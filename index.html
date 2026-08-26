@@ -119,8 +119,8 @@
   </div>
 
   <div class="card full">
-    <h2>Estúdios (56)</h2>
-    <p class="hint">Marque o andamento de cada estúdio — fica salvo neste navegador. Follow-up sugerido: 7 dias após o envio.</p>
+    <h2 id="tableTitle">Estúdios</h2>
+    <p class="hint">Marque o andamento de cada estúdio (fica salvo neste navegador). Follow-up sugerido: 7 dias após o envio. Lote 4 = rascunhos prontos no Gmail, ainda não enviados.</p>
     <div class="controls">
       <input type="search" id="q" placeholder="Buscar estúdio, país ou email…" aria-label="Buscar">
       <select id="fStatus" aria-label="Filtrar por andamento">
@@ -216,8 +216,16 @@ const STUDIOS = [
  ["Unit Image","França","contact@unit-image.fr",3,"ok"],
  ["Waterproof Studios","Canadá","info@waterproofstudios.com",3,"ok"],
  ["Mathematic","França","contact@mathematicfilm.com",3,"ok"],
- ["iLogos Game Studios","Malta","bizdev@ilogos.biz",3,"ok"]
+ ["iLogos Game Studios","Malta","bizdev@ilogos.biz",3,"ok"],
+ ["Blue Zoo Animation","Reino Unido","recruitment@blue-zoo.co.uk",4,"rascunho"],
+ ["Giant Animation","Irlanda","hello@giant.ie",4,"rascunho"],
+ ["Squeeze Animation Studios","Canadá","info@squeezestudio.com",4,"rascunho"],
+ ["Flying Bark Productions","Austrália","enquiries@flyingbark.com.au",4,"rascunho"],
+ ["TeamTO","França","info@teamto.com",4,"rascunho"],
+ ["Karrot Animation","Reino Unido","hello@karrotanimation.com",4,"rascunho"],
+ ["3Doubles Producciones","Espanha","info@3doubles.com",4,"rascunho"]
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
+const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
 const EMAILS_TOTAL = 61, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32]];
 
@@ -250,27 +258,31 @@ const DELIV = {
   ok:      {label:"Entregue",              icon:"✓", color:"--good"},
   conf:    {label:"Entregue · confirmação automática", icon:"✓", color:"--good"},
   reenvio: {label:"Reenviado (email corrigido)",       icon:"↻", color:"--warn"},
-  bounce:  {label:"Bounce — sem email válido",         icon:"✕", color:"--crit"}
+  bounce:  {label:"Bounce, sem email válido",          icon:"✕", color:"--crit"},
+  rascunho:{label:"Rascunho pronto (aguardando envio)", icon:"✎", color:"--axis"}
 };
 const STAGES = ["aguardando","respondeu","entrevista","oferta","recusado"];
 const STAGE_LABEL = {aguardando:"Aguardando", respondeu:"Respondeu", entrevista:"Entrevista", oferta:"Oferta", recusado:"Recusado"};
 
 // ---------- KPIs ----------
 function counts(){
-  const delivered = STUDIOS.filter(s=>s.delivery!=="bounce").length;
-  const resp = STUDIOS.filter(s=>["respondeu","entrevista","oferta"].includes(stageOf(s))).length;
-  const ent  = STUDIOS.filter(s=>["entrevista","oferta"].includes(stageOf(s))).length;
-  const off  = STUDIOS.filter(s=>stageOf(s)==="oferta").length;
-  return {delivered, resp, ent, off};
+  const delivered = CONTACTED.filter(s=>s.delivery!=="bounce").length;
+  const resp = CONTACTED.filter(s=>["respondeu","entrevista","oferta"].includes(stageOf(s))).length;
+  const ent  = CONTACTED.filter(s=>["entrevista","oferta"].includes(stageOf(s))).length;
+  const off  = CONTACTED.filter(s=>stageOf(s)==="oferta").length;
+  const rec  = CONTACTED.filter(s=>stageOf(s)==="recusado").length;
+  const drafts = STUDIOS.length - CONTACTED.length;
+  return {delivered, resp, ent, off, rec, drafts};
 }
 function renderTiles(){
   const c = counts();
   const rate = c.delivered ? Math.round(100*c.resp/c.delivered) : 0;
   $("#tiles").innerHTML = [
-    [STUDIOS.length, "Estúdios contatados", ""],
+    [CONTACTED.length, "Estúdios contatados", c.drafts+" rascunhos prontos (lote 4)"],
     [EMAILS_TOTAL, "Emails enviados", "3 lotes em 26/08"],
     [c.delivered, "Entregues", "1 bounce pendente (Meduzarts)"],
     [c.resp, "Respostas", rate+"% dos entregues", c.resp>0],
+    [c.rec, "Recusas", "todas respondidas com follow-up"],
     [c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([n,l,d,up])=>`<div class="tile"><div class="n">${n}</div><div class="l">${esc(l)}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
 }
@@ -279,16 +291,16 @@ function renderTiles(){
 function renderFunnel(){
   const c = counts();
   const steps = [
-    ["Contatados", STUDIOS.length], ["Entregues", c.delivered],
+    ["Contatados", CONTACTED.length], ["Entregues", c.delivered],
     ["Respostas", c.resp], ["Entrevistas", c.ent], ["Ofertas", c.off]
   ];
   const ramp = ["--f1","--f2","--f3","--f4","--f5"].map(css);
   const W=460, rowH=34, padL=96, padR=46, H=steps.length*rowH+6;
-  const max = STUDIOS.length;
+  const max = CONTACTED.length;
   let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Funil da campanha">`;
   steps.forEach(([label,v],i)=>{
     const y=i*rowH+6, bw=Math.max(v>0?4:0,(W-padL-padR)*v/max);
-    const pct = i===0 ? "" : ` · ${Math.round(100*v/max)}%`;
+    const pct = i===0 ? "" : ` (${Math.round(100*v/max)}%)`;
     svg += `<text x="${padL-8}" y="${y+15}" text-anchor="end" fill="${css('--ink-2')}">${esc(label)}</text>`;
     if(v>0) svg += `<rect x="${padL}" y="${y}" width="${bw}" height="22" rx="4" fill="${ramp[i]}" data-tip="<b>${esc(label)}</b>${v} de ${max} estúdios${pct}"/>`;
     else svg += `<line x1="${padL}" x2="${padL+2}" y1="${y+11}" y2="${y+11}" stroke="${css('--axis')}" stroke-width="22"/>`;
@@ -321,7 +333,7 @@ function renderLotes(){
 // ---------- por país (barras horizontais, série única) ----------
 function renderPaises(){
   const byC = {};
-  STUDIOS.forEach(s=>{ byC[s.country]=(byC[s.country]||0)+1; });
+  CONTACTED.forEach(s=>{ byC[s.country]=(byC[s.country]||0)+1; });
   const rows = Object.entries(byC).sort((a,b)=>b[1]-a[1]);
   const blue = css("--blue");
   const W=980, rowH=26, padL=120, padR=40, H=rows.length*rowH+8;
@@ -339,7 +351,8 @@ function renderPaises(){
 
 // ---------- tabela ----------
 function followUp(s){
-  if(s.delivery==="bounce") return `<span class="fu-wait">— reenviar</span>`;
+  if(s.delivery==="rascunho") return `<span class="fu-wait">aguarda envio</span>`;
+  if(s.delivery==="bounce") return `<span class="fu-wait">reenviar</span>`;
   const stage = stageOf(s);
   if(stage!=="aguardando") return `<span class="fu-wait">—</span>`;
   const due = new Date(SENT+"T12:00:00Z"); due.setUTCDate(due.getUTCDate()+7);
@@ -404,6 +417,8 @@ function renderAll(withRows=true){
   renderTiles(); renderFunnel(); renderLotes(); renderPaises();
   if(withRows) renderRows(); else renderRows();
 }
+document.getElementById("tableTitle").textContent =
+  `Estúdios (${STUDIOS.length}: ${CONTACTED.length} contatados + ${STUDIOS.length-CONTACTED.length} em rascunho)`;
 document.getElementById("updated").textContent =
   "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) {
