@@ -13,8 +13,7 @@ I work as an international contractor from Brazil, UTC-3, aligned with Eastern T
 
 CV and cover letter attached.
 
+Best,
+Vini Cavalcanti
 Portfolio: https://www.artstation.com/viniciuscavalcanti
 Founder, Vini Cavalcanti School: https://vinicavalcanti.com
-
-Best regards,
-Vini Cavalcanti

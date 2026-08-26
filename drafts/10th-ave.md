@@ -1,13 +1,13 @@
-# RetroStyle Games
+# 10th Ave Productions
 
-**Para:** job@retrostylegames.com
+**Para:** talent@10ave.com
 **Assunto:** Senior Character Artist · Wingfeather Saga credit · stylized + grooming
 
-Dear RetroStyle team,
+Dear 10th Ave team,
 
 I'm Vini Cavalcanti, Senior 3D Character Artist (The Wingfeather Saga, Endstar), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with 10+ years in stylized characters.
 
-On Wingfeather at Angel Studios I modeled and hand-painted characters for Season 1. On Endstar at E-Line Media I take hero characters from sculpt to engine. I also groom characters in Houdini. You built the stylized 3D characters for Lysward with Snowcastle Games, and that register is where I work daily.
+On Wingfeather at Angel Studios I modeled and hand-painted characters for Season 1. On Endstar at E-Line Media I take hero characters from sculpt to engine. I also groom characters in Houdini. You released Lydia and the Mist Rider this year and have The Bravest of All in production, so your character pipeline in Québec stays busy.
 
 I work end to end: blockout, sculpt, retopology, look dev, hand-painted and PBR texturing, grooming. Based in Brazil, UTC-3, aligned with Eastern Time. I work as an international contractor or can relocate with sponsorship.
 

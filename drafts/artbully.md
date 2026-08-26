@@ -13,8 +13,7 @@ I work end to end: blockout, sculpt, retopology, look dev, hand-painted and PBR 
 
 CV and cover letter attached.
 
+Best,
+Vini Cavalcanti
 Portfolio: https://www.artstation.com/viniciuscavalcanti
 Founder, Vini Cavalcanti School: https://vinicavalcanti.com
-
-Best regards,
-Vini Cavalcanti
