@@ -93,6 +93,11 @@
   </header>
   <p class="sub">Senior 3D Character Artist · aplicações por email para estúdios de animação e games · início 26/08/2026 · <span id="updated"></span></p>
 
+  <div id="alerta" role="alert" style="display:none; margin:0 0 16px; padding:10px 14px; border-radius:10px;
+       border:1px solid var(--crit); color:var(--ink); background:color-mix(in srgb, var(--crit) 12%, var(--surface));">
+    ✕ <b>Automação com problema:</b> <span id="alertaMsg"></span>
+  </div>
+
   <div class="tiles" id="tiles"></div>
 
   <div class="cards">
@@ -153,6 +158,8 @@
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
 const UPDATED = "2026-08-26";
+// Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
+const ALERTA = "";
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
  ["Airship Interactive","Reino Unido","talent@airshipinteractive.com",1,"ok"],
@@ -399,6 +406,17 @@ function renderAll(withRows=true){
 }
 document.getElementById("updated").textContent =
   "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
+if (ALERTA) {
+  document.getElementById("alertaMsg").textContent = ALERTA;
+  document.getElementById("alerta").style.display = "block";
+}
+// atestado de vida: se a automação parar de rodar, a data acima envelhece e este aviso aparece
+if ((Date.now() - new Date(UPDATED+"T12:00:00Z")) > 2*864e5) {
+  document.getElementById("alertaMsg").textContent =
+    "o site não é atualizado desde " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR") +
+    ". A rotina diária pode ter parado. " + (ALERTA ? " " + ALERTA : "");
+  document.getElementById("alerta").style.display = "block";
+}
 renderAll();
 </script>
 </body>
