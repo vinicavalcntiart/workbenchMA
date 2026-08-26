@@ -22,3 +22,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Bardel Entertainment | Canadá | https://bardel.ca/contactus/ | Vancouver; service CG de peso; só formulário |
 | Supamonks | França | https://www.supamonks.com/studio/ | Arcueil; 2D/3D para publicidade e trailers; sem email público |
 | Le Cube | Argentina/Brasil/Espanha | https://www.lecube.tv/contact | Publicidade character-led; email ofuscado no site |
+- Gigglebug Entertainment (Finlândia) — sem email público; vagas em https://gigglebugentertainment.com/jobs/
+- Fortiche Production (França) — Arcane; aplicação só pelo formulário "Become a Forticher" em https://forticheprod.com/contact/
+- Mainframe Studios (Canadá) — sem email público, não aceita submissões não solicitadas; vagas em https://www.mainframe.ca/careers/
+- ICON Creative Studio (Canadá) — maior estúdio CG independente do Canadá; sem email geral público verificado; vagas em https://www.iconcreativestudio.com/careers
