@@ -267,7 +267,7 @@ const STAGE_LABEL = {aguardando:"Aguardando", respondeu:"Respondeu", entrevista:
 // ---------- KPIs ----------
 function counts(){
   const delivered = CONTACTED.filter(s=>s.delivery!=="bounce").length;
-  const resp = CONTACTED.filter(s=>["respondeu","entrevista","oferta"].includes(stageOf(s))).length;
+  const resp = CONTACTED.filter(s=>["respondeu","entrevista","oferta","recusado"].includes(stageOf(s))).length;
   const ent  = CONTACTED.filter(s=>["entrevista","oferta"].includes(stageOf(s))).length;
   const off  = CONTACTED.filter(s=>stageOf(s)==="oferta").length;
   const rec  = CONTACTED.filter(s=>stageOf(s)==="recusado").length;
@@ -281,7 +281,7 @@ function renderTiles(){
     [CONTACTED.length, "Estúdios contatados", c.drafts+" rascunhos prontos (lote 4)"],
     [EMAILS_TOTAL, "Emails enviados", "3 lotes em 26/08"],
     [c.delivered, "Entregues", "1 bounce pendente (Meduzarts)"],
-    [c.resp, "Respostas", rate+"% dos entregues", c.resp>0],
+    [c.resp, "Respostas", rate+"% dos entregues · "+(c.resp-c.rec)+" em aberto", c.resp>c.rec],
     [c.rec, "Recusas", "todas respondidas com follow-up"],
     [c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([n,l,d,up])=>`<div class="tile"><div class="n">${n}</div><div class="l">${esc(l)}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
