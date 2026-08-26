@@ -11,7 +11,7 @@ Pessoas relevantes (contato direto via LinkedIn; emails pessoais não são públ
 
 Olá, pessoal do Pé Grande,
 
-Sou Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), mestrando em Creative Industries e especialista em Game Art (pós-graduação), com **mais de 10 anos em personagens estilizados**.
+Sou Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), especialista em Game Art pela **Méliès São Paulo** e mestrando em Indústrias Criativas pela **Universidade Católica de Pernambuco**, com **mais de 10 anos em personagens estilizados**.
 
 Na **The Wingfeather Saga**, da Angel Studios, modelei e pintei à mão personagens da primeira temporada. Há quase cinco anos estou na **E-Line Media**, no Arizona, levando os personagens principais de **Endstar** do sculpt à engine. Também faço grooming de personagens em **Houdini**. Acompanho o trabalho do estúdio há tempos, e ver uma casa de Porto Alegre entregando animação desse nível para clientes como **LEGO** e **Samsung** é o tipo de projeto do qual eu adoraria participar.
 
