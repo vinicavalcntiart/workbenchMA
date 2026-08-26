@@ -91,7 +91,7 @@
     <h1>Campanha de busca de emprego — Vini Cavalcanti</h1>
     <button class="btn" id="themeBtn" aria-label="Alternar tema">🌗 Tema</button>
   </header>
-  <p class="sub">Senior 3D Character Artist · aplicações por email para estúdios de animação e games · início 26/08/2026</p>
+  <p class="sub">Senior 3D Character Artist · aplicações por email para estúdios de animação e games · início 26/08/2026 · <span id="updated"></span></p>
 
   <div class="tiles" id="tiles"></div>
 
@@ -141,15 +141,18 @@
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
     61 emails enviados (56 estúdios + 1 teste + 4 reenvios) ·
-    marcações de andamento ficam só no seu navegador (localStorage).
+    atualizado diariamente por automação (respostas, rejeições e bounces) ·
+    marcações manuais de andamento ficam só no seu navegador (localStorage).
   </footer>
 </div>
 <div id="tooltip" role="status"></div>
 
 <script>
-// ---------- dados (26/08/2026) ----------
+// ---------- dados ----------
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente)
+// 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
+const UPDATED = "2026-08-26";
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
  ["Airship Interactive","Reino Unido","talent@airshipinteractive.com",1,"ok"],
@@ -207,7 +210,7 @@ const STUDIOS = [
  ["Waterproof Studios","Canadá","info@waterproofstudios.com",3,"ok"],
  ["Mathematic","França","contact@mathematicfilm.com",3,"ok"],
  ["iLogos Game Studios","Malta","bizdev@ilogos.biz",3,"ok"]
-].map(([name,country,email,batch,delivery])=>({name,country,email,batch,delivery}));
+].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 
 const EMAILS_TOTAL = 61, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32]];
 
@@ -216,7 +219,7 @@ const KEY = "campanha-vini-status-v1";
 let progress = {};
 try { progress = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e) { progress = {}; }
 function saveProgress(){ try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch(e){} }
-const stageOf = s => progress[s.email] || "aguardando";
+const stageOf = s => progress[s.email] || s.stage || "aguardando";
 
 // ---------- helpers ----------
 const $ = sel => document.querySelector(sel);
@@ -394,6 +397,8 @@ function renderAll(withRows=true){
   renderTiles(); renderFunnel(); renderLotes(); renderPaises();
   if(withRows) renderRows(); else renderRows();
 }
+document.getElementById("updated").textContent =
+  "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 renderAll();
 </script>
 </body>
