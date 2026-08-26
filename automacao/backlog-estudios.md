@@ -9,18 +9,18 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Bardel Entertainment | Canadá | bardel.ca | portal |
 | Le Cube | Argentina | lecube.com | portal |
 | Punkrobot | Chile | punkrobot.cl | pendente |
-| Zombie Studio | Brasil | zombie.studio | pendente |
+| Zombie Studio | Brasil | zombie.studio | descartado (escopo geográfico) |
 | Golden Wolf | Reino Unido/EUA | goldenwolf.tv | pendente |
 | Snowball Studios | Israel | snowball-vfx? | pendente |
 | Tiny Island Productions | Singapura | tinyisland.com.sg | pendente |
 | Omens Studios | Singapura | omens-studios.com | aprovado |
 | CraveFX | Singapura | cravefx.com | pendente |
 | One Animation | Singapura | oneanimation.com | aprovado |
-| Original Force | China | originalforce.com | pendente |
-| Toonz Media Group | Índia | toonz.co | pendente |
+| Original Force | China | originalforce.com | descartado (escopo geográfico) |
+| Toonz Media Group | Índia | toonz.co | descartado (escopo geográfico) |
 | 88 Pictures | Índia | 88pictures.com | aprovado |
-| Green Gold Animation | Índia | greengold.tv | pendente |
-| Studio Eeksaurus | Índia | eeksaurus.com | pendente |
+| Green Gold Animation | Índia | greengold.tv | descartado (escopo geográfico) |
+| Studio Eeksaurus | Índia | eeksaurus.com | descartado (escopo geográfico) |
 | PGS Entertainment? (dist, não estúdio) | França | - | descartado |
 | Fortiche Production | França | forticheprod.com | pendente (provável portal) |
 | Supamonks | França | supamonks.com | portal |
@@ -32,3 +32,5 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Anima Vitae | Finlândia | anima.fi | aprovado |
 | Gigglebug Entertainment | Finlândia | gigglebug.com | pendente |
 | Qvisten Animation | Noruega | qvisten.no | aprovado |
+
+REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
