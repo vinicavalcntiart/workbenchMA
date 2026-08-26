@@ -196,7 +196,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    76 emails enviados (71 estúdios + 1 teste + 4 reenvios) ·
+    85 emails enviados (80 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -213,7 +213,7 @@ const UPDATED = "2026-08-26";
 const ALERTA = "";
 // Uma linha por dia: [data, emails enviados no dia, respostas humanas recebidas no dia] — mantido pela automação.
 const DAILY = [
- ["2026-08-26",76,6]
+ ["2026-08-26",85,6]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -287,15 +287,15 @@ const STUDIOS = [
  ["Mighty Animation","México","info@mightyanimation.com",4,"ok"],
  ["The Line","Reino Unido","entertainment@thelinestudio.com",4,"ok"],
  ["Juice","Polônia","info@juice.pl",4,"ok"],
- ["Guru Studio","Canadá","info@gurustudio.com",5,"rascunho"],
- ["Jam Filled Entertainment","Canadá","contact@jamfilled.com",5,"rascunho"],
- ["House of Cool","Canadá","info@houseofcool.com",5,"rascunho"],
- ["Atomic Cartoons","Canadá","hr@atomiccartoons.com",5,"rascunho"],
- ["Omens Studios","Singapura","careers@omens-studios.com",5,"rascunho"],
- ["One Animation","Singapura","info@oneanimation.com",5,"rascunho"],
- ["Anima Vitae","Finlândia","info@anima.fi",5,"rascunho"],
- ["Qvisten Animation","Noruega","hedda.toftner@qvisten.no",5,"rascunho"],
- ["Estúdio Pé Grande","Brasil","hello@estudiopegrande.com.br",5,"rascunho"],
+ ["Guru Studio","Canadá","info@gurustudio.com",5,"bounce"],
+ ["Jam Filled Entertainment","Canadá","contact@jamfilled.com",5,"ok"],
+ ["House of Cool","Canadá","info@houseofcool.com",5,"ok"],
+ ["Atomic Cartoons","Canadá","hr@atomiccartoons.com",5,"ok"],
+ ["Omens Studios","Singapura","careers@omens-studios.com",5,"ok"],
+ ["One Animation","Singapura","info@oneanimation.com",5,"ok"],
+ ["Anima Vitae","Finlândia","info@anima.fi",5,"ok"],
+ ["Qvisten Animation","Noruega","hedda.toftner@qvisten.no",5,"ok"],
+ ["Estúdio Pé Grande","Brasil","hello@estudiopegrande.com.br",5,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -306,6 +306,7 @@ const PORTAIS = [
  ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Responderam pedindo o formulário Google de candidatura"],
  ["Anima Kitchent","Espanha","https://www.linkedin.com/company/anima-kitchent/jobs/","email","RH (Rocio González) pede questionário nas vagas do LinkedIn; seguir a Rocio"],
  ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Email quicou; formulário do site é o único canal"],
+ ["Guru Studio","Canadá","https://gurustudio.com/careers","email","Email quicou (info@ é Google Group fechado, sem alternativa pública); aplicar na General Application do portal — Head of Talent: Sue Jung"],
  ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)"],
  ["Blur Studio","EUA","https://blur.com/careers","portal","Cinematics AAA e Love Death + Robots; reel via portal próprio"],
  ["Platige Image","Polônia","https://platige.com/careers/","portal","Portal de vagas próprio (email geral também recebeu rascunho)"],
@@ -324,7 +325,7 @@ const PORTAIS = [
  ["Ánima Estudios","México","https://www.animaestudios.com","portal","Maior estúdio da América Latina; sem email público"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
-const EMAILS_TOTAL = 76, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15]];
+const EMAILS_TOTAL = 85, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
