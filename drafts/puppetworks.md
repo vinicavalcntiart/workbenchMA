@@ -7,7 +7,7 @@ Dear Puppetworks team,
 
 I'm Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with **10+ years in stylized characters**.
 
-On **The Wingfeather Saga** at Angel Studios I modeled and hand-painted Season 1 characters. Today I'm at **E-Line Media in Arizona, US**, almost five years in, responsible for Endstar's hero characters from sculpt to engine, **Houdini grooming** included. You built **Kill Code Part 3** for Apex Legends with Psyop, and you already run international remote artists, which is my setup too.
+I modeled and hand-painted Season 1 characters on **The Wingfeather Saga** at Angel Studios. Today I'm at **E-Line Media in Arizona, US**, almost five years in, responsible for Endstar's hero characters from sculpt to engine, **Houdini grooming** included. You built **Kill Code Part 3** for Apex Legends with Psyop, and you already run international remote artists, which is my setup too.
 
 CV and cover letter attached.
 

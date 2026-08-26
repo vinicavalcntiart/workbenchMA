@@ -9,7 +9,7 @@ Dear iLogos team,
 
 I'm Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with **10+ years in stylized characters**.
 
-On **The Wingfeather Saga** at Angel Studios I modeled and hand-painted Season 1 characters. Today I'm at **E-Line Media in Arizona, US**, almost five years in, responsible for Endstar's hero characters from sculpt to engine, **Houdini grooming** included. Your character roles run fully remote, which is how I already work. Please pass this along to your art hiring team.
+I modeled and hand-painted Season 1 characters on **The Wingfeather Saga** at Angel Studios. Today I'm at **E-Line Media in Arizona, US**, almost five years in, responsible for Endstar's hero characters from sculpt to engine, **Houdini grooming** included. Your character roles run fully remote, which is how I already work. Please pass this along to your art hiring team.
 
 CV and cover letter attached.
 
