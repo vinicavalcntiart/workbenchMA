@@ -3,6 +3,8 @@
 **Para:** hello@estudiopegrande.com.br
 **Assunto:** Senior Character Artist 3D · crédito em Wingfeather Saga · stylized + grooming
 
+Canais adicionais (26/08): página Work With Us (https://www.estudiopegrande.com.br/work-with-us/) é o canal deles para artistas; sinal de vaga ABERTA para 3D Generalist sênior, remota, 40h/semana; WhatsApp comercial +55 51 9148 3072. Único email público continua sendo hello@.
+
 Pessoas relevantes (contato direto via LinkedIn; emails pessoais não são públicos):
 - Felipe Galvão (sócio-fundador): https://www.linkedin.com/in/felipegalvao/
 - Gabriel Vedana (sócio-fundador): https://www.linkedin.com/in/gabrielvedana/
