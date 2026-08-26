@@ -13,3 +13,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Dwarf Animation Studio | França | https://www.dwarfanimation.com/careers.htm | Animou Nimona; vagas atuais para feature estilizada em Montpellier |
 | Wise Blue Studios | Espanha | https://www.wisebluestudios.com/open-positions/ | Só considera aplicação pelo formulário próprio (avisam que email não é processado) |
 | Aardman | Reino Unido | https://jobs.aardman.com/ | Stop-motion + departamento CG; portal de vagas próprio |
+| Lighthouse Studios | Irlanda | https://lighthousestudios.ie/careers | Kilkenny; vagas atualizadas mensalmente; email de careers existe mas não foi possível verificar o endereço exato |
+| Assemblage Entertainment | Índia | https://www.madassemblage.com/contact-us/ | Features CG (Netflix); só formulário de contato |
+| Room 8 Studio | Ucrânia (global) | https://room8studio.com/careers/ | Game art e cinematics AAA; contato só por formulário |
+| Boulder Media | Irlanda | https://bouldermedia.tv/contact/ | Dublin; séries CG/2D; contato só por formulário |
