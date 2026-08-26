@@ -261,7 +261,7 @@ const STUDIOS = [
  ["Kavaleer Productions","Irlanda","jobs@kavaleer.com",3,"ok"],
  ["Meduzarts","Canadá","info@meduzarts.com",3,"bounce"],
  ["Moonmana","Ucrânia","careers@moonmana.com",3,"ok"],
- ["Nuare Studio","Canadá","contact@nuarestudio.com",3,"ok","respondeu"],
+ ["Nuare Studio","Canadá","contact@nuarestudio.com",3,"ok","conversa"],
  ["Piranha Bar","Irlanda","info@piranhabar.ie",3,"ok"],
  ["Polydin Studio","Global","info@polydin.com",3,"ok"],
  ["Sperasoft","EUA","jobs@sperasoft.com",3,"ok","recusado"],
@@ -362,12 +362,13 @@ const DELIV = {
   bounce:  {label:"Bounce, sem email válido", icon:"✕", color:"--crit"},
   rascunho:{label:"Rascunho pronto (aguardando envio)", icon:"✎", color:"--axis"}
 };
-const STAGES = ["aguardando","respondeu","entrevista","oferta","recusado"];
-const STAGE_LABEL = {aguardando:"Aguardando", respondeu:"Respondeu", entrevista:"Entrevista", oferta:"Oferta", recusado:"Recusado"};
+const STAGES = ["aguardando","respondeu","conversa","entrevista","oferta","recusado"];
+const STAGE_LABEL = {aguardando:"Aguardando", respondeu:"Respondeu", conversa:"Em conversa", entrevista:"Entrevista", oferta:"Oferta", recusado:"Recusado"};
 
 function counts(){
   const delivered = CONTACTED.filter(s=>s.delivery!=="bounce").length;
-  const conv = CONTACTED.filter(s=>["respondeu","entrevista","oferta"].includes(stageOf(s))).length;
+  const conv = CONTACTED.filter(s=>["respondeu","conversa","entrevista","oferta"].includes(stageOf(s))).length;
+  const aberto = CONTACTED.filter(s=>stageOf(s)==="respondeu").length;
   const rec  = CONTACTED.filter(s=>stageOf(s)==="recusado").length;
   const resp = conv + rec;
   const ent  = CONTACTED.filter(s=>["entrevista","oferta"].includes(stageOf(s))).length;
@@ -375,15 +376,15 @@ function counts(){
   const aguard = CONTACTED.filter(s=>s.delivery!=="bounce" && stageOf(s)==="aguardando").length;
   const bounce = CONTACTED.filter(s=>s.delivery==="bounce").length;
   const drafts = STUDIOS.length - CONTACTED.length;
-  return {delivered, resp, conv, ent, off, rec, aguard, bounce, drafts};
+  return {delivered, resp, conv, aberto, ent, off, rec, aguard, bounce, drafts};
 }
 
 // ---------- o que fazer agora ----------
 function renderAcoes(){
   const c = counts();
   const items = [];
-  if(c.conv > 0)
-    items.push(["urgente","🔥",`<b>${c.conv} resposta${c.conv>1?"s":""} positiva${c.conv>1?"s":""}</b> esperando você responder pessoalmente`,"#estudios"]);
+  if(c.aberto > 0)
+    items.push(["urgente","🔥",`<b>${c.aberto} resposta${c.aberto>1?"s":""} positiva${c.aberto>1?"s":""}</b> esperando você responder pessoalmente`,"#estudios"]);
   const pendEmail = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
   const pendAll = PORTAIS.filter(p=>!isApplied(p)).length;
   if(pendEmail > 0)
@@ -416,7 +417,7 @@ function renderTiles(){
     ["🏢", CONTACTED.length, "Estúdios contatados", c.drafts>0 ? c.drafts+" rascunhos prontos" : "todos os lotes enviados"],
     ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes"],
     ["✅", c.delivered, "Entregues", c.bounce+" bounce pendente"],
-    ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.conv+" em aberto", c.conv>0],
+    ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
     ["🚫", c.rec, "Recusas", "todas respondidas com follow-up"],
     ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([ic,n,l,d,up])=>`<div class="tile"><div class="h"><span>${ic}</span>${esc(l)}</div><div class="n">${n}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
