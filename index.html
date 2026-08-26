@@ -296,6 +296,15 @@ const STUDIOS = [
  ["Anima Vitae","Finlândia","info@anima.fi",5,"ok"],
  ["Qvisten Animation","Noruega","hedda.toftner@qvisten.no",5,"ok"],
  ["Estúdio Pé Grande","Brasil","hello@estudiopegrande.com.br",5,"ok"],
+ ["Golden Wolf","Reino Unido/EUA","hello@goldenwolf.tv",6,"rascunho"],
+ ["Tiny Island Productions","Singapura","contact@tinyisland.net",6,"rascunho"],
+ ["CraveFX","Singapura","hello@cravefx.com",6,"rascunho"],
+ ["Circus","França","contact@circus.fr",6,"rascunho"],
+ ["Creative Conspiracy","Bélgica","info@cc.be",6,"rascunho"],
+ ["Submarine","Holanda","studiotalent@submarine.nl",6,"rascunho"],
+ ["TAT Productions","França","contact@tatprod.com",6,"rascunho"],
+ ["Cyber Group Studios","França","info@cybergroupstudios.com",6,"rascunho"],
+ ["Pipeline Studios","Canadá","info@pipelinestudios.com",6,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -322,7 +331,11 @@ const PORTAIS = [
  ["Room 8 Studio","Ucrânia","https://room8studio.com/careers/","portal","Game art e cinematics AAA"],
  ["Boulder Media","Irlanda","https://bouldermedia.tv/contact/","portal","Dublin; séries CG"],
  ["Studio Rakete","Alemanha","https://www.studiorakete.de/en/kontakt-2/","portal","Hamburgo; features e séries CG"],
- ["Ánima Estudios","México","https://www.animaestudios.com","portal","Maior estúdio da América Latina; sem email público"]
+ ["Ánima Estudios","México","https://www.animaestudios.com","portal","Maior estúdio da América Latina; sem email público"],
+ ["Fortiche Production","França","https://forticheprod.com/contact/","portal","Arcane; aplicação só pelo formulário Become a Forticher"],
+ ["Mainframe Studios","Canadá","https://www.mainframe.ca/careers/","portal","Vancouver; séries CG; não aceita submissões por email"],
+ ["ICON Creative Studio","Canadá","https://www.iconcreativestudio.com/careers","portal","Maior estúdio CG independente do Canadá; sem email geral público"],
+ ["Gigglebug Entertainment","Finlândia","https://gigglebugentertainment.com/jobs/","portal","Helsinque; sem email público; vagas no site"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
 const EMAILS_TOTAL = 85, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9]];
