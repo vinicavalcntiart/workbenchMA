@@ -19,3 +19,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Boulder Media | Irlanda | https://bouldermedia.tv/contact/ | Dublin; séries CG/2D; contato só por formulário |
 | Studio Rakete | Alemanha | https://www.studiorakete.de/en/kontakt-2/ | Hamburgo; features e séries CG; sem email público |
 | Ánima Estudios | México | https://www.animaestudios.com | Maior estúdio da América Latina; sem email geral público |
+| Bardel Entertainment | Canadá | https://bardel.ca/contactus/ | Vancouver; service CG de peso; só formulário |
+| Supamonks | França | https://www.supamonks.com/studio/ | Arcueil; 2D/3D para publicidade e trailers; sem email público |
+| Le Cube | Argentina/Brasil/Espanha | https://www.lecube.tv/contact | Publicidade character-led; email ofuscado no site |
