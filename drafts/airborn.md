@@ -1,6 +1,6 @@
 # Airborn Studios
 
-**Para:** jobs@airborn-studios.com
+**Para:** contact@airborn-studios.com
 **Assunto:** Senior Character Artist · Wingfeather Saga credit · stylized + grooming
 
 Dear Airborn team,

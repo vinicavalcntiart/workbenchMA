@@ -1,6 +1,6 @@
 # VSQUAD
 
-**Para:** info@vsquad.art
+**Para:** head@vsquad.art
 **Assunto:** Senior Character Artist · Wingfeather Saga credit · stylized + grooming
 
 Dear VSQUAD team,
