@@ -18,5 +18,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Room 8 Studio | Ucrânia (global) | https://room8studio.com/careers/ | Game art e cinematics AAA; contato só por formulário |
 | Boulder Media | Irlanda | https://bouldermedia.tv/contact/ | Dublin; séries CG/2D; contato só por formulário |
 | Studio Rakete | Alemanha | https://www.studiorakete.de/en/kontakt-2/ | Hamburgo; features e séries CG; sem email público |
-| Wise Blue Studios | Espanha | https://www.wisebluestudios.com/contact | Valência/Canárias; animação e live action; só formulário |
 | Ánima Estudios | México | https://www.animaestudios.com | Maior estúdio da América Latina; sem email geral público |

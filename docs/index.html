@@ -118,6 +118,17 @@
     </div>
   </div>
 
+  <div class="card full" style="margin-bottom:16px">
+    <h2>Aplicações via portal ou formulário</h2>
+    <p class="hint" id="portalHint">Estúdios que não aceitam (ou pediram para não usar) email: aplique pelo link e marque quando fizer. A marcação fica salva neste navegador.</p>
+    <table>
+      <thead><tr>
+        <th>Feito</th><th>Estúdio</th><th>País</th><th>Onde aplicar</th><th>Origem / nota</th>
+      </tr></thead>
+      <tbody id="portalRows"></tbody>
+    </table>
+  </div>
+
   <div class="card full">
     <h2 id="tableTitle">Estúdios</h2>
     <p class="hint">Marque o andamento de cada estúdio (fica salvo neste navegador). Follow-up sugerido: 7 dias após o envio. Lote 4 = rascunhos prontos no Gmail, ainda não enviados.</p>
@@ -234,6 +245,29 @@ const STUDIOS = [
  ["Juice","Polônia","info@juice.pl",4,"rascunho"]
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
+
+// Estúdios que exigem aplicação via portal/formulário. origem: "email" = pediram na resposta ao nosso email; "portal" = nunca aceitaram email.
+const PORTAIS = [
+ ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/careers","email","Responderam: por GDPR só aceitam candidatura pelas vagas do site"],
+ ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Responderam pedindo o formulário Google de candidatura"],
+ ["Anima Kitchent","Espanha","https://www.linkedin.com/company/anima-kitchent/jobs/","email","RH (Rocio González) pede questionário nas vagas do LinkedIn; seguir a Rocio"],
+ ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Email quicou; formulário do site é o único canal"],
+ ["Blur Studio","EUA","https://blur.com/careers","portal","Cinematics AAA e Love Death + Robots; reel via portal próprio"],
+ ["Platige Image","Polônia","https://platige.com/careers/","portal","Portal de vagas próprio (email geral também recebeu rascunho)"],
+ ["Magic Media","Chipre","https://careers.magicmedia.studio/","portal","Vagas permanentemente remotas"],
+ ["Stellar Creative Lab","Canadá","https://www.stellarcreativelab.com/work-with-us","portal","CG features e séries; equipes híbridas"],
+ ["CBN Animation (Superbook)","EUA","https://www1.cbn.com/jobs","portal","Série bíblica CG; encaixe direto com a credencial Wingfeather"],
+ ["N-iX Game & VR Studio","Ucrânia","https://careers.n-ix.com/","portal","Já teve vaga remota de 3D Character Artist"],
+ ["Dwarf Animation Studio","França","https://www.dwarfanimation.com/careers.htm","portal","Animou Nimona; vagas para feature estilizada em Montpellier"],
+ ["Wise Blue Studios","Espanha","https://www.wisebluestudios.com/open-positions/","portal","Avisam que email não é processado; só formulário próprio"],
+ ["Aardman","Reino Unido","https://jobs.aardman.com/","portal","Stop-motion + departamento CG"],
+ ["Lighthouse Studios","Irlanda","https://lighthousestudios.ie/careers","portal","Kilkenny; vagas atualizadas mensalmente"],
+ ["Assemblage Entertainment","Índia","https://www.madassemblage.com/contact-us/","portal","Features CG para Netflix; só formulário"],
+ ["Room 8 Studio","Ucrânia","https://room8studio.com/careers/","portal","Game art e cinematics AAA"],
+ ["Boulder Media","Irlanda","https://bouldermedia.tv/contact/","portal","Dublin; séries CG"],
+ ["Studio Rakete","Alemanha","https://www.studiorakete.de/en/kontakt-2/","portal","Hamburgo; features e séries CG"],
+ ["Ánima Estudios","México","https://www.animaestudios.com","portal","Maior estúdio da América Latina; sem email público"]
+].map(([name,country,url,origem,note])=>({name,country,url,origem,note}));
 
 const EMAILS_TOTAL = 61, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32]];
 
@@ -396,6 +430,44 @@ function renderRows(){
   });
 }
 
+// ---------- portais ----------
+const PKEY = "campanha-portais-v1";
+let applied = {};
+try { applied = JSON.parse(localStorage.getItem(PKEY) || "{}") || {}; } catch(e) { applied = {}; }
+function renderPortais(){
+  const rows = [...PORTAIS].sort((a,b)=>{
+    const pa = applied[a.url]?1:0, pb = applied[b.url]?1:0;
+    if(pa!==pb) return pa-pb;
+    if(a.origem!==b.origem) return a.origem==="email" ? -1 : 1;
+    return a.name.localeCompare(b.name);
+  });
+  document.getElementById("portalRows").innerHTML = rows.map(p=>{
+    const done = !!applied[p.url];
+    const origem = p.origem==="email"
+      ? `<span class="chip"><span class="dot" style="background:var(--warn)"></span>⚠ pediram na resposta</span>`
+      : `<span class="chip"><span class="dot" style="background:var(--axis)"></span>só portal</span>`;
+    return `<tr style="${done?'opacity:.55':''}">
+      <td><input type="checkbox" data-url="${esc(p.url)}"${done?" checked":""} aria-label="Marcar ${esc(p.name)} como aplicado"></td>
+      <td>${done?"<s>"+esc(p.name)+"</s>":esc(p.name)}</td>
+      <td>${esc(p.country)}</td>
+      <td><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir aplicação ↗</a></td>
+      <td>${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span></td>
+    </tr>`;
+  }).join("");
+  const doneCount = PORTAIS.filter(p=>applied[p.url]).length;
+  const pend = PORTAIS.filter(p=>!applied[p.url] && p.origem==="email").length;
+  document.getElementById("portalHint").textContent =
+    `${doneCount} de ${PORTAIS.length} aplicados · ${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
+    "Aplique pelo link e marque quando fizer (fica salvo neste navegador).";
+  document.getElementById("portalRows").querySelectorAll("input[type=checkbox]").forEach(cb=>{
+    cb.addEventListener("change", ()=>{
+      if(cb.checked) applied[cb.dataset.url] = true; else delete applied[cb.dataset.url];
+      try { localStorage.setItem(PKEY, JSON.stringify(applied)); } catch(e){}
+      renderPortais();
+    });
+  });
+}
+
 // ---------- funções ----------
 $("#q").addEventListener("input", renderRows);
 $("#fStatus").addEventListener("change", renderRows);
@@ -422,7 +494,7 @@ try { const t = localStorage.getItem("campanha-theme"); if(t) document.documentE
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>renderAll(false));
 
 function renderAll(withRows=true){
-  renderTiles(); renderFunnel(); renderLotes(); renderPaises();
+  renderTiles(); renderFunnel(); renderLotes(); renderPaises(); renderPortais();
   if(withRows) renderRows(); else renderRows();
 }
 document.getElementById("tableTitle").textContent =
