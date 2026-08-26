@@ -5,11 +5,9 @@
 
 Dear Digic team,
 
-I'm Vini Cavalcanti, Senior 3D Character Artist (The Wingfeather Saga, Endstar), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with 10+ years in stylized characters. I'm applying for the Character Modeler opening on your careers site.
+I'm Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with **10+ years in stylized characters**. I'm applying for the **Character Modeler** opening on your careers site.
 
-On Wingfeather at Angel Studios I modeled and hand-painted characters for Season 1 of the show. On Endstar at E-Line Media I take hero characters from sculpt to engine. I also groom characters in Houdini, which supports the close-up detail your Assassin's Creed cinematics run on.
-
-I work end to end: blockout, sculpt, retopology, look dev, hand-painted and PBR texturing, grooming. Based in Brazil, UTC-3, aligned with Eastern Time. I work as an international contractor or can relocate with sponsorship.
+My first series credit was **The Wingfeather Saga** at Angel Studios, where I modeled and hand-painted characters for Season 1. For almost five years now I've been with **E-Line Media in Arizona, US**, taking Endstar's hero characters from first sculpt to engine and grooming them in **Houdini**. Close-up detail is where grooming pays off, and your **Assassin's Creed** cinematics are made of close-ups.
 
 CV and cover letter attached.
 

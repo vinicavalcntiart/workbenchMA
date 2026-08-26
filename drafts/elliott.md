@@ -5,11 +5,9 @@
 
 Dear Elliott Animation team,
 
-I'm Vini Cavalcanti, Senior 3D Character Artist (The Wingfeather Saga, Endstar), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with 10+ years in stylized characters.
+I'm Vini Cavalcanti, Senior 3D Character Artist (**The Wingfeather Saga**, **Endstar**), MA cand. in Creative Industries and Game Art Specialist (PG Dip), with **10+ years in stylized characters**.
 
-On Wingfeather at Angel Studios I modeled and hand-painted characters for Season 1. On Endstar at E-Line Media I take hero characters from sculpt to engine. I also groom characters in Houdini. You keep long series like Total Dramarama running out of Toronto, and my series experience on Wingfeather fits that rhythm.
-
-I work end to end: blockout, sculpt, retopology, look dev, hand-painted and PBR texturing, grooming. Based in Brazil, UTC-3, aligned with Eastern Time. I work as an international contractor or can relocate with sponsorship.
+I got my series start on **The Wingfeather Saga** at Angel Studios, modeling and hand-painting Season 1 characters. Since early 2022, almost five years now, I've been at **E-Line Media in Arizona, US**, building Endstar's hero characters end to end and **grooming in Houdini**. You keep long series like **Total Dramarama** running out of Toronto, and my series experience on Wingfeather fits that rhythm.
 
 CV and cover letter attached.
 
