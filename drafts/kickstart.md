@@ -1,6 +1,6 @@
 # Kickstart Entertainment
 
-**Para:** careers@kickstartent.com
+**Para:** info@kickstartent.com
 **Assunto:** Senior Character Artist · Wingfeather Saga credit · stylized + grooming
 
 Dear Kickstart team,

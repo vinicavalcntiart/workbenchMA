@@ -1,6 +1,6 @@
 # Industrial Brothers
 
-**Para:** jobs@industrialbrothers.com
+**Para:** info@industrialbrothers.com
 **Assunto:** Senior Character Artist · Wingfeather Saga credit · stylized + grooming
 
 Dear Industrial Brothers team,
