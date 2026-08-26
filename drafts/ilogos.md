@@ -16,4 +16,5 @@ CV and cover letter attached.
 Best,
 Vini Cavalcanti
 Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
 Founder, Vini Cavalcanti School: https://vinicavalcanti.com
