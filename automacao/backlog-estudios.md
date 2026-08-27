@@ -47,18 +47,28 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | WildBrain Studios | Canadá | wildbrain.com | portal |
 | Brown Bag Films | Irlanda | brownbagfilms.com | aprovado |
 | Studio Isar Animation | Alemanha | isaranimation.com | aprovado |
-| Cinesite Montreal/Vancouver | Canadá | cinesite.com | pendente (provável portal) |
+| Cinesite Montreal/Vancouver | Canadá | cinesite.com | portal |
 
 | Tonko House | EUA | tonkohouse.com | aprovado |
 | Chromosphere | EUA | chromosphere-la.com | aprovado |
 | HouseSpecial | EUA | housespecial.com | aprovado |
 | Psyop | EUA | psyop.com | portal |
-| Cyborn | Bélgica | cyborn.be | pendente |
-| Xilam Animation | França | xilam.com | pendente |
-| Studio 100 Animation | França | studio100animation.net | pendente |
-| ReelFX | EUA | reelfx.com | pendente |
-| Locksmith Animation | Reino Unido | locksmithanimation.com | pendente |
-| DNEG Animation | Reino Unido | dneg.com | pendente (provável portal) |
-| Jellyfish Pictures | Reino Unido | jellyfishpictures.co.uk | pendente (verificar situação financeira) |
+| Cyborn | Bélgica | cyborn.be | descartado (duplicado; já contatado no lote 3) |
+| Xilam Animation | França | xilam.com | portal (sem email atual verificado) |
+| Studio 100 Animation | França | studio100animation.net | portal (email não confirmável) |
+| ReelFX | EUA | reelfx.com | aprovado |
+| Locksmith Animation | Reino Unido | locksmithanimation.com | aprovado |
+| DNEG Animation | Reino Unido | dneg.com | portal |
+| Jellyfish Pictures | Reino Unido | jellyfishpictures.co.uk | descartado (entrou em administração e encerrou em 2025) |
+
+| REALTIME | Reino Unido | realtimeuk.com | portal (sem email geral público) |
+| Blink Industries | Reino Unido | blinkindustries.tv | descartado (2D Toon Boom; sem email público) |
+| Aixsponza | Alemanha | aixsponza.com | descartado (motion design; sem foco em personagens) |
+| Yeti Farm Creative | Canadá | yetifarm.com | descartado (sem email público verificado) |
+| Wind Sun Sky Entertainment | Canadá | windsunsky.com | pendente |
+| House of Secrets | Holanda | houseofsecrets.nl | pendente |
+| Storm Studios | Noruega | stormstudios.no | pendente |
+| Ghost VFX | Dinamarca | ghostvfx.com | pendente |
+| Important Looking Pirates | Suécia | ilpvfx.com | pendente |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

@@ -30,3 +30,8 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Superprod Animation (França) — sem email público; vagas em https://careers.werecruit.io/en/superprod
 - WildBrain Studios (Canadá) — só recepção por email; vagas em https://wildbrain-career.talent-soft.com/
 - Psyop (EUA) — candidatura via formulário do site em https://www.psyop.com/
+- Xilam Animation (França) — CG e 2D (Oggy Oggy); sem email atual verificado; contato em https://xilam.com/en/contact-us/
+- Studio 100 Animation (França) — Maya the Bee, Vic the Viking CG; email não confirmável em fonte oficial; vagas via grupo em https://studio100group.com/
+- DNEG Animation (Reino Unido) — só ATS próprio; https://www.dneg.com/careers
+- Cinesite (Reino Unido/Canadá) — só ATS próprio; https://www.cinesite.com/careers/
+- REALTIME (Reino Unido) — cinematics de games (Manchester); sem email geral público; https://realtimeuk.com/
