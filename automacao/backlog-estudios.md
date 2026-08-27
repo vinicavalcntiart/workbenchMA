@@ -89,11 +89,39 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 
 | Able & Baker | Espanha | ableandbakerstudios.com | descartado (duplicado; já contatado no lote 3) |
 | Like A Photon Creative | Austrália/Irlanda | likeaphoton.com | portal (sem email público) |
-| OLM Digital | Japão | olm.co.jp | pendente |
-| Shirogumi | Japão | shirogumi.com | pendente |
-| Mukpuddy Animation | Nova Zelândia | mukpuddy.com | pendente |
-| Uniko Estudio | Espanha | unikostudio.com | pendente |
-| PFX | Tchéquia | pfx.tv | pendente |
-| GoldBee | Tchéquia | goldbee.cz | pendente |
+| OLM Digital | Japão | olm.co.jp | portal (só formulário de recrutamento) |
+| Shirogumi | Japão | shirogumi.com | aprovado (info@shirogumi.co.jp via diretório oficial JFDB) |
+| Mukpuddy Animation | Nova Zelândia | mukpuddy.com | descartado (2D puro) |
+| Uniko Estudio | Espanha | uniko.com.es | descartado (produtora audiovisual/2D; fora do foco) |
+| PFX | Tchéquia | pfx.tv | aprovado |
+| GoldBee | Tchéquia | goldbee.cz | descartado (homônimo: marca de roupa/distribuidora; não é estúdio de produção) |
+
+| Cheeky Little Media | Austrália | cheekylittle.com.au | aprovado |
+| nWave Studios | Bélgica | nwave.com | aprovado |
+| Fabrique d'Images | Luxemburgo | fabrique-d-images.com | aprovado |
+| MIAM! animation | França | miam-animation.com | aprovado |
+| Marza Animation Planet | Japão | marza.com | já estava em portal_only (formulário oficial) |
+| Dwarf Animation Studio | França | dwarfanimation.com | já estava em portal_only |
+| Supamonks | França | supamonks.com | já estava em portal_only |
+| ICON Creative Studio | Canadá | iconcreativestudio.com | portal (só ATS) |
+| Orange | Japão | orange-cg.com | portal (sem email público) |
+| Digital Frontier | Japão | dfx.co.jp | portal (sem email público) |
+| Locus / Sidus Animation | Coreia do Sul | locusanimation.com | portal (sem email público) |
+| L'Atelier Animation | Canadá | latelieranimation.com | portal (Cinesite; só ATS) |
+| Arx Anima | Áustria | arxanima.com | portal (sem email público) |
+| Pixel Zoo | Austrália | pixelzoo.com.au | portal (só formulário) |
+| Red Star 3D | Reino Unido | redstar3d.com | portal (sem email público) |
+| Baobab Studios | EUA | baobabstudios.com | portal (sem email público) |
+| Nørlum | Dinamarca | noerlum.com | descartado (foco 2D) |
+| Big Jump Entertainment | Canadá | bigjumpent.com | descartado (2D híbrido; fora do foco) |
+| Squarefish | Bélgica | squarefish.eu | descartado (motion design) |
+| Island of Misfits / IoM | Canadá | islandofmisfits? | descartado (sem email verificado; transição pós-DHX) |
+| Woodblock | Alemanha | woodblock.tv | descartado (duplicado; já contatado) |
+| Studio Soi | Alemanha | studiosoi.de | descartado (duplicado; já contatado) |
+| Walking The Dog | Bélgica | walkingthedog.be | descartado (duplicado; já contatado) |
+| Unit Image | França | unit-image.fr | descartado (duplicado; já contatado) |
+| Steamroller Studios | EUA | steamrollerstudios.com | descartado (duplicado; já contatado) |
+| Rainbow CGI | Itália | rbw-cgi.it | descartado (duplicado; já contatado) |
+| Hampa Studio | Espanha | hampastudio.com | descartado (duplicado; já contatado) |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
