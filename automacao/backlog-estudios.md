@@ -41,8 +41,8 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Polygon Pictures | Japão | ppi.co.jp | aprovado |
 | Marza Animation Planet | Japão | marza.com | portal |
 | Nørlum | Dinamarca | noerlum.com | descartado (2D puro) |
-| A. Film Production | Dinamarca | afilm.com | aprovado |
-| Blue Spirit | França | spirit-prod.com | aprovado |
+| A. Film Production | Dinamarca | afilm.com | descartado (duplicado; já contatado no lote 3) |
+| Blue Spirit | França | spirit-prod.com | descartado (duplicado; já contatado no lote 3) |
 | Superprod | França | superprod.net | portal |
 | WildBrain Studios | Canadá | wildbrain.com | portal |
 | Brown Bag Films | Irlanda | brownbagfilms.com | aprovado |
