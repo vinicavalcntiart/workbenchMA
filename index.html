@@ -306,6 +306,14 @@ const STUDIOS = [
  ["TAT Productions","França","contact@tatprod.com",6,"ok"],
  ["Cyber Group Studios","França","info@cybergroupstudios.com",6,"ok"],
  ["Pipeline Studios","Canadá","info@pipelinestudios.com",6,"ok"],
+ ["Polygon Pictures","Japão","jobs@ppi.co.jp",7,"rascunho"],
+ ["A. Film Production","Dinamarca","info@afilm.dk",7,"rascunho"],
+ ["Blue Spirit","França","info@spirit-prod.com",7,"rascunho"],
+ ["Brown Bag Films","Irlanda","info@brownbagfilms.com",7,"rascunho"],
+ ["Studio Isar Animation","Alemanha","info@isaranimation.com",7,"rascunho"],
+ ["Tonko House","EUA","info@tonkohouse.com",7,"rascunho"],
+ ["Chromosphere","EUA","info@chromosphere-la.com",7,"rascunho"],
+ ["HouseSpecial","EUA","hello@housespecial.com",7,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -336,7 +344,11 @@ const PORTAIS = [
  ["Fortiche Production","França","https://forticheprod.com/contact/","portal","Arcane; aplicação só pelo formulário Become a Forticher"],
  ["Mainframe Studios","Canadá","https://www.mainframe.ca/careers/","portal","Vancouver; séries CG; não aceita submissões por email"],
  ["ICON Creative Studio","Canadá","https://www.iconcreativestudio.com/careers","portal","Maior estúdio CG independente do Canadá; sem email geral público"],
- ["Gigglebug Entertainment","Finlândia","https://gigglebugentertainment.com/jobs/","portal","Helsinque; sem email público; vagas no site"]
+ ["Gigglebug Entertainment","Finlândia","https://gigglebugentertainment.com/jobs/","portal","Helsinque; sem email público; vagas no site"],
+ ["Marza Animation Planet","Japão","https://www.marza.com/en/careers/","portal","Tóquio (grupo Sega); candidatura só via formulário"],
+ ["Superprod Animation","França","https://careers.werecruit.io/en/superprod","portal","Paris e Angoulême; sem email público; vagas no portal"],
+ ["WildBrain Studios","Canadá","https://wildbrain-career.talent-soft.com/","portal","Vancouver; 2D e CG; remoto dentro da British Columbia"],
+ ["Psyop","EUA","https://www.psyop.com/","portal","NY e LA; animação e cinematics para games; candidatura via formulário"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
 const EMAILS_TOTAL = 94, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9]];
