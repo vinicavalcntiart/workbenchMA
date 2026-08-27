@@ -38,3 +38,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Important Looking Pirates (Suécia) — VFX de criaturas/personagens (Mandalorian); sem email público; https://www.ilpvfx.com/
 - Storm Studios (Noruega) — VFX Oslo (The Last of Us); email não verificado publicamente; https://www.stormstudios.no/
 - Ghost VFX (Dinamarca) — Copenhague; só ATS próprio; https://www.ghostvfx.com/
+- Cloth Cat Animation (Reino Unido/País de Gales) — 2D e CG; só email da academia é público; https://clothcat.com/
+- Pingle Studio (Ucrânia) — co-dev; email não verificado publicamente; https://pinglestudio.com/contact
+- Outpost VFX (Reino Unido) — VFX Bournemouth/Montreal/LA; vagas em https://careers.outpost-vfx.com/

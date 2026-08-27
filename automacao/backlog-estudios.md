@@ -73,10 +73,18 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 
 | Starloop Studios | Espanha | starloopstudios.com | aprovado |
 | Virtuos | Singapura | virtuosgames.com | aprovado |
-| Cloth Cat Animation | Reino Unido (País de Gales) | clothcatanimation.com | pendente |
-| Outpost VFX | Reino Unido | outpostvfx.com | pendente |
-| Kevuru Games | Ucrânia | kevurugames.com | pendente |
-| Pingle Studio | Ucrânia | pinglestudio.com | pendente |
-| The Third Floor | Reino Unido/EUA | thethirdfloorinc.com | pendente (previz; verificar encaixe) |
+| Cloth Cat Animation | Reino Unido (País de Gales) | clothcat.com | portal (só email da academia é público) |
+| Outpost VFX | Reino Unido | outpost-vfx.com | portal |
+| Kevuru Games | Ucrânia | kevurugames.com | descartado (duplicado; já contatado no lote 3) |
+| Pingle Studio | Ucrânia | pinglestudio.com | portal (email não verificado) |
+| The Third Floor | Reino Unido/EUA | thethirdfloorinc.com | descartado (previz; fora do foco de personagem) |
+
+| Lightbox Animation Studios | Espanha | lbox.es | aprovado |
+| Passion Pictures | Reino Unido | passion-pictures.com | aprovado |
+| Cube Creative | França | cube-creative.com | pendente |
+| Red Knuckles | Reino Unido | redknuckles.co.uk | pendente |
+| Studio Gobo | Reino Unido | studiogobo.com | pendente (provável portal) |
+| RodeoFX | Canadá | rodeofx.com | pendente (provável portal) |
+| Andarta Pictures | França | andarta-pictures.com | pendente |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
