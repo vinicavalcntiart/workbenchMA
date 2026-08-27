@@ -105,6 +105,24 @@
   #tooltip b { display:block; }
   footer { color:var(--muted); font-size:12px; margin-top:28px; }
   a { color:var(--blue); }
+  /* kit de aplicação */
+  .kit-group { margin:0 0 6px; border:1px solid var(--grid); border-radius:10px; overflow:hidden; }
+  .kit-group summary { cursor:pointer; padding:9px 12px; font-weight:600; font-size:13px; list-style:none; display:flex; align-items:center; gap:8px; }
+  .kit-group summary::before { content:"▸"; color:var(--muted); transition:transform .15s; }
+  .kit-group[open] summary::before { transform:rotate(90deg); }
+  .kit-item { display:flex; gap:10px; align-items:flex-start; padding:8px 12px; border-top:1px solid var(--grid); }
+  .kit-item .kl { flex:0 0 170px; color:var(--ink-2); font-size:12.5px; padding-top:2px; }
+  .kit-item .kv { flex:1; min-width:0; font-size:12.5px; white-space:pre-wrap; word-break:break-word; color:var(--ink);
+    max-height:76px; overflow:hidden; position:relative; }
+  .kit-item .kv.open { max-height:none; }
+  .kit-item .kv.clamped:not(.open)::after { content:""; position:absolute; left:0; right:0; bottom:0; height:26px;
+    background:linear-gradient(transparent, var(--surface)); }
+  .kit-item .kbtns { flex:none; display:flex; flex-direction:column; gap:4px; }
+  .copybtn { border:1px solid var(--axis); background:var(--surface); color:var(--blue); border-radius:7px;
+    padding:3px 10px; cursor:pointer; font:inherit; font-size:12px; }
+  .copybtn.ok { color:var(--good-text); border-color:var(--good); }
+  .morebtn { border:none; background:none; color:var(--muted); cursor:pointer; font:inherit; font-size:11.5px; padding:2px 6px; }
+  @media (max-width:640px){ .kit-item { flex-wrap:wrap; } .kit-item .kl { flex-basis:100%; } }
 </style>
 </head>
 <body>
@@ -121,6 +139,7 @@
     <a href="#visao">📊 Visão geral</a>
     <a href="#acoes">⚡ O que fazer agora</a>
     <a href="#portais">📝 Portais</a>
+    <a href="#kit">🧰 Kit de aplicação</a>
     <a href="#estudios">🏢 Estúdios</a>
   </nav>
 
@@ -174,6 +193,12 @@
       </tr></thead>
       <tbody id="portalRows"></tbody>
     </table>
+  </div>
+
+  <h2 class="sec" id="kit">🧰 Kit de aplicação <span class="badge">copiar e colar nos formulários</span></h2>
+  <div class="card full">
+    <p class="hint">Respostas prontas para os campos típicos de formulário de carreira. Clique em <b>Copiar</b>, cole no campo, anexe CV + cover letter. Nos textos com <code>{STUDIO}</code>, troque pelo nome do estúdio. Nunca citar o salário da E-Line; pretensão é a do kit.</p>
+    <div id="kitList"></div>
   </div>
 
   <h2 class="sec" id="estudios">🏢 Estúdios <span class="badge" id="tableTitle"></span></h2>
@@ -563,6 +588,62 @@ function renderPaises(){
 }
 
 // ---------- portais ----------
+// ---------- kit de aplicação ----------
+const KIT = [
+ ["Dados básicos", [
+  ["Nome","Vini Cavalcanti"],
+  ["Email","contact@vinicavalcanti.art"],
+  ["Telefone","+55 81 97306 2286"],
+  ["Portfólio","https://www.artstation.com/viniciuscavalcanti"],
+  ["LinkedIn","https://www.linkedin.com/in/vinicavalcnti/"],
+  ["Site / escola","https://vinicavalcanti.com"],
+  ["Instagram de arte","https://www.instagram.com/vinicavalcntiart/"],
+  ["Cargo atual","Senior 3D Character Artist at E-Line Media (almost five years)"],
+  ["Anos de experiência","10+ years in stylized 3D characters"],
+  ["Localização / fuso","Based in Brazil (UTC-3); working remotely with a US team (Arizona) for almost five years"],
+  ["Formação","Game Art Specialist (PG Dip), Melies Sao Paulo; MA candidate in Creative Industries, Catholic University of Pernambuco; IELTS certified"],
+  ["Softwares","ZBrush, Maya, Substance Painter, Houdini (grooming), Photoshop, Marmoset, Unreal and Unity (engine integration)"]
+ ]],
+ ["Bios e experiência", [
+  ["Bio curta (50 palavras)","Senior 3D Character Artist with 10+ years in stylized characters. Modeled and hand-painted Season 1 characters on The Wingfeather Saga at Angel Studios. Almost five years at E-Line Media taking Endstar's hero characters from sculpt to engine. Houdini grooming as well. Portfolio: artstation.com/viniciuscavalcanti"],
+  ["Bio média (100 palavras)","I'm Vini Cavalcanti, Senior 3D Character Artist with over ten years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, responsible for Endstar's hero characters from first sculpt to engine, and I also do character grooming in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles, including personal projects built to the same production standard. I also founded an online school where I teach my character workflow at vinicavalcanti.com."],
+  ["Experiência (campo 'describe your experience')","Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Earlier outsourcing background at PUGA Studios delivering characters for international clients. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration."]
+ ]],
+ ["Cover letter e motivação", [
+  ["Cover letter genérica (trocar {STUDIO})","Dear {STUDIO} team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nMy portfolio at artstation.com/viniciuscavalcanti has more than 45 projects with over 60 characters, including personal projects I build to the same production standard as my studio work. I teach my full character workflow at my school, vinicavalcanti.com, which keeps my process documented and repeatable.\n\nI work remotely with US teams daily and I'm comfortable owning a character from concept handoff to engine. I'd be glad to bring that to {STUDIO}.\n\nBest,\nVini Cavalcanti"],
+  ["Por que quer trabalhar aqui (trocar {STUDIO})","{STUDIO}'s character work is the kind I want my name on. I follow the studio's projects and the craft bar is exactly where I operate: appealing stylized characters, built clean, delivered on schedule. I want to bring ten years of character experience to a team that treats characters as the center of the project."],
+  ["Como soube da vaga","I follow the studio's work."]
+ ]],
+ ["Salário, disponibilidade e visto", [
+  ["Pretensão (full-time)","My salary expectation is USD 3,840 per month."],
+  ["Pretensão (anual)","USD 46,000 per year"],
+  ["Pretensão (freelance/projeto)","For freelance or per-project work I'm flexible on structure; happy to align a number to the scope of the project."],
+  ["Disponibilidade / notice period","I can start after a standard transition with my current studio; I'm glad to align dates in the process."],
+  ["Remoto","I've worked fully remote with a US studio for almost five years; overlap with US and European hours is routine for me."],
+  ["Realocação / visto","I'm open to relocating for the right opportunity. I don't hold an EU passport, but with a specialist degree, a master's in progress, IELTS certification and publications, my profile scores well in points-based visa processes, and I'm glad to run the process with the studio's support."],
+  ["Autorização de trabalho (EUA)","I currently work for a US company as an international remote contractor."]
+ ]]
+];
+function renderKit(){
+  const wrap = $("#kitList");
+  wrap.innerHTML = KIT.map(([g,items],gi)=>`<details class="kit-group"${gi===0?" open":""}><summary>${g}</summary>${
+    items.map(([l,v],i)=>{
+      const long = v.length>220;
+      return `<div class="kit-item"><div class="kl">${l}</div><div class="kv${long?" clamped":""}" id="kv-${gi}-${i}">${v.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div><div class="kbtns"><button class="copybtn" data-g="${gi}" data-i="${i}">Copiar</button>${long?`<button class="morebtn" data-t="kv-${gi}-${i}">expandir</button>`:""}</div></div>`;
+    }).join("")}</details>`).join("");
+  wrap.querySelectorAll(".copybtn").forEach(b=>b.addEventListener("click",async ()=>{
+    const txt = KIT[+b.dataset.g][1][+b.dataset.i][1];
+    try { await navigator.clipboard.writeText(txt); }
+    catch(e){ const t=document.createElement("textarea"); t.value=txt; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
+    b.textContent="Copiado ✓"; b.classList.add("ok");
+    setTimeout(()=>{ b.textContent="Copiar"; b.classList.remove("ok"); },1500);
+  }));
+  wrap.querySelectorAll(".morebtn").forEach(b=>b.addEventListener("click",()=>{
+    const kv=document.getElementById(b.dataset.t); kv.classList.toggle("open");
+    b.textContent = kv.classList.contains("open") ? "recolher" : "expandir";
+  }));
+}
+
 function renderPortais(){
   const rows = [...PORTAIS].sort((a,b)=>{
     const pa = isApplied(a)?1:0, pb = isApplied(b)?1:0;
@@ -678,7 +759,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderLotes(); renderPaises(); renderPortais(); renderChips(); renderRows();
+  renderLotes(); renderPaises(); renderPortais(); renderKit(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }

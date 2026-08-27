@@ -1,0 +1,61 @@
+# Kit de aplicação via formulário/portal
+
+Respostas prontas para os campos típicos de formulários de carreira.
+Copiar, colar, anexar CV + cover letter (PDFs) e enviar.
+REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês full-time.
+
+## Dados básicos
+- Nome: Vini Cavalcanti
+- Email: contact@vinicavalcanti.art
+- Telefone: +55 81 97306 2286
+- Portfólio: https://www.artstation.com/viniciuscavalcanti
+- LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+- Site / escola: https://vinicavalcanti.com
+- Instagram de arte: https://www.instagram.com/vinicavalcntiart/
+- Cargo atual: Senior 3D Character Artist at E-Line Media (almost five years)
+- Experiência: 10+ years in stylized 3D characters
+- Localização / fuso: Based in Brazil (UTC-3); working remotely with a US team (Arizona) for almost five years
+- Formação: Game Art Specialist (PG Dip), Melies Sao Paulo; MA candidate in Creative Industries, Catholic University of Pernambuco; IELTS certified
+
+## Bio curta (aprox. 50 palavras)
+Senior 3D Character Artist with 10+ years in stylized characters. Modeled and hand-painted Season 1 characters on The Wingfeather Saga at Angel Studios. Almost five years at E-Line Media taking Endstar's hero characters from sculpt to engine. Houdini grooming as well. Portfolio: artstation.com/viniciuscavalcanti
+
+## Bio média (aprox. 100 palavras)
+I'm Vini Cavalcanti, Senior 3D Character Artist with over ten years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, responsible for Endstar's hero characters from first sculpt to engine, and I also do character grooming in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles, including personal projects built to the same production standard. I also founded an online school where I teach my character workflow at vinicavalcanti.com.
+
+## Cover letter genérica (trocar {STUDIO})
+Dear {STUDIO} team,
+
+I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.
+
+My portfolio at artstation.com/viniciuscavalcanti has more than 45 projects with over 60 characters, including personal projects I build to the same production standard as my studio work. I teach my full character workflow at my school, vinicavalcanti.com, which keeps my process documented and repeatable.
+
+I work remotely with US teams daily and I'm comfortable owning a character from concept handoff to engine. I'd be glad to bring that to {STUDIO}.
+
+Best,
+Vini Cavalcanti
+
+## Por que quer trabalhar aqui (trocar {STUDIO} e 1 frase específica)
+{STUDIO}'s character work is the kind I want my name on. I follow the studio's projects and the craft bar is exactly where I operate: appealing stylized characters, built clean, delivered on schedule. I want to bring ten years of character experience to a team that treats characters as the center of the project.
+
+## Experiência resumida (campo "describe your experience")
+Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Earlier outsourcing background at PUGA Studios delivering characters for international clients. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration.
+
+## Softwares
+ZBrush, Maya, Substance Painter, Houdini (grooming), Photoshop, Marmoset, Unreal and Unity (engine integration)
+
+## Pretensão salarial
+- Full-time: My salary expectation is USD 3,840 per month.
+- Freelance/projeto: For freelance or per-project work I'm flexible on structure; happy to align a number to the scope of the project.
+- Se o campo for anual: USD 46,000 per year (equivalente aproximado).
+
+## Disponibilidade / notice period
+I can start after a standard transition with my current studio; I'm glad to align dates in the process. (Ajustar se quiser prazo específico.)
+
+## Visto / realocação / remoto
+- Remoto: I've worked fully remote with a US studio for almost five years; overlap with US and European hours is routine for me.
+- Realocação: I'm open to relocating for the right opportunity. I don't hold an EU passport, but with a specialist degree, a master's in progress, IELTS certification and publications, my profile scores well in points-based visa processes, and I'm glad to run the process with the studio's support.
+- Autorização de trabalho (EUA): I currently work for a US company as an international remote contractor. (Ajustar conforme o caso.)
+
+## Como soube da vaga
+Campo "How did you hear about us": I follow the studio's work; ou LinkedIn; ou Studio website.
