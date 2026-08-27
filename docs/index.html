@@ -196,7 +196,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    85 emails enviados (80 estúdios + 1 teste + 4 reenvios) ·
+    94 emails enviados (89 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -208,12 +208,13 @@
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente) | rascunho (não enviado)
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
-const UPDATED = "2026-08-26";
+const UPDATED = "2026-08-27";
 // Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
 const ALERTA = "";
 // Uma linha por dia: [data, emails enviados no dia, respostas humanas recebidas no dia] — mantido pela automação.
 const DAILY = [
- ["2026-08-26",85,6]
+ ["2026-08-26",93,6],
+ ["2026-08-27",1,0]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -296,15 +297,15 @@ const STUDIOS = [
  ["Anima Vitae","Finlândia","info@anima.fi",5,"ok"],
  ["Qvisten Animation","Noruega","hedda.toftner@qvisten.no",5,"ok"],
  ["Estúdio Pé Grande","Brasil","hello@estudiopegrande.com.br",5,"ok"],
- ["Golden Wolf","Reino Unido/EUA","hello@goldenwolf.tv",6,"rascunho"],
- ["Tiny Island Productions","Singapura","contact@tinyisland.net",6,"rascunho"],
- ["CraveFX","Singapura","hello@cravefx.com",6,"rascunho"],
- ["Circus","França","contact@circus.fr",6,"rascunho"],
- ["Creative Conspiracy","Bélgica","info@cc.be",6,"rascunho"],
- ["Submarine","Holanda","studiotalent@submarine.nl",6,"rascunho"],
- ["TAT Productions","França","contact@tatprod.com",6,"rascunho"],
- ["Cyber Group Studios","França","info@cybergroupstudios.com",6,"rascunho"],
- ["Pipeline Studios","Canadá","info@pipelinestudios.com",6,"rascunho"],
+ ["Golden Wolf","Reino Unido/EUA","hello@goldenwolf.tv",6,"ok"],
+ ["Tiny Island Productions","Singapura","contact@tinyisland.net",6,"ok"],
+ ["CraveFX","Singapura","hello@cravefx.com",6,"ok"],
+ ["Circus","França","contact@circus.fr",6,"ok"],
+ ["Creative Conspiracy","Bélgica","info@cc.be",6,"ok"],
+ ["Submarine","Holanda","studiotalent@submarine.nl",6,"ok"],
+ ["TAT Productions","França","contact@tatprod.com",6,"ok"],
+ ["Cyber Group Studios","França","info@cybergroupstudios.com",6,"ok"],
+ ["Pipeline Studios","Canadá","info@pipelinestudios.com",6,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -338,7 +339,7 @@ const PORTAIS = [
  ["Gigglebug Entertainment","Finlândia","https://gigglebugentertainment.com/jobs/","portal","Helsinque; sem email público; vagas no site"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
-const EMAILS_TOTAL = 85, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9]];
+const EMAILS_TOTAL = 94, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
