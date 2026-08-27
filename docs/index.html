@@ -339,6 +339,9 @@ const STUDIOS = [
  ["HouseSpecial","EUA","hello@housespecial.com",7,"ok"],
  ["Locksmith Animation","Reino Unido","careers@locksmithanimation.com",8,"rascunho"],
  ["Reel FX","EUA","info@reelfx.com",8,"rascunho"],
+ ["House of Secrets","Holanda","info@houseofsecrets.nl",8,"rascunho"],
+ ["Starloop Studios","Espanha","hello@starloopstudios.com",8,"rascunho"],
+ ["Virtuos","Singapura","info@virtuosgames.com",8,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -380,7 +383,10 @@ const PORTAIS = [
  ["Studio 100 Animation","França","https://studio100group.com/","portal","Maya the Bee e Vic the Viking CG; vagas via grupo"],
  ["DNEG Animation","Reino Unido","https://www.dneg.com/careers","portal","Só ATS próprio"],
  ["Cinesite","Reino Unido/Canadá","https://www.cinesite.com/careers/","portal","Só ATS próprio; Montreal e Vancouver"],
- ["REALTIME","Reino Unido","https://realtimeuk.com/","portal","Cinematics de games em Manchester; sem email geral público"]
+ ["REALTIME","Reino Unido","https://realtimeuk.com/","portal","Cinematics de games em Manchester; sem email geral público"],
+ ["Important Looking Pirates","Suécia","https://www.ilpvfx.com/","portal","VFX de criaturas e personagens (Mandalorian); sem email público"],
+ ["Storm Studios","Noruega","https://www.stormstudios.no/","portal","VFX de Oslo (The Last of Us); email não verificado publicamente"],
+ ["Ghost VFX","Dinamarca","https://www.ghostvfx.com/","portal","Copenhague; só ATS próprio"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
 const EMAILS_TOTAL = 100, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6]];

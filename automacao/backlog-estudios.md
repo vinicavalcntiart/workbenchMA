@@ -65,10 +65,18 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Blink Industries | Reino Unido | blinkindustries.tv | descartado (2D Toon Boom; sem email público) |
 | Aixsponza | Alemanha | aixsponza.com | descartado (motion design; sem foco em personagens) |
 | Yeti Farm Creative | Canadá | yetifarm.com | descartado (sem email público verificado) |
-| Wind Sun Sky Entertainment | Canadá | windsunsky.com | pendente |
-| House of Secrets | Holanda | houseofsecrets.nl | pendente |
-| Storm Studios | Noruega | stormstudios.no | pendente |
-| Ghost VFX | Dinamarca | ghostvfx.com | pendente |
-| Important Looking Pirates | Suécia | ilpvfx.com | pendente |
+| Wind Sun Sky Entertainment | Canadá | windsunsky.com | descartado (produtora multimídia; sem email público) |
+| House of Secrets | Holanda | houseofsecrets.nl | aprovado |
+| Storm Studios | Noruega | stormstudios.no | portal (email não verificado) |
+| Ghost VFX | Dinamarca | ghostvfx.com | portal |
+| Important Looking Pirates | Suécia | ilpvfx.com | portal (sem email público) |
+
+| Starloop Studios | Espanha | starloopstudios.com | aprovado |
+| Virtuos | Singapura | virtuosgames.com | aprovado |
+| Cloth Cat Animation | Reino Unido (País de Gales) | clothcatanimation.com | pendente |
+| Outpost VFX | Reino Unido | outpostvfx.com | pendente |
+| Kevuru Games | Ucrânia | kevurugames.com | pendente |
+| Pingle Studio | Ucrânia | pinglestudio.com | pendente |
+| The Third Floor | Reino Unido/EUA | thethirdfloorinc.com | pendente (previz; verificar encaixe) |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

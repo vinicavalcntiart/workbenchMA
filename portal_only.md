@@ -35,3 +35,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - DNEG Animation (Reino Unido) — só ATS próprio; https://www.dneg.com/careers
 - Cinesite (Reino Unido/Canadá) — só ATS próprio; https://www.cinesite.com/careers/
 - REALTIME (Reino Unido) — cinematics de games (Manchester); sem email geral público; https://realtimeuk.com/
+- Important Looking Pirates (Suécia) — VFX de criaturas/personagens (Mandalorian); sem email público; https://www.ilpvfx.com/
+- Storm Studios (Noruega) — VFX Oslo (The Last of Us); email não verificado publicamente; https://www.stormstudios.no/
+- Ghost VFX (Dinamarca) — Copenhague; só ATS próprio; https://www.ghostvfx.com/
