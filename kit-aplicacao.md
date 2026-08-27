@@ -30,7 +30,7 @@ I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized chara
 
 My portfolio at artstation.com/viniciuscavalcanti has more than 45 projects with over 60 characters, including personal projects I build to the same production standard as my studio work. I teach my full character workflow at my school, vinicavalcanti.com, which keeps my process documented and repeatable.
 
-I work remotely with US teams daily and I'm comfortable owning a character from concept handoff to engine. I'd be glad to bring that to {STUDIO}.
+I work remotely with US teams daily and I'm comfortable owning a character from concept handoff to engine. I'm also open to relocating for the right opportunity: my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. I'd be glad to bring all of that to {STUDIO}.
 
 Best,
 Vini Cavalcanti
@@ -54,7 +54,8 @@ I can start after a standard transition with my current studio; I'm glad to alig
 
 ## Visto / realocação / remoto
 - Remoto: I've worked fully remote with a US studio for almost five years; overlap with US and European hours is routine for me.
-- Realocação: I'm open to relocating for the right opportunity. I don't hold an EU passport, but with a specialist degree, a master's in progress, IELTS certification and publications, my profile scores well in points-based visa processes, and I'm glad to run the process with the studio's support.
+- Realocação (curta): I'm open to relocating for the right opportunity, and my academic background makes a strong visa case: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in progress, IELTS certification and published work.
+- Realocação (longa): I'm open to relocating for the right opportunity. I don't hold an EU passport, but my profile is built for skilled-worker and points-based visa processes: an honors (laurea) academic distinction, a postgraduate specialization in Game Art (Melies Sao Paulo), a master's in Creative Industries in progress (Catholic University of Pernambuco), IELTS certification, and publications both academic and in production. I'm glad to run the visa process with the studio's support, and my ten years of senior experience count toward the requirements most countries apply.
 - Autorização de trabalho (EUA): I currently work for a US company as an international remote contractor. (Ajustar conforme o caso.)
 
 ## Como soube da vaga
