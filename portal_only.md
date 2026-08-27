@@ -41,7 +41,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Cloth Cat Animation (Reino Unido/País de Gales) — 2D e CG; só email da academia é público; https://clothcat.com/
 - Pingle Studio (Ucrânia) — co-dev; email não verificado publicamente; https://pinglestudio.com/contact
 - Outpost VFX (Reino Unido) — VFX Bournemouth/Montreal/LA; vagas em https://careers.outpost-vfx.com/
-- Red Knuckles (Reino Unido) — Emmy e BAFTA; email não verificado publicamente; https://www.redknuckles.co.uk/contact
+- Red Knuckles — SAIU do portal_only: Vini encontrou eps@redknuckles.co.uk na página de contato; tratado por email (lote 9)
 - Studio Gobo (Reino Unido) — co-dev de games; só ATS próprio; https://www.studiogobo.com/careers
 - RodeoFX (Canadá) — VFX Montreal; só ATS próprio; https://www.rodeofx.com/en/careers
 - Like A Photon Creative (Austrália/Irlanda) — features CG infantis; sem email público; https://likeaphoton.com/

@@ -82,7 +82,7 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Lightbox Animation Studios | Espanha | lbox.es | aprovado |
 | Passion Pictures | Reino Unido | passion-pictures.com | aprovado |
 | Cube Creative | França | cube-creative.com | aprovado |
-| Red Knuckles | Reino Unido | redknuckles.co.uk | portal (email não verificado) |
+| Red Knuckles | Reino Unido | redknuckles.co.uk | aprovado (eps@ encontrado pelo Vini na página de contato) |
 | Studio Gobo | Reino Unido | studiogobo.com | portal |
 | RodeoFX | Canadá | rodeofx.com | portal |
 | Andarta Pictures | França | andarta-pictures.com | descartado (2D puro) |
