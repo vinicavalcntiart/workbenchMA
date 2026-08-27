@@ -16,6 +16,12 @@ REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês ful
 - Experiência: 10+ years in stylized 3D characters
 - Localização / fuso: Based in Brazil (UTC-3); working remotely with a US team (Arizona) for almost five years
 - Formação: Game Art Specialist (PG Dip), Melies Sao Paulo; MA candidate in Creative Industries, Catholic University of Pernambuco; IELTS certified
+- Title (tratamento): Mr
+- Endereço (Address 1): Estrada do Bonsucesso, 209
+- Cidade (Town/City): Olinda
+- Estado (County/State): Pernambuco
+- País (Country): Brazil
+- CEP (Postcode/Zip): 53240-480
 
 ## Bio curta (aprox. 50 palavras)
 Senior 3D Character Artist with 10+ years in stylized characters. Modeled and hand-painted Season 1 characters on The Wingfeather Saga at Angel Studios. Almost five years at E-Line Media taking Endstar's hero characters from sculpt to engine. Houdini grooming as well. Portfolio: artstation.com/viniciuscavalcanti
@@ -57,6 +63,9 @@ I can start after a standard transition with my current studio; I'm glad to alig
 - Realocação (curta): I'm open to relocating for the right opportunity, and my academic background makes a strong visa case: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in progress, IELTS certification and published work.
 - Realocação (longa): I'm open to relocating for the right opportunity. I don't hold an EU passport, but my profile is built for skilled-worker and points-based visa processes: an honors (laurea) academic distinction, a postgraduate specialization in Game Art (Melies Sao Paulo), a master's in Creative Industries in progress (Catholic University of Pernambuco), IELTS certification, and publications both academic and in production. I'm glad to run the visa process with the studio's support, and my ten years of senior experience count toward the requirements most countries apply.
 - Autorização de trabalho (EUA): I currently work for a US company as an international remote contractor. (Ajustar conforme o caso.)
+- Right to work no país (campo de texto livre): I don't hold the right to work locally yet and would need sponsorship. My profile is built for skilled-worker visas: honors laurea, postgraduate specialization, a master's in progress, IELTS and publications. I already work fully remote for a US studio, so I can start remotely while the visa process runs and relocate as soon as it clears.
+- Precisa de sponsorship (sim/não + comentário): Yes. I'm glad to run the process with the studio's support; profiles like mine score well in points-based routes, and I can work remotely during the transition.
+- REGRA: em checkbox binário de "right to work", responder a verdade. Mentir derruba a candidatura na checagem documental e pode queimar o estúdio inteiro. A estratégia é vender o caso de visto nos campos de texto, não burlar o filtro.
 
 ## Como soube da vaga
 Campo "How did you hear about us": I follow the studio's work; ou LinkedIn; ou Studio website.
