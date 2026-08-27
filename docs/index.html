@@ -197,7 +197,12 @@
 
   <h2 class="sec" id="kit">🧰 Kit de aplicação <span class="badge">copiar e colar nos formulários</span></h2>
   <div class="card full">
-    <p class="hint">Respostas prontas para os campos típicos de formulário de carreira. Clique em <b>Copiar</b>, cole no campo, anexe CV + cover letter. Nos textos com <code>{STUDIO}</code>, troque pelo nome do estúdio. Nunca citar o salário da E-Line; pretensão é a do kit.</p>
+    <p class="hint">Respostas prontas para os campos típicos de formulário de carreira. Clique em <b>Copiar</b>, cole no campo, anexe CV + cover letter. Nunca citar o salário da E-Line; pretensão é a do kit.</p>
+    <div class="controls" style="margin-bottom:12px">
+      <label for="kitStudio" style="color:var(--ink-2); font-size:13px">Aplicando para:</label>
+      <select id="kitStudio"></select>
+      <span class="hint" id="kitStudioHint" style="margin:0"></span>
+    </div>
     <div id="kitList"></div>
   </div>
 
@@ -654,15 +659,50 @@ const KIT = [
   ["Precisa de sponsorship? (sim/não + comentário)","Yes. I'm glad to run the process with the studio's support; profiles like mine score well in points-based routes, and I can work remotely during the transition."]
  ]]
 ];
+const KIT_STUDIO_KEY = "campanha-kit-studio-v1";
+function kitStudioName(){
+  try { return localStorage.getItem(KIT_STUDIO_KEY) || ""; } catch(e){ return ""; }
+}
+function kitText(raw){
+  const s = kitStudioName();
+  return s ? raw.split("{STUDIO}").join(s) : raw;
+}
+function setupKitStudio(){
+  const sel = $("#kitStudio");
+  const pend = PORTAIS.filter(p=>!isApplied(p)).map(p=>p.name);
+  const done = PORTAIS.filter(p=>isApplied(p)).map(p=>p.name);
+  const others = CONTACTED.map(s=>s.name).filter(n=>!pend.includes(n)&&!done.includes(n)).sort((a,b)=>a.localeCompare(b));
+  const opt = n=>`<option value="${n.replace(/"/g,"&quot;")}">${n}</option>`;
+  sel.innerHTML = `<option value="">— escolha o estúdio —</option>`
+    + (pend.length?`<optgroup label="Portais pendentes">${pend.map(opt).join("")}</optgroup>`:"")
+    + (done.length?`<optgroup label="Portais aplicados">${done.map(opt).join("")}</optgroup>`:"")
+    + `<optgroup label="Outros estúdios contatados">${others.map(opt).join("")}</optgroup>`;
+  sel.value = kitStudioName();
+  if(sel.value==="" && kitStudioName()!=="") sel.value="";
+  sel.addEventListener("change",()=>{
+    try { localStorage.setItem(KIT_STUDIO_KEY, sel.value); } catch(e){}
+    renderKit();
+  });
+  updateKitHint();
+}
+function updateKitHint(){
+  const s = kitStudioName();
+  $("#kitStudioHint").innerHTML = s
+    ? `Textos com <code>{STUDIO}</code> já saem como <b>${s}</b>.`
+    : `Escolha o estúdio para os textos trocarem <code>{STUDIO}</code> automaticamente.`;
+}
 function renderKit(){
+  updateKitHint();
   const wrap = $("#kitList");
-  wrap.innerHTML = KIT.map(([g,items],gi)=>`<details class="kit-group"${gi===0?" open":""}><summary>${g}</summary>${
+  const open = [...wrap.querySelectorAll("details")].map(d=>d.open);
+  wrap.innerHTML = KIT.map(([g,items],gi)=>`<details class="kit-group"${(open.length?open[gi]:gi===0)?" open":""}><summary>${g}</summary>${
     items.map(([l,v],i)=>{
-      const long = v.length>220;
-      return `<div class="kit-item"><div class="kl">${l}</div><div class="kv${long?" clamped":""}" id="kv-${gi}-${i}">${v.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div><div class="kbtns"><button class="copybtn" data-g="${gi}" data-i="${i}">Copiar</button>${long?`<button class="morebtn" data-t="kv-${gi}-${i}">expandir</button>`:""}</div></div>`;
+      const t = kitText(v);
+      const long = t.length>220;
+      return `<div class="kit-item"><div class="kl">${l}</div><div class="kv${long?" clamped":""}" id="kv-${gi}-${i}">${t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div><div class="kbtns"><button class="copybtn" data-g="${gi}" data-i="${i}">Copiar</button>${long?`<button class="morebtn" data-t="kv-${gi}-${i}">expandir</button>`:""}</div></div>`;
     }).join("")}</details>`).join("");
   wrap.querySelectorAll(".copybtn").forEach(b=>b.addEventListener("click",async ()=>{
-    const txt = KIT[+b.dataset.g][1][+b.dataset.i][1];
+    const txt = kitText(KIT[+b.dataset.g][1][+b.dataset.i][1]);
     try { await navigator.clipboard.writeText(txt); }
     catch(e){ const t=document.createElement("textarea"); t.value=txt; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
     b.textContent="Copiado ✓"; b.classList.add("ok");
@@ -789,7 +829,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderLotes(); renderPaises(); renderPortais(); renderKit(); renderChips(); renderRows();
+  renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
