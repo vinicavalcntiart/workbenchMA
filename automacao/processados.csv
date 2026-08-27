@@ -49,3 +49,4 @@ data,estudio,email,message_id,tipo,acao
 2026-08-27,REALTIME,aplicacao-manual,aplicacao-manual,portal-aplicado,Vini aplicou pelo portal realtimeuk.com; PORTAIS marcado como feito
 2026-08-27,Xilam Animation,aplicacao-manual,aplicacao-manual,portal-aplicado,Vini aplicou pelo site xilam.com; PORTAIS marcado como feito
 2026-08-27,Passion Republic,aplicacao-manual,aplicacao-manual,portal-aplicado,Vini re-submeteu via formulário noteforms conforme pedido da Sofea (Senior HR); PORTAIS marcado como feito
+2026-08-27,Fortiche Production,formulario,formulario,portal-falhou,Formulário Become a Forticher não envia (testado com e sem VPN; data futura; consentimento ok); retentar em alguns dias
