@@ -18,7 +18,7 @@ Hi {TEAM},
 
 Thanks for letting me know, and for taking the time to reply. Most studios don't.
 
-If it's alright, I'd like to stay on your radar for future character work. My portfolio is at artstation.com/viniciuscavalcanti. The Wingfeather Saga and Endstar pieces are the closest to what you do, and the Houdini grooming work is there as well.
+If it's alright, I'd like to stay on your radar for future character work. My portfolio is at artstation.com/viniciuscavalcanti: more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces there, built to the same production standard as my studio work. The Houdini grooming breakdowns are there as well.
 
 If an opening comes up on the character side down the line, I'd be glad to hear from you.
 
