@@ -196,7 +196,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    94 emails enviados (89 estúdios + 1 teste + 4 reenvios) ·
+    100 emails enviados (95 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -214,7 +214,7 @@ const ALERTA = "";
 // Uma linha por dia: [data, emails enviados no dia, respostas humanas recebidas no dia] — mantido pela automação.
 const DAILY = [
  ["2026-08-26",93,6],
- ["2026-08-27",1,0]
+ ["2026-08-27",7,1]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -306,12 +306,12 @@ const STUDIOS = [
  ["TAT Productions","França","contact@tatprod.com",6,"ok"],
  ["Cyber Group Studios","França","info@cybergroupstudios.com",6,"ok"],
  ["Pipeline Studios","Canadá","info@pipelinestudios.com",6,"ok"],
- ["Polygon Pictures","Japão","jobs@ppi.co.jp",7,"rascunho"],
- ["Brown Bag Films","Irlanda","info@brownbagfilms.com",7,"rascunho"],
- ["Studio Isar Animation","Alemanha","info@isaranimation.com",7,"rascunho"],
- ["Tonko House","EUA","info@tonkohouse.com",7,"rascunho"],
- ["Chromosphere","EUA","info@chromosphere-la.com",7,"rascunho"],
- ["HouseSpecial","EUA","hello@housespecial.com",7,"rascunho"],
+ ["Polygon Pictures","Japão","jobs@ppi.co.jp",7,"ok"],
+ ["Brown Bag Films","Irlanda","info@brownbagfilms.com",7,"ok"],
+ ["Studio Isar Animation","Alemanha","info@isaranimation.com",7,"ok"],
+ ["Tonko House","EUA","info@tonkohouse.com",7,"ok"],
+ ["Chromosphere","EUA","info@chromosphere-la.com",7,"ok"],
+ ["HouseSpecial","EUA","hello@housespecial.com",7,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -324,6 +324,7 @@ const PORTAIS = [
  ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Email quicou; formulário do site é o único canal"],
  ["Guru Studio","Canadá","https://gurustudio.com/careers","email","Email quicou (info@ é Google Group fechado, sem alternativa pública); aplicar na General Application do portal — Head of Talent: Sue Jung"],
  ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)"],
+ ["Passion Republic","Malásia","https://noteforms.com/forms/pr-career-application-sjj7ie","email","Sofea (Senior HR) pediu re-submissão pelo formulário de carreiras para seguir com o processo"],
  ["Blur Studio","EUA","https://blur.com/careers","portal","Cinematics AAA e Love Death + Robots; reel via portal próprio"],
  ["Platige Image","Polônia","https://platige.com/careers/","portal","Portal de vagas próprio (email geral também recebeu rascunho)"],
  ["Magic Media","Chipre","https://careers.magicmedia.studio/","portal","Vagas permanentemente remotas"],
@@ -349,7 +350,7 @@ const PORTAIS = [
  ["Psyop","EUA","https://www.psyop.com/","portal","NY e LA; animação e cinematics para games; candidatura via formulário"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
-const EMAILS_TOTAL = 94, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9]];
+const EMAILS_TOTAL = 100, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
