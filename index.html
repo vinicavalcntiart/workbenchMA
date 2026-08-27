@@ -226,7 +226,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    100 emails enviados (95 estúdios + 1 teste + 4 reenvios) ·
+    107 emails enviados (102 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -244,7 +244,7 @@ const ALERTA = "";
 // Uma linha por dia: [data, emails enviados no dia, respostas humanas recebidas no dia] — mantido pela automação.
 const DAILY = [
  ["2026-08-26",93,6],
- ["2026-08-27",7,5]
+ ["2026-08-27",14,5]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -342,13 +342,13 @@ const STUDIOS = [
  ["Tonko House","EUA","info@tonkohouse.com",7,"ok"],
  ["Chromosphere","EUA","info@chromosphere-la.com",7,"ok"],
  ["HouseSpecial","EUA","hello@housespecial.com",7,"ok"],
- ["Locksmith Animation","Reino Unido","careers@locksmithanimation.com",8,"rascunho"],
- ["Reel FX","EUA","info@reelfx.com",8,"rascunho"],
- ["House of Secrets","Holanda","info@houseofsecrets.nl",8,"rascunho"],
- ["Starloop Studios","Espanha","hello@starloopstudios.com",8,"rascunho"],
- ["Virtuos","Singapura","info@virtuosgames.com",8,"rascunho"],
- ["Lightbox Animation Studios","Espanha","lightbox@lbox.es",8,"rascunho"],
- ["Passion Pictures","Reino Unido","reception@passion-pictures.com",8,"rascunho"],
+ ["Locksmith Animation","Reino Unido","careers@locksmithanimation.com",8,"ok"],
+ ["Reel FX","EUA","info@reelfx.com",8,"ok"],
+ ["House of Secrets","Holanda","info@houseofsecrets.nl",8,"ok"],
+ ["Starloop Studios","Espanha","hello@starloopstudios.com",8,"ok"],
+ ["Virtuos","Singapura","info@virtuosgames.com",8,"ok"],
+ ["Lightbox Animation Studios","Espanha","lightbox@lbox.es",8,"ok"],
+ ["Passion Pictures","Reino Unido","reception@passion-pictures.com",8,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -401,7 +401,7 @@ const PORTAIS = [
  ["Outpost VFX","Reino Unido","https://careers.outpost-vfx.com/","portal","Bournemouth/Montreal/LA; vagas via portal próprio"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
-const EMAILS_TOTAL = 100, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6]];
+const EMAILS_TOTAL = 107, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
