@@ -38,15 +38,27 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Pipeline Studios | Canadá | pipelinestudios.com | aprovado |
 | Mainframe Studios | Canadá | mainframe.ca | portal |
 | ICON Creative Studio | Canadá | iconcreativestudio.com | portal |
-| Polygon Pictures | Japão | ppi.co.jp | pendente |
-| Marza Animation Planet | Japão | marza.com | pendente |
-| Nørlum | Dinamarca | norlum.com | pendente |
-| A. Film Production | Dinamarca | afilm.dk | pendente |
-| Blue Spirit | França | bluespirit.com | pendente |
-| Superprod | França | superprod.net | pendente |
-| WildBrain Studios | Canadá | wildbrain.com | pendente |
-| Brown Bag Films | Irlanda | brownbagfilms.com | pendente |
-| Studio Isar Animation | Alemanha | studioisar.com | pendente |
+| Polygon Pictures | Japão | ppi.co.jp | aprovado |
+| Marza Animation Planet | Japão | marza.com | portal |
+| Nørlum | Dinamarca | noerlum.com | descartado (2D puro) |
+| A. Film Production | Dinamarca | afilm.com | aprovado |
+| Blue Spirit | França | spirit-prod.com | aprovado |
+| Superprod | França | superprod.net | portal |
+| WildBrain Studios | Canadá | wildbrain.com | portal |
+| Brown Bag Films | Irlanda | brownbagfilms.com | aprovado |
+| Studio Isar Animation | Alemanha | isaranimation.com | aprovado |
 | Cinesite Montreal/Vancouver | Canadá | cinesite.com | pendente (provável portal) |
+
+| Tonko House | EUA | tonkohouse.com | aprovado |
+| Chromosphere | EUA | chromosphere-la.com | aprovado |
+| HouseSpecial | EUA | housespecial.com | aprovado |
+| Psyop | EUA | psyop.com | portal |
+| Cyborn | Bélgica | cyborn.be | pendente |
+| Xilam Animation | França | xilam.com | pendente |
+| Studio 100 Animation | França | studio100animation.net | pendente |
+| ReelFX | EUA | reelfx.com | pendente |
+| Locksmith Animation | Reino Unido | locksmithanimation.com | pendente |
+| DNEG Animation | Reino Unido | dneg.com | pendente (provável portal) |
+| Jellyfish Pictures | Reino Unido | jellyfishpictures.co.uk | pendente (verificar situação financeira) |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

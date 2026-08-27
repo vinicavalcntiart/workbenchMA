@@ -26,3 +26,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Fortiche Production (França) — Arcane; aplicação só pelo formulário "Become a Forticher" em https://forticheprod.com/contact/
 - Mainframe Studios (Canadá) — sem email público, não aceita submissões não solicitadas; vagas em https://www.mainframe.ca/careers/
 - ICON Creative Studio (Canadá) — maior estúdio CG independente do Canadá; sem email geral público verificado; vagas em https://www.iconcreativestudio.com/careers
+- Marza Animation Planet (Japão) — candidatura só via formulário em https://www.marza.com/en/careers/
+- Superprod Animation (França) — sem email público; vagas em https://careers.werecruit.io/en/superprod
+- WildBrain Studios (Canadá) — só recepção por email; vagas em https://wildbrain-career.talent-soft.com/
+- Psyop (EUA) — candidatura via formulário do site em https://www.psyop.com/
