@@ -81,10 +81,19 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 
 | Lightbox Animation Studios | Espanha | lbox.es | aprovado |
 | Passion Pictures | Reino Unido | passion-pictures.com | aprovado |
-| Cube Creative | França | cube-creative.com | pendente |
-| Red Knuckles | Reino Unido | redknuckles.co.uk | pendente |
-| Studio Gobo | Reino Unido | studiogobo.com | pendente (provável portal) |
-| RodeoFX | Canadá | rodeofx.com | pendente (provável portal) |
-| Andarta Pictures | França | andarta-pictures.com | pendente |
+| Cube Creative | França | cube-creative.com | aprovado |
+| Red Knuckles | Reino Unido | redknuckles.co.uk | portal (email não verificado) |
+| Studio Gobo | Reino Unido | studiogobo.com | portal |
+| RodeoFX | Canadá | rodeofx.com | portal |
+| Andarta Pictures | França | andarta-pictures.com | descartado (2D puro) |
+
+| Able & Baker | Espanha | ableandbakerstudios.com | descartado (duplicado; já contatado no lote 3) |
+| Like A Photon Creative | Austrália/Irlanda | likeaphoton.com | portal (sem email público) |
+| OLM Digital | Japão | olm.co.jp | pendente |
+| Shirogumi | Japão | shirogumi.com | pendente |
+| Mukpuddy Animation | Nova Zelândia | mukpuddy.com | pendente |
+| Uniko Estudio | Espanha | unikostudio.com | pendente |
+| PFX | Tchéquia | pfx.tv | pendente |
+| GoldBee | Tchéquia | goldbee.cz | pendente |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
