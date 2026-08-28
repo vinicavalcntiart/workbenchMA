@@ -61,3 +61,9 @@ data,estudio,email,message_id,tipo,acao
 2026-08-28,Passion Republic,jenny@passionrepublic.com,1a045e1e8121002f,confirmacao-portal,Aplicação confirmada na vaga Modeling Artist; em análise pelo RH
 2026-08-28,Cyber Group Studios,mailer-daemon@googlemail.com,1a045c2d2112022e,delivery-delay,Entrega temporariamente atrasada para info@cybergroupstudios.com; Gmail retenta por 47h
 2026-08-28,Submarine,studiotalent@submarine.nl,1a048031faa18f8b,cortesia,Milo (Head of Animation Recruitment) respondeu ao template agradecendo e mantendo contato; sem ação
+2026-08-28,DreamWall,emma.dupire@dreamwall.be,1a0485c9fa932c40,pedido-portal,Auto-reply oficial: candidatura só via Talentsquare (dreamwall.be/en/jobs); adicionado ao PORTAIS
+2026-08-28,Plastic Wax,recruitment+noreply@plasticwax.com,1a04852152a6dee7,pedido-info,Auto-reply pediu right to work AUS + pretensão + disponibilidade + início + localização e grupo de recrutamento no Facebook; Vini responde pessoalmente
+2026-08-28,Mac Guff,recrutement@macguff.fr,1a04852a96a5fcbe,confirmacao-recebimento,Auto-reply confirmou recebimento da candidatura
+2026-08-28,Mac Guff,cseignolle@macguff.eu,1a04852bafd7cb4f,fora-do-escritorio,OOO até 28/08; sem ação
+2026-08-28,Studio 100 Animation,mailer-daemon@googlemail.com,1a04854559ca83da,bounce,550 endereço não existe; movido para PORTAIS (grupo Studio 100)
+2026-08-28,nWave Studios,mailer-daemon@googlemail.com,1a048507de8568ae,bounce,550 endereço não existe (2x; reenvio do Vini também falhou); movido para PORTAIS (nwave.com/jobs)
