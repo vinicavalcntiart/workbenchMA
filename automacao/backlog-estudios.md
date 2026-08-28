@@ -180,4 +180,9 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Watch Next Media | França | watchnextmedia.com | aprovado |
 | Method Animation / Mediawan | França | mediawankidsandfamily.com | portal (sem email público) |
 
+| Maga Animation Studio | Itália | maga-animation.com | aprovado |
+| Caribara Animation | França | caribara-animation.com | pendente |
+| Studio Hari | França | studiohari.com | pendente |
+| Gaumont Animation | França | gaumont.com | pendente |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

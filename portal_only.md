@@ -89,3 +89,5 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Wargaming (Europa) — 3D Character Artist stylized (título não anunciado); via gamejobs.co
 - VAGA: nDreams Studio Elevation (Reino Unido; remoto) — 3D Character Artist VR; via gamejobs.co
 - VAGA: Hidden Acorn (remoto) — 3D Character Artist stylized em UE5; via hitmarker
+- VAGA: DuskSoft Studios (remoto) — Stylized 3D Character Artist, contrato, hand-painted/PBR contido, publicada 17/08; via workwithindies.com
+- VAGA: Room 8 Studio (internacional/remoto) — Senior 3D Stylized Characters Artist; via room8studio.com/talent
