@@ -72,3 +72,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Klang Games (Alemanha) — Berlim (Seed); email não exibido publicamente; https://klang-games.com/careers
 - Studio Rakete (Alemanha) — Hamburgo; serviço de animação; sem email público; http://www.studiorakete.de/en/kontakt-2/
 - RISE Visual Effects Studios (Alemanha) — VFX Berlim/Colônia/Munique; só portal em https://www.risefx.com/rise-visual-effects-studios-jobs.php
+- Sola Digital Arts (Japão) — CG de ULTRAMAN e SAC_2045; sem email público; https://sola-digital.com/
+- Kamikaze Douga (Japão) — CG estilizado (Star Wars: Visions); sem email público; https://kamikazedouga.co.jp/
+- Coatsink (Reino Unido) — games VR/console; sem email geral público; https://coatsink.com/contact

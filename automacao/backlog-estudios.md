@@ -168,4 +168,13 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Ember Lab | EUA | emberlab.com | descartado (duplicado; já contatado) |
 | Airship Syndicate | EUA | airshipsyndicate.com | descartado (duplicado; já contatado) |
 
+| Keos Masons | Canadá | keosmasons.com | aprovado |
+| Sola Digital Arts | Japão | sola-digital.com | portal (sem email público) |
+| Kamikaze Douga | Japão | kamikazedouga.co.jp | portal (sem email público) |
+| Coatsink | Reino Unido | coatsink.com | portal (sem email geral público) |
+| Atomhawk | Reino Unido | atomhawk.com | descartado (foco concept/2D) |
+| Daily Madness Productions | Irlanda | dailymadness.tv | descartado (sem email verificado; foco serviço 2D) |
+| Puppetworks | Hungria | puppetworks.hu | descartado (duplicado; já contatado) |
+| Nexus Studios | Reino Unido | nexusstudios.com | descartado (duplicado; já contatado) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
