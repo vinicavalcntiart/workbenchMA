@@ -226,7 +226,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    130 emails enviados (125 estúdios + 1 teste + 4 reenvios) ·
+    132 emails enviados (127 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -245,7 +245,7 @@ const ALERTA = "";
 const DAILY = [
  ["2026-08-26",93,6],
  ["2026-08-27",16,6],
- ["2026-08-28",21,1]
+ ["2026-08-28",23,1]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -373,8 +373,8 @@ const STUDIOS = [
  ["Polyarc","EUA","contact@polyarcgames.com",10,"ok"],
  ["Gimpville","Noruega","oslo@gimpville.no",10,"ok"],
  ["Keos Masons","Canadá","info@keosmasons.com",10,"ok"],
- ["Watch Next Media","França","contact@watchnextmedia.com",11,"rascunho"],
- ["Maga Animation Studio","Itália","contact@maga-animation.com",11,"rascunho"],
+ ["Watch Next Media","França","contact@watchnextmedia.com",11,"ok"],
+ ["Maga Animation Studio","Itália","contact@maga-animation.com",11,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -449,7 +449,7 @@ const PORTAIS = [
  ["Like A Photon Creative","Austrália","https://likeaphoton.com/","portal","Features CG infantis (Brisbane e Dublin); sem email público"]
 ].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
 
-const EMAILS_TOTAL = 130, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21]];
+const EMAILS_TOTAL = 132, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
