@@ -83,3 +83,9 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Streamline Games (remoto) — Lead Character Artist, 100% remoto; via gamejobs.co
 - Hasbro Skeleton Key (EUA/Canadá) — Lead Character Artist, Austin/Montreal; via gamejobs.co
 - PUBG Madison (EUA/Canadá) — Senior Character Artist fixed-term, remoto US/CA; via gamejobs.co
+- Method Animation / Mediawan Kids & Family (França) — Miraculous e séries CG; sem email público; https://mediawankidsandfamily.com/studios
+- VAGA: Sumo Digital (Reino Unido; remoto/híbrido) — 3D Character Artist para jogos estilizados; via gamejobs.co
+- VAGA: Blackbird Interactive (Canadá) — Senior 3D Character Artist em jogo de direção de arte estilizada; via gamejobs.co
+- VAGA: Wargaming (Europa) — 3D Character Artist stylized (título não anunciado); via gamejobs.co
+- VAGA: nDreams Studio Elevation (Reino Unido; remoto) — 3D Character Artist VR; via gamejobs.co
+- VAGA: Hidden Acorn (remoto) — 3D Character Artist stylized em UE5; via hitmarker

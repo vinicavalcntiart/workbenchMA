@@ -177,4 +177,7 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Puppetworks | Hungria | puppetworks.hu | descartado (duplicado; já contatado) |
 | Nexus Studios | Reino Unido | nexusstudios.com | descartado (duplicado; já contatado) |
 
+| Watch Next Media | França | watchnextmedia.com | aprovado |
+| Method Animation / Mediawan | França | mediawankidsandfamily.com | portal (sem email público) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
