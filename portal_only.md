@@ -60,3 +60,15 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Anima Inc. (Japão) — CG de games e anime (Star Wars: Visions); sem email público; https://animainc.jp/
 - Sanzigen (Japão) — 3DCG com look de anime tradicional; sem email público; https://www.sanzigen.co.jp/
 - Mighty Nice (Austrália) — CG de alto acabamento para marcas (Apple; Google; Disney+); sem email geral público; https://mightynice.com.au/connect-connect-now
+- Ankama (França) — Wakfu/Dofus; vagas 3D abertas; só portal em https://recrutement.ankama.com/jobs
+- Squanch Games (EUA) — stylized 3D (High on Life); só ATS em https://squanch-games.rippling-ats.com/
+- SYBO (Dinamarca) — Subway Surfers; só portal em https://sybo.teamtailor.com/jobs
+- Rovio (Finlândia) — Angry Birds; vagas de arte em https://www.rovio.com/careers/
+- Behaviour Interactive (Canadá) — Montreal; co-dev e jogos próprios; só portal em https://www.bhvr.com/jobs/
+- Metacore (Finlândia) — Merge Mansion; só Greenhouse em https://job-boards.eu.greenhouse.io/metacore
+- Supercell (Finlândia) — Brawl Stars etc; vagas de arte em https://supercell.com/en/careers/
+- Volta (Canadá) — visual development 2D/3D (grupo Keywords); sem email público; https://www.volta.ca/
+- Amber (Romênia) — co-dev global; só formulário em https://amberstudio.com/
+- Klang Games (Alemanha) — Berlim (Seed); email não exibido publicamente; https://klang-games.com/careers
+- Studio Rakete (Alemanha) — Hamburgo; serviço de animação; sem email público; http://www.studiorakete.de/en/kontakt-2/
+- RISE Visual Effects Studios (Alemanha) — VFX Berlim/Colônia/Munique; só portal em https://www.risefx.com/rise-visual-effects-studios-jobs.php

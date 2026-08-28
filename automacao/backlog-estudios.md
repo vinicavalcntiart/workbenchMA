@@ -146,4 +146,26 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Kavaleer Productions | Irlanda | kavaleer.com | descartado (duplicado; já contatado) |
 | Piranha Bar | Irlanda | piranhabar.ie | descartado (duplicado; já contatado) |
 
+| Moon Studios | Áustria (remoto) | moongamestudios.com | aprovado |
+| QLOC | Polônia | q-loc.com | aprovado |
+| Ars Thanea | Polônia | arsthanea.com | aprovado |
+| Polyarc | EUA | polyarcgames.com | aprovado |
+| Gimpville | Noruega | gimpville.no | aprovado |
+| Ankama | França | ankama.com | portal (só portal de recrutamento) |
+| Squanch Games | EUA | squanchgames.com | portal (só ATS) |
+| SYBO | Dinamarca | sybogames.com | portal (só Teamtailor) |
+| Rovio | Finlândia | rovio.com | portal (só careers) |
+| Behaviour Interactive | Canadá | bhvr.com | portal (só careers) |
+| Metacore | Finlândia | metacoregames.com | portal (só Greenhouse) |
+| Supercell | Finlândia | supercell.com | portal (só careers) |
+| Volta | Canadá | volta.ca | portal (Keywords; sem email público) |
+| Amber | Romênia | amberstudio.com | portal (só formulário) |
+| Klang Games | Alemanha | klang-games.com | portal (email não exibido) |
+| Studio Rakete | Alemanha | studiorakete.de | portal (sem email público) |
+| RISE Visual Effects Studios | Alemanha | risefx.com | portal (só portal de vagas) |
+| ToonBox Entertainment | Canadá | toonboxent.com | descartado (faliu em 2019) |
+| LAVAlabs Moving Images | Alemanha | lavalabs.de | descartado (email não verificável; domínio ambíguo) |
+| Ember Lab | EUA | emberlab.com | descartado (duplicado; já contatado) |
+| Airship Syndicate | EUA | airshipsyndicate.com | descartado (duplicado; já contatado) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
