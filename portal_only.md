@@ -31,7 +31,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - WildBrain Studios (Canadá) — só recepção por email; vagas em https://wildbrain-career.talent-soft.com/
 - Psyop (EUA) — candidatura via formulário do site em https://www.psyop.com/
 - Xilam Animation (França) — CG e 2D (Oggy Oggy); sem email atual verificado; contato em https://xilam.com/en/contact-us/
-- Studio 100 Animation (França) — Maya the Bee, Vic the Viking CG; email não confirmável em fonte oficial; vagas via grupo em https://studio100group.com/
+- Studio 100 Animation — SAIU do portal_only: info@studio100animation.com encontrado na página de contato do site oficial; tratado por email (lote 10)
 - DNEG Animation (Reino Unido) — só ATS próprio; https://www.dneg.com/careers
 - Cinesite (Reino Unido/Canadá) — só ATS próprio; https://www.cinesite.com/careers/
 - REALTIME (Reino Unido) — cinematics de games (Manchester); sem email geral público; https://realtimeuk.com/
@@ -55,3 +55,8 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Pixel Zoo (Austrália) — CG de marcas infantis (Rainbow High); só formulário; https://pixelzoo.com.au/contact/
 - Red Star 3D (Reino Unido) — CG em Sheffield; sem email público; https://www.redstar3d.com/
 - Baobab Studios (EUA) — animação interativa premiada; sem email público; https://www.baobabstudios.com/
+- ZAG Studios (França) — CG séries (Miraculous); sem email público; vagas em https://join.com/companies/zag2
+- Graphinica (Japão) — 3DCG anime (Tóquio/Quioto/Sapporo); sem email público; https://www.graphinica.com/
+- Anima Inc. (Japão) — CG de games e anime (Star Wars: Visions); sem email público; https://animainc.jp/
+- Sanzigen (Japão) — 3DCG com look de anime tradicional; sem email público; https://www.sanzigen.co.jp/
+- Mighty Nice (Austrália) — CG de alto acabamento para marcas (Apple; Google; Disney+); sem email geral público; https://mightynice.com.au/connect-connect-now

@@ -124,4 +124,26 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Rainbow CGI | Itália | rbw-cgi.it | descartado (duplicado; já contatado) |
 | Hampa Studio | Espanha | hampastudio.com | descartado (duplicado; já contatado) |
 
+| Plastic Wax | Austrália | plasticwax.com | aprovado |
+| La Station Animation | França | lastationanimation.com | aprovado |
+| Mac Guff | França | macguff.com | aprovado |
+| Akkord Film | Alemanha | akkord.film | aprovado |
+| Dexter Studios | Coreia do Sul | dexterstudios.com | aprovado |
+| DreamWall | Bélgica | dreamwall.be | aprovado |
+| IBRIDO Studio | Itália | ibridostudio.com | aprovado |
+| Studio 100 Animation | França | studio100animation.com | aprovado (promovido do portal_only; email na página oficial) |
+| MOFAC | Coreia do Sul | mofac.com | aprovado |
+| ZAG Studios | França | zag.com | portal (sem email público) |
+| Graphinica | Japão | graphinica.com | portal (sem email público) |
+| Anima Inc. | Japão | animainc.jp | portal (sem email público) |
+| Sanzigen | Japão | sanzigen.co.jp | portal (sem email público) |
+| Mighty Nice | Austrália | mightynice.com.au | portal (sem email geral público) |
+| Copenhagen Bombay | Dinamarca | copenhagenbombay.com | descartado (faliu em 2023) |
+| Duncan Studio | EUA | duncanstudio.com | descartado (foco 2D) |
+| Magic Light Pictures | Reino Unido | magiclightpictures.com | descartado (produtora; anima via estúdios parceiros) |
+| GO-N Productions | França | go-n.fr | descartado (duplicado; já contatado) |
+| Ánima Kitchent | Espanha | animakitchent.com | descartado (duplicado; já contatado) |
+| Kavaleer Productions | Irlanda | kavaleer.com | descartado (duplicado; já contatado) |
+| Piranha Bar | Irlanda | piranhabar.ie | descartado (duplicado; já contatado) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
