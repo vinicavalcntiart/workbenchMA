@@ -75,3 +75,11 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Sola Digital Arts (Japão) — CG de ULTRAMAN e SAC_2045; sem email público; https://sola-digital.com/
 - Kamikaze Douga (Japão) — CG estilizado (Star Wars: Visions); sem email público; https://kamikazedouga.co.jp/
 - Coatsink (Reino Unido) — games VR/console; sem email geral público; https://coatsink.com/contact
+
+## Vagas abertas encontradas nos job boards (28/08, fontes do PDF do Vini)
+- Riot Games (EUA) — Senior 3D Character Artist, LoL Cosmetics (hand-painted stylized); via hitmarker
+- Cloud Chamber (EUA/Canadá) — Senior Character Artist, BioShock; via hitmarker
+- Gameloft (Canadá/Europa) — Senior 3D Character Artist, D&D; pede stylized hair; via hitmarker
+- Streamline Games (remoto) — Lead Character Artist, 100% remoto; via gamejobs.co
+- Hasbro Skeleton Key (EUA/Canadá) — Lead Character Artist, Austin/Montreal; via gamejobs.co
+- PUBG Madison (EUA/Canadá) — Senior Character Artist fixed-term, remoto US/CA; via gamejobs.co
