@@ -100,6 +100,13 @@
   .fu-wait { color:var(--muted); }
   tr.pdone { opacity:.55; }
   tr.pdone .pname { text-decoration: line-through; }
+  tr.prio-alta td:first-child { border-left:4px solid var(--crit); }
+  tr.prio-media td:first-child { border-left:4px solid var(--warn); }
+  tr.prio-baixa td:first-child { border-left:4px solid var(--axis); }
+  tr.prio-alta { background: color-mix(in srgb, var(--crit) 6%, transparent); }
+  .prio-chip-alta { color:var(--crit); font-weight:700; }
+  .prio-chip-media { color:var(--serious); font-weight:600; }
+  .prio-chip-baixa { color:var(--muted); }
   #tooltip { position:fixed; pointer-events:none; z-index:10; display:none; background:var(--surface); color:var(--ink);
     border:1px solid var(--ring); border-radius:8px; padding:6px 10px; font-size:12px; box-shadow:0 2px 10px rgba(0,0,0,.18); }
   #tooltip b { display:block; }
@@ -381,12 +388,12 @@ const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 // Estúdios que exigem aplicação via portal/formulário. origem: "email" = pediram na resposta ao nosso email; "portal" = nunca aceitaram email.
 // 6º campo (opcional) = true quando a aplicação foi CONFIRMADA (gravado pela automação ao ver o email de confirmação, ou a pedido do Vini).
 const PORTAIS = [
- ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/careers","email","Responderam: por GDPR só aceitam candidatura pelas vagas do site"],
- ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Responderam pedindo o formulário Google de candidatura"],
- ["Anima Kitchent","Espanha","https://www.linkedin.com/company/anima-kitchent/jobs/","email","RH (Rocio González) pede questionário nas vagas do LinkedIn; seguir a Rocio"],
+ ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/careers","email","Responderam: por GDPR só aceitam candidatura pelas vagas do site",false,"media"],
+ ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Responderam pedindo o formulário Google de candidatura",false,"alta"],
+ ["Anima Kitchent","Espanha","https://www.linkedin.com/company/anima-kitchent/jobs/","email","RH (Rocio González) pede questionário nas vagas do LinkedIn; seguir a Rocio",false,"media"],
  ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Aplicação enviada em 27/08 pelo formulário do site (email havia quicado; era o único canal)",true],
  ["Guru Studio","Canadá","https://gurustudio.com/careers","email","General Application enviada em 27/08 (email quicou; portal era o único canal) — Head of Talent: Sue Jung",true],
- ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)"],
+ ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)",false,"media"],
  ["Passion Republic","Malásia","https://noteforms.com/forms/pr-career-application-sjj7ie","email","Re-submissão enviada em 27/08 pelo formulário; confirmação recebida em 28/08 (Jenny, RH) na vaga Modeling Artist, em análise",true],
  ["CraveFX","Singapura","https://careers.cravefx.com/","email","Aplicação enviada em 27/08 pelo portal oficial, conforme pedido da Sharon (HR Manager)",true],
  ["TAT Productions","França","https://jobs.tatprod.com/fr/tat","email","Aplicado em 27/08 na vaga Lead Character Modeling & Blendshape 3D (confirmação recebida); convite com nota enviado à recruiter Julie Goutheraud no LinkedIn",true],
@@ -415,24 +422,24 @@ const PORTAIS = [
  ["Redmonk Studio (grupo Superprod)","França","https://careers.werecruit.io/en/superprod","portal","Aplicação enviada em 27/08 junto com a da Superprod",true],
  ["WildBrain Studios","Canadá","https://wildbrain-career.talent-soft.com/","portal","Aplicado em 27/08 na vaga Groom Supervisor, CG (Feature) — confirmação recebida; remoto dentro da British Columbia",true],
  ["Psyop","EUA","https://www.psyop.com/","portal","Aplicado em 27/08 na vaga CG Modeler — confirmação recebida",true],
- ["Locksmith Animation","Reino Unido","https://locksmithanimation.com/careers","email","Auto-reply: careers@ não é monitorado para CVs especulativos; acompanhar vagas no site e nas redes (Bad Fairies em produção)"],
- ["Polygon Pictures","Japão","https://pro.form-mailer.jp/fms/4f8c76fa17178","email","RH respondeu em 27/08 pedindo o formulário oficial com demo reel; usar o kit + link do ArtStation como reel"],
- ["Riot Games","EUA","https://hitmarker.net/jobs/riot-games-senior-3d-character-artist-league-of-legends-cosmetics-2875801","portal","VAGA: Senior 3D Character Artist em League of Legends Cosmetics; hand-painted stylized é exatamente o seu forte; conferir se segue aberta"],
- ["Cloud Chamber","EUA/Canadá","https://hitmarker.net/jobs/cloud-chamber-senior-character-artist-2271728","portal","VAGA: Senior Character Artist no próximo BioShock; personagens estilizados; Novato/Montreal"],
- ["Gameloft","Canadá/Europa","https://hitmarker.net/jobs/gameloft-d-d-pc-console-senior-3d-character-artist-3046376","portal","VAGA: Senior 3D Character Artist em D&D (PC/console); pede técnica de cabelo estilizado, seu diferencial de grooming"],
- ["Streamline Games","Remoto","https://gamejobs.co/Lead-Character-Artist-at-Streamline-Games-5362","portal","VAGA: Lead Character Artist 100% remoto, freelance com conversão a full-time; sem barreira de visto"],
- ["Hasbro (Skeleton Key)","EUA/Canadá","https://gamejobs.co/Lead-Character-Artist-at-Hasbro-8203","portal","VAGA: Lead Character Artist no estúdio Skeleton Key; Austin e Montreal"],
- ["PUBG Madison","EUA/Canadá","https://gamejobs.co/Senior-Character-Artist-Fixed-Term-at-PUBG","portal","VAGA: Senior Character Artist (6 meses, remoto só EUA/Canadá; visto é barreira, avaliar mesmo assim)"],
- ["Sumo Digital","Reino Unido/Remoto","https://gamejobs.co/Character-Artist-at-Sumo-Digital-4124","portal","VAGA: 3D Character Artist remoto/híbrido para jogos estilizados; remoto aceito para o candidato certo"],
- ["Blackbird Interactive","Canadá","https://gamejobs.co/3D-Character-Artist-at-Blackbird-Interactive","portal","VAGA: Senior 3D Character Artist em jogo com direção de arte estilizada; Vancouver"],
- ["Wargaming","Europa","https://gamejobs.co/3D-Character-Artist-Unannounced-Title-at-Wargaming","portal","VAGA: 3D Character Artist stylized em título não anunciado; ZBrush + Substance"],
- ["nDreams (Studio Elevation)","Reino Unido/Remoto","https://gamejobs.co/Character-Artist-Studio-Elevation-Remote-at-nDreams","portal","VAGA: 3D Character Artist 100% remoto no estúdio de VR"],
- ["DuskSoft Studios","Remoto","https://www.workwithindies.com/careers/dusksoft-studios-stylized-3d-character-artist","portal","VAGA: Stylized 3D Character Artist, contrato remoto, hand-painted; publicada 17/08, encaixe direto"],
- ["Room 8 Studio","Internacional/Remoto","https://room8studio.com/talent/3d-stylized-characters-artist-senior/","portal","VAGA: Senior 3D Stylized Characters Artist; outsourcing grande com trabalho stylized contínuo"],
- ["DreamWall","Bélgica","https://www.dreamwall.be/en/jobs","email","Auto-reply em 28/08: recrutamento só via Talentsquare; se aplicar e não responderem em 2 semanas, é não; base guarda o perfil por 2 anos"],
- ["nWave Studios","Bélgica","https://www.nwave.com/jobs","email","Email do diretório bounceou; candidaturas espontâneas são bem-vindas pelo site"],
- ["Studio 100 Animation","França","https://studio100group.com/","email","info@ bounceou; vagas pelo site do grupo Studio 100"],
- ["Plastic Wax","Austrália","https://www.facebook.com/groups/258469080935348/","email","Responder o auto-reply por email com: right to work na Austrália, pretensão salarial, disponibilidade, início e localização (kit tem as respostas); e entrar no grupo de recrutamento do Facebook"],
+ ["Locksmith Animation","Reino Unido","https://locksmithanimation.com/careers","email","Auto-reply: careers@ não é monitorado para CVs especulativos; acompanhar vagas no site e nas redes (Bad Fairies em produção)",false,"media"],
+ ["Polygon Pictures","Japão","https://pro.form-mailer.jp/fms/4f8c76fa17178","email","RH respondeu em 27/08 pedindo o formulário oficial com demo reel; usar o kit + link do ArtStation como reel",false,"alta"],
+ ["Riot Games","EUA","https://hitmarker.net/jobs/riot-games-senior-3d-character-artist-league-of-legends-cosmetics-2875801","portal","VAGA: Senior 3D Character Artist em League of Legends Cosmetics; hand-painted stylized é exatamente o seu forte; conferir se segue aberta",false,"alta"],
+ ["Cloud Chamber","EUA/Canadá","https://hitmarker.net/jobs/cloud-chamber-senior-character-artist-2271728","portal","VAGA: Senior Character Artist no próximo BioShock; personagens estilizados; Novato/Montreal",false,"media"],
+ ["Gameloft","Canadá/Europa","https://hitmarker.net/jobs/gameloft-d-d-pc-console-senior-3d-character-artist-3046376","portal","VAGA: Senior 3D Character Artist em D&D (PC/console); pede técnica de cabelo estilizado, seu diferencial de grooming",false,"alta"],
+ ["Streamline Games","Remoto","https://gamejobs.co/Lead-Character-Artist-at-Streamline-Games-5362","portal","VAGA: Lead Character Artist 100% remoto, freelance com conversão a full-time; sem barreira de visto",false,"alta"],
+ ["Hasbro (Skeleton Key)","EUA/Canadá","https://gamejobs.co/Lead-Character-Artist-at-Hasbro-8203","portal","VAGA: Lead Character Artist no estúdio Skeleton Key; Austin e Montreal",false,"media"],
+ ["PUBG Madison","EUA/Canadá","https://gamejobs.co/Senior-Character-Artist-Fixed-Term-at-PUBG","portal","VAGA: Senior Character Artist (6 meses, remoto só EUA/Canadá; visto é barreira, avaliar mesmo assim)",false,"baixa"],
+ ["Sumo Digital","Reino Unido/Remoto","https://gamejobs.co/Character-Artist-at-Sumo-Digital-4124","portal","VAGA: 3D Character Artist remoto/híbrido para jogos estilizados; remoto aceito para o candidato certo",false,"alta"],
+ ["Blackbird Interactive","Canadá","https://gamejobs.co/3D-Character-Artist-at-Blackbird-Interactive","portal","VAGA: Senior 3D Character Artist em jogo com direção de arte estilizada; Vancouver",false,"media"],
+ ["Wargaming","Europa","https://gamejobs.co/3D-Character-Artist-Unannounced-Title-at-Wargaming","portal","VAGA: 3D Character Artist stylized em título não anunciado; ZBrush + Substance",false,"media"],
+ ["nDreams (Studio Elevation)","Reino Unido/Remoto","https://gamejobs.co/Character-Artist-Studio-Elevation-Remote-at-nDreams","portal","VAGA: 3D Character Artist 100% remoto no estúdio de VR",false,"media"],
+ ["DuskSoft Studios","Remoto","https://www.workwithindies.com/careers/dusksoft-studios-stylized-3d-character-artist","portal","VAGA: Stylized 3D Character Artist, contrato remoto, hand-painted; publicada 17/08, encaixe direto",false,"alta"],
+ ["Room 8 Studio","Internacional/Remoto","https://room8studio.com/talent/3d-stylized-characters-artist-senior/","portal","VAGA: Senior 3D Stylized Characters Artist; outsourcing grande com trabalho stylized contínuo",false,"media"],
+ ["DreamWall","Bélgica","https://www.dreamwall.be/en/jobs","email","Auto-reply em 28/08: recrutamento só via Talentsquare; se aplicar e não responderem em 2 semanas, é não; base guarda o perfil por 2 anos",false,"media"],
+ ["nWave Studios","Bélgica","https://www.nwave.com/jobs","email","Email do diretório bounceou; candidaturas espontâneas são bem-vindas pelo site",false,"baixa"],
+ ["Studio 100 Animation","França","https://studio100group.com/","email","info@ bounceou; vagas pelo site do grupo Studio 100",false,"baixa"],
+ ["Plastic Wax","Austrália","https://www.facebook.com/groups/258469080935348/","email","Responder o auto-reply por email com: right to work na Austrália, pretensão salarial, disponibilidade, início e localização (kit tem as respostas); e entrar no grupo de recrutamento do Facebook",false,"alta"],
  ["Xilam Animation","França","https://xilam.com/en/contact-us/","portal","Aplicação enviada em 27/08 pelo site",true],
  ["Studio 100 Animation","França","https://studio100group.com/","portal","Maya the Bee e Vic the Viking CG; vagas via grupo"],
  ["DNEG Animation","Reino Unido","https://www.dneg.com/careers","portal","Só ATS próprio"],
@@ -447,7 +454,7 @@ const PORTAIS = [
  ["Studio Gobo","Reino Unido","https://www.studiogobo.com/careers","portal","Co-dev de games (Brighton); só ATS próprio"],
  ["RodeoFX","Canadá","https://www.rodeofx.com/en/careers","portal","VFX Montreal; só ATS próprio"],
  ["Like A Photon Creative","Austrália","https://likeaphoton.com/","portal","Features CG infantis (Brisbane e Dublin); sem email público"]
-].map(([name,country,url,origem,note,done])=>({name,country,url,origem,note,done}));
+].map(([name,country,url,origem,note,done,prio])=>({name,country,url,origem,note,done,prio}));
 
 const EMAILS_TOTAL = 132, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2]];
 
@@ -762,21 +769,30 @@ function renderKit(){
   }));
 }
 
+const PRIO_W = { alta:0, media:1, baixa:2 };
+const prioOf = p => p.prio && PRIO_W.hasOwnProperty(p.prio) ? p.prio : (p.origem==="email" ? "media" : "baixa");
 function renderPortais(){
   const rows = [...PORTAIS].sort((a,b)=>{
     const pa = isApplied(a)?1:0, pb = isApplied(b)?1:0;
     if(pa!==pb) return pa-pb;
+    const wa = PRIO_W[prioOf(a)], wb = PRIO_W[prioOf(b)];
+    if(wa!==wb) return wa-wb;
     if(a.origem!==b.origem) return a.origem==="email" ? -1 : 1;
     return a.name.localeCompare(b.name);
   });
   $("#portalRows").innerHTML = rows.map(p=>{
     const done = isApplied(p);
+    const prio = prioOf(p);
+    const prioChip = done ? "" :
+      prio==="alta" ? `<span class="chip prio-chip-alta">🔥 alta</span>` :
+      prio==="media" ? `<span class="chip prio-chip-media">média</span>` :
+      `<span class="chip prio-chip-baixa">baixa</span>`;
     const origem = p.origem==="email"
       ? `<span class="chip"><span class="dot" style="background:var(--warn)"></span>⚠ pediram na resposta</span>`
       : `<span class="chip"><span class="dot" style="background:var(--axis)"></span>só portal</span>`;
-    return `<tr class="${done?"pdone":""}">
+    return `<tr class="${done?"pdone":"prio-"+prio}">
       <td><input type="checkbox" data-url="${esc(p.url)}"${done?" checked":""}${p.done?" disabled":""} aria-label="Marcar ${esc(p.name)} como aplicado"${p.done?' title="Confirmado pela automação (email de confirmação recebido)"':""}></td>
-      <td><span class="pname">${esc(p.name)}</span>${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
+      <td><span class="pname">${esc(p.name)}</span> ${prioChip}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
       <td>${esc(p.country)}</td>
       <td><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir aplicação ↗</a></td>
       <td>${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span></td>
@@ -797,8 +813,9 @@ function updatePortalHint(){
   const doneCount = PORTAIS.filter(isApplied).length;
   const pend = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
   $("#portalBadge").textContent = `${doneCount}/${PORTAIS.length} feitos`;
-  $("#portalHint").textContent =
+  $("#portalHint").innerHTML =
     `${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
+    `Prioridade pela mensagem recebida e pelo encaixe da vaga: <span class="prio-chip-alta">🔥 alta</span> = pediram diretamente ou vaga com seu perfil exato · <span class="prio-chip-media">média</span> = redirecionamento padrão ou vaga próxima · <span class="prio-chip-baixa">baixa</span> = sem sinal do estúdio. ` +
     "Aplique pelo link e marque quando fizer (fica salvo neste navegador). O selo verde aparece quando a automação vê o email de confirmação.";
 }
 
