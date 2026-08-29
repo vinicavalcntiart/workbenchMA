@@ -185,4 +185,7 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Studio Hari | França | hari-studios.com | portal (sem email público; Grizzy é CG) |
 | Gaumont Animation | França | gaumont.com | portal (só portal corporativo) |
 
+| Illogic | Itália | illogic.xyz | aprovado |
+| Snowball Studios | Israel/Canadá/UK | snowballvfx.com | descartado (sede fora do escopo; sem email público) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

@@ -111,3 +111,9 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - 31st Union Valencia / ex-elite3d (Espanha) — email antigo com DNS morto; aplicar via https://31stunion.com/careers
 - VAGA: Virtuos (global) — Character Art Team Leader; via gamesjobsdirect
 - VAGA: Obsidian Entertainment (EUA) — Character Artist RPG; via 80.lv digest
+- VAGA: Activision / Toys for Bob (EUA/CA/UK remoto) — Senior Character Artist STYLIZED; via gamejobs.co
+- VAGA: Half Mermaid Productions (remoto) — Senior Character Artist; via remotegamejobs
+- VAGA: Blankhans (Alemanha/remoto) — Senior 3D Character Artist; via remotegamejobs
+- VAGA: Supersocial (remoto) — Character Artist; via remotegamejobs
+- Massive Black — VAGA EXPIRADA (verificado 29/08)
+- Snowball Studios (Israel/Toronto/Londres) — descartado: sem email público e sede principal fora do escopo
