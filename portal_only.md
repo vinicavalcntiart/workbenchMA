@@ -108,3 +108,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA GROOM: Techland (Polônia) — Senior Character Hair (Grooming) Artist; via gamejobs.co
 - VAGA GROOM: Rockstar (UK/EUA) — Character Hair & Groom Artist; via gamejobs.co
 - VAGA GROOM: Ubisoft (Canadá) — Groom Artist em Assassin's Creed; via gamejobs.co
+- 31st Union Valencia / ex-elite3d (Espanha) — email antigo com DNS morto; aplicar via https://31stunion.com/careers
