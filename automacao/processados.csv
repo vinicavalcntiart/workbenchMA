@@ -69,3 +69,4 @@ data,estudio,email,message_id,tipo,acao
 2026-08-28,nWave Studios,mailer-daemon@googlemail.com,1a048507de8568ae,bounce,550 endereço não existe (2x; reenvio do Vini também falhou); movido para PORTAIS (nwave.com/jobs)
 2026-08-29,Cyber Group Studios,info@cybergroupstudios.com,1a04b535619663b6,estudio-fechado,Liquidação judiciária decretada em abril/2025 (Tribunal de Comércio de Paris); entrega nunca completará; descartado
 2026-08-29,elite3d,mailer-daemon@googlemail.com,1a04d08999940e29,bounce,DNS do domínio morto; estúdio virou 31st Union Valencia (2K) em 2021; adicionado portal 31stunion.com
+2026-08-29,MOFAC,mailer-daemon@googlemail.com,1a04dcb696030d6e,delivery-delay,Entrega temporariamente atrasada para contact@mofac.com; Gmail retenta por 46h
