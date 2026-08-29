@@ -96,3 +96,11 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Digic Pictures (Hungria) — Character Modeler aberta; portal career.digicpictures.com; contratam freelance remoto
 - Goodbye Kansas Studios (Suécia) — open application via career.goodbyekansas.com (hello@ já recebeu email em 26/08)
 - VAGA: Hit Box Games (remoto) — 3D Character Artist/Modeler freelance UE5; via ingamejob.com
+- VAGA: ArenaNet (EUA; remoto) — Lead Character Artist stylized; via remotegamejobs
+- VAGA: Stairway Games (remoto) — 3D Character Artist Disney/Pixar-like (Coral Island); via remotegamejobs
+- VAGA: Studio Camelia (França; remoto) — 3D Character Artist JRPG stylized; via remotegamejobs
+- VAGA: Massive Black (EUA; remoto) — 3D Character Artist jr a sr; via remotegamejobs
+- VAGA: Giant Sparrow (EUA; remoto) — 3D Character Artist gently stylized; via remotegamejobs
+- VAGA: Day 9 Game Studio (EUA; remoto) — Lead Character Artist; via remotegamejobs
+- VAGA: LingoLooper (remoto) — Lead Stylized 3D Character Artist; via remotegamejobs
+- Platige Image (Polônia) — só ATS próprio em platige.com/careers (info@ recebeu email em 26/08)
