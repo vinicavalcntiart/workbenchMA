@@ -188,4 +188,7 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Illogic | Itália | illogic.xyz | aprovado |
 | Snowball Studios | Israel/Canadá/UK | snowballvfx.com | descartado (sede fora do escopo; sem email público) |
 
+| Oasis Animation | Canadá | oasisanimation.com | descartado (2D puro; maior estúdio 2D do Quebec) |
+| Mokko Studio | Canadá | mokkostudio.com | descartado (encerrado em 2017) |
+
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).

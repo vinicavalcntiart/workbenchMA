@@ -117,3 +117,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Supersocial (remoto) — Character Artist; via remotegamejobs
 - Massive Black — VAGA EXPIRADA (verificado 29/08)
 - Snowball Studios (Israel/Toronto/Londres) — descartado: sem email público e sede principal fora do escopo
+- VAGA: Impleo / Disney Dreamlight Valley (remoto) — 3D Character Artist stylized padrão Disney; via impleo.org
+- VAGA: Plumeria Studio (remoto) — Stylized Character Concept Artist freelance (mais concept que 3D); via workwithindies
+- Oasis Animation (Canadá) — descartado: maior estúdio 2D do Quebec, 2D puro fora do foco (info@oasisanimation.com verificado, guardado só como registro)
+- Mokko Studio (Canadá) — descartado: estúdio encerrado em 2017
