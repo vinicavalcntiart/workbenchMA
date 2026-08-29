@@ -74,3 +74,4 @@ data,estudio,email,message_id,tipo,acao
 2026-08-29,Plastic Wax,recruitment@plasticwax.com,1a04ded7049cb9e7,resposta-enviada,Vini enviou a resposta com right to work AUS + pretensão + disponibilidade + início + localização
 2026-08-29,Plastic Wax,recruitment+noreply@plasticwax.com,1a04deda7f8c7019,auto-resposta,Mesmo auto-reply disparou de novo ao receber a resposta; sem ação
 2026-08-29,Miam! Animation,jobs@miam-animation.com,-,portal-aplicado,Vini aplicou pelo formulário Google que o estúdio pediu; aguardar confirmação
+2026-08-29,Miam! Animation,forms-receipts-noreply@google.com,1a04f6bff64478ac,confirmacao-portal,Google Forms confirmou o envio do formulario "MIAM! Candidature / Application"; candidatura registrada
