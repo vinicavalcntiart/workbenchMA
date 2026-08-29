@@ -117,8 +117,12 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Supersocial (remoto) — Character Artist; via remotegamejobs
 - Massive Black — VAGA EXPIRADA (verificado 29/08)
 - Snowball Studios (Israel/Toronto/Londres) — descartado: sem email público e sede principal fora do escopo
-- VAGA: Impleo / Disney Dreamlight Valley (remoto) — 3D Character Artist stylized padrão Disney; via impleo.org
+- Impleo / Disney Dreamlight Valley — VAGA EXPIRADA (verificado pelo Vini em 29/08 no SmartRecruiters oficial: "This job ad has expired"). Empregador real: Gameloft Ucrânia; anúncio com 2 meses. impleo.org é agregador, não fonte oficial
 - VAGA: Plumeria Studio (remoto) — Stylized Character Concept Artist freelance (mais concept que 3D); via workwithindies
 - Oasis Animation (Canadá) — descartado: maior estúdio 2D do Quebec, 2D puro fora do foco (info@oasisanimation.com verificado, guardado só como registro)
 - Mokko Studio (Canadá) — descartado: estúdio encerrado em 2017
 - Activision / Toys for Bob — VAGA EXPIRADA (verificado 29/08); acompanhar careers.toysforbob.com/c/art-jobs
+- Streamline Studios — VAGA CONFIRMADA no ATS oficial Workable (29/08); nome correto é Streamline Studios, não "Streamline Games"; board tem Lead + Senior + 3D Character Artist
+- DuskSoft Studios — vaga ativa, mas é estúdio de um dev só, freelance por comissão; rebaixada para média (29/08)
+- Studio Camelia — VAGA EXPIRADA (verificado 29/08); acompanhar emploi.afjv.com/annonces-societes/1979
+- Half Mermaid Productions — vaga confirmada no ATS oficial TriNet (29/08), mas NÃO patrocina visto para não-cidadãos dos EUA; rebaixada para média
