@@ -147,6 +147,7 @@
     <a href="#acoes">⚡ O que fazer agora</a>
     <a href="#portais">📝 Portais</a>
     <a href="#kit">🧰 Kit de aplicação</a>
+    <a href="#dossies">🎯 Dossiês por vaga</a>
     <a href="#estudios">🏢 Estúdios</a>
   </nav>
 
@@ -211,6 +212,12 @@
       <span class="hint" id="kitStudioHint" style="margin:0"></span>
     </div>
     <div id="kitList"></div>
+  </div>
+
+  <h2 class="sec" id="dossies">🎯 Dossiês por vaga <span class="badge" id="dossieBadge"></span></h2>
+  <div class="card full">
+    <p class="hint">Texto já escrito <b>para cada vaga específica</b>: abra o link, cole a cover letter e envie. Prioridade pela chance real de dar certo.</p>
+    <div id="dossieList"></div>
   </div>
 
   <h2 class="sec" id="estudios">🏢 Estúdios <span class="badge" id="tableTitle"></span></h2>
@@ -789,6 +796,224 @@ function renderKit(){
 
 const PRIO_W = { alta:0, media:1, baixa:2 };
 const prioOf = p => p.prio && PRIO_W.hasOwnProperty(p.prio) ? p.prio : (p.origem==="email" ? "media" : "baixa");
+const DOSSIES = [
+ [
+  "Epic Games",
+  "Senior Groom Artist",
+  "https://gamejobs.co/Senior-Groom-Artist-at-Epic-Games",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Epic Games team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nThis role is where my two specialties meet. Grooming in Houdini is part of my daily work, and I build the characters the grooms sit on, so I understand hair from the sculpt outward: silhouette first, then flow, then the technical pass that has to survive engine constraints. I've delivered that loop on hero characters that shipped.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "This role is where my two specialties meet. Grooming in Houdini is part of my daily work, and I build the characters the grooms sit on, so I understand hair from the sculpt outward: silhouette first, then flow, then the technical pass that has to survive engine constraints. I've delivered that loop on hero characters that shipped."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "A vaga pede Houdini OU XGen explicitamente. Lidere com grooming em Houdini na primeira linha do formulário e no assunto, não com modelagem. Mostre os breakdowns de groom do ArtStation primeiro. Epic patrocina visto e tem posições remotas nos EUA."
+   ]
+  ]
+ ],
+ [
+  "Techland",
+  "Senior Character Hair (Grooming) Artist",
+  "https://gamejobs.co/Senior-Character-Hair-Grooming-Artist-at-Techland-1871",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Techland team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nReal-time hair and fur is exactly the intersection I work in. I groom in Houdini and I take characters from first sculpt to engine, so I handle hair with the engine budget already in mind instead of handing off a groom that has to be rebuilt downstream.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI'm open to relocating for the right opportunity. I don't hold local work authorization yet and would need sponsorship, but my profile is built for skilled-worker routes: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in Creative Industries in progress, IELTS certification and published work. I already work fully remote for a US studio, so I can start remotely while the process runs.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Real-time hair and fur is exactly the intersection I work in. I groom in Houdini and I take characters from first sculpt to engine, so I handle hair with the engine budget already in mind instead of handing off a groom that has to be rebuilt downstream."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Foco total em hair/fur real-time. Polônia é rota de visto viável (skilled worker UE) e Techland já contratou estrangeiros. Cite Endstar como prova de sculpt-to-engine e o grooming em Houdini como especialidade."
+   ]
+  ]
+ ],
+ [
+  "Stairway Games",
+  "3D Character Artist (remoto)",
+  "https://remotegamejobs.com/jobs/stairway-games-3d-character-artist-remote-job",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Stairway Games team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nA Disney and Pixar inspired aesthetic is the register I've worked in for ten years. On The Wingfeather Saga I hand-painted Season 1 characters, and on Endstar I own appealing stylized heroes from first sculpt through to engine, which is the same appeal-first, anatomy-aware craft your art direction asks for.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "A Disney and Pixar inspired aesthetic is the register I've worked in for ten years. On The Wingfeather Saga I hand-painted Season 1 characters, and on Endstar I own appealing stylized heroes from first sculpt through to engine, which is the same appeal-first, anatomy-aware craft your art direction asks for."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Vaga 100% remota: zero barreira de visto, prioridade máxima. Eles citam Disney/Pixar. Puxe Wingfeather (hand-painted) e os projetos pessoais mais cartoon do ArtStation para o topo."
+   ]
+  ]
+ ],
+ [
+  "ArenaNet",
+  "Lead Character Artist (remoto)",
+  "https://remotegamejobs.com/jobs/arenanet-lead-character-artist-unannounced-project-remote-job",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear ArenaNet team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nStylized characters with personality is what my portfolio is built on, and I've been the person accountable for hero characters end to end at E-Line Media: sculpt, hand-painted and PBR texturing, grooming, engine integration. I also teach my full character workflow at my own school, which is the same skill a lead uses to make a pipeline repeatable for a team.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Stylized characters with personality is what my portfolio is built on, and I've been the person accountable for hero characters end to end at E-Line Media: sculpt, hand-painted and PBR texturing, grooming, engine integration. I also teach my full character workflow at my own school, which is the same skill a lead uses to make a pipeline repeatable for a team."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "É vaga de LEAD: enfatize ownership de personagem ponta a ponta e o fato de você ENSINAR o workflow (escola própria) como prova de capacidade de liderar e documentar processo. Remota."
+   ]
+  ]
+ ],
+ [
+  "Massive Black",
+  "3D Character Artist (junior a senior, remoto)",
+  "https://remotegamejobs.com/jobs/massive-black-3d-character-artist-junior-middle-senior-remote-job",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Massive Black team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nArt service work is where I started: at PUGA Studios I delivered characters for international clients on client pipelines and client schedules. I've kept that discipline while moving into senior character ownership, so I can plug into an external pipeline and hit a brief without a long ramp.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Art service work is where I started: at PUGA Studios I delivered characters for international clients on client pipelines and client schedules. I've kept that discipline while moving into senior character ownership, so I can plug into an external pipeline and hit a brief without a long ramp."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Casa de outsourcing: o diferencial aqui é seu passado na PUGA e a capacidade de entrar em pipeline de cliente. Remota. Mencione versatilidade de estilo (45+ projetos, muitos títulos)."
+   ]
+  ]
+ ],
+ [
+  "Sumo Digital",
+  "3D Character Artist (remoto/híbrido)",
+  "https://gamejobs.co/Character-Artist-at-Sumo-Digital-4124",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Sumo Digital team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nStylized games are the work I want my name on, and your teams ship them at scale. I bring ten years of stylized character craft with the engine end already covered: I take Endstar's heroes from first sculpt to engine every cycle, so I arrive knowing what the game side needs from a character.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me. I'm open to relocating for the right opportunity. I don't hold local work authorization yet and would need sponsorship, but my profile is built for skilled-worker routes: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in Creative Industries in progress, IELTS certification and published work. I already work fully remote for a US studio, so I can start remotely while the process runs.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Stylized games are the work I want my name on, and your teams ship them at scale. I bring ten years of stylized character craft with the engine end already covered: I take Endstar's heroes from first sculpt to engine every cycle, so I arrive knowing what the game side needs from a character."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Anunciada como remoto/híbrido para o candidato certo. Deixe claro na primeira linha que você já trabalha remoto há 5 anos com time estrangeiro, e que está aberto a realocar para o Reino Unido."
+   ]
+  ]
+ ],
+ [
+  "Riot Games",
+  "Senior 3D Character Artist, League of Legends Cosmetics",
+  "https://hitmarker.net/jobs/riot-games-senior-3d-character-artist-league-of-legends-cosmetics-2875801",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Riot Games team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nHand-painted stylized texturing is the core of what I do. On The Wingfeather Saga I hand-painted Season 1 characters, and champion skins are the same discipline pushed further: silhouette, readable shapes and painted texture doing the heavy lifting at gameplay distance.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me. I'm open to relocating for the right opportunity. I don't hold local work authorization yet and would need sponsorship, but my profile is built for skilled-worker routes: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in Creative Industries in progress, IELTS certification and published work. I already work fully remote for a US studio, so I can start remotely while the process runs.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Hand-painted stylized texturing is the core of what I do. On The Wingfeather Saga I hand-painted Season 1 characters, and champion skins are the same discipline pushed further: silhouette, readable shapes and painted texture doing the heavy lifting at gameplay distance."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Pede 5+ anos e hand-painted stylized: é a descricao exata do seu perfil. Priorize as pecas hand-painted do portfolio. Riot patrocina visto e tem histórico de contratar internacionalmente."
+   ]
+  ]
+ ],
+ [
+  "Gameloft",
+  "Senior 3D Character Artist, D&D (PC/console)",
+  "https://hitmarker.net/jobs/gameloft-d-d-pc-console-senior-3d-character-artist-3046376",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear Gameloft team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nThe posting asks for stylized hair technique, which is where my Houdini grooming background pays off directly. I build the character and the groom, so hair reads as part of the silhouette from the first sculpt instead of being solved at the end.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me. I'm open to relocating for the right opportunity. I don't hold local work authorization yet and would need sponsorship, but my profile is built for skilled-worker routes: an honors (laurea) distinction, a postgraduate specialization in Game Art, a master's in Creative Industries in progress, IELTS certification and published work. I already work fully remote for a US studio, so I can start remotely while the process runs.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "The posting asks for stylized hair technique, which is where my Houdini grooming background pays off directly. I build the character and the groom, so hair reads as part of the silhouette from the first sculpt instead of being solved at the end."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "O gancho é a exigência de técnica de cabelo estilizado: seu grooming em Houdini é diferencial raro nessa faixa. Gameloft tem estúdios em Montreal e Europa, com processos de visto estabelecidos."
+   ]
+  ]
+ ],
+ [
+  "DuskSoft Studios",
+  "Stylized 3D Character Artist (contrato remoto)",
+  "https://www.workwithindies.com/careers/dusksoft-studios-stylized-3d-character-artist",
+  [
+   [
+    "Cover letter da vaga (colar inteira)",
+    "Dear DuskSoft Studios team,\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nStrong silhouettes, distinctive faces and hand-painted or restrained textures is a precise description of my portfolio. I've delivered exactly that on a broadcast series and on a shipping game, and I'm comfortable owning a character from concept handoff through to a clean, engine-ready asset.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.\n\nI've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode, not an adjustment. Overlap with US and European hours is routine for me.\n\nBest,\nVini Cavalcanti"
+   ],
+   [
+    "Por que este estúdio (campo curto)",
+    "Strong silhouettes, distinctive faces and hand-painted or restrained textures is a precise description of my portfolio. I've delivered exactly that on a broadcast series and on a shipping game, and I'm comfortable owning a character from concept handoff through to a clean, engine-ready asset."
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "Contrato remoto, publicada em 17/08 (recente). Eles descrevem literalmente seu estilo. Aplicação rápida: cover letter curta e link do ArtStation no topo."
+   ]
+  ]
+ ],
+ [
+  "Polygon Pictures",
+  "Formulário oficial com demo reel (pedido pelo RH)",
+  "https://pro.form-mailer.jp/fms/4f8c76fa17178",
+  [
+   [
+    "Mensagem curta para o formulário",
+    "Thank you for getting back to me. As requested, here are my details and reel.\n\nI'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1, and for almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini.\n\nMy portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. You have kept CG series and features shipping out of Tokyo for over three decades, and characters that hold up under that production discipline are exactly what I build.\n\nI'm open to relocating to Japan and I already work fully remote with an overseas team, so I can start remotely while a visa process runs."
+   ],
+   [
+    "Campo de demo reel / portfolio",
+    "https://www.artstation.com/viniciuscavalcanti"
+   ],
+   [
+    "Como me posicionar nesta vaga",
+    "O RH PEDIU esta candidatura, então é a de maior chance da lista. Se o formulário exigir arquivo de reel, anexe o PDF do portfólio (portfolio/Vini_Cavalcanti_Portfolio.pdf no repo) e escreva que o portfólio completo está no link. Formulário em japonês: use tradutor do navegador."
+   ]
+  ]
+ ]
+];
+
+function renderDossies(){
+  const wrap = $("#dossieList");
+  $("#dossieBadge").textContent = DOSSIES.length + " vagas prontas";
+  wrap.innerHTML = DOSSIES.map(([studio,role,url,items],di)=>
+    `<details class="kit-group"${di===0?" open":""}><summary>${esc(studio)} <span style="color:var(--muted); font-weight:400">· ${esc(role)}</span></summary>`
+    + `<div class="kit-item"><div class="kl">Onde aplicar</div><div class="kv"><a href="${esc(url)}" target="_blank" rel="noopener">abrir a vaga &#8599;</a></div><div class="kbtns"></div></div>`
+    + items.map(([l,v],i)=>{
+        const long = v.length>220;
+        return `<div class="kit-item"><div class="kl">${esc(l)}</div><div class="kv${long?" clamped":""}" id="dv-${di}-${i}">${esc(v)}</div><div class="kbtns"><button class="copybtn dcopy" data-d="${di}" data-i="${i}">Copiar</button>${long?`<button class="morebtn" data-t="dv-${di}-${i}">expandir</button>`:""}</div></div>`;
+      }).join("")
+    + `</details>`).join("");
+  wrap.querySelectorAll(".dcopy").forEach(b=>b.addEventListener("click", async ()=>{
+    const txt = DOSSIES[+b.dataset.d][3][+b.dataset.i][1];
+    try { await navigator.clipboard.writeText(txt); }
+    catch(e){ const t=document.createElement("textarea"); t.value=txt; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
+    b.textContent="Copiado \u2713"; b.classList.add("ok");
+    setTimeout(()=>{ b.textContent="Copiar"; b.classList.remove("ok"); },1500);
+  }));
+  wrap.querySelectorAll(".morebtn").forEach(b=>b.addEventListener("click",()=>{
+    const kv=document.getElementById(b.dataset.t); if(!kv) return;
+    kv.classList.toggle("open");
+    b.textContent = kv.classList.contains("open") ? "recolher" : "expandir";
+  }));
+}
+
 function renderPortais(){
   const rows = [...PORTAIS].sort((a,b)=>{
     const pa = isApplied(a)?1:0, pb = isApplied(b)?1:0;
@@ -912,7 +1137,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderChips(); renderRows();
+  renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
