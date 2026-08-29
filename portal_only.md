@@ -93,3 +93,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Room 8 Studio (internacional/remoto) — Senior 3D Stylized Characters Artist; via room8studio.com/talent
 - Studio Hari (França) — Grizzy & the Lemmings (CG); sem email público; https://hari-studios.com/en/
 - Gaumont Animation (França) — séries CG do grupo Gaumont; só portal corporativo; https://www.gaumont.com/
+- VAGA: Digic Pictures (Hungria) — Character Modeler aberta; portal career.digicpictures.com; contratam freelance remoto
+- Goodbye Kansas Studios (Suécia) — open application via career.goodbyekansas.com (hello@ já recebeu email em 26/08)
+- VAGA: Hit Box Games (remoto) — 3D Character Artist/Modeler freelance UE5; via ingamejob.com
