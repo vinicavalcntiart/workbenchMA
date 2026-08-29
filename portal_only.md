@@ -121,3 +121,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Plumeria Studio (remoto) — Stylized Character Concept Artist freelance (mais concept que 3D); via workwithindies
 - Oasis Animation (Canadá) — descartado: maior estúdio 2D do Quebec, 2D puro fora do foco (info@oasisanimation.com verificado, guardado só como registro)
 - Mokko Studio (Canadá) — descartado: estúdio encerrado em 2017
+- Activision / Toys for Bob — VAGA EXPIRADA (verificado 29/08); acompanhar careers.toysforbob.com/c/art-jobs
