@@ -132,3 +132,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Ánima Kitchent — link do LinkedIn não abria sem login; usar https://www.infojobs.net/anima-kitchent (público) ou jobs@animakitchent.com; estúdio em Las Palmas, semana de 4 dias
 - DreamWall (Bélgica) — CANDIDATURA ESPONTÂNEA ENVIADA em 30/08 pelo Talentsquare, conforme pedido do estúdio; sem retorno em 2 semanas significa não (prazo 13/09)
 - 2K / Cloud Chamber (EUA; Novato CA) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (BioShock; personagens estilizados; lidera o time de character art); exige visto de trabalho nos EUA
+- Scopely (EUA; remoto) — CANDIDATURA ENVIADA em 30/08 para Senior 3D Artist em Monopoly GO!; vaga remota, pede portfólio estilizado/whimsical; time entre Espanha e EUA
