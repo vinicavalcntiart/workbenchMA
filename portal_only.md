@@ -144,3 +144,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: N-iX (Ucrânia; escritório ou remoto) — Freelance Character Hair (Grooming) Artist para projeto da Paradox Interactive; confirmada no careers.n-ix.com em 30/08; nível anunciado é middle
 - VAGA: Room 8 Studio (global) — Grooming Artist para personagens 3D realistas (Xgen/Ornatrix/Yeti); confirmada no site oficial em 30/08; foco realista
 - Side (Canadá, provável Montreal) — CANDIDATURA ENVIADA em 30/08 para Artiste 3D senior / Senior 3D Artist; vaga não confirmada na fonte oficial; https://side.inc/careers
+- Ubisoft Montreal (Canadá) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist em Rainbow Six Siege (customização de operadores); portal oficial ubisoft.com/company/careers
