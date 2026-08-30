@@ -66,6 +66,26 @@
   .acao.atencao { border-left-color:var(--warn); }
   .acao.info { border-left-color:var(--axis); }
   .acao.boa { border-left-color:var(--good); }
+  /* novidades (newsletter) */
+  .nov-day { display:flex; align-items:center; gap:10px; margin:20px 0 9px; }
+  .nov-day:first-child { margin-top:0; }
+  .nov-date { font-weight:700; font-size:12.5px; color:var(--ink); background:var(--page);
+    border:1px solid var(--ring); border-radius:999px; padding:3px 12px; flex:none; }
+  .nov-rule { flex:1; height:1px; background:var(--grid); }
+  .nov-item { display:flex; gap:12px; padding:11px 14px; margin-bottom:8px;
+    background:var(--page); border:1px solid var(--ring); border-left-width:4px; border-radius:10px; }
+  .nov-ic { font-size:19px; line-height:1.25; flex:none; }
+  .nov-b { min-width:0; }
+  .nov-tag { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .nov-tit { font-weight:650; margin-top:1px; }
+  .nov-txt { color:var(--ink-2); font-size:13px; margin-top:3px; }
+  .nov-item a { color:inherit; text-underline-offset:2px; }
+  .nv-viva   { border-left-color:var(--good); }    .nv-viva   .nov-tag { color:var(--good-text); }
+  .nv-vaga   { border-left-color:var(--crit); }    .nv-vaga   .nov-tag { color:var(--crit); }
+  .nv-porta  { border-left-color:var(--axis); }    .nv-porta  .nov-tag { color:var(--muted); }
+  .nv-nao    { border-left-color:var(--serious); } .nv-nao    .nov-tag { color:var(--serious); }
+  .nv-alerta { border-left-color:var(--warn); }    .nv-alerta .nov-tag { color:var(--serious); }
+  .nv-envio  { border-left-color:var(--axis); }    .nv-envio  .nov-tag { color:var(--muted); }
   /* tiles */
   .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
   .tile { background:var(--surface); border:1px solid var(--ring); border-radius:14px; padding:14px 16px; }
@@ -143,8 +163,9 @@
   </header>
 
   <nav class="secoes">
-    <a href="#visao">📊 Visão geral</a>
     <a href="#acoes">⚡ O que fazer agora</a>
+    <a href="#novidades">📰 Novidades</a>
+    <a href="#visao">📊 Visão geral</a>
     <a href="#portais">📝 Portais</a>
     <a href="#kit">🧰 Kit de aplicação</a>
     <a href="#dossies">🎯 Dossiês por vaga</a>
@@ -159,34 +180,42 @@
   <h2 class="sec" id="acoes">⚡ O que fazer agora</h2>
   <div class="acoes" id="acoesList"></div>
 
+  <h2 class="sec" id="novidades">📰 Novidades da campanha <span class="badge" id="novBadge"></span></h2>
+  <div class="card full">
+    <p class="hint">O que aconteceu de verdade, dia a dia: quem respondeu, quem pediu formulário, que vaga apareceu e o que morreu pelo caminho. Mais recente primeiro.</p>
+    <div class="chips" id="novChips"></div>
+    <div id="novList" style="margin-top:12px"></div>
+    <div style="margin-top:10px"><button class="btn" id="novMore"></button></div>
+  </div>
+
   <h2 class="sec" id="visao">📊 Visão geral</h2>
   <div class="tiles" id="tiles"></div>
 
   <div class="cards" style="margin-top:12px">
     <div class="card">
-      <h3>Funil da campanha</h3>
+      <h3>🧭 Funil da campanha</h3>
       <p class="hint">Do contato à oferta</p>
       <div id="funnel"></div>
     </div>
     <div class="card">
-      <h3>Situação dos estúdios contatados</h3>
+      <h3>🚦 Situação dos estúdios contatados</h3>
       <p class="hint">Onde cada um dos contatados está agora</p>
       <div id="statusbar"></div>
       <div class="legend" id="statusLegend"></div>
     </div>
     <div class="card">
-      <h3>Atividade por dia</h3>
+      <h3>📅 Atividade por dia</h3>
       <p class="hint">Emails enviados e respostas humanas recebidas</p>
       <div id="timeline"></div>
       <div class="legend" id="tlLegend"></div>
     </div>
     <div class="card">
-      <h3>Emails por lote</h3>
+      <h3>📦 Emails por lote</h3>
       <p class="hint">Lote 3 inclui 4 reenvios corrigidos</p>
       <div id="lotes"></div>
     </div>
     <div class="card full">
-      <h3>Estúdios contatados por país</h3>
+      <h3>🌍 Estúdios contatados por país</h3>
       <p class="hint">País-sede principal de cada estúdio</p>
       <div id="paises"></div>
     </div>
@@ -197,7 +226,7 @@
     <p class="hint" id="portalHint"></p>
     <table>
       <thead><tr>
-        <th>Feito</th><th>Estúdio</th><th>País</th><th>Onde aplicar</th><th>Origem / nota</th>
+        <th>✓ Feito</th><th>🏢 Estúdio</th><th>🌍 País</th><th>🔗 Onde aplicar</th><th>🗒️ Origem / nota</th>
       </tr></thead>
       <tbody id="portalRows"></tbody>
     </table>
@@ -227,12 +256,12 @@
     <div class="controls">
       <input type="search" id="q" placeholder="Buscar estúdio, país ou email…" aria-label="Buscar">
       <button class="btn" id="exportBtn">⬇ Exportar CSV</button>
-      <button class="btn" id="resetBtn">Limpar marcações</button>
+      <button class="btn" id="resetBtn">🧹 Limpar marcações</button>
     </div>
     <table>
       <thead><tr>
-        <th>Estúdio</th><th>País</th><th>Email</th><th class="num">Lote</th>
-        <th>Entrega</th><th>Follow-up</th><th>Andamento</th>
+        <th>🏢 Estúdio</th><th>🌍 País</th><th>✉️ Email</th><th class="num">📦 Lote</th>
+        <th>📬 Entrega</th><th>⏳ Follow-up</th><th>📍 Andamento</th>
       </tr></thead>
       <tbody id="rows"></tbody>
     </table>
@@ -542,6 +571,80 @@ function counts(){
   const bounce = CONTACTED.filter(s=>s.delivery==="bounce").length;
   const drafts = STUDIOS.length - CONTACTED.length;
   return {delivered, resp, conv, aberto, ent, off, rec, aguard, bounce, drafts};
+}
+
+// ---------- novidades (newsletter) ----------
+// [data ISO, tipo, titulo, texto, link opcional]
+// tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
+const NOVIDADES = [
+ ["2026-08-29","viva","Plastic Wax recebeu seus dados","Você respondeu ao pedido do estúdio australiano com right to work, pretensão, disponibilidade, data de início e localização. A bola está com o recrutamento deles agora."],
+ ["2026-08-29","porta","Miam! Animation confirmou a candidatura","O recibo do Google Forms chegou às 21h27. O formulário era exigência do próprio estúdio, que tinha respondido ao email pedindo essa via."],
+ ["2026-08-29","vaga","Streamline Studios: três vagas de personagem abertas","Lead Character Artist, Senior 3D Character Artist e 3D Character Artist, todas no ATS oficial (Workable). Remoto, freelance com conversão a full-time.","https://apply.workable.com/streamlinestudios/"],
+ ["2026-08-29","alerta","Quatro vagas marcadas como quentes estavam mortas","Impleo/Disney Dreamlight Valley (que na verdade era da Gameloft Ucrânia), Studio Camelia, Activision/Toys for Bob e Massive Black. Todas tinham sido confirmadas por agregador, não pela fonte oficial. Regra nova da automação: só vira vaga quente o que estiver aberto no ATS ou na página de carreiras do próprio estúdio, e as três vagas quentes mais antigas são rechecadas a cada rodada."],
+ ["2026-08-29","envio","Lote 12 enviado: Illogic e Stairway Games","A campanha chega a 134 emails para 129 estúdios, em 12 lotes."],
+ ["2026-08-29","nao","Seis estúdios saíram da lista por não existirem mais","Cyber Group Studios (liquidação judicial decretada em abril de 2025 pelo Tribunal de Comércio de Paris), elite3d (domínio morto; virou 31st Union Valencia após a compra pela 2K), Mokko Studio, ToonBox, Copenhagen Bombay e Jellyfish Pictures."],
+ ["2026-08-28","viva","Passion Republic colocou sua candidatura em análise","Jenny confirmou a inscrição na vaga nomeada Modeling Artist; o RH está avaliando o perfil."],
+ ["2026-08-28","nao","Submarine recusou, mas guardou seu portfólio","Milo Cremer Eindhoven, Head of Animation Recruitment, explicou que as vagas exigem residência na Holanda ou na Bélgica. Agradeceu o ArtStation e pediu para manter contato."],
+ ["2026-08-28","porta","DreamWall redirecionou para o Talentsquare","Auto-resposta oficial da Emma Dupire: candidaturas só pelo portal em dreamwall.be/en/jobs."],
+ ["2026-08-28","envio","Lotes 10 e 11: 23 estúdios novos","França, Japão, Coreia do Sul, Bélgica, Itália, Austrália e Noruega."],
+ ["2026-08-28","nao","Dois bounces: Studio 100 Animation e nWave","Os endereços não existem (550). Os dois foram movidos para a fila de candidatura por portal."],
+ ["2026-08-27","viva","Polygon Pictures pediu o formulário oficial com demo reel","O RH em Tóquio respondeu pedindo a via oficial (pro.form-mailer.jp) com um reel. Há um dossiê pronto para essa candidatura na seção de vagas."],
+ ["2026-08-27","viva","TAT Productions confirmou candidatura em vaga nomeada","Lead Character Modeling e Blendshape 3D. Convite com nota enviado à recruiter Julie Goutheraud no LinkedIn, como o próprio estúdio sugeriu."],
+ ["2026-08-27","viva","WildBrain confirmou na vaga de Groom Supervisor (CG Feature)","Encaixe direto com o grooming em Houdini, que é o diferencial mais raro do seu perfil nessa faixa."],
+ ["2026-08-27","viva","Psyop confirmou na vaga de CG Modeler","Candidatura registrada pelo Jotform do estúdio."],
+ ["2026-08-27","viva","Superprod confirmou na vaga de Milão","Mid/Senior Character Designer (Anime Specialist), mais a candidatura espontânea no mesmo portal."],
+ ["2026-08-27","porta","Catorze candidaturas por portal em um único dia","Blue Zoo, CraveFX, Guru, Meduzarts, Assemblage, TAT, Gigglebug, Psyop, REALTIME, Xilam, Passion Republic, Wise Blue, Superprod e Redmonk."],
+ ["2026-08-27","alerta","O formulário da Fortiche não envia","Testado com e sem VPN, consentimento marcado, e mesmo assim falha. Fica para retentar."],
+ ["2026-08-26","viva","Nuare Studio abriu conversa no mesmo dia","Você respondeu com portfólio, foco nos projetos pessoais e pretensão de USD 3.840 por mês, com CV e cover letter anexados."],
+ ["2026-08-26","viva","Studio Soi explicou o gargalo do visto alemão","Torben respondeu ao follow-up: o processo leva meses e exige provar que não há artista disponível na UE. Guardou seu email para trabalho remoto futuro."],
+ ["2026-08-26","nao","Cinco recusas no primeiro dia","Sperasoft, Studio Soi, Anima Kitchent, B-Water e SunStrike. Todas receberam a resposta-padrão que mantém a porta aberta."],
+ ["2026-08-26","envio","A campanha começa com 93 emails","Lotes 1 a 5 disparados em um unico dia."]
+];
+const NOV_META = {
+ viva:  ["\u{1F389}","Em andamento","nv-viva"],
+ vaga:  ["\u{1F525}","Vaga quente","nv-vaga"],
+ porta: ["\u{1F4DD}","Candidatura","nv-porta"],
+ nao:   ["✕","Sem sequência","nv-nao"],
+ alerta:["⚠️","Correção","nv-alerta"],
+ envio: ["\u{1F4E4}","Envios","nv-envio"]
+};
+let novFilter = "", novAll = false;
+const DIAS_VISIVEIS = 2;
+function novDate(iso){
+  const [y,m,d] = iso.split("-");
+  const dt = new Date(Date.UTC(+y,+m-1,+d));
+  const sem = ["domingo","segunda","terça","quarta","quinta","sexta","sábado"][dt.getUTCDay()];
+  return d+"/"+m+" · "+sem;
+}
+function renderNovidades(){
+  const sel = NOVIDADES.filter(n=>!novFilter || n[1]===novFilter);
+  const dias = [...new Set(sel.map(n=>n[0]))].sort().reverse();
+  const mostrar = novAll ? dias : dias.slice(0, DIAS_VISIVEIS);
+  $("#novList").innerHTML = mostrar.map(dia=>{
+    const itens = sel.filter(n=>n[0]===dia).map(([,tipo,tit,txt,link])=>{
+      const [ic,tag,cls] = NOV_META[tipo] || NOV_META.porta;
+      const corpo = link
+        ? esc(txt)+' <a href="'+esc(link)+'" target="_blank" rel="noopener">abrir vaga →</a>'
+        : esc(txt);
+      return '<div class="nov-item '+cls+'"><span class="nov-ic">'+ic+'</span><div class="nov-b">'
+        + '<div class="nov-tag">'+tag+'</div><div class="nov-tit">'+esc(tit)+'</div>'
+        + '<div class="nov-txt">'+corpo+'</div></div></div>';
+    }).join("");
+    return '<div class="nov-day"><span class="nov-date">'+novDate(dia)+'</span><span class="nov-rule"></span></div>'+itens;
+  }).join("") || '<p class="hint">Nada nessa categoria ainda.</p>';
+  const restantes = dias.length - mostrar.length;
+  const btn = $("#novMore");
+  btn.style.display = (dias.length > DIAS_VISIVEIS) ? "" : "none";
+  btn.textContent = novAll ? "▲ Mostrar só os dias recentes" : "▼ Ver os outros "+restantes+" dia"+(restantes>1?"s":"");
+  $("#novBadge").textContent = NOVIDADES.length+" atualizações";
+  const chips = [["","Tudo",NOVIDADES.length],
+    ...Object.keys(NOV_META).map(k=>[k,NOV_META[k][0]+" "+NOV_META[k][1],NOVIDADES.filter(n=>n[1]===k).length])]
+    .filter(([k,,n])=>k==="" || n>0);
+  $("#novChips").innerHTML = chips.map(([val,label,n])=>
+    '<button class="chipbtn'+(novFilter===val?" on":"")+'" data-n="'+val+'">'+esc(label)+' '+n+'</button>').join("");
+  $("#novChips").querySelectorAll("button").forEach(b=>{
+    b.addEventListener("click", ()=>{ novFilter = b.dataset.n; novAll = !!novFilter; renderNovidades(); });
+  });
 }
 
 // ---------- o que fazer agora ----------
@@ -1134,6 +1237,7 @@ $("#exportBtn").addEventListener("click", ()=>{
 $("#resetBtn").addEventListener("click", ()=>{
   if(confirm("Limpar todas as marcações de andamento?")){ progress={}; saveProgress(); renderAll(); }
 });
+$("#novMore").addEventListener("click", ()=>{ novAll = !novAll; renderNovidades(); });
 $("#themeBtn").addEventListener("click", ()=>{
   const root = document.documentElement;
   const dark = root.dataset.theme==="dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
@@ -1146,7 +1250,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
+  renderNovidades(); renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
