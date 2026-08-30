@@ -136,3 +136,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Rebellion (Reino Unido; Oxford) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist (shooter tático em 3a pessoa) via apply.workable.com/rebellion; vaga presencial em Oxford
 - Kabam (Canadá; Vancouver) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (pipeline completo, do concept à integração); presencial 5 dias; via https://jobs.lever.co/kabam
 - Hasbro / Wizards of the Coast, estúdio Skeleton Key (EUA; Austin TX) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist; pipeline de personagem com hair work; 7+ anos AAA; via careers.hasbro.com
+- Teyon (Polônia; Cracóvia) — CANDIDATURA ENVIADA em 30/08 para Senior/Lead Character Artist (action RPG novo); oferecem apoio de realocação e híbrido 3 dias; https://teyon.com/careers/
