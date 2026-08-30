@@ -122,7 +122,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Oasis Animation (Canadá) — descartado: maior estúdio 2D do Quebec, 2D puro fora do foco (info@oasisanimation.com verificado, guardado só como registro)
 - Mokko Studio (Canadá) — descartado: estúdio encerrado em 2017
 - Activision / Toys for Bob — VAGA EXPIRADA (verificado 29/08); acompanhar careers.toysforbob.com/c/art-jobs
-- Streamline Studios — VAGA CONFIRMADA no ATS oficial Workable (29/08); nome correto é Streamline Studios, não "Streamline Games"; board tem Lead + Senior + 3D Character Artist
+- Streamline Studios — NÃO CONFIRMADA. A checagem de 29/08 foi só por resultado de busca (o Workable é bloqueado pelo proxy); a página oficial de carreiras responde "no job openings at the moment" (verificado pelo Vini em 30/08). Página é filtrada por região; conferir o seletor de regiões
 - DuskSoft Studios — vaga ativa, mas é estúdio de um dev só, freelance por comissão; rebaixada para média (29/08)
 - Studio Camelia — VAGA EXPIRADA (verificado 29/08); acompanhar emploi.afjv.com/annonces-societes/1979
 - Half Mermaid Productions — vaga confirmada no ATS oficial TriNet (29/08), mas NÃO patrocina visto para não-cidadãos dos EUA; rebaixada para média
