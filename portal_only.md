@@ -127,3 +127,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Studio Camelia — VAGA EXPIRADA (verificado 29/08); acompanhar emploi.afjv.com/annonces-societes/1979
 - Half Mermaid Productions — vaga confirmada no ATS oficial TriNet (29/08), mas NÃO patrocina visto para não-cidadãos dos EUA; rebaixada para média
 - Gameloft (Barcelona) — VAGA EXPIRADA (verificado 30/08): a Senior 3D Character Artist de D&D saiu do ar; nenhuma outra vaga de character artist em Barcelona na checagem de 30/08; acompanhar https://www.en.gameloft.com/careers
+- Riot Games — VAGA EXPIRADA (verificado 30/08): a Senior 3D Character Artist de LoL Cosmetics saiu do portal; acompanhar https://www.riotgames.com/en/work-with-us
+- Cartoon Saloon — SEM VAGAS ABERTAS (verificado 30/08); só aceitam candidatura em vaga publicada por GDPR; time todo presencial em Kilkenny; acompanhar https://www.cartoonsaloon.ie/positions/
+- Ánima Kitchent — link do LinkedIn não abria sem login; usar https://www.infojobs.net/anima-kitchent (público) ou jobs@animakitchent.com; estúdio em Las Palmas, semana de 4 dias

@@ -454,9 +454,9 @@ const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 // Estúdios que exigem aplicação via portal/formulário. origem: "email" = pediram na resposta ao nosso email; "portal" = nunca aceitaram email.
 // 6º campo (opcional) = true quando a aplicação foi CONFIRMADA (gravado pela automação ao ver o email de confirmação, ou a pedido do Vini).
 const PORTAIS = [
- ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/careers","email","Responderam: por GDPR só aceitam candidatura pelas vagas do site",false,"media"],
+ ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/positions/","email","SEM VAGAS ABERTAS (verificado 30/08 pelo Vini). Responderam que por GDPR só aceitam candidatura em vaga publicada, e no momento não há nenhuma. Todo o time trabalha presencialmente em Kilkenny. Link corrigido para a página real de vagas; publicam com frequência, então vale rechecar",false,"baixa"],
  ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Aplicado em 29/08 pelo formulário Google, conforme pedido do estúdio; recibo do Google Forms confirmou o envio às 21h27",true,"alta"],
- ["Anima Kitchent","Espanha","https://www.linkedin.com/company/anima-kitchent/jobs/","email","RH (Rocio González) pede questionário nas vagas do LinkedIn; seguir a Rocio",false,"media"],
+ ["Ánima Kitchent","Espanha (Las Palmas)","https://www.infojobs.net/anima-kitchent/em-i98565456564653657873771015253846515663","email","LINK DO LINKEDIN CORRIGIDO em 30/08: a URL antiga exigia login e não abria. O RH (Rocio González) explicou que por GDPR não pode guardar CV avulso e pede o questionário da vaga publicada. Agora o link vai para a página pública do InfoJobs, que abre sem conta. Alternativa: es.linkedin.com/company/ánima-kitchent e jobs@animakitchent.com. Estúdio fica em Las Palmas de Gran Canaria e trabalha em semana de 4 dias",false,"media"],
  ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Aplicação enviada em 27/08 pelo formulário do site (email havia quicado; era o único canal)",true],
  ["Guru Studio","Canadá","https://gurustudio.com/careers","email","General Application enviada em 27/08 (email quicou; portal era o único canal) — Head of Talent: Sue Jung",true],
  ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)",false,"media"],
@@ -490,7 +490,7 @@ const PORTAIS = [
  ["Psyop","EUA","https://www.psyop.com/","portal","Aplicado em 27/08 na vaga CG Modeler — confirmação recebida",true],
  ["Locksmith Animation","Reino Unido","https://locksmithanimation.com/careers","email","Auto-reply: careers@ não é monitorado para CVs especulativos; acompanhar vagas no site e nas redes (Bad Fairies em produção)",false,"media"],
  ["Polygon Pictures","Japão","https://pro.form-mailer.jp/fms/4f8c76fa17178","email","RH respondeu em 27/08 pedindo o formulário oficial com demo reel; usar o kit + link do ArtStation como reel",false,"alta"],
- ["Riot Games","EUA","https://www.riotgames.com/en/work-with-us/job/6470371/senior-3d-character-artist-league-of-legends-cosmetics-los-angeles-usa","portal","VAGA CONFIRMADA no site oficial em 29/08: Senior 3D Character Artist, LoL Cosmetics (Los Angeles); pede hand-painted stylized; há uma 2a vaga similar de LoL no mesmo portal",false,"alta"],
+ ["Riot Games","EUA","https://www.riotgames.com/en/work-with-us","portal","SEM VAGA COMPATÍVEL (verificado 30/08 pelo Vini): a Senior 3D Character Artist de LoL Cosmetics saiu do ar e o que resta de arte no portal é estágio e funções fora do perfil. Link agora vai para o portal geral; a carta do dossiê continua válida para quando abrir vaga de skins",false,"baixa"],
  ["Cloud Chamber","EUA/Canadá","https://hitmarker.net/jobs/cloud-chamber-senior-character-artist-2271728","portal","VAGA: Senior Character Artist no próximo BioShock; personagens estilizados; Novato/Montreal",false,"media"],
  ["Gameloft","Espanha (Barcelona)","https://www.en.gameloft.com/careers","portal","VAGA EXPIRADA (verificado 30/08): a Senior 3D Character Artist de D&D em Barcelona saiu do ar. Uma busca nas vagas abertas de Barcelona em 30/08 não encontrou nenhuma vaga de character artist. Link agora aponta para o portal geral de carreiras; a Gameloft abre vagas de personagem com frequência, vale acompanhar",false,"baixa"],
  ["Streamline Studios","Remoto (Malásia)","https://apply.workable.com/streamlinestudios/","portal","VAGA CONFIRMADA no ATS oficial (Workable) em 29/08: Lead Character Artist 100% remoto, freelance com conversão a full-time, reporta ao Art/Creative Director. O mesmo board tem tambem Senior 3D Character Artist e 3D Character Artist abertos. Nome correto e Streamline Studios (grupo Streamline Media), nao Streamline Games",false,"alta"],
@@ -604,6 +604,7 @@ function counts(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","alerta","Riot e Cartoon Saloon saem do topo da lista","Você conferiu e a Senior 3D Character Artist de LoL Cosmetics não está mais no portal da Riot: o que sobrou de arte lá é estágio e função fora do perfil. A Cartoon Saloon também está sem vaga aberta, e como eles só aceitam candidatura em vaga publicada por causa do GDPR, não há por onde entrar agora. As duas caíram para baixa prioridade. O link da Ánima Kitchent também foi corrigido: o antigo era do LinkedIn e exigia login, agora aponta para a página pública do InfoJobs."],
  ["2026-08-30","alerta","A vaga da Gameloft em Barcelona expirou","A Senior 3D Character Artist de Dungeons & Dragons, que era a vaga mais forte da lista por juntar personagem estilizado com contrato permanente na Europa, saiu do ar. Era a quinta vaga que morre em dois dias, e desta vez o anúncio tinha sido conferido no site oficial da Gameloft, não em agregador: o problema aqui não foi fonte ruim, foi o próprio ritmo do mercado. Uma varredura nas vagas de Barcelona em 30/08 não achou nenhuma outra de character artist, então o link do site passa a apontar para o portal geral de carreiras.","https://www.en.gameloft.com/careers"],
  ["2026-08-30","porta","ArenaNet confirmou sua candidatura espontânea","Você aplicou pelo portal oficial da ArenaNet, em Bellevue, e o ATS deles (Ashby) confirmou a inscrição como General Applications. O que puxou o interesse foi a vaga de Lead Character Artist em projeto não anunciado, remota, liderando times internos e externos de arte de criaturas. A carta usa a sua escola como prova de capacidade de liderança: quem ensina o workflow inteiro sabe torná-lo repetível para um time.","https://www.arena.net/en/careers"],
  ["2026-08-29","viva","Plastic Wax recebeu seus dados","Você respondeu ao pedido do estúdio australiano com right to work, pretensão, disponibilidade, data de início e localização. A bola está com o recrutamento deles agora."],
@@ -1060,8 +1061,8 @@ const DOSSIES = [
  ],
  [
   "Riot Games",
-  "Senior 3D Character Artist, League of Legends Cosmetics",
-  "https://hitmarker.net/jobs/riot-games-senior-3d-character-artist-league-of-legends-cosmetics-2875801",
+  "VAGA EXPIRADA em 30/08 · Senior 3D Character Artist, LoL Cosmetics",
+  "https://www.riotgames.com/en/work-with-us",
   [
    [
     "Cover letter da vaga (colar inteira)",
