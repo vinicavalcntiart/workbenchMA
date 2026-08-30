@@ -138,3 +138,5 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Hasbro / Wizards of the Coast, estúdio Skeleton Key (EUA; Austin TX) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist; pipeline de personagem com hair work; 7+ anos AAA; via careers.hasbro.com
 - Teyon (Polônia; Cracóvia) — CANDIDATURA ENVIADA em 30/08 para Senior/Lead Character Artist (action RPG novo); oferecem apoio de realocação e híbrido 3 dias; https://teyon.com/careers/
 - Black Kite Studios (Reino Unido/remoto) — CANDIDATURA ENVIADA em 30/08 para Lead 3D Artist via https://joinus.blackkitestudios.com/jobs; detalhes da vaga não confirmados na fonte oficial
+- VAGA: teamLFG / PlayStation Studios (EUA Bellevue; anunciada como remota) — 3D Character Art Lead em IP nova; confirmada em 30/08 no careers.playstation.com E no Greenhouse do teamLFG (mesmo id 5984590004); provável exigência de autorização de trabalho nos EUA
+- Digic Pictures — vaga de Character Modeler RECHECADA em 30/08 e segue aberta; portal com 16+ vagas, incluindo CFX Artist (simulação de pano e cabelo)
