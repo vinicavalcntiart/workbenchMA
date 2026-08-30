@@ -644,7 +644,7 @@ const GRANDES = [
  ["Walt Disney Animation Studios","Burbank, CA","https://www.disneycareers.com/en/search-jobs","ats","Portal único da Disney, verificado em 30/08. Filtrar por Walt Disney Animation Studios. Sem via de email"],
  ["DreamWorks Animation","Glendale, CA","https://www.dreamworks.com/careers","ats","Página oficial de carreiras verificada em 30/08. Recrutamento pelo grupo Universal; sem email público"],
  ["Sony Pictures Animation","Culver City, CA","https://www.sonypicturesanimation.com/careers/job-postings","ats","Página oficial de vagas verificada em 30/08. Eles dizem que aceitam candidatura mesmo sem vaga anunciada"],
- ["Skydance Animation","Santa Monica, CA / Madrid","https://jobs.lever.co/skydance","ats","Lever oficial verificado em 30/08. Têm divisões de Art, Visual Development e VFX, que é exatamente a sua faixa. Também há estúdio em Madri, o que abre uma rota europeia"],
+ ["Skydance Animation","Santa Monica, CA / Madrid","https://jobs.lever.co/skydance","ats","CANDIDATURA ENVIADA em 30/08. Lever oficial verificado no mesmo dia. Têm divisões de Art, Visual Development e VFX, que é exatamente a sua faixa. Também há estúdio em Madri, o que abre uma rota europeia",true],
  ["Illumination","Santa Monica, CA","https://www.illumination.com/","ats","Recrutamento roda pelo grupo Universal e não há portal próprio público; sem email de candidatura. Acompanhar pelo LinkedIn deles"],
  ["LAIKA","Portland, OR","https://www.laika.com/careers/","ats","Página oficial verificada em 30/08; eles afirmam que as vagas listadas estão sempre atualizadas. Stop-motion com departamento CG forte"],
  ["Netflix Animation","Los Angeles, CA","https://explore.jobs.netflix.net/careers","ats","Portal único da Netflix; filtrar por Animation. Sem email de candidatura"],
@@ -653,15 +653,16 @@ const GRANDES = [
  ["Cartoon Network Studios","Burbank, CA","https://careers.wbd.com/","ats","Parte da Warner Bros. Discovery; sem portal separado"],
  ["Titmouse","Los Angeles / Nova York / Vancouver","https://titmouse.net/careers/","form","Página oficial verificada em 30/08. Aceitam portfólio, reel e currículo mesmo sem vaga aberta, o que é raro entre os grandes"],
  ["Reel FX Animation","Dallas, TX","https://www.reelfx.com/careers/","ats","Página oficial verificada em 30/08. Feature e conteúdo de marca em CG"],
- ["Powerhouse Animation","Austin, TX","https://www.powerhouseanimation.com/careers/","form","Página oficial verificada em 30/08. Dizem explicitamente que aceitam portfólio, reel e currículo para consideração futura mesmo sem vaga"],
+ ["Powerhouse Animation","Austin, TX","https://www.powerhouseanimation.com/careers/","form","CANDIDATURA ENVIADA em 30/08, aproveitando que eles aceitam portfólio, reel e currículo para consideração futura mesmo sem vaga aberta. Página oficial verificada no mesmo dia",true],
  ["Bento Box Entertainment","Los Angeles / Atlanta","https://www.bentoboxent.com/","form","Aceitam envio de portfólio, reel e currículo para consideração futura; produção majoritariamente 2D, então o encaixe é menor"],
  ["ShadowMachine","Los Angeles / Portland","https://www.linkedin.com/company/shadowmachine/jobs/","ats","As vagas saem pelo LinkedIn da produtora; não têm portal próprio público. Pinóquio do Del Toro"],
  ["Angel Studios","Provo, UT","https://www.angel.com/careers","ats","VOCÊ JÁ TEM CRÉDITO AQUI: modelou e pintou os personagens da 1a temporada de The Wingfeather Saga. Uma candidatura direta aqui carrega peso que nenhuma outra da lista tem"]
 ];
 function renderGrandes(){
-  const rows = [...GRANDES].map(([name,sede,url,via,note])=>({name,sede,url,via,note}));
+  const rows = [...GRANDES].map(([name,sede,url,via,note,done])=>({name,sede,url,via,note,done:!!done}));
+  const feito = g => g.done || !!applied[g.url];
   rows.sort((a,b)=>{
-    const pa = applied[a.url]?1:0, pb = applied[b.url]?1:0;
+    const pa = feito(a)?1:0, pb = feito(b)?1:0;
     if(pa!==pb) return pa-pb;
     return a.name.localeCompare(b.name);
   });
@@ -671,16 +672,16 @@ function renderGrandes(){
     email:['<span class="chip"><span class="dot" style="background:var(--warn)"></span>email</span>']
   };
   $("#grandeRows").innerHTML = rows.map(g=>{
-    const done = !!applied[g.url];
+    const done = feito(g);
     return '<tr class="'+(done?"pdone":"")+'">'
-      + '<td><input type="checkbox" data-url="'+esc(g.url)+'"'+(done?" checked":"")+' aria-label="Marcar '+esc(g.name)+' como aplicado"></td>'
-      + '<td><span class="pname">'+esc(g.name)+'</span></td>'
+      + '<td><input type="checkbox" data-url="'+esc(g.url)+'"'+(done?" checked":"")+(g.done?" disabled title=\"Registrado pela automação: o Vini confirmou o envio\"":"")+' aria-label="Marcar '+esc(g.name)+' como aplicado"></td>'
+      + '<td><span class="pname">'+esc(g.name)+'</span>'+(g.done?' <span class="chip" style="color:var(--good-text)">✓ enviado</span>':'')+'</td>'
       + '<td>'+esc(g.sede)+'</td>'
       + '<td><a href="'+esc(g.url)+'" target="_blank" rel="noopener">abrir carreiras ↗</a></td>'
       + '<td>'+(VIA[g.via]||VIA.ats)[0]+' <span style="color:var(--muted)">· '+esc(g.note)+'</span></td>'
       + '</tr>';
   }).join("");
-  const feitos = rows.filter(g=>applied[g.url]).length;
+  const feitos = rows.filter(feito).length;
   const semVaga = GRANDES.filter(g=>g[3]==="form").length;
   $("#grandeBadge").textContent = feitos+" de "+GRANDES.length+" feitos";
   $("#grandeHint").innerHTML = "Os grandes da animação americana, com a rota oficial de candidatura de cada um conferida em 30/08. "
@@ -701,6 +702,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","porta","Primeiras candidaturas nos estúdios grandes: Skydance e Powerhouse","Você abriu a lista dos grandes no mesmo dia em que ela foi montada. A Skydance é a mais estratégica das duas: tem divisão de Visual Development, que é o cargo que você quer de fato, e estúdio em Madri além do de Santa Monica, o que abre uma rota europeia sem depender de visto americano. A Powerhouse foi pela porta que eles mesmos deixam aberta, aceitando portfólio, reel e currículo para consideração futura mesmo sem vaga anunciada."],
  ["2026-08-30","alerta","O kit de aplicação agora inclui os estúdios grandes","Você reparou que Skydance, Pixar, Angel e os outros não apareciam no seletor do kit: ele só listava os portais e os estúdios já contatados por email. Corrigido. Os 17 estúdios grandes entram agora num grupo próprio no topo da lista, separados entre os que faltam fazer e os já marcados como feitos, e o {STUDIO} dos textos passa a ser substituído pelo nome deles como em qualquer outro."],
  ["2026-08-30","porta","Ubisoft e Side confirmaram as candidaturas","As duas responderam pelo ATS do próprio empregador em menos de uma hora: a Ubisoft pelo SmartRecruiters, com o título em francês Artiste de personnages sénior·e (Rainbow Six Siege), e a Side pelo Workable. Isso também resolve uma dúvida minha: como você aplica pelo Hitmarker, eu não consigo confirmar o anúncio na página do estúdio, mas o botão de aplicar encaminha para o ATS real, então a candidatura chega no lugar certo. A prova é justamente essas confirmações virem do domínio do empregador e não do agregador."],
  ["2026-08-30","porta","Candidatura na Ubisoft Montreal, em Rainbow Six Siege","Você aplicou para Senior Character Artist em Rainbow Six Siege. O trabalho descrito é conteúdo de customização para os operadores existentes, equilibrando qualidade visual e restrição técnica dentro de produção AAA, trabalhando junto com concept, rigging e animação. Confirmei no portal oficial da Ubisoft que a família de vagas de personagem de Siege está aberta. É a sua terceira porta no Canadá, ao lado de Behaviour em Montreal e Kabam em Vancouver, e o Quebec é a praça com a rota de visto mais rodada do mundo para arte de games."],
@@ -1016,8 +1018,9 @@ function setupKitStudio(){
   const pend = PORTAIS.filter(p=>!isApplied(p)).map(p=>p.name);
   const done = PORTAIS.filter(p=>isApplied(p)).map(p=>p.name);
   const jaTem = n => pend.includes(n) || done.includes(n);
-  const grandesPend = GRANDES.map(g=>g[0]).filter(n=>!jaTem(n) && !GRANDES.some(g=>g[0]===n && applied[g[2]]));
-  const grandesFeitos = GRANDES.filter(g=>applied[g[2]]).map(g=>g[0]).filter(n=>!jaTem(n));
+  const gFeito = g => !!g[5] || !!applied[g[2]];
+  const grandesPend = GRANDES.filter(g=>!gFeito(g)).map(g=>g[0]).filter(n=>!jaTem(n));
+  const grandesFeitos = GRANDES.filter(gFeito).map(g=>g[0]).filter(n=>!jaTem(n));
   const cobertos = new Set([...pend, ...done, ...grandesPend, ...grandesFeitos]);
   const others = CONTACTED.map(s=>s.name).filter(n=>!cobertos.has(n)).sort((a,b)=>a.localeCompare(b));
   const opt = n=>`<option value="${n.replace(/"/g,"&quot;")}">${n}</option>`;
