@@ -147,3 +147,5 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Ubisoft Montreal (Canadá) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist em Rainbow Six Siege (customização de operadores); portal oficial ubisoft.com/company/careers
 - Skydance Animation (EUA Santa Monica / Madri) — CANDIDATURA ENVIADA em 30/08 pelo Lever oficial; divisao de Visual Development; rota europeia por Madri
 - Powerhouse Animation (EUA Austin) — CANDIDATURA ENVIADA em 30/08 pela pagina oficial; aceitam portfolio sem vaga aberta
+- VAGA REMOTA: Santa Monica Studio / PlayStation (EUA; remota) — Sr Character Artist, External Development; confirmada em sms.playstation.com em 30/08; anúncio pede hair e groom; função de guiar arte terceirizada casa com o passado de outsourcing na PUGA
+- VAGA REMOTA: VOID Interactive (Irlanda; remoto) — Lead Character Artist em Ready or Not; confirmada em voidinteractive.net/careers em 30/08; fora da Irlanda entra como contractor sem visto, mas a vaga está marcada (EU)
