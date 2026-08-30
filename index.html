@@ -701,6 +701,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","alerta","O kit de aplicação agora inclui os estúdios grandes","Você reparou que Skydance, Pixar, Angel e os outros não apareciam no seletor do kit: ele só listava os portais e os estúdios já contatados por email. Corrigido. Os 17 estúdios grandes entram agora num grupo próprio no topo da lista, separados entre os que faltam fazer e os já marcados como feitos, e o {STUDIO} dos textos passa a ser substituído pelo nome deles como em qualquer outro."],
  ["2026-08-30","porta","Ubisoft e Side confirmaram as candidaturas","As duas responderam pelo ATS do próprio empregador em menos de uma hora: a Ubisoft pelo SmartRecruiters, com o título em francês Artiste de personnages sénior·e (Rainbow Six Siege), e a Side pelo Workable. Isso também resolve uma dúvida minha: como você aplica pelo Hitmarker, eu não consigo confirmar o anúncio na página do estúdio, mas o botão de aplicar encaminha para o ATS real, então a candidatura chega no lugar certo. A prova é justamente essas confirmações virem do domínio do empregador e não do agregador."],
  ["2026-08-30","porta","Candidatura na Ubisoft Montreal, em Rainbow Six Siege","Você aplicou para Senior Character Artist em Rainbow Six Siege. O trabalho descrito é conteúdo de customização para os operadores existentes, equilibrando qualidade visual e restrição técnica dentro de produção AAA, trabalhando junto com concept, rigging e animação. Confirmei no portal oficial da Ubisoft que a família de vagas de personagem de Siege está aberta. É a sua terceira porta no Canadá, ao lado de Behaviour em Montreal e Kabam em Vancouver, e o Quebec é a praça com a rota de visto mais rodada do mundo para arte de games."],
  ["2026-08-30","porta","Candidatura na Side para Artiste 3D senior","Você aplicou para a vaga de Artiste 3D senior, anunciada em francês e inglês, o que aponta para Quebec. Fica registrado que eu não consegui confirmar essa vaga na fonte oficial hoje: a busca não achou a página dela no site da Side, então sede, formato de contrato e escopo ficam por confirmar se eles responderem. A Side é uma prestadora global de serviços para games, com frentes de arte, áudio, localização e QA."],
@@ -1014,10 +1015,16 @@ function setupKitStudio(){
   const sel = $("#kitStudio");
   const pend = PORTAIS.filter(p=>!isApplied(p)).map(p=>p.name);
   const done = PORTAIS.filter(p=>isApplied(p)).map(p=>p.name);
-  const others = CONTACTED.map(s=>s.name).filter(n=>!pend.includes(n)&&!done.includes(n)).sort((a,b)=>a.localeCompare(b));
+  const jaTem = n => pend.includes(n) || done.includes(n);
+  const grandesPend = GRANDES.map(g=>g[0]).filter(n=>!jaTem(n) && !GRANDES.some(g=>g[0]===n && applied[g[2]]));
+  const grandesFeitos = GRANDES.filter(g=>applied[g[2]]).map(g=>g[0]).filter(n=>!jaTem(n));
+  const cobertos = new Set([...pend, ...done, ...grandesPend, ...grandesFeitos]);
+  const others = CONTACTED.map(s=>s.name).filter(n=>!cobertos.has(n)).sort((a,b)=>a.localeCompare(b));
   const opt = n=>`<option value="${n.replace(/"/g,"&quot;")}">${n}</option>`;
   sel.innerHTML = `<option value="">— escolha o estúdio —</option>`
+    + (grandesPend.length?`<optgroup label="🏆 Estúdios grandes (a fazer)">${grandesPend.map(opt).join("")}</optgroup>`:"")
     + (pend.length?`<optgroup label="Portais pendentes">${pend.map(opt).join("")}</optgroup>`:"")
+    + (grandesFeitos.length?`<optgroup label="🏆 Estúdios grandes (feitos)">${grandesFeitos.map(opt).join("")}</optgroup>`:"")
     + (done.length?`<optgroup label="Portais aplicados">${done.map(opt).join("")}</optgroup>`:"")
     + `<optgroup label="Outros estúdios contatados">${others.map(opt).join("")}</optgroup>`;
   sel.value = kitStudioName();
