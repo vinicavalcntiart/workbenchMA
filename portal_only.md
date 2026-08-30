@@ -17,7 +17,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Assemblage Entertainment | Índia | https://www.madassemblage.com/contact-us/ | Features CG (Netflix); só formulário de contato |
 | Room 8 Studio | Ucrânia (global) | https://room8studio.com/careers/ | Game art e cinematics AAA; contato só por formulário |
 | Boulder Media | Irlanda | https://bouldermedia.tv/contact/ | Dublin; séries CG/2D; contato só por formulário |
-| Studio Rakete | Alemanha | https://www.studiorakete.de/en/kontakt-2/ | Hamburgo; features e séries CG; sem email público |
+| Studio Rakete | Alemanha | SAIU do portal_only | Vini achou jobs2026@studiorakete.de no site; tratado por email (lote 13) |
 | Ánima Estudios | México | https://www.animaestudios.com | Maior estúdio da América Latina; sem email geral público |
 | Bardel Entertainment | Canadá | https://bardel.ca/contactus/ | Vancouver; service CG de peso; só formulário |
 | Supamonks | França | https://www.supamonks.com/studio/ | Arcueil; 2D/3D para publicidade e trailers; sem email público |
@@ -70,7 +70,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Volta (Canadá) — visual development 2D/3D (grupo Keywords); sem email público; https://www.volta.ca/
 - Amber (Romênia) — co-dev global; só formulário em https://amberstudio.com/
 - Klang Games (Alemanha) — Berlim (Seed); email não exibido publicamente; https://klang-games.com/careers
-- Studio Rakete (Alemanha) — Hamburgo; serviço de animação; sem email público; http://www.studiorakete.de/en/kontakt-2/
+- Studio Rakete — SAIU do portal_only: Vini achou jobs2026@studiorakete.de na página do site; tratado por email (lote 13)
 - RISE Visual Effects Studios (Alemanha) — VFX Berlim/Colônia/Munique; só portal em https://www.risefx.com/rise-visual-effects-studios-jobs.php
 - Sola Digital Arts (Japão) — CG de ULTRAMAN e SAC_2045; sem email público; https://sola-digital.com/
 - Kamikaze Douga (Japão) — CG estilizado (Star Wars: Visions); sem email público; https://kamikazedouga.co.jp/
