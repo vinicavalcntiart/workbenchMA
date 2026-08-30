@@ -66,26 +66,50 @@
   .acao.atencao { border-left-color:var(--warn); }
   .acao.info { border-left-color:var(--axis); }
   .acao.boa { border-left-color:var(--good); }
-  /* novidades (newsletter) */
-  .nov-day { display:flex; align-items:center; gap:10px; margin:20px 0 9px; }
-  .nov-day:first-child { margin-top:0; }
-  .nov-date { font-weight:700; font-size:12.5px; color:var(--ink); background:var(--page);
-    border:1px solid var(--ring); border-radius:999px; padding:3px 12px; flex:none; }
-  .nov-rule { flex:1; height:1px; background:var(--grid); }
-  .nov-item { display:flex; gap:12px; padding:11px 14px; margin-bottom:8px;
-    background:var(--page); border:1px solid var(--ring); border-left-width:4px; border-radius:10px; }
-  .nov-ic { font-size:19px; line-height:1.25; flex:none; }
-  .nov-b { min-width:0; }
-  .nov-tag { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
-  .nov-tit { font-weight:650; margin-top:1px; }
-  .nov-txt { color:var(--ink-2); font-size:13px; margin-top:3px; }
-  .nov-item a { color:inherit; text-underline-offset:2px; }
-  .nv-viva   { border-left-color:var(--good); }    .nv-viva   .nov-tag { color:var(--good-text); }
-  .nv-vaga   { border-left-color:var(--crit); }    .nv-vaga   .nov-tag { color:var(--crit); }
-  .nv-porta  { border-left-color:var(--axis); }    .nv-porta  .nov-tag { color:var(--muted); }
-  .nv-nao    { border-left-color:var(--serious); } .nv-nao    .nov-tag { color:var(--serious); }
-  .nv-alerta { border-left-color:var(--warn); }    .nv-alerta .nov-tag { color:var(--serious); }
-  .nv-envio  { border-left-color:var(--axis); }    .nv-envio  .nov-tag { color:var(--muted); }
+  /* novidades: feed horizontal de mini posts */
+  .feedwrap { position:relative; margin-top:4px; }
+  .feed {
+    display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x proximity;
+    scroll-behavior:smooth; padding:4px 2px 12px; scrollbar-width:thin;
+  }
+  .feed::-webkit-scrollbar { height:8px; }
+  .feed::-webkit-scrollbar-thumb { background:var(--axis); border-radius:999px; }
+  .feed::-webkit-scrollbar-track { background:transparent; }
+  .feed:focus-visible { outline:2px solid var(--blue); outline-offset:3px; border-radius:12px; }
+  .post {
+    flex:0 0 300px; scroll-snap-align:start; display:flex; flex-direction:column;
+    background:var(--page); border:1px solid var(--ring); border-top-width:4px;
+    border-radius:12px; padding:13px 15px 12px; cursor:pointer; text-align:left;
+    font:inherit; color:inherit;
+  }
+  .post:hover { border-color:var(--axis); }
+  .post .pmeta { display:flex; align-items:center; gap:7px; }
+  .post .pcat { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .post .pwhen { margin-left:auto; font-size:11.5px; color:var(--muted); white-space:nowrap; }
+  .post .ptit { margin:9px 0 0; font-size:15px; line-height:1.32; font-weight:660; }
+  .post .ptxt {
+    margin:7px 0 0; font-size:13px; color:var(--ink-2);
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; overflow:hidden;
+  }
+  .post.open .ptxt { -webkit-line-clamp:unset; overflow:visible; }
+  .post .pfoot { margin-top:auto; padding-top:11px; font-size:12.5px; color:var(--muted); }
+  .post .pfoot a { color:var(--blue); text-decoration:none; font-weight:600; }
+  .post .pfoot a:hover { text-decoration:underline; }
+  .feednav {
+    position:absolute; top:38%; z-index:2; width:34px; height:34px; border-radius:999px;
+    border:1px solid var(--ring); background:var(--surface); color:var(--ink);
+    font-size:19px; line-height:1; cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,.12);
+  }
+  .feednav:hover:not(:disabled) { border-color:var(--axis); }
+  .feednav:disabled { opacity:0; pointer-events:none; }
+  .feednav.prev { left:-8px; } .feednav.next { right:-8px; }
+  @media (max-width:640px){ .post { flex-basis:82vw; } .feednav { display:none; } }
+  .pv-viva   { border-top-color:var(--good); }    .pv-viva   .pcat { color:var(--good-text); }
+  .pv-vaga   { border-top-color:var(--crit); }    .pv-vaga   .pcat { color:var(--crit); }
+  .pv-porta  { border-top-color:var(--blue); }    .pv-porta  .pcat { color:var(--blue); }
+  .pv-nao    { border-top-color:var(--serious); } .pv-nao    .pcat { color:var(--serious); }
+  .pv-alerta { border-top-color:var(--warn); }    .pv-alerta .pcat { color:var(--serious); }
+  .pv-envio  { border-top-color:var(--axis); }    .pv-envio  .pcat { color:var(--muted); }
   /* tiles */
   .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
   .tile { background:var(--surface); border:1px solid var(--ring); border-radius:14px; padding:14px 16px; }
@@ -182,10 +206,13 @@
 
   <h2 class="sec" id="novidades">📰 Novidades da campanha <span class="badge" id="novBadge"></span></h2>
   <div class="card full">
-    <p class="hint">O que aconteceu de verdade, dia a dia: quem respondeu, quem pediu formulário, que vaga apareceu e o que morreu pelo caminho. Mais recente primeiro.</p>
+    <p class="hint">As notícias da campanha em ordem, da mais recente para a mais antiga. Arraste para o lado ou use as setas; clique num post para ler inteiro.</p>
     <div class="chips" id="novChips"></div>
-    <div id="novList" style="margin-top:12px"></div>
-    <div style="margin-top:10px"><button class="btn" id="novMore"></button></div>
+    <div class="feedwrap">
+      <button class="feednav prev" id="novPrev" aria-label="Notícias mais recentes">&lsaquo;</button>
+      <div class="feed" id="novList" tabindex="0" aria-label="Feed de novidades da campanha"></div>
+      <button class="feednav next" id="novNext" aria-label="Notícias mais antigas">&rsaquo;</button>
+    </div>
   </div>
 
   <h2 class="sec" id="visao">📊 Visão geral</h2>
@@ -608,34 +635,39 @@ const NOV_META = {
  alerta:["⚠️","Correção","nv-alerta"],
  envio: ["\u{1F4E4}","Envios","nv-envio"]
 };
-let novFilter = "", novAll = false;
-const DIAS_VISIVEIS = 2;
-function novDate(iso){
+let novFilter = "";
+function novWhen(iso){
   const [y,m,d] = iso.split("-");
   const dt = new Date(Date.UTC(+y,+m-1,+d));
-  const sem = ["domingo","segunda","terça","quarta","quinta","sexta","sábado"][dt.getUTCDay()];
+  const sem = ["dom","seg","ter","qua","qui","sex","sáb"][dt.getUTCDay()];
   return d+"/"+m+" · "+sem;
 }
+function novNav(){
+  const f = $("#novList");
+  const fim = f.scrollWidth - f.clientWidth;
+  $("#novPrev").disabled = f.scrollLeft <= 2;
+  $("#novNext").disabled = f.scrollLeft >= fim - 2;
+}
 function renderNovidades(){
-  const sel = NOVIDADES.filter(n=>!novFilter || n[1]===novFilter);
-  const dias = [...new Set(sel.map(n=>n[0]))].sort().reverse();
-  const mostrar = novAll ? dias : dias.slice(0, DIAS_VISIVEIS);
-  $("#novList").innerHTML = mostrar.map(dia=>{
-    const itens = sel.filter(n=>n[0]===dia).map(([,tipo,tit,txt,link])=>{
-      const [ic,tag,cls] = NOV_META[tipo] || NOV_META.porta;
-      const corpo = link
-        ? esc(txt)+' <a href="'+esc(link)+'" target="_blank" rel="noopener">abrir vaga →</a>'
-        : esc(txt);
-      return '<div class="nov-item '+cls+'"><span class="nov-ic">'+ic+'</span><div class="nov-b">'
-        + '<div class="nov-tag">'+tag+'</div><div class="nov-tit">'+esc(tit)+'</div>'
-        + '<div class="nov-txt">'+corpo+'</div></div></div>';
-    }).join("");
-    return '<div class="nov-day"><span class="nov-date">'+novDate(dia)+'</span><span class="nov-rule"></span></div>'+itens;
+  const sel = NOVIDADES.filter(n=>!novFilter || n[1]===novFilter)
+                       .slice().sort((a,b)=> a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0);
+  $("#novList").innerHTML = sel.map(([data,tipo,tit,txt,link])=>{
+    const [ic,tag,cls] = NOV_META[tipo] || NOV_META.porta;
+    const pe = link
+      ? '<a href="'+esc(link)+'" target="_blank" rel="noopener">abrir vaga oficial →</a>'
+      : 'clique para ler inteiro';
+    return '<article class="post '+cls+'" tabindex="0">'
+      + '<div class="pmeta"><span>'+ic+'</span><span class="pcat">'+tag+'</span>'
+      + '<span class="pwhen">'+novWhen(data)+'</span></div>'
+      + '<h4 class="ptit">'+esc(tit)+'</h4>'
+      + '<p class="ptxt">'+esc(txt)+'</p>'
+      + '<div class="pfoot">'+pe+'</div></article>';
   }).join("") || '<p class="hint">Nada nessa categoria ainda.</p>';
-  const restantes = dias.length - mostrar.length;
-  const btn = $("#novMore");
-  btn.style.display = (dias.length > DIAS_VISIVEIS) ? "" : "none";
-  btn.textContent = novAll ? "▲ Mostrar só os dias recentes" : "▼ Ver os outros "+restantes+" dia"+(restantes>1?"s":"");
+  $("#novList").querySelectorAll(".post").forEach(el=>{
+    const abre = ev => { if(ev.target.tagName!=="A") el.classList.toggle("open"); };
+    el.addEventListener("click", abre);
+    el.addEventListener("keydown", ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); abre(ev); }});
+  });
   $("#novBadge").textContent = NOVIDADES.length+" atualizações";
   const chips = [["","Tudo",NOVIDADES.length],
     ...Object.keys(NOV_META).map(k=>[k,NOV_META[k][0]+" "+NOV_META[k][1],NOVIDADES.filter(n=>n[1]===k).length])]
@@ -643,8 +675,9 @@ function renderNovidades(){
   $("#novChips").innerHTML = chips.map(([val,label,n])=>
     '<button class="chipbtn'+(novFilter===val?" on":"")+'" data-n="'+val+'">'+esc(label)+' '+n+'</button>').join("");
   $("#novChips").querySelectorAll("button").forEach(b=>{
-    b.addEventListener("click", ()=>{ novFilter = b.dataset.n; novAll = !!novFilter; renderNovidades(); });
+    b.addEventListener("click", ()=>{ novFilter = b.dataset.n; renderNovidades(); $("#novList").scrollLeft = 0; });
   });
+  novNav();
 }
 
 // ---------- o que fazer agora ----------
@@ -1237,7 +1270,11 @@ $("#exportBtn").addEventListener("click", ()=>{
 $("#resetBtn").addEventListener("click", ()=>{
   if(confirm("Limpar todas as marcações de andamento?")){ progress={}; saveProgress(); renderAll(); }
 });
-$("#novMore").addEventListener("click", ()=>{ novAll = !novAll; renderNovidades(); });
+const novPasso = () => Math.max(240, $("#novList").clientWidth * 0.8);
+$("#novPrev").addEventListener("click", ()=>{ $("#novList").scrollLeft -= novPasso(); });
+$("#novNext").addEventListener("click", ()=>{ $("#novList").scrollLeft += novPasso(); });
+$("#novList").addEventListener("scroll", novNav, {passive:true});
+addEventListener("resize", novNav);
 $("#themeBtn").addEventListener("click", ()=>{
   const root = document.documentElement;
   const dark = root.dataset.theme==="dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
