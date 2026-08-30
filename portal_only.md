@@ -133,3 +133,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - DreamWall (Bélgica) — CANDIDATURA ESPONTÂNEA ENVIADA em 30/08 pelo Talentsquare, conforme pedido do estúdio; sem retorno em 2 semanas significa não (prazo 13/09)
 - 2K / Cloud Chamber (EUA; Novato CA) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (BioShock; personagens estilizados; lidera o time de character art); exige visto de trabalho nos EUA
 - Scopely (EUA; remoto) — CANDIDATURA ENVIADA em 30/08 para Senior 3D Artist em Monopoly GO!; vaga remota, pede portfólio estilizado/whimsical; time entre Espanha e EUA
+- Rebellion (Reino Unido; Oxford) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist (shooter tático em 3a pessoa) via apply.workable.com/rebellion; vaga presencial em Oxford
