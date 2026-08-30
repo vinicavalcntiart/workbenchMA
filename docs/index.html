@@ -190,6 +190,7 @@
     <a href="#acoes">⚡ O que fazer agora</a>
     <a href="#novidades">📰 Novidades</a>
     <a href="#visao">📊 Visão geral</a>
+    <a href="#grandes">🏆 Estúdios grandes</a>
     <a href="#portais">📝 Portais</a>
     <a href="#kit">🧰 Kit de aplicação</a>
     <a href="#dossies">🎯 Dossiês por vaga</a>
@@ -246,6 +247,17 @@
       <p class="hint">País-sede principal de cada estúdio</p>
       <div id="paises"></div>
     </div>
+  </div>
+
+  <h2 class="sec" id="grandes">🏆 Estúdios grandes <span class="badge" id="grandeBadge"></span></h2>
+  <div class="card full">
+    <p class="hint" id="grandeHint"></p>
+    <table>
+      <thead><tr>
+        <th>✓ Feito</th><th>🏢 Estúdio</th><th>📍 Sede</th><th>🔗 Como aplicar</th><th>🗒️ Nota</th>
+      </tr></thead>
+      <tbody id="grandeRows"></tbody>
+    </table>
   </div>
 
   <h2 class="sec" id="portais">📝 Aplicações via portal ou formulário <span class="badge" id="portalBadge"></span></h2>
@@ -622,10 +634,72 @@ function counts(){
   return {delivered, resp, conv, aberto, ent, off, rec, aguard, bounce, drafts};
 }
 
+// ---------- estúdios grandes (lista do Vini, categoria de animação americana) ----------
+// [nome, sede, url oficial, via, nota]
+// via: ats | form | email
+const GRANDES = [
+ ["Pixar Animation Studios","Emeryville, CA","https://pixar.wd501.myworkdayjobs.com/Pixar_External_Career_Site","ats","Workday próprio, verificado em 30/08. Também aparece no disneycareers.com com filtro por Pixar. Não aceita email; exige autorização de trabalho nos EUA"],
+ ["Walt Disney Animation Studios","Burbank, CA","https://www.disneycareers.com/en/search-jobs","ats","Portal único da Disney, verificado em 30/08. Filtrar por Walt Disney Animation Studios. Sem via de email"],
+ ["DreamWorks Animation","Glendale, CA","https://www.dreamworks.com/careers","ats","Página oficial de carreiras verificada em 30/08. Recrutamento pelo grupo Universal; sem email público"],
+ ["Sony Pictures Animation","Culver City, CA","https://www.sonypicturesanimation.com/careers/job-postings","ats","Página oficial de vagas verificada em 30/08. Eles dizem que aceitam candidatura mesmo sem vaga anunciada"],
+ ["Skydance Animation","Santa Monica, CA / Madrid","https://jobs.lever.co/skydance","ats","Lever oficial verificado em 30/08. Têm divisões de Art, Visual Development e VFX, que é exatamente a sua faixa. Também há estúdio em Madri, o que abre uma rota europeia"],
+ ["Illumination","Santa Monica, CA","https://www.illumination.com/","ats","Recrutamento roda pelo grupo Universal e não há portal próprio público; sem email de candidatura. Acompanhar pelo LinkedIn deles"],
+ ["LAIKA","Portland, OR","https://www.laika.com/careers/","ats","Página oficial verificada em 30/08; eles afirmam que as vagas listadas estão sempre atualizadas. Stop-motion com departamento CG forte"],
+ ["Netflix Animation","Los Angeles, CA","https://explore.jobs.netflix.net/careers","ats","Portal único da Netflix; filtrar por Animation. Sem email de candidatura"],
+ ["Nickelodeon Animation Studio","Burbank, CA","https://careers.paramount.com/go/Nickelodeon-Animation/8711300/","ats","Portal da Paramount com página dedicada à Nickelodeon Animation, verificada em 30/08. Dá para assinar alertas de vaga"],
+ ["Warner Bros. Animation","Burbank, CA","https://careers.wbd.com/","ats","Recrutamento pelo portal da Warner Bros. Discovery; a Cartoon Network Studios também entra por aqui"],
+ ["Cartoon Network Studios","Burbank, CA","https://careers.wbd.com/","ats","Parte da Warner Bros. Discovery; sem portal separado"],
+ ["Titmouse","Los Angeles / Nova York / Vancouver","https://titmouse.net/careers/","form","Página oficial verificada em 30/08. Aceitam portfólio, reel e currículo mesmo sem vaga aberta, o que é raro entre os grandes"],
+ ["Reel FX Animation","Dallas, TX","https://www.reelfx.com/careers/","ats","Página oficial verificada em 30/08. Feature e conteúdo de marca em CG"],
+ ["Powerhouse Animation","Austin, TX","https://www.powerhouseanimation.com/careers/","form","Página oficial verificada em 30/08. Dizem explicitamente que aceitam portfólio, reel e currículo para consideração futura mesmo sem vaga"],
+ ["Bento Box Entertainment","Los Angeles / Atlanta","https://www.bentoboxent.com/","form","Aceitam envio de portfólio, reel e currículo para consideração futura; produção majoritariamente 2D, então o encaixe é menor"],
+ ["ShadowMachine","Los Angeles / Portland","https://www.linkedin.com/company/shadowmachine/jobs/","ats","As vagas saem pelo LinkedIn da produtora; não têm portal próprio público. Pinóquio do Del Toro"],
+ ["Angel Studios","Provo, UT","https://www.angel.com/careers","ats","VOCÊ JÁ TEM CRÉDITO AQUI: modelou e pintou os personagens da 1a temporada de The Wingfeather Saga. Uma candidatura direta aqui carrega peso que nenhuma outra da lista tem"]
+];
+function renderGrandes(){
+  const rows = [...GRANDES].map(([name,sede,url,via,note])=>({name,sede,url,via,note}));
+  rows.sort((a,b)=>{
+    const pa = applied[a.url]?1:0, pb = applied[b.url]?1:0;
+    if(pa!==pb) return pa-pb;
+    return a.name.localeCompare(b.name);
+  });
+  const VIA = {
+    ats:  ['<span class="chip"><span class="dot" style="background:var(--axis)"></span>portal/ATS</span>'],
+    form: ['<span class="chip"><span class="dot" style="background:var(--good)"></span>aceita portfólio sem vaga</span>'],
+    email:['<span class="chip"><span class="dot" style="background:var(--warn)"></span>email</span>']
+  };
+  $("#grandeRows").innerHTML = rows.map(g=>{
+    const done = !!applied[g.url];
+    return '<tr class="'+(done?"pdone":"")+'">'
+      + '<td><input type="checkbox" data-url="'+esc(g.url)+'"'+(done?" checked":"")+' aria-label="Marcar '+esc(g.name)+' como aplicado"></td>'
+      + '<td><span class="pname">'+esc(g.name)+'</span></td>'
+      + '<td>'+esc(g.sede)+'</td>'
+      + '<td><a href="'+esc(g.url)+'" target="_blank" rel="noopener">abrir carreiras ↗</a></td>'
+      + '<td>'+(VIA[g.via]||VIA.ats)[0]+' <span style="color:var(--muted)">· '+esc(g.note)+'</span></td>'
+      + '</tr>';
+  }).join("");
+  const feitos = rows.filter(g=>applied[g.url]).length;
+  const semVaga = GRANDES.filter(g=>g[3]==="form").length;
+  $("#grandeBadge").textContent = feitos+" de "+GRANDES.length+" feitos";
+  $("#grandeHint").innerHTML = "Os grandes da animação americana, com a rota oficial de candidatura de cada um conferida em 30/08. "
+    + "Praticamente nenhum aceita candidatura por email: quase todos rodam ATS próprio, então aqui a entrega é o link certo, não o rascunho. "
+    + "<b>"+semVaga+" deles aceitam portfólio mesmo sem vaga aberta</b>, e esses valem o envio agora. "
+    + "Marque o que já enviou; fica salvo neste navegador.";
+  $("#grandeRows").querySelectorAll("input[type=checkbox]").forEach(cb=>{
+    cb.addEventListener("change", ()=>{
+      if(cb.checked) applied[cb.dataset.url] = true; else delete applied[cb.dataset.url];
+      try { localStorage.setItem(PKEY, JSON.stringify(applied)); } catch(e){}
+      cb.closest("tr").classList.toggle("pdone", cb.checked);
+      renderGrandes();
+    });
+  });
+}
+
 // ---------- novidades (newsletter) ----------
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","envio","Nova seção no site: os grandes da animação americana","Você mandou a categoria da Wikipédia com os estúdios dos seus sonhos e agora eles têm lugar próprio no painel, com a rota oficial de candidatura de cada um conferida hoje. A conclusão dura é que quase nenhum aceita email: Pixar roda Workday próprio, Disney e Nickelodeon rodam portal corporativo, DreamWorks e Illumination recrutam pelo grupo Universal, Skydance usa Lever. O que muda o jogo são os três que aceitam portfólio mesmo sem vaga aberta, Titmouse, Powerhouse e Bento Box, além da Sony Pictures Animation que diz o mesmo. E tem a Angel Studios, onde você já tem crédito na primeira temporada de The Wingfeather Saga, o que nenhuma outra da lista pode dizer."],
  ["2026-08-30","envio","Segunda via aberta na Polyarc, agora no endereço certo","O primeiro email foi para o contact@ genérico e não teve retorno. A página oficial de carreiras deles publica jobs@polyarcgames.com e diz textualmente que gostam de ouvir gente mesmo sem vaga aberta, então o rascunho já está no Gmail apontando para lá. O gancho é o Quill: um herói estilizado que as pessoas se apegam é feito de silhueta, apelo e formas legíveis, não de detalhe, e é esse o problema que você resolve. Falta você assinar, anexar e enviar."],
  ["2026-08-30","alerta","Correção de rumo: groom é ferramenta, não é o cargo","Você me corrigiu e com razão. Sua carreira é visual development e character modeling, e o grooming em Houdini é um diferencial que soma a isso, não uma especialidade que você queira exercer sozinha. Eu tinha destacado a vaga de Freelancer Grooming Artist da Digic como o melhor encaixe da campanha, o que estava errado de perspectiva: ela é remota e sem barreira de visto, mas é um posto só de groom. Ela caiu para média e fica como carta na manga. As de groom da N-iX e da Room 8 caíram para baixa. A porta principal na Digic continua sendo a de Character Modeler, que segue aberta."],
  ["2026-08-30","vaga","A Digic abriu Grooming Artist freelance remoto, e o anúncio cita Houdini","Esse é o encaixe mais direto que a campanha achou até agora. A vaga é para criar pelo, penas e cabelo de personagens e criaturas, é freelance e remota, e o anúncio cita Houdini por nome, ao lado de Yeti com Arnold. Freelance remoto quer dizer zero barreira de visto, que é o obstáculo que derruba metade das suas candidaturas. Confirmei no ATS oficial da Digic, o mesmo onde a vaga de Character Modeler segue aberta. Na mesma varredura apareceram outras duas de groom, na N-iX (freelance remoto para um projeto da Paradox, mas anunciada como nível middle) e na Room 8 (foco realista, pede Xgen ou Ornatrix).","https://career.digicpictures.com/jobs/freelance-grooming-artist"],
@@ -1326,7 +1400,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderNovidades(); renderLotes(); renderPaises(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
+  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
