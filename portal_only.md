@@ -36,7 +36,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Cinesite (Reino Unido/Canadá) — só ATS próprio; https://www.cinesite.com/careers/
 - REALTIME (Reino Unido) — cinematics de games (Manchester); sem email geral público; https://realtimeuk.com/
 - Important Looking Pirates (Suécia) — VFX de criaturas/personagens (Mandalorian); sem email público; https://www.ilpvfx.com/
-- Storm Studios (Noruega) — VFX Oslo (The Last of Us); email não verificado publicamente; https://www.stormstudios.no/
+- Storm Studios (Noruega; Oslo) — CANDIDATURA ENVIADA em 30/08 pelo formulário de https://www.stormstudios.no/ (VFX de The Last of Us; sem email público)
 - Ghost VFX (Dinamarca) — Copenhague; só ATS próprio; https://www.ghostvfx.com/
 - Cloth Cat Animation (Reino Unido/País de Gales) — 2D e CG; só email da academia é público; https://clothcat.com/
 - Pingle Studio (Ucrânia) — co-dev; email não verificado publicamente; https://pinglestudio.com/contact

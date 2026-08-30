@@ -296,7 +296,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    134 emails enviados (129 estúdios + 1 teste + 4 reenvios) ·
+    135 emails enviados (130 estúdios + 1 teste + 4 reenvios) ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -316,7 +316,8 @@ const DAILY = [
  ["2026-08-26",93,6],
  ["2026-08-27",16,6],
  ["2026-08-28",23,1],
- ["2026-08-29",2,0]
+ ["2026-08-29",2,0],
+ ["2026-08-30",1,0]
 ];
 const STUDIOS = [
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
@@ -448,7 +449,7 @@ const STUDIOS = [
  ["Maga Animation Studio","Itália","contact@maga-animation.com",11,"ok"],
  ["Illogic","Itália","info@illogic.xyz",12,"ok"],
  ["Stairway Games","Indonésia (remoto)","careers@stairwaygames.com",12,"ok"],
- ["Studio Rakete","Alemanha","jobs2026@studiorakete.de",13,"rascunho"],
+ ["Studio Rakete","Alemanha","jobs2026@studiorakete.de",13,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -542,7 +543,7 @@ const PORTAIS = [
  ["Cinesite","Reino Unido/Canadá","https://www.cinesite.com/careers/","portal","Só ATS próprio; Montreal e Vancouver"],
  ["REALTIME","Reino Unido","https://realtimeuk.com/","portal","Aplicação enviada em 27/08 — confirmação recebida (Ethan Clark, Teamtailor)",true],
  ["Important Looking Pirates","Suécia","https://www.ilpvfx.com/","portal","VFX de criaturas e personagens (Mandalorian); sem email público"],
- ["Storm Studios","Noruega","https://www.stormstudios.no/","portal","VFX de Oslo (The Last of Us); email não verificado publicamente"],
+ ["Storm Studios","Noruega (Oslo)","https://www.stormstudios.no/","portal","CANDIDATURA ENVIADA em 30/08 pelo site. VFX de Oslo, com crédito em The Last of Us; não tinham email público, então o portal era a única via",true,"media"],
  ["Ghost VFX","Dinamarca","https://www.ghostvfx.com/","portal","Copenhague; só ATS próprio"],
  ["Cloth Cat Animation","Reino Unido","https://clothcat.com/","portal","Cardiff; 2D e CG; sem email geral público"],
  ["Pingle Studio","Ucrânia","https://pinglestudio.com/contact","portal","Co-dev de games; email não verificado publicamente"],
@@ -552,7 +553,7 @@ const PORTAIS = [
  ["Like A Photon Creative","Austrália","https://likeaphoton.com/","portal","Features CG infantis (Brisbane e Dublin); sem email público"]
 ].map(([name,country,url,origem,note,done,prio])=>({name,country,url,origem,note,done,prio}));
 
-const EMAILS_TOTAL = 134, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2],["Lote 12",2]];
+const EMAILS_TOTAL = 135, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2],["Lote 12",2],["Lote 13",1]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
@@ -610,7 +611,8 @@ function counts(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
- ["2026-08-30","envio","Studio Rakete sai da fila de formulário e vira email direto","Você achou no site deles o endereço jobs2026@studiorakete.de, que eu não tinha encontrado: o estúdio de Hamburgo estava marcado como só-formulário. O rascunho já está pronto no Gmail, com o gancho em The Amazing Maurice e Bayala, onde personagem e criatura carregam a atuação e pelo e cabelo fazem boa parte da leitura, que é onde o grooming entra junto com a modelagem. Falta você assinar, anexar CV e cover letter e enviar."],
+ ["2026-08-30","porta","Candidatura enviada à Storm Studios, em Oslo","Você aplicou pelo site da Storm Studios, a casa de VFX norueguesa com crédito em The Last of Us. Eles não publicam email, então o formulário era a única porta, e é por isso que estavam parados na lista de só-portal desde o começo da campanha."],
+ ["2026-08-30","envio","Studio Rakete sai da fila de formulário e o email já foi","Você achou no site deles o endereço jobs2026@studiorakete.de, que eu não tinha encontrado: o estúdio de Hamburgo estava marcado como só-formulário. O email saiu no mesmo dia, com o gancho em The Amazing Maurice e Bayala, onde personagem e criatura carregam a atuação e pelo e cabelo fazem boa parte da leitura, que é onde o grooming entra junto com a modelagem. Vira o lote 13 e leva a campanha a 135 emails para 130 estúdios."],
  ["2026-08-30","porta","Sete candidaturas novas em um dia, três delas de Lead","Na DreamWall você aplicou pelo Talentsquare, que foi a via que a Emma Dupire pediu ao responder seu email dia 28; a regra deles é explícita, sem retorno em duas semanas significa não, e o prazo cai em 13 de setembro. Na 2K você entrou na Lead Character Artist, a vaga mais sênior a que a campanha se candidatou até agora: a posição aberta é da Cloud Chamber, no BioShock, definindo o padrão de qualidade dos personagens e liderando o time de character art. E na Behaviour Interactive você aplicou para Senior 3D Character Artist em 7 Days to Die, em Montreal, que é o maior estúdio independente do Canadá e fica numa província com rota de visto estabelecida para arte de games. E na Scopely você entrou na Senior 3D Artist de Monopoly GO!, que é remota e pede justamente portfólio estilizado ou whimsical, com o time espalhado entre Espanha e Estados Unidos. A Rebellion, em Oxford: Senior Character Artist para um shooter tático em terceira pessoa, no estúdio de Sniper Elite e 2000 AD. A Kabam, em Vancouver: Lead Character Artist supervisionando o pipeline inteiro de personagem, do concept à integração, no estúdio de Marvel Contest of Champions. E a Hasbro, no Skeleton Key da Wizards of the Coast em Austin: Lead Character Artist que define o padrão de qualidade dos personagens e ajuda a montar o pipeline junto com Tech Art, cabelo incluído, que é exatamente onde o seu grooming em Houdini pesa."],
  ["2026-08-30","alerta","Riot, Cartoon Saloon e Blackbird saem do topo da lista","Você conferiu três de uma vez. A Senior 3D Character Artist de LoL Cosmetics não está mais no portal da Riot, e o que sobrou de arte lá é estágio e função fora do perfil. A Cartoon Saloon está sem vaga aberta, e como só aceitam candidatura em vaga publicada por causa do GDPR, não há por onde entrar agora. A Senior 3D Character Artist da Blackbird Interactive também caiu, mas essa deixa porta: o estúdio segue com 16 vagas no Lever oficial e mantém uma General Application aberta justamente para quem não encaixa nas atuais. O link da Ánima Kitchent também foi corrigido: o antigo era do LinkedIn e exigia login, agora aponta para a página pública do InfoJobs."],
  ["2026-08-30","alerta","A vaga da Gameloft em Barcelona expirou","A Senior 3D Character Artist de Dungeons & Dragons, que era a vaga mais forte da lista por juntar personagem estilizado com contrato permanente na Europa, saiu do ar. Era a quinta vaga que morre em dois dias, e desta vez o anúncio tinha sido conferido no site oficial da Gameloft, não em agregador: o problema aqui não foi fonte ruim, foi o próprio ritmo do mercado. Uma varredura nas vagas de Barcelona em 30/08 não achou nenhuma outra de character artist, então o link do site passa a apontar para o portal geral de carreiras.","https://www.en.gameloft.com/careers"],
