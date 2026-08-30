@@ -134,3 +134,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - 2K / Cloud Chamber (EUA; Novato CA) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (BioShock; personagens estilizados; lidera o time de character art); exige visto de trabalho nos EUA
 - Scopely (EUA; remoto) — CANDIDATURA ENVIADA em 30/08 para Senior 3D Artist em Monopoly GO!; vaga remota, pede portfólio estilizado/whimsical; time entre Espanha e EUA
 - Rebellion (Reino Unido; Oxford) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist (shooter tático em 3a pessoa) via apply.workable.com/rebellion; vaga presencial em Oxford
+- Kabam (Canadá; Vancouver) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (pipeline completo, do concept à integração); presencial 5 dias; via https://jobs.lever.co/kabam
