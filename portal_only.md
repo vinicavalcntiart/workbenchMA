@@ -140,3 +140,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Black Kite Studios (Reino Unido/remoto) — CANDIDATURA ENVIADA em 30/08 para Lead 3D Artist via https://joinus.blackkitestudios.com/jobs; detalhes da vaga não confirmados na fonte oficial
 - VAGA: teamLFG / PlayStation Studios (EUA Bellevue; anunciada como remota) — 3D Character Art Lead em IP nova; confirmada em 30/08 no careers.playstation.com E no Greenhouse do teamLFG (mesmo id 5984590004); provável exigência de autorização de trabalho nos EUA
 - Digic Pictures — vaga de Character Modeler RECHECADA em 30/08 e segue aberta; portal com 16+ vagas, incluindo CFX Artist (simulação de pano e cabelo)
+- VAGA: Digic Pictures (Hungria; REMOTO) — Freelancer Grooming Artist; confirmada no ATS oficial em 30/08; anúncio cita Houdini e Yeti/Arnold; freelance remoto, sem barreira de visto; ENCAIXE MÁXIMO
+- VAGA: N-iX (Ucrânia; escritório ou remoto) — Freelance Character Hair (Grooming) Artist para projeto da Paradox Interactive; confirmada no careers.n-ix.com em 30/08; nível anunciado é middle
+- VAGA: Room 8 Studio (global) — Grooming Artist para personagens 3D realistas (Xgen/Ornatrix/Yeti); confirmada no site oficial em 30/08; foco realista
