@@ -308,7 +308,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    135 emails enviados (130 estúdios + 1 teste + 4 reenvios) ·
+    154 emails enviados (149 estúdios + 1 teste + 4 reenvios), incluindo a leva pré-campanha de julho e agosto ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -332,6 +332,25 @@ const DAILY = [
  ["2026-08-30",1,0]
 ];
 const STUDIOS = [
+ ["Paramount Animation","EUA","animation_jobs@paramount.com",0,"ok"],
+ ["Baobab Studios (email)","EUA","info@baobabstudios.com",0,"ok"],
+ ["Superseed Studios","Reino Unido","contact@superseedstudios.com",0,"ok"],
+ ["Keytoon Animation","Espanha","info@keytoon.com",0,"ok"],
+ ["The Frank Barton Company","EUA","jobs@thefrankbartoncompany.com",0,"ok"],
+ ["Animal Studios","Espanha","rrhh@animalstudios.es",0,"ok"],
+ ["23 Lunes","Espanha","jobs@23lunes.studio",0,"ok"],
+ ["THE LINE Studio","Reino Unido","info@thelinestudio.com",0,"ok"],
+ ["Ritzy Animation","Espanha","info@ritzyanimation.com",0,"ok"],
+ ["Artists Animation","EUA","info@artistsanimation.com",0,"ok"],
+ ["Tonic DNA","Canadá","hr@tonicdna.com",0,"ok"],
+ ["Theory Studios","EUA","hi@theorystudios.com",0,"ok","recusado"],
+ ["Savian","Canadá","hello@savian.ca",0,"ok"],
+ ["Pipeline Studios (pré)","Canadá","production@pipelinestudios.com",0,"ok"],
+ ["Digital Dimension (pré)","Canadá","info@digitaldimension.com",0,"ok"],
+ ["Sony Pictures Imageworks","EUA","recruiting@imageworks.com",0,"ok","conversa"],
+ ["Jam Filled (pré)","Canadá","contact@jamfilled.com",0,"ok"],
+ ["Squeeze Studio","Canadá","svigne@squeezestudio.com",0,"ok","recusado"],
+ ["The Wingfeather Saga","EUA","keith@wingfeathersaga.com",0,"ok","recusado"],
  ["Digic Pictures","Hungria","contact@digicpictures.com",1,"ok"],
  ["Airship Interactive","Reino Unido","talent@airshipinteractive.com",1,"ok"],
  ["Puppetworks","Hungria","info@puppetworks.eu",1,"ok"],
@@ -463,6 +482,10 @@ const STUDIOS = [
  ["Stairway Games","Indonésia (remoto)","careers@stairwaygames.com",12,"ok"],
  ["Studio Rakete","Alemanha","jobs2026@studiorakete.de",13,"ok"],
  ["Polyarc (2ª via)","EUA","jobs@polyarcgames.com",13,"rascunho"],
+ ["Paramount Animation (2ª via)","EUA","animation_jobs@paramount.com",13,"rascunho"],
+ ["Keytoon Animation (2ª via)","Espanha","info@keytoon.com",13,"rascunho"],
+ ["Tonic DNA (2ª via)","Canadá","hr@tonicdna.com",13,"rascunho"],
+ ["THE LINE Studio (2ª via)","Reino Unido","info@thelinestudio.com",13,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -574,7 +597,7 @@ const PORTAIS = [
  ["Like A Photon Creative","Austrália","https://likeaphoton.com/","portal","Features CG infantis (Brisbane e Dublin); sem email público"]
 ].map(([name,country,url,origem,note,done,prio])=>({name,country,url,origem,note,done,prio}));
 
-const EMAILS_TOTAL = 135, LOTES = [["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2],["Lote 12",2],["Lote 13",1]];
+const EMAILS_TOTAL = 154, LOTES = [["Pré-campanha",19],["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2],["Lote 12",2],["Lote 13",1]];
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
@@ -702,6 +725,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","envio","A campanha invisível de julho e agosto entrou no painel","Você tinha escrito para 19 estúdios antes desta campanha começar e nada disso estava registrado, o que criava risco real de eu te mandar bater na mesma porta duas vezes. Agora estão lá como Pré-campanha, e o total sobe para 154 emails em 149 estúdios. Três delas tiveram resposta humana que também não estava contada: a Theory Studios recusou porque só contrata cidadãos americanos por causa de trabalho para o governo, a Squeeze recusou e a versão em francês dá o motivo verdadeiro que a inglesa esconde, prazo de permissão de trabalho longo demais para uma necessidade urgente, e a Wingfeather respondeu que está com o time de asset completo. Preparei segunda via para quatro que ficaram no silêncio e ainda valem: Paramount Animation, Keytoon, Tonic DNA e THE LINE."],
  ["2026-08-30","alerta","Angel Studios sai da fila: o Keith já tinha respondido","Você me lembrou de olhar os emails antigos e eu estava sugerindo uma coisa errada. Em 4 de agosto o Keith Lango, que te contratou em 2021 para a primeira temporada, respondeu ao seu contato dizendo que estão completos em asset work nos projetos atuais e que avisariam se abrisse necessidade. Não foi recusa ao seu trabalho, foi equipe cheia, e ele deixou a porta encostada. Por isso tirei a Angel Studios da lista de agora: procurar a porta corporativa 26 dias depois do não dele parece contornar quem já respondeu, e o meio é pequeno. A 5a temporada está greenlit, então a hora certa de voltar é quando a 4a fechar e a 5a começar a montar equipe."],
  ["2026-08-30","porta","Primeiras candidaturas nos estúdios grandes: Skydance e Powerhouse","Você abriu a lista dos grandes no mesmo dia em que ela foi montada. A Skydance é a mais estratégica das duas: tem divisão de Visual Development, que é o cargo que você quer de fato, e estúdio em Madri além do de Santa Monica, o que abre uma rota europeia sem depender de visto americano. A Powerhouse foi pela porta que eles mesmos deixam aberta, aceitando portfólio, reel e currículo para consideração futura mesmo sem vaga anunciada."],
  ["2026-08-30","alerta","O kit de aplicação agora inclui os estúdios grandes","Você reparou que Skydance, Pixar, Angel e os outros não apareciam no seletor do kit: ele só listava os portais e os estúdios já contatados por email. Corrigido. Os 17 estúdios grandes entram agora num grupo próprio no topo da lista, separados entre os que faltam fazer e os já marcados como feitos, e o {STUDIO} dos textos passa a ser substituído pelo nome deles como em qualquer outro."],
@@ -841,7 +865,7 @@ function renderTiles(){
     ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes para "+CONTACTED.length+" estúdios"],
     ["✅", c.delivered, "Emails entregues", c.bounce+" bounce (email nunca chegou)"],
     ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
-    ["🚫", c.rec, "Recusas", "todas respondidas com follow-up"],
+    ["🚫", c.rec, "Recusas", "todas respondidas; nenhuma ficou sem retorno"],
     ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([ic,n,l,d,up])=>`<div class="tile"><div class="h"><span>${ic}</span>${esc(l)}</div><div class="n">${n}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
 }
