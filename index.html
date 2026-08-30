@@ -221,7 +221,7 @@
   <div class="cards" style="margin-top:12px">
     <div class="card">
       <h3>🧭 Funil da campanha</h3>
-      <p class="hint">Do contato à oferta</p>
+      <p class="hint">Só a trilha de email. As candidaturas por portal não passam por aqui</p>
       <div id="funnel"></div>
     </div>
     <div class="card">
@@ -567,6 +567,14 @@ const PKEY = "campanha-portais-v1";
 let applied = {};
 try { applied = JSON.parse(localStorage.getItem(PKEY) || "{}") || {}; } catch(e) { applied = {}; }
 const isApplied = p => !!(p.done || applied[p.url]);
+// estúdios realmente alcançados: email entregue + candidaturas por portal em estúdios que não receberam email
+const normName = x => x.toLowerCase().normalize("NFD").replace(/[^a-z0-9]/g,"").slice(0,12);
+function alcance(){
+  const porEmail = CONTACTED.filter(s=>s.delivery!=="bounce");
+  const chavesEmail = new Set(STUDIOS.map(s=>normName(s.name)));
+  const soPortal = PORTAIS.filter(p=>isApplied(p) && !chavesEmail.has(normName(p.name)));
+  return {porEmail:porEmail.length, soPortal:soPortal.length, total:porEmail.length+soPortal.length};
+}
 
 // ---------- helpers ----------
 const $ = sel => document.querySelector(sel);
@@ -613,6 +621,7 @@ function counts(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","alerta","O número de estúdios contatados estava errado","Você reparou certo. O painel dizia 130 estúdios contatados, e esse número errava dos dois lados: contava 6 estúdios cujo email quicou e nunca chegou, e ignorava 19 estúdios que só foram alcançados por candidatura em portal, sem email nenhum. O contador agora mostra estúdios alcançados de verdade, 143, quebrado em 124 por email entregue mais 19 só por portal. O funil também passou a dizer que cobre apenas a trilha de email, porque candidatura em portal nunca passou por ele."],
  ["2026-08-30","alerta","Correção: a vaga da Streamline não estava confirmada","Eu marquei a Streamline como vaga quente dia 29 escrevendo que tinha confirmado no ATS oficial. Não confirmei: o board deles no Workable é bloqueado pela rede daqui, e o que eu tinha era só texto de resultado de busca. Você abriu a página de carreiras e ela responde que não há vaga aberta no momento. A entrada caiu para baixa prioridade e o link agora aponta para a página de carreiras deles. Vale um detalhe: a página é filtrada por região e oferece trocar de escritório, então pode haver vaga em outra região, mas isso precisa ser conferido antes de valer o seu tempo."],
  ["2026-08-30","porta","Candidatura na Black Kite Studios para Lead 3D Artist","Você aplicou para Lead 3D Artist na Black Kite, um estúdio criativo independente de arte e VFX para games que mantém portal próprio de vagas e costuma anunciar posições remotas. Fica registrado que os detalhes da vaga não deram para confirmar na fonte oficial hoje: o portal deles não abre daqui. Sede e formato de contrato ficam para confirmar com eles se houver retorno."],
  ["2026-08-30","porta","Candidatura na Teyon, e essa oferece apoio de realocação","Você aplicou para Senior/Lead Character Artist na Teyon, em Cracóvia, assumindo a arte de personagem de um action RPG novo, no mesmo time que fez Terminator: Resistance e RoboCop: Rogue City. O que separa essa das outras é que o anúncio oferece apoio de realocação e modelo híbrido de 3 dias no escritório, ou seja, eles já contam com gente vindo de fora. Estúdio de mais de 150 pessoas, com escritórios em Cracóvia, Łódź, Varsóvia e Tóquio, e sem crunch há anos. Foi nessa que apareceu o campo de pretensão em PLN líquido."],
@@ -731,11 +740,12 @@ function renderAcoes(){
 // ---------- tiles ----------
 function renderTiles(){
   const c = counts();
+  const a = alcance();
   const rate = c.delivered ? Math.round(100*c.resp/c.delivered) : 0;
   $("#tiles").innerHTML = [
-    ["🏢", CONTACTED.length, "Estúdios contatados", c.drafts>0 ? c.drafts+" rascunhos prontos" : "todos os lotes enviados"],
-    ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes"],
-    ["✅", c.delivered, "Entregues", c.bounce+" bounce pendente"],
+    ["🏢", a.total, "Estúdios alcançados", a.porEmail+" por email + "+a.soPortal+" só por portal"],
+    ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes para "+CONTACTED.length+" estúdios"],
+    ["✅", c.delivered, "Emails entregues", c.bounce+" bounce (email nunca chegou)"],
     ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
     ["🚫", c.rec, "Recusas", "todas respondidas com follow-up"],
     ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
@@ -745,7 +755,7 @@ function renderTiles(){
 // ---------- funil ----------
 function renderFunnel(){
   const c = counts();
-  const steps = [["Contatados", CONTACTED.length],["Entregues", c.delivered],["Respostas", c.resp],["Entrevistas", c.ent],["Ofertas", c.off]];
+  const steps = [["Emails enviados", CONTACTED.length],["Entregues", c.delivered],["Respostas", c.resp],["Entrevistas", c.ent],["Ofertas", c.off]];
   const ramp = ["--f1","--f2","--f3","--f4","--f5"].map(css);
   const W=460, rowH=34, padL=96, padR=46, H=steps.length*rowH+6, max=CONTACTED.length;
   let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Funil da campanha">`;
