@@ -725,6 +725,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-30","alerta","Vaga remota passa a vir na frente","Você definiu a regra: remoto é o formato ideal, e as presenciais continuam valendo candidatura normalmente. O painel agora marca as vagas remotas com um selo e coloca elas na frente dentro de cada faixa de prioridade, e as duas rotinas automáticas passaram a puxar busca por remoto primeiro, sem parar de registrar as presenciais com visto. Fica registrado também que motivo pessoal nenhum entra em carta, formulário ou resposta a recrutador: se perguntarem sobre mudança, a resposta é que você quer realocar."],
  ["2026-08-30","envio","Cinco segundas vias enviadas, e a Polyarc respondeu na hora","Saíram os cinco emails: Polyarc no endereço de recrutamento que a página oficial deles publica, e as quatro segundas vias da leva antiga, Paramount Animation, Keytoon, Tonic DNA e THE LINE. A Polyarc respondeu quinze segundos depois com a confirmação automática deles, dizendo que revisam as candidaturas e que podem procurar mais adiante quando surgir a oportunidade certa, o que é exatamente o que a página deles prometia. A campanha vai a 159 emails."],
  ["2026-08-30","envio","A campanha invisível de julho e agosto entrou no painel","Você tinha escrito para 19 estúdios antes desta campanha começar e nada disso estava registrado, o que criava risco real de eu te mandar bater na mesma porta duas vezes. Agora estão lá como Pré-campanha, e o total sobe para 154 emails em 149 estúdios. Três delas tiveram resposta humana que também não estava contada: a Theory Studios recusou porque só contrata cidadãos americanos por causa de trabalho para o governo, a Squeeze recusou e a versão em francês dá o motivo verdadeiro que a inglesa esconde, prazo de permissão de trabalho longo demais para uma necessidade urgente, e a Wingfeather respondeu que está com o time de asset completo. Preparei segunda via para quatro que ficaram no silêncio e ainda valem: Paramount Animation, Keytoon, Tonic DNA e THE LINE."],
  ["2026-08-30","alerta","Angel Studios sai da fila: o Keith já tinha respondido","Você me lembrou de olhar os emails antigos e eu estava sugerindo uma coisa errada. Em 4 de agosto o Keith Lango, que te contratou em 2021 para a primeira temporada, respondeu ao seu contato dizendo que estão completos em asset work nos projetos atuais e que avisariam se abrisse necessidade. Não foi recusa ao seu trabalho, foi equipe cheia, e ele deixou a porta encostada. Por isso tirei a Angel Studios da lista de agora: procurar a porta corporativa 26 dias depois do não dele parece contornar quem já respondeu, e o meio é pequeno. A 5a temporada está greenlit, então a hora certa de voltar é quando a 4a fechar e a 5a começar a montar equipe."],
@@ -1094,6 +1095,8 @@ function renderKit(){
 }
 
 const PRIO_W = { alta:0, media:1, baixa:2 };
+// prioridade do Vini (30/08): vaga remota vem sempre antes, dentro da mesma faixa
+const isRemoto = p => /remot/i.test((p.country||"")+" "+(p.note||""));
 const prioOf = p => p.prio && PRIO_W.hasOwnProperty(p.prio) ? p.prio : (p.origem==="email" ? "media" : "baixa");
 const DOSSIES = [
  [
@@ -1319,6 +1322,8 @@ function renderPortais(){
     if(pa!==pb) return pa-pb;
     const wa = PRIO_W[prioOf(a)], wb = PRIO_W[prioOf(b)];
     if(wa!==wb) return wa-wb;
+    const ra = isRemoto(a)?0:1, rb = isRemoto(b)?0:1;
+    if(ra!==rb) return ra-rb;
     if(a.origem!==b.origem) return a.origem==="email" ? -1 : 1;
     return a.name.localeCompare(b.name);
   });
@@ -1334,7 +1339,7 @@ function renderPortais(){
       : `<span class="chip"><span class="dot" style="background:var(--axis)"></span>só portal</span>`;
     return `<tr class="${done?"pdone":"prio-"+prio}">
       <td><input type="checkbox" data-url="${esc(p.url)}"${done?" checked":""}${p.done?" disabled":""} aria-label="Marcar ${esc(p.name)} como aplicado"${p.done?' title="Confirmado pela automação (email de confirmação recebido)"':""}></td>
-      <td><span class="pname">${esc(p.name)}</span> ${prioChip}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
+      <td><span class="pname">${esc(p.name)}</span> ${prioChip}${isRemoto(p)?' <span class="chip" style="color:var(--blue);font-weight:600">🌐 remoto</span>':""}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
       <td>${esc(p.country)}</td>
       <td><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir aplicação ↗</a></td>
       <td>${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span></td>
@@ -1358,6 +1363,7 @@ function updatePortalHint(){
   $("#portalHint").innerHTML =
     `${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
     `Prioridade pela mensagem recebida e pelo encaixe da vaga: <span class="prio-chip-alta">🔥 alta</span> = pediram diretamente ou vaga com seu perfil exato · <span class="prio-chip-media">média</span> = redirecionamento padrão ou vaga próxima · <span class="prio-chip-baixa">baixa</span> = sem sinal do estúdio. ` +
+    `<b>Vagas <span style="color:var(--blue)">🌐 remotas</span> aparecem primeiro dentro de cada faixa</b>, mas as presenciais continuam na lista e valem candidatura. ` +
     "Aplique pelo link e marque quando fizer (fica salvo neste navegador). O selo verde aparece quando a automação vê o email de confirmação.";
 }
 
