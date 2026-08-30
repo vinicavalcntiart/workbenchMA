@@ -130,7 +130,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Riot Games — VAGA EXPIRADA (verificado 30/08): a Senior 3D Character Artist de LoL Cosmetics saiu do portal; acompanhar https://www.riotgames.com/en/work-with-us
 - Cartoon Saloon — SEM VAGAS ABERTAS (verificado 30/08); só aceitam candidatura em vaga publicada por GDPR; time todo presencial em Kilkenny; acompanhar https://www.cartoonsaloon.ie/positions/
 - Ánima Kitchent — link do LinkedIn não abria sem login; usar https://www.infojobs.net/anima-kitchent (público) ou jobs@animakitchent.com; estúdio em Las Palmas, semana de 4 dias
-- DreamWall (Bélgica) — CANDIDATURA ESPONTÂNEA ENVIADA em 30/08 pelo Talentsquare, conforme pedido do estúdio; sem retorno em 2 semanas significa não (prazo 13/09)
+- DreamWall (Bélgica) — CANDIDATURA FINALIZADA em 30/08 (email validado no Talentsquare); sem retorno em 2 semanas significa não (prazo 13/09)
 - 2K / Cloud Chamber (EUA; Novato CA) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (BioShock; personagens estilizados; lidera o time de character art); exige visto de trabalho nos EUA
 - Scopely (EUA; remoto) — CANDIDATURA ENVIADA em 30/08 para Senior 3D Artist em Monopoly GO!; vaga remota, pede portfólio estilizado/whimsical; time entre Espanha e EUA
 - Rebellion (Reino Unido; Oxford) — CANDIDATURA ENVIADA em 30/08 para Senior Character Artist (shooter tático em 3a pessoa) via apply.workable.com/rebellion; vaga presencial em Oxford
