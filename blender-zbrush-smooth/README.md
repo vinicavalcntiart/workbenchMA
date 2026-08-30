@@ -33,23 +33,27 @@ A intensidade do relax em relação ao smooth é a constante
 `topology_relax_factor` no topo do `smooth.cc` (padrão `1.0f`; `0.5f` para um
 relax mais discreto).
 
-## Criando o brush na UI (depois de compilar)
+## Instalação rápida (recomendada)
 
-Desde o Blender 4.3 os brushes são *assets*, então o brush em si você cria
-uma vez na interface:
+1. **Compilar** (uma vez): rode `instalar_windows.bat` (Windows) ou
+   `bash instalar_linux.sh` (Linux). O script baixa o Blender, aplica o
+   patch e compila sozinho — só esperar.
+2. **Importar o brush**: o arquivo **`VC_Smooth_brush.blend`** já vem pronto
+   nesta pasta, com o brush marcado como asset. No Blender compilado:
+   - `Edit → Preferences → File Paths → Asset Libraries → +`
+   - Aponte para a pasta onde está o `VC_Smooth_brush.blend` (ou copie o
+     arquivo para a pasta da sua asset library existente).
+   - Pronto: o **VC_Smooth** aparece no asset shelf do Sculpt Mode (barrinha
+     inferior da viewport), em todos os projetos.
 
-1. Entre no **Sculpt Mode** e selecione o brush **Smooth**.
-2. No asset shelf (ou na lista de brushes), clique com o botão direito →
-   **Duplicate Asset** (ou `Ctrl+D` no brush ativo).
-3. Renomeie a cópia para **`VC_Smooth`** (o nome precisa começar exatamente
-   assim; `Vini Cavalcanti Smooth` também funciona).
-4. Salve como asset na sua biblioteca (Essentials não é editável — salve na
-   sua User Library) para ele aparecer em todo projeto.
+Alternativa sem o .blend: duplicar o brush Smooth na UI (clique-direito no
+asset shelf → **Duplicate Asset**) e renomear para `VC_Smooth` — o código
+reconhece qualquer smooth cujo nome comece com `VC_Smooth` ou
+`Vini Cavalcanti`.
 
-Pronto: o `VC_Smooth` tem o comportamento ZBrush; o Smooth original continua
-100% vanilla. Observação: o smooth de atalho (segurar **Shift**) usa o brush
-Smooth padrão, então continua vanilla — use o VC_Smooth diretamente (dá para
-mapear num atalho próprio ou fixar no asset shelf).
+O Smooth original continua 100% vanilla. Observação: o smooth de atalho
+(segurar **Shift**) usa o brush Smooth padrão, então continua vanilla — use o
+VC_Smooth diretamente (dá para fixar no asset shelf ou mapear num atalho).
 
 ## Base do patch
 
