@@ -137,3 +137,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Kabam (Canadá; Vancouver) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist (pipeline completo, do concept à integração); presencial 5 dias; via https://jobs.lever.co/kabam
 - Hasbro / Wizards of the Coast, estúdio Skeleton Key (EUA; Austin TX) — CANDIDATURA ENVIADA em 30/08 para Lead Character Artist; pipeline de personagem com hair work; 7+ anos AAA; via careers.hasbro.com
 - Teyon (Polônia; Cracóvia) — CANDIDATURA ENVIADA em 30/08 para Senior/Lead Character Artist (action RPG novo); oferecem apoio de realocação e híbrido 3 dias; https://teyon.com/careers/
+- Black Kite Studios (Reino Unido/remoto) — CANDIDATURA ENVIADA em 30/08 para Lead 3D Artist via https://joinus.blackkitestudios.com/jobs; detalhes da vaga não confirmados na fonte oficial
