@@ -1,5 +1,5 @@
 diff --git a/source/blender/editors/sculpt_paint/mesh/brushes/smooth.cc b/source/blender/editors/sculpt_paint/mesh/brushes/smooth.cc
-index b0f544bf..7521dd10 100644
+index b0f544bf..e9b2ab91 100644
 --- a/source/blender/editors/sculpt_paint/mesh/brushes/smooth.cc
 +++ b/source/blender/editors/sculpt_paint/mesh/brushes/smooth.cc
 @@ -9,6 +9,8 @@
@@ -11,25 +11,44 @@ index b0f544bf..7521dd10 100644
  #include "BKE_mesh.hh"
  #include "BKE_object_types.hh"
  #include "BKE_paint.hh"
-@@ -31,6 +33,17 @@ namespace blender::ed::sculpt_paint::brushes {
+@@ -17,6 +19,7 @@
+ 
+ #include "BLI_array.hh"
+ #include "BLI_enumerable_thread_specific.hh"
++#include "BLI_string_ref.hh"
+ #include "BLI_task.hh"
+ 
+ #include "editors/sculpt_paint/mesh/mesh_brush_common.hh"
+@@ -31,6 +34,28 @@ namespace blender::ed::sculpt_paint::brushes {
  
  inline namespace smooth_cc {
  
 +/**
-+ * ZBrush-style smooth: in addition to the regular Laplacian smoothing of the shape, every
-+ * iteration also relaxes the topology (the same tangential, shape-preserving smoothing used by
-+ * the Slide Relax brush). This evens out vertex distribution while the surface is smoothed,
-+ * closely matching the behavior of ZBrush's Smooth brush.
++ * VC_Smooth ("Vini Cavalcanti Smooth"): ZBrush-style smooth. In addition to the regular
++ * Laplacian smoothing of the shape, every iteration also relaxes the topology (the same
++ * tangential, shape-preserving smoothing used by the Slide Relax brush). This evens out vertex
++ * distribution while the surface is smoothed, closely matching the behavior of ZBrush's Smooth
++ * brush.
++ *
++ * The combined behavior only applies to smooth brushes whose name starts with "VC_Smooth" or
++ * "Vini Cavalcanti"; every other smooth brush keeps the stock Blender behavior. Create the
++ * brush in the UI by duplicating the Smooth brush asset and renaming it to "VC_Smooth".
 + *
 + * The value is the strength of the topology relaxation relative to the shape smoothing.
-+ * 0.0 = old Blender behavior (shape only), 1.0 = full relax pass per smooth iteration.
++ * 0.0 = stock Blender behavior (shape only), 1.0 = full relax pass per smooth iteration.
 + */
 +constexpr float topology_relax_factor = 1.0f;
++
++static bool is_vc_smooth_brush(const Brush &brush)
++{
++  const StringRef name = brush.id.name + 2;
++  return name.startswith("VC_Smooth") || name.startswith("Vini Cavalcanti");
++}
 +
  static Vector<float> iteration_strengths(const float strength)
  {
    constexpr int max_iterations = 4;
-@@ -55,14 +68,25 @@ struct LocalData {
+@@ -55,14 +80,25 @@ struct LocalData {
    Vector<int> neighbor_data;
    Vector<float3> new_positions;
    Vector<float3> translations;
@@ -55,7 +74,7 @@ index b0f544bf..7521dd10 100644
                                                 const PositionDeformData &position_data)
  {
    PRF_scope(ProfileCategory::Editor);
-@@ -75,6 +99,9 @@ BLI_NOINLINE static void apply_positions_faces(const Sculpt &sd,
+@@ -75,6 +111,9 @@ BLI_NOINLINE static void apply_positions_faces(const Sculpt &sd,
    translations_from_new_positions(new_positions, verts, position_data.eval, translations);
    scale_translations(translations, factors);
  
@@ -65,7 +84,17 @@ index b0f544bf..7521dd10 100644
    clip_and_lock_translations(sd, ss, position_data.eval, verts, translations);
    position_data.deform(translations, verts);
  }
-@@ -102,6 +129,7 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
+@@ -84,7 +123,8 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
+                                               const Brush &brush,
+                                               Object &object,
+                                               const IndexMask &node_mask,
+-                                              const float brush_strength)
++                                              const float brush_strength,
++                                              const float relax_factor)
+ {
+   const SculptSession &ss = *object.runtime->sculpt_session;
+   bke::pbvh::Tree &pbvh = *bke::object::pbvh_get(object);
+@@ -102,9 +142,14 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
    const OffsetIndices<int> node_vert_offsets = create_node_vert_offsets(
        nodes, node_mask, node_offset_data);
    Array<float3> new_positions(node_vert_offsets.total_size());
@@ -73,37 +102,46 @@ index b0f544bf..7521dd10 100644
    Array<float> all_factors(node_vert_offsets.total_size());
    Array<float> all_distances(node_vert_offsets.total_size());
  
-@@ -144,6 +172,29 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
++  if (relax_factor == 0.0f) {
++    relax_translations.as_mutable_span().fill(float3(0));
++  }
++
+   threading::EnumerableThreadSpecific<LocalData> all_tls;
+ 
+   /* Calculate the new positions into a separate array in a separate loop because multiple loops
+@@ -144,6 +189,31 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
                verts,
                neighbors,
                new_positions.as_mutable_span().slice(node_vert_offsets[pos]));
 +
-+          /* ZBrush-style smooth: also relax the topology (tangential, shape-preserving
-+           * smoothing, same as the Slide Relax brush) so vertex distribution is evened out
-+           * while the shape is smoothed. Computed against the same position snapshot as the
-+           * Laplacian smoothing above; both translations are applied together below. */
-+          tls.relax_factors.resize(verts.size());
-+          const MutableSpan<float> relax_factors = tls.relax_factors;
-+          relax_factors.copy_from(node_factors);
-+          scale_factors(relax_factors, topology_relax_factor);
-+          smooth::calc_relaxed_translations_faces(
-+              position_data.eval,
-+              vert_normals,
-+              faces,
-+              corner_verts,
-+              vert_to_face_map,
-+              ss.boundary_info_cache->verts,
-+              ss.boundary_info_cache->edges,
-+              attribute_data.face_sets,
-+              attribute_data.hide_poly,
-+              false,
-+              verts,
-+              relax_factors,
-+              relax_translations.as_mutable_span().slice(node_vert_offsets[pos]));
++          /* VC_Smooth: also relax the topology (tangential, shape-preserving smoothing, same
++           * as the Slide Relax brush) so vertex distribution is evened out while the shape is
++           * smoothed. Computed against the same position snapshot as the Laplacian smoothing
++           * above; both translations are applied together below. */
++          if (relax_factor > 0.0f) {
++            tls.relax_factors.resize(verts.size());
++            const MutableSpan<float> relax_factors = tls.relax_factors;
++            relax_factors.copy_from(node_factors);
++            scale_factors(relax_factors, relax_factor);
++            smooth::calc_relaxed_translations_faces(
++                position_data.eval,
++                vert_normals,
++                faces,
++                corner_verts,
++                vert_to_face_map,
++                ss.boundary_info_cache->verts,
++                ss.boundary_info_cache->edges,
++                attribute_data.face_sets,
++                attribute_data.hide_poly,
++                false,
++                verts,
++                relax_factors,
++                relax_translations.as_mutable_span().slice(node_vert_offsets[pos]));
++          }
          },
          exec_mode::grain_size(1));
  
-@@ -156,6 +207,7 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
+@@ -156,6 +226,7 @@ BLI_NOINLINE static void do_smooth_brush_mesh(const Depsgraph &depsgraph,
                                  tls,
                                  all_factors.as_mutable_span().slice(node_vert_offsets[pos]),
                                  new_positions.as_span().slice(node_vert_offsets[pos]),
@@ -111,7 +149,7 @@ index b0f544bf..7521dd10 100644
                                  position_data);
          },
          exec_mode::grain_size(1));
-@@ -166,6 +218,8 @@ static void calc_grids(const Depsgraph &depsgraph,
+@@ -166,11 +237,14 @@ static void calc_grids(const Depsgraph &depsgraph,
                         const Sculpt &sd,
                         const OffsetIndices<int> faces,
                         const Span<int> corner_verts,
@@ -120,60 +158,86 @@ index b0f544bf..7521dd10 100644
                         const BitSpan boundary_verts,
                         const Set<OrderedEdge> &boundary_edges,
                         Object &object,
-@@ -200,6 +254,26 @@ static void calc_grids(const Depsgraph &depsgraph,
+                        const Brush &brush,
+                        const float strength,
++                       const float relax_factor,
+                        const bke::pbvh::GridsNode &node,
+                        LocalData &tls)
+ {
+@@ -200,6 +274,28 @@ static void calc_grids(const Depsgraph &depsgraph,
    translations_from_new_positions(new_positions, positions, translations);
    scale_translations(translations, tls.factors);
  
-+  /* ZBrush-style smooth: combine with topology relaxation (see the mesh code path). */
-+  tls.relax_factors.resize(positions.size());
-+  const MutableSpan<float> relax_factors = tls.relax_factors;
-+  relax_factors.copy_from(tls.factors);
-+  scale_factors(relax_factors, topology_relax_factor);
-+  tls.relax_translations.resize(positions.size());
-+  const MutableSpan<float3> relax_translations = tls.relax_translations;
-+  smooth::calc_relaxed_translations_grids(subdiv_ccg,
-+                                          faces,
-+                                          corner_verts,
-+                                          face_sets,
-+                                          vert_to_face_map,
-+                                          boundary_verts,
-+                                          boundary_edges,
-+                                          grids,
-+                                          false,
-+                                          relax_factors,
-+                                          relax_translations);
-+  add_translations(translations, relax_translations);
++  /* VC_Smooth: combine with topology relaxation (see the mesh code path). */
++  if (relax_factor > 0.0f) {
++    tls.relax_factors.resize(positions.size());
++    const MutableSpan<float> relax_factors = tls.relax_factors;
++    relax_factors.copy_from(tls.factors);
++    scale_factors(relax_factors, relax_factor);
++    tls.relax_translations.resize(positions.size());
++    const MutableSpan<float3> relax_translations = tls.relax_translations;
++    smooth::calc_relaxed_translations_grids(subdiv_ccg,
++                                            faces,
++                                            corner_verts,
++                                            face_sets,
++                                            vert_to_face_map,
++                                            boundary_verts,
++                                            boundary_edges,
++                                            grids,
++                                            false,
++                                            relax_factors,
++                                            relax_translations);
++    add_translations(translations, relax_translations);
++  }
 +
    clip_and_lock_translations(sd, ss, positions, translations);
    apply_translations(translations, grids, subdiv_ccg);
  }
-@@ -209,6 +283,7 @@ static void calc_bmesh(const Depsgraph &depsgraph,
+@@ -209,6 +305,8 @@ static void calc_bmesh(const Depsgraph &depsgraph,
                         Object &object,
                         const Brush &brush,
                         const float strength,
++                       const float relax_factor,
 +                       const int face_set_offset,
                         bke::pbvh::BMeshNode &node,
                         LocalData &tls)
  {
-@@ -230,6 +305,17 @@ static void calc_bmesh(const Depsgraph &depsgraph,
+@@ -230,6 +328,19 @@ static void calc_bmesh(const Depsgraph &depsgraph,
    translations_from_new_positions(new_positions, positions, translations);
    scale_translations(translations, tls.factors);
  
-+  /* ZBrush-style smooth: combine with topology relaxation (see the mesh code path). */
-+  tls.relax_factors.resize(verts.size());
-+  const MutableSpan<float> relax_factors = tls.relax_factors;
-+  relax_factors.copy_from(tls.factors);
-+  scale_factors(relax_factors, topology_relax_factor);
-+  tls.relax_translations.resize(verts.size());
-+  const MutableSpan<float3> relax_translations = tls.relax_translations;
-+  smooth::calc_relaxed_translations_bmesh(
-+      verts, positions, face_set_offset, false, relax_factors, relax_translations);
-+  add_translations(translations, relax_translations);
++  /* VC_Smooth: combine with topology relaxation (see the mesh code path). */
++  if (relax_factor > 0.0f) {
++    tls.relax_factors.resize(verts.size());
++    const MutableSpan<float> relax_factors = tls.relax_factors;
++    relax_factors.copy_from(tls.factors);
++    scale_factors(relax_factors, relax_factor);
++    tls.relax_translations.resize(verts.size());
++    const MutableSpan<float3> relax_translations = tls.relax_translations;
++    smooth::calc_relaxed_translations_bmesh(
++        verts, positions, face_set_offset, false, relax_factors, relax_translations);
++    add_translations(translations, relax_translations);
++  }
 +
    clip_and_lock_translations(sd, ss, positions, translations);
    apply_translations(translations, verts);
  }
-@@ -257,6 +343,10 @@ void do_smooth_brush(const Depsgraph &depsgraph,
+@@ -247,16 +358,24 @@ void do_smooth_brush(const Depsgraph &depsgraph,
+   bke::pbvh::Tree &pbvh = *bke::object::pbvh_get(object);
+   const Brush &brush = *BKE_paint_brush_for_read(&sd.paint);
+ 
++  /* Only the VC_Smooth brush combines the shape smoothing with topology relaxation; every
++   * other smooth brush keeps the stock behavior. */
++  const float relax_factor = is_vc_smooth_brush(brush) ? topology_relax_factor : 0.0f;
++
+   boundary::ensure_boundary_info(object);
+ 
+   switch (pbvh.type()) {
+     case bke::pbvh::Type::Mesh:
+-      do_smooth_brush_mesh(depsgraph, sd, brush, object, node_mask, brush_strength);
++      do_smooth_brush_mesh(depsgraph, sd, brush, object, node_mask, brush_strength, relax_factor);
+       break;
+     case bke::pbvh::Type::Grids: {
        const Mesh &base_mesh = *id_cast<const Mesh *>(object.data);
        const OffsetIndices faces = base_mesh.faces();
        const Span<int> corner_verts = base_mesh.corner_verts();
@@ -184,7 +248,7 @@ index b0f544bf..7521dd10 100644
  
        threading::EnumerableThreadSpecific<LocalData> all_tls;
        for (const float strength : iteration_strengths(brush_strength)) {
-@@ -268,6 +358,8 @@ void do_smooth_brush(const Depsgraph &depsgraph,
+@@ -268,11 +387,14 @@ void do_smooth_brush(const Depsgraph &depsgraph,
                           sd,
                           faces,
                           corner_verts,
@@ -193,7 +257,13 @@ index b0f544bf..7521dd10 100644
                           ss.boundary_info_cache->verts,
                           ss.boundary_info_cache->edges,
                           object,
-@@ -282,13 +374,15 @@ void do_smooth_brush(const Depsgraph &depsgraph,
+                          brush,
+                          strength,
++                         relax_factor,
+                          nodes[i],
+                          tls);
+             },
+@@ -282,13 +404,16 @@ void do_smooth_brush(const Depsgraph &depsgraph,
      }
      case bke::pbvh::Type::BMesh: {
        vert_random_access_ensure(object);
@@ -206,7 +276,8 @@ index b0f544bf..7521dd10 100644
              [&](const int i) {
                LocalData &tls = all_tls.local();
 -              calc_bmesh(depsgraph, sd, object, brush, strength, nodes[i], tls);
-+              calc_bmesh(depsgraph, sd, object, brush, strength, face_set_offset, nodes[i], tls);
++              calc_bmesh(
++                  depsgraph, sd, object, brush, strength, relax_factor, face_set_offset, nodes[i], tls);
              },
              exec_mode::grain_size(1));
        }
