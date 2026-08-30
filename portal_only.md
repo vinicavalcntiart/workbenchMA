@@ -85,7 +85,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - PUBG Madison (EUA/Canadá) — Senior Character Artist fixed-term, remoto US/CA; via gamejobs.co
 - Method Animation / Mediawan Kids & Family (França) — Miraculous e séries CG; sem email público; https://mediawankidsandfamily.com/studios
 - VAGA: Sumo Digital (Reino Unido; remoto/híbrido) — 3D Character Artist para jogos estilizados; via gamejobs.co
-- VAGA: Blackbird Interactive (Canadá) — Senior 3D Character Artist em jogo de direção de arte estilizada; via gamejobs.co
+- Blackbird Interactive (Canadá; Vancouver) — VAGA EXPIRADA (verificado 30/08); estúdio segue contratando (16 vagas) e mantém General Application aberta em https://jobs.lever.co/blackbirdinteractive; semana de 4 dias
 - VAGA: Wargaming (Europa) — 3D Character Artist stylized (título não anunciado); via gamejobs.co
 - VAGA: nDreams Studio Elevation (Reino Unido; remoto) — 3D Character Artist VR; via gamejobs.co
 - VAGA: Hidden Acorn (remoto) — 3D Character Artist stylized em UE5; via hitmarker
