@@ -143,3 +143,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Digic Pictures (Hungria; REMOTO) — Freelancer Grooming Artist; confirmada no ATS oficial em 30/08; anúncio cita Houdini e Yeti/Arnold; freelance remoto, sem barreira de visto; ENCAIXE MÁXIMO
 - VAGA: N-iX (Ucrânia; escritório ou remoto) — Freelance Character Hair (Grooming) Artist para projeto da Paradox Interactive; confirmada no careers.n-ix.com em 30/08; nível anunciado é middle
 - VAGA: Room 8 Studio (global) — Grooming Artist para personagens 3D realistas (Xgen/Ornatrix/Yeti); confirmada no site oficial em 30/08; foco realista
+- Side (Canadá, provável Montreal) — CANDIDATURA ENVIADA em 30/08 para Artiste 3D senior / Senior 3D Artist; vaga não confirmada na fonte oficial; https://side.inc/careers
