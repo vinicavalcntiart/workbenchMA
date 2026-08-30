@@ -7,7 +7,7 @@ REM  Requisitos: Git e Visual Studio 2022 Community com o
 REM  workload "Desktop development with C++" instalados.
 REM ============================================================
 setlocal
-set "BASE_COMMIT=08bed5b5b42ec017e8dcc87b76f6c373c322b086"
+set "BASE_BRANCH=blender-v5.2-release"
 set "SCRIPT_DIR=%~dp0"
 set "LOG=%SCRIPT_DIR%instalacao_log.txt"
 echo Instalacao VC_Smooth iniciada > "%LOG%"
@@ -27,9 +27,9 @@ if errorlevel 1 goto erro_clone
 :ja_clonado
 cd /d "%USERPROFILE%\blender-vc\blender"
 
-echo [2/4] Fixando na versao base do patch...
-git fetch origin %BASE_COMMIT% >> "%LOG%" 2>&1
-git checkout %BASE_COMMIT% >> "%LOG%" 2>&1
+echo [2/4] Mudando para o Blender 5.2 LTS...
+git fetch origin %BASE_BRANCH% >> "%LOG%" 2>&1
+git checkout -B vc-smooth origin/%BASE_BRANCH% >> "%LOG%" 2>&1
 if errorlevel 1 echo AVISO: nao consegui fixar o commit base, seguindo com a versao atual.
 
 echo [3/4] Aplicando o patch VC_Smooth...

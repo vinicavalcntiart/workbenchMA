@@ -6,7 +6,7 @@
 #  Requisitos: git, cmake, gcc/g++ (sudo apt install build-essential cmake git)
 # ============================================================
 set -e
-BASE_COMMIT=08bed5b5b42ec017e8dcc87b76f6c373c322b086
+BASE_BRANCH=blender-v5.2-release
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATCH="$SCRIPT_DIR/zbrush-style-smooth.patch"
 
@@ -21,9 +21,9 @@ if [ ! -d blender ]; then
 fi
 cd blender
 
-echo "[2/4] Fixando na versao base do patch..."
-git fetch origin "$BASE_COMMIT" 2>/dev/null || true
-git checkout "$BASE_COMMIT" || echo "[AVISO] Sem o commit base; seguindo com a versao atual."
+echo "[2/4] Mudando para o Blender 5.2 LTS..."
+git fetch origin "$BASE_BRANCH"
+git checkout -B vc-smooth "origin/$BASE_BRANCH"
 
 echo "[3/4] Aplicando o patch VC_Smooth..."
 git apply --check "$PATCH" && git apply "$PATCH" || {

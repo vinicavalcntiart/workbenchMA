@@ -39,12 +39,19 @@ relax mais discreto).
    `bash instalar_linux.sh` (Linux). O script baixa o Blender, aplica o
    patch e compila sozinho — só esperar.
 2. **Importar o brush**: o arquivo **`VC_Smooth_brush.blend`** já vem pronto
-   nesta pasta, com o brush marcado como asset. No Blender compilado:
-   - `Edit → Preferences → File Paths → Asset Libraries → +`
-   - Aponte para a pasta onde está o `VC_Smooth_brush.blend` (ou copie o
-     arquivo para a pasta da sua asset library existente).
-   - Pronto: o **VC_Smooth** aparece no asset shelf do Sculpt Mode (barrinha
-     inferior da viewport), em todos os projetos.
+   nesta pasta, com o brush marcado como asset (salvo na versão 4.3, abre em
+   qualquer Blender 4.3+). **Atenção: não abra o .blend com dois cliques** —
+   ele vai parecer uma cena vazia, porque o brush não é um objeto. O caminho
+   certo é registrar a pasta como Asset Library:
+   - Coloque o `VC_Smooth_brush.blend` numa pasta fixa (ex.:
+     `Documentos\BlenderAssets`).
+   - No Blender compilado: `Edit → Preferences → File Paths → Asset
+     Libraries → +` e aponte para essa pasta.
+   - Entre no **Sculpt Mode** e abra o **asset shelf** (a barrinha na parte
+     de baixo da viewport — arraste a borda inferior pra cima se estiver
+     recolhida). O **VC_Smooth** aparece lá (se tiver filtro de catálogo
+     ativo, olhe em "All"/"Unassigned").
+   - Vale para todos os projetos, para sempre.
 
 Alternativa sem o .blend: duplicar o brush Smooth na UI (clique-direito no
 asset shelf → **Duplicate Asset**) e renomear para `VC_Smooth` — o código
@@ -57,10 +64,14 @@ VC_Smooth diretamente (dá para fixar no asset shelf ou mapear num atalho).
 
 ## Base do patch
 
-- Repositório: https://github.com/blender/blender (mirror oficial)
-- Commit base: `08bed5b5b42ec017e8dcc87b76f6c373c322b086` (branch `main`, ago/2026)
-- Patch pequeno, num arquivo só; tende a aplicar limpo em qualquer 4.5+/5.x
-  recente. Se falhar, aplique as mudanças à mão (são blocos pequenos).
+- Repositório: https://projects.blender.org/blender/blender (mirror no GitHub:
+  https://github.com/blender/blender)
+- Alvo dos instaladores: branch **`blender-v5.2-release`** (Blender 5.2 LTS —
+  a mesma versão que o Vini usa). Verificado: o patch aplica limpo e passa
+  checagem de tipos (`clang -fsyntax-only`) tanto no 5.2 LTS quanto no `main`
+  (commit `08bed5b5`, ago/2026).
+- Patch pequeno, num arquivo só. Se falhar em outra versão, aplique as
+  mudanças à mão (são blocos pequenos).
 
 ## Como aplicar e compilar
 
