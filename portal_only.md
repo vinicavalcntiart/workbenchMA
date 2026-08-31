@@ -179,3 +179,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Digic Pictures (Hungria) — VAGAS EXPIRADAS verificado pelo Vini em 31/08: Character Modeler e Freelance Grooming Artist nao estao mais na pagina de carreiras; so restava a de Previs, que ele aplicou; estudio segue valendo
 - JAPAO FORA DO ESCOPO (regra do Vini, 31/08): nenhuma vaga japonesa interessa (idioma, fuso incompativel com remoto, moeda); Polygon Pictures, Marza, OLM Digital, Orange, Digital Frontier, Graphinica, Anima Inc. e Sanzigen ficam arquivados; nao prospectar Japao
 - Disney Research Studios (Suica; Zurique) — CANDIDATURA ENVIADA em 31/08 na vaga de Studio Intern; estagio, mas ele se qualifica pelo vinculo estudantil do mestrado; entidade distinta da WDAS e da ILM
+- Cloth Cat Animation (Reino Unido; Cardiff) — CANDIDATURA ENVIADA em 31/08 pelo Speculative Enquiry Form do site; via de candidatura espontanea, sem email geral publico
