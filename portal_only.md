@@ -114,7 +114,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Activision / Toys for Bob (EUA/CA/UK remoto) — Senior Character Artist STYLIZED; via gamejobs.co
 - VAGA: Half Mermaid Productions (remoto) — Senior Character Artist; via remotegamejobs
 - VAGA: Blankhans (Alemanha/remoto) — Senior 3D Character Artist; via remotegamejobs
-- VAGA: Supersocial (remoto) — Character Artist; via remotegamejobs
+- Supersocial (remoto WFA) — APLICADO 31/08: General Application no portal oficial (full-time/part-time/contractor; North America e work from anywhere); mundos Roblox, estilizado por natureza
 - Massive Black — VAGA EXPIRADA (verificado 29/08)
 - Snowball Studios (Israel/Toronto/Londres) — descartado: sem email público e sede principal fora do escopo
 - Impleo / Disney Dreamlight Valley — VAGA EXPIRADA (verificado pelo Vini em 29/08 no SmartRecruiters oficial: "This job ad has expired"). Empregador real: Gameloft Ucrânia; anúncio com 2 meses. impleo.org é agregador, não fonte oficial
