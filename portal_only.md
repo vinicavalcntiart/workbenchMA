@@ -104,7 +104,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: Day 9 Game Studio (EUA; remoto) — Lead Character Artist; via remotegamejobs
 - VAGA: LingoLooper (remoto) — Lead Stylized 3D Character Artist; via remotegamejobs
 - Platige Image (Polônia) — só ATS próprio em platige.com/careers (info@ recebeu email em 26/08)
-- VAGA GROOM: Epic Games (EUA) — Senior Groom Artist (Houdini/XGen); via gamejobs.co
+- Epic Games (EUA/Brasil) — APLICADO 31/08: Modeling Outsource Lead (R27348), operacao brasileira, sem exigencia de visto (excecao deliberada ao recorte geografico); a vaga de Senior Groom Artist (Houdini/XGen) segue nao confirmada
 - Techland (Polônia) — APLICADO 31/08: Character Artist pelo portal oficial (pretensão 17001-19000 PLN bruto); a vaga de Senior Character Hair (Grooming) Artist segue arquivada; https://techland.net/job-offers/
 - VAGA GROOM: Rockstar (UK/EUA) — Character Hair & Groom Artist; via gamejobs.co
 - VAGA GROOM: Ubisoft (Canadá) — Groom Artist em Assassin's Creed; via gamejobs.co
