@@ -179,3 +179,5 @@ data,estudio,email,message_id,tipo,acao
 2026-08-31,Digic Pictures,-,-,vaga-encerrada,Vini verificou na pagina de carreiras que a Character Modeler NAO existe mais; era a vaga alta mais antiga do painel confirmada em 29/08 e rechecada em 30/08; derrubada para baixa
 2026-08-31,Digic Pictures,-,-,vaga-encerrada,A Freelance Grooming Artist tambem saiu da pagina de carreiras; derrubada para baixa; era plano B por ser groom exclusivo
 2026-08-31,-,-,-,ferramenta,Painel passa a esconder por padrao as vagas encerradas (expirada, sem vagas, caminho fechado); 12 entradas afetadas; botao no rodape do bloco mostra ou esconde e a preferencia fica salva no navegador; linhas mortas aparecem riscadas quando visiveis
+2026-08-31,-,-,-,regra-do-vini,JAPAO FORA DA CAMPANHA: nenhuma vaga japonesa interessa (nao fala o idioma, nao se mudaria para la, fuso inviabiliza remoto, moeda desvalorizada); nao prospectar nem sugerir estudio japones; Coreia do Sul e Singapura seguem valendo
+2026-08-31,Polygon Pictures,-,-,caminho-encerrado,Pendencia do formulario com demo reel pedido pelo RH em 27/08 CANCELADA por decisao do Vini de 31/08 (Japao fora do escopo); nao cobrar mais
