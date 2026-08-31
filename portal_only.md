@@ -32,7 +32,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Psyop (EUA) — candidatura via formulário do site em https://www.psyop.com/
 - Xilam Animation (França) — CG e 2D (Oggy Oggy); sem email atual verificado; contato em https://xilam.com/en/contact-us/
 - Studio 100 Animation — SAIU do portal_only: info@studio100animation.com encontrado na página de contato do site oficial; tratado por email (lote 10)
-- DNEG Animation (Reino Unido) — só ATS próprio; https://www.dneg.com/careers
+- DNEG Animation (Reino Unido) — APLICADO 31/08: Character Modeller (Build), híbrido em Londres, pelo ATS próprio; https://www.dneg.com/careers
 - Cinesite (Reino Unido/Canadá) — só ATS próprio; https://www.cinesite.com/careers/
 - REALTIME (Reino Unido) — cinematics de games (Manchester); sem email geral público; https://realtimeuk.com/
 - Important Looking Pirates (Suécia) — VFX de criaturas/personagens (Mandalorian); sem email público; https://www.ilpvfx.com/
