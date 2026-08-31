@@ -174,3 +174,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - ILM London / Disney (Reino Unido) — CANDIDATURA ENVIADA em 31/08 na Lead Texture Artist (anuncio de 26/08 no disneycareers.com); disciplina vizinha real; ressalvas: VFX fotorrealista contra portfolio estilizado e nivel de Lead em pipeline desconhecido; Londres no escopo e ILM patrocina visto
 - Reel FX Animation (EUA; Dallas, TX) — CANDIDATURA ENVIADA em 31/08 pela General Application em reelfx.com/careers; banco de talentos, sem vaga especifica
 - Digic Pictures (Hungria; Budapeste) — CANDIDATURA ENVIADA em 31/08 na Previs Artist como PORTA DE ENTRADA; a vaga de Character Modeler no mesmo estudio segue sendo a porta principal
+- Santa Monica Studio (EUA; remoto) — CANDIDATURA ENVIADA em 31/08 na 3D UI Artist (porta de entrada, unica vaga de arte aberta); a Sr Character Artist do External Development confirmada em 30/08 JA SAIU DO AR, verificado pelo Vini em 31/08
