@@ -182,3 +182,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Cloth Cat Animation (Reino Unido; Cardiff) — CANDIDATURA ENVIADA em 31/08 pelo Speculative Enquiry Form do site; via de candidatura espontanea, sem email geral publico
 - Blizzard Entertainment (EUA; Irvine) — CANDIDATURA ENVIADA em 31/08 na Senior Previz Artist - Temp (SFD / Cinematics) como porta de entrada; contrato temporario; assinar alerta de vaga em careers.blizzard.com filtrando Character
 - nDreams / Studio Elevation (Reino Unido; remoto) — CANDIDATURA ESPONTANEA ENVIADA em 31/08; Vini verificou que nao ha vaga aberta; expectativa baixa e assumida
+- Industrial Brothers (Canada, Toronto) — APLICADO 31/08: General Application no site oficial; segundo canal apos bounce de jobs@ e reenvio sem resposta para info@; https://www.industrialbrothers.com/careers
