@@ -143,6 +143,8 @@
   .fu-due { color:var(--good-text); font-weight:600; }
   .fu-wait { color:var(--muted); }
   tr.pdone { opacity:.55; }
+  tr.pmorta { opacity:.45; }
+  tr.pmorta .pname { text-decoration: line-through; text-decoration-style: dotted; }
   tr.pdone .pname { text-decoration: line-through; }
   tr.prio-alta td:first-child { border-left:4px solid var(--crit); }
   tr.prio-media td:first-child { border-left:4px solid var(--warn); }
@@ -739,6 +741,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-31","alerta","Vagas encerradas saíram da frente no painel","Você reclamou que a lista de portais estava cheia de vaga morta, e estava mesmo: doze das entradas eram vaga expirada, estúdio sem posições abertas ou caminho já fechado. Agora elas ficam escondidas por padrão, com um botão para mostrar quando você quiser conferir o histórico, e aparecem riscadas quando visíveis. A lista de trabalho caiu de 116 para 104 linhas. Nada foi apagado, porque saber que uma vaga existiu e fechou em poucos dias é informação útil para escolher onde vale assinar alerta."],
  ["2026-08-31","alerta","A vaga de Character Modeler da Digic também fechou","Você conferiu a página de carreiras deles e só existe a de Previs, que é a que você mandou. As outras duas que o painel guardava, a Character Modeler e a Freelance Grooming Artist, saíram do ar e foram derrubadas para baixa. A de Character Modeler doí mais: estava confirmada no portal oficial desde 29/08, foi rechecada em 30/08 e era a aposta mais bem colocada da campanha inteira, num estúdio que contrata freelance remoto do exterior. Com ela, já são doze vagas que morreram em poucos dias desde o começo, e isso torna alerta de vaga no ATS de cada estúdio mais valioso do que qualquer varredura periódica."],
  ["2026-08-31","alerta","As vagas de personagem da Insomniac não existiam, e a regra de fonte oficial pegou","Ontem eu registrei três vagas de Senior Character Artist da Insomniac vindas de agregador, marcadas como não confirmadas porque o proxy bloqueava o site do estúdio. Hoje você abriu a página oficial e ela tem quatro vagas, todas de contrato, e nenhuma é de character artist. Ou seja, aquelas três já estavam mortas quando apareceram na busca, e a regra de nunca escrever confirmada sem abrir a fonte do empregador evitou que você perdesse tempo com elas. Você aplicou na Senior Facial Character TD como porta de entrada, que é a única com parentesco real: o TD facial monta o sistema que deforma o rosto e quem esculpe os alvos de blendshape é o character artist."],
  ["2026-08-31","alerta","A vaga de personagem da Santa Monica Studio já saiu do ar","Ao entrar hoje no site deles você viu que a única vaga de arte aberta era 3D UI Artist, e aplicou nela. Isso significa que a Sr Character Artist do time de External Development, que eu confirmei ontem no domínio do próprio estúdio e registrei como prioridade alta, ficou no ar por poucos dias e já foi retirada. Era a que pedia hair e groom entre os requisitos e falava em guiar arte de personagem terceirizada, o encaixe mais direto que a varredura tinha achado. Serve de medida do ritmo: vaga sênior de personagem em estúdio grande fecha em dias, então alerta de vaga vale mais que varredura periódica."],
@@ -1410,8 +1413,17 @@ function renderDossies(){
   }));
 }
 
+// vaga morta: expirada, estúdio sem vagas, caixa fechada ou caminho encerrado.
+// O Vini pediu em 31/08 para elas não poluírem a lista; ficam escondidas por padrão.
+const MORTA_RE = /VAGA EXPIRADA|SEM VAGAS|NÃO EXISTE|NÃO APLICAR|não está mais|não aparece mais|saiu do ar|estúdio fechado|liquida/i;
+const isMorta = p => MORTA_RE.test(p.note||"") && !isApplied(p);
+const MKEY = "campanha-mostrar-mortas-v1";
+let showMortas = false;
+try { showMortas = localStorage.getItem(MKEY) === "1"; } catch(e){}
 function renderPortais(){
-  const rows = [...PORTAIS].sort((a,b)=>{
+  const todas = [...PORTAIS];
+  const mortas = todas.filter(isMorta);
+  const rows = (showMortas ? todas : todas.filter(p=>!isMorta(p))).sort((a,b)=>{
     const pa = isApplied(a)?1:0, pb = isApplied(b)?1:0;
     if(pa!==pb) return pa-pb;
     const wa = PRIO_W[prioOf(a)], wb = PRIO_W[prioOf(b)];
@@ -1431,7 +1443,7 @@ function renderPortais(){
     const origem = p.origem==="email"
       ? `<span class="chip"><span class="dot" style="background:var(--warn)"></span>⚠ pediram na resposta</span>`
       : `<span class="chip"><span class="dot" style="background:var(--axis)"></span>só portal</span>`;
-    return `<tr class="${done?"pdone":"prio-"+prio}">
+    return `<tr class="${done?"pdone":(isMorta(p)?"pmorta":"prio-"+prio)}">
       <td><input type="checkbox" data-url="${esc(p.url)}"${done?" checked":""}${p.done?" disabled":""} aria-label="Marcar ${esc(p.name)} como aplicado"${p.done?' title="Confirmado pela automação (email de confirmação recebido)"':""}></td>
       <td><span class="pname">${esc(p.name)}</span> ${prioChip}${isRemoto(p)?' <span class="chip" style="color:var(--blue);font-weight:600">🌐 remoto</span>':""}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
       <td>${esc(p.country)}</td>
@@ -1439,7 +1451,13 @@ function renderPortais(){
       <td>${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span></td>
     </tr>`;
   }).join("");
-  updatePortalHint();
+  updatePortalHint(mortas.length);
+  const tg = $("#mortasToggle");
+  if(tg) tg.addEventListener("click", ()=>{
+    showMortas = !showMortas;
+    try { localStorage.setItem(MKEY, showMortas?"1":"0"); } catch(e){}
+    renderPortais();
+  });
   // atualiza só a linha clicada; a ordenação muda apenas na próxima visita, para a lista não pular sob o clique
   $("#portalRows").querySelectorAll("input[type=checkbox]").forEach(cb=>{
     cb.addEventListener("change", ()=>{
@@ -1450,11 +1468,13 @@ function renderPortais(){
     });
   });
 }
-function updatePortalHint(){
+function updatePortalHint(mortasCount){
   const doneCount = PORTAIS.filter(isApplied).length;
   const pend = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
+  const mortas = typeof mortasCount==="number" ? mortasCount : PORTAIS.filter(isMorta).length;
   $("#portalBadge").textContent = `${doneCount}/${PORTAIS.length} feitos`;
   $("#portalHint").innerHTML =
+    (mortas ? `<b>${mortas} vaga${mortas===1?"":"s"} encerrada${mortas===1?"":"s"}</b> (expirada, estúdio sem vagas ou caminho fechado) ${showMortas?"aparecendo na lista":"escondida"+(mortas===1?"":"s")+" para não poluir"}. <button id="mortasToggle" class="copybtn" style="margin-left:4px">${showMortas?"esconder":"mostrar"}</button><br>` : "") +
     `${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
     `Prioridade pela mensagem recebida e pelo encaixe da vaga: <span class="prio-chip-alta">🔥 alta</span> = pediram diretamente ou vaga com seu perfil exato · <span class="prio-chip-media">média</span> = redirecionamento padrão ou vaga próxima · <span class="prio-chip-baixa">baixa</span> = sem sinal do estúdio. ` +
     `<b>Vagas <span style="color:var(--blue)">🌐 remotas</span> aparecem primeiro dentro de cada faixa</b>, mas as presenciais continuam na lista e valem candidatura. ` +
