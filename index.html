@@ -735,6 +735,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-08-31","alerta","Kit ganhou carta de porta de entrada para 59 formulários","Como você vai aplicar de propósito em vagas de outra função esperando que o recrutador encaminhe o portfólio, o kit agora tem um grupo novo com uma carta pronta para cada formulário que ainda não foi enviado. A carta declara na primeira linha que a sua área é personagem e pede o encaminhamento para quem lidera character art, que é o que separa um encaminhamento interno de uma recusa por função errada. A lista se atualiza sozinha e já exclui quem respondeu, quem recusou, quem tem vaga de personagem aberta e a Angel Studios. Tem também uma versão curta para campo de texto pequeno."],
  ["2026-08-31","nao","Akkord Film respondeu de Berlim, e é não por enquanto","A Nadine Lahav, do escritório da Akkord em Berlim, respondeu ao email do dia 28 dizendo que não há vagas abertas agora e pedindo para tentar de novo daqui a alguns meses. Ela mencionou que normalmente encaminharia para os parceiros deles em posição de animador 3D, então o perfil foi lido como animação e não como personagem, o que explica parte do não. A resposta padrão de agradecimento já saiu na mesma thread, pedindo para ficar no radar para trabalho de personagem. É a décima recusa da campanha e a segunda alemã, mas é das poucas que deixa a porta aberta com prazo."],
  ["2026-08-30","vaga","Quatro vagas remotas achadas, nenhuma conferida: o proxy caiu","A varredura noturna trouxe quatro nomes e a melhor delas é a thatgamecompany, de Journey e Sky, com Mid-Senior 3D Character Artist remota, que é o estúdio mais alinhado com personagem estilizado de toda a rodada. Vem depois a Wildlight Entertainment, remote-first fundada por gente de Apex Legends e Titanfall, com Senior Character Artist para personagens semi-estilizados de AAA entre 130 e 170 mil dólares por ano, empregando apenas nos Estados Unidos e Canadá. A Insomniac Games tem três remotas, mas a de Heads pede cabeças naturalistas por fotogrametria, que é realismo e não a sua força. E a Skydance tem Visual Development Artist pelo Lever oficial, só que o recorte é design de ambiente com 8 anos de experiência em longa e filiação ao Animation Guild, não personagem. A rodada seguinte, à meia-noite, achou mais três, e uma delas passa na frente de todas: a Twin Swans, estúdio boutique britânico de um folk horror narrativo para PlayStation 5, procura Senior 3D Character Artist totalmente remoto e de qualquer lugar, pedindo personagens estilizados do conceito ao modelo final. Trabalhar de qualquer lugar é o que separa ela das americanas, que são remotas mas exigem autorização de trabalho nos Estados Unidos. Vieram junto a Crows Crows Crows, de The Stanley Parable, com 3D Character Artist remoto em contrato de seis meses para criaturas, e a Running With Scissors, da série Postal, também remota. Nenhuma das sete está confirmada: o proxy desta automação bloqueou o Greenhouse, o Lever e os sites dos próprios estúdios nas duas rodadas, então todas entraram como baixa até você abrir os links. Na Twin Swans em especial vale pressa e cuidado ao mesmo tempo, porque um resumo de busca sugeriu que a página de carreiras pode já estar sem vagas. Pelo mesmo motivo a revalidação das vagas antigas não pôde ser feita hoje.","https://twinswans.com"],
  ["2026-08-30","porta","Você entrou na Sony Pictures Animation por vis dev, e fecha seis grandes em um dia","A da Sony Pictures Animation é a mais alinhada das seis: você aplicou direto no departamento de Visual Development, que é o seu foco declarado de carreira, e não para uma vaga de modelagem ou de groom. É o estúdio de Spider-Verse e Klaus, e não se confunde com a Sony Pictures Imageworks, que é a casa de VFX e outra entidade. Antes dela saíram, no mesmo dia, a DreamWorks pelo Express Future Interest Form, a Titmouse com portfólio, reel e currículo fora de vaga aberta, e a Bento Box Atlanta pelo Lever oficial. Com Skydance e Powerhouse, são seis dos dezessete grandes da animação americana em um único dia, e agora todas as portas espontâneas dessa lista estão usadas. O resto depende de vaga abrir, que é o que as rotinas varrem a cada quatro horas. Três já voltaram com confirmação automática na mesma noite: a Sony pelo Greenhouse oficial, a Titmouse pela automação de Airtable e a Bento Box pelo Lever. As duas últimas avisam por escrito que esse tipo de envio não garante resposta, e a da Sony diz que revisam todo o material mas não dão retorno individual pelo volume. Ou seja, banco de talentos não dá retorno rápido por natureza, e nenhum desses seis entra na conta de resposta esperada.","https://www.sonypicturesanimation.com/careers/job-postings"],
@@ -1046,6 +1047,66 @@ const KIT = [
   ["Precisa de sponsorship? (sim/não + comentário)","Yes. I'm glad to run the process with the studio's support; profiles like mine score well in points-based routes, and I can work remotely during the transition."]
  ]]
 ];
+// porta de entrada (regra do Vini, 31/08): quando não há vaga de personagem aberta,
+// ele aplica na vaga que existe e pede encaminhamento interno. A carta tem que
+// declarar isso na primeira linha, senão a triagem reprova por função errada.
+function portaLetter(nome, role){
+  // "Blur Studio (grooming)" vira "Blur Studio": parêntese é anotação minha, não nome
+  const studio = nome.replace(/\s*\([^)]*\)\s*/g," ").replace(/\s*\/.*$/,"").trim();
+  const alvo = role ? `the ${role} opening` : "the opening you currently have posted";
+  return `Dear ${studio} team,
+
+I'm writing about ${alvo}, and I'll be straight about why: it is the closest open door I found, and my discipline is character art. I'm a Senior 3D Character Artist and visual development artist with 10+ years in stylized characters.
+
+On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1. For almost five years I've been with E-Line Media in Arizona, US, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini. My portfolio at artstation.com/viniciuscavalcanti holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it, built to the same production standard as my studio work.
+
+If character art and visual development sit with a different team at ${studio}, I would be grateful if you could pass my portfolio to whoever leads it, and keep me on file for when an opening comes up. If the posted role is open to a senior artist coming from the character side, I'd be glad to talk about that as well.
+
+I've worked fully remote with a US studio for almost five years, so a distributed team is my normal working mode. I'm open to relocating; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case.
+
+Best,
+Vini Cavalcanti`;
+}
+const PORTA_CURTA = "I'm applying here as the closest open door, not because this is my discipline. I'm a Senior 3D Character Artist and visual development artist with 10+ years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media. If there is no character or visual development opening right now, I'd be grateful if you could forward my portfolio to whoever leads character art and keep me on file for when one opens. Portfolio: artstation.com/viniciuscavalcanti";
+// pega o título da vaga da nota, quando existe, para a carta citar a posição certa
+function portaRole(note){
+  const m = /VAGAS?:\s*([^;.]{3,60})/.exec(note||"");
+  return m ? m[1].trim().replace(/\s+/g," ") : "";
+}
+// só entram formulários ainda não enviados que NÃO são vaga da área dele:
+// onde já existe vaga de personagem, a carta certa é a normal, não esta.
+const CHAR_RE = /character|vis dev|visual development|modeler|modelling|modeling|groom/i;
+function portaPendentes(){
+  const out = [];
+  // estúdio que já respondeu, marcou entrevista ou recusou sai da lista:
+  // ali a conversa é humana e uma carta de porta de entrada atrapalha
+  const FORA = ["respondeu","entrevista","oferta","recusado"];
+  const vivos = new Set(STUDIOS.filter(s=>FORA.includes(stageOf(s))).map(s=>normName(s.name)));
+  PORTAIS.forEach(p=>{
+    if(isApplied(p)) return;
+    if(vivos.has(normName(p.name))) return;
+    if(/NÃO APLICAR|SEM VAGAS ABERTAS|VAGA EXPIRADA/i.test(p.note||"")) return;
+    const role = portaRole(p.note);
+    if(role && CHAR_RE.test(role)) return;
+    out.push([p.name, role]);
+  });
+  GRANDES.forEach(g=>{
+    if(g[5] || applied[g[2]]) return;
+    if(/NÃO APLICAR/i.test(g[4]||"")) return;
+    out.push([g[0], ""]);
+  });
+  const vistos = new Set();
+  return out.filter(([n])=>{ const k=n.toLowerCase(); if(vistos.has(k)) return false; vistos.add(k); return true; })
+            .sort((a,b)=>a[0].localeCompare(b[0]));
+}
+function kitPortaGroup(){
+  const pend = portaPendentes();
+  const items = [["Versão curta (campo de texto pequeno)", PORTA_CURTA]]
+    .concat(pend.map(([n,role])=>[n + (role?" · "+role:""), portaLetter(n, role)]));
+  return ["🚪 Porta de entrada · " + pend.length + " formulários ainda não enviados", items];
+}
+function kitGroups(){ return KIT.concat([kitPortaGroup()]); }
+let KIT_GROUPS = KIT;
 const KIT_STUDIO_KEY = "campanha-kit-studio-v1";
 function kitStudioName(){
   try { return localStorage.getItem(KIT_STUDIO_KEY) || ""; } catch(e){ return ""; }
@@ -1089,14 +1150,15 @@ function renderKit(){
   updateKitHint();
   const wrap = $("#kitList");
   const open = [...wrap.querySelectorAll("details")].map(d=>d.open);
-  wrap.innerHTML = KIT.map(([g,items],gi)=>`<details class="kit-group"${(open.length?open[gi]:gi===0)?" open":""}><summary>${g}</summary>${
+  KIT_GROUPS = kitGroups();
+  wrap.innerHTML = KIT_GROUPS.map(([g,items],gi)=>`<details class="kit-group"${(open.length?open[gi]:gi===0)?" open":""}><summary>${g}</summary>${
     items.map(([l,v],i)=>{
       const t = kitText(v);
       const long = t.length>220;
       return `<div class="kit-item"><div class="kl">${l}</div><div class="kv${long?" clamped":""}" id="kv-${gi}-${i}">${t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div><div class="kbtns"><button class="copybtn" data-g="${gi}" data-i="${i}">Copiar</button>${long?`<button class="morebtn" data-t="kv-${gi}-${i}">expandir</button>`:""}</div></div>`;
     }).join("")}</details>`).join("");
   wrap.querySelectorAll(".copybtn").forEach(b=>b.addEventListener("click",async ()=>{
-    const txt = kitText(KIT[+b.dataset.g][1][+b.dataset.i][1]);
+    const txt = kitText(KIT_GROUPS[+b.dataset.g][1][+b.dataset.i][1]);
     try { await navigator.clipboard.writeText(txt); }
     catch(e){ const t=document.createElement("textarea"); t.value=txt; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
     b.textContent="Copiado ✓"; b.classList.add("ok");
