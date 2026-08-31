@@ -192,3 +192,11 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Mokko Studio | Canadá | mokkostudio.com | descartado (encerrado em 2017) |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
+Twin Swans | Reino Unido | twinswans.com | pendente (verificar email oficial quando o proxy liberar; tem vaga remota de character)
+Crows Crows Crows | Holanda | crowscrowscrows.com | pendente
+Running With Scissors | EUA | runningwithscissors.com | pendente
+Asterman | Lituania (Vilnius) | asterman.org | pendente (casa de game art com portfolio de personagem estilizado)
+SunStrike Studios | Chipre | sunstrikestudios.com | pendente (70+ artistas; concept a character e animacao)
+Wildlight Entertainment | EUA (remote-first) | wildlight.com | pendente (tem vaga de Senior Character Artist semi-estilizado)
+thatgamecompany | EUA (remoto) | thatgamecompany.com | pendente (Journey e Sky; encaixe altissimo em estilizado)
+Giant Sparrow | EUA (remoto) | giantsparrow.com | pendente (ja registrado em PORTAIS por vaga; falta email oficial)
