@@ -50,7 +50,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Digital Frontier (Japão) — CG features e games; sem email público; https://www.dfx.co.jp/
 - Locus / Sidus Animation (Coreia do Sul) — CG features (Red Shoes); sem email público; http://locusanimation.com/
 - L'Atelier Animation (Canadá) — CG features; parte da Cinesite; só ATS; https://latelieranimation.com/
-- ICON Creative Studio (Canadá) — maior CG independente do Canadá (Young Jedi Adventures); só ATS; https://www.iconcreativestudio.com/careers
+- ICON Creative Studio (Canadá) — APLICADO 31/08: Intermediate Modeling/Texture Artist (Assets), Vancouver; maior CG independente do Canadá (Young Jedi Adventures); https://www.iconcreativestudio.com/careers
 - Arx Anima (Áustria) — character animation boutique em Viena; sem email público; https://arxanima.com/
 - Pixel Zoo (Austrália) — CG de marcas infantis (Rainbow High); só formulário; https://pixelzoo.com.au/contact/
 - Red Star 3D (Reino Unido) — CG em Sheffield; sem email público; https://www.redstar3d.com/
