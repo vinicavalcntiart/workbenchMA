@@ -198,7 +198,7 @@ Running With Scissors | EUA | runningwithscissors.com | pendente
 Asterman | Lituania (Vilnius) | asterman.org | pendente (casa de game art com portfolio de personagem estilizado)
 SunStrike Studios | Chipre | sunstrikestudios.com | pendente (70+ artistas; concept a character e animacao)
 Wildlight Entertainment | EUA (remote-first) | wildlight.com | pendente (tem vaga de Senior Character Artist semi-estilizado)
-thatgamecompany | EUA (remoto) | thatgamecompany.com | pendente (Journey e Sky; encaixe altissimo em estilizado)
+thatgamecompany | EUA (remoto) | thatgamecompany.com | APLICADO 31/08 (3D Character Artist Mid-Senior, vaga confirmada na fonte oficial)
 Giant Sparrow | EUA (remoto) | giantsparrow.com | pendente (ja registrado em PORTAIS por vaga; falta email oficial)
 
 ## Estrategia de porta de entrada (regra do Vini, 31/08)
