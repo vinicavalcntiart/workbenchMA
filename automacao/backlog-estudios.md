@@ -200,3 +200,6 @@ SunStrike Studios | Chipre | sunstrikestudios.com | pendente (70+ artistas; conc
 Wildlight Entertainment | EUA (remote-first) | wildlight.com | pendente (tem vaga de Senior Character Artist semi-estilizado)
 thatgamecompany | EUA (remoto) | thatgamecompany.com | pendente (Journey e Sky; encaixe altissimo em estilizado)
 Giant Sparrow | EUA (remoto) | giantsparrow.com | pendente (ja registrado em PORTAIS por vaga; falta email oficial)
+
+## Estrategia de porta de entrada (regra do Vini, 31/08)
+Em estudio com bom encaixe mas sem vaga de character aberta, vale registrar vaga de OUTRA funcao (production, coordination, generalista) como "porta de entrada", prioridade baixa. Preferir sempre a porta General Application quando existir. Em campo de texto livre o Vini declara na primeira linha que e character artist e vis dev e pede encaminhamento para quem lidera character art.
