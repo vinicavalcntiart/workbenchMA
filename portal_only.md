@@ -183,3 +183,6 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Blizzard Entertainment (EUA; Irvine) — CANDIDATURA ENVIADA em 31/08 na Senior Previz Artist - Temp (SFD / Cinematics) como porta de entrada; contrato temporario; assinar alerta de vaga em careers.blizzard.com filtrando Character
 - nDreams / Studio Elevation (Reino Unido; remoto) — CANDIDATURA ESPONTANEA ENVIADA em 31/08; Vini verificou que nao ha vaga aberta; expectativa baixa e assumida
 - Industrial Brothers (Canada, Toronto) — APLICADO 31/08: General Application no site oficial; segundo canal apos bounce de jobs@ e reenvio sem resposta para info@; https://www.industrialbrothers.com/careers
+- VAGA REMOTA (NAO CONFIRMADA): Room 8 Studio (internacional; remoto) — Lead Stylized 3D Character Artist; um degrau acima da Senior ja listada; proxy bloqueou room8studio.com em 31/08; https://room8studio.com/careers/
+- VAGA REMOTA (NAO CONFIRMADA): Candlestick Games (remoto; contrato; base Ontario) — Stylized 3D Character Artist a 25-30 CAD/hora, anunciada em 28/07/2026; titulo bate mas remuneracao e baixa; via workwithindies
+- Running With Scissors (EUA) — sem email verificavel; a pagina de vagas diz que nao ha posicoes abertas; https://runningwithscissors.com/about/job-opportunities/

@@ -192,14 +192,15 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Mokko Studio | Canadá | mokkostudio.com | descartado (encerrado em 2017) |
 
 REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
-Twin Swans | Reino Unido | twinswans.com | pendente (verificar email oficial quando o proxy liberar; tem vaga remota de character)
-Crows Crows Crows | Holanda | crowscrowscrows.com | pendente
-Running With Scissors | EUA | runningwithscissors.com | pendente
-Asterman | Lituania (Vilnius) | asterman.org | pendente (casa de game art com portfolio de personagem estilizado)
-SunStrike Studios | Chipre | sunstrikestudios.com | pendente (70+ artistas; concept a character e animacao)
+Twin Swans | Reino Unido | twinswans.com | portal (sem email publico; vaga de character rechecada em 31/08 e o agregador agora mostra zero vagas abertas)
+Crows Crows Crows | Holanda | crowscrowscrows.com | aprovado (email enviado em 31/08 para hello@crowscrowscrows.com)
+Running With Scissors | EUA | runningwithscissors.com | portal (a pagina de vagas diz que nao ha posicoes abertas e os emails aparecem mascarados nas buscas; sem endereco verificavel)
+Asterman | Lituania (Vilnius) | asterman.org | aprovado (office@asterman.org confirmado na pagina de contatos; rascunho criado em 31/08)
+SunStrike Studios | Chipre | sunstrikestudios.com | descartado (duplicado; ja contatado em 26/08 por job@sunstrikestudios.com)
 Wildlight Entertainment | EUA (remote-first) | wildlight.com | pendente (tem vaga de Senior Character Artist semi-estilizado)
 thatgamecompany | EUA (remoto) | thatgamecompany.com | APLICADO 31/08 (3D Character Artist Mid-Senior, vaga confirmada na fonte oficial)
-Giant Sparrow | EUA (remoto) | giantsparrow.com | pendente (ja registrado em PORTAIS por vaga; falta email oficial)
+Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (sem email publico; so a pagina giantsparrow.com/jobs)
 
 ## Estrategia de porta de entrada (regra do Vini, 31/08)
 Em estudio com bom encaixe mas sem vaga de character aberta, vale registrar vaga de OUTRA funcao (production, coordination, generalista) como "porta de entrada", prioridade baixa. Preferir sempre a porta General Application quando existir. Em campo de texto livre o Vini declara na primeira linha que e character artist e vis dev e pede encaminhamento para quem lidera character art.
+Hologram Monster | Finlandia | hologram-monster.com | pendente (estudio finlandes de codesenvolvimento e outsourcing 2D/3D; personagens para Unity e Unreal; falta email oficial)
