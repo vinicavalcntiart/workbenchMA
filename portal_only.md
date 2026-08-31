@@ -181,3 +181,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Disney Research Studios (Suica; Zurique) — CANDIDATURA ENVIADA em 31/08 na vaga de Studio Intern; estagio, mas ele se qualifica pelo vinculo estudantil do mestrado; entidade distinta da WDAS e da ILM
 - Cloth Cat Animation (Reino Unido; Cardiff) — CANDIDATURA ENVIADA em 31/08 pelo Speculative Enquiry Form do site; via de candidatura espontanea, sem email geral publico
 - Blizzard Entertainment (EUA; Irvine) — CANDIDATURA ENVIADA em 31/08 na Senior Previz Artist - Temp (SFD / Cinematics) como porta de entrada; contrato temporario; assinar alerta de vaga em careers.blizzard.com filtrando Character
+- nDreams / Studio Elevation (Reino Unido; remoto) — CANDIDATURA ESPONTANEA ENVIADA em 31/08; Vini verificou que nao ha vaga aberta; expectativa baixa e assumida
