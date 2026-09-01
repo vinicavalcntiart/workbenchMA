@@ -188,3 +188,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Running With Scissors (EUA) — sem email verificavel; a pagina de vagas diz que nao ha posicoes abertas; https://runningwithscissors.com/about/job-opportunities/
 - Steamroller Animation (EUA, Orlando; remoto) — rota oficial de candidatura pelo site proprio; o email de 26/08 para contact@steamrollerstudios.com nunca respondeu e nao ha endereco alternativo publicado; https://www.steamrolleranimation.com/careers
 - Wicked Saints Studios (EUA) — APLICADO 31/08: General Application no site oficial; estudio pequeno sem vaga de personagem nomeada; NAO confundir com Wicked Fox Games
+- VAGA REMOTA (NAO CONFIRMADA): Gravity Well (remote-first) — 3D Character Artist no Greenhouse oficial; estudio dos ex-Respawn; contratam sem depender de realocacao ou visto; proxy bloqueou o Greenhouse em 01/09; https://job-boards.greenhouse.io/gravitywell
