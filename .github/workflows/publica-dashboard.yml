@@ -23,6 +23,10 @@ concurrency:
 
 jobs:
   publicar:
+    # Sem o secret o job é PULADO, não falha. Job que falha manda email de erro a
+    # cada push, e em 01/09 isso encheu a caixa do Vini com uma dúzia de avisos.
+    # Pulado é silencioso, e no dia em que o secret existir ele volta a rodar sozinho.
+    if: ${{ secrets.DASHBOARD_SENHA != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
