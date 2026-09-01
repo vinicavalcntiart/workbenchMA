@@ -1,0 +1,70 @@
+name: Publicar dashboard cifrado
+
+# O gh-pages passa a receber SOMENTE a versão cifrada do painel. A senha vive
+# como secret do repositório (DASHBOARD_SENHA) e nunca entra em arquivo nenhum.
+# Se o secret não estiver configurado o job falha de propósito: é melhor o site
+# ficar desatualizado do que voltar a publicar os dados em claro.
+
+on:
+  push:
+    branches: [claude/vini-cavalcanti-job-campaign-gciixk]
+    paths:
+      - "docs/index.html"
+      - "automacao/cifra-dashboard.mjs"
+      - ".github/workflows/publica-dashboard.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publica-dashboard
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Cifrar o painel
+        env:
+          DASHBOARD_SENHA: ${{ secrets.DASHBOARD_SENHA }}
+        run: |
+          if [ -z "$DASHBOARD_SENHA" ]; then
+            echo "::error::Falta o secret DASHBOARD_SENHA (Settings > Secrets and variables > Actions). Nada foi publicado."
+            exit 1
+          fi
+          node automacao/cifra-dashboard.mjs docs/index.html "$RUNNER_TEMP/index.html"
+
+      - name: Conferir que nada saiu em claro
+        run: |
+          for termo in Wingfeather E-Line PROSPECTOS "const STUDIOS"; do
+            if grep -qF "$termo" "$RUNNER_TEMP/index.html"; then
+              echo "::error::O arquivo publicado contém \"$termo\" em texto puro. Abortado."
+              exit 1
+            fi
+          done
+          echo "ok: só cifra no arquivo de saída"
+
+      - name: Publicar em gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add gh gh-pages
+          cp "$RUNNER_TEMP/index.html" gh/index.html
+          touch gh/.nojekyll
+          git -C gh add index.html .nojekyll
+          if git -C gh diff --cached --quiet; then
+            echo "nada mudou"
+          else
+            git -C gh commit -m "publica dashboard cifrado (${GITHUB_SHA::7})"
+            git -C gh push origin gh-pages
+          fi
