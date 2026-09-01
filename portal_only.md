@@ -186,3 +186,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA REMOTA (NAO CONFIRMADA): Room 8 Studio (internacional; remoto) — Lead Stylized 3D Character Artist; um degrau acima da Senior ja listada; proxy bloqueou room8studio.com em 31/08; https://room8studio.com/careers/
 - Candlestick Games (remoto; base Ontario) — VAGA EXPIRADA (verificado em 31/08); rascunho pronto para laura@candlestickgames.ca, email de pessoa nomeada
 - Running With Scissors (EUA) — sem email verificavel; a pagina de vagas diz que nao ha posicoes abertas; https://runningwithscissors.com/about/job-opportunities/
+- Steamroller Animation (EUA, Orlando; remoto) — rota oficial de candidatura pelo site proprio; o email de 26/08 para contact@steamrollerstudios.com nunca respondeu e nao ha endereco alternativo publicado; https://www.steamrolleranimation.com/careers

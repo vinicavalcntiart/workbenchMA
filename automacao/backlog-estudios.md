@@ -197,7 +197,7 @@ Crows Crows Crows | Holanda | crowscrowscrows.com | aprovado (email enviado em 3
 Running With Scissors | EUA | runningwithscissors.com | portal (a pagina de vagas diz que nao ha posicoes abertas e os emails aparecem mascarados nas buscas; sem endereco verificavel)
 Asterman | Lituania (Vilnius) | asterman.org | aprovado (office@asterman.org confirmado na pagina de contatos; rascunho criado em 31/08)
 SunStrike Studios | Chipre | sunstrikestudios.com | descartado (duplicado; ja contatado em 26/08 por job@sunstrikestudios.com)
-Wildlight Entertainment | EUA (remote-first) | wildlight.com | pendente (tem vaga de Senior Character Artist semi-estilizado)
+Wildlight Entertainment | EUA (remote-first) | wildlight.com | portal (sem email publico; candidatura so pelo Lever jobs.lever.co/wildlight; empregam apenas nos EUA e Canada)
 thatgamecompany | EUA (remoto) | thatgamecompany.com | APLICADO 31/08 (3D Character Artist Mid-Senior, vaga confirmada na fonte oficial)
 Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (sem email publico; so a pagina giantsparrow.com/jobs)
 
