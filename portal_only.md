@@ -191,3 +191,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA REMOTA (NAO CONFIRMADA): Gravity Well (remote-first) — 3D Character Artist no Greenhouse oficial; estudio dos ex-Respawn; contratam sem depender de realocacao ou visto; proxy bloqueou o Greenhouse em 01/09; https://job-boards.greenhouse.io/gravitywell
 - Hinterland Studio (Canada, Vancouver; distribuido) — APLICADO 01/09: General Application no site oficial; estudio de The Long Dark; visual estilizado pintado a mao; https://hinterlandgames.com/careers/
 - Arcanaut Studios (Canada, Edmonton/Kelowna; remoto em BC ou Alberta) — APLICADO 01/09: Senior Character Artist pelo ATS oficial; pedem realismo com fotogrametria e simulacao de roupa; https://arcanautstudios.applytojobs.ca/
+- Electronic Arts (EUA/global) — APLICADO 01/09 como PORTA DE ENTRADA: Art Director, a vaga aberta mais proxima da area dele; grupo com dezenas de estudios, cadastro vale a longo prazo
