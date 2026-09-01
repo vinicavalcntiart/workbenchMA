@@ -192,3 +192,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Hinterland Studio (Canada, Vancouver; distribuido) — APLICADO 01/09: General Application no site oficial; estudio de The Long Dark; visual estilizado pintado a mao; https://hinterlandgames.com/careers/
 - Arcanaut Studios (Canada, Edmonton/Kelowna; remoto em BC ou Alberta) — APLICADO 01/09: Senior Character Artist pelo ATS oficial; pedem realismo com fotogrametria e simulacao de roupa; https://arcanautstudios.applytojobs.ca/
 - Electronic Arts (EUA/global) — APLICADO 01/09 como PORTA DE ENTRADA: Art Director, a vaga aberta mais proxima da area dele; grupo com dezenas de estudios, cadastro vale a longo prazo
+- IGG (I Got Games) (Indonesia, Jacarta; sede do grupo em Singapura) — APLICADO 01/09: 3D Character Artist (Art & Animation); disciplina exata mas posto fora do recorte geografico; https://www.igg.com/about/join.html
