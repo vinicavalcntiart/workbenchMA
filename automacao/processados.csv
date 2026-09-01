@@ -245,3 +245,7 @@ data,estudio,email,message_id,tipo,acao
 2026-09-01,BAPBAP Studios,yo@bapbap.gg,r-3138530171430400096,rascunho-criado,Email trazido pelo Vini; battle royale MOBA estilizado de navegador; gancho na leitura por silhueta de um elenco muito variado em tela pequena; sede nao confirmada
 2026-09-01,Electronic Arts,aplicacao-manual,aplicacao-manual,portal-aplicado,PORTA DE ENTRADA: Art Director foi a vaga aberta mais proxima da area dele; direcao de arte fica acima de character art na mesma cadeia entao o portfolio cai perto do time certo
 2026-09-01,Lote 14,-,-,enviado,Seis emails enviados pelo Vini de uma vez: Wicked Fox Games Red Manta Twin Atlas Gravity Well Fluffy Dog Studio Iron Oak Games e BAPBAP
+2026-09-01,Wicked Fox Games,mailer-daemon@googlemail.com,1a05ae7d1e3262c6,bounce,Endereco info@wickedfoxgames.com inexistente; busca nao achou alternativo publicado porque esse e o unico que o site divulga; registrado o formulario de contato do site como via restante
+2026-09-01,Electronic Arts,EAcareers@ea.com,1a05ae68a61b9bb9,confirmacao-ats,Confirmacao de recebimento da candidatura Art Director Req ID 215644
+2026-09-01,Arcanaut Studios,no-reply@hire.humi.ca,1a05ad64373c77a4,confirmacao-ats,Confirmacao de recebimento da candidatura Senior Character Artist pelo ATS Humi
+2026-09-01,Wicked Saints Studios,team@wickedsaints.studio,1a05ac31c64f4683,auto-resposta,Nao e confirmacao de candidatura e sim pedido de confirmacao de inscricao em lista de email (double opt-in); pendencia do Vini clicar em confirmar; automacao nao clica em link recebido
