@@ -194,6 +194,7 @@
     <a href="#visao">📊 Visão geral</a>
     <a href="#grandes">🏆 Estúdios grandes</a>
     <a href="#portais">📝 Portais</a>
+    <a href="#prospec">🗺️ Prospecção</a>
     <a href="#kit">🧰 Kit de aplicação</a>
     <a href="#dossies">🎯 Dossiês por vaga</a>
     <a href="#estudios">🏢 Estúdios</a>
@@ -270,6 +271,17 @@
         <th>✓ Feito</th><th>🏢 Estúdio</th><th>🌍 País</th><th>🔗 Onde aplicar</th><th>🗒️ Origem / nota</th>
       </tr></thead>
       <tbody id="portalRows"></tbody>
+    </table>
+  </div>
+
+  <h2 class="sec" id="prospec">🗺️ Prospecção de estúdios <span class="badge" id="prospecBadge"></span></h2>
+  <div class="card full">
+    <p class="hint" id="prospecHint"></p>
+    <table>
+      <thead><tr>
+        <th>🏢 Estúdio</th><th>📍 Onde fica</th><th>✉️ Contato</th><th>🗒️ Por que vale</th>
+      </tr></thead>
+      <tbody id="prospecRows"></tbody>
     </table>
   </div>
 
@@ -506,6 +518,11 @@ const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
 // Estúdios que exigem aplicação via portal/formulário. origem: "email" = pediram na resposta ao nosso email; "portal" = nunca aceitaram email.
 // 6º campo (opcional) = true quando a aplicação foi CONFIRMADA (gravado pela automação ao ver o email de confirmação, ou a pedido do Vini).
+// Prospecção vinda de diretório de estúdios (gamedevmap e afins), curada à mão.
+// [nome, "cidade, país", site oficial, email verificado ou "", nota curta, "alta|media|baixa"]
+const PROSPECTOS = [
+];
+
 const PORTAIS = [
  ["Cartoon Saloon","Irlanda","https://www.cartoonsaloon.ie/positions/","email","SEM VAGAS ABERTAS (verificado 30/08 pelo Vini). Responderam que por GDPR só aceitam candidatura em vaga publicada, e no momento não há nenhuma. Todo o time trabalha presencialmente em Kilkenny. Link corrigido para a página real de vagas; publicam com frequência, então vale rechecar",false,"baixa"],
  ["Miam! Animation","França","https://docs.google.com/forms/d/1OziyExaLgAlM0OgnO4Qpb0SaGy7stIHzlOF0q80vZDI/edit?pli=1","email","Aplicado em 29/08 pelo formulário Google, conforme pedido do estúdio; recibo do Google Forms confirmou o envio às 21h27",true,"alta"],
@@ -1487,6 +1504,42 @@ const isMorta = p => MORTA_RE.test(p.note||"") && !isApplied(p);
 const MKEY = "campanha-mostrar-mortas-v1";
 let showMortas = false;
 try { showMortas = localStorage.getItem(MKEY) === "1"; } catch(e){}
+
+function renderProspec(){
+  const ordem = {alta:0, media:1, baixa:2};
+  const rows = [...PROSPECTOS].sort((a,b)=>{
+    const wa = ordem[a[5]] ?? 3, wb = ordem[b[5]] ?? 3;
+    if(wa!==wb) return wa-wb;
+    const ea = a[3] ? 0 : 1, eb = b[3] ? 0 : 1;
+    if(ea!==eb) return ea-eb;
+    return a[0].localeCompare(b[0]);
+  });
+  const comEmail = rows.filter(r=>r[3]).length;
+  const badge = $("#prospecBadge");
+  if(badge) badge.textContent = rows.length ? rows.length + " candidatos" : "vazio";
+  const hint = $("#prospecHint");
+  if(hint) hint.innerHTML = rows.length
+    ? `Estúdios novos garimpados em diretório e curados à mão: <b>${rows.length}</b> candidatos, <b>${comEmail}</b> com email já verificado em fonte oficial. Ainda NÃO foram contatados; entram na fila de rascunho por ordem de prioridade.`
+    : "Nada aqui ainda. Salve uma página de diretório de estúdios e mande no chat: a curadoria aparece nesta seção antes de virar email.";
+  const tbody = $("#prospecRows");
+  if(!tbody) return;
+  tbody.innerHTML = rows.map(r=>{
+    const [nome, local, site, email, nota, prio] = r;
+    const chip = prio==="alta" ? `<span class="chip prio-chip-alta">🔥 alta</span>`
+      : prio==="media" ? `<span class="chip prio-chip-media">média</span>`
+      : `<span class="chip prio-chip-baixa">baixa</span>`;
+    const contato = email
+      ? `<a href="mailto:${esc(email)}">${esc(email)}</a>`
+      : `<span style="color:var(--muted)">sem email público</span>`;
+    return `<tr class="prio-${prio}">
+      <td><span class="pname">${esc(nome)}</span> ${chip}</td>
+      <td>${esc(local)}</td>
+      <td>${contato}${site?` · <a href="${esc(site)}" target="_blank" rel="noopener">site ↗</a>`:""}</td>
+      <td style="color:var(--muted)">${esc(nota)}</td>
+    </tr>`;
+  }).join("");
+}
+
 function renderPortais(){
   const todas = [...PORTAIS];
   const mortas = todas.filter(isMorta);
@@ -1628,7 +1681,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
+  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
