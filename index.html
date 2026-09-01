@@ -286,6 +286,7 @@
       </tr></thead>
       <tbody id="prospecRows"></tbody>
     </table>
+    <div id="prospecFora"></div>
   </div>
 
   <h2 class="sec" id="kit">🧰 Kit de aplicação <span class="badge">copiar e colar nos formulários</span></h2>
@@ -525,7 +526,7 @@ const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 // [nome, "cidade, país", site oficial, email verificado ou "", nota curta, "alta|media|baixa"]
 const PROSPECTOS = [
  ["Mikros Animation","Montreal e Paris · 501-1000 pessoas","https://www.mikrosanimation.com/","","Longa CG estilizado (PAW Patrol, Ninja Turtles Mutant Mayhem). Parecia risco porque a Technicolor implodiu, mas foi COMPRADO pela Rodeo FX em março de 2025 com 207 empregos preservados em Montreal, e segue em produção no terceiro filme do PAW Patrol. Publicam vagas de character surfacing, ou seja, contratam a disciplina dele. É o melhor nome da leva","alta"],
- ["ON Animation Studios","Montreal · ESTÚDIO FECHADO","https://www.onanimationstudios.com/","","NÃO APLICAR: o estúdio fechou as portas em fevereiro de 2025. Eu tinha registrado como alta prioridade na primeira leva por causa do catálogo (O Pequeno Príncipe, Playmobil) e a checagem seguinte derrubou. Fica aqui como registro para ninguém tentar de novo","baixa"],
+ ["ON Animation Studios","Montreal","https://www.onanimationstudios.com/","","Fechou em fevereiro de 2025. Estava no diretório como ativo","fora"],
  ["Portfolio Entertainment","Toronto · 51-200 pessoas","https://www.portfolioentertainment.com/","","Série CG infantil desde 1991, hoje dentro do grupo 9 Story Media. Grupo grande significa produção contínua e time de arte estável. A Brown Bag, também do 9 Story, já foi contatada, então este é outro braço do mesmo grupo","alta"],
  ["ZAG Inc","Los Angeles e Paris","https://www.zag-inc.com/","","Dona de Miraculous: As Aventuras de Ladybug, que é franquia CG estilizada movida a personagem e com produção continuada há mais de dez anos. De toda a leva americana é a que mais se parece com o seu portfólio: elenco fixo, leitura por silhueta, apelo acima de detalhe","alta"],
  ["Wild Canary","Los Angeles · 51-200 pessoas","http://www.wildcanary.com/","","Série CG infantil produzida em Los Angeles, porte médio e produção de temporada, que significa demanda contínua de personagem em vez de contratação por pico","alta"],
@@ -533,10 +534,10 @@ const PROSPECTOS = [
  ["Hook","Detroit, Ann Arbor, Los Angeles e São Francisco · 51-200 pessoas","https://byhook.com/","","Estúdio de criação com braço de animação e presença em quatro cidades americanas. Porte médio e trabalho de marca, que costuma pedir personagem estilizado. Falta confirmar o quanto do trabalho é 3D","media"],
  ["Calabash","Chicago · 11-50 pessoas","http://calabashanimation.com/","","Casa histórica de animação de personagem para publicidade, com trabalho premiado em performance. Publicidade paga bem e o ciclo é curto. Falta confirmar quanto é CG e quanto é stop motion","media"],
  ["SICKBOAT","Los Angeles e Melbourne · 11-50 pessoas","https://sickboat.com/","","Estúdio de animação e design com operação nos EUA e na Austrália, os dois dentro do recorte. Porte pequeno, catálogo a confirmar","media"],
- ["Pearl Studio","Xangai, com escritórios em Los Angeles e Nova York","https://www.pearlstudio.com/","","FORA DO RECORTE apesar do endereço americano: a produção é em Xangai e a China não entra na lista de países da campanha. Fica registrado porque o catálogo é longa CG estilizada de peso (Abominável, Ne Zha 2) e o escritório de Los Angeles pode um dia contratar localmente","baixa"],
+ ["Pearl Studio","Xangai (escritórios em Los Angeles e Nova York)","https://www.pearlstudio.com/","","Produção é em Xangai, e a China está fora do recorte de países da campanha","fora"],
  ["Yeti Farm Creative","Kelowna, Colúmbia Britânica · 51-200 pessoas","http://www.yetifarmcreative.com/","","Casa de animação de serviço em Kelowna, mesma cidade da Bardel. Porte médio e produção para terceiros, que costuma significar demanda contínua de asset. Falta confirmar catálogo recente e email","media"],
  ["ToonBox Entertainment","Toronto · 11-50 pessoas","https://www.toonboxent.com/","","Estúdio de longa CG em Toronto, fizeram O Ladrão de Casaca (The Nut Job). Pequeno, mas com longa no currículo, o que significa time de personagem de verdade em algum momento. Falta confirmar produção ativa","media"],
- ["Tangent Animation","Toronto · ESTÚDIO FECHADO","https://www.tangent-animation.com/","","NÃO APLICAR: fechou em agosto de 2021, demitindo cerca de 400 pessoas de uma vez, no meio de projetos para a Netflix. Continua listado no diretório, que é o alerta de que esses catálogos ficam desatualizados por anos","baixa"],
+ ["Tangent Animation","Toronto","https://www.tangent-animation.com/","","Fechou em agosto de 2021, 400 demitidos. O diretório ainda lista","fora"],
  ["Keyframe Digital","Toronto · 11-50 pessoas","http://keyframe.ca/","","Animação 3D em Toronto, porte pequeno onde artista que entrega ponta a ponta pesa mais. Falta confirmar catálogo recente e email","media"],
  ["IoM Media","Halifax e Toronto · 51-200 pessoas","http://www.iom-media.com/","","Produção infantil canadense com operação em duas cidades. Porte médio e catálogo a confirmar","media"],
  ["Arcana Studio","Vancouver e Pequim · 11-50 pessoas","https://arcana.com/","","Casa de quadrinhos e animação em Vancouver, que já é o cluster mais denso da campanha. Pequeno, catálogo a confirmar","media"]
@@ -1252,10 +1253,16 @@ function setupKitStudio(){
   const grandesPend = GRANDES.filter(g=>!gFeito(g)).map(g=>g[0]).filter(n=>!jaTem(n));
   const grandesFeitos = GRANDES.filter(gFeito).map(g=>g[0]).filter(n=>!jaTem(n));
   const cobertos = new Set([...pend, ...done, ...grandesPend, ...grandesFeitos]);
+  const ordemP = {alta:0, media:1, baixa:2};
+  const prospec = PROSPECTOS.filter(r=>r[5]!=="fora" && !cobertos.has(r[0]))
+    .sort((a,b)=>(ordemP[a[5]]??3)-(ordemP[b[5]]??3) || a[0].localeCompare(b[0]))
+    .map(r=>r[0]);
+  prospec.forEach(n=>cobertos.add(n));
   const others = CONTACTED.map(s=>s.name).filter(n=>!cobertos.has(n)).sort((a,b)=>a.localeCompare(b));
   const opt = n=>`<option value="${n.replace(/"/g,"&quot;")}">${n}</option>`;
   sel.innerHTML = `<option value="">— escolha o estúdio —</option>`
     + (grandesPend.length?`<optgroup label="🏆 Estúdios grandes (a fazer)">${grandesPend.map(opt).join("")}</optgroup>`:"")
+    + (prospec.length?`<optgroup label="🗺️ Prospecção (ainda não contatados)">${prospec.map(opt).join("")}</optgroup>`:"")
     + (pend.length?`<optgroup label="Portais pendentes">${pend.map(opt).join("")}</optgroup>`:"")
     + (grandesFeitos.length?`<optgroup label="🏆 Estúdios grandes (feitos)">${grandesFeitos.map(opt).join("")}</optgroup>`:"")
     + (done.length?`<optgroup label="Portais aplicados">${done.map(opt).join("")}</optgroup>`:"")
@@ -1599,7 +1606,8 @@ function setupSecoes(){
 
 function renderProspec(){
   const ordem = {alta:0, media:1, baixa:2};
-  const rows = [...PROSPECTOS].sort((a,b)=>{
+  const fora = PROSPECTOS.filter(r=>r[5]==="fora").sort((a,b)=>a[0].localeCompare(b[0]));
+  const rows = PROSPECTOS.filter(r=>r[5]!=="fora").sort((a,b)=>{
     const wa = ordem[a[5]] ?? 3, wb = ordem[b[5]] ?? 3;
     if(wa!==wb) return wa-wb;
     const ea = a[3] ? 0 : 1, eb = b[3] ? 0 : 1;
@@ -1608,10 +1616,10 @@ function renderProspec(){
   });
   const comEmail = rows.filter(r=>r[3]).length;
   const badge = $("#prospecBadge");
-  if(badge) badge.textContent = rows.length ? rows.length + " candidatos" : "vazio";
+  if(badge) badge.textContent = rows.length ? rows.length + " para aplicar" : "vazio";
   const hint = $("#prospecHint");
   if(hint) hint.innerHTML = rows.length
-    ? `Estúdios novos garimpados em diretório e curados à mão: <b>${rows.length}</b> candidatos, <b>${comEmail}</b> com email já verificado em fonte oficial. Ainda NÃO foram contatados; entram na fila de rascunho por ordem de prioridade.`
+    ? `Estúdios novos garimpados em diretório e curados à mão: <b>${rows.length}</b> que valem candidatura, <b>${comEmail}</b> com email já verificado em fonte oficial. Ainda NÃO foram contatados. Todos aparecem no seletor do 🧰 Kit de aplicação.`
     : "Nada aqui ainda. Salve uma página de diretório de estúdios e mande no chat: a curadoria aparece nesta seção antes de virar email.";
   const tbody = $("#prospecRows");
   if(!tbody) return;
@@ -1630,6 +1638,12 @@ function renderProspec(){
       <td style="color:var(--muted)">${esc(nota)}</td>
     </tr>`;
   }).join("");
+  const box = $("#prospecFora");
+  if(box) box.innerHTML = fora.length
+    ? `<details style="margin-top:12px"><summary style="cursor:pointer; color:var(--muted); font-size:12px">Descartados na checagem (${fora.length}) — não aplicar, ficam só como registro</summary>
+       <ul style="margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:12px; line-height:1.7">${
+         fora.map(r=>`<li><b>${esc(r[0])}</b> (${esc(r[1])}): ${esc(r[4])}</li>`).join("")}</ul></details>`
+    : "";
 }
 
 function renderPortais(){
