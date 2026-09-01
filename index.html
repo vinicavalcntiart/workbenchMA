@@ -333,7 +333,7 @@ const DAILY = [
  ["2026-08-29",2,0],
  ["2026-08-30",6,0],
  ["2026-08-31",8,3]
- ["2026-09-01",6,0]
+ ["2026-09-01",8,0]
 ];
 const STUDIOS = [
  ["Paramount Animation","EUA","animation_jobs@paramount.com",0,"ok"],
@@ -499,8 +499,8 @@ const STUDIOS = [
  ["Fluffy Dog Studio","Canadá (Vancouver, 100% remoto)","contact@fluffydogstudio.com",14,"ok"],
  ["Iron Oak Games","Canadá (Toronto)","jobs@ironoakgames.com",14,"ok"],
  ["BAPBAP Studios","Sede não confirmada","yo@bapbap.gg",14,"ok"],
- ["This Game Studio","Canadá (Vancouver)","info@thisgamestudio.com",14,"rascunho"],
- ["Hologram Monster","Finlândia (Tampere)","info@hologram-monster.com",14,"rascunho"],
+ ["This Game Studio","Canadá (Vancouver)","info@thisgamestudio.com",14,"ok"],
+ ["Hologram Monster","Finlândia (Tampere)","info@hologram-monster.com",14,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -771,6 +771,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-09-01","envio","This Game Studio e Hologram Monster fecham o dia com oito emails","Você enviou os dois últimos rascunhos: a This Game Studio, de Vancouver, que faz mobile de qualidade de console sobre marcas licenciadas, e a Hologram Monster, casa finlandesa de outsourcing cuja primeira linha de serviço é personagem 3D estilizado. As duas cartas apoiam o argumento no seu passado de outsourcing na PUGA, porque nos dois casos o trabalho é entregar dentro do estilo de outra pessoa e não impor o seu. Com essas, o dia fecha em oito emails enviados e cinco candidaturas por portal."],
  ["2026-09-01","vaga","Quatro vagas sênior de personagem remotas na varredura, e a do Day[9] passa a uma hora de você","A varredura da madrugada achou quatro Senior Character Artist remotas: People Can Fly, Antimatter Games, Bulkhead e o estúdio novo do Day[9]. Nenhuma foi confirmada na fonte oficial porque o proxy desta automação segue bloqueando os sites, então todas entraram em baixa. Vale destacar a do Day[9] por um detalhe curioso: é totalmente remota, mas só aceita candidatos entre os fusos UTC-8 e UTC-4, e você está em UTC-3, uma hora fora da faixa. Como é regra de fuso e não de país, é o tipo de trava que às vezes cede numa conversa. As outras três puxam para personagem realista, então valem mais pela senioridade que pela linguagem visual. Na mesma rodada saiu o rascunho para a Hologram Monster, casa finlandesa de outsourcing cuja primeira linha de serviço é justamente personagem 3D estilizado."],
  ["2026-09-01","porta","IGG: a vaga é da sua disciplina exata, mas o posto é em Jacarta","Você aplicou para 3D Character Artist no time de Art & Animation da IGG. O título é a sua função sem desvio nenhum, e a sede do grupo fica em Singapura, que está dentro do recorte da campanha. O que fica fora é o posto em si, anunciado para Jacarta, na Indonésia, país que não entra na lista. Por isso ela entrou em baixa e não em alta, apesar do encaixe de disciplina ser perfeito. Se eles chamarem, a primeira pergunta a fazer é se o time aceita remoto ou se existe posição equivalente em Singapura, porque isso muda tudo."],
  ["2026-09-01","envio","This Game Studio trabalha com marca licenciada, e isso é o seu Wingfeather de novo","Rascunho pronto para a This Game Studio, de Vancouver, que faz jogos mobile de qualidade de console em cima de marcas e propriedades licenciadas. A carta ataca o que isso exige de verdade: o personagem tem que ler como personagem daquela marca, não como sua interpretação dela, o que é combinar estilo estabelecido com precisão e ainda fazer o modelo funcionar na engine. É literalmente o que o Wingfeather pediu, adaptar personagens de um mundo que já existia, e o que os anos de outsourcing na PUGA treinaram. Quarto estúdio de Vancouver na campanha, depois de ICON, Fluffy Dog e Hinterland."],
