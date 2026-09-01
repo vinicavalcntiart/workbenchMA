@@ -198,3 +198,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA REMOTA (NAO CONFIRMADA): Bulkhead (UK; remoto com preferencia por quem esta no UK) — Senior Character Artist em contrato; personagem realista
 - VAGA REMOTA (NAO CONFIRMADA): Day[9] (remoto so entre UTC-8 e UTC-4) — Senior Character Artist; o Vini esta em UTC-3, uma hora fora da faixa
 - G5 Games (Malta/Suecia) — APLICADO 01/09: candidatura especulativa sem vaga nomeada; casual mobile de producao continua; confirmar moeda e local do contrato se houver conversa; https://www.g5e.com/careers
+- Mikros Animation (Canada, Montreal; Franca, Paris) — APLICADO 01/09: vaga aberta "Tell us about yourself" no SmartRecruiters oficial (banco de talentos Montreal/Paris/AUTRE); primeiro nome da secao de Prospeccao a virar candidatura; pretensao informada CAD 75.000 a 79.999; https://jobs.smartrecruiters.com/MikrosAnimation/
