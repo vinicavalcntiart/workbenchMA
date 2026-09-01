@@ -15,7 +15,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 | Aardman | Reino Unido | https://jobs.aardman.com/ | Stop-motion + departamento CG; portal de vagas próprio |
 | Lighthouse Studios | Irlanda | https://lighthousestudios.ie/careers | Kilkenny; vagas atualizadas mensalmente; email de careers existe mas não foi possível verificar o endereço exato |
 | Assemblage Entertainment | Índia | https://www.madassemblage.com/contact-us/ | Features CG (Netflix); só formulário de contato |
-| Room 8 Studio | Ucrânia (global) | https://room8studio.com/careers/ | Game art e cinematics AAA; contato só por formulário |
+| Room 8 Studio (NAO APLICAR: dona da PUGA; paga brasileiro em real, valor baixo) | Ucrânia (global) | https://room8studio.com/careers/ | Game art e cinematics AAA; contato só por formulário |
 | Boulder Media | Irlanda | https://bouldermedia.tv/contact/ | Dublin; séries CG/2D; contato só por formulário |
 | Studio Rakete | Alemanha | SAIU do portal_only | Vini achou jobs2026@studiorakete.de no site; tratado por email (lote 13) |
 | Ánima Estudios | México | https://www.animaestudios.com | Maior estúdio da América Latina; sem email geral público |
@@ -90,7 +90,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA: nDreams Studio Elevation (Reino Unido; remoto) — 3D Character Artist VR; via gamejobs.co
 - VAGA: Hidden Acorn (remoto) — 3D Character Artist stylized em UE5; via hitmarker
 - VAGA: DuskSoft Studios (remoto) — Stylized 3D Character Artist, contrato, hand-painted/PBR contido, publicada 17/08; via workwithindies.com
-- VAGA: Room 8 Studio (internacional/remoto) — Senior 3D Stylized Characters Artist; via room8studio.com/talent
+- Room 8 Studio — NAO APLICAR (decisao do Vini em 31/08): compraram a PUGA e contratam brasileiro em real com valor baixo; todas as vagas deles saem da campanha
 - Studio Hari (França) — Grizzy & the Lemmings (CG); sem email público; https://hari-studios.com/en/
 - Gaumont Animation (França) — séries CG do grupo Gaumont; só portal corporativo; https://www.gaumont.com/
 - VAGA: Digic Pictures (Hungria) — Character Modeler aberta; portal career.digicpictures.com; contratam freelance remoto
@@ -183,7 +183,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Blizzard Entertainment (EUA; Irvine) — CANDIDATURA ENVIADA em 31/08 na Senior Previz Artist - Temp (SFD / Cinematics) como porta de entrada; contrato temporario; assinar alerta de vaga em careers.blizzard.com filtrando Character
 - nDreams / Studio Elevation (Reino Unido; remoto) — CANDIDATURA ESPONTANEA ENVIADA em 31/08; Vini verificou que nao ha vaga aberta; expectativa baixa e assumida
 - Industrial Brothers (Canada, Toronto) — APLICADO 31/08: General Application no site oficial; segundo canal apos bounce de jobs@ e reenvio sem resposta para info@; https://www.industrialbrothers.com/careers
-- VAGA REMOTA (NAO CONFIRMADA): Room 8 Studio (internacional; remoto) — Lead Stylized 3D Character Artist; um degrau acima da Senior ja listada; proxy bloqueou room8studio.com em 31/08; https://room8studio.com/careers/
+- Room 8 Studio (Lead Stylized 3D Character Artist) — NAO APLICAR pelo mesmo motivo acima
 - Candlestick Games (remoto; base Ontario) — VAGA EXPIRADA (verificado em 31/08); rascunho pronto para laura@candlestickgames.ca, email de pessoa nomeada
 - Running With Scissors (EUA) — sem email verificavel; a pagina de vagas diz que nao ha posicoes abertas; https://runningwithscissors.com/about/job-opportunities/
 - Steamroller Animation (EUA, Orlando; remoto) — rota oficial de candidatura pelo site proprio; o email de 26/08 para contact@steamrollerstudios.com nunca respondeu e nao ha endereco alternativo publicado; https://www.steamrolleranimation.com/careers
