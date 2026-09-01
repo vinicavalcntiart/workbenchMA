@@ -6,6 +6,14 @@ Substituir `{TEAM}` pelo nome do estúdio (ex.: "Cartoon Saloon team").
 Nada além deste texto. Sem emojis, sem travessão, sem "I hope this finds you well",
 sem floreio de IA.
 
+NUNCA ESCAPE O htmlBody (erro real cometido em 01/09 no email para a Amy Hurwitz,
+da LAIKA). O campo htmlBody recebe HTML DE VERDADE: `<p>`, `<b>`, `<a href="...">`.
+Se você escrever `&lt;p&gt;` no lugar de `<p>`, o Gmail entrega a mensagem com as
+tags impressas como texto e o estúdio recebe um email com cara de lixo. Antes de
+chamar a ferramenta, olhe o htmlBody: se enxergar `&lt;` ou `&gt;` em qualquer
+lugar, está errado, corrija antes de enviar. O body (texto puro) é o oposto: nele
+NÃO pode haver tag nenhuma.
+
 REGRA DE ENVIO (obrigatória): sempre enviar com body (texto puro) E htmlBody.
 No htmlBody, o link do portfólio vai como âncora com texto limpo:
 `<a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>`
