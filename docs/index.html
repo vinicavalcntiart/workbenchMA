@@ -349,7 +349,7 @@ const DAILY = [
  ["2026-08-29",2,0],
  ["2026-08-30",6,0],
  ["2026-08-31",8,3],
- ["2026-09-01",13,4]
+ ["2026-09-01",13,5]
 ];
 const STUDIOS = [
  ["Wildseed Studios","Reino Unido","jobs@wildseedstudios.com",11,"ok"],
@@ -443,7 +443,7 @@ const STUDIOS = [
  ["Untold Studios","Reino Unido","hello@untoldstudios.tv",4,"ok"],
  ["Nexus Studios","Reino Unido","jobs@nexusstudios.com",4,"conf"],
  ["Lemon Sky Studios","Malásia","inquiries@lemonskystudios.com",4,"ok"],
- ["Passion Republic","Malásia","team@passionrepublic.com",4,"ok"],
+ ["Passion Republic","Malásia","team@passionrepublic.com",4,"ok","recusado"],
  ["Mighty Animation","México","info@mightyanimation.com",4,"ok"],
  ["The Line","Reino Unido","entertainment@thelinestudio.com",4,"ok"],
  ["Juice","Polônia","info@juice.pl",4,"ok"],
@@ -567,7 +567,7 @@ const PORTAIS = [
  ["Meduzarts","Canadá","https://meduzarts.com/contact","email","Aplicação enviada em 27/08 pelo formulário do site (email havia quicado; era o único canal)",true],
  ["Guru Studio","Canadá","https://gurustudio.com/careers","email","General Application enviada em 27/08 (email quicou; portal era o único canal) — Head of Talent: Sue Jung",true],
  ["Nexus Studios","Reino Unido","https://nexusstudios.com/joinus/","email","Auto-resposta sugere completar o formulário de freelance (email já entregue e em análise)",false,"media"],
- ["Passion Republic","Malásia","https://noteforms.com/forms/pr-career-application-sjj7ie","email","Re-submissão enviada em 27/08 pelo formulário; confirmação recebida em 28/08 (Jenny, RH) na vaga Modeling Artist, em análise",true],
+ ["Passion Republic","Malásia","https://noteforms.com/forms/pr-career-application-sjj7ie","email","RECUSADO em 01/09 na vaga de Modeling Artist, e respondido. A Jenny, do RH, escreveu dizendo que juntaram um grupo competitivo de candidatos e seguem com perfis mais próximos da necessidade, e convidou a se candidatar em vagas futuras. Como veio de pessoa, em endereço que aceita resposta, mandei a resposta-padrão para manter o contato vivo do lado de personagem. Histórico completo: email em 26/08, o RH pediu re-submissão pelo formulário noteforms, você refez em 27/08 e a Jenny confirmou em 28/08. Foi o processo mais completo da campanha até agora, com quatro trocas, e mesmo assim parou aqui. Vale registrar que a Malásia ficou fora do recorte geográfico na revisão de 31/08, então esse caminho já não era prioridade",true,"baixa"],
  ["CraveFX","Singapura","https://careers.cravefx.com/","email","Aplicação enviada em 27/08 pelo portal oficial, conforme pedido da Sharon (HR Manager)",true],
  ["TAT Productions","França","https://jobs.tatprod.com/fr/tat","email","Aplicado em 27/08 na vaga Lead Character Modeling & Blendshape 3D (confirmação recebida); convite com nota enviado à recruiter Julie Goutheraud no LinkedIn",true],
  ["Blue Zoo Animation","Reino Unido","https://careers.blue-zoo.co.uk/","email","Aplicação especulativa enviada em 27/08 (perfil criado; pretensão £42.000; visto sinalizado)",true],
@@ -827,6 +827,7 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-09-01","nao","Passion Republic recusou a Modeling Artist, e era o processo mais completo da campanha","A Jenny, do RH da Passion Republic, escreveu às 22h dizendo que juntaram um grupo competitivo de candidatos e seguem com perfis mais próximos da necessidade. Respondi com o template, porque veio de pessoa e em endereço que aceita resposta. Essa dói de um jeito diferente das outras. Foi o processo mais longo que a campanha produziu: email em 26 de agosto, o RH pediu re-submissão pelo formulário, você refez em 27 e a Jenny confirmou o recebimento em 28. Quatro trocas com uma pessoa real, e ainda assim parou aqui. A ressalva que suaviza: a Malásia saiu do recorte geográfico na revisão de 31 de agosto, então esse caminho já não era prioridade quando a resposta chegou. Com essa, o dia fecha em cinco respostas humanas e três recusas."],
  ["2026-09-01","vaga","A Digic abriu Character Surfacing para a série de Magic The Gathering da Netflix, e o anúncio descreve o Wingfeather","A varredura achou vaga nova no ATS oficial da Digic: Character Surfacing Artist para a série animada de Magic The Gathering, produzida para a Netflix. O anúncio pede texturização e shading de personagem estilizado e portfólio com trabalho de animação em estilo pintado. É a descrição literal do que você fez na primeira temporada do Wingfeather. Não subi para alta por um motivo só: a Digic anuncia contrato freelance para quem está fora da Hungria, e freelance está fora da sua regra de vaga fixa. Presencial em Budapeste provavelmente é efetivo, então a primeira coisa a perguntar é o tipo de contrato. Você já tem histórico com eles, com email em 26 de agosto e candidatura na Previs em 31, e as vagas anteriores de Character Modeler e Grooming já tinham expirado. Esta é nova."],
  ["2026-09-01","alerta","Segundo estúdio do dia que exige residência: The Third Floor tem a vaga certa e a porta fechada","O Third Floor, maior empresa de visualização do mundo, com Emmy e VES e clientes como Disney, Marvel e Netflix, abriu Character Modeler no departamento de animação: efetiva, remota, modelando e texturizando criaturas e personagens altamente estilizados em Maya e ZBrush. Encaixe quase perfeito. E o mesmo bloqueio da SkyBox Labs aparece de novo: o remoto só vale para quem mora em nove estados americanos específicos ou no Canadá. Dois estúdios no mesmo dia com a vaga certa e a exigência de residência prévia. Esse é o padrão que mais custa nesta campanha, e é o argumento mais forte a favor de priorizar estúdio que patrocina visto ou que contrata de qualquer lugar."],
  ["2026-09-01","envio","Cinco emails saíram na mesma hora e três estúdios já confirmaram recebimento","Você mandou os cinco rascunhos: Keyframe, Artists Animation, Next Level Games, Wildseed e Klei. O dia fecha em treze emails. Três confirmações já voltaram. A Klei respondeu automaticamente dizendo que pelo volume não conseguem responder a todos, mas que leem toda candidatura que chega. A Wildseed mandou recibo formal de recebimento da candidatura. E os portais da Relic e da IoM Media confirmaram pelo BambooHR, que é o mesmo sistema, o que quer dizer que as duas candidaturas de hoje entraram na base deles de verdade. Nenhuma dessas é resposta humana, são todas automáticas, mas servem para uma coisa: confirmam que o endereço existe e que a mensagem chegou onde deveria, que é mais do que se pode dizer dos doze emails que quicaram nesta campanha."],
