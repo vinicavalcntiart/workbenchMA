@@ -197,3 +197,4 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - VAGA REMOTA (NAO CONFIRMADA): Antimatter Games (remoto ou hibrido) — Senior Character Artist; estudio de FPS, puxa para realista
 - VAGA REMOTA (NAO CONFIRMADA): Bulkhead (UK; remoto com preferencia por quem esta no UK) — Senior Character Artist em contrato; personagem realista
 - VAGA REMOTA (NAO CONFIRMADA): Day[9] (remoto so entre UTC-8 e UTC-4) — Senior Character Artist; o Vini esta em UTC-3, uma hora fora da faixa
+- G5 Games (Malta/Suecia) — APLICADO 01/09: candidatura especulativa sem vaga nomeada; casual mobile de producao continua; confirmar moeda e local do contrato se houver conversa; https://www.g5e.com/careers
