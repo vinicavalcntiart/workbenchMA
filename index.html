@@ -50,7 +50,10 @@
   nav.secoes a:hover { border-color:var(--blue); color:var(--blue); }
   .btn { background:var(--surface); color:var(--ink); border:1px solid var(--ring); border-radius:8px; padding:6px 12px; cursor:pointer; font:inherit; }
   .btn:hover { border-color:var(--axis); }
-  h2.sec { font-size:15px; margin:26px 0 10px; display:flex; align-items:center; gap:8px; }
+  h2.sec { font-size:15px; margin:26px 0 10px; display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none; }
+  h2.sec .caret { font-size:11px; opacity:.6; transition:transform .15s ease; }
+  h2.sec.fechada .caret { transform:rotate(-90deg); }
+  h2.sec.fechada { opacity:.72; }
   h2.sec .badge { background:var(--surface); border:1px solid var(--ring); border-radius:999px; padding:1px 10px; font-size:12px; color:var(--ink-2); font-weight:500; }
   /* ações */
   .acoes { display:grid; gap:8px; }
@@ -1525,6 +1528,75 @@ const MKEY = "campanha-mostrar-mortas-v1";
 let showMortas = false;
 try { showMortas = localStorage.getItem(MKEY) === "1"; } catch(e){}
 
+/* Fechar/expandir seções. Guarda a escolha no navegador do Vini. */
+const SEC_KEY = "campanha-secoes-fechadas-v1";
+
+function secoesFechadas(){
+  try { return new Set(JSON.parse(localStorage.getItem(SEC_KEY) || "[]")); }
+  catch(e){ return new Set(); }
+}
+
+function salvarSecoes(set){
+  try { localStorage.setItem(SEC_KEY, JSON.stringify([...set])); } catch(e){}
+}
+
+function corpoDaSecao(h2){
+  const corpo = [];
+  let el = h2.nextElementSibling;
+  while(el && !(el.tagName === "H2" && el.classList.contains("sec"))){
+    corpo.push(el);
+    el = el.nextElementSibling;
+  }
+  return corpo;
+}
+
+function aplicarSecao(h2, fechada){
+  corpoDaSecao(h2).forEach(el => { el.hidden = fechada; });
+  h2.classList.toggle("fechada", fechada);
+  h2.setAttribute("aria-expanded", String(!fechada));
+}
+
+function abrirSecao(id){
+  const h2 = document.getElementById(id);
+  if(!h2 || !h2.classList.contains("fechada")) return;
+  const fechadas = secoesFechadas();
+  fechadas.delete(id);
+  salvarSecoes(fechadas);
+  aplicarSecao(h2, false);
+}
+
+function setupSecoes(){
+  const fechadas = secoesFechadas();
+  document.querySelectorAll("h2.sec").forEach(h2 => {
+    if(!h2.querySelector(".caret")){
+      const caret = document.createElement("span");
+      caret.className = "caret";
+      caret.textContent = "▼";
+      h2.insertBefore(caret, h2.firstChild);
+    }
+    h2.setAttribute("role", "button");
+    h2.setAttribute("tabindex", "0");
+    h2.title = "Clique para fechar ou abrir esta seção";
+    aplicarSecao(h2, fechadas.has(h2.id));
+
+    const alterna = () => {
+      const agora = secoesFechadas();
+      const fechar = !h2.classList.contains("fechada");
+      if(fechar) agora.add(h2.id); else agora.delete(h2.id);
+      salvarSecoes(agora);
+      aplicarSecao(h2, fechar);
+    };
+    h2.addEventListener("click", alterna);
+    h2.addEventListener("keydown", ev => {
+      if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); alterna(); }
+    });
+  });
+
+  document.querySelectorAll("nav.secoes a[href^='#']").forEach(a => {
+    a.addEventListener("click", () => abrirSecao(a.getAttribute("href").slice(1)));
+  });
+}
+
 function renderProspec(){
   const ordem = {alta:0, media:1, baixa:2};
   const rows = [...PROSPECTOS].sort((a,b)=>{
@@ -1701,7 +1773,7 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows();
+  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows(); setupSecoes();
 }
 $("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
