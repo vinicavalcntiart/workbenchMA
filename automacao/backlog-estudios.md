@@ -203,4 +203,4 @@ Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (sem email publico; so 
 
 ## Estrategia de porta de entrada (regra do Vini, 31/08)
 Em estudio com bom encaixe mas sem vaga de character aberta, vale registrar vaga de OUTRA funcao (production, coordination, generalista) como "porta de entrada", prioridade baixa. Preferir sempre a porta General Application quando existir. Em campo de texto livre o Vini declara na primeira linha que e character artist e vis dev e pede encaminhamento para quem lidera character art.
-Hologram Monster | Finlandia | hologram-monster.com | pendente (estudio finlandes de codesenvolvimento e outsourcing 2D/3D; personagens para Unity e Unreal; falta email oficial)
+Hologram Monster | Finlandia (Tampere) | hologram-monster.com | aprovado (info@hologram-monster.com confirmado; rascunho criado em 01/09)

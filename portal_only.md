@@ -193,3 +193,7 @@ Alvos fortes que não aceitam candidatura por email. Link direto da página de c
 - Arcanaut Studios (Canada, Edmonton/Kelowna; remoto em BC ou Alberta) — APLICADO 01/09: Senior Character Artist pelo ATS oficial; pedem realismo com fotogrametria e simulacao de roupa; https://arcanautstudios.applytojobs.ca/
 - Electronic Arts (EUA/global) — APLICADO 01/09 como PORTA DE ENTRADA: Art Director, a vaga aberta mais proxima da area dele; grupo com dezenas de estudios, cadastro vale a longo prazo
 - IGG (I Got Games) (Indonesia, Jacarta; sede do grupo em Singapura) — APLICADO 01/09: 3D Character Artist (Art & Animation); disciplina exata mas posto fora do recorte geografico; https://www.igg.com/about/join.html
+- VAGA REMOTA (NAO CONFIRMADA): People Can Fly (remoto) — Senior Character Artist; catalogo realista, encaixe de senioridade mais que de estilo; https://peoplecanfly.com/careers/
+- VAGA REMOTA (NAO CONFIRMADA): Antimatter Games (remoto ou hibrido) — Senior Character Artist; estudio de FPS, puxa para realista
+- VAGA REMOTA (NAO CONFIRMADA): Bulkhead (UK; remoto com preferencia por quem esta no UK) — Senior Character Artist em contrato; personagem realista
+- VAGA REMOTA (NAO CONFIRMADA): Day[9] (remoto so entre UTC-8 e UTC-4) — Senior Character Artist; o Vini esta em UTC-3, uma hora fora da faixa
