@@ -1,9 +1,12 @@
 name: Publicar dashboard cifrado
 
-# O gh-pages passa a receber SOMENTE a versão cifrada do painel. A senha vive
-# como secret do repositório (DASHBOARD_SENHA) e nunca entra em arquivo nenhum.
-# Se o secret não estiver configurado o job falha de propósito: é melhor o site
-# ficar desatualizado do que voltar a publicar os dados em claro.
+# O gh-pages recebe SOMENTE a versão cifrada do painel. A senha vive como secret
+# do repositório (DASHBOARD_SENHA) e nunca entra em arquivo nenhum.
+#
+# Enquanto o secret não existir, o job de publicação é PULADO em silêncio, não
+# falha. Job que falha manda email do GitHub a cada push, e em 01/09 isso encheu
+# a caixa do Vini. Como o contexto `secrets` NÃO é permitido num `if` de job,
+# quem lê o secret é o job "checar", que expõe só um sim ou não como saída.
 
 on:
   push:
@@ -22,11 +25,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checar:
+    runs-on: ubuntu-latest
+    outputs:
+      tem_senha: ${{ steps.senha.outputs.tem_senha }}
+    steps:
+      - id: senha
+        env:
+          DASHBOARD_SENHA: ${{ secrets.DASHBOARD_SENHA }}
+        run: |
+          if [ -n "$DASHBOARD_SENHA" ]; then
+            echo "tem_senha=sim" >> "$GITHUB_OUTPUT"
+          else
+            echo "tem_senha=nao" >> "$GITHUB_OUTPUT"
+            echo "::notice::Secret DASHBOARD_SENHA ausente. Publicação pulada, nada foi exposto."
+          fi
+
   publicar:
-    # Sem o secret o job é PULADO, não falha. Job que falha manda email de erro a
-    # cada push, e em 01/09 isso encheu a caixa do Vini com uma dúzia de avisos.
-    # Pulado é silencioso, e no dia em que o secret existir ele volta a rodar sozinho.
-    if: ${{ secrets.DASHBOARD_SENHA != '' }}
+    needs: checar
+    if: needs.checar.outputs.tem_senha == 'sim'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,12 +57,7 @@ jobs:
       - name: Cifrar o painel
         env:
           DASHBOARD_SENHA: ${{ secrets.DASHBOARD_SENHA }}
-        run: |
-          if [ -z "$DASHBOARD_SENHA" ]; then
-            echo "::error::Falta o secret DASHBOARD_SENHA (Settings > Secrets and variables > Actions). Nada foi publicado."
-            exit 1
-          fi
-          node automacao/cifra-dashboard.mjs docs/index.html "$RUNNER_TEMP/index.html"
+        run: node automacao/cifra-dashboard.mjs docs/index.html "$RUNNER_TEMP/index.html"
 
       - name: Conferir que nada saiu em claro
         run: |
