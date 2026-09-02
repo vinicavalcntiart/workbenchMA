@@ -413,3 +413,19 @@ data,estudio,email,message_id,tipo,acao
 2026-09-02,-,-,-,auditoria,Rodada 2 de formularios: 38 portais avaliados; 2 candidaturas espontaneas + 1 cadastro Connect confirmados; 13 para o Vini (hCaptcha/Workable-Cloudflare/conta); 15 sem vaga e sem via espontanea; 2 pulados por exigirem direito de trabalho na UE (RISE FX e Haymaker); 4 com email vao para rascunho (Alt.VFX FIN Design Nabi MegaZebra)
 2026-09-02,Radical Forge,alex.whittle@radicalforge.teamtailor-mail.com,1a0633a9f1787a0d,confirmacao-portal,registrado (Welcome to Radical Forge; cadastro no Connect confirmado; entrada do PORTAIS ja marcada como aplicada)
 2026-09-02,Cloud Chamber (2K),no-reply@2k.com,1a063398750f7ba7,rejeicao,"recusa explicita para Lead Character Artist (seguiram com outro candidato; guardam o CV no banco); remetente noreply entao sem template; nao identifica se e a requisicao de Novato ou a de Montreal e as duas entradas do PORTAIS foram rebaixadas para baixa"
+2026-09-02,Bossfight Entertainment,info@bossfightentertainment.com,1a063d0ba646e0ad,bounce,buscar outro endereco (Google Group info@ inexistente ou fechado para postagem externa; bounce veio em thread separada 1a063d0ba646e0ad)
+2026-09-02,Macrograph,info@macrograph.co.kr,1a063d0d6ea6a3c3,bounce,buscar outro endereco (mailer-daemon; 550 5.1.1 No such user)
+2026-09-02,Visual Creatures,info@visualcreatures.com,1a063d5320bf4912,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Supamonks,contact@supamonks.com,1a063d5951cc82ac,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,FIN Design + Effects,careers@findesign.com.au,1a063d00a972d53a,auto-reply,registrado sem acao; a auto-resposta manda montar perfil no portal de talentos https://recruit.findesign.com.au/ e entrou no PORTAIS
+2026-09-02,Proxima Milano,jobs@proximamilano.com,1a063d0d0fff22f8,auto-reply,registrado sem acao
+2026-09-02,Cyan Worlds,info@cyan.com,1a063d144cfb4d39,auto-reply,registrado sem acao
+2026-09-02,LUGUNDTRUG,jobs@lugundtrug.net,1a063d15ad8b6497,auto-reply,registrado sem acao
+2026-09-02,Tic Toc Games,jobs@tictocgames.com,1a063d188c97792a,auto-reply,registrado sem acao
+2026-09-02,Cold Iron Studios,info@coldironstudios.com,1a063d4ff1426ae6,auto-reply,registrado sem acao
+2026-09-02,Mago Production,jobs@magoproduction.com,1a063d5574c47136,auto-reply,registrado sem acao
+2026-09-02,Freefolk,jobs.ldn@freefolk.com,1a063d613ea75b3b,auto-reply,registrado sem acao
+2026-09-02,HB Studios,jobs@hb-studios.com,1a063d61f718e0fe,auto-reply,registrado sem acao
+2026-09-02,Milk VFX,recruitment@milk-vfx.com,1a063d648828b6c9,auto-reply,registrado sem acao
+2026-09-02,4J Studios,jobs@4jstudios.com,1a063d6e1aa633ec,auto-reply,registrado sem acao
+2026-09-02,-,-,-,envio,Lote 17 (70 emails) enviado pelo Apps Script do Vini (automacao/envia-rascunhos.gs) entre 20h29 e 20h36 UTC com assinatura e anexos; 4 bounces; 11 auto-replies
