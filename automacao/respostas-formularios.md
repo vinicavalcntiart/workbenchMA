@@ -130,3 +130,32 @@ A automação de 02/09 enviou dez candidaturas e dois cadastros em banco de tale
 | Electronic Arts Vancouver, Senior Character Artist, EA Sports FC | https://jobs.ea.com/en_US/careers/ApplicationMethods?jobId=215788 | Portal Avature em 3 etapas que exige conta EA Careers (ou fluxo first time applicant, que cria a conta) |
 | Mainframe Studios, General Application (Join Our Talent Community) | https://secure.ukgready.ca/ta/6214859.careers?CareersSearch | UKG Ready com conta de candidato; fluxo Use my resume ou Type it in myself |
 | Ánima Kitchent (Las Palmas), vaga publicada no InfoJobs | https://www.infojobs.net/anima-kitchent/em-i98565456564653657873771015253846515663 | O InfoJobs exige conta e devolve captcha ao navegador automático; o RH pediu o questionário da vaga publicada por GDPR |
+
+## Formulários para aplicar à mão (02/09, rodada 2)
+
+Segunda leva de 37 estúdios "portal-only" mais o quadro da KingsIsle. A automação enviou três candidaturas/cadastros (Mirada Studios, Studio Liddell e o Connect da Radical Forge). Os links abaixo ficaram para você. Use os dados básicos e as respostas padrão do topo deste arquivo.
+
+| Estúdio e vaga | Link do formulário | Motivo |
+|---|---|---|
+| Quantic Dream, Candidature Spontanée (Paris, CDI) | https://jobs.eu.lever.co/quanticdream/cc1dacb2-01b7-47c0-b827-9b9b786d1dd7/apply | Lever com hCaptcha; formulário curto (nome, email, telefone, localização, empresa atual, LinkedIn, portfólio, CV) |
+| RocketWerkz, Expressions of Interest (Auckland, presencial com apoio de realocação e visto) | https://careers.rocketwerkz.com/o/expressions-of-interest-auckland/c/new | Recruitee com hCaptcha de desafio de imagem no envio. Responder: função pretendida "3D Artist – Senior 3D Character Artist"; direito de trabalho na Nova Zelândia = No; está na Nova Zelândia = No; salário = pretensão padrão; anexar CV e carta |
+| VFX Legion, Artist Application (Los Angeles, equipe 100% remota) | https://vfxlegion.com/join-us/ | reCAPTCHA v2 com checkbox visível; pede endereço completo, telefone, demo reel, website, CV e checkboxes de skills (marcar 3D Generalist; não há opção de Character Modeler) |
+| Velan Studios, General Application (híbrido Troy NY e Toronto) | https://velanstudios.workable.com/jobs/3417239/candidates/new | Workable atrás de Cloudflare (bloqueia o navegador automático com error 1015) e costuma exigir Turnstile; nenhuma vaga de personagem aberta |
+| KingsIsle Entertainment, quadro de vagas | https://apply.workable.com/kingsisle-entertainment-inc/ | Workable atrás de Cloudflare; o quadro nem chegou a abrir para a automação |
+| PikPok, quadro de vagas | https://apply.workable.com/pikpok/ | Workable atrás de Cloudflare; o quadro nem chegou a abrir para a automação |
+| Digital Domain, portal de vagas | https://careers.digitaldomain.com/ | O portal devolveu erro 400/502 pelo proxy nas duas tentativas; conferir a olho (histórico forte de humano digital e criatura) |
+| Digital Sun (Valência), vagas | https://digitalsungames.com/jobs | Página protegida por Cloudflare |
+| Electric Theatre Collective (Londres), vagas | https://electrictheatre.com/careers | Site inteiro atrás do desafio Cloudflare |
+| Arkane Studios (Lyon), vagas | https://www.arkane-studios.com/en | Vagas centralizadas no portal do grupo (ZeniMax/Bethesda), que exige conta de candidato |
+| PLAYERUNKNOWN Productions, cadastro no Connect (Amsterdã) | https://careers.playerunknownproductions.net/connect | Teamtailor Connect sem captcha, dá para fazer em 2 minutos; ficou de fora só por tempo. Nenhuma vaga aberta e os departamentos são de tecnologia (Game Team, Melba/Engine, Research), então o encaixe é fraco |
+| Carbonated, General Application (Los Angeles) | https://www.carbonated.com/jobs | O botão "General Application" leva a uma página que não renderizou nenhum formulário no navegador automático; a página tem reCAPTCHA. Nenhuma vaga listada e o foco é mobile |
+| Tarsier Studios (Malmö), quadro de vagas | https://tarsier.recruitment.simployer.com/careers | O quadro do Simployer carregou sem nenhuma vaga e sem candidatura espontânea; vale reconferir a olho (a URL antiga tarsier.se/career dá 404; a correta é tarsier.se/jobs) |
+
+Sem formulário, mas com email de candidatura (entram na rodada de email, não são "portal-only"):
+
+| Estúdio | Endereço | Observação |
+|---|---|---|
+| Alt.VFX (Austrália) | recruitment@altvfx.com | A Open Application / Expression of Interest é por email, com assunto "EOI – Other"; aceita Brisbane, Sydney, Melbourne e remoto; pede área de interesse, disponibilidade, localização e local preferido |
+| FIN Design + Effects (Austrália) | careers@findesign.com.au | O portal "GET INTO FIN" só publica o email; nenhuma vaga listada |
+| Nabi Studios (Singapura) | hampus@nabistudios.com | A página de carreiras manda enviar o CV para esse endereço |
+| MegaZebra (Munique/Montréal) | jobs@megazebra.com | A própria página pede candidatura espontânea por email; encaixe fraco (jogos casuais mobile) |
