@@ -1965,7 +1965,9 @@ function updatePortalHint(mortasCount){
   const doneCount = PORTAIS.filter(isApplied).length;
   const pend = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
   const mortas = typeof mortasCount==="number" ? mortasCount : PORTAIS.filter(isMorta).length;
-  $("#portalBadge").textContent = `${doneCount}/${PORTAIS.length} feitos`;
+  const vivas = PORTAIS.length - mortas;
+  const manuais = PORTAIS.filter(p=>!isApplied(p) && !isMorta(p) && /À MÃO/.test(p.note||"")).length;
+  $("#portalBadge").textContent = `${doneCount} feitas de ${vivas} abertas · ${manuais} só à mão · ${mortas} encerradas`;
   $("#portalHint").innerHTML =
     (mortas ? `<b>${mortas} vaga${mortas===1?"":"s"} encerrada${mortas===1?"":"s"}</b> (expirada, estúdio sem vagas ou caminho fechado) ${showMortas?"aparecendo na lista":"escondida"+(mortas===1?"":"s")+" para não poluir"}. <button id="mortasToggle" class="copybtn" style="margin-left:4px">${showMortas?"esconder":"mostrar"}</button><br>` : "") +
     `${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
