@@ -37,6 +37,15 @@ function anexos() {
   });
 }
 
+// Passo de teste: manda UM email para você mesmo com a assinatura e os dois anexos. Não toca nos rascunhos.
+function enviarTeste() {
+  const eu = Session.getActiveUser().getEmail();
+  const html = "<p>Teste do envio automático da campanha.</p><p>Se a assinatura abaixo e os dois PDFs anexados estiverem certos, o script está pronto.</p>"
+             + "<br><br>-- <br>" + assinatura();
+  GmailApp.sendEmail(eu, "TESTE campanha: assinatura e anexos", "Teste do envio automático da campanha.", { htmlBody: html, attachments: anexos(), name: "Vini Cavalcanti" });
+  Logger.log("teste enviado para " + eu);
+}
+
 function enviarRascunhos() {
   const sig = assinatura();
   const files = anexos();
