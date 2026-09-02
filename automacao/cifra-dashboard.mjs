@@ -25,7 +25,13 @@ if (!senha) {
 
 const entrada = process.argv[2] || "docs/index.html";
 const saida = process.argv[3] || "index.html";
-const plano = fs.readFileSync(entrada);
+// O painel traz o marcador __BUILD__ no lugar do carimbo de publicação. Ele é
+// trocado aqui, na hora de cifrar, para que o site sempre mostre quando aquela
+// versão foi publicada de verdade, sem ninguém precisar editar a data à mão.
+const agora = new Date();
+const dois = n => String(n).padStart(2, "0");
+const carimbo = `${dois(agora.getUTCDate())}/${dois(agora.getUTCMonth() + 1)} às ${dois(agora.getUTCHours())}h${dois(agora.getUTCMinutes())} UTC`;
+const plano = Buffer.from(fs.readFileSync(entrada, "utf8").replaceAll("__BUILD__", carimbo), "utf8");
 
 const ITERACOES = 310000;
 const sal = crypto.randomBytes(16);
