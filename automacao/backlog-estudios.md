@@ -220,3 +220,7 @@ Mainframe Industries | Finlandia/Suecia (Pax Dei) | themainframe.com | portal (a
 - Infinigon Games | info@infinigongames.com | buscar outro endereço
 - Big Bad Wolf | jobs@bigbadwolf-studio.com | buscar outro endereço
 - Infinite Studios | work@infinitestudios.com.sg | buscar outro endereço
+
+## Rodada 2 de 02/09 (navegador)
+
+67 aprovados foram direto para alvos.csv (lote 17). Continuam bloqueados pelo proxy (502) e valem terceira tentativa: Jellyfish, Glassworks, roll7, Melusine, Ellipse, Fishing Cactus, Luxx Studios, Rabcat, Toadman, Chimera Entertainment, The Line Animation, Cutting Edge, Digital Idea, Redrover, Studio Animal, Pukeko Pictures, Solid VFX, Bardel, Guru Studio, Bluepoint, Certain Affinity, Petroglyph, Wonderstorm, Proletariat, Ascendant, Anchor Point, Smoke and Mirrors, Nomad CGI, Ghost Ship VFX. RISE FX e Haymaker VFX (Alemanha) só aceitam quem já tem direito de trabalho na UE e ficaram em portal_only.
