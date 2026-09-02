@@ -343,3 +343,63 @@ data,estudio,email,message_id,tipo,acao
 2026-09-02,Important Looking Pirates,-,-,portal-aplicado,Cadastro no Connect (Teamtailor) com CV; departamento Model/Texture/Lookdev; funcao Artist; banco de talentos oficial; feito pela automacao entre 13h50 e 14h45 UTC
 2026-09-02,-,-,-,auditoria,88 portais pendentes + 14 prospectos classificados em 02/09: 14 aplicaveis (8 enviados); 27 bloqueados por captcha; 14 manuais; 38 sem vaga; 6 nao conferidos (site fora do ar ou bloqueio de rede); relatorios em class_1 a class_4; formularios manuais listados em automacao/respostas-formularios.md
 2026-09-02,-,-,-,followup-enviado,71 follow-ups enviados como resposta na thread original entre 14h45 e 15h05 UTC via Gmail reply (autorizado pelo Vini); Sun Creature e Waterproof excluidos por terem recebido 2a via hoje; 73 rascunhos antigos movidos para a lixeira; ids dos envios em automacao/followup-0209-enviados.csv
+2026-09-02,Alien Studio,jobs@alien.sk,1a0629551003ede0,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Vile Monarch,jobs@vilemonarch.com,1a06292ad3d40455,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Star Stable Entertainment,contact@starstable.com,1a06291a005f0224,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Might and Delight,jobs@mightanddelight.com,1a06291526ed49d6,bounce,buscar outro endereco (Google Group jobs@ inexistente ou fechado; bounce veio em thread separada 1a06291526ed49d6)
+2026-09-02,Sword and Wand,careers@swordandwand.com,1a0628e2aafc7495,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Luma Pictures,recruiting@lumapictures.com,1a0628ca0914d01a,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Infinigon Games,info@infinigongames.com,1a0628872841561d,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Big Bad Wolf,jobs@bigbadwolf-studio.com,1a062817d2e62ba8,bounce,buscar outro endereco (mailer-daemon; endereco nao existe)
+2026-09-02,Infinite Studios,work@infinitestudios.com.sg,1a0626b85497e13e,bounce,buscar outro endereco (Exchange do estudio recebeu mas o encaminhamento interno para frameworks-studios.com falhou; tratado como bounce)
+2026-09-02,Henchman & Goon,jobs@henchmangoon.com,1a0629310ccdce55,auto-reply,registrado sem acao
+2026-09-02,11 bit studios,jobs@11bitstudios.com,1a062926cd3a635b,auto-reply,registrado sem acao
+2026-09-02,Landfall,info@landfall.se,1a062918240641a0,auto-reply,registrado sem acao
+2026-09-02,Flashbulb Games,job@flashbulbgames.com,1a0628f3813fe555,auto-reply,registrado sem acao
+2026-09-02,Uken Games,jobs@uken.com,1a0628beaee4a8e4,auto-reply,registrado sem acao
+2026-09-02,Illusorium Studios,cv@illusoriumstudios.com,1a06289bf3c500de,auto-reply,registrado sem acao
+2026-09-02,Mimic Productions,careers@mimicproductions.com,1a0629379159e915,auto-reply,registrado sem acao
+2026-09-02,Caligari Film,jobs@caligari.film,1a0629127ef47708,auto-reply,registrado sem acao (confirmacao de recebimento em alemao; guardam dados por seis meses)
+2026-09-02,Caligari Film,m.hamann@caligari.film,1a062911e478c4a5,auto-reply,registrado sem acao (fora do escritorio ate 07/09)
+2026-09-02,Frozenbyte,jobs@frozenbyte.com,1a062903a77aa989,auto-reply,registrado sem acao (prometem responder em ate duas semanas)
+2026-09-02,Brikk Animation,work@brikk.se,1a0628ee620b4c1b,auto-reply,registrado sem acao
+2026-09-02,Milford,careers@milford.se,1a0628ec394ea362,auto-reply,registrado sem acao
+2026-09-02,Supermassive Games,jobs@supermassivegames.com,1a0628b883ab4191,auto-reply,registrado sem acao
+2026-09-02,Sun Creature (2ª via),jobs@suncreature.com,1a0628a5ef27fc62,auto-reply,registrado sem acao (auto-resposta diz que no momento nao aceitam candidaturas espontaneas)
+2026-09-02,Hello Games,jobs@hellogames.co.uk,1a06288d675ec7c9,auto-reply,registrado sem acao
+2026-09-02,Flix Interactive,careers@flixinteractive.com,1a062887429bfabc,auto-reply,registrado sem acao
+2026-09-02,Cloud Imperium Games,recruitment@cloudimperiumgames.com,1a06287ed8ed168b,auto-reply,registrado sem acao (pede candidatura pelo portal proprio)
+2026-09-02,Sun & Moon Studios,jobs@sunandmoonstudios.co.uk,1a0628507332684f,auto-reply,registrado sem acao
+2026-09-02,Little Moon Animation,jobs@littlemoonanimation.com,1a062841578ad2a5,auto-reply,registrado sem acao
+2026-09-02,Jyamma Games,careers@jyammagames.com,1a06283923f24cf9,auto-reply,registrado sem acao
+2026-09-02,Sandfall Interactive,contact@sandfall.co,1a06282c1c047468,auto-reply,registrado sem acao (volume alto apos Expedition 33; prometem responder nas proximas semanas)
+2026-09-02,Alkimia Interactive (THQ Nordic Barcelona),jobs@thqnordicbcn.com,1a06282b96bfa6a4,auto-reply,registrado sem acao
+2026-09-02,34BigThings,careers@34bigthings.com,1a062815922e3e18,auto-reply,registrado sem acao
+2026-09-02,BUF,jobs_paris@buf.com,1a0627ec06835fce,auto-reply,registrado sem acao
+2026-09-02,Triangle Factory,work@triangle-factory.be,1a0627b9c5f31194,auto-reply,registrado sem acao
+2026-09-02,ZEILT productions,contact@zeilt.com,1a0627ae16ebc869,auto-reply,registrado sem acao (pede candidatura pela plataforma team.zeilt)
+2026-09-02,Little Chicken Game Company,jobs@littlechicken.nl,1a06277a8d3441d8,auto-reply,registrado sem acao (auto-resposta pede reenvio para o endereco da disciplina; conferir endereco de arte no site)
+2026-09-02,Owlchemy Labs,jobs@owlchemylabs.com,1a06276bc20a0067,auto-reply,registrado sem acao
+2026-09-02,Raccoon Logic,jobs@raccoonlogic.com,1a0627532007d735,auto-reply,registrado sem acao
+2026-09-02,KingsIsle Entertainment,info@kingsisle.com,1a06274fcdfdd2c6,auto-reply,registrado sem acao (virou ticket de suporte em help@)
+2026-09-02,Playable Worlds,jobs@playableworlds.com,1a06273fe58944b4,auto-reply,registrado sem acao
+2026-09-02,Wētā FX,recruitment@wetafx.co.nz,1a06272750d39443,auto-reply,registrado sem acao (nao aceitam candidatura por email; so pelo portal)
+2026-09-02,Wētā Workshop,recruitment@wetaworkshop.co.nz,1a062724f52ae2b2,auto-reply,registrado sem acao (nao aceitam candidatura por email; so pelo portal)
+2026-09-02,Gunfire Games,jobs@gunfiregames.com,1a0626fd37df64ab,auto-reply,registrado sem acao (caixa nao monitorada; contratacao so pelo sistema online)
+2026-09-02,Budge Studios,jobs@budgestudios.ca,1a0626e0edd7541e,auto-reply,registrado sem acao
+2026-09-02,Nathan Love,jobs@nathanlove.com,1a0626d286b5cd3d,auto-reply,registrado sem acao
+2026-09-02,Ember Lab,contact@emberlab.com,1a062969583cc83c,auto-reply,registrado sem acao (auto-resposta ao follow-up de hoje)
+2026-09-02,Piranha Bar,info@piranhabar.ie,1a0629abb251d45b,auto-reply,registrado sem acao (auto-resposta ao follow-up de hoje)
+2026-09-02,Omens Studios,suann.omens@gmail.com,1a0629c0f38dc752,auto-reply,registrado sem acao (fora do escritorio ate 08/09; resposta ao follow-up de hoje)
+2026-09-02,Important Looking Pirates,eleonora.matrella@ilpvfx.teamtailor-mail.com,1a0629f799e6b1e7,confirmacao-portal,registrado (Welcome to ILP; cadastro no Connect confirmado)
+2026-09-02,Goodbye Kansas,daniel.axelsson@goodbyekansas.teamtailor-mail.com,1a0628d18552f70c,confirmacao-portal,registrado (Welcome to Goodbye Kansas; cadastro no Connect confirmado)
+2026-09-02,2K (Small Axe),no-reply@2k.com,1a062779fa5ea67e,confirmacao-portal,registrado (Application received para Senior Character Artist)
+2026-09-02,Cloud Chamber,no-reply@2k.com,1a06247ca35a4332,confirmacao-portal,registrado (Thank you for applying; Lead Character Artist)
+2026-09-02,Gardens Interactive,no-reply@ashbyhq.com,1a062768fa3c2a57,confirmacao-portal,registrado (Ashby confirmou a candidatura)
+2026-09-02,AGBO,no-reply@agbo.breezy-mail.com,1a0626c845bb0e8d,confirmacao-portal,registrado (Breezy confirmou Senior Character Texture Artist)
+2026-09-02,Wizards of the Coast,noreply-recruiting@wizards.com,1a062481aaad0a0a,confirmacao-portal,registrado (Thank You for Applying; Lead Character Artist)
+2026-09-02,Sony Pictures Imageworks,no-reply@imageworks.com,1a06247c35d2a73c,confirmacao-portal,registrado (Thank You for Your Application; Experienced Modeler)
+2026-09-02,Mob Entertainment,no-reply@us.greenhouse-mail.io,1a062450488216b5,confirmacao-portal,registrado (Greenhouse: Thank you for applying)
+2026-09-02,Swaybox Studios,no-reply@us.greenhouse-mail.io,1a0626f33feebc40,confirmacao-portal,registrado (Greenhouse: Thank you for applying; Senior CG Generalist Modeler)
+2026-09-02,Studio Bozzetto & Co,studio@studiobozzetto.com,1a06292b18d340e0,rejeicao,respondido com template na thread (msg 1a062a7f0f5906f8); redirecionou para o formulario do site
+2026-09-02,4A Games (Malta),contact@4a-games.com.mt,1a0629dc3b40e209,resposta,redirecionou para o formulario do site; candidatura Senior 3D Character Artist enviada pela automacao pelo JotForm oficial com CV e carta (tela de confirmacao) as 15h20 UTC

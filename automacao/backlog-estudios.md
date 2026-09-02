@@ -209,3 +209,14 @@ Fenomen Studios | Noruega | fenomen.no | descartado (site aberto em 02/09: conte
 Cakefish (Dreamthorn) | Noruega / remoto | dreamthorn.com | aprovado (positions.md aberto em 02/09: Principal Character Artist remota, contrato de longo prazo full-time + participacao nos lucros, candidatura por join@dreamthorn.com direto ao studio lead; rascunho criado no lote 15)
 Qudical | remoto (global) | qudical.com | descartado (indie de estreia, horror retro; anuncio de character artist no workwithindies sem formato de contrato nem email; sem sinal de vaga efetiva)
 Mainframe Industries | Finlandia/Suecia (Pax Dei) | themainframe.com | portal (anuncio de Character Artist remoto no remotegamejobs vem de fevereiro de 2024 nas fontes datadas; sem email publico; candidatura so pela pagina de carreiras; nao confundir com a Mainframe Studios do Canada)
+
+## Bounces 02/09
+- Alien Studio | jobs@alien.sk | buscar outro endereço
+- Vile Monarch | jobs@vilemonarch.com | buscar outro endereço
+- Star Stable Entertainment | contact@starstable.com | buscar outro endereço
+- Might and Delight | jobs@mightanddelight.com | buscar outro endereço
+- Sword and Wand | careers@swordandwand.com | buscar outro endereço
+- Luma Pictures | recruiting@lumapictures.com | buscar outro endereço
+- Infinigon Games | info@infinigongames.com | buscar outro endereço
+- Big Bad Wolf | jobs@bigbadwolf-studio.com | buscar outro endereço
+- Infinite Studios | work@infinitestudios.com.sg | buscar outro endereço
