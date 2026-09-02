@@ -224,3 +224,12 @@ Mainframe Industries | Finlandia/Suecia (Pax Dei) | themainframe.com | portal (a
 ## Rodada 2 de 02/09 (navegador)
 
 67 aprovados foram direto para alvos.csv (lote 17). Continuam bloqueados pelo proxy (502) e valem terceira tentativa: Jellyfish, Glassworks, roll7, Melusine, Ellipse, Fishing Cactus, Luxx Studios, Rabcat, Toadman, Chimera Entertainment, The Line Animation, Cutting Edge, Digital Idea, Redrover, Studio Animal, Pukeko Pictures, Solid VFX, Bardel, Guru Studio, Bluepoint, Certain Affinity, Petroglyph, Wonderstorm, Proletariat, Ascendant, Anchor Point, Smoke and Mirrors, Nomad CGI, Ghost Ship VFX. RISE FX e Haymaker VFX (Alemanha) só aceitam quem já tem direito de trabalho na UE e ficaram em portal_only.
+
+## Rodada de vagas de 02/09 (noite): nomes que a varredura levantou
+
+Sem prospecção de nomes novos nesta rodada, a fila continua seca. Dois nomes apareceram pela varredura de vagas e valem entrar na fila quando ela reabrir:
+
+- Digital Extremes | Canadá (London, Ontário) | dona do Warframe, ~500 pessoas, independente | Greenhouse oficial em job-boards.greenhouse.io/digitalextremes; vaga de Concept Artist aberta em 02/09 e registrada no painel. Nenhum email público encontrado ainda; a rota é o ATS.
+- Escape Velocity Entertainment | remoto (América do Norte, Canadá e Europa) | estúdio 100% remoto com publisher comprometido, contrata na Europa sem exigir residência específica | Workable oficial em apply.workable.com/escape-velocity-entertainment-inc; em 02/09 as 8 vagas abertas são todas de design e engenharia, nenhuma de arte, e as vagas de arte que agregadores mostram já expiraram. Monitorar o board.
+
+Checados e descartados nesta rodada por não terem endereço alternativo publicado: Keos Masons (o site inteiro só publica info@, que já recebeu email em 28/08). Airborn Studios, Art Bully, Steamroller, Puppetworks e Starloop ficaram de fora da segunda via porque já tinham reenvio ou follow-up na thread.

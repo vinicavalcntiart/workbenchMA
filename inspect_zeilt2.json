@@ -1,0 +1,21 @@
+{
+ "title": "Suricate",
+ "url": "https://zeilt.suricate.app/offer-details/cmcdmo2df0001hk68ga24e462",
+ "fields": [
+  {
+   "tag": "input",
+   "type": "checkbox",
+   "name": "",
+   "id": "",
+   "label": "",
+   "required": false,
+   "value": "on"
+  }
+ ],
+ "captcha": [],
+ "grecaptcha": false,
+ "submit": [
+  "APPLY",
+  "apply"
+ ]
+}
