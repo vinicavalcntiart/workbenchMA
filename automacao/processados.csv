@@ -441,3 +441,7 @@ data,estudio,email,message_id,tipo,acao
 2026-09-02,Escape Velocity Entertainment,-,-,revalidacao,Workable oficial com 8 vagas e nenhuma de arte; Outsourcing Character Artist expirada
 2026-09-02,Keos Masons,-,-,vaga-nova,Character Artist Hard Surface remota confirmada na pagina Careers oficial e registrada como media
 2026-09-02,Keos Masons,-,-,segunda-onda,Sem segunda via: o site so publica info@ e nenhum jobs@ careers@ ou recruitment@ alternativo
+2026-09-02,Gunfire Games,-,-,portal-aplicado,Cadastro no banco de talentos (Paylocity) com CV apos auto-resposta do jobs@ pedir esse caminho; tela de confirmacao; feito pela automacao ~21h UTC
+2026-09-02,Wētā FX,-,-,portal-aplicado,Perfil criado no site de carreiras oficial com CV apos auto-resposta pedir candidatura pelo portal; acesso por link no email; feito pela automacao ~21h UTC
+2026-09-02,Wētā Workshop,-,-,portal-aplicado,Cadastro no Connect (Teamtailor) disciplina Creative Services e Concept Artists apos auto-resposta pedir esse caminho; CV nao subiu (upload derrubou a sessao) e fica pendente; feito pela automacao ~21h UTC
+2026-09-02,-,-,-,auditoria,Auto-respostas do dia relidas: 8 pediam candidatura por formulario ou banco de talentos; 3 concluidas (Gunfire Wētā FX Wētā Workshop); 5 para o Vini (FIN Design e ZEILT exigem conta com senha; Supermassive e por email; KingsIsle no Workable atras do Cloudflare; Little Chicken pede reenvio para art-jobs@)

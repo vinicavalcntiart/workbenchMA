@@ -159,3 +159,19 @@ Sem formulário, mas com email de candidatura (entram na rodada de email, não s
 | FIN Design + Effects (Austrália) | careers@findesign.com.au | O portal "GET INTO FIN" só publica o email; nenhuma vaga listada |
 | Nabi Studios (Singapura) | hampus@nabistudios.com | A página de carreiras manda enviar o CV para esse endereço |
 | MegaZebra (Munique/Montréal) | jobs@megazebra.com | A própria página pede candidatura espontânea por email; encaixe fraco (jogos casuais mobile) |
+
+## Pedidos de formulário vindos de auto-resposta (02/09)
+
+Estúdios cuja auto-resposta de hoje mandava se candidatar por formulário/portal/banco de talentos. As três primeiras já foram feitas pela automação; o resto ficou para o Vini pelo motivo indicado.
+
+Feitas (confirmação em <scratch>/apply):
+- Gunfire Games — candidatura espontânea (talent network) enviada pelo Paylocity. https://recruiting.paylocity.com/Recruiting/PublicLeads/New/20e9f03b-0303-4991-9f63-b4dae15d620f — confirmação "Thanks for connecting with us!".
+- Wētā FX — perfil criado no careers site (login por magic-link) e CV anexado. https://careers.wetafx.co.nz/ — banco de talentos.
+- Wētā Workshop — cadastro no Teamtailor Connect (disciplina Creative Services → Concept Artists). https://wetaworkshop.teamtailor.com/connect — conexão confirmada (dashboard "Welcome to Connect"); CV não anexou pelo fluxo headless.
+
+Ficaram para o Vini:
+- FIN Design + Effects — https://recruit.findesign.com.au/auth/sign-up — o talent portal exige criar conta com senha (não permitido à automação). Alternativa por email: careers@findesign.com.au.
+- ZEILT Productions — https://team.zeilt.com/candidature (Suricate) — para se candidatar (inclusive "Candidature Spontanée") é preciso criar conta Suricate com senha. As vagas de modeling/texturing abertas são freelance e exigem endereço fiscal no Québec.
+- Supermassive Games — https://www.supermassivegames.com/careers/speculative-application — a "speculative application" é, na verdade, um email do Workable (supermassive-games@jobs.workablemail.com); enviar CV por email. Guildford, UK, híbrido.
+- KingsIsle Entertainment — https://apply.workable.com/kingsisle-entertainment-inc/ — board Workable atrás de Cloudflare (error 1015), não abre no navegador automático.
+- Little Chicken Game Company — reenviar candidatura para art-jobs@littlechicken.nl (a auto-resposta pede o email da disciplina de arte).
