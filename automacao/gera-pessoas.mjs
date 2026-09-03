@@ -46,6 +46,9 @@ const pessoas = linhas.slice(1).map(l => ({
   email: l[col("email")] || "",
   confianca: (l[col("confianca")] || "").trim() || "sem-email",
   fonte: l[col("fonte")] || "",
+  // Situação da abordagem: rascunho, enviado, bounce, sem via. É o que separa
+  // "achamos a pessoa" de "a carta chegou nela".
+  situacao: (col("situacao") >= 0 && l[col("situacao")]) || "",
 }));
 
 // Fonte costuma vir como URL crua, e a coluna é lida por gente na tela. Encurta
