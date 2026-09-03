@@ -117,8 +117,20 @@ escrita à mão, porque ela é:
 - Uma frase dizendo **por que ela**, ancorada em algo real e verificável: um filme em que
   ela é creditada, uma palestra que deu, um projeto no ArtStation dela. Específico, curto,
   sem bajulação. Se você não achou nada real para dizer, não invente: manda a carta padrão.
-- Fechar pedindo **a conversa, não a vaga**: alguém que não está contratando ainda
-  responde um colega, e é isso que abre porta.
+- Fechar pedindo **direção, não tempo**. Correção do Vini em 03/09, e ela derruba a
+  primeira versão desta regra: as cartas fechavam pedindo vinte minutos de call, e isso
+  é pedir a coisa mais escassa que um diretor de arte tem, vindo de um desconhecido.
+  O custo de dizer sim fica alto demais e a resposta padrão vira o silêncio. Some-se
+  que essas pessoas dificilmente terão tempo de abrir o portfólio.
+  **O pedido tem que custar menos que a recusa.** O fechamento é este, fixo:
+
+  > If character work opens up on your side, I'd like to be on your list. And if someone
+  > else there is the right person for this, just point me and I will take it there.
+
+  Ele dá três saídas baratas a quem lê: guardar o nome, encaminhar, ou responder um nome.
+  As três servem ao Vini, e nenhuma custa uma agenda. **Nunca peça call, reunião, café,
+  quinze minutos nem vinte minutos numa carta fria.** Chamada é coisa que o estúdio
+  propõe depois que se interessou, e aí quem trata é o Comunicador.
 
 Tudo o mais é regra fixa da campanha, sem exceção:
 
