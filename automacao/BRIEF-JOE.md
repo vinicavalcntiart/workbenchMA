@@ -153,14 +153,35 @@ dos Estados Unidos leva a frase fixa de realocação no fim do parágrafo 2.
 
 ## Correções de método vindas da primeira rodada
 
-1. **Casa grande não tem email público.** Varrer os domínios das listas de grandes deu
-   zero endereço de pessoa: Titmouse, Reel FX, Bento Box, Riot, Epic, Bungie, Roblox,
-   Larian, CDPR, Remedy, Naughty Dog e Rocksteady não publicam nenhum. Então em estúdio
-   grande o produto do Joe **não é email**: é uma fila separada de *nome + cargo + estúdio*
-   em `automacao/pessoas.csv` com `email` vazio e `confianca` igual a `sem-email`, para o
-   Vini abordar por LinkedIn ou pelo formulário. Nomes já achados assim: Brooke Keesling
-   (head de talento de animação, Bento Box), Melisa Hayward (principal creative recruiter,
-   Riot). Nunca inventar o formato do endereço para preencher a coluna.
+1. **Casa grande não publica email na página de contato, e a saída NÃO é LinkedIn.**
+   Varrer os domínios das listas de grandes deu zero endereço na página de contato.
+   **Decisão do Vini, 03/09: abordagem por LinkedIn a recrutador de estúdio grande não
+   funciona.** Eles recebem centenas de mensagens por semana e simplesmente ignoram a
+   caixa. Não registre LinkedIn como via de contato para casa grande, e não sugira isso
+   ao Vini. O que ele quer é **email**: Disney, Pixar, Netflix, Netflix Games, Sony,
+   DreamWorks, Nickelodeon e o resto da lista dos grandes.
+   Onde esse email existe, publicado e verificável, é fora da página de contato:
+   - **Artigos e talks do SIGGRAPH e da ACM.** Disney Animation, Pixar, DreamWorks,
+     Sony Imageworks e Netflix publicam paper técnico e production talk todo ano, e o
+     rodapé de autor traz o email institucional. Procure em `dl.acm.org`,
+     `s2026.siggraph.org`, `studios.disneyresearch.com`, `graphics.pixar.com`,
+     `research.dreamworks.com` e nas páginas de publicação de cada estúdio.
+   - **Código aberto.** O log de commits do git guarda o email real de quem contribuiu:
+     USD e OpenSubdiv da Pixar, MoonRay e OpenMoonRay da DreamWorks, OpenColorIO da Sony,
+     Ptex e SeExpr da Disney, e os repositórios da Netflix. `git log` num clone, ou a API
+     de commits do GitHub, devolve nome e email pareados.
+   - **Patentes**, que listam inventor com vínculo institucional.
+   O que sai daí é de dois tipos, e os dois valem: **endereço real de pessoa** (confiança
+   alta, citando o paper ou o commit), e **o padrão do domínio provado**, que promove
+   qualquer nome novo daquela casa para confiança média.
+   Ressalva honesta a escrever na nota: essas fontes puxam mais gente técnica, TD e
+   engenheiro, do que diretor de arte. Um TD sênior não contrata, mas trabalha ao lado de
+   quem contrata, e o padrão de domínio que ele revela serve para a casa inteira.
+   Quando mesmo assim não houver email, a linha entra em `automacao/pessoas.csv` com
+   `email` vazio e `confianca` igual a `sem-email`, guardando *nome + cargo + estúdio*
+   para uso futuro. Nomes já achados assim: Brooke Keesling (head de talento de animação,
+   Bento Box), Melisa Hayward (principal creative recruiter, Riot).
+   **Nunca inventar o formato do endereço para preencher a coluna.**
 2. **Duas pessoas por estúdio, quando os cargos são complementares** e os dois endereços
    estão publicados. O limite de uma por estúdio cortou pares bons (na nWave o Kevin
    Hermans, diretor de arte de personagem, ao lado do Christopher Grao). Continua valendo
