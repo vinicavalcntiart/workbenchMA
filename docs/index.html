@@ -178,6 +178,17 @@
   footer { color:var(--muted); font-size:12px; margin-top:28px; }
   a { color:var(--blue); }
   /* kit de aplicação */
+  .secao-dobra { margin:0 0 6px; }
+  .secao-dobra > summary { cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px;
+    flex-wrap:wrap; padding:9px 13px; border:1px dashed var(--grid); border-radius:10px;
+    color:var(--ink-2); font-size:12.5px; background:var(--surface); }
+  .secao-dobra > summary::-webkit-details-marker { display:none; }
+  .secao-dobra > summary::before { content:"▸"; color:var(--muted); transition:transform .15s; }
+  .secao-dobra[open] > summary::before { transform:rotate(90deg); }
+  .secao-dobra > summary:hover { border-color:var(--blue); color:var(--blue); }
+  .secao-dobra[open] > summary { margin-bottom:8px; }
+  .secao-dobra .dobra-rot::after { content:" · clique para abrir"; color:var(--muted); }
+  .secao-dobra[open] .dobra-rot::after { content:" · clique para fechar"; }
   .kit-group { margin:0 0 6px; border:1px solid var(--grid); border-radius:10px; overflow:hidden; }
   .kit-group summary { cursor:pointer; padding:9px 12px; font-weight:600; font-size:13px; list-style:none; display:flex; align-items:center; gap:8px; }
   .kit-group summary::before { content:"▸"; color:var(--muted); transition:transform .15s; }
@@ -225,6 +236,7 @@
     <a href="#novidades">📰 Novidades</a>
     <a href="#visao">📊 Visão geral</a>
     <a href="#grandes">🏆 Estúdios grandes</a>
+    <a href="#joe">🕵️ Espionagem do Joe</a>
     <a href="#portais">📝 Portais</a>
     <a href="#prospec">🗺️ Prospecção</a>
     <a href="#kit">🧰 Kit de aplicação</a>
@@ -299,6 +311,32 @@
       </tr></thead>
       <tbody id="grandeRows"></tbody>
     </table>
+  </div>
+
+  <h2 class="sec" id="joe">🕵️ Espionagem do Joe <span class="badge" id="joeBadge"></span></h2>
+  <div class="card full">
+    <div class="resumo">
+      <h3 style="margin:0 0 2px">Por que esta seção existe</h3>
+      <p class="hint">Dos <b id="joeTotalEnvios"></b> emails da campanha, só <b id="joeComNome"></b> chegaram a uma pessoa com nome. O resto foi para caixa genérica, que existe para filtrar. O Joe caça as pessoas: nome, cargo e endereço, sempre com a fonte anotada. Regra dele, sem exceção: <b>endereço sem fonte não vira linha</b>.</p>
+    </div>
+    <div class="tiles" id="joeTiles"></div>
+
+    <h3 style="margin:18px 0 2px">👤 Pessoas capturadas</h3>
+    <p class="hint">Ordenadas por confiança. <b>Alta</b> é endereço publicado pelo próprio estúdio ou pela própria pessoa. <b>Média</b> é padrão de domínio provado por endereços reais. <b>Sem email</b> é nome e cargo guardados para quando surgir a via.</p>
+    <div class="chips" id="joeChips"></div>
+    <table>
+      <thead><tr>
+        <th>👤 Pessoa</th><th>💼 Cargo</th><th>🏢 Estúdio</th><th>✉️ Email</th><th>🎯 Confiança</th><th>🔎 De onde saiu</th>
+      </tr></thead>
+      <tbody id="joeRows"></tbody>
+    </table>
+
+    <h3 style="margin:18px 0 2px">🔑 Padrões de domínio já provados</h3>
+    <p class="hint">Um padrão provado vale mais que um endereço solto: qualquer nome novo daquela casa passa a valer confiança média. Só entra aqui o formato confirmado por pelo menos dois endereços reais.</p>
+    <div id="joePadroes"></div>
+
+    <h3 style="margin:18px 0 2px">🧭 Próximos passos da caçada</h3>
+    <div class="acoes" id="joePassos"></div>
   </div>
 
   <h2 class="sec" id="portais">📝 Aplicações via portal ou formulário <span class="badge" id="portalBadge"></span></h2>
@@ -1112,6 +1150,16 @@ const LOTES = (() => {
 const ENVIOS = STUDIOS.length;
 const ESTUDIOS_EMAIL = new Set(STUDIOS.map(s => s.email.trim().toLowerCase())).size;
 const SEGUNDAS_VIAS = ENVIOS - ESTUDIOS_EMAIL;
+// Quantos emails da campanha chegaram a uma PESSOA e não a uma caixa que existe
+// para filtrar. É o número que justifica o Joe, então é derivado do dado e não
+// escrito à mão: conta o que vem antes do @ e descarta os locais genéricos.
+const CAIXA_GENERICA = new Set(["info","jobs","careers","career","hr","contact","hello","recruiting",
+  "recruitment","recruit","talent","talents","apply","work","people","office","team","studio","hi",
+  "mail","admin","general","hiring","art","production","business","enquiries","inquiries","enquiry",
+  "submissions","submission","join","joinus","jobb","reception","press","support","hey","email","us"]);
+const ehPessoa = e => { const u = String(e).split("@")[0].toLowerCase().replace(/[._-]/g,"");
+  return !!u && !CAIXA_GENERICA.has(u) && !/^(jobs|careers|info|contact|hr|recruit)/.test(u); };
+const ESTUDIOS_PESSOA = new Set(STUDIOS.filter(s=>ehPessoa(s.email)).map(s=>s.email.trim().toLowerCase())).size;
 const EMAILS_PRE = STUDIOS.filter(s=>s.batch===0).length;   // leva de julho e agosto
 const EMAILS_CAMPANHA = ENVIOS - EMAILS_PRE;                // de 26/08 em diante
 // O log diário (enviados.csv) conta também os endereços que quicaram e foram
@@ -1278,9 +1326,20 @@ function renderGrandes(){
       + '<td><span class="pname">'+esc(g.name)+'</span>'+(g.done?' <span class="chip" style="color:var(--good-text)">✓ enviado</span>':'')+'</td>'
       + '<td>'+esc(g.sede)+'</td>'
       + '<td><a href="'+esc(g.url)+'" target="_blank" rel="noopener">abrir carreiras ↗</a></td>'
-      + '<td>'+(VIA[g.via]||VIA.ats)[0]+' <span style="color:var(--muted)">· '+esc(g.note)+'</span></td>'
+      // As notas dos grandes viraram redações e sozinhas ocupavam dois terços da
+      // página. Mesmo tratamento da tabela de portais: três linhas, e o resto só
+      // quando ele pedir.
+      + '<td><div class="nota"><span class="ncorpo">'+(VIA[g.via]||VIA.ats)[0]
+      + ' <span style="color:var(--muted)">· '+esc(g.note)+'</span></span>'
+      + ((g.note||"").length > 180 ? '<button class="morebtn nmais" type="button">ler a nota inteira</button>' : "")
+      + '</div></td>'
       + '</tr>';
   }).join("");
+  $("#grandeRows").querySelectorAll(".nmais").forEach(b=>b.addEventListener("click", ()=>{
+    const nota = b.closest(".nota");
+    nota.classList.toggle("aberta");
+    b.textContent = nota.classList.contains("aberta") ? "recolher a nota" : "ler a nota inteira";
+  }));
   const feitos = rows.filter(feito).length;
   const semVaga = GRANDES.filter(g=>g[3]==="form").length;
   const al = k => GRANDES.filter(g=>alertaDoGrande(g)===k).length;
@@ -1308,6 +1367,184 @@ function renderGrandes(){
 // ---------- novidades (newsletter) ----------
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
+/* PESSOAS e PADROES são gerados de automacao/pessoas.csv e automacao/padroes-dominio.md
+   por `node automacao/gera-pessoas.mjs`. Não edite à mão entre os marcadores: rode o
+   script depois que o Joe acrescentar linhas, senão a seção mente. */
+// <PESSOAS>
+const PESSOAS = [
+ {
+  "data": "2026-09-03",
+  "estudio": "Ars Thanea",
+  "pais": "Polônia",
+  "pessoa": "Marta Krol",
+  "cargo": "Head of Operations",
+  "email": "marta.krol@arsthanea.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://arsthanea.com/about"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Brikk Animation",
+  "pais": "Suécia",
+  "pessoa": "Samuel Fast Hurtigkarl",
+  "cargo": "Creative Director",
+  "email": "samuel@brikk.se",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://brikk.se/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Eallin",
+  "pais": "Tchéquia",
+  "pessoa": "Filip Finkelštejn",
+  "cargo": "Managing Director / Executive Producer",
+  "email": "filip@eallin.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://eallin.com/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Filmic Art",
+  "pais": "Suécia",
+  "pessoa": "Andreas Ibohm",
+  "cargo": "Executive Producer",
+  "email": "andreas@filmic.se",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://filmic.se/about"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "HouseSpecial",
+  "pais": "EUA",
+  "pessoa": "Julie Ragland",
+  "cargo": "Representation (contato direto do estudio)",
+  "email": "julie@housespecial.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome em https://housespecial.com/about"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Magic Lab",
+  "pais": "Tchéquia",
+  "pessoa": "Viktor Plch",
+  "cargo": "Partner / Head of VFX",
+  "email": "viktor@magiclab.film",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://www.magiclab.cz/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Mathematic",
+  "pais": "França",
+  "pessoa": "Guillaume Marien",
+  "cargo": "Executive Producer e socio",
+  "email": "guillaume.marien@mathematicfilm.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://www.mathematicfilm.com/"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Piranha Bar",
+  "pais": "Irlanda",
+  "pessoa": "Richard Chaney",
+  "cargo": "Partner, Creative Head of Studio",
+  "email": "richard@piranhabar.ie",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://www.piranhabar.ie/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Qvisten Animation",
+  "pais": "Noruega",
+  "pessoa": "Rasmus A. Sivertsen",
+  "cargo": "Creative Director",
+  "email": "rasmus@qvisten.no",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://qvisten.no/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Reactiv",
+  "pais": "Canadá",
+  "pessoa": "Anna Junger",
+  "cargo": "Executive Producer",
+  "email": "anna@getreactiv.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://getreactiv.com/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "SHED",
+  "pais": "Canadá",
+  "pessoa": "Renaud Cote",
+  "cargo": "Executive Producer",
+  "email": "rcote@shedmtl.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://shedmtl.com/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Studio AKA",
+  "pais": "Reino Unido",
+  "pessoa": "Nikki Kefford",
+  "cargo": "Head of Commercial Production",
+  "email": "nikki@studioaka.co.uk",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://studioaka.co.uk/about"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "THE LINE Studio",
+  "pais": "Reino Unido",
+  "pessoa": "James Duveen",
+  "cargo": "Games (responsavel pela area de jogos)",
+  "email": "james@thelinestudio.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e area em https://www.thelinestudio.com/contact"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "The Sequence Group",
+  "pais": "Canadá",
+  "pessoa": "Ian Kirby",
+  "cargo": "Founder & Creative Director",
+  "email": "ian@thesequencegroup.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo em https://thesequencegroup.com/about"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "nWave Studios",
+  "pais": "Bélgica",
+  "pessoa": "Christopher Grao",
+  "cargo": "CG Supervisor e Diretor Artistico",
+  "email": "cgrao@nwave.com",
+  "confianca": "media",
+  "fonte": "nome e cargo em https://variety.com/2026/film/global/yugly-nwave-snd-animation-annecy-2026-1236784958/ e https://www.esma-3d.fr/en/news/our-former-credits-christopher-grao-artistic-director-and-cg-supervisor-for-hopper-and-the-secret-of-the-groundhog/ ; padrao inicial+sobrenome publicado em https://www.nwave.com/contact (Goedele Gillis=ggillis@nwave.com; Eloise Ngangura=engangura@nwave.com; Matthieu Gondinet=mgondinet@nwave.com)"
+ },
+ {
+  "data": "2026-09-03",
+  "estudio": "Platige Image",
+  "pais": "Polônia",
+  "pessoa": "Jakub Jabłoński",
+  "cargo": "Director / Art Director",
+  "email": "jjablonski@platige.com",
+  "confianca": "media",
+  "fonte": "perfil no site do proprio estudio https://platige.com/talents/jakub-jablonski/ ; padrao inicial+sobrenome publicado em https://platige.com/studio (Bartek Kujbida=bkujbida@platige.com; Piotr Prokop=pprokop@platige.com; Marek Jankowski=mjankowski@platige.com; Sylwia Slusarczyk=sslusarczyk@platige.com; Malwina Woch=mwoch@platige.com)"
+ }
+];
+// </PESSOAS>
+// <PADROES>
+const PADROES = [];
+// </PADROES>
+
+const JOE_PASSOS = [
+ ["Caçar o email dos grandes fora da página de contato","Disney, Pixar, Netflix, Netflix Games, Sony, DreamWorks e Nickelodeon não publicam endereço de ninguém no site. Mas publicam em rodapé de autor de paper do SIGGRAPH, em log de commits dos repositórios abertos (USD da Pixar, MoonRay da DreamWorks, OpenColorIO da Sony, Ptex da Disney) e em patente. É de onde sai tanto o endereço real quanto o padrão do domínio.","rodando"],
+ ["Casar nome de arte com padrão provado","Quando o padrão de uma casa está provado, qualquer diretor de arte ou character lead dela achado em crédito de filme, palestra ou entrevista vira alvo de confiança média. É o produto mais valioso da caçada.","proximo"],
+ ["Segunda pessoa nos estúdios que valem duas","O limite de uma por estúdio cortou pares bons, como o diretor de arte de personagem da nWave ao lado do supervisor de CG. Onde os dois endereços estão publicados e os cargos são complementares, valem os dois.","proximo"],
+ ["Conferir se a pessoa ainda trabalha lá","A Squeeze foi descartada mesmo com o padrão provado, porque os dois nomes de arte encontrados já estão em outra casa. Cargo desatualizado é pior que alvo nenhum.","regra"]
+];
+
 const NOVIDADES = [
  ["2026-09-03","viva","Flying Bark encaminhou seu portfólio para o time de recrutamento, e foi o follow-up que fez isso","A Miranda, da Flying Bark Productions de Sydney, respondeu dizendo que passou seu portfólio para o time de recrutamento e que eles entram em contato se houver interesse. Pela regra da porta de entrada isso conta como resposta positiva, e é a segunda da campanha. O detalhe que importa mais que a resposta em si: ela veio na thread do follow-up enviado em 02/09, não do email original de 26 de agosto. É a primeira evidência concreta de que a onda de follow-up funciona, o que muda o cálculo dos outros 70 estúdios que receberam a mesma mensagem.",""],
  ["2026-09-03","nao","Ubisoft e 2K recusaram as duas vagas de personagem que você tinha em estúdio grande","A Ubisoft respondeu pelo SmartRecruiters recusando a Artiste de personnages sénior·e de Rainbow Six Siege nos estúdios canadenses, dizendo que mantém seu currículo em arquivo, e a 2K recusou a Senior Character Artist. As duas doem mais que uma recusa comum porque eram vagas de personagem de verdade, e em setembro de 2026 essas quase não existem: a varredura do mesmo dia mostrou a Microsoft inteira, com onze estúdios, sem uma única vaga de arte de jogo aberta. Nenhuma das duas recebeu resposta, porque as duas vêm de endereço que não aceita mensagem.",""],
@@ -1579,6 +1816,122 @@ function renderAcoes(){
 }
 
 // ---------- tiles ----------
+// A seção do Joe é a única do painel que fala de PESSOAS e não de estúdios, então
+// tem contagem própria. Tudo aqui deriva de PESSOAS e PADROES, que o
+// automacao/gera-pessoas.mjs escreve a partir do CSV: nada é literal.
+const CONF_ROTULO = { alta:"alta", media:"média", "sem-email":"sem email" };
+const CONF_COR = { alta:"--good", media:"--warn", "sem-email":"--axis" };
+let joeFiltro = "todas";
+
+/* O painel cresceu para nove seções e abria todas expandidas, o que dá uma parede
+ * de 421 linhas de estúdio mais 236 de portal antes de qualquer leitura. Queixa do
+ * Vini em 03/09: "o site tá tão confuso com essa quantidade de informação".
+ * As seções de consulta passam a abrir fechadas, com o resumo dizendo o que tem
+ * dentro; as de ação (o que fazer agora, novidades, visão geral, espionagem)
+ * continuam abertas. A escolha de cada um fica salva no navegador dele. */
+const DOBRA_KEY = "campanha-dobras-v1";
+function dobrarSecoes(){
+  const alvos = [
+    ["portais","a fila inteira de rotas por formulário, das feitas às encerradas"],
+    ["prospec","estúdios curados que ainda não receberam email"],
+    ["kit","as respostas prontas para colar em formulário"],
+    ["dossies","as cartas já escritas, uma por vaga"],
+    ["estudios","a tabela completa da campanha, um estúdio por linha"]
+  ];
+  let salvo = {};
+  try { salvo = JSON.parse(localStorage.getItem(DOBRA_KEY) || "{}"); } catch(e){}
+
+  alvos.forEach(([id,desc])=>{
+    const h2 = document.getElementById(id);
+    const card = h2 && h2.nextElementSibling;
+    // O valida-dashboard.sh roda num DOM de mentira, sem árvore de verdade, então
+    // sem parentNode não há o que dobrar e a função simplesmente não faz nada.
+    if(!h2 || !card || card.tagName === "DETAILS" || !card.parentNode) return;
+    const det = document.createElement("details");
+    det.className = "secao-dobra";
+    det.open = salvo[id] === true;
+    const sum = document.createElement("summary");
+    const badge = h2.querySelector(".badge");
+    sum.innerHTML = '<span class="dobra-rot">'+esc(desc)+"</span>"
+      + (badge ? ' <span class="badge">'+badge.textContent+"</span>" : "");
+    det.appendChild(sum);
+    card.parentNode.insertBefore(det, card);
+    det.appendChild(card);
+    det.addEventListener("toggle", ()=>{
+      salvo[id] = det.open;
+      try { localStorage.setItem(DOBRA_KEY, JSON.stringify(salvo)); } catch(e){}
+    });
+  });
+
+  // Clicar no menu de cima tem que abrir a seção, senão o link leva a um título
+  // fechado e parece que o site quebrou.
+  document.querySelectorAll('nav.secoes a[href^="#"]').forEach(a=>{
+    a.addEventListener("click", ()=>{
+      const h2 = document.getElementById(a.getAttribute("href").slice(1));
+      const det = h2 && h2.nextElementSibling;
+      if(det && det.tagName === "DETAILS") det.open = true;
+    });
+  });
+}
+
+function renderJoe(){
+  const total = PESSOAS.length;
+  const por = c => PESSOAS.filter(p=>p.confianca===c).length;
+  const comEmail = PESSOAS.filter(p=>p.email).length;
+  const estudios = new Set(PESSOAS.map(p=>p.estudio)).size;
+
+  $("#joeTotalEnvios").textContent = ENVIOS;
+  $("#joeComNome").textContent = ESTUDIOS_PESSOA;
+  $("#joeBadge").textContent = total
+    ? total+" pessoas · "+comEmail+" com email · "+estudios+" estúdios"
+    : "ainda sem rodada registrada";
+
+  $("#joeTiles").innerHTML = [
+    ["👤", total, "Pessoas capturadas", estudios+" estúdios alcançados por nome"],
+    ["✉️", comEmail, "Com endereço na mão", por("alta")+" de fonte publicada · "+por("media")+" por padrão de domínio"],
+    ["🔑", PADROES.length, "Padrões de domínio provados", "cada um transforma qualquer nome novo daquela casa em alvo"],
+    ["📭", por("sem-email"), "Nome sem endereço ainda", "guardados até aparecer uma via de contato"]
+  ].map(([ic,n,l,d])=>`<div class="tile"><div class="h"><span>${ic}</span>${esc(l)}</div><div class="n">${n}</div><div class="d">${esc(d)}</div></div>`).join("");
+
+  const chips = [["todas","Todas",total],["alta","Confiança alta",por("alta")],
+                 ["media","Confiança média",por("media")],["sem-email","Sem email",por("sem-email")]];
+  $("#joeChips").innerHTML = chips.filter(c=>c[2]||c[0]==="todas")
+    .map(([k,l,n])=>`<button class="chipbtn${joeFiltro===k?" on":""}" data-joe="${k}">${esc(l)} <span style="color:var(--muted)">${n}</span></button>`).join("");
+
+  const lista = joeFiltro==="todas" ? PESSOAS : PESSOAS.filter(p=>p.confianca===joeFiltro);
+  $("#joeRows").innerHTML = lista.length ? lista.map(p=>{
+    const cor = CONF_COR[p.confianca] || "--axis";
+    // A fonte vem longa e às vezes com URL. Na tela mostra o texto curto; o
+    // inteiro fica no title, para conferir de onde saiu sem poluir a tabela.
+    const fonteCurta = p.fonte.length > 90 ? p.fonte.slice(0,88)+"…" : p.fonte;
+    return "<tr>"
+      + '<td><span class="pname">'+esc(p.pessoa)+"</span></td>"
+      + "<td>"+esc(p.cargo)+"</td>"
+      + "<td>"+esc(p.estudio)+'<div style="color:var(--muted); font-size:11.5px">'+esc(p.pais)+"</div></td>"
+      + "<td>"+(p.email
+          ? '<a href="mailto:'+esc(p.email)+'">'+esc(p.email)+"</a>"
+          : '<span style="color:var(--muted)">sem endereço</span>')+"</td>"
+      + '<td><span class="chip"><span class="dot" style="background:var('+cor+')"></span>'+esc(CONF_ROTULO[p.confianca]||p.confianca)+"</span></td>"
+      + '<td style="color:var(--muted)" title="'+esc(p.fonte)+'">'+esc(fonteCurta)+"</td>"
+      + "</tr>";
+  }).join("") : '<tr><td colspan="6" style="color:var(--muted)">Nenhuma pessoa nesta faixa de confiança ainda.</td></tr>';
+
+  $("#joePadroes").innerHTML = PADROES.length
+    ? '<table><thead><tr><th>🌐 Domínio</th><th>🔤 Formato</th><th>🔎 Provado por</th></tr></thead><tbody>'
+      + PADROES.map(p=>"<tr><td><b>"+esc(p.dominio)+"</b></td><td><code>"+esc(p.formato)+"</code></td>"
+        + '<td style="color:var(--muted)">'+esc(p.prova)+"</td></tr>").join("")
+      + "</tbody></table>"
+    : '<p class="hint">Nenhum padrão provado ainda. O Joe está atrás deles nos papers do SIGGRAPH e nos logs de commit dos repositórios abertos dos grandes.</p>';
+
+  const ESTADO = { rodando:["🔄","var(--blue)","rodando agora"], proximo:["⏭️","var(--warn)","próximo"], regra:["📌","var(--axis)","regra fixa"] };
+  $("#joePassos").innerHTML = JOE_PASSOS.map(([t,d,e])=>{
+    const [ic,cor,rot] = ESTADO[e] || ESTADO.proximo;
+    return '<div class="acao"><span style="font-size:18px">'+ic+"</span><div><b>"+esc(t)
+      + '</b> <span class="chip" style="color:'+cor+'">'+rot+"</span>"
+      + '<div style="color:var(--ink-2); margin-top:2px">'+esc(d)+"</div></div></div>";
+  }).join("");
+}
+
 function renderTiles(){
   const c = counts();
   const a = alcance();
@@ -2458,7 +2811,11 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>render
 
 function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
-  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows(); setupSecoes();
+  renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderJoe(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows(); setupSecoes(); dobrarSecoes();
+  $("#joeChips").addEventListener("click", e=>{
+    const b = e.target.closest("[data-joe]"); if(!b) return;
+    joeFiltro = b.dataset.joe; renderJoe();
+  });
 }
 $("#updated").innerHTML = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR")
   + ' · <b class="carimbo">publicado ' + esc(BUILD) + "</b>";
