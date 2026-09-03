@@ -356,7 +356,8 @@ const DAILY = [
  ["2026-09-02","porta","Blizzard confirmou a candidatura para Lead Character Artist de Overwatch e a FIN Design ganhou perfil completo","A automação passou a criar conta nos portais que exigem cadastro, com sua autorização, e o resultado apareceu logo: a Blizzard aceitou a candidatura para Lead Character Artist de Overwatch em Irvine, com número de candidato e email de confirmação, e é a vaga mais forte do dia porque o anúncio pede textura autoral pintada à mão. Na FIN Design foi criado o perfil no banco de talentos com CV, força 6 de 10, que era o que a auto-resposta deles pedia. A EA de Vancouver ficou no meio do caminho: a conta abre, o formulário da Senior Character Artist foi preenchido, mas o servidor deles devolveu erro interno três vezes, então falta você refazer o envio. Arkane, Mainframe e ZEILT continuam fora de alcance da automação, por bloqueio de rede ou por serem freelance.",""],
  ["2026-09-02","vaga","ThunderRoar Studio abriu Character Modeler com posição remota, e o portfólio deles é Genshin e League of Legends","Você mandou o anúncio que o estúdio publicou no próprio Instagram e ele é dos melhores encaixes que apareceram: Junior e Senior Character Modeler, com vagas remotas disponíveis, numa casa de outsourcing fundada por veteranos da Malásia que assina a Shenhe do Genshin Impact, o Graffiti Squad de League of Legends e o Honor of Kings. É o cargo exato que você procura e o registro estilizado que você domina. O rascunho já está no Gmail para o endereço de contato confirmado no site. A ressalva é a de sempre com outsourcing asiático: o anúncio incentiva candidatos malaios e o contrato pode ser local em moeda fraca, então vale confirmar a faixa antes de avançar.","https://thunder-roar.com/contact/"],
  ["2026-09-02",245,5],
- ["2026-09-03",0,0]
+ ["2026-09-03","envio","Lote 18 saiu de madrugada: Toys for Bob, ThunderRoar e quatro segundas vias","Você rodou o script às 23h22 no seu horário e os seis rascunhos do lote 18 saíram com assinatura e anexos. Entre eles a Toys for Bob, dona de Crash Bandicoot e Spyro, que publica no site que é um time enxuto acostumado a remoto, e a ThunderRoar, que anunciou Character Modeler com posição remota e assina a Shenhe do Genshin Impact. As outras quatro são segundas vias em endereços de recrutamento publicados nos sites, para estúdios que não responderam no endereço genérico. O endereço da Fluffy Dog voltou como inexistente, então aquele caminho fica só pelo formulário do site, e a Golden Wolf respondeu na hora com acuse automático dizendo que revisam todos os portfólios.",""],
+ ["2026-09-03",6,0]
 ];
 const STUDIOS = [
  ["Dreamcraft Entertainment","EUA","jobs@dreamcraft.com",11,"ok"],
@@ -775,12 +776,12 @@ const STUDIOS = [
  ["Alt.VFX","Austrália","recruitment@altvfx.com",17,"ok"],
  ["FIN Design + Effects","Austrália","careers@findesign.com.au",17,"ok"],
  ["Nabi Studios","Singapura","hampus@nabistudios.com",17,"ok"],
- ["ThunderRoar Studio","Malásia","enquiry@thunder-roar.com",18,"rascunho"],
- ["Fluffy Dog Studio (2ª via)","Canadá (Vancouver, 100% remoto)","career@fluffydogstudio.com",18,"rascunho"],
- ["Able & Baker (2ª via)","Espanha (Madri)","jobs@ableandbakerstudios.com",18,"rascunho"],
- ["Cheeky Little Media (2ª via)","Austrália (Sydney)","careers@cheekylittle.com.au",18,"rascunho"],
- ["Golden Wolf (2ª via)","Reino Unido (Londres) e EUA (Nova York)","jobs@goldenwolf.tv",18,"rascunho"],
- ["Toys for Bob","EUA (Novato, CA, remoto)","recruiting@toysforbob.dev",18,"rascunho"],
+ ["ThunderRoar Studio","Malásia","enquiry@thunder-roar.com",18,"ok"],
+ ["Fluffy Dog Studio (2ª via)","Canadá (Vancouver, 100% remoto)","career@fluffydogstudio.com",18,"bounce"],
+ ["Able & Baker (2ª via)","Espanha (Madri)","jobs@ableandbakerstudios.com",18,"ok"],
+ ["Cheeky Little Media (2ª via)","Austrália (Sydney)","careers@cheekylittle.com.au",18,"ok"],
+ ["Golden Wolf (2ª via)","Reino Unido (Londres) e EUA (Nova York)","jobs@goldenwolf.tv",18,"ok"],
+ ["Toys for Bob","EUA (Novato, CA, remoto)","recruiting@toysforbob.dev",18,"ok"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
