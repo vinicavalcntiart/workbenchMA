@@ -63,6 +63,7 @@ global.Calendar = {
 vm.runInThisContext(fs.readFileSync(require('path').join(__dirname, '..', 'agente-agenda.gs'), 'utf8'));
 CFG.SIMULAR = false;
 CFG.VARRER_GMAIL = false;
+CFG.AGENDAS_SEMPRE_BLOQUEIAM = [];   // ligado só na seção própria, mais abaixo
 
 const r = sincronizarAgenda();
 let falhas = 0;
@@ -188,6 +189,34 @@ sincronizarAgenda();
 ok(acoes.insert.some(b => /Team playtest/.test(b.description)), 'com a agenda acrescentada, o playtest vira bloqueio');
 ok(/nenhuma agenda de fora com compromisso perdido/.test(diagnostico()), 'e o diagnóstico para de reclamar');
 CFG.CALENDARIOS_FONTE = ['primary'];
+
+console.log('== agenda de trabalho bloqueia tudo ==');
+elineEventos.push(
+  { id: 'livre-trabalho', summary: 'Focus block', status: 'confirmed', transparency: 'transparent',
+    start: { dateTime: `${AMANHA}T16:00:00-03:00` }, end: { dateTime: `${AMANHA}T17:00:00-03:00` } },
+  { id: 'recusada-trabalho', summary: 'Standup opcional', status: 'confirmed',
+    start: { dateTime: `${AMANHA}T09:30:00-03:00` }, end: { dateTime: `${AMANHA}T10:00:00-03:00` },
+    attendees: [{ self: true, responseStatus: 'declined' }] },
+  { id: 'feriado-trabalho', summary: 'Company holiday', status: 'confirmed',
+    start: { date: AMANHA }, end: { date: '2026-09-05' } },
+);
+CFG.CALENDARIOS_FONTE = ['primary'];                       // de propósito: sem a E-Line aqui
+CFG.AGENDAS_SEMPRE_BLOQUEIAM = ['c_eline@group.calendar.google.com'];
+resetProps(); acoes.insert.length = 0; guards.length = 0;
+sincronizarAgenda();
+const doTrabalho = acoes.insert.map(b => b.extendedProperties.private.chave);
+const temTrabalho = (id) => doTrabalho.includes('c_eline@group.calendar.google.com:' + id);
+ok(temTrabalho('playtest'), 'lê a agenda de trabalho sem precisar repetir o id em CALENDARIOS_FONTE');
+ok(temTrabalho('livre-trabalho'), 'evento marcado como Livre na agenda de trabalho bloqueia');
+ok(temTrabalho('recusada-trabalho'), 'evento recusado na agenda de trabalho bloqueia');
+ok(!temTrabalho('feriado-trabalho'), 'dia inteiro continua de fora, mesmo na agenda de trabalho');
+ok(/bloqueia \(agenda de trabalho\)/.test(diagnostico()), 'o diagnóstico diz de onde veio a regra');
+
+// e a regra não vaza para a agenda pessoal
+ok(!acoes.insert.some(b => b.extendedProperties.private.chave === 'primary:recusada'),
+   'reunião recusada na agenda pessoal continua sem bloquear');
+ok(!acoes.insert.some(b => b.extendedProperties.private.chave === 'primary:livre'),
+   'evento Livre na agenda pessoal continua sem bloquear');
 
 console.log(falhas ? `\n${falhas} FALHA(S)` : '\ntudo passou');
 process.exit(falhas ? 1 : 0);

@@ -53,7 +53,8 @@ isso você quiser, ponha `REMOVER_ORFAOS: false`.
 
 | Situação | O que acontece |
 |---|---|
-| Convite sem resposta na agenda | vira bloqueio, com respiro de 15 min dos dois lados |
+| Qualquer coisa na agenda de trabalho (`AGENDAS_SEMPRE_BLOQUEIAM`) | bloqueia, sem olhar RSVP nem "Livre" |
+| Convite sem resposta na agenda pessoal | vira bloqueio, com respiro de 15 min dos dois lados |
 | Convite que você recusou | ignorado, você está livre mesmo |
 | Evento marcado como "Livre" | ignorado |
 | Aniversário, feriado, local de trabalho | ignorado |
@@ -65,6 +66,24 @@ isso você quiser, ponha `REMOVER_ORFAOS: false`.
 | Teto de one-on-ones por dia | fecha o resto do dia ao bater o teto, desligado por padrão |
 | Sessão marcada com menos de 24h de antecedência | alerta para o Vini; pedido de remarcação ao aluno só com `AUTO_REMARCAR` ligado |
 | Aviso repetido do mesmo conflito | só sai uma vez; o agente guarda o que já avisou por 30 dias |
+
+## A agenda de trabalho é caso à parte
+
+`AGENDAS_SEMPRE_BLOQUEIAM` lista as agendas em que **tudo** tira disponibilidade. Nelas o
+agente não olha RSVP e não olha se o evento está marcado como "Livre": reunião de trabalho
+é reunião de trabalho, confirmada ou não.
+
+```js
+AGENDAS_SEMPRE_BLOQUEIAM: ['vcavalcanti@endlessstudios.com'],
+```
+
+Só ficam de fora evento de dia inteiro (governado por `BLOQUEAR_DIA_INTEIRO`), local de
+trabalho e aniversário, porque não são compromisso.
+
+O que estiver nessa lista já é lido como fonte. Não precisa repetir em `CALENDARIOS_FONTE`.
+
+Na agenda pessoal nada muda: lá o convite recusado continua liberando o horário, e evento
+marcado como "Livre" continua sendo ignorado.
 
 ## Antecedência mínima
 

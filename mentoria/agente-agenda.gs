@@ -39,8 +39,15 @@ const CFG = {
   CALENDARIO_ALVO: 'primary',
 
   // Agendas onde os compromissos reais aparecem. Acrescente aqui o id de qualquer
-  // agenda secundária (E-Line, pessoal) que também deva tirar disponibilidade.
+  // agenda secundária que também deva tirar disponibilidade.
   CALENDARIOS_FONTE: ['primary'],
+
+  // Agendas de trabalho: TUDO nelas tira disponibilidade, sem olhar RSVP e sem olhar
+  // se o evento está marcado como "Livre". Reunião de trabalho é reunião de trabalho,
+  // confirmada ou não. Só ficam de fora evento de dia inteiro (governado por
+  // BLOQUEAR_DIA_INTEIRO), local de trabalho e aniversário, que não são compromisso.
+  // O que estiver aqui já é lido como fonte, não precisa repetir em CALENDARIOS_FONTE.
+  AGENDAS_SEMPRE_BLOQUEIAM: ['vcavalcanti@endlessstudios.com'],
 
   // Quantos dias à frente o agente cuida.
   HORIZONTE_DIAS: 60,
@@ -126,10 +133,10 @@ function sincronizarAgenda() {
   const compromissos = [];
   const oneOnOnes = [];
 
-  CFG.CALENDARIOS_FONTE.forEach(function (calId) {
+  agendasFonte().forEach(function (calId) {
     listarEventos(calId, ini, fim).forEach(function (ev) {
       if (ehBloqueio(ev)) return;
-      if (!ocupado(ev)) return;
+      if (!ocupado(ev, calId)) return;
       const item = { calId: calId, ev: ev, inicio: quando(ev.start), fim: quando(ev.end) };
       if (!item.inicio || !item.fim) return;
       compromissos.push(item);
@@ -225,11 +232,15 @@ function listarEventos(calId, ini, fim, extra) {
   return itens;
 }
 
-function ocupado(ev) {
+function ocupado(ev, calId) {
   if (ev.status === 'cancelled') return false;
-  if (ev.transparency === 'transparent') return false;                 // marcado como Livre
   if (ev.eventType === 'workingLocation' || ev.eventType === 'birthday') return false;
   if (ev.start && ev.start.date && !CFG.BLOQUEAR_DIA_INTEIRO) return false;
+
+  // Agenda de trabalho: bloqueia sem perguntar mais nada.
+  if (sempreBloqueia(calId)) return true;
+
+  if (ev.transparency === 'transparent') return false;                 // marcado como Livre
   if (new RegExp(CFG.IGNORAR_TITULO, 'i').test(ev.summary || '')) return false;
   const eu = (ev.attendees || []).filter(function (a) { return a.self; })[0];
   if (eu && CFG.RSVP_OCUPADO.indexOf(eu.responseStatus) === -1) return false;  // recusado
@@ -268,6 +279,20 @@ function fusoDoCalendario() {
   } catch (e) {
     return Session.getScriptTimeZone();
   }
+}
+
+/** União de CALENDARIOS_FONTE com AGENDAS_SEMPRE_BLOQUEIAM, sem repetição. */
+function agendasFonte() {
+  const vistas = {};
+  return CFG.CALENDARIOS_FONTE.concat(CFG.AGENDAS_SEMPRE_BLOQUEIAM || []).filter(function (id) {
+    if (vistas[id]) return false;
+    vistas[id] = true;
+    return true;
+  });
+}
+
+function sempreBloqueia(calId) {
+  return (CFG.AGENDAS_SEMPRE_BLOQUEIAM || []).indexOf(calId) !== -1;
 }
 
 /* ============================ ESCRITA NA AGENDA ============================ */
@@ -445,7 +470,7 @@ function convitesSoNoGmail(ini, fim) {
 }
 
 function jaEstaNaAgenda(uid) {
-  const alvos = CFG.CALENDARIOS_FONTE.concat([CFG.CALENDARIO_ALVO]);
+  const alvos = agendasFonte().concat([CFG.CALENDARIO_ALVO]);
   for (let i = 0; i < alvos.length; i++) {
     try {
       const r = Calendar.Events.list(alvos[i], { iCalUID: uid, showDeleted: false, maxResults: 5 });
@@ -682,7 +707,7 @@ function resumoMentorados() {
   const fim = new Date(agora.getTime() + CFG.HORIZONTE_DIAS * 24 * 60 * 60 * 1000);
 
   const porAluno = {};
-  CFG.CALENDARIOS_FONTE.forEach(function (calId) {
+  agendasFonte().forEach(function (calId) {
     listarEventos(calId, ini, fim).forEach(function (ev) {
       if (!ehOneOnOne(ev) || ehBloqueio(ev)) return;
       const email = emailDoAluno(ev);
@@ -764,8 +789,9 @@ function todasAsAgendas() {
 }
 
 function ehFonte(cal) {
-  if (CFG.CALENDARIOS_FONTE.indexOf(cal.id) !== -1) return true;
-  return !!cal.primary && CFG.CALENDARIOS_FONTE.indexOf('primary') !== -1;
+  const fontes = agendasFonte();
+  if (fontes.indexOf(cal.id) !== -1) return true;
+  return !!cal.primary && fontes.indexOf('primary') !== -1;
 }
 
 /**
@@ -794,9 +820,9 @@ function diagnostico() {
       const eu = (ev.attendees || []).filter(function (a) { return a.self; })[0];
       let situacao;
       if (ehBloqueio(ev)) situacao = 'bloqueio do agente';
-      else if (!ocupado(ev)) situacao = 'ignorado (evento)';
+      else if (!ocupado(ev, cal.id)) situacao = 'ignorado (evento)';
       else if (!fonte) { situacao = 'PERDIDO: agenda fora das fontes'; faltando[cal.id] = cal; }
-      else situacao = 'bloqueia';
+      else situacao = sempreBloqueia(cal.id) ? 'bloqueia (agenda de trabalho)' : 'bloqueia';
       linhas.push([
         formata(quando(ev.start), tz),
         (ev.summary || 'sem título').substring(0, 40),
@@ -814,7 +840,7 @@ function diagnostico() {
     linhas.push('>> ' + ids.length + ' agenda(s) têm compromisso que deveria tirar disponibilidade');
     linhas.push('>> e o agente não está lendo. Troque CALENDARIOS_FONTE por:');
     linhas.push('');
-    linhas.push('  CALENDARIOS_FONTE: [' + CFG.CALENDARIOS_FONTE.concat(ids).map(function (id) {
+    linhas.push('  CALENDARIOS_FONTE: [' + agendasFonte().concat(ids).map(function (id) {
       return "'" + id + "'";
     }).join(', ') + '],');
   } else {
