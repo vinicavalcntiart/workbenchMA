@@ -115,8 +115,10 @@ function enviarRascunhos() {
   const sobra = MailApp.getRemainingDailyQuota();
   Logger.log(rascunhos.length + " rascunhos da campanha encontrados · cota restante hoje: " + sobra);
   if (sobra <= 0) {
-    Logger.log("COTA ZERADA. Nada foi enviado. Ela se recompõe aos poucos nas 24 horas "
-      + "seguintes a cada envio, então tente de novo daqui a algumas horas ou amanhã.");
+    Logger.log("COTA ZERADA. Nada foi enviado e nenhum rascunho se perdeu. A cota do "
+      + "Apps Script vira no começo do dia no fuso do Pacífico, que é por volta das 4h "
+      + "da manhã em Recife, então amanhã cedo ela já estará cheia. Rode a função cota() "
+      + "antes de enviar para ver com quanto você está trabalhando.");
     return;
   }
   let n = 0;
