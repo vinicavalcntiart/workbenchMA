@@ -22,10 +22,10 @@ const fontes = [
 ];
 
 const guards = [
-  { id: 'g-orfao', summary: '🔒 Indisponível (agente)', status: 'confirmed',
+  { id: 'g-orfao', summary: 'Busy', status: 'confirmed',
     start: { dateTime: `${AMANHA}T20:00:00-03:00` }, end: { dateTime: `${AMANHA}T21:00:00-03:00` },
     extendedProperties: { private: { marca: 'mentoria-guard', chave: 'primary:sumiu', assinatura: 'x' } } },
-  { id: 'g-desatualizado', summary: '🔒 Indisponível (agente)', status: 'confirmed',
+  { id: 'g-desatualizado', summary: 'Busy', status: 'confirmed',
     start: { dateTime: `${AMANHA}T10:00:00-03:00` }, end: { dateTime: `${AMANHA}T11:00:00-03:00` },
     extendedProperties: { private: { marca: 'mentoria-guard', chave: 'primary:sessao1', assinatura: 'antiga' } } },
 ];

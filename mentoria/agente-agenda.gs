@@ -98,7 +98,7 @@ const CFG = {
 
 const MARCA = 'mentoria-guard';
 const VERSAO = 'v1';
-const TITULO_BLOQUEIO = '🔒 Indisponível (agente)';
+const TITULO_BLOQUEIO = 'Busy';
 const COR_BLOQUEIO = '8'; // grafite
 const CHAVE_ULTIMO_RESUMO = 'mentoria.ultimoResumo';
 

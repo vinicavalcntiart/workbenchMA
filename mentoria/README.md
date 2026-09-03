@@ -25,10 +25,15 @@ o que ignorar.
 ```
 convite sem resposta            bloqueio criado pelo agente
 14:00-15:00                     13:45-15:15
-rsvp = needsAction      --->    dono: o Vini
+rsvp = needsAction      --->    título "Busy", dono: o Vini
 o agendamento ignora            sem convidados, transparency = opaque
                                 o agendamento respeita
 ```
+
+O bloqueio aparece na agenda com o título **Busy**, em grafite e com visibilidade
+privada. Para trocar o nome, é a constante `TITULO_BLOQUEIO` no topo do script; o
+agente reconhece o que é dele pela etiqueta interna, não pelo título, então renomear
+não órfã nada que já exista.
 
 Cada bloqueio carrega uma etiqueta interna (`extendedProperties.private.marca`) com a
 chave do compromisso que o originou. É por essa etiqueta que o agente reconhece o que
