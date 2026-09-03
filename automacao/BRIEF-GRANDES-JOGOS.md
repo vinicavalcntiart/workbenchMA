@@ -64,9 +64,10 @@ As mesmas da campanha, em `automacao/respostas-formularios.md`. Os pontos que ma
   no Canadá, CAD 75.000 a 79.999.
 - E-Line Media é o emprego **atual**, sem data de fim. Se o parser preencher, apague.
 - **Telefone com seletor de país separado**: escolha "BR (+55) Brazil" no seletor e escreva
-  apenas `81973062286` no campo do número, sem código, sem espaço e sem hífen. Regra descoberta
-  pelo Vini em 02/09 depois de duas falhas no Eightfold da Netflix. Se o campo for único,
-  aí sim `+55 81 97306 2286`.
+  apenas os dígitos sem o código de país, sem espaço e sem hífen. Regra descoberta pelo Vini
+  em 02/09 depois de duas falhas no Eightfold da Netflix. Se o campo for único, use o formato
+  internacional. Os três formatos do número estão no documento privado do Drive
+  "CAMPANHA - dados pessoais dos formulários": o repositório é público e o número não fica aqui.
 - Captcha com desafio não se burla: registra "à mão" e segue.
 - Nunca escrever nada que sugira hesitação em mudar de país.
 

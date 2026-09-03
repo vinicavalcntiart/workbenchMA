@@ -7,7 +7,7 @@ REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês ful
 ## Dados básicos
 - Nome: Vini Cavalcanti
 - Email: contact@vinicavalcanti.art
-- Telefone: +55 81 97306 2286
+- Telefone: no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 - Portfólio: https://www.artstation.com/viniciuscavalcanti
 - LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
 - Site / escola: https://vinicavalcanti.com
@@ -17,11 +17,11 @@ REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês ful
 - Localização / fuso: Based in Brazil (UTC-3); working remotely with a US team (Arizona) for almost five years
 - Formação: Game Art Specialist (PG Dip), Melies Sao Paulo; MA candidate in Creative Industries, Catholic University of Pernambuco; IELTS certified
 - Title (tratamento): Mr
-- Endereço (Address 1): Estrada do Bonsucesso, 209
+- Endereço (Address 1): no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 - Cidade (Town/City): Olinda
 - Estado (County/State): Pernambuco
 - País (Country): Brazil
-- CEP (Postcode/Zip): 53240-480
+- CEP (Postcode/Zip): no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 
 ## Bio curta (aprox. 50 palavras)
 Senior 3D Character Artist with 10+ years in stylized characters. Modeled and hand-painted Season 1 characters on The Wingfeather Saga at Angel Studios. Almost five years at E-Line Media taking Endstar's hero characters from sculpt to engine. Houdini grooming as well. Portfolio: artstation.com/viniciuscavalcanti

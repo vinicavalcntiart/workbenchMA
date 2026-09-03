@@ -6,8 +6,8 @@ Usadas pela automação em 02/09/2026 nos formulários do Greenhouse (Mob Entert
 
 - Nome: Vini Cavalcanti (First name: Vini; Last name: Cavalcanti)
 - Email: contact@vinicavalcanti.art
-- Telefone: +55 81 97306 2286
-- **Telefone em formulário com seletor de país separado**: país `BR (+55) Brazil` no seletor e apenas `81973062286` no campo do número, sem código, espaço ou hífen. Confirmado à mão pelo Vini no Eightfold da Netflix em 02/09: repetir o `+55` no campo do número faz a validação recusar. Vale para qualquer ATS com seletor de país ao lado do campo (Eightfold, Greenhouse, Workday). Quando o campo é único e o próprio texto de ajuda pede o código (ex.: Paylocity, "start with a + and then the country code"), aí sim usar `+5581973062286`.
+- Telefone e endereço residencial: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários", na pasta da campanha. Não estão aqui porque este repositório é público. O documento traz os três formatos do número, prontos para copiar.
+- **Telefone em formulário com seletor de país separado**: país `BR (+55) Brazil` no seletor e, no campo do número, **apenas os dígitos sem o código de país**, sem espaço e sem hífen. Confirmado à mão pelo Vini no Eightfold da Netflix em 02/09: repetir o `+55` no campo do número faz a validação recusar. Vale para qualquer ATS com seletor de país ao lado do campo (Eightfold, Greenhouse, Workday). Quando o campo é único e o próprio texto de ajuda pede o código (ex.: Paylocity, "start with a + and then the country code"), aí sim usar o formato internacional sem espaço.
 - Cidade: Olinda, Pernambuco, Brazil
 - País de residência: Brazil
 - LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
@@ -191,7 +191,7 @@ corrigido aqui.** O seletor funciona, e na prática nem precisa ser tocado.
 3. Depois do anexo, o **parser do Eightfold preenche sozinho** o código de país (`🇧🇷 (+55) Brazil`), o
    campo Country (`Brazil`) e o campo State (`Pernambuco`), lendo do próprio currículo. Não mexer neles:
    digitar por cima só concatena texto e quebra o campo.
-4. O campo do número aceita **`81973062286`** e mais nada (sem `+55`, sem espaço, sem hífen).
+4. O campo do número aceita **só os dígitos sem o código de país** e mais nada (sem `+55`, sem espaço, sem hífen). O valor está no documento privado do Drive.
 5. Com isso o formulário fecha inteiro, sem um único erro de validação.
 
 **O que trava mesmo:** o `POST` final para `https://explore.jobs.netflix.net/api/application/v2/submit`
@@ -204,7 +204,7 @@ Não é desafio de imagem, não há o que resolver, e não se burla. No navegado
 1. Abrir o link da vaga e clicar em `APPLY NOW`.
 2. `SELECT FILE` → `Vini_Cavalcanti_CV.pdf`. Aceitar o modal com **I ACKNOWLEDGE**.
 3. Conferir que Email / First name / Last name / Country / State vieram certos; City = `Olinda`.
-4. Telefone: deixar o seletor como veio (`BR (+55) Brazil`) e digitar só `81973062286`.
+4. Telefone: deixar o seletor como veio (`BR (+55) Brazil`) e digitar só os dígitos sem o código de país (valor no documento privado do Drive).
 5. Self-ID (gênero, etnia, orientação): marcar **I choose not to disclose** nos três.
    Veterano dos EUA, pessoa trans e deficiência: **I choose not to disclose** nos três.
 6. Additional Documents: `SELECT FILES` → `Vini_Cavalcanti_Cover_Letter.pdf`.
