@@ -732,26 +732,96 @@ function removerAcionador() {
 }
 
 /**
- * Diagnóstico: lista os compromissos das próximas 2 semanas e diz, para cada um,
- * se o agente o considera ocupado e por quê. Use quando algo passar batido.
+ * Lista todas as agendas desta conta e diz quais o agente está lendo hoje.
+ * É por aqui que se descobre o id da agenda de trabalho (E-Line) para acrescentar
+ * em CALENDARIOS_FONTE.
+ */
+function listarAgendas() {
+  const linhas = ['AGENDAS DESTA CONTA', ''];
+  todasAsAgendas().forEach(function (c) {
+    linhas.push((ehFonte(c) ? '[LENDO]     ' : '[ignorada]  ') + (c.summary || '(sem nome)') +
+      (c.primary ? '  (principal)' : ''));
+    linhas.push('            id: ' + c.id);
+    linhas.push('            acesso: ' + c.accessRole +
+      (c.accessRole === 'freeBusyReader' ? '  <- só livre/ocupado, o agente não consegue ler os eventos' : ''));
+    linhas.push('');
+  });
+  linhas.push('Para o agente passar a ler uma agenda ignorada, copie o id dela para');
+  linhas.push('CALENDARIOS_FONTE, no topo do script.');
+  Logger.log(linhas.join('\n'));
+  return linhas.join('\n');
+}
+
+function todasAsAgendas() {
+  const itens = [];
+  let pageToken = null;
+  do {
+    const r = Calendar.CalendarList.list({ maxResults: 250, pageToken: pageToken });
+    (r.items || []).forEach(function (c) { itens.push(c); });
+    pageToken = r.nextPageToken;
+  } while (pageToken);
+  return itens;
+}
+
+function ehFonte(cal) {
+  if (CFG.CALENDARIOS_FONTE.indexOf(cal.id) !== -1) return true;
+  return !!cal.primary && CFG.CALENDARIOS_FONTE.indexOf('primary') !== -1;
+}
+
+/**
+ * Diagnóstico: varre TODAS as agendas da conta, não só as configuradas, e diz para
+ * cada compromisso das próximas 2 semanas se o agente o considera ocupado e por quê.
+ * No fim, aponta as agendas que têm compromisso ocupado mas estão fora de
+ * CALENDARIOS_FONTE. É o primeiro lugar para olhar quando algo passa batido.
  */
 function diagnostico() {
   const tz = fusoDoCalendario();
   const agora = new Date();
   const fim = new Date(agora.getTime() + 14 * 24 * 60 * 60 * 1000);
-  const linhas = [];
-  CFG.CALENDARIOS_FONTE.forEach(function (calId) {
-    listarEventos(calId, agora, fim).forEach(function (ev) {
+  const linhas = ['COMPROMISSOS DAS PRÓXIMAS 2 SEMANAS', ''];
+  const faltando = {};
+
+  todasAsAgendas().forEach(function (cal) {
+    const fonte = ehFonte(cal);
+    let eventos = [];
+    try {
+      eventos = listarEventos(cal.id, agora, fim);
+    } catch (e) {
+      linhas.push('!! não consegui ler "' + (cal.summary || cal.id) + '": ' + e);
+      return;
+    }
+    eventos.forEach(function (ev) {
       const eu = (ev.attendees || []).filter(function (a) { return a.self; })[0];
+      let situacao;
+      if (ehBloqueio(ev)) situacao = 'bloqueio do agente';
+      else if (!ocupado(ev)) situacao = 'ignorado (evento)';
+      else if (!fonte) { situacao = 'PERDIDO: agenda fora das fontes'; faltando[cal.id] = cal; }
+      else situacao = 'bloqueia';
       linhas.push([
         formata(quando(ev.start), tz),
-        (ev.summary || 'sem título').substring(0, 45),
-        ehBloqueio(ev) ? 'BLOQUEIO DO AGENTE' : (ocupado(ev) ? 'ocupado' : 'ignorado'),
+        (ev.summary || 'sem título').substring(0, 40),
+        (cal.summary || cal.id).substring(0, 22),
+        situacao,
         'rsvp=' + (eu ? eu.responseStatus : 'sem convite'),
         'transp=' + (ev.transparency || 'opaque'),
       ].join(' | '));
     });
   });
+
+  const ids = Object.keys(faltando);
+  if (ids.length) {
+    linhas.push('');
+    linhas.push('>> ' + ids.length + ' agenda(s) têm compromisso que deveria tirar disponibilidade');
+    linhas.push('>> e o agente não está lendo. Troque CALENDARIOS_FONTE por:');
+    linhas.push('');
+    linhas.push('  CALENDARIOS_FONTE: [' + CFG.CALENDARIOS_FONTE.concat(ids).map(function (id) {
+      return "'" + id + "'";
+    }).join(', ') + '],');
+  } else {
+    linhas.push('');
+    linhas.push('>> nenhuma agenda de fora com compromisso perdido.');
+  }
+
   Logger.log(linhas.join('\n'));
   return linhas.join('\n');
 }

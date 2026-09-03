@@ -112,9 +112,33 @@ O agente cuida do resto, que a configuração nativa não cobre:
 | Função | Para quê |
 |---|---|
 | `sincronizarAgenda` | a rodada normal; é ela que o acionador chama |
-| `diagnostico` | lista os compromissos das próximas 2 semanas e diz, para cada um, se o agente o considera ocupado e por quê. Use quando algo passar batido |
+| `listarAgendas` | todas as agendas da conta, com o id de cada uma e se o agente está lendo ou ignorando |
+| `diagnostico` | varre **todas** as agendas e diz, compromisso a compromisso, se bloqueia, se é ignorado ou se está PERDIDO numa agenda fora das fontes. Primeiro lugar para olhar quando algo passa batido |
 | `resumoMentorados` | panorama dos alunos: sessões, semana do programa de 10, sessões marcadas à frente |
 | `instalarAcionador` / `removerAcionador` | liga e desliga a rodada automática |
+
+## Quando um compromisso passa batido
+
+A causa quase sempre é a mesma: ele está numa **agenda secundária** que o agente não lê.
+No Google Calendar a cor do evento vem da agenda, então um bloco de cor diferente do
+resto costuma ser exatamente isso. Reunião de trabalho da E-Line é o caso clássico.
+
+Rode `diagnostico`. Ele varre todas as agendas da conta, marca o que está fora do alcance
+e no fim entrega a linha pronta para colar:
+
+```
+03/09 às 13:30 | Team playtest!    | E-Line          | PERDIDO: agenda fora das fontes | rsvp=needsAction
+03/09 às 19:00 | Rafa Souza | ...  | Vini Cavalcanti | bloqueia                        | rsvp=needsAction
+
+>> 1 agenda(s) têm compromisso que deveria tirar disponibilidade
+>> e o agente não está lendo. Troque CALENDARIOS_FONTE por:
+
+  CALENDARIOS_FONTE: ['primary', 'c_abc123@group.calendar.google.com'],
+```
+
+Se a agenda aparecer com `acesso: freeBusyReader`, você só tem permissão de livre/ocupado
+nela e o agente não consegue ler os eventos. Peça acesso de leitura a quem for dono, ou
+deixe a agenda de fora e conte com a varredura do Gmail para os convites.
 
 ## Emails que ele manda
 

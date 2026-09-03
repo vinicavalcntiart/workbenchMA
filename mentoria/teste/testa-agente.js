@@ -21,6 +21,13 @@ const fontes = [
     attendees: [{ self: true, responseStatus: 'accepted' }, { email: 'aluno@escola.com', displayName: 'Marina Reis' }] },
 ];
 
+// A agenda de trabalho, que o agente NÃO está lendo: é o caso do Team playtest.
+const elineEventos = [
+  { id: 'playtest', summary: 'Team playtest!', status: 'confirmed',
+    start: { dateTime: `${AMANHA}T13:30:00-03:00` }, end: { dateTime: `${AMANHA}T15:00:00-03:00` },
+    attendees: [{ self: true, responseStatus: 'needsAction' }] },
+];
+
 const guards = [
   { id: 'g-orfao', summary: 'Busy', status: 'confirmed',
     start: { dateTime: `${AMANHA}T20:00:00-03:00` }, end: { dateTime: `${AMANHA}T21:00:00-03:00` },
@@ -31,14 +38,21 @@ const guards = [
 ];
 
 const acoes = { insert: [], patch: [], remove: [] };
+const agendas = [
+  { id: 'vini@gmail.com', summary: 'Vini Cavalcanti', primary: true, accessRole: 'owner' },
+  { id: 'c_eline@group.calendar.google.com', summary: 'E-Line', accessRole: 'reader' },
+];
+const porAgenda = { 'vini@gmail.com': fontes, 'c_eline@group.calendar.google.com': elineEventos };
 global.Calendar = {
+  CalendarList: { list: () => ({ items: agendas }) },
   Calendars: { get: () => ({ timeZone: 'America/Sao_Paulo' }) },
   Events: {
     list: (calId, p) => {
       if (p.privateExtendedProperty) return { items: guards };
       if (p.iCalUID) return { items: [] };
       const ini = dia(p.timeMin), fim = dia(p.timeMax);
-      return { items: fontes.filter(e => dia(e.start.dateTime) < fim && dia(e.end.dateTime) > ini) };
+      const lista = porAgenda[calId] || (calId === 'primary' ? fontes : []);
+      return { items: lista.filter(e => dia(e.start.dateTime) < fim && dia(e.end.dateTime) > ini) };
     },
     insert: (body, calId) => acoes.insert.push(body),
     patch: (body, calId, id) => acoes.patch.push({ id, body }),
@@ -155,6 +169,25 @@ const dur = (dia(rolante.end.dateTime) - dia(rolante.start.dateTime)) / 3600000;
 ok(dur >= 24 && dur <= 24.5, 'cobre pelo menos as 24h pedidas, nunca menos (' + dur.toFixed(2) + 'h)');
 ok(dia(rolante.start.dateTime) <= new Date(), 'começa agora, não deixa brecha antes');
 CFG.BLOQUEIO_ROLANTE = false;
+
+console.log('== diagnóstico acha a agenda que falta ==');
+const diag = diagnostico();
+ok(/Team playtest/.test(diag), 'enxerga evento de agenda que não é fonte');
+ok(/PERDIDO: agenda fora das fontes/.test(diag), 'marca o evento como perdido');
+ok(/c_eline@group\.calendar\.google\.com/.test(diag), 'nomeia o id da agenda que falta');
+ok(/CALENDARIOS_FONTE: \['primary', 'c_eline@group\.calendar\.google\.com'\]/.test(diag), 'entrega a linha de config pronta para colar');
+ok(/Rafa|E-Line weekly sync/.test(diag), 'continua listando os eventos da agenda principal');
+
+const agendasLog = listarAgendas();
+ok(/\[LENDO\].*Vini Cavalcanti/.test(agendasLog), 'marca a agenda principal como lida');
+ok(/\[ignorada\].*E-Line/.test(agendasLog), 'marca a agenda da E-Line como ignorada');
+
+CFG.CALENDARIOS_FONTE = ['primary', 'c_eline@group.calendar.google.com'];
+resetProps(); acoes.insert.length = 0; guards.length = 0;
+sincronizarAgenda();
+ok(acoes.insert.some(b => /Team playtest/.test(b.description)), 'com a agenda acrescentada, o playtest vira bloqueio');
+ok(/nenhuma agenda de fora com compromisso perdido/.test(diagnostico()), 'e o diagnóstico para de reclamar');
+CFG.CALENDARIOS_FONTE = ['primary'];
 
 console.log(falhas ? `\n${falhas} FALHA(S)` : '\ntudo passou');
 process.exit(falhas ? 1 : 0);
