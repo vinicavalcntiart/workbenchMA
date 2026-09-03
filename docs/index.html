@@ -261,8 +261,8 @@
       <div id="funnel"></div>
     </div>
     <div class="card">
-      <h3>🚦 Situação dos estúdios contatados</h3>
-      <p class="hint">Onde cada um dos contatados está agora</p>
+      <h3>🚦 Situação dos envios</h3>
+      <p class="hint">Onde está agora cada email que saiu</p>
       <div id="statusbar"></div>
       <div class="legend" id="statusLegend"></div>
     </div>
@@ -273,7 +273,7 @@
       <div class="legend" id="tlLegend"></div>
     </div>
     <div class="card">
-      <h3>📦 Estúdios por lote de envio</h3>
+      <h3>📦 Emails por lote de envio</h3>
       <p class="hint">Cada lote é uma rodada de envio; toque na barra para ver a data</p>
       <div id="lotes"></div>
     </div>
@@ -310,6 +310,7 @@
       <div class="legend" id="portalBarraLegend"></div>
     </div>
     <p class="hint" id="portalHint"></p>
+    <div class="chips" id="portalChips"></div>
     <table>
       <thead><tr>
         <th>✓ Feito</th><th>🏢 Estúdio</th><th>🌍 País</th><th>🔗 Onde aplicar</th><th>🗒️ Origem / nota</th>
@@ -1103,9 +1104,20 @@ const LOTES = (() => {
   return [...m.entries()].sort((a,b)=>a[0]-b[0])
     .map(([b,n]) => [b===0 ? "Pré-campanha" : "Lote "+b, n, dataDoLote(b)]);
 })();
+// Duas contas diferentes, e é de propósito. Uma LINHA do STUDIOS é um email que
+// saiu; estúdio que recebeu segunda via no mesmo endereço tem duas linhas. Por isso
+// "emails enviados" é maior que "estúdios contatados", e os dois aparecem no topo
+// com rótulo próprio. Nenhum é escrito à mão: os dois saem do array e envelhecem
+// junto com ele.
+const ENVIOS = STUDIOS.length;
+const ESTUDIOS_EMAIL = new Set(STUDIOS.map(s => s.email.trim().toLowerCase())).size;
+const SEGUNDAS_VIAS = ENVIOS - ESTUDIOS_EMAIL;
 const EMAILS_PRE = STUDIOS.filter(s=>s.batch===0).length;   // leva de julho e agosto
-const EMAILS_DIA = DAILY.reduce((a,d)=>a+d[1],0);           // de 26/08 em diante, pelo log diário
-const EMAILS_TOTAL = EMAILS_PRE + EMAILS_DIA;
+const EMAILS_CAMPANHA = ENVIOS - EMAILS_PRE;                // de 26/08 em diante
+// O log diário (enviados.csv) conta também os endereços que quicaram e foram
+// trocados por outro, então ele fica sempre um pouco acima da tabela. Os dois estão
+// certos; medem coisas diferentes, e o rodapé diz qual é qual.
+const EMAILS_LOG = EMAILS_PRE + DAILY.reduce((a,d)=>a+d[1],0);
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
@@ -1179,10 +1191,23 @@ const A_MAO_RE = /(?:^|[\s(,;.])[aà]\s+m[ãa]o(?![a-zç])/i;
 function alertaDoGrande(g){
   const n = (g && g[4]) || "";
   if(/alerta[^.]{0,80}(ativo|ativa|criado)/i.test(n) || /coberta pelo cadastro/i.test(n)) return "ativo";
-  if(/bloquead|captcha|datadome/i.test(n)) return "bloqueado";
-  if(/n[ãa]o existe|sem alerta|n[ãa]o deu/i.test(n)) return "inexistente";
+  // Daqui para baixo lê SÓ o trecho da nota que fala do alerta. Sem esse recorte, a
+  // nota da CD Projekt, que cita captcha justamente para dizer que o obstáculo NÃO é
+  // captcha e é do quadro de vagas, entrava na conta de alerta travado, e o painel
+  // pedia dois minutos de captcha que não existem.
+  const i = n.search(/alerta de vaga/i);
+  if(i < 0) return "indefinido";
+  const trecho = n.slice(i);
+  if(/bloquead|captcha|datadome/i.test(trecho)) return "bloqueado";
+  if(/n[ãa]o existe|sem alerta|n[ãa]o deu/i.test(trecho)) return "inexistente";
   return "indefinido";
 }
+// A varredura de jogos marca com "À MÃO em <data>" o portal de estúdio grande que não
+// abre para o navegador automático (muro de cookies, portal que recusa a conexão).
+// Não é vaga travada nem alerta travado: é a varredura inteira daquela casa que passa
+// a depender dele. Fila separada, por isso não entra na conta dos portais.
+const GRANDE_MAO_RE = /[àa]\s+m[ãa]o em \d/i;
+const feitoGrande = g => !!g[5] || !!applied[g[2]];
 function pendencias(){
   const abertos = PORTAIS.filter(p=>!isApplied(p) && !isMorta(p));
   return {
@@ -1190,7 +1215,9 @@ function pendencias(){
     aMao: abertos.filter(p=>A_MAO_RE.test(p.note||"")),
     altas: abertos.filter(p=>prioOf(p)==="alta"),
     pedidas: abertos.filter(p=>p.origem==="email"),
-    alertaBloq: GRANDES.filter(g=>alertaDoGrande(g)==="bloqueado")
+    remotas: abertos.filter(isRemoto),
+    alertaBloq: GRANDES.filter(g=>alertaDoGrande(g)==="bloqueado"),
+    grandeMao: GRANDES.filter(g=>GRANDE_MAO_RE.test(g[4]||"") && !feitoGrande(g))
   };
 }
 
@@ -1282,6 +1309,8 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-09-03","alerta","O agente que responde os estúdios virou o Comunicador e agora fecha sozinho tudo que é fato","Quem lê e responde os emails da campanha deixou de ser uma rotina solta e virou um agente com nome, caráter e documento próprio, o automacao/BRIEF-COMUNICADOR.md. A mudança prática é onde passa a linha. Ele responde sozinho tudo que é fato ou cortesia: recusa explícita, pergunta sobre visto, pedido de portfólio ou de currículo, correção de rota e redirecionamento para formulário, e nesse último caso ele vai ao portal, aplica e só então responde dizendo que a candidatura foi feita. O que compromete você continua com você: convite de entrevista, teste técnico, negociação de salário e oferta viram rascunho pronto no Gmail mais aviso, e nunca email enviado. Na mesma rodada a regra de não disparar email novo deixou de ser texto de prompt e virou trava de ferramenta no .claude/settings.json, que nenhum agente da campanha consegue contornar.",""],
+ ["2026-09-03","alerta","O topo do painel passou a separar estúdio contatado de email enviado","O painel mostrava um número só e ele misturava as duas coisas. Agora são dois, e os dois saem do array na hora de desenhar a página: 413 endereços de estúdio receberam a sua carta e 421 emails saíram, porque oito estúdios levaram segunda via no mesmo endereço. Junto entraram quatro contas que faltavam, todas calculadas e nenhuma escrita à mão: candidaturas por portal feitas contra confirmadas pelo estúdio, quantos dos estúdios grandes já receberam candidatura sua, quantas vagas morreram antes de dar tempo e quantos portais de casa grande só abrem na sua mão. A CD Projekt Red saiu da conta de alerta travado no captcha, porque a nota dela cita captcha justamente para dizer que o obstáculo é outro, o muro de consentimento de cookies do quadro de vagas, e agora ela aparece na fila certa.",""],
  ["2026-09-03","porta","Cinco candidaturas na primeira rodada dos grandes de jogos, e a Epic ficou coberta inteira","A rotina de jogos rodou pela primeira vez e saíram cinco candidaturas com tela de confirmação, todas em casa grande. Na Riot foram duas: o Principal Concept Artist de ambiente e personagem de League of Legends, que entrou pela sua regra de não filtrar senioridade, e a Senior Art Outsourcing Manager de Weapon Concept do time de Skins de VALORANT, que talvez seja a melhor da rodada, porque o anúncio pede exatamente uma mistura de artista veterano de produção com especialista em logística, dando retorno e direção a fornecedor externo, que é o seu passado de casa de outsourcing visto do outro lado do balcão. Na Epic foram três: a Modeling Outsource Lead de Montreal, a mesma vaga na sede da Carolina do Norte e a Hard Surface Outsource Lead do Fortnite, também na sede. Somando a de Porto Alegre que já tinha saído em 31/08, a família inteira de liderança de outsourcing da Epic está coberta. Duas dessas ficaram travadas quando o ambiente reiniciou no meio da madrugada e foram refeitas do zero. O resto da rodada foi varredura e o retrato é sóbrio: a Xbox Gaming só tem dois quadros vivos, Blizzard e King, e a única vaga de personagem é a de Overwatch em que você já entrou. A Microsoft, que cobre Halo Studios, Rare, Obsidian, Mojang e Bethesda, não tem uma única vaga de arte de jogo aberta hoje. A PlayStation, com 197 requisições no quadro global, tem só duas de arte, e nenhuma de personagem. A 2K não abriu nada novo, e Roblox, Bungie, Nintendo, Amazon Games e Krafton também não têm arte de personagem no ar. Três vagas foram vistas e deixadas de fora de propósito, e o motivo é sempre disciplina e nunca nível: o concept de ambiente da Santa Monica Studio, a chefia de concept art da Riot em Singapura e a artista 2D de Unity da King em Barcelona.",""],
  ["2026-09-03","alerta","A rotina diária dos estúdios grandes ganhou uma irmã só de jogos, e ela começa pelos portais que cobrem famílias inteiras","A varredura diária que já cuidava dos grandes da animação agora tem uma gêmea para os grandes de jogos, pela mesma razão: vaga de personagem em casa grande dura poucos dias e as primeiras 48 horas valem mais que todo o resto. A ordem de visita começa pelos portais que cobrem várias marcas de uma vez, porque uma candidatura ali alcança uma família inteira. O Workday do Xbox cobre Activision, Blizzard e King, e foi por ele que a sua Lead Character Artist de Overwatch entrou. O careers da Microsoft cobre Halo Studios, The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang e Bethesda. O da Sony cobre Naughty Dog, Insomniac, Santa Monica, Sucker Punch, Guerrilla, Bend, Bluepoint, Firesprite e Housemarque. O da EA cobre Respawn, BioWare, Motive, Criterion e Maxis, e a conta já existe. O Greenhouse da 2K cobre Cloud Chamber, Firaxis, Hangar 13 e Visual Concepts. Só depois vêm os portais próprios, com Riot e Epic na frente por serem estilizado puro, que é o seu registro. Três casas já entram marcadas como sempre à mão, porque o envio pede captcha de desafio: Valve, Larian e Ubisoft. E vale a regra que você fixou ontem, de que em estúdio grande não se filtra senioridade: júnior, mid, sênior, lead e principal, tudo recebe candidatura.",""],
  ["2026-09-03","envio","Lote 18 saiu de madrugada: Toys for Bob, ThunderRoar e quatro segundas vias","Você rodou o script às 23h22 no seu horário e os seis rascunhos do lote 18 saíram com assinatura e anexos. Entre eles a Toys for Bob, dona de Crash Bandicoot e Spyro, que publica no site que é um time enxuto acostumado a remoto, e a ThunderRoar, que anunciou Character Modeler com posição remota e assina a Shenhe do Genshin Impact. As outras quatro são segundas vias em endereços de recrutamento publicados nos sites, para estúdios que não responderam no endereço genérico. O endereço da Fluffy Dog voltou como inexistente, então aquele caminho fica só pelo formulário do site, e a Golden Wolf respondeu na hora com acuse automático dizendo que revisam todos os portfólios.",""],
@@ -1504,14 +1533,18 @@ function renderAcoes(){
   if(c.aberto > 0)
     items.push(["urgente","🔥",`<b>${c.aberto} resposta${c.aberto>1?"s":""} positiva${c.aberto>1?"s":""}</b> esperando você responder pessoalmente`,"#estudios"]);
   // O que só ele pode fazer vem antes de tudo: é a fila que a automação não desafoga.
+  // Cada cartão abre a tabela de portais já filtrada no balde dele, senão ele cai numa
+  // lista de 236 linhas para achar as três que o cartão está falando.
   if(p.altas.length > 0)
-    items.push(["urgente","🎯",`<b>${p.altas.length} vaga${p.altas.length>1?"s quentes":" quente"} sem candidatura</b>, começando pela ${esc(p.altas[0].name)}`,"#portais"]);
+    items.push(["urgente","🎯",`<b>${p.altas.length} vaga${p.altas.length>1?"s quentes":" quente"} sem candidatura</b>, começando pela ${esc(p.altas[0].name)}`,"#portais","alta"]);
   if(p.aMao.length > 0)
-    items.push(["atencao","🖐️",`<b>${p.aMao.length} candidaturas só à mão</b>: captcha de desafio, conta com senha ou portal que não abre para a automação`,"#portais"]);
+    items.push(["atencao","🖐️",`<b>${p.aMao.length} candidaturas só à mão</b>: captcha de desafio, conta com senha ou portal que não abre para a automação`,"#portais","mao"]);
+  if(p.grandeMao.length > 0)
+    items.push(["atencao","🏆",`<b>${p.grandeMao.length} portais de estúdio grande que só abrem na sua mão</b> (${p.grandeMao.map(g=>esc(g[0].split(/[,:(]/)[0].trim())).join(", ")}): a varredura automática não passa da porta`,"#grandes"]);
   if(p.alertaBloq.length > 0)
     items.push(["atencao","🔔",`<b>${p.alertaBloq.length} alertas de vaga travados no captcha</b> (${p.alertaBloq.map(g=>esc(g[0].replace(/\s+Studios$/,""))).join(", ")}): dois minutos cada, e depois avisam sozinhos`,"#grandes"]);
   if(p.pedidas.length > 0)
-    items.push(["atencao","📝",`<b>${p.pedidas.length} ${p.pedidas.length>1?"estúdios pediram":"estúdio pediu"} aplicação por formulário</b> na resposta ao seu email`,"#portais"]);
+    items.push(["atencao","📝",`<b>${p.pedidas.length} ${p.pedidas.length>1?"estúdios pediram":"estúdio pediu"} aplicação por formulário</b> na resposta ao seu email`,"#portais","abertas"]);
   if(c.bounce > 0)
     items.push(["info","✕",`<b>${c.bounce} bounce sem email válido</b>: a rota que sobra é o formulário do site de cada um`,"#portais"]);
   if(c.drafts > 0)
@@ -1530,9 +1563,15 @@ function renderAcoes(){
   // urgente primeiro, sempre: no celular ele lê os dois primeiros cartões e decide
   const PESO = {urgente:0, atencao:1, info:2, boa:3};
   items.sort((a,b)=>PESO[a[0]]-PESO[b[0]]);
-  $("#acoesList").innerHTML = items.map(([cls,ic,txt,href])=>
-    `<a class="acao ${cls}" href="${href||"#visao"}"><span class="ic">${ic}</span><span>${txt}</span><span class="go">ver →</span></a>`
+  $("#acoesList").innerHTML = items.map(([cls,ic,txt,href,filtro])=>
+    `<a class="acao ${cls}" href="${href||"#visao"}"${filtro?` data-filtro="${filtro}"`:""}><span class="ic">${ic}</span><span>${txt}</span><span class="go">ver →</span></a>`
   ).join("");
+  // o cartão só serve se a seção estiver aberta quando ele chegar lá
+  $("#acoesList").querySelectorAll(".acao[href^='#']").forEach(a=>a.addEventListener("click", ()=>{
+    const alvo = a.getAttribute("href").slice(1);
+    if(alvo === "portais") irParaPortais(a.dataset.filtro);
+    else abrirSecao(alvo);
+  }));
 }
 
 // ---------- tiles ----------
@@ -1541,12 +1580,22 @@ function renderTiles(){
   const a = alcance();
   const rate = c.delivered ? Math.round(100*c.resp/c.delivered) : 0;
   const p = pendencias();
+  // Candidatura por portal: "feita" é o que está marcado, "confirmada" é o que o
+  // estúdio respondeu confirmando. Os dois vêm dos dados, e a distância entre eles é
+  // o que ele marcou à mão e ainda não teve retorno nenhum.
+  const portalFeitas = PORTAIS.filter(isApplied).length;
+  const portalConf = PORTAIS.filter(p2=>p2.done).length;
+  const portalMortas = PORTAIS.filter(isMorta).length;
+  const grandesFeitos = GRANDES.filter(feitoGrande).length;
+  const soVoce = p.aMao.length + p.alertaBloq.length + p.grandeMao.length;
   $("#tiles").innerHTML = [
-    ["🏢", a.total, "Estúdios alcançados", a.porEmail+" por email + "+a.soPortal+" só por portal"],
-    ["🖐️", p.aMao.length + p.alertaBloq.length, "Só você pode fazer", p.aMao.length+" candidaturas à mão + "+p.alertaBloq.length+" alertas com captcha"],
-    ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes para "+CONTACTED.length+" estúdios"],
+    ["🏢", ESTUDIOS_EMAIL, "Estúdios contatados por email", "endereços distintos; "+a.soPortal+" outros alcançados só por portal"],
+    ["📤", ENVIOS, "Emails enviados", LOTES.length+" lotes · "+SEGUNDAS_VIAS+" segundas vias para o mesmo endereço"],
+    ["🖐️", soVoce, "Só você pode fazer", p.aMao.length+" candidaturas à mão + "+p.alertaBloq.length+" alertas com captcha + "+p.grandeMao.length+" portais que não abrem"],
+    ["📝", portalFeitas, "Candidaturas por portal", portalConf+" confirmadas pelo estúdio · "+p.abertos.length+" rotas ainda abertas"],
+    ["🏆", grandesFeitos, "Estúdios grandes com candidatura", "de "+GRANDES.length+" na lista · "+portalMortas+" vagas morreram antes de dar tempo"],
     ["✅", c.delivered, "Estúdios com email entregue", c.bounce+" bounce, o email nunca chegou"],
-    ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
+    ["💬", c.resp, "Respostas humanas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
     ["🚫", c.rec, "Recusas", "todas respondidas; nenhuma ficou sem retorno"],
     ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([ic,n,l,d,up])=>`<div class="tile"><div class="h"><span>${ic}</span>${esc(l)}</div><div class="n">${n}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
@@ -1555,15 +1604,15 @@ function renderTiles(){
 // ---------- funil ----------
 function renderFunnel(){
   const c = counts();
-  const steps = [["Emails enviados", CONTACTED.length],["Entregues", c.delivered],["Respostas", c.resp],["Entrevistas", c.ent],["Ofertas", c.off]];
+  const steps = [["Emails enviados", ENVIOS],["Entregues", c.delivered],["Respostas", c.resp],["Entrevistas", c.ent],["Ofertas", c.off]];
   const ramp = ["--f1","--f2","--f3","--f4","--f5"].map(css);
-  const W=460, rowH=34, padL=96, padR=46, H=steps.length*rowH+6, max=CONTACTED.length;
+  const W=460, rowH=34, padL=96, padR=46, H=steps.length*rowH+6, max=ENVIOS;
   let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Funil da campanha">`;
   steps.forEach(([label,v],i)=>{
     const y=i*rowH+6, bw=Math.max(v>0?4:0,(W-padL-padR)*v/max);
     const pct = i===0 ? "" : ` (${Math.round(100*v/max)}%)`;
     svg += `<text x="${padL-8}" y="${y+15}" text-anchor="end" fill="${css('--ink-2')}">${esc(label)}</text>`;
-    if(v>0) svg += `<rect x="${padL}" y="${y}" width="${bw}" height="22" rx="4" fill="${ramp[i]}" data-tip="<b>${esc(label)}</b>${v} de ${max} estúdios${pct}"/>`;
+    if(v>0) svg += `<rect x="${padL}" y="${y}" width="${bw}" height="22" rx="4" fill="${ramp[i]}" data-tip="<b>${esc(label)}</b>${v} de ${max} envios${pct}"/>`;
     else svg += `<line x1="${padL}" x2="${padL+2}" y1="${y+11}" y2="${y+11}" stroke="${css('--axis')}" stroke-width="22"/>`;
     svg += `<text x="${padL+bw+7}" y="${y+15}" fill="${css('--ink')}" font-weight="600">${v}</text>`;
   });
@@ -1610,7 +1659,7 @@ function renderStatusBar(){
     if(w>34) svg += `<text x="${x+w/2}" y="${barY+barH/2+4}" text-anchor="middle" fill="#ffffff" font-weight="600">${v}</text>`;
     x += w;
   });
-  svg += `<text x="0" y="${H-4}" fill="${css('--muted')}">0</text><text x="${W}" y="${H-4}" text-anchor="end" fill="${css('--muted')}">${total} estúdios</text></svg>`;
+  svg += `<text x="0" y="${H-4}" fill="${css('--muted')}">0</text><text x="${W}" y="${H-4}" text-anchor="end" fill="${css('--muted')}">${total} envios</text></svg>`;
   $("#statusbar").innerHTML = svg;
   $("#statusLegend").innerHTML = segs.map(([label,v,color])=>
     `<span><span class="dot" style="background:${color}"></span>${esc(label)} <b>${v}</b></span>`).join("");
@@ -1670,8 +1719,15 @@ function renderLotes(){
 
 // ---------- países ----------
 function renderPaises(){
-  const byC = {};
-  CONTACTED.forEach(s=>{ byC[s.country]=(byC[s.country]||0)+1; });
+  // Conta ESTÚDIO e não linha: quem levou segunda via no mesmo endereço tem duas
+  // linhas, e sem esta dedução o mapa somava 421 e brigava com o número do topo.
+  const byC = {}, vistos = new Set();
+  CONTACTED.forEach(s=>{
+    const chave = s.email.trim().toLowerCase();
+    if(vistos.has(chave)) return;
+    vistos.add(chave);
+    byC[s.country]=(byC[s.country]||0)+1;
+  });
   const rows = Object.entries(byC).sort((a,b)=>b[1]-a[1]);
   const blue = css("--blue");
   const W=1020, rowH=26, padL=120, padR=40, H=rows.length*rowH+8, max=rows[0][1];
@@ -2088,9 +2144,6 @@ function renderDossies(){
 // O Vini pediu em 31/08 para elas não poluírem a lista; ficam escondidas por padrão.
 const MORTA_RE = /VAGA EXPIRADA|SEM VAGAS|NÃO EXISTE|NÃO APLICAR|não está mais|não aparece mais|saiu do ar|estúdio fechado|liquida/i;
 const isMorta = p => MORTA_RE.test(p.note||"") && !isApplied(p);
-const MKEY = "campanha-mostrar-mortas-v1";
-let showMortas = false;
-try { showMortas = localStorage.getItem(MKEY) === "1"; } catch(e){}
 
 /* Fechar/expandir seções. Guarda a escolha no navegador do Vini. */
 const SEC_KEY = "campanha-secoes-fechadas-v1";
@@ -2203,10 +2256,30 @@ function renderProspec(){
     : "";
 }
 
+// Filtro de situação da fila de portais. São 236 rotas e a maioria já é histórico:
+// sem isso, para achar as três que dependem dele hoje ele rolava a tabela inteira no
+// celular. Cada balde é uma pergunta que ele faz de verdade ao abrir o painel.
+let portalFiltro = "";
+const PORTAL_BALDES = [
+  ["",        "Tudo que está de pé",  p => !isMorta(p)],
+  ["abertas", "Sem candidatura",      p => !isApplied(p) && !isMorta(p)],
+  ["alta",    "🔥 Vaga quente",       p => !isApplied(p) && !isMorta(p) && prioOf(p)==="alta"],
+  ["mao",     "🖐️ Só à mão",          p => !isApplied(p) && !isMorta(p) && A_MAO_RE.test(p.note||"")],
+  ["remota",  "🌐 Remota",            p => !isApplied(p) && !isMorta(p) && isRemoto(p)],
+  ["feitas",  "✓ Já aplicada",        p => isApplied(p)],
+  ["mortas",  "⨯ Vaga encerrada",     p => isMorta(p)]
+];
+const baldeDoPortal = k => (PORTAL_BALDES.find(b=>b[0]===k) || PORTAL_BALDES[0])[2];
+// Chamado pelos cartões de "O que fazer agora": abre a seção e já filtra a tabela.
+function irParaPortais(filtro){
+  portalFiltro = filtro || "";
+  renderPortais();
+  abrirSecao("portais");
+}
 function renderPortais(){
   const todas = [...PORTAIS];
   const mortas = todas.filter(isMorta);
-  const rows = (showMortas ? todas : todas.filter(p=>!isMorta(p))).sort((a,b)=>{
+  const rows = todas.filter(baldeDoPortal(portalFiltro)).sort((a,b)=>{
     const pa = isApplied(a)?1:0, pb = isApplied(b)?1:0;
     if(pa!==pb) return pa-pb;
     const wa = PRIO_W[prioOf(a)], wb = PRIO_W[prioOf(b)];
@@ -2238,20 +2311,19 @@ function renderPortais(){
       <td><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir aplicação ↗</a></td>
       <td><div class="nota"><span class="ncorpo">${nota}</span>${longa?'<button class="morebtn nmais" type="button">ler a nota inteira</button>':""}</div></td>
     </tr>`;
-  }).join("");
+  }).join("") || '<tr><td colspan="5" style="color:var(--muted)">Nada nesta situação agora.</td></tr>';
   // nota inteira só quando ele pedir: sem isso cada linha vira um parágrafo de dez linhas no celular
   $("#portalRows").querySelectorAll(".nmais").forEach(b=>b.addEventListener("click", ()=>{
     const nota = b.closest(".nota");
     nota.classList.toggle("aberta");
     b.textContent = nota.classList.contains("aberta") ? "recolher a nota" : "ler a nota inteira";
   }));
+  $("#portalChips").innerHTML = PORTAL_BALDES.map(([k,label,teste])=>
+    `<button class="chipbtn${portalFiltro===k?" on":""}" data-b="${k}">${esc(label)} ${PORTAIS.filter(teste).length}</button>`).join("");
+  $("#portalChips").querySelectorAll("button").forEach(b=>b.addEventListener("click", ()=>{
+    portalFiltro = b.dataset.b; renderPortais();
+  }));
   updatePortalHint(mortas.length);
-  const tg = $("#mortasToggle");
-  if(tg) tg.addEventListener("click", ()=>{
-    showMortas = !showMortas;
-    try { localStorage.setItem(MKEY, showMortas?"1":"0"); } catch(e){}
-    renderPortais();
-  });
   // atualiza só a linha clicada; a ordenação muda apenas na próxima visita, para a lista não pular sob o clique
   $("#portalRows").querySelectorAll("input[type=checkbox]").forEach(cb=>{
     cb.addEventListener("change", ()=>{
@@ -2276,7 +2348,8 @@ function updatePortalHint(mortasCount){
   ], "rotas por formulário", "Situação das aplicações por portal");
   $("#portalBadge").textContent = `${doneCount} feitas de ${vivas} abertas · ${manuais} só à mão · ${mortas} encerradas`;
   $("#portalHint").innerHTML =
-    (mortas ? `<b>${mortas} vaga${mortas===1?"":"s"} encerrada${mortas===1?"":"s"}</b> (expirada, estúdio sem vagas ou caminho fechado) ${showMortas?"aparecendo na lista":"escondida"+(mortas===1?"":"s")+" para não poluir"}. <button id="mortasToggle" class="copybtn" style="margin-left:4px">${showMortas?"esconder":"mostrar"}</button><br>` : "") +
+    `<b>Comece pelos botões abaixo</b>: eles separam o que ainda depende de você do que já é histórico. ` +
+    `As <b>${mortas} vaga${mortas===1?"":"s"} encerrada${mortas===1?"":"s"}</b> (expirada, estúdio sem vagas ou caminho fechado) ficam fora da lista até você pedir. ` +
     `<b><span class="chip prio-chip-media" style="font-size:12.5px">🖐️ à mão</span> marca as ${manuais} que a automação não consegue enviar</b> por captcha de desafio, conta com senha ou portal que não abre para ela; o motivo exato está na nota de cada linha. ` +
     `${p.pedidas.length} ${p.pedidas.length===1?"pedido feito por email ainda pendente":"pedidos feitos por email ainda pendentes"}. ` +
     `Prioridade pela mensagem recebida e pelo encaixe da vaga: <span class="prio-chip-alta">🔥 alta</span> = pediram diretamente ou vaga com seu perfil exato · <span class="prio-chip-media">média</span> = redirecionamento padrão ou vaga próxima · <span class="prio-chip-baixa">baixa</span> = sem sinal do estúdio. ` +
@@ -2388,8 +2461,11 @@ function renderAll(){
 $("#updated").innerHTML = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR")
   + ' · <b class="carimbo">publicado ' + esc(BUILD) + "</b>";
 // O rodapé contava 159 emails desde que a campanha tinha 149 estúdios; agora sai dos dados.
-$("#rodapeNums").textContent = EMAILS_TOTAL + " emails para " + STUDIOS.length + " estúdios, sendo "
-  + EMAILS_PRE + " na leva pré-campanha de julho e agosto e " + EMAILS_DIA + " de 26/08 em diante";
+$("#rodapeNums").textContent = ENVIOS + " emails para " + ESTUDIOS_EMAIL + " endereços, sendo "
+  + EMAILS_PRE + " na leva pré-campanha de julho e agosto e " + EMAILS_CAMPANHA + " de 26/08 em diante"
+  + (EMAILS_LOG !== ENVIOS
+      ? " (o log diário soma " + EMAILS_LOG + ", porque conta também os endereços que quicaram e foram trocados)"
+      : "");
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
 if ((Date.now() - new Date(UPDATED+"T12:00:00Z")) > 2*864e5) {
   $("#alertaMsg").textContent = "o site não é atualizado desde " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR") +
