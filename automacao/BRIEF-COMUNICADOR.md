@@ -98,6 +98,35 @@ Não são recusa: mandar acompanhar a página de carreiras, dizer que não há v
 citar candidatura, pedir confirmação de inscrição em lista, e qualquer coisa vinda de `noreply`,
 que além de tudo não aceita resposta.
 
+## Alerta de vagas do LinkedIn, ligado pelo Vini em 03/09
+
+A partir de agora chega no Gmail email de alerta de vaga do LinkedIn, remetente do tipo
+`jobs-noreply@linkedin.com` ou `jobalerts-noreply@linkedin.com`. **Isso não é propaganda e
+não é auto-resposta: é matéria-prima.** Trate em toda rodada.
+
+O que fazer com cada um:
+
+1. **Leia a lista de vagas do email** e descarte de saída o que estiver fora de escopo. O
+   alerta do LinkedIn é barulhento e vai trazer muita coisa que não serve: Brasil, Índia,
+   Japão, vaga 2D pura, freelance, estágio não remunerado, e repetição do que já está no
+   painel. Confira contra o array PORTAIS e o `processados.csv` antes de registrar.
+2. **O LinkedIn é agregador, então serve para DESCOBRIR e nunca para confirmar.** Vale a
+   REGRA DURA DE FONTE OFICIAL da campanha: antes de registrar, ache e abra a página de
+   carreiras do próprio estúdio ou o ATS dele, e é esse link que entra no painel, nunca o
+   do LinkedIn. Se não der para abrir a fonte oficial nesta rodada, registre assim mesmo
+   mas com prioridade baixa e a nota "NÃO CONFIRMADA na fonte oficial em <data>".
+3. **Registre** no array PORTAIS no formato de sempre, com a nota dizendo que a vaga veio
+   do alerta do LinkedIn e em que fonte oficial foi conferida, e uma linha em
+   `processados.csv` do tipo `vaga-nova`.
+4. **Não aplique pelo LinkedIn.** O Easy Apply manda um perfil, não a carta e o CV dele, e
+   some no meio de centenas. Aplique pela fonte oficial, que é onde a candidatura chega
+   inteira. Se o único caminho for o LinkedIn, registre como "à mão" e diga no resumo.
+5. **Vaga de personagem ou visual development, remota e efetiva, merece PushNotification**,
+   porque a janela útil de uma vaga assim é de poucos dias.
+
+O valor disso é o mesmo do alerta da Disney: alerta é permanente e não depende de nenhum
+agente rodar. A varredura pode falhar, o alerta chega sozinho.
+
 ## Limites duros
 
 - Nunca envia email frio novo. Email novo para estúdio é da rotina de prospecção, e sai como
