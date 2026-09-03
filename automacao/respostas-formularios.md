@@ -7,6 +7,7 @@ Usadas pela automação em 02/09/2026 nos formulários do Greenhouse (Mob Entert
 - Nome: Vini Cavalcanti (First name: Vini; Last name: Cavalcanti)
 - Email: contact@vinicavalcanti.art
 - Telefone: +55 81 97306 2286
+- **Telefone em formulário com seletor de país separado**: país `BR (+55) Brazil` no seletor e apenas `81973062286` no campo do número, sem código, espaço ou hífen. Confirmado à mão pelo Vini no Eightfold da Netflix em 02/09: repetir o `+55` no campo do número faz a validação recusar. Vale para qualquer ATS com seletor de país ao lado do campo (Eightfold, Greenhouse, Workday). Quando o campo é único e o próprio texto de ajuda pede o código (ex.: Paylocity, "start with a + and then the country code"), aí sim usar `+5581973062286`.
 - Cidade: Olinda, Pernambuco, Brazil
 - País de residência: Brazil
 - LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
@@ -101,7 +102,7 @@ A automação de 02/09 enviou dez candidaturas e dois cadastros em banco de tale
 
 | Estúdio e vaga | Link do formulário | Motivo |
 |---|---|---|
-| Netflix Animation Studios, Head of Characters (Vancouver) | https://explore.jobs.netflix.net/careers/job/790317384604 (botão Apply abre o Eightfold) | O seletor de código de país do telefone travou no navegador automático; formulário simples de 1 página, com modal de privacidade para aceitar |
+| Netflix Animation Studios, Head of Characters (Vancouver) | https://explore.jobs.netflix.net/careers/job/790317384604 (botão Apply abre o Eightfold) | Ver o bloco "Netflix (Eightfold)" logo abaixo: o formulário se preenche inteiro, o que trava é o envio, por reCAPTCHA invisível |
 | Fortiche Production, candidatura espontânea Become a Forticher | https://forticheprod.com/application/ | O servidor deles derruba a conexão da automação no envio (segunda vez, depois de 27/08); pede departamento, local (Paris ou Las Palmas), software, disponibilidade e texto sobre você |
 | Valve, 3D Character Artist (Bellevue) | https://www.valvesoftware.com/en/jobs?job_id=2 | reCAPTCHA com checkbox visível; campos de nome, email, portfólio, como descobriu a vaga e CV |
 | Lighthouse Games, Lead Character Artist (Leamington Spa) | https://apply.workable.com/lighthousegames/j/F7F90250DA/apply/ | Cloudflare Turnstile antes do formulário do Workable |
@@ -175,3 +176,72 @@ Ficaram para o Vini:
 - Supermassive Games — https://www.supermassivegames.com/careers/speculative-application — a "speculative application" é, na verdade, um email do Workable (supermassive-games@jobs.workablemail.com); enviar CV por email. Guildford, UK, híbrido.
 - KingsIsle Entertainment — https://apply.workable.com/kingsisle-entertainment-inc/ — board Workable atrás de Cloudflare (error 1015), não abre no navegador automático.
 - Little Chicken Game Company — reenviar candidatura para art-jobs@littlechicken.nl (a auto-resposta pede o email da disciplina de arte).
+
+## Netflix (Eightfold): o que realmente trava, e o passo a passo à mão (02/09)
+
+Duas tentativas anteriores registraram "o seletor de código de país do telefone travou". **Isso está errado e fica
+corrigido aqui.** O seletor funciona, e na prática nem precisa ser tocado.
+
+**O que a automação descobriu, testando de verdade:**
+
+1. O formulário só monta depois de clicar em `APPLY NOW` na página da vaga (ir direto em
+   `/careers/apply?pid=...` não renderiza nada). Leva uns 10 segundos.
+2. Assim que o CV é anexado, aparece o modal **Candidate Privacy** — é ele que bloqueia todos os cliques
+   seguintes, e foi ele que passou por "seletor travado" nas tentativas anteriores. Clicar em **I ACKNOWLEDGE**.
+3. Depois do anexo, o **parser do Eightfold preenche sozinho** o código de país (`🇧🇷 (+55) Brazil`), o
+   campo Country (`Brazil`) e o campo State (`Pernambuco`), lendo do próprio currículo. Não mexer neles:
+   digitar por cima só concatena texto e quebra o campo.
+4. O campo do número aceita **`81973062286`** e mais nada (sem `+55`, sem espaço, sem hífen).
+5. Com isso o formulário fecha inteiro, sem um único erro de validação.
+
+**O que trava mesmo:** o `POST` final para `https://explore.jobs.netflix.net/api/application/v2/submit`
+devolve `400 {"message": "Please try again later"}` em toda tentativa — inclusive com navegador de tela
+sob Xvfb. É o **reCAPTCHA invisível** da Netflix reprovando a sessão automatizada (IP de datacenter).
+Não é desafio de imagem, não há o que resolver, e não se burla. No navegador do Vini o mesmo formulário passa.
+
+**Passo a passo à mão (vale para todas as vagas da Netflix abaixo):**
+
+1. Abrir o link da vaga e clicar em `APPLY NOW`.
+2. `SELECT FILE` → `Vini_Cavalcanti_CV.pdf`. Aceitar o modal com **I ACKNOWLEDGE**.
+3. Conferir que Email / First name / Last name / Country / State vieram certos; City = `Olinda`.
+4. Telefone: deixar o seletor como veio (`BR (+55) Brazil`) e digitar só `81973062286`.
+5. Self-ID (gênero, etnia, orientação): marcar **I choose not to disclose** nos três.
+   Veterano dos EUA, pessoa trans e deficiência: **I choose not to disclose** nos três.
+6. Additional Documents: `SELECT FILES` → `Vini_Cavalcanti_Cover_Letter.pdf`.
+   URL: `https://www.artstation.com/viniciuscavalcanti`.
+7. Application Questions: contratante da Netflix hoje → **No**; já trabalhou na Netflix → **No**;
+   precisa de patrocínio de visto → **Yes**.
+8. `SUBMIT APPLICATION`.
+
+Vagas da Netflix abertas em 02/09, em ordem de prioridade (todas em `https://explore.jobs.netflix.net/careers/job/<id>`):
+
+| Vaga | id | Local | Por que |
+|---|---|---|---|
+| Visual Development Artist, Ink | 790317300191 | Los Angeles / Vancouver / Los Gatos | Vis dev puro, dito com todas as letras |
+| Character Designer, Ink | 790317332872 | Los Angeles / Vancouver / Los Gatos | Design de personagem puro |
+| Head of Characters | 790317384604 | Vancouver | Chefia de personagem estilizado |
+| Head of Character Effects (CFX) | 790317396721 | Sydney | CFX encosta no grooming em Houdini; Austrália é a rota de visto mais fácil |
+| Head of Character Effects (CFX) | 790314413902 | Vancouver | Mesma vaga no outro estúdio |
+| CG Artist, Experimental, INK | 790315702145 | Los Angeles / Vancouver / Los Gatos | Generalista 3D, porta de entrada no mesmo time |
+| CG Experimental Artist | 790317300617 | Los Angeles / Vancouver / Los Gatos | Requisição irmã da anterior |
+| Expression of Interest, CFX | 790312834739 | Vancouver | Banco de talentos de CFX |
+
+**Não aplicar**: `790317298520` (Character Modeling Supervisor, Sydney) é a **mesma vaga** em que ele já
+aplicou em 31/08 — vale a regra de uma candidatura por vaga. Fora da disciplina, de propósito:
+Story Artist do Ink (`790317299745`, storyboard 2D) e as duas Environment Modeling Supervisor
+(`790317281901` Sydney e `790314799972` Vancouver), que são de cenário e não de personagem.
+
+**Como varrer a Netflix sem raspar a interface**: a API pública deles devolve tudo em JSON —
+`https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&query=<termo>&start=0&num=20&sort_by=relevance`,
+paginando com `start=20`, `40` etc.
+
+## Alertas de vaga que ficaram para o Vini fazer à mão (02/09)
+
+| Estúdio | Onde | Por que a automação não conseguiu |
+|---|---|---|
+| Walt Disney Animation Studios | disneycareers.com, botão **JOB ALERTS** | O formulário abre inteiro, mas o envio dispara reCAPTCHA com desafio de imagem (nesta conferência, "selecione as motocicletas") |
+| Sony Pictures Animation | sonypicturesjobs.com, bloco **Job Alerts** (Radancy) | Mesmo caso: formulário completo, envio com desafio de imagem ("selecione os semáforos") |
+| DreamWorks Animation | nbcunicareers.com → **Join our Talent Community** → região *United States* | Cai num SmartRecruiters (`join.smartrecruiters.com/NBCUniversal3`) que devolve 403 por DataDome |
+
+Em todos: e-mail `contact@vinicavalcanti.art`, termos `character artist`, `character design`,
+`character modeler` e `visual development`, **sem filtro de senioridade**.
