@@ -11,4 +11,9 @@ s = open(sys.argv[1], encoding='utf-8').read()
 print("\n;\n".join(re.findall(r'<script[^>]*>(.*?)</script>', s, re.S)))
 PY
 cp "$DIR/valida-dashboard.js" "$TMP/stub.js"
-cd "$TMP" && node stub.js
+(cd "$TMP" && node stub.js)
+
+# Rodar sem lancar nao basta: uma entrada de NOVIDADES caida dentro do DAILY nao
+# quebra a pagina, ela publica "19406porta6" no lugar do total de emails. Este
+# segundo passo confere o formato de cada linha dos arrays de dados.
+node "$DIR/valida-formato.mjs" "$DIR/../docs/index.html"
