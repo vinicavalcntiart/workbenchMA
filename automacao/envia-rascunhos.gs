@@ -89,10 +89,24 @@ function enviarRascunhos() {
   const sig = assinatura();
   const files = anexos();
   const rascunhos = GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO);
-  Logger.log(rascunhos.length + " rascunhos da campanha encontrados");
+  // Cota diária do Gmail. Em 03/09 uma execução estourou no meio e morreu com
+  // "Service invoked too many times for one day: email", deixando o Vini sem saber
+  // quantos tinham saído. Perguntar antes é barato e transforma o estouro num aviso.
+  const sobra = MailApp.getRemainingDailyQuota();
+  Logger.log(rascunhos.length + " rascunhos da campanha encontrados · cota restante hoje: " + sobra);
+  if (sobra <= 0) {
+    Logger.log("COTA ZERADA. Nada foi enviado. Ela se recompõe aos poucos nas 24 horas "
+      + "seguintes a cada envio, então tente de novo daqui a algumas horas ou amanhã.");
+    return;
+  }
   let n = 0;
   for (const d of rascunhos) {
     if (n >= MAX_POR_EXECUCAO) break;
+    if (n >= sobra) {
+      Logger.log("PAREI NA COTA: " + n + " enviados, " + (rascunhos.length - n)
+        + " ficaram para a próxima execução. Não é erro.");
+      break;
+    }
     const m = d.getMessage();
     const para = m.getTo();
     if (!para) continue;
