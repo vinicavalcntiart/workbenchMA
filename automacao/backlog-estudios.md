@@ -108,10 +108,10 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Digital Frontier | Japão | dfx.co.jp | portal (sem email público) |
 | Locus / Sidus Animation | Coreia do Sul | locusanimation.com | portal (sem email público) |
 | L'Atelier Animation | Canadá | latelieranimation.com | portal (Cinesite; só ATS) |
-| Arx Anima | Áustria | arxanima.com | portal (sem email público) |
-| Pixel Zoo | Austrália | pixelzoo.com.au | portal (só formulário) |
-| Red Star 3D | Reino Unido | redstar3d.com | portal (sem email público) |
-| Baobab Studios | EUA | baobabstudios.com | portal (sem email público) |
+| Arx Anima | Áustria | arxanima.com | aprovado (talent@arxanima.com publicado na página oficial arxanima.com/career em 03/09, sob o rótulo Applications, ao lado de um convite explícito a candidatura espontânea; rascunho criado no lote 19) |
+| Pixel Zoo | Austrália | pixelzoo.com.au | aprovado (jobs@pixelzoo.com.au publicado na página oficial de carreiras em 03/09, com o pedido explícito de escrever e registrar interesse quando nenhuma vaga listada serve; rascunho criado no lote 19) |
+| Red Star 3D (Red Star Studio) | Reino Unido | redstar3d.com | aprovado (hello@redstar3D.com publicado na própria página de vagas redstar3d.com/jobs em 03/09; nenhuma vaga listada hoje; rascunho criado no lote 19) |
+| Baobab Studios | EUA | baobabstudios.com | portal (sem email público; baobabstudios.com/careers responde 404 em 03/09) |
 | Nørlum | Dinamarca | noerlum.com | descartado (foco 2D) |
 | Big Jump Entertainment | Canadá | bigjumpent.com | descartado (2D híbrido; fora do foco) |
 | Squarefish | Bélgica | squarefish.eu | descartado (motion design) |
@@ -137,7 +137,7 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Graphinica | Japão | graphinica.com | portal (sem email público) |
 | Anima Inc. | Japão | animainc.jp | portal (sem email público) |
 | Sanzigen | Japão | sanzigen.co.jp | portal (sem email público) |
-| Mighty Nice | Austrália | mightynice.com.au | portal (sem email geral público) |
+| Mighty Nice | Austrália | mightynice.com.au | aprovado (careers@mightynice.com.au publicado na página oficial Connect em 03/09; rascunho criado no lote 19) |
 | Copenhagen Bombay | Dinamarca | copenhagenbombay.com | descartado (faliu em 2023) |
 | Duncan Studio | EUA | duncanstudio.com | descartado (foco 2D) |
 | Magic Light Pictures | Reino Unido | magiclightpictures.com | descartado (produtora; anima via estúdios parceiros) |
@@ -160,8 +160,8 @@ Formato: nome | país | pista de domínio | status (pendente / aprovado / portal
 | Supercell | Finlândia | supercell.com | portal (só careers) |
 | Volta | Canadá | volta.ca | portal (Keywords; sem email público) |
 | Amber | Romênia | amberstudio.com | portal (só formulário) |
-| Klang Games | Alemanha | klang-games.com | portal (email não exibido) |
-| Studio Rakete | Alemanha | studiorakete.de | portal (sem email público) |
+| Klang Games | Alemanha | klang-games.com | aprovado (recruitment@klang-games.com publicado na página oficial de carreiras em 03/09, pedindo currículo para posições futuras; rascunho criado no lote 19) |
+| Studio Rakete | Alemanha | studiorakete.de | descartado (duplicado; a página studiorakete.de/job publica jobs2026@studiorakete.de para Initiativbewerbung, mas esse mesmo endereço já recebeu carta em 30/08; linha desta fila estava desatualizada) |
 | RISE Visual Effects Studios | Alemanha | risefx.com | portal (só portal de vagas) |
 | ToonBox Entertainment | Canadá | toonboxent.com | descartado (faliu em 2019) |
 | LAVAlabs Moving Images | Alemanha | lavalabs.de | descartado (email não verificável; domínio ambíguo) |
@@ -233,3 +233,18 @@ Sem prospecção de nomes novos nesta rodada, a fila continua seca. Dois nomes a
 - Escape Velocity Entertainment | remoto (América do Norte, Canadá e Europa) | estúdio 100% remoto com publisher comprometido, contrata na Europa sem exigir residência específica | Workable oficial em apply.workable.com/escape-velocity-entertainment-inc; em 02/09 as 8 vagas abertas são todas de design e engenharia, nenhuma de arte, e as vagas de arte que agregadores mostram já expiraram. Monitorar o board.
 
 Checados e descartados nesta rodada por não terem endereço alternativo publicado: Keos Masons (o site inteiro só publica info@, que já recebeu email em 28/08). Airborn Studios, Art Bully, Steamroller, Puppetworks e Starloop ficaram de fora da segunda via porque já tinham reenvio ou follow-up na thread.
+
+## Rodada de 03/09 (prospecção): a fila de nomes novos está seca
+
+Nenhum item ficou como "pendente" nesta fila. Quatro buscas na web e uma varredura direta pelas APIs oficiais de Greenhouse (Riot, Epic, Sony global, Cloud Chamber, Digital Extremes, Insomniac, Swaybox, Mob), Lever (Behaviour, Avalanche, Skydance, Larian, Blackbird, Kabam, SkyBox, Wildlight, Bento Box), Workable (Rebellion, Lighthouse, Escape Velocity, Nexus, PikPok, Streamline) e Ashby não produziram um único estúdio novo: tudo voltou duplicado. Por isso a rodada foi feita reabrindo os "portal_only" fortes, e é dali que saíram os seis rascunhos do lote 19.
+
+Reabertos e promovidos a aprovado: Arx Anima, Pixel Zoo, Mighty Nice, Red Star 3D e Klang Games (linhas acima atualizadas), mais a terceira via da Fluffy Dog.
+
+Reabertos e mantidos como portal, com o motivo agora verificado e não suposto:
+| Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (a página oficial de vagas abriu em 03/09: o bloco com 3D Character Artist e Concept Artist freelance está comentado no código, ou seja, desativado; o que está vivo são funções futuras de programação e design para o fim de 2026, e nenhum email é publicado) |
+| Nexus Studios | Reino Unido | nexusstudios.com | portal (joinus e careers dão 404, mas o Workable oficial abriu em 03/09 e a General Application de Londres está aberta em apply.workable.com/j/4F41AEB27C; essa é a rota da casa) |
+| Volta | Canadá | volta.ca | portal (página de carreiras no ar em 03/09 com Available Jobs e Open application, sem email publicado) |
+| Amber | Romênia | amberstudio.com | portal (página de carreiras no ar em 03/09, só formulário, sem email publicado) |
+| ZAG Studios | França | zag.com | portal (zag.com responde apenas "Coming soon" em 03/09 e zag.com/careers dá 404; sem rota oficial) |
+| Coatsink | Reino Unido | coatsink.com | portal (o board deles roda em coatsink.careers.haileyhr.app, host bloqueado pelo proxy da automação; sem email público) |
+| Twin Swans | Reino Unido | twinswans.com | portal (o board roda em twinswans.homerun.co, host bloqueado pelo proxy; sem email público) |

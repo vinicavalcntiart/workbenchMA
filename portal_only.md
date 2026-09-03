@@ -310,3 +310,38 @@ Segundas vias criadas (rascunho no Gmail, nada enviado). Nenhum estúdio de tril
 - Able & Baker (Espanha, Madri) — jobs@ableandbakerstudios.com, publicado na página de contato oficial ao lado do contact@. O contact@ recebeu email em 26/08 mais follow-up, sem resposta e sem bounce.
 - Cheeky Little Media (Austrália, Sydney) — careers@cheekylittle.com.au, publicado na página de contato oficial sob o rótulo Come Work With Us. O contact@ recebeu email em 28/08, sem resposta e sem bounce.
 - Golden Wolf (Reino Unido, Londres, e EUA, Nova York) — jobs@goldenwolf.tv, publicado na página de contato oficial sob Careers + Freelance Enquiries. O hello@ recebeu email em 26/08 mais follow-up, sem resposta e sem bounce.
+
+## Rodada de 03/09 (prospecção): fila seca, promoções vindas do próprio portal_only
+
+Varredura: 4 buscas na web (remoto primeiro: senior character artist remoto full-time; visual development e character designer remoto; 3D character artist remoto estilizado na Europa e Canadá; character modeler em estúdio europeu) mais checagem direta das APIs oficiais de Greenhouse, Lever, Workable e Ashby. Nenhum estúdio novo: Mob Entertainment, Rebellion, Lighthouse, Avalanche, Skydance, Behaviour, Cloud Chamber, Riot, Epic, Digital Extremes e Larian já estavam todos registrados, e o dedupe cortou o resto. A fila de nomes novos secou de verdade.
+
+Vagas confirmadas na fonte oficial em 03/09 (nenhuma inédita além da primeira):
+
+- VAGA (ALTA), inédita no painel: Behaviour Interactive (Canadá; Montréal, híbrido) — Senior 3D Character Artist de Dead by Daylight, permanente full-time; fonte oficial aberta em 03/09 pela API do Lever (https://jobs.lever.co/bhvr/18024240-e637-409f-a647-b422541e2dc7). Era citada só dentro da nota de outra vaga e agora tem linha própria. As três requisições de personagem da casa estão abertas ao mesmo tempo: 7 Days to Die (candidatura enviada em 30/08), projeto não anunciado e esta. APLICAR À MÃO, hCaptcha com desafio de imagem.
+- Confirmadas e sem mudança: Avalanche Studios (Lead Character Artist, Estocolmo, Permanent Employment), Skydance Animation (Character Designer em Santa Monica e Senior Grooming TD em Madri, as duas Full Time), Lighthouse Games (Lead Character Artist, Royal Leamington Spa), Ubisoft (Malmö, Montpellier e Montréal, as três Full-time pelo SmartRecruiters), DreamWorks (Visual Development Artist, permanente) e as seis requisições da Netflix Animation registradas no painel, todas presentes na API oficial deles.
+
+Revalidação das entradas mais antigas ainda em alta ou média e sem candidatura (nenhuma morreu hoje):
+
+- CONFIRMADA — Cinesite Montréal: Candidature Spontanée (id 93) aberta na listagem oficial do BambooHR; o quadro subiu para oito posições, com um Senior Lighting TD de VFX novo, e nenhuma é de personagem.
+- CONFIRMADA — Cinesite Vancouver: Speculative Application (id 260) aberta; as outras três continuam sendo Senior FX Artist com foco em água, Senior Animator e Junior Accountant.
+- CONFIRMADA — Palomar / Mediawan Kids & Family: a página de jobs está no ar e o formulário de spontaneous application segue aberto, com anexo de até 5 MB; nenhuma vaga individual listada.
+- NÃO CONFIRMADA (segunda rodada seguida) — Stairway Games: a página de carreiras responde 429 com Vercel Security Checkpoint. Não é 404 nem anúncio removido, então não conta como expirada.
+- NÃO CONFIRMADA — Virtuos: virtuosgames.com/careers responde 403 do Cloudflare mesmo com user agent de navegador, e o Games Jobs Direct exige login. A Character Art Team Leader não pôde ser reaberta.
+- DERRUBADA — Santa Monica Studio (EUA; remoto permitido): a Sr Character Artist do time de External Development que o RemoteGameJobs ainda anuncia não existe na fonte oficial. A API do Greenhouse global da Sony foi aberta em 03/09 e devolve 192 requisições da PlayStation inteira, com apenas duas de arte (Sr Concept Artist de ambiente e uma engenharia de ferramenta de personagem). VAGA EXPIRADA, registrada no painel para não custar outra rodada.
+- ATUALIZADA — Fluffy Dog Studio (Canadá; 100% remoto): a página oficial de carreiras abriu em 03/09 e diz que não há posição aberta, o que confirma que a ArtStation Jobs deles está vazia e não apenas bloqueada. A página tem uma armadilha: o texto visível escreve careers@fluffydogstudio.com e o link do texto e do botão Apply Now aponta para career@fluffydogstudio.com, no singular. O contact@ não respondeu, o career@ quicou em 03/09, e o careers@ do texto virou a terceira via, com rascunho no lote 19.
+
+Rotas oficiais registradas nesta rodada:
+
+- ROTA OFICIAL (MEDIA) — Nexus Studios (Reino Unido; Londres): a General Application do Workable oficial está aberta em https://apply.workable.com/j/4F41AEB27C. Resolve a pendência de 02/09, quando o Workable devolveu 429 e o joinus e o careers do site davam 404. As duas únicas posições do board são essa e uma coordenação de recrutamento por contrato de três meses.
+- SEM VAGA DE ARTE (BAIXA) — Giant Sparrow (EUA; remoto): a página oficial de vagas abriu em 03/09 e o bloco com 3D Character Artist freelance e Concept Artist freelance está comentado no código, ou seja, desativado. O que está vivo são funções futuras para o fim de 2026, todas de programação e design, e nenhum email é publicado.
+
+Promovidos de portal_only para alvo de email (endereço publicado na página oficial, aberta nesta rodada; rascunhos no lote 19, nada enviado):
+
+- arx anima (Áustria, Viena) — talent@arxanima.com, publicado em arxanima.com/career sob o rótulo Applications, ao lado do convite explícito a mandar portfólio para consideração futura. CG de longa e série (Ooops! e a sequência, Talking Tom & Friends). A única posição listada hoje é estágio.
+- Pixel Zoo (Austrália, Brisbane) — jobs@pixelzoo.com.au, publicado na página de carreiras com o pedido de escrever e registrar interesse quando nenhuma vaga listada serve. As listadas em 03/09 são 3D Animator sênior, Compositor mid-sênior e Pipeline Developer, nenhuma de personagem.
+- Mighty Nice (Austrália, Sydney) — careers@mightynice.com.au, publicado na página Connect ao lado do internships@ e do endereço da executiva de produção. Irmã australiana da Nexus de Londres.
+- Red Star Studio (Reino Unido, Sheffield) — hello@redstar3D.com, publicado na própria página de vagas, que está no ar e hoje não lista nenhuma posição. CG dos especiais Tabby McTat e The Scarecrows' Wedding, ou seja, personagem e pelo do começo ao fim.
+- Klang Games (Alemanha, Berlim) — recruitment@klang-games.com, publicado na página de carreiras com o texto pedindo currículo para ser considerado em posições futuras do SEED.
+- Fluffy Dog Studio, terceira via (Canadá, 100% remoto) — careers@fluffydogstudio.com, o endereço que aparece no texto da página de carreiras.
+
+Caiu no dedupe no último passo: Studio Rakete (Alemanha, Hamburgo). A página studiorakete.de/job publica jobs2026@studiorakete.de para Initiativbewerbung, mas esse mesmo endereço já recebeu carta em 30/08. A linha da fila estava desatualizada e foi corrigida.
