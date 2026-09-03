@@ -34,6 +34,14 @@ function limparLinks(texto) {
     if (!m) return todo;
     var destino = m[1].replace(/&amp;/g, "&");
     try { destino = decodeURIComponent(destino); } catch (e) {}
+    // O Gmail às vezes devolve o destino rebaixado para http e sem www. Nos
+    // domínios do Vini isso fica feio no corpo em texto puro, então volta ao
+    // endereço canônico. Só nos domínios dele: reescrever link de terceiro seria
+    // mexer em coisa que não é nossa.
+    destino = destino
+      .replace(/^http:\/\/(?:www\.)?artstation\.com\//i, "https://www.artstation.com/")
+      .replace(/^http:\/\/(?:www\.)?linkedin\.com\//i, "https://www.linkedin.com/")
+      .replace(/^http:\/\/(?:www\.)?vinicavalcanti\.com/i, "https://vinicavalcanti.com");
     return destino;
   });
 }
