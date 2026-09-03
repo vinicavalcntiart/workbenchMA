@@ -42,6 +42,8 @@
   header.top { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
   h1 { font-size:21px; margin:0; }
   .sub { color:var(--ink-2); margin:4px 0 14px; font-size:13px; }
+  /* carimbo de publicação: é como ele sabe se está olhando a versão de agora */
+  .sub .carimbo { color:var(--ink); font-weight:600; white-space:nowrap; }
   nav.secoes { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px; }
   nav.secoes a {
     text-decoration:none; color:var(--ink-2); background:var(--surface);
@@ -89,6 +91,9 @@
   .post .pmeta { display:flex; align-items:center; gap:7px; }
   .post .pcat { font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
   .post .pwhen { margin-left:auto; font-size:11.5px; color:var(--muted); white-space:nowrap; }
+  .post .pnovo { margin-left:auto; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--page); background:var(--blue); border-radius:999px; padding:1px 7px; }
+  .post .pnovo + .pwhen { margin-left:7px; }
   .post .ptit { margin:9px 0 0; font-size:15px; line-height:1.32; font-weight:660; }
   .post .ptxt {
     margin:7px 0 0; font-size:13px; color:var(--ink-2);
@@ -127,6 +132,9 @@
   .card h3 { font-size:14px; margin:0 0 2px; }
   .card .hint { color:var(--muted); font-size:12px; margin:0 0 10px; }
   .card.full { grid-column:1 / -1; }
+  /* resumo em barra no topo de uma seção de tabela */
+  .resumo { margin:0 0 14px; padding:0 0 12px; border-bottom:1px solid var(--grid); }
+  .resumo h3 { font-size:13.5px; }
   svg text { font:12px system-ui,-apple-system,"Segoe UI",sans-serif; }
   .legend { display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; font-size:12.5px; color:var(--ink-2); }
   .legend .dot { width:10px; height:10px; border-radius:3px; display:inline-block; margin-right:5px; vertical-align:-1px; }
@@ -143,6 +151,14 @@
   td.num, th.num { text-align:right; font-variant-numeric: tabular-nums; }
   .chip { display:inline-flex; align-items:center; gap:5px; font-size:12px; color:var(--ink-2); white-space:nowrap; }
   .dot { width:9px; height:9px; border-radius:50%; flex:none; }
+  /* nota do portal: as notas passam de mil caracteres e cada linha virava um
+     parágrafo. Fica em três linhas, com botão para abrir a nota inteira. */
+  .nota .ncorpo { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
+  .nota.aberta .ncorpo { -webkit-line-clamp:unset; overflow:visible; }
+  .nota .nmais { display:block; margin-top:2px; padding-left:0; }
+  /* alvo de toque no celular: caixa de marcar e link de aplicar */
+  td input[type=checkbox] { width:20px; height:20px; accent-color:var(--blue); }
+  td a { display:inline-block; padding:4px 0; }
   .fu-due { color:var(--good-text); font-weight:600; }
   .fu-wait { color:var(--muted); }
   tr.pdone { opacity:.55; }
@@ -179,6 +195,19 @@
   .copybtn.ok { color:var(--good-text); border-color:var(--good); }
   .morebtn { border:none; background:none; color:var(--muted); cursor:pointer; font:inherit; font-size:11.5px; padding:2px 6px; }
   @media (max-width:640px){ .kit-item { flex-wrap:wrap; } .kit-item .kl { flex-basis:100%; } }
+  /* celular: o painel é aberto no telefone várias vezes por dia. As tabelas deixam
+     de exigir 780px e passam a caber na tela, quebrando linha em vez de rolar de lado. */
+  @media (max-width:640px){
+    .wrap { padding:16px 10px 56px; }
+    .card { padding:12px; }
+    table { min-width:0; }
+    th, td { padding:6px 4px; }
+    th { font-size:11.5px; }
+    td { font-size:12.5px; word-break:break-word; }
+    .tile .n { font-size:26px; }
+    .acao { padding:10px 11px; gap:9px; }
+    .acao .go { display:none; }
+  }
 </style>
 </head>
 <body>
@@ -244,8 +273,8 @@
       <div class="legend" id="tlLegend"></div>
     </div>
     <div class="card">
-      <h3>📦 Emails por lote</h3>
-      <p class="hint">Lote 3 inclui 4 reenvios corrigidos</p>
+      <h3>📦 Estúdios por lote de envio</h3>
+      <p class="hint">Cada lote é uma rodada de envio; toque na barra para ver a data</p>
       <div id="lotes"></div>
     </div>
     <div class="card full">
@@ -257,6 +286,12 @@
 
   <h2 class="sec" id="grandes">🏆 Estúdios grandes <span class="badge" id="grandeBadge"></span></h2>
   <div class="card full">
+    <div class="resumo">
+      <h3 style="margin:0 0 2px">🔔 Alerta de vaga nos grandes</h3>
+      <p class="hint">Alerta de vaga vale mais que varredura: é feito uma vez e avisa para sempre. Onde ele não existe, a vaga só aparece se alguém olhar.</p>
+      <div id="grandeAlerta"></div>
+      <div class="legend" id="grandeAlertaLegend"></div>
+    </div>
     <p class="hint" id="grandeHint"></p>
     <table>
       <thead><tr>
@@ -268,6 +303,12 @@
 
   <h2 class="sec" id="portais">📝 Aplicações via portal ou formulário <span class="badge" id="portalBadge"></span></h2>
   <div class="card full">
+    <div class="resumo">
+      <h3 style="margin:0 0 2px">🗂️ Como está a fila de portais</h3>
+      <p class="hint">Onde está cada rota por formulário: as feitas, as que ainda dependem de você e as que já morreram.</p>
+      <div id="portalBarra"></div>
+      <div class="legend" id="portalBarraLegend"></div>
+    </div>
     <p class="hint" id="portalHint"></p>
     <table>
       <thead><tr>
@@ -326,7 +367,7 @@
 
   <footer>
     Fonte: <code>enviados.csv</code> e <code>alvos.csv</code> do repositório da campanha ·
-    159 emails enviados (149 estúdios + 5 segundas vias + 1 teste + 4 reenvios), incluindo a leva pré-campanha de julho e agosto ·
+    <span id="rodapeNums"></span> ·
     atualizado automaticamente pelo monitor (respostas, rejeições, bounces e portais) ·
     marcações manuais ficam só no seu navegador (localStorage).
   </footer>
@@ -1039,7 +1080,25 @@ const PORTAIS = [
  ["Like A Photon Creative","Austrália","https://likeaphoton.com/","portal","Features CG infantis (Brisbane e Dublin); sem email público. SEM VAGAS (verificado 02/09): não há página de carreiras (careers, jobs e join-us dão 404), só o formulário de contato genérico",false,"baixa"]
 ].map(([name,country,url,origem,note,done,prio])=>({name,country,url,origem,note,done,prio}));
 
-const EMAILS_TOTAL = 159, LOTES = [["Pré-campanha",19],["Lote 1",15],["Lote 2",14],["Lote 3",32],["Lote 4",15],["Lote 5",9],["Lote 6",9],["Lote 7",6],["Lote 8",7],["Lote 9",2],["Lote 10",21],["Lote 11",2],["Lote 12",2],["Lote 13",6]];
+// Lotes e total de emails saem dos próprios dados, e não de uma lista escrita à mão:
+// a lista à mão tinha parado no lote 13 e em 159 emails enquanto a campanha já ia
+// no lote 18 e em 422 estúdios, o que fazia o painel mentir em três lugares.
+// Data de envio de cada lote, conferida contra enviados.csv em 03/09. Lote novo sem data
+// aqui cai na data mais recente conhecida, para nunca inventar follow-up vencido.
+const LOTE_DATA = {0:"2026-08-04",1:"2026-08-26",2:"2026-08-26",3:"2026-08-26",4:"2026-08-26",5:"2026-08-26",
+  6:"2026-08-26",7:"2026-08-27",8:"2026-08-27",9:"2026-08-27",10:"2026-08-28",11:"2026-08-28",12:"2026-08-29",
+  13:"2026-08-30",14:"2026-09-01",15:"2026-09-02",16:"2026-09-02",17:"2026-09-02",18:"2026-09-03"};
+const LOTE_ULTIMO = Object.values(LOTE_DATA).sort().pop();
+const dataDoLote = b => LOTE_DATA[b] || LOTE_ULTIMO;
+const LOTES = (() => {
+  const m = new Map();
+  STUDIOS.forEach(s => m.set(s.batch, (m.get(s.batch)||0)+1));
+  return [...m.entries()].sort((a,b)=>a[0]-b[0])
+    .map(([b,n]) => [b===0 ? "Pré-campanha" : "Lote "+b, n, dataDoLote(b)]);
+})();
+const EMAILS_PRE = STUDIOS.filter(s=>s.batch===0).length;   // leva de julho e agosto
+const EMAILS_DIA = DAILY.reduce((a,d)=>a+d[1],0);           // de 26/08 em diante, pelo log diário
+const EMAILS_TOTAL = EMAILS_PRE + EMAILS_DIA;
 
 // ---------- estado local ----------
 const KEY = "campanha-vini-status-v1";
@@ -1102,6 +1161,32 @@ function counts(){
   return {delivered, resp, conv, aberto, ent, off, rec, aguard, bounce, drafts};
 }
 
+// ---------- o que depende só do Vini ----------
+// Captcha de desafio, conta com senha, portal que não abre para a automação: tudo
+// isso vira uma linha "à mão" na nota. A automação escreve ora "À MÃO", ora "a mao",
+// então a busca ignora acento; com o /À MÃO/ literal, seis pendências sumiam da conta.
+const A_MAO_RE = /(?:^|[\s(,;.])[aà]\s+m[ãa]o(?![a-zç])/i;
+// Situação do alerta de vaga em cada estúdio grande, lida da nota que a automação
+// escreve. A ordem dos testes importa: "criado" vem antes de "captcha", senão a Angel,
+// cuja nota diz que o formulário dela é "sem captcha nenhum", cairia no balde errado.
+function alertaDoGrande(g){
+  const n = (g && g[4]) || "";
+  if(/alerta[^.]{0,80}(ativo|ativa|criado)/i.test(n) || /coberta pelo cadastro/i.test(n)) return "ativo";
+  if(/bloquead|captcha|datadome/i.test(n)) return "bloqueado";
+  if(/n[ãa]o existe|sem alerta|n[ãa]o deu/i.test(n)) return "inexistente";
+  return "indefinido";
+}
+function pendencias(){
+  const abertos = PORTAIS.filter(p=>!isApplied(p) && !isMorta(p));
+  return {
+    abertos,
+    aMao: abertos.filter(p=>A_MAO_RE.test(p.note||"")),
+    altas: abertos.filter(p=>prioOf(p)==="alta"),
+    pedidas: abertos.filter(p=>p.origem==="email"),
+    alertaBloq: GRANDES.filter(g=>alertaDoGrande(g)==="bloqueado")
+  };
+}
+
 // ---------- estúdios grandes (lista do Vini, categoria de animação americana) ----------
 // [nome, sede, url oficial, via, nota]
 // via: ats | form | email
@@ -1150,10 +1235,17 @@ function renderGrandes(){
   }).join("");
   const feitos = rows.filter(feito).length;
   const semVaga = GRANDES.filter(g=>g[3]==="form").length;
-  $("#grandeBadge").textContent = feitos+" de "+GRANDES.length+" feitos";
-  $("#grandeHint").innerHTML = "Os grandes da animação americana, com a rota oficial de candidatura de cada um conferida em 30/08. "
+  const al = k => GRANDES.filter(g=>alertaDoGrande(g)===k).length;
+  barraSegmentos("#grandeAlerta","#grandeAlertaLegend",[
+    ["Alerta ativo", al("ativo"), css("--s3")],
+    ["Travado no captcha, depende de você", al("bloqueado"), css("--s4")],
+    ["O portal não oferece alerta", al("inexistente"), css("--s1")],
+    ["Sem informação na nota", al("indefinido"), css("--axis")]
+  ], "estúdios grandes", "Alerta de vaga nos estúdios grandes");
+  $("#grandeBadge").textContent = feitos+" de "+GRANDES.length+" com candidatura · "+al("ativo")+" com alerta ativo";
+  $("#grandeHint").innerHTML = "Os grandes da animação americana, com a rota oficial de candidatura de cada um conferida na fonte. "
     + "Praticamente nenhum aceita candidatura por email: quase todos rodam ATS próprio, então aqui a entrega é o link certo, não o rascunho. "
-    + "<b>"+semVaga+" deles aceitam portfólio mesmo sem vaga aberta</b>, e esses valem o envio agora. "
+    + "<b>"+feitos+" dos "+GRANDES.length+" já receberam candidatura sua</b> e "+semVaga+" deles aceitam portfólio mesmo sem vaga aberta. "
     + "Marque o que já enviou; fica salvo neste navegador.";
   $("#grandeRows").querySelectorAll("input[type=checkbox]").forEach(cb=>{
     cb.addEventListener("change", ()=>{
@@ -1169,10 +1261,13 @@ function renderGrandes(){
 // [data ISO, tipo, titulo, texto, link opcional]
 // tipos: viva (andamento) | vaga | porta (candidatura) | nao (sem sequencia) | alerta | envio
 const NOVIDADES = [
+ ["2026-09-03","alerta","A rotina diária dos estúdios grandes ganhou uma irmã só de jogos, e ela começa pelos portais que cobrem famílias inteiras","A varredura diária que já cuidava dos grandes da animação agora tem uma gêmea para os grandes de jogos, pela mesma razão: vaga de personagem em casa grande dura poucos dias e as primeiras 48 horas valem mais que todo o resto. A ordem de visita começa pelos portais que cobrem várias marcas de uma vez, porque uma candidatura ali alcança uma família inteira. O Workday do Xbox cobre Activision, Blizzard e King, e foi por ele que a sua Lead Character Artist de Overwatch entrou. O careers da Microsoft cobre Halo Studios, The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang e Bethesda. O da Sony cobre Naughty Dog, Insomniac, Santa Monica, Sucker Punch, Guerrilla, Bend, Bluepoint, Firesprite e Housemarque. O da EA cobre Respawn, BioWare, Motive, Criterion e Maxis, e a conta já existe. O Greenhouse da 2K cobre Cloud Chamber, Firaxis, Hangar 13 e Visual Concepts. Só depois vêm os portais próprios, com Riot e Epic na frente por serem estilizado puro, que é o seu registro. Três casas já entram marcadas como sempre à mão, porque o envio pede captcha de desafio: Valve, Larian e Ubisoft. E vale a regra que você fixou ontem, de que em estúdio grande não se filtra senioridade: júnior, mid, sênior, lead e principal, tudo recebe candidatura.",""],
  ["2026-09-03","envio","Lote 18 saiu de madrugada: Toys for Bob, ThunderRoar e quatro segundas vias","Você rodou o script às 23h22 no seu horário e os seis rascunhos do lote 18 saíram com assinatura e anexos. Entre eles a Toys for Bob, dona de Crash Bandicoot e Spyro, que publica no site que é um time enxuto acostumado a remoto, e a ThunderRoar, que anunciou Character Modeler com posição remota e assina a Shenhe do Genshin Impact. As outras quatro são segundas vias em endereços de recrutamento publicados nos sites, para estúdios que não responderam no endereço genérico. O endereço da Fluffy Dog voltou como inexistente, então aquele caminho fica só pelo formulário do site, e a Golden Wolf respondeu na hora com acuse automático dizendo que revisam todos os portfólios.",""],
  ["2026-09-02","porta","Blizzard confirmou a candidatura para Lead Character Artist de Overwatch e a FIN Design ganhou perfil completo","A automação passou a criar conta nos portais que exigem cadastro, com sua autorização, e o resultado apareceu logo: a Blizzard aceitou a candidatura para Lead Character Artist de Overwatch em Irvine, com número de candidato e email de confirmação, e é a vaga mais forte do dia porque o anúncio pede textura autoral pintada à mão. Na FIN Design foi criado o perfil no banco de talentos com CV, força 6 de 10, que era o que a auto-resposta deles pedia. A EA de Vancouver ficou no meio do caminho: a conta abre, o formulário da Senior Character Artist foi preenchido, mas o servidor deles devolveu erro interno três vezes, então falta você refazer o envio. Arkane, Mainframe e ZEILT continuam fora de alcance da automação, por bloqueio de rede ou por serem freelance.",""],
  ["2026-09-02","vaga","ThunderRoar Studio abriu Character Modeler com posição remota, e o portfólio deles é Genshin e League of Legends","Você mandou o anúncio que o estúdio publicou no próprio Instagram e ele é dos melhores encaixes que apareceram: Junior e Senior Character Modeler, com vagas remotas disponíveis, numa casa de outsourcing fundada por veteranos da Malásia que assina a Shenhe do Genshin Impact, o Graffiti Squad de League of Legends e o Honor of Kings. É o cargo exato que você procura e o registro estilizado que você domina. O rascunho já está no Gmail para o endereço de contato confirmado no site. A ressalva é a de sempre com outsourcing asiático: o anúncio incentiva candidatos malaios e o contrato pode ser local em moeda fraca, então vale confirmar a faixa antes de avançar.","https://thunder-roar.com/contact/"],
- ["2026-09-02","vaga","Netflix: o telefone estava resolvido e o bloqueio era outro; oito vagas novas do Eightfold e o alerta dos grandes varrido um por um","Duas coisas nesta rodada. A PRIMEIRA E A NETFLIX. O que travava as candidaturas no Eightfold nunca foi o seletor de codigo de pais: depois de anexar o CV o proprio parser deles preenche pais, estado e codigo de pais sozinho, e o campo do numero so precisa de 81973062286, sem codigo, sem espaco e sem hifen. Com isso a automacao preencheu o formulario da Character Designer do Ink inteiro, sem um unico erro de validacao, com CV e carta anexados, portfolio, autodeclaracao em prefiro nao responder e patrocinio de visto em Sim. O que barra e o envio: a chamada final devolve 400 Please try again later porque o reCAPTCHA invisivel da Netflix reprova a sessao automatizada, e isso nao se burla, nem com navegador de tela sob Xvfb. Ou seja, as candidaturas da Netflix ficaram a um clique suas, e o passo a passo esta em automacao/respostas-formularios.md. A varredura da API publica deles tambem mostrou muito mais vaga do que a interface deixava ver: entraram no painel a Visual Development Artist do Ink (vis dev puro, alta), duas requisicoes de CG Artist experimental do mesmo selo, as duas chefias de Character Effects de Sydney e Vancouver, que encostam no grooming em Houdini, e o banco de talentos de CFX de Vancouver. A Character Modeling Supervisor de Sydney que aparecia na lista e a mesma vaga em que voce ja aplicou em 31/08, entao nao foi repetida. Ficaram de fora, por disciplina: a Story Artist do Ink, que e storyboard 2D, as duas Environment Modeling Supervisor, que sao de cenario e nao de personagem, e as vagas tecnicas. A SEGUNDA COISA E O ALERTA DE VAGA NOS GRANDES, varrido um por um. Deu certo um: a Angel Studios, cujo Paylocity tem um Notify Me Of Future Openings sem captcha, confirmado na tela, com character artist, character modeler, character design e visual development e sem filtro de senioridade. O resto nao da, e agora com motivo verificado em vez de suposicao: Netflix tem o recurso desligado na propria configuracao do site; Pixar nao tem alerta nenhum no locatario Workday dela; Disney e Sony Pictures tem formulario de alerta de verdade mas o envio abre desafio de imagem do reCAPTCHA; DreamWorks joga o talent community no SmartRecruiters da NBCUniversal, que devolve 403 por DataDome; e LAIKA, Skydance, Illumination, Titmouse, Reel FX, Powerhouse e Bento Box simplesmente nao tem, porque Greenhouse e Lever nao oferecem alerta por email. Continuam ativos os dois de sempre, Paramount e Warner Bros. Discovery, mais o do Imageworks feito hoje cedo.","https://explore.jobs.netflix.net/careers/job/790317332872"],
+ ["2026-09-02","vaga","Netflix: o bloqueio nunca foi o telefone, é o reCAPTCHA do envio, e a varredura achou oito vagas novas","O que travava as candidaturas no Eightfold nunca foi o seletor de código de país. Depois de anexar o CV, o parser deles preenche país, estado e código sozinho, e o campo do número só quer 81973062286, sem código, sem espaço e sem hífen, que é a regra que você mesmo descobriu depois de duas falhas. Com isso a automação preencheu a Character Designer do Ink inteira, sem um único erro de validação, com CV e carta anexados, portfólio, autodeclaração em prefiro não responder e patrocínio de visto em Sim. O que barra é o clique final: a chamada de envio volta com erro 400 porque o reCAPTCHA invisível da Netflix reprova a sessão automatizada, e isso não se burla, nem com navegador de tela. Ou seja, as candidaturas da Netflix ficaram a um clique seu, e o passo a passo está em automacao/respostas-formularios.md. A varredura da API pública deles mostrou muito mais vaga do que a interface deixa ver: entraram no painel a Visual Development Artist do Ink, que é vis dev puro e por isso alta, duas requisições de CG Artist experimental do mesmo selo, as duas chefias de Character Effects de Sydney e Vancouver, que encostam no seu grooming em Houdini, e o banco de talentos de CFX de Vancouver. A Character Modeling Supervisor de Sydney que aparece na lista é a mesma em que você já aplicou em 31/08, então não foi repetida. Ficaram de fora por disciplina a Story Artist do Ink, que é storyboard 2D, as duas Environment Modeling Supervisor, que são de cenário, e as vagas técnicas.","https://explore.jobs.netflix.net/careers/job/790317332872"],
+ ["2026-09-02","alerta","Alerta de vaga varrido nos 18 estúdios grandes, um por um: só a Angel Studios deixou criar","Alerta de vaga por email vale mais que varredura, porque é feito uma vez e avisa para sempre, então cada um dos grandes foi testado e agora o motivo de cada não está verificado, não suposto. Deu certo um: a Angel Studios, cujo Paylocity tem um Notify Me Of Future Openings sem captcha nenhum, confirmado na tela, cadastrado com character artist, character modeler, character design e visual development, sem filtro de senioridade. Dos outros, três são captcha e ficam para você, cada um em dois minutos: Disney e Sony Pictures têm formulário de alerta de verdade, mas o envio abre desafio de imagem do reCAPTCHA, e a DreamWorks joga o talent community num SmartRecruiters da NBCUniversal que devolve 403 por DataDome. Os demais simplesmente não oferecem o recurso: a Netflix carrega os textos de talent community mas vem com ele desligado na própria configuração do site, a Pixar não tem alerta nenhum no Workday dela, e LAIKA, Skydance, Illumination, Titmouse, Reel FX, Powerhouse e Bento Box rodam em Greenhouse ou Lever, que não mandam vaga nova por email. Continuam ativos os dois de sempre, Paramount e Warner Bros. Discovery, mais o do Imageworks criado no mesmo dia.",""],
+ ["2026-09-02","vaga","Duas rotas oficiais novas no Canadá: CG Designer da Atomic Cartoons e o banco de talentos da Jam Filled","A varredura de Greenhouse achou duas entradas que ainda não estavam no painel. A Atomic Cartoons abriu CG Designer em Vancouver, e a descrição é visual development de personagens, cenários e adereços, mas o anúncio declara foco em veículo e exige autorização de trabalho no Canadá com residência na Colúmbia Britânica desde 31 de dezembro de 2025, então entrou como baixa. A Jam Filled publicou uma Expression of Interest no Greenhouse próprio, e o texto diz com todas as letras que não é vaga aberta e sim banco de talentos; entrou como média, e vale porque o site deles só publica o contact@, que nunca respondeu, ou seja, essa passa a ser a via oficial da casa.",""],
  ["2026-09-02","porta","Você entrou na candidatura geral da Sony Pictures Imageworks e o alerta de arte do estúdio ficou ativo","A Expression of Interest é a porta que a Imageworks deixa aberta quando não há requisição publicada: o próprio anúncio diz que pode não existir vaga no momento e que a candidatura fica guardada para posições futuras, e ela vale de uma vez para Los Angeles, Montréal e Vancouver. O envio foi confirmado duas vezes, na tela do Greenhouse e por um email de agradecimento do próprio imageworks.com citando a posição pelo nome. No formulário a posição principal ficou como Modeling e a secundária como Concept Artist, as três cidades foram marcadas, e as perguntas de imigração foram respondidas como sempre, que vai precisar de work permit no Canadá, sem rodeio. Isso é uma requisição diferente da Experienced Modeler de Vancouver que já tinha saído mais cedo no mesmo dia, então não é candidatura repetida. Na mesma página havia o bloco Create a Job Alert, e ele agora existe: a conta MyGreenhouse do seu email foi criada por código de segurança e o alerta ficou no departamento Artists, que é o departamento-pai da casa e sozinho cobre 43 das 54 requisições publicadas, de animação e character FX a modelagem, look development, texture, rigging, lighting e supervisão de CG. O formulário do alerta não pergunta localidade, ou seja, ele já chega com as três cidades juntas, e a frequência foi trocada de semanal para diária, que é o que interessa quando a janela útil de uma vaga em estúdio grande é de poucos dias.","https://job-boards.greenhouse.io/sonypicturesimageworks/jobs/4551278003"],
  ["2026-09-02","porta","Duas candidaturas dentro do grupo Disney na mesma noite: Character Design Lead da Disney Television Animation e Senior Texture Artist da ILM London","A rotina nova dos estúdios grandes rodou pela primeira vez e a conta que você já tinha no Workday da Disney funcionou de primeira, o que abriu o caminho todo. A automação varreu o portal com nove buscas de personagem e arte e enviou duas candidaturas, as duas confirmadas na mesma noite com status Application Received: a Character Design Lead da Disney Television Animation em Glendale, requisição 10159762, que tem prazo até 09 de setembro e por isso não podia esperar, e a Senior Texture Artist da ILM London, requisição 10159370, que é uma requisição nova e diferente da Lead Texture Artist que te recusou em 01 de setembro, ou seja, é o mesmo time um degrau abaixo, exatamente o nível que a recusa sugeriu. A Character Design Lead estava marcada em baixa no painel por ser presencial, paga por hora e desenhada em 2D, e subiu para alta pela sua regra de não filtrar senioridade em estúdio grande. Três coisas ficaram para você à mão: o alerta de vaga do disneycareers.com, com dez combinações já montadas de Animation and Visual Effects e Creative em Burbank, Glendale, Los Angeles, Emeryville, Londres, San Francisco e Vancouver, que parou num reCAPTCHA de imagem no envio; a Character Designer do Ink, o selo autoral da Netflix em Los Angeles, que é design de personagem puro e apareceu hoje no Eightfold, onde o seletor de código de país do telefone trava no navegador automático; e vale saber que o Workday da Disney não tem alerta dentro da conta do candidato, só o site de carreiras tem. Sem novidade na Pixar, que segue com uma única vaga no portal inteiro, na Warner Bros. Discovery, onde a busca por personagem só devolve design de jogo da WB Games, e na Paramount, cujo alerta por email já estava ativo desde 31 de agosto.","https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Glendale-CA-USA/Character-Design-Lead---Disney-Television-Animation_10159762"],
  ["2026-09-02","alerta","O quadro de vagas da Toys for Bob saiu do ar e no lugar dele apareceu um endereço oficial de recrutamento","A varredura da meia-noite revalidou os portais mais antigos e derrubou um: o endereço careers.toysforbob.com não existe mais e a página de carreiras do site principal responde 404, então a Senior Character Artist que estava marcada para monitorar não tem mais para onde voltar. O que sobrou é melhor do que parece. A seção Open Roles do site oficial agora tem um botão único, Tell Us About Yourself, que aponta para recruiting@toysforbob.dev, e o texto ao lado diz que são um time enxuto acostumado a trabalhar remoto. É a dona de Crash Bandicoot e Spyro, estilizado puro, e nunca recebeu email seu, então esse endereço entra na fila do próximo lote. Na mesma rodada a Fortiche foi reconferida e cresceu: o formulário espontâneo deles aceita contrato de funcionário, tem Remote entre os locais e tem Character design, Character modeling e Groom na lista de departamentos.","https://toysforbob.com/"],
@@ -1328,7 +1423,7 @@ const NOV_META = {
  vaga:  ["\u{1F525}","Vaga quente","nv-vaga"],
  porta: ["\u{1F4DD}","Candidatura","nv-porta"],
  nao:   ["✕","Sem sequência","nv-nao"],
- alerta:["⚠️","Correção","nv-alerta"],
+ alerta:["⚠️","Regra ou correção","nv-alerta"],
  envio: ["\u{1F4E4}","Envios","nv-envio"]
 };
 let novFilter = "";
@@ -1354,6 +1449,7 @@ function renderNovidades(){
       : 'clique para ler inteiro';
     return '<article class="post '+cls+'" tabindex="0">'
       + '<div class="pmeta"><span>'+ic+'</span><span class="pcat">'+tag+'</span>'
+      + (data===UPDATED ? '<span class="pnovo">novo</span>' : "")
       + '<span class="pwhen">'+novWhen(data)+'</span></div>'
       + '<h4 class="ptit">'+esc(tit)+'</h4>'
       + '<p class="ptxt">'+esc(txt)+'</p>'
@@ -1364,7 +1460,9 @@ function renderNovidades(){
     el.addEventListener("click", abre);
     el.addEventListener("keydown", ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); abre(ev); }});
   });
-  $("#novBadge").textContent = NOVIDADES.length+" atualizações";
+  // ele abre o painel várias vezes por dia e a primeira pergunta é o que mudou desde ontem
+  const hoje = NOVIDADES.filter(n=>n[0]===UPDATED).length;
+  $("#novBadge").textContent = (hoje ? hoje+(hoje===1?" nova hoje · ":" novas hoje · ") : "")+NOVIDADES.length+" no total";
   const chips = [["","Tudo",NOVIDADES.length],
     ...Object.keys(NOV_META).map(k=>[k,NOV_META[k][0]+" "+NOV_META[k][1],NOVIDADES.filter(n=>n[1]===k).length])]
     .filter(([k,,n])=>k==="" || n>0);
@@ -1379,28 +1477,37 @@ function renderNovidades(){
 // ---------- o que fazer agora ----------
 function renderAcoes(){
   const c = counts();
+  const p = pendencias();
   const items = [];
   if(c.aberto > 0)
     items.push(["urgente","🔥",`<b>${c.aberto} resposta${c.aberto>1?"s":""} positiva${c.aberto>1?"s":""}</b> esperando você responder pessoalmente`,"#estudios"]);
-  const pendEmail = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
-  const pendAll = PORTAIS.filter(p=>!isApplied(p)).length;
-  if(pendEmail > 0)
-    items.push(["atencao","📝",`<b>${pendEmail} estúdio${pendEmail>1?"s":""} pediu${pendEmail>1?"ram":""} aplicação via formulário</b> na resposta ao seu email (${pendAll} portais pendentes no total)`,"#portais"]);
-  else if(pendAll > 0)
-    items.push(["info","📝",`<b>${pendAll} aplicações via portal</b> ainda pendentes`,"#portais"]);
+  // O que só ele pode fazer vem antes de tudo: é a fila que a automação não desafoga.
+  if(p.altas.length > 0)
+    items.push(["urgente","🎯",`<b>${p.altas.length} vaga${p.altas.length>1?"s quentes":" quente"} sem candidatura</b>, começando pela ${esc(p.altas[0].name)}`,"#portais"]);
+  if(p.aMao.length > 0)
+    items.push(["atencao","🖐️",`<b>${p.aMao.length} candidaturas só à mão</b>: captcha de desafio, conta com senha ou portal que não abre para a automação`,"#portais"]);
+  if(p.alertaBloq.length > 0)
+    items.push(["atencao","🔔",`<b>${p.alertaBloq.length} alertas de vaga travados no captcha</b> (${p.alertaBloq.map(g=>esc(g[0].replace(/\s+Studios$/,""))).join(", ")}): dois minutos cada, e depois avisam sozinhos`,"#grandes"]);
+  if(p.pedidas.length > 0)
+    items.push(["atencao","📝",`<b>${p.pedidas.length} ${p.pedidas.length>1?"estúdios pediram":"estúdio pediu"} aplicação por formulário</b> na resposta ao seu email`,"#portais"]);
   if(c.bounce > 0)
-    items.push(["atencao","✕",`<b>${c.bounce} bounce sem email válido</b> (Meduzarts): aplicar pelo formulário do site`,"#portais"]);
+    items.push(["info","✕",`<b>${c.bounce} bounce sem email válido</b>: a rota que sobra é o formulário do site de cada um`,"#portais"]);
   if(c.drafts > 0)
     items.push(["info","✉️",`<b>${c.drafts} rascunho${c.drafts>1?"s":""}</b> no Gmail aguardando assinatura + PDFs e envio`,"#estudios"]);
-  const due = new Date(SENT+"T12:00:00Z"); due.setUTCDate(due.getUTCDate()+7);
-  const days = Math.ceil((due - Date.now())/864e5);
-  const dueStr = due.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"});
-  if(days<=0 && c.aguard>0)
-    items.push(["urgente","⏰",`<b>Follow-up vencido</b> para ${c.aguard} estúdios sem resposta (desde ${dueStr})`,"#estudios"]);
-  else if(c.aguard>0)
-    items.push(["info","⏳",`Follow-up dos ${c.aguard} sem resposta <b>em ${days} dia${days>1?"s":""}</b> (${dueStr})`,"#estudios"]);
+  const devidos = STUDIOS.filter(followUpDevido);
+  const aVencer = STUDIOS.filter(s=>followUpAberto(s) && !followUpDevido(s));
+  if(devidos.length > 0)
+    items.push(["urgente","⏰",`<b>Follow-up vencido</b> em ${devidos.length} estúdio${devidos.length>1?"s":""} sem resposta, contando 7 dias a partir do envio de cada lote`,"#estudios"]);
+  else if(aVencer.length > 0){
+    const prox = new Date(Math.min(...aVencer.map(s=>followUpVence(s))));
+    const dias = Math.max(1, Math.ceil((prox - Date.now())/864e5));
+    items.push(["info","⏳",`Próximo follow-up dos ${aVencer.length} sem resposta <b>em ${dias} dia${dias>1?"s":""}</b> (${prox.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})})`,"#estudios"]);
+  }
   if(items.length===0)
     items.push(["boa","✅","<b>Tudo em dia.</b> Nenhuma ação pendente agora",""]);
+  // urgente primeiro, sempre: no celular ele lê os dois primeiros cartões e decide
+  const PESO = {urgente:0, atencao:1, info:2, boa:3};
+  items.sort((a,b)=>PESO[a[0]]-PESO[b[0]]);
   $("#acoesList").innerHTML = items.map(([cls,ic,txt,href])=>
     `<a class="acao ${cls}" href="${href||"#visao"}"><span class="ic">${ic}</span><span>${txt}</span><span class="go">ver →</span></a>`
   ).join("");
@@ -1411,10 +1518,12 @@ function renderTiles(){
   const c = counts();
   const a = alcance();
   const rate = c.delivered ? Math.round(100*c.resp/c.delivered) : 0;
+  const p = pendencias();
   $("#tiles").innerHTML = [
     ["🏢", a.total, "Estúdios alcançados", a.porEmail+" por email + "+a.soPortal+" só por portal"],
+    ["🖐️", p.aMao.length + p.alertaBloq.length, "Só você pode fazer", p.aMao.length+" candidaturas à mão + "+p.alertaBloq.length+" alertas com captcha"],
     ["📤", EMAILS_TOTAL, "Emails enviados", LOTES.length+" lotes para "+CONTACTED.length+" estúdios"],
-    ["✅", c.delivered, "Emails entregues", c.bounce+" bounce (email nunca chegou)"],
+    ["✅", c.delivered, "Estúdios com email entregue", c.bounce+" bounce, o email nunca chegou"],
     ["💬", c.resp, "Respostas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
     ["🚫", c.rec, "Recusas", "todas respondidas; nenhuma ficou sem retorno"],
     ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
@@ -1438,6 +1547,28 @@ function renderFunnel(){
   });
   svg += `<line x1="${padL}" x2="${padL}" y1="4" y2="${H-2}" stroke="${css('--axis')}"/></svg>`;
   $("#funnel").innerHTML = svg; bindTips($("#funnel"));
+}
+
+// Barra de 100% reaproveitável, no mesmo desenho da barra de situação: usada pelo
+// resumo dos estúdios grandes e pelo resumo dos portais. Recebe [rótulo, valor, cor].
+function barraSegmentos(alvo, legendaAlvo, segs, unidade, aria){
+  const usados = segs.filter(s=>s[1]>0);
+  const total = usados.reduce((a,s)=>a+s[1],0);
+  const W=460, H=58, barY=6, barH=32;
+  let x=0, svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(aria)}">`;
+  usados.forEach(([label,v,color])=>{
+    const w = total ? W*v/total : 0;
+    svg += `<rect x="${x+1}" y="${barY}" width="${Math.max(w-2,2)}" height="${barH}" rx="4" fill="${color}" data-tip="<b>${esc(label)}</b>${v} de ${total} (${Math.round(100*v/total)}%)"/>`;
+    if(w>26) svg += `<text x="${x+w/2}" y="${barY+barH/2+4}" text-anchor="middle" fill="#ffffff" font-weight="600">${v}</text>`;
+    x += w;
+  });
+  svg += `<text x="${W}" y="${H-4}" text-anchor="end" fill="${css('--muted')}">${total} ${esc(unidade)}</text></svg>`;
+  const el = $(alvo); if(!el) return;
+  el.innerHTML = svg;
+  const leg = $(legendaAlvo);
+  if(leg) leg.innerHTML = usados.map(([label,v,color])=>
+    `<span><span class="dot" style="background:${color}"></span>${esc(label)} <b>${v}</b></span>`).join("");
+  bindTips(el);
 }
 
 // ---------- barra de situação (100%) ----------
@@ -1497,23 +1628,21 @@ function renderTimeline(){
 }
 
 // ---------- emails por lote ----------
+// Barras deitadas, e não em pé: são 19 lotes e um deles tem 96 emails. Em pé, no
+// celular, o rótulo de cada lote virava um borrão. Deitado, cada lote é uma linha
+// legível com o nome à esquerda, no mesmo desenho do gráfico de países.
 function renderLotes(){
-  const blue = css("--blue"), max = 35;
-  const W=460, H=190, padB=26, padT=16, padL=44;
-  const slot=(W-padL-16)/LOTES.length, bw=Math.min(56, slot*.55);
+  const blue = css("--blue");
+  const max = Math.max(...LOTES.map(l=>l[1]));
+  const rowH=20, padL=86, padR=44, W=460, H=LOTES.length*rowH+8;
   let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Emails por lote">`;
-  [0,10,20,30].forEach(t=>{
-    const y = padT+(H-padT-padB)*(1-t/max);
-    svg += `<line x1="${padL}" x2="${W-8}" y1="${y}" y2="${y}" stroke="${css('--grid')}"/>`;
-    svg += `<text x="${padL-8}" y="${y+4}" text-anchor="end" fill="${css('--muted')}">${t}</text>`;
+  LOTES.forEach(([l,v,quando],i)=>{
+    const y=i*rowH+4, bw=Math.max(2,(W-padL-padR)*v/max);
+    svg += `<text x="${padL-8}" y="${y+12}" text-anchor="end" fill="${css('--ink-2')}">${esc(l)}</text>`;
+    svg += `<rect x="${padL}" y="${y}" width="${bw}" height="14" rx="4" fill="${blue}" data-tip="<b>${esc(l)}</b>${v} emails · enviado em ${fmtBR(quando)}"/>`;
+    svg += `<text x="${padL+bw+6}" y="${y+12}" fill="${css('--ink')}" font-weight="600">${v}</text>`;
   });
-  LOTES.forEach(([l,v],i)=>{
-    const x=padL+slot*i+(slot-bw)/2, h=(H-padT-padB)*v/max, y=H-padB-h;
-    svg += `<rect x="${x}" y="${y}" width="${bw}" height="${h}" rx="4" fill="${blue}" data-tip="<b>${esc(l)}</b>${v} emails"/>`;
-    svg += `<text x="${x+bw/2}" y="${y-6}" text-anchor="middle" fill="${css('--ink')}" font-weight="600">${v}</text>`;
-    svg += `<text x="${x+bw/2}" y="${H-8}" text-anchor="middle" fill="${css('--ink-2')}">${esc(l)}</text>`;
-  });
-  svg += `<line x1="${padL}" x2="${W-8}" y1="${H-padB}" y2="${H-padB}" stroke="${css('--axis')}"/></svg>`;
+  svg += `<line x1="${padL}" x2="${padL}" y1="2" y2="${H-4}" stroke="${css('--axis')}"/></svg>`;
   $("#lotes").innerHTML = svg; bindTips($("#lotes"));
 }
 
@@ -2075,14 +2204,25 @@ function renderPortais(){
     const origem = p.origem==="email"
       ? `<span class="chip"><span class="dot" style="background:var(--warn)"></span>⚠ pediram na resposta</span>`
       : `<span class="chip"><span class="dot" style="background:var(--axis)"></span>só portal</span>`;
+    // "à mão" na própria linha: é o que separa o que a automação ainda faz do que só ele faz
+    const maoChip = (!done && A_MAO_RE.test(p.note||""))
+      ? ' <span class="chip prio-chip-media" title="A automação não consegue enviar esta: captcha, conta com senha ou portal fechado para ela">🖐️ à mão</span>' : "";
+    const nota = `${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span>`;
+    const longa = (p.note||"").length > 180;
     return `<tr class="${done?"pdone":(isMorta(p)?"pmorta":"prio-"+prio)}">
       <td><input type="checkbox" data-url="${esc(p.url)}"${done?" checked":""}${p.done?" disabled":""} aria-label="Marcar ${esc(p.name)} como aplicado"${p.done?' title="Confirmado pela automação (email de confirmação recebido)"':""}></td>
-      <td><span class="pname">${esc(p.name)}</span> ${prioChip}${isRemoto(p)?' <span class="chip" style="color:var(--blue);font-weight:600">🌐 remoto</span>':""}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
+      <td><span class="pname">${esc(p.name)}</span> ${prioChip}${maoChip}${isRemoto(p)?' <span class="chip" style="color:var(--blue);font-weight:600">🌐 remoto</span>':""}${p.done?' <span class="chip" style="color:var(--good-text)">✓ confirmado</span>':""}</td>
       <td>${esc(p.country)}</td>
       <td><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir aplicação ↗</a></td>
-      <td>${origem} <span style="color:var(--muted)">· ${esc(p.note)}</span></td>
+      <td><div class="nota"><span class="ncorpo">${nota}</span>${longa?'<button class="morebtn nmais" type="button">ler a nota inteira</button>':""}</div></td>
     </tr>`;
   }).join("");
+  // nota inteira só quando ele pedir: sem isso cada linha vira um parágrafo de dez linhas no celular
+  $("#portalRows").querySelectorAll(".nmais").forEach(b=>b.addEventListener("click", ()=>{
+    const nota = b.closest(".nota");
+    nota.classList.toggle("aberta");
+    b.textContent = nota.classList.contains("aberta") ? "recolher a nota" : "ler a nota inteira";
+  }));
   updatePortalHint(mortas.length);
   const tg = $("#mortasToggle");
   if(tg) tg.addEventListener("click", ()=>{
@@ -2102,14 +2242,21 @@ function renderPortais(){
 }
 function updatePortalHint(mortasCount){
   const doneCount = PORTAIS.filter(isApplied).length;
-  const pend = PORTAIS.filter(p=>!isApplied(p) && p.origem==="email").length;
   const mortas = typeof mortasCount==="number" ? mortasCount : PORTAIS.filter(isMorta).length;
   const vivas = PORTAIS.length - mortas;
-  const manuais = PORTAIS.filter(p=>!isApplied(p) && !isMorta(p) && /À MÃO/.test(p.note||"")).length;
+  const p = pendencias();
+  const manuais = p.aMao.length;
+  barraSegmentos("#portalBarra","#portalBarraLegend",[
+    ["Candidatura feita", doneCount, css("--s3")],
+    ["Aberta, só à mão", manuais, css("--s4")],
+    ["Aberta para a automação", p.abertos.length - manuais, css("--s1")],
+    ["Encerrada", mortas, css("--s2")]
+  ], "rotas por formulário", "Situação das aplicações por portal");
   $("#portalBadge").textContent = `${doneCount} feitas de ${vivas} abertas · ${manuais} só à mão · ${mortas} encerradas`;
   $("#portalHint").innerHTML =
     (mortas ? `<b>${mortas} vaga${mortas===1?"":"s"} encerrada${mortas===1?"":"s"}</b> (expirada, estúdio sem vagas ou caminho fechado) ${showMortas?"aparecendo na lista":"escondida"+(mortas===1?"":"s")+" para não poluir"}. <button id="mortasToggle" class="copybtn" style="margin-left:4px">${showMortas?"esconder":"mostrar"}</button><br>` : "") +
-    `${pend} pedido${pend===1?"":"s"} por email ainda pendente${pend===1?"":"s"}. ` +
+    `<b><span class="chip prio-chip-media" style="font-size:12.5px">🖐️ à mão</span> marca as ${manuais} que a automação não consegue enviar</b> por captcha de desafio, conta com senha ou portal que não abre para ela; o motivo exato está na nota de cada linha. ` +
+    `${p.pedidas.length} ${p.pedidas.length===1?"pedido feito por email ainda pendente":"pedidos feitos por email ainda pendentes"}. ` +
     `Prioridade pela mensagem recebida e pelo encaixe da vaga: <span class="prio-chip-alta">🔥 alta</span> = pediram diretamente ou vaga com seu perfil exato · <span class="prio-chip-media">média</span> = redirecionamento padrão ou vaga próxima · <span class="prio-chip-baixa">baixa</span> = sem sinal do estúdio. ` +
     `<b>Vagas <span style="color:var(--blue)">🌐 remotas</span> aparecem primeiro dentro de cada faixa</b>, mas as presenciais continuam na lista e valem candidatura. ` +
     "Aplique pelo link e marque quando fizer (fica salvo neste navegador). O selo verde aparece quando a automação vê o email de confirmação.";
@@ -2117,13 +2264,31 @@ function updatePortalHint(mortasCount){
 
 // ---------- tabela de estúdios ----------
 let chipFilter = "";
+// Follow-up conta 7 dias a partir do envio DAQUELE lote, não do primeiro dia da
+// campanha. Com a data única, os 245 emails de 02/09 apareciam como follow-up
+// vencido no mesmo dia em que saíram, e o cartão do topo pedia uma cobrança de
+// 385 estúdios que não existia.
+function followUpVence(s){
+  const d = new Date(dataDoLote(s.batch)+"T12:00:00Z");
+  d.setUTCDate(d.getUTCDate()+7);
+  return d;
+}
+// Cabe follow-up: email entregue, estúdio ainda de pé, nenhuma resposta e nenhum
+// follow-up já enviado. O estúdio que fechou as portas não entra na conta.
+function followUpAberto(s){
+  if(s.delivery==="bounce" || s.delivery==="rascunho" || s.delivery==="fechado") return false;
+  return stageOf(s)==="aguardando" && !FOLLOWUP_PRONTO.has(s.email);
+}
+function followUpDevido(s){
+  return followUpAberto(s) && followUpVence(s) - Date.now() <= 0;
+}
 function followUp(s){
   if(s.delivery==="rascunho") return `<span class="fu-wait">aguarda envio</span>`;
   if(s.delivery==="bounce") return `<span class="fu-wait">reenviar</span>`;
   const stage = stageOf(s);
-  if(stage!=="aguardando") return `<span class="fu-wait">—</span>`;
+  if(stage!=="aguardando") return `<span class="fu-wait">·</span>`;
   if(FOLLOWUP_PRONTO.has(s.email)) return `<span class="fu-wait">✓ follow-up 02/09</span>`;
-  const due = new Date(SENT+"T12:00:00Z"); due.setUTCDate(due.getUTCDate()+7);
+  const due = followUpVence(s);
   const days = Math.ceil((due - Date.now())/864e5);
   if(days<=0) return `<span class="fu-due">✓ devido (${due.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})})</span>`;
   return `<span class="fu-wait">em ${days}d</span>`;
@@ -2198,7 +2363,11 @@ function renderAll(){
   renderAcoes(); renderTiles(); renderFunnel(); renderStatusBar(); renderTimeline();
   renderNovidades(); renderLotes(); renderPaises(); renderGrandes(); renderPortais(); renderProspec(); setupKitStudio(); renderKit(); renderDossies(); renderChips(); renderRows(); setupSecoes();
 }
-$("#updated").textContent = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR") + " (publicação " + BUILD + ")";
+$("#updated").innerHTML = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR")
+  + ' · <b class="carimbo">publicado ' + esc(BUILD) + "</b>";
+// O rodapé contava 159 emails desde que a campanha tinha 149 estúdios; agora sai dos dados.
+$("#rodapeNums").textContent = EMAILS_TOTAL + " emails para " + STUDIOS.length + " estúdios, sendo "
+  + EMAILS_PRE + " na leva pré-campanha de julho e agosto e " + EMAILS_DIA + " de 26/08 em diante";
 if (ALERTA) { $("#alertaMsg").textContent = ALERTA; $("#alerta").style.display = "block"; }
 if ((Date.now() - new Date(UPDATED+"T12:00:00Z")) > 2*864e5) {
   $("#alertaMsg").textContent = "o site não é atualizado desde " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR") +
