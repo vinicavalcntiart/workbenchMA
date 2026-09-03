@@ -55,3 +55,15 @@ Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Juli
 - Prospecção a cada 4h: varre vagas remotas primeiro, revalida vagas antigas, alimenta o painel e a newsletter.
 - Envio: os rascunhos da campanha (assunto fixo) saem pelo Apps Script `automacao/envia-rascunhos.gs`, na conta do Vini, com assinatura e anexos; ele roda à mão (40 por execução) ou por acionador de tempo, se ele ligar. O monitor marca os estúdios como enviados quando vê a mensagem em Enviados.
 - Formulários: a automação preenche formulários sem captcha de desafio pelo navegador headless (Greenhouse, Ashby, Breezy, JotForm, Teamtailor Connect, formulários próprios); hCaptcha, reCAPTCHA de caixa, Turnstile, DataDome e portais com conta ficam para o Vini, listados em `automacao/respostas-formularios.md`.
+
+## Mentoria (trilha separada da campanha)
+Alunos da escola (vinicavalcanti.com) já pagaram e têm o link de agendamento para marcar
+one-on-one uma vez por semana ou mais, até fechar o projeto, que costuma durar 10 semanas.
+Link: https://calendar.app.google/tFZdRSApDvE1xqsS8
+
+Problema resolvido em `mentoria/`: convite de reunião da E-Line entra na agenda como "sem
+resposta", o Vini não confirma, o agendamento do Google trata como horário livre e o aluno
+marca em cima. O agente `mentoria/agente-agenda.gs` roda no Apps Script da conta dele a cada
+15 minutos e converte cada compromisso não confirmado num bloqueio próprio, que o
+agendamento é obrigado a respeitar. Ele **só tira disponibilidade, nunca abre horário**.
+Instalação e limites em `mentoria/README.md`.
