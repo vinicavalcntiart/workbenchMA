@@ -20,6 +20,37 @@ const MAX_POR_EXECUCAO = 40;   // execução do Apps Script dura no máximo 6 mi
 const PAUSA_MS = 1500;         // pausa entre envios
 const SIMULAR = true;          // true = só lista no log; false = envia de verdade
 
+// ARMADILHA DO LINK, resolvida aqui em 03/09/2026.
+// O compositor do Gmail reescreve TODO link ao gravar o rascunho, virando
+// https://www.google.com/url?q=<destino>&source=gmail&ust=...  Isso acontece na API,
+// não por copiar link de thread nenhuma, então não dá para evitar na hora de escrever
+// o rascunho: o jeito é desfazer a reescrita aqui, imediatamente antes de enviar.
+// Num email frio o link embrulhado parece rastreador de spam, e no corpo em texto puro
+// a URL gigante aparece inteira.
+function limparLinks(texto) {
+  if (!texto) return texto;
+  return texto.replace(/https?:\/\/(?:www\.)?google\.com\/url\?[^\s"'<>]*/gi, function (todo) {
+    var m = /[?&](?:amp;)?q=([^&\s"'<>]+)/i.exec(todo);
+    if (!m) return todo;
+    var destino = m[1].replace(/&amp;/g, "&");
+    try { destino = decodeURIComponent(destino); } catch (e) {}
+    return destino;
+  });
+}
+
+// Confere, sem enviar nada, se sobrou algum link embrulhado nos rascunhos da campanha.
+function conferirLinks() {
+  const rascunhos = GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO);
+  let sujos = 0;
+  for (const d of rascunhos) {
+    const m = d.getMessage();
+    const bruto = m.getBody() + " " + m.getPlainBody();
+    if (/google\.com\/url/i.test(bruto)) { sujos++; Logger.log("AINDA EMBRULHADO: " + m.getTo()); }
+    if (/google\.com\/url/i.test(limparLinks(bruto))) Logger.log("LIMPEZA FALHOU: " + m.getTo());
+  }
+  Logger.log(rascunhos.length + " rascunhos, " + sujos + " com link embrulhado (a limpeza corrige no envio)");
+}
+
 function assinatura() {
   // Usa a assinatura padrão da conta (a "n"). Se quiser outra, marque-a como padrão no Gmail antes de rodar.
   const contas = Gmail.Users.Settings.SendAs.list("me").sendAs || [];
@@ -57,9 +88,10 @@ function enviarRascunhos() {
     const m = d.getMessage();
     const para = m.getTo();
     if (!para) continue;
-    const html = m.getBody() + "<br><br>-- <br>" + sig;
+    const html = limparLinks(m.getBody()) + "<br><br>-- <br>" + sig;
+    const texto = limparLinks(m.getPlainBody());
     if (SIMULAR) { Logger.log("enviaria para " + para); n++; continue; }
-    d.update(para, ASSUNTO, m.getPlainBody(), { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
+    d.update(para, ASSUNTO, texto, { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
     d.send();
     n++;
     Logger.log("enviado para " + para);
