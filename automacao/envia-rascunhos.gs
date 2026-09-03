@@ -46,6 +46,26 @@ function limparLinks(texto) {
   });
 }
 
+/* Diz quanta cota de envio a conta tem AGORA. Rode esta função sozinha no editor e
+ * leia o número no registro de execução. Ela não envia nada.
+ *
+ * Como ler o número, porque ele identifica a conta melhor que qualquer suposição:
+ *   perto de 100  -> a conta está no teto baixo do Apps Script. Isso vale para Gmail
+ *                    comum, para Workspace Individual e para Workspace em teste ou
+ *                    recém-criado, que o Google segura por reputação de envio.
+ *   perto de 1500 -> Workspace pago normal, e a cota é folgada de verdade.
+ * O teto do Apps Script é diferente do teto do Gmail: email mandado à mão pelo site,
+ * ou por conector, gasta o do Gmail e não gasta o do script. Só o que o script dispara
+ * gasta este aqui.
+ */
+function cota() {
+  const n = MailApp.getRemainingDailyQuota();
+  Logger.log("Cota de envio restante agora: " + n);
+  Logger.log(n >= 1000 ? "Workspace pago com cota folgada."
+    : "Conta no teto baixo (cerca de 100 por dia). Divida os lotes ou envie em dois dias.");
+  return n;
+}
+
 // Confere, sem enviar nada, se sobrou algum link embrulhado nos rascunhos da campanha.
 function conferirLinks() {
   const rascunhos = GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO);
