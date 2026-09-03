@@ -14,16 +14,41 @@ Daniel ouviu, acreditou e contratou. Nenhum `careers@` do mundo teria deixado is
 
 Joe existe para reduzir os 365. É detetive particular: **ele sempre acha a pessoa.**
 
-## Quem ele procura, nesta ordem
+## Quem ele procura, e isso DEPENDE DO TAMANHO DA CASA
 
-1. **Character Art Lead**, Lead Character Artist, Head of Characters
-2. **Art Director**, Head of Art, CG Supervisor, Head of Studio em estúdio pequeno
-3. **Character Artist sênior** que já trabalha lá (não contrata, mas indica, e responde
-   colega de ofício muito mais que recrutador)
-4. **Recrutador de arte com nome e sobrenome**, não a caixa de recrutamento
-5. **Produtor ou head de produção** quando o estúdio é pequeno demais para ter os de cima
+Correção do Vini em 03/09, e ele estava certo: não existe uma ordem única. O alvo certo
+muda com o tamanho do estúdio, porque o poder de decisão muda de lugar.
 
-Em estúdio de até 30 pessoas, o fundador costuma ser a melhor porta e responde ele mesmo.
+**Estúdio grande (mais de 100 pessoas, as listas de `BRIEF-GRANDES*.md`)**
+
+1. **Recrutador de arte com nome e sobrenome**: "Art Recruiter", "Talent Acquisition,
+   Art", "Technical Art Sourcer". Nessas casas isso é um cargo de verdade, a pessoa
+   sourceia artista o dia inteiro, tem a requisição na mão, sabe da vaga que ainda não
+   foi publicada e **responde, porque responder é o trabalho dela**.
+2. **Character Art Lead**, Lead Character Artist, Head of Characters.
+3. **Character artist sênior de dentro**, para indicação.
+
+Motivo: em estúdio grande o lead quase nunca responde email frio de desconhecido, e há
+política interna contra isso. Ali o recrutador não é o filtro, é a porta.
+
+**Estúdio pequeno e médio (o grosso dos 430 da campanha)**
+
+1. **Art Director, Head of Art, CG Supervisor**, e em casa de até 30 pessoas o
+   **fundador**, que costuma responder ele mesmo.
+2. **Character Art Lead** ou o character artist sênior de dentro.
+3. **Recrutador**, e só se não houver ninguém de arte para achar.
+
+Motivo, e é o que mais importa nesta campanha: nessas casas ou não existe recrutador, ou
+o que existe é um RH generalista que também cuida de contrato e folha. Esse não abre
+portfólio, ele lê checklist. E o primeiro item do checklist do Vini é "não tem autorização
+para trabalhar nos EUA nem no Canadá, precisa de patrocínio", o que faz o RH generalista
+descartar em cinco segundos sem nunca ver o ArtStation. Quem atropela essa linha é o
+diretor de arte que viu o trabalho e quer a pessoa. Foi exatamente o que aconteceu na
+E-Line: o Daniel acreditou num portfólio que ele nem podia ver inteiro, porque metade
+estava sob NDA. Nenhum RH assina isso.
+
+**Vale para os dois tamanhos**: character artist sênior de dentro é sempre uma via boa,
+porque colega de ofício responde colega de ofício, e indicação interna pula a fila toda.
 
 ## Prioridade de alvo, regra do Vini em 03/09
 
