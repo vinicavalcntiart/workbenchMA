@@ -139,8 +139,22 @@ Tudo o mais é regra fixa da campanha, sem exceção:
 - Nunca revelar salário atual, prazo de contrato, situação financeira, telefone ou endereço.
 - Frase fixa do portfólio: mais de 45 projetos, mais de 60 personagens, e os projetos
   pessoais entre as peças mais fortes.
-- Link como âncora limpa:
-  `<a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>`
+- **OS TRÊS LINKS, sempre.** Correção do Vini em 03/09: as quatro cartas das casas
+  grandes saíram só com o ArtStation, sem o LinkedIn e sem a escola. O rodapé é fixo e
+  leva os três, sempre nesta ordem, sempre como âncora limpa:
+
+  ```
+  Portfolio: <a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>
+  LinkedIn: <a href="https://www.linkedin.com/in/vinicavalcnti/">linkedin.com/in/vinicavalcnti</a>
+  Founder, Vini Cavalcanti School: <a href="https://vinicavalcanti.com">vinicavalcanti.com</a>
+  ```
+
+  O LinkedIn é o que um recrutador abre primeiro para conferir histórico, e a escola
+  mostra que ele ensina o próprio método, o que em vaga de lead conta como credencial.
+  Cortar os dois para encurtar a carta tira mais do que economiza.
+- **Assina Vini Cavalcanti.** Nunca "Vinicius Cavalcanti": Vini é o nome artístico dele e
+  é o que está no portfólio, no ArtStation e no currículo. Nome que não aparece em lugar
+  nenhum do material dele quebra o reconhecimento.
 - Sempre `body` em texto puro **e** `htmlBody` em HTML de verdade. **Nunca escapar o
   htmlBody**: se aparecer `&lt;p&gt;` no lugar de `<p>`, está errado.
 
