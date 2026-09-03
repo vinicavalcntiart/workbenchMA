@@ -34,7 +34,12 @@ global.Utilities = {
 global.Logger = { log: (...a) => global.LOG.push(a.join(' ')) };
 global.LOG = [];
 global.Session = { getScriptTimeZone: () => 'America/Sao_Paulo', getActiveUser: () => ({ getEmail: () => 'vini@example.com' }) };
-global.PropertiesService = { getScriptProperties: () => ({ getProperty: () => null, setProperty: () => {} }) };
+global.PROPS = {};
+global.resetProps = () => { global.PROPS = {}; };
+global.PropertiesService = { getScriptProperties: () => ({
+  getProperty: (k) => (k in global.PROPS ? global.PROPS[k] : null),
+  setProperty: (k, v) => { global.PROPS[k] = String(v); },
+}) };
 global.ScriptApp = { getProjectTriggers: () => [], newTrigger: () => ({ timeBased: () => ({ everyMinutes: () => ({ create: () => {} }) }) }) };
 global.GmailApp = { search: () => [], sendEmail: (...a) => global.EMAILS.push(a) };
 global.EMAILS = [];

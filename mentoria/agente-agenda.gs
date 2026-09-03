@@ -72,6 +72,18 @@ const CFG = {
   // 0 desliga.
   MAX_ONE_ON_ONE_POR_DIA: 0,
 
+  // Antecedência mínima que o aluno precisa dar para marcar, em horas.
+  // A trava de verdade é a nativa do agendamento do Google (README, seção
+  // "Antecedência mínima"). Aqui ela serve de rede: o agente flagra a sessão
+  // marcada em cima da hora e avisa você. 0 desliga.
+  AVISO_MINIMO_HORAS: 24,
+
+  // Trava dura: bloqueio contínuo cobrindo as próximas AVISO_MINIMO_HORAS.
+  // Funciona, mas te deixa permanentemente ocupado nas próximas 24h para QUALQUER
+  // um que consulte sua agenda, inclusive o pessoal da E-Line procurando horário.
+  // Por isso vem desligado. Use só se a trava nativa não der conta.
+  BLOQUEIO_ROLANTE: false,
+
   // Varredura do Gmail: pega convite .ics que ainda não virou evento na agenda.
   VARRER_GMAIL: true,
   DIAS_GMAIL: 14,
@@ -101,6 +113,7 @@ const VERSAO = 'v1';
 const TITULO_BLOQUEIO = 'Busy';
 const COR_BLOQUEIO = '8'; // grafite
 const CHAVE_ULTIMO_RESUMO = 'mentoria.ultimoResumo';
+const CHAVE_AVISOS = 'mentoria.avisos';
 
 /* ============================ FUNÇÃO PRINCIPAL ============================ */
 
@@ -141,6 +154,8 @@ function sincronizarAgenda() {
   if (CFG.VARRER_GMAIL) {
     convitesSoNoGmail(ini, fim).forEach(function (d) { desejados[d.chave] = d; });
   }
+  const rolante = bloqueioRolante(agora);
+  if (rolante) desejados[rolante.chave] = rolante;
 
   // ---- o que já existe ----
   const existentes = {};
@@ -175,9 +190,16 @@ function sincronizarAgenda() {
   }
 
   const colisoes = detectarColisoes(compromissos, oneOnOnes);
-  relatar(criados, ajustados, removidos, colisoes, tz);
+  const emCimaDaHora = detectarAvisoCurto(oneOnOnes, agora);
+  relatar(criados, ajustados, removidos, colisoes, emCimaDaHora, tz);
 
-  return { criados: criados.length, ajustados: ajustados.length, removidos: removidos.length, colisoes: colisoes.length };
+  return {
+    criados: criados.length,
+    ajustados: ajustados.length,
+    removidos: removidos.length,
+    colisoes: colisoes.length,
+    emCimaDaHora: emCimaDaHora.length,
+  };
 }
 
 /* ============================ LEITURA DA AGENDA ============================ */
@@ -343,6 +365,39 @@ function diaDaSemana(d, tz) {
   return mapa[sigla] !== undefined ? mapa[sigla] : d.getDay();
 }
 
+/**
+ * Trava dura da antecedência mínima: um bloqueio contínuo cobrindo daqui até o fim
+ * da janela de aviso. Ele rola junto com o relógio, arredondado para múltiplos de
+ * 15 min (para baixo no começo, para cima no fim, nunca cobrindo menos do que a
+ * política pede). Desligado por padrão.
+ */
+function bloqueioRolante(agora) {
+  if (!CFG.BLOQUEIO_ROLANTE || !CFG.AVISO_MINIMO_HORAS) return null;
+  const QUARTO = 15 * 60000;
+  return {
+    chave: 'aviso-minimo',
+    inicio: new Date(Math.floor(agora.getTime() / QUARTO) * QUARTO),
+    fim: new Date(Math.ceil((agora.getTime() + CFG.AVISO_MINIMO_HORAS * 3600000) / QUARTO) * QUARTO),
+    motivo: 'antecedência mínima de ' + CFG.AVISO_MINIMO_HORAS + 'h para novas reservas',
+  };
+}
+
+/**
+ * Sessões marcadas com menos antecedência do que a política pede.
+ * Compara o horário da sessão com o momento em que ela foi CRIADA, não com agora.
+ * Sessão marcada há duas semanas para amanhã está em dia; sessão marcada hoje de
+ * manhã para hoje à tarde, não.
+ */
+function detectarAvisoCurto(oneOnOnes, agora) {
+  if (!CFG.AVISO_MINIMO_HORAS) return [];
+  const limite = CFG.AVISO_MINIMO_HORAS * 3600000;
+  return oneOnOnes.filter(function (s) {
+    if (s.inicio <= agora) return false;
+    if (!s.ev.created) return false;
+    return (s.inicio.getTime() - new Date(s.ev.created).getTime()) < limite;
+  });
+}
+
 function horaNoDia(diaISO, hhmm, tz) {
   return Utilities.parseDate(diaISO + ' ' + hhmm, tz, 'yyyy-MM-dd HH:mm');
 }
@@ -473,22 +528,25 @@ function formata(d, tz) {
   return d ? Utilities.formatDate(d, tz, "dd/MM 'às' HH:mm") : '?';
 }
 
-function relatar(criados, ajustados, removidos, colisoes, tz) {
+function relatar(criados, ajustados, removidos, colisoes, emCimaDaHora, tz) {
   const linhas = [];
-  linhas.push(criados.length + ' bloqueio(s) criado(s), ' + ajustados.length + ' ajustado(s), ' + removidos.length + ' removido(s), ' + colisoes.length + ' colisão(ões)');
+  linhas.push(criados.length + ' bloqueio(s) criado(s), ' + ajustados.length + ' ajustado(s), ' +
+    removidos.length + ' removido(s), ' + colisoes.length + ' colisão(ões), ' +
+    emCimaDaHora.length + ' em cima da hora');
   criados.forEach(function (d) { linhas.push('  + ' + formata(d.inicio, tz) + ' — ' + d.motivo); });
   ajustados.forEach(function (d) { linhas.push('  ~ ' + formata(d.inicio, tz) + ' — ' + d.motivo); });
   removidos.forEach(function (r) { linhas.push('  - ' + r); });
   colisoes.forEach(function (c) {
     linhas.push('  ! ' + formata(c.sessao.inicio, tz) + ' one-on-one com "' + (c.conflito.ev.summary || 'compromisso') + '"');
   });
+  emCimaDaHora.forEach(function (s) {
+    linhas.push('  ! ' + formata(s.inicio, tz) + ' one-on-one marcado com menos de ' + CFG.AVISO_MINIMO_HORAS + 'h');
+  });
   Logger.log(linhas.join('\n'));
 
   if (CFG.SIMULAR) return;
-  if (colisoes.length) {
-    avisarColisoes(colisoes, tz);
-    return;
-  }
+  if (colisoes.length) avisarColisoes(colisoes, tz);
+  if (emCimaDaHora.length) avisarAvisoCurto(emCimaDaHora, tz);
   if (!criados.length && !ajustados.length && !removidos.length) return;
 
   // Resumo de rotina no máximo uma vez por dia, para não encher a caixa.
@@ -499,7 +557,29 @@ function relatar(criados, ajustados, removidos, colisoes, tz) {
   GmailApp.sendEmail(destinatario(), 'Agenda da mentoria: ' + criados.length + ' novo(s) bloqueio(s)', linhas.join('\n'));
 }
 
-function avisarColisoes(colisoes, tz) {
+/**
+ * Guarda o que já foi avisado, para o mesmo conflito não render um email a cada
+ * rodada de 15 minutos. Devolve true se este aviso já saiu antes.
+ */
+function jaAvisado(chave) {
+  const props = PropertiesService.getScriptProperties();
+  let mapa = {};
+  try { mapa = JSON.parse(props.getProperty(CHAVE_AVISOS) || '{}'); } catch (e) { mapa = {}; }
+  const agora = Date.now();
+  const validade = 30 * 24 * 60 * 60 * 1000;
+  Object.keys(mapa).forEach(function (k) { if (agora - mapa[k] > validade) delete mapa[k]; });
+  const visto = mapa.hasOwnProperty(chave);
+  if (!visto) mapa[chave] = agora;
+  props.setProperty(CHAVE_AVISOS, JSON.stringify(mapa));
+  return visto;
+}
+
+function avisarColisoes(todas, tz) {
+  const colisoes = todas.filter(function (c) {
+    return !jaAvisado('colisao:' + c.sessao.ev.id + ':' + c.conflito.ev.id);
+  });
+  if (!colisoes.length) return;
+
   const linhas = ['Um one-on-one já marcado está em cima de outro compromisso.', ''];
   colisoes.forEach(function (c) {
     linhas.push('One-on-one: ' + formata(c.sessao.inicio, tz) + ' — ' + (c.sessao.ev.summary || ''));
@@ -517,6 +597,33 @@ function avisarColisoes(colisoes, tz) {
     const email = emailDoAluno(c.sessao.ev);
     if (!email) return;
     GmailApp.sendEmail(email, 'Need to move our one-on-one', textoRemarcacao(c.sessao, tz));
+  });
+}
+
+function avisarAvisoCurto(todas, tz) {
+  const sessoes = todas.filter(function (s) { return !jaAvisado('aviso-curto:' + s.ev.id); });
+  if (!sessoes.length) return;
+
+  const linhas = ['Sessão marcada com menos de ' + CFG.AVISO_MINIMO_HORAS + 'h de antecedência.', ''];
+  sessoes.forEach(function (s) {
+    linhas.push('One-on-one: ' + formata(s.inicio, tz));
+    linhas.push('Marcada em: ' + formata(new Date(s.ev.created), tz));
+    linhas.push('Aluno:      ' + (emailDoAluno(s.ev) || 'não identificado'));
+    linhas.push('');
+  });
+  linhas.push('Se isso está acontecendo com frequência, a trava nativa do agendamento');
+  linhas.push('provavelmente está desligada. Veja "Antecedência mínima" em mentoria/README.md.');
+  linhas.push('');
+  linhas.push(CFG.AUTO_REMARCAR
+    ? 'AUTO_REMARCAR está ligado: o pedido de remarcação já foi enviado ao aluno.'
+    : 'AUTO_REMARCAR está desligado. Nenhum email foi para o aluno.');
+  GmailApp.sendEmail(destinatario(), 'Mentoria: sessão marcada em cima da hora', linhas.join('\n'));
+
+  if (!CFG.AUTO_REMARCAR) return;
+  sessoes.forEach(function (s) {
+    const email = emailDoAluno(s.ev);
+    if (!email) return;
+    GmailApp.sendEmail(email, 'Our one-on-one needs a bit more notice', textoAvisoCurto(s, tz));
   });
 }
 
@@ -541,6 +648,20 @@ function textoRemarcacao(sessao, tz) {
     'Please pick a new slot here: ' + CFG.LINK_AGENDAMENTO,
     '',
     'Every slot you see there is free on my end, so whatever you book is confirmed.',
+    '',
+    'Best,',
+    CFG.NOME_MENTOR,
+  ].join('\n');
+}
+
+function textoAvisoCurto(sessao, tz) {
+  return [
+    'Hi ' + primeiroNome(sessao.ev) + ',',
+    '',
+    'I saw you booked our one-on-one for ' + formata(sessao.inicio, tz) + '. I need at least ' +
+      CFG.AVISO_MINIMO_HORAS + ' hours of notice so I can prepare and actually look at your work before we talk.',
+    '',
+    'Could you move it to a later slot? Here is the link: ' + CFG.LINK_AGENDAMENTO,
     '',
     'Best,',
     CFG.NOME_MENTOR,

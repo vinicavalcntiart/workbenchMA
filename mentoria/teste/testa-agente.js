@@ -78,6 +78,7 @@ ok(!EMAILS.some(e => e[0] === 'aluno@escola.com'), 'com AUTO_REMARCAR desligado,
 
 console.log('== AUTO_REMARCAR ligado ==');
 EMAILS.length = 0;
+resetProps();               // conflito novo: sem isso o dedupe segura o aviso
 CFG.AUTO_REMARCAR = true;
 sincronizarAgenda();
 const aoAluno = EMAILS.find(e => e[0] === 'aluno@escola.com');
@@ -104,6 +105,56 @@ console.log('== janela protegida ==');
 CFG.JANELAS_PROTEGIDAS = [{ dias: [5], de: '12:00', ate: '13:30', motivo: 'almoço' }];
 const janelas = janelasProtegidas(new Date(`${AMANHA}T00:00:00-03:00`), new Date('2026-09-12T00:00:00-03:00'), 'America/Sao_Paulo');
 ok(janelas.length === 2 && janelas[0].chave === 'janela:2026-09-04:12:00-13:30' && janelas[1].chave === 'janela:2026-09-11:12:00-13:30', 'gera a janela nas duas sextas da faixa (' + janelas.map(j => j.chave).join(', ') + ')');
+
+console.log('== não repete aviso do mesmo conflito ==');
+resetProps();
+CFG.AUTO_REMARCAR = false;
+EMAILS.length = 0;
+sincronizarAgenda();
+const depoisDaPrimeira = EMAILS.length;
+sincronizarAgenda();
+ok(depoisDaPrimeira >= 1 && EMAILS.length === depoisDaPrimeira, 'segunda rodada com o mesmo conflito não manda email de novo');
+
+console.log('== antecedência mínima ==');
+resetProps();
+EMAILS.length = 0;
+const emCima = { id: 'sessao-tarde', summary: 'Vini Cavalcanti Mentorship', status: 'confirmed',
+  created: `${AMANHA}T08:00:00-03:00`,
+  start: { dateTime: `${AMANHA}T18:00:00-03:00` }, end: { dateTime: `${AMANHA}T19:00:00-03:00` },
+  attendees: [{ self: true, responseStatus: 'accepted' }, { email: 'atrasado@escola.com', displayName: 'Caio Lima' }] };
+const comAntecedencia = { id: 'sessao-ok', summary: 'Vini Cavalcanti Mentorship', status: 'confirmed',
+  created: '2026-08-20T10:00:00-03:00',
+  start: { dateTime: `${AMANHA}T20:00:00-03:00` }, end: { dateTime: `${AMANHA}T21:00:00-03:00` },
+  attendees: [{ self: true, responseStatus: 'accepted' }, { email: 'certinho@escola.com' }] };
+fontes.push(emCima, comAntecedencia);
+const r2 = sincronizarAgenda();
+ok(r2.emCimaDaHora === 1, 'flagra só a sessão marcada 10h antes (' + r2.emCimaDaHora + ')');
+const alerta = EMAILS.find(e => /em cima da hora/.test(e[1]));
+ok(!!alerta && /atrasado@escola.com/.test(alerta[2]), 'o alerta nomeia quem marcou em cima da hora');
+ok(!/certinho@escola.com/.test(alerta[2]), 'sessão marcada com semanas de antecedência não entra');
+ok(!EMAILS.some(e => e[0] === 'atrasado@escola.com'), 'com AUTO_REMARCAR desligado, o aluno não recebe nada');
+
+resetProps();
+EMAILS.length = 0;
+CFG.AUTO_REMARCAR = true;
+sincronizarAgenda();
+const pedido = EMAILS.find(e => e[0] === 'atrasado@escola.com');
+ok(!!pedido && /Caio/.test(pedido[2]) && /24 hours of notice/.test(pedido[2]), 'pede remarcação ao aluno, em inglês, citando as 24h');
+CFG.AUTO_REMARCAR = false;
+
+console.log('== bloqueio rolante ==');
+resetProps();
+acoes.insert.length = 0;
+ok(!acoes.insert.some(b => b.extendedProperties.private.chave === 'aviso-minimo'), 'vem desligado por padrão');
+CFG.BLOQUEIO_ROLANTE = true;
+guards.length = 0;
+sincronizarAgenda();
+const rolante = acoes.insert.find(b => b.extendedProperties.private.chave === 'aviso-minimo');
+ok(!!rolante, 'ligado, cria o bloqueio contínuo');
+const dur = (dia(rolante.end.dateTime) - dia(rolante.start.dateTime)) / 3600000;
+ok(dur >= 24 && dur <= 24.5, 'cobre pelo menos as 24h pedidas, nunca menos (' + dur.toFixed(2) + 'h)');
+ok(dia(rolante.start.dateTime) <= new Date(), 'começa agora, não deixa brecha antes');
+CFG.BLOQUEIO_ROLANTE = false;
 
 console.log(falhas ? `\n${falhas} FALHA(S)` : '\ntudo passou');
 process.exit(falhas ? 1 : 0);

@@ -63,6 +63,30 @@ isso você quiser, ponha `REMOVER_ORFAOS: false`.
 | One-on-one já marcado que ficou em cima de uma reunião nova | email urgente para o Vini; email de remarcação ao aluno só se `AUTO_REMARCAR` estiver ligado |
 | Janela protegida (almoço, foco) | bloqueio fixo recorrente, desligado por padrão |
 | Teto de one-on-ones por dia | fecha o resto do dia ao bater o teto, desligado por padrão |
+| Sessão marcada com menos de 24h de antecedência | alerta para o Vini; pedido de remarcação ao aluno só com `AUTO_REMARCAR` ligado |
+| Aviso repetido do mesmo conflito | só sai uma vez; o agente guarda o que já avisou por 30 dias |
+
+## Antecedência mínima
+
+Você quer que ninguém marque em cima da hora. **Isso se resolve na configuração do
+agendamento, não no agente.** É lá que o Google recusa a reserva na hora de fazer, em vez
+de você descobrir depois.
+
+calendar.google.com > abra o agendamento "Vini Cavalcanti Mentorship" > **Janela de
+reserva** (Booking window) > o campo do **tempo mínimo antes do início** > escolha
+**1 dia**. Salve. Pronto: o aluno abre o link e o dia de amanhã simplesmente não aparece.
+
+O agente cuida do resto, que a configuração nativa não cobre:
+
+- `AVISO_MINIMO_HORAS: 24` é a rede de segurança. Se alguma sessão escapar (você mexeu na
+  configuração, o aluno tinha um convite antigo, o Google mudou de ideia), ele compara o
+  horário da sessão com o momento em que ela foi **criada** e te avisa. Sessão marcada há
+  duas semanas para amanhã está em dia; marcada hoje de manhã para hoje à tarde, não.
+- `BLOQUEIO_ROLANTE` é a trava dura: um bloqueio contínuo cobrindo as próximas 24 horas,
+  sempre. Funciona sem depender de configuração nenhuma, **mas te deixa permanentemente
+  ocupado nas próximas 24h para qualquer um que consulte sua agenda**, inclusive o pessoal
+  da E-Line procurando horário com você. Vem desligado. Só ligue se a trava nativa não
+  der conta.
 
 ## Instalação
 
@@ -96,8 +120,13 @@ isso você quiser, ponha `REMOVER_ORFAOS: false`.
 
 - **Urgente, para o Vini**: quando um one-on-one já marcado está em cima de outro
   compromisso. Sempre, sem exceção.
+- **Em cima da hora, para o Vini**: quando uma sessão foi marcada com menos antecedência
+  do que `AVISO_MINIMO_HORAS`.
 - **Resumo, para o Vini**: no máximo uma vez por dia, e só quando algo mudou. Rodada sem
   novidade não gera email. (A caixa dele já encheu uma vez com aviso automático, em 01/09.)
+
+Alerta é avisado **uma vez só**. O agente guarda por 30 dias o que já reportou, então um
+conflito que fica de pé por três dias não vira 288 emails.
 - **Remarcação, para o aluno, em inglês**: só com `AUTO_REMARCAR: true`. Aponta o link de
   agendamento e não dá motivo pessoal.
 
