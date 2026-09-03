@@ -132,6 +132,59 @@ Tudo o mais é regra fixa da campanha, sem exceção:
 - Sempre `body` em texto puro **e** `htmlBody` em HTML de verdade. **Nunca escapar o
   htmlBody**: se aparecer `&lt;p&gt;` no lugar de `<p>`, está errado.
 
+## A armadilha do link, que custou os 16 primeiros rascunhos
+
+Na rodada de 03/09 os 16 rascunhos saíram com os links embrulhados no redirecionador do
+Gmail: `https://www.google.com/url?q=https://www.artstation.com/...&source=gmail&ust=...`.
+Isso acontece quando se copia o link de uma mensagem **já enviada ou recebida**, porque o
+Gmail reescreve os links na exibição. Num email frio o efeito é péssimo: parece rastreador
+de spam, e no corpo em texto puro a URL gigante aparece inteira.
+
+**Regra:** o link do portfólio se escreve à mão, sempre exatamente assim, e nunca se copia
+de thread nenhuma:
+`<a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>`
+Antes de fechar a rodada, abra um rascunho e confirme que não existe `google.com/url` em
+lugar nenhum.
+
+Na mesma revisão apareceram dois desvios menores, também para não repetir: a frase do
+portfólio tem forma fixa ("more than 45 projects with over 60 characters across many
+titles, and my personal projects are some of the strongest pieces in it"), e estúdio fora
+dos Estados Unidos leva a frase fixa de realocação no fim do parágrafo 2.
+
+## Correções de método vindas da primeira rodada
+
+1. **Casa grande não tem email público.** Varrer os domínios das listas de grandes deu
+   zero endereço de pessoa: Titmouse, Reel FX, Bento Box, Riot, Epic, Bungie, Roblox,
+   Larian, CDPR, Remedy, Naughty Dog e Rocksteady não publicam nenhum. Então em estúdio
+   grande o produto do Joe **não é email**: é uma fila separada de *nome + cargo + estúdio*
+   em `automacao/pessoas.csv` com `email` vazio e `confianca` igual a `sem-email`, para o
+   Vini abordar por LinkedIn ou pelo formulário. Nomes já achados assim: Brooke Keesling
+   (head de talento de animação, Bento Box), Melisa Hayward (principal creative recruiter,
+   Riot). Nunca inventar o formato do endereço para preencher a coluna.
+2. **Duas pessoas por estúdio, quando os cargos são complementares** e os dois endereços
+   estão publicados. O limite de uma por estúdio cortou pares bons (na nWave o Kevin
+   Hermans, diretor de arte de personagem, ao lado do Christopher Grao). Continua valendo
+   o teto de duas, e continua proibido mandar para a mesma casa em dias seguidos.
+3. **Cargo desatualizado é pior que alvo nenhum.** A Squeeze foi descartada mesmo com o
+   padrão de domínio provado, porque os dois nomes de arte encontrados já estão em outra
+   casa. Confirme que a pessoa ainda trabalha lá antes de entregar a linha.
+
+## Padrões de domínio já provados, use para confiança média
+
+Platige (`inicial+sobrenome`), nWave (`inicial+sobrenome`), Reel FX (`nome.sobrenome`),
+Squeeze (`inicial+sobrenome`), Electric Square (`nome.sobrenome`), Qvisten (`nome.sobrenome`).
+Qualquer pessoa nova dessas casas entra direto como confiança média, citando o padrão.
+
+## A técnica que rendeu, e que é a rotina
+
+Varredura mecânica com `curl` nas páginas `/contact`, `/about`, `/team`, `/studio` e
+`/people` dos domínios da campanha, extraindo `mailto:` e filtrando os locais que parecem
+nome de pessoa; depois um segundo passe que lê as três linhas de texto ao redor de cada
+endereço, de onde sai o cargo. Rodou em paralelo nos 426 domínios e devolveu cerca de
+3.800 linhas cruas. Buscador rende pouco para achar endereço e serve para **confirmar**
+nome, cargo e projeto. **ArtStation está bloqueado por Cloudflare** (403 por fetch e pelo
+navegador do scratchpad), o que é a maior perda, porque seria a melhor fonte de todas.
+
 ## Limites duros
 
 - **Uma pessoa por estúdio por rodada.** Duas cartas para a mesma casa no mesmo dia é
