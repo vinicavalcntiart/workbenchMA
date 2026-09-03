@@ -115,10 +115,13 @@ function enviarRascunhos() {
   const sobra = MailApp.getRemainingDailyQuota();
   Logger.log(rascunhos.length + " rascunhos da campanha encontrados · cota restante hoje: " + sobra);
   if (sobra <= 0) {
-    Logger.log("COTA ZERADA. Nada foi enviado e nenhum rascunho se perdeu. A cota do "
-      + "Apps Script vira no começo do dia no fuso do Pacífico, que é por volta das 4h "
-      + "da manhã em Recife, então amanhã cedo ela já estará cheia. Rode a função cota() "
-      + "antes de enviar para ver com quanto você está trabalhando.");
+    // Sobre QUANDO ela volta: a documentação do Google fala em período de 24 horas sem
+    // cravar a hora do corte, e existe relato tanto de virada em horário fixo quanto de
+    // janela móvel contada do primeiro envio. Como não dá para afirmar qual é, esta
+    // mensagem não promete horário: manda conferir, que custa dois segundos e não erra.
+    Logger.log("COTA ZERADA. Nada foi enviado e nenhum rascunho se perdeu. Ela volta "
+      + "dentro de 24 horas. Em vez de adivinhar a hora, rode a função cota() antes de "
+      + "tentar de novo: ela diz o número exato e não envia nada.");
     return;
   }
   let n = 0;
