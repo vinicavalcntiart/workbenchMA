@@ -1,2 +1,5 @@
 # logs soltos de scripts do navegador (nunca versionar)
 *.log
+
+# Permissões locais do Claude Code: são da máquina, não do repositório.
+.claude/settings.local.json
