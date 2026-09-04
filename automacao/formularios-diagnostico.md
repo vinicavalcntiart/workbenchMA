@@ -89,6 +89,25 @@ Tentativas registradas entre 03 e 04/09, contando só formulário de candidatura
   cinco tentativas com a sessão logada e funcionando em outra vaga do mesmo time)
 - **Bug nosso descoberto e corrigido:** 3
 
+## Rodada 2, 04/09/2026: 403 do Cloudflare que não era muro
+
+Site: `voidinteractive.net/careers` (VOID Interactive, dona de Ready or Not).
+
+| Como foi aberto | Resultado |
+|---|---|
+| `curl` | **403**, página do Cloudflare "Sorry, you have been blocked" |
+| Navegador com tela de verdade sob Xvfb | **200**, página inteira, com o quadro de vagas e os links do BambooHR |
+
+Isso confirma o padrão da rodada 1 numa terceira ferramenta: o 403 não queria dizer
+site fora do ar nem muro intransponível, queria dizer que o cliente não parecia um
+navegador. **Antes de registrar qualquer site como inacessível, abrir com o navegador
+de tela de verdade é obrigatório.**
+
+O resultado prático: a vaga que os agregadores mostram (Lead Character Artist de Ready
+or Not, remota) **não existe** no quadro oficial deles, que hoje tem duas posições e
+nenhuma de arte. Uma entrada do painel que estava em suspenso desde 30/08 foi fechada
+com a fonte na mão.
+
 ## Fila para a próxima rodada
 
 1. Reclassificar as 54 entradas da lista manual do `respostas-formularios.md` usando as
