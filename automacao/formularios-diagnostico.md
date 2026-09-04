@@ -201,6 +201,40 @@ agora aceita `application sent`, `we've received your application` e as variaç�
 O script foi copiado para `automacao/apply-greenhouse.js` para não se perder com o
 container.
 
+## Rodada 6, 04/09/2026: a varredura da Disney estava mentindo nas duas direções
+
+Não é bug de formulário, é bug de **descoberta**, e por isso é pior: ele decide o que a
+campanha nem chega a tentar.
+
+A varredura do `disneycareers.com` lia o HTML da busca e pegava os 10 primeiros links.
+Dois problemas somados: o site **ignora a palavra-chave** (buscar `modeler` devolve as
+mesmas 768 vagas) e a ordenação muda entre sessões.
+
+| Rodada | Os 10 primeiros eram | Veredito que a varredura deu |
+|---|---|---|
+| 16h50 | Senior Modeler da ILM e um Art Director | "duas vagas de arte hoje" |
+| 20h50 | massagista e cozinheiro da Disneyland | "nada" |
+
+Mesma consulta, respostas opostas, e **nenhuma das duas confiável**. A primeira acertou
+por sorte; a segunda teria feito a campanha perder vaga na casa que a regra do Vini manda
+varrer primeiro.
+
+**Corrigido com a API oficial do Workday**, que é o que o próprio site consome:
+
+```
+POST https://disney.wd5.myworkdayjobs.com/wday/cxs/disney/disneycareer/jobs
+{"appliedFacets":{},"limit":20,"offset":0,"searchText":"modeler"}
+```
+
+Ela devolve `total`, título, local e data de publicação, e a busca funciona de verdade.
+Oito termos por ela dão o quadro completo da Disney hoje, e ele fecha com o registro:
+Character Design Lead da Disney Television Animation (candidatura de 02/09), Senior
+Modeler da ILM Sydney (candidatura de hoje), Lead e Senior Texture Artist da ILM London
+(as duas recusadas) e três de Mumbai, fora do escopo.
+
+**A lição, que é a mesma da leitura de volta:** raspar HTML de página que pagina e ordena
+sozinha é adivinhação. Onde existe API do próprio ATS, é ela que vale.
+
 ## Fila para a próxima rodada
 
 1. Reclassificar as 54 entradas da lista manual do `respostas-formularios.md` usando as
