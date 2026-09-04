@@ -145,6 +145,31 @@ Vini**, e não a última.
 (`headless:false`) e a executar a leitura de volta de todos os campos antes do envio,
 resolvendo o item 3 da fila abaixo para o Greenhouse.
 
+## Rodada 4, 04/09/2026: o reCAPTCHA do Greenhouse é pontuação, não portão
+
+A rodada 3 mediu quais boards do Greenhouse carregam reCAPTCHA e concluiu que a
+Imageworks e a 2K carregam. Hoje à tarde a Fanatics Collectibles, que **também carrega**
+(objeto `grecaptcha` e iframe presentes), **aceitou o envio**, do mesmo IP, com tela de
+confirmação.
+
+| Board | Carrega reCAPTCHA | Envio hoje |
+|---|---|---|
+| Sony Pictures Imageworks | sim | recusado, duas tentativas, de manhã |
+| Fanatics Collectibles | sim | **aceito**, à tarde |
+| Epic Games, Riot Games | não | aceitos em 03/09 |
+
+**Conclusão que corrige a rodada 3:** carregar reCAPTCHA não é o mesmo que barrar. É
+verificação por pontuação de sessão, e a mesma rede pode passar num board e falhar em
+outro no mesmo dia. Então a medição prévia (`automacao/hb-recaptcha.js`) serve para
+**avisar o risco**, não para desistir: **tentar o envio continua obrigatório** mesmo em
+board que carrega o desafio. Só depois de o envio ser recusado é que a vaga vai para a
+fila do Vini.
+
+**Segunda lição, de operação:** a espera de seis minutos pelo código de segurança do
+Greenhouse estourou na primeira tentativa da Fanatics porque a busca no Gmail só começou
+depois. O jeito certo é o que funcionou na segunda: subir o envio em segundo plano e ir
+buscar o código em paralelo, sem esperar o script pedir.
+
 ## Fila para a próxima rodada
 
 1. Reclassificar as 54 entradas da lista manual do `respostas-formularios.md` usando as
