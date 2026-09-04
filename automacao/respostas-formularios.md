@@ -254,3 +254,32 @@ paginando com `start=20`, `40` etc.
 
 Em todos: e-mail `contact@vinicavalcanti.art`, termos `character artist`, `character design`,
 `character modeler` e `visual development`, **sem filtro de senioridade**.
+
+## Sony Pictures Imageworks: Experienced Texture Artist, Vancouver (04/09)
+
+Greenhouse, `job-boards.greenhouse.io/sonypicturesimageworks/jobs/4363799003`. A automação
+preencheu o formulário inteiro e conferiu campo a campo antes de enviar; o envio é que foi
+recusado pelo reCAPTCHA do board, nas duas tentativas. No navegador dele passa. O dossiê de
+copiar e colar está no painel, na aba de formulários; abaixo ficam as respostas para
+registro.
+
+| Campo | Resposta |
+|---|---|
+| First / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Country e Phone | Brazil +55, número no documento privado do Drive |
+| Resume/CV e Cover Letter | anexar os dois PDFs |
+| LinkedIn Profile | https://www.linkedin.com/in/vinicavalcnti/ |
+| Website e Demo Reel | https://www.artstation.com/viniciuscavalcanti |
+| Demo Reel Password | em branco |
+| How do hear about us? | Imageworks Career Site |
+| Have you worked at Imageworks before? | No |
+| Were you ever employed by SPE or one of its Sony Affiliates? | No |
+| Where do you currently reside? | I live outside of CAN |
+| Eligibility to work in Canada | I will need a work permit |
+| If you have an open work permit, when does it expire? | em branco |
+| When are you available to work? | Available after a standard transition period. |
+| Voluntary Disclosures | Yes, I have read and consent to the terms and conditions |
+
+Não é candidatura repetida: a Experienced Modeler (4363749003) e a Expression of Interest
+(4551278003), as duas de 02/09, são outras requisições e outra disciplina.

@@ -83,8 +83,9 @@ Tentativas registradas entre 03 e 04/09, contando só formulário de candidatura
   International, Mighty Nice, e o cadastro da Gunfire em 02/09)
 - **Entregues ao Vini e enviadas por ele:** 3 (Piranha Games, Mattel, e a Disney de
   02/09)
-- **Muro de verificação humana confirmado:** 2 (Scopely, reCAPTCHA Enterprise; Jam
-  City, hCaptcha com desafio de imagem)
+- **Muro de verificação humana confirmado:** 3 (Scopely, reCAPTCHA Enterprise; Jam
+  City, hCaptcha com desafio de imagem; Imageworks Experienced Texture Artist, reCAPTCHA
+  do board do Greenhouse, em 04/09)
 - **Defeito do servidor do empregador:** 1 (EA 215788, `Internal server error` em
   cinco tentativas com a sessão logada e funcionando em outra vaga do mesmo time)
 - **Bug nosso descoberto e corrigido:** 3
@@ -108,6 +109,42 @@ or Not, remota) **não existe** no quadro oficial deles, que hoje tem duas posi�
 nenhuma de arte. Uma entrada do painel que estava em suspenso desde 30/08 foi fechada
 com a fonte na mão.
 
+## Rodada 3, 04/09/2026: o Greenhouse não é um caminho só
+
+Até aqui o Greenhouse era tratado como via aberta, porque cinco candidaturas passaram por
+ele em 03/09 (três na Epic, duas na Riot). Hoje a Experienced Texture Artist da Sony
+Pictures Imageworks foi preenchida inteira, passou pela leitura de volta com os dezesseis
+campos conferidos, e o envio devolveu `Please complete the reCAPTCHA and resubmit your
+application`. Duas tentativas, mesmo resultado.
+
+**Teste, sem enviar nada:** abrir cada board e medir se a página carrega reCAPTCHA.
+
+| Board | `window.grecaptcha` | iframe de desafio | Candidatura recente |
+|---|---|---|---|
+| Sony Pictures Imageworks | objeto | 1 | recusada hoje |
+| 2K | objeto | 1 | passou em 02/09 |
+| Epic Games | indefinido | 0 | três passaram em 03/09 |
+| Riot Games | indefinido | 0 | duas passaram em 03/09 |
+
+**Duas conclusões, e a segunda é a que importa.**
+
+A primeira é que o Greenhouse não tem um comportamento só: é configuração de board. Onde
+não há reCAPTCHA, a automação envia; onde há, a recusa aparece **só no último clique**,
+depois de todo o trabalho de preenchimento. Medir antes custa vinte segundos e evita
+gastar a rodada inteira para descobrir no fim.
+
+A segunda é que o board da Imageworks **aceitou duas candidaturas nossas em 02/09** e
+recusa hoje. O formulário não mudou. O que mudou foi a reputação da sessão, no mesmo IP de
+datacenter que a rodada 1 já tinha visto ser citado por nome pelo SmartRecruiters. Ou seja,
+o reCAPTCHA invisível não é um portão fixo: é um placar que piora com o uso. Isso não muda
+a linha ética, continua sendo verificação humana e continua sem se burlar, mas muda o
+planejamento: **candidatura em board com reCAPTCHA é a que deve ir primeiro na fila do
+Vini**, e não a última.
+
+**Ação tomada:** `apply_gh.js` passou a rodar com tela de verdade por padrão
+(`headless:false`) e a executar a leitura de volta de todos os campos antes do envio,
+resolvendo o item 3 da fila abaixo para o Greenhouse.
+
 ## Fila para a próxima rodada
 
 1. Reclassificar as 54 entradas da lista manual do `respostas-formularios.md` usando as
@@ -116,8 +153,13 @@ com a fonte na mão.
 2. Testar com tela de verdade os que estavam marcados como Cloudflare (`error 1015` da
    Workable, Turnstile do Rippling): o resultado do SmartRecruiters sugere que o
    diagnóstico deles também pode estar errado.
-3. Implementar a leitura de volta dos campos antes do envio, em todos os scripts.
-4. Procurar rota legítima antes de declarar muro: página do próprio estúdio, API pública
+3. Implementar a leitura de volta dos campos antes do envio, em todos os scripts. **Feito
+   no `apply_gh.js` em 04/09**, junto com o modo de tela de verdade por padrão; falta
+   levar para o `apply_arrow.js`, o `apply_pgi.js` e os scripts de Airtable e Lever.
+4. Medir o reCAPTCHA do board **antes** de preencher, em todo ATS que tenha essa
+   configuração por cliente (`automacao/hb-recaptcha.js` faz isso para o Greenhouse), e
+   mandar direto para a fila do Vini o que já se sabe que vai ser recusado no envio.
+5. Procurar rota legítima antes de declarar muro: página do próprio estúdio, API pública
    do ATS, email de recrutamento publicado, candidatura espontânea. A Piranha Games
    publica `recruiting@piranhagames.com` na própria página da vaga e ninguém tinha
    olhado.
