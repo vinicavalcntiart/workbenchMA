@@ -357,3 +357,7 @@ Caiu no dedupe no último passo: Studio Rakete (Alemanha, Hamburgo). A página s
 - ALERTA (04/09): Warner Bros. Discovery, careers.wbd.com, alerta de vaga criado e ativado para contact@vinicavalcanti.art com a palavra-chave character artist. Cobre Warner Bros. Animation e Cartoon Network Studios. O portal hoje não tem nada da disciplina aberto: character artist devolve 326 resultados por casamento de texto solto e modeler devolve duas vagas de sistema de imposto.
 
 - BLOQUEIO (04/09): Paramount. O portal responde Access Denied do Akamai tanto ao curl quanto ao navegador com tela de verdade, então a varredura direta não passa. A casa segue coberta pelo alerta de vagas ativo na conta dele desde 31/08, que já entregou email de vaga nova em 02/09.
+
+- VAGA EXPIRADA (04/09): CD PROJEKT RED. O Hitmarker anuncia Lead 3D Character Artist do Project Sirius e Senior Character Artist do Witcher 4, e a página oficial de vagas da CDPR, aberta nesta rodada com o navegador de tela de verdade, lista 41 posições e nenhuma de arte. A Senior Character Artist já tinha sido conferida como expirada em 02/09; agora a Lead do Sirius também não existe. A CD PROJEKT RED Vancouver continua na fila de Prospecção.
+
+- NOTA TÉCNICA (04/09): Pixar, Lucasfilm e Walt Disney Animation NÃO têm board no Greenhouse (os tokens pixar, lucasfilm e disneyanimation respondem 404). O grupo Disney inteiro passa pelo Workday, e a varredura tem que ser feita no disneycareers.com com o navegador de tela de verdade, porque a busca deles é JavaScript e o curl não passa.
