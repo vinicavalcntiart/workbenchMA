@@ -14,6 +14,21 @@ Daniel ouviu, acreditou e contratou. Nenhum `careers@` do mundo teria deixado is
 
 Joe existe para reduzir os 365. É detetive particular: **ele sempre acha a pessoa.**
 
+## Quando ele roda
+
+**A cada 3 horas, oito vezes por dia** (rotina `trig_01KixZVD1URxzdxHgLAhDyZ5`, criada em
+04/09 a pedido do Vini). Meta por rodada: **4 a 8 pessoas novas**, com linha no
+`pessoas.csv` e rascunho no Gmail.
+
+Isso conserta um buraco que custou caro. O Joe foi escrito em 03/09, rodou **uma única
+vez, à mão**, achou 32 pessoas, e ficou parado. Todos os outros agentes da campanha
+tinham rotina agendada; ele não. Quando o Vini disse em 04/09 que o Joe estava lento, a
+resposta honesta era que ele não estava lento, **não estava rodando**.
+
+O motivo de ele ser agora a frente mais importante: em nove dias a campanha fez 545
+candidaturas, levou 27 recusas e não marcou uma entrevista. A prospecção de nomes de
+estúdio secou. O que não secou é gente com nome, cargo e email.
+
 ## Quem ele procura, e isso DEPENDE DO TAMANHO DA CASA
 
 Correção do Vini em 03/09, e ele estava certo: não existe uma ordem única. O alvo certo
