@@ -1832,6 +1832,7 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-04","alerta","O painel passou a mostrar o total de candidaturas, que hoje é 545","Você notou que o site mostrava email e portal em caixas separadas e nunca a soma, que é justamente o número que responde à pergunta de quantas candidaturas a campanha já fez. Agora ele é a primeira caixa do topo e aparece também no rodapé: 545 no total, sendo 428 cartas por email e 117 por portal e formulário. A conta tem um cuidado contra contagem dupla, que está escrito no código: a lista de estúdios grandes tem uma linha por casa e a maioria dessas casas já tem a vaga correspondente na lista de portais, então só entram as linhas de estúdio grande que não aparecem entre as candidaturas de portal já contadas. Nenhum dos três números é escrito à mão; os três saem dos dados e envelhecem junto com eles.",""],
  ["2026-09-04","envio","A 3D Artist do Monopoly GO em Barcelona foi enviada, doze horas depois de ter sido dada como travada","De manhã essa candidatura bateu no reCAPTCHA do Greenhouse da Scopely e foi para a sua fila manual com o dossiê pronto. À tarde a Fanatics provou que esse reCAPTCHA é pontuação de sessão e não portão fixo, porque aceitou um envio do mesmo endereço de rede. Com isso a Scopely foi retentada às 18h45 e passou, com a tela dizendo Application Sent. O dossiê saiu da aba de formulários porque não falta mais nada. Junto veio a correção de um erro meu que é dos mais perigosos: o script tinha marcado essa candidatura como não confirmada, quando ela tinha sido enviada, só porque a frase da Scopely não estava na lista de confirmações que ele reconhece. Falso negativo desse tipo leva a mandar duas vezes, que foi o que aconteceu com a Red Star ontem. Agora a lista aceita as variações todas e a própria URL de confirmação vale como prova.","https://job-boards.greenhouse.io/scopely/jobs/5398064008"],
  ["2026-09-04","vaga","A Plarium abriu Character Concept Artist com escritório em Barcelona e Varsóvia, e eu não mandei","O lembrete de vaga salva do LinkedIn trouxe a Senior Character Concept Artist da Plarium e a conferência na fonte oficial confirmou: o quadro deles tem treze posições e essa é uma, para um jogo de sobrevivência novo, com escritórios em Barcelona, Varsóvia, Lviv e Kharkiv, emprego efetivo registrado e 20 a 26 dias de férias. Barcelona e Varsóvia estão no seu recorte. Não mandei, e o motivo é o mesmo que segurou a Manager Concept Art da Riot: o anúncio pede cinco anos ou mais COMO character concept artist e portfólio com conceitos semirrealistas de projetos comerciais concluídos nessa função, e você é artista 3D de personagem, com portfólio estilizado e tridimensional. A candidatura seria fraca e gasta a sua única entrada nessa casa. O remoto também não te alcança: vale só para quem já mora na Polônia, Espanha ou Ucrânia. Se você discordar, é rápido: o formulário está no próprio anúncio, no botão Send CV, e pede só nome, email, telefone, país, currículo e link de portfólio, sem captcha.","https://company.plarium.com/en/career/character-concept-artist-778-1257/"],
  ["2026-09-04","alerta","A primeira varredura com a regra nova não achou nada de novo nas quatro casas, e isso é informação boa","Disney, DreamWorks, Paramount e Warner foram varridas antes de tudo, como manda a sua regra, e o resultado é que a fila delas está limpa: a Disney tem exatamente duas vagas de arte publicadas hoje, a Senior Modeler da ILM onde a sua candidatura já entrou e um Art Director de cenografia de espetáculo ao vivo em Kissimmee; a NBCUniversal repete as mesmas quatro de Montréal e Glendale que já estão no seu painel esperando a sua mão; a Warner não tem nada da disciplina, com character artist, modeler e visual development devolvendo zero; e a Paramount segue coberta pelo alerta. Ou seja, hoje não há nada dessas casas parado por descuido, o que era exatamente a dúvida. Duas descobertas técnicas úteis vieram junto: Pixar, Lucasfilm e Disney Animation não usam Greenhouse, só Workday, então a varredura delas passa pelo disneycareers; e o Hitmarker anuncia duas vagas de personagem na CD PROJEKT RED que não existem, porque a página oficial deles tem 41 posições e nenhuma de arte. É a quarta vez hoje que um agregador mostra vaga morta.",""],
@@ -2284,10 +2285,21 @@ function renderTiles(){
   // o que ele marcou à mão e ainda não teve retorno nenhum.
   const portalFeitas = PORTAIS.filter(isApplied).length;
   const portalConf = PORTAIS.filter(p2=>p2.done).length;
+  // TOTAL DE CANDIDATURAS, pedido dele em 04/09: o painel mostrava email e portal em
+  // caixas separadas e nunca a soma. Cada carta fria é uma candidatura e cada envio por
+  // portal é outra, então a soma é legítima. O cuidado é não contar duas vezes o mesmo
+  // estúdio grande: o array GRANDES é UMA linha por casa, e a maioria dessas casas já
+  // tem a vaga correspondente no PORTAIS. Por isso só entram as linhas do GRANDES cujo
+  // estúdio não aparece entre as candidaturas de portal já contadas.
+  const nomesPortalFeitos = new Set(PORTAIS.filter(isApplied).map(p2=>normName(p2.name)));
+  const grandesSoNoGrandes = GRANDES.filter(g=>feitoGrande(g) && !nomesPortalFeitos.has(normName(g[0]))).length;
+  const CAND_PORTAL = portalFeitas + grandesSoNoGrandes;
+  const CAND_TOTAL = ENVIOS + CAND_PORTAL;
   const portalMortas = PORTAIS.filter(isMorta).length;
   const grandesFeitos = GRANDES.filter(feitoGrande).length;
   const soVoce = p.aMao.length + p.alertaBloq.length + p.grandeMao.length;
   $("#tiles").innerHTML = [
+    ["🎯", CAND_TOTAL, "Candidaturas no total", ENVIOS+" cartas por email + "+CAND_PORTAL+" por portal e formulário"],
     ["🏢", ESTUDIOS_EMAIL, "Estúdios contatados por email", "endereços distintos; "+a.soPortal+" outros alcançados só por portal"],
     ["📤", ENVIOS, "Emails enviados", LOTES.length+" lotes · "+SEGUNDAS_VIAS+" segundas vias para o mesmo endereço"],
     ["🖐️", soVoce, "Só você pode fazer", p.aMao.length+" candidaturas à mão + "+p.alertaBloq.length+" alertas com captcha + "+p.grandeMao.length+" portais que não abrem"],
@@ -2296,7 +2308,7 @@ function renderTiles(){
     ["✅", c.delivered, "Estúdios com email entregue", c.bounce+" bounce, o email nunca chegou"],
     ["💬", c.resp, "Respostas humanas", rate+"% dos entregues · "+c.aberto+" em aberto", c.aberto>0],
     ["🚫", c.rec, "Recusas", "todas respondidas; nenhuma ficou sem retorno"],
-    ["🎯", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
+    ["🤝", c.ent, "Entrevistas", c.off+(c.off===1?" oferta":" ofertas"), c.ent>0]
   ].map(([ic,n,l,d,up])=>`<div class="tile"><div class="h"><span>${ic}</span>${esc(l)}</div><div class="n">${n}</div>${d?`<div class="d${up?" up":""}">${esc(d)}</div>`:""}</div>`).join("");
 }
 
@@ -3298,8 +3310,18 @@ function renderAll(){
 $("#updated").innerHTML = "dados atualizados em " + new Date(UPDATED+"T12:00:00Z").toLocaleDateString("pt-BR")
   + ' · <b class="carimbo">publicado ' + esc(BUILD) + "</b>";
 // O rodapé contava 159 emails desde que a campanha tinha 149 estúdios; agora sai dos dados.
-$("#rodapeNums").textContent = ENVIOS + " emails para " + ESTUDIOS_EMAIL + " endereços, sendo "
-  + EMAILS_PRE + " na leva pré-campanha de julho e agosto e " + EMAILS_CAMPANHA + " de 26/08 em diante"
+// O total de candidaturas tambem sai daqui, para o rodape dizer a mesma conta do topo.
+(function(){
+  const nn = x => x.toLowerCase().normalize("NFD").replace(/[^a-z0-9]/g,"").slice(0,12);
+  const pf = PORTAIS.filter(isApplied).length;
+  const nomes = new Set(PORTAIS.filter(isApplied).map(p=>nn(p.name)));
+  const gs = GRANDES.filter(g=>feitoGrande(g) && !nomes.has(nn(g[0]))).length;
+  window.CAND_PORTAL_TOTAL = pf + gs;
+})();
+$("#rodapeNums").textContent = (ENVIOS + window.CAND_PORTAL_TOTAL)
+  + " candidaturas no total, sendo " + ENVIOS + " cartas por email e "
+  + window.CAND_PORTAL_TOTAL + " por portal e formulário. As de email foram "
+  + "para " + ESTUDIOS_EMAIL + " endereços, sendo " + EMAILS_PRE + " na leva pré-campanha de julho e agosto e " + EMAILS_CAMPANHA + " de 26/08 em diante"
   + (EMAILS_LOG !== ENVIOS
       ? " (o log diário soma " + EMAILS_LOG + ", porque conta também os endereços que quicaram e foram trocados)"
       : "");
