@@ -58,8 +58,11 @@ Valem as mesmas da campanha, que estão em `automacao/respostas-formularios.md`:
 
 - Verdade sempre. Direito de trabalho nos EUA e Canadá: **No**. Precisa de patrocínio: **Yes**.
   Aceita realocar: **Yes**, sem ressalva.
-- Salário atual: "Confidential under NDA", nunca um valor. Pretensão: USD 46.000 por ano;
-  no Canadá, CAD 75.000 a 79.999.
+- Salário atual: "Confidential under NDA", nunca um valor. PRETENSÃO, regra nova do Vini de 04/09:
+  pedir a **base da faixa publicada** no anúncio. Sem faixa, em casa grande sênior ou lead:
+  EUA USD 100.000, Canadá CAD 95.000, Reino Unido GBP 50.000, Europa ocidental EUR 55.000,
+  Austrália AUD 110.000. Nunca abaixo do piso legal da ocupação, que é o que viabiliza o visto.
+  A faixa antiga de USD 46.000 está MORTA. Detalhe completo no BRIEFING.md.
 - Emprego atual E-Line Media **sem data de fim**. Se o parser preencher, apague.
 - Diversidade e EEO: prefere não responder.
 - Nunca escrever nada que sugira hesitação em mudar de país. O mestrado só aparece como

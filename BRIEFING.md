@@ -16,7 +16,7 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
 4. **Discrição:** nunca escrever, em carta, formulário ou resposta, qualquer motivo pessoal que sugira dificuldade ou hesitação em mudar de país. Se perguntarem, a posição é uma só: ele quer realocar. O mestrado só aparece como credencial que fortalece o caso de visto.
 5. **Escopo geográfico:** América do Norte, Europa (incl. UK/Irlanda/Nórdicos), Oceania e, na Ásia, só Coreia do Sul e Singapura. **Japão está fora** (idioma, fuso, moeda). Não prospectar Índia nem Brasil (a antiga exceção, Estúdio Pé Grande, fechou em agosto de 2026). Room 8 Studio e grupo estão fora.
 6. **Fonte oficial:** job board serve para DESCOBRIR vaga, nunca para confirmar. Só escrever "vaga confirmada" depois de abrir a página do próprio empregador ou o ATS dele.
-7. **Salário:** USD 3.840 por mês. **Nunca revelar o salário da E-Line** (quebra de NDA).
+7. **Salário:** ver a POLÍTICA DE PRETENSÃO no fim deste arquivo (regra do Vini, 04/09): pede-se a **base da faixa publicada**; sem faixa publicada, USD 100.000 em estúdio grande e USD 85.000 no resto, com equivalentes por país. Nunca abaixo do piso legal de visto. **Nunca revelar o salário da E-Line** (quebra de NDA).
 8. **Right to work:** nunca mentir em caixa de autorização de trabalho. Responder "No" para EUA e "Yes" para sponsorship, e vender o caso de visto no campo de texto livre.
 9. **Frase fixa de portfólio** (usar sempre, com negrito nos trechos indicados): "My portfolio holds more than **45 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it."
 10. **Frase fixa de realocação** (só para estúdios FORA dos EUA): "I'm open to relocating as well; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case."
@@ -57,3 +57,40 @@ Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Juli
 - Prospecção a cada 4h: varre vagas remotas primeiro, revalida vagas antigas, alimenta o painel e a newsletter.
 - Envio: os rascunhos da campanha (assunto fixo) saem pelo Apps Script `automacao/envia-rascunhos.gs`, na conta do Vini, com assinatura e anexos; ele roda à mão (40 por execução) ou por acionador de tempo, se ele ligar. O monitor marca os estúdios como enviados quando vê a mensagem em Enviados.
 - Formulários: a automação preenche formulários sem captcha de desafio pelo navegador headless (Greenhouse, Ashby, Breezy, JotForm, Teamtailor Connect, formulários próprios); hCaptcha, reCAPTCHA de caixa, Turnstile, DataDome e portais com conta ficam para o Vini, listados em `automacao/respostas-formularios.md`.
+
+## POLÍTICA DE PRETENSÃO SALARIAL (decisão do Vini em 04/09, substitui a faixa antiga)
+
+A faixa antiga era **USD 46.000 por ano**, e ela estava trabalhando contra ele por dois
+motivos concretos. O primeiro é de leitura: contra as faixas que os próprios estúdios
+publicaram nesta campanha (Wizards, Lead Character Artist, USD 156.800 a 235.200; Cloud
+Chamber, Lead Character Artist, USD 148.000 a 175.000; Mattel, Lead Artist, USD 96.800 a
+137.000; Scopely, Senior 3D Artist, USD 80.000 a 130.000; Piranha Games, Character Artist,
+CAD 80.000 a 120.000), pedir 46 mil não lê como barato, lê como candidato de outro cargo.
+O segundo é legal e é o que decide: **para patrocinar visto, o empregador é obrigado a
+pagar o piso oficial da ocupação** (prevailing wage no H-1B dos Estados Unidos, salário
+vigente no LMIA canadense, limite mínimo do Skilled Worker britânico). Pedir abaixo desse
+piso não te faz mais fácil de contratar, te faz impossível de patrocinar.
+
+**A regra que o Vini definiu: no mínimo competitivo, posicionado na BASE da faixa.**
+O diferencial dele é estar no piso do mercado, nunca abaixo dele.
+
+1. **Se o anúncio publica a faixa, peça a base dela.** É a regra principal e não depende de
+   estimativa nenhuma. Texto: "Aligned with the posted range for the role, at the lower
+   end." Isso é competitivo por definição.
+2. **Se não publica, e é sênior ou lead em estúdio grande:**
+   Estados Unidos **USD 100.000** · Canadá **CAD 95.000** · Reino Unido **GBP 50.000** ·
+   Europa ocidental **EUR 55.000** · Austrália **AUD 110.000**
+3. **Estúdio pequeno ou médio, ou cargo abaixo de sênior:** um degrau abaixo, e nunca
+   menos que isto: EUA **USD 85.000** · Canadá **CAD 80.000** · Reino Unido **GBP 42.000**
+   · Europa ocidental **EUR 45.000** · Austrália **AUD 95.000**
+4. **Piso absoluto, que não se rompe em nenhuma hipótese:** nada abaixo do piso legal da
+   ocupação no país, porque isso inviabiliza o patrocínio de visto.
+5. **Texto padrão quando o campo é livre:** "Open to aligning with your band for the role;
+   as a reference, I'm looking at around <valor>." Nunca um número seco sem a abertura.
+6. **Salário atual da E-Line: NUNCA revelar.** Resposta fixa: "Confidential under the NDA
+   of my current contract; happy to discuss ranges during the process."
+
+**Honestidade sobre a origem dos números:** os do item 1 vêm do próprio anúncio, então são
+fato. Os dos itens 2 e 3 são estimativa construída a partir das faixas que esta campanha
+viu publicadas e do que o piso de visto exige; se aparecer vaga de país onde a faixa
+importe muito, vale conferir o piso oficial daquele país antes de responder.

@@ -43,7 +43,7 @@ Fala inglês e português. Reside em Olinda, Pernambuco.
 precisa de patrocínio de visto. Isso se diz com naturalidade, nunca como desculpa.
 **Realocação**: quer realocar, sem ressalva. O mestrado só aparece como credencial que fortalece
 o caso de visto, nunca como algo que o prenda a um lugar.
-**Pretensão**: USD 46.000 por ano, ou USD 3.840 por mês. No Canadá, CAD 75.000 a 79.999 por ano.
+**Pretensão** (regra nova do Vini, 04/09, a antiga de USD 46.000 está morta): pedir a **base da faixa publicada** no anúncio. Sem faixa publicada, sênior ou lead em estúdio grande: EUA USD 100.000, Canadá CAD 95.000, Reino Unido GBP 50.000, Europa ocidental EUR 55.000, Austrália AUD 110.000. Estúdio pequeno ou médio: EUA USD 85.000, Canadá CAD 80.000, Reino Unido GBP 42.000, Europa EUR 45.000, Austrália AUD 95.000. NUNCA abaixo do piso legal da ocupação, porque isso inviabiliza patrocínio de visto. Sempre com a abertura: "Open to aligning with your band for the role". Detalhe completo no BRIEFING.md.
 **Salário atual da E-Line: NUNCA revelar.** Se perguntarem, "Confidential under NDA".
 
 ## O que ele responde sozinho, sem perguntar nada

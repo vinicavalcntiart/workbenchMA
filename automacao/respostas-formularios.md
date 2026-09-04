@@ -25,7 +25,7 @@ Usadas pela automação em 02/09/2026 nos formulários do Greenhouse (Mob Entert
 - Anos de experiência: More than 10 years (nas escalas fechadas, a faixa mais alta, por exemplo "> 7")
 - Experiência na indústria de games? Yes
 - Empresa atual / mais recente: E-Line Media
-- Pretensão salarial: USD 3,840 per month (USD 46,000 per year); quando o campo pede texto: "Open to aligning with the studio's band for the role; as a reference, my current expectation is around USD 46,000 per year."
+- Pretensão salarial (REGRA NOVA do Vini, 04/09; a de USD 46.000 está MORTA): **peça a base da faixa publicada no anúncio**, e o texto é "Aligned with the posted range for the role, at the lower end." Se o anúncio não publica faixa: sênior ou lead em estúdio grande, EUA **USD 100,000**, Canadá **CAD 95,000**, Reino Unido **GBP 50,000**, Europa ocidental **EUR 55,000**, Austrália **AUD 110,000**; estúdio pequeno ou médio, EUA **USD 85,000**, Canadá **CAD 80,000**, Reino Unido **GBP 42,000**, Europa **EUR 45,000**, Austrália **AUD 95,000**. Campo de texto livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." NUNCA abaixo do piso legal da ocupação no país: o empregador é obrigado a pagar o prevailing wage para patrocinar visto, então pedir abaixo disso não te faz barato, te faz impossível de patrocinar. Política completa no BRIEFING.md
 - Salário atual: "Confidential under the NDA of my current contract; happy to discuss ranges during the process."
 - Aviso prévio / disponibilidade: "A standard transition period with my current studio; glad to align dates in the process."
 - Pesquisas de diversidade (idade, etnia, gênero): Prefer not to say
@@ -61,7 +61,7 @@ Link: https://jobs.eu.lever.co/frontier/3571ace3-9f1a-4db2-9e2b-5eb8c8487181
 - Tem experiência com escultura orgânica? Yes
 - Link do portfólio: https://www.artstation.com/viniciuscavalcanti
 - Salário atual: Confidential under the NDA of my current contract; happy to discuss ranges during the process.
-- Pretensão salarial: Open to aligning with Frontier's band for the role; as a reference, my current expectation is around USD 46,000 per year.
+- Pretensão salarial (ATUALIZADA em 04/09): "Open to aligning with Frontier's band for the role; as a reference, I'm looking at around GBP 50,000 per year." A Frontier fica em Cambridge, Reino Unido, e é casa grande, então vale o piso de sênior em casa grande da política nova. O valor antigo escrito aqui, USD 46,000, está MORTO.
 - Aviso prévio: A standard transition period with my current studio; glad to align dates in the process.
 - País de residência: Brazil
 - Híbrido ou presencial no estúdio? Hybrid, relocating to Cambridge.
