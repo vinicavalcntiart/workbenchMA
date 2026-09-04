@@ -83,12 +83,16 @@ Tentativas registradas entre 03 e 04/09, contando só formulário de candidatura
   International, Mighty Nice, e o cadastro da Gunfire em 02/09)
 - **Entregues ao Vini e enviadas por ele:** 3 (Piranha Games, Mattel, e a Disney de
   02/09)
-- **Muro de verificação humana confirmado:** 3 (Scopely, reCAPTCHA Enterprise; Jam
-  City, hCaptcha com desafio de imagem; Imageworks Experienced Texture Artist, reCAPTCHA
-  do board do Greenhouse, em 04/09)
+- **Muro de verificação humana confirmado:** 2 (Jam City, hCaptcha com desafio de
+  imagem; Imageworks Experienced Texture Artist, reCAPTCHA do board do Greenhouse, em
+  04/09). **A Scopely saiu desta lista na rodada 5:** ela recusou de manhã e ACEITOU o
+  envio à noite, no mesmo IP, o que prova que recusa por reCAPTCHA é resultado de
+  sessão e não veredito.
+- **Recusadas por reCAPTCHA e depois enviadas numa retentativa:** 1 (Scopely, 3D
+  Artist do Monopoly GO em Barcelona)
 - **Defeito do servidor do empregador:** 1 (EA 215788, `Internal server error` em
   cinco tentativas com a sessão logada e funcionando em outra vaga do mesmo time)
-- **Bug nosso descoberto e corrigido:** 3
+- **Bug nosso descoberto e corrigido:** 4 (o quarto é o falso negativo de confirmação, na rodada 5)
 
 ## Rodada 2, 04/09/2026: 403 do Cloudflare que não era muro
 
@@ -169,6 +173,33 @@ fila do Vini.
 Greenhouse estourou na primeira tentativa da Fanatics porque a busca no Gmail só começou
 depois. O jeito certo é o que funcionou na segunda: subir o envio em segundo plano e ir
 buscar o código em paralelo, sem esperar o script pedir.
+
+## Rodada 5, 04/09/2026: a Scopely passou, e o script quase mentiu que não
+
+A rodada 4 concluiu que reCAPTCHA carregado não é reCAPTCHA que barra. A Scopely, que
+tinha recusado o envio de manhã, foi tentada de novo à noite **e passou**, com a tela
+dizendo `Application Sent!` na URL de confirmação. Três boards do Greenhouse com
+reCAPTCHA, três resultados diferentes no mesmo dia e no mesmo IP:
+
+| Board | Manhã | Noite |
+|---|---|---|
+| Sony Pictures Imageworks | recusado, duas tentativas | não retestado |
+| Scopely | recusado | **aceito** |
+| Fanatics Collectibles | — | aceito |
+
+**Regra que fica:** recusa de envio por reCAPTCHA **não é veredito, é o resultado
+daquela sessão**. Toda vaga parada por esse motivo deve ser retentada nas rodadas
+seguintes antes de continuar na fila manual do Vini.
+
+**E o bug que essa rodada revelou é o mais perigoso do livro-caixa até agora.** O
+`apply_gh.js` marcou como `NOT CONFIRMED` uma candidatura que **tinha sido enviada**,
+porque a regex de sucesso não reconhecia `Application Sent`, que é a frase da Scopely.
+Falso negativo aqui não é só ruído: leva a **reenviar candidatura já feita**, que é
+exatamente o erro cometido com a Red Star em 03/09. Corrigido em duas frentes: a regex
+agora aceita `application sent`, `we've received your application` e as variações de
+`submitted`, e a própria URL terminada em `/confirmation` passa a contar como prova.
+O script foi copiado para `automacao/apply-greenhouse.js` para não se perder com o
+container.
 
 ## Fila para a próxima rodada
 
