@@ -1828,6 +1828,7 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-04","alerta","As respostas dos formulários travados agora estão no painel, com botão de copiar campo a campo","Elas estavam só num arquivo do repositório, que não é onde você trabalha. Agora as quatro candidaturas que dependem de você abrir o navegador (Piranha Games, Jam City, Mattel e a EA 215788) aparecem em Dossiês por vaga, cada campo com o valor exato e um botão Copiar do lado, e o cartão no topo da página leva direto para lá. A única linha que não traz o valor pronto é a do telefone, que não pode ser escrita no repositório porque ele é público; ela diz em que documento do Drive o número está.",""],
  ["2026-09-04","vaga","A Piranha Games abriu Character Artist remota no Canadá, e é o melhor encaixe em dias","O quadro do Rippling deles tem uma única vaga no ar e é exatamente a sua: Character Artist sob o Art Director e o Lead Character Artist, com anatomia humana e animal, modelagem, texturização, ZBrush, Substance Painter, Marmoset, Marvelous Designer e Unreal Engine 5, e o anúncio ainda pede groom em strands e hair cards, que é o seu diferencial de Houdini. Aceita de intermediário a sênior e declara faixa anual de 80 a 120 mil dólares canadenses. Falta só você mandar: o formulário foi preenchido inteiro e conferido, e trava num Verify you are human da Cloudflare que não passa em sessão automatizada.","https://ats.rippling.com/pgicareers/jobs/8451a97b-cf16-4df5-8f3d-e22523185a7e"],
  ["2026-09-04","porta","A Lead Character Artist de Montreal da Wizards recebeu uma segunda candidatura pelo Easy Apply","As 22h20 o LinkedIn avisou que sua candidatura foi enviada para a Hasbro na Lead Character Artist de Montreal, e um minuto depois chegou o Thank You for Applying da Wizards. E a mesma requisicao que ja tinha sido enviada em 02/09 pelo Greenhouse da Hasbro, e vale saber qual das duas conta: a de 02/09 e a completa, com CV e carta anexados, enquanto o Easy Apply manda o perfil do LinkedIn e mais nada. Na mesma leva chegou tambem a confirmacao por email da Arrow International, que fecha por fora do site a candidatura de Senior Artist em Chicago enviada mais cedo.",""],
  ["2026-09-04","envio","Segunda via para a Polyarc, dona do Moss, com o endereço de contratação que faltava","A carta de 26 de agosto tinha ido para o contact@ do site, o endereço geral, e não teve resposta nem quique. A página da Polyarc publica quatro endereços lado a lado, e um deles é o jobs@, que é o de contratação: o rascunho novo já está no Gmail apontado para lá, com gancho no Quill, que o jogador vê de perto durante o jogo inteiro. Na mesma varredura, duas vagas antigas foram reconferidas na fonte oficial e as duas continuam vivas: a Senior 3D Character Artist de Dead by Daylight na Behaviour, que o anúncio do Lever segue marcando como permanente full-time e híbrida em Montréal, e a Character Artist Hard Surface remota e sênior da Keos Masons.",""],
@@ -2075,6 +2076,11 @@ function renderAcoes(){
   // O que só ele pode fazer vem antes de tudo: é a fila que a automação não desafoga.
   // Cada cartão abre a tabela de portais já filtrada no balde dele, senão ele cai numa
   // lista de 236 linhas para achar as três que o cartão está falando.
+  // A fila que so ele resolve: formulario ja preenchido e conferido, travado no
+  // captcha ou em erro do servidor. Cada um tem as respostas prontas para colar.
+  const faltaEnviar = DOSSIES.filter(d=>d[4]);
+  if(faltaEnviar.length > 0)
+    items.push(["urgente","📋",`<b>${faltaEnviar.length} formulários prontos para colar</b>, campo a campo, começando pela ${esc(faltaEnviar[0][0])}: só falta você enviar`,"#dossies"]);
   if(p.altas.length > 0)
     items.push(["urgente","🎯",`<b>${p.altas.length} vaga${p.altas.length>1?"s quentes":" quente"} sem candidatura</b>, começando pela ${esc(p.altas[0].name)}`,"#portais","alta"]);
   if(p.aMao.length > 0)
@@ -2591,6 +2597,89 @@ const isRemoto = p => /remot/i.test((p.country||"")+" "+(p.note||""));
 const prioOf = p => p.prio && PRIO_W.hasOwnProperty(p.prio) ? p.prio : (p.origem==="email" ? "media" : "baixa");
 const DOSSIES = [
  [
+  "Piranha Games",
+  "FAÇA ESTA PRIMEIRO · Character Artist, 100% remota no Canadá, CAD 80 a 120 mil por ano",
+  "https://ats.rippling.com/pgicareers/jobs/8451a97b-cf16-4df5-8f3d-e22523185a7e",
+  [
+   ["Como é o envio (leia antes)","Anexe o CV primeiro: o Rippling lê o arquivo e já preenche sozinho nome, sobrenome, email, empresa atual, o código de país +55 BR e a localização Recife, Brazil. Depois disso só faltam o telefone e os dois links abaixo, mais as cinco caixas de sim ou não. No clique final em Apply aparece um Verify you are human da Cloudflare: marque a caixa e envie. Pronouns pode ficar em branco."],
+   ["First name","Vini"],
+   ["Last name","Cavalcanti"],
+   ["Email","contact@vinicavalcanti.art"],
+   ["Current company","E-Line Media"],
+   ["Phone number (só os dígitos, o seletor já vem em +55 BR)","(no documento privado do Drive, o ‘CAMPANHA - dados pessoais dos formulários’. Só os dígitos, sem o código do país, sem espaço e sem hífen.)"],
+   ["LinkedIn Link","https://www.linkedin.com/in/vinicavalcnti/"],
+   ["Website link","https://www.artstation.com/viniciuscavalcanti"],
+   ["Are you currently authorized to work in Canada?","No"],
+   ["Do you live in Canada?","No"],
+   ["Do you live in British Columbia?","No"],
+   ["Do you have at least 4 years of work experience in the role?","Yes"],
+   ["Are you ok with the annual compensation range of $80K-$120K CAD?","Yes"],
+   ["Consentimento de SMS","No - I do not consent to receiving text messages"],
+   ["Por que vale a pena","O anúncio pede anatomia humana e animal, silhueta, modelagem, texturização, ZBrush, Substance Painter, Marmoset, Marvelous Designer e Unreal Engine 5, e ainda cita groom em strands e hair cards, que é o seu diferencial de Houdini virando requisito. É a única vaga no ar no quadro deles. Donos de MechWarrior Online e MechWarrior 5 Clans."]
+  ],
+  true
+ ],
+ [
+  "Jam City",
+  "Principal 3D Generalist · San Francisco, presencial, efetiva, USD 75 a 120 mil por ano",
+  "https://jobs.lever.co/jamcity/14272af5-efc7-4150-8b59-dcabdaa8c578/apply",
+  [
+   ["Como é o envio (leia antes)","Formulário do Lever. Anexe o CV, cole os campos abaixo e resolva o hCaptcha de imagem no fim. Gênero e status de veterano podem ir em Decline to self-identify."],
+   ["Full name","Vini Cavalcanti"],
+   ["Email","contact@vinicavalcanti.art"],
+   ["Phone (campo único, use o formato internacional completo)","(no documento privado do Drive, o ‘CAMPANHA - dados pessoais dos formulários’. Só os dígitos, sem o código do país, sem espaço e sem hífen.)"],
+   ["Current company","E-Line Media"],
+   ["LinkedIn URL","https://www.linkedin.com/in/vinicavalcnti/"],
+   ["Portfolio URL","https://www.artstation.com/viniciuscavalcanti"],
+   ["Other website","https://vinicavalcanti.com"],
+   ["Preferred Name","Vini"],
+   ["City","Olinda"],
+   ["State","Pernambuco"],
+   ["Country","Brazil"],
+   ["Caixa I agree (declaração de veracidade)","Marcar"],
+   ["Are you currently employed?","Yes"],
+   ["Have you previously been employed by our organization?","No"],
+   ["Are you legally authorized to work in the United States?","No"],
+   ["Will you now or in the future require sponsorship for employment visa status?","Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work remotely for a US studio as an international contractor and can keep working remotely while the process runs."],
+   ["How did you hear about Jam City?","LinkedIn"]
+  ],
+  true
+ ],
+ [
+  "Mattel",
+  "Lead Artist, Digital Gaming · El Segundo, CA, USD 96.800 a 137.000 por ano",
+  "https://jobs.smartrecruiters.com/MattelInc/744000122752619-lead-artist-digital-gaming",
+  [
+   ["Como é o envio (leia antes)","A ficha abre normal, mas o botão I am interested cai numa tela Access is temporarily restricted quando a sessão parece automatizada. No seu navegador comum ele passa. Os campos são os de sempre, sem perguntas extras conhecidas."],
+   ["Nome e email","Vini Cavalcanti · contact@vinicavalcanti.art"],
+   ["Telefone","(no documento privado do Drive, o ‘CAMPANHA - dados pessoais dos formulários’. Só os dígitos, sem o código do país, sem espaço e sem hífen.)"],
+   ["LinkedIn","https://www.linkedin.com/in/vinicavalcnti/"],
+   ["Portfólio","https://www.artstation.com/viniciuscavalcanti"],
+   ["Autorizado a trabalhar nos EUA","No"],
+   ["Precisa de patrocínio de visto","Yes"],
+   ["Leitura honesta da vaga","Casa grande e dona de Barbie, Hot Wheels, Monster High e Masters of the Universe, então vale como porta de entrada. Mas o texto pede 5 anos ou mais como Lead Artist em jogo mobile e 2 a 3 títulos acompanhados em live ops, e o dia a dia é dar direção a fornecedores externos com arte 2D e de marketing. Encaixe médio."]
+  ],
+  true
+ ],
+ [
+  "Electronic Arts",
+  "Senior Character Artist, EA Sports FC · Vancouver, efetiva, híbrida (requisição 215788)",
+  "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788",
+  [
+   ["Como é o envio (leia antes)","Aqui NÃO é captcha. Entre na sua conta EA Careers (usuário é o seu email; a senha foi redefinida em 03/09 e está na conversa do Claude, nunca no repositório) e clique Apply na ficha. O perfil já está completo, então o formulário vem quase todo preenchido. O botão Next da primeira tela devolveu Internal server error em cinco tentativas na automação, com e sem anexos, em dois dias: é defeito da requisição no lado da EA, e no navegador normal pode passar. Se o registro for criado, ele aparece no seu perfil em Job Applications como Finish your application."],
+   ["Como ficou sabendo da vaga","EA Careers Website"],
+   ["Anos de experiência","More Than 3 Years"],
+   ["Já trabalhou na EA?","No"],
+   ["Precisa de patrocínio de imigração?","Yes"],
+   ["Tem alguma restrição que impeça trabalhar para a EA?","No"],
+   ["Acordo de confidencialidade da entrevista","Marcar o aceite"],
+   ["Autodeclarações (gênero, etnia, deficiência)","Prefiro não responder / Decline"],
+   ["Anexos","CV, carta de apresentação e o PDF do portfólio, mais o link do ArtStation no campo Website/Portfolio"],
+   ["Por que insistir","É a versão EFETIVA da vaga. A temporária do mesmo time (215657) já foi enviada e confirmada em 03/09, então esta é a que falta."]
+  ],
+  true
+ ],
+ [
   "Epic Games",
   "Senior Groom Artist",
   "https://gamejobs.co/Senior-Groom-Artist-at-Epic-Games",
@@ -2785,8 +2874,11 @@ const DOSSIES = [
 function renderDossies(){
   const wrap = $("#dossieList");
   $("#dossieBadge").textContent = DOSSIES.length + " vagas prontas";
-  wrap.innerHTML = DOSSIES.map(([studio,role,url,items],di)=>
-    `<details class="kit-group"${di===0?" open":""}><summary>${esc(studio)} <span style="color:var(--muted); font-weight:400">· ${esc(role)}</span></summary>`
+  // Vaga que ainda depende de um envio a mao vem marcada e ja aberta: e o unico
+  // conteudo desta secao que cobra acao dele hoje.
+  const pendente = DOSSIES.findIndex(d=>d[4]);
+  wrap.innerHTML = DOSSIES.map(([studio,role,url,items,falta],di)=>
+    `<details class="kit-group"${di===(pendente>=0?pendente:0)?" open":""}><summary>${falta?'<span class="badge" style="background:var(--urgente,#c0392b); color:#fff; margin-right:6px">falta enviar</span>':""}${esc(studio)} <span style="color:var(--muted); font-weight:400">· ${esc(role)}</span></summary>`
     + `<div class="kit-item"><div class="kl">Onde aplicar</div><div class="kv"><a href="${esc(url)}" target="_blank" rel="noopener">abrir a vaga &#8599;</a></div><div class="kbtns"></div></div>`
     + items.map(([l,v],i)=>{
         const long = v.length>220;
