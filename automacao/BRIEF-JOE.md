@@ -247,6 +247,24 @@ endereço, de onde sai o cargo. Rodou em paralelo nos 426 domínios e devolveu c
 nome, cargo e projeto. **ArtStation está bloqueado por Cloudflare** (403 por fetch e pelo
 navegador do scratchpad), o que é a maior perda, porque seria a melhor fonte de todas.
 
+## O que já está esgotado, e o que ainda não foi minerado
+
+Descoberta da primeira rodada agendada, 04/09: **a varredura mecânica de `mailto:` nos
+sites já está esgotada.** Ela rodou nos 426 domínios em 03/09 e rendeu o que tinha para
+render. Repetir em 29 domínios de estúdios que nunca responderam devolveu **dois**
+endereços de pessoa, e um deles nem era de arte. Não vale gastar rodada nisso.
+
+**O que ainda não foi minerado, em ordem de rendimento provável:**
+
+1. **Créditos.** IMDb para animação e VFX, MobyGames para jogos, e o crédito final do
+   trailer no YouTube, que costuma listar o time de personagem inteiro com cargo. Dá
+   nome e cargo pareados; o endereço sai depois pelo padrão de domínio.
+2. **Listas de palestrante** de GDC, SIGGRAPH, Annecy e Animation Guild, que já trazem
+   nome, cargo e estúdio juntos.
+3. **Imprensa e podcast**: entrevista com diretor de arte quase sempre dá nome e cargo.
+
+É mais lento que a varredura, e é onde ainda tem nome novo.
+
 ## Limites duros
 
 - **Uma pessoa por estúdio por rodada.** Duas cartas para a mesma casa no mesmo dia é
