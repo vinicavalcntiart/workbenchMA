@@ -345,3 +345,5 @@ Promovidos de portal_only para alvo de email (endereço publicado na página ofi
 - Fluffy Dog Studio, terceira via (Canadá, 100% remoto) — careers@fluffydogstudio.com, o endereço que aparece no texto da página de carreiras.
 
 Caiu no dedupe no último passo: Studio Rakete (Alemanha, Hamburgo). A página studiorakete.de/job publica jobs2026@studiorakete.de para Initiativbewerbung, mas esse mesmo endereço já recebeu carta em 30/08. A linha da fila estava desatualizada e foi corrigida.
+
+- ROTA OFICIAL (04/09): Turtle Rock Studios (EUA; Irvine, CA; com trabalho remoto): página de carreiras https://turtlerockstudios.com/careers/ aberta nesta rodada, quadro com uma única posição (Senior Producer) e nada de arte. Sem email de recrutamento publicado e sem candidatura espontânea. Donos de Back 4 Blood e Left 4 Dead; a própria página anuncia presencial, híbrido e remoto. Conferir de novo quando abrir vaga de arte.
