@@ -173,19 +173,33 @@ Tudo o mais é regra fixa da campanha, sem exceção:
 - Sempre `body` em texto puro **e** `htmlBody` em HTML de verdade. **Nunca escapar o
   htmlBody**: se aparecer `&lt;p&gt;` no lugar de `<p>`, está errado.
 
-## A armadilha do link, que custou os 16 primeiros rascunhos
+## A armadilha do link, e a correção do diagnóstico feita em 05/09
 
 Na rodada de 03/09 os 16 rascunhos saíram com os links embrulhados no redirecionador do
 Gmail: `https://www.google.com/url?q=https://www.artstation.com/...&source=gmail&ust=...`.
-Isso acontece quando se copia o link de uma mensagem **já enviada ou recebida**, porque o
-Gmail reescreve os links na exibição. Num email frio o efeito é péssimo: parece rastreador
-de spam, e no corpo em texto puro a URL gigante aparece inteira.
+Num email frio o efeito é péssimo: parece rastreador de spam, e no corpo em texto puro a
+URL gigante aparece inteira.
 
-**Regra:** o link do portfólio se escreve à mão, sempre exatamente assim, e nunca se copia
-de thread nenhuma:
+**A primeira explicação escrita aqui estava errada, e a correção importa.** Ela dizia que
+isso acontecia por copiar link de mensagem já enviada ou recebida, e que a regra era
+escrever o link à mão. Em 05/09 os seis rascunhos da rodada foram escritos à mão, sem
+copiar nada de thread nenhuma, e voltaram embrulhados do mesmo jeito. A prova de que a
+causa é outra está no corpo em texto puro: ele foi escrito com o domínio **sem protocolo**
+(`Portfolio: artstation.com/viniciuscavalcanti`), ou seja, sem nenhuma URL, e mesmo assim
+voltou com o `google.com/url` completo. Quem embrulha é o **compositor da API do Gmail**,
+ao gravar o rascunho, em todo link que ele reconhece. Não é evitável na escrita, e
+conferir o rascunho depois só confirma o embrulho, não o impede.
+
+**Onde isso já está resolvido:** na função `limparLinks` de `automacao/envia-rascunhos.gs`,
+que desfaz a reescrita no Apps Script do Vini imediatamente antes de enviar, e devolve os
+domínios dele à forma canônica em `https://`. O `.gs` já trazia o diagnóstico certo desde
+03/09; era este arquivo que continuava com o errado. A função `conferirLinks()` do mesmo
+script lista, sem enviar nada, quantos rascunhos ainda estão embrulhados e confirma que a
+limpeza pega todos.
+
+**Regra prática, então:** escreva o link à mão na forma canônica, porque é dela que a
+limpeza parte, e **não gaste rodada tentando fazer o rascunho nascer limpo**:
 `<a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>`
-Antes de fechar a rodada, abra um rascunho e confirme que não existe `google.com/url` em
-lugar nenhum.
 
 Na mesma revisão apareceram dois desvios menores, também para não repetir: a frase do
 portfólio tem forma fixa ("more than 45 projects with over 60 characters across many
@@ -253,6 +267,15 @@ Descoberta da primeira rodada agendada, 04/09: **a varredura mecânica de `mailt
 sites já está esgotada.** Ela rodou nos 426 domínios em 03/09 e rendeu o que tinha para
 render. Repetir em 29 domínios de estúdios que nunca responderam devolveu **dois**
 endereços de pessoa, e um deles nem era de arte. Não vale gastar rodada nisso.
+
+**Confirmado em 05/09, e vira a rotina:** a veia de crédito e imprensa rende, e rende em
+casa grande. A rodada saiu de zero a quatro nomes novos de arte de personagem em Pixar,
+LAIKA, Netflix Animation e Blizzard usando só busca por crédito de filme recente e
+entrevista de imprensa, cruzada com os padrões de domínio de `padroes-dominio.md`. O
+método é este, e é para repetir: **ache o nome e o cargo no crédito ou na entrevista, e
+deixe o endereço sair do padrão do domínio**, nunca o contrário. Duas ressalvas honestas:
+o padrão dá confiança média, não alta, e o gancho da carta precisa vir da mesma matéria
+que deu o nome, senão a carta vira genérica com um nome em cima.
 
 **O que ainda não foi minerado, em ordem de rendimento provável:**
 

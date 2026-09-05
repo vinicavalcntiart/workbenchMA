@@ -418,7 +418,7 @@
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente) | rascunho (não enviado)
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
-const UPDATED = "2026-09-04";
+const UPDATED = "2026-09-05";
 const BUILD = "__BUILD__";
 // Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
 const ALERTA = "";
@@ -1445,6 +1445,17 @@ const PESSOAS = [
   "situacao": "enviado 03/09"
  },
  {
+  "data": "2026-09-04",
+  "estudio": "Flipbook Studio",
+  "pais": "Reino Unido",
+  "pessoa": "Andrew Lord",
+  "cargo": "New Business",
+  "email": "andrew@flipbookstudio.co.uk",
+  "confianca": "alta",
+  "fonte": "Publicado no rodape de contato do flipbookstudio.co.uk com o nome ao lado do endereco; estudio de Manchester",
+  "situacao": "sem-alvo-de-arte"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "HouseSpecial",
   "pais": "EUA",
@@ -1599,6 +1610,17 @@ const PESSOAS = [
   "situacao": "enviado 03/09"
  },
  {
+  "data": "2026-09-04",
+  "estudio": "Walking The Dog",
+  "pais": "Bélgica",
+  "pessoa": "Anton Roebben (Toon)",
+  "cargo": "Production Design e cofundador",
+  "email": "toon@walkingthedog.be",
+  "confianca": "alta",
+  "fonte": "Publicado na propria pagina walkingthedog.be/about-us na secao People, com nome cargo e IMDb ao lado; fundou o estudio em 1999 junto com o produtor Eric Goossens",
+  "situacao": "rascunho-criado"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "Walt Disney Animation Studios",
   "pais": "EUA",
@@ -1629,7 +1651,7 @@ const PESSOAS = [
   "email": "courtney.chun@disneyanimation.com",
   "confianca": "alta",
   "fonte": "Endereco publicado no rodape de autor do talk do SIGGRAPH 2023 'Creating the Art-Directed Groom for Legend in Disney's Strange World', PDF aberto em cdn.disneyanimation.com, onde ela e a primeira autora. Cargo de Look Development Artist confirmado em perfil profissional publico. Autora de um talk que e literalmente sobre groom estilizado art-directed, o assunto central do portfolio do Vini. Sem rascunho nesta rodada pelo teto de duas cartas por casa.",
-  "situacao": "rascunho"
+  "situacao": "rascunho-criado 05/09"
  },
  {
   "data": "2026-09-03",
@@ -1643,6 +1665,17 @@ const PESSOAS = [
   "situacao": "rascunho"
  },
  {
+  "data": "2026-09-05",
+  "estudio": "Blizzard Entertainment",
+  "pais": "EUA",
+  "pessoa": "Chris G. Robinson",
+  "cargo": "Senior Art Director, World of Warcraft",
+  "email": "crobinson@blizzard.com",
+  "confianca": "media",
+  "fonte": "Cargo publicado na Wowpedia e no perfil profissional publico: senior art director de World of Warcraft, hoje tambem creative director ao lado do executive creative director, revisando cada zona, personagem e linha de missao. Entrou na Blizzard em 2006 como lead character artist de The Burning Crusade, ou seja, veio de arte de personagem. Midnight, a decima primeira expansao, saiu em 02/03/2026 e ele consta entre os creditos. Endereco pelo padrao inicial+sobrenome@blizzard.com, provado por jburnett@, sdobbs@ e lpanian@ nos commits do OpenUSD e do OpenEXR; sao so tres provas, entao o padrao e de forca media.",
+  "situacao": "rascunho-criado"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "DreamWorks Animation",
   "pais": "EUA",
@@ -1652,6 +1685,28 @@ const PESSOAS = [
   "confianca": "media",
   "fonte": "Cargo confirmado como VFX Supervisor de The Bad Guys 2 (2025) pela AWN, pela Computer Graphics World e pela pagina de palestrantes da VIEW Conference, onde apresentou o filme ao lado do diretor Pierre Perifel. Entrou na PDI/DreamWorks em 1999 como clothing artist em Shrek, ou seja, veio do mesmo lado da mesa que o Vini. CORRECAO DE UMA BUSCA ANTERIOR: uma primeira busca o deu como Head of Character Animation e isso esta ERRADO, o cargo real e VFX Supervisor. Endereco pelo padrao nome.sobrenome@dreamworks.com, provado por 20 enderecos reais do log de commits do OpenMoonRay (barry.fowler@, mike.day@, jon.lanz@, ron.woods@, karl.rasche@ e outros). RESSALVA: o dominio usa o nome pelo qual a pessoa e conhecida, entao se matt.baer@ voltar, tentar matthew.baer@dreamworks.com.",
   "situacao": "enviado 03/09"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "LAIKA",
+  "pais": "EUA",
+  "pessoa": "Thibault Leclercq",
+  "cargo": "Principal Character Designer",
+  "email": "tleclercq@laika.com",
+  "confianca": "media",
+  "fonte": "Cargo publicado na LAIKApedia e confirmado pelo material de imprensa de Wildwood: e o principal character designer do filme, responsavel por estabelecer o look dos personagens e supervisionar todo o design do esboco ao resultado final na tela. Subiu na propria casa de 2D animator e character designer a lead e depois principal. Endereco montado com o padrao inicial+sobrenome@laika.com, provado por mprater@ e pfranz@ nos commits do OpenEXR e do OpenImageIO; o padrao e o mais fragil do arquivo, so duas provas. CORROBORACAO INDEPENDENTE, e vale dizer de onde veio: um agregador publico de contatos mostra o email dele na LAIKA mascarado como t***@laika.com, o que confirma a inicial t e nada alem disso. Nao foi usado servico pago nenhum, so o trecho publico do resultado de busca.",
+  "situacao": "rascunho-criado"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Netflix Animation Studios",
+  "pais": "EUA",
+  "pessoa": "Dan Casey",
+  "cargo": "Art Director (Steps)",
+  "email": "dcasey@netflix.com",
+  "confianca": "media",
+  "fonte": "Cargo confirmado pela cobertura do Annecy 2026 em varios veiculos (whats-on-netflix, Variety, Animation Scoop): ele e o art director de Steps, ao lado dos diretores Alyce Tzue e John Ripa e do head of character animation Jason Figliozzi. Steps e o primeiro longa que sai inteiramente do Netflix Animation Studios e foi feito entre Burbank, Sydney e Vancouver. Endereco pelo padrao inicial+sobrenome@netflix.com, provado por mais de 30 enderecos reais; se dcasey@ voltar, a segunda forma legitima da casa e danc@netflix.com.",
+  "situacao": "rascunho-criado"
  },
  {
   "data": "2026-09-03",
@@ -1674,6 +1729,28 @@ const PESSOAS = [
   "confianca": "media",
   "fonte": "Cargo confirmado no credito de Elio (2025) como character art director; historico de design de personagem em Brave, Coco, Onward, Luca e Elemental. Endereco montado com o padrao inicial+sobrenome@pixar.com, provado por 10 enderecos reais do log de commits do OpenSubdiv, do OpenUSD e do OpenTimelineIO (dyu@ David Yu, jfong@ Julian Fong, mkraemer@ Manuel Kraemer, ssalituro@ Susan Salituro, nporcino@ Nick Porcino, gelkoura@ George Elkoura, jloy@ John Loy e outros). RESSALVA: a Pixar e o padrao mais fraco da lista, porque tem contas antigas em estilo Unix que fogem da regra (so o sobrenome, ou so o primeiro nome); se voltar, tentar nolte@pixar.com.",
   "situacao": "enviado 03/09"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Pixar Animation Studios",
+  "pais": "EUA",
+  "pessoa": "Anna Scott",
+  "cargo": "Character Art Director",
+  "email": "ascott@pixar.com",
+  "confianca": "media",
+  "fonte": "Cargo confirmado por imprensa de 2026 sobre Hoppers, onde ela assina character art director: entrevista no movieweb (movieweb.com/hoppers-most-difficult-character-create/), entrevista em video do Hollywood First Look e a materia do creativebloq sobre a producao. O gancho e literal: ela descreve o elenco construido a partir de formas simples e legiveis, beans and circles, um afastamento deliberado do hiper-realismo, que e exatamente o que o Vini faz. Endereco montado com o padrao inicial+sobrenome@pixar.com, provado por 10 enderecos reais em automacao/padroes-dominio.md. RESSALVA: a Pixar e o padrao mais fragil da lista por causa de contas antigas em estilo Unix; se ascott@ voltar, tentar annascott@ e scott@.",
+  "situacao": "rascunho-criado"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Pixar Animation Studios",
+  "pais": "EUA",
+  "pessoa": "Jeremie Talbot",
+  "cargo": "Characters Supervisor",
+  "email": "jtalbot@pixar.com",
+  "confianca": "media",
+  "fonte": "Creditado como Characters Supervisor de Hoppers (2026) nas listas de credito do filme; e o cargo que chefia modelagem, shading e rig de personagem, alvo direto da campanha. Endereco pelo mesmo padrao inicial+sobrenome@pixar.com. SEM RASCUNHO nesta rodada por causa do limite de uma carta por casa por rodada: a carta da Pixar foi para a Anna Scott, que e diretora de arte de personagem. Ele e o primeiro alvo da Pixar na proxima rodada.",
+  "situacao": "reserva"
  },
  {
   "data": "2026-09-03",
@@ -1706,7 +1783,7 @@ const PESSOAS = [
   "email": "mlasker@imageworks.com",
   "confianca": "media",
   "fonte": "Cargo publicado na propria pagina de equipe do estudio, https://www.imageworks.com/our-team/creative; e o topo da cadeia criativa da animacao de longa da casa, a mesma que fez Spider-Verse. Endereco pelo padrao inicial+sobrenome@imageworks.com, provado pelos 15 enderecos citados em automacao/padroes-dominio.md. Sem rascunho nesta rodada por causa do teto de duas cartas por casa e porque a carta foi para o recrutador de arte, que e prioridade maior pela regra dos grandes.",
-  "situacao": "rascunho"
+  "situacao": "rascunho-criado 05/09"
  },
  {
   "data": "2026-09-03",
@@ -1761,6 +1838,17 @@ const PESSOAS = [
   "email": "",
   "confianca": "sem-email",
   "fonte": "Cargo confirmado no credito de Zootopia 2 (2025), Art Director Characters ao lado da Meg Park. Sem email porque o padrao da casa nao resolve este nome com seguranca: com nome proprio de duas partes o dominio tanto pode montar sangjun.lee@disneyanimation.com quanto sang.jun.lee@disneyanimation.com, e escolher um dos dois seria chute. Guardado com nome e cargo para uso futuro.",
+  "situacao": "sem via"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Warner Bros. Pictures Animation",
+  "pais": "EUA",
+  "pessoa": "Charles Ellison",
+  "cargo": "3D Character Designer e Character Visual Development Artist",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "O alvo mais parecido com o Vini que esta campanha ja achou, e por isso doi nao ter endereco. Carreira publicada no site dele, charles-ellison.com/resume: modelador na DreamWorks a partir de 2008 (How To Train Your Dragon, Kung Fu Panda 2, Rise of the Guardians), character modeling lead, depois modeling supervisor de Trolls e Trolls World Tour, character visual development, passagem pela Netflix Animation no Sea Beast, character art director na Spire Animation e, desde maio de 2023, 3D character designer na Warner Bros. Pictures Animation, hoje no The Bluey Movie. E o mesmo caminho do Vini dez anos a frente: modelador de personagem que virou diretor de arte de personagem. SEM EMAIL porque nao existe padrao provado de warnerbros.com em lugar nenhum desta campanha e o site dele nao publica endereco (a pagina de contato e so formulario do Squarespace). Inventar o formato seria chute. FICA COMO ALVO PRIORITARIO: a Warner e uma das quatro casas da regra 14 do briefing, e assim que aparecer um endereco real de warnerbros.com o padrao promove este nome na hora.",
   "situacao": "sem via"
  }
 ];
@@ -1833,6 +1921,9 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-05","alerta","Seis cartas novas com nome e sobrenome, e quatro delas para casa grande de personagem","Primeira rodada agendada do Joe rendendo de verdade, com seis rascunhos prontos e nenhum enviado, como sempre. Os nomes novos: Anna Scott, character art director de Hoppers na Pixar, que descreveu em entrevista o elenco do filme como construído a partir de formas simples e legíveis, beans and circles, um afastamento deliberado do hiper-realismo, ou seja, o seu assunto; Thibault Leclercq, principal character designer da LAIKA, que estabeleceu o look dos personagens de Wildwood e o carregou do esboço até a tela; Dan Casey, art director de Steps, o primeiro longa que sai inteiramente do Netflix Animation Studios, feito entre Burbank, Sydney e Vancouver; e Chris G. Robinson, senior art director de World of Warcraft, que entrou na Blizzard em 2006 como lead character artist. Junto saíram duas cartas que estavam represadas desde 03/09 pelo teto de duas por casa: Courtney Chun, look development artist da Disney Animation e primeira autora do talk do SIGGRAPH sobre o groom art-directed do Legend em Strange World, e Michael Lasker, hoje creative director de CG Features na Sony Imageworks e o supervisor de look of picture de Into the Spider-Verse, o que quer dizer look development e texture paint, que é a sua função exata. Três dos seis endereços vêm de padrão de domínio provado e não de endereço publicado, e isso está escrito linha por linha em automacao/pessoas.csv.",""],
+ ["2026-09-05","alerta","Achei o alvo mais parecido com você que esta campanha já viu, e ele está na Warner sem endereço","Charles Ellison é 3D character designer e character visual development artist da Warner Bros. Pictures Animation desde maio de 2023, hoje no The Bluey Movie. O currículo está publicado no site dele e é o seu caminho dez anos à frente: modelador na DreamWorks a partir de 2008 em How To Train Your Dragon, Kung Fu Panda 2 e Rise of the Guardians, depois character modeling lead, depois modeling supervisor de Trolls e Trolls World Tour, depois visual development, uma passagem pela Netflix Animation no Sea Beast, character art director na Spire Animation e então a Warner. Modelador de personagem que virou diretor de arte de personagem, que é exatamente a transição que você quer fazer. E não dá para escrever para ele: a Warner não tem nenhum padrão de domínio provado nesta campanha, o site dele não publica endereço e a página de contato é só formulário do Squarespace. Ficou registrado com nome e cargo e sem email, porque inventar o formato seria chute. Assim que aparecer um endereço real de warnerbros.com, ele é promovido na hora.",""],
+ ["2026-09-05","alerta","Quinto anúncio morto de agregador em dois dias, agora na Blizzard","A busca por nomes de arte trouxe dois anúncios de Lead Character Artist da Blizzard num agregador de vagas de jogos, um de World of Warcraft e um de jogo não anunciado em Irvine. A conferência na fonte oficial, pela API do Workday do locatário Xbox Gaming, desmentiu os dois: a busca por character artist devolve treze requisições vivas e existe uma única de arte de personagem, a Lead Character Artist de Overwatch, R027817, publicada há três dias, que é justamente aquela em que a sua candidatura entrou em 02/09. Nada novo escapou. É a quinta vez em dois dias que um agregador mostra vaga que não existe mais, depois da VOID Interactive, da Visual Concepts, da Eleventh Hour e da CD PROJEKT RED, e é o motivo de a regra da campanha ser abrir sempre a página do próprio empregador antes de escrever confirmada.",""],
  ["2026-09-04","alerta","A pretensão salarial mudou: no mínimo competitivo, e você fica na base da faixa","Os USD 46.000 saíram de todos os briefs, dos formulários e das rotinas automáticas. O motivo não é achismo: contra as faixas que os próprios estúdios publicaram nesta campanha, de 156.800 a 235.200 na Wizards, de 148.000 a 175.000 na Cloud Chamber, de 96.800 a 137.000 na Mattel e de 80.000 a 130.000 na Scopely, aquele número não lia como barato, lia como candidato de outro cargo. E existe um motivo maior, que é legal: para patrocinar visto o empregador é obrigado a pagar o piso oficial da ocupação, o prevailing wage nos Estados Unidos, o salário vigente do LMIA no Canadá e o mínimo do Skilled Worker no Reino Unido. Pedir abaixo disso não te torna barato, te torna impossível de patrocinar. A regra que você definiu ficou assim: quando o anúncio publica faixa, pede-se a base dela, o que é competitivo por definição; quando não publica, o piso é USD 100.000 nos Estados Unidos em casa grande e USD 85.000 no resto, com equivalentes em dólar canadense, libra, euro e dólar australiano. Seu diferencial continua existindo, ele só passou a morar na base do mercado em vez de embaixo dele.",""],
  ["2026-09-04","alerta","O Joe não estava lento, não estava rodando, e agora roda de três em três horas","Você disse que o Joe parecia lento e o diagnóstico foi pior que isso. A campanha tinha quatro rotinas agendadas, o Half Breaks, a dos estúdios grandes, a de prospecção e o Comunicador, e o Joe não tinha nenhuma: ele rodou uma única vez, à mão, em 03/09, achou 32 pessoas e ficou parado. Justo o agente feito para atacar o problema que mais dói, que é carta fria caindo em caixa genérica. Isso é falha de quem montou as rotinas e não do agente. Agora ele roda a cada três horas, oito vezes por dia, com meta de quatro a oito pessoas novas por rodada e ordem de ataque escrita: estúdios grandes primeiro, pelo caminho que já se provou (rodapé de paper do SIGGRAPH, log de commits de código aberto e patente), depois os estúdios que já receberam sua carta numa caixa genérica e nunca responderam, que são os mais qualificados de todos porque só faltou chegar em alguém.",""],
  ["2026-09-04","alerta","A varredura da Disney estava mentindo, e agora usa a API oficial deles","Achei um erro meu que é do tipo que faz perder vaga sem ninguém notar. A varredura do site de carreiras da Disney lia os dez primeiros resultados da página, e o site ignora a palavra-chave: buscar modeler devolve as mesmas 768 vagas de sempre. Às 16h50 os dez primeiros calharam de ser a Senior Modeler da ILM e um Art Director, e eu concluí que eram as duas vagas de arte do dia; às 20h50 os dez primeiros eram massagista e cozinheiro da Disneyland, e a mesma varredura disse que não havia nada. Mesma pergunta, respostas opostas, nenhuma confiável. Trocada pela API oficial do Workday, que é o que o próprio site consome e que devolve busca de verdade com total e data. Com ela o quadro completo da Disney hoje fecha com o registro e não sobra nada: a Character Design Lead da televisão e a Senior Modeler da ILM já têm candidatura sua, as duas de texturização de Londres foram recusadas, e as três de Mumbai estão fora do recorte. Um achado veio junto: existem duas Expression of Interest de CFX na Netflix, não uma, e a de Sydney nunca tinha sido registrada.",""],
