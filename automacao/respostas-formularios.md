@@ -283,3 +283,62 @@ registro.
 
 Não é candidatura repetida: a Experienced Modeler (4363749003) e a Expression of Interest
 (4551278003), as duas de 02/09, são outras requisições e outra disciplina.
+
+## Formulários deixados À MÃO em 05/09, com tudo pronto para colar
+
+Os dois abaixo foram preenchidos e testados pela automação até o fim. O que trava é só a
+verificação anti-robô, que não se burla. Copiar e colar leva três minutos cada.
+
+### Keywords Studios / Lakshya Digital: Character Artist - Hair Specialist (remoto)
+
+Link: https://apply.workable.com/keywords-intl1/j/CA33DB1208/
+O que trava: **Cloudflare Turnstile**, o quadrinho "Verify you are human" logo acima do botão.
+Ele não se resolve sozinho, então é marcar o quadrinho e clicar em Submit application.
+**Antes de escrever, limpe os campos Address, City e Country**: o autofill do currículo do
+Workable escreve "Columbus, United States of America" ali sozinho e o texto novo concatena.
+
+- First name: Vini · Last name: Cavalcanti
+- Email: contact@vinicavalcanti.art · Phone: o número dele, prefixo +55
+- Address: Olinda, Pernambuco, Brazil
+- Headline: `Senior 3D Character Artist, 10+ years in stylized characters, character grooming in Houdini`
+- Summary: `Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where I have taken hero characters from first sculpt to engine for almost five years as a remote international contractor. I do character grooming in Houdini and handle hair, fur and facial hair as part of the character, not as a separate step. Portfolio: artstation.com/viniciuscavalcanti`
+- Resume: Vini_Cavalcanti_CV.pdf
+- Income Expectations: `Open to aligning with your band for the role; as a reference, I'm looking at around USD 100,000 per year.`
+- Marcar o aceite da Privacy Notice.
+- Cover letter:
+
+```
+Hair is the part of a character I keep coming back to, so a role built entirely around it is one I want.
+
+For almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt through retopology, UVs, baking, texturing and engine integration, working fully remote from a different country and time zone as an international contractor. That is the exact working pattern this role describes. Before that I modeled and hand-painted characters for the first season of The Wingfeather Saga at Angel Studios.
+
+On grooming specifically: I build character grooms in Houdini, and I work them as part of the character rather than as a bolt-on, which means shape, flow, layering and silhouette read against the sculpt, and the result has to survive deformation and hold up in engine. My published work is stylized, and your requirement lists realistic or highly stylized real-time hair, so I am putting the stylized side forward and I am comfortable working to hair cards and to strand-based setups depending on what the project needs.
+
+I would need work sponsorship for an employment position, and I already work as a remote contractor for a studio abroad, so the contract and remote format here is what I do every day.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+### Dream Games: Visual Development Artist (Istambul, presencial)
+
+Link: https://jobs.lever.co/dreamgames/7d2e95ca-ef9c-4ff8-b856-319eedc12b66/apply
+O que trava: **hCaptcha de desafio de imagem** do Lever, o mesmo de Larian, Frontier, Asobo e
+Skydance. Formulário curto, só sete campos.
+
+- Resume/CV: Vini_Cavalcanti_CV.pdf
+- Full name: Vini Cavalcanti · Email: contact@vinicavalcanti.art · Phone: o número dele
+- Current location: Olinda, Pernambuco, Brazil · Current company: E-Line Media
+- LinkedIn URL: https://www.linkedin.com/in/vinicavalcnti/
+- Portfolio URL: https://www.artstation.com/viniciuscavalcanti
+- Marcar o aceite do Statement of Personal Data Protection Law.
+
+### 3Doubles Producciones: 3D Modeler - Lead (ENVIADA em 05/09, guardado como modelo)
+
+Link: https://3doubles.factorial.es/apply/3d-modeler-lead-318348
+O ATS é o **Factorial**, e ele não tem captcha nenhum: é o formulário mais fácil que a campanha
+encontrou até agora. Guardado aqui porque vale reaproveitar em outras casas espanholas.
+
+- Prefijo telefónico: `Brasil (+55)`; no campo Teléfono, só os dígitos sem o código.
+- URL personal: https://www.artstation.com/viniciuscavalcanti
+- Pergunta de direito de trabalho (radio, só duas opções): **`No, I need a VISA`**
+- "Are you looking to relocate to Tenerife?" (obrigatória): `Yes. I want to relocate to Tenerife and I am ready to move for the role, on-site and full-time, with the 07:30 to 15:00 shift. I already work daily with a studio in another country and time zone, so moving to where the team is would make the work easier, not harder. I would need work sponsorship, and my academic record (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.`
