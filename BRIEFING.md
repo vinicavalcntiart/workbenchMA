@@ -87,6 +87,13 @@ Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Juli
 - Não cobrar a Polygon Pictures: cancelada com a saída do Japão.
 - Angel Studios: Keith Lango disse em 04/08 que o time de asset está completo. Ele aplicou mesmo assim como porta de entrada em 31/08. A janela boa é quando a 5ª temporada montar equipe.
 
+- **NUNCA escrever para Charles Ellison** (Warner Bros. Pictures Animation), nem por email, nem
+  pelo formulário do site pessoal dele. **Ele foi PROFESSOR do Vini**, dito por ele em 05/09. Não é
+  contato frio e não se pede emprego a ele por dentro da campanha. Isso vale para o Joe, para a
+  prospecção e para o Comunicador. Se o Vini quiser falar com ele, é conversa pessoal dele.
+  Consequência prática: a Warner deixa de ter o Ellison como via, e a casa segue sem pessoa
+  alcançável até aparecer outro nome.
+
 ## Pendências dele
 - Formulário da **Fortiche** (envio falhou em 27/08).
 - **Walt Disney Animation Studios**, único dos grandes sem candidatura.
