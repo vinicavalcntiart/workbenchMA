@@ -337,3 +337,39 @@ O array STUDIOS termina em `].map(([name,country,email,batch,delivery,stage])` e
 PROSPECTOS vem logo depois. Ao inserir linha no STUDIOS use esse `].map` como âncora,
 nunca o `];` seguinte. O array NOVIDADES não é o DAILY. Rodar
 `sh automacao/valida-dashboard.sh` antes de cada commit.
+
+## Duas correções de método vindas da rodada de 05/09, 21h35
+
+**1. O arquivo de eventos da escola envelhece, e o uso muda com isso.**
+A página de índice de eventos da Gnomon devolve sobretudo coisa de 2021 a 2023, e a maioria
+dos palestrantes de lá já mudou de casa, o que cai direto na regra de que cargo desatualizado
+é pior que alvo nenhum. Duas saídas, e as duas funcionaram:
+
+- **Para eventos recentes**, não use o índice: abra QUALQUER página de evento e leia a barra
+  `MORE EVENTS` no rodapé dela, que lista os mais novos. Foi por ali que apareceram os três
+  eventos de 2026, entre eles a conversa com o Gustavo Medeiros, da Blizzard.
+- **No arquivo antigo, procure FUNDADOR e DONO**, porque esses não mudam de casa. Foi assim
+  que saiu o Marco Plouffe, de um evento de 2021 que continua valendo porque ele é dono da
+  empresa. Para empregado, só evento recente serve.
+
+**2. Quase toda casa grande já está no teto de duas pessoas, e isso muda o plano.**
+Contagem feita em 05/09 no `pessoas.csv`: Disney com **seis**, Zoic, Sony Pictures Imageworks,
+LAIKA e Blizzard com **quatro** cada, Studio AKA, Pixar e DreamWorks com **três**, Riot, Mob
+Entertainment e Lucasfilm/ILM com **duas**. Sobrava espaço em Weta FX, Ubisoft, Animal Logic,
+Roblox e Sony Pictures Animation, e a rodada de 05/09 gastou quatro desses cinco.
+
+**Consequência prática, para não perder rodada:** achar mais um nome numa casa grande já
+mapeada não serve. O rendimento agora vem de dois lugares, nesta ordem:
+
+1. **Abrir padrão de domínio em casa grande NOVA**, pelo caminho já provado (log de commit de
+   código aberto, rodapé de autor de talk, patente).
+2. **Estúdio pequeno e médio já contatado e sem resposta**, onde o alvo é o **fundador** ou o
+   diretor de arte. São **46 estúdios só no Canadá** que receberam carta em caixa genérica
+   (`info@`, `careers@`, `jobs@`, `hello@`, `contact@`) e nunca responderam. Essa lista sai do
+   array STUDIOS do painel, filtrando país igual a Canadá, entrega `ok` e endereço genérico.
+   O Marco Plouffe saiu exatamente dela, e foi o melhor achado do dia.
+
+**3. Dois sobrenomes é a mesma armadilha dos bounces de 05/09.** O Jevgeni Laur aparece como
+Laur no nome de exibição e no Gumroad, e como Vasjukov na URL antiga do LinkedIn. Quando isso
+acontecer, monte pelo nome que a pessoa USA HOJE, marque a linha como **baixa** e escreva a
+segunda tentativa na própria linha, pronta para o dia em que a primeira voltar.
