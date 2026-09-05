@@ -209,11 +209,83 @@ tente o nome e sobrenome colados.
 
 ---
 
+## Lucasfilm (domínio próprio, diferente do da ILM) — provado em 05/09
+
+**`inicial+sobrenome@lucasfilm.com`**
+
+| Endereço | Pessoa | Fonte |
+|---|---|---|
+| `jstone@lucasfilm.com` | Jonathan Stone | log de commits do MaterialX |
+| `mkuo@lucasfilm.com` | Malia Kuo | log de commits do MaterialX |
+
+**Quantos endereços provam:** 2.
+
+**Por que isso importa:** a campanha só conhecia `ilm.com`. Este é um segundo domínio
+vivo da mesma casa, com o mesmo formato, e serve de segunda via quando um endereço em
+`ilm.com` voltar.
+
+**Endereços novos de `ilm.com` achados na mesma varredura, que reforçam o padrão de lá:**
+`rherrera@`, `sgilligan@` (MaterialX), `abucior@` (Alan Bucior), `cary@` (Cary Phillips),
+`ilawson@` (Ian Lawson) e `juliencb@` (Julien Cohen Bengio), estes quatro no log do
+OpenUSD. Atenção: `cary@` e `juliencb@` são exceções ao formato, então em nome comprido
+ou composto vale desconfiar.
+
+---
+
+## Sony (`sony.com`) — provado em 05/09, MAS NÃO É A SONY PICTURES ANIMATION
+
+**`nome.sobrenome@sony.com`**
+
+| Endereço | Pessoa | Fonte |
+|---|---|---|
+| `Jeremiah.Zanin@sony.com` | Jeremiah Zanin | log de commits do OpenUSD |
+| `hamed.sabri@sony.com` | Hamed Sabri | log de commits do OpenUSD |
+
+**Quantos endereços provam:** 2.
+
+**AVISO QUE VALE MAIS QUE O PADRÃO.** Foi conferido: Jeremiah Zanin é do **Santa Monica
+Studio**, que é PlayStation, ou seja, Sony Interactive Entertainment. Este domínio é da
+Sony corporativa e do braço de jogos, **não** da Sony Pictures Animation. Portanto NÃO se
+usa `sony.com` para montar endereço de gente da Sony Pictures Animation: seria chute entre
+divisões diferentes, e Wendell Dalit continua **sem via**. O que este padrão abre de
+verdade é o Santa Monica Studio, casa de jogos grande, em escopo e com zero cartas.
+
+---
+
+## Weta FX — três endereços reais, e DUAS formas
+
+**`nome+inicial@wetafx.co.nz`** na maioria, com uma segunda forma em `inicial+sobrenome`.
+
+`antond@` (Anton Dukhovnikov) e `peterh@` (Peter Hillman) são nome mais inicial;
+`sfinnie@` é inicial mais sobrenome. Todos no log de commits do MaterialX e do OpenImageIO.
+
+**Quantos endereços provam:** 3, mas com duas formas, então a confiança de um endereço
+novo aqui é **média para baixa** e vale tentar as duas.
+
+---
+
+## Exceções novas no padrão da Sony Pictures Imageworks, achadas em 05/09
+
+O padrão `inicial+sobrenome@imageworks.com` continua valendo e ganhou mais provas
+(`chambers@`, `jrray@`, `slooper@`, `aconty@`, `ckulla@`, `cstein@`, `plecocq@`), mas
+apareceram **quatro exceções** que precisam ficar registradas: `jeremys@` (Jeremy Selan,
+nome mais inicial), `blair@` (Blair Zajac, só o primeiro nome), `sam@` (Sam Richards, só o
+primeiro nome) e `hall@` (Brian Hall, só o sobrenome). Ou seja, contas antigas fogem da
+regra, igual à Pixar.
+
 ## Não provados, registrados para não se perder
 
 - **Epic Games.** Só um endereço real encontrado, `matt.johnson@epicgames.com`, no log de
   commits do OpenEXR. Um endereço não prova padrão. A forma `nome.sobrenome` é a hipótese, e
-  fica marcada como **não provada** até aparecer o segundo.
+  fica marcada como **não provada** até aparecer o segundo. **Varrido de novo em 05/09** nos
+  logs completos de MaterialX, OpenColorIO, OpenImageIO e OpenUSD: nenhum segundo endereço
+  apareceu. A Epic segue fechada.
+- **Framestore.** Um endereço real, `kevin.wheatley@framestore.com` (OpenUSD), na forma
+  `nome.sobrenome`. Um só não prova. Fica marcado até aparecer o segundo.
+- **DNEG.** Dois endereços reais, `axs@dneg.com` (Alex Schwank) e `mkj@dneg.com` (Mark
+  Boorer), mas eles NÃO seguem formato de nome: são apelidos de três letras que não derivam
+  do nome. Dois endereços aqui **não** viram padrão, e montar endereço de DNEG é impossível
+  por este caminho.
 - **Sony Pictures Animation** é empresa distinta da Sony Pictures Imageworks e **não** usa
   `imageworks.com`. Nenhum endereço real dela foi encontrado. Não reutilize o padrão da
   Imageworks para a Animation.
