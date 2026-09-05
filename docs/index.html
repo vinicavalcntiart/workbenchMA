@@ -884,6 +884,7 @@ const STUDIOS = [
  ["Fluffy Dog Studio (3ª via)","Canadá (Vancouver, 100% remoto)","careers@fluffydogstudio.com",19,"ok"],
  ["Polyarc (2ª via)","EUA (Seattle)","jobs@polyarcgames.com",20,"rascunho"],
  ["Big Shot Pictures","EUA","hello@bigshotpictures.com",21,"rascunho","-"],
+ ["Zoic Studios","EUA e Canadá","jweitzell@zoicstudios.com",21,"rascunho","-"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -1693,6 +1694,50 @@ const PESSOAS = [
  },
  {
   "data": "2026-09-05",
+  "estudio": "Zoic Studios",
+  "pais": "EUA (Culver City) e Canada (Vancouver)",
+  "pessoa": "Julie Weitzell",
+  "cargo": "Executive Producer, Episodic & Film",
+  "email": "jweitzell@zoicstudios.com",
+  "confianca": "alta",
+  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa. ESCOLHIDA entre os quatro porque episodico e longa e o lado onde criatura e personagem carregam o show, e porque a vaga aberta de 3D Artist da casa e em Vancouver, o cluster mais forte desta campanha. RESSALVA: e producao, nao direcao de arte; a carta pede direcao e nao vaga.",
+  "situacao": "rascunho-criado"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Zoic Studios",
+  "pais": "EUA",
+  "pessoa": "Steve Melchiorre",
+  "cargo": "Senior Executive Producer",
+  "email": "smelchiorre@zoicstudios.com",
+  "confianca": "alta",
+  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa. SEM RASCUNHO: uma pessoa por estudio por rodada. Segundo alvo da Zoic, e fecha o teto de duas.",
+  "situacao": "reserva"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Zoic Studios",
+  "pais": "EUA",
+  "pessoa": "Rocco Passionino",
+  "cargo": "Senior Executive Producer",
+  "email": "rpassionino@zoicstudios.com",
+  "confianca": "alta",
+  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa. SEM RASCUNHO pelo mesmo limite. Registrado porque e prova do padrao do dominio.",
+  "situacao": "reserva"
+ },
+ {
+  "data": "2026-09-05",
+  "estudio": "Zoic Studios",
+  "pais": "EUA",
+  "pessoa": "Nicole Fina",
+  "cargo": "Senior Executive Producer, Advertising",
+  "email": "nfina@zoicstudios.com",
+  "confianca": "alta",
+  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa. NAO E ALVO: publicidade, nao episodico nem longa. Registrada so como prova do padrao do dominio.",
+  "situacao": "sem-alvo-de-arte"
+ },
+ {
+  "data": "2026-09-05",
   "estudio": "Blizzard Entertainment",
   "pais": "EUA",
   "pessoa": "Chris G. Robinson",
@@ -1934,6 +1979,17 @@ const PESSOAS = [
   "situacao": "sem via"
  },
  {
+  "data": "2026-09-05",
+  "estudio": "Patriam Studios",
+  "pais": "Nova Zelandia (Nelson)",
+  "pessoa": "",
+  "cargo": "",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "Estudio indie neozelandes com TRES vagas abertas na disciplina exata do Vini: Character Artist, Creature Artist e Texture Artist. SEM PESSOA E SEM EMAIL: o site tem so quatro paginas (home, About Us, Games & Projects e Saga of Roljar), nao nomeia ninguem, nao publica endereco nenhum, e o Contact e um formulario do Google (forms.gle/tpe9mhPjuPxzSqrJ8). As vagas so existem num post do LinkedIn, sem fonte oficial propria. Guardado porque o encaixe de disciplina e o melhor da fila nova e porque formulario do Google nao tem captcha, entao e via viavel para o Vini.",
+  "situacao": "sem via"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "Walt Disney Animation Studios",
   "pais": "EUA",
@@ -2013,6 +2069,31 @@ const PADROES = [
   "dominio": "`brandonwang@pixar.com`",
   "formato": "Brandon Wang",
   "prova": "log de commits do Ptex"
+ },
+ {
+  "dominio": "Endereço",
+  "formato": "Pessoa",
+  "prova": "Cargo"
+ },
+ {
+  "dominio": "`jweitzell@zoicstudios.com`",
+  "formato": "Julie Weitzell",
+  "prova": "Executive Producer, Episodic & Film"
+ },
+ {
+  "dominio": "`smelchiorre@zoicstudios.com`",
+  "formato": "Steve Melchiorre",
+  "prova": "Senior Executive Producer"
+ },
+ {
+  "dominio": "`rpassionino@zoicstudios.com`",
+  "formato": "Rocco Passionino",
+  "prova": "Senior Executive Producer"
+ },
+ {
+  "dominio": "`nfina@zoicstudios.com`",
+  "formato": "Nicole Fina",
+  "prova": "Senior Executive Producer, Advertising"
  }
 ];
 // </PADROES>
@@ -2025,6 +2106,7 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-05","alerta","A Zoic Studios publica o email das quatro chefias, e isso vale mais que a carta","Rodada do Joe com rendimento baixo e uma descoberta que compensa. Varri as páginas de contato, about, team, studio, people, crew, careers e jobs de dezoito estúdios da fila nova de 297, e uma única publica endereço de pessoa: a Zoic Studios, casa grande de VFX com escritório em Vancouver e vaga de 3D Artist aberta. A página de contato deles lista quatro chefias com nome, cargo e email lado a lado. A carta foi para Julie Weitzell, que toca episódico e longa, que é o lado onde criatura e personagem carregam o show. O que vale mais que a carta é o efeito colateral: quatro endereços reais provam o padrão do domínio deles, então qualquer nome de arte da Zoic que apareça num crédito daqui em diante já nasce com endereço utilizável. É o décimo segundo padrão do arquivo. Apareceu também a Patriam Studios, na Nova Zelândia, com três vagas na sua disciplina exata, Character, Creature e Texture Artist, e sem ninguém para escrever: o site não nomeia uma pessoa sequer e o contato é formulário do Google. Ficou registrada assim mesmo, porque formulário do Google não tem captcha e é via viável para você.",""],
  ["2026-09-05","porta","A fila de estúdios saiu de zero para 297, e a Big Shot Pictures virou carta","A prospecção vinha dizendo há quatro dias que a lista de estúdios tinha secado, e isso estava certo para as fontes velhas e errado no geral: faltava fonte nova. Cruzando a planilha que você mandou contra tudo que a campanha já registrou, sobraram 297 estúdios dentro do seu escopo que nunca foram tocados, e 45 deles têm vaga de arte aberta hoje. O backlog foi reescrito com essa fila inteira. Um já virou carta: a Big Shot Pictures, de Los Angeles, o estúdio novo do Brian Robbins, ex-chefe da Paramount, com acordo de produção com a Sony e um slate que é quase todo personagem de franquia: o reboot de Alvin and the Chipmunks, a série Eloise, a série do Bucket List Family e um anime com o IShowSpeed escrito pelo showrunner de One Piece. Eles têm Character Artist aberta em Los Angeles e publicam o endereço no rodapé do próprio site. O gancho da carta é o seu de verdade: fazer personagem que o público já tem na cabeça sobreviver à passagem para 3D sem perder o que se reconhece nele. Rascunho pronto, não enviado.",""],
  ["2026-09-05","nao","Três das quatro vagas novas de personagem da planilha estavam mortas","Vale registrar porque acabei de instalar a planilha como fonte fixa e ela precisa entrar no painel com o aviso certo. Quatro vagas que pareciam vivas nela foram conferidas na fonte oficial: a 3D Character Modeller da Glitch Productions responde 410, com a conta do JazzHR deles desativada, e as três vagas eram freelance de qualquer jeito; a Character Artist remota da One Man Studio sumiu, o quadro do BambooHR deles está vazio; e a Model Art Lead da Infinity Ward em Barcelona não existe mais no portal Workday da Xbox Gaming. Sobrou uma viva, a Senior Modeler da Highdive em Toronto, e lendo o anúncio inteiro ela é modelagem de cenário e não de personagem, então entrou como porta de entrada. A planilha DESCOBRE, ela não CONFIRMA, e isso ficou escrito no backlog para as próximas rodadas.",""],
  ["2026-09-05","alerta","O alerta da Warner estava ativo mas semanal, e agora tem um diário do lado","Segundo defeito do mesmo alerta, achado no check-in seguinte. O email de confirmação da Warner mostrou a frequência: semanal. Numa casa onde vaga de personagem vive de três a sete dias, alerta semanal chega depois do enterro. A causa era outro bug meu: o script procurava um botão Daily, e a frequência ali é uma lista suspensa com Daily, Weekly e Monthly, então o clique não pegava e ficava o padrão. Tentei recriar o alerta de character artist em diário e o site recusou, porque a chave dele é o critério de busca e não a frequência. A saída foi criar um segundo alerta, com a palavra modeler, em frequência DIÁRIA, ativado na mesma rodada. A Warner passa a ter duas vigilâncias: character artist semanal e modeler diária. Se você quiser deixar as duas diárias, existe um fluxo Manage job alerts no próprio site que manda por email o link da página de gestão.",""],

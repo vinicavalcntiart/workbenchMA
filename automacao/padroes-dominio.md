@@ -227,3 +227,28 @@ tente o nome e sobrenome colados.
 - **`dl.acm.org` bloqueia o acesso** desta máquina (403 por curl, e o proxy de saída barra o
   domínio). A saída foi ir direto nos PDFs abertos que os estúdios hospedam, o que funcionou
   para a Disney Animation e não existe para a Pixar, que não publica PDF aberto no site próprio.
+
+## Zoic Studios
+
+**`inicial+sobrenome@zoicstudios.com`**
+
+Achado em 05/09 e é o padrão mais barato de provar do arquivo inteiro: os quatro endereços
+saem da **própria página de contato do estúdio**, `https://zoicstudios.com/contact`, cada um
+com nome e cargo ao lado.
+
+| Endereço | Pessoa | Cargo |
+|---|---|---|
+| `jweitzell@zoicstudios.com` | Julie Weitzell | Executive Producer, Episodic & Film |
+| `smelchiorre@zoicstudios.com` | Steve Melchiorre | Senior Executive Producer |
+| `rpassionino@zoicstudios.com` | Rocco Passionino | Senior Executive Producer |
+| `nfina@zoicstudios.com` | Nicole Fina | Senior Executive Producer, Advertising |
+
+A mesma página publica `zoic-ep@zoicstudios.com` como caixa geral de produtor executivo, em
+Los Angeles, Nova York e Vancouver, e o telefone de cada escritório.
+
+**Quantos endereços provam:** 4, todos publicados.
+
+**Por que isso vale mais do que parece.** A Zoic é casa grande de VFX com escritório em
+Vancouver, o cluster mais forte desta campanha, e tem vaga de 3D Artist aberta. Com o padrão
+provado, qualquer nome de ARTE da casa que apareça em crédito de série ou entrevista vira
+endereço de confiança média na hora, sem depender de o estúdio publicar o endereço dele.
