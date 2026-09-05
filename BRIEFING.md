@@ -57,6 +57,13 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
     mesmo `internal_job_id` (aqui, `5834551003` em Novato e Montréal). A checagem é **título mais
     local mais `internal_job_id`**, nunca só o id da URL, e toda vaga registrada tem que guardar o
     **link do ATS**, não o do site institucional.
+    **Extensão escrita em 05/09, depois do MESMO erro pela segunda vez.** Na DNEG eu tentei
+    aplicar numa "Character Modeller for VFX style creatures" achando que era vaga nova, e o
+    Jobvite recusou com *You've already applied*: era a mesma requisição de 31/08, que o site
+    tinha republicado com outro título. O dedupe falhou porque a entrada do painel guardava só
+    o nome do estúdio e a URL. **Toda entrada de candidatura passa a guardar o ID DA REQUISIÇÃO
+    no ATS** (`ovLGAfwg` no Jobvite, `internal_job_id` no Greenhouse, o uuid no Lever e no
+    Ashby, o número da vaga no BambooHR). Nome de estúdio e URL não identificam requisição.
 19. **Código de segurança do Greenhouse: a espera é da sessão, não da caixa (05/09).** O Greenhouse
     passou a exigir código por email antes de aceitar o envio. A automação espera seis minutos com
     o navegador aberto e o formulário já preenchido; se ninguém entregar o código nesse prazo, todo
