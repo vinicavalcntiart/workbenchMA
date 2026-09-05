@@ -78,7 +78,12 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
 Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Julie Goutheraud), WildBrain (Groom Supervisor), Psyop, Superprod Milano, Nuare, Plastic Wax, Submarine (recusa morna), DreamWall (prazo vence 13/09), Black Kite (Angus Edhouse respondeu).
 
 ## Não fazer
-- Não aplicar de novo na Sony Pictures Imageworks (Margot Ingrassia). Ele já cobrou.
+- **Não cobrar a Margot Ingrassia** (`mingrassia@imageworks.com`) na thread de julho da Sony
+  Pictures Imageworks: ele já cobrou uma vez e decidiu não insistir. **Isto vale para a THREAD e
+  para a PESSOA, nunca para o estúdio.** A Imageworks continua alvo normal da campanha: vaga
+  aberta lá se aplica como em qualquer casa grande. Corrigido em 05/09 a pedido do Vini, porque
+  esta linha estava escrita como "não aplicar de novo na Sony Pictures Imageworks" e eu a li
+  como veto ao estúdio inteiro, que nunca foi o que ele disse.
 - Não cobrar a Polygon Pictures: cancelada com a saída do Japão.
 - Angel Studios: Keith Lango disse em 04/08 que o time de asset está completo. Ele aplicou mesmo assim como porta de entrada em 31/08. A janela boa é quando a 5ª temporada montar equipe.
 
