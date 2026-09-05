@@ -26,6 +26,28 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
 14. **PRIORIDADE MÁXIMA, regra dele em 04/09: vaga de arte ou modelagem em Disney, DreamWorks, Paramount ou Warner se aplica NA HORA, nunca só se registra.** Vale para o grupo inteiro de cada uma: Disney inclui Pixar, Lucasfilm e ILM, Marvel e Disney Television Animation; DreamWorks inclui NBCUniversal; Paramount inclui Nickelodeon e Skydance; Warner inclui Warner Bros. Animation e Cartoon Network. **Esta regra passa por cima de qualquer rotina que mande "só ler e registrar", inclusive a de prospecção.** A ordem é: achou, abre a fonte oficial, aplica. Só depois registra no painel. Se o formulário estiver atrás de verificação humana, o dossiê de copiar e colar vai para o painel **e o Vini é avisado por PushNotification na mesma rodada**, nunca no resumo do fim do dia. O motivo é o custo: vaga de personagem em casa grande vive poucos dias, e quatorze já morreram nesta campanha antes de dar tempo.
 15. **Alerta antes de varredura.** Em toda casa grande, criar o alerta de vaga por email é prioridade permanente, porque ele funciona sozinho e não depende de agente nenhum rodar. Ativos hoje: Disney (disneycareers, categoria Animation and Visual Effects), Sony Pictures Imageworks (MyGreenhouse, departamento Artists), Paramount (jobs2web) e Warner Bros. Discovery (careers.wbd.com, palavra-chave character artist, criado em 04/09).
 
+16. **Fonte fixa de vagas, dada pelo Vini em 05/09:** a planilha pública
+    *Animation/VFX/Game Industry Job Postings*
+    (`https://docs.google.com/spreadsheets/d/1eR2oAXOuflr8CZeGoz3JTrsgNj3KuefbdXJOmNtjEVM/htmlview`),
+    mantida pela comunidade e atualizada todo dia. Ela traz estúdio, cidade, país,
+    cargo, nível, presencial ou remoto, data e **link da fonte oficial** de cada vaga.
+    **Como ler sem abrir o navegador:** `https://docs.google.com/spreadsheets/d/<id>/gviz/tq?tqx=out:csv`
+    devolve as 2.400 e poucas linhas em CSV (o `/export?format=csv` responde 401, o
+    `gviz` não). A rotina de prospecção passa a começar por ela depois das quatro
+    casas grandes, filtrando por personagem, modelagem, surfacing, look dev e groom,
+    dentro do escopo geográfico e nos últimos 25 dias. **A regra de fonte oficial
+    continua valendo**: a planilha DESCOBRE, a página do empregador CONFIRMA.
+17. **Preenchedor de formulário no navegador dele (05/09).** O que trava as
+    candidaturas não é o formulário, é a rede: o SmartRecruiters cita o IP na tela e o
+    reCAPTCHA invisível pontua a sessão, sempre no último clique. A saída não é driblar
+    o porteiro, é o preenchimento acontecer no navegador do Vini. O código está em
+    `automacao/preencher-formulario.js`, é injetado no painel por
+    `automacao/gera-preenchedor.mjs` e vira um favorito na barra do navegador dele, com
+    o telefone embutido só ali (nunca no repositório). **Ele não clica em enviar, não
+    anexa arquivo e não encosta em captcha.** Toda vaga que a automação não conseguir
+    enviar deve sair para a fila dele com esta instrução, e não mais só com o dossiê de
+    copiar e colar.
+
 ## Números (31/08)
 - 159 emails em 14 lotes para 154 estúdios; 148 entregues, 6 bounces.
 - 172 estúdios alcançados (148 por email + 24 só por portal).
