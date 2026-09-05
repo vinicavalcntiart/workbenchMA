@@ -69,7 +69,7 @@ de fonte oficial vale para a planilha igual vale para qualquer agregador.
 - Topdeck Productions (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (London) | vagas de arte hoje: Art Director | fonte da vaga: https://www.workwithindies.com/careers/topdeck-productions-art-director | pendente
 - Unorthodox (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (London) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7483881406809694208/ | pendente
 - Zoic Studios | Canada (Vancouver) | vagas de arte hoje: 3D Artist | fonte da vaga: https://zoicstudios.applytojob.com/apply/iHm7iyOWjp/BC-Senior-Hard-Surface-ModelTextureLook-Dev-Artist | pendente
-- le truc | Switzerland (Geneva) | vagas de arte hoje: Modeler | fonte da vaga: https://www.letruc.studio/jobs | pendente
+- le truc (APLICADO em 05/09 pelo formulario oficial do Microsoft Forms, com tela de confirmacao) | Switzerland (Geneva) | vagas de arte hoje: Modeler | fonte da vaga: https://www.letruc.studio/jobs | pendente
 
 ## Os outros 254 estúdios novos, sem vaga de arte hoje
 
@@ -87,3 +87,26 @@ raiz, contato, about, careers, jobs e impressum abertas em 05/09 e **nenhum emai
 publicado em nenhuma delas**. Isso confirma pela quinta rodada seguida o mesmo padrao:
 estudio pequeno e medio praticamente nao publica endereco de pessoa nem de contato de
 carreira, e a via viavel e o ATS.
+
+## FILA DE PAÍSES PEDIDA PELO VINI EM 05/09: Suíça, Finlândia e Holanda
+
+O Vini pediu em 05/09 para procurar estúdios nesses três países e criou junto uma rotina de
+fim de semana, O EUROPEU, que roda a cada duas horas até segunda para aplicar no máximo de
+vagas da Europa que trabalha em inglês. Esta seção é o combustível dela.
+
+**Já resolvidos na primeira rodada:**
+- le truc, Genebra, Suíça: **APLICADO** em 05/09 pelo formulário oficial, com confirmação na tela.
+- Submarine, Amsterdã: vaga ótima de Character Artist para longa CG estilizado, **não enviada**,
+  porque o estúdio já recusou em 26/08 citando residência NL/BE, e o anúncio confirma.
+- Team Tumult, Zurique: **descartado**. É estúdio de 2D, motion design e ilustração, sem 3D, e a
+  página de contato diz com todas as letras que não está contratando nem aceitando estágio.
+- BUCK Amsterdã: **descartado**, a vaga de 3D Artist é de nível trainee.
+- Random Studio, Amsterdã: já descartado antes, é design e experiência digital.
+
+**Varridos em 05/09 sem nenhum email publicado** (a via é o ATS, não repetir a busca de contato):
+Anima Vitae, Gigglebug e Pyjama Films na Finlândia; Nukleus e Studio Seufz na Suíça; Studio
+Smack, PostPanic, Ambassadors, Abstraction, Ronimo, Triangle Studios e Blackmill na Holanda.
+
+**Com email genérico achado, encaixe ainda por conferir:** il Luster (`info@illuster.nl`),
+Planet X (`contact@planetxstorm.com`) e Nixxes (`info@nixxes.com`, mas é casa de port de PC da
+Sony, majoritariamente engenharia).
