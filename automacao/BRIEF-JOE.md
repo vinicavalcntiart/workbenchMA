@@ -261,6 +261,35 @@ endereço, de onde sai o cargo. Rodou em paralelo nos 426 domínios e devolveu c
 nome, cargo e projeto. **ArtStation está bloqueado por Cloudflare** (403 por fetch e pelo
 navegador do scratchpad), o que é a maior perda, porque seria a melhor fonte de todas.
 
+## PÁGINA DE EVENTO DE ESCOLA DE ARTE, a fonte achada em 05/09
+
+**É a melhor veia desde os padrões de domínio, e resolve o defeito das outras duas.**
+Rodapé de talk do SIGGRAPH e log de commit de código aberto dão muito engenheiro e
+pesquisador e pouquíssimo artista, porque quem publica paper e quem escreve código não é
+quem modela personagem. Escola de arte convida exatamente o contrário.
+
+**Como funciona.** Gnomon, CGMA, Think Tank, Animation Mentor e afins publicam, para cada
+palestra, uma página com **nome, cargo e biografia** de cada convidado, e a biografia
+costuma dizer o time, o filme ou o jogo, e quantos anos de casa. Isso é a matéria-prima
+exata do Joe: nome mais cargo mais algo real e verificável para ancorar a carta.
+
+**O que rendeu na primeira vez, em 05/09:** UMA página da Gnomon deu Katia Bourykina e
+Blair Armitage, as duas Principal Character Artist da Riot, com a bio da Katia dizendo que
+a especialidade dela é personagem estilizado e hand-painted. Outra deu Wendell Dalit, art
+director de KPOP Demon Hunters na Sony Pictures Animation, e Linyao Li, character artist de
+Diablo IV na Blizzard. Quatro nomes com cargo, contra ZERO de três rodadas varrendo página
+de contato de estúdio.
+
+**Como usar.** Ache a listagem de eventos da escola, filtre por palestra de personagem,
+abra a página do evento e leia a seção Speakers. O email não vem daí: vem do padrão de
+domínio já provado da casa, então a confiança é **média** e a fonte que se cita na linha do
+`pessoas.csv` é a página do evento, com data, mais o padrão que serviu de prova.
+
+**Cuidado que já apareceu:** `riotgames.com` é bloqueado pelo proxy de saída desta máquina,
+então a página oficial do estúdio pode não abrir mesmo existindo. A página da escola abre,
+e ela é fonte oficial dela mesma, com nome e cargo publicados. Isso basta para o nome e o
+cargo; o email continua vindo do padrão.
+
 ## O que já está esgotado, e o que ainda não foi minerado
 
 Descoberta da primeira rodada agendada, 04/09: **a varredura mecânica de `mailto:` nos
