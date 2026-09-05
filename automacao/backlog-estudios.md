@@ -1,250 +1,80 @@
-# Fila de candidatos para prospecção (verificar email oficial antes de aprovar)
+# Backlog de estúdios
 
 Formato: nome | país | pista de domínio | status (pendente / aprovado / portal / descartado)
 
-| Guru Studio | Canadá | gurustudio.com | aprovado |
-| Jam Filled | Canadá | jamfilled.com | aprovado |
-| House of Cool | Canadá | houseofcool.com | aprovado |
-| Atomic Cartoons | Canadá | atomiccartoons.com | aprovado |
-| Bardel Entertainment | Canadá | bardel.ca | portal |
-| Le Cube | Argentina | lecube.com | portal |
-| Punkrobot | Chile | punkrobot.cl | descartado (escopo geográfico) |
-| Zombie Studio | Brasil | zombie.studio | descartado (escopo geográfico) |
-| Golden Wolf | Reino Unido/EUA | goldenwolf.tv | aprovado |
-| Snowball Studios | Israel | snowball-vfx? | descartado (fora do escopo geográfico) |
-| Tiny Island Productions | Singapura | tinyisland.net | aprovado |
-| Omens Studios | Singapura | omens-studios.com | aprovado |
-| CraveFX | Singapura | cravefx.com | aprovado |
-| One Animation | Singapura | oneanimation.com | aprovado |
-| Original Force | China | originalforce.com | descartado (escopo geográfico) |
-| Toonz Media Group | Índia | toonz.co | descartado (escopo geográfico) |
-| 88 Pictures | Índia | 88pictures.com | aprovado |
-| Green Gold Animation | Índia | greengold.tv | descartado (escopo geográfico) |
-| Studio Eeksaurus | Índia | eeksaurus.com | descartado (escopo geográfico) |
-| PGS Entertainment? (dist, não estúdio) | França | - | descartado |
-| Fortiche Production | França | forticheprod.com | portal |
-| Supamonks | França | supamonks.com | portal |
-| Circus | França | circus.fr | aprovado (circus.be é cassino; estúdio real é o de Paris) |
-| Grid VFX | Bélgica | grid-vfx.com | descartado (encerrou operações em 2021) |
-| Creative Conspiracy | Bélgica | cc.be | aprovado |
-| Il Luster | Holanda | illuster.nl | descartado (sem email público; foco em curtas autorais) |
-| Submarine | Holanda | submarine.nl | aprovado |
-| Anima Vitae | Finlândia | anima.fi | aprovado |
-| Gigglebug Entertainment | Finlândia | gigglebugentertainment.com | portal |
-| Qvisten Animation | Noruega | qvisten.no | aprovado |
+## FILA REABASTECIDA EM 05/09/2026, e de onde ela veio
 
-| TAT Productions | França | tatprod.com | aprovado |
-| Cyber Group Studios | França | cybergroupstudios.com | aprovado |
-| Pipeline Studios | Canadá | pipelinestudios.com | aprovado |
-| Mainframe Studios | Canadá | mainframe.ca | portal |
-| ICON Creative Studio | Canadá | iconcreativestudio.com | portal |
-| Polygon Pictures | Japão | ppi.co.jp | aprovado |
-| Marza Animation Planet | Japão | marza.com | portal |
-| Nørlum | Dinamarca | noerlum.com | descartado (2D puro) |
-| A. Film Production | Dinamarca | afilm.com | descartado (duplicado; já contatado no lote 3) |
-| Blue Spirit | França | spirit-prod.com | descartado (duplicado; já contatado no lote 3) |
-| Superprod | França | superprod.net | portal |
-| WildBrain Studios | Canadá | wildbrain.com | portal |
-| Brown Bag Films | Irlanda | brownbagfilms.com | aprovado |
-| Studio Isar Animation | Alemanha | isaranimation.com | aprovado |
-| Cinesite Montreal/Vancouver | Canadá | cinesite.com | portal |
+A fila estava **zerada** desde 04/09, e as quatro rodadas anteriores de prospecção
+concluíram que a lista tinha secado. Isso estava certo para as fontes antigas e errado
+no geral: o que faltava era fonte nova. O Vini indicou em 05/09 a planilha pública
+*Animation/VFX/Game Industry Job Postings*, com 2.452 vagas e link da fonte oficial em
+cada linha, e ela resolveu o problema de uma vez.
 
-| Tonko House | EUA | tonkohouse.com | aprovado |
-| Chromosphere | EUA | chromosphere-la.com | aprovado |
-| HouseSpecial | EUA | housespecial.com | aprovado |
-| Psyop | EUA | psyop.com | portal |
-| Cyborn | Bélgica | cyborn.be | descartado (duplicado; já contatado no lote 3) |
-| Xilam Animation | França | xilam.com | portal (sem email atual verificado) |
-| Studio 100 Animation | França | studio100animation.net | portal (email não confirmável) |
-| ReelFX | EUA | reelfx.com | aprovado |
-| Locksmith Animation | Reino Unido | locksmithanimation.com | aprovado |
-| DNEG Animation | Reino Unido | dneg.com | portal |
-| Jellyfish Pictures | Reino Unido | jellyfishpictures.co.uk | descartado (entrou em administração e encerrou em 2025) |
+Cruzando as vagas dos últimos 75 dias, dentro do escopo geográfico, contra tudo que a
+campanha já registrou (alvos.csv, enviados.csv, portal_only.md, o painel, pessoas.csv e
+processados.csv), sobraram **299 estúdios que a campanha nunca tocou**. Destes, **45 têm
+pelo menos uma vaga de arte aberta hoje**, e são esses que entram na fila abaixo, em
+ordem de quantas vagas de arte cada um tem.
 
-| REALTIME | Reino Unido | realtimeuk.com | portal (sem email geral público) |
-| Blink Industries | Reino Unido | blinkindustries.tv | descartado (2D Toon Boom; sem email público) |
-| Aixsponza | Alemanha | aixsponza.com | descartado (motion design; sem foco em personagens) |
-| Yeti Farm Creative | Canadá | yetifarm.com | descartado (sem email público verificado) |
-| Wind Sun Sky Entertainment | Canadá | windsunsky.com | descartado (produtora multimídia; sem email público) |
-| House of Secrets | Holanda | houseofsecrets.nl | aprovado |
-| Storm Studios | Noruega | stormstudios.no | portal (email não verificado) |
-| Ghost VFX | Dinamarca | ghostvfx.com | portal |
-| Important Looking Pirates | Suécia | ilpvfx.com | portal (sem email público) |
+**Como ler esta fila, e o aviso que custou três verificações hoje:** a planilha DESCOBRE,
+ela não CONFIRMA. Em 05/09 quatro vagas de personagem que pareciam vivas nela foram
+conferidas na fonte oficial e **três estavam mortas**: a Glitch Productions responde 410
+com a conta do JazzHR desativada, a One Man Studio tem o quadro do BambooHR vazio, e a
+Model Art Lead da Infinity Ward sumiu do locatário Workday da Xbox Gaming. A regra dura
+de fonte oficial vale para a planilha igual vale para qualquer agregador.
 
-| Starloop Studios | Espanha | starloopstudios.com | aprovado |
-| Virtuos | Singapura | virtuosgames.com | aprovado |
-| Cloth Cat Animation | Reino Unido (País de Gales) | clothcat.com | portal (só email da academia é público) |
-| Outpost VFX | Reino Unido | outpost-vfx.com | portal |
-| Kevuru Games | Ucrânia | kevurugames.com | descartado (duplicado; já contatado no lote 3) |
-| Pingle Studio | Ucrânia | pinglestudio.com | portal (email não verificado) |
-| The Third Floor | Reino Unido/EUA | thethirdfloorinc.com | descartado (previz; fora do foco de personagem) |
+## Fila com vaga de arte aberta (45 estúdios, todos pendentes)
 
-| Lightbox Animation Studios | Espanha | lbox.es | aprovado |
-| Passion Pictures | Reino Unido | passion-pictures.com | aprovado |
-| Cube Creative | França | cube-creative.com | aprovado |
-| Red Knuckles | Reino Unido | redknuckles.co.uk | aprovado (eps@ encontrado pelo Vini na página de contato) |
-| Studio Gobo | Reino Unido | studiogobo.com | portal |
-| RodeoFX | Canadá | rodeofx.com | portal |
-| Andarta Pictures | França | andarta-pictures.com | descartado (2D puro) |
+- Glitch Productions | Australia (Sydney) | descartado em 05/09: o quadro do JazzHR responde 410 com a conta desativada, e as tres vagas (Asset Artist, 3D Character Modeller e Surfacing/Look Development) eram todas FREELANCE, contra a regra de vaga fixa. Guardar o nome: e a casa de Murder Drones e The Amazing Digital Circus, estilizado e remoto, e vale voltar quando abrir efetiva
+- Patriam Studios | New Zealand (Nelson) | vagas de arte hoje: Character Artist; Creature Artist; Texture Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7479655752778006530/ | pendente
+- The Heist | Canada (Toronto) | vagas de arte hoje: Art Director | fonte da vaga: https://jobs.lever.co/thinkingbox/dd09ad83-e4a9-46bf-9a28-8f865beea506 | pendente
+- Blump Studio | France (Paris) | vagas de arte hoje: 2D/3D Artist; Matte Painter/Concept Artist | fonte da vaga: https://jobs.smartrecruiters.com/BlumpStudio/744000140199109-generaliste-aftereffect-2d-3d- | pendente
+- Jagex | England (Cambridge) | vagas de arte hoje: Art Director | fonte da vaga: https://apply.workable.com/jagex-limited/j/830E439990 | pendente
+- Random Studio | France (Paris) | vagas de arte hoje: 3D Artist | fonte da vaga: https://randomstudio.bamboohr.com/careers/45 | pendente
+- Algorithm | Ireland (Dublin) | vagas de arte hoje: Generalist, 3D | fonte da vaga: https://animationireland.com/job/algorithm-hiring-cg-generalist/ | pendente
+- Amuse Animation | Spain (Las Palmas de Gran Canaria) | vagas de arte hoje: Concept Designer | fonte da vaga: https://amuseanimation.bamboohr.com/careers/180 | pendente
+- Aristocrat | Bulgaria (Sofia) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Anim | pendente
+- Awaken Realms | Poland (Wrocław) | vagas de arte hoje: Character Artist | fonte da vaga: https://www.skillshot.pl/jobs/39589-3d-character-artist-at-awaken-realms | pendente
+- Cast Iron Games | England (Wakefield) | vagas de arte hoje: 3D Artist | fonte da vaga: https://careers.castirongames.com/jobs/7154430-lead-3d-artist | pendente
+- Coffee Stain Studios | Sweden (Stockholm) | vagas de arte hoje: Art Director | fonte da vaga: https://jobs.coffeestain.com/jobs/8083591-art-director-and-art-lead | pendente
+- DLVR | United States (New York City) | vagas de arte hoje: 3D Artist | fonte da vaga: https://jobs.gusto.com/postings/dlvr-3d-artist-68896d07-c740-4488-83bc-8bbbd5fcfffc | pendente
+- Dark Alley Games | England (London) | vagas de arte hoje: Art Director | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7500606073272221696/ | pendente
+- Digital Eclipse | United States (Emeryville) | vagas de arte hoje: Concept Designer | fonte da vaga: https://job-boards.greenhouse.io/digitaleclipse/jobs/5114920008 | pendente
+- Double Eleven | England (Middlesbrough) | vagas de arte hoje: 3D Artist | fonte da vaga: https://apply.workable.com/double-eleven/j/5F3A0FF923/ | pendente
+- Evil Empire | France (Bordeaux) | vagas de arte hoje: 3D Artist | fonte da vaga: https://emploi.afjv.com/emploi-jeux-video/EINF1697-29013 | pendente
+- GRIP Studios | Czech Republic (Prague) | vagas de arte hoje: Concept Artist | fonte da vaga: https://grip-studios.com/hiring.php | pendente
+- Golden Hind Games | Poland (Warsaw) | vagas de arte hoje: Hard Surface Artist | fonte da vaga: https://www.skillshot.pl/jobs/39494-3d-hard-surface-artist-modularne-statki-mid-poly-a | pendente
+- Goodname Studio | Lithuania (Vilnius) | vagas de arte hoje: Concept Artist | fonte da vaga: https://goodname.lt/jobs/ | pendente
+- GrandSon Creative | United States (Culver City) | vagas de arte hoje: Art Director | fonte da vaga: https://grandsonla.com/jobs/art-director-print-sr-art-director/ | pendente
+- Grumpyface Studios | United States (Tempe) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/jobs/view/4441749168/ | pendente
+- Highdive | Canada (Montreal) | vagas de arte hoje: Modeler | fonte da vaga: https://job-boards.greenhouse.io/highdive/jobs/5097897007 | pendente
+- Illumination Studios Paris | France (Paris) | vagas de arte hoje: Surfacing Artist | fonte da vaga: https://jobs.lever.co/illumination/88ab5915-96db-448b-98d7-7d3385c5f0bf | pendente
+- Infinity Ward | United States (Woodland Hills) | vagas de arte hoje: Modeler | DESCARTADO em 05/09: a Model Art Lead de Barcelona nao existe mais no locatario Workday da Xbox Gaming
+- KOTOC | Spain (Barcelona) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7485301871134425088/ | pendente
+- Knifewing Entertainment | United States (Gallup) | vagas de arte hoje: Character Designer | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7482340253815701504/ | pendente
+- Level Infinite | England (London) | vagas de arte hoje: 3D Artist | fonte da vaga: https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/United-Kingdom-London/XMLNAME-3D-Artist-Intern | pendente
+- Lightfox Games | Canada (Vancouver) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.lightfoxgames.com/careers/?id=lead-3d-artist-seattle | pendente
+- Lumiere | Poland (Warsaw) | vagas de arte hoje: Asset Artist | fonte da vaga: https://www.linkedin.com/jobs/view/4446665252 | pendente
+- Magic Spark | Estonia (Tallinn) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://magicspark.studio/careers/art-lead | pendente
+- Marks | Canada (Toronto) | vagas de arte hoje: Art Director | fonte da vaga: https://recruiting2.ultipro.com/SGS1000SGSI/JobBoard/2e113479-4a4e-4531-a2af-518ed0717655/OpportunityDetail?op | pendente
+- Neowiz | South Korea (Seongnam) | vagas de arte hoje: Modeler | fonte da vaga: https://jobs.lever.co/neowiz/5ad83a87-38c2-4441-81da-5ab73e3217fc | pendente
+- One Man Studio | England (Horsham) | vagas de arte hoje: Character Artist | DESCARTADO em 05/09: o quadro do BambooHR deles esta vazio, a Character Artist saiu do ar
+- Pipeworks Studios | United States (Eugene) | vagas de arte hoje: Art Director | fonte da vaga: https://pipeworks.pinpointhq.com/en/postings/c1f70e26-0887-4255-bee6-bd8458fc73eb | pendente
+- Pretty Cool Games | England (Knottingley) | vagas de arte hoje: Concept Artist | fonte da vaga: https://www.prettycoolgames.co.uk/concept-artist | pendente
+- Sadfish | Canada (sem cidade) | vagas de arte hoje: Concept Artist | fonte da vaga: https://sadfish-inc.breezy.hr/p/07b87a7d3e79-2d-character-concept-artist | pendente
+- Sixteen Tons Entertainment | Germany (Berlin) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://www.linkedin.com/jobs/view/4454035331/ | pendente
+- TangleMindGames | United States (Seattle) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://tanglemindgames.com/job.html?slug=art-lead | pendente
+- The Chinese Room | England (Brighton) | vagas de arte hoje: Concept/UI Artist | fonte da vaga: https://www.thechineseroom.co.uk/vacancies | pendente
+- The Sweetspot | Germany (Hamburg) | vagas de arte hoje: Art Director | fonte da vaga: https://thesweetspot.co/info | pendente
+- Topdeck Productions | England (London) | vagas de arte hoje: Art Director | fonte da vaga: https://www.workwithindies.com/careers/topdeck-productions-art-director | pendente
+- Unorthodox | England (London) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7483881406809694208/ | pendente
+- Zoic Studios | Canada (Vancouver) | vagas de arte hoje: 3D Artist | fonte da vaga: https://zoicstudios.applytojob.com/apply/iHm7iyOWjp/BC-Senior-Hard-Surface-ModelTextureLook-Dev-Artist | pendente
+- le truc | Switzerland (Geneva) | vagas de arte hoje: Modeler | fonte da vaga: https://www.letruc.studio/jobs | pendente
 
-| Able & Baker | Espanha | ableandbakerstudios.com | descartado (duplicado; já contatado no lote 3) |
-| Like A Photon Creative | Austrália/Irlanda | likeaphoton.com | portal (sem email público) |
-| OLM Digital | Japão | olm.co.jp | portal (só formulário de recrutamento) |
-| Shirogumi | Japão | shirogumi.com | aprovado (info@shirogumi.co.jp via diretório oficial JFDB) |
-| Mukpuddy Animation | Nova Zelândia | mukpuddy.com | descartado (2D puro) |
-| Uniko Estudio | Espanha | uniko.com.es | descartado (produtora audiovisual/2D; fora do foco) |
-| PFX | Tchéquia | pfx.tv | aprovado |
-| GoldBee | Tchéquia | goldbee.cz | descartado (homônimo: marca de roupa/distribuidora; não é estúdio de produção) |
+## Os outros 254 estúdios novos, sem vaga de arte hoje
 
-| Cheeky Little Media | Austrália | cheekylittle.com.au | aprovado |
-| nWave Studios | Bélgica | nwave.com | aprovado |
-| Fabrique d'Images | Luxemburgo | fabrique-d-images.com | aprovado |
-| MIAM! animation | França | miam-animation.com | aprovado |
-| Marza Animation Planet | Japão | marza.com | já estava em portal_only (formulário oficial) |
-| Dwarf Animation Studio | França | dwarfanimation.com | já estava em portal_only |
-| Supamonks | França | supamonks.com | já estava em portal_only |
-| ICON Creative Studio | Canadá | iconcreativestudio.com | portal (só ATS) |
-| Orange | Japão | orange-cg.com | portal (sem email público) |
-| Digital Frontier | Japão | dfx.co.jp | portal (sem email público) |
-| Locus / Sidus Animation | Coreia do Sul | locusanimation.com | portal (sem email público) |
-| L'Atelier Animation | Canadá | latelieranimation.com | portal (Cinesite; só ATS) |
-| Arx Anima | Áustria | arxanima.com | aprovado (talent@arxanima.com publicado na página oficial arxanima.com/career em 03/09, sob o rótulo Applications, ao lado de um convite explícito a candidatura espontânea; rascunho criado no lote 19) |
-| Pixel Zoo | Austrália | pixelzoo.com.au | aprovado (jobs@pixelzoo.com.au publicado na página oficial de carreiras em 03/09, com o pedido explícito de escrever e registrar interesse quando nenhuma vaga listada serve; rascunho criado no lote 19) |
-| Red Star 3D (Red Star Studio) | Reino Unido | redstar3d.com | aprovado (hello@redstar3D.com publicado na própria página de vagas redstar3d.com/jobs em 03/09; nenhuma vaga listada hoje; rascunho criado no lote 19) |
-| Baobab Studios | EUA | baobabstudios.com | portal (sem email público; baobabstudios.com/careers responde 404 em 03/09) |
-| Nørlum | Dinamarca | noerlum.com | descartado (foco 2D) |
-| Big Jump Entertainment | Canadá | bigjumpent.com | descartado (2D híbrido; fora do foco) |
-| Squarefish | Bélgica | squarefish.eu | descartado (motion design) |
-| Island of Misfits / IoM | Canadá | islandofmisfits? | descartado (sem email verificado; transição pós-DHX) |
-| Woodblock | Alemanha | woodblock.tv | descartado (duplicado; já contatado) |
-| Studio Soi | Alemanha | studiosoi.de | descartado (duplicado; já contatado) |
-| Walking The Dog | Bélgica | walkingthedog.be | descartado (duplicado; já contatado) |
-| Unit Image | França | unit-image.fr | descartado (duplicado; já contatado) |
-| Steamroller Studios | EUA | steamrollerstudios.com | descartado (duplicado; já contatado) |
-| Rainbow CGI | Itália | rbw-cgi.it | descartado (duplicado; já contatado) |
-| Hampa Studio | Espanha | hampastudio.com | descartado (duplicado; já contatado) |
+Entram como reserva de prospecção: são casas dentro do escopo que a campanha nunca
+contatou e que estavam contratando nos últimos 75 dias, só que em outra disciplina.
+Valem carta fria quando a fila de cima acabar.
 
-| Plastic Wax | Austrália | plasticwax.com | aprovado |
-| La Station Animation | França | lastationanimation.com | aprovado |
-| Mac Guff | França | macguff.com | aprovado |
-| Akkord Film | Alemanha | akkord.film | aprovado |
-| Dexter Studios | Coreia do Sul | dexterstudios.com | aprovado |
-| DreamWall | Bélgica | dreamwall.be | aprovado |
-| IBRIDO Studio | Itália | ibridostudio.com | aprovado |
-| Studio 100 Animation | França | studio100animation.com | aprovado (promovido do portal_only; email na página oficial) |
-| MOFAC | Coreia do Sul | mofac.com | aprovado |
-| ZAG Studios | França | zag.com | portal (sem email público) |
-| Graphinica | Japão | graphinica.com | portal (sem email público) |
-| Anima Inc. | Japão | animainc.jp | portal (sem email público) |
-| Sanzigen | Japão | sanzigen.co.jp | portal (sem email público) |
-| Mighty Nice | Austrália | mightynice.com.au | aprovado (careers@mightynice.com.au publicado na página oficial Connect em 03/09; rascunho criado no lote 19) |
-| Copenhagen Bombay | Dinamarca | copenhagenbombay.com | descartado (faliu em 2023) |
-| Duncan Studio | EUA | duncanstudio.com | descartado (foco 2D) |
-| Magic Light Pictures | Reino Unido | magiclightpictures.com | descartado (produtora; anima via estúdios parceiros) |
-| GO-N Productions | França | go-n.fr | descartado (duplicado; já contatado) |
-| Ánima Kitchent | Espanha | animakitchent.com | descartado (duplicado; já contatado) |
-| Kavaleer Productions | Irlanda | kavaleer.com | descartado (duplicado; já contatado) |
-| Piranha Bar | Irlanda | piranhabar.ie | descartado (duplicado; já contatado) |
-
-| Moon Studios | Áustria (remoto) | moongamestudios.com | aprovado |
-| QLOC | Polônia | q-loc.com | aprovado |
-| Ars Thanea | Polônia | arsthanea.com | aprovado |
-| Polyarc | EUA | polyarcgames.com | aprovado |
-| Gimpville | Noruega | gimpville.no | aprovado |
-| Ankama | França | ankama.com | portal (só portal de recrutamento) |
-| Squanch Games | EUA | squanchgames.com | portal (só ATS) |
-| SYBO | Dinamarca | sybogames.com | portal (só Teamtailor) |
-| Rovio | Finlândia | rovio.com | portal (só careers) |
-| Behaviour Interactive | Canadá | bhvr.com | portal (só careers) |
-| Metacore | Finlândia | metacoregames.com | portal (só Greenhouse) |
-| Supercell | Finlândia | supercell.com | portal (só careers) |
-| Volta | Canadá | volta.ca | portal (Keywords; sem email público) |
-| Amber | Romênia | amberstudio.com | portal (só formulário) |
-| Klang Games | Alemanha | klang-games.com | aprovado (recruitment@klang-games.com publicado na página oficial de carreiras em 03/09, pedindo currículo para posições futuras; rascunho criado no lote 19) |
-| Studio Rakete | Alemanha | studiorakete.de | descartado (duplicado; a página studiorakete.de/job publica jobs2026@studiorakete.de para Initiativbewerbung, mas esse mesmo endereço já recebeu carta em 30/08; linha desta fila estava desatualizada) |
-| RISE Visual Effects Studios | Alemanha | risefx.com | portal (só portal de vagas) |
-| ToonBox Entertainment | Canadá | toonboxent.com | descartado (faliu em 2019) |
-| LAVAlabs Moving Images | Alemanha | lavalabs.de | descartado (email não verificável; domínio ambíguo) |
-| Ember Lab | EUA | emberlab.com | descartado (duplicado; já contatado) |
-| Airship Syndicate | EUA | airshipsyndicate.com | descartado (duplicado; já contatado) |
-
-| Keos Masons | Canadá | keosmasons.com | aprovado |
-| Sola Digital Arts | Japão | sola-digital.com | portal (sem email público) |
-| Kamikaze Douga | Japão | kamikazedouga.co.jp | portal (sem email público) |
-| Coatsink | Reino Unido | coatsink.com | portal (sem email geral público) |
-| Atomhawk | Reino Unido | atomhawk.com | descartado (foco concept/2D) |
-| Daily Madness Productions | Irlanda | dailymadness.tv | descartado (sem email verificado; foco serviço 2D) |
-| Puppetworks | Hungria | puppetworks.hu | descartado (duplicado; já contatado) |
-| Nexus Studios | Reino Unido | nexusstudios.com | descartado (duplicado; já contatado) |
-
-| Watch Next Media | França | watchnextmedia.com | aprovado |
-| Method Animation / Mediawan | França | mediawankidsandfamily.com | portal (sem email público) |
-
-| Maga Animation Studio | Itália | maga-animation.com | aprovado |
-| Caribara Animation | França | caribara.com | descartado (2D puro) |
-| Studio Hari | França | hari-studios.com | portal (sem email público; Grizzy é CG) |
-| Gaumont Animation | França | gaumont.com | portal (só portal corporativo) |
-
-| Illogic | Itália | illogic.xyz | aprovado |
-| Snowball Studios | Israel/Canadá/UK | snowballvfx.com | descartado (sede fora do escopo; sem email público) |
-
-| Oasis Animation | Canadá | oasisanimation.com | descartado (2D puro; maior estúdio 2D do Quebec) |
-| Mokko Studio | Canadá | mokkostudio.com | descartado (encerrado em 2017) |
-
-REGRA DE ESCOPO (26/08, pedido do Vini): focar América do Norte, Europa, Reino Unido/Irlanda, Nórdicos, Oceania e Ásia desenvolvida (Japão, Coreia, Singapura). Evitar Índia e demais mercados emergentes. Exceção brasileira única: Estúdio Pé Grande (já contatado).
-Twin Swans | Reino Unido | twinswans.com | portal (sem email publico; vaga de character rechecada em 31/08 e o agregador agora mostra zero vagas abertas)
-Crows Crows Crows | Holanda | crowscrowscrows.com | aprovado (email enviado em 31/08 para hello@crowscrowscrows.com)
-Running With Scissors | EUA | runningwithscissors.com | portal (a pagina de vagas diz que nao ha posicoes abertas e os emails aparecem mascarados nas buscas; sem endereco verificavel)
-Asterman | Lituania (Vilnius) | asterman.org | aprovado (office@asterman.org confirmado na pagina de contatos; rascunho criado em 31/08)
-SunStrike Studios | Chipre | sunstrikestudios.com | descartado (duplicado; ja contatado em 26/08 por job@sunstrikestudios.com)
-Wildlight Entertainment | EUA (remote-first) | wildlight.com | portal (sem email publico; candidatura so pelo Lever jobs.lever.co/wildlight; empregam apenas nos EUA e Canada)
-thatgamecompany | EUA (remoto) | thatgamecompany.com | APLICADO 31/08 (3D Character Artist Mid-Senior, vaga confirmada na fonte oficial)
-Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (sem email publico; so a pagina giantsparrow.com/jobs)
-
-## Estrategia de porta de entrada (regra do Vini, 31/08)
-Em estudio com bom encaixe mas sem vaga de character aberta, vale registrar vaga de OUTRA funcao (production, coordination, generalista) como "porta de entrada", prioridade baixa. Preferir sempre a porta General Application quando existir. Em campo de texto livre o Vini declara na primeira linha que e character artist e vis dev e pede encaminhamento para quem lidera character art.
-Hologram Monster | Finlandia (Tampere) | hologram-monster.com | aprovado (info@hologram-monster.com confirmado; rascunho criado em 01/09)
-Sagatoon | Noruega (Hamar) | sagatoon.no | descartado (produtora de longas em captacao, nao estudio com time interno: Ludolf at Anger Academy, EUR 8,5 mi, esta em negociacao com a Lightbox, que ja esta na campanha; site oficial aberto em 02/09 traz so post@sagatoon.com)
-Fenomen Studios | Noruega | fenomen.no | descartado (site aberto em 02/09: content house de TV, documentario, podcast e eventos; nao e estudio de animacao; email post@fenomen.no)
-Cakefish (Dreamthorn) | Noruega / remoto | dreamthorn.com | aprovado (positions.md aberto em 02/09: Principal Character Artist remota, contrato de longo prazo full-time + participacao nos lucros, candidatura por join@dreamthorn.com direto ao studio lead; rascunho criado no lote 15)
-Qudical | remoto (global) | qudical.com | descartado (indie de estreia, horror retro; anuncio de character artist no workwithindies sem formato de contrato nem email; sem sinal de vaga efetiva)
-Mainframe Industries | Finlandia/Suecia (Pax Dei) | themainframe.com | portal (anuncio de Character Artist remoto no remotegamejobs vem de fevereiro de 2024 nas fontes datadas; sem email publico; candidatura so pela pagina de carreiras; nao confundir com a Mainframe Studios do Canada)
-
-## Bounces 02/09
-- Alien Studio | jobs@alien.sk | buscar outro endereço
-- Vile Monarch | jobs@vilemonarch.com | buscar outro endereço
-- Star Stable Entertainment | contact@starstable.com | buscar outro endereço
-- Might and Delight | jobs@mightanddelight.com | buscar outro endereço
-- Sword and Wand | careers@swordandwand.com | buscar outro endereço
-- Luma Pictures | recruiting@lumapictures.com | buscar outro endereço
-- Infinigon Games | info@infinigongames.com | buscar outro endereço
-- Big Bad Wolf | jobs@bigbadwolf-studio.com | buscar outro endereço
-- Infinite Studios | work@infinitestudios.com.sg | buscar outro endereço
-
-## Rodada 2 de 02/09 (navegador)
-
-67 aprovados foram direto para alvos.csv (lote 17). Continuam bloqueados pelo proxy (502) e valem terceira tentativa: Jellyfish, Glassworks, roll7, Melusine, Ellipse, Fishing Cactus, Luxx Studios, Rabcat, Toadman, Chimera Entertainment, The Line Animation, Cutting Edge, Digital Idea, Redrover, Studio Animal, Pukeko Pictures, Solid VFX, Bardel, Guru Studio, Bluepoint, Certain Affinity, Petroglyph, Wonderstorm, Proletariat, Ascendant, Anchor Point, Smoke and Mirrors, Nomad CGI, Ghost Ship VFX. RISE FX e Haymaker VFX (Alemanha) só aceitam quem já tem direito de trabalho na UE e ficaram em portal_only.
-
-## Rodada de vagas de 02/09 (noite): nomes que a varredura levantou
-
-Sem prospecção de nomes novos nesta rodada, a fila continua seca. Dois nomes apareceram pela varredura de vagas e valem entrar na fila quando ela reabrir:
-
-- Digital Extremes | Canadá (London, Ontário) | dona do Warframe, ~500 pessoas, independente | Greenhouse oficial em job-boards.greenhouse.io/digitalextremes; vaga de Concept Artist aberta em 02/09 e registrada no painel. Nenhum email público encontrado ainda; a rota é o ATS.
-- Escape Velocity Entertainment | remoto (América do Norte, Canadá e Europa) | estúdio 100% remoto com publisher comprometido, contrata na Europa sem exigir residência específica | Workable oficial em apply.workable.com/escape-velocity-entertainment-inc; em 02/09 as 8 vagas abertas são todas de design e engenharia, nenhuma de arte, e as vagas de arte que agregadores mostram já expiraram. Monitorar o board.
-
-Checados e descartados nesta rodada por não terem endereço alternativo publicado: Keos Masons (o site inteiro só publica info@, que já recebeu email em 28/08). Airborn Studios, Art Bully, Steamroller, Puppetworks e Starloop ficaram de fora da segunda via porque já tinham reenvio ou follow-up na thread.
-
-## Rodada de 03/09 (prospecção): a fila de nomes novos está seca
-
-Nenhum item ficou como "pendente" nesta fila. Quatro buscas na web e uma varredura direta pelas APIs oficiais de Greenhouse (Riot, Epic, Sony global, Cloud Chamber, Digital Extremes, Insomniac, Swaybox, Mob), Lever (Behaviour, Avalanche, Skydance, Larian, Blackbird, Kabam, SkyBox, Wildlight, Bento Box), Workable (Rebellion, Lighthouse, Escape Velocity, Nexus, PikPok, Streamline) e Ashby não produziram um único estúdio novo: tudo voltou duplicado. Por isso a rodada foi feita reabrindo os "portal_only" fortes, e é dali que saíram os seis rascunhos do lote 19.
-
-Reabertos e promovidos a aprovado: Arx Anima, Pixel Zoo, Mighty Nice, Red Star 3D e Klang Games (linhas acima atualizadas), mais a terceira via da Fluffy Dog.
-
-Reabertos e mantidos como portal, com o motivo agora verificado e não suposto:
-| Giant Sparrow | EUA (remoto) | giantsparrow.com | portal (a página oficial de vagas abriu em 03/09: o bloco com 3D Character Artist e Concept Artist freelance está comentado no código, ou seja, desativado; o que está vivo são funções futuras de programação e design para o fim de 2026, e nenhum email é publicado) |
-| Nexus Studios | Reino Unido | nexusstudios.com | portal (joinus e careers dão 404, mas o Workable oficial abriu em 03/09 e a General Application de Londres está aberta em apply.workable.com/j/4F41AEB27C; essa é a rota da casa) |
-| Volta | Canadá | volta.ca | portal (página de carreiras no ar em 03/09 com Available Jobs e Open application, sem email publicado) |
-| Amber | Romênia | amberstudio.com | portal (página de carreiras no ar em 03/09, só formulário, sem email publicado) |
-| ZAG Studios | França | zag.com | portal (zag.com responde apenas "Coming soon" em 03/09 e zag.com/careers dá 404; sem rota oficial) |
-| Coatsink | Reino Unido | coatsink.com | portal (o board deles roda em coatsink.careers.haileyhr.app, host bloqueado pelo proxy da automação; sem email público) |
-| Twin Swans | Reino Unido | twinswans.com | portal (o board roda em twinswans.homerun.co, host bloqueado pelo proxy; sem email público) |
+10:10 Games, 22DOGS, 314 Arts, Absurd Ventures, Adam's Animation Academy, Aesir Interactive, Alane Adams Studios, Allstory Pictures, Apparent, Arrowhead Game Studios, Art&Graft, Articy Software, Aston Martin F1 Team, Astrid Entertainment, Atlantis Animation, Avantis Education, BANDAI NAMCO Europe, Baleuko, Barnstorm Visual Effects, Basic Fun!, Bearded Kitten, Beenox, Believer Entertainment, Benuts, Black Shamrock, Brain Jar Games, Broadwick Studio, BulletFarm, CLOSER, Cahoots Studios, CarouselStudio, CarpeDiem, Cat Daddy, Chess.com, Chrome Productions, Cinnamon, CipSoft, Coal Car Studio, Condé Nast, Coop Touski Animation, Couch Heroes, Crafty Apes, Creative Assembly, Critical Path Games, Crystal Dragon Interactive, Cybernetic Walrus, DECK 13 Interactive, Dambuster Studios, Dark Shadow VFX, Demiurge Studios, Distillery VFX, EA Create, El Guiri Studios, Elephant Goldfish, Elsewhere Entertainment, Embark Studios, Entain, Eyeline, FLY MOUSTACHE, Fathom VFX, Fellow Traveller, Fenris Creations, Final Key Interactive, Finitude, Flow Postproduction, Fool's Theory, Fusebox Games, FutuRats, Galaxy Grove, GameDuell, Gearbox Entertainment Company, Gears for Breakfast, Genius, Ghost Story Games, Gimmick Studio, Gismart, Goalhanger, Goliath, Good Karma Entertainment, Goodgame Studios, Grimlore Games, Gunpowder Tech, Halon, Happy Flamingos, Hardsuit Labs, Headland Archaeology, Here Now Films, High Moon Studios, Hooligan Animation, HundredStar Games, Hyper Luminal Games, Hypixel Studios, IGG Canada, IMPRNT STUDIOS, Imagic TV, Imaginarium Studios, Immersive Octopus, Inferno Studios, Inflexion Games, Ink and Light, Ironbelly Studios, KERO Animation, Keen Software House, Kiagu Studios, Koffeecup, LEGO Digital Play, LIMESTONE MEDIA & ENTERTAINMENT, La Cabane Productions, Lanning Animation, Last Arrow Games, Legendary Entertainment, Light & Wonder, Lightcatcher Media, Lightspeed Studios, Lionsgate, Little Zoo Studio, Los York, Lucid Games, Ludios, MIghty Canvas, Madbox, Magic Beans Studios, Marmalade Game Studio, Maya, Blender, 3ds Max, Mighty Yeti Studios, MikeTeevee, Minetta Interactive, Mini Pepper Games, Miniclip, Minimin, Miyu Productions, MobilityWare, Molinare, Moon Active, Mr. Wolf, Muffin Games, Mythwright, NFB, NOOW, NaturalMotion, Nethertales LLC, New Moon Production, Newscape Studios, Nixxes, Nori Productions, OOOLALA, Ocellus Studio, One of Us, PUBG Seattle, Panna Cotta Software, Panot Studio, Payload Studios, Picture Shop, Pixel Toys, Playcademy, Playdemic, Playrix, Plimsoll, Pocket Sized Hands, Primary Visual Effects, Pure Imagination Studios, Qloud Games, Rabbit's Foot Studios, Raven Software, Razorhead Entertainment, Reality, Rebel Wolves, Red Barrels, Red Hook Studios, Red Kite Games, Redly Games, Reflector Entertainment, Residence Pictures, Ricochet TV Production, Riyo Games, Roarty Digital Inc, Rotor Studios, Rouge Studios, SHARKBYTE, Saber Interactive Porto, Sad Owl Studios, Scholar, Second Star Games, Secret Mode, Seismic Squirrel, Sharkmob, Shifty Eye, Sidekick Publishing, Skybound Entertainment, Skymap Games, Skywalker Sound Development Group, Sledgehammer Games, Snap Finger Click, Socialpoint, Softgames, Soul Assembly, Spellwork, Spinny Hat Studios, Sportradar, Stencil VR, Stokes Twins, Stormteller Games, Striking Distance Studios, Studio MDHR, Super Spline Studios, SuperPlay, Swift Games, Tabooma, Take-Two Interactive, Target Creative, The Charactershop, The Creative Store, The Embassy, The Kobold Collective, The Three Thousands, The Vigilante Group, Thea Energy, Third Kind Games, TigerRoll Studios, Titanium Clad Studios, Torn Banner Studios, Touché Videoagentur, Treehouse, Treehouse Ninjas, Treyarch, Triband, Tripledot Studios, Turnip & Duck, Twin Harbour Interactive, UFX Studios, Unfold Games, Uni Dreams, University of Hawaii at Manoa, Unknown Studio (LinkedIn Lead), Unknown Worlds Entertainment, Uppercut, Vertpaint Studios, Viridian, Visualogie, Voodoo, Wanderlust Videos, West Pier Studio, Whisper, Wickworks, Windy Games, Wolcen Studio, Wooster Games, Wylie Co., ZeptoLab, d3t, three bohemians, tobspr Games, ustwo, weltenbauer
