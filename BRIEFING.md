@@ -48,6 +48,24 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
     enviar deve sair para a fila dele com esta instrução, e não mais só com o dossiê de
     copiar e colar.
 
+18. **Antes de aplicar, conferir requisição e não id de URL (erro meu em 05/09).** A varredura
+    dos grandes tratou como nova a `7888174003` do Greenhouse da 2K, Lead Character Artist em
+    Novato, porque esse número não existia em lugar nenhum do painel, e mandou uma segunda
+    candidatura para uma vaga **já recusada em 02/09**. O que enganou foi o registro antigo, que
+    apontava para o site institucional e nunca guardou o id do ATS. Vale para toda rodada: uma
+    requisição pode ter **vários anúncios de local**, cada um com id de URL próprio e todos com o
+    mesmo `internal_job_id` (aqui, `5834551003` em Novato e Montréal). A checagem é **título mais
+    local mais `internal_job_id`**, nunca só o id da URL, e toda vaga registrada tem que guardar o
+    **link do ATS**, não o do site institucional.
+19. **Código de segurança do Greenhouse: a espera é da sessão, não da caixa (05/09).** O Greenhouse
+    passou a exigir código por email antes de aceitar o envio. A automação espera seis minutos com
+    o navegador aberto e o formulário já preenchido; se ninguém entregar o código nesse prazo, todo
+    o preenchimento se perde e o código velho **não serve na tentativa seguinte**, porque cada
+    tentativa gera o seu. A ordem certa é: rodar a candidatura em segundo plano, esperar o arquivo
+    `needcode_<slug>.txt` que ela cria ao pedir, ler no Gmail o código **mais recente pelo horário**
+    e escrever `code_<slug>.txt` com a sessão ainda viva. Rodar a candidatura e ir cuidar de outra
+    coisa perde o envio.
+
 ## Números (31/08)
 - 159 emails em 14 lotes para 154 estúdios; 148 entregues, 6 bounces.
 - 172 estúdios alcançados (148 por email + 24 só por portal).

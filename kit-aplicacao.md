@@ -2,7 +2,9 @@
 
 Respostas prontas para os campos típicos de formulários de carreira.
 Copiar, colar, anexar CV + cover letter (PDFs) e enviar.
-REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês full-time.
+REGRAS: nunca citar o salário da E-Line (NDA); a pretensão é a POLÍTICA NOVA de 04/09, na
+seção de pretensão salarial mais abaixo. A faixa antiga de USD 3.840 por mês e USD 46.000 por
+ano está MORTA e não deve ser escrita em formulário nenhum.
 
 ## Dados básicos
 - Nome: Vini Cavalcanti
@@ -50,10 +52,24 @@ Senior 3D Character Artist with 10+ years across animation and games. Credits in
 ## Softwares
 ZBrush, Maya, Substance Painter, Houdini (grooming), Photoshop, Marmoset, Unreal and Unity (engine integration)
 
-## Pretensão salarial
-- Full-time: My salary expectation is USD 3,840 per month.
+## Pretensão salarial (regra nova do Vini, 04/09; a faixa antiga de USD 46.000 está MORTA)
+A posição é **no mínimo competitivo, na BASE da faixa**. Política completa no fim do BRIEFING.md.
+
+1. **Se o anúncio publica faixa, peça a base dela.** É a regra principal:
+   "Aligned with the posted range for the role, at the lower end."
+2. **Sem faixa publicada, sênior ou lead em estúdio grande:** EUA **USD 100,000** · Canadá
+   **CAD 95,000** · Reino Unido **GBP 50,000** · Europa ocidental **EUR 55,000** · Austrália
+   **AUD 110,000**
+3. **Estúdio pequeno ou médio, ou cargo abaixo de sênior:** EUA **USD 85,000** · Canadá
+   **CAD 80,000** · Reino Unido **GBP 42,000** · Europa **EUR 45,000** · Austrália **AUD 95,000**
+4. **Nunca abaixo do piso legal da ocupação no país**, porque isso inviabiliza o patrocínio
+   de visto (prevailing wage nos EUA, salário vigente do LMIA no Canadá, mínimo do Skilled
+   Worker no Reino Unido).
+5. **Texto para campo livre:** "Open to aligning with your band for the role; as a reference,
+   I'm looking at around <valor>."
+6. **Salário atual da E-Line: NUNCA revelar** (NDA). Resposta fixa: "Confidential under the
+   NDA of my current contract; happy to discuss ranges during the process."
 - Freelance/projeto: For freelance or per-project work I'm flexible on structure; happy to align a number to the scope of the project.
-- Se o campo for anual: USD 46,000 per year (equivalente aproximado).
 
 ## Disponibilidade / notice period
 I can start after a standard transition with my current studio; I'm glad to align dates in the process. (Ajustar se quiser prazo específico.)

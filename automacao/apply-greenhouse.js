@@ -2,7 +2,13 @@
 const {chromium}=require('playwright'); const fs=require('fs');
 const [url,slug,ansFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile));
-const BASE={first:'Vini',last:'Cavalcanti',email:'contact@vinicavalcanti.art',phone:'+55 81 97306 2286',country:'Brazil',city:'Olinda, Pernambuco, Brazil',
+// O telefone NAO fica escrito aqui: este repositorio e publico. Ele vem da variavel de
+// ambiente VINI_TEL, e o valor esta no documento privado do Drive "CAMPANHA - dados
+// pessoais dos formularios". Sem ela, o script para antes de abrir o navegador em vez de
+// mandar formulario sem telefone.
+const TEL=process.env.VINI_TEL;
+if(!TEL){ console.error('[erro] falta a variavel de ambiente VINI_TEL com o telefone dele'); process.exit(1); }
+const BASE={first:'Vini',last:'Cavalcanti',email:'contact@vinicavalcanti.art',phone:TEL,country:'Brazil',city:'Olinda, Pernambuco, Brazil',
  resume:'/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/apply/Vini_Cavalcanti_CV.pdf',
  cover:'/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/apply/Vini_Cavalcanti_Cover_Letter.pdf'};
 const log=(...a)=>console.log(`[${slug}]`,...a);
