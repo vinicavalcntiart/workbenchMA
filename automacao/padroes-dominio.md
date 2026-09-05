@@ -257,7 +257,11 @@ verdade é o Santa Monica Studio, casa de jogos grande, em escopo e com zero car
 **`nome+inicial@wetafx.co.nz`** na maioria, com uma segunda forma em `inicial+sobrenome`.
 
 `antond@` (Anton Dukhovnikov) e `peterh@` (Peter Hillman) são nome mais inicial;
-`sfinnie@` é inicial mais sobrenome. Todos no log de commits do MaterialX e do OpenImageIO.
+`sfinnie@` é inicial mais sobrenome, e em 05/09 apareceu `navramoussis@` (Nicholas
+Avramoussis), que confirma essa segunda forma. Todos no log de commits do MaterialX, do
+OpenImageIO e do OpenVDB. Curiosidade útil: o mesmo Nick Avramoussis aparece como `nna@dneg.com`
+e como `navramoussis@wetafx.co.nz`, ou seja, mudou de casa, e isso lembra que endereço de log
+de commit envelhece.
 
 **Quantos endereços provam:** 3, mas com duas formas, então a confiança de um endereço
 novo aqui é **média para baixa** e vale tentar as duas.
@@ -272,6 +276,43 @@ apareceram **quatro exceções** que precisam ficar registradas: `jeremys@` (Jer
 nome mais inicial), `blair@` (Blair Zajac, só o primeiro nome), `sam@` (Sam Richards, só o
 primeiro nome) e `hall@` (Brian Hall, só o sobrenome). Ou seja, contas antigas fogem da
 regra, igual à Pixar.
+
+## Ubisoft — provado em 05/09, e abre uma casa grande inteira
+
+**`nome.sobrenome@ubisoft.com`**
+
+| Endereço | Pessoa | Fonte |
+|---|---|---|
+| `anton.brand@ubisoft.com` | Anton Brand | log de commits do OpenVDB / OSL |
+| `brian.mckinnon@ubisoft.com` | Brian McKinnon | idem |
+| `farchad.bidgolirad@ubisoft.com` | Farchad Bidgolirad | idem |
+| `jerome.hubert@ubisoft.com` | Jerome Hubert | idem |
+
+**Quantos endereços provam:** 4, todos na mesma forma, sem exceção vista.
+
+**Por que importa:** a Ubisoft é casa grande dentro do escopo (Massive na Suécia, Montpellier
+na França, Montréal no Canadá), a campanha tem **três candidaturas de portal travadas** lá
+por causa do DataDome do SmartRecruiters, e **nenhuma carta pessoal**. Qualquer nome de arte
+da Ubisoft que apareça daqui em diante nasce com endereço de confiança média.
+
+---
+
+## Animal Logic — nove endereços, duas formas, e uma ressalva que muda tudo
+
+**`nome+inicial@al.com.au`** na maioria, com uma segunda forma em `Nome.Sobrenome@al.com.au`.
+
+Primeira forma: `aloysb@`, `danielh@` (Daniel Heckenberg), `eoinm@`, `ghislainv@` (Ghislain
+Veilleux), `jonc@` (JP Collins), `nickw@` (Nick Wu). Segunda forma: `Steve.Agland@`,
+`Zhicheng.Ye@`, `fabrice.macagno@`. Todos no log de commits do OpenVDB e do OpenTimelineIO.
+
+**Quantos endereços provam:** 9.
+
+**RESSALVA QUE PRECISA SER LIDA ANTES DE USAR.** Em 05/09 a própria página de carreiras da
+Animal Logic diz, com essas palavras, *"Our jobs have now moved netflixanimation.com"*. Ou
+seja, a casa foi absorvida pela Netflix Animation e essas caixas em `al.com.au` podem ser
+legado. Antes de escrever para alguém da Animal Logic, considere que a pessoa provavelmente
+está hoje em `netflix.com`, cujo padrão a campanha já tem provado por mais de trinta
+endereços nas duas formas.
 
 ## Não provados, registrados para não se perder
 
@@ -290,10 +331,14 @@ regra, igual à Pixar.
   incoerência. Grassetti segue **sem via**.
 - **Framestore.** Um endereço real, `kevin.wheatley@framestore.com` (OpenUSD), na forma
   `nome.sobrenome`. Um só não prova. Fica marcado até aparecer o segundo.
-- **DNEG.** Dois endereços reais, `axs@dneg.com` (Alex Schwank) e `mkj@dneg.com` (Mark
-  Boorer), mas eles NÃO seguem formato de nome: são apelidos de três letras que não derivam
-  do nome. Dois endereços aqui **não** viram padrão, e montar endereço de DNEG é impossível
-  por este caminho.
+- **DNEG, com a descrição corrigida em 05/09.** Agora são OITO endereços reais: `axs@`
+  (Alex Schwank), `dan@` (Dan Bailey), `hb@` (Harry Biddle), `mels@`, `mkj@` (Mark Boorer),
+  `mw@` (Matt Warner), `nna@` (Nick Avramoussis) e `rhj@` (Richard Jones). A descrição
+  anterior, de que eram apelidos que não derivam do nome, estava **parcialmente errada**: a
+  maioria é INICIAL DO NOME mais INICIAIS DO SOBRENOME (`hb`, `mw`, `nna`, `rhj`, `axs`).
+  Mesmo assim **não é construível com segurança**, porque `dan@` é primeiro nome puro e
+  `mkj@` não bate com Mark Boorer, e porque duas ou três letras colidem entre pessoas. Serve
+  como reconhecimento, não como construção.
 - **Sony Pictures Animation** é empresa distinta da Sony Pictures Imageworks e **não** usa
   `imageworks.com`. Nenhum endereço real dela foi encontrado. Não reutilize o padrão da
   Imageworks para a Animation.
