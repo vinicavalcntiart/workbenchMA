@@ -280,6 +280,14 @@ regra, igual à Pixar.
   fica marcada como **não provada** até aparecer o segundo. **Varrido de novo em 05/09** nos
   logs completos de MaterialX, OpenColorIO, OpenImageIO e OpenUSD: nenhum segundo endereço
   apareceu. A Epic segue fechada.
+- **Naughty Dog, e a tentação que veio junto com o padrão da Sony.** Em 05/09, ao provar
+  `nome.sobrenome@sony.com`, apareceu a ideia de montar o endereço do Raf Grassetti, que hoje
+  está na Naughty Dog e é dos alvos de arte mais próximos do perfil do Vini. **Recusado.** Um
+  único funcionário de estúdio first party na base `sony.com` (Jeremiah Zanin, do Santa Monica
+  Studio) não prova que a Naughty Dog use esse domínio, e a Naughty Dog tem domínio próprio,
+  `naughtydog.com`, sem nenhum endereço real conhecido. É o mesmo tipo de chute entre divisões
+  que foi recusado para Wendell Dalit no mesmo dia, e aceitar num caso e recusar no outro seria
+  incoerência. Grassetti segue **sem via**.
 - **Framestore.** Um endereço real, `kevin.wheatley@framestore.com` (OpenUSD), na forma
   `nome.sobrenome`. Um só não prova. Fica marcado até aparecer o segundo.
 - **DNEG.** Dois endereços reais, `axs@dneg.com` (Alex Schwank) e `mkj@dneg.com` (Mark
