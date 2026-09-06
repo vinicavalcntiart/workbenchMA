@@ -66,6 +66,39 @@ function cota() {
   return n;
 }
 
+/* DIAGNÓSTICO DA COTA, escrito em 06/09 porque a conta é Workspace PAGO e mesmo assim o
+ * teto lido é de cerca de 100 por dia, e ninguém entendia o motivo.
+ *
+ * A chave é que a cota do Apps Script NÃO segue o domínio nem o plano pago: ela segue a
+ * CONTA QUE EXECUTA O SCRIPT. Se este arquivo mora no Drive de uma conta @gmail.com comum
+ * e só manda COMO contact@vinicavalcanti.art através de um alias de envio, o teto é o da
+ * conta comum, 100 por dia, por mais que o domínio tenha Workspace pago. É a explicação
+ * mais provável e esta função a confirma ou a descarta em uma execução.
+ *
+ * Rode esta função sozinha, no editor, e leia o registro. Ela não envia nada.
+ * COMO LER:
+ *   usuário efetivo termina em @gmail.com  -> é isso. O script roda na conta comum. A
+ *       correção é copiar o script para o Drive da conta do Workspace e rodar de lá.
+ *   usuário efetivo é @vinicavalcanti.art e a cota ainda vem perto de 100 -> não é conta
+ *       errada. Aí sobram duas causas, nesta ordem: assinatura Workspace INDIVIDUAL, que é
+ *       paga mas o Apps Script trata como conta comum; ou Workspace em teste ou recém
+ *       criado, que o Google segura por reputação até o plano firmar.
+ *   cota perto de 1500 -> não há limite nenhum a contornar, e o gargalo é outro.
+ */
+function diagnostico() {
+  Logger.log("Conta que EXECUTA o script (é a dona da cota): " + Session.getEffectiveUser().getEmail());
+  try {
+    Logger.log("Conta ativa na sessão: " + Session.getActiveUser().getEmail());
+  } catch (e) {
+    Logger.log("Conta ativa na sessão: não foi possível ler (" + e + ")");
+  }
+  Logger.log("Cota de envio restante agora: " + MailApp.getRemainingDailyQuota());
+  const aliases = GmailApp.getAliases();
+  Logger.log("Endereços que esta conta pode usar como remetente: " + (aliases.length ? aliases.join(", ") : "nenhum alias, só o endereço principal"));
+  Logger.log("Rascunhos da campanha nesta caixa: " + GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO).length);
+  Logger.log("LEIA: se a conta que executa terminar em @gmail.com, o teto de 100 é dela e o Workspace pago do domínio não conta.");
+}
+
 // Confere, sem enviar nada, se sobrou algum link embrulhado nos rascunhos da campanha.
 function conferirLinks() {
   const rascunhos = GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO);
