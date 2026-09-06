@@ -672,3 +672,48 @@ Within 30 days of an offer. If it helps the schedule, I can start remotely while
 Yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in Madrid. I am not an EU citizen and would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I am a Senior 3D Character Artist with more than 10 years in stylized work, credited on The Wingfeather Saga at Angel Studios and almost five years at E-Line Media taking assets from first sculpt to engine. Modeling is the core of what I do: sculpt and high poly, retopology, UVs, baking, texturing and look development in Maya, ZBrush, Substance Painter and Designer and Houdini. Open to aligning with your band for the role.
 
 **Survey demográfico:** opcional, pode deixar em branco.
+
+## Netflix Animation Studios (Eightfold) — SETE vagas, todas à mão pelo mesmo motivo
+
+**Medido em 06/09 às 21h40, e a medida corrige o registro anterior.** O formulário do Eightfold da Netflix **preenche 100% pela automação**: rodei a Head of Characters em modo seco e o resultado foi `still-empty-required []` e `errors-pre []`, ou seja, nenhum campo obrigatório vazio e nenhum erro. CV e carta anexados, país, estado e código de telefone corretos.
+
+**O que barra é só o envio.** O `POST /api/application/v2/submit` devolve **`400 {"message": "Please try again later"}`** três vezes seguidas, com o reCAPTCHA respondendo 200 antes. É **pontuação de sessão do reCAPTCHA invisível rejeitando IP de datacenter**, não defeito de formulário e não desafio de imagem.
+
+**E vale corrigir uma leitura antiga:** as duas candidaturas Netflix que deram certo (Character Modeling Supervisor em 31/08 e Visual Development Artist Ink em 04/09) foram enviadas **pelo Vini, do navegador dele**. A automação nunca passou por esse portão. Do IP residencial dele passa; do datacenter não passa.
+
+**Portanto: as sete abaixo são candidatura de um minuto cada no seu navegador.** O formulário é o mesmo em todas, muda só o link.
+
+| Vaga | Local | Link |
+|---|---|---|
+| Head of Characters | Vancouver | https://explore.jobs.netflix.net/careers/job/790317384604 |
+| Character Designer - Ink | Los Angeles | https://explore.jobs.netflix.net/careers/job/790317332872 |
+| Head of Character Effects (CFX) | Vancouver | https://explore.jobs.netflix.net/careers/job/790314413902 |
+| Head of Character Effects (CFX) | Sydney | https://explore.jobs.netflix.net/careers/job/790317396721 |
+| Expression of Interest CFX | Vancouver | https://explore.jobs.netflix.net/careers/job/790312834739 |
+| CG Artist Experimental - Ink | Los Angeles | https://explore.jobs.netflix.net/careers/job/790315702145 |
+| CG Experimental Artist | Los Angeles | https://explore.jobs.netflix.net/careers/job/790317300617 |
+
+**Ordem sugerida, do mais seu para o menos:** Head of Characters primeiro, porque é personagem 3D estilizado da modelagem ao CFX e é o estilo exato do portfólio. Depois as duas de Head of CFX, que encostam no grooming em Houdini. Character Designer Ink em seguida. As duas de CG Experimental e a Expression of Interest são porta de entrada.
+
+### Preenchimento, campo a campo
+
+| Campo | Resposta |
+|---|---|
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Additional documents | Vini_Cavalcanti_Cover_Letter.pdf |
+| First name | Vini |
+| Last name | Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone country code | Brazil (+55) |
+| Phone | 81973062286 |
+| City | Olinda |
+| State | Pernambuco |
+| Country | Brazil |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Privacy acknowledgement | marcar |
+
+**Atenção no telefone:** escolha o código do país no seletor ao lado ANTES de digitar o número. Se digitar o número cru num campo internacional, o widget lê o 81 do DDD como código do Japão.
+
+**Se pedir verificação de email por código:** o Eightfold manda um código de 6 dígitos e ele **só vale dentro da mesma sessão do formulário**. Leia o email e volte para a mesma aba, sem fechar.
+
+**Autorização de trabalho, quando perguntarem:** a verdade, ele precisa de patrocínio de visto e não tem autorização no Canadá, nos EUA nem na Austrália.
