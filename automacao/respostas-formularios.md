@@ -977,3 +977,58 @@ deles**, e enquanto durar ninguém consegue se candidatar por ali.
 Vale insistir depois: a Gamecan mantém uma **página inteira de realocação** (`gamecan.eu/relocation/`,
 com time de realocação e pacote de chegada em Pärnu), que é exatamente a prioridade dele. Se o link
 continuar quebrado, a alternativa é `info@gamecan.eu`, que é rota de email e não de formulário.
+
+## Fatia ATS pequeno e formulário hospedado (06/09) — o que ficou À MÃO e por quê
+
+Esta rodada varreu 32 estúdios europeus classificados como ATS pequeno (Traffit, eRecruiter,
+Homerun, Recruitee, Factorial, Oracle, Workday) e formulário hospedado (Notion, Google Forms,
+Tally, Typeform, JotForm, Formspree, MS Forms, HubSpot). O que segue é o que sobrou de parede,
+já mapeado, e uma correção de link que estava errada na rodada anterior.
+
+### Deep Worlds (Genebra, Suíça) — o link certo do formulário de vaga
+
+**CORREÇÃO IMPORTANTE.** O Tally linkado na página inicial deles, `https://tally.so/r/J9l6q7`, é
+**formulário de contato**, não de candidatura: o título é "Contact form" e o próprio texto diz
+"For Job Applications, please use this link". O formulário de candidatura é outro:
+
+**Link certo:** https://tally.so/r/RGRv7d ("Deep Worlds - Job application", 3 páginas)
+
+A primeira pergunta obrigatória é "What position are you applying for?" e as opções são
+**Senior Gameplay programmer**, **Generalist Programmer** e **Other**. Não há vaga de arte
+aberta: a via possível é escolher `Other` e declarar a disciplina. Encaixe fraco, porque a
+contratação anunciada é de programação, mas a porta existe e é espontânea por `Other`.
+Eles oferecem 100% remoto (freelance) ou híbrido presencial em Genebra, à escolha do candidato.
+
+### Rebel Wolves (Varsóvia, Polônia) — eRecruiter, Open Application
+
+**Link:** https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74
+(chega-se por rebel-wolves.com → /en/join-us)
+
+Formulário de candidatura espontânea ("Open Application") do eRecruiter, em inglês. Campos:
+nome, sobrenome, email, telefone, **anexo de CV obrigatório** (`data-test-id="cv-file"`, aceita
+pdf), três caixas de texto livre e uma pilha de consentimentos de RGPD que são caixas
+escondidas atrás de widget próprio — vale a regra das três formas de caixa de marcar do
+BRIEF-JHON, e `isChecked()` tem que voltar `true` antes de dar por marcado.
+**Não há captcha no HTML da página.** O que a rodada anterior mediu foi o POST de upload do CV
+voltando **403 do Cloudflare com "Just a moment"** contra o nosso IP de datacenter. No navegador
+do Vini passa.
+
+### PixelAnt Games (Wrocław, Polônia) — eRecruiter, Future Opportunities
+
+**Link do formulário:** https://form.erecruiter.pl/form/a66fabf884d24c15beb2ec7854531f0a
+**Página que o publica:** https://pixelantgames.com/careers/future-opportunities/
+
+É candidatura espontânea declarada: "Didn't see a role that's the right fit just yet? No
+worries - we'd still love to hear from you". Local: Wrocław ou remoto. Mesmo eRecruiter da
+Rebel Wolves, mesmo campo de CV obrigatório e a mesma parede de 403 no upload.
+
+### Respostas para os três, quando o Vini abrir no navegador dele
+
+Dados básicos do topo deste arquivo. Nos campos livres, o texto é este:
+
+```
+I WANT TO RELOCATE and I am fully open to moving for the role, on site and full time, and I am equally comfortable with remote or hybrid. I am a Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development, LODs and engine integration, plus character grooming in Houdini when hair or fur is part of the design. Credited on The Wingfeather Saga season 1 at Angel Studios, and for almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine as a remote international contractor. As a Senior I review other artists' work and set the asset standard, I teach as founder of my own character art school and I am a master's candidate. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am not an EU citizen and I would need visa sponsorship; my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I'm looking at around EUR 45,000 per year. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+Autorização de trabalho na Polônia e na Suíça: **não tem, precisa de patrocínio**, e isso se
+responde com a verdade. Liderança de equipe: **sim**. Salário atual da E-Line: nunca se revela.
