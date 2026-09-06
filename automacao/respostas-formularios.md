@@ -342,3 +342,30 @@ encontrou até agora. Guardado aqui porque vale reaproveitar em outras casas esp
 - URL personal: https://www.artstation.com/viniciuscavalcanti
 - Pergunta de direito de trabalho (radio, só duas opções): **`No, I need a VISA`**
 - "Are you looking to relocate to Tenerife?" (obrigatória): `Yes. I want to relocate to Tenerife and I am ready to move for the role, on-site and full-time, with the 07:30 to 15:00 shift. I already work daily with a studio in another country and time zone, so moving to where the team is would make the work easier, not harder. I would need work sponsorship, and my academic record (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.`
+
+### GIANTS Software: Open Application (candidatura espontânea, Suíça/Alemanha/Chéquia)
+
+Link: https://jobs.smartrecruiters.com/GIANTSSoftwareGmbH/744000086339075-open-application
+O que trava: ao clicar em **I'm interested** o SmartRecruiters manda para o aplicativo
+`oneclick-ui` e cai o **DataDome**, o mesmo muro das três candidaturas da Ubisoft. Abra no seu
+navegador, que passa.
+
+Eles pedem **currículo e carta de apresentação**. Dados de sempre (nome, email, telefone com
+prefixo BR +55 e o número sem repetir o código), e para os campos livres:
+
+- Cargo pretendido: `3D Character Artist / Character Modeler`
+- Pretensão (Suíça, estúdio médio-grande, sem faixa publicada; a política manda EUR 55.000 para
+  Europa ocidental em casa grande, e a Suíça paga acima disso, então o texto abre a faixa sem
+  fixar número baixo): `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 per year, and I understand Swiss levels differ.`
+- Direito de trabalho: precisa de patrocínio, sempre dito com naturalidade.
+- Texto curto de apresentação, se houver campo:
+
+```
+I'm a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where for almost five years I have taken hero characters from first sculpt to engine as a remote international contractor.
+
+Your careers page describes the Brno office as the core of 3D art, with artists specialised in vehicle and character creation and character animation. Character creation end to end is my daily work: sculpt, retopology, UVs, baking, texturing and engine integration, with topology built for deformation, plus character grooming in Houdini when hair or fur is part of the design.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I would need work sponsorship, and I'm ready to relocate; my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
