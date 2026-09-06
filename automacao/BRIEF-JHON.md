@@ -34,7 +34,11 @@ Se sobrar tempo, ele volta para a fila, não para a prospecção.
    candidaturas da campanha: a Lead Character Artist da Cloud Chamber e a Senior Look Development
    Artist da Sony Pictures Imageworks, as duas com a exigência escrita no anúncio. Vaga de Quebec
    sem exigência de francês continua valendo normalmente.
-2. Dentro disso: **remota antes de presencial**, e **efetiva antes de contrato**.
+2. **REALOCAÇÃO EM PRIMEIRO LUGAR, REMOTO EM SEGUNDO.** Decisão do Vini em 06/09, e ela **inverte**
+   a regra antiga da campanha, de 30/08, que punha vaga remota sempre na frente. Daqui em diante,
+   vaga presencial que o leva para fora do país vale **mais** que vaga remota, porque o objetivo
+   dele é sair, não trabalhar de casa. Vaga remota continua valendo e entra logo atrás.
+   Dentro de cada faixa, **efetiva antes de contrato**.
 3. Dentro disso: personagem, modelagem, texturização, look development e visual development antes
    de qualquer outra disciplina.
 4. Candidatura espontânea e banco de talentos contam e valem envio, porque casa que abre
