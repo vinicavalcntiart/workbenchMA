@@ -863,3 +863,117 @@ I am not an EU citizen and would need work sponsorship. My academic background, 
 
 Portfolio: https://www.artstation.com/viniciuscavalcanti
 ```
+
+## EF Games, Senior 3D Hard Surface And Vehicle Artist (Madri, Espanha) — À MÃO por reCAPTCHA v3
+
+**Link:** https://ef.games/jobs/senior-3d-hard-surface/
+
+**Por que à mão:** formulário Elementor com **reCAPTCHA v3 invisível**
+(`data-type="v3"`, sitekey `6LdHI1cqAAAAAOHNZPOUjdX3nmTiCgSm_Io8_Vtn`). A automação preencheu o
+formulário inteiro em 06/09, conferiu campo a campo por leitura de volta, os dois anexos entraram e
+**nenhum campo obrigatório ficou inválido**. No clique em enviar o `admin-ajax.php` devolveu
+`{"success":false,...,"message":"reCAPTCHA V3 validation failed, suspected as abusive usage"}` e a
+tela mostrou *Invalid form, reCAPTCHA validation failed*. É pontuação de sessão reprovando IP de
+datacenter, igual ao da Netflix: no navegador dele passa. **Nada foi enviado.**
+
+**Por que vale:** é a única vaga ABERTA de modelagem e texturização achada na fatia MOTOR-A. Madri,
+presencial, estúdio novo bancado por uma das maiores casas de multiplayer e esports (o próprio site
+liga para a Steam com `utm_source=kraftonhq_web`). Pede modelar, texturizar e implementar asset em
+Unity, levar concept 2D até asset final com UV, material e bake, e **mentorar outros no
+departamento**, que é exatamente o argumento de senioridade dele.
+
+**Armadilha desta página, medida:** a caixa de aceite da Privacy Policy e a caixa opcional de
+contato futuro têm o **mesmo `id` e o mesmo `name`** (`form-field-field_91ffee6`). `querySelector`
+pega só a primeira. Marque as duas na tela.
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o número dele, no formato internacional com +55 |
+| Upload CV | `Vini_Cavalcanti_CV.pdf` |
+| Additional files | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn profile | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Link to your website/portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Other useful links | `https://vinicavalcanti.com` |
+| How many years of experience... | `10+ years` |
+| Have you worked on AAA video game projects? | **`No`** (é a verdade: Endstar não é AAA e não há credito AAA comprovado; o texto livre explica o alcance) |
+| Proficiency in English | `Fluent (C1-C2)` |
+| Proficiency in Spanish | `Basic (A1-A2)` — **confira com ele**, foi a escolha conservadora por não haver dado na campanha; o requisito da vaga é inglês OU espanhol nativo, e o inglês já cumpre |
+| Where are you based | `Olinda, Pernambuco, Brazil` |
+| Desired salary (gross/year, in €) | `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 gross per year.` |
+| Notice needed | `About one to two months, negotiable.` |
+| Comfortable in a hybrid environment? | `Yes` |
+| As DUAS caixas de aceite | marcar |
+
+**Lista de jogos (campo "Please list all the video games you have contributed to"):**
+
+```
+Endstar (E-Line Media, PC), Senior 3D Character Artist: hero characters from first sculpt to engine, high poly, retopology, UVs, baking, texturing and engine integration. Almost five years, ongoing. The Wingfeather Saga, season 1 (Angel Studios, animated series): character modeling and hand painted texturing. Earlier outsourcing work at PUGA Studios delivering character and asset work for international clients. Full breakdown and images: https://www.artstation.com/viniciuscavalcanti
+```
+
+**Cover letter:**
+
+```
+My discipline is character: modeling, sculpting, texturing and look development. If a character opening comes up at EF Games I would like this application forwarded there. I am applying to the Hard Surface and Vehicle role because building a game asset end to end is the same job for me, and because I want to work in Madrid.
+
+I WANT TO RELOCATE and I am fully open to moving for the role, on site in Madrid and full time. I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized work. For almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration in Unity and Unreal, which is the whole asset rather than one stage of it. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios, and I have an outsourcing background delivering assets for international clients. On hard surface specifically, mechanical and articulated shapes are part of my daily modeling work, and I take 2D concept through to a finished asset with clean topology, UV edit, materials and baked textures.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I am a Senior who reviews other artists' work and sets the asset standard, I teach as the founder of my own character art school, and I am a master's candidate, so mentoring inside a department is already part of what I do.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+## eXiin, candidatura espontânea (Bruxelas, Bélgica) — À MÃO, o envio falhou
+
+**Link:** https://exiin.com/jobs-internships/
+
+**Por que à mão:** Contact Form 7 com **reCAPTCHA v3** (`api.js?render=6LdfPdAUAAAAAPDn1oizGunxc...`).
+A automação preencheu tudo em 06/09 e o clique em Submit devolveu na tela *Failed to send your
+message. Please try later or contact the administrator by another method.* **Nada foi enviado.**
+
+**O que a página diz, e é honesto registrar:** *We don't have any public job openings at the moment.
+However, we are looking to increase our team, but preference is given to people who have been an
+intern with us.* O select de posição só tem `Internship` e `Other`; escolher **Other**. O campo de
+arquivo aceita só `audio/*,video/*,image/*`, então **não dá para anexar o CV em PDF**: vai por link.
+
+Campos: Your Name, Your Email, For which position (**Other**), Link of your work/Portfolio
+(`https://www.artstation.com/viniciuscavalcanti`), Your Bluesky (deixar vazio), Your Message.
+
+```
+Applying for: Artist. Senior 3D Character Artist, character modeling, sculpting, texturing and look development, plus hair and fur grooming in Houdini.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site and school: https://vinicavalcanti.com
+
+Not an internship, a senior application. Your page says you are looking to increase the team, so here I am.
+
+Start: about one to two months from an offer, negotiable.
+Length: permanent, full time.
+English: yes, fluent, IELTS certified. I work every day with a studio in the United States.
+Commute to Brussels: yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in Brussels. I am not an EU citizen and I would need visa sponsorship; an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications make a strong visa case.
+
+10+ years. Season 1 of The Wingfeather Saga at Angel Studios, where I modeled and hand painted characters. Almost five years at E-Line Media on Endstar, hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+Open to aligning with your band for the role; as a reference, around EUR 45,000 gross per year.
+```
+
+## Gamecan (Pärnu, Estônia) — porta QUEBRADA no lado deles, avisar
+
+**Link que a página de carreiras publica:** https://careers.gamecan.eu/connect
+
+O botão *Connect* da página de carreiras aponta para um Teamtailor em domínio próprio que **não
+resolve**: o certificado TLS servido pela Fastly não cobre `careers.gamecan.eu`
+(`is not in the cert's altnames: DNS:x.sni-498-default.ssl.fastly.net`) e o host devolve **421**.
+Confirmado por curl e pelo navegador de verdade em 06/09, e `gamecan.teamtailor.com` devolve 404,
+ou seja, não existe slug alternativo achável. **Não é bloqueio contra nós, é configuração errada
+deles**, e enquanto durar ninguém consegue se candidatar por ali.
+
+Vale insistir depois: a Gamecan mantém uma **página inteira de realocação** (`gamecan.eu/relocation/`,
+com time de realocação e pacote de chegada em Pärnu), que é exatamente a prioridade dele. Se o link
+continuar quebrado, a alternativa é `info@gamecan.eu`, que é rota de email e não de formulário.
