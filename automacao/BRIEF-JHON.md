@@ -211,6 +211,39 @@ recebeu a candidatura é o **email de confirmação**. Além disso, a caixa de e
 **pré-campanha**, de julho e agosto, que os CSVs não têm: antes de aplicar em casa que ele já tocou
 antes de 26/08, busque no Gmail confirmação antiga daquele domínio.
 
+## Completar PERFIL no Connect: seis armadilhas medidas em 06/09, à noite
+
+Perfil pela metade é candidatura que o recrutador abre e vê metade. Estas seis foram medidas
+completando quinze perfis numa rodada só, e **todas mentem em silêncio**.
+
+1. **O magic link tem COTA DIÁRIA, e ela é o gargalo de verdade.** O Teamtailor parece parar de
+   mandar email de sign in depois de **cinco por estúdio por dia**. IOI e Funcom ficaram
+   inacessíveis a noite inteira porque agentes diferentes tinham pedido cinco links cada, em
+   rajada, entre 18h e 20h; os três pedidos seguintes não geraram email nenhum. **Peça UM, use na
+   hora.** Link de duas horas antes já estava morto em dez de onze estúdios; link consumido em
+   menos de cinco minutos funcionou em todos.
+2. **`input[type=date]` não aceita digitação solta.** Digitar `2026-11-06` tecla a tecla no
+   widget gravou **`1106-02-02`** e o log disse ok. Use `fill()` com ISO e releia.
+3. **Multi-escolha com o PAINEL ABERTO não envia.** Na Coffee Stain o item ficou marcado, o
+   `Next` foi clicado, e a página voltou para o mesmo slide com a resposta vazia, sem erro. Feche
+   o painel (clique de novo no botão que o abriu) e só então envie.
+4. **Filtro de escopo tem que valer nos DOIS lugares.** O slide `/connect/questions/locations` e
+   a seção de locais dentro de `/connect/profile/settings` editam o mesmo campo. Limpei Bengaluru,
+   Hong Kong, Amman, Abu Dhabi e Dubai no slide e o Settings, logo depois, remarcou todos.
+5. **Leitor que guarda campo por NOME numa chave só MENTE quando o name se repete.** Com
+   `location_ids[]` e `answer[choices][]` o último sobrescreve os outros e a prova diz que só um
+   ficou marcado. Na Goodbye Kansas isso me fez achar que Londres tinha sumido. Acumule em lista.
+6. **Local fora do escopo vem marcado por padrão e ninguém olha.** Mumbai estava marcado como
+   "onde quero trabalhar" na Goodbye Kansas e na Untold, e a Playa tinha Bengaluru, Hong Kong,
+   Amman, Abu Dhabi e Dubai. Marcar tudo é tão errado quanto deixar em branco.
+
+**O mapa do wizard, que é slide a slide e não formulário único:** `/connect/questions/info` (nome,
+telefone, endereço), `/locations`, `/resume`, `/pitch` e depois `/connect/questions/1..N` numeradas.
+O `redirect_url` escondido de cada slide diz qual é o próximo. Fora do wizard ainda existem
+`/connect/resume` e `/connect/profile/settings`, e é no Settings que ficam **departamento e função**,
+que é o campo que um recrutador já marcou como VERY IMPORTANT nesta campanha. Preenchedor genérico
+de formulário único volta "sem campos" em todos eles.
+
 ## Escopo, que é o mesmo da campanha
 
 América do Norte, Europa incluindo Reino Unido, Irlanda, Nórdicos e União Europeia, Oceania, e na
