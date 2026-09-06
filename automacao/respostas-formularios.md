@@ -409,3 +409,60 @@ existe salário anual para citar. GBP 275 por dia é o equivalente aproximado da
 britânica da sua política de 04/09 para estúdio de porte médio, e vem com a frase de alinhamento
 à banda, que é a que a política manda usar. Se eles publicarem faixa depois, a regra continua
 sendo pedir a base dela.
+
+## BetaDwarf, Unsolicited Application (Copenhague, BambooHR) — à mão por reCAPTCHA
+
+**Link:** https://betadwarfaps.bamboohr.com/careers/28
+
+**Por que à mão:** o formulário termina num reCAPTCHA de caixa de marcar. Todo o resto foi
+mapeado e testado pela automação em 06/09.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, no formato internacional |
+| Address / City / Province / Postal Code | os de sempre |
+| Country | trocar de `Denmark`, que vem preenchido, para `Brazil` |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Desired Pay** (obrigatório) | `Around DKK 520,000 per year. Open to aligning with your band for the role, and the offer would need to meet the Danish work permit salary threshold for sponsorship.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Who referred you | deixar vazio |
+| **What role are you seeking?** (obrigatório) | `Senior 3D Character Artist / Character Modeler: modeling, sculpting, texturing and look development, with Houdini grooming as a supporting skill.` |
+| Consentimento da Privacy Policy | marcar |
+| reCAPTCHA | marcar a caixa |
+
+**Sobre a pretensão, para você saber de onde veio:** a Dinamarca só concede permissão de
+trabalho a não europeu acima de um piso salarial anual, e a sua regra de 04/09 diz que pedir
+abaixo do piso legal não o torna barato, torna impossível de patrocinar. Por isso o número está
+acima do EUR 45.000 da faixa de estúdio médio europeu, e a frase deixa explícito que a oferta
+precisa alcançar o limite do visto.
+
+## Bongfish, Open Application (Graz, Personio) — à mão por uma pergunta só
+
+**Link:** https://bongfish.jobs.personio.com/job/366240
+
+**Por que à mão:** o campo obrigatório *Where did you hear about this position?* só oferece
+Linkedin, Artstation, 80.lv, Work with Indies, Slack, Discord, Startus, Hitmarker e duas opções
+de indicação. **Nenhuma é verdade no nosso caso**, porque a campanha chegou na Bongfish pelo
+diretório de estúdios e pela página de carreiras deles, e eu não invento resposta em formulário.
+O botão de envio fica desabilitado enquanto essa pergunta não for respondida. Escolha a que for
+verdadeira para você.
+
+| Campo | O que escrever |
+|---|---|
+| Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre |
+| Available from | `Negotiable, around two months from an offer` |
+| Location | `Olinda, Pernambuco, Brazil` |
+| Where did you hear about this position? | **você escolhe** |
+| Do you have a work permit for Austria? | `No` |
+| Where would you prefer to work? | `On site in the office (and relocate to Austria)` |
+| What type of employment would you prefer? | `A permanent position - employment contract` |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Other | `Vini_Cavalcanti_Cover_Letter.pdf` |
+
+Não há campo de pretensão salarial nem de mensagem neste formulário.
