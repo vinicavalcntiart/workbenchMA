@@ -530,7 +530,7 @@ design, Groom e Texture**, que são a disciplina dele inteira. Vale a candidatur
 | Contract | `Employee / Freelance` |
 | Name / Surname | `Vini` / `Cavalcanti` |
 | E-mail | `contact@vinicavalcanti.art` |
-| Phone | `+55 81 97306 2286` |
+| Phone | `[TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios]` |
 | Preferred workplace location (marca mais de um) | `Paris`, `Montpellier`, `Las Palmas` e `Remote`. Presencial vem primeiro, seguindo a regra de realocação |
 | Upload your CV | `Vini_Cavalcanti_CV.pdf` |
 | Upload your Portfolio | `Vini_Cavalcanti_Cover_Letter.pdf` |
@@ -555,7 +555,7 @@ fila**, porque o captcha é do BambooHR e não do estúdio: aparece igual na ICO
 | Campo | O que escrever |
 |---|---|
 | First / Last Name | `Vini` / `Cavalcanti` |
-| Email / Phone | `contact@vinicavalcanti.art` / `+55 81 97306 2286` |
+| Email / Phone | `contact@vinicavalcanti.art` / `[TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios]` |
 | Address, City, Province, Postal Code (**obrigatórios**) | saem do doc privado do Drive, **não podem entrar neste repositório** |
 | Country | trocar o `Canada` que já vem preenchido |
 | Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
@@ -655,7 +655,7 @@ igualmente **Yes**.
 | Resume/CV | Vini_Cavalcanti_CV.pdf |
 | Full name | Vini Cavalcanti |
 | Email | contact@vinicavalcanti.art |
-| Phone | +55 81 97306 2286 |
+| Phone | [TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios] |
 | Current location | Olinda, Pernambuco, Brazil |
 | Current company | E-Line Media |
 | LinkedIn URL | https://www.linkedin.com/in/vinicavalcnti/ |
@@ -705,7 +705,7 @@ Yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in M
 | Last name | Cavalcanti |
 | Email | contact@vinicavalcanti.art |
 | Phone country code | Brazil (+55) |
-| Phone | 81973062286 |
+| Phone | [TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios] |
 | City | Olinda |
 | State | Pernambuco |
 | Country | Brazil |
