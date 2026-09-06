@@ -466,3 +466,32 @@ verdadeira para você.
 | Other | `Vini_Cavalcanti_Cover_Letter.pdf` |
 
 Não há campo de pretensão salarial nem de mensagem neste formulário.
+
+## ICON Creative Studio, Intermediate Modeling/Texture Artist (Vancouver, BambooHR) — à mão por reCAPTCHA
+
+**Link:** https://iconcreative.bamboohr.com/careers/136
+
+**Por que à mão:** o formulário termina num reCAPTCHA de caixa de marcar. Todo o resto foi
+preenchido e conferido pela automação em 06/09.
+
+**Armadilha desta página:** o campo **Country já vem preenchido com Canada**. Trocar para Brazil,
+senão o endereço fica errado.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre |
+| Address / City / Province / Postal Code | os de sempre |
+| Country | trocar `Canada` por `Brazil` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Date Available | deixar vazio ou pôr uma data cerca de dois meses à frente |
+| **Desired Pay** | `CAD 63,131 per year, the lower end of your posted range. Open to aligning with your band for the role.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| reCAPTCHA | marcar a caixa |
+
+**Sobre a pretensão:** o anúncio publica a faixa de CAD 63.131,12 a 85.000, então a regra de 04/09
+manda pedir a base dela, que é o número acima. Vale saber que é posição sindicalizada e que o
+próprio anúncio diz que o valor exibido é o mínimo do acordo coletivo, com o resto negociável por
+experiência.

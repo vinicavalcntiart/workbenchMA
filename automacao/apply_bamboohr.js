@@ -18,15 +18,29 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     for (const t of ['Accept all', 'Accept All', 'Accept', 'Got it', 'I agree']) {
       const e = await p.$(`button:has-text("${t}")`); if (e) { await e.click().catch(() => {}); await p.waitForTimeout(1200); break; }
     }
-    for (const t of ['Apply for This Job', 'Apply for this job', 'Apply Now', 'Apply']) {
-      const e = await p.$(`a:has-text("${t}"), button:has-text("${t}")`);
-      if (e) { await e.click().catch(() => {}); log('cliquei em', t); await p.waitForTimeout(3500); break; }
+    // O BambooHR monta a pagina em SHADOW DOM: p.$('button:has-text(...)') NAO acha o botao.
+    // O que funciona e o getByText do Playwright, medido em 06/09 na BetaDwarf.
+    let clicou = false;
+    for (let tent = 0; tent < 6 && !clicou; tent++) {
+      for (const t of ['Apply for This Job', 'Apply for this job', 'Apply Now']) {
+        const loc = p.getByText(t, {exact: false});
+        if (await loc.count().catch(() => 0)) {
+          await loc.first().click({timeout: 15000}).catch(e => log('click err', e.message.split('\n')[0]));
+          log('cliquei em', t, '(tentativa', tent + 1, ')');
+          clicou = true;
+          await p.waitForTimeout(6000);
+          break;
+        }
+      }
+      if (!clicou) await p.waitForTimeout(4000);
     }
-    await p.waitForSelector('input[name=firstName], #firstName', {timeout: 60000});
+    if (!clicou) log('NAO ACHEI o botao Apply nem depois de 6 tentativas');
+    await p.locator('input[name=firstName]').first().waitFor({timeout: 60000});
 
     for (const [name, val] of Object.entries(A.fields || {})) {
-      const el = await p.$(`[name="${name}"], #${name}`);
-      if (!el) { log('CAMPO AUSENTE', name); continue; }
+      const loc = p.locator(`[name="${name}"]`).first();
+      if (!await loc.count().catch(() => 0)) { log('CAMPO AUSENTE', name); continue; }
+      const el = await loc.elementHandle();
       const tag = await el.evaluate(e => e.tagName);
       if (tag === 'SELECT') {
         const opts = await el.evaluate(e => [...e.options].map(o => o.text));
@@ -40,7 +54,7 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     }
 
     // curriculo: o input que aceita pdf, nunca o de foto
-    const fis = await p.$$('input[type=file]');
+    const fis = await p.locator('input[type=file]').elementHandles();
     let posto = false;
     for (const fi of fis) {
       const acc = ((await fi.getAttribute('accept')) || '').toLowerCase();
@@ -54,7 +68,7 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     }
     if (!posto) log('ATENCAO: nao achei input de arquivo para o curriculo');
 
-    for (const cb of await p.$$('input[type=checkbox]')) {
+    for (const cb of await p.locator('input[type=checkbox]').elementHandles()) {
       const req = await cb.evaluate(e => e.required || /privacy|consent|agree|policy/i.test((e.closest('label') || e.parentElement || {}).innerText || ''));
       if (req) { const on = await cb.isChecked().catch(() => false); if (!on) await cb.check({force: true}).catch(() => {}); }
     }
@@ -68,7 +82,8 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     for (const [n, v] of rb) log('  leitura de volta', n, '=>', String(v).slice(0, 60));
 
     if (!SUBMIT) { log('DRY RUN'); await b.close(); return; }
-    const sb = await p.$('button:has-text("Submit Application"), button:has-text("Submit"), button[type=submit]');
+    const sbLoc = p.getByText('Submit Application', {exact: false});
+    const sb = (await sbLoc.count().catch(() => 0)) ? await sbLoc.first().elementHandle() : await p.locator('button[type=submit]').first().elementHandle().catch(() => null);
     if (!sb) { log('SEM BOTAO DE ENVIO'); await b.close(); return; }
     const on = await sb.isEnabled().catch(() => false);
     if (!on) { log('BOTAO DESABILITADO, falta campo obrigatorio'); await p.screenshot({path: `err_${slug}.png`, fullPage: true}); await b.close(); return; }
