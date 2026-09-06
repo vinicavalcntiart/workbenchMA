@@ -246,6 +246,39 @@ O `redirect_url` escondido de cada slide diz qual é o próximo. Fora do wizard 
 que é o campo que um recrutador já marcou como VERY IMPORTANT nesta campanha. Preenchedor genérico
 de formulário único volta "sem campos" em todos eles.
 
+### Mais quatro, medidas na madrugada de 07/09 completando ILP e Twin Harbour
+
+7. **Domínio próprio bloqueado não é vaga inacessível: use o ESPELHO `<slug>.teamtailor.com`.**
+   `careers.ilpvfx.com` não passa pelo proxy desta sessão (o certificado servido é de
+   `x.sni-498-default.ssl.fastly.net` e o host responde 502), e por isso a Important Looking
+   Pirates ficou uma noite inteira registrada como "para o Vini fazer no navegador dele". O
+   espelho serve **o mesmo backend** e **o token do magic link vale nele**: basta trocar o host
+   do link do email antes de abrir. O link ainda redireciona uma vez para o domínio próprio e
+   essa aba morre, mas **o cookie de sessão já ficou gravado**, então voltar ao espelho em
+   `/connect/dashboard` entra logado. Receita para todo Teamtailor de domínio próprio bloqueado.
+8. **O rótulo da função se REPETE em cada departamento, e os de fora ficam escondidos.** Casar
+   `candidate[role_id]` pelo TEXTO do rótulo pega o primeiro "Artist" da página, que é de outro
+   departamento; o servidor descarta em silêncio e a função volta para **All roles**. Só valem os
+   radios **visíveis**, que são os do departamento escolhido. Foi o que deixou a ILP em All roles
+   depois de o log dizer "ok".
+9. **A conferência depois do clique tem que olhar o MESMO input, pelo `value`.** Conferir por
+   texto de rótulo devolve **falso negativo** com o campo certo já marcado, pelo mesmo motivo do
+   item 8, e faz o script "corrigir" o que já estava certo.
+10. **Conta que já existe transforma o cadastro em LOGIN, e isso é a saída quando o pedido de
+    link não gera email.** Na Twin Harbour o `/connect/login` não mandou nada, mas passar pelo
+    `/connect` escolhendo departamento e enviando devolveu a tela mansa "If we find a Connect
+    account, a sign in link will be sent" **e o email chegou**. Detalhe que evita recusa errada:
+    nessa variante **as caixas de consentimento nem existem** na tela. Caixa ausente (`null`) é
+    login e pode enviar; caixa que existe e não marcou (`false`) é a armadilha do gêmeo escondido
+    e aí não se envia. E a lista de departamentos do `/connect` é desenhada por JavaScript: ler o
+    DOM cedo demais devolve **zero radios** e o log diz "departamento ausente" com a página viva.
+
+**A cota de cinco por estúdio por dia, medida de novo em 06/09 às 23h56:** IOI e Funcom tinham
+gasto os cinco entre 18h27 e 20h13 e, mesmo às 23h56, pedido novo **não gerava email nenhum**, o
+que descarta reset no fim do dia de Estocolmo. Estúdio com cota livre respondeu na hora na mesma
+madrugada (ILP e Twin Harbour). Ou seja: a cota é real, é por estúdio, e **quem a queima tranca o
+estúdio até o dia virar**. Peça UM e use na hora.
+
 ## Escopo, que é o mesmo da campanha
 
 América do Norte, Europa incluindo Reino Unido, Irlanda, Nórdicos e União Europeia, Oceania, e na
