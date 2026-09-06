@@ -1548,3 +1548,34 @@ Open to aligning with your band for the role; as a reference, I am looking at ar
 
 Portfolio: https://www.artstation.com/viniciuscavalcanti
 LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+
+## Distillery VFX, Vancouver — Job Application Form — À MÃO, e NÃO é captcha
+
+**Link:** https://www.distilleryvfx.com/apply
+**Medido em 06/09 às 23h30, e o diagnóstico corrige o anterior.** A entrada dizia "à mão por reCAPTCHA". **Não há captcha nenhum:** nenhum script de reCAPTCHA, hCaptcha ou Turnstile carrega na página, e depois do clique em Apply Now nenhum desafio aparece.
+
+**O que trava são DOIS campos obrigatórios que não são `input`, `textarea` nem `select`:** são dropdowns próprios do Wix, botões com `data-hook=dropdown-base`. Um preenchedor comum ignora os dois **em silêncio**, o formulário não envia e **não aparece mensagem de erro nenhuma** — parece captcha e não é. Nem o clique do Playwright nem o `.click()` de dentro do navegador abriram a lista.
+
+Tudo o mais preenche: 12 de 12 campos, CV sobe para o serviço do Wix (o nome do arquivo aparece na tela), e as três opções de local ficam marcadas.
+
+**Cuidado com o CV:** depois do upload o Wix **limpa o `input[type=file]`**, então `input.value` vazio NÃO quer dizer que faltou anexo. A prova é o nome do arquivo na tela.
+
+**Por que vale:** Vancouver, Canadá anglófono, que é a prioridade número um da campanha.
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | código do país Brasil, número no doc privado do Drive |
+| Current Country of Residence | Brazil |
+| What role are you interested in? | Character Modeller and Texture Artist. Senior 3D Character Artist, 10+ years, stylized. I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role; I would need visa sponsorship. |
+| **What is your current level?** (dropdown) | **Sr** |
+| LinkedIn Link | https://www.linkedin.com/in/vinicavalcnti/ |
+| Reel or Portfolio Link 1 | https://www.artstation.com/viniciuscavalcanti |
+| Reel or Portfolio Link 2 | https://vinicavalcanti.com |
+| Vimeo Password | No password, the portfolio is public. |
+| Upload Resume | Vini_Cavalcanti_CV.pdf |
+| **Current Status in Canada** (dropdown) | **Need a work permit** (a verdade) |
+| Workplace options | marcar Studio, Remote e Hybrid |
+| Rate expectation | Open to aligning with your band for the role; as a reference, around CAD 48/hour, or CAD 95,000 per year equivalent. |
+| How did you hear about this role? | Your careers page. |
