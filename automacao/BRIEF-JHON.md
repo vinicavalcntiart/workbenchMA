@@ -108,6 +108,21 @@ Onde couber mais de uma linha, acrescentar o caso de visto, que é forte:
 **Nunca escrever nada que sugira hesitação em mudar de país.** O mestrado só aparece como
 credencial que fortalece o visto, jamais como compromisso que prende.
 
+## Antes de brigar com qualquer preenchedor, teste a rede
+
+Em 06/09 uma rodada inteira saiu falsa por isso. O `bridge.js` do navegador lê o `HTTPS_PROXY` no
+arranque, e depois de um reinício do contêiner o processo vivo apontava para uma porta morta. Todo
+navegador abria em **página branca** com `bridge error ECONNREFUSED`, e o preenchedor respondia
+"NAO ACHEI" em todos os campos, o que parece formulário quebrado e é rede. **Teste de uma linha
+antes de qualquer diagnóstico:**
+
+```
+curl --proxy http://127.0.0.1:18080 -k https://example.com
+```
+
+Tem que devolver 200. E **`node fetch` não passa pelo proxy**: devolve `403 Host not in allowlist`
+**com corpo**, então toda página parece viva e sem ATS. Varredura de quadro se faz com **curl**.
+
 ## Onde ele não pode errar
 
 **Autorização de trabalho se responde com a verdade, sempre.** Ele não é cidadão da União
