@@ -369,3 +369,43 @@ My portfolio holds more than 45 projects with over 60 characters across many tit
 
 Portfolio: artstation.com/viniciuscavalcanti
 ```
+
+## Nexus Studios, General Application (Londres, Workable) — pronto para mandar à mão
+
+**Link:** https://apply.workable.com/nexusstudios/j/4F41AEB27C/apply/
+
+**Por que à mão:** o Workable deles só mostra o Cloudflare Turnstile **depois** do clique em
+Submit, e é do tipo caixa de marcar. A automação preencheu o formulário inteiro em 06/09 e parou
+ali, com a tela em "Submitting...". Nada foi enviado.
+
+**Duas armadilhas desta página, medidas, e as duas quebram a candidatura em silêncio:**
+
+1. Existem **dois campos de arquivo**, e o primeiro é **Photo**. O currículo tem que ir no
+   segundo, o de **Resume**, que é o único que aceita PDF.
+2. O autofill do currículo escreve **"Columbus, United States of America"** no campo Address.
+   Apagar e corrigir.
+
+**Respostas, campo por campo:**
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Headline | `Senior 3D Character Artist, stylized characters and Houdini grooming` |
+| Phone | seletor de país em **BR (+55)** e, no campo do número, **só os dígitos**, sem código de país |
+| Address | `Olinda, Pernambuco, Brazil` |
+| Photo | deixar vazio |
+| Where did you hear about us? | `Nexus Studios Website` (é a opção verdadeira: o quadro saiu da página de carreiras deles) |
+| Summary | `Senior 3D Character Artist with a credit on The Wingfeather Saga at Angel Studios and almost five years at E-Line Media in Arizona, US, taking Endstar hero characters from first sculpt to engine. I model, sculpt, texture and look dev characters, and I also groom hair and fur in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles. I would need visa sponsorship to work in the United Kingdom and I am fully open to relocating.` |
+| Resume | `Vini_Cavalcanti_CV.pdf` no campo **Resume**, não no de foto |
+| Showreel/website link | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel Password | `No password, the portfolio is public.` |
+| What is your expected day rate? | `GBP 275 per day. Open to aligning with your band for the role.` |
+| What is your notice period/When are you available? | `Negotiable, around two months from an offer.` |
+| Privacy Notice | marcar |
+
+**Sobre a taxa diária, para você saber de onde veio o número:** a vaga é **contrato**, então não
+existe salário anual para citar. GBP 275 por dia é o equivalente aproximado da base da faixa
+britânica da sua política de 04/09 para estúdio de porte médio, e vem com a frase de alinhamento
+à banda, que é a que a política manda usar. Se eles publicarem faixa depois, a regra continua
+sendo pedir a base dela.
