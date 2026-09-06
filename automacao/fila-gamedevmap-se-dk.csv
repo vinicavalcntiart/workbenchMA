@@ -1,0 +1,103 @@
+# Fila gamedevmap da Suecia e da Dinamarca, colhida em 06/09
+# Formato: nome,tipo,cidade,estado,pais,site,status
+# Estes dois paises tinham devolvido pagina vazia na rodada anterior do mesmo dia; na
+# segunda tentativa o gamedevmap respondeu 200 normalmente, entao era instabilidade dele.
+# So os do tipo Developer e Developer and Publisher, ja passados pelo dedupe da campanha.
+# Suecia 50, Dinamarca 47.
+10 Chambers,Developer,Stockholm,Stockholm,Sweden,https://10chambers.com/,NOVO
+2Play Studios,Developer,Stockholm,Stockholm,Sweden,http://2play.se,NOVO
+5 Fortress,Developer,Boden,North Bothnia,Sweden,https://www.5fortress.com/,NOVO
+A Bit Ago,Developer,Sundsvall,Norrland,Sweden,https://abitago.se/,NOVO
+ActFirst Games,Developer,Bromma,Stockholm,Sweden,https://actfirstgames.com/,NOVO
+Adventure Party Games,Developer,Stockholm,Stockholm,Sweden,https://www.adventurepartygames.com/,NOVO
+Aegik,Developer,Sala,Vastmanland,Sweden,https://aegik.se/,NOVO
+Aftnareld,Developer,Linkoping,Ostergotland,Sweden,https://www.aftnareld.com/,NOVO
+Aldgard Studio,Developer,Malmo,Scania,Sweden,https://studio.aldgard.se/,NOVO
+AmberWing,Developer,Norrkoping,Ostergotland,Sweden,https://www.amberwing.se/,NOVO
+Ancient Well Entertainment,Developer,Arjang,Varmland,Sweden,https://ancientwell.io/,NOVO
+Antediluvian Interactive,Developer,Stockholm,Stockholm,Sweden,https://antediluvianinteractive.com/,NOVO
+Anyone's Game Studio,Developer,Uppsala,Uppland,Sweden,https://www.anyonesgame.se/,NOVO
+Aonic,Developer and Publisher,Stockholm,Stockholm,Sweden,https://aonic.co/,NOVO
+Apog Labs,Developer,Malmo,Scania,Sweden,https://www.apoglabs.com/,NOVO
+Appskeppet,Developer,Gothenburg,Vastra Gotaland,Sweden,https://apskeppet.se/,NOVO
+Aroko Game Studio,Developer,Lund,Scania,Sweden,https://arokogamestudio.com/,NOVO
+Arrowhead Game Studios,Developer,Stockholm,Stockholm,Sweden,https://arrowheadgamestudios.com/,NOVO
+Art in Heart,Developer,Vasteras,Vastmanland,Sweden,https://gonnergame.com/,NOVO
+Athletic Design,Developer,Lund,Scania,Sweden,https://www.athleticdesign.se/,NOVO
+Atomic Elbow,Developer,Sundsvall,Norrland,Sweden,https://atomicelbow.com/,NOVO
+Aurora Arts,Developer,Skoevde,Vastra Gotaland,Sweden,https://www.auroraartsstudio.com/,NOVO
+Aurora Punks,Developer and Publisher,Stockholm,Stockholm,Sweden,https://www.aurorapunks.com/,NOVO
+Axolot Games,Developer and Publisher,Stockholm,Stockholm,Sweden,https://axolotgames.com/,NOVO
+Ballistic Pork,Developer,Jorn,Vasterbotten,Sweden,https://ballisticpork.se/,NOVO
+Ballistic Pork,Developer,Stockholm,Stockholm,Sweden,https://ballisticpork.se/,NOVO
+BandanaKid Games,Developer,Stockholm,Stockholm,Sweden,https://www.bandanakid.com/,NOVO
+Bandit Island Games,Developer,Stockholm,Stockholm,Sweden,https://www.bandit-island.com/,NOVO
+Beartwigs,Developer,Linkoping,Ostergotland,Sweden,https://beartwigs.com/,NOVO
+Beyond Frames Entertainment,Developer and Publisher,Stockholm,Stockholm,Sweden,https://beyondframes.com/,NOVO
+Big Mood Studios,Developer,Skoevde,Vastra Gotaland,Sweden,https://bigmood.se/,NOVO
+Big Mood Studios,Developer,Uppsala,Uppland,Sweden,https://bigmood.se/,NOVO
+Black Voyage Games,Developer,Stockholm,Stockholm,Sweden,https://blackvoyagegames.com/,NOVO
+Blackdrop Interactive,Developer,Karlskrona,Gotaland,Sweden,https://www.blackdropinteractive.com/,NOVO
+Bloom & Gloom Games,Developer,Malmo,Scania,Sweden,https://www.bloomandgloom.games/,NOVO
+Bloom and Gloom,Developer,Malmo,Scania,Sweden,https://www.bloomandgloom.games/,NOVO
+Blue Scarab Entertainment,Developer,Stockholm,Stockholm,Sweden,https://bluescarab.com/,NOVO
+Box Dragon (Coffee Stain),Developer,Gothenburg,Vastra Gotaland,Sweden,https://boxdragon.se/,NOVO
+Brimstone,Developer,Remote,Remote,Sweden,https://brimstone.games/,NOVO
+Brimstone Games,Developer,Skoevde,Vastra Gotaland,Sweden,https://brimstone.games/,NOVO
+BulletHell Studios,Developer,Vasteras,Vastmanland,Sweden,https://bullethellstudios.com/,NOVO
+Bumblebee Studios,Developer,Solna,Stockholm,Sweden,https://www.bumblebee-studios.se/,NOVO
+Campground Interactive,Developer,Falun,Dalarna,Sweden,https://www.campground.se/,NOVO
+Carry Castle,Developer,Malmo,Scania,Sweden,https://carrycastle.se/,NOVO
+Clifftop Games,Developer,Hedemora,Dalarna,Sweden,https://www.clifftopgames.com/,NOVO
+Code Club,Developer,Motala,Ostergotland,Sweden,http://codeclub.se/,NOVO
+Coffee Stain North,Developer,Stockholm,Stockholm,Sweden,https://coffeestain.com/studios/coffee-stain-north,NOVO
+Coffee Stain Studios,Developer and Publisher,Skoevde,Vastra Gotaland,Sweden,https://www.coffeestainstudios.com,NOVO
+Cold River Games,Developer,Umea,Norrland,Sweden,https://crg.studio/,NOVO
+Coldwood Interactive,Developer,Stockholm,Stockholm,Sweden,https://coldwood.com/,NOVO
+Bedtime Digital Games,Developer,Aalborg,Jutland,Denmark,https://bedtime.io/,NOVO
+BetaDwarf,Developer,Copenhagen,Oresund,Denmark,https://betadwarf.com/,NOVO
+Campfire Cabal (THQ Nordic),Developer,Copenhagen,Oresund,Denmark,https://campfirecabal.com/,NOVO
+Carlsen Games,Developer,Copenhagen,Oresund,Denmark,https://carlsengames.com/,NOVO
+Chop Chop Games,Developer,Aarhus,Aarhus,Denmark,https://chopchop.dk/,NOVO
+Corner Studio Games,Developer,Copenhagen,Oresund,Denmark,https://cornerstudiogames.com/,NOVO
+Crinkle Cut Games,Developer,Copenhagen,Oresund,Denmark,https://crinklecutgames.com/,NOVO
+Flatponies (VRUnicorns),Developer,Copenhagen,Oresund,Denmark,https://flatponies.com/,NOVO
+Framebunker,Developer,Copenhagen,Oresund,Denmark,https://www.framebunker.com,NOVO
+frecle,Developer,Copenhagen,Oresund,Denmark,https://www.frecle.net,NOVO
+Funday Games,Developer,Aarhus,Aarhus,Denmark,https://fundaygames.dk/,NOVO
+Game Swing,Developer,Copenhagen,Oresund,Denmark,https://www.game-swing.com,NOVO
+Gears for Breakfast,Developer,Copenhagen,Oresund,Denmark,https://gearsforbreakfast.com/,NOVO
+Geometric Interactive,Developer,Copenhagen,Oresund,Denmark,https://geometricinteractive.com/,NOVO
+Ghost Ship Games (Coffee Stain),Developer,Copenhagen,Oresund,Denmark,https://ghostship.dk/,NOVO
+Guppyworks,Developer,Copenhagen,Oresund,Denmark,https://www.guppyworks.com,NOVO
+Half Past Yellow,Developer,Copenhagen,Oresund,Denmark,https://halfpastyellow.com/,NOVO
+House on Fire,Developer,Copenhagen,Oresund,Denmark,https://houseonfire.dk,NOVO
+Hovgaard Games,Developer,Copenhagen,Oresund,Denmark,https://hovgaard.com/,NOVO
+Hutlihut Games,Developer,Copenhagen,Oresund,Denmark,https://hutlihut.dk/,NOVO
+Indoor Sunglasses,Developer,Copenhagen,Oresund,Denmark,https://mind-diver.com/,NOVO
+Invisible Walls (Amplifier Game Invest),Developer,Copenhagen,Oresund,Denmark,https://invisiblewalls.co/,NOVO
+IO Interactive,Developer,Copenhagen,Oresund,Denmark,https://ioi.dk/,NOVO
+Klassefilm,Developer,Copenhagen,Oresund,Denmark,https://www.klassefilm.dk,NOVO
+Kong Orange,Developer,Aarhus,Aarhus,Denmark,https://www.kongorange.com,NOVO
+Lost Umbrella Games,Developer,Copenhagen,Oresund,Denmark,https://lostumbrellagames.com/,NOVO
+Lunch Money Games,Developer,Aarhus,Aarhus,Denmark,https://lunchmoney.games/,NOVO
+Moonmen Games,Developer,Copenhagen,Oresund,Denmark,https://www.moonmengames.com,NOVO
+MP2 Games,Developer and Publisher,Copenhagen,Oresund,Denmark,https://mp2.dk/,NOVO
+Neon Aurelius,Developer,Copenhagen,Oresund,Denmark,https://neonaurelius.com/,NOVO
+Northplay,Developer,Copenhagen,Oresund,Denmark,https://www.northplay.co/,NOVO
+Other Tales,Developer,Copenhagen,Oresund,Denmark,https://www.othertalesinteractive.com,NOVO
+Pine Creek Games,Developer,Havnso,Zealand,Denmark,https://www.pinecreekgames.com/,NOVO
+Playdead,Developer,Copenhagen,Oresund,Denmark,https://www.playdead.com,NOVO
+Raw Power Games,Developer,Copenhagen,Oresund,Denmark,https://rawpowergames.com/,NOVO
+Rhombico Games,Developer,Vejle,Region Syddanmark,Denmark,https://www.rhombicogames.com,NOVO
+Rune Vision,Developer,Copenhagen,Oresund,Denmark,https://www.runevision.com,NOVO
+Savivo,Developer,Copenhagen,Oresund,Denmark,http://www.savivo.com/,NOVO
+Silkroad Studios,Developer,Copenhagen,Oresund,Denmark,https://silkroadstudios.net/,NOVO
+Slipgate Ironworks,Developer,Aalborg,Jutland,Denmark,https://slipgate-ironworks.com/,NOVO
+The Outer Zone,Developer,Copenhagen,Oresund,Denmark,https://theouterzone.itch.io/,NOVO
+Throughline Games,Developer,Copenhagen,Oresund,Denmark,https://www.throughlinegames.com,NOVO
+Triband,Developer,Copenhagen,Oresund,Denmark,https://www.triband.net,NOVO
+Trophy Games,Developer,Copenhagen,Oresund,Denmark,https://www.trophy-games.com,NOVO
+Unity Technologies,Developer,Copenhagen,Oresund,Denmark,https://www.unity3d.com,NOVO
+Wiredfly,Developer,Aarhus,Aarhus,Denmark,https://www.wiredfly.dk/,NOVO
+Wombo Games,Developer,Copenhagen,Oresund,Denmark,https://www.wombogames.com/,NOVO
