@@ -717,3 +717,149 @@ Yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in M
 **Se pedir verificação de email por código:** o Eightfold manda um código de 6 dígitos e ele **só vale dentro da mesma sessão do formulário**. Leia o email e volte para a mesma aba, sem fechar.
 
 **Autorização de trabalho, quando perguntarem:** a verdade, ele precisa de patrocínio de visto e não tem autorização no Canadá, nos EUA nem na Austrália.
+
+## FATIA JS-SO (06/09): as portas que só existem depois do JavaScript
+
+Esta secção sai da varredura da fila `JS-SO`, os 82 domínios cuja página de vagas **não
+existe no HTML que o curl baixa**. A varredura anterior marcou os 82 como "sem vaga" porque
+o `curl` devolveu 200 com corpo vazio. **Isso era falso negativo**, e a prova é que abrindo
+cada um no navegador de verdade apareceram candidaturas espontâneas e vagas abertas que o
+curl não via. Regra que fica: **nesta fila nada se conclui por curl**.
+
+### Distillery VFX, Job Application Form (Vancouver, Canadá) — À MÃO por reCAPTCHA
+
+**Link:** https://www.distilleryvfx.com/apply
+(a porta também aparece como https://www.distilleryvfx.com/careers/general-application-)
+
+**Por que à mão:** o formulário é Wix e o **reCAPTCHA de caixa de marcar** ("Verification —
+Please confirm you're human", com o quadrinho *I'm not a robot*) só aparece **depois** do
+clique em **Apply Now**, igual ao Turnstile do Workable e ao hCaptcha do Recruitee. Até ali
+o formulário aceita tudo. Em 06/09 a automação preencheu o formulário inteiro, conferiu
+campo a campo por leitura de volta e parou nessa parede; nada foi enviado.
+
+**Por que vale, e muito:** o fuso do site é `America/Vancouver` e o formulário pergunta
+*Current Status in Canada* com valores em **CAD** — ou seja, é **Canadá anglófono**, que é a
+prioridade número um da fila. Estúdio boutique de VFX para cinema e TV de alto perfil.
+
+**Armadilhas medidas, as três mentem em silêncio:**
+1. O menu *Current Status in Canada* tem **"Open work permit"** logo antes de
+   **"Need a work permit"**. Casar por pedaço de texto marca a opção errada, que é mentira
+   em campo de autorização de trabalho. Case pelo **texto exato**.
+2. O menu *What is your current level* **não tem "Senior"**: as opções são
+   `Student · Jr · Mid · Sr · Lead · Supervisor`. A certa é **`Sr`**.
+3. O anexo é um dropzone do Wix que **esvazia o `input[type=file]`** depois de subir o
+   arquivo. Ler o input devolve vazio mesmo com o anexo certo: confira pelo **nome do
+   arquivo escrito na tela** abaixo de *Upload Resume*.
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com o código do país |
+| Current Country of Residence | `Brazil` |
+| What role are you interested in? | `Senior 3D Character Artist / Character Modeler (modeling, sculpting, texturing, look development; Houdini grooming as a supporting skill)` |
+| What is your current level? | `Sr` |
+| LinkedIn Link | https://www.linkedin.com/in/vinicavalcnti/ |
+| Reel or Portfolio Link 1 | https://www.artstation.com/viniciuscavalcanti |
+| Reel or Portfolio Link 2 | https://vinicavalcanti.com |
+| Vimeo Password | `No password, the portfolio is public` |
+| Upload Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Current Status in Canada** | **`Need a work permit`** (é a verdade, e nunca a de cima) |
+| Select all workplace options | marcar **Studio**, **Hybrid** e **Remote**, nesta ordem de preferência |
+| What is your Rate expectation? | `CAD 80,000/year. Open to aligning with your band for the role.` |
+| How did you hear about this role? | `Distillery VFX careers page` |
+| reCAPTCHA | marcar a caixa e clicar em **Apply Now** |
+
+**De onde vem o número:** o anúncio não publica faixa, é casa boutique, e a política de
+04/09 manda **CAD 80.000** para estúdio pequeno ou médio no Canadá, nunca abaixo do piso
+legal da ocupação, porque abaixo dele o patrocínio fica inviável.
+
+### TRIXTER, Speculative Job Application (Munique e Berlim, Alemanha) — À MÃO por defeito de rede
+
+**Link:** https://www.trixter.de/jobs/job/speculative-job-application-2/
+
+**O achado:** a página de vagas da TRIXTER só monta em JavaScript, e por isso a varredura por
+curl a deu como vazia. No navegador ela mostra **uma vaga: Speculative Job Application**, e a
+própria página diz que **só aceitam candidatura por este formulário**, nunca por email nem
+LinkedIn. É a TRIXTER de Munique, **A Cinesite Partner Company**.
+
+**Por que à mão:** não é captcha. O formulário é um **Personio embutido em WordPress** (os
+campos são `job_position_id` e `custom_attribute_NNNNNN`) e o envio é por AJAX. Do nosso
+ambiente a requisição de envio **não chega a sair**: a tela devolve
+*"Sorry, something went wrong and your message could not be sent. Please try again, or email
+us directly at hello@trixter.de."*, e nenhuma requisição de rede aparece. É a mesma família
+de falha da Fortiche. Um detalhe que custou tempo e fica registrado: **enviar por
+`form.requestSubmit()` devolve 200 e recarrega o formulário em branco, sem mensagem nenhuma,
+o que parece envio feito e não é.** Só o clique de verdade no botão faz o AJAX rodar, e é ele
+que revela o erro. O quadro do Personio deles (`trixter.jobs.personio.com/xml`) confirma que
+existe **essa única vaga**, id `2316610`, e o board não é público, então o site é a única porta.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com o código do país |
+| **Eligibility to work in Germany** | **`No`** (é a verdade: precisa de patrocínio) |
+| Availability Date | uma data cerca de dois meses à frente, no formato `dd.mm.aaaa` |
+| Desired Salary / Freelance Daily Rate | `EUR 55,000 per year, or EUR 350 per day freelance. Open to aligning with your band for the role. I WANT TO RELOCATE to München or Berlin and I am fully open to moving for the role; I am not an EU citizen and would need visa sponsorship.` |
+| Link to Portfolio/Website | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio Password | `No password, the portfolio is public` |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| IMDB | deixar vazio |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Caixa de consentimento | marcar |
+
+**Atenção na carta:** a própria vaga pede *"include in your cover letter for what kind of
+position you want to apply for"*, e **não existe campo de texto livre** neste formulário.
+O cargo pretendido precisa estar escrito na carta: *Senior 3D Character Artist / Character
+Modeler*. O `EUR 55.000` sai da política de 04/09 para Europa ocidental em casa grande, e a
+TRIXTER é casa grande do grupo Cinesite.
+
+**Armadilha da página:** o aviso de cookies fica por cima do botão de envio, e clicar com
+força no botão sem fechar o aviso leva para `/data-privacy/`, que parece o formulário ter
+sumido. Aceite os cookies antes.
+
+### Gaijin Entertainment, Lead Material & Texture Artist (Budapeste, Hungria) — À MÃO por captcha
+
+**Link:** https://gaijinent.com/job/material--texture-artist
+**Quadro inteiro:** https://gaijinent.com/job
+
+**O achado:** o quadro deles não existe sem JavaScript. Renderizado, mostra **9 vagas**, duas
+de arte, e uma delas é **Lead Material & Texture Artist**, ou seja, texturização em cargo de
+liderança, que é disciplina dele com a resposta de liderança já fechada em 06/09 como **SIM**.
+A casa **paga realocação** para Hungria, Chipre, Alemanha, Montenegro, Letônia e Armênia, e o
+anúncio diz com todas as letras que consideram candidatos de qualquer país e residência.
+
+**Por que à mão:** o formulário (`form.job-respond-form`) termina num campo
+`input[name=captcha]` com **desafio de imagem próprio**. Captcha de desafio não se burla.
+
+**A ressalva honesta, que precisa ir na carta:** o anúncio pede **materiais realistas** de
+hard surface, arquitetura e terreno, e pede Substance Designer. O portfólio dele é
+estilizado e de personagem. Use a resposta já pronta do bloco da Rodeo FX sobre realismo, e
+não esconda a diferença.
+
+| Campo | O que escrever |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Additional communication method | LinkedIn: https://www.linkedin.com/in/vinicavalcnti/ |
+| Country | `Brazil` |
+| What languages do you speak? | `Portuguese (native), English (IELTS certified), Spanish (working proficiency)` |
+| Cover letter | o texto abaixo |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Enter captcha | resolver na tela |
+
+```
+I WANT TO RELOCATE and I am fully open to moving for the role, and your relocation support to Hungary or Germany is one of the reasons I am writing.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor. Texturing and material work are not a separate step for me: I own the asset end to end, sculpt and high poly, retopology, UVs, baking, PBR and hand painted texturing, look development and engine integration, in Substance Painter and Designer, ZBrush, Maya and Houdini, where I also handle grooming.
+
+On the lead side, I have been Senior for five years, which means reviewing other artists' work, setting the asset standard and mentoring juniors; I also teach as the founder of my own character art school and I am a master's candidate, so giving feedback and holding a quality bar is daily work for me.
+
+One thing said plainly: my published portfolio is mostly stylized, while this role asks for realistic materials for hard surface, architecture and terrain. Every sculpt I make starts from realistic anatomy and I work daily with PBR, UVs, color management, trim sheets and tileables, so I am comfortable delivering realistic surfaces, and I would rather say that clearly than overstate it.
+
+I am not an EU citizen and would need work sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
