@@ -5,9 +5,15 @@ quais deles a campanha nunca contatou.
 Uso:
     python3 automacao/parse-gamedevmap.py <arquivo.html> [<arquivo2.html> ...]
 
-O gamedevmap bloqueia o proxy desta automação, então o fluxo é: o Vini abre
-https://www.gamedevmap.com/index.php?country=<Pais> no navegador, salva a
-página e joga aqui. Vale também country=Remote, que lista estúdios remote-first.
+CORRIGIDO EM 06/09: o gamedevmap NÃO bloqueia mais esta automação. O curl simples
+com user-agent de navegador responde 200 e devolve a página inteira, então o fluxo
+agora é direto, sem depender do Vini salvar HTML:
+
+    curl -s -A "Mozilla/5.0 Chrome/128" \
+      "https://www.gamedevmap.com/index.php?country=<Pais>" -o <Pais>.html
+
+Vale também country=Remote, que lista estúdios remote-first. A observação antiga,
+de que o site bloqueava o proxy, era do tempo em que a rede do ambiente era fechada.
 
 A saída vai para a saída padrão em CSV (nome,tipo,cidade,estado,pais,site,status)
 onde status é "NOVO" ou "ja contatado".
