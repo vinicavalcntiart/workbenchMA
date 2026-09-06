@@ -1441,3 +1441,30 @@ Registrado para a próxima rodada não reabrir o que já foi lido no navegador d
   de carreiras renderiza praticamente vazia, sem vaga e sem porta de candidatura.
 - **Coffee Stain North, Art Director and Art Lead**: **já tinha candidatura enviada hoje** por
   outra frente da campanha, requisição `8083591`. Duplicata pega no dedupe, não reenviada.
+
+## 9. SQRT3 (Varsóvia, Polônia) — envio NÃO CONFIRMADO, e a armadilha dos dois formulários iguais
+
+**Link:** https://sqrt3.games/#rekrutacja (a seção *Kariera* fica na própria home)
+**Por que conta:** a seção diz *"Kochasz gry i chcesz tworzyć je razem z nami? Zostaw nam swoje CV!"*
+(deixe seu CV) e tem campo real de upload de PDF, até 24 MB. É candidatura espontânea.
+**O que aconteceu:** o formulário foi preenchido inteiro e conferido campo a campo, com o CV
+anexado e o consentimento lido de volta como marcado, mas **depois do clique em WYŚLIJ a tela
+limpou o formulário sem escrever mensagem nenhuma**, nem de sucesso nem de erro. Pela regra da
+campanha isso **não conta como envio**. Numa tentativa o POST do Elementor devolveu 200 e noutra
+502 pelo nosso proxy. **Confira a caixa de email antes de reenviar**, porque uma das tentativas
+pode ter entrado.
+
+**A armadilha, que vale para qualquer página com mais de um formulário Elementor:** existem **dois
+formulários Elementor idênticos** nesta página, o de contato e o de recrutamento, com os **mesmos
+`name`** (`form_fields[name]`, `form_fields[email]`, `form_fields[message]`) e o mesmo
+`name="Nowy formularz"`. `querySelector` devolve o **de contato**, então a primeira tentativa
+escreveu no formulário errado sem erro nenhum. O que distingue os dois é o campo de arquivo, que só
+o de recrutamento tem: escope tudo por **`form:has(input[type=file])`**.
+
+| Campo | O que preencher |
+|---|---|
+| Imię i Nazwisko | `Vini Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Wiadomość | o texto de candidatura espontânea (o mesmo do bloco do Knights of Unity serve) |
+| Wgraj swoje CV (PDF, máx 24 MB) | `Vini_Cavalcanti_CV.pdf` |
+| Zgoda (consentimento) | marcar |
