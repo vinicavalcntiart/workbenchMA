@@ -220,9 +220,19 @@ function enviarRascunhos() {
     const m = d.getMessage();
     const para = m.getTo();
     if (!para) continue;
+    if (SIMULAR) { Logger.log("enviaria para " + para); n++; continue; }
+    // RASCUNHO JA PREPARADO NAO SE PREPARA DE NOVO, senao a assinatura entra DUAS VEZES no corpo.
+    // Isso passou a importar em 06/09, quando o prepararRascunhos() nasceu: dali em diante existe
+    // rascunho que ja chega aqui completo, e reaplicar o update duplicaria a assinatura.
+    if (m.getAttachments().length >= NOMES_ANEXOS.length) {
+      d.send();
+      n++;
+      Logger.log("enviado (ja vinha preparado) para " + para);
+      Utilities.sleep(PAUSA_MS);
+      continue;
+    }
     const html = limparLinks(m.getBody()) + "<br><br>-- <br>" + sig;
     const texto = limparLinks(m.getPlainBody());
-    if (SIMULAR) { Logger.log("enviaria para " + para); n++; continue; }
     d.update(para, ASSUNTO, texto, { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
     d.send();
     n++;
