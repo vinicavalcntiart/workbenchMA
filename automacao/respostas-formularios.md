@@ -1032,3 +1032,302 @@ I WANT TO RELOCATE and I am fully open to moving for the role, on site and full 
 
 Autorização de trabalho na Polônia e na Suíça: **não tem, precisa de patrocínio**, e isso se
 responde com a verdade. Liderança de equipe: **sim**. Salário atual da E-Line: nunca se revela.
+
+---
+
+# Fatia MOTOR-B (06/09): dossiês dos formulários de WordPress que ficaram à mão
+
+Sete formulários abaixo foram preenchidos inteiros pela automação, com leitura de volta campo a
+campo, e pararam na verificação anti-robô ou num campo que eu não invento. Nenhum deles foi
+enviado. Copiar e colar leva poucos minutos cada.
+
+## A regra nova que esta rodada mediu, e ela vale para o WordPress inteiro
+
+**Formulário de WordPress com reCAPTCHA v3 recusa a sessão automatizada, e a mensagem de erro
+mente sobre o motivo.** Três casas devolveram a mesma tela genérica do Contact Form 7,
+*"There was an error trying to send your message. Please try again later"*, que parece defeito de
+servidor de email e **não é**: é pontuação de sessão. Quem provou isso foi o **Urban Games**, cujo
+Elementor escreve o motivo por extenso na tela, em vermelho: **"Invalid form, reCAPTCHA validation
+failed"** e **"reCAPTCHA V3 validation failed, suspected as abusive usage"**. É o mesmo muro da EF
+Games e da eXiin na fatia A.
+
+**Consequência prática, e ela poupa tempo:** antes de preencher um formulário de WordPress, veja
+como o `api.js` do reCAPTCHA é carregado na página.
+
+| O que aparece no HTML | O que é | O que fazer |
+|---|---|---|
+| Nenhum `recaptcha` na página | sem captcha | **envia normalmente** |
+| `api.js?render=<chave>` | v3, pontuação de sessão | **vai à mão**, a automação é reprovada |
+| `api.js?render=explicit` com `<div class="g-recaptcha" data-sitekey>` | v2 de caixa | **vai à mão**, é parede |
+| `api.js` sem `render=`, com `data-sitekey` | v2 de caixa | **vai à mão**, é parede |
+
+A **Nordcurrent**, o único envio confirmado desta fatia, é exatamente o caso da primeira linha:
+Contact Form 7 **sem reCAPTCHA nenhum**, e passou de primeira.
+
+## Dados que valem para todos os sete
+
+Nome `Vini` / `Cavalcanti` · Email `contact@vinicavalcanti.art` · Telefone `+55 81 97306 2286`
+(em campo único, sem espaços: `+5581973062286`) · Cidade `Olinda, Pernambuco` · País `Brazil`
+Portfólio `https://www.artstation.com/viniciuscavalcanti` ·
+LinkedIn `https://www.linkedin.com/in/vinicavalcnti/` · Escola `https://vinicavalcanti.com`
+Anexos: `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf`
+Autorização de trabalho: **não é cidadão da UE, precisa de patrocínio** — nunca responder outra coisa.
+Liderança de equipe: **Yes**, cinco anos de Senior na E-Line, professor e fundador da própria escola, mestrando.
+
+## 1. Gigantic Duck Games — 3D Artist (Borås, Suécia, REMOTO efetivo) — à mão por reCAPTCHA v3
+
+**Link:** https://giganticduck.com/application/
+**Por que vale:** é a única **vaga de 3D Artist aberta** da fatia inteira, remota, 40h por semana,
+em dois projetos (Bombergrounds e um título não anunciado). A mesma requisição existe nas duas
+versões, então escolha uma.
+**O que trava:** Contact Form 7 com reCAPTCHA v3. Preenchido e enviado **duas vezes**, e nas duas
+a tela devolveu *"There was an error trying to send your message. Please try again later"*.
+
+| Campo | O que preencher |
+|---|---|
+| Position you are applying for (select, obrigatório) | `3D Artist` |
+| Location (select, obrigatório) | `Remote` |
+| Full Name (obrigatório) | `Vini Cavalcanti` |
+| Country (obrigatório) | `Brazil` |
+| Email (obrigatório) | `contact@vinicavalcanti.art` |
+| Discord | deixar vazio |
+| Link to portfolio or other site | `https://www.artstation.com/viniciuscavalcanti` |
+| CV (obrigatório, aceita pdf/docx/jpg/png) | `Vini_Cavalcanti_CV.pdf` |
+| Application Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Extra Attachment | deixar vazio |
+| Where did you hear about this position (select, obrigatório) | `Other` — é a única verdadeira, a campanha chegou pelo diretório de estúdios e pela página de carreiras deles |
+
+**Não existe campo de mensagem livre neste formulário**, então a frase de realocação e o caso de
+visto só cabem na carta anexada.
+
+## 2. Urban Games — Head of Art (Schaffhausen, Suíça) — à mão por reCAPTCHA v3
+
+**Link do formulário:** https://www.urbangames.com/contact/#contact-form
+**Vaga:** https://www.urbangames.com/career/ (a descrição de Head of Art é um PDF em
+`https://www.urbangames.com/head-of-art-2/`). Casa de *Transport Fever 3*. Há também Head of
+Publishing e Lead Producer abertos, e a página convida candidatura espontânea.
+**O que trava:** o Elementor escreve o motivo na tela: *"Invalid form, reCAPTCHA validation failed"*
+e *"reCAPTCHA V3 validation failed, suspected as abusive usage"*.
+**Aviso:** o formulário tem só três campos e **nenhum campo de arquivo**, então CV e carta vão por
+link e por resposta ao email deles.
+
+- Name: `Vini Cavalcanti`
+- Email: `contact@vinicavalcanti.art`
+- Message:
+
+```
+Application for the Head of Art opening listed on your career page (and, if the fit is better there, for any character or 3D art role on the team).
+
+I WANT TO RELOCATE to Schaffhausen and I am fully open to moving for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+On the leadership side, which is what a Head of Art role asks for: as a Senior I review other artists' work, set the asset standard and mentor junior artists. I am also a teacher and the founder of my own character art school, where I built and teach the curriculum, and I am a master's candidate. Setting an art vision, giving structured feedback and writing guides is already my daily practice.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+I can send the CV and cover letter in PDF by reply, or by any address you prefer.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year, and I understand Swiss levels differ.
+
+Work authorisation: I am not an EU or Swiss citizen and I would need a permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
+
+Phone: +55 81 97306 2286
+```
+
+## 3. Grimlore Games (THQ Nordic) — Open Application (Munique) — à mão por reCAPTCHA v2 de caixa
+
+**Link:** https://grimloregames.com/open-application/ , botão **APPLY NOW**, que leva a
+`https://grimloregames.com/apply?contact-reason=Grimlore%20Job%20Application:%20Open%20Application%20(m/f/d)`
+**Por que vale:** casa de *Titan Quest II* e *SpellForce 3*, do grupo THQ Nordic/Embracer. As vagas
+de arte abertas hoje são **Senior/Principal Environment Artist** e **3D Animator**, ou seja, o lado
+de personagem e criatura está descoberto, e a própria página pede candidatura espontânea.
+**O que trava:** WPForms com **reCAPTCHA v2 de caixa de marcar**, visível logo acima do Submit.
+**Aviso:** o formulário **não tem campo de arquivo**. CV por link.
+
+| Campo | O que preencher |
+|---|---|
+| Name * | `Vini Cavalcanti` |
+| Email * | `contact@vinicavalcanti.art` |
+| Subject * | `Open Application (m/f/d) - Senior 3D Character Artist / Character Modeler` |
+| Privacy Policy Checkbox * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+Message *:
+
+```
+I WANT TO RELOCATE to Munich and I am fully open to moving for the role, on site and full time.
+
+I am applying as a Senior 3D Character Artist / Character Modeler. I have more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini, so hair is part of the character rather than a separate handoff.
+
+Your open application page says to reach out even when the role is not listed, and Titan Quest II and the RPG and RTS line are exactly the kind of character and creature work I want: heroes, monsters and armour sets built for deformation and for engine, at scale. Your current openings list a Senior/Principal Environment Artist and a 3D Animator, so the character and creature side is where I would strengthen the team, and I am comfortable covering hard surface and props alongside characters.
+
+As a Senior I review other artists' work, set the asset standard and mentor junior artists. I also teach as founder of my own character art school and I am a master's candidate.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+CV on request or downloadable from the portfolio site; happy to send the PDF by reply.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
+
+Phone: +55 81 97306 2286
+```
+
+## 4. Stormind Games — Spontaneous Applications (Acireale e Milão, Itália) — à mão por reCAPTCHA do BambooHR
+
+**Link:** https://stormindgames.bamboohr.com/careers/203
+**Por que vale:** casa italiana premiada de *Remothered* e *Batora*, jogos narrativos para PC e
+console. É a **única requisição aberta** no quadro deles, e é espontânea, que conta.
+**O que trava:** o reCAPTCHA de caixa de marcar do BambooHR, o mesmo da ICON, da Image Engine e da
+BetaDwarf. É do ATS, não do estúdio.
+
+**Não perca tempo com o formulário do site:** `stormindgames.com/careers` tem um Contact Form 7 de
+candidatura espontânea no HTML, mas ele está **escondido, sem nenhum gatilho visível na página** —
+o único botão real é VIEW OPENINGS, que leva ao BambooHR. Medido no navegador de verdade.
+
+**Duas armadilhas desta página, as duas medidas:**
+1. O campo **Country já vem preenchido com `United States`**. Trocar para `Brazil`.
+2. Existe um **radio obrigatório** *"Is your English proficiency level at least B2? (Please note
+   your English level will be tested during the recruiting process)"* → **Yes**.
+
+| Campo | O que preencher |
+|---|---|
+| First / Last Name * | `Vini` / `Cavalcanti` |
+| Email * | `contact@vinicavalcanti.art` |
+| Phone * | `+55 81 97306 2286` |
+| Address / City / State / ZIP | os de sempre (documento privado do Drive) |
+| Country | trocar `United States` por `Brazil` |
+| Cover Letter * | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume * | `Vini_Cavalcanti_CV.pdf` |
+| Date Available | cerca de dois meses à frente |
+| Desired Pay | `Around EUR 45,000 per year. Open to aligning with your band for the role.` |
+| Website, Blog or Portfolio | ArtStation |
+| LinkedIn URL * | LinkedIn |
+| Highest Education Obtained / College | escolaridade e universidade |
+| Who referred you / References | deixar vazio |
+| English proficiency at least B2 * | **Yes** |
+| Please attach any relevant document or portfolio | opcional, pode ir o PDF do portfólio |
+| Referred by a current employee | deixar vazio |
+| Consentimento GDPR (EU 2016/679) * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+## 5. The Knights of Unity — candidatura espontânea (Wrocław, Polônia) — à mão por reCAPTCHA v2
+
+**Link:** https://theknightsofunity.elevato.net/pl/nie-znalazles-interesujacego-cie-stanowiska,ja,58
+(a página tem alternador PL / EN no topo)
+**O ATS é o Elevato**, que é **ATS novo para esta campanha** e vale conhecer: formulário completo,
+com **até quatro arquivos de CV**, pretensão salarial, aviso prévio e campo de informação adicional.
+**O que trava:** reCAPTCHA v2 de caixa de marcar (`api.js` sem `render=`, com `div.g-recaptcha` e
+`data-sitekey`, que é a assinatura do v2).
+
+| Campo (rótulo em polonês) | O que preencher |
+|---|---|
+| Imię * | `Vini` |
+| Nazwisko * | `Cavalcanti` |
+| Adres e-mail * | `contact@vinicavalcanti.art` |
+| Telefon komórkowy * | `+5581973062286` |
+| Jakie stanowisko Cię interesuje? (que cargo te interessa) | `Senior 3D Character Artist / Character Modeler` |
+| Plik CV (até 4 arquivos, máx 4 MB cada) | `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Kwota (pretensão) | `EUR 45,000` |
+| Okres wypowiedzenia (aviso prévio, select) | cerca de dois meses |
+| Adres e-mail de quem indicou | deixar vazio |
+| Informacja dodatkowa (informação adicional) | o texto abaixo |
+| Zgoda (consentimento de dados) * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+```
+I WANT TO RELOCATE to Wroclaw and I am fully open to moving for the role, on site and full time. Remote also works, since I already work every day with a studio in another country and time zone.
+
+Senior 3D Character Artist with more than 10 years in stylized characters. Almost five years as Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Credited on season 1 of The Wingfeather Saga at Angel Studios, where I modeled and hand painted characters. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+As a Senior I review other artists' work, set the asset standard and mentor junior artists; I also teach as founder of my own character art school and I am a master's candidate.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+```
+
+## 6. Milestone — General Application (Milão) — à mão por DATA DE NASCIMENTO, não por captcha
+
+**Link:** https://milestone.it/general-application/ (chega-se por milestone.it/careers → *Send your
+spontaneous application*)
+**Por que vale:** Milestone é casa grande italiana, de *MotoGP*, *Hot Wheels Infinite Rush*,
+*Screamer* e *Ride*. O ATS é o **Cezanne** (`cezanneondemand.intervieweb.it`, IdForm 1108), dentro
+de iframe, e é **ATS novo para a campanha**.
+**Por que ficou à mão, e é um motivo diferente de todos os outros desta rodada:** o reCAPTCHA deles
+é **invisível e não barrou nada**. O que barra são dois campos obrigatórios que a automação não
+responde: **Home Address**, que é widget de autocomplete de endereço, e **Date of birth**, que é
+dado que eu não invento em formulário. O envio devolve *"Some required fields are empty or
+incorrect. Fill in all fields marked with *"* e marca esses dois em vermelho.
+
+**Tudo o mais já foi preenchido e conferido por leitura de volta**, então é só repetir:
+
+| Campo | O que preencher |
+|---|---|
+| First Name / Surname | `Vini` / `Cavalcanti` |
+| E-Mail / Confirm E-Mail | `contact@vinicavalcanti.art` nos dois |
+| **Home Address** (obrigatório) | escolher da lista do autocomplete; o endereço está no documento privado do Drive |
+| Mobile phone number | o widget vem em `+1`: digitar `+5581973062286` faz ele virar `+55` sozinho, conferido |
+| **Date of birth** (obrigatório) | **só você tem esse dado** |
+| Total years of experience | `10` |
+| Functional Area (select) | `Creativity` |
+| Portfolio Link | `https://www.artstation.com/viniciuscavalcanti` |
+| Education Qualification (select) | `Post lauream Specialization` |
+| Skills | ZBrush, Maya, Blender, Substance Painter, Substance Designer, Houdini, Unreal, Unity |
+| CV (máx 5 MB) | `Vini_Cavalcanti_CV.pdf` |
+| Privacy (informativa art. 13 GDPR) | marcar |
+
+**Não há campo de mensagem livre neste formulário**, então a frase de realocação e o caso de visto
+só cabem na carta, que aqui não tem campo: vale mandar o CV com a carta no mesmo PDF, ou escrever
+depois para o RH deles.
+
+## 7. Gamious — candidatura espontânea (Haarlem, Holanda) — à mão por reCAPTCHA v3
+
+**Link:** https://gamious.com/jobs/
+**Por que conta como porta:** a página diz que não há vaga aberta agora **mas convida a escrever
+assim mesmo** e pede, com todas as letras, *"Don't forget a link to your portfolio and/or resume"*.
+Encaixe fraco de urgência, mas é porta aberta declarada.
+**O que trava:** Contact Form 7 com reCAPTCHA v3; a tela devolveu *"There was an error trying to
+send your message. Please try again later"*. Não há campo de arquivo.
+
+- Name: `Vini Cavalcanti` · E-mail: `contact@vinicavalcanti.art`
+- Subject: `Senior 3D Character Artist / Character Modeler - open application`
+- Your message:
+
+```
+Your jobs page says to reach out even when nothing is listed, so here I am.
+
+I WANT TO RELOCATE to the Netherlands and I am fully open to moving for the role, on site and full time. Remote also works: I already work every day with a studio in another country and time zone.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unity and Unreal. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+Your games are stylized and character driven, which is the register I work in natively, and I take a character end to end rather than one step of it.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio and resume: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+Happy to send the CV in PDF by reply.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Phone: +55 81 97306 2286
+```
+
+## 8. VSTEP (Roterdã) — não é captcha, é bloqueio de rede contra nós
+
+**Link:** https://vstepsimulation.com/careers/
+O host **derruba a conexão** (`Recv failure: Connection reset by peer`) por curl **e** pelo
+navegador de verdade, em `vstepsimulation.com` e em `vstep.nl`, na raiz e em `/careers`. Pela regra
+de 06/09 isso não prova vaga morta nem site fora do ar: prova bloqueio contra o nosso IP. O CSV de
+portas registra Gravity Forms no site deles. **Abra no seu navegador antes de descartar.**
