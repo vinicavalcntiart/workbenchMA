@@ -356,6 +356,21 @@ aparece também como Chief Operating Officer de VFX do grupo Cinesite, e onde o 
 CG cobre as três marcas. Cada casa mantém o próprio domínio, então **não se troca um pelo
 outro**: gente da Image Engine é `image-engine.com`, gente da Cinesite é `cinesite.com`.
 
+## Luma Pictures — provado em 06/09, e a prova final veio do site deles
+
+**`nome + inicial do sobrenome@lumapictures.com`**.
+
+Três endereços reais, e o terceiro é o que fecha a conta porque está publicado pela própria
+Luma: `palm@` (Pal Mezei) e `paulm@` (Paul Molodowitch) saíram do log de commits do
+OpenColorIO e do OpenImageIO, e `ericr@` (Eric Robertson, New Business) está na página
+About do site deles, ao lado de `pr@` e de `recruiting@lumapictures.com`.
+
+**Por que importa:** a Luma é estúdio de VFX independente desde 2002, com cerca de 300
+pessoas em Santa Monica, **Melbourne** e **Vancouver**, ou seja, cobre a Oceania e o cluster
+mais denso da campanha de uma vez, e tem mais de 100 longas no currículo.
+
+**Quantos endereços provam:** 3, sendo um publicado pelo próprio estúdio.
+
 ## Não provados, registrados para não se perder
 
 - **Epic Games.** Só um endereço real encontrado, `matt.johnson@epicgames.com`, no log de
@@ -371,6 +386,19 @@ outro**: gente da Image Engine é `image-engine.com`, gente da Cinesite é `cine
   `naughtydog.com`, sem nenhum endereço real conhecido. É o mesmo tipo de chute entre divisões
   que foi recusado para Wendell Dalit no mesmo dia, e aceitar num caso e recusar no outro seria
   incoerência. Grassetti segue **sem via**.
+- **Atomic Cartoons.** Um endereço real, `n.yue@atomiccartoons.com` (Nicholas Yue), no log de
+  commits dos repositórios da Academy Software Foundation, na forma **inicial do nome, ponto,
+  sobrenome**. Um só não prova. Fica marcado até aparecer o segundo, e por isso o Joey Wilson,
+  Head of CG Assets deles, entrou no `pessoas.csv` com confiança **baixa** e não média.
+- **Digital Domain.** Um endereço real, `fredriks@d2.com` (Fredrik Salomonsson), na forma
+  nome mais inicial, e num domínio legado (`d2.com`) e não no `digitaldomain.com` público.
+  Não serve para construir. Isso mantém a **Kasita Wonowidjojo**, Senior Texture Painter de
+  lá, guardada sem via.
+- **Method Studios** (`nome.sobrenome`, dois endereços: `blair.tennessy@` e `robert.minsk@`) e
+  **Nvizible** (`nome.sobrenome`, dois endereços: `ben.deluca@` e `hugh.macdonald@`) têm forma
+  consistente, mas as duas casas encolheram ou fecharam a operação de VFX, então o padrão fica
+  registrado sem valor prático.
+- **Mikros Image**: `cnt@` e `mfe@`, iniciais puras, não construível.
 - **Framestore.** Um endereço real, `kevin.wheatley@framestore.com` (OpenUSD), na forma
   `nome.sobrenome`. Um só não prova. Fica marcado até aparecer o segundo.
 - **DNEG, com a descrição corrigida em 05/09.** Agora são OITO endereços reais: `axs@`
