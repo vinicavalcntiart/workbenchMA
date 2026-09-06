@@ -568,3 +568,38 @@ fila**, porque o captcha é do BambooHR e não do estúdio: aparece igual na ICO
 | Please choose your level of experience | `Senior` |
 | Please select your current work status for Canada | `Work Permit Required` (é a verdade) |
 | Anything else we should know? | `I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role. My academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.` |
+
+## Rodeo FX, Senior Lookdev Artist (Toronto e Montréal) — pronto para mandar à mão
+
+**Links:** Toronto https://jobs.smartrecruiters.com/RodeoFX/744000144123709-senior-lookdev-artist-multiple-positions
+· Montréal https://jobs.smartrecruiters.com/RodeoFX/744000145587059-senior-lookdev-artist-multiple-positions
+
+**Por que à mão:** SmartRecruiters com **DataDome**. Medido em 06/09: a página renderiza **zero
+caractere** no navegador de verdade, que é a assinatura do bloqueio e não erro de rede.
+
+**Por que vale:** Rodeo FX é casa grande de Montréal, dona da Mikros, e a de **Toronto é Canadá
+anglófono**, que é a prioridade número um. Permanente, tempo integral. A campanha nunca tinha
+consultado o quadro deles: o token do SmartRecruiters é `RodeoFX` e tem 30 vagas.
+
+| Campo | O que escrever |
+|---|---|
+| Nome, email, telefone | `Vini` / `Cavalcanti` / `contact@vinicavalcanti.art` / telefone do doc privado do Drive |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Anos em lookdev ou texturização | `10+` (o anúncio pede no mínimo 6) |
+| Autorização de trabalho no Canadá | **Não**, precisa de patrocínio. Nunca mentir aqui |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+| Realocação | `I WANT TO RELOCATE to Toronto and I am fully open to moving for the role, on site and full time.` |
+
+**A ressalva do realismo, que é o ponto fraco da candidatura e tem resposta pronta.** O anúncio
+pede texturização **realista** e fotorrealismo, e o portfólio dele é estilizado. Não esconda,
+responda assim:
+
+```
+My portfolio is mostly stylized, but every sculpt starts from realistic anatomy and I'm comfortable delivering realistic organic models in ZBrush with clean game topology, UVs and PBR texturing. I work daily with PBR workflows, UVs, color management and displacement, in Substance Painter and Designer and in Houdini, where I also handle grooming. Nuke and Mari are the two tools on your list I would be picking up rather than bringing, and I would rather say that plainly than overstate it.
+```
+
+**Terceira vaga, com alerta:** existe também `Artiste de développement visuel Senior`, que é
+literalmente metade do título dele, mas é a **única das três publicada só em francês**, sem versão
+em inglês, enquanto as duas de Lookdev saíram nas duas línguas. Confirme a exigência de idioma
+antes de investir, porque francês já derrubou duas candidaturas desta campanha.
