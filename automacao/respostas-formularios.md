@@ -1579,3 +1579,32 @@ Tudo o mais preenche: 12 de 12 campos, CV sobe para o serviço do Wix (o nome do
 | Workplace options | marcar Studio, Remote e Hybrid |
 | Rate expectation | Open to aligning with your band for the role; as a reference, around CAD 48/hour, or CAD 95,000 per year equivalent. |
 | How did you hear about this role? | Your careers page. |
+
+## ICON Creative Studio — Intermediate Modeling/Texture Artist, Vancouver — A VAGA MAIS IMPORTANTE DA FILA
+
+**Link:** https://iconcreative.bamboohr.com/careers/136
+**Por que esta é a número um por chance de contratação:** é a disciplina literal dele (modelar e texturizar em Maya, com Substance Painter e ZBrush, topologia e UV, e o anúncio cita Houdini como diferencial); a faixa é **publicada, CAD 63.131 a 85.000**; a posição é **sindicalizada**; e há **dois sinais de visto que quase nenhum estúdio dá**: eles dizem que o time vem do mundo inteiro e mantêm uma vaga aberta de **RCIC Immigration Coordinator**, ou seja, tratam imigração dentro de casa. É a maior casa de animação CG independente do Canadá, com mais de mil artistas, entregando para Netflix, Disney+, Apple TV+, Amazon, Peacock e Paramount+.
+**Conferido em 06/09 às 23h45:** o quadro tem **28 vagas** e esta é a **única** da disciplina dele. Não existe versão sênior de modelagem lá, então é esta ou nenhuma.
+**Ressalvas honestas:** o nível é intermediário, não sênior, e é presencial em Vancouver.
+
+**Parede confirmada, não vale insistir:** o formulário do BambooHR termina em **reCAPTCHA v2 de caixa** (o iframe vem com `size=normal` e `render=explicit`). Não é caso mal diagnosticado como a SQRT3 e a Distillery foram.
+
+**O formulário fica atrás do botão Apply** e tem 17 campos. Preenchimento:
+
+| Campo | Resposta |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | seu número, com o código do país na frente |
+| Address / City / Postal Code | os do documento privado do Drive, "CAMPANHA - dados pessoais dos formulários" |
+| Province | Pernambuco |
+| Country | Brazil |
+| Choose File (obrigatório) | Vini_Cavalcanti_CV.pdf |
+| Date Available | dentro de 30 dias da oferta |
+| **Desired Pay** | Aligned with the posted range for the role, at the lower end (CAD 63,131). Open to aligning with your band. |
+| Website, Blog or Portfolio | https://www.artstation.com/viniciuscavalcanti |
+| LinkedIn URL | https://www.linkedin.com/in/vinicavalcnti/ |
+
+**Atenção:** há um campo armadilha chamado "Please leave this field blank" (`nickname_hpcsaf`). É caça-robô: **deixe vazio**.
+
+**Se houver campo de mensagem ou o formulário permitir carta:** diga que você QUER REALOCAR para Vancouver, que precisa de patrocínio de visto, e cite a láurea, a especialização, o mestrado em andamento, o IELTS e as publicações como caso de visto. Com o RCIC deles, essa é a informação mais útil que você pode dar.
