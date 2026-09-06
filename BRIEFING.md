@@ -64,6 +64,18 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
     o nome do estúdio e a URL. **Toda entrada de candidatura passa a guardar o ID DA REQUISIÇÃO
     no ATS** (`ovLGAfwg` no Jobvite, `internal_job_id` no Greenhouse, o uuid no Lever e no
     Ashby, o número da vaga no BambooHR). Nome de estúdio e URL não identificam requisição.
+    **Terceira extensão, escrita em 06/09 depois do erro pela terceira vez, e ela é a mais
+    desconfortável porque o id do ATS também falhou.** Apliquei na `4363748003` da Sony Pictures
+    Imageworks, anunciada no quadro deles como **Modeler** em Vancouver, e o email de confirmação
+    que chegou dois minutos depois nomeia a posição como **Experienced Modeler**, que é a
+    requisição já enviada em 02/09. O anúncio de Modeler é casca: aponta para a requisição do
+    outro. Some-se que a própria Imageworks tinha escrito em 14/08 dizendo que a **Modeler foi
+    preenchida**, e que os quatro anúncios de modelagem e textura deles não são atualizados desde
+    28 de maio. Duas regras novas saem daí: **(a) quem diz qual requisição recebeu a candidatura é
+    o EMAIL DE CONFIRMAÇÃO**, então ler o email antes de registrar vitória, porque o id do anúncio
+    pode mentir; **(b) a CAIXA DE EMAIL guarda candidatura pré-campanha que os CSVs não têm** — as
+    de 12/07 na Modeler e na Texture Artist estavam lá e eu não olhei. Antes de aplicar em casa que
+    ele já tocou antes de 26/08, buscar no Gmail confirmação antiga daquele domínio.
 19. **Código de segurança do Greenhouse: a espera é da sessão, não da caixa (05/09).** O Greenhouse
     passou a exigir código por email antes de aceitar o envio. A automação espera seis minutos com
     o navegador aberto e o formulário já preenchido; se ninguém entregar o código nesse prazo, todo
