@@ -12,6 +12,13 @@
 // - pega o HTML do rascunho, acrescenta a assinatura que você usa (a marcada como padrão em Configurações > Assinatura),
 // - anexa os dois PDFs, envia e o rascunho sai da caixa de rascunhos.
 // Ele NÃO mexe em rascunhos com outro assunto.
+//
+// DUAS FUNÇÕES, DUAS COTAS DIFERENTES, e é isso que dá a saída para o teto de 100 por dia:
+//   prepararRascunhos()  -> completa o rascunho com assinatura e anexos e NÃO envia nada.
+//                           Gasta a cota de leitura e escrita do Gmail, que é enorme. Depois é
+//                           só disparar pela interface do Gmail, que tem teto próprio e maior.
+//   enviarRascunhos()    -> completa E envia. Gasta a cota de ENVIO, a que trava em 100 nesta conta.
+// Se a cota de envio estiver zerada, use a primeira e mande à mão.
 
 const ASSUNTO = "Senior Character Artist · Wingfeather Saga credit · stylized + grooming";
 const PASTA_DRIVE_ID = "1A3lzDurErp2bHh9s8jbEW7TLMnswxmi8";
@@ -136,6 +143,51 @@ function enviarTeste() {
              + "<br><br>-- <br>" + assinatura();
   GmailApp.sendEmail(eu, "TESTE campanha: assinatura e anexos", "Teste do envio automático da campanha.", { htmlBody: html, attachments: anexos(), name: "Vini Cavalcanti" });
   Logger.log("teste enviado para " + eu);
+}
+
+/* PREPARA os rascunhos sem enviar NENHUM, ideia do Vini em 06/09 e ela resolve o teto de 100.
+ *
+ * POR QUE FUNCIONA: o Apps Script tem DUAS cotas diferentes e independentes. Enviar email gasta
+ * a cota de envio, que nesta conta é de 100 por janela de 24 horas. Ler e ESCREVER rascunho gasta
+ * outra cota, a de leitura e escrita do Gmail, que é de dezenas de milhares por dia e nunca chegou
+ * perto do limite nesta campanha. Como o enviarRascunhos() já fazia d.update() e só depois d.send(),
+ * basta ficar com a primeira metade: o rascunho sai daqui COMPLETO, com assinatura, os dois PDFs
+ * anexados e os links já desembrulhados, e o disparo passa a ser feito à mão pelo Gmail.
+ *
+ * O QUE MUDA NA PRÁTICA: o envio pela interface do Gmail tem teto próprio e muito maior que o do
+ * script, então os 75 rascunhos deixam de esbarrar no limite. O preço é clicar em enviar um por um.
+ *
+ * RODAR DE NOVO É SEGURO: rascunho que já tem os dois anexos é pulado, senão a assinatura entraria
+ * duas vezes no corpo.
+ *
+ * O QUE ELA NÃO RESOLVE, e continua valendo: disparar tudo de uma vez, de um domínio jovem, é o que
+ * arrisca a reputação. Mande em levas, não os 75 de uma sentada.
+ */
+function prepararRascunhos() {
+  const sig = assinatura();
+  const files = anexos();
+  const rascunhos = GmailApp.getDrafts().filter(d => d.getMessage().getSubject() === ASSUNTO);
+  Logger.log(rascunhos.length + " rascunhos da campanha encontrados. Esta função NÃO envia nada.");
+  let feitos = 0, pulados = 0;
+  for (const d of rascunhos) {
+    if (feitos >= MAX_POR_EXECUCAO) {
+      Logger.log("PAREI NO LIMITE DA EXECUÇÃO: " + (rascunhos.length - feitos - pulados)
+        + " ficaram para a próxima rodada. Não é erro, é o limite de 6 minutos do Apps Script.");
+      break;
+    }
+    const m = d.getMessage();
+    const para = m.getTo();
+    if (!para) { pulados++; continue; }
+    if (m.getAttachments().length >= NOMES_ANEXOS.length) { pulados++; continue; }
+    const html = limparLinks(m.getBody()) + "<br><br>-- <br>" + sig;
+    const texto = limparLinks(m.getPlainBody());
+    d.update(para, ASSUNTO, texto, { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
+    feitos++;
+    Logger.log("pronto para enviar à mão: " + para);
+  }
+  Logger.log(feitos + " rascunhos completados com assinatura e anexos, " + pulados
+    + " pulados por já estarem prontos ou sem destinatário. Cota de envio gasta: ZERO.");
+  Logger.log("Agora abra o Gmail, confira o primeiro e dispare pela interface, em levas.");
 }
 
 function enviarRascunhos() {
