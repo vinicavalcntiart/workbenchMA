@@ -1331,3 +1331,98 @@ O host **derruba a conexão** (`Recv failure: Connection reset by peer`) por cur
 navegador de verdade, em `vstepsimulation.com` e em `vstep.nl`, na raiz e em `/careers`. Pela regra
 de 06/09 isso não prova vaga morta nem site fora do ar: prova bloqueio contra o nosso IP. O CSV de
 portas registra Gravity Forms no site deles. **Abra no seu navegador antes de descartar.**
+
+### Cosmico (Suécia), SENIOR 3D ARTIST — À MÃO porque o Squarespace recusa a automação
+
+**Link:** https://www.cosmicogames.com/career (o botão **SENIOR 3D ARTIST →** leva para
+https://www.cosmicogames.com/contact, que é a porta que o próprio estúdio publicou para a vaga)
+
+**O achado:** a página de carreiras da Cosmico só monta em JavaScript e por isso o curl a deu
+como sem vaga. Renderizada, ela lista **três vagas abertas: SENIOR 3D ARTIST, WRITER e
+ENVIRONMENT ARTIST**. A primeira é a disciplina dele em nível dele.
+
+**Por que à mão:** o formulário é Squarespace e não tem captcha visível, mas o
+`POST /api/form/SaveFormSubmission` volta **401** e a tela responde *"Unable to submit form.
+Please try again later."* É o anti-robô do Squarespace recusando a sessão automatizada, do
+mesmo tipo do reCAPTCHA invisível da Netflix. No navegador dele passa.
+
+**Armadilha:** o formulário tem um **campo isca** (`id=message-field`) que fica invisível e
+não pode ser preenchido, senão o envio é descartado como spam. Preencha só Name, Email e
+Message.
+
+**Ressalva honesta:** não há campo de anexo, então o currículo não vai. Os links do portfólio
+precisam estar no texto, e estão.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Message | o texto abaixo |
+
+```
+Applying for the SENIOR 3D ARTIST role listed on your careers page. I WANT TO RELOCATE and I am fully open to moving to Sweden for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, and I take an asset end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, in Maya, ZBrush, Substance Painter and Designer and Blender. I also groom hair and fur in Houdini, so character, texture and groom are one continuous job for me rather than three handoffs.
+
+I am credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted the characters, and for almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt to engine while working fully remote from another country and time zone. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. Your studio works in stylized worlds, which is exactly my register.
+
+As a Senior of five years I review other artists' work and set the asset standard; I also teach as the founder of my own character art school and I am a master's candidate.
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site: https://vinicavalcanti.com
+```
+
+### Achado que é da fila de EMAIL, não de formulário: THQ Nordic Mobile / HandyGames
+
+**Vaga:** 2D/3D Game Artist (Mid-level/Senior) (f/m/d), **HandyGames Studios GmbH**,
+Giebelstadt perto de Würzburg, Alemanha, **presencial**, parte do **Embracer Group**.
+**Link:** https://www.thqnordicmobile.com/en/jobs/2d-3d-game-artist/
+
+**Por que entra aqui:** o quadro deles não existe sem JavaScript e o curl marcou o domínio
+como sem vaga. Renderizado, ele mostra seis anúncios, e este é **arte de verdade e no nível
+dele**: o texto pede *"Execution of the entire game asset creation workflow: from high- and
+low-poly modeling to PBR texturing and integration into the game engine (Unity)"*,
+*"Creation of stylized 3D models, environments, props, and potentially characters"* e
+*"mentoring junior artists and interns"*. É o fluxo inteiro que ele faz todo dia, em estilizado,
+com mentoria, que é a resposta de liderança já fechada como SIM.
+
+**Não é candidatura de formulário:** o botão **APPLY NOW!** é um `mailto:` para
+`jobs@thqnordicmobile.com` com o assunto já montado
+(`Application as 2D/3D Game Artist (Mid-level/Senior)`). Por isso ela **sai da fila do Jhon e
+vai para a fila de email**, com currículo e carta anexados. Atenção: **Alkimia Interactive
+(THQ Nordic Barcelona) já foi contatada** em 02/09, mas é outro estúdio e outro endereço; esta
+não é repetição.
+
+### O que a fila JS-SO mostrou e não virou candidatura, com o motivo
+
+Registrado para a próxima rodada não reabrir o que já foi lido no navegador de verdade em 06/09:
+
+- **Nixxes Software (PlayStation Studios, Utrecht)**: quadro vivo, **só Graphics Programmer e
+  Senior Optimization Programmer**. Sem candidatura espontânea.
+- **InnoGames (Hamburgo)**: o quadro é **Lever europeu** (`api.eu.lever.co/v0/postings/innogames`),
+  **5 vagas**, nenhuma de arte e nenhuma espontânea. O site linka só a âncora `#c926`, por isso
+  a varredura por curl não achava nada.
+- **Hazelight (Estocolmo)**: página de carreiras renderiza **zero vaga**.
+- **Paradox Interactive**: 22 vagas, a única de personagem é **estágio** de 3D Character Art,
+  abaixo do nível dele. A via foi o banco de talentos, já feita.
+- **Aonic** e **Rift Consulting** (Suécia): Teamtailor com 2 e 3 vagas, todas de engenharia e
+  jurídico. Sem arte.
+- **Sandbox Interactive (Albion Online, Berlim)**: tem **Lead 3D Environment Artist**, mas o
+  formulário exige, em campo obrigatório, **anos de experiência em arte de cenário** e um
+  **link de portfólio mostrando assets 3D de cenário**. O portfólio dele é de personagem e não
+  tem esse material, então responder seria inventar. Descartada por exigência do anúncio.
+- **RaceWard Studio (Nacon, Milão)**, **The Game Kitchen (Tenerife)**, **Gamedia (Alkmaar)**,
+  **Inverge (Valência)**, **Blue Brain Games**, **EB Studio (Suécia)**, **Beartwigs**,
+  **Frostrok**, **Strelka Games**, **Throughline Games**: a porta é **email**, não formulário.
+  Vão para a fila de email. A Gamedia ainda exige morar a **até 40 km de Alkmaar**.
+- **Mooneye Studios (Hamburgo)**: sem vaga; só procura freelancer de **concept art de cenário**.
+- **Villain Studios (Amsterdã)**: tem candidatura espontânea, mas é produtora de reality e
+  documentário, e as áreas são criação, produção e pós. Fora da disciplina.
+- **DigiTales**, **Bippinbits**, **BiteMe Games**, **Bloom and Gloom**, **Convoy Games**,
+  **Crunchy Leaf**, **Ember Trail**, **Tiny Bull**, **Barrel Roll Games**: a página renderizada
+  diz, com todas as letras, que **não há vaga** e várias pedem para **não** mandar espontânea.
+- **On a Roll Studio**: o domínio da fila é `tumblr.com` e cai no quadro da **Automattic**, que
+  não é o estúdio. Registro errado na fila de origem.
