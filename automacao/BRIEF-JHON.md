@@ -217,3 +217,71 @@ Resumo em português dizendo, nesta ordem: **quantas candidaturas foram ENVIADAS
 tela**, com estúdio, cargo, país e o texto da confirmação; quais ficaram à mão e por qual captcha,
 com o dossiê já escrito; o que foi descartado e o motivo, quando o motivo for do anúncio e não
 dele; e **quantas ainda sobram na fila**, que é o número que mede se o Jhon está fazendo o trabalho.
+
+## Fatia MOTOR-A medida por inteiro em 06/09, e o que ela ensina sobre o tipo `MOTOR`
+
+Sessenta estúdios de Europa continental, todos classificados `MOTOR` (Contact Form 7, Gravity,
+Elementor, WPForms, Forminator, Formidable, Caldera, FluentForm, Ninja). Resultado bruto: **15
+duplicados**, **3 candidaturas enviadas e confirmadas**, **2 paredes de captcha com dossiê**, **1
+porta quebrada do lado do estúdio** e **39 sem porta de candidatura nenhuma**.
+
+**A linha do brief que dizia "a maioria é fale conosco disfarçado" ficou medida: de 45 estúdios não
+duplicados, exatamente UM tinha campo de arquivo no formulário** (EF Games, e é justamente o único
+com vaga aberta de modelagem). Nos outros 44 o `type="file"` que a varredura por curl acusava era o
+**CSS do plugin Contact Form 7** (`contact-form-7/includes/css/styles.css`), não um campo de
+verdade. **Detector de porta que procura `type=file` no HTML bruto conta folha de estilo como
+formulário de candidatura.** Filtre `.css` antes de contar.
+
+**O que fez diferença para achar as três portas boas**, e vale repetir na fatia B e nas próximas:
+não foi o formulário, foi **o texto da página de carreiras**. As três que valeram diziam, com
+todas as letras, que recebiam perfil:
+
+- **Code Horizon** (Polônia): *"The recrutation is currently closed but feel free to drop your CV
+  through contact form"*. Quando a página de carreiras aponta para o formulário de contato, aquele
+  formulário **deixa de ser genérico** e vira a porta designada por eles. Caldera, sem captcha.
+- **Abylight Barcelona**: *"We review and archive every profile we receive to consider them for our
+  current and future selection processes"*, com a lista de vagas vazia. Gravity Forms.
+- **Frame Break**: o site é WordPress, mas a porta real estava em `jobs.<dominio>`, um **Teamtailor
+  Connect** que a classificação `MOTOR` não enxergava. **Antes de tratar um MOTOR como formulário do
+  site, procure `jobs.`, `careers.` e `career.` no domínio dele.**
+
+**Duas armadilhas novas, medidas:**
+
+1. **reCAPTCHA v3 nem sempre é só pontuação de fundo, às vezes é o portão inteiro.** O brief dizia
+   "tente mesmo assim", e está certo em tentar, mas em 06/09 **duas de três tentativas morreram
+   nele**: a EF Games devolveu `reCAPTCHA V3 validation failed, suspected as abusive usage` e a
+   eXiin devolveu *Failed to send your message*. A Abylight, também WordPress e também com v3 na
+   página, passou. Ou seja: v3 vale a tentativa e o custo dela é baixo, mas **conte com falhar** e
+   já tire o dossiê na mesma rodada, antes de fechar o navegador.
+2. **Caixa de aceite duplicada com `id` E `name` iguais.** Na EF Games as duas caixas do fim do
+   formulário (privacidade obrigatória e contato futuro opcional) compartilham
+   `id="form-field-field_91ffee6"`. É prima da armadilha do gêmeo escondido do Teamtailor, só que
+   aqui as duas são reais: `querySelector` marca uma e deixa a outra. Use `querySelectorAll` e
+   percorra.
+
+**Estúdios desta fatia com veto ESCRITO no próprio anúncio**, para não gastar rodada de novo (a
+frase é deles, com a data em que foi lida):
+
+- **Frictional Games** (06/09): *"We can only consider European (EU/EEA) residents for job
+  positions"*, e todas as vagas do quadro estão marcadas `-CLOSED-`. Freelance só por email.
+- **Finitude** (06/09): as quatro vagas são Narrative Designer, Producer, Senior Programmer e Unity
+  Developer, nenhuma de arte, e *"All available positions are fully remote but generally require you
+  to reside in Germany"*.
+- **Engine Software** (06/09): *"Full Time Positions: We are currently not hiring!"*; estágio só por
+  email.
+- **FDG Entertainment** (06/09): *"Currently no open positions available"*.
+- **Clifftop Games** (06/09): *"Unfortunately, we do not have any open positions at this time"*.
+- **Byte Barrel** (06/09): as cinco vagas do site apontam para o Skillshot e as cinco estão
+  **`Ogłoszenie zarchiwizowane`**, arquivadas, inclusive a de 3D Artist.
+- **Goose Minded** (06/09): o domínio do CSV, `gamedevestonia.ee`, **não é do estúdio**, é da
+  associação GameDev Estonia, e o quadro dela tem anúncio de dois e três anos atrás. Domínio errado
+  na fila, não estúdio sem vaga.
+
+**Só por email, não é formulário** (viram fila de email, não de Jhon): Arclight Creations
+(`jobs@arclightcreations.pl`, e a página diz *"Aktualnie nie prowadzimy rekrutacji"*), Clockstone
+(*"Feel free to get in touch via office@clockstone.com"*), Digital Daredevils (só Technical Artist,
+e por `office@`), Futurats (espontânea por email; as vagas abertas são de programação e design).
+
+**Não deu para avaliar, e não é vaga morta:** `dgmind.com` devolve **403 do LiteSpeed também no
+navegador de verdade**, e `earlymorningstudio.com` e `filimundus.se` derrubam a conexão
+(`ECONNRESET`) por curl e por navegador. Ficam para reconferir de outra rede.
