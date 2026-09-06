@@ -1066,8 +1066,8 @@ Contact Form 7 **sem reCAPTCHA nenhum**, e passou de primeira.
 
 ## Dados que valem para todos os sete
 
-Nome `Vini` / `Cavalcanti` · Email `contact@vinicavalcanti.art` · Telefone `+55 81 97306 2286`
-(em campo único, sem espaços: `+5581973062286`) · Cidade `Olinda, Pernambuco` · País `Brazil`
+Nome `Vini` / `Cavalcanti` · Email `contact@vinicavalcanti.art` · Telefone `o telefone do doc privado do Drive`
+(em campo único, sem espaços: `o telefone do doc privado do Drive`) · Cidade `Olinda, Pernambuco` · País `Brazil`
 Portfólio `https://www.artstation.com/viniciuscavalcanti` ·
 LinkedIn `https://www.linkedin.com/in/vinicavalcnti/` · Escola `https://vinicavalcanti.com`
 Anexos: `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf`
@@ -1134,7 +1134,7 @@ Compensation: open to aligning with your band for the role; as a reference, I am
 
 Work authorisation: I am not an EU or Swiss citizen and I would need a permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
 
-Phone: +55 81 97306 2286
+Phone: o telefone do doc privado do Drive
 ```
 
 ## 3. Grimlore Games (THQ Nordic) — Open Application (Munique) — à mão por reCAPTCHA v2 de caixa
@@ -1176,7 +1176,7 @@ Compensation: open to aligning with your band for the role; as a reference, I am
 
 Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
 
-Phone: +55 81 97306 2286
+Phone: o telefone do doc privado do Drive
 ```
 
 ## 4. Stormind Games — Spontaneous Applications (Acireale e Milão, Itália) — à mão por reCAPTCHA do BambooHR
@@ -1200,7 +1200,7 @@ o único botão real é VIEW OPENINGS, que leva ao BambooHR. Medido no navegador
 |---|---|
 | First / Last Name * | `Vini` / `Cavalcanti` |
 | Email * | `contact@vinicavalcanti.art` |
-| Phone * | `+55 81 97306 2286` |
+| Phone * | `o telefone do doc privado do Drive` |
 | Address / City / State / ZIP | os de sempre (documento privado do Drive) |
 | Country | trocar `United States` por `Brazil` |
 | Cover Letter * | `Vini_Cavalcanti_Cover_Letter.pdf` |
@@ -1231,7 +1231,7 @@ com **até quatro arquivos de CV**, pretensão salarial, aviso prévio e campo d
 | Imię * | `Vini` |
 | Nazwisko * | `Cavalcanti` |
 | Adres e-mail * | `contact@vinicavalcanti.art` |
-| Telefon komórkowy * | `+5581973062286` |
+| Telefon komórkowy * | `o telefone do doc privado do Drive` |
 | Jakie stanowisko Cię interesuje? (que cargo te interessa) | `Senior 3D Character Artist / Character Modeler` |
 | Plik CV (até 4 arquivos, máx 4 MB cada) | `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf` |
 | Kwota (pretensão) | `EUR 45,000` |
@@ -1275,7 +1275,7 @@ incorrect. Fill in all fields marked with *"* e marca esses dois em vermelho.
 | First Name / Surname | `Vini` / `Cavalcanti` |
 | E-Mail / Confirm E-Mail | `contact@vinicavalcanti.art` nos dois |
 | **Home Address** (obrigatório) | escolher da lista do autocomplete; o endereço está no documento privado do Drive |
-| Mobile phone number | o widget vem em `+1`: digitar `+5581973062286` faz ele virar `+55` sozinho, conferido |
+| Mobile phone number | o widget vem em `+1`: digitar `o telefone do doc privado do Drive` faz ele virar `+55` sozinho, conferido |
 | **Date of birth** (obrigatório) | **só você tem esse dado** |
 | Total years of experience | `10` |
 | Functional Area (select) | `Creativity` |
@@ -1321,7 +1321,7 @@ Compensation: open to aligning with your band for the role; as a reference, I am
 
 Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
 
-Phone: +55 81 97306 2286
+Phone: o telefone do doc privado do Drive
 ```
 
 ## 8. VSTEP (Roterdã) — não é captcha, é bloqueio de rede contra nós
