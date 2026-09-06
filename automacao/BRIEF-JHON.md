@@ -44,6 +44,30 @@ Se sobrar tempo, ele volta para a fila, não para a prospecção.
 4. Candidatura espontânea e banco de talentos contam e valem envio, porque casa que abre
    espontânea está dizendo que quer receber.
 
+## O gamedevmap é fonte do Jhon também, e o Vini pediu isso em 06/09
+
+Quando a fila do PORTAIS acabar, ou quando ela só tiver captcha de desafio, o Jhon **não volta para
+prospecção de nome**: ele vai ao `gamedevmap.com` procurar **formulário para enviar candidatura**.
+São 1.273 estúdios já colhidos nas filas `automacao/fila-gamedevmap-*.csv`, e o que interessa ali é
+quem tem porta de candidatura aberta, não quem tem endereço de email.
+
+**Três coisas já foram medidas em 06/09 e poupam o trabalho de refazer:**
+
+1. **Quinze estúdios têm ATS conhecido**, e todos foram consultados: zero vaga de arte aberta. A
+   lista está em `processados.csv` sob `varredura-carreiras-1273`. Não vale repetir tão cedo.
+2. **Dezesseis estúdios têm FORMULÁRIO PRÓPRIO no site**, fora de qualquer ATS, e esses **nunca
+   foram trabalhados**. A fila está em `automacao/fila-jhon-formulario-proprio.csv`, com o domínio e
+   o caminho onde o formulário aparece. **Comece por ela**, porque é a única parte do gamedevmap
+   que ainda está intocada.
+3. **Cento e dezesseis domínios não recebem email nenhum**, listados em
+   `automacao/dominios-sem-email.csv`. Não vale abrir nem para formulário: domínio que não publica
+   servidor de email costuma ser página de itch.io, wix ou carrd, sem estúdio de verdade atrás.
+
+**Como o Jhon trabalha um formulário próprio**, que é diferente de ATS: abra a página com o
+navegador de verdade, porque quase todos são JavaScript; sonde os campos antes de escrever
+resposta; e desconfie de formulário sem campo de arquivo, que costuma ser só um "fale conosco"
+disfarçado. Formulário genérico de contato não conta como candidatura e não vira `done=true`.
+
 ## A frase que o Vini pediu, e ela é obrigatória
 
 **Em todo formulário de Europa e Canadá, deixar explícito que ele QUER REALOCAR.** Não é "estou

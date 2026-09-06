@@ -1,0 +1,24 @@
+# Fila do Jhon: estudios do gamedevmap que tem FORMULARIO PROPRIO de candidatura no site,
+# fora de qualquer ATS conhecido. Achados em 06/09 relendo as 5.964 paginas de carreira ja
+# baixadas, procurando <form> com campo de arquivo e campo de email na mesma pagina.
+# POR QUE ESTA LISTA EXISTE: a varredura de ATS daquele dia procurou so Greenhouse, Lever,
+# Ashby, Workable, Teamtailor, Recruitee, Personio, BambooHR e afins, e achou 15 quadros em
+# 1.273 estudios. Quem tem formulario proprio ficou invisivel, e o Vini apontou o buraco.
+# Formato: dominio,caminhos onde o formulario aparece
+dominio,caminhos
+altereyes.com,jobs
+cm.games,careers
+devilishgames.com,career,careers,jobs,join-us,vacancies,work-with-us
+digitaldimension.com,careers
+drago-entertainment.com,career,careers
+firechick.de,career,careers,jobs,join-us,vacancies,work-with-us
+fracturedbyte.com,jobs
+ninerocksgames.com,careers
+passion-pictures.com,career,careers,jobs,join,join-us,opportunities,vacancies,work-with-us
+rendercube.pl,join-us
+rubberbandgames.com,career,careers
+scarecrow-studio.com,careers
+talisman.games,career,careers,jobs,join-us,vacancies,work-with-us
+tension.se,career
+thefarm51.com,career,careers
+veomstudio.com,career
