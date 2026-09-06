@@ -435,7 +435,7 @@
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente) | rascunho (não enviado)
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
-const UPDATED = "2026-09-05";
+const UPDATED = "2026-09-06";
 const BUILD = "__BUILD__";
 // Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
 const ALERTA = "";
@@ -453,7 +453,8 @@ const DAILY = [
  ["2026-09-02",245,5],
  ["2026-09-03",12,12],
  ["2026-09-04",2,4],
- ["2026-09-05",17,0]
+ ["2026-09-05",17,0],
+ ["2026-09-06",24,0]
 ];
 const STUDIOS = [
  ["Dreamcraft Entertainment","EUA","jobs@dreamcraft.com",11,"ok"],
@@ -888,29 +889,30 @@ const STUDIOS = [
  ["Zoic Studios","EUA e Canadá","jweitzell@zoicstudios.com",21,"ok","-"],
  ["Amuse Animation","Espanha","info@amuseanimation.com",21,"ok","-"],
  ["Riot Games (Katia Bourykina)","EUA (Los Angeles)","ybourykina@riotgames.com",21,"bounce","-"],
- ["Riot Games (Katia Bourykina, 2ª via)","EUA (Los Angeles)","kbourykina@riotgames.com",21,"rascunho","-"],
- ["Keos Masons (Marco Plouffe)","Canadá (Montréal)","contact@marcoplouffe.com",22,"rascunho","-"],
- ["Ubisoft Massive Entertainment (Jevgeni Laur)","Suécia (Malmö)","jevgeni.laur@ubisoft.com",22,"rascunho","-"],
- ["Wētā FX (Sam Sharplin)","Nova Zelândia (Wellington)","ssharplin@wetafx.co.nz",22,"rascunho","-"],
- ["Netflix Animation / Animal Logic (Bradley Sick)","Austrália (Sydney)","bsick@netflix.com",22,"rascunho","-"],
- ["Image Engine (Barry Poon, Head of Assets)","Canadá (Vancouver)","barryp@image-engine.com",22,"rascunho","-"],
- ["Cinesite (Holger Voss, Group Head of CG VFX)","Canadá e Reino Unido","hvoss@cinesite.com",22,"rascunho","-"],
- ["Joinplay Games","Finlândia (Tampere)","creative@joinplaygames.com",23,"rascunho","-"],
- ["Cornfox & Brothers","Finlândia","support@cornfox.com",23,"rascunho","-"],
- ["10tons","Finlândia (Tampere)","jobs@10tons.com",23,"rascunho","-"],
- ["tinyBuild (Eerie Guest, Roterdã)","Holanda (Roterdã)","jobs@tinybuild.com",23,"rascunho","-"],
- ["appelmoes games","Holanda","hello@appelmoes.games",23,"rascunho","-"],
- ["Abbey Games","Holanda (Utrecht)","info@abbeygames.com",23,"rascunho","-"],
- ["Galaxy Grove","Holanda (Utrecht)","joost@galaxy-grove.com",23,"rascunho","-"],
- ["Horsefly Games","Finlândia","juho@horsefly.games",23,"rascunho","-"],
- ["Channel 37","Finlândia (Helsinque)","contact@channel37.co",23,"rascunho","-"],
- ["Naraven Games","Suíça (Lausanne)","info@naravengames.com",23,"rascunho","-"],
- ["Kalamona Studios","Suíça (St. Gallen)","job@kalamonastudios.com",23,"rascunho","-"],
- ["Kuuasema","Finlândia (Helsinque)","jobs@kuuasema.com",23,"rascunho","-"],
- ["Nitro Games","Finlândia","info@nitrogames.com",23,"rascunho","-"],
- ["Colossal Order","Finlândia (Tampere)","jobs@colossalorder.fi",23,"rascunho","-"],
- ["Atomic Cartoons (Joey Wilson, Head of CG Assets)","Canadá (Vancouver)","j.wilson@atomiccartoons.com",23,"rascunho","-"],
- ["Luma Pictures","EUA (Santa Monica), Austrália (Melbourne) e Canadá (Vancouver)","recruiting@lumapictures.com",23,"rascunho","-"],
+ ["Riot Games (Katia Bourykina, 2ª via)","EUA (Los Angeles)","kbourykina@riotgames.com",21,"bounce","-"],
+ ["Keos Masons (Marco Plouffe)","Canadá (Montréal)","contact@marcoplouffe.com",22,"ok","-"],
+ ["Ubisoft Massive Entertainment (Jevgeni Laur)","Suécia (Malmö)","jevgeni.laur@ubisoft.com",22,"bounce","-"],
+ ["Wētā FX (Sam Sharplin)","Nova Zelândia (Wellington)","ssharplin@wetafx.co.nz",22,"ok","-"],
+ ["Netflix Animation / Animal Logic (Bradley Sick)","Austrália (Sydney)","bsick@netflix.com",22,"bounce","-"],
+ ["Image Engine (Barry Poon, Head of Assets)","Canadá (Vancouver)","barryp@image-engine.com",22,"ok","-"],
+ ["Cinesite (Holger Voss, Group Head of CG VFX)","Canadá e Reino Unido","hvoss@cinesite.com",22,"bounce","-"],
+ ["Joinplay Games","Finlândia (Tampere)","creative@joinplaygames.com",23,"ok","-"],
+ ["Cornfox & Brothers","Finlândia","support@cornfox.com",23,"ok","-"],
+ ["10tons","Finlândia (Tampere)","jobs@10tons.com",23,"ok","-"],
+ ["tinyBuild (Eerie Guest, Roterdã)","Holanda (Roterdã)","jobs@tinybuild.com",23,"ok","-"],
+ ["appelmoes games","Holanda","hello@appelmoes.games",23,"ok","-"],
+ ["Abbey Games","Holanda (Utrecht)","info@abbeygames.com",23,"ok","-"],
+ ["Galaxy Grove","Holanda (Utrecht)","joost@galaxy-grove.com",23,"ok","-"],
+ ["Horsefly Games","Finlândia","juho@horsefly.games",23,"ok","-"],
+ ["Channel 37","Finlândia (Helsinque)","contact@channel37.co",23,"ok","-"],
+ ["Naraven Games","Suíça (Lausanne)","info@naravengames.com",23,"ok","-"],
+ ["Kalamona Studios","Suíça (St. Gallen)","job@kalamonastudios.com",23,"ok","-"],
+ ["Kuuasema","Finlândia (Helsinque)","jobs@kuuasema.com",23,"ok","-"],
+ ["Nitro Games","Finlândia","info@nitrogames.com",23,"ok","-"],
+ ["Colossal Order","Finlândia (Tampere)","jobs@colossalorder.fi",23,"ok","-"],
+ ["Atomic Cartoons (Joey Wilson, Head of CG Assets)","Canadá (Vancouver)","j.wilson@atomiccartoons.com",23,"ok","-"],
+ ["Luma Pictures","EUA (Santa Monica), Austrália (Melbourne) e Canadá (Vancouver)","recruiting@lumapictures.com",23,"bounce","-"],
+ ["Blizzard Entertainment (Linyao Freya Li)","EUA (Irvine)","lli@blizzard.com",21,"bounce","-"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -2157,6 +2159,9 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-06","envio","Você disparou vinte e quatro cartas de uma vez, e seis quicaram","O Apps Script rodou às 03h48 e esvaziou a fila inteira de rascunhos: 18 entregues e SEIS bounces. Quicaram recruiting@lumapictures.com, hvoss@cinesite.com, bsick@netflix.com, jevgeni.laur@ubisoft.com, kbourykina@riotgames.com e lli@blizzard.com. Duas respostas de robô no mesmo minuto: a Kuuasema confirmou o recebimento, e a Cornfox transformou a carta em ticket de suporte no Jira deles, porque o support@ que eles publicam é canal de jogador e não de recrutamento"],
+ ["2026-09-06","alerta","A lição mais cara da campanha: endereço montado por padrão falha em mais de sessenta por cento","Os vinte e quatro envios de hoje deram a primeira medição real de uma coisa que eu vinha tratando como confiável. Separando por origem do endereço: os PUBLICADOS no site do estúdio ou da pessoa foram 17 envios com 16 entregas; os MONTADOS a partir de padrão de domínio tirado de log de commit foram 8 envios com CINCO bounces. O motivo é simples e desconfortável: o log de commit prova que o FORMATO existe, não que a pessoa continua na casa nem que a caixa continua ativa; um endereço de um commit antigo é um endereço morto com o formato certo. E o caso que mais dói é a Luma Pictures, cujo endereço de recrutamento estava publicado na própria página About e mesmo assim quicou, o que mostra que endereço publicado também envelhece. A regra mudou e já está escrita: endereço montado entra no máximo como baixa, e nunca se gasta a única carta de uma casa grande num endereço montado quando existe formulário ou recrutamento publicado"],
+ ["2026-09-06","nao","A Riot Games fica sem via, depois de as duas formas do endereço falharem","O ybourykina@ quicou em 5 de setembro e o kbourykina@, a segunda tentativa, quicou hoje. Some-se que riotgames.com é bloqueado pelo proxy desta máquina, então nem a página oficial abre daqui. A casa tem duas pessoas guardadas, Katia Bourykina e Blair Armitage, as duas Principal Character Artist, e nenhuma via de email. Fica parada até aparecer endereço publicado"],
  ["2026-09-06","porta","A Luma Pictures entrou na campanha, e ela cobre Melbourne e Vancouver de uma vez","Estúdio de VFX independente desde 2002, cerca de 300 pessoas, com escritórios em Santa Monica, Melbourne e Vancouver e mais de cem longas no currículo, de Black Panther a Guardians of the Galaxy. O endereço de recrutamento deles está publicado na própria página About, então é confiança alta, e a carta já está pronta. Junto veio o padrão do domínio provado por três endereços, o que abre a casa inteira para nome de arte que apareça depois. Na mesma rodada entrou Joey Wilson, Head of CG Assets da Atomic Cartoons em Vancouver, que é o cargo exato da sua disciplina numa casa grande canadense que já tinha recebido carta no hr@ sem resposta"],
  ["2026-09-06","envio","Catorze rascunhos novos na Suíça, na Finlândia e na Holanda, e eles vieram de uma fonte que eu achava morta","O gamedevmap voltou a funcionar. O parser da campanha dizia que o site bloqueava esta automação e que o fluxo dependia de você salvar o HTML no seu navegador; testei e não é mais verdade, então baixei os três países que você pediu direto. Deu 239 estúdios que a campanha nunca tinha contatado, 129 deles com time de desenvolvimento. Varri os 129 sites atrás de email publicado, achei 58, e depois filtrei um a um por encaixe real, descartando jogo social de cassino, publicidade, gamificação, jogos de saúde, pixel art e estúdio de uma pessoa só. Sobraram CATORZE com carta escrita e rascunho pronto no Gmail. Os mais fortes: Joinplay Games, de Tampere, que faz um action RPG afro-fantasia onde você joga como Aya e invoca criaturas lendárias em Unreal; Cornfox e Brothers, com Oceanhorn 3 em desenvolvimento; tinyBuild, de Hello Neighbor e Potion Craft, pelo braço de Roterdã; appelmoes, do Mail Time, um jogo inteiro sobre entregar correspondência para criaturas da floresta; e a 10tons, que despeja personagem e criatura estilizados em PC e em todos os consoles"],
  ["2026-09-06","porta","A GIANTS Software, do Farming Simulator, é a segunda porta da campanha na Suíça","Sede em Zurique, e o escritório deles em Brno é descrito pela própria página de carreiras como o núcleo de arte 3D, com artistas especialistas em criação de VEÍCULO E DE PERSONAGEM e animação de personagem. Eles mantêm uma Open Application permanente, que é candidatura espontânea oficial, e o anúncio diz com todas as letras que o emprego é permanente com salário atrativo e bônus, que é o formato fixo que você procura. Ficou à mão porque ao clicar em I am interested o SmartRecruiters joga para o aplicativo oneclick-ui e cai o DataDome, o mesmo muro que trava as suas três candidaturas da Ubisoft. Pedem currículo e carta de apresentação, e as respostas já estão prontas no painel"],

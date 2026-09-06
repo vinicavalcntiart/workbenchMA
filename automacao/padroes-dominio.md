@@ -447,3 +447,36 @@ Los Angeles, Nova York e Vancouver, e o telefone de cada escritório.
 Vancouver, o cluster mais forte desta campanha, e tem vaga de 3D Artist aberta. Com o padrão
 provado, qualquer nome de ARTE da casa que apareça em crédito de série ou entrevista vira
 endereço de confiança média na hora, sem depender de o estúdio publicar o endereço dele.
+
+## AVISO QUE PASSA POR CIMA DE TODOS OS PADRÕES ACIMA (medido em 06/09)
+
+Em 06/09 o Vini disparou 24 cartas de uma vez, e isso deu a primeira **medição real** do
+valor destes padrões. Separando os envios pela origem do endereço:
+
+| Origem do endereço | Enviados | Entregues | Bounces |
+|---|---|---|---|
+| **Publicado** no site do estúdio ou da pessoa | 17 | 16 | 1 |
+| **Montado** por padrão de domínio de log de commit | 8 | 3 | **5** |
+
+**Padrão de domínio falha em mais de 60% das vezes.** Quicaram `jevgeni.laur@ubisoft.com`,
+`bsick@netflix.com`, `hvoss@cinesite.com`, `kbourykina@riotgames.com` e `lli@blizzard.com`.
+Sobreviveram só `ssharplin@wetafx.co.nz`, `barryp@image-engine.com` e
+`j.wilson@atomiccartoons.com`, e este último estava marcado como confiança **baixa**, o que
+mostra que a escala de confiança deste arquivo **não estava prevendo nada**.
+
+**Por que falha, e a explicação é simples e desconfortável:** o log de commit prova que o
+**formato** existe, não que **aquela pessoa** continua na casa nem que a caixa continua
+ativa. Um endereço de um commit de 2019 é um endereço morto com o formato certo.
+
+**O caso que mais dói:** `recruiting@lumapictures.com` estava **publicado na página About do
+próprio estúdio**, ou seja, confiança alta pelo critério do brief, e quicou com 550 5.1.1.
+Endereço publicado também envelhece.
+
+**Como usar estes padrões daqui em diante:**
+
+1. Endereço **publicado** continua sendo a primeira escolha, e agora vale conferir a data da
+   página quando ela mostrar.
+2. Endereço **montado por padrão** entra no máximo como **baixa**, nunca média, e vale como
+   tentativa barata, não como via confiável.
+3. **Nunca gastar a única carta de uma casa grande num endereço montado.** Se a casa tem uma
+   via de formulário ou de recrutamento publicada, ela vem primeiro.
