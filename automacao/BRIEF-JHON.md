@@ -156,6 +156,21 @@ e `probe_bamboo.js` no mesmo diretório, e todos listam campo, tipo, obrigatorie
 Na Metropolis VFX foram quatro tentativas de depuração até descobrir que a pergunta "você mora na
 Espanha?" respondida com "não" era eliminatória. Antes de culpar o script, leia o que a página diz.
 
+**A checagem de duplicidade se faz no GMAIL, não nos CSVs.** Em 06/09 a campanha aplicou pela
+segunda vez na Lead Character Modeling e Blendshape da TAT Productions. O Vini já tinha aplicado
+naquela mesma requisição em **27/08**, e a confirmação daquele dia veio do **mesmíssimo endereço**,
+`jobs.e13168@studio-tat.werecruit.io`, onde `e13168` é o id que está no fim da URL da vaga. O erro
+não foi de leitura de anúncio: foi ter conferido só os CSVs, que começam depois. **Antes de aplicar
+em qualquer casa, busque no Gmail confirmação antiga daquele domínio.** E quando o ATS manda a
+confirmação de um endereço com o id da requisição embutido, esse endereço é a chave de deduplicação
+mais barata que existe: buscar o id no Gmail responde na hora se aquela requisição já foi.
+
+**Cuidado de pontuação ao editar o `docs/index.html`, que quebrou o painel em 06/09.** Toda entrada
+do PORTAIS termina em `",true,"alta"],`: a **aspa fecha a nota antes do booleano** e a **vírgula
+fecha a linha**. Acrescentar texto ao fim de uma nota buscando por `,false,` e concatenando põe o
+texto **fora** das aspas e derruba a página inteira. Rode `sh automacao/valida-dashboard.sh` antes
+de todo commit, sem exceção.
+
 **E o identificador do anúncio não é identidade de vaga.** Na Imageworks o anúncio de "Modeler"
 gerou confirmação nomeando "Experienced Modeler", que já tinha candidatura. Quem diz qual requisição
 recebeu a candidatura é o **email de confirmação**. Além disso, a caixa de email guarda candidatura
