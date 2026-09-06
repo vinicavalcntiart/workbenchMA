@@ -491,3 +491,20 @@ Endereço publicado também envelhece.
 A mesma mineracao reconfirmou o padrao da ILM em treze enderecos distintos (`akunz@`, `brobson@`, `dhess@`, `ehanway@`, `ewimmer@`, `mshooter@`, `pauls@`, `pstanczyk@`, `sboorer@`, `tstraubinger@`, `vlazar@`, `yshu@`), com a excecao ja conhecida de gente de casa antiga que usa so o primeiro nome (`cary@`, `nick@`, `jihun@`), e o da Weta FX em quatro.
 
 LEMBRETE QUE PASSA POR CIMA DISTO: padrao provado continua sendo confianca MEDIA e nada mais. A medicao de 06/09 mostrou que endereco montado por padrao quica em mais de 60 por cento das vezes, porque o padrao prova o FORMATO e nao que a pessoa continua na casa.
+
+## Dois padroes provados em 06/09 pela PAGINA DE CONTATO da MPC, e nao por log de commit
+
+A pagina `mpcvfx.com/contact` publica quatro enderecos de pessoa, com nome e cargo ao lado de cada um.
+Isso prova dois formatos de uma vez, porque a MPC e a The Mill hoje sao a mesma marca sob a TransPerfect
+e a mesma pagina usa os dois dominios.
+
+| Casa | Padrao | Prova, toda publicada na propria pagina de contato |
+|---|---|---|
+| MPC | `nome.sobrenome@mpcvfx.com` | `helene.vanovre@mpcvfx.com` (Executive Producer), `anai.cabanes@mpcvfx.com` (Post-production sales manager), `laurence.hoeters@mpcvfx.com` (VFX Producer, Liege) |
+| The Mill | `nome.sobrenome@themill.com` | `beatrice.bauwens@themill.com` (Director of MPC Paris and Liege, Head of Film & Series) |
+
+**Por que estes dois valem mais que os anteriores:** os padroes deste arquivo saiam quase todos de log de
+commit, e o aviso acima mediu que endereco montado assim quica em mais de 60% das vezes, porque o commit
+prova o formato e nao prova que a caixa continua viva. Aqui a prova e uma pagina de contato que o estudio
+mantem hoje, com o cargo escrito ao lado. Continua sendo padrao, e continua entrando como **baixa** quando
+o endereco for montado; o que melhora e a chance, nao a regra.
