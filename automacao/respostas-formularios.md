@@ -999,6 +999,21 @@ aberta: a via possível é escolher `Other` e declarar a disciplina. Encaixe fra
 contratação anunciada é de programação, mas a porta existe e é espontânea por `Other`.
 Eles oferecem 100% remoto (freelance) ou híbrido presencial em Genebra, à escolha do candidato.
 
+**ONDE EXATAMENTE ELE TRAVA, medido em 06/09 e diferente do que estava escrito antes.** O
+reCAPTCHA v2 não está na última página: está no **fim da página 2**, e a página escreve
+*"Complete the Captcha before you can proceed"* junto do aviso "1 question needs your attention".
+Tudo o que vem antes foi preenchido e conferido por leitura de volta, **inclusive o anexo do
+currículo, que aqui sobe sem problema** (o nome do arquivo aparece na tela). Ou seja: para o Vini
+isso é um minuto de trabalho, é marcar o quadradinho e clicar em Next.
+
+**Página 1:** marcar `Other` e escrever no campo ao lado `Senior 3D Character Artist / Character Modeler`.
+**Página 2:** First Name `Vini`, Last Name `Cavalcanti`, Email `contact@vinicavalcanti.art`,
+Phone o de sempre no formato internacional, Location `Olinda, Pernambuco, Brazil`,
+LinkedIN Profile o de sempre, Website / Portfolio a ArtStation, Other links `https://vinicavalcanti.com`,
+"Anything else we should know?" o texto longo abaixo, "Upload your resume and cover letter" os dois PDFs,
+"How did you hear about this job?" **Company website** (é a verdade: a campanha chegou pelo site deles),
+e "Are you able to work in our Geneva office?" respondida com sim, seguindo a regra de realocação.
+
 ### Rebel Wolves (Varsóvia, Polônia) — eRecruiter, Open Application
 
 **Link:** https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74
