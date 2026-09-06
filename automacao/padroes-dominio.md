@@ -508,3 +508,29 @@ commit, e o aviso acima mediu que endereco montado assim quica em mais de 60% da
 prova o formato e nao prova que a caixa continua viva. Aqui a prova e uma pagina de contato que o estudio
 mantem hoje, com o cargo escrito ao lado. Continua sendo padrao, e continua entrando como **baixa** quando
 o endereco for montado; o que melhora e a chance, nao a regra.
+
+## Rodeo FX — provado em 06/09 pelo codigo aberto da propria casa, e e casa grande NOVA
+
+**`inicial + sobrenome@rodeofx.com`**
+
+| Endereço | Pessoa | Fonte |
+|---|---|---|
+| `cfleche@rodeofx.com` | Charles Flèche | log de commits do OpenWalter, repositório de código aberto da própria Rodeo FX |
+| `glaforge@rodeofx.com` | Guillaume Laforge | idem |
+| `xcui@rodeofx.com` | Xue Cui | idem |
+
+**Quantos endereços provam:** 3, mais a caixa interna `dev@rodeofx.com`.
+
+**Exceção vista:** `lucille@rodeofx.com` (Lucille Caillaud), só o primeiro nome. Então, quando a
+forma principal voltar, o primeiro nome sozinho é a segunda tentativa.
+
+**Por que importa:** a Rodeo FX é casa grande de VFX com sede em Montréal e escritórios em
+Toronto, Québec, Paris e Los Angeles, dona da Mikros Animation, e a campanha só tinha tocado
+nela por banco de talentos (confirmação de 01/09 pelo `notification@rodeofx.com`), sem nenhuma
+carta pessoal. A página de liderança deles publica quinze nomes com cargo, entre eles **Deak
+Ferrand, Head of Art Department**, e **Yvon Jardel, Creative Director de Animation Development**.
+
+**Detalhe de método que vale mais que o padrão:** essa página tinha sido registrada como **404**
+na rodada anterior. Ela não é 404, ela **exige JavaScript**: `curl` recebe a casca do Vue e nada
+mais. Abrindo com o navegador de verdade (`hb_run.sh`) a lista inteira aparece. Antes de dar uma
+página de equipe como inexistente, abrir com navegador.
