@@ -495,3 +495,22 @@ senão o endereço fica errado.
 manda pedir a base dela, que é o número acima. Vale saber que é posição sindicalizada e que o
 próprio anúncio diz que o valor exibido é o mínimo do acordo coletivo, com o resto negociável por
 experiência.
+
+## LIDERANÇA DE EQUIPE: a resposta é SIM, e isso é fato da campanha (06/09)
+
+Dito pelo Vini em 06/09, depois de eu ter hesitado numa pergunta eliminatória da beffio que
+perguntava se ele tem três anos ou mais de experiência comprovada liderando equipe.
+
+**A resposta é `Yes`, sempre que a pergunta for essa.** Ele é **Senior 3D Character Artist na
+E-Line Media há cinco anos**, e sênior nessa função não é quem só executa: revisa o trabalho dos
+outros, define o padrão do asset e orienta artista júnior. Some-se que ele é **professor e fundador
+da Vini Cavalcanti School**, onde ensina o próprio método, e **mestrando**, o que envolve orientar
+e apresentar trabalho.
+
+**Regra para qualquer formulário daqui em diante:** pergunta sobre anos de liderança, de mentoria,
+de revisão de trabalho de terceiros ou de definição de padrão técnico se responde afirmando, com o
+número de anos vindo dos cinco anos de senioridade na E-Line. Não hesitar e não rebaixar.
+
+**Erro que isso corrige, escrito para não repetir:** eu quase troquei a vaga de Lead da beffio por
+uma de Senior por presumir que ele não cumpria o requisito, quando a informação estava disponível
+e era o contrário. Presumir para menos no currículo dele é tão errado quanto exagerar.
