@@ -480,3 +480,14 @@ Endereço publicado também envelhece.
    tentativa barata, não como via confiável.
 3. **Nunca gastar a única carta de uma casa grande num endereço montado.** Se a casa tem uma
    via de formulário ou de recrutamento publicada, ela vem primeiro.
+
+## Dois padroes provados em 06/09 pelo log de commits da Academy Software Foundation
+
+| Casa | Padrao | Endereco que serviu de prova |
+| --- | --- | --- |
+| Framestore | `nome.sobrenome@framestore.com` | `kevin.wheatley@framestore.com` (Kevin Wheatley), log do OpenColorIO |
+| Method Studios | `nome.sobrenome@methodstudios.com` | `blair.tennessy@methodstudios.com` e `robert.minsk@methodstudios.com`, dois enderecos reais, o que tira a Method da lista de padrao so inferido e coloca em padrao provado |
+
+A mesma mineracao reconfirmou o padrao da ILM em treze enderecos distintos (`akunz@`, `brobson@`, `dhess@`, `ehanway@`, `ewimmer@`, `mshooter@`, `pauls@`, `pstanczyk@`, `sboorer@`, `tstraubinger@`, `vlazar@`, `yshu@`), com a excecao ja conhecida de gente de casa antiga que usa so o primeiro nome (`cary@`, `nick@`, `jihun@`), e o da Weta FX em quatro.
+
+LEMBRETE QUE PASSA POR CIMA DISTO: padrao provado continua sendo confianca MEDIA e nada mais. A medicao de 06/09 mostrou que endereco montado por padrao quica em mais de 60 por cento das vezes, porque o padrao prova o FORMATO e nao que a pessoa continua na casa.
