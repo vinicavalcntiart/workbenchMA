@@ -639,3 +639,36 @@ francês no texto.
 **Na versão de Montréal** troque a moeda para dólar canadense e peça `CAD 95,000 per year; open to
 aligning with your band for the role`, e a pergunta de realocação será sobre Montréal, respondida
 igualmente **Yes**.
+
+## Skydance Animation Madrid — Environment Modeling Artist (Lever) — À MÃO por hCaptcha
+
+**Link:** https://jobs.lever.co/skydance/ebbcdae8-e70b-48c3-ba2e-021ff7451fe1/apply
+**Por que à mão:** hCaptcha de imagem aparece SÓ DEPOIS do clique em Submit. Medido em 06/09, desafio "Tap things that break when dropped". Todo o resto do formulário foi preenchido e conferido por leitura de volta antes da parede.
+**Por que vale:** Skydance Animation está sob a PARAMOUNT (a própria descrição da vaga aponta para privacy.paramount.com), então a regra 14 se aplica: vaga de modelagem em casa Paramount é candidatura imediata. Madri, full time, híbrida.
+
+**DUAS ARMADILHAS DO FORMULÁRIO, para não perder tempo:**
+1. O campo **Current location APAGA sozinho** a cada tecla que não casa com sugestão. Não digite: cole "Olinda, Pernambuco, Brazil" de uma vez e não toque mais nele. Deixe por último.
+2. Uma pergunta obrigatória fica **escondida atrás do aviso de cookies**: "Please choose your country of residence". Feche o aviso antes de conferir.
+
+| Campo | Resposta |
+|---|---|
+| Resume/CV | Vini_Cavalcanti_CV.pdf |
+| Full name | Vini Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | +55 81 97306 2286 |
+| Current location | Olinda, Pernambuco, Brazil |
+| Current company | E-Line Media |
+| LinkedIn URL | https://www.linkedin.com/in/vinicavalcnti/ |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Other website | https://vinicavalcanti.com |
+| How did you hear about this position? | Skydance Website |
+| What is your working status in Spain? | **Require work permit** (a verdade) |
+| Please choose your country of residence | Brazil |
+
+**When would you be able to join us?**
+Within 30 days of an offer. If it helps the schedule, I can start remotely while the work permit is being processed, which is how I already work today for a studio in another country.
+
+**Are you willing to work on-site in Madrid (Spain)?**
+Yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in Madrid. I am not an EU citizen and would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I am a Senior 3D Character Artist with more than 10 years in stylized work, credited on The Wingfeather Saga at Angel Studios and almost five years at E-Line Media taking assets from first sculpt to engine. Modeling is the core of what I do: sculpt and high poly, retopology, UVs, baking, texturing and look development in Maya, ZBrush, Substance Painter and Designer and Houdini. Open to aligning with your band for the role.
+
+**Survey demográfico:** opcional, pode deixar em branco.
