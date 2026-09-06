@@ -1468,3 +1468,34 @@ o de recrutamento tem: escope tudo por **`form:has(input[type=file])`**.
 | Wiadomość | o texto de candidatura espontânea (o mesmo do bloco do Knights of Unity serve) |
 | Wgraj swoje CV (PDF, máx 24 MB) | `Vini_Cavalcanti_CV.pdf` |
 | Zgoda (consentimento) | marcar |
+
+## Framestore — 3D Modeller (Short term contract), Montreal — À MÃO por hCaptcha
+
+**Link:** https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme
+**Achada em 06/09 as 22h40** varrendo a API do Recruitee da Framestore por disciplina, e ela NAO estava no painel: o painel so tinha a Blender Generalist e a Visual Development AI. Das 51 vagas do quadro, esta e a unica de MODELAGEM.
+**Por que vale muito:** e a disciplina literal dele, no departamento de Film de uma casa multi premiada com Oscar, em MONTREAL, ou seja, Canada, que e pais prioritario. Contrato curto, mas contrato por projeto em casa grande de VFX conta normalmente pela regra de formato.
+**Por que a mao:** hCaptcha de imagem, medido em 06/09. Preenchi tudo, a URL avancou para /c/new e o desafio apareceu. Nao se burla.
+
+**TRES ARMADILHAS DESTE FORMULARIO, para nao perder tempo:**
+1. O formulario existe no DOM mas fica FECHADO: os campos preenchem normalmente e o botao **Send continua invisivel**. Tem que clicar em **Apply** primeiro para abrir a secao de envio.
+2. O campo de telefone **ja vem preenchido com +1** e nao aceita clique (widget proprio). Escreva com o codigo do pais explicito, senao o numero sai como norte-americano.
+3. As tres ultimas perguntas sao **radio e nao texto**: anos de experiencia, patrocinio de visto e pronomes. Um preenchedor de texto ignora as tres em silencio.
+
+| Campo | Resposta |
+|---|---|
+| CV or resume | Vini_Cavalcanti_CV.pdf |
+| Full name | Vini Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | codigo do pais Brasil, numero no doc privado do Drive |
+| Portfolio link | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio password | No password, the portfolio is public. |
+| Years of experience in 3D modeling | **More than 5 years** |
+| Availability date | Within 30 days of an offer. |
+| Current Location | Olinda, Pernambuco |
+| Citizenship | Brazilian |
+| **Will you need visa sponsorship?** | **Yes** (a verdade) |
+| What are your pronouns? | He/him |
+| Consentimento | marcar |
+
+**Desired salary/rate:**
+Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.
