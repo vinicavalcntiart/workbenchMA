@@ -1426,3 +1426,18 @@ Registrado para a próxima rodada não reabrir o que já foi lido no navegador d
   diz, com todas as letras, que **não há vaga** e várias pedem para **não** mandar espontânea.
 - **On a Roll Studio**: o domínio da fila é `tumblr.com` e cai no quadro da **Automattic**, que
   não é o estúdio. Registro errado na fila de origem.
+- **Nomada Studio (GRIS, Neva — Barcelona)**: a página `/careers/` renderiza uma frase só,
+  *"There are no open positions at this time."* Encaixe seria ótimo, vale revisitar.
+- **Oddshot Games (Flandres, Bélgica)**: tem **Open Application**, mas é por email
+  (`jobs@oddshot.gg`, assunto *Open Application*) e o anúncio **exige morar em Flandres**.
+  Descartada por exigência do anúncio.
+- **Red Rover Interactive (Oslo)**: a candidatura espontânea é `mailto:` para
+  `rick@redroverinteractive.com`. Fila de email.
+- **Broken Rules (Viena)**: a única vaga é **Finanzmanager*in**, meio período.
+- **Dionic Software (Alemanha, 100% remoto)**: *"We are currently not looking to hire."*
+- **Kong Orange (Aarhus)**: a página de carreiras é **texto de exemplo em lorem ipsum**
+  ("Senior Architect", "Design Intern"), ou seja, modelo de site nunca preenchido. Não há vaga.
+- **Brunch Studio (Paris)**: casa de CGI que faz trailer de Riot, Blizzard e Mojang. A página
+  de carreiras renderiza praticamente vazia, sem vaga e sem porta de candidatura.
+- **Coffee Stain North, Art Director and Art Lead**: **já tinha candidatura enviada hoje** por
+  outra frente da campanha, requisição `8083591`. Duplicata pega no dedupe, não reenviada.
