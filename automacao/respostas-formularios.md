@@ -1514,3 +1514,37 @@ o de recrutamento tem: escope tudo por **`form:has(input[type=file])`**.
 
 **Desired salary/rate:**
 Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.
+
+## SQRT3 (Square Root of Tree), Varsóvia — espontânea — À MÃO, e NÃO é captcha
+
+**Link:** https://sqrt3.games/#rekrutacja (a seção REKRUTACJA, no fim da página)
+**Medido em 06/09 às 23h.** Preenchi tudo e a leitura de volta deu certo: CV anexado, nome, email, mensagem de 1451 caracteres e o consentimento marcado. **Nenhum desafio de captcha apareceu** (o reCAPTCHA da página é v2 invisível, `render=explicit` com `data-size="invisible"`, que passa por pontuação).
+
+**O que trava é a NOSSA rede, não o estúdio:** o `POST /wp-admin/admin-ajax.php` volta **502 com `bridge error read ECONNRESET`**. É a mesma assinatura que a TRIXTER deu na fatia JS-SO: o AJAX de envio não sai deste ambiente. **No seu navegador isso não acontece**, e como não há captcha, é envio de um minuto.
+
+**Cuidado que vale para este e para qualquer Contact Form 7 e Elementor:** depois de clicar em enviar, se os campos continuarem preenchidos, **não enviou**. Formulário que enviou de verdade limpa ou troca de tela.
+
+**Atenção: há DOIS formulários na página.** O de contato não tem campo de CV. O de recrutamento é o que tem **"Wgraj CV"**. Use esse.
+
+| Campo (em polonês) | Resposta |
+|---|---|
+| Imię i Nazwisko | Vini Cavalcanti |
+| E-mail | contact@vinicavalcanti.art |
+| Wgraj CV | Vini_Cavalcanti_CV.pdf |
+| Zgoda (consentimento) | marcar, é obrigatório |
+
+**Wiadomość (mensagem):**
+Senior 3D Character Artist, 10+ years in stylized characters, applying spontaneously.
+
+I WANT TO RELOCATE to Warsaw and I am fully open to moving for the role. I am not an EU citizen and would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Credited on The Wingfeather Saga at Angel Studios, where I modelled and hand painted the Season 1 characters, and for almost five years at E-Line Media in Arizona I have taken the hero characters of Endstar from first sculpt into engine. I take a character end to end: high poly sculpting, retopology, UVs, baking, texturing, look development and engine integration, plus hair and fur grooming in Houdini. Tools: ZBrush, Maya, Substance Painter and Designer, Houdini, Marmoset, Unreal Engine.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+As a Senior I review other artists' work and set the asset standard; I also teach as founder of my own character art school and I am a master's candidate, so leading and mentoring is part of what I do.
+
+Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
