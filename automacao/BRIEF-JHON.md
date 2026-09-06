@@ -51,17 +51,33 @@ prospecção de nome**: ele vai ao `gamedevmap.com` procurar **formulário para 
 São 1.273 estúdios já colhidos nas filas `automacao/fila-gamedevmap-*.csv`, e o que interessa ali é
 quem tem porta de candidatura aberta, não quem tem endereço de email.
 
-**Três coisas já foram medidas em 06/09 e poupam o trabalho de refazer:**
+**O Vini mandou refazer essa conta, e ele estava certo.** A primeira varredura anunciou dezesseis
+estúdios com formulário próprio. Ele respondeu "duvido que seja só isso, deixe que ele faça uma
+vasta busca", e a busca larga achou **346 portas de candidatura**, não dezesseis. O erro foi de
+método: o detector procurava **um** formato, `<form>` com campo de arquivo **e** campo
+`type="email"` na mesma página estática. Quem usa `name="your-email"`, quem hospeda o formulário
+fora, quem está num ATS que a lista não tinha, e quem monta a porta em JavaScript ficaram todos
+invisíveis. **Varredura estreita mede o que ela sabe procurar, não o que existe.**
 
-1. **Quinze estúdios têm ATS conhecido**, e todos foram consultados: zero vaga de arte aberta. A
-   lista está em `processados.csv` sob `varredura-carreiras-1273`. Não vale repetir tão cedo.
-2. **Dezesseis estúdios têm FORMULÁRIO PRÓPRIO no site**, fora de qualquer ATS, e esses **nunca
-   foram trabalhados**. A fila está em `automacao/fila-jhon-formulario-proprio.csv`, com o domínio e
-   o caminho onde o formulário aparece. **Comece por ela**, porque é a única parte do gamedevmap
-   que ainda está intocada.
-3. **Cento e dezesseis domínios não recebem email nenhum**, listados em
-   `automacao/dominios-sem-email.csv`. Não vale abrir nem para formulário: domínio que não publica
-   servidor de email costuma ser página de itch.io, wix ou carrd, sem estúdio de verdade atrás.
+A fila refeita está em `automacao/fila-jhon-portas.csv`, já sem os 116 domínios que não recebem
+email, já ordenada por Canadá e depois Europa, e classificada por **tipo de porta**, porque cada
+tipo se trabalha de um jeito:
+
+| Porta | Quantos | O que é, e quanto vale |
+|---|---|---|
+| `ATS-NOVO` | 12 | Quadro de vaga real em ATS que a campanha nunca procurou: Workday, Traffit, Homerun, Kenjo, eRecruiter, Softgarden, Factorial, Recruitee, Oracle. **Vale mais que todo o resto**, porque tem vaga listada e formulário estruturado |
+| `HOSPEDADO` | 29 | Typeform, Google Forms, JotForm, Tally, Airtable, HubSpot. Costuma não ter captcha e aceita anexo. Alvo fácil e real |
+| `PROPRIO` | 29 | Formulário do próprio site com campo de arquivo |
+| `MOTOR` | 163 | Contact Form 7, Gravity, Elementor, WPForms no site. **A maioria é "fale conosco" disfarçado**: só conta se tiver campo de arquivo ou pedir currículo por escrito |
+| `MAILTO` | 31 | Só publica `jobs@`. Vira carta, não formulário: entrega para a fila de email |
+| `JS-SO` | 82 | A página fala em candidatura mas a porta só existe depois do JavaScript. **Precisa do navegador de verdade para saber o que é** |
+
+**Já medido nas quatro primeiras portas do `ATS-NOVO`, para ninguém repetir:** Boulder Media, de
+Dublin, com Kenjo, está com zero vaga aberta; Anshar Studios, de Katowice, com Traffit, só tem TI,
+programação e um banco de talentos de VFX freelance; BoomBit, de Gdańsk, só tem estágio; e a Giant
+Ant, de Vancouver, com Homerun, só tem Junior 2D Animator. **Activision usa Workday**, e isso é o
+achado que mais dói: a varredura de ATS de 06/09 declarou "zero vaga de arte em quinze quadros"
+sem nunca ter procurado Workday, que é o ATS de meio setor.
 
 **Como o Jhon trabalha um formulário próprio**, que é diferente de ATS: abra a página com o
 navegador de verdade, porque quase todos são JavaScript; sonde os campos antes de escrever
