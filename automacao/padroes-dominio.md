@@ -314,6 +314,48 @@ legado. Antes de escrever para alguém da Animal Logic, considere que a pessoa p
 está hoje em `netflix.com`, cujo padrão a campanha já tem provado por mais de trinta
 endereços nas duas formas.
 
+## Image Engine — provado em 06/09, e e a casa de VFX de Vancouver
+
+**`nome + inicial do sobrenome@image-engine.com`**, com desambiguação por segunda letra quando
+há colisão de primeiro nome.
+
+Cerca de **trinta endereços reais** no log de commits do **Gaffer** e do **Cortex**, os dois
+projetos de código aberto mantidos pela própria Image Engine: `andrewk@` (Andrew Kaufman),
+`bent@` (Ben Toogood), `brendanh@` (Brendan Holt), `cedricl@` (Cedric Launay), `danield@`
+(Daniel Dresser), `davidm@` (David Minor), `ivani@` (Ivan Imanishi), `lukeg@` (Luke Goddard),
+`mattig@` (Matti Gruener), `pauleliep@` (Paul-Elie Pipelin), `petruc@` (Petru Ciobanu),
+`richardm@` (Richard Monette), `stefanf@` (Stefan Feess), `beatriced@` (Bea Domenge),
+`aitorp@`, `bradleyh@`, `carlosg@`, `ehsans@`, `koichit@`, `lorenzop@`, `paulon@`, `piotrb@`,
+`tomc@`, `valerieb@`, `yannics@`.
+
+**A desambiguação é real e importa:** quando dois primeiros nomes colidem, o endereço estica
+para duas letras do sobrenome. `michaeldu@` (Michael DuBelko), `michaelne@` (Michael Neynens)
+e `michaelk@` (Michael Kessler) convivem; o mesmo vale para `donbo@` (Don Boogert), `timle@`
+(Tim Lehr) e `christopherle@`.
+
+**Duas exceções vistas.** Uma é `lberesna@` (Linas Beresna), na forma inicial mais sobrenome.
+A outra é gente antiga ou muito sênior com **só o primeiro nome**: `john@` (John Haddon),
+`lucio@` (Lucio Moser), `mark@` (Mark Williams), `blair@` (Blair Tennessee).
+
+**Quantos endereços provam:** cerca de 30.
+
+## Cinesite — provado em 06/09, e o grupo inclui a Image Engine
+
+**`inicial + sobrenome@cinesite.com`**, com uma segunda forma em `nome + inicial`.
+
+Forma principal, nos mesmos logs do Gaffer e do Cortex: `jhaddon@` (John Haddon), `gkeech@`
+(Gregory Richard Keech), `proberts@` (Paul-George Roberts). Segunda forma: `ericm@` (Eric
+Mehl), `tomc@` (Tom Cowland). E um caso de primeiro nome puro, `alexander@` (Alexander
+Savenko).
+
+**Quantos endereços provam:** 6.
+
+**Contexto que vale saber antes de usar:** a Cinesite, a Image Engine e a Trixter são o mesmo
+grupo, o que ficou explícito na página de equipe deles, onde o gerente geral da Image Engine
+aparece também como Chief Operating Officer de VFX do grupo Cinesite, e onde o Group Head of
+CG cobre as três marcas. Cada casa mantém o próprio domínio, então **não se troca um pelo
+outro**: gente da Image Engine é `image-engine.com`, gente da Cinesite é `cinesite.com`.
+
 ## Não provados, registrados para não se perder
 
 - **Epic Games.** Só um endereço real encontrado, `matt.johnson@epicgames.com`, no log de

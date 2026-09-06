@@ -373,3 +373,34 @@ mapeada não serve. O rendimento agora vem de dois lugares, nesta ordem:
 Laur no nome de exibição e no Gumroad, e como Vasjukov na URL antiga do LinkedIn. Quando isso
 acontecer, monte pelo nome que a pessoa USA HOJE, marque a linha como **baixa** e escreva a
 segunda tentativa na própria linha, pronta para o dia em que a primeira voltar.
+
+
+## PÁGINA DE CREW DE ESTÚDIO DE VFX, a veia achada em 06/09
+
+**É a melhor das três, porque é a única que entrega quem CONTRATA.** Log de commit de código
+aberto dá engenheiro e TD; página de evento de escola de arte dá palestrante; nenhuma das duas
+dá chefe de departamento. A página de crew dá.
+
+**Como funciona.** Várias casas de VFX publicam a equipe inteira com nome e cargo, e o que
+interessa é a seção de chefia. A Image Engine tem `image-engine.com/crew`, com uma seção
+**Heads of Department** que lista Head of Assets, Head of Art, Head of CG, Head of CFX, Head of
+FX, Head of Layout e por aí. O grupo Cinesite tem `cinesite.com/our-team`, que ainda marca de
+qual casa cada pessoa é (Cinesite, Image Engine, Trixter, Imaginarium).
+
+**A combinação que funciona, e é para repetir:**
+
+1. **Página de crew** dá o NOME e o CARGO, e é fonte oficial do próprio estúdio.
+2. **Log de commit do código aberto da mesma casa** dá o PADRÃO DO DOMÍNIO.
+3. O endereço sai do padrão, com confiança média, citando os dois.
+
+Foi assim que 06/09 abriu **duas casas grandes de uma vez**: Gaffer e Cortex, mantidos pela
+própria Image Engine, deram trinta endereços e provaram os dois padrões (o da Image Engine e o
+da Cinesite, que aparecem juntos porque são o mesmo grupo), e as páginas de crew deram Barry
+Poon (Head of Assets) e Holger Voss (Group Head of CG).
+
+**Onde testar:** `/crew`, `/our-team`, `/team`, `/people` e `/about` em toda casa de VFX que
+ainda não tem padrão. Nem todas publicam: Rodeo FX, Folks VFX, Spin VFX e Raynault respondem
+404 nesses caminhos.
+
+**Lembre do teto.** Padrão novo não vira oito cartas: continuam valendo uma pessoa por estúdio
+por rodada e duas na campanha inteira. Padrão novo vale por abrir a casa, não por encher a fila.
