@@ -72,12 +72,20 @@ tipo se trabalha de um jeito:
 | `MAILTO` | 31 | Só publica `jobs@`. Vira carta, não formulário: entrega para a fila de email |
 | `JS-SO` | 82 | A página fala em candidatura mas a porta só existe depois do JavaScript. **Precisa do navegador de verdade para saber o que é** |
 
-**Já medido nas quatro primeiras portas do `ATS-NOVO`, para ninguém repetir:** Boulder Media, de
-Dublin, com Kenjo, está com zero vaga aberta; Anshar Studios, de Katowice, com Traffit, só tem TI,
-programação e um banco de talentos de VFX freelance; BoomBit, de Gdańsk, só tem estágio; e a Giant
-Ant, de Vancouver, com Homerun, só tem Junior 2D Animator. **Activision usa Workday**, e isso é o
-achado que mais dói: a varredura de ATS de 06/09 declarou "zero vaga de arte em quinze quadros"
-sem nunca ter procurado Workday, que é o ATS de meio setor.
+**Já medido nessas portas, para ninguém repetir:** Boulder Media, de Dublin, com Kenjo, está com
+zero vaga aberta; a Giant Ant, de Vancouver, com Homerun, só tem Junior 2D Animator. **Activision
+usa Workday**, e isso é o achado que mais dói: a varredura de ATS de 06/09 declarou "zero vaga de
+arte em quinze quadros" sem nunca ter procurado Workday, que é o ATS de meio setor; o quadro certo
+é `xboxgaming.wd1.myworkdayjobs.com/External` e **não** o CentralTech que o site linka, e nele não
+há vaga de personagem, modelagem, texturização nem look dev no mundo inteiro.
+
+**E duas correções que custaram candidatura, feitas na mesma tarde de 06/09.** Uma primeira leitura
+rápida deste brief dizia que a Anshar Studios "só tem TI e programação" e que a BoomBit "só tem
+estágio". **As duas coisas eram falsas**: a Anshar tem sete vagas, duas delas de arte, e candidatura
+espontânea aberta, e a BoomBit tem recrutamento aberto por área. As duas receberam candidatura no
+mesmo dia. **A lição é a regra: ler uma página de anúncio não é ler o quadro. Abra o quadro do ATS
+antes de escrever que uma casa não tem vaga**, porque essa frase, uma vez escrita aqui, faz a
+próxima rodada pular a casa sem conferir.
 
 **Como o Jhon trabalha um formulário próprio**, que é diferente de ATS: abra a página com o
 navegador de verdade, porque quase todos são JavaScript; sonde os campos antes de escrever
