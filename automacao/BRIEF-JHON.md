@@ -156,6 +156,14 @@ e `probe_bamboo.js` no mesmo diretório, e todos listam campo, tipo, obrigatorie
 Na Metropolis VFX foram quatro tentativas de depuração até descobrir que a pergunta "você mora na
 Espanha?" respondida com "não" era eliminatória. Antes de culpar o script, leia o que a página diz.
 
+**Varredura paralela demais fabrica vaga morta que não morreu.** Em 06/09 as 165 pendentes foram
+abertas com catorze conexões ao mesmo tempo e vinte e uma pareceram mortas. Reconferindo devagar,
+com quatro segundos entre uma e outra, **doze delas eram apenas `429` e `403`**, que é limite de
+taxa e bloqueio de robô contra o nosso IP, não anúncio removido; a Plastic Wax voltou viva na
+segunda tentativa. **Só `404`, `410` ou o texto da própria página dizendo que fechou provam vaga
+morta.** Nove morreram de verdade naquele dia. Quando for varrer em massa, use poucas conexões, e
+antes de escrever VAGA EXPIRADA reconfira a candidata sozinha.
+
 **A checagem de duplicidade se faz no GMAIL, não nos CSVs.** Em 06/09 a campanha aplicou pela
 segunda vez na Lead Character Modeling e Blendshape da TAT Productions. O Vini já tinha aplicado
 naquela mesma requisição em **27/08**, e a confirmação daquele dia veio do **mesmíssimo endereço**,
