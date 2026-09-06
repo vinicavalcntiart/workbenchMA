@@ -514,3 +514,57 @@ número de anos vindo dos cinco anos de senioridade na E-Line. Não hesitar e n�
 **Erro que isso corrige, escrito para não repetir:** eu quase troquei a vaga de Lead da beffio por
 uma de Senior por presumir que ele não cumpria o requisito, quando a informação estava disponível
 e era o contrário. Presumir para menos no currículo dele é tão errado quanto exagerar.
+
+## Fortiche Production, candidatura espontânea (Paris, Montpellier e Las Palmas) — pronto para mandar à mão
+
+**Link:** https://forticheprod.com/application/
+
+**Por que à mão:** o formulário tem **três passos** e o seletor de local é um widget próprio que o
+preenchedor não consegue marcar, então o passo 1 nunca valida e a tela volta ao começo. O
+reCAPTCHA deles é **v3**, ou seja, pontuação de sessão e não portão, então não é ele que barra.
+É a Fortiche de *Arcane*, e os departamentos que ela lista incluem **Character modeling, Character
+design, Groom e Texture**, que são a disciplina dele inteira. Vale a candidatura à mão.
+
+| Campo | O que escolher ou escrever |
+|---|---|
+| Contract | `Employee / Freelance` |
+| Name / Surname | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | `+55 81 97306 2286` |
+| Preferred workplace location (marca mais de um) | `Paris`, `Montpellier`, `Las Palmas` e `Remote`. Presencial vem primeiro, seguindo a regra de realocação |
+| Upload your CV | `Vini_Cavalcanti_CV.pdf` |
+| Upload your Portfolio | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Department (marca mais de um) | `Character modeling`, `Character design`, `Groom`, `Texture` |
+| Software | `Maya`, `Photoshop`, `Houdini`, `Zbrush` |
+| Availability | uma data cerca de dois meses à frente |
+| Tell us about you | o texto abaixo |
+| Acceptance | marcar |
+
+```
+I WANT TO RELOCATE and I am fully open to moving for the role, on site in Paris, Montpellier or Las Palmas. Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, and I also groom hair and fur in Houdini, so character modeling, texture and groom are one continuous job for me rather than three handoffs. Credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted characters, and for almost five years at E-Line Media I have taken Endstar's hero characters from first sculpt to engine. I am a Senior who reviews other artists' work and sets the asset standard, I teach as founder of my own character art school, and I am a master's candidate. I am not an EU citizen and I would need visa sponsorship; my academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+## Image Engine, General Application de Assets (Vancouver, BambooHR) — pronto para mandar à mão
+
+**Link:** https://imageengine.bamboohr.com/careers/21
+
+**Por que à mão:** reCAPTCHA de caixa de marcar. **E isso vale para as cinco vagas de BambooHR da
+fila**, porque o captcha é do BambooHR e não do estúdio: aparece igual na ICON e na Image Engine.
+
+| Campo | O que escrever |
+|---|---|
+| First / Last Name | `Vini` / `Cavalcanti` |
+| Email / Phone | `contact@vinicavalcanti.art` / `+55 81 97306 2286` |
+| Address, City, Province, Postal Code (**obrigatórios**) | saem do doc privado do Drive, **não podem entrar neste repositório** |
+| Country | trocar o `Canada` que já vem preenchido |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` (é um campo **separado** do de cima, e é o obrigatório) |
+| Date Available | cerca de dois meses à frente |
+| Desired Pay | `CAD 95,000 per year. Open to aligning with your band for the role.` |
+| Website / LinkedIn | ArtStation e LinkedIn |
+| Please choose one position of your interest | `Modeling` |
+| Years of experience | `10` |
+| Please choose your level of experience | `Senior` |
+| Please select your current work status for Canada | `Work Permit Required` (é a verdade) |
+| Anything else we should know? | `I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role. My academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.` |
