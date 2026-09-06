@@ -603,3 +603,39 @@ My portfolio is mostly stylized, but every sculpt starts from realistic anatomy 
 literalmente metade do título dele, mas é a **única das três publicada só em francês**, sem versão
 em inglês, enquanto as duas de Lookdev saíram nas duas línguas. Confirme a exigência de idioma
 antes de investir, porque francês já derrubou duas candidaturas desta campanha.
+
+## Framestore, Blender Generalist e 3D Modeller (Londres e Montréal, Recruitee) — pronto para mandar à mão
+
+**Links:** Londres https://framestore.recruitee.com/o/blender-generalist ·
+Montréal (visdev) https://framestore.recruitee.com/o/generaliste-blender-artiste-au-development-visuel-blender-generalist-visual-development-artist ·
+Montréal (3D Modeller) https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme
+
+**Por que à mão:** o Recruitee mostra **hCaptcha de imagem só DEPOIS do clique em Send**, igual ao
+Turnstile do Workable. Medido em 06/09, com o desafio "Find the thing needed for a mountain hike".
+O formulário aceita tudo antes disso, então o preenchimento abaixo já foi validado na tela.
+
+**Por que vale:** Framestore é casa multi premiada com Oscar, e a de Londres é do time de **Visual
+Development**, que é metade do título dele, com **Blender** como ferramenta central do time e no
+currículo dele. O anúncio cita IF, Loki S2 e Como Treinar o Seu Dragão. Nenhuma das três exige
+francês no texto.
+
+| Campo | O que escrever |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email address | `contact@vinicavalcanti.art` |
+| Phone number | trocar o país para Brasil no seletor e usar o telefone do doc privado do Drive |
+| CV or resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Showreel/Portfolio Link | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel/Portfolio password | deixar vazio, o portfólio é público |
+| Availability date | `Negotiable, around two months from an offer` |
+| Citizenship | `Brazilian` |
+| Current location | `Olinda, Pernambuco` |
+| **Are you open to relocating to London, UK?** | **Yes** |
+| Desired annual salary (£ GBP) | `GBP 50,000 per year; open to aligning with your band for the role` |
+| What is your preferred pronoun | `He/him` |
+| Legal Agreements | marcar |
+
+**Na versão de Montréal** troque a moeda para dólar canadense e peça `CAD 95,000 per year; open to
+aligning with your band for the role`, e a pergunta de realocação será sobre Montréal, respondida
+igualmente **Yes**.
