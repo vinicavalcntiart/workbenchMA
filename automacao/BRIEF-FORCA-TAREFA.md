@@ -858,3 +858,25 @@ está enviando, e **especialmente** quando o envio nasce de uma resposta humana,
 pressa é maior. A contagem não infla, porque o `conta-hoje.sh` deduplica por estúdio, mas o
 recrutador vê duas entradas do mesmo candidato no mesmo dia, e esse dano não aparece em número
 nenhum.
+
+## Casa que publica em dois idiomas engana o dedupe por título
+
+Achado em 07/09, e ele estava prestes a fazer o Vini se candidatar de novo a uma vaga em que já
+tinha sido **recusado**.
+
+O painel listava "Ubisoft Montreal, Senior Character Artist (Rainbow Six Siege)" como vaga nova à
+mão, esperando por ele. A campanha já tinha se candidatado a ela em **30/08** e recebido a
+**recusa em 02/09** — mas aquele registro está com o título em **francês**, *Artiste de
+personnages sénior·e (Rainbow Six Siege)*, porque o SmartRecruiters serve o título localizado
+conforme o idioma de quem abre a página. Título diferente, mesma requisição.
+
+**Prova:** a API oficial devolve **uma única** requisição de Senior Character Artist do Rainbow
+Six em todo o quadro, id `744000145282762`, referência `REF31793B`, Montreal, liberada em 24/08.
+Bate com a data da candidatura e com a da recusa.
+
+**Regra:** para dedupe, **o id da requisição ou a referência mandam, e o título não vale nada**.
+Vale sempre, e vale em dobro nas casas que publicam bilíngue: Ubisoft, Larian, Gameloft, Sloclap,
+Skydance Madrid. Registre SEMPRE o id junto da URL, porque é ele que a garra consegue casar.
+
+**Detalhe que destravou a conferência:** o token do SmartRecruiters da Ubisoft é **`ubisoft2`**,
+não `ubisoft` nem `UbisoftGroup`, que devolvem zero e passam a falsa impressão de quadro vazio.
