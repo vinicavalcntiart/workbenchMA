@@ -1750,6 +1750,66 @@ nenhuma.
   intervalo), a mesma família de bloqueio já medida na Velan Studios, KingsIsle e PikPok. Fica para
   reconferir de outra rede ou para o Vini abrir direto.
 
+## Sinn Studio, General Interest Application (Toronto, Humi) — À MÃO por reCAPTCHA Enterprise invisível
+
+**Link:** https://sinnstudio.applytojobs.ca/general+interest/26552
+**Por que vale:** startup de XR/spatial computing em Toronto (Liberty Village, híbrido). O
+próprio texto da vaga espontânea lista **"3D Model Art"** e **"Technical Animation/Art"** entre
+os cargos futuros que esse banco de talentos alimenta — encaixe direto, achado na varredura dos
+351 domínios canadenses novos que curl dava como vazios (fila `can_js.txt`).
+**Por que à mão:** formulário do Humi, sem captcha visível na tela (nenhum quadrinho "I'm not a
+robot"), mas o botão Submit dispara um **reCAPTCHA Enterprise invisível**
+(`google.com/recaptcha/enterprise/anchor`) com callback `onSubmit(token)`. Preenchido o
+formulário inteiro e conferido por leitura de volta, o token do reCAPTCHA ficou **vazio depois de
+30 segundos de espera**, ou seja, a pontuação nunca aprovou a sessão automatizada. Nada foi
+enviado.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | o de sempre, com +55 na frente |
+| Country | Brazil |
+| Postal Code | o CEP do doc privado do Drive |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Portfolio (if applicable) | https://www.artstation.com/viniciuscavalcanti |
+| Are you legally authorized to work in Canada? | **No** (é a verdade) |
+| Please tell us a little bit about yourself and your career interests | Senior 3D Character Artist, 10+ anos, Wingfeather Saga e Endstar/E-Line Media, modelagem/escultura/textura/look dev e grooming em Houdini; XR é fronteira nova para arte de personagem |
+| Please tell us about the future role you would be interested in | `3D Model Art / Character Art and Technical Animation for XR` |
+| Do you live in the Greater Toronto Area (GTA)? | `No, I currently live in Olinda, Pernambuco, Brazil` |
+| If you do not live in the GTA, are you willing to relocate to commute 2x weekly to the office in Liberty Village? | `Yes. I WANT TO RELOCATE to Toronto and I am fully open to moving for the role and commuting to the Liberty Village office. Preciso de patrocínio de trabalho; láurea com honors, especialização, mestrado em andamento, IELTS e publicações como caso de visto` |
+| Have you been referred...? | deixar vazio |
+
+**Armadilha desta página:** o radio "Are you legally authorized to work in Canada?" tem as duas
+opções (Yes/No) SEM atributo `value` distinguível no HTML — casar por `[value="No"]` não encontra
+nada; escolher pela ordem dos elementos (segundo radio do grupo) ou pelo texto do rótulo ao lado.
+
+## Descartes da fatia JS-SO do Canadá anglófono (07/09), sem porta nem vaga de arte
+
+Conferidos com navegador de verdade, um a um, porque o curl dava todos como vazios:
+
+- **Darling VFX** (Toronto): site é reel de publicidade (Visa, Audi, Burger King), sem página de
+  carreiras nenhuma.
+- **Kerosene Visual Effects** (Toronto): motion graphics/broadcast design, sem página de
+  carreiras, só `studio@kerosenevfx.com`.
+- **Western FX Studios** (Vancouver): tem link "Careers" na navegação mas a página não lista
+  vaga nem formulário, só o telefone e email institucional.
+- **Tantrum Studio** (Toronto): página `#/careers/` não renderiza conteúdo nenhum além do menu.
+- **Truly Social Games** (Vancouver): `/careers/` devolve Access Denied da Akamai citando um
+  domínio terceiro (`dot-games.org`), configuração quebrada do lado deles.
+- **Sun Machine Games** (Vancouver): domínio parked, à venda pela GoDaddy.
+- **JAXX Creative** (Toronto) e **Hyper Hippo Games** (Kelowna/Vancouver): as duas atrás de
+  "Robot Challenge Screen", desafio anti-robô que bloqueia até a home.
+- **Gaggle Studios** (Toronto): uma única vaga aberta, Unity Technical Designer, sem encaixe de
+  disciplina.
+- **CryptoKitties** (Vancouver): página vazia/quebrada, projeto praticamente abandonado.
+- **Kannon Films** (Ottawa): produtora de documentário e conteúdo infantil, sem seção de
+  carreiras.
+- **New World Interactive** (Calgary, Edmonton, Toronto, Vancouver): quadro próprio diz
+  literalmente "There are currently no job openings, please check back later".
+- **Sinn Studio, vaga de Programação** (Junior Developer): fora da disciplina dele; só a General
+  Interest Application (acima) interessa.
+
 ## FATIA M-R DA EUROPA (07/09): achados novos do diretório de 6.624 estúdios
 
 Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nunca tocados pela
