@@ -24,23 +24,23 @@ Moonbug Entertainment
 Moonmana
 Moonraker VFX
 Morgana Studios
-Mundfish
+# FEITO Mundfish | sem vaga da disciplina: quadro tem VFX Artist e Technical Artist; hubs em Abu Dhabi e Yerevan
 # FEITO NOLABEL | sem porta de formulario: pagina de carreiras lida (https://nolabel.com.pl/join-us) so publica email (jobs@nolabel.com.pl;office@nolabel.com.pl), vira fila de carta
 Nabi Studios
 # FEITO Naraven Games | sem porta de formulario: pagina de carreiras lida () so publica email (info@naravengames.com;julia@naravengames.com), vira fila de carta
 Nathan Love
-Next Level Games (Nintendo)
-Nitro Games
+# FEITO Next Level Games (Nintendo) | a mao, reCAPTCHA v2 de caixa no JazzHR; General Application com opcao 3D Character Art, dossie no painel
+# FEITO Nitro Games | sem porta: quadro HaileyHR (nitrogames.careers.haileyhr.app) com ZERO vaga e sem espontanea
 No Brakes Games
 Noodlecake Studios
 Nu Boyana Portugal / Lusco Fusco Animation
-Nuare Studio
+# FEITO Nuare Studio | nao avaliavel: o site inteiro devolve 503 Site Currently Unavailable (reconferir de outra rede)
 Old Skull Games
 # FEITO Omens Studios | sem porta de formulario: pagina de carreiras lida (https://omens-studios.com/careers) so publica email (careers@omens-studios.com), vira fila de carta
 One Animation
 # FEITO Other Ocean Interactive | sem porta de formulario: pagina de carreiras lida () so publica email (employment@otherocean.com), vira fila de carta
 # FEITO Owlchemy Labs | sem porta de formulario: quadro Workable vazio e espontanea por email jobs@owlchemylabs.com
-Panache Digital Games
+# FEITO Panache Digital Games | sem porta: pagina de carreiras sem vaga e sem formulario de candidatura (so captura de email)
 # FEITO Paramount Animation | quadro Paramount lido inteiro por curl: zero vaga de personagem, modelagem, textura, look dev ou 3D
 # FEITO Passtech Games | sem porta de formulario: pagina de carreiras lida (https://passtechgames.com/careers) so publica email (CONTACT@PASSTECHGAMES.COM;JOBS@PASSTECHGAMES.COM), vira fila de carta
 Pearl Abyss
@@ -49,14 +49,14 @@ Pearl Abyss
 # FEITO Pixel Zoo | a mao, reCAPTCHA v3 reprovou o envio; vaga Environment Artist viva, dossie no painel
 Pixelsplit
 Playable Worlds
-Playfight
+# FEITO Playfight | sem porta: /careers devolve 404 no site do estudio
 # FEITO Playful Studios | sem porta de formulario: pagina de carreiras lida (https://playfulstudios.com/careers) so publica email (hiring@playfulstudios.com), vira fila de carta
 # FEITO Playground Games | sem vaga da disciplina (so Design, Producao e Engenharia no Jobvite) e sem espontanea
 Playtonic Games
 Polyarc
 Polydin Studio
 # FEITO Polynoid | sem porta de formulario: pagina de carreiras lida () so publica email (contact@polynoid.tv), vira fila de carta
-Proxima Milano
+# FEITO Proxima Milano | sem porta de formulario: a espontanea e por email jobs@proximamilano.com
 Purple Lamp (THQ Nordic)
 Pushka Studios
 QLOC
@@ -65,10 +65,10 @@ Qvisten Animation
 # FEITO Rainbow CGI | ja no painel (Rainbow SpA), parede de reCAPTCHA v3 medida por outro agente
 # FEITO Rarebyte | sem porta de formulario: pagina de carreiras lida (https://rarebyte.com/jobs) so publica email (jobs@rarebyte.com;office@rarebyte.com), vira fila de carta
 Raylight Games
-Reactiv
+# FEITO Reactiv | sem porta: pagina de carreiras so pede email para hiring (at) getreactiv (dot) com
 Red Knuckles
 Red Manta / Twin Atlas
-Red Meat Games
+# FEITO Red Meat Games | sem porta: /careers devolve 404; o unico formulario do site e assinatura de newsletter
 Red Star Studio
 Reel FX
 Reply Game Studios
@@ -80,7 +80,7 @@ Robot Entertainment
 # FEITO Robot Playground Media | vaga Visual Development Artist viva mas candidatura SO por email jobs@robotplaygroundmedia.com
 # FEITO RocketBrush Studio | sem porta de formulario: pagina de carreiras lida () so publica email (hello@;hello@rocketbrush.com), vira fila de carta
 # FEITO Rocksteady Studios | sem porta de formulario: pagina de carreiras lida (https://rocksteadyltd.com/careers) so publica email (jobs@rocksteadyltd.com), vira fila de carta
-Ruckus Games
+# FEITO Ruckus Games | sem porta: quadro Pinpoint com Current Openings vazio e sem espontanea
 # FEITO Runaway Play | sem porta de formulario: pagina de carreiras lida (https://runawayplay.com/careers) so publica email (kylie@runawayplay.com), vira fila de carta
 SEHSUCHT
 # FEITO SHED | a mao, reCAPTCHA v2 de caixa, dossie no painel
@@ -89,7 +89,7 @@ SSVFX
 # FEITO Sandfall Interactive | Open Application existe mas a pagina /jobs/open-application esta protegida por SENHA (Guest Area)
 Sans Strings Studio
 Savian
-ShadowMachine
+# FEITO ShadowMachine | sem porta da disciplina: os Google Forms de arte estao TODOS fechados desde maio/junho; so IT Editorial Media Manager aberto
 Shirogumi
 # FEITO Siege Camp | sem porta de formulario: pagina de carreiras lida (https://siegecamp.com/careers) so publica email (jobs@siegecamp.com;press@siegecamp.com), vira fila de carta
 # FEITO Singularity 6 | sem porta de formulario: pagina de carreiras lida (https://singularity6.com/careers) so publica email (hello@singularity6.com), vira fila de carta
@@ -98,7 +98,7 @@ Shirogumi
 Sparky Animation
 Sperasoft
 Spin VFX
-Squeeze Animation Studios
+# FEITO Squeeze Animation Studios | NAO APLICAR: ja registrado no painel que a casa recusou por permissao de trabalho
 Stardust Effects
 # FEITO Starloop Studios | sem porta de formulario: pagina de carreiras lida () so publica email (hello@starloopstudios.com), vira fila de carta
 # FEITO Studio AKA | sem porta de formulario: pagina de carreiras lida (https://studioaka.co.uk/careers) so publica email (hello@studioaka.co.uk), vira fila de carta
@@ -120,7 +120,7 @@ Terminal FX
 The Animation Band
 The Breach Studios
 The Frank Barton Company
-The Juggernaut
+# FEITO The Juggernaut | sem porta: /careers devolve 404 no site do estudio
 The Sequence Group
 The Thinklab
 The Wingfeather Saga

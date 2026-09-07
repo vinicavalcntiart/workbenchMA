@@ -3119,3 +3119,26 @@ reCAPTCHA v3, com a tela genérica *"There was an error trying to send your mess
 **Mensagem** (colar inteiro):
 
 > Hello Pixel Zoo team, I am applying for the Environment Artist opening at your North Lakes studio. I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized 3D. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's style, with review rounds as routine. The posting asks for hard surface modelling in Maya plus texturing, surfacing and shaders, and that is daily work for me: I take an asset end to end, sculpt through retopology, UVs, baking, texturing, LODs and engine integration, and I also do character grooming in Houdini. I lead as well: I review other artists' work, I set the asset standard, and I founded my own character art school. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE to Brisbane and I am fully open to moving for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around AUD 95,000. Portfolio: https://www.artstation.com/viniciuscavalcanti  LinkedIn: https://www.linkedin.com/in/vinicavalcnti/  Site: https://vinicavalcanti.com  CV and showreel available on request or by email to contact@vinicavalcanti.art
+
+### Next Level Games / Nintendo (Vancouver, Canadá) — General Application — PAREDE: reCAPTCHA v2 de caixa
+
+Link: https://nextlevelgames.applytojob.com/apply/YyYQvToJW1/General-Application
+
+Quadro **próprio em JazzHR** que a campanha nunca tinha listado (a varredura do careers.nintendo.com
+de 03/09 não o cobria). A General Application tem um menu obrigatório *Position / Discipline* com a
+opção literal **3D Character Art**. Regime: híbrido, no mínimo três dias por semana em Vancouver.
+O envio exige reCAPTCHA v2 de caixa, rotulado *Human Check*.
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | Vini / Cavalcanti |
+| Email address | contact@vinicavalcanti.art |
+| Phone number | número do documento privado do Drive |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Cover Letter | Vini_Cavalcanti_Cover_Letter.pdf |
+| Website, blog, or portfolio | https://www.artstation.com/viniciuscavalcanti |
+| Position / Discipline * | **3D Character Art** |
+| Are you authorized to work in Canada? * | **No** |
+| Do you currently reside in the province of British Columbia? * | **Willing to Relocate** |
+| Have you previously worked at a video game studio? * | **Yes** |
+| How did you hear about this job opening? | Next Level Games careers page |
