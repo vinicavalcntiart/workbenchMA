@@ -3,12 +3,12 @@
 # A outra metade esta em fila-formulario-A.txt. Nao invada a outra metade.
 # Total desta fila: 160
 Mac Guff
-Maga Animation Studio
-MagicLab
+# FEITO Maga Animation Studio | sem porta de formulario: pagina de carreiras lida (https://maga-animation.com/careers) so publica email (contact@maga-animation.com;job@maga-animation.com), vira fila de carta
+# FEITO MagicLab | sem porta de formulario: pagina de carreiras lida (https://magiclab.cz/jobs) so publica email (), vira fila de carta
 Mago Production
 Mascista
-Mathematic
-Melbot Studios
+# FEITO Mathematic | sem porta de formulario: pagina de carreiras lida () so publica email (ashlee.wismach@mathematic.tv;contact@mathematicfilm.com), vira fila de carta
+# FEITO Melbot Studios | sem porta de formulario: pagina de carreiras lida () so publica email (info@melbot.es), vira fila de carta
 Mercurysteam
 Microids
 Mighty Animation
@@ -16,18 +16,18 @@ Mighty Coconut
 Mighty Nice
 Milford
 Millimages
-Mimic Productions
-Mirage VFX
-Monigotes Estudio
+# FEITO Mimic Productions | sem porta de formulario: pagina de carreiras lida (https://mimicproductions.com/careers) so publica email (info@mimicproductions.com), vira fila de carta
+# FEITO Mirage VFX | sem porta de formulario: pagina de carreiras lida (https://mirage-vfx.com/jobs) so publica email (jobs@mirage-vfx.com;patrickf@mirage-vfx.com), vira fila de carta
+# FEITO Monigotes Estudio | sem porta de formulario: pagina de carreiras lida () so publica email (info@monigotestudio.es), vira fila de carta
 Moon Studios
 Moonbug Entertainment
 Moonmana
 Moonraker VFX
 Morgana Studios
 Mundfish
-NOLABEL
+# FEITO NOLABEL | sem porta de formulario: pagina de carreiras lida (https://nolabel.com.pl/join-us) so publica email (jobs@nolabel.com.pl;office@nolabel.com.pl), vira fila de carta
 Nabi Studios
-Naraven Games
+# FEITO Naraven Games | sem porta de formulario: pagina de carreiras lida () so publica email (info@naravengames.com;julia@naravengames.com), vira fila de carta
 Nathan Love
 Next Level Games (Nintendo)
 Nitro Games
@@ -36,34 +36,34 @@ Noodlecake Studios
 Nu Boyana Portugal / Lusco Fusco Animation
 Nuare Studio
 Old Skull Games
-Omens Studios
+# FEITO Omens Studios | sem porta de formulario: pagina de carreiras lida (https://omens-studios.com/careers) so publica email (careers@omens-studios.com), vira fila de carta
 One Animation
-Other Ocean Interactive
+# FEITO Other Ocean Interactive | sem porta de formulario: pagina de carreiras lida () so publica email (employment@otherocean.com), vira fila de carta
 # FEITO Owlchemy Labs | sem porta de formulario: quadro Workable vazio e espontanea por email jobs@owlchemylabs.com
 Panache Digital Games
 # FEITO Paramount Animation | quadro Paramount lido inteiro por curl: zero vaga de personagem, modelagem, textura, look dev ou 3D
-Passtech Games
+# FEITO Passtech Games | sem porta de formulario: pagina de carreiras lida (https://passtechgames.com/careers) so publica email (CONTACT@PASSTECHGAMES.COM;JOBS@PASSTECHGAMES.COM), vira fila de carta
 Pearl Abyss
-Pipeline Studios
-Piranha Bar
+# FEITO Pipeline Studios | sem porta de formulario: pagina de carreiras lida () so publica email (development@pipelinestudios.com;distribution@pipelinestudios.com), vira fila de carta
+# FEITO Piranha Bar | sem porta de formulario: pagina de carreiras lida (https://piranhabar.ie/careers) so publica email (info@piranhabar.ie), vira fila de carta
 # FEITO Pixel Zoo | a mao, reCAPTCHA v3 reprovou o envio; vaga Environment Artist viva, dossie no painel
 Pixelsplit
 Playable Worlds
 Playfight
-Playful Studios
+# FEITO Playful Studios | sem porta de formulario: pagina de carreiras lida (https://playfulstudios.com/careers) so publica email (hiring@playfulstudios.com), vira fila de carta
 # FEITO Playground Games | sem vaga da disciplina (so Design, Producao e Engenharia no Jobvite) e sem espontanea
 Playtonic Games
 Polyarc
 Polydin Studio
-Polynoid
+# FEITO Polynoid | sem porta de formulario: pagina de carreiras lida () so publica email (contact@polynoid.tv), vira fila de carta
 Proxima Milano
 Purple Lamp (THQ Nordic)
 Pushka Studios
 QLOC
 Qvisten Animation
-Raccoon Logic
+# FEITO Raccoon Logic | sem porta de formulario: pagina de carreiras lida (https://raccoonlogic.com/careers) so publica email (info@raccoonlogic.com;jobs@raccoonlogic.com), vira fila de carta
 # FEITO Rainbow CGI | ja no painel (Rainbow SpA), parede de reCAPTCHA v3 medida por outro agente
-Rarebyte
+# FEITO Rarebyte | sem porta de formulario: pagina de carreiras lida (https://rarebyte.com/jobs) so publica email (jobs@rarebyte.com;office@rarebyte.com), vira fila de carta
 Raylight Games
 Reactiv
 Red Knuckles
@@ -78,10 +78,10 @@ Rising Sun Pictures
 Ritzy Animation
 Robot Entertainment
 # FEITO Robot Playground Media | vaga Visual Development Artist viva mas candidatura SO por email jobs@robotplaygroundmedia.com
-RocketBrush Studio
-Rocksteady Studios
+# FEITO RocketBrush Studio | sem porta de formulario: pagina de carreiras lida () so publica email (hello@;hello@rocketbrush.com), vira fila de carta
+# FEITO Rocksteady Studios | sem porta de formulario: pagina de carreiras lida (https://rocksteadyltd.com/careers) so publica email (jobs@rocksteadyltd.com), vira fila de carta
 Ruckus Games
-Runaway Play
+# FEITO Runaway Play | sem porta de formulario: pagina de carreiras lida (https://runawayplay.com/careers) so publica email (kylie@runawayplay.com), vira fila de carta
 SEHSUCHT
 # FEITO SHED | a mao, reCAPTCHA v2 de caixa, dossie no painel
 SHIFT UP
@@ -91,32 +91,32 @@ Sans Strings Studio
 Savian
 ShadowMachine
 Shirogumi
-Siege Camp
-Singularity 6
+# FEITO Siege Camp | sem porta de formulario: pagina de carreiras lida (https://siegecamp.com/careers) so publica email (jobs@siegecamp.com;press@siegecamp.com), vira fila de carta
+# FEITO Singularity 6 | sem porta de formulario: pagina de carreiras lida (https://singularity6.com/careers) so publica email (hello@singularity6.com), vira fila de carta
 # FEITO Snapshot Games | sem porta de formulario: quadro GoHire com zero vaga e General Application por email jobs@snapshotgames.com
-SnowDog Studio
+# FEITO SnowDog Studio | sem porta de formulario: pagina de carreiras lida (https://snowdogfx.com/join-us) so publica email (info@snowdogfx.com), vira fila de carta
 Sparky Animation
 Sperasoft
 Spin VFX
 Squeeze Animation Studios
 Stardust Effects
-Starloop Studios
-Studio AKA
-Studio Evil
-Studio Isar Animation
-Studio Rakete
+# FEITO Starloop Studios | sem porta de formulario: pagina de carreiras lida () so publica email (hello@starloopstudios.com), vira fila de carta
+# FEITO Studio AKA | sem porta de formulario: pagina de carreiras lida (https://studioaka.co.uk/careers) so publica email (hello@studioaka.co.uk), vira fila de carta
+# FEITO Studio Evil | sem porta de formulario: pagina de carreiras lida () so publica email (contacts@studioevil.com), vira fila de carta
+# FEITO Studio Isar Animation | sem porta de formulario: pagina de carreiras lida (https://isaranimation.com/jobs) so publica email (jobs@isaranimation.com), vira fila de carta
+# FEITO Studio Rakete | sem porta de formulario: pagina de carreiras lida () so publica email (info@studiorakete.de), vira fila de carta
 Studio Soi
-Sun & Moon Studios
+# FEITO Sun & Moon Studios | sem porta de formulario: pagina de carreiras lida (https://sunandmoonstudios.co.uk/careers) so publica email (info@sunandmoonstudios.co.uk), vira fila de carta
 Sun Creature
-SunStrike Studios
-Sunblink Entertainment
+# FEITO SunStrike Studios | sem porta de formulario: pagina de carreiras lida () so publica email (info@sunstrikestudios.com), vira fila de carta
+# FEITO Sunblink Entertainment | sem porta de formulario: pagina de carreiras lida () so publica email (info@sunblink.com;sunblink@fortyseven.com), vira fila de carta
 Superseed Studios
 TESTE (validação)
-Team Clout
+# FEITO Team Clout | sem porta de formulario: pagina de carreiras lida (https://clout.games/careers) so publica email (JOB@CLOUT.GAMES), vira fila de carta
 TeamTO
 Telescope Animation
 Terminal FX
-Tessera Studios
+# FEITO Tessera Studios | sem porta de formulario: pagina de carreiras lida () so publica email (info@tesserastudios.com), vira fila de carta
 The Animation Band
 The Breach Studios
 The Frank Barton Company
@@ -125,10 +125,10 @@ The Sequence Group
 The Thinklab
 The Wingfeather Saga
 Theory Studios
-This Game Studio
+# FEITO This Game Studio | sem porta de formulario: pagina de carreiras lida () so publica email (info@thisgamestudio.com), vira fila de carta
 ThunderRoar Studio
 Tic Toc Games
-Tindalos Interactive
+# FEITO Tindalos Interactive | sem porta de formulario: pagina de carreiras lida () so publica email (contact@tindalos-interactive.com), vira fila de carta
 Tiny Island Productions
 Tippett Studio
 TomaVision
@@ -138,27 +138,27 @@ Toys for Bob
 Traega Entertainment
 TrailerFarm
 Traumhaus Studios
-Triangle Factory
+# FEITO Triangle Factory | sem porta de formulario: pagina de carreiras lida () so publica email (info@triangle-factory.be;work@triangle-factory.be), vira fila de carta
 Trimaran VFX
 Trust Studio
-Tumblehead
+# FEITO Tumblehead | sem porta de formulario: pagina de carreiras lida () so publica email (contact@tumblehead.com), vira fila de carta
 Twin Harbour Interactive (Stillfront)
 Twin Pines
-Twin Win Games
-UPP
-Uken Games
+# FEITO Twin Win Games | sem porta de formulario: pagina de carreiras lida () so publica email (info@twinwingames.com), vira fila de carta
+# FEITO UPP | sem porta de formulario: pagina de carreiras lida (https://upp.cz/careers) so publica email (info@upp.cz), vira fila de carta
+# FEITO Uken Games | sem porta de formulario: pagina de carreiras lida (https://uken.com/careers) so publica email (jobs@uken.com;support@uken.com), vira fila de carta
 Unfrozen
 Unit Image
-User T38
+# FEITO User T38 | sem porta de formulario: pagina de carreiras lida () so publica email (jobs@usert38.com;nuria.mateos@usert38.com), vira fila de carta
 VEA Games
 VSQUAD (reenvio)
 # FEITO Vertigo Games | sem porta de formulario: open application so por email jobs@vertigo-games.com
 Walking The Dog
 Watch Next Media
-Wildseed Studios
-Witch Beam
-Woodblock
+# FEITO Wildseed Studios | sem porta de formulario: pagina de carreiras lida (https://wildseedstudios.com/jobs) so publica email (jobs@wildseedstudios.com), vira fila de carta
+# FEITO Witch Beam | sem porta de formulario: pagina de carreiras lida (https://witchbeam.com.au/join) so publica email (info@witchbeam.com.au), vira fila de carta
+# FEITO Woodblock | sem porta de formulario: pagina de carreiras lida () so publica email (contact@woodblock.tv;newbiz@woodblock.tv), vira fila de carta
 Young Horses
 Yukfoo Animation
 tinyBuild
-viennaFX
+# FEITO viennaFX | sem porta de formulario: pagina de carreiras lida () so publica email (office@vfx.at), vira fila de carta
