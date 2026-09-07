@@ -119,6 +119,67 @@ function conferirLinks() {
   Logger.log(rascunhos.length + " rascunhos, " + sujos + " com link embrulhado (a limpeza corrige no envio)");
 }
 
+/* CONFERE TODO RASCUNHO DA CAIXA, sem enviar nada, e diz o que está fora do padrão.
+ *
+ * Por que ela varre TODOS e não só os do assunto da campanha: o conferirLinks() acima
+ * filtra por ASSUNTO, e por isso ele é cego justamente para o pior defeito possível, que
+ * é o rascunho com o assunto ERRADO. Rascunho com assunto errado não é só feio: o
+ * prepararRascunhos() e o enviarRascunhos() acham os rascunhos POR ESSE ASSUNTO LITERAL,
+ * então um assunto trocado deixa a carta invisível para o envio e ela nunca sai. Foi o que
+ * aconteceu em 07/09 com a carta do No Ghost, que estava pronta e fora da esteira.
+ *
+ * Rode sozinha no editor e leia o registro de execução. Ela não altera e não envia nada.
+ */
+function conferirRascunhos() {
+  const LINKS = [
+    ["ArtStation", /artstation\.com\/viniciuscavalcanti/i],
+    ["LinkedIn", /linkedin\.com\/in\/vinicavalcnti/i],
+    ["site", /vinicavalcanti\.com/i]
+  ];
+  // Pedir tempo em carta fria custa mais que a recusa, e a regra da campanha proíbe.
+  const PEDIDO_DE_TEMPO = /\b(a call|a chat|a meeting|coffee|fifteen minutes|twenty minutes|15 minutes|20 minutes|chance to talk|hop on a call|your time)\b/i;
+  const PROIBIDO = [
+    ["a palavra Brazil", /\bbrazil\b/i],
+    ["travessão", /—/],
+    ["'I hope this finds you well'", /hope this (email )?finds you well/i],
+    ["assinatura como Vinicius", /\bvinicius\b/i],
+    ["htmlBody escapado", /&lt;(p|a|br|b)\b/i]
+  ];
+  const rascunhos = GmailApp.getDrafts();
+  let comProblema = 0;
+  for (const d of rascunhos) {
+    const m = d.getMessage();
+    const para = m.getTo();
+    const assunto = m.getSubject();
+    const html = m.getBody() || "";
+    const texto = m.getPlainBody() || "";
+    const tudo = html + " " + texto;
+    const faltas = [];
+
+    if (assunto !== ASSUNTO) {
+      faltas.push("ASSUNTO FORA DO PADRÃO, o envio NUNCA vai achar este rascunho. Está: \"" + assunto + "\"");
+    }
+    for (const [nome, re] of LINKS) {
+      if (!re.test(tudo)) faltas.push("falta o link do " + nome);
+    }
+    if (PEDIDO_DE_TEMPO.test(tudo)) faltas.push("pede tempo ou conversa, e o fechamento certo é pedir direção");
+    for (const [nome, re] of PROIBIDO) {
+      if (re.test(tudo)) faltas.push("contém " + nome);
+    }
+    if (!texto.trim()) faltas.push("sem corpo em texto puro");
+    if (!html.trim()) faltas.push("sem corpo em HTML");
+    if (/google\.com\/url/i.test(limparLinks(tudo))) faltas.push("link embrulhado que a limpeza NÃO desfaz");
+
+    if (faltas.length) {
+      comProblema++;
+      Logger.log("PROBLEMA em " + para + ": " + faltas.join(" | "));
+    }
+  }
+  Logger.log(rascunhos.length + " rascunhos na caixa, " + comProblema + " com problema.");
+  if (!comProblema) Logger.log("Todos no padrão. Pode rodar o prepararRascunhos.");
+  return comProblema;
+}
+
 function assinatura() {
   // Usa a assinatura padrão da conta (a "n"). Se quiser outra, marque-a como padrão no Gmail antes de rodar.
   const contas = Gmail.Users.Settings.SendAs.list("me").sendAs || [];
