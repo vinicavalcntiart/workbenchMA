@@ -515,3 +515,32 @@ para os 9.657 hosts da lista, e a fatia que deu tempo de rodar não achou vaga n
 - **`pkill -f chrome` mata o próprio shell** que rodou o comando, e leva junto o que vinha depois
   na mesma linha. Já custou um registro e um commit inteiros. Use `pgrep` para conferir e mate
   por PID.
+
+## `json.dumps` do Python escreve espaço depois da vírgula, e isso APAGA a candidatura da contagem
+
+Medido em 07/09, e é a armadilha mais silenciosa até agora porque **não quebra nada**: a linha
+continua sendo JSON válido, o painel renderiza, o validador passa, e a candidatura simplesmente
+**não é contada**.
+
+O `conta-hoje.sh` casa a linha com `\["([^"]+)","([^"]*)",...` e o `.startswith('[') and
+',true,' in l`. O `json.dumps` padrão escreve `["A", "B", true, "alta"]`, com espaço, e nenhum
+dos dois casa. Resultado: **46 linhas do painel estavam nesse formato**, entre elas as melhores
+do dia (EA Vancouver, Epic, Riot), registradas certinho e invisíveis para a contagem. Consertar
+o espaçamento sozinho subiu o piso de 109 para 111.
+
+**Regra:** ao reescrever linha do `docs/index.html` por script, sempre
+`json.dumps(arr, ensure_ascii=False, separators=(',', ':'))`. Depois de qualquer escrita em
+massa, rode `sh automacao/conta-hoje.sh` e confira que o número **subiu**. Número que não se
+mexe depois de um envio registrado é sintoma, não coincidência.
+
+## A tela de sucesso do widget de ATS pode ser desenhada NO CLIENTE, e aí ela não é prova
+
+Medido no GoHire em 07/09. O `applyJob` do widget faz o POST e, se o JSON de volta não tem campo
+`error`, mostra a div de sucesso. **A tela não vem do servidor.** Ela é `display:block` numa div
+que já estava na página.
+
+A consequência inverte a regra da taxonomia de prova nesse caso: para esse ATS, o **200 com
+identificador de candidato** é exatamente a mesma evidência que o Vini teria clicando com a
+própria mão, e um navegador teria produzido MENOS informação, não mais. Antes de gastar
+navegador numa parede de host, leia o JS do widget: se a confirmação for cliente, a chamada
+direta à API é igual em força e custa um centésimo.
