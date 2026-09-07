@@ -1049,3 +1049,25 @@ libera nada não é conservadora, é quebrada.** Se um guarda-corpo passa um dia
 recusando tudo e ninguém estranha, o sintoma some dentro do resumo como "não achei trabalho".
 Toda trava nova precisa de um teste que prove que ela deixa passar o caso legítimo, não só
 que ela barra o caso ruim.
+
+## Correção da minha própria conclusão sobre a garra (07/09, meia hora depois)
+
+Escrevi acima que a garra quebrada "provavelmente explica a baixa produção de formulário do
+dia". Fui atrás e **não há prova disso**, então desfaço a parte especulativa e guardo só o
+que foi medido.
+
+O defeito era real e teria travado trabalho legítimo — isso continua de pé, e o conserto
+continua certo. Mas o agente da fatia europeia relatou que montou a fila **direto do array
+PORTAIS**, recortado por script entre `const PORTAIS = [` e o `].map`, sem passar pela garra
+para ESCOLHER, e por isso não pulou nada. E a única linha do `processados.csv` que registra
+a garra barrando trabalho ("a garra barrou tudo que parecia novo", varredura das 16h55 nas
+quatro casas grandes) foi conferida: as quatro vagas eram genuinamente já conhecidas ou já
+recusadas. A garra acertou naquele caso.
+
+A lição dupla, e a segunda metade é sobre mim:
+1. **Uma trava que nunca libera nada não é conservadora, é quebrada.** Vale, e o conserto fica.
+2. **Achar a causa de um problema não prova que ela produziu o efeito que te incomodava.**
+   Eu achei um defeito real e imediatamente o pendurei no número que estava me incomodando,
+   que era a produção baixa de formulário. Isso é a mesma pressa que me fez mandar candidatura
+   repetida para a Union VFX. Defeito achado e efeito medido são duas afirmações separadas, e
+   a segunda precisa de evidência própria.

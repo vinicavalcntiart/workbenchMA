@@ -696,6 +696,24 @@ Yes. I WANT TO RELOCATE and I am fully open to moving for the role, on site in M
 
 **Ordem sugerida, do mais seu para o menos:** Head of Characters primeiro, porque é personagem 3D estilizado da modelagem ao CFX e é o estilo exato do portfólio. Depois as duas de Head of CFX, que encostam no grooming em Houdini. Character Designer Ink em seguida. As duas de CG Experimental e a Expression of Interest são porta de entrada.
 
+**REVALIDADA EM 07/09 NA FONTE OFICIAL, e a Head of Characters subiu para prioridade ALTA.**
+A página do Eightfold responde 200 com o anúncio inteiro, então a vaga continua viva. Três
+coisas que a revalidação acrescentou e que mudam o peso dela:
+
+- **Faixa publicada no próprio anúncio:** *"The overall market range for this role is
+  typically $204k - $279k CAD"*. É compensação total, sem stock. Pela política de 04/09
+  pede-se a BASE, então **CAD 204.000**, com a abertura obrigatória *"Open to aligning with
+  your band for the role."*
+- **Nenhum veto de residência escrito.** O anúncio foi buscado termo a termo por `authoriz`,
+  `eligib`, `sponsor` e `work permit`: zero ocorrências. É o contrário das três da NBCU em
+  Montréal, que dizem "Must be legally authorized to work in Canada" num bloco do fim.
+- **Vancouver é Canadá anglófono**, que é a sua prioridade 1, e o regime é híbrido com
+  **mínimo de 3 dias por semana no escritório** — o único ponto de atenção do anúncio.
+
+Continua sendo candidatura de um minuto no seu navegador, pelo mesmo motivo de sempre: o
+formulário preenche 100% pela automação e o que trava é só o envio, pelo reCAPTCHA invisível
+que recusa IP de datacenter. Do seu IP residencial passa, e já passou duas vezes.
+
 ### Preenchimento, campo a campo
 
 | Campo | Resposta |
