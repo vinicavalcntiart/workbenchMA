@@ -577,3 +577,21 @@ devoluções.
 aparece (por `recruiter-email`, política de privacidade ou página de perfil), o nome do
 Teamtailor confirma que a pessoa existe, está na casa hoje e trabalha com contratação. Foi
 o que fechou a conta da Helena Toresson.
+
+## netflix.com está FECHADA por endereço montado: quatro bounces seguidos
+
+Medido até 07/09. Quatro endereços de `netflix.com` construídos por padrão voltaram todos com
+*Address not found*, e três deles em segundos: `dcasey@`, `danc@`, `bsick@`, `jfigliozzi@`.
+O padrão não é o problema pontual de um nome, é a casa: a Netflix não expõe caixa individual
+por esse formato.
+
+**Regra:** não montar mais nenhum endereço de `netflix.com` por padrão. Nome de pessoa da
+Netflix continua valendo como captura, mas só entra em fila de envio com **endereço visto
+publicado** pela própria empresa. Pela regra da casa 550, a porta do email fica fechada e a
+Netflix passa a ser alvo de portal e de LinkedIn, não de carta.
+
+Vale a distinção que apareceu no mesmo dia com a **Hydraulx**: o `vancouverjobs@hydraulx.com`
+também deu bounce, mas ele estava **publicado na página de carreiras deles**. Isso não é erro
+de montagem, é caixa desativada. A diferença importa para o registro: a Hydraulx continua com
+vaga de pé (Senior Modeler em Vancouver) e só precisa de outro endereço publicado; a Netflix
+não precisa de outro endereço, precisa de outra porta.
