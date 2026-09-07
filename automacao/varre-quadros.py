@@ -13,6 +13,15 @@ AS QUATRO LICOES, todas medidas e todas caras:
    atras. Por isso 403, 401, 429 e a familia do Cloudflare saem daqui com estado
    'bloqueado', que quer dizer ABRA COM NAVEGADOR, e nunca 'erro'.
 
+   MAS CUIDADO COM O EXAGERO OPOSTO, medido em 07/09 e que corrigiu um numero meu: de nove
+   "bloqueados" abertos com navegador, so UM era bloqueio de IP de verdade. Quatro estavam
+   mortos por certificado vencido, DNS caido ou dominio revendido, e cinco estavam vivos e
+   sem parede nenhuma. A etiqueta 'bloqueado' da varredura grande estava INFLADA porque a
+   versao anterior juntava erro de TLS com 403. Agora sao tres etiquetas distintas, porque o
+   conserto de cada uma e diferente: 'bloqueado' abre com navegador, 'certificado' abre com
+   curl -k, e 'dns-morto' geralmente esta morto mesmo. Contagem de bloqueio nunca deve ser
+   citada como se fosse contagem de vaga escondida sem antes abrir uma amostra no navegador.
+
 2. FILTRO EM INGLES SO ACHA VAGA EM INGLES. A "Artiste 3D" da Ankama passou batida em tres
    varreduras, e no recorte do Quebec duas vagas so apareceram por 'personnage' e
    'artiste 3d'. O vocabulario aqui e multilingue de proposito: frances, alemao, espanhol,
@@ -81,7 +90,7 @@ def variantes(url):
 
 def olha(linha):
     estudio, cidade, regiao, url = (linha + ['', '', '', ''])[:4]
-    bloqueado = ultimo = ''
+    bloqueado = cert = dns = ultimo = ''
     for v in variantes(url):
         try:
             req = urllib.request.Request(
@@ -98,8 +107,19 @@ def olha(linha):
             continue
         except Exception as e:
             texto = str(e)[:60]
-            if 'certificate' in texto.lower() or 'ssl' in texto.lower():
-                bloqueado = f'TLS: {texto}'
+            baixo = texto.lower()
+            # CORRECAO DE 07/09, e ela nasceu de um numero meu que estava errado. A versao
+            # anterior marcava erro de TLS como 'bloqueado', e isso INFLOU muito a contagem de
+            # bloqueio: de nove "bloqueados" abertos com navegador, so UM era bloqueio de IP de
+            # verdade; quatro estavam mortos por certificado expirado, DNS caido ou dominio
+            # revendido, e cinco estavam vivos. Juntar as duas coisas faz a varredura mentir
+            # nos dois sentidos: esconde site morto atras de "e so bloqueio" e esconde site vivo
+            # atras de "nao respondeu". Agora certificado tem etiqueta propria, porque o conserto
+            # dele e outro: certificado vencido abre com -k, bloqueio de IP so abre com navegador.
+            if 'certificate' in baixo or 'ssl' in baixo or 'cert_' in baixo:
+                cert = f'certificado: {texto}'
+            elif 'name or service not known' in baixo or 'nodename' in baixo or 'getaddrinfo' in baixo:
+                dns = f'DNS: {texto}'
             ultimo = texto
             continue
 
@@ -121,6 +141,10 @@ def olha(linha):
 
     if bloqueado:
         return (estudio, cidade, regiao, url, 'bloqueado', bloqueado, '')
+    if cert:
+        return (estudio, cidade, regiao, url, 'certificado', cert, '')
+    if dns:
+        return (estudio, cidade, regiao, url, 'dns-morto', dns, '')
     return (estudio, cidade, regiao, url, 'erro', ultimo, '')
 
 
@@ -149,7 +173,10 @@ def main():
                 print(f'--- {feitos} de {len(linhas)}', flush=True)
     print(f'\nFIM: {feitos} olhados. {contagem}', flush=True)
     print('ARTE = tem vaga da disciplina na pagina.', flush=True)
-    print('bloqueado = 403, 429 ou TLS recusado. NAO e site morto: abra com navegador.', flush=True)
+    print('bloqueado = 403, 429 ou 503 de verdade. Abra com navegador.', flush=True)
+    print('certificado = certificado vencido ou invalido. Abre com curl -k: foi o caso dos', flush=True)
+    print('   tres links do studiohog, dados como mortos por dias e vivos o tempo todo.', flush=True)
+    print('dns-morto = o dominio nao resolve. Esse sim costuma estar morto de verdade.', flush=True)
     print('js = so monta em JavaScript. NAO e "sem vaga": abra com navegador.', flush=True)
     return 0
 

@@ -2079,3 +2079,42 @@ campos abaixo (já estão prontos, só falta marcar o captcha e clicar Submit Ap
 
 Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
 `$SCRATCH/apply/streamline84_filled.png`.
+
+## Larian Studios (Character Artist — Open Application, Gent) — dossiê à mão, 07/09
+
+Link: https://larian.com/careers/64e1e658-7c7a-4c7f-b950-f997d40a9d8e (página oficial da vaga,
+time Character Art, listagem "Open Application", localização "Any" incluindo Gent na Bélgica) →
+botão "Apply for this job" leva ao ATS oficial deles, Lever:
+https://jobs.lever.co/larian/64e1e658-7c7a-4c7f-b950-f997d40a9d8e/apply
+CONFIRMADA na fonte oficial em 07/09: o próprio site da Larian lista esta candidatura aberta
+permanente de Character Art (não é vaga fechada nem expirada) — estúdio de Baldur's Gate 3 e
+Divinity: Original Sin 2, com sede histórica em Gent. Não há vaga nominal de Character Artist
+aberta agora (o quadro de 42 posições tem só Environment Artist em Quebec/Kuala Lumpur e
+Technical Artist em Barcelona), então esta é candidatura espontânea por disciplina, que conta
+como envio pela regra 4. Formulário preenchido inteiro em MODO SECO (sem --submit), com leitura
+de volta de cada campo — falta só o captcha:
+
+| Campo | O que escrever |
+|---|---|
+| Resume/CV | anexar `Vini_Cavalcanti_CV.pdf` (upload comum, sem dropzone escondido) |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários", formato internacional com +55 |
+| Current location | **digitar e escolher da lista** (autocomplete): `Olinda, Pernambuco, Brazil` — no teste automático o autocomplete não devolveu sugestão nenhuma (rede do agente), então é campo para digitar devagar e esperar a lista aparecer antes de clicar |
+| Current company | `E-Line Media` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio (Artstation, GitHub, personal website etc) URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Other website | `https://vinicavalcanti.com` |
+| What is your preferred Larian Studios location? | `Ghent` (radio) |
+| What is your second preferred Larian Studio location | `Dublin` (radio; opcional, mas ajuda a mostrar abertura a outra praça) |
+| Are you open to working in studio (onsite) full time? | `Yes` (select) |
+| Are you willing to relocate to a Larian studio location for this role? | `Yes` (select) |
+| How many years of professional experience do you have? | `More than 10 years` (select) |
+| Do you have experience working in the games industry? | `Yes` (select) |
+| What is the most recent company you have worked for? | `E-Line Media` |
+| Where did you hear about career opportunities with Larian? | marcar `ArtStation` (checkbox) |
+| Campo de contexto (Other/Conference/School) | pode deixar vazio, já que a resposta acima não é "Other" |
+| **PAREDE: hCaptcha de imagem** | visível no fim do formulário antes do botão Submit Application; resolver na tela, não se burla |
+
+Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
+`$SCRATCH/apply/filled_larian-char.png`.
