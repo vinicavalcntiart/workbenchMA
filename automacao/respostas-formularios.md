@@ -2344,3 +2344,56 @@ A tela devolveu *"One or more fields have an error. Please check and try again"*
 > aligning with your band for the role; as a reference, I am looking at around USD 100,000. Reel and
 > portfolio: https://www.artstation.com/viniciuscavalcanti — CV:
 > https://www.linkedin.com/in/vinicavalcnti/ — Site: https://vinicavalcanti.com
+
+## Plastic Wax (Sydney, Austrália) — Recruitment Form — À MÃO por reCAPTCHA que só aparece no fim
+
+**Link:** https://www.plasticwax.com/careers (rolar até RECRUITMENT FORM)
+
+Casa de animação e cinemática de Sydney (Subnautica 2, Splitgate 2, Disney Epic Mickey Rebrushed).
+A página diz: *"Don't see your role listed? That's okay, just complete the form below and we'll keep
+your details on hand for any relevant opportunities."*
+
+**POR QUE FICOU À MÃO:** o formulário é do Wix, em **quatro etapas**, e a automação preencheu e
+conferiu **todas** elas, inclusive os três menus e o anexo do CV. Ao clicar em **Submit** abre um
+**modal "Verification — Please confirm you're human"** com **reCAPTCHA de caixa de marcar**. É a
+mesma família do Workable e do Recruitee: até o clique final, tudo passa. Captura em
+`sp_plw_fim.png`. Marque a caixa e clique em Submit de novo, que leva dez segundos.
+
+Etapa a etapa, com os valores já validados:
+
+**Etapa 1** — First name `Vini`; Last name `Cavalcanti`; Email `contact@vinicavalcanti.art`;
+Phone (o do documento privado do Drive, **com o código de país**, e o seletor de bandeira vai
+sozinho para o Brasil); Address `Olinda, Pernambuco, Brazil`.
+
+**Etapa 2** — Resume* `Vini_Cavalcanti_CV.pdf`; Website / Portfolio
+`https://www.artstation.com/viniciuscavalcanti`; Portfolio Password `No password required.`;
+LinkedIn `https://www.linkedin.com/in/vinicavalcnti/`; Brief Description About Yourself:
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters. I WANT
+> TO RELOCATE and I am fully open to moving to Sydney for a role. Almost five years at E-Line Media
+> taking Endstar's hero characters from first sculpt to engine; The Wingfeather Saga at Angel
+> Studios, modelling and hand-painting Season 1 characters; and three years at PUGA Studios
+> delivering characters for international clients under someone else's art direction, in the style
+> defined by the client, with review rounds as routine. I am a Senior who reviews other artists'
+> work and sets the asset standard, and I founded my own character art school. Tools: ZBrush, Maya,
+> Blender, Substance Painter and Designer, Marmoset Toolbag, Unreal Engine, Houdini (grooming). I
+> would need work visa sponsorship for Australia; my academic background, with an honors laurea, a
+> postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa
+> case. Compensation: open to aligning with your band for the role; as a reference, around AUD
+> 95,000. Portfolio: artstation.com/viniciuscavalcanti — LinkedIn: linkedin.com/in/vinicavalcnti —
+> Site: vinicavalcanti.com
+
+**Etapa 3** — Working Rights\* **`Seeking Sponsorship in Australia`** (a lista tem *Australian
+Citizen or Permanent Resident*, *New Zealand Citizen*, *Valid Working Visa*, *Seeking Sponsorship in
+Australia*, *Seeking Remote International Work*; **a verdade é a quarta**); Job Type Preference\*
+**Permanent or Fixed Term - Full Time**; Reason For Application `Actively seeking employment`;
+Salary or Day Rate Expectations `Open to aligning with your band for the role; as a reference,
+around AUD 95,000 per year.` (a própria página avisa: excluir superannuation e informar em AUD);
+Availability To Commence `4 weeks`; e marcar a caixa de consentimento de banco de dados.
+
+**Armadilhas medidas:** (1) o **primeiro clique em Next não avança** — o Wix precisa de um segundo
+clique depois de os campos registrarem; (2) o botão de Submit **fica com o rótulo vazio** enquanto
+processa, o que faz um preenchedor genérico achar que o botão sumiu; (3) o `innerText` do input do
+menu volta **vazio** mesmo com a opção escolhida, e quem mostra a verdade é o **texto do botão** do
+menu; (4) o anexo do Wix limpa o `input[type=file]`, e a prova é o **nome do arquivo na tela**,
+que aqui apareceu como `Vini_Cavalcanti_CV.pdf`.
