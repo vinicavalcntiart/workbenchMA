@@ -1,152 +1,111 @@
-# Só o Vini pode fazer — fechado em 07/09, 02h50 UTC
+# Só o Vini pode fazer — refeito em 07/09, 06h40 UTC
 
-Tudo que a automação levou até o limite e não pôde terminar, com o motivo medido de cada um.
+O arquivo anterior era de 02h50 e ficou velho em quase tudo. Este é o estado real de agora.
 Nada aqui é "tente de novo": em todos os casos alguém já foi até a parede e voltou com o mapa.
 
 Ordenado pelo que rende mais por minuto do seu tempo.
 
 ---
 
-## 1. UPP, Praga: RESOLVIDA depois que este arquivo foi escrito. NÃO REAPLIQUE.
+## 0. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado
 
-**Texture Artist:** https://upp.cz/careers/texture-artist
-**Senior 3D Generalist:** https://upp.cz/careers/senior-3d-generalist
+**O painel que você abre no navegador está parado em 06/09 às 14h06.** Ele não está quebrado:
+está velho. Aberto num navegador de verdade, o `docs/index.html` do repositório renderiza
+**478 linhas com zero erro de JavaScript**. A sua tela mostra 236 rotas e 60 à mão; o número
+real é **478 de pé, 259 sem candidatura e 102 à mão**.
 
-As duas são a sua disciplina literal, e as duas foram **enviadas por mim em 07/09, por volta das
-02h40 UTC**, cada uma com POST 200 em `upp.cz/api/submit-application`, que é o endpoint real de
-envio deles, com CV anexado e visível na tela e o consentimento marcado.
+**A causa:** o secret `DASHBOARD_SENHA` sumiu do repositório, e sem ele o job que publica é
+**pulado**. Job pulado faz o run contar como *success*, com check verde, então foram catorze
+horas de commits que nunca chegaram ao site e nenhum sinal apontou isso.
 
-**Ressalva honesta, e é por isso que elas continuam citadas aqui:** não houve texto de confirmação
-na tela nem email de recebimento, e eu conferi a caixa. Há prova de REDE, que é bem mais forte que
-formulário que apenas limpa, mas não há prova de tela. **Não reaplique hoje**, porque reenviar
-trocaria uma dúvida por uma candidatura repetida. Se em alguns dias não vier resposta nenhuma da
-UPP, aí sim vale você mandar e ver a confirmação com os próprios olhos.
+**O conserto, e só você pode fazer:** GitHub → Settings → Secrets and variables → Actions →
+New repository secret. Nome exato **`DASHBOARD_SENHA`**, valor = a senha que você usa para
+abrir o painel. Depois disso qualquer push republica sozinho.
 
-O que travava não era captcha nem lentidão, como três diagnósticos anteriores diziam: eram quatro
-sobreposições que nunca somem e interceptam os cliques.
-
----
-
-## 1b. Certain Affinity: DUAS vagas de Senior Material Artist, Vancouver e Toronto
-
-**Vancouver:** https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist
-**As duas no quadro do estúdio:** https://certainaffinity.com/career
-
-Estúdio AAA de verdade, com trabalho em **Halo, Doom, Call of Duty e Left 4 Dead**, e a vaga é
-**material e texturização**, que é a sua disciplina. São **duas requisições separadas**, uma por
-cidade, e as duas em Canadá anglófono, que é a prioridade número um.
-
-Ela quase não existiu para nós: o `certainaffinity.com` voltava 403 no curl e a campanha o tinha
-como morto. Aberto com navegador, estava vivo o tempo todo.
-
-**Preenchi o formulário inteiro e conferi campo a campo em 07/09.** Só falta marcar o captcha:
-é reCAPTCHA **v2 de caixa**, medido pelo iframe âncora de 304 por 78 pixels, então não adianta
-tentar de outro IP. Não há pergunta de autorização de trabalho nem de salário.
-
-Campos, todos do JazzHR: `Vini` / `Cavalcanti` / `contact@vinicavalcanti.art` / telefone **com
-+55** / cidade `Olinda` / província `Pernambuco` / CV anexado. Endereço e CEP são opcionais.
-
-**Detalhe que confunde:** o campo de arquivo do JazzHR é **invisível**, então o nome do CV não
-aparece na tela mesmo com o anexo dentro. Ao contrário do Wix, aqui a prova é o próprio input.
+Já deixei o workflow gritando: agora ele grava aviso amarelo com título e escreve no resumo do
+run o que houve e como consertar. Continua sem falhar e sem te mandar email, mas para de mentir
+calado.
 
 ---
 
-## 1c. Larian Studios, Gent: Character Artist, candidatura aberta permanente
+## 1. Três formulários prontos, esperando um clique seu
 
-A casa de **Baldur's Gate 3**. É a candidatura espontânea permanente do time de Character Art, e
-o formulário do Lever foi preenchido inteiro e conferido: nome, email, telefone, local Ghent,
-disposto a presencial e a realocar, 10+ anos, ArtStation.
+Todos com o formulário **preenchido e conferido campo a campo**. Para você é menos de um minuto
+cada, porque só falta o que a automação não pode fazer.
 
-**A parede:** hCaptcha de imagem, no fim, antes do Submit. Dossiê campo a campo em
-`respostas-formularios.md`. Para você é menos de um minuto.
+### 1a. Engine Room Hollywood, Los Angeles — falta só ANEXAR UMA IMAGEM
+https://www.engineroomhollywood.com/careers/ (role até *READY TO JOIN US*)
+
+**Não tem captcha nenhum.** O envio parou num detalhe só: o campo `File` é obrigatório e o
+`accept` dele é `audio/*,video/*,image/*`, ou seja **recusa PDF**. Tentei baixar uma imagem do
+seu ArtStation para resolver sozinho e não consegui: o site está atrás do Cloudflare.
+
+**Anexe qualquer render do seu trabalho** e o envio passa. O resto está preenchido.
+
+### 1b. Floating Rock, Wellington — Character Artist do *Kyōryū*
+O encaixe mais direto que apareceu na madrugada. Parede: reCAPTCHA do HubSpot.
+**As duas respostas que não podem errar:** `Modeller - Character` e `10+ years`.
+Dossiê campo a campo em `automacao/respostas-formularios.md`.
+
+### 1c. Plastic Wax, Sydney — banco de talentos
+Formulário Wix de quatro etapas, preenchido inteiro **com CV anexado**. O reCAPTCHA aparece
+num modal **depois** do Submit. **A resposta que não pode errar:** Working Rights =
+`Seeking Sponsorship in Australia`, que é a quarta opção. A terceira, *Valid Working Visa*,
+seria mentira — e foi exatamente nela que um seletor da automação caiu na primeira passada.
+O defeito já está corrigido no script, que agora **recusa adivinhar** em vez de pegar a
+primeira opção da lista.
 
 ---
 
-## 1d. Respawn Entertainment, Vancouver: PISTA FORTE, mas confira antes
-
-A casa de **Apex Legends**, do grupo EA, tem escritório de verdade em Vancouver, e a leitura da
-página de carreiras deles mostrou **cinco vagas de arte abertas**, uma delas **Principal Materials
-Artist**, que é encaixe direto em texturização.
-
-**Por que isto está como pista e não como link pronto, e a ressalva é honesta:** não consegui
-confirmar a vaga na fonte oficial. A busca do `jobs.ea.com` **ignora a palavra-chave** e devolve
-as mesmas vinte vagas para "materials artist", "character artist" e "environment artist" — é o
-mesmo defeito que o portal da Disney já tinha mostrado. E a campanha tem histórico de erro interno
-do Avature na EA Vancouver, que devolveu *Internal server error* em cinco tentativas.
-
-**O que fazer:** abra `respawn.com` na seção de carreiras pelo seu navegador e procure a Principal
-Materials Artist de Vancouver. Se ela existir, vale muito: é AAA, é Canadá anglófono e é a sua
-disciplina. Se cair no portal da EA e ele der erro, entre na sua conta e veja em *Job Applications*
-se aparece "Finish your application", que foi o que resolveu um caso igual antes.
-
----
-
-## 2. Rainbow SpA, Roma e Milão: três portas abertas de uma vez
-
+## 2. Rainbow CGI, Roma e Milão: pendência honesta, decida você
 https://www.rbw-cgi.it/careers/
 
-A casa das Winx tem **3D Modeler, Surfacing Artist e General Application** abertas ao mesmo
-tempo. O formulário é Contact Form 7 **com campo de arquivo de verdade**, então CV e carta sobem.
+A casa das Winx, animação de personagem estilizado, que é o seu registro. O menu de função tem
+**`3D Character`** escrito. Preenchi o formulário inteiro, com CV anexado, e cliquei em enviar:
+**os campos limparam, mas não houve POST capturado, texto de confirmação, URL de confirmação
+nem email.** Pela regra que fechamos, isso **não conta como enviada**.
 
-**A parede:** reCAPTCHA v3, de pontuação de sessão. Ele reprova a automação e devolve a tela
-genérica *"There was an error trying to send your message"*, que mente sobre o motivo. **No seu
-navegador passa direto.**
-
----
-
-## 3. Bulkhead Interactive, Derby: o anúncio diz por escrito que patrocina visto
-
-https://careers.bulkhead.com/jobs/5739695-open-application-in-studio
-
-**Não confunda com a versão [Remote]**, que é por projeto. Esta é a **IN-STUDIO**, e o anúncio
-diz três coisas raras: *"Don't worry, we can sponsor your visa"*, *"This role is 100% on-site"*
-e que oferecem **ajuda de realocação**. Patrocínio dito por escrito vale mais que quase tudo.
-
-**Por que fica com você, e não é captcha:** o formulário exige um **print da aba Most Played do
-seu perfil Steam**, arquivo obrigatório que só você gera.
-
-**Armadilha medida:** os menus *Where are you currently based* e *Which department* continuam
-mostrando "Select an option" mesmo depois de marcados. Confira pela tela, não pelo primeiro clique.
+**Não reenviei de propósito**, para não trocar uma dúvida por uma candidatura repetida. Se em
+alguns dias não vier resposta, mande você e veja a confirmação com os próprios olhos. Parede
+declarada: reCAPTCHA v3, que é pontuação de sessão e passa no seu navegador.
 
 ---
 
-## 4. Screen Burn Interactive, Glasgow: também patrocina, e está em Silent Hill
+## 3. O que EU mandei enquanto você dormia, para você não repetir
 
-Ex-No Code, BAFTA múltiplo, hoje em *Silent Hill: Townfall* para Konami e Annapurna. A
-candidatura espontânea diz **explicitamente que patrocina visto de trabalho**.
-Parede: reCAPTCHA de caixa no BreatheHR. Dossiê campo a campo em `respostas-formularios.md`.
-
----
-
-## 5. Urban Games, Suíça: Head of Art
-
-https://www.urbangames.com/career/ · descrição em PDF em https://www.urbangames.com/head-of-art-2
-Porta: o formulário de contato em https://www.urbangames.com/contact
-
-Além do Head of Art eles convidam candidatura espontânea por escrito. **O formulário não tem
-campo de arquivo**, então CV e portfólio vão por link, e o texto pronto está em
-`respostas-formularios.md`. Parede: reCAPTCHA v3, com a mensagem em vermelho na tela.
+- **Bulkhead Interactive [IN-STUDIO], Derby** — ENVIADA às 05h30, com URL de confirmação.
+  **É a que realoca**: presencial integral, ajuda de realocação e a frase *"Don't worry, we can
+  sponsor your visa"*, todas confirmadas na tela. Você tinha mandado a **[REMOTE]** às 04h45,
+  que é por projeto e de casa; são requisições diferentes e agora as duas estão feitas.
+- **BoomBit, Gdańsk** — ENVIADA, com prova dupla. Ela só existiu porque a resposta automática
+  deles dizia, no meio do texto padrão, que **candidatura por email é apagada por GDPR**: a
+  carta de 06/09 foi destruída sem leitura. Vale ler o corpo das automáticas antes de arquivar.
+- **Larian, Gent** — você mandou, e a confirmação do Lever chegou às 04h35.
 
 ---
 
-## 6. Upsurge Studios, Melbourne: preenchida inteira, parou no último clique
+## 4. Erro meu da madrugada, dito com todas as letras
 
-A vaga é a disciplina literal: humanoides, criaturas e monstros, anatomia e edge loop para
-deformação, cabelo, pelo e pele, com ZBrush, XGen, Substance e Unreal ou Unity.
-O formulário foi preenchido inteiro, **com CV e carta anexados**, e parou no **Turnstile** da
-Cloudflare. Prioridade 3 por ser Oceania, mas é um clique seu.
+**Mandei duas candidaturas repetidas para a Sony Pictures Imageworks**, na mesma noite em que
+escrevi a trava que deveria impedir isso. A *Experienced Modeler* já tinha ido em 02/09 e a
+*Experienced Texture Artist* em 05/09, e eu reenviei as duas.
+
+**Como passou:** escolhi no que trabalhar filtrando o painel por `done=false`; as vagas de
+Vancouver estavam com `done=true` e ficaram invisíveis para o meu filtro. Depois reachei as
+mesmas requisições pela API do Greenhouse e tratei como novidade. A trava que eu tinha escrito
+protegia contra dois agentes ao mesmo tempo, não contra trabalho feito dias antes.
+
+**Consertado na hora e testado:** a `garra.sh` ganhou o comando `checa` e passou a aceitar a URL
+da vaga, e recusa com `JA-FEITO` qualquer requisição cuja URL ou ID já apareça no painel ou no
+`processados.csv`, **sem olhar estado nenhum**. Os cinco agentes que estavam rodando foram
+avisados um a um.
+
+**Por causa disso, a contagem honesta de hoje é 101 estúdios, não 102:** a Sony já era estúdio
+trabalhado, e as minhas repetidas a fizeram contar como nova.
 
 ---
 
-## 7. A fila grande
-
-`automacao/FILA-DO-VINI.md` tem **45 entradas mais um apêndice de 33** medidas depois que ela
-foi montada. As três primeiras do apêndice são as de cima. As do corpo principal começam por
-Behaviour *Dead by Daylight*, Ubisoft Montréal e Framestore.
-
----
-
-## 8. Perguntas que só você responde, e por isso ficaram em branco de propósito
+## 5. Perguntas que só você responde, e por isso ficaram em branco de propósito
 
 Nenhuma foi inventada.
 
@@ -156,12 +115,28 @@ Nenhuma foi inventada.
 | **Ghost Ship** e **Keen Games** | vídeo gravado por câmera, impossível por automação |
 | **Keen Games** | número de títulos publicados |
 | **Coffee Stain** | qual estúdio do grupo você prefere: são 8 opções nomeadas, nenhuma neutra |
-| **Sharkmob** e **Weta** | departamento ficou em "All" porque nenhuma opção é de arte de personagem. Na Sharkmob a suspeita é "Content", que na Embark é o guarda-chuva de arte, mas não há prova sobre a casa dela |
+| **Sharkmob** e **Weta Workshop** | departamento no genérico porque **nenhuma opção do menu é arte de personagem** |
 | **Untold Studios** | departamento no genérico; decisão anterior sua, não revertida |
+| **FIN Design** | o email de verificação expira em 1 hora e pedir outro exige login com senha |
+| Aba **References** de qualquer Teamtailor | dispara email ao contato na hora e exige pessoa real |
 
 ---
 
-## 9. Três fontes do PDF paradas pelo NOSSO ambiente, não pelos sites
+## 6. A fila grande, e a leitura honesta dela
+
+`PORTAIS` tem **259 entradas sem candidatura**, mas isso **não são 259 portas abertas**. Depois
+de varrer a noite inteira, o veredito dos agentes é que a esmagadora maioria já tem motivo
+escrito: captcha de desafio, vaga expirada, **veto de residência** ou porta de email.
+
+**Veto de residência foi a descoberta mais cara da madrugada.** Muita vaga remota exige já morar
+no país, e isso não aparece no título: Image Engine (*"required to be based in British Columbia
+and eligible to work in Canada"*), thatgamecompany, Shishi, Panna Cotta e People Can Fly caíram
+por isso. A Image Engine em especial: eu tinha te recomendado como a sua rota de mudança mais
+realista, e ela exige exatamente o que você ainda não tem.
+
+---
+
+## 7. Três fontes do PDF paradas pelo NOSSO ambiente, não pelos sites
 
 `worldwidestudios.net`, `gamedevjobs.io` e `gamefilmhub.com` devolvem, por extenso, do proxy de
 saída: **`Host not in allowlist`**. Falham igual no navegador. **Só destrava se você liberar
@@ -169,31 +144,8 @@ esses hosts nas configurações de egresso do ambiente.** São três fontes inte
 
 ---
 
-## 10. Um canal passivo que trabalha sozinho depois de criado
+## 8. Um canal passivo que trabalha sozinho depois de criado
 
 `80.lv/talent` **não é quadro de vagas**: é marketplace de perfil, com conta obrigatória
 (*"Create, publish, and share your profile and your work samples seen by hiring companies"*).
 Conta criada trabalha sozinha, e só você pode criar.
-
----
-
-## 11. Rascunhos prontos no Gmail, esperando a sua decisão
-
-Todos com o assunto padrão, então o script de envio os encontra.
-
-- **Hydraulx**, Vancouver: eles têm *Senior Modeler* e *Mid Modeler* abertas, disciplina exata,
-  e a porta é só email.
-- **Floating Rock**, Wellington: personagem e criatura com ZBrush, Substance e UE5.
-- **Lightbox Animation**, Madri: o quadro está vazio hoje, e a própria página convida
-  candidatura espontânea pedindo **links e nenhum anexo**, que é como a carta foi escrita.
-
----
-
-## 12. Uma pendência honesta: L'Atelier Animation, Montreal
-
-O formulário foi preenchido inteiro e o clique saiu, a página devolveu 200 e os campos limparam,
-**mas não veio confirmação nem email**. Pela regra fechada hoje, isso não conta como enviada.
-
-**Não reenviamos de propósito.** Reenviar no mesmo dia trocaria uma perda possível por um dano
-certo, e hoje a Icefall já recebeu duas candidaturas por colisão de fila. **Se em alguns dias não
-vier resposta, mande você e veja a confirmação com os próprios olhos.**
