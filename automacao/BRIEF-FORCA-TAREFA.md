@@ -409,3 +409,45 @@ só duas viraram carta, e as duas porque o endereço apareceu publicado **em out
 `nome.sobrenome@dominio` para as outras seria o mesmo chute que produziu as 17 devoluções.
 **O atalho confirma que a pessoa existe, está na casa hoje e cuida de contratação. Quem dá o
 endereço é o site.**
+
+## O CENSO DE QUADROS ENVELHECE EM HORAS, e por isso ele agora mora num ARQUIVO
+
+Medido em 07/09 pela fatia COLHEITA. A rodada anterior varreu os quadros de ATS conhecidos, achou
+**46 vagas da disciplina que a garra dizia nunca terem sido tocadas**, aplicou em duas e passou o
+número adiante **sem gravar o censo em lugar nenhum**. Refazer custou vinte minutos, e o pior é
+que o número já não valia: refeito o censo (`automacao/censo-boards-0709.csv`, 173 tokens, 123
+quadros, **2.791 vagas**, 165 da disciplina, 74 fora do painel), a conferência no **Gmail** mostrou
+que a maioria dessas 74 **já tinha recebido candidatura nas horas anteriores** — Envar, Bluehole
+duas, Loonshot, Playdead, Beffio três, Ankama, Bulkhead duas, Stunlocks, Gigglebug, Star Stable —
+sem nada disso ter chegado ao painel nem ao `processados.csv`.
+
+**Duas coisas ficam:** (1) censo se salva em arquivo versionado, sempre, porque o custo de gravar
+é um `git add` e o de refazer é meia hora; (2) **contagem de "nunca tocada" tem validade de horas**,
+não de dias, e a única fonte que acompanha o ritmo é o Gmail. Nesta rodada o Gmail sozinho impediu
+**nove repetidas** que a garra tinha liberado com `OK`.
+
+**E a leitura estratégica, que é a parte útil:** o estoque de disciplina nos quadros que a campanha
+já conhece **está seco**, e quase tudo o que sobra é parede — BambooHR inteiro com reCAPTCHA de
+caixa, Lever com hCaptcha, SmartRecruiters com DataDome, Ashby reprovando a sessão por pontuação, e
+os 15 quadros do Workable devolvendo `429` horas depois do primeiro teste. Procurar mais nos mesmos
+quadros rende pouco; o que rende é **quadro de estúdio novo**.
+
+## BambooHR: local VAZIO na listagem não é remoto, é campo não preenchido. `atsLocation` diz a verdade.
+
+Medido em 07/09 na Streamline Studios e na Stirling Animation, e as duas enganam para lados
+opostos. O `<token>.bamboohr.com/careers/list` devolve `location` com `city`, `state` e
+`addressCountry` **todos nulos** nas duas casas, o que faz as vagas parecerem remotas ou europeias.
+
+O `/careers/<id>/detail` traz um segundo campo, **`atsLocation`**, e é ele que tem o dado:
+**Streamline é Kuala Lumpur, Malásia** (fora do escopo, três vagas descartadas) e **Stirling é
+Stirling, Reino Unido** (dentro do escopo). Um `curl` no `/detail` resolve as duas, e **não gasta
+navegador**. Antes de classificar geografia de vaga do BambooHR, leia o `atsLocation`.
+
+## `pkill -f chrome` MATA O SEU PRÓPRIO SHELL
+
+Custou um comando inteiro em 07/09, com registro de painel e commit dentro dele. `pkill -f` casa
+contra a linha de comando **completa**, e a linha de comando do shell que roda `pkill -f chrome`
+**contém a palavra chrome**: o `pkill` se mata, e tudo o que vinha depois do `;` nunca roda, sem
+mensagem nenhuma além de um código de saída 1. Escreva o padrão quebrado, `pkill -f 'chrom[e]'`, ou
+confira primeiro com `ps aux` — que nesta rodada mostrou que **não havia navegador nenhum vivo**, e
+que o `pgrep -f chrome` estava casando com a linha do próprio gerenciador da sessão.
