@@ -2729,3 +2729,124 @@ repositório, que é público** — ela foi entregue ao Vini no resumo da rodada
 documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Detalhe do fluxo: a página
 de redefinição tem **dois** campos de senha e o botão se chama **Next**, com `id="submitButton"`;
 abrir `/careers/ForgotPassword` direto pela URL devolve **página vazia**, o link tem que ser clicado.
+
+## CENSO DO PORTAL INTEIRO DA EA (07/09, 09h30): 332 vagas, e a arte NÃO está onde se esperava
+
+A porta da EA foi aberta em 07/09 e a primeira coisa a fazer com ela era **listar o portal
+inteiro**, porque a busca por palavra-chave do `jobs.ea.com` **ignora o termo** e devolve as
+mesmas vinte vagas para qualquer coisa que se digite — foi isso que escondeu a Respawn por dias.
+A leitura confiável é **paginar por `jobOffset`, 20 por página**; `jobRecordsPerPage=100` não
+funciona, o servidor devolve 20 do mesmo jeito. O script está em `automacao/lista-ea.sh` e roda
+em cerca de um minuto com **uma conexão sequencial**; o retrato de 07/09 está em
+`automacao/ea-portal-0709.csv`.
+
+**O resultado desmente a expectativa mais cara do dia.** A esperança escrita era que "Canadá
+anglófono e Europa estão todos aí dentro" por causa de BioWare, Motive, Criterion, DICE e Maxis.
+Geograficamente é verdade. **Em vaga de arte, não é:**
+
+| Estúdio do grupo | Vagas no portal | Da disciplina do Vini |
+|---|---|---|
+| EA Studios - SPORTS (Vancouver, Bucareste, Orlando, Birmingham) | 143 | **4** |
+| EA Studios - Respawn (Vancouver GNW, LA) | 19 | 1 (a 214789, já enviada) |
+| EA Studios - Quality Verification | 24 | 0 |
+| EA Studios - EA Create (Xangai, Kuala Lumpur) | 9 | 0 no escopo geográfico |
+| EA Studios - Localization | 6 | 0 |
+| EA Studios - Motive Montreal | 5 | 0 (engenharia e narrativa) |
+| EA Studios - Full Circle (Vancouver, Montréal) | 5 | 0 |
+| EA Studios - DICE Stockholm | 4 | 0 (engenharia e design) |
+| EA Studios - Mobile Korea | 4 | 0 |
+| Maxis (Vancouver) | 3 | 1 (Art Director 215644, já enviada em 01/09) |
+| EA Studios - Ripple Effect | 2 | 0 |
+| EA Studios - Criterion Games (Guildford) | 2 | 0 (business dev e segurança) |
+| **EA Studios - BioWare (Edmonton)** | **1** | **0** (Production Director) |
+| EA Studios - DCS, Mobile (Firemonkeys, Playdemic, Glu, Slingshot) | 9 | 0 no escopo |
+| CT (IT, Segurança, Frostbite, Infra, Dados), Finanças, Marketing, RH, Jurídico | ~100 | 0 |
+
+**A frase que fica para a campanha: no dia 07/09 a EA inteira tinha exatamente CINCO vagas da
+disciplina no mundo todo, e QUATRO delas eram a mesma equipe de Characters do EA SPORTS FC em
+Vancouver.** BioWare tem uma vaga só no mundo. Criterion tem duas e nenhuma é de arte. DICE tem
+quatro e nenhuma é de arte. **Entrada de painel por estúdio do grupo não vale nada aqui: o que
+vale é o censo do portal, e ele leva um minuto.**
+
+### As três Character Artist do EA SPORTS FC são a MESMA vaga em três contratos
+
+Armadilha nova, e o `internal_job_id` do Greenhouse não ajuda aqui porque o Avature não publica
+um. **O que separa as três é o `Worker Type` e a FAIXA SALARIAL**, não o texto:
+
+| Req | Worker Type | Faixa publicada (BC) | Situação |
+|---|---|---|---|
+| **215358** | **Regular Employee** (efetiva) | CAD 92.900 – 129.200 | **ENVIADA em 07/09** |
+| 215657 | Temporary Employee | CAD 77.700 – 107.900 | enviada em 03/09 |
+| 215666 | Temporary Employee | CAD 92.900 – 129.200 | **NÃO enviada: é cópia literal da 215657** |
+
+Diferença entre a 215657 e a 215666, linha a linha do anúncio renderizado: **só o número da
+requisição e a faixa**. Diferença entre a 215657 e a 215358: número, requisição, **Worker Type** e
+faixa. Ou seja, a regra "título + cidade iguais já é suspeita suficiente para pular" **teria feito
+perder a versão EFETIVA**, que é justamente a que sustenta patrocínio de visto — contrato de doze
+meses raramente sustenta permissão de trabalho e efetivo sustenta. **A regra ganha uma exceção
+medida: quando o mesmo anúncio sai como Temporary e como Regular, as duas são requisições
+diferentes e a Regular vale a candidatura mesmo que a Temporary já tenha ido.** O que NÃO vale é
+mandar nas duas Temporary idênticas.
+
+Como conferir em trinta segundos, sem navegador: `curl` na página da vaga e comparar
+`Worker Type`, `Work Model` e o bloco `PAY RANGES`. O `LinkedInID` que aparece no rodapé **não
+serve de chave**: é o id da empresa na LinkedIn e é o mesmo `74884070` em todas as vagas da EA.
+
+### O que ficou de fora, e por quê
+
+- **215788 Senior Character Artist (Vancouver, efetiva)** — continua sem candidatura, e agora por
+  um motivo NOVO além do defeito de servidor: com a 215358 enviada, mandar também na sênior do
+  **mesmo time e mesma função** é exatamente a candidatura repetida que a regra do Greenhouse
+  proíbe ("Modeler e Experienced Modeler: mande só na sênior"). O erro estrutural, para não se
+  repetir: **quando o mesmo time publica o nível júnior e o sênior da mesma função, decida ANTES
+  qual das duas recebe a candidatura.** Aqui a sênior estava quebrada do lado da EA (Internal
+  server error em cinco tentativas em dois dias), então a efetiva não-sênior era a única porta
+  que abria de verdade.
+- **214767 Concept Hard Surface Artist (Apex Legends, Vancouver)** — o título engana. O anúncio
+  se chama por dentro **"Concept Artist I"**, é concept art 2D de cosmético de arma, e é o nível
+  de ENTRADA. Fora da disciplina e abaixo da senioridade.
+- **215670 / 215659 / 215871 Concept Artist (Environment, Wardrobe, Mural)** — concept 2D.
+- **215826 Visual Designer - EA SPORTS UFC** — o nome soa a visual development e **não é**: é
+  design gráfico e de UI, Figma e Adobe, com 3D só como "nice to have".
+- **214727 Capture Artist - Skate** — captura de gameplay para marketing, não é arte 3D.
+- **216056 Associate Environment Artist** e **215726 Concept Artist** e **215915 Associate
+  Technical Art Director** — todas em Kuala Lumpur, **fora do escopo geográfico** (na Ásia só
+  valem Coreia do Sul e Singapura). As duas últimas saíram do ar entre 09h00 e 09h30 de 07/09.
+- **215999 / 215998 Level Artist e Senior Level Artist, 215913 Concept Artist - Character,
+  216022 Art Director - Create, 214738 Senior 3D Art Lead FC Mobile** — todas em Xangai, fora do
+  escopo.
+- **Todo o bloco de Technical Artist** (são catorze no EA SPORTS) — disciplina que ele não tem.
+
+### Enviadas nesta rodada, com prova tripla cada uma
+
+| Req | Vaga | Local | Prova |
+|---|---|---|---|
+| **215358** | Character Artist - EA Sports FC (Regular Employee, híbrida) | Vancouver, Canadá | `Success?jobId=215358` + texto na tela + email de `EAcareers@ea.com` às 09h07 |
+| **215660** | Level Artist - EA SPORTS FC (contrato de 12 meses, presencial 3 dias) | Vancouver/Burnaby, Canadá | `Success?jobId=215660` + texto na tela + email de `EAcareers@ea.com` às 09h17 |
+
+A Level Artist foi enviada com a ressalva escrita no painel: o eixo do anúncio é construção de
+nível e arquitetura, que não é o portfólio dele, mas as **qualificações** são conhecimento expert
+de Maya, modelagem de alta fidelidade, pintura fotorrealista em Substance Painter, ZBrush e
+Substance Designer, e **supervisionar artistas internos E EXTERNOS com experiência de fornecedor
+de outsourcing** — que é literalmente o que os três anos de PUGA provam.
+
+### O fluxo logado, reconfirmado duas vezes seguidas
+
+O `mt_ea_go.js` fechou as duas candidaturas sem uma única intervenção. A sequência é sempre a
+mesma e vale escrever: `ApplicationMethods` (login) → `ApplicationGeneralInformation` (perfil já
+preenchido, cinco selects e a carta) → botão `7858-save` → `ApplicationEEO` com **três** telas
+encadeadas (`17506-goto`, `2666-next`, `2680-save`) → `Success?jobId=`. O aceite de rótulo
+`*` é o `17505`; o `3679-2` (patrocínio) e o `3679-3` (restrição) só aparecem na **segunda** tela
+do EEO. Em nenhuma das duas houve 502 no Continue nem página vazia — o defeito de rede que
+atormentou a rodada anterior não apareceu com o navegador rodando sozinho.
+
+### A senha da conta
+
+Foi redefinida de novo em 07/09 às 08h55 pelo fluxo oficial (`/careers/Login` → *Forgot your
+password?* → link de `noreply@ea.avature.net`, assunto *Password activation*). **A senha nova NÃO
+está neste arquivo nem em nenhum outro do repositório, que é público**: foi entregue ao Vini no
+resumo da rodada e o lugar dela é o documento privado do Drive "CAMPANHA - dados pessoais dos
+formulários". Dois detalhes do fluxo que custam tempo: o link é de **uso único** (a segunda
+tentativa de abri-lo devolve página sem campo de senha, o que parece defeito e é o link já gasto),
+e o campo de email da recuperação é o **próprio `#username`** da tela de login, com o botão
+**Continue** — não existe tela separada.
