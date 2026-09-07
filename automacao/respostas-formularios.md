@@ -1830,3 +1830,68 @@ Vini ou de outra rede antes de descartar — é bloqueio de IP, não anúncio fe
   prioridade por não ter abertura declarada.
 - **Pixel-Nexus** (Bélgica/Espanha): "not actively hiring" e as vagas espontâneas que aceitam são
   Pipeline TD, SysAdmin e Technical Artist — fora da disciplina de personagem/modelagem.
+
+## Blackbird Interactive, General Application (Vancouver, Canadá, Lever) — à mão por hCaptcha de desafio
+
+**Link:** https://jobs.lever.co/blackbirdinteractive/498bb3c2-b23f-4aed-8fdd-ee80649e381d/apply
+
+**Por que à mão:** confirmado na API oficial do Lever em 07/09 que a General Application de
+Vancouver segue aberta (o board tem dez vagas, nenhuma de arte, mas a espontânea continua lá,
+como as revalidações de 02/09 e 05/09 já registravam). O formulário inteiro foi preenchido e
+conferido campo a campo; no clique em enviar apareceu o desafio de imagem **"Tap things that break
+when dropped"**, a mesma família de hCaptcha de Larian, Frontier, Asobo, Behaviour e Skydance
+Madrid nesta campanha. Nada foi enviado.
+
+**Armadilha nova medida e já corrigida no `apply_lever.js`:** o campo *Current location* (id
+`location-input`) espera uma sugestão de geocodificação para confirmar o texto digitado; quando a
+API não devolve nenhuma (comum nesta rede), o script antigo apertava Escape para fechar o dropdown
+vazio, e isso **apagava o texto já digitado**, deixando o campo em branco sem erro nenhum na tela.
+Corrigido: o script agora relê o valor do campo depois do Escape e reescreve com `.fill()` se ficou
+vazio. Por isso o campo pode aparecer vazio na captura — é opcional, não bloqueia o envio.
+
+| Campo | O que escrever |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com +55 |
+| Current location | `Olinda, Pernambuco, Brazil` (opcional; digite direto, sem Escape) |
+| Current company | `E-Line Media` |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Other website | `https://vinicavalcanti.com` |
+| How many years of gaming industry experience do you have? (obrigatório, textarea) | o texto abaixo |
+| Are you eligible to work in Canada? (obrigatório) | **`I would require a work permit/visa`** (é a verdade) |
+| Are you currently living in Canada? | `No` |
+| Desired start date (obrigatório) | `Negotiable, available to start about two months after an offer, once a standard transition period with my current studio and the work permit process allow.` |
+| How did you hear about this opportunity? (obrigatório) | `Other` (nenhuma das opções da lista — LinkedIn, remotegamejobs.com, Discord, Glassdoor/Indeed, Friend/Colleague, Teach-Art.org, Artstation, Fan of BBI — é verdadeira; a campanha chegou pela revalidação do próprio board) |
+| Pesquisa demográfica (idade, etnia, gênero) | opcional, deixar em branco |
+
+**Texto do campo de anos de experiência** (é o único campo grande de texto livre do formulário,
+por isso carrega a frase obrigatória de realocação e o caso de visto):
+
+```
+More than 10 years. I am a Senior 3D Character Artist, credited on The Wingfeather Saga at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor: sculpt and high poly, retopology, UVs, baking, texturing, look development and engine integration, plus character grooming in Houdini. As a Senior I review other artists' work and set the asset standard, I teach as founder of my own character art school, and I am a master's candidate. There is no character opening listed right now, so this is a General Application; if one opens I would like it forwarded to me. I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role, on site and full time. I am not an EU citizen and I am not authorized to work in Canada; I would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, around CAD 95,000 per year. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+## Stellar Entertainment, Associate Art Director (Guildford, Reino Unido, híbrido) — à mão por reCAPTCHA
+
+**Link:** https://jobs.ashbyhq.com/stellarentertainment/2c053416-6eaf-43d7-9932-c3a9eaf9437d
+
+**Por que à mão:** reCAPTCHA v2 invisível (site key `6LeFb_YUAAAAALUD5h-BiQEp8JaFChe0e0A6r49Y`). A automação preencheu o formulário inteiro em 07/09, com CV e carta anexados e confirmados pelo nome do arquivo na tela, e o envio devolveu *"We couldn't submit your application. Your application submission was flagged as possible spam"* — pontuação de sessão reprovando IP de datacenter, mesma família da Netflix. No navegador do Vini passa em menos de um minuto.
+
+**Por que vale:** estúdio de jogos com sede em Guildford (UK) e Utrecht (Holanda), projeto novo **não anunciado** com meta AAA. O cargo é de liderança de arte: mentorar e gerenciar artistas de UI, Hard Surface, World, VFX e Animation, colaborando com o Art Director na visão criativa — bate direto com os cinco anos de Senior na E-Line, revisando trabalho e definindo padrão.
+
+**Armadilha do formulário, já resolvida:** o board da Ashby abre na aba **Overview**; o formulário de candidatura só existe depois de clicar na aba **Application**, ao lado. O formulário em si é curto: nome, email, CV, carta, sem perguntas customizadas.
+
+| Campo | O que escrever |
+|---|---|
+| Name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter (campo de arquivo opcional) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Location (autocomplete, se aparecer) | `Olinda, Pernambuco, Brazil` |
+| I agree (consentimento, opcional) | marcar |
+| reCAPTCHA | invisível, só clicar em Submit |
+
+Sem campo de texto livre nem pergunta de patrocínio de visto no formulário; se abrir um campo de mensagem, use a frase fixa de realocação e o caso de visto.
