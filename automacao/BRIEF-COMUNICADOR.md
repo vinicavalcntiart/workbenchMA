@@ -212,3 +212,36 @@ casos a resposta tem que:
 
 **Regra de segurança que resolve o caso duvidoso:** se você leu a mensagem e pensou "que gentil",
 ela é faixa 2. Gentileza específica não se responde com parágrafo pré-escrito.
+
+## Antes de decidir qualquer coisa: LER a mensagem e entender o que ela diz
+
+Dito pelo Vini em 07/09, e é a correção mais de fundo que este brief recebeu:
+*"tem que ler a resposta, entender o contexto, antes de responder."*
+
+O erro do dia não foi escolher o template errado. Foi o **processo**: eu classificava a mensagem
+numa categoria e a categoria escolhia o texto. Classificar é rápido e **se parece** com ler, mas
+não é ler. Uma mensagem calorosa e uma carta de fôrma caem na mesma categoria e saem com a mesma
+resposta, que foi exatamente o que aconteceu.
+
+**A ordem correta é esta, e ela não se pula:**
+
+1. **Leia a mensagem inteira**, incluindo a assinatura. Quem escreveu, com que cargo, em que voz.
+2. **Escreva, no registro do `processados.csv`, uma linha dizendo o que a mensagem DE FATO diz**,
+   com as palavras dela. Não "recusa": *"não há vaga de character artist agora, elogiou o
+   histórico, agradeceu por ele ter se apresentado"*. Se você não consegue escrever essa linha,
+   você não leu.
+3. **Só então pergunte: responder acrescenta alguma coisa para o Vini?**
+
+**São TRÊS saídas possíveis, não duas.** A terceira é a que faltava:
+
+- **Não responder.** É a saída certa quando a pessoa já fechou com cortesia e a resposta seria só
+  educação sobre educação. Exemplo real: o CEO da Boxelware escreveu *"I'd love to keep you in
+  mind, once an opportunity arises I'll get back to you"*. Não há nada a acrescentar ali. Silêncio
+  é a resposta profissional.
+- **Resposta escrita**, curta, tratando do que a pessoa disse. Quando ela reagiu ao material dele
+  com especificidade, ou quando há um fato útil que ela não tem.
+- **Template**, só na faixa 1 da seção acima.
+
+**O teste final, antes de mandar qualquer coisa:** leia a mensagem recebida e a sua resposta uma
+embaixo da outra, como o Vini leu na tela. Se a sua resposta pudesse ter sido escrita **sem** ter
+lido a mensagem dela, ela está errada e você não a leu.
