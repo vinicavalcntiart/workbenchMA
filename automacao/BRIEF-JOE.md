@@ -423,3 +423,50 @@ ainda não tem padrão. Nem todas publicam: Rodeo FX, Folks VFX, Spin VFX e Rayn
 
 **Lembre do teto.** Padrão novo não vira oito cartas: continuam valendo uma pessoa por estúdio
 por rodada e duas na campanha inteira. Padrão novo vale por abrir a casa, não por encher a fila.
+
+---
+
+## MEDIDO EM 07/09: o endereço deduzido de padrão BATE NA PORTA ERRADA com frequência alta
+
+Isto não é uma ressalva teórica, é uma contagem. A caixa do Vini tem **17 devoluções de
+mailer-daemon em três dias**, todas com `550 5.1.1 The email account that you tried to reach
+does not exist`. Elas custaram exatamente o que uma carta enviada custa, e não entregaram nada.
+
+Quem devolveu, e olhe o padrão de quem são:
+
+| Endereço | Casa | Como nasceu |
+|---|---|---|
+| `hvoss@cinesite.com` | Cinesite | padrão de log de commit + página de crew |
+| `ericr@lumapictures.com` | Luma | padrão deduzido |
+| `recruiting@lumapictures.com` | Luma | caixa funcional adivinhada |
+| `dferrand@rodeofx.com` | Rodeo FX | padrão deduzido |
+| `jevgeni.laur@ubisoft.com` | Ubisoft | padrão `nome.sobrenome@` |
+| `lli@blizzard.com`, `jhwang@blizzard.com` | Blizzard | padrão `inicial+sobrenome@` |
+| `kbourykina@`, `ybourykina@riotgames.com` | Riot | padrão, e DUAS variantes da mesma pessoa |
+| `bsick@`, `danc@`, `dcasey@netflix.com` | Netflix | padrão |
+| `courtney.chun@local.disneyanimation.com` | Disney Animation | padrão |
+| `jobs@torquemada-games.com`, `careers@aesir-interactive.com`, `jobs@stcware.com` | estúdios pequenos | caixa funcional adivinhada |
+
+**A leitura honesta, e ela contraria a seção acima deste arquivo.** O método de cruzar página
+de crew com log de commit CONTINUA valendo: foi ele que abriu Image Engine e Cinesite. Mas ele
+prova o PADRÃO DO DOMÍNIO, e não prova que AQUELA CAIXA EXISTE. Holger Voss é Group Head of CG
+da Cinesite de verdade, o padrão estava certo, e mesmo assim `hvoss@cinesite.com` não existe.
+Casa grande costuma ter caixa individual fechada para fora, ou atrás de um filtro que devolve
+550 para remetente desconhecido. As duas variantes da MESMA pessoa na Riot (`kbourykina` e
+`ybourykina`) são a prova mais clara: quando a rodada tenta duas grafias, ela já sabia que
+estava chutando.
+
+**Regras que saem daí, e valem a partir de agora:**
+
+1. **Endereço só de padrão, sem nenhuma aparição do endereço LITERAL em fonte pública, é
+   confiança BAIXA, não média.** Vale mandar mesmo assim quando a casa é grande e não há outra
+   porta, mas ele entra na planilha como *tentado*, nunca como *enviado*.
+2. **Nunca duas grafias da mesma pessoa.** Se há dúvida entre `kbourykina` e `ybourykina`, não
+   há endereço: há um chute. Uma tentativa só, ou nenhuma.
+3. **Caixa funcional (`jobs@`, `careers@`, `recruiting@`) também precisa ser vista publicada.**
+   Três das dezessete devoluções são disso: são as mais fáceis de adivinhar e por isso as mais
+   adivinhadas. Se a página de carreiras não escreve o endereço, ele pode não existir.
+4. **Conferir a devolução faz parte da rodada.** Uma casa que devolveu 550 continua ABERTA, e
+   não fechada: ninguém leu nada lá. Ela deve voltar para a fila por outra porta, formulário
+   ou endereço publicado, e não ser contada como já trabalhada. Blizzard, Netflix, Riot,
+   Ubisoft, Cinesite, Luma, Rodeo FX e Disney Animation estão todas nesse estado agora.
