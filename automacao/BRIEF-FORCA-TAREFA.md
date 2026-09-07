@@ -140,3 +140,34 @@ revisão como rotina**. Isso responde uma pergunta que estúdio de serviço, pub
 sempre têm e quase nunca escrevem no anúncio.
 
 Somada aos cinco anos de E-Line e ao crédito do Wingfeather, ela é o que fecha os dez anos.
+
+## Asterisco no rótulo NÃO é prova de campo obrigatório. A Bulkhead custou dias por isso.
+
+A Bulkhead ficou marcada "só o Vini pode fazer" por dias, com o motivo escrito de que o
+formulário **exige print da aba Most Played do perfil Steam, arquivo que só ele gera**. O Vini
+abriu o formulário e viu na hora o que a automação não tinha visto.
+
+Abrindo o formulário por dentro:
+
+- A pergunta de plataforma é rádio com **PC, Console, Mobile & Handheld** e
+  **"I don't play games often"**.
+- O upload do Steam tem asterisco no texto do rótulo, mas o `<input type="file">` está com
+  **`required: false`**.
+- E existe uma pergunta logo em seguida: *"Please tell us about any non-Steam games you like to
+  play..."*, que é **a saída oficial deles para quem não joga em Steam**.
+
+Marcar Console e responder essa caixa era o caminho previsto pelo próprio estúdio. Tratamos um
+campo **condicional** como parede dura, e uma vaga com **patrocínio de visto dito por escrito**,
+que é o sinal mais raro da campanha, ficou parada sem precisar.
+
+**As três verificações que passam a ser obrigatórias antes de declarar um campo impossível:**
+
+1. **Leia o atributo `required` do input**, não o asterisco do rótulo. Asterisco é texto e mente.
+2. **Procure a pergunta companheira.** Formulário bom quase sempre oferece "se não X, conte Y".
+   Se ela existe, o campo X é condicional.
+3. **Olhe as opções do rádio antes.** Muitas vezes a resposta que dispensa o anexo já está ali
+   ("Console", "I don't play games often"), e escolher a verdade dele já resolve.
+
+Campo que só o Vini pode preencher existe de verdade (vídeo gravado por câmera, por exemplo),
+mas ele tem que ser **provado**, não suposto. Declarar parede que não existe custa mais caro que
+tentar e falhar, porque a vaga sai da fila da automação e some da vista.
