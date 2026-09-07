@@ -119,7 +119,7 @@
 # FEITO Freefolk
 # FEITO Frima Studio
 # FEITO Frozenbyte
-# FEITO GIANTSTEP | RECONFERIDO 07/09: giantstep.co.kr/career.php responde 200 (11,6 KB). O quadro real e giantstepcorp.recruiter.co.kr/appsite/company/index (ATS coreano que a campanha nao conhece); /apply.html devolve 404 da Gabia. Porta de email: jobs@giantstep.co.kr
+# FEITO GIANTSTEP | RECONFERIDO 07/09: giantstep.co.kr/career.php responde 200 (11,6 KB). O quadro real e giantstepcorp.recruiter.co.kr/appsite/company/index (ATS coreano que a campanha nao conhece); /apply.html devolve 404 da Gabia. Porta de email: jobs@giantstep.co.kr || ATS NOVO: o quadro dela vive em giantstepcorp.recruiter.co.kr, plataforma coreana que a campanha nunca tinha visto. Next.js sem dado no HTML e API em api-recruiter.recruiter.co.kr devolvendo 401 (nao 404) nos caminhos de vaga: falta o cabecalho de empresa. Registrado no painel com o proximo passo
 # FEITO GO-N Productions
 # FEITO Galaxy Grove
 # FEITO Game-Ace
