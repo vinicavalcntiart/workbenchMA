@@ -391,3 +391,21 @@ rodada só. A garra respondeu **livre** para Bulkhead, Star Stable, MOOD Visuals
 Vine FX, e o Gmail mostrou candidatura já confirmada nas cinco — inclusive duas enviadas nas
 horas anteriores, pela própria madrugada. **Buscar o domínio do estúdio no Gmail antes de enviar
 não é zelo, é a etapa que pega o trabalho que ainda não foi commitado.**
+
+## Duas correções de regra que a rodada da EA e a do Joe obrigaram
+
+**1. "Título + cidade iguais é suspeita suficiente para pular" TERIA PERDIDO uma vaga efetiva.**
+A EA tem três requisições *Character Artist, EA SPORTS FC, Vancouver*. O texto é quase idêntico.
+O que as separa é o **Worker Type** e a **faixa salarial**: a 215657 é temporária, a 215666 é
+cópia literal dela, e a **215358 é `Regular Employee`, efetiva, com faixa CAD 92.900 a 129.200**.
+Aplicar a regra ao pé da letra teria descartado justamente a única efetiva — e efetiva contra
+temporária é exatamente o que sustenta patrocínio de visto. **Antes de descartar por título e
+cidade repetidos, compare tipo de vínculo e faixa.**
+
+**2. O atalho do `teamtailor-mail.com` é VERIFICADOR, não fonte.** Eu o passei ao Joe como se
+fosse mina de endereço. Ele colheu **mais de 40 recrutadores com nome real e cargo**, e
+**nenhum endereço**: o domínio `@<token>.teamtailor-mail.com` é relay. Das 40 e poucas pessoas,
+só duas viraram carta, e as duas porque o endereço apareceu publicado **em outro lugar**. Montar
+`nome.sobrenome@dominio` para as outras seria o mesmo chute que produziu as 17 devoluções.
+**O atalho confirma que a pessoa existe, está na casa hoje e cuida de contratação. Quem dá o
+endereço é o site.**
