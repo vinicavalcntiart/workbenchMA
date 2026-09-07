@@ -185,6 +185,36 @@ sem `--submit` eles preenchem, tiram print e mostram a leitura de volta, sem env
 | Formulário próprio, qualquer um | `probe_own.js` e `fill_own.js` | Duas mentiras comuns. Um `<button>` **sem atributo `type`** não casa com `button[type=submit]`, e o script anuncia "botão não achado" com o formulário inteiro preenchido, que parece problema da página e é do seletor. E **formulário Wix que se limpa sozinho parece envio feito e não é**: só conta confirmação escrita na tela, redirecionamento para página de agradecimento, ou email |
 
 
+## ADIVINHAR O TOKEN DO ATS a partir do nome do estudio, e isso ACHA PORTA QUE VARREDURA DE SITE NAO ACHA
+
+Medido em 07/09 na fatia EUA/Oceania e vale para qualquer fatia. Peguei os **730 nomes de estudio**
+das filas `usa_resultado.csv` e `automacao/fila-oceania.csv` e gerei **1.548 tokens** possiveis de
+quadro: nome sem espaco, nome com hifen, e nome **sem os sufixos** studios, studio, games, game,
+entertainment, animation, interactive, productions, inc, llc, vfx. Depois bati um por um contra a
+API publica de cada ATS, com dez conexoes.
+
+`https://boards-api.greenhouse.io/v1/boards/<token>/jobs` devolveu **15 quadros de verdade**, e um
+deles, a **Unknown Worlds** (casa de Subnautica), tinha **General Application marcada Remote** que
+virou candidatura enviada e confirmada no mesmo dia. **O quadro dela NAO esta linkado na pagina de
+carreiras do estudio**, ou seja, nenhuma varredura de site, por curl ou por navegador, o
+encontraria. Esse e o ponto: varredura de site acha a porta que o estudio *mostra*; adivinhacao de
+token acha a porta que o ATS *tem*.
+
+As outras APIs publicas que aceitam o mesmo truque, todas sem chave:
+
+    https://api.lever.co/v0/postings/<token>?mode=json
+    https://jobs.ashbyhq.com/api/non-user-graphql          (POST, ApiJobBoardWithTeams)
+    https://<token>.teamtailor.com/jobs.json               (JSON Feed: a chave e `items`, nao `jobs`)
+    https://<token>.bamboohr.com/careers/list
+    https://<token>.recruitee.com/api/offers/
+    https://<token>.breezy.hr/json
+    https://api.smartrecruiters.com/v1/companies/<token>/postings
+
+**O custo e baixo e o resultado se acumula:** a lista de tokens que responderam vira patrimonio da
+campanha e nao precisa ser gerada de novo. **A leitura honesta do numero tambem importa:** 1.548
+tentativas para 15 quadros e 1 candidatura. Isso nao e desperdicio, e o preco de achar porta
+escondida; mas nao substitui a fila de portas ja conhecidas, que continua sendo o trabalho principal.
+
 ## A armadilha que MENTE em campo de autorizacao de trabalho, medida em 07/09 na Plastic Wax
 
 **Escolher opcao de menu por regex de OU pega a PRIMEIRA opcao da lista que casa, nao a melhor.**
