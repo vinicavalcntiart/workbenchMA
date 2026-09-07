@@ -1810,6 +1810,45 @@ Conferidos com navegador de verdade, um a um, porque o curl dava todos como vazi
 - **Sinn Studio, vaga de Programação** (Junior Developer): fora da disciplina dele; só a General
   Interest Application (acima) interessa.
 
+## Quebec (07/09): quatro casas com vaga de arte, priorizadas atrás do Canadá anglófono
+
+Vieram da revarredura dos 137 domínios canadenses que tinham ficado de fora da primeira colheita,
+quase todos do Quebec. Regra do Vini: Quebec vale depois do Canadá anglófono, e vaga que exigir
+francês fluente se registra e não se envia.
+
+### Gradient Effects — CORREÇÃO DE LOCAL, os cargos de arte são de Los Angeles, não Montreal
+
+**Link:** https://www.gradientfx.com/jobs/
+O quadro lista oito vagas (VFX Pipeline Engineer, 3D Modeler, VFX Coordinator, Nuke Compositor,
+Senior Effects TD, Assistant VFX Editor, Matchmovers, Animators) e **todas, sem exceção, são em
+Los Angeles, California**, apesar do rodapé mostrar telefone de Montreal também. Não há vaga de
+Montreal no quadro. Fica fora do escopo do Canadá anglófono: se alguém tocar Gradient Effects,
+é pela vaga de 3D Modeler em Los Angeles, não em Montreal.
+
+### Greensky Games (Montreal, remoto) — À MÃO por reCAPTCHA + Cloudflare Turnstile
+
+**Link:** https://www.greensky.games/work
+Estúdio de jogos de VR **fully remote**, sem exigência de francês (site só em inglês). O
+formulário "Open Application" (Webflow) foi preenchido (nome, email, mensagem de apresentação com
+a frase de realocação e o caso de visto) e conferido por leitura de volta, mas tem **DOIS
+anti-robôs empilhados**: um reCAPTCHA v2 e um desafio da Cloudflare (`challenges.cloudflare.com`).
+O token do reCAPTCHA ficou vazio depois de 30s. Nada foi enviado.
+
+### Loomi Animation (Quebec City) — SEM vaga de 3D, site e processo só em francês
+
+**Link:** https://www.loomianimation.ca/
+Estúdio de animação 2D (não 3D), vagas abertas hoje: Coordonateur(trice) de production, Artiste
+décors couleur 2D, Artiste effets 2D, Producteur(trice) délégué(e), Réalisateur(trice) — nenhuma
+de personagem 3D. Candidatura só por email, `rh@loomianimation.com`, processo inteiro em francês.
+Sem encaixe de disciplina e sem porta de formulário; não vale a rodada.
+
+### Up2blu (Bromont) — página de carreiras não encontrada
+
+**Link:** https://www.up2blu.com/ (a rota `/carrieres` devolve 404, e o menu do site não expõe
+links de navegação legíveis por raspagem, provável SPA por hash). Agência multidisciplinar
+pequena (jogo, design, animação), site só em francês. Não foi possível achar a porta de
+candidatura nas duas tentativas; fica pendente de reconferência com mais tempo de navegador.
+
 ## FATIA M-R DA EUROPA (07/09): achados novos do diretório de 6.624 estúdios
 
 Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nunca tocados pela
@@ -1955,3 +1994,47 @@ More than 10 years. I am a Senior 3D Character Artist, credited on The Wingfeath
 | reCAPTCHA | invisível, só clicar em Submit |
 
 Sem campo de texto livre nem pergunta de patrocínio de visto no formulário; se abrir um campo de mensagem, use a frase fixa de realocação e o caso de visto.
+
+## Screen Burn Interactive / No Code, Speculative Application (Glasgow) — À MÃO por reCAPTCHA de caixa, ATS novo BreatheHR
+
+**Link do anúncio:** https://hr.breathehr.com/recruitment/vacancies/34692?identifier=nocode
+**Link direto do formulário:** https://hr.breathehr.com/application/34692/new
+
+**Por que vale, e muito:** a No Code (BAFTA multiplo, Observation, Stories Untold) rebatizou para
+**Screen Burn Interactive** e está trabalhando em **Silent Hill: Townfall** para a Konami/Annapurna.
+O próprio anúncio de candidatura espontânea diz: *"Please note we will sponsor right-to-work visas
+for eligible permanent roles"* — patrocínio de visto dito com todas as letras. Pede explicitamente
+portfólio para vagas de arte/animação/som.
+
+**Por que à mão:** o formulário termina em **reCAPTCHA v2 de caixa** (recaptcha.net). Medido em
+07/09; não insisti.
+
+**ATS novo para a campanha: BreatheHR.** Formulário simples, sem campo de anexo visível — o link
+do portfólio precisa ir dentro do campo Notes.
+
+| Campo | O que escrever |
+|---|---|
+| Title | deixar vazio |
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Phone number | o de sempre, formato internacional |
+| Email / Email confirmation | `contact@vinicavalcanti.art` |
+| Notes | o texto abaixo |
+| Address 1-3, City, County, Postcode | endereço de Olinda, Pernambuco, Brazil |
+| Country | `Brazil` |
+| Applicant source | `Job site` |
+| Consent checkbox | marcar |
+| reCAPTCHA | resolver na tela |
+
+```
+Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga season 1 I modeled and hand-painted characters for Angel Studios, and for almost five years at E-Line Media I have taken Endstar's hero characters from first sculpt to engine as a remote international contractor: sculpt, retopology, UVs, baking, texturing, look development and engine integration, plus character grooming in Houdini.
+
+I want to relocate to Glasgow and am fully open to moving for the role. I am not a UK/EU citizen and would need visa sponsorship; my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) makes a strong visa case.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site: https://vinicavalcanti.com
+
+If character work opens up on your side, I'd like to be on your list. And if someone else there is the right person for this, just point me and I will take it there.
+
+Vini Cavalcanti
+```
