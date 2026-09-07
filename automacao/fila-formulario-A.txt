@@ -14,47 +14,47 @@
 # FEITO AIM Creative Studios
 # FEITO Abbey Games
 # FEITO Able & Baker
-# FEITO About Fun
+# FEITO About Fun | RECONFERIDO 07/09: responde 200 com cabecalho de Chrome. VAGA DA DISCIPLINA VIVA (3D Graphic Artist, personagens e ambientes) + Open Application, mas a porta e mailto:hr@about-fun.com; vira fila de carta com gancho
 # FEITO Abrakam Entertainment
 # FEITO Aggro Crab
 # FEITO Airborn Studios (reenvio)
 # FEITO Akkord Film
 # FEITO Alive VFX
-# FEITO Alkimia Interactive (THQ Nordic Barcelona)
+# FEITO Alkimia Interactive (THQ Nordic Barcelona) | RECONFERIDO 07/09: responde 200 com cabecalho de Chrome. Oito vagas anunciadas por assunto de email, uma delas 3D Artist Application; porta e mailto:jobs@thqnordicbcn.com, sem formulario
 # FEITO Alt.VFX
 # FEITO Angry Mob Games
 # FEITO Animal Studios
-# FEITO Animationsfabrik
+# FEITO Animationsfabrik | RECONFERIDO 07/09: /en/career responde 200 (9,4 KB) com cabecalho de Chrome; porta e email (anne.weiss@ e mail@animationsfabrik.de), sem formulario
 # FEITO Antaruxa
 # FEITO Apog Labs
 # FEITO Appeal Studios
 # FEITO Ars Thanea
-# FEITO Art Bully Productions
+# FEITO Art Bully Productions | RECONFERIDO 07/09: responde 200 com cabecalho de Chrome; porta e mailto:jobs@artbullyproductions.com, sem formulario
 # FEITO Artefacts Studio
 # FEITO Artifex Animation Studios
 # FEITO Artists Animation Studio
 # FEITO Artjail
 # FEITO Artzee
 # FEITO Asterman
-# FEITO Atent Games
+# FEITO Atent Games | RECONFERIDO 07/09: responde 200 com cabecalho de Chrome (pagina monta em JavaScript); porta e contact@atentgames.com, /jobs devolve 404
 # FEITO Auroch Digital
 # FEITO B-Water Animation Studios
 # FEITO BAPBAP Studios
 # FEITO BUCK
-# FEITO BUF
+# FEITO BUF | RECONFERIDO 07/09: buf.com/jobs responde 200 com cabecalho de Chrome; porta e email por cidade (jobs_paris@ e jobs_montreal@buf.com), sem formulario
 # FEITO Babaroga
 # FEITO Badi Badi
-# FEITO Baobab Studios (email)
-# FEITO Black Forest Games (THQ Nordic)
-# FEITO Blind Squirrel Games
+# FEITO Baobab Studios (email) | RECONFERIDO 07/09: /careers e /careers-1 devolvem 404 mas a RAIZ responde 200 (31 KB); a pagina aponta para ./about#careers e nao publica formulario
+# FEITO Black Forest Games (THQ Nordic) | RECONFERIDO 07/09: /career/ responde 200 e /career/open-positions/ tambem, com a lista VAZIA; a propria pagina escreve que o estudio 'operates on-site and does not provide remote positions'. Porta e jobs@bfgames.biz
+# FEITO Blind Squirrel Games | RECONFERIDO 07/09: blindsquirrelentertainment.com/careers responde 200 (32 KB); o payload de vagas volta sem cargo nenhum listado. Porta e careers@blindsquirrelgames.com
 # FEITO Blow Studio
 # FEITO Blue Isle Studios
 # FEITO Blue Spirit
-# FEITO BlueTwelve Studio
-# FEITO Bossa Studios
+# FEITO BlueTwelve Studio | AINDA NAO AVALIAVEL, e o defeito e NOSSO: o gateway desta sessao fecha o tunel de bluetwelvestudio.com no meio da troca (ws_closed_mid_exchange) e o http devolve 403 de 107 bytes. Nao e casa morta; reconferir de outra rede
+# FEITO Bossa Studios | RECONFERIDO 07/09: bossastudios.com/careers.html responde 200 com cabecalho de Chrome. Estudio 100% remoto; a pagina de carreiras nao lista vaga aberta nem expoe formulario no HTML servido
 # FEITO Brikk Animation
 # FEITO Bubblebird Studio
-# FEITO Budge Studios
+# FEITO Budge Studios | RECONFERIDO 07/09 e VIROU DOSSIE: responde 200 e o quadro BambooHR do token 'budge' tem 4 vagas, uma da disciplina (Artiste 3D Generaliste/3D Artist Generalist, Montreal, full-time). Formulario preenchido inteiro; reCAPTCHA v2 de caixa aparece so depois do Submit. Dossie campo a campo no painel
 # FEITO CAOZ
 # FEITO Caligari Film
 # FEITO Carse & Waterman
@@ -69,21 +69,21 @@
 # FEITO Cloud Imperium Games
 # FEITO Cold Iron Studios
 # FEITO Colossal Order
-# FEITO Copernicus Studios
+# FEITO Copernicus Studios | AINDA NAO AVALIAVEL: devolve 202 com redirecionamento para /.well-known/sgcaptcha/, que e o anti-robo da SiteGround contra o nosso IP. Nao e casa morta
 # FEITO Cornfox & Brothers
 # FEITO Cosmic Dino Studio
-# FEITO Crater Studio
+# FEITO Crater Studio | RECONFERIDO 07/09: a RAIZ devolve 403 mas /jobs devolve 200 e convida por escrito a 'apply via job application form - register your interest', com secao Artists. Formulario monta em JavaScript e falta abrir com navegador
 # FEITO Creative Conspiracy
 # FEITO Crema
 # FEITO Crytivo
-# FEITO Cube Creative
+# FEITO Cube Creative | AINDA NAO AVALIAVEL, e o defeito e NOSSO: o gateway desta sessao responde 502 ao CONNECT de cube-creative.com e de www.cube-creative.com; cube-creative.fr redireciona para o mesmo host. Reportado, nao contornado
 # FEITO Cut to Bits
 # FEITO Cyan Worlds
 # FEITO Cyborn
 # FEITO DAYWALKER Studios
 # FEITO Dark Cloud Games
 # FEITO Day For Nite
-# FEITO Day Off Interactive
+# FEITO Day Off Interactive | AINDA NAO AVALIAVEL, e o defeito e NOSSO: 502 no CONNECT de dayoffinteractive.com pelo gateway desta sessao
 # FEITO Deck Nine Games
 # FEITO Devsisters
 # FEITO Dexter Studios
@@ -100,7 +100,7 @@
 # FEITO Eisko
 # FEITO El Ranchito
 # FEITO Electric Square (Brighton e Malta)
-# FEITO Elliott Animation
+# FEITO Elliott Animation | AINDA NAO AVALIAVEL: devolve 202 com redirecionamento para /.well-known/sgcaptcha/ (anti-robo da SiteGround contra o nosso IP). Nao e casa morta; porta publicada e info@elliottanimation.com
 # FEITO Elysium Studios
 # FEITO Eschatology Entertainment
 # FEITO Fabrique Fantastique
@@ -119,11 +119,11 @@
 # FEITO Freefolk
 # FEITO Frima Studio
 # FEITO Frozenbyte
-# FEITO GIANTSTEP
+# FEITO GIANTSTEP | RECONFERIDO 07/09: giantstep.co.kr/career.php responde 200 (11,6 KB). O quadro real e giantstepcorp.recruiter.co.kr/appsite/company/index (ATS coreano que a campanha nao conhece); /apply.html devolve 404 da Gabia. Porta de email: jobs@giantstep.co.kr
 # FEITO GO-N Productions
 # FEITO Galaxy Grove
 # FEITO Game-Ace
-# FEITO Giant Animation
+# FEITO Giant Animation | RECONFERIDO 07/09: giantanimation.ie/careers/ responde 200 (30 KB) com a secao CURRENT JOB OPENINGS VAZIA. Porta e hello@giant.ie
 # FEITO Gimpville
 # FEITO Glowfish Interactive
 # FEITO Golden Wolf
@@ -134,9 +134,9 @@
 # FEITO HOUND13
 # FEITO Haemimont Games
 # FEITO Hahn Film
-# FEITO Harebrained Schemes
-# FEITO Heart Machine
-# FEITO Hello Games
+# FEITO Harebrained Schemes | RECONFERIDO 07/09: harebrained-schemes.com responde 200 (43 KB) com cabecalho de Chrome; /careers devolve 404 e a unica porta publicada e info@hbs-studios.com
+# FEITO Heart Machine | RECONFERIDO 07/09: heartmachine.com/careers responde 200 (60 KB). Carrega o widget do SmartRecruiters sem vaga nenhuma e oferece espontanea por escrito ('send us your resume/portfolio'), mas o link Get in Touch vai para /contact e o /join e so lista de email. Estudio de LA que aceita remoto permanente
+# FEITO Hello Games | RECONFERIDO 07/09 e MUDOU DE VEREDITO: o dominio guardado era hellogames.co.uk (so email) e o site e hellogames.ORG, que responde 200. Oito vagas abertas, entre elas EXPERIENCED ARTIST da disciplina dele (concepts to modelling, characters to environments, Maya/ZBrush/Substance). Porta e mailto:jobs@hellogames.co.uk, entao vira carta com gancho na vaga nomeada
 # FEITO Henchman & Goon
 # FEITO HiFi 3D
 # FEITO Hidden Path Entertainment
@@ -158,20 +158,20 @@
 # FEITO Joinplay Games
 # FEITO Juice
 # FEITO Jyamma Games
-# FEITO KOG
+# FEITO KOG | RECONFERIDO 07/09: kog.co.kr responde 200 (58 KB) com cabecalho de Chrome; a pagina de recrutamento e /recruit/info e o site e todo em coreano. Porta publicada: KOG@KOG.CO.KR
 # FEITO Kalamona Studios
 # FEITO Kapow Pictures
 # FEITO Karrot Animation
 # FEITO Kavaleer Productions
 # FEITO Keos Masons
 # FEITO Kevuru Games
-# FEITO Keyframe Digital Productions
-# FEITO Keytoon Animation
+# FEITO Keyframe Digital Productions | RECONFERIDO 07/09, e a causa era o NOSSO proxy: keyframe.ca devolve literalmente 'Host not in allowlist' (403 de 98 bytes), mas WWW.keyframe.ca passa e devolve 200 com 55 KB. Bloqueio por hostname exato, nao estudio fora do ar. /careers devolve 404; porta e info@keyframe.ca
+# FEITO Keytoon Animation | RECONFERIDO 07/09: keytoon.com responde 200 (39 KB) com cabecalho de Chrome; /careers devolve 404 e a pagina nao publica formulario nem endereco de candidatura
 # FEITO Kickstart Entertainment (reenvio)
 # FEITO KidsCave Studios
 # FEITO Klang Games
 # FEITO Klei Entertainment
-# FEITO Krillbite Studio
+# FEITO Krillbite Studio | RECONFERIDO 07/09: krillbite.com/jobs responde 200 e diz por escrito '0 open position(s)' e que espontanea vai por application@krillbite.com. Sem formulario
 # FEITO Kuuasema
 # FEITO LUGUNDTRUG
 # FEITO La Station Animation
