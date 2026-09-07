@@ -3,8 +3,13 @@
 Usado pela automação diária. Responder NA MESMA THREAD da rejeição, em inglês,
 sem assinatura extra (a resposta abaixo já fecha com o nome).
 Substituir `{TEAM}` pelo nome do estúdio (ex.: "Cartoon Saloon team").
-Nada além deste texto. Sem emojis, sem travessão, sem "I hope this finds you well",
-sem floreio de IA.
+Nada além deste texto. Sem travessão, sem "I hope this finds you well", sem floreio de IA.
+
+SOBRE EMOJI (regra do Vini, 07/09): este template não leva emoji porque é o texto de
+faixa 1, para mensagem curta e sem voz própria. Resposta a pessoa que escreveu com
+gentileza NÃO usa este template: leva texto escrito à mão, começa reconhecendo a
+gentileza ("Thanks for your kind answer") e PODE levar um emoji discreto. Veja a seção
+"Seja SIMPÁTICO quando a pessoa foi simpática" do BRIEF-COMUNICADOR.md.
 
 NUNCA ESCAPE O htmlBody (erro real cometido em 01/09 no email para a Amy Hurwitz,
 da LAIKA). O campo htmlBody recebe HTML DE VERDADE: `<p>`, `<b>`, `<a href="...">`.

@@ -245,3 +245,46 @@ resposta, que foi exatamente o que aconteceu.
 **O teste final, antes de mandar qualquer coisa:** leia a mensagem recebida e a sua resposta uma
 embaixo da outra, como o Vini leu na tela. Se a sua resposta pudesse ter sido escrita **sem** ter
 lido a mensagem dela, ela está errada e você não a leu.
+
+## Seja SIMPÁTICO quando a pessoa foi simpática, e sim, com emoji (regra do Vini, 07/09)
+
+Dito por ele depois de ver a resposta ao Ole: *"comece a ser mais simpático, usar emoji, thanks
+for your kind answer ☺️, sabe"*.
+
+A proibição de emoji e de floreio da campanha existe para **carta fria de primeiro contato**,
+onde ninguém conhece ninguém e excesso de intimidade queima. **Ela não vale para resposta a uma
+pessoa que escreveu com gentileza.** Estava sendo aplicada nos dois casos, e por isso a resposta
+saía seca exatamente onde devia ser humana. Isso muda agora.
+
+**Quando a mensagem recebida é calorosa** (elogia o material com especificidade, deseja boa
+sorte, agradece a ele por ter escrito, é assinada em voz própria), a resposta:
+
+- **começa reconhecendo a gentileza, com essas palavras ou parecidas**:
+  *"Thanks for your kind answer"*, *"That is kind of you to say"*, *"Thank you, that means a
+  lot"*. Nunca o *"Thanks for letting me know, and for taking the time to reply"* da fôrma,
+  sobretudo se a pessoa já agradeceu o tempo dele;
+- **pode e deve levar um emoji**, um só, discreto e no lugar certo: `☺️` ou `🙂` perto do
+  agradecimento. Um, não três, e nunca no meio de informação técnica;
+- **responde ao que a pessoa disse**, nomeando o que ela nomeou;
+- é **curta**, três ou quatro linhas, e termina com a porta aberta.
+
+**Onde a regra antiga continua valendo, sem exceção:** carta fria de primeiro contato e
+follow-up de carta não respondida. Ali segue sem emoji, sem travessão, sem "I hope this finds you
+well" e sem floreio. O critério é simples: **emoji responde a calor humano, nunca abre conversa
+com desconhecido.**
+
+Exemplo do que devia ter saído para o Ole, da Flashbulb, que escreveu *"You have an impressive
+background and clearly a lot of experience in character art"* e agradeceu a ele por ter se
+apresentado:
+
+> Hi Ole,
+>
+> Thanks for your kind answer, that means a lot coming from your side ☺️
+>
+> Understood on there being no character seat open right now. If one comes up, I'd love to be on
+> your list. My portfolio is at artstation.com/viniciuscavalcanti if it is ever useful.
+>
+> Best of luck with what you are building.
+>
+> Best,
+> Vini Cavalcanti
