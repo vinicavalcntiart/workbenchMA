@@ -187,6 +187,34 @@ sem `--submit` eles preenchem, tiram print e mostram a leitura de volta, sem env
 **Quando o ATS for novo:** sonde antes de escrever resposta. Existem `probe_tt.js`, `probe_personio.js`
 e `probe_bamboo.js` no mesmo diretório, e todos listam campo, tipo, obrigatoriedade e opções.
 
+## O que conta como PROVA de envio, e o que não conta. Regra de 07/09
+
+A campanha tinha a metade fácil desta regra escrita: **formulário que continua preenchido depois
+do clique NÃO enviou**. Faltava a metade difícil, e ela apareceu em duas candidaturas na mesma
+noite: **formulário que apenas SE LIMPA também não prova envio.**
+
+Na L'Atelier Animation o clique devolveu HTTP 200, o formulário fechou e os campos limparam, e
+mesmo assim não veio texto de confirmação nem email. Isso é indistinguível de um envio que entrou.
+E na Senior 3D Generalist da UPP o clique saiu, mas o navegador morreu antes de ler a tela.
+
+**Só três coisas contam como prova, e qualquer uma basta:**
+
+1. Texto de confirmação **na tela**, lido e citado (*"Thank you for applying"*, *"Application
+   received"*, e o equivalente em francês, alemão, sueco ou polonês, porque confirmação em outro
+   idioma já foi marcada como "resultado duvidoso" numa candidatura que TINHA entrado);
+2. **URL final** de confirmação (`/thanks`, `/confirmation`, `/application-sent`, `/apply/submitted`);
+3. **Email de recebimento** do estúdio, que é a prova mais forte porque nomeia a requisição.
+
+Sem nenhuma das três, a linha vai para `preenchida sem prova`, com a data, e **não vira
+`done=true`**. E aqui vem a parte que exige cabeça fria: **não reenvie no mesmo dia para resolver a
+dúvida.** Reenviar troca uma perda possível por um dano certo, que é o estúdio receber duas
+mensagens do mesmo candidato no mesmo dia. Em 07/09 a Icefall recebeu duas por colisão de fila, e
+uma segunda no mesmo dia seria pior que a dúvida. O caminho é esperar alguns dias e, se não vier
+resposta, o Vini manda do navegador dele e vê a confirmação com os próprios olhos.
+
+**Registrar uma vitória que não se viu é pior que registrar uma dúvida**, porque a dúvida escrita
+alguém resolve depois, e a vitória falsa some da fila para sempre.
+
 ## Regra dura que nasceu de um erro em 06/09
 
 **Formulário que fica cinza ou com botão desabilitado pode ser o estúdio dizendo não, e não bug.**
