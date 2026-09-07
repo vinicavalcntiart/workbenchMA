@@ -2479,3 +2479,92 @@ do título dele, em **Londres**. A parede é a mesma do resto do Recruitee: **hC
 depois do clique em Send**. Use o mesmo preenchimento campo a campo já validado no bloco da
 Framestore acima, trocando a pergunta de realocação para Londres e a pretensão para
 `GBP 50,000 per year; open to aligning with your band for the role`.
+
+## ARMADILHA NOVA, medida em 07/09: a PERGUNTA-ELIMINATÓRIA do Teamtailor DESLIGA o formulário
+
+A **Cast Iron Games** (Lead 3D Artist, Wakefield, Reino Unido, presencial) ensinou uma trava que a
+campanha ainda não tinha visto e que vale para **qualquer vaga do Teamtailor**:
+
+O formulário tem uma pergunta obrigatória marcada só como *"Location\*"*, e o enunciado inteiro é
+**"Please note that this role is on-site at our Wakefield studio. Are you currently based in the UK
+and able to work on-site?"**, com rádio Yes/No. Respondendo **No**, que é a verdade, o Teamtailor
+escreve na tela **"You have to meet these requirements to be able to apply"** e aplica a classe
+`cursor-not-allowed opacity-50` no *contêiner inteiro do formulário*: o botão de envio fica
+`disabled` e **nenhum clique passa**.
+
+**Por que isso importa mais do que uma vaga perdida:** o sintoma no log da automação é
+`element is not enabled` e `<div ...> intercepts pointer events`, repetido dezenas de vezes, que é
+**idêntico ao sintoma de sobreposição invisível** já catalogado. São coisas diferentes: uma é
+defeito de página e se contorna, a outra é **veto de residência implementado como código** e não se
+contorna. Diferencie olhando a classe do `formContentWrapper`: se ela tiver `cursor-not-allowed`,
+é eliminatória, e a resposta é **descartar a vaga**, não insistir.
+
+**Cast Iron Games fica DESCARTADA por veto de residência**, medido em 07/09. O anúncio em si não diz
+"must be based in", então a leitura do texto do anúncio **não teria pego isso**: só abrindo o
+formulário. É mais uma prova da regra de 07/09 de que a condição real mora no formulário.
+
+## NEOWIZ (Coreia do Sul, Seongnam) — DUAS vagas de 3D Character Modeler — À MÃO por hCaptcha
+
+Estúdio novo para a campanha, achado em 07/09 pela fatia CACADOR cruzando o `backlog-estudios.md`
+(entrada "Neowiz | South Korea (Seongnam) | Modeler | pendente") com a API oficial do Lever. O
+quadro tem **22 vagas** e duas são exatamente a disciplina dele:
+
+| Vaga | Estúdio interno | Link |
+|---|---|---|
+| **3D 캐릭터 모델러 — 3D Character Modeler, próximo título de *Lies of P*** | NOUGH Studio | https://jobs.lever.co/neowiz/5ad83a87-38c2-4441-81da-5ab73e3217fc |
+| **3D 캐릭터 모델러 — 3D Character Modeler, novo projeto de console de IP original** | Onetake Studio | https://jobs.lever.co/neowiz/7de35c5d-137c-4c03-9453-5f93228899f7 |
+
+*Lies of P* é o soulslike coreano que virou sucesso global, e o próximo título dele é a vaga de
+cima. Coreia do Sul está dentro do escopo geográfico.
+
+**Por que à mão:** Lever, e o Lever da Neowiz tem **hCaptcha** (`newassets.hcaptcha.com` no iframe,
+confirmado em 07/09). É a mesma parede de Larian, Frontier, Asobo, Behaviour, Skydance, Jam City,
+Avalanche e Blackbird. Não se burla.
+
+**Formulário mapeado campo a campo** (o mesmo nas duas vagas):
+
+| Campo | O que preencher |
+|---|---|
+| Resume/CV, Full name, Email, Phone | os de sempre |
+| Current location / Current company | `Olinda, Pernambuco, Brazil` / `E-Line Media` |
+| Portfolio URL / LinkedIn | ArtStation e LinkedIn de sempre |
+| 지원 동기, 강조 프로젝트, 포트폴리오 참고 링크 (obrigatório, texto livre) | motivação, projetos de destaque e links; use o texto padrão de realocação |
+| 경력기술서 및 포트폴리오 파일 첨부 (PDF) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| **1. 나는 어떤 디자이너인가** (obrigatório) — quem você é como artista | apresentação: 10+ anos, Wingfeather Saga temporada 1, cinco anos na E-Line, três anos na PUGA entregando personagem sob direção de arte alheia com rodada de revisão como rotina |
+| **2. 지원동기와 입사 후 목표** (obrigatório) — motivação e objetivos | quer trabalhar em personagem estilizado e semi-realista de console; **QUER REALOCAR** para a Coreia do Sul; precisa de patrocínio de visto |
+| **3. 가장 마음에 들었던 게임과 이유** (obrigatório) — jogo favorito e por quê | **SÓ O VINI RESPONDE.** A campanha não inventa preferência de jogo. O campo aceita `N/A`, mas a resposta boa é dele |
+| 경력 (총 경력 기간) — anos de carreira (select) | **`10년`** ou mais alto conforme ele preferir; a lista vai de 0 a 20+ |
+| 최근 직장명 — último empregador (obrigatório) | `E-Line Media` |
+| 현재 연봉 — salário atual | **DEIXAR VAZIO.** É opcional, e salário atual da E-Line nunca se revela |
+| 희망 연봉 — pretensão (só números, em KRW) | opcional; se quiser preencher, o equivalente da política para casa grande. Também vale deixar vazio e usar o campo de justificativa |
+| 최종 학력 — escolaridade | grau dele |
+| 채용 공고를 처음으로 접하신 경로 (obrigatório, select) | a verdade é **`기타(직접 입력)`**, "outro (escrever)", porque a campanha chegou pelo quadro oficial do Lever; escrever no campo seguinte |
+| 국가보훈대상자 / 장애인 (obrigatórios, rádio) | marcar a opção de **não se aplica**; são benefícios legais coreanos para veterano e pessoa com deficiência |
+| 개인정보 수집 및 이용 동의 (obrigatório, select) | **`동의`** (concordo) |
+| 인재풀 등록 동의 (obrigatório, select) | **`동의`**, que também põe o perfil no banco de talentos |
+| 민감정보 동의 (opcional) | pode deixar em `Select...` |
+| **hCaptcha** | resolver na tela |
+
+## Behaviour Interactive, Senior Texture Artist — Dead by Daylight (Montréal) — REQUISIÇÃO NOVA
+
+**Link:** https://jobs.lever.co/bhvr/55fa65fe-50b8-41e2-a406-5f185c860295/apply
+
+Esta **não estava na campanha**: o painel tem a Senior 3D Character Artist de *Dead by Daylight*
+(`18024240`), a de projeto não anunciado (`86ddd557`) e a de *7 Days to Die* (`976b2a8c`, enviada e
+confirmada em 30/08), mas **não tem a de textura**. É **Montréal, Canadá**, e textura é disciplina
+dele com todas as letras.
+
+**Por que à mão:** hCaptcha do Lever, confirmado em 07/09 no próprio formulário.
+
+O formulário é **idêntico** ao das outras vagas da Behaviour, então valem as respostas do bloco
+"Behaviour Interactive" acima: portfólio, LinkedIn, outro site, **elegível para trabalhar no Canadá
+= No**, e **aceita ir ao escritório três dias por semana = Yes**. No texto livre, a frase de
+realocação para Montréal e o caso de visto.
+
+## Illumination Studios Paris — quadro do Lever ESVAZIADO, a Surfacing Artist morreu
+
+O `backlog-estudios.md` registra "Illumination Studios Paris | France (Paris) | Surfacing Artist |
+https://jobs.lever.co/illumination/88ab5915-96db-448b-98d7-7d3385c5f0bf | pendente". Medido em
+07/09 na **API oficial do Lever**: `api.lever.co/v0/postings/illumination?mode=json` responde 200
+com **lista vazia**. Não é bloqueio nem falso negativo de curl, é quadro sem nenhuma vaga.
+Vale reconferir quando a Illumination reabrir, porque surfacing é o centro da disciplina dele.
