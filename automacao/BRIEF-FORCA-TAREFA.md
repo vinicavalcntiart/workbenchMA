@@ -1071,3 +1071,38 @@ A lição dupla, e a segunda metade é sobre mim:
    que era a produção baixa de formulário. Isso é a mesma pressa que me fez mandar candidatura
    repetida para a Union VFX. Defeito achado e efeito medido são duas afirmações separadas, e
    a segunda precisa de evidência própria.
+
+## Workable: a queda do 1015 destrava LER, não destrava ENVIAR (07/09, 20h45)
+
+Medido, e a medida desfaz uma esperança minha. Às 20h20 eu vi o `apply.workable.com`
+responder 301 e 200 onde de manhã devolvia 429 com `error code 1015`, e concluí que a porta
+de candidatura tinha aberto. **Estava errado, e a diferença é entre ler e enviar.**
+
+O 1015 é limite de taxa da Cloudflare contra o NOSSO IP e ele de fato caiu: dez quadros
+diferentes responderam sem um único 429 entre 20h20 e 20h45. Mas o teste que importa não é
+o GET, é o clique. Na Lighthouse Games, pela rota real
+(`apply.workable.com/<conta>/j/<id>/apply/`, sem passar pelo `jobs.workable.com`), o
+formulário preencheu, o botão "Submit application" foi clicado ao vivo, e **a caixa "Verify
+you are human" do Turnstile apareceu DEPOIS do clique**: o botão travou em "Submitting..." e
+nenhum POST de candidatura saiu. O mesmo Turnstile foi confirmado por curl no HTML das
+outras páginas de candidatura (Nexus, Velan, BeamNG, Keywords).
+
+Então o quadro completo do Workable, com as três paredes separadas:
+1. `apply.workable.com` → 429/1015, limite de taxa contra o nosso IP, **intermitente**.
+2. `jobs.workable.com` → POST devolve 412 com `x-ts: 0`, falta token do Turnstile.
+3. `apply.workable.com`, mesmo com o 1015 fora do caminho → **Turnstile pós-clique**.
+
+A número 3 é a que manda, é universal na plataforma, e não se burla. **O Workable inteiro é
+fila do Vini, não fila de agente.** Quando o 1015 cair de novo, o ganho é poder LER o quadro
+e escrever dossiê exato; não é candidatura.
+
+O valor real da janela ficou em outro lugar: cinco entradas estavam marcadas como parede só
+por causa do 1015, que não era do estúdio, e puderam finalmente ser lidas. Das cinco,
+**três não tinham nada para nós** (PikPok com o quadro vazio, KingsIsle só com Community
+Manager, Team17 só com Platform Engineer) e duas seguem vivas atrás do Turnstile. Ou seja:
+a janela não rendeu candidatura, rendeu **verdade** — três "paredes" que na verdade eram
+ausência de vaga, e que estavam ocupando lugar na fila como se fossem trabalho por fazer.
+
+A lição, e ela vale para toda parede que a gente anotar: **"o servidor respondeu" não é o
+mesmo que "a porta abriu".** A prova de que uma porta abre é o envio confirmado, nunca o
+código de status do GET. Antes de comemorar bloqueio caído, clique.
