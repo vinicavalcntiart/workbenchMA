@@ -2,131 +2,131 @@
 # Criada em 07/09 a pedido do Vini. Recorte: nomes que comecam de A ate L.
 # A outra metade esta em fila-formulario-B.txt. Nao invada a outra metade.
 # Total desta fila: 183
-10th Ave Productions
-10tons
+# FEITO 10th Ave Productions
+# FEITO 10tons
 11 bit studios
-13AM Games
-23 Lunes
-34BigThings
-4J Studios
-A. Film Production
+# FEITO 13AM Games
+# FEITO 23 Lunes
+# FEITO 34BigThings
+# FEITO 4J Studios
+# FEITO A. Film Production
 AAA Game Art Studio
 AIM Creative Studios
-Abbey Games
-Able & Baker
-About Fun
-Abrakam Entertainment
-Aggro Crab
+# FEITO Abbey Games
+# FEITO Able & Baker
+# FEITO About Fun
+# FEITO Abrakam Entertainment
+# FEITO Aggro Crab
 Airborn Studios (reenvio)
-Akkord Film
+# FEITO Akkord Film
 Alive VFX
-Alkimia Interactive (THQ Nordic Barcelona)
+# FEITO Alkimia Interactive (THQ Nordic Barcelona)
 Alt.VFX
 Angry Mob Games
-Animal Studios
-Animationsfabrik
-Antaruxa
-Apog Labs
+# FEITO Animal Studios
+# FEITO Animationsfabrik
+# FEITO Antaruxa
+# FEITO Apog Labs
 Appeal Studios
 # FEITO Ars Thanea
-Art Bully Productions
-Artefacts Studio
+# FEITO Art Bully Productions
+# FEITO Artefacts Studio
 Artifex Animation Studios
-Artists Animation Studio
+# FEITO Artists Animation Studio
 # FEITO Artjail
-Artzee
+# FEITO Artzee
 # FEITO Asterman
-Atent Games
-Auroch Digital
-B-Water Animation Studios
+# FEITO Atent Games
+# FEITO Auroch Digital
+# FEITO B-Water Animation Studios
 BAPBAP Studios
-BUCK
-BUF
-Babaroga
+# FEITO BUCK
+# FEITO BUF
+# FEITO Babaroga
 Badi Badi
-Baobab Studios (email)
-Black Forest Games (THQ Nordic)
-Blind Squirrel Games
-Blow Studio
-Blue Isle Studios
-Blue Spirit
-BlueTwelve Studio
-Bossa Studios
-Brikk Animation
-Bubblebird Studio
-Budge Studios
-CAOZ
-Caligari Film
-Carse & Waterman
+# FEITO Baobab Studios (email)
+# FEITO Black Forest Games (THQ Nordic)
+# FEITO Blind Squirrel Games
+# FEITO Blow Studio
+# FEITO Blue Isle Studios
+# FEITO Blue Spirit
+# FEITO BlueTwelve Studio
+# FEITO Bossa Studios
+# FEITO Brikk Animation
+# FEITO Bubblebird Studio
+# FEITO Budge Studios
+# FEITO CAOZ
+# FEITO Caligari Film
+# FEITO Carse & Waterman
 Cayplay Studio
 CerebralFix
-Channel 37
-Cheeky Little Media
-Chibig
-Chromosphere
-Cinemotion
+# FEITO Channel 37
+# FEITO Cheeky Little Media
+# FEITO Chibig
+# FEITO Chromosphere
+# FEITO Cinemotion
 Cirkus
 Cloud Imperium Games
-Cold Iron Studios
+# FEITO Cold Iron Studios
 Colossal Order
-Copernicus Studios
-Cornfox & Brothers
-Cosmic Dino Studio
-Crater Studio
-Creative Conspiracy
+# FEITO Copernicus Studios
+# FEITO Cornfox & Brothers
+# FEITO Cosmic Dino Studio
+# FEITO Crater Studio
+# FEITO Creative Conspiracy
 Crema
-Crytivo
-Cube Creative
-Cut to Bits
+# FEITO Crytivo
+# FEITO Cube Creative
+# FEITO Cut to Bits
 Cyan Worlds
-Cyborn
+# FEITO Cyborn
 DAYWALKER Studios
 Dark Cloud Games
 # FEITO Day For Nite
-Day Off Interactive
-Deck Nine Games
-Devsisters
-Dexter Studios
-Dibulitoon Studio
-Digital Dimension (Saturday)
+# FEITO Day Off Interactive
+# FEITO Deck Nine Games
+# FEITO Devsisters
+# FEITO Dexter Studios
+# FEITO Dibulitoon Studio
+# FEITO Digital Dimension (Saturday)
 Digital Rain Studios
-Divine Studios
+# FEITO Divine Studios
 Drakhar Studio
-Dreamcraft Entertainment
-Drifter Entertainment
+# FEITO Dreamcraft Entertainment
+# FEITO Drifter Entertainment
 # FEITO DrinkBox Studios
-Eallin
-Eden Games
-Eisko
-El Ranchito
-Electric Square (Brighton e Malta)
-Elliott Animation
+# FEITO Eallin
+# FEITO Eden Games
+# FEITO Eisko
+# FEITO El Ranchito
+# FEITO Electric Square (Brighton e Malta)
+# FEITO Elliott Animation
 Elysium Studios
 Eschatology Entertainment
-Fabrique Fantastique
+# FEITO Fabrique Fantastique
 # FEITO Fabrique d'Images
-Fast Travel Games
-Filmic Art
-Fire Without Smoke
-Flashbulb Games
+# FEITO Fast Travel Games
+# FEITO Filmic Art
+# FEITO Fire Without Smoke
+# FEITO Flashbulb Games
 Flickerpix
-Flight School Studio
-Flightless
-Flipbook Studio
-Flix Interactive
-Flux Animation Studio
+# FEITO Flight School Studio
+# FEITO Flightless
+# FEITO Flipbook Studio
+# FEITO Flix Interactive
+# FEITO Flux Animation Studio
 # FEITO Flying Bark Productions
 Freefolk
-Frima Studio
-Frozenbyte
-GIANTSTEP
-GO-N Productions
-Galaxy Grove
+# FEITO Frima Studio
+# FEITO Frozenbyte
+# FEITO GIANTSTEP
+# FEITO GO-N Productions
+# FEITO Galaxy Grove
 Game-Ace
-Giant Animation
-Gimpville
-Glowfish Interactive
-Golden Wolf
+# FEITO Giant Animation
+# FEITO Gimpville
+# FEITO Glowfish Interactive
+# FEITO Golden Wolf
 Grinding Gear Games
 Ground Control Studios
 Gunzilla Games
@@ -134,54 +134,54 @@ Gunzilla Games
 HOUND13
 Haemimont Games
 Hahn Film
-Harebrained Schemes
-Heart Machine
-Hello Games
+# FEITO Harebrained Schemes
+# FEITO Heart Machine
+# FEITO Hello Games
 Henchman & Goon
-HiFi 3D
-Hidden Path Entertainment
-Hipster Whale
+# FEITO HiFi 3D
+# FEITO Hidden Path Entertainment
+# FEITO Hipster Whale
 Hocus Pocus Studio
-Hologram Monster
+# FEITO Hologram Monster
 Horsefly Games
 Hothead Games
-House of Secrets
-HouseSpecial
-Hybride
-IBRIDO Studio
-IXOR
-Illogic
+# FEITO House of Secrets
+# FEITO HouseSpecial
+# FEITO Hybride
+# FEITO IBRIDO Studio
+# FEITO IXOR
+# FEITO Illogic
 Illusion Ray
 # FEITO Iron Oak Games
-Ironroot Games
+# FEITO Ironroot Games
 Jo-Mei Games
 Joinplay Games
 # FEITO Juice
-Jyamma Games
-KOG
+# FEITO Jyamma Games
+# FEITO KOG
 Kalamona Studios
-Kapow Pictures
-Karrot Animation
-Kavaleer Productions
+# FEITO Kapow Pictures
+# FEITO Karrot Animation
+# FEITO Kavaleer Productions
 Keos Masons
 Kevuru Games
-Keyframe Digital Productions
-Keytoon Animation
+# FEITO Keyframe Digital Productions
+# FEITO Keytoon Animation
 Kickstart Entertainment (reenvio)
 # FEITO KidsCave Studios
-Klang Games
+# FEITO Klang Games
 # FEITO Klei Entertainment
-Krillbite Studio
-Kuuasema
+# FEITO Krillbite Studio
+# FEITO Kuuasema
 LUGUNDTRUG
 La Station Animation
-Landfall
-Lemon Sky Studios
-Light Brick Studio
-Limbic Entertainment
+# FEITO Landfall
+# FEITO Lemon Sky Studios
+# FEITO Light Brick Studio
+# FEITO Limbic Entertainment
 Liquid Development
-Little Moon Animation
-Look North World
-Lumatic
-appelmoes games
-arx anima
+# FEITO Little Moon Animation
+# FEITO Look North World
+# FEITO Lumatic
+# FEITO appelmoes games
+# FEITO arx anima
