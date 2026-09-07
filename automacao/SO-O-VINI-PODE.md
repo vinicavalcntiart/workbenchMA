@@ -19,10 +19,14 @@ tela, URL de confirmação ou email de recebimento). As que mais valem:
 | **Mob Entertainment** | Senior Environment Artist | **remota, EUA** | faixa publicada |
 | Keen Software House, BoomBit, Bad Rhino, Embark, Envar, Wargaming, Bluehole, Unknown Worlds, PlayQ, Digital Confectioners, Altered FX, Chakrra e outras | | | |
 
-**Cinco pessoas escreveram de próprio punho hoje, e quatro elogiaram o seu material.** O CEO da
-Boxelware: *"Your portfolio is truly impressive."* Uma **artista** da MoonMonster: *"Thanks for
-your impressive application."* A Head of HR Europe da tinyBuild disse que não há vaga que alinhe
-com o seu perfil e que **vai guardar seus dados**. A PushkaStudios pediu para manter contato.
+**Oito pessoas escreveram de próprio punho hoje, e seis engajaram com o seu material a ponto de
+levar resposta.** Três elogiaram o portfólio com todas as letras. O CEO da Boxelware: *"Your
+portfolio is truly impressive."* Uma **artista** da MoonMonster: *"Thanks for your impressive
+application."* O Ole, da Flashbulb: *"You have an impressive background and clearly a lot of
+experience in character art."* A Head of HR Europe da tinyBuild disse que não há vaga que alinhe
+com o seu perfil e que **vai guardar seus dados**, a PushkaStudios pediu para manter contato, e a
+Pixel Maniacs respondeu na mesma linha. As outras duas, DAYWALKER e Colossal Order, mandaram
+aviso genérico de que não há vaga sem reagir a nada seu, e por isso **não** levaram resposta.
 
 Isso importa porque, com centenas de candidaturas e nenhuma entrevista, a leitura fácil seria que
 o portfólio não chama atenção. **Não é o que os textos dizem.** Quem abriu, elogiou. O que falta é
@@ -60,7 +64,7 @@ Dreamthorn (Principal Character Artist, remota) e House of Cool (Toronto). Tem u
 nessa fila agora.
 ---
 
-## 0. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado
+## 1. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado
 
 **O painel que você abre no navegador está parado em 06/09 às 14h06.** Ele não está quebrado:
 está velho. Aberto num navegador de verdade, o `docs/index.html` do repositório renderiza
@@ -88,7 +92,7 @@ mão" que você me mandou não é a campanha encolhendo. É a foto velha.
 
 ---
 
-## 1. NBCUniversal em Montréal: casa nova, três vagas de LIDERANÇA, e o anúncio cita Houdini Groom pelo nome
+## 2. NBCUniversal em Montréal: casa nova, três vagas de LIDERANÇA, e o anúncio cita Houdini Groom pelo nome
 
 Apareceu hoje e **não existia no painel**. A NBCUniversal tem estúdio de jogos em Montréal, na
 Avenue du Parc, presencial, e está contratando uma família inteira de liderança de arte:
@@ -116,7 +120,7 @@ anúncio é em inglês e a NBCUniversal é casa americana, mas a cidade é essa.
 
 ---
 
-## 1z. Três formulários prontos, esperando um clique seu
+## 3. Três formulários prontos, esperando um clique seu
 
 Todos com o formulário **preenchido e conferido campo a campo**. Para você é menos de um minuto
 cada, porque só falta o que a automação não pode fazer.
@@ -145,7 +149,7 @@ primeira opção da lista.
 
 ---
 
-## 0b. GUARDE A SENHA NOVA DA CONTA EA no doc privado do Drive
+## 4. GUARDE A SENHA NOVA DA CONTA EA no doc privado do Drive
 
 Para destravar o portal da EA foi preciso fazer a **redefinição oficial de senha** da sua conta
 de candidato, porque a antiga não estava disponível nesta sessão. **A senha nova foi entregue a
@@ -179,7 +183,7 @@ Receita campo a campo e as armadilhas em `automacao/respostas-formularios.md`; o
 
 ---
 
-## 1e. Quatro vagas novas mapeadas hoje, todas paradas só no captcha
+## 5. Quatro vagas novas mapeadas hoje, todas paradas só no captcha
 
 Preenchidas e conferidas campo a campo, com dossiê em `automacao/respostas-formularios.md`.
 
@@ -196,7 +200,7 @@ Preenchidas e conferidas campo a campo, com dossiê em `automacao/respostas-form
 
 ---
 
-## 1d. UM PDF DE PORTFÓLIO destrava uma classe inteira de formulário
+## 6. UM PDF DE PORTFÓLIO destrava uma classe inteira de formulário
 
 Hoje **duas** candidaturas pararam pelo mesmo motivo, e não é captcha: o formulário exige
 **arquivo** de portfólio e a campanha não tem nenhum.
@@ -214,7 +218,7 @@ inteiro em vez de uma vaga.
 
 ---
 
-## 2. Rainbow CGI, Roma e Milão: pendência honesta, decida você
+## 7. Rainbow CGI, Roma e Milão: pendência honesta, decida você
 https://www.rbw-cgi.it/careers/
 
 A casa das Winx, animação de personagem estilizado, que é o seu registro. O menu de função tem
@@ -228,7 +232,7 @@ declarada: reCAPTCHA v3, que é pontuação de sessão e passa no seu navegador.
 
 ---
 
-## 3. O que EU mandei enquanto você dormia, para você não repetir
+## 8. O que EU mandei enquanto você dormia, para você não repetir
 
 - **Bulkhead Interactive [IN-STUDIO], Derby** — ENVIADA às 05h30, com URL de confirmação.
   **É a que realoca**: presencial integral, ajuda de realocação e a frase *"Don't worry, we can
@@ -241,7 +245,7 @@ declarada: reCAPTCHA v3, que é pontuação de sessão e passa no seu navegador.
 
 ---
 
-## 4. Erro meu da madrugada, dito com todas as letras
+## 9. Erro meu da madrugada, dito com todas as letras
 
 **Mandei duas candidaturas repetidas para a Sony Pictures Imageworks**, na mesma noite em que
 escrevi a trava que deveria impedir isso. A *Experienced Modeler* já tinha ido em 02/09 e a
@@ -262,7 +266,7 @@ trabalhado, e as minhas repetidas a fizeram contar como nova.
 
 ---
 
-## 5. Perguntas que só você responde, e por isso ficaram em branco de propósito
+## 10. Perguntas que só você responde, e por isso ficaram em branco de propósito
 
 Nenhuma foi inventada.
 
@@ -279,7 +283,7 @@ Nenhuma foi inventada.
 
 ---
 
-## 6. A fila grande, e a leitura honesta dela
+## 11. A fila grande, e a leitura honesta dela
 
 `PORTAIS` tem **259 entradas sem candidatura**, mas isso **não são 259 portas abertas**. Depois
 de varrer a noite inteira, o veredito dos agentes é que a esmagadora maioria já tem motivo
@@ -293,7 +297,7 @@ realista, e ela exige exatamente o que você ainda não tem.
 
 ---
 
-## 7. Três fontes do PDF paradas pelo NOSSO ambiente, não pelos sites
+## 12. Três fontes do PDF paradas pelo NOSSO ambiente, não pelos sites
 
 `worldwidestudios.net`, `gamedevjobs.io` e `gamefilmhub.com` devolvem, por extenso, do proxy de
 saída: **`Host not in allowlist`**. Falham igual no navegador. **Só destrava se você liberar
@@ -306,7 +310,7 @@ baixo do widget, e a receita fica escrita no brief da força-tarefa, então não
 
 ---
 
-## 8. Um canal passivo que trabalha sozinho depois de criado
+## 13. Um canal passivo que trabalha sozinho depois de criado
 
 `80.lv/talent` **não é quadro de vagas**: é marketplace de perfil, com conta obrigatória
 (*"Create, publish, and share your profile and your work samples seen by hiring companies"*).
