@@ -636,6 +636,62 @@ disciplina**. Quatro entraram no painel como pendentes por 1015: Side Senior Tex
 (Montreal e Toronto), Sperasoft Material Artist (stylization, seis requisicoes na Polonia, Romenia
 e Servia), Liquid Development Material Artist e Sawhorse Productions Roblox 3D Artist.
 
+### O `jobs.workable.com` serve tambem o FORMULARIO INTEIRO, e mesmo assim NAO ENVIA. Medido em 07/09.
+
+O achado acima estava certo pela metade, e a metade que faltava vale nos dois sentidos. **Ele da
+MAIS do que se pensava:** alem do indice de busca e do anuncio, o host nao bloqueado serve a
+**estrutura completa do formulario de candidatura**:
+
+    GET https://jobs.workable.com/api/v1/jobs/<uuid>/form?includeAccountMetadata=true
+
+Devolve secao por secao **cada campo com `id`, rotulo, tipo, obrigatoriedade e a lista de opcoes com
+o id de cada uma**, mais o `gdprPolicyUrl`, de onde sai de graca o **slug da conta** no
+apply.workable.com. O `<uuid>` e o campo `id` do item do indice. Isso muda o que se pode escrever
+sobre uma vaga do Workable: **nenhuma precisa mais ficar com dossie chutado nem com nota de
+"pendente de reconferencia"**. Ela entra direto como **a mao com o formulario campo a campo**, e o
+Vini envia em um minuto. Foi assim que sairam seis dossies exatos numa rodada so, entre eles o da
+Lighthouse Games, cujo `/form` revelou que **os unicos campos obrigatorios sao nome e email** — a
+candidatura mais barata da fila inteira, que estava parada havia dias.
+
+**E a metade ruim, que fecha a pergunta: o ENVIO nao passa por lugar nenhum.** O
+`POST /api/v1/jobs/<uuid>/apply?lng=en` existe e responde. O corpo e
+`{candidate:[{name,value}],job:{position:<numero>}}`, descoberto por sondas de carga incompleta, que
+so podem gerar erro de validacao e nunca candidatura (`{"candidate":{}}` devolve *"candidate must be
+an array"*, e `{"id":...}` no item devolve *"id: Not allowed"*). Com o corpo **bem formado** o
+servidor devolve **`412 Precondition Failed`** e o cabecalho **`x-ts: 0`**, que e o token do
+**Cloudflare Turnstile** faltando (`wjb_acp_turnstile_captcha_enabled: true` no
+`/api/v1/feature-flags`).
+
+**E o navegador de tela NAO passou onde o curl nao passou**, que era exatamente a licao do Half
+Breaks a testar: o formulario monta inteiro, o CV sobe para
+`workable-application-form.s3.amazonaws.com`, os radios e o dropdown gravam, o botao *Submit
+application* fica **habilitado**, e no clique sai um `POST` para `challenges.cloudflare.com` e o
+POST de candidatura **nunca sai**, com o botao virando cinza e ficando assim. Mesma parede, mesma
+causa, pelos dois caminhos.
+
+**Entao o Workable tem DUAS paredes diferentes e convem nao confundi-las na nota:** o `1015` do
+`apply.workable.com` e **limite de taxa contra o NOSSO IP**; o Turnstile do `jobs.workable.com` e
+**captcha de pontuacao da PLATAFORMA**. Nenhuma das duas e do estudio, e a vaga continua viva.
+
+**Tres armadilhas medidas no formulario, todas silenciosas:**
+
+1. **Os radios ficam ESCONDIDOS atras de widget proprio.** A estrutura e
+   `fieldset[role=radiogroup][data-ui=<idDoCampo>]` com
+   `div[data-ui=option][role=radio]` envolvendo `<label><input name="<idDoCampo>" value="true|false"
+   aria-hidden tabindex="-1">`. `input.click()` nao move nada; quem recebe o clique e o **label**.
+   Enderecar por `input[name][value]` e deterministico e evita a armadilha da Plastic Wax de casar
+   rotulo por regex e pegar a primeira opcao que casa num campo de elegibilidade.
+2. **A leitura logo apos o clique MENTE.** Ela devolve `false` com o radio certo marcado, porque o
+   React ainda nao atualizou. So a **releitura do DOM depois de todos os cliques** diz a verdade —
+   nove radios que apareceram como "clicou e nao marcou" estavam todos corretos na conferencia.
+3. **A pagina tem DOIS botoes `Submit application`** (cabecalho fixo e fim do formulario) e o widget
+   de **Feedback** do Workable tambem casa com `/submit/i`. Seletor frouxo com `.last()` clica no
+   botao errado, o painel parece fechar e **nenhum POST sai**, com o log dizendo que o clique
+   funcionou. Alvo ancorado, `/^Submit application$/`, e conferir se o POST existiu.
+
+E o **endereco vem autopreenchido com `Columbus, United States of America`**, pela geolocalizacao do
+nosso proxy. Trocar sempre.
+
 ## O GoHire publica o sitemap da PLATAFORMA INTEIRA, e o `robots.txt` entrega o caminho
 
 Medido em 07/09. `jobs.gohire.io/robots.txt` aponta para **`jobs.gohire.io/sitemap.txt`**, que e
