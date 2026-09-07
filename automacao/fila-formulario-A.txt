@@ -104,7 +104,7 @@ Elliott Animation
 Elysium Studios
 Eschatology Entertainment
 Fabrique Fantastique
-Fabrique d'Images
+# FEITO Fabrique d'Images
 Fast Travel Games
 Filmic Art
 Fire Without Smoke
@@ -168,7 +168,7 @@ Kevuru Games
 Keyframe Digital Productions
 Keytoon Animation
 Kickstart Entertainment (reenvio)
-KidsCave Studios
+# FEITO KidsCave Studios
 Klang Games
 # FEITO Klei Entertainment
 Krillbite Studio
