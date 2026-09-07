@@ -3142,3 +3142,39 @@ O envio exige reCAPTCHA v2 de caixa, rotulado *Human Check*.
 | Do you currently reside in the province of British Columbia? * | **Willing to Relocate** |
 | Have you previously worked at a video game studio? * | **Yes** |
 | How did you hear about this job opening? | Next Level Games careers page |
+
+### Unit Image (Paris, França) — General Application — PAREDE: reCAPTCHA v3 (mensagem explícita)
+
+Link: https://www.unit-image.fr/en/jobs/ (Fluent Forms, com upload de currículo)
+
+Medido em 07/09, tentativa única de envio: a página respondeu, com todas as letras,
+**"reCaptcha verification failed, please try again."** Nada foi enviado.
+
+Três armadilhas medidas no formulário, todas úteis para quem o abrir de novo:
+1. **Os `id` dos checkboxes mudam a cada carga** (hash por instância). Case pelo texto do rótulo.
+2. O bloco de especialidade só aparece **depois** de marcar o departamento **3D ART**, e mesmo assim
+   o input de *3D CHARACTER* não aceita marcação por automação. Nenhum desses campos é obrigatório.
+3. O campo de telefone tem **máscara local** e come o código do país; o campo de data é seletor e
+   recusa texto digitado.
+
+| Campo | Resposta |
+|---|---|
+| First / Last name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | número do documento privado do Drive |
+| Country | Brazil |
+| Salary expectation | Open to aligning with your band for the role; as a reference, around EUR 55,000 per year |
+| Contract | PERMANENT |
+| Showreel / Website | https://www.artstation.com/viniciuscavalcanti |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| Seniority | Senior |
+| Team role | Artist / Team member |
+| Education | Honors laurea, postgraduate specialization in Game Art (Méliès), MA in progress (UNICAP), IELTS, published author |
+| Departamento | 3D ART |
+| Especialidade | 3D CHARACTER, com Cartoon character, Realistic character, Grooming e Blendshapes |
+| Other software | ZBrush, Substance 3D Painter, Marmoset Toolbag, Unreal Engine 5, Marvelous Designer, Photoshop, Maya, Houdini |
+| Upload resume | Vini_Cavalcanti_CV.pdf |
+
+**OTHER INFO** (colar inteiro):
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters, applying as a general application because your open roles are outside my discipline today. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini, which fits a 3DSMax, VRay and Houdini based workflow. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I also lead: I review other artists' work, I set the asset standard, and I founded my own character art school, so I am open to a lead seat as well. I WANT TO RELOCATE to Paris and I am fully open to moving for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Salary: open to aligning with your band for the role; as a reference, around EUR 55,000 per year. My current salary is confidential under the NDA of my current contract; happy to discuss ranges during the process. Portfolio: https://www.artstation.com/viniciuscavalcanti
