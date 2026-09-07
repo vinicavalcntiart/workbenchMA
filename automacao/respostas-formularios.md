@@ -2397,3 +2397,85 @@ processa, o que faz um preenchedor genérico achar que o botão sumiu; (3) o `in
 menu volta **vazio** mesmo com a opção escolhida, e quem mostra a verdade é o **texto do botão** do
 menu; (4) o anexo do Wix limpa o `input[type=file]`, e a prova é o **nome do arquivo na tela**,
 que aqui apareceu como `Vini_Cavalcanti_CV.pdf`.
+
+---
+
+# Fatia CACADOR (07/09, madrugada): fontes NOVAS abertas e o que cada uma rendeu
+
+Esta fatia saiu com uma ordem clara: não insistir nos quadros já varridos e **abrir fonte que a
+campanha nunca usou**. O que segue é a medida de cada uma, para ninguém repetir o caminho morto.
+
+| Fonte nova | Resultado medido em 07/09 |
+|---|---|
+| **gamejobs.co** (agregador) | **A ÚNICA QUE RENDEU.** 2.085 anúncios varridos por 12 buscas de disciplina, 132 estúdios, **80 deles inéditos para a campanha**. Dela saíram as três candidaturas enviadas desta fatia (Bluehole x2 e Loonshot) |
+| **API de ATS por token de estúdio** | Varridos **2.588 tokens** dos nomes de `processados.csv` e do `STUDIOS` do painel em sete sistemas (Greenhouse, Lever, Ashby, Workable, Recruitee, SmartRecruiters, BambooHR) e depois **4.505 tokens** das filas do gamedevmap. Resultado da primeira: **55 vagas da disciplina, e nenhuma inédita** além das que esta fatia já trabalhou. Isso confirma, medido e não presumido, o diagnóstico do agente do Grackle: o gargalo é **estoque**, não captcha |
+| **artstation.com/jobs** | **PAREDE, e não é o board:** a página é SPA e o `POST /api/v2/jobs/search.json` exige token CSRF que só existe dentro da sessão; abrindo no navegador de verdade, a ArtStation devolve o desafio da Cloudflare (`Just a moment...`, "Please complete a security check", Session ID e IP do datacenter na tela). Do navegador do Vini abre normal |
+| **awn.com/jobs** | **PAREDE Cloudflare.** curl devolve 403 e o navegador de tela devolve "Performing security verification" com Ray ID. Não é vaga morta, é bloqueio de IP |
+| **animationguild.org/jobs** | **NÃO É QUADRO DE VAGAS.** A URL responde 200, mas o conteúdo é um **post de blog de 2015** ("Jobs and Networking", de Steve Hulett) com conselhos de carreira. Não existe listagem de vaga ali. Não reabrir |
+| **cgmeetup.com/jobs** | Vivo e sem bloqueio, mas **tem duas vagas no total** (`arabic-content-writer` e `vfx-short-film-low-budget`), nenhuma da disciplina. Fonte real, estoque nulo |
+| **workwithindies.com** | Vivo, 98 vagas no quadro, e **as de arte são todas freelance ou pagamento por entrega** (personagem pago por peça, contrato de 3 a 4 semanas). Nenhuma com patrocínio nem realocação. O `/jobs` devolve 404: o quadro fica na raiz do site |
+| **remotive.com/api** e **himalayas.app/jobs/api** | APIs públicas de vaga remota, as duas respondem 200 e **as duas devolvem ZERO vaga de arte 3D** em dez buscas de disciplina. São quadros de tecnologia. Não vale reabrir |
+
+## As três armadilhas do Greenhouse EM OUTRO IDIOMA, medidas e já corrigidas no `apply_gh.js`
+
+O quadro coreano da Bluehole quebrou o preenchedor em três pontos diferentes, e **os três falham em
+silêncio**, que é o tipo de erro mais caro. Ficam corrigidos e valem para qualquer quadro que não
+esteja em inglês (o Greenhouse da Bluehole, da Loonshot e o francês da Highdive são exemplos vivos):
+
+1. **O botão de envio não tem a palavra "Submit".** No quadro coreano ele se chama `지원서 제출`. O
+   seletor antigo (`button:has-text("Submit application")`) devolvia `null` e o script morria com
+   `Cannot read properties of null`, depois de já ter preenchido tudo. Conserto: cair para
+   `form button[type=submit]` e registrar no log o texto do botão que achou.
+2. **A tela do código de segurança também não diz "security code" em inglês.** A detecção era por
+   texto, então o script passava direto, concluía "NOT CONFIRMED" e **fechava o navegador com o
+   código já enviado por email** — candidatura perdida sem erro nenhum na tela. Conserto: detectar
+   também pelo próprio campo de código no DOM (`input[autocomplete=one-time-code]` e parentes).
+3. **O menu de país está no idioma do quadro.** Brasil aparece como `브라질`, e o prefixo fixo
+   `^Brazil` não casava. O campo de país agora aceita `countryPrefs` pelo arquivo de respostas.
+
+E uma quarta, do mesmo lote: a regex que decide se a candidatura foi confirmada só conhecia texto em
+inglês. A confirmação da Bluehole é `(주)블루홀에 지원해주셔서 감사합니다`. **A URL `/confirmation`
+salva nesses casos**, e é a prova que vale em qualquer idioma.
+
+## IGG Canada, 3D Character Artist (Vancouver) — DESCARTADA POR VETO DE RESIDÊNCIA
+
+**Link:** https://igg.bamboohr.com/careers/289 · Vancouver, BC, presencial integral, CAD 60.000–85.000
+
+Dói, porque é **Vancouver**, prioridade número um, disciplina exata (personagem e hard surface,
+ZBrush, Maya, Substance) e faixa publicada. Mas o anúncio fecha a porta por escrito:
+
+> *"Legally eligible to work in Canada - we are unable to sponsor work permits for candidates
+> applying for this position."*
+
+Ele **precisa de patrocínio** e isso não se contorna com texto bonito no formulário. Não enviar.
+Registro da leitura: **07/09**. Se um dia reabrir sem essa frase, é candidatura de um minuto.
+Atenção para não confundir com a outra IGG que a campanha já trabalhou: aquela era a de **Jacarta**,
+requisição diferente e fora do recorte geográfico.
+
+## Good Job Games, Senior 3D Artist e 3D Artist (Istambul) — À MÃO, e por dois motivos
+
+**Links:** https://job-boards.greenhouse.io/goodjobgames/jobs/7491067003 (Senior 3D Artist) ·
+https://job-boards.greenhouse.io/goodjobgames/jobs/4303829003 (3D Artist) ·
+https://job-boards.greenhouse.io/goodjobgames/jobs/7588887003 (3D Artist, Hybrid-Casual)
+
+**Por que à mão, e o segundo motivo é o que manda:**
+
+1. Este quadro do Greenhouse **tem reCAPTCHA na página** (ao contrário do da Bluehole e do da
+   Loonshot, que não têm e por isso enviaram).
+2. Existe uma pergunta obrigatória que **só o Vini pode responder**: *"Match Villains oyununu kaç
+   level oynadın?"* — quantos níveis do jogo Match Villains você jogou. Pela regra da campanha,
+   pergunta cuja resposta só ele sabe **não se inventa**: fica em branco e se registra.
+
+Há ainda uma pergunta obrigatória de menu, *"Autodesk Maya ile çalışma deneyimin var mı?"* (tem
+experiência com Maya?), que é **Sim**, e o campo `Portfolyo`, que é a ArtStation.
+
+## Framestore, Visual Development Artist – AI & Generative Tools (Londres) — requisição NOVA
+
+**Link:** https://framestore.recruitee.com/o/visual-development-artist-ai-generative-tools
+
+Esta **não estava no dossiê de Framestore** que a campanha já tinha (lá constam a Blender Generalist
+de Londres e as duas de Montréal). É requisição diferente, de **Visual Development**, que é metade
+do título dele, em **Londres**. A parede é a mesma do resto do Recruitee: **hCaptcha de imagem só
+depois do clique em Send**. Use o mesmo preenchimento campo a campo já validado no bloco da
+Framestore acima, trocando a pergunta de realocação para Londres e a pretensão para
+`GBP 50,000 per year; open to aligning with your band for the role`.
