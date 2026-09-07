@@ -57,7 +57,7 @@ Playtonic Games
 Polydin Studio
 # FEITO Polynoid | sem porta de formulario: pagina de carreiras lida () so publica email (contact@polynoid.tv), vira fila de carta
 # FEITO Proxima Milano | sem porta de formulario: a espontanea e por email jobs@proximamilano.com
-Purple Lamp (THQ Nordic)
+# FEITO Purple Lamp (THQ Nordic) | sem porta de formulario: /career/ so tem campo de busca, sem vaga listada e sem formulario de candidatura
 Pushka Studios
 QLOC
 Qvisten Animation
@@ -130,7 +130,7 @@ ThunderRoar Studio
 # FEITO Tic Toc Games | sem porta de formulario: /jobs so tem newsletter; a unica vaga da disciplina e 3D Modeler nas FILIPINAS, fora do recorte; contato jobs@tictocgames.com
 # FEITO Tindalos Interactive | sem porta de formulario: pagina de carreiras lida () so publica email (contact@tindalos-interactive.com), vira fila de carta
 Tiny Island Productions
-Tippett Studio
+# FEITO Tippett Studio | sem porta de formulario no HTML: a pagina fala em Expression of Interest mas a unica porta publicada e jobs@tippett.com
 # FEITO TomaVision | sem porta de formulario: /jobs lista vagas de animacao 2D e rigging, sem porta propria; contato hola@tomavision.net
 Tonic DNA
 Tonko House
@@ -147,7 +147,7 @@ Twin Pines
 # FEITO Twin Win Games | sem porta de formulario: pagina de carreiras lida () so publica email (info@twinwingames.com), vira fila de carta
 # FEITO UPP | sem porta de formulario: pagina de carreiras lida (https://upp.cz/careers) so publica email (info@upp.cz), vira fila de carta
 # FEITO Uken Games | sem porta de formulario: pagina de carreiras lida (https://uken.com/careers) so publica email (jobs@uken.com;support@uken.com), vira fila de carta
-Unfrozen
+# FEITO Unfrozen | ENVIADA E CONFIRMADA (espontanea, remoto) - honeypot website + captcha aritmetico
 # FEITO Unit Image | a mao, reCAPTCHA v3 recusou com mensagem explicita; General Application com upload, dossie no painel
 # FEITO User T38 | sem porta de formulario: pagina de carreiras lida () so publica email (jobs@usert38.com;nuria.mateos@usert38.com), vira fila de carta
 VEA Games
