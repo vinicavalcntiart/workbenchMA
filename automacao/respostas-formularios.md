@@ -2568,3 +2568,86 @@ https://jobs.lever.co/illumination/88ab5915-96db-448b-98d7-7d3385c5f0bf | penden
 07/09 na **API oficial do Lever**: `api.lever.co/v0/postings/illumination?mode=json` responde 200
 com **lista vazia**. Não é bloqueio nem falso negativo de curl, é quadro sem nenhuma vaga.
 Vale reconferir quando a Illumination reabrir, porque surfacing é o centro da disciplina dele.
+
+## Dossiês do JHON, 08/09 (Europa e Canadá): três formulários prontos para o Vini mandar à mão
+
+Os três estão preenchidos e conferidos campo a campo pela automação; o que falta em cada um está
+dito com todas as letras. Telefone: **documento privado do Drive** "CAMPANHA - dados pessoais dos
+formulários" (nesta sessão a variável `VINI_TEL` estava vazia).
+
+### 1. Bohemia Interactive — Open Application (Praga, Chéquia)
+
+`https://careers.bohemia.net/en/apply` · **A parede é reCAPTCHA v3, e só ela.** Os dois bloqueios
+que o painel registrava, o menu de disciplina e o código de país, **não existem**: eles caíam
+porque pedaços de JavaScript sob demanda voltavam 502 intermitente pela ponte desta sessão.
+
+| Campo | Resposta |
+|---|---|
+| Discipline (menu) | **Art & Animation** (a lista tem 22 opções) |
+| First name / Last name | Vini / Cavalcanti |
+| Email address | contact@vinicavalcanti.art |
+| Country code | **Brazil (+55)** |
+| Phone number | do doc privado do Drive; o campo **não é obrigatório** |
+| CV/Resume | `Vini_Cavalcanti_CV.pdf` (a prova do anexo é o **nome na tela**, o input fica vazio) |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Portfolio/LinkedIn link | https://www.artstation.com/viniciuscavalcanti |
+| Expected monthly gross salary | **4600** + moeda **EUR** (= EUR 55.200/ano, piso de sênior em casa grande da Europa) |
+| Possible start date | opcional, em branco |
+| How did you learn about the position? | **Search engine** |
+| Are you entitled to work in EU? | **deixar DESMARCADA** — é a verdade, ele precisa de patrocínio |
+| Caixa de consentimento | marcar |
+
+**Não há campo de texto livre**, então a frase de realocação só cabe na carta anexada.
+Sinal de recusa: o POST em `/en/apply.data` volta 200 com `success:false` e
+*"Security verification failed. Please try again."*
+
+### 2. TRIXTER — Speculative Job Application (Munique e Berlim)
+
+`https://www.trixter.de/jobs/job/speculative-job-application-2/` · Personio embutido em WordPress.
+**Vaga marcada FREELANCE.** O clique em enviar **não gera pedido de rede nenhum** e a tela escreve
+*"Sorry, something went wrong..."*: quem recusa é o script deles. Endereço alternativo que a
+própria tela oferece: `hello@trixter.de`.
+
+| Campo | Resposta |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| E-mail | contact@vinicavalcanti.art |
+| Phone | doc privado do Drive (opcional) |
+| Eligibility to work in Germany (`custom_attribute_244638`) | **No** — a verdade |
+| Availability Date | 20.10.2026 |
+| Desired Salary / Freelance Daily Rate | EUR 55,000 per year equivalent; open to aligning with your band for the role. |
+| Link to Portfolio (`244637`) | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio Password (`244636`) | em branco |
+| LinkedIn (`244635`) | https://www.linkedin.com/in/vinicavalcnti/ |
+| IMDB (`244413`) | em branco |
+| Resume / Cover letter | os dois PDFs |
+| Caixa `terms` | marcar |
+
+Armadilha nova: o botão **send application não tem atributo `type`**, então `button[type=submit]`
+devolve zero elementos. E o aviso de cookies cobre o botão: remova o nó que aparecer em
+`document.elementFromPoint` no centro dele, nunca clique com força (cai na página de privacidade).
+
+### 3. Ironbird Creations — 3D Artist (Cracóvia, Polônia)
+
+`https://careers.ironbirdcreations.com/jobs/2228715-3d-artist/applications/new` · Teamtailor,
+**sem captcha nenhum**. Falta **um** campo, e é dele: *"Please share your portfolio with us"* é
+**obrigatório e é upload de ARQUIVO** (dropzone, `required: true`, 1 arquivo, sem opção de link).
+A campanha não tem PDF de portfólio, e pôr o CV ali seria mentir sobre o que o arquivo é.
+**Resolve exportando um PDF do ArtStation.** Ressalva: as seis vagas do quadro são de novembro de
+2022 e nada foi publicado depois, então o quadro está parado.
+
+| Campo | Resposta |
+|---|---|
+| Salary expectation (PLN gross) | PLN 16,000 gross per month (~PLN 192,000/ano). Open to aligning with your band for the role. |
+| Aviso prévio (rádio) | **1 month** |
+| Portfólio (upload obrigatório) | **PDF do ArtStation — só o Vini gera** |
+| Nível de inglês (rádio A1–C2) | **C1** |
+| Where did you hear about this position? | Your careers page |
+| First name / Last name / Email | Vini / Cavalcanti / contact@vinicavalcanti.art |
+| Phone | doc privado do Drive, **com o código do país na frente** (widget `intl-tel-input`) |
+| Upload CV (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| Additional files | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Textarea `cover_letter` | "I WANT TO RELOCATE and I am fully open to moving for the role." + o caso de visto (láurea com honras, especialização, mestrado em andamento, IELTS e publicações) |
+
+**Teamtailor:** POST 200 não é candidatura completa — só depois de abrir o link do email
+*"Complete the application"* a URL vira `/thanks`.
