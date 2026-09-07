@@ -2850,3 +2850,28 @@ formulários". Dois detalhes do fluxo que custam tempo: o link é de **uso únic
 tentativa de abri-lo devolve página sem campo de senha, o que parece defeito e é o link já gasto),
 e o campo de email da recuperação é o **próprio `#username`** da tela de login, com o botão
 **Continue** — não existe tela separada.
+
+### Alerta de vaga criado na conta da EA (07/09), e o que ele cobre de verdade
+
+Com o portal seco na disciplina, a rede que sobra é o alerta do próprio portal. Foi criado um,
+na conta dele: **Job Category = Art, sem filtro de país, frequência semanal**, e a EA confirmou na
+tela *"Job alert created. We'll send you emails to contact@vinicavalcanti.art with jobs that match
+your criteria"*, com a linha aparecendo depois em `/careers/ProfileJobAlerts`.
+
+O caminho, porque ele não está onde parece: o botão **Create job alert** da lista de alertas é um
+`<a class="button button--primary">` para **`/careers/AgentCreate?from=profile`**, e o item de mesmo
+nome no submenu está **invisível**, então `getByText('Create job alert').click()` estoura em timeout
+de 30s dizendo *element is not visible* — vá pela URL. Os cinco filtros (Country `8200`, Job
+Category `4872`, Worker Type `4873`, Studio/Department `4874`, Work Model `4875`) são **select2 que
+busca no servidor**, com um `<input id="<id>-search__field">` ao lado: digite, **espere a lista
+parar de dizer "Searching…"**, clique na opção e **releia `selectedOptions`** antes de dar por
+gravado. A categoria certa se chama exatamente **`Art`**.
+
+**Duas ressalvas honestas, para ninguém contar vitória que não viu.** A frequência foi pedida
+**Daily** e o portal gravou **Weekly**: o `selectOption({label:'Daily'})` não levantou erro nenhum e
+a lista mostra Weekly, e uma segunda passada pelo `EditAgent?action=edit&id=` também não mudou. E
+**não foi possível confirmar por dentro do portal que as vagas de Character Artist estão etiquetadas
+na categoria `Art`**: o painel de filtros da busca só monta depois de expandir e os parâmetros de
+filtro na URL (`?4872=Art` e variantes) são **ignorados pelo servidor**, que devolve as 332 de
+sempre. Ou seja: **o alerta é rede a mais, não substituto do censo.** Quem quiser certeza roda
+`sh automacao/lista-ea.sh`, que leva um minuto e lê o portal inteiro.
