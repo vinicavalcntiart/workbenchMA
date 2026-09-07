@@ -228,3 +228,19 @@ linhas e cujo primeiro casamento não é o relevante.
 
 Passe **sempre a URL** como quinto argumento do `pega`. Ele procura a URL e o ID numérico longo
 da requisição no `docs/index.html` e no `processados.csv` e recusa com saída 4.
+
+## Commite a CADA candidatura, não de hora em hora. O contêiner reinicia.
+
+Em 07/09 às 06h44 o contêiner desta sessão **reiniciou e matou SETE agentes de uma vez**, no
+meio do trabalho. Sobreviveu exatamente o que estava commitado e empurrado; o resto evaporou,
+sem aviso e sem chance de recuperar.
+
+A instrução anterior era "commite de hora em hora", e ela salvou muita coisa (as candidaturas da
+Crystal Dynamics e da Tripwire entraram minutos antes). Mas uma hora de trabalho perdido é caro
+demais quando o custo de commitar é um segundo. **A regra passa a ser: commit e push a cada
+candidatura enviada**, logo depois de registrar a prova.
+
+**Causa provável, e o cuidado que sai dela:** sete navegadores Playwright ao mesmo tempo na
+mesma máquina. Disco estava em 40% e não foi ele. **Rode UM navegador por vez**, e depois de
+cada rodada confira `pgrep -f chrome` e mate o que ficou pendurado. Não é frescura de recurso:
+processo pendurado de agente morto continua ocupando memória de quem está vivo.
