@@ -1349,3 +1349,90 @@ Para você não gastar minuto reabrindo o que já foi decidido.
 **Quadros que não abriram e não confirmam vaga da sua disciplina:** KingsIsle, PikPok, Velan, Digital Domain, Digital Sun, Electric Theatre, Arkane, Tarsier, Carbonated, PLAYERUNKNOWN, VSTEP.
 
 **Parede que também atrapalha você, ficou por último com ressalva:** Bulkhead Open Application [Remote] — exige **print da aba Most Played do seu perfil Steam** e o contrato é por projeto, fora da sua regra de vaga fixa. Se sobrar tempo no fim das três horas: https://careers.bulkhead.com/jobs/5744150-open-application-remote/applications/new
+
+
+---
+
+# APÊNDICE DE 07/09, DE MADRUGADA: as paredes que foram medidas DEPOIS que esta fila foi montada
+
+Esta fila foi fechada no começo da noite. Entre aquele momento e as duas da manhã os agentes
+mediram mais trinta e três portas que ficam à mão, e nenhuma delas está nas 45 entradas acima.
+Conferi uma a uma **pela URL**, e não pelo nome do estúdio, porque casar por nome me deu falso
+positivo: a DreamWorks e NBCU aparecia como ausente e já é a entrada 4 e a 18 desta fila.
+
+Duas ficaram de fora de propósito: **Studio Bozzetto**, porque o estúdio já respondeu em 02/09 que
+não está contratando e exige presença em Bergamo, e **Dream Games**, que é Istambul e está fora do
+escopo geográfico.
+
+## As três que valem a mão primeiro
+
+### A. Rainbow SpA — 3D Modeler **e** Surfacing Artist — Roma e Milão, Itália
+**Link:** https://www.rbw-cgi.it/careers/
+**É a melhor vaga não enviada da Europa nesta madrugada.** A casa é a das Winx Club, italiana e
+grande, e o quadro tem **três portas da sua faixa ao mesmo tempo**: 3D Modeler, Surfacing Artist e
+General Application. O formulário é Contact Form 7 **com campo de arquivo de verdade**, então CV e
+carta sobem normalmente.
+**A parede:** reCAPTCHA v3, de pontuação de sessão. Ele reprova a automação e devolve a tela
+genérica *"There was an error trying to send your message"*, que mente sobre o motivo. **No seu
+navegador passa direto.** É envio de um minuto.
+
+### B. Bulkhead Interactive — Open Application **IN-STUDIO** — Derby, Reino Unido
+**Link:** https://careers.bulkhead.com/jobs/5739695-open-application-in-studio
+**Atenção, esta não é a mesma que está no fim da seção "o que ficou de fora".** Aquela é a
+[Remote], por projeto. Esta é a **presencial**, e é melhor por três motivos escritos no próprio
+anúncio: *"Don't worry, we can sponsor your visa"*, *"This role is 100% on-site"* e **oferece ajuda
+de realocação**. Patrocínio dito por escrito é raro e vale mais que quase tudo nesta fila.
+**Por que fica com você e não é captcha:** o formulário exige um **print da aba Most Played do seu
+perfil Steam**, campo de arquivo obrigatório que só você pode gerar.
+**Armadilha medida, confira pela tela:** os dois menus, *Where are you currently based* e *Which
+department*, continuam mostrando "Select an option" mesmo depois de marcados por script. Olhe a
+tela, não confie no primeiro clique.
+
+### C. Urban Games — Head of Art — Schaffhausen, Suíça
+**Link da vaga:** https://www.urbangames.com/career/ · descrição em PDF em https://www.urbangames.com/head-of-art-2
+**Porta:** o formulário de contato em https://www.urbangames.com/contact
+A casa é a de Transport Fever 3, e além do Head of Art eles convidam candidatura espontânea por
+escrito, pedindo uma mensagem que explique o encaixe.
+**A parede:** reCAPTCHA v3, e aqui ele foi explícito na tela, em vermelho: *"Invalid form, reCAPTCHA
+validation failed"* e *"reCAPTCHA V3 validation failed, suspected as abusive usage"*.
+**O formulário NÃO tem campo de arquivo**, então o CV e a carta vão por link, e o texto pronto está
+em `automacao/respostas-formularios.md`.
+
+## As outras trinta, se sobrar tempo
+
+Todas já foram abertas e medidas, todas ficam à mão, e o texto de cada uma está no painel. Onde a
+coluna diz "à mão, motivo na nota do painel", o obstáculo não é captcha nomeado: abra a entrada no
+painel e o motivo está escrito lá.
+
+| Estúdio e vaga | Onde | O que barra | Link |
+|---|---|---|---|
+| Passion Pictures (candidatura espontanea) | Reino Unido (Londres) | reCAPTCHA v3, que reprova a sessao automatizada pelo IP | https://passion-pictures.com/careers |
+| Bandai Namco Mobile (Open Application) | Espanha (Barcelona) | à mão, motivo na nota do painel | https://bandainamcomobile.com/careers/jobs/1199319-open-application |
+| Milestone | Itália (Milão) | reCAPTCHA | https://milestone.it/general-application/ |
+| Nexus Studios (General Application) | Reino Unido (Londres) | reCAPTCHA v2 de caixa de marcar | https://apply.workable.com/j/4F41AEB27C |
+| Ubisoft Montpellier | França (Montpellier, presencial) | DataDome do SmartRecruiters | https://jobs.smartrecruiters.com/Ubisoft2/744000121716487 |
+| Palomar Animation (Mediawan Kids & Family) | Itália e França (grupo Mediawan) | reCAPTCHA | https://mediawankidsandfamily.com/jobs |
+| Rebel Wolves (Open Application, candidatura espontânea) | Polônia (Varsóvia ou remoto) | à mão, motivo na nota do painel | https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74 |
+| PixelAnt Games / Sumo Digital (Future Opportunities, espontânea) | Polônia (Wrocław ou remoto) | à mão, motivo na nota do painel | https://form.erecruiter.pl/form/a66fabf884d24c15beb2ec7854531f0a |
+| Game Boost (Open application, Game Artists) | Suecia (Estocolmo; hibrido e remoto) | à mão, motivo na nota do painel | https://gameboost.teamtailor.com/jobs/2814432-open-application-game-artists-game-boost-home-of-game-gigs-sweden-hybrid-remote |
+| SQRT3 (Square Root of Tree) | Polônia (Varsóvia) | reCAPTCHA | https://sqrt3.games/#rekrutacja |
+| Stormind Games | Itália (Acireale e Milão) | reCAPTCHA v2 de caixa de marcar | https://stormindgames.bamboohr.com/careers/203 |
+| Gamious | Holanda (Haarlem) | reCAPTCHA v3, que reprova a sessao automatizada pelo IP | https://gamious.com/jobs/ |
+| eXiin | Bélgica (Bruxelas) | reCAPTCHA v3, que reprova a sessao automatizada pelo IP | https://exiin.com/jobs-internships/ |
+| Funday Games (Senior Art Director) | Dinamarca | reCAPTCHA v2 de caixa de marcar | https://funday.bamboohr.com/careers/279 |
+| Metropolis VFX (Expression of Interest) | Espanha (Madri, híbrida) | à mão, motivo na nota do painel | https://ilpvfx.teamtailor.com/jobs/6941873-metropolis-expression-of-interest |
+| Random Studio (3D Artist, Amsterdã) | Holanda (Amsterdã) e França (Paris) | reCAPTCHA v2 de caixa de marcar | https://randomstudio.bamboohr.com/careers |
+| Amuse Animation (Concept Designer) | Espanha (Las Palmas de Gran Canária) | reCAPTCHA v2 de caixa de marcar | https://amuseanimation.bamboohr.com/careers/180 |
+| DreamWorks e NBCU (Associate Art Director, Montréal) | Canadá (Montréal, presencial) | à mão, motivo na nota do painel | https://jobs.smartrecruiters.com/NBCUniversal3/744000133659271-associate-art-director-characters-concepts-lighting-vfx-world-directeur-rice-artistique-associe-e-personnages-monde-concepts-eclairage-et-vfx- |
+| Gameloft Montréal (Lead 3D Character Artist, Disney Dreamlight Valley) | Canadá (Montréal) | à mão, motivo na nota do painel | https://www.artstation.com/jobs/Rdml |
+| Offworld Industries (Squad) | Canadá (New Westminster, BC, presencial) | reCAPTCHA | https://owi.bamboohr.com/careers/199 |
+| Streamline Studios | Remoto (global) | reCAPTCHA | https://streamlinestudios.bamboohr.com/careers/84 |
+| Electronic Arts Vancouver (EA Sports FC) | Canadá (Vancouver) | à mão, motivo na nota do painel | https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788 |
+| Mainframe Studios | Canadá | à mão, motivo na nota do painel | https://www.mainframe.ca/careers/ |
+| Stairway Games | Remoto | à mão, motivo na nota do painel | https://stairwaygames.com/careers |
+| VOID Interactive | Irlanda/Remoto (UE) | à mão, motivo na nota do painel | https://voidinteractive.net/careers/ |
+| Fluffy Dog Studio | Remoto (estúdio 100% remoto; base Vancouver) | à mão, motivo na nota do painel | https://www.artstation.com/jobs/c/fluffy-dog-studio |
+| Wicked Fox Games | EUA (remoto) | à mão, motivo na nota do painel | https://wickedfoxgames.com/contact/ |
+| Pingle Studio | Ucrânia | à mão, motivo na nota do painel | https://pinglestudio.com/join-the-team/3d-hard-surface-artist/ |
+| Outpost VFX | Reino Unido | à mão, motivo na nota do painel | https://careers.outpost-vfx.com/en/careers/ |
+| Deep Worlds (Job application, opção Other) | Suíça (Genebra ou remoto) | reCAPTCHA | https://tally.so/r/RGRv7d |
