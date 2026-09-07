@@ -62,6 +62,25 @@ disposto a presencial e a realocar, 10+ anos, ArtStation.
 
 ---
 
+## 1d. Respawn Entertainment, Vancouver: PISTA FORTE, mas confira antes
+
+A casa de **Apex Legends**, do grupo EA, tem escritório de verdade em Vancouver, e a leitura da
+página de carreiras deles mostrou **cinco vagas de arte abertas**, uma delas **Principal Materials
+Artist**, que é encaixe direto em texturização.
+
+**Por que isto está como pista e não como link pronto, e a ressalva é honesta:** não consegui
+confirmar a vaga na fonte oficial. A busca do `jobs.ea.com` **ignora a palavra-chave** e devolve
+as mesmas vinte vagas para "materials artist", "character artist" e "environment artist" — é o
+mesmo defeito que o portal da Disney já tinha mostrado. E a campanha tem histórico de erro interno
+do Avature na EA Vancouver, que devolveu *Internal server error* em cinco tentativas.
+
+**O que fazer:** abra `respawn.com` na seção de carreiras pelo seu navegador e procure a Principal
+Materials Artist de Vancouver. Se ela existir, vale muito: é AAA, é Canadá anglófono e é a sua
+disciplina. Se cair no portal da EA e ele der erro, entre na sua conta e veja em *Job Applications*
+se aparece "Finish your application", que foi o que resolveu um caso igual antes.
+
+---
+
 ## 2. Rainbow SpA, Roma e Milão: três portas abertas de uma vez
 
 https://www.rbw-cgi.it/careers/
