@@ -325,3 +325,69 @@ listados inteiros, e **nenhuma vaga nova da disciplina**. As duas que existem, C
 da Fatshark e Senior Character Artist Unity3D da beffio, **já têm candidatura**. Embark tem 18
 vagas e nenhuma de personagem; Untold tem 24 e são todas VFX e produção. O método é bom, o
 estoque é que está seco.
+
+## Uma entrada de painel por estúdio ESCONDE o quadro. Medido em escala em 07/09.
+
+A campanha já sabia disso pela Sony Imageworks, que aparecia como uma entrada de Montréal
+enquanto o quadro tinha 54 vagas. Em 07/09 a fatia RESTO transformou isso em método e mediu o
+tamanho do buraco: peguei **todos os tokens de ATS que já apareciam em alguma URL do painel ou
+do `processados.csv`** (31 Greenhouse, 27 Teamtailor, 23 BambooHR, 17 Lever, 13 Workable, 10
+SmartRecruiters, 6 Ashby, 4 Breezy, 1 Recruitee) e baixei **o quadro inteiro de cada um**.
+
+Deu **2.122 vagas**, 139 na disciplina dele, e **46 que a garra confirmou nunca terem sido
+tocadas**. Entre elas apareceram coisas que nenhuma entrada do painel mostrava: a **Embark**
+estava registrada só como cadastro de Connect e tinha uma Environment Artist aberta (virou
+candidatura enviada), a **Skydance de Madri** tem uma *família inteira* de surfacing e o painel
+só listava três vagas soltas, a **Kabam** tinha uma General Application de Vancouver além da
+Lead Character Artist já recusada, e a **Barnstorm** tinha uma Environment Generalist de
+Vancouver além da Creature Lead.
+
+**A regra:** quando o painel registrar um estúdio por qualquer porta (vaga nomeada, banco de
+talentos, Connect, e-mail), **liste o quadro inteiro do ATS dele antes de dar a casa por
+trabalhada**. Custa um pedido e devolve o quadro todo.
+
+## O quadro do ATS mora MUITAS VEZES em domínio próprio, e varredura por slug não o acha
+
+Medido em 07/09, e foi o que rendeu a candidatura da **Envar Studio**, um estúdio de Estocolmo
+que **não existia no painel**. O `jobs.json` do Teamtailor dele não está em
+`envar.teamtailor.com`: está em **`careers.envarstudio.com/jobs.json`**.
+
+Receita: pegue os domínios de estúdio já colhidos nos CSVs, gere `careers.<domínio>`,
+`career.<domínio>` e `jobs.<domínio>`, e peça `/jobs.json` em cada um. Sobre 2.592 domínios
+(7.716 hospedeiros) apareceram **29 quadros** que a varredura por slug não encontra — Paradox,
+Sharkmob, Starbreeze, Arrowhead, Coffee Stain, Raw Fury e a própria Envar entre eles.
+**Adivinhar slug acha a porta que o ATS tem; varrer subdomínio acha a porta que só o DNS do
+estúdio conhece.**
+
+## SmartRecruiters: o ANÚNCIO renderiza, quem está bloqueado é o FORMULÁRIO
+
+A nota antiga da campanha — *"a página renderiza completamente vazia, zero botões e zero texto"* —
+está certa só para metade. Medido em 07/09 na GIANTS e na Gameloft:
+
+- `jobs.smartrecruiters.com/<empresa>/<id>` (o **anúncio**) **renderiza normal**, texto inteiro,
+  sem DataDome no HTML.
+- `/oneclick-ui/company/<empresa>/publication/<uuid>` (o **formulário**, atrás do botão
+  *I'm interested*) volta com **texto de tamanho zero e `datadome` no HTML**. O botão aponta para
+  o host `www.smartr.me`, que devolve *"Oops, you've gone too far"*.
+
+**Consequência prática, e ela é boa:** dá para **ler e qualificar** qualquer vaga do
+SmartRecruiters por automação — faixa salarial, regime de trabalho e veto de residência — e só o
+**envio** precisa do navegador do Vini. Foi assim que o veto da People Can Fly (*"open to
+candidates only from the game industry who are based in Europe"*) foi lido hoje sem gastar
+navegador nenhum.
+
+## Workable: `error code: 1015` é a plataforma inteira contra o NOSSO IP, não o estúdio
+
+Medido em 07/09 em **dez quadros diferentes no mesmo minuto** (nexusstudios, kingsisle, bardel,
+pxo, team-17-digital, rebellion, pikpok, lighthousegames, one-of-us, streamlinestudios), por
+curl **e** por navegador de tela, um por vez: os dez devolvem a mesma página do Cloudflare com
+`error code: 1015`. **Isso é limite de taxa, não vaga morta.** `1015` num quadro do Workable
+**não autoriza** escrever SEM VAGA nem PAREDE na nota — escreve-se *pendente de reconferência*.
+
+## O Gmail impediu MAIS CINCO repetidas em 07/09, e a garra tinha liberado as cinco
+
+A regra "o `OK` da garra não é prova suficiente para enviar" ganhou cinco casos novos numa
+rodada só. A garra respondeu **livre** para Bulkhead, Star Stable, MOOD Visuals, Creepy Jar e
+Vine FX, e o Gmail mostrou candidatura já confirmada nas cinco — inclusive duas enviadas nas
+horas anteriores, pela própria madrugada. **Buscar o domínio do estúdio no Gmail antes de enviar
+não é zelo, é a etapa que pega o trabalho que ainda não foi commitado.**
