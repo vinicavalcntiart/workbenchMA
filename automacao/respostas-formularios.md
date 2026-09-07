@@ -3323,3 +3323,46 @@ Production, Other — **nenhuma opção de Character/Modeling/Texturing**), link
 Tem honeypot: `input[name="website"]` escondido (tabindex -1, autocomplete off) — deixar vazio.
 **Não enviado nesta rodada** porque as disciplinas oferecidas não cobrem modelagem/textura/personagem
 (mais próximo seria "Other"); fica pronto para quem quiser usar como porta de entrada.
+
+### Reality Games, 3D Generalist (Cracóvia, Polônia) — VAI À MÃO POR CAPTCHA do Recruitee (prova de trabalho), dossiê completo em 07/09
+
+**Link:** https://careers.reality.co/o/3d-generalist (formulário: `https://careers.reality.co/o/3d-generalist/c/new`)
+
+**Por que vale:** vaga efetiva, presencial em Cracóvia, modelagem/textura/animação de personagens e
+ambientes para o jogo mobile deles, e a página cita por escrito pacote de **relocation assistance**.
+Casa média, escritório numa estação de trem histórica restaurada no centro da cidade.
+
+**Por que fica à mão, medido duas vezes em 07/09:** depois do clique em Send aparece
+`captcha-base.recruiteecdn.com` (widget tipo `hsw`, prova de trabalho) com um botão "Skip" sobreposto;
+em duas tentativas (esperando 15s e depois 120s) a tela **não mudou**, os campos continuaram
+preenchidos e nenhum email de confirmação chegou. Mesma família do Recruitee que bloqueia a Framestore
+— o captcha aparece só depois do clique, nunca antes.
+
+**Duas armadilhas do próprio formulário, para quem for preencher:** o campo "Why do you want to
+join" é um input de **uma linha, limite 255 caracteres** — resposta longa é cortada sem aviso. As
+perguntas de escolha (`contract expectations`, `task agreement`) são radios em `.content`, onde o
+`value` É o próprio texto do rótulo, e os dois consentimentos são `.flag` **sem `id` e sem `label`**,
+então um preenchedor genérico de Recruitee não marca nenhum dos dois — tem que contar a posição do
+elemento.
+
+**Campos, na ordem, lidos da API pública (`careers.reality.co/api/offers/3d-generalist`):**
+
+| Campo | Tipo | Obrigatório | Resposta recomendada |
+|---|---|---|---|
+| Nome / email / telefone | texto | sim | dados básicos do topo deste arquivo |
+| CV | anexo | sim | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | anexo | **desativado no formulário** (`options_cover_letter: off`) | não existe campo |
+| What is your preferred work location? | múltipla escolha, obrigatória | sim | Kraków (única opção listada); usar a frase de realocação no texto livre seguinte |
+| Please briefly introduce yourself in a video introduction | vídeo, até 120s | **não obrigatório** | deixar em branco — só o Vini pode gravar |
+| Link to LinkedIn/Website/Portfolio/... | texto (link) | sim | `https://www.artstation.com/viniciuscavalcanti` |
+| Why do you want to join Reality Games? | texto, **máx. 255 caracteres** | sim | "Senior 3D character/environment artist, 10+ years, sculpt-to-engine at E-Line Media. Reality Games' mobile IP work and the Kraków studio + relocation support are exactly the move I'm looking for. I WANT TO RELOCATE." (ajustar para caber em 255) |
+| What could be your first available working day at Reality? | texto | sim | "A standard transition period with my current studio; glad to align dates in the process." |
+| What are your contract expectations? | escolha única: Mandate contract (UZ) / B2B | sim | **decisão do Vini** — nenhuma das duas é contrato CLT de emprego direto, o que é atípico para quem pede patrocínio; vale perguntar ao recrutador se há via de emprego direto antes de escolher |
+| What are your salary expectations? (NET in PLN per month) | texto | sim | estimativa a partir da política de 04/09 (estúdio médio, Europa, sem faixa publicada: EUR 45.000/ano bruto) ≈ PLN 16.000 bruto/mês; **valor NET depende dos descontos do contrato escolhido (UZ vs B2B), então registrar como "Open to aligning with your band for the role; as a reference, around PLN 16,000 gross per month, happy to adjust once we know net terms" e o Vini ajusta o NET na hora** |
+| In the next recruitment stage we might give you a short task. Please express your will | escolha única: Agree / Disagree | sim | **Agree** |
+| Consentimento de dados (recrutamento atual) | legal, checkbox sem label | sim | marcar |
+| Consentimento de dados (recrutamentos futuros) | legal, checkbox sem label | opcional | marcar (mantém o perfil ativo) |
+
+**Autorização de trabalho:** o formulário não pergunta diretamente; a frase de realocação e o caso de
+visto (láurea com honras, especialização, mestrado em andamento, IELTS, publicações) cabem na resposta
+de "Why do you want to join".
