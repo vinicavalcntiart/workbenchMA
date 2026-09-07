@@ -1,4 +1,4 @@
-# Só o Vini pode fazer — estado das 12h00 UTC de 07/09
+# Só o Vini pode fazer — estado das 14h00 UTC de 07/09
 
 Ordenado pelo que rende mais por minuto do seu tempo. Nada aqui é "tente de novo": em todos os
 casos alguém já foi até a parede e voltou com o mapa.
@@ -207,20 +207,40 @@ Receita campo a campo e as armadilhas em `automacao/respostas-formularios.md`; o
 
 ---
 
-## 5. Quatro vagas novas mapeadas hoje, todas paradas só no captcha
+## 5. A fila à mão, em ordem do que rende mais por minuto seu
 
-Preenchidas e conferidas campo a campo, com dossiê em `automacao/respostas-formularios.md`.
+Todas preenchidas e conferidas campo a campo, com dossiê em `automacao/respostas-formularios.md`.
+Para você é copiar e colar; a parede em todas é captcha de desafio, que não se burla.
 
-- **Offworld Industries, 3D Generalist** — New Westminster, **Colúmbia Britânica**, híbrido, com
+**1. Lighthouse Games, Lead Character Artist** (Tencent, Royal Leamington Spa, Reino Unido).
+**Esta é a mais barata da fila inteira: o formulário pede só NOME e EMAIL.** Estava parada há
+dias sem ninguém perceber que custava trinta segundos. Parede: Turnstile.
+
+**2. Skydance Animation, Senior Grooming TD** (Madri, **híbrido**, não presencial como estava
+escrito antes). **Subiu de baixa para alta hoje** e é grupo Paramount, ou seja, regra 14. Não é
+groom puro: o anúncio pede *"grooms & surfacing"* e cita **Mari e Substance** pelo nome, então é
+o seu diferencial somado a texturização. Busca literal no anúncio inteiro: `sponsor` zero,
+`eligib` zero, `work permit` zero, `must be based` zero. **Não há veto de residência**, ao
+contrário da NBCU de Montréal. Espanhol é *desirable*, não exigido. Parede: hCaptcha do Lever.
+
+**3. One Of Us, Modeller** (Paris, híbrido). A casa aparecia no painel como um quadro morto em
+`1015`; na verdade tem **três vagas da sua disciplina** (Modeller, Texture, Look Dev), as três
+mapeadas. **Mande só a de Modeller**: três candidaturas no mesmo dia na mesma casa queima.
+Parede: Turnstile.
+
+**4. Side, Senior Texture Artist** (Montréal e Toronto). Requisição diferente da Senior 3D
+Artist que já foi enviada em 30/08. Parede: Turnstile.
+
+**5. Offworld Industries, 3D Generalist** — New Westminster, **Colúmbia Britânica**, híbrido, com
   **faixa publicada de CAD 80.000 a 95.000**. Parede: reCAPTCHA do BambooHR. É a mais forte das
   quatro: Canadá anglófono, faixa aberta, disciplina compatível.
-- **Image Engine, Texture & Look Dev Artist (Mid)** — Vancouver, contrato curto. reCAPTCHA do
+**6. Image Engine, Texture & Look Dev Artist (Mid)** — Vancouver, contrato curto. reCAPTCHA do
   BambooHR. Atenção: a **General Application** deles exige morar na Colúmbia Britânica, mas
   **esta requisição nomeada não tem esse veto**.
-- **Skydance Animation, Environment Surfacing LEAD** — Madri. hCaptcha do Lever. O quadro deles
+**7. Skydance Animation, Environment Surfacing LEAD** — Madri. hCaptcha do Lever. O quadro deles
   tem sete requisições de surfacing, e **só esta é de nível seu**: as outras cinco são Trainee e
   Junior, e mandar nelas queima a porta.
-- **Stirling Animation, Environment Surfacing Artist** — Escócia. reCAPTCHA do BambooHR.
+**8. Stirling Animation, Environment Surfacing Artist** — Escócia. reCAPTCHA do BambooHR.
 
 ---
 

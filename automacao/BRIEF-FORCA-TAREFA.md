@@ -793,3 +793,26 @@ antes de mandar push, baixe o anúncio inteiro pela API e faça a busca literal 
 `authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `days a week`. Custa um curl.
 Recomendação forte com base em nota de terceiro, sem ter lido o texto integral, é como se
 constrói uma expectativa que o próprio anúncio já desmentia.
+
+## Workable: parede medida até o fim, e são DUAS paredes diferentes
+
+Fechado em 07/09, para ninguém gastar rodada nisso de novo.
+
+- `apply.workable.com` devolve **429 / `error code: 1015`**: limite de taxa do Cloudflare contra
+  o **nosso IP**. Igual com curl pelado e com cabeçalho completo de Chrome.
+- `jobs.workable.com` **não** está bloqueado e dá mais do que se pensava: além do índice de
+  busca entre todas as contas, o `GET /api/v1/jobs/<uuid>/form?includeAccountMetadata=true`
+  serve a **estrutura completa do formulário** — cada campo com id, rótulo, tipo,
+  obrigatoriedade e a lista de opções com o id de cada uma, mais o slug da conta no
+  `gdprPolicyUrl`. **Nenhum dossiê de Workable precisa mais ser chutado.**
+- Mas ele **não envia**. O `POST /api/v1/jobs/<uuid>/apply` existe e o corpo é
+  `{candidate:[{name,value}],job:{position:<n>}}`, descoberto por sondas de carga incompleta que
+  só geram erro de validação. Com corpo bem formado o servidor devolve **412 Precondition
+  Failed** com **`x-ts: 0`**: falta o token do **Turnstile**.
+- **O navegador de tela não passa onde o curl não passa**, e isso foi testado num alvo (Side):
+  o formulário monta, o CV sobe para o S3 do Workable, os campos gravam, o Submit habilita, e no
+  clique sai um POST para `challenges.cloudflare.com` e o POST de candidatura **nunca sai**.
+
+Ou seja: o `1015` é do nosso IP e o Turnstile é da plataforma. **Nenhuma das duas é do estúdio**,
+e nenhuma se contorna. Vaga de Workable vira dossiê à mão, sempre, e o dossiê agora sai completo
+e correto de graça pela API de formulário.
