@@ -114,10 +114,23 @@ Avenue du Parc, presencial, e está contratando uma família inteira de lideran�
 | **Lead Material Artist** (Character/Wardrobe) | https://jobs.smartrecruiters.com/NBCUniversal3/744000137526669 |
 | **Associate Art Director**, trilha Characters | https://jobs.smartrecruiters.com/NBCUniversal3/744000133659271 |
 
-**Por que esta é a mais importante da lista:** o anúncio de Lead Character Artist nomeia por
-escrito *"XGen, Houdini Groom, Metahuman, cloth simulation"*. É raríssimo um anúncio citar a
-ferramenta, e grooming em Houdini é exatamente o seu diferencial de apoio. Some a isso Canadá,
-cargo de liderança e casa grande, que é o que sustenta patrocínio de visto.
+**LEIA ESTA RESSALVA ANTES DE GASTAR SEU TEMPO, porque eu te mandei um push às 13h dizendo que
+esta era a primeira coisa do dia e depois li o anúncio inteiro.** As três dizem, na seção
+*Eligibility Requirements*: **"Must be legally authorized to work in Canada"** e *"Must be
+willing to work in our Montreal office a minimum of 4 days a week"*. Confirmei na API oficial da
+NBCUniversal, no texto da própria Lead Character Artist. Você **não** tem autorização no Canadá
+e precisa de patrocínio, então essa linha é o tipo de veto que derruba antes de alguém abrir o
+seu ArtStation. O anúncio ainda pede *"portfolio demonstrating realism"*, que também não é o
+centro do seu material.
+
+**Continua valendo enviar?** Sim, mas como aposta barata e não como a estrela da manhã. Custa
+poucos minutos porque a conta já existe, a NBCUniversal é casa grande que patrocina de verdade
+quando quer a pessoa, e cargo de liderança em disciplina escassa é justamente onde essa linha
+às vezes cede. Mande com a expectativa certa, não como a melhor chance do dia.
+
+**O que continua sendo verdade e é o motivo de ela estar aqui:** o anúncio de Lead Character
+Artist nomeia por escrito *"XGen, Houdini Groom, Metahuman, cloth simulation"*. É raríssimo um
+anúncio citar a ferramenta, e grooming em Houdini é exatamente o seu diferencial de apoio.
 
 **A parede é DataDome no SmartRecruiters**, medido hoje: o anúncio abre limpo, e o formulário
 `/oneclick-ui/` devolve 403 com interstitial. Não se burla.

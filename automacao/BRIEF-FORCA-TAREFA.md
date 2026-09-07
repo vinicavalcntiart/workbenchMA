@@ -717,3 +717,23 @@ disparando, e isso esta provado na caixa (ativacao confirmada por email em 05/09
 `character artist` semanal e `modeler` diario, e listas entregues em 05/09 e 06/09 por
 `careers@careeralerts.wbd.com`). Alerta provado e alerta suposto sao coisas diferentes; escreva
 qual dos dois voce tem.
+
+## Leia a seção Eligibility Requirements ANTES de recomendar a vaga, não depois
+
+Erro do coordenador em 07/09, e o mais caro do dia porque saiu como PushNotification para o
+Vini. Recomendei as três vagas da NBCUniversal em Montréal como a primeira coisa da manhã dele,
+com base no que a nota do painel dizia e no fato de o anúncio citar *XGen, Houdini Groom,
+Metahuman, cloth simulation* pelo nome. Só depois um agente leu o anúncio inteiro e achou, em
+*Eligibility Requirements*: **"Must be legally authorized to work in Canada"** e *"Must be
+willing to work in our Montreal office a minimum of 4 days a week"*. Confirmei na API oficial,
+no texto da própria Lead Character Artist, a que eu tinha empurrado.
+
+É a **classe de descoberta mais cara da campanha**, a do veto de residência, e ela mora quase
+sempre num bloco no fim do anúncio que a listagem do ATS não mostra: *must be based in*,
+*required to be based*, *eligible to work in*, *no sponsorship*, *Eligibility Requirements*.
+
+**Regra:** antes de marcar prioridade alta, antes de escrever no arquivo do Vini e sobretudo
+antes de mandar push, baixe o anúncio inteiro pela API e faça a busca literal por
+`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `days a week`. Custa um curl.
+Recomendação forte com base em nota de terceiro, sem ter lido o texto integral, é como se
+constrói uma expectativa que o próprio anúncio já desmentia.
