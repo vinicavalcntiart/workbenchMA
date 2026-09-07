@@ -72,7 +72,7 @@
 # FEITO Copernicus Studios | AINDA NAO AVALIAVEL: devolve 202 com redirecionamento para /.well-known/sgcaptcha/, que e o anti-robo da SiteGround contra o nosso IP. Nao e casa morta
 # FEITO Cornfox & Brothers
 # FEITO Cosmic Dino Studio
-# FEITO Crater Studio | RECONFERIDO 07/09: a RAIZ devolve 403 mas /jobs devolve 200 e convida por escrito a 'apply via job application form - register your interest', com secao Artists. Formulario monta em JavaScript e falta abrir com navegador
+# FEITO Crater Studio | RECONFERIDO 07/09: a RAIZ devolve 403 mas /jobs devolve 200 e convida por escrito a 'apply via job application form - register your interest', com secao Artists. Formulario monta em JavaScript e falta abrir com navegador || FECHADO com navegador em 07/09: a pagina monta inteira, sem captcha, e devolve ZERO campos; 'Artists' e 'Administration' apontam de volta para /jobs e /artists da 404. O convite escrito existe e o formulario prometido NAO existe. Porta real: effects@craterstudio.com
 # FEITO Creative Conspiracy
 # FEITO Crema
 # FEITO Crytivo

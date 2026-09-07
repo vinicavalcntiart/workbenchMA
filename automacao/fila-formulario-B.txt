@@ -47,7 +47,7 @@
 # FEITO Pipeline Studios | sem porta de formulario: pagina de carreiras lida () so publica email (development@pipelinestudios.com;distribution@pipelinestudios.com), vira fila de carta
 # FEITO Piranha Bar | sem porta de formulario: pagina de carreiras lida (https://piranhabar.ie/careers) so publica email (info@piranhabar.ie), vira fila de carta
 # FEITO Pixel Zoo | a mao, reCAPTCHA v3 reprovou o envio; vaga Environment Artist viva, dossie no painel
-# FEITO Pixelsplit | DOMINIO ACHADO em 07/09: nao e pixelsplit.de, e pixelsplit.GAMES, que responde 200 com 23 KB. A porta de candidatura e uma pagina do Notion (pixelsplit.notion.site/Join-Pixelsplit), que exige JavaScript e precisa de navegador
+# FEITO Pixelsplit | DOMINIO ACHADO em 07/09: nao e pixelsplit.de, e pixelsplit.GAMES, que responde 200 com 23 KB. A porta de candidatura e uma pagina do Notion (pixelsplit.notion.site/Join-Pixelsplit), que exige JavaScript e precisa de navegador || FECHADO em 07/09: a porta e uma pagina do Notion e notion.site NAO CARREGA por esta rede (timeout de 120s no proprio page.goto do navegador de tela). Mesma causa da Red Manta / Twin Atlas. Vai para o navegador do Vini
 # FEITO Playable Worlds | sem porta utilizavel por automacao: /careers embute widget do JazzHR e a alternativa declarada e jobs@playableworlds.com
 # FEITO Playfight | sem porta: /careers devolve 404 no site do estudio
 # FEITO Playful Studios | sem porta de formulario: pagina de carreiras lida (https://playfulstudios.com/careers) so publica email (hiring@playfulstudios.com), vira fila de carta
