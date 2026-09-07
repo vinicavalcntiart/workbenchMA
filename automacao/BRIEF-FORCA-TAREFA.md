@@ -451,3 +451,26 @@ contra a linha de comando **completa**, e a linha de comando do shell que roda `
 mensagem nenhuma além de um código de saída 1. Escreva o padrão quebrado, `pkill -f 'chrom[e]'`, ou
 confira primeiro com `ps aux` — que nesta rodada mostrou que **não havia navegador nenhum vivo**, e
 que o `pgrep -f chrome` estava casando com a linha do próprio gerenciador da sessão.
+
+## Varredura de subdomínio pelo NOSSO proxy custa 1 host por segundo. Meça antes de lançar 9.657.
+
+Medido em 07/09 pela fatia COLHEITA, e é um número que muda o planejamento de rodada. A receita do
+`careers.<domínio>/jobs.json` é boa e já rendeu a Envar, mas **pelo proxy desta sessão ela é lenta
+de um jeito que a conta ingênua não prevê**: host que não existe não falha rápido, porque quem
+resolve o nome é o proxy, e o `curl` fica no `CONNECT` até o timeout inteiro. Com 3.219 domínios ×
+3 prefixos = **9.657 hosts**, oito conexões em paralelo e timeout de 8s, o ritmo medido foi de
+**cerca de um host por segundo**, ou seja **mais de duas horas e meia** para a lista toda — o
+tamanho de uma rodada inteira gasto numa varredura só.
+
+**A parte alfabética que deu tempo de rodar (a até g, 27 quadros achados, 11 com vaga) devolveu
+ZERO vaga nova da disciplina.** Os quadros em domínio próprio que apareceram — `careers.beffio.com`
+(21 vagas), `careers.embark-studios.com` (18), `careers.bulkhead.com` (6), `careers.envarstudio.com`
+(3), `careers.foolstheory.com` (4), `jobs.coffeestain.com`, `jobs.arrowheadgamestudios.com`,
+`careers.castirongames.com` — **já estavam todos trabalhados**, e a Fool's Theory, único achado que
+parecia novo, tinha recebido a Open Application dela às 00h15 do mesmo dia. Foi a **décima**
+repetida que o Gmail impediu nesta rodada.
+
+**Como fazer da próxima vez:** ordene a lista de domínios por prioridade (Canadá e Europa primeiro,
+casa sem ATS conhecido antes de casa com ATS conhecido), corte o timeout para 4s, e **rode em
+fatia**, medindo o ritmo nos primeiros cem hosts antes de decidir se vale a lista inteira. E nunca
+com navegador aberto ao mesmo tempo, que é a regra que já custou o contêiner das 06h44.
