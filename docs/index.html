@@ -1085,6 +1085,7 @@ const STUDIOS = [
  ["Zoic Studios (Steve Melchiorre, Senior Executive Producer)","EUA (Culver City) e Canadá (Vancouver)","smelchiorre@zoicstudios.com",27,"rascunho"],
  ["Perun Creative","Republica Checa (Ostrava/remoto)","jobs@peruncreative.com",28,"rascunho"],
 ["No Ghost","Reino Unido (Londres)","jobs@noghost.co.uk",28,"rascunho"],
+["PinPin Team","Franca (Lyon)","contact@pinpinteam.com",28,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -1551,6 +1552,11 @@ const PORTAIS = [
 ["NanoTribe","Alemanha","https://www.nanotribe.com/","portal","DOMINIO EXPIRADO. Confirmado em 07/09 na fatia M-R da Europa: o dominio devolve pagina de venda do GoDaddy (forsale.godaddy.com). Estudio nao tem presenca online ativa",false,"baixa"],
 ["Red Beard Games","Reino Unido","https://www.redbeardgames.com/","portal","DOMINIO EXPIRADO E A VENDA. Confirmado em 07/09 na fatia M-R da Europa: redbeardgames.com redireciona para pagina de venda da HugeDomains por USD 15.095. Estudio nao existe mais nesse dominio",false,"baixa"],
 ["Point Flottant / Mattrunks","Franca","https://pointflottant.com/","portal","ESTUDIO FECHADO PERMANENTEMENTE. Confirmado em 07/09 na fatia M-R da Europa: mattrunks.studio redireciona para pointflottant.com, cuja pagina inteira diz After fifteen years of bringing ideas and products to life, Point Flottant has permanently closed. Duas entradas do diretorio (Mattrunks e Point Flottant) sao o mesmo estudio fechado",false,"baixa"],
+["Padrao Cloudflare Robot Challenge nesta fatia (NRG Studios, Orchard Post, Pictor, Playwing)","Reino Unido e Irlanda","https://nrg-studios.com/","portal","QUATRO PAREDES da mesma familia medidas em 07/09 na fatia M-R da Europa, e nenhuma e vaga morta: nrg-digital.co.uk (redireciona para nrg-studios.com), orchardpost.com, pictor.ie e playwing.com/careers respondem TODOS com o mesmo Cloudflare Robot Challenge Screen (Checking the site connection security), status 202, zero form no DOM, tanto por navegador de tela quanto por curl. Mesma assinatura do Rumble VFX e do Payload Studios ja registrados. Reconferir do navegador do Vini ou de outra rede antes de descartar qualquer um destes quatro",false,"baixa"],
+["Dominios expirados nesta fatia (One6th, Playsnak, Playtino)","Reino Unido e outros","https://www.one6th.co/","portal","TRES DOMINIOS PARADOS no GoDaddy, confirmados em 07/09 na fatia M-R da Europa: one6th.co, playsnak.com e playtino.com devolvem todos a mesma pagina de dominio estacionado gratuito da GoDaddy, sem nenhum conteudo do estudio original. Diretorio desatualizado nos tres",false,"baixa"],
+["NMBRS (Available Roles)","Suecia","https://www.nmbrs.studio/join-us","portal","DESCARTADO em 07/09 na fatia M-R da Europa: a unica vaga aberta e Senior Animator, fora da disciplina de modelagem/personagem 3D dele. Contato geral em contact@nmbrs.studio se quiser reconsiderar",false,"baixa"],
+["noOne (Careers)","Franca","https://www.noone-studio.com/carrières","portal","SEM VAGA, confirmado em 07/09 na fatia M-R da Europa: a propria pagina diz All positions are currently filled, so com candidatura espontanea generica",false,"baixa"],
+["Onyx Studio e Parallel Studio, nao renderizaram","Servia e Franca","https://www.onyx.studio/careers","portal","NAO FOI POSSIVEL LER em 07/09 na fatia M-R da Europa: as duas paginas devolvem HTTP 200 mas corpo de texto VAZIO mesmo no navegador de tela com espera de varios segundos (nao e o padrao Cloudflare, e outro tipo de bloqueio ou renderizacao que a automacao nao decifrou). Nao classificar como sem vaga: precisa reconferir do navegador do Vini",false,"baixa"],
 ].map(([name,country,url,origem,note,done,prio])=>({name,country,url,origem,note,done,prio}));
 
 // Lotes e total de emails saem dos próprios dados, e não de uma lista escrita à mão:
