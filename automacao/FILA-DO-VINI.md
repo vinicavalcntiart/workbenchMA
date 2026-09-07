@@ -1,0 +1,1351 @@
+# FILA DO VINI — 45 candidaturas para mandar com as suas mãos (07/09)
+
+**45 vagas na fila, tempo total estimado 2h34 (154 minutos), todas com formulário e nenhuma por email.**
+Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
+**As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Ubisoft Montréal (Senior Character, Rainbow Six Siege) · Behaviour (Senior Character, projeto não anunciado).
+
+Vá de cima para baixo. Cada entrada é autossuficiente: link, parede, campos e textos prontos.
+As dez primeiras foram reconferidas no ar hoje, uma a uma, na fonte oficial de cada ATS.
+
+---
+
+## COMO USAR ESTE ARQUIVO
+
+Os quatro blocos abaixo se repetiriam em toda entrada, então ficam aqui em cima uma vez só.
+Quando uma entrada disser "TEXTO A", volte aqui, copie e cole.
+
+### DADOS FIXOS
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Telefone | **do documento privado do Drive, CAMPANHA - dados pessoais dos formulários**. Com seletor de país ao lado: escolha `BR (+55) Brazil` primeiro e digite **só os dígitos**, sem +55, sem espaço e sem hífen |
+| Endereço, CEP, província | **do documento privado do Drive, CAMPANHA - dados pessoais dos formulários** |
+| Cidade / Estado / País | `Olinda` / `Pernambuco` / `Brazil` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfólio | `https://www.artstation.com/viniciuscavalcanti` |
+| Outro site / escola | `https://vinicavalcanti.com` |
+| Empresa atual | `E-Line Media` |
+| Anexos | `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf` |
+
+### RESPOSTAS PADRÃO DE TRIAGEM
+
+| Pergunta | Resposta (é a verdade, nunca mude) |
+|---|---|
+| Precisa de patrocínio de visto, agora ou no futuro? | `Yes` |
+| Autorizado a trabalhar nos EUA / Canadá / Austrália / Nova Zelândia? | `No` |
+| É cidadão da UE / tem permissão de trabalho na UE? | `No — I would need sponsorship` |
+| Tipo de visto | `Skilled-worker sponsorship. I already work remotely for a US studio as an international contractor and can keep working remotely while the process runs.` |
+| Disposto a realocar / presencial / híbrido? | `Yes` |
+| Anos de experiência | `10` (em escala fechada, a faixa mais alta: `More than 10 years`, `> 7`, `More than 5 years`) |
+| Senioridade | `Senior` (quando o menu não tiver "Senior", use `Sr`) |
+| Liderou equipe? Anos de liderança? | `Yes` — cinco anos de Senior na E-Line revisando trabalho de outros e definindo padrão de asset, mais professor e fundador da própria escola e mestrando |
+| Experiência em games? | `Yes` |
+| Salário atual | `Confidential under the NDA of my current contract; happy to discuss ranges during the process.` |
+| Aviso prévio / disponibilidade | `A standard transition period with my current studio; glad to align dates in the process.` — ou `Within 30 days of an offer` |
+| Pesquisa de diversidade | `Prefer not to say` / `I choose not to disclose` |
+| Como soube da vaga | a página de carreiras do próprio estúdio |
+
+**Pretensão salarial, regra de 04/09:** se o anúncio publica faixa, peça **a base dela**. Sem faixa:
+casa grande — EUA `USD 100,000`, Canadá `CAD 95,000`, Reino Unido `GBP 50,000`, Europa `EUR 55,000`;
+casa pequena ou média — EUA `USD 85,000`, Canadá `CAD 80,000`, Reino Unido `GBP 42,000`, Europa `EUR 45,000`;
+Oceania `AUD 110,000` (grande) e `AUD 95,000` (média). Sempre com a frase
+`Open to aligning with your band for the role.` Nunca abaixo do piso legal da ocupação: abaixo dele o patrocínio fica inviável.
+
+### TEXTO A — apresentação completa, com realocação (campo livre grande)
+
+```
+I WANT TO RELOCATE and I am fully open to moving for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development, LODs and engine integration, plus character grooming in Houdini when hair or fur is part of the design. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini, Marmoset, Unreal and Unity.
+
+I am credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted the characters, and for almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine, working fully remote from another country and time zone as an international contractor. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+As a Senior I review other artists' work and set the asset standard; I also teach as the founder of my own character art school and I am a master's candidate, so mentoring and holding a quality bar is daily work for me.
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case, and I can start remotely while the permit is processed.
+
+Open to aligning with your band for the role.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+```
+
+### TEXTO B — versão curta (campo de duas ou três linhas)
+
+```
+Senior 3D Character Artist, 10+ years in stylized characters: modeling, sculpting, texturing and look development, plus hair and fur grooming in Houdini. Credited on The Wingfeather Saga at Angel Studios and, for almost five years, on Endstar at E-Line Media. I WANT TO RELOCATE and I am fully open to moving for the role; I am not an EU citizen and would need visa sponsorship. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+### TEXTO C — ressalva de realismo (só onde o anúncio pedir realista/fotorreal)
+
+```
+My portfolio is mostly stylized, but every sculpt starts from realistic anatomy and I am comfortable delivering realistic organic models in ZBrush with clean game topology, UVs and PBR texturing. I work daily with PBR workflows, UVs, color management and displacement, in Substance Painter and Designer and in Houdini. I would rather say that plainly than overstate it.
+```
+
+### TEXTO D — caso de visto em uma frase
+
+```
+I am not an EU citizen and I have no work authorization in Canada, the US, Australia or New Zealand: I would need sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case, and I can start remotely while the permit is processed, which is how I already work today.
+```
+
+---
+
+# BANDA 1 — REALOCAÇÃO PARA CANADÁ E EUROPA (36 vagas)
+
+## 1. Behaviour Interactive — Senior 3D Character Artist, Dead by Daylight — Montréal, Canadá
+
+**Link direto:** https://jobs.lever.co/bhvr/18024240-e637-409f-a647-b422541e2dc7/apply
+**Por que vale:** disciplina literal e senioridade que bate — Senior Character Artist, permanente e híbrida em Montréal, num jogo que vive de assassinos e sobreviventes, ou seja, produção contínua de personagem. **Reconferida no ar hoje na API oficial do Lever.**
+**A parede:** hCaptcha com desafio de imagem do Lever, aparece **depois** do clique em Submit.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Current location | `Olinda, Pernambuco, Brazil` |
+| Current company | `E-Line Media` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Other Website | `https://vinicavalcanti.com` |
+| Are you legally eligible to work in Canada? | `No` |
+| Aceita ir ao escritório 3 dias por semana (híbrido)? | `Yes` |
+| Why are you interested in this role? | o texto abaixo |
+| Pesquisa demográfica | `Prefer not to say` |
+
+**Textos longos:**
+
+```
+Dead by Daylight is a game made of characters, killers and licensed survivors shipped continuously, and character art end to end is exactly what I do. I have more than 10 years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration, plus hair and fur grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters. As a Senior I review other artists' work and set the asset standard, I teach as the founder of my own character art school and I am a master's candidate. I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; I am not an EU or Canadian citizen and would need visa sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+**Cuidados:** o anúncio está em francês na API, mas o formulário é bilíngue e o texto em inglês é aceito. Não responda "Yes" à elegibilidade no Canadá: mentir na triagem derruba a candidatura depois. Esta é a **terceira** requisição de personagem da Behaviour — a de *7 Days to Die* já foi enviada em 30/08, não repita aquela.
+
+## 2. Ubisoft Montréal — Senior Character Artist, Rainbow Six Siege — Montréal, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/Ubisoft2/744000145282762
+**Por que vale:** Senior + personagem + permanente numa casa que move gente entre países por rotina; o anúncio pede ZBrush, Substance 3D Painter, Maya, topologia e deformação, asset pronto para engine. **Reconferida no ar hoje na API oficial do SmartRecruiters (REF3179...).**
+**A parede:** DataDome no botão **I'm interested** — a página fica em branco para robô. No seu navegador passa direto.
+**Tempo estimado:** 4 min
+
+**Cole nos campos (tela do SmartRecruiters, mesma das outras Ubisoft):**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| First / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Location / City / Country | `Olinda, Pernambuco` / `Brazil` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Website / Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Cover letter (campo ou anexo) | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO A |
+| Are you legally authorized to work in Canada? | `No` |
+| Will you require sponsorship? | `Yes` |
+| Are you willing to relocate to Montreal? | `Yes` |
+| Como soube da vaga | `Ubisoft careers page` |
+| Consentimentos e privacidade | marcar |
+
+**Textos longos:** TEXTO A no campo de carta ou mensagem.
+**Cuidados:** o formulário abre num aplicativo separado (`oneclick-ui`) depois do clique em **I'm interested**; se a tela vier vazia, recarregue **na aba normal**, sem janela anônima. Não mande também a Team Lead Modeling no mesmo minuto: são requisições diferentes e as duas estão nesta fila, mas mande uma de cada vez para não confundir os anexos.
+
+## 3. Behaviour Interactive — Senior 3D Character Artist, projeto não anunciado — Montréal, Canadá
+
+**Link direto:** https://jobs.lever.co/bhvr/86ddd557-7d9b-48f1-ab04-0a90ba38e2dc/apply
+**Por que vale:** segunda requisição sênior de personagem da mesma casa, híbrida em Montréal, e o anúncio pede setup e groom de cabelo em Unreal 5, que é exatamente a sua combinação. **Reconferida no ar hoje na API oficial do Lever.**
+**A parede:** hCaptcha com desafio de imagem do Lever, no envio.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Current location | `Olinda, Pernambuco, Brazil` |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Other Website | `https://vinicavalcanti.com` |
+| Eligible to work in Canada? | `No` |
+| Aceita ir ao escritório 3 dias por semana? | `Yes` |
+| Why are you interested in this role? | o texto abaixo |
+
+**Textos longos:**
+
+```
+The posting asks for a senior character artist who can set up and groom hair in Unreal Engine 5, and that is the combination I bring: 10+ years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine, plus character grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand-painted Season 1 characters. I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case.
+```
+
+**Cuidados:** é vaga diferente da nº 1 desta fila (aquela é Dead by Daylight); pode mandar as duas, mas com cartas diferentes, que é como estão escritas aqui.
+
+## 4. DreamWorks Animation / NBCUniversal — Lead Character Artist (Face, Body & Crowd, Hair & Wardrobe) — Montréal, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/NBCUniversal3/744000137526729-lead-character-artist-body-crowd-face-hair-wardrobe-chef-fe-d-equipe-artiste-personnage-tete-corps-foule-cheveux-vetements-
+**Por que vale:** Lead de personagem em casa grande, e a trilha de **Hair & Wardrobe** encosta direto no seu grooming em Houdini; liderança você tem, e a resposta é sim. **Reconferida no ar hoje na API oficial do SmartRecruiters.**
+**A parede:** SmartRecruiters com verificação humana (tela *Verification Required* com desafio de deslizar) ou aplicação que não carrega, sempre contra IP de automação. No seu navegador passa.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| First / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Location | `Olinda, Pernambuco, Brazil` |
+| LinkedIn / Portfolio | LinkedIn e ArtStation dos DADOS FIXOS |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + o texto abaixo |
+| Anos liderando equipe | `5` |
+| Autorização de trabalho no Canadá | `No, I will need sponsorship` |
+| Aceita realocar para Montréal? | `Yes` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+| Self-ID | `I choose not to disclose` |
+
+**Textos longos:**
+
+```
+I am applying to the Hair and Wardrobe track first, and I am comfortable across Face, Body and Crowd. Hair is the part of a character I keep coming back to: I build character grooms in Houdini and treat them as part of the character rather than a bolt-on, so shape, flow, layering and silhouette read against the sculpt. I have more than 10 years in 3D characters, almost five of them as Senior at E-Line Media taking Endstar's hero characters from first sculpt to engine, and I am credited on The Wingfeather Saga season 1 at Angel Studios. As a Senior I review other artists' work and set the asset standard, I teach as the founder of my own character art school and I am a master's candidate, so leading a small character team is the natural next step and not a jump. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role. I am not a Canadian citizen and would need visa sponsorship; an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications make a strong visa case.
+```
+
+**Cuidados:** o anúncio é bilíngue mas **não exige francês**; o de Montréal da Imageworks exige, este não. A Lead Material Artist da mesma casa é a nº 18 desta fila: mandar as duas dobra a chance de alguém da arte abrir seu portfólio.
+
+## 5. Gaijin Entertainment — Lead Material & Texture Artist — Budapeste, Hungria (com realocação paga)
+
+**Link direto:** https://gaijinent.com/job/material--texture-artist
+**Por que vale:** texturização em cargo de liderança, e é o **melhor sinal de visto da fila**: a casa paga realocação para Hungria, Chipre, Alemanha, Montenegro, Letônia e Armênia e diz por escrito que considera candidato de qualquer país. **Reconferida no ar hoje: a página da vaga responde com o título certo.**
+**A parede:** captcha de **desafio de imagem próprio deles**, no fim do formulário (`input[name=captcha]`).
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Additional communication method | `LinkedIn: https://www.linkedin.com/in/vinicavalcnti/` |
+| Country | `Brazil` |
+| What languages do you speak? | `Portuguese (native), English (IELTS certified), Spanish (working proficiency)` |
+| Cover letter | o texto abaixo |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Enter captcha | resolver o desafio de imagem na tela |
+
+**Textos longos:**
+
+```
+I WANT TO RELOCATE and I am fully open to moving for the role, and your relocation support to Hungary or Germany is one of the reasons I am writing.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor. Texturing and material work are not a separate step for me: I own the asset end to end, sculpt and high poly, retopology, UVs, baking, PBR and hand painted texturing, look development and engine integration, in Substance Painter and Designer, ZBrush, Maya and Houdini, where I also handle grooming.
+
+On the lead side, I have been Senior for five years, which means reviewing other artists' work, setting the asset standard and mentoring juniors; I also teach as the founder of my own character art school and I am a master's candidate, so giving feedback and holding a quality bar is daily work for me.
+
+One thing said plainly: my published portfolio is mostly stylized, while this role asks for realistic materials for hard surface, architecture and terrain. Every sculpt I make starts from realistic anatomy and I work daily with PBR, UVs, color management, trim sheets and tileables, so I am comfortable delivering realistic surfaces, and I would rather say that clearly than overstate it.
+
+I am not an EU citizen and would need work sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+**Cuidados:** o quadro inteiro fica em https://gaijinent.com/job e só existe depois do JavaScript; se abrir vazio, recarregue. A ressalva de realismo já está na carta de propósito — não a tire.
+
+## 6. Ubisoft Massive — Lead Character Artist, The Division 2 — Malmö, Suécia
+
+**Link direto:** https://jobs.smartrecruiters.com/Ubisoft2/744000144027102
+**Por que vale:** Lead de personagem, tempo integral, numa das casas que mais patrocinam visto na Europa; Suécia é rota de trabalho conhecida e o time é internacional. **Reconferida no ar hoje na API oficial do SmartRecruiters.**
+**A parede:** DataDome no botão **I'm interested**, igual às outras Ubisoft.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| First / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Location | `Olinda, Pernambuco, Brazil` |
+| LinkedIn / Portfolio | LinkedIn e ArtStation dos DADOS FIXOS |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO A |
+| Anos de experiência | `10` |
+| Anos liderando equipe | `5` |
+| Direito de trabalho na Suécia / UE | `No, I would need a work permit and sponsorship` |
+| Aceita realocar para Malmö? | `Yes` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around EUR 55,000 per year.` |
+
+**Textos longos:** TEXTO A. Se o anúncio insistir em realismo, acrescente o TEXTO C.
+**Cuidados:** o anúncio é de jogo realista; não esconda que seu portfólio é estilizado, use o TEXTO C. Suécia exige que a oferta alcance o piso salarial do visto de trabalho — a frase de alinhamento à banda já cobre isso.
+
+## 7. Avalanche Studios Group — Lead Character Artist — Estocolmo, Suécia
+
+**Link direto:** https://jobs.lever.co/avalanchestudios/8f7bd580-5877-446e-83cb-97bb1fce0f6a/apply
+**Por que vale:** Lead de personagem, **emprego permanente** e híbrido, e o formulário é curto — é a melhor relação entre valor e minuto da fila. **Reconferida no ar hoje na API oficial do Lever: "Lead Character Artist", Stockholm, Permanent Employment, híbrido.**
+**A parede:** hCaptcha do Lever no envio.
+**Tempo estimado:** 2 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone (obrigatório) | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Current location (obrigatório) | `Olinda, Pernambuco, Brazil` |
+| Current company | `E-Line Media` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Additional information (se houver) | TEXTO B |
+
+**Textos longos:** TEXTO B, e o TEXTO C se houver campo livre — o anúncio fala em criatura e animal com ênfase realista.
+**Cuidados:** o anúncio diz explicitamente que não é preciso cumprir todos os requisitos para se candidatar; ênfase em **animal e criatura**, que está no seu portfólio, então cite bicho e criatura no campo livre se ele existir.
+
+## 8. Rodeo FX — Senior Lookdev Artist — Toronto, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/RodeoFX/744000144123709-senior-lookdev-artist-multiple-positions
+**Por que vale:** *look development* é disciplina literal sua, no nível Senior, em **Toronto**, Canadá anglófono, sem exigência de francês, casa grande dona da Mikros. **Reconferida no ar hoje na API oficial do SmartRecruiters (RDO243M, Toronto, full-time).**
+**A parede:** DataDome. A página renderiza zero caractere para robô; no seu navegador abre normal.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| Nome / email / telefone | dos DADOS FIXOS |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Anos em lookdev ou texturização | `10+` (o anúncio pede no mínimo 6) |
+| Autorização de trabalho no Canadá | `No, I would need sponsorship` |
+| Aceita realocar para Toronto? | `Yes. I WANT TO RELOCATE to Toronto and I am fully open to moving for the role, on site and full time.` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO C |
+
+**Textos longos:** TEXTO C, obrigatoriamente — o anúncio pede texturização **realista** e fotorrealismo. Acrescente ao fim:
+
+```
+Nuke and Mari are the two tools on your list I would be picking up rather than bringing, and I would rather say that plainly than overstate it.
+```
+
+**Cuidados:** o anúncio diz que existe faixa salarial mas **não publica o número**, então vale a política de casa grande no Canadá. A versão de Montréal é a nº 17 desta fila e é outra requisição, pode mandar as duas.
+
+## 9. ICON Creative Studio — Intermediate Modeling/Texture Artist — Vancouver, Canadá
+
+**Link direto:** https://iconcreative.bamboohr.com/careers/136
+**Por que vale:** disciplina literal (modelar e texturizar em Maya, com Substance Painter e ZBrush, e Houdini citado como diferencial), **faixa publicada CAD 63.131 a 85.000**, posição sindicalizada, e o sinal de visto mais forte da fila: eles mantêm vaga aberta de **RCIC Immigration Coordinator**, ou seja, tratam imigração dentro de casa. **Reconferida no ar hoje: a página responde com o título da vaga.**
+**A parede:** reCAPTCHA v2 de caixa de marcar do BambooHR, no fim do formulário, atrás do botão **Apply**.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Address / City / Postal Code | do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Province | `Pernambuco` |
+| **Country** | trocar o `Canada` que vem preenchido por `Brazil` |
+| Choose File (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| Date Available | uma data dentro de 30 dias |
+| **Desired Pay** | `Aligned with the posted range for the role, at the lower end (CAD 63,131). Open to aligning with your band.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| "Please leave this field blank" | **deixar vazio, é caça-robô** |
+| reCAPTCHA | marcar a caixa |
+
+**Textos longos:** se houver campo de mensagem ou carta, cole o TEXTO D e acrescente `I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role.` Com o RCIC deles, essa é a informação mais útil que você pode dar.
+**Cuidados:** o `Country` vem com `Canada` e o endereço fica errado se não trocar. O nível é intermediário, não sênior, e é presencial em Vancouver — é a única vaga da sua disciplina nas 28 do quadro deles, então é esta ou nenhuma.
+
+## 10. Ubisoft Montréal — Team Lead, Modeling (Unreal) — Montréal, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/Ubisoft2/744000141713411
+**Por que vale:** **modelagem** em cargo de liderança, em Montréal, na casa que mais realoca artista internacional no Canadá. **Reconferida no ar hoje na API oficial do SmartRecruiters: "Team Lead - Modeling (Unreal)", Montreal.**
+**A parede:** DataDome no botão **I'm interested**.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| First / Last name, email, telefone | dos DADOS FIXOS |
+| Location | `Olinda, Pernambuco, Brazil` |
+| LinkedIn / Portfolio | LinkedIn e ArtStation dos DADOS FIXOS |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO A |
+| Anos de experiência | `10` |
+| Anos liderando equipe | `5` |
+| Autorização no Canadá / patrocínio | `No` / `Yes` |
+| Aceita realocar para Montréal? | `Yes` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+
+**Textos longos:** TEXTO A. Acrescente uma linha sobre Unreal: você integra asset em Unreal e Unity todo dia no Endstar.
+**Cuidados:** é a terceira requisição da Ubisoft desta fila (as outras são a nº 2 e a nº 6). São vagas diferentes, mas mande uma por vez.
+
+## 11. Lighthouse Games — Lead Character Artist — Royal Leamington Spa, Reino Unido
+
+**Link direto:** https://apply.workable.com/lighthousegames/j/F7F90250DA/apply/
+**Por que vale:** Lead de personagem em estúdio novo da Tencent montado por ex-Playground (Forza Horizon), presencial no Reino Unido, que patrocina Skilled Worker por rotina.
+**A parede:** Cloudflare Turnstile antes do formulário do Workable — a caixa "Verify you are human".
+**Tempo estimado:** 4 min
+**NÃO RECONFERIDA hoje:** o Workable devolve bloqueio de Cloudflare para qualquer robô (erro 1015), então confie no registro de 02/09 e confirme na tela que a vaga ainda está listada antes de preencher.
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| **Address / City / Country** | `Olinda, Pernambuco, Brazil` — **apague antes o "Columbus, United States of America"** que o autofill do Workable escreve sozinho |
+| Headline | `Senior 3D Character Artist, 10+ years in stylized characters, character grooming in Houdini` |
+| Summary | TEXTO B |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Portfolio / showreel | `https://www.artstation.com/viniciuscavalcanti` |
+| Do you have the right to work in the UK? | `No — I would need Skilled Worker sponsorship` |
+| Willing to relocate to Leamington Spa? | `Yes` |
+| Salary expectation | `Open to aligning with your band for the role; as a reference, around GBP 50,000 per year.` |
+| Privacy notice | marcar |
+
+**Textos longos:** TEXTO B mais o TEXTO C — o anúncio fala em credibilidade dos personagens, ou seja, realismo.
+**Cuidados:** o Turnstile só aparece depois do clique em Submit; se a tela ficar em "Submitting...", é ele. Marque e reenvie.
+
+## 12. Framestore — 3D Modeller (contrato curto) — Montréal, Canadá
+
+**Link direto:** https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme
+**Por que vale:** **modelagem**, disciplina literal, no departamento de Film de uma casa multipremiada com Oscar, em Montréal. Das 51 vagas do quadro deles é a única de modelagem. **Reconferida no ar hoje.**
+**A parede:** hCaptcha de imagem do Recruitee, **só depois do clique em Send**.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| CV or resume | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | **trocar o `+1` que já vem** para o código do Brasil; número do documento privado do Drive |
+| Portfolio link | `https://www.artstation.com/viniciuscavalcanti` |
+| Portfolio password | `No password, the portfolio is public.` |
+| Years of experience in 3D modeling (radio) | `More than 5 years` |
+| Availability date | `Within 30 days of an offer.` |
+| Current Location | `Olinda, Pernambuco` |
+| Citizenship | `Brazilian` |
+| **Will you need visa sponsorship? (radio)** | `Yes` |
+| Desired salary/rate | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.` |
+| What are your pronouns? (radio) | `He/him` |
+| Consentimento | marcar |
+
+**Cuidados:** **três armadilhas medidas.** (1) O formulário existe na página mas fica fechado: clique em **Apply** primeiro, senão o botão Send nem aparece. (2) O telefone vem com `+1` num widget que não aceita clique — escreva com o código do país explícito. (3) As três últimas perguntas são **radio, não texto**: anos de experiência, patrocínio e pronomes. Contrato curto, mas contrato por projeto em casa grande de VFX conta pela sua regra de formato.
+
+## 13. Frontier Developments — Experienced Character Artist — Cambridge, Reino Unido
+
+**Link direto:** https://jobs.eu.lever.co/frontier/3571ace3-9f1a-4db2-9e2b-5eb8c8487181/apply
+**Por que vale:** personagem puro, casa grande britânica, híbrido em Cambridge, e o formulário já pergunta sobre patrocínio, ou seja, eles contratam quem precisa. **Reconferida no ar hoje na API oficial do Lever: "Experienced Character Artist", Cambridge / Hybrid.**
+**A parede:** hCaptcha de desafio de imagem do Lever.
+**Tempo estimado:** 5 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Nome, email, telefone | dos DADOS FIXOS |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Other | `https://vinicavalcanti.com` |
+| Tem experiência com escultura orgânica? | `Yes` |
+| Link do portfólio | `https://www.artstation.com/viniciuscavalcanti` |
+| Salário atual | `Confidential under the NDA of my current contract; happy to discuss ranges during the process.` |
+| Pretensão salarial | `Open to aligning with Frontier's band for the role; as a reference, I'm looking at around GBP 50,000 per year.` |
+| Aviso prévio | `A standard transition period with my current studio; glad to align dates in the process.` |
+| País de residência | `Brazil` |
+| Híbrido ou presencial? | `Hybrid, relocating to Cambridge.` |
+| Precisa de patrocínio de visto? | `Yes` |
+| Detalhe sobre elegibilidade no Reino Unido | o texto abaixo |
+| Entende que a vaga exige realocação para Cambridge? | `Yes` |
+| Pesquisa de diversidade | `Prefer not to say` |
+
+**Textos longos:**
+
+```
+I answered yes: I would need Skilled Worker sponsorship. My academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) supports the visa case, and I can start remotely while it is processed, which is how I already work today for a studio in another country.
+```
+
+**Cuidados:** a pretensão antiga de USD 46.000 está **morta**; use o número acima. Não deixe o campo de salário atual em branco nem escreva valor: a frase de NDA é a resposta.
+
+## 14. Asobo Studio — Character Artist H/F, projeto narrativo não anunciado — Bordeaux, França
+
+**Link direto:** https://jobs.eu.lever.co/asobostudio/1ab1d28f-6f7c-4106-b43f-6ef78dcb7603/apply
+**Por que vale:** personagem puro na casa de *A Plague Tale*, presencial em Bordeaux. **Reconferida no ar hoje na API oficial do Lever.**
+**A parede:** hCaptcha de desafio de imagem do Lever.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Nome, email, telefone | dos DADOS FIXOS |
+| LinkedIn / Portfolio / Other | LinkedIn, ArtStation e site dos DADOS FIXOS |
+| Conte mais sobre você | o texto abaixo |
+| Anos de experiência | `> 7` |
+| Aceita trabalhar presencial em Bordeaux? | `Oui / Yes` |
+| Habilidades em realismo | TEXTO C |
+| Experiência em estúdio | `Yes: almost five years full-time at E-Line Media (Endstar), and earlier studio experience at PUGA Studios delivering characters for international clients.` |
+| Caixa de consentimento de comunicação | marcar |
+
+**Textos longos:**
+
+```
+I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1, and for almost five years I've been with E-Line Media in Arizona, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini. A new narrative project at the studio behind A Plague Tale is exactly the kind of character-driven work I want: I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I WANT TO RELOCATE to Bordeaux and am fully open to moving for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. Portfolio: artstation.com/viniciuscavalcanti
+```
+
+**Cuidados:** o anúncio é em francês, mas o formulário aceita resposta em inglês; não invente nível de francês em nenhum campo.
+
+## 15. Larian Studios — Character Artist, Open Application — Dublin, Barcelona, Gent, Guildford, Varsóvia, Quebec
+
+**Link direto:** https://jobs.lever.co/larian/64e1e658-7c7a-4c7f-b950-f997d40a9d8e/apply
+**Por que vale:** personagem, casa grande de *Baldur's Gate 3*, e a candidatura é aberta para **sete escritórios**, incluindo Dublin, Barcelona e Quebec — ou seja, uma candidatura cobre Canadá e Europa. **Reconferida no ar hoje na API oficial do Lever.**
+**A parede:** hCaptcha de desafio de imagem do Lever.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Nome, email, telefone | dos DADOS FIXOS |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio (Artstation, GitHub, personal website etc) | `https://www.artstation.com/viniciuscavalcanti` |
+| Any other work you would like to share? | `https://vinicavalcanti.com` |
+| Localização preferida | `Dublin` |
+| Segunda opção de localização | `Barcelona` |
+| Aceita trabalhar presencial em tempo integral? | `Yes` |
+| Disposto a realocar? | `Yes` |
+| Anos de experiência | `More than 10 years` |
+| Experiência na indústria de games? | `Yes` |
+| Empresa mais recente | `E-Line Media` |
+| Como ficou sabendo da vaga | `Larian Careers Page` |
+
+**Cuidados:** Dublin e Barcelona na frente porque são as duas onde o patrocínio é mais direto; Quebec exigiria francês.
+
+## 16. Cosmico — SENIOR 3D ARTIST — Suécia
+
+**Link direto:** https://www.cosmicogames.com/career (o botão **SENIOR 3D ARTIST →** leva para https://www.cosmicogames.com/contact, que é a porta que o próprio estúdio publicou)
+**Por que vale:** vaga sênior de 3D aberta, em estúdio de mundos estilizados, que é o seu registro nativo. **Reconferida no ar hoje: a página lista SENIOR 3D ARTIST.**
+**A parede:** não é captcha visível — é o anti-robô do Squarespace, que recusa sessão automatizada com *"Unable to submit form"*. No seu navegador passa.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Message | o texto abaixo |
+
+**Textos longos:**
+
+```
+Applying for the SENIOR 3D ARTIST role listed on your careers page. I WANT TO RELOCATE and I am fully open to moving to Sweden for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, and I take an asset end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, in Maya, ZBrush, Substance Painter and Designer and Blender. I also groom hair and fur in Houdini, so character, texture and groom are one continuous job for me rather than three handoffs.
+
+I am credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted the characters, and for almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt to engine while working fully remote from another country and time zone. My portfolio holds more than 45 projects with over 60 characters across many titles.
+
+As a Senior of five years I review other artists' work and set the asset standard; I also teach as the founder of my own character art school and I am a master's candidate.
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site: https://vinicavalcanti.com
+```
+
+**Cuidados:** o formulário tem um **campo isca invisível** (`message-field`) que não pode ser preenchido — preencha só Name, Email e Message. Não há anexo: os links precisam estar no texto, e estão.
+
+## 17. Rodeo FX — Senior Lookdev Artist — Montréal, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/RodeoFX/744000145587059-senior-lookdev-artist-multiple-positions
+**Por que vale:** mesma disciplina e senioridade da nº 8, requisição diferente, na sede da casa. **Reconferida no ar hoje na API oficial do SmartRecruiters.**
+**A parede:** DataDome, igual à de Toronto.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:** os mesmos da nº 8, trocando a cidade:
+
+| Campo | O que colar |
+|---|---|
+| Upload resume | `Vini_Cavalcanti_CV.pdf` |
+| Nome, email, telefone | dos DADOS FIXOS |
+| Portfolio / LinkedIn | ArtStation e LinkedIn dos DADOS FIXOS |
+| Anos em lookdev ou texturização | `10+` |
+| Autorização de trabalho no Canadá | `No, I would need sponsorship` |
+| Aceita realocar? | `Yes. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO C |
+
+**Cuidados:** as duas de Lookdev saíram em inglês e francês; **a terceira vaga deles, "Artiste de développement visuel Senior", saiu só em francês** e ficou fora desta fila de propósito — francês já derrubou duas candidaturas desta campanha.
+
+## 18. DreamWorks Animation / NBCUniversal — Lead Material Artist (Character & Wardrobe, World & Props) — Montréal, Canadá
+
+**Link direto:** https://jobs.smartrecruiters.com/NBCUniversal3/744000137526669-lead-material-artist-character-wardrobe-world-props-personnage-garde-robe-monde-accessoires-
+**Por que vale:** liderança de **material e shading de personagem**, que é a mesma superfície que você fez à mão no Wingfeather; mesma casa e mesmo time da nº 4. **Reconferida no ar hoje na API oficial do SmartRecruiters.**
+**A parede:** verificação humana do SmartRecruiters (desafio de deslizar) contra IP de automação.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:** os mesmos da nº 4, mudando só a trilha:
+
+| Campo | O que colar |
+|---|---|
+| Upload resume / cover letter | os dois PDFs |
+| Nome, email, telefone, localização | dos DADOS FIXOS |
+| LinkedIn / Portfolio | dos DADOS FIXOS |
+| Trilha pretendida | `Character & Wardrobe` |
+| Anos de experiência / liderança | `10` / `5` |
+| Autorização no Canadá / patrocínio | `No` / `Yes` |
+| Aceita realocar para Montréal? | `Yes` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+
+**Textos longos:** TEXTO A, trocando a primeira frase por `I am applying to the Character and Wardrobe track: surfacing and shading characters is the half of my job that comes right after the sculpt.`
+**Cuidados:** não exige francês. Mande depois da nº 4 e com carta diferente.
+
+## 19. Framestore — Blender Generalist / Visual Development Artist — Montréal, Canadá
+
+**Link direto:** https://framestore.recruitee.com/o/generaliste-blender-artiste-au-development-visuel-blender-generalist-visual-development-artist
+**Por que vale:** **visual development** é metade do seu título, e **Blender** é ferramenta central do time e está no seu currículo; Montréal, casa com Oscar. **Reconferida no ar hoje.**
+**A parede:** hCaptcha de imagem do Recruitee, **só depois do clique em Send**.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email address | `contact@vinicavalcanti.art` |
+| Phone number | trocar o país para Brasil no seletor; número do documento privado do Drive |
+| CV or resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Showreel/Portfolio Link | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel/Portfolio password | deixar vazio, o portfólio é público |
+| Availability date | `Negotiable, around two months from an offer` |
+| Citizenship | `Brazilian` |
+| Current location | `Olinda, Pernambuco` |
+| Are you open to relocating to Montreal? | `Yes` |
+| Desired annual salary (CAD) | `CAD 95,000 per year; open to aligning with your band for the role` |
+| Preferred pronoun | `He/him` |
+| Legal Agreements | marcar |
+
+**Cuidados:** clique em **Apply** para abrir a seção de envio antes de procurar o botão Send. O anúncio é bilíngue e **não exige francês**.
+
+## 20. Framestore — Blender Generalist — Londres, Reino Unido
+
+**Link direto:** https://framestore.recruitee.com/o/blender-generalist
+**Por que vale:** é o time de **Visual Development** de Londres, com Blender no centro; o anúncio cita *IF*, *Loki S2* e *Como Treinar o Seu Dragão*. **Reconferida no ar hoje.**
+**A parede:** hCaptcha de imagem do Recruitee depois do Send.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:** iguais aos da nº 19, com duas trocas:
+
+| Campo | O que colar |
+|---|---|
+| Are you open to relocating to London, UK? | `Yes` |
+| Desired annual salary (£ GBP) | `GBP 50,000 per year; open to aligning with your band for the role` |
+| Todo o resto | igual à nº 19 |
+
+**Cuidados:** mesma armadilha do botão **Apply** antes do Send; o telefone precisa do seletor de país trocado para Brasil.
+
+## 21. Netflix Animation Studios — Head of Characters — Vancouver, Canadá
+
+**Link direto:** https://explore.jobs.netflix.net/careers/job/790317384604
+**Por que vale:** personagem 3D estilizado da modelagem ao CFX, em Vancouver, híbrido, na casa que já abriu duas portas para você. **Reconferida no ar hoje: a página responde com o título.**
+**A parede:** reCAPTCHA **invisível** no envio — não há desafio para resolver; do IP dele reprova, do seu navegador passa. As suas duas candidaturas Netflix que deram certo foram enviadas assim.
+**Tempo estimado:** 3 min
+
+**Cole nos campos (o formulário só monta depois do `APPLY NOW`):**
+
+| Campo | O que colar |
+|---|---|
+| Resume | `Vini_Cavalcanti_CV.pdf` — logo depois aparece o modal **Candidate Privacy**: clicar em **I ACKNOWLEDGE** |
+| First name / Last name | `Vini` / `Cavalcanti` (o parser preenche sozinho, só confira) |
+| Email | `contact@vinicavalcanti.art` |
+| Phone country code | deixar como veio: `BR (+55) Brazil` |
+| Phone | **só os dígitos, sem +55, sem espaço e sem hífen** — do documento privado do Drive |
+| City / State / Country | `Olinda` / `Pernambuco` / `Brazil` (State e Country vêm preenchidos, não digite por cima) |
+| Additional Documents | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| URL / Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Self-ID (gênero, etnia, orientação, veterano, trans, deficiência) | `I choose not to disclose` em todos |
+| É contratante da Netflix hoje? | `No` |
+| Já trabalhou na Netflix? | `No` |
+| Precisa de patrocínio de visto? | `Yes` |
+
+**Cuidados:** **três coisas que já custaram tempo.** (1) Ir direto na URL `/careers/apply?pid=...` não renderiza nada — tem que clicar em `APPLY NOW` e esperar uns 10 segundos. (2) O modal de privacidade bloqueia todos os cliques seguintes até você aceitar. (3) Digitar por cima de Country e State só concatena texto e quebra o campo. Se pedir código de 6 dígitos por email, ele **só vale na mesma aba** — não feche.
+
+## 22. Image Engine — General Application, Assets (modelagem, textura, look dev e groom) — Vancouver, Canadá
+
+**Link direto:** https://imageengine.bamboohr.com/careers/21
+**Por que vale:** uma fila de candidatura espontânea que cobre as **quatro** coisas que você faz, com o grooming citado pelo nome, dentro de casa grande de VFX em Vancouver, o cluster que mais contrata internacional. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa do BambooHR (é do ATS, não do estúdio).
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First / Last Name | `Vini` / `Cavalcanti` |
+| Email / Phone | `contact@vinicavalcanti.art` / telefone do documento privado do Drive |
+| Address, City, Province, Postal Code (obrigatórios) | do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| **Country** | trocar o `Canada` que vem preenchido por `Brazil` |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` (campo **separado** do de cima e é o obrigatório) |
+| Date Available | cerca de dois meses à frente |
+| Desired Pay | `CAD 95,000 per year. Open to aligning with your band for the role.` |
+| Website / LinkedIn | ArtStation e LinkedIn |
+| Please choose one position of your interest | `Modeling` |
+| Years of experience | `10` |
+| Please choose your level of experience | `Senior` |
+| Please select your current work status for Canada | `Work Permit Required` |
+| Anything else we should know? | `I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role. My academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.` |
+| reCAPTCHA | marcar a caixa |
+
+**Cuidados:** o campo **Cover Letter vem antes do Resume** e também aceita PDF — se errar, o CV vai para a carta e o currículo fica vazio, sem erro na tela. Confira o nome do arquivo em cada campo.
+
+## 23. Distillery VFX — Job Application Form — Vancouver, Canadá
+
+**Link direto:** https://www.distilleryvfx.com/apply
+**Por que vale:** Canadá anglófono, estúdio boutique de VFX para cinema e TV de alto perfil, e o formulário pergunta status no Canadá com valores em CAD, ou seja, contratam de fora. **Reconferida no ar hoje.**
+**A parede:** **não é captcha** — são dois menus próprios do Wix (*What is your current level* e *Current Status in Canada*) que um preenchedor ignora em silêncio. Para você, é só clicar nos dois.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | código do país Brasil; número do documento privado do Drive |
+| Current Country of Residence | `Brazil` |
+| What role are you interested in? | `Character Modeller and Texture Artist. Senior 3D Character Artist, 10+ years, stylized. I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role; I would need visa sponsorship.` |
+| **What is your current level?** (menu) | `Sr` — o menu **não tem "Senior"** |
+| LinkedIn Link | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Reel or Portfolio Link 1 | `https://www.artstation.com/viniciuscavalcanti` |
+| Reel or Portfolio Link 2 | `https://vinicavalcanti.com` |
+| Vimeo Password | `No password, the portfolio is public.` |
+| Upload Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Current Status in Canada** (menu) | `Need a work permit` — **cuidado, "Open work permit" fica logo antes e seria mentira** |
+| Select all workplace options | marcar `Studio`, `Hybrid` e `Remote` |
+| Rate expectation | `Open to aligning with your band for the role; as a reference, around CAD 80,000 per year.` |
+| How did you hear about this role? | `Distillery VFX careers page` |
+
+**Cuidados:** depois do upload, o Wix **limpa o campo de arquivo** — a prova de que o CV subiu é o **nome do arquivo escrito na tela**, não o campo.
+
+## 24. Cinesite — Candidature Spontanée / Speculative Application — Montréal, Canadá
+
+**Link direto:** https://cinesitemontreal.bamboohr.com/careers/93
+**Por que vale:** casa grande de animação e VFX em Montréal, candidatura espontânea **aberta e revalidada** (jobOpeningStatus Open). **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa do BambooHR.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First / Last Name, Email, Phone | dos DADOS FIXOS |
+| **Country** | trocar por `Brazil` se vier `Canada` |
+| Resume / Cover Letter | os dois PDFs, cada um no campo certo |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Website / Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Qual é o seu status de trabalho no Canadá? | `I will need a work permit` |
+| Você está em Montréal? | `No — I WANT TO RELOCATE and I am fully open to moving for the role` |
+| Data disponível | cerca de dois meses à frente |
+| Pretensão | `CAD 95,000 per year. Open to aligning with your band for the role.` |
+| Cargo pretendido / mensagem | TEXTO B |
+| reCAPTCHA | marcar a caixa |
+
+**Cuidados:** Montréal é Quebec — se aparecer pergunta sobre francês, responda a verdade, sem inventar nível.
+
+## 25. Cinesite — Speculative Application — Vancouver, Canadá
+
+**Link direto:** https://cinesitevancouver.bamboohr.com/careers/260
+**Por que vale:** mesma casa, cidade anglófona, e Vancouver é o cluster mais denso da campanha. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa do BambooHR.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:** iguais aos da nº 24, mais os de endereço:
+
+| Campo | O que colar |
+|---|---|
+| Address / City / Province / Postal Code / Country | do documento privado do Drive; **Country = `Brazil`** |
+| Todo o resto | igual à nº 24, trocando Montréal por Vancouver |
+
+**Cuidados:** o vínculo aqui é **Fixed Term** (prazo determinado) — vale como porta de entrada em casa grande, mas saiba disso antes.
+
+## 26. Fortiche Production — candidatura espontânea "Become a Forticher" — Paris, Montpellier e Las Palmas
+
+**Link direto:** https://forticheprod.com/application/
+**Por que vale:** é a Fortiche de *Arcane*, referência máxima de estilizado, e os departamentos que ela lista incluem **Character modeling, Character design, Groom e Texture** — a sua disciplina inteira. **Reconferida no ar hoje.**
+**A parede:** o servidor derruba a conexão da automação no envio; o reCAPTCHA é v3 (pontuação, não portão). No seu navegador passa.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Contract | `Employee / Freelance` |
+| Name / Surname | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | do documento privado do Drive, CAMPANHA - dados pessoais dos formulários |
+| Preferred workplace location (marca mais de um) | `Paris`, `Montpellier`, `Las Palmas` e `Remote` |
+| Upload your CV | `Vini_Cavalcanti_CV.pdf` |
+| Upload your Portfolio | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Department (marca mais de um) | `Character modeling`, `Character design`, `Groom`, `Texture` |
+| Software | `Maya`, `Photoshop`, `Houdini`, `Zbrush` |
+| Availability | uma data cerca de dois meses à frente |
+| Tell us about you | TEXTO A |
+| Acceptance | marcar |
+
+**Cuidados:** o formulário tem **três passos** e o seletor de local é um widget próprio — marque os locais com o mouse e confirme que ficaram marcados antes de avançar, senão o passo 1 não valida e a tela volta ao começo.
+
+## 27. EF Games — Senior 3D Hard Surface and Vehicle Artist — Madri, Espanha
+
+**Link direto:** https://ef.games/jobs/senior-3d-hard-surface/
+**Por que vale:** é a única vaga **aberta** de modelagem e texturização achada na varredura de estúdios espanhóis; presencial em Madri, estúdio novo bancado por uma das maiores casas de multiplayer, e o anúncio pede **mentorar outros no departamento**, que é o seu argumento de senioridade. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA v3 invisível do Elementor — pontuação de sessão. No seu navegador passa.
+**Tempo estimado:** 5 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | formato internacional, do documento privado do Drive |
+| Upload CV | `Vini_Cavalcanti_CV.pdf` |
+| Additional files | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn profile | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Link to your website/portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Other useful links | `https://vinicavalcanti.com` |
+| Quantos anos de experiência | `10+ years` |
+| Have you worked on AAA video game projects? | `No` (é a verdade; o texto livre explica o alcance) |
+| Proficiency in English | `Fluent (C1-C2)` |
+| Proficiency in Spanish | **[VOCÊ SABE ESTE]** — a campanha não tem esse dado; o requisito é inglês OU espanhol e o inglês já cumpre |
+| Where are you based | `Olinda, Pernambuco, Brazil` |
+| Desired salary (bruto/ano, em €) | `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 gross per year.` |
+| Notice needed | `About one to two months, negotiable.` |
+| Comfortable in a hybrid environment? | `Yes` |
+| Please list all the video games you have contributed to | o texto abaixo |
+| Cover letter | o segundo texto abaixo |
+| **As DUAS caixas de aceite** | marcar as duas |
+
+**Textos longos:**
+
+```
+Endstar (E-Line Media, PC), Senior 3D Character Artist: hero characters from first sculpt to engine, high poly, retopology, UVs, baking, texturing and engine integration. Almost five years, ongoing. The Wingfeather Saga, season 1 (Angel Studios, animated series): character modeling and hand painted texturing. Earlier outsourcing work at PUGA Studios delivering character and asset work for international clients. Full breakdown and images: https://www.artstation.com/viniciuscavalcanti
+```
+
+```
+My discipline is character: modeling, sculpting, texturing and look development. If a character opening comes up at EF Games I would like this application forwarded there. I am applying to the Hard Surface and Vehicle role because building a game asset end to end is the same job for me, and because I want to work in Madrid.
+
+I WANT TO RELOCATE and I am fully open to moving for the role, on site in Madrid and full time. I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized work. For almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration in Unity and Unreal, which is the whole asset rather than one stage of it. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. On hard surface specifically, mechanical and articulated shapes are part of my daily modeling work, and I take 2D concept through to a finished asset with clean topology, UV edit, materials and baked textures.
+
+I am a Senior who reviews other artists' work and sets the asset standard, I teach as the founder of my own character art school, and I am a master's candidate, so mentoring inside a department is already part of what I do.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+**Cuidados:** a caixa de aceite da Privacy Policy e a caixa opcional de contato futuro têm o **mesmo id** — marque as duas na tela, uma de cada vez.
+
+## 28. Skydance Animation — Senior Grooming TD — Madri, Espanha
+
+**Link direto:** https://jobs.lever.co/skydance/9ad28cab-87cd-4235-ae9b-b4c53a3457e5/apply
+**Por que vale:** grooming é a sua disciplina adjacente, no nível **Senior**, em casa da Paramount, híbrida em Madri. **Reconferida no ar hoje na API oficial do Lever: "Senior Grooming TD", Madrid.**
+**A parede:** hCaptcha de imagem do Lever, depois do Submit.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name / Email / Phone | dos DADOS FIXOS |
+| **Current location** | cole `Olinda, Pernambuco, Brazil` **de uma vez e não toque mais** — o campo apaga sozinho a cada tecla que não casa com sugestão |
+| Current company | `E-Line Media` |
+| LinkedIn / Portfolio / Other website | dos DADOS FIXOS |
+| How did you hear about this position? | `Skydance Website` |
+| What is your working status in Spain? | `Require work permit` |
+| Please choose your country of residence | `Brazil` |
+| When would you be able to join us? | `Within 30 days of an offer. If it helps the schedule, I can start remotely while the work permit is being processed, which is how I already work today for a studio in another country.` |
+| Duas caixas de texto obrigatórias | TEXTO A, com a frase de realocação para Madri na primeira linha |
+
+**Cuidados:** uma pergunta obrigatória fica **escondida atrás do aviso de cookies** ("country of residence") — feche o aviso antes de conferir. Grooming é diferencial de apoio, não o cargo que você persegue: por isso está aqui e não no topo.
+
+## 29. TRIXTER — Speculative Job Application — Munique e Berlim, Alemanha
+
+**Link direto:** https://www.trixter.de/jobs/job/speculative-job-application-2/
+**Por que vale:** TRIXTER de Munique, **A Cinesite Partner Company**, e a própria página diz que **só aceitam candidatura por este formulário**, nunca por email nem LinkedIn — ou seja, é a única porta e ela está aberta. **Reconferida no ar hoje.**
+**A parede:** não é captcha — o envio por AJAX não sai do ambiente da automação e a tela mente dizendo que a mensagem não pôde ser enviada. No seu navegador passa.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | com código do país, do documento privado do Drive |
+| **Eligibility to work in Germany** | `No` |
+| Availability Date | data cerca de dois meses à frente, no formato `dd.mm.aaaa` |
+| Desired Salary / Freelance Daily Rate | `EUR 55,000 per year, or EUR 350 per day freelance. Open to aligning with your band for the role. I WANT TO RELOCATE to München or Berlin and I am fully open to moving for the role; I am not an EU citizen and would need visa sponsorship.` |
+| Link to Portfolio/Website | `https://www.artstation.com/viniciuscavalcanti` |
+| Portfolio Password | `No password, the portfolio is public` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| IMDB | deixar vazio |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Caixa de consentimento | marcar |
+
+**Cuidados:** **não existe campo de texto livre** e a vaga pede que a carta diga qual cargo você quer — o PDF da carta precisa dizer *Senior 3D Character Artist / Character Modeler*. E aceite os cookies antes: o aviso fica por cima do botão de envio e o clique leva para a página de privacidade.
+
+## 30. GIANTS Software — Open Application — Erlangen (Alemanha), Zurique (Suíça) e Brno (Chéquia)
+
+**Link direto:** https://jobs.smartrecruiters.com/GIANTSSoftwareGmbH/744000086339075-open-application
+**Por que vale:** a página de carreiras deles descreve Brno como o núcleo de 3D com artistas de **veículo e personagem**; candidatura espontânea aberta em três países da Europa. **Reconferida no ar hoje na API oficial do SmartRecruiters.**
+**A parede:** DataDome no botão **I'm interested**.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume e Cover Letter (pedem os dois) | os dois PDFs |
+| Nome, email, telefone | dos DADOS FIXOS (prefixo BR +55, número sem repetir o código) |
+| Cargo pretendido | `3D Character Artist / Character Modeler` |
+| Direito de trabalho | `No, I would need sponsorship` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 per year, and I understand Swiss levels differ.` |
+| Texto de apresentação | o texto abaixo |
+
+**Textos longos:**
+
+```
+I'm a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where for almost five years I have taken hero characters from first sculpt to engine as a remote international contractor.
+
+Your careers page describes the Brno office as the core of 3D art, with artists specialised in vehicle and character creation and character animation. Character creation end to end is my daily work: sculpt, retopology, UVs, baking, texturing and engine integration, with topology built for deformation, plus character grooming in Houdini when hair or fur is part of the design.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE and I am ready to move for the role; I would need work sponsorship, and my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+## 31. nWave Studios — Speculative Application — Bruxelas ou Liège, Bélgica
+
+**Link direto:** https://nwave.bamboohr.com/careers/121
+**Por que vale:** o formulário tem departamento **Character_Modeling** e nível **Senior** como opções, ou seja, a casa arquiva sua candidatura exatamente na sua disciplina. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa do BambooHR.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Nome, email, telefone, endereço | dos DADOS FIXOS e do documento privado do Drive |
+| Country | `Brazil` |
+| Estúdio | `Brussels` |
+| Departamento | `Character_Modeling` |
+| Nível | `Senior` |
+| Escolaridade / universidade | seus dados de formação |
+| Resume / Cover Letter | os dois PDFs, cada um no campo certo |
+| Desired Pay | `Around EUR 45,000 per year. Open to aligning with your band for the role.` |
+| Website / LinkedIn | ArtStation e LinkedIn |
+| Mensagem, se houver | TEXTO B |
+| reCAPTCHA | marcar a caixa |
+
+**Cuidados:** mesma armadilha do BambooHR: o campo **Cover Letter vem antes do Resume** e aceita PDF.
+
+## 32. Quantic Dream — Candidature Spontanée — Paris, França (CDI)
+
+**Link direto:** https://jobs.eu.lever.co/quanticdream/cc1dacb2-01b7-47c0-b827-9b9b786d1dd7/apply
+**Por que vale:** candidatura espontânea em CDI (contrato permanente) numa casa de jogo narrativo com personagem realista de alto nível; formulário curto. **Reconferida no ar hoje na API oficial do Lever.**
+**A parede:** hCaptcha de imagem do Lever.
+**Tempo estimado:** 2 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name / Email / Phone | dos DADOS FIXOS |
+| Current location | `Olinda, Pernambuco, Brazil` |
+| Current company | `E-Line Media` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Campo livre, se houver | TEXTO B |
+
+**Cuidados:** não invente nível de francês.
+
+## 33. BetaDwarf — Unsolicited Application — Copenhague, Dinamarca
+
+**Link direto:** https://betadwarfaps.bamboohr.com/careers/28
+**Por que vale:** porta espontânea aberta numa casa dinamarquesa; a Dinamarca só patrocina acima de um piso salarial, e a pretensão abaixo já está calculada para caber nele. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa do BambooHR.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | do documento privado do Drive, formato internacional |
+| Address / City / Province / Postal Code | do documento privado do Drive |
+| **Country** | trocar `Denmark`, que vem preenchido, por `Brazil` |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Desired Pay** (obrigatório) | `Around DKK 520,000 per year. Open to aligning with your band for the role, and the offer would need to meet the Danish work permit salary threshold for sponsorship.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Who referred you | deixar vazio |
+| **What role are you seeking?** (obrigatório) | `Senior 3D Character Artist / Character Modeler: modeling, sculpting, texturing and look development, with Houdini grooming as a supporting skill.` |
+| Consentimento da Privacy Policy | marcar |
+| reCAPTCHA | marcar a caixa |
+
+**Cuidados:** não baixe o número da pretensão: abaixo do piso do visto dinamarquês você não fica barato, fica impossível de patrocinar.
+
+## 34. Grimlore Games (THQ Nordic) — Open Application — Munique, Alemanha
+
+**Link direto:** https://grimloregames.com/open-application/ → botão **APPLY NOW**
+**Por que vale:** casa de *Titan Quest II* e *SpellForce 3*, do grupo THQ Nordic/Embracer, e as vagas de arte abertas hoje são de cenário e animação, ou seja, **o lado de personagem e criatura está descoberto**. **Reconferida no ar hoje.**
+**A parede:** WPForms com reCAPTCHA v2 de **caixa de marcar**, visível acima do Submit.
+**Tempo estimado:** 2 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Name * | `Vini Cavalcanti` |
+| Email * | `contact@vinicavalcanti.art` |
+| Subject * | `Open Application (m/f/d) - Senior 3D Character Artist / Character Modeler` |
+| Message * | o texto abaixo |
+| Privacy Policy Checkbox * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+**Textos longos:**
+
+```
+I WANT TO RELOCATE to Munich and I am fully open to moving for the role, on site and full time.
+
+I am applying as a Senior 3D Character Artist / Character Modeler. I have more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini, so hair is part of the character rather than a separate handoff.
+
+Your open application page says to reach out even when the role is not listed, and Titan Quest II and the RPG and RTS line are exactly the kind of character and creature work I want: heroes, monsters and armour sets built for deformation and for engine, at scale. Your current openings list a Senior/Principal Environment Artist and a 3D Animator, so the character and creature side is where I would strengthen the team.
+
+As a Senior I review other artists' work, set the asset standard and mentor junior artists. I also teach as founder of my own character art school and I am a master's candidate.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+CV happy to send by reply.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed.
+```
+
+**Cuidados:** o formulário **não tem campo de arquivo**, então o CV vai por link e por resposta ao email deles. Não escreva telefone no texto.
+
+## 35. The Knights of Unity — candidatura espontânea — Wrocław, Polônia
+
+**Link direto:** https://theknightsofunity.elevato.net/pl/nie-znalazles-interesujacego-cie-stanowiska,ja,58 (tem alternador PL/EN no topo)
+**Por que vale:** formulário completo, com pretensão, aviso prévio e até quatro anexos, numa casa polonesa de Unity; Polônia é Europa com patrocínio viável e custo de vida que fecha a conta.
+**A parede:** reCAPTCHA v2 de caixa de marcar.
+**Tempo estimado:** 3 min
+**Não reconferida hoje** (registro de 06/09).
+
+**Cole nos campos:**
+
+| Campo (rótulo em polonês) | O que colar |
+|---|---|
+| Imię * | `Vini` |
+| Nazwisko * | `Cavalcanti` |
+| Adres e-mail * | `contact@vinicavalcanti.art` |
+| Telefon komórkowy * | do documento privado do Drive |
+| Jakie stanowisko Cię interesuje? | `Senior 3D Character Artist / Character Modeler` |
+| Plik CV (até 4 arquivos, 4 MB cada) | `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Kwota (pretensão) | `EUR 45,000` |
+| Okres wypowiedzenia (aviso prévio) | cerca de dois meses |
+| Adres e-mail de quem indicou | deixar vazio |
+| Informacja dodatkowa | TEXTO A, com `I WANT TO RELOCATE to Wroclaw` na primeira linha |
+| Zgoda (consentimento) * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+## 36. Netflix Animation Studios — Head of Character Effects (CFX) — Vancouver, Canadá
+
+**Link direto:** https://explore.jobs.netflix.net/careers/job/790314413902
+**Por que vale:** CFX encosta direto no seu grooming em Houdini, é Vancouver, e o formulário é o mesmo da nº 21 — depois da primeira, esta leva um minuto. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA invisível no envio (sem desafio; do seu navegador passa).
+**Tempo estimado:** 2 min
+
+**Cole nos campos:** exatamente os mesmos da nº 21.
+
+**Cuidados:** é chefia de departamento e CFX é diferencial de apoio, não o seu cargo alvo — por isso vem depois das de modelagem e personagem. Existe a irmã de Sydney, que é a nº 45 desta fila.
+
+---
+
+# BANDA 2 — REMOTO EM EUA, CANADÁ E EUROPA (3 vagas)
+
+## 37. Keywords Studios / Lakshya Digital — Character Artist, Hair Specialist — remoto (Canadá, EUA e Reino Unido)
+
+**Link direto:** https://apply.workable.com/keywords-intl1/j/CA33DB1208/
+**Por que vale:** é a única vaga que a campanha já viu feita **só de grooming**, remota e listando Canadá, EUA e Reino Unido, e você já trabalha remoto internacional todo dia — é a rota mais parecida com a sua vida atual.
+**A parede:** Cloudflare Turnstile, o quadrinho "Verify you are human" acima do botão.
+**Tempo estimado:** 3 min
+**Não reconferida hoje:** o Workable devolve bloqueio de Cloudflare para robô; o registro de 06/09 confirma o anúncio vivo na fonte oficial.
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email / Phone | `contact@vinicavalcanti.art` / telefone do documento privado do Drive |
+| **Address / City / Country** | `Olinda, Pernambuco, Brazil` — **limpe antes** o "Columbus, United States of America" que o autofill escreve |
+| Headline | `Senior 3D Character Artist, 10+ years in stylized characters, character grooming in Houdini` |
+| Summary | o primeiro texto abaixo |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Income Expectations | `Open to aligning with your band for the role; as a reference, I'm looking at around USD 100,000 per year.` |
+| Cover letter | o segundo texto abaixo |
+| Privacy Notice | marcar |
+| Turnstile | marcar o quadrinho e enviar |
+
+**Textos longos:**
+
+```
+Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where I have taken hero characters from first sculpt to engine for almost five years as a remote international contractor. I do character grooming in Houdini and handle hair, fur and facial hair as part of the character, not as a separate step. Portfolio: artstation.com/viniciuscavalcanti
+```
+
+```
+Hair is the part of a character I keep coming back to, so a role built entirely around it is one I want.
+
+For almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt through retopology, UVs, baking, texturing and engine integration, working fully remote from a different country and time zone as an international contractor. That is the exact working pattern this role describes. Before that I modeled and hand-painted characters for the first season of The Wingfeather Saga at Angel Studios.
+
+On grooming specifically: I build character grooms in Houdini, and I work them as part of the character rather than as a bolt-on, which means shape, flow, layering and silhouette read against the sculpt, and the result has to survive deformation and hold up in engine. My published work is stylized, and your requirement lists realistic or highly stylized real-time hair, so I am putting the stylized side forward and I am comfortable working to hair cards and to strand-based setups depending on what the project needs.
+
+I would need work sponsorship for an employment position, and I already work as a remote contractor for a studio abroad, so the contract and remote format here is what I do every day.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+## 38. Gigantic Duck Games — 3D Artist — remoto (estúdio em Borås, Suécia)
+
+**Link direto:** https://giganticduck.com/application/
+**Por que vale:** vaga **aberta** de 3D Artist, **remota**, 40h semanais, em dois projetos; foi a única vaga de 3D aberta de toda a varredura de WordPress. **Reconferida no ar hoje.**
+**A parede:** Contact Form 7 com reCAPTCHA v3 — a tela mente dizendo "error trying to send your message". No seu navegador passa.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Position you are applying for (obrigatório) | `3D Artist` |
+| Location (obrigatório) | `Remote` |
+| Full Name (obrigatório) | `Vini Cavalcanti` |
+| Country (obrigatório) | `Brazil` |
+| Email (obrigatório) | `contact@vinicavalcanti.art` |
+| Discord | deixar vazio |
+| Link to portfolio or other site | `https://www.artstation.com/viniciuscavalcanti` |
+| CV (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| Application Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Extra Attachment | deixar vazio |
+| Where did you hear about this position (obrigatório) | `Other` |
+
+**Cuidados:** **não existe campo de mensagem livre** — a frase de realocação e o caso de visto só cabem na carta anexada, então confira que o PDF da carta está atualizado antes de enviar.
+
+## 39. Obsidian Entertainment — General Application (Remote) — EUA
+
+**Link direto:** https://obsidian.applytojob.com/apply/21Ud1IGKcj
+**Por que vale:** a General Application deles está marcada **Remote e Full Time** e segue aberta; é porta de entrada numa casa grande de RPG. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA de caixa de marcar do JazzHR.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First / Last Name, Email, Phone | dos DADOS FIXOS |
+| Location | `Olinda, Pernambuco, Brazil` |
+| Resume / Cover Letter | os dois PDFs |
+| Website / Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Cargo pretendido | `Senior 3D Character Artist / Character Modeler` |
+| Aceita realocar? | `Yes` |
+| Autorizado a trabalhar nos EUA? | `No` |
+| Precisa de patrocínio? | `Yes` |
+| Mensagem / carta | TEXTO A |
+| reCAPTCHA | marcar a caixa |
+
+**Cuidados:** a Character Artist que existia no digest do 80.lv **não existe mais**; o que resta é esta candidatura geral. Não perca tempo procurando a outra.
+
+---
+
+# BANDA 3 — RESTO DO ESCOPO (6 vagas)
+
+## 40. RocketWerkz — Expressions of Interest — Auckland, Nova Zelândia
+
+**Link direto:** https://careers.rocketwerkz.com/o/expressions-of-interest-auckland/c/new
+**Por que vale:** presencial **com apoio de realocação e de visto dito no anúncio**, que é o sinal mais raro que existe; Nova Zelândia entra pelo escopo da Oceania. **Reconferida no ar hoje.**
+**A parede:** hCaptcha de desafio de imagem do Recruitee, no envio.
+**Tempo estimado:** 3 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Nome, email, telefone | dos DADOS FIXOS |
+| CV e carta | os dois PDFs |
+| Função pretendida | `3D Artist – Senior 3D Character Artist` |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Tem direito de trabalho na Nova Zelândia? | `No` |
+| Está na Nova Zelândia? | `No` |
+| Aceita realocar? | `Yes — I WANT TO RELOCATE and I am fully open to moving for the role` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, the equivalent of AUD 95,000 per year for a studio of this size.` |
+| Campo livre | TEXTO A |
+
+**Cuidados:** clique em **Apply** antes de procurar o botão de envio, como em todo Recruitee.
+
+## 41. Prismatic Studios — 3D Character Artist (IP própria) — Auckland, Nova Zelândia
+
+**Link direto:** https://www.prismaticstudios.co.nz/careers/ (o formulário fica no fim da página)
+**Por que vale:** **3D Character Artist** para a primeira IP original do estúdio, tempo integral — é definir os personagens no começo do projeto, que é onde artista de personagem pesa mais. **Reconferida no ar hoje: a opção "3D Character Artist (Unannounced Internal IP)" está no menu do formulário.**
+**A parede:** nenhum captcha visível; o formulário é Forminator com **campo isca** e dois anexos obrigatórios.
+**Tempo estimado:** 3 min
+
+**Cole nos campos (na ordem da tela):**
+
+| Campo | O que colar |
+|---|---|
+| Name * | `Vini Cavalcanti` |
+| Email Address * | `contact@vinicavalcanti.art` |
+| Cover Letter * (arquivo) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| CV / Resume * (arquivo) | `Vini_Cavalcanti_CV.pdf` |
+| What is your desired position? * | `3D Character Artist (Unannounced Internal IP)` |
+| Message | TEXTO A, com `I WANT TO RELOCATE to Auckland` na primeira linha |
+| "Please do not fill in this field" | **deixar vazio, é caça-robô** |
+
+**Cuidados:** os dois anexos são obrigatórios; se faltar um, a validação recusa sem mensagem clara.
+
+## 42. Jam City — Principal 3D Generalist — San Francisco, EUA (presencial, USD 75.000–120.000)
+
+**Link direto:** https://jobs.lever.co/jamcity/14272af5-efc7-4150-8b59-dcabdaa8c578/apply
+**Por que vale:** **faixa publicada**, pede personagem explicitamente, ZBrush e Substance, e trata anatomia humana e animal. **Reconferida no ar hoje na API oficial do Lever: "Principal 3D Generalist", San Francisco, CA.**
+**A parede:** hCaptcha de desafio de imagem do Lever.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name / Preferred Name | `Vini Cavalcanti` / `Vini` |
+| Email / Phone | dos DADOS FIXOS |
+| City / State / Country | `Olinda` / `Pernambuco` / `Brazil` |
+| LinkedIn / Portfolio | dos DADOS FIXOS |
+| Marcar "I agree" | marcar |
+| Está empregado hoje? | `Yes` |
+| Já trabalhou na Jam City? | `No` |
+| Autorizado a trabalhar nos EUA? | `No` |
+| Precisa de patrocínio? | o texto abaixo |
+| Como soube da vaga | `LinkedIn` |
+| Gênero e veterano | `Decline to self-identify` |
+| Pretensão, se pedir | `Aligned with the posted range for the role, at the lower end (USD 75,000). Open to aligning with your band.` |
+
+**Textos longos:**
+
+```
+Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work remotely for a US studio as an international contractor and can keep working remotely while the process runs.
+```
+
+**Cuidados:** é presencial em San Francisco, ou seja, depende inteiramente do patrocínio — por isso está na terceira banda e não no topo, apesar da faixa publicada.
+
+## 43. Valve — 3D Character Artist — Bellevue, WA, EUA
+
+**Link direto:** https://www.valvesoftware.com/en/jobs?job_id=2
+**Por que vale:** personagem 3D na Valve, formulário curtíssimo, e é uma das casas que patrocinam sem drama. **Reconferida no ar hoje.**
+**A parede:** reCAPTCHA com caixa visível.
+**Tempo estimado:** 2 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Portfolio / links | `https://www.artstation.com/viniciuscavalcanti` e `https://vinicavalcanti.com` |
+| Como descobriu a vaga | `Valve careers page` |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Campo livre, se houver | TEXTO B |
+| reCAPTCHA | marcar a caixa |
+
+## 44. DreamWorks Animation — Visual Development Artist — Glendale, CA, EUA
+
+**Link direto:** https://jobs.smartrecruiters.com/NBCUniversal3/744000143937898
+**Por que vale:** **visual development** é metade do seu título, no time de longa da DreamWorks. **Reconferida no ar hoje na API oficial do SmartRecruiters: "DreamWorks Feature - Visual Development Artist", Glendale.**
+**A parede:** verificação humana do SmartRecruiters (desafio de deslizar) contra IP de automação.
+**Tempo estimado:** 4 min
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Upload resume / cover letter | os dois PDFs |
+| Nome, email, telefone, localização | dos DADOS FIXOS |
+| LinkedIn / Portfolio | dos DADOS FIXOS |
+| Autorizado a trabalhar nos EUA? | `No` |
+| Precisa de patrocínio? | `Yes` |
+| Aceita realocar para Glendale? | `Yes` |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around USD 100,000 per year.` |
+| Self-ID | `I choose not to disclose` |
+| Carta / mensagem | TEXTO A |
+
+**Cuidados:** é híbrido com três dias no escritório e presencial nos EUA, ou seja, depende de patrocínio — daí a posição na terceira banda.
+
+## 45. Netflix Animation Studios — Head of Character Effects (CFX) — Sydney, Austrália
+
+**Link direto:** https://explore.jobs.netflix.net/careers/job/790317396721
+**Por que vale:** mesma vaga da nº 36 no outro estúdio; a Austrália é rota de visto mais direta que a americana e o formulário é o mesmo, então custa um minuto.
+**A parede:** reCAPTCHA invisível no envio.
+**Tempo estimado:** 2 min
+**Não reconferida hoje** (a irmã de Vancouver foi, e é a mesma requisição em outro estúdio).
+
+**Cole nos campos:** exatamente os mesmos da nº 21.
+
+**Cuidados:** **não aplique** na `790317298520` (Character Modeling Supervisor, Sydney): você já aplicou nela em 31/08.
+
+---
+
+# O QUE FICOU DE FORA, E POR QUÊ
+
+Para você não gastar minuto reabrindo o que já foi decidido.
+
+**Já enviadas (não repita):** Sony Pictures Imageworks (Texture, Modeler, Look Dev, Expression of Interest), 3Doubles Producciones, Bongfish, Juggler Games, Twin Harbour, Mikros, Miam!, Teyon, beffio, Digic, Lightbox, Mattel, Netflix Visual Development Artist Ink, Disney TV Animation Character Design Lead, EA Character Artist 215657, Techland Character Artist (enviada em 31/08 pelo portal oficial — as duas fichas REF64D do SmartRecruiters são a mesma requisição, então ficaram fora).
+
+**Sem patrocínio ou com exigência de autorização prévia (chance material zero):** thatgamecompany 3D Character Artist ("unable to sponsor"), Atomic Cartoons CG Designer (exige residência na Colúmbia Britânica desde 2025), Stirling Animation (exige residir no Reino Unido fora de Londres, e é contractor), The Third Floor (exige residência em estado americano listado e E-Verify), People Can Fly (exige residir na Polônia ou no Canadá), Keywords Studios Austrália (remoto só dentro da Austrália), Oddshot (exige morar em Flandres), Gamedia (exige morar a 40 km de Alkmaar).
+
+**Disciplina que não é sua:** Skydance Environment Modeling Artist (Madri), Highdive Senior Modeler (Toronto, modelagem de cenário), Sandbox Interactive Lead 3D Environment Artist, Netflix Character Designer Ink e Skydance Character Designer (design 2D), Netflix Story Artist e as duas Environment Modeling Supervisor, Riot Manager Concept Art (Singapura), Amuse Concept Designer, Plarium Character Concept Artist.
+
+**Porta é email, não formulário (o Apps Script já cuida):** Cakefish/Dreamthorn Principal Character Artist, THQ Nordic Mobile/HandyGames, Alt.VFX, FIN Design, Nabi Studios, MegaZebra, Supermassive, Little Chicken, Red Rover, Oddshot, RaceWard, The Game Kitchen, Gamedia, Inverge e as demais da fatia de email.
+
+**Idioma eliminatório:** Sony Pictures Imageworks Senior Look Development Artist (Montréal) e Rodeo FX *Artiste de développement visuel Senior* exigem francês fluente — francês já derrubou duas candidaturas desta campanha.
+
+**Porta quebrada ou conta obrigatória:** Gamecan (certificado TLS quebrado do lado deles, ninguém consegue aplicar), ZEILT (exige conta e as vagas pedem endereço fiscal no Québec), Mainframe (UKG Ready com conta de candidato), Ánima Kitchent (InfoJobs exige conta), FIN Design (portal exige conta), EA Vancouver 215788 (a requisição devolve *Internal server error* no lado da EA em cinco tentativas; se quiser tentar, entre na sua conta e veja em *Job Applications* se aparece "Finish your application").
+
+**Quadros que não abriram e não confirmam vaga da sua disciplina:** KingsIsle, PikPok, Velan, Digital Domain, Digital Sun, Electric Theatre, Arkane, Tarsier, Carbonated, PLAYERUNKNOWN, VSTEP.
+
+**Parede que também atrapalha você, ficou por último com ressalva:** Bulkhead Open Application [Remote] — exige **print da aba Most Played do seu perfil Steam** e o contrato é por projeto, fora da sua regra de vaga fixa. Se sobrar tempo no fim das três horas: https://careers.bulkhead.com/jobs/5744150-open-application-remote/applications/new
