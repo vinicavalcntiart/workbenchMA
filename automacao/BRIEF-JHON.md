@@ -209,6 +209,27 @@ fecha a linha**. Acrescentar texto ao fim de uma nota buscando por `,false,` e c
 texto **fora** das aspas e derruba a página inteira. Rode `sh automacao/valida-dashboard.sh` antes
 de todo commit, sem exceção.
 
+**O MESMO PEDIDO DE VAGA APARECE EM DOIS QUADROS DO GREENHOUSE, com IDs diferentes. Medido em
+07/09 às 00h30 e é a armadilha mais silenciosa da regra 18, porque nada na tela avisa.** A 2K
+publica a mesma requisição no quadro da holding (`boards-api.greenhouse.io/v1/boards/2k`) **e** no
+quadro do estúdio (`.../cloudchamberen`). A Lead Character Artist aparece **quatro vezes**: 2k
+`7888173003` (Montréal) e `7888174003` (Novato), cloudchamberen `7888170003` (Montréal) e
+`7888172003` (Novato). Quatro IDs de anúncio, quatro URLs, e **uma requisição só**. A prova está num
+campo que a própria API entrega: **`internal_job_id`, que nas quatro é `5834551003`**. Comparar
+título, cidade e ID do anúncio, como a regra 18 mandava, **não pega este caso**: os IDs são
+diferentes de verdade. Então a regra ganha um passo obrigatório:
+
+> Antes de aplicar em vaga do Greenhouse, leia `internal_job_id` em
+> `https://boards-api.greenhouse.io/v1/boards/<quadro>/jobs/<id>` e compare com o das candidaturas
+> já enviadas. **`internal_job_id` igual é a mesma vaga**, mesmo que quadro, URL, cidade e ID do
+> anúncio sejam outros.
+
+Eu mesmo caí nisso em 07/09: varri o quadro `cloudchamberen`, ele parecia intocado, e comecei a
+enviar a Lead Character Artist de Montréal. **O Gmail é que salvou**: havia email da 2K de 06/09 às
+17h30 recusando exatamente essa vaga, de uma candidatura de 02/09 pelo quadro `2k`. Interrompi antes
+do envio. Se eu tivesse confiado no painel, seria a segunda candidatura repetida da campanha para a
+mesma Cloud Chamber. **Por isso a conferência no Gmail antes de enviar não é zelo, é etapa.**
+
 **E o identificador do anúncio não é identidade de vaga.** Na Imageworks o anúncio de "Modeler"
 gerou confirmação nomeando "Experienced Modeler", que já tinha candidatura. Quem diz qual requisição
 recebeu a candidatura é o **email de confirmação**. Além disso, a caixa de email guarda candidatura
