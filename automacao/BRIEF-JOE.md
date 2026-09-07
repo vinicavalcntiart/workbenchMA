@@ -152,6 +152,25 @@ Tudo o mais é regra fixa da campanha, sem exceção:
 - **Sem travessão. Sem emoji. Nunca a palavra Brazil.** Sem "I hope this finds you well".
 - Nunca escrever nada que sugira hesitação em mudar de país.
 - Nunca revelar salário atual, prazo de contrato, situação financeira, telefone ou endereço.
+- **NEGRITO ESTRATÉGICO, e ele tem forma fixa. Correção do Vini em 07/09.** A carta fria é o
+  canal que menos converte da campanha inteira, e ninguém a lê, todo mundo a varre. Então ela
+  precisa entregar quem ele é em três segundos, e quem faz isso é o negrito. **Marque estas
+  coisas, e só estas**, no `htmlBody`:
+
+  1. **Senior 3D Character Artist with more than 10 years** — quem ele é e há quanto tempo.
+  2. **The Wingfeather Saga season 1** — o crédito, que é a prova social mais forte que ele tem.
+  3. **E-Line Media** — que ele é sênior num estúdio de verdade agora, não entre empregos.
+  4. **more than 45 projects with over 60 characters** — o volume do portfólio.
+  5. **I want to relocate** — em casa fora dos Estados Unidos, porque é a dúvida número um do
+     leitor e responder antes da pergunta é o que mantém a carta viva.
+  6. **grooming in Houdini** quando a casa faz cabelo e pelo, e **um gancho da própria casa**,
+     o filme, a criatura, a divisão. No máximo um destes dois.
+
+  **Teto de seis marcas, e nunca frase inteira em negrito.** Negrito em tudo é negrito em nada:
+  se metade do parágrafo está marcada, o olho não pousa em lugar nenhum e o efeito se perde.
+  Marque o pedaço curto, três a oito palavras, dentro da frase, deixando o resto normal.
+  O corpo em texto puro vai **sem marcação nenhuma**, porque `**asterisco**` em email de texto
+  puro aparece literal e parece rascunho não terminado.
 - Frase fixa do portfólio: mais de 45 projetos, mais de 60 personagens, e os projetos
   pessoais entre as peças mais fortes.
 - **OS TRÊS LINKS, sempre.** Correção do Vini em 03/09: as quatro cartas das casas
