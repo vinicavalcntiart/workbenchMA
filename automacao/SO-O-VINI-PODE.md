@@ -57,6 +57,25 @@ primeira opção da lista.
 
 ---
 
+## 0b. GUARDE A SENHA NOVA DA CONTA EA no doc privado do Drive
+
+Para destravar o portal da EA foi preciso fazer a **redefinição oficial de senha** da sua conta
+de candidato, porque a antiga não estava disponível nesta sessão. **A senha nova foi entregue a
+você no chat e NÃO está escrita em nenhum arquivo deste repositório, que é público** — conferi
+os arquivos e o histórico do git, os dois limpos.
+
+Guarde-a no doc privado do Drive "CAMPANHA - dados pessoais dos formulários", ou troque por uma
+sua. Enquanto ela existir só no chat, ela se perde quando esta sessão terminar.
+
+**O que isso destravou, e é grande:** o painel tinha a EA como parede desde 03/09, e não era.
+O que travava era o fluxo: quem **já tem conta** não pode usar o bloco *First time applicant*,
+porque o passo `/Register` devolve *"There's an existing record with that email"* e não envia
+nada. Logado, o assistente vai até o fim. Isso abre o portal que cobre **BioWare, Motive
+Montréal, Criterion, Maxis, DICE e Ripple Effect**. Receita campo a campo e cinco armadilhas em
+`automacao/respostas-formularios.md`.
+
+---
+
 ## 1d. UM PDF DE PORTFÓLIO destrava uma classe inteira de formulário
 
 Hoje **duas** candidaturas pararam pelo mesmo motivo, e não é captcha: o formulário exige
