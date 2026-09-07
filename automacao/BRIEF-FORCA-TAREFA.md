@@ -203,3 +203,28 @@ o arquivo de respostas**, sempre.
 
 E no mesmo board há **níveis da mesma função**: *Modeler* e *Experienced Modeler*, *Texture
 Artist* e *Experienced Texture Artist*. **Mande só na sênior** — as duas é candidatura repetida.
+
+## Deduplicar por `done=false` é o contrário do necessário. Custou duas repetidas.
+
+Em 07/09 eu mesmo mandei **duas candidaturas repetidas** para a Sony Pictures Imageworks,
+na mesma noite em que escrevi a `garra.sh` para impedir exatamente isso. A *Experienced
+Modeler* já tinha ido em **02/09** e a *Experienced Texture Artist* em **05/09**.
+
+**Como passou:** escolhi no que trabalhar filtrando o painel por `done=false`. As vagas de
+Vancouver estavam com `done=true` e por isso ficaram **invisíveis para o meu filtro**. Depois
+reachei as mesmas requisições pela API do Greenhouse e tratei como novidade. Peguei a garra, mas
+a garra só protegia contra **dois agentes ao mesmo tempo**, não contra trabalho feito dias antes.
+
+**A lição, e ela é sutil:** filtrar por `done=false` para **escolher** está certo; conferir por
+`done=false` para **deduplicar** é o oposto do necessário, porque o que já foi feito é
+justamente o que está com `done=true`. Dedupe se faz contra o **arquivo inteiro**, sem filtro de
+estado, pela **URL ou pelo ID da requisição** — nunca pelo nome do estúdio, que aparece em várias
+linhas e cujo primeiro casamento não é o relevante.
+
+**Conserto estrutural, já no ar:**
+
+    sh automacao/garra.sh checa "<url-da-vaga>"                       # livre | JA-FEITO:<onde>
+    sh automacao/garra.sh pega "<Estudio>" "<Vaga>" <nome> "<url>"    # recusa com JA-FEITO
+
+Passe **sempre a URL** como quinto argumento do `pega`. Ele procura a URL e o ID numérico longo
+da requisição no `docs/index.html` e no `processados.csv` e recusa com saída 4.
