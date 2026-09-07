@@ -816,3 +816,28 @@ Fechado em 07/09, para ninguém gastar rodada nisso de novo.
 Ou seja: o `1015` é do nosso IP e o Turnstile é da plataforma. **Nenhuma das duas é do estúdio**,
 e nenhuma se contorna. Vaga de Workable vira dossiê à mão, sempre, e o dossiê agora sai completo
 e correto de graça pela API de formulário.
+
+## O PDF de portfólio existe, mas o ARTSTATION é a prioridade (regra do Vini, 07/09)
+
+O `Vini_Cavalcanti_Portfolio.pdf` está em `$SCRATCH/apply/` (2,56 MB, 7 páginas), baixado da
+pasta Vagas do Drive dele. **Ele não substitui o link.** Regra dita por ele ao entregar o
+arquivo: *"lembre que isso é só nos que precisa mesmo, a prioridade é mandar o artstation e não
+o pdf de portfolio"*.
+
+Como decidir, campo a campo:
+
+1. **Há campo de link, URL, portfolio, website ou "share your work"?** Então vai
+   `https://www.artstation.com/viniciuscavalcanti` e **o PDF não entra**, mesmo que exista um
+   campo de anexo opcional ao lado. Anexo opcional não se preenche só porque está lá.
+2. **O upload é obrigatório e não existe alternativa de link?** Aí sim o PDF, e só aí.
+3. **O campo aceita só imagem** (o `accept` do Engine Room é `audio/*,video/*,image/*`, que
+   recusa PDF): o PDF não serve, continua sendo caso de mão do Vini.
+
+O motivo é dele e é bom: o ArtStation tem mais de 45 projetos com mais de 60 personagens e é
+atualizado; o PDF é um recorte de sete páginas, congelado em 26/08. Mandar o recorte quando dava
+para mandar a obra inteira é perder por escolha nossa.
+
+**Detalhe de tamanho, medido:** 2,56 MB passa no teto de 3 MB do GoHire, mas **estoura qualquer
+formulário com limite de 2 MB**. Antes de anexar, leia o limite que o formulário declara
+(`uploadMaxSize` nas APIs que expõem isso) e, se não couber, registre como à mão em vez de
+mandar arquivo cortado.
