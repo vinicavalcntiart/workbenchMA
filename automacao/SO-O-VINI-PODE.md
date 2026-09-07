@@ -27,6 +27,41 @@ sobreposições que nunca somem e interceptam os cliques.
 
 ---
 
+## 1b. Certain Affinity: DUAS vagas de Senior Material Artist, Vancouver e Toronto
+
+**Vancouver:** https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist
+**As duas no quadro do estúdio:** https://certainaffinity.com/career
+
+Estúdio AAA de verdade, com trabalho em **Halo, Doom, Call of Duty e Left 4 Dead**, e a vaga é
+**material e texturização**, que é a sua disciplina. São **duas requisições separadas**, uma por
+cidade, e as duas em Canadá anglófono, que é a prioridade número um.
+
+Ela quase não existiu para nós: o `certainaffinity.com` voltava 403 no curl e a campanha o tinha
+como morto. Aberto com navegador, estava vivo o tempo todo.
+
+**Preenchi o formulário inteiro e conferi campo a campo em 07/09.** Só falta marcar o captcha:
+é reCAPTCHA **v2 de caixa**, medido pelo iframe âncora de 304 por 78 pixels, então não adianta
+tentar de outro IP. Não há pergunta de autorização de trabalho nem de salário.
+
+Campos, todos do JazzHR: `Vini` / `Cavalcanti` / `contact@vinicavalcanti.art` / telefone **com
++55** / cidade `Olinda` / província `Pernambuco` / CV anexado. Endereço e CEP são opcionais.
+
+**Detalhe que confunde:** o campo de arquivo do JazzHR é **invisível**, então o nome do CV não
+aparece na tela mesmo com o anexo dentro. Ao contrário do Wix, aqui a prova é o próprio input.
+
+---
+
+## 1c. Larian Studios, Gent: Character Artist, candidatura aberta permanente
+
+A casa de **Baldur's Gate 3**. É a candidatura espontânea permanente do time de Character Art, e
+o formulário do Lever foi preenchido inteiro e conferido: nome, email, telefone, local Ghent,
+disposto a presencial e a realocar, 10+ anos, ArtStation.
+
+**A parede:** hCaptcha de imagem, no fim, antes do Submit. Dossiê campo a campo em
+`respostas-formularios.md`. Para você é menos de um minuto.
+
+---
+
 ## 2. Rainbow SpA, Roma e Milão: três portas abertas de uma vez
 
 https://www.rbw-cgi.it/careers/
