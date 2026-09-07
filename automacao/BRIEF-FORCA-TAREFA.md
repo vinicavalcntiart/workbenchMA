@@ -1152,3 +1152,47 @@ registrar a limitação em vez de fingir que enviou. Mas o sintoma chegou até m
 de "zero candidaturas nesta rodada", que é indistinguível de fila seca. **Ferramenta que
 falta tem que gritar, não sussurrar dentro de um número baixo.** Sempre que um resumo trouxer
 zero envios, a primeira pergunta é se a ferramenta estava lá, e não se a fila estava vazia.
+
+## Formulário que volta VAZIO não prova fracasso, prova só que não sabemos (07/09, 21h)
+
+A regra escrita até hoje era: "formulário que apenas LIMPA não prova nada". Ela está certa e
+continua valendo **como regra de não contar vitória**. Mas ela vinha sendo lida como se
+tela vazia significasse que a candidatura NÃO entrou, e isso é a metade errada.
+
+Medido hoje na **REALTIME UK**: a candidatura de 08h51 tinha sido registrada como
+"preenchida sem prova, formulário voltou vazio". À noite, pedindo um link novo de acesso ao
+Connect e entrando com os cookies, o `/connect/dashboard` listava, em "Your applications",
+**uma candidatura com o título exato "Register Your Interest", id 253450424**. Ela tinha
+entrado. A tela vazia era só a tela. Mesma lição que a Beffio já tinha dado.
+
+Então tela vazia tem TRÊS desfechos possíveis, não dois: entrou, não entrou, ou não sabemos.
+E o único jeito de sair do "não sabemos" é **olhar do lado do ATS**: conta de candidato,
+painel do Connect, email de recibo, ou a própria API. Vale o minuto, por dois motivos
+opostos e igualmente caros: candidatura que entrou e não foi contada some da campanha, e
+candidatura que não entrou e foi contada vira buraco silencioso.
+
+**Consequência prática:** toda entrada do painel com nota do tipo "preenchida sem prova",
+"formulário voltou vazio" ou "não sei se entrou" é fila de reconferência pelo lado do ATS,
+não é derrota registrada.
+
+## Duas candidaturas para a UPP no mesmo dia, e a causa foi ler o status sem ler o corpo
+
+A **UPP de Praga** provavelmente recebeu Texture Artist e Senior 3D Generalist **duas vezes**
+em 07/09. Dois agentes bateram no mesmo endpoint (`POST www.upp.cz/api/submit-application`)
+com horas de diferença. O primeiro recebeu **HTTP 200 e não leu o corpo**, então não
+reconheceu o envio e não marcou `done=true`; o segundo, vendo a entrada aberta, mandou de
+novo e só depois achou o registro do primeiro no `processados.csv`.
+
+O corpo que o primeiro não leu dizia, com todas as letras:
+`{"success":true,"message":"Thank you for your application! We will get back to you as soon as possible."}`
+
+**A regra: 200 não é resposta, é envelope. Leia o corpo.** Um POST de candidatura só vira
+registro depois de ler o JSON e achar o `success` ou a mensagem de confirmação — e quando
+achar, marque `done=true` na hora, porque vitória não registrada é a matéria-prima da
+candidatura repetida. Foi assim que a Union VFX e a Sony Pictures Imageworks receberam duas,
+e agora a UPP. **Não reenviar para a UPP.**
+
+Achado bom da mesma rodada, que vale como método: o veredito antigo da UPP dizia "parede de
+rede, clique trava". Não era rede nem captcha — era um `<div class="preloader">` interceptando
+os eventos de ponteiro. **O endpoint real estava no JS da própria página.** Antes de chamar
+uma porta de parede, leia o JavaScript que a desenha.
