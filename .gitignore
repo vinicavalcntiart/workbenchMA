@@ -3,3 +3,13 @@
 
 # Permissões locais do Claude Code: são da máquina, não do repositório.
 .claude/settings.local.json
+
+# Paginas baixadas por varredura de agente. Em 07/09 apareceram ax.html e fc.html
+# na RAIZ do repositorio, que e PUBLICO, porque o curl rodou com o diretorio de
+# trabalho errado em vez do scratchpad. Sao regeneraveis e nunca devem ser
+# versionadas. A regra e so da raiz: docs/index.html, que e o painel, continua
+# versionado normalmente.
+/*.html
+/*.json
+!package.json
+!package-lock.json
