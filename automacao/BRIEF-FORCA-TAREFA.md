@@ -189,3 +189,17 @@ Outras três armadilhas do mesmo formulário, e a ordem entre elas importa:
    de arquivo **não tem atributo `name`, só `id`**.
 3. **Telefone é `intl-tel-input`** e devolve *"Phone is invalid"* para número sem país. O setter
    nativo não acorda o plugin: **digite** o número internacional inteiro, com o `+` na frente.
+
+## Greenhouse: o ID de cada pergunta muda A CADA VAGA, mesmo no mesmo board
+
+Medido em 07/09 na Sony Pictures Imageworks. A *Experienced Modeler* usa
+`question_7972538003` para "Have you worked at Imageworks before?"; a *Experienced Texture
+Artist*, do **mesmo estúdio e do mesmo board**, usa `question_7972757003` para a mesma pergunta.
+
+Copiar o arquivo de respostas da vaga irmã **parece funcionar**: o script não levanta erro
+nenhum, porque ele apenas não acha os campos. O envio volta com *"Resume/CV is required"* e
+*"This field is required"*, e uma tentativa se perde. **Mapeie os campos DA VAGA antes de montar
+o arquivo de respostas**, sempre.
+
+E no mesmo board há **níveis da mesma função**: *Modeler* e *Experienced Modeler*, *Texture
+Artist* e *Experienced Texture Artist*. **Mande só na sênior** — as duas é candidatura repetida.
