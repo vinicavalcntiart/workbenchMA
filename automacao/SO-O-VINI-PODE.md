@@ -1,10 +1,37 @@
-# Só o Vini pode fazer — refeito em 07/09, 06h40 UTC
+# Só o Vini pode fazer — estado das 11h00 UTC de 07/09
 
-O arquivo anterior era de 02h50 e ficou velho em quase tudo. Este é o estado real de agora.
-Nada aqui é "tente de novo": em todos os casos alguém já foi até a parede e voltou com o mapa.
+Ordenado pelo que rende mais por minuto do seu tempo. Nada aqui é "tente de novo": em todos os
+casos alguém já foi até a parede e voltou com o mapa.
 
-Ordenado pelo que rende mais por minuto do seu tempo.
+## O que a madrugada rendeu, em números que você pode conferir
 
+**109 estúdios com candidatura por formulário hoje** (contagem estrita, que só aceita prova de
+tela, URL de confirmação ou email de recebimento). As que mais valem:
+
+| Estúdio | Vaga | Onde | Detalhe |
+|---|---|---|---|
+| **Respawn / EA** | Principal Materials Artist (Apex Legends) | **Vancouver** | faixa publicada **CAD 133.500 a 186.400** |
+| **EA SPORTS FC** | Character Artist, **efetiva** | **Vancouver** | faixa **CAD 92.900 a 129.200** |
+| **Sony Pictures Imageworks** | Experienced Modeler | **Vancouver** | casa do Spider-Verse |
+| **Sony Pictures Imageworks** | Experienced Texture Artist | **Vancouver** | |
+| **Bulkhead** | Open Application **IN-STUDIO** | Derby, UK | patrocínio de visto e realocação ditos por escrito |
+| **Mob Entertainment** | Senior Environment Artist | **remota, EUA** | faixa publicada |
+| Keen Software House, BoomBit, Bad Rhino, Embark, Envar, Wargaming, Bluehole, Unknown Worlds, PlayQ, Digital Confectioners, Altered FX, Chakrra e outras | | | |
+
+**Cinco pessoas escreveram de próprio punho hoje, e quatro elogiaram o seu material.** O CEO da
+Boxelware: *"Your portfolio is truly impressive."* Uma **artista** da MoonMonster: *"Thanks for
+your impressive application."* A Head of HR Europe da tinyBuild disse que não há vaga que alinhe
+com o seu perfil e que **vai guardar seus dados**. A PushkaStudios pediu para manter contato.
+
+Isso importa porque, com centenas de candidaturas e nenhuma entrevista, a leitura fácil seria que
+o portfólio não chama atenção. **Não é o que os textos dizem.** Quem abriu, elogiou. O que falta é
+vaga aberta na hora certa, que é outro problema.
+
+**E a notícia dura, medida e não sentida:** o estoque de vaga por formulário nos estúdios que a
+campanha já conhece **secou**. Um agente listou 123 quadros de ATS, **2.791 vagas, 165 na sua
+disciplina**, e sobrou **uma** enviável. O resto é parede: BambooHR com reCAPTCHA, Lever com
+hCaptcha, SmartRecruiters com DataDome, Workable recusando o nosso IP. Daqui para frente o que
+rende é **quadro de estúdio novo** e **gente com nome e email**, não mais o mesmo conjunto.
 ---
 
 ## 0. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado
@@ -88,6 +115,23 @@ verdade, todas em Vancouver**. Quatro já foram enviadas.
 
 Receita campo a campo e as armadilhas em `automacao/respostas-formularios.md`; o censo em
 `automacao/ea-portal-0709.csv` e o script `automacao/lista-ea.sh`, que refaz tudo em um minuto.
+
+---
+
+## 1e. Quatro vagas novas mapeadas hoje, todas paradas só no captcha
+
+Preenchidas e conferidas campo a campo, com dossiê em `automacao/respostas-formularios.md`.
+
+- **Offworld Industries, 3D Generalist** — New Westminster, **Colúmbia Britânica**, híbrido, com
+  **faixa publicada de CAD 80.000 a 95.000**. Parede: reCAPTCHA do BambooHR. É a mais forte das
+  quatro: Canadá anglófono, faixa aberta, disciplina compatível.
+- **Image Engine, Texture & Look Dev Artist (Mid)** — Vancouver, contrato curto. reCAPTCHA do
+  BambooHR. Atenção: a **General Application** deles exige morar na Colúmbia Britânica, mas
+  **esta requisição nomeada não tem esse veto**.
+- **Skydance Animation, Environment Surfacing LEAD** — Madri. hCaptcha do Lever. O quadro deles
+  tem sete requisições de surfacing, e **só esta é de nível seu**: as outras cinco são Trainee e
+  Junior, e mandar nelas queima a porta.
+- **Stirling Animation, Environment Surfacing Artist** — Escócia. reCAPTCHA do BambooHR.
 
 ---
 
