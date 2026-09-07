@@ -2651,3 +2651,81 @@ A campanha não tem PDF de portfólio, e pôr o CV ali seria mentir sobre o que 
 
 **Teamtailor:** POST 200 não é candidatura completa — só depois de abrir o link do email
 *"Complete the application"* a URL vira `/thanks`.
+
+## EA (jobs.ea.com, Avature): a porta ESTAVA aberta, e o que travava era o fluxo errado
+
+Medido inteiro em 07/09 mandando a **Principal Materials Artist (Apex Legends)** da Respawn,
+requisição **214789**, Vancouver-Great Northern Way / Los Angeles-Chatsworth / Madison.
+Terminou com **prova tripla**: URL `jobs.ea.com/en_US/careers/Success?jobId=214789`, o texto
+*"Thanks for applying to Electronic Arts! We'll take it from here."* na tela, e o email de
+`EAcareers@ea.com` às 08h13 com o assunto *"Thanks for applying to Principal Materials Artist
+(Apex Legends) (Req ID 214789) at Electronic Arts!"*.
+
+Isto importa muito além da Respawn: o mesmo portal cobre **BioWare, Motive Montreal, Criterion,
+Maxis, DICE e Ripple Effect**, e o painel tinha a EA registrada como parede desde 03/09 por causa
+de um `Internal server error` numa requisição específica. **Não é parede.**
+
+### O erro que travava, e ele é de FLUXO, não de campo
+
+A tela `ApplicationMethods?jobId=<id>` tem duas metades: o login em cima e o bloco
+**"First time applicant"** embaixo. O bloco de candidato novo funciona lindamente — anexa o CV,
+o Avature **lê o PDF** e já preenche empresa, cargo, datas e formação — e então o passo `/Register`
+devolve, em vermelho, **"There's an existing record with that email"** e **nada é enviado**.
+Ou seja: quem já tem conta (o Vini tem, desde 03/09) **tem que ENTRAR**, e o caminho de candidato
+novo é um beco sem saída que consome a rodada inteira parecendo que vai dar certo.
+
+Com a sessão aberta, a URL vira `ApplicationGeneralInformation?jobId=<id>` e **o perfil já vem
+preenchido**: endereço, telefone, histórico, formação, idiomas, skills e link do portfólio.
+
+### Onde é preciso responder, vaga a vaga
+
+| Campo | Resposta |
+|---|---|
+| `7836` How did you hear about this opportunity? | **EA Careers Website** |
+| `7837` Are you willing to relocate? | **Yes** |
+| `7841` Have you ever worked at EA in any capacity? | **No** |
+| `17623` How many years of relevant experience | **More Than 3 Years** (é a faixa mais alta da lista) |
+| `17624` Bootcamp/diploma/serviço militar nos últimos 18 meses | **No** (o mestrado está EM CURSO, não concluído) |
+| `22155` Cover Letter (arquivo) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| `17505` aceite do **NDA de entrevista** | marcar |
+| gênero (Voluntary Self Disclosure) | **Choose not to Disclose** |
+| `3679-2` **Do you now or in the future require immigration sponsorship?** | **Yes** — é a verdade e é o campo em que não se pode errar |
+| `3679-3` Sujeito a restrição que impeça de trabalhar para a EA? | **No** |
+| `3684` I certify that all information is true and complete | marcar |
+
+Os ids **mudam entre o fluxo de candidato novo e o fluxo logado** (a mesma pergunta de anos de
+experiência é `17621` num e `17623` no outro), então **mapeie os campos da vaga**, como no Greenhouse.
+
+### As cinco armadilhas medidas, e três delas parecem outra coisa
+
+1. **Id que começa com dígito não entra em seletor CSS.** `#162`, `#175-save` e `#7836` levantam
+   `SyntaxError: not a valid selector` e **todo campo volta vazio**, o que parece formulário
+   quebrado e é seletor. Use `[id="162"]`. É a mesma lição do HubSpot embutido.
+2. **A página do Avature monta VAZIA quando o bundle dela falha na rede.** A URL está certíssima,
+   o passo está certo, e não existe um único `<input>`. Isso NÃO é login expirado nem vaga fechada:
+   é para **recarregar** até montar. Clicar no gatilho de upload não adianta, porque quem cria o
+   `#resumeFile` é justamente o JavaScript que não carregou.
+3. **O POST do Continue devolve 502 com frequência** e a página volta para `ApplicationMethods`.
+   Também não é recusa: reanexe o CV e clique de novo.
+4. **O botão Next da tela do NDA fica `disabled`** enquanto a caixa de aceite não estiver marcada,
+   e o clique estoura em *timeout de 30s* com a mensagem "element is not visible". Parece página
+   travada e é a caixa. O rótulo dela é **só um asterisco**, sem texto nenhum, então casar por
+   rótulo não acha: o que identifica é o container `.AcceptanceCheckboxField` com `required`.
+5. **O `select2` do Avature busca no servidor.** País, Estado e Código do país do telefone são
+   combobox que nascem com o `<select>` VAZIO e só carregam ao digitar; ler a lista cedo devolve
+   `["Searching…","Searching…"]` e o código conclui "não achei Brazil". Espere a lista **parar de
+   buscar**. E o Estado só carrega **depois** de o País estar escolhido.
+
+E uma regra que este envio confirma: **o `<select>` desses campos não tem o atributo `required`**,
+só o rótulo tem asterisco. Checagem genérica de "obrigatório vazio" **não pega** País, Estado e DDI.
+Guarde uma verificação explícita para eles, ou o envio sai sem endereço e volta com erro.
+
+### Conta de candidato
+
+A senha antiga não estava disponível para esta rodada. A redefinição foi feita pelo fluxo oficial
+(`/careers/Login` → *Forgot your password?*, e o link chega de `noreply@ea.avature.net` com o
+assunto *Password activation*). **A senha nova NÃO está escrita aqui nem em nenhum arquivo do
+repositório, que é público** — ela foi entregue ao Vini no resumo da rodada e o lugar dela é o
+documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Detalhe do fluxo: a página
+de redefinição tem **dois** campos de senha e o botão se chama **Next**, com `id="submitButton"`;
+abrir `/careers/ForgotPassword` direto pela URL devolve **página vazia**, o link tem que ser clicado.
