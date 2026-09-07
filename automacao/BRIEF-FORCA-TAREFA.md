@@ -296,3 +296,32 @@ Todos medidos em 07/09, e todos custaram diagnóstico errado escrito no painel.
 
 E um detalhe de proxy: `boards-api.eu.greenhouse.io` está **bloqueado por política do proxy**,
 mas `job-boards.eu.greenhouse.io` responde 200. Use o segundo.
+
+## A CAIXA DO VINI entrega o token do ATS de graça. Pare de adivinhar.
+
+Vários agentes já mediram que **adivinhar o token do ATS pelo nome do estúdio quase nunca
+acerta** — um deles gerou 1.548 tokens a partir de 730 nomes e só o Greenhouse rendeu. Testei
+hoje 14 estúdios europeus conhecidos no Greenhouse e **todos deram 404**: eles simplesmente não
+usam Greenhouse.
+
+**O atalho estava na caixa de entrada o tempo todo.** O Teamtailor envia de
+`<token>.teamtailor-mail.com`, então **cada confirmação já recebida entrega o token exato**:
+
+    no-reply@fatshark.teamtailor-mail.com          -> fatshark
+    no-reply@ghostship.teamtailor-mail.com         -> ghostship
+    no-reply@untoldstdfg1324556.teamtailor-mail.com -> untoldstdfg1324556
+
+**A Untold é a prova de que isto não é conveniência, é a única via:** ninguém adivinharia
+`untoldstdfg1324556` nunca. E o mesmo vale para nome de pessoa, porque recrutador do Teamtailor
+escreve do mesmo domínio (`morgane.perrin@sloclap.teamtailor-mail.com`).
+
+**Como usar:** busque no Gmail por `teamtailor-mail.com`, extraia os tokens dos remetentes, e
+liste **o board inteiro** de cada um em `https://<token>.teamtailor.com/jobs.json`. A chave do
+JSON é **`items`**, não `jobs`. Isso casa com a outra regra desta noite: uma entrada de painel
+por estúdio esconde o resto do quadro.
+
+**Resultado honesto da primeira rodada do método (07/09, 08h20):** 20 tokens colhidos, 20 boards
+listados inteiros, e **nenhuma vaga nova da disciplina**. As duas que existem, Character Artist
+da Fatshark e Senior Character Artist Unity3D da beffio, **já têm candidatura**. Embark tem 18
+vagas e nenhuma de personagem; Untold tem 24 e são todas VFX e produção. O método é bom, o
+estoque é que está seco.
