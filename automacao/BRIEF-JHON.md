@@ -184,6 +184,54 @@ sem `--submit` eles preenchem, tiram print e mostram a leitura de volta, sem env
 | **Google Forms paginado** | `gform_pages.js` | Medido na Alps Studios em 07/09. Quando o formulário tem **seções por resposta** (escolheu o departamento, o resto aparece só depois do Next), preenchedor de página única responde a primeira página e reporta FALHOU em todo o resto. E a pergunta de seção costuma ser **menu `[role=listbox]`, não radio**. **Correção medida na Alps em 07/09, e ela é a que faz o envio existir:** clicar em `div[role=option]` **mostra o rótulo escolhido mas NÃO grava a resposta**, e a prova é o `Next` devolver a **mesma seção** para sempre, com o rodapé genérico *Indicates required question* como único aviso. O que grava é **teclado**: abrir o menu, descer com `ArrowDown` até a posição da opção e apertar `Enter` — a mesma lição do dropdown do Wix. Cuidado também com `input[type=date]` obrigatório, que não aparece como pendente em log nenhum: sem ele o envio volta com *This is a required question*. A página não avança enquanto a obrigatória da seção estiver vazia, e o único aviso é o rodapé genérico *Indicates required question* |
 | Formulário próprio, qualquer um | `probe_own.js` e `fill_own.js` | Duas mentiras comuns. Um `<button>` **sem atributo `type`** não casa com `button[type=submit]`, e o script anuncia "botão não achado" com o formulário inteiro preenchido, que parece problema da página e é do seletor. E **formulário Wix que se limpa sozinho parece envio feito e não é**: só conta confirmação escrita na tela, redirecionamento para página de agradecimento, ou email |
 
+
+## A armadilha que MENTE em campo de autorizacao de trabalho, medida em 07/09 na Plastic Wax
+
+**Escolher opcao de menu por regex de OU pega a PRIMEIRA opcao da lista que casa, nao a melhor.**
+No formulario da Plastic Wax (Sydney) o menu `Working Rights` tem, nesta ordem: *Australian Citizen
+or Permanent Resident*, *New Zealand Citizen*, **Valid Working Visa**, **Seeking Sponsorship in
+Australia**, *Seeking Remote International Work*. Uma regex razoavel do tipo
+`/sponsor|visa|require/i` casa com **"Valid Working Visa"** primeiro, porque ela vem antes na lista,
+e a candidatura sai afirmando que ele **tem visto de trabalho australiano**. Isso e exatamente a
+mentira que o briefing proibe, e ela nao levanta erro nenhum: o log diz "clicou true".
+
+**A regra que fica, e ela vale para todo menu de elegibilidade:** alvo **EXPLICITO e ancorado**
+(`/^Seeking Sponsorship in Australia$/`), lista de preferencia **ordenada**, e o codigo **recusa
+escolher** quando nada casa, em vez de cair na primeira opcao. Nunca use `opts[0]` nem
+`opts[opts.length-1]` como reserva num campo de visto, salario ou disponibilidade.
+
+**Como conferir que gravou, no Wix:** ler o `innerText` do input devolve **vazio** mesmo com a
+opcao escolhida. Quem mostra a verdade e o **texto do proprio BOTAO** do menu: depois de escolher,
+a lista de botoes do formulario passa a ser `["Seeking Sponsorship in Australia","Actively seeking
+employment","4 weeks","Back","Submit"]`. E o print da tela e a prova final; foi ele que pegou o
+"Valid Working Visa" errado na primeira passada.
+
+## HubSpot embutido: cinco armadilhas, medidas em 07/09 na Floating Rock
+
+1. **O id de cada campo COMECA COM DIGITO** (uuid da instancia) e **muda a cada carga**. Montar
+   `#932ca1fb-...` faz o Playwright levantar `SyntaxError: not a valid selector` e **todo campo
+   volta vazio**, o que parece formulario quebrado e e seletor. Use `[id="..."]` e case pelo **texto
+   do rotulo**, nunca pelo id.
+2. O formulario vive num **iframe de `js-ap1.hsforms.net`** e so monta **depois de rolar a pagina**.
+3. Os menus nao sao `<select>`: sao combobox com `[role=listbox]` desenhado a parte, e
+   **`[role=option]` casa TAMBEM com a lista de paises do telefone**, que esta sempre no DOM. Uma
+   leitura ingenua devolve "Afghanistan +93, Albania +355...". Filtre o que termina em `+NN`.
+4. O telefone e o mesmo widget de bandeira que virou **+81 Japao** na Hampa: digite com `+55`.
+5. O formulario pode terminar num **reCAPTCHA** (campo escondido `g-recaptcha-response`), e ai e
+   parede: o clique em Submit nao muda a pagina e o formulario continua preenchido.
+
+## Greenhouse: tela que nao mudou em 9 segundos NAO e recusa, medido em 07/09 na PlayQ
+
+O `apply_gh.js` clica em Submit, espera **9 segundos**, le a tela e, se nao achar "security code",
+declara `NOT CONFIRMED`. No quadro da PlayQ a tela leva **20 segundos** para trocar, e ate la o
+botao fica so girando. **Duas candidaturas foram dadas como perdidas por isso**, e o que provou que
+elas TINHAM chegado ao servidor foi o **Gmail**: os emails *Security code for your application to
+PlayQ* chegaram nos minutos exatos dos dois cliques. Conserto: `gh_slow.js`, copia do `apply_gh.js`
+que espera ate 75 segundos em passos de 5 lendo a tela a cada passo; com ele a tela trocou aos 20s,
+o codigo foi lido do Gmail e a candidatura entrou, com `/confirmation` na URL.
+**Regra: antes de dar candidatura de Greenhouse por perdida, procure no Gmail o email de codigo de
+seguranca — ele e a prova de que o POST chegou.**
+
 **Quando o ATS for novo:** sonde antes de escrever resposta. Existem `probe_tt.js`, `probe_personio.js`
 e `probe_bamboo.js` no mesmo diretório, e todos listam campo, tipo, obrigatoriedade e opções.
 
