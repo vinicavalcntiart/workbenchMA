@@ -47,7 +47,7 @@ Vini Cavalcanti
 {STUDIO}'s character work is the kind I want my name on. I follow the studio's projects and the craft bar is exactly where I operate: appealing stylized characters, built clean, delivered on schedule. I want to bring ten years of character experience to a team that treats characters as the center of the project.
 
 ## Experiência resumida (campo "describe your experience")
-Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Earlier outsourcing background at PUGA Studios delivering characters for international clients. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration.
+Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Three years at PUGA Studios before that, delivering characters for international clients, matching someone else’s art direction and turning revision rounds fast. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration.
 
 ## Softwares
 ZBrush, Maya, Substance Painter, Houdini (grooming), Photoshop, Marmoset, Unreal and Unity (engine integration)

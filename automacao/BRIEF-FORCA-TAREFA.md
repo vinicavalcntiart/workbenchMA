@@ -130,3 +130,13 @@ mudam entre uma leitura e outra são justamente os três que mais pesam na decis
 Então: **antes de recomendar uma vaga ao Vini apoiado numa promessa escrita, REABRA a página e
 confirme a promessa ali.** Citar a nota não basta. E ao registrar uma promessa dessas, escreva
 na nota a DATA em que ela foi lida, para a próxima pessoa saber o quanto aquilo já envelheceu.
+
+## PUGA Studios: são TRÊS ANOS, e é argumento, não linha de currículo
+
+Decisão do Vini em 07/09: a PUGA passa a ser citada com a **duração**, três anos, e nas cartas e
+respostas de formulário ela entra pelo que prova, não pelo cargo. O que ela prova é **entregar
+personagem sob direção de arte de outra pessoa, no estilo definido pelo cliente, com rodada de
+revisão como rotina**. Isso responde uma pergunta que estúdio de serviço, publisher e casa média
+sempre têm e quase nunca escrevem no anúncio.
+
+Somada aos cinco anos de E-Line e ao crédito do Wingfeather, ela é o que fecha os dez anos.
