@@ -683,3 +683,37 @@ Isso vale para contar, para editar por âncora de texto e para deduplicar.
 E a lição de fundo, que custou uma correção pública ao Vini: **um número que contraria uma
 conclusão já medida por três agentes merece ser reconferido antes de virar recomendação.** Eu
 usei o 282 para dizer a ele que a fila não tinha secado, quando tinha.
+
+
+## A PARAMOUNT NAO E MAIS PONTO CEGO: o careers.paramount.com responde 200 e publica RSS
+
+Medido em 07/09 pela fatia REGRA 14, e corrige a instrucao que estava valendo ("responde Access
+Denied do Akamai ate no navegador, nao gaste rodada nela"). O host que estava sendo batido nao era
+o certo. **`careers.paramount.com` (SuccessFactors RMK) responde 200 a curl pelado** com um
+User-Agent de Chrome, e a propria pagina de busca anuncia, no `<link rel="alternate">`, um feed:
+
+    https://careers.paramount.com/search/?q=<termo>&startrow=0     (25 por pagina)
+    https://careers.paramount.com/services/rss/job/?locale=en_US&keywords=(<termo>)
+
+**Duas medicoes que evitam conclusao errada com esse feed:**
+
+1. **O RSS corta em cerca de 20 itens por consulta**, entao ZERO no RSS nao prova ausencia. Dez
+   termos diferentes devolveram 66 URLs unicas, e o filtro de palavra-chave dele e frouxo: buscar
+   `modeler` traz 210 KB de vaga de engenharia de dados.
+2. **Quem prova e a busca paginada.** A pagina declara o total ("291 Jobs") e pagina por
+   `&startrow=`. Doze pedidos leem o quadro INTEIRO. Feito isso em 07/09: das **291 vagas da
+   Paramount, ZERO** e de personagem, modelagem, texturizacao, look dev ou 3D. O unico titulo de
+   arte e um Art Director da CBS Sports, que e design de broadcast.
+
+**Consequencia pratica:** a Paramount passa a ser conferivel por curl a qualquer hora, em doze
+pedidos, sem navegador. Isso importa porque o alerta por email dela **nao esta provado**: a caixa
+tem um unico "New jobs posted from Paramount" (`paramountcareers@noreply.jobs2web.com`), de 31/08,
+chegado minutos depois da criacao da conta, e nada nos sete dias seguintes. Pela regra de 05/09,
+alerta so conta como ativo depois de ver a ativacao, e essa nunca apareceu. Trate a casa como
+coberta pelo RSS, que se verifica, e nao pelo alerta, que nao se verifica.
+
+**De quebra, o mesmo vale para a leitura da Warner:** os dois alertas dela **estao** ativos e
+disparando, e isso esta provado na caixa (ativacao confirmada por email em 05/09 para
+`character artist` semanal e `modeler` diario, e listas entregues em 05/09 e 06/09 por
+`careers@careeralerts.wbd.com`). Alerta provado e alerta suposto sao coisas diferentes; escreva
+qual dos dois voce tem.
