@@ -1855,32 +1855,52 @@ Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nun
 campanha depois do dedupe). Prioridade seguida: animação e VFX antes de jogos, e dentro disso
 personagem, modelagem, texturização, look dev e visual dev antes de generalista 3D.
 
-### REKiNDLED Studios, Join Us (Brighton/East Sussex, Reino Unido) — pronto para mandar à mão, SEM captcha
+### REKiNDLED Studios, Join Us (Brighton/East Sussex, Reino Unido) — pronto para mandar à mão, SEM captcha, AGORA COM AS 16 PERGUNTAS MAPEADAS
 
 **Link da página:** https://rekindled.uk/join-us/ (o formulário de verdade é um **Typeform**
-embutido em iframe: `https://form.typeform.com/to/Ab6JnnqE`)
+embutido em iframe, abra direto: `https://form.typeform.com/to/Ab6JnnqE`)
 
 **Por que vale, e muito:** Rekindled é "A Specialist Co-Development Partner for Gameplay and
 Cinematics", que embarca dentro de outros estúdios para entregar **qualidade de personagem AAA em
 prazo AA** — a frase do próprio site é quase o argumento de carreira dele. Clientes citados: Creative
-Assembly, Electric Square, BBC. Sem captcha nenhum: é só um Typeform curto, comum e sem verificação.
+Assembly, Electric Square, BBC. Sem captcha nenhum: é só um Typeform, e o próprio texto inicial diz
+"We work with freelancers and contractors around the world", ou seja, aceita gente fora do Reino
+Unido.
 
-**Por que ficou à mão:** o Typeform da Rekindled pré-carrega o campo da PRÓXIMA pergunta escondido
-no DOM ao lado do campo visível da pergunta atual, então um preenchedor cego que pega o primeiro
-`input[type=text]` da página erra o campo. Dá para preencher em menos de um minuto abrindo o link
-direto (sem precisar do site) e respondendo uma pergunta por tela:
+**Por que CONTINUA à mão, mesmo sem captcha, revisto em 07/09:** o formulário tem **16 perguntas**,
+não duas ou três como a nota antiga registrava, e várias exigem **julgamento honesto** que não pode
+ser chutado por automação (nível de experiência, disponibilidade, forma de contrato) — forçar uma
+tentativa automática nelas produziria resposta FALSA (uma tentativa de automação chegou a marcar
+"Junior" e inventar "veio pelo vídeo do Harvey Newman" só porque essas eram a opção A da lista).
+Preencher a mão leva de dois a três minutos com a tabela abaixo. **Detalhe técnico para quem for
+tentar de novo por script:** o input real de cada pergunta de texto não tem `type="text"` explícito
+(é `type="short_text"`), então seletor `input[type="text"]` erra; e digitar+Enter direto pelo teclado
+(sem clicar em elemento nenhum) funciona melhor que clicar, porque o Typeform mantém o foco na
+pergunta ativa automaticamente. Perguntas de múltipla escolha respondem à **tecla da letra da opção**
+(sem precisar clicar) e confirmam com Enter.
 
-| Pergunta (na ordem) | Resposta |
-|---|---|
-| 👋 About You? (nome completo) | `Vini Cavalcanti` |
-| What's the best email to reach you at? | `contact@vinicavalcanti.art` |
-| Perguntas seguintes (variam: portfólio, cargo, mensagem) | usar os dados do topo deste arquivo; no campo de texto livre/mensagem, usar o texto abaixo |
+| # | Pergunta (texto exato) | Tipo | Resposta recomendada |
+|---|---|---|---|
+| 1 | 👋 About You? — nome completo | texto | `Vini Cavalcanti` |
+| 2 | What's the best email to reach you at? | texto | `contact@vinicavalcanti.art` |
+| 3 | What do you do best? (única escolha) | A Animation / B Tech Animator / **C Character Artist** / D Tech Artist | **C** |
+| 4 | What is your character art specialisation? (múltipla) | A Realistic Humans / **B Stylised Humans** / C Realistic Creatures / **D Stylised Creatures** / E Hard-Surface / F Background-Crowd / **G Hair, Cloth & Grooming** / H All of the Above / I Other | **B, D, G** |
+| 5 | What is your strongest skill in Character Art? (única) | **A High Poly Modelling** / B Low Poly Game-Ready / C Texturing / D Retopology & UV / E Character & Creature Design / F Real-Time Characters / G Other | **A** (ou E, os dois são defensáveis; A é o mais forte pelo currículo de sculpt) |
+| 6 | What kind of tools do you use in your role? (múltipla) | A Animation Tools / B Technical Animation Tools / **C Character Art Tools** / D Technical Art Tools / E mix of all / F Other | **C** (some **D** se quiser sinalizar o lado técnico do grooming) |
+| 7 | What animation tools do you use regularly? (múltipla, apesar do nome é lista de software) | **A Maya** / B Motion Builder / C Blender / D 3D Max / E Unreal Engine / F Unity / G Cascadeur / **H Other** | **A**, e em H escrever `ZBrush, Substance Painter, Houdini` |
+| 8 | Where in the world are you based? | texto | `Olinda, Pernambuco, Brazil — I WANT TO RELOCATE and I am fully open to moving for the role.` |
+| 9 | Are you set up to work as a contractor? (única) | A Yes, all set up to invoice / B Not yet, but planning to / **C Not sure — happy to chat about it** / D No, only payroll / E Other | **C** (verdadeiro: ele é CLT/contratado remoto na E-Line hoje, não tem estrutura de invoicing aberta) |
+| 10 | Where did you hear about us? (única) | A Harvey Newman's Video/LinkedIn / B Rekindled LinkedIn Page / C Rekindled Team Member Post / D Recommended by Someone / **E Other** | **E**, escrever `Researching UK animation/VFX studios that hire internationally` |
+| 11 | How would you describe your experience level? (única) | A Junior / B Mid Level / **C Senior** / D Lead / E Director | **C** — NUNCA A, um chute errado aqui já saiu numa tentativa de automação e foi descartado a tempo |
+| 12 | Do you have a showreel or portfolio to share? | texto (link) | `https://www.artstation.com/viniciuscavalcanti` |
+| 13 | What kind of projects are you most excited to work on? | texto livre | `Stylized cinematic and game character work — hero characters, creatures and hair/fur grooming; exactly the AAA-quality-on-AA-timelines projects Rekindled specializes in.` |
+| 14 | Are you currently available for contract work? (única) | A Yes, currently available / B Available soon (weeks) / **C Booked, but open later down the line** / D Not right now | **C** é o mais honesto sem citar prazo de contrato (dado privado); **decisão final é do Vini**, que sabe o próprio aviso prévio |
+| 15 | Please share your LinkedIn or socials | texto (link) | `https://www.linkedin.com/in/vinicavalcnti/` |
+| 16 | What's your ideal working setup? (única) | A Remote / B Hybrid / C On-Site | Estúdio é time de freelancers globais ("we work with freelancers and contractors around the world"), então **A Remote** é o mais alinhado ao modelo deles; se o Vini preferir sinalizar a vontade de mudar de país mesmo assim, **B Hybrid** também é defensável. **Decisão do Vini** |
 
-```
-Senior 3D Character Artist with 10+ years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios, and for almost five years at E-Line Media taking Endstar's hero characters from first sculpt to engine as a remote international contractor. I take a character end to end: sculpt, retopology, UVs, baking, texturing, look development and engine integration, and I also groom hair and fur in Houdini. Your AAA character quality on AA timelines is exactly the standard I work to. I WANT TO RELOCATE to the United Kingdom and I am fully open to moving for the role. I am not an EU/UK citizen and would need visa sponsorship; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. Portfolio: artstation.com/viniciuscavalcanti
-```
-
-Portfólio: https://www.artstation.com/viniciuscavalcanti · LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Duas perguntas (9 e 14) tocam em disponibilidade/situação contratual real dele — por isso ficam
+como recomendação e não como automação: envolvem o prazo do contrato atual, que é dado privado e
+não deve ser inventado nem escrito neste repositório.
 
 ### Menhir FX, candidatura espontânea (Montpellier, França) — À MÃO por hCaptcha
 
