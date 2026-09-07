@@ -1664,6 +1664,92 @@ Vini isso passa. **REGRA NOVA: formulário cujo POST vai para um domínio `*.squ
 (`name="message-yui_ca03db1f..."`), típico padrão de isca; **deixado vazio**, por precaução, sem
 prova de que seja honeypot de verdade, mas sem uso óbvio nenhum no formulário.
 
+## Game Pill, candidatura espontânea sênior (Concord, Ontário) — À MÃO por reCAPTCHA v3
+
+**Link:** https://gamepill.com/career/
+**Por que vale:** a própria página de carreiras diz "If you are a senior talent and do not see a
+posting that fits your skills please submit your resume and we will see if there is a fit."
+Modelagem/arte cabe no campo livre "What I am best at".
+**Por que à mão:** Contact Form 7 com reCAPTCHA v3. Preenchido inteiro (nome, email, localização,
+"3D Character Art: modeling, sculpting, texturing, look development, Houdini grooming", link do
+portfólio e CV anexado) e conferido por leitura de volta. O token do reCAPTCHA foi obtido
+normalmente (sessão pontuada), mas o envio devolveu na tela **"There was an error trying to send
+your message. Please try again later."** — a mesma assinatura genérica do CF7 com v3 reprovando
+sessão automatizada já medida na EF Games, eXiin, Gigantic Duck Games e Gamious. Do navegador do
+Vini isso passa.
+
+## SideFX, Join Our SideFX Talent Community (Los Angeles ou Toronto, Ontário) — À MÃO por reCAPTCHA de caixa
+
+**Link:** https://sidefx.bamboohr.com/careers/87
+**Por que vale muito:** SideFX é a empresa dona do **Houdini**, a ferramenta central do grooming
+dele. Não há vaga de personagem/modelagem aberta no quadro (só "Learning Materials Coordinator",
+Toronto, e uma vaga de Marketing), mas o banco de talentos aceita candidatura espontânea e cobre
+Toronto, Ontário.
+**Por que à mão:** BambooHR com **reCAPTCHA de caixa "I'm not a robot"**, o mesmo muro do ATS
+inteiro já medido na ICON, Image Engine, Stormind e BetaDwarf — é do BambooHR e não do estúdio.
+Formulário simples: First Name, Last Name, Email, Phone, Resume (anexado e conferido na tela),
+"What type of role interests you?", "Where did you hear about SideFX?" e uma pergunta de
+consentimento de contato futuro (Yes/No).
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | o de sempre, com +55 na frente |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| What type of role interests you? | `3D Character Artist / Character Modeler — modeling, sculpting, texturing, look development, and character grooming in Houdini` |
+| Where did you hear about SideFX? | `SideFX careers page` |
+| Do you agree to SideFX contacting you regarding future employment opportunities? | Yes |
+
+## WGAMES, quadro de vagas (Toronto, Ontário) — PORTA QUEBRADA do lado deles
+
+**Link do site:** https://wgames.com/ (sete botões APPLY apontam para `wgames.bamboohr.com`)
+**O que foi medido:** todos os links `wgames.bamboohr.com/jobs/view.php?id=<n>` (formato antigo do
+BambooHR) devolvem **410 Gone**, e `wgames.bamboohr.com/careers` redireciona para a página de
+marketing genérica `bamboohr.com`. A conta BambooHR deles parece desativada ou migrada. Não é
+bloqueio de rede contra nós: o host responde, só não tem quadro nenhum vivo atrás dele. Sem porta
+de candidatura utilizável agora; reconferir mais tarde.
+
+## Zoic Studios, BC General Application (Vancouver) — DESCARTADA, veto escrito de residência
+
+**Link:** https://zoicstudios.applytojob.com/apply/va0rRqNxqm/BC-General-Application
+**Por que não foi enviada:** a própria página do anúncio diz, em negrito: **"This position is
+based in Vancouver. All applicants must reside in British Columbia/Ontario."** e depois **"Zoic
+does not cover relocation costs."** Não é uma preferência, é requisito de residência já vigente,
+igual ao veto escrito da beloFX (Índia) descartado nesta mesma leva. Como ele mora no Brasil e
+precisaria de patrocínio de visto e realocação, a única resposta honesta ao formulário violaria o
+requisito publicado, então a candidatura não foi enviada. Registrado aqui para não repetir a
+sondagem: as outras quatro vagas do mesmo board (`zoicstudios.applytojob.com`, CG Senior Previs,
+COMP Senior Compositor, Zoic Labs LA e Zoic Studios US) são todas remotas SÓ dentro dos EUA, então
+nenhuma das cinco serve para candidatura de fora da América do Norte. Zoic já tem contato humano
+na campanha por email (Julie Weitzell, rascunho pré-existente), então a casa não fica sem via
+nenhuma.
+
+## Descartes rápidos da colheita de 351+85 domínios canadenses (07/09)
+
+- **Twisted Mountain Animation** (Vancouver, modelagem/visdev/surfacing no site): quadro próprio
+  em `twistedmountainanimation.com/careers` (powered by BambooHR) diz **"We currently have no open
+  positions"**, sem opção de candidatura espontânea. Nada a enviar agora.
+- **Niche VFX** (Vancouver, look dev): site é só portfólio/depoimentos, sem formulário nem quadro
+  de vagas; contato é só `info@nichevfx.com`, o que vira fila de email e não de formulário.
+- **Gneiss Stuff VFX** (Kelowna, look dev): mesmo caso, site institucional sem formulário; contato
+  só `info@gneissstuff.com`.
+- **Fun2Pro / Fun Square VFX Productions** (Vancouver, look dev): o próprio site diz "Check our
+  available job positions on our Linked In" — não têm porta própria, só o LinkedIn Jobs, fora do
+  escopo de formulário direto.
+- **Creature Caster** (Vancouver): **FALSO POSITIVO** da varredura por palavra-chave. O domínio é
+  uma loja Shopify de miniaturas de mesa (tabletop), não um estúdio de VFX/personagem 3D; a
+  palavra "sculpt" apareceu em descrição de produto. Sem vaga, sem porta, descartar da lista.
+- **Ape Squared Creative** (Toronto): os anúncios de Modeler e Surfacing Artist achados citam
+  "as soon as this Spring 2022" — anúncio perene de anos atrás, mesma armadilha que já descartou
+  a Ironbird. Página `apesquared.com/careers` não abriu vaga nova na reconferência; descartado por
+  data, e-mail de contato `hello@apesquared.com` fica para a fila de email se algum dia reabrir.
+- **Bardel Entertainment** (Vancouver e Montréal): o quadro real é `apply.workable.com/bardel-entertainment/`
+  (achado via `bardel.ca/careers/`, não `bardel.com`, que é domínio parked/à venda). O board
+  devolveu **`error code: 1015` do Cloudflare** contra o nosso IP em duas tentativas (com 20s de
+  intervalo), a mesma família de bloqueio já medida na Velan Studios, KingsIsle e PikPok. Fica para
+  reconferir de outra rede ou para o Vini abrir direto.
+
 ## FATIA M-R DA EUROPA (07/09): achados novos do diretório de 6.624 estúdios
 
 Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nunca tocados pela
