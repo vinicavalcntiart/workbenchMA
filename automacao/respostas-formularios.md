@@ -2310,3 +2310,37 @@ Campo a campo, com os valores exatos que a automação já validou:
    a candidatura sai dizendo que ele tem menos experiência do que tem.
 6. O telefone é widget com bandeira, da mesma família do que virou `+81 Japão` na Hampa: digitado
    com `+55` na frente, a bandeira vai para o Brasil e o campo escondido `0-1/phone` fica correto.
+
+## Engine Room Hollywood (Los Angeles) — candidatura espontânea — falta só o ANEXO
+
+**Link:** https://www.engineroomhollywood.com/careers/ (rolar até READY TO JOIN US)
+
+Contact Form 7, **sem captcha nenhum**. A automação preencheu tudo e o envio parou num campo só:
+`File` é **obrigatório** e o `accept` dele é `audio/*,video/*,image/*`, ou seja, **não aceita PDF**.
+A tela devolveu *"One or more fields have an error. Please check and try again"* e o campo devolveu
+*"File: The field is required."*. **Anexe uma imagem ou um vídeo do trabalho** e o envio passa.
+
+| Campo | Valor |
+|---|---|
+| *First name | Vini |
+| *Last name | Cavalcanti |
+| *Email | contact@vinicavalcanti.art |
+| *Phone number | o do documento privado do Drive, com o código de país |
+| *Position | **3D artist** (a lista é: visual effects editor, 2D compositor, 3D artist, generalist, vfx producer, vfx supervisor) |
+| *Upload your work | **uma imagem ou um vídeo** — PDF é recusado |
+| *Message | o texto abaixo |
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist and CG generalist with 10+ years, and I WANT TO
+> RELOCATE: I am fully open to moving to Los Angeles for a role. Almost five years at E-Line Media
+> taking Endstar's hero characters from first sculpt to engine, sculpting, retopology, UVs, baking,
+> texturing and in-engine integration. On The Wingfeather Saga at Angel Studios I modelled and
+> hand-painted Season 1 characters. Before that, three years at PUGA Studios delivering characters
+> for international clients, which is where I learned to deliver under someone else's art direction,
+> in the style defined by the client, with review rounds as routine. I also do character grooming in
+> Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Marmoset Toolbag, Unreal
+> Engine, Houdini. I would need work visa sponsorship in the United States; my academic background,
+> with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and
+> publications, makes a strong visa case, and I can start remotely while it is processed. Open to
+> aligning with your band for the role; as a reference, I am looking at around USD 100,000. Reel and
+> portfolio: https://www.artstation.com/viniciuscavalcanti — CV:
+> https://www.linkedin.com/in/vinicavalcnti/ — Site: https://vinicavalcanti.com
