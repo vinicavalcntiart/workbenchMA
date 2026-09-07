@@ -2038,3 +2038,44 @@ If character work opens up on your side, I'd like to be on your list. And if som
 
 Vini Cavalcanti
 ```
+
+## Streamline Studios (Lead Character Artist, contractor, Malaysia/Remote) — dossiê à mão, 07/09
+
+Link: https://streamlinestudios.bamboohr.com/careers/84 (board oficial BambooHR, requisição 84,
+Department Art, Location "Malaysia (Remote)", Employment Type Contractor). CONFIRMADA na fonte
+oficial em 07/09: a lista `/careers/list` do BambooHR mostra a requisição 84 viva junto com a
+freelancer 3D Character Artist (106), ambas em Art. Formulário inteiro preenchido e conferido
+campo a campo em MODO SECO (sem --submit), com leitura de volta de cada campo — falta só o
+captcha. **PAREDE: reCAPTCHA de caixa de marcar ("I'm not a robot"), visível só depois de rolar
+até o fim do formulário preenchido** — mesma família de parede já medida na ICON Creative, Image
+Engine, Soul Assembly e Barnstorm Visual Effects, todas BambooHR. Abrir o link, conferir os
+campos abaixo (já estão prontos, só falta marcar o captcha e clicar Submit Application):
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários" — só os dígitos, sem código de país (campo único do BambooHR, sem seletor de país ao lado) |
+| Address / City / Province / Postal Code | endereço: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários" (Olinda, Pernambuco, Brazil, CEP de lá) |
+| Country | `Brazil` (é um combobox com busca: apagar "United States" com o x, digitar Brazil e clicar na opção) |
+| Cover Letter / Resume | anexar `Vini_Cavalcanti_Cover_Letter.pdf` e `Vini_Cavalcanti_CV.pdf` — cuidado, o Cover Letter vem ANTES do Resume no DOM e os dois aceitam pdf |
+| Date Available | `20/09/2026` (campo digitável, formato dd/mm/yyyy, não aceita clique solto no widget) |
+| Desired Pay | `USD 40/hr (~USD 85k/yr); open to your band for the role` (contractor, casa média — pretensão convertida para hora a partir do piso de USD 85.000/ano) |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Highest Education Obtained | `College - Bachelor of Fine Arts` (é combobox, não select nativo) |
+| References | `Available upon request; happy to share names and contacts from Angel Studios and E-Line Media in a later stage.` |
+| What is your hourly rate (USD)... | `Around USD 40/hour, based on a senior/lead contractor annual reference near USD 85,000; open to aligning with your project budget.` |
+| When can you start... | `I can start within about two weeks of an offer and commit roughly 15-20 hours per week to start, with room to grow depending on project needs.` |
+| Preferred communication method... | `Email and Slack/Discord for async updates, video calls for reviews; I typically respond within 4-6 hours on business days; I am based in UTC-3 (Brazil) and flexible to overlap with the project core hours.` |
+| Which game engines... | `Unreal Engine 4 and 5, Unity` |
+| What is your nationality? | `Brazilian` |
+| Current city and country residing in | `Olinda, Pernambuco, Brazil` |
+| Portfolio link (pergunta repetida) | `https://www.artstation.com/viniciuscavalcanti` |
+| Referred by Streamliner? | `No` |
+| How did you hear about Streamline? | marcar `Artstation` |
+| Campo `nickname_hpcsaf` | HONEYPOT — deixar VAZIO, não escrever nada |
+| `I'm not a robot` | resolver na tela |
+
+Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
+`$SCRATCH/apply/streamline84_filled.png`.
