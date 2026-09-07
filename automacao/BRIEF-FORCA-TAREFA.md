@@ -103,13 +103,25 @@ na frente), linha em `automacao/processados.csv`, `sh automacao/valida-dashboard
 commit, e commit e push no branch. Commite de hora em hora, não só no fim: rodada que só grava
 no fim evapora se o processo morrer.
 
-## REGRA NOVA DE 07/09: promessa escrita se reconfere na hora, nunca se cita da nota
+## REGRA DE 07/09: promessa escrita mora no FORMULARIO tanto quanto no anuncio
 
 A Bulkhead entrou nas três vagas recomendadas ao Vini porque a nota do painel dizia que o
-anúncio prometia, por escrito, *"Don't worry, we can sponsor your visa"*, mais presencial
-integral e ajuda de realocação. Ao reabrir a página para escrever a resposta dele, a contagem
-dos termos no HTML deu **`sponsor` 0, `visa` 0, `relocat` 0, `on-site` 0**: o anúncio foi
-reescrito e a promessa sumiu.
+anúncio prometia, por escrito, *"Don't worry, we can sponsor your visa"*. Ao reabrir a página,
+a contagem dos termos deu **`sponsor` 0, `visa` 0, `relocat` 0** no HTML do servidor E no texto
+renderizado por navegador, e eu concluí que o anúncio tinha sido reescrito e tirei a vaga da
+recomendação.
+
+**Estava errado, e o Vini provou com um print.** A frase está lá, viva, **dentro do
+formulário**, logo abaixo da pergunta *"Do you have the right to work in the UK?"*. No
+Teamtailor o formulário só carrega depois do *Apply for this job*, e o texto que eu capturei
+terminava literalmente em **"Loading application form"**: li a página inteira e parei
+exatamente antes da parte que importava.
+
+**Então: buscar termo numa página de vaga lê o ANÚNCIO, não a CANDIDATURA.** Condição de visto,
+patrocínio e regime de trabalho muitas vezes só aparecem nos campos do formulário, como texto
+de ajuda embaixo da pergunta. Contagem zero numa página cujo texto termina em "Loading
+application form" não é prova de ausência, é ausência de prova. **Abra o formulário antes de
+concluir qualquer coisa sobre patrocínio.**
 
 **Anúncio de vaga não é imutável, e nota de painel envelhece calada.** Os três campos que mais
 mudam entre uma leitura e outra são justamente os três que mais pesam na decisão do Vini:
