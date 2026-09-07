@@ -1089,6 +1089,10 @@ const STUDIOS = [
 ["PinPin Team","Franca (Lyon)","contact@pinpinteam.com",28,"rascunho"],
 ["Mainframe Industries","Finlandia (Helsinque), Islandia (Reykjavik) e Franca (Paris)","jobs@themainframe.com",28,"ok","-"],
 ["Ninja Theory","Reino Unido (Cambridge)","jobs@ninjatheory.com",28,"ok","-"],
+["Riot Games (Blair Armitage, Principal Character Artist)","EUA (Los Angeles)","barmitage@riotgames.com",29,"rascunho"],
+["Weta FX (Tim Forbes, Creatures Supervisor)","Nova Zelândia (Wellington)","tforbes@wetafx.co.nz",29,"rascunho"],
+["Netflix (Jason Figliozzi, Head of Character Animation)","EUA","jfigliozzi@netflix.com",29,"rascunho"],
+["Ubisoft Québec (Henrick Pelletier, Lead Character Artist)","Canadá (Québec)","henrick.pelletier@ubisoft.com",29,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -2703,6 +2707,17 @@ const PESSOAS = [
   "situacao": "ABRE UMA CASA GRANDE INTEIRA: ele manda no CG das tres marcas do grupo, Cinesite, Image Engine e Trixter, e a campanha tem DUAS candidaturas espontaneas travadas no BambooHR da Cinesite, de Montreal e de Vancouver, sem nenhuma carta pessoal"
  },
  {
+  "data": "2026-09-07",
+  "estudio": "Cinesite",
+  "pais": "Reino Unido",
+  "pessoa": "Eamonn Butler",
+  "cargo": "Chief Animation Officer",
+  "email": "ebutler@cinesite.com",
+  "confianca": "media",
+  "fonte": "pagina oficial de equipe do grupo (cinesite.com/our-team), secao VFX Leadership, que publica nome e cargo; padrao inicial+sobrenome@cinesite.com provado em 06/09 por seis enderecos reais no log de commits do Gaffer e do Cortex",
+  "situacao": "reserva: segunda pessoa da Cinesite. SEM CARTA nesta rodada porque a ultima tentativa da casa (Holger Voss, bounce) foi em 06/09, um dia atras, e a regra probe escrever em dias seguidos para o mesmo estudio. Pronta para a rodada de 08/09 ou depois"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "DreamWorks Animation",
   "pais": "EUA",
@@ -2745,6 +2760,17 @@ const PESSOAS = [
   "confianca": "media",
   "fonte": "nome e cargo publicados na pagina About do proprio estudio (framestore.com/about); o ENDERECO e montado pelo padrao nome.sobrenome@framestore.com, PROVADO nesta rodada pelo endereco real kevin.wheatley@framestore.com achado no log de commits do OpenColorIO da Academy Software Foundation",
   "situacao": "rascunho pronto; RESSALVA: Head of Studio e cargo de operacao e nao de arte, entao ela e porta de entrada e nao a pessoa da disciplina; a Framestore tem 51 vagas abertas e nenhuma pessoa de arte com nome publicado que eu tenha achado nesta rodada"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Framestore",
+  "pais": "Reino Unido, Canadá, EUA e Índia",
+  "pessoa": "Glenn Melenhorst",
+  "cargo": "VFX Supervisor",
+  "email": "glenn.melenhorst@framestore.com",
+  "confianca": "media",
+  "fonte": "bio oficial do proprio estudio (framestore.com/glenn-melenhorst), com credito recente em How To Train Your Dragon (nomeado ao VES 2026) e na serie Ted; a mesma bio confirma que ele veio da Iloura, hoje parte da Framestore. Endereco pelo padrao nome.sobrenome@framestore.com, ate agora provado por um so endereco real (kevin.wheatley@)",
+  "situacao": "reserva: segunda pessoa da Framestore, SEM CARTA porque a ultima tentativa da casa (Lizi Bedford) foi em 06/09, um dia atras. ACHADO IMPORTANTE NO CAMINHO: uma busca inicial apontava Glenn Melenhorst como Head of VFX da Method Studios Australia, mas methodstudios.com HOJE REDIRECIONA para company3.com e o proprio Framestore confirma que a Method Studios Melbourne (ex-Iloura) foi renomeada Framestore em 2020/2021. O padrao nome.sobrenome@methodstudios.com do padroes-dominio.md (blair.tennessy@, robert.minsk@) e endereco de casa que nao existe mais sob esse nome; NAO USAR para carta nova, risco alto de bounce"
  },
  {
   "data": "2026-09-06",
@@ -2822,6 +2848,17 @@ const PESSOAS = [
   "confianca": "media",
   "fonte": "Cargo publicado no proprio site da ILM (ilm.com/frankenstein-ilm-vfx-ivan-busquets-interview), em entrevista sobre o Frankenstein do Guillermo del Toro, onde ele fala do trabalho de criatura do filme, incluindo a propria Criatura e os animais. Endereco pelo padrao inicial+sobrenome@ilm.com.",
   "situacao": "rascunho-criado em 07/09, ativado da reserva: gap de dois dias desde a carta do Mathias Norgaard (05/09) respeita a regra de nao escrever em dias seguidos, e fecha o teto de duas da ILM"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Netflix",
+  "pais": "Estados Unidos",
+  "pessoa": "Jason Figliozzi",
+  "cargo": "Head of Character Animation (Steps)",
+  "email": "jfigliozzi@netflix.com",
+  "confianca": "media",
+  "fonte": "nome e cargo confirmados pela cobertura de imprensa do Annecy 2026 sobre Steps (variety.com/2026/film/global/steps-netflix-animation-annecy-hsu-wong-middler-seyfried-1236787924), o primeiro longa inteiramente produzido dentro do Netflix Animation Studios, ao lado dos diretores Alyce Tzue e John Ripa e do art director Dan Casey. Endereco pelo padrao inicial+sobrenome@netflix.com, provado por mais de 30 enderecos reais",
+  "situacao": "segunda pessoa de arte da Netflix (a primeira foi o Dan Casey, 05/09, cuja carta segue em rascunho na segunda via danc@); gap de dois dias respeita a regra de nao escrever em dias seguidos. RESSALVA: chefe de animacao de personagem nao contrata modelador, e a carta pede direcao e nao vaga"
  },
  {
   "data": "2026-09-05",
@@ -2912,6 +2949,17 @@ const PESSOAS = [
   "situacao": "reserva: uma pessoa por casa por rodada"
  },
  {
+  "data": "2026-09-07",
+  "estudio": "Riot Games",
+  "pais": "Estados Unidos",
+  "pessoa": "Blair Armitage",
+  "cargo": "Principal Character Artist",
+  "email": "barmitage@riotgames.com",
+  "confianca": "media",
+  "fonte": "pagina oficial do evento da Gnomon Stylized 3D Character Art with Riot Games Katia Bourykina and Blair Armitage (16/01/2025): Principal Character Artist na Riot desde 2017, personagens estilizados em PBR e recentemente cel-shaded para 2XKO. Email pelo padrao inicial+sobrenome@riotgames.com, provado por agiacca, bnagappa, cbutler e whagen no log de commits do League Director",
+  "situacao": "rascunho-criado; ativado da reserva de 05/09. Riot ja tinha a Katia Bourykina (as duas tentativas de endereco dela bounced), entao Blair fecha o teto de duas da casa; gap de dois dias desde a ultima tentativa (kbourykina@ em 06/09) respeita a regra de nao escrever em dias seguidos"
+ },
+ {
   "data": "2026-09-06",
   "estudio": "Rodeo FX",
   "pais": "Canada (Montreal) e EUA (Los Angeles)",
@@ -2967,6 +3015,28 @@ const PESSOAS = [
   "situacao": "rascunho"
  },
  {
+  "data": "2026-09-07",
+  "estudio": "Ubisoft Québec",
+  "pais": "Canadá (Québec)",
+  "pessoa": "Henrick Pelletier",
+  "cargo": "Lead Character Artist (Assassin's Creed Shadows)",
+  "email": "henrick.pelletier@ubisoft.com",
+  "confianca": "media",
+  "fonte": "creditado como Lead Character Artist - Ubisoft Quebec no art blast oficial de Assassin's Creed Shadows (magazine.artstation.com/2025/03/ubisoft-assassins-creed-shadows-art-blast), publicado pela propria Ubisoft. Endereco pelo padrao nome.sobrenome@ubisoft.com, provado em 05/09 por quatro enderecos reais (anton.brand, brian.mckinnon, farchad.bidgolirad, jerome.hubert) no log de commits do OpenVDB/OSL",
+  "situacao": "CASA NOVA para o Joe: primeira carta pessoal em estudio da Ubisoft no Canada (a unica pessoa anterior da Ubisoft foi a da Massive Entertainment na Suecia, que bounced duas vezes). Prioridade maxima de pais pela ordem do brief. RESSALVA HONESTA: o credito e de marco de 2025, entao ha risco real de a pessoa ja ter mudado de estudio"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Ubisoft Québec",
+  "pais": "Canadá (Québec)",
+  "pessoa": "Thierry Dansereau",
+  "cargo": "Art Director (Assassin's Creed Shadows)",
+  "email": "thierry.dansereau@ubisoft.com",
+  "confianca": "media",
+  "fonte": "mesmo art blast oficial de Assassin's Creed Shadows (magazine.artstation.com/2025/03/ubisoft-assassins-creed-shadows-art-blast), creditado como Art Director - Ubisoft Quebec",
+  "situacao": "reserva: segunda pessoa da Ubisoft Quebec, sem carta nesta rodada porque so vale uma pessoa por estudio por rodada (a carta foi para o Henrick Pelletier, Lead Character Artist, que e o alvo mais proximo da disciplina dele). Fica pronto para a proxima rodada, respeitando o gap de dias"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "Walt Disney Animation Studios",
   "pais": "EUA",
@@ -2976,6 +3046,17 @@ const PESSOAS = [
   "confianca": "media",
   "fonte": "Cargo confirmado no credito de Zootopia 2 (2025), onde ela assina Art Director Characters ao lado de Sang Jun Lee; na casa desde 2017, com Ralph Breaks the Internet, Raya, Encanto, Strange World e Wish. Endereco montado com o padrao nome.sobrenome@disneyanimation.com, provado por mais de 20 enderecos publicados (courtney.chun@, jose.velasquez@, jennifer.stratton@, alberto.luceno.ros@, karl.li@, brent.burley@ e outros; ver automacao/padroes-dominio.md). RESSALVA: se o nome formal dela for Megan, a variante e megan.park@disneyanimation.com. Rascunho NAO criado nesta rodada porque a regra so permite dois por casa quando os dois enderecos sao publicados, e o dela e inferido; fica como primeiro alvo da proxima rodada.",
   "situacao": "rascunho"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Weta FX",
+  "pais": "Nova Zelandia (Wellington)",
+  "pessoa": "Tim Forbes",
+  "cargo": "Creatures Supervisor",
+  "email": "tforbes@wetafx.co.nz",
+  "confianca": "media",
+  "fonte": "Wetā FX creatures supervisor citado pela The Credits (motionpictures.org, 'How Weta FX Brought the Villainous Ash People to Life in Avatar: Fire and Ash') detalhando a tecnologia BodyOpt para deformacao de personagem, e listado na sessao de producao do ACM SIGGRAPH 2026 (dl.acm.org/doi/10.1145/3774846.3795800). Endereco montado pelo padrao inicial+sobrenome@wetafx.co.nz",
+  "situacao": "segunda pessoa da Weta FX (teto de duas). CONFIANCA MEDIA e nao baixa, correcao do padrao: o Sam Sharplin usou esta MESMA forma (ssharplin@) em 05/09 e foi ENTREGUE, nao bounce, o que confirma esta forma especifica como viva; a outra forma (nome+inicial) continua sem essa prova"
  },
  {
   "data": "2026-09-07",
@@ -3207,6 +3288,17 @@ const PESSOAS = [
   "confianca": "sem-email",
   "fonte": "materia da Creative Bloq sobre por que GOAT vai parecer diferente de outros filmes de animacao, com ele nomeado como character designer do filme ao lado do production designer Jang Lee, explicando que o design do bode veio de tres racas reais, esloveno, nubiano e alpino",
   "situacao": "sem via, pelo mesmo motivo ja registrado para o Wendell Dalit: a Sony Pictures Animation e empresa distinta da Imageworks, nao usa imageworks.com, e nenhum endereco real dela foi achado. Montar um seria chute. Guardado nome e cargo"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Torn Banner Studios",
+  "pais": "Canadá (Toronto)",
+  "pessoa": "Steve Piggott",
+  "cargo": "Creative Director & CEO",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "publicado na propria pagina oficial de equipe do estudio (tornbanner.com/who-we-are), secao Management",
+  "situacao": "estudio novo para a campanha inteira, indie de Toronto (Chivalry, No More Room in Hell 2). SEM EMAIL: a pagina de contato so tem formulario e careers, nenhum endereco pessoal publicado e nenhum padrao de dominio conhecido para tornbanner.com. Guardado nome e cargo"
  },
  {
   "data": "2026-09-07",
@@ -3522,6 +3614,8 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+["2026-09-07","porta","O Joe achou quatro pessoas novas, e a Ubisoft ganhou a primeira porta no Canadá",
+ "Quatro rascunhos novos nesta rodada. Blair Armitage é a segunda pessoa da Riot (Principal Character Artist, mesma palestra da Gnomon que já tinha dado a Katia Bourykina, cujas duas tentativas de endereço voltaram bounce). Tim Forbes é a segunda da Weta FX, creatures supervisor citado pela imprensa oficial e pelo programa do SIGGRAPH 2026 explicando a tecnologia BodyOpt de deformação de personagem em Avatar: Fire and Ash; usei a MESMA forma de endereço que já foi ENTREGUE para o Sam Sharplin em 05/09, então subi a confiança para média em vez de baixa. Jason Figliozzi é a segunda pessoa da Netflix, head of character animation de Steps, o primeiro longa inteiramente feito dentro do Netflix Animation Studios. E o achado que mais importa: Henrick Pelletier, Lead Character Artist creditado pela própria Ubisoft no art blast oficial de Assassin's Creed Shadows, em Ubisoft Québec. É a PRIMEIRA carta pessoal da campanha numa casa da Ubisoft no Canadá, o país de maior prioridade; a única pessoa anterior da Ubisoft (Massive Entertainment, na Suécia) bounced duas vezes. RESSALVA HONESTA: o crédito é de março de 2025, então existe risco real de ele já ter mudado de estúdio. Fica também guardado, sem carta por causa do teto de uma pessoa por estúdio por rodada, o Thierry Dansereau, Art Director da mesma Ubisoft Québec. ACHADO QUE EVITA UM BOUNCE: ao checar um possível quinto nome (Glenn Melenhorst, VFX Supervisor), descobri que methodstudios.com hoje redireciona para company3.com, porque a Method Studios Melbourne foi renomeada Framestore em 2020/2021; o padrão de domínio methodstudios.com registrado em padroes-dominio.md é de uma casa que não existe mais sob esse nome, e escrevi isso no arquivo para ninguém gastar uma carta ali. O QUE TRAVOU: AGBO e Fanatics Collectibles, as duas prioridades de correção de pretensão salarial, seguem sem email verificável; a única informação de formato de endereço que existe para as duas vem de agregador pago, que o brief proíbe usar."],
 ["2026-09-07","porta","Fatia shog_br_A (68 estúdios do studiohog.com, Canadá/Reino Unido/Irlanda): reabri no navegador o que o curl tinha marcado 403/Cloudflare, e 50 dos 68 estavam VIVOS por trás do bloqueio",
  "Esta fatia veio de três links do studiohog.com que o PDF do Vini trazia e que a campanha tinha dado como inacessíveis; abertos com curl -k eles renderam 1.374 estúdios, 611 dentro do escopo depois do filtro de país e indústria, e uma varredura em massa marcou 404 deles como BLOQUEADOS por 403/Cloudflare. Recebi os 68 de Canadá (maioria) mais Reino Unido e Irlanda, com Canadá primeiro por ser a prioridade 1 do Vini, e abri cada um em série, com navegador de tela, sem paralelismo, testando a rede com outra página sempre que uma parecia travada. O NÚMERO QUE A RODADA PEDIU: dos 68, 50 abriram como página viva normal, mais 2 com certificado TLS quebrado do lado do próprio estúdio (Morro Images, SHD Games — servidor de pé, TLS morto) e mais 4 cujo domínio só existe hoje em HTTP puro pós-redirecionamento e o proxy deste ambiente só aceita CONNECT/HTTPS (Recom Farmhouse, XGen Studios, Project Whitecard, Axon Interactive) — ou seja, 56 dos 68 (82%) tinham estúdio vivo atrás do que uma varredura por curl chamaria de bloqueio. Só 9 estavam de fato mortos (domínio parado, não instalado ou reaproveitado por terceiro: Snowball Studios, 3D Matchmovers, Switch VFX, Sarbakan, EggNut, Classy Yak, Topix, Amethyst Games, Benjamin Rivers), e 3 deram ECONNRESET sem confirmação possível (Kreaturz, Animism Studios, Acme Pictures — precisam reconferir de outra rede). CONSERTO DE AMBIENTE FEITO NA HORA: o bridge.js validava o certificado do salto final e derrubava com 502 qualquer site em hosting compartilhado com cert genérico (ex.: OVH); adicionei rejectUnauthorized:false na perna de saída do bridge (o Chromium já ignorava erro de cert do lado dele), e isso revelou que o 3D Matchmovers estava com 'Site not installed' de verdade, não bloqueado. RESULTADO EM CANDIDATURA: só 1 vaga bateu a disciplina dele em todos os 68 — L'Atelier Animation (Montréal, hoje parte da Cinesite) tem candidatura espontânea aberta, e ENVIEI, mas sem confirmação (ver entrada própria em PORTAIS: fui o SEGUNDO a tentar sem saber do primeiro, mesmo resultado as duas vezes, formulário que só se limpa sem e-mail). Os outros 67: 2 portas de e-mail registradas sem rascunho (Alter Ego Post careers@alteregopost.com, CodeHatch sworin@codehatch.com), 1 descarte com motivo escrito (Kalos Studios exige 'legally entitled to work in Canada and have a valid work permit', que ele não tem), 2 são a mesma casa que já está em outra parte da campanha (BLVD = Rodeo FX; Complex Games = Frontier Developments), 1 fora de escopo geográfico (PhantomFX, as 7 vagas do quadro são todas na Índia) e o resto (cerca de 40) são estúdios pequenos de VFX/animação/jogos sem seção de carreiras, com vaga zerada, ou com vaga fora da disciplina (compositor, rigger, layout, matte paint, QA, programação). A LIÇÃO QUE VALE REPETIR: a varredura original tratou 403/Cloudflare como sinônimo de 'site morto', e não é — é o NOSSO IP recusado, o site quase sempre está de pé. O que a checagem de disciplina mostrou é que o gargalo real destes 68 não é acesso, é que a maioria simplesmente não tem vaga de personagem/modelagem/textura/lookdev aberta agora. Detalhe de processo: encontrei a candidatura de L'Atelier já registrada como pendente por outro agente da campanha (não da lista B, de uma rodada anterior) DEPOIS de já ter reenviado — devia ter checado o painel antes de preencher, e essa checagem ficou faltando aqui por pressa de prazo; documentado na própria entrada para não bater pela terceira vez."],
 ["2026-09-07","alerta","Fechamento do Canadá: dos 88 domínios reabertos que estavam vivos, 41 tiveram checagem de vaga; achado forte na Respawn Entertainment (EA)",
