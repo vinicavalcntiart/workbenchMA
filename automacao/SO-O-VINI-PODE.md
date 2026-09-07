@@ -55,13 +55,24 @@ tenho é exatamente a mesma que você teria clicando com a própria mão.
 **E a notícia dura, medida e não sentida, mas com um limite que eu mesmo errei de manhã:** um
 agente listou 123 quadros de ATS, **2.791 vagas, 165 na sua disciplina**, e sobrou **uma**
 enviável. O resto é parede: BambooHR com reCAPTCHA, Lever com hCaptcha, SmartRecruiters com
-DataDome, Workable recusando o nosso IP. Eu tinha resumido isso como "o estoque secou", e
-**isso ficou largo demais.** Secou o estoque de *vaga de disciplina em quadro de ATS que já
-conhecemos*. A fila de portal não secou: contei agora e há **282 vagas registradas sem
-candidatura e sem parede anotada**, quase todas página de carreiras de estúdio e candidatura
-espontânea, coisa que nunca foi trabalhada. As duas de prioridade alta ali são Cakefish /
-Dreamthorn (Principal Character Artist, remota) e House of Cool (Toronto). Tem um agente
-nessa fila agora.
+DataDome, Workable recusando o nosso IP.
+
+**E aqui eu preciso desfazer um número que eu mesmo te dei há uma hora.** Escrevi que a fila de
+portal não tinha secado e que sobravam **282 vagas sem candidatura e sem parede anotada**. Esse
+número está errado, e o erro é bobo: contei procurando as linhas no arquivo inteiro em vez de
+recortar primeiro o pedaço do array certo, e nome de estúdio aparece em mais de um array. Foi
+exatamente a armadilha que está escrita no brief do agente da Europa, e eu caí nela.
+
+**O número correto, recontado do array certo e confirmado por um agente independente:** o
+PORTAIS tem **655 entradas**, **405 ainda sem candidatura**, e dessas apenas **nove** têm nota
+curta o bastante para não trazerem veredito já escrito. **Nenhuma delas é porta de formulário
+aberta.** As duas que eu te apontei como prioridade alta caíram: a House of Cool **você já
+aplicou em 11/07**, com confirmação da WildBrain no Gmail para a mesma requisição 2025-4687, e
+o CSV e o painel não sabiam disso; e a Cakefish / Dreamthorn é porta de email, não de
+formulário.
+
+Ou seja: a minha versão original, a de que o estoque secou, estava certa, e a correção que eu
+fiz de manhã é que estava errada. A fila de formulário está seca de verdade.
 ---
 
 ## 1. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado

@@ -663,3 +663,23 @@ ano a 15 a 40 dolares a hora), ou repeticao de spam de Web3 (a Bondex sozinha te
 mesma 3D Stylized Environment Artist). **A NBCUniversal tem board no GoHire** com a mesma Associate
 Art Director de Montreal, mas o anuncio esta arquivado e o hash nao foi achado; se alguem achar o
 `clientHash` da NBCUniversal, essa e a porta que contorna o DataDome do SmartRecruiters delas.
+
+## Contar linha do painel sem RECORTAR o array primeiro dá número inflado
+
+Erro cometido pelo coordenador em 07/09 e medido por outro agente na mesma hora. Contei as
+entradas de portal varrendo o `docs/index.html` **inteiro** e filtrando por `a[3] == 'portal'`.
+Deu **723 entradas e 282 sem candidatura**. Os números reais, recortando o trecho entre
+`const PORTAIS = [` e o `].map` que o fecha, são **655 e 405**, e das 405 apenas **nove** não
+trazem veredito escrito na nota.
+
+A causa é a mesma que já estava escrita no brief do agente da Europa e que eu não apliquei:
+**nome de estúdio e linha com cara de portal aparecem em mais de um array**. Varrer o arquivo
+inteiro mistura PORTAIS com outros arrays e infla a fila.
+
+**Regra:** para qualquer contagem ou edição de array do painel, recorte primeiro o bloco do
+array alvo pelo seu `const NOME = [` e pelo `].map` que o fecha, e só então procure dentro dele.
+Isso vale para contar, para editar por âncora de texto e para deduplicar.
+
+E a lição de fundo, que custou uma correção pública ao Vini: **um número que contraria uma
+conclusão já medida por três agentes merece ser reconferido antes de virar recomendação.** Eu
+usei o 282 para dizer a ele que a fila não tinha secado, quando tinha.
