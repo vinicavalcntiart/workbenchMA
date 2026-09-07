@@ -466,7 +466,17 @@ estava chutando.
 3. **Caixa funcional (`jobs@`, `careers@`, `recruiting@`) também precisa ser vista publicada.**
    Três das dezessete devoluções são disso: são as mais fáceis de adivinhar e por isso as mais
    adivinhadas. Se a página de carreiras não escreve o endereço, ele pode não existir.
-4. **Conferir a devolução faz parte da rodada.** Uma casa que devolveu 550 continua ABERTA, e
-   não fechada: ninguém leu nada lá. Ela deve voltar para a fila por outra porta, formulário
-   ou endereço publicado, e não ser contada como já trabalhada. Blizzard, Netflix, Riot,
-   Ubisoft, Cinesite, Luma, Rodeo FX e Disney Animation estão todas nesse estado agora.
+4. **Conferir a devolução faz parte da rodada.** Uma casa que devolveu 550 continua ABERTA por
+   aquela porta: ninguém leu nada lá.
+
+   **Mas conferir o PAINEL antes de contar o prejuízo, porque eu quase errei este número.**
+   Cruzando as dezessete devoluções com `docs/index.html`, quatro dessas casas já tinham sido
+   alcançadas por outro caminho e a carta devolvida não custou nada: **Blizzard** (candidatura
+   enviada em 02/09 pelo Workday, com email de confirmação da Talent Acquisition citando a vaga),
+   **Ubisoft Montréal** e **Rodeo FX** (as duas com vaga viva e registrada para a mão, por
+   DataDome) e **Disney** (alerta de vaga ativo e verificado). A devolução ali é ruído, não perda.
+
+   **As que ficaram mesmo sem porta são estas, e é a lista curta que importa:** Cinesite,
+   Luma Pictures, Netflix/Animal Logic, Riot, e as três pequenas cuja ÚNICA porta era aquele
+   endereço adivinhado, Torquemada Games, Aesir Interactive e Storm in a Teacup. Sete, não
+   dezessete, e nenhuma delas some da fila.
