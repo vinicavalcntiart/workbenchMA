@@ -474,3 +474,44 @@ repetida que o Gmail impediu nesta rodada.
 casa sem ATS conhecido antes de casa com ATS conhecido), corte o timeout para 4s, e **rode em
 fatia**, medindo o ritmo nos primeiros cem hosts antes de decidir se vale a lista inteira. E nunca
 com navegador aberto ao mesmo tempo, que é a regra que já custou o contêiner das 06h44.
+
+## "Nunca tocada" tem validade de HORAS, não de dias, quando há agentes em paralelo
+
+Medido em 07/09 às 10h30. Um agente listou 123 quadros, achou **74 vagas da disciplina fora do
+painel**, e ao conferir descobriu que **a grande maioria já tinha recebido candidatura nas horas
+anteriores, por outro agente, sem ter sido commitada ainda**: Envar, Bluehole (duas), Loonshot,
+Playdead, Beffio (três), Ankama, Bulkhead (duas), Stunlocks, Gigglebug, Star Stable, Fool's
+Theory. **O Gmail impediu DEZ repetidas que a garra tinha liberado com `OK`** — somando dezoito
+no dia.
+
+Isso não é falha da garra nem do agente: é o preço de rodar em paralelo. O painel só sabe o que
+foi **commitado**, e entre enviar e commitar existe uma janela. **O Gmail não tem essa janela**,
+porque o estúdio responde em segundos.
+
+**Consequências práticas:**
+1. **Commit e push a cada candidatura**, não por rodada. Já é regra; esta medição é o porquê.
+2. **A busca no Gmail pelo domínio do estúdio é obrigatória antes de enviar**, e não opcional.
+   `JA-FEITO` da garra basta para pular; `OK` da garra nunca basta para enviar.
+3. **Lista de "nunca tocada" gerada há mais de uma hora já está velha.** Regenere, ou confira
+   uma a uma no Gmail antes de usar.
+
+## O estoque dos quadros CONHECIDOS secou. O que rende agora é quadro de estúdio NOVO.
+
+Leitura honesta de quem varreu: 123 quadros listados inteiros, 2.791 vagas, 165 na disciplina, e
+sobrou **uma** candidatura enviável. O resto é parede conhecida: BambooHR inteiro com reCAPTCHA
+de caixa, Lever com hCaptcha, SmartRecruiters com DataDome, Ashby reprovando a sessão, Workable
+em **429 contra o nosso IP** (medido duas vezes com 40 minutos de intervalo, então é limite da
+plataforma e **não autoriza escrever "sem vaga"**).
+
+E a varredura de subdomínio custa **um host por segundo** pelo proxy: mais de duas horas e meia
+para os 9.657 hosts da lista, e a fatia que deu tempo de rodar não achou vaga nova nenhuma.
+**Não gaste rodada nela sem tempo de sobra.**
+
+## Dois detalhes de leitura de ATS que mentem sobre geografia e sobre o próprio shell
+
+- **A listagem do BambooHR vem SEM LOCAL**, o que faz vaga presencial parecer remota. Quem diz a
+  geografia de verdade é o `atsLocation` do `/careers/<id>/detail`. Foi assim que as três vagas da
+  Streamline se revelaram em **Kuala Lumpur**, fora do escopo, depois de parecerem remotas.
+- **`pkill -f chrome` mata o próprio shell** que rodou o comando, e leva junto o que vinha depois
+  na mesma linha. Já custou um registro e um commit inteiros. Use `pgrep` para conferir e mate
+  por PID.
