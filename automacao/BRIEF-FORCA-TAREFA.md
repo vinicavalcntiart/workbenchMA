@@ -1249,3 +1249,20 @@ hora em vez de assumir que ele não procurou direito.** Foi a segunda vez em dua
 agente relatou ferramenta ausente e estava certo — a primeira foi o `$SCRATCH` vazio, que fez
 outro agente concluir que o CV não existia. **Agente relatando falta de arquivo é sinal, não
 desculpa.**
+
+## Quando o diagnóstico de uma parede for sofisticado demais, desconfie dele (07/09, 23h30)
+
+Três entradas registradas como parede intransponível caíram hoje, e nenhuma era parede:
+
+- **Crater** — "convida a candidatar-se e a página devolve zero campos". Era um **acordeão** que ninguém tinha clicado.
+- **UPP de Praga** — "parede de rede, clique trava". Era um `<div class="preloader">` interceptando os eventos de ponteiro, e o endpoint real (`POST /api/submit-application`) estava no JS da própria página.
+- **Juice, Varsóvia** — "a página usa ROLAGEM VIRTUAL, o conteúdo é movido por transform, `scrollIntoView` não move, as coordenadas não batem, `locator.click` estoura em timeout, clique por JavaScript muda o DOM mas o framework não acompanha e o Submit continua `disabled`". Tudo isso era **verdade observada** e mesmo assim a conclusão estava errada: o botão ficava desabilitado porque o **upload obrigatório de portfólio só entra no estado do React se a seção 4 for ABERTA antes do `setInputFiles`**. Reordenar três passos resolveu, **sem captcha nenhum**.
+
+O padrão que liga as três: **quanto melhor a explicação, menos alguém volta a testá-la.** "Rolagem virtual quebra o clique" é sofisticada, específica, coerente com tudo que foi observado, e por isso mesmo ficou de pé meio dia. Uma nota que dissesse só "não consegui" teria convidado outra tentativa; a nota bem escrita fechou a porta.
+
+**A regra, e ela é sobre como escrevemos as notas:**
+1. Diagnóstico de parede só vale com a **causa provada**, não com a causa plausível. Se você não isolou o mecanismo, escreva "não consegui, hipótese: X" e **não** escreva "parede por X".
+2. **Captcha de desafio se prova pelo DOM** (`recaptcha`, `hcaptcha`, `turnstile`, iframe), não por dedução a partir do botão que não habilita. Botão desabilitado quase nunca é captcha: é campo obrigatório que o framework não contabilizou.
+3. Antes de chamar qualquer porta de parede, **leia o JavaScript que a desenha** e confira a ordem de operações que o formulário espera.
+
+Custo medido do erro oposto: três candidaturas que existiam e ficaram meio dia paradas atrás de uma frase bem escrita.
