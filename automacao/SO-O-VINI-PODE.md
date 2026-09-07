@@ -446,3 +446,37 @@ baixo do widget, e a receita fica escrita no brief da força-tarefa, então não
 `80.lv/talent` **não é quadro de vagas**: é marketplace de perfil, com conta obrigatória
 (*"Create, publish, and share your profile and your work samples seen by hiring companies"*).
 Conta criada trabalha sozinha, e só você pode criar.
+
+**ATUALIZAÇÃO de 07/09 às 15h50: a conta está criada, o email está confirmado, e o que falta
+não depende mais de digitar nada.** O cadastro nunca foi a parede: a parede é que o
+**80 Level Talent trabalha por CONVITE**. O passo 3 do cadastro pede um *invitation code* e o
+perfil público só existe depois dele. Pedi o convite por dentro da plataforma, no botão
+*Request one*, que abre um pedido onde eles querem **um link de portfólio para revisar**;
+mandei o ArtStation. A tela respondeu *"Request sent! We will contact you shortly"* e agora,
+mesmo depois de recarregar, abre em *"Your application review is in progress"*.
+
+**O que sobra para você:** quando o código chegar no email, colar no passo 3. Vinte segundos.
+A senha da conta está no Drive privado, no arquivo *CAMPANHA - credenciais NOVAS de 07-09 v2*.
+
+---
+
+## 14. Duas coisas de vinte segundos cada, com senha nova (07/09, 16h)
+
+**a) A senha da EA mudou hoje, e agora ela está guardada de verdade.** A que está no doc
+*CAMPANHA - credenciais dos portais (privado)* **não funciona mais**: ela foi redefinida duas
+vezes hoje e nas duas a senha nova ficou só no chat e morreu com a sessão. Refiz a redefinição
+pelo fluxo oficial e a nova está no Drive, no arquivo **CAMPANHA - credenciais NOVAS de 07-09
+v2 (privado)**, na mesma pasta. Passe as duas linhas para o doc principal e apague os arquivos
+marcados como APAGAR.
+
+**b) O alerta de vaga da EA continua em WEEKLY, e trocar leva vinte segundos no seu navegador.**
+Entre em `https://jobs.ea.com/en_US/careers/ProfileJobAlerts`, botão **Edit** na linha do
+alerta de categoria *Art*, troque **Weekly** por **Daily** e salve. Eu não consegui: todo
+`POST` no assistente do Avature devolve **500** por `curl`, em urlencoded e em multipart, e o
+`jobs.ea.com` **não abre no navegador desta sessão** (tempo esgotado em toda tentativa, em três
+rodadas). Detalhe que confunde: a tela de edição mostra *Daily* marcado no próprio HTML
+enquanto a lista mostra *Weekly*. Quem manda é a lista.
+
+**O que já está certo na EA e você não precisa tocar:** o perfil de candidato está completo,
+conferido por dentro hoje, com contato, CV, link do ArtStation, quatro experiências com datas,
+três formações, idiomas e a lista de skills.
