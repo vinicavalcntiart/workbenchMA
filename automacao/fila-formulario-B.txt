@@ -43,7 +43,7 @@ One Animation
 # FEITO Panache Digital Games | sem porta: pagina de carreiras sem vaga e sem formulario de candidatura (so captura de email)
 # FEITO Paramount Animation | quadro Paramount lido inteiro por curl: zero vaga de personagem, modelagem, textura, look dev ou 3D
 # FEITO Passtech Games | sem porta de formulario: pagina de carreiras lida (https://passtechgames.com/careers) so publica email (CONTACT@PASSTECHGAMES.COM;JOBS@PASSTECHGAMES.COM), vira fila de carta
-Pearl Abyss
+# FEITO Pearl Abyss | sem vaga da disciplina: quadro oficial (pearlabyss.com/Company/Careers/List) tem so 2 vagas, Game Translator e Voice Actor; a candidatura espontanea exige conta no portal deles
 # FEITO Pipeline Studios | sem porta de formulario: pagina de carreiras lida () so publica email (development@pipelinestudios.com;distribution@pipelinestudios.com), vira fila de carta
 # FEITO Piranha Bar | sem porta de formulario: pagina de carreiras lida (https://piranhabar.ie/careers) so publica email (info@piranhabar.ie), vira fila de carta
 # FEITO Pixel Zoo | a mao, reCAPTCHA v3 reprovou o envio; vaga Environment Artist viva, dossie no painel
@@ -99,7 +99,7 @@ Sparky Animation
 Sperasoft
 Spin VFX
 # FEITO Squeeze Animation Studios | NAO APLICAR: ja registrado no painel que a casa recusou por permissao de trabalho
-Stardust Effects
+# FEITO Stardust Effects | ENVIADA E CONFIRMADA (3D Generalist, Oslo) - formulario proprio sem captcha
 # FEITO Starloop Studios | sem porta de formulario: pagina de carreiras lida () so publica email (hello@starloopstudios.com), vira fila de carta
 # FEITO Studio AKA | sem porta de formulario: pagina de carreiras lida (https://studioaka.co.uk/careers) so publica email (hello@studioaka.co.uk), vira fila de carta
 # FEITO Studio Evil | sem porta de formulario: pagina de carreiras lida () so publica email (contacts@studioevil.com), vira fila de carta
