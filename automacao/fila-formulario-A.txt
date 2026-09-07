@@ -156,7 +156,7 @@ Illusion Ray
 Ironroot Games
 Jo-Mei Games
 Joinplay Games
-Juice
+# FEITO Juice
 Jyamma Games
 KOG
 Kalamona Studios
