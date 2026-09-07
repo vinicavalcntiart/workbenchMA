@@ -244,3 +244,22 @@ candidatura enviada**, logo depois de registrar a prova.
 mesma máquina. Disco estava em 40% e não foi ele. **Rode UM navegador por vez**, e depois de
 cada rodada confira `pgrep -f chrome` e mate o que ficou pendurado. Não é frescura de recurso:
 processo pendurado de agente morto continua ocupando memória de quem está vivo.
+
+## O FORMULÁRIO carrega informação que o ANÚNCIO não tem, nos dois sentidos
+
+Duas medições de 07/09, opostas entre si, ensinam a mesma coisa.
+
+**A boa notícia estava só no formulário.** Na Bulkhead eu contei os termos no anúncio e deu
+`sponsor` 0, `visa` 0, `relocat` 0, e conclui que a promessa de patrocínio tinha sumido. Estava
+errado: *"Don't worry, we can sponsor your visa"* e *"100% on-site and we offer relocation
+assistance"* estão vivas, **dentro do formulário**, como texto de ajuda embaixo das perguntas.
+O texto que eu tinha capturado terminava em "Loading application form".
+
+**A má notícia também.** Na Larian Québec o anúncio não diz nada sobre visto e só exige inglês
+fluente, o que faz a vaga parecer aberta a estrangeiro. **O veto de residência está escrito
+dentro do formulário**, não no anúncio.
+
+**Regra:** antes de concluir qualquer coisa sobre **patrocínio, visto, residência ou regime de
+trabalho**, ABRA O FORMULÁRIO. Esses quatro assuntos moram tanto no corpo do anúncio quanto nos
+campos, e com frequência só nos campos. Contagem de termo numa página cujo texto termina em
+"Loading application form" não é prova de ausência, é ausência de prova.
