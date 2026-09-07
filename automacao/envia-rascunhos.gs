@@ -285,19 +285,32 @@ function enviarRascunhos() {
     // RASCUNHO JA PREPARADO NAO SE PREPARA DE NOVO, senao a assinatura entra DUAS VEZES no corpo.
     // Isso passou a importar em 06/09, quando o prepararRascunhos() nasceu: dali em diante existe
     // rascunho que ja chega aqui completo, e reaplicar o update duplicaria a assinatura.
-    if (m.getAttachments().length >= NOMES_ANEXOS.length) {
-      d.send();
-      n++;
-      Logger.log("enviado (ja vinha preparado) para " + para);
-      Utilities.sleep(PAUSA_MS);
+    // POR QUE ESTE ENVIO NAO USA d.update() SEGUIDO DE d.send(), e o motivo foi MEDIDO em
+    // 07/09 numa carta que ja tinha saido: o d.update() GRAVA o rascunho de novo, e e na
+    // gravacao que o compositor do Gmail reembrulha todo link em google.com/url. Ou seja,
+    // limpar o texto e logo depois gravar DESFAZ a limpeza, e o d.send() manda a versao
+    // reembrulhada. A carta da Cosmico saiu as 01h08 com os tres links embrulhados apesar
+    // de o limparLinks ter rodado, e foi assim que o defeito apareceu.
+    //
+    // A correcao e nao passar mais pela gravacao: monta o corpo limpo e manda direto pelo
+    // GmailApp.sendEmail, que compoe a mensagem final sem o embrulho, e so depois apaga o
+    // rascunho. Vale tambem para o rascunho que ja vinha preparado, porque ele foi
+    // preparado pelo mesmo update e portanto tambem esta embrulhado.
+    const jaPreparado = m.getAttachments().length >= NOMES_ANEXOS.length;
+    const html = limparLinks(m.getBody()) + (jaPreparado ? "" : "<br><br>-- <br>" + sig);
+    const texto = limparLinks(m.getPlainBody());
+    if (/google\.com\/url/i.test(html + texto)) {
+      Logger.log("NAO ENVIEI para " + para + ": sobrou link embrulhado que a limpeza nao desfez. Confira a mao.");
       continue;
     }
-    const html = limparLinks(m.getBody()) + "<br><br>-- <br>" + sig;
-    const texto = limparLinks(m.getPlainBody());
-    d.update(para, ASSUNTO, texto, { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
-    d.send();
+    GmailApp.sendEmail(para, ASSUNTO, texto, {
+      htmlBody: html,
+      attachments: jaPreparado ? m.getAttachments() : files,
+      name: "Vini Cavalcanti"
+    });
+    d.deleteDraft();
     n++;
-    Logger.log("enviado para " + para);
+    Logger.log("enviado com link limpo para " + para + (jaPreparado ? " (ja vinha preparado)" : ""));
     Utilities.sleep(PAUSA_MS);
   }
   Logger.log(n + " processados nesta execução" + (SIMULAR ? " (simulação)" : ""));
