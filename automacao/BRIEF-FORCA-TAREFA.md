@@ -171,3 +171,21 @@ que é o sinal mais raro da campanha, ficou parada sem precisar.
 Campo que só o Vini pode preencher existe de verdade (vídeo gravado por câmera, por exemplo),
 mas ele tem que ser **provado**, não suposto. Declarar parede que não existe custa mais caro que
 tentar e falhar, porque a vaga sai da fila da automação e some da vista.
+
+## Teamtailor: POST 200 NÃO é candidatura completa
+
+Medido na Bulkhead em 07/09. O envio devolve **200** e a URL vira
+`/applications/email_verification_needed`: a candidatura **não existe ainda**. Chega um email
+"Complete the application for ..." com um link `/applications/verify_email/<uuid>?candidate_uuid=<uuid>`,
+e só depois de abrir esse link a URL vira `/applications/<uuid>/thanks`, que é a prova de verdade.
+
+**Agente que parar no 200 conta candidatura pela metade e o estúdio nunca vê nada.** Depois de
+enviar num Teamtailor, procure esse email e abra o link antes de marcar `done=true`.
+
+Outras três armadilhas do mesmo formulário, e a ordem entre elas importa:
+1. **O formulário REMONTA ao rolar.** Marcar rádio antes de rolar até o fim apaga tudo.
+   Role primeiro, preencha depois.
+2. **Voltar ao topo DESMONTA a seção dos arquivos.** Role de novo antes de anexar o CV. O input
+   de arquivo **não tem atributo `name`, só `id`**.
+3. **Telefone é `intl-tel-input`** e devolve *"Phone is invalid"* para número sem país. O setter
+   nativo não acorda o plugin: **digite** o número internacional inteiro, com o `+` na frente.
