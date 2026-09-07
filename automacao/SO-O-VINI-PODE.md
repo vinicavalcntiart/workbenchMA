@@ -322,8 +322,64 @@ Nenhuma foi inventada.
 | **Coffee Stain** | qual estúdio do grupo você prefere: são 8 opções nomeadas, nenhuma neutra |
 | **Sharkmob** e **Weta Workshop** | departamento no genérico porque **nenhuma opção do menu é arte de personagem** |
 | **Untold Studios** | departamento no genérico; decisão anterior sua, não revertida |
-| **FIN Design** | o email de verificação expira em 1 hora e pedir outro exige login com senha |
+| ~~**FIN Design**~~ | **FECHADA em 07/09 às 15h20.** Não precisou de email novo: a senha está no doc privado do Drive, o login passou e o portal abre inteiro, sem nenhum aviso de verificação pendente. O perfil foi completado na mesma sessão |
 | Aba **References** de qualquer Teamtailor | dispara email ao contato na hora e exige pessoa real |
+
+### 10.1. As mesmas perguntas, agora com o endereço exato e as opções escritas (07/09, 15h40)
+
+Fui até cada tela e copiei o enunciado e o menu inteiro. Cada uma dá para responder em
+segundos, e **o resto do perfil dessas casas já está preenchido**: a pergunta é literalmente
+a única coisa em branco.
+
+**1. Coffee Stain, a mais barata de todas, e é UM CLIQUE.**
+Endereço direto: `https://jobs.coffeestain.com/en-GB/connect/questions/4`
+(entra pelo link de acesso que chega no email; o painel fica em `/connect/dashboard`).
+Enunciado: *"Studio — Is there any particular of our Studios you would like to work in?"*,
+com escolha **única** e sem opção neutra. As oito, com o jogo de cada uma entre parênteses,
+como o próprio menu escreve:
+
+1. Coffee Stain Studios (Satisfactory)
+2. Coffee Stain North (Goat Simulator 3)
+3. Coffee Stain Publishing
+4. Coffee Stain Malmö (mobile games)
+5. Coffee Stain Göteborg (Welcome to Bloxburg)
+6. Easy Trigger (Huntdown)
+7. Box Dragon (Unannounced game)
+8. Lavapotion (Songs of Conquest)
+
+Conferido hoje: as outras três perguntas da casa **já estão respondidas** (Role = `Senior 3D
+Character Artist`, Experience = `10` anos, Game = `Any`), as cinco localizações suecas mais
+Remote estão marcadas e o pitch está lá. Só a quarta ficou em branco, de propósito. Você já
+tem candidatura viva na casa, de Art Director and Art Lead em Estocolmo, feita há um dia.
+
+**2. Sharkmob, departamento.** Tela: `https://career.sharkmob.com/connect/profile/settings`,
+bloco *Your primary role*. Está hoje em **All**. O menu inteiro, sem nenhuma entrada de arte:
+All, Animation & Motion Capture, Audio, **Content**, Design & Direction, Engineering, Live
+Operations, Marketing, Narrative, Operations, Production, QA.
+**Indício novo que apareceu hoje e vale a sua decisão:** na Embark, que é sueca e usa o mesmo
+Teamtailor, **Content é o guarda-chuva da arte** (dentro de Content ela lista Animation, Art,
+Audio e Tools), e o perfil dela está gravado assim. Sharkmob não expõe as subfunções sem
+escolher o departamento, então ninguém confirmou que lá é igual. Se você disser "é Content",
+troca em dois cliques. O resto do perfil está completo: nome, telefone, endereço com Olinda e
+PE, Malmö e Londres marcadas e assinatura de vagas ligada.
+
+**3. Wētā Workshop, departamento.** Tela: `https://wetaworkshop.teamtailor.com/connect/profile/settings`.
+Está em **All**. O menu, também sem arte de personagem: Consumer Products, Creative Services,
+Finance & IT, Manufacture, Marketing, People & Culture, Tourism. O mais próximo é *Creative
+Services*, que foi onde a campanha registrou o cadastro de 02/09 como Concept Artists. O resto
+do perfil está completo e o questionário de cinco telas foi fechado hoje até o *All done*.
+
+**4. Ghost Ship Games, o Video CV.** É a única tela em branco do perfil deles, é **opcional**,
+e pede vídeo gravado por câmera. Fica no questionário do Connect de
+`https://ghostshipgames.teamtailor.com` (entra pelo link de acesso do email). Todo o resto
+está respondido, inclusive o *Why join* citando Deep Rock Galactic.
+
+**5. Keen Games, duas coisas.** O vídeo, mesmo caso do anterior, e o **número de títulos
+publicados**, que ninguém da campanha sabe e que eu não invento. Se você me disser o número,
+qualquer agente fecha em trinta segundos.
+
+**6. IOI.** Experiência em AAA e quais jogos você joga. As duas são sobre você e nenhuma tem
+resposta no material da campanha.
 
 ---
 
