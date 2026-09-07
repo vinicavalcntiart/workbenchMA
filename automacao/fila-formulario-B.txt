@@ -39,19 +39,19 @@ Old Skull Games
 Omens Studios
 One Animation
 Other Ocean Interactive
-Owlchemy Labs
+# FEITO Owlchemy Labs | sem porta de formulario: quadro Workable vazio e espontanea por email jobs@owlchemylabs.com
 Panache Digital Games
-Paramount Animation
+# FEITO Paramount Animation | quadro Paramount lido inteiro por curl: zero vaga de personagem, modelagem, textura, look dev ou 3D
 Passtech Games
 Pearl Abyss
 Pipeline Studios
 Piranha Bar
-Pixel Zoo
+# FEITO Pixel Zoo | a mao, reCAPTCHA v3 reprovou o envio; vaga Environment Artist viva, dossie no painel
 Pixelsplit
 Playable Worlds
 Playfight
 Playful Studios
-Playground Games
+# FEITO Playground Games | sem vaga da disciplina (so Design, Producao e Engenharia no Jobvite) e sem espontanea
 Playtonic Games
 Polyarc
 Polydin Studio
@@ -62,7 +62,7 @@ Pushka Studios
 QLOC
 Qvisten Animation
 Raccoon Logic
-Rainbow CGI
+# FEITO Rainbow CGI | ja no painel (Rainbow SpA), parede de reCAPTCHA v3 medida por outro agente
 Rarebyte
 Raylight Games
 Reactiv
@@ -77,7 +77,7 @@ RetroStyle Games
 Rising Sun Pictures
 Ritzy Animation
 Robot Entertainment
-Robot Playground Media
+# FEITO Robot Playground Media | vaga Visual Development Artist viva mas candidatura SO por email jobs@robotplaygroundmedia.com
 RocketBrush Studio
 Rocksteady Studios
 Ruckus Games
@@ -86,14 +86,14 @@ SEHSUCHT
 # FEITO SHED | a mao, reCAPTCHA v2 de caixa, dossie no painel
 SHIFT UP
 SSVFX
-Sandfall Interactive
+# FEITO Sandfall Interactive | Open Application existe mas a pagina /jobs/open-application esta protegida por SENHA (Guest Area)
 Sans Strings Studio
 Savian
 ShadowMachine
 Shirogumi
 Siege Camp
 Singularity 6
-Snapshot Games
+# FEITO Snapshot Games | sem porta de formulario: quadro GoHire com zero vaga e General Application por email jobs@snapshotgames.com
 SnowDog Studio
 Sparky Animation
 Sperasoft
@@ -152,7 +152,7 @@ Unit Image
 User T38
 VEA Games
 VSQUAD (reenvio)
-Vertigo Games
+# FEITO Vertigo Games | sem porta de formulario: open application so por email jobs@vertigo-games.com
 Walking The Dog
 Watch Next Media
 Wildseed Studios

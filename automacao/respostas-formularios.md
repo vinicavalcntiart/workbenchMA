@@ -3099,3 +3099,23 @@ imagem**; desafio não se burla, então nada foi enviado.
 **MOTIVATION LETTER** (colar inteiro):
 
 > I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; I would need work permit sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I also lead: I review other artists' work, set the asset standard, and I founded my own character art school. Open to aligning with your band for the role; as a reference, I am looking at around CAD 80,000. Portfolio: https://www.artstation.com/viniciuscavalcanti
+
+### Pixel Zoo (North Lakes, Brisbane, Austrália) — Environment Artist — PAREDE: reCAPTCHA v3
+
+Link da vaga: https://pixelzoo.com.au/careers/environment-artist/ · Formulário: https://pixelzoo.com.au/contact/
+
+O botão **APPLY NOW** do anúncio aponta para a página de contato, então aquele Contact Form 7 é a
+porta designada por eles. Sem campo de arquivo. Tentativa única de envio em 07/09 reprovada pelo
+reCAPTCHA v3, com a tela genérica *"There was an error trying to send your message. Please try again later"*.
+
+| Campo | Resposta |
+|---|---|
+| (select) your-recipient | **Job Interest** |
+| Nome | Vini Cavalcanti |
+| Telefone | número do documento privado do Drive, com o código do país na frente |
+| Email | contact@vinicavalcanti.art |
+| Assunto | Application: Environment Artist (North Lakes, Brisbane) |
+
+**Mensagem** (colar inteiro):
+
+> Hello Pixel Zoo team, I am applying for the Environment Artist opening at your North Lakes studio. I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized 3D. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's style, with review rounds as routine. The posting asks for hard surface modelling in Maya plus texturing, surfacing and shaders, and that is daily work for me: I take an asset end to end, sculpt through retopology, UVs, baking, texturing, LODs and engine integration, and I also do character grooming in Houdini. I lead as well: I review other artists' work, I set the asset standard, and I founded my own character art school. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE to Brisbane and I am fully open to moving for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around AUD 95,000. Portfolio: https://www.artstation.com/viniciuscavalcanti  LinkedIn: https://www.linkedin.com/in/vinicavalcnti/  Site: https://vinicavalcanti.com  CV and showreel available on request or by email to contact@vinicavalcanti.art
