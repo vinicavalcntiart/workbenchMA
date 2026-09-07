@@ -893,3 +893,29 @@ errada por mais da metade.
 
 Vale junto a lição de sempre: a página `<estudio>.com/jobs` costuma ser vitrine, e o ATS real
 mora noutro domínio. Na Cloud Imperium é `cloudimperiumgames.wd503.myworkdayjobs.com`.
+
+## Patrocínio de visto: casa pequena na EUROPA não consegue, no CANADÁ costuma ser fácil
+
+Regra dita pelo Vini em 07/09, corrigindo uma generalização minha. Eu peguei um caso holandês e
+transformei em regra universal, e isso ia despriorizar exatamente o alvo mais acessível dele.
+
+**Na Europa**, casa pequena de fato não patrocina, e o limite é **estrutural**, não de vontade:
+piso salarial alto para visto de trabalho qualificado, custo e burocracia que empresa pequena não
+absorve. A Head of HR da **Galaxy Grove**, em Utrecht, escreveu isso por conta própria em 07/09:
+*"we do not have the means to sponsor employees from outside the European Union"*, e acrescentou
+que provavelmente vale para outras empresas pequenas de lá. Consequência prática: numa recusa de
+estúdio pequeno europeu, o "não" costuma ser de **estrutura**, não do portfólio dele.
+
+**No Canadá é o contrário: costuma ser fácil, inclusive para estúdio pequeno.** Portanto, em
+território canadense:
+
+- **Não existe desempate por porte.** Estúdio pequeno e médio entra com o mesmo peso de casa
+  grande, e vaga da disciplina em casa pequena é alvo de **primeira** linha.
+- **O que derruba é veto ESCRITO no anúncio**, não suposição: *must be legally authorized to work
+  in Canada*, *must be based in*, *we do not sponsor*, *permanent resident or citizen*.
+- O sinal positivo escrito (*visa sponsorship*, *relocation assistance*, *LMIA*, *work permit
+  support*) continua valendo como reforço, mas a **ausência dele não é veto** no Canadá.
+
+E a regra de salário ganha o motivo certo: no Canadá nunca pedir abaixo do salário vigente do
+LMIA, porque pedir abaixo **não o torna barato, torna impossível de patrocinar**. Isso vale em
+casa de qualquer tamanho.
