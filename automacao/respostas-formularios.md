@@ -2247,3 +2247,66 @@ Texto de `Information for the recruiter`:
    botão devolve "não achei" em todas as 19 caixas. O certo é achar o `label[for=id]`, comparar o
    texto dele e clicar no botão, conferindo depois `aria-checked === "true"`.
 2. O banner de cookies fica no rodapé e **não** cobre o botão `Send`, ao contrário do da Bohemia.
+
+## Floating Rock (Wellington, Nova Zelândia) — Character Artist do Kyōryū — À MÃO por reCAPTCHA
+
+Achada em 07/09 pela fatia JHONB, na fila `automacao/fila-oceania.csv` (linha marcada ARTE).
+Estúdio pequeno de Wellington que **acabou de assinar com um publisher** e está montando o time do
+Kyōryū, e a vaga é literalmente a dele: *"We're looking for a creature-oriented Character Artist to
+bring Kyōryū's re-engineered dinosaurs to life. Translate our concept arts to a 3D model for the
+game. As a key hire in our game team, you'll help define the look and feel of our debut title."*
+
+**Link:** https://floating-rock.com/careers/ (o formulário é um HubSpot embutido, role a página até
+"Apply to be a Rockie at Floating Rock")
+
+**POR QUE FICOU À MÃO:** o formulário do HubSpot termina numa caixa de reCAPTCHA logo acima do
+botão Submit (campo escondido `g-recaptcha-response`, id `hs-recaptcha-response`). A automação
+preencheu **tudo**, conferiu campo a campo pela leitura de volta, clicou em Submit e a página não
+mudou: o formulário continuou preenchido e o widget do captcha ficou como uma caixa vazia. Captura
+em `sp_frock_pos.png`. Não se burla captcha de desafio; **abra o link, cole as respostas abaixo,
+marque a caixa e envie**, que leva um minuto.
+
+Campo a campo, com os valores exatos que a automação já validou:
+
+| Campo | Valor |
+|---|---|
+| First Name | Vini |
+| Last Name | Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone Number | o do documento privado do Drive, **sempre com o código de país +55 na frente** |
+| Link to resume, reel or portfolio * | https://www.artstation.com/viniciuscavalcanti |
+| Or upload resume | Vini_Cavalcanti_CV.pdf |
+| What role are you applying for? * | **Modeller - Character** (é a opção exata da lista; não existe "Character Artist" no menu) |
+| Seniority Level | Senior |
+| If selected other... | deixar em branco |
+| How many years of experience do you have? * | **10+ years** |
+| Linkedin Profile | https://www.linkedin.com/in/vinicavalcnti/ |
+| What is your expected hourly rate in NZD? * | Around NZD 55 per hour. Open to aligning with your band for the role. |
+| What's your ideal start date? | As soon as the visa allows, after a standard transition period with my current studio. |
+| Where are you currently based? * | Olinda, Pernambuco, Brazil |
+| Do you prefer to re-locate to NZ for this position? * | **Yes** |
+| Do you need a visa to work in New Zealand? * | **Yes** |
+| Which softwares are you most experienced with? | Maya, Unreal, Z Brush, Houdini, Photoshop, Substance, Blender |
+| What are your 3 best soft skills? | Adaptability, Communication, Leadership |
+| If software or soft skills are not listed | Marmoset Toolbag, XGen, Marvelous Designer, Unity. I WANT TO RELOCATE to New Zealand and I am fully open to moving for the role. 10+ years in stylized 3D characters: E-Line Media (Endstar, sculpt to engine), The Wingfeather Saga at Angel Studios, and three years at PUGA Studios delivering characters for international clients under someone else's art direction, in the client's style, with review rounds as routine. |
+| Caixa "I agree to receive other communications" | opcional, deixada desmarcada |
+
+**Armadilhas medidas neste formulário, todas novas para a campanha e todas do HubSpot embutido:**
+
+1. **O id de cada campo do HubSpot COMEÇA COM DÍGITO** (é o uuid da instância do formulário, e ele
+   **muda a cada carregamento**). Montar seletor como `#932ca1fb-...` faz o Playwright levantar
+   `SyntaxError: not a valid selector` no `querySelectorAll`, e **todo campo volta vazio**, o que
+   parece formulário quebrado e é seletor. O certo é `[id="..."]`, e casar o campo pelo **texto do
+   rótulo**, nunca pelo id, que não sobrevive à próxima carga.
+2. **O formulário vive num iframe** de `js-ap1.hsforms.net` e só monta **depois de rolar a página**.
+   Ler o DOM da página principal devolve só o campo de newsletter do rodapé.
+3. **Os menus não são `<select>`**: são combobox com lista `[role=listbox]` desenhada à parte. E o
+   seletor `[role=option]` **casa também com a lista de países do telefone**, que está sempre no DOM:
+   uma leitura ingênua devolve "Afghanistan +93, Albania +355..." no lugar das opções da pergunta.
+   Filtre o que termina em `+NN` e leia a lista visível.
+4. **A opção certa do menu de função é `Modeller - Character`.** O menu não tem "Character Artist",
+   e pedir por texto parecido não acha nada.
+5. **`10` casa primeiro com `6-10 years`.** O alvo tem que ser a string inteira, `10+ years`, senão
+   a candidatura sai dizendo que ele tem menos experiência do que tem.
+6. O telefone é widget com bandeira, da mesma família do que virou `+81 Japão` na Hampa: digitado
+   com `+55` na frente, a bandeira vai para o Brasil e o campo escondido `0-1/phone` fica correto.
