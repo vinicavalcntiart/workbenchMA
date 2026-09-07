@@ -480,3 +480,100 @@ estava chutando.
    Luma Pictures, Netflix/Animal Logic, Riot, e as três pequenas cuja ÚNICA porta era aquele
    endereço adivinhado, Torquemada Games, Aesir Interactive e Storm in a Teacup. Sete, não
    dezessete, e nenhuma delas some da fila.
+
+---
+
+## TRÊS VEIAS NOVAS DE ENDEREÇO **PUBLICADO**, achadas em 07/09 e todas repetíveis
+
+Escritas depois da regra de 07/09 que rebaixou endereço-de-padrão para confiança **baixa**.
+As três entregam endereço **visto escrito literalmente**, que é a única coisa que a
+medição das 17 devoluções deixou de pé. As três saíram de `curl`, sem navegador.
+
+### 1. O campo `recruiter-email` do Teamtailor, quando a casa renderiza no PRÓPRIO domínio
+
+Estúdio que usa Teamtailor mas mostra as vagas no site dele (e não em
+`slug.teamtailor.com`) costuma renderizar **no servidor** o payload inteiro da API, e esse
+payload traz o campo **`recruiter-email` com o endereço corporativo REAL do recrutador dono
+da requisição**. Não é padrão deduzido: é o endereço que o próprio estúdio publicou.
+
+```
+curl -sS -L https://<dominio>/careers | grep -oE '"recruiter-email":"[^"]+"'
+```
+
+Testar em `/`, `/careers`, `/careers/`, `/jobs`, `/career`. Rendeu:
+
+| Casa | Onde | Endereço |
+|---|---|---|
+| Starbreeze | `starbreeze.com/careers` | `marina.jonsdottir@starbreeze.com` |
+| Stunlock Studios | home de `stunlock.com` | `helenat@stunlockstudios.com` |
+
+**A Stunlock é a prova de por que endereço literal vence padrão:** o site é `stunlock.com`
+mas o email é **`@stunlockstudios.com`**. Qualquer endereço montado sobre o domínio do site
+teria quicado, e a rodada teria registrado "padrão certo" antes de ver o 550.
+
+**Rendimento honesto:** varrido `/careers`, `/jobs`, `/career` e `/` nos 673 domínios do
+painel, o campo apareceu em **zero** deles, porque quase nenhum estúdio da fila renderiza
+assim. As duas casas que renderizam não estavam na lista de domínios do painel. Ou seja: a
+veia é **rica mas rara**, e vale como teste barato em casa nova, não como varredura.
+
+**Onde o Teamtailor NÃO entrega:** `slug.teamtailor.com/jobs` e `/jobs.json` não trazem o
+campo; a seção Recruiter da página de vaga carrega por JavaScript e `curl` só vê o
+esqueleto; `/jobs/<id>/sections/<n>` e `/sections/<n>` respondem casca e 500.
+
+### 2. A POLÍTICA DE PRIVACIDADE nomeia o encarregado de dados, com nome, cargo e email
+
+Lei de proteção de dados na Coreia, na União Europeia, na Alemanha e no Reino Unido obriga
+a publicar um responsável. Muita casa publica **nome completo, cargo e email direto**, e
+quase sempre reparte por assunto, o que às vezes entrega **o responsável por RECRUTAMENTO**.
+
+Foi assim que saiu **Sunho Park (박선호), HR팀장 da GIANTSTEP**, em
+`giantstep.co.kr`, na tabela de encarregados, explicitamente sob a rubrica `채용 관련`,
+recrutamento. A mesma tabela deu o CTO e o chefe de planejamento estratégico, três
+endereços reais que também provam o formato `nome.sobrenome@giantstep.co.kr`.
+
+Caminhos que valem testar: `/privacy`, `/privacy-policy`, `/impressum`, `/datenschutz`,
+`/legal-notice`, `/mentions-legales`. O `impressum` alemão é o mais promissor ainda não
+minerado, porque a lei alemã exige contato de pessoa física responsável.
+
+### 3. O ofuscador de email do Cloudflare é REVERSÍVEL, e esconde página de perfil inteira
+
+Site que mostra `[email protected]` no texto não está sem endereço: está com o endereço
+guardado no atributo `data-cfemail`, em hexadecimal, cifrado com XOR pelo primeiro byte.
+
+```sh
+curl -sS -L <url> | grep -oE 'data-cfemail="[0-9a-f]+"' | sed 's/.*="//;s/"//' \
+ | python3 -c "import sys;h=sys.stdin.read().strip();b=bytes.fromhex(h);print(''.join(chr(c^b[0]) for c in b[1:]))"
+```
+
+A REALTIME (`realtimeuk.com`) publica **uma página de perfil por pessoa do time sênior, cada
+uma com o email direto**, todas ofuscadas assim. Decodificando saíram
+`jane@realtimeuk.com` (Jane Forsyth, Head of Production - Games) e `dave@realtimeuk.com`
+(David Cullinane, Executive Producer - Games), este último confirmado porque aparece
+**também em texto puro** no rodapé do site, como o contato de Games.
+
+**Regra que sai daí, e ela corrige varredura antiga:** a varredura mecânica de `mailto` que
+este arquivo deu como esgotada em 04/09 **não via nada disso**. Página que parece não
+publicar email pode estar publicando atrás do Cloudflare. Antes de dar um domínio como sem
+endereço, procurar `data-cfemail`.
+
+## O ATALHO DO `teamtailor-mail.com`, medido em 07/09
+
+Buscar `teamtailor-mail.com` no Gmail devolveu **mais de 40 recrutadores com nome real**,
+porque o Teamtailor envia a confirmação de candidatura **assinada pela pessoa**, de
+`nome.sobrenome@<slug>.teamtailor-mail.com`, e muitas assinaturas trazem o cargo por
+extenso (Luke Beazley, Talent Acquisition Manager da Starbreeze; Soledad Trejo, HR Business
+Partner & Recruitment da Envar; Helena Toresson da Stunlock; Daniel Axelsson da Goodbye
+Kansas; Eleonora Matrella da Important Looking Pirates; Declan Blayney da Airship).
+
+**O que o atalho entrega de verdade, e o que não entrega.** Entrega **nome e cargo com
+confiança alta**, porque a pessoa escreveu para o Vini. **Não entrega endereço**: o
+`@<slug>.teamtailor-mail.com` é relay e o endereço corporativo tem que ser achado ou
+provado à parte. Nesta rodada, das mais de 40 pessoas colhidas, **só duas** viraram carta,
+e as duas porque o endereço apareceu publicado em outro lugar (Starbreeze e Stunlock). Nas
+outras, montar `nome.sobrenome@dominio` seria exatamente o chute que produziu as 17
+devoluções.
+
+**Uso certo do atalho:** ele é o **verificador**, não a fonte. Quando um endereço publicado
+aparece (por `recruiter-email`, política de privacidade ou página de perfil), o nome do
+Teamtailor confirma que a pessoa existe, está na casa hoje e trabalha com contratação. Foi
+o que fechou a conta da Helena Toresson.
