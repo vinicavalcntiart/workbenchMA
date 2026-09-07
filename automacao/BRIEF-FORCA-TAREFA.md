@@ -263,3 +263,36 @@ dentro do formulário**, não no anúncio.
 trabalho**, ABRA O FORMULÁRIO. Esses quatro assuntos moram tanto no corpo do anúncio quanto nos
 campos, e com frequência só nos campos. Contagem de termo numa página cujo texto termina em
 "Loading application form" não é prova de ausência, é ausência de prova.
+
+## A garra NÃO enxerga o Gmail, e foi o Gmail que impediu três repetidas
+
+Medido em 07/09. Um agente chegou a preencher o formulário inteiro da **Chimera Entertainment**
+antes de conferir a caixa. A garra tinha devolvido `OK`, e com razão: a candidatura não estava
+no painel nem no `processados.csv`. O que provava que ela existia era o **email de confirmação
+de 06/09**. O mesmo valeu para **Deck13** e **Aesir**.
+
+**A garra confere painel e CSV, que são o que a campanha ESCREVEU. O Gmail é o que os estúdios
+RESPONDERAM, e é registro independente.** Quando um envio não chega a ser commitado (contêiner
+reiniciado, agente morto, rodada interrompida), o email de confirmação é a única prova que
+sobrou.
+
+**Regra:** antes de enviar em estúdio que você não trabalhou nesta rodada, faça também uma busca
+no Gmail pelo domínio dele. `JA-FEITO` da garra é motivo suficiente para pular; `OK` da garra
+**não** é prova suficiente para enviar.
+
+## Três defeitos do NOSSO ambiente que pareciam parede de estúdio
+
+Todos medidos em 07/09, e todos custaram diagnóstico errado escrito no painel.
+
+1. **O `502 read ECONNRESET` da SQRT3 era a ponte desta sessão, não o estúdio.** Um `page.route`
+   que re-busca cada recurso até 5 vezes fez o mesmo POST passar de primeira.
+2. **Os dois bloqueios registrados da Bohemia Interactive eram falsos.** O menu *Discipline* e o
+   código de país "não selecionavam" porque pedaços de JavaScript sob demanda voltavam 502
+   intermitente. Com a rede consertada, os dois selecionam normalmente. A parede real é
+   reCAPTCHA v3, que é outra coisa e tem outro conserto.
+3. **Rodar varredura com 20 a 40 conexões AO MESMO TEMPO que um navegador satura a ponte, mata o
+   Chromium e faz página viva parecer quebrada.** Isto provavelmente explica o reinício do
+   contêiner das 06h44. **Varredura em lote e navegador não rodam juntos.**
+
+E um detalhe de proxy: `boards-api.eu.greenhouse.io` está **bloqueado por política do proxy**,
+mas `job-boards.eu.greenhouse.io` responde 200. Use o segundo.

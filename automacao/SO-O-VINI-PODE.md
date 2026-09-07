@@ -57,6 +57,24 @@ primeira opção da lista.
 
 ---
 
+## 1d. UM PDF DE PORTFÓLIO destrava uma classe inteira de formulário
+
+Hoje **duas** candidaturas pararam pelo mesmo motivo, e não é captcha: o formulário exige
+**arquivo** de portfólio e a campanha não tem nenhum.
+
+- **Engine Room Hollywood**: campo de arquivo obrigatório que aceita só imagem ou vídeo, e
+  recusa PDF. Tentei baixar um render do seu ArtStation para resolver sozinho e o Cloudflare
+  bloqueou pelos dois caminhos.
+- **Ironbird Creations** (3D Artist, Cracóvia, Teamtailor **sem captcha**, mapeado inteiro):
+  *"Please share your portfolio"* é **upload obrigatório, sem alternativa de link**.
+
+**Se você exportar um PDF do portfólio e deixar em `$SCRATCH/apply/`, as duas saem na mesma
+rodada, e toda vaga futura com esse campo deixa de ser parede.** É provavelmente a coisa de
+maior alavancagem que você pode fazer em cinco minutos, porque destrava um tipo de formulário
+inteiro em vez de uma vaga.
+
+---
+
 ## 2. Rainbow CGI, Roma e Milão: pendência honesta, decida você
 https://www.rbw-cgi.it/careers/
 
