@@ -1196,3 +1196,24 @@ Achado bom da mesma rodada, que vale como método: o veredito antigo da UPP dizi
 rede, clique trava". Não era rede nem captcha — era um `<div class="preloader">` interceptando
 os eventos de ponteiro. **O endpoint real estava no JS da própria página.** Antes de chamar
 uma porta de parede, leia o JavaScript que a desenha.
+
+## Onde a candidatura repetida nasce: entrada aberta em casa já trabalhada (07/09, 22h20)
+
+Duas duplicatas em um dia só — Union VFX às 16h15 e UPP de Praga à noite — e as duas têm o
+mesmo formato. Levantei quantos lugares têm essa forma: **29 estúdios do PORTAIS têm ao mesmo
+tempo entrada `done=false` e entrada `done=true`.** Está tudo em `automacao/RISCO-DUPLICATA.md`.
+
+**Não são 29 erros**, e é importante não ler assim: casa grande publica várias requisições
+diferentes, e ter uma enviada não impede as outras. A Netflix tem oito abertas e uma enviada,
+todas vagas distintas. **É a lista dos lugares onde o erro pode acontecer de novo**, porque
+quem chega depois lê "aberta" como "por fazer".
+
+A regra que fica: **nessas 29 casas, o dedupe é pela REFERÊNCIA da requisição.** Antes de
+enviar, abra a entrada `done=true` do mesmo estúdio e confirme que é outra requisição. E
+confira o Gmail, sempre: hoje apareceram TRÊS envios reais que o painel não registrava —
+Larian (recibo do Lever às 04h35), Cosmico (email às 01h08) e REALTIME UK (listada no painel
+do Teamtailor apesar da tela ter voltado vazia).
+
+A lição de fundo é sobre o formato do nosso próprio registro: **uma entrada aberta não
+significa trabalho por fazer, significa que ninguém escreveu o desfecho.** As duas coisas são
+indistinguíveis olhando só o `done`, e essa ambiguidade é o combustível da duplicata.
