@@ -2156,3 +2156,38 @@ prova é o próprio input: ele guardou `Vini_Cavalcanti_CV.pdf`. Não conclua qu
 
 **Nenhuma pergunta de autorização de trabalho ou de salário no formulário**, então não há nada a
 decidir: é preencher, marcar o captcha e enviar.
+
+## Certain Affinity, Senior Material Artist (Vancouver e Toronto, JazzHR) — À MÃO por reCAPTCHA de desafio
+
+**Links:** Vancouver https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist ·
+Toronto https://certainaffinityinc.applytojob.com/apply/eJTHIpzicy/Senior-Material-Artist (mesmo
+formulário, mesmos campos, requisições separadas — mandar as duas)
+
+**Por que vale:** achado na reabertura com navegador de tela dos domínios que o curl tinha marcado
+403 na fatia Canadá anglófono (07/09); certainaffinity.com estava vivo o tempo todo. Estúdio AAA
+(trabalho em Halo, Doom, Call of Duty, Left 4 Dead) com presença nova em Vancouver e Toronto. A vaga
+é **Senior Material Artist**: texturização e shading (PBR, Substance Designer/Painter, Unreal 5,
+Maya, ZBrush), o encaixe mais direto de todo o lote reaberto. Vaga aberta só para candidatos na
+Colúmbia Britânica, Alberta, Ontário ou Nova Escócia (restrição de local de trabalho, não de
+cidadania) — nenhuma exigência escrita de autorização prévia.
+
+**Por que à mão:** testado em 07/09, formulário simples (sem pergunta customizada nenhuma além dos
+campos básicos), preenchido inteiro e conferido por leitura de volta. O `Human Check` é reCAPTCHA
+v2: o clique no quadrinho **não marcou sozinho** e abriu **desafio de imagem**, que não se burla.
+
+| Campo (id do JazzHR) | O que colar |
+|---|---|
+| `resumator-firstname-value` | `Vini` |
+| `resumator-lastname-value` | `Cavalcanti` |
+| `resumator-email-value` | `contact@vinicavalcanti.art` |
+| `resumator-phone-value` | o telefone **com +55 na frente**, do doc privado do Drive |
+| `resumator-city-value` | `Olinda` |
+| `resumator-state-value` | `Pernambuco` |
+| `resumator-address-value` e `resumator-postal-value` | opcionais, pode deixar em branco |
+| Currículo (`resumator-resume-value`) | `Vini_Cavalcanti_CV.pdf` |
+| `Human Check` | reCAPTCHA v2, resolver o desafio de imagem manualmente |
+
+Nenhuma pergunta de patrocínio/visto neste formulário; se aparecer alguma pergunta de elegibilidade
+fora do que já foi visto aqui, responder com a verdade (precisa de patrocínio, ainda não autorizado
+a trabalhar no Canadá). Pretensão, se pedirem: `CAD 95,000 per year. Open to aligning with your band
+for the role.`
