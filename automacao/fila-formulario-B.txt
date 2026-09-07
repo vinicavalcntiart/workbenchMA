@@ -1,0 +1,164 @@
+# FILA B: estudios com carta fria ENTREGUE e NENHUMA candidatura por formulario.
+# Criada em 07/09 a pedido do Vini. Recorte: nomes que comecam de M ate Z e numeros.
+# A outra metade esta em fila-formulario-A.txt. Nao invada a outra metade.
+# Total desta fila: 160
+Mac Guff
+Maga Animation Studio
+MagicLab
+Mago Production
+Mascista
+Mathematic
+Melbot Studios
+Mercurysteam
+Microids
+Mighty Animation
+Mighty Coconut
+Mighty Nice
+Milford
+Millimages
+Mimic Productions
+Mirage VFX
+Monigotes Estudio
+Moon Studios
+Moonbug Entertainment
+Moonmana
+Moonraker VFX
+Morgana Studios
+Mundfish
+NOLABEL
+Nabi Studios
+Naraven Games
+Nathan Love
+Next Level Games (Nintendo)
+Nitro Games
+No Brakes Games
+Noodlecake Studios
+Nu Boyana Portugal / Lusco Fusco Animation
+Nuare Studio
+Old Skull Games
+Omens Studios
+One Animation
+Other Ocean Interactive
+Owlchemy Labs
+Panache Digital Games
+Paramount Animation
+Passtech Games
+Pearl Abyss
+Pipeline Studios
+Piranha Bar
+Pixel Zoo
+Pixelsplit
+Playable Worlds
+Playfight
+Playful Studios
+Playground Games
+Playtonic Games
+Polyarc
+Polydin Studio
+Polynoid
+Proxima Milano
+Purple Lamp (THQ Nordic)
+Pushka Studios
+QLOC
+Qvisten Animation
+Raccoon Logic
+Rainbow CGI
+Rarebyte
+Raylight Games
+Reactiv
+Red Knuckles
+Red Manta / Twin Atlas
+Red Meat Games
+Red Star Studio
+Reel FX
+Reply Game Studios
+Resin
+RetroStyle Games
+Rising Sun Pictures
+Ritzy Animation
+Robot Entertainment
+Robot Playground Media
+RocketBrush Studio
+Rocksteady Studios
+Ruckus Games
+Runaway Play
+SEHSUCHT
+SHED
+SHIFT UP
+SSVFX
+Sandfall Interactive
+Sans Strings Studio
+Savian
+ShadowMachine
+Shirogumi
+Siege Camp
+Singularity 6
+Snapshot Games
+SnowDog Studio
+Sparky Animation
+Sperasoft
+Spin VFX
+Squeeze Animation Studios
+Stardust Effects
+Starloop Studios
+Studio AKA
+Studio Evil
+Studio Isar Animation
+Studio Rakete
+Studio Soi
+Sun & Moon Studios
+Sun Creature
+SunStrike Studios
+Sunblink Entertainment
+Superseed Studios
+TESTE (validação)
+Team Clout
+TeamTO
+Telescope Animation
+Terminal FX
+Tessera Studios
+The Animation Band
+The Breach Studios
+The Frank Barton Company
+The Juggernaut
+The Sequence Group
+The Thinklab
+The Wingfeather Saga
+Theory Studios
+This Game Studio
+ThunderRoar Studio
+Tic Toc Games
+Tindalos Interactive
+Tiny Island Productions
+Tippett Studio
+TomaVision
+Tonic DNA
+Tonko House
+Toys for Bob
+Traega Entertainment
+TrailerFarm
+Traumhaus Studios
+Triangle Factory
+Trimaran VFX
+Trust Studio
+Tumblehead
+Twin Harbour Interactive (Stillfront)
+Twin Pines
+Twin Win Games
+UPP
+Uken Games
+Unfrozen
+Unit Image
+User T38
+VEA Games
+VSQUAD (reenvio)
+Vertigo Games
+Walking The Dog
+Watch Next Media
+Wildseed Studios
+Witch Beam
+Woodblock
+Young Horses
+Yukfoo Animation
+tinyBuild
+viennaFX
