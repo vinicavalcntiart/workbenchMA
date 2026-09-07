@@ -220,12 +220,12 @@ antes de 26/08, busque no Gmail confirmação antiga daquele domínio.
 Perfil pela metade é candidatura que o recrutador abre e vê metade. Estas seis foram medidas
 completando quinze perfis numa rodada só, e **todas mentem em silêncio**.
 
-1. **O magic link tem COTA DIÁRIA, e ela é o gargalo de verdade.** O Teamtailor parece parar de
-   mandar email de sign in depois de **cinco por estúdio por dia**. IOI e Funcom ficaram
-   inacessíveis a noite inteira porque agentes diferentes tinham pedido cinco links cada, em
-   rajada, entre 18h e 20h; os três pedidos seguintes não geraram email nenhum. **Peça UM, use na
-   hora.** Link de duas horas antes já estava morto em dez de onze estúdios; link consumido em
-   menos de cinco minutos funcionou em todos.
+1. ~~**O magic link tem COTA DIÁRIA de cinco por estúdio por dia.**~~ **DESMENTIDO em 07/09, veja
+   o item 11.** Essa cota nunca existiu: os emails chegavam e quem os escondia era o preview de
+   busca do Gmail. Não gaste rodada tratando estúdio como trancado.
+   **O que continua valendo deste item, e foi medido de verdade: peça UM link e use na hora.**
+   Link de duas horas antes já estava morto em dez de onze estúdios; link consumido em menos de
+   cinco minutos funcionou em todos, e cada pedido novo invalida o anterior.
 2. **`input[type=date]` não aceita digitação solta.** Digitar `2026-11-06` tecla a tecla no
    widget gravou **`1106-02-02`** e o log disse ok. Use `fill()` com ISO e releia.
 3. **Multi-escolha com o PAINEL ABERTO não envia.** Na Coffee Stain o item ficou marcado, o
@@ -275,11 +275,18 @@ de formulário único volta "sem campos" em todos eles.
     e aí não se envia. E a lista de departamentos do `/connect` é desenhada por JavaScript: ler o
     DOM cedo demais devolve **zero radios** e o log diz "departamento ausente" com a página viva.
 
-**A cota de cinco por estúdio por dia, medida de novo em 06/09 às 23h56:** IOI e Funcom tinham
-gasto os cinco entre 18h27 e 20h13 e, mesmo às 23h56, pedido novo **não gerava email nenhum**, o
-que descarta reset no fim do dia de Estocolmo. Estúdio com cota livre respondeu na hora na mesma
-madrugada (ILP e Twin Harbour). Ou seja: a cota é real, é por estúdio, e **quem a queima tranca o
-estúdio até o dia virar**. Peça UM e use na hora.
+11. **A "COTA DIÁRIA DE CINCO LINKS" NÃO EXISTE. O item 1 desta lista está ERRADO e fica aqui só
+    para ninguém repetir o diagnóstico.** O que escondia os links era o **leitor de email**: a
+    busca do Gmail devolve, de cada thread, apenas as mensagens **mais antigas**, e **não marca
+    que truncou**. Como todo link de acesso do Teamtailor chega com o mesmo assunto e cai na
+    **mesma thread**, do sexto email em diante nada aparece na busca. Foi isso, e não cota
+    nenhuma, que trancou IOI e Funcom por uma noite inteira: os links estavam chegando o tempo
+    todo, **dez na IOI e oito na Funcom**, inclusive às 22h22, 23h12, 23h56 e 00h02. Abertas as
+    threads inteiras, os dois perfis entraram na primeira tentativa.
+    **A regra que sobra, e ela é de leitura, não de cota:** para achar o link mais recente, abra a
+    **THREAD inteira** e ordene por horário; nunca decida pelo resultado de busca. E continua
+    valendo pedir **UM e usar na hora**, porque cada pedido novo invalida o anterior e link velho
+    morre — isso sim foi medido de verdade.
 
 ## Escopo, que é o mesmo da campanha
 
