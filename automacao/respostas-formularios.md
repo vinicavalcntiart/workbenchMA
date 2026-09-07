@@ -2875,3 +2875,193 @@ na categoria `Art`**: o painel de filtros da busca só monta depois de expandir 
 filtro na URL (`?4872=Art` e variantes) são **ignorados pelo servidor**, que devolve as 332 de
 sempre. Ou seja: **o alerta é rede a mais, não substituto do censo.** Quem quiser certeza roda
 `sh automacao/lista-ea.sh`, que leva um minuto e lê o portal inteiro.
+
+---
+
+# Fatia WORKABLE + SKYDANCE, 07/09: seis dossiês campo a campo, todos verificados na fonte
+
+Todos os campos abaixo vieram da **estrutura oficial do formulário**, não de suposição: no Workable
+pelo `GET https://jobs.workable.com/api/v1/jobs/<uuid>/form?includeAccountMetadata=true`, que
+devolve seção por seção cada campo com `id`, rótulo, tipo, obrigatoriedade e a lista de opções com o
+id de cada uma; na Skydance pela API pública do Lever. Nenhum deles passou pelo `apply.workable.com`,
+que continua em `429 / error code 1015` contra o nosso IP.
+
+**Por que estão aqui e não enviados.** No Workable o envio é barrado pelo **Cloudflare Turnstile**:
+o `POST /api/v1/jobs/<uuid>/apply` devolve **412 Precondition Failed** com o cabeçalho **`x-ts: 0`**,
+que é o token faltando, e no navegador de tela o clique em *Submit application* dispara
+`challenges.cloudflare.com` e o POST de candidatura **nunca sai**, com o botão ficando cinza. Na
+Skydance é **hCaptcha de desafio** do Lever. Captcha de desafio não se burla; formulário mapeado
+campo a campo faz o envio virar um minuto de trabalho.
+
+## Respostas que valem para TODOS os formulários desta lista
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Telefone | valor no doc privado do Drive "CAMPANHA - dados pessoais dos formulários". **No Workable o campo tem seletor de país próprio**: escolher Brazil e digitar só os dígitos, sem código e sem espaço |
+| Endereço | `Olinda, Pernambuco`. **Armadilha medida:** o Workable autopreenche `Columbus, United States of America` pela geolocalização do nosso proxy. Trocar sempre |
+| Portfólio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Site | `https://vinicavalcanti.com` |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Autorização de trabalho | **precisa de patrocínio**, sempre a verdade |
+| Liderança de equipe | **Sim** |
+| Aviso prévio | um mês de transição a partir do contrato atual |
+| Salário atual | *"Confidential under the NDA of my current contract; happy to discuss ranges during the process."* |
+| Frase de realocação | *"I WANT TO RELOCATE and I am fully open to moving for the role."* |
+| Caso de visto | *"My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case."* |
+| Frase fixa de portfólio | *"My portfolio holds more than **45 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it."* |
+
+## 1. Skydance Animation — Senior Grooming TD, Madri (PRIORIDADE, regra 14)
+
+`https://jobs.lever.co/skydance/9ad28cab-87cd-4235-ae9b-b4c53a3457e5`
+
+**Por que subiu para alta:** não é grooming puro. O anúncio diz *"Creates complex, artistically
+appealing hairstyles, grooms & **surfacing** for: human characters, furry creatures, feathered
+characters, props and elements"*, e os Requirements pedem *"good understanding of the processes of
+grooming, **surfacing**, rendering, simulation"* e *"Depth of knowledge in groom & surfacing tools
+... **Mari**, **Substance** ..."*. Surfacing é texturização, disciplina dele. Skydance é grupo
+**Paramount**, então vale a regra 14: aplica na hora.
+
+**Busca literal no anúncio inteiro (07/09):** `authoriz` 2, e as duas no aviso padrão de fraude
+(*"contacted by an unauthorized person"*), nunca em elegibilidade; `eligib` 0; `sponsor` 0;
+`work permit` 0; `must be based` 0; `relocat` 0; `days a week` 0; faixa salarial nenhuma.
+**Não há veto de residência escrito.** Idioma: *"High English level desirable. Spanish desirable"*,
+ou seja o espanhol é desejável e **não** exigido. É **híbrido**, não presencial (`workplaceType:
+hybrid` e a etiqueta `#LI-Hybrid` no próprio texto).
+
+**Por que à mão:** a página `/apply` renderiza **hCaptcha de desafio**, sitekey
+`e33f87f8-88ec-4e1a-9a13-df9bbb1d8120`, com `hcaptcha.render('h-captcha', {...})` **sem**
+`size: invisible` e a `<div id="h-captcha" data-sitekey=...>` desenhada na página. Widget desenhado
+é desafio de imagem. Bate com as outras duas medições do mesmo quadro (Environment Surfacing Lead e
+Senior Environment Surfacing).
+
+| Campo | Resposta |
+|---|---|
+| Pretensão | *"Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 per year."* (sem faixa publicada, casa grande de animação, Europa ocidental) |
+| Status de trabalho na Espanha | a verdade: **não** tem autorização e precisaria de patrocínio, mais o caso de visto |
+| Anos de experiência | 10+ em personagem 3D, e grooming em Houdini como especialidade técnica |
+| Carta / campo livre | abrir dizendo que a metade de surfacing do posto é o trabalho dele e que o groom em Houdini é o diferencial: Wingfeather Saga temporada 1 na Angel Studios, quase cinco anos na E-Line com os personagens herói do Endstar do sculpt à engine, três anos na PUGA entregando personagem sob direção de arte de outra pessoa. Fechar com a frase de realocação e o caso de visto |
+
+## 2. Side — Senior Texture Artist, Montréal e Toronto (Canadá, prioridade 1 do Vini)
+
+`https://jobs.workable.com/view/c6VkX4b2KPumikGpAnF75s/...-in-toronto-at-side` (uuid
+`c6VkX4b2KPumikGpAnF75s`) e `.../9yuW35zXXRhYX4wgDGcVSQ/...-in-montreal-at-side`. Conta `sideinc`.
+
+**É UMA requisição com DOIS anúncios de local: manda-se em UM só.** E não confundir com a irmã
+*Artiste 3D senior / Senior 3D Artist*, do mesmo quadro, que **já foi enviada em 30/08 e recusada em
+31/08**. Esta é outra disciplina, outro uuid, e o Gmail não tem confirmação nenhuma dela.
+
+Híbrida, contrato de 6+ meses, Montréal (QC) ou Toronto (ON).
+
+| id | Obrigatório | Resposta |
+|---|---|---|
+| `firstname` `lastname` `email` `phone` `address` | sim | ver tabela comum |
+| `resume` | sim | CV em pdf |
+| `CA_1993` Salary Expectations | sim | *"Open to aligning with your band for the role; as a reference, I'm looking at around CAD 95,000 per year, or the equivalent hourly rate on a contract basis."* |
+| `CA_51704` proficiência em inglês | sim | **Excellent - I can confidently speak, write, and present in English in a professional setting.** |
+| `QA_12346521` inglês ou francês | sim | **Anglais // English** |
+| `QA_12346522` direito legal de trabalhar no Canadá | sim | **No** (a verdade) |
+| `QA_12346523` link de portfólio | sim | ArtStation |
+| `QA_12346524` aceita avaliação | sim | **Yes** |
+| `QA_12346525` experiência em estúdio AAA | sim | **No** (verdade já fixada pela campanha; o texto livre explica o alcance) |
+| `QA_12346526` experiência em textura com ao menos um título comercial | sim | texturização como parte da posse do personagem inteiro: E-Line/Endstar (UVs, bake, PBR, trim, look dev, engine), Wingfeather temporada 1 modelado e pintado à mão, três anos de PUGA sob direção de arte de cliente. Ferramentas: ZBrush, Substance Painter e Designer, Maya, Marmoset, Houdini, Unreal e Unity. Títulos comerciais: **Endstar** e **The Wingfeather Saga temporada 1** |
+| `QA_12346527` aceita híbrido | sim | **Yes** |
+| `QA_12346528` aberto a contrato em time de co-dev | sim | **Yes** |
+| `QA_12346529` valor hora em CAD | sim | *"Around CAD 48 per hour, which matches roughly CAD 95,000 per year at full time. Open to aligning with your band for the role."* |
+| `QA_12346530` quando pode começar | sim | um mês de transição, mais a frase de realocação |
+| `QA_12346531` e `QA_12346532` consentimento e retenção de dados | sim | **Yes** nos dois |
+| `CA_54302` situação atual | não | **Full Time Employee** |
+| `CA_51856` disciplinas | não | nenhuma da lista é arte de personagem (são AI, Back-End, Gameplay, Tools...); marcar **Other** ou deixar em branco |
+| `CA_53031` nome preferido, `CA_54306` indicação | não | em branco |
+| `cover_letter` | não | vale a pena: o argumento de outsourcing da PUGA responde exatamente o que uma casa de co-desenvolvimento quer saber |
+
+## 3. One Of Us — Modeller, Paris (a recomendada das três)
+
+`https://jobs.workable.com/view/2rTHdox84n1Ge86ez2adUb/hybrid-modeller-in-paris-at-one-of-us`
+(uuid `0bb699c6-9aeb-4653-8f85-b54b17abfa5a`, conta `one-of-us`)
+
+Casa de VFX de cinema com estúdios em Londres e Paris. O quadro tem 22 posições e **três** da
+disciplina, todas em Paris e híbridas: **Modeller**, **Texture Artist** e **Look Development
+Artist**. As de arte em Bengaluru estão fora do recorte. **Manda-se UMA**, e a escolhida é a
+Modeller, porque modelagem de personagem é o cargo que o briefing define como o dele.
+
+| id | Obrigatório | Resposta |
+|---|---|---|
+| `firstname` `lastname` `email` `address` | sim | ver tabela comum |
+| `phone` | **não** | opcional nesta casa |
+| `resume` | sim | CV em pdf |
+| `cover_letter` | sim | carta, com a frase de realocação e o caso de visto |
+| `QA_12197151` showreel de trabalho de produção e senhas | sim | ArtStation, sem senha |
+| `QA_12197152` LinkedIn | sim | ver tabela comum |
+| `QA_12197153` aviso prévio | sim | um mês |
+| `QA_12197154` pretensão anual antes de imposto | sim | *"Open to aligning with your band for the role; as a reference, I'm looking at around EUR 45,000 per year."* |
+| `QA_12197164` precisa de patrocínio na França | sim (boolean) | **Yes**, a verdade |
+| `gdpr` | sim | marcar |
+
+**Perguntar não é vetar.** A pergunta de patrocínio é obrigatória, mas **não existe** no formulário
+nem no anúncio nenhuma frase exigindo residência, ao contrário da Larian Québec e da Metropolis VFX.
+
+As outras duas, com os ids já mapeados, para o caso de a Modeller não andar:
+**Texture Artist** (uuid `60d3159b-5eb4-4fd1-ae1f-8a3dbe9c78d4`): `QA_10954755` showreel,
+`QA_10954756` LinkedIn, `QA_10954757` aviso prévio, `QA_10954758` patrocínio — **aqui é campo de
+TEXTO e não boolean, então cabe explicar o caso de visto na própria resposta** — e `QA_10954759`
+pretensão. **Look Development Artist** (uuid `8d806dc0-737b-4489-99cf-b07b533b5cf3`): `QA_12210701`
+showreel, `QA_12210702` LinkedIn, `QA_12210703` aviso prévio, `QA_12210704` pretensão anual,
+`QA_12210705` patrocínio (boolean).
+
+## 4. Lighthouse Games — Lead Character Artist, Royal Leamington Spa (a mais barata da fila)
+
+`https://jobs.workable.com/view/9KTC9Pg9V9wV5peayCNj4a/...` (uuid
+`46e9e7c7-50d6-4d97-a97c-5a8bf1a80e6f`, shortcode `F7F90250DA`)
+
+**O `/form` oficial mostra que o formulário é mínimo: os únicos campos obrigatórios são
+`firstname`, `lastname` e `email`.** Tudo o mais é opcional, inclusive `resume`, `phone`, `address`,
+`headline`, `avatar`, `education`, `experience`, `summary` e `cover_letter`. **Não há uma única
+pergunta customizada**, nenhuma de visto e nenhuma de salário. Anexar o CV, colar a carta, enviar.
+A única parede é o Turnstile.
+
+## 5. Sperasoft — Material Artist (stylization), Bucareste ou Cracóvia
+
+Bucareste uuid `71f8d852-e568-4880-8ad2-75d1357d6061`
+(`https://jobs.workable.com/view/f5h7r4Y8fRA9oyp1zobYkB/...`), Cracóvia uuid
+`241a463d-74ee-40de-abdd-a198dbc2167b`. Conta `sperasoft`. Belgrado (Sérvia) e Armênia estão fora do
+recorte e não recebem envio.
+
+Formulário curto: `firstname`, `lastname`, `email`, `phone`, `address`, `resume`, mais **`CA_45880`
+"Expected monthly salary (in local currency)"** e o link de portfólio (`QA_12376601` em Bucareste,
+`QA_12059404` em Cracóvia), mais a caixa de `gdpr`. **Não há pergunta de visto nem de residência.**
+
+**Atenção: a pretensão é MENSAL.** Europa em casa média são EUR 45.000 ao ano, ou seja cerca de
+**EUR 3.750 por mês**, com *"Open to aligning with your band for the role."*
+
+**Dedupe, e ele tem uma sutileza:** a Sperasoft respondeu um email frio em **26/08** dizendo que não
+tinha vaga aberta. O quadro de hoje desmente aquilo, com seis requisições de Material Artist. Uma
+candidatura por formulário numa requisição viva **não** é insistir sobre recusa.
+
+## 6. Sawhorse Productions — Roblox 3D Artist, remoto (EUA)
+
+uuid `4542a3b0-a493-4384-b604-8b72421e293a`
+
+Obrigatórios: `firstname`, `lastname`, `email`, `phone`, `address`, `resume`, mais
+**`QA_12209895`** *"Please share a link to your Roblox profile and links to Roblox games that you
+have worked on"* e **`QA_12209896`** *"Please provide Portfolio / Work Sample Links - You will not
+be considered without this"*. Opcionais: `avatar`, `education`, `experience`, `summary`,
+`cover_letter`.
+
+**`QA_12209895` só o Vini pode responder**: perfil do Roblox e jogos do Roblox em que trabalhou são
+dado que o repositório não tem e que não se inventa. Se ele não tiver perfil no Roblox, o honesto é
+escrever isso na própria caixa e apontar o portfólio, porque o campo é obrigatório e mentir nele
+queima a candidatura. Pretensão: freelance remoto nos EUA em casa média, **USD 85.000** de
+referência.
+
+## E uma que SAI da fila: Liquid Development — Material Artist, banco de talentos 2026
+
+O anúncio aparece marcado *Canada remoto* e não diz nada sobre residência, o que faz a vaga parecer
+aberta. **O veto está dentro do formulário**, que é a regra de 07/09 em estado puro. São três
+obrigatórias: `QA_11470010` *"Are you authorized to work in Canada without the need for sponsorship
+now or in the future?"*, `QA_11470029` *"Do you currently reside in Ontario, Canada?"* e
+`QA_11470016`, que publica a faixa de **60k a 85k CAD** e pede confirmação de que o candidato
+entende. As duas primeiras respostas verdadeiras são **não**, e não se mente em campo de autorização
+de trabalho. Registrada com o veto escrito e a data, fora da fila de envio.
