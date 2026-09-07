@@ -1608,3 +1608,139 @@ Tudo o mais preenche: 12 de 12 campos, CV sobe para o serviço do Wix (o nome do
 **Atenção:** há um campo armadilha chamado "Please leave this field blank" (`nickname_hpcsaf`). É caça-robô: **deixe vazio**.
 
 **Se houver campo de mensagem ou o formulário permitir carta:** diga que você QUER REALOCAR para Vancouver, que precisa de patrocínio de visto, e cite a láurea, a especialização, o mestrado em andamento, o IELTS e as publicações como caso de visto. Com o RCIC deles, essa é a informação mais útil que você pode dar.
+
+---
+
+# Fatia CANADÁ ANGLÓFONO (07/09): casas de VFX e animação de Vancouver, Toronto, BC e Ontário
+
+Esta fatia cobre a lista fechada do Vini de casas de VFX/animação do Canadá anglófono, mais a
+colheita nova de 351+85 domínios canadenses que outro agente varreu por curl e me entregou para
+abrir com navegador de verdade. Prioridade: personagem, modelagem, texturização, look dev, visual
+dev e grooming antes de generalista.
+
+## Roarty Digital, 3D Character Artist - Realistic (Vancouver, remoto) — À MÃO, formulário Squarespace bloqueia o envio (401)
+
+**Link:** https://www.roartydigital.com/character-artist-realistic
+**Por que vale:** casa de Vancouver que se descreve como "3d characters, digital art for AAA", e
+a vaga aberta é literalmente Character Artist. Remota.
+**Por que à mão:** o site é Squarespace (POST vai para `clanker-events.squarespace.com` e
+`roartydigital.com/api/form/SaveFormSubmission`). O formulário inteiro foi preenchido e conferido
+por leitura de volta (30 campos, 12 selects, 2 grupos de caixa), e o clique em SUBMIT devolveu
+**`401`** no `SaveFormSubmission` com a mensagem na tela **"Please try again later"**. Não é
+captcha de desafio: é o anti-robô do Squarespace recusando a sessão automatizada por pontuação,
+a mesma família da Netflix (Eightfold) e da Cosmico, medida antes nesta campanha. Do navegador do
+Vini isso passa. **REGRA NOVA: formulário cujo POST vai para um domínio `*.squarespace.com` ou
+`/api/form/SaveFormSubmission` é parede de rede, não vale insistir automatizado.**
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email Address | contact@vinicavalcanti.art |
+| your current location | Olinda, Pernambuco, Brazil |
+| position applying for | 3D Character Artist - Realistic |
+| portfolio link | https://www.artstation.com/viniciuscavalcanti |
+| resume link | https://vinicavalcanti.com |
+| Are you currently employed? | yes |
+| details | Currently a Senior 3D Character Artist at E-Line Media (Endstar), full-time, remote, international contractor |
+| years of industry experience | 10+ |
+| Are you familiar with Maya? | yes |
+| Are you familiar with Unreal Engine? | somewhat |
+| Are you familiar with creating real-time game characters? | yes |
+| link to a real-time character | https://www.artstation.com/viniciuscavalcanti |
+| familiar with mech/robots for realtime? | somewhat (ressalva: foco é personagem orgânico estilizado, não hard surface/mecha) |
+| experienced with Marvelous Designer? | no |
+| stylized or realistic characters? | both — portfólio é estilizado mas todo sculpt parte de anatomia realista |
+| proficient in English? | yes |
+| languages | Portuguese (native), English (fluent, IELTS), Spanish (working proficiency) |
+| lead a team before? | yes — cinco anos de Senior na E-Line, revisa trabalho de outros e é fundador da própria escola |
+| type of employment | full time |
+| day rate / currency | Open to aligning with your band for the role; referência CAD, aberto a alinhar |
+| earliest availability | ~2 meses a partir de uma oferta |
+| know anyone at RD? | no |
+| upload/download speed | 150 Mbps / 50 Mbps (fibra) |
+| Anything else | I WANT TO RELOCATE and I am fully open to moving for the role. Não é cidadão canadense e precisa de patrocínio; láurea com honors, especialização em Game Art, mestrado em andamento, IELTS e publicações como caso de visto |
+
+**Armadilha desta página:** existe um campo de texto sem rótulo nenhum, `id="message-field"`
+(`name="message-yui_ca03db1f..."`), típico padrão de isca; **deixado vazio**, por precaução, sem
+prova de que seja honeypot de verdade, mas sem uso óbvio nenhum no formulário.
+
+## FATIA M-R DA EUROPA (07/09): achados novos do diretório de 6.624 estúdios
+
+Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nunca tocados pela
+campanha depois do dedupe). Prioridade seguida: animação e VFX antes de jogos, e dentro disso
+personagem, modelagem, texturização, look dev e visual dev antes de generalista 3D.
+
+### REKiNDLED Studios, Join Us (Brighton/East Sussex, Reino Unido) — pronto para mandar à mão, SEM captcha
+
+**Link da página:** https://rekindled.uk/join-us/ (o formulário de verdade é um **Typeform**
+embutido em iframe: `https://form.typeform.com/to/Ab6JnnqE`)
+
+**Por que vale, e muito:** Rekindled é "A Specialist Co-Development Partner for Gameplay and
+Cinematics", que embarca dentro de outros estúdios para entregar **qualidade de personagem AAA em
+prazo AA** — a frase do próprio site é quase o argumento de carreira dele. Clientes citados: Creative
+Assembly, Electric Square, BBC. Sem captcha nenhum: é só um Typeform curto, comum e sem verificação.
+
+**Por que ficou à mão:** o Typeform da Rekindled pré-carrega o campo da PRÓXIMA pergunta escondido
+no DOM ao lado do campo visível da pergunta atual, então um preenchedor cego que pega o primeiro
+`input[type=text]` da página erra o campo. Dá para preencher em menos de um minuto abrindo o link
+direto (sem precisar do site) e respondendo uma pergunta por tela:
+
+| Pergunta (na ordem) | Resposta |
+|---|---|
+| 👋 About You? (nome completo) | `Vini Cavalcanti` |
+| What's the best email to reach you at? | `contact@vinicavalcanti.art` |
+| Perguntas seguintes (variam: portfólio, cargo, mensagem) | usar os dados do topo deste arquivo; no campo de texto livre/mensagem, usar o texto abaixo |
+
+```
+Senior 3D Character Artist with 10+ years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios, and for almost five years at E-Line Media taking Endstar's hero characters from first sculpt to engine as a remote international contractor. I take a character end to end: sculpt, retopology, UVs, baking, texturing, look development and engine integration, and I also groom hair and fur in Houdini. Your AAA character quality on AA timelines is exactly the standard I work to. I WANT TO RELOCATE to the United Kingdom and I am fully open to moving for the role. I am not an EU/UK citizen and would need visa sponsorship; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. Portfolio: artstation.com/viniciuscavalcanti
+```
+
+Portfólio: https://www.artstation.com/viniciuscavalcanti · LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+
+### Menhir FX, candidatura espontânea (Montpellier, França) — À MÃO por hCaptcha
+
+**Link:** https://menhirfx.com/en/recruitment
+
+**Por que vale:** estúdio de animação 2D/3D/motion design ("Make people want to play!"), com
+projetos para Dungeons & Dragons, Attack on Titan e Monopoly. A própria página de recrutamento diz
+"We are not currently recruiting new collaborators but you can still send us your application" —
+candidatura espontânea explicitamente aceita.
+
+**Por que à mão:** o formulário exige **hCaptcha** (`h-captcha` no rodapé). Campos: nome, email,
+telefone, tipo de contrato (CDD/CDDU/Stage/Alternance/**Freelance**), disponibilidade, CV e
+portfólio em PDF, anos de experiência (1-4 / 5-9 / **+10 années**), e duas listas de caixas de
+marcar: **Especializações** (2D / **3D** / Motion Design) e **Expertises** (Concept art /
+**Modeling** / **Lookdev** / Rigging / Animation / Layout / Set dressing / FX / CFX / Lighting /
+Compositing / IT TD), mais os softwares usados (Blender, Maya, Houdini, Unreal, Unity, ZBrush,
+Substance).
+
+| Campo | O que marcar/escrever |
+|---|---|
+| Type de contrat | `Freelance` (mais realista para candidatura internacional espontânea) |
+| Année d'expérience | `+10 années` |
+| Spécialisations | marcar `3D` |
+| Expertises | marcar `Modeling` e `Lookdev` |
+| Logiciels | `Maya`, `Houdini`, `Zbrush`, `Substance`, `Blender` |
+| Votre message | o texto de realocação padrão (ver topo deste arquivo), citando o crédito na Wingfeather Saga e Endstar/E-Line, e que precisa de patrocínio de visto para a França |
+| hCaptcha | resolver na tela |
+
+### Rumble VFX (Londres, Reino Unido) — parede MEDIDA, não é vaga morta
+
+**Link:** https://rumblevfx.com/
+
+Página inteira atrás de um **Cloudflare "Robot Challenge Screen"** ("Checking the site connection
+security"), tanto por curl (corpo de 169 bytes) quanto por navegador de tela (título literal
+"Robot Challenge Screen", nenhum `<form>` no DOM). Confirmado em 07/09. Reconferir do navegador do
+Vini ou de outra rede antes de descartar — é bloqueio de IP, não anúncio fechado.
+
+### Descartes com motivo escrito (fatia M-R, 07/09)
+
+- **Outside The Club** (Alemanha, VFX de cinema/streaming): única vaga aberta é **VFX Producer**,
+  sem nenhuma vaga de arte/modelagem/texturização. Fora da disciplina dele.
+- **Renderpeople GmbH** (Alemanha): a única vaga listada, 3D Pipeline Developer, está marcada
+  **CLOSED** na própria página; sem vaga de arte aberta.
+- **Moetion Films** (Irlanda): a página de vagas diz literalmente "We are not recruiting at the
+  moment", só aceita currículo por email (`jobs@moetionfilms.com`) sem vaga associada; baixa
+  prioridade por não ter abertura declarada.
+- **Pixel-Nexus** (Bélgica/Espanha): "not actively hiring" e as vagas espontâneas que aceitam são
+  Pipeline TD, SysAdmin e Technical Artist — fora da disciplina de personagem/modelagem.

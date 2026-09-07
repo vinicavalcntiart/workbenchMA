@@ -435,7 +435,7 @@
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente) | rascunho (não enviado)
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
-const UPDATED = "2026-09-06";
+const UPDATED = "2026-09-07";
 const BUILD = "__BUILD__";
 // Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
 const ALERTA = "";
@@ -1081,6 +1081,8 @@ const STUDIOS = [
  ["Eallin (Jozef Lipa, Executive Producer e Managing Partner)","Eslováquia (Bratislava)","jozef.lipa@eallin.com",26,"rascunho"],
  ["Filmic Animation (Moa Thenstedt Åkerström, Producer)","Suécia (Estocolmo)","moa@filmic.se",26,"rascunho"],
  ["Frima Studio (Jimmy Lemay, VP Développement des marchés)","Canadá (Quebec)","jimmy.lemay@frimastudio.com",26,"rascunho"],
+ ["Lucasfilm e Industrial Light & Magic (Ivan Busquets, VFX Supervisor)","EUA","ibusquets@ilm.com",27,"rascunho"],
+ ["Zoic Studios (Steve Melchiorre, Senior Executive Producer)","EUA (Culver City) e Canadá (Vancouver)","smelchiorre@zoicstudios.com",27,"rascunho"],
 ].map(([name,country,email,batch,delivery,stage])=>({name,country,email,batch,delivery,stage}));
 const CONTACTED = STUDIOS.filter(s=>s.delivery!=="rascunho");
 
@@ -1111,6 +1113,7 @@ const PROSPECTOS = [
 ];
 
 const PORTAIS = [
+["Ocellus Studio (Spontaneous Application, departamento Chara 3D LP / HP)","Franca (Lyon, presencial ou remoto)","https://ocellus-studio.com/careers","portal","CANDIDATURA ENVIADA e CONFIRMADA em 07/09 pelo APLICADOR 2, vinda da fila do PDF. Prova mais forte que existe: o POST em /sendApplication.php devolveu 302 e a pagina REDIRECIONOU para /application-sent com o texto THANK YOU FOR YOUR APPLICATION. We will be in touch shortly. Casa de arte e servicos de jogo em Lyon. O ACHADO E O DEPARTAMENTO: a lista deles tem CHARA 3D LP / HP, low poly e high poly de personagem, que e a disciplina exata dele, escolhida no envio, com o cargo declarado como 3D Character Artist (o campo tem limite de 20 caracteres). Experiencia marcada 6+ years, contrato Contract, CV e carta em PDF anexados, e os campos livres com 1587 caracteres de carta e 308 de localizacao dizendo I WANT TO RELOCATE and I am fully open to moving to Lyon mais o caso de visto. A PORTA SO EXISTE DEPOIS DO JAVASCRIPT: na pagina /careers ha DOIS links THAT S ME, e o da candidatura espontanea e o que tem href VAZIO; clicar nele monta um modal com 20 campos. DUAS ARMADILHAS: o link certo e o SEM href, entao casar por texto pega o errado, que leva para a vaga de Gamefeel Prototyper; e o botao SUBMIT nao esta dentro de nenhum <form>, entao o seletor form button[type=submit] devolve nulo e o preenchedor anuncia SEM BOTAO com tudo preenchido, que parece pagina quebrada e e do seletor",true,"alta"],
 ["Anima Vitae (Open Application, Helsinque)","Finlandia (Helsinque, presencial)","https://anima.fi/job/open-applications-2/","portal","CANDIDATURA ENVIADA e CONFIRMADA em 07/09 pela fatia de ANIMACAO E VFX DA EUROPA. Texto da tela, do proprio Contact Form 7: Thank you for your message. It has been sent, e o formulario ESVAZIOU depois do clique, que pela regra do brief e a prova de que entrou (CF7 que volta com os campos preenchidos NAO enviou). Candidatura espontanea de Helsinque. ATENCAO: eles tem DUAS paginas de Open Application e a outra, /job/open-applications/, e de KUALA LUMPUR, que esta FORA DO ESCOPO geografico; a de Helsinque e a que termina em -2. Sem captcha nenhum. CV anexado e conferido, telefone, dois links de portfolio e a caixa de privacidade marcada e conferida por isChecked. O anuncio avisa que trabalhar presencial costuma ser exigido, e a carta responde isso de frente com I WANT TO RELOCATE and I am fully open to moving for the role, mais a verdade de que ele nao e cidadao da UE e precisa de patrocinio. Pretensao EUR 55.000 com a abertura de alinhamento a banda. ARMADILHA NOVA E CARA, medida aqui: o formulario EXISTE NO DOM mas fica DENTRO DE UM ACORDEAO FECHADO, com display none. Digitar nele NAO levanta excecao e NAO escreve nada: o log diz escrevi em todos os campos e a leitura de volta devolve string VAZIA em todos. So o modo seco pegou. A correcao e clicar no gatilho Apply for this position antes, e CONFERIR que o campo de nome ficou visivel (offsetHeight) antes de digitar. E prima da terceira forma da caixa que mente, mas aqui derruba o formulario INTEIRO e nao um campo so. Tem tambem honeypot do Akismet, textarea _wpcf7_ak_hp_textarea, que precisa ficar vazio",true,"media"],
 ["Rainbow SpA (3D Modeler e Surface & Texture Artist)","Italia (Roma e Milao)","https://www.rbw-cgi.it/careers/","portal","VAGA DA DISCIPLINA E PAREDE DE reCAPTCHA v3, medida em 07/09 na fatia de animacao e VFX da Europa, sem gastar envio. A casa e a das Winx Club, italiana e grande, e o quadro tem 3D Modeler, Surfacing Artist e General Application, ou seja, tres portas da faixa dele. O formulario e Contact Form 7 COM CAMPO DE ARQUIVO de verdade. O que barra: a pagina carrega api.js?render=<chave>, que pela regra medida da campanha e reCAPTCHA v3 de PONTUACAO DE SESSAO, e v3 REPROVA a automacao e devolve a tela generica There was an error trying to send your message, que mente sobre o motivo. Nao insisti, por ordem do Vini. Vai a mao, e e envio de um minuto no navegador dele",false,"alta"],
 ["Passion Pictures (candidatura espontanea)","Reino Unido (Londres)","https://passion-pictures.com/careers","portal","PAREDE DE reCAPTCHA v3 medida em 07/09, sem gastar envio. A pagina de carreiras tem candidatura espontanea (unsolicited) em Contact Form 7, e carrega api.js?render=<chave>, assinatura do v3 de pontuacao, que reprova automacao. A pagina publica tambem dois enderecos de email, entre eles um de documentario que NAO e a caixa de animacao, entao nao serve de atalho. Vai a mao",false,"media"],
@@ -1794,6 +1797,17 @@ const PESSOAS = [
   "situacao": "rascunho-criado; CASA NOVA, nunca contatada. RESSALVA DE ENCAIXE, e ela e real: a Absolute e casa de POS de publicidade e drama, com animacao no menu mas sem departamento de personagem anunciado; o alvo virou o chefe de Film & TV por ser o lado de formato longo"
  },
  {
+  "data": "2026-09-06",
+  "estudio": "Alt.VFX",
+  "pais": "Austrália (Brisbane, Sydney e Melbourne)",
+  "pessoa": "Colin Renshaw",
+  "cargo": "Founder / Director",
+  "email": "col@altvfx.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo na pagina de equipe oficial do proprio estudio (altvfx.com/the-team), que publica QUATORZE enderecos de pessoa, entre eles Takeshi Takada (fundador e EP), Pete Herbert (COO), Nick Angus (Head of FX), Matthew Chance (Head of 2D) e Flavia Riley (Head of Production). A pagina About do mesmo site diz que a casa e owned and driven by a collective of leading artists and producers",
+  "situacao": "rascunho-criado; a Alt.VFX ja tinha recebido carta no lote 17 (02/09) na caixa generica recruitment@altvfx.com e nunca respondeu, que e exatamente o perfil que o brief manda atacar. PAGINA ACHADA NO CAMINHO /the-team, que nenhuma varredura anterior da campanha tinha testado"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "Ars Thanea",
   "pais": "Polônia",
@@ -1871,6 +1885,28 @@ const PESSOAS = [
   "situacao": "enviado 03/09"
  },
  {
+  "data": "2026-09-06",
+  "estudio": "Eallin (Bratislava)",
+  "pais": "Eslováquia (Bratislava)",
+  "pessoa": "Jozef Lipa",
+  "cargo": "Executive Producer / Managing Partner",
+  "email": "jozef.lipa@eallin.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo na pagina de contato oficial (eallin.com/contact), no bloco Bratislava, ao lado de Eva Simonovicova (Head of Production) e Jozef Elsik (Head of Post-Production); a mesma pagina prova o padrao nome.sobrenome@eallin.com",
+  "situacao": "rascunho-criado; SEGUNDA E ULTIMA pessoa da Eallin: a primeira foi Filip Finkelstejn, Managing Director em Praga, escrito em 03/09 sem resposta. Outro escritorio e outro pais, os dois dentro do escopo (Praga e Bratislava); o escritorio de Toquio da mesma casa esta FORA do escopo e foi ignorado de proposito"
+ },
+ {
+  "data": "2026-09-06",
+  "estudio": "Filmic Animation",
+  "pais": "Suécia (Estocolmo)",
+  "pessoa": "Moa Thenstedt Åkerström",
+  "cargo": "Producer",
+  "email": "moa@filmic.se",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo na pagina de contato oficial (filmic.se/contact), ao lado de Andreas Ibohm (Executive Producer); a MESMA pagina traz uma secao Talent dizendo que a casa quer ouvir Producer, Junior Producer, 3D artist, Comp Artist e 2D Animator experientes, e o site lista Clash Royale, Minecraft e Paradox Interactive entre os cases de game trailer",
+  "situacao": "rascunho-criado; SEGUNDA E ULTIMA pessoa da Filmic: a primeira foi Andreas Ibohm, Executive Producer, escrito em 03/09 sem resposta. RESSALVA DE ENCAIXE: os dois sao de producao e nao de arte, porque a casa nao publica ninguem de arte; o que sustenta a carta e a propria secao Talent pedindo 3D artist"
+ },
+ {
   "data": "2026-09-03",
   "estudio": "Filmic Art",
   "pais": "Suécia",
@@ -1902,6 +1938,17 @@ const PESSOAS = [
   "confianca": "alta",
   "fonte": "Publicado no rodape de contato do flipbookstudio.co.uk com o nome ao lado do endereco; estudio de Manchester",
   "situacao": "sem-alvo-de-arte"
+ },
+ {
+  "data": "2026-09-06",
+  "estudio": "Frima Studio",
+  "pais": "Canadá (Quebec)",
+  "pessoa": "Jimmy Lemay",
+  "cargo": "VP Développement des marchés et stratégies d'affaires",
+  "email": "jimmy.lemay@frimastudio.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo nas paginas de linha de negocio do proprio estudio (frimastudio.com/ligne-affaire/co-developpement e /developpement-complet), que tambem publicam Benjamin Denis (Directeur de comptes senior, co-developpement) e Alexandre St-Hilaire (Directeur de comptes, developpement complet). As mesmas paginas listam Fortnite, Triangle Strategy e Disciples Liberation como colaboracoes",
+  "situacao": "rascunho-criado; a Frima ja tinha recebido carta na caixa generica info@frimastudio.com e nunca respondeu, e nenhuma pessoa da casa tinha sido alcancada. RESSALVA DE ENCAIXE HONESTA: os tres enderecos publicados sao de desenvolvimento de negocio, nao de arte, entao a carta pede direcao e encaminhamento, que e exatamente o que o fechamento fixo faz"
  },
  {
   "data": "2026-09-03",
@@ -2045,6 +2092,17 @@ const PESSOAS = [
   "confianca": "alta",
   "fonte": "endereco publicado com nome e cargo na pagina de contato do proprio estudio (piranhabar.ie/contact)",
   "situacao": "rascunho pronto. ATENCAO PARA AS PROXIMAS RODADAS: a Piranha Bar agora ESTA NO TETO de duas pessoas na campanha inteira, porque o Richard Chaney foi contatado em 03/09; nao escrever para mais ninguem la. O espacamento de tres dias entre os dois respeita a regra de nao contatar em dias seguidos"
+ },
+ {
+  "data": "2026-09-06",
+  "estudio": "Platige Image (Montréal)",
+  "pais": "Canadá (Montréal)",
+  "pessoa": "Bartek Kujbida",
+  "cargo": "Head of Platige Montreal e Animation Supervisor",
+  "email": "bkujbida@platige.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com o nome ao lado na pagina de contatos oficial do proprio estudio (platige.com/management), no bloco Platige Montreal; a mesma pagina publica Aurelien Simon (Platige US, asimon@platige.us) e Piotr Prokop (VFX & Game Cinematics, pprokop@platige.com). O CARGO foi confirmado fora do site, na imprensa do setor que noticiou a abertura do escritorio (postPerspective, shots e LBBOnline: Bartek Kujbida to head Platige Image team in Canada), que o descreve como head do estudio de Montreal e animation supervisor com credito em Aquaman and the Lost Kingdom, Ghostbusters Afterlife e Rings of Power",
+  "situacao": "rascunho-criado; SEGUNDA E ULTIMA pessoa da Platige, e a escolha e defensavel porque e OUTRO PAIS e outro escritorio: a primeira foi Jakub Jablonski, Director/Art Director em Varsovia (03/09, confianca media, sem resposta). Esta e a linha de maior prioridade da rodada porque o alvo fica no Canada, que e o primeiro pais da ordem do brief"
  },
  {
   "data": "2026-09-03",
@@ -2202,6 +2260,17 @@ const PESSOAS = [
  },
  {
   "data": "2026-09-06",
+  "estudio": "The Sequence Group (Melbourne)",
+  "pais": "Austrália (Melbourne)",
+  "pessoa": "Luke Bicevskis",
+  "cargo": "Partner & Creative Director",
+  "email": "luke@thesequencegroup.com",
+  "confianca": "alta",
+  "fonte": "endereco publicado com nome e cargo na pagina About do proprio estudio (thesequencegroup.com/about), no bloco Melbourne, Australia; a mesma pagina publica Dan Sioui (Executive Producer, dan@) e Ian Kirby (Founder & CD, ian@) no bloco de Vancouver, e diz que a casa faz game trailers, game cinematics, titles, animated series e VFX",
+  "situacao": "rascunho-criado; SEGUNDA E ULTIMA pessoa do Sequence Group: a primeira foi Ian Kirby, Founder & Creative Director em Vancouver, escrito em 03/09 sem resposta. A escolha e defensavel porque e outro escritorio, outro pais e cargo complementar"
+ },
+ {
+  "data": "2026-09-06",
   "estudio": "Time Based Arts",
   "pais": "Reino Unido (Londres, Shoreditch)",
   "pessoa": "Tom Johnson",
@@ -2318,8 +2387,8 @@ const PESSOAS = [
   "cargo": "Senior Executive Producer",
   "email": "smelchiorre@zoicstudios.com",
   "confianca": "alta",
-  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa. SEM RASCUNHO: uma pessoa por estudio por rodada. Segundo alvo da Zoic, e fecha o teto de duas.",
-  "situacao": "reserva"
+  "fonte": "Publicado na propria pagina de contato do estudio, https://zoicstudios.com/contact, com nome, cargo e endereco lado a lado. Confianca ALTA. A mesma pagina publica quatro enderecos de pessoa e por isso PROVA o padrao inicial+sobrenome@zoicstudios.com, que passa a valer para qualquer nome novo da casa.",
+  "situacao": "rascunho-criado em 07/09, ativado da reserva: gap de dois dias desde a carta da Julie Weitzell (05/09) respeita a regra de nao escrever em dias seguidos, e fecha o teto de duas da Zoic"
  },
  {
   "data": "2026-09-05",
@@ -2516,8 +2585,8 @@ const PESSOAS = [
   "cargo": "VFX Supervisor",
   "email": "ibusquets@ilm.com",
   "confianca": "media",
-  "fonte": "Cargo publicado no proprio site da ILM (ilm.com/frankenstein-ilm-vfx-ivan-busquets-interview), em entrevista sobre o Frankenstein do Guillermo del Toro, onde ele fala do trabalho de criatura do filme, incluindo a propria Criatura e os animais. Endereco pelo padrao inicial+sobrenome@ilm.com. SEM RASCUNHO: limite de uma carta por casa por rodada, e a da ILM foi para o creature lead. E o primeiro alvo da ILM na proxima rodada, e fecha o teto de duas da casa.",
-  "situacao": "reserva"
+  "fonte": "Cargo publicado no proprio site da ILM (ilm.com/frankenstein-ilm-vfx-ivan-busquets-interview), em entrevista sobre o Frankenstein do Guillermo del Toro, onde ele fala do trabalho de criatura do filme, incluindo a propria Criatura e os animais. Endereco pelo padrao inicial+sobrenome@ilm.com.",
+  "situacao": "rascunho-criado em 07/09, ativado da reserva: gap de dois dias desde a carta do Mathias Norgaard (05/09) respeita a regra de nao escrever em dias seguidos, e fecha o teto de duas da ILM"
  },
  {
   "data": "2026-09-05",
@@ -2674,6 +2743,28 @@ const PESSOAS = [
   "situacao": "rascunho"
  },
  {
+  "data": "2026-09-07",
+  "estudio": "AGBO",
+  "pais": "EUA (Los Angeles)",
+  "pessoa": "John Cranston",
+  "cargo": "Creative Director, Innovation Department (Visual Development)",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "nome e cargo publicados na propria pagina oficial da AGBO (agbo.com/our-team/ e a bio individual em agbo.com/our-team/interactive/john-cranston/), que o lista na lideranca criativa do Departamento de Inovacao; cobertura da Deadline e do Indiewire de maio de 2024 sobre a criacao do departamento confirma o mesmo cargo, e o LinkedIn publico dele o lista tambem como Director, Visual Development",
+  "situacao": "URGENTE, pedido do Vini em 07/09: corrigir a pretensao salarial de USD 46.000 (regra revogada em 04/09) na candidatura de Senior Character Texture Artist enviada em 02/09, cuja confirmacao veio de no-reply@agbo.breezy-mail.com. SEM EMAIL: a AGBO nao publica nenhum endereco pessoal, nao tem codigo aberto nem talk de SIGGRAPH, e o unico formato encontrado (ex. j***@agbo.com, e a afirmacao de que 90% dos enderecos seguem inicial+sobrenome) vem de agregador pago (ZoomInfo e LeadIQ), que o brief proibe usar como prova. NAO montei endereco. Fica registrado para o Vini abordar por LinkedIn, fora do canal do Joe"
+ },
+ {
+  "data": "2026-09-06",
+  "estudio": "Alt.VFX",
+  "pais": "Austrália (Brisbane)",
+  "pessoa": "Sam Lee",
+  "cargo": "Head of Modelling",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "nome e cargo publicados na mesma pagina de equipe oficial (altvfx.com/the-team), na secao de chefia, ao lado de Jamie White (Head of 3D) e Chris Rentoul (Head of Animation)",
+  "situacao": "SEM CARTA de proposito, e por dois motivos: uma pessoa por estudio por rodada, e o endereco DELE NAO ESTA PUBLICADO. O padrao dominante do dominio e so o primeiro nome (col@, takeshi@, nick@, matt@, ant@), mas ha DUAS pessoas chamadas Sam na mesma pagina (Sam Lee e Sam Ayat, artista), entao sam@altvfx.com e ambiguo e nao se monta. E o alvo PERFEITO da campanha e fica guardado como segunda e ultima vaga da casa"
+ },
+ {
   "data": "2026-09-06",
   "estudio": "Atomic Cartoons",
   "pais": "Canada",
@@ -2696,6 +2787,17 @@ const PESSOAS = [
   "situacao": "SEM CARTA de proposito: o estudio so publica info@, e a medicao de 06/09 mostrou que endereco montado por padrao quica em mais de 60% das vezes, entao nao vale gastar a entrada da casa num chute"
  },
  {
+  "data": "2026-09-07",
+  "estudio": "Blue Isle Studios",
+  "pais": "Canadá (Toronto)",
+  "pessoa": "Alex Tintor",
+  "cargo": "Co-Founder",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "publicado na propria pagina About Us do estudio (blueislestudios.ca/about-us), que o cita ao lado de Brenden Frank como os dois fundadores que lideram a casa",
+  "situacao": "estudio pequeno, regra do brief manda o fundador como alvo. A pagina de contato e so um formulario sem endereco publicado, e nao ha padrao de dominio conhecido. SEM EMAIL de proposito. Brenden Frank, o outro cofundador, fica de reserva para uma proxima rodada"
+ },
+ {
   "data": "2026-09-05",
   "estudio": "Digital Domain",
   "pais": "Estados Unidos",
@@ -2705,6 +2807,61 @@ const PESSOAS = [
   "confianca": "sem-email",
   "fonte": "pagina oficial do evento da Gnomon Creating Believable Textures for Production, com nome, cargo e bio: Senior Texture Painter na Digital Domain, especializada em textura e LOOK DEVELOPMENT para cinema, episodico, jogos e publicidade, com creditos em Thunderbolts, A Minecraft Movie, Captain America Brave New World, Secret Invasion e The Electric State. Alvo bom e sem via: o dominio digitaldomain.com nao tem nenhum endereco real conhecido pela campanha e nao apareceu em nenhum dos quatro logs de codigo aberto varridos em 05/09",
   "situacao": "sem via: dominio da Digital Domain sem padrao provado"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Drinkbox Studios",
+  "pais": "Canadá (Toronto)",
+  "pessoa": "Augusto 'Cuxo' Quijano",
+  "cargo": "Art Director",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "publicado na propria pagina About do estudio (drinkboxstudios.com/about), que descreve cada membro da lideranca com nome e cargo; creditos em Guacamelee!, Severed e Nobody Saves the World",
+  "situacao": "casa nova para a campanha inteira. A pagina de contato oficial (drinkboxstudios.com/contact) so publica media@, contact@ e jobs@, sem nenhum endereco pessoal. SEM EMAIL de proposito"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Elliott Animation",
+  "pais": "Canadá (Toronto)",
+  "pessoa": "George Elliott",
+  "cargo": "Fundador, President & Creative Director",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "pagina oficial elliottanimation.ca/about-us/george-elliott, que descreve que ele fundou o estudio em 2000 como President e Creative Director",
+  "situacao": "estudio ja contatado em info@elliottanimation.ca sem resposta. A pagina bloqueou o acesso direto por captcha (sgcaptcha) nesta rodada; o cargo vem do proprio resumo da pagina oficial capturado pelo buscador. SEM EMAIL: nenhum endereco pessoal publicado e nenhum padrao de dominio provado"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Fanatics Collectibles",
+  "pais": "EUA (Nova York)",
+  "pessoa": "Tom Regan",
+  "cargo": "Senior Art Director, Topps Trading Card Product Development",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "cargo e nome publicos no LinkedIn dele (linkedin.com/in/thetomregan) e confirmados pelo org chart publico do The Org (theorg.com/org/fanatics/org-chart/tom-regan)",
+  "situacao": "URGENTE, mesmo pedido do Vini em 07/09: corrigir a pretensao de USD 46.000 na candidatura de Principal Visual Artist enviada em 04/09 (requisicao 4274428009 no board proprio da Fanatics Collectibles, ainda aberta, confirmacao veio de no-reply@collectfanatics.com). SEM EMAIL: o proprio anuncio da vaga avisa que a comunicacao oficial da Collectibles vem de @collectfanatics.com, dominio DIFERENTE do fanatics.com corporativo; o unico endereco real publicado que achei em fanatics.com foi brawilliams@fanatics.com (contato de imprensa, PR Newswire), que e de outro dominio e de outra area, e usa-lo seria o mesmo chute ja recusado no arquivo de padroes para a Sony Pictures Animation e a Naughty Dog. NAO montei endereco"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Fluffy Dog Studio",
+  "pais": "Canadá (Vancouver) e EUA (Los Angeles, remoto)",
+  "pessoa": "Nathan Gaul",
+  "cargo": "Lead Artist",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "publicado na propria pagina About do estudio (fluffydogstudio.com/about), secao Meet Our Management",
+  "situacao": "estudio ja contatado duas vezes na caixa generica (contact@ lote 14, careers@ lote 19) sem resposta. A pagina de contato oficial responde 404 e nao publica nenhum endereco pessoal. SEM EMAIL de proposito"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Giant Skull",
+  "pais": "EUA (Encino, Los Angeles)",
+  "pessoa": "Patrick Murphy",
+  "cargo": "Art Director",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "comunicado oficial de fundacao do estudio, citado literalmente pela imprensa (gamingtrend.com, reproduzindo o texto oficial da Giant Skull): 'Art Director, Patrick Murphy, who has more than 27 years of experience including being Art Director on Fortnite, Valorant, League of Legends, and various roles on God of War'",
+  "situacao": "ESTUDIO NOVO PARA A CAMPANHA INTEIRA: AAA independente fundado em 2023 por Stig Asmussen (diretor de Star Wars Jedi), publicado pela Wizards of the Coast, sede em Encino, dentro do escopo geografico. SEM EMAIL: giantskull.com nao publica nenhum endereco, o site e renderizado em JS/WebGL e nao ha padrao de dominio conhecido. Guardado nome e cargo para quando surgir a primeira prova de endereco"
  },
  {
   "data": "2026-09-06",
@@ -2762,6 +2919,28 @@ const PESSOAS = [
   "situacao": "sem via: freelance entre estudios, sem dominio proprio"
  },
  {
+  "data": "2026-09-06",
+  "estudio": "nWave Studios",
+  "pais": "Bélgica (Bruxelas e Liège)",
+  "pessoa": "Kevin Hermans",
+  "cargo": "Art Director e character designer",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "nome e cargo na materia da Variety sobre o longa Yugly, estreado em Annecy 2026 (variety.com/2026/film/global/yugly-nwave-snd-animation-annecy-2026-1236784958), que o cita fazendo direcao artistica e design de personagem ao lado do CG Supervisor Christopher Grao; perfil publico dele em artstation.com/kevinhermans",
+  "situacao": "SEM CARTA, e a decisao esta escrita para nao se repetir a tentativa: o padrao inicial+sobrenome@nwave.com esta provado por tres enderecos publicados em nwave.com/contact, mas em 03/09 o cgrao@nwave.com QUICOU com 550 5.4.1 Recipient address rejected: Access denied, e o edillens@nwave.com tambem quicou. O Exchange da nWave recusa remetente externo ou os enderecos nao existem; montar khermans@nwave.com seria quase certeza de bounce e a campanha nao pode subir a taxa de bounce. Ele e o alvo certo da casa e a via tem que ser outra"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Panache Digital Games",
+  "pais": "Canadá (Montréal)",
+  "pessoa": "The Chinh Ngo",
+  "cargo": "Art Director",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "confirmado no blog oficial do proprio estudio (panachedigitalgames.com/en/team, post de 13/05/2024 sobre ele) e no LinkedIn publico dele (ca.linkedin.com/in/the-chinh-ngo-a4241322), que traz o cargo Art Director; veio da Ubisoft Shanghai e da Ubisoft Montreal",
+  "situacao": "estudio ja contatado na caixa generica jobs@panachedigitalgames.com (lote 16) sem resposta. A pagina de contato oficial (panachedigitalgames.com/en/contact-us) so publica info@ e jobs@, sem nenhum endereco pessoal e sem padrao para montar. SEM EMAIL de proposito"
+ },
+ {
   "data": "2026-09-05",
   "estudio": "Patriam Studios",
   "pais": "Nova Zelandia (Nelson)",
@@ -2793,6 +2972,17 @@ const PESSOAS = [
   "confianca": "sem-email",
   "fonte": "materia da Creative Bloq sobre por que GOAT vai parecer diferente de outros filmes de animacao, com ele nomeado como character designer do filme ao lado do production designer Jang Lee, explicando que o design do bode veio de tres racas reais, esloveno, nubiano e alpino",
   "situacao": "sem via, pelo mesmo motivo ja registrado para o Wendell Dalit: a Sony Pictures Animation e empresa distinta da Imageworks, nao usa imageworks.com, e nenhum endereco real dela foi achado. Montar um seria chute. Guardado nome e cargo"
+ },
+ {
+  "data": "2026-09-07",
+  "estudio": "Trixter (grupo Cinesite)",
+  "pais": "Alemanha (Munique)",
+  "pessoa": "Mikkel Arildsen",
+  "cargo": "Asset & Creature Supervisor",
+  "email": "",
+  "confianca": "sem-email",
+  "fonte": "pagina oficial de equipe do proprio estudio (trixter.de/team), que publica cargo e bio de cada supervisor; a bio confirma trabalho de asset, creature e grooming em Shang-Chi, Capitã Marvel e The Marvels",
+  "situacao": "CASA GRANDE NOVA do grupo Cinesite (que ja abriu Cinesite e Image Engine em 06/09): a Trixter mantem dominio proprio, trixter.de, e nao ha nenhum endereco real conhecido dele. O log de commits do Gaffer e do Cortex, que provou os padroes da Cinesite e da Image Engine, nao tem nenhum autor em trixter.de, e a propria pagina do grupo avisa que cada marca mantem o dominio proprio, entao nao se pode importar o padrao das casas irmas. SEM EMAIL de proposito, guardado para quando aparecer o primeiro endereco real"
  },
  {
   "data": "2026-09-06",
@@ -3097,6 +3287,10 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+["2026-09-07","nao","AGBO e Fanatics: achei o nome certo nas duas casas, e nenhuma das duas tem email para corrigir a pretensao",
+ "Resposta ao pedido urgente sobre a pretensao de USD 46.000 travada nas candidaturas da AGBO (Senior Character Texture Artist, 02/09) e da Fanatics Collectibles (Principal Visual Artist, 04/09). Achei pessoa certa nas duas: John Cranston, Creative Director do Departamento de Inovacao da AGBO, publicado na propria pagina oficial agbo.com/our-team; e Tom Regan, Senior Art Director de Topps Trading Card Product Development na Fanatics Collectibles, confirmado por LinkedIn publico e pelo org chart do The Org. NENHUM DOS DOIS TEM EMAIL VERIFICAVEL. A AGBO nao publica endereco nenhum, nao tem codigo aberto nem talk de SIGGRAPH; o unico formato que apareceu numa busca (algo como j***@agbo.com) vem de agregador pago, ZoomInfo e LeadIQ, que o brief proibe usar como prova. Na Fanatics o problema e pior e mais claro: o proprio anuncio da vaga avisa que a comunicacao oficial da Collectibles sai de @collectfanatics.com, um dominio DIFERENTE do fanatics.com corporativo, e o unico endereco real que achei publicado em fanatics.com (brawilliams@fanatics.com, contato de imprensa da PR Newswire) e de outro dominio e de outra area, ou seja, usa-lo seria o mesmo chute que ja foi recusado no arquivo de padroes para a Sony Pictures Animation e para a Naughty Dog. NAO MONTEI ENDERECO NENHUM. As duas pessoas ficam registradas em pessoas.csv com nome, cargo e fonte, sem-email, para o Vini abordar por LinkedIn se quiser, fora do canal do Joe."],
+["2026-09-07","porta","Nove pessoas novas em nove casas, uma delas um estudio AAA que a campanha nunca tinha visto, e nenhuma com email",
+ "Rodada normal do Joe, e o resumo honesto e que a caca por pessoa NOVA em casa NOVA rendeu bem, mas a fila do Canada e dos EUA continua sem endereco pessoal publicado nem padrao provado. Nove nomes: The Chinh Ngo (Art Director, Panache Digital Games), George Elliott (fundador e Creative Director, Elliott Animation), Augusto 'Cuxo' Quijano (Art Director, Drinkbox Studios), Nathan Gaul (Lead Artist, Fluffy Dog Studio) e Alex Tintor (cofundador, Blue Isle Studios) no Canada; Mikkel Arildsen (Asset & Creature Supervisor da Trixter, a marca alema do grupo Cinesite, que abre uma casa grande nova mas sem endereco porque o log de commits do Gaffer e do Cortex nao tem nenhum autor em trixter.de); e Patrick Murphy, Art Director da Giant Skull, o estudio AAA fundado em 2023 por Stig Asmussen (diretor de Star Wars Jedi) e publicado pela Wizards of the Coast, que a campanha nunca tinha registrado. NENHUM DOS NOVE TEM EMAIL: todo mundo foi achado em pagina About/Team oficial ou comunicado de imprensa, com cargo confirmado, mas sem endereco pessoal publicado e sem padrao de dominio provado em nenhuma das casas. Para nao fechar a rodada com zero rascunho, ativei duas cartas que estavam de reserva com endereco pronto e respeitando o intervalo de dias: Ivan Busquets, VFX Supervisor da ILM (fecha o teto de duas da casa, dois dias depois do Mathias Norgaard) e Steve Melchiorre, Senior Executive Producer da Zoic (fecha o teto de duas da casa, dois dias depois da Julie Weitzell). As duas ja tem rascunho pronto no Gmail."],
 ["2026-09-07","nao","Dois agentes se contradisseram sobre a Lightbox e os dois estavam errados: o quadro dela esta vazio hoje","Um agente registrou duas vagas da faixa dele na Lightbox Animation, de Madri, Mid ou Senior 3D Modeler e Senior Surface and Texture Artist, com a porta sendo mailto para jobs@lbox.es. Outro agente tinha registrado a 3D Modeler como descartada, porque o anuncio exigiria cidadania ou permissao de trabalho da UE. Contradicao entre dois registros e coisa que so a fonte resolve, entao abri o site com navegador de tela, porque lbox.es e JavaScript puro e o curl devolve 158 caracteres. A RESPOSTA E QUE NENHUM DOS DOIS ESTAVA CERTO: a secao OPEN POSITIONS da pagina de vagas esta VAZIA hoje, sem nenhum anuncio listado. Nao ha vaga para aplicar nem clausula de cidadania para checar. O que existe e melhor que registro errado: a propria pagina convida candidatura espontanea, com o texto Cant find any offer that matches your profile, you can also send us your resume and demo reel to rrhh@lbox.es. RASCUNHO PRONTO NO GMAIL para esse endereco, com o assunto padrao da campanha. Detalhe do anuncio que a carta respeita: eles pedem para NAO anexar imagem nem video, so links de portfolio e reel, entao a carta vai sem anexo e com os tres links. A licao vale mais que a vaga: quadro de vagas muda de um dia para o outro, e registro de vaga feito por leitura de HTML envelhece rapido. Antes de mandar o Vini gastar a mao numa vaga, alguem abre a fonte."],
 ["2026-09-07","nao","Varri 512 estudios REMOTOS dos Estados Unidos e o corte quase nao rende: zero medido, para ninguem repetir","Prioridade 2 do Vini e remoto em Estados Unidos, Canada e Europa, entao tirei do diretorio novo o corte que ninguem tinha: 512 estudios americanos marcados REMOTO, com quadro de vagas publicado e ausentes do painel. Varri os 512. Resultado: 12 com palavra de arte na pagina, 45 que so montam em JavaScript, 199 sem arte e 256 com erro de conexao. E os 12 nao se sustentam quando abertos. Chakrra, de Princeton, lista 3D Character Modeler e Lighting and Texture Artist, mas o unico contato publicado e um endereco de GMAIL PESSOAL e o site inteiro e uma casca de JavaScript com o mesmo texto em toda pagina, ou seja, projeto de uma pessoa so. Hypersect diz na propria pagina que TODAS as posicoes estao preenchidas, e as areas listadas, Character Artist inclusive, sao Contract e Remote, que e o formato que a regra de 01/09 poe no fim da fila porque ele procura vaga efetiva. Pipsqueak Animation nao tem vaga: o que a varredura pegou foi a lista de SERVICOS que eles vendem ao cliente, com visual development entre eles. A leitura util e esta: remoto americano em casa pequena quase sempre e contrato, microestudio ou servico, e raramente alcanca alguem que precisa de patrocinio. O corte esta medido e nao precisa ser refeito. O que rende de verdade continua sendo Europa e Canada com realocacao, que e a prioridade 1."],
 ["2026-09-07","alerta","O salario errado da AGBO e da Fanatics nao tem como ser corrigido por resposta, e agora existe rota","Ficou pendente desde 04/09 a duvida de como consertar as duas candidaturas que sairam pedindo USD 46.000, valor de uma regra revogada. O problema nao e so dinheiro: 46 mil fica ABAIXO do prevailing wage da ocupacao nos Estados Unidos, e abaixo dele o patrocinio de visto nao sai, ou seja as duas candidaturas estao vivas com um numero que torna a contratacao impossivel se for adiante. CONFERIDO AGORA e a resposta e negativa por motivo concreto: as duas confirmacoes vieram de endereco no-reply, no-reply@collectfanatics.com e no-reply@agbo.breezy-mail.com, entao nao existe thread para responder e resposta ali volta. Reenviar a candidatura seria repetida e piora. A UNICA rota que sobra e uma pessoa com nome dentro de cada casa, e o Joe ja recebeu as duas no topo da fila dele, com a instrucao de que a carta referencia a candidatura existente e corrige a pretensao em uma frase, sem mencionar erro nem automacao. Se nao houver pessoa com email confirmado, fica sem correcao: endereco adivinhado nessas duas e pior que endereco nenhum."],
