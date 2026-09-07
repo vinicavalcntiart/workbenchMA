@@ -3065,3 +3065,37 @@ now or in the future?"*, `QA_11470029` *"Do you currently reside in Ontario, Can
 `QA_11470016`, que publica a faixa de **60k a 85k CAD** e pede confirmação de que o candidato
 entende. As duas primeiras respostas verdadeiras são **não**, e não se mente em campo de autorização
 de trabalho. Registrada com o veto escrito e a data, fora da fila de envio.
+
+## FILA B (07/09): estúdios com carta fria entregue e nenhuma candidatura por formulário
+
+Recorte criado a pedido do Vini em 07/09: 448 estúdios receberam carta fria entregue e só 105 tinham
+entrada de portal. Esta fatia é a metade M-Z desses 160 sem porta de formulário trabalhada.
+
+### SHED (Montreal, Canadá) — Spontaneous Application — PAREDE: reCAPTCHA v2 de caixa
+
+Link: https://shedmtl.com/en/jobs/spontaneous-application
+
+Formulário próprio em Drupal, **sem campo de upload**: resolve-se todo com texto e links, e tem um
+campo **Portfolio URL**, que é exatamente onde entra o ArtStation pela regra do Vini de 07/09.
+Medido em 07/09: o formulário aceita tudo, mas o botão Apply now exige **reCAPTCHA v2 de caixa**
+(`anchor` com `size=normal`, `type=image`). A caixa foi clicada uma vez e o Google abriu **desafio de
+imagem**; desafio não se burla, então nada foi enviado.
+
+| Campo | Resposta |
+|---|---|
+| First name | Vini |
+| Name | Cavalcanti |
+| e-Mail | contact@vinicavalcanti.art |
+| Phone | o número do documento privado do Drive, com o código do país na frente |
+| Present Job title | Senior 3D Character Artist |
+| City | Olinda |
+| Country | Brazil |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Other website | https://vinicavalcanti.com |
+| INTERESTED BY | marcar **Full time**, **Work from office** e **Work from home**; deixar Freelance em branco |
+| Caixa de privacidade | marcar |
+
+**MOTIVATION LETTER** (colar inteiro):
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; I would need work permit sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I also lead: I review other artists' work, set the asset standard, and I founded my own character art school. Open to aligning with your band for the role; as a reference, I am looking at around CAD 80,000. Portfolio: https://www.artstation.com/viniciuscavalcanti
