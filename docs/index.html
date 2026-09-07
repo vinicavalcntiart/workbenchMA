@@ -804,7 +804,7 @@ const STUDIOS = [
  ["Caligari Film","Alemanha","jobs@caligari.film",16,"ok"],
  ["Fast Travel Games","Suécia","career@fasttravelgames.com",16,"ok"],
  ["Might and Delight","Suécia","jobs@mightanddelight.com",16,"bounce"],
- ["Landfall","Suécia","info@landfall.se",16,"ok","respondeu"],
+ ["Landfall","Suécia","info@landfall.se",16,"ok","recusado"],
  ["Star Stable Entertainment","Suécia","contact@starstable.com",16,"bounce"],
  ["Stunlock Studios","Suécia","contact@stunlockstudios.com",16,"ok"],
  ["Haemimont Games","Bulgária","jobs@haemimontgames.com",16,"ok"],
@@ -817,7 +817,7 @@ const STUDIOS = [
  ["Tumblehead","Dinamarca","contact@tumblehead.com",16,"ok"],
  ["Stardust Effects","Noruega","elena@stardusteffects.no",16,"ok"],
  ["Filmic Art","Suécia","jobb@filmic.se",16,"ok"],
- ["Parasol Island","Alemanha","hr@parasol-island.com",16,"ok","respondeu"],
+ ["Parasol Island","Alemanha","hr@parasol-island.com",16,"ok","aguardando"],
  ["Mimic Productions","Alemanha","careers@mimicproductions.com",16,"ok"],
  ["Limbic Entertainment","Alemanha","applications@limbic-entertainment.com",16,"ok"],
  ["UPP","Tchéquia","joinupp@upp.cz",16,"ok"],
@@ -873,7 +873,7 @@ const STUDIOS = [
  ["Flux Animation Studio","Nova Zelândia","talent@fluxmedia.co.nz",16,"ok"],
  ["Cirkus","Nova Zelândia","work@cirkus.nz",16,"ok"],
  ["Runaway Play","Nova Zelândia","kylie@runawayplay.com",16,"ok"],
- ["CerebralFix","Nova Zelândia","info@cerebralfix.com",16,"ok","respondeu"],
+ ["CerebralFix","Nova Zelândia","info@cerebralfix.com",16,"ok","conversa"],
  ["GIANTSTEP","Coreia do Sul","jobs@giantstep.co.kr",16,"ok"],
  ["SHIFT UP","Coreia do Sul","recruit@shiftup.co.kr",16,"ok"],
  ["Pearl Abyss","Coreia do Sul","recruit@pearlabyss.com",16,"ok"],
@@ -901,7 +901,7 @@ const STUDIOS = [
  ["KidsCave Studios","Reino Unido","info@kidscave.com",15,"ok"],
  ["Little Moon Animation","Irlanda","jobs@littlemoonanimation.com",15,"ok"],
  ["SSVFX","Irlanda","recruitment@ssvfx.ie",15,"ok"],
- ["Passtech Games","França","jobs@passtechgames.com",15,"ok","respondeu"],
+ ["Passtech Games","França","jobs@passtechgames.com",15,"ok","conversa"],
  ["BlueTwelve Studio","França","job@bluetwelvestudio.com",15,"ok","respondeu"],
  ["Sandfall Interactive","França","contact@sandfall.co",15,"ok"],
  ["Big Bad Wolf","França","jobs@bigbadwolf-studio.com",15,"bounce"],
@@ -981,13 +981,13 @@ const STUDIOS = [
  ["IXOR","Grécia","info@ixorvfx.com",17,"ok"],
  ["Mascista","Grécia","info@mascista.com",17,"ok"],
  ["Monigotes Estudio","Espanha","info@monigotestudio.es",17,"ok"],
- ["Twin Pines","Espanha","info@twinpines.es",17,"ok","respondeu"],
+ ["Twin Pines","Espanha","info@twinpines.es",17,"ok","conversa"],
  ["User T38","Espanha","jobs@usert38.com",17,"ok"],
  ["Dibulitoon Studio","Espanha","dibu@dibulitoon.com",17,"ok"],
  ["Red Monk Studio","Itália","info@redmonkstudio.com",17,"ok"],
  ["Proxima Milano","Itália","jobs@proximamilano.com",17,"ok"],
- ["AIM Creative Studios","Portugal","jobs@aimcreativestudios.com",17,"ok","respondeu"],
- ["Tessera Studios","Espanha","info@tesserastudios.com",17,"ok","respondeu"],
+ ["AIM Creative Studios","Portugal","jobs@aimcreativestudios.com",17,"ok","conversa"],
+ ["Tessera Studios","Espanha","info@tesserastudios.com",17,"ok","conversa"],
  ["Atent Games","Chipre","contact@atentgames.com",17,"ok"],
  ["Lumatic","Alemanha","info@lumatic.xyz",17,"ok"],
  ["DAYWALKER Studios","Alemanha","info@daywalker-studios.de",17,"ok"],
@@ -998,7 +998,7 @@ const STUDIOS = [
  ["Digital Rain Studios","Áustria","office@digitalrain.at",17,"ok"],
  ["Hahn Film","Alemanha","info@hahnfilm.com",17,"ok"],
  ["SnowDog Studio","Polônia","info@snowdogfx.com",17,"ok"],
- ["Rarebyte","Áustria","jobs@rarebyte.com",17,"ok","respondeu"],
+ ["Rarebyte","Áustria","jobs@rarebyte.com",17,"ok","recusado"],
  ["Gunzilla Games","Alemanha","job@gunzillagames.com",17,"ok"],
  ["SEHSUCHT","Alemanha","contact@sehsucht.de",17,"ok"],
  ["Polynoid","Alemanha","contact@polynoid.tv",17,"ok"],
@@ -4288,7 +4288,7 @@ function renderAcoes(){
   const p = pendencias();
   const items = [];
   if(c.aberto > 0)
-    items.push(["urgente","🔥",`<b>${c.aberto} resposta${c.aberto>1?"s":""} positiva${c.aberto>1?"s":""}</b> esperando você responder pessoalmente`,"#estudios"]);
+    items.push(["urgente","🔥",`<b>${c.aberto} estúdio${c.aberto>1?"s":""} respondeu${c.aberto>1?"ram":""}</b> e ainda não ${c.aberto>1?"foram":"foi"} tratado${c.aberto>1?"s":""} pela campanha`,"#estudios"]);
   // O que só ele pode fazer vem antes de tudo: é a fila que a automação não desafoga.
   // Cada cartão abre a tabela de portais já filtrada no balde dele, senão ele cai numa
   // lista de 236 linhas para achar as três que o cartão está falando.
