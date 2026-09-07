@@ -1106,3 +1106,49 @@ ausência de vaga, e que estavam ocupando lugar na fila como se fossem trabalho 
 A lição, e ela vale para toda parede que a gente anotar: **"o servidor respondeu" não é o
 mesmo que "a porta abriu".** A prova de que uma porta abre é o envio confirmado, nunca o
 código de status do GET. Antes de comemorar bloqueio caído, clique.
+
+## `$SCRATCH` está VAZIO, e os briefs mandam usar `$SCRATCH/apply` (07/09, 21h40)
+
+Achado pelo agente da passada de navegador, e confirmado por mim na hora. **A variável de
+ambiente `$SCRATCH` não está definida no shell.** Quem segue o brief ao pé da letra e roda
+`cd $SCRATCH/apply` recebe:
+
+```
+sh: 1: cd: can't cd to /apply
+```
+
+Porque `$SCRATCH/apply` com a variável vazia vira `/apply`, que não existe. E o agente
+conclui, de boa-fé, que **a caixa de ferramentas não existe** — que não há `hb_run.sh`, nem
+os scripts de ATS, nem o `Vini_Cavalcanti_CV.pdf`, nem o `Cover_Letter.pdf`. Foi exatamente
+o que ele relatou: "esta sessão não tinha `$SCRATCH/apply` nem os arquivos que os briefs
+pressupõem", e por isso **nenhum envio real foi tentado** naquela rodada, mesmo tendo achado
+vaga viva da disciplina.
+
+**Está tudo lá.** O CV, a carta, o portfólio e os oito scripts de ATS existem e estão
+intactos. O que falta é só o caminho.
+
+**O conserto, e use este daqui em diante:** existe agora um atalho estável em
+`/home/user/apply`, que aponta para a pasta de verdade. Ele funciona sem depender de
+variável nenhuma:
+
+```
+cd /home/user/apply && sh hb_run.sh <script>.js
+```
+
+Os três arquivos que os formulários pedem:
+- `/home/user/apply/Vini_Cavalcanti_CV.pdf`
+- `/home/user/apply/Vini_Cavalcanti_Cover_Letter.pdf`
+- `/home/user/apply/Vini_Cavalcanti_Portfolio.pdf` (2,56 MB; lembrando que o ArtStation
+  tem prioridade sobre ele)
+
+Se um dia o atalho sumir (sessão nova, contêiner novo), ache a pasta assim, sem adivinhar:
+```
+ls -d /tmp/claude-*/*/*/scratchpad/apply
+```
+
+**A lição, e ela é maior que o caminho errado:** um agente competente passou uma rodada
+inteira sem tentar envio nenhum, e a causa foi uma variável vazia. Ele agiu certo ao
+registrar a limitação em vez de fingir que enviou. Mas o sintoma chegou até mim disfarçado
+de "zero candidaturas nesta rodada", que é indistinguível de fila seca. **Ferramenta que
+falta tem que gritar, não sussurrar dentro de um número baixo.** Sempre que um resumo trouxer
+zero envios, a primeira pergunta é se a ferramenta estava lá, e não se a fila estava vazia.

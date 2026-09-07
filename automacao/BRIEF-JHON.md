@@ -503,3 +503,17 @@ e por `office@`), Futurats (espontânea por email; as vagas abertas são de prog
 **Não deu para avaliar, e não é vaga morta:** `dgmind.com` devolve **403 do LiteSpeed também no
 navegador de verdade**, e `earlymorningstudio.com` e `filimundus.se` derrubam a conexão
 (`ECONNRESET`) por curl e por navegador. Ficam para reconferir de outra rede.
+
+## CAMINHO DA CAIXA DE FERRAMENTAS (corrigido em 07/09)
+
+**NÃO use `$SCRATCH/apply`: a variável `$SCRATCH` está vazia e o caminho vira `/apply`, que
+não existe.** Quem seguiu isso ao pé da letra concluiu que o CV e os scripts não existiam e
+passou a rodada sem tentar envio nenhum. Use o caminho estável:
+
+```
+cd /home/user/apply && sh hb_run.sh <script>.js
+```
+
+Arquivos: `/home/user/apply/Vini_Cavalcanti_CV.pdf`, `/home/user/apply/Vini_Cavalcanti_Cover_Letter.pdf`,
+`/home/user/apply/Vini_Cavalcanti_Portfolio.pdf`. Se o atalho sumir, ache com
+`ls -d /tmp/claude-*/*/*/scratchpad/apply`.

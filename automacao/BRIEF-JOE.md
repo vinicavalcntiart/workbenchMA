@@ -612,3 +612,17 @@ com a coluna `estudio` do `pessoas.csv`, e a grafia **não bate entre os arquivo
 Endereço é chave única e não tem grafia alternativa; nome de estúdio tem. Só depois, como segunda
 peneira, conferir o nome da casa. E conferir também se existe **rascunho de follow-up do mesmo dia**
 para aquela casa, porque duas cartas saindo juntas quebram a regra dos dias seguidos.
+
+## CAMINHO DA CAIXA DE FERRAMENTAS (corrigido em 07/09)
+
+**NÃO use `$SCRATCH/apply`: a variável `$SCRATCH` está vazia e o caminho vira `/apply`, que
+não existe.** Quem seguiu isso ao pé da letra concluiu que o CV e os scripts não existiam e
+passou a rodada sem tentar envio nenhum. Use o caminho estável:
+
+```
+cd /home/user/apply && sh hb_run.sh <script>.js
+```
+
+Arquivos: `/home/user/apply/Vini_Cavalcanti_CV.pdf`, `/home/user/apply/Vini_Cavalcanti_Cover_Letter.pdf`,
+`/home/user/apply/Vini_Cavalcanti_Portfolio.pdf`. Se o atalho sumir, ache com
+`ls -d /tmp/claude-*/*/*/scratchpad/apply`.
