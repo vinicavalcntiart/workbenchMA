@@ -2437,6 +2437,16 @@ menu volta **vazio** mesmo com a opção escolhida, e quem mostra a verdade é o
 menu; (4) o anexo do Wix limpa o `input[type=file]`, e a prova é o **nome do arquivo na tela**,
 que aqui apareceu como `Vini_Cavalcanti_CV.pdf`.
 
+**RECONFERIDO pelo Jhon em 07/09 (tarefa 1, fatia média):** o dossiê acima continua exato, campo a
+campo, e o Submit ainda cai no mesmo modal de reCAPTCHA de caixa. Confirma-se a mesma escolha de
+Working Rights e os mesmos valores. **Armadilha nova, não registrada acima:** esta página é Wix
+Thunderbolt pesado, e digitar nos campos ANTES de a hidratação terminar (uns 15-20s depois do load)
+faz o valor sumir sozinho 1-2s depois, sem erro nenhum na tela — parecia bug de `fill()`, mas era só
+falta de esperar a hidratação. Espere pelo menos 20s após o carregamento antes de preencher. Este
+achado vale para qualquer site pesado do mesmo motor (Thunderbolt/Wix). O painel (`docs/index.html`)
+estava desatualizado — a nota antiga não citava este dossiê nem o formulário real, e por isso a
+entrada passou o dia sem reconferência; corrigido nesta rodada.
+
 ---
 
 # Fatia CACADOR (07/09, madrugada): fontes NOVAS abertas e o que cada uma rendeu
