@@ -880,3 +880,16 @@ Skydance Madrid. Registre SEMPRE o id junto da URL, porque é ele que a garra co
 
 **Detalhe que destravou a conferência:** o token do SmartRecruiters da Ubisoft é **`ubisoft2`**,
 não `ubisoft` nem `UbisoftGroup`, que devolvem zero e passam a falsa impressão de quadro vazio.
+
+## Workday recusa lote grande, e isso faz varredura declarar quadro morto
+
+Medido na Cloud Imperium em 07/09. O endpoint público do Workday deles aceita `"limit":20` e
+devolve **HTTP 400** com `"limit":50`. Quem varre com lote maior lê o 400 como casa inacessível e
+registra quadro morto onde há **61 vagas abertas**.
+
+**Regra:** varredura de Workday vai sempre com `limit` 20 e pagina por `offset`. E confira o
+`total` que a resposta devolve: foi ele que mostrou que a leitura anterior de "26 vagas" estava
+errada por mais da metade.
+
+Vale junto a lição de sempre: a página `<estudio>.com/jobs` costuma ser vitrine, e o ATS real
+mora noutro domínio. Na Cloud Imperium é `cloudimperiumgames.wd503.myworkdayjobs.com`.
