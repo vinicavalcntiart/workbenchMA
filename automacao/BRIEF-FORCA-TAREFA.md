@@ -1217,3 +1217,35 @@ do Teamtailor apesar da tela ter voltado vazia).
 A lição de fundo é sobre o formato do nosso próprio registro: **uma entrada aberta não
 significa trabalho por fazer, significa que ninguém escreveu o desfecho.** As duas coisas são
 indistinguíveis olhando só o `done`, e essa ambiguidade é o combustível da duplicata.
+
+## Eu mandei os agentes lerem um arquivo que não existe (07/09, 22h35)
+
+Achado pelo agente d'O EUROPEU, que abriu o resumo dizendo: *"`automacao/BRIEFING.md` citado
+no início não existe no repositório"*. Fui conferir e ele está certo.
+
+**O `BRIEFING.md` mora na RAIZ do repositório, não em `automacao/`.** E eu escrevi
+`automacao/BRIEFING.md` em quase todos os prompts que despachei esta noite, **e também nos
+dois gatilhos do Jhon**, que disparam de 30 em 30 minutos. Ou seja: o erro não era de uma
+rodada, era permanente e se repetia sozinho.
+
+O `BRIEFING.md` é o arquivo que carrega as regras fixas da campanha inteira — escopo
+geográfico, política salarial de 04/09, regra 14 das quatro casas grandes, formato de
+contrato, regra de discrição, prioridade do remoto. **Um agente que não o abriu está operando
+de memória do que eu repeti no prompt**, e o que eu repito é sempre menos que o arquivo.
+
+Nenhum dano visível saiu disso hoje, porque eu repito as regras críticas inline em cada
+prompt. Mas isso é sorte de redundância, não desenho: bastava eu esquecer uma regra no prompt
+para o agente nunca ter acesso a ela.
+
+**O conserto, e escolhi o barato de propósito:** existe agora um link simbólico
+`automacao/BRIEFING.md -> ../BRIEFING.md`. Assim o caminho errado passa a resolver para o
+arquivo certo, **sem cópia e sem risco de as duas versões divergirem**. Isso conserta de uma
+vez todos os prompts já escritos, os dois gatilhos do Jhon e qualquer prompt futuro que
+repita o engano — o que é melhor que reescrever dois prompts de seis mil palavras e continuar
+com a armadilha de pé para o próximo.
+
+**A lição:** quando um agente disser que um arquivo do briefing não existe, **verifique na
+hora em vez de assumir que ele não procurou direito.** Foi a segunda vez em duas horas que um
+agente relatou ferramenta ausente e estava certo — a primeira foi o `$SCRATCH` vazio, que fez
+outro agente concluir que o CV não existia. **Agente relatando falta de arquivo é sinal, não
+desculpa.**
