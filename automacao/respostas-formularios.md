@@ -3178,3 +3178,32 @@ Três armadilhas medidas no formulário, todas úteis para quem o abrir de novo:
 **OTHER INFO** (colar inteiro):
 
 > I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters, applying as a general application because your open roles are outside my discipline today. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini, which fits a 3DSMax, VRay and Houdini based workflow. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I also lead: I review other artists' work, I set the asset standard, and I founded my own character art school, so I am open to a lead seat as well. I WANT TO RELOCATE to Paris and I am fully open to moving for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Salary: open to aligning with your band for the role; as a reference, around EUR 55,000 per year. My current salary is confidential under the NDA of my current contract; happy to discuss ranges during the process. Portfolio: https://www.artstation.com/viniciuscavalcanti
+
+### SHIFT UP (Seul, Coreia do Sul) — [신규 프로젝트] 3D 캐릭터 모델러 — SÓ O VINI PODE (data de nascimento)
+
+Link: https://career.shiftup.co.kr/o/235689/apply · Segunda porta da casa (não mandar junto):
+https://career.shiftup.co.kr/o/227420/apply (3D 배경 아티스트 / 레벨 아티스트)
+
+Casa de **Stellar Blade** e **NIKKE**. Vaga **efetiva** (정규직), 3+ anos. Coreia do Sul está dentro
+do recorte. O quadro fica em `career.shiftup.co.kr` (plataforma **Greeting**) e só monta por
+JavaScript, o que explica por que nenhuma varredura por curl o achou até hoje.
+**Não tem captcha.** O que impede a automação é um campo só: **생년월일, data de nascimento,
+obrigatória**.
+
+| Campo (coreano) | O que é | Resposta |
+|---|---|---|
+| 이름 | Nome | Vini Cavalcanti |
+| 생년월일 | **Data de nascimento (obrigatória)** | **só você tem esse dado** |
+| 이메일주소 / 이메일 확인 | Email e confirmação | contact@vinicavalcanti.art |
+| 연락처 | Telefone | trocar o seletor de 🇰🇷 +82 para o Brasil **antes** de digitar; número no doc privado do Drive |
+| 병역사항 | Serviço militar | não se aplica a estrangeiro |
+| 장애여부 / 보훈여부 | Deficiência / veterano | 비대상 (não aplicável) nos dois |
+| 이력서 | **Currículo (obrigatório)** | anexar Vini_Cavalcanti_CV.pdf (o campo alterna entre arquivo e URL) |
+| 포트폴리오 | **Portfólio (obrigatório)** | escolher **URL** e pôr https://www.artstation.com/viniciuscavalcanti |
+| 기타 서류 | Outros documentos | opcional, deixar vazio |
+| 지원한 경로 (obrigatória) | Como soube da vaga | 홈페이지 (a página de carreiras do próprio estúdio) |
+| 주소 | Endereço | cidade e país |
+| 포트폴리오 URL | URL do portfólio | https://www.artstation.com/viniciuscavalcanti |
+| Consentimentos | 4 caixas | marcar as duas **(필수)**; as duas **(선택)** são opcionais |
+
+Botão de envio: **제출하기**.
