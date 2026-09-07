@@ -2118,3 +2118,41 @@ de volta de cada campo — falta só o captcha:
 
 Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
 `$SCRATCH/apply/filled_larian-char.png`.
+
+### Certain Affinity, Senior Material Artist — Vancouver E Toronto — À MÃO por reCAPTCHA de caixa
+
+**Links, e são DUAS requisições separadas, uma por cidade:**
+https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist (Greater Vancouver, BC)
+O quadro do estúdio, com as duas: https://certainaffinity.com/career
+
+**Por que ela vale:** estúdio AAA de verdade, com trabalho em Halo, Doom, Call of Duty e Left 4
+Dead, e a vaga é **material e texturização**, que é a sua disciplina. As duas cidades são Canadá
+anglófono, que é a prioridade número um.
+
+**Como ela foi achada, e isso importa:** o `certainaffinity.com` voltava 403 no curl e a campanha
+o tinha como morto. Reaberto com navegador, estava vivo o tempo todo.
+
+**A parede, medida e não suposta:** o formulário é JazzHR e termina em **reCAPTCHA v2 de CAIXA**.
+A assinatura é inequívoca: `div.g-recaptcha` visível com `data-sitekey`, e o iframe âncora em
+**304 por 78 pixels**, que é o tamanho do quadro "I'm not a robot". Não é v3 de pontuação, então
+não adianta tentar de outro IP.
+
+**Preenchido e conferido por leitura de volta em 07/09**, tudo passou menos o captcha:
+
+| Campo (id do JazzHR) | O que colar |
+|---|---|
+| `resumator-firstname-value` | `Vini` |
+| `resumator-lastname-value` | `Cavalcanti` |
+| `resumator-email-value` | `contact@vinicavalcanti.art` |
+| `resumator-phone-value` | o telefone **com +55 na frente**, do doc privado do Drive |
+| `resumator-city-value` | `Olinda` |
+| `resumator-state-value` | `Pernambuco` |
+| `resumator-address-value` e `resumator-postal-value` | **opcionais**, pode deixar em branco |
+| Currículo | `Vini_Cavalcanti_CV.pdf` |
+
+**Detalhe de leitura que confunde:** o campo de arquivo do JazzHR é **invisível** (`vis:false`), então
+o nome do arquivo **não aparece na tela** mesmo com o anexo dentro. Aqui, ao contrário do Wix, a
+prova é o próprio input: ele guardou `Vini_Cavalcanti_CV.pdf`. Não conclua que faltou CV.
+
+**Nenhuma pergunta de autorização de trabalho ou de salário no formulário**, então não há nada a
+decidir: é preencher, marcar o captcha e enviar.
