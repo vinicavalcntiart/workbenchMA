@@ -15,6 +15,13 @@
 #   sh automacao/garra.sh checa "<url-da-vaga>"                     -> livre ou JA-FEITO:<onde>
 #   sh automacao/garra.sh solta "<estudio>" "<vaga>"             -> devolve se nao aplicou
 #   sh automacao/garra.sh lista
+# garras.txt NAO e versionado de proposito (esta no .gitignore), e um agente estranhou isso
+# achando que a trava "nasce vazia a cada rodada". As duas protecoes sao diferentes e ambas
+# existem: garras.txt e a trava de CONCORRENCIA, e serve porque todos os agentes rodam na
+# MESMA maquina e no MESMO diretorio, entao eles se enxergam ali; versiona-la so criaria
+# conflito de merge a cada reserva. A protecao que atravessa rodadas e dias e outra, e e a
+# funcao feito() abaixo, que confere a URL e o ID da requisicao contra o painel e o
+# processados.csv, esses sim versionados. Se voce so olhar garras.txt, esta olhando metade.
 ARQ="$(dirname "$0")/garras.txt"; TRAVA="$ARQ.lock"; touch "$ARQ"
 # chave normalizada: minusculas, so letras e numeros, para "Ninja Theory" == "ninja  theory"
 chave() { printf '%s|%s' "$1" "$2" | tr 'A-Z' 'a-z' | sed 's/[^a-z0-9|]//g'; }
