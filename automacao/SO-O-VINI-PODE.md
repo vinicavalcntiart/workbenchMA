@@ -88,7 +88,35 @@ mão" que você me mandou não é a campanha encolhendo. É a foto velha.
 
 ---
 
-## 1. Três formulários prontos, esperando um clique seu
+## 1. NBCUniversal em Montréal: casa nova, três vagas de LIDERANÇA, e o anúncio cita Houdini Groom pelo nome
+
+Apareceu hoje e **não existia no painel**. A NBCUniversal tem estúdio de jogos em Montréal, na
+Avenue du Parc, presencial, e está contratando uma família inteira de liderança de arte:
+
+| Vaga | Link |
+|---|---|
+| **Lead Character Artist** (Body/Crowd, Face, Hair & Wardrobe) | https://jobs.smartrecruiters.com/NBCUniversal3/744000137526729 |
+| **Lead Material Artist** (Character/Wardrobe) | https://jobs.smartrecruiters.com/NBCUniversal3/744000137526669 |
+| **Associate Art Director**, trilha Characters | https://jobs.smartrecruiters.com/NBCUniversal3/744000133659271 |
+
+**Por que esta é a mais importante da lista:** o anúncio de Lead Character Artist nomeia por
+escrito *"XGen, Houdini Groom, Metahuman, cloth simulation"*. É raríssimo um anúncio citar a
+ferramenta, e grooming em Houdini é exatamente o seu diferencial de apoio. Some a isso Canadá,
+cargo de liderança e casa grande, que é o que sustenta patrocínio de visto.
+
+**A parede é DataDome no SmartRecruiters**, medido hoje: o anúncio abre limpo, e o formulário
+`/oneclick-ui/` devolve 403 com interstitial. Não se burla.
+
+**Mas para você é fácil, e essa é a melhor parte:** o Gmail mostra que **você já tem conta no
+SmartRecruiters deles desde 10/07**. Entrar e preencher deve levar poucos minutos por vaga, e
+o dossiê campo a campo está em `automacao/respostas-formularios.md`.
+
+Uma ressalva honesta: Montréal é Quebec, que está atrás na sua ordem por causa do francês. O
+anúncio é em inglês e a NBCUniversal é casa americana, mas a cidade é essa.
+
+---
+
+## 1z. Três formulários prontos, esperando um clique seu
 
 Todos com o formulário **preenchido e conferido campo a campo**. Para você é menos de um minuto
 cada, porque só falta o que a automação não pode fazer.
