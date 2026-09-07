@@ -595,3 +595,20 @@ também deu bounce, mas ele estava **publicado na página de carreiras deles**. 
 de montagem, é caixa desativada. A diferença importa para o registro: a Hydraulx continua com
 vaga de pé (Senior Modeler em Vancouver) e só precisa de outro endereço publicado; a Netflix
 não precisa de outro endereço, precisa de outra porta.
+
+## O DEDUPE É PELO ENDEREÇO, NÃO PELO NOME DO ESTÚDIO (erro medido em 07/09)
+
+Na terceira rodada de 07/09 eu escrevi três rascunhos antes de conferir direito, e **dois eram
+repetição**: o Viktor Plch da Magic Lab já tinha sido achado em 03/09 e a carta dele **já foi
+enviada**, e o `hampus@nabistudios.com` já tinha recebido a carta fria do lote 17 e ainda tem
+rascunho de follow-up de hoje na fila. Os dois foram para a lixeira antes de qualquer envio.
+
+**A causa não foi desatenção, foi o método de conferência.** Eu cruzei o nome do estúdio da fila
+com a coluna `estudio` do `pessoas.csv`, e a grafia **não bate entre os arquivos**: a fila escreve
+`MagicLab` e o `pessoas.csv` escreve `Magic Lab`. Um espaço derrubou a checagem inteira.
+
+**Regra, e ela vale para toda rodada:** antes de escrever qualquer rascunho, procurar o
+**ENDEREÇO DE EMAIL** em `automacao/pessoas.csv`, `automacao/processados.csv` e `docs/index.html`.
+Endereço é chave única e não tem grafia alternativa; nome de estúdio tem. Só depois, como segunda
+peneira, conferir o nome da casa. E conferir também se existe **rascunho de follow-up do mesmo dia**
+para aquela casa, porque duas cartas saindo juntas quebram a regra dos dias seguidos.
