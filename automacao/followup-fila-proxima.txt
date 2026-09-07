@@ -1,0 +1,98 @@
+FILA DA PROXIMA RODADA DE FOLLOW-UP
+Montada em 07/09/2026 pela onda 3 (coorte 03-06/09), depois de esgotar os 46 rascunhos do dia.
+
+===============================================================================
+1. ACHADO QUE MUDA O PLANO: NAO EXISTE COORTE DE 07/09
+===============================================================================
+O briefing pedia a lista dos estudios que receberam carta em 07/09 para amanha.
+Ela nao existe. O dia 07/09 teve 33 linhas em enviados.csv e apenas DUAS com
+endereco de email, as duas com BOUNCE:
+
+  Netflix Animation (Jason Figliozzi)  jfigliozzi@netflix.com   BOUNCE 03h55
+  Hydraulx VFX                         vancouverjobs@hydraulx.com  BOUNCE 03h55
+
+Todo o resto de 07/09 foi candidatura por PORTAL (sem thread de email para
+responder) ou a propria onda de 212 follow-ups que o Vini disparou hoje.
+Conclusao: amanha NAO ha coorte nova de carta fria por email vinda de 07/09.
+
+===============================================================================
+2. O QUE SOBRA DE VERDADE: O RESTO DE 06/09
+===============================================================================
+enviados.csv esta INCOMPLETO para 06/09. Ele registra 42 linhas (26 com email),
+mas a caixa de enviados do Gmail mostra por volta de 200 cartas com o assunto da
+campanha naquele dia, dos lotes 23, 24 e 25. A onda 3 processou 46 estudios; o
+resto continua elegivel e nunca levou follow-up.
+
+Candidatos ja levantados e ainda NAO processados (thread de uma unica mensagem
+na conferencia de 07/09, carta de 06/09 as 12h51 e as 14h20):
+
+  jobs@byterockers.games            jobs@42bits-entertainment.com
+  jobs@acas.games                   info@bulkhead.com
+  info@bluebackpack.com             mail@cobalt-lane.com
+  official@bitfallstudios.de        contact@amberdive.com
+  contact@funcom.com                hello@antagonist.no
+  ioi@ioi.dk                        jobs@slipgate-ironworks.com
+  jobs@silkroadstudios.net          info@betadwarf.com
+  contact@campfirecabal.com         jobs@grubyentertainment.com
+  jobs@parasight.studio             hello@mechanistry.com
+  b.dowgielski@omlgames.com         hello@reikongames.com
+  info@starward.co                  recruitment@manorlords.com
+  jobs@thefarm51.com                contact@theastronauts.com
+  jobs@nukklear.com                 info@keengames.com
+  contact@team-reptile.com          hi@offroadgames.co
+  info@alverastudios.com            contact@bandit-island.com
+  jobs@apoglabs.com                 robin@10chambers.com
+  jobs@boxdragon.se                 hi@mp2.dk
+  info@invisiblewalls.co            hey@northplay.co
+  info@geometricinteractive.com     jobs@spectralgames.com
+  jobs@pixelperfectdude.com         publishing@awakenrealms.com
+  hello@robotgentleman.com          contact@monstercouch.com
+  contact@linceworks.com
+
+Sao 43 enderecos. E ainda ha pelo menos mais uma pagina da busca do Gmail que
+nao foi puxada (a busca de 06/09 devolve nextPageToken depois destes), entao o
+resto de 06/09 e MAIOR que esta lista.
+
+Busca que reproduz a fila:
+  in:sent after:2026/09/06 before:2026/09/07 subject:"Wingfeather Saga credit"
+
+===============================================================================
+3. JA DESCARTADOS NESTE PEDACO, NAO REABRIR
+===============================================================================
+  Boxelware        jobs@boxelware.de     o CEO respondeu e a conversa esta viva
+  Red Thread Games jobs@redthreadgames.com   auto-reply na thread
+  Arrowhead        contact@arrowheadgs.com   canned response na thread
+  iDreams          jobs@idreams.pl           respondeu de job@idreams.pl
+  Aurora Punks     hello@aurorapunks.com     auto-reply de noreply
+  Triband          hello@triband.net         auto-reply de noreply
+  Torquemada Games jobs@torquemada-games.com BOUNCE
+
+===============================================================================
+4. AS DUAS CONFERENCIAS TEM QUE SER REFEITAS, NAO HERDADAS
+===============================================================================
+Esta lista foi conferida as 17h de 07/09 e envelhece rapido: hoje mesmo
+chegaram respostas novas de tinyBuild, Colossal Order, Galaxy Grove, Boxelware e
+Melbot depois de a carta ter ficado dias em silencio. Antes de rascunhar:
+
+  a) Abrir a thread e confirmar que ela tem EXATAMENTE UMA mensagem.
+  b) Rodar a busca por dominio, from:{dominio1 dominio2 ...} after:2026/09/06.
+     Na onda 3 foi ela, e so ela, que pegou a recusa da Galaxy Grove, que chegou
+     em thread separada com o assunto "Re: Senior Character Artist" e teria
+     levado follow-up robotico em cima de conversa ja respondida.
+  c) Conferir os quatro CSVs de follow-up pelo NOME DO ESTUDIO, nunca pelo
+     endereco. Na onda 3, onze cartas pessoais de 06/09 cairam porque o estudio
+     ja tinha levado follow-up numa caixa funcional (SSVFX, Untold, Mirage VFX,
+     Carse & Waterman, User T38, Stardust, Platige, Eallin, Filmic, Sequence
+     Group, Frima). O limite e um por ESTUDIO em toda a campanha.
+
+Ressalva conhecida: jobs@apoglabs.com ja recebeu candidatura pelo portal deles
+(Manatal, Open Application, confirmada na tela em 06/09). Decidir se o
+follow-up por email ainda faz sentido antes de rascunhar.
+
+===============================================================================
+5. ONDE CONTINUA O TESTE DOS FECHOS
+===============================================================================
+A onda 3 fechou empatada em 23 fecho A e 23 fecho B. A alternacao um a um
+recomeca no FECHO A, porque o ultimo rascunho da onda 3 (Telegael) levou o B.
+Registrar em automacao/followup-0709.csv com coorte 03-06/09 enquanto for
+carta de 06/09.
