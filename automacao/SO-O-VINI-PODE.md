@@ -53,6 +53,13 @@ Já deixei o workflow gritando: agora ele grava aviso amarelo com título e escr
 run o que houve e como consertar. Continua sem falhar e sem te mandar email, mas para de mentir
 calado.
 
+**Medido de novo às 11h30 de hoje, para você não ter que acreditar em mim:** o run 379
+(`.github/workflows/publica-dashboard.yml`, commit `ebadcae`, 10h30 UTC) terminou com
+*success* e check verde, e dentro dele o job `publicar` está com conclusão **`skipped`**.
+Ou seja: continua sem o secret, e tudo que os agentes commitaram desde 06/09 às 14h06 está
+no repositório e **não** está no site que você abre. Aquela tela de "236 abertas · 60 só à
+mão" que você me mandou não é a campanha encolhendo. É a foto velha.
+
 ---
 
 ## 1. Três formulários prontos, esperando um clique seu
