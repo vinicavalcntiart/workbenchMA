@@ -102,3 +102,19 @@ Linha no `PORTAIS` do `docs/index.html` (nota dizendo se é remota, porque a ord
 na frente), linha em `automacao/processados.csv`, `sh automacao/valida-dashboard.sh` antes do
 commit, e commit e push no branch. Commite de hora em hora, não só no fim: rodada que só grava
 no fim evapora se o processo morrer.
+
+## REGRA NOVA DE 07/09: promessa escrita se reconfere na hora, nunca se cita da nota
+
+A Bulkhead entrou nas três vagas recomendadas ao Vini porque a nota do painel dizia que o
+anúncio prometia, por escrito, *"Don't worry, we can sponsor your visa"*, mais presencial
+integral e ajuda de realocação. Ao reabrir a página para escrever a resposta dele, a contagem
+dos termos no HTML deu **`sponsor` 0, `visa` 0, `relocat` 0, `on-site` 0**: o anúncio foi
+reescrito e a promessa sumiu.
+
+**Anúncio de vaga não é imutável, e nota de painel envelhece calada.** Os três campos que mais
+mudam entre uma leitura e outra são justamente os três que mais pesam na decisão do Vini:
+**promessa de visto, faixa salarial e regime de trabalho** (presencial, híbrido ou remoto).
+
+Então: **antes de recomendar uma vaga ao Vini apoiado numa promessa escrita, REABRA a página e
+confirme a promessa ali.** Citar a nota não basta. E ao registrar uma promessa dessas, escreva
+na nota a DATA em que ela foi lida, para a próxima pessoa saber o quanto aquilo já envelheceu.
