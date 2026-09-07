@@ -64,15 +64,30 @@ de candidato, porque a antiga não estava disponível nesta sessão. **A senha n
 você no chat e NÃO está escrita em nenhum arquivo deste repositório, que é público** — conferi
 os arquivos e o histórico do git, os dois limpos.
 
+**A senha foi redefinida DE NOVO às 08h55**, porque a primeira que passei vinha de uma variável
+de ambiente de sessão morta e não servia mais. **A que vale é a segunda, entregue no chat.**
+Detalhe do fluxo, para não parecer defeito: o link do email de *Password activation* é de **uso
+único**, e a segunda tentativa de abrir devolve página sem campo de senha.
+
 Guarde-a no doc privado do Drive "CAMPANHA - dados pessoais dos formulários", ou troque por uma
 sua. Enquanto ela existir só no chat, ela se perde quando esta sessão terminar.
 
-**O que isso destravou, e é grande:** o painel tinha a EA como parede desde 03/09, e não era.
+**O que isso destravou, com a expectativa já corrigida pelo censo:** o painel tinha a EA como parede desde 03/09, e não era.
 O que travava era o fluxo: quem **já tem conta** não pode usar o bloco *First time applicant*,
 porque o passo `/Register` devolve *"There's an existing record with that email"* e não envia
-nada. Logado, o assistente vai até o fim. Isso abre o portal que cobre **BioWare, Motive
-Montréal, Criterion, Maxis, DICE e Ripple Effect**. Receita campo a campo e cinco armadilhas em
-`automacao/respostas-formularios.md`.
+nada. Logado, o assistente vai até o fim. Isso abre o portal inteiro, e o portal foi então **listado por completo: 334 vagas**.
+
+**Aqui eu preciso corrigir o que te disse antes.** Escrevi que a porta destravava BioWare, Motive
+Montréal, Criterion, Maxis, DICE e Ripple Effect. Tecnicamente destrava, mas **não há arte
+nenhuma nesses estúdios hoje**: a BioWare tem UMA vaga no mundo (Production Director), a DICE
+Estocolmo tem quatro e são todas engenharia e design, a Criterion tem duas de negócios e
+segurança, a Motive Montréal tem cinco de engenharia e narrativa. **A arte da EA está concentrada
+no EA SPORTS de Vancouver, na Respawn, e no EA Create de Xangai e Kuala Lumpur**, os dois últimos
+fora do seu escopo. Foram sete requisições da sua disciplina dentro do escopo e **cinco vagas de
+verdade, todas em Vancouver**. Quatro já foram enviadas.
+
+Receita campo a campo e as armadilhas em `automacao/respostas-formularios.md`; o censo em
+`automacao/ea-portal-0709.csv` e o script `automacao/lista-ea.sh`, que refaz tudo em um minuto.
 
 ---
 
