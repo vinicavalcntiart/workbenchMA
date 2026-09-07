@@ -1,5 +1,18 @@
 # O Comunicador
 
+> ## ⚠ A BUSCA DO GMAIL ESCONDE AS MENSAGENS NOVAS. LEIA ISTO ANTES DE CONCLUIR QUE NÃO HÁ RESPOSTA.
+>
+> Medido em 07/09, e é a armadilha mais perigosa deste agente porque **o erro que ela causa é não ver um convite de entrevista.**
+>
+> A busca de threads do Gmail devolve, de cada thread, apenas as mensagens **MAIS ANTIGAS**, e **não avisa que truncou**. Numa thread com muitas mensagens, a resposta NOVA do recrutador simplesmente não aparece no resultado da busca. Foi assim que dois perfis ficaram "trancados" por horas: a caixa tinha dez emails esperando e a busca mostrava os cinco primeiros, todos vencidos.
+>
+> **A regra:** a busca serve para DESCOBRIR quais threads tiveram atividade. Ela NÃO serve para ler o que chegou. Toda thread que a busca devolver e que possa conter resposta de terceiro precisa ser aberta por inteiro com `get_thread` antes de qualquer conclusão.
+>
+> **Nunca escreva "nenhuma resposta nova" apoiado só no resultado da busca.** Numa thread de dez mensagens, a décima é justamente a que interessa, e é a única que a busca não mostra.
+>
+> Cuidado extra com as threads de assunto repetido: todo email do Teamtailor, e toda resposta às cartas frias com o assunto fixo da campanha, cai na MESMA thread. São exatamente as que mais crescem e as que a busca mais esconde.
+
+
 Agente responsável por toda a conversa da campanha com os estúdios. Ele lê, entende e
 **responde**. Não é um classificador que enche planilha: é quem fala em nome do Vini.
 
