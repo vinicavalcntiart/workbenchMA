@@ -919,3 +919,96 @@ território canadense:
 E a regra de salário ganha o motivo certo: no Canadá nunca pedir abaixo do salário vigente do
 LMIA, porque pedir abaixo **não o torna barato, torna impossível de patrocinar**. Isso vale em
 casa de qualquer tamanho.
+
+## A fatia CANADA foi medida por inteiro em 07/09: 103 entradas, e o que sobrou nao e vaga, e parede
+
+Leitura honesta de quem varreu as 103 entradas canadenses do PORTAIS que estavam com `done=false`.
+**Zero candidatura enviada, e o motivo nao e falta de vaga: e que toda porta canadense que restava ja
+esta medida como parede, e as que nao eram parede tem VETO ESCRITO.** Quem pegar esta fatia depois nao
+precisa reabrir nada disto.
+
+**O teste de realocacao derrubou CINCO casas, e duas delas estavam marcadas `alta`.** A busca literal por
+`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA` e `days a week` no texto INTEIRO
+baixado pela API oficial, e nao na listagem do ATS, achou o veto onde a nota do painel dizia que nao havia:
+
+- **NBCUniversal / DreamWorks, as tres requisicoes de Montreal** (REF38910F, REF38920U, REF38909O):
+  *"Must be willing to work in our Montreal office a minimum of 4 days a week. Must be legally authorized
+  to work in Canada."* Duas estavam `alta`. Cada uma tinha **duas entradas** no painel, uma como
+  NBCUniversal e outra como DreamWorks e NBCU: seis linhas para tres requisicoes.
+- **Barnstorm, Creature Lead** (`careers/176`), que estava `alta`: *"This role is open to Canadian based
+  talent. Candidates must be legally authorized to work in Canada."* A `careers/204` tem o irmao dela.
+  **A unica porta boa da casa e a `careers/114`**, cujo corpo nao tem veto nenhum.
+- **Image Engine, o quadro INTEIRO** (`careers/21`, `28` e `183`): *"Candidates are required to be based in
+  British Columbia and eligible to work in Canada."* Inclusive o banco de talentos de Assets, que a nota
+  antiga chamava de "a via mais limpa que apareceu nesta rodada".
+- **thatgamecompany**: *"We are unable to sponsor or take over sponsorship of an employment Visa at this
+  time"*, e a requisicao trocou de `Remote - US/Canada` para **`Remote - US`** apenas.
+- **Atomic Cartoons, CG Designer**: *"Currently legally entitled to work in Canada"* mais *"Applicants must
+  have resided within BC"*.
+
+**Passaram no teste, e sao estas que merecem o navegador do Vini:** ICON Creative `136` (Open, faixa
+publicada CAD 63.131,12 a 85.000, zero veto no texto), Offworld `198` e `199`, Barnstorm `114`, Cinesite
+Montreal `93` e Vancouver `260`, e as tres da Behaviour em Montreal, que tambem nao pedem frances.
+
+**Sinal positivo raro, e ele estava escondido no bloco de beneficios:** a Candidature Spontanee da
+**Gameloft Montreal** (REF1006B) escreve *"Support for new employees relocating from countries or regions
+outside Quebec"*. Isso e apoio a realocacao dito por escrito, que e o sinal mais forte da campanha.
+
+**Uma promocao, e ela corrige uma leitura antiga:** a **People Can Fly**, Principal Character Artist,
+Montreal, estava `baixa` com o motivo "exige residencia num dos dois paises". O texto integral diz
+*"someone who can work remotely from either Poland or Canada (EST)"*, que e onde trabalhar e **nao**
+exigencia de ja ter permissao. Como o objetivo dele e justamente mudar para o Canada, isso deixa de ser
+motivo de rebaixamento. Subiu para `media`.
+
+### `ATS_CAREERS_SITE_RECAPTCHA`: a prova de que o BambooHR e parede de PLATAFORMA
+
+A campanha ja tinha medido o reCAPTCHA do BambooHR na ICON e na Image Engine e deduzido que o quadro
+inteiro era parede. Agora ha prova direta: os **seis** quadros canadenses do BambooHR (`owi`,
+`barnstormvfx`, `iconcreative`, `cinesitemontreal`, `cinesitevancouver`, `imageengine`) servem, todos, a
+flag `ATS_CAREERS_SITE_RECAPTCHA` na lista de features do proprio BambooHR. **Nao e configuracao de
+estudio.** Nao vale abrir navegador para conferir de novo, em nenhum quadro do BambooHR.
+
+E o mesmo tipo de confirmacao vale para o **Lever**: as paginas `/apply` da Behaviour, da Kabam, da
+Blackbird e da Larian trazem, cada uma, 22 ocorrencias de `hcaptcha` no HTML servido. Parede de
+plataforma, medida por contagem e sem gastar navegador.
+
+### Parede de CONTA nao e parede de captcha, e a diferenca importa
+
+Duas casas canadenses ficaram registradas como inacessiveis quando o obstaculo e outro e e mais barato:
+
+- **Mainframe Studios** (UKG Ready, `secure.ukgready.ca/ta/6214859`): todo caminho de candidatura cai em
+  *"Sign In / Register - Job Candidate Account"*. Zero captcha.
+- **WildBrain** (TalentSoft): o quadro tem **zero** script de captcha, e existe uma porta
+  *"Submit a speculative job application"* — que aponta para `/my-account/my-CV-file.aspx`, ou seja, conta.
+
+**Captcha nao se burla; conta se cria.** As duas sao trabalho de um cadastro, nao de um desafio.
+
+### Portas que morreram do lado do estudio, e a prova de cada uma
+
+- **Phoenix Labs**: quem desenhava a candidatura era um embed do Greenhouse com o token
+  `phoenixlabsyvren`, e o quadro **nao existe mais**. 404 na API, 404 no
+  `boards.greenhouse.io/embed/job_board/js?for=`, e 404 no anuncio direto. O texto "General Application -
+  Remote - Canada" que ainda aparece na tela e conteudo estatico do site deles. **Pagina que renderiza nao
+  prova quadro vivo quando o quadro e um embed.**
+- **Digital Dimension** (Montreal): o formulario proprio e simples e **nao tem captcha**, mas depende do
+  `folkshr.app` com uma apiKey publicada no HTML deles, e pedir o token com essa chave devolve hoje
+  `{"success":false,"error":"Invalid_API_Key"}`. Sem token nao ha lista de vaga e nao ha POST. Nao e a nossa
+  rede.
+- **Fluffy Dog Studio**: *"There are currently no open positions"*, e a porta e o mailto
+  `careers@fluffydogstudio.com`, nao formulario.
+
+### Dedupe: duas armadilhas bilingues medidas nesta fatia
+
+- **Rodeo FX**: as duas vagas de Montreal, `744000145587059` (ingles) e `744000145587250` (frances), tem a
+  **mesma referencia RDO180I**. Um anuncio so, dois idiomas, dois ids de anuncio. A de Toronto,
+  `744000144123709`, e outra requisicao (RDO243M) e e a preferida por ser Canada anglofono.
+- **Framestore**: a oferta `2120070` do Recruitee tem **duas entradas no painel com a MESMA URL**.
+
+### O criterio "casa grande na frente" NAO vale no Canada. Correcao do Vini em 07/09.
+
+A frase da HR da Galaxy Grove, *"we do not have the means to sponsor employees from outside the European
+Union"*, e **europeia**: la o piso salarial do visto qualificado e o custo burocratico realmente excluem
+empresa pequena. **No Canada o patrocinio costuma ser viavel inclusive em estudio pequeno.** Entao estudio
+canadense pequeno e medio entra com o **mesmo peso** de casa grande, e o que derruba uma canadense continua
+sendo so o **veto escrito** no anuncio ou a **vaga expirada**. Se alguma canadense tiver sido rebaixada por
+porte, reabra.
