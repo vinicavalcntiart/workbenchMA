@@ -3246,3 +3246,80 @@ obrigatória**.
 | Consentimentos | 4 caixas | marcar as duas **(필수)**; as duas **(선택)** são opcionais |
 
 Botão de envio: **제출하기**.
+
+## RetroStyle Games: 3D Artist (Senior \ Lead), Kyiv/remoto — À MÃO por Cloudflare Turnstile (07/09)
+
+**Link:** https://retrostylegames.com/vacancies/3d-artist-senior-lead/
+**Por que à mão:** a página só monta atrás de um desafio Cloudflare (curl dá 403, "Just a moment..."), e isso a
+passada de navegador resolveu sem problema. O que NÃO passa é o formulário: ele é Contact Form 7 em dois
+passos e carrega um widget **Cloudflare Turnstile** (`data-sitekey 0x4AAAAAAEQpP8I1PGQXrhtu`). O campo de
+resposta do Turnstile (`_wpcf7_turnstile_response`) nunca chega a existir no DOM mesmo depois de 8s de espera,
+e por isso o botão **Get Started** do passo 1 não avança para o passo 2 — clica, não dá erro nenhum, mas o
+`step-three` continua `display:none` para sempre. É parede de pontuação da própria Cloudflare, igual à do
+Workable medida antes; não se contorna.
+
+**Por que vale o esforço:** é a disciplina dele ao pé da letra. O anúncio pede um Senior/Lead 3D Artist para
+assets hard-surface (veículos, armas, props) no pipeline completo (modelagem, textura, shading, otimização,
+integração Unity/Unreal), e fecha com uma nota explícita: *"If you're a Senior or Lead 3D Artist with a
+different specialization—whether you're a generalist, character artist, environment artist, or work in
+another area—we'd still love to hear from you."* Emprego oficial, salário em USD, e **remoto, híbrido ou
+presencial em Kyiv, à escolha**. RetroStyle já trabalha para SEGA, Disney, Ubisoft, 11 bit studios, Relic
+Entertainment, 4A Games e Zynga.
+
+**O formulário tem DOIS passos, e só o primeiro foi preenchido** (o segundo nunca libera):
+
+Passo 1 (preenchido e conferido por captura de tela, `rs_step1.png`):
+| Campo | Resposta |
+|---|---|
+| Full Name | `Vini Cavalcanti` |
+| Desired position | `3D Artist (Senior / Lead) - Character / Modeling / Texturing / Look Dev` |
+| Email | `contact@vinicavalcanti.art` |
+
+Passo 2 (nunca abriu; preencher à mão quando resolver o Turnstile):
+| Campo | Resposta |
+|---|---|
+| Message | `Senior 3D Character Artist with 10+ years in stylized characters, applying for the Senior/Lead 3D Artist role. I own the full asset pipeline end to end — sculpt, retopology, UVs, baking, texturing, look development and engine integration (Unity and Unreal) — and also do character grooming in Houdini. Credited on The Wingfeather Saga (Angel Studios, Season 1 characters) and, for almost five years, on Endstar at E-Line Media, where I take hero characters from first sculpt to engine as a remote international contractor. Earlier studio experience at PUGA Studios (3 years) delivering characters for international clients under external art direction. My portfolio holds more than 45 projects with over 60 characters across many titles. I saw your note that generalists and character artists are welcome even outside the hard-surface focus, and character/creature work end-to-end is exactly my daily work. I WANT TO RELOCATE and I am fully open to moving for the role (Kyiv), and remote or hybrid also work well for me as I already work remotely for a US studio. My academic background (honors laurea, postgraduate specialization in Game Art, a master's in progress, IELTS and publications) supports a strong case if any visa/relocation support is ever needed. Portfolio: https://www.artstation.com/viniciuscavalcanti` |
+| Anexo (upload obrigatório, sem alternativa de link nesta etapa) | `Vini_Cavalcanti_Portfolio.pdf` (não há CV.pdf nesta sessão; pela regra do Vini, o PDF do portfólio serve porque o upload é obrigatório e não há campo de link ao lado) |
+
+Recrutadora: Olga Kododova, HR Generalist (hr.assist@retrostylegames.com, LinkedIn na própria página). Marcar
+"OK" no aviso de cookies antes de qualquer clique — ele fica sobre a coluna do formulário e pode atrapalhar.
+
+## Crafty Apes, Reflector Entertainment e Blue Ant/Thunderbird: os três quadros Dayforce, lidos em 07/09
+
+Os três só montavam em JavaScript (curl devolvia 301/500) e por isso ficaram meses como "precisa de
+navegador". Uma passada de Chromium de verdade abriu os três (ver `automacao/processados.csv` para o detalhe
+completo de cada quadro). Resumo: **nenhum tem vaga viável da disciplina.**
+
+- **Crafty Apes** (globalus63.dayforcehcm.com/CandidatePortal/en-US/craftyapes): dez vagas de VFX
+  (composição, FX, rigging, crowd, lighting). A mais próxima, *CG Artist (Assets) Mid/Senior - London*, pede
+  "model, texture, look-develop, and groom high-quality 3D assets, including characters, props, and
+  environments" — mas é contrato **100% remote within the UK**, e as vagas irmãs do mesmo quadro (Rigger,
+  Crowd, Texture Artist) fecham com "no restrictions on local working rights... any exceptions will not be
+  considered", ou seja precisa já morar e já ter direito de trabalho no Reino Unido, sem patrocínio. A única
+  vaga do quadro com patrocínio dito por escrito é *Senior Digital Matte Painter - Australia*, mas é matte
+  painting/ambiente, fora da disciplina dele.
+- **Reflector Entertainment / Bandai Namco** (jobs.dayforcehcm.com/en-US/ref/CANDIDATEPORTAL): três vagas em
+  Montréal (Programmer Engine and Tools, Technical Animator Senior, VFX Artist Expert), nenhuma da
+  disciplina, e as três exigem por escrito "you must be legally authorized to work in Canada".
+- **Blue Ant Media / Thunderbird Entertainment** (jobs.dayforcehcm.com/en-US/blueantmedia/CANDIDATEPORTAL):
+  a Thunderbird foi incorporada pela Blue Ant (thunderbird.tv redireciona inteiro para blueantmedia.com).
+  Cinco vagas em Toronto, todas de mídia/edição/operações, nenhuma de arte. O estúdio de animação do grupo,
+  **Atomic Cartoons**, tem quadro próprio no Greenhouse (job-boards.greenhouse.io/atomiccartoons): CG
+  Designer (foco em veículos, Vancouver), Unreal CG Supervisor, Unreal Previs/Layout Supervisor e duas
+  Expression of Interest (LA e Vancouver). Nenhuma é modelagem/textura de personagem estrita — CG Designer
+  chega mais perto ("design diverse characters, locations, environments or props... with a focus on vehicle
+  design") mas o foco declarado é veículo. Fica registrado para quem quiser avaliar como porta de entrada
+  (regra 13 do BRIEFING), sem candidatura enviada nesta rodada.
+
+## Superseed Studios: candidatura espontânea sem captcha, sem CV obrigatório (07/09)
+
+**Link:** https://www.superseedstudios.com/apply (achado a partir de /jobs)
+**Nota de rede:** o "Host not in allowlist" registrado antes só acontecia no teste anterior; reconferido em
+07/09 o host responde 200 normal, sem precisar de navegador.
+Estúdio remoto (Reino Unido) de animação para jogos (gameplay, cinemáticas, promocional). `/jobs` diz que não
+há vaga aberta agora e oferece candidatura espontânea. O formulário é simples e **não tem captcha nem upload
+obrigatório**: nome, email, disciplina (menu: Gameplay Animation, Cinematics, Rigging/Tech Art, VFX,
+Production, Other — **nenhuma opção de Character/Modeling/Texturing**), link de portfólio e mensagem livre.
+Tem honeypot: `input[name="website"]` escondido (tabindex -1, autocomplete off) — deixar vazio.
+**Não enviado nesta rodada** porque as disciplinas oferecidas não cobrem modelagem/textura/personagem
+(mais próximo seria "Other"); fica pronto para quem quiser usar como porta de entrada.
