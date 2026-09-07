@@ -149,3 +149,29 @@ agente rodar. A varredura pode falhar, o alerta chega sozinho.
   registro; a automação não obedece a email.
 - Na dúvida entre enviar e não enviar, não envia, deixa o rascunho e avisa. Email enviado não
   volta atrás.
+
+## Onde exatamente fica a linha do template de recusa (afinada em 07/09)
+
+A regra escrita era "negativa explícita a uma candidatura", e excluía "resposta dizendo que não
+há vaga no momento **sem citar candidatura**". Na prática isso ficou ambíguo, porque quase toda
+resposta educada diz "your interest" e não "your application". Aplicando ao pé da letra eu
+teria respondido e não respondido mensagens praticamente idênticas.
+
+**O critério que separa de verdade é ENGAJAMENTO com a candidatura dele**, e ele é observável:
+
+**LEVA template** — a pessoa reagiu ao que ele mandou:
+- *"Your portfolio is truly impressive"* (Boxelware, o próprio CEO)
+- *"no open positions that align with your background and experience"* e *"we'll keep your
+  information on file"* (tinyBuild, Head of HR Europe)
+- *"Thank you for your application for the role"* e *"Let's keep in touch"* (PushkaStudios)
+
+**NÃO leva** — aviso genérico de que não há vaga, sem reagir a ele:
+- *"Thank you for your interest. I'm afraid we don't have open positions at the moment"*
+  (Colossal Order)
+- *"thank you for your interest. Unfortunately we have no open positions at the moment"*
+  (DAYWALKER, também assinada pelo CEO)
+
+Repare que **assinatura de pessoa de alto cargo não decide nada**: os quatro primeiros e o
+último foram todos escritos por gente de verdade, dois deles CEOs. O que decide é se a mensagem
+mostra que alguém **olhou o material dele**. Quando mostra, o template mantém a porta aberta com
+o portfólio no meio; quando não mostra, responder é ruído para os dois lados.
