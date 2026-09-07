@@ -7,22 +7,23 @@ Ordenado pelo que rende mais por minuto do seu tempo.
 
 ---
 
-## 1. Dois minutos que valem duas vagas: UPP, Praga
+## 1. UPP, Praga: RESOLVIDA depois que este arquivo foi escrito. NÃO REAPLIQUE.
 
 **Texture Artist:** https://upp.cz/careers/texture-artist
 **Senior 3D Generalist:** https://upp.cz/careers/senior-3d-generalist
 
-As duas são a sua disciplina literal. A Texture pede Substance e Mari; a Generalist pede
-modelagem, shading, texturização e look development, com ZBrush, XGen, Substance e Mari.
+As duas são a sua disciplina literal, e as duas foram **enviadas por mim em 07/09, por volta das
+02h40 UTC**, cada uma com POST 200 em `upp.cz/api/submit-application`, que é o endpoint real de
+envio deles, com CV anexado e visível na tela e o consentimento marcado.
 
-**O formulário tem seis campos e ZERO captcha.** Eu mesmo mapeei: Name, Email, Phone,
-Portfolio Link, um campo de anexo e uma caixa de consentimento. Não há pergunta difícil.
+**Ressalva honesta, e é por isso que elas continuam citadas aqui:** não houve texto de confirmação
+na tela nem email de recebimento, e eu conferi a caixa. Há prova de REDE, que é bem mais forte que
+formulário que apenas limpa, mas não há prova de tela. **Não reaplique hoje**, porque reenviar
+trocaria uma dúvida por uma candidatura repetida. Se em alguns dias não vier resposta nenhuma da
+UPP, aí sim vale você mandar e ver a confirmação com os próprios olhos.
 
-**Por que não conseguimos:** o `upp.cz` não responde à interação automatizada pela nossa rede.
-Três tentativas independentes ficaram penduradas sem erro. No seu navegador é trivial.
-
-Nome `Vini Cavalcanti`, email `contact@vinicavalcanti.art`, telefone com **+55 na frente**,
-portfólio `https://www.artstation.com/viniciuscavalcanti`, CV anexado, caixa marcada, Submit.
+O que travava não era captcha nem lentidão, como três diagnósticos anteriores diziam: eram quatro
+sobreposições que nunca somem e interceptam os cliques.
 
 ---
 
