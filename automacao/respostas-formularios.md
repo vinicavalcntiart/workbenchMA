@@ -107,6 +107,7 @@ A automação de 02/09 enviou dez candidaturas e dois cadastros em banco de tale
 | Valve, 3D Character Artist (Bellevue) | https://www.valvesoftware.com/en/jobs?job_id=2 | reCAPTCHA com checkbox visível; campos de nome, email, portfólio, como descobriu a vaga e CV |
 | Lighthouse Games, Lead Character Artist (Leamington Spa) | https://apply.workable.com/lighthousegames/j/F7F90250DA/apply/ | Cloudflare Turnstile antes do formulário do Workable |
 | Ubisoft Massive, Lead Character Artist, The Division 2 (Malmö) | https://jobs.smartrecruiters.com/Ubisoft2/744000144027102 | SmartRecruiters com DataDome no botão Apply |
+| Techland, Character Artist (Varsóvia/Wrocław, REF64D) | https://jobs.smartrecruiters.com/TechlandSA/744000137670539 | SmartRecruiters com DataDome no botão Apply; anúncio inteiro buscado termo a termo em 07/09 sem nenhum veto de residência ou patrocínio — a vaga mais limpa da fatia |
 | Ubisoft Montpellier, Team Lead Character, Beyond Good and Evil 2 | https://jobs.smartrecruiters.com/Ubisoft2/744000121716487 | SmartRecruiters com DataDome no botão Apply; anúncio em francês |
 | Ubisoft Montreal, Team Lead Modeling (Unreal) | https://jobs.smartrecruiters.com/Ubisoft2/744000141713411 | SmartRecruiters com DataDome no botão Apply |
 | DreamWorks Animation, Visual Development Artist (Glendale) | https://jobs.smartrecruiters.com/NBCUniversal3/744000143937898 | SmartRecruiters com DataDome no botão Apply |
