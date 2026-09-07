@@ -5,7 +5,7 @@
 # FEITO Mac Guff | nao avaliavel: macguff.fr nao respondeu nem por curl nem depois de retentativa (reconferir de outra rede)
 # FEITO Maga Animation Studio | sem porta de formulario: pagina de carreiras lida (https://maga-animation.com/careers) so publica email (contact@maga-animation.com;job@maga-animation.com), vira fila de carta
 # FEITO MagicLab | sem porta de formulario: pagina de carreiras lida (https://magiclab.cz/jobs) so publica email (), vira fila de carta
-# FEITO Mago Production | sem porta achavel: a home nao publica link de carreiras nem endereco de email
+# FEITO Mago Production | sem porta de formulario: a home nao publica carreiras, mas o endereco jobs@magoproduction.com existe e responde (auto-reply de recebimento em 07/09); e fila de carta
 # FEITO Mascista | sem porta achavel: a home nao publica link de carreiras nem endereco de email
 # FEITO Mathematic | sem porta de formulario: pagina de carreiras lida () so publica email (ashlee.wismach@mathematic.tv;contact@mathematicfilm.com), vira fila de carta
 # FEITO Melbot Studios | sem porta de formulario: pagina de carreiras lida () so publica email (info@melbot.es), vira fila de carta
