@@ -2191,3 +2191,59 @@ Nenhuma pergunta de patrocínio/visto neste formulário; se aparecer alguma perg
 fora do que já foi visto aqui, responder com a verdade (precisa de patrocínio, ainda não autorizado
 a trabalhar no Canadá). Pretensão, se pedirem: `CAD 95,000 per year. Open to aligning with your band
 for the role.`
+
+---
+
+## Rebel Wolves (Varsóvia, Polônia) — Open Application, departamento Art — À MÃO
+
+Link: https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74
+(redireciona para `https://form.erecruiter.pl/form/d2fa13d6d9cd47a6aa9010c9e9294d74`)
+
+Estúdio de Varsóvia fundado por veteranos do *The Witcher 3*, com *The Blood of Dawnwalker*
+anunciado. As duas vagas nominais de hoje são QA e RH, então a porta é a **Open Application**, que
+o próprio site publica como candidatura espontânea.
+
+**Por que à mão, medido em 07/09, e a lição vale para todo o eRecruiter:** a **página não tem
+captcha nenhum** — nem reCAPTCHA, nem hCaptcha, nem Turnstile, nem DataDome no HTML — mas o **POST
+de envio volta 403 com a página `Just a moment...` do Cloudflare** (`script-src
+challenges.cloudflare.com`). O desafio existe **só no envio** e é invisível antes de preencher.
+Depois do clique o formulário **continuou preenchido**, que é a prova de que não entrou, e nenhuma
+mensagem de erro apareceu na tela. No navegador do Vini isso passa direto.
+
+| Campo (`name`) | O que colar |
+|---|---|
+| `firstName` | `Vini` |
+| `lastName` | `Cavalcanti` |
+| `email` | `contact@vinicavalcanti.art` |
+| `phone` (obrigatório) | o telefone **com o código do país na frente**, do doc privado do Drive |
+| `cvFiles` (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| `custom_47761` — *Kind request to attach your portfolio* | `ArtStation: https://www.artstation.com/viniciuscavalcanti \| Website: https://vinicavalcanti.com \| LinkedIn: https://www.linkedin.com/in/vinicavalcnti` |
+| `custom_53668` — *What is your time zone?* (obrigatório) | `Currently UTC-3. I WANT TO RELOCATE to Warsaw and I am fully open to moving for the role, so I would be on CET/CEST full time. Until relocation I already work European hours daily with an international team.` |
+| `custom_47763` — *What are your net financial expectations?* (obrigatório) | `About PLN 11,500 net per month on an employment contract (roughly PLN 16,000 gross per month, or EUR 45,000 gross per year), which is my reference for a senior character artist in this market. Open to aligning with your band for the role, and happy to convert the figure if the contract type is B2B.` |
+| *Which department are you applying to* (obrigatório, 18 caixas) | marcar **Art** |
+| `custom_47765` — *Information for the recruiter* | o texto longo abaixo |
+| Consentimento (`3193`) | marcar: *I consent to the processing of my personal data (...) for the purposes of future recruitment* |
+
+Texto de `Information for the recruiter`:
+
+> I am applying for a Senior 3D Character Artist role in the Art department (character modelling,
+> sculpting, texturing, look development and grooming). I WANT TO RELOCATE and I am fully open to
+> moving to Warsaw for the role; this is not "open to considering", it is what I want.
+> I am a Senior 3D Character Artist with 10+ years of experience, five of them as Senior at E-Line
+> Media, where I review other artists' work and define the asset standard for the team, and I am the
+> founder and teacher of my own character art school. Credited on The Wingfeather Saga. Stylized and
+> semi-realistic characters end to end: ZBrush, Maya, Substance Painter/Designer, Marmoset, Unreal,
+> plus hair and fur grooming in Houdini and XGen.
+> My academic background, with an honors laurea, a postgraduate specialization, a master's in
+> progress, IELTS and publications, makes a strong visa case. I am not an EU citizen and would need
+> work authorisation/sponsorship, and I am ready to start the process immediately.
+> Portfolio: https://www.artstation.com/viniciuscavalcanti | Site: https://vinicavalcanti.com |
+> LinkedIn: https://www.linkedin.com/in/vinicavalcnti
+
+**Duas armadilhas medidas neste formulário:**
+
+1. **As caixas são Radix e o botão é VAZIO.** Cada opção é um `button[role=checkbox]` sem texto
+   nenhum dentro; o rótulo fica num `<label for="<id>">` **irmão**. Casar por `innerText` do próprio
+   botão devolve "não achei" em todas as 19 caixas. O certo é achar o `label[for=id]`, comparar o
+   texto dele e clicar no botão, conferindo depois `aria-checked === "true"`.
+2. O banner de cookies fica no rodapé e **não** cobre o botão `Send`, ao contrário do da Bohemia.
