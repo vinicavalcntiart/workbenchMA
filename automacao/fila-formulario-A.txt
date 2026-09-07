@@ -33,9 +33,9 @@ Art Bully Productions
 Artefacts Studio
 Artifex Animation Studios
 Artists Animation Studio
-Artjail
+# FEITO Artjail
 Artzee
-Asterman
+# FEITO Asterman
 Atent Games
 Auroch Digital
 B-Water Animation Studios
@@ -82,7 +82,7 @@ Cyan Worlds
 Cyborn
 DAYWALKER Studios
 Dark Cloud Games
-Day For Nite
+# FEITO Day For Nite
 Day Off Interactive
 Deck Nine Games
 Devsisters
@@ -94,7 +94,7 @@ Divine Studios
 Drakhar Studio
 Dreamcraft Entertainment
 Drifter Entertainment
-DrinkBox Studios
+# FEITO DrinkBox Studios
 Eallin
 Eden Games
 Eisko
@@ -115,7 +115,7 @@ Flightless
 Flipbook Studio
 Flix Interactive
 Flux Animation Studio
-Flying Bark Productions
+# FEITO Flying Bark Productions
 Freefolk
 Frima Studio
 Frozenbyte
@@ -130,7 +130,7 @@ Golden Wolf
 Grinding Gear Games
 Ground Control Studios
 Gunzilla Games
-HB Studios
+# FEITO HB Studios
 HOUND13
 Haemimont Games
 Hahn Film
@@ -152,7 +152,7 @@ IBRIDO Studio
 IXOR
 Illogic
 Illusion Ray
-Iron Oak Games
+# FEITO Iron Oak Games
 Ironroot Games
 Jo-Mei Games
 Joinplay Games
@@ -170,7 +170,7 @@ Keytoon Animation
 Kickstart Entertainment (reenvio)
 KidsCave Studios
 Klang Games
-Klei Entertainment
+# FEITO Klei Entertainment
 Krillbite Studio
 Kuuasema
 LUGUNDTRUG
