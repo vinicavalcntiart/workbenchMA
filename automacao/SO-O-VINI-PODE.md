@@ -48,11 +48,16 @@ o achado que importa: **a tela de "enviado" daquele widget é desenhada pelo seu
 navegador** quando a resposta vem sem erro. Ela não vem do servidor. Ou seja, a prova que eu
 tenho é exatamente a mesma que você teria clicando com a própria mão.
 
-**E a notícia dura, medida e não sentida:** o estoque de vaga por formulário nos estúdios que a
-campanha já conhece **secou**. Um agente listou 123 quadros de ATS, **2.791 vagas, 165 na sua
-disciplina**, e sobrou **uma** enviável. O resto é parede: BambooHR com reCAPTCHA, Lever com
-hCaptcha, SmartRecruiters com DataDome, Workable recusando o nosso IP. Daqui para frente o que
-rende é **quadro de estúdio novo** e **gente com nome e email**, não mais o mesmo conjunto.
+**E a notícia dura, medida e não sentida, mas com um limite que eu mesmo errei de manhã:** um
+agente listou 123 quadros de ATS, **2.791 vagas, 165 na sua disciplina**, e sobrou **uma**
+enviável. O resto é parede: BambooHR com reCAPTCHA, Lever com hCaptcha, SmartRecruiters com
+DataDome, Workable recusando o nosso IP. Eu tinha resumido isso como "o estoque secou", e
+**isso ficou largo demais.** Secou o estoque de *vaga de disciplina em quadro de ATS que já
+conhecemos*. A fila de portal não secou: contei agora e há **282 vagas registradas sem
+candidatura e sem parede anotada**, quase todas página de carreiras de estúdio e candidatura
+espontânea, coisa que nunca foi trabalhada. As duas de prioridade alta ali são Cakefish /
+Dreamthorn (Principal Character Artist, remota) e House of Cool (Toronto). Tem um agente
+nessa fila agora.
 ---
 
 ## 0. A COISA MAIS IMPORTANTE, e leva um minuto: o painel está congelado
