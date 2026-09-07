@@ -1012,3 +1012,40 @@ empresa pequena. **No Canada o patrocinio costuma ser viavel inclusive em estudi
 canadense pequeno e medio entra com o **mesmo peso** de casa grande, e o que derruba uma canadense continua
 sendo so o **veto escrito** no anuncio ou a **vaga expirada**. Se alguma canadense tiver sido rebaixada por
 porte, reabra.
+
+## A garra estava travando a fila inteira de formulário, e ninguém viu (07/09, à noite)
+
+Achado ao ir aplicar na Netflix Head of Characters de Vancouver, que estava marcada `alta`
+e `done=false`. Rodei `sh automacao/garra.sh checa` como o brief manda e a resposta foi
+`JA-FEITO`, saída 4.
+
+A causa: a função `feito()` conferia **presença** da URL no `docs/index.html`, sem olhar o
+estado. Só que **toda entrada da fila de formulário está, por definição, dentro do
+`docs/index.html`** — é lá que a fila mora. Então a garra respondia `JA-FEITO` para as 475
+entradas com `done=false`, que são exatamente as que faltam fazer.
+
+O efeito é pior do que parece, porque o brief do Jhon diz, com estas palavras: "antes de
+QUALQUER candidatura, rode `sh automacao/garra.sh checa` e depois `pega`; saída 4 quer dizer
+já feito". **O agente que obedecia o brief ao pé da letra pulava a fila inteira** e voltava
+dizendo que o poço estava seco. A trava que existia para impedir candidatura repetida estava
+impedindo candidatura.
+
+Isso obriga a reler com desconfiança toda conclusão de "fila seca" escrita hoje. Fila seca
+medida por agente que rodava a garra antes de abrir a vaga NÃO é medida, é o defeito falando.
+O que continua de pé é o que foi medido abrindo a fonte oficial: veto escrito no anúncio,
+vaga expirada, parede de captcha. O que cai é qualquer "pulei porque a garra disse feito".
+
+O conserto, que guarda a proteção e devolve o trabalho:
+- No painel, só conta como feito a linha que está com `,true,` (done=true).
+- No `processados.csv`, só contam os tipos que significam candidatura: `portal-aplicado`,
+  `confirmacao-portal`, `portal-enviado`, `candidatura`, `enviado`. Levantamento, varredura,
+  `vaga-nova`, `revalidacao`, `bloqueio` e `vaga-a-mao` NÃO são candidatura e não travam.
+- URL no painel com `done=false` não trava, mas o `checa` devolve `livre (ATENCAO: ...)`,
+  porque o caso Larian de hoje mostrou que existe envio real sem a linha do painel marcada.
+  O aviso mantém de pé a regra do brief de conferir o Gmail antes de enviar.
+
+A lição geral, e ela vale para qualquer trava que a gente escreva: **uma trava que nunca
+libera nada não é conservadora, é quebrada.** Se um guarda-corpo passa um dia inteiro
+recusando tudo e ninguém estranha, o sintoma some dentro do resumo como "não achei trabalho".
+Toda trava nova precisa de um teste que prove que ela deixa passar o caso legítimo, não só
+que ela barra o caso ruim.
