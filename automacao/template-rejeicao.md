@@ -20,6 +20,16 @@ No htmlBody, o link do portfólio vai como âncora com texto limpo:
 Nunca enviar só body com URL crua: o Gmail converte para HTML embrulhando a URL
 no redirecionador google.com/url e ela aparece por extenso, com cara de spam.
 
+
+ATENÇÃO, LIMITE DE USO (07/09): este texto é PISO, não é padrão. Ele só serve para
+mensagem curta, de caixa funcional ou sem voz própria, cujo engajamento é uma linha só.
+Se a pessoa assina com nome próprio, escreve na primeira pessoa, cita algo específico do
+material dele ou agradece a ele por ter escrito, o template é PROIBIDO e a resposta se
+escreve à mão, mais curta que este texto. A seção "O template é PISO, não é padrão" do
+BRIEF-COMUNICADOR.md tem os critérios. Motivo: em 07/09 este texto foi mandado ao Ole, da
+Flashbulb Games, em cima de uma mensagem pessoal e calorosa, e agradeceu "for taking the
+time to reply" a quem já tinha agradecido o tempo do Vini. Leu como robô.
+
 ---
 
 Hi {TEAM},

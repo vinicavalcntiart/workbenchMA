@@ -175,3 +175,40 @@ Repare que **assinatura de pessoa de alto cargo não decide nada**: os quatro pr
 último foram todos escritos por gente de verdade, dois deles CEOs. O que decide é se a mensagem
 mostra que alguém **olhou o material dele**. Quando mostra, o template mantém a porta aberta com
 o portfólio no meio; quando não mostra, responder é ruído para os dois lados.
+
+## O template é PISO, não é padrão: mensagem pessoal exige resposta escrita
+
+Erro real cometido em 07/09, apontado pelo Vini olhando a thread: *"o cara tinha dado uma
+mensagem super fofa e ele foi lá e respondeu com um padrão robótico."*
+
+O Ole, da Flashbulb Games, escreveu com nome, em voz própria, elogiando o material com
+especificidade (*"You have an impressive background and clearly a lot of experience in character
+art"*) e ainda agradeceu por ele ter se apresentado e mandado o trabalho. A resposta que saiu foi
+o template inteiro, incluindo *"Thanks for letting me know, and for taking the time to reply. Most
+studios don't"* — ou seja, **agradeceu pelo tempo de quem já tinha agradecido pelo dele**. Lado a
+lado, lê como máquina respondendo gente.
+
+O defeito não foi escolher responder. Foi tratar o critério de engajamento como um interruptor
+de duas posições: engajou, manda o template. **Engajamento tem grau, e a resposta tem que
+acompanhar.**
+
+**Como decidir agora, em duas faixas:**
+
+**Faixa 1, template basta.** A mensagem é curta, de caixa funcional ou assinada sem voz própria,
+e o engajamento é uma linha só (*"nice portfolio"*, *"we'll keep your info on file"*). Aqui o
+texto de `template-rejeicao.md` vai inteiro e está correto.
+
+**Faixa 2, template é proibido e a resposta se escreve.** Sinais, e basta um: a pessoa assina com
+nome próprio e escreve na primeira pessoa; **cita algo específico do material dele** em vez de
+elogiar genericamente; agradece a ele por ter escrito; ou deseja algo pessoal no fim. Nesses
+casos a resposta tem que:
+
+- **responder ao que a pessoa disse**, nomeando o que ela nomeou (se ela falou de *character
+  art*, a resposta fala de character art, não de "future character work" em abstrato);
+- ser **mais curta que o template**, não mais longa. Três ou quatro linhas;
+- **nunca** agradecer "por dedicar seu tempo" se a mensagem recebida já agradeceu o dele. Isso é
+  o eco que denuncia a fôrma;
+- manter só o que é fato útil: o link do ArtStation e a porta aberta para trabalho de personagem.
+
+**Regra de segurança que resolve o caso duvidoso:** se você leu a mensagem e pensou "que gentil",
+ela é faixa 2. Gentileza específica não se responde com parágrafo pré-escrito.
