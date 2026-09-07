@@ -28,7 +28,7 @@ Animationsfabrik
 Antaruxa
 Apog Labs
 Appeal Studios
-Ars Thanea
+# FEITO Ars Thanea
 Art Bully Productions
 Artefacts Studio
 Artifex Animation Studios
