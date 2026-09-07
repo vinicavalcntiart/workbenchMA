@@ -244,6 +244,37 @@ Artist que já foi enviada em 30/08. Parede: Turnstile.
 
 ---
 
+## 5b. Nove formulários novos mapeados na tarde, todos parados em captcha
+
+Vieram da fila dos 343 estúdios que já receberam sua carta e nunca receberam formulário. Todos
+preenchidos e conferidos campo a campo, com dossiê em `automacao/respostas-formularios.md`.
+
+**As três que valem mais:**
+
+**SHIFT UP, 3D Character Modeler, Coreia do Sul, efetiva.** É a sua disciplina ao pé da letra,
+dentro do recorte geográfico. **A parede aqui não é captcha, é você:** o formulário exige
+**data de nascimento**, que a automação não tem e não inventa. É o único campo que falta.
+Quadro em `career.shiftup.co.kr`, que só monta por JavaScript e por isso nunca tinha aparecido.
+
+**Next Level Games, General Application, Vancouver.** É **subsidiária integral da Nintendo**
+(Luigi's Mansion, Mario Strikers), e o quadro é **JazzHR próprio**, que a varredura do
+`careers.nintendo.com` de 03/09 não cobria. A General Application tem a opção literal
+**3D Character Art**. Canadá, casa grande. Parede: reCAPTCHA v2 de caixa.
+
+**Unit Image, General Application, Paris.** Casa de cinemáticas AAA de ponta, que a campanha só
+tinha tocado por email. Parede: reCAPTCHA v3, com a mensagem na tela.
+
+**As outras seis:** SHED (espontânea, Montréal, reCAPTCHA v2), Pixel Zoo (Environment Artist,
+Brisbane, reCAPTCHA v3), Sans Strings (Expression of Interest, Turnstile), Old Skull Games
+(espontânea, DataDome), Moonbug (Freelance Talent Network, Turnstile) e Red Manta / Twin Atlas
+(Environment Artist) — esta última é parede **nossa**, porque o `notion.site` não abre por esta
+rede, e não do estúdio.
+
+**Uma que não é formulário e sim carta:** a **Traega Entertainment** tem **Senior Character
+Artist viva**, exatamente o seu cargo, mas a porta é `jobs@traega.com`. Entrou na fila do Joe.
+
+---
+
 ## 6. UM PDF DE PORTFÓLIO destrava uma classe inteira de formulário
 
 Hoje **duas** candidaturas pararam pelo mesmo motivo, e não é captcha: o formulário exige
