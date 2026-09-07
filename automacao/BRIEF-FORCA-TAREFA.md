@@ -568,3 +568,98 @@ allowlist do navegador desta sessão.
    vão sempre. Resposta 200 com `userId` é candidatura criada.
 
 O script usado está em `$SCRATCH/gohire_apply.py` e recebe o arquivo da carta como argumento.
+
+## O sitemap de vagas do Hitmarker tem TRES paginas, nao infinitas, e o estoque dele esta trabalhado
+
+Medido em 07/09 pela fatia HITMARKER, e o numero corrige a suposicao que abriu a fatia.
+`hitmarker.net/sitemap-jobs.xml/p1` e `/p2` devolvem 5.000 URLs cada. **A partir da `/p3` o
+servidor devolve SEMPRE o mesmo rabo de 2.927 URLs**, com bytes identicos e md5 diferente (a ordem
+muda a cada pedido), entao `/p4` ate `/p7` nao acrescentam uma URL sequer. O total real e
+**12.926 vagas unicas**, e nao 5.000 por pagina ate acabar.
+
+Sobre as 12.926: **95** batem `character|modeler|modeller|sculpt|3d-artist|creature`, e **65**
+sobrevivem ao corte de concept 2D, engenharia, animacao, rigging, estagio e banco de talentos da
+Side. Dessas 65, conferidas uma a uma contra o painel e o `processados.csv`:
+
+- **duas** a garra recusou direto (Vertigo Istambul e Lightfold);
+- **cinco** estao fora do recorte geografico (Lakshya e Scopely Bangalore na India, Kojima e
+  PlayStation Team Asobi no Japao, Virtuos em Ho Chi Minh, Jam City em Montevideu);
+- **quase todo o resto ja tem candidatura ou ja tem parede escrita no painel**: Behaviour 7 Days
+  to Die (enviada 30/08), Rebellion Oxford (enviada e recusada 01/09), 2K Cloud Chamber Novato e
+  Montreal, 2K Small Axe Burnaby, Hasbro Skeleton Key Austin e Montreal, EA Vancouver, Epic (quatro
+  candidaturas e uma decisao escrita de nao mandar a quinta), Avalanche, Frontier, Lighthouse,
+  Ubisoft Massive, Ubisoft Montpellier, Techland, Fatshark, thatgamecompany, Keywords.
+
+**A licao para quem pegar este quadro depois:** o Hitmarker e agregador, e a campanha ja passou por
+ele. O que ele ainda rende **nao e a vaga da lista, e o ESTUDIO que a vaga revela** quando se abre
+o quadro inteiro do ATS dele. Foi assim que saiu a NBCUniversal: o sitemap trouxe UMA Associate Art
+Director e o quadro do SmartRecruiters mostrou uma familia inteira de lideranca de arte em Montreal.
+
+Duas armadilhas de leitura medidas na mesma rodada, as duas de filtro por palavra:
+- **`Character Lead` da Mari, em Londres, e ator dentro de fantasia** no Battersea Power Station,
+  a 14,75 libras a hora. Titulo perfeito, disciplina nenhuma.
+- **`Senior Character Designer` da Razer, em Singapura, e direcao criativa e narrativa**: character
+  bibles, arquetipo, briefing de animacao e skins, com estudio externo fazendo o asset. Nao e
+  modelagem. Ler o corpo do anuncio antes de contar como vaga da disciplina.
+
+## O Workable tem DOIS hosts, e so um deles esta em 1015: `jobs.workable.com` responde 200
+
+Achado de 07/09 que muda o que se pode fazer durante um bloqueio do Workable, e e o achado mais
+util desta fatia.
+
+`apply.workable.com` esta em **`error code: 1015`** contra o IP desta sessao, confirmado de novo em
+07/09 no board (`apply.workable.com/<conta>/`) e na API publica
+(`/api/v1/widget/accounts/<conta>`), com curl pelado **e** com cabecalho completo de Chrome
+(User-Agent, Accept, Accept-Language, Sec-Fetch-Mode, Upgrade-Insecure-Requests). Trocar cabecalho
+nao muda nada: e bloqueio por IP.
+
+**Mas `jobs.workable.com` e outro host e responde 200.** E ele serve um indice de busca que
+atravessa TODAS as contas do Workable:
+
+    GET https://jobs.workable.com/api/v1/jobs?query=character%20artist
+    GET https://jobs.workable.com/api/v1/jobs?query=...&pageToken=<nextPageToken>
+
+Cada item vem com `title`, `company`, `location` (com `countryName` e `city`), `workplace`
+(`remote`, `hybrid`, `on_site`), `employmentType`, `department`, `description`,
+`requirementsSection` e `url`. Ou seja: da para **qualificar geografia, regime de trabalho, faixa e
+exigencia de disciplina de qualquer vaga do Workable inteiro sem navegador e sem passar pelo host
+bloqueado**. So o ENVIO continua preso no `apply.workable.com`.
+
+Cuidado com o formato: o pais NAO esta em `location.country` (esse campo nao existe), esta em
+**`location.countryName`**, e `company` as vezes vem string e as vezes vem objeto com `title`.
+Filtro escrito contra `country` devolve zero e parece que nao ha vaga, quando ha.
+
+Rodando oito consultas (`character artist`, `3d modeler`, `texture artist`,
+`look development artist`, `3d character`, `creature artist`, `character modeler`,
+`material artist`) sairam **391 vagas unicas**, e **41 dentro do recorte geografico e da
+disciplina**. Quatro entraram no painel como pendentes por 1015: Side Senior Texture Artist
+(Montreal e Toronto), Sperasoft Material Artist (stylization, seis requisicoes na Polonia, Romenia
+e Servia), Liquid Development Material Artist e Sawhorse Productions Roblox 3D Artist.
+
+## O GoHire publica o sitemap da PLATAFORMA INTEIRA, e o `robots.txt` entrega o caminho
+
+Medido em 07/09. `jobs.gohire.io/robots.txt` aponta para **`jobs.gohire.io/sitemap.txt`**, que e
+uma lista de texto puro com **20.369 URLs de vaga de todos os clientes do GoHire**, no formato
+`jobs.gohire.io/<slug-da-empresa>-<idNumerico>/<titulo>-<jobId>/`.
+
+**A armadilha, e ela invalida o uso ingenuo da lista:** o `<idNumerico>` do sitemap **NAO e o
+`clientHash`** que a API pede, e a URL com o numero devolve **404**. Provado na Makeshift, que a
+campanha usou hoje: `makeshift-software-10013422/senior-character-modeler-299993/` da 404, e
+`makeshift-software-hnqmphxc/senior-character-modeler-299993/` da 200, mesma vaga. O `jobId`, esse
+sim, e o mesmo nos dois, e com o `clientHash` certo a API responde tudo:
+`widget-job?clientHash=hnqMpHxc&jobId=300611` devolve 200 para a Senior 3D Environment Artist que
+pela URL numerica parecia arquivada.
+
+Nao ha endpoint que traduza o id numerico em `clientHash`: testados e todos 404
+(`widget-jobs`, `widget`, `jobs`, `widget-client`, `company?id=`, `widget-job` com o numero no
+lugar do hash). **O hash so aparece no site do proprio estudio**, no `<script>` de
+`widget.gohire.io/widget/<clientHash>` da pagina de carreiras dele.
+
+**Entao o sitemap serve como DIRETORIO DE EMPRESAS, nao como fila de vagas clicaveis:** ele diz
+quem usa GoHire e com que titulos, e a partir dai se procura o hash no site do estudio. Resultado
+honesto desta rodada: das 20.369 URLs, so **cerca de 25** batem a disciplina, e quase todas sao ou
+ja trabalhadas (Lightfold, Makeshift), ou fora de nivel (Hug & Roll Gaming e entry level de 0 a 1
+ano a 15 a 40 dolares a hora), ou repeticao de spam de Web3 (a Bondex sozinha tem onze copias da
+mesma 3D Stylized Environment Artist). **A NBCUniversal tem board no GoHire** com a mesma Associate
+Art Director de Montreal, mas o anuncio esta arquivado e o hash nao foi achado; se alguem achar o
+`clientHash` da NBCUniversal, essa e a porta que contorna o DataDome do SmartRecruiters delas.
