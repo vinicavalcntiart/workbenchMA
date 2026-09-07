@@ -122,7 +122,7 @@ Freefolk
 # FEITO GIANTSTEP
 # FEITO GO-N Productions
 # FEITO Galaxy Grove
-Game-Ace
+# FEITO Game-Ace
 # FEITO Giant Animation
 # FEITO Gimpville
 # FEITO Glowfish Interactive
@@ -164,7 +164,7 @@ Kalamona Studios
 # FEITO Karrot Animation
 # FEITO Kavaleer Productions
 Keos Masons
-Kevuru Games
+# FEITO Kevuru Games
 # FEITO Keyframe Digital Productions
 # FEITO Keytoon Animation
 Kickstart Entertainment (reenvio)
