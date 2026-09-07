@@ -841,3 +841,20 @@ para mandar a obra inteira é perder por escolha nossa.
 formulário com limite de 2 MB**. Antes de anexar, leia o limite que o formulário declara
 (`uploadMaxSize` nas APIs que expõem isso) e, se não couber, registre como à mão em vez de
 mandar arquivo cortado.
+
+## A garra vale para o COORDENADOR também, e ele já furou essa regra
+
+Erro cometido por mim em 07/09 às 16h15. A recrutadora da Union VFX respondeu recomendando
+candidatar pelo site, eu achei o formulário, mapeei, enviei e confirmei na tela. **Não rodei a
+garra antes.** Rodando depois, ela devolve `JA-FEITO` na hora: outro agente já tinha enviado ao
+mesmo formulário mais cedo no mesmo dia.
+
+O que torna o erro instrutivo é o contexto: eu estava agindo sobre um **pedido explícito de uma
+pessoa de verdade**, e a urgência de responder bem a ela atropelou a checagem. A regra existe
+justamente para o momento em que parece óbvio que não há duplicata.
+
+**Regra:** `sh automacao/garra.sh checa "<url>"` antes de QUALQUER envio, sem exceção de quem
+está enviando, e **especialmente** quando o envio nasce de uma resposta humana, porque aí a
+pressa é maior. A contagem não infla, porque o `conta-hoje.sh` deduplica por estúdio, mas o
+recrutador vê duas entradas do mesmo candidato no mesmo dia, e esse dano não aparece em número
+nenhum.
