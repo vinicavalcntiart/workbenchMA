@@ -23,6 +23,56 @@ if [ -n "$VAZOU" ]; then
   exit 1
 fi
 
+# PORTA DA CARTA FRIA, instalada em 07/09 depois de a mesma familia de erro aparecer em
+# CINCO rascunhos numa hora so. Um deles saiu com assunto trocado, e assunto trocado nao e
+# defeito estetico: o envia-rascunhos.gs acha as cartas pelo ASSUNTO LITERAL, entao carta com
+# assunto diferente fica invisivel para o envio e nunca sai, parecendo trabalho feito. Aviso
+# escrito no brief ja tinha falhado, entao vira porta, como foi com o telefone.
+#
+# So confere os arquivos de drafts/ MEXIDOS AGORA (modificados ou novos em relacao ao HEAD).
+# Os 571 arquivos antigos ficam de fora de proposito: gate que reprova o passado nao e gate,
+# e ruido que todo mundo aprende a ignorar.
+ASSUNTO_FIXO='Senior Character Artist · Wingfeather Saga credit · stylized + grooming'
+FECHO_FIXO='just point me and I will take it there'
+CARTAS=$(cd "$DIRR" && git status --porcelain -- 'drafts/*.md' 2>/dev/null | awk '{print $NF}')
+PROBLEMAS=""
+for c in $CARTAS; do
+  f="$DIRR/$c"
+  [ -f "$f" ] || continue
+  grep -qF "$ASSUNTO_FIXO" "$f" || PROBLEMAS="$PROBLEMAS
+  $c: ASSUNTO fora do padrao. O envio acha a carta por esse assunto literal, entao ela nunca sairia."
+  grep -qF "$FECHO_FIXO" "$f" || PROBLEMAS="$PROBLEMAS
+  $c: falta o fechamento fixo, o que pede direcao em vez de tempo."
+  grep -qiE 'chance to talk|a call\b|hop on a call|fifteen minutes|twenty minutes|1[05] minutes|20 minutes' "$f" \
+    && PROBLEMAS="$PROBLEMAS
+  $c: pede conversa ou tempo. Em carta fria isso custa mais que a recusa."
+  grep -q 'artstation.com/viniciuscavalcanti' "$f" || PROBLEMAS="$PROBLEMAS
+  $c: falta o link do ArtStation."
+  grep -q 'linkedin.com/in/vinicavalcnti' "$f" || PROBLEMAS="$PROBLEMAS
+  $c: falta o link do LinkedIn."
+  grep -q 'vinicavalcanti.com' "$f" || PROBLEMAS="$PROBLEMAS
+  $c: falta o link do site."
+  grep -qiE '\bbrazil\b' "$f" && PROBLEMAS="$PROBLEMAS
+  $c: contem a palavra Brazil."
+  grep -q '—' "$f" && PROBLEMAS="$PROBLEMAS
+  $c: contem travessao."
+  grep -qi 'hope this finds you well' "$f" && PROBLEMAS="$PROBLEMAS
+  $c: contem 'I hope this finds you well'."
+  grep -qiE 'attach(ing|ed)? my (cv|resume)' "$f" && ! grep -qi 'anexo\|attached' "$f" && PROBLEMAS="$PROBLEMAS
+  $c: diz que anexa o curriculo. Confira se o anexo existe mesmo."
+done
+if [ -n "$PROBLEMAS" ]; then
+  echo "FALHA NA CARTA FRIA. Carta fria e o canal que menos converte, entao ela nao sai fora do padrao."
+  echo "$PROBLEMAS"
+  echo
+  echo "O assunto e sempre este, caractere por caractere:"
+  echo "  $ASSUNTO_FIXO"
+  echo "E o fechamento e sempre este:"
+  echo "  If character work opens up on your side, I'd like to be on your list. And if someone"
+  echo "  else there is the right person for this, just point me and I will take it there."
+  exit 1
+fi
+
 python3 - "$DIR/../docs/index.html" > "$TMP/app.js" <<'PY'
 import re, sys
 s = open(sys.argv[1], encoding='utf-8').read()
