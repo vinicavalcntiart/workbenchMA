@@ -1,6 +1,10 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-**43 vagas VIVAS, tempo total estimado cerca de 2h20, todas com formulário e nenhuma por email.**
+**43 vagas VIVAS em 42 entradas numeradas, tempo total estimado cerca de 2h20, todas com
+formulário e nenhuma por email.** São 43 e não 42 porque a entrada nº 2 carrega DUAS requisições
+da Netflix, a 2a de Sydney e a 2b de Vancouver. As cinco entradas que saíram continuam no arquivo
+com o cabeçalho RISCADO e o motivo literal; o texto antigo de cada uma ficou logo abaixo, rebaixado
+a subtítulo, para não ser confundido com entrada viva.
 
 **REVALIDAÇÃO DE 08/09 À NOITE, as 46 entradas conferidas uma a uma na fonte oficial de cada ATS,
 com a régua nova de dezessete termos. Resultado: 35 seguem, CINCO SAÍRAM, seis mudaram, e duas
@@ -186,7 +190,7 @@ Dead by Daylight is a game made of characters, killers and licensed survivors sh
 > `/api/application/v2/submit` volta 400, que é reCAPTCHA invisível recusando IP de datacenter.
 > Do seu navegador passa.
 
-## ~~2. Netflix Animation Studios — Head of Characters — Vancouver, Canadá~~ (MORTA, texto mantido para registro)
+#### (texto original da nº 2, mantido só para registro; a requisição está DESLISTADA, veja o aviso acima)
 
 **Link direto:** https://explore.jobs.netflix.net/careers/job/790317384604
 **Por que vale:** **SUBIU PARA O TOPO DA FILA na reconferência de hoje.** Personagem 3D estilizado da modelagem ao CFX, em Vancouver — Canadá anglófono, prioridade 1 do Vini —, híbrido, na casa que já abriu duas portas para ele. **Faixa publicada no próprio anúncio: "the overall market range for this role is typically $204k - $279k CAD"** (compensação total, sem stock). Anúncio buscado termo a termo por `authoriz`, `eligib`, `sponsor` e `work permit`: **zero ocorrências**, nenhum veto de residência escrito. A única ressalva real é o regime híbrido, **mínimo de 3 dias por semana no escritório**. Reconferida no ar hoje: a página responde com o título e com a faixa.
@@ -537,7 +541,7 @@ I answered yes: I would need Skilled Worker sponsorship. My academic background 
 > Francês operacional é exigência, não preferência. Conferido por mim na API do Lever.
 > Texto original mantido abaixo para registro.
 
-## 13. Asobo Studio — Character Artist H/F, projeto narrativo não anunciado — Bordeaux, França
+#### (texto original da nº 13, mantido só para registro; a entrada está MORTA, veja o aviso acima)
 
 **Link direto:** https://jobs.eu.lever.co/asobostudio/1ab1d28f-6f7c-4106-b43f-6ef78dcb7603/apply
 **Por que vale:** personagem puro na casa de *A Plague Tale*, presencial em Bordeaux. **Reconferida no ar hoje na API oficial do Lever.**
@@ -1262,7 +1266,7 @@ Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work rem
 > imediata. O que morreu foi esta requisição.
 > Texto original mantido abaixo para registro.
 
-## 38. DreamWorks Animation — Visual Development Artist — Glendale, CA, EUA
+#### (texto original da nº 38, mantido só para registro; a entrada está MORTA, veja o aviso acima)
 
 **Link direto:** https://jobs.smartrecruiters.com/NBCUniversal3/744000143937898
 **Por que vale:** **visual development** é metade do seu título, no time de longa da DreamWorks. **Reconferida no ar hoje na API oficial do SmartRecruiters: "DreamWorks Feature - Visual Development Artist", Glendale.**
@@ -1355,7 +1359,7 @@ Vini Cavalcanti
 > mesmo uuid do Lever, `cc1dacb2-01b7-47c0-b827-9b9b786d1dd7`. Conferido caractere a caractere.
 > **Faça a nº 27 e pule esta.**
 
-## 41. Quantic Dream — Candidature Spontanée — Paris, França (CDI, texto duplicado, mantido para registro)
+#### (texto original da nº 41, mantido só para registro; é duplicata da nº 27, veja o aviso acima)
 
 **Link direto:** https://jobs.eu.lever.co/quanticdream/cc1dacb2-01b7-47c0-b827-9b9b786d1dd7/apply
 **Por que vale:** casa de Detroit Become Human, Heavy Rain e Beyond Two Souls, ou seja jogo narrativo onde o rosto e a performance do personagem são o produto. É CDI, contrato efetivo francês, e não contrato de projeto. Candidatura espontânea conta pela regra da campanha. **Conferida viva em 08/09** na API oficial (`api.eu.lever.co/v0/postings/quanticdream` devolve três vagas; as outras duas são QA em Montréal).
@@ -1458,7 +1462,7 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 > **Não mande de novo.** As outras três requisições da Behaviour nesta fila continuam valendo.
 > Texto original mantido abaixo para registro.
 
-## 44. Behaviour Interactive — Senior 3D Character Artist, *7 Days to Die* — Montréal, Canadá (híbrido, EFETIVO)
+#### (texto original da nº 44, mantido só para registro; ela JÁ FOI ENVIADA, veja o aviso acima)
 
 **Link direto:** https://jobs.lever.co/bhvr/976b2a8c-9cb4-4066-a755-d0994af408c2
 **Por que vale:** requisição **nova**, publicada em 25/08, e **não é nenhuma das outras três da Behaviour** que já estão nesta fila — o dedupe foi feito pelo uuid da requisição, não pelo título. Busca literal de veto: **nenhuma**; o único `fran` do texto é a palavra *franchise*, e não exigência de francês.
