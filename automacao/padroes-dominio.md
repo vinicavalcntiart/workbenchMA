@@ -534,3 +534,20 @@ Ferrand, Head of Art Department**, e **Yvon Jardel, Creative Director de Animati
 na rodada anterior. Ela não é 404, ela **exige JavaScript**: `curl` recebe a casca do Vue e nada
 mais. Abrindo com o navegador de verdade (`hb_run.sh`) a lista inteira aparece. Antes de dar uma
 página de equipe como inexistente, abrir com navegador.
+
+## Wētā Workshop — provado em 08/09, domínio PRÓPRIO e diferente da Wētā FX
+
+**`nome.sobrenome@wetaworkshop.co.nz`**
+
+Um endereço real, publicado pelo próprio estúdio na página de contato (`wetaworkshop.com/contact`,
+seção Products): `lisa.birchall@wetaworkshop.co.nz`. É domínio `.co.nz` diferente do `wetafx.co.nz`
+já provado (nome+inicial/inicial+sobrenome), então **não confundir os dois padrões da mesma
+ilha**: FX e Workshop são empresas irmãs com domínio e formato próprios.
+
+**Quantos endereços provam:** 1, então padrão marcado como frágil (precisa de um segundo para
+deixar de ser "não provado"). Serviu para montar `rebekah.tisch@wetaworkshop.co.nz` (Supervising
+Art Director, Wētā Workshop Design Studio, publicada na própria página de Design do estúdio),
+mas **a carta NÃO foi escrita**: checagem no Gmail antes de escrever achou que a Wētā Workshop
+já respondeu à campanha em 07/09 (recruitment@wetaworkshop.co.nz avisando que o Game Studio deles
+fechou), e thread de quem já respondeu é do Comunicador, não do Joe. Padrão fica registrado para
+quando (e se) a casa voltar a ser alvo de carta fria por outra via.
