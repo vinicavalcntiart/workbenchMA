@@ -3432,3 +3432,37 @@ ser recusado. **NÃO ESTÁ MEDIDO.** Só o clique em Submit, no fim dos três pa
 
 Não existe `apply_dayforce.js`. **Próximo passo concreto:** escrever o preenchedor, rodar em modo
 seco até o passo 3 para ler o Questionnaire, e só então clicar.
+
+### Dayforce, continuação de 08/09: `apply_dayforce.js` existe, e onde ele parou
+
+Escrevi `/home/user/apply/apply_dayforce.js` e o arquivo de respostas `ans_eidos.json`. **O que já
+funciona, medido:** o modal fecha, o formulário monta, os campos de texto simples entram, e os
+**dois PDFs sobem** (a tela passa a mostrar `Vini_Cavalcanti_CV.pdf` e
+`Vini_Cavalcanti_Cover_Letter.pdf`).
+
+**TRÊS ARMADILHAS MEDIDAS, e a segunda é a mais cara:**
+
+1. **O modal de privacidade fecha com `Save`, não com `Next`.** O `Next` fica atrás do modal e o
+   clique morre em timeout de 20 s.
+2. **Os identificadores do Dayforce são `id`, NÃO `name`.** Selecionar por `[name="..."]` devolve
+   `null` em todos os campos, o preenchedor loga `MISSING` na lista inteira, e a rodada parece
+   parede quando o formulário está ali, montado e visível. Perdi duas execuções nisso. Selecione
+   por `#id`. O diagnóstico decisivo foi listar os frames: o frame principal tinha 19 inputs e
+   mesmo assim `[name="...email"]` devolvia `false`.
+3. **O bloco Personal Information é um sub-formulário com botão `Update` próprio.** Sem clicar
+   `Update` antes do `Next`, o `Next` não avança.
+
+**ONDE PAROU, e é honesto dizer que não está resolvido:** depois do `Update`, a validação mostra
+que **`Confirm Email Address`, `Mobile Phone Number`, `Preferred Contact Method`, `Country` e um
+`Additional Details` continuam vazios**. A leitura de volta já dizia `(VAZIO)` nesses campos e
+**estava certa** — não era artefato de leitura. Email, First Name e Last Name entram; os outros não.
+
+**A causa provável e o remédio já existem na própria caixa de ferramentas:** é o padrão de input
+controlado por React, o mesmo que o `apply_workable2.js` resolve com o `setv`, que chama o setter
+nativo de `value` e dispara `input` e `change` à mão, e o mesmo que o `apply_gh.js` resolve para
+combobox com o helper `pick`. **Próximo passo concreto: portar `setv` e `pick` para o
+`apply_dayforce.js`**, e só então ler o Questionnaire do passo 2, que continua sem ter sido visto.
+
+**E o captcha, agora com nome:** a listagem de frames mostrou `recaptcha/api2/anchor` **e**
+`recaptcha/api2/bframe`. Anchor mais bframe é o desenho do **reCAPTCHA v2**, o de caixa. Ainda não
+apareceu caixa na tela porque nunca cheguei ao Submit. **Continua sem veredito, e só o clique dá.**
