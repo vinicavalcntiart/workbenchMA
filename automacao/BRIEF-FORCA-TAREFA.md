@@ -1520,3 +1520,39 @@ Os links `.../jobs/<id>` e `.../postings/<uuid>` **redirecionam por JavaScript**
 estúdio e a vaga **parece morta**. A porta real é `<site>/careers/job?id=<id>`. E o veredito de
 captcha veio do clique: `POST /api/pinpoint/apply` devolveu **500 `ReCaptcha Failed`** — reCAPTCHA
 invisível reprovando o IP de datacenter, não quebra-cabeça.
+
+---
+
+## 08/09, VARREDURA DAS QUATRO CASAS GRANDES — ZERO VAGA NOVA, E TRÊS ACHADOS QUE FICAM
+
+A regra 14 manda aplicar na hora em vaga de arte da Disney, DreamWorks, Paramount ou Warner.
+Varridas as quatro hoje com **16 termos na Disney e 8 em cada uma das outras**: **nenhuma vaga
+nova aplicável**. Isso é resultado, não ausência de resultado — evita que a próxima rodada
+repita a varredura achando que ninguém olhou.
+
+### ARMADILHA NOVA DA DISNEY: "Posted Yesterday" que não é vaga nova
+
+A requisição `10159370` volta na API do Workday marcada **"Posted Yesterday"** com `startDate`
+de 07/09, **mas o corpo do anúncio diz `Date Posted: 2026-08-26`**. É anúncio **refrescado**, não
+reaberto — e é exatamente a mesma requisição que **já foi recusada**. Quem confia no rótulo de
+data da listagem aplica de novo numa vaga que já disse não. **Leia a data DENTRO do corpo.**
+
+### PARAMOUNT DEIXOU DE SER INALCANÇÁVEL, e a porta é o sitemap
+
+Desde 31/08 a campanha tratava a Paramount como fechada: `www.paramount.com` devolve Access
+Denied do Akamai até no navegador. **Medido hoje:** `careers.paramount.com` responde 200, mas a
+busca por palavra-chave e a paginação são **ignoradas pelo servidor** — todas as variantes
+devolvem os mesmos 318 KB, então quem varre por query conclui errado. **O que funciona é
+`careers.paramount.com/sitemap.xml`**, que enumera as **287 vagas** sem JavaScript e sem Akamai.
+As 287 foram lidas: zero de arte 3D hoje. Os boards Greenhouse `skydance` e `nickelodeon` dão 404.
+
+### O VETO DE MONTRÉAL DA NBCU, reconfirmado e agora com a frase inteira
+
+As cinco requisições de Montréal trazem, **no bloco do fim que a listagem não mostra**:
+*"Must be willing to work in our Montreal office a minimum of 4 days a week. Must be legally
+authorized to work in Canada."* Bate três termos da busca de veto de uma vez.
+
+### ASSINATURA DE PORTA FALSA: notion.site
+
+Pixelsplit e Twin Atlas devolvem **exatamente ~20 KB de shell JavaScript**. Anote o tamanho como
+assinatura: 20 KB de `notion.site` é página que não carregou, não quadro vazio.
