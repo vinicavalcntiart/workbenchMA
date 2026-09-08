@@ -1895,3 +1895,38 @@ zero dos dezessete termos. **Alvo novo achado justamente por desconfiar do relat
 - **Duplicata dentro da própria fila.** Quantic Dream aparecia duas vezes com o mesmo uuid do
   Lever, e a Gigantic Duck também, esta última **posta por mim** algumas horas antes sem eu ter
   feito grep da URL no arquivo. **Antes de acrescentar entrada, faça grep do link.**
+
+---
+
+## 08/09, 23h — A COLUNA `ja_no_painel` DO CENSO MENTE, e ela mente do jeito mais caro
+
+O `automacao/censo-boards-0709.csv` tem 2.791 requisições e uma coluna `ja_no_painel` com os
+valores `nova` e `JA-FEITO`. **Ela erra para o lado do falso "nova"**, que é o lado que faz mandar
+candidatura repetida.
+
+**Medido nesta rodada, nos dois quadros que a automação SABE atravessar:**
+
+| Família | Linhas da disciplina | Marcadas `nova` | Realmente por fazer |
+|---|---|---|---|
+| Teamtailor | 20 | 11 | **0** |
+| Greenhouse | 41 | 13 | **0** |
+
+As que mais enganaram: **Loonshot Games 3D Character Artist** (`8725151002`), **Bluehole 3D
+Character Artists Lead/Senior** (`8517790002`) e **Bluehole Lead Character Artist TERA2**
+(`8520212002`). As três vinham marcadas `nova` no censo, as três são o título exato dele, e as três
+**já tinham sido enviadas em 07/09 com prova dupla** (URL de confirmação e texto coreano de
+agradecimento na tela). Na Beffio o censo mostrava três vagas `nova` e as três candidaturas estão
+**registradas dentro do painel Connect do próprio estúdio**, lidas em 07/09.
+
+**A causa é a mesma da garra que respondia `JA-FEITO` para a fila inteira:** a coluna foi calculada
+por **presença da URL** no `docs/index.html`, e URL de quadro não é URL de requisição. Um teste que
+olha o lugar errado não é teste, é ruído com cara de medição.
+
+**O dedupe que funciona, e é barato:** `grep` do **id da requisição** em `docs/index.html`,
+`enviados.csv` e `automacao/processados.csv`, mais o `done` da entrada do painel. Três `grep` por
+vaga. Foi o que impediu quatro candidaturas repetidas hoje à noite.
+
+**Consequência para o estado da fila, dita com número:** nas duas famílias que a automação
+atravessa sem parede (Teamtailor, provado hoje na Sandbox; Greenhouse, provado em quatro casas),
+**o estoque conhecido está esgotado**. O que sobra no painel é captcha de desafio, que não se
+burla. Isso não é fila seca por falta de garimpo: é fila que virou fila do Vini.
