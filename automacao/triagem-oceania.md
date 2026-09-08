@@ -93,7 +93,17 @@ Os treze: `authoriz` · `eligib` · `sponsor` · `work permit` · `must be based
 
 ### 2.2 VAGAS DA DISCIPLINA, SEM VETO ESCRITO
 
-#### People Can Fly — Varsovia, Polonia
+#### ~~People Can Fly — Varsovia, Polonia~~ — CORRIGIDO PELO MAESTRO EM 08/09: TEM VETO ESCRITO, NAO APLICAR
+
+> **Correcao feita depois de entregue este relatorio, com a fonte oficial aberta.** O relatorio
+> abaixo diz "NENHUM DOS TREZE TERMOS" e esta errado. O painel ja carregava esta requisicao como
+> VETO DE RESIDENCIA desde 07/09, e o curl na API do SmartRecruiters confirma o painel: a PRIMEIRA
+> linha da descricao e *"The role is open to candidates **only from** the game industry who are
+> **based in** Europe."* A regua de treze termos nao pega essa frase, porque tem `must be based` e
+> nao tem `based in` nem `only from`. **A regua passou a ter dezessete termos**, e a correcao esta
+> no BRIEF-FORCA-TAREFA. A vaga esta fora.
+
+#### People Can Fly — Varsovia, Polonia (texto original do relatorio, mantido para registro)
 - **Senior Asset Artist (Hard Surface)**
 - Link direto: https://jobs.smartrecruiters.com/PeopleCanFly/744000141244724-senior-asset-artist-hard-surface-
 - ATS: SmartRecruiters (`PeopleCanFly`, 14 vagas no quadro)

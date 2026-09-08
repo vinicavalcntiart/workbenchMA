@@ -1759,3 +1759,39 @@ em `127.0.0.1:18080`, e cada chamada de Bash tem seu próprio namespace de rede,
 **tem de subir na mesma chamada**. É para isso que existe o `sh hb_run.sh <script>.js ...`, que
 sobe a ponte, espera ela responder 200 e ainda dá o `xvfb-run` (sem X server o Playwright headed
 morre com *"Looks like you launched a headed browser without having a XServer running"*).
+
+---
+
+## 08/09, à noite — A RÉGUA DE VETO TINHA UM SEGUNDO FURO, achado no MESMO DIA que o primeiro
+
+A triagem da Oceania devolveu a **People Can Fly (Senior Asset Artist, Hard Surface, Varsóvia)**
+como alvo vivo com o veredito literal **"NENHUM DOS TREZE TERMOS"**. O painel, por outro lado,
+já carregava a mesma requisição marcada **VETO DE RESIDÊNCIA, NÃO APLICAR**, escrito em 07/09.
+
+Dois relatos, um anúncio. Pela regra da Snowprint, **quem decide é o anúncio**. Um curl na API
+oficial do SmartRecruiters (`744000141244724`) devolve, na PRIMEIRA linha da descrição:
+
+> *"The role is open to candidates **only from** the game industry who are **based in** Europe."*
+
+**Os quinze termos da régua não pegam essa frase.** A régua tem `must be based`, que não casa
+com `based in`; e não tem nada parecido com `only from`. O veto de residência mais comum da
+Europa continental está escrito exatamente assim.
+
+**A régua passa a ter dezessete termos:**
+`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, **`based in`**,
+**`only from`**, `LMIA`, `days a week`, `days per week`, `days in the office`,
+`French`/idioma local, `resident`, `relocat`, `located in`, `unable to support`, `no relocation`.
+
+`based in` vai casar também com *"our studio is based in Berlin"*, que não é veto nenhum. Isso é
+aceitável e é como a régua funciona: ela **manda ler a frase inteira**, não decide sozinha. Termo
+que casa sem ser veto custa dez segundos de leitura; veto que a régua não mede custa uma
+candidatura que morre na primeira tela.
+
+**Duas lições de método, e a segunda é a que importa:**
+
+1. **É o segundo furo da régua no mesmo dia.** A régua não é lei da natureza: é uma lista que
+   cresce toda vez que alguém escreve o mesmo veto com outra palavra.
+2. **Relato de agente que contradiz o painel não substitui o painel.** Aqui o painel estava
+   certo e o relato errado; em 07/09 foi o contrário, com a WildBrain. **Nos dois casos quem
+   resolveu foi a fonte oficial, com um curl.** Antes de agir contra o que o painel diz,
+   baixe o anúncio.
