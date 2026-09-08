@@ -1686,3 +1686,28 @@ de relatório de agente: que o `curl` não passa no Jobvite, e que o `jobs.json`
 verificação, escreva **"relatado, não verificado"** — porque este arquivo é lido como verdade
 pelas rodadas seguintes, e uma armadilha inventada faz agente competente evitar porta que está
 aberta.
+
+---
+
+## 08/09 — A PIXAR TEM LOCATÁRIO PRÓPRIO, e a varredura da Disney NÃO a cobre
+
+A **regra 14** manda aplicar na hora em vaga de arte da Disney, e a Pixar é do grupo. Mas a
+varredura oficial da Disney roda em `disney.wd5.myworkdayjobs.com` e **a Pixar não está lá**:
+ela tem locatário próprio, `pixar.wd501`. A campanha a tinha registrada como *"não reproduziu"*
+depois de um 422.
+
+**A porta, medida hoje e permanente:**
+`POST https://pixar.wd501.myworkdayjobs.com/wday/cxs/pixar/Pixar_External_Career_Site/jobs`
+com corpo `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`.
+
+**COMO ELA FOI ACHADA, e o método vale para qualquer Workday:** pelo **oráculo do CXS**, `404`
+quer dizer que **o locatário EXISTE e o caminho do site está errado** — `422` é que o locatário
+não existe. Ou seja, **404 é convite para procurar o site, não veredito de porta fechada**. Os
+quatro palpites de site deram 404; o caminho verdadeiro saiu do HTML de `pixar.com/careers`.
+
+É a **quarta vez hoje** que a mesma raiz aparece: *identificador errado devolve 403, 404 ou lista
+vazia, e isso é registrado como porta bloqueada.* Antes foi `playgroundgames`, `paradoxinteractive`
+e `snowprint`.
+
+**Estado hoje:** três vagas no quadro inteiro da Pixar, **nenhuma da disciplina** (On-Call Chef,
+Staff Systems Engineer e Senior Research Scientist). Reconferir passou a custar um curl.
