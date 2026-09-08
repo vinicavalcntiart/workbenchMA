@@ -63,6 +63,15 @@ const dump=async(p,tag)=>{
     const h=await porRotulo(rot); const el=h.asElement();
     if(!el){ log('MISSING rotulo:',rot); continue; }
     const tag=await el.evaluate(e=>e.tagName);
+    const tipo=await el.evaluate(e=>e.type||'');
+    if(tipo==='checkbox'){
+      // ARMADILHA MEDIDA EM 08/09: sem este ramo o setv escreve o VALOR DE TEXTO dentro da
+      // caixa, a leitura de volta mostra v:"sim" parecendo preenchida, e a caixa fica
+      // DESMARCADA. Consentimento desmarcado reprova o envio e o sintoma parece parede.
+      await el.check({force:true}).catch(async()=>{ await el.click({force:true}); });
+      log('caixa',rot.slice(0,40),'marcada:',await el.isChecked().catch(()=>'?'));
+      await p.waitForTimeout(300); continue;
+    }
     if(tag==='SELECT'){
       const opts=await el.$$eval('option',os=>os.map(o=>(o.textContent||'').trim()));
       const re=new RegExp('^\\s*'+String(v).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*$','i');
@@ -125,6 +134,15 @@ const dump=async(p,tag)=>{
       const h=await porRotulo(rot); const el=h.asElement(); if(!el) continue;
       const jaTem=await el.evaluate(e=>!!e.value); if(jaTem) continue;
       const tag=await el.evaluate(e=>e.tagName);
+      const tipo=await el.evaluate(e=>e.type||'');
+      if(tipo==='checkbox'){
+        // ARMADILHA: sem este ramo o setv escreve o VALOR DE TEXTO dentro da caixa e a leitura
+        // de volta mostra v:"sim" parecendo preenchido, com a caixa DESMARCADA. Consentimento
+        // desmarcado reprova o envio e o sintoma parece parede.
+        await el.check({force:true}).catch(async()=>{ await el.click({force:true}); });
+        log('caixa',rot.slice(0,40),'marcada:',await el.isChecked().catch(()=>'?'));
+        await p.waitForTimeout(300); continue;
+      }
       if(tag==='SELECT'){
         const opts=await el.$$eval('option',os=>os.map(o=>(o.textContent||'').trim()));
         const alvo=opts.find(o=>new RegExp('^\\s*'+String(v)+'\\s*$','i').test(o))||opts.find(o=>new RegExp(String(v),'i').test(o));

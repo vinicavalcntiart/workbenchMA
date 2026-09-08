@@ -1455,3 +1455,68 @@ sintoma é idêntico ao de um preenchedor quebrado, e custa rodada inteira perse
 tratar como regex solto, o `find` devolve a primeira opção **da lista do site** que casa com
 qualquer alternativa. Aqui isso escolheu `Other` tendo `Company Website` disponível — e `Other`
 abriu um campo obrigatório novo que travou o avanço. Percorra as alternativas na ordem escrita.
+
+---
+
+## 08/09, RODADA DA FROTA — O QUE MUDOU DE VERDADE
+
+**DUAS CANDIDATURAS ENVIADAS E CONFIRMADAS**, as duas na DNEG (Character Modeler em Montréal e
+Groom TD em Londres), as duas com a mesma prova tripla: `POST /submitApplication` 200, URL final
+`/applyConfirmation`, e o texto **"APPLICATION SENT!"** na tela.
+
+### JOBVITE: família de ATS nova, e quatro armadilhas que valem para qualquer vaga dela
+
+1. **`curl` e WebFetch NÃO passam em `jobs.jobvite.com` neste ambiente, mas o NAVEGADOR passa** e
+   devolve 200. Uma rodada tinha registrado Jobvite como porta bloqueada por causa do curl.
+   **Porta bloqueada para curl não é porta bloqueada.**
+2. **`/apply` abre um portão de consentimento** (select de região) antes de qualquer campo. Quem
+   sonda `/apply` e conta os campos vê **um** e conclui que não há formulário.
+3. **Os `name` são ALEATÓRIOS POR SESSÃO** (`input-yCcsXfwX`). Preencher por `name` é impossível e
+   não serve para a próxima vaga: casa-se por **texto do rótulo**.
+4. **É assistente de dois passos, e o passo 2 nasce com o botão "Send Application" na tela AO LADO
+   de três obrigatórios vazios** (salário, disponibilidade, link do portfólio). Procurar o botão
+   antes de preencher envia em branco.
+
+### TRÊS ERROS MEUS QUE VALEM MAIS REGISTRADOS QUE ESCONDIDOS
+
+- **Botão de envio ESCONDIDO no DOM** fazia o locator casar, `count()` passar, o clique estourar em
+  timeout e o script pular o "Next" achando que enviou. **Todo seletor de botão exige `:visible`.**
+- **Regex de confirmação frouxa** casou com *"Thank you for considering a career at DNEG"*, que é o
+  texto de **abertura** do formulário. Isso é falso positivo de **prova de envio**, o erro mais caro
+  que existe aqui. A prova agora exige *application received/submitted/sent* ou *thank you for applying*.
+- **Caixa de marcar preenchida como texto:** sem um ramo próprio, o `setv` escreve o valor dentro da
+  caixa, a leitura de volta mostra `v:"sim"` **parecendo preenchida** e a caixa fica **desmarcada**.
+  Consentimento desmarcado reprova o envio e o sintoma parece parede.
+
+### RECRUITEE: o diagnóstico da campanha estava ERRADO
+
+Não é hCaptcha de imagem. É **prova de trabalho** (`hsw`), que **resolve sozinha no navegador do
+Vini**. E o botão **"Skip"** que o dossiê mandava clicar **não existe**: era o **"Skip to content"**
+da acessibilidade. O que escondia isso era um bug nosso — o preenchedor **ignorava em silêncio** as
+chaves `radiosContent` e `flags` do próprio arquivo de respostas, o formulário reprovava com *"This
+field is required and can not be left empty"*, e os três sintomas (tela não muda, campos continuam
+preenchidos, nenhum email chega) foram lidos como captcha.
+
+**REGRA NOVA, e ela é geral:** antes de registrar qualquer formulário como parede, **imprima o
+estado da validação e a lista de obrigatórios ainda vazios**. Campo vazio e captcha produzem o
+mesmo sintoma.
+
+### DEDUPE: 25 de 31 "vagas novas" já eram conhecidas
+
+Das 31 vagas de disciplina alta que o garimpo trouxe como vivas e sem veto, **25 já estavam na
+campanha**, várias já enviadas com dupla confirmação. **Cruze por referência de requisição contra o
+painel, o `enviados.csv` E o `processados.csv` antes de gastar rodada de navegador.**
+
+### ARMADILHA DE PAGINAÇÃO NOVA, no gamedevmap
+
+`country=United Kingdom` devolve **17** estúdios. O Reino Unido está partido em **England 790,
+Scotland 101, Wales 27, Northern Ireland 21 — 956 no total, 939 a mais**. Mesma classe de erro dos
+388 canadenses. E a Tchéquia é `Czechia` (65); `Czech Republic` devolve zero, e **zero aqui é nome
+errado, não país vazio**.
+
+### PINPOINT: ATS novo, com armadilha de endereço
+
+Os links `.../jobs/<id>` e `.../postings/<uuid>` **redirecionam por JavaScript** para o site do
+estúdio e a vaga **parece morta**. A porta real é `<site>/careers/job?id=<id>`. E o veredito de
+captcha veio do clique: `POST /api/pinpoint/apply` devolveu **500 `ReCaptcha Failed`** — reCAPTCHA
+invisível reprovando o IP de datacenter, não quebra-cabeça.

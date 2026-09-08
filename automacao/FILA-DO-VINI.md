@@ -1,6 +1,6 @@
-# FILA DO VINI — 42 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 e nº 41 acrescentadas em 08/09, nº 42 às 15h50 de 08/09)
+# FILA DO VINI — 44 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 44 acrescentadas em 08/09)
 
-**42 vagas na fila, tempo total estimado 2h22 (142 minutos), todas com formulário e nenhuma por email.**
+**44 vagas na fila, tempo total estimado 2h28 (148 minutos), todas com formulário e nenhuma por email.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1310,6 +1310,39 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 **Passo 3 de 3 — Submit.** Marque *"I agree to the Candidate Acknowledgement"* e clique **Submit**. É aqui que o quebra-cabeça de imagem sobe; resolva e confirme que a tela de confirmação apareceu antes de fechar.
 
 **Cuidados:** não há campo de carta escrita nem de portfólio neste formulário, então quem fala por você é o CV, a carta em PDF e o que estiver dentro deles — confira que o link do ArtStation está no CV. Não use *Import Resume* depois de preencher à mão, pelo mesmo motivo do parse.
+
+---
+
+## 43. TTK Games AB — CHARACTER ARTIST — Estocolmo, Suécia (híbrido, PERMANENTE)
+
+**Link direto:** https://ttkgames.com/careers/job?id=561860
+**Por que vale:** é **o título dele, ao pé da letra**, efetivo e híbrido em Estocolmo, com **faixa salarial publicada: 34.000 a 47.000 SEK por mês mais bônus**. A busca literal de veto no anúncio inteiro não devolveu **nenhuma** palavra. Achada hoje na caçada da web aberta; a campanha não tinha esta casa.
+**A parede:** reCAPTCHA **invisível**, e **não é quebra-cabeça**. Medido por mim em 08/09: preenchi tudo e cliquei em *Submit application*; o `POST /api/pinpoint/apply` voltou **500 com o corpo literal `ReCaptcha Failed`**. É a sessão automatizada sendo reprovada pelo IP de datacenter, a mesma assinatura da Netflix e da Moonmana. **Do seu navegador isso não acontece** — não há nada para resolver, é preencher e clicar.
+**Tempo estimado:** 2 min. É das mais baratas da fila.
+
+**ARMADILHA DE ENDEREÇO, que custou duas rodadas:** os links `.../jobs/561860` e `.../postings/<uuid>` do Pinpoint **redirecionam por JavaScript** para `ttkgames.com/careers` e a vaga parece morta. **A porta de verdade é o link acima**, com `?id=`.
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First Name | `Vini` |
+| Last Name | `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Link to Portfolio/LinkedIn | `https://www.artstation.com/viniciuscavalcanti` |
+| Upload CV (20 Mb máx, pdf/doc/docx) | o PDF do CV |
+| I have read and agree to the Privacy Policy | **marcar** |
+
+**Não há campo de carta, de salário nem de visto neste formulário** — são seis campos e pronto.
+
+---
+
+## 44. Behaviour Interactive — Senior 3D Character Artist, *7 Days to Die* — Montréal, Canadá (híbrido, EFETIVO)
+
+**Link direto:** https://jobs.lever.co/bhvr/976b2a8c-9cb4-4066-a755-d0994af408c2
+**Por que vale:** requisição **nova**, publicada em 25/08, e **não é nenhuma das outras três da Behaviour** que já estão nesta fila — o dedupe foi feito pelo uuid da requisição, não pelo título. Busca literal de veto: **nenhuma**; o único `fran` do texto é a palavra *franchise*, e não exigência de francês.
+**A parede:** hCaptcha de imagem do Lever, **só depois do clique em Submit** — a mesma já medida com clique real na própria Behaviour e na Quantic Dream.
+**Tempo estimado:** 4 min. **Aproveite que já vai abrir o Lever da Behaviour para as outras**, e use as mesmas respostas da entrada nº 1 desta fila.
 
 ---
 
