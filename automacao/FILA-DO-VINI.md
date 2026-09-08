@@ -1,6 +1,6 @@
-# FILA DO VINI — 40 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 acrescentada em 08/09)
+# FILA DO VINI — 41 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 e nº 41 acrescentadas em 08/09)
 
-**40 vagas na fila, tempo total estimado 2h14 (134 minutos), todas com formulário e nenhuma por email.**
+**41 vagas na fila, tempo total estimado 2h16 (136 minutos), todas com formulário e nenhuma por email.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1240,6 +1240,32 @@ Vini Cavalcanti
 ```
 
 **Cuidados:** as outras duas da mesma casa (Texture Artist e Look Development Artist, também em Paris) ficam **de fora de propósito**, uma por casa. As vagas de arte em Bengaluru estão fora do recorte geográfico.
+
+---
+
+## 41. Quantic Dream — Candidature Spontanée — Paris, França (CDI)
+
+**Link direto:** https://jobs.eu.lever.co/quanticdream/cc1dacb2-01b7-47c0-b827-9b9b786d1dd7/apply
+**Por que vale:** casa de Detroit Become Human, Heavy Rain e Beyond Two Souls, ou seja jogo narrativo onde o rosto e a performance do personagem são o produto. É CDI, contrato efetivo francês, e não contrato de projeto. Candidatura espontânea conta pela regra da campanha. **Conferida viva em 08/09** na API oficial (`api.eu.lever.co/v0/postings/quanticdream` devolve três vagas; as outras duas são QA em Montréal).
+**A parede:** hCaptcha de imagem do Lever. Medida por mim em 08/09 às 08h50: preenchi tudo e cliquei em Submit de verdade; apareceu o quebra-cabeça *"Find items that need what's shown in the reference to operate"*. **Nada foi enviado** e a garra foi solta.
+**Tempo estimado:** 2 min
+**É a mais barata desta fila inteira.** Só nome e email são obrigatórios, e **não há uma única pergunta customizada**: nada de visto, nada de salário, nada de carta.
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | DADOS FIXOS |
+| Current location | `Olinda, Pernambuco` (o campo é opcional e o autocompletar do Lever pode não sugerir nada; se não sugerir, deixe em branco) |
+| Current company | `E-Line Media` |
+| Resume/CV | o PDF do CV, e espere aparecer **Success!** ao lado antes de seguir |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Other website | `https://vinicavalcanti.com` |
+
+**Cuidados:** **não existe caixa de carta neste formulário**, então quem fala por você é o CV mais o ArtStation. Não use o botão *Apply with LinkedIn*, que sobrescreve o que você digitou com os dados do perfil.
 
 ---
 
