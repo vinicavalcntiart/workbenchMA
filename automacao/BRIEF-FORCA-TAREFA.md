@@ -1266,3 +1266,33 @@ O padrão que liga as três: **quanto melhor a explicação, menos alguém volta
 3. Antes de chamar qualquer porta de parede, **leia o JavaScript que a desenha** e confira a ordem de operações que o formulário espera.
 
 Custo medido do erro oposto: três candidaturas que existiam e ficaram meio dia paradas atrás de uma frase bem escrita.
+
+## Anúncios-zumbi: a lista dos que já foram desmentidos e voltam sempre (08/09, 05h)
+
+A varredura das 5h da manhã achou zero vaga nova e gastou a rodada inteira desmentindo **oito
+anúncios de agregador** que já tinham sido desmentidos antes. Isso é desperdício recorrente, e
+dá para matar em segundos com o dado certo, então fica registrado.
+
+**O truque que resolve a maioria:** o próprio anúncio do agregador costuma trazer `JSON-LD`
+com o campo **`validThrough`**. Leia esse campo ANTES de investigar qualquer coisa. Se a data
+já passou, é zumbi e acabou ali.
+
+Os que voltam com mais frequência, com a prova de morte:
+
+| Anúncio | Prova |
+|---|---|
+| **Santa Monica Studio / PlayStation, "Sr Character Artist, ExDev"** | O Greenhouse oficial da Sony cobre a PlayStation inteira (185 vagas) e **não tem nenhuma de personagem**. Já ressurgiu **seis vezes** em cache de busca. |
+| **Voracious Games, 3D Character Artist** | `validThrough: 2025-10-06`, morto há onze meses, e exige base nos EUA. |
+| **Mainframe / Pax Dei, Character Artist** | `validThrough: 2024-04-01`, morto há mais de dois anos. |
+| **Nervous Systems, Crustacean Interactive, Qudical, Myr** | Todos expirados (2024 ou 2025), ou contractor com exigência de país fixo. |
+| **Marvel Studios, "3D Character Modeler"** | Posting **arquivado desde 2022** e ainda indexado. |
+| **Twin Swans** | A API do Homerun deles devolve `"vacancies":[]`. |
+
+Some a esses os seis desmentidos entre 04 e 05/09 (VOID Interactive, Visual Concepts,
+Eleventh Hour, CD PROJEKT RED, duas Lead Character Artist da Blizzard) e o total de anúncios
+falsos que a campanha já derrubou passa de vinte.
+
+**A regra que fica:** antes de abrir qualquer anúncio de agregador, confira se o nome está
+nesta tabela. Se estiver, pule sem investigar. Se não estiver, leia o `validThrough` do
+JSON-LD antes de qualquer outra coisa. **Agregador mantém anúncio morto indexado por anos**, e
+cada um deles custa uma rodada de agente se for tratado como descoberta.
