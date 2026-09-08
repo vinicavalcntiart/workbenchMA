@@ -1,6 +1,6 @@
-# FILA DO VINI — 44 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 44 acrescentadas em 08/09)
+# FILA DO VINI — 45 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 45 acrescentadas em 08/09)
 
-**44 vagas na fila, tempo total estimado 2h28 (148 minutos), todas com formulário e nenhuma por email.**
+**45 vagas na fila, tempo total estimado 2h31 (151 minutos), todas com formulário e nenhuma por email.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1343,6 +1343,40 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 **Por que vale:** requisição **nova**, publicada em 25/08, e **não é nenhuma das outras três da Behaviour** que já estão nesta fila — o dedupe foi feito pelo uuid da requisição, não pelo título. Busca literal de veto: **nenhuma**; o único `fran` do texto é a palavra *franchise*, e não exigência de francês.
 **A parede:** hCaptcha de imagem do Lever, **só depois do clique em Submit** — a mesma já medida com clique real na própria Behaviour e na Quantic Dream.
 **Tempo estimado:** 4 min. **Aproveite que já vai abrir o Lever da Behaviour para as outras**, e use as mesmas respostas da entrada nº 1 desta fila.
+
+---
+
+## 45. Blue Zoo Animation — BLENDER MODELLER (Experienced) — Londres, Reino Unido
+
+**Link direto:** https://careers.blue-zoo.co.uk/vacancies/vacancy-apply.aspx?VacancyID=1310
+**Por que vale:** estúdio londrino conhecido, e a descrição diz que o time de modelagem e textura constrói *"the environments, props, **characters**"*. **Busca de veto com a régua nova de treze termos: nenhum.** E há um sinal que vale ouro neste quadro: a Blue Zoo **rotula explicitamente** as vagas restritas com o prefixo **"UK Only |"** — a Senior Blender Lighting ao lado tem o rótulo, **esta não tem**. Vaga sem rótulo num quadro que rotula é sinal real.
+**Ressalva honesta:** o dia a dia é *"stylised environment and prop assets"*, ou seja **ambiente e props**, não personagem. Entra como média pela regra de disciplina.
+**A parede:** **não é captcha** — não vi nenhum no HTML em nenhuma tela. É que a candidatura **exige criar conta**, e o cadastro tem dois campos que só se preenchem à mão.
+**Tempo estimado:** 3 min. Deixei 90% do caminho medido abaixo.
+
+**Cole no cadastro** (o link acima redireciona para `registration.aspx`):
+
+| Campo | O que colar |
+|---|---|
+| How did you hear about us? | `Our Careers Website` |
+| First Name | `Vini` |
+| Last Name | `Cavalcanti` |
+| Email / Confirm Email | `contact@vinicavalcanti.art` |
+| Password | a senha padrão da campanha (documento privado do Drive) |
+| Do you currently work for us? | **No** |
+| Have you previously worked for us? | **No** |
+| Showreel/Website URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel/Website Password | `No password, the portfolio is public.` |
+| Stay in the loop about upcoming roles? | **Yes** |
+| Data Privacy (I Agree) e "The information I have provided is accurate" | **marcar as duas** |
+| **Preferred Specialism** | **é seu, escolha você** — é um seletor próprio que abre uma janela; a opção de modelagem é a certa e eu não chuto especialismo |
+| **Preferred Location** | **London** |
+
+**QUATRO ARMADILHAS QUE EU JÁ PAGUEI, para você não pagar:**
+1. **O banner de cookies é um `input[type=submit]` do ASP.NET.** Aceitar dispara um postback que **recarrega a página e apaga tudo que já foi digitado**. **Aceite o cookie ANTES de escrever qualquer coisa.**
+2. **Há DOIS campos de senha na tela**, um do cadastro e outro da caixa de login na lateral. É fácil digitar no errado.
+3. **Os campos de email disparam uma validação por AJAX que re-renderiza o formulário.** Marque os radios e as caixas **depois** de preencher os emails, não antes.
+4. **O formulário revela obrigatórios novos a cada tentativa.** Não é erro seu: satisfaça os que ele apontar e envie de novo.
 
 ---
 

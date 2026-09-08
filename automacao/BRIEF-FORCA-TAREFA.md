@@ -1611,3 +1611,43 @@ por `<estudio>.teamtailor.com` não via.
 token contra 44 páginas com o cargo no texto), **desde que se leia o FIM da página**: a EB Studio
 mostra descrições completas de Material Artist e Prop Artist e só no rodapé diz *"We have no open
 positions at this time"*.
+
+---
+
+## 08/09 — PORTAL DE CARREIRAS EM ASP.NET: QUATRO ARMADILHAS QUE NÃO SÃO CAPTCHA
+
+Medidas na **Blue Zoo** (`careers.blue-zoo.co.uk`) e, duas delas, também na **WildBrain**
+(Talentsoft). Nenhuma é captcha — **não vi widget nem iframe de desafio em nenhuma tela** — e
+todas produzem o mesmo sintoma de "formulário que não passa", que é o que a campanha aprendeu a
+confundir com parede.
+
+**1. O banner de cookies é um `input[type=submit]`, não um `<button>`.** Dois efeitos: seletor de
+`button`/`a` não pega, e aceitar dispara um **postback que recarrega a página e apaga todo campo
+já preenchido**. O erro final vira *"You must complete the following before you can proceed"* com
+o formulário aparentemente preenchido. **Aceite o cookie antes de escrever qualquer coisa, e
+espere o recarregamento terminar.**
+
+**2. Há sempre DOIS campos de senha e vários submits**, porque a barra lateral repete a caixa de
+login. Pegar o primeiro do DOM cai no login: na Blue Zoo isso estoura em timeout de 30s, na
+WildBrain devolve *"The Username (email address) field is required"*. **Mire pelo contêiner**
+(`name*="RegistrationHolder"`), nunca pela ordem.
+
+**3. Os campos de email disparam validação por AJAX que RE-RENDERIZA o formulário.** Radio, caixa
+e senha marcados antes disso **somem**, e o erro seguinte é *"Password is a required field"* com a
+senha visivelmente escrita. **Ordem que funciona:** texto e email primeiro, espere o AJAX assentar,
+e só então radios, caixas e senha — por **clique no rótulo**, que é o que o ASP.NET escuta, e não
+por `check({force:true})`.
+
+**4. O formulário REVELA obrigatórios novos a cada tentativa.** Uma passada nunca fecha: satisfaça
+os que ele apontar e reenvie, em laço.
+
+**Onde eu parei, e por quê:** os dois últimos campos da Blue Zoo (*Preferred Specialism* e
+*Preferred Location*) são **widgets de picker próprios**, com `offsetParent === null` e uma janela
+que abre por JavaScript. Dava para insistir, mas **especialismo errado desqualifica a candidatura**,
+e a vaga é de disciplina média (ambiente e props). Virou a entrada 45 da FILA-DO-VINI com o
+caminho inteiro mapeado, que é o que a regra manda: parede que não se atravessa se deixa
+destrancada.
+
+**E um sinal de leitura que vale a pena copiar:** a Blue Zoo **rotula** as vagas restritas com o
+prefixo **"UK Only |"** no título da listagem. Num quadro que rotula, **vaga sem rótulo é sinal
+positivo real** — vale mais que a ausência de termos de veto no corpo.
