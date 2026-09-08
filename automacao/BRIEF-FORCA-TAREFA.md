@@ -1427,3 +1427,31 @@ frames, `iframe` no DOM sem exigir visibilidade, e o texto do desafio em qualque
 Esse falso negativo é caro por um motivo específico: **"sem captcha, só não confirmou" é o mesmo
 texto que uma porta quebrada produz.** A rodada seguinte lê isso como bug nosso e gasta a rodada
 inteira na mesma parede.
+
+---
+
+## 08/09, 15h49 — TERCEIRA CONFIRMAÇÃO DE QUE SÓ O CLIQUE É VEREDITO
+
+O Dayforce HCM foi fechado de ponta a ponta na Eidos-Montréal. Antes do clique em Submit, a
+medição do passo 3 dava `{frames:2, widgets:0}`: reCAPTCHA invisível, **nada na tela**. Depois do
+clique subiu o quebra-cabeça de imagem *"Select all images with a bus"*.
+
+**Três famílias de ATS, o mesmo comportamento:** Workable (Turnstile depois do clique, botão
+congela em "Submitting…"), Lever (hCaptcha de imagem depois do clique) e agora Dayforce
+(reCAPTCHA v2 de imagem depois do clique). Nas três, qualquer medição pré-clique — grep, contagem
+de iframe, listagem de frames — responde "sem desafio" e **mente**.
+
+**Regra, sem exceção conhecida:** não registre "sem captcha" a partir de varredura. Registre
+"sem captcha **medido**" só depois de um Submit de verdade.
+
+## DUAS ARMADILHAS NOVAS QUE VALEM PARA QUALQUER ATS, NÃO SÓ O DAYFORCE
+
+**1. Onde houver "Import Resume", suba o arquivo ANTES de digitar.** O parse do PDF reescreve o
+bloco de dados pessoais e apaga o que você já tinha preenchido. Na primeira rodada sobreviveram só
+os três campos que o parser leu do CV (email, nome, sobrenome) e morreram os outros quatro. O
+sintoma é idêntico ao de um preenchedor quebrado, e custa rodada inteira perseguindo o bug errado.
+
+**2. Alternativas separadas por `|` numa resposta de combo são ORDEM DE PREFERÊNCIA.** Se o código
+tratar como regex solto, o `find` devolve a primeira opção **da lista do site** que casa com
+qualquer alternativa. Aqui isso escolheu `Other` tendo `Company Website` disponível — e `Other`
+abriu um campo obrigatório novo que travou o avanço. Percorra as alternativas na ordem escrita.

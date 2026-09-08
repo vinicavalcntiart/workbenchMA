@@ -3466,3 +3466,59 @@ combobox com o helper `pick`. **Próximo passo concreto: portar `setv` e `pick` 
 **E o captcha, agora com nome:** a listagem de frames mostrou `recaptcha/api2/anchor` **e**
 `recaptcha/api2/bframe`. Anchor mais bframe é o desenho do **reCAPTCHA v2**, o de caixa. Ainda não
 apareceu caixa na tela porque nunca cheguei ao Submit. **Continua sem veredito, e só o clique dá.**
+
+---
+
+## DAYFORCE HCM, FECHADO DE PONTA A PONTA EM 08/09 ÀS 15h49
+
+O `apply_dayforce.js` percorre agora o assistente inteiro. Portei o `setv` do `apply_workable2.js`
+e escrevi um `pick` novo, e as cinco armadilhas que restavam apareceram em três rodadas medidas.
+
+**ARMADILHA 4 — `el.fill()` pinta o campo e não avisa o framework.** Confirmado: a leitura de volta
+que dizia `(VAZIO)` estava certa. Com o setter nativo de `value` mais `input`, `change` e `blur`,
+os sete campos de texto passaram a entrar.
+
+**ARMADILHA 5, a mais cara de todas — o upload do CV REESCREVE o bloco Personal Information.**
+O Dayforce faz o *parse* do PDF e sobrescreve os dados pessoais. Na rodada das 15h20 sobreviveram
+exatamente `email`, `firstName` e `lastName` (que o parser leu do PDF) e morreram `confirmEmail`,
+`linkedInURL`, `city` e o telefone. Não era o `setv` falhando: era **ordem**. **Os arquivos vão
+primeiro, o texto e os combos depois.** Vale a pena generalizar: em qualquer ATS que ofereça
+*Import Resume*, suba o arquivo antes de digitar.
+
+**ARMADILHA 6 — os combos são `rc-select`,** o motor do Ant Design; o `id` `rc_select_1` na tela
+entrega. A lista **não** fica dentro do campo, é desenhada num portal no fim do `body`, e a busca
+só acontece com digitação de teclado. Selecionar por `[role=option]` genérico devolve lista vazia
+e a rodada **parece parede**. Seletor que funciona: `[class*="select-item-option"]`,
+`.rc-virtual-list-holder-inner > div`, `[class*="select-dropdown"] [role="option"]`.
+
+**Alternativas separadas por `|` são ORDEM DE PREFERÊNCIA, não regex solto.** Com um regex único,
+o `find` devolve a primeira opção **da lista** que casa com qualquer alternativa: isso escolheu
+`Other` tendo `Company Website` disponível, e o `Other` abriu um campo obrigatório novo
+(`candidateSourceDescription`, "Additional Details") que travou o Next. Daí também a **segunda
+passada de texto**, para campos que só nascem depois de uma escolha de combo.
+
+**ARMADILHA 7 — o `Update` colapsa o bloco pessoal num resumo só de leitura e redesenha a página.**
+Um handle de `Next` pego antes disso clica **sem erro e sem efeito**. Pegue o botão depois do
+`Update`, e confirme a virada pelo **texto do passo**, não pela URL: o assistente é uma SPA.
+
+**O TELEFONE, com a regra do documento privado aplicada e conferida.** Existe um seletor separado
+`Country dialing code` (`rc_select_1`), então o campo do número leva **só os dígitos**. O resumo
+depois do `Update` imprimiu `Mobile Phone: +55 81 97306 2286`, exatamente o formato certo.
+
+**O QUESTIONNAIRE, que nunca tinha sido visto.** Duas perguntas, e a primeira é a de autorização:
+*"Are you currently authorized to work in Canada?"* (obrigatória) e *"If you're not in Quebec, are
+you willing to move within 6months?"*. Respondidas **No** e **Yes** — a de autorização com a
+verdade, como manda a regra. Detalhe de implementação: **os radios do Dayforce não têm `id`**, só
+um `value` numérico (29, 30, 31...) que muda de vaga para vaga. Por isso a resposta é casada por
+**texto da pergunta mais texto da opção**, subindo até 12 ancestrais atrás do enunciado: fica
+auditável no arquivo de respostas e continua valendo em outro estúdio da mesma família.
+
+**O VEREDITO DO CAPTCHA, agora com clique.** Passo 3 é o aceite `Candidate Acknowledgement` mais
+`Submit`. Antes do clique o passo 3 media `{frames:2, widgets:0}` — anchor mais bframe, invisível,
+nada na tela. **Depois do clique subiu o quebra-cabeça de imagem "Select all images with a bus".**
+Print em `df_eidos_enviado.png`. **Nada foi enviado**, e não se burla desafio.
+
+**A LIÇÃO QUE VALE MAIS QUE O ATS:** esta é a **terceira família** em que o captcha só existe
+depois do clique — Workable (Turnstile), Lever (hCaptcha de imagem) e agora Dayforce (reCAPTCHA v2
+de imagem). Nas três, a medição pré-clique diz "sem desafio visível" e **mente**. Confirma pela
+terceira vez a regra: **só o clique é veredito.**

@@ -1,6 +1,6 @@
-# FILA DO VINI — 41 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 e nº 41 acrescentadas em 08/09)
+# FILA DO VINI — 42 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 e nº 41 acrescentadas em 08/09, nº 42 às 15h50 de 08/09)
 
-**41 vagas na fila, tempo total estimado 2h16 (136 minutos), todas com formulário e nenhuma por email.**
+**42 vagas na fila, tempo total estimado 2h22 (142 minutos), todas com formulário e nenhuma por email.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1266,6 +1266,50 @@ Vini Cavalcanti
 | Other website | `https://vinicavalcanti.com` |
 
 **Cuidados:** **não existe caixa de carta neste formulário**, então quem fala por você é o CV mais o ArtStation. Não use o botão *Apply with LinkedIn*, que sobrescreve o que você digitou com os dados do perfil.
+
+---
+
+## 42. Eidos-Montréal — LEAD ENVIRONMENT ARTIST — Montréal, Canadá (permanente, presencial ou híbrido)
+
+**Link direto:** https://jobs.dayforcehcm.com/en-CA/eic/CANDIDATEPORTAL/jobs/2192 (Req #158)
+**Por que vale:** casa AAA de Deus Ex, Shadow of the Tomb Raider e Guardians of the Galaxy, no 400 de Maisonneuve Ouest. **PERMANENT FULL-TIME**, que é o formato fixo que você procura, num RPG em Unreal Engine 5. Busca literal de veto no texto integral (`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`, `French`, `français`, `bilingue`, `resident`): **nenhum**. Pede 5+ anos (você tem 10+), Maya, pipeline PBR de textura e material, modelagem, UV, bake, hard-surface e orgânico, e mentoria de júnior. É **ambiente e não personagem**, mas o pipeline pedido é o seu inteiro.
+**A parede:** reCAPTCHA v2 **de imagem**, e ela só aparece **DEPOIS** do clique em Submit. Medida por mim em 08/09 às 15h49: preenchi o assistente inteiro, marquei o aceite, cliquei em Submit de verdade, e subiu o quebra-cabeça *"Select all images with a bus"*. **Nada foi enviado.** Terceira família de ATS da campanha com esse padrão, junto de Workable e Lever.
+**Tempo estimado:** 6 min — o formulário inteiro já está mapeado abaixo, campo a campo, então é só colar.
+
+**O caminho, que não é óbvio:** na página da vaga clique **Apply** → a tela oferece **"Apply without an Account"**, escolha essa (não precisa criar conta) → abre um **modal de Privacy Notice**: marque a caixa e clique **Save**, *não* Next → só então o formulário monta.
+
+**Passo 1 de 3 — Candidate Info.** Suba o **CV primeiro**: o Dayforce faz o *parse* do PDF e **reescreve o bloco Personal Information inteiro**, apagando o que você tiver digitado antes. Depois de subir CV e carta, preencha:
+
+| Campo | O que colar |
+|---|---|
+| Email Address | `contact@vinicavalcanti.art` |
+| Confirm Email Address | `contact@vinicavalcanti.art` |
+| First Name | `Vini` |
+| Last Name | `Cavalcanti` |
+| LinkedIn Profile | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Country dialing code | `🇧🇷 +55 Brazil` |
+| Mobile Phone Number | DADOS FIXOS, **só os dígitos**, porque o seletor de país é separado |
+| Preferred Contact Method | `Email` |
+| Country | `Brazil` |
+| State/Province | `Pernambuco` |
+| City | `Olinda` |
+| How did you find out about this job opportunity? | escolha **Company Website** se existir na lista; se você escolher **Other**, nasce um campo obrigatório novo |
+| Additional Details (só aparece se a resposta acima for Other) | `Studio careers page` |
+| Resume | o PDF do CV |
+| Cover Letter | o PDF da carta |
+
+Feito isso, clique no botão **Update** do próprio bloco Personal Information (ele é um sub-formulário e tem botão próprio), espere aparecer *"Personal Information update successful."* e só então **Next**.
+
+**Passo 2 de 3 — Questionnaire.** Duas perguntas, e a primeira é a de autorização:
+
+| Pergunta | Resposta |
+|---|---|
+| Are you currently authorized to work in Canada? | **No** — é a verdade e não se mente nesse campo |
+| If you're not in Quebec, are you willing to move within 6 months? | **Yes** |
+
+**Passo 3 de 3 — Submit.** Marque *"I agree to the Candidate Acknowledgement"* e clique **Submit**. É aqui que o quebra-cabeça de imagem sobe; resolva e confirme que a tela de confirmação apareceu antes de fechar.
+
+**Cuidados:** não há campo de carta escrita nem de portfólio neste formulário, então quem fala por você é o CV, a carta em PDF e o que estiver dentro deles — confira que o link do ArtStation está no CV. Não use *Import Resume* depois de preencher à mão, pelo mesmo motivo do parse.
 
 ---
 
