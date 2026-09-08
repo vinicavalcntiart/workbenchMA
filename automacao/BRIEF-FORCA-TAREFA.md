@@ -1556,3 +1556,33 @@ authorized to work in Canada."* Bate três termos da busca de veto de uma vez.
 
 Pixelsplit e Twin Atlas devolvem **exatamente ~20 KB de shell JavaScript**. Anote o tamanho como
 assinatura: 20 KB de `notion.site` é página que não carregou, não quadro vazio.
+
+---
+
+## 08/09 — A RÉGUA DE VETO TINHA UM FURO, E ELE QUASE CUSTOU UMA CANDIDATURA
+
+A **Snowprint Studios** publicou hoje às 14h28 uma **Senior 3D Character Artist** em Estocolmo:
+o título literal dele, requisição nova, ninguém tinha tocado. A triagem automática rodou a busca
+de veto e devolveu **"nenhum termo"**. Baixei o anúncio inteiro para conferir e o veto está lá,
+escrito com todas as letras:
+
+> *"You are currently located in Stockholm, Sweden. **We are unable to support relocation for
+> this position.**"*
+
+**Por que a busca não viu:** a lista padrão da campanha tem nove termos — `authoriz`, `eligib`,
+`sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`, `French`, `resident` — e
+**nenhum deles aparece nessa frase**. O veto foi escrito com um vocabulário que a régua não media.
+
+**A régua passa a ser esta, e os quatro novos são obrigatórios:**
+`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`,
+`French`/idioma local, `resident`, **`relocat`**, **`located in`**, **`unable to support`**,
+**`no relocation`**.
+
+**A consequência é maior que uma vaga:** todo veredito de "limpo" dado antes desta correção foi
+produzido pela régua antiga. Vaga marcada limpa e ainda não enviada merece reconferência com os
+quatro termos novos antes de virar candidatura.
+
+**E a lição de método:** dois agentes discordaram sobre a Snowprint na mesma rodada, um dizendo
+limpa e outro dizendo vetada. **Quando dois relatos divergem, quem decide é o anúncio, não o
+relato** — baixar o texto inteiro custou um curl e evitou uma candidatura que morreria na
+primeira tela.
