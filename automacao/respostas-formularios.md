@@ -3524,3 +3524,69 @@ Print em `df_eidos_enviado.png`. **Nada foi enviado**, e não se burla desafio.
 depois do clique — Workable (Turnstile), Lever (hCaptcha de imagem) e agora Dayforce (reCAPTCHA v2
 de imagem). Nas três, a medição pré-clique diz "sem desafio visível" e **mente**. Confirma pela
 terceira vez a regra: **só o clique é veredito.**
+
+---
+
+## RECRUITEE, DIAGNÓSTICO CORRIGIDO EM 08/09 — NÃO É hCaptcha DE IMAGEM
+
+Medido duas vezes hoje com clique real, na **Reality Games** (3D Generalist, Cracóvia) e na
+**Framestore** (3D Modeller, Montréal). As duas deram exatamente o mesmo resultado, e ele
+**contradiz o que este arquivo dizia**.
+
+**O que estava escrito e está errado:** que a Framestore trava em "hCaptcha de imagem". E que o
+formulário da Reality Games tem um botão **"Skip"** sobreposto ao captcha. **Esse "Skip" não
+existe.** O que existe é o **"Skip to content"**, o link de acessibilidade que abre toda página do
+Recruitee — eu mesmo caí nele hoje: um seletor `has-text("Skip")` casou com ele e reportou
+"cliquei no Skip: true" sem ter clicado em nada. Com casamento exato (`/^\s*Skip\s*$/`), a
+contagem é **zero** nas duas casas.
+
+**O que realmente acontece:** o clique em Send dispara `POST captcha-base.recruiteecdn.com/getcaptcha/<uuid>`,
+que responde **200 com corpo binário** — é o desafio de **PROVA DE TRABALHO** (`hsw`), não um
+quebra-cabeça humano. Ele nunca completa neste ambiente e a tela não muda. **Nenhum desafio de
+imagem aparece em momento nenhum**, nem antes nem depois do clique.
+
+**POR QUE ISSO MUDA O CUSTO DA FAMÍLIA INTEIRA:** prova de trabalho **resolve sozinha no navegador
+do Vini**. Não há quebra-cabeça para ele resolver: é preencher e clicar em Send. As entradas de
+Recruitee (Framestore ×4, Reality Games, Dovetail, Ten Square) são portanto **baratas**, e não
+paredes caras como hCaptcha de imagem.
+
+### O BUG QUE ESCONDIA TUDO ISSO, e ele é a lição de verdade
+
+O `apply_recruitee3.js` **ignorava em silêncio duas chaves do próprio arquivo de respostas**:
+`radiosContent` (radio cujo `value` é o texto do rótulo, sob `.content`) e `flags` (consentimento
+que é pergunta aberta, sem `id` e sem `label`). O arquivo `ans_realitygames.json` já trazia as duas,
+preenchidas e corretas, desde 06/09. Como o preenchedor não as tratava, o formulário reprovava na
+validação com **"This field is required and can not be left empty"**, a tela não mudava, os campos
+continuavam preenchidos e nenhum email chegava.
+
+**Esses são exatamente os três sintomas que a campanha aprendeu a ler como "parede de captcha".**
+Não era captcha: era campo obrigatório vazio. O `apply_recruitee5.js` trata as duas chaves e agora
+imprime, **antes de clicar em Send**, a lista de mensagens de validação na tela e a lista de campos
+obrigatórios ainda vazios. Nas duas casas isso passou a devolver `[]` e `[]`.
+
+**REGRA NOVA:** antes de registrar qualquer formulário como parede, imprima o estado da validação.
+Campo obrigatório vazio e captcha produzem o mesmo sintoma, e confundir os dois custou dois dias de
+diagnóstico errado numa família inteira de ATS.
+
+**ARMADILHA DE ID, medida na Framestore:** os ids de `open_questions` que a **API** devolve
+(`3148831`...) **NÃO são** os ids do formulário renderizado (`7457220`...). Preencher pelos ids da
+API loga `SEM CAMPO` em todas as perguntas. Leia os ids do DOM (`probe_rc.js` faz isso e imprime
+rótulo, tipo, obrigatoriedade e as opções de cada radio).
+
+## TYPEFORM DA REKiNDLED — DUAS TENTATIVAS, NÃO PASSOU, E FICA NA MÃO DO VINI
+
+Tentado duas vezes em 08/09. **Nada foi enviado** e **nenhuma resposta errada foi gravada**, porque
+o preenchedor confere o texto da pergunta antes de responder e para quando não casa.
+
+**O que se aprendeu, para quem tentar de novo:**
+1. A dica antiga deste arquivo, de responder escolha pela **tecla da letra**, **não funciona** depois
+   que o foco passa por um campo de texto: o formulário trava na pergunta 11 com **"Please make a
+   selection in How would you describe your experience level?"**. Confirmado em print.
+2. Conferir a pergunta atual pelo `innerText` do **body inteiro** dá falso OK, porque o body traz
+   perguntas fora da tela. A v1 reportou doze passos "OK" estando parada na décima primeira.
+3. A v2 passou a clicar no **rótulo** da opção e a conferir só o bloco visível no viewport, mas o
+   seletor de bloco visível voltou vazio: o Typeform não expõe a pergunta em `h1/h2/legend` como eu
+   supus. **Quem for retomar começa por aí**, e a tabela das 16 respostas continua válida acima.
+
+**Decisão:** parei na segunda tentativa em vez de queimar uma terceira rodada de navegador. O
+dossiê estima 2 a 3 minutos na mão, e a fila do Vini é o lugar certo para ela.
