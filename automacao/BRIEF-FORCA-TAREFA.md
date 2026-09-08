@@ -1795,3 +1795,33 @@ candidatura que morre na primeira tela.
    certo e o relato errado; em 07/09 foi o contrário, com a WildBrain. **Nos dois casos quem
    resolveu foi a fonte oficial, com um curl.** Antes de agir contra o que o painel diz,
    baixe o anúncio.
+
+---
+
+## 08/09 — CONTACT FORM 7: como distinguir, COM CERTEZA, reprovação de pontuação de campo faltando
+
+O Contact Form 7 é o formulário próprio mais comum de estúdio pequeno, e ele tem um defeito de
+diagnóstico que já custou horas nesta campanha: **a mensagem de erro dele é a mesma para causas
+opostas.** Tanto um campo obrigatório vazio quanto uma reprovação do reCAPTCHA v3 devolvem:
+
+> *"There was an error trying to send your message. Please try again later."*
+
+Medido na **Gigantic Duck** em 08/09, com clique de verdade e formulário 100% preenchido (três
+selects, três textos, três anexos, todos lidos de volta). **O que separa as duas causas não é a
+mensagem, são duas coisas no DOM:**
+
+| Sinal | Onde olhar | O que significa |
+|---|---|---|
+| `class="wpcf7-form spam"` no `<form>` | atributo `className` do formulário | **v3 reprovou a sessão por pontuação.** Não é preenchimento. |
+| `class="wpcf7-form validation-errors"` | idem | **Falta ou está errado algum campo.** |
+| `.wpcf7-not-valid-tip` (lista) | dentro do formulário | Os campos que o próprio CF7 marcou. **Lista vazia + erro = pontuação.** |
+| `class="wpcf7-form sent"` / `mail-sent-ok` | idem | **Enviado.** É esta a prova, e não a troca de página: o CF7 envia por AJAX e a URL não muda. |
+
+**Esperar troca de página no CF7 dá falso negativo garantido.** O `apply_cf7.js` espera a classe
+mudar, imprime as três coisas (classe, mensagem, campos inválidos) e, quando a lista vem vazia
+com erro, diz na cara que é pontuação.
+
+**Consequência prática:** formulário CF7 com `_wpcf7_recaptcha_response` no HTML é **v3 de
+pontuação**, que não desenha desafio nenhum. Não há o que burlar e não se tenta. O que se faz é
+medir, escrever o dossiê campo a campo e mandar para a fila do Vini, onde o mesmo formulário custa
+menos de um minuto **porque a pontuação do navegador dele é outra**.

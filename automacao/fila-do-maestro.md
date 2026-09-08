@@ -166,7 +166,20 @@
 - **Por que vale:** ambiente é média na regra da campanha, mas isto é **modelagem 3D em cargo de LIDERANÇA** na casa de *Albion Online*, em Berlim, e a resposta de liderança já está fechada como sim. Oferecem bilhete de transporte da Alemanha inteira e cursos de idioma, o que é sinal de casa que contrata de fora.
 - **Painel:** **parcialmente.** O painel tem a entrada média "Sandbox Interactive (quadro inteiro do Teamtailor, Albion Online)" apontando para o **quadro**, `https://sandboxinteractive.teamtailor.com/jobs`, mas **não tem esta requisição**. O link acima é da requisição.
 
-## 14. Bandai Namco Mobile — Open Application — Barcelona, Espanha
+## ~~14. Bandai Namco Mobile — Open Application — Barcelona, Espanha~~ — CANCELADA EM 08/09 À NOITE: A PORTA É QUEBRADA DO LADO DELES
+
+> **Não gaste clique nisto, e a culpa é minha por ter posto na fila.** Eu escrevi aqui "não vi
+> captcha no HTML, veredito só com o clique", e o painel JÁ tinha o veredito medido POR REDE em
+> 07/09: o formulário não tem captcha nenhum, o upload do CV sobe de verdade para o S3 deles
+> (`/.netlify/functions/fileHandler` devolve 200), e logo em seguida o
+> `/.netlify/functions/getCandidates` devolve **400**, ou seja **a candidatura nunca é criada**.
+> É defeito do backend deles, não da nossa rede e não de captcha. Sondei o formulário de novo
+> hoje antes de preencher, achei a entrada do painel e parei ali.
+>
+> **A lição é a mesma de duas outras vezes hoje: antes de agir, leia o que o painel já sabe.**
+> Custou um `grep` e economizou uma rodada inteira de preenchimento que morreria calada.
+
+## 14. Bandai Namco Mobile — Open Application — Barcelona, Espanha (texto original, mantido para registro)
 
 - **Link direto:** https://bandainamcomobile.com/careers/jobs/1199319-open-application — o formulário está na própria página ("Apply for this Job", com anexo de CV e campo "Tell us about yourself")
 - **ATS:** portal próprio (formulário `<form>` confirmado no HTML de hoje)

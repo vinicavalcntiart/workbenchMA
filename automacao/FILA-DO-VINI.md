@@ -1,6 +1,7 @@
-# FILA DO VINI — 45 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 45 acrescentadas em 08/09)
+# FILA DO VINI — 46 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 46 acrescentadas em 08/09)
 
-**45 vagas na fila, tempo total estimado 2h31 (151 minutos), todas com formulário e nenhuma por email.**
+**46 vagas na fila, tempo total estimado 2h32 (152 minutos), todas com formulário e nenhuma por email.**
+**A mais barata da fila inteira é a nº 46, Gigantic Duck: 40 segundos, remota e efetiva.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1377,6 +1378,40 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 2. **Há DOIS campos de senha na tela**, um do cadastro e outro da caixa de login na lateral. É fácil digitar no errado.
 3. **Os campos de email disparam uma validação por AJAX que re-renderiza o formulário.** Marque os radios e as caixas **depois** de preencher os emails, não antes.
 4. **O formulário revela obrigatórios novos a cada tentativa.** Não é erro seu: satisfaça os que ele apontar e envie de novo.
+
+---
+
+## 46. Gigantic Duck — 3D Artist — **REMOTO**, estúdio em Borås, Suécia (EFETIVO, 40h/semana)
+
+**Link direto:** https://giganticduck.com/application/
+**Por que vale, e ela é a combinação mais rara da campanha:** **remoto + efetivo**, escrito por eles nas duas
+requisições vivas do quadro (3D Artist para *Bombergrounds* e 3D Artist para um jogo não anunciado):
+*"Remote, Full time (40 hours/week)"*. Não é freelance nem contrato por projeto. **Busca de veto com a régua nova
+de dezessete termos: zero ocorrências.** Casa de jogos multiplataforma estilizados, exatamente o recorte dele.
+
+**A parede, medida com clique de verdade em 08/09 às 20h50 UTC:** o formulário é Contact Form 7 com
+**reCAPTCHA v3 de pontuação**, e ele reprovou nossa sessão. A prova não é a mensagem, que mente: a mensagem
+genérica é *"There was an error trying to send your message"*, igual à de campo faltando. A prova é que o
+formulário voltou com a classe **`wpcf7-form spam`** e a lista de campos inválidos **VAZIA**. Nenhum campo estava
+errado; a pontuação do v3 é que recusou o IP de datacenter. **No seu navegador a pontuação é outra.**
+
+**Tempo estimado: 40 segundos.** É o formulário mais curto da fila inteira, e está todo medido:
+
+| Campo | O que escolher ou colar |
+|---|---|
+| Position | **3D Artist** |
+| Location | **Remote** (é a única opção) |
+| Full name | `Vini Cavalcanti` |
+| Country | `Brazil` |
+| Email | `contact@vinicavalcanti.art` |
+| Discord | opcional, pode deixar vazio |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Resume | anexar o CV (obrigatório) |
+| Application letter | anexar a carta |
+| Extra attachment | anexar o portfólio PDF |
+| Where did you hear about us? | **Other** |
+
+**Não há campo de texto livre**, então a frase de realocação não tem onde entrar. Não faz falta: a vaga é remota.
 
 ---
 
