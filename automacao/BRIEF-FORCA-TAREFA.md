@@ -1580,8 +1580,12 @@ escrito com todas as letras:
 
 **A régua passa a ser esta, e os quatro novos são obrigatórios:**
 `authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`,
-`French`/idioma local, `resident`, **`relocat`**, **`located in`**, **`unable to support`**,
-**`no relocation`**.
+**`days per week`**, **`days in the office`**, `French`/idioma local, `resident`,
+**`relocat`**, **`located in`**, **`unable to support`**, **`no relocation`**.
+
+Os dois de escritório entraram em 08/09 pelo mesmo motivo dos quatro de realocação: a **Fatshark**
+escreve *"4 days in the office **per week**"* e **`days a week` não casa com isso**. A régua já
+tinha falhado uma vez hoje na Snowprint; falhou de novo com outra redação da mesma exigência.
 
 **A consequência é maior que uma vaga:** todo veredito de "limpo" dado antes desta correção foi
 produzido pela régua antiga. Vaga marcada limpa e ainda não enviada merece reconferência com os
@@ -1597,11 +1601,25 @@ primeira tela.
 
 ## 08/09 — MAIS DUAS ARMADILHAS DE ATS, e uma delas invalida leitura de quadro
 
-**O `jobs.json` do Teamtailor MENTE.** Ele devolve lista vazia para quadros que têm vaga viva:
-na Paradox, `jobs.json` retorna **0** e o `sitemap.xml` do mesmo careersite retorna **18**. Quem
-lê `jobs.json` e conclui "sem vagas" está errado. **A rota certa é `<careersite>/sitemap.xml`.**
-Isso vale de imediato para a triagem europeia desta rodada, que usou `jobs.json` em parte dos
-quadros: onde ela disse "sem vaga" pelo JSON, o veredito não está fechado.
+~~**O `jobs.json` do Teamtailor MENTE.**~~ — **DESMENTIDO NO MESMO DIA, com número, e o erro de
+tê-lo escrito é meu.** Refiz **102 hostnames, 91 quadros distintos** pelas duas rotas:
+`jobs.json` devolveu **402** vagas contra **361** do `sitemap`. Divergiu em **2 de 102**, e nas
+duas **quem escondeu foi o SITEMAP** (Still Front 39×4, Kepler 7×1). O conjunto "vaga que só o
+sitemap vê" ficou **vazio nos 102 quadros**.
+
+**O que era o "0" da Paradox:** um **404 de slug inexistente contado como zero**.
+`paradoxinteractive.teamtailor.com` dá 404; `career.paradoxplaza.com/jobs.json` dá **200 com 18
+itens**, estável em 12 chamadas. Mesma coisa em SYBO (`sybogames` 404 contra `sybo` 200) e
+Goodbye Kansas.
+
+**A RAIZ, e ela já apareceu TRÊS VEZES hoje:** *slug errado devolve 403, 404 ou lista vazia, e
+isso é registrado como porta bloqueada ou quadro sem vaga.* Foi o `playgroundgames` (403) contra
+`playground-games` (200); foi o `paradoxinteractive` (404) contra `paradoxplaza` (200); e foi o
+`snowprint` (dado como inexistente) contra `snowprintstudios.teamtailor.com` (**200**).
+**Antes de escrever "bloqueado" ou "sem vagas", teste ao menos duas variações do slug.**
+
+**E "Teamtailor em domínio próprio não aparece no subdomínio do fornecedor" é PARCIALMENTE
+FALSO:** 27 dos 62 quadros em domínio próprio têm espelho vivo no fornecedor.
 
 **Teamtailor em domínio próprio existe e não aparece no subdomínio do fornecedor.** Sondar
 `career.<domínio>`, `careers.<domínio>` e `jobs.<domínio>` achou **48 quadros** que a varredura
@@ -1651,3 +1669,20 @@ destrancada.
 **E um sinal de leitura que vale a pena copiar:** a Blue Zoo **rotula** as vagas restritas com o
 prefixo **"UK Only |"** no título da listagem. Num quadro que rotula, **vaga sem rótulo é sinal
 positivo real** — vale mais que a ausência de termos de veto no corpo.
+
+
+---
+
+## 08/09 — UM ERRO MEU QUE ACONTECEU DUAS VEZES NO MESMO DIA
+
+Escrevi no brief, como se fosse medição, **duas coisas que eu não tinha medido**, as duas vindas
+de relatório de agente: que o `curl` não passa no Jobvite, e que o `jobs.json` do Teamtailor mente.
+**As duas eram falsas**, e as duas foram desmentidas no mesmo dia por teste direto — a segunda com
+102 quadros contra 1.
+
+**A regra que fica, e ela vale para todo mundo que escreve neste arquivo:** relato de agente é
+**candidato a fato**, não fato. O que entra aqui como armadilha medida precisa de um teste que
+**eu mesmo rodei**, ou de um número que dê para conferir. Quando for relato de terceiro sem
+verificação, escreva **"relatado, não verificado"** — porque este arquivo é lido como verdade
+pelas rodadas seguintes, e uma armadilha inventada faz agente competente evitar porta que está
+aberta.
