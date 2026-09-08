@@ -1466,9 +1466,14 @@ Groom TD em Londres), as duas com a mesma prova tripla: `POST /submitApplication
 
 ### JOBVITE: família de ATS nova, e quatro armadilhas que valem para qualquer vaga dela
 
-1. **`curl` e WebFetch NÃO passam em `jobs.jobvite.com` neste ambiente, mas o NAVEGADOR passa** e
-   devolve 200. Uma rodada tinha registrado Jobvite como porta bloqueada por causa do curl.
-   **Porta bloqueada para curl não é porta bloqueada.**
+1. ~~`curl` e WebFetch NÃO passam em `jobs.jobvite.com`~~ — **ERRADO, e o erro é meu. CORRIGIDO
+   no mesmo dia, 08/09.** Eu escrevi isso a partir do relato de uma rodada que levou 403 e da
+   minha constatação de que o navegador passava; **nunca testei o curl eu mesmo**. Testado
+   depois: `curl` devolve **HTTP 200** em `jobs.jobvite.com` e lê o anúncio inteiro (76 KB). O
+   403 original era **token errado** (`playgroundgames` dá 403, `playground-games` dá 200), não
+   bloqueio de egresso. **A lição sobrevive invertida:** 403 num ATS costuma ser token errado, e
+   não porta fechada — confira o slug antes de declarar bloqueio. E a minha: não escreva como
+   medição o que você não mediu.
 2. **`/apply` abre um portão de consentimento** (select de região) antes de qualquer campo. Quem
    sonda `/apply` e conta os campos vê **um** e conclui que não há formulário.
 3. **Os `name` são ALEATÓRIOS POR SESSÃO** (`input-yCcsXfwX`). Preencher por `name` é impossível e
@@ -1586,3 +1591,23 @@ quatro termos novos antes de virar candidatura.
 limpa e outro dizendo vetada. **Quando dois relatos divergem, quem decide é o anúncio, não o
 relato** — baixar o texto inteiro custou um curl e evitou uma candidatura que morreria na
 primeira tela.
+
+
+---
+
+## 08/09 — MAIS DUAS ARMADILHAS DE ATS, e uma delas invalida leitura de quadro
+
+**O `jobs.json` do Teamtailor MENTE.** Ele devolve lista vazia para quadros que têm vaga viva:
+na Paradox, `jobs.json` retorna **0** e o `sitemap.xml` do mesmo careersite retorna **18**. Quem
+lê `jobs.json` e conclui "sem vagas" está errado. **A rota certa é `<careersite>/sitemap.xml`.**
+Isso vale de imediato para a triagem europeia desta rodada, que usou `jobs.json` em parte dos
+quadros: onde ela disse "sem vaga" pelo JSON, o veredito não está fechado.
+
+**Teamtailor em domínio próprio existe e não aparece no subdomínio do fornecedor.** Sondar
+`career.<domínio>`, `careers.<domínio>` e `jobs.<domínio>` achou **48 quadros** que a varredura
+por `<estudio>.teamtailor.com` não via.
+
+**Ler o TEXTO da página de carreiras rende mais que caçar link de ATS** (8% de acerto adivinhando
+token contra 44 páginas com o cargo no texto), **desde que se leia o FIM da página**: a EB Studio
+mostra descrições completas de Material Artist e Prop Artist e só no rodapé diz *"We have no open
+positions at this time"*.
