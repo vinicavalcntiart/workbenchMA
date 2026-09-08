@@ -1,7 +1,20 @@
-# FILA DO VINI — 46 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 a nº 46 acrescentadas em 08/09)
+# FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-**46 vagas na fila, tempo total estimado 2h32 (152 minutos), todas com formulário e nenhuma por email.**
-**A mais barata da fila inteira é a nº 46, Gigantic Duck: 40 segundos, remota e efetiva.**
+**43 vagas VIVAS, tempo total estimado cerca de 2h20, todas com formulário e nenhuma por email.**
+
+**REVALIDAÇÃO DE 08/09 À NOITE, as 46 entradas conferidas uma a uma na fonte oficial de cada ATS,
+com a régua nova de dezessete termos. Resultado: 35 seguem, CINCO SAÍRAM, seis mudaram, e duas
+requisições novas da Netflix entraram no lugar da que morreu.**
+
+**As cinco que saíram, para você não perder tempo com elas:** nº 2 Netflix Head of Characters
+(deslistada, e a página continua respondendo 200, que é a armadilha), nº 13 Asobo (veto de francês
+escrito no anúncio), nº 38 DreamWorks VisDev (`active: false`, "This job has expired"), nº 41
+Quantic Dream (duplicata exata da nº 27, mesmo uuid) e nº 44 Behaviour *7 Days to Die* (o Gmail
+mostra recibo do Lever de 30/08: **já foi enviada**). Todas continuam no arquivo, riscadas e com o
+motivo literal, para ninguém reabrir.
+
+**As mais baratas:** nº 33 Gigantic Duck, **40 segundos**, remota e efetiva, campo a campo medido;
+e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem juntas em três minutos.
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -140,7 +153,40 @@ Dead by Daylight is a game made of characters, killers and licensed survivors sh
 
 **Cuidados:** o anúncio está em francês na API, mas o formulário é bilíngue e o texto em inglês é aceito. Não responda "Yes" à elegibilidade no Canadá: mentir na triagem derruba a candidatura depois. Esta é a **terceira** requisição de personagem da Behaviour — a de *7 Days to Die* já foi enviada em 30/08, não repita aquela.
 
-## 2. Netflix Animation Studios — Head of Characters — Vancouver, Canadá
+## 2. Netflix Animation Studios, Vancouver e Sydney — A VAGA ANTIGA MORREU, DUAS NOVAS ESTÃO VIVAS
+
+> **ATENÇÃO: a Head of Characters de Vancouver SAIU DA FILA em 08/09 à noite, e o jeito como ela
+> morreu é a armadilha mais cara desta revalidação.** A página dela **responde 200** e a API de
+> detalhe também. Parece viva. Mas o id `790317384604` **não está no quadro oficial**: paginei a
+> busca do próprio quadro da Netflix e ele não aparece em nenhuma página, enquanto as irmãs de
+> Vancouver aparecem. **Vaga deslistada mantém a página no ar.** Se você tivesse clicado, teria
+> preenchido um formulário para uma requisição que não existe mais.
+>
+> **No lugar dela, duas requisições VIVAS da mesma casa, medidas no anúncio inteiro em 08/09:**
+>
+> **2a. Character Modeling Supervisor — Netflix Animation Studios — Sydney, Austrália**
+> `https://explore.jobs.netflix.net/careers/job/790317298520` (Req `JR41751`)
+> **É o cargo dele com o nome dele, em nível de supervisão.** O anúncio diz: *"lead the character
+> modeling team"*. Híbrido, mínimo de 3 dias no escritório, e a Austrália está no escopo.
+> **Régua de dezessete termos: nenhum veto.** Não há `authoriz`, `eligib`, `sponsor` nem
+> `resident`. A única frase de regime é *"This role is based out of Sydney, Australia. Hybrid Role
+> (Minimum of 3 days a week in the office)"*, que é presença, não veto. Faixa não publicada: pela
+> regra de 04/09, casa grande na Austrália é **AUD 110.000**, com "Open to aligning with your band".
+>
+> **2b. Head of Environments — Netflix Animation Studios — Vancouver, Canadá**
+> `https://explore.jobs.netflix.net/careers/job/790316561602` (Req `JR41288`)
+> Liderança de show para **todos os ambientes, cenários e props**. Ambiente é média na régua de
+> disciplina, mas isto é **liderança**, é a casa que você mais quer e é Vancouver, prioridade 1.
+> **Régua: nenhum veto.** `based in` casa em *"This role is based in Vancouver, British Columbia"*,
+> que diz ONDE O CARGO FICA, e não quem pode se candidatar. É a distinção que separa este caso do
+> da People Can Fly, onde a frase era *"open to candidates only from ... based in Europe"*. Faixa
+> não publicada. Casa grande no Canadá: **CAD 95.000**.
+>
+> **A parede das duas é a mesma:** o Eightfold da Netflix preenche 100% pela automação e o POST em
+> `/api/application/v2/submit` volta 400, que é reCAPTCHA invisível recusando IP de datacenter.
+> Do seu navegador passa.
+
+## ~~2. Netflix Animation Studios — Head of Characters — Vancouver, Canadá~~ (MORTA, texto mantido para registro)
 
 **Link direto:** https://explore.jobs.netflix.net/careers/job/790317384604
 **Por que vale:** **SUBIU PARA O TOPO DA FILA na reconferência de hoje.** Personagem 3D estilizado da modelagem ao CFX, em Vancouver — Canadá anglófono, prioridade 1 do Vini —, híbrido, na casa que já abriu duas portas para ele. **Faixa publicada no próprio anúncio: "the overall market range for this role is typically $204k - $279k CAD"** (compensação total, sem stock). Anúncio buscado termo a termo por `authoriz`, `eligib`, `sponsor` e `work permit`: **zero ocorrências**, nenhum veto de residência escrito. A única ressalva real é o regime híbrido, **mínimo de 3 dias por semana no escritório**. Reconferida no ar hoje: a página responde com o título e com a faixa.
@@ -207,6 +253,11 @@ The posting asks for a senior character artist who can set up and groom hair in 
 ```
 
 **Cuidados:** é vaga diferente da nº 1 desta fila (aquela é Dead by Daylight); pode mandar as duas, mas com cartas diferentes, que é como estão escritas aqui.
+
+> **MUDOU desde que esta fila foi escrita (revalidação de 08/09):** o anúncio agora diz **"remote
+> or office"**, e a lista de destinos de realocação ganhou **Dubai**. Ou seja, a vaga ficou MELHOR:
+> continua com realocação paga e agora aceita remoto. Nada a corrigir na resposta, só saiba disso
+> ao ler a tela.
 
 ## 4. Gaijin Entertainment — Lead Material & Texture Artist — Budapeste, Hungria (com realocação paga)
 
@@ -300,6 +351,12 @@ Portfolio: https://www.artstation.com/viniciuscavalcanti
 
 **Textos longos:** TEXTO A. Se o anúncio insistir em realismo, acrescente o TEXTO C.
 **Cuidados:** o anúncio é de jogo realista; não esconda que seu portfólio é estilizado, use o TEXTO C. Suécia exige que a oferta alcance o piso salarial do visto de trabalho — a frase de alinhamento à banda já cobre isso.
+
+> **MUDOU (revalidação de 08/09), e é a mudança que mais dói desta lista:** o anúncio passou a
+> dizer, com todas as letras, *"**relocation assistance is not available for this role**"*.
+> **Isso NÃO é veto e a vaga CONTINUA na fila:** ele quer mudar de país e a frase fala de AJUDA
+> financeira à mudança, não de proibição de candidatar-se nem de patrocínio de visto. Mas mudança
+> por conta própria é uma decisão sua, e você merecia saber antes de clicar, não depois.
 
 ## 7. Avalanche Studios Group — Lead Character Artist — Estocolmo, Suécia
 
@@ -471,6 +528,14 @@ I answered yes: I would need Skilled Worker sponsorship. My academic background 
 ```
 
 **Cuidados:** a pretensão antiga de USD 46.000 está **morta**; use o número acima. Não deixe o campo de salário atual em branco nem escreva valor: a frase de NDA é a resposta.
+
+## ~~13. Asobo Studio — Character Artist H/F — Bordeaux, França~~ — SAIU EM 08/09: VETO DE IDIOMA
+
+> **Não gaste os seus minutos nesta.** A revalidação com a régua nova achou o que a antiga não
+> media, e está escrito no anúncio, em francês:
+> *"Tu disposes d'un niveau de **français** et anglais opérationnel"*.
+> Francês operacional é exigência, não preferência. Conferido por mim na API do Lever.
+> Texto original mantido abaixo para registro.
 
 ## 13. Asobo Studio — Character Artist H/F, projeto narrativo não anunciado — Bordeaux, França
 
@@ -775,6 +840,10 @@ Portfolio: artstation.com/viniciuscavalcanti
 
 **Cuidados:** uma pergunta obrigatória fica **escondida atrás do aviso de cookies** ("country of residence") — feche o aviso antes de conferir. Grooming é diferencial de apoio, não o cargo que você persegue: por isso está aqui e não no topo.
 
+> **MUDOU (revalidação de 08/09):** a espontânea agora está classificada como **Freelance**, e não
+> mais como efetiva. Continua valendo e continua na fila, mas entre ela e uma efetiva do mesmo
+> tempo de preenchimento, faça a efetiva primeiro.
+
 ## 24. TRIXTER — Speculative Job Application — Munique e Berlim, Alemanha
 
 **Link direto:** https://www.trixter.de/jobs/job/speculative-job-application-2/
@@ -987,6 +1056,10 @@ Work authorisation: I am not an EU citizen and I would need visa sponsorship. My
 
 # BANDA 2 — REMOTO EM EUA, CANADÁ E EUROPA (3 vagas)
 
+> **MUDOU (revalidação de 08/09), em dois pontos que mexem na decisão:** o contrato virou
+> **`contract`**, e os **Estados Unidos saíram** da lista de países aceitos. Sobram Canadá e Reino
+> Unido, que continuam no escopo dele. Segue na fila, mas agora é contrato remoto, não efetiva.
+
 ## 32. Keywords Studios / Lakshya Digital — Character Artist, Hair Specialist — remoto (Canadá, EUA e Reino Unido)
 
 **Link direto:** https://apply.workable.com/keywords-intl1/j/CA33DB1208/
@@ -1029,6 +1102,30 @@ Portfolio: artstation.com/viniciuscavalcanti
 ```
 
 ## 33. Gigantic Duck Games — 3D Artist — remoto (estúdio em Borås, Suécia)
+
+> **MEDIDA CAMPO A CAMPO EM 08/09 ÀS 20H50, com clique de verdade, e agora custa 40 segundos.**
+> São **duas** requisições vivas no quadro (Bombergrounds e um jogo não anunciado), as duas
+> *"Remote, Full time (40 hours/week)"*, e a régua de dezessete termos deu **zero ocorrências**.
+> O envio automatizado foi recusado, e a prova de QUE FOI a pontuação e não o preenchimento é
+> objetiva: o formulário voltou com a classe `wpcf7-form spam` e a **lista de campos inválidos
+> vazia**. Nenhum campo estava errado.
+>
+> | Campo | O que escolher ou colar |
+> |---|---|
+> | Position | **3D Artist** |
+> | Location | **Remote** (é a única opção) |
+> | Full name | `Vini Cavalcanti` |
+> | Country | `Brazil` |
+> | Email | `contact@vinicavalcanti.art` |
+> | Discord | opcional, pode deixar vazio |
+> | Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+> | Resume | anexar o CV (obrigatório) |
+> | Application letter | anexar a carta |
+> | Extra attachment | anexar o portfólio PDF |
+> | Where did you hear about us? | **Other** |
+>
+> **Não há campo de texto livre**, então a frase de realocação não tem onde entrar, e não faz
+> falta: a vaga é remota.
 
 **Link direto:** https://giganticduck.com/application/
 **Por que vale:** vaga **aberta** de 3D Artist, **remota**, 40h semanais, em dois projetos; foi a única vaga de 3D aberta de toda a varredura de WordPress. **Reconferida no ar hoje.**
@@ -1157,6 +1254,14 @@ Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work rem
 | Campo livre, se houver | TEXTO B |
 | reCAPTCHA | marcar a caixa |
 
+## ~~38. DreamWorks Animation — Visual Development Artist — Glendale, CA, EUA~~ — SAIU EM 08/09: EXPIRADA
+
+> A API do SmartRecruiters devolve `active: false` para a requisição `744000143937898`, e a página
+> escreve *"This job has expired"*. Conferido por mim na API oficial.
+> **Isto NÃO fecha a regra 14:** vaga nova de arte na DreamWorks continua sendo candidatura
+> imediata. O que morreu foi esta requisição.
+> Texto original mantido abaixo para registro.
+
 ## 38. DreamWorks Animation — Visual Development Artist — Glendale, CA, EUA
 
 **Link direto:** https://jobs.smartrecruiters.com/NBCUniversal3/744000143937898
@@ -1244,7 +1349,13 @@ Vini Cavalcanti
 
 ---
 
-## 41. Quantic Dream — Candidature Spontanée — Paris, França (CDI)
+## ~~41. Quantic Dream — Candidature Spontanée — Paris, França (CDI)~~ — SAIU: É A MESMA VAGA DA nº 27
+
+> **Duplicata exata, e o defeito é do arquivo, não da casa.** As duas entradas apontam para o
+> mesmo uuid do Lever, `cc1dacb2-01b7-47c0-b827-9b9b786d1dd7`. Conferido caractere a caractere.
+> **Faça a nº 27 e pule esta.**
+
+## 41. Quantic Dream — Candidature Spontanée — Paris, França (CDI, texto duplicado, mantido para registro)
 
 **Link direto:** https://jobs.eu.lever.co/quanticdream/cc1dacb2-01b7-47c0-b827-9b9b786d1dd7/apply
 **Por que vale:** casa de Detroit Become Human, Heavy Rain e Beyond Two Souls, ou seja jogo narrativo onde o rosto e a performance do personagem são o produto. É CDI, contrato efetivo francês, e não contrato de projeto. Candidatura espontânea conta pela regra da campanha. **Conferida viva em 08/09** na API oficial (`api.eu.lever.co/v0/postings/quanticdream` devolve três vagas; as outras duas são QA em Montréal).
@@ -1338,6 +1449,15 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 
 ---
 
+## ~~44. Behaviour Interactive — Senior 3D Character Artist, *7 Days to Die*~~ — SAIU: JÁ FOI ENVIADA EM 30/08
+
+> **O próprio arquivo se contradizia**, e a revalidação pegou: os blocos de "Cuidados" das
+> entradas nº 1 e nº 3 já diziam que esta tinha sido enviada. **O Gmail fecha a dúvida:** recibo do
+> Lever em **30/08 às 02h29**, `no-reply@hire.lever.co`, com o texto literal *"we received your
+> application for Senior 3D Character Artist - 7 Days to Die"*. Candidatura existe.
+> **Não mande de novo.** As outras três requisições da Behaviour nesta fila continuam valendo.
+> Texto original mantido abaixo para registro.
+
 ## 44. Behaviour Interactive — Senior 3D Character Artist, *7 Days to Die* — Montréal, Canadá (híbrido, EFETIVO)
 
 **Link direto:** https://jobs.lever.co/bhvr/976b2a8c-9cb4-4066-a755-d0994af408c2
@@ -1381,37 +1501,18 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 
 ---
 
-## 46. Gigantic Duck — 3D Artist — **REMOTO**, estúdio em Borås, Suécia (EFETIVO, 40h/semana)
+## 46. TTK Games AB — LEAD ENVIRONMENT ARTIST — Estocolmo, Suécia (híbrido, PERMANENTE)
 
-**Link direto:** https://giganticduck.com/application/
-**Por que vale, e ela é a combinação mais rara da campanha:** **remoto + efetivo**, escrito por eles nas duas
-requisições vivas do quadro (3D Artist para *Bombergrounds* e 3D Artist para um jogo não anunciado):
-*"Remote, Full time (40 hours/week)"*. Não é freelance nem contrato por projeto. **Busca de veto com a régua nova
-de dezessete termos: zero ocorrências.** Casa de jogos multiplataforma estilizados, exatamente o recorte dele.
-
-**A parede, medida com clique de verdade em 08/09 às 20h50 UTC:** o formulário é Contact Form 7 com
-**reCAPTCHA v3 de pontuação**, e ele reprovou nossa sessão. A prova não é a mensagem, que mente: a mensagem
-genérica é *"There was an error trying to send your message"*, igual à de campo faltando. A prova é que o
-formulário voltou com a classe **`wpcf7-form spam`** e a lista de campos inválidos **VAZIA**. Nenhum campo estava
-errado; a pontuação do v3 é que recusou o IP de datacenter. **No seu navegador a pontuação é outra.**
-
-**Tempo estimado: 40 segundos.** É o formulário mais curto da fila inteira, e está todo medido:
-
-| Campo | O que escolher ou colar |
-|---|---|
-| Position | **3D Artist** |
-| Location | **Remote** (é a única opção) |
-| Full name | `Vini Cavalcanti` |
-| Country | `Brazil` |
-| Email | `contact@vinicavalcanti.art` |
-| Discord | opcional, pode deixar vazio |
-| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
-| Resume | anexar o CV (obrigatório) |
-| Application letter | anexar a carta |
-| Extra attachment | anexar o portfólio PDF |
-| Where did you hear about us? | **Other** |
-
-**Não há campo de texto livre**, então a frase de realocação não tem onde entrar. Não faz falta: a vaga é remota.
+**Link direto:** https://ttkgames.com/careers/job?id=562172
+**Por que vale:** é **liderança de arte de ambiente**, efetiva e híbrida em Estocolmo, e a casa
+**publica a faixa**: *"Salary range Starting from **60,000 SEK per month**, rising to 85,000 with
+experience, plus bi-annual bonus, and perks."* Pela regra de 04/09 se pede a BASE: **60.000 SEK por
+mês**, com "Open to aligning with your band for the role". O anúncio pede direção artística,
+retorno e mentoria para o time de ambiente, mais coordenação da produção.
+**Régua de dezessete termos, rodada no anúncio inteiro: NENHUM.** Zero ocorrências.
+**A parede é a mesma da nº 43:** reCAPTCHA invisível, sem quebra-cabeça. Preencher e clicar.
+**APROVEITE A ABERTURA:** você já vai estar no formulário da TTK pela nº 43. **É o mesmo site e o
+mesmo formulário**, então esta custa mais um minuto, não mais dois.
 
 ---
 

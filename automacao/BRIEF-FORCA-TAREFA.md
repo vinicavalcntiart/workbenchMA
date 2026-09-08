@@ -1855,3 +1855,43 @@ ao `403` e a nomes conhecidos, e **não** como varredura geral.
 **fechada** (falência em março de 2024); e a **Radiant Worlds** não morreu, **virou Rebellion
 Warwick** em 2018. Domínio que some não quer dizer a mesma coisa em todos os casos, e escrever
 "não responde" apaga essa diferença.
+
+---
+
+## 08/09, à noite — DUAS FONTES OFICIAIS PODEM DISCORDAR SOBRE O MESMO ID, e quem decide é a do candidato
+
+A revalidação da fila mandou trocar o link da TTK Games: o id `561860` estaria morto e a vaga viva
+seria `558871`. **Estava invertido, e trocar teria posto um link morto na entrada mais barata da
+fila.** Medido com o navegador, que é o que o Vini usa:
+
+| id | Página do estúdio renderiza | Rota que a própria página chama |
+|---|---|---|
+| **`561860`** | **Character Artist**, Stockholm / Hybrid / Permanent, faixa ainda publicada | `.../api/pinpoint/job/561860` → **200** |
+| `558871` | **"Position not available"** | `.../api/pinpoint/job/558871` → **404** |
+
+**A causa, e ela vai voltar:** o relatório mediu em `ttkgames.pinpointhq.com/postings.json`, o
+quadro cru do ATS; o site do estúdio consome `ttk-strapi-….ondigitalocean.app/api/pinpoint/job/<id>`,
+com **outro espaço de identificadores**. **As duas respondem 200 e as duas são oficiais.**
+
+**A regra:** quando duas fontes oficiais discordarem sobre um id, vale **a rota que o candidato
+usa**, porque é nela que ele clica em Apply. O desempate é abrir a página no navegador. Um
+`postings.json` que não conhece o id do site não prova que a vaga morreu, prova que são dois
+catálogos.
+
+**E o quadro do site mostrou o que o `postings.json` não mostrou:** uma **Lead Environment Artist**
+(`562172`), efetiva e híbrida em Estocolmo, com faixa publicada de 60.000 a 85.000 SEK por mês e
+zero dos dezessete termos. **Alvo novo achado justamente por desconfiar do relatório.**
+
+### As outras armadilhas de "vaga morta" desta revalidação
+
+- **Vaga DESLISTADA mantém a página no ar.** A Netflix *Head of Characters* (Vancouver), que era a
+  **nº 2 da fila**, responde **200** na página e na API de detalhe, mas o id `790317384604` **não
+  está no quadro**. Página viva não é requisição viva: o teste que vale é procurar o id na
+  **listagem** do quadro, não abrir a página dele.
+- **O arquivo pode se contradizer sozinho.** A entrada nº 44 (Behaviour, *7 Days to Die*) estava na
+  fila para enviar, e os blocos de "Cuidados" das entradas nº 1 e nº 3 do MESMO arquivo já diziam
+  que ela tinha sido enviada. **Quem resolveu foi o Gmail**: recibo do Lever em 30/08. Antes de
+  mandar, procure o recibo pelo nome do estúdio.
+- **Duplicata dentro da própria fila.** Quantic Dream aparecia duas vezes com o mesmo uuid do
+  Lever, e a Gigantic Duck também, esta última **posta por mim** algumas horas antes sem eu ter
+  feito grep da URL no arquivo. **Antes de acrescentar entrada, faça grep do link.**
