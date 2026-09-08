@@ -1825,3 +1825,33 @@ com erro, diz na cara que é pontuação.
 pontuação**, que não desenha desafio nenhum. Não há o que burlar e não se tenta. O que se faz é
 medir, escrever o dossiê campo a campo e mandar para a fila do Vini, onde o mesmo formulário custa
 menos de um minuto **porque a pontuação do navegador dele é outra**.
+
+---
+
+## 08/09, à noite — QUANTO VALE REABRIR PORTA MORTA: 4,3%, e o número tem endereço
+
+A campanha descobriu hoje, seis vezes, que "porta morta" era **identificador errado**. A pergunta
+seguinte era óbvia: vale varrer o registro inteiro atrás disso? **Foi medido em 509 entradas**
+(48 do `PORTAIS`, 130 do garimpo do 3DVF, 21 do Canadá e 310 URLs da Europa). **Reabriram 22, ou
+4,3%.** E a média esconde o que interessa, porque a taxa é MUITO desigual:
+
+| O que o registro dizia | Taxa de reabertura | O que fazer com isso |
+|---|---|---|
+| `HTTP 0` (não resolveu) | **~6%**, ou seja **94% seguem mortas** | **Não varra de novo.** O painel acertou. |
+| `403` | **~80% eram FALSO NEGATIVO** | **Este é o bolso que vale.** Era o cliente, não o estúdio. |
+| `/careers` deu 404 | 9 de 23 tinham caminho vivo | Vale, mas só 1 tinha vaga da disciplina atrás. |
+| slug de ATS trocado | **1 acerto em 24** | **A Snowprint foi sorte, não padrão.** |
+
+**A conclusão honesta, e ela corrige uma euforia minha:** as seis reaberturas da manhã eram
+**casas grandes e visíveis**, onde o erro de identificador é comum porque a marca e o slug
+divergem. **A cauda longa é microestúdio morto de verdade.** Reabrir vale como varredura dirigida
+ao `403` e a nomes conhecidos, e **não** como varredura geral.
+
+**O achado que pagou a rodada:** **UFX Studios** (Bruxelas), registrada como `site-fora-do-ar` por
+**dois erros somados** — `http://` simples e o caminho `/careers`, que não existe lá.
+`https://ufxstudios.com/join-us/` responde **200** com quatro vagas. Casa nova, dedupe conferido.
+
+**Duas correções de registro que saíram junto:** a **Novarama** não está inacessível, está
+**fechada** (falência em março de 2024); e a **Radiant Worlds** não morreu, **virou Rebellion
+Warwick** em 2018. Domínio que some não quer dizer a mesma coisa em todos os casos, e escrever
+"não responde" apaga essa diferença.
