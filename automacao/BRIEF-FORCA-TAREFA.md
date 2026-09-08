@@ -1296,3 +1296,60 @@ falsos que a campanha já derrubou passa de vinte.
 nesta tabela. Se estiver, pule sem investigar. Se não estiver, leia o `validThrough` do
 JSON-LD antes de qualquer outra coisa. **Agregador mantém anúncio morto indexado por anos**, e
 cada um deles custa uma rodada de agente se for tratado como descoberta.
+
+---
+
+## 08/09, 07h20 UTC: "a fila está vazia" era uma fila com hora marcada
+
+Cheguei na virada do dia com o relatório da noite dizendo que **a fila de formulário automatizável
+estava esgotada**. Fui conferir em vez de aceitar, e o número não sustentava a frase: das 482
+entradas abertas do painel, filtrei as que são requisição de verdade em ATS que a campanha sabe
+enviar, e sobraram 72; li a nota de cada uma. A esmagadora maioria tinha motivo escrito e válido
+(parede medida, veto de residência, disciplina errada, vaga expirada, duplicata). **Duas não
+tinham.**
+
+Bluehole `8517791002` e Loonshot `8651145002` estavam marcadas, com todas as letras, como
+**"REQUISICAO LIVRE E NAO ENVIADA POR DECISAO ESCRITA... o motivo nao e da vaga, e de ritmo"**: as
+duas casas já haviam recebido candidatura em 07/09 de manhã, e a regra de **uma mensagem por casa
+por dia** proibia a segunda. A nota da própria entrada dizia *"vale para uma rodada de OUTRO DIA"*.
+
+O outro dia tinha chegado às 00h00 UTC, sete horas antes, e ninguém tinha voltado para olhar o
+relógio. Enviei as duas às 07h32 e 07h33, com prova dupla nas duas (URL `/confirmation` mais o
+texto de agradecimento na tela) e o código de segurança do Greenhouse lido no Gmail e devolvido no
+formulário. Hoje a Loonshot tem outra livre, a `8085897002`, e ela agora está segurada pela mesma
+regra: é de amanhã.
+
+**A regra que fica: adiamento por RITMO não é fila vazia, é fila com hora marcada, e quem escreve
+"fica para outro dia" tem que deixar a data.** Uma entrada adiada some no meio de 465 entradas
+abertas, todas visualmente idênticas, e a rodada seguinte lê "aberta" e vai atrás do motivo, acha
+um parágrafo que começa com NÃO ENVIADA, e passa adiante. Antes de dizer que o poço secou, filtre
+o painel por `outro dia|outra rodada|segurada de proposito|mesmo dia` — hoje isso custou uma linha
+de Python e devolveu duas candidaturas reais.
+
+E o corolário, que é o mais caro: **relatório de agente dizendo "não havia trabalho" é hipótese,
+não medição.** A frase custou zero para escrever e teria custado duas candidaturas se eu tivesse
+acreditado nela.
+
+## 08/09, 08h05 UTC: o Workable, remedido do jeito certo, continua de pé
+
+A lição de 07/09 dizia que diagnóstico sofisticado de parede é o menos re-testado, então re-testei
+o mais sofisticado que a campanha tem. **A parede continua**, e agora com prova melhor do que a
+que tínhamos:
+
+- **Probe leve, quatro contas diferentes** (One Of Us, Side, Sperasoft e Sawhorse): o script e o
+  widget do `challenges.cloudflare.com` já estão no DOM **antes de qualquer clique**. Não é uma
+  conta mal configurada, é o Workable.
+- **Teste de verdade, One Of Us Modeller:** preenchi o formulário inteiro, com leitura de volta
+  conferindo os dez campos, o radio de patrocínio em YES e a caixa de GDPR marcada, e **cliquei em
+  Submit application**. O que apareceu foi o Turnstile **interativo**, a caixinha *Verify you are
+  human* por marcar, com o botão congelado em *Submitting...* e **zero POST saindo**. É o mesmo
+  desenho do print da Lighthouse Games de 07/09, agora em segunda conta independente.
+
+Desafio de clique não se contorna, pela regra da campanha. **O Workable é fila do Vini, e o
+registro disso agora vale mais**: não é "um agente tentou e não deu", é medição em duas contas com
+print, mais o widget provado em outras duas.
+
+**O que sobra de aproveitável, e é bastante:** `apply_workable3.js` mais o arquivo de respostas
+enchem o formulário sozinhos em um minuto. A entrada nº 40 da FILA-DO-VINI já saiu com todos os
+campos e a carta prontos para colar. **Parede que não se atravessa ainda dá para deixar
+destrancada até a última volta da chave.**

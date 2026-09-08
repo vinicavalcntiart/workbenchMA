@@ -1,6 +1,6 @@
-# FILA DO VINI — 39 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite)
+# FILA DO VINI — 40 candidaturas para mandar com as suas mãos (07/09, corrigida de novo à noite; nº 40 acrescentada em 08/09)
 
-**39 vagas na fila, tempo total estimado 2h10 (130 minutos), todas com formulário e nenhuma por email.**
+**40 vagas na fila, tempo total estimado 2h14 (134 minutos), todas com formulário e nenhuma por email.**
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
@@ -1180,6 +1180,56 @@ Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work rem
 **Cole nos campos:** exatamente os mesmos da nº 2.
 
 **Cuidados:** **não aplique** na `790317298520` (Character Modeling Supervisor, Sydney): você já aplicou nela em 31/08.
+
+## 40. One Of Us — Modeller — Paris, França (híbrido, contrato)
+
+**Link direto:** https://jobs.workable.com/view/2rTHdox84n1Ge86ez2adUb/hybrid-modeller-in-paris-at-one-of-us
+**Por que vale:** casa de VFX de cinema premiada, com estúdios em Londres e Paris, e esta é a vaga de MODELAGEM, o cargo que o briefing define como o seu. O quadro tem três da disciplina em Paris (Modeller, Texture Artist e Look Development Artist) e **manda-se só esta**, para a casa não receber três do mesmo candidato. **Não há veto de residência nem no anúncio nem no formulário**: a única pergunta de visto é `Do you require sponsorship to work in France?`, e perguntar não é vetar.
+**A parede:** Turnstile da Cloudflare, a caixinha **Verify you are human**. Medida por mim em 08/09 às 08h05: preenchi o formulário inteiro e cliquei em Submit application de verdade; o botão congelou em *Submitting...*, a caixinha apareceu por marcar e nenhum POST saiu. Desafio de clique não se contorna, então esta é sua de direito. **Nada foi enviado** e a garra foi solta na sequência.
+**Tempo estimado:** 4 min
+**Reconferida hoje, 08/09**: anúncio `published` na API do Workable, Paris, Île-de-France.
+
+**Como é a tela:** o anúncio abre na aba *Overview*; clique em **Apply now** e o formulário abre por cima.
+
+**Cole nos campos:**
+
+| Campo | O que colar |
+|---|---|
+| First name / Last name / Email | DADOS FIXOS |
+| Phone | opcional nesta casa, pode deixar em branco |
+| Address (obrigatório) | `Olinda, Pernambuco` |
+| Resume (obrigatório) | o PDF do CV |
+| *Please provide your showreel of production work and necessary passwords* | `https://www.artstation.com/viniciuscavalcanti (no password required)` |
+| *Please provide your Linkedin profile* | `https://www.linkedin.com/in/vinicavalcnti/` |
+| *What is your current notice period?* | `One month notice from my current contract.` |
+| *What are your salary expectations per annum before tax?* | `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 45,000 per year.` |
+| *Do you require sponsorship to work in France?* | **YES** (é a verdade) |
+| Caixa da Privacy Notice | marcar |
+
+**Carta (obrigatória nesta casa), cole inteira:**
+
+```
+Dear One of Us team,
+
+I am writing about the Modeller role in Paris. I am a Senior 3D Character Artist with more than ten years in stylized characters, and modelling is the part of the pipeline I have owned end to end for most of that time.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero characters from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, look development and engine integration. On The Wingfeather Saga season 1 at Angel Studios I modelled and hand-painted the characters, so the surface treatment was mine from block-in to final. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's defined style, with revision rounds as routine, which is the working relationship a film facility asks for.
+
+I deliver the whole asset rather than one stage of it: high poly, retopology, UVs, bake, texture, LODs and engine. I have been Senior for five years, I review other artists' work and set the asset standard, and I founded and run my own character art school. My tools are ZBrush, Substance Painter and Designer, Maya, Marmoset, Houdini for grooming, and both Unreal and Unity.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles.
+
+I want to relocate and I am fully open to moving to Paris for the role. I would need visa sponsorship in France. My academic background, with an honours laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong case for it.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti
+```
+
+**Cuidados:** as outras duas da mesma casa (Texture Artist e Look Development Artist, também em Paris) ficam **de fora de propósito**, uma por casa. As vagas de arte em Bengaluru estão fora do recorte geográfico.
 
 ---
 
