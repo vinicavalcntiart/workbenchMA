@@ -796,7 +796,7 @@ const STUDIOS = [
  ["Sun Creature (2ª via)","Dinamarca","jobs@suncreature.com",15,"ok"],
  ["Waterproof Studios (2ª via)","Canadá","jobs@waterproofstudios.com",15,"ok"],
  ["Cakefish (Dreamthorn)","Noruega/Remoto","join@dreamthorn.com",15,"ok"],
- ["Milford","Suécia","careers@milford.se",16,"ok"],
+ ["Milford","Suécia","careers@milford.se",16,"ok","respondeu"],
  ["Brikk Animation","Suécia","work@brikk.se",16,"ok"],
  ["Light Brick Studio","Dinamarca","jobs@lightbrick.com",16,"ok"],
  ["Flashbulb Games","Dinamarca","job@flashbulbgames.com",16,"ok"],
@@ -828,7 +828,7 @@ const STUDIOS = [
  ["Parasol Island","Alemanha","hr@parasol-island.com",16,"ok","aguardando"],
  ["Mimic Productions","Alemanha","careers@mimicproductions.com",16,"ok"],
  ["Limbic Entertainment","Alemanha","applications@limbic-entertainment.com",16,"ok"],
- ["UPP","Tchéquia","joinupp@upp.cz",16,"ok"],
+ ["UPP","Tchéquia","joinupp@upp.cz",16,"ok","recusado"],
  ["Robot Entertainment","EUA","recruiting@robotentertainment.com",16,"ok"],
  ["Owlchemy Labs","EUA","jobs@owlchemylabs.com",16,"ok"],
  ["Mighty Coconut","EUA","jobs@mightycoconut.com",16,"ok"],
@@ -918,7 +918,7 @@ const STUDIOS = [
  ["Tactical Adventures","França","jobs@tactical-adventures.com",15,"ok"],
  ["Microids","França","recruitment@microids.com",15,"ok"],
  ["Tindalos Interactive","França","contact@tindalos-interactive.com",15,"ok"],
- ["Old Skull Games","França","contact@oldskullgames.com",15,"ok"],
+ ["Old Skull Games","França","contact@oldskullgames.com",15,"ok","recusado"],
  ["BUF","França","jobs_paris@buf.com",15,"ok"],
  ["Hocus Pocus Studio","França","job@hocuspocus-studio.fr",15,"ok"],
  ["Trimaran VFX","França","contact@trimaran.com",15,"ok"],
@@ -3944,6 +3944,7 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-08","porta","A Milford confirma que o encaminhamento interno funcionou","O Demian passou sua candidatura adiante dentro da Milford Animation Studios e a Ladan Adhami, do recrutamento, respondeu dizendo que seu perfil e impressionante, que nao ha vaga aberta agora e que voce entra na lista de recursos deles. Nao e vaga, mas e a prova de que a estrategia de escrever para quem nao e RH chega em alguem."],
  ["2026-09-08","nao","Aruma Studios responde que nao faz 3D","O diretor tecnico Ruben Lopez respondeu a sua carta de 06/09 dizendo que o estudio nao faz 3D e que o time do projeto novo ja esta fechado. Nao e um nao de vaga, e um nao de disciplina: a casa inteira sai da lista, e o follow-up que estava em rascunho para eles foi apagado antes de sair."],
 ["2026-09-08","porta","A Santa Monica Studio abriu por pessoa pela primeira vez, e cinco reservas presas por regra de dias seguidos foram liberadas","Rodada do Joe das 06h-07h UTC. UM nome novo: Josiah Scholten, Senior/Lead Character Artist creditado no art blast oficial da ArtStation Magazine sobre God of War Ragnarok, na Santa Monica Studio (PlayStation), casa que até hoje só tinha candidatura por portal (Sr 3D UI Artist, 31/08). Endereço pelo padrão nome.sobrenome@sony.com, já provado em padroes-dominio.md por Jeremiah Zanin e Hamed Sabri, confirmado como domínio do próprio Santa Monica Studio e não da Sony Pictures. CINCO RESERVAS DE RODADAS ANTERIORES, achadas em 06 e 07/09 e travadas só pela regra de não escrever em dias seguidos na mesma casa, tiveram o gap cumprido hoje e ganharam rascunho: Eamonn Butler (Chief Animation Officer, Cinesite), Glenn Melenhorst (VFX Supervisor, Framestore, crédito em How To Train Your Dragon nomeado ao VES 2026), Daniel Cox (Head of Art, Image Engine), Nuria Mateos (Design Producer, User T38) e Christophe Courgeau (Head of Environments, MPC Paris, carta reconhecendo o desencaixe de disciplina e pedindo encaminhamento). ACHADO QUE MUDOU O PLANO: a Weta Workshop seria alvo óbvio por um padrão novo (nome.sobrenome@wetaworkshop.co.nz, provado por lisa.birchall@wetaworkshop.co.nz publicado na página de contato, abrindo Rebekah Tisch, Supervising Art Director), mas a checagem no Gmail antes de escrever achou que a casa JÁ RESPONDEU em 07/09 à noite (Game Studio deles fechou); pela regra dura, thread de quem respondeu é do Comunicador, e a linha ficou registrada sem carta. O QUE NÃO RENDEU: impressum e data-cfemail em ~19 domínios de jogos alemães e crew/contato em ~30 domínios pequenos da Escandinávia e Benelux devolveram só caixa genérica; páginas de privacidade de estúdios coreanos grandes (Nexon, Pearl Abyss) são SPA em JavaScript e não abrem por curl; o log de commits do O3DE (Amazon Games) não tem nenhum e-mail @amazon.com corporativo, só contribuidores externos.",""],
 ["2026-09-07","porta","O EUROPEU virou a rodada para EMAIL na Suíça, Finlândia e Holanda, e achou cinco portas verificadas","Última rodada do O EUROPEU antes do prazo, redirecionada pelo Vini de formulário para email porque a fatia europeia de portal já estava fechada. Varrida a lista de 129 estúdios gamedevmap de CH/FI/NL nunca contatados (curl em /, /careers, /jobs, /about, /team, /contact de cada domínio, sem navegador), a maioria é indie de 1 a 10 pessoas sem vaga de arte e sem capacidade de patrocínio. Cinco passaram no corte de encaixe com endereço confirmado na própria fonte: Stray Fawn Studio (Zurique, Niche e Kill Your Darlings, contato aberto embora sem vaga hoje), Cosmic Division (Helsinque, estúdio novo do Harry Krueger, ex-diretor de Returnal e Nex Machina na Housemarque, confirmado por gamedeveloper.com e gematsu.com), Kalla Gameworks (Kuopio, endereço pessoal do CEO Janne Mikkola achado na página de equipe, time de 8 pessoas com um único 3D Artist), Black Cube Games (Holanda, endereço decodificado do ofuscador Cloudflare data-cfemail, estúdio de 11 anos com linha de Art Outsourcing) e GAMEDIA (Alkmaar, endereço publicado na página de jobs, que lista Game Artist entre os cargos que costumam contratar, mas exige presença a até 40km de distância). As cinco entraram como rascunho no Gmail, aguardando o Vini anexar CV e carta e enviar. Nenhuma tem vaga de personagem aberta hoje; todas foram lidas na fonte oficial em 07/09.",""],
