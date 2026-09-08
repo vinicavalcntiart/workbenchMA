@@ -1711,3 +1711,51 @@ e `snowprint`.
 
 **Estado hoje:** três vagas no quadro inteiro da Pixar, **nenhuma da disciplina** (On-Call Chef,
 Staff Systems Engineer e Senior Research Scientist). Reconferir passou a custar um curl.
+
+---
+
+## 08/09 — TEAMTAILOR: duas armadilhas que reprovam o envio SEM DIZER QUAL CAMPO
+
+Medidas na Sandbox Interactive (Lead 3D Environment Artist, Berlim), com clique de verdade, e
+custaram **dois envios reprovados** antes de aparecerem. As duas terminam na mesma tela:
+
+> *"Your answers could not be saved. Review them and try again, or contact the company if the
+> issue persists."*
+
+Essa frase **não diz qual pergunta**, e o formulário volta com nome, telefone, CV e carta ainda
+preenchidos, o que faz parecer erro de rede. Não é: é `HTTP 422` no `POST /applications`.
+
+**Como descobrir qual campo, em uma linha:** o `apply_teamtailor.js` agora grava a resposta 422
+inteira em `rede_<slug>_422.html` e o corpo enviado em `rede_<slug>_422.req.txt`. O HTML que volta
+traz `aria-invalid="true"` **no input exato** que reprovou. Sem isso, só resta adivinhar.
+
+### Armadilha 1 — pergunta CONDICIONAL escondida continua OBRIGATÓRIA no servidor
+
+*"Were you referred to this role by someone at Sandbox Interactive?"* é `boolean`. A seguinte,
+*"If so, kindly provide their name"*, é `text` marcada como **Required**, e o formulário a
+**esconde** quando a resposta é No. O `fill` do Playwright espera o campo ficar visível, estoura
+30 s e **mata a rodada inteira com ERR**, com o formulário já todo preenchido.
+
+E pular também não serve: o servidor devolveu `aria-invalid="true"` **nela**, escondida e tudo.
+**Campo invisível se escreve pelo setter nativo** (`value` + `input`/`change`/`blur`), nunca com
+`fill`, e nunca se pula por estar escondido.
+
+### Armadilha 2 — existe um QUINTO tipo de pergunta, `number`, e o detector não o via
+
+O detector do Teamtailor casava `text|boolean|choice|choices|range|date`. A pergunta
+*"How many years of experience do you have in 3D environment art?"* é **`number`**, e por isso
+**não aparecia nem como pendente**: o script dizia que estava tudo respondido e o envio voltava
+reprovado. É o quinto tipo descoberto assim, depois de `choice` (Coffee Stain North), `date`
+(Fool's Theory), `choices` (Ankama) e `range` (Triband). **Todas as cinco falharam do mesmo jeito
+silencioso.** Ao encontrar Teamtailor novo, rode antes o `tt_qdump.js`, que despeja índice, TIPO,
+opções e, no `range`, o `min`/`max` (na Sandbox a escala era **1 a 10**, não 1 a 5).
+
+### E a rede: o navegador NÃO fala com o proxy do ambiente diretamente
+
+Depois de um reinício, o `HTTPS_PROXY` do ambiente mudou de porta e o Chromium apontado direto
+para ele devolveu `ERR_CONNECTION_RESET` **em tudo, até em `example.com`**, enquanto o `curl`
+respondia 200. Parece site bloqueando automação e é a ponte: o navegador precisa do `bridge.js`
+em `127.0.0.1:18080`, e cada chamada de Bash tem seu próprio namespace de rede, então a ponte
+**tem de subir na mesma chamada**. É para isso que existe o `sh hb_run.sh <script>.js ...`, que
+sobe a ponte, espera ela responder 200 e ainda dá o `xvfb-run` (sem X server o Playwright headed
+morre com *"Looks like you launched a headed browser without having a XServer running"*).
