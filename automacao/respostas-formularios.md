@@ -3376,3 +3376,59 @@ elemento.
 **Autorização de trabalho:** o formulário não pergunta diretamente; a frase de realocação e o caso de
 visto (láurea com honras, especialização, mestrado em andamento, IELTS, publicações) cabem na resposta
 de "Why do you want to join".
+
+## Eidos-Montréal — Lead Environment Artist — Montréal (ATS NOVO: Dayforce HCM)
+
+`https://jobs.dayforcehcm.com/en-CA/eic/CANDIDATEPORTAL/jobs/2192`
+(req #158, `jobPostingId` 2192, cliente `eic`, portal `CANDIDATEPORTAL`)
+
+**Primeiro dossiê de Dayforce HCM da campanha.** Casa AAA (Deus Ex, Shadow of the Tomb Raider,
+Guardians of the Galaxy, Thief VR), 400 de Maisonneuve Ouest, Montréal. **Permanent Full-Time**,
+RPG em Unreal Engine 5, publicada em 29/05 e viva em 08/09. **Busca literal de veto no texto
+integral: `authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`,
+`French`, `français`, `bilingue`, `resident` — NENHUM.** Só diz *"offered onsite or in a hybrid
+capacity"*. Disciplina é AMBIENTE e não personagem, por isso entra como **média**.
+
+### O caminho até o formulário, medido com clique
+
+1. `/jobs/2192` → botão **Apply** → leva a `/apply?flowSelection=true`.
+2. Essa tela oferece **"Apply without an Account"** e "Already Have an Account? Sign In".
+   **A candidatura de convidado existe e não obriga criar conta.**
+3. O convidado cai em `/apply/manualApplication?applicationSource=Manual`.
+4. **ARMADILHA MEDIDA:** abre por cima um modal de Privacy Notice da Eidos com a caixa
+   *"I agree to the Privacy Statement"*. Marcar a caixa **não basta**: o botão que fecha o modal é
+   **`Save`**, não `Next`. Meu script clicou `Next`, que está ATRÁS do modal, e levou timeout de
+   15 s sem sair do lugar. Marque a caixa e clique **Save**.
+5. Atrás do modal está o assistente de **TRÊS PASSOS**: **Candidate Info → Questionnaire → Submit**.
+   O `Questionnaire` ainda NÃO foi visto, e é onde costuma morar a pergunta de autorização de
+   trabalho. **Ler antes de responder qualquer coisa.**
+
+### Campos do passo 1, nomes exatos
+
+| Campo | Valor |
+|---|---|
+| `jobPostingApplication_personalInfo_email` e `_confirmEmail` | `contact@vinicavalcanti.art` nos dois |
+| `jobPostingApplication_personalInfo_firstName` / `_lastName` | `Vini` / `Cavalcanti` |
+| `jobPostingApplication_personalInfo_middleName` | vazio |
+| `jobPostingApplication_personalInfo_linkedInURL` | `https://www.linkedin.com/in/vinicavalcnti/` |
+| `jobPostingApplication_personalInfo_mobilePhone` | do documento privado do Drive; há `_mobilePhoneCountryCode` escondido ao lado, então escolha o país no seletor e digite **só os dígitos** |
+| `jobPostingApplication_personalInfo_preferredContactMethod` | Email |
+| `jobPostingApplication_personalInfo_countryCode` / `_stateCode` / `_city` | os três são combobox de busca; cidade `Olinda` |
+| `jobPostingApplication_personalInfo_candidateSource` | combobox; o rótulo vem com `<!--_dfFormat_=html-->` grudado, é lixo do Dayforce e não parte da pergunta |
+| `jobPostingApplication_files_resume` | o PDF do CV. **Há DOIS inputs com esse mesmo `name`**, um em "Attachment" no topo e outro em "Resume Upload"; use o que está dentro do bloco Resume Upload |
+| `jobPostingApplication_files_coverLetter` | a carta |
+| `jobPostingApplication_files_additionalDocument` | opcional; o portfólio em PDF só se o link não couber em nenhum campo |
+
+Existe também **Import Resume**, que preenche sozinho a partir do CV. Não usar: sobrescreve
+campo já digitado, é o mesmo risco do *Apply with LinkedIn* da Quantic Dream.
+
+### O que FALTA medir, e é o que decide se isto é fila de agente ou fila do Vini
+
+A tela do passo 1 traz um `textarea` **`g-recaptcha-response`** e **dois iframes de captcha**, mas
+**nenhuma caixa "I'm not a robot" aparece na tela** — o print confirma. Dois iframes com textarea
+e sem caixa visível é o desenho de **reCAPTCHA invisível**, e aí o comportamento é o da Netflix:
+o formulário preenche 100 por cento e o veredito só vem no POST, que de IP de datacenter costuma
+ser recusado. **NÃO ESTÁ MEDIDO.** Só o clique em Submit, no fim dos três passos, responde.
+
+Não existe `apply_dayforce.js`. **Próximo passo concreto:** escrever o preenchedor, rodar em modo
+seco até o passo 3 para ler o Questionnaire, e só então clicar.
