@@ -1353,3 +1353,39 @@ print, mais o widget provado em outras duas.
 enchem o formulário sozinhos em um minuto. A entrada nº 40 da FILA-DO-VINI já saiu com todos os
 campos e a carta prontos para colar. **Parede que não se atravessa ainda dá para deixar
 destrancada até a última volta da chave.**
+
+## 08/09, 08h40 UTC: duas entradas da Bulkhead estavam abertas, e as duas já tinham sido enviadas
+
+Rodada do Jhon B sem fila: usei-a para varrer o que estava marcado **alta** e aberto. Peguei a
+Bulkhead Interactive, que aparecia com **duas entradas abertas**, uma IN-STUDIO e uma REMOTE, as
+duas com nota dizendo que ficavam à mão porque o formulário exigiria um print da aba *Most Played*
+do perfil Steam.
+
+**As duas já tinham sido enviadas em 07/09**, cada uma com o seu recibo e o seu remetente:
+`joe.brammer@bulkheadinteractive.teamtailor-mail.com` às 04h45 nomeando OPEN APPLICATION [REMOTE],
+e `hannah.webb@...` às 05h33 nomeando OPEN APPLICATION [IN-STUDIO], além do email de verificação
+das 05h30. O print do Steam, que a nota dava como impedimento, nem era obrigatório: o próprio envio
+registrou que o campo fica `required=false` e some da tela quando se marca Console.
+
+É o **RISCO-DUPLICATA em estado puro**: casa trabalhada, entrada aberta, e quem chega depois lê
+"aberta" como "por fazer". As duas foram fechadas com a prova do Gmail na nota.
+
+**A regra que fica:** entrada `alta` e aberta cuja nota descreve um impedimento **operacional** (um
+arquivo que só o Vini gera, um campo que a automação não preenche) é a mais provável de já ter sido
+resolvida por outra rodada sem que a linha fosse fechada, justamente porque alguém foi lá e
+resolveu. Antes de trabalhar uma dessas, **procure o recibo no Gmail pelo nome do estúdio**. Custa
+uma busca.
+
+## E uma armadilha nova, minha, na mesma rodada: varredura de captcha por curl dá FALSO NEGATIVO
+
+Varri catorze formulários de domínio próprio com `curl` procurando `recaptcha|hcaptcha|turnstile|
+datadome` no HTML, e cinco voltaram limpos. **Quatro dos cinco eram parede.** A Distillery VFX é o
+caso exemplar: o HTML não carrega script de captcha nenhum, e o modal *Verification - Please
+confirm you are human* com reCAPTCHA v2 de caixa só aparece **depois do clique em Apply Now** —
+está escrito na própria nota dela, medido em 07/09. A Gaijin tem captcha **próprio**, um campo de
+texto `name="captcha"` que nenhuma dessas quatro palavras encontra.
+
+**Ausência de palavra de captcha no HTML não é ausência de captcha.** A varredura por curl serve
+para achar candidato, nunca para declarar porta aberta; quem declara é o clique. É a mesma frase de
+07/09 pelo avesso: *"o servidor respondeu" não é "a porta abriu"* — e agora também *"o HTML está
+limpo" não é "não tem parede"*.
