@@ -633,3 +633,21 @@ cd /home/user/apply && sh hb_run.sh <script>.js
 Arquivos: `/home/user/apply/Vini_Cavalcanti_CV.pdf`, `/home/user/apply/Vini_Cavalcanti_Cover_Letter.pdf`,
 `/home/user/apply/Vini_Cavalcanti_Portfolio.pdf`. Se o atalho sumir, ache com
 `ls -d /tmp/claude-*/*/*/scratchpad/apply`.
+
+---
+
+## CORREÇÃO DE MÉTODO, 08/09: o site do estúdio pode morar em OUTRO domínio
+
+A rodada de 07/09 anotou *"aavfx.com devolve casca de 100 a 180 bytes"* e deu a **Artifex
+Animation Studios** como casa sem endereço publicado. **Estava errado.** O site institucional
+vivo deles fica em **`aastudios.ca`**, domínio diferente do domínio de email, e é lá que os
+endereços de pessoa estão publicados com nome e cargo — foi de lá que saiu `mhall@aavfx.com`,
+do dono e supervisor de VFX.
+
+**Regra que sai daí:** antes de dar um estúdio como "sem endereço publicado", confira se o
+**site institucional dele fica em domínio diferente do domínio de email**. Casca vazia num
+domínio não quer dizer casa sem site; quer dizer que o site está noutro lugar.
+
+É a mesma família das quatro portas que hoje pareciam fechadas por identificador errado
+(`playgroundgames`, `paradoxinteractive`, `snowprint` e o site do Workday da Pixar): **o que
+parece porta fechada costuma ser endereço errado.**
