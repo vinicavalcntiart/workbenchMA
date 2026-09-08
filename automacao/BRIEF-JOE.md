@@ -99,10 +99,14 @@ Ordem de confiança, da melhor para a pior:
 
 1. **Publicado**: o endereço aparece no site do estúdio, na assinatura de um email que já
    chegou, numa apresentação, num crédito. Confiança **alta**.
-2. **Padrão confirmado no mesmo domínio**: a campanha já tem 65 endereços de pessoa em
-   `enviados.csv`. Se um estúdio tem `nome.sobrenome@estudio.com` funcionando, o padrão
-   vale para outra pessoa do mesmo domínio. Confiança **média**, e diga qual endereço
-   serviu de prova.
+2. **Padrão confirmado no mesmo domínio**: se um estúdio tem `nome.sobrenome@estudio.com`
+   funcionando, o padrão vale para outra pessoa do mesmo domínio. Confiança **baixa**, e diga
+   qual endereço serviu de prova.
+   **NÃO é média, e isto foi MEDIDO, não opinado.** Em 06/09 o Vini disparou 24 cartas de uma
+   vez: das 17 com endereço PUBLICADO, 16 entregaram; das 8 com endereço MONTADO por padrão,
+   **5 quicaram**. Padrão de domínio falha em mais de 60% das vezes, porque o log de commit
+   prova que o FORMATO existe, não que aquela pessoa continua na casa nem que a caixa está
+   viva. Um endereço de um commit de 2019 é um endereço morto com o formato certo.
 3. **Padrão só inferido**, sem nenhum endereço conhecido daquele domínio: confiança
    **baixa**. Pode entrar, mas marcada como baixa, e nunca como se fosse certa.
 
@@ -246,8 +250,9 @@ dos Estados Unidos leva a frase fixa de realocação no fim do parágrafo 2.
      de commits do GitHub, devolve nome e email pareados.
    - **Patentes**, que listam inventor com vínculo institucional.
    O que sai daí é de dois tipos, e os dois valem: **endereço real de pessoa** (confiança
-   alta, citando o paper ou o commit), e **o padrão do domínio provado**, que promove
-   qualquer nome novo daquela casa para confiança média.
+   alta, citando o paper ou o commit), e **o padrão do domínio provado**, que dá a qualquer
+   nome novo daquela casa um endereço de confiança **baixa** — tentativa barata, nunca via
+   confiável. Ver a medição de 06/09 no item 2 da ordem de confiança.
    Ressalva honesta a escrever na nota: essas fontes puxam mais gente técnica, TD e
    engenheiro, do que diretor de arte. Um TD sênior não contrata, mas trabalha ao lado de
    quem contrata, e o padrão de domínio que ele revela serve para a casa inteira.
@@ -264,11 +269,13 @@ dos Estados Unidos leva a frase fixa de realocação no fim do parágrafo 2.
    padrão de domínio provado, porque os dois nomes de arte encontrados já estão em outra
    casa. Confirme que a pessoa ainda trabalha lá antes de entregar a linha.
 
-## Padrões de domínio já provados, use para confiança média
+## Padrões de domínio já provados, e eles valem confiança BAIXA
 
 Platige (`inicial+sobrenome`), nWave (`inicial+sobrenome`), Reel FX (`nome.sobrenome`),
 Squeeze (`inicial+sobrenome`), Electric Square (`nome.sobrenome`), Qvisten (`nome.sobrenome`).
-Qualquer pessoa nova dessas casas entra direto como confiança média, citando o padrão.
+Qualquer pessoa nova dessas casas entra com endereço montado e confiança **baixa**, citando o
+padrão. **Nunca gaste a única carta de uma casa grande num endereço montado:** se a casa tem
+formulário ou via de recrutamento publicada, ela vem primeiro.
 
 ## A técnica que rendeu, e que é a rotina
 
@@ -322,7 +329,7 @@ LAIKA, Netflix Animation e Blizzard usando só busca por crédito de filme recen
 entrevista de imprensa, cruzada com os padrões de domínio de `padroes-dominio.md`. O
 método é este, e é para repetir: **ache o nome e o cargo no crédito ou na entrevista, e
 deixe o endereço sair do padrão do domínio**, nunca o contrário. Duas ressalvas honestas:
-o padrão dá confiança média, não alta, e o gancho da carta precisa vir da mesma matéria
+o padrão dá confiança baixa, não alta nem média (medição de 06/09), e o gancho da carta precisa vir da mesma matéria
 que deu o nome, senão a carta vira genérica com um nome em cima.
 
 **O que ainda não foi minerado, em ordem de rendimento provável:**
@@ -410,7 +417,7 @@ qual casa cada pessoa é (Cinesite, Image Engine, Trixter, Imaginarium).
 
 1. **Página de crew** dá o NOME e o CARGO, e é fonte oficial do próprio estúdio.
 2. **Log de commit do código aberto da mesma casa** dá o PADRÃO DO DOMÍNIO.
-3. O endereço sai do padrão, com confiança média, citando os dois.
+3. O endereço sai do padrão, com confiança baixa, citando os dois.
 
 Foi assim que 06/09 abriu **duas casas grandes de uma vez**: Gaffer e Cortex, mantidos pela
 própria Image Engine, deram trinta endereços e provaram os dois padrões (o da Image Engine e o

@@ -3503,7 +3503,9 @@ Um handle de `Next` pego antes disso clica **sem erro e sem efeito**. Pegue o bo
 
 **O TELEFONE, com a regra do documento privado aplicada e conferida.** Existe um seletor separado
 `Country dialing code` (`rc_select_1`), então o campo do número leva **só os dígitos**. O resumo
-depois do `Update` imprimiu `Mobile Phone: +55 81 97306 2286`, exatamente o formato certo.
+depois do `Update` reimprimiu o telefone JA FORMATADO pelo proprio site, com o codigo do pais
+separado dos digitos, exatamente o formato que o documento privado manda. O VALOR NAO SE
+ESCREVE AQUI: o repositorio e publico, e quem confere abre o documento privado do Drive.
 
 **O QUESTIONNAIRE, que nunca tinha sido visto.** Duas perguntas, e a primeira é a de autorização:
 *"Are you currently authorized to work in Canada?"* (obrigatória) e *"If you're not in Quebec, are

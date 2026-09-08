@@ -73,6 +73,34 @@ if [ -n "$PROBLEMAS" ]; then
   exit 1
 fi
 
+# PORTA DA CONFIANCA DO EMAIL, instalada em 08/09 pela MESMA razao das duas portas acima:
+# regra escrita em brief que ja falhou vira porta. Em 06/09 mediu-se que endereco MONTADO por
+# padrao de dominio quica em mais de 60% das vezes (dos 24 disparos daquele dia: 17 publicados,
+# 16 entregues; 8 montados, 5 quicaram), e padroes-dominio.md passou a dizer que endereco de
+# padrao entra como BAIXA, nunca media. O BRIEF-JOE.md continuou ensinando "media" em seis
+# lugares contra dois, e a rodada de 08/09 seguiu a maioria: 16 linhas do pessoas.csv estavam
+# marcadas media com endereco montado. Confianca inflada e pior que confianca baixa, porque a
+# rodada seguinte gasta a unica carta da casa num endereco morto com o formato certo.
+INFLADAS=$(python3 - "$DIRR/automacao/pessoas.csv" <<'PY'
+import csv, sys
+try: linhas = list(csv.reader(open(sys.argv[1], encoding='utf-8')))
+except FileNotFoundError: sys.exit(0)
+for i, x in enumerate(linhas[1:], start=2):
+    if len(x) > 7 and x[6] == 'media' and 'padr' in x[7].lower() and 'publicad' not in x[7].lower():
+        print(f"  linha {i}: {x[1]} / {x[3]} / {x[5]}")
+PY
+)
+if [ -n "$INFLADAS" ]; then
+  echo "FALHA DE CONFIANCA NO pessoas.csv: endereco MONTADO por padrao marcado como media."
+  echo "$INFLADAS"
+  echo
+  echo "Endereco montado por padrao entra como BAIXA. Padrao prova que o FORMATO existe, nao"
+  echo "que a pessoa continua na casa nem que a caixa esta viva. Medicao de 06/09: 5 de 8"
+  echo "montados quicaram, contra 1 de 17 publicados. Se o endereco esta PUBLICADO, escreva"
+  echo "isso na fonte, e ai ele e alta e nao media."
+  exit 1
+fi
+
 python3 - "$DIR/../docs/index.html" > "$TMP/app.js" <<'PY'
 import re, sys
 s = open(sys.argv[1], encoding='utf-8').read()
