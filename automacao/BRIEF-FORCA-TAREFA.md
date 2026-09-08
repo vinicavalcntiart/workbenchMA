@@ -1930,3 +1930,30 @@ vaga. Foi o que impediu quatro candidaturas repetidas hoje à noite.
 atravessa sem parede (Teamtailor, provado hoje na Sandbox; Greenhouse, provado em quatro casas),
 **o estoque conhecido está esgotado**. O que sobra no painel é captcha de desafio, que não se
 burla. Isso não é fila seca por falta de garimpo: é fila que virou fila do Vini.
+
+---
+
+## 08/09, 23h50 — JOBVITE: a página da vaga e o FORMULÁRIO são URLs diferentes, e uma delas mente calada
+
+Ensaio a seco da DNEG *Facial Modeller*, feito **vinte minutos antes** da hora marcada do envio
+justamente para não descobrir problema na hora. Bom que foi feito:
+
+| URL | O que o preenchedor encontra |
+|---|---|
+| `…/job/oF9Yyfw4` (a página da vaga) | **`=== CAMPOS: 0 ===`**, quinze rótulos como `MISSING`, **zero `input[type=file]` no DOM** |
+| `…/job/oF9Yyfw4/apply` | **11 campos preenchidos**, todos os obrigatórios, e os três inputs de arquivo aparecem |
+
+**A página da vaga responde 200, mostra o anúncio inteiro e não tem formulário nenhum.** Quem
+julgar por ela conclui "formulário quebrado" ou "vaga sem candidatura", e as duas conclusões são
+falsas. O link certo está no HTML da própria página, como `href="/…/job/<id>/apply"`.
+
+**Por que não apareceu nas duas candidaturas de 08/09 de manhã:** naquelas o preenchedor recebeu
+uma URL que já era a de candidatura. O defeito só aparece quando se copia o link do anúncio, que é
+o que um humano faz naturalmente. **Regra: no Jobvite, sempre acrescente `/apply` ao link do
+anúncio antes de preencher.**
+
+**Detalhe honesto desta vaga:** o formulário da *Expression of interest* **não tem campo de
+portfólio nem de link**, ao contrário das outras duas da mesma casa. Os quatro rótulos que ficaram
+`MISSING` (pretensão, disponibilidade, showreel e senha) **não existem aqui**, não é falha do
+preenchedor. Sem campo de link, a candidatura vai com CV e nada mais, e o ArtStation viaja só
+dentro do currículo. Não há o que consertar; há o que registrar.
