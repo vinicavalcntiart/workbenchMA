@@ -1389,3 +1389,41 @@ texto `name="captcha"` que nenhuma dessas quatro palavras encontra.
 para achar candidato, nunca para declarar porta aberta; quem declara é o clique. É a mesma frase de
 07/09 pelo avesso: *"o servidor respondeu" não é "a porta abriu"* — e agora também *"o HTML está
 limpo" não é "não tem parede"*.
+
+## 08/09, 08h20 UTC: os dois testes de parede que este brief manda fazer NÃO DISCRIMINAM NADA
+
+Este arquivo diz, em duas linhas curtas: *"BAMBOOHR: cheque a flag `ATS_CAREERS_SITE_RECAPTCHA`.
+LEVER: cheque `hcaptcha` no `/apply`."* Fui usar as duas para varrer a fila aberta e descobri que
+**as duas devolvem a mesma resposta para todo mundo**:
+
+- **BambooHR, 17 contas abertas** (Cinesite Montréal e Vancouver, Image Engine, Barnstorm, Stirling,
+  Streamline, OWI, Funday, nWave, Amuse, Triotech, IGG, Budge, Soul Assembly, Stormind, Beta Dwarf,
+  Game Mode One): as 17 trazem `ATS_CAREERS_SITE_RECAPTCHA` no `/careers`, com HTML de tamanho
+  praticamente idêntico, porque a string vem no **pacote global de feature flags da plataforma**,
+  não na configuração do estúdio. Nas páginas de vaga, nenhuma tem site key `6L...`.
+- **Lever, 12 contas abertas** (Asobo, Avalanche, Behaviour, Blackbird, Dream Games, Frontier,
+  Illumination, Jam City, Kabam, NEOWIZ, Quantic Dream, Skydance): as 12 trazem `hcaptcha` **e**
+  `recaptcha` no HTML do `/apply`, porque a biblioteca vem no pacote de toda conta.
+
+**É a mesma família de defeito da garra que respondia `JA-FEITO` para a fila inteira: um teste que
+só sabe dizer uma coisa não é um teste, é uma constante com cara de medição.** E o custo aqui é
+maior do que parece, porque este é um teste que só sabe dizer *"tem parede"* — ou seja, ele nunca
+libera nada, e todo quadro do Lever e do BambooHR que foi descartado citando esse grep foi
+descartado sem prova.
+
+**A regra que fica: para BambooHR e Lever, o único veredito válido é o clique.** Preencha em modo
+seco, clique em enviar de verdade e olhe o print. Foi o que fiz na Behaviour Senior Texture Artist
+logo em seguida: o formulário enche 100 por cento e o hCaptcha **de imagem** ("Click the shape that
+is not like the others") aparece depois do clique. A parede era real ali, mas isso eu só sei porque
+cliquei, não porque grepei.
+
+### E o falso negativo dentro da própria ferramenta
+
+O `apply_lever2.js` relatou **`captcha challenge visible: 0`** com o quebra-cabeça do hCaptcha na
+tela, visível no print. A detecção antiga só contava `iframe` com `offsetParent !== null` e altura
+maior que 100. Corrigida para somar três sinais independentes: frame do `hcaptcha.com` na lista de
+frames, `iframe` no DOM sem exigir visibilidade, e o texto do desafio em qualquer idioma.
+
+Esse falso negativo é caro por um motivo específico: **"sem captcha, só não confirmou" é o mesmo
+texto que uma porta quebrada produz.** A rodada seguinte lê isso como bug nosso e gasta a rodada
+inteira na mesma parede.

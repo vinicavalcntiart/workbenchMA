@@ -168,6 +168,16 @@ Dead by Daylight is a game made of characters, killers and licensed survivors sh
 
 ## 3. Behaviour Interactive — Senior 3D Character Artist, projeto não anunciado — Montréal, Canadá
 
+> **TERCEIRA REQUISIÇÃO DA MESMA CASA, medida em 08/09 e deixada FORA da fila de propósito.**
+> A Behaviour também tem uma **Senior Texture Artist, Dead by Daylight** (Lever
+> `55fa65fe-50b8-41e2-a406-5f185c860295`), Montréal, híbrida, permanente, e ela é da sua
+> disciplina com todas as letras. Preenchi o formulário inteiro em 08/09 às 08h20 e cliquei em
+> Submit de verdade: o formulário aceita tudo (CV com Success, os três links, BeFlex em Yes,
+> elegibilidade no Canadá em No) e aí aparece o hCaptcha de imagem, o mesmo destas duas.
+> **Não entra na fila porque seriam TRÊS candidaturas suas na Behaviour no mesmo dia**, e é
+> justamente o que a campanha decidiu evitar na Scopely e na Epic. Mande as duas de cima hoje;
+> se elas não andarem em algumas semanas, esta é a próxima, e o formulário é idêntico ao da nº 1.
+
 **Link direto:** https://jobs.lever.co/bhvr/86ddd557-7d9b-48f1-ab04-0a90ba38e2dc/apply
 **Por que vale:** segunda requisição sênior de personagem da mesma casa, híbrida em Montréal, e o anúncio pede setup e groom de cabelo em Unreal 5, que é exatamente a sua combinação. **Reconferida no ar hoje na API oficial do Lever.**
 **A parede:** hCaptcha com desafio de imagem do Lever, no envio.
