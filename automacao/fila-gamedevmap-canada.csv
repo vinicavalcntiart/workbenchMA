@@ -1,0 +1,438 @@
+# FILA DO CANADA, colhida do gamedevmap em 08/09 a pedido do Vini.
+# O gamedevmap tinha sido colhido so para EUROPA (347 portas) e OCEANIA. O Canada, que e o pais
+# PRIORITARIO da campanha, nunca tinha sido varrido. Sao 487 estudios canadenses no gamedevmap;
+# 61 a campanha ja tocou (por nome ou por dominio) e estes 426 nunca foram tocados.
+# Colheita: https://www.gamedevmap.com/index.php?country=Canada&start=<1|101|201|301|401>&count=100
+# ATENCAO, duas armadilhas medidas na colheita: (1) o PDF do Vini traz o link em http:// e o bridge
+# desta maquina responde 'use CONNECT' em http puro, entao TEM que ser https://; (2) o parametro de
+# pagina NAO e page=, e start= com count=, senao as cinco paginas devolvem as mesmas 105 linhas.
+# O QUE FAZER COM ISTO: e fila do JHON, nao do prospector. O alvo e achar FORMULARIO de candidatura
+# (careers, jobs, join-us, work-with-us) e o ATS por tras dele, nao email. Ordem: Vancouver, Montreal,
+# Toronto, depois o resto.
+# Formato: nome,tipo,cidade,estado,site,status
+2K Sports Lab,,Developer and Publisher,Vancouver,https://sportslab.2k.com/,pendente
+2TG Entertainment,,Developer,Vancouver,https://www.2tg.io/,pendente
+81monkeys,,Developer,Vancouver,https://www.81monkeys.com/,pendente
+A Thinking Ape,,Mobile,Vancouver,https://athinkingape.com/,pendente
+Activision Vancouver,,Developer and Publisher,Vancouver,https://activision.com/,pendente
+Adamvision Studios,,Developer,Vancouver,https://adamvisionstudios.com/,pendente
+Avatone,,Health,Vancouver,https://avatone.co/,pendente
+Bergamot Games,,Developer,Vancouver,https://www.bergamotgames.com/,pendente
+Biba,,Mobile,Vancouver,https://www.playbiba.com/,pendente
+Bit Byters,,Developer,Vancouver,https://www.bit-byterz.com/,pendente
+Brace Yourself Games,,Developer,Vancouver,https://braceyourselfgames.com/,pendente
+Buffalo Buffalo,,Developer,Vancouver,https://buffalobuffalo.ca/,pendente
+Captain Games,,Mobile,Vancouver,https://www.captain-games.com/,pendente
+Casual Immersions Entertainment,,Mobile,Vancouver,http://www.casimm.com/,pendente
+Charm Games,,Extended Reality (XR),Vancouver,https://www.charmgames.com/,pendente
+Cheesemaster Games,,Developer,Vancouver,https://cheesemaster-games.itch.io/,pendente
+Chevy Ray,,Microstudio,Vancouver,https://chevyray.dev/,pendente
+Chorus Worldwide,,Publisher,Vancouver,https://chorusworldwide.biz/,pendente
+Coal Car Studio,,Developer,Vancouver,https://www.coalcar.ca/,pendente
+Coldblood Inc,,Developer,Vancouver,https://coldbloodinc.studio/,pendente
+Curiobot,,Developer,Vancouver,https://www.curiobot.com/,pendente
+Cuzus Games,,Developer,Vancouver,https://cuzus.games/,pendente
+Dapper Labs,,Developer,Vancouver,https://www.dapperlabs.com/,pendente
+Demonware (Activision),,Developer and Publisher,Vancouver,https://www.demonware.net/,pendente
+DigiBC,,Organization,Vancouver,https://digibc.org/,pendente
+Dinosire,,Developer,Vancouver,https://dinosire.com/,pendente
+Dropfake,,Developer,Vancouver,https://dropfake.com/,pendente
+East Side Games,,Developer,Vancouver,https://www.eastsidegamestudio.com/,pendente
+Extremely OK Games,,Developer,Vancouver,https://www.exok.com/,pendente
+Floating Origin Studios,,Developer,Vancouver,https://www.floatingorigininteractive.com/,pendente
+FlowMotion Entertainment,,Publisher,Vancouver,https://www.flowmotionentertainment.com/,pendente
+Frosty Pop Games,,Developer and Publisher,Vancouver,https://frostypop.com/,pendente
+Full Indie,,Organization,Vancouver,https://www.fullindie.com/,pendente
+Funplus,,Mobile,Vancouver,https://www.funplus.com/,pendente
+Funselektor Labs,,Developer,Vancouver,https://www.funselektor.com/,pendente
+Greg Lobanov,,Developer,Vancouver,https://www.dumbandfat.com/,pendente
+Guide Stone Studios,,Developer,Vancouver,http://dustwalkers.ca/,pendente
+HO! Games,,Developer,Vancouver,https://ho-games-studio.itch.io/,pendente
+Half Asleep,,Developer,Vancouver,https://halfasleep.games/,pendente
+Hildring Studios,,Developer,Vancouver,https://www.hildringstudio.com/,pendente
+Hollow Tree Games,,Developer,Vancouver,https://www.hollowtreegames.com/,pendente
+IGDA British Columbia - Vancouver,,Organization,Vancouver,https://igda.org/chapters/british-columbia-vancouver/,pendente
+Illseer Games,,Developer,Vancouver,https://illseer.itch.io/,pendente
+Inkwell Games,,Developer,Vancouver,https://inkwellgames.com/,pendente
+Interdimensional Games,,Developer,Vancouver,https://www.idgi1.ca/,pendente
+Ironclad Games,,Developer,Vancouver,https://www.ironcladgames.com/,pendente
+Jetpack Interactive,,Developer,Vancouver,https://www.jetpackinteractive.ca/,pendente
+Journey Bound Games,,Developer,Vancouver,https://www.pathofgiants.com/,pendente
+Kerberos Productions,,Developer,Vancouver,https://www.kerberos-productions.com/,pendente
+Kettle Games,,Extended Reality (XR),Vancouver,https://www.kettle.games/,pendente
+LBC Studio,,Mobile,Vancouver,https://www.lbcstudios.ca/,pendente
+Lifetap Studios,,Developer,Vancouver,https://www.lifetapstudios.com/,pendente
+LocalThunk,,Developer,Vancouver,https://playbalatro.com/,pendente
+Loligo Games Canada,,Developer,Vancouver,https://loligo.games/,pendente
+Matt Makes Games,,Developer,Vancouver,https://www.mattmakesgames.com/,pendente
+Meowza Games,,Developer,Vancouver,https://meowza.org/,pendente
+Metanaut,,Extended Reality (XR),Vancouver,https://metanautlabs.com/,pendente
+Minmax Games,,Developer,Vancouver,https://www.minmax-games.com/,pendente
+MrSuicideSheep,,Developer,Vancouver,https://mrsuicidesheep.itch.io/sheepy,pendente
+Mythical City Games,,Developer,Vancouver,https://www.mythicalcitygames.com/,pendente
+Nickervision Studios,,Developer,Vancouver,https://www.adamvisionstudios.com/,pendente
+Night Garden Studio,,Mobile,Vancouver,https://www.nightgardenstudio.com/,pendente
+Ninja Robot Dinosaur,,Developer,Vancouver,http://nrdland.com/,pendente
+Nintendo of Canada,,Publisher,Vancouver,https://www.nintendo.com/,pendente
+Non-Euclidean,,Developer,Vancouver,https://www.non-euclidean.net/,pendente
+Northway Games,,Extended Reality (XR),Vancouver,https://www.northwaygames.com/,pendente
+airG,,Online,Vancouver,http://web.airgames.airg.com/airgames/,pendente
+ePlay Digital,,Mobile,Vancouver,https://www.eplaydigital.com/,pendente
+2K Games,,Developer and Publisher,Montreal,https://2k.com/,pendente
+Affordance Studio,,Serious Games,Montreal,https://affordancestudio.com/,pendente
+Akedo Studio,,Developer,Montreal,https://akedostudio.com/,pendente
+Alblune,,Developer,Montreal,https://alblune.com/,pendente
+Alex Massé,,Microstudio,Montreal,https://alexmasse.com/,pendente
+Amazon Games Montreal Studio,,Developer,Montreal,https://amazongames.com/,pendente
+Arctic Flame Games,,Developer,Montreal,https://arcticflamegames.com/,pendente
+Artifact 5,,Extended Reality (XR),Montreal,https://artifact5.com/,pendente
+Autoexec Games,,Developer,Montreal,https://autoexec-games.com/,pendente
+BKOM Studios (Aonic),,Developer,Montreal,https://bkomstudios.com/,pendente
+Bad Rez Games,,Developer,Montreal,https://www.badrezgames.com/,pendente
+BadRez Games,,Developer,Montreal,https://badrezgames.itch.io/,pendente
+Bebop Games,,Developer,Montreal,https://bebop.games/,pendente
+Bethesda Game Studios Montreal (ZeniMax Media),,Developer,Montreal,https://bethesdagamestudios.com/,pendente
+Blindspot Games,,Developer,Montreal,https://blindspot-games.com/,pendente
+Blue Lizard Games,,Developer,Montreal,https://www.bluelizardgames.com/,pendente
+Borealys Games,,Developer,Montreal,https://borealysgames.com/,pendente
+Brass Lion Entertainment,,Developer,Montreal,https://www.brasslionentertainment.com/,pendente
+Breaking Walls,,Developer,Montreal,https://www.breakingwalls.co/,pendente
+Canari Games,,Developer,Montreal,https://www.canarigames.com/,pendente
+Catnip Lab,,Developer,Montreal,https://catnip-lab.com/,pendente
+Chasing Rats Games,,Developer,Montreal,https://chasingratsgames.com/,pendente
+Clever Endeavour Games,,Developer,Montreal,https://cleverendeavourgames.com/,pendente
+Clever Plays,,Developer,Montreal,https://www.clever-plays.com/,pendente
+Cloud Chamber (2K),,Developer,Montreal,https://www.cloudchamberstudios.com/,pendente
+Colorspace Studio,,Developer,Montreal,https://www.colorspacestudio.com/,pendente
+Compulsion Games (Microsoft),,Developer,Montreal,https://www.compulsiongames.com/,pendente
+Crea-ture Studios,,Developer,Montreal,https://crea-turestudios.com/,pendente
+DONTNOD Montreal,,Developer and Publisher,Montreal,https://dont-nod.com/,pendente
+Double Stallion,,Developer,Montreal,https://dblstallion.com/,pendente
+Doubleton Game Studio,,Developer,Montreal,http://doubletongamestudio.com/,pendente
+DryGin Studios,,Developer,Montreal,https://playbioinc.com/,pendente
+Eidos Montreal,,Developer and Publisher,Montreal,https://www.eidosmontreal.com/,pendente
+Ever Curious Entertainment,,Developer,Montreal,https://evercurious.games/,pendente
+Ex Nihilo,,Developer,Montreal,https://exnihilo-games.itch.io/,pendente
+Execution Labs,,Organization,Montreal,https://www.executionlabs.com/,pendente
+Felix & Paul,,Extended Reality (XR),Montreal,https://www.felixandpaul.com/,pendente
+Flameborn Games,,Developer,Montreal,https://www.flameborngames.com/,pendente
+Floppy Goat,,Microstudio,Montreal,http://www.floppygoat.com/,pendente
+Framestore VR Studio,,Extended Reality (XR),Montreal,https://www.framestorevr.com/,pendente
+GAMERella,,Organization,Montreal,https://gamerella.ca/,pendente
+Gata Games,,Developer,Montreal,https://thegatagames.ca/,pendente
+Gearbox Software (Take-Two Interactive),,Developer,Montreal,https://gearboxsoftware.com/,pendente
+Gold Bug Interactive,,Developer,Montreal,https://goldbuginteractive.com/,pendente
+Goose Byte,,Developer,Montreal,https://goosebyte.games/,pendente
+Gridpop Games,,Microstudio,Montreal,https://gridpop.co/,pendente
+Guard Crush Games,,Developer,Montreal,https://36137805.wixsite.com/guardcrushgames,pendente
+Guedin,,Developer,Montreal,https://guedin-uchiha.itch.io/,pendente
+Haven Studios (Playstation Studios),,Developer,Montreal,https://havenstudios.com/,pendente
+Heartloop Games,,Developer,Montreal,https://heartloopgames.com/,pendente
+Hibernum Creations,,Developer,Montreal,https://www.hibernum.com/,pendente
+Highdive NetEase,,Developer,Montreal,https://highdivegames.com/,pendente
+Hololabs,,Developer,Montreal,https://www.hololabs.org/,pendente
+Hotloop Games,,Developer,Montreal,https://hotloopgames.com/,pendente
+IN|Framez Technology,,Developer,Montreal,https://www.inframez.com/,pendente
+Illogika,,Developer,Montreal,https://www.illogika.com/,pendente
+Incube8 Games,,Publisher,Montreal,https://incube8games.com/,pendente
+Indie Asylum,,Organization,Montreal,https://indieasylum.com/,pendente
+Invoke Studios (Wizards of the Coast),,Developer,Montreal,https://invokestudios.com/,pendente
+Jellysnow Studio,,Microstudio,Montreal,https://jellysnow.com/,pendente
+Jintronix,,Health,Montreal,https://www.jintronix.com/,pendente
+Juicy Beast,,Developer,Montreal,https://www.juicybeast.com/,pendente
+Kitfox Games,,Developer,Montreal,https://www.kitfoxgames.com/,pendente
+Kokoromi,,Developer,Montreal,https://www.kokoromi.org/,pendente
+Krafton Montreal Studio,,Developer,Montreal,https://kraftonmontreal.com/,pendente
+Kutoka,,Developer,Montreal,https://www.kutoka.com/,pendente
+La Guilde du jeu video du Quebec,,Organization,Montreal,https://www.laguilde.quebec/,pendente
+Lucid Dreams Studio,,Developer,Montreal,https://luciddreamsstudio.com/,pendente
+Lucid Tales,,Developer,Montreal,https://www.lucidtales.coop/,pendente
+Ludeon Studios,,Developer,Montreal,https://www.ludeon.com/,pendente
+Ludia,,Mobile,Montreal,https://www.ludia.com/,pendente
+Ludica Health,,Health,Montreal,https://ludicahealth.com/,pendente
+Machine 22 (Dave Toulouse),,Microstudio,Montreal,https://machine22.com/,pendente
+ManaVoid Entertainment,,Developer,Montreal,https://manavoid.com/,pendente
+Marie LeBlanc Flanagan,,Developer,Montreal,https://marieflanagan.com/,pendente
+Meta4,,Online,Montreal,https://meta4.games/,pendente
+Metric Empire,,Developer,Montreal,https://metricempire.com/,pendente
+Mino Games,,Mobile,Montreal,https://www.minogames.com/,pendente
+Mooncube Games,,Developer,Montreal,https://mooncubegames.com/,pendente
+Mount Royal Game Society,,Organization,Montreal,https://www.mrgs.ca/,pendente
+Namra Games,,Developer,Montreal,https://namragamedev.itch.io/,pendente
+Neonable,,Developer,Montreal,https://www.neonable.com/,pendente
+NetEase Games,,Mobile,Montreal,https://www.neteasegames.com/,pendente
+Normal VR,,Extended Reality (XR),Montreal,https://normalvr.com/,pendente
+Norsfell,,Developer,Montreal,https://www.norsfell.com/,pendente
+Novaquark,,Developer,Montreal,https://www.novaquark.com/,pendente
+impossible,,Developer,Montreal,https://impossible.dev/,pendente
+2Dogs Games,,Developer,Toronto,https://2dogsgames.com/,pendente
+2K Play,,Developer and Publisher,Toronto,https://2k.com/,pendente
+A Bit Awake,,Microstudio,Toronto,https://abitawake.com/,pendente
+Achimostawinan Games,,Developer,Toronto,https://achimogames.itch.io/,pendente
+Actual Humans,,Developer,Toronto,https://actualhumans.com/,pendente
+Adam Gryu,,Developer,Toronto,https://adamgryu.com/,pendente
+Albedo Informatics,,Mobile,Toronto,https://www.albedoinformatics.com/,pendente
+Alientrap,,Developer,Toronto,https://alientrap.com/,pendente
+Alpha Channel (Kepler Interactive),,Developer,Toronto,https://alphachannelgames.com/,pendente
+Asteroid Base,,Developer,Toronto,http://asteroidbase.com/,pendente
+Autonomicity Games,,Mobile,Toronto,https://www.acitygames.com/,pendente
+Axon Interactive,,Developer,Toronto,https://axoninteractive.ca/,pendente
+Bad Jump Games,,Mobile,Toronto,http://badjumpgames.com/,pendente
+BancyCo,,Developer,Toronto,https://www.bancy.co/,pendente
+Behold Studios,,Developer,Toronto,https://www.beholdstudios.com.br/,pendente
+Bellwood Studios,,Developer,Toronto,https://www.bellwoodstudios.com/,pendente
+Betterhalf Studios,,Developer,Toronto,https://betterhalffilms.com/betterhalf-studios,pendente
+Black Tabby Games,,Developer,Toronto,https://blacktabbygames.com/,pendente
+Blue Ocean Games,,Investment,Toronto,https://blueoceangames.com/,pendente
+Bluish-Green Productions,,Developer,Toronto,https://www.bluishgreenproductions.com/,pendente
+Bobby Technology,,Developer,Toronto,https://bobbybobbybobby.com/,pendente
+Brandon Braun,,Developer,Toronto,https://brodnork.tumblr.com/,pendente
+Caged Element,,Developer,Toronto,https://gripracing.squarespace.com/,pendente
+Capybara Games,,Developer,Toronto,https://www.capybaragames.com/,pendente
+Certain Affinity (Keywords),,Developer,Toronto,https://www.certainaffinity.com/,pendente
+City from Naught,,Developer,Toronto,https://www.cityfromnaught.com/,pendente
+Cream Productions,,Developer,Toronto,https://creamproductions.com/,pendente
+DMG Toronto,,Organization,Toronto,https://www.dmg.to/,pendente
+Dark Slope Studios,,Extended Reality (XR),Toronto,https://www.darkslopestudios.com/,pendente
+Double Speak Games,,Microstudio,Toronto,https://doublespeakgames.com/,pendente
+Eleos Games,,Developer,Toronto,https://www.eleosgames.ca/,pendente
+Entertainment Software Association of Canada (ESAC),,Organization,Toronto,https://theesa.ca/,pendente
+Evil Trout,,Developer,Toronto,https://eviltrout.com/,pendente
+Fantasy Tales Online,,Online,Toronto,https://www.fantasytalesonline.com/,pendente
+Finish Line Games,,Developer,Toronto,https://www.finishlinegames.com/,pendente
+Fractal Phase,,Developer,Toronto,https://fractalphase.com/,pendente
+Furcula,,Developer,Toronto,https://furcula.ca/,pendente
+Galacanine Entertainment Software,,Microstudio,Toronto,https://www.galacanine.com/,pendente
+Game Arts International Network (GAIN),,Organization,Toronto,https://gaiasymposium.net/,pendente
+Game Hive,,Mobile,Toronto,https://www.gamehive.com/,pendente
+GameHive,,Mobile,Toronto,https://www.gamehive.com/,pendente
+Games by Stitch,,Developer,Toronto,https://www.gamesbystitch.com/,pendente
+Gatarn Games,,Mobile,Toronto,https://gatarn.io/,pendente
+GestureTek Health,,Health,Toronto,https://www.gesturetekhealth.com/,pendente
+Globacore,,Developer,Toronto,https://www.globacore.com/,pendente
+Glu Toronto (Electronic Arts),,Mobile,Toronto,https://www.glu.com/,pendente
+Gnometech,,Extended Reality (XR),Toronto,http://gnometech.com/,pendente
+Godmode Interactive,,Developer,Toronto,https://www.godmodeinteractive.com/,pendente
+Golden Ventures,,Investment,Toronto,https://www.golden.ventures/,pendente
+Hand Eye Society,,Organization,Toronto,https://www.handeyesociety.com/,pendente
+Hilltop Studios,,Developer,Toronto,https://hilltop.so/,pendente
+HitGrab,,Developer,Toronto,https://www.hitgrab.com/,pendente
+Household Games,,Developer,Toronto,http://household-games.com/,pendente
+IGDA Ontario - Toronto,,Organization,Toronto,https://igda.org/chapters/ontario-toronto/,pendente
+IRIS VR,,Extended Reality (XR),Toronto,https://www.irisvirtualreality.com/,pendente
+Impossible Studio,,Extended Reality (XR),Toronto,https://www.impossiblestudios.tv/,pendente
+Indigo Doyle,,Developer,Toronto,https://indigodoyle.com/,pendente
+Interactive Ontario (IO),,Organization,Toronto,https://www.interactiveontario.com/,pendente
+Jam City,,Mobile,Toronto,https://www.jamcity.com/,pendente
+Jamhammer Games,,Developer,Toronto,https://www.jamhammer.ca/,pendente
+Jim Guthrie,,Microstudio,Toronto,http://www.swordandsworcery.com/,pendente
+Kitten Cup Studio,,Developer,Toronto,https://www.kittencupstudio.com/,pendente
+Klub Kofta Studio,,Developer,Toronto,https://klubkofta.com/,pendente
+Komi Games,,Developer and Publisher,Toronto,https://www.komigames.com/,pendente
+L3O Interactive,,Developer,Toronto,https://www.l3o.com/,pendente
+LABS Works,,Microstudio,Toronto,http://www.mattkap.net/labs/check/,pendente
+Laundry Bear Games,,Developer,Toronto,https://www.laundrybear.com/,pendente
+Leafy Games,,Online,Toronto,https://leafygames.itch.io/,pendente
+Lightning Rod Games,,Developer,Toronto,https://lightningrodgames.com/,pendente
+Lithic Entertainment,,Developer,Toronto,https://www.lithicentertainment.com/,pendente
+Little Buffalo,,Microstudio,Toronto,https://littlebuffalostudios.com/,pendente
+Little Guy Games,,Mobile,Toronto,https://www.littleguygames.com/,pendente
+Lofty Sky Entertainment,,Developer,Toronto,https://loftysky.com/,pendente
+Longbow Games,,Developer,Toronto,https://www.longbowgames.com/,pendente
+Love Conquers All Games,,Developer,Toronto,https://www.loveconquersallgam.es/,pendente
+Lucky VR,,Extended Reality (XR),Toronto,https://www.getluckyvr.com/,pendente
+Lummox Labs,,Mobile,Toronto,https://www.lummoxlabs.com/,pendente
+M5 Games,,Mobile,Toronto,https://www.m5games.com/,pendente
+Magic Leap,,Extended Reality (XR),Toronto,https://www.magicleap.com/,pendente
+Magitech Corporation,,Developer,Toronto,http://www.magitechcorp.com/,pendente
+Maple Powered Games,,Developer,Toronto,https://maplepoweredgames.com/,pendente
+Massive Damage,,Mobile,Toronto,https://massivedamagestudios.com/,pendente
+Mega Power Games,,Developer,Toronto,https://megapowergames.com/,pendente
+Metanet Software,,Developer,Toronto,https://www.metanetsoftware.com/,pendente
+Mighty Yell Studios,,Developer,Toronto,https://www.mightyyell.com/,pendente
+Nihilocrat,,Developer,Toronto,https://nihilocrat.tumblr.com/,pendente
+Numizmatic,,Developer,Toronto,https://www.numizmatic.com/,pendente
+insertdisc5,,Microstudio,Toronto,https://www.insertdisc5.com/,pendente
+GabaGoo Games,,Developer,Banff,https://gabagoogames.ca/,pendente
+Maskwa Games,,Microstudio,Batoche,https://maskwainvestments.com/games/,pendente
+Cerebral Gardens,,Mobile,Bradford,https://www.cerebralgardens.com/,pendente
+Monster Bath Games,,Microstudio,Bridgewater,https://monsterbathchris.itch.io/,pendente
+gopokyo,,Developer,Bridgwater,https://lookup.gopokyo.com/,pendente
+Bramvale Studios,,Developer,Burnaby,https://www.bramvale.com/,pendente
+Banyango Software,,Developer,Calgary,https://www.banyango.com/,pendente
+Calgary Game Developers Association,,Organization,Calgary,https://www.calgary.games/,pendente
+Copychaser Games,,Developer,Calgary,https://www.copychaser.com/,pendente
+Dead Unicorn,,Developer,Calgary,https://deadunicorngames.itch.io/,pendente
+Eggnog Games,,Developer,Calgary,https://www.eggnoggames.com/,pendente
+Evil Objective Interactive,,Developer,Calgary,http://evilobjective.com/,pendente
+Giant Sandbox Games,,Developer,Calgary,https://giantsandbox.com/,pendente
+Grizzly Moose Games,,Developer,Calgary,https://www.grizzlymoosegames.com/,pendente
+Isto Inc,,Microstudio,Calgary,https://www.istoinc.com/,pendente
+Kitty Lambda Games,,Developer,Calgary,https://www.kittylambda.com/,pendente
+Mad Capacity Studios,,Developer,Calgary,https://www.madcapacity.com/,pendente
+Melcher Studios,,Developer,Calgary,https://www.melcher.ca/,pendente
+Metawe,,Developer,Calgary,https://www.metawe.com/,pendente
+Naturally Intelligent,,Developer,Calgary,https://www.naturallyintelligent.com/,pendente
+New World Interactive,,Developer,Calgary,https://newworldinteractive.com/,pendente
+Blot Interactive,,Developer,Cambridge,https://blotinteractive.com/,pendente
+Nooskewl,,Developer,Canmore,https://www.nooskewl.com/,pendente
+Green Robot Studios (VMP Group),,Serious Games,Cape Breton Island,https://greenrobotstudios.com/,pendente
+Blue Wizard Games,,Developer,Comox,https://bluewizard.com/,pendente
+Clicktoy Interactive,,Developer,Coquitlam,https://www.clicktoy.com/,pendente
+Let Us Cook,,Microstudio,Coquitlam,https://portabellowsgame.com/,pendente
+Asarge,,Developer,Courtenay,https://asarge.itch.io/,pendente
+Criminal Catepillar Games,,Microstudio,Dartmouth,https://criminalcaterpillar.com/,pendente
+Baby Ghosts Alberta,,Incubator/Accelerator,Edmonton,https://babyghosts.fund/,pendente
+Beamdog,,Developer,Edmonton,https://www.beamdog.com/,pendente
+BioWare Edmonton (Electronic Arts),,Developer,Edmonton,https://bioware.com/,pendente
+Bluecurse Studios,,Developer,Edmonton,https://www.bluecurse.com/,pendente
+Caldera Interactive,,Developer,Edmonton,https://calderainteractive.com/,pendente
+Cozy Comet Games,,Developer,Edmonton,https://www.cozycometgames.ca/,pendente
+Crimson Herring Studios (Zugalu Entertainment),,Developer,Edmonton,https://www.crimsonherring.com/,pendente
+Digital Alberta,,Organization,Edmonton,https://digitalalberta.com/,pendente
+Double Blit Games,,Developer,Edmonton,https://www.doubleblit.com/,pendente
+Exane Games,,Developer,Edmonton,https://www.exanegames.com/,pendente
+Fluik Entertainment,,Microstudio,Edmonton,https://www.fluik.com/,pendente
+Improbable Games Canada,,Developer,Edmonton,https://www.improbable.io/,pendente
+Interactive Arts Alberta,,Organization,Edmonton,https://interactiveartsalberta.org/,pendente
+Iron Goblin,,Developer,Edmonton,https://www.irongoblin.com/,pendente
+Itzy Interactive,,Developer,Edmonton,https://www.itzyinteractive.com/,pendente
+KOVR,,Extended Reality (XR),Edmonton,https://www.kovr.ca/,pendente
+Lucid Rain Studios,,Developer,Edmonton,https://lucidrainstudios.com/,pendente
+Mint in Box Digital Games,,Developer,Edmonton,https://www.mintinboxdigitalgames.com/,pendente
+MoneyPrep,,Serious Games,Edmonton,https://www.moneyprep.com/,pendente
+North Mist Studios,,Developer,Edmonton,https://www.northmiststudios.com/,pendente
+eQube Gaming,,Developer,Edmonton,https://www.eqube.com/,pendente
+gskinner,,Online,Edmonton,https://gskinner.com/,pendente
+k-critical,,Developer,Edmonton,https://k-critical.com/,pendente
+Influx Games,,Developer,Fredericton,https://www.influxgames.ca/,pendente
+Interactive New Brunswick,,Organization,Fredericton,https://interactivenb.com/,pendente
+DragonSpires: Fragmented Memories,,Online,Guelph,https://dragonspires.vercel.app/,pendente
+Milk Bag Games,,Developer,Guelph,https://www.milkbag.me/,pendente
+Aava Games,,Microstudio,Halifax,https://aavagames.itch.io/,pendente
+Alpha Dog Games,,Developer,Halifax,https://www.alphadoggames.com/,pendente
+Bagel+Balloon,,Developer,Halifax,https://bagelandballoon.org/,pendente
+Binogi,,Serious Games,Halifax,https://www.binogi.ca/,pendente
+Bitten Toast Games,,Developer,Halifax,https://www.bittentoast.com/,pendente
+Bluedrop Training and Simulation,,Serious Games,Halifax,https://www.bluedropts.com/,pendente
+Cosmocat,,Developer,Halifax,https://www.cosmocatgames.com/,pendente
+Cuirass Entertainment,,Developer,Halifax,https://www.cuirass.net/,pendente
+Cycada Games,,Microstudio,Halifax,https://cycada-games.itch.io/,pendente
+Digital Nova Scotia,,Organization,Halifax,https://digitalnovascotia.com/,pendente
+Falling Snow Interactive,,Microstudio,Halifax,https://www.fallingsnowinteractive.ca/,pendente
+Fire Titan Games,,Microstudio,Halifax,https://firetitangames.com/,pendente
+Fleet Sim Training Solutions,,Serious Games,Halifax,https://fleetsimts.ca/,pendente
+Gamemode One,,Developer,Halifax,https://www.gamemodeone.com/,pendente
+Graphics and Experiential Media (GEM) Lab,,Organization,Halifax,https://gem.cs.dal.ca/,pendente
+Handelabra Games,,Mobile,Halifax,https://www.handelabra.com/,pendente
+Ice Cold Blood,,Developer,Halifax,https://www.battyzabella.com/,pendente
+Interactive Society of Nova Scotia,,Organization,Halifax,https://www.interactivenovascotia.com/,pendente
+Isometricorp Games,,Developer,Halifax,https://tunicgame.com/,pendente
+Max Inferno,,Developer,Halifax,https://maxinferno.com/,pendente
+Modest Tree,,Serious Games,Halifax,https://www.modesttree.com/,pendente
+BattleGoat Studios,,Developer,Hamilton,https://www.battlegoat.com/,pendente
+Heavy Pepper,,Developer,Hamilton,https://www.heavypepper.com/,pendente
+MANGLEDmaw Games,,Microstudio,Hamilton,https://mangledmaw.itch.io/,pendente
+Moonray Studios,,Developer,Hamilton,https://www.moonraystudios.com/,pendente
+Nefarious Dimensions,,Developer,Hamilton,https://nefariousdimensions.wordpress.com/,pendente
+Hyper Hippo Entertainment,,Developer,Kelowna,https://hyperhippo.com/,pendente
+Dagga Soft,,Developer,Kitchener,https://www.daggasoft.com/,pendente
+Fluxscopic,,Developer,Kitchener,https://www.fluxscopic.com/,pendente
+Horrible Unicorn Game Studios,,Developer,Kitchener,https://www.horribleunicorngamestudios.com/,pendente
+Madgarden,,Microstudio,Kitchener,http://madgarden.net/,pendente
+Mistik Studios,,Developer,Leoville,https://mistikstudios.carrd.co/,pendente
+Gear Worx Productions,,Developer,Lethbridge,https://www.gearworxprod.com/,pendente
+Big Blue Bubble (Enad Global 7),,Developer,London,https://www.bigbluebubble.com/,pendente
+Big Viking Games,,Mobile,London,https://www.bigvikinggames.com/,pendente
+Digital Extremes,,Developer,London,https://www.digitalextremes.com/,pendente
+Doom Turtle,,Developer,London,https://www.doomturtle.ca/,pendente
+FloWHOA,,Developer,London,https://www.flowhoa.com/,pendente
+Joydrop,,Mobile,London,https://www.joydrop.co/,pendente
+Mongoose Rodeo,,Developer,London,https://crowsworn.com/,pendente
+A42 Games,,Mobile,Longueuil,https://a42games.com/,pendente
+Artifice Studio,,Developer,Longueuil,https://artificestudio.com/,pendente
+Aerosoft North America,,Developer,Lucan,https://aerosoft.com/,pendente
+Hutch Games,,Mobile,Mahone Bay,https://hutch.io/,pendente
+Freebird Games,,Developer,Markham,https://freebirdgames.com/,pendente
+Bitwad Entertainment,,Developer,Moose Jaw,https://www.bitwad.ca/,pendente
+Hemisphere Games,,Developer,Nelson,https://www.hemispheregames.com/,pendente
+Epic Story Interactive,,Mobile,New Westminster,https://www.epicstoryinteractive.com/,pendente
+Apparition Games,,Developer,Oakville,https://apparitiongames.com/,pendente
+A-Game Studios,,Developer,Ottawa,https://www.agamestudios.ca/,pendente
+Conatus Creative,,Developer,Ottawa,https://www.conatuscreative.com/,pendente
+Dirty Rectangles,,Organization,Ottawa,https://www.dirty-rectangles.com/,pendente
+Doublespeak Games,,Online,Ottawa,https://www.doublespeakgames.com/,pendente
+Ember Arcade,,Developer,Ottawa,https://www.emberarcade.com/home,pendente
+Fire Face,,Developer,Ottawa,https://www.fire-face.com/,pendente
+Fire Face Corporation,,Developer,Ottawa,https://fire-face.com/,pendente
+Joey Drew Studios,,Developer,Ottawa,https://www.joeydrewstudios.com/,pendente
+Magmic Games,,Mobile,Ottawa,https://www.magmic.com/,pendente
+Mardonpol,,Developer,Ottawa,https://www.mardonpol.com/,pendente
+North Peak Entertainment,,Developer,Ottawa,https://www.northpeakentmt.com/,pendente
+Northern Forge Studios,,Mobile,Ottawa,https://northernforge.com/,pendente
+Beenox Studios (Activision),,Developer,Quebec City,https://beenox.com/,pendente
+Berzerk Studio,,Developer,Quebec City,https://berzerkstudio.com/,pendente
+Beyond Fun Studio,,Developer,Quebec City,https://www.beyondfunstudio.com/,pendente
+Bishop Games,,Developer,Quebec City,https://bishopgames.com/,pendente
+Cathar Games,,Developer,Quebec City,https://www.cathargames.com/,pendente
+Chainsawesome Games,,Developer,Quebec City,https://www.chainsawesomegames.com/,pendente
+Cozy Bee Games,,Developer,Quebec City,https://cozybeegames.com/,pendente
+Cradle Games,,Developer,Quebec City,https://www.cradlegames.com/,pendente
+DolphinBarn,,Developer,Quebec City,http://dolphinbarn.com/,pendente
+Dragon Slumber,,Developer,Quebec City,https://www.dragonslumber.com/,pendente
+Fika Productions,,Developer,Quebec City,https://www.fikaproductions.com/,pendente
+Gearbox Studio Quebec (Take-Two Interactive),,Developer,Quebec City,https://gearboxsoftware.com/,pendente
+Hatchery Games,,Developer,Quebec City,https://hatcherygames.com/,pendente
+Neon Polygons Studios,,Developer,Quebec City,https://www.piecebypiecethegame.com/,pendente
+Nesting Games (Digital Bros),,Developer,Quebec City,https://www.nesting-games.com/,pendente
+Neuro Solutions Group,,Health,Quebec City,https://neurosolutionsgroup.com/,pendente
+Nine Dots Studio,,Developer and Publisher,Quebec City,https://ninedotsstudio.com/,pendente
+Bitcutter Studios,,Developer,Regina,https://www.bitcutter.com/,pendente
+Cheekynauts Entertainment,,Developer,Regina,https://www.cheekynauts.com/,pendente
+Massive Corporation Game Studios,,Developer,Regina,https://massivecorp.ca/,pendente
+Fortis Games,,Developer and Publisher,Remote,https://www.fortisgames.com/,pendente
+01 Studio,,Online,Saint-Hyacinthe,https://01studio.ca/,pendente
+CAE INC.,,Serious Games,Saint-Laurent,https://www.cae.com/,pendente
+GameTeam6,,Developer,Sainte-Adèle,https://gameteam6.com/,pendente
+Amuses Me Games,,Microstudio,Saskatoon,https://amuses.me/,pendente
+BiMonocle Games,,Developer,Saskatoon,https://bimonocle.com/,pendente
+DragonFly Games,,Microstudio,Saskatoon,https://dfgdev.webflow.io/,pendente
+Everglow Interactive,,Developer,Saskatoon,https://www.everglowinteractive.com/,pendente
+Foolish Mortals Games,,Developer,Saskatoon,http://foolish-mortals.net/,pendente
+Funkylung Studios,,Microstudio,Saskatoon,https://erikjohnson.itch.io/,pendente
+Moonlit Works,,Microstudio,Saskatoon,https://moonlitworks.itch.io/,pendente
+Fring Frang,,Developer,Saulnierville,https://fringfrang.com/,pendente
+Julia Minamata,,Microstudio,Scarborough,https://www.juliaminamata.com/,pendente
+Citeremis,,Developer,Sherbrooke,https://citeremis.com/,pendente
+GolemLabs,,Developer,Sherbrooke,https://www.golemlabs.com/,pendente
+Adjective Noun Studios,,Mobile,St. Catherines,https://adjectivenounstudios.ca/,pendente
+Apocalypse Studios,,Developer,St. Catherines,https://apocalypse333.com/,pendente
+Creative Bytes Studios,,Mobile,St. Catherines,https://www.creativebytesstudios.com/,pendente
+Falling Squirrel Games,,Developer,St. Catherines,https://www.fallingsquirrel.com/,pendente
+Celsius Game Studio,,Developer,St. Johns,https://www.celsiusgs.com/,pendente
+Gord Games,,Developer,St. Johns,https://gord.games/,pendente
+Initus Interactive,,Developer and Publisher,St. Johns,https://initusinteractive.com/,pendente
+Alchemy Interactive,,Developer,Stony Plain,https://alchemyinteractive.ca/,pendente
+Conquer Experience,,Serious Games,Surrey,https://conquerexperience.com/,pendente
+GoVenture World Corp.,,Developer,Sydney,https://www.goventureworld.com/,pendente
+MediaSpark,,Serious Games,Sydney,https://mediaspark.com/,pendente
+Mirror2 Studios,,Developer,Vaughan,https://mirror2studios.com/,pendente
+270sims,,Developer,Victoria,https://270sims.com/,pendente
+Ashdar Games,,Microstudio,Victoria,http://stars-in-shadow.com/,pendente
+Blastworks Inc (Gaming Realms),,Developer,Victoria,http://www.gamingrealms.com/,pendente
+Cloudhead Games,,Extended Reality (XR),Victoria,https://www.cloudheadgames.com/,pendente
+Codename Entertainment,,Developer,Victoria,https://www.codenameentertainment.com/,pendente
+Fancy Skeleton Games,,Mobile,Victoria,https://www.facebook.com/fancyskeletons,pendente
+Gaslamp Games,,Developer,Victoria,https://www.gaslampgames.com/,pendente
+KIXEYE (Stillfront Group),,Online,Victoria,https://www.kixeye.com/,pendente
+Kano Apps,,Mobile,Victoria,https://www.kanoapps.com/,pendente
+Feel Good Games,,Serious Games,Waterloo,https://www.littlemagicstories.com/,pendente
+Lunarch Studios,,Developer,Waterloo,http://www.prismata.net/,pendente
+Corbie Games,,Developer,White Rock,http://www.corbiegames.com/,pendente
+Bacon Bandit Games,,Mobile,Winnipeg,https://www.baconbanditgames.com/,pendente
+Complex Games,,Developer,Winnipeg,https://www.complexgames.com/,pendente
+Cozy Cube Games,,Developer,Winnipeg,https://cozycubegames.com/,pendente
+FlightyFelon Games,,Microstudio,Winnipeg,https://www.flightyfelongames.com/,pendente
+Infinite Ammo,,Developer,Winnipeg,https://www.infiniteammo.ca/,pendente
+Kaiclavier,,Developer,Winnipeg,https://kaiclavier.com/,pendente
+New Media Manitoba,,Organization,Winnipeg,https://newmediamanitoba.com/,pendente

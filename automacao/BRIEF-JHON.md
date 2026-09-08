@@ -44,6 +44,39 @@ Se sobrar tempo, ele volta para a fila, não para a prospecção.
 4. Candidatura espontânea e banco de talentos contam e valem envio, porque casa que abre
    espontânea está dizendo que quer receber.
 
+## O CANADÁ ENTROU NA FILA EM 08/09, e a lacuna era exatamente esta
+
+O Vini olhou o ritmo e disse: *"vagas tem, ele só não deve estar procurando nos sites corretos"*.
+Ele estava certo, e dá para medir. **A colheita do gamedevmap tinha coberto Europa (347 portas em
+`fila-jhon-portas.csv`) e Oceania, e nunca tinha tocado o Canadá** — que é o país prioritário da
+campanha junto com a Europa.
+
+Colhido em 08/09: **487 estúdios canadenses no gamedevmap, dos quais 61 a campanha já tinha tocado
+e 426 nunca foram tocados.** Estão em `automacao/fila-gamedevmap-canada.csv`, ordenados por
+Vancouver (68), Montréal (87) e Toronto (88) primeiro, depois Edmonton, Halifax, Quebec City,
+Calgary e o resto.
+
+**Esta é fila do Jhon, não do prospector.** O alvo ali é o FORMULÁRIO de candidatura e o ATS por
+trás dele, não email: abra `careers`, `jobs`, `career`, `join-us`, `work-with-us` no domínio, e
+classifique a porta como o brief já ensina (ATS conhecido, HOSPEDADO, formulário próprio, SEM-PORTA).
+
+**DUAS ARMADILHAS MEDIDAS na colheita, e as duas custam a rodada inteira se você não souber:**
+
+1. O PDF de links do Vini traz o gamedevmap como `http://`. **O bridge desta máquina responde
+   `use CONNECT` em http puro** e o navegador devolve 400 com corpo vazio, o que parece site fora
+   do ar e não é. Tem que ser `https://www.gamedevmap.com`.
+2. **A paginação não é `page=`, é `start=` com `count=`.** Com `page=1..4` as quatro páginas
+   devolvem as MESMAS 105 linhas e você conclui que o Canadá tem 99 estúdios. Com
+   `start=1|101|201|301|401&count=100` aparecem os 487 de verdade. Foi assim que a Europa achou
+   515 estúdios escondidos em 06/09, e eu repeti o erro antes de reler o `parse-gamedevmap.py`.
+
+Fonte: `Links Jobs - Rodrigo.pdf`, no Drive do Vini. O resto do PDF já está coberto ou medido:
+`talentmontreal.com` foi varrido em 07/09 (o lado inglês devolve zero e o `currentCulture=fr-CA`
+devolve seis), `80.lv`, `hitmarker`, `gracklehq`, `gamejobs.co` e `jobs.gamesindustry.biz` já são
+fonte corrente, e `worldwidestudios.net`, `gamedevjobs.io` e `gamefilmhub.com` estão bloqueados
+pelo nosso próprio relay. **Ainda NÃO tocados do PDF: `cgstudiomap.org` e os dois tinyurl**
+(`mapOfStudios` e `Animation-VFX-Game-job-studios`), que valem uma rodada.
+
 ## O gamedevmap é fonte do Jhon também, e o Vini pediu isso em 06/09
 
 Quando a fila do PORTAIS acabar, ou quando ela só tiver captcha de desafio, o Jhon **não volta para
