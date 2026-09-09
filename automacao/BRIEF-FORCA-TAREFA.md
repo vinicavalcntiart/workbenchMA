@@ -2489,3 +2489,27 @@ ficou corrigido foi a regra de prova, não o número.
 **área do candidato**. Recibo por email do recrutador entra como indício, nunca como prova. E
 sempre que a tela disser `email_verification_needed`, a candidatura está **pela metade** até alguém
 abrir o link: buscar o email e abrir é parte do envio, não um passo opcional.
+
+### A auditoria que esse achado obrigou, e o resultado (09/09)
+
+Se o Submit do Teamtailor pode não completar a candidatura, a pergunta seguinte é óbvia: **quantas
+das candidaturas que a campanha conta não existem?** Busquei no Gmail todo email *"Complete the
+application"* e *"Verify your email"*: sete de Teamtailor, **cinco deles nunca abertos**. Depois
+entrei na **área do candidato de cada casa**, pelo link mágico do Connect pedido ao próprio portal e
+lido na caixa dele, e contei por dentro.
+
+| Casa | O que a área do candidato mostra |
+|---|---|
+| beffio | **4** candidaturas, a de ontem marcada "About 10 hours" |
+| Embark Studios | **1**, Environment Artist, Estocolmo, "2 days" |
+| Untold Studios | **2**, General Application Londres e Los Angeles |
+| Airship | **Applied 2** |
+| Bulkhead | o próprio registro já dizia que o `/thanks` veio depois de verificar |
+
+**Zero candidatura fantasma.** Todas existem do lado do estúdio. O que estava errado era só a regra
+de prova, e ela agora está certa.
+
+**A regra, em uma linha:** quem decide é a **tela do envio**, não o email. Terminou em `/thanks`, a
+candidatura está registrada e o email de verificação é artefato redundante. Terminou em
+`email_verification_needed`, está **pela metade** até alguém abrir o link, e buscar esse email na
+caixa dele é parte do envio, não um passo opcional.
