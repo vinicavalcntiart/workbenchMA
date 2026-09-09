@@ -36,7 +36,7 @@ de fonte oficial vale para a planilha igual vale para qualquer agregador.
 - Aristocrat | Bulgaria (Sofia) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Anim | pendente
 - Awaken Realms (varrido em 05/09: so publica postmaster@, que nao e contato; segue pendente e a via e o ATS) | Poland (Wrocław) | vagas de arte hoje: Character Artist | fonte da vaga: https://www.skillshot.pl/jobs/39589-3d-character-artist-at-awaken-realms | pendente
 - Cast Iron Games (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (Wakefield) | vagas de arte hoje: 3D Artist | fonte da vaga: https://careers.castirongames.com/jobs/7154430-lead-3d-artist | pendente
-- Coffee Stain Studios | Sweden (Stockholm) | vagas de arte hoje: Art Director | fonte da vaga: https://jobs.coffeestain.com/jobs/8083591-art-director-and-art-lead | pendente
+- Coffee Stain Studios | Sweden (Stockholm) | vagas de arte hoje: Art Director | fonte da vaga: https://jobs.coffeestain.com/jobs/8083591-art-director-and-art-lead | descartado em 09/09 (duplicado): a campanha JA aplicou nesta casa. O painel tem Coffee Stain North (Art Director and Art Lead) com candidatura ENVIADA e CONFIRMADA em 06/09, e Coffee Stain (Connect) com perfil completado em 06/09. Nao repesquisar
 - DLVR (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | United States (New York City) | vagas de arte hoje: 3D Artist | fonte da vaga: https://jobs.gusto.com/postings/dlvr-3d-artist-68896d07-c740-4488-83bc-8bbbd5fcfffc | pendente
 - Dark Alley Games (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (London) | vagas de arte hoje: Art Director | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7500606073272221696/ | pendente
 - Digital Eclipse | United States (Emeryville) | vagas de arte hoje: Concept Designer | fonte da vaga: https://job-boards.greenhouse.io/digitaleclipse/jobs/5114920008 | pendente
@@ -46,14 +46,14 @@ de fonte oficial vale para a planilha igual vale para qualquer agregador.
 - Golden Hind Games (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | Poland (Warsaw) | vagas de arte hoje: Hard Surface Artist | fonte da vaga: https://www.skillshot.pl/jobs/39494-3d-hard-surface-artist-modularne-statki-mid-poly-a | pendente
 - Goodname Studio | Lithuania (Vilnius) | vagas de arte hoje: Concept Artist | fonte da vaga: https://goodname.lt/jobs/ | pendente
 - GrandSon Creative (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | United States (Culver City) | vagas de arte hoje: Art Director | fonte da vaga: https://grandsonla.com/jobs/art-director-print-sr-art-director/ | pendente
-- Grumpyface Studios (varrido em 05/09: publica hellothere@grumpyface.com, estudio pequeno; segue pendente) | United States (Tempe) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/jobs/view/4441749168/ | pendente
-- Highdive | Canada (Montreal) | vagas de arte hoje: Modeler | fonte da vaga: https://job-boards.greenhouse.io/highdive/jobs/5097897007 | pendente
+- Grumpyface Studios | United States (Tempe) | descartado em 09/09 (porta fechada, ja medido): o painel ja registra Grumpyface Studios (3D Game Artist, modelagem e textura) e o descarte com motivo, que e questionario que nao aceita mais resposta. A vaga era contrato curto de 2 a 3 meses, o que a joga para baixa pela regra de vaga efetiva. Nao repesquisar contato
+- Highdive | Canada (Toronto/Montreal) | descartado em 09/09 (duplicado): CANDIDATURA JA ENVIADA em 06/09 na Senior Modeler pelo Greenhouse 5097897007, confirmada na tela, registrada em alvos.csv como portal-enviado. Nao repesquisar
 - Illumination Studios Paris (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | France (Paris) | vagas de arte hoje: Surfacing Artist | fonte da vaga: https://jobs.lever.co/illumination/88ab5915-96db-448b-98d7-7d3385c5f0bf | pendente
 - Infinity Ward | United States (Woodland Hills) | vagas de arte hoje: Modeler | DESCARTADO em 05/09: a Model Art Lead de Barcelona nao existe mais no locatario Workday da Xbox Gaming
 - KOTOC | Spain (Barcelona) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7485301871134425088/ | pendente
 - Knifewing Entertainment | United States (Gallup) | vagas de arte hoje: Character Designer | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7482340253815701504/ | pendente
 - Level Infinite | England (London) | vagas de arte hoje: 3D Artist | fonte da vaga: https://tencent.wd1.myworkdayjobs.com/en-US/Tencent_Careers/job/United-Kingdom-London/XMLNAME-3D-Artist-Intern | pendente
-- Lightfox Games (varrido em 05/09: publica careers@lightfoxgames.com; segue pendente) | Canada (Vancouver) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.lightfoxgames.com/careers/?id=lead-3d-artist-seattle | pendente
+- Lightfox Games | EUA (Seattle, sede) e Canada (Vancouver) | APROVADO em 09/09, rascunho criado no Gmail, careers@lightfoxgames.com reverificado hoje na https://www.lightfoxgames.com/careers/ e MX do Google ativo. Fundado em 2019 por veteranos da King Seattle (Z2); Rumble Club e Knight's Edge sao estilizados; a propria pagina diz que estao montando time agora para um titulo novo com IP world-class. A carta NAO leva a frase de realocacao porque a sede e nos EUA. ATENCAO: a lista de vagas da pagina de carreiras e SPA e nao abre por curl, entao o quadro dele precisa de navegador
 - Lumiere (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | Poland (Warsaw) | vagas de arte hoje: Asset Artist | fonte da vaga: https://www.linkedin.com/jobs/view/4446665252 | pendente
 - Magic Spark (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | Estonia (Tallinn) | vagas de arte hoje: 2D/3D Artist | fonte da vaga: https://magicspark.studio/careers/art-lead | pendente
 - Marks (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | Canada (Toronto) | vagas de arte hoje: Art Director | fonte da vaga: https://recruiting2.ultipro.com/SGS1000SGSI/JobBoard/2e113479-4a4e-4531-a2af-518ed0717655/OpportunityDetail?op | pendente
@@ -68,7 +68,7 @@ de fonte oficial vale para a planilha igual vale para qualquer agregador.
 - The Sweetspot | Germany (Hamburg) | vagas de arte hoje: Art Director | fonte da vaga: https://thesweetspot.co/info | pendente
 - Topdeck Productions (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (London) | vagas de arte hoje: Art Director | fonte da vaga: https://www.workwithindies.com/careers/topdeck-productions-art-director | pendente
 - Unorthodox (varrido em 05/09: contato, about, team, studio, people, careers, jobs e impressum, NENHUM email publicado; segue pendente e a via e o ATS) | England (London) | vagas de arte hoje: 3D Artist | fonte da vaga: https://www.linkedin.com/feed/update/urn:li:activity:7483881406809694208/ | pendente
-- Zoic Studios | Canada (Vancouver) | vagas de arte hoje: 3D Artist | fonte da vaga: https://zoicstudios.applytojob.com/apply/iHm7iyOWjp/BC-Senior-Hard-Surface-ModelTextureLook-Dev-Artist | pendente
+- Zoic Studios | Canada (Vancouver) | descartado em 09/09 (duplicado): a campanha ja escreveu DUAS vezes, para jweitzell@zoicstudios.com em 05/09 e smelchiorre@zoicstudios.com em 07/09, os dois em enviados.csv. Nao repesquisar
 - le truc (APLICADO em 05/09 pelo formulario oficial do Microsoft Forms, com tela de confirmacao) | Switzerland (Geneva) | vagas de arte hoje: Modeler | fonte da vaga: https://www.letruc.studio/jobs | pendente
 
 ## Os outros 254 estúdios novos, sem vaga de arte hoje
@@ -107,6 +107,70 @@ vagas da Europa que trabalha em inglês. Esta seção é o combustível dela.
 Anima Vitae, Gigglebug e Pyjama Films na Finlândia; Nukleus e Studio Seufz na Suíça; Studio
 Smack, PostPanic, Ambassadors, Abstraction, Ronimo, Triangle Studios e Blackmill na Holanda.
 
-**Com email genérico achado, encaixe ainda por conferir:** il Luster (`info@illuster.nl`),
+**Com email genérico achado, encaixe CONFERIDO EM 09/09 e os dois DESCARTADOS:** il Luster (`info@illuster.nl`) descartado por perfil, a propria home diz "We are an independent producer" e "animation in all lengths and techniques", ou seja e PRODUTORA sem equipe interna de arte 3D; Planet X (`contact@planetxstorm.com`) descartado por disciplina, e VFX e pos-producao ("creative visual effects meets high-end post-production") e a UNICA vaga aberta na pagina de careers hoje e "Office Manager (NL/ENG, on-site)", em holandes. Registro antigo abaixo:
+il Luster (`info@illuster.nl`),
 Planet X (`contact@planetxstorm.com`) e Nixxes (`info@nixxes.com`, mas é casa de port de PC da
 Sony, majoritariamente engenharia).
+
+## RODADA DE 09/09/2026, sem navegador: o que saiu da lista de reserva
+
+A fila de cima (a das 45 casas com vaga de arte) esta praticamente exaurida como fonte
+de EMAIL: sobrou pendente so quem ja foi varrido em 05/09 e nao publica endereco nenhum.
+Por isso esta rodada trabalhou a lista dos 254 estudios de RESERVA, abrindo dominio por
+dominio com curl e lendo raiz, contato, about, careers, jobs, impressum e kontakt.
+
+**APROVADOS (email publicado, aberto e lido nesta rodada, MX conferido por DNS-over-HTTPS):**
+- La Cabane Productions | Franca (Paris) | `jobs@lacabaneproductions.com` | o rodape da
+  home diz com todas as letras "For jobs opportunities Please contact us at
+  jobs@lacabaneproductions.com". Slate CG estilizado: Mush-Mush and the Mushables com duas
+  temporadas, Luce and the Rock, Emma Makes Waves, The Wolf's Dinner e A Lamb's Stew, esta
+  com Andy Serkis, T'Nia Miller e Iris Onyejiuwa no elenco. A propria home noticia o premio
+  French Animation Producer of the Year. MX do Google. Rascunho criado.
+- Hooligan Animation | Australia (Queensland) | `Info@HooliganAnimation.studio` | endereco
+  no rodape CONTACT da home oficial. Fundado em 2022, pipeline "2D, 3D, MOTION, HYBRID",
+  conceito a entrega, alinhado TPN. A home noticia que a Hulu encomendou a serie adulta
+  Deano, com Joe Brumm, criador de Bluey, como produtor executivo. MX do Google no dominio
+  .studio (o .com tem MX proprio, Proofpoint, e NAO e o dominio do endereco). Rascunho criado.
+- Lightfox Games | EUA (Seattle) e Canada (Vancouver) | `careers@lightfoxgames.com`. Ver
+  a linha propria acima. Rascunho criado.
+- The Charactershop | Reino Unido (Worcester) | `info@thecharactershop.com` | rodape e
+  pagina About. Fundado em 2002 por um time da BBC, trabalho de personagem para CBeebies,
+  Nickelodeon e CITV, servicos listam "Character Design & Development" e "2D & 3D
+  Animation", e a equipe publicada tem Lead 3D Animator, Senior Generalist e Junior 3D
+  Generalist, ou seja o lado 3D existe e nao e 2D puro. Encaixe MEDIO, nao forte, porque o
+  volume e TV infantil e publicidade. MX do Microsoft 365. Rascunho criado.
+
+**DESCARTADOS nesta rodada, com a frase que derruba cada um:**
+- Kero Animation | EUA (Brooklyn) | tem `hello@keroanimation.com` publicado, mas TODOS os
+  projetos listados no site sao "Storyboard, Illustration, Cel Animation, Motion Design",
+  isto e, 2D e motion. 2D puro descarta.
+- Treehouse Ninjas | tem `info@treehouseninjas.com` publicado e vagas abertas, mas o proprio
+  site diz "We specialize in environments, and we independently develop them from concept
+  art to final lighting", e as vagas de arte sao Mid e Senior Environment Artist. Nao ha
+  disciplina de personagem na casa.
+- Baleuko | Espanha (Pais Basco) | tem `baleuko@baleuko.com` publicado, mas o site inteiro
+  esta em euskara, nao existe versao em ingles (`/en/` responde 404) e a producao e para a
+  ETB1, televisao publica basca. Veto de idioma local.
+- Hug & Roll (o dominio inkandlight.fr redireciona para hugandroll.com, ou seja a Ink and
+  Light do levantamento nao existe mais com esse nome) | publica `hello@hugandroll.com`, mas
+  se define como "Independent game studio" construindo "An AI-native editor, and an esports
+  title built with it". Nao ha producao de personagem.
+- il Luster e Planet X: ver a secao da fila de paises, acima.
+- Coffee Stain, Grumpyface, Highdive e Zoic: duplicados, ver as linhas proprias acima.
+
+**SEM NENHUM EMAIL PUBLICADO, varridos em 09/09 na raiz e em contato, contact-us, about,
+careers, jobs, impressum e kontakt (a via e o ATS, nao repetir a busca de contato):**
+Atlantis Animation, New Moon Production (new-moon.de), Little Zoo Studio, Mighty Yeti,
+Nori Productions, Chrome Productions, Turnip & Duck, El Guiri Studios, Patriam Studios,
+Panot Studio (dominio nao resolve), Pure Imagination Studios (dominio nao resolve),
+Gimmick Studio (dominio nao resolve), Cinnamon (dominio nao resolve), Lanning Animation
+(so um gmail pessoal, nao serve como endereco publicado de estudio).
+
+**A CONFERIR NA PROXIMA RODADA, e ela PRECISA DE NAVEGADOR:** Fenris Creations
+(Reykjavik, Londres e Xangai) publica `jobs@fenriscreations.com` na pagina /careers e
+escreve "We have a wealth of experience relocating team members from all over the world",
+que e o sinal de patrocinio mais forte visto hoje. O que trava e o encaixe: a casa se
+apresenta como o braco de tecnologia do ecossistema de EVE Online ("Carbon is the
+next-generation cross-platform game engine framework"), e o quadro de vagas em
+careers.fenriscreations.com e SPA que devolve pagina vazia por curl, entao NAO da para
+dizer se ha vaga de arte. Nao foi aprovado nem descartado de proposito.
