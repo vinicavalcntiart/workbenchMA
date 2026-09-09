@@ -10,12 +10,50 @@ TMP=$(mktemp -d)
 # vezes em 06/09, sempre por um agente diferente documentando qual valor tinha
 # preenchido num formulario. Aviso escrito em BRIEF nao segurou, entao a checagem
 # vira portao: todo commit ja passa por aqui.
+#
+# CORRIGIDO EM 09/09: ate hoje o proprio padrao de deteccao SOLETRAVA o telefone e a rua
+# dentro deste arquivo, que e publico. O gate que protegia o segredo era o unico lugar do
+# repositorio que ainda o continha. Agora a comparacao e por HASH: o script varre os numeros
+# e as palavras dos arquivos, calcula sha256 de cada candidato e compara com as impressoes
+# digitais abaixo. Detecta igual e nao publica nada.
 DIRR="$(cd "$(dirname "$0")/.." && pwd)"
-VAZOU=$(grep -rniE "97306.?2286|81973062286|\+?55[[:space:]-]?\(?81\)?[[:space:]-]?9?7306|Bonsucesso|53240-480" \
-  --include="*.md" --include="*.csv" --include="*.html" --include="*.js" --include="*.txt" \
-  "$DIRR" 2>/dev/null | grep -v "/.git/" || true)
+VAZOU=$(cd "$DIRR" && python3 - <<'PYPRIV'
+import hashlib, os, re, sys
+# impressoes digitais (sha256, 16 primeiros caracteres) dos valores que NAO podem aparecer:
+# telefone em tres formatos, CEP e o nome da rua. O valor em claro vive so no doc privado do Drive.
+ALVOS = {
+ "39267f4cf691f722","82083f73b5e30e1f","e9e6d57dcc16b15d",
+ "9beb3242f1196a49","21469a913a17af02",
+}
+EXT = (".md",".csv",".html",".js",".txt",".mjs",".json")
+achados = []
+for raiz, dirs, arqs in os.walk("."):
+    dirs[:] = [d for d in dirs if d not in (".git","node_modules")]
+    for a in arqs:
+        if not a.endswith(EXT):
+            continue
+        cam = os.path.join(raiz, a)
+        try:
+            txt = open(cam, encoding="utf-8", errors="ignore").read()
+        except Exception:
+            continue
+        for n, linha in enumerate(txt.splitlines(), 1):
+            candidatos = set()
+            for d in re.findall(r"\d[\d\s().+-]{6,20}\d", linha):
+                candidatos.add(re.sub(r"\D", "", d))
+            for w in re.findall(r"[A-Za-zÀ-ÿ]{6,20}", linha):
+                candidatos.add(w.lower())
+            for c in candidatos:
+                if not c:
+                    continue
+                if hashlib.sha256(c.encode()).hexdigest()[:16] in ALVOS:
+                    achados.append(f"{cam}:{n}: (valor sensivel detectado por impressao digital)")
+                    break
+print("\n".join(achados))
+PYPRIV
+)
 if [ -n "$VAZOU" ]; then
-  echo "FALHA DE PRIVACIDADE: telefone ou endereco residencial no repositorio publico."
+  echo "FALHA DE PRIVACIDADE: telefone, CEP ou endereco residencial no repositorio publico."
   echo "$VAZOU" | cut -c1-160
   echo
   echo "Ao documentar um campo preenchido, escreva o NOME do campo e nunca o valor."
