@@ -615,7 +615,7 @@ data,estudio,email,assunto,status
 2026-09-06,Loyalkaspar,david@loyalkaspar.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,enviado
 2026-09-06,Ludomotion,info@ludomotion.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,enviado
 2026-09-06,Luma Pictures,ericr@lumapictures.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,bounce
-2026-09-06,Mangatar,careers@mangatar.net,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,bounce
+2026-09-06,Mangatar,careers@mangatar.net,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,"bounce DEFINITIVO em 09/09 as 15h10 (antes era so atraso). Causa medida e ela vale para a CASA INTEIRA: o dominio mangatar.net NAO TEM REGISTRO MX NENHUM. A consulta DNS devolve so o SOA, sem resposta de MX, entao o Gmail cai no registro A (104.19.154.92, IP web da Cloudflare), que nao fala SMTP na porta 25, e o resultado e timeout e Action failed. CONSEQUENCIA PRATICA: o info@mangatar.net que o site publica vai quicar exatamente igual, e reenviar para ele e trabalho perdido. A unica rota viva da casa e o formulario em mangatar.net/contact/, que e Gravity Forms com reCAPTCHA e so renderiza por JavaScript"
 2026-09-06,Manorlords,recruitment@manorlords.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,enviado
 2026-09-06,Marmalademail,jobs@marmalademail.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,enviado
 2026-09-06,Massivegalaxy,contact@massivegalaxy.com,Senior Character Artist · Wingfeather Saga credit · stylized + grooming,enviado
