@@ -2037,3 +2037,42 @@ o dedupe por ID deu zero nas três.
 **A lição não é sobre a Airship, é sobre o método:** ter conta num ATS não é o mesmo que ter
 varrido o quadro daquele estúdio. O censo de 07/09 listava 177 vagas de Teamtailor em **32
 tokens**, e a campanha conhece mais de 700 estúdios.
+
+---
+
+## 09/09 — VARREDURA DE SLUGS DE TEAMTAILOR: 2.928 tentativas, 27 quadros, UMA candidatura
+
+Mesmo método da varredura de Greenhouse, na família que **passa sem captcha** e que a campanha
+conhecia por apenas **32 tokens**. Resultado, sem inflar:
+
+| | |
+|---|---|
+| Slugs testados (fora os 32 conhecidos) | **2.928** |
+| Quadros vivos achados | **27** |
+| Quadros com vaga da disciplina | **5** |
+| Depois do dedupe por ID e da régua | **1 candidatura enviada** |
+
+**A que rendeu: Airship Interactive, Character Artist**, banco de freelance global, régua zero.
+As outras quatro não eram alvo: MOOD (já enviada), Sandbox (enviada ontem à noite), Paradox (só
+programação e design) e **Snowprint**, que segue com o veto reconferido palavra por palavra hoje:
+*"You are currently located in Stockholm, Sweden. We are unable to support relocation for this
+position."*
+
+**Boa parte dos 27 são homônimos de palavra comum** (`black`, `house`, `next`, `proxima`,
+`revolution`), que são outras empresas. Somando as duas varreduras da madrugada: **5.862 slugs,
+68 quadros, 1 candidatura e 2 vagas achadas mas muradas.** Varredura por slug funciona, mas o
+rendimento é este, e agora está medido em vez de suposto.
+
+## RECRUITEE É PAREDE, e agora são DUAS medições independentes
+
+Antes havia uma: Reality Games, em 08/09, mostrou hCaptcha de imagem depois do Send. Hoje a
+segunda, na **Framestore de Montréal**, com clique real e captura na tela: o desafio é
+*"Identify the THREE characters that are partially hidden behind a line"*, com o quebra-cabeça
+desenhado.
+
+**Consequência prática:** as quatro vagas vivas da Framestore no Recruitee (3D Modeller Montréal
+`2120070`, Blender Generalist / Visual Development Artist Montréal `2718959`, Blender Generalist
+Londres `2709436` e Visual Development Artist AI Londres `2619285`) **são fila do Vini, não fila
+de agente** — inclusive a de Montréal, que é a única de modelagem entre as 53 do quadro e que
+seria o alvo mais forte da noite se a porta cedesse. **Não gaste rodada tentando Recruitee de
+novo.**
