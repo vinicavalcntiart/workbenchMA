@@ -2422,3 +2422,20 @@ estiverem realmente resolvidos antes.
 **Regra de cadência cede para ordem do Vini.** A ILM Vancouver estava parada na fila só pela minha
 regra de uma candidatura por casa por rodada. Ele tinha dito, com todas as letras, que em vaga de
 arte do grupo Disney a gente aplica primeiro. Regra interna de cadência não segura ordem dele.
+
+## Workday, mais duas armadilhas medidas na Netflix (09/09)
+
+7. **`click_filter` é o link de TROCA, não o botão de enviar.** Ele existe nos dois formulários: no
+   Create Account leva para Sign In, e no Sign In leva de volta para Create Account. Preencher e
+   depois clicar nele apaga o que foi escrito e devolve a tela de cadastro, sem nenhuma mensagem de
+   erro: o log dizia "entrando" e a tela ficava parada em Create Account. O sinal de qual tela está
+   aberta é o campo **verifyPassword**, que só existe no cadastro. Ordem certa: trocar primeiro,
+   escrever depois, enviar por último.
+8. **O menu anterior pode não ter saído do DOM.** O campo Estado leu **"LinkedIn"** como única
+   opção, que era a fonte recém escolhida. Lista curta demais virou sinal: relê com o menu fechado
+   antes de desistir. Sem isso, o endereço sai sem estado e ninguém percebe.
+
+**E uma nota de prova, específica do locatário `netflix.wd108`:** o **Candidate Home está quebrado
+do lado deles**, devolve "There are 1 error(s)" tanto no site `Netflix` quanto no `Eyeline`. Nesse
+locatário a terceira prova se tira na **página da vaga**, que passa a dizer "You applied for this
+job on <data>" com link View Application. Área do candidato fora do ar não é candidatura perdida.
