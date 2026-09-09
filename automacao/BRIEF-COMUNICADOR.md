@@ -288,3 +288,36 @@ apresentado:
 >
 > Best,
 > Vini Cavalcanti
+
+### SEGUNDA QUEBRA DESTA MESMA REGRA, em 09/09. Leia isto antes de responder qualquer thread.
+
+A regra acima foi escrita em 07/09 e **foi quebrada de novo em 09/09**, na resposta à Black Cube
+Games. Eles escreveram à mão dizendo que o trabalho dele é *"genuinely impressive"*, citaram
+*Realm of Fame* e *The Tale of Bistun* pelo nome, contaram os projetos e avisaram que copiaram o
+art lead. Ou seja: caloroso pelos quatro critérios. A resposta saiu **"Hi," seco, sem emoji,
+sem "thanks for your kind answer", e com quatro parágrafos** onde cabiam três linhas. O Vini
+reagiu assim: *"vc n usou emoji, soltou um hi seco. one more note, quem fala assim? tudo menos
+simpatia, alem de uma mensagem super longa"*.
+
+**Por que quebrou, e é sempre a mesma causa:** as proibições de carta fria (sem emoji, sem
+travessão, sem floreio) são as que ficam na memória de trabalho, porque valem para a maioria dos
+disparos. Elas atropelam esta regra justamente no caso raro em que ela importa.
+
+**CHECAGEM OBRIGATÓRIA, antes de escrever qualquer resposta em thread existente.** Classifique a
+mensagem recebida ANTES de escolher o tom, e escreva a classificação para si mesmo:
+
+1. A pessoa assinou em voz própria, com nome? 2. Elogiou o trabalho com especificidade, citando
+projeto, número ou detalhe? 3. Agradeceu a ele por ter escrito? 4. Desejou boa sorte?
+
+**Dois "sim" ou mais = mensagem CALOROSA**, e aí valem, sem exceção: nome da pessoa no
+cumprimento; abertura reconhecendo a gentileza; **um** emoji discreto; **três ou quatro linhas,
+não mais**; nenhum comentário sobre o próprio e-mail.
+
+**PROIBIDO em resposta calorosa, e foi exatamente o erro de 09/09:** narrar a própria mensagem.
+Frases como *"One more note, and this one asks for nothing"*, *"I'll keep this short"* ou
+*"Just a quick note"* são o remetente falando do e-mail em vez de falar com a pessoa. Ninguém
+fala assim. Corta.
+
+**Nome:** use o nome de quem assinou. Se a mensagem veio de caixa genérica mas a assinatura traz
+um endereço pessoal (na Black Cube era `majid@`), esse nome serve. Sem nenhum nome, "Hi there,"
+é mais quente que "Hi,".
