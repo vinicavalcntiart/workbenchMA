@@ -139,6 +139,19 @@ h1 em{font-style:normal;color:var(--vermelho)}
 .hovergrid{align-items:stretch}
 .hcard .hc .foto img{display:block}
 
+
+/* roleta */
+.roleta{background:var(--preto);color:var(--amarelo);border:4px solid var(--preto);padding:clamp(10px,1.6vh,20px) clamp(14px,1.6vw,28px);position:relative;overflow:hidden}
+.roleta .rw{font-family:var(--disp);text-transform:uppercase;font-size:clamp(28px,min(3.4vw,5.8vh),72px);line-height:.95;min-height:1.9em;display:flex;align-items:center}
+.roleta.spin .rw{animation:rtick .12s steps(1) infinite}
+@keyframes rtick{0%{transform:translateY(-3px)}50%{transform:translateY(3px)}}
+.roleta.done .rw{color:var(--papel);animation:rpop .5s cubic-bezier(.2,1.6,.4,1)}
+.roleta.done{background:var(--vermelho);border-color:var(--vermelho)}
+@keyframes rpop{from{transform:scale(.7);opacity:0}}
+.rbar{height:6px;background:#ffffff33;margin-top:10px}
+.rbar i{display:block;height:100%;width:0;background:var(--amarelo)}
+.roleta.done .rbar i{background:var(--papel)}
+
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,30px);margin-top:clamp(14px,3vh,36px)}
 .steps .blk{min-height:clamp(150px,26vh,320px);display:flex;flex-direction:column;justify-content:space-between}
@@ -498,9 +511,11 @@ h1 em{font-style:normal;color:var(--vermelho)}
   <h1>Vire o <em>bloco</em></h1>
   <div class="act">
     <div class="passos">
-      <div class="passo"><div class="n">1</div><div class="t"><b>O problema:</b> um personagem infantil brasileiro precisa ganhar licenciamento sem parecer cópia da Disney.</div></div>
+      <div class="passo"><div class="n">1</div><div class="t"><b>Sorteie o tema.</b> Pergunta fixa: <i>como isso ganha público novo sem orçamento?</i></div></div>
+      <div class="roleta" id="roleta"><div class="rw" id="rw">?</div><div class="rbar"><i id="rbar"></i></div></div>
+      <div class="tbtns" style="justify-content:flex-start;margin-top:0"><button class="btn" id="sortear">🎰 sortear · 1 min</button></div>
       <div class="passo"><div class="n">2</div><div class="t"><b>2 min · a empresa no topo.</b> Escreva a solução mais óbvia.</div></div>
-      <div class="passo"><div class="n">3</div><div class="t"><b>2 min · vire.</b> A criança no topo. O que ela quer de verdade? Uma frase.</div></div>
+      <div class="passo"><div class="n">3</div><div class="t"><b>2 min · vire.</b> O público no topo. O que ele quer de verdade? Uma frase.</div></div>
     </div>
     <div>
       <div class="timer" id="timer">2:00</div>
@@ -578,6 +593,21 @@ const leafcard=document.getElementById('leafcard');
 function showLeaf(k){leafcard.innerHTML='<b>'+LEAVES[k].t+'</b><div>'+LEAVES[k].b+'</div>';document.querySelectorAll('.leaf').forEach(l=>l.classList.toggle('on',l.dataset.k===k))}
 document.querySelectorAll('.leaf').forEach(l=>l.onclick=()=>showLeaf(l.dataset.k));showLeaf('raiz');
 
+
+const TEMAS=['quadrinhos independentes','estúdio de animação do Recife','museu sem público jovem','banda local numa segunda-feira','livraria de bairro','marca de moda autoral','festival de cinema sem patrocínio','game indie brasileiro','personagem infantil × Disney','editora de livros ilustrados','bloco de carnaval de rua','podcast de cultura','teatro de bonecos','artesanato de Caruaru','cinema de rua','selo de música independente','galeria de arte online','cordel','streaming regional','estúdio de tatuagem','escola de dança','feira de zines','coletivo de grafite','ateliê de cerâmica','festival de forró'];
+const rw=document.getElementById('rw'),rbar=document.getElementById('rbar'),roleta=document.getElementById('roleta');
+let spinning=false;
+document.getElementById('sortear').onclick=e=>{
+  if(spinning)return;spinning=true;roleta.classList.remove('done');roleta.classList.add('spin');e.target.disabled=true;e.target.style.opacity=.5;
+  const DUR=60000,t0=performance.now();let last=-1;
+  const final=Math.floor(Math.random()*TEMAS.length);
+  (function step(){
+    const t=Math.min(1,(performance.now()-t0)/DUR);rbar.style.width=(t*100)+'%';
+    if(t>=1){rw.textContent=TEMAS[final];roleta.classList.remove('spin');roleta.classList.add('done');spinning=false;e.target.disabled=false;e.target.style.opacity=1;return}
+    let i;do{i=Math.floor(Math.random()*TEMAS.length)}while(i===last);last=i;rw.textContent=TEMAS[i];
+    setTimeout(step,55+900*Math.pow(t,3));
+  })();
+};
 const CRISES=['Agora o prazo é 30 segundos.','Orçamento zero. Nenhum real.','A ideia precisa caber em cinco palavras.','Proibido usar internet.','A solução tem que funcionar sem nenhuma imagem.','Troquem de folha com o colega ao lado e continuem a ideia dele.'];
 let secs=120,tick=null;const timer=document.getElementById('timer');
 function paint(){const m=Math.floor(secs/60),s=secs%60;timer.textContent=m+':'+String(s).padStart(2,'0');timer.classList.toggle('warn',secs<=10&&secs>0);if(secs===0&&tick){clearInterval(tick);tick=null;timer.textContent='0:00'}}
