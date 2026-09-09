@@ -2284,3 +2284,33 @@ inteira que estava parada havia dois dias.
 **`choice`** (escolha única) quer a chave **`opcao`**, no singular, e pergunta do tipo **`choices`**
 (múltipla) quer **`opcoes`**, no plural. Usar a errada faz o preenchedor dizer, corretamente,
 *"RECUSO DE ADIVINHAR"* e parar sem enviar. O `tt_qdump.js` mostra o tipo de cada uma antes.
+
+## Varredura das quatro casas grandes em 09/09 às 05h: zero, e o zero está medido
+
+Feita pela rotina de prospecção, com número em vez de impressão.
+
+- **Disney:** já recebeu candidatura nesta rodada, a Previs Generalist Artist da ILM Londres
+  (`10137201`). O quadro novo `disneycareerdc` foi varrido inteiro por agente: 642 vagas, e sobrou
+  **uma** linha nova de verdade, a Lead Generalist Artist da ILM Vancouver (`10142674`), segurada
+  para a próxima rodada pela regra de uma mensagem por casa por dia.
+- **Warner Bros. Discovery:** `careers.wbd.com/global/en/search-results` com quatro palavras-chave
+  (`character artist`, `modeler`, `modelling`, `look development`). O bloco `"jobs":[` foi extraído
+  com balanceamento de colchetes que respeita string, porque a expressão regular preguiçosa quebra
+  no array grande. **Zero vagas da disciplina.**
+- **NBCUniversal e DreamWorks:** API do SmartRecruiters, oito consultas
+  (`artist`, `modeler`, `modeller`, `surfacing`, `look development`, `sculpt`, `character`,
+  `environment`). Nove títulos da disciplina, e os três que importam são de Montréal:
+  `REF38910F` Lead Character Artist, `REF38920U` Lead Material Artist e `REF38909O` Associate Art
+  Director. **Os três morrem no mesmo veto escrito**, no bloco *Eligibility Requirements*:
+
+  > *"Must be willing to work in our Montreal office a minimum of 4 days a week.
+  > **Must be legally authorized to work in Canada.**"*
+
+  Isso é veto ESCRITO, e desqualifica pela régua. A `DreamWorks Feature - Character Effects Artist`
+  de Glendale é CFX, disciplina que ele não tem. **Detalhe de método:** o endpoint
+  `/postings/<ref>` devolve **400** com o `refNumber`; ele quer o `id` interno que vem na listagem.
+- **Paramount:** Access Denied do Akamai até no navegador, e por isso está coberta pelo alerta de
+  email desde 31/08. Não foi tentada de novo.
+
+**Conclusão para a próxima rodada:** as três de Montréal já estavam registradas no painel como
+vetadas, e a varredura confirmou. Não gaste rodada relendo essas três; o que muda é vaga nova.
