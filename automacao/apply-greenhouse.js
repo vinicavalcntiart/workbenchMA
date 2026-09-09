@@ -21,7 +21,25 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
  try{
   await p.goto(url,{timeout:120000,waitUntil:'networkidle'}).catch(()=>{}); await p.waitForSelector('#first_name',{timeout:60000}); await p.waitForTimeout(3000);
   await p.fill('#first_name',BASE.first); await p.fill('#last_name',BASE.last); await p.fill('#email',BASE.email);
-  if(await p.$('#phone')){ await p.fill('#phone',BASE.phone); }
+  // ARMADILHA MEDIDA NA EPIC (09/09): o Greenhouse novo monta o telefone com o
+  // intl-tel-input, que e um SELETOR DE PAIS separado (#iti-0__search-input) grudado no
+  // #phone. A regra do documento privado vale aqui: escolher o pais no seletor e escrever
+  // no campo do numero SO os digitos, sem +55. Repetir o codigo faz a validacao recusar.
+  // Sem esta parte o formulario sai com bandeira errada e numero invalido, e ninguem avisa.
+  if(await p.$('#phone')){
+    const bandeira=await p.$('.iti__selected-country, [aria-controls*="iti-0__dropdown"], button[class*="iti__selected"]');
+    if(bandeira){
+      await bandeira.click({force:true}).catch(()=>{});
+      await p.waitForTimeout(900);
+      const busca=await p.$('#iti-0__search-input');
+      if(busca){ await busca.fill('Brazil').catch(()=>{}); await p.waitForTimeout(900); }
+      const opcao=await p.$('#iti-0__item-br, li[id*="item-br"], .iti__country[data-country-code="br"]');
+      if(opcao){ await opcao.click({force:true}).catch(()=>{}); log('pais do telefone => Brazil (+55)'); }
+      else { await p.keyboard.press('Enter').catch(()=>{}); log('pais do telefone: escolhi pelo Enter, confira a leitura de volta'); }
+      await p.waitForTimeout(700);
+    }
+    await p.fill('#phone',BASE.phone);
+  }
   // combobox helper: type and pick best option
   async function pick(inputSel, prefs, label, fallbackFirst){
     const inp=await p.$(inputSel); if(!inp){ log('no field',label); return false; }
@@ -51,11 +69,28 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
   await p.waitForTimeout(3000);
   // questions
   for(const q of A.questions){
-    const sel='#'+q.id.replace(/([\[\]])/g,'\\$1');
+    // ARMADILHA MEDIDA NA EPIC (09/09): os campos de dados demograficos do Greenhouse tem
+    // id PURAMENTE NUMERICO (4000367004). '#4000367004' nao e seletor CSS valido, e o
+    // querySelectorAll estoura SyntaxError, que caia no catch de fora e abortava o
+    // preenchimento inteiro depois de tudo ja estar digitado. Id que comeca com digito vai
+    // por seletor de atributo.
+    const sel=/^\d/.test(q.id) ? '[id="'+q.id+'"]' : '#'+q.id.replace(/([\[\]])/g,'\\$1');
     const el=await p.$(sel); if(!el){ log('missing',q.id,q.label); continue; }
     const role=await el.getAttribute('role'); const cls=(await el.getAttribute('class'))||'';
     // Campo que o Greenhouse renderiza como combobox mas que a resposta trata como
     // texto (State, por exemplo) chegava aqui sem prefs e derrubava a execucao inteira.
+    // CAIXA DE MARCAR: o consentimento de dados demograficos da Epic e um checkbox, e o
+    // p.fill() de antes estourava excecao nele, o que abortava o preenchimento INTEIRO
+    // pelo catch de fora. Marcar so quando a resposta pedir, nunca por padrao: honeypot
+    // (beecatcher, hp_, honeypot) fica SEMPRE vazio.
+    const tipo=(await el.getAttribute('type'))||'';
+    if(tipo==='checkbox'||tipo==='radio'){
+      if(/honeypot|beecatcher|^hp_/i.test(q.id)){ log('honeypot, deixando vazio', q.id); continue; }
+      const querMarcar=q.marcar!==false;
+      if(querMarcar){ await el.check({force:true}).catch(async()=>{ await el.click({force:true}).catch(()=>{}); }); log('marcado',q.label); }
+      else log('deixado desmarcado',q.label);
+      continue;
+    }
     if(q.type==='select'||role==='combobox'||/select__input/.test(cls)){ await pick(sel,q.prefs||[q.text||''],q.label,q.first); }
     else { await p.fill(sel,q.text||''); log('filled',q.label); }
   }
@@ -71,6 +106,9 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
   const readback=await p.evaluate(ids=>ids.map(id=>{
     const el=document.getElementById(id)||document.getElementById(id+'[]');
     if(!el) return [id,'(CAMPO NAO ENCONTRADO)'];
+    // checkbox devolve value="on" marcado ou nao, entao a leitura de volta antiga mentia:
+    // dizia "on" para caixa desmarcada. O que vale aqui e o .checked.
+    if(el.type==='checkbox'||el.type==='radio') return [id, el.checked?'MARCADO':'DESMARCADO'];
     let v=(el.value||'').trim();
     if(!v){
       // react-select nao guarda o texto no input: o escolhido fica em single-value ou multi-value.
@@ -79,7 +117,7 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
         v = parts.length ? parts.join(' + ') : box.innerText.replace(/\s+/g,' ').trim().slice(0,80); }
     }
     return [id, v||'(VAZIO)'];
-  }), ['first_name','last_name','email','phone'].concat(A.questions.map(q=>q.id.replace(/\[\]$/,''))));
+  }), ['first_name','last_name','email','phone','country','candidate-location'].concat(A.questions.map(q=>q.id.replace(/\[\]$/,''))));
   for(const [id,v] of readback) log('  leitura de volta', id, '=>', v);
   const vazios=readback.filter(([,v])=>v==='(VAZIO)'||v==='(CAMPO NAO ENCONTRADO)').map(([id])=>id);
   if(vazios.length) log('ATENCAO, campos sem valor lido:',JSON.stringify(vazios));
