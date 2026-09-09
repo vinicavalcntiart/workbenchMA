@@ -2346,3 +2346,32 @@ passa, e o upload é um POST separado que pode ter proteção própria. Some ist
    anexo é o NOME DO ARQUIVO na tela**, nunca o valor do campo. Isso ficou implementado com
    `setInputFiles` primeiro e o `drop` como fallback automático, e serve para qualquer formulário
    React com zona de soltar.
+
+## Varredura da Regra 14 às 07h45 de 09/09: zero vaga nova, e TRÊS falhas de registro achadas
+
+A varredura das quatro casas grandes foi refeita, agora com seis palavras-chave (`character`,
+`modeler`, `modeling`, `surfacing`, `look development`, `sculpt`) **nos DOIS quadros da Disney**,
+`disneycareer` e `disneycareerdc`. **Nenhuma vaga nova da disciplina.** Tudo que apareceu já
+estava trabalhado, vetado ou fora de escopo (as três de Mumbai, que a Índia derruba).
+
+**Mas o dedupe por ID achou outra coisa, e ela vale mais que a varredura:** três candidaturas
+REAIS da Disney estavam registradas no `processados.csv` e **nunca tinham entrado no
+`enviados.csv`**, ou seja o dia delas foi subcontado e elas sumiriam de qualquer contagem futura:
+
+| Requisição | Vaga | Enviada em | Desfecho |
+|---|---|---|---|
+| `10159371` | Lead Texture Artist, ILM Londres | 01/09 | recusada em 01/09 |
+| `10159370` | Senior Texture Artist, ILM Londres | 02/09 | recusada em 03/09 |
+| `10159882` | Senior Modeler, ILM Sydney | 04/09 | Application Received |
+
+As três linhas foram acrescentadas ao fim do `enviados.csv` com a data ORIGINAL e a nota dizendo
+que são correção de registro, não candidatura nova. O arquivo foi de 767 para 770 linhas.
+
+**A lição de método, e ela é a mesma que já apareceu duas vezes esta madrugada:** candidatura só
+existe quando está nos **três** lugares. O `processados.csv` guarda o recibo, mas quem conta é o
+`enviados.csv`, e o painel é quem mostra. A auditoria cruzada custa um script de vinte linhas e
+achou três buracos numa passada. **Vale rodar no fim de toda rodada**, não só quando se desconfia.
+
+**Detalhe de API que economiza tempo:** o `searchText` do Workday da Disney funciona de verdade e
+devolve resultado diferente por termo, mas os dois quadros compartilham a maior parte das vagas, e
+**o mesmo id volta em quase todos os termos**. Varra com `sort -u` sobre o id, não sobre o título.
