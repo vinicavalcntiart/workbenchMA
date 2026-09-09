@@ -2513,3 +2513,26 @@ de prova, e ela agora está certa.
 candidatura está registrada e o email de verificação é artefato redundante. Terminou em
 `email_verification_needed`, está **pela metade** até alguém abrir o link, e buscar esse email na
 caixa dele é parte do envio, não um passo opcional.
+
+## Greenhouse com código de segurança: a ordem certa, medida em 09/09
+
+Na Sony Pictures Imageworks o envio pediu código por email, e **duas tentativas foram perdidas por
+ordem errada**. O que se mediu:
+
+- **Cada clique em Submit dispara um código NOVO e invalida o anterior.** Gravar o código no arquivo
+  ANTES de rodar o script garante falha: quando ele chega na hora de digitar, o código que está no
+  arquivo já morreu, porque o próprio clique dele pediu outro. Três emails chegaram em oito minutos,
+  um por tentativa.
+- **A ordem que funciona:** rodar o envio em SEGUNDO PLANO, esperar o marcador
+  `EMAIL CODE REQUIRED` aparecer no log, **só então** ler o código mais recente no Gmail e gravar o
+  arquivo enquanto o script ainda espera. Ele tem seis minutos de janela, o que é folga suficiente.
+- **Os ids dos campos do Greenhouse são PRÓPRIOS DE CADA VAGA.** O arquivo de respostas da Modeler
+  da mesma casa não serviu para a Environment Artist: todos os `question_*` deram "missing" e o
+  formulário foi enviado vazio na primeira tentativa. Antes de reaproveitar resposta entre vagas da
+  mesma casa, **despeje o formulário** (id, rótulo, tipo, obrigatoriedade) e monte o arquivo pelos
+  ids que aquela vaga tem. Existe `gh_dump.js` para isso.
+
+**E a lição de fila, que é a mais cara aqui:** esta vaga escapou dias porque aparecia **só dentro de
+uma nota de inventário**, nunca como entrada própria do painel. O dedupe por ID achava a menção e
+concluía "já trabalhada". Menção em texto de varredura NÃO é entrada de fila: quando o inventário
+achar vaga da disciplina, ela tem que virar linha, senão o próprio dedupe a esconde.

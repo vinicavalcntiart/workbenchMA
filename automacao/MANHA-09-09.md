@@ -7,7 +7,7 @@ seu.
 
 ## 1. O placar, sem inflar
 
-**Vinte candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
+**Vinte e uma candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
 prova por recibo de email ou pela área do candidato. Conferido nos três registros
 (`enviados.csv`, painel, `processados.csv`): **nenhuma falta em lugar nenhum**.
 
@@ -33,6 +33,7 @@ prova por recibo de email ou pela área do candidato. Conferido nos três regist
 | 18 | **Eyeline Studios (Netflix)** | **Modeling Supervisor** | Seul |
 | 19 | **Netflix Animation** | **Environment Modeling Supervisor** | Sydney |
 | 20 | Airship Interactive | Groom Artist (banco de freelance) | rede global |
+| 21 | **Sony Pictures Imageworks** | **Environment Artist** | Vancouver |
 
 A **nº 8** é a mais alinhada que a campanha já achou: supervisão de modelagem de **personagem**,
 num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
