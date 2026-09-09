@@ -95,7 +95,9 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
     else { await p.fill(sel,q.text||''); log('filled',q.label); }
   }
   // EEO / demographic selects: decline
-  for(const id of ['gender','hispanic_ethnicity','veteran_status','disability_status','race']){ if(await p.$('#'+id)) await pick('#'+id,['don\'t wish','not wish','Decline','Prefer not'],id).catch(()=>{}); }
+  // 'I do not want to answer' entrou em 09/09: o disability_status da Mob Entertainment nao
+  // oferece 'Decline' nem 'wish', so essa frase, e sem ela o campo ficava sem resposta.
+  for(const id of ['gender','hispanic_ethnicity','veteran_status','disability_status','race']){ if(await p.$('#'+id)) await pick('#'+id,['don\'t wish','not wish','do not want to answer','Decline','Prefer not'],id).catch(()=>{}); }
   await p.waitForTimeout(1000);
   await p.screenshot({path:`filled_${slug}.png`,fullPage:true});
   const missing=await p.$$eval('[aria-invalid="true"], .field-error, .error',els=>els.map(e=>e.id||e.innerText.slice(0,60)));
@@ -121,6 +123,24 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
   for(const [id,v] of readback) log('  leitura de volta', id, '=>', v);
   const vazios=readback.filter(([,v])=>v==='(VAZIO)'||v==='(CAMPO NAO ENCONTRADO)').map(([id])=>id);
   if(vazios.length) log('ATENCAO, campos sem valor lido:',JSON.stringify(vazios));
+  // LEITURA DE VOLTA DOS ANEXOS, nova em 09/09. O anexo era o unico obrigatorio que a
+  // conferencia NAO olhava: o setInputFiles vai em '#resume', e quadro que renomeia o
+  // input deixaria a candidatura sair SEM CURRICULO, com 'pre-submit invalid: []' na tela,
+  // que e o retrato do erro caro desta campanha (parece certo, nao levanta excecao).
+  // MEDIDO EM 09/09 e a medicao mudou o teste: depois do setInputFiles o React do Greenhouse
+  // TROCA a area de anexo por uma etiqueta com o nome do arquivo e TIRA o input do DOM. Entao
+  // "zero input[type=file]" nao quer dizer "sem curriculo", quer dizer "ja anexou" — e contar
+  // input teria dado um alarme falso bem no minuto do envio. O que prova de verdade e o NOME
+  // DO ARQUIVO aparecendo no formulario.
+  const nomeCV=BASE.resume.split('/').pop(), nomeCarta=BASE.cover.split('/').pop();
+  const prova=await p.evaluate(([cv,carta])=>{
+    const t=(document.querySelector('form')||document.body).innerText;
+    return {inputs:document.querySelectorAll('input[type=file]').length,
+            cv:t.includes(cv), carta:t.includes(carta),
+            trecho:(t.match(/[^\n]*\.pdf[^\n]*/g)||[]).slice(0,4)};
+  },[nomeCV,nomeCarta]);
+  log('  anexo: input[type=file] restantes =',prova.inputs,'| CV visivel no formulario =',prova.cv,'| carta =',prova.carta,'|',JSON.stringify(prova.trecho));
+  if(!prova.cv) log('!! PARE: o nome do CV NAO aparece no formulario. Nao envie sem conferir o print.');
   if(!SUBMIT){ log('DRY RUN done'); await b.close(); return; }
   const btn=await p.$('button:has-text("Submit application"), button[type=submit]:has-text("Submit"), input[type=submit]');
   await btn.click(); await p.waitForTimeout(9000);
