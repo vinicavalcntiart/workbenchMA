@@ -22,6 +22,52 @@ e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
+## ATUALIZAÇÃO DE 09/09 À TARDE — três entradas mudaram, e uma delas você ia perder tempo à toa
+
+**nº 7, Avalanche Studios Group (Lead Character Artist, Estocolmo). O motivo do fracasso foi
+descoberto hoje, e sem ele você tentaria e desistiria.** O formulário do Lever tem um campo
+**Current location** que é autocomplete estruturado: o que vale para o servidor não é o texto
+digitado, é a sugestão ESCOLHIDA da lista. A lista vem de uma chamada que o hCaptcha libera, e do
+nosso IP ela volta vazia, então o Submit não gera requisição nenhuma e **nenhum erro aparece na
+tela**. No seu navegador a lista aparece. Então: digite só `Olinda`, **espere e clique na sugestão**,
+e só depois Submit. O resto já está preenchido no dossiê da entrada 7. O currículo já passou pelo
+parser do Lever com "Success!".
+
+**nº 43 e 46, TTK Games. Confirmado com navegador de verdade (antes era dedução por cabeçalho):**
+a rota do Pinpoint redireciona para `ttkgames.com/careers/` e a página de destino tem ZERO campos.
+A casa não usa o formulário do Pinpoint, manda para o site próprio, cujo envio já devolveu
+`500 ReCaptcha Failed`. Continua valendo o dossiê, mas pelo site deles.
+
+**Offworld Industries (3D Character Artist, New Westminster, BC) sobe da tabela do fim para entrada
+com dossiê completo.** É PERSONAGEM, no CANADÁ, efetiva, faixa publicada **CAD 80.000 a 95.000**, e
+o anúncio **não tem veto escrito** (o único acerto da régua é "three days per week" no escritório,
+que é presença híbrida). Parede medida com clique, três vezes: reCAPTCHA v2 com desafio de imagem.
+
+Link: https://owi.bamboohr.com/careers/199
+
+**A ORDEM IMPORTA e é o que mais custa tempo aqui:**
+
+1. **Country primeiro, antes de qualquer campo de texto.** Escolha **Brazil**. Com país Canadá o
+   campo Province é um menu de províncias; ao trocar para Brazil o BambooHR **troca o elemento por
+   um campo de texto livre**. Preenchendo antes, o valor vai para um menu que deixa de existir e a
+   província fica vazia sem aviso nenhum.
+2. First Name `Vini` · Last Name `Cavalcanti` · Email `contact@vinicavalcanti.art`
+3. Phone, Address, City e Postal Code: valores no doc privado do Drive. **Province:** `Pernambuco`
+   (campo de texto, depois que o país virou Brazil).
+4. **Date Available:** a máscara é **mm/dd/yyyy**. Digitar `2026-10-20` grava `02/dd/yyyy`. Use
+   `10/20/2026`.
+5. **Desired Pay:** `CAD 80,000 per year, aligned with the posted range for the role, at the lower
+   end. Open to aligning with your band for the role.`
+6. **Website, Blog or Portfolio:** `https://www.artstation.com/viniciuscavalcanti`
+7. **LinkedIn URL:** `https://www.linkedin.com/in/vinicavalcnti/`
+8. **Resume:** o formulário tem DOIS campos de arquivo e o **primeiro é o da Cover Letter**. O CV
+   vai no segundo, o marcado com asterisco.
+9. O campo "Please leave this field blank" é armadilha para robô: **deixe vazio**.
+
+Depois resolva o reCAPTCHA e clique em Submit. Menos de um minuto.
+
+---
+
 Vá de cima para baixo. Cada entrada é autossuficiente: link, parede, campos e textos prontos.
 As dez primeiras foram reconferidas no ar hoje, uma a uma, na fonte oficial de cada ATS.
 
