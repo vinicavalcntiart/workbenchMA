@@ -7,7 +7,7 @@ seu.
 
 ## 1. O placar, sem inflar
 
-**Dezoito candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
+**Dezenove candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
 prova por recibo de email ou pela área do candidato. Conferido nos três registros
 (`enviados.csv`, painel, `processados.csv`): **nenhuma falta em lugar nenhum**.
 
@@ -31,6 +31,7 @@ prova por recibo de email ou pela área do candidato. Conferido nos três regist
 | 16 | **Netflix Animation** | **Environment Modeling Supervisor** (CAD 167–212k) | Vancouver |
 | 17 | **Netflix Animation** | **Environment Surfacing Supervisor** (CAD 163–223k) | Vancouver |
 | 18 | **Eyeline Studios (Netflix)** | **Modeling Supervisor** | Seul |
+| 19 | **Netflix Animation** | **Environment Modeling Supervisor** | Sydney |
 
 A **nº 8** é a mais alinhada que a campanha já achou: supervisão de modelagem de **personagem**,
 num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
@@ -44,7 +45,7 @@ num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
 
 ## 2. O QUE SÓ VOCÊ PODE FAZER, em ordem
 
-### 2.1 Quatro candidaturas de Workday: NÃO precisam mais da sua mão
+### 2.1 Três candidaturas de Workday: NÃO precisam mais da sua mão
 
 Deixei esta seção pedindo cliques seus de madrugada. **Não pede mais.** O fluxo do Workday agora
 atravessa sozinho, e a prova são as três de hoje de manhã: ILM Vancouver, Netflix Modeling e

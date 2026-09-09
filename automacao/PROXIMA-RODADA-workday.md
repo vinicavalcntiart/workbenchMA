@@ -1,4 +1,4 @@
-# Próxima rodada: quatro candidaturas de Workday prontas para clicar
+# Próxima rodada: três candidaturas de Workday prontas para clicar
 
 > **ATUALIZADO às 10h UTC de 09/09: a nº 7, ILM Vancouver `10142674`, JÁ FOI ENVIADA E CONFIRMADA.**
 > Ela não esperou a virada da rodada porque o Vini mandou, por escrito, ser o primeiro em qualquer
@@ -40,7 +40,7 @@ como "sim".
 | 2 | **Lead Surfacing Artist** `JR40928` | Eyeline, Seul | `netflix.wd108.myworkdayjobs.com` | `Eyeline` | `Eyeline-Seoul/Lead-Surfacing-Artist_JR40928` | não publicada |
 | ~~3~~ | ~~**Environment Modeling Supervisor** `JR39446`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 167k–212k~~ |
 | ~~4~~ | ~~**Environment Surfacing Supervisor** `JR39273`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 163k–223k~~ |
-| 5 | **Environment Modeling Supervisor** `JR41734` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Modeling-Supervisor_JR41734` | não publicada |
+| ~~5~~ | ~~**Environment Modeling Supervisor** `JR41734`~~ | ~~Netflix Animation, Sydney~~ | **ENVIADA em 09/09** | | | |
 | 6 | **Environment Surfacing Supervisor** `JR41749` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Surfacing-Supervisor_JR41749` | não publicada |
 | ~~7~~ | ~~**Lead Generalist Artist** `10142674`~~ | ~~Disney / ILM Vancouver~~ | **ENVIADA em 09/09, Application Received** | | | ~~CAD 126.800–162.300~~ |
 | 8 | **Visual Development Artist, Ink** `JR41753` | Netflix, LA/Vancouver | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Los-Angeles/Visual-Development-Artist--Ink_JR41753` | não publicada |
