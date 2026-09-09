@@ -1646,6 +1646,60 @@ validation failed"* e *"reCAPTCHA V3 validation failed, suspected as abusive usa
 **O formulário NÃO tem campo de arquivo**, então o CV e a carta vão por link, e o texto pronto está
 em `automacao/respostas-formularios.md`.
 
+## 48. Volka — 3D ARTIST — Limassol, Chipre (presencial, EFETIVA) — A CASA BANCA A AUTORIZAÇÃO
+
+**Link direto:** https://jobs.ashbyhq.com/volka/fa36e503-daf1-44d8-be2c-260cea2dd300/application
+
+**Por que ela vale mais que a média da fila, e não é o cargo:** é a frase de benefício, e quase
+nenhuma casa escreve isso.
+
+> *"Relocation Support: Moving countries is stressful. We handle the tickets, accounts and
+> **permits** for you and your family. We provide temporary accommodations while you're getting
+> settled, cover the first rent of your own apartment and help with necessary furnishings."*
+> Mais: *"Language Learning + **Naturalization Support**"*.
+
+A casa banca passagem, contas, **autorizações** e primeiro aluguel, e mantém vaga aberta de
+*Immigration Specialist*. Isso é o oposto do veto de residência que derruba metade da fila.
+
+**Encaixe, dito sem maquiar:** é **ambiente estilizado**, não personagem. O anúncio pede
+*"Full-cycle creation of stylized low-poly environment assets: landscapes, vegetation, buildings,
+props and decorative objects"*, com high poly, low poly, retopologia, UV e textura. É a disciplina
+dele no sentido de modelagem e textura estilizada, mas o recorte é ambiente. Pede **2 anos**; ele
+tem mais de 10. Chipre é UE, dentro do escopo. Efetiva e presencial em Limassol. Faixa não
+publicada, então pela regra de 04/09 a pretensão é **EUR 45.000** com a frase de alinhamento
+(casa média), e vale dizer na carta que ele QUER REALOCAR.
+
+**Régua de vinte termos:** dois casamentos, os dois falsos positivos: `relocat` é a frase A FAVOR
+citada acima, e `located in` é o endereço do estúdio. **Sem veto.** Dedupe por requisição: zero em
+enviados.csv, no painel, no processados.csv e nesta fila.
+
+**POR QUE ESTÁ NA SUA MÃO, e o que conferir antes de preencher:** a **API da Ashby diz que a vaga
+está viva** (`isListed: true`, `applicationDeadline: null`, e ela mesma serve essa URL como
+`applyUrl`), mas a página renderizada, aberta com navegador de verdade daqui, mostra
+**"Page not found"**. Foi medido em 09/09 que o Ashby devolve a MESMA resposta para vaga real, uuid
+falso e inquilino falso, seis URLs com 7.270 bytes idênticos: só a API discrimina. Ou seja, o
+"Page not found" é a nossa rede, não a vaga.
+
+**Abra o link no seu navegador. Se carregar o formulário com o título "3D Artist", preencha e
+envie. Se disser "Page not found" aí também, então a vaga saiu do ar e é para riscar esta entrada.**
+
+---
+
+## 49. Crater Studio — convite aberto a Artists — Belgrado, Sérvia — PORTA É EMAIL, NÃO FORMULÁRIO
+
+**Link:** https://craterstudio.com/jobs · **Email publicado:** effects@craterstudio.com
+
+O texto da própria página diz *"Please apply via job application form - register your interest"*,
+mas **o formulário não existe na página**. Abri com navegador de verdade em 09/09, rolei até o fim
+e li o DOM: **zero campo de formulário, zero link de candidatura**. O único contato publicado é o
+`effects@craterstudio.com` e dois telefones. Régua de vinte termos: zero casamento.
+
+**Consequência prática:** isto não é fila de formulário, é **carta**, e carta fria nova é sempre
+rascunho pela regra da campanha. Fica registrado aqui para a próxima rodada não gastar navegador
+procurando um formulário que a página promete e não tem.
+
+---
+
 ## As outras trinta, se sobrar tempo
 
 Todas já foram abertas e medidas, todas ficam à mão, e o texto de cada uma está no painel. Onde a
