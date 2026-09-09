@@ -2000,3 +2000,40 @@ porque **estúdio pequeno raramente usa Greenhouse**, e casa grande já estava n
 que rendeu de verdade hoje foi outro: **perguntar qual ATS cada estúdio do painel realmente usa**,
 lendo o HTML da página de carreiras dele, em vez de adivinhar o slug. Varredura por slug é barata,
 então vale rodar; mas o rendimento dela é baixo e agora está medido: **2 vagas em 2.934 tentativas.**
+
+---
+
+## 09/09, 00h22 — TEAMTAILOR PODE EXIGIR VERIFICAÇÃO DE EMAIL, e sem ela a candidatura NÃO EXISTE
+
+Medido na **Airship Interactive**, Character Artist. O preenchedor rodou inteiro, todas as sete
+perguntas obrigatórias responderam, o CV subiu, os consentimentos foram marcados, e o clique em
+Submit levou para:
+
+`.../applications/email_verification_needed` → *"Verify your email. We've sent you an email.
+Please click the verification link in the email to complete your application."*
+
+**O preenchedor marcou `RESULTADO DUVIDOSO`, e ele estava certo em marcar:** naquele momento a
+candidatura **não existia**. Quem parasse ali teria registrado um envio que não aconteceu, que é
+o erro mais caro desta campanha.
+
+**O que completa:** o email chega em segundos de `no-reply@<conta>.teamtailor-mail.com` com o
+assunto *"Complete the application for <cargo>"* e traz uma URL
+`/applications/verify_email/<uuid>?candidate_uuid=<uuid>`. **Abrir essa URL no navegador conclui a
+candidatura** e a tela vira *"Thanks for applying. We have received your application and we will
+be reviewing it shortly"*, com a URL terminando em `/thanks`.
+
+**Por que a Sandbox não pediu isso e a Airship pediu:** a Sandbox confirmou direto na tela. A
+diferença é configuração da conta, não do candidato. **Regra: no Teamtailor, `RESULTADO DUVIDOSO`
+com `email_verification_needed` na URL não é falha — é meio caminho. Vá ao Gmail, abra o link, e
+só então registre o envio.**
+
+## E a varredura que achou a vaga: 32 tokens conhecidos para mais de 700 estúdios
+
+A Airship apareceu numa varredura de slugs de **Teamtailor** feita na madrugada de 09/09, pelo
+mesmo método da varredura de Greenhouse. **A campanha tinha perfil Connect na Airship desde 06/09
+e nunca tinha visto estas três requisições** (Character Artist, Groom Artist e Environment Artist):
+o dedupe por ID deu zero nas três.
+
+**A lição não é sobre a Airship, é sobre o método:** ter conta num ATS não é o mesmo que ter
+varrido o quadro daquele estúdio. O censo de 07/09 listava 177 vagas de Teamtailor em **32
+tokens**, e a campanha conhece mais de 700 estúdios.
