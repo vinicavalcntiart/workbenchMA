@@ -72,7 +72,24 @@ faixa publicada, **CAD 167–212k** e **CAD 163–223k**.
 A fundadora da Game Boost pediu, por escrito, que você conecte com ela e com o Tommy, e disse que
 é no feed deles que publicam os pedidos de trabalho. **Jenny Österlund** e **Tommy**, Game Boost.
 
-### 2.3 Sete rascunhos no Gmail esperando o seu envio
+### 2.3 VINTE E DOIS rascunhos no Gmail, e o envio é MANUAL
+
+Corrigindo uma coisa que eu escrevi hoje mais cedo e que estava errada: eu disse que rascunho com o
+assunto fixo sai sozinho pelo Apps Script. **Não sai.** Medi: são **22 rascunhos** com o assunto
+fixo parados na caixa, o mais antigo de **08/09 às 19h03**, quase dezoito horas. Se fosse
+automático, esses já teriam saído.
+
+O próprio `automacao/envia-rascunhos.gs` diz por que, no passo 5 do cabeçalho: é para abrir
+`script.google.com` e **rodar a função à mão**. E a constante `SIMULAR` no arquivo está como
+`true`, o que faz a execução só listar e não enviar. São dois gestos: trocar para `false` e rodar.
+
+**Atalho que o próprio arquivo documenta e que vale se a cota apertar:** `prepararRascunhos()`
+completa assinatura e anexos **sem gastar a cota de envio** (100 por 24 horas), e aí você dispara
+pela interface do Gmail, que tem teto maior.
+
+Eu não envio, por regra sua. O que me cabe é medir e dizer o número, e o número é 22.
+
+### 2.3.1 A lista original de sete, que continua valendo
 
 Seis são para **pessoa com nome e cargo, com endereço publicado** (confiança alta, não montado):
 
