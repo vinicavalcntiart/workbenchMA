@@ -513,7 +513,7 @@ h1 em{font-style:normal;color:var(--vermelho)}
     <div class="passos">
       <div class="passo"><div class="n">1</div><div class="t"><b>Sorteie o tema.</b> Pergunta fixa: <i>como isso ganha público novo sem orçamento?</i></div></div>
       <div class="roleta" id="roleta"><div class="rw" id="rw">?</div><div class="rbar"><i id="rbar"></i></div></div>
-      <div class="tbtns" style="justify-content:flex-start;margin-top:0"><button class="btn" id="sortear">🎰 sortear · 30 s</button></div>
+      <div class="tbtns" style="justify-content:flex-start;margin-top:0"><button class="btn" id="sortear">🎰 sortear</button></div>
       <div class="passo"><div class="n">2</div><div class="t"><b>2 min · a empresa no topo.</b> Escreva a solução mais óbvia.</div></div>
       <div class="passo"><div class="n">3</div><div class="t"><b>2 min · vire.</b> O público no topo. O que ele quer de verdade? Uma frase.</div></div>
     </div>
@@ -599,7 +599,7 @@ const rw=document.getElementById('rw'),rbar=document.getElementById('rbar'),role
 let spinning=false;
 document.getElementById('sortear').onclick=e=>{
   if(spinning)return;spinning=true;roleta.classList.remove('done');roleta.classList.add('spin');e.target.disabled=true;e.target.style.opacity=.5;
-  const DUR=30000,t0=performance.now();let last=-1;
+  const DUR=15000,t0=performance.now();let last=-1;
   const final=Math.floor(Math.random()*TEMAS.length);
   (function step(){
     const t=Math.min(1,(performance.now()-t0)/DUR);rbar.style.width=(t*100)+'%';
