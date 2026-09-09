@@ -1,4 +1,4 @@
-# Próxima rodada: três candidaturas de Workday prontas para clicar
+# Próxima rodada: duas candidaturas de Workday prontas para clicar
 
 > **ATUALIZADO às 10h UTC de 09/09: a nº 7, ILM Vancouver `10142674`, JÁ FOI ENVIADA E CONFIRMADA.**
 > Ela não esperou a virada da rodada porque o Vini mandou, por escrito, ser o primeiro em qualquer
@@ -43,7 +43,7 @@ como "sim".
 | ~~5~~ | ~~**Environment Modeling Supervisor** `JR41734`~~ | ~~Netflix Animation, Sydney~~ | **ENVIADA em 09/09** | | | |
 | 6 | **Environment Surfacing Supervisor** `JR41749` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Surfacing-Supervisor_JR41749` | não publicada |
 | ~~7~~ | ~~**Lead Generalist Artist** `10142674`~~ | ~~Disney / ILM Vancouver~~ | **ENVIADA em 09/09, Application Received** | | | ~~CAD 126.800–162.300~~ |
-| 8 | **Visual Development Artist, Ink** `JR41753` | Netflix, LA/Vancouver | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Los-Angeles/Visual-Development-Artist--Ink_JR41753` | não publicada |
+| ~~8~~ | ~~**Visual Development Artist, Ink** `JR41753`~~ | ~~Netflix, LA~~ | **RECUSADA em 09/09 com motivo escrito: é desenho e pintura 2D** | | | |
 
 **Pretensão a usar em cada uma.** Faixa publicada, pede-se a BASE: nº 3 → `CAD 167,000`;
 nº 4 → `CAD 163,000`; nº 7 → `CAD 126,800`. Sem faixa, casa grande: `CAD 95,000` para as do
@@ -62,8 +62,13 @@ role.` sem número, que foi o que passou na Eyeline em 09/09. Sempre com a frase
   modelagem. A régua de vinte termos deu **zero** veto. Ela saiu na frente porque o Vini disse com
   todas as letras que vaga de arte do grupo Disney a gente aplica primeiro, e ordem dele vale mais
   que regra interna de cadência.
-- **nº 8 (Ink):** é **visual development 2D**, "design and paint", em pipeline com IA generativa.
-  É a mais distante do centro e está aqui só para não sumir do radar.
+- **nº 8 (Ink): RECUSADA em 09/09, com o anúncio integral lido.** A régua deu zero e não há veto
+  nenhum, mas as Qualifications pedem *"Excellence in draftsmanship with a working knowledge of
+  anatomy and/or volumetric drawing"*, *"Advanced working knowledge of digital drawing tools"* e
+  *"Demonstrated and genuine interest in Generative AI imagery and video"*. Maya, Unreal e Blender
+  aparecem só como *"a significant plus"*: o 3D é o acessório e o desenho é o cargo. O portfólio
+  dele é escultura e modelagem. Netflix Los Angeles não tinha recebido nada hoje, então a cadência
+  não era o impedimento, a disciplina é.
 
 ## O que NÃO entra e por quê
 
