@@ -22,6 +22,31 @@ e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
+## ENTRADA NOVA DE 09/09 ÀS 21h30 — DUAS DO LEVER, e uma delas é da Paramount
+
+O Lever destas duas casas já foi medido **com clique de verdade** nesta campanha: o hCaptcha é de
+**desafio de imagem** e aparece **depois** do Submit. Não abri navegador de novo justamente porque
+o histórico da casa já dizia isso — foi o teste de dedupe pelo NOME da casa que economizou a rodada.
+
+1. **Skydance Animation Madrid — `Environment Surfacing Artist`** · Madri, híbrido
+   · `c5793932-893f-418a-a24a-7749fcf1c90e` · https://jobs.lever.co/skydance/c5793932-893f-418a-a24a-7749fcf1c90e/apply
+   **É requisição INÉDITA**, diferente das duas que você já tem na fila (a `90d2f2b7` Senior e a
+   `f3ee86d4` Lead). Pede *"Paints **stylized** textures… using **Substance 3D Paint**"* — surfacing
+   estilizado, o centro do seu portfólio. **E vale a regra 14:** a política de privacidade do anúncio
+   aponta para `privacy.paramount.com`, ou seja **a Skydance Animation está sob a Paramount**.
+   A régua deu quatro acertos e os quatro são falso positivo, dois deles no aviso antifraude do
+   próprio anúncio. **Se for mandar uma só, a do seu nível é a `90d2f2b7`; esta aqui é a de base.**
+
+2. **Jam City — `Level Design Artist`** · São Francisco, presencial ·
+   `787abb3b-1009-42f3-bf82-9846dff0e646` · https://jobs.lever.co/jamcity/787abb3b-1009-42f3-bf82-9846dff0e646/apply
+   *"**Edit or create high-quality and optimized 3D environments and props**"*, Maya, Unity, PBR —
+   é level art **com** modelagem. **Faixa publicada USD 90.000–110.000**, então a pretensão é a base,
+   USD 90.000, com a frase de alinhamento. **Ressalvas honestas:** presencial em São Francisco e o
+   produto é jogo mobile de objetos escondidos. Está aqui porque régua e dedupe estão limpos, não
+   porque eu a recomende acima das outras.
+
+---
+
 ## ENTRADA NOVA DE 09/09 ÀS 21h — DUAS DO WORKABLE, e as duas são boas
 
 O Workable é parede medida com clique real duas vezes (Lighthouse em 07/09, One Of Us em 08/09):
