@@ -7,7 +7,7 @@ seu.
 
 ## 1. O placar, sem inflar
 
-**Catorze candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
+**Quinze candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
 prova por recibo de email ou pela área do candidato. Conferido nos três registros
 (`enviados.csv`, painel, `processados.csv`): **nenhuma falta em lugar nenhum**.
 
@@ -27,6 +27,7 @@ prova por recibo de email ou pela área do candidato. Conferido nos três regist
 | 12 | **Eyeline Studios (Netflix)** | **Lead Modeler** | Seul |
 | 13 | **Activision** | Associate Art Director (USD 126.800–234.580) | Santa Monica |
 | 14 | Game Boost | Open Application, Game Artists | Estocolmo |
+| 15 | **Disney / ILM Vancouver** | **Lead Generalist Artist** (CAD 126.800–162.300) | Vancouver |
 
 A **nº 8** é a mais alinhada que a campanha já achou: supervisão de modelagem de **personagem**,
 num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
@@ -40,17 +41,20 @@ num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
 
 ## 2. O QUE SÓ VOCÊ PODE FAZER, em ordem
 
-### 2.1 Oito candidaturas de Workday, prontas para clicar (15 a 20 min no total)
+### 2.1 Sete candidaturas de Workday, prontas para clicar (12 a 18 min no total)
 
 Estão em **`automacao/PROXIMA-RODADA-workday.md`**, com host, quadro, caminho da vaga e a pretensão
 a usar em cada uma. O comando é sempre o mesmo, trocando quatro argumentos, e sem a palavra
 `ENVIAR` no fim ele **para na tela de revisão** para você conferir.
 
-**A primeira da lista é a que você mandou priorizar:** Disney / ILM Vancouver, **Lead Generalist
-Artist**, requisição `10142674`, com faixa publicada de **CAD 126.800 a 162.300**. Ela não saiu
-hoje só porque a Disney já tinha recebido a de Londres nesta rodada.
+**A que você mandou priorizar já saiu, e não precisou de você:** Disney / ILM Vancouver, **Lead
+Generalist Artist**, requisição `10142674`, faixa publicada **CAD 126.800 a 162.300**, enviada às
+10h UTC e já com status **Application Received**. Eu tinha deixado ela na fila por causa da minha
+própria regra de uma candidatura por casa por rodada; a sua ordem sobre o grupo Disney vale mais
+que essa regra, então ela virou envio no mesmo dia.
 
-Depois dela vêm duas da Netflix Vancouver com faixa publicada, **CAD 167–212k** e **CAD 163–223k**.
+As sete que sobraram são todas da Netflix ou da Eyeline. As duas primeiras são as de Vancouver com
+faixa publicada, **CAD 167–212k** e **CAD 163–223k**.
 
 ### 2.2 Um clique no LinkedIn (1 min)
 

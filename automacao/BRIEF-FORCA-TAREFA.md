@@ -2375,3 +2375,50 @@ achou três buracos numa passada. **Vale rodar no fim de toda rodada**, não só
 **Detalhe de API que economiza tempo:** o `searchText` do Workday da Disney funciona de verdade e
 devolve resultado diferente por termo, mas os dois quadros compartilham a maior parte das vagas, e
 **o mesmo id volta em quase todos os termos**. Varra com `sort -u` sobre o id, não sobre o título.
+
+## Workday: seis armadilhas novas, medidas na Disney do Canadá em 09/09
+
+A ILM Vancouver `10142674` custou **onze rodadas de ensaio** antes de uma revisão verdadeira, e
+nenhuma delas foi envio. Cada uma virou trava no `wd_geral.js`. O padrão que atravessa as seis é
+um só: **eu estava lendo texto de tela onde precisava ler estrutura de DOM**.
+
+1. **Gate por rótulo é gate quebrado.** O passo 1 só rodava se o corpo tivesse `Country*`. A Disney
+   de Londres escreve isso; a do Canadá escreve `Country / Region*`. Resultado: o passo inteiro
+   pulado **em silêncio**, sem uma linha de log, e o servidor devolvendo nove campos obrigatórios
+   vazios. O sinal confiável é a **presença do elemento** `#country--country`.
+2. **Chip escolhido também é `role=option`.** Com `data-automation-id="selectedItem"`. Ler
+   `[role=option]` mistura opção de menu com resposta antiga, e foi assim que o chip "Ganji"
+   apareceu como **única opção** do Prefix e do código de país. Opção de verdade é `menuItem`, e
+   alguns menus (grau, gênero) só têm `role=option`: o seletor certo aceita os dois e exclui o chip.
+3. **"How Did You Hear About Us" é ÁRVORE, não lista.** Clicar na categoria de nível 1 **troca a
+   lista pelos filhos**, e o componente marca um filho sozinho. Foi assim que ficou gravado
+   **"Ganji"**, um quadro de empregos chinês em que ele nunca entrou, com a checagem antiga dizendo
+   "respondida". A regra segura é comparar a lista antes e depois do clique: se mudou, desceu; se
+   não mudou, escolheu. E o valor só se lê com o menu FECHADO, senão a leitura devolve `Expanded`.
+4. **Lista virtualizada não se resolve por força.** A de Job Board desenha catorze itens por vez.
+   Não adianta `scrollTop` (os ancestrais têm `scrollHeight` igual ao `clientHeight`), nem roda do
+   mouse sozinha, nem digitar na caixa de busca (isso devolve o menu para a raiz e perde o nível).
+   O caminho foi mudar de rota: **Social Media → LinkedIn**, lista pequena que cabe inteira, e
+   verdadeira. Antes de brigar com um componente, procure a porta menor.
+5. **"Post Graduate Certificate" não é sinônimo de pós.** A preferência antiga punha `post grad`
+   acima de bachelor e escolheu um diploma que ele NÃO tem. Certificado e diploma saíram da lista,
+   bacharelado subiu, e a conferência final passou a **recusar o envio** se qualquer um dos dois
+   aparecer no campo de grau. E não basta preencher o que está vazio: um rascunho anterior pode ter
+   deixado resposta falsa gravada, então o campo é conferido mesmo já preenchido.
+6. **"Voluntário" no texto e obrigatório no asterisco.** "Please select your gender" trava o passo
+   4 apesar do parágrafo dizer que a seção é opcional. Resposta escolhida: a que não revela nada.
+
+**A lição de método, que vale para além do Workday:** depois da terceira tentativa cega eu parei e
+escrevi um script de diagnóstico de trinta linhas que só abre o menu e descreve o DOM, sem
+preencher nada. Ele resolveu em UMA rodada o que três tentativas não tinham resolvido, e as duas
+rodadas seguintes já foram acerto. **Quando duas tentativas seguidas falham pelo mesmo motivo, a
+terceira não é outra tentativa: é uma medição.**
+
+**Erro de validação do Workday RE-RENDERIZA o passo e APAGA o texto já escrito.** Nome, endereço e
+telefone voltam vazios. Ou seja, um multiselect lido errado não custa só aquele campo: custa o
+formulário inteiro. Por isso a ordem país → combos → texto por último só funciona se os combos
+estiverem realmente resolvidos antes.
+
+**Regra de cadência cede para ordem do Vini.** A ILM Vancouver estava parada na fila só pela minha
+regra de uma candidatura por casa por rodada. Ele tinha dito, com todas as letras, que em vaga de
+arte do grupo Disney a gente aplica primeiro. Regra interna de cadência não segura ordem dele.

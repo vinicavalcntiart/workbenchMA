@@ -1,4 +1,9 @@
-# Próxima rodada: oito candidaturas de Workday prontas para clicar
+# Próxima rodada: sete candidaturas de Workday prontas para clicar
+
+> **ATUALIZADO às 10h UTC de 09/09: a nº 7, ILM Vancouver `10142674`, JÁ FOI ENVIADA E CONFIRMADA.**
+> Ela não esperou a virada da rodada porque o Vini mandou, por escrito, ser o primeiro em qualquer
+> vaga de arte do grupo Disney. A regra de uma por casa por rodada cedeu para a ordem dele.
+> Sobram sete, todas da Netflix ou da Eyeline.
 
 Escrito em 09/09/2026, depois da madrugada que enviou treze candidaturas. **Nenhuma destas oito
 está enviada**, e o motivo não é técnica: é a regra da campanha de **uma mensagem por casa por
@@ -37,7 +42,7 @@ como "sim".
 | 4 | **Environment Surfacing Supervisor** `JR39273` | Netflix Animation, Vancouver | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Vancouver/Environment-Surfacing-Supervisor_JR39273` | **CAD 163k–223k** |
 | 5 | **Environment Modeling Supervisor** `JR41734` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Modeling-Supervisor_JR41734` | não publicada |
 | 6 | **Environment Surfacing Supervisor** `JR41749` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Surfacing-Supervisor_JR41749` | não publicada |
-| 7 | **Lead Generalist Artist** `10142674` | Disney / ILM Vancouver | `disney.wd5.myworkdayjobs.com` | `disneycareerdc` | `Vancouver-BC-Canada/Lead-Generalist-Artist_10142674` | **CAD 126.800–162.300** |
+| ~~7~~ | ~~**Lead Generalist Artist** `10142674`~~ | ~~Disney / ILM Vancouver~~ | **ENVIADA em 09/09, Application Received** | | | ~~CAD 126.800–162.300~~ |
 | 8 | **Visual Development Artist, Ink** `JR41753` | Netflix, LA/Vancouver | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Los-Angeles/Visual-Development-Artist--Ink_JR41753` | não publicada |
 
 **Pretensão a usar em cada uma.** Faixa publicada, pede-se a BASE: nº 3 → `CAD 167,000`;
@@ -51,11 +56,12 @@ role.` sem número, que foi o que passou na Eyeline em 09/09. Sempre com a frase
   A nº 2 tem trabalho de **criatura hero** escrito no corpo, o que puxa a favor.
 - **nº 3 a nº 6 (Netflix Animation):** são **ambiente**, não personagem, mas com supervisão, e a
   casa é animação, que é onde está o crédito do Wingfeather. As duas de Vancouver pagam mais.
-- **nº 7 (ILM Vancouver):** é **generalista de ambiente** e parte do trabalho é digital matte
-  painting, que é pintura e não modelagem. Foi por isso que ficou atrás das de personagem.
-  A régua deu **zero** casamento, e o Vini disse com todas as letras em 09/09 que qualquer vaga de
-  arte do grupo Disney perto da área dele deve receber candidatura primeiro. **Esta é a primeira
-  da lista quando a rodada virar.**
+- **nº 7 (ILM Vancouver): ENVIADA em 09/09 às 10h UTC**, requisição `10142674`, status
+  **Application Received**. A ressalva original continua valendo e foi mandada assim mesmo: é
+  generalista de ambiente e parte do trabalho é digital matte painting, que é pintura e não
+  modelagem. A régua de vinte termos deu **zero** veto. Ela saiu na frente porque o Vini disse com
+  todas as letras que vaga de arte do grupo Disney a gente aplica primeiro, e ordem dele vale mais
+  que regra interna de cadência.
 - **nº 8 (Ink):** é **visual development 2D**, "design and paint", em pipeline com IA generativa.
   É a mais distante do centro e está aqui só para não sumir do radar.
 
