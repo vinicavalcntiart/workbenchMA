@@ -2164,3 +2164,71 @@ raiz com a do painel.
 
 **Campo `beecatcher`** (Workday) e **`hp_`/`honeypot`** (Breezy) são armadilhas para robô: ficam
 **sempre vazios**.
+
+## A RÉGUA GANHOU DOIS TERMOS, e o buraco foi achado por um veto que escapou inteiro
+
+A régua tinha dezoito termos. Em 09/09 um agente rodou-a na **Pretty Cool Games** e ela devolveu
+**nenhum casamento**. O anúncio, no entanto, é restrito por escrito, e a frase é esta:
+
+> **"Remote within the UK"**
+
+Nenhum dos dezoito pega isso. Nem `must be based`, nem `resident`, nem `only from`. A régua passa a
+ter **vinte termos**, com os dois novos:
+
+19. `within the`
+20. `only`
+
+Os dois são ruidosos de propósito, e ruído aqui é barato: eles não descartam nada sozinhos, só
+**obrigam a ler a frase**. `only` vai casar com "not only" e com "the only", e `within the` vai
+casar com "within the team". Isso é aceitável, porque o custo de um falso positivo é uma leitura de
+dez segundos e o custo de um falso negativo é uma candidatura enviada para uma porta fechada.
+
+**A régua completa, vinte termos:** `authoriz`, `eligib`, `sponsor`, `work permit`,
+`must be based`, `based in`, `only from`, `LMIA`, `days a week`, `days per week`,
+`days in the office`, `resident`, `relocat`, `located in`, `unable to support`, `no relocation`,
+`x a week`, `x per week`, **`within the`**, **`only`**, mais idioma local exigido.
+
+## Duas armadilhas de método que custaram rodada inteira a agentes em 09/09
+
+**`curl -w` come o formato que começa com `@`**, porque interpreta como nome de arquivo. Se o
+formato de saída precisa começar com arroba, escreva-o de outro jeito.
+
+**`pkill -f <padrão>` mata o próprio shell** quando o padrão casa com a linha de comando do
+`bash -c` que está rodando. Já tinha acontecido comigo em 08/09, com saída 144, e aconteceu de novo
+com um agente. Prefira matar por PID.
+
+**HTTP 422 no oráculo do Workday prova que aquele slug não existe NAQUELE POD, nunca que a empresa
+não está no Workday.** O lote 1 declarou Sega e Unity inexistentes; o lote 2 achou as duas, a Sega
+em `wd3` e a Unity com um sufixo (`unitytech`) que nenhuma normalização mecânica de "Unity
+Technologies" gera. Pods novos medidos no lote 2: `wd107`, `wd109`, `wd504`. E `wd101`, `wd505` e
+`wd2`, que estavam na lista do briefing, **não existem**.
+
+**`"total"` do Workday mente.** A NVIDIA devolve `"total":2000` e ainda entrega vagas em
+`offset:2000`. Pagine até vir página vazia, não até bater no `total`.
+
+## Teste de porta: duas respostas 200 não bastam num site de página única
+
+O teste do `Accept` (200 com `*/*` contra 302 com `text/html`) pegou a porta falsa da TTK. Mas um
+agente mediu em 09/09 que ele é **cego para aplicação de página única**: no HiBob, a vaga real, um
+uuid inexistente e **um inquilino que não existe** devolvem os três `200` com **1.342 bytes
+idênticos**. Duas respostas 200 ali não provam nem vaga viva nem estúdio vivo.
+
+**Regra completa do teste de porta, com três tiros:**
+1. `Accept: */*` — deve dar 200.
+2. `Accept: text/html` com User-Agent de navegador — deve dar 200 também. Se der 302 para o site do
+   estúdio, **não é porta**.
+3. **Tiro de controle numa URL que obrigatoriamente não existe.** Se ela responder igual à real, o
+   teste não mediu nada. Foi assim que a Activision se confirmou (23.902 bytes contra 5.866 do
+   controle) e foi por isso que a Torpor Games ficou sem decisão.
+
+## Dedupe antes da FONTE, não só antes da vaga
+
+Um agente refez em 09/09 uma mineração do sitemap do Hitmarker e do workwithindies que já tinha
+sido feita em 07/09, e "descobriu" de novo a família HiBob, que já estava registrada naquele dia
+como ATS novo. Custou a maior parte da rodada dele. **Antes de varrer uma fonte, `grep` o nome dela
+em `automacao/processados.csv` e nos relatórios.** É um comando.
+
+Dois achados que economizam rodada: **Phenom People é vitrine, não porta** — o `applyUrl` da
+Activision aponta para o Workday que já era varrido, e front-end novo não é porta nova. E **chutar
+slug não descobre nada** numa família sem fonte: 80 slugs de estúdio europeu contra o feed do
+Personio deram **80 de 80 em HTTP 307**.
