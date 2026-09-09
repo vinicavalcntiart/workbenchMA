@@ -1957,3 +1957,46 @@ portfólio nem de link**, ao contrário das outras duas da mesma casa. Os quatro
 `MISSING` (pretensão, disponibilidade, showreel e senha) **não existem aqui**, não é falha do
 preenchedor. Sem campo de link, a candidatura vai com CV e nada mais, e o ArtStation viaja só
 dentro do currículo. Não há o que consertar; há o que registrar.
+
+---
+
+## 09/09, madrugada — VARRI 2.934 SLUGS DE GREENHOUSE, e o resultado diz onde a fronteira está
+
+O Vini cobrou resultado e tinha razão: eu tinha parado de procurar caminho novo cedo demais. O
+`censo-boards-0709.csv` cobre **6 famílias de ATS**, e o número que importa não é o de vagas, é o
+de **tokens**:
+
+| ATS | vagas no censo | **tokens distintos** |
+|---|---|---|
+| greenhouse | 1.422 | **31** |
+| smartrecruiters | 549 | 14 |
+| lever | 268 | 12 |
+| teamtailor | 177 | **32** |
+| bamboohr | 163 | 20 |
+| ashby | 109 | 6 |
+| breezy | 38 | **3** |
+
+**A campanha conhece mais de 700 estúdios e testou 31 tokens de Greenhouse.** O resto nunca foi
+perguntado.
+
+**O que a varredura fez:** gerei 2.953 slugs a partir dos nomes dos arrays `PORTAIS` e `STUDIOS`
+(nome colado, nome com hífen, nome sem a última palavra, primeira palavra), tirei os 31 já
+conhecidos e bati os 2.934 restantes contra `boards-api.greenhouse.io/v1/boards/<slug>/jobs` com
+concorrência 6.
+
+**Resultado honesto: 41 quadros vivos, e só DUAS vagas novas e usáveis.** A maioria dos 41 é
+homônimo de palavra comum (`nice`, `oscar`, `super`, `flix`, `engine`, `moon`, `carbon`), que são
+outras empresas. Das casas de verdade que apareceram fora do censo — Riot, Rockstar, Insomniac,
+Turtle Rock, Bandai Namco, 31st Union, Airship, Keen — **nenhuma tem vaga da disciplina hoje**: o
+que a Riot tem é Principal Concept Artist, que é 2D, e a Insomniac tem um Facial Character TD por
+contrato, que é direção técnica.
+
+**As duas que sobraram são da Epic Games:** `6121292004` Principal Environment Artist e `6001731004`
+Senior Environment Artist, as duas em Cary. Nenhuma tem veto: o único `authoriz` do texto é o
+aviso antiagência (*"unauthorized third party"*), falso positivo conhecido.
+
+**A lição, e ela vale para as próximas varreduras:** slug gerado por regra pega poucas casas novas
+porque **estúdio pequeno raramente usa Greenhouse**, e casa grande já estava no censo. O caminho
+que rendeu de verdade hoje foi outro: **perguntar qual ATS cada estúdio do painel realmente usa**,
+lendo o HTML da página de carreiras dele, em vez de adivinhar o slug. Varredura por slug é barata,
+então vale rodar; mas o rendimento dela é baixo e agora está medido: **2 vagas em 2.934 tentativas.**
