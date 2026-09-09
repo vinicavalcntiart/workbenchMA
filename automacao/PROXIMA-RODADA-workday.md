@@ -1,4 +1,4 @@
-# Próxima rodada: cinco candidaturas de Workday prontas para clicar
+# Próxima rodada: quatro candidaturas de Workday prontas para clicar
 
 > **ATUALIZADO às 10h UTC de 09/09: a nº 7, ILM Vancouver `10142674`, JÁ FOI ENVIADA E CONFIRMADA.**
 > Ela não esperou a virada da rodada porque o Vini mandou, por escrito, ser o primeiro em qualquer
@@ -36,7 +36,7 @@ como "sim".
 
 | # | Vaga | Casa (já usada em 09/09) | host | site | jobpath | Faixa |
 |---|---|---|---|---|---|---|
-| 1 | **Modeling Supervisor** `JR40941` | Eyeline, Seul | `netflix.wd108.myworkdayjobs.com` | `Eyeline` | `Eyeline-Seoul/Modeling-Supervisor_JR40941` | não publicada |
+| ~~1~~ | ~~**Modeling Supervisor** `JR40941`~~ | ~~Eyeline, Seul~~ | **ENVIADA em 09/09** | | | |
 | 2 | **Lead Surfacing Artist** `JR40928` | Eyeline, Seul | `netflix.wd108.myworkdayjobs.com` | `Eyeline` | `Eyeline-Seoul/Lead-Surfacing-Artist_JR40928` | não publicada |
 | ~~3~~ | ~~**Environment Modeling Supervisor** `JR39446`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 167k–212k~~ |
 | ~~4~~ | ~~**Environment Surfacing Supervisor** `JR39273`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 163k–223k~~ |
