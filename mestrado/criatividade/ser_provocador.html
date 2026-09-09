@@ -152,6 +152,23 @@ h1 em{font-style:normal;color:var(--vermelho)}
 .rbar i{display:block;height:100%;width:0;background:var(--amarelo)}
 .roleta.done .rbar i{background:var(--papel)}
 
+
+/* atividade guiada */
+.stwrap{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(18px,3vw,60px);align-items:center;margin-top:clamp(8px,1.5vh,20px)}
+.stmain{position:relative;min-height:clamp(260px,42vh,520px)}
+.stage{display:none;flex-direction:column;gap:clamp(12px,2.2vh,26px)}
+.stage h1{font-size:clamp(40px,min(5.6vw,9.5vh),120px)}
+.stage.on{display:flex;animation:stin .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes stin{from{opacity:0;transform:translateX(40px)}}
+.stage .chip{align-self:flex-start;background:var(--preto);color:var(--amarelo);border-color:var(--preto)}
+.stside{display:flex;flex-direction:column;align-items:center;gap:clamp(10px,2vh,20px)}
+.stside .timer{width:100%}
+#miniflow{width:clamp(90px,10vw,170px);transition:transform 1s cubic-bezier(.6,-.2,.3,1.2)}
+#miniflow circle,#miniflow line{fill:none;stroke:var(--preto);stroke-width:8}
+#miniflow.flipped{transform:rotate(180deg)}
+#miniflow.flipped circle:first-child{fill:var(--vermelho)}
+.hidden{display:none!important}
+
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,30px);margin-top:clamp(14px,3vh,36px)}
 .steps .blk{min-height:clamp(150px,26vh,320px);display:flex;flex-direction:column;justify-content:space-between}
@@ -507,20 +524,34 @@ h1 em{font-style:normal;color:var(--vermelho)}
 
 <!-- 19 ATIVIDADE -->
 <section class="slide yellow" data-sec="Atividade">
-  <div class="label">Atividade · individual · 5 minutos</div>
-  <h1>Vire o <em>bloco</em></h1>
-  <div class="act">
-    <div class="passos">
-      <div class="passo"><div class="n">1</div><div class="t"><b>Sorteie o tema.</b> Pergunta fixa: <i>como isso ganha público novo sem orçamento?</i></div></div>
-      <div class="roleta" id="roleta"><div class="rw" id="rw">?</div><div class="rbar"><i id="rbar"></i></div></div>
-      <div class="tbtns" style="justify-content:flex-start;margin-top:0"><button class="btn" id="sortear">🎰 sortear</button></div>
-      <div class="passo"><div class="n">2</div><div class="t"><b>2 min · a empresa no topo.</b> Escreva a solução mais óbvia.</div></div>
-      <div class="passo"><div class="n">3</div><div class="t"><b>2 min · vire.</b> O público no topo. O que ele quer de verdade? Uma frase.</div></div>
+  <div class="label">Atividade · individual · <span id="stkick">passo 1 de 4</span></div>
+  <div class="stwrap">
+    <div class="stmain">
+      <div class="stage on" data-i="0">
+        <h1>Sorteie o <em>tema</em></h1>
+        <div class="roleta" id="roleta"><div class="rw" id="rw">?</div><div class="rbar"><i id="rbar"></i></div></div>
+        <div class="tbtns" style="justify-content:flex-start"><button class="btn" id="sortear">🎰 sortear</button></div>
+      </div>
+      <div class="stage" data-i="1">
+        <div class="chip" id="tema1">tema</div>
+        <h1>Como a <em>empresa</em> atrairia público novo?</h1>
+        <p class="lead">Escreva a solução mais óbvia. 2 minutos.</p>
+      </div>
+      <div class="stage" data-i="2">
+        <div class="chip" id="tema2">tema</div>
+        <h1>Vire o bloco. O que o <em>público</em> quer de verdade?</h1>
+        <p class="lead">Escreva uma frase. 2 minutos.</p>
+      </div>
+      <div class="stage" data-i="3">
+        <h1>Cada um lê a sua <em>frase</em>.</h1>
+        <p class="lead">O que mudou quando o público foi para o topo?</p>
+      </div>
     </div>
-    <div>
+    <div class="stside">
+      <svg id="miniflow" viewBox="0 0 200 200"><circle cx="100" cy="40" r="26"/><line x1="100" y1="66" x2="40" y2="150"/><line x1="100" y1="66" x2="100" y2="150"/><line x1="100" y1="66" x2="160" y2="150"/><circle cx="40" cy="165" r="14"/><circle cx="100" cy="165" r="14"/><circle cx="160" cy="165" r="14"/></svg>
       <div class="timer" id="timer">2:00</div>
       <div class="tbtns">
-        <button class="btn" id="tstart">▶ iniciar</button><button class="btn" id="tpause">⏸</button><button class="btn" id="t2">2:00</button>
+        <button class="btn" id="stprev">←</button><button class="btn" id="stnext">próximo →</button>
         <button class="btn" id="crise" style="background:var(--vermelho);color:var(--papel)">🪜 tirar a escada</button>
       </div>
       <div class="reveal" id="crisecard" style="margin-top:clamp(12px,2.4vh,26px)"></div>
@@ -596,29 +627,40 @@ document.querySelectorAll('.leaf').forEach(l=>l.onclick=()=>showLeaf(l.dataset.k
 
 const TEMAS=['quadrinhos independentes','estúdio de animação do Recife','museu sem público jovem','banda local numa segunda-feira','livraria de bairro','marca de moda autoral','festival de cinema sem patrocínio','game indie brasileiro','personagem infantil × Disney','editora de livros ilustrados','bloco de carnaval de rua','podcast de cultura','teatro de bonecos','artesanato de Caruaru','cinema de rua','selo de música independente','galeria de arte online','cordel','streaming regional','estúdio de tatuagem','escola de dança','feira de zines','coletivo de grafite','ateliê de cerâmica','festival de forró'];
 const rw=document.getElementById('rw'),rbar=document.getElementById('rbar'),roleta=document.getElementById('roleta');
-let spinning=false;
+let spinning=false,tema='';
 document.getElementById('sortear').onclick=e=>{
   if(spinning)return;spinning=true;roleta.classList.remove('done');roleta.classList.add('spin');e.target.disabled=true;e.target.style.opacity=.5;
-  const DUR=15000,t0=performance.now();let last=-1;
-  const final=Math.floor(Math.random()*TEMAS.length);
+  const DUR=15000,t0=performance.now();let last=-1;const final=Math.floor(Math.random()*TEMAS.length);
   (function step(){
     const t=Math.min(1,(performance.now()-t0)/DUR);rbar.style.width=(t*100)+'%';
-    if(t>=1){rw.textContent=TEMAS[final];roleta.classList.remove('spin');roleta.classList.add('done');spinning=false;e.target.disabled=false;e.target.style.opacity=1;return}
+    if(t>=1){tema=TEMAS[final];rw.textContent=tema;document.getElementById('tema1').textContent=tema;document.getElementById('tema2').textContent=tema;
+      roleta.classList.remove('spin');roleta.classList.add('done');spinning=false;e.target.disabled=false;e.target.style.opacity=1;return}
     let i;do{i=Math.floor(Math.random()*TEMAS.length)}while(i===last);last=i;rw.textContent=TEMAS[i];
     setTimeout(step,55+900*Math.pow(t,3));
   })();
 };
-const CRISES=['Agora o prazo é 30 segundos.','Orçamento zero. Nenhum real.','A ideia precisa caber em cinco palavras.','Proibido usar internet.','A solução tem que funcionar sem nenhuma imagem.','Troquem de folha com o colega ao lado e continuem a ideia dele.'];
+/* cronômetro */
 let secs=120,tick=null;const timer=document.getElementById('timer');
-function paint(){const m=Math.floor(secs/60),s=secs%60;timer.textContent=m+':'+String(s).padStart(2,'0');timer.classList.toggle('warn',secs<=10&&secs>0);if(secs===0&&tick){clearInterval(tick);tick=null;timer.textContent='0:00'}}
+function paint(){const m=Math.floor(secs/60),s=secs%60;timer.textContent=m+':'+String(s).padStart(2,'0');timer.classList.toggle('warn',secs<=10&&secs>0);if(secs===0&&tick){clearInterval(tick);tick=null}}
 function setT(v){if(tick){clearInterval(tick);tick=null}secs=v;paint()}
-document.getElementById('tstart').onclick=()=>{if(tick||secs<=0)return;tick=setInterval(()=>{secs--;paint()},1000)};
-document.getElementById('tpause').onclick=()=>{if(tick){clearInterval(tick);tick=null}};
-document.getElementById('t2').onclick=()=>setT(120);
+function startT(){if(tick||secs<=0)return;tick=setInterval(()=>{secs--;paint()},1000)}
+timer.onclick=()=>{tick?(clearInterval(tick),tick=null):startT()};
+/* etapas */
+const stages=[...document.querySelectorAll('.stage')],stkick=document.getElementById('stkick'),mini=document.getElementById('miniflow'),criseBtn=document.getElementById('crise');
 const crisecard=document.getElementById('crisecard');
-document.getElementById('crise').onclick=()=>{const c=CRISES[Math.floor(Math.random()*CRISES.length)];crisecard.textContent='🪜 '+c;crisecard.classList.remove('on');void crisecard.offsetWidth;crisecard.classList.add('on');if(c.startsWith('Agora')){setT(30);document.getElementById('tstart').click()}};
-paint();
-
+let st=0;
+function goSt(i){
+  st=Math.max(0,Math.min(3,i));stages.forEach(s=>s.classList.toggle('on',+s.dataset.i===st));
+  stkick.textContent='passo '+(st+1)+' de 4';
+  mini.classList.toggle('flipped',st>=2);
+  timer.classList.toggle('hidden',st===0||st===3);criseBtn.classList.toggle('hidden',st===0||st===3);crisecard.classList.remove('on');
+  if(st===1||st===2){setT(120);startT()}else setT(120);
+}
+document.getElementById('stnext').onclick=()=>goSt(st+1);
+document.getElementById('stprev').onclick=()=>goSt(st-1);
+const CRISES=['Agora o prazo é 30 segundos.','Orçamento zero. Nenhum real.','A ideia precisa caber em cinco palavras.','Proibido usar internet.','A solução tem que funcionar sem nenhuma imagem.','Troquem de folha com o colega ao lado e continuem a ideia dele.'];
+criseBtn.onclick=()=>{const c=CRISES[Math.floor(Math.random()*CRISES.length)];crisecard.textContent='🪜 '+c;crisecard.classList.remove('on');void crisecard.offsetWidth;crisecard.classList.add('on');if(c.startsWith('Agora')){setT(30);startT()}};
+goSt(0);
 let start=0;try{start=+localStorage.getItem('sp2_cur')||0}catch(e){}
 go(location.hash?+location.hash.slice(1)||0:start);
 </script>
