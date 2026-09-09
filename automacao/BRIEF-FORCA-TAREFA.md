@@ -2536,3 +2536,27 @@ ordem errada**. O que se mediu:
 uma nota de inventário**, nunca como entrada própria do painel. O dedupe por ID achava a menção e
 concluía "já trabalhada". Menção em texto de varredura NÃO é entrada de fila: quando o inventário
 achar vaga da disciplina, ela tem que virar linha, senão o próprio dedupe a esconde.
+
+## Duas formas novas de "o servidor respondeu não é a porta abriu" (09/09)
+
+**1. Curl 200 numa página em JavaScript não diz nada.** A vaga da Red Manta / Twin Atlas mora numa
+página do Notion. A reconferência de rede deu **200** e pareceu porta reaberta; o navegador estourou
+o tempo em **120 segundos** na mesma URL. O 200 era a casca da SPA, e o que não passa por esta rede
+são os recursos que o Notion carrega depois. Página em JavaScript só tem veredito no navegador.
+
+**2. Formulário sem captcha nenhum ainda pode ser porta morta, e o defeito pode ser do estúdio.**
+Na Bandai Namco Mobile o formulário é próprio, com sete campos e upload obrigatório, e **zero**
+marca de reCAPTCHA, hCaptcha, Turnstile ou DataDome no DOM. Preenchi tudo, o nome do arquivo
+apareceu na tela e o **upload do CV funcionou** (POST em `/.netlify/functions/fileHandler` → 200,
+currículo gravado no S3 deles). Quebra no passo seguinte: `/.netlify/functions/getCandidates`
+consulta a API de recrutamento deles pelo email e devolve **400 embrulhando um 404**, e a página
+fica parada sem mensagem. Quem nunca se candidatou ali não tem registro, a consulta dá 404, e o
+front-end trata isso como erro fatal em vez de seguir e criar a candidatura. **Não é contornável
+nem pelo navegador do Vini**, porque a falha é no servidor deles.
+
+Duas coisas ficam dessa medição, além da vaga:
+- **Ler o corpo da resposta, não só o código.** O primeiro envio registrou "400" e só. Foi o segundo,
+  com o corpo capturado, que mostrou o 404 de cima e transformou "não sei por quê" em diagnóstico.
+- **Upload que funciona não é candidatura enviada.** O currículo dele está no S3 da Bandai Namco e
+  nenhuma candidatura existe. Prova continua sendo tela de confirmação, URL de confirmação ou
+  recibo, nunca um passo intermediário que respondeu 200.
