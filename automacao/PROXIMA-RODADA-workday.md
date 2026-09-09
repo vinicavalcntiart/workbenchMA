@@ -1,4 +1,6 @@
-# Próxima rodada: duas candidaturas de Workday prontas para clicar
+# Fila do Workday: ZERADA em 09/09
+
+> As oito saíram todas, ou foram recusadas com motivo escrito. Nada aqui espera a mão dele.
 
 > **ATUALIZADO às 10h UTC de 09/09: a nº 7, ILM Vancouver `10142674`, JÁ FOI ENVIADA E CONFIRMADA.**
 > Ela não esperou a virada da rodada porque o Vini mandou, por escrito, ser o primeiro em qualquer

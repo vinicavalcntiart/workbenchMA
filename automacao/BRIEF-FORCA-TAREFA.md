@@ -2597,3 +2597,25 @@ Aconteceu duas vezes no mesmo dia, por defeitos diferentes, e nas duas o sintoma
 resumo sem uma segunda rodada daquela casa SOZINHA.** Custa uma consulta. O preço de aceitar o zero
 errado é a campanha ficar cega justamente nas quatro casas onde a regra manda aplicar na hora, e
 vaga de personagem em casa grande vive de três a sete dias.
+
+## Cadência se conta no fuso DELE, não no do servidor (09/09)
+
+Duas candidaturas ficaram travadas horas por uma conta minha errada. Eu disse ao Vini que a Eyeline
+de Seul e a Netflix de Sydney já tinham recebido **duas** hoje, e por isso as duas de surfacing não
+sairiam. **Contei em UTC.** No fuso dele, UTC-3, a candidatura anterior de cada uma dessas casas saiu
+às **21h e 22h de ONTEM**. Hoje cada uma tinha recebido **uma só**, e as duas estavam liberadas pela
+mesma regra que eu já tinha aplicado à Netflix de Vancouver.
+
+**Regra que fica: cadência é sobre o dia do candidato e do recrutador, não sobre o dia do relógio do
+servidor.** Antes de segurar uma candidatura por ritmo, converta as anteriores para UTC-3 e conte.
+Uma linha de `python3` resolve, e o preço de errar é exatamente o que aconteceu aqui: duas
+candidaturas da disciplina paradas por engano de aritmética.
+
+## Workday: o pêndulo do Create Account / Sign In, agora fechado
+
+`click_filter` é o **link de troca** entre os dois formulários e existe nos dois. Já estava escrito
+aqui que a ordem é trocar primeiro e escrever depois; faltava uma coisa, medida hoje na Netflix de
+Sydney: **esperar a troca terminar**. Clicar no link e preencher em seguida escreve no formulário
+velho, o envio não acontece e a tela fica parada em Create Account **sem erro nenhum**. O sinal de
+que a troca acabou é o campo `verifyPassword` **sumir**, então agora se espera por ele, com até três
+tentativas, e o botão de envio é procurado também **por texto**, porque o id muda de locatário.
