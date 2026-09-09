@@ -1,0 +1,70 @@
+{
+  "url": "https://careers.fenriscreations.com/register-your-interest/new",
+  "cv": "Vini_Cavalcanti_CV.pdf",
+  "texto": {
+    "#job_seeker_form_job_seeker_first_name": "Vini",
+    "#job_seeker_form_job_seeker_last_name": "Cavalcanti",
+    "#job_seeker_form_job_seeker_email": "contact@vinicavalcanti.art",
+    "#phone-input": "__TEL__",
+    "#job_seeker_form_job_seeker_linkedin_url": "https://www.linkedin.com/in/vinicavalcnti/",
+    "#personal-summary": "Senior 3D Character Artist with more than ten years in stylized characters. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so the surface treatment was mine from block-in to final. For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration, in Unity and Unreal. I also do hair and fur grooming in Houdini. Before that, three years at PUGA Studios delivering assets under another studio's art direction in the client's defined style. I have been Senior for five years, I review other artists' work and set the asset standard, and I founded and run my own character art school. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am interested in character, creature and asset art: modelling, sculpting, texturing, surfacing, look development and grooming. I WANT TO RELOCATE to Reykjavik and I am fully open to moving for the role. I am not an EU or EEA citizen, so I would need visa sponsorship; my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Portfolio: https://www.artstation.com/viniciuscavalcanti"
+  },
+  "combos": [
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][location_ids][]\"]",
+      "rotulo": "Locations",
+      "valores": [
+        "Reykjav"
+      ]
+    },
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][department_ids][]\"]",
+      "rotulo": "Departments",
+      "valores": [
+        "Art"
+      ]
+    },
+    {
+      "titulo": "What is your current location?",
+      "rotulo": "Current location",
+      "valores": [
+        "Other"
+      ]
+    },
+    {
+      "titulo": "Would you need a VISA sponsorship in order to relocate for the role?",
+      "rotulo": "Precisa de visto",
+      "valores": [
+        "Yes"
+      ]
+    },
+    {
+      "titulo": "Are you a...",
+      "rotulo": "Are you a...",
+      "valores": [
+        "None of the above?"
+      ]
+    },
+    {
+      "titulo": "Where did you hear about this position?",
+      "rotulo": "Where did you hear",
+      "valores": [
+        "Fenris Creations Website"
+      ]
+    },
+    {
+      "titulo": "Are you willing to relocate for the role?",
+      "rotulo": "Willing to relocate",
+      "valores": [
+        "Yes"
+      ]
+    },
+    {
+      "sel": "#job_seeker_form_equality_monitoring_gender",
+      "rotulo": "Gender",
+      "valores": [
+        "Prefer Not To Say"
+      ]
+    }
+  ]
+}

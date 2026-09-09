@@ -22,6 +22,58 @@ e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
+## ENTRADA NOVA DE 09/09 ÀS 22h50 — FENRIS CREATIONS (a CCP do EVE Online), TRÊS MINUTOS SEUS
+
+**É a casa com o sinal de patrocínio mais forte que a campanha achou hoje**, e o formulário não
+tem captcha nenhum. Eu não consegui fechar o envio e digo por quê logo abaixo, mas **todas as
+respostas já estão decididas e as listas reais estão medidas**, então para você é copiar e clicar.
+
+**Por que ela importa.** É a CCP Games renomeada, dona do *EVE Online*, independente de novo desde
+maio de 2026, com sede em Reykjavík e estúdios em Londres e Xangai. O anúncio de vaga deles lista
+**Relocation Package** entre os benefícios, o processo seletivo tem um estágio chamado literalmente
+**"Stage 5: Relocation and Benefits Chat"**, e o formulário pergunta, com todas as letras,
+*"Would you need a VISA sponsorship in order to relocate for the role?"*, explicando que
+*"we will review your application to see if we would legally be able to acquire a VISA sponsorship"*.
+Casa que pergunta isso é casa que patrocina.
+
+**A porta:** https://careers.fenriscreations.com/register-your-interest/new (banco de talentos, que
+conta como candidatura pela regra da campanha). **Sem captcha.**
+
+**As respostas, todas verdadeiras e já conferidas contra as listas reais do formulário:**
+
+| Campo | Resposta |
+|---|---|
+| `What is your current location?` | **Other** (as opções são Iceland, United Kingdom, EEA/EU, USA/Canada, Asia, Other) |
+| `Would you need a VISA sponsorship…?` | **Yes** |
+| `Are you a...` | **None of the above?** (as outras são Current Employee, Former Employee, Current or former EVE Online Player, Current or former intern/contractor) |
+| `Where did you hear about this position?` | **Fenris Creations Website** |
+| `Are you willing to relocate for the role?` | **Yes** |
+| `Locations` | **Reykjavík** · `Departments` | **Art** |
+| `Gender` | Prefer Not To Say |
+| Aceite obrigatório | *Allow us to process your personal information* |
+
+O texto do **Personal Summary** (1.441 caracteres, já escrito) está em `automacao/ans_fenris.json`,
+no campo `#personal-summary` — é só copiar.
+
+**Por que eu não fechei, sem maquiar.** O envio saiu e o servidor recusou com
+`Answers boolean answer can't be blank`. A causa é a pergunta de visto: ela é **condicional**, só
+aparece depois que a localização é respondida, e é do tipo *boolean*, não lista. Não consegui
+desenhar esse clique de forma estável dentro da rodada. **Nada ficou registrado do lado deles**,
+porque a validação barrou antes de gravar.
+
+**E um erro meu que você precisa saber, porque quase virou resposta falsa:** eu pedi *Other* na
+pergunta de localização e o clique caiu em **USA/Canada**. O log dizia "escolhi Other" porque
+olhava o texto da opção que eu mandei clicar, e não o que o controle passou a mostrar. Se o envio
+tivesse fechado, o estúdio teria lido que você mora nos Estados Unidos ou no Canadá. **Confira esse
+campo com o olho antes de enviar.**
+
+**A única vaga de arte aberta hoje lá eu descartei, com a frase colada:** a `Cinematic Artist` é
+*"creating trailers and promotional video content"*, *"film language, pacing, and visual
+storytelling"* e *"UE5 cinematic shot creation"*, no departamento de **Marketing**. É
+cinematografia e edição, não modelagem. Por isso a porta certa é o banco de talentos.
+
+---
+
 ## ENTRADA NOVA DE 09/09 ÀS 21h30 — DUAS DO LEVER, e uma delas é da Paramount
 
 O Lever destas duas casas já foi medido **com clique de verdade** nesta campanha: o hCaptcha é de

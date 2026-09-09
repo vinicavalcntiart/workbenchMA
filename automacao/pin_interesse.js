@@ -1,0 +1,137 @@
+// Pinpoint, rota REGISTER YOUR INTEREST (/register-your-interest/new).
+//
+// Por que nao serve o apply_pinpoint.js: aquele preenche a candidatura a uma VAGA, cujos campos
+// se chamam application_form[application][...]. O banco de interesse usa outro prefixo,
+// job_seeker_form[job_seeker][...], e tem uma coisa que o outro nao tem: COMBOBOX de verdade.
+// Locations, Departments, "Are you a...", "Where did you hear about this position?" e
+// "Are you willing to relocate for the role?" sao campos de texto que abrem lista; o <select>
+// irmao existe mas vem escondido, e escrever nele direto e a armadilha do BambooHR de hoje,
+// onde selectOption falhava em silencio. Aqui se digita, espera a lista e ESCOLHE, e depois se
+// confere o que ficou escrito na tela.
+//
+// Uso: VINI_TEL='...' sh hb_run.sh pin_interesse.js <respostas.json> <slug> [--submit]
+const {chromium}=require('playwright'); const fs=require('fs');
+const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
+const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname;
+for(const k of Object.keys(A.texto||{})) if(A.texto[k]==='__TEL__'){
+  if(!process.env.VINI_TEL){ console.error('[erro] o arquivo pede __TEL__ e falta VINI_TEL'); process.exit(1); }
+  A.texto[k]=process.env.VINI_TEL;
+}
+const log=(...a)=>console.log('['+slug+']',...a);
+(async()=>{
+ const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2800},locale:'en-US',
+   userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
+ p.on('request',r=>{ if(r.method()==='POST') log('[pedido POST]', r.url().slice(0,110)); });
+ p.on('requestfailed',r=>{ if(r.method()==='POST') log('[pedido POST FALHOU]', r.url().slice(0,110), r.failure()&&r.failure().errorText); });
+ p.on('response',async r=>{ if(r.request().method()==='POST'){ log('[rede POST]', r.status(), r.url().slice(0,110)); } });
+ try{
+  await p.goto(A.url,{waitUntil:'domcontentloaded',timeout:120000}); await p.waitForTimeout(8000);
+  for(const t of ['Accept all','Accept All','Accept','Allow all','I agree']){
+    const e=await p.$('button:has-text("'+t+'")'); if(e&&await e.isVisible().catch(()=>false)){ await e.click().catch(()=>{}); await p.waitForTimeout(1500); break; } }
+
+  for(const [sel,v] of Object.entries(A.texto||{})){
+    const el=await p.$(sel); if(!el){ log('NAO ACHEI o campo',sel); continue; }
+    await el.scrollIntoViewIfNeeded().catch(()=>{});
+    await el.click({force:true}).catch(()=>{}); await el.fill('').catch(()=>{});
+    await el.type(String(v),{delay:3}).catch(()=>{});
+    const lido=await el.inputValue().catch(()=>'');
+    log('campo',sel, lido.length? '('+lido.length+' chars) '+lido.slice(0,50) : '(NAO ENTROU NADA)');
+  }
+
+  if(A.cv){ const fi=await p.$('input[type=file]');
+    if(fi){ await fi.setInputFiles(D+'/'+A.cv); await p.waitForTimeout(9000); log('CV anexado', A.cv); } else log('NAO ACHEI input de arquivo'); }
+
+  // COMBOBOX: clicar, digitar, esperar a lista, escolher a opcao cujo texto casa.
+  // Combo por TITULO da pergunta, e nao por indice: no Pinpoint o indice do slot muda quando
+  // uma pergunta CONDICIONAL entra (a da Fenris so revela "Would you need a VISA sponsorship"
+  // depois que a localizacao e respondida). Achar pelo titulo sobrevive a isso.
+  const acharPorTitulo=async(titulo)=>await p.evaluate(t=>{
+    const h=[...document.querySelectorAll('input[name$="[title]"]')].find(e=>(e.value||'').trim().toLowerCase()===t.trim().toLowerCase());
+    if(!h) return null;
+    const m=h.name.match(/answers_attributes\]\[(\d+)\]/); if(!m) return null;
+    return 'job_seeker_form_job_seeker_answers_attributes_'+m[1]+'_text_answer';
+  }, titulo);
+
+  for(const c of (A.combos||[])){
+    let sel=c.sel;
+    if(c.titulo){ const id=await acharPorTitulo(c.titulo);
+      if(!id){ log('NAO ACHEI a pergunta pelo titulo:', JSON.stringify(c.titulo)); continue; }
+      sel='#'+id; log('pergunta', JSON.stringify(c.titulo), 'esta no slot', sel); }
+    const el=await p.$(sel); if(!el){ log('NAO ACHEI o combo',sel); continue; }
+    for(const alvo of (Array.isArray(c.valores)?c.valores:[c.valores])){
+      await el.scrollIntoViewIfNeeded().catch(()=>{});
+      await el.click({force:true}).catch(()=>{});
+      await p.waitForTimeout(700);
+      await el.fill('').catch(()=>{});
+      await el.type(String(alvo).slice(0,14),{delay:70}).catch(()=>{});
+      await p.waitForTimeout(1800);
+      // MEDIDO NA FENRIS EM 09/09: ha combo deste ATS que NAO abre a lista digitando, so com
+      // seta para baixo. Sem isto, "What is your current location?" e "Are you a..." voltavam
+      // lista VAZIA e o campo ficava em branco na leitura final, sem erro nenhum na tela.
+      if(!(await p.$$('[role=option], li[id*="option"]')).length){
+        await p.keyboard.press('ArrowDown').catch(()=>{}); await p.waitForTimeout(1700); }
+      let opcoes=await p.$$('[role=option], li[id*="option"], div[class*="option"]:not([class*="options"])');
+      // Se digitar nao abriu lista, abre sem filtro: ha combo que so lista no clique.
+      if(!opcoes.length){ await el.fill('').catch(()=>{}); await el.click({force:true}).catch(()=>{}); await p.waitForTimeout(1600);
+        opcoes=await p.$$('[role=option], li[id*="option"], div[class*="option"]:not([class*="options"])'); }
+      const textos=[];
+      for(const o of opcoes){ const t=((await o.innerText().catch(()=>''))||'').replace(/\s+/g,' ').trim(); if(t) textos.push(t); }
+      log('   lista oferecida:', JSON.stringify(textos.slice(0,14)));
+      // CASAMENTO EXATO PRIMEIRO. O prefixo sozinho escolheu "Fenris Creations Employee" quando
+      // eu pedi "Fenris Creations Website" (09/09), que seria AFIRMAR uma indicacao inexistente.
+      // Prefixo curto e chute; num campo de formulario de emprego, chute vira mentira.
+      let escolhido=null, idx=-1;
+      idx=textos.findIndex(t=>t.toLowerCase()===String(alvo).toLowerCase());
+      if(idx<0) idx=textos.findIndex(t=>t.toLowerCase().startsWith(String(alvo).toLowerCase()));
+      if(idx<0 && String(alvo).length>=8) idx=textos.findIndex(t=>t.toLowerCase().includes(String(alvo).toLowerCase()));
+      if(idx>=0){ await opcoes[idx].click({force:true}).catch(()=>{}); escolhido=textos[idx]; }
+      else if(c.aceitaAproximado && textos.length){ await opcoes[0].click({force:true}).catch(()=>{}); escolhido=textos[0]+' (aproximado, autorizado no arquivo)'; }
+      await p.waitForTimeout(1200);
+      // CONFERENCIA NA TELA, e ela existe por um erro medido em 09/09: pedi "Other" na pergunta
+      // de localizacao e o clique caiu em "USA/Canada". O log dizia "escolhi Other" porque olhava
+      // o texto da OPCAO que eu mandei clicar, nao o que o controle passou a mostrar. Num
+      // formulario de emprego isso nao e bug de log, e resposta falsa entregue ao estudio.
+      const naTela=await el.evaluate(e=>{
+        const box=e.closest('[class*="container"]')||e.closest('[class*="control"]')||e.parentElement;
+        return box? (box.innerText||'').replace(/\s+/g,' ').trim().slice(0,80) : '';
+      }).catch(()=>'');
+      const bate = naTela.toLowerCase().includes(String(alvo).toLowerCase().replace(/\?$/,''));
+      log('combo',c.rotulo||sel,'| pedi',JSON.stringify(alvo),'| cliquei em',JSON.stringify(escolhido||'(NADA)'),'| a TELA mostra',JSON.stringify(naTela),bate?'| CONFERE':'| !! NAO CONFERE, NAO ENVIE');
+    }
+  }
+
+  // aceite obrigatorio, pelo rotulo e nunca por varredura cega
+  for(const cb of await p.$$('input[type=checkbox]')){
+    const rot=await cb.evaluate(e=>{ const l=e.id&&document.querySelector('label[for="'+CSS.escape(e.id)+'"]'); return ((l&&l.innerText)||e.getAttribute('aria-label')||(e.parentElement&&e.parentElement.innerText)||'').replace(/\s+/g,' ').trim(); }).catch(()=>'');
+    if(/allow us to process|process your personal|consent|i agree/i.test(rot) && !/do not|opt.?out|marketing/i.test(rot)){
+      await cb.check({force:true}).catch(async()=>{ await cb.click({force:true}).catch(()=>{}); });
+      log('aceite marcado:', rot.slice(0,70), '=>', await cb.isChecked().catch(()=>'?'));
+    }
+  }
+
+  await p.waitForTimeout(1200);
+  // leitura de volta imediatamente antes do clique
+  for(const sel of Object.keys(A.texto||{})){ const v=await p.$eval(sel,e=>e.value).catch(()=>null);
+    log('  leitura final',sel,'=>', v===null?'(CAMPO SUMIU)': (String(v).trim()? String(v).length+' chars':'(VAZIO)')); }
+  const obrig=await p.evaluate(()=>[...document.querySelectorAll('input[required],select[required],textarea[required]')].map(e=>({
+    n:e.name||e.id, tipo:e.type, ok: e.type==='checkbox'? e.checked : !!(e.value||'').trim()})));
+  log('  obrigatorios:',JSON.stringify(obrig));
+  await p.screenshot({path:D+'/pin_'+slug+'_pre.png',fullPage:true}).catch(()=>{});
+  log('captcha iframes:',JSON.stringify(await p.$$eval('iframe',fs=>fs.map(f=>f.src).filter(s=>/recaptcha|hcaptcha|turnstile|datadome/i.test(s))).catch(()=>[])));
+  if(!SUBMIT){ log('MODO SECO, nada enviado'); await b.close(); return; }
+
+  const sb=await p.$('button[type=submit], button:has-text("Submit")');
+  if(!sb){ log('!! nao achei o Submit'); await b.close(); return; }
+  await sb.scrollIntoViewIfNeeded().catch(()=>{}); await p.waitForTimeout(900);
+  const cx=await sb.boundingBox().catch(()=>null); log('caixa do Submit:',JSON.stringify(cx));
+  if(cx) await p.mouse.click(cx.x+cx.width/2, cx.y+cx.height/2).catch(()=>{}); else await sb.click({force:true}).catch(()=>{});
+  await p.waitForTimeout(16000);
+  const txt=(await p.innerText('body')).replace(/\s+/g,' ');
+  await p.screenshot({path:D+'/pin_'+slug+'_post.png',fullPage:true}).catch(()=>{});
+  const ok=/thank you|thanks|registered|received|we'll be in touch|we will be in touch|success|interest has been/i.test(txt);
+  log(ok?'RESPOSTA POSITIVA NA TELA':'NAO CONFIRMADA','| url:',p.url());
+  log('TEXTO:',txt.slice(0,900));
+ }catch(e){ log('ERR',e.message.split('\n')[0]); await p.screenshot({path:D+'/pin_'+slug+'_err.png',fullPage:true}).catch(()=>{}); }
+ await b.close();
+})();
