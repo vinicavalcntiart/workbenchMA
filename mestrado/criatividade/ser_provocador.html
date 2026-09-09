@@ -530,20 +530,20 @@ h1 em{font-style:normal;color:var(--vermelho)}
       <div class="stage on" data-i="0">
         <h1>Sorteie o <em>tema</em></h1>
         <div class="roleta" id="roleta"><div class="rw" id="rw">?</div><div class="rbar"><i id="rbar"></i></div></div>
-        <div class="tbtns" style="justify-content:flex-start"><button class="btn" id="sortear">🎰 sortear</button></div>
+        <div class="tbtns" style="justify-content:flex-start;align-items:center"><button class="btn" id="sortear">🎰 sortear</button><span class="chip">📱 abram o bloco de notas</span></div>
       </div>
       <div class="stage" data-i="1">
         <div class="chip" id="tema1">tema</div>
         <h1>Como a <em>empresa</em> atrairia público novo?</h1>
-        <p class="lead">Escreva a solução mais óbvia. 2 minutos.</p>
+        <p class="lead">📱 No bloco de notas do celular: a solução mais óbvia. 2 minutos.</p>
       </div>
       <div class="stage" data-i="2">
         <div class="chip" id="tema2">tema</div>
         <h1>Vire o bloco. O que o <em>público</em> quer de verdade?</h1>
-        <p class="lead">Escreva uma frase. 2 minutos.</p>
+        <p class="lead">📱 No bloco de notas do celular: uma frase. 2 minutos.</p>
       </div>
       <div class="stage" data-i="3">
-        <h1>Cada um lê a sua <em>frase</em>.</h1>
+        <h1>Cada um lê a sua <em>frase</em> no celular.</h1>
         <p class="lead">O que mudou quando o público foi para o topo?</p>
       </div>
     </div>
@@ -658,7 +658,7 @@ function goSt(i){
 }
 document.getElementById('stnext').onclick=()=>goSt(st+1);
 document.getElementById('stprev').onclick=()=>goSt(st-1);
-const CRISES=['Agora o prazo é 30 segundos.','Orçamento zero. Nenhum real.','A ideia precisa caber em cinco palavras.','Proibido usar internet.','A solução tem que funcionar sem nenhuma imagem.','Troquem de folha com o colega ao lado e continuem a ideia dele.'];
+const CRISES=['Agora o prazo é 30 segundos.','Orçamento zero. Nenhum real.','A ideia precisa caber em cinco palavras.','Proibido usar internet.','A solução tem que funcionar sem nenhuma imagem.'];
 criseBtn.onclick=()=>{const c=CRISES[Math.floor(Math.random()*CRISES.length)];crisecard.textContent='🪜 '+c;crisecard.classList.remove('on');void crisecard.offsetWidth;crisecard.classList.add('on');if(c.startsWith('Agora')){setT(30);startT()}};
 goSt(0);
 let start=0;try{start=+localStorage.getItem('sp2_cur')||0}catch(e){}
