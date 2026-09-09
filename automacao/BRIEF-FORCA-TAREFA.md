@@ -2232,3 +2232,33 @@ Dois achados que economizam rodada: **Phenom People é vitrine, não porta** —
 Activision aponta para o Workday que já era varrido, e front-end novo não é porta nova. E **chutar
 slug não descobre nada** numa família sem fonte: 80 slugs de estúdio europeu contra o feed do
 Personio deram **80 de 80 em HTTP 307**.
+
+## WIX: menu próprio é resolvível, e a parede fica escondida atrás do botão
+
+A Distillery VFX estava na fila do Vini com a parede descrita como *"não é captcha, são dois menus
+próprios do Wix que um preenchedor ignora em silêncio"*. Metade estava certa e a metade que
+importa estava errada.
+
+**Os menus são resolvíveis pela automação.** Eles não são `<select>`: o Wix desenha um `div` com
+`role=listbox`, e as opções vêm **triplicadas** na leitura (`Sr / Sr / Sr`), porque o componente
+mantém cópias. Abrir por clique e escolher pelo texto exato funciona. Ficaram `Sr` no nível e
+**`Need a work permit`** no status, que é a opção verdadeira e que fica **logo depois** de
+`Open work permit` na lista — trocar uma pela outra seria mentira num campo de imigração.
+
+**Duas armadilhas de preenchimento no mesmo formulário:**
+- O campo **Phone** não é achado por laço de rótulo, mesmo tendo `label[for]` correto. Foi
+  preenchido por dentro do DOM, pelo `for` do rótulo que começa com "Phone", com o setter nativo
+  e disparo de `input`, `change` e `blur`.
+- As **caixas de local de trabalho não têm `for` no rótulo**, então casar por `label[for]` devolve
+  string vazia e o laço nunca marca nada. Elas se acham pelo atributo `name` do grupo
+  (`Select all workplace options...`).
+- O botão chama **`Apply Now`**. Um seletor por `button:has-text("Submit")` espera trinta segundos
+  e desiste sem dizer por quê.
+
+**A parede de verdade só apareceu no clique:** depois do `Apply Now` abre uma janela
+**`Verification — Please confirm you're human`** com o **reCAPTCHA de caixa**. O HTML servido não
+tinha nada disso, e a varredura por grep deu limpo. **Nada foi enviado**, e a fila do Vini foi
+corrigida para dizer isso com todas as letras, em vez de prometer que eram só dois cliques de menu.
+
+É o mesmo padrão do Workable e do BambooHR: **o único veredito válido é o clique**, e um formulário
+que preenche 100% não é um formulário que envia.

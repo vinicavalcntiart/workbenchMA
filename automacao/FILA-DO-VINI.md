@@ -676,8 +676,13 @@ Site: https://vinicavalcanti.com
 
 **Link direto:** https://www.distilleryvfx.com/apply
 **Por que vale:** Canadá anglófono, estúdio boutique de VFX para cinema e TV de alto perfil, e o formulário pergunta status no Canadá com valores em CAD, ou seja, contratam de fora. **Reconferida no ar hoje.**
-**A parede:** **não é captcha** — são dois menus próprios do Wix (*What is your current level* e *Current Status in Canada*) que um preenchedor ignora em silêncio. Para você, é só clicar nos dois.
-**Tempo estimado:** 4 min
+**A PAREDE, CORRIGIDA EM 09/09 COM CLIQUE DE VERDADE — a descrição anterior estava errada e faria você perder a viagem.** Dizia "não é captcha, são dois menus do Wix". Os dois menus **são resolvíveis pela automação**, e eu resolvi: preenchi o formulário inteiro, subi o CV (o nome `Vini_Cavalcanti_CV.pdf` aparece na tela, que é a prova válida), marquei as três caixas de local de trabalho, escolhi `Sr` no nível e **`Need a work permit`** no status, que é a opção verdadeira e fica logo depois de `Open work permit`, que seria mentira.
+
+**O que trava é outra coisa, e ela só aparece DEPOIS do clique em `Apply Now`:** abre uma janela escrita **`Verification — Please confirm you're human`** com o **reCAPTCHA de caixa "I'm not a robot"**. Está no print `dist_pos.png`. Nenhuma varredura de HTML via isso antes do clique, e é mais um caso da regra da campanha: **quem dá o veredito é o clique**.
+
+**Nada foi enviado.** Não há linha no `enviados.csv` para a Distillery, e o formulário continua preenchido esperando você marcar uma caixa.
+
+**Tempo estimado:** 4 min, e o botão chama **`Apply Now`**, não "Submit".
 
 **Cole nos campos:**
 
