@@ -551,3 +551,50 @@ mas **a carta NÃO foi escrita**: checagem no Gmail antes de escrever achou que 
 já respondeu à campanha em 07/09 (recruitment@wetaworkshop.co.nz avisando que o Game Studio deles
 fechou), e thread de quem já respondeu é do Comunicador, não do Joe. Padrão fica registrado para
 quando (e se) a casa voltar a ser alvo de carta fria por outra via.
+
+---
+
+# SETE PADRÕES PROVADOS DE UMA VEZ, colhidos das respostas humanas de 09/09
+
+Esta seção não veio de garimpo em página de equipe. Veio da caixa de entrada: sete pessoas
+escreveram à mão para o Vini em 09/09, e **cada uma dessas mensagens é um endereço REAL,
+funcionando, com nome e cargo conhecidos**. Isso é prova de padrão da melhor qualidade que
+existe, e é de graça: o endereço não foi montado nem inferido, ele **entregou uma mensagem**.
+
+Por que isso vale registro: a régua de 08/09 mediu que endereço MONTADO por padrão quica em mais
+de 60% das vezes, porque o padrão prova o formato e não a caixa. Aqui o formato **e** a caixa
+estão provados no mesmo ato.
+
+| Estúdio | Pessoa | Cargo/contexto | Formato provado |
+|---|---|---|---|
+| **Eremite Games** (Polônia) | Lukasz Korzanowski | respondeu pela caixa institucional | `contact@eremitegames.com` é lida por pessoa com nome, não é robô |
+| **Game Boost** (Suécia) | Jenny Österlund | fundadora | `nome.sobrenome@` no Teamtailor da casa |
+| **Embark Studios** (Suécia) | Terri Kim-Bell | recrutadora | `nome-nome-sobrenome@` no Teamtailor da casa |
+| **Warhorse Studios** (Chéquia) | Markéta Uhlíková | RH | responde pela caixa de candidato do Breezy, não por endereço próprio |
+| **viennaFX** (Áustria) | Felix S. | sócio | `inicial.inicial@vfx.at`, endereço curto de casa pequena |
+| **Airship Interactive** (Inglaterra) | Declan Blayney | recrutamento | `nome.sobrenome@` no Teamtailor da casa |
+| **beffio** (Polônia) | Tom Lassota | recrutamento | `nome.sobrenome@` no Teamtailor da casa |
+
+**A LIÇÃO DE MÉTODO, e ela muda a ordem de trabalho do Joe:** quatro dos sete escrevem por
+`nome.sobrenome@<subdominio>.teamtailor-mail.com`, que é endereço da PLATAFORMA e não do estúdio,
+então **não serve para carta fria** e não deve ser registrado como padrão do domínio da casa. Os
+dois que valem de verdade são a viennaFX (`f.s@vfx.at`, casa pequena com formato de inicial) e a
+confirmação de que a caixa institucional da Eremite é lida por um humano com nome.
+
+**O que fazer com isso:** quando uma casa responde pelo Teamtailor, o nome da pessoa é ouro e o
+endereço não é. Guarde o NOME, e procure o endereço do domínio próprio do estúdio por outra via.
+
+## Rodada do Joe de 18h35 em 09/09: ZERO pessoas novas, e o motivo medido
+
+Dez estúdios já contatados em caixa genérica, sem resposta e sem bounce, tiveram site aberto nas
+rotas `/`, `/contact`, `/about`, `/team`, `/studio`, `/people` e `/careers`, procurando endereço
+PESSOAL publicado: Jam Filled, Savian, Copernicus, Industrial Brothers, Steamroller, Baobab,
+Flight School, Cyborn, Blow Studio e A. Film. **Resultado: um único endereço não genérico em
+dez casas**, e ele é `games@baobabstudios.com`, que é departamental e não pessoa.
+
+Segunda tentativa, extraindo NOME e CARGO das páginas de equipe (Art Director, Head of Art,
+CG Supervisor, fundador): **zero em seis casas**. As páginas que respondem 200 montam a equipe por
+JavaScript, exatamente como a armadilha já registrada na Rodeo FX. **Próxima rodada que for atrás
+de página de equipe abre com navegador desde o começo, não com curl.**
+
+Nenhum endereço foi inventado para bater a meta de 4 a 8 pessoas.
