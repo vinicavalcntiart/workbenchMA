@@ -1,4 +1,15 @@
-# Fila do Workday: ZERADA em 09/09
+# Fila do Workday: ZERADA DE VERDADE em 09/09 — as OITO saíram
+
+> **Correção das 20h30.** Este arquivo continuava listando a nº 2 (Eyeline `JR40928`) e a nº 6
+> (Netflix Sydney `JR41749`) como esperando a próxima rodada. **As duas já tinham sido enviadas
+> e confirmadas horas antes**, com prova de `jobTasks/completed/application`. Fui disparar a nº 2
+> e o dedupe na hora do clique pegou.
+>
+> **É a terceira fila desatualizada em uma hora**, junto com a preparação da Imageworks e as três
+> da Ubisoft. O padrão é sempre o mesmo: **arquivo de fila escrito de manhã envelhece em horas,
+> porque outra rodada envia a partir dele e não volta para riscar a linha.** A defesa que
+> funcionou nas três vezes é a mesma e é barata: **refazer o dedupe contra `enviados.csv` e
+> `processados.csv` no minuto do disparo**, nunca contra a fila.
 
 > As oito saíram todas, ou foram recusadas com motivo escrito. Nada aqui espera a mão dele.
 
@@ -7,10 +18,11 @@
 > vaga de arte do grupo Disney. A regra de uma por casa por rodada cedeu para a ordem dele.
 > Sobram sete, todas da Netflix ou da Eyeline.
 
-Escrito em 09/09/2026, depois da madrugada que enviou treze candidaturas. **Nenhuma destas oito
-está enviada**, e o motivo não é técnica: é a regra da campanha de **uma mensagem por casa por
-rodada**. As quatro casas abaixo já receberam uma candidatura em 09/09, então estas ficam para a
-rodada seguinte.
+Escrito em 09/09/2026, depois da madrugada que enviou treze candidaturas. **O texto original dizia
+que nenhuma das oito estava enviada**, e isso era verdade na hora em que foi escrito: o que segurava
+todas era a regra da campanha de **uma mensagem por casa por rodada**. Ao longo do dia as oito foram
+resolvidas uma a uma — sete enviadas e uma recusada com motivo escrito —, e a tabela abaixo é a que
+vale. **O parágrafo antigo fica riscado aqui como lembrete de que fila envelhece.**
 
 Todas foram reconferidas em 09/09 por um agente: detalhe da API **200**, página pública **200**,
 régua rodada de novo sobre o texto integral e **dedupe por ID de requisição 0/0/0/0** nos quatro
@@ -39,11 +51,11 @@ como "sim".
 | # | Vaga | Casa (já usada em 09/09) | host | site | jobpath | Faixa |
 |---|---|---|---|---|---|---|
 | ~~1~~ | ~~**Modeling Supervisor** `JR40941`~~ | ~~Eyeline, Seul~~ | **ENVIADA em 09/09** | | | |
-| 2 | **Lead Surfacing Artist** `JR40928` | Eyeline, Seul | `netflix.wd108.myworkdayjobs.com` | `Eyeline` | `Eyeline-Seoul/Lead-Surfacing-Artist_JR40928` | não publicada |
+| ~~2~~ | ~~**Lead Surfacing Artist** `JR40928`~~ | ~~Eyeline, Seul~~ | **ENVIADA em 09/09, três provas incluindo `jobTasks/completed/application`** | | | |
 | ~~3~~ | ~~**Environment Modeling Supervisor** `JR39446`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 167k–212k~~ |
 | ~~4~~ | ~~**Environment Surfacing Supervisor** `JR39273`~~ | ~~Netflix Animation, Vancouver~~ | **ENVIADA em 09/09** | | | ~~CAD 163k–223k~~ |
 | ~~5~~ | ~~**Environment Modeling Supervisor** `JR41734`~~ | ~~Netflix Animation, Sydney~~ | **ENVIADA em 09/09** | | | |
-| 6 | **Environment Surfacing Supervisor** `JR41749` | Netflix Animation, Sydney | `netflix.wd108.myworkdayjobs.com` | `Netflix` | `Sydney/Environment-Surfacing-Supervisor_JR41749` | não publicada |
+| ~~6~~ | ~~**Environment Surfacing Supervisor** `JR41749`~~ | ~~Netflix Animation, Sydney~~ | **ENVIADA em 09/09, três provas** | | | |
 | ~~7~~ | ~~**Lead Generalist Artist** `10142674`~~ | ~~Disney / ILM Vancouver~~ | **ENVIADA em 09/09, Application Received** | | | ~~CAD 126.800–162.300~~ |
 | ~~8~~ | ~~**Visual Development Artist, Ink** `JR41753`~~ | ~~Netflix, LA~~ | **RECUSADA em 09/09 com motivo escrito: é desenho e pintura 2D** | | | |
 
