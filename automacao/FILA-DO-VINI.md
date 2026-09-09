@@ -1476,8 +1476,31 @@ Feito isso, clique no botão **Update** do próprio bloco Personal Information (
 **Link direto:** https://careers.blue-zoo.co.uk/vacancies/vacancy-apply.aspx?VacancyID=1310
 **Por que vale:** estúdio londrino conhecido, e a descrição diz que o time de modelagem e textura constrói *"the environments, props, **characters**"*. **Busca de veto com a régua nova de treze termos: nenhum.** E há um sinal que vale ouro neste quadro: a Blue Zoo **rotula explicitamente** as vagas restritas com o prefixo **"UK Only |"** — a Senior Blender Lighting ao lado tem o rótulo, **esta não tem**. Vaga sem rótulo num quadro que rotula é sinal real.
 **Ressalva honesta:** o dia a dia é *"stylised environment and prop assets"*, ou seja **ambiente e props**, não personagem. Entra como média pela regra de disciplina.
-**A parede:** **não é captcha** — não vi nenhum no HTML em nenhuma tela. É que a candidatura **exige criar conta**, e o cadastro tem dois campos que só se preenchem à mão.
-**Tempo estimado:** 3 min. Deixei 90% do caminho medido abaixo.
+**A parede:** **não é captcha** — conferido de novo em 09/09, zero `iframe` de captcha e zero widget (`{"fr":[],"w":0}`). É que a candidatura **exige criar conta**, e o cadastro tem dois campos que a automação não vence.
+
+**CORREÇÃO DE 09/09, medida em cinco rodadas de navegador, porque a descrição antiga estava errada
+e faria você perder tempo:** o resto do cadastro **passa inteiro pela automação**. Nome, sobrenome,
+os dois emails, origem "Our Careers Website", os três radios, as duas caixas de consentimento e a
+senha ficaram todos preenchidos e lidos de volta, e o botão Register foi clicado três vezes. O que
+trava, sempre, é só isto:
+
+> `Preferred Specialism is a required field` · `Preferred Location is a required field`
+
+E o motivo é específico: **esses dois não são `<select>` e não são janela**. São um *itemPicker* do
+jQuery UI, com um `<button>` "Select" (`..._CanC_PreferredIndustry1_btnChange` e
+`..._CanC_PreferredLocation1_btnChange`), um input de texto `txtMyBox` e um campo **oculto**
+`hdnValue`, que fica em `0` e é o que o servidor lê. Medido: o botão existe no DOM mas responde
+`Element is not visible`, e toda a cadeia de pais dele tem `offsetHeight: 0`, ou seja o bloco é
+renderizado colapsado; clicar pelo DOM não abre janela nenhuma; e digitar `mod` e `lon` no
+`txtMyBox` **não produz sugestão** (zero menu de autocomplete). Sem clique numa sugestão, o
+`hdnValue` continua `0` e o cadastro nunca fecha.
+
+**Ou seja: no navegador de verdade, com o widget desenhado na tela, isto são dois cliques seus.
+Na automação é parede.** Escolha `Modelling` (ou o mais próximo que a lista mostrar) no Specialism
+e `London` no Location.
+
+**Tempo estimado:** 3 min, e o resto do formulário provavelmente já vai estar preenchido pelo
+navegador se você usar os valores da tabela abaixo.
 
 **Cole no cadastro** (o link acima redireciona para `registration.aspx`):
 
