@@ -7,7 +7,7 @@ seu.
 
 ## 1. O placar, sem inflar
 
-**Dezesseis candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
+**Dezessete candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
 prova por recibo de email ou pela área do candidato. Conferido nos três registros
 (`enviados.csv`, painel, `processados.csv`): **nenhuma falta em lugar nenhum**.
 
@@ -29,6 +29,7 @@ prova por recibo de email ou pela área do candidato. Conferido nos três regist
 | 14 | Game Boost | Open Application, Game Artists | Estocolmo |
 | 15 | **Disney / ILM Vancouver** | **Lead Generalist Artist** (CAD 126.800–162.300) | Vancouver |
 | 16 | **Netflix Animation** | **Environment Modeling Supervisor** (CAD 167–212k) | Vancouver |
+| 17 | **Netflix Animation** | **Environment Surfacing Supervisor** (CAD 163–223k) | Vancouver |
 
 A **nº 8** é a mais alinhada que a campanha já achou: supervisão de modelagem de **personagem**,
 num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
@@ -42,7 +43,12 @@ num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
 
 ## 2. O QUE SÓ VOCÊ PODE FAZER, em ordem
 
-### 2.1 Seis candidaturas de Workday, prontas para clicar (10 a 15 min no total)
+### 2.1 Cinco candidaturas de Workday: NÃO precisam mais da sua mão
+
+Deixei esta seção pedindo cliques seus de madrugada. **Não pede mais.** O fluxo do Workday agora
+atravessa sozinho, e a prova são as três de hoje de manhã: ILM Vancouver, Netflix Modeling e
+Netflix Surfacing, as três enviadas e confirmadas sem você. As cinco que sobraram são da Netflix e
+da Eyeline, casas que já receberam candidatura hoje, e saem na virada da rodada. **Eu mando.**
 
 Estão em **`automacao/PROXIMA-RODADA-workday.md`**, com host, quadro, caminho da vaga e a pretensão
 a usar em cada uma. O comando é sempre o mesmo, trocando quatro argumentos, e sem a palavra
