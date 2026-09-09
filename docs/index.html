@@ -435,7 +435,7 @@
 // entrega: ok | conf (auto-resposta) | reenvio (bounce corrigido, reenviado ok) | bounce (pendente) | rascunho (não enviado)
 // 6º campo (opcional): andamento vindo da automação — respondeu | entrevista | oferta | recusado
 const SENT = "2026-08-26";
-const UPDATED = "2026-09-08";
+const UPDATED = "2026-09-09";
 const BUILD = "__BUILD__";
 // Preenchido pela automação quando algo quebra (ex.: sem acesso ao Gmail). Vazio = tudo ok.
 const ALERTA = "";
@@ -456,7 +456,8 @@ const DAILY = [
  ["2026-09-05",17,0],
  ["2026-09-06",100,13],
  ["2026-09-07",17,10],
- ["2026-09-08",0,1]
+ ["2026-09-08",0,1],
+ ["2026-09-09",0,4]
 ];
 const STUDIOS = [
  ["Red Sky Games (pessoa: Andre Francavilla, CEO & CTO, Production Lead)","Italia (Milao)","andre.francavilla@redskygames.com",36,"rascunho","PESSOA achada pelo Joe em 08/09. Endereco PUBLICADO na secao Contact da politica de privacidade do proprio estudio, e o cargo publicado na pagina About, que lista o time inteiro de quatro pessoas. Confianca ALTA. A casa recebeu a carta fria em info@redskygames.com no lote de 06/09 e nao respondeu. Primeira pessoa desta casa"],
@@ -537,7 +538,7 @@ const STUDIOS = [
  ["Happy Volcano","Bélgica","hello@happyvolcano.com",25,"rascunho"],
  ["MoonMonster Studios","Bélgica","jobs@moonmonster.be",25,"rascunho"],
  ["The Artistocrats","Bélgica","contact@the-artistocrats.com",25,"rascunho"],
- ["I-Illusions","Bélgica","hello@i-illusions.com",25,"rascunho"],
+ ["I-Illusions","Bélgica","hello@i-illusions.com",25,"rascunho","recusado"],
  ["Cybernetic Walrus","Bélgica","info@cyberneticwalrus.com",25,"rascunho"],
  ["Marmalade Game Studio","Portugal","jobs@marmalademail.com",25,"ok","-"],
  ["Fun Punch Games","Portugal","jobs@funpunchgames.com",25,"rascunho"],
@@ -582,7 +583,7 @@ const STUDIOS = [
  ["Hindsight Studios","Alemanha","info@hindsight-studios.de",25,"rascunho"],
  ["Chaosmonger Studio","Estônia","info@chaosmonger.com",25,"rascunho"],
  ["Creature Factory","Alemanha","info@creature-factory.com",24,"rascunho"],
- ["Studio RUCACH","Irlanda","contact@rucach.com",24,"rascunho"],
+ ["Studio RUCACH","Irlanda","contact@rucach.com",24,"rascunho","recusado"],
  ["Black Shamrock (Virtuos)","Irlanda","dub-careers@virtuosgames.com",24,"rascunho"],
  ["Electric Square (Keywords)","Irlanda","charlotte.pook@electricsquare.com",24,"rascunho"],
  ["RubberBand Games","Reino Unido","employment@rubberbandgames.com",24,"rascunho"],
@@ -609,7 +610,7 @@ const STUDIOS = [
  ["Aruma Studios","Espanha","contact@arumastudios.com",24,"ok","recusado"],
  ["Daedalic Entertainment","Alemanha","scouting@daedalic.com",24,"rascunho"],
  ["Deck13 Interactive","Alemanha","info@deck13.com",24,"rascunho"],
- ["Aesir Interactive","Alemanha","careers@aesir-interactive.com",24,"bounce"],
+ ["Aesir Interactive","Alemanha","careers@aesir-interactive.com",24,"bounce","recusado"],
  ["Chimera Entertainment","Alemanha","info@chimera-entertainment.de",24,"rascunho"],
  ["Binary Impact","Alemanha","jobs@binaryimpact.de",24,"rascunho"],
  ["Byterockers' Games","Alemanha","jobs@byterockers.games",24,"rascunho"],
@@ -1027,7 +1028,7 @@ const STUDIOS = [
  ["NOLABEL","Polônia","office@nolabel.com.pl",17,"ok"],
  ["Badi Badi","Polônia","hello@badibadi.com",17,"ok"],
  ["LUGUNDTRUG","Alemanha","jobs@lugundtrug.net",17,"ok"],
- ["viennaFX","Áustria","office@vfx.at",17,"ok"],
+ ["viennaFX","Áustria","office@vfx.at",17,"ok","recusado"],
  ["About Fun","Tchéquia","hr@about-fun.com",17,"ok"],
  ["Mirage VFX","Austrália","jobs@mirage-vfx.com",17,"ok"],
  ["Macrograph","Coreia do Sul","info@macrograph.co.kr",17,"bounce"],
@@ -4008,6 +4009,7 @@ const JOE_PASSOS = [
 ];
 
 const NOVIDADES = [
+ ["2026-09-09","envio","Tres candidaturas de manha, e a Disney que voce mandou priorizar saiu sem precisar de voce","Saíram a Lead Generalist Artist da ILM Vancouver (requisição 10142674, faixa publicada CAD 126.800 a 162.300) e as duas supervisões de ambiente da Netflix Animation em Vancouver, Modeling (JR39446, CAD 167 a 212 mil) e Surfacing (JR39273, CAD 163 a 223 mil), as três confirmadas com três provas cada. A da Disney estava parada na fila só pela regra interna de uma candidatura por casa por rodada, e a sua ordem sobre vaga de arte do grupo Disney passou por cima dela. A primeira custou onze rodadas de ensaio até a revisão ficar verdadeira, porque o formulário canadense gravou sozinho um quadro de empregos chinês como fonte e um diploma de pós que você não tem; a terceira passou de ponta a ponta na primeira tentativa.","https://disney.wd5.myworkdayjobs.com/en-US/disneycareerdc/job/Vancouver-BC-Canada/Lead-Generalist-Artist_10142674"],
  ["2026-09-09","porta","Seis pessoas novas, todas com endereco publicado, e duas casas grandes que a campanha tinha dado como fechadas","A rodada do detetive fechou com seis nomes e nenhum endereco montado por padrao de dominio, que e a faixa que quicou cinco vezes em oito na medicao de 06/09. Sao eles: Naomi Foakes, Head of Business Development para a America do Norte da PIXOMONDO, primeira pessoa dessa casa grande em toda a campanha; Pauline Mallam, do time de People da AARDMAN, tambem a primeira; Eleanor Coleman, contato internacional de servicos da BLUE SPIRIT, que tem estudio em Montreal e cuja filmografia traz Blue Eye Samurai e What If...?; Marianne Culbert, VP de producao de animacao do grupo SPHERE ANIMATION, em Montreal, casa de quase duzentas pessoas que a campanha nunca tinha tocado; Marie Soto, Executive Producer da JUMBLA, que atende Madri e Los Angeles; e Patrick Salter, socio-diretor do STUDIO PANCHO, em Melbourne. O ACHADO DE METODO, e ele corrige uma nota antiga: em 06/09 ficou escrito que Pixomondo e Aardman nao publicam endereco de pessoa, e as duas publicam, uma na HOME e a outra na PAGINA DE CARREIRAS, exatamente os dois caminhos que aquela varredura nao testou. O que continua nao rendendo, e fica escrito para nao se repetir: o campo recruiter-email do Teamtailor deu zero em dezoito dominios, o impressum alemao deu so caixa funcional em vinte e um, e as paginas de crew das casas grandes de VFX seguem sem nome com email."],
  ["2026-09-09","envio","Treze candidaturas numa madrugada, e a Walla Walla respondeu em tres horas","Saíram treze candidaturas entre a noite de 08/09 e a madrugada de 09/09, todas com prova na tela. As de mais peso são a Character Modeling Supervisor da Netflix Animation em Sydney, que é o cargo dele com o nome dele, a Previs Generalist Artist da ILM em Londres, a Lead Modeler da Eyeline em Seul e a Associate Art Director da Activision, com faixa publicada de USD 126.800 a 234.580. A Walla Walla Studio foi a resposta mais rápida que a campanha já teve: três horas depois da candidatura o estúdio mandou um questionário complementar, e ele já foi respondido."],
 ["2026-09-08","envio","Voce rodou o Apps Script e a leva saiu, com as seis pessoas novas de hoje","As cartas comecaram a sair as 17h55, e nelas foram os seis nomes que o detetive achou hoje: Winston Helgason da The Embassy VFX, Kate Bate da Tendril, Carson Loveday da ICON, Marie-Josee Lachance da REAL by FAKE, Fi Kilroe da Freefolk e Chris Batten da Absolute Post. Quatro deles sao no Canada, e as seis tinham o endereco publicado pelo proprio estudio.",""],
