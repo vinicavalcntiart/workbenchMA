@@ -2076,3 +2076,91 @@ Londres `2709436` e Visual Development Artist AI Londres `2619285`) **são fila 
 de agente** — inclusive a de Montréal, que é a única de modelagem entre as 53 do quadro e que
 seria o alvo mais forte da noite se a porta cedesse. **Não gaste rodada tentando Recruitee de
 novo.**
+
+## PINPOINT: a porta "nativa" da TTK NÃO é porta, e o teste que revela isso é o cabeçalho Accept
+
+Um agente entregou em 09/09 a rota `https://<empresa>.pinpointhq.com/en/postings/<uuid>/applications/new`
+como a saída para as duas vagas da TTK Games de Estocolmo, que estavam presas desde 08/09 porque o
+POST do site do estúdio devolvia **500 `ReCaptcha Failed`**. A medição dele estava certa e a
+conclusão estava errada, e o motivo é instrutivo.
+
+**O que ele mediu:** `curl` naquela URL devolve **200** com o formulário real, sem redirecionar, com
+os campos `application_form[application][first_name]` e companhia, e sem `recaptcha`, `hcaptcha`,
+`turnstile` ou `cf-challenge` no HTML.
+
+**O que eu medi no navegador:** a mesma URL termina em `https://ttkgames.com/careers/`. Testei com
+JavaScript desligado, achando que fosse redirecionamento por script: **também cai no site do
+estúdio**, ou seja é redirecionamento de HTTP, não de JS. Testei com User-Agent de `curl` dentro do
+Chromium: **cai igual**.
+
+**O discriminador é o cabeçalho `Accept`, e o teste é de uma linha:**
+
+| requisição | resposta |
+|---|---|
+| `-A "curl/8.5.0"`, Accept `*/*` | **200** com o formulário |
+| `-A "Mozilla/5.0 ... Chrome/128"`, Accept `*/*` | **200** com o formulário |
+| `-A "curl/8.5.0"`, `-H "Accept: text/html"` | **302** para `https://ttkgames.com/careers/` |
+
+Ou seja: o Pinpoint serve o recurso cru para quem não pede HTML, e **redireciona toda navegação de
+navegador** para o site do estúdio, porque foi assim que a TTK configurou o quadro. No site do
+estúdio o formulário exige reCAPTCHA, que é justamente o que reprovou em 08/09.
+
+**A regra que fica:** chegar naquele formulário mandando um `Accept` que nenhum navegador manda é
+**contornar o captcha que a casa pôs na frente da candidatura**, e a campanha não contorna desafio
+de captcha. A TTK Games segue **parede**, e as duas vagas (Character Artist e Lead Environment
+Artist, Estocolmo, faixas publicadas) continuam fila do Vini à mão, não fila de agente.
+
+**A lição de método, que vale para qualquer família:** `curl` respondendo 200 com formulário **não
+prova** que existe porta. Antes de comemorar rota nova, repita a requisição com `Accept: text/html`,
+que é o que o navegador manda. Se as duas respostas divergem, o que existe é uma configuração de
+redirecionamento, e a porta de verdade é a outra.
+
+## O QUE A MADRUGADA DE 09/09 MEDIU SOBRE WORKDAY, e por que virou o fluxo mais produtivo
+
+Três candidaturas enviadas em uma madrugada por Workday: Disney/ILM Londres `10137201`, Netflix
+Animation Sydney `JR41751` e Cloud Imperium Manchester `JR101515`. Tudo que custou rodada de
+navegador virou código em **`/home/user/apply/wd_geral.js`**, que recebe host, site, caminho da vaga
+e um apelido, cria conta se preciso e caminha até a Review. As oito armadilhas, todas medidas:
+
+1. **O campo Country vem com um valor DE VERDADE** (`United States of America`), não com
+   `Select One`. Um preenchedor que pula combo "que já tem valor" deixa o país errado, e aí o
+   telefone brasileiro é recusado por não bater com o formato da região.
+2. **Trocar o Country REDESENHA** nome, endereço e a pergunta de origem, e **apaga** o que já foi
+   escrito. Ordem obrigatória: país primeiro, depois os combos, e **texto por último**.
+3. **Depois de trocar para Brazil existem DOIS inputs com o mesmo id** `name--legalName--lastName`:
+   o primeiro é *Mother's Family Name* e o **segundo** é o *Family Name* obrigatório. Qualquer
+   seletor por id pega só o primeiro, então a leitura de volta dizia "preenchido" enquanto o
+   servidor recusava por campo vazio. Custou quatro rodadas de navegador na Netflix.
+4. **O listbox do Country deixa a opção órfã `Brazil (+55)` no DOM** depois de fechar, e ela aparece
+   na leitura de `[role=option]` de outros menus. Um fallback de "clica na primeira opção" clicava
+   nela. Descarte opções com `(+` e **feche todo menu antes de abrir o próximo**: na Cloud Imperium
+   o código de país do telefone tentou casar com `Job Board`, que era o menu anterior ainda aberto.
+5. **"How Did You Hear About Us" é menu em cascata** de até três níveis, e cada casa tem a sua
+   árvore. Netflix: `Job Boards` → `LinkedIn`. Cloud Imperium: `Career Websites` → `Job Board`.
+   Se a escolha de nível 1 já fecha a pergunta, clicar de novo **desmarca**.
+6. **Reentrar em `/apply/useMyLastApplication` com rascunho aberto REFAZ o passo 2 e APAGA o CV e a
+   formação.** Para retomar rascunho a rota é `/apply`.
+7. **A pergunta de pretensão salarial costuma ser um `textarea` SEM rótulo ligado**, achável só pelo
+   id que começa com `secondaryQuestionnaire--`. Preenchedor que procura por rótulo passa direto e
+   diz que respondeu tudo.
+8. **Pergunta da casa pode ser par de RADIO em vez de lista.** A Cloud Imperium faz
+   *"Have you worked previously with CIG"* assim, e um tratador que só olha listbox reprova em
+   silêncio.
+
+**E a armadilha que não é de código, é de honestidade:** o menu de grau acadêmico da Netflix marcou
+sozinho **"Master Degree Completed"**, e o mestrado do Vini está **em andamento**. A lista não tinha
+nenhuma opção de mestrado em curso, então ficou **"Bachelor of Arts"**, que é verdade. O
+`wd_geral.js` agora tem essa ordem de preferência gravada, e uma conferência final que **recusa
+enviar** se a Review mostrar mestrado concluído ou autorização legal respondida como "sim".
+
+## Conta de Workday: falha nos DOIS sites do locatário aponta CONTA, não site
+
+A senha da Disney parou de autenticar. Testei nos dois sites do mesmo locatário, `disneycareer` e
+`disneycareerdc`: falhou nos dois, o que separa "conta com problema" de "site que exige conta
+própria". **Duas tentativas e pare**, para não arriscar bloqueio. A saída é o *Forgot your password*
+da própria tela, com o link chegando no email do Vini. A senha nova é a padrão da campanha, o que de
+quebra fecha o risco anotado no documento de credenciais, que era a senha da Disney compartilhar
+raiz com a do painel.
+
+**Campo `beecatcher`** (Workday) e **`hp_`/`honeypot`** (Breezy) são armadilhas para robô: ficam
+**sempre vazios**.
