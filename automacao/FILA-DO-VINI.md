@@ -22,6 +22,31 @@ e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
+## ENTRADA NOVA DE 09/09 ÀS 21h — DUAS DO WORKABLE, e as duas são boas
+
+O Workable é parede medida com clique real duas vezes (Lighthouse em 07/09, One Of Us em 08/09):
+o **Turnstile aparece DEPOIS do Submit**, o botão trava em "Submitting…" e o POST devolve **412
+com `x-ts: 0`**. Não é suposição e não se burla. As duas abaixo passaram a régua de vinte termos
+com os únicos acertos sendo falsos positivos catalogados, e o dedupe com zero.
+
+1. **Sperasoft / AMC Studio — `Lead Props/Environment 3D Artist`** · Bucareste, Romênia
+   (telecommute) · uuid `532f4b03-d196-42bf-bb46-72979c256131`
+   · https://jobs.workable.com/view/bgM2Eip6fX6RA8zmRDZV2K/
+   Pede *"expert-level skill in **hard-surface and organic props**"*, *"modeling and texturing
+   workflows (**PBR**)"*, ZBrush e Substance, *"from **stylized to photorealistic**"*. Idioma: só
+   *"Strong English"*. **Detalhe que vale saber antes de clicar:** a campanha já escreveu para a
+   Sperasoft por email em 26/08 e **foi recusada** — mas a própria recusa convidou a acompanhar as
+   vagas no site, então a porta não está fechada. **Ressalva:** é cargo de liderança, pede dois
+   anos como lead. **Tem gêmea em Varsóvia e é a MESMA vaga: mande uma.**
+
+2. **Magic Media — `Senior 3D Generalist Artist`** · remoto Polônia · uuid
+   `76cde5c1-4b15-471c-9e2e-358ec9d842fc` · https://jobs.workable.com/view/fETqLf4yCZ6XDqX9KTXYwG/
+   **Publicada hoje às 14h35.** Pede *"assets such as **characters or environment props**"* e
+   *"models (both **hard surface and organic**) and **textures**"*. **Ressalva:** é generalista, não
+   personagem puro, e a mesma requisição está publicada em **seis países** — mande uma só.
+
+---
+
 ## ENTRADA NOVA DE 09/09 ÀS 20h — UBISOFT, três vagas, e por que elas caíram na sua mão
 
 **Antes de tudo, a parte que não me favorece: isto já estava escrito.** O painel registra desde
