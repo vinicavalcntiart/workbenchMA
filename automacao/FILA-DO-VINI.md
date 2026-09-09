@@ -35,7 +35,15 @@ o histórico da casa já dizia isso — foi o teste de dedupe pelo NOME da casa 
    estilizado, o centro do seu portfólio. **E vale a regra 14:** a política de privacidade do anúncio
    aponta para `privacy.paramount.com`, ou seja **a Skydance Animation está sob a Paramount**.
    A régua deu quatro acertos e os quatro são falso positivo, dois deles no aviso antifraude do
-   próprio anúncio. **Se for mandar uma só, a do seu nível é a `90d2f2b7`; esta aqui é a de base.**
+   próprio anúncio.
+
+   **CORREÇÃO DAS 21h45, e ela muda a recomendação que eu tinha acabado de escrever.** Eu disse
+   aqui que, se fosse mandar uma só, a do seu nível seria a `90d2f2b7` (a Senior). **A `90d2f2b7`
+   MORREU: `api.lever.co/v0/postings/skydance/90d2f2b7…` responde 404 hoje.** O quadro inteiro da
+   Skydance foi listado (28 vagas) e a família de surfacing de Madri **continua viva** — Lead,
+   Junior, os dois Trainee, Environment Modeling e Senior Grooming TD. Não foi a casa que fechou,
+   **foi o nível SENIOR desta função que sumiu.** Então **a `c5793932` acima passou a ser o topo
+   aberto da função**, e é nela que você manda.
 
 2. **Jam City — `Level Design Artist`** · São Francisco, presencial ·
    `787abb3b-1009-42f3-bf82-9846dff0e646` · https://jobs.lever.co/jamcity/787abb3b-1009-42f3-bf82-9846dff0e646/apply
