@@ -1,5 +1,26 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+> ## SE VOCÊ SÓ TIVER DEZ MINUTOS HOJE, gaste nestas três
+>
+> O arquivo cresceu muito em 09/09 e você disse que está sem tempo. Então a ordem, com o motivo
+> de cada uma em uma linha:
+>
+> 1. **Flaming Fowl Studios — Lead 3D Artist.** É a mais barata de todas: **o rascunho já está no
+>    seu Gmail**, é só disparar. É o único anúncio do dia que convida candidatura de qualquer lugar
+>    do mundo por escrito, e a porta é email, então não tem captcha para atravessar.
+> 2. **Fenris Creations — Register Your Interest.** É a CCP do *EVE Online*. O processo seletivo
+>    deles tem um estágio chamado *"Relocation and Benefits Chat"* e o formulário pergunta se você
+>    precisa de patrocínio de visto. Sem captcha, e **todas as respostas já estão decididas na
+>    entrada** — é copiar e clicar. **Confira com o olho o campo de localização: escolha `Other`.**
+> 3. **Skydance Animation Madrid — Environment Surfacing Artist `c5793932`.** É Paramount (a política
+>    de privacidade do anúncio aponta para `privacy.paramount.com`), é surfacing estilizado com
+>    Substance 3D Paint, e é a requisição de topo aberta dessa função depois que a Senior morreu hoje.
+>    Custa o hCaptcha de imagem do Lever, e o dossiê está pronto.
+>
+> Depois dessas três, a próxima é a **Ubisoft Montréal `REF31656C`**, que apesar de Quebec não pede
+> francês em lugar nenhum do anúncio.
+
+
 **44 vagas VIVAS em 43 entradas numeradas, tempo total estimado cerca de 2h20, todas com
 formulário e nenhuma por email.** São 43 e não 42 porque a entrada nº 2 carrega DUAS requisições
 da Netflix, a 2a de Sydney e a 2b de Vancouver. As cinco entradas que saíram continuam no arquivo
