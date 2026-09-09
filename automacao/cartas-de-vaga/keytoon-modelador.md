@@ -1,9 +1,20 @@
 # Keytoon Animation Studio (Madri) — vaga aberta de MODELADOR
 
-**PARA MANDAR A PARTIR DE 09/09, NÃO HOJE.** A casa já recebeu uma carta hoje, do Joe, para
-`david@keytoon.com` (o Director, endereço publicado em `/nosotros`). A regra da campanha é uma
-mensagem por estúdio por rodada e nunca em dias seguidos. Esta é a **segunda e última** da casa,
-pelo teto de duas por estúdio, e por isso vai para o endereço institucional, não para outra pessoa.
+**ATUALIZADO EM 09/09, E A PREMISSA MUDOU.** O rascunho foi criado hoje e está no Gmail, para
+`info@keytoon.com`, com o assunto ditado pela casa. Mas a carta do Joe para `david@keytoon.com`
+**NÃO FOI ENVIADA**: conferi o rascunho `r3582860448331873437`, de 08/09 às 21h52, e ele continua
+como DRAFT, pela regra da campanha de que carta fria nova é sempre rascunho e nunca envio.
+
+**Consequência, e é decisão do Vini:** existem agora DOIS rascunhos para a Keytoon e **só um deve
+sair**. A recomendação é o de `info@keytoon.com`, este aqui, por dois motivos medidos: ele responde
+a uma **vaga aberta e nomeada** na página `/empleo`, e usa o **assunto que a própria casa dita**,
+`Oferta empleo Modelador`, que é o que faz a mensagem cair na triagem certa. O do David é carta fria
+para o Director, sem vaga citada. Mandar os dois queima o teto de duas mensagens por estúdio numa
+casa só, no mesmo dia, com a mesma pessoa lendo.
+
+**Sem anexo, de propósito:** conferi como as cartas frias da campanha estão montadas e nenhuma leva
+CV anexado, só os links. Esta segue o mesmo padrão, e a última linha oferece o CV no formato que a
+casa preferir.
 
 **Para:** info@keytoon.com (publicado em `keytoon.com/contacto`)
 **Assunto, DITADO PELA CASA, literal:** `Oferta empleo Modelador`
