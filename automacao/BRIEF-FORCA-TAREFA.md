@@ -2262,3 +2262,25 @@ corrigida para dizer isso com todas as letras, em vez de prometer que eram só d
 
 É o mesmo padrão do Workable e do BambooHR: **o único veredito válido é o clique**, e um formulário
 que preenche 100% não é um formulário que envia.
+
+## 502 DO PROXY É ESTADO, NÃO VEREDITO: a Game Boost caiu sozinha e virou candidatura
+
+Em 07/09 a Game Boost entrou no painel como **"NÃO ALCANÇADA PELA NOSSA REDE, e NÃO é parede do
+estúdio"**: o quadro respondia **502** no proxy com *Hostname does not match certificates altnames*,
+certificado da Fastly, o mesmo sintoma da Gamecan. A entrada foi para a fila do Vini e ficou lá.
+
+Em 09/09 reconferi por curiosidade, com dois comandos: `jobs.json` respondeu **200**, e a rota de
+candidatura em `www.gameboost.se/.../applications/new` respondeu **200 com `Accept: text/html`**, ou
+seja passou no teste de porta. **O bloqueio tinha caído.** A candidatura foi enviada na hora, com
+URL `/applications/<uuid>/thanks/<token>` e o texto *"Thanks for applying"*.
+
+**A regra que fica, e ela vale para toda entrada fechada por rede:** 502, 403 e timeout do proxy
+são **estado**, não veredito. Parede de captcha é do estúdio e não muda sozinha; bloqueio de rede
+muda. Entrada fechada por rede precisa de **reconferência periódica**, e custa dois `curl`. A mesma
+lógica já tinha rendido 4,3% na varredura de portas reabertas de 08/09; aqui rendeu uma candidatura
+inteira que estava parada havia dois dias.
+
+**Detalhe do Teamtailor que custou uma rodada:** no arquivo `ansq_<slug>.json`, pergunta do tipo
+**`choice`** (escolha única) quer a chave **`opcao`**, no singular, e pergunta do tipo **`choices`**
+(múltipla) quer **`opcoes`**, no plural. Usar a errada faz o preenchedor dizer, corretamente,
+*"RECUSO DE ADIVINHAR"* e parar sem enviar. O `tt_qdump.js` mostra o tipo de cada uma antes.
