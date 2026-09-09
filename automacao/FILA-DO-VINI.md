@@ -1646,42 +1646,41 @@ validation failed"* e *"reCAPTCHA V3 validation failed, suspected as abusive usa
 **O formulário NÃO tem campo de arquivo**, então o CV e a carta vão por link, e o texto pronto está
 em `automacao/respostas-formularios.md`.
 
-## 48. Volka — 3D ARTIST — Limassol, Chipre (presencial, EFETIVA) — A CASA BANCA A AUTORIZAÇÃO
+## 48. Volka — 3D ARTIST — Limassol, Chipre — A CASA BANCA A AUTORIZAÇÃO, MAS A PORTA ESTÁ QUEBRADA
 
-**Link direto:** https://jobs.ashbyhq.com/volka/fa36e503-daf1-44d8-be2c-260cea2dd300/application
+**CORRIGIDA POUCO DEPOIS DE ESCRITA, em 09/09, e a correção é minha.** Eu tinha posto esta entrada
+dizendo que o "Page not found" era a nossa rede e que bastava você abrir no seu navegador. **Isso
+está errado**, e o registro da campanha já tinha a medição melhor: em 08/09 uma rodada abriu a
+página com navegador de verdade e contou os pedidos de rede, e não houve **nenhum** pedido falhado,
+zero 4xx, zero 5xx. Reproduzi hoje, agora no **quadro inteiro** e não só na vaga:
+`jobs.ashbyhq.com/volka` renderiza **"Page not found"** com **zero pedidos com problema**.
 
-**Por que ela vale mais que a média da fila, e não é o cargo:** é a frase de benefício, e quase
-nenhuma casa escreve isso.
+**Conclusão honesta: a porta pública desta vaga está quebrada do lado da Ashby, não do nosso.**
+Abrir no seu navegador quase certamente mostra a mesma coisa. Se mostrar, não é sinal de nada
+sobre você nem sobre a vaga.
+
+**A vaga existe mesmo assim.** A API pública da Ashby continua servindo o quadro da Volka com
+quatro anúncios, entre eles `3D Artist | Cyprus, Limassol | isListed: true`, requisição
+`fa36e503-daf1-44d8-be2c-260cea2dd300`, sem prazo de encerramento.
+
+**Por que ela vale o incômodo:** a frase de benefício, que quase nenhuma casa escreve.
 
 > *"Relocation Support: Moving countries is stressful. We handle the tickets, accounts and
 > **permits** for you and your family. We provide temporary accommodations while you're getting
 > settled, cover the first rent of your own apartment and help with necessary furnishings."*
-> Mais: *"Language Learning + **Naturalization Support**"*.
+> Mais: *"Language Learning + **Naturalization Support**"*. E a casa mantém vaga aberta de
+> *Immigration Specialist*.
 
-A casa banca passagem, contas, **autorizações** e primeiro aluguel, e mantém vaga aberta de
-*Immigration Specialist*. Isso é o oposto do veto de residência que derruba metade da fila.
+**Encaixe, sem maquiar:** é **ambiente estilizado low poly** para o time de marketing, não
+personagem, e pede 2 anos quando ele tem mais de 10. Régua de vinte termos: dois casamentos, os
+dois falsos positivos (`relocat` é a frase a favor acima, `located in` é endereço). Sem veto.
 
-**Encaixe, dito sem maquiar:** é **ambiente estilizado**, não personagem. O anúncio pede
-*"Full-cycle creation of stylized low-poly environment assets: landscapes, vegetation, buildings,
-props and decorative objects"*, com high poly, low poly, retopologia, UV e textura. É a disciplina
-dele no sentido de modelagem e textura estilizada, mas o recorte é ambiente. Pede **2 anos**; ele
-tem mais de 10. Chipre é UE, dentro do escopo. Efetiva e presencial em Limassol. Faixa não
-publicada, então pela regra de 04/09 a pretensão é **EUR 45.000** com a frase de alinhamento
-(casa média), e vale dizer na carta que ele QUER REALOCAR.
-
-**Régua de vinte termos:** dois casamentos, os dois falsos positivos: `relocat` é a frase A FAVOR
-citada acima, e `located in` é o endereço do estúdio. **Sem veto.** Dedupe por requisição: zero em
-enviados.csv, no painel, no processados.csv e nesta fila.
-
-**POR QUE ESTÁ NA SUA MÃO, e o que conferir antes de preencher:** a **API da Ashby diz que a vaga
-está viva** (`isListed: true`, `applicationDeadline: null`, e ela mesma serve essa URL como
-`applyUrl`), mas a página renderizada, aberta com navegador de verdade daqui, mostra
-**"Page not found"**. Foi medido em 09/09 que o Ashby devolve a MESMA resposta para vaga real, uuid
-falso e inquilino falso, seis URLs com 7.270 bytes idênticos: só a API discrimina. Ou seja, o
-"Page not found" é a nossa rede, não a vaga.
-
-**Abra o link no seu navegador. Se carregar o formulário com o título "3D Artist", preencha e
-envie. Se disser "Page not found" aí também, então a vaga saiu do ar e é para riscar esta entrada.**
+**O QUE FAZER, já que o formulário não abre:** o site próprio, `volka.com/careers/`, responde 200
+mas monta a lista em JavaScript e **não publica email nenhum no HTML**. Então isto é trabalho de
+navegador seu: abrir `volka.com/careers/`, ver se a lista renderizada oferece uma rota de
+candidatura que não seja a Ashby quebrada, e, se não oferecer, procurar o contato de recrutamento
+por lá. **Prioridade baixa pelo encaixe, mas alta pela frase de realocação**, e por isso está
+escrita e não descartada.
 
 ---
 
