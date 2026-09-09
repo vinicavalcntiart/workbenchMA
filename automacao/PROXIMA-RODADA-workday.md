@@ -82,3 +82,55 @@ role.` sem número, que foi o que passou na Eyeline em 09/09. Sempre com a frase
 - ILM Mumbai (`10154147` Sr Character Modeler, `10155895` Lead Modeler, `10146393` Lead Environment
   Artist): são os três alvos mais centrais que apareceram em 642 vagas e **morrem no escopo**.
   Índia está fora, e isso não se contorna.
+
+---
+
+# PRIMEIRO ENVIO DE 10/09, JÁ PREPARADO E CONFERIDO EM 09/09 ÀS 19h50
+
+**Sony Pictures Imageworks — Experienced Modeler — Vancouver, BC, Canadá**
+`https://job-boards.greenhouse.io/embed/job_app?for=sonypicturesimageworks&token=4363749003`
+
+Requisição `4363749003`, internal `4243531003`. **Régua de vinte termos: ZERO acertos.** Nenhum
+veto escrito, nenhuma exigência de francês (o anúncio diz *"Language in work environment -
+English"*). *Project based, Full Time*, que conta normalmente em casa grande pela regra de formato.
+
+**Por que esta e não as outras cinco da mesma casa:** o anúncio diz, com todas as letras,
+*"Prepares and builds models for characters and stand-ins for layout"*. É modelagem de
+PERSONAGEM, o centro dele, no CANADÁ, que é a prioridade um. As outras: Modeler `4363748003` e
+Texture Artist `4363798003` já foram enviadas; Look Development `6659179003` pede 3 a 5 anos, que
+é abaixo do nível dele; as duas de Character FX são CFX, disciplina que ele não tem.
+
+**A casa está travada hoje só por cadência:** a Environment Artist saiu de manhã, com recibo do
+`no-reply@imageworks.com` às 11h24.
+
+## O comando, um só
+
+```
+cd /home/user/apply && VINI_TEL='<só os dígitos, do doc privado do Drive>' \
+  sh hb_run.sh apply_gh.js \
+  "https://job-boards.greenhouse.io/embed/job_app?for=sonypicturesimageworks&token=4363749003" \
+  spimod ans_spi_modeler.json --submit
+```
+
+Depois do clique, o Greenhouse manda **código de segurança por email**. Ordem obrigatória, já
+paga duas vezes nesta campanha: rode o envio EM SEGUNDO PLANO, espere o marcador
+`EMAIL CODE REQUIRED`, e SÓ ENTÃO leia o código mais novo no Gmail e escreva `code_spimod.txt`.
+Cada clique em Submit gera código novo e invalida o anterior.
+
+## As respostas já estão decididas e conferidas em ensaio, com as listas reais do formulário
+
+| Campo | Resposta | Por quê |
+|---|---|---|
+| `Where do you currently reside` | **I live outside of CAN** | verdade |
+| `Eligibility to work in Canada` | **I will need a work permit** | verdade, ele precisa de patrocínio |
+| `How do hear about us?` | **Imageworks Career Site** | verdade: a vaga saiu da varredura do quadro do próprio estúdio, não do LinkedIn |
+| `Worked at Imageworks before` | No | verdade |
+| `Employed by SPE or Sony Affiliates` | No | verdade |
+| `When are you available` | Within 30 days of an offer | não revela prazo de contrato |
+| `Voluntary Disclosures` | Yes, I have read and consent to the terms and conditions | única opção |
+
+O ensaio de 19h50 fechou com `pre-submit invalid: []`, ou seja nenhum campo obrigatório vazio.
+
+**ATENÇÃO NO ENSAIO DE 19h50:** um dos ensaios foi rodado com o telefone DIGITADO ERRADO por
+mim (um dígito final trocado). Não houve envio, era ensaio. **Amanhã copie o número do documento
+privado do Drive, não de memória.**
