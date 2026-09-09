@@ -2560,3 +2560,24 @@ Duas coisas ficam dessa medição, além da vaga:
 - **Upload que funciona não é candidatura enviada.** O currículo dele está no S3 da Bandai Namco e
   nenhuma candidatura existe. Prova continua sendo tela de confirmação, URL de confirmação ou
   recibo, nunca um passo intermediário que respondeu 200.
+
+## Uma parede que responde 2xx: o captcha do SiteGround (09/09)
+
+Payload Studios, Stargate Studios Malta e Nice Shoes devolvem **HTTP 202**, corpo de **179 bytes**,
+cabeçalho **`sg-captcha: challenge`** e um `<meta refresh>` para `/.well-known/sgcaptcha/`. É captcha
+do SiteGround, e não passa nem com navegador.
+
+**Isto corrige o que eu mesmo escrevi hoje.** Na reconferência das 49 portas travadas por rede eu
+listei as três entre as que "voltaram a responder", porque olhei **só o código**. Duas ou três horas
+depois, ao tentar usar uma delas, o corpo mostrou o que o código escondia. A regra que já estava no
+brief, *"o servidor respondeu não é a porta abriu"*, tinha uma lacuna: ela estava escrita pensando em
+403 e 502, e ninguém tinha imaginado uma parede que devolve **2xx**.
+
+Pior do que perder a porta seria a etiqueta errada: `varre-quadros.py` classificava corpo pequeno com
+código 2xx como **`js`**, que significa "abra com navegador". Isso mandaria a próxima rodada gastar
+navegador em três casas onde navegador não resolve. O arquivo foi consertado: a assinatura agora sai
+com etiqueta própria **`captcha-siteground`**, e a lição 6 está no cabeçalho dele.
+
+**Regra que fica: em varredura, leia o CORPO e os CABEÇALHOS, não só o código.** Corpo de 179 bytes
+não é página de nada, e qualquer resposta abaixo de uns 400 caracteres merece uma segunda olhada
+antes de virar número num resumo.

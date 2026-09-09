@@ -30,6 +30,13 @@ AS QUATRO LICOES, todas medidas e todas caras:
 3. VARREDURA QUE SO ESCREVE NO FIM EVAPORA. Uma rodada inteira se perdeu quando o processo
    estourou o tempo antes de imprimir a primeira linha. Aqui grava e da flush a cada achado.
 
+6. CAPTCHA QUE RESPONDE 2xx. Medido em 09/09: o captcha do SiteGround devolve HTTP 202 com
+   corpo de 179 bytes, cabecalho 'sg-captcha: challenge' e um meta refresh para
+   /.well-known/sgcaptcha/. Codigo 2xx faz qualquer varredura marcar "porta aberta", e a
+   etiqueta 'js' faria alguem gastar navegador nela a toa, porque captcha de desafio nao se
+   burla nem com navegador. Sai com etiqueta propria, 'captcha-siteground'. Pegou tres casas
+   de uma vez: Payload Studios, Stargate Studios Malta e Nice Shoes.
+
 4. CALIBRAGEM: 20 segundos de tempo limite e 10 conexoes renderam 234 vagas; 6 segundos e
    mais de 20 conexoes renderam ZERO na mesma lista. Zero ali era pressa, nao ausencia.
    Os padroes abaixo sao esses, e apertar a concorrencia nao acelera, cega.
@@ -98,6 +105,16 @@ def olha(linha):
             with urllib.request.urlopen(req, timeout=TEMPO_LIMITE, context=CTX) as r:
                 corpo = r.read(400_000).decode('utf-8', 'ignore')
                 codigo, final = r.status, r.geturl()
+                cabecalhos = {k.lower(): v for k, v in r.headers.items()}
+            # LICAO 6, medida em 09/09 na Payload, na Stargate Malta e na Nice Shoes:
+            # captcha do SiteGround responde HTTP 202 com corpo de 179 bytes e um
+            # <meta refresh> para /.well-known/sgcaptcha/, mais o cabecalho
+            # 'sg-captcha: challenge'. Codigo 2xx faz qualquer varredura marcar
+            # "porta aberta", e a etiqueta 'js' faria alguem gastar navegador nela.
+            # Nao adianta navegador: captcha de desafio nao se burla. Etiqueta propria.
+            if 'sg-captcha' in cabecalhos or 'sgcaptcha' in corpo:
+                return (estudio, cidade, regiao, final, 'captcha-siteground',
+                        f'{codigo}, sg-captcha, corpo de {len(corpo)} bytes', '')
         except urllib.error.HTTPError as e:
             # Licao 1: isto e porta fechada para robo, nao ausencia de vaga.
             if e.code in (401, 403, 406, 429, 503):
