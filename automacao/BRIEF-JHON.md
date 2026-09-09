@@ -578,3 +578,38 @@ reais), as marcas de envio junto do ID (`/confirmation`, `ENVIADA`, `jobTasks/co
 
 **O segundo argumento não é opcional na prática.** Dedupe só por ID deixou passar a Ubisoft, que
 tinha ID inédito e casa parede. **200 na URL da vaga não é porta verificada.**
+
+---
+
+## O TESTE DE CAPTCHA QUE VALE, e por que ele NÃO é o que estava proibido
+
+Medido em 09/09 à noite, com três casos e um deles desmentindo a generalização fácil.
+
+O briefing proíbe, com razão, **grepar a palavra `recaptcha` ou `hcaptcha` no HTML**: as strings vêm
+no pacote global da plataforma, aparecem em todas as contas, e um teste que só sabe dizer "tem
+parede" nunca libera nada. Isso continua proibido.
+
+**O que discrimina é outra coisa: o parâmetro `size=` do anchor do widget que de fato CARREGOU.**
+Abra a página com navegador, liste os `iframe` cujo `src` casa com `recaptcha.*anchor` e leia o
+`size` da query.
+
+| Caso medido | `size=` | `bframe` | Desfecho real |
+|---|---|---|---|
+| Mob Entertainment (Greenhouse) | `invisible` | nenhum | **Candidatura ENVIADA e confirmada em 09/09** |
+| Jungler (JazzHR) | `normal` | presente | Parede de caixa de desafio |
+| Offworld Industries (BambooHR) | **nenhum anchor** | nenhum | **Parede real**, medida com três cliques |
+
+**A regra que sai daí, e ela é deliberadamente torta para um lado só:**
+
+- **`size=normal` com `bframe` presente = PAREDE, condenada sem gastar rodada.** É caixa de desafio.
+- **`size=invisible` = não há desafio humano na carga**, mas isso **não garante passagem**: o POST
+  ainda pode ser recusado por pontuação, que é exatamente o caso do Eightfold da Netflix.
+- **Nenhum anchor carregado NÃO DIZ NADA.** A Offworld prova: o widget só nasce **depois** do
+  clique em Submit. Ausência na carga não é ausência de parede.
+
+**Ou seja: este teste só serve para CONDENAR, nunca para LIBERAR.** É por isso que ele não cai na
+proibição do briefing, que existia contra testes que nunca liberavam nada e por isso não decidiam
+nada. Este decide um lado: quando ele acusa `size=normal`, você economiza a rodada inteira; quando
+ele fica em silêncio, o veredito continua sendo o clique.
+
+A sonda está em `automacao/cap_size.js`.
