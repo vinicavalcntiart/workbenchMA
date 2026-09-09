@@ -2314,3 +2314,35 @@ Feita pela rotina de prospecção, com número em vez de impressão.
 
 **Conclusão para a próxima rodada:** as três de Montréal já estavam registradas no painel como
 vetadas, e a varredura confirmou. Não gaste rodada relendo essas três; o que muda é vaga nova.
+
+## REBEL WOLVES: o GET abriu, o UPLOAD não. Cloudflare no POST, e nada foi enviado
+
+O agente que reconferiu portas de rede em 09/09 achou que o 403 do Cloudflare no `form.erecruiter.pl`
+tinha caído: raiz **200**, endpoint do WebID **200** com 542.978 bytes. Ele foi honesto e escreveu a
+ressalva certa: *"medi o GET, não o POST, porque medir o POST seria enviar."* A ressalva estava
+certa e o otimismo não.
+
+**Medido com clique real:** o formulário preenche inteiro — nome, sobrenome, email, telefone, fuso,
+pretensão, texto para o recrutador, o departamento **Art** marcado e o consentimento marcado. O que
+não passa é o **upload do CV**. O POST para `https://form.erecruiter.pl/form/<WebID>` volta **403**
+com `<title>Just a moment...</title>`, que é o desafio do Cloudflare, em **três tentativas
+seguidas**. Na tela: *"Failed to upload the file. Please try again."*, e o envio reprova com o campo
+`cvFiles` marcado inválido. **Nada foi enviado.**
+
+**Regra que isto acrescenta ao teste de porta:** GET 200 na página do formulário **não prova** que a
+casa aceita candidatura. Onde houver anexo obrigatório, a porta só está aberta quando o **upload**
+passa, e o upload é um POST separado que pode ter proteção própria. Some isto aos três tiros:
+`Accept: */*`, `Accept: text/html` e tiro de controle **medem leitura**, não escrita.
+
+**Duas armadilhas de preenchimento medidas no caminho, e as duas já estão no `apply_erecruiter.js`:**
+
+1. **As caixas de departamento não têm `name`, `id` nem `<label>` envolvente.** O rótulo mora num
+   ancestral. O casador antigo procurava um elemento folha com o texto exato e devolvia
+   "nao achei" para `Art`, que existe e é a caixa de índice 2. A leitura certa sobe até quatro
+   ancestrais e pega o primeiro texto curto.
+2. **O formulário é React e IGNORA o `setInputFiles` do Playwright.** O campo fica vazio, o log diz
+   "file ok" e só o envio revela a falha. O que o componente escuta é um **evento de `drop` com
+   `DataTransfer` de verdade**, montado com `File` a partir do conteúdo em base64. A **prova do
+   anexo é o NOME DO ARQUIVO na tela**, nunca o valor do campo. Isso ficou implementado com
+   `setInputFiles` primeiro e o `drop` como fallback automático, e serve para qualquer formulário
+   React com zona de soltar.

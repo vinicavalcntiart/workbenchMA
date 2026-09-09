@@ -1660,7 +1660,7 @@ painel e o motivo está escrito lá.
 | Nexus Studios (General Application) | Reino Unido (Londres) | reCAPTCHA v2 de caixa de marcar | https://apply.workable.com/j/4F41AEB27C |
 | Ubisoft Montpellier | França (Montpellier, presencial) | DataDome do SmartRecruiters | https://jobs.smartrecruiters.com/Ubisoft2/744000121716487 |
 | Palomar Animation (Mediawan Kids & Family) | Itália e França (grupo Mediawan) | reCAPTCHA | https://mediawankidsandfamily.com/jobs |
-| Rebel Wolves (Open Application, candidatura espontânea) | Polônia (Varsóvia ou remoto) | à mão, motivo na nota do painel | https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74 |
+| Rebel Wolves (Open Application, candidatura espontânea) | Polônia (Varsóvia ou remoto) | **CLOUDFLARE NO UPLOAD, medido em 09/09 com clique real.** O formulário preenche inteiro, com o departamento Art e o consentimento marcados, mas o POST do anexo devolve 403 com `Just a moment...` em três tentativas e a tela diz `Failed to upload the file`. Do seu navegador passa. | https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74 |
 | PixelAnt Games / Sumo Digital (Future Opportunities, espontânea) | Polônia (Wrocław ou remoto) | à mão, motivo na nota do painel | https://form.erecruiter.pl/form/a66fabf884d24c15beb2ec7854531f0a |
 | Game Boost (Open application, Game Artists) | Suecia (Estocolmo; hibrido e remoto) | à mão, motivo na nota do painel | https://gameboost.teamtailor.com/jobs/2814432-open-application-game-artists-game-boost-home-of-game-gigs-sweden-hybrid-remote |
 | SQRT3 (Square Root of Tree) | Polônia (Varsóvia) | reCAPTCHA | https://sqrt3.games/#rekrutacja |
