@@ -3618,3 +3618,35 @@ dossiê estima 2 a 3 minutos na mão, e a fila do Vini é o lugar certo para ela
 10. **`nickname_hpcsaf`** ("Please leave this field blank") é **HONEYPOT**: fica vazio sempre.
 
 Depois de preencher, resolva o reCAPTCHA e clique em **Submit Application**. Leva menos de um minuto no seu navegador.
+
+---
+
+## Avalanche Studios Group — Lead Character Artist (Estocolmo) — À MÃO, e agora sabemos POR QUÊ
+
+**URL:** https://jobs.lever.co/avalanchestudios/8f7bd580-5877-446e-83cb-97bb1fce0f6a/apply · **Lever** · Permanente, híbrido
+**Régua de vinte termos:** UM acerto, `relocat` em *"relocation assistance is not available for this role"*. Isso é benefício, **não é veto escrito** de autorização, residência ou nacionalidade. **Nenhum veto.**
+**Encaixe:** Lead, personagem, com ênfase em animal e criatura e em fluxos de **pelo e pele** — que é exatamente onde o grooming em Houdini dele encosta. O realismo é o ponto fraco declarado, e está dito aqui de propósito.
+
+### A PAREDE DO LEVER, medida em 09/09 e finalmente ENTENDIDA
+
+O registro antigo da campanha dizia "Lever tem hCaptcha no HTML", que o próprio brief já proibia como critério porque não discrimina nada. O mecanismo real é outro e é pior:
+
+1. O campo **Current location** é obrigatório e é **autocomplete estruturado**. O que vale para o servidor não é o texto digitado, é o `#selected-location` (`name="selectedLocation"`), que **só recebe valor quando uma sugestão da lista é escolhida**.
+2. A lista vem de `GET https://jobs.lever.co/searchLocations?text=<termo>&**hcaptchaResponse=**`. **O parâmetro do hCaptcha vai VAZIO do nosso IP**, e a lista volta sem resultado nenhum. Testado com `Olinda`, `Recife` e `Olinda, Brazil`: **zero sugestões nas três**. Pelo `curl`, o mesmo endereço devolve **403 Forbidden**.
+3. Sem sugestão escolhida, `selectedLocation` fica vazio, o clique em **Submit** **não gera POST nenhum** e **nenhuma mensagem de erro aparece na tela**.
+
+**Por que isso importa mais do que esta vaga:** um envio nessas condições é indistinguível, no log, de parede de captcha depois do Submit. Foi por pouco que a campanha não registrou "Lever é parede" pelo motivo errado. O correto é: **o hCaptcha do Lever bloqueia a BUSCA DE LOCAL, que é um campo obrigatório, e não o Submit.** No navegador dele, com IP residencial, o hCaptcha emite o token e a lista aparece.
+
+### Está tudo preenchido, falta você escolher o local e clicar
+
+- **Resume/CV**: `Vini_Cavalcanti_CV.pdf` (o parser do Lever leu e devolveu **Success!**)
+- **Full name** `Vini Cavalcanti` · **Email** `contact@vinicavalcanti.art` · **Phone**: doc privado do Drive
+- **Current location**: digite `Olinda` e **escolha a sugestão da lista** (é esse passo que a automação não consegue)
+- **Current company** `E-Line Media`
+- **LinkedIn URL** `https://www.linkedin.com/in/vinicavalcnti/`
+- **Portfolio URL** `https://www.artstation.com/viniciuscavalcanti`
+- **Other website** `https://vinicavalcanti.com`
+- **How would you identify?** `Prefer not to say`
+- **Consentimento de marketing**: opcional, deixe como preferir
+
+Depois é só **Submit**. Menos de um minuto.
