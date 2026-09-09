@@ -2439,3 +2439,27 @@ arte do grupo Disney a gente aplica primeiro. Regra interna de cadência não se
 do lado deles**, devolve "There are 1 error(s)" tanto no site `Netflix` quanto no `Eyeline`. Nesse
 locatário a terceira prova se tira na **página da vaga**, que passa a dizer "You applied for this
 job on <data>" com link View Application. Área do candidato fora do ar não é candidatura perdida.
+
+## O DIFF de quadros de ATS, e o filtro que quase escondeu a única novidade do dia (09/09)
+
+**Método que passa a valer:** em vez de varrer o mundo de novo, reconsulte os pares `ats/token`
+do último censo e compare **por ID de vaga**. Custou uma consulta por quadro, os 123 responderam,
+e o resultado foi limpo: **37 vagas novas em 24 horas, e zero da disciplina pelo filtro**. Isso é
+uma resposta com número para a pergunta "a fila secou?", em vez de uma impressão.
+
+**A lição cara, e ela é minha.** O filtro quase deixou passar a única novidade real do dia. A
+Outpost VFX abriu **nove vagas em Montréal**, e o meu regex não tinha `environment artist` nem as
+palavras em francês `généraliste` e `environnements`. É a lição 2 do `varre-quadros.py` ("filtro em
+inglês só acha vaga em inglês") reaparecendo numa forma nova: **filtro sem o nome da disciplina em
+inglês também não acha**. Só vi porque, depois de o contador dar zero, imprimi as 37 e li uma a uma.
+
+Regra que fica: quando um filtro devolver **zero**, imprima o conjunto inteiro que ele descartou e
+leia. Zero é a resposta que mais parece trabalho feito e mais esconde defeito de medição.
+
+**E o que a leva da Outpost corrige:** a nota antiga da campanha dizia que as vagas de disciplina
+dessa casa eram freelance. As nove de Montréal são **todas Full-time**, e duas estão em escopo,
+Senior Environment Artist `744000148457555` e CG Generalist `744000148453550`. Nenhuma tem veto
+escrito. A parede foi remedida hoje **com tiro de controle**: o anúncio abre 200, a rota de
+candidatura `/oneclick-ui` devolve 403 com interstitial do DataDome, e uma publicação
+**inexistente** devolve o mesmo 403, o que prova que a parede é da plataforma e não da vaga. O site
+próprio não tem rota alternativa: `/careers`, `/jobs` e `/en/careers` respondem 404.
