@@ -550,3 +550,31 @@ cd /home/user/apply && sh hb_run.sh <script>.js
 Arquivos: `/home/user/apply/Vini_Cavalcanti_CV.pdf`, `/home/user/apply/Vini_Cavalcanti_Cover_Letter.pdf`,
 `/home/user/apply/Vini_Cavalcanti_Portfolio.pdf`. Se o atalho sumir, ache com
 `ls -d /tmp/claude-*/*/*/scratchpad/apply`.
+
+---
+
+## O DEDUPE DO MINUTO DO CLIQUE — obrigatório desde 09/09 às 20h35
+
+Em trinta minutos de 09/09, **quatro candidaturas quase saíram repetidas, e as quatro já tinham
+passado por um dedupe antes**: a Imageworks `4363749003` (preparada por mim na véspera, já enviada
+duas vezes), a Eyeline `JR40928` e a Netflix Sydney `JR41749` (as duas listadas como "esperando a
+próxima rodada" e já enviadas horas antes), e as três da Ubisoft (dedupe por ID zero, mas a CASA
+estava registrada como parede de DataDome desde 06/09).
+
+**O padrão é sempre o mesmo: arquivo de fila envelhece em horas**, porque outra rodada envia a
+partir dele e não volta para riscar a linha. E não adianta lembrar disso, porque o que engana é
+justamente a anotação bem escrita — inclusive a sua própria de ontem.
+
+**Antes de QUALQUER clique de envio, rode:**
+
+```
+sh automacao/dedupe-agora.sh <ID-da-requisicao> "<nome da casa>"
+```
+
+Ele imprime três coisas: **todas** as ocorrências do ID nos quatro arquivos (não a primeira — as
+células concatenam adiamento antigo com recibo novo, e ler só a primeira já escondeu dois envios
+reais), as marcas de envio junto do ID (`/confirmation`, `ENVIADA`, `jobTasks/completed`,
+`/thanks`, `applyConfirmation`), e o histórico de **parede, recusa e duplicata da CASA**.
+
+**O segundo argumento não é opcional na prática.** Dedupe só por ID deixou passar a Ubisoft, que
+tinha ID inédito e casa parede. **200 na URL da vaga não é porta verificada.**
