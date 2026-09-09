@@ -85,7 +85,24 @@ role.` sem número, que foi o que passou na Eyeline em 09/09. Sempre com a frase
 
 ---
 
-# PRIMEIRO ENVIO DE 10/09, JÁ PREPARADO E CONFERIDO EM 09/09 ÀS 19h50
+# ~~PRIMEIRO ENVIO DE 10/09~~ — **CANCELADO ÀS 20h20 DE 09/09. NÃO DISPARE ESTE COMANDO.**
+
+> **A `4363749003` JÁ FOI ENVIADA DUAS VEZES: em 02/09 às 13h20 e de novo em 07/09 às 05h59.**
+> A segunda já está registrada em `processados.csv` como `REPETIDA-ERRO-MEU`. Disparar o comando
+> abaixo faria o estúdio receber a **mesma requisição pela terceira vez**.
+>
+> **Como o erro passou:** eu escrevi esta seção depois de um ensaio limpo, e a nota de "preparada e
+> conferida" tem a minha própria letra — então ela passa direto pela desconfiança na hora do
+> disparo. O dedupe que eu fiz foi da vaga contra a *fila*, não do ID contra o *arquivo*.
+> **A regra que fica: o dedupe se refaz NA HORA DO DISPARO, contra `processados.csv` e
+> `enviados.csv`, nunca contra a anotação de ontem — inclusive quando a anotação é minha.**
+>
+> **A casa inteira está esgotada**, conferido no mesmo minuto: Modeler `4363748003` enviada,
+> Texture Artist `4363798003` enviada, Experienced Texture Artist `4363799003` enviada depois do
+> bloqueio de reCAPTCHA de 04/09, Look Development `6659179003` enviada, Expression of Interest
+> `4551278003` enviada em 02/09. **Não sobra requisição na Imageworks.**
+>
+> O texto abaixo fica de pé só como registro do que tinha sido preparado.
 
 **Sony Pictures Imageworks — Experienced Modeler — Vancouver, BC, Canadá**
 `https://job-boards.greenhouse.io/embed/job_app?for=sonypicturesimageworks&token=4363749003`

@@ -22,6 +22,52 @@ e a dupla da TTK Games, nº 43 e nº 46, que são **o mesmo formulário** e saem
 Ordem: 1º realocação para Canadá e Europa, 2º remoto em EUA/Canadá/Europa, 3º o resto do escopo.
 **As três primeiras:** Behaviour *Dead by Daylight* (Senior Character, Montréal) · Netflix Animation Studios (Head of Characters, Vancouver, faixa publicada CAD 204.000–279.000) · Behaviour (Senior Character, projeto não anunciado).
 
+## ENTRADA NOVA DE 09/09 ÀS 20h — UBISOFT, três vagas, e por que elas caíram na sua mão
+
+**Antes de tudo, a parte que não me favorece: isto já estava escrito.** O painel registra desde
+06/09 que *"as duas da Ubisoft esbarram no DataDome"*. Eu gastei uma rodada de navegador para
+redescobrir isso porque a caça me entregou as três com "URL de candidatura verificada em HTTP 200"
+e eu tratei isso como porta aberta. **A regra que fica: 200 na URL da vaga não é porta verificada —
+o dedupe tem que cruzar o histórico da CASA, não só o ID da requisição.** O que a rodada de hoje
+acrescenta de verdade é o mecanismo exato, que antes não estava escrito em lugar nenhum.
+
+**A Ubisoft usa**
+SmartRecruiters. A página pública da vaga responde 200 normalmente, mas o botão *"I'm interested"*
+leva para `jobs.smartrecruiters.com/oneclick-ui/...`, que responde **403** e monta um iframe do
+**DataDome** — desafio de arrastar o controle deslizante, com a frase *"Automated (bot) activity on
+your network"* e o nosso IP escrito na tela. DataDome está na lista de captcha que não se burla.
+**Consequência: Ubisoft, Gameloft e NBCUniversal, as três casas grandes de SmartRecruiters do
+painel, só entram pela sua mão.**
+
+As três passaram a régua de vinte termos com **zero acerto** e o dedupe com **zero ocorrência**.
+Estão em ordem de quanto encostam no seu portfólio:
+
+1. **Ubisoft Montréal — `Level Artist (Unreal)`** · req `REF31656C` · posting `744000145286834`
+   · https://jobs.smartrecruiters.com/Ubisoft2/744000145286834 · publicada 24/08.
+   **É a melhor das três.** Apesar de ser Quebec, **não pede francês em lugar nenhum do anúncio** —
+   é a diferença literal entre esta e as gêmeas da 2K que eu descartei hoje. E as qualificações
+   pedem *"Experience with **modeling, texturing**, lighting, or image processing"*.
+   **Ressalva honesta:** o ofício central é montagem e integração em Unreal; a modelagem aparece
+   como necessidade a comunicar aos times de arte.
+
+2. **Ubisoft Annecy — `Lead Level Artist (F/M/NB) [AAA Project]`** · req `REF31639U` · posting
+   `744000140062829` · https://jobs.smartrecruiters.com/Ubisoft2/744000140062829 · publicada 27/07.
+   Num estúdio francês, a única exigência de idioma é *"Fluency in English"* — francês não aparece,
+   o que é o oposto de um veto. Pede *"Extensive experience creating environments for video games"*.
+   **Ressalva:** é cargo de gestão, com pouca mão na ferramenta.
+
+3. **Ubisoft Montréal — `Senior Level Artist`** · req `REF31781B` · posting `744000145286684`
+   · https://jobs.smartrecruiters.com/Ubisoft2/744000145286684 · publicada 24/08.
+   **Fica em último por uma frase do próprio anúncio:** *"This position is **not primarily focused
+   on creating high-resolution 3D assets or producing full environment models from scratch**."* É
+   exatamente o que o seu portfólio é. Régua limpa e dedupe zero são o motivo de estar listada em
+   vez de descartada em silêncio — a decisão é sua, com a frase na mão.
+
+**Mande UMA só** (a nº 1, se for escolher pelo meu voto): é uma casa, e a regra de uma candidatura
+por casa por rodada vale aqui como vale para as outras.
+
+---
+
 ## ATUALIZAÇÃO DE 09/09 À TARDE — três entradas mudaram, e uma delas você ia perder tempo à toa
 
 **nº 7, Avalanche Studios Group (Lead Character Artist, Estocolmo). O motivo do fracasso foi
