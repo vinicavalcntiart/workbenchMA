@@ -1,6 +1,6 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-**43 vagas VIVAS em 42 entradas numeradas, tempo total estimado cerca de 2h20, todas com
+**44 vagas VIVAS em 43 entradas numeradas, tempo total estimado cerca de 2h20, todas com
 formulário e nenhuma por email.** São 43 e não 42 porque a entrada nº 2 carrega DUAS requisições
 da Netflix, a 2a de Sydney e a 2b de Vancouver. As cinco entradas que saíram continuam no arquivo
 com o cabeçalho RISCADO e o motivo literal; o texto antigo de cada uma ficou logo abaixo, rebaixado
@@ -1517,6 +1517,37 @@ retorno e mentoria para o time de ambiente, mais coordenação da produção.
 **A parede é a mesma da nº 43:** reCAPTCHA invisível, sem quebra-cabeça. Preencher e clicar.
 **APROVEITE A ABERTURA:** você já vai estar no formulário da TTK pela nº 43. **É o mesmo site e o
 mesmo formulário**, então esta custa mais um minuto, não mais dois.
+
+---
+
+## 47. Epic Games — PRINCIPAL ENVIRONMENT ARTIST — Cary, Carolina do Norte, EUA
+
+**Link direto:** https://job-boards.greenhouse.io/epicgames/jobs/6121292004
+**Achada em 09/09 de madrugada**, numa varredura de 2.934 slugs de Greenhouse. **Não estava no
+censo de 07/09**, ou seja é requisição que a campanha nunca tinha visto. Atualizada em 13/08.
+**Régua de dezessete termos: nenhum veto.** O único `authoriz` do texto é o aviso antiagência
+(*"Epic does not accept any unsolicited resumes from any unauthorized third party"*), falso
+positivo conhecido. **Dedupe por ID: zero ocorrência** no painel, no `enviados.csv` e no
+`processados.csv`.
+
+**A parede, medida com navegador, e ela é do QUADRO e não da vaga:** o `job-boards.greenhouse.io`
+da Epic devolve *"One more step. Please complete a security check to continue"*, com Session ID e
+o IP na tela. É muro de bot contra IP de datacenter, **não** captcha de desafio. **No seu
+navegador isso não acontece.** O preenchedor morreu esperando o campo `first_name` por 60 s.
+
+**LEIA ISTO ANTES DE CLICAR, porque é decisão sua:** a campanha **já tem quatro candidaturas
+confirmadas na Epic**, de 31/08 e 03/09, e três delas no time de outsourcing (Modeling Outsource
+Lead em Cary, em Montréal e na operação brasileira, mais Hard Surface Outsource Lead). Esta é de
+**outro time**, Environment Art, e de nível **Principal**, acima do que você já pleiteou, então
+não é o caso de "quinta inscrição no mesmo time num nível abaixo" que a campanha decidiu evitar.
+Ainda assim é a quinta na mesma casa, e quem decide isso é você.
+
+**Respostas:** as mesmas das quatro anteriores da Epic, que estão em `respostas-formularios.md`:
+precisa de patrocínio de visto, nunca trabalhou na Epic, E-Line Media como empregador atual.
+
+**A irmã, se esta for sênior demais:** Senior Environment Artist, mesma casa e mesma cidade,
+`https://job-boards.greenhouse.io/epicgames/jobs/6001731004`. **Mande só uma das duas**, e a regra
+da campanha é mandar na mais alta.
 
 ---
 
