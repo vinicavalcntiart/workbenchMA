@@ -2463,3 +2463,29 @@ escrito. A parede foi remedida hoje **com tiro de controle**: o anúncio abre 20
 candidatura `/oneclick-ui` devolve 403 com interstitial do DataDome, e uma publicação
 **inexistente** devolve o mesmo 403, o que prova que a parede é da plataforma e não da vaga. O site
 próprio não tem rota alternativa: `/careers`, `/jobs` e `/en/careers` respondem 404.
+
+## Teamtailor: o envio NÃO completa a candidatura, e o recibo do recrutador não é prova (09/09)
+
+Medido na Airship Interactive, na Groom Artist `8281721`, e vale para todo Teamtailor:
+
+1. **A primeira tela depois do Submit foi `/applications/email_verification_needed`**, com o texto
+   *"Just one step left to complete your application"*. A candidatura **não existia** ali. Ela só
+   passou a existir depois de abrir o link de verificação que chegou na caixa dele, e aí sim a tela
+   virou `/thanks` com *"Thanks for applying"* e a área do candidato passou a mostrar **Applied 2**.
+   O script fez a coisa certa: chamou o resultado de **DUVIDOSO** em vez de contar como envio.
+
+2. **O email "Thank you for your application" assinado pelo recrutador NÃO é prova de nada.**
+   O do Groom Artist chegou às **10h19**, e eu só abri o link de verificação às **10h25**. Seis
+   minutos de diferença provam que o ATS dispara o agradecimento **no envio**, não na conclusão.
+   Quem contar esse email como prova vai registrar como enviada uma candidatura que não existe.
+
+**A auditoria que isso obrigou, e o resultado honesto:** o registro da beffio de 00h29 citava esse
+mesmo email do Tom Lassota como uma das duas provas. Entrei no Connect da beffio pelo link mágico
+enviado ao email dele, e a área do candidato lista **quatro candidaturas**, com a Lead 3D Artist /
+Environment / World Building / Unity3D marcada *"About 10 hours"*. **A candidatura existe.** O que
+ficou corrigido foi a regra de prova, não o número.
+
+**Regra que passa a valer:** em Teamtailor, prova é a tela `/thanks`, a URL de confirmação ou a
+**área do candidato**. Recibo por email do recrutador entra como indício, nunca como prova. E
+sempre que a tela disser `email_verification_needed`, a candidatura está **pela metade** até alguém
+abrir o link: buscar o email e abrir é parte do envio, não um passo opcional.

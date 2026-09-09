@@ -7,7 +7,7 @@ seu.
 
 ## 1. O placar, sem inflar
 
-**Dezenove candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
+**Vinte candidaturas ENVIADAS e confirmadas**, todas com prova na tela e a maioria com terceira
 prova por recibo de email ou pela área do candidato. Conferido nos três registros
 (`enviados.csv`, painel, `processados.csv`): **nenhuma falta em lugar nenhum**.
 
@@ -32,6 +32,7 @@ prova por recibo de email ou pela área do candidato. Conferido nos três regist
 | 17 | **Netflix Animation** | **Environment Surfacing Supervisor** (CAD 163–223k) | Vancouver |
 | 18 | **Eyeline Studios (Netflix)** | **Modeling Supervisor** | Seul |
 | 19 | **Netflix Animation** | **Environment Modeling Supervisor** | Sydney |
+| 20 | Airship Interactive | Groom Artist (banco de freelance) | rede global |
 
 A **nº 8** é a mais alinhada que a campanha já achou: supervisão de modelagem de **personagem**,
 num estúdio de **animação**, que é onde está o seu crédito do Wingfeather.
