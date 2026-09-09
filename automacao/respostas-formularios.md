@@ -3590,3 +3590,31 @@ o preenchedor confere o texto da pergunta antes de responder e para quando não 
 
 **Decisão:** parei na segunda tentativa em vez de queimar uma terceira rodada de navegador. O
 dossiê estima 2 a 3 minutos na mão, e a fila do Vini é o lugar certo para ela.
+
+---
+
+## Offworld Industries — 3D Character Artist (New Westminster, BC) — À MÃO POR reCAPTCHA v2
+
+**URL:** https://owi.bamboohr.com/careers/199 · **BambooHR** · requisição 199
+**Faixa publicada:** CAD 80.000 a 95.000 por ano · Efetiva, três dias no escritório
+**Régua de vinte termos:** UM acerto, `days per week` em "work from our office three days per week", que é presença híbrida e falso positivo conhecido. **Nenhum veto escrito de autorização, patrocínio ou residência.**
+
+**A PAREDE, e ela foi MEDIDA COM CLIQUE, não suposta.** Três envios reais tentados. Em todos, o único POST que saiu foi o do upload do currículo (`/ajax/files/attachTemporary.php`, 200, `errorType: ok`). **Nenhum POST de envio.** O botão existe, é `BUTTON` da Fabric, `disabled=false`, foi rolado até a área visível e clicado por coordenada. O diagnóstico do DOM depois do clique: `g-recaptcha-response` **VAZIO**, com os iframes `recaptcha/api2/anchor` **e** `recaptcha/api2/bframe` presentes. O `bframe` é o quadro de desafio por imagem, ou seja **reCAPTCHA v2 com desafio**, que a campanha não burla.
+
+**IMPORTANTE, e corrige o brief:** isto NÃO quer dizer que BambooHR inteiro é parede. A ICON Creative é BambooHR e a candidatura de 31/08 passou, com e-mail de recibo do `notifications@app.bamboohr.com`. O reCAPTCHA é configuração POR QUADRO. O teste de flag no HTML não distingue nada; quem distingue é o clique.
+
+**O formulário fica destrancado para você: campos na ordem, e a ordem importa.**
+
+1. **Country** primeiro, antes de tudo. É um select da Fabric: o `<select>` nativo é esqueleto invisível com uma option vazia, e quem escolhe é o `button.fab-SelectToggle` com `aria-label="Country ..."`. Escolha **Brazil**.
+   *Por que primeiro:* com país Canadá, `state.value` é um **select de províncias**; ao trocar para Brazil o BambooHR **troca o elemento por um input de texto livre**. Preenchendo antes, o valor vai para um select que deixa de existir e a província fica vazia sem aviso.
+2. **First Name** `Vini` · **Last Name** `Cavalcanti` · **Email** `contact@vinicavalcanti.art`
+3. **Phone**: formato internacional (o campo é único, sem seletor de país). Valor no doc privado do Drive.
+4. **Address**, **City**, **Postal Code**: valores no doc privado do Drive. **Province**: `Pernambuco` (campo de texto, depois que o país virou Brazil).
+5. **Date Available**: máscara **mm/dd/yyyy**. Escrever `2026-10-20` grava `02/dd/yyyy`. Use `10/20/2026`.
+6. **Desired Pay**: `CAD 80,000 per year, aligned with the posted range at the lower end. Open to aligning with your band for the role.`
+7. **Website, Blog or Portfolio**: `https://www.artstation.com/viniciuscavalcanti`
+8. **LinkedIn URL**: `https://www.linkedin.com/in/vinicavalcnti/`
+9. **Resume**: o formulário tem DOIS inputs de arquivo e o **primeiro é o da Cover Letter**. O CV vai no segundo, o marcado como obrigatório.
+10. **`nickname_hpcsaf`** ("Please leave this field blank") é **HONEYPOT**: fica vazio sempre.
+
+Depois de preencher, resolva o reCAPTCHA e clique em **Submit Application**. Leva menos de um minuto no seu navegador.
