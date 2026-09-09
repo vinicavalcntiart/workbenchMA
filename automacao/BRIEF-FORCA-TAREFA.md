@@ -2581,3 +2581,19 @@ com etiqueta própria **`captcha-siteground`**, e a lição 6 está no cabeçalh
 **Regra que fica: em varredura, leia o CORPO e os CABEÇALHOS, não só o código.** Corpo de 179 bytes
 não é página de nada, e qualquer resposta abaixo de uns 400 caracteres merece uma segunda olhada
 antes de virar número num resumo.
+
+## Zero de casa da Regra 14 se confere DUAS vezes (09/09)
+
+Aconteceu duas vezes no mesmo dia, por defeitos diferentes, e nas duas o sintoma foi idêntico:
+**a Warner devolveu zero e o quadro não estava vazio.**
+
+1. **De manhã**, o parser do `careers.wbd.com` tinha parado de casar e imprimia "parse falhou" nas seis
+   palavras-chave. Refeito por contagem de colchetes.
+2. **Às 12h55**, o laço `for ... done | sort -u` com heredoc dentro engoliu a saída do Python e a
+   Warner apareceu como zero linhas. Rodando a mesma consulta **sozinha**: 10 vagas, as duas de arte
+   conhecidas. Não era o site, era o meu shell.
+
+**Regra que fica: zero vindo de Disney, DreamWorks/NBCU, Paramount ou Warner não vira número de
+resumo sem uma segunda rodada daquela casa SOZINHA.** Custa uma consulta. O preço de aceitar o zero
+errado é a campanha ficar cega justamente nas quatro casas onde a regra manda aplicar na hora, e
+vaga de personagem em casa grande vive de três a sete dias.
