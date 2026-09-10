@@ -32,9 +32,28 @@ const log=(...a)=>console.log('['+slug+']',...a);
 
   for(const [sel,v] of Object.entries(A.texto||{})){
     const el=await p.$(sel); if(!el){ log('NAO ACHEI o campo',sel); continue; }
+    // MEDIDO NA ROCKSTEADY EM 10/09, e este e o pior defeito que o modo seco ja pegou.
+    // O campo de LinkedIn do Pinpoint, #job_seeker_form_linkedin_url, e
+    // <input type="hidden">: existe no DOM, entao o $() acha e NAO cai no "NAO ACHEI".
+    // Mas type() nao escreve em campo escondido, e o pior nao e o campo ficar vazio: o
+    // FOCO CONTINUA NO CAMPO ANTERIOR, entao os 42 caracteres da URL do LinkedIn foram
+    // digitados dentro do TELEFONE, que passou de 14 para 56 caracteres. Enviar assim
+    // entregaria ao estudio um telefone lixo e nenhum LinkedIn, e o log antigo so dizia
+    // "(NAO ENTROU NADA)" na linha do LinkedIn, sem nunca ligar uma coisa na outra.
+    // Campo escondido se preenche pelo DOM, com os eventos que o Rails escuta, e nunca
+    // pelo teclado. E depois se tira o foco, para nao vazar no proximo campo.
+    const escondido=await el.evaluate(e=>e.type==='hidden'||e.offsetParent===null&&getComputedStyle(e).display==='none').catch(()=>false);
+    if(escondido){
+      await el.evaluate((e,val)=>{ e.value=val;
+        e.dispatchEvent(new Event('input',{bubbles:true})); e.dispatchEvent(new Event('change',{bubbles:true})); }, String(v)).catch(()=>{});
+      const lidoH=await el.evaluate(e=>e.value).catch(()=>'');
+      log('campo',sel,'ESCONDIDO, preenchido pelo DOM =>', lidoH===String(v)? '('+lidoH.length+' chars) CONFERE' : '!! NAO CONFERE, NAO ENVIE');
+      continue;
+    }
     await el.scrollIntoViewIfNeeded().catch(()=>{});
     await el.click({force:true}).catch(()=>{}); await el.fill('').catch(()=>{});
     await el.type(String(v),{delay:3}).catch(()=>{});
+    await el.evaluate(e=>e.blur()).catch(()=>{});
     const lido=await el.inputValue().catch(()=>'');
     log('campo',sel, lido.length? '('+lido.length+' chars) '+lido.slice(0,50) : '(NAO ENTROU NADA)');
   }
