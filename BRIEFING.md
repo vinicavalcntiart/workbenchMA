@@ -361,3 +361,38 @@ fora, apesar da palavra "creature". Concept e character design 2D também estão
 
 **E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
 entram, por mais que o título seja perfeito.
+
+## MEDIDO EM 10/09: TRÊS ARMADILHAS DE ENVIO NO NAVEGADOR (custaram 2 tentativas na Keen)
+
+A candidatura da Keen Software House ficou três tentativas sem sair, e **nenhuma das causas era
+parede do estúdio**. As três valem para qualquer formulário, então ficam aqui e não só na linha
+do `enviados.csv`.
+
+1. **O Playwright DISPENSA `confirm()` por omissão, e isso cancela o envio sem deixar rasto.**
+   Esta foi a causa de fundo. A página levanta um diálogo nativo,
+   *"Answers cannot be changed once submitted. Are you ready to submit?"*, e sem tratador o
+   Playwright responde **Cancelar**. O clique acontece, o botão não reclama, e simplesmente
+   **nenhum pedido sai**. Todo script de envio passa a abrir com:
+   `p.on('dialog', async d => { log('[dialogo]', d.type(), d.message()); await d.accept(); });`
+   Sem essa linha, um "não enviou" pode ser só isto.
+
+2. **Escutar só `response` é cego.** Pedido barrado, falhado ou cancelado **nunca devolve
+   resposta**, então o registo fica vazio e parece que nada foi tentado. A prova mora no
+   **pedido**, que sai antes de existir resposta: escutar `request`, `requestfailed` e
+   `framenavigated`, não só `response`.
+
+3. **Nunca engolir o erro do clique com `.catch(()=>{})`.** Se houver camada por cima do botão,
+   é exatamente essa mensagem que diz qual é. Clique dentro de `try/catch` que **regista** o
+   motivo, e só depois cai para o clique por coordenada.
+
+**E a regra de prova, que já era, reforçada porque falhei nela hoje:** o teste de sucesso
+**não pode casar texto no corpo da página**. Na Keen, o regex `/thank you/i` casou com a
+**própria pergunta de salário** do formulário (*"Please also state including currency, thank
+you."*) e eu anunciei um envio que não existia. Vale como envio: **pedido de rede para o endereço
+de submissão, OU mudança de URL.** Texto de tela é confirmação secundária, nunca o veredito.
+
+**Bónus de formulário, também medido hoje:** no React-Select, **apertar `Escape` depois de
+escolher DESFAZ a escolha** e o campo volta para `Select...`. E campo que parece texto pode ser
+lista de opção única — a política de dados da Keen era um `select` com uma só opção, e escrever
+texto nela deixava o obrigatório em branco. Antes de clicar em enviar, **ler o valor de volta na
+tela**, campo a campo, incluindo as listas.
