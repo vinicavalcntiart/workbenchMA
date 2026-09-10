@@ -636,3 +636,33 @@ git add automacao/pessoas.csv automacao/processados.csv docs/index.html
 
 Se `git status` mostrar arquivo que você não tocou, **deixe fora**. Ele é de outra rodada e ela
 vai commitar sozinha.
+
+---
+
+## REGRA DO VINI, 10/09: PERSONAGEM PRIMEIRO, E ELE MEDIU O ERRO
+
+Palavras dele: *"olha to vendo vc aplicando mt em environment. eu n vou passar. meu portfolio é
+full character. isso é perda de tempo."*
+
+**Conferido no `enviados.csv`, e ele está certo com folga.** Das 27 candidaturas de portal
+confirmadas em 09 e 10/09: **17 de ambiente, 7 de personagem, 3 de outra coisa.** Sessenta e três
+por cento do esforço foi para a disciplina em que o portfólio dele não compete. Ele é **full
+character**: escultura, personagem, criatura, groom, textura e superfície DE PERSONAGEM, look dev.
+
+**A ordem muda, e ela é dura:**
+
+1. **PERSONAGEM E CRIATURA vêm primeiro, sempre.** Character Artist, Character Modeler, Creature
+   Artist, Character Sculptor, Groom/Hair/Fur, Character Surfacing, Character Look Dev, Character
+   TD de modelagem, Visual Development de personagem. É aqui que o portfólio dele ganha.
+2. **Modelagem e superfície genéricas** (Modeler, Surfacing Artist, Look Development) entram
+   depois, e só quando o corpo do anúncio citar personagem ou criatura. Cole a frase.
+3. **AMBIENTE, PROP, LEVEL ART, HARD SURFACE E GENERALISTA entram por ÚLTIMO**, e só quando não
+   houver nada de personagem na rodada. **Nunca como o carro-chefe do dia.** Se uma rodada fechar
+   só com ambiente, diga isso no resumo com a palavra "só sobrou ambiente", em vez de apresentar
+   como resultado.
+
+**O que NÃO muda:** a regra 14 continua valendo (Disney, DreamWorks, Paramount e Warner se aplica
+na hora), mas mesmo lá a preferência entre duas vagas abertas é a de personagem.
+
+**Como isso se mede daqui em diante:** todo resumo de rodada diz quantas de PERSONAGEM e quantas
+de AMBIENTE. Número de candidaturas sem essa quebra não é resultado, é volume.
