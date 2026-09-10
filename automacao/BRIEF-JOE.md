@@ -651,3 +651,26 @@ domínio não quer dizer casa sem site; quer dizer que o site está noutro lugar
 É a mesma família das quatro portas que hoje pareciam fechadas por identificador errado
 (`playgroundgames`, `paradoxinteractive`, `snowprint` e o site do Workday da Pixar): **o que
 parece porta fechada costuma ser endereço errado.**
+
+---
+
+## NUNCA use `git add -A`, e isto aconteceu DUAS VEZES em 09/09
+
+Vários agentes escrevem no mesmo repositório ao mesmo tempo. `git add -A` varre a árvore
+inteira e leva junto o trabalho **em andamento de outro agente**, com uma mensagem de commit
+que não descreve aquelas linhas. Aconteceu duas vezes na noite de 09/09: uma rodada de
+prospecção commitou o relatório de outro agente que tinha escrito, no próprio arquivo, que não
+ia commitar; e a rodada do Joe levou junto o registro de duas respostas de estúdio que eu ainda
+estava escrevendo.
+
+Nas duas vezes não houve perda, porque o conteúdo estava completo. **Mas o risco é gravar um
+arquivo pela metade**, e aí o painel quebra ou um registro nasce truncado.
+
+**A regra: adicione só os arquivos que VOCÊ escreveu, um a um.**
+
+```
+git add automacao/pessoas.csv automacao/processados.csv docs/index.html
+```
+
+Se `git status` mostrar arquivo que você não tocou, **deixe fora**. Ele é de outra rodada e ela
+vai commitar sozinha.
