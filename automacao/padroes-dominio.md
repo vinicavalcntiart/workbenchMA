@@ -598,3 +598,39 @@ JavaScript, exatamente como a armadilha já registrada na Rodeo FX. **Próxima r
 de página de equipe abre com navegador desde o começo, não com curl.**
 
 Nenhum endereço foi inventado para bater a meta de 4 a 8 pessoas.
+
+## Magnopus — provado em 10/09 pelo código aberto da própria casa, e é casa NOVA
+
+**`nome.sobrenome@magnopus.com`**
+
+Catorze endereços reais no log de commits do **Connected Spaces Platform**
+(`github.com/magnopus-opensource/connected-spaces-platform`), repositório de código aberto
+mantido pela própria Magnopus:
+
+`adam.thorn@`, `adrian.meredith@`, `caio.andrade@`, `david.swift@`, `Elliot.Morris@`,
+`garrett.hickey@`, `christopher.atkinson@`, `matthew.voisey@`, `ray.saltrelli@`,
+`richard.searle@`, `sam.birley@`, `sandy.lepape@`, `thomas.yehya@` e `aidan.gustard@magnopus.com`.
+
+**Quantos endereços provam:** 14, todos na mesma forma, sem nenhuma exceção vista. A maiúscula
+de `Elliot.Morris@` é só como o autor digitou.
+
+**Por que importa:** a Magnopus tem escritório em **Los Angeles** e em **St Albans**, os dois em
+escopo, faz virtual art department para cinema e tempo real (o VAD de Fallout é trabalho deles),
+e a campanha nunca tinha tocado a casa por pessoa. A candidatura de personagem pelo banco de
+talentos do Pinpoint deles entrou em 10/09, com recibo, o que significa que o portfólio já está
+no sistema quando a carta de pessoa chegar.
+
+**Continua valendo a régua de 06/09 e de 07/09:** endereço montado por este padrão entra como
+confiança **BAIXA**, porque o commit prova o FORMATO e não que a caixa está viva. O primeiro uso
+foi `ian.palmer@magnopus.com` (Ian Palmer, Director of Art do estúdio do Reino Unido, cargo dito
+por ele mesmo no post *Meet the Magnopians* do estúdio), e ele só foi usado porque a via de
+recrutamento publicada tinha sido usada primeiro, no mesmo dia.
+
+## Frost FX — a armadilha de domínio pela TERCEIRA vez (10/09)
+
+O site é **`frostfx.com`** e todo endereço de pessoa é **`@frostfx.ee`**, com o nome próprio
+sozinho: `heiki@`, `andres@`, `marko@`, `martin@`, `anton@`, `kalev@`, `will@frostfx.ee`, todos
+publicados com nome e cargo na seção Team da home. É o mesmo caso da **Stunlock**
+(`stunlock.com` com email `@stunlockstudios.com`, 07/09) e da **TELEVISOR** (`televisor.pl` com
+email `@televisor.studio`, 10/09). **Regra reforçada: antes de montar qualquer endereço, procure
+um endereço LITERAL na página, porque o domínio do site mente com frequência que já não é rara.**
