@@ -21,6 +21,33 @@
 > francês em lugar nenhum do anúncio.
 
 
+> ## ✅ NOVE JÁ SAÍRAM, ENTRE 03h53 e 04h10 UTC DE 10/09. NÃO REFAÇA NENHUMA DELAS.
+>
+> Li os recibos na caixa antes de escrever isto, um por um. Todas de personagem, e todas eram
+> entradas que este arquivo listava como travadas por captcha:
+>
+> | Estúdio | Vaga confirmada no recibo | Hora UTC | Quem confirmou |
+> |---|---|---|---|
+> | Behaviour Interactive | Senior 3D Character Artist, *Dead by Daylight* | 03h53 | Lever |
+> | Frontier Developments | Experienced Character Artist | 03h57 | Lever EU |
+> | Lighthouse Games | Lead Character Artist | 04h00 e 04h04 | Workable + John Chalkley, Head of Talent Acquisition |
+> | Fenris Creations | Register Your Interest, departamento Art | 04h10 | Pinpoint |
+> | Ubisoft Massive | Lead Character Artist *[The Division 2]*, `REF31739L` | 04h03 | SmartRecruiters |
+> | Offworld Industries | 3D Character Artist | 04h04 | BambooHR |
+> | People Can Fly | **o recibo não nomeia a vaga** | 04h07 | SmartRecruiters |
+> | Avalanche Studios Group | Lead Character Artist | 04h08 | Lever |
+> | TTK Games AB | Character Artist (vaga `561860`) | 04h09 | Pinpoint |
+>
+> **A única com ressalva é a People Can Fly:** o recibo confirma que uma candidatura entrou, mas
+> não diz qual requisição a recebeu, e a casa tem duas entradas vivas no painel. Antes de tocar
+> nela de novo, abra o *Access My Application* do próprio recibo. Nas outras oito, reaplicar só
+> gera duplicata, que é um erro que esta campanha já cometeu três vezes.
+>
+> **O que isso prova sobre a fila:** a parede nunca foi o formulário, foi o captcha reprovando o IP
+> da automação. As nove atravessaram no seu navegador em dezessete minutos.
+
+
+
 **44 vagas VIVAS em 43 entradas numeradas, tempo total estimado cerca de 2h20, todas com
 formulário e nenhuma por email.** São 43 e não 42 porque a entrada nº 2 carrega DUAS requisições
 da Netflix, a 2a de Sydney e a 2b de Vancouver. As cinco entradas que saíram continuam no arquivo
