@@ -50,14 +50,51 @@ const log=(...a)=>console.log('['+slug+']',...a);
     const h=[...document.querySelectorAll('input[name$="[title]"]')].find(e=>(e.value||'').trim().toLowerCase()===t.trim().toLowerCase());
     if(!h) return null;
     const m=h.name.match(/answers_attributes\]\[(\d+)\]/); if(!m) return null;
-    return 'job_seeker_form_job_seeker_answers_attributes_'+m[1]+'_text_answer';
+    // MEDIDO NA FENRIS EM 09/09, e foi o que derrubou o envio: o servidor recusou com
+    // "Answers boolean answer can't be blank". A pergunta de visto NAO e caixa de texto, e
+    // BOOLEANA, entao o campo dela nao se chama _text_answer e sim _boolean_answer, e o
+    // controle e um par de radios Yes/No. Montar o id sempre como _text_answer achava um
+    // campo que nao existe, o combo era pulado com "NAO ACHEI", e o formulario ia incompleto.
+    // Agora eu devolvo o SLOT e digo que forma de resposta existe de verdade naquele slot.
+    const base='job_seeker_form_job_seeker_answers_attributes_'+m[1];
+    const pre='job_seeker_form[job_seeker][answers_attributes]['+m[1]+']';
+    const achaRadios=()=>[...document.querySelectorAll('input[type=radio]')]
+        .filter(e=>(e.name||'').startsWith(pre)).map(e=>({id:e.id, valor:e.value}));
+    const radios=achaRadios();
+    for(const suf of ['text_answer','boolean_answer','choice_answer','answer']){
+      if(document.getElementById(base+'_'+suf)) return {tipo:'campo', id:base+'_'+suf, slot:m[1]};
+    }
+    if(radios.length) return {tipo:'radio', radios, slot:m[1]};
+    return null;
   }, titulo);
 
   for(const c of (A.combos||[])){
     let sel=c.sel;
-    if(c.titulo){ const id=await acharPorTitulo(c.titulo);
-      if(!id){ log('NAO ACHEI a pergunta pelo titulo:', JSON.stringify(c.titulo)); continue; }
-      sel='#'+id; log('pergunta', JSON.stringify(c.titulo), 'esta no slot', sel); }
+    if(c.titulo){ const achado=await acharPorTitulo(c.titulo);
+      if(!achado){ log('NAO ACHEI a pergunta pelo titulo:', JSON.stringify(c.titulo)); continue; }
+      if(achado.tipo==='radio'){
+        // Pergunta booleana: nao ha lista para abrir, ha dois radios. Clico o que casa com a
+        // resposta pedida e leio de volta o que ficou marcado, que e o unico teste que vale.
+        const alvo=String(Array.isArray(c.valores)?c.valores[0]:c.valores);
+        // MEDIDO NA FENRIS EM 10/09: os radios booleanos do Pinpoint nao valem "Yes" e "No",
+        // valem "true" e "false". Casar pela primeira letra fazia "Yes" nao achar nada e a
+        // pergunta obrigatoria ficava em branco, que e exatamente o "boolean answer can't be
+        // blank" que o servidor devolveu ontem. A traducao e explicita, nunca por aproximacao:
+        // num campo de formulario de emprego, chute vira resposta falsa.
+        const comoBooleano={yes:'true', no:'false', sim:'true', 'nao':'false', true:'true', false:'false'}[alvo.toLowerCase()];
+        const escolha=achado.radios.find(r=>String(r.valor).toLowerCase()===alvo.toLowerCase())
+                   || (comoBooleano && achado.radios.find(r=>String(r.valor).toLowerCase()===comoBooleano));
+        log('pergunta', JSON.stringify(c.titulo), 'e BOOLEANA no slot', achado.slot,
+            '| radios oferecidos:', JSON.stringify(achado.radios.map(r=>r.valor)));
+        if(!escolha){ log('!! nenhum radio casa com', JSON.stringify(alvo), ', NAO ENVIE'); continue; }
+        const r=await p.$('#'+escolha.id.replace(/([^\w-])/g,'\\$1'));
+        if(r){ await r.scrollIntoViewIfNeeded().catch(()=>{}); await r.check({force:true}).catch(async()=>{ await r.click({force:true}).catch(()=>{}); }); }
+        const marcado=r? await r.isChecked().catch(()=>false) : false;
+        log('combo',c.rotulo||c.titulo,'| pedi',JSON.stringify(alvo),'| radio',JSON.stringify(escolha.valor),
+            marcado?'| MARCADO, CONFERE':'| !! NAO MARCOU, NAO ENVIE');
+        continue;
+      }
+      sel='#'+achado.id; log('pergunta', JSON.stringify(c.titulo), 'esta no slot', sel); }
     const el=await p.$(sel); if(!el){ log('NAO ACHEI o combo',sel); continue; }
     for(const alvo of (Array.isArray(c.valores)?c.valores:[c.valores])){
       await el.scrollIntoViewIfNeeded().catch(()=>{});
@@ -92,9 +129,27 @@ const log=(...a)=>console.log('['+slug+']',...a);
       // de localizacao e o clique caiu em "USA/Canada". O log dizia "escolhi Other" porque olhava
       // o texto da OPCAO que eu mandei clicar, nao o que o controle passou a mostrar. Num
       // formulario de emprego isso nao e bug de log, e resposta falsa entregue ao estudio.
+      // MEDIDO EM 10/09: ler so o innerText do contentor devolvia STRING VAZIA em sete dos oito
+      // combos, e o alarme "NAO CONFERE" era falso. Neste ATS o valor escolhido nao fica no
+      // texto da caixa: fica no value do proprio input, ou na option selecionada do <select>
+      // irmao escondido, ou num chip fora do contentor. Entao a leitura tenta as tres, nesta
+      // ordem, e so declara vazio se as tres vierem vazias.
       const naTela=await el.evaluate(e=>{
+        const v=(e.value||'').trim();
+        if(v) return v;
+        const form=e.closest('form')||document;
+        const nome=(e.name||e.id||'').replace(/_text_answer$/,'');
+        for(const s of form.querySelectorAll('select')){
+          const mesmo=(s.name||s.id||'').includes(nome)|| (nome&&nome.includes((s.name||s.id||'')));
+          if(!mesmo) continue;
+          const sel=[...s.selectedOptions].map(o=>(o.textContent||'').trim()).filter(Boolean).join(', ');
+          if(sel) return sel;
+        }
         const box=e.closest('[class*="container"]')||e.closest('[class*="control"]')||e.parentElement;
-        return box? (box.innerText||'').replace(/\s+/g,' ').trim().slice(0,80) : '';
+        const t=box? (box.innerText||'').replace(/\s+/g,' ').trim() : '';
+        if(t) return t.slice(0,80);
+        const pai=box&&box.parentElement;
+        return pai? (pai.innerText||'').replace(/\s+/g,' ').trim().slice(0,80) : '';
       }).catch(()=>'');
       const bate = naTela.toLowerCase().includes(String(alvo).toLowerCase().replace(/\?$/,''));
       log('combo',c.rotulo||sel,'| pedi',JSON.stringify(alvo),'| cliquei em',JSON.stringify(escolhido||'(NADA)'),'| a TELA mostra',JSON.stringify(naTela),bate?'| CONFERE':'| !! NAO CONFERE, NAO ENVIE');
