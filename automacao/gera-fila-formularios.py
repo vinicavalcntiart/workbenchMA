@@ -245,7 +245,53 @@ vaga(
          "Portfolio: " + ART, None, False),
     ])
 
-# ---------------------------------------------------------------- 6 AVALANCHE
+# ---------------------------------------------------------------- 6 PEOPLE CAN FLY
+vaga(
+    id='pcf', studio='People Can Fly',
+    role='Principal Character Artist · remoto a partir da Polônia ou do Canadá (EST)',
+    chips=[('wall', 'DataDome no botão'), ('plain', 'SmartRecruiters'), ('ok', 'zero termo de veto')],
+    url='https://jobs.smartrecruiters.com/PeopleCanFly/744000134528029',
+    ok='Achada nesta madrugada relendo os 123 quadros do censo. É a descrição de criatura mais '
+       'próxima do seu portfólio que apareceu hoje: "Possibilité de créer des créatures complexes, '
+       'des bipèdes aux quadrupèdes et au-delà", mais rostos humanos, roupas, PBR em Substance '
+       'Painter e Unreal. É AAA de verdade: Gears of War E-Day com a Microsoft, projeto Echo para a '
+       'KRAFTON e Lost Rift.',
+    note='Passei o anúncio inteiro pela régua de veto, termo a termo: authoriz, eligib, sponsor, '
+         'work permit, citizen, resident. ZERO acerto, nem um. O que existe é uma exigência de '
+         'lugar, não de cidadania: "We are looking for someone who can work remotely from either '
+         'Poland or Canada (EST)". Ou seja, é candidatura para quem vai morar lá, que é exatamente '
+         'o que você quer, e a PCF tem escritório na Polônia, no Reino Unido, na Irlanda, nos EUA e '
+         'no Canadá. O anúncio é de 26/06 e continua ativo na API oficial hoje.',
+    campos=[
+        ('Upload resume / cover letter', 'Vini_Cavalcanti_CV.pdf + Vini_Cavalcanti_Cover_Letter.pdf', None, True),
+        ('Nome / Email / Localização', 'Vini Cavalcanti\n' + EMAIL + '\n' + LOC, None, True),
+        ('LinkedIn / Portfolio', LI + '\n' + ART, None, True),
+        ('Precisa de patrocínio?', 'Yes', None, True),
+        ('Aceita realocar para a Polônia ou para o Canadá?', 'Yes, and that is what I am looking for.', None, True),
+        ('Pretensão', 'Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.', None, True),
+        ('Carta / mensagem',
+         "The posting asks for complex creatures from bipeds to quadrupeds and beyond, believable "
+         "human faces and clothing, hard surface for weapons and armour, PBR in Substance Painter, "
+         "and Unreal. That list is my portfolio, in order.\n\n"
+         "I have more than ten years in 3D characters. For almost five of them, at E-Line Media, I "
+         "have taken Endstar's hero characters from first sculpt to engine: high poly and low poly, "
+         "retopology, UVs, baking, PBR texturing, LODs and integration in Unreal. I also groom hair "
+         "and fur in Houdini, which is the part that makes quadrupeds and creatures hold up in "
+         "close shots. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand painted "
+         "the season's characters, creatures included.\n\n"
+         "A Principal is expected to hold the bar rather than just clear it. I have been Senior for "
+         "five years, I review other artists' work and set the asset standard, and I founded and "
+         "run my own character art school, so giving feedback that another artist can act on is "
+         "something I do every week. I have also delivered under another studio's art direction at "
+         "PUGA Studios, with revision rounds as routine, which is the same discipline as holding "
+         "quality across a distributed pipeline.\n\n"
+         "I am fully open to relocating, to Poland or to Canada, and I would need visa sponsorship. "
+         "My academic background, with an honors laurea, a postgraduate specialization in Game Art, "
+         "a master's in progress, IELTS and publications, makes a strong case.\n\n"
+         "Portfolio: " + ART, None, False),
+    ])
+
+# ---------------------------------------------------------------- 7 AVALANCHE
 vaga(
     id='avalanche', studio='Avalanche Studios Group',
     role='Lead Character Artist · Estocolmo, Suécia, híbrido',
@@ -489,7 +535,7 @@ out.write(CSS)
 out.write('\n\n<div class="wrap">\n\n')
 out.write('''  <header>
     <h1>Fila do Vini</h1>
-    <p class="sub">Dez formulários, <strong>todos de personagem ou criatura</strong>. Você mediu
+    <p class="sub">Onze formulários, <strong>todos de personagem ou criatura</strong>. Você mediu
     certo: das 27 candidaturas de 09 e 10 de setembro, 17 eram de ambiente e 7 de personagem.
     Esta lista é a correção. Nenhuma vaga de ambiente entrou aqui.</p>
   </header>
@@ -497,7 +543,7 @@ out.write('''  <header>
   <div class="howto">
     <p><strong>Como usar.</strong> Abra o link da vaga e, para cada campo, toque em <em>Copiar</em> e cole. Os textos longos já estão prontos e citam o anúncio daquele estúdio, não precisam de edição.</p>
     <p><strong>Telefone e endereço não estão aqui de propósito.</strong> Eles moram só no seu documento privado do Drive, <em>CAMPANHA - dados pessoais dos formulários</em>. Copie de lá quando o campo pedir.</p>
-    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Nenhuma dessas dez foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
+    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Nenhuma dessas onze foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
     <p><strong>Se você só tiver dois minutos hoje:</strong> a nº 3, Lighthouse Games. O formulário oficial exige apenas nome, sobrenome e email. Todo o resto é opcional.</p>
   </div>
 
