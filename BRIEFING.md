@@ -225,3 +225,139 @@ na hora), mas mesmo lá a preferência entre duas vagas abertas é a de personag
 
 **Como isso se mede daqui em diante:** todo resumo de rodada diz quantas de PERSONAGEM e quantas
 de AMBIENTE. Número de candidaturas sem essa quebra não é resultado, é volume.
+
+## REGRA DO VINI, 10/09 DE MADRUGADA: A CARTA CURTA, E ELE APONTOU O RASCUNHO
+
+Ele leu o rascunho da HandyGames e devolveu isto, literal:
+
+> *"esta gigante. Implorando por realocacao, parecendo mendico, em capslock. com texto imenso.
+> melhor apagar e recomecar"*
+
+E logo depois: *"msm coisa pro keytoon"*. Os dois rascunhos foram reescritos.
+
+**O que estava errado, nome por nome:**
+
+1. **`I WANT TO RELOCATE` em capslock.** Frase inteira em maiúscula, num parágrafo só para ela.
+   Isso não lê como disponibilidade, lê como súplica. **PROIBIDO daqui em diante: nenhuma frase
+   em capslock na carta.** Sigla é permitida (IELTS, PBR, UV, PUGA Studios), frase não.
+2. **Pedir realocação como favor.** A forma certa é uma linha afirmativa, sem adjetivo e sem
+   repetição: *"I am ready to move to Madrid for the role."* Uma vez, no fim do parágrafo, e acabou.
+   Nada de *"fully open to moving"* somado a *"I want to relocate"* somado a *"open to relocating
+   as well"* na mesma carta.
+3. **Parágrafo de visto com três orações.** A versão longa dizia não ser cidadão, precisar de
+   patrocínio, listar laurea, especialização, mestrado, IELTS e publicações, e ainda oferecer
+   começar remoto. **Uma frase basta:** *"I am not an EU citizen, so I would need work
+   authorization sponsorship."* O currículo acadêmico só entra quando o formulário PERGUNTA,
+   ou quando a casa já demonstrou que patrocina.
+4. **Tamanho.** A HandyGames tinha 420 palavras e sete parágrafos. **Teto: 250 palavras.**
+   A carta padrão da campanha, que rendeu as 11 respostas humanas, tem 200 a 250. Acima disso,
+   corte, não reorganize.
+5. **`CV attached` sem anexo.** A HandyGames dizia isso e o rascunho não tinha anexo nenhum.
+   Ou anexa, ou escreve *"Happy to send my CV in whatever format you prefer."* **Nunca afirme
+   um anexo que não está lá.**
+
+**CONFERÊNCIA BARATA antes de fechar qualquer rascunho:** conte as palavras, procure
+`[A-Z]{4,}` e confira se cada acerto é sigla de verdade, e leia em voz alta a linha de
+realocação. Se ela aparecer duas vezes, apague uma.
+
+## MEDIDO EM 10/09: O `google.com/url` NÃO É ERRO DO AGENTE, É DO GMAIL
+
+O briefing mandava conferir que não existe `google.com/url` em nenhum link, e explicava a origem
+como *"isso acontece quando se copia link de thread"*. **A explicação estava errada, e a exigência
+é impossível por esta API.** Medição de hoje, com o RAW do MIME na mão:
+
+- Escrevi `https://www.artstation.com/viniciuscavalcanti` limpo, em `body` e em `htmlBody`, pelo
+  `update_draft`. Reli o rascunho em `messageFormat: RAW`: **o Gmail gravou
+  `https://www.google.com/url?q=https://www.artstation.com/...&source=gmail&ust=...&sa=E`**,
+  nas DUAS partes, texto e HTML.
+- Tentei driblar escrevendo o domínio nu, `artstation.com/viniciuscavalcanti`. **Ficou pior:**
+  o Gmail embrulhou do mesmo jeito **e rebaixou o esquema para `http://`**.
+
+**Regra nova, que substitui a antiga:**
+- **Escreva sempre a URL completa com `https://`.** Domínio nu vira `http://` embrulhado.
+- **Não conte `google.com/url` como defeito do rascunho.** Ele aparece em 100% dos rascunhos
+  criados por esta API e a campanha já enviou centenas de cartas assim, com 11 respostas humanas,
+  entre elas *"Wow, your portfolio looks awesome!"*, ou seja, **o link embrulhado abre**.
+- **O que continua proibido de verdade é colar link copiado de dentro de uma thread**, porque aí
+  vem embrulho de OUTRA mensagem, com `ust` e `sa` de outro dia, e às vezes apontando para o lugar
+  errado. A origem se distingue pelo alvo: se o `q=` for a URL certa, é o Gmail; se for outra
+  coisa, é cópia errada.
+
+## MEDIDO EM 10/09: RASCUNHO SÓ COM HTML É DEFEITO SILENCIOSO
+
+Quatro rascunhos do lote de 09/09 (`info@thecharactershop.com`, `careers@lightfoxgames.com`,
+`Info@hooligananimation.studio`, `jobs@lacabaneproductions.com`) tinham `htmlBody` com texto bom e
+**nenhuma parte de texto puro**. `list_drafts` devolvia `plaintextBody` vazio e o corpo parecia
+apagado. Não estava apagado: estava só em HTML, que é exatamente o que filtro de spam pune.
+
+**Conferência obrigatória depois de criar rascunho:** reler com `list_drafts` em
+`DRAFT_VIEW_FULL` e checar que `plaintextBody` **não** está vazio. Se estiver, reenviar o
+`update_draft` com `body` E `htmlBody` juntos, porque passar só um APAGA o outro.
+
+## REGRA DO VINI, 10/09 DE MADRUGADA: A CARTA CURTA, E ELE APONTOU O RASCUNHO
+
+Ele leu o rascunho da HandyGames e devolveu isto, literal:
+
+> *"esta gigante. Implorando por realocacao, parecendo mendico, em capslock. com texto imenso.
+> melhor apagar e recomecar"*
+
+E logo depois: *"msm coisa pro keytoon"*. Os dois rascunhos foram reescritos.
+
+**O que estava errado, nome por nome:**
+
+1. **`I WANT TO RELOCATE` em capslock.** Frase inteira em maiúscula, num parágrafo só para ela.
+   Isso não lê como disponibilidade, lê como súplica. **PROIBIDO daqui em diante: nenhuma frase
+   em capslock na carta.** Sigla é permitida (IELTS, PBR, UV, PUGA Studios), frase não.
+2. **Pedir realocação como favor.** A forma certa é uma linha afirmativa, sem adjetivo e sem
+   repetição: *"I am ready to move to Madrid for the role."* Uma vez, no fim do parágrafo, e acabou.
+   Nada de *"fully open to moving"* somado a *"I want to relocate"* somado a *"open to relocating
+   as well"* na mesma carta.
+3. **Parágrafo de visto com três orações.** A versão longa dizia não ser cidadão, precisar de
+   patrocínio, listar laurea, especialização, mestrado, IELTS e publicações, e ainda oferecer
+   começar remoto. **Uma frase basta:** *"I am not an EU citizen, so I would need work
+   authorization sponsorship."* O currículo acadêmico só entra quando o formulário PERGUNTA,
+   ou quando a casa já demonstrou que patrocina.
+4. **Tamanho.** A HandyGames tinha 420 palavras e sete parágrafos. **Teto: 250 palavras.**
+   A carta padrão da campanha, que rendeu as 11 respostas humanas, tem 200 a 250. Acima disso,
+   corte, não reorganize.
+5. **`CV attached` sem anexo.** A HandyGames dizia isso e o rascunho não tinha anexo nenhum.
+   Ou anexa, ou escreve *"Happy to send my CV in whatever format you prefer."* **Nunca afirme
+   um anexo que não está lá.**
+
+**CONFERÊNCIA BARATA antes de fechar qualquer rascunho:** conte as palavras, procure
+`[A-Z]{4,}` e confira se cada acerto é sigla de verdade, e leia em voz alta a linha de
+realocação. Se ela aparecer duas vezes, apague uma.
+
+## MEDIDO EM 10/09: O `google.com/url` NÃO É ERRO DO AGENTE, É DO GMAIL
+
+O briefing mandava conferir que não existe `google.com/url` em nenhum link, e explicava a origem
+como *"isso acontece quando se copia link de thread"*. **A explicação estava errada, e a exigência
+é impossível por esta API.** Medição de hoje, com o RAW do MIME na mão:
+
+- Escrevi `https://www.artstation.com/viniciuscavalcanti` limpo, em `body` e em `htmlBody`, pelo
+  `update_draft`. Reli o rascunho em `messageFormat: RAW`: **o Gmail gravou
+  `https://www.google.com/url?q=https://www.artstation.com/...&source=gmail&ust=...&sa=E`**,
+  nas DUAS partes, texto e HTML.
+- Tentei driblar escrevendo o domínio nu, `artstation.com/viniciuscavalcanti`. **Ficou pior:**
+  o Gmail embrulhou do mesmo jeito **e rebaixou o esquema para `http://`**.
+
+**Regra nova, que substitui a antiga:**
+- **Escreva sempre a URL completa com `https://`.** Domínio nu vira `http://` embrulhado.
+- **Não conte `google.com/url` como defeito do rascunho.** Ele aparece em 100% dos rascunhos
+  criados por esta API e a campanha já enviou centenas de cartas assim, com 11 respostas humanas,
+  entre elas *"Wow, your portfolio looks awesome!"*, ou seja, **o link embrulhado abre**.
+- **O que continua proibido de verdade é colar link copiado de dentro de uma thread**, porque aí
+  vem embrulho de OUTRA mensagem, com `ust` e `sa` de outro dia, e às vezes apontando para o lugar
+  errado. A origem se distingue pelo alvo: se o `q=` for a URL certa, é o Gmail; se for outra
+  coisa, é cópia errada.
+
+## MEDIDO EM 10/09: RASCUNHO SÓ COM HTML É DEFEITO SILENCIOSO
+
+Quatro rascunhos do lote de 09/09 (`info@thecharactershop.com`, `careers@lightfoxgames.com`,
+`Info@hooligananimation.studio`, `jobs@lacabaneproductions.com`) tinham `htmlBody` com texto bom e
+**nenhuma parte de texto puro**. `list_drafts` devolvia `plaintextBody` vazio e o corpo parecia
+apagado. Não estava apagado: estava só em HTML, que é exatamente o que filtro de spam pune.
+
+**Conferência obrigatória depois de criar rascunho:** reler com `list_drafts` em
+`DRAFT_VIEW_FULL` e checar que `plaintextBody` **não** está vazio. Se estiver, reenviar o
+`update_draft` com `body` E `htmlBody` juntos, porque passar só um APAGA o outro.
