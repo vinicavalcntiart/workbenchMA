@@ -1949,6 +1949,61 @@ procurando um formulário que a página promete e não tem.
 
 ---
 
+## 50. Playdead — ZBrush Modeler — Copenhague, Dinamarca — É AMBIENTE, VAI POR ÚLTIMO
+
+> **Leia esta linha antes de tudo:** a caça das 15h45 de 10/09 leu **359 quadros e 9.345 vagas** e
+> **não achou UMA vaga de personagem nova no mundo**. **Só sobrou ambiente**, e é esta. Ela está
+> aqui em último lugar de propósito. **Se houver qualquer coisa de personagem em pé** — a Razer
+> `JR2026007640`, a Skydance Grooming `9ad28cab` do item 23, ou qualquer uma das travadas por
+> captcha — **essa vai primeiro e esta espera.** Dossiê completo em `automacao/caca-1545-1009.md`.
+
+**Anúncio:** https://playdead.breezy.hr/p/3be060a4fcf301-zbrush-modeler — **HTTP 200 hoje**
+**Candidatura:** https://playdead.breezy.hr/p/3be060a4fcf301-zbrush-modeler/apply — **HTTP 200 hoje**
+**ID da requisição (Breezy):** `3be060a4fcf301` · **Publicada em 2026-09-10, hoje** · `Full-Time`,
+presencial em Copenhague.
+
+**POR QUE É AMBIENTE, e não modelagem que sobe pela regra 2.** As palavras *character* e *creature*
+**não aparecem uma única vez** no anúncio. O que ele pede, colado:
+
+> *"Your responsibility as our new colleague will be to create and sculpt high quality
+> **architectural and organic models within a 3D open world environment**."*
+> *"Creating and sculpting high quality architectural and organic models to produce **believable
+> locations** within a large, open world."*
+> *"Collaborating with other artists and designers to support **level design and construction**."*
+
+**RÉGUA DE VETO, termo a termo, sobre o corpo inteiro:** `authoriz` 0 · `eligib` 0 · `sponsor` 0 ·
+`work permit` 0 · `must be based` 0 · `LMIA` 0 · `days a week` 0 · `citizen` 0 · `resident` 0.
+**Zero veto escrito.** `visa` 1 e `relocat` 1, e os dois são **a favor**, na mesma frase:
+
+> *"You should be willing to work at the Playdead office in Copenhagen, Denmark. **We can offer
+> relocation and visa support if required.**"*
+
+**DEDUPE** (`sh automacao/dedupe-agora.sh "3be060a4fcf301" "Playdead"`): o ID tem **zero ocorrência**
+nos quatro arquivos, requisição inédita, nenhuma marca de envio. A **casa** já recebeu duas
+candidaturas, em 06/09 (`d6b5a5e4f54a01`, Material and Texture Artist, confirmada) e em 08/09 —
+**não é parede**, o Breezy deles não tem captcha nenhum.
+
+**ARMADILHA MEDIDA HOJE NO `/apply`:** o honeypot **`hp_7f2b`** aparece 4 vezes no HTML e **tem que
+ficar VAZIO**. Zero marca de reCAPTCHA, hCaptcha, Turnstile ou DataDome.
+
+**COMANDO EXATO DE DISPARO:**
+
+```
+cd /home/user/apply
+VINI_TEL="<telefone, do doc privado do Drive>" \
+VINI_SAL="EUR 45000" \
+sh hb_run.sh apply_breezy.js \
+   "https://playdead.breezy.hr/p/3be060a4fcf301-zbrush-modeler/apply" \
+   playdead-zbrush --submit
+```
+
+Sem `--submit` ele para no modo seco. **`VINI_SAL` não tem padrão e o script lança erro se faltar** —
+é o conserto de 07/09 da faixa morta de 46 mil. O anúncio **não publica faixa**; Dinamarca é Europa
+ocidental e Playdead é casa média, então **EUR 45.000** pela política de 04/09.
+**Refaça o dedupe no minuto do clique**, nunca contra esta página.
+
+---
+
 ## As outras trinta, se sobrar tempo
 
 Todas já foram abertas e medidas, todas ficam à mão, e o texto de cada uma está no painel. Onde a
