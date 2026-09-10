@@ -23,39 +23,6 @@ def vaga(**kw):
     VAGAS.append(kw)
 
 
-# ---------------------------------------------------------------- 7 VALVE
-vaga(
-    id='valve', studio='Valve',
-    role='3D Character Artist · Bellevue, Washington, EUA, presencial',
-    chips=[('wall', 'reCAPTCHA de caixa'), ('plain', 'formulário próprio'), ('ok', 'dois minutos')],
-    url='https://www.valvesoftware.com/en/jobs?job_id=2',
-    ok='Formulário curtíssimo e a casa patrocina sem drama. O anúncio pede "High-level organic and '
-       'hard-surface modeling", "Your ability to model characters in a variety of styles with an '
-       'emphasis on character design" e "A thorough understanding of human anatomy".',
-    note='O anúncio avisa: "Sorry, we do not accept student portfolios." O seu não é, então mande '
-         'o ArtStation direto, que é o link com prioridade sobre o PDF.',
-    campos=[
-        ('Name / Email', 'Vini Cavalcanti\n' + EMAIL, None, True),
-        ('Portfolio / links', ART + '\n' + SITE, None, True),
-        ('Como descobriu a vaga', 'Valve careers page', None, True),
-        ('CV', 'Vini_Cavalcanti_CV.pdf', None, True),
-        ('Campo livre, se houver',
-         "Valve asks character artists to contribute across the whole pipeline: sculpt high "
-         "resolution in ZBrush, craft the low resolution game model, author PBR textures, and work "
-         "with concept artists and animators so the character reads and performs. That full span "
-         "is what I have been doing for ten years, and for almost five of them at E-Line Media "
-         "specifically: Endstar's hero characters from first sculpt to engine, including high "
-         "poly, retopology, UVs, baking, texturing, LODs and integration, plus hair and fur "
-         "grooming in Houdini.\n\n"
-         "On range of styles: The Wingfeather Saga season 1 at Angel Studios was hand painted and "
-         "stylized, Endstar is a different stylization again, and my personal work goes realistic. "
-         "Anatomy is the constant underneath all three. My portfolio holds more than 45 projects "
-         "with over 60 characters, and the personal pieces are some of the strongest in it.\n\n"
-         "I would need visa sponsorship to work in the United States, and I am fully open to "
-         "relocating to Bellevue.\n\n"
-         "Portfolio: " + ART, None, False),
-    ])
-
 # ---------------------------------------------------------------- 8 SKYDANCE GROOMING
 vaga(
     id='grooming', studio='Skydance Animation',
@@ -115,7 +82,8 @@ def artigo(n, v):
     o = io.StringIO()
     o.write('  <article class="job" id="%s">\n' % v['id'])
     o.write('    <header>\n')
-    o.write('      <h2 class="studio">%d. %s</h2>\n' % (n, html.escape(v['studio'])))
+    rotulo = ('%d. %s' % (n, v['studio'])) if len(VAGAS) > 1 else v['studio']
+    o.write('      <h2 class="studio">%s</h2>\n' % html.escape(rotulo))
     o.write('      <p class="role">%s</p>\n' % html.escape(v['role']))
     o.write('      <div class="meta">\n')
     for cls, txt in v['chips']:
@@ -142,23 +110,24 @@ out.write(CSS)
 out.write('\n\n<div class="wrap">\n\n')
 out.write('''  <header>
     <h1>Fila do Vini</h1>
-    <p class="sub">Você limpou oito das dez em dezessete minutos, entre 03h53 e 04h10, e as oito são
-    de personagem. <strong>Sobraram duas.</strong> As outras saíram daqui e estão carimbadas
-    NÃO REAPLICAR no painel.</p>
+    <p class="sub">Você limpou nove das dez, todas de personagem. <strong>Sobrou uma.</strong>
+    As outras saíram daqui e estão carimbadas NÃO REAPLICAR no painel, com o recibo de cada uma.</p>
   </header>
 
   <div class="howto">
     <p><strong>Como usar.</strong> Abra o link da vaga e, para cada campo, toque em <em>Copiar</em> e cole. Os textos longos já estão prontos e citam o anúncio daquele estúdio, não precisam de edição.</p>
     <p><strong>Telefone e endereço não estão aqui de propósito.</strong> Eles moram só no seu documento privado do Drive, <em>CAMPANHA - dados pessoais dos formulários</em>. Copie de lá quando o campo pedir.</p>
-    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Nenhuma dessas duas foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
-    <p><strong>As duas que sobraram são as mais baratas da lista.</strong> A Valve é um formulário curtíssimo e a Skydance é a que mais aproveita o seu Houdini. Juntas devem custar menos de dez minutos.</p>
+    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Ela não foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
+    <p><strong>Esta é a que mais aproveita o seu Houdini.</strong> O anúncio pede grooms para personagens humanos, criaturas peludas e personagens com pena, e nomeia o Houdini. É Paramount, o que aciona a regra 14 da campanha.</p>
   </div>
 
 ''')
-out.write('  <nav class="jump" aria-label="Ir para uma vaga">\n')
-for i, v in enumerate(VAGAS, 1):
-    out.write('    <a href="#%s">%d · %s</a>\n' % (v['id'], i, html.escape(v['studio'])))
-out.write('  </nav>\n\n')
+# com uma vaga so, a barra de atalhos e ruido: um link que aponta para a unica coisa da pagina
+if len(VAGAS) > 1:
+    out.write('  <nav class="jump" aria-label="Ir para uma vaga">\n')
+    for i, v in enumerate(VAGAS, 1):
+        out.write('    <a href="#%s">%d · %s</a>\n' % (v['id'], i, html.escape(v['studio'])))
+    out.write('  </nav>\n\n')
 for i, v in enumerate(VAGAS, 1):
     out.write(artigo(i, v))
 out.write('''  <footer>
@@ -166,9 +135,9 @@ out.write('''  <footer>
     painel: Behaviour (Senior 3D Character Artist, Dead by Daylight), Frontier (Experienced
     Character Artist), Lighthouse Games (Lead Character Artist), Ubisoft Massive (Lead Character
     Artist, The Division 2), Offworld Industries (3D Character Artist), People Can Fly, Avalanche
-    Studios (Lead Character Artist) e TTK Games (Character Artist). A Fenris Creations foi enviada
-    pela automação às 04h e o recibo chegou às 04h10. Nove candidaturas de personagem e nenhuma de
-    ambiente.</p>
+    Studios (Lead Character Artist), TTK Games (Character Artist) e Valve (3D Character Artist).
+    A Fenris Creations foi enviada pela automação às 04h e o recibo chegou às 04h10. Dez
+    candidaturas de personagem e nenhuma de ambiente.</p>
     <p><strong>Uma ressalva só, na People Can Fly:</strong> o recibo prova que uma candidatura
     entrou, mas não diz qual requisição recebeu, e a casa tem duas entradas vivas no painel. Antes
     de tocar nela de novo, abra o <em>Access My Application</em> do próprio recibo.</p>
