@@ -115,6 +115,27 @@ const log=(...a)=>console.log('['+slug+']',...a);
       }
       sel='#'+achado.id; log('pergunta', JSON.stringify(c.titulo), 'esta no slot', sel); }
     const el=await p.$(sel); if(!el){ log('NAO ACHEI o combo',sel); continue; }
+    // TEXTO LIVRE achado pelo TITULO, marcado com "livre": true no arquivo de respostas.
+    // MEDIDO NA GAMEPLAY GALAXY EM 10/09: ha pergunta de texto que so pode ser preenchida
+    // DEPOIS de outra, porque e CONDICIONAL (o slot 2 dela so existe quando o slot 1, que e
+    // booleano, vira true). O mapa "texto" roda ANTES dos combos, entao o campo ainda nao
+    // existe la e o preenchimento cairia num "NAO ACHEI o campo" silencioso.
+    // E o caminho de combo tambem NAO serve para texto: ele digita apenas os 14 PRIMEIROS
+    // caracteres, porque foi feito para FILTRAR lista, e truncaria a resposta. Numa pergunta
+    // obrigatoria de formulario de emprego, resposta truncada e pior que resposta ausente,
+    // porque parece respondida. Entao texto livre tem caminho proprio: digita tudo e confere
+    // o tamanho de volta.
+    if(c.livre){
+      const alvo=String(Array.isArray(c.valores)?c.valores[0]:c.valores);
+      await el.scrollIntoViewIfNeeded().catch(()=>{});
+      await el.click({force:true}).catch(()=>{}); await el.fill('').catch(()=>{});
+      await el.type(alvo,{delay:3}).catch(()=>{});
+      await el.evaluate(e=>e.blur()).catch(()=>{});
+      const lido=await el.inputValue().catch(()=>'');
+      log('texto livre',c.rotulo||c.titulo,'| pedi',alvo.length,'chars | a TELA tem',lido.length,'chars',
+          lido===alvo?'| CONFERE':'| !! NAO CONFERE, NAO ENVIE');
+      continue;
+    }
     for(const alvo of (Array.isArray(c.valores)?c.valores:[c.valores])){
       await el.scrollIntoViewIfNeeded().catch(()=>{});
       await el.click({force:true}).catch(()=>{});

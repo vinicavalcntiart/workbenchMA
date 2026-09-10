@@ -1,0 +1,74 @@
+{
+  "url": "https://gameplaygalaxy.pinpointhq.com/register-your-interest/new",
+  "cv": "Vini_Cavalcanti_CV.pdf",
+  "texto": {
+    "#job_seeker_form_job_seeker_first_name": "Vini",
+    "#job_seeker_form_job_seeker_last_name": "Cavalcanti",
+    "#job_seeker_form_job_seeker_email": "contact@vinicavalcanti.art",
+    "#phone-input": "__TEL__",
+    "#job_seeker_form_linkedin_url": "https://www.linkedin.com/in/vinicavalcnti/",
+    "#personal-summary": "I am registering my interest in the Art team at Gameplay Galaxy. Trial Xtreme and Trailblazer put a rider on screen on every single run, and stylized character modelling, texturing and grooming is my whole discipline.\n\nI am a senior 3D character artist with more than ten years on stylized characters and creatures. At Angel Studios I modelled and hand painted the season one characters of The Wingfeather Saga. For close to five years at E-Line Media I have built hero characters end to end on Endstar, from sculpt to engine. That role is fully remote with an American team, so a fully remote, fully invested position is how I already work. I came up through outsourcing at PUGA Studios.\n\nI take a character all the way: high poly, sculpt, retopology, UV, bake, texture, LODs and engine setup, with grooming in Houdini as a support skill. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it: https://www.artstation.com/viniciuscavalcanti\n\nI can work remotely from where I live today with no sponsorship needed. For an onsite position I would need work authorization sponsorship. I am ready to move for the role.\n\nVini Cavalcanti",
+    "#job_seeker_form_job_seeker_answers_attributes_0_text_answer": "Open to aligning with your band for the role; as a reference, I am looking at around USD 85,000 gross per year.",
+    "#job_seeker_form_job_seeker_answers_attributes_6_text_answer": "Four weeks from an offer.",
+    "#job_seeker_form_job_seeker_answers_attributes_8_text_answer": "I use it for reference gathering, for naming and sorting files, and for boilerplate scripting. Sculpting, retopology, UV, texturing and grooming stay hand made, because that is what the work is judged on."
+  },
+  "combos": [
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][location_ids][]\"]",
+      "rotulo": "Locations",
+      "valores": [
+        "Remote"
+      ]
+    },
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][department_ids][]\"]",
+      "rotulo": "Departments",
+      "valores": [
+        "Art"
+      ]
+    },
+    {
+      "titulo": "Do you have experience working within the games industry?",
+      "rotulo": "Experiencia em jogos (booleana)",
+      "valores": [
+        "true"
+      ]
+    },
+    {
+      "titulo": "What are the most successful games you've worked on?",
+      "rotulo": "Jogos de maior sucesso (texto livre, condicional)",
+      "livre": true,
+      "valores": [
+        "Endstar at E-Line Media, where I have built hero characters from sculpt to engine for close to five years, and The Wingfeather Saga at Angel Studios, where I modelled and hand painted the season one characters."
+      ]
+    },
+    {
+      "titulo": "Are you happy to work 100% remote?",
+      "rotulo": "100% remoto (booleana)",
+      "valores": [
+        "true"
+      ]
+    },
+    {
+      "titulo": "We ask for our team to be fully invested in our project and ask for exclusivity. That means you wouldn't be able to work as freelance with other companies. Are you ok with that?",
+      "rotulo": "Exclusividade (booleana)",
+      "valores": [
+        "true"
+      ]
+    },
+    {
+      "titulo": "How many years of experience do you have in a similar position?",
+      "rotulo": "Anos de experiencia (lista)",
+      "valores": [
+        "More than 10 years"
+      ]
+    },
+    {
+      "titulo": "Do you require any form of visa sponsorship to work on your current location?",
+      "rotulo": "Visto NO LOCAL ATUAL (booleana)",
+      "valores": [
+        "false"
+      ]
+    }
+  ]
+}
