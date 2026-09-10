@@ -1,0 +1,681 @@
+<title>Fila do Vini</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root{
+    --bg:#F5F4F1; --surface:#FFFFFF; --sunk:#EFEEEA;
+    --ink:#171A19; --muted:#66706D; --line:#DDDBD5;
+    --accent:#0E6360; --accent-soft:#DCEDEB;
+    --ok:#2B6B45; --ok-soft:#DDEEE2;
+    --warn:#8E5410; --warn-soft:#F5E7D3;
+    --shadow:0 1px 2px rgba(20,26,25,.06), 0 8px 24px -16px rgba(20,26,25,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121514; --surface:#1A1E1D; --sunk:#151918;
+      --ink:#EAEDEB; --muted:#98A29F; --line:#2A302E;
+      --accent:#5CCFC6; --accent-soft:#183330;
+      --ok:#78CE9A; --ok-soft:#16291F;
+      --warn:#E3A85F; --warn-soft:#2E2317;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -18px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121514; --surface:#1A1E1D; --sunk:#151918;
+    --ink:#EAEDEB; --muted:#98A29F; --line:#2A302E;
+    --accent:#5CCFC6; --accent-soft:#183330;
+    --ok:#78CE9A; --ok-soft:#16291F;
+    --warn:#E3A85F; --warn-soft:#2E2317;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -18px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.55;
+    padding-inline:20px; padding-block:32px 72px;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:28px}
+
+  h1,h2,h3,.ui{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+  h1{font-size:clamp(1.7rem,5vw,2.3rem); line-height:1.12; margin:0; letter-spacing:-.02em; text-wrap:balance}
+  .sub{color:var(--muted); font-size:1rem; margin:0; max-width:60ch}
+
+  .howto{
+    background:var(--sunk); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px; display:flex; flex-direction:column; gap:8px;
+  }
+  .howto p{margin:0; font-size:.95rem; color:var(--muted)}
+  .howto strong{color:var(--ink)}
+
+  .jump{display:flex; flex-wrap:wrap; gap:8px}
+  .jump a{
+    font-family:Archivo,sans-serif; font-size:.8rem; font-weight:600;
+    text-decoration:none; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:6px 12px;
+    background:var(--surface);
+  }
+  .jump a:hover{border-color:var(--accent); color:var(--accent)}
+  .jump a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  .job{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    box-shadow:var(--shadow); overflow:hidden; scroll-margin-top:16px;
+  }
+  .job > header{padding:18px 18px 14px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:8px}
+  .studio{font-family:Archivo,sans-serif; font-weight:700; font-size:1.18rem; letter-spacing:-.01em; margin:0}
+  .role{margin:0; color:var(--muted); font-size:.98rem}
+  .meta{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:2px}
+  .chip{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.72rem; font-weight:500;
+    letter-spacing:.03em; text-transform:uppercase;
+    padding:4px 8px; border-radius:5px; border:1px solid transparent; white-space:nowrap;
+  }
+  .chip.ok{background:var(--ok-soft); color:var(--ok); border-color:color-mix(in srgb,var(--ok) 30%, transparent)}
+  .chip.wall{background:var(--warn-soft); color:var(--warn); border-color:color-mix(in srgb,var(--warn) 30%, transparent)}
+  .chip.plain{background:var(--sunk); color:var(--muted); border-color:var(--line)}
+  .open{
+    font-family:Archivo,sans-serif; font-weight:600; font-size:.9rem;
+    color:var(--accent); text-decoration:none; align-self:flex-start;
+    border-bottom:1px solid color-mix(in srgb,var(--accent) 40%, transparent); padding-bottom:1px;
+  }
+  .open:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+
+  .fields{display:flex; flex-direction:column}
+  .field{border-top:1px solid var(--line); padding:14px 18px; display:flex; flex-direction:column; gap:8px}
+  .field:first-child{border-top:none}
+  .fhead{display:flex; gap:10px; align-items:baseline; justify-content:space-between}
+  .fname{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.78rem; color:var(--muted);
+    letter-spacing:.01em; word-break:break-word;
+  }
+  button.copy{
+    font-family:Archivo,sans-serif; font-size:.78rem; font-weight:600;
+    background:var(--sunk); color:var(--ink); border:1px solid var(--line);
+    border-radius:6px; padding:5px 11px; cursor:pointer; flex:none;
+  }
+  button.copy:hover{border-color:var(--accent); color:var(--accent)}
+  button.copy:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  button.copy[data-done="1"]{background:var(--ok-soft); color:var(--ok); border-color:color-mix(in srgb,var(--ok) 35%, transparent)}
+  .val{
+    margin:0; white-space:pre-wrap; font-size:.97rem; line-height:1.5;
+    max-height:15em; overflow:auto; overscroll-behavior:contain;
+  }
+  .val.short{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.9rem}
+  .note{margin:0; font-size:.86rem; color:var(--muted); font-style:italic}
+  .warnbox{
+    margin:0; padding:10px 12px; border-radius:8px;
+    background:var(--warn-soft); color:var(--warn);
+    font-size:.88rem; font-family:Archivo,sans-serif; font-weight:500;
+  }
+  .okbox{
+    margin:0; padding:10px 12px; border-radius:8px;
+    background:var(--ok-soft); color:var(--ok);
+    font-size:.88rem; font-family:Archivo,sans-serif; font-weight:500;
+  }
+  footer{color:var(--muted); font-size:.86rem; border-top:1px solid var(--line); padding-top:16px}
+  footer a{color:var(--accent)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <h1>Fila do Vini</h1>
+    <p class="sub">Sete formulários que só passam pela sua mão, com o texto de cada campo já escrito
+    para <em>aquele</em> estúdio, usando as palavras do anúncio dele. Ordem: do mais barato para o mais caro.</p>
+  </header>
+
+  <div class="howto">
+    <p><strong>Como usar.</strong> Abra o link da vaga, e para cada campo toque em <em>Copiar</em> e cole. Os textos longos já estão prontos, não precisam de edição.</p>
+    <p><strong>Telefone e endereço não estão aqui de propósito.</strong> Eles moram só no seu documento privado do Drive, <em>CAMPANHA - dados pessoais dos formulários</em>. Copie de lá quando o campo pedir.</p>
+    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Onde diz <em>sem captcha</em>, a automação falhou por outro motivo, escrito na própria vaga.</p>
+  </div>
+
+  <nav class="jump" aria-label="Ir para uma vaga">
+    <a href="#fenris">1 · Fenris Creations</a>
+    <a href="#skydance">2 · Skydance Madrid</a>
+    <a href="#ubisoft">3 · Ubisoft Montréal</a>
+    <a href="#sperasoft">4 · Sperasoft</a>
+    <a href="#magicmedia">5 · Magic Media</a>
+    <a href="#glinda">6 · Glinda Games</a>
+    <a href="#jamcity">7 · Jam City</a>
+  </nav>
+
+  <!-- 1 FENRIS -->
+  <article class="job" id="fenris">
+    <header>
+      <h2 class="studio">Fenris Creations</h2>
+      <p class="role">Register Your Interest · banco de talentos · Reykjavík, Islândia</p>
+      <div class="meta">
+        <span class="chip ok">sem captcha</span>
+        <span class="chip plain">Pinpoint</span>
+        <span class="chip plain">patrocina visto</span>
+      </div>
+      <a class="open" href="https://careers.fenriscreations.com/register-your-interest/new" target="_blank" rel="noopener">Abrir o formulário</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="okbox">É a CCP Games renomeada, dona do EVE Online. O processo seletivo deles tem um estágio chamado <em>Relocation and Benefits Chat</em>, e o formulário pergunta se você precisa de patrocínio de visto. Casa que pergunta isso é casa que patrocina.</p>
+        <p class="note">Eu não fechei o envio: o servidor recusou pedindo uma pergunta condicional de visto que só aparece depois da localização. Nada ficou registrado do lado deles.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">First Name / Last Name / Email</span><button class="copy" data-t="Vini&#10;Cavalcanti&#10;contact@vinicavalcanti.art">Copiar</button></div>
+        <p class="val short">Vini · Cavalcanti · contact@vinicavalcanti.art</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">LinkedIn URL</span><button class="copy" data-t="https://www.linkedin.com/in/vinicavalcnti/">Copiar</button></div>
+        <p class="val short">https://www.linkedin.com/in/vinicavalcnti/</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">What is your current location?</span><button class="copy" data-t="Other">Copiar</button></div>
+        <p class="val short">Other</p>
+        <p class="note">As opções são Iceland, United Kingdom, EEA/EU, USA/Canada, Asia e Other. Confira com o olho: foi exatamente aqui que o meu clique caiu em USA/Canada.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Would you need a VISA sponsorship…?</span><button class="copy" data-t="Yes">Copiar</button></div>
+        <p class="val short">Yes</p>
+        <p class="note">Só aparece depois que a localização é respondida.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Are you a…</span><button class="copy" data-t="None of the above?">Copiar</button></div>
+        <p class="val short">None of the above?</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Where did you hear about this position?</span><button class="copy" data-t="Fenris Creations Website">Copiar</button></div>
+        <p class="val short">Fenris Creations Website</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Willing to relocate / Locations / Departments / Gender</span><button class="copy" data-t="Yes&#10;Reykjavík&#10;Art&#10;Prefer Not To Say">Copiar</button></div>
+        <p class="val short">Yes · Reykjavík · Art · Prefer Not To Say</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Personal Summary</span><button class="copy" data-t="I am a Senior 3D Character Artist with more than ten years in stylized characters, and I am writing to be on your list for character, creature and asset work.
+
+On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so the stylized surface treatment was mine from block-in to final. For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. I also do hair and fur grooming in Houdini. Before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's defined style, with revision rounds as routine.
+
+Fenris builds deep, player-driven worlds that hold communities together for decades, and worlds like that are made of assets that have to survive being looked at for years, not for one shot. That is the kind of asset I like building. I have been Senior for five years, I review other artists' work and set the asset standard, and I founded and run my own character art school.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE to Reykjavík and I am fully open to moving for the role. I am not an EU or EEA citizen, so I would need visa sponsorship; my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti">Copiar</button></div>
+        <p class="val">I am a Senior 3D Character Artist with more than ten years in stylized characters, and I am writing to be on your list for character, creature and asset work.
+
+On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so the stylized surface treatment was mine from block-in to final. For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. I also do hair and fur grooming in Houdini. Before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's defined style, with revision rounds as routine.
+
+Fenris builds deep, player-driven worlds that hold communities together for decades, and worlds like that are made of assets that have to survive being looked at for years, not for one shot. That is the kind of asset I like building. I have been Senior for five years, I review other artists' work and set the asset standard, and I founded and run my own character art school.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE to Reykjavík and I am fully open to moving for the role. I am not an EU or EEA citizen, so I would need visa sponsorship; my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2 SKYDANCE -->
+  <article class="job" id="skydance">
+    <header>
+      <h2 class="studio">Skydance Animation Madrid</h2>
+      <p class="role">Environment Surfacing Artist · <span style="font-family:'IBM Plex Mono',monospace;font-size:.85em">c5793932</span> · Madri, híbrido</p>
+      <div class="meta">
+        <span class="chip wall">hCaptcha de imagem</span>
+        <span class="chip plain">Lever</span>
+        <span class="chip plain">grupo Paramount</span>
+      </div>
+      <a class="open" href="https://jobs.lever.co/skydance/c5793932-893f-418a-a24a-7749fcf1c90e/apply" target="_blank" rel="noopener">Abrir o formulário</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="okbox">É Paramount: a política de privacidade do anúncio aponta para privacy.paramount.com, e a regra 14 da campanha manda aplicar nessas casas na hora. E é surfacing estilizado, o centro do seu portfólio.</p>
+        <p class="warnbox">O desafio de imagem aparece depois do Submit. Já foi medido com clique nesta casa, então não é suposição.</p>
+        <p class="note">Requisição inédita. A Senior da mesma função morreu em 09/09, então esta passou a ser o topo aberto.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Nome / Email / Empresa atual</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art&#10;E-Line Media">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti · contact@vinicavalcanti.art · E-Line Media</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Current location (autocomplete: escolha da lista)</span><button class="copy" data-t="Olinda">Copiar</button></div>
+        <p class="val short">Olinda</p>
+        <p class="note">Digite pouco e ESCOLHA a sugestão. Se você só digitar sem escolher, o Lever aceita a tela e recusa o envio em silêncio.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Portfolio / LinkedIn</span><button class="copy" data-t="https://www.artstation.com/viniciuscavalcanti&#10;https://www.linkedin.com/in/vinicavalcnti/">Copiar</button></div>
+        <p class="val short">artstation.com/viniciuscavalcanti · linkedin.com/in/vinicavalcnti</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão salarial</span><button class="copy" data-t="Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.">Copiar</button></div>
+        <p class="val short">Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Autorização de trabalho na Espanha</span><button class="copy" data-t="I am not an EU citizen and would need visa sponsorship for Spain. I want to relocate to Madrid and I am fully open to moving for the role.">Copiar</button></div>
+        <p class="val short">I am not an EU citizen and would need visa sponsorship for Spain. I want to relocate to Madrid and I am fully open to moving for the role.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Cover letter / Additional information</span><button class="copy" data-t="Dear Skydance Animation team,
+
+I am applying for the Environment Surfacing Artist role in Madrid. Your posting describes painting stylized textures based on concept art while maintaining the visual style of the show in Substance 3D Paint, building procedural textures in Substance 3D Designer, and working to physically based shading principles with a clear understanding of UVs and texture layout. That is a description of my working day.
+
+On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so holding a defined stylized art direction across a surface was my responsibility from block-in to final. For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs and texture layout, baking, hand-painted and PBR texturing, trim sheets, material work, look development and engine integration. Substance Painter and Designer are daily tools for me, alongside ZBrush, Maya and Marmoset. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, with revision rounds as routine, which is exactly the relationship a surfacing seat has with an Art Director and an Environment Supervisor.
+
+You write that you are looking for pioneers who push the limits of the most collaborative art form there is. The part of the craft I care most about is the one where colour, material and shape carry the read instead of geometry, and that only works when surfacing and look development talk to each other early.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving to Madrid for the role. I am not an EU citizen, so I would need visa sponsorship, and I say it up front. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Dear Skydance Animation team,
+
+I am applying for the Environment Surfacing Artist role in Madrid. Your posting describes painting stylized textures based on concept art while maintaining the visual style of the show in Substance 3D Paint, building procedural textures in Substance 3D Designer, and working to physically based shading principles with a clear understanding of UVs and texture layout. That is a description of my working day.
+
+On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so holding a defined stylized art direction across a surface was my responsibility from block-in to final. For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs and texture layout, baking, hand-painted and PBR texturing, trim sheets, material work, look development and engine integration. Substance Painter and Designer are daily tools for me, alongside ZBrush, Maya and Marmoset. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, with revision rounds as routine, which is exactly the relationship a surfacing seat has with an Art Director and an Environment Supervisor.
+
+You write that you are looking for pioneers who push the limits of the most collaborative art form there is. The part of the craft I care most about is the one where colour, material and shape carry the read instead of geometry, and that only works when surfacing and look development talk to each other early.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving to Madrid for the role. I am not an EU citizen, so I would need visa sponsorship, and I say it up front. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3 UBISOFT -->
+  <article class="job" id="ubisoft">
+    <header>
+      <h2 class="studio">Ubisoft Montréal</h2>
+      <p class="role">Level Artist (Unreal) · <span style="font-family:'IBM Plex Mono',monospace;font-size:.85em">REF31656C</span> · Montreal, Canadá</p>
+      <div class="meta">
+        <span class="chip wall">DataDome</span>
+        <span class="chip plain">SmartRecruiters</span>
+        <span class="chip ok">não pede francês</span>
+      </div>
+      <a class="open" href="https://jobs.smartrecruiters.com/Ubisoft2/744000145286834" target="_blank" rel="noopener">Abrir a vaga</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="okbox">Apesar de ser Quebec, o anúncio inteiro não pede francês em lugar nenhum. É a diferença literal entre esta e as gêmeas da 2K que eu descartei.</p>
+        <p class="warnbox">O botão <em>I'm interested</em> leva a uma tela que responde 403 e monta o DataDome com controle deslizante. Só passa pelo seu navegador normal.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Nome / Email</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti · contact@vinicavalcanti.art</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão salarial</span><button class="copy" data-t="Open to aligning with your band for the role; as a reference, I am looking at around CAD 95,000 per year.">Copiar</button></div>
+        <p class="val short">Open to aligning with your band for the role; as a reference, I am looking at around CAD 95,000 per year.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Autorização de trabalho no Canadá</span><button class="copy" data-t="I am not a Canadian citizen or permanent resident and would need work permit sponsorship. I WANT TO RELOCATE and I am fully open to moving to Montreal for the role.">Copiar</button></div>
+        <p class="val short">I am not a Canadian citizen or permanent resident and would need work permit sponsorship. I WANT TO RELOCATE and I am fully open to moving to Montreal for the role.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Cover letter / Motivação</span><button class="copy" data-t="Dear Ubisoft Montreal team,
+
+I am applying for the Level Artist (Unreal) role. Your posting says the job is to create immersive and memorable 3D environments, to place proxies and communicate modeling and texturing needs with the art teams, and to integrate and assemble assets in Unreal Engine while balancing artistic goals against technical constraints. I am writing because I have spent my career on both sides of that conversation: I am the person who builds the asset, and I am used to being the person who says what the asset needs.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. Owning the whole chain means I know exactly what a proxy has to communicate for the modeling and texturing teams to act on it, and where a scene will cost more than it gives. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, which is where composition, colour and shape language became the tools I reach for first. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, with revision rounds as routine.
+
+Environmental storytelling is the part of the brief I would most want to be trusted with. A space reads before anything in it moves, and getting that read right is a composition problem before it is a technical one.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving to Montreal for the role. I am not a Canadian citizen or permanent resident, so I would need sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Dear Ubisoft Montreal team,
+
+I am applying for the Level Artist (Unreal) role. Your posting says the job is to create immersive and memorable 3D environments, to place proxies and communicate modeling and texturing needs with the art teams, and to integrate and assemble assets in Unreal Engine while balancing artistic goals against technical constraints. I am writing because I have spent my career on both sides of that conversation: I am the person who builds the asset, and I am used to being the person who says what the asset needs.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. Owning the whole chain means I know exactly what a proxy has to communicate for the modeling and texturing teams to act on it, and where a scene will cost more than it gives. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, which is where composition, colour and shape language became the tools I reach for first. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, with revision rounds as routine.
+
+Environmental storytelling is the part of the brief I would most want to be trusted with. A space reads before anything in it moves, and getting that read right is a composition problem before it is a technical one.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving to Montreal for the role. I am not a Canadian citizen or permanent resident, so I would need sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4 SPERASOFT -->
+  <article class="job" id="sperasoft">
+    <header>
+      <h2 class="studio">Sperasoft / AMC Studio</h2>
+      <p class="role">Lead Props/Environment 3D Artist · Bucareste, Romênia · telecommute</p>
+      <div class="meta">
+        <span class="chip wall">Turnstile</span>
+        <span class="chip plain">Workable</span>
+        <span class="chip plain">cargo de liderança</span>
+      </div>
+      <a class="open" href="https://jobs.workable.com/view/bgM2Eip6fX6RA8zmRDZV2K/" target="_blank" rel="noopener">Abrir a vaga</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="warnbox">O Turnstile aparece depois do Submit e o botão trava em <em>Submitting…</em>. Medido com clique real duas vezes, em casas diferentes.</p>
+        <p class="note">Detalhe que vale saber antes: a campanha escreveu para a Sperasoft por email em 26/08 e foi recusada, mas a própria recusa convidou a acompanhar as vagas no site. A porta não está fechada. Tem gêmea em Varsóvia e é a MESMA vaga: mande uma.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Nome / Email</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti · contact@vinicavalcanti.art</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão salarial</span><button class="copy" data-t="Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.">Copiar</button></div>
+        <p class="val short">Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Cover letter</span><button class="copy" data-t="Dear Sperasoft team,
+
+I am applying for the Lead Props/Environment 3D Artist role. Your posting asks for expert-level skill in hard-surface and organic props, modeling and texturing workflows in PBR, ZBrush and Substance Painter and Designer, and the range to move from stylized to photorealistic. Those are the two halves of my working day, and the range is the part I would bring first.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so the stylized end of that range is not theory for me. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, in the client's defined style, with revision rounds as routine. That is the same working relationship a co-development lead has with a client, seen from the artist's side of the table, and it is why I think an outsourcing background is an advantage here rather than a footnote.
+
+On the lead half: I have been Senior for five years, I review other artists' work and set the asset standard on my team, and I founded and run my own character art school, which is where the habit of giving feedback that someone can act on came from.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving for the role. I am not an EU citizen, so I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Dear Sperasoft team,
+
+I am applying for the Lead Props/Environment 3D Artist role. Your posting asks for expert-level skill in hard-surface and organic props, modeling and texturing workflows in PBR, ZBrush and Substance Painter and Designer, and the range to move from stylized to photorealistic. Those are the two halves of my working day, and the range is the part I would bring first.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, so the stylized end of that range is not theory for me. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, in the client's defined style, with revision rounds as routine. That is the same working relationship a co-development lead has with a client, seen from the artist's side of the table, and it is why I think an outsourcing background is an advantage here rather than a footnote.
+
+On the lead half: I have been Senior for five years, I review other artists' work and set the asset standard on my team, and I founded and run my own character art school, which is where the habit of giving feedback that someone can act on came from.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving for the role. I am not an EU citizen, so I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5 MAGIC MEDIA -->
+  <article class="job" id="magicmedia">
+    <header>
+      <h2 class="studio">Magic Media</h2>
+      <p class="role">Senior 3D Generalist Artist · remoto na Polônia</p>
+      <div class="meta">
+        <span class="chip wall">Turnstile</span>
+        <span class="chip plain">Workable</span>
+        <span class="chip plain">remota</span>
+      </div>
+      <a class="open" href="https://jobs.workable.com/view/fETqLf4yCZ6XDqX9KTXYwG/" target="_blank" rel="noopener">Abrir a vaga</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="note">Publicada em 09/09. A MESMA requisição está publicada em seis países: mande uma só. Ucrânia e Sérvia estão fora do recorte.</p>
+        <p class="warnbox">Mesma parede de Turnstile do Workable.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Nome / Email</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti · contact@vinicavalcanti.art</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão salarial</span><button class="copy" data-t="Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.">Copiar</button></div>
+        <p class="val short">Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Cover letter</span><button class="copy" data-t="Dear Magic Media team,
+
+I am applying for the Senior 3D Generalist Artist role. Your posting asks for assets such as characters or environment props, models both hard surface and organic, and textures. I have spent more than ten years delivering exactly that, and the generalist part is not a compromise for me: owning an asset end to end is how I prefer to work.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration, in Unity and Unreal. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, in the client's defined style, with revision rounds as routine, which is the working relationship a client-facing studio needs an artist to be comfortable in from day one.
+
+Tools: ZBrush, Substance Painter and Designer, Maya, Marmoset, Houdini for grooming, Unity and Unreal for integration.
+
+One thing worth saying about remote: I have worked fully remote with a studio in the United States for almost five years, across a wide time difference, so a distributed team is how I already work rather than something I would be learning on the job.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving for the role. I am not an EU citizen, so I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Dear Magic Media team,
+
+I am applying for the Senior 3D Generalist Artist role. Your posting asks for assets such as characters or environment props, models both hard surface and organic, and textures. I have spent more than ten years delivering exactly that, and the generalist part is not a compromise for me: owning an asset end to end is how I prefer to work.
+
+For almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration, in Unity and Unreal. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters. Before that I spent three years at PUGA Studios delivering assets inside another studio's art direction, in the client's defined style, with revision rounds as routine, which is the working relationship a client-facing studio needs an artist to be comfortable in from day one.
+
+Tools: ZBrush, Substance Painter and Designer, Maya, Marmoset, Houdini for grooming, Unity and Unreal for integration.
+
+One thing worth saying about remote: I have worked fully remote with a studio in the United States for almost five years, across a wide time difference, so a distributed team is how I already work rather than something I would be learning on the job.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I WANT TO RELOCATE and I am fully open to moving for the role. I am not an EU citizen, so I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6 GLINDA -->
+  <article class="job" id="glinda">
+    <header>
+      <h2 class="studio">Glinda Games</h2>
+      <p class="role">3D Artist · Ferntree Gully, Victoria, Austrália · híbrido ou remoto</p>
+      <div class="meta">
+        <span class="chip wall">desafio do Wix</span>
+        <span class="chip plain">formulário próprio</span>
+        <span class="chip plain">pede 2 a 4 anos</span>
+      </div>
+      <a class="open" href="https://www.glindagames.com/jobs/apply" target="_blank" rel="noopener">Abrir o formulário</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="warnbox">O HTML não tem captcha nenhum. No clique em Submit o Wix injeta <em>Verification. Please confirm you're human.</em> Eu cliquei e vi.</p>
+        <p class="note">Fundada por Daniel Visser depois da aquisição da Wicked Witch, com crédito em Age of Empires II Definitive Edition e MultiVersus. Pede 2 a 4 anos e você tem mais de dez: a carta abaixo diz isso de frente, em vez de deixar você parecer sobrequalificado por acidente. Tem campo de anexo para CV e carta.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">First name / Last name / Email / Type</span><button class="copy" data-t="Vini&#10;Cavalcanti&#10;contact@vinicavalcanti.art&#10;Artist">Copiar</button></div>
+        <p class="val short">Vini · Cavalcanti · contact@vinicavalcanti.art · Artist</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Portfolio Link</span><button class="copy" data-t="https://www.artstation.com/viniciuscavalcanti">Copiar</button></div>
+        <p class="val short">https://www.artstation.com/viniciuscavalcanti</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Message</span><button class="copy" data-t="Hi Glinda Games team,
+
+I am writing about the 3D Artist role on the art team. I am a Senior 3D Character Artist with more than ten years in stylized work, and the range you describe is the range I actually work in: environment props and set dressing, vehicles and signage, and occasional character or creature work.
+
+What I do end to end is the asset itself. At E-Line Media in Arizona I have spent almost five years taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration, including polish and optimization passes. Before that I modeled and hand-painted the characters for The Wingfeather Saga season 1 at Angel Studios, and before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's defined style, with revision rounds as routine. Your line about being grounded in realistic PBR while also exploring stylised directions is exactly the ground I stand on.
+
+Tools: ZBrush, Substance Painter and Designer, Maya, Marmoset, Houdini for grooming, Unity and Unreal for integration.
+
+Two honest notes. First, your ad asks for two to four years and I have more than ten, so if you are building a mid-level seat I would rather you know that up front than find out on the call. I am not looking to lead this one, I am looking to build assets and to be useful from week one. Second, I am not an Australian citizen or permanent resident, so I would need visa sponsorship. I want to relocate and I am fully open to moving for the role, and my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Hi Glinda Games team,
+
+I am writing about the 3D Artist role on the art team. I am a Senior 3D Character Artist with more than ten years in stylized work, and the range you describe is the range I actually work in: environment props and set dressing, vehicles and signage, and occasional character or creature work.
+
+What I do end to end is the asset itself. At E-Line Media in Arizona I have spent almost five years taking Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration, including polish and optimization passes. Before that I modeled and hand-painted the characters for The Wingfeather Saga season 1 at Angel Studios, and before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's defined style, with revision rounds as routine. Your line about being grounded in realistic PBR while also exploring stylised directions is exactly the ground I stand on.
+
+Tools: ZBrush, Substance Painter and Designer, Maya, Marmoset, Houdini for grooming, Unity and Unreal for integration.
+
+Two honest notes. First, your ad asks for two to four years and I have more than ten, so if you are building a mid-level seat I would rather you know that up front than find out on the call. I am not looking to lead this one, I am looking to build assets and to be useful from week one. Second, I am not an Australian citizen or permanent resident, so I would need visa sponsorship. I want to relocate and I am fully open to moving for the role, and my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 7 JAM CITY -->
+  <article class="job" id="jamcity">
+    <header>
+      <h2 class="studio">Jam City</h2>
+      <p class="role">Level Design Artist · São Francisco, presencial</p>
+      <div class="meta">
+        <span class="chip wall">hCaptcha</span>
+        <span class="chip plain">Lever</span>
+        <span class="chip ok">USD 90.000 a 110.000</span>
+      </div>
+      <a class="open" href="https://jobs.lever.co/jamcity/787abb3b-1009-42f3-bf82-9846dff0e646/apply" target="_blank" rel="noopener">Abrir o formulário</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="note">É a última da fila por dois motivos escritos: é presencial em São Francisco e o produto é jogo mobile de objetos escondidos. Régua e dedupe estão limpos, então ela existe; não é a que eu recomendaria antes das outras seis.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Nome / Email / Empresa atual</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art&#10;E-Line Media">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti · contact@vinicavalcanti.art · E-Line Media</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Current location (escolha da lista)</span><button class="copy" data-t="Olinda">Copiar</button></div>
+        <p class="val short">Olinda</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão salarial (faixa publicada, peça a base)</span><button class="copy" data-t="Aligned with the posted range for the role, at the lower end: USD 90,000. Open to aligning with your band for the role.">Copiar</button></div>
+        <p class="val short">Aligned with the posted range for the role, at the lower end: USD 90,000. Open to aligning with your band for the role.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Autorização de trabalho nos EUA</span><button class="copy" data-t="I am not authorized to work in the United States and would need visa sponsorship. I want to relocate and I am fully open to moving to San Francisco for the role.">Copiar</button></div>
+        <p class="val short">I am not authorized to work in the United States and would need visa sponsorship. I want to relocate and I am fully open to moving to San Francisco for the role.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Cover letter</span><button class="copy" data-t="Dear Jam City team,
+
+I am applying for the Level Design Artist role. Your posting asks for assembling captivating levels from existing assets, editing or creating high-quality and optimized 3D environments and props, and lighting 3D scenes that stay optimized for mobile devices. The optimization line is the one that made me write: I have spent almost five years shipping assets that had to look right and stay cheap.
+
+At E-Line Media in Arizona I take Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration in Unity, with LODs and polish passes as part of the job rather than an afterthought. That is the same discipline a mobile level needs. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, which is where composition, colour and value became the tools I reach for first, and those are the three your posting names.
+
+I am also comfortable on the collaboration side your brief describes: presenting work to design and narrative leads, taking a change of direction, and playtesting other people's levels to give feedback someone can act on. I have been Senior for five years and I review other artists' work, and I founded and run my own character art school.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I want to relocate and I am fully open to moving to San Francisco for the role. I am not authorized to work in the United States, so I would need visa sponsorship, and I say it up front. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti">Copiar</button></div>
+        <p class="val">Dear Jam City team,
+
+I am applying for the Level Design Artist role. Your posting asks for assembling captivating levels from existing assets, editing or creating high-quality and optimized 3D environments and props, and lighting 3D scenes that stay optimized for mobile devices. The optimization line is the one that made me write: I have spent almost five years shipping assets that had to look right and stay cheap.
+
+At E-Line Media in Arizona I take Endstar's hero assets from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim sheets, material work, look development and engine integration in Unity, with LODs and polish passes as part of the job rather than an afterthought. That is the same discipline a mobile level needs. On The Wingfeather Saga season 1 at Angel Studios I modeled and hand-painted the characters, which is where composition, colour and value became the tools I reach for first, and those are the three your posting names.
+
+I am also comfortable on the collaboration side your brief describes: presenting work to design and narrative leads, taking a change of direction, and playtesting other people's levels to give feedback someone can act on. I have been Senior for five years and I review other artists' work, and I founded and run my own character art school.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I want to relocate and I am fully open to moving to San Francisco for the role. I am not authorized to work in the United States, so I would need visa sponsorship, and I say it up front. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+LinkedIn: linkedin.com/in/vinicavalcnti
+
+Thank you for your time.
+
+Vini Cavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p>Fora desta lista e sem esforço nenhum: a <strong>Flaming Fowl Studios</strong> (Lead 3D Artist, remoto de qualquer lugar do mundo) já está como rascunho pronto no seu Gmail. É só disparar, e a porta é email, então não tem captcha.</p>
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("button.copy");
+    if (!b) return;
+    var texto = b.getAttribute("data-t") || "";
+    var marcar = function () {
+      var antes = b.textContent;
+      b.textContent = "Copiado";
+      b.setAttribute("data-done", "1");
+      setTimeout(function () {
+        b.textContent = antes;
+        b.removeAttribute("data-done");
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(marcar, function () { manual(texto, marcar); });
+    } else {
+      manual(texto, marcar);
+    }
+  });
+  function manual(texto, ok) {
+    var ta = document.createElement("textarea");
+    ta.value = texto;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); ok(); } catch (err) { ta.remove(); return; }
+    ta.remove();
+  }
+</script>
