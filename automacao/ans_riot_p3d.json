@@ -1,0 +1,33 @@
+{
+  "city": "Olinda, Pernambuco, Brazil",
+  "questions": [
+    {"id":"question_68868145","label":"LinkedIn Profile URL","type":"text","text":"https://www.linkedin.com/in/vinicavalcnti/"},
+    {"id":"question_68868147","label":"Website","type":"text","text":"https://www.artstation.com/viniciuscavalcanti"},
+
+    {"id":"question_68868148","label":"How did you hear about this job","type":"select","prefs":["^Riot Games Website$","Riot Games Website"]},
+
+    {"id":"question_68868149","label":"Friends, family or significant others at Riot","type":"text","text":"None. I do not know anyone who works at Riot Games or has worked there in the last year."},
+
+    {"id":"question_68868150","label":"Current full address","type":"text","text":"__ENDERECO__"},
+
+    {"id":"question_68868151[]","label":"Business fluent languages","type":"select","prefs":["^English$","English"]},
+
+    {"id":"question_68868152","label":"18 years of age or older","type":"select","prefs":["^Yes$","Yes"]},
+    {"id":"question_68868153","label":"Race or ethnic identity","type":"select","prefs":["^Decline to state$","Decline"]},
+    {"id":"question_68868154","label":"Gender","type":"select","prefs":["^Decline to state$","Decline"]},
+
+    {"id":"question_68868155","label":"Legally authorized to work in the US","type":"select","prefs":["^No$","No"]},
+    {"id":"question_68868156","label":"Require sponsorship to work in the US","type":"select","prefs":["^Yes$","Yes"]},
+
+    {"id":"question_68868157","label":"Candidate Privacy Notice","type":"select","prefs":["^I Accept / I Agree$","I Accept","Agree"]},
+
+    {"id":"question_68868158","label":"Previously worked for Riot Games","type":"select","prefs":["^No$","No"]},
+    {"id":"question_68868159","label":"Previously applied to Riot Games","type":"select","prefs":["^Yes$","Yes"]},
+
+    {"id":"question_68868160","label":"Worked for Tencent or affiliate in last 12 months","type":"select","prefs":["^No$","No"]},
+    {"id":"question_68868161","label":"Last year at Tencent","type":"select","prefs":["^n/a$","n/a"]},
+    {"id":"question_68868162","label":"Last month at Tencent","type":"select","prefs":["^n/a$","n/a"]},
+
+    {"id":"question_68868163","label":"E-Verify notice","type":"select","prefs":["^Yes$","Yes"]}
+  ]
+}

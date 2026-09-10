@@ -11,6 +11,14 @@ if(!TEL){ console.error('[erro] falta a variavel de ambiente VINI_TEL com o tele
 const BASE={first:'Vini',last:'Cavalcanti',email:'contact@vinicavalcanti.art',phone:TEL,country:'Brazil',city:'Olinda, Pernambuco, Brazil',
  resume:'/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/apply/Vini_Cavalcanti_CV.pdf',
  cover:'/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/apply/Vini_Cavalcanti_Cover_Letter.pdf'};
+// O ENDERECO tambem nunca fica escrito em arquivo do repositorio, pela mesma razao do
+// telefone: o repositorio e PUBLICO. O arquivo de respostas traz o marcador __ENDERECO__ e o
+// valor vem de VINI_END, que mora no doc privado do Drive. Sem a variavel, o script para antes
+// de abrir o navegador, em vez de mandar formulario com campo obrigatorio vazio.
+for(const q of (A.questions||[])) if(q.text==='__ENDERECO__'){
+  if(!process.env.VINI_END){ console.error('[erro] o arquivo pede __ENDERECO__ e falta a variavel VINI_END'); process.exit(1); }
+  q.text=process.env.VINI_END;
+}
 const log=(...a)=>console.log(`[${slug}]`,...a);
 (async()=>{
  // Half Breaks, rodada 1: modo headless levava a recusa seca de sessao em varios ATS.
