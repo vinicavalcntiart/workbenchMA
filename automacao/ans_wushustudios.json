@@ -1,0 +1,28 @@
+{
+  "url": "https://wushustudios.pinpointhq.com/register-your-interest/new",
+  "cv": "Vini_Cavalcanti_CV.pdf",
+  "texto": {
+    "#job_seeker_form_job_seeker_first_name": "Vini",
+    "#job_seeker_form_job_seeker_last_name": "Cavalcanti",
+    "#job_seeker_form_job_seeker_email": "contact@vinicavalcanti.art",
+    "#phone-input": "__TEL__",
+    "#job_seeker_form_linkedin_url": "https://www.linkedin.com/in/vinicavalcnti/",
+    "#personal-summary": "I am registering my interest in the art team at Wushu Studios. Co-development in Liverpool means matching an existing art direction asset for asset and shipping to someone else's bar, and that is the skill outsourcing taught me before I ever worked in house.\n\nI am a senior 3D character artist with more than ten years on stylized characters and creatures. At Angel Studios I modelled and hand painted the season one characters of The Wingfeather Saga. For close to five years at E-Line Media I have built hero characters end to end on Endstar, from sculpt to engine, working remotely with an American team. I came up through outsourcing at PUGA Studios.\n\nI take a character all the way: high poly, sculpt, retopology, UV, bake, texture, LODs and engine setup, with grooming in Houdini as a support skill. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it: https://www.artstation.com/viniciuscavalcanti\n\nI am not a UK or EU citizen, so I would need work authorization sponsorship. I am ready to move for the role.\n\nVini Cavalcanti"
+  },
+  "combos": [
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][location_ids][]\"]",
+      "rotulo": "Locations",
+      "valores": [
+        "Liverpool"
+      ]
+    },
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][department_ids][]\"]",
+      "rotulo": "Departments",
+      "valores": [
+        "Product"
+      ]
+    }
+  ]
+}
