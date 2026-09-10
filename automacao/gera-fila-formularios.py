@@ -443,54 +443,6 @@ vaga(
          "Portfolio: " + ART, None, False),
     ])
 
-# ---------------------------------------------------------------- 10 FENRIS
-vaga(
-    id='fenris', studio='Fenris Creations',
-    role='Register Your Interest, banco de talentos · Reykjavík, Islândia',
-    chips=[('ok', 'sem captcha'), ('plain', 'Pinpoint'), ('ok', 'patrocina visto')],
-    url='https://careers.fenriscreations.com/register-your-interest/new',
-    ok='É a CCP Games renomeada, dona do EVE Online. O processo seletivo tem um estágio chamado '
-       'literalmente "Stage 5: Relocation and Benefits Chat", e o formulário pergunta "Would you '
-       'need a VISA sponsorship in order to relocate for the role?". Casa que pergunta isso é casa '
-       'que patrocina.',
-    note='Eu não fechei o envio: o servidor recusou com "Answers boolean answer can\'t be blank", '
-         'porque a pergunta de visto é condicional e só aparece depois que a localização é '
-         'respondida. Nada ficou registrado do lado deles. Confira com o olho o campo de '
-         'localização: foi exatamente ali que o meu clique caiu em USA/Canada quando eu pedi Other.',
-    campos=[
-        ('First Name / Last Name / Email', 'Vini\nCavalcanti\n' + EMAIL, None, True),
-        ('LinkedIn URL', LI, None, True),
-        ('What is your current location?', 'Other', 'As opções são Iceland, United Kingdom, EEA/EU, USA/Canada, Asia e Other.', True),
-        ('Would you need a VISA sponsorship…?', 'Yes', 'Só aparece depois que a localização é respondida.', True),
-        ('Are you a…', 'None of the above?', None, True),
-        ('Where did you hear about this position?', 'Fenris Creations Website', None, True),
-        ('Willing to relocate / Locations / Departments / Gender', 'Yes\nReykjavík\nArt\nPrefer Not To Say', None, True),
-        ('Personal Summary',
-         "I am a Senior 3D Character Artist with more than ten years in stylized characters, and I "
-         "am writing to be on your list for character, creature and asset work.\n\n"
-         "On The Wingfeather Saga season 1 at Angel Studios I modeled and hand painted the "
-         "characters, so the stylized surface treatment was mine from block-in to final. For "
-         "almost five years I have been with E-Line Media in Arizona, taking Endstar's hero assets "
-         "from first sculpt to engine: sculpt, retopology, UVs, baking, PBR texturing, trim "
-         "sheets, material work, look development and engine integration. I also do hair and fur "
-         "grooming in Houdini. Before that I spent three years at PUGA Studios delivering assets "
-         "under another studio's art direction, in the client's defined style, with revision "
-         "rounds as routine.\n\n"
-         "Fenris builds deep, player-driven worlds that hold communities together for decades, and "
-         "worlds like that are made of assets that have to survive being looked at for years, not "
-         "for one shot. That is the kind of asset I like building. I have been Senior for five "
-         "years, I review other artists' work and set the asset standard, and I founded and run my "
-         "own character art school.\n\n"
-         "My portfolio holds more than 45 projects with over 60 characters across many titles, and "
-         "my personal projects are some of the strongest pieces in it.\n\n"
-         "I want to relocate to Reykjavík and I am fully open to moving for the role. I am not an "
-         "EU or EEA citizen, so I would need visa sponsorship; my academic background, with an "
-         "honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS "
-         "and publications, makes a strong visa case.\n\n"
-         "Portfolio: " + ART, None, False),
-    ])
-
-
 def campo(nome, valor, nota, curto):
     o = io.StringIO()
     o.write('      <div class="field">\n')
@@ -535,7 +487,7 @@ out.write(CSS)
 out.write('\n\n<div class="wrap">\n\n')
 out.write('''  <header>
     <h1>Fila do Vini</h1>
-    <p class="sub">Onze formulários, <strong>todos de personagem ou criatura</strong>. Você mediu
+    <p class="sub">Dez formulários, <strong>todos de personagem ou criatura</strong>. Você mediu
     certo: das 27 candidaturas de 09 e 10 de setembro, 17 eram de ambiente e 7 de personagem.
     Esta lista é a correção. Nenhuma vaga de ambiente entrou aqui.</p>
   </header>
@@ -543,7 +495,7 @@ out.write('''  <header>
   <div class="howto">
     <p><strong>Como usar.</strong> Abra o link da vaga e, para cada campo, toque em <em>Copiar</em> e cole. Os textos longos já estão prontos e citam o anúncio daquele estúdio, não precisam de edição.</p>
     <p><strong>Telefone e endereço não estão aqui de propósito.</strong> Eles moram só no seu documento privado do Drive, <em>CAMPANHA - dados pessoais dos formulários</em>. Copie de lá quando o campo pedir.</p>
-    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Nenhuma dessas onze foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
+    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Nenhuma dessas dez foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
     <p><strong>Se você só tiver dois minutos hoje:</strong> a nº 3, Lighthouse Games. O formulário oficial exige apenas nome, sobrenome e email. Todo o resto é opcional.</p>
   </div>
 
@@ -560,6 +512,12 @@ out.write('''  <footer>
     Level Artist (três), Sperasoft Lead Props/Environment, Magic Media 3D Generalist, Glinda Games e
     Jam City Level Design Artist. Todas continuam registradas no repositório, mas nenhuma é a sua
     disciplina e nenhuma volta para a sua mão até que a fila de personagem esteja vazia.</p>
+    <p><strong>A Fenris Creations saiu daqui porque foi ENVIADA</strong>, às 04h de hoje, e é a
+    primeira candidatura de personagem depois da regra que você escreveu. Três provas: o servidor
+    respondeu 302, a página final terminou em <code>/thanks</code> e a tela escreveu
+    <em>"Thanks. You have successfully registered your interest."</em> O que travava era um erro meu,
+    não uma parede deles: a pergunta de visto é booleana e os botões dela valem <code>true</code> e
+    <code>false</code>, não Yes e No, então a resposta obrigatória ia em branco. Corrigido.</p>
     <p><strong>Fora desta lista e sem esforço nenhum:</strong> a <strong>Flaming Fowl Studios</strong>
     (Lead 3D Artist, remoto de qualquer lugar do mundo) já está como rascunho pronto no seu Gmail.
     É só disparar, e a porta é email, então não tem captcha.</p>
