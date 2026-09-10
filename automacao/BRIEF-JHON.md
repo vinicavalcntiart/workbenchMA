@@ -131,7 +131,7 @@ disfarçado. Formulário genérico de contato não conta como candidatura e não
 aberto a considerar": é que ele quer. Onde houver campo de texto livre, de localização, de
 disponibilidade ou de mensagem, a posição aparece assim, sem rodeio:
 
-> I WANT TO RELOCATE and I am fully open to moving for the role.
+> I am ready to move for the role.
 
 Onde couber mais de uma linha, acrescentar o caso de visto, que é forte:
 

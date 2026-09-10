@@ -54,7 +54,7 @@ Dear HandyGames team,
 
 I am Vini Cavalcanti, a Senior 3D Artist with more than 10 years in production, applying for the 2D/3D Game Artist (Mid-level/Senior) role at HandyGames Studios in Giebelstadt.
 
-I WANT TO RELOCATE and I am fully open to moving to Giebelstadt for the role, on site.
+I am ready to move to Giebelstadt for the role, on site.
 
 The 3D half of your listing is the whole of my daily work. For almost five years at E-Line Media I have taken Endstar's assets from first sculpt to engine: high and low poly modeling, retopology, UVs, baking, PBR texturing, material and asset setup, LODs and integration in Unity and Unreal. Stylized models, environments, props and characters are what I build, and I was credited on The Wingfeather Saga season 1 at Angel Studios modeling and hand painting to a defined stylized art direction. For three years at PUGA Studios I delivered stylized game art for international clients in the client's style, with review rounds as routine, which is the same discipline your Art Direction Style Guide asks for. On the mentoring line: at E-Line I review other artists' work and set the asset standard, and I founded and teach at my own character art school.
 

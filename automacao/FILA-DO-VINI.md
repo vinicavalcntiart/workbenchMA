@@ -310,7 +310,7 @@ Oceania `AUD 110,000` (grande) e `AUD 95,000` (média). Sempre com a frase
 ### TEXTO A — apresentação completa, com realocação (campo livre grande)
 
 ```
-I WANT TO RELOCATE and I am fully open to moving for the role, on site and full time.
+I am ready to move for the role, on site and full time.
 
 I am a Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development, LODs and engine integration, plus character grooming in Houdini when hair or fur is part of the design. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini, Marmoset, Unreal and Unity.
 
@@ -328,7 +328,7 @@ LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
 ### TEXTO B — versão curta (campo de duas ou três linhas)
 
 ```
-Senior 3D Character Artist, 10+ years in stylized characters: modeling, sculpting, texturing and look development, plus hair and fur grooming in Houdini. Credited on The Wingfeather Saga at Angel Studios and, for almost five years, on Endstar at E-Line Media. I WANT TO RELOCATE and I am fully open to moving for the role; I am not an EU citizen and would need visa sponsorship. Portfolio: https://www.artstation.com/viniciuscavalcanti
+Senior 3D Character Artist, 10+ years in stylized characters: modeling, sculpting, texturing and look development, plus hair and fur grooming in Houdini. Credited on The Wingfeather Saga at Angel Studios and, for almost five years, on Endstar at E-Line Media. I am ready to move for the role; I am not an EU citizen and would need visa sponsorship. Portfolio: https://www.artstation.com/viniciuscavalcanti
 ```
 
 ### TEXTO C — ressalva de realismo (só onde o anúncio pedir realista/fotorreal)
@@ -375,7 +375,7 @@ I am not an EU citizen and I have no work authorization in Canada, the US, Austr
 **Textos longos:**
 
 ```
-Dead by Daylight is a game made of characters, killers and licensed survivors shipped continuously, and character art end to end is exactly what I do. I have more than 10 years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration, plus hair and fur grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters. As a Senior I review other artists' work and set the asset standard, I teach as the founder of my own character art school and I am a master's candidate. I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; I am not an EU or Canadian citizen and would need visa sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Portfolio: https://www.artstation.com/viniciuscavalcanti
+Dead by Daylight is a game made of characters, killers and licensed survivors shipped continuously, and character art end to end is exactly what I do. I have more than 10 years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration, plus hair and fur grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters. As a Senior I review other artists' work and set the asset standard, I teach as the founder of my own character art school and I am a master's candidate. I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I am ready to move to Montreal for the role; I am not an EU or Canadian citizen and would need visa sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Portfolio: https://www.artstation.com/viniciuscavalcanti
 ```
 
 **Cuidados:** o anúncio está em francês na API, mas o formulário é bilíngue e o texto em inglês é aceito. Não responda "Yes" à elegibilidade no Canadá: mentir na triagem derruba a candidatura depois. Esta é a **terceira** requisição de personagem da Behaviour — a de *7 Days to Die* já foi enviada em 30/08, não repita aquela.
@@ -476,7 +476,7 @@ Dead by Daylight is a game made of characters, killers and licensed survivors sh
 **Textos longos:**
 
 ```
-The posting asks for a senior character artist who can set up and groom hair in Unreal Engine 5, and that is the combination I bring: 10+ years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine, plus character grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand-painted Season 1 characters. I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case.
+The posting asks for a senior character artist who can set up and groom hair in Unreal Engine 5, and that is the combination I bring: 10+ years in 3D characters, almost five of them at E-Line Media taking Endstar's hero characters from first sculpt to engine, plus character grooming in Houdini. On The Wingfeather Saga at Angel Studios I modeled and hand-painted Season 1 characters. I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I already applied to your 7 Days to Die opening because Behaviour is a studio I want to work at. I am ready to move to Montreal for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case.
 ```
 
 **Cuidados:** é vaga diferente da nº 1 desta fila (aquela é Dead by Daylight); pode mandar as duas, mas com cartas diferentes, que é como estão escritas aqui.
@@ -509,7 +509,7 @@ The posting asks for a senior character artist who can set up and groom hair in 
 **Textos longos:**
 
 ```
-I WANT TO RELOCATE and I am fully open to moving for the role, and your relocation support to Hungary or Germany is one of the reasons I am writing.
+I am ready to move for the role, and your relocation support to Hungary or Germany is one of the reasons I am writing.
 
 I am a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor. Texturing and material work are not a separate step for me: I own the asset end to end, sculpt and high poly, retopology, UVs, baking, PBR and hand painted texturing, look development and engine integration, in Substance Painter and Designer, ZBrush, Maya and Houdini, where I also handle grooming.
 
@@ -626,7 +626,7 @@ Portfolio: https://www.artstation.com/viniciuscavalcanti
 | LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
 | Anos em lookdev ou texturização | `10+` (o anúncio pede no mínimo 6) |
 | Autorização de trabalho no Canadá | `No, I would need sponsorship` |
-| Aceita realocar para Toronto? | `Yes. I WANT TO RELOCATE to Toronto and I am fully open to moving for the role, on site and full time.` |
+| Aceita realocar para Toronto? | `Yes. I am ready to move to Toronto for the role, on site and full time.` |
 | Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
 | Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO C |
 
@@ -714,7 +714,7 @@ Nuke and Mari are the two tools on your list I would be picking up rather than b
 | Current Location | `Olinda, Pernambuco` |
 | Citizenship | `Brazilian` |
 | **Will you need visa sponsorship? (radio)** | `Yes` |
-| Desired salary/rate | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.` |
+| Desired salary/rate | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I am ready to move to Montreal for the role.` |
 | What are your pronouns? (radio) | `He/him` |
 | Consentimento | marcar |
 
@@ -788,7 +788,7 @@ I answered yes: I would need Skilled Worker sponsorship. My academic background 
 **Textos longos:**
 
 ```
-I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1, and for almost five years I've been with E-Line Media in Arizona, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini. A new narrative project at the studio behind A Plague Tale is exactly the kind of character-driven work I want: I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I WANT TO RELOCATE to Bordeaux and am fully open to moving for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. Portfolio: artstation.com/viniciuscavalcanti
+I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand-painted characters for Season 1, and for almost five years I've been with E-Line Media in Arizona, taking Endstar's hero characters from first sculpt to engine. I also do character grooming in Houdini. A new narrative project at the studio behind A Plague Tale is exactly the kind of character-driven work I want: I take a character end to end, sculpt through retopology, UVs, baking, texturing and engine integration, and I am ready to move to Bordeaux and am fully open to moving for the role; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case. Portfolio: artstation.com/viniciuscavalcanti
 ```
 
 **Cuidados:** o anúncio é em francês, mas o formulário aceita resposta em inglês; não invente nível de francês em nenhum campo.
@@ -811,7 +811,7 @@ I'm Vini Cavalcanti, Senior 3D Character Artist with 10+ years in stylized chara
 **Textos longos:**
 
 ```
-Applying for the SENIOR 3D ARTIST role listed on your careers page. I WANT TO RELOCATE and I am fully open to moving to Sweden for the role, on site and full time.
+Applying for the SENIOR 3D ARTIST role listed on your careers page. I am ready to move to Sweden for the role, on site and full time.
 
 I am a Senior 3D Character Artist with more than 10 years in stylized characters, and I take an asset end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, in Maya, ZBrush, Substance Painter and Designer and Blender. I also groom hair and fur in Houdini, so character, texture and groom are one continuous job for me rather than three handoffs.
 
@@ -844,7 +844,7 @@ Site: https://vinicavalcanti.com
 | Portfolio / LinkedIn | ArtStation e LinkedIn dos DADOS FIXOS |
 | Anos em lookdev ou texturização | `10+` |
 | Autorização de trabalho no Canadá | `No, I would need sponsorship` |
-| Aceita realocar? | `Yes. I WANT TO RELOCATE to Montreal and I am fully open to moving for the role.` |
+| Aceita realocar? | `Yes. I am ready to move to Montreal for the role.` |
 | Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
 | Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` + TEXTO C |
 
@@ -915,7 +915,7 @@ Site: https://vinicavalcanti.com
 | Email | `contact@vinicavalcanti.art` |
 | Phone | código do país Brasil; número do documento privado do Drive |
 | Current Country of Residence | `Brazil` |
-| What role are you interested in? | `Character Modeller and Texture Artist. Senior 3D Character Artist, 10+ years, stylized. I WANT TO RELOCATE to Vancouver and I am fully open to moving for the role; I would need visa sponsorship.` |
+| What role are you interested in? | `Character Modeller and Texture Artist. Senior 3D Character Artist, 10+ years, stylized. I am ready to move to Vancouver for the role; I would need visa sponsorship.` |
 | **What is your current level?** (menu) | `Sr` — o menu **não tem "Senior"** |
 | LinkedIn Link | `https://www.linkedin.com/in/vinicavalcnti/` |
 | Reel or Portfolio Link 1 | `https://www.artstation.com/viniciuscavalcanti` |
@@ -946,7 +946,7 @@ Site: https://vinicavalcanti.com
 | LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
 | Website / Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
 | Qual é o seu status de trabalho no Canadá? | `I will need a work permit` |
-| Você está em Montréal? | `No — I WANT TO RELOCATE and I am fully open to moving for the role` |
+| Você está em Montréal? | `No — I am ready to move for the role` |
 | Data disponível | cerca de dois meses à frente |
 | Pretensão | `CAD 95,000 per year. Open to aligning with your band for the role.` |
 | Cargo pretendido / mensagem | TEXTO B |
@@ -1037,7 +1037,7 @@ Endstar (E-Line Media, PC), Senior 3D Character Artist: hero characters from fir
 ```
 My discipline is character: modeling, sculpting, texturing and look development. If a character opening comes up at EF Games I would like this application forwarded there. I am applying to the Hard Surface and Vehicle role because building a game asset end to end is the same job for me, and because I want to work in Madrid.
 
-I WANT TO RELOCATE and I am fully open to moving for the role, on site in Madrid and full time. I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+I am ready to move for the role, on site in Madrid and full time. I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
 
 I am a Senior 3D Character Artist with more than 10 years in stylized work. For almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration in Unity and Unreal, which is the whole asset rather than one stage of it. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. On hard surface specifically, mechanical and articulated shapes are part of my daily modeling work, and I take 2D concept through to a finished asset with clean topology, UV edit, materials and baked textures.
 
@@ -1092,7 +1092,7 @@ Portfolio: artstation.com/viniciuscavalcanti
 | Phone | com código do país, do documento privado do Drive |
 | **Eligibility to work in Germany** | `No` |
 | Availability Date | data cerca de dois meses à frente, no formato `dd.mm.aaaa` |
-| Desired Salary / Freelance Daily Rate | `EUR 55,000 per year, or EUR 350 per day freelance. Open to aligning with your band for the role. I WANT TO RELOCATE to München or Berlin and I am fully open to moving for the role; I am not an EU citizen and would need visa sponsorship.` |
+| Desired Salary / Freelance Daily Rate | `EUR 55,000 per year, or EUR 350 per day freelance. Open to aligning with your band for the role. I am ready to move to München or Berlin for the role; I am not an EU citizen and would need visa sponsorship.` |
 | Link to Portfolio/Website | `https://www.artstation.com/viniciuscavalcanti` |
 | Portfolio Password | `No password, the portfolio is public` |
 | LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
@@ -1128,7 +1128,7 @@ I'm a Senior 3D Character Artist with more than 10 years in stylized characters,
 
 Your careers page describes the Brno office as the core of 3D art, with artists specialised in vehicle and character creation and character animation. Character creation end to end is my daily work: sculpt, retopology, UVs, baking, texturing and engine integration, with topology built for deformation, plus character grooming in Houdini when hair or fur is part of the design.
 
-My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I WANT TO RELOCATE and I am ready to move for the role; I would need work sponsorship, and my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am ready to move and I am ready to move for the role; I would need work sponsorship, and my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.
 
 Portfolio: artstation.com/viniciuscavalcanti
 ```
@@ -1228,7 +1228,7 @@ Portfolio: artstation.com/viniciuscavalcanti
 **Textos longos:**
 
 ```
-I WANT TO RELOCATE to Munich and I am fully open to moving for the role, on site and full time.
+I am ready to move to Munich for the role, on site and full time.
 
 I am applying as a Senior 3D Character Artist / Character Modeler. I have more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini, so hair is part of the character rather than a separate handoff.
 
@@ -1269,7 +1269,7 @@ Work authorisation: I am not an EU citizen and I would need visa sponsorship. My
 | Kwota (pretensão) | `EUR 45,000` |
 | Okres wypowiedzenia (aviso prévio) | cerca de dois meses |
 | Adres e-mail de quem indicou | deixar vazio |
-| Informacja dodatkowa | TEXTO A, com `I WANT TO RELOCATE to Wroclaw` na primeira linha |
+| Informacja dodatkowa | TEXTO A, com `I am ready to move to Wroclaw` na primeira linha |
 | Zgoda (consentimento) * | marcar |
 | reCAPTCHA | marcar a caixa |
 
@@ -1428,7 +1428,7 @@ Portfolio: artstation.com/viniciuscavalcanti
 | Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
 | Tem direito de trabalho na Nova Zelândia? | `No` |
 | Está na Nova Zelândia? | `No` |
-| Aceita realocar? | `Yes — I WANT TO RELOCATE and I am fully open to moving for the role` |
+| Aceita realocar? | `Yes — I am ready to move for the role` |
 | Pretensão | `Open to aligning with your band for the role; as a reference, the equivalent of AUD 95,000 per year for a studio of this size.` |
 | Campo livre | TEXTO A |
 
