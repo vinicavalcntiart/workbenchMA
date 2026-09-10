@@ -153,7 +153,8 @@ escrita à mão, porque ela é:
 
 Tudo o mais é regra fixa da campanha, sem exceção:
 
-- **Sem travessão. Sem emoji. Nunca a palavra Brazil.** Sem "I hope this finds you well".
+- **Sem travessão. Nunca a palavra Brazil.** Sem "I hope this finds you well".
+- **EMOJI AGORA E OBRIGATORIO, e o Vini cobrou tres vezes.** Carta para pessoa com nome leva um ou dois, preferencia dele: ☺️ e 😊. Um no fecho, opcionalmente outro ao citar o portfolio. Nunca no assunto (o disparador acha o rascunho pelo assunto exato). Ver a regra completa no fim do BRIEFING.md.
 - Nunca escrever nada que sugira hesitação em mudar de país.
 - Nunca revelar salário atual, prazo de contrato, situação financeira, telefone ou endereço.
 - **NEGRITO ESTRATÉGICO, e ele tem forma fixa. Correção do Vini em 07/09.** A carta fria é o
@@ -772,3 +773,71 @@ apagado. Não estava apagado: estava só em HTML, que é exatamente o que filtro
 **Conferência obrigatória depois de criar rascunho:** reler com `list_drafts` em
 `DRAFT_VIEW_FULL` e checar que `plaintextBody` **não** está vazio. Se estiver, reenviar o
 `update_draft` com `body` E `htmlBody` juntos, porque passar só um APAGA o outro.
+
+## REGRA DO VINI, 10/09 DE MADRUGADA: MAIS SIMPATIA E MAIS EMOJI, EM TODA MENSAGEM
+
+Ele disse, literal:
+
+> *"vamos melhorar a comunicacao no email. mais simpatia. mais emojis gosto mt desses: ☺️ 😊
+> usem bastante quando fizerem mensagens e interagirem no meu nome"*
+
+É a **terceira vez** que ele cobra isto. Em 07/09 já tinha dito *"vc n usou emoji, soltou um hi
+seco. one more note, quem fala assim? tudo menos simpatia"*. Na madrugada de 10/09 cobrou de novo,
+*"tb tem que ver a falta de emojis que pedi"*, e a auditoria dos vinte rascunhos daquele momento
+deu **emoji = ZERO em todos os vinte**. Cobrado três vezes deixa de ser preferência e vira regra.
+
+**A REGRA ANTIGA CAI.** O briefing dizia, na lista de proibições de carta, *"Proibido em carta: a
+palavra Brazil, travessão, emoji, floreio de IA"*. **Emoji sai dessa lista.** Continuam proibidos a
+palavra Brazil, o travessão e o floreio de IA.
+
+### Os dois emojis preferidos dele, e são estes
+
+**☺️ e 😊.** Use estes dois por padrão. Um terceiro só quando for concreto e óbvio no contexto
+(🎨 falando de arte, 👋 numa saudação de retomada). **Nada de emoji decorativo aleatório**, nada de
+🚀 ✨ 🔥, que é justamente o floreio que ele odeia.
+
+### Onde entram, por tipo de mensagem
+
+| Tipo | Quantos | Onde |
+|---|---|---|
+| **Resposta a mensagem humana calorosa** | 1 a 2 | na abertura que agradece e no fecho |
+| **Carta fria para PESSOA COM NOME** (abre com `Hi Sarah,`) | 1 a 2 | no fecho, e opcionalmente ao citar o portfólio |
+| **Carta fria para CAIXA** (`jobs@`, `info@`, `careers@`) | 1 | no fecho, e só |
+| **Campo de formulário de ATS** | **ZERO** | formulário é registro, não conversa |
+| **Recusa, follow-up de silêncio, mensagem de assunto delicado** | **ZERO** | emoji ali soa desdém |
+
+**Nunca no assunto do email**, porque o disparador do Apps Script acha o rascunho pelo assunto
+exato e qualquer caractere a mais some com a carta para sempre. **Nunca em bloco**, tipo `☺️😊`.
+Um por lugar.
+
+### O resto da simpatia, que não é emoji
+
+Nome da pessoa na abertura, sempre que houver nome. Uma frase que reconhece o que ELA disse ou
+fez, antes de falar do Vini. Nada de `Hi,` seco. Nada de `One more note`. Contração é bem-vinda
+(`I'm`, `I'd`), porque é como gente escreve.
+
+## REGRA DO VINI, 10/09: O GRUPO DISNEY SE OLHA TODO DIA, SEM EXCEÇÃO
+
+Ele disse: *"n esqueça da disney. sempre olho no grupo disney pixar etc."*
+
+A regra 14 já mandava aplicar imediatamente em vaga de arte ou modelagem da Disney, DreamWorks,
+Paramount e Warner. **O que muda agora é que a varredura do grupo Disney deixa de ser reativa e
+vira rotina fixa: toda rodada de caça olha o grupo, mesmo que a rodada tenha outro alvo.**
+
+**Os quadros do grupo, com o que já se sabe de cada um:**
+
+| Casa | Onde ler | Nota |
+|---|---|---|
+| Disney (inclui **ILM**, **Pixar**, Marvel, 20th, Searchlight) | Workday, locatário `disney` no pod `wd5`, **DOIS sites**: `disneycareer` e `disneycareerdc` | O `disneycareerdc` foi descoberto tarde e tinha vaga que o outro não tinha. **Leia os dois, sempre.** |
+| Pixar | Workday, locatário `pixar`, pod `wd501`, site `Pixar_External_Career_Site` | |
+| DreamWorks | SmartRecruiters, `nbcuniversal3` | As de Montréal têm **veto escrito** de autorização no Canadá |
+| Paramount / Skydance Animation | Lever, `skydance` | A política de privacidade aponta para `privacy.paramount.com`, é o que prova o grupo |
+| Warner | `careers.wbd.com` e Workday `warnerbros`/`wd5` | Varrida várias vezes, zero encaixe de arte até agora |
+
+**A ressalva de disciplina continua valendo e é ela que evita perder rodada:** não são dele VFX em
+tempo real, design de locação 2D, pintura de cenário, **CFX e simulação**. Atenção às armadilhas de
+título: **"Creature TD" na ILM costuma ser rigging e "Creature FX" é simulação** — os dois estão
+fora, apesar da palavra "creature". Concept e character design 2D também estão fora, porque ele é 3D.
+
+**E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
+entram, por mais que o título seja perfeito.
