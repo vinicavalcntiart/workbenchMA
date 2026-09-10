@@ -802,3 +802,39 @@ fora, apesar da palavra "creature". Concept e character design 2D também estão
 
 **E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
 entram, por mais que o título seja perfeito.
+
+## MEDIDO EM 10/09: O PINPOINT É PLATAFORMA INTEIRA QUE A CAMPANHA NUNCA LEU
+
+O `censo-boards-0809.csv` tem 1.419 quadros de Greenhouse, 1.353 de SmartRecruiters, 265 de Lever,
+175 de Teamtailor, 163 de BambooHR, 109 de Ashby, 66 de Recruitee e 38 de Breezy. **De Pinpoint,
+zero.** E o Pinpoint é justamente o ATS que passou sem captcha duas vezes hoje: a Fenris Creations
+às 04h e a Brazen Animation às 04h40.
+
+**A porta barata é `<slug>.pinpointhq.com/en/register-your-interest/new`**, o banco de talentos.
+Responde `200` quando está aberto e `302` quando a casa desligou (Bandai Namco Mobile e Build A
+Rocket Boy estão fechados assim). O `/postings.json` do mesmo slug lista as vagas abertas **sem
+chave nenhuma**, e é por ele que se sonda a plataforma:
+
+    https://<slug>.pinpointhq.com/postings.json
+    https://<slug>.pinpointhq.com/en/register-your-interest/new
+
+**COMO RECONHECER CONTA DEMO SEM ABRIR, e isso economiza a rodada:** o Pinpoint serve um quadro de
+demonstração com **cinco vagas sempre iguais** — *Head of DEI - Belfast*, *Head of DEI - US*,
+*Head of DEI - UK*, *Marketing Manager* (Paris) e *Customer Service Rep* (New York). Quadro com
+esse conjunto exato não é da casa: `amplitude`, `bandainamcomobile` e `cube` caíram nisso. Só
+`brazenanimation`, `blackbirdinteractive`, `buildarocketboy`, `curvedigital` e `ccpgames` eram
+quadros de verdade.
+
+**Rendimento honesto da sondagem de token**, para ninguém esperar milagre: 3.600 tokens gerados dos
+nomes das filas devolveram **12 quadros**, dos quais **1 virou candidatura** (Brazen). É o mesmo
+preço da adivinhação de token do Greenhouse (1.548 tentativas, 15 quadros, 1 candidatura). Vale
+como colheita de fundo, nunca como carro-chefe da rodada.
+
+**TRÊS ARMADILHAS do `register-your-interest`, medidas na Brazen e diferentes das da Fenris:** cada
+conta escolhe seus campos, então **sonde em modo seco antes de escrever o arquivo de respostas**.
+Na Brazen **não existe campo de LinkedIn**, a lista de **Departments vem vazia** e o menu de gênero
+só tem *Male*, *Female* e *Non-Binary*, **sem "Prefer Not To Say"**. Pedir opção que não existe fez o
+script deixar *Male* na tela sem erro nenhum no log — a mesma família da armadilha de escolher a
+primeira opção que casa. O certo foi tirar os três combos e preencher só os quatro obrigatórios de
+verdade (nome, sobrenome, email e a caixa de consentimento). **Sem campo de link, o ArtStation entra
+dentro do texto do resumo**, e é obrigatório conferir que entrou.
