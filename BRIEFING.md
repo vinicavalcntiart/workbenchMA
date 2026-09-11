@@ -544,3 +544,36 @@ isso. **A prova do anexo é o pedido de upload, nunca o input.**
 legível** aqui (fonte embutida, extração volta lixo). Anexar arquivo cujo conteúdo eu não li é o
 erro que o briefing proíbe. A carta anexada passa a nascer de `carta_pdf.js`, a partir de texto
 escrito na rodada, e o gerador **recusa gerar** se a frase banida `I WANT TO RELOCATE` aparecer.
+
+## MEDIDO EM 11/09: DUAS PROVAS DE ENVIO QUE MENTEM, E EU CAÍ NAS DUAS NO MESMO DIA
+
+Nenhuma linha falsa entrou em `enviados.csv` — o erro foi pego antes —, mas o script chegou a
+imprimir **">> ENVIADO" duas vezes sem nada ter sido enviado**, na Nine Dots Studio. As duas
+falhas são do mesmo tipo: um sinal que parece prova e não é.
+
+**1. "A URL mudou" não é prova quando a URL nova traz os campos do próprio formulário.**
+Formulário sem `action` cujo JavaScript ainda não amarrou o `onSubmit` cai no comportamento
+padrão do navegador: ele serializa **tudo** na query string — `name`, `email`, `message`, até o
+**nome** do arquivo — e recarrega a mesma página. A URL muda, o formulário "esvazia" (é a
+recarga), e **nada foi ao servidor**; anexo nem cabe em query string.
+**Regra:** mudança de URL só conta quando a URL nova **não** traz os campos do formulário.
+
+**2. "Saiu pedido de rede" não é prova se o pedido não foi para a casa.**
+Meu filtro excluía Google Analytics e esqueceu o resto. Os pixels da **TikTok**
+(`analytics.tiktok.com/api/v2/pixel/act`) e do **Facebook** (`facebook.com/tr`) entraram na
+contagem e o script anunciou envio com o formulário ainda cheio.
+**Regra:** o filtro de prova casa o **domínio da casa**, nunca uma lista de rastreadores a
+excluir. E **formulário ainda preenchido VETA qualquer outra prova.**
+
+**3. Armadilha de preenchimento da mesma casa, que vale para todo formulário React.**
+Se o `__reactProps` do campo **não tem `value` nem `onChange`**, o campo é *uncontrolled* e quem
+lê é a ref (react-hook-form). Aí: escrever pelo **setter nativo** enche o DOM mas **não avisa** o
+formulário, e o Submit cala; **digitar tecla a tecla avisa**, mas só **depois da hidratação**,
+porque antes dela o React remonta e devolve o campo vazio. Ordem certa: esperar hidratar →
+digitar de verdade → conferir campo a campo.
+
+**Como saber se hidratou:** procurar no `<form>` e nos `<button>` dele uma chave
+`__reactProps$…` com `onSubmit` **ou** `onClick` amarrado. Cuidado: a chave `__reactFiber$…`
+vem primeiro na lista e **não** serve — pegar a primeira chave que começa com `__react` foi o
+que me fez ler o fiber e concluir errado. E o botão pode não ser `type=submit`: nesta casa é um
+`<button type="button">` com o texto `JOIN YOUR CV`.
