@@ -190,3 +190,103 @@ publicado ou com dominio que nao resolve, todos listados na secao acima), o que 
 **232 nomes de reserva ainda intocados**. Eles nao tem vaga de arte aberta conhecida, entao o
 rendimento por nome e menor que o da fila antiga: dos 22 abertos hoje, 4 viraram carta, o que
 da 18 por cento. E um numero honesto para calibrar a proxima rodada.
+
+## RODADA DE 11/09/2026, 18h: a fila principal segue sem NENHUM "pendente" de status, e a reserva rendeu 3 de 39
+
+**Numero honesto antes de tudo.** Passei o `grep pendente` na fila das 45 casas: as 24 ocorrencias
+sao todas **texto de nota** ("segue pendente e a via e o ATS") em linhas cujo **status ja e
+`portal`, `aprovado`, `aplicado` ou `descartado`**. Ou seja, **zero pendentes de verdade**, igual
+ao que 09/09 escreveu. A fila de trabalho continua sendo a lista de reserva.
+
+**A PENDENCIA EXPLICITA DO ARQUIVO, FECHADA:** a secao "A CONFERIR NA PROXIMA RODADA" mandava
+abrir a **Fenris Creations** com navegador porque o quadro nao abria por curl. **Nao precisa mais:**
+o quadro e **Pinpoint** (`app.pinpointhq.com`), abre por curl, e hoje tem **cinco vagas e nenhuma
+de arte** (Lead Game Designer, Technical Director, Senior Backend Engineer, Brand Manager,
+Cinematic Artist). E, o que mata a linha de vez, **a campanha JA APLICOU LA**: candidatura de
+PERSONAGEM enviada e confirmada em 10/09 pela rota `register-your-interest` do Pinpoint, com quatro
+provas e recibo por email de `fenriscreations@pinpoint.email`. Alem disso a casa **e a CCP Games
+renomeada** (EVE Online, Reykjavik, o site diz "founded under the name Loki margmidlun in 1997").
+**Linha encerrada, nao repesquisar.**
+
+**Metodo desta rodada:** 39 dominios da lista de reserva abertos por curl em raiz, `/contact`,
+`/contact-us`, `/about`, `/careers`, `/jobs`, `/impressum` e `/join-us`, extraindo `mailto:`,
+endereco em texto e `data-cfemail` decodificado. Depois, **checagem de encaixe uma a uma**, que e
+onde a maioria cai.
+
+**APROVADOS (email PUBLICADO, lido na pagina do proprio estudio, MX conferido por DNS-over-HTTPS,
+rascunho criado no Gmail em 11/09 e NAO ENVIADO):**
+
+- **Third Kind Games** | Reino Unido (Leamington Spa) | `hello@thirdkindgames.com` | endereco na
+  pagina `/contact` e tambem no `mailto:` da `/careers`. MX Outlook ativo. Co-dev e full-dev AAA,
+  fundada em 2016 por nove veteranos e **adquirida pela Virtuos em 2024**; clientes Blizzard,
+  Amazon, Microsoft e Mythical Games; a equipe publicada tem departamento de **Art**. Vagas de hoje
+  sao so de programacao mais uma **Speculative Application**, entao a via e carta fria. Gancho da
+  carta: a propria frase deles, "always on the lookout for our next Third Kinder", mais o passado
+  de outsourcing dele na PUGA Studios, que e exatamente o que co-dev pede. **Ressalva registrada de
+  proposito:** a Virtuos ja recebeu carta em 27/08 (`info@`) e 06/09 (`dub-careers@`); esta e outra
+  casa, outro dominio e outro pais, e a ultima carta ao grupo foi ha cinco dias, entao nao quebra a
+  regra dos dias seguidos.
+- **Mighty Canvas** | America do Norte (o site nao publica cidade nem pais) | `info@mightycanvas.com`
+  | endereco na `/contact`. MX Google ativo. Prestadora de servico de arte: "specializing in
+  producing industry leading 2D and 3D visual designs", com "Concept Design, Illustration, 3D/2D
+  Production Art, UI/UX, Graphic Design, and Art Direction in Games", credito em Gears of War 4.
+  **A carta NAO leva a frase de realocacao**, porque o pais nao esta publicado e a casa se descreve
+  como norte-americana: pela regra 10, frase de realocacao so em estudio comprovadamente fora dos EUA.
+- **Wooster Games** | EUA | `hello@woostergames.com` | endereco no rodape da home. MX Google ativo.
+  Jogos sociais para VR, PC, mobile e console, **Animal Company, numero 1 no Meta Quest**, que e
+  personagem 3D estilizado de bicho, exatamente o portfolio dele. O quadro de hoje tem uma vaga so,
+  Creative Director, pelo Zoho Recruit, entao a via e carta fria. **Sem frase de realocacao**, casa
+  dos EUA.
+
+**DESCARTADOS nesta rodada, com a frase literal que derruba cada um:**
+
+- **Elephant Goldfish** | Irlanda (Dublin) e Reino Unido (Londres) | publica
+  `careers@elephantgoldfish.com`, e o endereco e bom, **mas a disciplina nao e**: a propria pagina
+  About diz "post-production and VFX studio" que trabalha "across colour, audio, editing, and VFX",
+  a pagina Our Work lista so "VFX / Colour / Audio / Edit", e as UNICAS vagas abertas sao
+  "Comp Supervisor" e "Compositors (mid/senior)". Nao ha departamento de modelagem nem de
+  personagem. E parte do Molinare Creative Group, que tem o mesmo perfil.
+- **Super Spline Studios** | Reino Unido | publica `info@supersplinestudios.com`, mas se define na
+  home como "UK Games Animation Specialist Co-Development Partner" e "Your Remote Animation
+  Department". E casa de **animacao**, nao de modelagem ou personagem.
+- **Rotor Studios** | Australia (Melbourne) e Japao (Nagoya) | publica varios enderecos de pessoa
+  (`colin.brennan@`, `shirley.li@`, `melbourne@`), mas a casa vende "personalisation", "AI &
+  emerging tech" e "cg & vfx" para conteudo de marca, nao producao de personagem. Some-se que metade
+  dela esta no Japao, que esta fora do escopo.
+- **Fly Moustache** | publica `info@flymoustache.com`, mas se apresenta como "ANIMATION CREW" de
+  "2D TRADIGITAL / CUT-OUT". 2D puro descarta.
+- **Allstory Pictures** | Australia (Brisbane) | publica `connect@allstorypictures.com`, mas e
+  produtora de conteudo de historia: "Documentary", "Kids' Content", "Scripted", "Factual". Nao ha
+  producao 3D de personagem.
+- **Immersive Octopus** | publica `info@immersiveoctopus.com`, mas vende "Immersive Shows, Parties,
+  Experiences & Adventures". Nao e producao de arte 3D.
+- **Minetta Interactive** | Nova York | publica `info@minetta.com`, mas o site diz "Minetta
+  Interactive is a mobile puzzle game studio". Jogo de puzzle nao tem disciplina de personagem.
+- **Riyo Games** | Canada | publica `contact@riyogames.com`, e Canada e prioridade 1, mas o site diz
+  "indie game studio focused on **retro RPGs**" e "retro-infused RPGs", ou seja arte 2D retro.
+- **Studio MDHR** | publica `inquiries@studiomdhr.com`, mas e a casa de Cuphead, animacao desenhada
+  a mao quadro a quadro. 2D puro descarta.
+- **Ghost Story Games** | so publica `Community@GhostStoryGames.com`, que e caixa de comunidade e nao
+  de contratacao. Pela regra de 07/09, caixa funcional so vale quando esta publicada COMO via de
+  contato, e esta nao esta.
+- **d3t** | Reino Unido (Runcorn) | o endereco existe e esta publicado, so que ofuscado pelo
+  Cloudflare (`contact@d3t.co.uk`, decodificado do `data-cfemail`), **mas a casa e do grupo Keywords
+  Studios**, que a campanha ja trabalhou em varias frentes (Keywords Australia, Lakshya), e a caixa
+  e de enquiries geral. Fica registrado como porta conhecida, sem carta.
+- **Crafty Apes, Barnstorm VFX, Benuts, Distillery VFX, Marmalade, Cybernetic Walrus, The Embassy
+  VFX, Fool's Theory**: **duplicados**, todos ja tem registro proprio na campanha (Marmalade,
+  Cybernetic Walrus e The Embassy ja receberam carta; Benuts ja esta no `alvos.csv`; Distillery,
+  Barnstorm e Crafty Apes ja estao no painel como parede de captcha; Fool's Theory ja recebeu
+  candidatura pelo Teamtailor). Nao repesquisar.
+
+**PENDENTE DE VERDADE, o unico que sai desta rodada:** **Kiagu Studios** | Coreia do Sul (Seul,
+dentro do escopo) | `contact@kiagu.com` publicado na raiz, **MX Google ativo**. Nao foi aprovado nem
+descartado de proposito: a casa se apresenta como "Entertainment IP Studio" que leva IP original
+para "webnovel, webtoon, and games", e `kiagu.com/careers` e SPA que devolve pagina vazia por curl,
+entao **nao da para dizer se existe disciplina de 3D de personagem**. Precisa de navegador.
+
+**RENDIMENTO MEDIDO, para calibrar a proxima rodada:** 39 dominios abertos, 24 com algum endereco
+publicado, **3 viraram carta**. Isso da **7,7 por cento**, contra os 18 por cento de 09/09. A queda
+tem causa: os nomes mais obviamente de animacao e jogos ja foram gastos, e o que sobra na reserva e
+cada vez mais pos-producao, publicidade, evento e 2D. Sobram cerca de **194 nomes de reserva
+intocados**.
