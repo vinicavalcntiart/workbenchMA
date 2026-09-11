@@ -279,11 +279,34 @@ rascunho criado no Gmail em 11/09 e NAO ENVIADO):**
   Barnstorm e Crafty Apes ja estao no painel como parede de captcha; Fool's Theory ja recebeu
   candidatura pelo Teamtailor). Nao repesquisar.
 
-**PENDENTE DE VERDADE, o unico que sai desta rodada:** **Kiagu Studios** | Coreia do Sul (Seul,
+**PENDENTE DE VERDADE, o unico que saiu daquela rodada:** **Kiagu Studios** | Coreia do Sul (Seul,
 dentro do escopo) | `contact@kiagu.com` publicado na raiz, **MX Google ativo**. Nao foi aprovado nem
 descartado de proposito: a casa se apresenta como "Entertainment IP Studio" que leva IP original
 para "webnovel, webtoon, and games", e `kiagu.com/careers` e SPA que devolve pagina vazia por curl,
 entao **nao da para dizer se existe disciplina de 3D de personagem**. Precisa de navegador.
+
+**FECHADA em 11/09 as 21h, e NAO precisou de navegador: APROVADO, rascunho criado.** O
+`kiagu.com` redireciona 307 para `www.kiagu.com`, e seguir o redirecionamento com `-L` ja devolve
+**17 mil caracteres de texto**. A resposta a duvida estava ali: *"We hire selectively across
+writing, **art**, design, production, animation, and engineering. Senior craft, original IP, no
+committee culture"*, mais o convite escrito *"Nothing that fits? We read every unsolicited
+application: contact@kiagu.com"*. O produto e **Astral Sync**, ARPG de acao **anime dark fantasy
+estilizado em Unreal 5** para PC e mobile, com criaturas e chefes, que e o material do portfolio
+dele. **Nenhuma das 4 vagas ativas e dele** e as quatro foram lidas inteiras: Animation Artist,
+Animation Programmer, UI Designer e VFX Artist (VFX em tempo real, disciplina vetada). Por isso a
+via e **carta fria**, que e justamente a que a casa convida. Rascunho no Gmail em 11/09, nao
+enviado; linha em `alvos.csv` e ficha em `drafts/kiagu-studios.md`.
+
+**COMO O QUADRO DELES SE LE SEM NAVEGADOR, porque a receita serve para qualquer site assim:** o
+`careers.js` do proprio site chama um **Supabase publico** com a chave embutida em texto claro,
+`SB_URL = 'https://oanycmuffsdaonpacsct.supabase.co'` e `SB_KEY = 'sb_publishable_...'`, e a
+listagem inteira sai de
+`GET <SB_URL>/rest/v1/jobs?select=*&is_active=eq.true&order=sort_order.asc` com os cabecalhos
+`apikey` e `Authorization: Bearer`. Devolve titulo, departamento, local, tipo de contrato,
+descricao, requisitos e responsabilidades de cada vaga. **Licao geral: antes de marcar SPA como
+"precisa de navegador", baixe o JS que ela carrega e procure a chamada de dados** — em site
+pequeno feito em Supabase, Firebase ou Airtable a chave vem no proprio bundle e o quadro
+inteiro sai por curl.
 
 **RENDIMENTO MEDIDO, para calibrar a proxima rodada:** 39 dominios abertos, 24 com algum endereco
 publicado, **3 viraram carta**. Isso da **7,7 por cento**, contra os 18 por cento de 09/09. A queda
