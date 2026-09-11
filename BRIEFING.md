@@ -492,3 +492,55 @@ Logo é a borda deles somada a este proxy, **não** o nosso navegador.
 Mesmo padrão do `careers.ilpvfx.com`. **Regra:** domínio próprio de Teamtailor que devolve 421 ou
 000 vai para a fila da mão dele sem gastar mais rodada — e vale registrar **por que**, porque
 "não abriu" sem causa medida vira palpite na próxima leitura.
+
+## MEDIDO EM 11/09: O QUESTIONÁRIO DO CONNECT E AS QUATRO ARMADILHAS DELE
+
+O `/connect/questions/start` não é enfeite: é onde entram **portfólio, LinkedIn, anos de
+experiência, que vaga ele procura, que software usa e onde ele quer trabalhar**. Ficou em
+branco até hoje porque as perguntas nunca tinham sido **lidas** — e pergunta não lida não se
+responde. Foram lidas tela por tela, são inofensivas, e agora são respondidas.
+
+**Quatro armadilhas, todas pagas:**
+
+1. **Não tocar no campo de endereço dentro do questionário.** Digitar nele abre a lista de
+   sugestões do mapa **por cima do botão Next**, e o clique em Next vai parar na lista. O
+   questionário entrou em laço por quatro telas. O endereço já é gravado em
+   `/connect/profile/settings`; ali dentro, deixa quieto.
+2. **As caixas do banner de cookie viram "locais de trabalho".** Em algumas casas elas não têm
+   atributo `name`, então filtrar só por `name` deixa passar `Strictly necessary`, `Analytics`
+   e `Marketing`. Filtrar **também pelo rótulo**.
+3. **Lista de locais tem que ser de PERMISSÃO, nunca de proibição.** O rótulo é a **cidade**,
+   não o país: `india` não casa com **Bengaluru**. A eRepublik ficou marcada dizendo que ele
+   quer trabalhar em Bengaluru, Amman, Dubai e Abu Dhabi. Permissão erra para o lado seguro —
+   no máximo deixa de marcar um local bom, e isso é recuperável; marcar um local fora do escopo
+   **mente sobre o que ele quer**. O script agora também **desmarca** o que ficou marcado errado.
+4. **Filtro de rede estreito dá falso negativo.** O meu procurava `question`, e o Teamtailor
+   grava em **`/connect/answers`**. Duas casas apareceram como "nada saiu" tendo gravado.
+   **Filtro que não vê nada em cima de tela que avançou é suspeito do filtro, não prova de que
+   nada saiu.**
+
+**Regra de verdade mantida onde custa:** na pergunta *"Do you live in Europe?"* da GOALS a
+resposta foi **No**. É a verdade e é cara, e é a resposta certa.
+
+## MEDIDO EM 11/09: PERSONIO É A LANE SEM PORTEIRO
+
+Das três famílias varridas hoje (**Ashby**, **Lever**, **Personio**), só o Personio serve o
+formulário sem anti-bot. **Ashby é parede**: reCAPTCHA v2 invisível em 6 de 6, chave de
+plataforma igual em todo inquilino. **Lever é parede**: hCaptcha mais desafio Cloudflare em
+8 de 8. **Personio: zero ocorrência** de captcha, recaptcha, hcaptcha, turnstile, datadome,
+perimeterx, akamai, botd, challenge, honeypot, sitekey e cloudflare em quatro formulários.
+
+Rota: `https://<slug>.jobs.personio.com/job/<id>/apply`. Campos servidos no HTML: `first_name`,
+`last_name`, `email`, `phone`, `location`, `available_from`, `salary_expectations`,
+`documents.cv`, `documents.cover-letter`, `documents.work-sample`. Sonda de inquilino:
+`HEAD https://<slug>.jobs.personio.com/` devolve **200** se existe e **307** se não. Quem lista
+vaga é **`/search.json`**; o `/xml` devolve 404 mesmo em inquilino vivo e **não serve como sonda**.
+
+**ARMADILHA DO ANEXO:** o Personio manda o arquivo para `/api/v1/documents` e **limpa o input**.
+Conferir `input.files` devolve `VAZIO` em anexo que subiu — quase abortei uma candidatura boa por
+isso. **A prova do anexo é o pedido de upload, nunca o input.**
+
+**CARTA EM PDF:** o `Vini_Cavalcanti_Cover_Letter.pdf` da pasta é de 02/09 e o texto dele **não é
+legível** aqui (fonte embutida, extração volta lixo). Anexar arquivo cujo conteúdo eu não li é o
+erro que o briefing proíbe. A carta anexada passa a nascer de `carta_pdf.js`, a partir de texto
+escrito na rodada, e o gerador **recusa gerar** se a frase banida `I WANT TO RELOCATE` aparecer.
