@@ -37,7 +37,7 @@ de trabalhar dentro da direção de arte alheia.
 
 - Dedupe: `kiagu` não aparece em `alvos.csv`, `enviados.csv`, `portal_only.md` nem em `drafts/`.
   A única ocorrência no `docs/index.html` é uma menção de varredura antiga, sem candidatura.
-- Carta com 236 palavras (teto de 250), zero capslock de frase, zero travessão, sem a palavra
+- Carta com 244 palavras (teto de 250; a primeira versao saiu com 251 e foi apertada), zero capslock de frase, zero travessão, sem a palavra
   proibida, sem a frase banida de realocação.
 - Um emoji ☺️ só, no fecho da abertura, que é a dose de caixa funcional.
 - `plaintextBody` conferido não vazio depois de criar.
