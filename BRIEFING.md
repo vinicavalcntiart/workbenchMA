@@ -742,3 +742,39 @@ risco sem retorno. O que precisa estar certo é o *status* de cada linha e a
 `Huvudkontor` (matriz), sem arte nenhuma. Nada foi enviado. Antes de gastar
 rodada num slug que veio de varredura, **confere a identidade da casa**, porque a
 lista de slugs não distingue estúdio de restaurante.
+
+## MEDIDO EM 11/09 À NOITE: NO CONNECT O CARGO É **RÁDIO**, UM SÓ, E A ASSINATURA É CAIXA
+
+O registro da Facepunch de hoje dizia que **os dois** cargos de personagem tinham ficado
+marcados, `Character (Rust)` 942551 e `Character (s&box)` 942552. **Isso nunca foi possível.**
+`candidate[role_id]` é **rádio**, não caixa de seleção: cabe **um** cargo primário. Na prática
+ficava só o último clicado, que era o s&box.
+
+Trocado de propósito para **`Character (Rust)`**, porque Rust é o carro-chefe da casa, com time
+de personagem estabelecido e produção contínua, enquanto s&box é a plataforma nova e menor.
+Conferido em visita separada depois de salvar: `department_id` 377136 `checked=true`,
+`role_id` 942551 `checked=true`.
+
+**A compensação existe e vale usar sempre:** a seção *Job subscription* da mesma tela é
+**caixa de seleção**, e ali cabem **os dois** cargos. Então a regra é **cargo primário um,
+alerta dois** — o perfil aponta para a frente mais forte e o alerta cobre as duas.
+
+### A armadilha de leitura que quase me fez registrar um estrago que não existia
+
+Ao conferir, li `department_id => 373744` e `role_id => 942560` e quase escrevi que o
+questionário tinha **apagado** o direcionamento de personagem. Não tinha apagado nada.
+
+O erro era da minha sonda: ela lia `input[name].value`. **Num rádio, `.value` devolve o valor
+daquele input, marcado ou não** — então o último rádio do DOM vence e o mapa mostra um valor
+que ninguém escolheu. Os marcados de verdade eram 377136 e 942552, como a sonda de `.checked`
+mostrou logo depois.
+
+**Para rádio e caixa, o que vale é o `.checked`, nunca o `.value` solto.** `tt_confere.js` foi
+corrigido para pular o que não está marcado e para imprimir o rótulo junto do ID, que é o que
+torna o erro visível de imediato (`942551 (Character (Rust))` em vez de `942551`).
+
+Vale a pena reler a regra mais velha desta campanha à luz disto: **prova que a própria página
+escreve não é prova.** A tela final do questionário dizia *"All done, thank you!"* nas quatro
+casas; foi a visita separada que mostrou o que de fato ficou guardado. E foi a visita separada
+que também mostrou o lado bom: os quatro locais (`Europe`, `Birmingham`, `UK`, `Worldwide`)
+persistiram, e o CV continua em `/connect/resume`.
