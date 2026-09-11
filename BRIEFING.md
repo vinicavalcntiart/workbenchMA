@@ -806,3 +806,45 @@ confirmação ou o texto do servidor aparecer, e só desiste quando não há mai
 faz perder uma candidatura que ia passar, e ele tenta a pessoa a reenviar por cima de uma que
 passou. As duas coisas custam. Antes de registrar `NÃO ENVIADO`, olhar o print e a caixa de
 entrada.
+
+## MEDIDO EM 11/09 ÀS 22h: EU CONCLUÍ "NÃO ENVIOU" DE UMA BUSCA QUE NÃO ALCANÇAVA O RECIBO
+
+A candidatura da Warner foi enviada **duas vezes**. As duas passaram. O Vini está em duplicata
+no banco de talentos da WBPA: dois recibos de `no-reply@wbpanim.com`, às **20h38m04** e às
+**20h39m08**, 64 segundos de diferença.
+
+É inofensivo e não há o que desfazer. O que precisa ficar escrito é **como eu me convenci do
+contrário**, porque o mesmo erro reaparece em qualquer rodada.
+
+### Os dois erros, e o segundo é o grave
+
+**1. Conferi cedo.** A primeira confirmação chegou às 20h38m04 e eu olhei a caixa antes disso.
+
+**2. Procurei onde o recibo não podia estar.** Busquei
+`from:(greenhouse-mail.io OR warnerbros.com OR wbd.com)`. O recibo veio de **`wbpanim.com`**,
+que não estava na busca. **Concluir ausência a partir de uma busca que não alcança o remetente
+é concluir nada** — e eu escrevi "conferido que não gerou candidatura" como se fosse medição.
+
+### A regra
+
+**O recibo do ATS e o recibo da CASA são remetentes diferentes, e a casa costuma usar domínio
+próprio que não se adivinha.** O Greenhouse manda o código de segurança por
+`us.greenhouse-mail.io`, mas o "obrigado pela candidatura" veio do domínio do estúdio. Não dá
+para prever o domínio do estúdio; dá para não filtrar por ele.
+
+Então, para decidir se um envio existiu:
+
+- **Busque por JANELA DE TEMPO, não por remetente**: `newer_than:1d` mais o nome da casa, ou
+  simplesmente o que chegou nos últimos minutos. Remetente é ótimo para achar, péssimo para
+  provar que algo não existe.
+- **Espere pelo menos 4 minutos** antes de tratar ausência como resposta. A Absurd Ventures
+  recebeu o recibo 2 minutos depois do código; a Warner, 1min23s.
+- **Na dúvida entre reenviar e esperar, ESPERE.** Duplicata em banco de talentos é barata;
+  numa vaga real com recrutador lendo, não é.
+
+### E o que continua valendo da lição anterior
+
+A correção de ontem à noite (esperar pela prova e não pelo relógio, porque fechar o navegador
+com o envio girando mata o pedido) **continua certa** e foi ela que fez a segunda tentativa
+passar em 2 segundos. O que estava errado não era esperar: era o diagnóstico de que a primeira
+tinha falhado.
