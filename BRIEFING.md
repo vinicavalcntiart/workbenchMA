@@ -396,3 +396,34 @@ escolher DESFAZ a escolha** e o campo volta para `Select...`. E campo que parece
 lista de opção única — a política de dados da Keen era um `select` com uma só opção, e escrever
 texto nela deixava o obrigatório em branco. Antes de clicar em enviar, **ler o valor de volta na
 tela**, campo a campo, incluindo as listas.
+
+## MEDIDO EM 11/09: ESTÚDIO FRANCÊS PODE EXIGIR FRANCÊS ORAL E ESCRITO
+
+A campanha vinha tratando a França como Europa genérica, onde o inglês basta. **Não é.**
+Quem mediu isso foi a própria recrutadora da TAT Productions, no LinkedIn, em 11/09.
+
+**Julie Gouthéraud, Sourcer & recruiter da TAT (Toulouse), escreveu com todas as letras:**
+*"Great please let me know when you'll be able to work in french (oral et ecrit!) !"*
+
+Isso veio depois de o Vini responder, com honestidade, que ainda não fala francês. A resposta
+dela **não é recusa**: é requisito de idioma com a porta destrancada e convite explícito para
+voltar. Ele assumiu prazo próprio de cerca de seis meses e o compromisso de avisar quando chegar.
+
+**A regra que sai disso, e vale para toda rodada:**
+
+- **Antes de gastar carta em casa francesa**, procurar no anúncio e no site do estúdio:
+  `français courant`, `maîtrise du français`, `oral et écrit`, `bilingue`, `francophone`.
+- **Se exigir**, registrar como **porta condicionada ao idioma**, não como candidatura.
+  **Não descartar a casa:** ela volta para a fila quando o francês dele chegar ao nível.
+- Casas francesas ou francófonas já contatadas: Sandfall, DLP Paris, Mathematic, Cyborn, TAT.
+  A Asobo já tinha veto de francês registrado em 08/09, e agora ele deixa de ser caso isolado.
+
+**E a lição de conversa, que é do Vini e não minha:** ele fechou a primeira mensagem com
+*"Merci!"* e foi exatamente isso que puxou o *"Vous parlez français ?"*. Cortesia em francês
+numa casa francesa gera a pergunta de idioma. Não é motivo para parar de fazer, é motivo para
+saber que a pergunta vem, e ter a resposta honesta pronta.
+
+**NÃO ESCREVER PARA A TAT ANTES DE MARÇO DE 2027**, ou antes de ele dizer que chegou ao nível.
+Ele prometeu voltar só quando puder trabalhar em francês; voltar antes queima a palavra dele.
+Quando for, a rota é **a mesma thread do LinkedIn com a Julie**, nunca candidatura fria: ela já
+tem o portfólio e as candidaturas dele no sistema.
