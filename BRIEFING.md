@@ -1,6 +1,9 @@
 # Campanha de emprego do Vini Cavalcanti — briefing
 Atualizado em 31/08/2026. Painel ao vivo: https://vinicavalcntiart.github.io/workbenchMA/
 
+> **Mentoria da escola é outro assunto.** Resposta a aluno ou interessado na mentoria segue
+> `mentoria/BRIEFING.md` (fatos do programa, regras de escrita em inglês, modelo aprovado).
+
 ## Quem é
 Senior 3D Character Artist, 10+ anos em personagens estilizados.
 - **The Wingfeather Saga** (Angel Studios): modelou e pintou à mão os personagens da 1ª temporada.
