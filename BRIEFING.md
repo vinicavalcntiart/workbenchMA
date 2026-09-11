@@ -427,3 +427,68 @@ saber que a pergunta vem, e ter a resposta honesta pronta.
 Ele prometeu voltar só quando puder trabalhar em francês; voltar antes queima a palavra dele.
 Quando for, a rota é **a mesma thread do LinkedIn com a Julie**, nunca candidatura fria: ela já
 tem o portfólio e as candidaturas dele no sistema.
+
+## MEDIDO EM 11/09: O TEAMTAILOR CONNECT É CADASTRO DE **DUAS ETAPAS**
+
+Dez casas passaram por esta rota em 11/09 e o método está fechado. Quem parar na primeira tela
+deixa no banco da casa **um cadastro sem nome e sem CV**, que não serve para nada.
+
+**Etapa 1** — `https://<inquilino>.teamtailor.com/connect` → `/connect/candidates/new`.
+Só pede: consentimento, email, departamento e (quando a casa tem) cargo. **Não existe campo de
+nome, telefone ou CV nesta tela.** Prova de envio: `POST /connect/candidates` respondido 302 e a
+URL indo para `/connect/dashboard`.
+
+**Etapa 2** — já logado, reaproveitando o `storageState` salvo pela etapa 1.
+- **Nome, sobrenome, email, telefone e endereço: `/connect/profile/settings`.**
+- **CV: `/connect/resume`.**
+- Cada um salva com seu próprio `POST /connect/profile` respondido 302.
+
+**ARMADILHA DE NAVEGAÇÃO, e ela custou uma rodada:** o cartão **"Basic details"** do painel
+**NÃO** leva aos dados básicos — ele aponta para `/connect/questions/start`, que é o
+questionário. O caminho certo só apareceu listando os `href` do painel.
+
+**Três variantes de casa que o script tem que aguentar, todas medidas:**
+1. **Sem caixa de consentimento** (MindArk). Caixa **ausente** (`null`) é a variante de login e
+   pode enviar. Caixa que **existe e não marcou** (`false`) é a armadilha do gêmeo
+   `input[type=hidden]` com o mesmo `name`, e aí **para**. São casos diferentes: tratar os dois
+   como erro perde porta à toa.
+2. **Sem campo de departamento** (Last Arrow). Casa de departamento único não desenha nenhum
+   `input[name="candidate[department_id]"]`. Contar os inputs antes de tentar marcar.
+3. **Departamento que não é disciplina** (Kinda Brave). Lá os "departamentos" são os quatro
+   estúdios do grupo e nenhum publica descrição. Quando não dá para saber qual faz personagem,
+   marcar a entrada de grupo é honesto; **chutar um estúdio não é**.
+
+**O QUE VALE CAÇAR NO MENU, porque muda a fila em que ele cai:** algumas casas têm cargo de
+personagem nomeado e ele tem que ser marcado. Medidos hoje: **MindArk tem o departamento
+`Character Art` separado de `3D Art`**; **GOALS tem o cargo `Character Art` separado de
+`3D Art / Environment Art`, `Concept Art`, `2D / UI Art` e `Technical Art`**; **Facepunch tem
+`Character (Rust)` e `Character (s&box)`**. Departamento de arte sozinho joga ele no balaio
+genérico.
+
+**Ler rótulo de cargo é armadilha:** sem `label[for]`, subir no máximo três níveis e ficar com o
+**menor** `innerText` não vazio. Pegar o contêiner devolve o mesmo texto para todo cargo.
+
+**`headless` não serve aqui:** headless o Teamtailor não monta a lista de departamentos e
+`getElementById` devolve `null` com o departamento vivo na página.
+
+Ferramentas: `tt_connect.js` (etapa 1), `tt_etapa2.js` (etapa 2 inteira), `tt_ids.js`
+(departamentos e cargos no mesmo navegador), `tt_pagina.js` (despeja qualquer página do Connect
+com a sessão salva, **sem nunca imprimir valor cru**), `tt_links.js` (href do painel),
+`tt_vaga.js` (a outra rota: **anúncio** espontâneo, que é melhor — tem nome, telefone, **carta**
+e CV).
+
+## MEDIDO EM 11/09: DOMÍNIO PRÓPRIO DO TEAMTAILOR PODE DAR 421 DO FASTLY
+
+A Liquid Swords não abre por esta rede. O anúncio existe no `jobs.json`, mas o link do Teamtailor
+manda 301 para `careers.liquidswords.com` e a borda do Fastly responde **421** com
+*"Requested host does not match any Subject Alternative Names (SANs) on TLS certificate ... in use
+with this connection"* — página com **zero campo**.
+
+**A hipótese óbvia foi testada e caiu:** parecia coalescência de conexão HTTP/2 (o Chrome reusando
+a conexão do `teamtailor.com`, que também é Fastly). Refiz com `--disable-http2` indo **direto** ao
+domínio próprio, sem passar pelo redirecionamento: **mesmo 421**. Por `curl` o domínio dá `000`.
+Logo é a borda deles somada a este proxy, **não** o nosso navegador.
+
+Mesmo padrão do `careers.ilpvfx.com`. **Regra:** domínio próprio de Teamtailor que devolve 421 ou
+000 vai para a fila da mão dele sem gastar mais rodada — e vale registrar **por que**, porque
+"não abriu" sem causa medida vira palpite na próxima leitura.
