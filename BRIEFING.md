@@ -778,3 +778,31 @@ escreve não é prova.** A tela final do questionário dizia *"All done, thank y
 casas; foi a visita separada que mostrou o que de fato ficou guardado. E foi a visita separada
 que também mostrou o lado bom: os quatro locais (`Europe`, `Birmingham`, `UK`, `Worldwide`)
 persistiram, e o CV continua em `/connect/resume`.
+
+## MEDIDO EM 11/09 À NOITE: O ENVIO DO GREENHOUSE DEMORA MAIS QUE A MINHA PRESSA
+
+A Warner quase foi perdida por um defeito meu, não por porteiro nenhum. Depois de responder o
+código de segurança, o script esperava **9 segundos**, lia a tela, não achava confirmação,
+declarava `NOT CONFIRMED` e **fechava o navegador**. Fechar o navegador com o envio em curso
+**mata o pedido no meio**.
+
+O print da primeira tentativa provava que não era recusa: formulário inteiro preenchido, CV
+anexado, os **oito quadradinhos do código corretos**, e o botão **em carregamento**. Era o
+servidor ainda trabalhando.
+
+**Como saber se uma tentativa assim virou candidatura ou não:** o Greenhouse manda email de
+confirmação da casa em um ou dois minutos (a Absurd Ventures recebeu o dela dois minutos
+depois do código). Passados quatro minutos sem confirmação, **a primeira tentativa não
+existiu**, e aí repetir é seguro e não gera duplicata. Foi o que se mediu antes de repetir.
+
+Na segunda tentativa, com a espera corrigida, a confirmação apareceu em **2 segundos** e veio
+com as duas provas: URL `/jobs/5371895008/confirmation` e texto do servidor.
+
+**A correção, e ela vale para todo formulário, não só o Greenhouse:** esperar pela **prova**,
+não pelo **relógio**. `gh_jamfilled.js` agora faz laço de até 90s, sai assim que a URL de
+confirmação ou o texto do servidor aparecer, e só desiste quando não há mais spinner.
+
+**Falso negativo é o erro mais caro que existe aqui**, e por dois lados ao mesmo tempo: ele
+faz perder uma candidatura que ia passar, e ele tenta a pessoa a reenviar por cima de uma que
+passou. As duas coisas custam. Antes de registrar `NÃO ENVIADO`, olhar o print e a caixa de
+entrada.
