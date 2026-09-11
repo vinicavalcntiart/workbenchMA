@@ -13,3 +13,9 @@
 /*.json
 !package.json
 !package-lock.json
+
+# Cache de bytecode do Python. Aparece sozinho sempre que um agente roda script
+# de automacao que importa outro modulo (visto em 11/09 em automacao/__pycache__).
+# E regeneravel e nao pertence ao repositorio.
+__pycache__/
+*.pyc
