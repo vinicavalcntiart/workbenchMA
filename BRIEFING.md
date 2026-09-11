@@ -628,3 +628,24 @@ da página **dentro do próprio parâmetro** (`dl=https%3A%2F%2Fwww.casa.com...`
 `google-analytics.com` casava com o domínio da casa e entrava na contagem de prova.
 
 **Regra final:** extrair o host com `new URL(u).hostname` e exigir que o **host seja** o da casa.
+
+## MEDIDO EM 11/09: FALTAVA "TEXTURE" NA LISTA DE TERMOS DA CAÇA
+
+A varredura do grupo Disney das 16h50 leu 1.620 anúncios por título com nove termos — `character`,
+`creature`, `modeler`, `modeling`, `sculpt`, `groom`, `surfacing`, `look development`,
+`visual development` — e fechou em zero. Uma hora depois, uma passagem barata por `searchText`
+devolveu uma vaga que a primeira **não pegou**: *Senior Texture Artist – ILM London*, `10159370`.
+
+Aquela em particular já estava aplicada e confirmada em 02/09, então o placar continuou zero.
+**A lacuna, porém, é real:** texturização é disciplina dele, está escrita no briefing como parte
+do cargo, e mesmo assim não estava na lista. Se a ILM abrir uma Senior Texture Artist nova
+amanhã, a varredura por título não acha.
+
+**A lista de termos passa a ser:** `character`, `creature`, `modeler`, `modeling`, `sculpt`,
+`groom`, `surfacing`, `look development`, `visual development`, **`texture`**, **`texturing`**,
+**`shading`** e **`material`**. O último não é enfeite: o *Lead Material Artist* da NBCU é
+exatamente o caso de "material" querendo dizer surfacing de personagem.
+
+**Lição de método por trás disso:** varredura por título só acha o que a lista de termos prevê.
+Quando uma passagem por busca do próprio ATS devolve algo que a sua varredura não devolveu, o
+suspeito é a **sua lista**, não o quadro.
