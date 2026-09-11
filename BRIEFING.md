@@ -577,3 +577,26 @@ digitar de verdade → conferir campo a campo.
 vem primeiro na lista e **não** serve — pegar a primeira chave que começa com `__react` foi o
 que me fez ler o fiber e concluir errado. E o botão pode não ser `type=submit`: nesta casa é um
 `<button type="button">` com o texto `JOIN YOUR CV`.
+
+## MEDIDO EM 11/09: "SEM CAPTCHA" NÃO É SINÔNIMO DE "EU CONSIGO ENVIAR"
+
+Duas casas seguidas, duas plataformas diferentes, o mesmo fracasso — e é padrão, não azar.
+
+- **Nine Dots** (Next.js, react-hook-form): o React nunca amarra o handler do botão, porque
+  chunks do bundle voltam `ERR_ABORTED`. O clique cai no submit GET do navegador.
+- **Blowfish** (Wix): o clique é aceito no botão certo, **nenhum pedido sai**, e o formulário
+  não acusa nada — sem campo `aria-invalid`, sem obrigatório vazio, sem texto de erro.
+
+**O que descarta "a rede está fora":** na Blowfish o **upload de arquivo funcionou** — dois
+`POST /_api/form-submission-service/v4/submissions/media-upload-url` respondidos **200**. O que
+falha é o caminho de **envio** do SPA, não a conectividade.
+
+**Regra prática para a triagem das caças:** formulário **servido inteiro no HTML** (Personio,
+Teamtailor, Greenhouse, GoHire) é enviável daqui e é onde vale gastar rodada. Formulário que só
+existe **depois do JavaScript** (Wix, Next.js hidratado, Squarespace) vai para a fila da mão
+dele **mesmo sem captcha**. O dossiê de caça precisa dizer qual dos dois é, e não só se tem
+porteiro.
+
+**Detalhe de clique que custou uma rodada:** `locator('button:has-text("Submit")')` pega botão
+de **outro** formulário da página. Marcar o botão que está **dentro do mesmo `<form>`** do campo
+de nome e clicar nesse é o que resolve.
