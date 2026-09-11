@@ -600,3 +600,31 @@ porteiro.
 **Detalhe de clique que custou uma rodada:** `locator('button:has-text("Submit")')` pega botão
 de **outro** formulário da página. Marcar o botão que está **dentro do mesmo `<form>`** do campo
 de nome e clicar nesse é o que resolve.
+
+## MEDIDO EM 11/09: A ASSINATURA DO reCAPTCHA v3 NUM FORMULÁRIO CONTACT FORM 7
+
+O v3 **não é desafio de clique**, é pontuação invisível, então não há o que burlar: o próprio
+navegador gera o token em `_wpcf7_recaptcha_response` ao carregar a página. O que acontece é a
+pontuação reprovar o IP de datacenter — e o Contact Form 7 diz isso de um jeito muito específico:
+
+`POST /wp-json/contact-form-7/v1/contact-forms/<id>/feedback` → **200**, com corpo
+`{"contact_form_id":<id>,"status":"spam","message":"..."}` e o `<form>` ficando com
+`class="wpcf7-form spam"` e `data-status="spam"`.
+
+**`status: "spam"` é recusa, não envio.** Nada é entregue ao estúdio, então não há risco de
+duplicata quando a candidatura for refeita à mão. Registrar como parede e mandar para a fila
+dele. A mensagem de erro que aparece na tela é genérica e pode estar em espanhol ou na língua do
+site; o que decide é o `status` do JSON.
+
+**Anexo no CF7:** o limite padrão é **1 MB**. O PDF do portfólio tem 2,6 MB e derrubaria o envio
+inteiro. Manda o CV e deixa a ArtStation no texto, que pelo briefing já tem prioridade.
+
+## MEDIDO EM 11/09: CASAR O HOST, NUNCA A URL
+
+Terceira afinação da mesma regra no mesmo dia, e ela era necessária. Depois de aprender que
+pedido de rede só conta se for para a casa, o filtro passou a casar o domínio **em qualquer
+lugar da URL** — e isso ainda deixa rastreador passar, porque o Google Analytics carrega a URL
+da página **dentro do próprio parâmetro** (`dl=https%3A%2F%2Fwww.casa.com...`). Um POST para
+`google-analytics.com` casava com o domínio da casa e entrava na contagem de prova.
+
+**Regra final:** extrair o host com `new URL(u).hostname` e exigir que o **host seja** o da casa.
