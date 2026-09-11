@@ -315,3 +315,99 @@ function enviarRascunhos() {
   }
   Logger.log(n + " processados nesta execução" + (SIMULAR ? " (simulação)" : ""));
 }
+
+
+/* ============================================================================
+ * ENVIA OS RASCUNHOS DE ASSUNTO PRÓPRIO
+ *
+ * POR QUE ESTA FUNÇÃO EXISTE, medido em 11/09 às 23h20:
+ * Sobraram três cartas presas na caixa desde 10/09, e não por esquecimento. O
+ * enviarRascunhos() acha os rascunhos por `getSubject() === ASSUNTO`, ou seja
+ * pelo assunto EXATO da campanha. Estas três têm assunto próprio DE PROPÓSITO,
+ * porque a própria casa manda usar um:
+ *
+ *   - UFX Studios      "Jobs · Senior Character Artist · ..."  (a página pede "Jobs" no assunto)
+ *   - HandyGames       "Application as 2D/3D Game Artist (Mid-level/Senior)"
+ *   - Keytoon          "Oferta empleo Modelador"               (o texto do anúncio pede este)
+ *
+ * O conferirRascunhos() já avisava disto ("ASSUNTO FORA DO PADRÃO, o envio NUNCA
+ * vai achar este rascunho"), mas não havia como enviá-las. Ficavam escritas,
+ * corretas e invisíveis. Duas delas citam vaga aberta pelo nome.
+ *
+ * POR QUE A LISTA DE PERMISSÃO, e ela não é burocracia:
+ * Filtrar por "assunto diferente do padrão" pegaria QUALQUER rascunho da caixa,
+ * inclusive email pessoal do Vini. Uma função de disparo que varre o que não
+ * reconhece é um acidente esperando a vez. Então ela só envia para endereço que
+ * está escrito aqui embaixo, um a um, e ignora todo o resto sem reclamar.
+ *
+ * O assunto de cada uma é PRESERVADO: é o assunto que a casa pediu, e trocá-lo
+ * pelo padrão da campanha desmontaria a única razão de a carta ser diferente.
+ *
+ * O resto é igual ao enviarRascunhos(): limpa o link, NÃO regrava o rascunho
+ * (regravar reembrulha o link em google.com/url, medido em 07/09 na Cosmico),
+ * respeita a cota e apaga o rascunho só depois que o envio saiu.
+ * ========================================================================== */
+
+const ASSUNTO_PROPRIO_PERMITIDOS = [
+  "vfx_hr@ufxstudios.com",      // UFX Studios, Bruxelas
+  "jobs@thqnordicmobile.com",   // HandyGames / THQ Nordic Mobile, Giebelstadt
+  "info@keytoon.com"            // Keytoon, Madri
+];
+
+function enviarAssuntoProprio() {
+  const sig = assinatura();
+  const files = anexos();
+  const permitidos = ASSUNTO_PROPRIO_PERMITIDOS.map(e => e.toLowerCase().trim());
+
+  const rascunhos = GmailApp.getDrafts().filter(function (d) {
+    const m = d.getMessage();
+    if (m.getSubject() === ASSUNTO) return false;          // essas são do enviarRascunhos()
+    const para = (m.getTo() || "").toLowerCase();
+    return permitidos.some(e => para.indexOf(e) !== -1);
+  });
+
+  const sobra = MailApp.getRemainingDailyQuota();
+  Logger.log(rascunhos.length + " rascunhos de assunto próprio encontrados · cota restante hoje: " + sobra);
+  if (!rascunhos.length) {
+    Logger.log("Nada a enviar. Se você esperava alguma, confira se o destinatário está em "
+      + "ASSUNTO_PROPRIO_PERMITIDOS: fora da lista, a função ignora de propósito.");
+    return;
+  }
+  if (sobra <= 0) {
+    Logger.log("COTA ZERADA. Nada foi enviado e nenhum rascunho se perdeu. Rode cota() antes de tentar de novo.");
+    return;
+  }
+
+  let n = 0;
+  for (const d of rascunhos) {
+    if (n >= MAX_POR_EXECUCAO) break;
+    if (n >= sobra) {
+      Logger.log("PAREI NA COTA: " + n + " enviados, " + (rascunhos.length - n) + " ficaram para a próxima. Não é erro.");
+      break;
+    }
+    const m = d.getMessage();
+    const para = m.getTo();
+    const assuntoDela = m.getSubject();          // o assunto que a CASA pediu, preservado
+    if (!para || !assuntoDela) continue;
+    if (SIMULAR) { Logger.log("enviaria para " + para + " com assunto \"" + assuntoDela + "\""); n++; continue; }
+
+    const jaPreparado = m.getAttachments().length >= NOMES_ANEXOS.length;
+    const html = limparLinks(m.getBody()) + (jaPreparado ? "" : "<br><br>-- <br>" + sig);
+    const texto = limparLinks(m.getPlainBody());
+    if (/google\.com\/url/i.test(html + texto)) {
+      Logger.log("NAO ENVIEI para " + para + ": sobrou link embrulhado que a limpeza nao desfez. Confira a mao.");
+      continue;
+    }
+    GmailApp.sendEmail(para, assuntoDela, texto, {
+      htmlBody: html,
+      attachments: jaPreparado ? m.getAttachments() : files,
+      name: "Vini Cavalcanti"
+    });
+    d.deleteDraft();
+    n++;
+    Logger.log("enviado com link limpo para " + para + " · assunto \"" + assuntoDela + "\""
+      + (jaPreparado ? " (ja vinha preparado)" : ""));
+    Utilities.sleep(PAUSA_MS);
+  }
+  Logger.log(n + " processados nesta execução" + (SIMULAR ? " (simulação)" : ""));
+}
