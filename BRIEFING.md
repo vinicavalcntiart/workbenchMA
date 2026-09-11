@@ -668,3 +668,77 @@ for a list of roles in our other locations"*. A campanha já tem duas candidatur
 **A regra geral que isto confirma:** veto de autorização costuma ser **por estúdio e por
 requisição**, não por casa. Ao registrar um, escreva qual estúdio e qual requisição, para a
 rodada seguinte não fechar uma porta que continua aberta em outro país.
+
+## MEDIDO EM 11/09 À NOITE: O DEDUPE POR NOME NO `enviados.csv` FALHA, E ELE JÁ ME FEZ QUASE REAPLICAR
+
+Ia gastar uma rodada cadastrando a **Stunlock** no Connect. O dedupe de sempre
+(`grep` do nome da casa em `enviados.csv`) devolveu "2 ocorrências" — duas cartas
+frias, 02/09 e 07/09 — e nenhuma linha de portal. Conclusão aparente: a rota do
+portal está livre.
+
+Estava errada. A caixa de entrada tinha recibo do Teamtailor de **06/09**,
+`helena.toresson@stunlocksstudios.teamtailor-mail.com`, dizendo *"We will review
+your application for Open Application shortly"*. **O envio existia. A linha é que
+nunca foi escrita.**
+
+### Por que o método falha
+
+São duas falhas somadas, e qualquer uma sozinha já basta:
+
+1. **A linha pode não existir.** Um envio confirmado na tela que não vira linha
+   no CSV é invisível para o `grep`. O CSV é registro manual, não é log.
+2. **O nome no CSV não é o slug.** No CSV está `Stunlock Studios`; o slug é
+   `stunlocksstudios`, com dois "s". `Snowprint`/`snowprintstudios`,
+   `Paradox Interactive`/`paradox-interactive`, `SYBO`/`sybogames`. Procurar o
+   nome não acha o slug e procurar o slug não acha o nome.
+
+### A fonte de verdade é a CAIXA DE ENTRADA, não o CSV
+
+Todo envio pelo Teamtailor gera recibo de `<slug>.teamtailor-mail.com`. O slug
+vem de graça no remetente. Então **antes de gastar rodada em slug de Teamtailor,
+a conferência é no Gmail**, não no CSV:
+
+```
+from:teamtailor-mail.com
+```
+
+Se existe recibo com aquele slug, a rota está gasta, esteja ou não no CSV. O CSV
+confirma, nunca desmente.
+
+O mesmo raciocínio vale para qualquer ATS que manda recibo com domínio próprio
+(`greenhouse-mail.io`, `personio.de`, `ashbyhq.com`): **o recibo é prova de envio
+e o CSV é só a anotação dele.** Anotação se perde; recibo não.
+
+### O estrago medido
+
+A lista de 89 slugs "livres" do Teamtailor tinha sido montada por `grep` no CSV,
+ou seja pelo método quebrado. Cruzando com os recibos, **pelo menos 24 dos 89 já
+estavam enviados** — `awaceb`, `beyondframesentertainment`, `fatshark`,
+`paradoxinteractive`, `sybogames`, `tacticaladventures`, `snowprintstudios`,
+`stunlocksstudios` e mais. Um quarto da fila era candidatura repetida esperando
+para acontecer.
+
+### Consertado nesta rodada
+
+- Escrita a linha que faltava da Stunlock (06/09, `portal-enviado`).
+- Quatro linhas estavam **sem campo de status nenhum** (4 colunas em vez de 5):
+  os dois envios da **DNEG Animation** de 08/09 (Montreal e Londres), que são
+  candidaturas reais e confirmadas, e dois bounces (Cinesite, Image Engine).
+  Um envio sem status é um envio que não conta. Status preenchido nos quatro.
+
+### Uma coisa que NÃO é problema, para não perder tempo com ela
+
+O `enviados.csv` tem cinco larguras de linha misturadas (5, 6, 7 e 8 colunas —
+a de 8 é o formato novo, de 09/09 em diante). Parece defeito e não é urgente:
+**nenhum programa lê esse arquivo.** Ele é alvo de `grep` para humano e para
+agente. Normalizar o esquema com agente concorrente escrevendo no mesmo repo é
+risco sem retorno. O que precisa estar certo é o *status* de cada linha e a
+*existência* da linha, não o número de vírgulas.
+
+### Falso amigo: nem todo slug de Teamtailor é estúdio
+
+`chopchop` parecia casa sueca de jogos. É **rede de fast-food** — o site bate em
+`restaurang`, `mat`, `sushi`, `wok`, e os departamentos são `Drift` (operações) e
+`Huvudkontor` (matriz), sem arte nenhuma. Nada foi enviado. Antes de gastar
+rodada num slug que veio de varredura, **confere a identidade da casa**, porque a
+lista de slugs não distingue estúdio de restaurante.
