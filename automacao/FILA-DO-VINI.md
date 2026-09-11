@@ -2053,3 +2053,51 @@ painel e o motivo está escrito lá.
 | Blowfish Studios (candidatura espontânea, Sydney) | Austrália (Sydney) | **NÃO É CAPTCHA** (zero medido). Formulário Wix preenchido inteiro daqui — First name, Last name, Preferred name, Email, "A bit about you" com 1.600 caracteres, **CV e portfólio anexados com sucesso** (`POST /_api/form-submission-service/v4/submissions/media-upload-url` → 200 nos dois, e os dois nomes aparecem na tela). O **Submit não dispara**: cliquei no botão certo, o de dentro do próprio formulário, e **nenhum pedido sai**; sem campo inválido, sem obrigatório vazio, sem texto de erro. É o mesmo padrão da Nine Dots: o caminho de envio do SPA não completa por esta rede, embora o upload de arquivo complete. Do seu navegador vai. | https://www.blowfishstudios.com/careers |
 | Peekaboo Animation (candidatura espontânea pelo formulário de contato) | Espanha (Barcelona) | **reCAPTCHA v3 reprovou a sessão, e desta vez com a palavra do servidor.** O formulário é Contact Form 7, servido no HTML, e foi preenchido inteiro daqui: nome, email, mensagem de 1.479 caracteres, CV anexado (45.459 B), consentimento `acceptance-408` marcado, honeypot `coupon_question` **desmarcado** e o token `_wpcf7_recaptcha_response` **presente** (gerado pelo próprio navegador, nada foi burlado). O `POST` para `/wp-json/contact-form-7/v1/contact-forms/9/feedback` voltou **200** com `{"status":"spam"}` — é a pontuação do v3 reprovando o IP de datacenter, não um erro nosso. **Nada foi entregue a eles**, então não há risco de duplicata. Do seu navegador passa. O convite é escrito pela própria casa no formulário: *"IF YOU WANT TO WORK WiTH US, PLEASE ATTACH YOUR PORTFOLIO"*. Se for anexar o PDF do portfólio, atenção: o CF7 limita anexo a 1 MB por padrão e o seu PDF tem 2,6 MB — mande o CV e deixe a ArtStation no texto. | https://www.peekabooanimation.com/contact/ |
 | **GSC Game World — 3D Character Artist** (S.T.A.L.K.E.R. 2) · requisição `236329` | Praga (RTC), Kyiv ou **remoto dentro da Europa** | **A MELHOR VAGA DA FILA, e é vaga de verdade, não banco de talentos.** Preenchi tudo daqui: nome, email, telefone, carta de 2.158 caracteres no editor rico, CV anexado, pretensão EUR 55.000, e os dois consentimentos de GDPR marcados. O servidor respondeu **422** com a frase dele: *"We could not verify that this application was submitted by a person. Please reload the page and try again."* — é o **reCAPTCHA v3** reprovando o IP de datacenter, a mesma parede da Peekaboo. **Nada foi entregue**, então não há duplicata. Do seu navegador passa. Sem exigência de idioma escrita (a vaga de Concept Artist deles exige ucraniano, a de personagem **não**). | https://gscgameworld.peopleforce.io/careers/v/236329-3d-character-artist/a/new |
+
+---
+
+## ArtStation Jobs — o quadro mais on-target da disciplina, e só o SEU navegador alcança
+
+**Medido em 11/09 às 21h50, e desta vez com navegador de tela de verdade, não só curl.**
+
+O Jhon B tinha fechado em 09/09 dizendo "não é caçável por `curl`": `/jobs` dá **403** com
+interstitial do Cloudflare, `/jobs.json` dá 200 mas é a casca da SPA em Angular com zero vaga,
+a API v2 dá **500** e o POST dá **412 Invalid CSRF Token**.
+
+Abri com o navegador de tela para ver se a hidratação resolvia. **Não resolve.** A página
+carrega e para em:
+
+> *"One more step. Please complete a security check to continue."*
+
+Título da aba: *"Just a moment..."*. **É captcha de DESAFIO do Cloudflare**, e por regra do
+briefing desafio não se burla. Zero vaga chegou pela API porque a página nunca passou do muro.
+
+**Por que é o IP e não o navegador:** a sessão sai por IP de datacenter, e o Cloudflare desafia
+esse tipo de origem por padrão. **Do seu navegador, em casa, isso passa sem você nem ver.**
+
+### O que isso significa para a campanha
+
+O ArtStation Jobs é, de todos os quadros que a campanha conhece, **o mais alinhado à disciplina
+dele**: é o quadro da própria comunidade de arte 3D, onde vaga de personagem aparece com o nome
+certo e sem o ruído de marketing e engenharia que enche Workday e SmartRecruiters. E é o único
+que nenhuma automação desta campanha consegue ler.
+
+**Portanto ele vale uma visita SUA, à mão, e provavelmente vale mais que uma rodada inteira de
+agente.** A conta é simples: agente varre dezenas de milhares de anúncios para achar zero de
+personagem, e este quadro é pequeno e quase todo da disciplina.
+
+### O que procurar quando abrir
+
+Termos, na ordem de prioridade do briefing:
+`character artist`, `character modeler`, `creature artist`, `3d modeler`, `sculptor`,
+`texture artist`, `look development`, `surfacing`, `visual development`, `groom`.
+
+**Descartar pelo CORPO, não pelo título:** `Creature TD` quase sempre é rigging e `Creature FX`
+é simulação; os dois estão fora, apesar da palavra creature. Também fora: VFX em tempo real,
+design de locação 2D, matte painting, concept e character design 2D.
+
+**Antes de gastar carta:** confira se a vaga já está no `enviados.csv`, e leia o anúncio inteiro
+atrás de veto ESCRITO (`authorized to work`, `must be based`, `citizen`, `resident`). Patrocínio
+de visto é contexto, não é critério de descarte.
+
+Se achar alguma e me passar o link, eu monto o dossiê e preencho o formulário na hora.
