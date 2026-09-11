@@ -649,3 +649,22 @@ exatamente o caso de "material" querendo dizer surfacing de personagem.
 **Lição de método por trás disso:** varredura por título só acha o que a lista de termos prevê.
 Quando uma passagem por busca do próprio ATS devolve algo que a sua varredura não devolveu, o
 suspeito é a **sua lista**, não o quadro.
+
+## MEDIDO EM 11/09: VETO ESCRITO NA DNEG MONTREAL, E O QUE ELE NÃO ALCANÇA
+
+A DNEG Montreal recusou a *Modeleur de personnages / Character Modeler* com a frase literal, em
+francês e inglês: *"nous ne pouvons pas considérer les candidats qui n'ont pas le droit de
+travailler au Canada"* / *"we are not able to consider candidates who do not have the right to
+work in Canada for this role"*.
+
+Isso é **veto escrito**, não leitura de contexto. **DNEG Montreal está fechada** enquanto não
+houver direito de trabalho no Canadá, e nenhuma rodada deve gastar tiro lá.
+
+**Duas coisas impedem descartar a DNEG inteira:** o veto é **do estúdio de Montreal e daquela
+requisição**, não da empresa; e o próprio email redireciona, *"Please see www.dneg.com/careers
+for a list of roles in our other locations"*. A campanha já tem duas candidaturas vivas em
+**Londres** — Groom TD (DNEG ANIM) e Facial Modeller (DNEG VFX), ambas de 08/09 e não recusadas.
+
+**A regra geral que isto confirma:** veto de autorização costuma ser **por estúdio e por
+requisição**, não por casa. Ao registrar um, escreva qual estúdio e qual requisição, para a
+rodada seguinte não fechar uma porta que continua aberta em outro país.
