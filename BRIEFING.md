@@ -911,11 +911,27 @@ verdade, e não havia nada.
 
 **Só que o zero era do token errado.** `api.smartrecruiters.com/v1/companies/NBCUniversal/postings`
 e `/DreamWorksAnimation/postings` respondem **200 com `totalFound: 0` e `content: []`** mesmo sem
-filtro nenhum, ou seja o token existe e o quadro dele é vazio. O quadro que tem vaga é
-**`NBCUniversal1`**, que devolve **7 requisições** (Rough Layout Artist em Glendale, Booking
-Coordinator, estagiário do NBC News Group, duas de Multi Media Producer, uma "Test, UK" e uma de
-Email Marketing). Nenhuma da disciplina, então o resultado final da rodada não muda. **O método
-é que estava quebrado.**
+filtro nenhum, ou seja o token existe e o quadro dele é vazio.
+
+**CORREÇÃO ESCRITA PELO MAESTRO ÀS 09h20, e ela evita um estrago sério.** A rodada concluiu que
+"o quadro que tem vaga é `NBCUniversal1`". **Está errado, e seguir isso cegaria a campanha.**
+Medição direta dos quatro tokens, feita agora:
+
+| token | `totalFound` sem filtro |
+|---|---|
+| **`NBCUniversal3`** | **384** |
+| `NBCUniversal1` | 7 |
+| `NBCUniversal` | 0 |
+| `DreamWorksAnimation` | 0 |
+
+**O quadro grande é o `NBCUniversal3`, que é justamente o que a rotina já usava**, e é nele que
+estão a `DreamWorks Feature - Character Effects Artist` e as de Montreal. O `NBCUniversal1`, com
+7 vagas, é um quadro MENOR e SEPARADO que a campanha não lia. Trocar um pelo outro perderia 384
+vagas, incluindo as únicas da disciplina que a casa tem.
+
+Então a leitura certa não é "achar O token", é **achar TODOS os tokens vivos**: nesta casa são
+**dois**, e a partir de agora a ronda consulta os dois. O resultado da disciplina não muda (a
+única do `NBCUniversal1` é Rough Layout Artist, que é layout e está fora), mas a cobertura sim.
 
 ### A regra que sai daqui, e ela é irmã da regra do `ronda-disney.sh`
 
@@ -927,7 +943,8 @@ O script da Disney resolveu "**resposta vazia não é zero**". Isto aqui é o de
 
 1. Consulte o token **sem filtro nenhum** (`?limit=5`, sem `q=`). Se vier `totalFound: 0`, o
    problema é o token, não o termo de busca. Casa grande nunca tem zero vaga de tudo.
-2. Tente as variantes óbvias antes de desistir: sufixo numérico (`NBCUniversal1`), com e sem
+2. Tente as variantes óbvias antes de desistir: sufixo numérico (`NBCUniversal1`, `NBCUniversal3`),
+   e **não pare no primeiro que responder**: podem existir DOIS quadros vivos, como aqui. Com e sem
    espaço, com e sem "Animation", com e sem "Studios".
 3. Só depois de um token que devolve dezenas de vagas é que "zero da disciplina" quer dizer
    alguma coisa.
