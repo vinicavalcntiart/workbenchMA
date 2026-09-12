@@ -286,3 +286,22 @@ achar o NOME do lead de personagem por imprensa/entrevista, e depois procurar o 
   PRIMEIRA pessoa desta casa.
 - **Gancho já pronto para o dia em que aparecer endereço:** a entrevista dele é sobre **silhueta** e
   construção de personagem para jogo-serviço de longa duração, que é o vocabulário do portfólio do Vini.
+
+---
+
+## RODADA DAS 15h40 DE 12/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Caminho novo da rodada, e ele é repetível e barato:** varrer os **slugs de Teamtailor que a
+campanha já conhece** seguindo o redirecionamento **para o domínio próprio da casa** e procurar
+`mailto:` de pessoa dentro da página de cada vaga. O campo `recruiter-email` do payload (veia de
+07/09) apareceu em **zero** dos 78 slugs — mas o `mailto:` no corpo do anúncio apareceu, e é a
+mesma coisa: endereço **publicado pela própria casa**, não montado.
+
+### Maria Sjöman — HR (dona da requisição de Art Director and Art Lead) — Coffee Stain North, Estocolmo, Suécia
+- **Email:** maria.sjoman@coffeestain.com · confiança **alta** · fonte: https://jobs.coffeestain.com/jobs/8083591-art-director-and-art-lead — fim do anúncio, em texto e em `mailto:`, lido nesta rodada: **"If you have any questions regarding the role, please reach out to Maria Sjöman, HR, maria.sjoman@coffeestain.com"**. O mesmo endereço aparece na outra vaga aberta da casa (Senior Game Designer).
+- **Armadilha de domínio, confirmada de novo:** o site de recrutamento é `jobs.coffeestain.com`, o relay do Teamtailor é `coffeestainstudios.teamtailor-mail.com` e o email corporativo é **`@coffeestain.com`**. Endereço montado sobre `coffeestainstudios.com` teria quicado. É a lição da Stunlock, de novo.
+- **Por que ELA e não outra pessoa:** a casa tem **34 pessoas** e não publica o email de mais ninguém; ela é a pessoa nomeada na requisição de arte. O cargo de Art Director está **aberto**, ou seja não há diretor de arte a quem escrever hoje.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"COFFEE STAIN NORTH is a small game developer based in Stockholm that belongs to the Coffee Stain Group. Since the company was founded in 2013, we have grown to 34 employees and are now open to adding a couple of new friends"**, e o produto é Goat Simulator 3, que o anúncio descreve como um jogo onde o jogador **"can explore the island of San Angora solo or with friends, wreaking havoc as a goat (or one of many unlockable characters)"**. Elenco de personagens estilizados desbloqueáveis é exatamente o portfólio dele.
+- **Fora dos EUA?** Sim — Suécia, União Europeia. A linha de realocação e a de patrocínio entram.
+- **Dedupe, feito na caixa:** `pessoas.csv` dá zero para "coffeestain"; `enviados.csv` tem uma linha que **não é carta**, é o registro reconstruído da candidatura de portal; e o **Gmail** mostra que em **06/09** o Vini se candidatou a **esta mesma vaga** pelo Teamtailor e que o recibo veio **assinado por ela** (`maria.sjoman@coffeestainstudios.teamtailor-mail.com`, *"Thank you for your application to the role as Art Director and Art Lead... we will review your application shortly"*). **Nenhuma recusa e nenhuma resposta humana.** PRIMEIRA carta desta casa.
+- **Ressalva honesta, três:** (1) ela é **HR, não arte** — numa casa de 34 pessoas isso pesa menos, mas não é o diretor de arte; (2) o próprio anúncio escreve **"Due to GDPR, we can't accept applications through email"**, então a carta **não pode ser candidatura por email**: tem que ser pergunta de direção a quem cuida da requisição, e se citar a vaga precisa dizer que ele **já aplicou pelo portal em 06/09**; (3) a vaga aberta é de Art Director, não de personagem, e o anúncio é de **17/07/2026**.
