@@ -12,8 +12,6 @@
   "permissions": {
     "defaultMode": "bypassPermissions",
     "deny": [
-      "mcp__Gmail__create_draft",
-      "mcp__Gmail__update_draft",
       "mcp__Gmail__send_message",
       "mcp__Gmail__forward",
       "mcp__Gmail__trash_thread",

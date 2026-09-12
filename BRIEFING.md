@@ -1185,7 +1185,7 @@ Numa sessão que já está aberta, os tipos novos podem ainda não estar dispon�
 garantia é de conduta: o maestro não delega escrita de carta, ponto. A trava por ferramenta
 vale a partir da próxima sessão.
 
-## 12/09, 15h20 — `create_draft` FOI PARA A LISTA DE NEGADOS. LEIA ANTES DE TENTAR ESCREVER CARTA.
+## 12/09, 15h20 — `create_draft` FOI NEGADO E DEPOIS LIBERADO ÀS 15h40. A TRAVA QUE FICOU É OUTRA.
 
 O Vini pediu **quatro vezes** que parassem os pedidos de aprovação de rascunho na tela dele.
 Minhas três primeiras respostas foram parciais e nenhuma parou o problema:
@@ -1304,3 +1304,34 @@ só — a **Jungler** (Paris, seis vagas, já registrada como parede de reCAPTCH
 3. **A frase que decide pode estar fora do recorte que você leu.** Eu li o corpo do anúncio pelo
    HTML e a linha de prioridade não estava nele: ela só apareceu no **texto renderizado**, depois
    do bloco de benefícios. Recorte de 4.000 caracteres a partir do título não é o anúncio inteiro.
+
+### ATUALIZAÇÃO DAS 15h40: o `deny` saiu, e a razão importa
+
+Quando eu pus `create_draft` no `deny`, os tipos de agente restritos de `.claude/agents/`
+**ainda não estavam registrados** nesta sessão — definição de agente é lida na abertura, e a
+sessão já estava aberta. Naquele momento negar era a única coisa que funcionava **agora**.
+
+Minutos depois os dois tipos entraram no ar (`campanha-cacador` e `campanha-detetive`), e com
+isso o `deny` virou **redundante**: quem abria pedido na tela do Vini era o subagente, e o
+subagente agora **não tem a ferramenta na mão**. O `deny` só continuava custando uma coisa, e
+era a errada: **impedir o maestro de escrever carta**, que é a frente que mais deu resposta
+positiva nesta campanha.
+
+**O Vini decidiu liberar**, com a trava dos agentes de pé. Então o estado final é:
+
+| Quem | Pode criar rascunho? |
+|---|---|
+| Sessão principal (maestro) | **sim** |
+| `campanha-cacador` e `campanha-detetive` | **não, por falta da ferramenta** |
+| Qualquer agente novo | **só se alguém lhe der a ferramenta de propósito** |
+
+**E a lição de método, que vale mais que o caso:** trava certa é a mais estreita que resolve o
+problema. O `deny` era largo demais, porque punia também quem não era o problema. Ele foi a
+resposta certa por alguns minutos, enquanto era a única disponível, e passou a ser a errada no
+instante em que a trava estreita entrou no ar. **Quando a trava estreita começa a valer,
+levante a larga** em vez de acumular as duas.
+
+**Ao criar agente novo para esta campanha, use um dos dois tipos restritos.** Se precisar de um
+tipo novo, monte o arquivo em `.claude/agents/` e **omita as ferramentas de escrita do Gmail**
+da lista `tools`. Nunca resolva isso escrevendo "não use tal ferramenta" no prompt: prompt
+convence, `tools` impede.
