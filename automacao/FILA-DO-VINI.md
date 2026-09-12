@@ -1841,6 +1841,35 @@ da campanha é mandar na mais alta.
 
 ---
 
+## ~~51. Absurd Ventures — CHARACTER ART LEAD~~ — ✅ **ENVIADA EM 12/09 ÀS 11h24 UTC. NÃO REFAÇA.**
+
+> Enviada pelo maestro no mesmo dia em que o Jhon B a achou. **Prova dupla**, que é o padrão
+> desta casa porque o recibo dela é mudo: a URL terminou em `/jobs/5236256007/confirmation`
+> **e** a página respondeu *"Thank you for applying to Absurd Ventures"*. Código de segurança
+> `BPjwpS7x`, pedido às 11h21m34 e atendido às 11h21m45.
+>
+> **A primeira tentativa foi RECUSADA pelo próprio formulário e não enviou nada**, o que é
+> bom: nenhuma duplicata, nenhum código gasto à toa. Faltavam dois campos obrigatórios que
+> este dossiê não tinha visto, e os dois viraram conserto no `apply-greenhouse.js`:
+>
+> 1. **`Discipline` é campo da seção Education**, não é `question_*`, então o `answers.json`
+>    nem falava dele e o log não acusava nada — o servidor é que dizia *"Discipline is
+>    required."* Agora existe um bloco `education` no arquivo de respostas. A opção honesta,
+>    entre as 79 da lista, é **`Game and interactive media design`**, porque a formação dele é
+>    Game Art Specialist (PG Dip) pela Melies São Paulo.
+> 2. **O "multi-select" do Greenhouse é GRUPO DE CHECKBOX**, não `<select>`. Cada opção tem id
+>    próprio `<name>[]_<idDaOpcao>`, então procurar por `#question_12881396007[]` devolvia
+>    `null` e o log dizia apenas `missing`. Marcadas **Unity + Unreal 5**.
+>
+> **E um terceiro defeito, que era o mais perigoso dos três:** a leitura de volta desse campo
+> imprimia o rótulo inteiro da pergunta (*"... Unity Unreal 4 Unreal 5 Other None"*) como se
+> fosse a resposta, porque existe um elemento com o id do grupo e o teste caía no ramo do
+> react-select. Isso é pior que não conferir, porque dá ao operador a impressão de que
+> conferiu. Agora o grupo de checkbox é testado PRIMEIRO e só o `.checked` conta — a leitura
+> de volta do envio bom diz `Unity + Unreal 5`.
+
+### Texto original da entrada, mantido para referência
+
 ## 51. Absurd Ventures — CHARACTER ART LEAD — Santa Monica, Califórnia, EUA (efetiva, presencial)
 
 **Link direto (fonte oficial, o ATS da própria casa):**
