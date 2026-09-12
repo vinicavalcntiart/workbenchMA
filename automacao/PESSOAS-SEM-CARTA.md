@@ -460,3 +460,51 @@ não prova cargo atual**, e cargo desatualizado é pior que alvo nenhum. Descart
   parado, ainda que a campanha o tenha reconferido em 07/09; (3) ele é **fundador, não supervisor de
   arte**, e não confirmei o título operacional dele hoje — o que vale é o critério do BRIEF-JOE, de
   que fundador não muda de casa.
+
+### TRÊS CASAS MORTAS PELA CAIXA NESTA RODADA, e as três pareciam boas no arquivo
+
+O `grep` dava sinal verde nas três. Quem matou foi o **Gmail** e, num dos casos, o **painel** —
+exatamente o que o `dedupe-agora.sh` manda fazer antes de escrever a ficha.
+
+- **~~Behaviour Interactive (Montréal)~~ — RECUSOU.** No papel era o achado do dia: **três**
+  *Senior 3D Character Artist* abertas ao mesmo tempo no Lever (`bhvr`) — 7 Days to Die, Dead by
+  Daylight e projeto não anunciado —, casa AAA canadense, e `pessoas.csv` com **zero** pessoa. O
+  Gmail conta outra história: em **11/09 às 17h17** chegou *"Thank you for your interest in Behaviour
+  Interactive and application for the Senior Character Artist position, on 7 Days to Die. We are
+  sorry to inform you that we have decided to move..."*. **Casa que já recusou está fora dos limites
+  do Joe.** Fica valendo só o que é da caça: a candidatura de **10/09** para a Dead by Daylight segue
+  sem resposta, e a de projeto não anunciado (`86ddd557`) continua aberta.
+- **~~DNEG~~ — RECUSOU DUAS VEZES.** `pessoas.csv` tem zero pessoa da DNEG e o site publica até
+  endereços de área (`art@dneg.com`, `dneg-animation@dneg.com`, `cto-office@dneg.com`, lidos hoje na
+  página About). Mas o Gmail tem **duas recusas escritas**: **01/09**, Character Modeller (DNEG
+  Animation), Londres — *"we are currently unable to consider candidates who live overseas"* — e
+  **11/09**, *Modeleur de personnages / Character Modeler (DNEG Animation)*, Montréal, com a mesma
+  frase em francês. **Fora dos limites.**
+- **~~Wil Film (Copenhague)~~ — VETO DE VISTO ESCRITO, e o painel já sabia.** A varredura mecânica
+  desta rodada achou o que parecia uma ficha perfeita: estúdio de **animação 3D de personagem
+  estilizado** há quase 20 anos (*"9 seasons of the outstanding TV series 'Ninjago: Masters of
+  Spinjitzu' with 102 episodes and several 'LEGO Star Wars' productions"*), com a página `/team`
+  publicando **`erik@wilfilm.dk` — Erik Wilstrup, CEO** e o `/jobs` convidando candidatura espontânea
+  (*"send your CV and portfolio to: jobs@wilfilm.dk"*), mais `morten.stahlhut@wilfilm.dk` de um
+  anúncio. Gmail e CSVs davam **zero**. O que mata está na mesma página `/jobs`: **"Apply for an open
+  position ONLY if you are a EU pass holder"**, e o `docs/index.html` já registrava isso em **07/09**
+  como *"DESCARTE COM VETO ESCRITO"*. **O dedupe tem que incluir o painel, não só os CSVs e a caixa.**
+
+### ATUALIZAÇÃO DOS QUATRO TRAVADOS — o que esta rodada tentou e o que sobrou
+
+- **Paweł Mielniczuk (CD PROJEKT RED) — ROTA NOVA, e é a única novidade dos quatro.** Ele é
+  **Festival Director do Promised Land Art Festival**, que a própria CDPR organiza. O site do festival
+  existe e publica endereço: **`contact@promisedland-artfestival.com`** e **`biz@`** e **`media@`**
+  (https://www.promisedland-artfestival.com/en, lido nesta rodada), e o **regulamento oficial de 2024
+  hospedado pela própria CDPR** (https://cdn-l.cdprojektred.com/Regulamin_PLAF_24_EN.pdf, 6 páginas,
+  lido nesta rodada) confirma o festival como coisa da casa e repete o mesmo `contact@`. **Não é o
+  endereço dele** e o site do festival **não escreve o nome dele em lugar nenhum** — mas é uma caixa
+  publicada da operação que ele dirige, e é melhor porta que `ir@cdprojekt.com`. Quem escrever decide.
+  O que continua valendo: **nenhum `@cdprojektred.com` aparece no regulamento nem no site do festival**.
+- **Jan Philip Cramer (Digital Domain).** Busca pelo literal `"@d2.com" Cramer` devolve **só agregador
+  pago** (ZoomInfo com `a***@d2.com`, adapt.io) e as caixas comerciais que a rodada das 15h40 já tinha
+  lido. Nada novo. Continua sem endereço dele.
+- **Michael Skyers (Digital Extremes)** e **Marie Schindler (Stellar Creative Lab).** Busca pelo nome
+  + estúdio + "email" devolve, nos dois casos, **apenas RocketReach/ZoomInfo/ContactOut com o
+  endereço mascarado** (`m******@stellarcreativelab.com`). Serviço pago é proibido. **Nada foi
+  montado, e as duas fichas seguem valendo pelo nome e pelo cargo.**
