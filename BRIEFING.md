@@ -1660,3 +1660,68 @@ mandou UMA candidatura para lá**, contra 46 para o país mais difícil do mundo
 **silêncio**, não sucesso — e em 12/09 ficou provado que casa recusa mudando o estado no portal,
 sem escrever. **O sinal forte desta tabela é a coluna de VETOS**, porque é texto do próprio
 anúncio; a coluna de recusas é fraca e não deve ser citada sozinha.
+
+## 12/09, 23h (JHON B) — EXISTE QUADRO NACIONAL DE VAGA, ELE ABRE POR `curl`, E A CAMPANHA NUNCA TINHA LIDO NENHUM
+
+A rodada geográfica da Holanda começou pelo caminho óbvio (sondar domínio de estúdio e adivinhar
+token de ATS) e o caminho óbvio rendeu pouco: **222 domínios holandeses sondados** devolveram
+**cinco** assinaturas de ATS, e **575 tokens** batidos contra onze APIs públicas devolveram quadros
+que a campanha, na maioria, já conhecia.
+
+**O que rendeu foi outra coisa: a página de recursos da associação do país.** A Dutch Games
+Association mantém *"Finding a job in the (Dutch) games industry"*, e ela lista as fontes que a
+própria indústria usa. Três nomes de lá davam **zero ocorrência no repositório inteiro** antes
+desta rodada (`gamejobs.eu`, `gamejobs.be`, `dutchgameindustry`).
+
+| Fonte | O que é | Como se lê |
+|---|---|---|
+| **`www.dutchgamesindustry.nl/jobs`** | **quadro nacional holandês: 119 vagas, 38 casas contratando, 19 cidades**, com etiqueta de disciplina e senioridade e a idade de cada anúncio | `curl` puro. **HTML estático**, sem JavaScript, sem chave, sem paginação |
+| **`gameindustry.be/jobs`** | quadro nacional belga, 20 vagas | `curl` + `self.__next_f.push` (flight data do Next.js), e ali vem **o corpo inteiro do anúncio** |
+| `gamejobs.eu` | **não é quadro de vaga**: é lista de candidatos procurando trabalho | — |
+| `dutchgamesassociation.nl/vacancies` | **não é quadro da indústria**: são as vagas do conselho da associação (tesoureiro, estágio de banco de dados) | — |
+
+**Armadilha medida no quadro holandês, e ela decide o que dá para fazer com ele:** o título da vaga
+**não tem link no HTML** — o link é desenhado por JavaScript. Então de lá se tira **inventário**
+(quem está contratando, o quê, onde, há quanto tempo), e o corpo do anúncio tem de ser buscado no
+site da casa. Mesmo assim o inventário sozinho já responde a pergunta mais cara da campanha, que é
+*"esta casa está contratando agora?"*, para um país inteiro, em **uma requisição**.
+
+> **Regra: antes de varrer um país por estúdio, procure o quadro NACIONAL dele.** O caminho é a
+> associação da indústria daquele país, na página de recursos ou de carreira. Uma requisição que
+> cobre 38 casas vale mais que 222 sondas de domínio, e foi exatamente essa a conta desta rodada.
+> Procurado e **não** achado equivalente vivo em: Suécia (`dataspelsbranschen.se/jobb`, 404),
+> Finlândia (`neogames.fi/jobs`, 404), Dinamarca (`gamesdenmark.dk/jobs`, 404), Irlanda
+> (`imirt.ie/jobs`, 404) e Alemanha (`game.de`, só as vagas da própria associação).
+
+### O que os quatro caminhos independentes mediram sobre a HOLANDA, e o número é duro
+
+**Zero vaga de personagem, e zero veto escrito de autorização.** O quadro nacional inteiro tem de
+arte só 2D e estágio; a **Guerrilla** tem **uma** vaga no mundo (Studio Technical Director,
+Amsterdã); a **Nixxes** tem duas, ambas de programação; a **Vertigo Games** tem **zero** e só aceita
+espontânea por `jobs@vertigo-games.com`, que já recebeu carta em 02/09 e follow-up em 07/09. Ubisoft
+e Keywords: zero na Holanda.
+
+**Isso não desmente a tabela das 22h, refina ela.** O problema holandês não é porta fechada por
+escrito — é **ausência de vaga da disciplina neste momento**. Para a Holanda, a rota que funciona é
+a **carta para pessoa com nome**, não a fila de formulário.
+
+### `careers.playstation.com` é agregador, e cada estúdio do grupo tem o SEU quadro Greenhouse
+
+Extraídos da página: `sonyinteractiveentertainmentglobal` (185 vagas), `siei` (62, Tóquio), `pdi`
+(18, Polyphony), `naughtydog` (13), `haven` e `havenenglish` (2 cada, Montréal), `firesprite` (1) e
+**`guerrilla-games`** (1). É a mesma família do `disneycareerdc` e do `Blizzard_External_Careers`:
+**não existe "o" quadro da casa, existem todos**. E o detalhe que engana: **as vagas holandesas da
+Nixxes estão no quadro GLOBAL**, não num quadro com o nome dela — quem procurar o token `nixxes` em
+ATS nenhum acha, e concluiria "casa sem vaga" com a casa contratando.
+
+### Três falsos amigos de token, medidos nesta rodada
+
+- **`boards-api.greenhouse.io/v1/boards/remedy` não é a Remedy Entertainment**: é uma farmácia
+  americana (Facilities Manager em Houston, Pharmacy Packaging Clerk em Syracuse).
+- **`jobs.ashbyhq.com/rain` não é a Rain Games da Noruega**: é uma fintech de Nova York.
+- **`triumph.bamboohr.com` não é a Triumph Studios de Delft**: é a Triumph das motocicletas, e a
+  vaga que casou com a régua era **"Junior Design Modeler"** em Midland, no Reino Unido.
+
+Some-se ao `chopchop` (rede de fast-food sueca), ao `mpc.wd1` (Marathon Petroleum) e ao `icon.wd3`
+(pesquisa clínica). **Token que casa com o nome não prova que é a casa**, e o preço de conferir é
+uma leitura do primeiro título do quadro.
