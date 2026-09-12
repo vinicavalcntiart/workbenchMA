@@ -1403,3 +1403,49 @@ Palavras dele: *"Melhor, tudo de uma vez, vc junta e pede a aprovação."*
 `.claude/settings.json` (medido em 12/09, com a configuração correta e o cartão aparecendo
 assim mesmo). Como não dá para tirar o cartão, a única alavanca que sobra é **reduzir o número
 de vezes que ele aparece**, e lote faz exatamente isso.
+
+## 12/09, 20h (JHON B) — O QUADRO DA CASA PODE ESTAR NUM SITE IRMÃO DO MESMO LOCATÁRIO WORKDAY
+
+O `BRIEF-JHON.md` diz desde 06/09, com todas as letras, que na Activision/Blizzard *"o quadro
+certo é `xboxgaming.wd1.myworkdayjobs.com/External` e não o CentralTech que o site linka, e nele
+não há vaga de personagem, modelagem, texturização nem look dev no mundo inteiro"*.
+
+**A frase está certa sobre o site `External` e errada sobre a casa.** O `robots.txt` do mesmo
+locatário lista **sete** sites, e as vagas de arte da Blizzard estão em **outro**:
+
+| locatário | sites que o `robots.txt` entrega |
+|---|---|
+| `xboxgaming.wd1` | `External`, **`Blizzard_External_Careers`** (52 vagas), `King_External_Careers` (16), `CentralTech`, `DL_external`, `SS_external`, `HOH` |
+| `tencent.wd1` | `Tencent_Careers`, `Lightspeed`, `timi_careers`, **`timi_montreal_careers`**, `OA_Huoshui_Platform`, `internal_bole` |
+| `pixar.wd501` | `Pixar_External_Career_Site`, `Pixar_External_Events`, `Pixar_External_Internships`, `Pixar_External_Tech_Jobs` |
+| `lnw.wd5` | `LightWonderExternalCareers`, `SciPlayExternalCareersSite`, `GroverGamingExternalCareerSite` |
+| `spe.wd1` | `SonyPicturesEntertainment`, `DirectApply` |
+| `warnerbros.wd5` | `global`, `francais`, `directshare` |
+| `disney.wd5` | `disneycareer`, `disneycareerdc` (o par que a campanha já sabia) |
+
+**O que isso custou até hoje:** a **Character Artist – StarCraft** (`R028136`, postada em 12/09) e a
+**Lead Character Artist – Overwatch** (`R027817`) nunca apareceram em varredura nenhuma. A segunda
+o Vini alcançou por outra via em 02/09 e foi recusada hoje; a primeira estava invisível.
+
+> **Regra: em Workday, antes de escrever "zero na casa X", leia
+> `https://<locatário>.<pod>.myworkdayjobs.com/robots.txt`.** Ele lista os sites do locatário,
+> custa UMA requisição, e é a mesma lição do `disneycareerdc` — só que agora com o nome do
+> mecanismo. É a irmã da regra do `NBCUniversal3`: **não existe "O" quadro da casa, existem TODOS
+> os quadros vivos dela.**
+
+### Dois falsos amigos de locatário, medidos na mesma rodada
+
+- **`mpc.wd1` não é a Moving Picture Company**, é a **Marathon Petroleum**: 125 vagas de refinaria,
+  operador de gás e mecânico, zero de arte.
+- **`icon.wd3` não é a ICON Creative Studio** (que usa BambooHR, `iconcreative`), é a **ICON plc**,
+  de pesquisa clínica: 840 vagas de coordenação de estudo clínico.
+
+É a mesma família do `chopchop` que era rede de fast-food. **Token que casa com o nome da casa não
+prova que é a casa**: confira o conteúdo do quadro antes de escrever qualquer número sobre ela.
+
+### Rendimento honesto do oráculo, para ninguém esperar milagre
+
+105 tokens de estúdio × 14 pods = **1.470 sondas de `robots.txt`**, e saíram **4 locatários**:
+`autodesk.wd1`, `unitytech.wd1` (já conhecido), `spinmaster.wd3` (Spin Master, 57 vagas, zero da
+disciplina) e `icon.wd3` (o falso amigo). **Adivinhar locatário rende pouco; ler o `robots.txt` dos
+locatários que a campanha JÁ CONHECE rendeu a vaga do dia.** Gaste a rodada no segundo.
