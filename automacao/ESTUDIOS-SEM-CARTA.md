@@ -147,6 +147,45 @@ ficha responde essa pergunta explicitamente.
 
 ---
 
+### Cahoots Studios — Reino Unido (cidade não publicada no site)
+
+- **Email:** `jobs@cahootsstudios.com` · fonte: https://cahootsstudios.com/contact (aberto
+  nesta rodada em 12/09 às 10h00; HTTP 200, publicado em texto na página de contato junto
+  de `hello@cahootsstudios.com`). O `jobs@` é o correto aqui porque é a caixa que eles
+  publicam **como via de carreira**, e não a de comercial. MX ativo (filtro `cp247.net`).
+  A página publica também dois endereços de sócio, que ficam guardados como segunda via se
+  a primeira quicar.
+- **Encaixe:** é a descrição mais próxima do trabalho dele em toda esta rodada, dita pela
+  própria home: *"From designing and creating charming animated characters within fully
+  digital 3D worlds ... we do it all"* e *"breathing life into complex 3D characters
+  inhabiting fully digital worlds using cutting edge CGI technology"*. **Personagem 3D
+  estilizado é literalmente o produto da casa.** Trabalham para "commercials, TV, games,
+  and film", ou seja o mesmo leque dos créditos dele, e a sócia Lucy Teire tem "over 20
+  years producing animation for kids' TV, commercials, and **game cinematics**", que é
+  exatamente o crédito de Wingfeather Saga no currículo dele.
+- **Gancho, com a frase deles entre aspas:** *"We've built an army of insanely talented
+  freelancers from every corner of the globe. They're not just contractors, they're part of
+  the Cahoots family. We don't need a big in-house team because we're smart enough to call
+  in the right talent at the right time."* É a casa dizendo por escrito que **contrata
+  artista de fora, do mundo inteiro**, o que derruba de saída a objeção de geografia. O
+  segundo gancho é a própria definição da marca: *"in cahoots"*, aliança, que é como se
+  pede para entrar na lista de freelancers deles.
+- **Fora dos EUA?** **Sim** (Reino Unido: Cahoots Studios Ltd, contatos com prefixo
+  britânico). A frase de realocação ENTRA, **mas com cuidado**: a via que eles oferecem é a
+  rede de freelancers global, então o argumento forte aqui é disponibilidade e fuso, e a
+  realocação entra em segundo plano, não como pedido principal.
+- **Ressalva honesta:** o site não publica quadro de vagas nem lista de posições abertas, e
+  o modelo declarado é **freelance por projeto**, que pela regra de formato vale "baixa"
+  como vaga. Como carta fria, porém, é das melhores portas da rodada, porque o convite a
+  artista externo está escrito.
+- **Dedupe:** `grep -i cahoots` no repositório bate só em `automacao/backlog-estudios.md`
+  (lista de reserva) e `automacao/garimpo-pdf-fontes.csv` (garimpo). **Zero** em
+  `alvos.csv`, `enviados.csv`, `pessoas.csv`, `processados.csv` e `docs/index.html`.
+  **Gmail conferido nesta rodada** (`cahoots OR cahootsstudios OR "magic beans"`): **zero
+  threads**.
+
+---
+
 ## Descartados nesta rodada, com a razão literal
 
 - **Believer Entertainment** (`believer.com`): o domínio **não é do estúdio**. Responde 200
@@ -155,6 +194,14 @@ ficha responde essa pergunta explicitamente.
   **descartado**; o estúdio de Austin, se for perseguido, precisa de outro domínio.
 - **Vertpaint, 314 Arts e HundredStar sem endereço de PESSOA:** as três publicam só caixa
   funcional. Isso é o padrão medido há cinco rodadas e não é defeito da busca.
+- **Magic Beans Studios** (Los Angeles, `hello@magicbeansstudios.com` publicado): descartado
+  por **disciplina e porte**. A home diz "Creator-led animation studio - Est. 2025",
+  "Handcrafted worlds", "Every frame drawn with care", e a serie em desenvolvimento, *Alphas*,
+  se vende como "Ghibli meets The Goonies". E animacao 2D autoral de casa fundada este ano,
+  sem pipeline de personagem 3D.
+- **Skymap Games**: o site responde 200 em tudo, mas o unico endereco que sai da varredura e
+  `user@domain.com`, ou seja **texto de exemplo do tema**, nao contato real. Nao montar nada
+  a partir disso.
 - **Sem email publicado nenhum, varridos nesta rodada em raiz, `/contact`, `/contact-us`,
   `/careers` e `/jobs` (não repesquisar contato, a via é o ATS):** Ironbelly Studios,
   Gears for Breakfast, Red Kite Games, Pixel Toys, Demiurge Studios, Wolcen Studio, Ludios,
@@ -168,5 +215,5 @@ ficha responde essa pergunta explicitamente.
 
 | | |
 |---|---|
-| Fichas esperando carta | **4** |
+| Fichas esperando carta | **5** |
 | Rascunhos criados nesta rodada | **0, de propósito** |
