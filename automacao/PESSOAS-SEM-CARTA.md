@@ -44,6 +44,9 @@ rascunho.
 
 ---
 
+- **ROTA MEDIDA EM 12/09 às 07h20 (pelo maestro, não pelo Joe):** a casa **não tem formulário de candidatura**. O único `<form>` do site inteiro é inscrição de newsletter do Mailchimp (`list-manage.com/subscribe/post`), que NÃO é candidatura e não deve ser usada como tal. A página `/careers/` não lista vaga nenhuma: traz só o endereço de Toronto (145 Augusta Ave.), o telefone e o mesmo `giles@polyesterstudio.com`. Portanto **a rota é carta para pessoa com nome, e só**. Zero sinal de captcha em qualquer página.
+- **Reforço de gancho, medido na navegação do site:** o menu de primeiro nível deles é `Work. Characters. Culture.` — **"Characters" é seção própria do site**, não subcategoria de portfólio. Vale citar isso na carta junto com o "LEAD WITH CHARACTERS" da home.
+
 ### Jake Fishman — Director of Business Operations — Concept Art House (CAH), San Francisco, EUA (com Xangai e Chengdu)
 - **Email:** jake.fishman@conceptarthouse.com · confiança **alta** · fonte: https://conceptarthouse.com/contact ("Have a project in mind? Reach out to discuss it! jake.fishman@conceptarthouse.com", lido nesta rodada). Cargo em https://theorg.com/org/concept-art-house/org-chart/jake-fishman — fonte de terceiro, e a carta não deve citar o cargo como se ele o tivesse publicado.
 - **Por que ELE e não outra pessoa:** é a única pessoa com nome que a casa publica, e numa casa de terceirização é ele quem decide para quem o trabalho vai. Não existe RH generalista no meio.
