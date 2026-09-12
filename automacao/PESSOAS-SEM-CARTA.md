@@ -21,3 +21,13 @@ rascunho.
 - **Fora dos EUA?** Sim — Chéquia, União Europeia. A frase de realocação da carta pode citar de volta o "relocation support" deles.
 - **Dedupe:** zero ocorrência de "madfinger" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa. Monika Pavlišová (mpavlisova@madfingergames.com, HR Lead) fica como SEGUNDA e última possível.
 - **Ressalva honesta:** as vagas abertas hoje são AI Programmer, Lead Technical Artist e Senior Level Designer — nenhuma de personagem. A carta é de porta, não de vaga.
+
+---
+
+### Tim Remmers — Cofundador (contato publicado de imprensa e negócios) — Team Reptile, Enschede, Holanda
+- **Email:** tim@team-reptile.com · confiança **alta** · fonte: https://team-reptile.com/presskit/ ("Press/Business contact tim@team-reptile.com", lido nesta rodada)
+- **Por que ELE e não outra pessoa:** casa de menos de 30 pessoas, onde o BRIEF-JOE manda ir no fundador; dos dois fundadores (Dion Koster e Tim Remmers), só o Tim tem endereço publicado. Não existe recrutador nem RH nessa casa — quem lê é quem faz.
+- **Gancho, com a frase do próprio estúdio entre aspas:** o presskit diz que **"Team Reptile is a venture in cold blood started by Dion Koster and Tim Remmers in 2011"** e que **"Team Reptile will keep creating more cyberfunk style games in the future."** O encaixe é direto: Bomb Rush Cyberfunk vive de personagem 3D estilizado — elenco, roupas, silhueta — e "mais jogos no estilo cyberfunk" é exatamente mais elenco para modelar.
+- **Fora dos EUA?** Sim — Holanda, União Europeia.
+- **Dedupe:** zero ocorrência de "team reptile"/"team-reptile" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa. Dion Koster fica como SEGUNDA e última possível, se algum dia aparecer endereço dele.
+- **Ressalva honesta:** https://team-reptile.com/jobs/ diz "We currently don't have any open vacancies" — carta de porta, não de vaga. E o endereço do Tim é rotulado como contato de imprensa/negócios, então a carta tem que se apresentar rápido e não parecer press release.
