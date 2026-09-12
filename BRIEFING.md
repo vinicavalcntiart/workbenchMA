@@ -1449,3 +1449,49 @@ prova que é a casa**: confira o conteúdo do quadro antes de escrever qualquer 
 `autodesk.wd1`, `unitytech.wd1` (já conhecido), `spinmaster.wd3` (Spin Master, 57 vagas, zero da
 disciplina) e `icon.wd3` (o falso amigo). **Adivinhar locatário rende pouco; ler o `robots.txt` dos
 locatários que a campanha JÁ CONHECE rendeu a vaga do dia.** Gaste a rodada no segundo.
+
+## 12/09, 21h — TRÊS DEFEITOS DO `wd_geral.js`, E A TELA "MY APPLICATIONS" COMO FONTE DE DEDUPE
+
+A vaga da Blizzard (Character Artist, StarCraft, `R028136`) levou **quatro tentativas** para sair,
+e as três primeiras morreram em defeitos do próprio script, não do formulário. Ficam registrados
+porque todos os três valem para **qualquer** Workday:
+
+1. **URL com `/job/` duplicado.** O `externalPath` que a API do Workday devolve **já começa com
+   `/job/`**, e o script acrescentava outro. O Workday respondia uma página quase vazia com
+   `1 Error` e mais nada: **sem 404, sem mensagem, sem formulário**, e o ensaio morria em
+   "passo 0 de 0". Agora o script tira o prefixo e **imprime a URL** que vai abrir.
+2. **Credencial por locatário é OBJETO, não texto.** As entradas `disney_workday`,
+   `netflix_workday`, `cig_workday` e `xboxgaming_workday` do `cred.json` têm a forma
+   `{portal, email, senha, nota}`. Usar a entrada inteira em `page.fill` derruba o script com
+   `value: expected string, got object`. **O email também pode mudar por locatário**, então os
+   dois saem de lá.
+3. **Aviso de código de país é cosmético.** `!! nao casou codigo do pais` assusta, mas o Workday
+   deduz o `+55` da escolha de país: a leitura de volta trouxe `+55 (81) 973062286 (Home Mobile)`.
+   Não gaste rodada nisso.
+
+**E o erro de diagnóstico que eu cometi no caminho, que é o mais caro:** vi `1 Error` na tela de
+Sign In e **culpei a senha**, cheguei a mexer em senha por locatário antes de olhar a URL. A nota
+do `cred.json` dizia, o tempo todo, que a conta tinha sido criada em 09/09 pela automação. **Leia
+o que o registro já diz antes de consertar o que você imagina.**
+
+### A TELA "MY APPLICATIONS" É FONTE DE DEDUPE, E MELHOR QUE O ARQUIVO
+
+A confirmação do envio mostrou a lista de candidaturas do próprio Workday, e ela revelou o que
+**nenhum arquivo do repositório sabia**: existem **três** candidaturas ativas nesta casa, não uma.
+
+| Requisição | Vaga | Enviada |
+|---|---|---|
+| `R028136` | Character Artist, StarCraft | 12/09 (esta) |
+| `R028112` | **Environment Artist**, Unannounced Game | 09/09 |
+| `R028122` | Associate Art Director | 08/09 |
+
+Somando a `R027817` (Lead Character Artist, Overwatch), **recusada hoje às 08h17**, são **quatro
+aproximações em dez dias** na mesma casa.
+
+**Duas consequências.** A de cadência: quatro em dez dias é muito, e a próxima nesta casa precisa
+de justificativa forte. E uma que contraria ordem do Vini: **a de 09/09 é de AMBIENTE**, contra a
+regra de personagem primeiro, e isso não aparecia em lugar nenhum do repositório.
+
+**A regra que fica:** em casa que usa Workday **e onde já exista conta**, abrir
+`/candidateHome` ou a lista "My Applications" **antes de aplicar**. É dedupe vindo do próprio
+empregador, e portanto mais confiável que qualquer arquivo nosso, que é registro manual.
