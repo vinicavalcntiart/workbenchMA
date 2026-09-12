@@ -1361,7 +1361,21 @@ incômodo parou. **Só quem vê a tela sabe se parou.** O certo é descrever o q
 ("a configuração está assim, a chamada funcionou") e perguntar se o aviso sumiu, em vez de
 declarar vitória por dedução.
 
-**Providência tomada:** nesta sessão o maestro **para de chamar `create_draft`**. Carta nova é
-entregue como **arquivo em `drafts/`**, pronta para copiar e colar, com destinatário e assunto
-no cabeçalho. Isso tira a fonte do incômodo sem perder nenhuma carta, e não depende de eu
-entender o mecanismo. A trava dos agentes em `.claude/agents/` continua valendo.
+**PROVIDÊNCIA QUE EU PROPUS E O VINI DERRUBOU NA HORA, e ele estava certo.** Eu propus parar de
+chamar `create_draft` e entregar a carta como arquivo em `drafts/` para ele copiar e colar.
+Resposta dele: *"Não vou ter trabalho de colar nada, ta maluco"*.
+
+**A lição é a mesma do caso da Lightfox, poucas horas antes, e eu repeti o erro:** diante de um
+obstáculo eu escolhi a saída que **empurra trabalho manual para ele**. Tirar trabalho da mão
+dele é o ponto da campanha inteira; uma "solução" que devolve tarefa não é solução, é desistir
+com outro nome. **Antes de propor qualquer coisa, pergunte: isto tira trabalho dele ou
+acrescenta?** Se acrescenta, não é solução.
+
+**O que fica valendo:** o maestro **continua criando os rascunhos normalmente**. O cartão de
+aprovação é incômodo da plataforma e não se resolve daqui — está medido que a configuração do
+projeto está correta e permissiva e o cartão aparece do mesmo jeito.
+
+**O que dá para melhorar de verdade, e é a única alavanca real:** escrever as cartas **EM LOTE,
+numa tacada só**, em vez de pingar uma a uma ao longo do dia. Quinze cartões espalhados por dez
+horas incomodam muito mais que quinze juntos em dois minutos. Então: acumule as fichas prontas
+e escreva todas de uma vez. A trava dos agentes em `.claude/agents/` continua valendo.
