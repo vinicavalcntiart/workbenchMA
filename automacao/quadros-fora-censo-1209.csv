@@ -150,125 +150,125 @@ recruitee,zero,OK,19,SIM
 smartrecruiters,dontnod,OK,3,SIM
 smartrecruiters,ludia1,OK,0,SIM
 smartrecruiters,nbcuniversal,OK,0,SIM
-teamtailor,10chambers,OK,0,SIM
+teamtailor,10chambers,OK (dominio proprio https://careers.10chambers.com),0,SIM
 teamtailor,above,OK,4,SIM
-teamtailor,airshipinteractive,OK,0,SIM
+teamtailor,airshipinteractive,OK (dominio proprio https://careers.airshipinteractive.com),10,SIM
 teamtailor,anima,OK,7,SIM
-teamtailor,antagonist,OK,0,SIM
-teamtailor,aonic,OK,0,SIM
-teamtailor,avantis,OK,0,SIM
+teamtailor,antagonist,OK (dominio proprio https://werken-bij.antagonist.nl),1,SIM
+teamtailor,aonic,OK (dominio proprio https://careers.aonic.co),2,SIM
+teamtailor,avantis,OK (dominio proprio https://careers.avantisgroup.com),13,SIM
 teamtailor,awaceb,OK,1,SIM
-teamtailor,axis,OK,0,SIM
-teamtailor,beyondframesentertainment,OK,0,SIM
-teamtailor,bica,OK,0,SIM
-teamtailor,black,OK,0,SIM
-teamtailor,butter,OK,0,SIM
-teamtailor,capsulestudio,OK,0,SIM
-teamtailor,captureage,OK,0,SIM
-teamtailor,chief,OK,0,SIM
-teamtailor,chopchop,OK,0,SIM
-teamtailor,curio,OK,0,SIM
-teamtailor,dare,OK,0,SIM
+teamtailor,axis,OK (dominio proprio https://karriere.axissolutions.no),2,SIM
+teamtailor,beyondframesentertainment,OK (dominio proprio https:/),0,SIM
+teamtailor,bica,OK (dominio proprio https://www.jobs.bica.services),13,SIM
+teamtailor,black,OK,20,SIM
+teamtailor,butter,OK (dominio proprio https://careers.allgravy.com),17,SIM
+teamtailor,capsulestudio,OK (dominio proprio https://career.capsule.studio),1,SIM
+teamtailor,captureage,OK (dominio proprio https://careers.captureage.com),1,SIM
+teamtailor,chief,OK (dominio proprio https://karriar.chief.se),9,SIM
+teamtailor,chopchop,OK (dominio proprio https://work.chopchop.se),20,SIM
+teamtailor,curio,OK (dominio proprio https://careers.curiogroup.com),9,SIM
+teamtailor,dare,OK (dominio proprio https://careers.dare.global),6,SIM
 teamtailor,delve,OK,8,SIM
-teamtailor,doktor,OK,0,SIM
-teamtailor,eclipse,OK,0,SIM
-teamtailor,ember,OK,0,SIM
-teamtailor,envar,HTTP-404,,SIM
+teamtailor,doktor,OK (dominio proprio https:/),20,SIM
+teamtailor,eclipse,OK (dominio proprio https://karriar.eclipse.se),3,SIM
+teamtailor,ember,OK (dominio proprio https://careers.ember.org.nz),13,SIM
+teamtailor,envar,HTTP-404,0,SIM
 teamtailor,erepublik,OK,0,SIM
-teamtailor,facepunch,301 p/ careers.facepunch.com; HTTP 200 e ZERO vaga listada,,SIM
-teamtailor,firefly,OK,0,SIM
-teamtailor,foolstheory,HTTP-404,,SIM
-teamtailor,fortis,OK,0,SIM
+teamtailor,facepunch,HTTP-404,0,SIM
+teamtailor,firefly,OK (dominio proprio https://career.firefly.se),13,SIM
+teamtailor,foolstheory,HTTP-404,0,SIM
+teamtailor,fortis,OK (dominio proprio https://career.fortis.com.mt),4,SIM
 teamtailor,fully,OK,2,SIM
-teamtailor,funcom,OK,0,SIM
-teamtailor,fundagames,HTTP-404,,SIM
-teamtailor,fuse,OK,0,SIM
-teamtailor,gamecan,HTTP-404,,SIM
-teamtailor,genius,OK,0,SIM
-teamtailor,ghostshipgames,HTTP-404,,SIM
-teamtailor,goals,OK,0,SIM
-teamtailor,goodbyekansasstudios,HTTP-404,,SIM
+teamtailor,funcom,OK (dominio proprio https:/),6,SIM
+teamtailor,fundagames,HTTP-404,0,SIM
+teamtailor,fuse,OK (dominio proprio https://careers.fuse.co.id),20,SIM
+teamtailor,gamecan,HTTP-404,0,SIM
+teamtailor,genius,OK (dominio proprio https://careers.genius.paris),3,SIM
+teamtailor,ghostshipgames,HTTP-404,0,SIM
+teamtailor,goals,OK (dominio proprio https://tt.playgoals.com),0,SIM
+teamtailor,goodbyekansasstudios,HTTP-404,0,SIM
 teamtailor,goodgamestudios,OK,6,SIM
-teamtailor,grace,OK,0,SIM
+teamtailor,grace,OK (dominio proprio https://jobb.gracestudio.se),3,SIM
 teamtailor,graft,OK,5,SIM
-teamtailor,groundcontrol,OK,0,SIM
-teamtailor,habitat,OK,0,SIM
-teamtailor,here,OK,0,SIM
-teamtailor,hero,OK,0,SIM
-teamtailor,homa,OK,0,SIM
-teamtailor,house,HTTP-403,,NAO
-teamtailor,impact,301 p/ dominio proprio; dominio NAO RESPONDE = NAO CONFERIDO,,NAO
-teamtailor,infinity,OK,0,SIM
-teamtailor,invisiblewalls,HTTP-404,,SIM
-teamtailor,keengames,HTTP-404,,SIM
-teamtailor,keplerinteractive,OK,3,SIM
-teamtailor,kindabrave,OK,0,SIM
+teamtailor,groundcontrol,OK (dominio proprio https://careers.ground-control.co.uk),20,SIM
+teamtailor,habitat,OK,20,SIM
+teamtailor,here,OK (dominio proprio https://careers.hereweare.org.uk),4,SIM
+teamtailor,hero,OK (dominio proprio https://career.hero.se),9,SIM
+teamtailor,homa,OK (dominio proprio https://recrutamento.homa.pt),20,SIM
+teamtailor,house,HTTP-403,0,NAO
+teamtailor,impact,ERRO-ProxyError,0,NAO
+teamtailor,infinity,OK (dominio proprio https://careers.infinity.co),7,SIM
+teamtailor,invisiblewalls,HTTP-404,0,SIM
+teamtailor,keengames,HTTP-404,0,SIM
+teamtailor,keplerinteractive,OK (dominio proprio https://careers.kepler-interactive.com),6,SIM
+teamtailor,kindabrave,OK (dominio proprio https://careers.kindabrave.com),0,SIM
 teamtailor,kinetic,OK,2,SIM
-teamtailor,lastarrowgames,OK,0,SIM
-teamtailor,level,OK,0,SIM
-teamtailor,life,OK,0,SIM
-teamtailor,lightheartentertainment,OK,0,SIM
-teamtailor,lingokids,OK,0,SIM
-teamtailor,liquidswords,301 p/ dominio proprio; dominio NAO RESPONDE = NAO CONFERIDO,,NAO
-teamtailor,lunar,OK,0,SIM
-teamtailor,madbox,OK,0,SIM
-teamtailor,made,OK,0,SIM
-teamtailor,mill,HTTP-404,,SIM
+teamtailor,lastarrowgames,OK (dominio proprio https://careers.lastarrowgames.com),1,SIM
+teamtailor,level,OK (dominio proprio https://careers.flylevel.com),6,SIM
+teamtailor,life,OK (dominio proprio https://jobb.lifebutiken.se),3,SIM
+teamtailor,lightheartentertainment,OK (dominio proprio https://careers.lightheart.games),1,SIM
+teamtailor,lingokids,OK (dominio proprio https:/),0,SIM
+teamtailor,liquidswords,ERRO-SSLError,0,NAO
+teamtailor,lunar,OK (dominio proprio https:/),17,SIM
+teamtailor,madbox,OK (dominio proprio https://careers.madbox.io),13,SIM
+teamtailor,made,OK,20,SIM
+teamtailor,mill,HTTP-404,0,SIM
 teamtailor,mind,OK,3,SIM
-teamtailor,mindark,OK,0,SIM
-teamtailor,minogames,HTTP-404,,SIM
-teamtailor,mobile,HTTP-403,,NAO
+teamtailor,mindark,OK (dominio proprio https://career.mindark.com),0,SIM
+teamtailor,minogames,HTTP-404,0,SIM
+teamtailor,mobile,HTTP-403,0,NAO
 teamtailor,monster,OK,4,SIM
-teamtailor,neat,OK,0,SIM
-teamtailor,neongiant,OK,0,SIM
+teamtailor,neat,OK (dominio proprio https://careers.neat.no),19,SIM
+teamtailor,neongiant,OK (dominio proprio https:/),1,SIM
 teamtailor,newmoonproduction,OK,2,SIM
-teamtailor,next,OK,0,SIM
+teamtailor,next,OK,20,SIM
 teamtailor,ofmstudios,OK,0,SIM
-teamtailor,once,OK,0,SIM
-teamtailor,opusmajor,OK,0,SIM
-teamtailor,osome,OK,0,SIM
-teamtailor,paradox,HTTP-404,,SIM
-teamtailor,paradoxinteractive,HTTP-404,,SIM
-teamtailor,paradoxplaza,HTTP-404,,SIM
+teamtailor,once,OK (dominio proprio https://empleo.once.es),12,SIM
+teamtailor,opusmajor,OK (dominio proprio https://career.opusmajor.io),0,SIM
+teamtailor,osome,OK (dominio proprio https://careers.osome.com),14,SIM
+teamtailor,paradox,HTTP-404,0,SIM
+teamtailor,paradoxinteractive,HTTP-404,0,SIM
+teamtailor,paradoxplaza,HTTP-404,0,SIM
 teamtailor,parkerschauffeurs,OK,1,SIM
 teamtailor,pixiongames,OK,3,SIM
 teamtailor,power,OK,20,SIM
-teamtailor,princessbento,OK,0,SIM
-teamtailor,radicalforge,HTTP-404,,SIM
-teamtailor,rawfury,OK,0,SIM
+teamtailor,princessbento,OK (dominio proprio https://careers.princessbento.com),4,SIM
+teamtailor,radicalforge,HTTP-404,0,SIM
+teamtailor,rawfury,OK (dominio proprio https:/),2,SIM
 teamtailor,revolution,OK,0,SIM
-teamtailor,rhino,HTTP-403,,NAO
+teamtailor,rhino,HTTP-403,0,NAO
 teamtailor,salt,OK,2,SIM
 teamtailor,sandboxinteractive,OK,9,SIM
-teamtailor,seven,OK,0,SIM
-teamtailor,sharkmob,OK,0,SIM
-teamtailor,slug,HTTP-404,,SIM
-teamtailor,snowprint,HTTP-404,,SIM
-teamtailor,snowprintstudios,OK,0,SIM
+teamtailor,seven,OK,20,SIM
+teamtailor,sharkmob,OK (dominio proprio https://career.sharkmob.com),5,SIM
+teamtailor,slug,HTTP-404,0,SIM
+teamtailor,snowprint,HTTP-404,0,SIM
+teamtailor,snowprintstudios,OK (dominio proprio https://career.snowprintstudios.com),2,SIM
 teamtailor,squeeze,OK,10,SIM
 teamtailor,stardust,OK,7,SIM
 teamtailor,starship,OK,4,SIM
-teamtailor,stillfrontgroup,OK,18,SIM
+teamtailor,stillfrontgroup,OK,20,SIM
 teamtailor,stim,OK,1,SIM
-teamtailor,stunlockstudios,HTTP-404,,SIM
-teamtailor,sunday,OK,0,SIM
-teamtailor,sweet,OK,0,SIM
-teamtailor,sweetspot,OK,0,SIM
+teamtailor,stunlockstudios,HTTP-404,0,SIM
+teamtailor,sunday,OK (dominio proprio https://careers.sundayapp.com),20,SIM
+teamtailor,sweet,OK,20,SIM
+teamtailor,sweetspot,OK (dominio proprio https:/),0,SIM
 teamtailor,swiftgames,OK,1,SIM
-teamtailor,sybogames,HTTP-404,,SIM
-teamtailor,tapnation,OK,0,SIM
+teamtailor,sybogames,HTTP-404,0,SIM
+teamtailor,tapnation,OK (dominio proprio https://careers.tap-nation.io),2,SIM
 teamtailor,territorystudio,OK,0,SIM
-teamtailor,thegang,OK,0,SIM
-teamtailor,triband,OK,0,SIM
+teamtailor,thegang,OK (dominio proprio https://careers.thegang.io),0,SIM
+teamtailor,triband,OK (dominio proprio https://careers.triband.net),8,SIM
 teamtailor,tribes,OK,12,SIM
-teamtailor,tt,HTTP-404,,SIM
-teamtailor,unfold,OK,0,SIM
-teamtailor,united,HTTP-403,,NAO
-teamtailor,unleash,HTTP-404,,SIM
-teamtailor,vividgamessa,OK,0,SIM
-teamtailor,waypoint,OK,0,SIM
+teamtailor,tt,HTTP-404,0,SIM
+teamtailor,unfold,OK (dominio proprio https://careers.unfold.no),1,SIM
+teamtailor,united,HTTP-403,0,NAO
+teamtailor,unleash,HTTP-404,0,SIM
+teamtailor,vividgamessa,OK (dominio proprio https:/),2,SIM
+teamtailor,waypoint,OK (dominio proprio https://careers.waypointports.com),4,SIM
 teamtailor,yonder,OK,6,SIM
-teamtailor,zero,OK,0,SIM
+teamtailor,zero,OK,1,SIM
 workable,bardel-entertainment,OK,12,SIM
 workable,beamng,OK,5,SIM
 workable,big-viking-games-3,OK,9,SIM
