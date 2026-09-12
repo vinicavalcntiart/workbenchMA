@@ -1843,10 +1843,22 @@ da campanha é mandar na mais alta.
 
 ## ~~51. Absurd Ventures — CHARACTER ART LEAD~~ — ✅ **ENVIADA EM 12/09 ÀS 11h24 UTC. NÃO REFAÇA.**
 
-> Enviada pelo maestro no mesmo dia em que o Jhon B a achou. **Prova dupla**, que é o padrão
-> desta casa porque o recibo dela é mudo: a URL terminou em `/jobs/5236256007/confirmation`
-> **e** a página respondeu *"Thank you for applying to Absurd Ventures"*. Código de segurança
-> `BPjwpS7x`, pedido às 11h21m34 e atendido às 11h21m45.
+> Enviada pelo maestro no mesmo dia em que o Jhon B a achou. **Prova tripla**: a URL terminou
+> em `/jobs/5236256007/confirmation`, a página respondeu *"Thank you for applying to Absurd
+> Ventures"*, e às **11h22m05** chegou o recibo por email. Código de segurança `BPjwpS7x`,
+> pedido às 11h21m34 e atendido às 11h21m45.
+>
+> **CORREÇÃO DE MÉTODO, e ela muda o dedupe desta casa.** Este dossiê dizia que *"o recibo por
+> email desta casa é mudo, ele não nomeia a requisição"*. **Isso valia só para as espontâneas.**
+> O recibo da vaga nomeada chegou assim, com todas as letras:
+>
+> > *"Thank you for applying to our **Character Art Lead** role here at Absurd Ventures."*
+>
+> Contra o das espontâneas de ontem, que diziam apenas *"Thank you for submitting a general
+> application"*. Ou seja: **o Greenhouse nomeia a vaga quando há vaga a nomear**, e o silêncio
+> do recibo era propriedade da porta espontânea, não da casa. Para o dedupe futuro isto
+> importa: nesta casa dá para separar candidatura espontânea de candidatura a requisição
+> **pelo próprio recibo**, sem depender do arquivo.
 >
 > **A primeira tentativa foi RECUSADA pelo próprio formulário e não enviou nada**, o que é
 > bom: nenhuma duplicata, nenhum código gasto à toa. Faltavam dois campos obrigatórios que

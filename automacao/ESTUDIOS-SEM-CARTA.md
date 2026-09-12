@@ -1,5 +1,32 @@
 # Estúdios APROVADOS que ainda esperam carta
 
+## ✅ AS CINCO VIRARAM CARTA EM 12/09, ENTRE 12h55 e 14h20. FICHA ZERADA.
+
+| Casa | Caixa | Ângulo que a carta usou |
+|---|---|---|
+| HundredStar Games | `jobs@hundredstar.games` | o convite escrito à candidatura espontânea, citado de volta |
+| Hyper Luminal Games | `info@hyperluminalgames.com` | Frank, Tyke e Olive: três jogos carregados por um personagem cada |
+| Cahoots Studios | `jobs@cahootsstudios.com` | a rede global de freelancers que eles publicam, e **freelance como o pedido principal**, não realocação |
+| Vertpaint Studios | `services@vertpaint.com` | a frase do Kary Black sobre "solve problems that will ship content", emendada nos três anos de outsourcing dele na PUGA |
+| 314 Arts | `hello@314arts.com` | fidelidade e pipeline, **não** estilizado |
+
+**A carta da 314 Arts diz a ressalva em voz alta em vez de esconder:** o portfólio dele é
+estilizado e *Night Runner* e *Vengeance* não são. O que atravessa é o pipeline e a anatomia
+por baixo. Fingir encaixe forte numa casa de FPS realista seria descoberto na primeira tela
+do portfólio, então a carta chega dizendo o que carrega e o que não carrega.
+
+**O bloqueio que este arquivo registrava não era o que parecia.** A suposição era que
+`create_draft` estava travado para todo mundo. Medido às 11h30: trava só para **subagente**;
+da sessão principal passa calado. Por isso as onze cartas de hoje (estas cinco mais as seis
+pessoas) saíram sem um único pedido de aprovação na tela do Vini. A regra nova está no fim do
+`BRIEFING.md`: **agente acha e verifica, maestro escreve.**
+
+**Continua valendo a medição das 09h20:** nenhuma das cinco tem formulário de candidatura, e
+formulário comercial não se usa como porta de emprego. A rota destas cinco é carta, e só.
+
+---
+
+
 Arquivo criado na rodada de prospecção das **08h50 de 12/09/2026**, pela razão medida na
 madrugada: `mcp__Gmail__create_draft` abre pedido de aprovação na tela do Vini e **não
 retorna enquanto ninguém aprova**, e três agentes seguidos morreram exatamente ali. Esta
