@@ -397,3 +397,36 @@ a Frontier. As outras devolveram só caixa genérica (`recruitment@sumogroupltd.
   da casa, mas **não escrito em texto visível na tela**; (2) ela é recrutamento, não arte, o que aqui
   é vantagem porque é quem despacha a requisição; (3) **a carta tem que dizer que ele já aplicou pelo
   portal em 10/09**, senão chega como se fosse primeiro contato.
+
+### Glauco Longhi — **Character Director** — Santa Monica Studio (PlayStation Studios), Los Angeles, EUA
+
+- **Email:** **não existe em fonte pública** · confiança **sem-email** · fonte da pessoa e do cargo:
+  **site pessoal dele**, https://www.glaucolonghi.com/about, lido nesta rodada.
+- **Por que ELE e não outra pessoa da casa:** é o **diretor de personagem** de uma casa AAA de
+  personagem. O próprio texto dele: *"Currently working at Santa Monica Studio as **Character
+  Director**, previously at Unknown Worlds Entertainment as Studio Art Director, Art Director at
+  Striking Distance Studios, **Character Director for The Callisto Protocol**, **Lead Character
+  Artist at Sony Santa Monica Studio**, working on the God of War Franchise and **Senior Character
+  Artist at Naughty Dog**"*, com créditos em The Callisto Protocol (2022), God of War Ragnarök
+  (2022), God of War (2018) e Uncharted 4 (2016). Não é recrutador, não é produção, não é ambiente.
+- **Fora dos EUA?** Não — Los Angeles. A frase de realocação **não** entra; o que entra é o pedido de
+  patrocínio, e ele é o ponto fraco desta casa.
+- **Dedupe, feito na caixa:** o Gmail devolve **três** threads — a carta de **08/09 para Josiah
+  Scholten** (`josiah.scholten@sony.com`, endereço **montado**, sem resposta e sem bounce na thread),
+  o recibo de candidatura de 31/08 para Senior 3D UI Artist (*"Thank you for applying to Santa Monica
+  Studio!"*) e um boletim de terceiro. **Nenhuma recusa, nenhuma resposta humana.** Esta é a
+  **SEGUNDA e ÚLTIMA** pessoa da casa — e é alvo melhor que a primeira.
+- **O QUE TRAVA, sem maquiagem:** https://www.glaucolonghi.com/contact-me **não publica endereço
+  nenhum**, só lista de espera de mentoria e cursos da Longhi Academy; a única string com `@` na
+  página é o placeholder `user@domain.com` do tema. **Nada foi montado.**
+- **Ressalva honesta:** o site oficial do estúdio está **travado para esta campanha**
+  (`sonysantamonica.com` devolveu **502 no túnel do proxy** e `santamonicastudio.com` devolveu
+  **403**), então o gancho disponível vem das palavras **dele**, não das da casa.
+
+### ~~Frank Tzeng — Naughty Dog~~ — **ARMADILHA DESCARTADA NESTA RODADA, e ela é repetível**
+
+A busca devolve "Frank Tzeng, Lead Character Artist, Naughty Dog", e `franktzeng.com` responde 200
+**com email publicado**: `frank@TzengMgmt.com`. O endereço é literal — e é de **outra atividade**:
+o site hoje é de uma **consultoria de gestão** (*"Frank D. Tzeng / CEO 曾敦仁 / 執行長 — Irvine, CA —
+Taipei, Taiwan"*), com método de cinco P e nenhuma menção a arte de personagem. **Endereço publicado
+não prova cargo atual**, e cargo desatualizado é pior que alvo nenhum. Descartado antes de virar linha.
