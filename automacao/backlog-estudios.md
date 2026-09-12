@@ -313,3 +313,71 @@ publicado, **3 viraram carta**. Isso da **7,7 por cento**, contra os 18 por cent
 tem causa: os nomes mais obviamente de animacao e jogos ja foram gastos, e o que sobra na reserva e
 cada vez mais pos-producao, publicidade, evento e 2D. Sobram cerca de **194 nomes de reserva
 intocados**.
+
+## RODADA DE 12/09/2026, 08h50: 5 aprovados, e NENHUM virou rascunho de propósito
+
+**A regra nova que define esta rodada.** `mcp__Gmail__create_draft` abre pedido de aprovação
+na tela do Vini e **não retorna enquanto ninguém aprova**; três agentes morreram nesse ponto
+na madrugada. Então esta rodada fez a metade cara (achar, abrir a fonte, ler a frase, conferir
+dedupe em arquivo **e no Gmail**) e parou antes da carta. Cada aprovado virou **ficha completa**
+em `automacao/ESTUDIOS-SEM-CARTA.md`, com endereço, URL exata aberta na rodada, encaixe, gancho
+com frase literal do estúdio, resposta de "fora dos EUA" e o dedupe conferido. Quem for escrever
+a carta não precisa reabrir nada.
+
+**APROVADOS (5), todos com email PUBLICADO lido na página do próprio estúdio e MX conferido:**
+
+- **HundredStar Games** | Reino Unido (Londres) | `jobs@hundredstar.games`. Fecha a pendência
+  deixada pelo agente que morreu na madrugada. AAA de Londres, "100 people in london", quadro de
+  vagas vazio e **convite escrito à espontânea com portfólio**.
+- **Vertpaint Studios** | Reino Unido (Londres) | `services@vertpaint.com`. Co-dev AAA com peso em
+  arte, fundada por ex-Rockstar, depoimento publicado da **Digital Extremes** sobre a arte deles.
+- **Hyper Luminal Games** | Reino Unido (Dundee) | `info@hyperluminalgames.com`. Jogos próprios de
+  3D estilizado cosy movidos a personagem, mais braço de work for hire com 80+ jogos.
+- **Cahoots Studios** | Reino Unido | `jobs@cahootsstudios.com`. **O encaixe mais direto da
+  rodada:** a home fala em criar "charming animated characters within fully digital 3D worlds", e
+  a casa declara que monta equipe com freelancers do mundo inteiro.
+- **314 Arts** | Alemanha (Reken) | `hello@314arts.com`. Vende "Game Art" como serviço declarado no
+  próprio formulário. Ressalva: é FPS realista, não estilizado, então encaixe médio.
+
+**DESCARTADOS com a frase que derruba cada um:** Magic Beans Studios (LA, "Creator-led animation
+studio, Est. 2025", "Every frame drawn with care", 2D autoral); Believer Entertainment
+(`believer.com` **não é do estúdio**, é site de estudo bíblico, e o `questions@` que sai da
+varredura é dessa casa); Igloo Animations (Dublin, "specialising in **2D** digital, mixed media &
+animated explanation videos"); Studio Meala (oeste da Irlanda, "specialise in outstanding
+**hand-drawn 2D** animation"); Curiosity Studio (Dublin, "research led creative studio" de
+imersivo e experiencial, não produção de personagem); ALT Animation (Belfast, produção e serviço
+de série 2D para RTÉ Jr); Sixteen South (só publica `rights@` e `website@`, nenhuma caixa de
+carreira); Skymap Games (o único endereço que sai é `user@domain.com`, **texto de exemplo do
+tema**, não contato real); Dulaman Studios (Irlanda, série indie *The Wards of Oribis* com
+personagens nomeados, mas **sem nenhuma evidência de 3D** na página e financiada por Patreon,
+então não é casa que contrata; fica anotada, não aprovada).
+
+**SEM EMAIL PUBLICADO NENHUM, varridos nesta rodada em raiz, `/contact`, `/contact-us`,
+`/careers` e `/jobs`** (não repesquisar contato, a via é o ATS): Ironbelly Studios, Gears for
+Breakfast, Red Kite Games, Pixel Toys, Demiurge Studios, Wolcen Studio, Ludios, Mighty Yeti,
+Hardsuit Labs, BulletFarm, Halon, Titanium Clad Studios, Second Star Games, Treehouse Republic,
+Fathom VFX, Astrid Entertainment.
+
+**TRAVADOS POR REDE (`http=000` em todos os caminhos; isso NÃO é morte, é a rede):**
+`hypixelstudios.com`, `inflexion.games`, `uppercut.games`, `brainjargames.com`,
+`muffingames.com`, `pocketsizedhands.com`, `jammedia.com`. `threebohemians.com` responde **404**
+em tudo. Ficam para reconferência.
+
+**FONTE NOVA ABERTA NESTA RODADA:** a lista de membros da **Animation Ireland**
+(`https://animationireland.com/studios/`, HTTP 200) enumera **53 domínios externos** de estúdio
+irlandês em uma página só, sem JavaScript. Cruzada contra o que a campanha já tem, sobraram 10
+nomes inéditos, e 8 foram varridos aqui. **Rendimento honesto: zero aprovado**, porque a
+animação irlandesa é majoritariamente 2D desenhado. A fonte serve, mas para 3D de personagem ela
+é pobre; a próxima rodada ganha mais indo para **CEE Animation** e créditos de série CG recente.
+
+**RENDIMENTO MEDIDO:** 30 domínios abertos, 11 com algum endereço publicado, **5 viraram ficha**.
+Isso dá **17 por cento**, contra 7,7 por cento em 11/09 e 18 por cento em 09/09. A recuperação
+tem causa e ela é repetível: nesta rodada os nomes foram escolhidos por **plausibilidade de
+disciplina** antes de abrir o domínio (jogo ou co-dev com pipeline 3D), em vez de varrer a
+reserva em ordem alfabética.
+
+**Sobram cerca de 140 nomes de reserva intocados** (contados por cruzamento automático da lista
+dos 254 contra `alvos.csv`, `enviados.csv`, `pessoas.csv`, `processados.csv`, `docs/index.html` e
+o resto deste arquivo; a contagem anterior de 194 era estimativa a olho). O que sobra ali é cada
+vez mais pós-produção, publicidade, evento e 2D, então **a reserva deixou de ser a melhor fonte**:
+vale mais tempo em fonte nova com filtro de disciplina do que em varrer o resto da lista.
