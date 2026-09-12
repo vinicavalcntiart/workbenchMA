@@ -430,3 +430,33 @@ A busca devolve "Frank Tzeng, Lead Character Artist, Naughty Dog", e `franktzeng
 o site hoje é de uma **consultoria de gestão** (*"Frank D. Tzeng / CEO 曾敦仁 / 執行長 — Irvine, CA —
 Taipei, Taiwan"*), com método de cinco P e nenhuma menção a arte de personagem. **Endereço publicado
 não prova cargo atual**, e cargo desatualizado é pior que alvo nenhum. Descartado antes de virar linha.
+
+### Olcun Tan — **Founder** — Gradient Effects, Los Angeles, EUA
+
+- **Email:** **não existe endereço de pessoa publicado** · confiança **sem-email** · fonte do nome e
+  do cargo: https://www.gradientfx.com/about/ — **"Gradient Effects is a Los Angeles based VFX
+  company founded in 2006 by academy member Olcun Tan"**, e a mesma página declara que **"SCRTLB was
+  founded in 2013 out of Gradient Effects as a branch dedicated to animation and VFX for blockbuster
+  movies."**
+- **Como a casa apareceu:** filtro do `automacao/garimpo-cgstudiomap.csv` por
+  `ja_na_campanha=nao` + `tem_vaga_disciplina=sim` + observação **ALTA**, dentro do escopo — sobraram
+  **quatro** casas, e esta é a única dos EUA sem pessoa registrada.
+- **Por que ELE:** casa pequena que **não publica o nome de mais ninguém**, nem de arte nem de RH;
+  o BRIEF-JOE manda ir no fundador quando não há diretor de arte publicado.
+- **A vaga, lida nesta rodada** em https://www.gradientfx.com/jobs/ : **"3D MODELER - Los Angeles,
+  California"**, pedindo *"Expert knowledge of Maya, ZBrush, Mud Box"*, *"Expert knowledge of
+  Photoshop, Mari"*, *"Must understand Deformers and basic knowledge of Rigging techniques"* e
+  *"Strong knowledge and experiences in materials/shader/look development"*.
+- **Fora dos EUA?** Não — Los Angeles. Sem frase de realocação; o patrocínio é o ponto fraco.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv` e `processados.csv`;
+  `docs/index.html` tem **uma** linha de 07/09 que é registro de **portal**, não carta; e o **Gmail
+  devolveu ZERO**. PRIMEIRA pessoa desta casa.
+- **ROTA REAL enquanto não houver endereço de pessoa:** `contact@gradientfx.com`, que é o **único**
+  endereço do site inteiro, citando a vaga pelo nome — e o próprio anúncio escreve **"NO PHONE
+  CALLS"** e que candidatura presencial não é aceita, ou seja email é a porta que sobra.
+- **Ressalva honesta, três:** (1) o anúncio **não usa a palavra character nem creature** — pela regra
+  PERSONAGEM PRIMEIRO é modelagem genérica, e a carta tem que se vender por personagem sem fingir que
+  a vaga é de personagem; (2) o rodapé do site marca **Copyright 2021**, então o quadro pode estar
+  parado, ainda que a campanha o tenha reconferido em 07/09; (3) ele é **fundador, não supervisor de
+  arte**, e não confirmei o título operacional dele hoje — o que vale é o critério do BRIEF-JOE, de
+  que fundador não muda de casa.
