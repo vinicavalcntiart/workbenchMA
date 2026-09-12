@@ -1,5 +1,17 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+> ## 🎯 ENTRADA NOVA DE 12/09, 11h — E ELA É A PRIMEIRA DA FILA HOJE
+>
+> **Absurd Ventures — CHARACTER ART LEAD — Santa Monica, Califórnia.** Publicada **ontem, 11/09 às
+> 19h11 (hora de Nova York)**, requisição `5236256007`. É **vaga NOMEADA de personagem** numa casa
+> grande nova (a de Dan Houser), com **faixa publicada de USD 150.000 a 185.000**, régua de veto
+> limpa e **candidatura possível pela automação** (o Greenhouse dessa casa já aceitou duas
+> candidaturas nossas ontem). O dossiê inteiro é a **entrada nº 51** deste arquivo.
+>
+> **Não confunda com as duas de ontem:** o que saiu em 11/09 foram as espontâneas
+> `4141408007` (General Game Development, 19h04) e `4141404007` (Animated Series, 21h22). Esta é
+> **outra requisição, e é nomeada**. Conferido no Gmail: nenhum recibo cita Character Art Lead.
+
 > ## SE VOCÊ SÓ TIVER DEZ MINUTOS HOJE, gaste nestas três
 >
 > O arquivo cresceu muito em 09/09 e você disse que está sem tempo. Então a ordem, com o motivo
@@ -1826,6 +1838,106 @@ precisa de patrocínio de visto, nunca trabalhou na Epic, E-Line Media como empr
 **A irmã, se esta for sênior demais:** Senior Environment Artist, mesma casa e mesma cidade,
 `https://job-boards.greenhouse.io/epicgames/jobs/6001731004`. **Mande só uma das duas**, e a regra
 da campanha é mandar na mais alta.
+
+---
+
+## 51. Absurd Ventures — CHARACTER ART LEAD — Santa Monica, Califórnia, EUA (efetiva, presencial)
+
+**Link direto (fonte oficial, o ATS da própria casa):**
+https://job-boards.greenhouse.io/absurdventures/jobs/5236256007
+
+**Requisição `5236256007`, `internal_job_id` `4680308007`.** Publicada em **2026-09-11T19:11:12-04:00**
+e o `updated_at` é o mesmo carimbo, ou seja **não é anúncio refrescado, é vaga nova de ontem**.
+Conferida viva nesta rodada: a API devolveu 200 e a página pública também.
+
+**Por que ela é a primeira da fila:** é a disciplina exata dele com o título mais alto que ele pode
+pleitear. O corpo é personagem do começo ao fim — *"lead our character art team and help define the
+visual quality and direction of our characters"*, *"setting artistic and technical standards"*,
+*"Evaluate character art at key stages of development"*, *"7+ years of professional character art
+experience in the video game industry"*. Nenhuma linha de ambiente, prop ou hard surface.
+
+**Faixa publicada, e ela manda na pretensão:** *"The base pay range for this position is $150,000 to
+$185,000 per year."* Pela política de 04/09, **pede-se a BASE: USD 150.000**. Não há campo de salário
+neste formulário, então isso só entra se alguém perguntar depois.
+
+### Régua de veto, termo a termo, no texto INTEIRO baixado pela API (não na listagem)
+
+| Termo | Frase inteira, como está escrita | Veredito |
+|---|---|---|
+| `eligib` | *"Certain roles may also be **eligible** for bonus and equity."* | **Falso positivo.** É benefício, não elegibilidade para trabalhar. |
+| `within the` | *"make effective decisions **within the** constraints of a large game production"* | **Falso positivo.** |
+| `on-site` / `located` | *"Full-time job with benefits. Role is **on-site** in Santa Monica, CA. Office is **located** near downtown Santa Monica"* | **Restrição de presença, não veto de candidatura.** Ele quer realocar. |
+| `authoriz`, `sponsor`, `work permit`, `must be based`, `based in`, `only from`, `LMIA`, `resident`, `citizen`, `relocat`, `unable to support`, `no relocation`, `days a week`, `days per week`, `days in the office`, idioma local | **nenhuma ocorrência** | — |
+
+**Veredito: zero veto escrito.** A casa não promete patrocínio e não o proíbe; pelo briefing isso é
+contexto, não critério de descarte.
+
+### Dedupe, feito no minuto do achado
+
+`sh automacao/dedupe-agora.sh 5236256007 "Absurd"` → **ID inédito nos quatro arquivos.** A casa tem
+histórico e ele NÃO bloqueia esta: as duas candidaturas de 11/09 são espontâneas de outras
+requisições (`4141408007` General Game Development às 19h04 e `4141404007` Animated Series às 21h22).
+**Conferido também no Gmail, por janela de tempo e não por remetente** (`Absurd newer_than:3d`): os
+dois recibos de `no-reply@us.greenhouse-mail.io` dizem *"Thank you for submitting a general
+application"* e **nenhum nomeia Character Art Lead**. Rota livre.
+
+**Cadência:** a casa recebeu duas candidaturas ontem e nenhuma hoje. A terceira porta espontânea
+(`4141225007`, Film & TV) estava adiada para "outro dia" — **não mande as duas no mesmo dia**. Entre
+a espontânea e a vaga nomeada de personagem, a nomeada ganha, e com folga.
+
+### O formulário, campo a campo (ids DESTA vaga — eles mudam de vaga para vaga no Greenhouse)
+
+| Campo | `name` | Resposta |
+|---|---|---|
+| First / Last / Email | `first_name`, `last_name`, `email` | Vini · Cavalcanti · contact@vinicavalcanti.art |
+| Phone (opcional) | `phone` | variável de ambiente `VINI_TEL` |
+| Resume/CV (**obrigatório**) | `resume` | `Vini_Cavalcanti_CV.pdf` |
+| Cover Letter (opcional, **mandar**) | `cover_letter` | PDF gerado de `carta_absurd_charlead.txt` |
+| Website or portfolio link (**obrigatório**) | `question_12881389007` | https://www.artstation.com/viniciuscavalcanti |
+| Work samples (opcional) | `question_12881390007` | deixar vazio: há campo de link, e o ArtStation tem prioridade sobre o PDF |
+| LinkedIn | `question_12881391007` | https://www.linkedin.com/in/vinicavalcnti/ |
+| **Lawfully authorized to work in the US?** | `question_12881392007` | **No** (é a verdade, regra 8) |
+| Located in the Los Angeles area? | `question_12881393007` | **No** |
+| Open to relocating to LA? | `question_12881394007` | **Yes.** |
+| Willing to come into the Santa Monica studio 5 days/week? | `question_12881395007` | **Yes.** |
+| Which engines? (**multi-select**) | `question_12881396007[]` | **Unreal 5** e **Unity** |
+| How many games have you shipped? | `question_12881397007` | `5-10` (é `input_text` aqui; na espontânea de ontem era `select` e foi escolhido 5-10) |
+
+**Duas ressalvas medidas, para não virar envio silenciosamente errado:**
+1. **`question_12881396007` é `multi_value_multi_select`.** O preenchedor trata combo como escolha
+   única. **Confira no print se ficaram marcadas as DUAS** antes de aceitar o resultado.
+2. **Este quadro pede CÓDIGO DE SEGURANÇA por email** (medido ontem duas vezes:
+   `fOWTy8p9` às 19h02 e `gR3eoHvV` às 21h21, de `no-reply@us.greenhouse-mail.io`). Cada clique em
+   Submit gera um código NOVO e mata o anterior: rode em segundo plano, espere o
+   `needcode_absurd-charlead.txt`, só então leia o código mais recente no Gmail e grave
+   `code_absurd-charlead.txt` com a sessão viva.
+
+### Comando exato de disparo
+
+```
+cd /home/user/apply
+CARTA_TXT=/home/user/apply/carta_absurd_charlead.txt \
+CARTA_PDF=/home/user/apply/carta_absurd_charlead.pdf \
+sh hb_run.sh carta_pdf.js
+
+sh automacao/dedupe-agora.sh 5236256007 "Absurd"      # refaça no MINUTO do clique
+
+cd /home/user/apply
+VINI_TEL="<telefone, do doc privado do Drive>" \
+sh hb_run.sh apply-greenhouse.js \
+  "https://job-boards.greenhouse.io/absurdventures/jobs/5236256007" \
+  absurd-charlead ans_absurd-charlead.json --submit
+```
+
+Sem `--submit` ele preenche, tira print e mostra a leitura de volta sem enviar. **A carta e o
+arquivo de respostas já estão escritos** em `/home/user/apply/carta_absurd_charlead.txt` (250
+palavras, sem capslock, sem a palavra proibida, uma única linha de realocação) e
+`/home/user/apply/ans_absurd-charlead.json`.
+
+**Prova de envio que vale aqui:** URL terminando em `/jobs/5236256007/confirmation` **ou** o texto
+*"Thank you for applying to Absurd Ventures"*. O recibo por email desta casa é **mudo** — ele diz
+apenas *"Thank you for submitting a general application"* e **não nomeia a requisição**, medido nos
+dois de ontem. Então a prova é a URL somada ao horário.
 
 ---
 
