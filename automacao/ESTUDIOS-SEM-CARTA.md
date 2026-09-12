@@ -113,9 +113,60 @@ ficha responde essa pergunta explicitamente.
 
 ---
 
+### Hyper Luminal Games — Dundee, Escócia (Reino Unido)
+
+- **Email:** `info@hyperluminalgames.com` · fonte: https://hyperluminalgames.com/contact
+  (aberto nesta rodada em 12/09 às 09h45; HTTP 200, publicado em texto junto do endereço
+  completo do estúdio, Suite 7 The Vision Building, 20 Greenmarket, Dundee DD1 4QB). MX
+  Google ativo (`smtp.google.com`).
+- **Encaixe:** é **exatamente** o material do portfólio dele. Os jogos próprios publicados
+  na página /games são 3D **estilizado e cosy, movidos a personagem com nome**: *The Day I
+  Became A Bird* ("Join Frank, an awkward young boy, as he discovers newfound feelings for
+  his classmate, Sylvia"), *Pine Hearts* ("As Tyke, hop into your hiking boots"), *Cloud
+  Jumper* ("help Olive find her way home"). Personagem estilizado com leitura de silhueta e
+  carga emocional é o que essas três capas pedem. Some-se o braço de **work for hire**, que
+  já entregou "80+ games".
+- **Gancho, com a frase deles entre aspas:** da home, *"We make games where every team
+  member proudly states: 'I built that!'"* e *"We put smiles on people's faces with
+  beautiful and fun experiences that people play and love."* Casa direto com personagem
+  estilizado feito para ser lembrado. Gancho de reforço, da página de carreiras: eles se
+  gabam de *"one of the lowest staff churn rates in the industry"* e de *"promoting from
+  within"*, que é o argumento de quem entra para ficar.
+- **Fora dos EUA?** **Sim** (Escócia, Reino Unido, endereço postal publicado). A frase de
+  realocação ENTRA.
+- **Ressalva honesta:** a seção **Vacancies** da página de carreiras está **vazia** hoje (o
+  bloco emenda direto em "BUILDING PARTNERSHIPS ... Get in touch!"), então não há anúncio
+  para responder: a via é carta fria pelo `info@`.
+- **Dedupe:** `grep -i "hyper luminal"` bate em quatro arquivos e **nenhum é envio**:
+  `automacao/backlog-estudios.md` (lista de reserva), `automacao/fila-gamedevmap-europa.csv`
+  e `automacao/garimpo-pdf-fontes.csv` (garimpo), e `automacao/caca-breezy-homerun.md`, onde
+  a única menção é o quadro `hyperluminal` do Join.com listado como **vivo e com zero vaga
+  publicada**. **Zero** em `alvos.csv`, `enviados.csv`, `pessoas.csv`, `processados.csv` e
+  `docs/index.html`. **Gmail conferido nesta rodada** (`hyperluminal OR "Hyper Luminal"`):
+  **zero threads**.
+
+---
+
+## Descartados nesta rodada, com a razão literal
+
+- **Believer Entertainment** (`believer.com`): o domínio **não é do estúdio**. Responde 200
+  com um site de estudo bíblico ("Believer.com - Home Page", "Study The WORD Today"), e o
+  `questions@believer.com` que sai da varredura é dessa casa, não de jogos. Endereço
+  **descartado**; o estúdio de Austin, se for perseguido, precisa de outro domínio.
+- **Vertpaint, 314 Arts e HundredStar sem endereço de PESSOA:** as três publicam só caixa
+  funcional. Isso é o padrão medido há cinco rodadas e não é defeito da busca.
+- **Sem email publicado nenhum, varridos nesta rodada em raiz, `/contact`, `/contact-us`,
+  `/careers` e `/jobs` (não repesquisar contato, a via é o ATS):** Ironbelly Studios,
+  Gears for Breakfast, Red Kite Games, Pixel Toys, Demiurge Studios, Wolcen Studio, Ludios,
+  Mighty Yeti, Hardsuit Labs, BulletFarm, Halon, Titanium Clad Studios, Second Star Games.
+- **Travados por rede (`http=000` em todos os caminhos, NÃO é morte):** `hypixelstudios.com`,
+  `inflexion.games`, `uppercut.games`, `brainjargames.com`. Ficam para reconferência.
+
+---
+
 ## Placar das fichas
 
 | | |
 |---|---|
-| Fichas esperando carta | **3** |
+| Fichas esperando carta | **4** |
 | Rascunhos criados nesta rodada | **0, de propósito** |
