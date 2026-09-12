@@ -1,5 +1,47 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+## 🖐️ À MÃO, AGORA: Lightfox Games — Senior 3D Artist, Vancouver — **só falta o captcha**
+
+**Link:** https://www.lightfoxgames.com/careers/?id=senior-3d-artist-vancouver&src=linkedin
+Vaga que o próprio Vini mandou em 12/09. Vancouver BC, híbrido ~50% presencial, faixa publicada
+**CA$95.000–120.000**, jogo mobile não anunciado de IP e publisher grandes. Encaixe real:
+*"Create high-quality 3D assets including **characters**, props, and weapons"*, personagem
+primeiro na lista, e *"experience with stylized art directions"* em nice-to-have.
+
+**A parede é o Cloudflare Turnstile** (*"Please complete the verification challenge."*, token
+vazio). Captcha de desafio não se burla, e ele reprova o IP de datacenter, não a candidatura.
+**No navegador dele passa** — foi assim que nove formulários "travados" saíram em dezessete
+minutos em 10/09.
+
+| Campo | Valor |
+|---|---|
+| NAME | `Vini Cavalcanti` |
+| EMAIL | `contact@vinicavalcanti.art` |
+| RESUME | `Vini_Cavalcanti_CV.pdf` |
+| PORTFOLIO / REEL URL | `https://www.artstation.com/viniciuscavalcanti` |
+| LINKEDIN URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| As DUAS caixas de acknowledgment | **marcadas** |
+| Data de início | **12/10/2026** (um mês; trocar se o prazo real dele for outro) |
+| `company` (campo sem rótulo) | **VAZIO** — é honeypot anti-robô |
+
+**No campo ANYTHING ELSE vai o texto da constante `NOTA` em `/home/user/apply/lf_aplica.js`**,
+que abre declarando o visto na primeira linha. **Esse texto é a razão de as caixas poderem ser
+marcadas:** a situação real chega escrita na mesma submissão, então nada fica escondido e o
+recrutador lê o fato em vez de descobrir numa call.
+
+**TRÊS PORTÕES, e os dois primeiros já estão resolvidos no script** — registrados porque a
+sequência enganou duas medições minhas: (1) as caixas de acknowledgment; (2) o campo
+*"WHAT'S THE SOONEST YOU'D BE AVAILABLE TO START THIS POSITION?"*, que **só renderiza depois**
+das caixas e **não é `<input>`**, é `button.datepick-day[data-date]` num widget de div; (3) o
+Turnstile, que é o único que sobra.
+
+**Rota paralela, já pronta:** rascunho para `careers@lightfoxgames.com` com assunto próprio
+nomeando a vaga (precisa do `enviarAssuntoProprio()`). E **Anthony Tewes, Head of Art**, sem
+email publicado, é contato de LinkedIn que só o Vini pode fazer.
+
+---
+
+
 > ## 🎯 ENTRADA NOVA DE 12/09, 11h — E ELA É A PRIMEIRA DA FILA HOJE
 >
 > **Absurd Ventures — CHARACTER ART LEAD — Santa Monica, Califórnia.** Publicada **ontem, 11/09 às
