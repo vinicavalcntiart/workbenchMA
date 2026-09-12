@@ -848,3 +848,56 @@ A correção de ontem à noite (esperar pela prova e não pelo relógio, porque 
 com o envio girando mata o pedido) **continua certa** e foi ela que fez a segunda tentativa
 passar em 2 segundos. O que estava errado não era esperar: era o diagnóstico de que a primeira
 tinha falhado.
+
+## MEDIDO NA MADRUGADA DE 12/09: AGENTE QUE CRIA RASCUNHO TRAVA QUANDO NINGUÉM APROVA
+
+**Três agentes seguidos travaram, e os três no MESMO ponto: a criação do rascunho no Gmail.**
+
+| Agente | Tempo parado | Última coisa que produziu |
+|---|---|---|
+| Joe das 21h36 | 5h | *"I'll start by pulling the repo..."* |
+| Prospecção das 00h50 | 3h | *"Vou criar o rascunho da HundredStar Games."* |
+| Joe das 03h35 | minutos | *"Nenhum contato prévio. Criando o primeiro rascunho."* |
+
+A prospecção é a que prova: ela **não** travou no começo. Varreu, achou um estúdio novo
+(HundredStar Games), passou no dedupe, e parou **exatamente** na chamada de `create_draft`.
+
+### A causa, e ela não é bug do agente
+
+`mcp__Gmail__create_draft` abre um pedido de aprovação na tela do Vini. **Enquanto ninguém
+aprova, a chamada não retorna e o agente fica esperando indefinidamente.**
+
+A prova por contraste está no relógio: os 6 rascunhos criados às 21h13-21h15 saíram **porque o
+Vini estava acordado aprovando um a um** (ele reclamou disso na hora, com estas palavras: *"fica
+aparecendo vários avisos aqui no Claude pra eu permitir ajustes no rascunho"* e *"acho um saco
+ter que ficar permitindo tudo"*). Depois que ele parou de aprovar, todo agente que chegou nesse
+ponto morreu ali.
+
+Segunda prova por contraste: **o Comunicador rodou normalmente** às 22h e às 00h, as duas vezes
+em poucos minutos. Nas duas ele fechou com *"nada ficou como rascunho"* — ou seja, **nunca
+chamou `create_draft`**.
+
+### O que isso custou
+
+Oito horas de três agentes, e o pior não é o tempo: é que **uma rodada de zero por agente
+travado é indistinguível, no resumo, de uma rodada de zero por fila seca.** A madrugada parecia
+"campanha sem vaga nova" e parte dela era só agente pendurado esperando um clique.
+
+### As regras que saem daqui
+
+1. **Agente que cria rascunho só roda quando o Vini está acordado**, ou com a permissão de
+   `create_draft` realmente efetiva. Fora disso ele vai travar, não importa o quanto o prompt
+   seja bom. Isso vale para o **Joe** (a função dele É criar rascunho) e para a **prospecção**.
+2. **O Comunicador e as rodadas de varredura por curl continuam valendo de madrugada**, porque
+   não passam por ali.
+3. **Sinal de diagnóstico, para não perder horas de novo:** agente parado com a última mensagem
+   falando em *criar rascunho* está travado, não trabalhando. Confira o disco (`pessoas.csv`
+   não cresceu? nenhum arquivo novo?) e a contagem de rascunhos na caixa. Se os dois estão
+   parados, mate e não relance até destravar a permissão.
+4. **Matar cedo é barato.** Nenhum dos três tinha trabalho não salvo, porque nenhum chegou a
+   produzir. O caro foi ter esperado.
+
+### Pendência deixada pelo agente morto, que NÃO se perde
+
+A prospecção tinha achado **HundredStar Games** como nome novo, aprovado no dedupe, e ia
+escrever a carta. Fica anotado aqui para a próxima rodada que puder criar rascunho.
