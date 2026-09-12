@@ -1495,3 +1495,89 @@ regra de personagem primeiro, e isso não aparecia em lugar nenhum do repositór
 **A regra que fica:** em casa que usa Workday **e onde já exista conta**, abrir
 `/candidateHome` ou a lista "My Applications" **antes de aplicar**. É dedupe vindo do próprio
 empregador, e portanto mais confiável que qualquer arquivo nosso, que é registro manual.
+
+## 12/09, 22h (JHON B) — A LISTA "MY APPLICATIONS" DO WORKDAY: A ROTA É A API, NUNCA A TELA
+
+A tela `https://<host>/en-US/<site>/candidateHome` devolve **"There are 1 error(s). Use View All
+button for details."** e **não renderiza a lista**, mesmo com o email do Vini na barra superior.
+Isso derrubou a ferramenta a tarde inteira.
+
+**O defeito é de RENDERIZAÇÃO do SPA, não da casa e não de permissão.** A prova veio de usar a
+**Blizzard como controle com resposta conhecida** (a tela de confirmação das 21h já tinha mostrado
+R028136, R028112 e R028122): escutando a rede, a **mesma página**, no **mesmo carregamento** que
+escreve "1 Error", busca e recebe os dados com HTTP 200 em
+
+```
+GET https://<host>/wday/cxs/<locatário>/<site>/applications?type=active&limit=4
+```
+
+que respondeu `{"total":3,...}` com as três requisições certas. **Ler `innerText` da tela era o
+erro; os dados sempre estiveram chegando.**
+
+**Campos reais do JSON:** `postingTitle`, `jobRequisitionId`, `dateApplied`, `status`, `draft`
+(rascunho não é candidatura), `jobPostingAnchorId`. Existe também `?type=inactive`, que é onde
+ficam as recusas.
+
+**Testado e descartado, para ninguém refazer:**
+
+| O que tentei | O que devolveu |
+|---|---|
+| `/userHome` | tela vazia (137 caracteres), sem erro e sem lista |
+| `/candidateHome/jobApplications`, `/myapplications`, `/candidateHome/applications` | o mesmo `1 Error` |
+| clicar numa aba tipo "Active (3)" | **não existe**: o inventário da tela tem cinco botões (English, email, Search for Jobs, Candidate Home, menu) e **um** link, "Skip to main content" |
+| CXS `/candidateHome`, `/userHome`, `/jobApplications`, `/candidate/applications`, `/candidateProfile` | **HTTP 406** nos cinco |
+| `applications?...&limit=50` | **HTTP 400**. Pagina-se com `limit=4` e `offset` |
+
+**Duas coisas medidas de graça e que economizam rodada:**
+
+1. **A conta é por LOCATÁRIO, não por site.** `xboxgaming/External` e
+   `xboxgaming/Blizzard_External_Careers` devolvem a **mesma** lista. Uma leitura por locatário
+   basta, e não uma por quadro.
+2. **`/wday/cxs/<loc>/<site>/userprofile` é a prova barata de sessão:** responde 200 com
+   `emailAddress` só quando há login de verdade. Use-o antes de concluir qualquer coisa, senão
+   "lista vazia" pode ser só "deslogado".
+
+Ferramenta: `automacao/wd_minhas.js` (cópia em `/home/user/apply/wd_minhas.js`).
+Uso: `cd /home/user/apply && sh hb_run.sh wd_minhas.js <host> <site> <slug>`.
+
+### O QUE A LEITURA DOS QUATRO LOCATÁRIOS DEVOLVEU, E O BURACO TEM TAMANHO
+
+**26 candidaturas** na conta dos quatro locatários. Duas delas **não existiam em lugar nenhum do
+repositório** e três estavam registradas como vivas quando já estavam fechadas.
+
+| Casa | Ativas | Inativas | O que era novo |
+|---|---|---|---|
+| Blizzard (`xboxgaming.wd1`) | 3 | 0 | nada: as três já tinham entrado no registro às 21h |
+| Disney (`disney.wd5`) | 4 | 4 | **10154147** e duas recusas |
+| Netflix (`netflix.wd108`) | 13 | 1 | **JR40467** e uma duplicata |
+| Cloud Imperium (`cloudimperiumgames.wd503`) | 0 | 1 | a recusa da JR101515 |
+
+**As duas candidaturas desconhecidas são as duas de 10/07/2026**, ou seja **pré-campanha, feitas
+pelo próprio Vini**, exatamente a classe que a regra 18(c) previa:
+
+- **Netflix `JR40467`** — Principal Technical Artist, Games R&D, Tech Lab. O identificador aparece
+  **zero** vez em qualquer arquivo do repositório.
+- **Disney `10154147`** — Character Modeler (Mid-Senior Level). **E este é o caso instrutivo:** o
+  número aparece em **dez** arquivos, e sempre como *vaga vista em varredura e descartada por ser
+  Mumbai*. `grep 10154147 enviados.csv` devolve **zero**. **Identificador presente no repositório
+  não quer dizer candidatura registrada, quer dizer que alguém escreveu aquele número em algum
+  lugar.** O dedupe por ID teria passado limpo.
+
+**Duplicata real, invisível até hoje:** a Netflix `JR41751` (Character Modeling Supervisor) aparece
+**duas vezes na lista ativa**, enviada em **31/08 e em 08/09**. O `enviados.csv` tem uma linha só.
+
+**Três desfechos que o repositório dava como vivos:** a expressão `No Longer in Consideration`
+aparecia **zero** vez no repositório inteiro. Estão assim a Senior Modeler ILM Sydney `10159882`
+e a Senior Texture Artist ILM London `10159370`; e a Vehicle Artist `JR101515` da Cloud Imperium
+está `Not selected`.
+
+### A RESSALVA QUE IMPEDE USAR ISTO COMO PROVA DE AUSÊNCIA
+
+A Blizzard devolve três ativas e **zero** inativas, e a **Lead Character Artist de Overwatch
+`R027817`**, enviada em 02/09 e **recusada hoje às 08h17**, não aparece em nenhuma das duas. A
+causa está escrita no próprio repositório, em 02/09: *"Blizzard não exigia conta e a candidatura
+foi enviada"*. **Candidatura enviada sem conta não fica vinculada à conta criada depois.**
+
+> **A lista do Workday é fonte de dedupe POSITIVA e muito confiável — o que ela mostra, existe.
+> Ela NÃO é prova de ausência: o que ela não mostra pode existir mesmo assim.** Somando a
+> `R027817`, a Blizzard tem **quatro** aproximações em dez dias, não três.
