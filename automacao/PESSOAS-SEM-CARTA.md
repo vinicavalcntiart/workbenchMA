@@ -61,3 +61,13 @@ rascunho.
 - **Fora dos EUA?** Sim — Holanda, União Europeia.
 - **Dedupe:** zero ocorrência de "galaxy grove" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa.
 - **Ressalva honesta, e é a maior desta rodada:** a mesma página diz **"We currently don't have any job openings"** e **"We are currently not looking for new freelancers to work with."** Além disso os jogos deles (Station to Station, Town to City, Steam to Electric) são de construção e gestão, com pouco personagem. É carta de porta de longo prazo; a carta não deve fingir que existe vaga.
+
+---
+
+### Paul Widelski — artista de personagem (título exato não publicado) — HundredStar Games, Londres, Reino Unido
+- **Email:** **NÃO EXISTE endereço de pessoa publicado** · confiança **sem-email** · fonte da pessoa: https://uk.linkedin.com/in/paul-widelski-6152984a (perfil público, lido nesta rodada sem login); fonte do estúdio: https://www.hundredstar.games/
+- **Por que ELE e não outra pessoa:** casa AAA de 100 pessoas que não publica um único nome; ele é a única pessoa de personagem identificável, e foi ele quem divulgou publicamente a vaga "Expert/Principal Character Artist" da casa.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de vagas diz, com estas palavras, **"While we may not currently be advertising for the kind of position you feel best aligns to your skillset, we'd welcome you to speculatively apply by sharing your CV and portfolio with our Recruitment team via jobs@hundredstar.games for future consideration should a role become available."** É convite escrito a candidatura espontânea. A home diz só **"AAA games, 100 people in london"**.
+- **Fora dos EUA?** Sim — Reino Unido. Continua precisando de patrocínio (UK exige), então a frase de realocação vale inteira.
+- **Dedupe:** "hundredstar" não aparece em `enviados.csv`, `pessoas.csv` nem `docs/index.html`; aparece uma vez em `automacao/processados.csv`, e é justamente a nota do agente que morreu na madrugada de 12/09 deixando esta casa pendente. PRIMEIRA pessoa desta casa.
+- **O QUE FALTA, e é o que trava a carta para a pessoa:** o site publica só `info@hundredstar.games` e `jobs@hundredstar.games`. Não há nenhum endereço de pessoa em fonte pública gratuita; o único lugar que oferece um é serviço pago de busca de email, que o BRIEF-JOE proíbe. **Nada foi montado nem inventado.** Enquanto não aparecer endereço literal, a carta possível é para `jobs@hundredstar.games`, e ela tem chance real porque a própria casa pediu candidatura espontânea — quem escrever decide se manda assim ou se guarda.
