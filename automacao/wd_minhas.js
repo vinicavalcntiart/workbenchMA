@@ -27,7 +27,12 @@ const fs=require('fs');
 const C=require('./cred.json');
 const [host,site,slug]=process.argv.slice(2);
 const LOC=(host||'').split('.')[0];
-const CRED=C[LOC+'_workday'];
+// APELIDO DE LOCATARIO: a chave do cred.json nem sempre e o primeiro rotulo do host.
+// Medido em 12/09: host cloudimperiumgames.wd503 com chave cig_workday imprimia
+// "entrada propria? false" e caia na senha padrao da campanha. Funcionou por coincidencia
+// (a senha e a mesma), e teria falhado calado no dia em que a senha daquele locatario mudasse.
+const APELIDO={cloudimperiumgames:'cig'};
+const CRED=C[(APELIDO[LOC]||LOC)+'_workday'];
 const SENHA=(CRED&&typeof CRED==='object'?CRED.senha:CRED)||C.padrao_campanha;
 const EMAIL=(CRED&&typeof CRED==='object'&&CRED.email)||C.email;
 const estado='wdst_'+slug+'.json';
