@@ -1,5 +1,40 @@
 # Pessoas achadas e verificadas, ESPERANDO CARTA
 
+## ✅ DESTRAVADO EM 12/09 ÀS 11h30. SETE CARTAS ESCRITAS.
+
+**O bloqueio caiu, e a causa não era a que este arquivo supunha.** A suposição registrada
+abaixo é que `create_draft` estava travado para todo mundo. Não estava: **travava só para
+AGENTE**. A chamada feita da sessão principal passa calada, e foi assim que as sete saíram.
+A permissão do projeto lista `mcp__Gmail__create_draft` no `allow` desde 11/09, e mesmo assim
+o subagente continua abrindo pedido de aprovação na tela do Vini — ou seja o `allow` do
+projeto não alcança o subagente nesta sessão remota.
+
+**A regra que fica, e ela é de divisão de trabalho, não de configuração:**
+**agente NUNCA escreve carta. Agente acha e verifica; o maestro escreve.**
+
+| Pessoa | Casa | Rascunho |
+|---|---|---|
+| Arno Schmitz | Guerrilla Games | criado |
+| Eva Balvirčáková | MADFINGER Games | criado |
+| Giles Sander | Polyester Studio | criado |
+| Jake Fishman | Concept Art House | criado |
+| Tim Remmers | Team Reptile | criado, e ele **assume a primeira carta de 06/09** em vez de fingir que é o primeiro contato |
+| Curtis Andrus | Animal Logic | criado |
+| *(caixa `jobs@`, não a pessoa)* | HundredStar Games | criado |
+
+**As duas que continuam paradas, e por quê:** **Jan Philip Cramer** (Digital Domain) e
+**Paweł Mielniczuk** (CD PROJEKT RED). Nos dois casos o endereço **não existe em fonte
+pública** e o que havia era chute. Casa grande não se gasta em endereço montado, então elas
+seguem valendo pelo nome, pelo cargo e pelo domínio provado, esperando endereço literal.
+
+**Os rascunhos saem pelo Apps Script (`enviarRascunhos()`), nunca à mão pelo Gmail:** a API
+embrulha todo link em `https://www.google.com/url?q=...` e só o `limparLinks` do
+`automacao/envia-rascunhos.gs` desfaz isso na hora do envio. Conferido de novo hoje no
+rascunho do Arno: os três links saíram embrulhados.
+
+---
+
+
 Criado na rodada das 06h35 de 12/09/2026 pelo Joe.
 
 **Por que este arquivo existe:** na madrugada de 12/09 três agentes seguidos morreram
