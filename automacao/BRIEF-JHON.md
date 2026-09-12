@@ -838,3 +838,34 @@ script deixar *Male* na tela sem erro nenhum no log — a mesma família da arma
 primeira opção que casa. O certo foi tirar os três combos e preencher só os quatro obrigatórios de
 verdade (nome, sobrenome, email e a caixa de consentimento). **Sem campo de link, o ArtStation entra
 dentro do texto do resumo**, e é obrigatório conferir que entrou.
+
+## 12/09, 22h — ANTES DE APLICAR EM WORKDAY, LEIA A LISTA DE CANDIDATURAS DA PRÓPRIA CASA
+
+Ferramenta: `cd /home/user/apply && sh hb_run.sh wd_minhas.js <host> <site> <slug>`.
+Cópia versionada em `automacao/wd_minhas.js`. Ela **só lê**, não envia nada.
+
+**Não leia a tela.** `/en-US/<site>/candidateHome` escreve *"There are 1 error(s)"* e não
+renderiza a lista, mesmo logado — isso é defeito de renderização do SPA, não da casa (provado
+na Blizzard, onde a resposta certa era conhecida). A lista vem da API, com os cookies da sessão:
+
+```
+GET https://<host>/wday/cxs/<locatário>/<site>/applications?type=active&limit=4
+```
+
+e o `?type=inactive` é onde ficam as recusas. `limit=50` devolve **HTTP 400**; pagina com
+`limit=4` e `offset`.
+
+**A conta é por LOCATÁRIO, não por site**, então uma leitura por locatário cobre todos os
+quadros dele. Locatários com conta hoje: `xboxgaming.wd1`, `disney.wd5`, `netflix.wd108`,
+`cloudimperiumgames.wd503`.
+
+**Por que isto entra na sua fila e não na do prospector:** a leitura de 12/09 achou **duas
+candidaturas que o repositório não conhecia** (Netflix `JR40467` e Disney `10154147`, as duas
+de 10/07, pré-campanha) e **uma duplicata real** (Netflix `JR41751`, enviada 31/08 **e**
+08/09). Isso é exatamente o erro que mais custa aqui: mandar segunda candidatura para uma
+requisição que já recebeu a primeira.
+
+**E a ressalva, que impede usar isto como desculpa:** a lista é prova **positiva** (o que ela
+mostra, existe) e **não** é prova de ausência. A `R027817` da Blizzard foi enviada em 02/09
+**sem conta** e por isso não aparece em lista nenhuma. Candidatura anterior à criação da conta
+continua invisível ali — para essa, o dedupe é a caixa de entrada.
