@@ -1,5 +1,69 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+## 🖐️ À MÃO, AGORA (entrada nova de 12/09, 15h30): Stellar Creative Lab — **Modeling Artists (Mid & Senior)**, Vancouver — só falta a caixa do captcha
+
+**Link:** https://stellarcreativelab.applytojob.com/apply/zK3Gust365/Modeling-Artists-Mid-Senior
+Vaga **nova**, saiu no seu alerta do LinkedIn de hoje às 12h44 (Character Art, Canadá). Vancouver
+BC, efetiva, híbrido flexível, e o projeto é **uma série premium de streaming para a Marvel
+Animation**. Faixa publicada **CA$70.000–85.000**. Quadro JazzHR, requisição `zK3Gust365`.
+
+**Por que ela é sua:** o corpo põe personagem em primeiro lugar, *"building **characters**,
+sprawling sets, vehicles, or organic hard-surface props"* e *"including **characters**, sets,
+props, vehicles"*, e as Core Tools são **Maya, ZBrush e Photoshop**.
+
+**A parede é o reCAPTCHA v2 de caixa** (rótulo *"Human Check\*"*). **Eu cliquei em Submit
+Application e medi**, não supus: **zero POST para o domínio deles** (os nove POST que saíram são
+todos do New Relic, `bam.nr-data.net`), o formulário continuou cheio, o token
+`g-recaptcha-response` ficou com comprimento zero e o site escreveu em vermelho **"Please
+verify."** ao lado da caixa *"I'm not a robot"*. Print em
+`/home/user/apply/result_stellarmod.png`. **No seu navegador isso é um clique.**
+
+**O formulário inteiro já foi preenchido e conferido campo a campo aqui, duas vezes** (antes e
+depois do clique). Basta repetir:
+
+| Campo | Valor |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email Address | `contact@vinicavalcanti.art` |
+| Phone | **campo único, sem seletor de país** → formato internacional sem espaço (doc privado do Drive, `CAMPANHA - dados pessoais dos formulários`) |
+| Address / City / State / Postal | endereço residencial do mesmo doc privado; City `Olinda`, State `Pernambuco` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| *"link to your portfolio or reel"* | ArtStation, LinkedIn e site, mais a situação de visto **declarada na mesma submissão** (texto abaixo) |
+| *"Are you legally entitled to work in Canada?"* | **No** |
+| *"What is your employment eligibility?"* | **Non-citizen seeking work authorization** |
+| *"Are you currently residing in B.C.?"* | **No** |
+| *"...familiar with the salary range stated in the job listing?"* | `Yes. I am familiar with the posted range of CAD 70,000 to 85,000 and I am aligned with it, at the lower end of the band.` |
+| *"Have you previously worked for Stellar Creative Lab?"* | **No** |
+| Human Check | **a caixa do reCAPTCHA — é a única coisa que falta** |
+
+O texto do campo de portfólio está pronto em `/home/user/apply/ans_stellar_mod.json`, chave
+`#resumator-questionnaire-q278966`: ele abre com os links e **diz a verdade sobre o visto na
+mesma tela em que as três respostas de elegibilidade aparecem**, que é a regra que você definiu
+hoje. Nenhuma caixa foi marcada escondendo nada: aqui não foi preciso, porque o menu **deles**
+já oferece a opção honesta.
+
+**Duas coisas que quase pareceram veto e não são:**
+1. A lista de requisitos traz *"Eligibility: Legally eligible to work in British Columbia,
+   Canada"*, mas o texto renderizado termina com *"**All qualified candidates are encouraged to
+   apply**, though priority will be given to BC Residents, Canadians and Canadian Permanent
+   Residents"* — é **preferência declarada**, não proibição, e o próprio menu do formulário tem
+   a opção de quem precisa de patrocínio.
+2. A campanha já tocou esta casa em **31/08**, mas foi **porta de entrada** (Production
+   Coordinator), requisição diferente e fora da disciplina. Não é candidatura repetida.
+
+**Ressalva honesta de salário:** a base da faixa publicada (CA$70.000) fica **abaixo** do piso de
+referência da campanha para o Canadá (CA$80.000). Segui a regra 1 do briefing, que manda pedir a
+**base da faixa publicada** e vence a estimativa; se você preferir pedir 80.000, é trocar uma
+linha do campo de salário.
+
+**E tem a irmã, que é sua também:** **Surfacing/Texture Artists (Mid & Senior)**,
+`j7JwsT6x1k`, mesma série e mesmo formulário (conferido por curl: mesmos seis ids de pergunta,
+mesmo captcha) — *"creating the look, feel, and texture of **characters**, environments, and
+objects"*, estética *painterly*. **Não foi tentada hoje de propósito, por cadência de uma casa
+por dia. Ela vale a partir de 13/09**, com este mesmo dossiê.
+
+---
+
 ## 🖐️ À MÃO, AGORA: Lightfox Games — Senior 3D Artist, Vancouver — **só falta o captcha**
 
 **Link:** https://www.lightfoxgames.com/careers/?id=senior-3d-artist-vancouver&src=linkedin
