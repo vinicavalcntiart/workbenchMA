@@ -217,3 +217,26 @@ ficha responde essa pergunta explicitamente.
 |---|---|
 | Fichas esperando carta | **5** |
 | Rascunhos criados nesta rodada | **0, de propósito** |
+
+---
+
+## ROTA CONFERIDA PELO MAESTRO ÀS 09h20: NENHUM DOS CINCO TEM FORMULÁRIO DE CANDIDATURA
+
+A faixa de formulário **não** está bloqueada pelo `create_draft`, então fui ver se algum destes cinco
+podia ser enviado agora em vez de esperar. Não pode. Medição, casa por casa:
+
+| Casa | Formulário | Veredito |
+|---|---|---|
+| **Cahoots Studios** | **zero** | rota é `jobs@cahootsstudios.com`, carta |
+| **HundredStar Games** | **zero** (e há captcha na home) | rota é `jobs@hundredstar.games`, e o site convida por escrito |
+| **Vertpaint** | existe, campo *"Where are you in production, and what support are you looking for?"* | **balcão de CLIENTE**, não de candidatura |
+| **314 Arts** | existe, com campo **Company** | **balcão de CLIENTE**, não de candidatura |
+| **Hyper Luminal** | "Let's Talk" genérico, Webflow | genérico demais; a rota publicada deles é `info@` |
+
+**A decisão e o porquê:** formulário comercial não se usa como porta de emprego. Ele chega no time de
+vendas, não no de arte, e lê como spam de fornecedor. A diferença para a **Peekaboo**, onde o formulário
+de contato FOI usado e deu certo, é que lá o próprio formulário dizia *"IF YOU WANT TO WORK WiTH US,
+PLEASE ATTACH YOUR PORTFOLIO"* — a casa convidando. Aqui os campos dizem o contrário.
+
+Portanto **as cinco esperam o `create_draft`**, junto com as cinco pessoas do Joe. Dez cartas prontas
+para sair em lote.
