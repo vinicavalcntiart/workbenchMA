@@ -634,3 +634,31 @@ publicados com nome e cargo na seção Team da home. É o mesmo caso da **Stunlo
 (`stunlock.com` com email `@stunlockstudios.com`, 07/09) e da **TELEVISOR** (`televisor.pl` com
 email `@televisor.studio`, 10/09). **Regra reforçada: antes de montar qualquer endereço, procure
 um endereço LITERAL na página, porque o domínio do site mente com frequência que já não é rara.**
+
+## UBISOFT — padrão provado por três endereços literais (12/09, pelo Joe)
+
+O talk aberto **"A Ragdoll-less Approach to Physical Animations of Characters in Vehicles"**
+(SIGGRAPH 2019 Talks, PDF sem paywall em
+https://history.siggraph.org/wp-content/uploads/2022/09/2019-Talks-Shin_A-Ragdoll-less-Approach.pdf)
+traz no rodapé, com afiliação **Ubisoft Reflections**:
+
+```
+hyojong.shin@ubisoft.com   (Hyojong Shin)
+mark.leadbeater@ubisoft.com (Mark Leadbeater)
+ben.merrick@ubisoft.com     (Ben Merrick)
+```
+
+**O que isso prova:** o formato da casa é **`nome.sobrenome@ubisoft.com`**, o mesmo para todos os
+estúdios do grupo, e não um domínio por estúdio. **O que isso NÃO prova:** que a caixa de outra
+pessoa esteja viva — endereço montado sobre este padrão continua sendo confiança **BAIXA**, pela
+régua de 06/09 (dos 8 montados daquele lote, 5 quicaram).
+
+## O rodapé de paper tem DATA DE VALIDADE (medido em 12/09)
+
+Varri os três anos de Talks abertos do `history.siggraph.org` (2019, 2020 e 2021; 224 talks, PDF
+baixado e primeira página extraída). **Só esses anos trazem email no rodapé.** As páginas de
+**2022 e 2023 do arquivo não hospedam PDF nenhum** (0 de 54 e 0 de 70) — o arquivo só linka o DOI
+da ACM, que está atrás do Cloudflare e devolve **403 até com navegador**. Ou seja: o caminho do
+rodapé de paper serve para achar gente cujo endereço foi publicado **até 2021**, e por isso vem
+sempre com ressalva de vigência. Quando o PDF é hospedado pelo **próprio estúdio** (o caso da
+Animal Logic), o ano pode ser mais recente.
