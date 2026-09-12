@@ -230,3 +230,59 @@ achar o NOME do lead de personagem por imprensa/entrevista, e depois procurar o 
   a confirmação de que ela segue na IOI vem do texto dela mesma, não de página da casa; (3) o Vini já
   está no banco de candidatos do Teamtailor da IOI desde 06/09, o que é bom (mostra interesse) e ruim
   (ela pode responder "aplica pelo portal") — a carta deve pedir **direção**, não vaga.
+
+### François Lord — CG Supervisor (autor do pipeline de criaturas em USD) — Rodeo FX, Montréal, Canadá
+- **Email:** flord@rodeofx.com · confiança **alta** (publicado, **mas leia a ressalva**) · fonte: rodapé
+  do PDF aberto de **"Case study on using a parallel pipeline and USD to build creatures"**,
+  SIGGRAPH 2020 Talks —
+  https://history.siggraph.org/wp-content/uploads/2022/08/2020-Talks-Lord_Case-study-on-using-a-parallel-pipeline-and-USD-to-build.pdf
+  — bloco de autor lido literalmente: *"François Lord — Rodeo FX Inc, Montreal, Quebec, Canada —
+  flord@rodeofx.com"*.
+- **Por que ELE:** o talk inteiro é de **criatura** (*"a photorealistic CG dromedary, one of the main
+  stars"*), e ele é o supervisor de CG que montou o caminho por onde a criatura passa. Numa casa que
+  publica só `info@`, ele é a única pessoa do lado de personagem com endereço literal em fonte aberta.
+- **Gancho, com a frase do próprio estúdio entre aspas** (a página só renderiza com JavaScript; foi
+  aberta com navegador nesta rodada): https://rodeofx.com/about diz **"WE ARE BORN TO CRAFT"**, define
+  a casa como **"INDEPENDENT, ARTIST-DRIVEN & BORN IN QUEBEC"**, e cita o fundador Sébastien Moreau:
+  **"Rodeo was founded by artists and has always put people at the centre of everything we do...this
+  guarantees that our work, our creations, are always the very best they can be."**
+- **Fora dos EUA?** Sim — Canadá (Montréal), o país de maior prioridade do BRIEF-JOE. A carta diz de
+  frente que ele precisa de patrocínio.
+- **Dedupe:** `pessoas.csv` tem **uma** linha de Rodeo FX (Deak Ferrand, Head of Art Department,
+  `dferrand@rodeofx.com`, 06/09) e o **Gmail prova que aquela carta quicou no mesmo dia**
+  (`mailer-daemon`, *"550 5.1.1 the email account that you tried to reach does not exist"*). Nenhuma
+  recusa da casa, nenhuma resposta humana. Esta é a **SEGUNDA e ÚLTIMA** pessoa desta casa.
+- **Ressalva honesta, e é grande:** (1) o endereço é **publicado, mas de 2020**; (2) **outro endereço
+  do mesmo domínio já quicou** seis dias atrás, o que mostra que a casa desativa caixa de quem sai;
+  (3) a página de liderança de hoje lista quinze executivos e **ele não está entre eles**, e os
+  créditos públicos dele na Rodeo (Jumanji 2017 e 2019) são antigos — ele pode ter saído. Se quicar,
+  o que sobra desta casa é `info@rodeofx.com`, genérico. **Nota de estrutura que a carta deve saber:**
+  a própria página About declara **MIKROS ANIMATION** e **ALCHEMY 24** como divisões da Rodeo FX, e a
+  confirmação de candidatura da Mikros de 01/09 chegou de `notification@rodeofx.com` — ou seja, o
+  grupo já recebeu uma candidatura do Vini.
+
+---
+
+### Michael Skyers — **Principal Character Artist (Warframe)** — Digital Extremes, London (Ontario), Canadá
+- **Email:** **não existe em fonte pública gratuita** · confiança **sem-email** · fonte da pessoa e do
+  cargo: https://80.lv/author/michael-skyers — página aberta e lida nesta rodada, que apresenta a
+  entrevista de **26/03/2026** com esta frase literal: **"Principal Character Artist at Digital
+  Extremes, Michael Skyers, discusses designing the latest frame, Follie, evolving silhouettes, and
+  building characters for a long-running live-service game."**
+- **Por que ELE:** é o artista de personagem **principal** do Warframe, dentro de uma casa AAA
+  canadense de ~400 pessoas. Personagem puro: não é recrutador, não é produção, não é ambiente.
+- **Fora dos EUA?** Sim — **Canadá**, o país de maior prioridade da campanha.
+- **O QUE TRAVA, sem maquiagem:** `digitalextremes.com` **não publica endereço de pessoa nenhuma** —
+  a varredura de `/contact`, `/about`, `/team`, `/careers` e `/jobs` desta rodada devolveu **zero**
+  email, nem genérico. Os únicos lugares que oferecem endereço dele são **agregadores pagos**
+  (ZoomInfo e RocketReach, que mostram só `m***@digitalextremes.com`), proibidos pelo BRIEF-JOE.
+  **Nada foi montado.** ArtStation dele está na lista de fontes travadas e o LinkedIn devolve 999.
+- **Armadilha evitada e registrada, porque é repetível:** `skyerzz.com` existe e responde 200 — e é de
+  **outra pessoa**, um site de mods de Minecraft. Domínio que "parece" o apelido do artista não é
+  fonte; foi aberto e conferido antes de virar linha.
+- **Dedupe:** zero ocorrência de "digital extremes" em `pessoas.csv` e `enviados.csv`; o **Gmail**
+  mostra só recibo automático de candidatura de 06/09 (`no-reply@digitalextremes.com`, vaga de Concept
+  Artist) e um código de segurança do Greenhouse. **Nenhuma recusa, nenhuma resposta humana.**
+  PRIMEIRA pessoa desta casa.
+- **Gancho já pronto para o dia em que aparecer endereço:** a entrevista dele é sobre **silhueta** e
+  construção de personagem para jogo-serviço de longa duração, que é o vocabulário do portfólio do Vini.
