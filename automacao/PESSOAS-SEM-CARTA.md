@@ -188,3 +188,45 @@ is a need in future."*
 
 **Casa que já respondeu está fora dos limites da campanha.** É o mesmo erro da Galaxy Grove, evitado
 desta vez **antes** de virar linha no `pessoas.csv` — e evitado outra vez pela caixa, não pelo arquivo.
+
+---
+
+## RODADA DAS 12h50 DE 12/09 — JOE. AGENTE NÃO ESCREVE CARTA (regra das 11h35). FICHAS SÓ.
+
+**Caminho da rodada, e ele repete o do Arno Schmitz:** casa grande não publica email de pessoa
+nenhuma, mas o **lead de personagem dela tem site pessoal** e publica o endereço lá. O caminho é:
+achar o NOME do lead de personagem por imprensa/entrevista, e depois procurar o site pessoal dele.
+
+### Beatrice Harty — **Lead Character Artist** — IO Interactive (IOI), Malmö, Suécia
+- **Email:** contact@beaharty.com · confiança **alta** · fonte: **site pessoal dela**,
+  https://www.beaharty.com/about — página aberta e lida nesta rodada, que termina com
+  **"Get in touch: contact@beaharty.com"**.
+- **Por que ELA e não outra pessoa da casa:** é a **lead de arte de personagem** de uma casa AAA
+  (Hitman, 007 First Light, Project Fantasy) que **não publica o email de ninguém** — o site inteiro
+  só oferece `ioi@ioi.dk`, e essa caixa já respondeu ao Vini com resposta automática. Não é
+  recrutador, não é produção, não é ambiente: é quem decide como o personagem fica. A própria
+  página dela conta a carreira: Game Art na The Game Assembly (2015), estágio e depois emprego na
+  **Massive Entertainment – A Ubisoft Studio** até 2021 (The Division, The Division 2, Avatar:
+  Frontiers of Pandora), 2021–2022 com a Shapefarm e com o time da **A44** na Nova Zelândia, e
+  desde agosto de 2022 na IOI: *"working as a Lead Character Artist in our Malmö studio"*.
+- **Gancho, com a frase do próprio estúdio entre aspas:** https://www.ioi.dk/about diz
+  **"IOI's ambition has always been to create immersive, system-driven worlds filled with beautiful
+  art and innovative design"**, e https://www.ioi.dk/careers publica, no fim da página,
+  **"Did you not find the job you were looking for? Unsolicited applications"** — a casa convida
+  candidatura espontânea por escrito. Como a carta vai para a caixa PESSOAL dela, o tom certo é de
+  artista para artista (silhueta, elenco, roupa, groom), não de candidatura a RH.
+- **Fora dos EUA?** Sim — Suécia (Malmö), sede dinamarquesa, União Europeia. A frase de realocação e
+  a de patrocínio entram inteiras.
+- **Dedupe, e o Gmail mudou a leitura:** `pessoas.csv` e `enviados.csv` dão **zero** para
+  "io interactive"; a **caixa não**. Em **06/09** saiu carta fria para `ioi@ioi.dk`, caixa genérica,
+  que devolveu **só resposta automática** (*"we cannot reply to all emails that are sent to this
+  address"*), e no mesmo dia entrou um painel de candidato do Teamtailor da IOI (relay
+  `kasper-raaby-abrahamsen@ioi.teamtailor-mail.com`, que é o nome do recrutador da casa).
+  **Nenhum humano respondeu e a casa não recusou.** Esta é a **SEGUNDA e ÚLTIMA** aproximação
+  da casa, seis dias depois da primeira, agora para pessoa com nome. A carta **precisa saber que
+  já houve uma primeira** e não chegar como se fosse o primeiro contato.
+- **Ressalva honesta:** (1) o endereço é caixa **pessoal**, então ela pode ler devagar e a carta não
+  pode parecer spam de recrutamento; (2) o site pessoal dela não diz a data da última atualização, e
+  a confirmação de que ela segue na IOI vem do texto dela mesma, não de página da casa; (3) o Vini já
+  está no banco de candidatos do Teamtailor da IOI desde 06/09, o que é bom (mostra interesse) e ruim
+  (ela pode responder "aplica pelo portal") — a carta deve pedir **direção**, não vaga.
