@@ -76,5 +76,28 @@ else
 fi
 
 echo
-echo "VEREDITO: leia as três seções antes de clicar. Ocorrência sem marca de envio pode ser"
+echo "== 4. O QUE ESTE SCRIPT NÃO PODE PROVAR, e você tem de conferir à mão =="
+echo "    Ele lê ARQUIVO. Arquivo não é log: a linha pode simplesmente NUNCA TER SIDO ESCRITA."
+echo "    Medido na madrugada de 12/09, e duas vezes na mesma noite:"
+echo "      - STUNLOCK: o grep devolveu duas cartas frias e nenhuma linha de portal, então a"
+echo "        rota parecia livre. Havia recibo do Teamtailor de 06/09 na caixa de entrada."
+echo "        O envio existia; a linha é que faltava. Na reconciliação seguinte, 26 de 89"
+echo "        slugs ditos livres já tinham sido enviados."
+echo "      - TRAEGA: a nota do painel dizia apenas \"carta fria entregue, sem resposta\". A"
+echo "        caixa mostrou TRÊS cartas, e a de 08/09 já usava o gancho da vaga nomeada."
+echo "    Some-se a isso que O NOME NO CSV NÃO É O SLUG DO ATS (Stunlock Studios vs"
+echo "    stunlocksstudios, SYBO vs sybogames, Paradox Interactive vs paradox-interactive),"
+echo "    então procurar um não acha o outro."
+echo
+echo "    A FONTE DE VERDADE DE ENVIO POR PORTAL É O RECIBO NA CAIXA. Antes de clicar, rode"
+echo "    no Gmail, e busque por JANELA DE TEMPO, nunca só por remetente:"
+echo "      from:<slug>.teamtailor-mail.com          (Teamtailor)"
+echo "      newer_than:2d \"<nome da casa>\"            (qualquer ATS)"
+echo "    O recibo do ATS e o recibo da CASA são remetentes DIFERENTES: o Greenhouse manda o"
+echo "    código por us.greenhouse-mail.io e a Warner mandou o \"obrigado\" de wbpanim.com,"
+echo "    domínio que não se adivinha. Filtrar por remetente e não achar nada não prova nada:"
+echo "    foi assim que eu declarei falhado um envio da Warner que tinha passado."
+echo
+echo "VEREDITO: leia as QUATRO seções antes de clicar. Ocorrência sem marca de envio pode ser"
 echo "adiamento ou descarte; ocorrência COM marca é envio feito, e clicar de novo é repetir."
+echo "E ausência nas três primeiras seções NÃO é prova de rota livre: confira a caixa."
