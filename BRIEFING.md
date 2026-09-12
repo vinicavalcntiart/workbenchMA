@@ -1184,3 +1184,30 @@ garante a reincidência.
 Numa sessão que já está aberta, os tipos novos podem ainda não estar disponíveis, e nela a
 garantia é de conduta: o maestro não delega escrita de carta, ponto. A trava por ferramenta
 vale a partir da próxima sessão.
+
+## 12/09, 15h20 — `create_draft` FOI PARA A LISTA DE NEGADOS. LEIA ANTES DE TENTAR ESCREVER CARTA.
+
+O Vini pediu **quatro vezes** que parassem os pedidos de aprovação de rascunho na tela dele.
+Minhas três primeiras respostas foram parciais e nenhuma parou o problema:
+
+1. instruí cada agente a não chamar a ferramenta — **instrução não é trava**;
+2. criei `.claude/agents/` com `tools` restrito — **só vale a partir da próxima sessão**;
+3. reescrevi as rotinas na origem — **não alcança agente órfão já pendurado**.
+
+Sobrou uma coisa que funciona agora, nesta sessão, contra qualquer chamador: **negar**.
+`mcp__Gmail__create_draft` e `mcp__Gmail__update_draft` estão na lista `deny` dos dois arquivos
+de permissão. **Negado não pergunta: recusa na hora.** Nenhum agente, nem o maestro, consegue
+abrir pedido na tela dele.
+
+**O CUSTO, dito de frente:** eu também não escrevo mais rascunho enquanto isso valer. Foi
+decisão consciente, e o custo hoje era **zero**, porque as treze cartas do dia já estavam
+escritas e as três fichas que sobraram estão paradas por **falta de endereço publicado**, não
+por falta de ferramenta.
+
+**QUANDO HOUVER LOTE NOVO DE FICHA PARA ESCREVER**, a linha tem que sair do `deny` — e isso é
+**decisão do Vini, não minha**. Peça, explique que o lote existe, e espere ele responder. Não
+retire por conta própria: a trava só vale enquanto ninguém a contorna sozinho.
+
+**A regra geral que fica:** capacidade que precisa ser negada a agente se nega na configuração,
+não no prompt. E quando três camadas de conserto parcial não resolvem, a quarta não é a quarta
+explicação: é cortar a capacidade.
