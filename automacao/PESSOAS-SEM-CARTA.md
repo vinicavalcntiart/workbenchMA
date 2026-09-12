@@ -84,3 +84,25 @@ duplamente fora dos limites da campanha.**
 - **Fora dos EUA?** Sim — Reino Unido. Continua precisando de patrocínio (UK exige), então a frase de realocação vale inteira.
 - **Dedupe:** "hundredstar" não aparece em `enviados.csv`, `pessoas.csv` nem `docs/index.html`, e o Gmail também devolve zero; aparece uma vez em `automacao/processados.csv`, e é justamente a nota do agente que morreu na madrugada de 12/09 deixando esta casa pendente. PRIMEIRA pessoa desta casa.
 - **O QUE FALTA, e é o que trava a carta para a pessoa:** o site publica só `info@hundredstar.games` e `jobs@hundredstar.games`. Não há nenhum endereço de pessoa em fonte pública gratuita; o único lugar que oferece um é serviço pago de busca de email, que o BRIEF-JOE proíbe. **Nada foi montado nem inventado.** Enquanto não aparecer endereço literal, a carta possível é para `jobs@hundredstar.games`, e ela tem chance real porque a própria casa pediu candidatura espontânea — quem escrever decide se manda assim ou se guarda.
+
+---
+
+## RODADA DAS 09h35 DE 12/09 — CASA GRANDE POR RODAPÉ DE PAPER
+
+**Caminho novo, e ele funciona.** A rodada das 05h35 já tinha registrado em `processados.csv`
+que "os PDFs desses talks ficam atrás do paywall da ACM". Isso é verdade para `dl.acm.org`
+(medido de novo hoje: **403 Forbidden**, com e sem navegador falso). Mas **não é verdade para as
+cópias abertas**: `history.siggraph.org` hospeda centenas de PDFs de Talks do SIGGRAPH sem
+paywall, e vários estúdios hospedam o próprio PDF no próprio domínio. **O rodapé desses PDFs traz
+nome, afiliação, cidade e email institucional**, ou seja, endereço PUBLICADO — não montado.
+Medido nesta rodada em três PDFs diferentes, todos abriram e todos tinham email.
+
+---
+
+### Curtis Andrus — Groom artist (título exato não publicado pelo estúdio) — Animal Logic / Netflix Animation Studios, Vancouver, Canadá
+- **Email:** curtis.andrus@animallogic.ca · confiança **alta** · fonte: rodapé da primeira página de **"Improving Groom Interactivity in Houdini"**, DigiPro 2022 (DOI 10.1145/3543664.3543678), **PDF hospedado pelo próprio estúdio**: https://animallogic.com/wp-content/uploads/2023/06/Improving-Groom-Interactivity-in-Houdini.pdf — bloco de autores lido literalmente nesta rodada: *"Curtis Andrus — curtis.andrus@animallogic.ca — Animal Logic — Vancouver, BC, Canada"*. A publicação também está listada na página pública de publicações da casa: https://animallogic.com/technology/publications/improving-groom-interactivity-houdini/
+- **Por que ELE:** groom é a disciplina colada em personagem, e ele não é um nome solto — é o autor do sistema de grooming da casa e **o mesmo Andrus de "Furtility: Robust Hair Styling"** (SIGGRAPH 2015, feito na MPC). É especialista de cabelo e pelo de carreira, dentro de uma casa que não publica um único email de contato.
+- **Gancho, com a frase do próprio paper entre aspas:** **"To improve performance and interactivity working with our Houdini-based Grooming Tools, Animal Logic developed a set of custom nodes to control and optimize the process of evaluating our groom generation networks."** A carta deve falar de personagem e de groom como quem entende a cadeia modelagem → groom → look dev, não como quem viu a palavra no site.
+- **Fora dos EUA?** Sim — Vancouver, Canadá. **Canadá é o país de maior prioridade do BRIEF-JOE**, e a carta deve dizer de frente que ele precisa de patrocínio.
+- **Dedupe:** "animal logic" só aparece em `pessoas.csv` como `Netflix Animation / Animal Logic` (Bradley Sick, `bsick@netflix.com`, **BOUNCE em 06/09**); zero em `enviados.csv`; **e o Gmail devolveu ZERO** para `{"animal logic" animallogic al.com.au "Curtis Andrus"}`. Esta é a **SEGUNDA e ÚLTIMA** pessoa desta casa.
+- **Ressalva honesta, e ela é grande:** o paper é de **2022**, e em **janeiro de 2024** a Animal Logic foi integrada à Netflix Animation Studios. O endereço é **publicado, não montado** — mas a vigência do domínio `animallogic.ca` não foi confirmada nesta rodada, e o `bsick@netflix.com` do Bradley Sick já bounceou, o que mostra que a migração de domínio dessa casa é terreno movediço. Se bouncear, **a via alternativa da MESMA casa já está medida**: `beau.parkes@al.com.au` (Beau Parkes, Animal Logic Sydney, no mesmo rodapé do mesmo paper). Ela **não abre carta própria** — o teto de duas fecha no Curtis.
