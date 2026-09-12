@@ -1254,3 +1254,53 @@ descobrir numa call.
 datacenter, não a candidatura. Formulário inteiro preenchido e correto; só o Turnstile falta.
 **Rota: o navegador do Vini**, onde os mesmos nove formulários que estavam "travados" passaram
 em dezessete minutos.
+
+## 12/09, 15h30 — O JAZZHR É UMA FAMÍLIA INTEIRA FORA DO CENSO, E O ALERTA DO LINKEDIN ACHOU O QUE O CENSO NÃO ACHA
+
+A caça das 13h fechou **fila zero** depois de ler 2.366 vagas em 322 quadros de **dez** famílias de
+ATS (teamtailor, recruitee, greenhouse, workable, pinpoint, bamboohr, personio, lever, ashby,
+smartrecruiters). Duas horas depois, **o alerta de vaga do LinkedIn que chega na caixa dele** trouxe
+uma vaga da disciplina que nenhuma dessas varreduras podia ter achado:
+
+> **Stellar Creative Lab — Modeling Artists (Mid & Senior) — Vancouver, BC**, para uma série
+> premium de streaming da **Marvel Animation**, faixa publicada CA$70.000–85.000.
+
+**A causa é de cobertura, e ela está medida:** o quadro é **JazzHR** (`<slug>.applytojob.com`), e o
+JazzHR **não existe no censo**. Contagem feita agora: `applytojob` aparece **0 vez** em
+`automacao/censo-boards-0809.csv` e **0 vez** em `automacao/quadros-fora-censo-1209.csv`, enquanto o
+repositório já conhece **13 tokens** dessa plataforma. A família inteira nunca tinha sido lida.
+
+**Varri os 12 tokens vivos por `curl` nesta rodada: 49 vagas.** A disciplina aparece em duas casas
+só — a **Jungler** (Paris, seis vagas, já registrada como parede de reCAPTCHA v2 em 09/09) e a
+**Stellar**, que é nova. Rendimento honesto: **uma casa nova em 12 quadros**. É pouco, e mesmo assim
+é mais do que as dez famílias juntas renderam hoje, porque elas estavam secas.
+
+**As duas regras que saem daqui:**
+
+1. **`applytojob.com` (JazzHR) entra na lista de famílias do censo.** Sonda:
+   `https://<slug>.applytojob.com/apply` responde **200** com os `href` de todas as vagas em
+   `/apply/<id>/<Titulo-Com-Hifen>`, e **302** quando a conta morreu. Dá para varrer a plataforma
+   inteira por `curl`, sem navegador e sem chave.
+2. **Ler os alertas do Gmail do dia é etapa da caça, não enfeite.** Eles são a única fonte que
+   cobre o ATS que a campanha ainda não mapeou. Custo: dois `get_message`. Os de hoje devolveram
+   uma casa nova (Stellar) e confirmaram zero na Warner (Senior Lighting Artist, Advanced Level
+   Artist de Montréal e dois Combat Designers — nenhuma da disciplina).
+
+### E três coisas medidas no formulário da Stellar, que valem para além dela
+
+1. **O reCAPTCHA v2 dela é parede, e eu CLIQUEI para provar.** Anchor `size=normal` com `bframe`
+   presente, rótulo *"Human Check\*"*. Depois do clique: **zero POST para o host da casa** (os nove
+   POST que saíram são todos do New Relic, `bam.nr-data.net`), formulário **ainda cheio**,
+   `g-recaptcha-response` com comprimento zero, e o site escrevendo em vermelho **"Please
+   verify."**. A régua de `size=normal` acertou de novo, e desta vez com clique por trás.
+2. **"Priority will be given to BC Residents" NÃO é veto, e o formulário prova isso.** A lista de
+   requisitos traz *"Eligibility: Legally eligible to work in British Columbia, Canada"*, o que
+   parece porta fechada. Mas o texto renderizado termina com *"**All qualified candidates are
+   encouraged to apply**, though priority will be given to BC Residents, Canadians and Canadian
+   Permanent Residents"*, e o menu obrigatório do próprio formulário oferece a opção
+   **"Non-citizen seeking work authorization"**. **Casa que escreve essa opção no menu está dizendo
+   que recebe quem precisa de patrocínio.** Confirma a regra da força-tarefa: leia o FORMULÁRIO
+   antes de concluir qualquer coisa sobre visto, porque ele desmente o anúncio nos dois sentidos.
+3. **A frase que decide pode estar fora do recorte que você leu.** Eu li o corpo do anúncio pelo
+   HTML e a linha de prioridade não estava nele: ela só apareceu no **texto renderizado**, depois
+   do bloco de benefícios. Recorte de 4.000 caracteres a partir do título não é o anúncio inteiro.
