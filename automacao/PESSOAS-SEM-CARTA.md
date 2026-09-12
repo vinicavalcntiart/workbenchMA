@@ -343,3 +343,57 @@ Nenhum dos três ganhou endereço literal nesta rodada. Fica escrito **o que foi
 - **Jan Philip Cramer (Digital Domain).** A página https://digitaldomain.com/contact-us **publica sim endereços de pessoa**, e eu os li hoje com o decodificador ligado — mas são todos da holding asiática e da área comercial: `arthur.ma@ddhl.com` (VP Operations), `allen.chen@ddhl.com`, `hongjie.liu@ddhl.com` (GM China), `william.yang@ddpo.com`, `yaqi.ren@ddhl.com`, `colin.kwok@ddhl.com`, mais `pr@ddhl.com`, `marketing@d2.com` e `newbusiness@d2.com`. **Nenhum de arte, nenhum na América do Norte**, e a linha de recrutamento aponta para `careers.digitaldomain.com`. O talk dele no SIGGRAPH 2023 (*She Hulk*) **não tem PDF hospedado** no `history.siggraph.org` (a página existe e mostra `2023-Image-Not-Available`), então não há rodapé de autor para ler. `jpcramer.com` existe e é **domínio estacionado** (114 bytes, redireciona para `/lander`); `janphilipcramer.com` e `philcramer.com` não respondem.
 - **Paweł Mielniczuk (CD PROJEKT RED).** Varri `cdprojektred.com` e `cdprojekt.com` com decodificação de entidade e de `data-cfemail`: só saem `ir@cdprojekt.com`, `recepcja@`, `esg@`, `gielda@` e `wza@cdprojekt.com`, todas caixas corporativas de relações com investidores. **Armadilha de domínio evitada e registrada:** `mielniczuk.art` responde 200 e **é de outra pessoa** — um pintor polonês de pastel e óleo, sem ligação com ele. Mesma família do `skyerzz.com`.
 - **Michael Skyers (Digital Extremes).** `michaelskyers.com` e `skyers.art` não existem. A única oferta de endereço continua sendo agregador pago. Sem novidade.
+
+---
+
+## RODADA DAS 22h DE 12/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Veia nova desta rodada, e ela é a irmã do `recruiter-email` do Teamtailor:** estúdio que usa
+**Lever mas renderiza as vagas no domínio PRÓPRIO** com front-end Nuxt costuma imprimir no HTML,
+dentro do `__NUXT_DATA__`, o **objeto de usuário do DONO de cada requisição**, com nome, cargo e
+**email corporativo real**. Não é padrão deduzido: é endereço publicado pela casa. E, resolvendo os
+índices do payload, dá para dizer **qual pessoa é dona da requisição de personagem**, que é
+exatamente o que o BRIEF-JOE pede em casa grande.
+
+```
+curl -sS -L https://careers.<dominio>/ | grep -oE '[a-z.]+@<dominio>'
+# depois: json.loads do __NUXT_DATA__ e resolver posting['owner'] -> {name, email, jobTitle}
+```
+
+**Rendimento honesto, medido:** testei **~110 páginas de carreira** de casas no escopo (subdomínios
+`careers.`/`jobs.` e `/careers` do domínio próprio, games e animação). O payload vazou em **UMA**:
+a Frontier. As outras devolveram só caixa genérica (`recruitment@sumogroupltd.com`,
+`jobs@supermassivegames.com`, `office@peoplecanfly.com`, `info@wetaworkshop.co.nz`) ou nada.
+**Veia rica e rara**, igual à do Teamtailor: vale como teste barato em casa nova, não como varredura.
+
+### Ellie Baldino — **Talent Acquisition Advisor** — Frontier Developments plc, Cambridge, Reino Unido
+
+- **Email:** ebaldino@frontier.co.uk · confiança **alta** · fonte: https://careers.frontier.co.uk/ —
+  payload do próprio site de carreiras da casa, lido nesta rodada, literal: `"Ellie Baldino"`,
+  `"ebaldino@frontier.co.uk"`, `"Talent Acquisition Advisor"`.
+- **Por que ELA e não outra pessoa:** resolvendo os índices do payload, a requisição
+  **"Experienced Character Artist" tem como *owner* exatamente ela** (as outras dela são Lead Artist,
+  Lead Technical Artist e VFX Artist). É o alvo literal do BRIEF-JOE para casa grande: **recrutador
+  com nome e sobrenome e com a requisição de personagem na mão**, numa casa que não publica o email
+  de nenhum artista. A vaga foi confirmada na fonte oficial nesta rodada
+  (`https://api.eu.lever.co/v0/postings/frontier?mode=json`): department **Art**, team **Character**,
+  Cambridge/Hybrid, Permanent — https://jobs.eu.lever.co/frontier/3571ace3-9f1a-4db2-9e2b-5eb8c8487181
+- **Gancho, com a frase do próprio anúncio entre aspas:** **"The Experienced Character Artist will be
+  responsible for delivering high-quality, game-ready character and creature assets"** e, no mesmo
+  anúncio, **"We can provide a comprehensive relocation support package as part of any offer, should
+  you need to relocate."** A segunda é ouro: é a casa respondendo por escrito a dúvida número um do
+  leitor, e a carta pode citá-la de volta.
+- **Fora dos EUA?** Sim — Reino Unido. A linha de realocação e a de patrocínio entram inteiras.
+- **Dedupe, feito na caixa:** `pessoas.csv` dá **zero** para "Frontier Developments" (as três
+  ocorrências de "frontier" são **Final Frontier** e **Digital Frontier FX** — armadilha de grafia); o
+  **Gmail** mostra que em **10/09 o Vini já se candidatou a ESTA vaga** (recibo do Lever EU) e que o
+  alerta do LinkedIn ainda a anunciava hoje às 17h46. **Nenhuma recusa, nenhuma resposta humana.**
+  PRIMEIRA pessoa desta casa.
+- **Alternativas da MESMA casa, que NÃO abrem carta própria:** Yaz Harniman
+  (`yharniman@frontier.co.uk`, Talent Acquisition Partner) e Lee Mowatt (`lmowatt@frontier.co.uk`,
+  cargo nulo no payload). O formato `inicial+sobrenome@frontier.co.uk` fica provado por **três**
+  endereços literais.
+- **Ressalva honesta, três:** (1) o endereço está no **payload JSON** da página — publicado pelo site
+  da casa, mas **não escrito em texto visível na tela**; (2) ela é recrutamento, não arte, o que aqui
+  é vantagem porque é quem despacha a requisição; (3) **a carta tem que dizer que ele já aplicou pelo
+  portal em 10/09**, senão chega como se fosse primeiro contato.
