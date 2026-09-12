@@ -1071,3 +1071,40 @@ nunca à mão pelo Gmail. A API do Gmail embrulha **todo** link em
 `https://www.google.com/url?q=...` e só o `limparLinks` do `automacao/envia-rascunhos.gs`
 desfaz isso na hora do envio. Conferido de novo hoje: os três links do rascunho do Arno
 saíram embrulhados.
+
+---
+
+## REGRA MEDIDA EM 12/09 ÀS 13h PELO JHON B: LER QUADRO DE TEAMTAILOR SEM PERDER QUATRO QUINTOS DELE
+
+Minha varredura registrou **ZERO vaga** no quadro da Airship Interactive. O quadro tem **dez**,
+entre elas uma **Character Artist** e uma **Groom Artist**.
+
+**A causa, medida e não suposta.** O Teamtailor responde **301** de `<slug>.teamtailor.com/jobs`
+para o domínio próprio da casa, e **na página servida os `href` são absolutos naquele domínio**:
+
+```
+href="https://careers.airshipinteractive.com/jobs/8281687-character-artist"
+```
+
+Um leitor que só aceita `href` relativo ou `href` em `*.teamtailor.com` casa zero e **registra
+zero vaga como se tivesse conferido**. É a mesma família do falso negativo da ronda do Disney:
+a sonda não falha alto, **mente baixo**.
+
+**O tamanho do buraco, nos mesmos 119 tokens:** 25 quadros com vaga e **141 vagas** antes;
+79 quadros com vaga e **653 vagas** depois. E o Teamtailor é a família mais numerosa que a
+campanha conhece, **151 tokens**.
+
+> **Ao ler Teamtailor: siga o redirecionamento e aceite `href` absoluto em QUALQUER domínio.**
+> Confira contra um controle conhecido antes de acreditar num zero. `careers.airshipinteractive.com`
+> serve de controle: tem de devolver dez vagas.
+
+## E A SEGUNDA, DO MESMO DIA: O ID QUE O QUADRO PUBLICA NÃO É O ID QUE A CANDIDATURA REGISTRA
+
+**TTK Games** e **Fatshark** passaram **limpas na seção 1 do `dedupe-agora.sh`** — ID inédito nos
+quatro arquivos — e as duas **já estavam enviadas**. Morreram na **seção 3**, a do nome da casa.
+
+Na TTK a razão é concreta e vale para todo Pinpoint: o quadro publica o **posting** `558871`, e a
+candidatura ficou registrada sob o **job** `561860`. **Procurar um não acha o outro.**
+
+> **O segundo argumento do `dedupe-agora.sh` não é formalidade.** Nesta rodada ele foi a única
+> coisa entre a fila e duas candidaturas repetidas.
