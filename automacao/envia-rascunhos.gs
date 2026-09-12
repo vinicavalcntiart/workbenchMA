@@ -349,9 +349,10 @@ function enviarRascunhos() {
  * ========================================================================== */
 
 const ASSUNTO_PROPRIO_PERMITIDOS = [
-  "vfx_hr@ufxstudios.com",      // UFX Studios, Bruxelas
-  "jobs@thqnordicmobile.com",   // HandyGames / THQ Nordic Mobile, Giebelstadt
-  "info@keytoon.com"            // Keytoon, Madri
+  "vfx_hr@ufxstudios.com",       // UFX Studios, Bruxelas
+  "jobs@thqnordicmobile.com",    // HandyGames / THQ Nordic Mobile, Giebelstadt
+  "info@keytoon.com",            // Keytoon, Madri
+  "careers@lightfoxgames.com"    // Lightfox Games, Vancouver: Senior 3D Artist
 ];
 
 function enviarAssuntoProprio() {

@@ -1108,3 +1108,44 @@ candidatura ficou registrada sob o **job** `561860`. **Procurar um não acha o o
 
 > **O segundo argumento do `dedupe-agora.sh` não é formalidade.** Nesta rodada ele foi a única
 > coisa entre a fila e duas candidaturas repetidas.
+
+## 12/09, 14h50 — FORMULÁRIO PODE SER FECHADO PELA RESPOSTA HONESTA, E `required` NÃO AVISA
+
+Medido na **Lightfox Games, Senior 3D Artist, Vancouver**, vaga que o Vini mandou hoje.
+
+O formulário próprio deles tem duas caixas com asterisco:
+
+- *"I confirm that I am legally authorized to work in Canada. \*"* — **falsa para ele**
+- *"I understand this role is based out of British Columbia. \*"* — verdadeira
+
+**A leitura do HTML disse que dava para enviar sem a primeira, e a leitura do HTML estava
+errada.** Nenhuma das duas tem o atributo `required`, e `form.checkValidity()` só reclamava de
+`name`, `email` e `resume`. Preenchi tudo, deixei a falsa vazia, marquei a verdadeira, e cliquei.
+**Nenhum POST de candidatura saiu** — só três do Google Analytics. Não houve tela de erro
+vistosa, não houve exceção: o formulário simplesmente não fez nada, que é a forma mais cara de
+falhar, porque parece envio.
+
+Só o diagnóstico com clique e leitura da mensagem revelou o motivo, escrito pelo próprio site:
+
+> **"Please check all acknowledgment boxes to continue."**
+
+**A validação era do JavaScript deles, não do HTML.** Então:
+
+1. **`required` ausente NÃO significa campo opcional.** Site com validação própria em JS
+   ignora o atributo. A única prova de que um campo é dispensável é **clicar e ver sair POST**.
+2. **Ausência de POST de candidatura é ausência de candidatura.** Analytics não conta. Foi por
+   olhar a rede, e não a tela, que isto não virou "enviado" no `enviados.csv`.
+3. **Existe parede que não é captcha: é a resposta honesta.** Aqui o bloqueio não foi técnico,
+   foi que a casa exige jurar autorização de trabalho que ele não tem. **Não se marca.** A regra
+   de nunca mentir em campo de autorização é absoluta e vence a vontade de fechar a rodada.
+
+**O que fazer quando isso aparecer de novo:** não force o formulário e não invente rota. Escreva
+para a caixa publicada dizendo **por que** o formulário não pôde ser usado. Isso é honesto, e é
+informação útil para o empregador, que de outro modo nunca veria o candidato. Foi a saída aqui:
+carta para `careers@lightfoxgames.com` com assunto próprio, nomeando a vaga e abrindo a situação
+de visto na terceira linha.
+
+**Ressalva de cadência, dita porque conta contra mim:** essa casa recebeu carta fria em 11/09,
+ou seja **ontem**. Esta é a **segunda e última** aproximação permitida, e ela vem em dia
+seguido, o que normalmente não se faz. O que justifica é que o gatilho é novo e é da casa: uma
+vaga da disciplina abriu e o formulário dela barrou o candidato.
