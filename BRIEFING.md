@@ -1037,3 +1037,37 @@ quadro.** Rodar esse cruzamento a cada censo novo custa uma centena de requisiç
 **No mesmo movimento, o diff do censo por ID:** os 123 quadros responderam, **3.583 vagas lidas,
 269 requisições novas em quatro dias e ZERO de personagem**. O estoque dos quadros conhecidos
 segue seco, agora com número de hoje.
+
+## 12/09, 11h35 — AGENTE NUNCA ESCREVE CARTA. O PEDIDO DE PERMISSÃO VEM DAÍ.
+
+O Vini reclamou de estar tendo que aprovar **criação de rascunho**, um por um, na tela dele.
+A causa foi medida agora e **não é a que a madrugada supunha**.
+
+A suposição de 12/09 de madrugada era que `mcp__Gmail__create_draft` estava travado para todo
+mundo, e três agentes morreram pendurados nele. **Errado.** O que foi medido às 11h30:
+
+- chamada de `create_draft` feita **da sessão principal**: passa **calada**, sem pedir nada.
+  Sete cartas saíram assim, seguidas, sem um único aviso na tela dele.
+- chamada de `create_draft` feita **por subagente**: abre pedido de aprovação e fica lá
+  esperando. E fica esperando **mesmo com `mcp__Gmail__create_draft` na lista `allow` do
+  `.claude/settings.json` desde 11/09**, e mesmo com `defaultMode: bypassPermissions`.
+
+Ou seja: **a permissão do projeto não alcança o subagente nesta sessão remota.** Mexer mais na
+configuração não resolve, porque a configuração já está certa.
+
+**A regra, e ela é de divisão de trabalho:**
+
+> **Agente ACHA e VERIFICA. O maestro ESCREVE A CARTA.**
+> Nenhum agente desta campanha chama `mcp__Gmail__create_draft`, em nenhuma hipótese.
+> Leitura de Gmail (`search_threads`, `get_thread`, `get_draft`) continua liberada e é
+> obrigatória no dedupe — a prova de envio é o recibo na caixa, não o arquivo.
+
+O agente que achar pessoa nova entrega **a ficha**: email verificado, URL da fonte, gancho com
+a frase da casa entre aspas, dedupe feito no Gmail, e ressalva honesta. A carta é escrita
+depois, na sessão principal, em lote. Foi assim que as sete de hoje saíram em cinco minutos.
+
+**E vale o aviso de sempre sobre o rascunho:** ele sai pelo Apps Script (`enviarRascunhos()`),
+nunca à mão pelo Gmail. A API do Gmail embrulha **todo** link em
+`https://www.google.com/url?q=...` e só o `limparLinks` do `automacao/envia-rascunhos.gs`
+desfaz isso na hora do envio. Conferido de novo hoje: os três links do rascunho do Arno
+saíram embrulhados.
