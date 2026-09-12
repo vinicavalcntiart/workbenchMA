@@ -901,3 +901,37 @@ travado é indistinguível, no resumo, de uma rodada de zero por fila seca.** A 
 
 A prospecção tinha achado **HundredStar Games** como nome novo, aprovado no dedupe, e ia
 escrever a carta. Fica anotado aqui para a próxima rodada que puder criar rascunho.
+
+## MEDIDO EM 12/09 ÀS 09h: "HTTP 200 COM ZERO" PODE SER O QUADRO ERRADO, NÃO O QUADRO VAZIO
+
+A ronda da NBCUniversal foi conferida por API do SmartRecruiters com quatro termos. Os quatro
+voltaram **HTTP 200 com `totalFound: 0`**, que é exatamente a resposta que o
+`ronda-disney.sh` ensina a aceitar como zero medido: a API respondeu, o corpo é JSON de
+verdade, e não havia nada.
+
+**Só que o zero era do token errado.** `api.smartrecruiters.com/v1/companies/NBCUniversal/postings`
+e `/DreamWorksAnimation/postings` respondem **200 com `totalFound: 0` e `content: []`** mesmo sem
+filtro nenhum, ou seja o token existe e o quadro dele é vazio. O quadro que tem vaga é
+**`NBCUniversal1`**, que devolve **7 requisições** (Rough Layout Artist em Glendale, Booking
+Coordinator, estagiário do NBC News Group, duas de Multi Media Producer, uma "Test, UK" e uma de
+Email Marketing). Nenhuma da disciplina, então o resultado final da rodada não muda. **O método
+é que estava quebrado.**
+
+### A regra que sai daqui, e ela é irmã da regra do `ronda-disney.sh`
+
+O script da Disney resolveu "**resposta vazia não é zero**". Isto aqui é o degrau seguinte:
+**quadro vazio não é casa sem vaga.** O SmartRecruiters (e o Greenhouse, e o Workday) devolvem
+200 educado para qualquer token que um dia existiu, inclusive o abandonado.
+
+**Antes de escrever "zero na casa X", prove que o token é o que a casa usa hoje:**
+
+1. Consulte o token **sem filtro nenhum** (`?limit=5`, sem `q=`). Se vier `totalFound: 0`, o
+   problema é o token, não o termo de busca. Casa grande nunca tem zero vaga de tudo.
+2. Tente as variantes óbvias antes de desistir: sufixo numérico (`NBCUniversal1`), com e sem
+   espaço, com e sem "Animation", com e sem "Studios".
+3. Só depois de um token que devolve dezenas de vagas é que "zero da disciplina" quer dizer
+   alguma coisa.
+
+**O custo de não fazer isso é o pior erro desta campanha, o falso negativo:** a casa parece
+fechada, ninguém volta lá, e a vaga passa. E ele é pior que o da madrugada, porque aqui **não há
+sintoma nenhum**: 200, JSON válido, zero. Nada na tela diz que você mediu a coisa errada.
