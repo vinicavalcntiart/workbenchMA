@@ -1379,3 +1379,27 @@ projeto está correta e permissiva e o cartão aparece do mesmo jeito.
 numa tacada só**, em vez de pingar uma a uma ao longo do dia. Quinze cartões espalhados por dez
 horas incomodam muito mais que quinze juntos em dois minutos. Então: acumule as fichas prontas
 e escreva todas de uma vez. A trava dos agentes em `.claude/agents/` continua valendo.
+
+### DECIDIDO PELO VINI ÀS 19h30: CARTA SE ESCREVE EM LOTE, NUNCA UMA A UMA
+
+Palavras dele: *"Melhor, tudo de uma vez, vc junta e pede a aprovação."*
+
+**Regra operacional, sem margem:**
+
+1. **Ficha pronta não vira carta na hora.** Ela se acumula em `automacao/PESSOAS-SEM-CARTA.md`
+   com `PENDENTE-maestro-escreve` no `pessoas.csv`. Isso vale mesmo quando é **uma só**: uma
+   carta solta hoje e outra daqui a duas horas são **dois** cartões de aprovação na tela dele,
+   e é exatamente isso que ele mandou parar.
+2. **O maestro escreve o lote inteiro numa tacada**, todas as `create_draft` no mesmo bloco de
+   trabalho, e só então avisa. Quinze cartões em dois minutos incomodam menos que quinze
+   espalhados por dez horas.
+3. **Quando disparar o lote:** quando houver **três ou mais fichas** com email publicado
+   esperando, ou quando ele pedir, ou ao fechar o dia. Menos de três e não urgente: **espera**.
+   **Exceção única:** vaga nomeada com prazo curto, onde perder o dia custa a vaga.
+4. **O aviso no fim é um só**, listando o lote inteiro: quem, casa, e o gancho de cada uma.
+   Não avise carta por carta.
+
+**Por que isto não é preciosismo:** o cartão de aprovação é da plataforma e não se desliga pelo
+`.claude/settings.json` (medido em 12/09, com a configuração correta e o cartão aparecendo
+assim mesmo). Como não dá para tirar o cartão, a única alavanca que sobra é **reduzir o número
+de vezes que ele aparece**, e lote faz exatamente isso.
