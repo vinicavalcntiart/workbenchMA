@@ -1608,3 +1608,19 @@ o valor sensível aparece por escrito, porque o objetivo dela é mostrar o que f
 **Ao trazer leitura de volta para o repositório, traga o veredito, nunca o conteúdo:**
 "telefone preenchido e com o código do país correto" diz tudo o que o próximo agente precisa,
 e não publica nada.
+
+### A TRAVA, criada às 21h45: nenhum commit passa sem a validação
+
+Escrever "rodar `valida-dashboard.sh` antes de qualquer commit" neste arquivo seria repetir o
+erro que eu mesmo apontei hoje de manhã: **regra escrita é pedido, não impedimento.** Então a
+regra virou gancho de git.
+
+- **`.githooks/pre-commit`** roda o `valida-dashboard.sh` e **bloqueia o commit** se ele falhar.
+- **Ligar uma vez por clone:** `git config core.hooksPath .githooks`
+- **Testado de verdade**, não suposto: tentei commitar o número de propósito e o commit foi
+  recusado com a mensagem da validação.
+- Em emergência real existe `git commit --no-verify`, e quem usar **deve dizer por que** no
+  corpo do commit.
+
+Agora o `BRIEFING.md`, os CSVs e qualquer arquivo novo passam pela mesma peneira que o painel,
+que era o buraco por onde o telefone saiu.
