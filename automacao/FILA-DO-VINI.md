@@ -1,5 +1,105 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+## 🤖 PRONTA PARA DISPARO AUTOMÁTICO (entrada nova de 12/09, 19h55, Jhon B): Blizzard Entertainment — **Character Artist, StarCraft**, Irvine CA — requisição `R028136`, **postada HOJE**
+
+**Anúncio (fonte oficial, ATS):**
+https://xboxgaming.wd1.myworkdayjobs.com/Blizzard_External_Careers/job/Irvine---Blizzard---Blizzard-Way/Character-Artist---StarCraft---Irvine--CA_R028136
+
+| | |
+|---|---|
+| Requisição | **`R028136`** (é o `jobReqId` do Workday, não id de vitrine) |
+| Quadro | Workday, locatário `xboxgaming`, pod `wd1`, site **`Blizzard_External_Careers`** |
+| Local / regime | Irvine, CA · **Full time** · híbrido (*"hybrid work week, with a mix of work-from-home and on-site days, based out of our Irvine studio"*) |
+| Data no corpo | `Date Posted` do Workday = **2026-09-12**, "Posted Today" |
+| Faixa publicada | **USD 30,47 – 56,35 por HORA** |
+
+### Por que ela é dele, com a frase colada
+
+É **personagem puro**, não é modelagem genérica:
+
+> *"you should have extensive experience working with **modeling, sculpting, and texturing** tools
+> to achieve **photorealistic characters**, weapons, and props. Additionally, you should have
+> expertise in **human and creature anatomy**, hard surface modeling, and Unreal Engine 5"*
+
+> *"Contribute to the creation of high-quality, detailed 3D models from **realistic humans and
+> creatures** to vehicles, weapons and props."*
+
+Pede **5+ anos** (ele tem 10+), **Maya, ZBrush, Substance Painter, Photoshop**, e dá pontos extras
+por *"Marvelous designer and **hair systems**"*, que é o grooming dele. Mentoria de juniores está
+nas responsabilidades, e liderança se responde **sim**.
+
+### Régua de veto, termo a termo, no texto INTEGRAL baixado pela API (não na listagem)
+
+Baixei `wday/cxs/xboxgaming/Blizzard_External_Careers/job/...` (7.942 caracteres) e busquei os vinte
+termos mais os idiomas. **Nenhum veto escrito.** Os acertos, classificados um a um:
+
+| termo | frase literal | veredito |
+|---|---|---|
+| `eligib` | *"Subject to **eligibility** requirements, the Company offers comprehensive benefits"* | benefício, **não** é autorização |
+| `eligib` | *"**Eligibility** to participate in these benefits may vary for part time and temporary full-time employees"* | benefício |
+| `eligib` | *"employees in this role may be **eligible** for incentive compensation"* | remuneração |
+| `relocat` | *"If the Company requires that you move geographic locations for the job, then you may also be eligible for **relocation assistance**"* | **sinal POSITIVO**, apoio a realocação por escrito |
+| `only` | *"**Only** online artwork submissions will be accepted"* | portfólio |
+| `only` | *"our ability to build immersive and innovate worlds is **only** enhanced by diverse teams"* | texto institucional |
+
+**Zero ocorrência** de `authoriz`, `sponsor`, `work permit`, `visa`, `citizen`, `must be based`,
+`based in`, `only from`, `LMIA`, `days a week`, `days per week`, `days in the office`, `resident`,
+`located in`, `unable to support`, `no relocation`, `within the`, nem de idioma local.
+
+### Dedupe — feito, e ele salvou meia candidatura
+
+`sh automacao/dedupe-agora.sh "R028136" "Blizzard"`
+
+1. **`R028136` é inédito** nos quatro arquivos.
+2. **A CASA não é inédita, e é aqui que estaria o erro:** a requisição **`R027817`, Lead Character
+   Artist – Overwatch**, do mesmo quadro e da mesma cidade, foi enviada em **02/09 às 23h32** e
+   **RECUSADA HOJE, 12/09 às 08h17**, por `activision@myworkday.com` (thread `1a094b171fb89954`).
+   São **requisições diferentes, times diferentes** (StarCraft × Overwatch) e a StarCraft nasceu
+   hoje. **A Overwatch não se toca.**
+3. Gmail conferido **por janela de tempo** (`Blizzard newer_than:3d`): a única mensagem é a recusa
+   acima. Nenhum envio nosso à Blizzard hoje.
+
+### Comando exato de disparo
+
+```
+cd /home/user/apply && sh hb_run.sh wd_geral.js xboxgaming.wd1.myworkdayjobs.com Blizzard_External_Careers "/job/Irvine---Blizzard---Blizzard-Way/Character-Artist---StarCraft---Irvine--CA_R028136" blizzard-starcraft ENVIAR
+```
+
+Sem `ENVIAR` ele roda seco (preenche, printa e lê de volta). O locatário `xboxgaming` **já tem
+conta criada** desde a candidatura de 02/09, então o fluxo é de login, não de cadastro — e vale a
+armadilha 7 do `wd_geral.js`: o pêndulo Create Account / Sign In só terminou de trocar quando o
+campo `verifyPassword` some.
+
+### Pretensão, pela regra de 04/09
+
+Faixa publicada existe, então **pede-se a base dela: USD 30.47 por hora**, com a abertura padrão
+*"Aligned with the posted range for the role, at the lower end."*
+
+### Ressalvas honestas, que enfraquecem a ficha
+
+1. **A faixa é HORÁRIA**, e faixa horária costuma marcar vínculo horista ou por projeto. O anúncio
+   diz `Full time` e lista benefícios de efetivo, mas a moeda do anúncio é hora. **Efetivo é o que
+   sustenta patrocínio**; se isso for temporário, o valor para visto cai muito. Não dá para
+   resolver pelo texto: é pergunta para a primeira conversa.
+2. **Ela é dos Estados Unidos e a casa não promete patrocínio.** Não há `sponsor` nem `visa` no
+   texto — o que existe é *relocation assistance*, que é outra coisa. Ausência de veto não é
+   promessa de visto.
+3. **Cadência:** a casa recusou ele hoje de manhã em outra requisição. Isso não proíbe esta, e a
+   regra de cadência é sobre **envios nossos** (hoje foram zero para lá), mas é honesto dizer que
+   é o mesmo recrutamento olhando o mesmo nome na mesma semana.
+
+### O buraco de cobertura que achou isto, e ele vale mais que a vaga
+
+O `BRIEF-JHON.md` diz, desde 06/09, que *"o quadro certo é `xboxgaming.wd1.myworkdayjobs.com/External`"*
+e que nele não há vaga da disciplina no mundo inteiro. **Está certo sobre o `External` e errado
+sobre a casa.** O `robots.txt` do mesmo locatário lista **sete sites**, e os quadros grandes de arte
+estão nos outros: `Blizzard_External_Careers` (50 vagas), `King_External_Careers` (16),
+`CentralTech`, `DL_external`, `SS_external`, `HOH`. As **quatro** vagas de arte da Blizzard —
+incluindo as duas de personagem — vivem num site que a campanha nunca abriu.
+
+> **Regra: em Workday, leia o `robots.txt` do locatário antes de dizer que a casa não tem vaga.**
+> Ele lista os sites, é uma requisição, e é a mesma lição do `disneycareerdc`.
+
 ## 🖐️ À MÃO, AGORA (entrada nova de 12/09, 15h30): Stellar Creative Lab — **Modeling Artists (Mid & Senior)**, Vancouver — só falta a caixa do captcha
 
 **Link:** https://stellarcreativelab.applytojob.com/apply/zK3Gust365/Modeling-Artists-Mid-Senior
