@@ -662,3 +662,60 @@ da ACM, que está atrás do Cloudflare e devolve **403 até com navegador**. Ou 
 rodapé de paper serve para achar gente cujo endereço foi publicado **até 2021**, e por isso vem
 sempre com ressalva de vigência. Quando o PDF é hospedado pelo **próprio estúdio** (o caso da
 Animal Logic), o ano pode ser mais recente.
+
+## QUATRO PADRÕES PROVADOS POR ENDEREÇO LITERAL EM 12/09 ÀS 22h (pelo Joe)
+
+Todos vieram de **endereço visto escrito**, nenhum foi deduzido. Ver a ressalva do rodapé de paper
+acima: os três primeiros saíram de PDFs de Talks de 2019 a 2021, então provam o **formato** e não a
+**vigência da caixa**.
+
+### Frontier Developments — `inicial+sobrenome@frontier.co.uk` (fonte de HOJE, não de paper)
+
+| Endereço | Pessoa e cargo | Fonte |
+|---|---|---|
+| `ebaldino@frontier.co.uk` | Ellie Baldino, **Talent Acquisition Advisor** | payload do próprio `careers.frontier.co.uk` |
+| `yharniman@frontier.co.uk` | Yaz Harniman, **Talent Acquisition Partner** | idem |
+| `lmowatt@frontier.co.uk` | Lee Mowatt (cargo nulo no payload) | idem |
+
+**A veia, e ela é nova:** o site de carreiras da casa é front-end próprio em **Nuxt** e renderiza no
+servidor o **payload do Lever**, que inclui o objeto do **usuário dono de cada requisição** com nome,
+cargo e email corporativo. Resolvendo os índices do `__NUXT_DATA__` dá para dizer **quem é dono da
+requisição de personagem**. É a irmã do `recruiter-email` do Teamtailor (veia de 07/09).
+**Rendimento honesto: vazou em 1 de ~110 páginas de carreira testadas nesta rodada.**
+
+### Electronic Arts — `inicial+sobrenome@ea.com`
+
+`chlewin@ea.com` (Chris Lewin, EA/SEED), `jpower@ea.com` (James Power, EA/Tiburon) e
+`jcobb@ea.com` (James Cobb, EA/Tiburon), no rodapé de *"Swish: Neural Network Cloth Simulation on
+Madden NFL 21"*, SIGGRAPH 2021 Talks —
+https://history.siggraph.org/wp-content/uploads/2022/06/2021-Talks-Lewin_Swish.pdf
+
+### Valve — `nome+inicial@valvesoftware.com`
+
+`joev@valvesoftware.com` (Joe van den Heuvel), `jamesc@valvesoftware.com` (James Cunliffe, **Animator**)
+e `eddie@valvesoftware.com` (Eddie Parker), no rodapé de *"The Right Foot in the Wrong Place:
+Character Locomotion in Half-Life: Alyx"*, SIGGRAPH 2021 Talks —
+https://history.siggraph.org/wp-content/uploads/2022/06/2021-Talks-Heuvel_The-Right-Foot-in-the-Wrong-Place.pdf
+
+### MPC / Moving Picture Company — `nome-duasletrasdosobrenome@`, em DOIS domínios
+
+`michael-g@moving-picture.com` (Michael Gregory, **Creative Director**) e
+`daniel-se@moving-picture.com` (Dan Seddon, VFX Supervisor), no rodapé de *"Creating Photoreal
+Creatures that Audiences Can Connect With"*, SIGGRAPH 2019 —
+https://history.siggraph.org/wp-content/uploads/2022/09/2019-Talks-Gregory_Creating-Photoreal-Creatures-that-Audiences-Can-Connect-With.pdf
+E, no mesmo formato, em `mpcfilm.com`: `yanli-z@`, `darryl-g@`, `rob-p@` (*"Sculpting Color Spaces"*,
+2019) e `rasmus-h@`, `christoph-ge@` (*"Mesh-Driven Generation and Animation of Groomed Feathers"*,
+2019).
+
+**Por que isto NÃO virou ficha nesta rodada, e a razão é dupla:** (1) o `pessoas.csv` já tem **duas**
+pessoas de MPC (Beatrice Bauwens e Christophe Courgeau, as duas do braço Paris/Liège, em
+`mpcvfx.com`), ou seja a casa está no teto; (2) nenhum dos dois domínios acima foi reconferido quanto
+à vigência depois da queda do grupo Technicolor. Fica registrado como **formato**, não como porta.
+
+### Blue Sky Studios — o caso em que o rodapé publica GMAIL, e por que isso não serve
+
+O talk *"Reinventing a Character Creation Pipeline"* (SIGGRAPH 2021) traz cinco autores da Blue Sky e
+**nenhum endereço corporativo**: `polyoptics.ca@gmail.com`, `chaniszewski@gmail.com`,
+`toddejhill@gmail.com`, `chris.pagoria@gmail.com`. São endereços pessoais **publicados** e ainda
+plausíveis — mas a **Blue Sky fechou em 2021**, então o vínculo morreu junto e não se sabe onde cada
+um está hoje. **Cargo desatualizado é pior que alvo nenhum**: registrado só como aviso.
