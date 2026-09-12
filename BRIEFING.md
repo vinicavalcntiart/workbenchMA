@@ -952,3 +952,35 @@ O script da Disney resolveu "**resposta vazia não é zero**". Isto aqui é o de
 **O custo de não fazer isso é o pior erro desta campanha, o falso negativo:** a casa parece
 fechada, ninguém volta lá, e a vaga passa. E ele é pior que o da madrugada, porque aqui **não há
 sintoma nenhum**: 200, JSON válido, zero. Nada na tela diz que você mediu a coisa errada.
+
+## MEDIDO EM 12/09 ÀS 10h: EMAIL PUBLICADO PODE ESTAR CODIFICADO EM ENTIDADE HTML
+
+Ao conferir a melhor pessoa da rodada do Joe (**Arno Schmitz**, Lead Character Artist da
+Guerrilla Games), a minha sonda disse **"nenhum email na página"** e eu quase rebaixei uma
+ficha correta de **ALTA** para chute.
+
+O email está publicado, e em três páginas do site dele. Só que assim:
+
+```
+mailto:i&#110;&#102;&#111;&#064;a&#114;&#110;&#111;s&#099;&#104;&#109;&#105;&#116;&#122;&#046;c&#111;&#109;
+```
+
+que decodificado é `info@arnoschmitz.com`. É ofuscação por **entidade HTML**, prática comum
+contra raspador, e ela derrota qualquer busca por texto puro — inclusive a minha, que procurava
+`[A-Za-z0-9._%+-]+@...` no HTML cru.
+
+### A regra
+
+**Antes de escrever "não publica email", decodifique a página.** Um `grep` por `@` no HTML não
+basta. O mínimo é:
+
+1. Extrair os `mailto:` e passar cada um por `html.unescape` (em Python) antes de olhar.
+2. Procurar também `&#64;` e `&#064;`, que são o `@` codificado.
+3. Desconfiar de página de contato que tem botão de email e nenhum endereço legível: o endereço
+   está lá, escondido.
+
+**Por que isso importa mais do que parece:** confundir "ofuscado" com "não publicado" rebaixa a
+ficha de ALTA para BAIXA, e a regra manda **nunca gastar a única carta de uma casa grande num
+endereço de confiança baixa**. Ou seja, o erro não desperdiça só a informação, ele **impede o
+contato com a pessoa certa** — aqui, um Lead Character Artist de AAA com créditos em Horizon,
+que é exatamente o alvo que a campanha inteira procura.
