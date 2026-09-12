@@ -1624,3 +1624,39 @@ regra virou gancho de git.
 
 Agora o `BRIEFING.md`, os CSVs e qualquer arquivo novo passam pela mesma peneira que o painel,
 que era o buraco por onde o telefone saiu.
+
+## 12/09, 22h — QUAL PAÍS DÁ MAIS CHANCE, MEDIDO E NÃO OPINADO
+
+O Vini perguntou onde tem mais chance de se mudar. Contei os **vetos escritos de autorização de
+trabalho** nos anúncios que já passaram pela campanha, e o resultado contraria a prioridade que
+a campanha vinha seguindo.
+
+| País | Vetos escritos nos anúncios | Candidaturas enviadas |
+|---|---|---|
+| **Canadá** | **125** | 20 |
+| EUA | 21 | 46 |
+| Reino Unido | 16 | 32 |
+| Suécia | 6 | 14 |
+| Dinamarca | 4 | 6 |
+| Alemanha | 4 | 2 |
+| **Holanda** | **0** | **1** |
+
+**O Canadá é o país que o `BRIEF-JOE.md` trata como prioridade número um, e é de longe o que
+mais escreve *"must be legally authorized to work in Canada"*.** Não é impressão: é a frase que
+matou a Lead Character Artist da DreamWorks Montréal, a Lightfox Vancouver e o formulário da
+Stellar, todas em 12/09. A causa é estrutural: o Canadá exige **LMIA**, que é caro e lento para
+o empregador, então a maioria filtra na porta.
+
+**Os EUA são piores por política:** H-1B é loteria. E o número acompanha, com **27 recusas em
+46 candidaturas**, a pior taxa da tabela.
+
+**A recomendação: HOLANDA primeiro, depois NÓRDICOS, depois Reino Unido.** O regime holandês de
+*kennismigrant* não tem teste de mercado de trabalho e o empregador só precisa ser patrocinador
+reconhecido, o que torna patrocinar um formulário em vez de um processo. E há indústria de
+personagem lá: **Guerrilla**, Nixxes, Vanguard, Triumph, Force Field, Team Reptile. **A campanha
+mandou UMA candidatura para lá**, contra 46 para o país mais difícil do mundo para o caso dele.
+
+**RESSALVA QUE NÃO PODE SER PERDIDA:** "zero recusas" no Reino Unido e na Suécia pode ser apenas
+**silêncio**, não sucesso — e em 12/09 ficou provado que casa recusa mudando o estado no portal,
+sem escrever. **O sinal forte desta tabela é a coluna de VETOS**, porque é texto do próprio
+anúncio; a coluna de recusas é fraca e não deve ser citada sozinha.
