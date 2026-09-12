@@ -984,3 +984,56 @@ ficha de ALTA para BAIXA, e a regra manda **nunca gastar a única carta de uma c
 endereço de confiança baixa**. Ou seja, o erro não desperdiça só a informação, ele **impede o
 contato com a pessoa certa** — aqui, um Lead Character Artist de AAA com créditos em Horizon,
 que é exatamente o alvo que a campanha inteira procura.
+
+## MEDIDO EM 12/09 ÀS 11h: A RÉGUA DE VETO NÃO TEM POLONÊS, E A ANSHAR ESCREVE O VETO EM POLONÊS
+
+A régua de vinte termos traz `French` e, ao lado, a expressão genérica *"mais idioma local
+exigido"*. **Na prática a lista literal que os agentes rodam não casa com `Polish`**, e foi assim
+que a **Anshar Studios** (Katowice, 180 pessoas, AAA e AA) quase passou limpa hoje com uma
+*Senior/Mid Character Artist* viva, título exato dele e formulário Traffit sem nenhuma marca de
+captcha no HTML. O veto está na lista de requisitos, escrito assim:
+
+> *"Communicative English, both spoken and written (B1/B2 level). **Fluent Polish, both spoken and
+> written.** Willingness to work from our office in Katowice, Poland (on-site position only)."*
+
+É a mesma classe de descoberta do francês da TAT em 11/09, e o desfecho é o mesmo: **não descarta a
+casa, vira porta condicionada ao idioma.** A Anshar inclusive oferece *"Help with relocation"* e
+publica faixa (8.350–15.050 PLN brutos), ou seja a porta é boa e o que fecha é a língua.
+
+**A régua ganha os idiomas POR EXTENSO, e não só o francês:**
+`Polish`, `polski`, `German`, `Deutsch`, `Swedish`, `svenska`, `Danish`, `Dutch`, `Spanish`,
+`Italian`, `Japanese`, além de `French`/`français`. São ruidosos de propósito, e ruído aqui é
+barato: eles não descartam nada sozinhos, **obrigam a ler a frase**.
+
+**E a lição de fundo, que é a terceira vez que esta régua cresce:** ela não é lei da natureza, é
+uma lista que cresce toda vez que alguém escreve o mesmo veto com outra palavra. Snowprint
+(`unable to support relocation`), People Can Fly (`based in` / `only from`), Pretty Cool
+(`within the`), e agora Anshar (`Polish`).
+
+## MEDIDO EM 12/09 ÀS 11h: QUADRO CONHECIDO NÃO É QUADRO LIDO, E O BURACO TEM TAMANHO
+
+O `censo-boards-0809.csv` cobre **123 quadros**. Extraí por expressão regular **todos os tokens de
+ATS que aparecem em qualquer URL do repositório** (painel, `enviados.csv`, `processados.csv`,
+`alvos.csv`, relatórios) e cruzei com o censo:
+
+| Família | Tokens que a campanha conhece | No censo | **Fora do censo** |
+|---|---|---|---|
+| teamtailor | 151 | 32 | **119** |
+| recruitee | 71 | 5 | **66** |
+| pinpoint | 20 | 0 | **20** |
+| workable | 19 | 0 | **19** |
+| greenhouse | 48 | 31 | **17** |
+| bamboohr | 35 | 20 | **15** |
+| personio | 12 | 0 | **12** |
+
+Listados inteiros os que valiam: **95 quadros responderam, 756 vagas**. **A única vaga de
+personagem achada hoje estava exatamente aí** — *Absurd Ventures, Character Art Lead*, casa que
+entrou no registro ontem pela porta ESPONTÂNEA e cujo quadro ninguém tinha listado.
+
+**A regra de 07/09 (*"liste o quadro inteiro do ATS antes de dar a casa por trabalhada"*) ganha o
+número e uma causa nomeada: casa que entra no painel por candidatura espontânea entra SEM o
+quadro.** Rodar esse cruzamento a cada censo novo custa uma centena de requisições.
+
+**No mesmo movimento, o diff do censo por ID:** os 123 quadros responderam, **3.583 vagas lidas,
+269 requisições novas em quatro dias e ZERO de personagem**. O estoque dos quadros conhecidos
+segue seco, agora com número de hoje.
