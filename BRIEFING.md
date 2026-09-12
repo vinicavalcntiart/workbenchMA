@@ -1466,7 +1466,7 @@ porque todos os três valem para **qualquer** Workday:
    `value: expected string, got object`. **O email também pode mudar por locatário**, então os
    dois saem de lá.
 3. **Aviso de código de país é cosmético.** `!! nao casou codigo do pais` assusta, mas o Workday
-   deduz o `+55` da escolha de país: a leitura de volta trouxe `+55 (81) 973062286 (Home Mobile)`.
+   deduz o `+55` da escolha de país: a leitura de volta trouxe o numero dele ja formatado com o codigo do pais e o rotulo `(Home Mobile)`, **e o valor nao se escreve aqui**.
    Não gaste rodada nisso.
 
 **E o erro de diagnóstico que eu cometi no caminho, que é o mais caro:** vi `1 Error` na tela de
@@ -1581,3 +1581,30 @@ foi enviada"*. **Candidatura enviada sem conta não fica vinculada à conta cria
 > **A lista do Workday é fonte de dedupe POSITIVA e muito confiável — o que ela mostra, existe.
 > Ela NÃO é prova de ausência: o que ela não mostra pode existir mesmo assim.** Somando a
 > `R027817`, a Blizzard tem **quatro** aproximações em dez dias, não três.
+
+## 12/09, 21h35 — EU VAZEI O TELEFONE DELE NUM REPOSITÓRIO PÚBLICO. REGISTRO DA FALHA.
+
+Ao documentar o conserto do `wd_geral.js`, escrevi a leitura de volta do formulário **com o
+número inteiro**, para mostrar que o campo tinha ficado certo. O `valida-dashboard.sh` pegou:
+*"FALHA DE PRIVACIDADE: telefone, CEP ou endereco residencial no repositorio publico."*
+
+**Quebrei exatamente a regra que este arquivo manda os agentes cumprirem:** *ao documentar um
+campo preenchido, escreva o NOME do campo e nunca o valor*. E quebrei por uma razão que parecia
+boa na hora, que é a mais perigosa: **eu estava provando que a medição tinha dado certo**, e
+colei a prova inteira em vez da parte que importava.
+
+**O texto foi corrigido**, e o arquivo está limpo. Mas duas coisas ficam ditas sem maquiagem:
+
+1. **O commit já tinha sido empurrado** (`88af5fc`), então o número esteve num repositório
+   público por cerca de quinze minutos e **continua no histórico do git**, mesmo com o texto
+   atual limpo. Tirar do histórico exige reescrever commits já publicados, o que é decisão do
+   Vini e não minha.
+2. **A validação salvou, mas tarde.** Ela roda antes do commit do painel, e este trecho entrou
+   por um commit de `BRIEFING.md`, que não passava por ela. **Rodar `valida-dashboard.sh` antes
+   de QUALQUER commit**, e não só quando se mexe no painel.
+
+**A regra reforçada, com a armadilha nomeada:** leitura de volta de formulário é justamente onde
+o valor sensível aparece por escrito, porque o objetivo dela é mostrar o que ficou gravado.
+**Ao trazer leitura de volta para o repositório, traga o veredito, nunca o conteúdo:**
+"telefone preenchido e com o código do país correto" diz tudo o que o próximo agente precisa,
+e não publica nada.
