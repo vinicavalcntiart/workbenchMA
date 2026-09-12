@@ -1335,3 +1335,33 @@ levante a larga** em vez de acumular as duas.
 tipo novo, monte o arquivo em `.claude/agents/` e **omita as ferramentas de escrita do Gmail**
 da lista `tools`. Nunca resolva isso escrevendo "não use tal ferramenta" no prompt: prompt
 convence, `tools` impede.
+
+## 12/09, 19h20 — EU ERREI DUAS VEZES SOBRE O PEDIDO DE PERMISSÃO. O QUE SE SABE E O QUE NÃO SE SABE.
+
+O Vini recebeu **de novo** o cartão "Claude wants to use Create Draft", desta vez numa carta
+escrita **pela sessão principal** (a da Maria Sjöman, Coffee Stain North).
+
+**Isso derruba a explicação que eu dei de manhã e repeti à tarde.** Eu afirmei que
+`create_draft` só pedia aprovação quando chamado por subagente, e que da sessão principal
+passava calado. **Não é verdade.** Eu inferi isso de as chamadas voltarem rápido, e chamada
+que volta rápido não prova que ninguém foi incomodado do outro lado.
+
+**O que está medido, e é pouco:**
+- os dois arquivos de permissão estão **corretos**: JSON válido, `mcp__Gmail__create_draft` no
+  `allow`, fora do `deny`, `defaultMode: bypassPermissions`;
+- a chamada **funciona**: as duas cartas de 19h15 e 19h16 existem no Gmail com ID;
+- e **mesmo assim** o cartão de aprovação aparece na tela dele.
+
+**Conclusão honesta: a permissão do projeto não governa esta sessão remota.** O cartão vem do
+próprio ambiente (web/app), não do `.claude/settings.json`. **Eu não sei o mecanismo exato e
+não vou inventar uma terceira teoria.**
+
+**A regra que fica, e ela é sobre como eu falo, não sobre configuração:** não afirme que um
+incômodo parou. **Só quem vê a tela sabe se parou.** O certo é descrever o que foi medido
+("a configuração está assim, a chamada funcionou") e perguntar se o aviso sumiu, em vez de
+declarar vitória por dedução.
+
+**Providência tomada:** nesta sessão o maestro **para de chamar `create_draft`**. Carta nova é
+entregue como **arquivo em `drafts/`**, pronta para copiar e colar, com destinatário e assunto
+no cabeçalho. Isso tira a fonte do incômodo sem perder nenhuma carta, e não depende de eu
+entender o mecanismo. A trava dos agentes em `.claude/agents/` continua valendo.
