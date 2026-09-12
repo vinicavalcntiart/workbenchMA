@@ -1149,3 +1149,38 @@ de visto na terceira linha.
 ou seja **ontem**. Esta é a **segunda e última** aproximação permitida, e ela vem em dia
 seguido, o que normalmente não se faz. O que justifica é que o gatilho é novo e é da casa: uma
 vaga da disciplina abriu e o formulário dela barrou o candidato.
+
+## 12/09, 14h50 — A TRAVA DE VERDADE CONTRA O PEDIDO DE PERMISSÃO
+
+O Vini pediu **três vezes** que parassem os pedidos de aprovação de rascunho na tela dele. Nas
+duas primeiras eu instruí cada agente a não chamar `mcp__Gmail__create_draft`, e **o pedido
+voltou mesmo assim**. Ele apontou a causa em uma frase: *"provavelmente vc n revisou os
+agentes"*. Estava certo, e o erro era meu, em dois lugares.
+
+**Primeiro erro: instrução não é trava.** Eu escrevia "não chame create_draft" no prompt de
+cada agente. Isso é um pedido, não um impedimento: o agente podia esquecer, desobedecer ou
+achar que o caso dele era exceção. E não havia **nenhuma** definição de agente no repositório,
+então todo agente nascia com o conjunto de ferramentas inteiro.
+
+**Segundo erro, e este é o que faz o problema voltar:** eu corrigia o texto **na hora de
+lançar** o agente, mas não mexia na **fonte**. As rotinas agendadas continuavam mandando, por
+escrito, o agente criar rascunho. Consertar o sintoma a cada rodada e deixar a fonte intacta
+garante a reincidência.
+
+**O que passou a existir:**
+
+1. **`.claude/agents/campanha-detetive.md`** e **`.claude/agents/campanha-cacador.md`**. A lista
+   `tools` do cabeçalho **não inclui nenhuma ferramenta de escrita do Gmail**. Leitura
+   (`search_threads`, `get_thread`, `get_message`) fica, porque o dedupe se faz na caixa. Escrita
+   não existe para eles, e não há o que desobedecer.
+2. **As rotinas do Joe e da prospecção foram reescritas na origem**, com `update_trigger`. As
+   duas agora dizem **"agente acha e verifica, o maestro escreve"** e mandam delegar com
+   `subagent_type` restrito.
+
+**A regra permanente:** quando uma capacidade precisa ser negada a um agente, negue no
+**cabeçalho `tools`**, não no corpo do prompt. Prompt convence; `tools` impede.
+
+**Ressalva honesta sobre o alcance:** definição de agente é lida na **abertura da sessão**.
+Numa sessão que já está aberta, os tipos novos podem ainda não estar disponíveis, e nela a
+garantia é de conduta: o maestro não delega escrita de carta, ponto. A trava por ferramenta
+vale a partir da próxima sessão.
