@@ -31,3 +31,13 @@ rascunho.
 - **Fora dos EUA?** Sim — Holanda, União Europeia.
 - **Dedupe:** zero ocorrência de "team reptile"/"team-reptile" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa. Dion Koster fica como SEGUNDA e última possível, se algum dia aparecer endereço dele.
 - **Ressalva honesta:** https://team-reptile.com/jobs/ diz "We currently don't have any open vacancies" — carta de porta, não de vaga. E o endereço do Tim é rotulado como contato de imprensa/negócios, então a carta tem que se apresentar rápido e não parecer press release.
+
+---
+
+### Giles Sander — Producer — Polyester Studio, Toronto, Canadá (e Nova York)
+- **Email:** giles@polyesterstudio.com · confiança **alta** · fonte: https://polyesterstudio.com/say-hello/ ("Producer Giles Sander — Email: giles@polyesterstudio.com", nome, cargo e endereço na mesma linha; lido nesta rodada)
+- **Por que ELE e não outra pessoa:** é a única pessoa que o estúdio publica, e a página existe exatamente para receber quem quer trabalhar com eles. Casa pequena de produção sob demanda: produtor é quem lê e quem distribui trabalho.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"LEAD WITH CHARACTERS"** e, logo abaixo, **"Polyester is the imagination studio that crafts unforgettable characters for the world's most memorable brands."** A própria página Say Hello convida com **"Let's characterize your world; Giles would be happy to help."** O portfólio deles é etiquetado "3D characters" (peças: Character Anthem, 2026 Canadian Census, DoorDash). Não existe encaixe mais literal para um Senior 3D Character Artist do que um estúdio cujo produto É personagem.
+- **Fora dos EUA?** Sim — Canadá (Toronto), com presença em Nova York. Canadá é o país de maior prioridade do BRIEF-JOE, e a carta deve dizer de frente que ele precisa de patrocínio de visto, porque é o item que o RH usa para cortar e o estúdio de personagem é quem atropela.
+- **Dedupe:** zero ocorrência de "polyester" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa.
+- **Ressalva honesta:** o cargo é produção, não direção de arte; e o estúdio é de publicidade/branded content com personagem, não de jogo ou longa.
