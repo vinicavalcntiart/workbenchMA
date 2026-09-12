@@ -126,3 +126,30 @@ Medido nesta rodada em três PDFs diferentes, todos abriram e todos tinham email
 - **Fora dos EUA?** Sim — Holanda, União Europeia. A frase de patrocínio de visto vale inteira.
 - **Dedupe:** **zero** ocorrência de "guerrilla" em `pessoas.csv` e em `enviados.csv`; em `automacao/processados.csv` só há duas notas de varredura de ATS (03/09 e 06/09), **nenhuma carta e nenhuma pessoa**; e o **Gmail devolveu zero** para Guerrilla. **PRIMEIRA** pessoa desta casa — sobra uma.
 - **Ressalva honesta, duas:** (1) o endereço é **caixa pessoal**, não corporativa — nesta campanha isso é vantagem, porque a Guerrilla não publica endereço de pessoa nenhuma, mas a carta tem que se comportar como carta a um artista, não como candidatura a RH. (2) O domínio `guerrilla-games.com` **estourou o tempo três vezes** nesta rodada (duas por WebFetch, uma por curl) — a frase da casa veio do índice de busca daquela página, **não** da página aberta por mim. O site pessoal, esse sim, abriu e foi lido inteiro. Fica registrado: **guerrilla-games.com entra na lista de fontes travadas.**
+
+---
+
+### Paweł Mielniczuk — Art Director de personagem (ex-Lead Character Artist) — CD PROJEKT RED, Varsóvia, Polônia
+- **Email:** **não publicado** · confiança **sem-email** · fonte primária lida nesta rodada: sala de imprensa da própria CDPR, https://press.cdprojektred.com/en/news/1654/promised-land-art-festival-reaches-new-heights-in-2024
+- **Por que ELE:** entrou no departamento de arte da CD PROJEKT RED em **2006**, virou **Lead Character Artist em 2010**, trabalhou nos três Witcher e, em **Cyberpunk 2077**, supervisionou todo o processo de arte de *Phantom Liberty* e **dirigiu os departamentos de personagem, armas e veículos** do jogo base. Hoje aparece como Art Director do *Project Hadar*. É a definição de "quem decide arte de personagem numa casa grande".
+- **Gancho, com a frase dele entre aspas:** **"Promised Land is all about making the impossible possible, and creating this year's event really felt like the embodiment of that thought."** — dita como **"Festival Director of Promised Land Art Festival"**, o festival de arte que a própria CDPR organiza com a cidade de Łódź. É um homem que passa o ano chamando artista para dentro; a carta certa fala com o organizador de festival de arte, não com um RH.
+- **Fora dos EUA?** Sim — Polônia, União Europeia.
+- **Dedupe:** **zero** ocorrência de "cd projekt"/"cdprojekt" em `pessoas.csv`, `enviados.csv` e `automacao/processados.csv`, **e zero no Gmail**. **PRIMEIRA** pessoa desta casa.
+- **O QUE FALTA, sem maquiagem:** a CD PROJEKT RED **não publica o endereço de pessoa nenhuma**, o formato de `cdprojektred.com` não está provado por nenhum endereço real, o ArtStation dele (`artstation.com/blooddragon`) está atrás do Cloudflare 403 e o único lugar que oferece um endereço é agregador pago, proibido pelo BRIEF-JOE. **Nada foi montado.** E mais uma ressalva de fonte: o cargo de arte veio do artigo da própria CDPR *"Promised Land Art Festival 2023 — Interview with Art Director Paweł Mielniczuk"*, que está hospedado no LinkedIn — que devolve **999** para esta campanha —, então ele foi lido pelo **índice de busca**, não pela página aberta. O que eu abri e li foi a sala de imprensa da CDPR.
+
+---
+
+### ~~Alena Dubrovina — Art Director, Larian Studios~~ — **DESCARTADA NESTA RODADA, NÃO ESCREVER**
+Ela é o alvo perfeito no papel: entrou na Larian em 2016 como estagiária, subiu a Character Designer,
+depois **Lead Character Designer** e hoje é **Art Director** de *Baldur's Gate 3*. A ficha chegou a
+ser montada.
+
+**O Gmail matou.** `mcp__Gmail__search_threads` por `{larian "cd projekt" cdprojektred Dubrovina Mielniczuk}`
+devolveu **duas** threads da Larian: em **07/09** o Vini aplicou para *Character Artist – Open Application*
+pelo Lever, e em **08/09** o time de recrutamento respondeu, com estas palavras:
+*"Thanks for registering your details in our open application... **While we may not have a role that suits
+your profile right now**, we will keep your details and share them with the relevant teams to see if there
+is a need in future."*
+
+**Casa que já respondeu está fora dos limites da campanha.** É o mesmo erro da Galaxy Grove, evitado
+desta vez **antes** de virar linha no `pessoas.csv` — e evitado outra vez pela caixa, não pelo arquivo.
