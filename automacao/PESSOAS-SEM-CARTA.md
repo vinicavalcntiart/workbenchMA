@@ -326,3 +326,20 @@ mesma coisa: endereço **publicado pela própria casa**, não montado.
 - **ROTA REAL:** `jobs_berlin@automatik-vfx.com`, **publicado** em https://automatik-vfx.com/contact e específico do estúdio de Berlim, citando a vaga de Character Artist pelo nome. As outras caixas publicadas são `info@`, `jobs_london@` e `pressrelations@`.
 - **Dedupe, feito na caixa:** zero ocorrência de "automatik" e "post republic" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`, **e o Gmail devolveu zero**. Casa inédita, PRIMEIRA pessoa.
 - **Ressalva honesta, três:** (1) ele é o diretor-gerente, **não** o supervisor de arte; (2) a vaga é **contrato curto (3-4 meses) e presencial em Berlim**, o que significa pedir visto alemão para poucos meses — é o ponto fraco desta ficha; (3) a existência da vaga vem da planilha da comunidade e de um anúncio do LinkedIn que eu **não consegui abrir**; o que abri e li foi o site da casa.
+
+### ~~Ricard Cussó / Ryan Greaves — Cosmic Dino Studio (Brisbane, Austrália)~~ — **DESCARTADA NESTA RODADA, NÃO ESCREVER**
+A casa é ótima no papel: estúdio australiano de longas estilizados (*Scarygirl* 2023, *The Sloth Lane*, *Combat Wombat*), fundadores publicados em https://cosmicdinostudio.com/our-story/ com nome e cargo (**Ricard Cussó, Founder / Feature Director**; **Ryan Greaves, Founder / Producer & Screenwriter**; **Tania Vincent, Director / Head of Animation**), e **vaga viva de CG Supervisor** com `jobs@cosmicdinostudio.com` publicado na planilha pública de vagas.
+
+**O Gmail matou, de novo pela caixa e não pelo arquivo.** Em **02/09** saiu carta fria para `hello@cosmicdinostudio.com` e em **03/09** um humano respondeu, de **`stephen.d@cosmicdinostudio.com`**: *"Cosmic Dino has received your application! ... We'll be reviewing your submission shortly ... and will be in touch if your profile aligns with future job openings."* **Quem já respondeu está fora dos limites do Joe: a thread é do Comunicador.**
+
+**O que fica de útil, e é um padrão de domínio novo provado por endereço LITERAL:** `cosmicdinostudio.com` usa **`nome.inicial@`** (`stephen.d@cosmicdinostudio.com`, visto na caixa, não montado). Se um dia a casa voltar para a fila, é esse o formato — e o `hello@` continua sendo a porta publicada.
+
+---
+
+## OS TRÊS TRAVADOS: o que foi tentado hoje e o que caiu
+
+Nenhum dos três ganhou endereço literal nesta rodada. Fica escrito **o que foi medido**, para ninguém repetir:
+
+- **Jan Philip Cramer (Digital Domain).** A página https://digitaldomain.com/contact-us **publica sim endereços de pessoa**, e eu os li hoje com o decodificador ligado — mas são todos da holding asiática e da área comercial: `arthur.ma@ddhl.com` (VP Operations), `allen.chen@ddhl.com`, `hongjie.liu@ddhl.com` (GM China), `william.yang@ddpo.com`, `yaqi.ren@ddhl.com`, `colin.kwok@ddhl.com`, mais `pr@ddhl.com`, `marketing@d2.com` e `newbusiness@d2.com`. **Nenhum de arte, nenhum na América do Norte**, e a linha de recrutamento aponta para `careers.digitaldomain.com`. O talk dele no SIGGRAPH 2023 (*She Hulk*) **não tem PDF hospedado** no `history.siggraph.org` (a página existe e mostra `2023-Image-Not-Available`), então não há rodapé de autor para ler. `jpcramer.com` existe e é **domínio estacionado** (114 bytes, redireciona para `/lander`); `janphilipcramer.com` e `philcramer.com` não respondem.
+- **Paweł Mielniczuk (CD PROJEKT RED).** Varri `cdprojektred.com` e `cdprojekt.com` com decodificação de entidade e de `data-cfemail`: só saem `ir@cdprojekt.com`, `recepcja@`, `esg@`, `gielda@` e `wza@cdprojekt.com`, todas caixas corporativas de relações com investidores. **Armadilha de domínio evitada e registrada:** `mielniczuk.art` responde 200 e **é de outra pessoa** — um pintor polonês de pastel e óleo, sem ligação com ele. Mesma família do `skyerzz.com`.
+- **Michael Skyers (Digital Extremes).** `michaelskyers.com` e `skyers.art` não existem. A única oferta de endereço continua sendo agregador pago. Sem novidade.
