@@ -41,3 +41,23 @@ rascunho.
 - **Fora dos EUA?** Sim — Canadá (Toronto), com presença em Nova York. Canadá é o país de maior prioridade do BRIEF-JOE, e a carta deve dizer de frente que ele precisa de patrocínio de visto, porque é o item que o RH usa para cortar e o estúdio de personagem é quem atropela.
 - **Dedupe:** zero ocorrência de "polyester" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa.
 - **Ressalva honesta:** o cargo é produção, não direção de arte; e o estúdio é de publicidade/branded content com personagem, não de jogo ou longa.
+
+---
+
+### Jake Fishman — Director of Business Operations — Concept Art House (CAH), San Francisco, EUA (com Xangai e Chengdu)
+- **Email:** jake.fishman@conceptarthouse.com · confiança **alta** · fonte: https://conceptarthouse.com/contact ("Have a project in mind? Reach out to discuss it! jake.fishman@conceptarthouse.com", lido nesta rodada). Cargo em https://theorg.com/org/concept-art-house/org-chart/jake-fishman — fonte de terceiro, e a carta não deve citar o cargo como se ele o tivesse publicado.
+- **Por que ELE e não outra pessoa:** é a única pessoa com nome que a casa publica, e numa casa de terceirização é ele quem decide para quem o trabalho vai. Não existe RH generalista no meio.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Since 2007, Concept Art House has been the trusted art outsourcing partner for top game developers, including Activision | Blizzard, Epic Games, Roblox, and NCSoft. We specialize in AAA and mobile game art, crafting high-quality character designs, 2D & 3D assets, animation, and VFX that bring game worlds to life."** Personagem é o produto da casa, não um detalhe dela.
+- **Fora dos EUA?** NÃO — sede em San Francisco. **Mas isto aqui inverte a frase de realocação em vez de piorá-la:** CAH é casa de terceirização, contrata artista por projeto e a distância. A carta deve pedir trabalho remoto por projeto, não vaga com visto, e dizer isso na primeira linha. É a única ficha desta rodada em que o problema do patrocínio simplesmente não se aplica.
+- **Dedupe:** zero ocorrência de "concept art house"/"conceptarthouse" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa.
+- **Ressalva honesta:** a página de contato é comercial ("tem um projeto em mente?"), então a carta chega numa caixa de clientes e não de candidatos. Tem que se identificar como artista nas duas primeiras linhas.
+
+---
+
+### Joost van Dongen — Fundador e diretor — Galaxy Grove, Utrecht, Holanda
+- **Email:** joost@galaxy-grove.com · confiança **alta** · fonte: https://galaxy-grove.com/ (bloco "Contact — Email: joost@galaxy-grove.com", com endereço e número de KVK; lido nesta rodada)
+- **Por que ELE e não outra pessoa:** a própria home diz que a casa tem **"27 Grovers"** — casa de até 30 pessoas, onde o BRIEF-JOE manda ir direto no fundador, que responde ele mesmo.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Galaxy Grove is a game studio based in Utrecht, the Netherlands, specialising in high quality 3D management and building entertainment games"**, e **"Our team members worked on games such as Horizon Forbidden West, Dune Awakening, Halo, Turmoil, Dawn of War IV, Iron Harvest, Starfield, Fallout 76 and more."** Esse segundo trecho é a alavanca: é uma casa pequena montada com gente de AAA, exatamente o perfil que reconhece um portfólio de personagem AAA sem precisar de checklist.
+- **Fora dos EUA?** Sim — Holanda, União Europeia.
+- **Dedupe:** zero ocorrência de "galaxy grove" em `pessoas.csv`, `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. PRIMEIRA pessoa desta casa.
+- **Ressalva honesta, e é a maior desta rodada:** a mesma página diz **"We currently don't have any job openings"** e **"We are currently not looking for new freelancers to work with."** Além disso os jogos deles (Station to Station, Town to City, Steam to Electric) são de construção e gestão, com pouco personagem. É carta de porta de longo prazo; a carta não deve fingir que existe vaga.
