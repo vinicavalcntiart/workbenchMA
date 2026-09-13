@@ -1798,3 +1798,50 @@ recibo na caixa** — buscando **pelo nome da casa, sem filtrar remetente**, por
 **O que isso custa quando não se pega:** a rodada seguinte teria mandado uma terceira e uma quarta
 candidatura para a mesma casa em uma semana, que é exatamente o dano que a regra de cadência
 existe para evitar.
+
+## 13/09, 12h50 (MAESTRO) — ONZE HORAS DE ZERO, E A CAUSA NÃO FOI FERRAMENTA
+
+**O número primeiro, porque ele é o assunto:** entre 01h35 e 12h28 de 13/09 as rotinas dispararam
+cerca de **vinte vezes** nesta sessão e a campanha produziu **ZERO candidatura enviada e ZERO
+carta nova**. Não foi fila seca, não foi ferramenta faltando, não foi permissão travada, não foi
+captcha. Foi o maestro lendo o disparo e fechando o turno sem executar a rodada.
+
+**A mecânica exata, porque sem ela a lição não serve para nada:** estas rotinas têm
+`persist_session: true` apontando para a sessão principal, então cada disparo chega aqui dentro
+como **uma mensagem de turno**, e não como uma sessão nova que roda sozinha. O maestro chamava
+`ReadNotifications`, lia o prompt inteiro da rodada, e encerrava. **Ler a ordem foi confundido com
+cumprir a ordem.** Vinte vezes seguidas.
+
+**Por que isto não se conserta com promessa:** "agora vou prestar atenção" é exatamente a classe
+de instrução que esta campanha já mediu que não segura nada. A regra do repositório é
+`instrução não é trava`, e ela vale contra o próprio maestro.
+
+**A trava possível, e ela é decisão do VINI, não do maestro:** se as rotinas nascessem em **sessão
+própria a cada disparo** (`create_new_session_on_fire`), a rodada rodaria sem depender de alguém
+pegar o turno. O `update_trigger` **não** mexe nesse campo (só nome, horário, estado, modelo e
+prompt), então trocar isso exige **apagar e recriar a rotina, perdendo o histórico de execuções**.
+Por isso **nenhuma rotina foi apagada**: apagar rotina do Vini por iniciativa própria seria o
+segundo erro em cima do primeiro. Fica proposto e não executado.
+
+**O que a manhã de fato rendeu, para o registro não ficar só negativo:** a carta da Ellie Baldino
+(01h35, e com ela a fila de fichas com email publicado zerou), o fechamento do lote de 20
+rascunhos, o achado das três cartas presas desde 10/09 por assunto próprio, e o conserto da branch
+descrito abaixo.
+
+## 13/09, 12h28 (MAESTRO) — TODA RODADA PUXAVA A BRANCH ERRADA, E ISSO FOI CONSERTADO NA FONTE
+
+**Medido com `git log A..B` nos dois sentidos:** `claude/vini-cavalcanti-job-campaign-gciixk` está
+**6 commits atrás** e **0 commits à frente** de `claude/vini-job-campaign-batch-2-so98fm`. Ou seja
+a so98fm **contém tudo** o que a gciixk tem, e mais. Não há nada a salvar na gciixk.
+
+**O defeito:** as cinco rotinas mandavam, no primeiro comando, `git pull origin ...gciixk`. Todo
+agente que rodava começava a rodada com estado velho, e empurrava para um ramo que ninguém lê.
+
+**O conserto foi no prompt de cada rotina, via `update_trigger`, e não num aviso de uma vez só** —
+de novo porque instrução não é trava. Corrigidas: Jhon A (`trig_013Gc…`), Jhon B (`trig_016rD…`),
+Joe (`trig_01Kix…`), Comunicador (`trig_01AjJ…`) e prospecção (`trig_011Sr…`). As cinco agora
+puxam e empurram na **so98fm**, e cada prompt traz a medição junto, para ninguém "corrigir" de
+volta.
+
+**A BRANCH OFICIAL DA CAMPANHA É `claude/vini-job-campaign-batch-2-so98fm`.** A gciixk fica como
+histórico morto.
