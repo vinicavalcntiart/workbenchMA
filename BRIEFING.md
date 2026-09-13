@@ -1725,3 +1725,76 @@ ATS nenhum acha, e concluiria "casa sem vaga" com a casa contratando.
 Some-se ao `chopchop` (rede de fast-food sueca), ao `mpc.wd1` (Marathon Petroleum) e ao `icon.wd3`
 (pesquisa clínica). **Token que casa com o nome não prova que é a casa**, e o preço de conferir é
 uma leitura do primeiro título do quadro.
+
+## 13/09, 02h (JHON B) — EXISTE BUSCA GLOBAL DE PLATAFORMA EM DUAS FAMÍLIAS DE ATS, E A CAMPANHA LIA CASA POR CASA
+
+A campanha sempre leu ATS **por inquilino**: um token, um quadro, uma requisição de cada vez. É
+assim que se chegou a 1.548 sondas de Greenhouse para 15 quadros e 3.600 de Pinpoint para 12.
+**Duas das famílias que ela já conhecia têm busca da plataforma inteira, sem chave**, e isso lê
+milhares de casas de uma vez, inclusive as que nenhum token adivinhado alcança.
+
+| Onde | Rota | O que devolve |
+|---|---|---|
+| **Workable** | `https://jobs.workable.com/api/v1/jobs?query=<termo>&limit=20` (pagina com `pageToken`) | JSON com **o anúncio inteiro**: título, empresa, cidade, país, `created`, URL, descrição e requisitos |
+| **SmartRecruiters** | `https://jobs.smartrecruiters.com/sr-jobs/search?keyword=<termo>&limit=100&offset=<n>` | JSON com id da requisição, empresa, cidade, país e data de publicação |
+
+**Três armadilhas medidas, e a primeira faria a fonte parecer fechada:**
+
+1. **No Workable, `limit=100` devolve HTTP 400** nos catorze termos. Parece plataforma barrada e
+   é só o teto do parâmetro: com `limit=20` saíram **1.047 anúncios únicos**.
+2. **`api.smartrecruiters.com/v1/postings?q=` devolve 404.** A API por empresa continua sendo
+   `/v1/companies/<token>/postings`; quem faz busca global é o **host do site de vagas**, que é
+   outro serviço.
+3. **`totalFound` não é o que você consegue ler.** O SmartRecruiters declara 20.942 para
+   `3d modeler` e entrega cerca de 90 por termo; o Workable declara 750 para
+   `visual development` e entrega 300. Isso é leitura **dos mais relevantes**, e escrever "li a
+   plataforma inteira" seria falso. Diga o que leu.
+
+**O rendimento desta primeira passagem foi zero vaga nova**, e vale registrar por quê: das 22 do
+Workable e das 2 do SmartRecruiters que passaram no filtro de disciplina e escopo, **todas já
+estavam no repositório**. Serve como rede de segurança barata (duas dezenas de requisições por
+rodada), não como mina. E o ruído do SmartRecruiters é enorme, porque a busca é fuzzy: `material
+artist` traz *Material Handler*, `groom` traz *Veterinary Groomer* e *Terrain Park Groomer*, e
+`character artist` traz **Subway Sandwich Artist**.
+
+## 13/09, 02h (JHON B) — NO JAZZHR, HTTP 200 NÃO PROVA QUADRO VIVO, E O `<title>` É QUEM DECIDE
+
+A regra escrita em 12/09 diz que `https://<slug>.applytojob.com/apply` responde **200** quando o
+quadro existe e **302** quando a conta morreu. **A primeira metade está errada.** Sondados 9.643
+tokens, 41 responderam 200 — e **26 desses 41 servem uma página com o título
+`JazzHR - Inactive Career Page` e nenhuma vaga**, entre eles `amazon`, `blizzard`, `epicgames`,
+`niantic`, `neteasegames`, `cloudimperiumgames` e `stellar`. Uma sonda que conta código de
+resposta registra 41 quadros onde existem 15.
+
+> **No JazzHR, a prova de quadro vivo é o `<title>` da página, não o código HTTP.**
+
+**E sete falsos amigos novos para a lista**, que já tinha `chopchop`, `mpc.wd1`, `icon.wd3`,
+`remedy`, `rain` e `triumph`: **`playground.applytojob.com` é um cassino de Québec** (croupier,
+cozinheiro, segurança), não a Playground Games; `chimera` é uma empreiteira de defesa com trinta
+vagas da DARPA; `aquila` é ajuda financeira estudantil; `antler` é capital de risco; `return` é
+caminhão e agricultura; `blackfox` contrata historiador; `tribe` é gestão predial.
+
+**Rendimento honesto das duas sondagens de token desta rodada**, para ninguém esperar milagre:
+9.643 tokens para **46 quadros de Personio** e **15 de JazzHR**, e **zero vaga da disciplina** nos
+dois. O único acerto de título em 46 quadros de Personio (Chimera Entertainment, *3D Artist
+Generalist — Modelling & Texturing*) caiu na geografia: o posto é em **Cebu, nas Filipinas**.
+
+## 13/09, 02h (JHON B) — O DEDUPE FALHOU DE NOVO PELO MESMO MOTIVO, E DESTA VEZ NA BLUEHOLE
+
+O Joe listou em 12/09, às 22h, as duas vagas de personagem da **Bluehole Studio (KRAFTON)** como
+*"não registradas em lugar nenhum do repositório"*, e o maestro fechou às 22h40 uma medição de
+idioma cuidadosa para decidir se valia enviar. **As duas já tinham sido enviadas em 07/09**, com
+recibo de `career@bluehole.com` às **05h32** (`8517790002`, 3D Character Artists Lead/Senior) e às
+**05h38** (`8520212002`, Lead Character Artist TERA2). Uma terceira, a de ambiente `8517791002`,
+tem recibo de **08/09**, embora o painel ainda a registre como *"requisição livre, segurada por
+decisão de ritmo"*.
+
+**A causa é a de sempre e por isso ela merece ser dita de novo:** `grep -i bluehole enviados.csv`
+devolve **zero**. As três candidaturas existem e **nenhuma virou linha**. É o caso Stunlock de
+11/09 repetido, e a lição operacional é a mesma: **arquivo não é log, e quem prova envio é o
+recibo na caixa** — buscando **pelo nome da casa, sem filtrar remetente**, porque o remetente
+(`career@bluehole.com`) não se adivinha a partir do token do ATS (`bluehole` no Greenhouse).
+
+**O que isso custa quando não se pega:** a rodada seguinte teria mandado uma terceira e uma quarta
+candidatura para a mesma casa em uma semana, que é exatamente o dano que a regra de cadência
+existe para evitar.
