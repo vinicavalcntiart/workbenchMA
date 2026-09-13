@@ -1845,3 +1845,55 @@ volta.
 
 **A BRANCH OFICIAL DA CAMPANHA É `claude/vini-job-campaign-batch-2-so98fm`.** A gciixk fica como
 histórico morto.
+
+## 13/09, 13h (MAESTRO) — A PARAMOUNT NÃO ERA ILEGÍVEL, E AGORA TEM SCRIPT
+
+A campanha carregava desde 31/08 a nota *"Paramount responde Access Denied do Akamai e está
+coberta pelo alerta de email"*. Metade disso é verdade e a metade errada custou treze dias de
+casa da regra 14 sem varredura.
+
+| endereço | resposta medida em 13/09 |
+|---|---|
+| `www.paramount.com/careers` | **HTTP 403**, Access Denied do Akamai. A nota velha vem daqui. |
+| `careers.paramount.com` | **HTTP 200**, 319 KB. Abre. |
+| `careers.paramount.com/sitemap.xml` | **HTTP 200**, e lista as **286 vagas** com o título dentro da URL. |
+
+**A busca do site não serve:** ela é SPA e devolve a MESMA casca de 319 KB para qualquer termo,
+com ou sem palavra-chave. Quem tentar ler resultado filtrado por curl tem que escrever
+**NÃO CONFERIDO**, nunca zero. **Quem lê é o sitemap.**
+
+Virou `automacao/ronda-paramount.sh`, que baixa o sitemap, falha alto se ele não responder 200 ou
+mudar de formato, e **manda classificar cada acerto à mão** — porque o único acerto de hoje foi
+*Sr Data Engineer (Data Architecture and Modeling)*, falso positivo puro.
+
+**Resultado da primeira rodada: 286 vagas no quadro, ZERO da disciplina.** Zero medido.
+
+**Armadilha registrada porque quase virou registro falso:** um laço de `curl` reusando o mesmo
+arquivo de saída sobrescreveu o sitemap com o `robots.txt`; o parser achou zero `<loc>` e o
+primeiro resultado foi "0 vagas". Não era zero, era o meu script. **Falha de parser é NÃO
+CONFERIDO, nunca zero** — a regra vale para o parser que eu mesmo acabei de escrever.
+
+## 13/09, 13h (MAESTRO) — AS QUATRO CASAS GRANDES, RODADA COMPLETA
+
+- **Disney:** `ronda-disney.sh`, 12 consultas responderam, 0 falharam, 12 IDs da disciplina no ar,
+  **zero novo medido**.
+- **DreamWorks / NBCUniversal:** 4 requisições casaram com personagem e as **quatro estão fora,
+  com motivo escrito**. As três de Montréal (Lead Character Artist `744000137526729`, Lead
+  Material Artist `744000137526669` e Associate Art Director `744000133659271`) trazem, sob
+  *Eligibility Requirements*, **"Must be legally authorized to work in Canada"** — lido hoje na
+  API oficial, requisição por requisição, e não herdado de uma irmã. A quarta é *Character
+  **Effects** Artist* (Glendale), que é **CFX e está fora da disciplina**.
+  **Correção de leitura minha, registrada de propósito:** eu ia apresentar essas vagas como
+  "barradas por captcha". O `sr_dw2.js` de fato reencontrou hoje a parede do SmartRecruiters
+  (*"Verification Required — Slide right to secure your access"*, com a própria tela acusando
+  *"Automated (bot) activity on your network (IP 160.79.106.128)"*, ou seja o IP do contêiner).
+  Mas **o captcha é irrelevante aqui**: o veto escrito já desqualifica. Confundir a parede de
+  acesso com o motivo de descarte teria escondido o fato real.
+- **Warner:** 5 termos, os 5 responderam 200, **zero da disciplina**. Vale anotar por que os
+  alertas de email dele vêm cheios de lixo: a busca da WBD é fuzzy e para `modeler` devolve
+  *"Staff, Architect - Tax Systems (OneSource)"*. O parser foi conferido imprimindo os títulos
+  crus antes de declarar zero.
+- **Paramount:** aberta pela primeira vez, ver a seção acima. 286 vagas, zero da disciplina.
+
+**Saldo honesto da rodada das quatro casas: zero candidatura nova.** O que ela rendeu não foi
+vaga, foi **um quadro a mais legível para sempre**.
