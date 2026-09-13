@@ -632,3 +632,37 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   hoje**; o que esta ficha entrega de valor imediato é **a vaga viva**, e a decisão de escrever
   para uma das recrutadoras do relay é do maestro, sabendo que montar
   `nome.sobrenome@fatshark.se` seria exatamente o chute que produziu as 17 devoluções de 07/09.
+
+### Michael Bengtsson — **Cofundador (contato publicado de business inquiries)** — Mindbender (Meindbender), Gotemburgo, Suécia
+
+- **Email:** michael@mindbender.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://meindbender.com/ , aberta nesta rodada. O endereço está no `mailto:` do bloco
+  `contact-info-business-inquiries`, com o nome **"Michael Bengtsson"** no `<span>` imediatamente
+  acima e o LinkedIn dele ao lado. Os únicos dois endereços do site são `mail@mindbender.com` e
+  este.
+- **ARMADILHA DE DOMÍNIO, pela quinta vez nesta campanha, e ela está registrada aqui de propósito:**
+  o site é **`meindbender.com`** e o email é **`@mindbender.com`**. Endereço montado sobre o
+  domínio do site teria quicado — é o caso Stunlock (`stunlock.com` / `@stunlockstudios.com`), o
+  Apparat (`apparat.studio` / `@apparat.no`) e a TELEVISOR de novo.
+- **Por que ELE e não outra pessoa da casa:** a casa foi **fundada em 2006 por Michael Bengtsson,
+  Calle Halldin, Olov Burman e Tony Österlund** (texto da própria home) e ele é o **único dos
+  quatro com endereço publicado**. Casa pequena e de fundador: o BRIEF-JOE manda ir no fundador.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a lista de serviços da home diz, literal,
+  **"Iconic character design: From concept to full 3D"**, e o parágrafo seguinte:
+  **"working together to create characters and story that is not only memorable in their own right,
+  but simultaneously tailored to communication."** No mesmo bloco eles listam **"Digital animation:
+  Commercials, Game Trailers"** — ou seja, personagem 3D para jogo é serviço de casa. Esta é a
+  frase mais próxima do portfólio do Vini em toda a rodada.
+- **Fora dos EUA?** Sim — Suécia. Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** `meindbender`, `mindbender` e `Michael Bengtsson` dão **zero** em
+  `pessoas.csv`, `enviados.csv`, `automacao/processados.csv`, `docs/index.html` **e `alvos.csv`**;
+  e o **Gmail devolveu ZERO** para `mindbender OR meindbender OR Bengtsson`. **CASA NOVA para a
+  campanha inteira**, PRIMEIRA pessoa.
+- **Ressalva honesta, três:** (1) o endereço está publicado sob a rubrica **business inquiries**,
+  ou seja é a caixa comercial dele e não uma caixa de recrutamento — a carta tem que se apresentar
+  como oferta de trabalho e não como pedido de emprego genérico; (2) **não há vaga aberta** e o
+  site não tem página de carreira, então é carta de porta; (3) não confirmei hoje, por fonte
+  independente, que ele continua ativo na casa — o que sustenta a escolha é o critério do BRIEF-JOE
+  de que **fundador não muda de casa**, e o fato de o endereço estar no site que está no ar hoje.
+- **Segunda e última pessoa possível, para outro dia:** nenhuma com endereço — os outros três
+  fundadores aparecem só pelo nome.
