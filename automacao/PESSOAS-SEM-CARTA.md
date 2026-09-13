@@ -741,3 +741,32 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   (3) a matéria é de **março de 2025** e ela mesma diz ter entrado na casa um ano antes daquilo —
   não confirmei hoje que continua lá; (4) ela está em **Malmö** e a vaga aberta é em **Estocolmo**,
   que são divisões diferentes do grupo.
+
+### Petter Lindblad — **Founder (produtor)** — Snowcloud Films, Estocolmo, Suécia
+
+- **Email:** petter.lindblad@snowcloud.se · confiança **alta** · **PUBLICADO** · fonte:
+  https://www.snowcloud.se/about-us , aberta nesta rodada. O bloco de equipe traz, em texto
+  visível e um embaixo do outro, **"Petter Lindblad" / "Founder" / "petter.lindblad@snowcloud.se"**.
+  O único `mailto:` da página é o `contact@snowcloud.se`, ou seja o endereço dele é **publicado em
+  texto** e não escondido.
+- **Por que ELE e não outra pessoa da casa:** o bloco de equipe publica **uma pessoa só**. A
+  própria página diz: **"The company was founded in 2014 by producer Petter Lindblad, formerly
+  full-time producer at Copenhagen Bombay for over seven years."**
+- **Gancho, com a frase do próprio estúdio entre aspas:** a home deles, aberta nesta rodada,
+  publica um item de notícia intitulado **"Looking for Stockholm-based 3D-artists"**, com o texto
+  **"We're looking to find some final artists to join our team, available 100% on site in
+  Stockholm."** E a descrição da casa: **"Swedish production company focusing on projects for
+  children and youths, mainly animation. Specializing in low-cost, lean productions with high
+  quality screen results."**
+- **Fora dos EUA?** Sim — Suécia. Entram realocação e patrocínio, e a frase deles sobre *100% on
+  site in Stockholm* torna a linha de realocação obrigatória e não opcional.
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `snowcloud`. `pessoas.csv`,
+  `enviados.csv`, `automacao/processados.csv` e `docs/index.html` também dão zero. **CASA NOVA para
+  a campanha inteira**, PRIMEIRA pessoa.
+- **Ressalva honesta, três, e a primeira é séria:** (1) o anúncio de 3D artists é de **27/10/2025**,
+  ou seja **quase um ano atrás**, e a casa não tem página de carreira para reconferir — pode estar
+  morto, e a carta não deve tratá-lo como vaga aberta, só como prova de que a casa contrata artista
+  3D em Estocolmo; (2) ele é **produtor e fundador, não arte** — não abre portfólio, encaminha; (3)
+  a Snowcloud se define como **produtora** e terceiriza execução (a própria página lista Sun
+  Creature, LEE Film, Copenhagen Bombay e Meindbender como clientes/parceiros), então o encaixe com
+  personagem 3D é de **serviço**, não de cadeira fixa.
