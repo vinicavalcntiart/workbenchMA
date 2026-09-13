@@ -536,3 +536,35 @@ estratégia no meio do caminho não custou nada. **Nenhum navegador.** Ordem:
 Nada foi enviado, nenhum formulário foi preenchido, e `docs/index.html`, `enviados.csv` e
 `automacao/FILA-DO-VINI.md` não foram tocados. Os únicos arquivos escritos por esta rodada são
 **este** e uma linha em `automacao/processados.csv`.
+
+---
+
+## CORREÇÃO DE 13/09 — A Nº 1 DESTA FILA NÃO DEVE SER ENVIADA
+
+**`JR2026007640` — Senior Character Designer, Razer, Singapura — SAI DA FILA.**
+
+Esta fila, escrita em 10/09, põe a Razer como **nº 1** porque ela é a única vaga com personagem no
+centro que as 17.986 vagas daquela varredura produziram dentro do escopo, com dedupe zerado nos
+quatro arquivos e régua de 17 termos sem um único casamento. Tudo isso continua verdade.
+
+**E mesmo assim ela não é dele.** A rodada de caça de 13/09 releu o anúncio inteiro e a frase que
+decide está escrita no próprio texto:
+
+> *"This is a review and direction role, not hands-on trait tuning"*
+
+A qualificação pedida é *"Background in character design, art direction, or creative direction"*, e
+o anúncio **não cita Maya, ZBrush, Substance nem Blender em nenhum ponto**: o trabalho de mão vai
+para estúdio externo. Isso é **design de personagem e direção**, que a régua de disciplina descarta
+com todas as letras, junto com concept e character design 2D. A ressalva honesta já estava escrita
+na própria ficha de 10/09; o que faltava era a conclusão.
+
+**Por que esta correção existe:** o arquivo dizia "nº 1 da fila" com comando de disparo pronto, e a
+rodada de envio que lesse só este arquivo mandaria a candidatura. **Dois arquivos discordando é como
+uma candidatura errada sai.** Vale a leitura mais recente do anúncio, não a posição na fila.
+
+**A nº 2, `JR41288` Head of Environments da Netflix Vancouver, continua onde está e pelo mesmo
+motivo de sempre:** é ambiente, está em último de propósito, e ambiente não é carro-chefe desta
+campanha. A faixa publicada (CAD 204k–279k, a maior que a campanha já viu em vaga de arte) não muda
+a disciplina.
+
+**Saldo: esta fila de 10/09 está esgotada. Zero itens enviáveis.**
