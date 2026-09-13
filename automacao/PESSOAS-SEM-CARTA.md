@@ -666,3 +666,41 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   de que **fundador não muda de casa**, e o fato de o endereço estar no site que está no ar hoje.
 - **Segunda e última pessoa possível, para outro dia:** nenhuma com endereço — os outros três
   fundadores aparecem só pelo nome.
+
+### Are Sundnes — **CEO & Cofundador** — Hyper Games, Oslo, Noruega
+
+- **Email:** are@hypergames.no · confiança **alta** · **PUBLICADO** · fonte:
+  https://hypergames.no/studio , aberta nesta rodada. A página lista os treze funcionários com
+  nome e cargo e publica **três** endereços em texto visível: **"Are Sundnes CEO & Co-founder
+  are@hypergames.no"**, "Terje Gran CTO & Co-founder terje@hypergames.no" e "Runa Haukland Project
+  Manager runa@hypergames.no".
+- **CORREÇÃO DE REGISTRO ANTIGO, e é o achado de método desta ficha:** o
+  `automacao/processados.csv` de **06/09** deu esta casa como **DESCARTADA**, com a justificativa
+  *"o wp-sitemap completo de paginas nao tem nenhuma pagina de carreiras ou vagas. A pagina de
+  contato so trata de suporte do Moomintroll"*. Aquilo estava certo sobre `/contact` e **errado
+  sobre a casa**: quem publica endereço de pessoa aqui é **`/studio`**, não `/contact` nem
+  `/careers`. É o mesmo erro de rota que já tinha custado a Storm Studios em 10/09. **Descartar uma
+  casa por causa de uma rota que não abriu é descartar a rota, não a casa.**
+- **Por que ELE e não outra pessoa da casa:** dos três endereços publicados, os outros dois são
+  **CTO** e **Project Manager**; nenhum artista da casa tem endereço publicado. Em casa de **13
+  pessoas** o BRIEF-JOE manda ir no **fundador**, que responde ele mesmo.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a home, aberta nesta rodada, anuncia o
+  jogo novo assim: **"From the creators of Snufkin: Melody of Moominvalley comes a new adventure
+  based on the wonderful Moomin stories by author Tove Jansson. This time we follow Moomintroll
+  himself, in a cold but cozy winter adventure."** E a página do estúdio:
+  **"Hyper Games is an independent game studio based in Oslo, Norway. We're most known for our
+  games 'Mørkredd', and 'Eggggg'. We started out in 2012 and now count 13 employees."** Casa que
+  vive de **personagem licenciado estilizado** (Moomin, Alfie Atkins/Alfons Åberg) é exatamente
+  onde o portfólio dele — personagem estilizado e pintado à mão — compete.
+- **Fora dos EUA?** Sim — Noruega. Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `hypergames OR "Hyper Games"`.
+  `pessoas.csv`, `enviados.csv` e `docs/index.html` dão **zero**; `processados.csv` tem as duas
+  ocorrências citadas acima, e **nenhuma delas é carta** — é a nota de descarte de 06/09.
+  PRIMEIRA pessoa desta casa, e a casa nunca recebeu mensagem nenhuma.
+- **Ressalva honesta, três:** (1) **não há vaga aberta** e o estúdio não tem página de carreiras —
+  é carta de porta, e o próprio registro de 06/09 já tinha medido isso; (2) a casa tem **quatro
+  pessoas de arte publicadas** (Mads Frantzen, Marcus Kjeldsen, Rolf Hove, Adriane Brennmoen) e
+  **nenhuma com endereço** — montar `nome@hypergames.no` para elas seria chute, ainda que o padrão
+  de primeiro nome esteja provado por três endereços, e por isso **nada foi montado**; (3) treze
+  pessoas é pequeno, então a chance de existir orçamento para patrocínio de visto é a mais fraca
+  desta rodada.
