@@ -1897,3 +1897,91 @@ CONFERIDO, nunca zero** — a regra vale para o parser que eu mesmo acabei de es
 
 **Saldo honesto da rodada das quatro casas: zero candidatura nova.** O que ela rendeu não foi
 vaga, foi **um quadro a mais legível para sempre**.
+
+## 13/09, 12h50 (JHON B) — O LEVER TEM **DOIS HOSTS DE API**, E UM TOKEN VIVO NUM RESPONDE 404 NO OUTRO
+
+A campanha lê o Lever por `https://api.lever.co/v0/postings/<token>`. **Isso é metade da
+plataforma.** Existe um host europeu, `api.eu.lever.co`, e os dois **não se enxergam**: token que
+existe num devolve **404** no outro, com o mesmo corpo de 41 bytes que a campanha vinha lendo como
+*"esse token não existe"*.
+
+**Medido nesta rodada, nos 24 tokens de Lever que o repositório conhece:**
+
+| | quadros vivos | vagas |
+|---|---|---|
+| `api.lever.co` (o que a campanha usava) | 16 | 269 |
+| `api.eu.lever.co` (nunca consultado) | 4 | 29 |
+
+**Os quatro que existem SÓ no host europeu:** `asobostudio` (9 vagas), `frontier` (13),
+`innogames` (6), `quanticdream` (1). Ou seja **um quinto dos quadros de Lever da campanha era
+invisível**, e entre eles está a **Frontier**, casa cuja *Experienced Character Artist* de
+Cambridge o Vini enviou à mão em 10/09 — a vaga entrou pelo alerta do LinkedIn, **não** pela
+varredura, e agora dá para dizer por quê: a varredura batia no host errado e lia 404.
+
+> **Regra: no Lever, consulte SEMPRE os dois hosts antes de escrever qualquer número sobre uma
+> casa.** É a mesma família do `NBCUniversal3`, do `disneycareerdc` e do
+> `Blizzard_External_Careers`: **não existe "o" quadro da casa, existem todos os vivos.** E aqui
+> o falso negativo é pior que o normal, porque o 404 *parece* resposta definitiva.
+
+**Rendimento honesto da sondagem de token no host novo**, para ninguém esperar milagre: 3.966
+nomes de estúdio europeu das filas do gamedevmap viraram **6.938 tokens**, sondados contra
+`api.eu.lever.co` com **zero erro de rede**. Saíram **5 quadros**, dos quais **2 inéditos**
+(`kwalee`, 3 vagas de facilities, jurídico e QA; `fishlabs`, 1 de TI). **Zero vaga da
+disciplina.** Chute de token continua valendo como colheita de fundo e nunca como carro-chefe —
+o que rendeu foi o **host**, não o chute.
+
+### Na mesma rodada: a Asobo é PERSONAGEM PURO e continua fechada pelo IDIOMA
+
+`asobostudio`, **Character Artist H/F (Projet narratif non annoncé)**, Bordeaux, onsite,
+`1ab1d28f-6f7c-4106-b43f-6ef78dcb7603`. É o cargo exato dele, com a frase literal *"Tu seras
+impliqué.e sur l'ensemble du pipeline de création des personnages"* e *"modélisation, sculpt, UV,
+baking, texturing et création de shaders"*, no time que fez **A Plague Tale**.
+
+**E o veto de idioma está escrito:** *"Tu disposes d'un niveau de **français** et anglais
+opérationnel"*. Pela regra da TAT de 11/09, isso **não descarta a casa**: vira **porta
+condicionada ao idioma**, e ela volta à fila quando o francês dele chegar ao nível. Some-se um
+dado que conta contra: a faixa publicada é **32k€ a 47k€**, abaixo do piso de EUR 55.000 da
+política de pretensão para casa grande — e a Asobo tem mais de 300 pessoas.
+
+## 13/09, 12h50 (JHON B) — DUAS CORREÇÕES NO ORÁCULO DO WORKDAY, E UMA DELAS DESMENTE O REGISTRO DE HOJE
+
+**1. `activision.wd1`, `magicleap.wd1` e `sonyinteractive.wd1` devolvem `422`, não `200`.**
+O registro desta manhã diz que os três *"respondem robots.txt SEM listar site nenhum, o que não é
+quadro vazio, é locatário que não publica a lista"*. Remedido agora, com `curl` e cabeçalho de
+navegador: os três dão **HTTP 422** com corpo de erro do Workday, e `422` já está escrito neste
+arquivo como **"o locatário não existe naquele pod"**. A diferença importa: "não publica a lista"
+convida a insistir no host; "não existe" manda **procurar o pod certo**. Varridos os 17 pods para
+cada um: **nenhum dos três existe em pod nenhum**. A Activision vive em `xboxgaming.wd1`, e é por
+isso que o host `activision.wd1` espalhado pelo repositório é lixo que pode gerar zero falso.
+
+**E o defeito que produziu o erro é meu e vale mais que o caso:** a minha primeira passagem deu
+`406` em **todos os 33 locatários**, inclusive nos que funcionam, porque eu mandei
+`Accept: application/json` num arquivo de texto. **`406` em toda a lista não é a lista estar
+morta, é o seu cabeçalho.** Zero uniforme em cima de uma lista heterogênea é suspeito do sondador.
+
+**2. Mecanismo novo: no Workday, `403` e `404` dizem coisas diferentes sobre o SITE.**
+Procurando o quadro da KRAFTON (cujo `robots.txt` responde 200 com **corpo vazio**, igual ao da
+Epic Games), a API CXS separou os dois casos:
+
+- `krafton/External`, `/Careers`, `/KRAFTON_Careers` → **404** `not found: Job_Posting_Site_ID`
+- `krafton/krafton` e `krafton/KRAFTON` → **403** `permission denied`
+
+> **`404` é "esse site não existe"; `403` é "existe e está fechado ao público".** Então o quadro
+> Workday da KRAFTON **existe** e não é legível daqui — a casa se lê pelo Greenhouse `bluehole`,
+> que a campanha já usa. Isso dá uma sonda de nome de site que não depende do `robots.txt`, útil
+> justamente nos locatários de corpo vazio.
+
+**Locatário novo achado de graça na mesma varredura de pods: `dneg.wd3`, que responde `401`** —
+existe, API pública desligada. A DNEG é lida pelo Jobvite e continua sendo; fica anotado para
+ninguém "descobrir" de novo.
+
+### A varredura em si, e ela fechou em zero medido
+
+**19 locatários com `robots.txt` legível, 54 quadros lidos, 5.242 vagas, `NAO CONFERIDO` = 0.**
+Os quadros de até 900 vagas foram **paginados por inteiro** em vez de consultados por termo, que
+é mais caro e não depende da lista de termos acertar. Quadros que o registro de hoje não cobria:
+`sky.wd3` (4 sites), `sonyglobal.wd1` (3), `spinmaster.wd3` (3, incluindo `TocaBoca_Careers`),
+`autodesk.wd1` (2), `cae.wd3` (3), `maxon.wd103`, `bydeluxe.wd5`, `aristocrat.wd3` (3).
+**Zero vaga de personagem nova em todos.** Os dois únicos acertos de disciplina em escopo foram
+o **Lead Modeler `JR40923`** e a **Modeling Supervisor `JR40941`** da **Eyeline Seoul** — as duas
+**já enviadas e confirmadas em 09/09**, pegas pelo `dedupe-agora.sh`.
