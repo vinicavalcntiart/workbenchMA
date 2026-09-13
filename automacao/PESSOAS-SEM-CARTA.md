@@ -704,3 +704,40 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   de primeiro nome esteja provado por três endereços, e por isso **nada foi montado**; (3) treze
   pessoas é pequeno, então a chance de existir orçamento para patrocínio de visto é a mais fraca
   desta rodada.
+
+### Diana Varro — **Character Artist (theHunter: Call of the Wild)** — Avalanche Studios Group, Malmö, Suécia
+
+- **Email:** **não existe em fonte pública** · confiança **sem-email** · fonte do nome, do cargo e
+  do trabalho: **o site do próprio estúdio**,
+  https://avalanchestudios.com/stories/character-artist-interview (08/03/2025), aberta nesta
+  rodada, literal: **"Diana Varro is a Character Artist on theHunter: Call of the Wild. Originally
+  from Hungary, Diana is based in Malmö and is part of the team that brings to life the undisputed
+  stars of the game: the animals that populate its many reserves."**
+- **Por que ELA e não outra pessoa da casa:** é a **única pessoa de arte de personagem que a
+  Avalanche nomeia publicamente**. E o encaixe é raro: o trabalho dela é **criatura com pelo**, que
+  é onde o grooming em Houdini do Vini deixa de ser adorno e vira a competência principal. Com as
+  palavras dela, do mesmo texto: **"When the research is complete, I get to work on the 3D sculpt
+  of the animal – the textures, and a low-poly mesh – which is then set up for technical
+  animation."** Isso é o pipeline inteiro dele, descrito por ela.
+- **O contexto que dá urgência, conferido na fonte oficial nesta rodada:** a **Lead Character
+  Artist** de Estocolmo **continua viva** — `https://api.lever.co/v0/postings/avalanchestudios?mode=json`
+  respondeu **HTTP 200 com 12 vagas**, e a requisição `8f7bd580-5877-446e-83cb-97bb1fce0f6a`
+  aparece com department **Development**, location **Stockholm**,
+  https://jobs.lever.co/avalanchestudios/8f7bd580-5877-446e-83cb-97bb1fce0f6a
+- **Gancho, com a frase do próprio estúdio entre aspas:** a chamada da matéria é
+  **"Bringing life to Call of the Wild"**, e o texto continua: **"Since we're reproducing real
+  animals, the process doesn't involve a lot of pre-production, especially if compared to games
+  where you create fantasy characters or monsters."** A carta pode pegar exatamente essa frase e
+  trazer o outro lado dela, que é o lado do portfólio dele.
+- **Fora dos EUA?** Sim — Suécia. Entram realocação e patrocínio.
+- **Dedupe, feito na caixa:** o Gmail devolve **uma** thread — o recibo do Lever de **10/09**,
+  *"we received your application for the Lead Character Artist position"*. **Nenhuma recusa e
+  nenhuma resposta humana.** `pessoas.csv` dá **zero** para Avalanche. PRIMEIRA pessoa desta casa,
+  e a carta para ela é **indicação interna em cima de uma candidatura que já está no sistema**,
+  que é o cenário favorito do BRIEF-JOE.
+- **Ressalva honesta, quatro:** (1) **não há endereço** e o estúdio não publica nenhum endereço
+  individual — o único `@avalanchestudios.com` em fonte pública é comercial, e **nada foi montado**;
+  (2) ela é **artista, não lead e não recrutadora**, então a via é encaminhamento e não decisão;
+  (3) a matéria é de **março de 2025** e ela mesma diz ter entrado na casa um ano antes daquilo —
+  não confirmei hoje que continua lá; (4) ela está em **Malmö** e a vaga aberta é em **Estocolmo**,
+  que são divisões diferentes do grupo.
