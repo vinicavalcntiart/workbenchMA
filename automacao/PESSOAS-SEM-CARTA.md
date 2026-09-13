@@ -770,3 +770,66 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   a Snowcloud se define como **produtora** e terceiriza execução (a própria página lista Sun
   Creature, LEE Film, Copenhagen Bombay e Meindbender como clientes/parceiros), então o encaixe com
   personagem 3D é de **serviço**, não de cadeira fixa.
+
+### O NEGATIVO DESTA RODADA, escrito para a próxima não refazer
+
+**Casas que morreram no dedupe, e as duas por motivo diferente:**
+
+- **~~Submarine (Amsterdã)~~ — RECUSOU, e está no `enviados.csv` desde 26/08** com o desfecho
+  escrito: *"recusado (respondido; vagas exigem residência NL/BE)"*. É a maior casa de animação
+  holandesa e **está fora dos limites do Joe**. Ela aparece como "thread viva" no BRIEFING, o que
+  engana: o campo de desfecho é que manda.
+- **~~Paladin Studios (Haia)~~ — A CASA FECHOU.** Parecia ficha pronta: `stein@paladinstudios.com`
+  publicado com nome (Stein Damen, Business Development) e uma página `/team` com 45 pessoas,
+  incluindo quatro 3D Artists. O que mata está no topo de toda página do site, lido nesta rodada:
+  **"ANNOUNCEMENT: Our quest has ended, and Paladin has shut down operations on May 1st 2024."**
+  Endereço publicado não prova casa viva.
+
+**Falsos amigos de domínio medidos hoje**, para a lista que já tinha `chopchop`, `mpc.wd1`,
+`icon.wd3`, `remedy`, `rain`, `triumph` e `playground`:
+
+| domínio | o que eu esperava | o que é |
+|---|---|---|
+| `studiomassa.com` | Studio Massa, animação holandesa | **escritório de contabilidade italiano** em Casale Monferrato |
+| `spektrum.dk` | Spektrum, animação dinamarquesa | **banca de advocacia** em Herning |
+| `filmtecknarna.se` | Filmtecknarna, animação sueca | **blog de conteúdo** com posts sobre cassino e mudanças |
+| `blackstudios.se` | Bläck, estúdio sueco | **blog** de 2019 sobre desenvolvimento de jogos |
+| `storyline.no` | VFX norueguês (16 endereços de pessoa publicados) | **serviços de produção e rental** — câmera, som, grading, estúdio. Zero arte de personagem |
+
+**`juras3d.com` está MORTO, e isso quase virou endereço falso nesta ficha.** A busca oferece
+`juras.rodionovas@juras3d.com` como se fosse endereço publicado. `dns.google/resolve` responde
+**`"Status":3`, NXDOMAIN**, e o `curl` devolve `CONNECT tunnel failed 502`. **Antes de usar
+endereço de site pessoal que veio de resumo de busca, resolva o domínio.**
+
+**O que ficou NÃO CONFERIDO, com essas palavras:**
+
+- `triumphstudios.com`, `forcefieldvr.com`, `codeglue.com` e `bugbear.fi` devolveram **000** (o
+  túnel de saída não resolveu), com e sem `www`. **NÃO CONFERIDO**, não é casa sem site.
+- `www.mobygames.com` e `magazine.artstation.com` devolveram **403**. Os créditos do MobyGames e os
+  *art blasts* da ArtStation seriam a melhor fonte de nome+cargo pareados da rodada.
+  **NÃO CONFERIDO.**
+- `funcom.com/careers` responde 200 mas escreve **"Loading vacancies..."**: a lista é montada por
+  JavaScript e o `curl` não a vê. **NÃO CONFERIDO** — não escrever "Funcom sem vaga".
+- A busca global do Workable com o termo `character artist` devolveu **HTTP 429**. Os outros três
+  termos (`character art`, `creature artist`, `3d character`) responderam 200 e **nenhum acerto em
+  escopo** — tudo Bengaluru, Cairo, Amman, Manila e Istambul. O 429 é **NÃO CONFERIDO**.
+
+**Zeros medidos de verdade (200 na mão, corpo lido):**
+
+- **Quadro nacional holandês** (`dutchgamesindustry.nl/jobs`): 119 vagas, 38 casas, **zero de
+  personagem**. Confirma a medição de 12/09 com número de hoje.
+- **Housemarque** (`boards-api.greenhouse.io/v1/boards/housemarque/jobs`): **3 vagas, as três de
+  iluminação**. Zero da disciplina.
+- **Sharkmob** (`sharkmob.teamtailor.com/jobs.json`): **5 vagas**, nenhuma de arte. A
+  *Lead Character Artist* que a busca ainda mostra no ArtStation **não está no quadro vivo**.
+- **Avalanche** (`api.lever.co/v0/postings/avalanchestudios`): **12 vagas, uma de personagem**, que
+  é justamente a que o Vini já enviou em 10/09.
+- **Fatshark** (`fatshark.teamtailor.com/jobs.json`): **5 vagas, uma de personagem** — o achado da
+  rodada.
+
+**Uma via anotada e NÃO gasta, porque a casa já tem pessoa:** o anúncio arquivado de
+*Character Art Director* da Guerrilla em `https://gamejobs.co/Character-Art-Director-at-Guerrilla-1412`,
+aberto nesta rodada, publica **"contact Dave Benach (Senior Talent Acquisition Business Partner)
+through recruitment@guerrilla-games.com"**. É **caixa funcional**, não endereço de pessoa, e a
+Guerrilla já tem **Arno Schmitz** como primeira pessoa. Fica registrado como a **segunda e última**
+via possível daquela casa, para quem precisar dela.
