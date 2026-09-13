@@ -34,6 +34,73 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
+## 🔎 RODADA DE CAÇA DE 13/09 às 14h45 UTC (Jhon B) — **PORTA DE ESPONTÂNEA SEM CAPTCHA: ZERO NOVA, em 23.161 sondagens**
+
+**O que você precisa fazer nesta seção: nada.** Ela é medição, não tarefa. Está aqui para a
+próxima rodada não gastar o dia refazendo o que já foi medido.
+
+O alvo era estreito: **porta de candidatura espontânea que não põe desafio** — a família que já
+provou que passa (a Fenris entrou em 10/09 pelo `register-your-interest/new` do Pinpoint).
+Quatro famílias sondadas, **zero porta nova depois do dedupe**.
+
+| Família | Rota sondada | Sondagens | Rota viva | Sem desafio no HTML | Nova depois do dedupe |
+|---|---|---|---|---|---|
+| **Pinpoint**, por slug | `/en/register-your-interest/new` | **2.601** | 23 em 200 · 2 em 302 | 15 servem o formulário inteiro | **0** |
+| **Pinpoint**, por domínio próprio | idem em `careers.`/`jobs.`/`career.` de 5.852 domínios | **17.557** | **1** | 1 | **0** |
+| **Teamtailor**, slugs conhecidos | `/connect` | **149** | 132 (47 em 200 + 85 em 301) | 132 | **0** |
+| **Teamtailor**, slugs novos | `/connect` | **2.572** | 12 | 12 | **0** |
+| **Teamtailor**, anúncio espontâneo | `jobs.json` dos 149 inquilinos | **149 feeds** | 40 anúncios | — | **0** |
+| **Homerun** | `/`, `/open-application`, `/open-applications` | **12** | 1 (`totalmayhemgames`) | 1 | **0** (já usada) |
+| **Recruitee** | — | **0** | — | — | **0** (parede já medida 7×, não remedida) |
+
+**Por que deu zero, em uma linha:** esta lane foi trabalhada em 10 e 11/09 e **foi consumida**.
+Os 13 quadros Pinpoint com a porta aberta são os mesmos 11 de 10/09, e o Gmail mostra recibo
+nos que interessam; as 15 rotas Teamtailor que a caça de 11/09 enfileirou têm **todas** recibo
+de 11/09 às 14h-15h na caixa dele.
+
+### As duas únicas coisas acionáveis que saíram daqui
+
+1. **Os 7 quadros Pinpoint com o banco de talentos DESLIGADO foram re-testados hoje, como
+   10/09 mandou, e os 7 continuam desligados** (302 na `register-your-interest/new`):
+   `appquantum`, `tripledotstudios`, `buildarocketboy`, `everi`, `ruckus-games`,
+   `bandainamcomobile`, `theready`. Ligar o banco é um clique no painel do estúdio, então vale
+   re-testar de novo **depois de 27/09** — antes disso é rodada queimada.
+   **Mudança de estado medida hoje:** a `hyperhippo`, que 10/09 listava como porta aberta,
+   agora devolve **404** — o quadro morreu, e ela sai da lista.
+2. **Cinco slugs ficaram `NÃO CONFERIDO`**, e a palavra é essa: `clockwork`, `eallin`,
+   `ilogos-game-studios`, `moonbug-entertainment`, `snowdogstudio` devolveram `000` na primeira
+   passada **e na reconferência lenta**. Não são zero, são não medidos. (Os outros 111 que
+   deram `000` foram reconferidos um a um e eram 404 de verdade.)
+
+### Três armadilhas medidas hoje, para não custarem a rodada de alguém
+
+- **`200` na URL exata do Pinpoint não é Pinpoint.** Na varredura de domínio próprio, **44
+  hosts** responderam 200 em `/en/register-your-interest/new` sem redirecionar, e **nenhum
+  deles era Pinpoint**: são páginas de erro do próprio site que respondem 200 (`Page not
+  found` da Take-Two, `Unknown Domain`, `Example Domain`, `Bizland`). Quem contar código de
+  resposta registra 44 portas onde existe **uma**. O que decide é o `<title>` dizer
+  *Register Your Interest* **e** o HTML trazer `job_seeker_form`.
+- **A régua `ACME`/`Hooli` de 10/09 funcionou de novo, e pegou as duas melhores casas do dia.**
+  `moonbug` e `framestore` abrem 200, servem o formulário e não têm captcha nenhum — e são
+  **conta de demonstração**: o quadro traz as cinco vagas-semente (*Head of DEI* em Belfast,
+  US e UK, *Marketing Manager* Paris, *Customer Service Rep* Nova York) e as divisões `ACME` e
+  `Hooli`. Candidatura ali cai numa conta que ninguém abre.
+- **`ccpgames.pinpointhq.com` responde 301 para `fenriscreations.pinpointhq.com`.** É a prova
+  mecânica de que o quadro da Fenris **é** o da CCP Games: quem sondar a CCP como casa nova
+  está reabrindo a candidatura de 10/09.
+
+**Quebra por disciplina, como a regra de 10/09 exige: PERSONAGEM 0, AMBIENTE 0.** Não é "só
+sobrou ambiente" — não sobrou nada, porque banco de talentos não tem disciplina de vaga e a
+lane inteira já estava consumida.
+
+**A única casa que a varredura trouxe e que não estava na lista de 10/09 era a Sun Creature
+(Copenhague), e ela cai com motivo escrito naquele mesmo dia:** *"Estúdio de animação 2D. O
+portfólio dele é 3D full character; a casa não tem a produção onde ele compete."* Some-se que
+a caixa dele já tem auto-resposta da casa dizendo que **não aceitam candidatura espontânea**.
+Registrada como descarte, não como achado.
+
+---
+
 ## 🔎 RODADA DE CAÇA DE 13/09 às 12h50 UTC (Jhon B) — **FILA NOVA: ZERO · e as 15 da sua mão estão TODAS VIVAS**
 
 **O que você precisa fazer nesta seção: nada.** Ela existe por dois motivos, e o segundo é o
