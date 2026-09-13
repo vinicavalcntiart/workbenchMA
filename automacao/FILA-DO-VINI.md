@@ -1,6 +1,44 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-## 🤖 PRONTA PARA DISPARO AUTOMÁTICO (entrada nova de 12/09, 19h55, Jhon B): Blizzard Entertainment — **Character Artist, StarCraft**, Irvine CA — requisição `R028136`, **postada HOJE**
+## 📬 LOTE DE CARTAS FECHADO — 13/09 às 01h35 — **20 rascunhos prontos, dois comandos seus**
+
+Esta é a única coisa que o lote de cartas pede de você. Não há nada para colar de carta
+nenhuma: os vinte rascunhos já estão escritos na sua caixa, com assinatura e anexos, e o
+Apps Script é que dispara.
+
+**Antes de rodar, RECOLE o `automacao/envia-rascunhos.gs` no editor.** A cópia que está aí
+mudou depois do último lote: a lista `ASSUNTO_PROPRIO_PERMITIDOS` ganhou a Lightfox. Sem
+recolar, a carta da Lightfox continua invisível para o envio. E confira que o
+`const SIMULAR` está em **`false`** — com `true` o log lista tudo e **não sai nada**, e o
+log parece idêntico ao de um envio real.
+
+| comando | quantas | o que são |
+|---|---|---|
+| `enviarRascunhos()` | **16** | assunto fixo da campanha |
+| `enviarAssuntoProprio()` | **4** | assunto que a própria casa pediu |
+
+**As 16 do assunto fixo:** Ellie Baldino (Frontier, Cambridge — a nova de agora), Stellar
+Creative Lab, Maria Sjöman (Coffee Stain), Rodeo FX, Beatrice Harty (IO Interactive), 314 Arts,
+Vertpaint, Cahoots, Hyperluminal, Hundred Star, Curtis Andrus (Animal Logic), Team Reptile,
+Jake Fishman (Concept Art House), Polyester, MADFINGER, Arno Schmitz.
+
+**As 4 de assunto próprio:** Lightfox Games (Vancouver, a que explica por que o formulário
+não pôde ser usado), UFX Studios (Bruxelas), HandyGames/THQ Nordic (Giebelstadt) e Keytoon
+(Madri). **As três últimas estão presas desde 10/09** — foram escritas certas e ficaram
+invisíveis porque o envio achava rascunho pelo assunto exato da campanha. A função que as
+enxerga existe desde 11/09 e nunca foi rodada.
+
+> A carta da Ellie **não se candidata de novo**. Ela é a dona da requisição *Experienced
+> Character Artist* no site da Frontier, você já aplicou pelo Lever em 10/09, e a carta diz
+> isso na segunda frase e pede direção.
+
+---
+
+## ~~🤖 PRONTA PARA DISPARO AUTOMÁTICO (entrada nova de 12/09, 19h55, Jhon B): Blizzard Entertainment — **Character Artist, StarCraft**, Irvine CA — requisição `R028136`~~ — **ENVIADA em 12/09**
+
+> Candidatura confirmada por três provas: o texto na tela, a linha `Under Review · September 12, 2026`
+> na própria lista do Workday da Blizzard, e o email de recibo cerca de uma hora depois nomeando o cargo.
+> Registrada em `enviados.csv`. A ficha abaixo fica só como histórico.
 
 **Anúncio (fonte oficial, ATS):**
 https://xboxgaming.wd1.myworkdayjobs.com/Blizzard_External_Careers/job/Irvine---Blizzard---Blizzard-Way/Character-Artist---StarCraft---Irvine--CA_R028136
