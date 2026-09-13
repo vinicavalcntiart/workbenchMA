@@ -34,6 +34,65 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
+## 🔎 RODADA DE CAÇA DE 13/09 às 12h50 UTC (Jhon B) — **FILA NOVA: ZERO · e as 15 da sua mão estão TODAS VIVAS**
+
+**O que você precisa fazer nesta seção: nada.** Ela existe por dois motivos, e o segundo é o
+que vale o seu tempo.
+
+### 1. As 15 vagas que estão na sua mão foram RECONFERIDAS na fonte oficial, uma a uma
+
+Ninguém tinha feito isso desde 09/09, e vaga sênior de personagem dura de 3 a 7 dias. **Todas
+as 15 responderam VIVA, zero morta, zero não conferido.** Então nenhum clique seu vai para uma
+vaga que já fechou:
+
+| # | Vaga | Onde | Fonte que respondeu |
+|---|---|---|---|
+| 1 | Behaviour — Senior 3D Character Artist, Dead by Daylight | Montréal | Lever US |
+| 3 | Behaviour — Senior 3D Character Artist, projeto não anunciado | Montréal | Lever US |
+| 5 | Gameloft — Candidature Spontanée | Montréal | SmartRecruiters |
+| 6 | Ubisoft Massive — Lead Character Artist, The Division 2 | Malmö | SmartRecruiters |
+| 7 | Avalanche — Lead Character Artist | Estocolmo | Lever US |
+| 8 | Rodeo FX — Senior Lookdev Artist | Toronto | SmartRecruiters |
+| 9 | Ubisoft Montréal — Team Lead, Modeling (Unreal) | Montréal | SmartRecruiters |
+| 10 | Lighthouse Games — Lead Character Artist | Royal Leamington Spa | Workable |
+| 11 | Framestore — 3D Modeller (contrato curto) | Montréal | Recruitee |
+| 12 | Frontier — Experienced Character Artist | Cambridge | **Lever EU** |
+| 13 | Asobo — Character Artist H/F | Bordeaux | **Lever EU** |
+| 15 | Rodeo FX — Senior Lookdev Artist | Montréal | SmartRecruiters |
+| 16 | Framestore — Blender Generalist / Visual Development Artist | Montréal | Recruitee |
+| 17 | Framestore — Blender Generalist | Londres | Recruitee |
+| 23 | Skydance — Senior Grooming TD | Madri | Lever US |
+
+**Duas ressalvas honestas sobre esta tabela.** A 12 (Frontier) **já foi enviada por você em
+10/09** e continua listada porque a vaga segue no ar, não porque falte fazer algo — **não
+reaplique**. A 13 (Asobo) continua **fechada pelo idioma**, com o veto relido hoje no anúncio
+inteiro: *"Tu disposes d'un niveau de **français** et anglais opérationnel"*. Ela fica na lista
+para quando o francês chegar ao nível, e a faixa publicada dela (32k€–47k€) está abaixo do piso
+da sua política de pretensão.
+
+### 2. A caça fechou em ZERO vaga nova, e o zero tem número
+
+**54 quadros de Workday lidos com 5.242 vagas** (19 locatários, quadros de até 900 vagas
+paginados por inteiro em vez de consultados por termo), **os dois hosts do Lever** com 20
+quadros e 298 vagas, **6.938 tokens** sondados no host europeu do Lever, a **regra 14 conferida
+pela segunda vez no dia** nas quatro casas, os **quadros nacionais** de Chéquia, Romênia, Nova
+Zelândia, Irlanda e Suíça, e o **alerta do LinkedIn das 12h44**. **Nenhuma falha de medição:
+`NÃO CONFERIDO` = 0 na varredura do Workday e na sondagem do Lever.**
+
+**Quebra por disciplina do que apareceu:** 2 de personagem/modelagem dentro do escopo (Eyeline
+Seoul `JR40923` e `JR40941`), e as duas **já tinham sido enviadas e confirmadas em 09/09** — o
+`dedupe-agora.sh` pegou as duas. O resto foi ambiente, concept 2D ou fora do escopo.
+
+### 3. O achado que muda a varredura daqui em diante
+
+**O Lever tem dois hosts de API e a campanha lia só um.** `api.eu.lever.co` existe, e um token
+vivo lá devolve **404** em `api.lever.co` — o mesmo 404 que a varredura vinha lendo como "essa
+casa não tem quadro". Quatro dos 20 quadros de Lever da campanha existem **só** no host europeu,
+e um deles é a **Frontier**, a casa cuja vaga você mandou à mão em 10/09 depois de ela chegar
+pelo alerta do LinkedIn. Agora dá para dizer por que ela nunca apareceu na varredura.
+
+---
+
 ## 🔎 RODADA DE CAÇA DE 13/09 às 01h45 UTC (Jhon B) — **FILA NOVA: ZERO, e o zero está medido**
 
 **Nada novo para você fazer nesta seção.** Ela existe por duas razões: para o número do zero
