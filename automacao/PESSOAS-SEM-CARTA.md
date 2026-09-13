@@ -508,3 +508,51 @@ exatamente o que o `dedupe-agora.sh` manda fazer antes de escrever a ficha.
   + estúdio + "email" devolve, nos dois casos, **apenas RocketReach/ZoomInfo/ContactOut com o
   endereço mascarado** (`m******@stellarcreativelab.com`). Serviço pago é proibido. **Nada foi
   montado, e as duas fichas seguem valendo pelo nome e pelo cargo.**
+
+---
+
+## RODADA DAS 15h35 DE 13/09 — JOE. ALVO GEOGRÁFICO: **HOLANDA PRIMEIRO, NÓRDICOS EM SEGUIDA**.
+
+**Por que esta rodada é geográfica:** a medição de 12/09 às 22h conta **125 vetos escritos de
+autorização de trabalho no Canadá**, 21 nos EUA e **ZERO na Holanda**; e a varredura de 12/09 às
+23h mediu **zero vaga de personagem no quadro nacional holandês**. Porta aberta, prateleira vazia:
+a rota holandesa é **carta para pessoa com nome**, não fila de formulário. Reconferido nesta
+rodada: `https://www.dutchgamesindustry.nl/jobs` responde 200, declara **119 vagas, 38 casas, 19
+cidades**, e **nenhuma é de personagem** — as de arte são 2D Artist (Miniclip), estágio de 3D e 2D
+(Little Chicken) e Game Art stage (hackshield). A Guerrilla segue com **uma** vaga no país inteiro
+(Studio Technical Director) e a Nixxes com duas, **as duas de programação**.
+
+**Agente não escreve carta.** A escrita do Gmail não está na lista `tools` deste agente. Leitura do
+Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
+
+### Jeff Dronkers — **Lead Character Artist** — Vertigo Games, Roterdã, Holanda
+
+- **Email:** **não existe em fonte pública** · confiança **sem-email** · fonte do nome e do cargo:
+  https://theorg.com/org/vertigo-games-1/org-chart/jeff-dronkers , aberta nesta rodada, literal:
+  *"Jeff Dronkers / Lead Character Artist / Rotterdam, Netherlands / Jeff Dronkers is a seasoned
+  Senior Character Artist at Vertigo Games, with a career spanning various roles in 3D art and
+  animation since 2010"*, dentro do time **"Art and Animation Team, 37 people"** da casa.
+- **Por que ELE e não outra pessoa da casa:** é o **único cargo de chefia de personagem** que a
+  casa tem nome público. Vertigo é o maior estúdio holandês de VR (PLAION), com Arizona Sunshine,
+  Metro Awakening e Thief VR, ou seja **criatura e personagem em primeira pessoa** — a disciplina
+  exata dele. Não é recrutador, não é ambiente, não é produção.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de vagas deles, aberta nesta
+  rodada (https://www.vertigo-games.com/jobs/), não lista **nenhuma** posição aberta e em vez disso
+  escreve **"You are welcome to send us an open application. Please include a motivation letter,
+  resume and/or portfolio where applicable"**. E o About diz: **"Vertigo Studios Rotterdam (the
+  Netherlands) creates cutting-edge, high-quality games that offer unrivaled immersion, realizing
+  the stoutest dreams of gamers everywhere."** A carta entra exatamente pela porta que eles
+  próprios abriram.
+- **Fora dos EUA?** Sim — Holanda. Leva a linha de realocação e a de patrocínio. E a Holanda é o
+  país com **zero veto escrito** na contagem da campanha, o que torna essa linha barata de escrever.
+- **Dedupe, feito na caixa:** `pessoas.csv` dá **zero** para Vertigo; o **Gmail** devolve **uma**
+  thread, com a carta fria de **02/09 para `jobs@vertigo-games.com`** e o follow-up de **07/09** na
+  mesma thread. **Nenhuma resposta, nenhuma recusa, nenhum bounce.** PRIMEIRA pessoa desta casa.
+  `grep` por "Dronkers" no Gmail: zero.
+- **Ressalva honesta, três:** (1) **não há endereço** — nem publicado nem montável com honestidade,
+  porque a casa não expõe nenhum endereço individual e o único `@vertigo-games.com` que existe em
+  fonte pública é o `jobs@`, que já recebeu duas mensagens; (2) o cargo vem do **The Org**, que
+  marca o perfil como **"Unverified"** e cuja fonte é o LinkedIn — o site do estúdio **não publica
+  nome de artista nenhum**, então o cargo não tem confirmação de primeira mão; (3) a casa foi
+  tocada há **seis dias** (follow-up de 07/09), então a carta para ele é a **segunda e última**
+  aproximação permitida e precisa assumir isso na primeira linha, nunca chegar como primeiro contato.
