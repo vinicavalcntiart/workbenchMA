@@ -34,6 +34,68 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
+## 🔎 RODADA DE CAÇA DE 13/09 às 01h45 UTC (Jhon B) — **FILA NOVA: ZERO, e o zero está medido**
+
+**Nada novo para você fazer nesta seção.** Ela existe por duas razões: para o número do zero
+ficar escrito, e porque a rodada achou **um erro de registro que valia uma candidatura repetida**.
+
+### ⚠️ NÃO REAPLICAR NA BLUEHOLE: as duas vagas de personagem JÁ FORAM ENVIADAS em 07/09
+
+O Joe listou em 12/09, às 22h, as duas vagas de personagem da **Bluehole Studio (KRAFTON, Pangyo,
+Coreia do Sul)** como *"não registradas em lugar nenhum do repositório"*, e o maestro fechou a
+medição de idioma às 22h40 deixando-as *"na fila, para o Vini decidir"*. **As duas já tinham sido
+enviadas cinco dias antes**, e a prova é o recibo da própria casa na caixa de entrada:
+
+| Requisição (Greenhouse) | Vaga | Recibo de `career@bluehole.com` |
+|---|---|---|
+| `8517790002` (`internal_job_id` 6395150002) | 3D Character Artists (Lead / Senior) — Project V | **07/09, 05h32** |
+| `8520212002` (`internal_job_id` 6386636002) | 리드 캐릭터 아티스트 (Lead Character Artist) — TERA2 | **07/09, 05h38** |
+| `8517791002` | 3D Environment Artists (Lead/Senior) — Project V | **08/09, 07h31** |
+
+A terceira linha contraria o painel, que ainda registra a `8517791002` como *"requisição livre e
+não enviada por decisão escrita"*: ela foi enviada no dia seguinte à decisão e o registro nunca
+foi atualizado.
+
+**Por que o dedupe deixou passar:** `grep -i bluehole enviados.csv` devolve **zero**. As três
+candidaturas existem, confirmadas por email, e **nenhuma virou linha no `enviados.csv`** — é a
+mesma falha da Stunlock, de 11/09, e ela reaparece porque arquivo não é log. Quem resolveu foi a
+caixa de entrada. **`enviados.csv` é do Jhon A e eu não o toquei**; a correção da planilha de
+envios fica para ele, com os dados acima já apurados.
+
+### O que foi varrido nesta rodada, fonte por fonte, e o que cada uma devolveu
+
+| Fonte | Volume medido | Da disciplina no escopo | Novo |
+|---|---|---|---|
+| **Grupo Disney** (`ronda-disney.sh`, os dois sites) | 12 consultas responderam, 12 IDs no ar | 12 | **0** |
+| Workday, **28 quadros** de 20 locatários (o `robots.txt` de cada um) | 13 termos por quadro | 8 acertos de título | **0** |
+| DreamWorks/NBCU, 4 tokens SmartRecruiters | `NBCUniversal3` 383 vagas + `NBCUniversal1` 7 | 4 | **0** |
+| Paramount/Skydance (Lever `skydance`) | 28 anúncios | 7 | **0** |
+| **Busca global do Workable** (fonte nova, ver abaixo) | 1.047 anúncios únicos, 14 termos | 22 | **0** |
+| **Busca global do SmartRecruiters** (fonte nova) | 551 anúncios únicos, 14 termos | 2 de jogos | **0** |
+| Planilha da comunidade (regra 16) | 1.396 linhas desde 19/08 | 42 | **0** |
+| Alertas de vaga no Gmail (EUA e Canadá, 12/09) | 9 vagas | 4 | **0** |
+| **Personio** sondado com 9.643 tokens | 46 quadros vivos | 1 | **0** (Filipinas) |
+| **JazzHR** sondado com 9.643 tokens | 41 respostas, 15 quadros vivos | 0 | **0** |
+
+**Quebra de disciplina da rodada: 0 de personagem, 0 de ambiente.** Não é "só sobrou ambiente" —
+não sobrou nada, e o estoque dos quadros conhecidos segue seco pelo quarto dia.
+
+### Os três descartes que valem ficar escritos, com a frase
+
+1. **Razer — Senior Character Designer (6 meses), Singapura**, `JR2026007640`. Singapura está no
+   escopo e o título casa, mas o corpo é **direção criativa de conceito**, não modelagem:
+   *"Directs the full visual pipeline from concept art through animation to marketplace skins"* e
+   *"This is a review and direction role, not hands-on"*. Concept e character design 2D estão na
+   lista de descarte. Some-se *"Posted 30+ Days Ago"*.
+2. **Cloud Imperium Games** — o quadro irmão `broadbean_external`, que a campanha nunca tinha
+   lido, tem quatro vagas com "personagem" no título (Montréal e Manchester) e **as quatro são
+   `Character Concept Artist` ou `Character Producer`**: conceito 2D e produção, as duas fora.
+3. **Chimera Entertainment — 3D Artist Generalist, Modelling & Texturing** (único acerto de
+   título em 46 quadros do Personio): o posto é em **Cebu, nas Filipinas**, fora do recorte
+   geográfico, e é freelancer.
+
+---
+
 ## ~~🤖 PRONTA PARA DISPARO AUTOMÁTICO (entrada nova de 12/09, 19h55, Jhon B): Blizzard Entertainment — **Character Artist, StarCraft**, Irvine CA — requisição `R028136`~~ — **ENVIADA em 12/09**
 
 > Candidatura confirmada por três provas: o texto na tela, a linha `Under Review · September 12, 2026`
