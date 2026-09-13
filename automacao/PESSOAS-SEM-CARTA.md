@@ -583,3 +583,52 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   ressalva: **não há vaga aberta**, o site não tem página de carreira; é carta de porta. Terceira:
   a página de contato tem telefone publicado, que **não** foi registrado aqui, porque o repositório
   é público.
+
+### Juras Rodionovas ("Juras") — **Character Artist (time de personagem de Darktide)** — Fatshark, Estocolmo, Suécia
+
+- **Email:** **não existe endereço vivo** · confiança **sem-email** · fonte do nome, do cargo e do
+  trabalho: **o dev blog do próprio estúdio**,
+  https://forums.fatsharkgames.com/t/darktide-101-enemy-character-art-dev-blog/105178 (11/02/2025),
+  aberto nesta rodada, literal: **"Hello! My name is Juras, and I am one of the character artists
+  who worked on enemy character art for Warhammer 40,000: Darktide"** e **"with a (quite) small
+  in-house team of character and concept artists"**.
+- **POR QUE ESTA CASA É A MELHOR DA RODADA, e é medição de hoje:** a Fatshark tem **vaga de
+  personagem VIVA**, lida nesta rodada em `https://fatshark.teamtailor.com/jobs.json` (HTTP 200,
+  5 vagas) e conferida no anúncio
+  `https://fatshark.teamtailor.com/jobs/8190501-character-artist` (publicado em **07/08/2026**).
+  É a **única** vaga da disciplina que esta rodada achou em toda a Holanda e nos nórdicos.
+- **Gancho, com a frase do próprio anúncio entre aspas:** **"As a member of the Character Art
+  Team, you will help us in creating gritty and believable characters and creatures, developing our
+  pipeline, and integrating content into the engine... applying your skills in high-poly sculpting,
+  modeling, texturing, as well as hair grooming."** E, na lista de benefícios,
+  **"Relocation package for international talent"**. As duas linhas são de ouro: a primeira nomeia
+  **grooming**, que é o diferencial dele, e a segunda é a casa respondendo por escrito à dúvida
+  número um do leitor. Do dev blog, o gancho de colega para colega:
+  **"Making character art begins with having great concepts to use as reference and target."**
+- **Por que ELE e não outra pessoa da casa:** é artista de personagem de dentro, e o BRIEF-JOE diz
+  que **colega de ofício responde colega de ofício** e que indicação interna pula a fila. A
+  alternativa seriam as duas recrutadoras que já apareceram na caixa (ver dedupe), e elas são
+  **relay do Teamtailor**, não endereço corporativo.
+- **Fora dos EUA?** Sim — Suécia. Entram realocação e patrocínio, e a carta pode citar de volta o
+  **"Relocation package for international talent"** deles.
+- **Dedupe, feito na caixa:** o Gmail devolve **três** threads da Fatshark, todas de 06 e 07/09 e
+  todas do relay `@fatshark.teamtailor-mail.com`: o "Welcome to Fatshark" de **Jonas Wallin**, dois
+  "Log in to Connect" automáticos, e o **"Thank you for your application! :)" de Rachel Raschke**
+  (*"We have successfully received your details, but since many Sharks are on summer vacation now,
+  the process will be a bit slower than usual"*). **Nenhuma recusa e nenhuma resposta humana de
+  verdade** — as três são automáticas do Connect. `pessoas.csv` dá **zero** para Fatshark.
+  PRIMEIRA pessoa desta casa.
+- **O QUE TRAVA O ENDEREÇO, sem maquiagem:** o site pessoal dele, `juras3d.com`, aparece em busca
+  com o endereço `juras.rodionovas@juras3d.com`. **Eu não usei esse endereço e ele não entra na
+  linha**, porque o domínio **não existe mais**: `curl` devolve `CONNECT tunnel failed 502` e a
+  consulta de DNS em `https://dns.google/resolve?name=juras3d.com&type=A` responde
+  **`"Status":3`, que é NXDOMAIN**. Endereço em domínio morto quica por definição. Foi medido, não
+  suposto.
+- **Ressalva honesta, três:** (1) o sobrenome **Rodionovas** e o título **"Lead Character Artist"**
+  vêm de **resumo de busca**, não de fonte aberta por mim — a fonte de primeira mão (o dev blog do
+  estúdio) escreve só **"Juras"** e **"one of the character artists"**, então é assim que a linha
+  guarda o cargo; (2) o dev blog é de **fevereiro de 2025**, e cargo desatualizado é pior que alvo
+  nenhum — não confirmei hoje que ele continua na casa; (3) **sem endereço não há carta para ele
+  hoje**; o que esta ficha entrega de valor imediato é **a vaga viva**, e a decisão de escrever
+  para uma das recrutadoras do relay é do maestro, sabendo que montar
+  `nome.sobrenome@fatshark.se` seria exatamente o chute que produziu as 17 devoluções de 07/09.
