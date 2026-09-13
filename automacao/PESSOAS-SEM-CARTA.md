@@ -556,3 +556,30 @@ Gmail foi usada em todas as fichas, e é ela que manda no dedupe.
   nome de artista nenhum**, então o cargo não tem confirmação de primeira mão; (3) a casa foi
   tocada há **seis dias** (follow-up de 07/09), então a carta para ele é a **segunda e última**
   aproximação permitida e precisa assumir isso na primeira linha, nunca chegar como primeiro contato.
+
+### Dario van Vree — **Cofundador e Diretor** — Studio Pupil, Amsterdã, Holanda
+
+- **Email:** dario@studiopupil.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://studiopupil.com/people/ e https://studiopupil.com/contact/ , as duas abertas nesta
+  rodada. O endereço aparece **em texto visível** no topo das duas páginas e de novo no fim da
+  biografia dele. É o **único** endereço do site inteiro: não existe `info@` nem `jobs@` ali.
+- **Por que ELE e não outra pessoa da casa:** a página `people` publica **uma pessoa só**, ele.
+  Casa pequena, e o BRIEF-JOE manda ir no **fundador** quando não há diretor de arte publicado.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Dario van Vree directs animation with
+  an eye for the weird, the incentive and the power of character performance."** E, na mesma
+  página: **"With Studio Pupil we find ourselves at the heart of European indie animation"**. Ele
+  também **ensina storytelling e animação de personagem na Willem de Kooning Academy** e
+  **cofundou o Kaboom Amsterdam Animation Festival** — e isso casa com o lado de escola do Vini
+  (a Vini Cavalcanti School), que é justamente o link que a carta fria costuma desperdiçar.
+- **Fora dos EUA?** Sim — Holanda. Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv` e `docs/index.html` dão **zero** para
+  "Studio Pupil"; `automacao/processados.csv` tem **uma** ocorrência, que é registro de varredura e
+  não de carta; e o **Gmail devolveu ZERO** para `snowcloud OR "Studio Pupil" OR studiopupil OR
+  Dronkers`. CASA NOVA para a campanha inteira, PRIMEIRA pessoa.
+- **Ressalva honesta, e ela é pesada:** **é estúdio de animação de autor, majoritariamente 2D**
+  ("I'm Perfectly Fine", "Luce and the Rock", "Sisters of the Mist"), então o encaixe com
+  **personagem 3D** é **indireto** — o que aproxima é a frase deles sobre *character performance* e
+  o fato de ele ensinar animação de personagem, não uma pipeline de sculpt/retopo/textura. Segunda
+  ressalva: **não há vaga aberta**, o site não tem página de carreira; é carta de porta. Terceira:
+  a página de contato tem telefone publicado, que **não** foi registrado aqui, porque o repositório
+  é público.
