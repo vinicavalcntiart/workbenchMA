@@ -2895,3 +2895,38 @@ continua sendo *"Open to aligning with your band for the role"*.
 3. **Exige NDA e contrato de prestador antes do material confidencial.**
 4. A mesma casa tem **3D Generalist** (props, set dressing, montagem de cena) e **Concept Artist**
    (2D) abertas. **As duas estão fora da disciplina** e não entram nesta fila.
+
+---
+
+## Streamline Studios — **3D Character Artist** (freelance, remoto) — entrada de PRIORIDADE BAIXA, 14/09
+
+Entra na fila **como baixa e com as ressalvas na frente**, não como achado do dia. A disciplina
+é certa e a régua passou limpa, mas o formato e o país não são o que ele procura.
+
+- **Requisição:** `106` no BambooHR · `https://streamlinestudios.bamboohr.com/careers/106`
+- **Casa:** Streamline Media Group, 25 anos, co-desenvolvimento para Sony, Microsoft e editoras AAA
+- **Régua de veto, termo a termo:** `authoriz`, `sponsor`, `work permit`, `must be based`, `LMIA`,
+  `citizen`, `right to work`, `resident`, `eligib` — **ZERO acerto**. Nenhum veto escrito.
+- **Disciplina:** hands-on de verdade. *"specialization in Character production workflow"*, com
+  ZBrush, Maya e Substance citados. Não é gestão.
+- **Dedupe:** casa inédita no registro.
+
+### As três ressalvas, e elas é que decidem
+
+1. **`atsLocation` diz `Kuala Lumpur, Malásia`**, e a casa é Kuala Lumpur e Tóquio. **A Malásia não
+   está no escopo** (na Ásia só Coreia do Sul e Singapura) e o Japão está fora por ordem dele.
+2. **É freelance por ordem de serviço:** *"This is a fully remote, project-based engagement: scope,
+   deliverables, timelines, and rates are defined per work order."* Pelo briefing, freelance e
+   temporário entram **no máximo como baixa**.
+3. **Não é rota de visto.** Remoto por contrato não patrocina nada e não realoca ninguém, que é o
+   objetivo da campanha.
+
+**O que salva a entrada:** é **100% remota**, então o escopo de país não é violado por realocação,
+e a casa entrega para Sony e Microsoft. Fica registrada para ele decidir, não descartada por mim.
+
+### A irmã dela NÃO entra
+
+A **Lead Character Artist** (`84`) da mesma casa também passa a régua, mas o corpo mostra que é
+**gestão e não arte**: *"responsible for managing and coordinating art-related project plans"*,
+*"oversee the assigning and tracking of art assets"*, *"Create briefs and documentation"*,
+*"Prepare and plan content submission packages for clients"*. Cargo de produção com nome de arte.
