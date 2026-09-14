@@ -39,7 +39,7 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
-## 🔎 RODADA DE CAÇA DE 14/09 às 00h45 UTC (Jhon B) — **grupo Disney medido em zero · e a ÚLTIMA porta Pinpoint livre**
+## 🔎 RODADA DE CAÇA DE 14/09 às 00h45 UTC (Jhon B) — **grupo Disney medido em zero · e a fila de Pinpoint ACABOU** (correção de 01h20)
 
 ### Grupo Disney, olhado por ordem dele como em toda rodada
 
@@ -48,38 +48,33 @@ no ar, nenhum novo.** Este zero foi MEDIDO, não é resposta vazia: o script fal
 devolver zero falso, e os dois quadros do locatário `disney` (`disneycareer` e `disneycareerdc`)
 entram na conta.
 
-### A fila de Pinpoint está no fim, e sobrou UMA
+### A fila de Pinpoint acabou: oito usadas e a nona morta
 
 Das nove portas `register-your-interest` que a rodada de 10/09 levantou, **oito já aparecem no
 `enviados.csv`**: rocksteady, playground-games, magnopus, singularity6, pipeworks, outpost-vfx,
-ingenuitystudios e wushustudios. **Sobra uma:**
+ingenuitystudios e wushustudios. A nona eu dei como livre e **estava errado** (leia abaixo):
 
-#### Hyper Hippo Entertainment — Kelowna, Colúmbia Britânica (a vaga é `Remote (Canada)`)
+#### ~~Hyper Hippo Entertainment~~ — **ROTA MORTA. ERRO MEU, CORRIGIDO NA MESMA NOITE.**
 
-- **URL:** `https://hyperhippo.pinpointhq.com/register-your-interest/new`
-- **Conferida AGORA, nesta rodada:** HTTP **200**, título `Register Your Interest | Hyper Hippo
-  Entertainment Careers`, **zero ocorrência de `recaptcha`, `hcaptcha` e `turnstile`** no HTML e
-  **zero palavra-isca** (`ACME` e `Hooli` em 0), que é o teste de locatário de demonstração.
-- **Por que ela vale:** a casa está registrada no painel como **parede** desde 08/09, porque a
-  página de carreiras nem chega a montar. Esta rota entra por trás da parede, e o departamento
-  **`Art`** existe de verdade na lista.
-- **Dedupe, feito no minuto:** `enviados.csv` não tem a casa, e o **GMAIL devolveu ZERO** para
-  `"Hyper Hippo" OR hyperhippo`. Rota livre.
-- **Campos, do dossiê de 10/09:** department **`Art`**, location **`Remote (Canada)`** (é a única),
-  LinkedIn em `#job_seeker_form_linkedin_url`, e **uma pergunta só** do estúdio, slot 0, `short_text`,
-  **não obrigatória**, id `237602`: *"What are your pronouns?"* → responder `He/Him`.
+> **NÃO CLIQUE AQUI.** Eu enfileirei esta porta às 00h45 de 14/09 depois de um `curl` devolver
+> **HTTP 200** com o título `Register Your Interest | Hyper Hippo Entertainment Careers` e zero
+> marcador de captcha. **Estava errado, e o registro já avisava.**
+>
+> Meia hora depois, na rodada de envio, o `dedupe-agora.sh` mostrou o que eu não tinha lido: a
+> campanha mediu esta rota **duas vezes no navegador**, em 08/09 e de novo em 11/09, e as duas
+> deram **404**. A causa foi isolada por bisseção de cabeçalho na época.
+>
+> **Reconferi eu mesmo agora, no navegador de verdade:** `HTTP 404`, título `404 Not Found |
+> Pinpoint`, texto *"The page you were looking for doesn't exist"*, e **zero campo de formulário
+> na página**. O `curl` recebe 200 e o navegador recebe 404, na mesma URL e no mesmo minuto.
+>
+> **A lição, que vale mais que a porta:** nesta casa, e provavelmente em outras do Pinpoint,
+> **`curl` 200 não prova porta aberta**. Só o navegador prova. Quem varrer Pinpoint por curl tem
+> que confirmar no navegador antes de enfileirar, e eu não confirmei.
+>
+> Com isso, das nove portas `register-your-interest` levantadas em 10/09, **oito foram usadas e a
+> nona está morta: a fila de Pinpoint acabou.**
 
-> **RESSALVA HONESTA, e ela é grande.** A única localização oferecida é `Remote (Canada)`, e ele
-> não tem autorização de trabalho no Canadá. **Não há veto ESCRITO** e por isso a porta não se
-> descarta pela régua, mas é banco de talentos de um país que já é o pior da campanha em veto
-> escrito (125 medidos). Encaixe de disciplina é bom, probabilidade é baixa. **Nenhum campo de
-> autorização deve ser respondido com mentira**, e se aparecer atestação obrigatória sem campo de
-> texto livre, a regra manda NÃO marcar e registrar como item de mão.
-
-**Comando de disparo, para a faixa do Jhon A:**
-```
-sh automacao/dedupe-agora.sh "hyperhippo" "Hyper Hippo"
-```
 
 ---
 
