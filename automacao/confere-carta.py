@@ -57,8 +57,17 @@ SEM_GANCHO = re.compile(
     r'\b(your (?:studio|company|team)|the (?:studio|company))\b', re.I)
 
 RX_URL = re.compile(r'https?://[^\s<>"\')]+')
-RX_EMOJI = re.compile(
-    '[\U0001F300-\U0001FAFF☀-➿←-⇿⬀-⯿️]')
+
+# O seletor de variacao U+FE0F e um caractere SEPARADO que segue o emoji base: o predileto do
+# Vini, "☺️", e na verdade U+263A + U+FE0F. Contar a classe crua fazia UM emoji virar DOIS e
+# reprovar carta correta, defeito que o proprio verificador acusou em 14/09. O seletor sai antes
+# da contagem, e o que sobra e o emoji de verdade.
+RX_VS = re.compile('[︎️‍]')
+RX_EMOJI = re.compile('[\U0001F300-\U0001FAFF☀-➿←-⇿⬀-⯿]')
+
+
+def conta_emoji(t):
+    return len(RX_EMOJI.findall(RX_VS.sub('', t)))
 
 
 def palavras(t):
@@ -136,10 +145,10 @@ def confere(txt, html=None, tipo='fria', nome=''):
     lo, hi = EMOJI.get(tipo, EMOJI['fria'])
     linhas = txt.strip().split('\n')
     assunto = next((l for l in linhas if l.lower().startswith('subject:')), '')
-    if RX_EMOJI.search(assunto):
+    if conta_emoji(assunto):
         erros.append('EMOJI NO ASSUNTO. O disparador do Apps Script acha o rascunho pelo '
                      'assunto literal: emoji ali some com a carta.')
-    e = len(RX_EMOJI.findall(RX_EMOJI.sub('', assunto) and txt.replace(assunto, '') or txt))
+    e = conta_emoji(txt.replace(assunto, '') if assunto else txt)
     if e < lo:
         avisos.append('%d emoji para tipo "%s", esperado entre %d e %d.' % (e, tipo, lo, hi))
     if e > hi:
