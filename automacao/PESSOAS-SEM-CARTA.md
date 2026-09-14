@@ -833,3 +833,54 @@ aberto nesta rodada, publica **"contact Dave Benach (Senior Talent Acquisition B
 through recruitment@guerrilla-games.com"**. É **caixa funcional**, não endereço de pessoa, e a
 Guerrilla já tem **Arno Schmitz** como primeira pessoa. Fica registrado como a **segunda e última**
 via possível daquela casa, para quem precisar dela.
+
+## RODADA DAS 00h35 DE 14/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Rota desta rodada, na ordem que o maestro pediu:** Holanda primeiro, nórdicos em seguida.
+Reconferido nesta rodada, e o número de hoje bate com o de 12 e 13/09:
+`https://www.dutchgamesindustry.nl/jobs` responde **200 com 304 KB** e o quadro nacional holandês
+**continua sem uma única vaga de personagem** — o que há de arte é 2D Artist, Game Art (stage),
+Environmental Artist Internship, Internship Game Artist 2D/3D e um Art Lead contratado. Porta
+aberta, prateleira vazia: na Holanda a rota é **carta para pessoa com nome**, e foi o que esta
+rodada caçou.
+
+**Dedupe feito na CAIXA, não no arquivo.** As cinco casas abaixo devolveram **ZERO** no Gmail, em
+busca por nome de casa, por domínio e por **janela de tempo** (`newer_than:10d` cruzado com os
+nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áustria (outra casa,
+`office@digitalrain.at`) e a recusa já conhecida da Galaxy Grove.
+
+### Peter Wingaard — **Management, Level Design (cofundador; contato de "Inquiries" do estúdio)** — Rain Games, Bergen, Noruega
+
+- **Email:** peter@rain-games.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://rain-games.com/press , aberta nesta rodada. É o presskit() oficial da casa e ele publica,
+  na seção **Contact**, três endereços em texto visível: **"Inquiries peter@rain-games.com"**,
+  **"Press requests Marion@rain-games.com"** e **"Support support@rain-games.com"**, além do
+  **"Press / Business contact: andersson@rain-games.com"** do Factsheet.
+- **Por que ELE e não outra pessoa da casa:** a mesma página publica o time inteiro com cargo, e as
+  pessoas certas de arte estão lá — **"Ole Ivar Rudi — Art Director"**, **"Aslak Helgesen — Lead
+  Artist"** e **"Petter Amland — Artist"**. **Nenhum dos três tem endereço publicado, e nada foi
+  montado.** Dos endereços que existem, o do Peter é o único que não é caixa de imprensa nem de
+  suporte, e ele é da direção de uma casa pequena, que é exatamente onde o BRIEF-JOE manda ir.
+  A carta ganha uma vantagem rara aqui: **o fecho fixo ("if someone else there is the right person
+  for this, just point me") tem destinatário com nome e cargo já sabidos**, o Ole Ivar Rudi.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Rain Games is an independent,
+  employee-owned game development studio based in Norway. Founded in 2010, the creators at Rain
+  Games share a passion for crafting memorable worlds which engage curious players through a sense
+  of exploration and discovery."** E, na mesma página, a lista de lançamentos:
+  **"the critically acclaimed puzzle platformer Teslagrad, as well as the 3D action-adventure
+  World to the West"**. O *World to the West* é o encaixe: ação-aventura 3D com elenco de
+  personagens estilizados, que é o portfólio dele.
+- **Fora dos EUA?** Sim — Noruega. Entram a linha de realocação e a de patrocínio. Atenção de
+  redação: a Noruega **não é União Europeia**, então a frase não deve falar em cidadania da UE.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `rain-games`; o **Gmail devolveu ZERO** para `rain-games OR "Rain Games" OR
+  Teslagrad` e zero para `Wingaard`. A única coisa que o Gmail tem com a palavra "rain" é a
+  **Digital Rain**, austríaca, que é outra casa. **CASA NOVA para a campanha inteira**, PRIMEIRA
+  pessoa.
+- **Ressalva honesta, quatro:** (1) o pareamento `peter@` ↔ **Peter Wingaard** é **inferência
+  minha**: a página publica o endereço sob o rótulo "Inquiries" e publica um único Peter no time;
+  é a leitura óbvia, mas não está escrito lado a lado; (2) **o presskit está velho** — ele fala do
+  Girl Genius *"gearing up for their own release later in 2023"*, então nome e cargo podem ter
+  mudado, e cargo desatualizado é pior que alvo nenhum; (3) o cargo dele é **gestão e level design,
+  não arte** — ele encaminha, não abre portfólio; (4) **não há vaga aberta** e a casa é pequena e
+  de capital próprio dos funcionários, o que torna patrocínio de visto a hipótese mais fraca.
