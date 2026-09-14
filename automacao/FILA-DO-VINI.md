@@ -1,10 +1,10 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-## 📬 LOTE DE CARTAS FECHADO — 13/09 às 01h35 — **20 rascunhos prontos, dois comandos seus**
+## 📬 LOTE DE CARTAS FECHADO — 13/09 às 23h50 — **24 rascunhos prontos, dois comandos seus**
 
 Esta é a única coisa que o lote de cartas pede de você. Não há nada para colar de carta
-nenhuma: os vinte rascunhos já estão escritos na sua caixa, com assinatura e anexos, e o
-Apps Script é que dispara.
+nenhuma: os vinte e quatro rascunhos já estão escritos na sua caixa, com assinatura e anexos,
+e o Apps Script é que dispara.
 
 **Antes de rodar, RECOLE o `automacao/envia-rascunhos.gs` no editor.** A cópia que está aí
 mudou depois do último lote: a lista `ASSUNTO_PROPRIO_PERMITIDOS` ganhou a Lightfox. Sem
@@ -14,8 +14,13 @@ log parece idêntico ao de um envio real.
 
 | comando | quantas | o que são |
 |---|---|---|
-| `enviarRascunhos()` | **16** | assunto fixo da campanha |
+| `enviarRascunhos()` | **20** | assunto fixo da campanha |
 | `enviarAssuntoProprio()` | **4** | assunto que a própria casa pediu |
+
+**As 4 mais novas, escritas em 13/09 à noite, todas para pessoa com nome e email publicado
+no site do próprio estúdio:** Dario van Vree (Studio Pupil, Amsterdã), Michael Bengtsson
+(Mindbender, Gotemburgo), Are Sundnes (Hyper Games, Oslo) e Petter Lindblad (Snowcloud Films,
+Estocolmo). Entram no `enviarRascunhos()` junto com as 16 abaixo.
 
 **As 16 do assunto fixo:** Ellie Baldino (Frontier, Cambridge — a nova de agora), Stellar
 Creative Lab, Maria Sjöman (Coffee Stain), Rodeo FX, Beatrice Harty (IO Interactive), 314 Arts,
