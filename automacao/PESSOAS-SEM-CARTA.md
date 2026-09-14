@@ -1190,3 +1190,35 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   de patrocínio de visto e sugere trabalho remoto por projeto; (3) o endereço **não está escrito
   ao lado do nome dele** — está atrás do texto "contact us" da página de contato, então é o
   estúdio publicando o endereço dele como canal de entrada, e não uma caixa pessoal.
+
+### Igor Duspara — **Owner and Creative Director** — Studio CAN, Roterdã, Holanda
+
+- **Email:** igor@studiocan.nl · confiança **alta** · **PUBLICADO** · fonte:
+  https://studiocan.nl/about , aberta nesta rodada. O bloco de contato do fim da página publica,
+  um embaixo do outro, **"Igor Duspara — Owner and Creative Director — igor@studiocan.nl"** e
+  **"Jonas Ott — Owner and Creative Producer — jonas@studiocan.nl"**, ao lado do `info@studiocan.nl`
+  genérico. (A mesma página publica telefone, que **não** foi registrado aqui porque o repositório
+  é público.)
+- **Por que ELE e não outra pessoa da casa:** a casa tem duas pessoas e as duas estão publicadas.
+  Dos dois donos, ele é o **Creative Director** e o outro é produtor — o BRIEF-JOE manda ir na
+  arte antes da produção.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Studio CAN is a Rotterdam-based
+  animation studio telling your stories in the most compelling and playful way"** e, o que
+  interessa de verdade, **"Our work tends to be playful and lighthearted, character driven and
+  narrative, with a hint of silliness thrown in for good measure."** Casa que se define como
+  *character driven* é casa que conversa com um portfólio de personagem estilizado.
+- **Fora dos EUA?** Sim — Holanda, União Europeia, que é a rota preferida (zero veto escrito de
+  autorização na contagem de 12/09).
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `studiocan` e para `Duspara`; a única ocorrência de "studio can" em
+  `docs/index.html` é coincidência de texto corrido ("...nenhum estúdio can..."), não registro de
+  casa. O **Gmail devolveu ZERO** para `studiocan`, `"Studio CAN"`, `"studiocan.nl"`, `Duspara` e
+  na janela de 12 dias cruzada com Roterdã. **CASA NOVA**, PRIMEIRA pessoa; Jonas Ott fica como
+  segunda e última.
+- **Ressalva honesta, e ela é pesada, três:** (1) **o estúdio é 2D**, não 3D — a própria bio dele
+  na página diz que ele **"focuses on 2D animation, motion graphics, and drawing"**, e o serviço
+  anunciado é videoclipe, motion graphic, explainer e animação de logo; o encaixe com personagem
+  3D é **indireto** e a carta não pode fingir o contrário; (2) **são duas pessoas** — não há
+  quadro para contratar, e a forma honesta é oferta de colaboração por projeto, como no caso da
+  Concept Art House e do 3Dpicnic; (3) **não há vaga aberta nem página de carreiras**, é carta de
+  porta.
