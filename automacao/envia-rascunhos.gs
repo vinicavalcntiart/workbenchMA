@@ -1,12 +1,20 @@
 // Envia os rascunhos da campanha com a assinatura do Gmail e os anexos (CV e carta).
 // Roda dentro da SUA conta Google, no Apps Script (script.google.com), sem proxy e sem token.
 //
-// COMO USAR (uma vez):
+// COMO USAR — UMA VEZ SÓ, E NUNCA MAIS. Mudou em 14/09; ver o bloco PILOTO AUTOMÁTICO no fim.
 // 1. Abra https://script.google.com, "Novo projeto", cole este arquivo inteiro.
 // 2. No menu da esquerda, "Serviços" (+), adicione "Gmail API" (fica como serviço avançado "Gmail").
 // 3. Confira PASTA_DRIVE_ID (pasta do Drive com Vini_Cavalcanti_CV.pdf e Vini_Cavalcanti_Cover_Letter.pdf).
-// 4. Com SIMULAR = true, rode a função enviarRascunhos e autorize; o log só lista o que seria enviado.
-// 5. Troque SIMULAR para false e rode de novo. Cada execução envia até MAX_POR_EXECUCAO; rode mais vezes se sobrar.
+// 4. Rode `instalar` e autorize. Ele cria o gatilho de 2 em 2 horas e deixa DESARMADO.
+// 5. Rode `armar`. A partir daí as cartas saem sozinhas, sem você editar código nunca mais.
+// Para conferir a qualquer momento: rode `estado`, que diz se o gatilho existe, se está armado,
+// quantos rascunhos esperam e quando foi a última rodada. Para parar: `desarmar`.
+//
+// O QUE ISTO CONSERTOU. Até 14/09 não havia gatilho nenhum e `SIMULAR` era uma constante que
+// você tinha de editar no código. O padrão do arquivo era `true`, ou seja NÃO ENVIAR. Em 14/09
+// isso tinha represado 26 rascunhos, o mais velho de 10/09, com o último lote de cartas saído
+// em 11/09 às 21h27: três dias de campanha parada, sem erro nenhum aparecer, porque não enviar
+// era o comportamento normal do arquivo.
 //
 // O que ele faz com cada rascunho da campanha (assunto fixo abaixo):
 // - pega o HTML do rascunho, acrescenta a assinatura que você usa (a marcada como padrão em Configurações > Assinatura),
@@ -25,7 +33,28 @@ const PASTA_DRIVE_ID = "1A3lzDurErp2bHh9s8jbEW7TLMnswxmi8";
 const NOMES_ANEXOS = ["Vini_Cavalcanti_CV.pdf", "Vini_Cavalcanti_Cover_Letter.pdf"];
 const MAX_POR_EXECUCAO = 40;   // execução do Apps Script dura no máximo 6 minutos
 const PAUSA_MS = 1500;         // pausa entre envios
-const SIMULAR = true;          // true = só lista no log; false = envia de verdade
+
+// SIMULAR deixou de ser uma constante que você edita à mão, e a razão está medida.
+// Em 14/09 havia 26 rascunhos represados, o mais velho de 10/09, e o último lote de cartas
+// tinha saído em 11/09 às 21h27: TRÊS DIAS parados. A causa não era cota nem erro. Era esta
+// linha, que no repositório sempre veio `true`, somada ao fato de que o arquivo NUNCA teve
+// gatilho de tempo. Ou seja: o envio só acontecia se você colasse o arquivo, editasse o
+// código e rodasse à mão. Colar a cópia do repositório e rodar não enviava nada: só escrevia
+// no log. Isso punha trabalho recorrente na sua mão e represava a campanha em silêncio.
+// Agora o estado mora numa propriedade do script, que se liga e desliga por função, sem
+// editar código, e o padrão continua sendo o seguro.
+// O try existe porque este código roda no CARREGAMENTO do script, antes de qualquer função.
+// Na primeiríssima execução, antes de você autorizar, PropertiesService ainda lança; sem o
+// try isso quebraria TODAS as funções do arquivo, inclusive o diagnóstico. Em caso de dúvida
+// ele devolve o estado seguro, que é desarmado.
+function armado_() {
+  try {
+    return PropertiesService.getScriptProperties().getProperty('ARMADO') === 'sim';
+  } catch (e) {
+    return false;
+  }
+}
+const SIMULAR = !armado_();    // armado = envia de verdade; desarmado = só lista no log
 
 // ARMADILHA DO LINK, resolvida aqui em 03/09/2026.
 // O compositor do Gmail reescreve TODO link ao gravar o rascunho, virando
@@ -411,4 +440,99 @@ function enviarAssuntoProprio() {
     Utilities.sleep(PAUSA_MS);
   }
   Logger.log(n + " processados nesta execução" + (SIMULAR ? " (simulação)" : ""));
+}
+
+
+/* =============================================================================
+ * PILOTO AUTOMÁTICO — acrescentado em 14/09/2026
+ *
+ * POR QUE ISTO EXISTE. Até hoje o arquivo não tinha gatilho nenhum: enviar dependia de
+ * você abrir o Apps Script, editar `SIMULAR` no código e rodar a função à mão. O resultado
+ * medido em 14/09: 26 rascunhos represados, o mais velho de 10/09, e o último lote de
+ * cartas saído em 11/09 às 21h27. Três dias de campanha parada sem nenhum erro aparecer,
+ * porque "não enviar" era o comportamento normal do arquivo.
+ *
+ * O QUE VOCÊ FAZ, UMA VEZ SÓ, e nunca mais:
+ *   1. Cole este arquivo por cima do projeto antigo no script.google.com.
+ *   2. Rode `instalar`. Ele cria o gatilho de 2 em 2 horas e deixa DESARMADO.
+ *   3. Rode `estado` e leia o log: ele diz quantos rascunhos existem e se está armado.
+ *   4. Rode `armar`. A partir daí as cartas saem sozinhas, de 2 em 2 horas.
+ *
+ * Para parar a qualquer momento: rode `desarmar`. O gatilho continua de pé, mas cada
+ * execução só lista no log. Para remover o gatilho de vez: `desinstalar`.
+ *
+ * NADA DISSO PEDE EDIÇÃO DE CÓDIGO. Era a edição de código que fazia a campanha parar.
+ * ============================================================================= */
+
+const GATILHO_ALVO = 'rodada';
+const GATILHO_HORAS = 2;
+
+function instalar() {
+  desinstalar();
+  ScriptApp.newTrigger(GATILHO_ALVO).timeBased().everyHours(GATILHO_HORAS).create();
+  // instalar NUNCA arma sozinho: quem manda enviar é você, com `armar`.
+  PropertiesService.getScriptProperties().setProperty('ARMADO', 'nao');
+  Logger.log('gatilho criado: ' + GATILHO_ALVO + ' a cada ' + GATILHO_HORAS + 'h. '
+             + 'Estado: DESARMADO. Rode `armar` quando quiser que as cartas saiam.');
+}
+
+function desinstalar() {
+  var n = 0;
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === GATILHO_ALVO) { ScriptApp.deleteTrigger(t); n++; }
+  });
+  Logger.log(n + ' gatilho(s) removido(s).');
+}
+
+function armar() {
+  PropertiesService.getScriptProperties().setProperty('ARMADO', 'sim');
+  Logger.log('ARMADO. As cartas passam a sair sozinhas de ' + GATILHO_HORAS + ' em '
+             + GATILHO_HORAS + ' horas. Para parar, rode `desarmar`.');
+}
+
+function desarmar() {
+  PropertiesService.getScriptProperties().setProperty('ARMADO', 'nao');
+  Logger.log('DESARMADO. O gatilho continua de pé, mas cada execução só lista no log.');
+}
+
+/* Diz em UMA olhada se o sistema está vivo. Rode esta quando desconfiar de qualquer coisa. */
+function estado() {
+  var gatilhos = ScriptApp.getProjectTriggers().filter(function (t) {
+    return t.getHandlerFunction() === GATILHO_ALVO;
+  });
+  var rascunhos = GmailApp.getDrafts().filter(function (d) {
+    return d.getMessage().getSubject() === ASSUNTO;
+  });
+  Logger.log('gatilho instalado: ' + (gatilhos.length ? 'SIM' : 'NAO'));
+  Logger.log('armado: ' + (armado_() ? 'SIM, as cartas saem sozinhas' : 'NAO, so lista no log'));
+  Logger.log('rascunhos com o assunto da campanha: ' + rascunhos.length);
+  var ultimo = PropertiesService.getScriptProperties().getProperty('ULTIMA_RODADA');
+  Logger.log('ultima rodada automatica: ' + (ultimo || 'nunca rodou'));
+  if (gatilhos.length && !armado_() && rascunhos.length) {
+    Logger.log('>>> ATENCAO: ha ' + rascunhos.length + ' rascunho(s) parado(s) e o script esta '
+               + 'DESARMADO. Foi exatamente esta combinacao que represou a campanha por tres '
+               + 'dias em 14/09. Rode `armar`.');
+  }
+}
+
+/* O que o gatilho chama. Faz as duas filas na mesma execução: a do assunto fixo da campanha
+ * e a dos rascunhos com assunto próprio. Registra a hora para o `estado` poder provar que
+ * rodou, porque "eu acho que está rodando" foi o que escondeu a parada de três dias. */
+function rodada() {
+  PropertiesService.getScriptProperties()
+    .setProperty('ULTIMA_RODADA', new Date().toISOString());
+  if (!armado_()) {
+    Logger.log('rodada chamada, mas o script esta DESARMADO: nada foi enviado.');
+    return;
+  }
+  try {
+    enviarRascunhos();
+  } catch (e) {
+    Logger.log('ERRO em enviarRascunhos: ' + e);
+  }
+  try {
+    enviarAssuntoProprio();
+  } catch (e) {
+    Logger.log('ERRO em enviarAssuntoProprio: ' + e);
+  }
 }
