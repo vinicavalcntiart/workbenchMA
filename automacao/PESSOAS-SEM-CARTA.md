@@ -1121,3 +1121,36 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   e modelo feito à mão, o que reduz o espaço de personagem 3D; (3) o endereço dele está no
   `mailto:` **junto com o `jobs@`**, ou seja é o canal de candidatura da casa e não a caixa
   privada dele — a carta tem que funcionar se o RH abrir antes.
+
+### Dan Dixon — **Cofundador / Executive Producer** — Snafu Pictures, Londres, Reino Unido
+
+- **Email:** dan@snafu-pictures.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://snafu-pictures.com/team , aberta nesta rodada. A página publica **nove pessoas com nome,
+  cargo e endereço**, um embaixo do outro: **"Dan Dixon — Co-founder/EP — dan@snafu-pictures.com"**,
+  Paul Schleicher (Co-founder/EP), Tony Orsten (Chairman), Ross Main (Production Manager), Natt
+  Tapley (Head Writer & Creative Development), Joel Veitch (Creator - Bad Dinosaurs), Joe Burns
+  (Head of Story) e mais dois.
+- **Por que ELE e não outra pessoa da casa:** dos dois fundadores, é o que vem do lado de
+  produção de CG — a bio dele na mesma página diz que produziu **"full CG animation for TV drama,
+  games and advertising"** e que trabalhou em **"Axis Studios, Aardman, The Imaginarium, MPC and
+  Framestore"**. Não existe diretor de arte nem RH publicado nessa casa; pelo BRIEF-JOE, em casa
+  pequena a porta é o fundador, e entre os dois o Dan é quem já contratou artista de CG.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Snafu Pictures is a London based
+  Animation Production Company established by Dan Dixon & Paul Schleicher in 2020."** O produto
+  atual é personagem: o Joel Veitch está creditado ali como **"Creator - Bad Dinosaurs"**, e a bio
+  do Natt Tapley diz que ele é **"our Head Writer and Voice Director on Bad Dinosaurs for
+  Netflix"**. Uma série de dinossauro em CG é elenco de criatura estilizada, que é exatamente o
+  que o portfólio do Vini entrega.
+- **Fora dos EUA?** Sim — Reino Unido. Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv`, `alvos.csv` e
+  `docs/index.html` dão **zero** para `snafu` e para `Dixon`; o **Gmail devolveu ZERO** para
+  `snafu`, para `"snafu-pictures.com"`, para `"Bad Dinosaurs"` e na janela de 12 dias — e vale
+  dizer que a caixa tem carta para muita casa de Londres (Union VFX, Framestore, Untold, Golden
+  Wolf, BlueBolt, No Ghost), **nenhuma delas esta**. **CASA NOVA**, PRIMEIRA pessoa. Paul
+  Schleicher fica como segunda e última.
+- **Ressalva honesta, três:** (1) é **produtora**, não estúdio de execução — quem modela os
+  personagens de uma série dela pode ser um estúdio parceiro, e a carta tem que pedir para entrar
+  na lista de artistas dos projetos, não vaga de quadro fixo; (2) o cargo dele é **produção
+  executiva**, não direção de arte, então ele encaminha mais do que abre portfólio; (3) o site
+  **não tem página de carreiras nem vaga publicada** (o menu é só Adult, Family, News, About),
+  ou seja é carta de porta.
