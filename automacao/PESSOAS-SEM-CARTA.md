@@ -979,3 +979,37 @@ nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áu
   agencies is white-label, so it can't sit on this page"** —, então não dá para medir quanto de
   personagem existe de fato; (3) não há vaga, não há página de carreiras, e o volume de trabalho de
   um estúdio solo é imprevisível.
+
+### Simon van der Linden — **Cofundador (game design, conceitos)** — Monobanda, Utrecht, Holanda
+
+- **Email:** simon@monobanda.nl · confiança **alta** · **PUBLICADO pelo próprio site**, mas leia a
+  ressalva 1 antes de usar · fonte: https://monobanda.nl/contact e https://monobanda.nl/about , as
+  duas abertas nesta rodada. O endereço está no bloco de dados estruturados que o site publica em
+  todas as páginas, com o nome legal da casa junto:
+  `{"legalName":"Monobanda PLAY", ... "email":"simon@monobanda.nl"}`. O nome e o cargo dele saem da
+  mesma fonte, na página About: **"Simon van der Linden — Co founder / game design, concepts"**.
+- **Por que ELE e não outra pessoa da casa:** a About publica o time inteiro — Rosalie van Velsen
+  (Creative Operations Lead), Joanneke Weerdmeester (Behavioural Scientist), **Niki Smit (Co founder
+  / game design, visual design / concepts)**, Rian Evers (Project lead) e Jesse van Leeuwen (Coding
+  & Development) — e **nenhum outro tem endereço publicado**. Nada foi montado. O Niki Smit, que é
+  o lado visual da dupla fundadora, fica como **segunda e última** pessoa possível, e só no dia em
+  que aparecer endereço dele publicado.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Monobanda is an award winning studio
+  that explores and expands the boundaries of play and interaction."** e, o que de fato abre a porta
+  para o Vini: **"We work in hybrid freelance teams where our art is informed, and co-created by
+  scientists, psychologists, care professionals and other experts on the broad spectrum of human
+  experience."** Casa que monta **time híbrido de freelancers** é casa que contrata artista por
+  projeto, e isso contorna o item de checklist que mata a candidatura dele em RH generalista.
+- **Fora dos EUA?** Sim — Holanda, União Europeia, a rota preferida da rodada.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `monobanda`; o **Gmail devolveu ZERO** para `monobanda` e para `"van der Linden"`,
+  inclusive na busca por janela de tempo. **CASA NOVA para a campanha inteira**, PRIMEIRA pessoa.
+- **Ressalva honesta, três:** (1) **o endereço não está escrito ao lado do nome dele.** Ele é o
+  endereço de contato que o próprio site publica no bloco de dados estruturados, enquanto o texto
+  visível da página de contato mostra `info@monobanda.nl`. **Não é endereço montado** — é o estúdio
+  publicando —, mas quem escrever deve saber que `simon@` pode ser uma caixa que ele compartilha, e
+  a carta tem que funcionar mesmo se outra pessoa abrir; (2) **o encaixe com personagem 3D é
+  indireto**: a casa faz VR, instalação de arte, oficina e intervenção em saúde mental, e o lado de
+  design visual é do Niki, não dele; (3) **não há vaga aberta** e o site não tem página de
+  carreiras, só um menu **"FOR HIRE"** — é carta de porta. A página de contato publica telefone, que
+  **não** foi registrado aqui porque o repositório é público.
