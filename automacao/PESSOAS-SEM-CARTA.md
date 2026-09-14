@@ -1154,3 +1154,39 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   executiva**, não direção de arte, então ele encaminha mais do que abre portfólio; (3) o site
   **não tem página de carreiras nem vaga publicada** (o menu é só Adult, Family, News, About),
   ou seja é carta de porta.
+
+### Greg Maguire — **Founder / CEO (ex-Creature Supervisor da ILM)** — Humain, Belfast, Reino Unido
+
+- **Email:** greg@humain-studios.com · confiança **alta** · **PUBLICADO**, mas leia a ressalva 3 ·
+  fonte: https://humain-studios.com/contact , aberta nesta rodada. O link **"contact us"** da
+  página é, literal no HTML, `<a href="mailto:greg@humain-studios.com">contact us.</a>`. Nome e
+  cargo saem de https://humain-studios.com/about , também aberta nesta rodada: **"Greg Maguire —
+  Founder – CEO"**.
+- **Por que ELE e não outra pessoa da casa:** é o único do time com endereço publicado (a página
+  de carreiras manda tudo para `careers@humain-studios.com`, caixa funcional), e a bio oficial
+  dele é a de um homem de criatura, não de RH: **"He was R&D Supervisor at Lucasfilm Animation
+  and a Creature Supervisor at Industrial Light & Magic"**, com passagem por **"Walt Disney
+  Feature Animation, Industrial Light & Magic, Lucasfilm Animation and Digital Domain"**, créditos
+  em *Harry Potter and the Prisoner of Azkaban*, *Happy Feet* e *Avatar*, e a fundação do curso de
+  animação 3D da Ulster University.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"The team at Humain is busy creating
+  and perfecting body and facial rigs for leading game and film production studios, but our
+  capacity is always expanding."** E a página diz para quem ela é: **"If you are a producer,
+  animator, outsource manager or rigger working on a live or planned project..."**. O encaixe é
+  de cadeia: quem faz rig facial para casa grande trabalha em cima de malha de personagem, e o
+  Vini é quem entrega essa malha — a carta é de artista para artista, e o fecho fixo ("aponte a
+  pessoa certa") tem valor extra aqui, porque os clientes dele são justamente as casas grandes.
+- **Fora dos EUA?** Sim — Belfast, Reino Unido (HUMAIN Ltd. é registrada lá, conforme a própria
+  política de privacidade do site). Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv`, `alvos.csv` e
+  `docs/index.html` dão **zero** para `humain` e para `Maguire`; o **Gmail devolveu ZERO** para
+  `humain`, para `"humain-studios.com"`, para `Maguire` e na janela de 12 dias. **CASA NOVA**,
+  PRIMEIRA pessoa.
+- **Ressalva honesta, três, e a primeira é a que mais pesa:** (1) **a casa é de RIGGING**, facial
+  e corporal, com framework próprio (EKER) — ela não contrata modelador de personagem, e fingir
+  o contrário mata a carta na primeira linha; o pedido honesto é ser lembrado quando um cliente
+  precisar de modelagem, ou ser apontado para a casa certa; (2) o time publicado é pequeno e
+  internacional (**"our talented people live all over the world"**), o que enfraquece a hipótese
+  de patrocínio de visto e sugere trabalho remoto por projeto; (3) o endereço **não está escrito
+  ao lado do nome dele** — está atrás do texto "contact us" da página de contato, então é o
+  estúdio publicando o endereço dele como canal de entrada, e não uma caixa pessoal.
