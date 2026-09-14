@@ -2045,3 +2045,30 @@ Seis mensagens saíram com o defeito antes de eu medir: Borja Corvo Santana (Bro
 cartão de visita. As outras quatro são agradecimento de duas linhas a uma recusa ou a um "não
 temos vaga": ali o link é enfeite, e mandar quatro emails de correção faz mais barulho do que o
 defeito. Registro a escolha em vez de dizer que está tudo consertado.
+
+### A FRESTA QUE DEIXOU O DEFEITO PASSAR, e ela estava escrita aqui dentro
+
+O brief do Comunicador diz, com todas as letras:
+
+> "O `google.com/url` nos links é do Gmail, não seu: ele embrulha qualquer URL ao gravar.
+> Escreva a URL completa com `https://` e não trate o embrulho como defeito; quem desfaz é o
+> `limparLinks` do `automacao/envia-rascunhos.gs`, no envio."
+
+**Isso é VERDADE para RASCUNHO e MENTIRA para RESPOSTA DIRETA.** Conferi a função em
+`automacao/envia-rascunhos.gs:37`: ela existe, desembrulha mesmo, e ainda devolve os domínios
+dele ao endereço canônico. Mas ela roda **dentro do Apps Script**, no `enviarRascunhos()`.
+
+**Resposta mandada por `mcp__Gmail__reply` NÃO PASSA POR ELA.** Não existe limpeza nenhuma no
+caminho da API. Foi por essa fresta que o embrulho chegou visível ao Carsten Granig: eu li a
+regra de cima, concluí que o embrulho se resolvia sozinho, e ele não se resolveu porque o
+caminho era outro.
+
+**Qual regra vale onde:**
+
+| Caminho | Quem limpa | O que eu tenho de fazer |
+|---|---|---|
+| `create_draft` + `enviarRascunhos()` | `limparLinks` no envio | URL completa com `https://` basta. O embrulho some sozinho. |
+| `mcp__Gmail__reply` (resposta direta) | **NINGUÉM** | `<a href="URL completa">texto curto</a>` no `htmlBody`, obrigatório. Sem isso o embrulho chega à vista. |
+
+Quem só decorar "o embrulho não é defeito" vai repetir o erro na primeira resposta direta que
+escrever. A frase não está errada: está incompleta, e agora está completa.
