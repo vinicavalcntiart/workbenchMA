@@ -1013,3 +1013,60 @@ nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áu
   design visual é do Niki, não dele; (3) **não há vaga aberta** e o site não tem página de
   carreiras, só um menu **"FOR HIRE"** — é carta de porta. A página de contato publica telefone, que
   **não** foi registrado aqui porque o repositório é público.
+
+### O NEGATIVO DESTA RODADA, escrito para a próxima não refazer
+
+**1. DUAS VAGAS DE PERSONAGEM VIVAS, e as duas estão FECHADAS por veto escrito ou por cadência.**
+Varridos por `jobs.json` os **151 slugs de Teamtailor** que o repositório conhece, num passe de
+`curl`, filtrando título por personagem, criatura, groom, sculpt, look dev, surfacing e 3D art.
+Voltaram **doze acertos em cinco casas**, e o que importa é isto:
+
+| Casa | Vaga | Publicada | Situação medida hoje |
+|---|---|---|---|
+| **Snowprint Studios** (Estocolmo) | **Senior 3D Character Artist** | 08/09 | **VETO ESCRITO**, lido na fonte: *"You are currently located in Stockholm, Sweden. We are unable to support relocation for this position."* |
+| **Kepler Interactive / Tactical Adventures** (Paris) | **Lead 3D Character Artist** | 02/09 | anúncio **inteiro em francês**, com o inglês como *nice to have* (*"Vous pratiquez l'anglais professionnel"*). Porta condicionada ao idioma, pela regra da TAT de 11/09. E a casa já recebeu candidatura. |
+| Beffio (Poznań, remoto Europa) | Senior Character Artist Unity3D, Lead 3D Character Artist, Senior Character Concept Artist | 2025-2026 | **três candidaturas já enviadas em 06/09**. Quarta aproximação não se faz. |
+| Fatshark | Character Artist | 07/08 | já é a ficha de 13/09 |
+| Airship Interactive | Character Artist, Groom Artist | 27/08 | quatro registros em `enviados.csv` |
+
+A do Snowprint dói e vale escrever por quê: o corpo do anúncio é o retrato do Vini —
+*"You'll create stylized 3D characters and creatures, taking them from sculpting and modelling
+through texturing and into Unity"*, *"fluent in ZBrush, Maya, Substance Painter"*, portfólio pedindo
+*"Stylized 3D characters with a strong eye for shape, proportions, detail, and visual style"*. O que
+fecha é a última linha dos requisitos, e ela é veto de residência, não de habilidade.
+
+**2. DESCOBERTA que vale como veto novo: a Wil Film exige passaporte da UE, por escrito.**
+A Wil Film (Copenhague, estúdio de animação CG com pipeline em Maya) publica time inteiro com nome,
+cargo e email — inclusive **Toke Uthaug Rasmussen, Head of Modelling**, e dois CG Supervisors — e
+parecia a melhor ficha da rodada. A página `https://wilfilm.dk/jobs` mata a casa em uma frase:
+**"Apply for an open position ONLY if you are a EU pass holder. Unfortunately, the process and
+requirements in order to qualify for a work permit according to the Danish law can be very
+complicated."** Isso é veto escrito de autorização, não leitura de contexto. **Nenhuma carta foi
+escrita e nenhuma linha entrou.** Fica registrado para ninguém "descobrir" a casa de novo.
+
+**3. As cinco casas que o maestro mandou testar, medidas por `jobs.json` nesta rodada:**
+**Kepler Interactive** é a única que vale, e vale pela vaga acima (6 vagas no quadro).
+**Opus Major** e **OFM Studios** respondem 200 com **`items: []`**, ou seja quadro vivo e vazio.
+**Swift Games** tem uma vaga só, QA Tester em Berlim. **New Moon Production** abre com Unity
+Developer. Nenhuma das quatro tem cadeira de arte anunciada hoje.
+
+**4. A varredura mecânica de `mailto:` continua esgotada, e desta vez tem número.**
+Foram varridos **cerca de 300 domínios** de Holanda, Suécia, Dinamarca, Noruega, Finlândia, Suíça,
+Bélgica, Alemanha, Áustria, Reino Unido e Irlanda, em `/`, `/contact`, `/team`, `/about`, `/people`,
+`/studio`, `/jobs`, `/careers`, `/press` e `/presskit`, com decodificação de entidade HTML e de
+`data-cfemail`. **Quase todo endereço de pessoa que apareceu já estava na campanha**: Nørlum
+(Jericca Cleland, carta em 11/09), Storm Studios (Håvard Munkejord), Milford (Demian Zarins),
+Polder Animation (Bastiaan Schravendeel), Aardman (Pauline Mallam), 10 Chambers (robin@, carta em
+06/09), Naraven, Qvisten, A. Film. **Isso não é fila seca, é a mesma veia devolvendo o mesmo
+minério.** As cinco fichas desta rodada saíram de casas que **nenhuma varredura anterior tinha
+aberto**, e as três holandesas saíram de listas fora do gamedevmap.
+
+**5. Mais uma casa morta que parecia ficha pronta:** a **Paladin Studios** (Haia) voltou a aparecer
+com `stein@paladinstudios.com` publicado. Ela **fechou em 01/05/2024** e já está registrada assim na
+rodada de 13/09. O aviso de encerramento continua no topo do site.
+
+**6. O que ficou NÃO CONFERIDO, com essas palavras:** `postpanic.nl`, `pedrianimation.com`,
+`il-luster.nl`, `xform.nl`, `codeglue.com` e `ofm-studios.com` devolvem **000** por este túnel de
+saída, com e sem `www`, por `https` e por `http`. **Não é casa sem site.** A `triumphstudios.com`
+redireciona para a página da Paradox e a `codeglue.com` para a Behaviour Rotterdam, ou seja as duas
+perderam site próprio. A `forcefieldvr.com` só abre por `http` e não publica endereço nenhum.
