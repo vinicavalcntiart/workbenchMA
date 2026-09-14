@@ -39,6 +39,50 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
+## 🔎 RODADA DE CAÇA DE 14/09 às 00h45 UTC (Jhon B) — **grupo Disney medido em zero · e a ÚLTIMA porta Pinpoint livre**
+
+### Grupo Disney, olhado por ordem dele como em toda rodada
+
+`sh automacao/ronda-disney.sh` → **12 consultas responderam, ZERO falharam, 12 IDs da disciplina
+no ar, nenhum novo.** Este zero foi MEDIDO, não é resposta vazia: o script falha alto em vez de
+devolver zero falso, e os dois quadros do locatário `disney` (`disneycareer` e `disneycareerdc`)
+entram na conta.
+
+### A fila de Pinpoint está no fim, e sobrou UMA
+
+Das nove portas `register-your-interest` que a rodada de 10/09 levantou, **oito já aparecem no
+`enviados.csv`**: rocksteady, playground-games, magnopus, singularity6, pipeworks, outpost-vfx,
+ingenuitystudios e wushustudios. **Sobra uma:**
+
+#### Hyper Hippo Entertainment — Kelowna, Colúmbia Britânica (a vaga é `Remote (Canada)`)
+
+- **URL:** `https://hyperhippo.pinpointhq.com/register-your-interest/new`
+- **Conferida AGORA, nesta rodada:** HTTP **200**, título `Register Your Interest | Hyper Hippo
+  Entertainment Careers`, **zero ocorrência de `recaptcha`, `hcaptcha` e `turnstile`** no HTML e
+  **zero palavra-isca** (`ACME` e `Hooli` em 0), que é o teste de locatário de demonstração.
+- **Por que ela vale:** a casa está registrada no painel como **parede** desde 08/09, porque a
+  página de carreiras nem chega a montar. Esta rota entra por trás da parede, e o departamento
+  **`Art`** existe de verdade na lista.
+- **Dedupe, feito no minuto:** `enviados.csv` não tem a casa, e o **GMAIL devolveu ZERO** para
+  `"Hyper Hippo" OR hyperhippo`. Rota livre.
+- **Campos, do dossiê de 10/09:** department **`Art`**, location **`Remote (Canada)`** (é a única),
+  LinkedIn em `#job_seeker_form_linkedin_url`, e **uma pergunta só** do estúdio, slot 0, `short_text`,
+  **não obrigatória**, id `237602`: *"What are your pronouns?"* → responder `He/Him`.
+
+> **RESSALVA HONESTA, e ela é grande.** A única localização oferecida é `Remote (Canada)`, e ele
+> não tem autorização de trabalho no Canadá. **Não há veto ESCRITO** e por isso a porta não se
+> descarta pela régua, mas é banco de talentos de um país que já é o pior da campanha em veto
+> escrito (125 medidos). Encaixe de disciplina é bom, probabilidade é baixa. **Nenhum campo de
+> autorização deve ser respondido com mentira**, e se aparecer atestação obrigatória sem campo de
+> texto livre, a regra manda NÃO marcar e registrar como item de mão.
+
+**Comando de disparo, para a faixa do Jhon A:**
+```
+sh automacao/dedupe-agora.sh "hyperhippo" "Hyper Hippo"
+```
+
+---
+
 ## 🔎 RODADA DE CAÇA DE 13/09 às 14h45 UTC (Jhon B) — **PORTA DE ESPONTÂNEA SEM CAPTCHA: ZERO NOVA, em 23.161 sondagens**
 
 **O que você precisa fazer nesta seção: nada.** Ela é medição, não tarefa. Está aqui para a
