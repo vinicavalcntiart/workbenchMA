@@ -2802,3 +2802,96 @@ patrocínio no primeiro campo de texto livre que aparecer.
 
 As outras duas da mesma casa, se quiser aproveitar a sessão já destravada:
 `744000137526669` Lead Material Artist e `744000133659271` Associate Art Director, ambas Montréal.
+
+---
+
+## PORTA NOVA — Dirk Interactive, **3D Character Artist – Unreal Engine 5** (14/09, Jhon caçador)
+
+**É a única porta nova da rodada, e ela é de PERSONAGEM PURO.** Casa inédita em tudo: zero
+ocorrência em `enviados.csv`, `processados.csv`, painel, `FILA-DO-VINI.md` **e zero thread no
+Gmail** para `dirkinteractive` ou "Dirk Interactive".
+
+- **Casa:** dirk / Dirk Interactive Inc. — Vancouver, British Columbia, Canadá
+- **Cargo:** 3D Character Artist – Unreal Engine 5 · **Remoto** · Contrato por comissão
+- **Requisição:** id do quadro próprio `3d-character-artist`; **LinkedIn `4464812501`**, publicada
+  em **11/09/2026**, `employmentType: CONTRACTOR`, `jobLocation: Vancouver, British Columbia, Canada`
+- **Quadro (fonte oficial):** `https://dirkinteractive.com/careers.html`, que carrega
+  `https://dirkinteractive.com/jobs.json` — a vaga está com **`"open": true`** lá agora
+- **URL DE CANDIDATURA:**
+  `https://docs.google.com/forms/d/e/1FAIpQLScgQwRncOu6RSVMCrdkh5DYmuCeUzMxPuyVrJx2qEMzznZhSQ/viewform`
+- **Descoberta:** planilha oficial da comunidade (linha de 14/09, Vancouver, Remote), **confirmada
+  na fonte do próprio empregador**, nunca no agregador.
+
+### Por que ela é dele, com a frase do anúncio
+
+> *"Strong understanding of anatomy, proportion, clothing, and silhouette."*
+> *"High-quality modelling, sculpting, texturing, and material skills."*
+> *"Develop character models, clothing, and equipment from approved concepts and references."*
+> *"Create topology, UVs, textures, and materials suited to real-time production."*
+
+É o pipeline inteiro de personagem, do sculpt à engine, que é exatamente o ponto forte 12 do
+briefing. **Zero ambiente, zero prop, zero level art no corpo da vaga.**
+
+### Régua de veto, termo a termo, no texto INTEIRO baixado da fonte
+
+Rodada sobre o registro completo do `jobs.json` (descrição, responsabilidades, requisitos,
+nice-to-have, engajamento e lista de material da candidatura). **Três acertos, os três
+classificados à mão:**
+
+| Termo | Frase inteira | Veredito |
+|---|---|---|
+| `authoriz` | *"share only material you are **authorized** to disclose. Password-protected portfolios are welcome."* | **FALSO POSITIVO.** É NDA de portfólio, não autorização de trabalho |
+| `international` | *"**International applicants are welcome**, with availability for occasional discussions during Pacific Time working hours."* | **SINAL POSITIVO**, e é o mais forte que esta campanha já leu num anúncio canadense |
+| `Pacific` | mesma frase acima | restrição de **fuso**, não de nacionalidade |
+
+**ZERO ocorrências de:** `sponsor`, `eligib`, `work permit`, `must be based`, `LMIA`,
+`days a week`, `citizen`, `resident`, `right to work`, `visa`, e zero exigência de idioma
+(`French`, `fluent` e os demais da régua não aparecem). **Nenhum veto escrito.**
+
+Vale o contraste, porque ele mede o quanto isto é raro: a mesma rodada leu a **Rebellion**
+(Senior Character Artist, Oxford/Warwick) e ela traz, por escrito, *"This role is only open to
+applicants who have the permanent right to work in the UK. We are unable to provide or take over
+visa sponsorship, either now or in the future."* — essa é veto e foi descartada.
+
+### A porta: Google Forms, sem captcha, **mas exige conta Google**
+
+Medido por `curl`, não suposto. `GET` no `viewform` responde **HTTP 302 para
+`accounts.google.com/ServiceLogin?service=wise&...&ltmpl=forms`** e, seguindo, **401** com a casca
+de login. **Zero ocorrência de `captcha`, `recaptcha`, `hcaptcha` ou `turnstile`** no que foi
+servido.
+
+**Consequência honesta: a LISTA DE CAMPOS ficou `NÃO CONFERIDO`.** O `FB_PUBLIC_LOAD_DATA_`, que é
+onde o Google Forms publica os campos, não é servido a quem não está logado, então eu não posso
+dizer quais são os campos sem inventar. O que o anúncio diz que a candidatura tem de levar, e isso
+é texto deles:
+
+> *"Portfolio. Résumé or a brief overview of professional experience. Relevant character examples,
+> including in-engine work and breakdowns where available. Availability, location or time zone, and
+> your usual project pricing or rate expectations."*
+
+**Para você, em dois minutos:** abra o formulário logado na sua conta Google, que ele monta
+direto. Leve ArtStation, CV, exemplos de personagem com breakdown, e no campo de
+disponibilidade/localização diga o fuso e que há sobreposição confortável com o Pacífico — é
+literalmente o que eles pedem. **Não há caixa de autorização de trabalho no anúncio**, e se
+aparecer uma no formulário, a resposta é a verdade de sempre.
+
+### Pretensão, e aqui a regra 1 do briefing não se aplica
+
+**A vaga de personagem NÃO publica faixa.** Quem publica é a irmã de Art Director, **CAD 45–65 por
+hora**, e usar a faixa de outra requisição seria inventar. Como é contrato por comissão em casa
+pequena, a referência da política é o degrau de casa pequena no Canadá; a frase de abertura
+continua sendo *"Open to aligning with your band for the role"*.
+
+### As ressalvas, ditas de frente porque elas pesam
+
+1. **É contrato de 3 a 4 meses, remoto, por comissão** — e a ordem do `BRIEF-JHON` é
+   **realocação primeiro, remoto segundo, efetiva antes de contrato**. Esta porta está no degrau
+   de baixo dessa escada. Ela entra porque é de personagem e porque está aberta, não porque é boa
+   colocação.
+2. **A casa é muito nova e quase não tem lastro público.** O site é GitHub Pages e as páginas
+   `About` e `Games` do próprio menu respondem **404**; não há jogo publicado, nem equipe
+   nomeada. O projeto é *"unannounced PC game"* sob NDA. Não é motivo para descartar, é motivo
+   para você saber o que está pegando.
+3. **Exige NDA e contrato de prestador antes do material confidencial.**
+4. A mesma casa tem **3D Generalist** (props, set dressing, montagem de cena) e **Concept Artist**
+   (2D) abertas. **As duas estão fora da disciplina** e não entram nesta fila.
