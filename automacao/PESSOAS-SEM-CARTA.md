@@ -1070,3 +1070,54 @@ rodada de 13/09. O aviso de encerramento continua no topo do site.
 saída, com e sem `www`, por `https` e por `http`. **Não é casa sem site.** A `triumphstudios.com`
 redireciona para a página da Paradox e a `codeglue.com` para a Behaviour Rotterdam, ou seja as duas
 perderam site próprio. A `forcefieldvr.com` só abre por `http` e não publica endereço nenhum.
+
+## RODADA DAS 12h35 DE 14/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Rota desta rodada:** Holanda primeiro, nórdicos e Reino Unido em seguida. A varredura mecânica
+de `mailto:` sobre lista de estúdio **continuou esgotada** (ver o negativo no fim desta seção),
+e o que rendeu foi uma fonte que nenhuma rodada anterior tinha aberto: **os diretórios de
+associação da indústria**, lidos por `curl` — `dutchgamesassociation.nl/members` (116 domínios
+holandeses), `animationuk.org/directory` (102 domínios britânicos) e
+`ukscreenalliance.co.uk/directory` (105). Das cinco fichas abaixo, quatro saíram de lá.
+
+**Dedupe feito na CAIXA, não no arquivo.** As cinco casas devolveram **ZERO** no Gmail em quatro
+buscas diferentes: por nome de casa, por sobrenome da pessoa, por domínio e por **janela de
+tempo** (`newer_than:12d` cruzado com animação/estúdio/personagem e com as cidades). E duas
+casas que pareciam achado novo morreram justamente aí, no arquivo: **Sir Lancelot** (Daniel
+Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
+
+### James Finlay — **Founder / Creative Director** — Myth Studio, Londres, Reino Unido
+
+- **Email:** james.finlay@mythstudio.co.uk · confiança **alta** · **PUBLICADO** · fonte:
+  https://www.mythstudio.co.uk/careers , aberta nesta rodada. O botão **Enquire now** da vaga
+  aberta é um `mailto:` com dois destinatários, literal no HTML:
+  `mailto:jobs@mythstudio.co.uk,james.finlay@mythstudio.co.uk?subject=MYTH%20STUDIO%20-%203D%20ANIMATORS%20%26%20ARTISTS`,
+  e a mesma página traz a âncora `james-finlay#person`. Nome e cargo saem de
+  https://www.mythstudio.co.uk/studio , também aberta nesta rodada: **"The Senior Team — James
+  Finlay, Founder/Creative Director"**.
+- **Por que ELE e não outra pessoa da casa:** o /studio publica seis pessoas — Frankie Evans
+  (Head of Production), Danny Prothero (Creative Director), Izzy Hill (Head of Client Success and
+  Marketing), Jono Kamester (Head of Animation) e Antonieta Martinez-Hernandez (Senior Producer) —
+  e **só dois endereços existem no site**: o dele e o `izzy.hill@`, que é de **novos negócios**.
+  Entre o fundador que dirige a parte criativa e a caixa comercial, o BRIEF-JOE manda ir na
+  arte. Nada foi montado para as outras quatro pessoas.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a vaga aberta diz **"We are looking for
+  3D animators and artists to join us on upcoming projects. You will help bring characters,
+  worlds, and stories to life across commercials, brand films, and broadcast work, collaborating
+  closely with our directors and designers"**, e mais: **"A strong reel matters more than a long
+  CV"** e **"We are also open to speculative applications for a full time position."** O estúdio
+  se apresenta como **"a small, award-winning animation studio in London"**.
+- **Fora dos EUA?** Sim — Reino Unido, que exige patrocínio. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv`, `alvos.csv` e
+  `docs/index.html` dão **zero** para `mythstudio` e `Myth Studio` (o único "Finlay" do
+  repositório é **Joe Finlayson, da Pixomondo**, outra casa); e o **Gmail devolveu ZERO** para
+  `myth OR mythstudio`, para `Finlay`, para `"mythstudio.co.uk"` e na janela de 12 dias.
+  **CASA NOVA para a campanha inteira**, PRIMEIRA pessoa. Izzy Hill fica como segunda e última.
+- **Ressalva honesta, três:** (1) **a vaga aberta é de ANIMAÇÃO, não de modelagem** — ela pede
+  **"Character animation in C4D"** e **"Proficient in C4D Octane"**, e o Vini é modelador de
+  personagem, não animador; a carta não pode fingir que a vaga é dele, e o caminho honesto é a
+  candidatura espontânea que a própria página convida; (2) o /studio diz que a casa
+  **"will always prioritise traditional and handmade techniques"**, com animação quadro a quadro
+  e modelo feito à mão, o que reduz o espaço de personagem 3D; (3) o endereço dele está no
+  `mailto:` **junto com o `jobs@`**, ou seja é o canal de candidatura da casa e não a caixa
+  privada dele — a carta tem que funcionar se o RH abrir antes.
