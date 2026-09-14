@@ -324,7 +324,20 @@ palavra Brazil, o travessão e o floreio de IA.
 | **Carta fria para PESSOA COM NOME** (abre com `Hi Sarah,`) | 1 a 2 | no fecho, e opcionalmente ao citar o portfólio |
 | **Carta fria para CAIXA** (`jobs@`, `info@`, `careers@`) | 1 | no fecho, e só |
 | **Campo de formulário de ATS** | **ZERO** | formulário é registro, não conversa |
-| **Recusa, follow-up de silêncio, mensagem de assunto delicado** | **ZERO** | emoji ali soa desdém |
+| **Resposta a uma RECUSA escrita por pessoa** | 1 | ~~ZERO~~ — corrigido pelo Vini em 14/09 |
+| **Follow-up de silêncio, mensagem de assunto delicado** | **ZERO** | ninguém do outro lado escreveu ainda |
+
+**CORREÇÃO DO VINI, 14/09.** Esta tabela dizia `ZERO` para recusa, com a justificativa de que
+"emoji ali soa desdém". Ele desmentiu com todas as letras: *"n tem regra de responder sem emoji
+pra recusa."* A linha saiu. Uma recusa escrita por uma PESSOA é uma mensagem humana como
+qualquer outra, e responder seco a quem se deu ao trabalho de escrever é que soa frio.
+
+O caso que fez isso aparecer: **Chris McCarthy, Head of Recruitment da Third Kind Games**,
+respondeu em 14/09 dizendo não para a vaga *e* indicando outra casa (*"Do look at the Virtuos
+Studios"*), escreveu *"Happy to keep in touch longer term"* e ainda pediu conexão no LinkedIn.
+Isso não é uma recusa, é uma porta encostada — e a resposta saiu sem emoji por causa da linha
+acima. **Recusa de robô (`noreply@`, template de ATS) continua não merecendo resposta nenhuma;
+a regra aqui é só para quando uma PESSOA escreve.**
 
 **Nunca no assunto do email**, porque o disparador do Apps Script acha o rascunho pelo assunto
 exato e qualquer caractere a mais some com a carta para sempre. **Nunca em bloco**, tipo `☺️😊`.
