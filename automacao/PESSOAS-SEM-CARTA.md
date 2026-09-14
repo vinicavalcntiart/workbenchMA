@@ -1222,3 +1222,35 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   quadro para contratar, e a forma honesta é oferta de colaboração por projeto, como no caso da
   Concept Art House e do 3Dpicnic; (3) **não há vaga aberta nem página de carreiras**, é carta de
   porta.
+
+### Ilari Koskinen — **Animation Director (e Executive Producer da casa)** — Brink Helsinki, Helsinque, Finlândia
+
+- **Email:** ilari@brinkhelsinki.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://www.brinkhelsinki.com/team , aberta nesta rodada. O cartão dele traz, no HTML,
+  `<h2 class="exad-team-member-name">Ilari Koskinen</h2>` seguido de
+  `<span class="exad-team-member-designation">Animation Director</span>` e do
+  `<a href="mailto:ilari@brinkhelsinki.com">`. O mesmo cartão aparece de novo na seção **Crew**,
+  ali com o cargo **Executive Producer**. (A página publica telefone de cada um, que **não** foi
+  registrado aqui porque o repositório é público.)
+- **Por que ELE e não outra pessoa da casa:** a página publica **três** Animation Directors —
+  Ilari Koskinen, **Petja Salmio** e **Janne Roivainen** — e **só o dele tem endereço**; os
+  outros dois não têm e **nada foi montado**. Os demais endereços publicados são do CEO
+  (Alexander Seraidaris), de outra produtora executiva (Molla Karjaluoto) e do CFO (Ilpo
+  Virtanen). Ele é o único que junta cadeira de direção de arte e poder de produção.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"We are a Helsinki-based creative
+  illustration and animation studio, founded in 2011"** e **"Creating lovable characters,
+  engaging design, and captivating animations is what thrives us."** É a própria casa dizendo que
+  o centro do trabalho dela é criar personagem.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. Entram a linha de realocação e a de
+  patrocínio.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html`
+  dão **zero** para `brinkhelsinki`, `Koskinen` e `Seraidaris`; a única ocorrência no repositório
+  inteiro é uma linha do `automacao/garimpo-cgstudiomap.csv`, que é lista de garimpo e **não**
+  registro de contato. O **Gmail devolveu ZERO** para `brinkhelsinki OR Brink OR Koskinen OR
+  Seraidaris`. **CASA NOVA**, PRIMEIRA pessoa; Alexander Seraidaris fica como segunda e última.
+- **Ressalva honesta, três, e a primeira é medida:** (1) **a palavra "3D" aparece ZERO vez na
+  página de trabalhos deles**, contra duas de "character" — é casa de ilustração e animação, com
+  cara de 2D, então o encaixe com personagem 3D é **indireto** e a carta tem que se oferecer como
+  quem acrescenta uma disciplina, não como quem responde a uma vaga; (2) o cargo dele é **direção
+  de animação**, não direção de arte de personagem; (3) **não há vaga aberta nem página de
+  carreiras** no site — é carta de porta.
