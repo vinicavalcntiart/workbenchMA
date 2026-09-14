@@ -919,3 +919,34 @@ nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áu
   time de personagem; (2) **não há vaga aberta** e o site não tem página de carreiras, então é
   carta de porta; (3) o rodapé do site diz **"© Copyright 2024"**, ou seja a página pode estar
   desatualizada e o cargo dela não foi confirmado por fonte independente hoje.
+
+### Tony Manninen — **CEO (e o endereço que a casa publica para "Business Proposals")** — LudoCraft, Oulu, Finlândia
+
+- **Email:** tony.manninen@ludocraft.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://www.ludocraft.com , aberta nesta rodada. O rodapé publica em texto visível, um embaixo do
+  outro: **"Drop us a line / Business Proposals / CEO Tony Manninen / tony.manninen@ludocraft.com"**
+  e **"Career & Support / marja.kuipers@ludocraft.com"**. São os dois únicos endereços do site, e
+  **os dois são de pessoa** — não existe `info@` nem `jobs@` ali.
+- **Por que ELE e não outra pessoa da casa:** são **18 pessoas** (o próprio site conta:
+  **"2006 LudoCraft Established / 18 LudoCraftians / 218 Projects Completed"**), e o BRIEF-JOE manda
+  ir no **fundador** em casa desse tamanho, porque ele responde ele mesmo e não lê checklist. A
+  alternativa publicada é a caixa de **Career & Support**, que é o caminho de RH, e o BRIEF-JOE
+  coloca o RH por último justamente porque é ele que descarta por causa do visto em cinco segundos.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"LudoCraft is a group of individuals who
+  came together to form a team. We usually talk about programmers and graphic artists. But in
+  reality we are so much more."** E, sobre o método: **"Games are a media that combine technology,
+  psychology, art and interaction into a seamless experience."** A casa também publica que trabalhou
+  no **Hill Climb Racing para a Fingersoft** e no **Donald Duck CodeMaster para a Sanoma Kids
+  Media** — ou seja **personagem licenciado infantil**, que é onde o estilizado dele compete.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. Entram a linha de realocação e a de patrocínio.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `ludocraft`; o **Gmail devolveu ZERO** para `ludocraft OR LudoCraft OR Manninen`, e
+  zero também por janela de tempo. **CASA NOVA para a campanha inteira**, PRIMEIRA pessoa.
+  Marja Kuipers (Career & Support) fica como **segunda e última** possível.
+- **Ressalva honesta, três:** (1) **a casa não é de entretenimento de personagem** — ela se descreve
+  como parceira de *"gamified design and development"* e o portfólio é serious game e gamificação
+  para Nokia, para o Parlamento Sámi e para empresas de aquecimento urbano; o encaixe com personagem
+  3D é **indireto** e a carta não pode fingir o contrário; (2) o rodapé diz **"© 2021 LudoCraft
+  Ltd."**, então o site é antigo e o cargo não foi confirmado hoje por fonte independente —
+  o que sustenta a escolha é o critério do BRIEF-JOE de que **fundador não muda de casa**; (3)
+  **não há vaga aberta** e não existe página de carreiras: é carta de porta.
