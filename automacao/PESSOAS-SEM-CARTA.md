@@ -1691,3 +1691,367 @@ Creative Producer / Founder), **Cantilever Media** (Andrew Baker e Andrea Martin
 Williams, Creative Director), **Stiúidio Fia** (Paul McDonnell, CEO, com endereço de **Gmail
 pessoal**), **Lazy Sunday** (Artem Vasiliev, CEO), **SANAM** (Aislí Madden, Producer) e
 **Monster Entertainment** (Andrew Fitzpatrick, Chairman — mas é **distribuidora**, não estúdio).
+
+---
+
+## RODADA DAS 18h45 DE 14/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Alvo pedido: repetir nos diretórios nórdicos e holandês o achado da rodada das 16h30. Os quatro
+diretórios NÃO renderam, e a causa NÃO é a que a rodada anterior registrou.** Ela anotou
+`connect_rejected` e `ws_closed_mid_exchange` e concluiu "erro de rede". Reabri os quatro por
+**três tubos independentes** (`WebFetch`, `curl` pelo proxy e **DNS-over-HTTPS na resolvedora
+pública do Google**) e o veredito é outro, medido e não opinado. Está no bloco "OS QUATRO
+DIRETÓRIOS" no fim desta seção. **O que rendeu foi a fila irlandesa que a rodada anterior deixou
+apontada, e ela devolveu 7 pessoas novas.**
+
+**O ACHADO DE MÉTODO DESTA RODADA, e ele vale mais que qualquer ficha: PUBLICADO NÃO É
+ENTREGÁVEL.** A campanha inteira trata "endereço publicado" como confiança alta e para por aí
+(regra medida em 06/09: dos 17 publicados, 16 entregaram). Nesta rodada um endereço **publicado**
+no diretório da Animation Ireland, `andrew@cantilevermedia.ie`, está num domínio que **NÃO
+EXISTE**: `cantilevermedia.ie` devolve **NXDOMAIN autoritativo do registro `.ie`** em **quatro
+tipos de registro** (A, NS, SOA e MX). Se essa carta saísse, quicava. **Passa a haver um segundo
+portão, e ele é barato:** antes de gravar um endereço numa ficha, consultar o **MX do domínio**.
+Os outros seis domínios desta rodada passaram no portão (`trickshotfilms.com` doteasy,
+`turnipandduck.com` e `sixteensouth.tv` Google, `paperowlfilms.com` Outlook, `pictor.ie` Zoho,
+`ink-and-light.com` IONOS). **A Cantilever caiu para `sem-email` por causa desse portão, e isso é
+o portão funcionando, não fracasso.**
+
+**SEGUNDO ACHADO DE MÉTODO: o campo "Skills in..." do diretório MENTE por omissão.** A rodada
+anterior usou esse campo para julgar se a casa faz 3D e descartou várias por ele estar vazio.
+**A Trickshot Films tem o campo VAZIO e escreve no corpo da própria página: "We specialize in 3d
+characters."** É o encaixe mais direto com o Vini que este diretório inteiro tem, e o campo de
+rótulo não sabia disso. Refiz a varredura no **TEXTO** das 44 páginas e não no rótulo, e foi assim
+que apareceram Trickshot, Cantilever (longa CGI) e Ink and Light ("mostly with CG animation").
+
+**TERCEIRO, e conserta uma ressalva da rodada das 16h30.** Ela registrou que o `mailto:` de
+**Paul O'Flanagan (Creative Director, Boulder Media)** sai truncado como `mailto:Paul.O` porque o
+apóstrofo corta o link, e por isso escolheu a Gillian Comerford. **O endereço dele está publicado
+inteiro em TEXTO na mesma página**, fora do atributo `href`: `Paul.O'Flanagan@bouldermedia.tv`
+(https://animationireland.com/studios/boulder-media/). **NÃO virei ficha dele nesta rodada** — a
+Gillian Comerford já é ficha da casa e a carta dela nem saiu ainda; ele fica como **segunda e
+última** da Boulder, agora com o endereço resolvido. A lição é a de 12/09 outra vez: **extrair só
+`mailto:` perde endereço; tem de ler o texto também.**
+
+### Colin Williams — **Founder e Creative Director** — Sixteen South, Belfast, Reino Unido (Irlanda do Norte)
+
+- **Email:** colin@sixteensouth.tv · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/sixteen-south/ , aberta nesta rodada. No bloco
+  `studio_contacts` do HTML ele é **a única pessoa publicada**, e o par nome/cargo/endereço sai
+  colado: `<h4>Colin Williams</h4>` + `Creative Director` + `mailto:colin@sixteensouth.tv`. A
+  caixa geral da casa é outra (`website@sixteensouth.tv`), então **este é endereço de pessoa, não
+  de caixa**. Cargo confirmado por **segunda fonte**, o site da própria casa:
+  https://www.sixteensouth.tv/about , também aberta nesta rodada — **"Sixteen South has grown from
+  an idea in the head of our founder and Creative Director, Colin Williams"**. **NADA foi
+  montado.** MX do domínio conferido: Google.
+- **Por que ELE e não outra pessoa da casa:** é a única pessoa que o diretório publica, é o
+  fundador e é a cadeira criativa — não há a quem preferir. Não existe aqui o dilema de gestão
+  contra arte que apareceu nas outras casas.
+- **Gancho, com a frase do próprio estúdio entre aspas, e é o melhor desta rodada:** a página
+  About diz que o slate de desenvolvimento entrega **"shows that will be delivered in 2D, 3D,
+  hybrid animation, live action and fur"** (https://www.sixteensouth.tv/about). **"fur" é groom**,
+  que é exatamente o diferencial de apoio do Vini, e é a primeira casa desta frente inteira a
+  escrever a palavra. A mesma página dá o tamanho: **"Founded in 2007, Sixteen South has grown
+  from an idea in the head of our founder and Creative Director, Colin Williams to a group that
+  currently employs over 100 brilliantly talented people and a solid management team in downtown
+  Belfast"**, e a casa se apresenta como **"proudly wholly owned and independent"**. No diretório
+  ela mede o próprio catálogo: **"We've made 667 episodes of 15 original series of quality
+  television... we've won over 100 international awards, including a BAFTA, two RTS awards, three
+  IFTAs, two British Animation Awards, the Prix Jeunesse and two EMMY nominations"**
+  (https://animationireland.com/studios/sixteen-south/).
+- **Fora dos EUA?** Sim — **Reino Unido (Irlanda do Norte)**, que exige patrocínio. A linha de
+  realocação vale inteira. **Atenção: é Reino Unido, não Irlanda** — a carta não pode falar em
+  União Europeia.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `sixteensouth` — **nenhum arquivo do repositório cita esta
+  casa**. O **Gmail devolveu ZERO** para a busca `sixteensouth OR "Sixteen South" OR "Colin
+  Williams"`. **CASA NOVA, PRIMEIRA pessoa.** O ZERO é confiável porque rodei **controle** na
+  mesma sessão: a busca `flickerpix OR littlemoonanimation OR kavaleer` devolveu **4 threads** e a
+  busca por janela `Ireland OR Irish OR Dublin OR Belfast newer_than:30d` devolveu **9**, então a
+  ferramenta estava respondendo e o vazio é vazio de verdade, não falha de parser.
+- **Ressalva honesta, três:** (1) **o ofício da casa é 2D** — o carro-chefe *Odo* é descrito por
+  eles como **"Premium quality, hand-drawn 2D animation with 3D post lighting"**, e o único título
+  em CGI, *The Coop Troop*, é **"being co-produced with our partners Mikros Animation Studio and
+  Technocolor in Paris in super-deluxe CGI"**, ou seja **o CGI sai de casa e vai para Paris**; o
+  "3D" e o "fur" estão no **slate de desenvolvimento**, que é promessa e não cadeira aberta; (2)
+  com mais de 100 pessoas e **"a solid management team"**, é casa com filtro de RH, e escrever
+  direto ao fundador pode ser desviado; (3) **não há página de vagas** no site (o menu é HOME,
+  ABOUT, MANIFESTO, AWARDS, CONTACT) — **não confirmei vaga aberta** e isto é carta de porta.
+
+### Matt Pidgeon — **Director** — Trickshot Films, Dún Laoghaire (Dublin), Irlanda
+
+- **Email:** matt@trickshotfilms.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/trickshot-films/ , aberta nesta rodada. Conferi no **HTML
+  cru** porque o endereço aparece duas vezes: dentro de `<div class="studio_contacts">` sai
+  `<h4>Matt Pidgeon</h4> <p class="c_role">Director</p> <p class="email"><a
+  href="mailto:matt@trickshotfilms.com">`. **NADA foi montado.** MX do domínio conferido
+  (doteasy).
+- **Por que ELE e não outra pessoa da casa:** a página publica dois nomes, **Matt Pidgeon
+  (Director)** e **Deirdre Griffin (Producer)**, e o BRIEF manda ir na cadeira criativa antes da
+  produção. Deirdre Griffin fica como **segunda e última** da casa.
+- **Por que ESTA CASA é a melhor desta rodada, e é a frase deles que decide:** **"We specialize in
+  3d characters. The design, build and technical aspects that allow them to feel alive in the
+  hands of a skilled animator."** (https://animationireland.com/studios/trickshot-films/). É a
+  **única casa do diretório inteiro que declara especialização em personagem 3D com essas
+  palavras** — não é 3D genérico, é personagem 3D, que é o cargo do Vini.
+- **Gancho, com a frase do próprio estúdio entre aspas, e aqui tem dois:** além da de cima, o site
+  deles responde na FAQ, com todas as letras, o que o Vini está fazendo — **"Can I send my reel in
+  for a spec job application? Yes! Please do share your showreel with us—we may not be able to
+  reply to every submission, but we make time to review them carefully, and we'll reach out if
+  your work is a fit for our upcoming projects."** (https://www.trickshotfilms.com/, aberta nesta
+  rodada). A mesma página abre com **"We bring stories to life with heart and humour"** e diz que
+  a casa **"handles every stage of production with craft, care, and precision"** e que **"Our
+  pipeline is based on industry standards like OpenColor"** e ACES. **A carta não precisa pedir
+  licença: eles convidam o reel por escrito.**
+- **Fora dos EUA?** Sim — Irlanda, União Europeia. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `trickshotfilms` — **nenhuma ocorrência no repositório**. O
+  **Gmail devolveu ZERO** para `trickshotfilms OR Trickshot OR Pidgeon`. **CASA NOVA, PRIMEIRA
+  pessoa.**
+- **Ressalva honesta, quatro:** (1) **o endereço dele é TAMBÉM a caixa geral da casa** — o mesmo
+  `matt@trickshotfilms.com` aparece no bloco de contato do estúdio e no bloco da pessoa, então
+  pode ser lido por mais gente que ele, e a carta deve nomeá-lo na primeira linha para não virar
+  correspondência de caixa; (2) **é casa pequena** — só duas pessoas publicadas, e o site não diz
+  quantas são no total, o que enfraquece muito a hipótese de patrocínio de visto; (3) o próprio
+  site avisa **"we may not be able to reply to every submission"**, então silêncio ali não é
+  recusa nem sinal de nada; (4) **não há vaga aberta** — o convite é para reel espontâneo, e o
+  site não tem página de vagas; é carta de porta, ainda que de porta aberta.
+
+### Aidan O'Donovan — **Creative Director e cofundador** — Turnip + Duck, Dublin, Irlanda
+
+- **Email:** aidan@turnipandduck.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/turnipandduck/ , aberta nesta rodada. O bloco
+  `studio_contacts` publica dois pares nome/cargo/endereço: **Colm Tobin — Managing Director —
+  colm@** e **Aidan O'Donovan — Creative Director — aidan@**, mais a caixa `info@`. A condição de
+  cofundador sai de **segunda fonte**, o site da própria casa:
+  https://turnipandduck.com/about , também aberta nesta rodada — **"Turnip + Duck was set up in
+  2016 by Colm Tobin and Aidan O'Donovan"**. **NADA foi montado.** MX conferido (Google).
+- **Por que ELE e não outra pessoa da casa:** são dois publicados, um é gestão (Managing Director)
+  e ele é a **única cadeira criativa**. Colm Tobin fica como segunda e última.
+- **Gancho, com a frase do próprio estúdio entre aspas, e ele é feito sob medida para carta de
+  personagem:** a casa lista o que toda produção original dela precisa ter — **"Every T+D Original
+  needs five elements; a unique hook, something clever that helps audiences grow, funny
+  characters, lots of heart, and of course a killer theme tune!"** E, o que abre a porta de
+  verdade: **"Because we are not tied to any particular pipeline, our shows can take whatever
+  forms they need to, making us a very co-production friendly studio. In the past we have worked
+  with 2D studios, 3D specialists, nature documentarians and puppet builders to bring our ideas to
+  life. We love to collaborate!"** (https://animationireland.com/studios/turnipandduck/ e
+  https://turnipandduck.com/about). A casa se apresenta como **"an award-winning writer-led
+  creator studio based in Dublin, Ireland"** e tem prêmio recente registrado no próprio site
+  (**"Kidscreen Award for Best New Series!"**, 12 de março de 2026).
+- **Fora dos EUA?** Sim — Irlanda, União Europeia. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `turnipandduck` — **nenhuma ocorrência no repositório**. O
+  **Gmail devolveu ZERO** para `turnipandduck OR "Turnip + Duck" OR "Turnip and Duck" OR
+  O'Donovan`. **CASA NOVA, PRIMEIRA pessoa.**
+- **Ressalva honesta, e é pesada, três:** (1) **a casa não executa 3D, ela contrata quem executa**
+  — o catálogo inteiro do site é 2D ou mídia mista (*Maddie + Triggs* 2D, *Critters TV* "2D
+  mixed", *Atom Town* "2D Animation", *Brain Freeze* "mixed media"), e o 3D aparece só como
+  **parceiro que eles procuram**; a carta tem de ser escrita como oferta a um **parceiro de
+  coprodução**, não como candidatura a cadeira interna; (2) eles se declaram **"writer-led"** e
+  **"Development Specialists"**, com foco em roteiro, prototipagem e pitch — o peso da casa está
+  antes da produção, não na modelagem; (3) é casa de duas pessoas publicadas, então a hipótese de
+  patrocínio de visto é fraca, e **não há página de vagas** — carta de porta.
+
+### Gráinne McGuiness — **Creative Director e cofundadora** — Paper Owl Films, Belfast, Reino Unido (Irlanda do Norte)
+
+- **Email:** grainne@paperowlfilms.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/paper-owl-films/ , aberta nesta rodada. O bloco
+  `studio_contacts` publica três pessoas e **só duas com endereço**: **Gavin Halpin — Managing
+  Director — gavin@**, **Gráinne McGuiness — Creative Director — grainne@** e **Stephen Petticrew
+  — Head of Post Production — sem endereço**. **NADA foi montado.** MX conferido (Outlook).
+- **Por que ELA e não outra pessoa da casa:** dos dois que têm endereço, um é gestão e ela é a
+  **cadeira criativa**; e ela é **cofundadora**, dito na mesma página — **"Paper Owl Films Ltd.
+  was founded in 2012 by Grainne McGuinness, Stephen Petticrew and Gavin Halpin"**. Gavin Halpin
+  fica como segunda e última. **Registro a divergência de grafia, porque ela é do próprio
+  diretório:** o bloco de contatos escreve **"Gráinne McGuiness"** (um `n`) e o texto da mesma
+  página escreve **"Grainne McGuinness"** (dois `n`, sem acento). **Não sei qual é a certa**, e o
+  endereço, que é o que importa, é `grainne@` nas duas leituras.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de carreiras deles convida
+  candidatura espontânea por escrito — **"Can I submit a speculative application? Yes. We welcome
+  speculative CVs and portfolios at jobs@paperowlfilms.com"** — e ainda diz **"Do you review
+  portfolios outside hiring windows? Yes. We keep strong portfolios on file for future
+  opportunities"** e **"Some roles require experience; others prioritize strong portfolios and
+  creative potential"** (https://paperowlfilms.com/careers, aberta nesta rodada). A missão, da
+  home: **"At Paper Owl Films we create award winning content that matters for young audiences,
+  opening up new ways of seeing the world and making space for all kinds of minds to be
+  represented on screen"** (https://paperowlfilms.com/). O alcance, do diretório: **"Their work is
+  enjoyed all over the world on channels such as CBeebies, RTÉjr, TG4, BBC, CBC, NBC Universal,
+  Netflix and digital platforms"**.
+- **Fora dos EUA?** Sim — **Reino Unido (Irlanda do Norte)**. Realocação vale, e **não** se fala
+  em União Europeia.
+- **Dedupe, feito na caixa:** **zero em `enviados.csv`** — a casa **nunca recebeu carta**. As três
+  ocorrências no repositório **não são contato**: `automacao/caca-sem-ats-1109.md` registra a
+  **porta** (`https://paperowlfilms.com/careers`, HTTP 200) e nunca escreveu, e
+  `europa-mr-reabertos-07-09.csv` e `processados.csv` são listas de garimpo. O **Gmail devolveu
+  ZERO** para `paperowlfilms OR "Paper Owl" OR McGuiness OR McGuinness`. **PRIMEIRA pessoa da
+  casa.**
+- **Ressalva honesta, e a primeira é séria, quatro:** (1) **a própria FAQ deles impõe a barreira
+  de visto** — **"Can international applicants apply? Yes, though you must have the right to work
+  in the UK or Ireland"**; isso **não é patrocínio**, é exigência de quem já tem direito, e a
+  carta **não pode fingir que não leu isso** — o caso de visto tem de ser feito de frente; (2)
+  **não achei sinal de 3D em lugar nenhum** — nem o campo de habilidades do diretório (vazio) nem
+  o site citam 3D, CG ou modelagem, e os títulos conhecidos (*Pablo*, *Sol*) são 2D; o encaixe com
+  personagem 3D é **fraco**; (3) **o endereço da casa diverge entre as duas fontes** — o diretório
+  diz **Holywood, Northern Ireland** e o site da própria casa diz **Belfast**; segui o site, que é a casa falando; (4) o rodapé do site traz **"we do not accept any
+  unsolicited materials"**, e embora a FAQ de carreiras convide currículo espontâneo no `jobs@`, a
+  contradição existe e o convite é para o `jobs@`, não para a caixa dela.
+
+### Aria Ungerer — **Creative Producer / Founder** — Pictor Productions, Irlanda
+
+- **Email:** aria@pictor.ie · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/pictor/ , aberta nesta rodada. É a **única pessoa** do
+  bloco `studio_contacts` (`<h4>Aria Ungerer</h4>` + `Creative Producer / Founder` +
+  `mailto:aria@pictor.ie`) e **não há caixa geral na página**, só o endereço dela. **NADA foi
+  montado.** MX conferido (Zoho).
+- **Por que ELA e não outra pessoa da casa:** é a única pessoa publicada, e é fundadora e cadeira
+  criativa ao mesmo tempo. Não há alternativa nem dilema.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"we are passionate about visual art
+  and aim to express that through the medium of animation"**, e o projeto em curso, que é
+  personagem puro: **"With the support of the Irish Film Board and Creative Europe MEDIA fund, we
+  are currently developing our first TV show, Flix; a comedy about the only dog living in Cat
+  Town"**, que é **"an adaptation of the eponymous children's book by world famous, children's
+  book author, Tomi Ungerer"**, coproduzido **"with UK production company, Eye Present"**
+  (https://animationireland.com/studios/pictor/).
+- **Fora dos EUA?** Sim — Irlanda, União Europeia. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `alvos.csv` e
+  `processados.csv`. A **única** ocorrência no repositório é uma linha de `docs/index.html` que
+  **não é contato**: registra que `pictor.ie` respondeu com **Cloudflare Robot Challenge Screen**
+  numa varredura de portas, junto com outros quatro domínios. O **Gmail devolveu ZERO** para
+  `"pictor.ie" OR Pictor OR Ungerer`. **PRIMEIRA pessoa da casa.**
+- **Ressalva honesta, e esta é a ficha mais fraca da rodada, quatro:** (1) **não abri o site da
+  própria casa** — `pictor.ie` está atrás do **Cloudflare Robot Challenge**, registrado no
+  repositório em 11/09 e não vencido hoje; **NÃO CONFERIDO** por segunda fonte, então cargo e
+  técnica vêm só do diretório; (2) **não há nenhuma prova de 3D** — o campo de habilidades está
+  vazio e o texto não cita técnica nenhuma; (3) a casa está **desenvolvendo o primeiro programa**,
+  ou seja é pré-produção financiada por fundo, sem pipeline de produção montado e sem cadeira de
+  modelagem provável; (4) o **sobrenome dela é o mesmo do autor do livro** que estão adaptando
+  (Tomi Ungerer) — pode ser parentesco e pode ser coincidência, **não confirmei**, e a carta **não
+  deve especular sobre isso**.
+
+### Andrew Baker — **CEO e cofundador** — Cantilever Media, Dublin, Irlanda — **`sem-email`, e a razão é uma PROVA, não uma falta**
+
+- **Pessoa, publicada com cargo e endereço em** https://animationireland.com/studios/cantilever-media/ ,
+  aberta nesta rodada: o bloco `studio_contacts` traz **Andrew Baker — CEO —
+  andrew@cantilevermedia.ie** e **Andrea Martin — CEO — andrea@cantilevermedia.ie** (os dois com o
+  mesmo título). O texto confirma: **"Founded by Andrew Baker and Andrea Martin, Cantilever Media
+  is a Dublin based production company"**.
+- **POR QUE O ENDEREÇO NÃO ENTRA, apesar de PUBLICADO:** o domínio `cantilevermedia.ie` **não
+  existe**. Consultei a resolvedora pública do Google em **quatro tipos de registro** e todos
+  devolveram **`Status: 3` (NXDOMAIN) com autoridade do registro `.ie`** (`a.ns.ie.`): **A, NS,
+  SOA e MX**. Como controle, `cantilever.media` — o domínio do **site**, que o diretório publica
+  como `/www.cantilever.media` — resolve normalmente (`Status: 0`, A em 198.185.159.145). Ou seja
+  **a armadilha de domínio que a rodada anterior anotou como "site `cantilever.media`, email
+  `@cantilevermedia.ie`" é pior do que ela pensava: o domínio do email está morto.** Carta enviada
+  ali **quica**. A linha entra guardando **nome, cargo e estúdio**, que é o que o BRIEF manda.
+- **Por que a casa vale o registro mesmo assim:** é, junto da Trickshot, a casa desta rodada com
+  sinal de **CGI de longa-metragem** — **"Our first project, 'The Amazing Maurice' is a CGI
+  animated theatrical film based on the award winning book 'The Amazing Maurice and his Educated
+  Rodents' by Sir Terry Pratchett, starring Hugh Laurie, Emilia Clarke, David Thewlis, Himesh
+  Pate, Gemma Arterton and Hugh Bonneville"**. Longa em CGI com elenco desse porte é exatamente o
+  tipo de produção que emprega modelador de personagem.
+- **O que eu NÃO fiz:** **não montei** `andrew@cantilever.media` trocando o domínio pelo do site.
+  Seria chute, é o chute que quicou cinco vezes em 07/09, e desta vez com um agravante: **o
+  domínio do site não publica MX nenhum** (consulta MX em `cantilever.media` devolveu `Status: 0`
+  **sem registro MX**), então nem sequer há prova de que aquele domínio receba email.
+- **Dedupe, feito na caixa:** as duas ocorrências no repositório são a **nota da própria rodada
+  das 16h30** em `PESSOAS-SEM-CARTA.md` e uma linha de método em `processados.csv`; **zero em
+  `enviados.csv`**. O **Gmail devolveu ZERO** para `cantilevermedia OR "cantilever.media" OR
+  "Cantilever Media"`. **CASA NOVA.**
+- **Ressalva:** os **dois** fundadores levam o título de **CEO** no diretório, então **não sei
+  qual dos dois é a cadeira criativa** e escolhi o primeiro listado; o site
+  `https://www.cantilever.media/` abre (HTTP 200) mas o conteúdo é montado por JavaScript e o
+  corpo servido tem só o menu (**About**, **Contact**) — **NÃO CONFERIDO** por segunda fonte; e
+  *The Amazing Maurice* é de 2022, então **não é prova de produção viva hoje**.
+
+### Leevi Lemmetty — **Director** — Ink and Light, Irlanda — **`sem-email`, e isso vale**
+
+- **Pessoas, publicadas com cargo em** https://animationireland.com/studios/ink-and-light/ ,
+  aberta nesta rodada: o bloco `studio_contacts` traz **Tamsin Lyons — Producer** e **Leevi
+  Lemmetty — Director**, e **nenhum dos dois tem endereço**. O único `mailto:` da página é a caixa
+  `info@ink-and-light.com`.
+- **Por que entra sem email:** é uma das **três** casas desta rodada com sinal explícito de 3D, e
+  a frase é da própria casa — **"Ink and Light is a boutique production house creating original
+  films and TV series for the international and domestic markets. We work mostly with CG
+  animation, but enjoy exploring whatever form fits to tell a great story."** O catálogo publicado
+  (*Ollie*, *Hopscotch and the Christmas Tree*, *Harry & Bip*, *Royals Next Door*, *Stories from
+  Backwoods*) é de série de personagem.
+- **O alvo certo é o Leevi Lemmetty (Director)**, que é a cadeira criativa, e é dele que falta o
+  endereço. **Nada foi montado**, embora o padrão `nome@dominio` seja o mais comum nas casas
+  vizinhas deste mesmo diretório: padrão de outra casa não prova o padrão desta. O domínio
+  `ink-and-light.com` **tem MX vivo** (IONOS), então o dia em que aparecer um endereço literal,
+  ele é entregável.
+- **Dedupe:** **zero** em todo o repositório para `ink-and-light`, e o **Gmail devolveu ZERO**
+  para `"ink-and-light" OR "Ink and Light" OR Lemmetty OR "Tamsin Lyons"`. **CASA NOVA.**
+- **Ressalva:** o campo de habilidades do diretório lista **`Stop Motion` e `VFX` e NÃO lista
+  3D**, o que contradiz a frase "mostly with CG animation" da mesma página — é o mesmo defeito de
+  rótulo que quase fez perder a Trickshot, e quem manda é o texto; **não abri o site
+  `www.ink-and-light.com`** nesta rodada, então **NÃO CONFERIDO** por segunda fonte; e *Royals
+  Next Door* também aparece no catálogo da **Pikkukala** (ficha da rodada das 16h30), o que sugere
+  coprodução entre as duas — **duas cartas sobre o mesmo título**, e o maestro deve saber disso.
+
+### OS QUATRO DIRETÓRIOS: o veredito é MEDIDO, e desmente "erro de rede" em dois dos quatro
+
+A rodada das 16h30 registrou `connect_rejected` e `ws_closed_mid_exchange` nos quatro e concluiu
+**erro de rede**. Reabri por três tubos independentes. **Em dois casos não é rede: o domínio não
+existe.** A prova é resposta **autoritativa do registro nacional**, que é o juiz final:
+
+| Diretório | DNS (resolvedora pública) | HTTP | Veredito |
+|---|---|---|---|
+| `finnanimation.fi` | **resolve** (A = 104.247.81.99) | **503** em `http://`, **connection reset** em `https://`, por `WebFetch` **e** por `curl` | **NÃO CONFERIDO** — o site existe e **o servidor dele é que não entrega**. Não é o túnel. |
+| `animationinnorway.no` | **`Status: 3` NXDOMAIN**, autoridade `charm.norid.no.` (registro `.no`) | não chega a haver | **O DOMÍNIO NÃO EXISTE.** Não é erro de rede. Não insistir. |
+| `animationinthenetherlands.nl` | **`Status: 3` NXDOMAIN**, autoridade `ns1.dns.nl.` / `dns.sidn.nl.` (registro `.nl`) | não chega a haver | **O DOMÍNIO NÃO EXISTE.** Não é erro de rede. Não insistir. |
+| `klik.amsterdam` | **`Status: 2` SERVFAIL** — os **cinco** servidores de nome delegados respondem **REFUSED** (*lame delegation*) | não chega a haver | **NÃO CONFERIDO** — o domínio está delegado no registro mas o DNS dele está quebrado **do lado deles**. |
+
+**O que isso muda para a próxima rodada, e economiza o tempo que eu gastei:** **parar de tentar
+`animationinnorway.no` e `animationinthenetherlands.nl`** — não são "rede ruim", não existem, e
+nenhum navegador vai abri-los. `finnanimation.fi` e `klik.amsterdam` continuam valendo **uma**
+tentativa futura, porque a falha ali é de servidor e pode passar. **Não procurei qual seria o
+domínio certo da associação norueguesa e da holandesa** — busca na web devolveu só diretórios
+comerciais de terceiros (ensun, ProductionHub, GoodFirms), que não publicam cargo com endereço e
+não servem para esta frente. **Isso fica aberto e eu digo que fica.**
+
+**Também NÃO abri `/impressum` em casa alemã ou austríaca nenhuma**, que o pedido mencionava: a
+rodada foi inteira consumida pelos quatro diretórios e pela fila irlandesa, e não chegou lá.
+**NÃO CONFERIDO.**
+
+### O QUE O DEDUPE MATOU, com nome, para ninguém repetir
+
+A fila irlandesa que a rodada anterior deixou apontada tinha nomes que **já receberam carta**, e
+só se descobre abrindo `enviados.csv` e a caixa:
+
+- **Flickerpix** (Johnny Schumann, Creative Director) — **carta em 02/09 para
+  `jobs@flickerpix.com`** e follow-up em 07/09, os dois na caixa. **FORA.**
+- **Little Moon** (3D declarado, o rótulo mais forte do diretório) — **carta em 02/09 para
+  `jobs@littlemoonanimation.com`**, e a casa **respondeu** com resposta automática de
+  `vanessa+canned.response@littlemoonanimation.com`, que é a **Vanessa Robinson** publicada no
+  diretório como Creative Producer. **FORA, e doeu**, porque era a única casa com habilidade
+  declarada **`3D` e só**.
+- **Piranha Bar** (Epic MegaGrant, **"blending 3D animated characters with live action using the
+  Unreal Engine"**) — já em `enviados.csv`. **FORA**, e é a maior perda das três pelo encaixe.
+- **Kavaleer**, **Revelator**, **Engine House**, **Moetion Films**, **Brown Bag**, **Giant
+  Animation** — todas já em `enviados.csv`. **FORA.**
+
+E o dedupe também **confirmou que o maestro escreveu** as fichas da rodada das 16h30: a caixa
+mostra cartas saindo às **17h54 de 14/09** para `john@cheersdogears.com` (Dog Ears),
+`susan@wiggleywoo.com` (Wiggleywoo) e Treehouse Republic, esta com **resposta automática de
+ausência de Dale Robinson no mesmo minuto** (fora a trabalho, volta dia 15). **Nenhuma dessas
+casas pode ser reaberta.**
+
+### A FILA QUE SOBROU, medida e não usada
+
+Ainda com nome, cargo e endereço publicados no diretório, **sem carta e sem ficha**, para a
+próxima rodada não recomeçar do zero — **todos com MX a conferir antes de virar ficha**:
+**Studio 9** (Joe Coveney e John O'Connell, Co Founders, `joe@`/`john@studio9.ie`, MX Titan — mas
+a casa declara **"stop-motion and 2d animation techniques"** e **zero 3D**, encaixe fraco, por
+isso ficou fora hoje); **Paper Panther** (Carol Freeman, Founder & Director, `carol@paperpanther.ie`
+— **stop-motion de bonecos de feltro e recorte de papel**, encaixe muito fraco com 3D digital);
+**Studio Meala** (Stephan Fagan, Managing Director — atenção, o nome sai "Stephan" e o endereço
+sai `stephen@studiomeala.com`); **Lazy Sunday** (Artem Vasiliev, CEO); **Stiúidio Fia** (Paul
+McDonnell, CEO, endereço de **Gmail pessoal**, e a casa é de **efeitos práticos**: "special
+effects, prop making, sculpting, moulding & casting, model making, and puppet fabrication");
+**SANAM** (Aislí Madden, Producer, `aisli@sanam.ie`); **Igloo Animations** (Paul Dowling, Producer,
+`paul@iglooanimations.com` — e **Julie Rush, Design Lead**, que é a cadeira de arte, mas dela o
+diretório publica só a caixa `info@`); **Distillery Films** (Jonathan Clarke, Producer, mas só com
+a caixa `info@`); **Boulder Media** (Paul O'Flanagan, Creative Director, endereço resolvido nesta
+rodada, **segunda e última** da casa); **Monster Entertainment** (Andrew Fitzpatrick, Chairman —
+mas é **distribuidora**, não estúdio).
