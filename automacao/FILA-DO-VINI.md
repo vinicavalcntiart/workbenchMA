@@ -1,9 +1,9 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-## 📬 LOTE DE CARTAS FECHADO — 13/09 às 23h50 — **24 rascunhos prontos, dois comandos seus**
+## 📬 LOTE DE CARTAS FECHADO — 14/09 às 12h40 — **29 rascunhos prontos, dois comandos seus**
 
 Esta é a única coisa que o lote de cartas pede de você. Não há nada para colar de carta
-nenhuma: os vinte e quatro rascunhos já estão escritos na sua caixa, com assinatura e anexos,
+nenhuma: os vinte e nove rascunhos já estão escritos na sua caixa, com assinatura e anexos,
 e o Apps Script é que dispara.
 
 **Antes de rodar, RECOLE o `automacao/envia-rascunhos.gs` no editor.** A cópia que está aí
@@ -14,10 +14,19 @@ log parece idêntico ao de um envio real.
 
 | comando | quantas | o que são |
 |---|---|---|
-| `enviarRascunhos()` | **20** | assunto fixo da campanha |
+| `enviarRascunhos()` | **25** | assunto fixo da campanha |
 | `enviarAssuntoProprio()` | **4** | assunto que a própria casa pediu |
 
-**As 4 mais novas, escritas em 13/09 à noite, todas para pessoa com nome e email publicado
+**As 5 MAIS NOVAS, escritas em 14/09 de manhã, todas para pessoa com nome e email publicado na
+fonte oficial:** Peter Wingaard (Rain Games, Bergen — a carta aponta para Ole Ivar Rudi, o diretor
+de arte, porque o endereço dele não é publicado), Karlijn Walters (Denda Games, Hengelo — a carta
+diz na cara que não se sabe se 3D de personagem é da alçada dela), Tony Manninen (LudoCraft, Oulu),
+Joost Spek (3Dpicnic — **essa não é candidatura a vaga**, é oferta de colaboração por projeto e
+remota, porque o estúdio é de uma pessoa só) e Simon van der Linden (Monobanda, Utrecht — time
+híbrido de freelancer, então a carta oferece as duas formas). **Três das cinco são holandesas**, que
+é a rota preferida medida em 12/09.
+
+**As 4 de 13/09, também para pessoa com nome e email publicado
 no site do próprio estúdio:** Dario van Vree (Studio Pupil, Amsterdã), Michael Bengtsson
 (Mindbender, Gotemburgo), Are Sundnes (Hyper Games, Oslo) e Petter Lindblad (Snowcloud Films,
 Estocolmo). Entram no `enviarRascunhos()` junto com as 16 abaixo.
