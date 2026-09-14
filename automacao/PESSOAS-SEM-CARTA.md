@@ -884,3 +884,38 @@ nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áu
   mudado, e cargo desatualizado é pior que alvo nenhum; (3) o cargo dele é **gestão e level design,
   não arte** — ele encaminha, não abre portfólio; (4) **não há vaga aberta** e a casa é pequena e
   de capital próprio dos funcionários, o que torna patrocínio de visto a hipótese mais fraca.
+
+### Karlijn Walters — **Lead Graphical Designer (a cadeira de arte da casa)** — Denda Games, Hengelo, Holanda
+
+- **Email:** karlijn@denda.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://denda-corporate.com , aberta nesta rodada. O bloco **OUR EXPERTS** publica quatro pessoas
+  com nome e cargo, cada uma com o seu `mailto:` no cartão, e os quatro saem no HTML na mesma ordem
+  das quatro pessoas: **Jacques Neuvel (Managing Director) → neuvel@denda.com**, **Thomas Veldhuis
+  (Director of Business Development) → thomas@denda.com**, **Lennard Mulder (Technical Game
+  Producer) → lennard@denda.com** e **Karlijn Walters (Lead Graphical Designer) → karlijn@denda.com**.
+- **ARMADILHA DE DOMÍNIO, e ela é a sexta da campanha:** o site é **`denda-corporate.com`** e o
+  email é **`@denda.com`**. Qualquer endereço montado sobre o domínio do site teria quicado — é o
+  caso Stunlock (`stunlock.com` / `@stunlockstudios.com`), Meindbender (`meindbender.com` /
+  `@mindbender.com`) e Apparat. Aqui não houve montagem: o estúdio publicou os dois.
+- **Por que ELA e não outra pessoa da casa:** dos quatro nomes publicados, três são gestão,
+  desenvolvimento de negócio e produção técnica. **Ela é a única cadeira de arte da casa**, e o
+  BRIEF-JOE manda, em casa pequena e média, ir na arte antes do RH e antes do comercial.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"We develop games from idea to release
+  with full focus on every detail needed to make it a great success."** e, na descrição do serviço
+  de desenvolvimento, **"From high quailty game ports for HTML5, PlayStation, Xbox and Nintendo
+  Switch to full work-for-hire activities, we provide you with all your needs."** (o erro de
+  digitação em "quailty" é do site deles, e fica aqui como está para quem for conferir a fonte).
+  **"full work-for-hire"** é o gancho de verdade: casa que faz trabalho por encomenda é casa que
+  precisa de artista por projeto, e aí o problema do patrocínio de visto muda de tamanho.
+- **Fora dos EUA?** Sim — Holanda, União Europeia, que é o país de **zero veto escrito** na
+  contagem de 12/09 e a rota preferida desta rodada.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `denda`; o **Gmail devolveu ZERO** para `denda OR "Denda Games" OR Walters`, e zero
+  também na busca por janela de tempo. **CASA NOVA para a campanha inteira**, PRIMEIRA pessoa.
+  Jacques Neuvel fica como **segunda e última** possível.
+- **Ressalva honesta, três, e a primeira é séria:** (1) **"Graphical Designer" pode não ser 3D** —
+  em casa de porte pequeno esse título costuma cobrir 2D, interface e marketing, e o site não
+  mostra nenhum personagem 3D no portfólio; o encaixe é de **casa que terceiriza arte**, não de
+  time de personagem; (2) **não há vaga aberta** e o site não tem página de carreiras, então é
+  carta de porta; (3) o rodapé do site diz **"© Copyright 2024"**, ou seja a página pode estar
+  desatualizada e o cargo dela não foi confirmado por fonte independente hoje.
