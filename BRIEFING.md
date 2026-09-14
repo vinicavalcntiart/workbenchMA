@@ -1985,3 +1985,63 @@ Os quadros de até 900 vagas foram **paginados por inteiro** em vez de consultad
 **Zero vaga de personagem nova em todos.** Os dois únicos acertos de disciplina em escopo foram
 o **Lead Modeler `JR40923`** e a **Modeling Supervisor `JR40941`** da **Eyeline Seoul** — as duas
 **já enviadas e confirmadas em 09/09**, pegas pelo `dedupe-agora.sh`.
+
+## 14/09 — LINK QUEBRADO NA CARTA. ERRO MEU, MEDIDO NO MIME, E A REGRA QUE FECHA ISSO
+
+O Vini abriu a resposta que saiu para o Carsten Granig, da Swift Games, e a assinatura estava
+assim, **em texto visível**, três linhas seguidas:
+
+```
+Portfolio: https://www.google.com/url?q=3Dhttps://www.artstation.com/viniciuscavalcanti&source=3Dgmail&ust=3D1789477396439000&sa=3DE
+```
+
+Palavras dele: "os links saíram quebrados que vergonha. Isso não pode acontecer nunca."
+
+### A causa, conferida no MIME cru e não no que a tela mostra
+
+Chamei `mcp__Gmail__reply` passando **só `body`**, em texto puro, sem `htmlBody`. A API do Gmail
+não manda texto puro: ela converte sozinha para `text/html` e **"linkifica" cada URL pelo
+redirecionador dela**, deixando o embrulho À VISTA no corpo da mensagem. Não é artefato da tela
+do Gmail dele: puxei a mensagem com `messageFormat: RAW`, decodifiquei, e o embrulho está no
+que saiu pelo fio. O Carsten recebeu aquilo.
+
+### A correção, e o limite dela, porque prometer demais aqui é mentir
+
+Com `<a href="...">` de verdade no `htmlBody`, o **texto visível fica limpo**
+(`artstation.com/viniciuscavalcanti`). Conferido no MIME da resposta à Sylwia Polaczyk.
+
+**MAS**: no mesmo MIME se vê que o Gmail **continua embrulhando o `href` por dentro**, mesmo com
+âncora correta. Isso NÃO se desliga pela API. A diferença real é que ninguém vê o embrulho e o
+clique cai no lugar certo. Quem prometer "link 100% limpo" está prometendo o que a ferramenta
+não entrega.
+
+### REGRA, sem exceção
+
+**Toda chamada de `reply` e de `create_draft` leva `body` em texto puro E `htmlBody` em HTML
+CRU.** Mandar só um dos dois é defeito, não escolha.
+
+**`htmlBody` NUNCA vai escapado.** Escrever `&lt;div&gt;` em vez de `<div>` entrega tag crua na
+tela do destinatário. Eu fiz isso em 14/09 com a **Inés Laborda, Producer da Drakhar**: ela
+recebeu um muro de `<p>` e `<br>`. Tive de escrever de novo pedindo desculpa. Acento vai por
+entidade (`&aacute;`, `&eacute;`), tag vai crua. São coisas diferentes.
+
+**Link no corpo é sempre `<a href="URL completa">texto curto</a>`**, nunca URL solta no meio do
+texto, nem no `body` nem no `htmlBody`.
+
+### Como conferir, porque "eu acho que ficou bom" não é conferência
+
+Depois de mandar a PRIMEIRA de um lote, puxe a mensagem com `messageFormat: RAW`, decodifique o
+base64 e procure `<a href=` no corpo. Achou âncora: a fórmula está certa, siga o lote. Achou URL
+solta em texto: pare, conserte a chamada, e só então continue. Custa uma chamada e evita mandar
+o mesmo defeito para quinze estúdios.
+
+### O que ficou por consertar, e por que não consertei tudo
+
+Seis mensagens saíram com o defeito antes de eu medir: Borja Corvo Santana (Broken Bird), Mike
+(Cybernetic Walrus), Carsten Granig (Swift Games), Simon Sweeney (Kepler), Paul Murphy
+(Lighthouse) e a caixa da Cyborn.
+
+**Reenviei limpo só Carsten e Simon**, que são apresentação de verdade, onde a assinatura é o
+cartão de visita. As outras quatro são agradecimento de duas linhas a uma recusa ou a um "não
+temos vaga": ali o link é enfeite, e mandar quatro emails de correção faz mais barulho do que o
+defeito. Registro a escolha em vez de dizer que está tudo consertado.
