@@ -2072,3 +2072,162 @@ caminho era outro.
 
 Quem só decorar "o embrulho não é defeito" vai repetir o erro na primeira resposta direta que
 escrever. A frase não está errada: está incompleta, e agora está completa.
+
+## 14/09 — A TABELA DE QUADROS DO WORKDAY, REMEDIDA INTEIRA, E UM POD DA LISTA NÃO EXISTE
+
+Rodada só de `curl` e API, sem navegador. Três alvos: os seis locatários pendentes em `401`,
+locatários novos derivados do painel e do censo, e paginação integral dos quadros conhecidos.
+
+### 1. O POD `wd101` NÃO EXISTE, e ele está na lista de pods que a campanha manda sondar
+
+Sonda de pod, barata e definitiva: `https://zzprobe0.<pod>.myworkdayjobs.com/robots.txt`.
+**`422` quer dizer pod vivo** (o pod respondeu e recusou o locatário inventado); **falha de
+túnel quer dizer pod inexistente**, porque o host nem resolve.
+
+| resultado | pods |
+|---|---|
+| **422, pod vivo** | `wd1` `wd3` `wd5` `wd10` `wd12` `wd102` `wd103` `wd105` `wd107` `wd108` `wd109` `wd501` `wd502` `wd503` `wd504` |
+| **não resolve, pod inexistente** | **`wd100`**, **`wd101`** |
+
+Conferido com controle: `disney.wd101` falha igual a `naoexiste123.wd101`. **Toda sondagem que
+incluiu `wd101` produziu erro de rede e não `422`, e erro de rede é NÃO CONFERIDO, nunca
+"locatário não existe".** Quem contar `wd101` como pod sondado infla a cobertura da varredura em
+um sétimo sem ter medido nada. E os pods `wd10`, `wd102`, `wd105`, `wd107`, `wd108`, `wd109`,
+`wd502`, `wd503`, `wd504` são reais e ficam **fora** da lista de sete que o briefing usa — a
+Netflix mora em `wd108` e já passou batida por isso uma vez.
+
+### 2. O `401` É DO LOCATÁRIO INTEIRO. NOME DE SITE NÃO FURA, e agora está medido com número
+
+A dúvida em aberto era se um NOME DE SITE correto abriria o endpoint `cxs` de um locatário cujo
+`robots.txt` responde `401`. **Não abre.** Medidos **178 nomes de site** (`External`, `Careers`,
+`ExternalCareerSite`, `External_Career_Site`, `<Nome>_Careers`, `<Nome>External`,
+`<Nome>_External_Career_Site`, `Jobs`, `Global_Careers`, `Corporate` e as variantes de cada casa)
+contra os seis locatários:
+
+| Locatário | Pod | `robots.txt` | Sites testados | Resposta do `cxs` | Veredito |
+|---|---|---|---|---|---|
+| `ea` | `wd5` | 401 | 29 | **401 em 29/29** | NÃO CONFERIDO, precisa-de-navegador |
+| `riotgames` | `wd5` | 401 | 30 | **401 em 30/30** | NÃO CONFERIDO, precisa-de-navegador |
+| `dneg` | `wd3` | 401 | 29 | **401 em 29/29** | NÃO CONFERIDO, precisa-de-navegador |
+| `scopely` | `wd1` | 401 | 30 | **401 em 30/30** | NÃO CONFERIDO, precisa-de-navegador |
+| `roblox` | `wd503` | 401 | 30 | **401 em 30/30** | NÃO CONFERIDO, precisa-de-navegador |
+| `mattel` | `wd1` | 401 | 30 | **401 em 30/30** | NÃO CONFERIDO, precisa-de-navegador |
+
+O corpo é sempre o mesmo e é o que nomeia o mecanismo:
+`{"errorCode":"HTTP_401","message":"Unable to verify credentials for system account "}`.
+Refeito no host alternativo `https://<pod>.myworkdaysite.com/wday/cxs/...`: **401 idêntico**.
+Os seis existem em **um** pod cada e dão `422` em todos os outros.
+
+> **Regra: `401` fecha o LOCATÁRIO, não o site.** Adivinhar nome de site num locatário `401` é
+> gasto sem retorno — está medido em 178 tentativas. O caminho desses seis é o navegador do Vini,
+> e **nenhum deles pode ser escrito como "casa sem vaga"** em resumo nenhum.
+
+### 3. A TABELA DE QUADROS, REMEDIDA HOJE: 105 locatários com `robots.txt` legível, 273 sites
+
+Lidos os `robots.txt` de **164 pares locatário×pod** que o repositório já conhecia:
+**105 responderam `200`**, 50 responderam `401`, 8 responderam `422` e **1 respondeu `410`**.
+
+**`comcast`/`wd5` responde `410`** — é o quarto estado, o locatário MIGROU. Não insista nele.
+
+**Os `422` desmentem host que o repositório ainda espalha:** `activision`/`wd1`,
+`sonyinteractive`/`wd1`, `magicleap`/`wd1`, `netflix`/`wd1`, `amazongamestech`/`wd1`,
+`dassaultsystemesentertainment`/`wd503`, `gearboxpublishing`/`wd10` e `da`/`wd109` **não
+existem**. A Activision vive em `xboxgaming`/`wd1` e a Netflix em `netflix`/`wd108`.
+
+Os quadros da área, com o número de vagas de cada site medido hoje:
+
+| Locatário / pod | Sites do `robots.txt` (vagas) |
+|---|---|
+| `disney`/`wd5` | `disneycareer` (634), `disneycareerdc` (647) |
+| `netflix`/`wd108` | `Netflix` (645), `Eyeline` (44) |
+| `xboxgaming`/`wd1` | `External` (102), `Blizzard_External_Careers` (52), `King_External_Careers` (18), `SS_external` (2), `CentralTech` (2), `DL_external` (0), `HOH` (0) |
+| `warnerbros`/`wd5` | `global` (331), `francais` (4), `directshare` (27) |
+| `pixar`/`wd501` | `Pixar_External_Career_Site` (3), `Pixar_External_Tech_Jobs` (1), `Pixar_External_Events` (0), `pixar_invite_to_apply` (0), `Pixar_External_Internships` (0) |
+| `tencent`/`wd1` | `Tencent_Careers` (303), `OA_Huoshui_Platform` (140), `Lightspeed` (42), `internal_bole` (64), `timi_careers` (0), `timi_montreal_careers` (0) |
+| `cloudimperiumgames`/`wd503` | `CIG_Global_Careers` (60), `broadbean_external` (58) |
+| `spe`/`wd1` | `SonyPicturesEntertainment` (73), `DirectApply` (28) |
+| `sonyglobal`/`wd1` | `SonyGlobalCareers` (113), `SonyJapanCareers` (12), `Sony_Europe_Careers` (22) |
+| `sega`/`wd3` | `SEGA_Careers` (26) |
+| `razer`/`wd3` | `Careers` (180) |
+| `unitytech`/`wd1` | `Unity` (125) |
+| `mpc`/`wd1` | `MPCCareers` (125) — lembrando que é a **Marathon Petroleum** |
+| `lnw`/`wd5` | `LightWonderExternalCareers` (110), `SciPlayExternalCareersSite` (15), `GroverGamingExternalCareerSite` (5) |
+| `aristocrat`/`wd3` | `AristocratExternalCareersSite` (192), `ContractortoEmployeeOpportunities` (2), `PrivateCareerSite` (3) |
+| **`gearbox`/`wd1`** | **`GEC` (4)** — **quadro novo nesta tabela**: é a Gearbox Entertainment Company, Frisco/TX |
+| `spinmaster`/`wd3` | `SpinMaster_Careers` (53), `SAGOMINI_Careers` (3), `TocaBoca_Careers` (1) |
+| `sky`/`wd3` | `TUX` (289), `sky_careers` (38), `broadbean_external` (5) |
+| `lego`/`wd103` | `LEGO_External` (447), `LEGO_Executive` (11) |
+| `autodesk`/`wd1` | `Ext` (398), `uni` (13) |
+| `maxon`/`wd103` | `MAXO` (5) |
+| `bydeluxe`/`wd5` | `Deluxe_External` (45) |
+| `deluxe`/`wd5` | `USA_CAN` (75), `EMG_EXT` (9), `AUS` (0), `External_Colleges_Universities` (0) |
+| `iyuno`/`wd3` | `Careers` (55) |
+| `fox`/`wd1` | `Domestic` (318), `FOXTVST_EAST` (43), `FOXTVST_Central` (34), `FOXTVST_WEST` (16) |
+| `amcn`/`wd5` · `starz`/`wd5` · `aenetworks`/`wd1` | `amcnetworks` (24) · `Starz` (18) · `AE-Careers` (11) |
+| `nine`/`wd105` · `sevenwestmedia`/`wd105` · `yle`/`wd502` | `Nine_External_Career_Site` (34) · `SWM` (57) · `External` (9) |
+| `nvidia`/`wd5` · `adobe`/`wd5` · `logitech`/`wd5` · `sonos`/`wd1` | `NVIDIAExternalCareerSite` (2000+) · `external_experienced` (739) · `Logitech` (207) · `Sonos` (38) |
+| `ringling`/`wd1` | `RinglingExternalCareers` (6), `RinglingExternalCareersFaculty` (2) — faculdade de arte |
+
+### 4. PAGINAÇÃO INTEGRAL: 213 quadros, 40.750 vagas, ZERO falha, ZERO personagem inédita
+
+Paginados por inteiro (`limit` 20, `offset` crescente, sem depender de lista de termos)
+**todos** os 213 quadros com vaga. **40.750 das 40.751 declaradas foram lidas**, `NÃO CONFERIDO`
+= 0. (As oito diferenças de uma vaga são quadros corporativos cujo `total` mudou durante a
+própria paginação.)
+
+**`limit` máximo do Workday é 20.** `limit=100` devolve **HTTP 400** com corpo de erro. Quem ler
+esse 400 como parede vai achar que a plataforma fechou; é só o teto do parâmetro.
+
+**Acertos da régua de disciplina, e o desfecho de cada um** — todos já conhecidos, nenhum inédito:
+
+| Vaga | Requisição | Estado no dedupe |
+|---|---|---|
+| Senior Texture Artist, ILM Londres | `10159370` | enviada 02/09, **recusada 03/09** |
+| Lead Texture Artist, ILM Londres | `10159371` | enviada 31/08, **recusada 01/09** |
+| Senior Modeler, ILM Sydney | `10159882` | enviada 04/09, **No Longer in Consideration** |
+| Character Modeling Supervisor, Netflix Sydney | `JR41751` | enviada 31/08 **e** 08/09 (duplicata já registrada) |
+| Character Artist – StarCraft, Blizzard | `R028136` | enviada 12/09 |
+| Lead Character Artist – Overwatch, Blizzard | `R027817` | enviada 02/09, **recusada 12/09** |
+| Lead Modeler / Lead Surfacing / Modeling Supervisor, Eyeline Seul | `JR40923` `JR40928` `JR40941` | enviadas 09/09 |
+| Senior Character Designer, Razer Singapura | `JR2026007640` | **descarte por disciplina já escrito em 13/09** |
+
+**Armadilha de leitura medida hoje:** a `10159370` aparece como *"Posted 7 Days Ago"* e a
+`10159882` como *"Posted 10 Days Ago"*, o que faz as duas **parecerem requisições novas**. O
+`postedOn` do Workday é reapresentado quando a casa promove o anúncio; **quem decide é o ID da
+requisição**, e os dois IDs são exatamente os que já foram enviados e recusados.
+
+**Fora da disciplina, com motivo escrito, para a próxima rodada não reabrir:** `Creature TD (all
+levels)` e `Creature Technical Director (Rigging)` da ILM são **rigging**; `Creatures FX` e
+`Head of Character Effects (CFX)` da Netflix são **simulação**; `Character Design Lead` da Disney
+Television Animation, `Character Designer- Ink` da Netflix e `Senior Character Concept Artist` da
+Cloud Imperium são **2D**; `Senior Character Producer` da CIG é **produção**. Fora do escopo
+geográfico: `Sr Character Modeler`, `Lead Modeler` e `Look Dev TD` de Mumbai, `Groom Artist` e
+`Surfacing/Lookdev Artist` de Hyderabad, `3D Character Artist` de Shenzhen.
+
+### 5. LOCATÁRIOS NOVOS: 9.318 sondas, 4 locatários, ZERO da disciplina
+
+Derivados 1.553 tokens dos nomes de estúdio do painel e do `censo-boards-0809.csv`, batidos
+contra os seis pods vivos da lista do briefing. Rendimento honesto:
+
+| Locatário / pod | Estado | Quem é de verdade | Vagas | Da disciplina |
+|---|---|---|---|---|
+| **`upp`/`wd3`** | `200`, sites `UPP-Careers` e `Jobs_Careers` | **falso amigo**: University Partnerships Programme, alojamento estudantil no Reino Unido — **não é a UPP de VFX de Praga** | 17 | **0** |
+| **`cat`/`wd5`** | `200`, sites `CaterpillarCareers` e `SolarTurbines` | **falso amigo**: Caterpillar | 1.020 | **0** |
+| **`klanggames`/`wd3`** | **`401`** | token de **Klang Games** (Berlim, *Seed*). Identidade **não conferida**, porque `401` não deixa ler nada | — | **NÃO CONFERIDO** |
+| `greensky`/`wd5` | `401` | financeira | — | **NÃO CONFERIDO** |
+
+Os dois `200` foram **paginados por inteiro** (1.037 vagas) e nenhum tem a disciplina.
+`federation`/`wd105`, que parecia a Federation Entertainment da animação francesa, é a
+**Federation University Australia**: some à lista de falsos amigos junto de `mpc`, `icon`,
+`remedy`, `rain`, `triumph`, `chopchop` e `playground`.
+
+**Ordem de gasto, confirmada de novo:** 9.318 sondas de adivinhação renderam **zero** da
+disciplina; a paginação dos quadros já conhecidos custou 2.038 requisições e cobriu 40.750 vagas.
+**Gaste a rodada nos quadros conhecidos**, não em adivinhar locatário.
+
+### 6. O SALDO, sem maquiagem
+
+**Quadros novos abertos: 2** (`upp`, `cat`), **os dois falsos amigos**. **Vagas lidas: 41.787.**
+**Vagas de personagem inéditas: ZERO.** **`NÃO CONFERIDO`: 8 locatários** — os seis do `401`
+pendente, mais `klanggames` e `greensky`. Nada entrou na fila do Vini porque não havia o que
+acrescentar, e fila inflada seria pior que o zero.
