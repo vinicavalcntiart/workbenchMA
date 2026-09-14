@@ -950,3 +950,32 @@ nomes). As duas únicas coisas que a janela devolveu foram a Digital Rain da Áu
   Ltd."**, então o site é antigo e o cargo não foi confirmado hoje por fonte independente —
   o que sustenta a escolha é o critério do BRIEF-JOE de que **fundador não muda de casa**; (3)
   **não há vaga aberta** e não existe página de carreiras: é carta de porta.
+
+### Joost Spek — **Fundador e artista 3D (o estúdio é ele)** — 3Dpicnic, Holanda
+
+- **Email:** joost@3dpicnic.nl · confiança **alta** · **PUBLICADO** · fonte: https://3dpicnic.nl/contact
+  (bloco **"Get In Touch — Email: joost@3dpicnic.nl"**, em texto visível) e https://3dpicnic.nl/about ,
+  as duas abertas nesta rodada. É o **único endereço do site inteiro**: não existe `info@` nem `hello@`.
+- **Por que ELE e não outra pessoa da casa:** não há outra. A página About diz, na primeira pessoa:
+  **"I'm Joost Spek, the digital artist behind 3Dpicnic. I've been making 3D work for clients around
+  the world for over a decade, from my studio in the Netherlands. The studio is small on purpose: it
+  means craft, attention, and direct contact with the person actually doing the work."**
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"We work with marketers, creatives and
+  producers on animations for social, product visuals and characters."** e, logo abaixo, **"Some
+  weeks that means a 3D animation for a social campaign. Other weeks it's a character, a product
+  visual, or an AR mural"**. O serviço de animação 3D é descrito assim: **"Social pieces, explainers,
+  character work, product films. We try to make every frame feel alive, not just moving."** É um
+  estúdio holandês que escreve **"character work"** três vezes na própria página de serviços.
+- **Fora dos EUA?** Sim — Holanda, União Europeia.
+- **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv` dão
+  **zero** para `3dpicnic`; o **Gmail devolveu ZERO** para `3dpicnic OR picnic`, e zero também por
+  janela de tempo. **CASA NOVA para a campanha inteira**, PRIMEIRA e única pessoa possível.
+- **Ressalva honesta, e ela é a mais pesada desta rodada:** (1) **é um estúdio de UMA pessoa** —
+  ele não tem cadeira para contratar ninguém, e pedir emprego ali seria pedir o que não existe.
+  **A única forma honesta desta carta é a do caso Concept Art House**: oferta de **colaboração por
+  projeto, remota**, para quando entrar trabalho de personagem que ele não dê conta sozinho. Se a
+  carta chegar como candidatura a vaga, ela morre na primeira linha; (2) o portfólio público dele
+  pende para **AR e mural**, e ele próprio explica por quê — **"A lot of what we make for brands and
+  agencies is white-label, so it can't sit on this page"** —, então não dá para medir quanto de
+  personagem existe de fato; (3) não há vaga, não há página de carreiras, e o volume de trabalho de
+  um estúdio solo é imprevisível.
