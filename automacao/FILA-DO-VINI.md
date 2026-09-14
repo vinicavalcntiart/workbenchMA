@@ -106,38 +106,60 @@ Registrada como descarte, não como achado.
 
 ---
 
-## 🔎 RODADA DE CAÇA DE 13/09 às 12h50 UTC (Jhon B) — **FILA NOVA: ZERO · e as 15 da sua mão estão TODAS VIVAS**
+## 🔎 RODADA DE CAÇA DE 13/09 às 12h50 UTC (Jhon B) — **FILA NOVA: ZERO** · corrigida em 14/09: das 15 ditas "da sua mão", **CINCO já eram suas e uma tem veto. Sobram 9**
 
 **O que você precisa fazer nesta seção: nada.** Ela existe por dois motivos, e o segundo é o
 que vale o seu tempo.
 
-### 1. As 15 vagas que estão na sua mão foram RECONFERIDAS na fonte oficial, uma a uma
+### 1. As 15 vagas foram RECONFERIDAS na fonte oficial — mas cinco já eram suas
 
 Ninguém tinha feito isso desde 09/09, e vaga sênior de personagem dura de 3 a 7 dias. **Todas
-as 15 responderam VIVA, zero morta, zero não conferido.** Então nenhum clique seu vai para uma
-vaga que já fechou:
+as 15 responderam VIVA, zero morta, zero não conferido**, então nenhum clique seu vai para uma
+vaga que já fechou. **O que esta seção errou, e a correção de 14/09 arruma, é outra coisa:
+estar VIVA não quer dizer estar POR FAZER.** Cinco destas você já enviou:
 
-| # | Vaga | Onde | Fonte que respondeu |
-|---|---|---|---|
-| 1 | Behaviour — Senior 3D Character Artist, Dead by Daylight | Montréal | Lever US |
-| 3 | Behaviour — Senior 3D Character Artist, projeto não anunciado | Montréal | Lever US |
-| 5 | Gameloft — Candidature Spontanée | Montréal | SmartRecruiters |
-| 6 | Ubisoft Massive — Lead Character Artist, The Division 2 | Malmö | SmartRecruiters |
-| 7 | Avalanche — Lead Character Artist | Estocolmo | Lever US |
-| 8 | Rodeo FX — Senior Lookdev Artist | Toronto | SmartRecruiters |
-| 9 | Ubisoft Montréal — Team Lead, Modeling (Unreal) | Montréal | SmartRecruiters |
-| 10 | Lighthouse Games — Lead Character Artist | Royal Leamington Spa | Workable |
-| 11 | Framestore — 3D Modeller (contrato curto) | Montréal | Recruitee |
-| 12 | Frontier — Experienced Character Artist | Cambridge | **Lever EU** |
-| 13 | Asobo — Character Artist H/F | Bordeaux | **Lever EU** |
-| 15 | Rodeo FX — Senior Lookdev Artist | Montréal | SmartRecruiters |
-| 16 | Framestore — Blender Generalist / Visual Development Artist | Montréal | Recruitee |
-| 17 | Framestore — Blender Generalist | Londres | Recruitee |
-| 23 | Skydance — Senior Grooming TD | Madri | Lever US |
+| # | Vaga | Onde | Fonte | **Situação real** |
+|---|---|---|---|---|
+| ~~1~~ | ~~Behaviour — Senior 3D Character Artist, Dead by Daylight~~ | Montréal | Lever US | **JÁ ENVIADA 10/09 03h53** |
+| 3 | Behaviour — Senior 3D Character Artist, projeto não anunciado | Montréal | Lever US | falta |
+| 5 | Gameloft — Candidature Spontanée | Montréal | SmartRecruiters | falta |
+| ~~6~~ | ~~Ubisoft Massive — Lead Character Artist, The Division 2~~ | Malmö | SmartRecruiters | **JÁ ENVIADA 10/09 04h03** |
+| ~~7~~ | ~~Avalanche — Lead Character Artist~~ | Estocolmo | Lever US | **JÁ ENVIADA 10/09 04h08** |
+| 8 | Rodeo FX — Senior Lookdev Artist | Toronto | SmartRecruiters | falta |
+| 9 | Ubisoft Montréal — Team Lead, Modeling (Unreal) | Montréal | SmartRecruiters | falta |
+| ~~10~~ | ~~Lighthouse Games — Lead Character Artist~~ | Royal Leamington Spa | Workable | **JÁ ENVIADA 10/09 04h00** |
+| 11 | Framestore — 3D Modeller (contrato curto) | Montréal | Recruitee | falta |
+| ~~12~~ | ~~Frontier — Experienced Character Artist~~ | Cambridge | **Lever EU** | **JÁ ENVIADA 10/09 03h57** |
+| ~~13~~ | ~~Asobo — Character Artist H/F~~ | Bordeaux | **Lever EU** | **VETO DE IDIOMA, não clique** |
+| 15 | Rodeo FX — Senior Lookdev Artist | Montréal | SmartRecruiters | falta |
+| 16 | Framestore — Blender Generalist / Visual Development Artist | Montréal | Recruitee | falta |
+| 17 | Framestore — Blender Generalist | Londres | Recruitee | falta |
+| 23 | Skydance — Senior Grooming TD | Madri | Lever US | falta |
 
-**Duas ressalvas honestas sobre esta tabela.** A 12 (Frontier) **já foi enviada por você em
-10/09** e continua listada porque a vaga segue no ar, não porque falte fazer algo — **não
-reaplique**. A 13 (Asobo) continua **fechada pelo idioma**, com o veto relido hoje no anúncio
+> ### ⛔ CORREÇÃO DE 14/09 — a tabela acima mandava você clicar em CINCO vagas que já são suas
+>
+> A versão anterior desta tabela listava as 15 como "na sua mão" e avisava de UMA só (a
+> Frontier). **Cinco já tinham sido enviadas por você mesmo na madrugada de 10/09, entre
+> 03h53 e 04h08 UTC, cada uma com recibo na caixa**, e continuaram na lista como se
+> faltassem: Behaviour Dead by Daylight, Ubisoft Massive, Avalanche, Lighthouse Games e
+> Frontier. **Quatro dessas cinco são exatamente as de personagem**, ou seja, a tabela
+> empurrava seus melhores minutos para portas já abertas.
+>
+> Como isso foi medido, e o método vale mais que a correção: cada ID foi cruzado com o
+> `enviados.csv` e depois **lido no CAMPO DE DESFECHO**, nunca pela simples ocorrência do
+> nome. As cinco trazem `enviada` no campo e a frase literal do recibo.
+>
+> Descoberto porque a rodada do Jhon A de 14/09 ia aplicar na Avalanche: o modo seco passou,
+> o formulário ficou perfeito na tela, e **o `dedupe-agora.sh` barrou no minuto do clique**.
+> Sem ele a campanha teria mandado candidatura repetida para Estocolmo.
+>
+> **Sobram 9 de verdade**, e a 13 (Asobo) está fora por veto escrito de idioma
+> (*"Tu disposes d'un niveau de français et anglais opérationnel"*), então o que resta para
+> a sua mão são **9**, das quais **uma é de personagem**: a 3, Behaviour, projeto não
+> anunciado.
+
+**Ressalva corrigida em 14/09.** A 12 (Frontier) já foi enviada por você em 10/09 — e ela
+**não era a única**: veja o bloco de correção logo acima, são CINCO nessa situação. A 13 (Asobo) continua **fechada pelo idioma**, com o veto relido hoje no anúncio
 inteiro: *"Tu disposes d'un niveau de **français** et anglais opérationnel"*. Ela fica na lista
 para quando o francês chegar ao nível, e a faixa publicada dela (32k€–47k€) está abaixo do piso
 da sua política de pretensão.
