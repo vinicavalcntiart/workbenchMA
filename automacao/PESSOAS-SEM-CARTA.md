@@ -1349,3 +1349,345 @@ cargo ao lado do endereço**, não a varredura em si.
 neste túnel; `axisstudiosgroup.com` devolve **403**; `api.github.com` está **fechado para esta
 sessão** ("GitHub access to this repository is not enabled"), o que fecha a via de log de commit
 pelo GitHub — a do Gitea do Blender, essa, abriu.
+
+## RODADA DAS 16h30 DE 14/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**A rota pedida foi Holanda primeiro, e a Holanda deu zero nesta rodada. Digo com a palavra
+exata: a veia holandesa devolveu nada aproveitável.** O que rendeu foi a Irlanda, que é a
+terceira da ordem. O negativo holandês está medido no fim desta seção, com números.
+
+**O ACHADO DE MÉTODO, e ele corrige uma conclusão anterior do próprio repositório.** A rodada de
+11/09 já tinha usado `animationireland.com/studios/` e registrou em `processados.csv` que um BFS
+pelos **sites dos estúdios** devolveu Revelator, Engine House, Treehouse Republic, ALT Animation,
+Sanam e Moetion. **O que ninguém tinha aberto era a PÁGINA DE DETALHE de cada estúdio dentro do
+próprio diretório** — `animationireland.com/studios/<slug>/`. Ela publica, num bloco só, **nome,
+cargo e email de cada pessoa da direção**, e publica endereço de gente que o site do estúdio não
+publica em lugar nenhum. Abri as **47** páginas de detalhe e elas devolveram **mais de 40
+endereços de pessoa com cargo**, quase todos inéditos.
+
+**Isso desmente, com prova, uma linha que está gravada no painel da campanha.** O registro de
+06/09 em `docs/index.html` diz, literal: *"Aardman, Blue Zoo, Brown Bag, Cartoon Saloon, Boulder,
+Kavaleer e Sun Creature também: nenhuma publica nome com email."* Para a **Boulder Media** isso
+agora está errado — o diretório da associação publica os dois Creative Directors dela com
+endereço. **A frase não estava mentindo: estava medindo o lugar errado.**
+
+**Dedupe feito na CAIXA, não no arquivo.** As sete casas devolveram **ZERO** no Gmail em quatro
+buscas diferentes: por nome de casa, por sobrenome da pessoa, por **domínio** e por **janela de
+tempo** (`newer_than:30d` cruzado com Dublin/Ireland/Irish/Belfast, e `newer_than:90d` pelos
+sobrenomes). E uma casa que parecia achado pronto morreu justamente aí, na caixa: a **Giant
+Animation** (Dublin, a única irlandesa com 3D declarado e Creative Director com endereço
+publicado, `sean@giant.ie`) **já recebeu carta em 26/08 na caixa `hello@giant.ie` e follow-up em
+02/09, sem resposta** — o Gmail devolveu a thread inteira. Não virou ficha.
+
+### Gillian Comerford — **Creative Director** — Boulder Media, Dublin, Irlanda
+
+- **Email:** Gillian.Comerford@bouldermedia.tv · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/boulder-media/ , aberta nesta rodada. O bloco de contato
+  traz quatro pessoas com cargo e endereço, um embaixo do outro: **Colm Tyrrell — Head of Studio
+  Production — colm.tyrrell@**, **Jenni MacNeaney — Head of Studio Operations — jenni.macneany@**,
+  **Paul O'Flanagan — Creative Director** e **Gillian Comerford — Creative Director —
+  Gillian.Comerford@**. O cargo dela está confirmado por **segunda fonte independente**, o site da
+  própria casa: https://bouldermedia.tv/who-we-are/ , também aberta nesta rodada, publica
+  **"Gillian Comerford — Creative Director"** com bio. **NADA foi montado.**
+- **Por que ELA e não outra pessoa da casa:** a direção publicada tem duas cadeiras de produção e
+  operação (Tyrrell e MacNeaney) e **duas cadeiras criativas de mesmo nível**, Paul O'Flanagan e
+  ela. Entre os dois Creative Directors eu escolhi ela **por uma razão medida, não por gosto**: o
+  `mailto:` de Paul O'Flanagan **está quebrado no HTML do próprio diretório**. Extraí os `mailto:`
+  crus da página e o dele sai truncado como `mailto:Paul.O` — o apóstrofo corta o link. Não dá
+  para saber se o endereço real usa apóstrofo reto, apóstrofo curvo ou nenhum, e chutar isso é
+  gastar a melhor carta da maior casa de animação da Irlanda num endereço que pode não existir.
+  O dela sai inteiro e sem ambiguidade: `mailto:Gillian.Comerford@bouldermedia.tv`. A bio dela
+  ainda é a mais próxima do trabalho do Vini: **"She has worked as an Animator, Animation Director
+  and Director on a considerable number of award winning series and shorts including works for
+  Disney, Cartoon Network, Nickelodeon and most recently Netflix."** Paul O'Flanagan fica como
+  **segunda e última** da casa, e só se alguém conseguir o endereço dele de fonte não truncada.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de carreiras publica a missão,
+  e ela é sobre personagem: **"To combine our passion, expertise and experience to deliver the
+  best animation, breathing life and soul into characters and storytelling"**
+  (https://bouldermedia.tv/careers/). A mesma página diz que a casa **"has been creating and
+  sharing the best TV shows and movies in 2D and 3D and has a mix of Children's and Adult
+  Animation in our portfolio"**, e o Who We Are abre com **"Established in 2000, Boulder Media is
+  one of Ireland's largest animation studios."**
+- **Fora dos EUA?** Sim — Irlanda, que exige autorização de trabalho. A linha de realocação vale
+  inteira.
+- **Dedupe, feito na caixa:** `enviados.csv` dá **zero** para Boulder (a casa **nunca recebeu
+  carta**); em `docs/index.html` ela existe só como **porta de portal**, com a nota de 02/09
+  *"SEM VAGAS... só formulário de contato sem upload e o info@bouldermedia.tv"*; e o **Gmail
+  devolveu ZERO** para `boulder`, `bouldermedia`, `Comerford`, `O'Flanagan`, para o domínio
+  `"bouldermedia.tv"` e nas janelas de 30 e 90 dias. **PRIMEIRA pessoa da casa.**
+- **Ressalva honesta, quatro:** (1) **a visão declarada da casa é 2D** — o Who We Are diz
+  **"Our vision is to be both an originator and the best creative animation partner for high end
+  2D TV content and features"**; o 3D aparece no diretório da associação (`2D 3D VFX`) e na página
+  de carreiras, mas não é o carro-chefe, e a carta não pode fingir que é; (2) **é a maior casa de
+  animação da Irlanda**, com estrutura de RH e a frase **"Boulder Media does not accept unsolicited
+  pitches or submissions"** no rodapé do formulário — a frase é sobre **pitch de projeto**, não
+  sobre candidatura, mas é sinal de casa que filtra; (3) o cargo dela é direção criativa de série
+  de TV, **não direção de arte de personagem**, e nenhum chefe de CG aparece publicado; (4) a
+  seção VACANCIES da página de carreiras estava **vazia** quando eu abri, então **não há vaga
+  aberta** e isto é carta de porta.
+
+### Andrew Hamilton — **Creative Director** — elk.Studios, Dundalk, Irlanda
+
+- **Email:** andrew.hamilton@elkstudios.tv · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/elk-studios/ , aberta nesta rodada. Os `mailto:` crus da
+  página são quatro e saem ao lado do nome e do cargo: **Ian Hamilton — Managing Director —
+  ian.hamilton@**, **Andrew Hamilton — Creative Director — andrew.hamilton@**, **Brian Gilmore —
+  Head of Studio — Brian.gilmore@** e a caixa `info@`. **NADA foi montado.**
+- **Por que ELE e não outra pessoa da casa:** dos três publicados, um é gestão (Managing Director)
+  e outro é chefia de estúdio; ele é **a única cadeira criativa**, e o BRIEF-JOE manda ir na arte
+  antes da gestão e do RH em casa pequena e média. Ian Hamilton fica como segunda e última.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de carreiras **convida
+  candidatura espontânea com todas as letras** — **"We're not currently hiring, but we're always
+  on the lookout for talented people across animation, production and development. If you think
+  you'd be a good fit for Elk, we'd love to hear from you!"**
+  (https://www.elkstudios.tv/careers). E a apresentação da casa:
+  **"An agile first adapter animation studio producing bold, story-driven work for key partners
+  and platforms"**, **"Founded in 2017 by some of Ireland's most experienced animation
+  professionals"** e **"Based in Dundalk, Ireland, with a sibling studio in Newry, Northern
+  Ireland"** (https://www.elkstudios.tv/).
+- **Fora dos EUA?** Sim — Irlanda. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `elkstudios`, e o **Gmail devolveu ZERO** para
+  `elkstudios`, `elk.Studios`, `Hamilton`, o domínio `"elkstudios.tv"` e por janela de tempo.
+  **CASA NOVA, PRIMEIRA pessoa.** **CUIDADO COM O FALSO AMIGO:** existe uma **ELK Studios sueca**,
+  `elk-studios.com`, de jogo de cassino, já registrada em `garimpo-cgstudiomap.csv` como
+  `nao_encontrada`. **Não é esta casa** — o domínio certo é `elkstudios.tv`, sem hífen.
+- **Ressalva honesta, três:** (1) **não consegui confirmar que a casa faz 3D** — o diretório da
+  Animation Ireland deixa o campo de habilidades **vazio** para ela, e a página de trabalhos
+  mostra **um único título**, *Gangsta Granny* (48×11', entrega em outubro de 2026, para BBC e
+  WDR), sem dizer a técnica; (2) o convite da página de carreiras cita **"animation, production
+  and development"** e **não cita modelagem nem arte de personagem**; (3) a casa é de 2017 e
+  pequena, com estúdio irmão em Newry, o que enfraquece a hipótese de patrocínio de visto.
+
+### John McDaid — **Creative Director** — Dog Ears, Derry, Reino Unido (Irlanda do Norte)
+
+- **Email:** john@cheersdogears.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/dog-ears/ , aberta nesta rodada. Os `mailto:` crus são três:
+  **Fionnuala Deane — Managing Director — fionnuala@**, **John McDaid — Creative Director —
+  john@** e a caixa `hello@`. **NADA foi montado.**
+- **Por que ELE e não outra pessoa da casa:** só duas pessoas são publicadas, uma de gestão e uma
+  criativa. Ele é a criativa. Fionnuala Deane fica como segunda e última.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Dog Ears creates beautiful engaging
+  content for children that we would love in our own homes"** e **"We are known for thoughtful
+  creative work, made with integrity in collaboration with our partners and super talented crew"**
+  (https://cheersdogears.com/). O produto é personagem e está medido: **"Our focus has always been
+  on the creation of strong original IP, including Puffin Rock, which we produce with Cartoon
+  Saloon"**, e a mesma página diz que **"Our first two seasons were streamed on Netflix for over
+  32.9 million hours in 2025"** e que o longa *Puffin Rock and the New Friends* foi
+  **"the first animated movie ever made in Northern Ireland"**.
+- **Fora dos EUA?** Sim — Reino Unido (Irlanda do Norte), que exige patrocínio. A linha de
+  realocação vale inteira. **Atenção: é Reino Unido, não Irlanda** — a carta não pode falar em
+  União Europeia.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `cheersdogears`, `Dog Ears` e `McDaid`, e o **Gmail
+  devolveu ZERO** para todos eles, para o domínio `"cheersdogears.com"` e nas janelas de 30 e 90
+  dias. **CASA NOVA, PRIMEIRA pessoa.**
+- **Ressalva honesta, e ela é pesada, três:** (1) **a casa diz que não executa** — a própria
+  página afirma **"The Dog Ears team specialise in pre-production and collaboration, developing
+  and creating stories with like minded studios worldwide"**, ou seja a produção pesada vai para
+  outra casa e não há cadeira de modelagem 3D ali; (2) **as vagas abertas são de storyboard**, não
+  de personagem: a página *Work Here!* pede **"Storyboard Supervisor"** e **"Storyboard Artists"**
+  para uma série pré-escolar nova, e manda responder para `hello@` — a carta tem de ser de porta e
+  não pode fingir encaixe na vaga; (3) *Puffin Rock* é **2D**, e não há sinal de 3D no site.
+
+### Lee McQuade — **Creative Director** — ALT Animation, Bangor, Reino Unido (Irlanda do Norte)
+
+- **Email:** lee@altanimation.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/alt-animation/ , aberta nesta rodada: **Tim Bryans —
+  Managing Director — tim@**, **Andrea McQuade — Head of Production — andrea@** e **Lee McQuade —
+  Creative Director — lee@**, mais a caixa `info@`. Cargo confirmado por **segunda fonte**, o site
+  da própria casa: https://www.altanimation.com/team , também aberta nesta rodada, publica
+  **"Lee McQuade — Creative Director"**. **NADA foi montado.**
+- **Por que ELE e não outra pessoa da casa:** dos quatro nomes publicados no site (os três acima
+  mais Matthew Bradley, Development Producer), ele é **a única cadeira criativa**; os outros são
+  gestão, produção e desenvolvimento.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"ALT Animation — Passionately
+  providing imaginative and creative work through considered collaboration and efficient
+  delivery"** e, no bloco de curtas, **"We pride ourselves on our ability to tell complex stories
+  through the art of animation, using vivid imagery and dynamic characters to bring ideas to
+  life"** (https://www.altanimation.com/). A casa se apresenta como capaz de **"take on any part
+  of the pipeline"**.
+- **Fora dos EUA?** Sim — Reino Unido (Irlanda do Norte). Realocação vale, e **não** se fala em UE.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `alvos.csv` e
+  `docs/index.html` para `altanimation` e `McQuade`. **A única ocorrência no repositório é uma
+  linha de método em `processados.csv` de 11/09**, que registra ter achado "ALT Animation com
+  endereço de pessoa publicado" e **nunca transformou isso em ficha nem em carta** — é pendência
+  antiga, não duplicata. O **Gmail devolveu ZERO** para `altanimation`, `ALT Animation`, `McQuade`,
+  o domínio `"altanimation.com"` e por janela de tempo. **PRIMEIRA pessoa da casa.**
+- **Ressalva honesta, três:** (1) **o diretório deixa o campo de habilidades vazio e o site não
+  cita 3D em lugar nenhum** — o portfólio visível é *Doodle Girl* (RTÉ Jr, 26×7') e trabalho de
+  eLearning para **BBC Bitesize e BBC Teach**, o que puxa para 2D e para conteúdo educativo; (2)
+  a casa é **muito pequena**, quatro pessoas publicadas, e vive de fundo público (**"supported
+  with funds awarded by the UK Global Screen Fund"**), o que enfraquece muito a hipótese de
+  patrocínio de visto; (3) o rodapé do site diz **©2023**, então o quadro de pessoal não foi
+  confirmado hoje por fonte independente — o diretório da associação é de 2026 e bate, o que
+  ajuda, mas não é o site da casa.
+
+### Veronica Lassenius — **Creative Director e cofundadora** — Pikkukala, Helsinque, Finlândia
+
+- **Email:** veronica@pikkukala.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/pikkukala/ , aberta nesta rodada. A página publica **dois**
+  `mailto:`, os dois de pessoa e nenhum de caixa: **Veronica Lassenius — Creative Director —
+  veronica@** e **Pablo Jordi — Producer — pablo@**. A condição de cofundadora sai de **segunda
+  fonte**, o site da própria casa: https://www.pikkukala.com/about , também aberta nesta rodada —
+  **"Founded in Helsinki in 2012 by animation veterans Veronica Lassenius and Pablo Jordi"**.
+  **NADA foi montado.**
+- **Por que ELA e não outra pessoa da casa:** são só duas pessoas publicadas, os dois fundadores;
+  ele é produtor e ela é a direção criativa. O BRIEF-JOE manda ir na arte antes da produção.
+  Pablo Jordi fica como segunda e última.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"We love good design, fun characters
+  and interesting atmospheres. Our creations stand for values of respect, diversity and
+  curiosity"** e **"We are worldbuilders who use animation and interactive entertainment to create
+  cool and purposeful universes for everyone"** (https://www.pikkukala.com/about). A home
+  acrescenta: **"With studios in Helsinki and Barcelona, we are the partners of choice for
+  like-minded companies searching for co-production and high quality animation production
+  services"**. O produto atual é personagem e está em plataforma grande: *Royals Next Door* e
+  *Samuel*, este último com estreia na Netflix registrada no próprio blog deles.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv` e `alvos.csv`. As duas
+  ocorrências no repositório **não são contato**: `portal_only.md` lista a casa como "formulário
+  de contato no site, vaga de personagem não conferido" e `caca-sem-ats-1109.md` só registra que
+  `pikkukala.eu` responde em `http`. O **Gmail devolveu ZERO** para `pikkukala`, `Lassenius`, o
+  domínio `"pikkukala.com"` e por janela de tempo. **PRIMEIRA pessoa da casa.**
+- **Ressalva honesta, três:** (1) **não há prova de 3D** — o diretório deixa o campo de
+  habilidades vazio e o catálogo deles (*Taste Buddies*, *Royals Next Door*, *Samuel*, *Who Will
+  Comfort Toffle?*) é de aparência 2D; o encaixe com personagem 3D é **INDIRETO**; (2) a casa é de
+  **coprodução e serviço**, com metade da operação em **Barcelona**, então a cadeira, se existir,
+  pode não ser em Helsinque; (3) a única vaga que achei no site deles é **"Senior Storyboard
+  artist for Froggie"**, de outubro de 2025, fora da disciplina e velha — a carta é de porta.
+
+### Dale Robinson — **Producer / General Manager** — Treehouse Republic, Dublin, Irlanda
+
+- **Email:** dale@treehouserepublic.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/treehouse-republic/ , aberta nesta rodada. É o **único**
+  `mailto:` da página, e sai duas vezes: no bloco de contato da casa e ao lado de
+  **"Dale Robinson — Producer/ General Manager"**. **NADA foi montado.**
+- **Por que ELE e não outra pessoa da casa:** a mesma página publica **"Graham Holbook — Creative
+  Director"**, que seria o alvo preferido pela regra da arte antes da produção — mas dele a casa
+  publica **só o Twitter, nenhum endereço**. Montar `graham@` sobre o domínio seria exatamente o
+  chute que produziu cinco devoluções em 07/09, e não foi feito. Fica ele, que é o único
+  publicado, e **Graham Holbrook fica como segunda e última, se e quando aparecer endereço
+  literal dele**. (Registro a grafia: o diretório escreve "Holbook" no nome e "GrahamHolbrook" no
+  Twitter — não sei qual das duas é a certa.)
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Established in 2010, Treehouse
+  Republic is a creative-led award-winning 2D animation studio, who, having been raised on
+  Saturday morning cartoons while searching for the toys in the cereal box, have a strong comedy
+  action core that they pour into all their work"**, e a capacidade que interessa:
+  **"With the capability to create any part of a production from concept to final output"**
+  (https://treehouserepublic.com/).
+- **Fora dos EUA?** Sim — Irlanda. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `alvos.csv` e
+  `docs/index.html` para `treehouserepublic` e `Dale Robinson` (as ocorrências de "Treehouse" no
+  repositório são de outros arquivos e outras casas). Como na ALT, **a única menção é a linha de
+  método de 11/09 em `processados.csv`**, que achou a casa e nunca escreveu. O **Gmail devolveu
+  ZERO** para `treehouserepublic`, `Treehouse Republic`, `Dale Robinson`, o domínio e a janela de
+  tempo. **PRIMEIRA pessoa da casa.**
+- **Ressalva honesta, e é a mais dura desta rodada, três:** (1) **a casa se declara 2D na
+  primeira linha do próprio site** — o diretório da associação diz `2D 3D VFX`, mas quem manda é a
+  casa, e ela diz **"2D animation studio"**; o encaixe com personagem 3D é **fraco e não
+  confirmado**; (2) **o alvo é produção, não arte** — ele encaminha, não abre portfólio, e a carta
+  precisa pedir o encaminhamento para o Graham Holbrook pelo nome; (3) o catálogo é pré-escolar e
+  infantil (*Hey Fuzzy Yellow*, *Atom Town*, *Cozmo & Friends!*, *Hungry Bear Tales*) e não há
+  página de vagas — é carta de porta.
+
+### Susan Broe — **Producer e cofundadora** — Wiggleywoo, Dublin, Irlanda
+
+- **Email:** susan@wiggleywoo.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://animationireland.com/studios/wiggleywoo/ , aberta nesta rodada: a página publica
+  **"Gilly — Director / Writer, Creative Director"** e **"Susan Broe — Producer —
+  susan@wiggleywoo.com"**. É o **único** `mailto:` da página. Confirmado por **segunda fonte** no
+  site da própria casa: o bloco de dados estruturados de https://www.wiggleywoo.com/ traz
+  `"email": "susan@wiggleywoo.com"` com `"contactType": "General Enquiries"`. **NADA foi montado.**
+  A página do diretório publica **telefone e endereço residencial**, que **NÃO** foram registrados
+  aqui porque o repositório é público.
+- **Por que ELA e não outra pessoa da casa:** a casa publica duas pessoas. A outra, "Gilly", é
+  Director/Creative Director e seria o alvo preferido — mas **nem nome completo nem endereço dela
+  existem publicados**, e não montei nada. Susan Broe é a única com endereço, e é cofundadora.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Wiggleywoo is a Dublin-based studio
+  crafting original, character-driven stories for audiences of all ages. From laugh-out-loud kids'
+  TV to sharp adult comedy — we bring big personalities to life with bold visuals and a healthy
+  dose of Irish spirit"** e **"Crafted in Ireland. Loved Everywhere."** (https://www.wiggleywoo.com/).
+  A casa está em produção do primeiro longa: **"We are currently in production on our first
+  animated feature film Tea with the Dead"**, e a série *The Day Henry Met* **"has been broadcast
+  in 192 countries worldwide including Nick Jr International"**.
+- **Fora dos EUA?** Sim — Irlanda. A linha de realocação vale inteira.
+- **Dedupe, feito na caixa:** zero em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html` para `wiggleywoo` e `Broe` (o único "Broe" do repositório é uma
+  linha de `fila-gamedevmap-europa.csv`, que é lista de garimpo e não registro de contato). O
+  **Gmail devolveu ZERO** para `wiggleywoo`, `Broe`, o domínio `"wiggleywoo.com"` e nas janelas de
+  30 e 90 dias. **CASA NOVA, PRIMEIRA pessoa.**
+- **Ressalva honesta, três:** (1) **o diretório declara a habilidade da casa como `2D` e só** —
+  é o rótulo mais restritivo desta rodada inteira, e o encaixe com personagem 3D é **fraco**; (2)
+  o cargo dela é **produção**, não arte, e a pessoa de arte da casa não tem nem nome completo
+  publicado, então a carta tem de pedir o encaminhamento sem poder citar um nome; (3) a casa é
+  **muito pequena** e sem página de carreiras — é carta de porta, e a hipótese de patrocínio de
+  visto é fraca.
+
+### JAM Media — Dublin, Irlanda — **três nomes com cargo, ZERO endereço. `sem-email`, e isso vale.**
+
+- **Pessoas, publicadas com cargo em** https://animationireland.com/studios/jam-media/ , aberta
+  nesta rodada: **John Rice — CEO / Executive Producer**, **Alan Shannon — CCO / Director** e
+  **Mark Cumberton — COO / Producer**.
+- **Por que entra sem email:** é, pelo rótulo do próprio diretório, **a casa irlandesa com o
+  perfil técnico mais próximo do Vini desta rodada inteira** — o campo de habilidades dela lista
+  **`2D 3D After Effects Animation Software Development Flash Games Development Live Action Maya
+  Maya Max Puppetry Stop Motion`**. É a única da lista que declara **Maya e Max**.
+- **Por que NÃO tem endereço, e o que eu não fiz:** os `mailto:` crus da página do diretório são
+  **um só, `info@jammedia.com`**. Nenhuma das três pessoas tem endereço publicado ali nem no site
+  da casa. **Existe padrão de domínio plausível nas casas vizinhas** (`nome@dominio` e
+  `nome.sobrenome@dominio` aparecem em Boulder, elk, ALT e Dog Ears), **e mesmo assim nada foi
+  montado**: padrão de OUTRA casa não prova o padrão desta, e é esse chute que quicou cinco vezes
+  em 07/09. A linha entra guardando nome, cargo e estúdio.
+- **Dedupe:** `jammedia` só aparece em `backlog-estudios.md`, que é lista de garimpo; o **Gmail
+  devolveu ZERO** para `jammedia`, `"jammedia.com"` e `JAM Media`. **Casa nova.**
+- **Ressalva:** o alvo certo seria **Alan Shannon (CCO / Director)**, e é dele justamente que
+  falta o endereço. Se alguma rodada futura achar o endereço dele publicado em texto, a ficha está
+  meio pronta aqui.
+
+### O QUE MORREU NESTA RODADA, com número, para ninguém repetir
+
+**1. A HOLANDA DEU ZERO, e o gasto foi grande.** Varri **385 domínios** de estúdio da Holanda,
+Suécia, Dinamarca, Noruega e Finlândia — todos os que as filas `fila-gamedevmap-ch-fi-nl.csv`,
+`fila-gamedevmap-se-dk.csv` e `fila-gamedevmap-europa2/3/4.csv` têm e que **ainda não estavam** em
+`enviados.csv`, `pessoas.csv`, `processados.csv`, `alvos.csv` ou `docs/index.html` — em sete
+caminhos cada (`/`, `/contact`, `/about`, `/team`, `/press`, `/presskit`, `/press-kit`), com
+decodificação de entidade HTML e de `data-cfemail`. **Rendimento: 127 linhas de saída e nenhum
+alvo aproveitável.** O que apareceu foi **estúdio de uma a três pessoas de jogo indie 2D**
+(`martin@soupmasters.com`, `christofer@talemaker.se`, `jussi@platonicpartnership.com`,
+`mikael@eldenpixels.com`, `michael@shellander.se`, `magnus@orsakverkan.com`,
+`roy@wispfire.com`, `niels@weirdbeard.nl`, `dimme@monkeybizniz.com`,
+`sebastianbazelmans@purpleflamestudio.com`), sem nenhum sinal de personagem 3D e sem cargo
+publicado. **Não inventei ficha com eles para bater meta.**
+
+**2. Dois falsos amigos custaram leitura e ficam registrados:** `fido.se`, que a fila lista como
+estúdio sueco de VFX, **redireciona hoje para a Goodbye Kansas**, que já recebeu carta; e a
+**ELK Studios sueca** (`elk-studios.com`, cassino) não tem nada a ver com a **elk.Studios
+irlandesa** (`elkstudios.tv`) desta rodada.
+
+**3. A lista de membros da Dutch Games Association não serve mais para endereço de pessoa.**
+Reabri `dutchgamesassociation.nl/members`, extraí **171 domínios** e varri os de estúdio: quase
+todo site é SPA e devolve **a mesma home em qualquer caminho**, com `info@` e nada mais. O pouco
+que era de pessoa (`jord@wantedgamestudio.com`, da Wanted 5 Games de Haarlem — com a **armadilha
+de domínio** de sempre, site `wanted5games.com` e email `@wantedgamestudio.com`) **não tem
+sobrenome nem cargo publicado**: o site só chama o sujeito de "Jord" e de *"Chief Lunch Officer"*
+numa piada. Sem sobrenome e sem cargo **não vira ficha**.
+
+**4. O que ficou NÃO CONFERIDO, com essas palavras:** `finnanimation.fi` (associação finlandesa de
+animação), `animationinnorway.no`, `animationinthenetherlands.nl` e `klik.amsterdam` **não abrem
+por este túnel de saída** — `connect_rejected` e `ws_closed_mid_exchange`, que é **erro de rede e
+não casa sem site**. As três primeiras são exatamente a versão nórdica e holandesa do diretório
+que rendeu esta rodada inteira na Irlanda, e **são a primeira coisa a tentar de novo na próxima**,
+de preferência por navegador. `www.nfpa.nl` falha na verificação de certificado.
+
+**5. Sobrou fila boa na Irlanda, medida e não usada, para a próxima rodada não recomeçar do
+zero.** As páginas de detalhe do diretório ainda têm, com nome, cargo e endereço publicados e
+**sem carta na campanha**: **Turnip + Duck** (Colm Tobin MD, Aidan O'Donovan Creative Director),
+**Studio 9** (Joe Coveney e John O'Connell, cofundadores), **Paper Panther** (Carol Freeman,
+Founder & Director), **Trickshot Films** (Matt Pidgeon, Director), **Pictor** (Aria Ungerer,
+Creative Producer / Founder), **Cantilever Media** (Andrew Baker e Andrea Martin, com a
+**armadilha de domínio** `cantilever.media` no site e `@cantilevermedia.ie` no email),
+**Studio Meala** (Stephan Fagan, MD — e atenção, o nome sai "Stephan" e o endereço sai
+`stephen@`), **Flickerpix** (Johnny Schumann, Creative Director), **Sixteen South** (Colin
+Williams, Creative Director), **Stiúidio Fia** (Paul McDonnell, CEO, com endereço de **Gmail
+pessoal**), **Lazy Sunday** (Artem Vasiliev, CEO), **SANAM** (Aislí Madden, Producer) e
+**Monster Entertainment** (Andrew Fitzpatrick, Chairman — mas é **distribuidora**, não estúdio).
