@@ -2761,3 +2761,44 @@ atrás de veto ESCRITO (`authorized to work`, `must be based`, `citizen`, `resid
 de visto é contexto, não é critério de descarte.
 
 Se achar alguma e me passar o link, eu monto o dossiê e preencho o formulário na hora.
+
+---
+
+## ITEM DE MÃO NOVO — DreamWorks Montreal, **Lead Character Artist** (14/09)
+
+**Esta é, pela leitura do corpo do anúncio, a vaga que mais casa com o portfólio dele em toda a
+campanha.** Contagem no texto oficial: `character` 20, `groom` 6, `hair` 4, `fur` 2, `Houdini` 4,
+`XGen` 2. O título é literalmente *Lead Character Artist (Body/Crowd, Face, Hair & Wardrobe)*.
+
+- **Requisição:** `744000137526729` · refNumber `REF38910F`
+- **Casa:** NBCUniversal / DreamWorks Animation, Montréal, Canadá · **Full time**, presencial
+- **Página da vaga:** https://jobs.smartrecruiters.com/NBCUniversal3/744000137526729
+- **Publicada:** 13/07 · **Dedupe:** sem candidatura, conferido
+- **Régua de veto:** o anúncio diz *"Must be legally authorized to work in Canada"* e *"Must be
+  willing to work in our Montreal office a minimum of 4 days a week"*. **Não é veto de patrocínio**:
+  ser patrocinado É estar legalmente autorizado, e presença no escritório é restrição de presença,
+  não proibição de candidatura. Pelo briefing, isso é contexto.
+
+### Por que ela está na sua mão, e o que EU já testei (cliquei, não supus)
+
+O registro da campanha dizia desde 08/09 que a casa inteira estava travada por DataDome, e por
+isso esta vaga passou **seis dias parada**. Isso estava **errado pela metade** e a correção importa:
+
+| O que eu abri | Resultado medido |
+|---|---|
+| Página da vaga, navegador de verdade | **HTTP 200, livre.** Título certo, zero iframe de captcha, zero bloqueio |
+| Formulário `oneclick-ui`, anônimo | **403 + DataDome**, desafio de slider com áudio |
+| Formulário `oneclick-ui`, **com a sessão salva** `sr_state.json` | **403 + DataDome** igual. Não é questão de estar logado |
+| Rota `external-referrals` (a terceira, tirada do `referralUrl` da API) | **403 + DataDome** |
+
+**Três rotas de candidatura testadas, três barradas no mesmo muro.** Desafio de captcha não se
+burla, então aqui para. O que muda em relação ao registro antigo: a casa **não** está fechada, e o
+quadro dela continua valendo a varredura de toda rodada. O muro é só do formulário.
+
+**O que fazer, em dois minutos:** abrir a página da vaga acima no seu navegador normal, clicar em
+*I'm interested*, resolver o slider uma vez e seguir. O CV e os links são os de sempre.
+**Autorização de trabalho no Canadá: responda NÃO**, que é a verdade, e diga que precisa de
+patrocínio no primeiro campo de texto livre que aparecer.
+
+As outras duas da mesma casa, se quiser aproveitar a sessão já destravada:
+`744000137526669` Lead Material Artist e `744000133659271` Associate Art Director, ambas Montréal.
