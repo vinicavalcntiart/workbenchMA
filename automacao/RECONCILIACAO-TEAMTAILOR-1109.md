@@ -179,6 +179,41 @@ O `enviados.csv` tem **duas formas convivendo**: as linhas recentes (as ~15 últ
 
 Dos 89: 26 são falsos livres (seção 2) → sobram 63. Verifiquei a identidade de cada um dos 63 com uma consulta (`https://<slug>.teamtailor.com`, seguindo o redirect que o próprio Teamtailor devolve; WebSearch só quando o domínio caiu).
 
+### ⚠️ ATUALIZAÇÃO DE 14/09 — a "fila limpa" já não é de 15, e a porta aberta não basta
+
+Esta seção continua correta no que mediu (quem tem recibo e quem não tem), mas ela responde
+"a porta abre?" e **não responde a pergunta que decide: a porta tem cadeira de artista?**
+Medido em 14/09 no navegador, lendo a lista de departamentos de cada Connect:
+
+| slug | porta | departamento de arte | veredito |
+|---|---|---|---|
+| captureage | abre, sem captcha | **Art** | **NÃO CADASTRAR.** A própria casa escreve no painel: *"We're not actively using this feature at the moment but will build on it in the future"*, assinado por Marta Juras, Director Of Operations |
+| opusmajor | abre, sem captcha | **Art Team** (526325) | **cadastrado em 14/09**, perfil e CV verificados por recarga |
+| swiftgames | abre, sem captcha | **Art** (269483) | **cadastrado em 14/09**, idem |
+| keplerinteractive | abre, sem captcha | **Creative** (427432) | **cadastrado em 14/09**, idem |
+| newmoonproduction | abre, sem captcha | Game Art | livre, mas é Stillfront |
+| ofmstudios | abre, sem captcha | Game Art | livre, mas é Stillfront |
+| stillfrontgroup | abre, sem captcha | Game Art | livre, mas é Stillfront |
+| princessbento | abre, sem captcha | Animation, Character Layout, Rigging | **pipeline 2D, fora da disciplina** |
+| territorystudio | abre, sem captcha | Creative Advertising, VFX, Gaming | sem Art puro, fronteira |
+| houseofhow | abre, sem captcha | só Design | **sem cadeira de arte** |
+| goodgamestudios | abre, sem captcha | **nenhuma** (vai de Administration a Publishing) | **sem cadeira de arte** |
+| rawfury | abre, sem captcha | **nenhuma** | **sem cadeira de arte** |
+| tapnation | abre, sem captcha | **nenhuma** | **sem cadeira de arte** |
+| capsulestudio | — | Character | **JÁ ENVIADA em 11/09**, não estava marcada aqui |
+| liquidswords | **morta**, código 000 no domínio próprio | — | parede de rede já medida em 11/09 |
+
+**Zero captcha nas 14 que abrem**, conferido por iframe no DOM e não por grep de HTML, que o
+briefing proíbe com razão.
+
+**Duas lições para quem herdar isto.** A primeira: *porta aberta* e *porta útil* são medidas
+diferentes, e só a segunda vale minuto dele. A segunda: a variante de LOGIN do `connect_signup`
+("sem checkbox real") quer dizer que **a conta já existia para o email dele**, e nessa variante
+**não sai recibo nenhum** — foi o que aconteceu em captureage, swiftgames e kepler. Só a Opus
+Major marcou consentimento de verdade. Por isso os três cadastros de 14/09 estão registrados
+como **cadastro**, e não como candidatura: sem recibo, e com o painel dizendo *"No applications
+yet"*, eles não alcançam a prova que a capsulestudio teve em 11/09.
+
 ### 4a. FILA LIMPA — 15 slugs, estúdio de jogos/animação/VFX confirmado
 
 | slug | o que é |
