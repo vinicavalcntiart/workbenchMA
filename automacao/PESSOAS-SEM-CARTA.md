@@ -1254,3 +1254,98 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   quem acrescenta uma disciplina, não como quem responde a uma vaga; (2) o cargo dele é **direção
   de animação**, não direção de arte de personagem; (3) **não há vaga aberta nem página de
   carreiras** no site — é carta de porta.
+
+### Julien Kaspar — **3D Artist do Blender Studio (módulo de Sculpt, Paint & Texture)** — Blender Studio / Blender Foundation, Amsterdã, Holanda — **SEM EMAIL, e o motivo está medido**
+
+- **Email:** **não existe endereço dele publicado** · confiança **sem-email** · fonte do nome e do
+  cargo: perfil público dele no Gitea do próprio projeto,
+  https://projects.blender.org/api/v1/users/JulienKaspar , lido nesta rodada, que devolve
+  `full_name: "Julien Kaspar"` e `description: "3D Artist @ Blender Studio. Sculpt, Paint &
+  Texture Module artist"`.
+- **Por que ELE, e quem mais existe ali:** o mesmo caminho devolve
+  **Andy Goralczyk** (`eyecandy`), com a descrição **"Art Director at Blender HQ, working on Open
+  Movies and Blender Studio content. Lighting, modeling, fx and grooming"**, e **Demeter Dzadik**
+  (`Mets`), **"the character rigger at Blender Studio"**. É um time de personagem inteiro, numa
+  casa holandesa, com nome e cargo publicados pela própria casa.
+- **O QUE TRAVA, e é para ninguém repetir o caminho:** o Gitea publica o email dos artistas como
+  `NNNN+login@noreply.localhost`, ou seja **anonimizado**. Os sites pessoais deles não ajudam:
+  `juliankaspar.com`, `artificial3d.com` e `goralczyk.net` abrem com HTTP 200 e publicam **zero
+  endereço**; `julienkaspar.com` devolve **000** neste túnel. `blender.org/jobs`,
+  `blender.org/about/jobs` e `studio.blender.org/about` também devolvem zero endereço.
+- **O padrão do domínio está provado, e mesmo assim NADA foi montado:** o log de commits do
+  próprio Gitea (`/api/v1/repos/blender/blender/commits` e
+  `/api/v1/repos/studio/blender-studio-tools/commits`, lidos nesta rodada) devolve **dez endereços
+  literais** no formato `primeironome@blender.org` — `bastien@`, `hans@`, `jacques@`, `jeroen@`,
+  `philipp@`, `sergey@`, `simon@` (Simon Thommes, tech artist do Studio), `francesco@`, `anna@` e
+  `marton@`. Montar `julien@blender.org` ou `andy@blender.org` em cima disso seria exatamente o
+  chute que produziu as dezessete devoluções de 07/09. **A linha entra sem email, de propósito.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para Blender e para os nomes; o repositório
+  também. **CASA NOVA.**
+- **Ressalva honesta:** o Blender Studio é financiado por doação e por assinatura, tem time
+  pequeno e contrata pouco; e a disciplina publicada do Julien é escultura e textura dentro do
+  desenvolvimento do software, não produção de elenco para cliente.
+
+### O NEGATIVO DESTA RODADA, escrito para a próxima não refazer
+
+**1. A MELHOR FICHA DA RODADA MORREU NA GEOGRAFIA: 3D Sparrow Group.**
+`3dsparrow.com/aboutus` publica o time de gestão inteiro com nome, cargo e endereço —
+**Oli Bernard (CEO) oli@**, **Debbie MacDonald (Creative Director) debbiemacdonald@**,
+**Leo Rakhmanin (Studio Director) leo.rakhmanin@**, **Nick Okorokov (COO) okorokov@** e
+**Anna Voronova (Head of Pre-Production) voronova@** — e a casa é de personagem 3D de verdade:
+o IP **Booba** é descrito por eles como **"A little creature who explores the world like a child"**,
+com **"13 billion views across digital platforms"**. O que mata está em `3dsparrow.com/contacts`,
+lido nesta rodada: além da **"UK headquarters"** em Londres, os escritórios são **na Rússia
+(Krasnogorsk)** e **em Dubai**. A sede britânica é a entidade; a produção está fora do escopo
+geográfico da campanha. **Nenhuma carta foi escrita e nenhuma linha de carta entrou.** Se o
+escopo mudar, os cinco endereços já estão mapeados aqui. O `/careers` deles responde 404.
+
+**2. DUAS CASAS QUE PARECIAM ACHADO NOVO JÁ TINHAM CARTA, e as duas vieram da mesma armadilha.**
+**Sir Lancelot Animation Studio** (Malmö; Daniel Claesson, 3D/Houdini Artist) recebeu carta em
+**09/09**, e **Troll VFX** (Antti Kulmala, EP/CEO) em **11/09**. As duas apareceram na varredura
+desta rodada porque o `automacao/garimpo-cgstudiomap.csv` ainda as marca como
+`ja_na_campanha=nao`. **Esse campo está desatualizado e não serve de dedupe**: o que vale é
+procurar o domínio e o sobrenome em `pessoas.csv` e `enviados.csv`, e depois no Gmail.
+
+**3. A FONTE QUE RENDEU NESTA RODADA: diretório de associação da indústria, lido por `curl`.**
+Três abriram e nenhuma tinha sido usada antes:
+`dutchgamesassociation.nl/members` (**116 domínios holandeses** depois de tirar escola, banco e
+advogado), `animationuk.org/directory` (**102 domínios britânicos**, dos quais **72 inéditos** no
+repositório) e `ukscreenalliance.co.uk/directory` (**105**, quase toda casa de pós-produção e
+acabamento, pouca arte). Quatro das seis fichas desta rodada saíram daí. **Não abriram:**
+`ukie.org.uk/members` (404), `neogames.fi/companies` (404), `gamesdenmark.dk/members` (é uma
+imagem PNG), `flandersgamehub.be/studios` (a lista é montada por JavaScript) e
+`accessvfx.org/members` (500).
+
+**4. Casas com endereço de pessoa publicado que NÃO viraram ficha, e por quê** (para ninguém
+gastar rodada nelas de novo):
+
+| Casa | Endereço publicado | Por que não |
+|---|---|---|
+| Super Spline Studios (Leamington Spa) | `aron@`, `eoin@`, `james@supersplinestudios.com` | o `/about` publica **dezesseis pessoas e todas são animadoras**; a casa vende animação de jogo, não modelagem |
+| Eaglet Films (Londres) | `massimo@eagletfilms.com` (Massimo Fenati, CEO/CCO) | o catálogo é desenho à mão e boneco de tricô (*Froglets* é **"a hand-crafted, puppetry production"**) |
+| V+ Animation (Londres) | `vit.nico@vplusanimation.com` | estúdio **2D "powered by artists & AI"** |
+| Armchair & Rocket (Belfast) | `stephen@`, `michael@armchairandrocket.com` | os dois nomes aparecem **sem cargo** na página, e cargo desatualizado ou desconhecido é pior que alvo nenhum |
+| The Barn Games (Holanda) | cinco endereços de pessoa no `/about-us` | serious game para treinamento corporativo; a única cadeira de arte é "Ontwerper" e não há 3D no portfólio |
+| Solid Clouds (Reykjavík) | `stefangun@solidclouds.com` | o endereço é real e publicado, mas **não há página de equipe** para parear nome e cargo |
+| Pixomondo | `joe.finlayson@pixomondo.com` (Head of Business Development, PXO Clara) | **Naomi Foakes já recebeu carta em 09/09**; a segunda vaga da casa não se gasta em desenvolvimento de negócio |
+| Haymaker VFX | quatro pessoas com nome e cargo | **veto escrito já registrado em 10/09**: *"Only candidates eligible to work within the EU/Europe will be considered"* |
+
+**5. Achado de método que vale repetir: o campo `"recipient"` no JSON da página de vagas.**
+É irmão do `recruiter-email` do Teamtailor. Em `solidclouds.com/jobs` o payload traz
+`"recipient":"stefangun@solidclouds.com"`, que é o endereço corporativo real que recebe a
+candidatura espontânea, e ele **não aparece em lugar nenhum do texto visível**. Vale o `grep` em
+toda página de vaga nova.
+
+**6. A varredura mecânica de `mailto:` continua esgotada, agora com o número desta rodada.**
+Foram varridos **cerca de 230 domínios novos** (116 holandeses da DGA, 72 britânicos da Animation
+UK, mais lotes de Alemanha com `/impressum`, Áustria, Bélgica, Irlanda, Espanha, Polônia, Chéquia,
+Hungria, Coreia do Sul e nórdicos), em `/`, `/contact`, `/about`, `/team`, `/jobs`, `/careers`,
+`/press` e `/privacy`, com decodificação de entidade HTML e de `data-cfemail`. O que saiu foi
+quase só caixa genérica. **O que rendeu foi ler a PÁGINA DE EQUIPE das poucas casas que publicam
+cargo ao lado do endereço**, não a varredura em si.
+
+**7. O que ficou NÃO CONFERIDO, com essas palavras:** `sun-creature.com`, `macrograph.co.kr`,
+`mofac.com`, `digitalidea.co.kr`, `4thcreativeparty.com` e `julienkaspar.com` devolvem **000**
+neste túnel; `axisstudiosgroup.com` devolve **403**; `api.github.com` está **fechado para esta
+sessão** ("GitHub access to this repository is not enabled"), o que fecha a via de log de commit
+pelo GitHub — a do Gitea do Blender, essa, abriu.
