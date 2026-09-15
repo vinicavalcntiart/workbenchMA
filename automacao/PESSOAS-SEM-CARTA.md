@@ -2691,6 +2691,20 @@ o site mudou o veredito de metade delas, nos dois sentidos.
 
 **Nenhuma das cinco pessoas abaixo tem carta. Nenhuma linha tem endereço montado.**
 
+> ## ✅ AS CINCO ESTÃO ESCRITAS — 15/09 às 19h25, pelo maestro
+>
+> | Pessoa | Casa | Rascunho | O que a carta teve de resolver |
+> |---|---|---|---|
+> | **Tero Suomela** | Animagency, Vantaa | `r-1127406507327552130` | a casa é **também agência de talento**, então o fecho fixo da campanha é literalmente o serviço que ela vende; a carta **cita** a frase deles em vez de afirmar que fazem 3D |
+> | **Alli Sadegiani** | Allimator, Estocolmo | `r-8122479825025277631` | ele **vende mentoria e feedback pagos**: a carta diz **na primeira linha** que não é pedido de feedback. Ele é animador e não contrata, então o pedido é o de apontar |
+> | **Eric Vogel** | Tordenfilm, Oslo | `r-2302955756468033677` | **cargo não publicado**, então a carta não o chama de nada; a animação é feita fora (Qvisten), e a carta assume isso em voz alta |
+> | **Bárður Mikladal** | Kyka, Ilhas Faroe | `r1854103396231644481` | o diretório escreve "Kyka, **Denmark**" e isso engana: as Faroe estão **fora da UE e de Schengen**, e a carta diz isso com todas as letras |
+> | **Juha Fiilin** | Fiilin Good Films, Helsinque | `r9059581669478497500` | o convite do site pede **portfólio e estágio na mesma linha**, então a carta diz de frente que são dez anos e não pedido de estágio |
+>
+> Texto das cinco em `automacao/cartas-nordicos3-1509/` (`.txt` e `.html`).
+> `confere-carta.py` no lote inteiro: **OK, o lote pode sair**, pior par de semelhança **37%**.
+> As cinco linhas do `pessoas.csv` já trocaram o `PENDENTE-maestro-escreve` pelo ID do rascunho.
+
 ### Tero Suomela — **Creative Producer - Founder** — Animagency, Vantaa, Finlândia — **casa nova, e a ficha mais forte da rodada**
 
 - **Email:** tero@animagency.fi · confiança **alta** · **PUBLICADO pela própria casa, com nome E
