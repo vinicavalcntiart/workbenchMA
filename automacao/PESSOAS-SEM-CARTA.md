@@ -2257,3 +2257,33 @@ rodada e transformado em ficha o que estava parado há treze dias.
   host** (`SSL: no alternative certificate subject name matches target host name`) e
   `www.gigglebug.tv/about` responde **404** — a frase dos fundadores foi lida no **rodapé da
   página de erro**, que é conteúdo publicado deles mas é lugar frágil.
+
+### Cornelia Boysen — Maipo Film, Oslo, Noruega — **a ficha mais fraca da rodada, e a fraqueza é a técnica**
+
+- **Email:** cornelia@maipo.no · confiança **alta** para a entrega · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada:
+  **`Maipo Film, Norway | Cornelia Boysen | +47 91 39 47 18 | cornelia@maipo.no`**. **NADA foi
+  montado.** **MX conferido:** `aspmx.l.google.com` (Google Workspace).
+- **Por que ELA e não outra pessoa da casa:** é a única pessoa nomeada em qualquer fonte que
+  consegui abrir. O site próprio, https://www.maipo.no/ , publica **apenas a caixa**
+  `maipo@maipo.no` e **nenhum nome**.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Maipo has produced more than 25 films
+  and is one of Scandinavia's leading production companies. Maipo produces animated feature films,
+  series, live action family films and award-winning art house flicks"**, e o que é novo:
+  **"Rufus, The Sea Serpent Who Couldn't Swim (feature, 2025)"** e **"The Polar Bear Prince
+  (feature, 2024)"**.
+- **Fora dos EUA?** Sim — Noruega. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `maipo OR Boysen OR "Maipo Film" OR
+  nordicanimation`. Zero em `pessoas.csv`, `enviados.csv`, `processados.csv` e `alvos.csv`.
+  **CASA NOVA.**
+- **Ressalva honesta, e é por isso que eu digo que é a mais fraca das seis com endereço:** (1)
+  **a técnica da casa é a errada.** O texto do diretório é explícito: o maior sucesso deles é
+  **"the stop motion puppet animation Louis & Luca's Christmas"**, e o catálogo destacado é
+  *Hocus Pocus, Alfie Atkins*, *Louis & Luca – The Big Cheese Race* e *Luis & Luca: Mission to the
+  Moon*. **Boneco de stop motion não é personagem 3D digital** e o Vini não faz isso; os dois
+  títulos recentes (*Rufus*, *The Polar Bear Prince*) **podem** ser CG, mas o diretório **não diz
+  a técnica** e eu **não confirmei**; (2) **o cargo dela não é publicado** em nenhuma das duas
+  fontes; (3) a Maipo é **produtora**, e produtora grande faz muita coisa que não é animação
+  ("live action family films", "art house flicks"), o que dilui ainda mais a chance de haver
+  assento de modelagem dentro de casa. **Se o maestro precisar cortar uma carta desta rodada,
+  corte esta.**
