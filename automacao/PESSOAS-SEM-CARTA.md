@@ -2287,3 +2287,49 @@ rodada e transformado em ficha o que estava parado há treze dias.
   ("live action family films", "art house flicks"), o que dilui ainda mais a chance de haver
   assento de modelagem dentro de casa. **Se o maestro precisar cortar uma carta desta rodada,
   corte esta.**
+
+### Koen Deetman — **cofundador e game director** — KeokeN Interactive, Hoofddorp, Holanda — **`sem-email`, e a razão é uma PROVA**
+
+- **Pessoa, publicada com nome, cargo e biografia pela própria casa** em
+  https://keokeninteractive.com/team , aberta nesta rodada. O bloco "Our Founders" traz os dois
+  irmãos e distingue os papéis com todas as letras: **"Koen Deetman — Co-founder of KeokeN
+  Interactive and an expert in games. He always knows how to connect the right people and to find
+  that perfect balance between business and creatives. This innovative mastermind is the game
+  director at KeokeN Interactive"**, contra **"Paul Deetman — Co-founder of KeokeN Interactive and
+  the award-winning founder of Hunchback specialises in game- and movie trailers"**.
+- **POR QUE ELE e não o irmão:** o texto deles mesmo diz que o **game director** é o Koen. O Paul
+  é trailer. A cadeira criativa do jogo é a do Koen, e a regra desta rodada é personagem primeiro.
+- **POR QUE ENTRA SEM EMAIL, e isto é uma prova e não uma falta:** **o domínio
+  `keokeninteractive.com` NÃO PUBLICA MX NENHUM.** Consulta à resolvedora pública do Google:
+  **`A` devolve `Status 0` com três endereços** (198.185.159.144, 198.49.23.145, 198.49.23.144 —
+  Squarespace), e **`MX` devolve `Status 0` com resposta VAZIA**. Site vivo, correio inexistente.
+  Endereço montado ali **quica com certeza**, e por isso **não montei nada**. O único endereço que
+  aparece no HTML do site é o **placeholder `user@domain.com`** do formulário, que não é endereço
+  de ninguém.
+- **A pista que fica aberta, e ela é boa:** o domínio antigo **`keoken.nl` redireciona 301 para
+  `keokeninteractive.com`**, mas **continua com MX próprio vivo** (`10 mail.keoken.nl`). Ou seja
+  **a casa recebe correio no domínio velho e não no novo.** Isso é pista, **não é endereço**: eu
+  **não montei** `koen@keoken.nl`, porque não há um único endereço literal daquele domínio para
+  servir de prova de padrão, e padrão sem prova foi o que quicou cinco vezes em 06/09.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Envisioning the game's industry as a
+  platform to go beyond traditional gaming and create immersive experiences, KeokeN Interactive
+  aim to develop rich and believable worlds that will make you forget your surroundings and push
+  the boundaries of your reality"**; e o parágrafo que praticamente escreve a carta sozinho, por
+  citar uma casa onde a campanha já tem gente:
+  **"Looking up to industry titans like Guerrilla Games, also hailing from the Netherlands, KeokeN
+  Interactive quickly became a creative place where extremely talented people express themselves
+  into the art of games"**. O catálogo é *Deliver Us The Moon*, *Deliver Us Mars* e, anunciado,
+  **"Deliver Us Home is a solitary sci-fi experience where one astronaut works to secure a home
+  and new future for humanity"**.
+- **Fora dos EUA?** Sim — Holanda, União Europeia. **A linha de realocação vale inteira**, e é o
+  país que esta rodada foi mandada abrir.
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `keoken OR Deetman OR "Deliver Us"` e
+  **ZERO** para o domínio `"keokeninteractive.com"`. Zero em `pessoas.csv`, `enviados.csv`,
+  `processados.csv` e `alvos.csv`. **CASA NOVA.**
+- **Ressalva honesta:** (1) **sem MX no domínio do site, não há como entregar carta hoje** — a
+  ficha vale pelo nome, pelo cargo e pela casa, esperando endereço literal, exatamente como o
+  BRIEF manda; (2) **não abri `/jobs`**, que é a outra porta da casa, nem procurei perfil público
+  do Koen fora do site; (3) a trilogia *Deliver Us* é **sci-fi realista de astronauta e ambiente**,
+  com pouquíssimo elenco humano — é o encaixe **mais fraco de personagem** entre as sete fichas, e
+  o estilizado do Vini não é o que a casa mostra; (4) *Deliver Us Home* está **anunciado** no site
+  sem data, então **não é prova de produção viva hoje**.
