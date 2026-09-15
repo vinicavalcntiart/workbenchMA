@@ -2816,3 +2816,44 @@ o site mudou o veredito de metade delas, nos dois sentidos.
   encomenda** personagem, não a quem o esculpe, e vale por isso ou não vale; (4) **o catálogo
   animado está parado desde 2020**, então não há prova de produção de personagem viva hoje.
 
+### Bárður Mikladal — **cargo NÃO publicado** — Kyka, Norðragøta, Ilhas Faroe — **casa nova, e é a única desta rodada que declara 3D E VFX E personagem na mesma frase**
+
+- **Email:** hey@kyka.fo · confiança **alta para a entrega, mas é CAIXA e não endereço de pessoa** ·
+  fontes, as duas abertas nesta rodada: https://nordicanimation.com/studios-producers/ , que publica
+  **`Kyka, Denmark | Bárður Mikladal | Hey@kyka.fo | +298...`**, e https://kyka.fo/ , cujo rodapé
+  repete `hey@kyka.fo` em texto puro. **NADA FOI MONTADO**, e em particular **não montei**
+  `bardur@` nem `bm@`, porque não existe um único endereço literal daquele domínio para provar
+  padrão. **MX conferido nesta rodada:** `aspmx.l.google.com` com prioridade 1 e os quatro `alt`
+  (Google Workspace, vivo). Telefone existe nas duas fontes e **não é registrado aqui**.
+- **Por que ELE e não outro da casa:** o site **não tem página de equipe que abra** — `/about` e
+  `/contact` respondem **404** (as rotas de verdade são faroesas, `/um` e `/samskifti`), e o
+  rodapé, que é a parte que carrega, publica endereço e telefone e **nenhum nome**. O único nome
+  que existe publicado em qualquer lugar é o dele, no diretório. Em casa deste tamanho, é a pessoa.
+- **Gancho, com a frase do próprio estúdio entre aspas, e ela é a melhor descrição técnica da
+  rodada:** **"Kyka is a small animation and VFX studio based in the Faroe Islands, bringing
+  stories to life through 2D/3D animation, motion design, and visual effects. We collaborate with
+  both local and international partners and welcome co-productions that share our passion for
+  culturally rooted and character-driven stories. Our ambition is to create more homegrown content
+  for children and Faroese audiences – high-quality, thoughtful storytelling across shorts, TV
+  series, and commissioned formats"**, com o catálogo **"ABC Moments (shorts 2023), Sakin (series
+  2022), ABC (Commissioned 2021)"**. **"3D" e "character-driven" na mesma frase** é o que nenhuma
+  outra casa desta rodada escreveu.
+- **Fora dos EUA?** Sim — **Ilhas Faroe**, e aqui há uma sutileza que a carta precisa acertar: as
+  Faroe são território da **Dinamarca** mas **estão fora da União Europeia e fora do Espaço
+  Schengen**, com regime de imigração próprio. O diretório escreve a casa como "Kyka, Denmark" e
+  isso é enganoso. **A linha de realocação vale**, mas **nenhuma carta pode sugerir que trabalhar
+  lá é trabalhar na UE.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `animagency OR Suomela OR kyka OR
+  Mikladal OR filmicart OR Knape OR apparatfilm` e **ZERO** para `"kyka.fo"`. No repositório: zero
+  ocorrências de `hey@kyka.fo`, de `kyka` e de `Mikladal` em `pessoas.csv`, `enviados.csv`,
+  `processados.csv`, `alvos.csv` e `docs/index.html`. **CASA NOVA.**
+- **Ressalva honesta, e são cinco:** (1) **o endereço é uma caixa `hey@`**; (2) **o cargo dele não
+  é publicado** em nenhuma fonte que abri — a carta **não pode dar a ele um título**; (3) **o site
+  é quase todo em faroês** e as duas rotas em inglês que tentei deram 404, então **não li nenhuma
+  página institucional da própria casa**: a descrição inteira acima vem do perfil no diretório, que
+  é fonte de terceiro (ainda que o texto seja escrito pela casa); (4) a casa se descreve como
+  **"small"** e o catálogo publicado são **três peças**, duas delas comissionadas — não há prova de
+  equipe de arte interna nem de vaga; (5) **é o mercado mais periférico da campanha inteira**, com
+  ~54 mil habitantes no país todo, então a chance de haver assento sênior de personagem é baixa
+  mesmo com a técnica batendo.
+
