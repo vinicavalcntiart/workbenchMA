@@ -1,51 +1,42 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
-## 📬 LOTE DE CARTAS FECHADO — 14/09 às 12h40 — **29 rascunhos prontos, dois comandos seus**
+## 📬 LOTE DE CARTAS — **9 rascunhos na fila, um comando seu** (estado de 15/09 às 19h45)
 
-Esta é a única coisa que o lote de cartas pede de você. Não há nada para colar de carta
-nenhuma: os vinte e nove rascunhos já estão escritos na sua caixa, com assinatura e anexos,
-e o Apps Script é que dispara.
+**O lote anterior SAIU, e isto foi conferido na caixa e não suposto.** As buscas `in:sent` mostram
+duas rajadas com a assinatura do `envia-rascunhos.gs`: **34 cartas em 14/09 às 17h54** e mais
+**16 em 15/09 às 14h14**. Eram as vinte e nove represadas mais o resto da fila. **Não há nada
+daquele lote esperando você.**
 
-**Antes de rodar, RECOLE o `automacao/envia-rascunhos.gs` no editor.** A cópia que está aí
-mudou depois do último lote: a lista `ASSUNTO_PROPRIO_PERMITIDOS` ganhou a Lightfox. Sem
-recolar, a carta da Lightfox continua invisível para o envio. E confira que o
-`const SIMULAR` está em **`false`** — com `true` o log lista tudo e **não sai nada**, e o
-log parece idêntico ao de um envio real.
+**O que isso já rendeu, e é a parte que importa: CINCO PESSOAS RESPONDERAM** —
+Eva Balvirčáková (MADFINGER), Giles Sander (Polyester), Michael Bengtsson (Mindbender),
+Joost Spek (3Dpicnic) e Gillian Comerford (Boulder Media). As cinco threads estão vivas e todas
+já foram respondidas de volta. **Duas quicaram** e os endereços estão mortos:
+`hello@314arts.com` e `flord@rodeofx.com` (Rodeo FX).
 
-| comando | quantas | o que são |
+**O `automacao/pessoas.csv` foi reconciliado contra a caixa em 15/09:** 42 fichas que ainda diziam
+`rascunho-criado` ou `ficha-sem-carta` agora dizem **`CARTA ENVIADA`**, com a data e com quem
+respondeu. Ficha que diz rascunho quando a carta já saiu é o que faz uma rodada reenviar.
+
+### A fila de agora: 9 rascunhos, todos de assunto fixo
+
+Um comando só, **`enviarRascunhos()`**. Não há nenhum de assunto próprio nesta fila.
+
+| Para | Casa | Quando foi escrita |
 |---|---|---|
-| `enviarRascunhos()` | **25** | assunto fixo da campanha |
-| `enviarAssuntoProprio()` | **4** | assunto que a própria casa pediu |
+| tero@animagency.fi | Animagency, Vantaa (FI) | 15/09 19h22 |
+| info@allimator.com | Allimator, Estocolmo (SE) | 15/09 19h32 |
+| eric@tordenfilm.no | Tordenfilm, Oslo (NO) | 15/09 19h33 |
+| juha@fiilin.com | Fiilin Good Films, Helsinque (FI) | 15/09 19h33 |
+| hey@kyka.fo | Kyka, Ilhas Faroe | 15/09 19h34 |
+| jobs@frontvfx.com | Front VFX, Vancouver (CA) | 15/09 18h09 |
+| haukur@gunhil.com | GunHil, Reykjavík (IS) | 15/09 16h42 |
+| fmosvold@online.no | Kool Produktion (NO) | 15/09 16h42 |
+| contact@sleetfleet.com | sleetfleet, Helsinque (FI) | 15/09 16h42 |
 
-**As 5 MAIS NOVAS, escritas em 14/09 de manhã, todas para pessoa com nome e email publicado na
-fonte oficial:** Peter Wingaard (Rain Games, Bergen — a carta aponta para Ole Ivar Rudi, o diretor
-de arte, porque o endereço dele não é publicado), Karlijn Walters (Denda Games, Hengelo — a carta
-diz na cara que não se sabe se 3D de personagem é da alçada dela), Tony Manninen (LudoCraft, Oulu),
-Joost Spek (3Dpicnic — **essa não é candidatura a vaga**, é oferta de colaboração por projeto e
-remota, porque o estúdio é de uma pessoa só) e Simon van der Linden (Monobanda, Utrecht — time
-híbrido de freelancer, então a carta oferece as duas formas). **Três das cinco são holandesas**, que
-é a rota preferida medida em 12/09.
-
-**As 4 de 13/09, também para pessoa com nome e email publicado
-no site do próprio estúdio:** Dario van Vree (Studio Pupil, Amsterdã), Michael Bengtsson
-(Mindbender, Gotemburgo), Are Sundnes (Hyper Games, Oslo) e Petter Lindblad (Snowcloud Films,
-Estocolmo). Entram no `enviarRascunhos()` junto com as 16 abaixo.
-
-**As 16 do assunto fixo:** Ellie Baldino (Frontier, Cambridge — a nova de agora), Stellar
-Creative Lab, Maria Sjöman (Coffee Stain), Rodeo FX, Beatrice Harty (IO Interactive), 314 Arts,
-Vertpaint, Cahoots, Hyperluminal, Hundred Star, Curtis Andrus (Animal Logic), Team Reptile,
-Jake Fishman (Concept Art House), Polyester, MADFINGER, Arno Schmitz.
-
-**As 4 de assunto próprio:** Lightfox Games (Vancouver, a que explica por que o formulário
-não pôde ser usado), UFX Studios (Bruxelas), HandyGames/THQ Nordic (Giebelstadt) e Keytoon
-(Madri). **As três últimas estão presas desde 10/09** — foram escritas certas e ficaram
-invisíveis porque o envio achava rascunho pelo assunto exato da campanha. A função que as
-enxerga existe desde 11/09 e nunca foi rodada.
-
-> A carta da Ellie **não se candidata de novo**. Ela é a dona da requisição *Experienced
-> Character Artist* no site da Frontier, você já aplicou pelo Lever em 10/09, e a carta diz
-> isso na segunda frase e pede direção.
-
+**Antes de rodar, confira duas coisas no editor do Apps Script:** que a cópia colada é a atual do
+`automacao/envia-rascunhos.gs` (a lista `ASSUNTO_PROPRIO_PERMITIDOS` ganhou a Lightfox e a
+Framestore), e que o disparo está **armado** — com ele desarmado o log lista tudo e **não sai
+nada**, e o log parece idêntico ao de um envio real.
 ---
 
 ## 🖐️ DUAS ENTRADAS NOVAS DE 15/09 — **formulário 100% preenchido, faltam só dois cliques seus**
