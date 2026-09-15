@@ -2857,3 +2857,49 @@ o site mudou o veredito de metade delas, nos dois sentidos.
   ~54 mil habitantes no país todo, então a chance de haver assento sênior de personagem é baixa
   mesmo com a técnica batendo.
 
+### Juha Fiilin — **cargo NÃO publicado, mas a casa leva o nome dele** — Fiilin Good Films, Helsinque, Finlândia — **casa nova, e é a única que PEDE portfólio por escrito**
+
+- **Email:** juha@fiilin.com · confiança **alta** · **PUBLICADO pela própria casa** · fontes, as
+  duas abertas nesta rodada: https://www.fiilingoodfilms.com/about , cujo rodapé escreve, logo
+  abaixo do convite **"Work with us."**, o endereço **`juha(@)fiilin.com`** — ofuscação de texto,
+  com local e domínio por extenso —, e https://nordicanimation.com/studios-producers/ , que publica
+  **`Fiilin Good Films, Finland | Juha Fiilin | juha@fiilin.com | https://www.fiilingoodfilms.com/`**.
+  **NADA FOI MONTADO.** **MX conferido nesta rodada:** `10 mx1.dvn.fi` (provedor finlandês, vivo).
+- **Atenção de método, e é a armadilha da Stunlock outra vez:** o **site é `fiilingoodfilms.com` e
+  o email é `@fiilin.com`**, domínios diferentes. Qualquer endereço montado sobre o domínio do site
+  teria quicado. O endereço certo é o do domínio curto, e ele está escrito nas duas fontes.
+- **Por que ELE e não outro da casa:** o `/about` tem uma seção **"Meet the team"** e ela **não
+  nomeia ninguém** — o texto embaixo do título diz só *"We collaborate across countries, time
+  zones, and disciplines"*. O único nome publicado em qualquer lugar é o dele, a empresa leva o
+  sobrenome dele, e a matéria de imprensa citada no próprio site atribui a fala à pessoa:
+  **"Commenting on the project, Fiilin told Cineuropa"**. Não há dilema.
+- **Gancho, com a frase do próprio estúdio entre aspas, e o primeiro é o motivo desta ficha
+  existir:** a home fecha com **"Let's talk. About your day, your awesome story idea, your
+  portfolio or your upcoming internship."** — **é a única casa desta rodada que pede portfólio por
+  escrito**, e o pedido está a dois parágrafos do endereço dele. O segundo gancho é a frase de
+  método: **"We design our stories from a strong concept — with character, premise, theme, and
+  deeper purpose all integrated from the start"**, e a casa se descreve como **"genre-driven IP for
+  tweens, teens and young adults across series, features, games and graphic novels"**, com serviço
+  declarado de **"Game studio collaboration: Narrative, trailers, VO, music, art direction, and
+  hybrid storytelling support"**. A fala do diretor sobre a série carro-chefe, publicada pelo
+  próprio site, é sobre personagem: **"In Joy Eternal, we show a character struggling with her
+  self-worth, mistakenly thinking it is tied to her achievements and failures"**.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. **A linha de realocação vale inteira**, com a
+  ressalva de que a casa se declara distribuída por **"Helsinki – Barcelona – London – Dublin – Los
+  Angeles"**.
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `fiilin OR "Joy Eternal" OR "Fiilin
+  Good"` e **ZERO** para `"fiilin.com"`. No repositório: zero ocorrências de `juha@fiilin.com`,
+  de `fiilin` e de `fiilingoodfilms` em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html`. **CASA NOVA.**
+- **Ressalva honesta, e a segunda é a que pode matar a ficha:** (1) **o cargo dele não é publicado**
+  — nem o site nem o diretório escrevem um título, e a única prova de que ele manda é a empresa
+  levar o nome dele e a imprensa citá-lo como voz da casa; **a carta não pode dar a ele um título**;
+  (2) **a técnica NÃO é dita em lugar nenhum**: o site fala em "animated", "anime-influenced",
+  "motion comics" e "graphic novels" e **nunca escreve 3D nem CG** — esta é a casa desta rodada com
+  **a prova mais fraca de pipeline 3D**, e pode ser inteiramente 2D; (3) é **desenvolvimento e IP,
+  não produção** — o texto diz que ela "develops original IP" e "partners with studios, producers,
+  and game developers", ou seja **a animação é feita por terceiros** e o assento de modelagem,
+  se existir, não é dela; (4) o *"your portfolio"* do convite está dentro de um **formulário de
+  contato**, e o formulário oferece "internship" na mesma linha — há risco de a carta de um sênior
+  de dez anos cair no mesmo funil de estagiário.
+
