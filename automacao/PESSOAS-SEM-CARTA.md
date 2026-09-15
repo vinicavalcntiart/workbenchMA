@@ -2490,3 +2490,37 @@ dias atrás.
   (3) Apparat é **produção e animação**, com metade do catálogo em live-action e conteúdo de
   palco (Alan Walker), então "character animation" é animação de movimento e **não prova que
   exista modelagem de personagem dentro de casa**.
+
+### Espen Nordahl — **Head of VFX / VFX Supervisor** — Storm Studios, Oslo, Noruega — **segunda e última da casa**
+
+- **Email:** nordahl@stormstudios.no · confiança **alta** · **PUBLICADO pela própria casa, com
+  nome E cargo ao lado** · fonte: https://www.stormstudios.no/ , aberta e lida nesta rodada. O
+  bloco `GET IN TOUCH` da **raiz** publica cinco pares de cargo, nome e endereço, e este é um
+  deles: **"Head of VFX / VFX Supervisor — Espen Nordahl — nordahl@stormstudios.no"**. **NADA foi
+  montado.**
+- **Por que ELE e não outro da casa:** dos cinco publicados, dois são produção e negócio (Thomas
+  Reppen, CEO / Executive Producer; Jessica-Rose Smith, Studio Manager / VFX Producer) e três são
+  arte. O **Head of CG, Håvard Munkejord, já recebeu a carta em 11/09** e não respondeu — ele era
+  o alvo certo e continua sendo, mas está gasto. Entre os dois que sobram, o **Head of VFX** manda
+  no departamento inteiro e o **VFX Supervisor** (Ivar Rystad) responde por show; então Nordahl é
+  a segunda e última pessoa desta casa, como o próprio registro de 10/09 já previa.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Storm Studios is a leading visual
+  effects company in Scandinavia, specialising in high-end VFX for the global feature film and
+  television industry"**, e a porta que a própria home abre: **"We are always looking for the best
+  talents. If you want to be part of a creative team that pushes boundaries of what is possible,
+  we would love to hear from you."** (as duas em https://www.stormstudios.no/ , lidas hoje).
+- **Fora dos EUA?** Sim — Noruega (EEE). **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu DUAS threads** para `stormstudios OR "Storm
+  Studios" OR Munkejord OR Nordahl`, e nenhuma é resposta humana: (a) a carta de **11/09 às
+  21h27** para `havard@stormstudios.no`, **uma mensagem só, sem resposta**; (b) o recibo
+  automático de **30/08** de `jobs@wix-forms.com`, *"Storm Studios - We have received your job
+  application. Thank you!"*, que é o formulário do site e é robô, não pessoa. **Zero para
+  `nordahl@`.** A casa **nunca recusou**.
+- **Ressalva honesta, e a primeira é a que pode matar a ficha:** (1) **CADÊNCIA, e aqui ela é pior
+  que na Apparat** — esta seria a **terceira aproximação em 16 dias** (formulário 30/08, carta
+  11/09, esta), e duas delas na mesma semana; a leitura honesta é **segurar até depois de 20/09**,
+  e quem decide é o maestro; (2) é **VFX de longa e série**, não animação de personagem
+  estilizado: o encaixe existe (criatura e asset moram dentro do CG), mas o portfólio do Vini é
+  estilizado e a casa mostra fotorrealismo; (3) o cargo é **Head of VFX**, ou seja o dono do
+  departamento inteiro e não especificamente de assets — quem seria o alvo perfeito é o Head of
+  CG, e esse já foi.
