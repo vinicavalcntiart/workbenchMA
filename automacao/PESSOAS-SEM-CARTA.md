@@ -2106,3 +2106,36 @@ rodada e transformado em ficha o que estava parado há treze dias.
   principal** (Home, About us, Our work, Contact) — cheguei nela pelo link "Know our team" do
   `/about`, ou seja é página viva mas pouco exposta, e não sei há quanto tempo a lista não é
   atualizada.
+
+### Jørn Kolsrud — Sagatoon, Hamar, Noruega — **a frase de encaixe mais forte da rodada, e o site mais vazio**
+
+- **Email:** jorn@sagatoon.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada. O diretório publica, no
+  bloco da Sagatoon, **`Sagatoon, Norway | Jørn Kolsrud | +47 91 51 16 56 | jorn@sagatoon.com |
+  http://www.sagatoon.com/`**. **NADA foi montado.** **MX conferido:**
+  `mx1/mx2/mx3.mailpod1-osl1.g1i.uniweb.no` (Uniweb, vivo).
+- **Por que ELE e não outro da casa:** é a **única pessoa** que o diretório publica para a
+  Sagatoon, e a Sagatoon é casa pequena de um produto só. Não há alternativa nem dilema.
+- **Gancho, com a frase do próprio estúdio entre aspas, e é a melhor da rodada:** **"The
+  company´s main focus is the development and production of 3D CGI feature film animation for a
+  global theatrical audience"**, e o que está acontecendo agora: **"We are now in pre-production
+  with our new film, Ludolf Lemming at Anger Academy. Our production partner is nGenious in
+  Canada"**. O catálogo publicado é **"Troll – The Tale of a Tail (feature, 2018)"**, **"Ludolf
+  Lemming at Anger Academy (feature in pre-production)"** e **"Dustbin Heroes (in development)"**.
+  Longa em **3D CGI** dito com essas palavras é o encaixe exato do Vini.
+- **Fora dos EUA?** Sim — Noruega. **A linha de realocação vale inteira.** (Noruega não é UE, é
+  EEE; a frase de patrocínio continua valendo igual.)
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `"sagatoon.com"` e zero para
+  `sagatoon OR Kolsrud`. No repositório há **uma** ocorrência e ela **não é contato**: a linha de
+  prospecção de 02/09 do `processados.csv` que diz *"fila do backlog reabastecida com a lista
+  Nordic Animation: Sagatoon e Fenomen pendentes"*. Ou seja a casa estava **na fila desde 02/09 e
+  nunca virou nada**. Zero em `enviados.csv`, `pessoas.csv` e `alvos.csv`. **CASA NOVA.**
+- **Ressalva honesta, e são três:** (1) **o cargo dele NÃO é publicado** — o diretório dá nome,
+  telefone, email e site, e **nenhum título**; tratar como contato da casa, e a carta **não pode
+  chamá-lo de diretor de nada**; (2) **o site da própria casa está praticamente vazio** —
+  `https://www.sagatoon.com/` responde **HTTP 200 com 1.963 bytes**, XHTML 1.0 Transitional
+  estático, e o corpo inteiro é o título "Sagatoon" e duas letras soltas; `/about` dá **404**.
+  Logo **NÃO HÁ SEGUNDA FONTE** e não há prova de casa viva por site; o que sustenta a ficha é o
+  MX vivo e o diretório; (3) o único longa **entregue** é de **2018** e o novo está só em
+  **pré-produção** com parceiro de produção **no Canadá** (nGenious), então o trabalho de
+  personagem pode nem ser feito em Hamar.
