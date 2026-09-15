@@ -48,6 +48,102 @@ enxerga existe desde 11/09 e nunca foi rodada.
 
 ---
 
+## 🖐️ DUAS ENTRADAS NOVAS DE 15/09 — **formulário 100% preenchido, faltam só dois cliques seus**
+
+Achadas varrendo BambooHR com controle 200 nas duas pontas. As duas estão **preenchidas e conferidas
+campo a campo em modo seco**; o que trava não é captcha, é uma parede da plataforma (detalhe no fim).
+Do seu lado é abrir o link, clicar **Apply for This Job** e repetir o que está na tabela.
+
+### 1. nWave — Bruxelas, Bélgica — https://nwave.bamboohr.com/careers/121
+
+A melhor porta de formulário em dias, e o motivo é a pergunta obrigatória de departamento: ela oferece
+**Character_Modeling (CHR_MOD)** e **Character_Surfacing/Grooming (CHR_SHD)**. É o cargo dele com todas
+as letras. Régua de veto no texto integral da API: **zero acerto**, nenhum veto escrito.
+
+| Campo | O que preencher |
+|---|---|
+| First / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o do doc privado do Drive, formato internacional sem espaço |
+| Country | **trocar Belgium por `Brazil` PRIMEIRO** — o BambooHR renomeia os rótulos conforme o país |
+| Address / City / Province / Postal Code | os do doc privado do Drive |
+| Date Available | `16/11/2026` (aqui a máscara é **dd/mm/yyyy**) |
+| Desired Pay | `EUR 55,000 per year. Open to aligning with your band for the role.` |
+| Website / LinkedIn | ArtStation e LinkedIn |
+| Highest Education Obtained | `Other` |
+| College/University | `Melies Sao Paulo` |
+| Which Studios | **Brussels** |
+| What department(s) | **Character_Modeling (CHR_MOD)** |
+| Experience level | **SENIOR** |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| `Please leave this field blank` | **HONEYPOT — deixar VAZIO** |
+| Anything you want us to know | o texto abaixo |
+
+```
+I am not an EU citizen and I would need visa sponsorship for Brussels. I am ready to move for the role.
+
+I am applying to Character Modeling. I am a Senior 3D Character Artist with more than ten years in stylized characters. I take a character end to end: sculpt, retopology that deforms cleanly, UVs, baking, hand-painted and PBR texturing, look development, cloth in Marvelous Designer and grooming in Houdini, so modeling, surfacing and groom are one continuous job for me rather than three handoffs. If it helps your sorting, I fit CHR_SHD as well as CHR_MOD.
+
+Credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand-painted the show's characters. For almost five years at E-Line Media I have carried Endstar's hero characters from first sculpt into engine. I review other artists' work and set the asset standard, and I teach as founder of my own character art school.
+
+On the visa case, because it is usually the first question: honors degree, a postgraduate specialization in Game Art at Melies Sao Paulo, a master's in Creative Industries in progress, IELTS and publications.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+**O formulário manda submeter uma vez por departamento.** Vale submeter uma segunda vez em
+**CHR_SHD**, trocando só a primeira frase do segundo parágrafo.
+
+### 2. Image Engine — Vancouver, Canadá — https://imageengine.bamboohr.com/careers/21
+
+`General Application - Assets (Modeling/Texturing/LookDev/Grooming)`. Eu tinha fechado esta porta porque
+o anúncio traz, em vermelho: *"Candidates are required to be based in British Columbia and eligible to
+work in Canada"*. **Você corrigiu e estava certo:** o próprio formulário desmente o aviso, porque a
+pergunta obrigatória de status oferece **"Work Permit Required"** como opção. A casa prevê quem precisa
+de patrocínio. Então se responde a verdade e se explica no campo livre.
+
+| Campo | O que preencher |
+|---|---|
+| Nome / Email / Phone / Endereço | os de sempre (telefone e endereço no doc privado do Drive) |
+| Country | `Brazil` |
+| Date Available | `11/16/2026` — **aqui a máscara é mm/dd/yyyy**, e digitar 16/11 vira `1m/11/2026` |
+| Desired Pay | `CAD 95,000 per year. Open to aligning with your band for the role.` |
+| Cover Letter / Resume | `Vini_Cavalcanti_Cover_Letter.pdf` e `Vini_Cavalcanti_CV.pdf` — **a carta vem ANTES do CV no DOM** |
+| Position of interest | `Modeling. I also cover Texturing and Look Development, and I groom hair and fur in Houdini.` |
+| Years of experience | `10+ years` |
+| Level of experience | `Senior` |
+| **Status para o Canadá** | **`Work Permit Required`** |
+| Expiry date do work permit | `N/A. I do not hold a work permit; I would need sponsorship.` |
+| Anything else we should know | o texto abaixo |
+
+```
+Said first so it is not missed: I am not based in British Columbia and I am not yet eligible to work in Canada. I would need visa sponsorship, and I am ready to move to Vancouver for the role. I am applying because your own form offers Work Permit Required as a status, so I would rather be honest about it up front than leave it out.
+
+Assets is exactly my job. I am a Senior 3D Character Artist with more than ten years in stylized characters, and I take a character end to end: sculpt, retopology that deforms cleanly, UVs, baking, hand-painted and PBR texturing, look development, cloth in Marvelous Designer and grooming in Houdini.
+
+Credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand-painted the show's characters. For almost five years at E-Line Media I have carried Endstar's hero characters from first sculpt into engine. I review other artists' work and set the asset standard, and I teach as founder of my own character art school.
+
+On the visa case: honors degree, a postgraduate specialization in Game Art at Melies Sao Paulo, a master's in Creative Industries in progress, IELTS and publications.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+### Por que as duas ficaram na sua mão, e eu CLIQUEI antes de dizer isso
+
+**O envio do BambooHR não sai daqui, e isso foi medido em DOIS locatários diferentes.** Não é captcha:
+não há desafio nenhum na tela. O que foi conferido, para não virar suposição: clique **sem force** no
+botão (o Playwright reclamaria se estivesse coberto, e não reclamou), `form.checkValidity()` devolvendo
+**true** com **zero** elemento em `:invalid`, zero campo obrigatório vazio, zero erro de JavaScript no
+clique, e o `requestSubmit()` nativo também disparado sem efeito. O **upload funciona** (200 em
+`ajax/files/attachTemporary.php`, duas vezes na Image Engine), então não é rede nem proxy. A página
+relata uma **exceção própria** ao Rollbar no envio. Falsa pista descartada: o 401 em `/globals/locale`
+aparece para qualquer visitante anônimo e não é a causa.
+
+**Consequência para as próximas rodadas: vaga em BambooHR é item de mão.** Não gastar rodada tentando
+enviar por aqui; o que rende é chegar com o dossiê pronto, como estes dois.
+
+---
+
 ## 🔎 RODADA DE CAÇA DE 14/09 às 00h45 UTC (Jhon B) — **grupo Disney medido em zero · e a fila de Pinpoint ACABOU** (correção de 01h20)
 
 ### Grupo Disney, olhado por ordem dele como em toda rodada
