@@ -2139,3 +2139,37 @@ rodada e transformado em ficha o que estava parado há treze dias.
   MX vivo e o diretório; (3) o único longa **entregue** é de **2018** e o novo está só em
   **pré-produção** com parceiro de produção **no Canadá** (nGenious), então o trabalho de
   personagem pode nem ser feito em Hamar.
+
+### Trine Heidegaard — **dona e produtora** — Pop Up Production, Copenhague, Dinamarca — **email vivo, site que não existe**
+
+- **Email:** trine@popupproduction.dk · confiança **alta** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada:
+  **`Pop Up Production, Denmark | Trine Heidegaard | +45 6065 7028 | trine@popupproduction.dk`**.
+  **NADA foi montado.** **MX conferido:** `10 popupproduction-dk.mail.protection.outlook.com`
+  (Microsoft 365, vivo).
+- **Por que ELA e não outra pessoa da casa:** **ela É a casa.** O texto do diretório diz
+  **"Pop up Production is located in Copenhagen and owned by Trine Heidegaard an independent
+  animation producer with many years of experience in the animation industry"**. Não existe
+  segunda pessoa a escolher.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"The mission of Pop Up Production is
+  to team up with passionated people and animation studios and develop and produce animated
+  feature films"** e **"Trine Heidegaard has produced and co-produced some of the most successful
+  feature films in Denmark, recently the Checkered Ninja trilogy"**. O catálogo publicado é de
+  longa de personagem em CG: **"Checkered Ninja 3 (feature, 2025)"**, **"Little Allan – The Human
+  Antenna (feature, 2022)"**, **"Checkered Ninja 2 (feature, 2021)"**, **"Checkered Ninja
+  (feature, 2018)"** e **"The Incredible Story Of The Giant Pear (feature, 2017)"**.
+- **Fora dos EUA?** Sim — Dinamarca, União Europeia. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `"popupproduction.dk"` e zero para
+  `popupproduction OR "Pop Up Production" OR Heidegaard`. Zero em `pessoas.csv`, `enviados.csv`,
+  `processados.csv` e `alvos.csv`. **CASA NOVA.**
+- **Ressalva honesta, e a primeira é séria:** (1) **o site da casa NÃO EXISTE.**
+  `popupproduction.dk` **não tem registro A** (consulta à resolvedora pública do Google:
+  `Status 0` com resposta **vazia**), embora os NS estejam delegados à Cloudflare e o **MX esteja
+  vivo no Microsoft 365**. Ou seja: **a caixa recebe, o site não abre.** É o inverso exato da
+  armadilha da Cantilever Media de 14/09, e por isso vale escrito: **A record e MX record são
+  coisas independentes, e quem decide se a carta chega é o MX.** O próprio diretório, no campo de
+  link, não aponta para site nenhum, aponta para um perfil de LinkedIn — o que **confirma** que a
+  casa não tem página; (2) por consequência, **NÃO CONFERIDO por segunda fonte**: tudo o que sei
+  vem do diretório; (3) ela é **produtora, não cadeira criativa**, e a casa é uma produtora que
+  **se junta a estúdios** (*"team up with ... animation studios"*), ou seja **ela não contrata
+  modelador diretamente** — a carta aqui é porta e indicação, não vaga.
