@@ -2437,3 +2437,56 @@ servido.
 linhas de Holanda e elas param em "KeokeN Interactive"**, ou seja a colheita do gamedevmap foi
 **truncada na letra K** e nunca cobriu L–Z. Quem for refazer a Holanda pelo gamedevmap precisa
 saber disso — eu supri o buraco à mão com 15 casas, mas não é a lista completa.
+
+## RODADA DAS 15h35 DE 15/09 — JOE. AGENTE NÃO ESCREVE CARTA (a escrita do Gmail não está nas ferramentas dele).
+
+**Rota pedida: Holanda primeiro, nórdicos depois, Reino Unido e Irlanda por último.** O que esta
+rodada mediu: a Holanda continua fechada pela mesma parede de 15/09 03h40 (a base da Netherlands
+Film Commission **ainda responde HTTP 500 hoje**, remedida nesta rodada), e a veia que entregou
+foi de novo a nórdica — só que desta vez por **página de equipe do próprio estúdio**, não só pelo
+diretório. Duas das fichas são a **segunda e última pessoa** de casas que já receberam carta em
+11/09 e não responderam, que é exatamente a prioridade que o `BRIEF-JOE.md` manda seguir
+(*"priorize quem já recebeu email e não respondeu: o estúdio já foi qualificado, só faltou chegar
+em alguém"*) — e as duas vêm com ressalva de **cadência**, porque a primeira carta é de quatro
+dias atrás.
+
+### Eirik Heldal — **CEO & Producer** — Apparat Studio, Bergen, Noruega — **segunda e última da casa, e CORRIGE o registro de 14/09**
+
+- **Email:** eirik.heldal@apparat.no · confiança **alta** · **PUBLICADO pela própria casa** ·
+  fonte: https://apparat.studio/ , aberta nesta rodada. O rodapé da home traz, em texto visível,
+  **"EIRIK HELDAL — CEO & Producer — phone: ... — e-mail: eirik.heldal@apparat.no"**. **NADA foi
+  montado.** **MX conferido nesta rodada:** `ASPMX.L.GOOGLE.COM` e alternativos (Google Workspace,
+  vivo).
+- **CORREÇÃO DE REGISTRO, e é metade do motivo desta ficha existir:** a rodada de 14/09 18h45
+  escreveu, sobre a Apparat, que *"Eirik Heldal publicado e é a segunda e última possível da casa,
+  mas o cargo dele não está em lugar nenhum: `apparat.no` responde 200 e o conteúdo é montado por
+  JavaScript, `/about` dá 404"*. **O cargo está publicado** — só não está em `apparat.no`, está em
+  **`apparat.studio`**, que é o domínio do site (a casa separa site e email, armadilha que o
+  `processados.csv` de 11/09 já tinha nomeado). É a mesma lição da Gigglebug de hoje de manhã:
+  *"o domínio que você abriu não publica"* não é o mesmo que *"não existe publicado"*.
+- **Por que ELE e não outro da casa:** a casa tem três pessoas conhecidas e **duas já estão
+  mapeadas**: Kristian Berg (director and creative lead) **recebeu a carta em 11/09** e não
+  respondeu. Sobra o Eirik, que é **CEO e produtor** — em casa desse porte é quem decide contratar
+  e quem distribui trabalho, e o cargo é **complementar** ao do Kristian, que é o caso em que o
+  `BRIEF-JOE.md` autoriza duas pessoas na mesma casa.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a home diz, na seção de animação,
+  **"Character animation for world-class productions. By senior artists."**, e o perfil que a casa
+  escreveu para o diretório nórdico completa: **"Located in Bergen, Norway, Apparat Studio is a
+  versatile production and animation company known for high-quality work and senior-level
+  expertise. We're a strong partner for international productions seeking collaboration and
+  co-financing, with a particular focus on character animation"**
+  (https://nordicanimation.com/studios-producers/ , aberta nesta rodada). O crédito publicado é
+  **"Richard the Stork and the Mystery of the Great Jewel (2023) Animation Studio"**.
+- **Fora dos EUA?** Sim — Noruega (EEE). **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu UMA thread** para `apparat.no OR Heldal OR
+  "Apparat Studio"`: a carta de **11/09 às 21h26 para `kristian.berg@apparat.no`**, **uma
+  mensagem só, sem resposta de ninguém**. `enviados.csv` confirma o mesmo envio. **Zero para
+  `eirik.heldal@`.** A casa **não recusou** e o Eirik **nunca foi contatado**.
+- **Ressalva honesta, e são três:** (1) **CADÊNCIA** — a casa recebeu carta há **quatro dias**, e
+  escrever de novo tão perto é o que o briefing chama de queimar o estúdio; a leitura honesta é
+  que esta carta **espere até por volta de 21/09**, e isso é decisão do maestro, não minha;
+  (2) a própria carta de 11/09 registra que o site dizia haver **um só artista 3D na casa**, ou
+  seja o assento de modelagem aqui é minúsculo e a porta realista é freela e indicação, não vaga;
+  (3) Apparat é **produção e animação**, com metade do catálogo em live-action e conteúdo de
+  palco (Alan Walker), então "character animation" é animação de movimento e **não prova que
+  exista modelagem de personagem dentro de casa**.
