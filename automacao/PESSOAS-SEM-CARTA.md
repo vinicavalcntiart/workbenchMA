@@ -2778,3 +2778,41 @@ o site mudou o veredito de metade delas, nos dois sentidos.
   a carta ser lida como pedido de serviço grátis — **quem escrever precisa deixar claro que não é
   pedido de feedback**.
 
+### Eric Vogel — **cargo NÃO publicado** — Tordenfilm, Oslo, Noruega — **casa nova, e é a única com longa 3D entregue**
+
+- **Email:** eric@tordenfilm.no · confiança **alta** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada, no bloco da Tordenfilm:
+  **`Tordenfilm, Norway | Eric Vogel | eric@tordenfilm.no | http://www.tordenfilm.no/`**.
+  **NADA FOI MONTADO.** **MX conferido nesta rodada:** `10 mail.countzero.no` (servidor próprio,
+  vivo). Telefone existe na fonte e **não é registrado aqui**.
+- **Por que ELE e não outro da casa:** é a **única** pessoa que existe publicada em qualquer fonte
+  desta casa. O site da própria Tordenfilm **não nomeia ninguém** — o `/about` fala só no plural
+  ("we produce and co-produce") e o `/contact`, aberto hoje, publica **apenas** `info@tordenfilm.no`
+  e `faktura@tordenfilm.no`. Não há dilema porque não há alternativa.
+- **Gancho, com a frase do próprio estúdio entre aspas:** o `/about` do site diz **"Tordenfilm is
+  an independent production company located in Oslo, Norway, founded in 2003. Tordenfilm was the
+  first production company to be initiated solely by graduates of the Norwegian National Film
+  School in Lillehammer"** e **"We produce and co-produce premium quality feature films, drama
+  series and animation for both the domestic and international markets"**, com o lema de abertura
+  **"Stable geniuses, always with heart."** O perfil escrito pela casa no diretório dá o crédito
+  que interessa: **"Their latest animated feature Two Buddies and a Badger 2 – The Great Big Beast
+  (2020) was a major box office success, and was co-produced with Qvisten Animation"**, e
+  **"Tordenfilm also produced the provocative and multi-award-winning short The Absence of Eddy
+  Table (2016), which was based on the works of Dave Cooper and was Oscar qualified"**. O *Eddy
+  Table* é o gancho bom para o Vini: é personagem 3D **estilizado e grotesco**, desenho de Dave
+  Cooper levado a CG, que é exatamente a faixa do portfólio dele — e não fotorrealismo.
+- **Fora dos EUA?** Sim — Noruega (EEE). **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `tordenfilm OR Vogel OR krystallplaneten
+  OR Korsberg OR sparreproduction OR "Irene Sparre"` e **ZERO** para `"tordenfilm.no"`. No
+  repositório: zero ocorrências de `eric@tordenfilm.no`; o token `tordenfilm` aparece **uma** vez em
+  `pessoas.csv` e é dentro do texto de dedupe da ficha da GunHil, não um envio. **CASA NOVA.**
+- **Ressalva honesta, e a terceira é a que mais pesa:** (1) **o cargo dele não é publicado em lugar
+  nenhum** — o diretório dá nome, telefone, email e link e **nenhum título**, e o site não nomeia
+  ninguém; **a carta não pode chamá-lo de nada**; (2) **é produtora, não estúdio de animação** — o
+  próprio texto diz "produce and co-produce", e a Tordenfilm faz também live-action e drama;
+  (3) **a animação é feita FORA**: o longa 3D deles foi "co-produced with **Qvisten Animation**", ou
+  seja quem tem o pipeline e o assento de modelagem é a Qvisten — **e a Qvisten já está no teto de
+  duas pessoas da campanha**; a leitura honesta é que esta carta chega a quem **financia e
+  encomenda** personagem, não a quem o esculpe, e vale por isso ou não vale; (4) **o catálogo
+  animado está parado desde 2020**, então não há prova de produção de personagem viva hoje.
+
