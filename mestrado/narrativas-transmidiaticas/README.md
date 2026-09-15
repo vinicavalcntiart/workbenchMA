@@ -2,6 +2,8 @@
 
 Ficha da disciplina. Preencher conforme o material chegar.
 
+**Drive da disciplina:** https://drive.google.com/drive/folders/1uYfChOghZTeGpRztUASijFRerHGFC5aC (pasta `Narrativas Transmidiaticas`, vazia em 15/09/2026). Ementa, textos e slides que o professor mandar vão para lá; aqui ficam só fichamentos e anotações.
+
 | Campo | Valor |
 |---|---|
 | Professor(a) | _a preencher_ |
@@ -24,7 +26,7 @@ Lista provisória, a ajustar quando a ementa oficial for adicionada em `ementa/`
 
 ## Ligação com a pesquisa
 
-_Como a disciplina conversa com a produção em 3D e animação e com o projeto de dissertação._
+A dissertação ("Traço Brasileiro", ver `mestrado/dissertacao/README.md`) já trabalha a expansão transmídia do corpus: Turma da Mônica, Menino Maluquinho e Irmão do Jorel circulam em quadrinhos, animação, live action e game (Quadro 1 do projeto). Jenkins e Scolari podem dar base teórica para essa seção, e o manual de diretrizes (produto técnico) pode ganhar um capítulo sobre consistência do personagem entre mídias. Anotar aqui tudo que a disciplina render nessa direção.
 
 ## Estrutura
 

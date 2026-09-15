@@ -40,6 +40,15 @@ Só crie a subpasta quando for usar. Pasta vazia não entra no git.
 - Commits: uma frase curta no imperativo, em português, prefixada com a disciplina. Ex.: `narrativas: fichamento de Scolari 2013`.
 - Se o Vini quiser cruzar a disciplina com a produção em 3D e animação dele, isso entra no README da disciplina, na seção "Ligação com a pesquisa".
 
+## Drive
+
+Os arquivos pesados (PDFs, slides, DOCX) ficam no Google Drive, não no git. A raiz é a pasta `Mestrado_InLocal`:
+https://drive.google.com/drive/folders/1-tqXd67gGBylIGXIv3lj-qlyzElDdb7q
+
+Cada disciplina tem a pasta correspondente lá dentro. O link específico fica no README de cada disciplina. Os próximos chats têm acesso ao Drive pelo conector e podem ler os arquivos direto de lá.
+
+Pastas já existentes no Drive que ainda **não** têm pasta aqui no repositório (criar quando forem trabalhadas): `Mídias digitais`, `Design da Info`, `Estágio de Docência`.
+
 ## Disciplinas
 
 | Pasta | Disciplina | Status |
