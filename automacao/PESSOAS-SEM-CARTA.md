@@ -3013,3 +3013,63 @@ de cenário, que é AMBIENTE e está vetado pela regra do Vini de 10/09**. O ún
 é o **Jean-Paul Tossings**, e mesmo ele é TD e rigger, não decisor de arte de personagem.
 **Decisão para depois de 20/09, e é do maestro.**
 
+
+---
+
+## RODADA DAS 21h35 DE 15/09/2026 — JOE, A PARTIR DO CENSO WIKIDATA DE ANIMAÇÃO
+
+**De onde saiu:** `automacao/alvos-joe-wikidata.csv`, 167 estúdios de animação inéditos com site
+oficial. **O aviso do maestro estava certo e foi o achado central da rodada:** o Wikidata
+classifica por rótulo, e a lista é dominada por casas de **2D, stop motion e produção pura**. A
+varredura automática de **153 domínios × até 20 caminhos** (`/contact`, `/about`, `/team`,
+`/kontakt`, `/equipe`, `/impressum`, `/company`, `/people`, `/crew`, `/contacto`, `/a-propos`,
+`/en/contact` …) devolveu **endereço de pessoa publicado em apenas cinco domínios da lista
+inteira**. Por isso as fichas abaixo são poucas e várias são de caixa: **nenhum endereço foi
+montado.**
+
+---
+
+### Gregory Zalcman — Producer — Take Five / Carbone 14, Bruxelas, Bélgica
+- **Email:** `gregory@take-five.be` · confiança **alta** · fonte: **https://take-five.be/team**,
+  aberta nesta rodada, bloco `TEAM`, que publica literalmente *"Gregory Zalcman / Producer /
+  gregory@take-five.be"*. **NADA FOI MONTADO.** MX conferido nesta rodada por DNS: `take-five.be`
+  responde `1 aspmx.l.google.com` e os quatro alt (Google Workspace, vivo); `carbone-14.be`
+  responde `1 smtp.google.com`. Telefones existem na fonte e **não são registrados aqui**.
+- **Por que ELE e não outra pessoa da casa:** a página publica **quatro** pessoas com nome, cargo
+  e endereço — Gregory Zalcman (Producer), Alon Knoll (Producer), David Grançon (Producer /
+  production manager) e Eric Jaminet (Production Accountant). Não há uma única pessoa de **arte**
+  publicada, então a regra do `BRIEF-JOE` para casa pequena cai no sócio-produtor. **A prova de
+  que é ele, e não outro dos quatro, é cruzada:** a página de contato da **Carbone 14**, o estúdio
+  de animação da casa, publica **o mesmo número de telefone** que a página da Take Five imprime ao
+  lado do nome do Gregory, e o **mesmo endereço postal** (Avenue Van Volxem 326A, Forest/Bruxelas).
+  Quem atende pela Carbone 14 é ele. Alon Knoll fica como **SEGUNDA e última** possível.
+- **Técnica CONFERIDA NO SITE, e é o motivo de esta ficha existir:** a home da Carbone 14 diz
+  *"Carbone 14 is a Brussels-based 2D and 3D animation studio bringing films and series to life"*;
+  o `/about` acrescenta *"The studio then turned to more ambitious projects, notably with Flow by
+  Gints Zilbalodis, Carbone 14's first 3D feature film"* e *"this has led us to get involved in
+  Nino Dino, a 78 x 7' preschool series developed by Folivari (France) and **animated in
+  Blender**"*. 3D declarado **e** com dois títulos nomeados — não é palavra solta.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a Take Five escreve
+  *"To support its growth, Take Five established Carbone 14, an animation studio designed to bring
+  its projects to life"*, e o `/about` dela abre com *"Take Five was born from a simple yet
+  powerful ambition: to produce works that evoke emotions and resonate with audiences"*. A ponte
+  para o Vini é o **Nino Dino**: 78 episódios de pré-escolar em Blender é exatamente o tipo de
+  produção que precisa de personagem que aguente anos de série sem quebrar.
+- **Fora dos EUA?** Sim — Bélgica, União Europeia. A frase de realocação vale inteira.
+- **Dedupe NA CAIXA, feito ANTES de abrir a primeira página:** `search_threads` por
+  `"take-five.be" OR "take five" OR "image-cie.com" OR "Image Entertainment" OR "hydralab" OR
+  "soulcage"` devolveu **`{}`**, zero threads; e por `"mexopolis" OR "pictak" OR "Gutierrez" OR
+  "carbone-14" OR "Zalcman"` também **zero**. No repositório, `take-five` só aparece em
+  `censo-wikidata.csv` e `alvos-joe-wikidata.csv` (listas, não envios), e `Zalcman` e `carbone-14`
+  dão **zero ocorrências**. **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta:** (1) **a Take Five é PRODUTORA, não o estúdio** — quem tem o pipeline é a
+  Carbone 14, e são duas pessoas jurídicas com números de IVA diferentes (`BE 0877.810.210` e
+  `BE 0871.532.033`); a carta chega a quem financia, não a quem esculpe; (2) **os quatro nomes
+  publicados são todos de PRODUÇÃO** — não existe Art Director, Head of Art nem CG Supervisor
+  publicado em nenhuma das duas casas, então não há como cumprir o "personagem primeiro" no alvo,
+  só no conteúdo da carta; (3) **o crédito de Flow é de co-produção**: o filme foi dirigido e em
+  boa parte animado pelo próprio Zilbalodis com equipe mínima, e chamar a Carbone 14 de "a casa
+  que fez Flow" seria exagero que um produtor percebe na primeira linha; (4) a casa é **2D e 3D**,
+  com o 3D concentrado em dois títulos, e o grosso do catálogo (Last Door South, Vol au Vent,
+  Boys Boys Boys) é 2D de autor; (5) a Carbone 14 publica **só `info@carbone-14.be`**, então o
+  endereço desta ficha é o da produtora-mãe, não o do estúdio.
