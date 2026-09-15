@@ -3210,3 +3210,43 @@ montado.**
   enxuta e freela, não assento sênior fixo; (4) **não existe página de vagas** em lugar nenhum do
   site; (5) o `WORK` mostra o portfólio por cliente e **não credita função**, então não consigo
   provar que existe alguém dedicado a modelagem de personagem lá dentro.
+
+---
+
+### Jorge R. Gutiérrez — cofundador da Mexopolis (o site não imprime título; o texto o descreve dirigindo, escrevendo e desenhando) — Mexopolis, Estados Unidos
+- **Email:** `jorge@mexopolis.com` · confiança **alta (endereço PUBLICADO)**, **com uma ressalva
+  de idade que pode derrubar tudo — leia a ressalva 1** · fonte: **https://www.mexopolis.com/**,
+  aberta nesta rodada; o bloco `E-mail` do rodapé publica, em texto puro, `jorge@mexopolis.com` e
+  `sandra@mexopolis.com`. **NADA FOI MONTADO.** MX conferido nesta rodada por DNS:
+  `10 dpmail03.doteasy.com` e `15 dpmailbu.doteasy.com` — **o domínio recebe email hoje**.
+- **Por que ELE e não outra pessoa da casa:** a casa tem **duas** pessoas e as duas têm endereço
+  publicado. Escolhi Jorge e não Sandra porque o próprio texto reparte os papéis: *"Jorge is
+  directing, writing and designing The Book of Life"* enquanto *"Sandra is designing all the girl
+  and cute characters"* — os dois são de personagem, mas quem decide o elenco inteiro e contrata é
+  o diretor. **Sandra Equihua fica como SEGUNDA e última** possível.
+- **Técnica:** o texto da casa diz que os dois *"have managed to blend their passion for
+  over-the-top Mexican folk and popular culture with **digital animation techniques** to create
+  **characters** and stories that dazzle the eye"*. Os longas dele — *The Book of Life* (Reel FX)
+  e *Maya and the Three* (Netflix) — são **CG 3D estilizado com elenco enorme**, que é
+  exatamente a faixa do portfólio do Vini: estilizado, não fotorrealismo.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Mexopolis is a production company
+  founded in 1994 by Jorge R. Gutierrez and Sandra Equihua in Tijuana, Mexico. … Currently, the
+  company is located wherever the couple live."* e o convite literal do rodapé: **"HELLO! Let's be
+  friends! Drop us an email to get started!"** É uma casa que pede email por escrito.
+- **Fora dos EUA?** **NÃO** — o site diz *"Dallas, Texas / USA"*. **A frase de realocação NÃO
+  entra**, e a carta precisa tratar o patrocínio de visto com franqueza em vez de sugerir mudança.
+- **Dedupe NA CAIXA:** `search_threads` por `"mexopolis" OR "pictak" OR "Gutierrez" OR
+  "Gutiérrez" OR "carbone-14" OR "Zalcman"` devolveu **`{}`**, zero threads. No repositório,
+  `mexopolis` só aparece em `censo-wikidata.csv` e `alvos-joe-wikidata.csv` (listas) e `Gutierrez`
+  dá **zero**. **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta, e a primeira é a que decide:** (1) **O SITE ESTÁ CONGELADO EM 2013** — o
+  rodapé diz *"© 1999 - 2013"* e o texto fala de *The Book of Life* como filme **em produção**,
+  um longa que estreou em **2014**; ou seja, o endereço é publicado mas **a publicação tem treze
+  anos**, e o MX vivo prova que o domínio recebe, **não** que a caixa dele ainda é lida; (2)
+  **NENHUM CARGO É PUBLICADO** — a carta não pode chamá-lo de diretor da Mexopolis nem de nada
+  além do que a página escreve; (3) **a Mexopolis NÃO CONTRATA modelador**: é a produtora pessoal
+  de um casal, e a animação dos projetos dele é feita em **Reel FX**, **Tangent** e afins — o
+  valor aqui é o mesmo do caso Allimator, é alguém que **conhece quem contrata**, então só o fecho
+  fixo da carta faz sentido; (4) o texto diz que o filho de 4 anos está desenhando nas paredes —
+  **esse filho hoje tem 17**, o que mede sozinho a idade da fonte; (5) ele é um nome grande e
+  público, com agente e caixa cheia; a chance de resposta é baixa e a carta precisa ser curta.
