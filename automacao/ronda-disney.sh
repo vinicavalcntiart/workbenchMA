@@ -22,7 +22,13 @@
 # Uso:  sh automacao/ronda-disney.sh
 #       sh automacao/ronda-disney.sh "<ids conhecidos separados por espaço>"
 
-CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882}"
+# 10160043 entrou em 15/09: Character Interaction Design Intern de parque temático, Kissimmee.
+# Ela é NOVA e MEDIDA, e foi descartada com três vetos ESCRITOS no anúncio ("Possess unrestricted
+# work authorization", "Possess a valid U.S. driver's license", "Be enrolled in an accredited
+# college/university") mais a disciplina errada: pede formação em Theatre, Digital Media, Graphic
+# or Web Design ou Creative Writing, e é personagem de parque, não 3D. Fica na lista de conhecidos
+# para não reacusar como novidade a cada rodada e fazer a próxima pessoa investigar de novo.
+CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882 10160043}"
 UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'
 TMP=$(mktemp -d)
 OK=0
