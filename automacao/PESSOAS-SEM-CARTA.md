@@ -2173,3 +2173,42 @@ rodada e transformado em ficha o que estava parado há treze dias.
   vem do diretório; (3) ela é **produtora, não cadeira criativa**, e a casa é uma produtora que
   **se junta a estúdios** (*"team up with ... animation studios"*), ou seja **ela não contrata
   modelador diretamente** — a carta aqui é porta e indicação, não vaga.
+
+### Kristine Knudsen — Den Siste Skilling, Bergen, Noruega — **nome publicado, endereço de CAIXA, e um endereço podre na mesma página**
+
+- **Email:** post@densisteskilling.no · confiança **alta** para a entrega, **mas é CAIXA e não
+  endereço de pessoa** · fontes, as duas abertas nesta rodada:
+  https://nordicanimation.com/studios-producers/ (que publica
+  **`Den Siste Skilling, Norway | Kristine Knudsen | +47 48 35 16 38 | post@densisteskilling.no`**)
+  e https://www.densisteskilling.no/ , o site da própria casa, cujo rodapé traz
+  `post@densisteskilling.no`. **NADA foi montado.** **MX conferido:** `alt2/alt3/alt4.aspmx.l.google.com`
+  (Google Workspace, vivo).
+- **ARMADILHA MEDIDA, e ela está na própria página da casa:** o HTML de
+  `https://www.densisteskilling.no/` contém **DOIS** endereços parecidos —
+  `post@densisteskilling.no` e **`post@denissteskilling.no`** (com **dois `s`** em "denis"). O
+  segundo é **erro de digitação deles** e é **endereço morto**: consultei a resolvedora pública do
+  Google e `denissteskilling.no` devolve **`Status: 3` (NXDOMAIN)** em **A** e em **MX**. **Quem
+  copiar o endereço errado da página perde a carta.** O bom é o de **um `s`**.
+- **Por que ELA e não outra pessoa da casa:** é a **única** pessoa que qualquer das duas fontes
+  nomeia. A casa é boutique e não publica equipe.
+- **Gancho, com a frase do próprio estúdio entre aspas:** do site,
+  **"Den siste skilling AS is a Norwegian production company based in Bergen. Named after the
+  former inn 'The last Shilling', as an inspiration to spend your resources on culture! The
+  company specializes in developing and producing animated as well as live action feature films
+  and TV series"**; e do diretório, o catálogo que é 3D CG de longa:
+  **"A Bergen-based boutique production company founded in 2010, focusing on animated feature
+  films. Their track record includes co-productions RICHARD THE STORK & THE MYSTERY OF THE GREAT
+  JEWEL (2023) and RICHARD THE STORK (2017). Our current slate includes animated feature
+  COCOBANANA, based on a popular audiobook – series, as well as GINGERBREAD TOWN and SANDER`S
+  MIDSUMMER"**.
+- **Fora dos EUA?** Sim — Noruega. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `"densisteskilling.no"` e zero para
+  `densisteskilling OR "Den Siste Skilling" OR Knudsen`. Zero no repositório inteiro. **CASA
+  NOVA.**
+- **Ressalva honesta:** (1) **o endereço é uma CAIXA `post@`, não o endereço dela** — em casa
+  desse tamanho a caixa provavelmente cai no colo dela, mas isso é aposta e não prova, e **não
+  montei** `kristine@densisteskilling.no`; a carta deve abrir com o nome dela mesmo indo para a
+  caixa; (2) **o cargo dela não é publicado** em nenhuma das duas fontes; (3) a casa é
+  **produtora e coprodutora**, não estúdio de produção — *Richard the Stork* foi animado em
+  parceiros estrangeiros, então o assento de personagem **não fica em Bergen**; (4) os dois longas
+  entregues são de 2017 e 2023 e o resto do slate está em desenvolvimento.
