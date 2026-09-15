@@ -2903,3 +2903,99 @@ o site mudou o veredito de metade delas, nos dois sentidos.
   contato**, e o formulário oferece "internship" na mesma linha — há risco de a carta de um sênior
   de dez anos cair no mesmo funil de estagiário.
 
+### O QUE MORREU NESTA RODADA, com a medição, para ninguém repetir
+
+**Cinco alvos foram investigados até o fim e mortos. Três deles morreram no DEDUPE DA CAIXA,
+depois de eu já ter aberto o site e lido cargo e endereço — ou seja, o trabalho de detetive
+estava certo e o alvo é que já tinha sido gasto.** Isso custou metade da rodada e a lição está
+no fim desta tabela.
+
+| Alvo | O que foi medido hoje | Veredito |
+|---|---|---|
+| **Piranha Bar (Dublin), Richard Chaney, `richard@piranhabar.ie`** | Página `/contact` publica **cinco** pares de nome, cargo e endereço, entre eles *"Richard Chaney — Partner \| Creative Head of Studio"*, cuja bio diz que ele *"leads the studio—inspiring our multidisciplinary team, **scouting emerging global talent**"* | **TETO ATINGIDO.** O Gmail devolveu **cinco threads**: carta para `richard@` em **03/09**, carta para `gavin.k@` (Founding Partner) em **06/09**, carta para `info@` em 26/08 com follow-up em 02/09, e dois recibos automáticos. **Duas pessoas já gastas, a casa está fechada pela regra do teto** |
+| **Telegael (Galway), Morgan O'Brien, `morgan@telegael.com`** | `/our-team` publica **doze** pares de nome, cargo e endereço, e o bloco dele é o alvo perfeito: **"Head of Animation"**, com a bio dizendo que as responsabilidades cobrem *"Art Direction, IP Development ... including **Character Design**, Background Painting, Concept Development"* | **TETO ATINGIDO.** O Gmail devolveu **duas threads**: carta para `morgan@` em **06/09** com follow-up em 08/09, e carta para `cathy@` (Head of Production) em **11/09**. Nenhuma resposta, e nenhuma vaga aberta por essa porta |
+| **Filmic / Filmic Art (Estocolmo), `andreas@filmic.se`** | Melhor encaixe técnico que eu vi hoje: `/who-we-are` escreve **"Character animation and storytelling are what we're passionate about"**, *"rigging and animation of **advanced 3D characters** or animals"*, *"cinematic trailers with **stylised characters**"*, com Clash Royale, Minecraft, Stellaris e Paradox no portfólio; `/contact` publica **Andreas Ibohm (Executive Producer)** e **Moa Thenstedt Åkerström (Producer)**, e a caixa de talento pede literalmente **"3D artist"** | **TETO ATINGIDO.** Gmail: carta para `andreas@filmic.se` em **03/09**, para `moa@filmic.se` em **06/09** e para `jobb@filmic.se` em 02/09 com follow-up em 07/09. **Quatro cartas nesta casa.** Fica o registro de método: o site é `filmicart.com` e o email é **`@filmic.se`** — armadilha da Stunlock, e o diretório nórdico ainda publica `jonathan@filmicart.com`, endereço que a casa **não** usa em lugar nenhum do próprio site |
+| **Sparre Production (Copenhague), Irene Sparre, `irene@sparreproduction.dk`** | Tudo batia: endereço publicado, **MX Google vivo**, casa **nova**, cargo publicado pela casa (*"Irene Sparre / Founder, CEO, Producer"*), e a prova de CG mais forte da rodada — *"Sparre Production has – for Wil Film – over the last 8 years produced more than 3000 minutes of animated content for LEGO, Disney, Lucasfilm based on LEGO Ninjago® and LEGO Star Wars® franchises"* e **"Sparre Production is signatory to high-end CG productions"**; a equipe publicada tem **Character Designer**, dois Art Directors e dois Concept Artists | **A PRÓPRIA CASA PEDIU PARA NÃO SER PROCURADA.** A página `/contact`, aberta hoje, escreve: **"We are not currently accepting internship applications or unsolicited job enquiries. Any future opportunities will be announced through our website and social media channels."** Carta fria pedindo para entrar na lista **é** unsolicited job enquiry. Pela regra do BRIEF-JOE, quem pediu para não ser contatado está fora. **NÃO VIRA FICHA E NÃO DEVE SER REABERTA enquanto essa frase estiver no ar** |
+| **Krystallplaneten (Tromsø), Merete Korsberg, `merete@krystallplaneten.no`** | Endereço e cargo publicados pela própria casa (`/people`: *"Merete Korsberg (OWNER/PRODUCER/CEO)"*, e o rodapé de todas as páginas repete o endereço), MX vivo, casa nova, e o perfil no diretório promete *"Working across 2D animation, stop motion and **3D**"* | **FORA DA TÉCNICA, e o site desmente o diretório.** A página `/productions`, aberta hoje, escreve a técnica projeto a projeto e **não há um único 3D**: *"KUNNSKAPENS SKOG ... **Style: digital 2D**"*, *"PEARL FISHERS ... **Style: stop motion**"*, *"ORIGIN OF MAN ... **Style: stop motion and glass table animation**"*. Ainda por cima ela é **co-produtora** no longa, cujo produtor principal é a Bautafilm sueca. **É a mesma morte da Tulipop, e é a prova de que o diretório nórdico não pode ser lido sem abrir o site** |
+
+**Falsos amigos de token derrubados hoje, para a lista crescer:** **`motionmakers`** não é
+estúdio de animação, é uma casa de **vídeo corporativo e estratégia de vídeo** com escritório em
+Vilvoorde e Hilversum (*"our core business is video in all its forms"*), e o token "motion"
+enganou; **`mrkaplin`** não é estúdio, é **um diretor freelance sozinho** (Robert Glassford, 3D
+Art & Motion Director, representado pela Jelly London) — publica `rob@mrkaplin.com` mas não
+contrata ninguém; **`paladinstudios`** existe e publica `stein@paladinstudios.com`, mas a primeira
+linha do `/about` diz **"ANNOUNCEMENT: Our quest has ended, and Paladin has shut down operations
+on May 1st 2024"** — **casa morta, endereço vivo**, que é a armadilha pior de todas porque a
+varredura mecânica não vê a diferença.
+
+### A LIÇÃO DE MÉTODO DESTA RODADA: O DEDUPE DE DOMÍNIO VEM ANTES DA INVESTIGAÇÃO, NÃO DEPOIS
+
+Eu gastei Piranha Bar, Telegael e Filmic **inteiras** — abrir site, ler equipe, extrair cargo,
+conferir técnica — **antes** de perguntar ao Gmail. As três já estavam no teto. Trabalho jogado
+fora por ordem errada de operação.
+
+**O conserto é barato e é este, e ele monta a peneira UMA vez por rodada:**
+
+```sh
+cat enviados.csv automacao/pessoas.csv automacao/processados.csv alvos.csv docs/index.html \
+ | grep -ohiE '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}' | tr 'A-Z' 'a-z' \
+ | sed 's/.*@//' | sort -u > /tmp/dominios_gastos.txt
+```
+
+Isso devolveu **953 domínios já tocados** nesta rodada, e `piranhabar.ie` e `telegael.com` estavam
+**os dois lá dentro**. Depois é só `grep -vxFf /tmp/dominios_gastos.txt lista_candidatos.txt`
+antes de abrir a primeira página. **A peneira de domínio é a primeira operação da rodada, não a
+última**, e o Gmail continua sendo a confirmação final — foi ele, e só ele, que pegou a Filmic,
+cujo domínio de email (`filmic.se`) não estava na lista porque o domínio do site é outro.
+
+### A HOLANDA NÃO ABRIU, E AGORA ESTÁ MEDIDO POR QUE
+
+A rota pedida era Holanda primeiro. **Ela rendeu ZERO pessoa nova**, e isto não é "não procurei":
+
+| O que foi tentado | Resultado medido |
+|---|---|
+| **83 domínios holandeses** sondados em raiz + `/contact` + `/about` + `/team` + `/our-team` + `/people` + `/crew` + `/studio` + `/jobs` + `/careers` (animação, VFX e jogos) | **UM único endereço de pessoa em casa viável**, e ele já era conhecido: `bastiaan@polderanimation.com`. Todo o resto é caixa (`info@`, `hello@`, `office@`, `jobs@`) |
+| **Política de privacidade e Impressum** em `/privacy`, `/privacy-policy`, `/privacybeleid`, `/impressum`, `/datenschutz`, `/legal`, `/legal-notice`, `/colofon`, `/disclaimer`, `/gdpr`, `/terms`, `/privacy-statement` nos **117 domínios novos** da rodada | **ZERO endereço de pessoa.** Só `dataprotection@`, `dpo@` e caixa. A veia do encarregado de dados, que rendeu a GIANTSTEP na Coreia, **não rende na Holanda nem no Reino Unido** |
+| **Campo `recruiter-email` do Teamtailor** em `/`, `/careers`, `/careers/`, `/jobs`, `/career`, `/vacatures`, `/werken-bij` nos mesmos 117 | **ZERO ocorrências.** Confirma a medição de 07/09: a veia é rica mas rara |
+| **`filmcommission.nl/database/animation-studios/`** | Não remedido hoje; seguia **HTTP 500** às 15h35 e às 03h40 |
+| **Diretórios holandeses de animação** — `animationinthenetherlands.nl`, `dutchanimation.nl`, `holland-animation.nl`, `klik.amsterdam`, `nfpa.nl` | **Os cinco recusados pelo proxy de saída** com `CONNECT tunnel failed, response 502`. **Isto é NÃO CONFERIDO, não é zero**, e é a pista mais promissora que fica aberta: se houver um diretório holandês com a estrutura do `nordicanimation.com`, ele está atrás dessa parede |
+
+**Leitura honesta:** a Holanda não tem veto escrito, tem **ausência de fonte**. As casas
+holandesas de porte (Guerrilla, Nixxes, Vertigo, Abbey, Grendel, Ambassadors, il Luster) publicam
+caixa e nada mais; as pequenas que publicam pessoa (Polder) **já receberam carta**. A próxima
+rodada que for para a Holanda deve gastar o tempo **procurando o diretório**, não varrendo
+domínio um a um — a varredura já foi feita e está medida acima.
+
+### A FILA QUE SOBRA, com o dedupe já feito, para a próxima rodada não recomeçar do zero
+
+**Nórdicos com endereço publicado, casa nova, sem carta e SEM FICHA** (todos com Gmail = zero
+nesta rodada, e todos com a técnica **ainda não conferida no site da casa** — que é exatamente o
+passo que matou a Krystallplaneten, então **confira antes de virar ficha**):
+
+- **Apparat Filmproduktion** (SE, Johan Edström, `johan@apparatfilm.se`) — o perfil diz
+  *"Techniques include 2D animation, stop motion, **CGI** and mixed media"*, mas também
+  *"specializing in animation for **documentaries** and commissioned films"*; o site
+  `apparatfilm.se` respondeu **HTTP 503** hoje, então **não há frase da casa**. **Não confundir com
+  a Apparat Studio da Noruega**, que é outra casa e já tem ficha. Nota de dedupe: **Johan Edström é
+  a MESMA pessoa** que aparece no diretório como Executive Producer da Chapel Films
+  (`johan.edstrom@thechapelfilms.com`) — duas casas, uma pessoa, **não vale como duas cartas**.
+- **Bivrost Film** (NO, Trond Jacobsen, `trond@bivrostfilm.no`, MX `mx.domeneshop.no` vivo) —
+  Emmy e Contrechamp em Annecy, mas **nenhuma técnica declarada** e *My Favorite War* é 2D.
+- **LØV Film** (NO, Lillian Løvseth, `lillian@loevfilm.no`) — **nenhuma técnica declarada**.
+- **Fiilin Good Films** virou ficha nesta rodada; **Made By Us** (DK, 2D declarado),
+  **Compass Films** (IS, *"full-service **2D** studio"*), **LEE Film**, **Pyjama**, **Soja**,
+  **BCD Film**, **Sun In Eye** e **Ulvenfilm** (2D declarado), **Dockhus** e **Trollfilm** (stop
+  motion declarado) estão **fora da técnica** e não devem ser reabertas.
+- **Plastilin Media OY** (FI, Kirill Razumov) — endereço publicado é **`@yahoo.com`**, caixa
+  pessoal de provedor; fica por último.
+
+**Holanda, a pista que fica aberta e vale mais que a fila acima:** **Polder Animation** é
+`3D character animation studio` declarado, tem **três** endereços de pessoa publicados em
+`/about` e só **um** foi gasto — sobram `sander@` (Production Design/Set Design) e `jean-paul@`
+(Technical Director/Rigger). **Não virou ficha hoje por dois motivos, e os dois precisam ser
+respeitados:** o Bastiaan recebeu carta em **11/09**, ou seja há quatro dias, e escrever de novo
+agora é a queimada de cadência que o briefing proíbe; e dos dois que sobram, o **Sander é design
+de cenário, que é AMBIENTE e está vetado pela regra do Vini de 10/09**. O único candidato legítimo
+é o **Jean-Paul Tossings**, e mesmo ele é TD e rigger, não decisor de arte de personagem.
+**Decisão para depois de 20/09, e é do maestro.**
+
