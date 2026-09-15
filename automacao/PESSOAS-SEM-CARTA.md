@@ -3114,3 +3114,56 @@ montado.**
   além do que a página diz**; (3) a casa é **publicidade, VFX e software**, com "robots" e
   "miniatures" na mesma frase — não é estúdio de animação de personagem, é uma casa larga, e o
   assento de modelagem sênior pode simplesmente não existir; (4) **não existe página de vagas**.
+
+---
+
+### Sebastian Runschke — Geschäftsführer (e, pelo texto da própria casa, quem faz a "kreative Leitung") — SERU Animation, Ludwigsburg + Hannover, Alemanha
+- **Email:** `office@seru-film.com` · confiança **alta (entrega)** — **mas é CAIXA, não endereço
+  de pessoa** · fonte: **https://www.seru-animation.com/impressum/**, aberta nesta rodada, que
+  publica *"Vertreten durch: die persönlich haftende Gesellschafterin: SERU Verwaltungs-GmbH …
+  diese vertreten durch den Geschäftsführer Dipl.-Ing. Sebastian Runschke"* e, logo abaixo,
+  *"E-Mail: office@seru-film.com"*. **NADA FOI MONTADO.**
+  **ARMADILHA DE DOMÍNIO, E ELA É GRAVE AQUI:** o site é **`seru-animation.com`** e o email é
+  **`@seru-film.com`** — domínios diferentes. Qualquer endereço montado sobre o domínio do site
+  (`s.runschke@seru-animation.com` e parentes) teria quicado. MX conferido nesta rodada por DNS:
+  `redparrot-studios.com` e `soulcage-department.de` respondem `5 smtpin.rzone.de`; o de
+  `seru-film.com` não foi consultado e **fica como pendência honesta**.
+- **Por que ELE e não outra pessoa da casa:** o site **não tem página de equipe** e não nomeia
+  mais ninguém. O `Über Uns` diz, sobre ele e sobre mais ninguém, que *"Bei den vorwiegend
+  europäisch finanzierten Projekten übernimmt SERU unter der Leitung von Geschäftsführer Sebastian
+  Runschke die gesamtheitliche Steuerung sämtlicher Arbeitsschritte und Bereiche innerhalb von
+  Animationsfilmproduktionen, **sowie die kreative Leitung**, Planung und Durchführung der
+  Arbeiten"* — ou seja, a própria casa escreve que a direção criativa é dele. Em casa deste porte
+  o `BRIEF-JOE` manda ir no fundador, e aqui o fundador é também quem assume a arte por escrito.
+- **Técnica CONFERIDA NO SITE:** o `Über Uns` diz *"SERU Animation GmbH & Co KG ist seit der
+  Gründung im Jahr 2011 spezialisiert auf die Produktion von **Zeichentrick und CGI animierten
+  Kinofilmen** und TV-Serien"*, e o menu de projetos lista **Die Häschenschule**, **Die
+  Häschenschule 2 – Der Große Eierklau**, **Rabbit Academy**, **Die Heinzels**, **Die Heinzels 2**
+  e **Meine Chaosfee & Ich** — longas de cinema em CGI, com elenco animal e criatura. **Isto não
+  é 2D puro**, e é a casa desta rodada com mais metragem de personagem 3D no catálogo.
+- **Gancho, com a frase do próprio estúdio entre aspas, e é o melhor da rodada:** a página
+  `https://www.seru-animation.com/film-jobs/`, aberta nesta rodada, diz
+  *"Gerade haben wir leider keine offenen Stellen zu besetzen. **Wir freuen uns dennoch immer über
+  Initiativbewerbungen!**"* — a casa **pede candidatura espontânea por escrito**. E o `Über Uns`
+  dá o segundo gancho, que é de padrão de qualidade: *"Produzent und Partner mit hohem
+  qualitativem Anspruch an **Artwork und Design**"*, além de *"Mit ihrem Firmensitz und kreativen
+  Basis in Ludwigsburg und einem eigenständigen Kreativteam und Studio in Hannover"* — há equipe
+  de arte interna, não é só coordenação.
+- **Fora dos EUA?** Sim — Alemanha, União Europeia. A frase de realocação vale inteira.
+- **Dedupe NA CAIXA:** `search_threads` por `"seru-film" OR "seru-animation" OR "Runschke" OR
+  "redparrot" OR "Red Parrot" OR "Keweloh" OR "Parekh" OR "Harder"` devolveu **cinco threads e
+  NENHUMA é destas casas** — são Brink Helsinki, Gigglebug, Dead Astronauts e Golden Wolf, todas
+  capturadas pela palavra inglesa *"harder"* dentro do corpo das cartas. **Falso positivo de
+  token, conferido um a um.** No repositório, `seru` e `redparrot` só aparecem em
+  `censo-wikidata.csv` e `alvos-joe-wikidata.csv` (listas), e `Runschke` e `Keweloh` dão **zero**.
+  **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta:** (1) **o endereço é uma CAIXA `office@`**, o oposto do que o Joe existe
+  para fazer; o site não publica **um único** endereço de pessoa; (2) a casa se descreve como
+  **"Produzent und Partner"** que faz a *"gesamtheitliche Steuerung"* — coordenação de produção
+  europeia com co-produtores, ou seja parte considerável da animação é feita **fora**; (3) o
+  catálogo é **misto**: Die Häschenschule e Die Heinzels são CGI, mas *Der kleine Rabe Socke*,
+  *Petronella Apfelmus* e *Simsala Grimm* são Zeichentrick (2D), e a página não diz qual técnica
+  vai no próximo projeto; (4) **não há vaga aberta**, e a casa tem **botão próprio de
+  Initiativbewerbung** — escrever ao Geschäftsführer contorna o funil que ela mesma pediu, e a
+  carta precisa assumir isso em vez de fingir que não viu; (5) o MX de `seru-film.com` **não foi
+  conferido nesta rodada**.
