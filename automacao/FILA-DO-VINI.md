@@ -401,6 +401,64 @@ incluindo as duas de personagem — vivem num site que a campanha nunca abriu.
 > **Regra: em Workday, leia o `robots.txt` do locatário antes de dizer que a casa não tem vaga.**
 > Ele lista os sites, é uma requisição, e é a mesma lição do `disneycareerdc`.
 
+## 🖐️ ITEM DE MÃO NOVO — NETFLIX ANIMATION STUDIOS, **Character Modeler** (15/09, 01h30)
+
+**É o título literal do cargo dele, e são DUAS requisições irmãs, as duas inéditas na campanha.**
+
+| | Vancouver | Sydney |
+|---|---|---|
+| Requisição | `790318470000` | `790318471349` |
+| Link | https://explore.jobs.netflix.net/careers/job/790318470000 | https://explore.jobs.netflix.net/careers/job/790318471349 |
+| Faixa publicada | **CAD 68.000 a 145.000** (total, sem stock) | não publicada |
+| Regime | híbrido, mínimo 3 dias no escritório | híbrido, mínimo 3 dias no escritório |
+
+**Dedupe feito em 15/09 às 01h20:** zero ocorrência das duas requisições em `enviados.csv`,
+`automacao/processados.csv`, `docs/index.html` e `automacao/FILA-DO-VINI.md`, e **zero na caixa** —
+a busca `Netflix newer_than:14d` só mostra o recibo da *Visual Development Artist- Ink* (04/09) e a
+recusa da *CG Experimental Artist* (07/09). **Requisições inéditas.**
+
+**Régua de veto rodada termo a termo no anúncio inteiro (3.524 e 3.170 caracteres):** ZERO acerto em
+`authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `citizen`, `resident`,
+`right to work`. O único acerto é `days a week`, e ele é **restrição de presença, não veto**:
+*"Hybrid Role (Minimum of 3 days a week in the office)"*.
+
+**Por que ela é a melhor da semana, com a frase deles:** *"We are looking for Character Modeling
+Artists who love building appealing stylised characters from strong proportions and clean forms to
+production-ready topology and UVs."* E pedem, junto da candidatura, *"Turntables, with wireframes,
+of character and creature models"*, que é o que o ArtStation dele já mostra.
+
+### POR QUE FICOU NA SUA MÃO, e eu CLIQUEI antes de dizer isso
+
+O formulário **preenche 100% pela automação** e eu cliquei em SUBMIT APPLICATION. O servidor
+recusou: `POST /api/application/v2/submit` devolveu **400** com
+`{"message": "Please try again later"}`. É o reCAPTCHA invisível do Eightfold recusando IP de
+datacenter, a mesma parede medida em 06/09 e **remedida hoje, 15/09**. Não há tela de captcha
+visível para resolver: a recusa é silenciosa e vem do servidor. **Nada foi enviado.**
+
+### O formulário campo a campo, já medido — é só repetir do seu IP
+
+1. Abra o link, **Apply**, anexe `Vini_Cavalcanti_CV.pdf`.
+2. Vai subir a janela **Candidate Privacy**: clique em **I ACKNOWLEDGE** (sem isso nada abaixo é clicável).
+3. Contato: email `contact@vinicavalcanti.art` · First `Vini` · Last `Cavalcanti` · País `Brazil` ·
+   Estado `Pernambuco` · Cidade `Olinda` · código do país **🇧🇷 (+55) Brazil** e o telefone **só com
+   os dígitos** (o número está no documento privado do Drive, não neste arquivo).
+4. Additional Documents: anexe `carta_nas_charmod.pdf` (já escrita, específica desta vaga, com a
+   situação de visto na primeira linha) e no campo **URL** ponha
+   `https://www.artstation.com/viniciuscavalcanti`.
+5. Application Questions, as três, e a terceira é a que não pode errar:
+   - *Are you currently working for Netflix as a contractor?* → **NO**
+   - *Have you worked for Netflix or any of Netflix's subsidiaries in the past?* → **NO**
+   - *Do you require sponsorship to legally work in the job location?* → **YES** (é a verdade)
+6. **SUBMIT APPLICATION**. A mensagem de sucesso desta casa é, literal:
+   *"Thank you for your interest! Your application has been received."*
+
+**Dica medida:** a terceira pergunta não abre a lista no clique, porque o menu da pergunta anterior
+ainda está fechando. Se travar, clique fora, volte nela e use a **seta para baixo** do teclado.
+
+**Depois de mandar a de Vancouver, mande a de Sydney:** é o mesmo formulário com outro `pid`, e a
+Austrália é a rota de visto mais acessível do escopo.
+
+
 ## 🖐️ À MÃO, AGORA (entrada nova de 12/09, 15h30): Stellar Creative Lab — **Modeling Artists (Mid & Senior)**, Vancouver — só falta a caixa do captcha
 
 **Link:** https://stellarcreativelab.applytojob.com/apply/zK3Gust365/Modeling-Artists-Mid-Senior
