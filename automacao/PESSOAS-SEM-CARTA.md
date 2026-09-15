@@ -2563,3 +2563,67 @@ dias atrás.
   desenvolvimento**, então **não há prova de pipeline de personagem aberto hoje** — e em 2017 a
   casa foi vendida à Sagafilm e recomprada em 2023, o que é sinal de estrutura pequena e
   intermitente.
+
+### Frank Mosvold — Kool Produktion, Noruega — **casa nova, longa 3D entregue, e o endereço é de provedor**
+
+- **Email:** fmosvold@online.no · confiança **alta para a entrega** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada:
+  **`Kool Produktion, Norway | Frank Mosvold | fmosvold@online.no |
+  https://www.facebook.com/KoolProduktion/`**. **NADA foi montado.** **MX conferido nesta
+  rodada:** `mx1c60/mx2c60/mx3c60/mx4c60.megamailservers.eu` (provedor vivo). Telefone existe na
+  fonte e **não é registrado aqui**.
+- **Por que ELE e não outro da casa:** é a **única** pessoa que a casa publica, e a casa é de uma
+  pessoa só no papel do diretório. Não há dilema.
+- **Gancho, com a frase do próprio estúdio entre aspas** (o texto do perfil é escrito pela própria
+  casa): **"Kool Produktion AS is a Norwegian production house. The company creates content for
+  children on all platforms. Kool Produktion's latest release was the animated feature film Ella
+  Bella Bingo (released worldwide 2020). The next animated feature will be The Legend of Magnus
+  the Good (currently in development)"**. O catálogo publicado ainda traz **"Ella Bella Bingo
+  Racer (game, 2020)"**, ou seja a casa cruza longa e jogo com o mesmo elenco — que é exatamente
+  a travessia do portfólio do Vini.
+- **Fora dos EUA?** Sim — Noruega (EEE). **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `Mosvold OR "Kool Produktion" OR
+  "Ella Bella"`. No repositório: **zero** em `enviados.csv`, `pessoas.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html`. **CASA NOVA.**
+- **Ressalva honesta, e são quatro, a terceira é a que mais pesa:** (1) **o cargo dele não é
+  publicado** em nenhuma fonte que abri — o diretório dá nome, telefone, email e link, e nenhum
+  título; a carta **não pode chamá-lo de nada**; (2) **a casa não tem site**: `koolproduktion.no`
+  responde **NXDOMAIN** na resolvedora pública do Google (`Status 3`), e o único link publicado é
+  uma página de Facebook, então **não há segunda fonte** nem prova de casa viva por site;
+  (3) **o endereço é de provedor de internet** (`online.no`, Telenor), não corporativo — entrega,
+  mas é caixa pessoal, e caixa pessoal de produtor recebe menos triagem profissional do que um
+  endereço de estúdio; (4) **a técnica não é dita pela casa**: *Ella Bella Bingo* é longa em CG,
+  mas o perfil escreve só *"animated feature film"* e **eu não confirmei em fonte oficial quem
+  animou**, nem se há qualquer produção em curso além do longa *"in development"*.
+
+### Teemu Leppälä — **CEO** — sleetfleet, Helsinque, Finlândia — **a ficha mais fraca da rodada, e o endereço é CAIXA**
+
+- **Email:** contact@sleetfleet.com · confiança **alta para a entrega, mas é CAIXA e não endereço
+  de pessoa** · fontes, as duas abertas nesta rodada:
+  https://nordicanimation.com/studios-producers/ , que publica **`sleetfleet, Finland | Teemu
+  Leppälä, CEO | contact@sleetfleet.com`** — e é o **único** bloco do diretório inteiro que traz o
+  **cargo** junto do nome —, e https://www.sleetfleet.com/ , cujo rodapé repete
+  `contact@sleetfleet.com`. **NADA foi montado**, e em particular **não montei** `teemu@` nem
+  `teemu.leppala@`, porque não existe um único endereço literal daquele domínio para provar
+  padrão. **MX conferido nesta rodada:** `10 mail.sleetfleet.com` (servidor próprio, vivo).
+- **Por que ELE e não outro da casa:** o site tem seção `TEAM` e **ela não nomeia ninguém** — só
+  descreve o time em bloco (*"Sleetfleets team combines decades of expertise in gaming, creative
+  industries, digitalization, education, and marine science"*). O único nome publicado em qualquer
+  lugar é o do CEO, e em casa deste tamanho o CEO decide arte por falta de quem mais decida.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Sleetfleet's vision is to create
+  highly valued, beloved, and licensed intellectual properties (IPs), including animated series.
+  The Icecube and Icebreaker Snow series, based on the highly anticipated games, provide a
+  cohesive experience that spans games, books, animated series, and more. These characters
+  champion the mission of saving the Arctic"**, e do perfil no diretório: **"We're excited to
+  announce an upcoming animated series starring our charismatic heroes, Ice Cube and Icebreaker
+  Snow!"**. É uma casa cujo produto **são dois personagens**, o que dá gancho natural.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `sleetfleet` e zero para `Leppala`.
+  No repositório, a **única** ocorrência de `sleetfleet` é a linha da rodada de 15/09 03h40 deste
+  mesmo arquivo, que a listou na *fila que sobrou* e **não virou ficha nem carta**. **CASA NOVA.**
+- **Ressalva honesta, e é por isso que eu digo que é a mais fraca:** (1) **o endereço é uma caixa
+  `contact@`**, o oposto do que o Joe existe para fazer; (2) a casa é **minúscula e é IP, não
+  produção** — games, livros e uma série *"in development"*, sem prova de equipe de arte interna
+  nem de pipeline 3D; (3) o **cargo vem do diretório**, não do site da casa, e o site **não nomeia
+  ninguém**, então se o CEO tiver mudado eu não teria como saber; (4) **se o maestro precisar
+  cortar uma carta desta rodada, corte esta.**
