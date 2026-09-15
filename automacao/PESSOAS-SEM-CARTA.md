@@ -2212,3 +2212,48 @@ rodada e transformado em ficha o que estava parado há treze dias.
   **produtora e coprodutora**, não estúdio de produção — *Richard the Stork* foi animado em
   parceiros estrangeiros, então o assento de personagem **não fica em Bergen**; (4) os dois longas
   entregues são de 2017 e 2023 e o resto do slate está em desenvolvimento.
+
+### Anttu Harlin — **cofundador** — Gigglebug Entertainment, Helsinque, Finlândia — **e ela CORRIGE um registro de 05/09**
+
+- **Email:** anttu.harlin@gigglebug.fi · confiança **alta** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada:
+  **`Gigglebug Entertainment, Finland | Anttu Harlin | +358 50 575 4862 | anttu.harlin@gigglebug.fi`**.
+  **NADA foi montado.** **MX conferido:** `aspmx.l.google.com` e alternativos (Google Workspace).
+- **CORREÇÃO DE REGISTRO ANTIGO, e é o motivo principal desta ficha existir:** o
+  `processados.csv` de **05/09** registra, sobre doze casas de CH/FI/NL, *"sem NENHUM email
+  publicado: Anima Vitae, Gigglebug e Pyjama Films (Finlândia) ... Marcados no backlog para não
+  repetir a busca de contato; a via é o ATS"*. **Isso estava certo para o site deles e errado para
+  o mundo:** o endereço do cofundador **existe publicado**, só não está em `gigglebug.fi` — está
+  no diretório nórdico. A lição de método é grande e vale para as outras onze: **"o site da casa
+  não publica" não é o mesmo que "não existe endereço publicado".**
+- **Por que ELE e não outro da casa:** os dois fundadores são **Joonas Utti e Anttu Harlin**, e o
+  diretório publica **só o do Harlin**. A segunda fonte é a própria casa: o rodapé de
+  https://www.gigglebug.tv/about diz **"Gigglebug is an created by Joonas Utti & Anttu Harlin"**
+  (o erro de gramática é deles) e lista, ao lado, apenas contatos de **vendas de TV,
+  licenciamento e booking de evento** em domínios de terceiros — nenhum de arte.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"Gigglebug Entertainment is an
+  animation IP studio based in Finland. We create, develop and produce positive children's
+  content with multi-platform distribution and global growth potential. Our company's mission is
+  to make fun stuff with a purpose!"**, e a origem dos dois, que é o que dá liga com um artista de
+  personagem: **"Gigglebug Entertainment was founded in 2013 by Joonas Utti and Anttu Harlin, who
+  previously led the animation studio, Anima Boutique Oy, with clients such as Disney, Nokia,
+  Veikkaus and Rovio"**.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa, e aqui ele NÃO voltou vazio:** o **Gmail devolveu ZERO** para
+  `"gigglebug.fi"` e zero para `Harlin`, **mas devolveu UMA thread** para `gigglebug`: o recibo de
+  **27/08** de `sanni.vainio@gigglebug.teamtailor-mail.com`, *"Thank you for your Open
+  application! We have now saved your details for future use."* O `enviados.csv` e o
+  `processados.csv` confirmam: **a casa já foi abordada uma vez, por Open Application no
+  Teamtailor**. Logo esta é a **SEGUNDA porta da mesma casa**, e **Sanni Vainio está FORA dos
+  limites** por já ter respondido. Anttu Harlin nunca foi contatado. **Fica sendo a primeira e
+  última pessoa nomeada desta casa.**
+- **Ressalva honesta, e são três:** (1) **a casa já recebeu uma candidatura espontânea em 27/08 e
+  ela foi aceita e arquivada** — a carta precisa **assumir isso**, não fingir primeiro contato, do
+  mesmo jeito que a do Tim Remmers assumiu a carta de 06/09; (2) **não há prova de 3D** — o
+  catálogo publicado (*Best & Bester*, *Gigglebug*, o negócio com o Milkshake! do Channel 5 e com
+  a *101 Dalmatian Street* da Disney) é conteúdo infantil de marca, e a casa se descreve como
+  **"animation IP studio"**, que é dona de propriedade intelectual e não necessariamente casa de
+  produção com assento de modelagem; (3) `www.gigglebug.fi` **tem certificado que não bate com o
+  host** (`SSL: no alternative certificate subject name matches target host name`) e
+  `www.gigglebug.tv/about` responde **404** — a frase dos fundadores foi lida no **rodapé da
+  página de erro**, que é conteúdo publicado deles mas é lugar frágil.
