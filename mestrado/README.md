@@ -11,7 +11,7 @@ mestrado/
 ├── README.md                       <- este arquivo
 ├── narrativas-transmidiaticas/     <- disciplina 1
 ├── outra-disciplina/               <- disciplina 2, e assim por diante
-└── dissertacao/                    <- quando chegar a hora
+└── dissertacao/                    <- estrutura já criada, ver README próprio
 ```
 
 Se a disciplina que o Vini estiver estudando ainda não tem pasta, crie a pasta antes de qualquer outra coisa. Não jogue arquivo solto na raiz de `mestrado/`.
@@ -45,5 +45,6 @@ Só crie a subpasta quando for usar. Pasta vazia não entra no git.
 | Pasta | Disciplina | Status |
 |---|---|---|
 | `narrativas-transmidiaticas/` | Narrativas Transmidiáticas | em curso |
+| `dissertacao/` | Dissertação (não é disciplina, tem regras próprias no README dela) | estrutura pronta |
 
 Atualize esta tabela quando criar uma disciplina nova.
