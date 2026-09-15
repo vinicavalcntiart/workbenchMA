@@ -3336,3 +3336,72 @@ montado.**
   nem escultura — é o vizinho do ofício do Vini, não o ofício dele; (4) é casa de **serviço de
   postprodução com quatro endereços e nove pessoas**, ou seja provavelmente muito freela por
   projeto, o que é porta e não assento.
+
+---
+
+### O QUE MORREU NESTA RODADA, E POR QUÊ — para a próxima rodada não reabrir
+
+**O aviso do maestro se confirmou na prática.** Abri **43 estúdios à mão** da
+`alvos-joe-wikidata.csv` (mais a varredura automática de **153 domínios × até 20 caminhos**,
+cerca de 3.060 requisições) e a maioria **não faz 3D**. Nenhum destes deve voltar:
+
+**Mortos por TÉCNICA — conferida no site, não no rótulo do Wikidata:**
+- **Nørlum** (DK) — o site rotula os próprios projetos como *"2D animation"*. 2D puro.
+- **A+C Studios** (UK) — **stop motion** declarado: claymation, papercraft, stop-frame.
+- **Owl House Studios** (UK) — **a definição do próprio site desmente o rótulo**:
+  *"3D Animation: **Layering of multiple 2D animated objects** to create a multi-dimensional
+  movie"*. Isso é 2.5D, não CG.
+- **Winding Snake Productions** (UK) — *"creatively driven **2D** animation studio"*.
+- **Studio Huckepack** (DE) — *"big love for **2d** animation, quirky styles & storytelling"*.
+- **Red Dog Culture House** (KR) — o cabeçalho do site é literalmente *"2D Animation Studio"*.
+- **Studio Croma** (IT) — stop motion.
+- **one and a half** (CY) — 2D de documentário; Yiannis Philiastides é Founder/Creative Director
+  mas só há `info@`.
+- **Global Mechanic** (CA) — **este é o caso Krystallplaneten desta rodada**: publica
+  `bruce@globalmechanic.com` (Bruce Alcock, Creative Director & Owner) e
+  `brodie@globalmechanic.com` (Chris Brodie, Executive Producer), dois endereços de pessoa
+  prontos — **e a página de projeto derruba a ficha**: o *Jam Van* é *"a blend of multiple
+  animation styles and live action"*, com personagens que são *"a mix of drawings and
+  phototextures"* e stop-motion de papel feito pela parceira Dadomani. **Mixed media, não CG.**
+  Se alguma rodada futura quiser gastar aqui, saiba que está gastando fora da disciplina.
+- **Pictak Cie** (FR) — publica `xavier@pictak.fr` em `/` e `/contact`. Morre por técnica:
+  Xavier Picard dirigiu *Moomin on the Riviera* e *Prince's Voyage*, **ambos 2D**, e o único
+  projeto no site está *"IN DEVELOPMENT"* sem técnica declarada.
+
+**Mortos por IDENTIDADE — o rótulo do Wikidata está errado sobre o que a casa é:**
+- **Creative Beards** (NL) — *"2D and 3D **explanatory** animations, infographics"*. Vídeo
+  explicativo corporativo, não personagem.
+- **Unagi** (CA no Wikidata) — **falso amigo duplo**: é um *studio de communication* em **PARIS**,
+  com motion design institucional e **podcast**. Nem o país nem o setor batem.
+- **Image Entertainment Corporation** (CA) — publica `s.viau@image-cie.com` com o nome do fundador
+  Sylvain Viau, **e é DISTRIBUIDORA**: *"s'est donnée pour mission de faire rayonner des films à
+  fort potentiel sur le marché international"*. Não produz animação.
+- **Animated Company** (UK) — *"**AI** Animation & VFX Studio"*.
+- **Storm Films** (NO) — produtora de longa; o único endereço publicado é `mbg@stormfilms.no`,
+  **sem nome ao lado**, e não há técnica declarada em página nenhuma que abriu.
+- **ROI VISUAL** (KR) — licenciamento e IP (ROI TOYS, ROI BOOKS), só `license@`.
+- **Zinkia** (ES), **Fifth Degree** (BG), **Doze Studio** (FR) — nenhuma pessoa publicada e
+  nenhuma técnica de personagem declarada; a Doze é publicidade e identidade visual.
+
+**Mortos por SITE/DOMÍNIO, medido hoje:**
+- **Rovio Animation** (FI) — `rovioanimation.com` **não resolve DNS**. Domínio morto.
+- **DogHead Animation Studio** (IT) — `dogheadanimaton.com` **não resolve DNS** (e note que o
+  domínio publicado no Wikidata está grafado errado, sem o `i` de *animation*).
+- **Blender Animation Studio** (NL) — `studio.blender.org` respondeu **HTTP 403**. Fica como
+  **NÃO CONFERIDO**, não como morto: é 3D de verdade e é Holanda, a rota número um. **Vale
+  retomar com outro caminho.**
+- **Caribara Animation** (FR) — **HTTP 503**. Também **NÃO CONFERIDO**.
+- **SAMG Entertainment** (KR), **TRIKK17** (DE), **Yapiko** (FR), **Timeless Films** (UK) —
+  páginas servidas por JS, sem pessoa e sem técnica legível.
+
+**Fora por TETO ou por já terem sido gastas — e a nWave é a lição da rodada:**
+- **nWave Pictures** (BE) — **teto de duas atingido, e as DUAS QUICARAM**:
+  `edillens@nwave.com` (28/08) e `cgrao@nwave.com` (03/09), as duas com
+  *"Delivery Status Notification (Failure) — endereço não encontrado"*, mais uma candidatura
+  espontânea via BambooHR em 11/07. **Os dois endereços eram MONTADOS por padrão de domínio.**
+  É a regra dos 5 quicados em 8 acontecendo numa casa só. **Nunca mais.**
+- **Giant Animation** (IE) — carta em 26/08 e follow-up em 02/09 para `hello@giant.ie`. Resta uma
+  aproximação, mas a casa é 2D.
+- **Aardman** (UK) — carta em 09/09 para `pauline.mallam@aardman.com`. Resta uma.
+- **b.water Animation Studios** (DE/ES) — teto: carta em 26/08 e **resposta humana** de Idayra do
+  Operations Department em 26/08. Casa já ativa, não reabrir a frio.
