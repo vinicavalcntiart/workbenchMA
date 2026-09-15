@@ -18,9 +18,20 @@ name: Publicar dashboard cifrado
 # do run o que aconteceu e como consertar. Continua sem falhar e sem mandar email,
 # mas para de mentir em silêncio.
 
+# DEFEITO DE 15/09, e ele custou TRES DIAS de site parado sem ninguem perceber.
+# Este gatilho escutava SO a branch `claude/vini-cavalcanti-job-campaign-gciixk`. A campanha
+# mudou para `claude/vini-job-campaign-batch-2-so98fm` em 13/09 e, a partir dali, NENHUM push
+# publicou nada: o ultimo commit da gh-pages e de 12/09. O Vini descobriu do jeito mais caro,
+# abrindo o site e nao achando o Preenchedor de formulario, que existe no repositorio desde
+# entao. Igual ao episodio do secret sumido em 07/09: o sinal dizia verde porque o workflow
+# simplesmente NAO RODAVA, e nao rodar tambem nao falha.
+# As duas branches ficam na lista de proposito: a antiga ainda existe no remoto, e tirar o nome
+# dela faria a mesma armadilha ao contrario se alguem voltar a empurrar por la.
 on:
   push:
-    branches: [claude/vini-cavalcanti-job-campaign-gciixk]
+    branches:
+      - claude/vini-job-campaign-batch-2-so98fm
+      - claude/vini-cavalcanti-job-campaign-gciixk
     paths:
       - "docs/index.html"
       - "automacao/cifra-dashboard.mjs"
