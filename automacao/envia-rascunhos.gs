@@ -396,7 +396,13 @@ const ASSUNTO_PROPRIO_PERMITIDOS = [
   "vfx_hr@ufxstudios.com",       // UFX Studios, Bruxelas
   "jobs@thqnordicmobile.com",    // HandyGames / THQ Nordic Mobile, Giebelstadt
   "info@keytoon.com",            // Keytoon, Madri
-  "careers@lightfoxgames.com"    // Lightfox Games, Vancouver: Senior 3D Artist
+  "careers@lightfoxgames.com",   // Lightfox Games, Vancouver: Senior 3D Artist
+  // Framestore Montreal, 3D Modeller (achada em 15/09 varrendo Recruitee). O anúncio manda,
+  // com estas palavras, "submit your resume and portfolio to recruiters@framestore.com with
+  // the subject line: Modeller - Montreal". O assunto é O DA CASA e não o da campanha, então
+  // o enviarRascunhos() não enxerga este rascunho. Esta porta de email também CONTORNA o
+  // captcha do Recruitee, que é o que trava o formulário deles.
+  "recruiters@framestore.com"
 ];
 
 function enviarAssuntoProprio() {
