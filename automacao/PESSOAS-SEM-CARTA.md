@@ -3073,3 +3073,44 @@ montado.**
   com o 3D concentrado em dois títulos, e o grosso do catálogo (Last Door South, Vol au Vent,
   Boys Boys Boys) é 2D de autor; (5) a Carbone 14 publica **só `info@carbone-14.be`**, então o
   endereço desta ficha é o da produtora-mãe, não o do estúdio.
+
+---
+
+### Sunit Parekh — Director (é o único dos cinco da página `/directors` com endereço publicado) — hydralab, Copenhague, Dinamarca
+- **Email:** `sunit@hydralab.com` · confiança **alta** · fonte: **https://cph.hydralab.com/contact**,
+  aberta nesta rodada, onde o bloco do escritório imprime, em texto puro,
+  *"Nytorv 17, 1 sal, 1450 København K, Danmark / Sunit Parekh, sunit@hydralab.com"*. O nome dele
+  também está em **https://cph.hydralab.com/directors**, ao lado de Kim Hagen, Esben Tønnesen,
+  Tonni Zinck e Tor Fruergaard. **NADA FOI MONTADO** — e em particular **não montei** endereço
+  para nenhum dos outros quatro diretores, porque o único endereço literal daquele domínio além da
+  caixa `cph@` é o dele. MX conferido nesta rodada por DNS: `10 smtp.google.com` (vivo).
+- **Por que ELE e não outra pessoa da casa:** a casa publica exatamente **cinco** diretores e
+  **um** endereço de pessoa, o dele, e o publica **junto do endereço postal do escritório**, que é
+  a posição de quem responde pela operação de Copenhague. Os outros quatro não têm endereço em
+  lugar nenhum do site, e escrever para eles exigiria montar — o que esta campanha já pagou caro
+  para aprender a não fazer (dos 8 montados, **cinco quicaram**).
+- **Gancho, com a frase do próprio estúdio entre aspas:** a home resume a casa em cinco palavras,
+  *"animation, vfx, miniatures, software, robots"*, e o `/contact` desenvolve:
+  *"From directing commercials and short films, executing high-end visual effects, to developing
+  innovative software and technology, hydralab occupies many worlds - and its core mission, to
+  remain broad, agile and ambitious, puts it in a unique position to understand visual
+  communication and information."* O catálogo aberto por mim tem **Dreambuilders**, **The Gnome
+  Movie**, **Gräns**, **Thelma**, **The Neon Demon**, **LEGO Replay** e **Along with the Gods** —
+  ou seja, a casa senta em produção de personagem digital e criatura, mesmo sem dizer a palavra.
+- **Fora dos EUA?** Sim — Dinamarca, União Europeia. A frase de realocação vale inteira.
+- **Dedupe NA CAIXA, feito ANTES de abrir a primeira página:** `search_threads` por
+  `"take-five.be" OR "take five" OR "image-cie.com" OR "Image Entertainment" OR "hydralab" OR
+  "soulcage"` devolveu **`{}`**, zero threads, e `"Parekh"` também deu zero. No repositório,
+  `hydralab` aparece em `garimpo-cgstudiomap.csv`, `censo-wikidata.csv` e
+  `alvos-joe-wikidata.csv` — **as três são listas de prospecção, nenhuma é envio** — e `Parekh` dá
+  **zero ocorrências**. **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta, e a primeira é séria:** (1) **a técnica 3D NÃO está escrita em lugar
+  nenhum** — abri a home, o `/contact`, o `/directors` e o `/work` e a casa **nunca escreve 3D,
+  CG, modelagem nem personagem**; o que me faz acreditar que há 3D ali são **títulos de projeto**
+  (Dreambuilders é longa CG dinamarquês, Gräns tem criatura protética e digital), e **título não é
+  descrição de técnica** — é exatamente o erro que derrubou a Krystallplaneten; (2) **"director"
+  aqui é diretor de comercial e de curta, não cargo executivo nem de arte** — a página `/directors`
+  não imprime um único título ao lado dos cinco nomes, então **a carta não pode chamá-lo de nada
+  além do que a página diz**; (3) a casa é **publicidade, VFX e software**, com "robots" e
+  "miniatures" na mesma frase — não é estúdio de animação de personagem, é uma casa larga, e o
+  assento de modelagem sênior pode simplesmente não existir; (4) **não existe página de vagas**.
