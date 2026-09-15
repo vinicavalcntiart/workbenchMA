@@ -1,0 +1,49 @@
+# Mestrado
+
+Pasta raiz de tudo que é do mestrado. Nada da campanha de vagas entra aqui, e nada do mestrado sai daqui.
+
+## Regra para os próximos chats
+
+Cada disciplina tem a sua própria subpasta, uma por disciplina, com nome em `kebab-case`, sem acento e sem espaço:
+
+```
+mestrado/
+├── README.md                       <- este arquivo
+├── narrativas-transmidiaticas/     <- disciplina 1
+├── outra-disciplina/               <- disciplina 2, e assim por diante
+└── dissertacao/                    <- quando chegar a hora
+```
+
+Se a disciplina que o Vini estiver estudando ainda não tem pasta, crie a pasta antes de qualquer outra coisa. Não jogue arquivo solto na raiz de `mestrado/`.
+
+## Estrutura dentro de cada disciplina
+
+Toda pasta de disciplina começa com um `README.md` contendo: nome da disciplina, professor, semestre, ementa resumida e forma de avaliação. A partir daí, use as subpastas conforme o material aparecer:
+
+```
+<disciplina>/
+├── README.md        <- ficha da disciplina (obrigatório)
+├── ementa/          <- plano de curso, cronograma, bibliografia oficial
+├── leituras/        <- fichamentos e resumos, um arquivo por texto
+├── aulas/           <- anotações de aula, uma por data (AAAA-MM-DD-tema.md)
+├── trabalhos/       <- rascunhos e versões dos trabalhos avaliativos
+└── referencias.md   <- bibliografia consolidada em ABNT
+```
+
+Só crie a subpasta quando for usar. Pasta vazia não entra no git.
+
+## Convenções
+
+- Idioma: português, salvo citação direta.
+- Fichamento de leitura: nome do arquivo é `sobrenome-ano-palavra-chave.md` (ex.: `jenkins-2009-cultura-da-convergencia.md`). Dentro, referência ABNT completa no topo, depois resumo, conceitos-chave, citações com página e um bloco final de "como isso conversa com a minha pesquisa".
+- Trabalhos: versionar com sufixo `v1`, `v2`, e manter só a última como `final`.
+- Commits: uma frase curta no imperativo, em português, prefixada com a disciplina. Ex.: `narrativas: fichamento de Scolari 2013`.
+- Se o Vini quiser cruzar a disciplina com a produção em 3D e animação dele, isso entra no README da disciplina, na seção "Ligação com a pesquisa".
+
+## Disciplinas
+
+| Pasta | Disciplina | Status |
+|---|---|---|
+| `narrativas-transmidiaticas/` | Narrativas Transmidiáticas | em curso |
+
+Atualize esta tabela quando criar uma disciplina nova.
