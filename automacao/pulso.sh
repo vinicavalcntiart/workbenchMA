@@ -33,7 +33,15 @@ while j<len(h):
         d-=1
         if d==0: break
     j+=1
-arr=json.loads(h[i:j+1])
+# TOLERANCIA A VIRGULA FINAL, e ela nasceu de um defeito medido em 15/09 as 18h41.
+# O array do painel terminava em `],\n]`. JavaScript aceita virgula sobrando; json.loads NAO.
+# Resultado: as secoes 2 e 4 deste pulso morriam num traceback, e o pulso e justamente a lista
+# de PORTAS onde cada rodada escolhe o que fazer. Quatro rodadas seguidas fecharam em "zero
+# porta de formulario" enquanto o painel guardava 4 portas 'alta' e 92 'baixa' de personagem
+# sem parede. Zero de leitor quebrado tem a MESMA cara de zero medido, e essa e a falha mais
+# cara da campanha. O gate do valida-dashboard.sh agora reprova a virgula; isto aqui e o cinto
+# de seguranca, para um pulso nunca mais ficar cego por pontuacao.
+arr=json.loads(re.sub(r',(\s*[\]}])', r'\1', h[i:j+1]))
 pend=[r for r in arr if len(r)>=7 and r[5] is False]
 mural=re.compile(r'captcha|datadome|recaptcha|hcaptcha|parede|muro|à mão|a mao|expirad|morta|esgotad|teto de|veto escrito',re.I)
 perso=re.compile(r'character|personagem|creature|criatura|modeler|modelagem|sculpt|groom',re.I)
@@ -71,7 +79,15 @@ while j<len(h):
         d-=1
         if d==0: break
     j+=1
-arr=json.loads(h[i:j+1])
+# TOLERANCIA A VIRGULA FINAL, e ela nasceu de um defeito medido em 15/09 as 18h41.
+# O array do painel terminava em `],\n]`. JavaScript aceita virgula sobrando; json.loads NAO.
+# Resultado: as secoes 2 e 4 deste pulso morriam num traceback, e o pulso e justamente a lista
+# de PORTAS onde cada rodada escolhe o que fazer. Quatro rodadas seguidas fecharam em "zero
+# porta de formulario" enquanto o painel guardava 4 portas 'alta' e 92 'baixa' de personagem
+# sem parede. Zero de leitor quebrado tem a MESMA cara de zero medido, e essa e a falha mais
+# cara da campanha. O gate do valida-dashboard.sh agora reprova a virgula; isto aqui e o cinto
+# de seguranca, para um pulso nunca mais ficar cego por pontuacao.
+arr=json.loads(re.sub(r',(\s*[\]}])', r'\1', h[i:j+1]))
 alta=[r for r in arr if len(r)>=7 and r[5] is False and r[6]=='alta']
 def data(r):
     m=re.findall(r'(\d{2})/(\d{2})', r[4])

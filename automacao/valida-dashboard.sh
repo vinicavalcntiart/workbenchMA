@@ -139,6 +139,56 @@ if [ -n "$INFLADAS" ]; then
   exit 1
 fi
 
+# PORTA DO PAINEL LEGIVEL POR MAQUINA, instalada em 15/09 depois de um apagao silencioso.
+# A validacao abaixo roda o JavaScript contra um DOM falso, e por isso NAO ENXERGA este defeito:
+# JavaScript aceita virgula sobrando antes do `]`, entao a pagina abre perfeita no navegador.
+# Quem quebra e o outro lado, o que ninguem olha: TODO leitor em python do painel (pulso.sh,
+# gera-fila-formularios.py, as sondas das rodadas) morre num traceback de json.loads.
+# Medido em 15/09 as 18h41: PORTAIS e STUDIOS terminavam em `],\n]`, as secoes 2 e 4 do pulso
+# estavam mortas, e quatro rodadas seguidas fecharam em "zero porta de formulario" enquanto o
+# painel guardava 4 portas 'alta' e 92 'baixa' de personagem sem parede nenhuma.
+# Zero de leitor quebrado e indistinguivel de zero medido. Por isso vira porta, e nao aviso.
+JSONRUIM=$(cd "$DIRR" && python3 - <<'PYJSON'
+import json
+h = open('docs/index.html', encoding='utf-8').read()
+def fatia(nome):
+    k = h.find('const ' + nome)
+    if k < 0:
+        return None
+    i = h.index('[', k); d = 0; j = i
+    while j < len(h):
+        c = h[j]
+        if c == '"':
+            j += 1
+            while j < len(h) and h[j] != '"':
+                j += 2 if h[j] == '\\' else 1
+        elif c == '[':
+            d += 1
+        elif c == ']':
+            d -= 1
+            if d == 0:
+                break
+        j += 1
+    return h[i:j + 1]
+for nome in ('PORTAIS', 'STUDIOS', 'PESSOAS', 'ENVIOS'):
+    s = fatia(nome)
+    if s is None:
+        continue
+    try:
+        json.loads(s)
+    except Exception as e:
+        print('  %s: %s' % (nome, str(e)[:80]))
+PYJSON
+)
+if [ -n "$JSONRUIM" ]; then
+  echo "FALHA DE PAINEL: um array de dados nao e JSON valido, entao os leitores em python estao cegos."
+  echo "$JSONRUIM"
+  echo
+  echo "Causa quase sempre a mesma: VIRGULA SOBRANDO na ultima linha, antes do ] que fecha."
+  echo "O navegador aceita e a pagina abre igual, por isso o defeito passa despercebido."
+  exit 1
+fi
+
 python3 - "$DIR/../docs/index.html" > "$TMP/app.js" <<'PY'
 import re, sys
 s = open(sys.argv[1], encoding='utf-8').read()

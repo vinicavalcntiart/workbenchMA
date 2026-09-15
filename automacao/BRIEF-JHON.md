@@ -926,3 +926,84 @@ Compagnie de VFX de Paris; **`circus`** é robótica de cozinha em Munique; **`s
 de RH e hipoteca em Coral Gables; **`squeeze`** no Teamtailor é uma rede norueguesa de massagem,
 não a Squeeze Studio de animação do Quebec; e **`groundcontrol`** é engenharia civil britânica.
 Somam-se aos já conhecidos `upp`, `cat` e `federation`.
+
+---
+
+## 15/09 — O ZERO QUE NÃO ERA ZERO: O PAINEL ESTAVA ILEGÍVEL POR MÁQUINA
+
+**Leia esta seção antes de escrever "zero" em qualquer rodada.** Ela não é sobre um ATS. É sobre
+o instrumento com que a campanha mede, e por isso vale para todas as rodadas de todos os agentes.
+
+### O defeito
+
+Os arrays `PORTAIS` e `STUDIOS` do `docs/index.html` terminavam com **vírgula sobrando** antes do
+`]` que fecha:
+
+```
+  ["Warner Bros. Pictures Animation", ... ,true,"media"],
+]
+```
+
+JavaScript aceita isso sem reclamar. A página abria perfeita no navegador, e o
+`automacao/valida-dashboard.sh` dava **OK** — porque ele valida **rodando o JavaScript** contra um
+DOM falso, e o JavaScript nunca viu problema nenhum. O defeito só existia do outro lado, o que
+ninguém olhava: **`json.loads` morre**, e com ele **todo leitor em python do painel**.
+
+### O que isso custou
+
+As seções **2 (PORTAS PENDENTES)** e **4 (REVALIDAÇÃO DEVIDA)** do `pulso.sh` morriam num
+traceback. O `pulso.sh` é exatamente o lugar onde cada rodada decide o que fazer. Rodada atrás de
+rodada abriu o pulso, viu o traceback rolar, desceu para a escada de recurso e fechou em "zero
+porta de formulário" — **enquanto o painel guardava 478 portas pendentes**, 46 delas de prioridade
+alta e 92 de personagem sem parede registrada.
+
+**Ao reler essas portas uma a uma, a conclusão honesta é que quase todas já estavam decididas**
+(veto escrito, duplicata, disciplina errada, quadro vazio). Ou seja: o conserto **não** revelou um
+lote de candidaturas perdidas. Mas isso foi **sorte**, e não desculpa: durante o tempo em que o
+pulso esteve cego, nenhuma rodada tinha como saber disso.
+
+### A regra que fica
+
+> **Zero de leitor quebrado tem exatamente a mesma cara de zero medido.** Essa é a falha mais cara
+> que existe nesta campanha, porque ela não parece falha: parece trabalho feito.
+
+Um **traceback no meio de uma saída** não é ruído para rolar a tela. É a ferramenta dizendo que
+aquela seção **não mediu nada**. Trate igual ao HTTP 303 do Workday em manutenção: **NÃO É ZERO, É
+AUSÊNCIA DE MEDIÇÃO.**
+
+### O que foi instalado para não repetir
+
+1. **`valida-dashboard.sh` ganhou porta**: cada array de dados (`PORTAIS`, `STUDIOS`, `PESSOAS`,
+   `ENVIOS`) é extraído e passado por `json.loads`; se algum não for JSON válido, o commit é
+   reprovado com a causa nomeada. **A porta foi testada nos dois sentidos**: acusa os dois arrays
+   no arquivo antigo e fica calada no consertado. Porta que nunca disparou não é porta, é enfeite.
+2. **`pulso.sh` ganhou leitor tolerante** a vírgula sobrando, como cinto de segurança.
+3. Rode `sh automacao/valida-dashboard.sh` **antes do commit e de novo depois da última edição**.
+   Isso já era regra; agora ela também protege a legibilidade por máquina.
+
+---
+
+## 15/09 — WORKABLE: A CAUSA DO 429 FOI NOMEADA, E A LANE ESTÁ FECHADA
+
+O estrangulamento do Workable era conhecido só por `curl`, o que deixava viva a hipótese de ser
+defeito do **cliente** (sem TLS de Chrome, sem cookie, sem `sec-ch-ua`). Foi medido em **navegador
+de verdade** (`automacao/sonda-workable.js`, que roda com `cp automacao/sonda-workable.js /home/user/apply/ && cd /home/user/apply && sh hb_run.sh sonda-workable.js`), três locatários, as duas vias na mesma sessão: a
+página pública e a API chamada **de dentro** da página, já com o cookie da navegação.
+
+**Seis medições, seis vezes `429`, e o corpo diz `error code: 1015`** — o limitador de taxa da
+**Cloudflare por endereço de IP**. Navegador real leva exatamente o mesmo 429 que o `curl`.
+
+> **Não é captcha, não é fingerprint, não é cabeçalho.** Enquanto o IP for este, a lane Workable
+> está fechada para a automação, e as portas dela (Moonbug, Lighthouse Games, One Of Us,
+> KingsIsle) são **item de mão do Vini**. **Não vale re-testar com navegador: já foi testado.**
+
+---
+
+## 15/09 — DUAS DÍVIDAS DE "NÃO CONFERIDO" FECHADAS COM ZERO MEDIDO
+
+- **PIXAR** (`pixar.wd501` / `Pixar_External_Career_Site`): em 12/09 ficou NÃO CONFERIDA com 500 e
+  502 em nove consultas. Hoje respondeu **200**, 3 de 3 vagas lidas, **zero da disciplina**. Lembre
+  que a Pixar é casa da **regra 14** e tem locatário **próprio**: a `ronda-disney.sh` roda em
+  `disney.wd5` e **não a cobre**.
+- **SONY PICTURES ENTERTAINMENT** (`spe.wd1`): quadro paginado por inteiro, **67 de 67**, zero da
+  disciplina. Fecha a ressalva escrita em 09/09.
