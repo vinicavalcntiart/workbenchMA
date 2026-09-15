@@ -2627,3 +2627,54 @@ dias atrás.
   nem de pipeline 3D; (3) o **cargo vem do diretório**, não do site da casa, e o site **não nomeia
   ninguém**, então se o CEO tiver mudado eu não teria como saber; (4) **se o maestro precisar
   cortar uma carta desta rodada, corte esta.**
+
+### O QUE MORREU NESTA RODADA, com a medição, para ninguém repetir
+
+| Alvo | O que foi medido hoje | Veredito |
+|---|---|---|
+| **Tulipop Studios (Islândia), Helga Árnadóttir, `helga@tulipop.com`** | Endereço **publicado** no diretório nórdico, **MX vivo** (Google Workspace), casa **nova**, e a dona é cofundadora. **Mas a página de produções da própria casa escreve a técnica:** *"Tulipop Tales, 52 x 7' **2D animated** series ... produced by Tulipop Studios. The production team comprises a strong line-up of Icelandic talent **in partnership with two strong animation studios, The Animation Band in Italy and Amuse Animation in Spain**"*, e *"Tulipop: Magical Seasons is a series of 30 minute high-quality **2D animated** films"* | **FORA DA TÉCNICA.** 2D e ainda por cima animado fora de casa. Não virou ficha, e **não deve ser reaberta** |
+| **Fridthjof Animation (Dinamarca), Ronnie Fridthjof, `ronnie@fridthjof.com`** | Endereço publicado, MX vivo (MailChannels), cargo publicado pelo perfil (*"It is run by the experienced and Cannes Film festival winning film producer Ronnie Fridthjof"*). **O que derrubou:** `fridthjof.com` é bundle de JavaScript e serve só *"This page requires JavaScript to display"*, então **não há frase do site**; e o longa de 2025 (*Lotte & Totte: Min første ven*) aparece **produzido pela B-Water Animation Studios**, ou seja **a animação é feita fora** | **FILA, não ficha.** Sem técnica confirmada e sem assento de arte em casa |
+| **Expanse (Oslo), Jonas Martin Larsen, Head of CG, `jonas@expanse.no`** | Era **a melhor pessoa da rodada**: cargo e endereço publicados na seção `People` do site, casa com *"3d animated featurefilm Tix – The lost childhood (in production, 2027)"* e *"around 500 shots with animated hero characters"* | **JÁ FOI.** `enviados.csv` e o painel mostram carta enviada em **11/09** para esse mesmo endereço. O dedupe salvou a rodada de repetir |
+| **Gimpville (Oslo), Torgeir Sanders, `oslo@gimpville.no`** | O site publica **só `jobs@gimpville.no`**; o diretório dá o nome e a **caixa `oslo@`** | **JÁ FOI.** Carta em **28/08** e follow-up em **07/09** nessa caixa. E não há endereço de pessoa publicado para abrir uma segunda porta |
+| **`a-film.dk`** | Procurei a A. Film dinamarquesa de animação. O domínio é de **um produtor de vídeo corporativo de uma pessoa só** (*"Jeg tilbyder ... reklamefilm, produktpræsentationer, brand storytelling"*), com `anders@a-film.dk` | **FALSO AMIGO**, junto de `chopchop`, `mpc.wd1`, `icon.wd3`, `remedy`, `rain`, `triumph`, `playground`, `upp`, `cat` e `federation` |
+| **Jogos nórdicos: krillbite, sarepta, megapop, dirtybit, ravnstudio, henchmanandgoon, ghostship, triband, kongorange, playdead, sixthvowel** | Sondadas raiz + `/contact` + `/about` + `/team` + `/kontakt` + `/om-oss` + `/people` + `/studio` + `/crew` | **ZERO endereço de pessoa.** Só caixa (`business@`, `contact@`, `mail@`, `support@`). E `sixthvowel.com` devolve `medicalcenter@fortknoxbg.com`, ou seja **domínio parqueado ou sequestrado**, não é o estúdio |
+| **VFX britânico: axisstudiosgroup, milk-vfx, unionvfx, jellyfishpictures, luxaeterna** | Mesmas oito rotas | **ZERO endereço de pessoa.** O único achado é `recruit@unionvfx.com`, que é caixa |
+| **VFX nórdico e holandês: ghost.dk, rvx.is, chimneygroup, baconx, captainpanda, wearebind, motekentertainment, suncreature, jafilm** | Mesmas rotas | **Nada legível por `curl`.** `fido.se` devolve `info@goodbyekansas.com`, ou seja **a Fido é Goodbye Kansas hoje**, casa que já escreveu para o Vini |
+| **`ravnstudio.com` e `fakegraphics.fi`** | O proxy de saída recusou: `connect_rejected` (9x) e `ws_closed_mid_exchange` (7x) | **NÃO CONFERIDO**, e isto **não é zero**. Ficam para outra rodada |
+| **Holanda: `filmcommission.nl/database/animation-studios/animation-studio/`** | Remedido hoje: **HTTP 500**, igual a 15/09 03h40 | **Continua quebrado do lado deles.** A parede holandesa segue de pé e **esta rodada não abriu a Holanda** |
+
+**A Storm Studios foi a única casa das varreduras de domínio que publicou pessoa, e ela já era
+conhecida.** A lição de 10/09 se confirma pela terceira vez: **em site Wix e afins, quem publica
+endereço é a RAIZ, não `/contact`** — foi por isso que a raiz da Storm devolveu cinco pares de
+nome, cargo e endereço enquanto onze casas de jogos e cinco de VFX devolveram caixa.
+
+### A FILA NÓRDICA, agora com o diretório inteiro lido e com o dedupe já feito
+
+Extraí **os 48 endereços** que `https://nordicanimation.com/studios-producers/` publica e cruzei
+os domínios com o repositório. O que sobra com **endereço publicado, sem ficha e sem carta**,
+para a próxima rodada não recomeçar do zero:
+
+- **Com sinal de 3D ou CG, que é onde vale gastar primeiro:** **Tordenfilm** (NO, Eric Vogel,
+  `eric@tordenfilm.no` — catálogo com *The Absence of Eddy Table* e *Two Buddies and a Badger*;
+  **o site não publica email nem nomeia ninguém**, e `/about` só diz *"We produce and co-produce
+  premium quality feature films, drama series and animation"*, então o cargo dele **não está
+  publicado**); **Krystallplaneten** (NO, Merete Korsberg, `merete@krystallplaneten.no` — o perfil
+  diz **"Working across 2D animation, stop motion and 3D"**, mas o link do site no diretório está
+  quebrado, escrito `http://Krystallplaneten/`); **Plastilin Media OY** (FI, Kirill Razumov —
+  *Kid-e-Cats*, *Sonya from Toastville*, mas o endereço publicado é **`@yahoo.com`**).
+- **Sem prova de 3D, e por isso abaixo:** Nørlum (DK, Claus Toksvig Kjaer, caixa `contact@` — e
+  atenção, **`norlum`/`noerlum` já aparece no repositório**, inclusive na lista de rascunhos
+  corrigidos de 11/09); Skjaldborn (DK, caixa); Ouros (DK, Rikke Planeta, `hello@` — o site
+  publica os fundadores mas a casa é de motion e explainer); Compass Films (IS, Heather Millard —
+  documentário); Kyka (FO/DK), Made By Us (DK), Sparre Production (DK, Irene Sparre — MX Google
+  vivo, conferido hoje), LØV Film, Bivrost, Klipp & Lim (**2D e bonecos, declarado**), Rainy Day,
+  Ulvenfilm (**2D declarado**), Trollfilm (**stop motion declarado**), Mikrofilm (caixa), UpNorth
+  (endereço `@gmail.com`), Pink Zebra (caixa `info@`), Sun In Eye (**2D declarado**), Animagency,
+  Fiilin Good Films, Pyjama Films (**2D declarado**), Allimator, BCD Film (**2D declarado**),
+  Dockhus (**stop motion**), LEE Film (**2D**), Soja, Apparat Filmproduktion (SE, casa diferente
+  da Apparat Studio da Noruega — **não confundir**).
+- **Já gastas, para não reabrir:** Sagatoon, Pop Up Production, Den Siste Skilling, Maipo,
+  Gigglebug, Wil Film (fichas de 15/09 03h40), Qvisten (**teto de duas atingido**), Anima Vitae,
+  Brikk, Filmic Art, The Chapel Films, Snowcloud (já na campanha), Fenomen (**não é animação**,
+  medido em 15/09), Expanse e Gimpville (**carta já enviada**), Storm e Apparat (fichas de hoje,
+  segunda pessoa).
