@@ -2524,3 +2524,42 @@ dias atrás.
   estilizado e a casa mostra fotorrealismo; (3) o cargo é **Head of VFX**, ou seja o dono do
   departamento inteiro e não especificamente de assets — quem seria o alvo perfeito é o Head of
   CG, e esse já foi.
+
+### Haukur Sigurjónsson — **lidera a produção e o braço sueco da casa (papel publicado; título formal não)** — GunHil, Reykjavík, Islândia — **casa nova**
+
+- **Email:** haukur@gunhil.com · confiança **alta** · **PUBLICADO** · fonte:
+  https://nordicanimation.com/studios-producers/ , aberta nesta rodada, no bloco da GunHil:
+  **`GunHil, Iceland | Haukur Sigurjónsson | haukur@gunhil.com | http://www.gunhil.com/`**.
+  **NADA foi montado.** **MX conferido nesta rodada:** `gunhil-com.mail.protection.outlook.com`
+  (Microsoft 365, vivo). Telefone existe na fonte e **não é registrado aqui**, por ser dado
+  pessoal.
+- **Por que ELE e não outro da casa:** a página `/about` do próprio estúdio, aberta hoje, nomeia
+  três pessoas e reparte os papéis: **"GunHil is co-founded by Gunnar Karlsson and Hilmar
+  Sigurdsson"**, e **"After formation, GunHil was soon joined by Haukur Sigurjonsson to lead
+  production and operate our Swedish wing"**. A cadeira criativa é o **Gunnar Karlsson**, que
+  *"visually created and co-directed"* o primeiro longa deles — **e ele não tem endereço publicado
+  em lugar nenhum que eu tenha aberto**. O Haukur é o único dos três com endereço literal
+  publicado, e quem lidera produção é quem sabe onde falta artista.
+- **Gancho, com a frase do próprio estúdio entre aspas, e ela prova a técnica:** o `/about` diz
+  que a dupla fundadora criou **"'The Lost Little Caterpillar' (2002) which was the first ever CGI
+  Animated film made in Iceland"**, e sobre o longa: **"In 2018, GunHil released the animated
+  feature film 'Ploey – You Never Fly Alone' to domestic success as well as being sold for
+  theatrical distribution in over 70 countries"**, que **"holds the record for most attendees and
+  biggest box-office revenue in the world of any Icelandic Film"**. O diretório acrescenta o que
+  está aberto agora: **"GunHil has a number of properties at various stages of completion, from
+  writing, through development to production"**, com **"Red Waters (feature, in development)"**.
+- **Fora dos EUA?** Sim — Islândia (EEE). **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `"gunhil.com"` e zero para
+  `tulipop OR gunhil OR tordenfilm OR sleetfleet OR fridthjof` e para `Sigurjonsson`. No
+  repositório: **zero ocorrências de `gunhil`** em `pessoas.csv`, `enviados.csv`,
+  `processados.csv`, `alvos.csv` e `docs/index.html`. **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta, e são quatro:** (1) **o cargo formal dele não é publicado** — o que existe é
+  a frase *"to lead production and operate our Swedish wing"*, então a carta pode dizer que ele
+  lidera produção, mas **não pode dar a ele um título** que a casa não escreveu; (2) ele opera o
+  **braço sueco** e o telefone publicado é **+46**, ou seja pode nem estar em Reykjavík — a casa é
+  islandesa, a pessoa talvez não; (3) o site **só publica a caixa `gunhil@gunhil.com`**, e o
+  endereço de pessoa vem do diretório, que é fonte de terceiro (embora o texto do perfil seja
+  escrito pela própria casa); (4) o único longa **entregue** é de **2018** e o novo está **em
+  desenvolvimento**, então **não há prova de pipeline de personagem aberto hoje** — e em 2017 a
+  casa foi vendida à Sagafilm e recomprada em 2023, o que é sinal de estrutura pequena e
+  intermitente.
