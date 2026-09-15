@@ -2333,3 +2333,107 @@ rodada e transformado em ficha o que estava parado há treze dias.
   com pouquíssimo elenco humano — é o encaixe **mais fraco de personagem** entre as sete fichas, e
   o estilizado do Vini não é o que a casa mostra; (4) *Deliver Us Home* está **anunciado** no site
   sem data, então **não é prova de produção viva hoje**.
+
+### A PAREDE HOLANDESA, medida nesta rodada — **a porta está aberta e a prateleira está vazia**
+
+O pedido desta rodada dizia que a Holanda tem **zero veto escrito de visto** e **zero vaga de
+personagem**, e que por isso a via é carta para pessoa. **Abri a Holanda e ela entregou UMA
+ficha, e sem email.** O motivo não é falta de varredura. É que **estúdio holandês quase não
+publica endereço de pessoa**, e os poucos que publicam não são de personagem. Fica medido para
+ninguém refazer:
+
+**O que varri, por tubo próprio (raiz + `/contact` + `/team` + `/about` + `/over-ons` + `/press`
++ `/jobs` + `/careers`, e em parte deles também `/presskit`, `/crew`, `/studio`, `/impressum`,
+`/colofon`):**
+
+- **Os 51 estúdios holandeses** do `automacao/fila-gamedevmap-ch-fi-nl.csv` (a lista vai só de
+  *Abbey Games* a *KeokeN*, porque o arquivo está **truncado em K** — anotado abaixo), **mais 15
+  postos à mão** para cobrir o L–Z: Nixxes, Paladin, Ronimo, Triumph, Two Tribes, Total Mayhem,
+  Triangle, Grendel, W!Games, IJsfontein, Gamious, KeokeN, Force Field, Vanguard e Sassybot.
+- **Cerca de 40 casas de animação e VFX**, colhidas do índice `https://animation31.com/bedrijven/`
+  (de onde extraí **199 domínios** do ecossistema holandês) e de busca: PostPanic, Pedri, Anikey,
+  KLOMP!, il Luster, Job Joris & Marieke, Studio Smack, Colorbleed, Planet X, Frame Order,
+  Ambassadors, GRID VFX, Beeldenfabriek, Foxmountain, The Drawing Room, Tiepes, Lukkien, Jagthund,
+  Katananga, Studio Mad, Skelter, Bigfish, Dotolina, 3DHype, Alien Trick, 5AM, Studio Noord,
+  Mr Beam, Spotted Bird, Ka-Ching Cartoons, Bewyrd, Manifest Animation e mais.
+
+**O que voltou, e é pouco:**
+
+| Achado | Veredito |
+|---|---|
+| `stein@paladinstudios.com` — **Stein Damen, Business Development** (https://www.paladinstudios.com/about) | **Publicado e vivo, mas é a cadeira errada.** Biz dev está ainda mais longe de personagem do que produção. Fica no banco, não vira carta. |
+| `kela@appelmoes.games` | **Nome completo e cargo NÃO são publicados** — o site só traz o apelido "Kela" e o X `@KelaMakesGames`. Sem nome e sem cargo, não é ficha. |
+| `anne@` / `jakob@` / `michiko@` / `Caya@beeldenfabriek.nl` — nomes e cargos publicados | **Arquitetura.** A própria página vende **"2D & 3D Floor Plans"** e "Coordinator Interior". Fora de escopo. |
+| `bram@` e `twan@foxmountain.nl` — Bram e Twan van de Vossenberg | **Animação técnica e médica.** O menu deles é "Explanimation, Medische animatie, Technische animatie". Não é personagem. |
+| `jiek@drawingroom.nl` — Jiek Weishut, Creative Agent | **Agência de design de marca e produto**, não animação. Fora. |
+| `cathleen@` e `chris@tiepes.nl` | **Cargos não publicados**, casa de animação/foto pequena, sem sinal de 3D. |
+| KLOMP!, Anikey | **Declaram 2D** com todas as letras: Anikey "specialise in traditional 2D digital animation". Fora da técnica. |
+| Pedri Animation | `pedri.nl` responde **HTTP 200 com 604 bytes** de página de domínio parado. **Não há site.** |
+| PostPanic | `www.postpanic.nl` **não resolve** (ENOTFOUND) e `postpanic.nl` volta 502 no túnel. **Não abri.** |
+| Submarine | **FORA DOS LIMITES: a casa RECUSOU.** Em 27/08 o `studiotalent@submarine.nl` respondeu *"At this time, our open roles require candidates to be based within the Netherlands or Belgium."* Houve troca e o **Milo Cremer Eindhoven, Head of Animation Recruitment**, fechou com *"Happy to stay in touch!"*. **Não reabrir.** |
+| il Luster, Studio Smack, Colorbleed, Planet X, Frame Order, Ambassadors, GRID VFX, Nixxes, Abbey, Grendel, Total Mayhem e o resto | **Só caixa** (`info@`, `office@`, `hello@`). O `/contact` da Ambassadors chega a nomear **Maurice (New Business)** e **Maryana (Marketing & PR)**, mas **só o primeiro nome e sem endereço** — não dá ficha. |
+
+**Os diretórios holandeses, com veredito por tubo:**
+
+| Fonte | Resultado | Veredito |
+|---|---|---|
+| `https://filmcommission.nl/database/animation-studios/animation-studio/` | **HTTP 500**, e `/database/` também **500** | **A base de estúdios de animação da Netherlands Film Commission está QUEBRADA do lado deles.** É o que seria o equivalente holandês do `animationireland.com`. Vale **uma** tentativa futura. |
+| `https://dutchgameindustry.directory/` | **HTTP 200**, vivo e completo | **Não serve para esta frente:** abri a ficha de empresa `/company/iceberg` inteira e ela traz vagas, jogos, fundação e localização e **nenhum contato de pessoa**. |
+| `https://dutchgamesassociation.nl/` | **HTTP 200** | Lista de membros vive atrás de `/dga-members-area/`. **Sem contato público.** |
+| `https://animation31.com/bedrijven/` | **HTTP 200** | **Serve, e foi o que usei** — não publica contato, mas é o índice de domínios do setor. |
+| `animationinthenetherlands.nl` | **NXDOMAIN**, medido em 14/09 | **Não existe.** Não retentei, e a rodada de 14/09 já mandou parar. |
+
+**O que isso quer dizer para a próxima rodada holandesa:** a via de **email publicado de pessoa**
+está fechada na Holanda por enquanto. O que sobra é (a) `sem-email` com nome e cargo, como a do
+Koen Deetman; (b) esperar a base da Film Commission voltar; (c) o ATS, que é a via que o
+`processados.csv` de 05/09 já tinha recomendado — **e que continua valendo, com a correção da
+ficha da Gigglebug: "o site da casa não publica" não é o mesmo que "não existe endereço
+publicado".**
+
+### E a SUÉCIA saiu ZERO, e o motivo também é medido
+
+Das quatro casas nórdicas, a Suécia foi a única sem ficha. Não foi por falta de tentativa:
+
+- **Goodbye Kansas** (Estocolmo), **Important Looking Pirates** e **Sharkmob** (Malmö) — as três
+  casas suecas com trabalho de criatura e personagem de verdade — **não publicam endereço de
+  pessoa nenhum**. Varri raiz, `/team`, `/about`, `/contact`, `/studio`, `/people`, `/crew` e
+  mais: a Goodbye Kansas devolve **`info@goodbyekansas.com` e `info@goodbyekansas.co.uk` em TODAS
+  as rotas** (site de página única, toda rota devolve o mesmo HTML), a ILP devolve `info@` e
+  `vfx@ilpvfx.com`, e a Sharkmob **não devolve email nenhum**. As três só falam por Teamtailor, e
+  **as três já escreveram para o Vini** (`daniel.axelsson@goodbyekansas`,
+  `eleonora.matrella@ilpvfx`, `josefina.havik@sharkmob`, todos recibos automáticos de Connect).
+- No diretório nórdico, o que a Suécia oferece com nome e endereço é **2D, stop motion ou
+  comissionado**: Dockhus (stop motion), LEE Film (2D), BCD Film (2D), Soja (comissionado),
+  Allimator (uma pessoa só, e o endereço é `info@`). **Filmic Art**, **Brikk**, **The Chapel
+  Films** e **Snowcloud** já estão na campanha.
+- **Qvisten Animation está no TETO**: `hedda.toftner@qvisten.no` levou carta em **26/08** com
+  follow-up em 02/09, e `rasmus@qvisten.no` levou carta em **03/09**. **Duas pessoas, teto da
+  campanha atingido, casa encerrada** — e isso só apareceu porque o dedupe foi feito na caixa; o
+  `pessoas.csv` só registrava o Rasmus.
+
+### A FILA QUE SOBROU, medida e não usada
+
+Do `https://nordicanimation.com/studios-producers/`, com **nome e endereço publicados**, sem
+ficha e sem carta, para a próxima rodada não recomeçar do zero — **todos com MX a conferir antes
+de virar ficha**: **Fridthjof Animation** (DK, Ronnie Fridthjof, `ronnie@fridthjof.com` — longas e
+séries infantis; o site é **JavaScript puro** e só serve "This page requires JavaScript", então
+não confirmei técnica); **Made By Us** (DK, Katrin Quist-Møller, `kqm@madebyus.dk`); **Sparre
+Production** (DK, Irene Sparre, `irene@sparreproduction.dk`); **Fenomen Studios** (NO, Eirik
+Smidesang Slåen, `ess@fenomen.no` — **atenção, e isto derruba a linha de 02/09 do
+`processados.csv` que a deixou "pendente": abri `fenomen.no` e a casa é de TV, documentário,
+podcast, reclame e evento, NÃO é animação**); **Klipp & Lim** (NO, Jøran Wærdahl); **Pink Zebra**
+(NO, Ruth Dyson); **LØV Film** (NO, Lillian Løvseth); **Krystallplaneten** (NO, Merete Korsberg);
+**Bivrost Film** (NO, Trond Jacobsen); **Kool Produktion** (NO, Frank Mosvold, endereço em
+`online.no`, pessoal); **Rainy Day Productions** (NO, dois nomes e caixa `post@`); **Pyjama Films**
+(FI, Terhi Väänänen); **Animagency** (FI, Tero Suomela); **Fiilin Good Films** (FI, Juha Fiilin);
+**Sun In Eye** (FI, Metsämarja Aittokoski, **2D declarado**); **sleetfleet** (FI, Teemu Leppälä,
+**CEO — é o único do diretório inteiro que publica o cargo junto do nome**). **Apparat Studio**
+(NO) tem **Eirik Heldal** publicado e é a **segunda e última** possível da casa, já que Kristian
+Berg é a primeira — **mas o cargo dele não está em lugar nenhum**: `apparat.no` responde 200 e o
+conteúdo é montado por JavaScript, `/about` dá 404, e o nome "Heldal" **não aparece** no HTML
+servido.
+
+**Também fica anotado um defeito de arquivo:** `automacao/fila-gamedevmap-ch-fi-nl.csv` tem **51
+linhas de Holanda e elas param em "KeokeN Interactive"**, ou seja a colheita do gamedevmap foi
+**truncada na letra K** e nunca cobriu L–Z. Quem for refazer a Holanda pelo gamedevmap precisa
+saber disso — eu supri o buraco à mão com 15 casas, mas não é a lista completa.
