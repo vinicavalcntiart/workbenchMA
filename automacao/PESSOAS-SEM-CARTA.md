@@ -3250,3 +3250,45 @@ montado.**
   fixo da carta faz sentido; (4) o texto diz que o filho de 4 anos está desenhando nas paredes —
   **esse filho hoje tem 17**, o que mede sozinho a idade da fonte; (5) ele é um nome grande e
   público, com agente e caixa cheia; a chance de resposta é baixa e a carta precisa ser curta.
+
+---
+
+### Dan Harder — dono da casa ("Sweatbox Animation is run by Dan Harder") — Sweatbox Animation ApS, Frederiksberg, Dinamarca
+- **Email:** `info@sweatbox.dk` · confiança **alta (entrega)** — **mas é CAIXA, não endereço de
+  pessoa** · fonte: **https://www.sweatbox.dk/about/**, aberta e lida por extenso nesta rodada;
+  o bloco `Contact` no fim da página publica *"Sweatbox Animation ApS / Godthåbsvej 26B / 2000
+  Frederiksberg / Email: info@sweatbox.dk / CVR: 21783609"*, e o mesmo documento abre com
+  *"Sweatbox Animation is run by **Dan Harder**"*. **NADA FOI MONTADO** — e em particular **não
+  montei** `dan@sweatbox.dk`, porque não existe um único endereço literal daquele domínio além da
+  caixa. O rodapé diz **"2026"**, então o site está sendo mantido — o oposto do caso Mexopolis.
+- **Por que ELE e não outra pessoa da casa:** o `/about` nomeia **treze** colaboradores (Thomas
+  Dreyer, Anders Hald, Niels Bach, Tine Karrebæk, Ilan Hatukah, Doron Meir, Karsten Lund, Uffe
+  Danielsen, Sara Koppel, Søren Itenov, Jeppe Kaas, Lasse Elkjær, Steffen Addington) e diz
+  explicitamente que todos estão ligados à casa *"on a project-by-project basis"* — são freelas,
+  não decisores. **A casa é o Dan Harder**, e a regra do `BRIEF-JOE` para casa de até 30 pessoas
+  aponta para o dono.
+- **Técnica CONFERIDA NO SITE:** o menu do site publica **`Character Design`** como uma das cinco
+  seções (`Projects / Storyboard / Character Design / Animation / Commercials`), e o `/about` diz
+  que entre os projetos próprios da casa está *"the **CGI feature Tivoli**"*, contrastado no mesmo
+  período com *"the classically animated short To Bee or Not to Bee"* — ou seja **a própria casa
+  separa o que é CGI do que é 2D**, e o longa é o CGI.
+- **Gancho, com a frase do próprio estúdio entre aspas, e o nome da casa é o gancho:** o `/about`
+  explica que *"the term Sweatbox comes from the room at the Disney studios where Walt used to
+  review the animators' work"*, e fecha com *"the pursuit of the highest possible quality has
+  always remained the priority, **regardless of style or medium**"*. Uma casa que se batizou com o
+  nome da sala de revisão da Disney e que diz que a qualidade importa mais que o meio é uma casa
+  que abre um portfólio. O terceiro gancho é operacional: a lista de colaboradores inclui
+  *"computer graphics artists"* contratados **por projeto** — é assim que o Vini entraria.
+- **Fora dos EUA?** Sim — Dinamarca, União Europeia. A frase de realocação vale, com a ressalva de
+  que trabalho por projeto pode ser remoto e talvez nem precise dela.
+- **Dedupe NA CAIXA:** `search_threads` por `"stormfilms" OR "Storm Films" OR "sweatbox" OR
+  "Dan Harder" OR "campfireani" OR "Campfire Aniworks"` devolveu **`{}`**, zero threads. No
+  repositório, `sweatbox` só aparece em `censo-wikidata.csv` e `alvos-joe-wikidata.csv` (listas).
+  **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta:** (1) **o endereço é uma CAIXA `info@`** — vale porque numa casa de uma
+  pessoa a caixa é a pessoa, mas é caixa; (2) **a casa é UMA PESSOA mais freelas** — não tem
+  pipeline 3D próprio nem assento fixo, e a porta realista aqui é freela, não vaga; (3) **o grosso
+  do catálogo é 2D clássico**: a casa nasceu em 1990 como *Dan Harder Animation* "providing
+  classical animation", e os serviços vendidos são storyboard, character design e animação, **não
+  modelagem nem groom**; (4) **o CGI Tivoli não tem data na página** e pode ser antigo — a casa
+  não publica ano em nenhum projeto próprio; (5) o site não tem página de vagas.
