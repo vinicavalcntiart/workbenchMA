@@ -299,6 +299,14 @@ function enviarRascunhos() {
       + "tentar de novo: ela diz o número exato e não envia nada.");
     return;
   }
+  // TRAVA DE DESTINATARIO REPETIDO, e ela nasceu de um defeito real achado em 15/09 as 03h45:
+  // havia DOIS rascunhos para igor@studiocan.nl, criados com dois minutos de diferenca e
+  // IDENTICOS byte a byte. Nasceram quando a ferramenta de escrita travou em pedido de
+  // aprovacao e a carta foi criada de novo. Sem esta trava o disparador mandaria as duas, e
+  // duas cartas iguais no mesmo minuto e exatamente a cara de robo que a campanha combate.
+  // A trava vale por EXECUCAO e nao apaga nada: o rascunho repetido fica onde esta, para
+  // alguem olhar e decidir. So o SEGUNDO nao sai.
+  const jaFoiPara = {};
   let n = 0;
   for (const d of rascunhos) {
     if (n >= MAX_POR_EXECUCAO) break;
@@ -310,6 +318,13 @@ function enviarRascunhos() {
     const m = d.getMessage();
     const para = m.getTo();
     if (!para) continue;
+    const chave = String(para).toLowerCase().trim();
+    if (jaFoiPara[chave]) {
+      Logger.log("PULADO, JA MANDEI PARA ESTE ENDERECO NESTA EXECUCAO: " + para
+        + ". Ha mais de um rascunho para ele; o repetido continua na caixa de rascunhos.");
+      continue;
+    }
+    jaFoiPara[chave] = true;
     if (SIMULAR) { Logger.log("enviaria para " + para); n++; continue; }
     // RASCUNHO JA PREPARADO NAO SE PREPARA DE NOVO, senao a assinatura entra DUAS VEZES no corpo.
     // Isso passou a importar em 06/09, quando o prepararRascunhos() nasceu: dali em diante existe
