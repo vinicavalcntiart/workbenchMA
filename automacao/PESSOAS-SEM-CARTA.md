@@ -2055,3 +2055,54 @@ diretório publica só a caixa `info@`); **Distillery Films** (Jonathan Clarke, 
 a caixa `info@`); **Boulder Media** (Paul O'Flanagan, Creative Director, endereço resolvido nesta
 rodada, **segunda e última** da casa); **Monster Entertainment** (Andrew Fitzpatrick, Chairman —
 mas é **distribuidora**, não estúdio).
+
+---
+
+## RODADA HOLANDA + NÓRDICOS, 15/09 03h40 UTC — sete fichas, e a Holanda saiu quase vazia
+
+**O alvo era a Holanda primeiro e os nórdicos em seguida.** O resultado inverteu a ordem: a
+Holanda entregou **uma** ficha e ela é `sem-email`; os nórdicos entregaram **seis**. Isso não é
+preguiça de busca, é uma parede que já estava medida no repositório e que eu remedi hoje — está
+escrita no bloco "A PAREDE HOLANDESA" no fim deste bloco de fichas.
+
+**A fonte que destravou os nórdicos** foi `https://nordicanimation.com/studios-producers/`, um
+diretório que publica, para cada casa, **nome da pessoa, telefone e email** — o mesmo formato do
+`animationireland.com` que rendeu a rodada irlandesa. **Ele NÃO é descoberta minha:** o
+`processados.csv` de 02/09 já registra *"fila do backlog reabastecida com a lista Nordic
+Animation: Sagatoon e Fenomen pendentes"*. O que é novo é ter aberto o diretório inteiro nesta
+rodada e transformado em ficha o que estava parado há treze dias.
+
+### Erik Wilstrup — **CEO** — Wil Film, Copenhague, Dinamarca
+
+- **Email:** erik@wilfilm.dk · confiança **alta** · **PUBLICADO** pela própria casa · fonte:
+  https://www.wilfilm.dk/team , aberta nesta rodada. O bloco "Know the team" traz cinco
+  `mailto:` emparelhados com nome e cargo. **NADA foi montado.** **MX conferido:**
+  `10 smtp.google.com` (Google Workspace).
+- **Por que ELE e não outro da casa:** a página publica cinco pessoas — **Erik Wilstrup (CEO)**,
+  Louise Barkholt (Producer), Anne Jørgensen (Business & Legal), Brith Dahl (CFO) e **Jimmi
+  Gravesen (Head of Technology)**. A cadeira criativa de verdade, **Peter Hausner (Supervising
+  Director)**, aparece na mesma lista **sem endereço nenhum**. Das cinco publicadas, produção,
+  jurídico e finanças estão mais longe de personagem do que o fundador que dá nome à casa, e em
+  casa desse porte o fundador responde ele mesmo. Por isso Erik.
+- **Gancho, com a frase do próprio estúdio entre aspas:** **"WIL FILM is a production company and
+  3d animation studio with almost 20 years of experience"** e, no mesmo texto, o catálogo que é
+  personagem estilizado puro: **"9 seasons of the outstanding TV series 'Ninjago: Masters of
+  Spinjitzu' with 102 episodes and several 'LEGO Star Wars' productions are under our umbrella"**
+  (https://www.wilfilm.dk/about). A página de equipe ainda descreve o pipeline: **"WIL FILM's CG
+  pipeline is based on Maya animation platform and our talented crew works with NUKE and After
+  Effects for image compositing and visual effects."**
+- **Fora dos EUA?** Sim — Dinamarca, União Europeia. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `wilfilm OR "Wil Film" OR Wilstrup`
+  **e ZERO** para o domínio `"wilfilm.dk"`. No repositório: zero em `pessoas.csv`,
+  `enviados.csv`, `processados.csv` e `alvos.csv`. **PRIMEIRA pessoa da casa, e casa inédita na
+  campanha.**
+- **Ressalva honesta:** (1) ele é **CEO, não a cadeira criativa** — o Supervising Director é o
+  Peter Hausner e é dele que a carta gostaria de falar, mas **não montei** `peter@wilfilm.dk` nem
+  `peter.hausner@wilfilm.dk`, porque **o domínio usa DOIS padrões ao mesmo tempo** (`erik@` curto
+  e `louise.barkholt@`/`anne.jorgensen@`/`brith.dahl@`/`jimmi.gravesen@` longos), e onde há dois
+  padrões não há padrão — seria exatamente o chute que quicou cinco vezes em 06/09; (2) *Ninjago*
+  terminou em 2022 e o site **não anuncia produção em curso**, então **não há prova de pipeline de
+  personagem aberto hoje**; (3) a página `/contact` só tem formulário, e `/team` **não está no menu
+  principal** (Home, About us, Our work, Contact) — cheguei nela pelo link "Know our team" do
+  `/about`, ou seja é página viva mas pouco exposta, e não sei há quanto tempo a lista não é
+  atualizada.
