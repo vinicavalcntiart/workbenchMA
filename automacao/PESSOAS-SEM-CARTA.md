@@ -3167,3 +3167,46 @@ montado.**
   Initiativbewerbung** — escrever ao Geschäftsführer contorna o funil que ela mesma pediu, e a
   carta precisa assumir isso em vez de fingir que não viu; (5) o MX de `seru-film.com` **não foi
   conferido nesta rodada**.
+
+---
+
+### Elmar Keweloh — representante legal da casa (o Impressum diz "Vertreten durch", sem cargo) — The Soulcage Department, Bremen, Alemanha
+- **Email:** `info@soulcage-department.de` · confiança **alta (entrega)** — **mas é CAIXA, não
+  endereço de pessoa** · fonte: **https://www.soulcage-department.de/3d-animationsstudio/**,
+  aberta e lida por extenso nesta rodada; é a página `ÜBER UNS` e traz, no mesmo documento, o
+  bloco de contato com `info@soulcage-department.de` e o Impressum com *"Vertreten durch: Elmar
+  Keweloh, Wilhelm Landt"*. **NADA FOI MONTADO** — e em particular **não montei** `e.keweloh@`
+  nem `elmar@`, porque **não existe um único endereço literal daquele domínio** além da caixa. MX
+  conferido nesta rodada por DNS: `5 smtpin.rzone.de` (Strato, vivo). Telefone existe na fonte e
+  **não é registrado aqui**. `/impressum/` e `/kontakt/` respondem **404** — o Impressum vive
+  dentro do `ÜBER UNS`, e quem procurar pela rota canônica vai achar que a casa não tem.
+- **Por que ELE e não outra pessoa da casa:** o site **não tem página de equipe** e não nomeia
+  mais ninguém além dos dois representantes legais. Dos dois, Elmar Keweloh é o primeiro listado;
+  **Wilhelm Landt fica como SEGUNDA e última** possível. Em casa deste tamanho o `BRIEF-JOE` manda
+  ir no fundador.
+- **Técnica CONFERIDA NO SITE, e esta é a melhor da rodada inteira:** o título da página é
+  *"3D Animationsstudio • Animationsfilme • Character Design"* e o texto abre com três palavras que
+  são praticamente o cargo do Vini — ***"Wir erschaffen Charakter."*** Segue:
+  *"Seit 2002 entwickeln wir als spezialisiertes **3D-Animationsstudio** hochwertige visuelle
+  Inhalte für die Werbebranche – mit Fokus auf **Charakteranimation**, visuelle Effekte und CGI"*
+  e *"Ob markante **3D-Charaktere**, Cinematics, realitätsnahe VFX-Integration in Realfilm oder
+  hochauflösende CGI-Stills – wir machen Ideen sichtbar"*. **Nenhuma outra casa desta rodada
+  escreveu "personagem" e "3D" juntos três vezes na mesma página.**
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Wir erschaffen Charakter"* é o gancho,
+  e o complemento é *"Unser Team verbindet technisches Know-how mit gestalterischer Leidenschaft"*.
+  A lista de clientes publicada na mesma página tem Coca-Cola, Ferrero, Bayer, Dr. Oetker, Meta e
+  Barclays — é publicidade de marca grande, onde mascote e personagem estilizado são o produto.
+- **Fora dos EUA?** Sim — Alemanha, União Europeia. A frase de realocação vale inteira.
+- **Dedupe NA CAIXA:** `search_threads` por `"…hydralab" OR "soulcage"` devolveu **`{}`**, zero
+  threads, e a busca por `"Keweloh"` também deu zero (os cinco resultados daquela consulta eram
+  falso positivo da palavra inglesa *harder*, conferidos um a um). No repositório, `soulcage` só
+  aparece em `censo-wikidata.csv` e `alvos-joe-wikidata.csv` (listas), e `Keweloh` dá **zero**.
+  **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta:** (1) **o endereço é uma CAIXA `info@`**, o oposto do que o Joe existe para
+  fazer — vale porque é o único que a casa publica, mas é caixa; (2) **o CARGO NÃO É PUBLICADO**:
+  o Impressum escreve apenas *"Vertreten durch"*, que é obrigação legal e não título, então **a
+  carta não pode chamá-lo de Geschäftsführer, de fundador nem de diretor de arte**; (3) a casa é
+  **publicidade**, não longa nem série — o ciclo é de comercial, o que costuma significar equipe
+  enxuta e freela, não assento sênior fixo; (4) **não existe página de vagas** em lugar nenhum do
+  site; (5) o `WORK` mostra o portfólio por cliente e **não credita função**, então não consigo
+  provar que existe alguém dedicado a modelagem de personagem lá dentro.
