@@ -3292,3 +3292,47 @@ montado.**
   classical animation", e os serviços vendidos são storyboard, character design e animação, **não
   modelagem nem groom**; (4) **o CGI Tivoli não tem data na página** e pode ser antigo — a casa
   não publica ano em nenhum projeto próprio; (5) o site não tem página de vagas.
+
+---
+
+### Fabian Berke — LookDev Supervisor — Red Parrot Studios, Colônia / Hamburgo / Stuttgart / Munique, Alemanha — **`sem-email`, e isso não é fracasso**
+- **Email:** **NÃO EXISTE ENDEREÇO DE PESSOA PUBLICADO.** A linha entra como `sem-email`
+  guardando **nome, cargo e estúdio**, como o briefing manda. A casa publica **uma única** caixa,
+  `info@redparrot-studios.com`, repetida **idêntica** nos quatro escritórios — o que é prova de
+  que **não há endereço por pessoa** a ser encontrado, e não apenas de que eu não achei.
+  **NADA FOI MONTADO** — não montei `f.berke@`, `fabian@` nem `berke@`, porque **não existe um
+  único endereço literal daquele domínio** que sirva de prova de padrão. MX conferido nesta rodada
+  por DNS: `5 smtpin.rzone.de` (Strato, vivo).
+- **Fonte, aberta nesta rodada:** **https://redparrot-studios.com/team/**, que publica nove
+  pessoas com nome e cargo: Mohammad Farokhmanesh (Geschäftsführer, Produzent, Regisseur), Pia
+  Wisgrill (VFX Producer/Projektmanagement), Maximilian Lippemeier (Produktionskoordination,
+  Editor, Stoffentwicklung), Nicole Fuentes (Projektkoordinatorin), Konstantin Filippov (System
+  Administrator, Technical Animator), Niclas Werres (Contentmanager, Compositing Artist),
+  **Fabian Berke (LookDev Supervisor)**, Carlos Cursaro (Lead Lighting und LookDev Artist) e
+  Franzi Roth (Projektmanagerin). Também aberta: **https://redparrot-studios.com/kontakt/**, que
+  confirma a caixa única.
+- **Por que ELE e não outra pessoa da casa:** dos nove, **seis são produção, coordenação ou TI**.
+  Sobram três de ofício, e o `BRIEF-JOE` manda ir no mais alto do ofício certo: Konstantin
+  Filippov é **Technical Animator**, que é rigging e está **fora da disciplina**; Carlos Cursaro é
+  **Lead** de lighting e lookdev; **Fabian Berke é o SUPERVISOR de LookDev**, ou seja o cargo mais
+  alto de superfície da casa — e superfície, textura e shading são metade do dia do Vini. **Não é
+  lead de ambiente**, então a regra de 10/09 está respeitada. Mohammad Farokhmanesh
+  (Geschäftsführer) fica como **SEGUNDA e última** possível.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Postproduction ist unsere Welt – von
+  der Konzeption bis zur technischen Umsetzung."* A casa tem **página de Karriere** própria e
+  quatro escritórios alemães.
+- **Fora dos EUA?** Sim — Alemanha, União Europeia. A frase de realocação vale inteira.
+- **Dedupe NA CAIXA:** `search_threads` por `"redparrot" OR "Red Parrot"` (dentro da consulta
+  conjunta com SERU, Keweloh, Parekh e Harder) devolveu **cinco threads e nenhuma desta casa** —
+  todas falso positivo da palavra inglesa *harder*, conferidas uma a uma. No repositório,
+  `redparrot` e `Red Parrot` só aparecem em `censo-wikidata.csv` e `alvos-joe-wikidata.csv`
+  (listas). **CASA NOVA.**
+- **Ressalva honesta, e ela é a mais dura da rodada:** (1) **não há endereço para escrever** — sem
+  um endereço de pessoa, esta ficha só vira carta se o maestro aceitar gastar a casa na caixa
+  `info@`, e aí o alvo deixa de ser o Fabian; (2) **a casa não escreve 3D de personagem em lugar
+  nenhum**: a autodescrição é *postprodução*, as seções são `Animation` e `VFX`, e **não abri
+  prova de elenco de personagem** — o que existe são **cargos** (LookDev, Lighting, Technical
+  Animator) que **implicam** pipeline 3D, e implicação não é prova; (3) LookDev não é modelagem
+  nem escultura — é o vizinho do ofício do Vini, não o ofício dele; (4) é casa de **serviço de
+  postprodução com quatro endereços e nove pessoas**, ou seja provavelmente muito freela por
+  projeto, o que é porta e não assento.
