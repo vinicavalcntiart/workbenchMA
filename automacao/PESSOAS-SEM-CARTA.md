@@ -2678,3 +2678,59 @@ para a próxima rodada não recomeçar do zero:
   Brikk, Filmic Art, The Chapel Films, Snowcloud (já na campanha), Fenomen (**não é animação**,
   medido em 15/09), Expanse e Gimpville (**carta já enviada**), Storm e Apparat (fichas de hoje,
   segunda pessoa).
+
+
+---
+
+# RODADA DO JOE, 15/09 18h35 UTC — cinco fichas, e a Holanda continuou fechada
+
+**Rota pedida era Holanda primeiro. Ela não abriu, e o motivo está medido na tabela do fim
+desta seção.** O que rendeu foi o **diretório nórdico relido com filtro de técnica**, que a
+rodada das 15h35 tinha deixado como fila sem conferir a técnica no site de cada casa. Conferir
+o site mudou o veredito de metade delas, nos dois sentidos.
+
+**Nenhuma das cinco pessoas abaixo tem carta. Nenhuma linha tem endereço montado.**
+
+### Tero Suomela — **Creative Producer - Founder** — Animagency, Vantaa, Finlândia — **casa nova, e a ficha mais forte da rodada**
+
+- **Email:** tero@animagency.fi · confiança **alta** · **PUBLICADO pela própria casa, com nome E
+  cargo ao lado** · fonte: https://www.animagency.fi/contact , aberta e lida nesta rodada. O bloco
+  `People` publica dois pares: **"Tero Suomela — Creative Producer - Founder — tero(at)animagency.fi"**
+  e "Robert Niva — Producer — robert(at)animagency.fi". A página escreve `(at)` no lugar do arroba,
+  que é ofuscação de texto e não montagem: o local e o domínio estão escritos por extenso.
+  **NADA FOI MONTADO.** Segunda fonte, com o mesmo endereço: https://nordicanimation.com/studios-producers/ .
+  **MX conferido nesta rodada:** `aspmx.l.google.com` e os quatro `alt` (Google Workspace, vivo).
+  Telefone existe nas duas fontes e **não é registrado aqui**.
+- **Por que ELE e não outro da casa:** a casa publica exatamente duas pessoas, e reparte os papéis
+  ela mesma — o Robert Niva é **Producer** e o Tero é **Creative Producer E Founder**. Em casa deste
+  tamanho o fundador é quem decide arte, e o BRIEF-JOE manda ir no fundador em casa de até 30
+  pessoas. O Robert Niva fica como **segunda e última** pessoa possível desta casa.
+- **Gancho, com a frase do próprio estúdio entre aspas, e aqui há dois:** o perfil escrito pela
+  casa diz **"Animagency is a story-driven animation studio based in Korso, Finland, specializing
+  in animated drama-comedy series. We are passionate about memorable characters, entertaining
+  stories, and distinctive visual worlds. Working across both 2D and 3D animation, we often blend
+  techniques with traditional animation and visual arts to create unique artistic styles"**, e o
+  segundo é o que faz esta casa valer mais que o tamanho dela: **"Through our international
+  network, Animagency also represents top animation talent, connecting productions with the right
+  talents and crews for every project"**. Ou seja a casa **é também uma agência de talento de
+  animação** — o pedido "se outra pessoa aí for a certa, me aponte" do fecho fixo da carta é
+  literalmente o serviço que ela vende. O `/about` acrescenta **"a Finnish story-driven animation
+  IP studio that connects 100% remotely the best talents into the most entertaining productions.
+  We have produced over 1500 minutes of animated content"**, e a casa é **100% remota**, o que
+  desarma em parte a conversa de visto.
+- **Fora dos EUA?** Sim — Finlândia, União Europeia. **A linha de realocação vale**, com a ressalva
+  de que a casa opera remota e talvez nem precise dela.
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `animagency OR Suomela OR kyka OR
+  Mikladal OR filmicart OR Knape OR apparatfilm` e **ZERO** para `"animagency.fi"`. No repositório:
+  zero ocorrências de `tero@animagency.fi` e de `animagency` em `pessoas.csv`, `enviados.csv`,
+  `processados.csv`, `alvos.csv` e `docs/index.html`. **CASA NOVA, primeira pessoa.**
+- **Ressalva honesta, e são três:** (1) **o 3D é palavra da casa, não prova vista** — as séries
+  creditadas (*Crazy – Crazier – Junior High*, *Pelurit*, *Bruno & Pjarta*, *Pasila 2.5*) são
+  sitcom animada para a YLE e têm cara de 2D; o "2D and 3D" está no perfil escrito pela casa e eu
+  **não vi um frame 3D**, porque a página `/productions` do site está praticamente vazia, com um
+  único cartaz (*SUPERMARS*) e nenhum texto; (2) **a casa tem caixa própria para candidatura**,
+  `talent(at)animagency.fi`, publicada ao lado dos endereços de pessoa — escrever ao fundador em
+  vez da caixa é a aposta do Joe, mas é uma aposta, e o estúdio pode simplesmente redirecionar;
+  (3) é casa **pequena e remota**, então não há assento fixo de modelagem: a porta realista é
+  freela e a rede de talento dela, não vaga.
+
