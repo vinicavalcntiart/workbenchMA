@@ -70,6 +70,16 @@ def conta_emoji(t):
     return len(RX_EMOJI.findall(RX_VS.sub('', t)))
 
 
+def corta_cabecalho(t):
+    """O bloco PARA:/ASSUNTO:/PESSOA:/TIPO:/NOTA: terminado em `---` e anotacao minha e NAO sai
+    pelo fio. Contar aquilo como carta inflava o tamanho e reprovava carta dentro do teto: as
+    cinco cartas irlandesas de 14/09 acusaram excesso so por causa do cabecalho. O `ASSUNTO:`
+    sai daqui ANTES do corte, porque a regra de emoji no assunto continua valendo."""
+    if '\n---\n' in t:
+        return t.split('\n---\n', 1)[1].lstrip('\n')
+    return t
+
+
 def palavras(t):
     corpo = re.sub(r'^(Portfolio|LinkedIn|Founder|Best|Hi|Hola|Bonjour)[^\n]*$', '',
                    t, flags=re.M)
@@ -95,6 +105,7 @@ def jaccard(a, b):
 def confere(txt, html=None, tipo='fria', nome=''):
     """Devolve (erros, avisos). Erro impede envio; aviso pede olhada."""
     erros, avisos = [], []
+    inteiro, txt = txt, corta_cabecalho(txt)
 
     # ---- 1. LINK. O defeito que custou a carta do Carsten.
     urls = RX_URL.findall(txt)
@@ -143,8 +154,9 @@ def confere(txt, html=None, tipo='fria', nome=''):
 
     # ---- 5. EMOJI
     lo, hi = EMOJI.get(tipo, EMOJI['fria'])
-    linhas = txt.strip().split('\n')
-    assunto = next((l for l in linhas if l.lower().startswith('subject:')), '')
+    linhas = inteiro.strip().split('\n')
+    assunto = next((l for l in linhas
+                    if l.lower().startswith(('subject:', 'assunto:'))), '')
     if conta_emoji(assunto):
         erros.append('EMOJI NO ASSUNTO. O disparador do Apps Script acha o rascunho pelo '
                      'assunto literal: emoji ali some com a carta.')
@@ -209,7 +221,7 @@ def main():
                 html = open(par, encoding='utf8').read()
         erros, avisos = confere(txt, html, tipo, os.path.basename(f))
         print('\n=== %s  (%d palavras, html: %s)'
-              % (os.path.basename(f), palavras(txt), 'sim' if html else 'NAO'))
+              % (os.path.basename(f), palavras(corta_cabecalho(txt)), 'sim' if html else 'NAO'))
         for e in erros:
             print('  ERRO   ', e)
         for a in avisos:
@@ -222,7 +234,7 @@ def main():
     if len(textos) > 1:
         print('\n=== SEMELHANCA ENTRE AS CARTAS DO LOTE')
         nomes = sorted(textos)
-        sh = {n: shingles(textos[n]) for n in nomes}
+        sh = {n: shingles(corta_cabecalho(textos[n])) for n in nomes}
         pior = 0.0
         for i in range(len(nomes)):
             for j in range(i + 1, len(nomes)):
