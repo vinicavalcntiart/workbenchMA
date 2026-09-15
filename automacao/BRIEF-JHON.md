@@ -869,3 +869,60 @@ requisição que já recebeu a primeira.
 mostra, existe) e **não** é prova de ausência. A `R027817` da Blizzard foi enviada em 02/09
 **sem conta** e por isso não aparece em lista nenhuma. Candidatura anterior à criação da conta
 continua invisível ali — para essa, o dedupe é a caixa de entrada.
+
+## 15/09 — AS SEIS ARMADILHAS DE LEITURA DE ATS MEDIDAS NUM DIA SÓ
+
+Num único dia sete pilhas de ATS foram varridas, e **seis delas tinham uma armadilha capaz de
+produzir zero falso**. Zero falso é o erro mais caro desta campanha: ele faz uma vaga viva passar
+por inexistente e ninguém percebe, porque o número parece certo. Todas as seis abaixo foram
+medidas, não supostas, e cada uma já quase virou número numa rodada minha.
+
+### 1. Eightfold (Netflix): o parâmetro `num` é IGNORADO
+Pedindo `num=50` ele devolve **dez**. Meu primeiro laço andava de 50 em 50 e leu **100 de 481**,
+ou seja 10 de cada 50, e ia fechar a rodada dizendo "três vagas da disciplina no quadro inteiro"
+com 381 vagas não lidas. **O passo é 10.** Com o passo certo: 470 de 481 lidas.
+
+### 2. Warner: a receita antiga estava errada em TRÊS camadas de uma vez
+Ela mandava ler `careers.wbd.com/.../search-results?keywords=<termo>` e pegar o JSON sob `"jobs":[`.
+(a) A regex `"jobs":(\[.*?\])` **não fecha o array**, porque há colchetes aninhados, e o parser
+morre com `Expecting ',' delimiter`. (b) Os campos **não ficam sob `data`**, são de primeiro nível,
+então `v["data"]["title"]` devolvia `None` em todos os itens e o efeito era *"10 vagas, zero da
+disciplina"*: número certo, zero falso. (c) E o pior, **`keywords` não filtra nada**: a página
+declara `totalHits: 310` e devolve sempre os mesmos dez, que na medição eram *Combat Designer* e
+*Data Scientist*. **A rota certa é o Workday**, e o próprio HTML entrega o endereço no campo
+`imApplyUrl`: `warnerbros.wd5.myworkdayjobs.com`, site `global`. Use `automacao/le-warner.py`.
+
+### 3. SmartRecruiters: token inexistente devolve 200 com `totalFound: 0`
+O 200 **não prova que a casa existe**. Só registre quadro com `totalFound > 0`, e nunca escreva
+"a casa não está no SmartRecruiters". Em compensação, **a caixa do token não importa**:
+`nbcuniversal3`, `NBCUniversal3` e `NBCUNIVERSAL3` devolvem os mesmos 380, então varrer com slug
+minúsculo não produz zero falso. E o `limit` tem teto de 100: **pagine com `offset`**, senão um
+quadro de 380 vira 100 lidas e 280 não lidas.
+
+### 4. Personio: o XML repete TÍTULO DE SEÇÃO dentro de `<name>`
+"Ihre Aufgaben", "Ihr Profil", "Warum wir?", "Our Mission", "About the Role" aparecem como `<name>`.
+Contar `<name>` **infla** o número de vagas: um quadro mostrou **6 `<position>` e 24 `<name>`**.
+Conte `<position>`. Do lado bom, aqui o 200 significa algo: slug inexistente devolve **307**.
+
+### 5. Workable: o estrangulamento é de IP e é LONGO
+429 no controle **antes e depois**, e 429 também em três requisições **isoladas** com 20 segundos
+entre elas. Não é concorrência sua. Medido em 15/09: ainda 429 duas horas depois. **Não some
+Workable a uma rodada que já varreu outras famílias**, e o silêncio dele **nunca** vira zero.
+
+### 6. BambooHR: dá para LER, mas o ENVIO não sai daqui
+Medido em **dois locatários diferentes** (nWave e Image Engine). Não é captcha: não há desafio
+nenhum na tela. O que foi conferido antes de afirmar: clique **sem** `force` no botão (o Playwright
+reclamaria se estivesse coberto, e não reclamou), `form.checkValidity()` devolvendo **true** com
+zero elemento em `:invalid`, zero campo obrigatório vazio, zero erro de JavaScript no clique, e o
+`requestSubmit()` nativo também disparado sem efeito. O **upload funciona** (200 em
+`ajax/files/attachTemporary.php`), então não é rede nem proxy. A página relata exceção própria ao
+Rollbar. **Vaga em BambooHR é item de mão com dossiê pronto**; não gaste rodada tentando enviar.
+Falsa pista já descartada: o 401 em `/globals/locale` aparece para qualquer visitante anônimo.
+
+### E a armadilha que não é de parser, é de nome: FALSO AMIGO DE TOKEN
+Cinco novos num dia, todos conferidos **pela lista de vagas** antes de o nome entrar em qualquer
+fila: **`buf`** é uma rede alemã de ópticas (Augenoptiker, Hörakustikmeister), **não** a BUF
+Compagnie de VFX de Paris; **`circus`** é robótica de cozinha em Munique; **`silkroad`** é software
+de RH e hipoteca em Coral Gables; **`squeeze`** no Teamtailor é uma rede norueguesa de massagem,
+não a Squeeze Studio de animação do Quebec; e **`groundcontrol`** é engenharia civil britânica.
+Somam-se aos já conhecidos `upp`, `cat` e `federation`.
