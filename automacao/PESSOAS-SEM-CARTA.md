@@ -2734,3 +2734,47 @@ o site mudou o veredito de metade delas, nos dois sentidos.
   (3) é casa **pequena e remota**, então não há assento fixo de modelagem: a porta realista é
   freela e a rede de talento dela, não vaga.
 
+### Alli Sadegiani — **diretor, animador e animation supervisor; dono da casa** — Allimator, Estocolmo, Suécia — **casa nova, e o endereço é CAIXA**
+
+- **Email:** info@allimator.com · confiança **alta para a entrega, mas é CAIXA e não endereço de
+  pessoa** · fonte: https://nordicanimation.com/studios-producers/ , aberta nesta rodada, no bloco
+  da Allimator: **`Allimator, Sweden | Alli Sadegiani | info@allimator.com`**. **NADA FOI MONTADO**,
+  e em particular **não montei** `alli@` — o site tem página `contact` e ela é **só formulário**,
+  sem um único endereço escrito, então não existe endereço literal daquele domínio para provar
+  padrão nenhum. **MX conferido nesta rodada:** `mx1`–`mx4.mailpod16-cph3.g1i.one.com` (provedor
+  one.com, vivo). Telefone existe na fonte e **não é registrado aqui**.
+- **Por que ELE e não outro da casa:** **a casa é ele.** O `/about` do próprio site escreve
+  **"ALLIMATOR is a studio run by Alli Sadegiani"**, e não há segunda pessoa em lugar nenhum.
+  Não há dilema.
+- **Por que esta ficha existe apesar de ser uma caixa, e é o argumento mais forte da rodada:**
+  em **fevereiro de 2026** ele ganhou o **Annie Award de "Individual Outstanding Character
+  Animation TV/Media"**, pela *Win or Lose* da Pixar — está escrito, com essa formulação exata, na
+  lista de prêmios do `/about`, e o próprio cabeçalho do site diz **"BY DIRECTOR | ANNIE AWARD
+  WINNING ANIMATOR ALLI SADEGIANI"**. É a única pessoa desta rodada cujo prêmio publicado tem a
+  palavra **personagem** no nome.
+- **Gancho, com a frase do próprio estúdio entre aspas:** o `/about` diz que ele é **"an Award
+  winning Swedish director, Annie Award winning animator and animation supervisor who has
+  contributed to Academy Award-winning films at Walt Disney Animation, DreamWorks Animation, and
+  Pixar Animation Studios"**, com os créditos **"Win or Lose (2025), Luca (2021), Soul (2020), Toy
+  Story 4 (2019), Incredibles 2 (2018), Piper (2016), Inside Out (2015) and The Good Dinosaur
+  (2013)"**, e que **"Under the ALLIMATOR umbrella, Alli is developing several independent animated
+  projects targeted towards an older audience"**. O perfil no diretório acrescenta o que está
+  aberto agora: **"In June 2025, Alli attended Annecy MIFA to present a new slate of 3D animated
+  shorts and long-form projects in development, seeking producers and co-producers"**.
+- **Fora dos EUA?** Sim — Suécia, União Europeia. **A linha de realocação vale inteira.**
+- **Dedupe, feito na caixa:** o **Gmail devolveu ZERO** para `allimator OR Sadegiani OR bivrost OR
+  "Trond Jacobsen"` e **ZERO** para `"allimator.com"`. No repositório: zero ocorrências de
+  `info@allimator.com` e o token `allimator` só aparece dentro do texto de dedupe de outra ficha.
+  **CASA NOVA.**
+- **Ressalva honesta, e são quatro:** (1) **o endereço é `info@`**, o oposto do que o Joe existe
+  para fazer — vale porque numa casa de uma pessoa a caixa é a pessoa, mas é caixa;
+  (2) **ele não contrata** — é um artista independente desenvolvendo projeto próprio, sem pipeline
+  e sem assento de modelagem para oferecer; o valor dele é ser quem conhece quem contrata na Pixar,
+  na Disney e na DreamWorks, e o fecho fixo da carta ("se outra pessoa aí for a certa, me aponte")
+  é a única parte que faz sentido nesta carta; (3) **ele é animador, não modelador** — o ofício
+  dele é movimento e o do Vini é escultura, superfície e groom, então "colega de ofício responde
+  colega de ofício" vale só pela metade; (4) o site **vende mentoria e feedback pagos** (a página
+  `contact` lista "MENTORSHIP - 30min Intro", "1h Single Feedback Session"), então há risco real de
+  a carta ser lida como pedido de serviço grátis — **quem escrever precisa deixar claro que não é
+  pedido de feedback**.
+
