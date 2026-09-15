@@ -480,3 +480,37 @@ enquanto a lista mostra *Weekly*. Quem manda é a lista.
 **O que já está certo na EA e você não precisa tocar:** o perfil de candidato está completo,
 conferido por dentro hoje, com contato, CV, link do ArtStation, quatro experiências com datas,
 três formações, idiomas e a lista de skills.
+
+---
+
+## 15/09 — UM DADO SÓ DESTRAVA TRÊS PORTAS, E NINGUÉM TINHA PEDIDO ELE
+
+Isto aqui não é mais uma parede: é o **contrário** de uma. Três portas diferentes, em três
+países, estão paradas pelo **mesmo campo obrigatório**, e o campo não é captcha nem desafio
+nenhum. É a sua **data de nascimento**.
+
+| Porta | Vaga | Onde | O que trava |
+|---|---|---|---|
+| **SHIFT UP** | **3D Character Modeler**, projeto novo | Seul, Coreia do Sul | `생년월일` obrigatório. **Não tem captcha nenhum.** |
+| **Rainbow CGI** | quadro triplo: **3D Modeler**, **3D Character**, **Surfacing Artist** | Roma e Milão | `BirthDate` obrigatório no Contact Form 7 |
+| **Milestone** | General Application | Milão | `Date of birth` obrigatório |
+
+A campanha escreveu **"só o Vini pode"** em três arquivos diferentes, em três datas diferentes,
+e **em nenhuma delas pediu o dado a você**. Isso é falha de comunicação minha, do tipo que você
+já tinha cobrado, e ela custou três portas paradas.
+
+**O conserto custa uma linha, e ela não é sua para digitar em formulário nenhum:** me diga a
+data aqui na conversa, ou escreva você mesmo no doc privado do Drive (*CAMPANHA - dados pessoais
+dos formulários (privado)*), e a automação passa a preencher as três sozinha, daqui para
+sempre. **Não escreva a data em arquivo do repositório**, que é público — ela mora só no Drive,
+ao lado do telefone e do endereço, pela mesma regra.
+
+**Por que vale a pena:** a SHIFT UP é casa de *Stellar Blade* e de *NIKKE*, a vaga é a sua
+disciplina ao pé da letra e **não há parede nenhuma além desse campo**. A Rainbow é a maior
+casa italiana de animação 3D (Winx Club) e o seletor de cargo dela oferece **três** posições da
+sua faixa de uma vez.
+
+> **Correção de registro feita hoje, na mesma volta:** a Rainbow estava marcada no painel como
+> "parede de reCAPTCHA v3". A própria nota admitia que a medição foi feita *sem gastar envio*,
+> ou seja, a parede era **suposição** tirada de ver `api.js?render=<chave>` no HTML — justamente
+> o que o método da campanha proíbe. O formulário foi relido hoje: o que trava é o `BirthDate`.
