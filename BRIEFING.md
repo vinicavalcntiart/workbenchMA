@@ -2417,3 +2417,46 @@ primeiro. A meta diária permanente continua 10/5. Dois agentes em paralelo: o J
 navegador da máquina) enviando casa a casa, e um Jhon B triador, sem navegador, montando
 `automacao/FILA-FORMULARIO-1609.md` com dossiês prontos e ordenados do mais fácil para o mais
 difícil, para o Jhon A consumir de cima para baixo. Regra que continua: um navegador por vez.
+
+### 16/09, terceiro turno (17h00–18h00 UTC) — DUAS ROTAS NOVAS PROVADAS E UMA PAREDE FECHADA
+
+**SuccessFactors passou a ter rota completa, conta inclusive** (`automacao/sf_apply.js`, etapas
+`conta | form | preenche | prova`). Primeira candidatura por ela: **Rising Sun Pictures, Senior
+Modelling Artist 623, Adelaide, contrato de 12 meses — ENVIADA E CONFIRMADA**, com o título da
+página virando *"Successfully Applied to Senior Modelling Artist (623)"*, o texto *"Your
+application has been sent. Thank you!"* e, **depois de recarregar e reentrar na conta**, o próprio
+perfil listando *"Jobs Applied (1) ... Status: We are currently reviewing all applications"*.
+As cinco armadilhas da família estão escritas no topo do script; as duas que mais custam tempo:
+o botão **Apply é um `<span id="180:_submitBtn">`**, não `<button>` nem `<a>` (seletor por tag
+devolve "sem botão Apply" e a rodada se perde), e o **botão de anexo não tem texto nenhum** — é
+um `<span role="button" id="N:_attachIcon">` com `aria-labelledBY`, e o rótulo mora no irmão
+`N:_ariaAttachLabel`. Conta nova anotada em `cred.json` (`rsp_sf`), fora do repositório.
+
+**TEAMTAILOR CONNECT: a regra mudou, e ela é dura.** *Perfil, CV e questionário só se fazem na
+SESSÃO DO CADASTRO*, no mesmo processo, logo depois do botão Connect/Conectar. O **link "Log in to
+Connect" do email NÃO autentica** — medido em **16 dos 20 locatários** testados em 16/09, com
+cinco hipóteses descartadas uma a uma (prazo, cookie, clique cego, pedir o link dentro do próprio
+navegador na mesma sessão persistente, e refazer a inscrição) e com a prova do servidor por curl:
+o `/connect/session/confirm/<uuid>/<token>` devolve 200 com um `_tt_session` **anônimo**, e com
+esse cookie `/connect/profile/settings` volta para `/connect` ("What interests you?"). A medição
+que fecha o assunto: criei a conta da **Ánima Estudios** do zero e o link **dela**, pedido cinco
+minutos depois, também não autenticou. Consequência prática: os 15 cadastros de Connect de hoje
+ficam **só como cadastro com departamento de arte marcado**, que é o que o recrutador vê, e o
+questionário deles não se responde mais. Ferramentas: `tt6_completa.js` (cadastro + perfil + CV +
+questionário numa sessão, contexto persistente, cookies em nove idiomas) e `tt3_quest.js`.
+
+**Duas armadilhas de leitura que valem para qualquer script novo:** (1) *"é tela de login?"* não se
+decide pelo **título** — a página pode estar a meio carregamento e o título vir vazio, e o script
+segue sem logar; o sinal certo é o campo de senha existir. (2) `document.body` pode ser **null** a
+meio de navegação, e `document.body.innerText` derruba a rodada com *"Cannot read properties of
+null"*. (3) Ler `[role=option]` **sem escopo** devolve a lista de **países** em todo picklist do
+SuccessFactors, porque o popup do primeiro campo fica no DOM.
+
+**Typeform:** a lane está **seca**. Três enviadas hoje (REKiNDLED, Caribara Montreal e **Sarofsky**,
+Chicago + remoto, casa inédita) e a quarta porta conhecida (Framebunker) é **caixa de contato de
+três campos em site sem vaga** — mandar por ali é carta fria, não candidatura, e contar seria
+inflar o placar. Defeito do `tf_fill7.js` corrigido nesta rodada: o bloco *statement* mandava
+**dois Enter cegos** e pulava a pergunta seguinte quando ela era opcional (a Question 2 de 11 da
+Sarofsky ficou em branco no primeiro ensaio); agora o segundo Enter só sai se a tela ainda estiver
+no statement. O script passou a registrar a **rede não-GET** do envio, que é prova mais forte que
+texto de tela — a tela de agradecimento da Sarofsky não tem texto próprio, só o botão "again".
