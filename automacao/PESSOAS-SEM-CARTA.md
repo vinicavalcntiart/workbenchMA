@@ -4655,3 +4655,5 @@ exatamente o que o brief proíbe: inventar endereço e chamar de verificado.
 `(dot)`, entidade HTML no `href`, `data-cfemail`). A forma solta `nome at dominio ponto tld`
 **não** entra em varredura automática — se existir, se lê no olho, na página. O script desta
 rodada foi corrigido antes de qualquer ficha ser escrita, e nenhuma ficha saiu do padrão solto.
+
+> **Maestro, 16/09 21h05 UTC:** carta do **Bruce Alcock (Global Mechanic)** escrita e gravada como rascunho `r2057132272551792358` (224 palavras, `confere-carta.py` limpo; sai pelo Apps Script do Vini). **Apparat (Eirik Heldal) e Storm Studios (Espen Nordahl) ficam seguradas até 21/09** pela ressalva de cadência das próprias fichas: as duas casas receberam carta em 11/09 e a Storm ainda tem formulário de 30/08. Marcadas no `pessoas.csv` como `PENDENTE-maestro-escreve-a-partir-de-21-09`.
