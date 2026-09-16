@@ -4251,3 +4251,46 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   é sinal de casa de escritório pequeno; (5) o catálogo mais recente citado é de **2023**, e não há
   projeto marcado como em produção hoje.
 
+---
+
+### Michał Amielańczyk — **Communication Manager** — Mechanistry, Polônia — **a casa tem o melhor encaixe de personagem da rodada e o pior cargo**
+
+- **Email:** `miami@mechanistry.com` · confiança **alta** · **PUBLICADO pelo próprio estúdio** em
+  **https://mechanistry.com/press**, aberta nesta rodada, em frase que pareia nome, cargo e endereço no
+  mesmo período: *"Would you like to cover Timberborn? Contact our **Communication Manager Michał
+  Amielańczyk** at: miami@mechanistry.com"*. **Nada foi montado**, e note que a parte local
+  (`miami`) **não sai de nenhum padrão dedutível** do nome — é exatamente o caso que prova por que
+  endereço literal vence padrão: qualquer montagem (`michal@`, `m.amielanczyk@`) teria quicado.
+- **Por que ELE e não outra pessoa da casa:** porque **é a única pessoa com nome que a casa publica em
+  todo o site**. `/`, `/press` e `/contact` só trazem `hello@mechanistry.com` e canais de comunidade
+  (Discord, loja). Não existe Art Director nem Lead publicado para escolher.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a manchete da home é
+  *"**Humans are gone. Will your beavers survive?**"* e a descrição é *"Timberborn is a **beaver
+  city-building game** with a unique architecture system, wooden machinery, dams and water physics,
+  available now on PC and macOS"*. A `alvos.csv` da campanha já tinha classificado a casa com encaixe
+  **forte**, nestes termos: *"Casa de Timberborn; castores estilizados; carga clara de personagem"*.
+  **E a casa está viva e em produção**, o que é raro nesta rodada: a própria página de imprensa lista
+  release de **3 de setembro de 2026** (*"Timberborn's 1.1 Update Gives Beaver Engineers Even More Ways to
+  Build, Dig, and Manage Their Settlements"*) e de **12 de março de 2026** (*"Lumberpunk City-Builder
+  Timberborn Launches into 1.0"*).
+- **Fora dos EUA?** Sim — Polônia, União Europeia. Frase de realocação inteira e patrocínio dito de frente.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 625 registra `hello@mechanistry.com` em **06/09** como
+  `enviado`; `alvos.csv` linha 502 traz a casa com encaixe **forte**. `pessoas.csv`: **zero** pessoa da
+  casa, e `miami@mechanistry.com` não existe em arquivo nenhum do repositório. **NA CAIXA:**
+  `search_threads` por `mechanistry OR Timberborn OR Amielanczyk` devolveu **uma** thread, a própria carta
+  de 06/09 para `hello@`, **sem resposta, sem bounce, sem recusa**. **PRIMEIRA pessoa.**
+- **Ressalva honesta, e ela é a mais dura da rodada, com o contra-argumento escrito:** (1) o cargo é
+  **comunicação e imprensa**, e a rodada de 16/09 de manhã **matou a Moonbug por exatamente isso**
+  (`sruthi.dhulipala@moonbug.com`, *"Media Contact"*). Mantenho a ficha, e o motivo da diferença tem de
+  ficar escrito para não virar precedente frouxo: a Moonbug é conglomerado de mídia com departamento de
+  imprensa inteiro, enquanto a Mechanistry é casa de **uma dezena de pessoas** onde o gerente de
+  comunicação senta ao lado de quem faz os castores, e onde a carta da campanha fecha pedindo **direção**
+  (*"if someone else there is the right person for this, just point me"*) — encaminhar é literalmente o
+  ofício dele. Ainda assim, **é o cargo mais fraco que o `BRIEF-JOE` admite**, e a ficha está aqui como a
+  última da fila, não como a melhor; (2) o endereço é **caixa de imprensa**, ou seja recebe pitch de
+  jornalista e de criador de conteúdo todos os dias, e carta fria de artista pode ser lida como PR; (3) a
+  casa tem **um único jogo** e ele acabou de sair de 1.0 em março de 2026 — pós-lançamento é quando
+  estúdio pequeno **encolhe** equipe de arte, não quando contrata sênior; (4) `/careers` não existe no
+  site e não há vaga publicada; (5) castor de city-builder é personagem **pequeno na tela, em escala de
+  jogo de construção**, o que usa menos escultura e groom do que o portfólio do Vini mostra.
+
