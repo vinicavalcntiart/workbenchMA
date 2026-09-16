@@ -30,9 +30,28 @@ captcha nem falta de conta. **E o erro de fluxo que come a rodada:** você já t
 *"There's an existing record with that email"* sem enviar nada. Campo a campo, com as armadilhas
 da tela, está na página de cliques e em `automacao/respostas-formularios.md`.
 
-**Eram 77 linhas, agora são 76 portas, e as duas mexidas estão escritas.** Saíram duas: a mesma
+### 🟢 ENTRARAM MAIS DUAS, achadas cruzando o painel com a página (16/09, 03h30)
+
+**Gigantic Duck — 3D Artist, Bombergrounds — `https://giganticduck.com/careers`**
+**REMOTA e efetiva, 40h por semana, escrito na própria página**, então aqui **não há questão de
+visto**. Revalidada agora: HTTP 200 e a vaga continua listada. Régua de veto: **zero ocorrência**
+dos dezessete termos. A parede é o reCAPTCHA v3 do Contact Form 7, que é pontuação de sessão: do
+IP da automação reprova, do seu navegador passa.
+
+**Good Job Games — Senior 3D Artist — `https://job-boards.greenhouse.io/goodjobgames/jobs/7491067003`**
+Viva (HTTP 200), zero veto. **Trava numa pergunta que só você pode responder:** *"Match Villains
+oyununu kaç level oynadın"*, quantos níveis do jogo você jogou. As outras duas já estão resolvidas:
+Maya **sim**, portfólio **ArtStation**. Ressalva escrita: a Turquia está fora da lista de países da
+campanha, então ela não é prioridade.
+
+**Eram 77 linhas, agora são 78 portas, e as mexidas estão escritas.** Saíram duas: a mesma
 vaga da Framestore aparecia **três vezes**, com o mesmo endereço, em dois grupos diferentes, e
-número inflado não é resultado. Entrou uma: a EA 215788 acima.
+número inflado não é resultado. Entraram três: a EA 215788 e estas duas.
+
+**Sobraram 21 portas de mão da disciplina fora da página**, listadas em
+`/tmp/claude-0/fora-da-fila.json` para a próxima rodada triar. A maioria é concept, level design ou
+direção de arte, que estão fora da disciplina; a Stirling Animation tem restrição **escrita** de
+residência no Reino Unido, além de contrato de *Contractor*.
 
 Nenhuma carta foi escrita duas vezes: o gancho de cada uma sai do anúncio que a campanha leu, a
 semelhança máxima entre duas cartas do lote é de 24% (o teto que a campanha aceita é 55%), e

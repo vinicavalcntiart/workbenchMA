@@ -2,7 +2,7 @@
  {
   "pid": "p1",
   "grupo": "Só falta um dado seu",
-  "grupo_expl": "Nenhuma tem captcha. O que trava é a data de nascimento, obrigatória nos dois formulários. Me diga a data e eu preencho e envio sozinho.",
+  "grupo_expl": "Nenhuma tem captcha de desafio. O que trava e um dado que so voce tem: a data de nascimento em duas delas, e em uma terceira quantos niveis de um jogo voce jogou. Me diga os dados e eu preencho e envio as duas primeiras sozinho.",
   "casa": "Rainbow SpA",
   "vaga": "3D Modeler e Surface & Texture Artist",
   "local": "Italia",
@@ -18,7 +18,7 @@
  {
   "pid": "p2",
   "grupo": "Só falta um dado seu",
-  "grupo_expl": "Nenhuma tem captcha. O que trava é a data de nascimento, obrigatória nos dois formulários. Me diga a data e eu preencho e envio sozinho.",
+  "grupo_expl": "Nenhuma tem captcha de desafio. O que trava e um dado que so voce tem: a data de nascimento em duas delas, e em uma terceira quantos niveis de um jogo voce jogou. Me diga os dados e eu preencho e envio as duas primeiras sozinho.",
   "casa": "SHIFT UP",
   "vaga": "SO O VINI PODE: o formulario exige DATA DE NASCIMENTO",
   "local": "Coreia do Sul",
@@ -1214,5 +1214,37 @@
   "dossie": "**Vaga:** Senior Character Artist, EA SPORTS FC, requisicao **215788**. Vancouver, British Columbia. **Regular Employee** (efetiva), modelo **Hibrido**.\n**Faixa PUBLICADA pela propria EA:** CAD 114.300 a 156.200. Pela politica da campanha, se houver faixa publicada pede-se a **BASE**: **CAD 114.300**, nunca acima nem abaixo.\n**Revalidada em 16/09 as 03h:** a requisicao continua no portal (lista completa de 325 vagas, paginada por jobOffset) e a pagina da vaga responde HTTP 200. Regua de veto no texto inteiro: o UNICO acerto e `eligib` em *\"eligible for bonus and other incentive programs\"*, que e falso positivo conhecido. **Nenhum veto escrito.**\n**POR QUE E COM VOCE, e nao com a automacao:** o botao Next da tela de informacoes gerais devolve `Internal server error` do Avature em **cinco tentativas**, com e sem anexos, em dois dias diferentes. Nao e captcha, nao e falta de conta, nao e rede.\n**O ERRO DE FLUXO QUE COME A RODADA, medido em 07/09:** a tela `ApplicationMethods` tem o login em cima e o bloco **First time applicant** embaixo. Voce JA TEM CONTA (desde 03/09), entao **ENTRE pelo login**. O caminho de candidato novo anexa o CV, le o PDF, preenche tudo e no fim devolve *\"There's an existing record with that email\"* sem enviar nada.\n**Com a sessao aberta o perfil ja vem preenchido** (endereco, telefone, historico, formacao, idiomas, skills, portfolio). Sobram as perguntas da vaga:\n\n| Campo | Resposta |\n|---|---|\n| How did you hear about this opportunity? | EA Careers Website |\n| Are you willing to relocate? | Yes |\n| Have you ever worked at EA in any capacity? | No |\n| How many years of relevant experience | More Than 3 Years (e a faixa mais alta da lista) |\n| Bootcamp/diploma/servico militar nos ultimos 18 meses | No (o mestrado esta EM CURSO, nao concluido) |\n| Cover Letter (arquivo) | Vini_Cavalcanti_Cover_Letter.pdf |\n| Aceite do NDA de entrevista | marcar |\n| Genero (Voluntary Self Disclosure) | Choose not to Disclose |\n| **Do you now or in the future require immigration sponsorship?** | **Yes** — e a verdade e e o campo em que nao se pode errar |\n| Sujeito a restricao que impeca de trabalhar para a EA? | No |\n| I certify that all information is true and complete | marcar |\n\n**Armadilhas da tela, para nao achar que quebrou:** a pagina do Avature as vezes monta VAZIA quando o pacote dela falha na rede, e a saida e **recarregar**; o Continue devolve **502** com frequencia e a saida e reanexar o CV e clicar de novo; o Next do NDA fica desabilitado ate a caixa de aceite ser marcada, e o rotulo dela e **so um asterisco**.\n**A conta:** usuario e o seu email. **A senha esta no documento privado do Drive**, nunca aqui.\n**Dedupe:** a irma **215358** (Character Artist, efetiva, mesmo time) foi ENVIADA e confirmada em 07/09, e a **215657** (temporaria) em 03/09. Esta **215788 e requisicao propria e mais senior**, com faixa maior; nao e duplicata delas.",
   "nota": "",
   "prio": "alta"
+ },
+ {
+  "pid": "p101",
+  "grupo": "reCAPTCHA v3",
+  "grupo_expl": "Invisível, decide por pontuação de sessão. Reprova a automação e aprova um humano sem pedir nada.",
+  "casa": "Gigantic Duck",
+  "vaga": "3D Artist, Bombergrounds - REMOTA e efetiva, sem questao de visto",
+  "local": "Remoto (casa na Suecia)",
+  "url": "https://giganticduck.com/careers",
+  "disc": "personagem",
+  "alta": true,
+  "nc": false,
+  "id": 101,
+  "dossie": "**Vaga:** 3D Artist, Bombergrounds. **Remota, efetiva, 40 horas por semana**, escrito assim na propria pagina de carreiras. A casa fica em Boras, na Suecia, mas o posto e remoto: **nao ha questao de visto aqui.**\n**Revalidada em 16/09 as 03h30:** `giganticduck.com/careers` responde **HTTP 200** e a vaga continua listada, ao lado de uma 2D Artist e de uma Data Analyst do mesmo jogo. Regua de veto no texto inteiro: **zero ocorrencia** dos dezessete termos.\n**A parede:** reCAPTCHA v3 no Contact Form 7 do site proprio, medida duas vezes com clique real. Nao e captcha de desafio, e pontuacao de sessao: do IP da automacao reprova, do seu navegador passa.\n**Ha uma SEGUNDA porta na mesma casa** (`giganticduck.com/application`), que e a de email e ja esta registrada no painel. Esta aqui e a **requisicao aberta**, que e outra coisa.\n**O que preencher:** nome, email, portfolio (ArtStation na frente do PDF), e a carta no campo de mensagem. Honeypot, se houver, fica VAZIO.",
+  "nota": "",
+  "prio": "alta"
+ },
+ {
+  "pid": "p102",
+  "grupo": "Só falta um dado seu",
+  "grupo_expl": "Nenhuma tem captcha de desafio. O que trava e um dado que so voce tem: a data de nascimento em duas delas, e em uma terceira quantos niveis de um jogo voce jogou. Me diga os dados e eu preencho e envio as duas primeiras sozinho.",
+  "casa": "Good Job Games",
+  "vaga": "Senior 3D Artist - pergunta obrigatoria que so voce pode responder",
+  "local": "Turquia (Istambul)",
+  "url": "https://job-boards.greenhouse.io/goodjobgames/jobs/7491067003",
+  "disc": "personagem",
+  "alta": false,
+  "nc": false,
+  "id": 102,
+  "dossie": "**Vaga:** Senior 3D Artist, Sariyer, Istambul. Quadro do Greenhouse, requisicao **7491067003**, revalidada em 16/09 as 03h30 com **HTTP 200**. Regua de veto: **zero ocorrencia**.\n**POR QUE SO VOCE PODE:** ha uma pergunta obrigatoria que **ninguem pode responder por voce**, e inventar resposta esta proibido: *\"Match Villains oyununu kac level oynadin\"*, ou seja, **quantos niveis do jogo Match Villains voce jogou**. Jogue o quanto quiser e responda o numero verdadeiro, ou deixe esta porta de lado.\n**As outras duas ja estao resolvidas:** *\"Autodesk Maya ile calisma deneyimin var mi\"* (tem experiencia com Maya) = **SIM**; campo **Portfolyo** = a ArtStation.\n**Segunda parede:** este quadro do Greenhouse **tem reCAPTCHA na pagina**, ao contrario de outros da mesma familia que enviaram sozinhos.\n**RESSALVA DE ESCOPO, escrita para voce decidir:** a Turquia esta fora da lista de paises da campanha. A vaga fica aqui porque o cargo e o seu com todas as letras, mas ela nao e prioridade.",
+  "nota": "",
+  "prio": "media"
  }
 ]
