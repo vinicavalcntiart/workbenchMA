@@ -3745,3 +3745,58 @@ repositório em 08/09 só para checar **quadro de vaga**, e o quadro é justamen
 nenhuma delas publica de forma legível por `curl`. Quatro das seis fichas de hoje saíram dali.
 **Sobram 35 do Canadá, 40 do Reino Unido, 27 da Dinamarca, 12 da Noruega, 8 da Suécia e 218 da
 França ainda não lidas uma a uma.**
+
+---
+
+## RODADA DE 16/09 (Joe, tarde) — A VEIA QUE RENDEU FOI O `presskit()`, E ELA CORRIGE UM NEGATIVO DE 07/09
+
+**O método desta rodada, em uma linha:** casa já qualificada pela campanha (carta em caixa
+genérica, sem resposta) **mais os caminhos `/press`, `/presskit`, `/press-kit` e `/pressroom`**,
+que NÃO estavam na varredura de 07/09 nem na de 10/09. Foi só isso que separou as duas fichas com
+email desta rodada das dezenas de casas varridas sem resultado.
+
+### Steffen Kabbelgaard — **Co-Owner, CEO & Game Director** — BetaDwarf Entertainment, Copenhague, Dinamarca — **nórdico, que é rota de frente**
+
+- **Email:** `steffen@betadwarf.com` · confiança **alta** · **PUBLICADO pelo próprio estúdio** no
+  `presskit()` dele, em **https://betadwarf.com/presskit**, aberto nesta rodada. A página traz duas
+  coisas no mesmo documento: na seção **Team & Repeating Collaborator**, *"Steffen Kabbelgaard /
+  Co-Owner, CEO, Game Director"*, e na seção **Contact**, sob a rubrica **Inquiries**, o endereço
+  `steffen@betadwarf.com`. **Nada foi montado por padrão de domínio.**
+- **Por que ELE e não outra pessoa da casa:** o presskit publica **nove** pessoas com cargo
+  (Steffen Kabbelgaard; Kenneth Harder, Co-Owner/CTO/Lead Programmer; Kristian Klie, Gameplay
+  Programmer; Alex Jørgensen, Animator; Peter Buje, Lead Designer; Christoffer Greulich, Producer;
+  Alexander Karlsson, Technical Artist; **Stefan Greulich, Art Director**; Martin Prestegaard
+  Lehnsdal, 3D Artist) e **um único endereço de pessoa**, o dele. O alvo de arte ideal seria o
+  **Stefan Greulich, Art Director**, e a casa **não publica endereço dele**: ele fica como
+  **SEGUNDA e última** possível, e hoje entraria como `sem-email`. Em casa desse porte o
+  `BRIEF-JOE` manda ir no dono, e ele é dono, CEO e diretor de jogo ao mesmo tempo.
+- **Gancho, com a frase do próprio estúdio entre aspas:** o presskit escreve que a casa
+  *"is now fully focused on making **Minion Masters** - the best real time card game with co-op on
+  PC and Console"*, e a home explica o que a casa é hoje: *"BetaDwarf is an ambitious venture
+  company where we push the boundaries of co-op games to create lifelong friendships"*, com
+  *"Friendshipping the world with co-op games"* como manchete. A origem, que é o melhor gancho
+  humano e está escrita por eles: *"It all started in Copenhagen with a small group squatting in a
+  university classroom for 7 months, getting discovered and moving in together for 3 years."*
+  **O encaixe de personagem é o conteúdo do jogo, não uma suposição:** Minion Masters é um jogo de
+  arena cujo produto é um **elenco de minions e masters estilizados**, e a `alvos.csv` da campanha
+  já classificou a casa, em 06/09, como *"Casa de Minion Masters; elenco grande de personagens
+  estilizados"*, encaixe **forte**.
+- **Fora dos EUA?** Sim — Dinamarca (Schiller Office Hotel, Nannasgade 28, 2200 Copenhague N),
+  União Europeia. A frase de realocação entra inteira, e a de patrocínio também.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 544 registra `info@betadwarf.com` em 06/09 com
+  status `enviado`; `processados.csv` linhas 903, 904, 906 e 927 registram o quadro de BambooHR da
+  casa, a candidatura espontânea mapeada campo a campo e o conserto do `apply_bamboohr.js` — a
+  candidatura **não foi enviada**, morreu no reCAPTCHA de caixa. `pessoas.csv`: **zero** pessoa da
+  BetaDwarf, e `steffen@betadwarf.com` não existe em arquivo nenhum do repositório. **NA CAIXA:**
+  `search_threads` por `betadwarf OR Kabbelgaard OR "Minion Masters"` devolveu **uma** thread, e é
+  a própria carta de 06/09 para `info@` — **sem resposta humana, sem bounce, sem recusa**. Esta é a
+  **PRIMEIRA pessoa** da casa.
+- **Ressalva honesta:** (1) o cargo é **CEO e Game Director, não arte** — quem decide a aparência
+  do elenco é o Stefan Greulich, e é dele que falta o endereço; (2) o rodapé do site diz **©2021**
+  e a página de carreiras diz *"No Available positions at this time"*, com estágio **não
+  remunerado** como única porta escrita, então o presskit pode estar velho e o pareamento
+  nome-cargo é de um documento sem data; (3) Minion Masters saiu em 2016 e a casa fala de
+  *"OUR NEXT PROJECT"* sem dizer qual, ou seja não há prova pública de produção de elenco novo
+  agora; (4) a casa é pequena e o dinheiro é de investidor (Square Enix, London Venture Partners,
+  Makers Fund), o que aperta contratação sênior; (5) a porta de email da casa já foi usada uma vez
+  em `info@`, então esta é a segunda batida no mesmo lugar, agora com nome.
