@@ -4152,3 +4152,53 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   (5) Luxemburgo é mercado pequeno e o incentivo fiscal local costuma vir com exigência de gasto local, o
   que aperta contratação de estrangeiro.
 
+---
+
+### Michael Brandstetter — **Design / 3D Animation / VFX / Post Production, e co-titular da casa no Impressum** — Digital Rain Studios, Viena, Áustria — **a casa escreve "character creation" ao lado do nome dele**
+
+- **Email:** `m.brandstetter@digitalrain.at` · confiança **alta** · **PUBLICADO pelo próprio estúdio** em
+  **três páginas diferentes** abertas nesta rodada: https://digitalrain.at/about.html ,
+  https://digitalrain.at/contact.html e https://digitalrain.at/projects.html . **Nada foi montado.**
+- **O pareamento, e ele é literal, sem inferência:** em `contact.html` o cartão dele diz, na ordem,
+  *"Michael Brandstetter | Design | 3D Animation | VFX | Post Production | m.brandstetter@digitalrain.at |
+  **your Partner for: design, character creation, general 3D production, animation, motion graphics**"*.
+  Em `about.html` a bio é *"Design and visual direction expert, versatile artist with extensive expertise
+  in 3D Workflows, industrial design, and post production finishing."* O **Impressum**
+  (https://digitalrain.at/impressum.html) nomeia os três como responsáveis da casa sob
+  *"Medieninhaber: Digital Rain Studios"*, o que confirma que ele é **dono e não empregado** — e dono não
+  troca de casa, que é a defesa contra a armadilha do cargo desatualizado.
+- **Por que ELE e não outra pessoa da casa:** a casa publica **três** pessoas, as três com endereço.
+  Kristian Zazgornik é *"3D animation specialist... product visualization, simulation, rendering, motion
+  graphics and VFX Pipelines"* e Thomas Brandstetter é *"VFX, 3D animation, motion capture, camera work"*.
+  **O Michael é o único cuja linha de serviço escrita pela casa contém `character creation`, e o único com
+  "visual direction" na bio.** Thomas Brandstetter fica como **SEGUNDA e última** possível (a bio dele
+  cita *"character animation"*).
+- **Gancho, com a frase do próprio estúdio entre aspas:** a casa se apresenta como
+  *"a Vienna-based studio for visual artistry and precise craftsmanship with proven workflows and almost
+  60 years of experience combined"* e *"a Vienna-based production house specializing in high-end visual
+  effects, 3D animation, post production, and camera work"*. O serviço número **02** da lista deles é
+  escrito assim: *"**Character Creation** — Concept, modeling, animation, motion capture and simulation"*,
+  e o portfólio em https://digitalrain.at/projects.html tem **filtro próprio chamado "Character"**, ao lado
+  de Product, VFX, 3D Animation, Design, Illustration e Games. O objeto social no Impressum repete:
+  *"Gemeinsame Tätigkeit im Bereich: 3D Animation, **Character Creation**, VFX, Motion Graphics, Product
+  Visualization, Design"*. A `alvos.csv` da campanha já tinha classificado a casa, com encaixe **forte**,
+  como *"Estudio de animacao 3D em Viena com categoria Character no portfolio; trabalhos Any Buddies e Moso
+  the moss"*.
+- **Fora dos EUA?** Sim — Áustria (Thimiggasse 50, A-1180 Wien), União Europeia. Frase de realocação
+  inteira e linha de patrocínio dita de frente.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 415 registra `office@digitalrain.at` em **02/09** como
+  `enviado`; `alvos.csv` linha 359 traz a casa com encaixe **forte**. `pessoas.csv`: **zero** pessoa da
+  casa, e `m.brandstetter@` não existe em arquivo nenhum do repositório. **NA CAIXA:** `search_threads` por
+  `digitalrain OR "Digital Rain" OR Brandstetter OR Zazgornik` devolveu **uma** thread com **duas
+  mensagens, as duas enviadas** (carta de 02/09 e follow-up de 07/09), **sem resposta, sem bounce, sem
+  recusa**. **PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) a casa tem **três pessoas** e vende serviço por sócio (*"your Partner for"*) —
+  não é estúdio com quadro de vagas, e não publica vaga nenhuma, então não há assento provado; (2) o peso
+  do portfólio é **product visualization e publicidade**, com "character creation" como uma das seis
+  linhas, não como o negócio principal; (3) o cargo dele não é um título de arte de personagem, é a
+  descrição de um sócio generalista — o negrito da carta tem de ir para a palavra `character creation`
+  que **eles** escreveram, e não para um cargo que não existe; (4) *"almost 60 years combined"* para três
+  pessoas significa cerca de vinte anos cada, ou seja um trio sênior que faz tudo — contratar um sênior de
+  fora é justamente o que casa desse porte evita; (5) a casa **já levou carta e follow-up**, então esta é
+  a terceira batida no mesmo domínio.
+
