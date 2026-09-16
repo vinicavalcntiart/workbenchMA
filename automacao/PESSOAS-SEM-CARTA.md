@@ -4070,3 +4070,85 @@ seção **Contact** (endereço de pessoa) — é exatamente o que o Joe procura,
   emprego; a porta da casa é o BambooHR `budge` (3D Artist Generalist), frente de formulário.
 - **Brendan Taylor (Mavericks VFX):** fica `sem-email`, como a ficha diz.
 Lote conferido pelo `confere-carta.py`: limpo, semelhança máxima 32%.
+
+---
+
+# RODADA DO JOE, 16/09 16h35 UTC — CINCO FICHAS, QUATRO COM ENDEREÇO PUBLICADO, E O DEDUPE DO GMAIL MATOU A MELHOR DELAS
+
+**O método desta rodada, em três linhas.** (1) Percorri as **414 casas já qualificadas** pela campanha
+(carta em caixa genérica em `enviados.csv`, status `enviado`, sem resposta, sem bounce, sem recusa, e
+**sem pessoa** em `pessoas.csv`) nos quatro caminhos de `presskit()` mais `/team`, `/about`, `/studio`,
+`/people`, `/crew`, `/contact`, `/impressum` e os `data.xml` do presskit — 22 caminhos, 9.108 URLs.
+(2) Varri **389 domínios de casa de personagem** (linhas de `alvos.csv` e `garimpo-cgstudiomap.csv`
+cuja observação diz personagem/character/criatura/estilizado) e **698 de rota de frente**
+(Canadá, Reino Unido, Irlanda, Holanda, nórdicos), mais um **rastreador de segundo nível** que, em vez
+de chutar caminho, **segue os links internos reais** de cada home (`team|about|people|crew|staff|studio|
+contact|equipe|om-oss|over-ons|impressum|press|company|ansatte|…`, 2.387 links seguidos).
+(3) Em tudo isso: decodificação de **entidades HTML no `mailto:`**, de **`data-cfemail` do Cloudflare** e
+do campo `recruiter-email` do Teamtailor. **Zero endereço montado por padrão de domínio nesta rodada.**
+
+**O número honesto:** 4.000 e poucas páginas lidas devolveram **1.031 endereços de aparência de pessoa**,
+dos quais **467 inéditos no repositório**. Depois do filtro de disciplina (a casa tem de fazer personagem
+3D) e do teto de duas pessoas por casa, sobraram **cinco fichas**. A conta é essa mesma: o gargalo não é
+achar endereço, é achar endereço **de gente de arte, em casa de personagem, que ainda tem vaga na cota.**
+
+---
+
+### Guillaume Vialaneix — **Co-Director, Head of Animation** — Fabrique d'Images, Differdange, Luxemburgo — **a ficha mais forte da rodada, e o endereço estava ofuscado em entidades HTML**
+
+- **Email:** `g.vialaneix@fabrique-d-images.com` · confiança **alta** · **PUBLICADO pelo próprio estúdio**
+  na seção **OUR TEAM** de **https://www.fabrique-d-images.com/**, aberta nesta rodada. **Nada foi
+  montado.** O endereço não aparece legível no texto: o `href` está escrito em **entidades HTML
+  decimais** (`mailto:&#103;.&#118;ia&#108;aneix&#64;fab&#114;&#105;q&#117;&#101;-&#100;&#45;&#105;&#109;&#97;&#103;es.&#99;o&#109;`),
+  e foi decodificado nesta rodada. É por isso que varredura antiga de `mailto` não viu esta casa: o
+  regex de endereço não casa com entidade.
+- **Como o pareamento nome-cargo-email foi PROVADO no HTML, e em duas vias independentes:** o cartão de
+  cada pessoa é `[ícones com o mailto][<span class="member-name">Nome</span>][cargo]`, ou seja o `mailto`
+  vem **imediatamente antes** do nome a que pertence. A sequência crua, em ordem, é: `jm.musique` →
+  *"Jean Marie MUSIQUE / CEO and producer"*; `c.parisse` → *"Christine PARISSE / Ceo & Producer"*;
+  `m.mertens` → *"Mark MERTENS / Producer"*; `y.czukor` → *"Yannick Czukor / Co-Director, Head of
+  Production"*; **`g.vialaneix` → *"Guillaume Vialaneix / Co-Director, Head of Animation"***;
+  `g.delazzer` → *"Geoffrey De Lazzer / Chief Financial Officer"*. A segunda via é a forma da parte
+  local: **inicial do primeiro nome + sobrenome**, única para cada um dos seis. As duas vias dão a mesma
+  resposta.
+- **Por que ELE e não outra pessoa da casa:** dos seis publicados, quatro são negócio e produção (os dois
+  CEOs produtores, o produtor Mark Mertens e o CFO) e o Yannick Czukor é **produção**. O Guillaume
+  Vialaneix é o **único cargo de ofício criativo com endereço publicado**, e é **Co-Director** da casa,
+  não empregado. Yannick Czukor fica como **SEGUNDA e última** possível. **Atenção de cota:** a carta de
+  28/08 foi para `c.parisse@`, que é **endereço de pessoa**, então esta é a **segunda pessoa** da casa e
+  a cota fecha aqui.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"FABRIQUE D'IMAGES was launched in 2002 in
+  Luxembourg by two graphic designers, Christine Parisse and Jean-Marie Musique"*, e a frase que é o
+  melhor gancho para um sênior de fora: *"Our programs are carried by a talented team of **more than 70
+  people** whose field of expertise ranges from the most creative to the most technical, **from 2D to
+  3D**, from the initial idea to the final image"*, com o diferencial que eles mesmos escrevem —
+  *"The particularity of our studio is to have its **directors and artistic directors in-house** and to
+  work on our original programs. Our artists are able to meet any challenge!"* O encaixe de personagem
+  é o catálogo, não suposição minha: **THE LAST DINOSAUR** e **ARVIL THE LITTLE FALCON** e **DUDLEY**
+  estão marcados *"in production"* em https://www.fabrique-d-images.com/our-projects/ , e o catálogo
+  entregue traz **STITCH HEAD** (2025), **KLINCUS** e **DINO-MITE** (2024), **PERCY'S TIGER TALES**
+  (2023), **MY FAIRY TROUBLEMAKER** (2022), **BAYALA** (2019) e **LUIS AND THE ALIENS** (2018) — dinossauro,
+  falcão, monstrinho, tigre, fada e alienígena são elenco para esculpir.
+- **A casa está CONTRATANDO agora, e isso muda o tom da carta:** https://www.fabrique-d-images.com/job-cards/
+  lista, nesta rodada, *"JOB IN LUXEMBOURG : Technical Director"*, *"JOB IN LUXEMBOURG : Senior Production
+  Manager / Line Producer"*, *"JOB IN LUXEMBOURG : Compositing Artist"*, *"JOB IN LUXEMBOURG : 2D Cut-out
+  animator"* e *"JOB IN LUXEMBOURG : 2D Compositing Artist"*. **Nenhuma é de personagem**, então a carta
+  não pode fingir responder a um anúncio: ela é carta de porta, e o pedido é o fechamento fixo da campanha.
+- **Fora dos EUA?** Sim — Luxemburgo (115c, rue Emile Mark, L-4620 Differdange), União Europeia. A frase
+  de realocação entra inteira e a de patrocínio também.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 135 registra `c.parisse@fabrique-d-images.com` em
+  **28/08** como `enviado`; `alvos.csv` linha 112 classifica a casa como *"Differdange; The Picture Factory
+  com ~70 artistas 2D/3D"*, encaixe **médio**, com fonte no guia oficial do Film Fund. `pessoas.csv`:
+  **zero** pessoa da casa, e `g.vialaneix@` não existe em arquivo nenhum do repositório. **NA CAIXA:**
+  `search_threads` por `fabrique-d-images OR "Fabrique d'Images" OR Vialaneix OR Parisse` devolveu **uma**
+  thread com **duas mensagens, as duas enviadas** (carta de 28/08 e follow-up de 07/09 na mesma thread),
+  **sem resposta humana, sem bounce, sem recusa**. Segunda pessoa da casa, e a última.
+- **Ressalva honesta:** (1) a casa se descreve como quem *"develop, finance and produce"*, ou seja é
+  **produtora** — é o mesmo caso da MovieBrats, e parte da fabricação pode acontecer em coprodução; (2) o
+  cargo é **Head of Animation**, animação e não modelagem ou escultura, então o encaixe é "quem manda no
+  elenco em movimento", não "quem contrata modelador"; (3) **duas das cinco vagas abertas são 2D cut-out
+  e 2D compositing**, o que confirma que uma fatia grande do pipeline dela é 2D; (4) a casa **já levou
+  carta e follow-up** no endereço de uma das donas, então esta é a terceira batida no mesmo domínio;
+  (5) Luxemburgo é mercado pequeno e o incentivo fiscal local costuma vir com exigência de gasto local, o
+  que aperta contratação de estrangeiro.
+
