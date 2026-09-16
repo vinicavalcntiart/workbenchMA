@@ -393,6 +393,7 @@ function enviarRascunhos() {
  * ========================================================================== */
 
 const ASSUNTO_PROPRIO_PERMITIDOS = [
+  "jobs@secretlevelstudios.com",  // Secret Level Studios, Letchworth Garden City (UK): Art Lead / Art Director (Character Art). A vaga manda escrever com o assunto "Art Lead / Director Application" e pede CV e portfolio anexos (16/09)
   "vfx_hr@ufxstudios.com",       // UFX Studios, Bruxelas
   "jobs@thqnordicmobile.com",    // HandyGames / THQ Nordic Mobile, Giebelstadt
   "info@keytoon.com",            // Keytoon, Madri

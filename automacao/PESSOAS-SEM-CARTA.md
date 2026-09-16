@@ -4701,3 +4701,5 @@ por semana no escritório (terça e quarta) e três remotos**.
    dele, e isso se diz em vez de se esconder.
 3. A vaga **não diz uma palavra sobre patrocínio de visto**, e o híbrido exige presença semanal
    em Letchworth. O visto precisa ser aberto na carta, não deixado para a entrevista.
+
+> **Maestro, 16/09 22h05 UTC:** carta da **Secret Level Studios (Art Lead / Art Director, Character Art)** escrita e gravada como rascunho `r-8873142809096571374`, com o assunto que a casa exige (`Art Lead / Director Application`), 232 palavras, `confere-carta.py` limpo, localização atual e aceite do híbrido escritos como a vaga pede, ressalvas de animação e de visto ditas. O endereço entrou em `ASSUNTO_PROPRIO_PERMITIDOS` do `envia-rascunhos.gs` (anexa CV e carta): **o Vini precisa colar a versão nova do script no Apps Script antes de rodar `enviarRascunhos()`**, senão este rascunho fica parado por assunto fora do padrão.
