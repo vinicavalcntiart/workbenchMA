@@ -1,0 +1,255 @@
+<title>Fila de Cliques</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#EAEDEF; --surface:#FFFFFF; --sunk:#E0E5E8; --line:#CBD3D8;
+    --ink:#15191C; --muted:#5C6975; --faint:#8794A0;
+    --clay:#B24A22; --clay-soft:#F6E3DB; --clay-ink:#8E3A1A;
+    --ok:#2E6B4A; --ok-soft:#DCEBE2;
+    --hold:#8A6412; --hold-soft:#F4E9CF;
+    --focus:#0E6F8C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12171A; --surface:#1A2126; --sunk:#151B1F; --line:#2B353C;
+      --ink:#E4EAEE; --muted:#93A2AE; --faint:#6B7A86;
+      --clay:#E07B4C; --clay-soft:#301810; --clay-ink:#F0A281;
+      --ok:#6FC194; --ok-soft:#14261C;
+      --hold:#D6A64B; --hold-soft:#2A2113;
+      --focus:#5BC4DE;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12171A; --surface:#1A2126; --sunk:#151B1F; --line:#2B353C;
+    --ink:#E4EAEE; --muted:#93A2AE; --faint:#6B7A86;
+    --clay:#E07B4C; --clay-soft:#301810; --clay-ink:#F0A281;
+    --ok:#6FC194; --ok-soft:#14261C;
+    --hold:#D6A64B; --hold-soft:#2A2113;
+    --focus:#5BC4DE;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);
+       font:400 16px/1.55 "Source Sans 3","Segoe UI",system-ui,sans-serif;margin:0}
+  .wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:32px 72px}
+  h1,h2,.lab,.n{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;
+                letter-spacing:.01em;text-wrap:balance}
+  code,.mono,.chip,.abrir{font-family:"JetBrains Mono",ui-monospace,monospace}
+
+  /* ---- topo ---- */
+  .lab{text-transform:uppercase;letter-spacing:.13em;font-size:12px;color:var(--clay)}
+  h1{font-size:clamp(34px,7vw,52px);line-height:.98;margin:6px 0 10px;font-weight:700}
+  .sub{color:var(--muted);max-width:62ch;margin:0 0 26px}
+  .sub b{color:var(--ink);font-weight:600}
+
+  .placar{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-bottom:12px}
+  .medidor{flex:1 1 260px;background:var(--surface);border:1px solid var(--line);
+           border-radius:3px;padding:14px 16px}
+  .medidor .n{font-size:40px;line-height:1;font-variant-numeric:tabular-nums;color:var(--clay)}
+  .medidor .u{color:var(--muted);font-size:13px;margin-left:6px}
+  .barra{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden;margin-top:10px}
+  .barra i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+  .reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:3px;
+         padding:6px 10px;font:500 12px "JetBrains Mono",monospace;cursor:pointer}
+  .reset:hover{border-color:var(--clay);color:var(--clay)}
+
+  /* ---- respostas padrao ---- */
+  .dossie{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+          padding:16px 18px;margin:18px 0 34px}
+  .dossie h2{font-size:17px;margin:0 0 4px}
+  .dossie>p{color:var(--muted);font-size:14px;margin:0 0 14px}
+  .campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;
+          background:var(--line);border:1px solid var(--line)}
+  .campo{background:var(--surface);padding:9px 11px}
+  .campo dt{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;
+            letter-spacing:.09em;font-size:11px;color:var(--faint)}
+  .campo dd{margin:2px 0 0;font-size:14px;word-break:break-word}
+  .campo dd.mono{font-size:13px}
+  .privado{margin-top:12px;padding:9px 11px;background:var(--hold-soft);
+           border-left:3px solid var(--hold);font-size:13.5px;color:var(--ink)}
+
+  /* ---- grupos ---- */
+  .grupo{margin:0 0 34px}
+  .grupo-cab{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;
+             padding:0 0 10px;border-bottom:2px solid var(--ink);margin-bottom:0}
+  .grupo-cab h2{font-size:26px;margin:0;line-height:1.1}
+  .explica{margin:3px 0 0;color:var(--muted);font-size:14px;max-width:52ch}
+  .grupo-num{text-align:right;flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end}
+  .grupo-num .n{font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+  .grupo-num .u{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:var(--faint);
+                font-family:"Barlow Condensed",sans-serif}
+  .grupo-num .alta{font-size:11.5px;color:var(--clay);margin-top:3px}
+
+  .portas{list-style:none;margin:0;padding:0}
+  .porta{border-bottom:1px solid var(--line);padding:11px 2px}
+  .linha{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+  .porta .feito{position:absolute;opacity:0;width:1px;height:1px}
+  .marca{width:19px;height:19px;border:1.5px solid var(--faint);border-radius:2px;
+         cursor:pointer;display:block;position:relative;flex:0 0 auto}
+  .marca:hover{border-color:var(--clay)}
+  .feito:focus-visible+.marca{outline:2px solid var(--focus);outline-offset:2px}
+  .feito:checked+.marca{background:var(--ok);border-color:var(--ok)}
+  .feito:checked+.marca::after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:10px;
+         border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+  .topo{display:flex;flex-wrap:wrap;gap:7px;align-items:baseline}
+  .casa{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:19px;line-height:1.15}
+  .vaga{margin:1px 0 0;font-size:14px;color:var(--muted)}
+  .local{margin:1px 0 0;font-size:12.5px;color:var(--faint);font-family:"JetBrains Mono",monospace}
+  .chip{font-size:10.5px;letter-spacing:.04em;padding:2px 6px;border-radius:2px;
+        text-transform:uppercase;white-space:nowrap}
+  .d-personagem{background:var(--clay-soft);color:var(--clay-ink)}
+  .d-superficie,.d-grooming,.d-outro{background:var(--sunk);color:var(--muted)}
+  .prio{background:transparent;color:var(--clay);border:1px solid var(--clay)}
+  .nc{background:var(--hold-soft);color:var(--hold)}
+  .veto{background:var(--clay);color:#fff}
+  .revalidado{background:var(--surface);border-left:3px solid var(--ok);padding:11px 14px;
+              margin:0 0 16px;font-size:14px;color:var(--muted)}
+  .revalidado b{color:var(--ink)}
+  .abrir{text-decoration:none;font-size:12.5px;padding:7px 13px;border:1px solid var(--clay);
+         color:var(--clay);border-radius:2px;white-space:nowrap}
+  .abrir:hover{background:var(--clay);color:#fff}
+  .abrir:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .porta.ok .casa,.porta.ok .vaga{text-decoration:line-through;color:var(--faint)}
+  .porta.ok .chip,.porta.ok .local{opacity:.45}
+
+  /* ---- textos prontos ---- */
+  .textos{margin:8px 0 0 31px}
+  .textos>summary{cursor:pointer;font:500 12px/1.6 "JetBrains Mono",monospace;color:var(--focus);
+         list-style:none;display:inline-block;padding:2px 0;border-bottom:1px dotted var(--focus)}
+  .textos>summary::-webkit-details-marker{display:none}
+  .textos>summary::before{content:"▸ ";font-size:11px}
+  .textos[open]>summary::before{content:"▾ "}
+  .textos>summary:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .textos-corpo{margin:10px 0 6px;display:flex;flex-direction:column;gap:12px}
+  .texto{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:11px 13px}
+  .texto-cab{display:flex;gap:10px;justify-content:space-between;align-items:baseline}
+  .texto-rot{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;
+             letter-spacing:.09em;font-size:11.5px;color:var(--faint)}
+  .texto-nota{margin:5px 0 0;font-size:12.5px;color:var(--faint)}
+  .copiar{background:none;border:1px solid var(--line);color:var(--muted);border-radius:2px;
+          padding:3px 9px;font:500 11px "JetBrains Mono",monospace;cursor:pointer;flex:0 0 auto}
+  .copiar:hover{border-color:var(--clay);color:var(--clay)}
+  .copiar.feita{border-color:var(--ok);color:var(--ok)}
+  .corpo-texto{margin:7px 0 0;white-space:pre-wrap;font:400 14.5px/1.6 "Source Sans 3",
+               "Segoe UI",system-ui,sans-serif;background:var(--sunk);border-radius:2px;
+               padding:10px 12px;user-select:all}
+  .dossie-txt{margin-top:7px;font-size:13.5px;color:var(--muted);max-height:22em;overflow:auto}
+  .dossie-txt p{margin:0 0 5px}
+  .dossie-txt .dt-tit{font-family:"Barlow Condensed",sans-serif;font-size:15px;color:var(--ink)}
+  .dossie-txt .dt-item{padding-left:12px;text-indent:-8px}
+  .dossie-txt b{color:var(--ink)}
+  .tab{border-collapse:collapse;width:100%;margin:4px 0 8px;font-size:13px;display:block;
+       overflow-x:auto}
+  .tab td{border:1px solid var(--line);padding:4px 7px;vertical-align:top}
+
+  .rodape{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+          color:var(--faint);font-size:13px}
+  @media (max-width:520px){
+    .linha{grid-template-columns:auto 1fr;row-gap:8px}
+    .abrir{grid-column:2;justify-self:start}
+    .grupo-cab{flex-direction:column;gap:8px}
+    .grupo-num{text-align:left;align-items:flex-start;flex-direction:row;gap:8px;align-items:baseline}
+    .textos{margin-left:0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<p class="lab">Campanha Vini Cavalcanti &middot; 16 set 2026</p>
+<h1>{{N}} candidaturas a um clique</h1>
+<p class="sub">Toda porta desta página tem <b>dossiê preenchido campo a campo</b> e parou no mesmo lugar: uma verificação que só passa de um navegador com sessão humana. Do IP da automação, nenhuma passa. As portas estão agrupadas <b>pelo clique que você tem de dar</b>, não por estúdio, porque quinze hCaptcha seguidos custam menos que quinze paredes diferentes.</p>
+
+<p class="revalidado">Novidade de hoje: cada porta abre em <b>texto pronto para colar</b>, com a <b>carta escrita para aquela vaga</b>, a bio de "tell us about yourself" e o resumo de uma linha. Nenhuma foi escrita duas vezes, e o gancho de cada uma sai do anúncio que a campanha leu. <b>{{COM_CARTA}} das {{N}} portas</b> vêm com os três textos.</p>
+<p class="revalidado" style="border-left-color:var(--hold)">Correção da versão anterior, e ela baixa o número: aquela página dizia 77 portas, mas <b>a mesma vaga da Framestore aparecia três vezes</b>, com o mesmo endereço, em dois grupos diferentes. São <b>{{N}} portas distintas</b>. Número inflado não vale como resultado.</p>
+<div class="placar">
+  <div class="medidor">
+    <span class="n" id="feitas">0</span><span class="u">de {{N}} enviadas</span>
+    <div class="barra"><i id="barra"></i></div>
+  </div>
+  <div class="medidor">
+    <span class="n" id="restam">{{N}}</span><span class="u">restam &middot; <span id="restam-alta">{{ALTA}}</span> de prioridade alta</span>
+    <div style="margin-top:10px"><button class="reset" id="zerar" type="button">zerar marcações</button></div>
+  </div>
+</div>
+
+<section class="dossie">
+  <h2>O que vai em todo formulário</h2>
+  <p>As respostas já decididas da campanha. Copie daqui e não improvise nenhuma.</p>
+  <dl class="campos">
+    <div class="campo"><dt>Nome</dt><dd>Vini Cavalcanti</dd></div>
+    <div class="campo"><dt>Email</dt><dd class="mono">contact@vinicavalcanti.art</dd></div>
+    <div class="campo"><dt>Portfólio</dt><dd class="mono">artstation.com/viniciuscavalcanti</dd></div>
+    <div class="campo"><dt>LinkedIn</dt><dd class="mono">linkedin.com/in/vinicavalcnti</dd></div>
+    <div class="campo"><dt>Site</dt><dd class="mono">vinicavalcanti.com</dd></div>
+    <div class="campo"><dt>Autorização de trabalho</dt><dd>Não tem nos EUA, Canadá, Austrália e Nova Zelândia; não é cidadão da UE; precisa de patrocínio. <b>Nunca marque o contrário.</b></dd></div>
+    <div class="campo"><dt>Salário atual</dt><dd>Confidential under the NDA of my current contract; happy to discuss ranges during the process.</dd></div>
+    <div class="campo"><dt>Pretensão sem faixa publicada</dt><dd>casa grande: USD 100k &middot; CAD 95k &middot; GBP 50k &middot; EUR 55k &middot; AUD 110k. Casa média: 85 &middot; 80 &middot; 42 &middot; 45 &middot; 95.</dd></div>
+    <div class="campo"><dt>Se houver faixa publicada</dt><dd>peça a base da faixa, nunca acima nem abaixo dela.</dd></div>
+  </dl>
+  <p class="privado"><b>Telefone e endereço não entram aqui.</b> Esta página é pública. Os dois moram só no documento privado do Drive, <i>CAMPANHA &ndash; dados pessoais dos formulários</i>. Formulário com seletor de país separado: escolha <span class="mono">BR (+55) Brazil</span> e digite só os dígitos. Campo único: formato internacional sem espaço.</p>
+</section>
+{{GRUPOS}}
+<p class="rodape">Marcação de progresso fica só no seu navegador. Portas revalidadas uma a uma em 16 de setembro: as que não responderam 200 daqui estão marcadas <b>não conferida</b>, o que não quer dizer que morreram, e uma saiu da lista por <span class="mono">410 Gone</span>. Telefone, endereço e data de nascimento moram no documento privado do Drive, nunca aqui.</p>
+</div>
+<script>
+(function(){
+  var K='fila-cliques-v3', salvo={};
+  try{ salvo=JSON.parse(localStorage.getItem(K)||'{}')||{}; }catch(e){ salvo={}; }
+  var portas=[].slice.call(document.querySelectorAll('.porta'));
+  var elFeitas=document.getElementById('feitas'),
+      elRestam=document.getElementById('restam'),
+      elAlta=document.getElementById('restam-alta'),
+      elBarra=document.getElementById('barra');
+  function guarda(){ try{ localStorage.setItem(K,JSON.stringify(salvo)); }catch(e){} }
+  function conta(){
+    var n=0, altaAberta=0;
+    portas.forEach(function(p){
+      var cx=p.querySelector('.feito');
+      if(cx.checked){ n++; } else if(p.querySelector('.prio')){ altaAberta++; }
+      p.classList.toggle('ok',cx.checked);
+    });
+    elFeitas.textContent=n;
+    elRestam.textContent=portas.length-n;
+    elAlta.textContent=altaAberta;
+    elBarra.style.width=(portas.length? (n/portas.length*100):0)+'%';
+  }
+  portas.forEach(function(p){
+    var id=p.dataset.id, cx=p.querySelector('.feito');
+    cx.checked=!!salvo[id];
+    cx.addEventListener('change',function(){ salvo[id]=cx.checked; guarda(); conta(); });
+  });
+  document.getElementById('zerar').addEventListener('click',function(){
+    salvo={}; guarda();
+    portas.forEach(function(p){ p.querySelector('.feito').checked=false; });
+    conta();
+  });
+  // copiar: a area de transferencia pode estar barrada dentro do quadro, entao ha DOIS planos
+  // de reserva, e o ultimo deles deixa o texto JA SELECIONADO para o Ctrl+C.
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest && ev.target.closest('.copiar');
+    if(!b) return;
+    var alvo=document.getElementById(b.dataset.alvo);
+    if(!alvo) return;
+    var txt=alvo.textContent, pronto=function(){
+      b.textContent='copiado'; b.classList.add('feita');
+      setTimeout(function(){ b.textContent='copiar'; b.classList.remove('feita'); },1800);
+    };
+    var velho=function(){
+      var ta=document.createElement('textarea');
+      ta.value=txt; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='-1000px';
+      document.body.appendChild(ta); ta.select();
+      var ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta);
+      if(ok){ pronto(); return; }
+      var r=document.createRange(); r.selectNodeContents(alvo);
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      b.textContent='selecionado, Ctrl+C';
+      setTimeout(function(){ b.textContent='copiar'; },2600);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(pronto,velho);
+    } else { velho(); }
+  });
+  conta();
+})();
+</script>

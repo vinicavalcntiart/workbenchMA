@@ -1,5 +1,21 @@
 # FILA DO VINI — 43 candidaturas VIVAS (revalidada uma a uma na fonte oficial em 08/09 à noite)
 
+## 🖱️ A FILA DE CLIQUES AGORA VEM COM O TEXTO ESCRITO — https://claude.ai/artifact/QcAt1Ym3zeCWZM764LLq9N
+
+**Cobrança dele em 16/09, e ela estava certa:** *"nessa fila de cliques n tem as cartas de
+recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os endereços e o
+dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
+**carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
+
+**O número baixou de propósito: são 75 portas, não 77.** A mesma vaga da Framestore aparecia
+**três vezes**, com o mesmo endereço, em dois grupos diferentes. Número inflado não é resultado.
+
+Nenhuma carta foi escrita duas vezes: o gancho de cada uma sai do anúncio que a campanha leu, a
+semelhança máxima entre duas cartas do lote é de 24% (o teto que a campanha aceita é 55%), e
+`automacao/confere-lote-formulario.py` reprova emoji, travessão, floreio, menção a salário e
+**nome próprio que não esteja na prova daquela porta** — a guarda contra atribuir à casa um
+filme, um prêmio ou um cliente que ela não tem.
+
 ## 📬 LOTE DE CARTAS — **9 rascunhos na fila, um comando seu** (estado de 15/09 às 19h45)
 
 **O lote anterior SAIU, e isto foi conferido na caixa e não suposto.** As buscas `in:sent` mostram
