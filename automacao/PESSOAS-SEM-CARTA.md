@@ -4519,3 +4519,11 @@ Autrechose), e nenhum deles deve virar carta:**
 2. **O dedupe do Gmail vem ANTES de escolher a pessoa.** A tinyBuild tinha cargo criativo, endereço
    literal e casa de personagem, e a casa já havia recusado por escrito em 07/09. Montar a ficha primeiro
    e conferir a caixa depois custa a rodada inteira de uma casa boa.
+
+## MAESTRO, 16/09 17h20 UTC — lote das 16h35 escrito, quatro cartas
+
+- **Guillaume Vialaneix (Fabrique d'Images):** rascunho `r8475083916284819541`, gancho nos diretores artísticos internos e nos três projetos em produção; diz que viu as cinco vagas de Luxemburgo e que nenhuma é de personagem.
+- **Michael Brandstetter (Digital Rain):** rascunho `r1743173961458051563`, gancho no serviço "Character Creation" e no filtro Character do portfólio.
+- **Ralph Kamp (Timeless Films):** rascunho `r7926989738467250603`, gancho no catálogo estilizado e na produção interna (Scrooge na Netflix).
+- **Michał Amielańczyk (Mechanistry):** rascunho `r568634798453027820`, escrita como pedido de encaminhamento a quem manda na arte, porque o cargo é comunicação. Diferente do caso Budge: aqui é casa de dez pessoas e encaminhar é o ofício dele.
+- Lote conferido pelo `confere-carta.py`: limpo, semelhança máxima 37%. Linha do Budge no `pessoas.csv` (campo com vírgula sem aspas) consertada.
