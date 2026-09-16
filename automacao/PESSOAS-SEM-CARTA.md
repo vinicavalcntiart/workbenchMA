@@ -3405,3 +3405,343 @@ cerca de 3.060 requisições) e a maioria **não faz 3D**. Nenhum destes deve vo
 - **Aardman** (UK) — carta em 09/09 para `pauline.mallam@aardman.com`. Resta uma.
 - **b.water Animation Studios** (DE/ES) — teto: carta em 26/08 e **resposta humana** de Idayra do
   Operations Department em 26/08. Casa já ativa, não reabrir a frio.
+
+---
+
+# RODADA DO JOE, 16/09 03h35 UTC — SEIS FICHAS, **TODAS COM ENDEREÇO PUBLICADO**, ZERO MONTADO
+
+**A rodada foi pedida com uma prioridade só: ENDEREÇO PUBLICADO**, porque o lote do maestro está
+travado por falta de endereço e não por falta de nome (doze das quinze fichas pendentes são
+`sem-email`). **As seis abaixo têm endereço visto escrito literalmente, com a URL exata, e
+nenhuma linha desta rodada tem endereço montado por padrão de domínio.**
+
+**E a `alvos-joe-wikidata.csv` não foi o que rendeu — vale registrar por quê.** Recorrida com um
+rastreador que, diferente da varredura de caminhos chutados de 15/09, **segue os links internos
+reais** de cada site (`/contact`, `/team`, `/about`, `/impressum`, `/kontakt`, `/over-ons`,
+`/jobs` …) e **decodifica `data-cfemail` do Cloudflare**, a lista de 167 casas devolveu endereço
+de pessoa em pouquíssimos domínios, e **um só virou ficha** (MovieBrats). O que rendeu de verdade
+foi **`automacao/garimpo-cgstudiomap.csv`**: 480 casas de CG/VFX/animação que o repositório já
+conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 6 fichas.
+
+| Pessoa | Cargo | Casa | País | Endereço | Confiança |
+|---|---|---|---|---|---|
+| Kaj Steveman | CEO & Executive Producer | FABLEfx | Suécia | `kaj@fablefx.com` | alta, publicado |
+| Nicolas Fuminier | Partner, Head of 3D & compositing | Studio Kippik | França | `nicolas@kippik.fr` | alta, publicado |
+| Tom Schirdewahn | VP Art & Creative | MovieBrats Pictures | Alemanha | `tom@moviebratspictures.com` | alta, publicado |
+| Jon Campfens | Co-founder / VFX Supervisor | Switch VFX & Animation | Canadá | `jonc@switchent.com` | alta, publicado |
+| Bill Otomo | Directeur artistique / Auteur graphique | La Chouette Compagnie | França | `bill@chouettecie.com` | alta, publicado |
+| Maarten Braaksma | Project Lead | Buckethead Entertainment | Holanda | `maarten@bucketheadentertainment.com` | alta, publicado |
+
+---
+
+### Kaj Steveman — **CEO & Executive Producer** — FABLEfx, Estocolmo, Suécia (com braço em Londres) — **a ficha mais forte da rodada, e a disciplina é literal**
+
+- **Email:** `kaj@fablefx.com` · confiança **alta** · **PUBLICADO**, com nome e cargo na mesma
+  linha, em **https://www.fablefx.com/contactus**, aberta nesta rodada: *"CONTACT Kaj Steveman -
+  CEO & Executive Producer kaj@fablefx.com"*.
+- **Por que ELE e não outra pessoa da casa:** a página de contato publica **duas** pessoas, e a
+  outra é **James Prosser, Studio Director FABLEfx UK**, cujo endereço é
+  `james.prosser@fablefx.co.uk` — **outro domínio**. Casa boutique e "cloud-based": pelo
+  `BRIEF-JOE`, em casa pequena o alvo é o fundador/CEO, que responde ele mesmo. James Prosser fica
+  como **SEGUNDA e última** possível. **Atenção de método:** o domínio do braço britânico é
+  `fablefx.co.uk` e o do sueco é `fablefx.com` — é a armadilha da Stunlock outra vez, e é a prova
+  de que **endereço literal vence padrão**: montar `james.prosser@fablefx.com` teria quicado.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"At FABLEfx, we specialise in digital
+  animals. With VFX experience since the 1990s, we are experts in Creature FX. Our Digital Zoo
+  features over 120 ready-to-use animal assets"*, e a frase que fecha o encaixe com o portfólio do
+  Vini: *"We handle everything from **creature design, asset build** and animation to rendering and
+  compositing, delivering photorealistic creations with true soul."* O slogan do site é **"Your
+  Digital Zoo"**. Animal fotorrealista é **modelagem, escultura, superfície e PELO** — ou seja o
+  **grooming em Houdini** entra aqui por direito, e não como enfeite.
+- **A casa convida por escrito, e isso muda o tom da carta:** em
+  **https://www.fablefx.com/careers** está *"Open Application — We are always looking for talented
+  people so feel free to send in an open application to make us aware about what you could bring to
+  the flock."* E no rodapé do contato: *"No open position and you still think you're a perfect
+  match? Send your awesome reel to: careers@fablefx.com"*. A carta **não** deve ir para
+  `careers@`: o endereço da pessoa existe e é melhor porta.
+- **Fora dos EUA?** Sim — Suécia (Estocolmo), União Europeia, com sociedade britânica separada
+  (FABLEfx UK LTD, Covent Garden). A frase fixa de realocação entra inteira.
+- **Dedupe NA CAIXA:** `search_threads` por `fablefx OR "FABLEfx" OR Steveman` devolveu **zero**.
+  No repositório, `fablefx` só aparece em dois lugares e **nenhum é carta**:
+  `automacao/garimpo-cgstudiomap.csv` (08/09, checagem de quadro de vaga: *"a pagina de carreiras
+  responde HTTP 200 mas o corpo tem apenas 290 caracteres… PRECISA DE NAVEGADOR"*) e
+  `automacao/BRIEF-JHON.md` (07/09, o caso do **Airtable embutido** que não desenha campo pelo
+  proxy). **A casa nunca recebeu carta. PRIMEIRA pessoa desta casa.**
+- **Ressalva honesta:** (1) o cargo é **CEO e Executive Producer**, ou seja produção e negócio, não
+  direção de arte — ele decide, mas não desenha; (2) a palavra **"Creature FX"** aparece na
+  autodescrição e na ILM ela significa **simulação**, que está fora da disciplina do Vini — o que
+  salva a ficha é a mesma página escrever *"creature design, asset build"* com todas as letras, e é
+  **essa** parte que a carta deve citar, não a sigla; (3) o catálogo é **publicidade** (D&AD, Clio,
+  Epica, LIA), não longa nem série, então é trabalho curto e por projeto; (4) o quadro de vagas
+  monta em JavaScript e o formulário é **Airtable**, que já foi medido como ilegível por esta rede
+  — **a carta é a única porta legível daqui**, e isso é argumento a favor dela.
+
+---
+
+### Nicolas Fuminier — **Partner, Head of 3D & compositing** — Studio Kippik, Paris, França — **a casa que escreve "Sculpting" na própria lista de ofícios**
+
+- **Email:** `nicolas@kippik.fr` · confiança **alta** · **PUBLICADO** com nome e cargo no mesmo
+  cartão, em **https://www.kippik.fr/about-us**, aberta nesta rodada. O HTML cru confirma o
+  pareamento sem ambiguidade: `<div>Nicolas <br/>Fuminier</div><div>Partner</div><div>Head of 3D
+  &amp; compositing</div><a href="mailto:nicolas@kippik.fr">`.
+- **Por que ELE e não outra pessoa da casa:** a casa publica **três sócios, os três com endereço**
+  — Anaëlle Moreau (Partner, **Head of animation**, `anaelle@kippik.fr`), Thomas Poulain (Partner,
+  **Artistic director**, `thomas@kippik.fr`) e ele. **Nicolas é o chefe do 3D**, e o que o Vini faz
+  — escultura, modelagem, textura e shading de personagem — mora inteiro debaixo desse cargo.
+  Anaëlle é animação, que não é o ofício dele. Thomas Poulain fica como **SEGUNDA e última**
+  possível, e é o alvo natural se o Nicolas não responder.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a lista de ofícios que a casa publica é
+  literalmente *"Direction · Art direction · Production · **Character design** · Rigging ·
+  Animation · Environment Design · **Sculpting** · **Texturing / Shading** · Rendering · Editing ·
+  Grading"*, e ao lado dela: *"We are a parisian animation studio founded in 2012 by three former
+  students of the Ecole Nationale Supérieure des Arts Décoratifs de Paris"* e *"To guarantee
+  creative excellence, **we keep the whole production process internal**."* Essa última é o ponto
+  de apoio da carta: pipeline interno quer dizer que o personagem é feito ali dentro, não
+  terceirizado.
+- **Fora dos EUA?** Sim — França (3 square de la Tour Maubourg, Paris 7e), União Europeia.
+- **Dedupe NA CAIXA:** `search_threads` por `kippik` (na consulta conjunta com chouette, switchent
+  e lagoonstudios) devolveu **zero**, e a busca por `Fuminier` também. No repositório, `kippik` só
+  aparece em `automacao/garimpo-cgstudiomap.csv`, numa checagem de **quadro de vaga** de 08/09
+  (*"Pagina de carreiras lida (mailto:jobs@kippik.fr): nenhum titulo da disciplina"*). **Nenhuma
+  carta saiu para esta casa. PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) é casa **pequena** — três sócios e equipe enxuta, *"Our scale enables
+  us to provide the upmost focus on each project"* — então não há assento fixo de character artist
+  esperando; (2) o trabalho publicado é **animação autoral e publicidade**, não longa nem jogo, e o
+  estilo é declarado *"handcrafted"*, o que costuma querer dizer estilizado e não fotorrealista;
+  (3) existe `jobs@kippik.fr` publicado, e é preciso **não** usá-lo: a carta perde a pessoa;
+  (4) o site data de 2023 no rodapé, então os três cargos podem ter mudado — o pareamento
+  nome-cargo-endereço está no HTML de hoje, mas hoje é a data da página, não a da checagem de RH.
+
+---
+
+### Tom Schirdewahn — **VP Art & Creative** — MovieBrats Pictures, Berlim e Erfurt, Alemanha — **a única ficha que saiu da lista do Wikidata**
+
+- **Email:** `tom@moviebratspictures.com` · confiança **alta** · **PUBLICADO** com nome, cargo e
+  endereço no mesmo cartão de equipe, em **https://moviebratspictures.com/company**, aberta nesta
+  rodada. HTML cru: `<div class="name">Tom Schirdewahn</div><div class="position">VP Art &
+  Creative</div>…<a href="mailto:tom@moviebratspictures.com">`.
+- **Por que ELE e não outra pessoa da casa:** a página publica **quatro** pessoas e três delas são
+  negócio — Esther Friedrich (CEO/Producer), Alexander Weimer (Partner/Producer, e o endereço dele
+  é a **caixa** `hello@`) e Uyen Gia Ha (Head of Marketing). **Tom Schirdewahn é o único cargo de
+  ARTE da casa inteira**, e o título diz "VP **Art** & Creative". Não é lead de ambiente, então a
+  regra de 10/09 está respeitada. Esther Friedrich fica como **SEGUNDA e última** possível.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"MovieBrats Pictures is an independent
+  film production house with offices in Berlin and Erfurt, developing, producing, and co-producing
+  commercially viable, high-quality feature films and serial content in both, live-action and
+  animation."* E o projeto que dá o gancho de personagem: *"the **3D animated** fantasy comedy
+  **THE DUMPLING QUEEN**, a co-production with China"*, cuja sinopse publicada em
+  **https://moviebratspictures.com/projects/the-dumpling-queen/** diz que a protagonista vence a
+  concorrência *"by **summoning magically animated food spirits** to help her run her kitchen"* —
+  elenco de criaturas, que é exatamente o que o Vini modela. A mesma página marca a seção **Visual
+  Development** e o projeto está em **Development**, que é a fase em que se escolhe quem faz o
+  elenco.
+- **Fora dos EUA?** Sim — Alemanha (Berlim e Erfurt), União Europeia. Frase de realocação inteira.
+- **Dedupe NA CAIXA:** `search_threads` por `moviebrats OR moviebratspictures OR Schirdewahn`
+  devolveu **zero**. No repositório há **uma** ocorrência, e ela **não é carta**: em 07/09 o agente
+  europeu registrou a casa num lote de `checado-sem-vaga` em `automacao/processados.csv`
+  (*"checados individualmente, sem vaga da disciplina ou fora do ramo"*), e o
+  `europa-mr-reabertos-07-09.csv` guarda a leitura do domínio antigo `moviebrats.com`. **Conferi a
+  identidade**, porque dois domínios parecidos já enganaram esta campanha nove vezes:
+  `moviebrats.com` **redireciona para o mesmo site** e o rodapé dos dois é `© MovieBrats Pictures
+  GmbH`. É a mesma casa, e ela **nunca recebeu carta**. PRIMEIRA pessoa.
+- **Ressalva honesta:** (1) é **produtora**, não estúdio com pipeline próprio — *"developing,
+  producing, and co-producing"* — e a Dumpling Queen é **co-produção com a China** (Huawen
+  Pictures, Gravity Pictures), então a execução do 3D provavelmente acontece lá e não em Berlim;
+  (2) o resto do catálogo é **live action** (ZOOLOGY, GEISTER, THE TUPILAQ) e o outro projeto
+  animado, ADAM, é **2D/3D** dirigido pelo time de *I Lost My Body*, que é 2D; (3) a casa não tem
+  página de vagas nenhuma — é carta de porta, não de vaga; (4) a foto do Tom no site tem caminho
+  `wp-content/uploads/**2016**/07/`, ou seja o cartão dele está no ar há muito tempo — o cargo
+  **pode estar desatualizado**, e cargo velho é pior que alvo nenhum.
+
+---
+
+### Jon Campfens — **Co-founder Switch VFX / VFX Supervisor** — Switch VFX & Animation, Toronto, Canadá — **e o Canadá é o país número um do BRIEF-JOE**
+
+- **Email:** `jonc@switchent.com` · confiança **alta** · **PUBLICADO** no cartão dele em
+  **https://www.switchent.com/about-us/**, aberta nesta rodada. HTML cru: `<h5>Jon Campfens</h5>
+  <h6>Co-founder Switch VFX / VFX Supervisor</h6> … <a href="mailto:jonc@switchent.com">`.
+- **Por que ELE e não outra pessoa da casa:** a casa publica **dois** fundadores, e o outro é
+  **Pete Denomme, Executive Producer / CEO** (`peted@switchent.com`), que é produção. **Jon é o
+  supervisor de VFX**, ou seja o lado de ofício, quem olha reel e decide quem entra num projeto.
+  Pete Denomme fica como **SEGUNDA e última** possível.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Two Talents. One Switch."* e *"Our
+  studio can imagine and engineer every aspect of a production pipeline to create original series
+  that are inspiring and sought after PLUS we can do service work that is superior."* O gancho
+  pessoal, e ele é verificável na própria bio publicada: Jon *"has spent three decades working in
+  the film industry… worked with some of the most creative Directors including **Guillermo del
+  Toro**, Norman Jewison, and **David Cronenberg**"*, com indicação ao Emmy e prêmio Gemini. A casa
+  também paga o **Switch Scholarship** em cinco faculdades de Ontário e hospeda o **Animation
+  Lounge** — é casa que fala com quem está chegando, e isso é argumento para a carta fria.
+- **Fora dos EUA?** Sim — Canadá (128a Sterling Road, Toronto). **Canadá é o topo da ordem de
+  país do `BRIEF-JOE`**, e é onde a carta precisa dizer de frente que ele precisa de patrocínio,
+  porque é o item que o RH usa para cortar e o supervisor é quem atropela.
+- **Dedupe NA CAIXA:** `search_threads` por `switchent OR "Switch VFX"` e por `Campfens` devolveu
+  **zero** nas duas. No repositório, `switchent` só aparece em `automacao/garimpo-cgstudiomap.csv`,
+  e a linha diz exatamente que a casa **não tem quadro de vagas achável**: *"MEDIDO 08/09: o site
+  RESPONDE, mas nao achei pagina de carreiras. Varri os links da home, chutei 14 caminhos"*.
+  **Nenhuma carta. PRIMEIRA pessoa.** E a ausência de quadro é justamente o caso em que a carta
+  para pessoa é a única porta.
+- **Ressalva honesta:** (1) o único recado de contratação que a casa publicou é *"Join Our
+  Compositing Roster!"* — **composição, não personagem**, e a carta não pode fingir que é resposta
+  a isso; (2) VFX Supervisor supervisiona o plano inteiro, não o elenco: não há prova publicada de
+  que a casa faça **criatura ou personagem CG**, o que há é uma divisão de **Animation** com
+  séries próprias; (3) o Canadá exige patrocínio e a campanha já levou veto escrito de autorização
+  em casas canadenses; (4) `switchinfo@switchent.com` é a caixa geral e **não** deve ser usada.
+
+---
+
+### Bill Otomo — **Directeur artistique / Auteur graphique** — La Chouette Compagnie, Montreuil e Angoulême, França — **e o email mora em OUTRO domínio**
+
+- **Email:** `bill@chouettecie.com` · confiança **alta** · **PUBLICADO** na seção *"La chouette
+  équipe"* de **https://www.chouetteco.com/**, aberta e lida no HTML cru nesta rodada. O `mailto:`
+  **envolve a foto dele** (`alt="bill.png"`), e o cartão ao lado traz *"Bill OTOMO"* com
+  *"Directeur artistique"* e *"Auteur graphique"*.
+- **ATENÇÃO, e é a lição de método desta ficha:** o site é **`chouetteco.com`** e **todos os
+  endereços são `@chouettecie.com`**. Qualquer endereço montado sobre o domínio do site teria
+  quicado. É a mesma armadilha da Stunlock, e é o motivo de esta campanha só aceitar endereço
+  visto escrito.
+- **Por que ELE e não outra pessoa da casa:** a página publica **dez** pessoas com nome e cargo, e
+  **nove** endereços. Sylvain Dos Santos (Directeur de la création) e Mariam Hachmi (Directrice
+  générale) são a chefia; Gaelle Autin e Charles Lefebvre aparecem como **Réalisateur/trice** e
+  também directeur/trice artistique, mas **o Charles não tem endereço publicado**; Claire Sun é
+  **Concept Artist** (2D); o resto é produção, jurídico, escrita e administração. **Bill Otomo é o
+  diretor artístico com endereço publicado**, ou seja a cadeira que decide como o elenco de uma
+  série CG se parece. Sylvain Dos Santos fica como **SEGUNDA e última** possível.
+  *Como o pareamento foi feito, para ninguém ter de refazer:* o Wix embaralha a ordem do texto,
+  então cruzei duas provas independentes — o `mailto:` está ancorado na **foto de cada pessoa**
+  (`bill.png`, `claire.png`, `marie hermelin.png`…) e **a parte local de cada endereço é o primeiro
+  nome**, único dentro da equipe (`bill`, `gaelle`, `claire`, `antoine`, `marie`, `brice`, `moira`,
+  `sylvain`, `mariam`, `guillaume`).
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Fondée fin 2014, la Chouette compagnie
+  développe, produit et exploite des séries d'animations en partenariat avec les principaux acteurs
+  français et internationaux du secteur."* O catálogo é elenco puro: **DRONERS** (52 x 26'),
+  **AZURO & la brigade des dragons** (52 x 11'), **LE MONDE SELON KEV**, **IMAGO**, e em 2026 a
+  casa *"produit et livre **DRAGON STRIKER** pour **DISNEY+**, **DREAMLAND** pour ADN, **TAKI
+  TANUKI** pour France Télévisions"*. Uma brigada de dragões e um *Dragon Striker* na Disney+ são,
+  literalmente, criatura para modelar. A página ainda tem a seção **"envie de nous rejoindre?"** e
+  um anúncio vivo (Head of International Sales), o que prova que a casa está contratando.
+- **Fora dos EUA?** Sim — França (Montreuil e Angoulême), União Europeia.
+- **Dedupe NA CAIXA:** `search_threads` por `chouette OR chouettecie` e por `Otomo` devolveu
+  **zero** nas duas. No repositório, `chouette` aparece em `automacao/garimpo-cgstudiomap.csv`
+  (08/09: *"a pagina de carreiras responde HTTP 200 mas o corpo tem apenas 409 caracteres… o quadro
+  monta em JavaScript"*) e uma vez em `fila-remotegamejobs-estudios.csv`, que é **outra coisa**
+  (`chouette.itch.io`, da *Jellyfish Parade*, nos Estados Unidos — falso amigo conferido e
+  descartado). `chouettecie` não existe em lugar nenhum do repositório. **Nenhuma carta. PRIMEIRA
+  pessoa.**
+- **Ressalva honesta:** (1) a Chouette se descreve como quem **"développe, produit et exploite"** —
+  é **produtora de séries**, e a fabricação do 3D costuma acontecer em estúdio parceiro, então a
+  carta não pode afirmar que ela tem pipeline interno; (2) Bill Otomo é **autor gráfico e diretor
+  artístico**, ou seja o lado **2D** do desenho de personagem, e o Vini é 3D — o encaixe é "quem
+  decide como o personagem se parece", não "quem faz o mesmo que eu"; (3) a casa tem **dois
+  endereços físicos** e é pequena; (4) a página não diz a técnica projeto a projeto, e foi
+  exatamente isso que derrubou a Krystallplaneten — aqui o que sustenta o 3D é o formato das
+  séries e as emissoras, não uma frase da casa dizendo "CGI".
+
+---
+
+### Maarten Braaksma — **Project Lead & Programmer (o estúdio é ele e mais um)** — Buckethead Entertainment VOF, Holanda — **a rota holandesa, e é a ficha mais fraca da rodada**
+
+- **Email:** `maarten@bucketheadentertainment.com` · confiança **alta** · **PUBLICADO** no bloco de
+  equipe da home, **https://www.bucketheadentertainment.com/**, aberta nesta rodada: o cartão traz
+  *"Maarten Braaksma — Project Lead & Programmer"* e um `mailto:` direto ao lado dos links de
+  LinkedIn e ArtStation dele.
+- **Por que ELE e não outra pessoa da casa:** **é a única pessoa que a casa publica.** Casa de
+  porte mínimo (VOF, a sociedade simples holandesa), onde o `BRIEF-JOE` manda ir no dono — e o
+  próprio site diz, sobre ele, *"If you're doing business with someone, then it's with him."*
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Welcome to the Buckethead
+  Entertainment web page! **Gameplay is king**"*, e o jogo deles, **RUMBLE**, é descrito assim:
+  *"You're a beginning martial artist with the power to control stone. By striking poses inspired
+  by real-life fighting sports, you can create attacks out of the earth beneath your feet. Test
+  your skills and creativity in the online PVP arena!"* Jogo de luta em primeira pessoa é elenco:
+  corpo, silhueta, material.
+- **Fora dos EUA?** Sim — Holanda (a casa não publica cidade; publica só a forma jurídica,
+  `Buckethead Entertainment VOF`). **Holanda é a rota número um desta rodada.**
+- **Dedupe NA CAIXA:** `search_threads` por `buckethead OR Braaksma` devolveu **zero**. No
+  repositório, `bucketheadentertainment` **não aparece em arquivo nenhum**. **CASA NOVA, PRIMEIRA
+  pessoa.**
+- **Ressalva honesta, e ela é a mais dura das seis:** (1) o cargo é **Project Lead & Programmer** —
+  **não é arte**, e o `BRIEF-JOE` só o aceita porque em casa de duas pessoas o dono é quem decide;
+  (2) a casa **não publica vaga nenhuma** e não tem página de carreiras; (3) o portfólio é
+  **RopeRaid** (2019, AirConsole) e **RUMBLE**, com *"Release date: Soon™"* ainda escrito na home,
+  ou seja o site está desatualizado; (4) o link de ArtStation do cartão dele aponta para a **home
+  do ArtStation**, sem perfil, então não dá para conferir trabalho de arte nenhum ali; (5) a casa é
+  de **gameplay**, e a própria manchete diz isso — arte de personagem não é o que ela vende.
+
+---
+
+### O QUE MORREU NESTA RODADA, com a medição, para a próxima não reabrir
+
+**Mortos por TÉCNICA, conferida no site e não no rótulo:**
+- **Fabelfjord** (NO, Tromsø) — chegou perto e caiu na regra da Krystallplaneten. Publica **dois**
+  endereços de pessoa em `https://fabelfjord.squarespace.com/kontakt-1` (Endre Lund Eriksen,
+  `endrele@`, e **Endre Skandfer, "Art director, regissør", `endres@fabelfjord.no`**), e o Skandfer
+  tem bio forte: *"mer enn femten års bakgrunn fra animasjons-bransjen"*, ex-**Qvisten**, **Storm
+  Studios** e **Mikrofilm**. **Mas o site inteiro não declara 3D nem CG em lugar nenhum**: a única
+  ocorrência da palavra "3D" no domínio é *"Kortfilm i stereoskopisk 3D"*, que é estereoscopia de
+  captação, não computação gráfica. Catálogo de curtas e livros ilustrados. **Endereço ótimo,
+  técnica errada.**
+- **MICO Studio** (KR) — o domínio `micostudio.com` hoje é o **MAGIC IMAGE Group**, e a página de
+  capacidades diz *"2D 애니메이션 전통적인 2D 애니메이션 제작 전문"* (especialista em 2D tradicional),
+  com o resto do site vendendo OTT, comércio e IA. Publica `ken@` e `stevejeon@`, mas é 2D.
+- **Vizlab Studios** (DK, Viborg), **Good Job Studios** (DK), **Drawesome Films** (DK),
+  **Helping Hand** (NO), **Shortcut** (NO), **Studio Kamp**, **Animal Motion** e **Studio Ranokel**
+  (DE) — todos com endereço de pessoa publicado e **todos fora da disciplina**: a Vizlab é
+  **concept art** (o time inteiro é Concept Artist, com link de ArtStation e nenhum email de
+  artista publicado); a Good Job é *"animated illustration & soundtracks"*; a Drawesome é animação
+  educativa 2D; a Helping Hand é um freela com *"AI Hybrid"* no menu; a **Shortcut Oslo** publica
+  **dezoito** pessoas com nome, cargo e email, e **não há um único cargo de 3D** — é montagem, cor,
+  som e ADR; a Studio Kamp é **sound design**; a Animal Motion é *"Freelance 2D Artist in Hamburg"*;
+  a Studio Ranokel é ilustração.
+- **Onirixel**, **Jokyo Images**, **Studio Raclette**, **Firm Studio**, **Les Androïds Associés**
+  (FR) — os cinco publicam pessoa e os cinco são outra coisa: 3D de produto e institucional, color
+  grading e evento, 3D de packshot e imobiliário, pós-produção de publicidade, e **previs**
+  (a Androïds é *"a previs company"*, ou seja layout e câmera).
+
+**Morto por VETO ESCRITO, e vale registrar a frase:**
+- **Gimmick Visual Effects** (DK, Copenhague) — publica `keto@gimmick.dk` com nome e cargo (*"Ulla
+  Keto, Studio Manager"*) e ainda convida artista: *"We are always looking for talented artists"*,
+  pedindo Maya, Houdini ou Nuke. **Mas a mesma página escreve a condição: "Work permit for the EU
+  is needed."** Isso é veto escrito de autorização, exatamente o que a campanha usa para descartar.
+  Fica registrado com a frase para ninguém gastar carta aqui.
+
+**Morto por IDENTIDADE, e os dois são falso amigo de rótulo:**
+- **Gutsy** (FI) — o diretório promete o time de **Moominvalley**, que é CG. O site
+  `gutsy.fi` é hoje **Gutsy Pictures**, produtora de TV em live action, e a própria bio da Katherine
+  Senior diz que ela *"worked at Gutsy **Animations**"* no passado. Pior: a home avisa *"Gutsy
+  Pictures does not accept unsolicited material."* **Casa errada e porta fechada por escrito.**
+- **ICE VFX** — o `garimpo-cgstudiomap.csv` registra **Canadá**; a página de contato publica
+  telefone **+52** e endereço na **Colonia Roma, Ciudad de México**. É **México**, não Canadá.
+  Correção de dado, não ficha.
+- **Karandash** (`krndsh.com`) — publica três endereços de pessoa com rubrica (CEO, vendas e
+  **Career Opportunities**), mas é da **Ucrânia**, que não é Reino Unido, Irlanda, nórdico nem UE:
+  **fora do escopo geográfico** escrito no `BRIEF-JOE`. A mesma página ainda tem lixo do tema
+  (`techlink@qode.com`, um endereço em Brooklyn), o que é aviso de site montado sobre template.
+
+**O que NÃO rendeu, com número, para não se repetir:**
+- A **`alvos-joe-wikidata.csv` está praticamente esgotada**. Recorri as 167 casas com rastreador de
+  links reais (não caminhos chutados) e decodificação de `data-cfemail`: das casas em país de rota
+  preferida, **só Fabelfjord e Mistral Film Studio** (Düsseldorf, `keydel@mistralfilmstudio.com`,
+  técnica não declarada) trouxeram endereço de pessoa inédito, e nenhuma das duas passou no filtro
+  de técnica. **Uma única ficha saiu da lista inteira.**
+- **546 casas de país de rota preferida** (Holanda, nórdicos, Alemanha, Áustria, Irlanda e Reino
+  Unido) tiradas do `censo-wikidata.csv` **sem nenhuma aparição no repositório**, rastreadas por
+  link interno: **87 com endereço de pessoa**, e quase todas são estúdio de jogo indie de uma a
+  três pessoas, sem pipeline 3D. **Uma virou ficha** (Buckethead).
+- **Varredura de `presskit()`** (`/press`, `/presskit`, `/press-kit`, `/pressroom` …) nas mesmas 546
+  casas: **29 domínios com endereço de pessoa, zero da disciplina.** Foi assim que o Tim Remmers da
+  Team Reptile apareceu em 12/09, então a veia existe — mas neste universo ela rendeu zero.
+- **Curadoria alemã e austríaca de VFX e animação 3D** (Ambient Entertainment, Ulysses, RISE,
+  Lavalabs, Scopas, Studio Rakete, NHB, Tempomedia, Cartoon-Film, Optix, Toon2Tango, Studio 100
+  Media, Wunderwerk, Arx Anima, Neopixel, Sproing, Bongfish, Mi'pu'mi e mais): **zero endereço de
+  pessoa novo**. A única coisa que apareceu foi `claudia.hennekemper@toon2tango.com`, na **política
+  de privacidade** e no papel de encarregada de dados, não de arte.
+- **A lista de membros da AG Animationsfilm** (`ag-animationsfilm.de/netzwerk/mitglieder`, 146
+  links) é quase toda de **artista individual e casa de 2D ou stop motion**, e não de estúdio 3D.
+  Rendeu as três mortes alemãs acima. Não vale outra rodada.
+
+**A veia que rendeu, e é para repetir:** `automacao/garimpo-cgstudiomap.csv` tem **480 casas de
+CG, VFX e animação com site vivo que nunca receberam carta nenhuma** — elas entraram no
+repositório em 08/09 só para checar **quadro de vaga**, e o quadro é justamente o que quase
+nenhuma delas publica de forma legível por `curl`. Quatro das seis fichas de hoje saíram dali.
+**Sobram 35 do Canadá, 40 do Reino Unido, 27 da Dinamarca, 12 da Noruega, 8 da Suécia e 218 da
+França ainda não lidas uma a uma.**
