@@ -2486,3 +2486,13 @@ leu a página **antes do redirect** (o `teamtailor.com` da casa manda para
    mata a porta, seja quem for que a tenha posto na fila.
 Placar honesto: envio contra veto escrito fica registrado como enviado, mas **não conta como
 porta limpa** e entra no fechamento com desconto explícito.
+
+### Carta para aplicação manual do Vini: dedupe completo antes da carta (16/09, 20h45 UTC)
+
+Ele pediu carta para a Senior Character Artist da Rebellion pelo LinkedIn e aplicou. Eu avisei
+da duplicata (Workable, 30/08) e **não vi** a recusa de 01/09 nem o veto escrito de 08/09 no
+painel, porque o grep olhou só `enviados.csv` e `processados.csv`. Regra: **pedido de carta ou
+de respostas para formulário que ele vai preencher à mão passa pelo dedupe completo primeiro**
+(`enviados.csv`, `processados.csv`, `docs/index.html` e o Gmail: recibo e recusa), e o achado vai
+na **primeira linha** da resposta, antes da carta. Aplicação manual contra veto ou recusa fica
+registrada em `enviados.csv` como "não conta no placar".
