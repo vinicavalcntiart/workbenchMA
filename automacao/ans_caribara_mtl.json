@@ -1,0 +1,115 @@
+{
+ "perguntas": {
+  "consens": {
+   "opcoes": [
+    "Oui, je consens"
+   ]
+  },
+  "quel est votre nom": {
+   "texto": "Cavalcanti"
+  },
+  "est votre pr": {
+   "texto": "Vini"
+  },
+  "marche de candidature": {
+   "opcoes": [
+    "Candidature spontanée"
+   ]
+  },
+  "rappeler la r": {
+   "texto": "Candidature spontanée, sans référence d'annonce."
+  },
+  "quel(s) poste": {
+   "opcoes": [
+    "Artiste design personnages"
+   ]
+  },
+  "disponible": {
+   "digitos": "11162026"
+  },
+  "cialit": {
+   "opcoes": [
+    "Design Character"
+   ]
+  },
+  "logiciels": {
+   "opcoes": [
+    "Maya"
+   ]
+  },
+  "monde de l": {
+   "digitos": "10"
+  },
+  "dans le poste auquel": {
+   "digitos": "10"
+  },
+  "langue": {
+   "opcoes": [
+    "Anglais / English"
+   ]
+  },
+  "votre cv au format pdf": {
+   "arquivo": "/home/user/apply/Vini_Cavalcanti_CV.pdf"
+  },
+  "lien vers vos r": {
+   "texto": "https://www.artstation.com/viniciuscavalcanti"
+  },
+  "motivation": {
+   "texto": "Je suis Vini Cavalcanti, Senior 3D Character Artist avec plus de dix ans en personnages stylises. Je dis d'emblee que mon metier est la 3D: sculpture, retopologie, UV, texturing, look development et grooming des cheveux et de la fourrure, du premier sculpt jusqu'au moteur. J'ecris parce que votre site dit que le studio de Montreal est specialise en animation 2D et 3D, et parce que votre liste de logiciels inclut Maya, Blender et Unreal. Je suis credite sur The Wingfeather Saga saison 1 chez Angel Studios, ou j'ai modele et peint les personnages a la main, et depuis presque cinq ans chez E-Line Media je prends les personnages principaux d'Endstar du premier sculpt jusqu'au moteur. Je suis Senior: je revise le travail des autres artistes et je fixe le standard des assets; je suis aussi fondateur de ma propre ecole d'art de personnage et candidat au master. Je suis pret a demenager a Montreal pour le poste. Je ne possede pas de visa canadien et j'aurais besoin d'un parrainage; mon dossier academique, avec une licence avec mention, une specialisation de troisieme cycle en Game Art, un master en cours, l'IELTS et des publications, rend le dossier de visa solide. Ouvert a m'aligner sur votre grille pour le poste. Portfolio: https://www.artstation.com/viniciuscavalcanti"
+  },
+  "collaborer avec caribara": {
+   "opcoes": [
+    "Présentiel"
+   ]
+  },
+  "ville de r": {
+   "texto": "Olinda, Pernambuco, Brazil"
+  },
+  "visa valide": {
+   "opcoes": [
+    "No"
+   ]
+  },
+  "adresse e": {
+   "texto": "contact@vinicavalcanti.art"
+  },
+  "num": {
+   "digitos": "<pessoal.json: telefone_internacional, com +55 explicito>"
+  },
+  "au sein du groupe": {
+   "opcoes": [
+    "No"
+   ]
+  },
+  "connu caribara": {
+   "opcoes": [
+    "Site internet Caribara"
+   ]
+  }
+ },
+ "ordem": [
+  "consens",
+  "quel est votre nom",
+  "est votre pr",
+  "marche de candidature",
+  "rappeler la r",
+  "quel(s) poste",
+  "disponible",
+  "cialit",
+  "logiciels",
+  "monde de l",
+  "dans le poste auquel",
+  "langue",
+  "votre cv au format pdf",
+  "lien vers vos r",
+  "motivation",
+  "collaborer avec caribara",
+  "ville de r",
+  "visa valide",
+  "adresse e",
+  "num",
+  "au sein du groupe",
+  "connu caribara"
+ ],
+ "_nota": "Dossie da Caribara Montreal. O telefone NAO fica aqui (repositorio publico): o script le de /home/user/apply/pessoal.json."
+}
