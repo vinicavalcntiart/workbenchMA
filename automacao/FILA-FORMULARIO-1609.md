@@ -140,3 +140,169 @@ General Application, weltenbauer Environment Artist, weltenbauer Tech Artist, St
 Side/Workable (corpo do anúncio não lido por 429 do IP).
 
 ---
+# FAIXA 1 — PERSONIO
+
+> **Como a lane se comporta, medido hoje:** o HTML servido das três páginas **não tem
+> `recaptcha`, `hcaptcha`, `turnstile`, `datadome` nem `perimeterx`** (grep no HTML inteiro).
+> O formulário **não existe no HTML** até alguém clicar em **"Apply for this job"**: ele monta
+> em JavaScript no mesmo endereço. **Não há `apply_personio.js` na caixa nova de
+> `/home/user/apply`** (ele morreu com o contêiner antigo); o que existe e serve é
+> `preencher-formulario.js` (preenche por rótulo, no navegador) ou `apply_own.js` com o mapa de
+> campos. **Armadilha conhecida da lane:** o Submit fica **cinza** enquanto faltar obrigatório e
+> **não diz qual**; e quando existir `#doc-input-cover-letter` marcado com `*`, a carta tem de
+> ir nesse campo, não em `other`.
+
+## 1. Bongfish — Open Application (Graz, Áustria)
+
+- **Formulário:** `https://bongfish.jobs.personio.com/job/366240?display=en` → botão *Apply for this job*
+- **Requisição:** `366240` · **Casa:** Bongfish GmbH · **Cargo:** Open Application Bongfish
+- **País/cidade:** Áustria, Graz (Am Eisernen Tor 3/2) · presencial
+- **Faixa publicada:** nenhuma. **Pretensão:** EUR 45.000/ano (regra de 04/09, casa pequena/média na Europa) + *"Open to aligning with your band for the role"*
+- **Régua de veto:** rodada no texto visível inteiro (974 caracteres): **zero acertos** dos 22 termos. Sem veto escrito.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "366240" "Bongfish"` → ocorrências em `processados.csv` (2) e `docs/index.html` (1), **nenhuma com marca de envio**; a casa aparece como quadro lido, não como candidatura. Gmail por "Bongfish": nada.
+- **Perguntas customizadas:** a armadilha desta casa já foi medida em rodada anterior — **"Where did you hear about this position"** é obrigatória e é a que deixa o Submit cinza. Responder: `Personio careers page`.
+- **Script e comando:**
+  `cd /home/user/apply && VINI_TEL='<código do país + número>' sh hb_run.sh preencher-formulario.js` (ou `apply_own.js ans_bongfish.json bongfish` com o mapa de campos depois do clique em Apply)
+- **Gancho (texto literal do anúncio):** *"There are currently no fitting vacancies, but you would be interested to work with us? We are always working on new projects and looking for motivated talents to join us."*
+- **Ressalva honesta:** é espontânea, não vaga; Bongfish é co-desenvolvimento (Motocross/Grip), personagem não é o produto central.
+
+## 2. Deck13 Interactive — General Application (f/m/x) (Frankfurt / Remote EU)
+
+- **Formulário:** `https://deck13.jobs.personio.com/job/2725779?display=en` → *Apply for this job*
+- **Requisição:** `2725779` · **Casa:** Deck13 Interactive GmbH · **Departamento no ATS:** `Creative`
+- **País/cidade:** Alemanha (Frankfurt, perto da Messe) — a vaga está marcada **Remote (EU)**
+- **Faixa publicada:** nenhuma. **Pretensão:** EUR 55.000/ano (casa grande de AA europeia, regra de 04/09) + a abertura padrão
+- **Régua de veto:** 2.781 caracteres lidos. Três acertos, **os três falsos positivos**: *"A modern, centrally located office in Frankfurt, Germany (near Messe)"*, *"Free language courses to help you expand your skills"* e *"Since our founding in 2001, in the heart of Frankfurt, Germany"*. **Nenhum veto escrito de residência, idioma ou autorização.**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "2725779" "Deck13"` → 1 ocorrência em `processados.csv` sem marca de envio (quadro lido). **Rota inédita.**
+- **Perguntas customizadas:** o anúncio pede em texto: carta, CV e portfólio. Campos do formulário só aparecem depois do clique.
+- **Script e comando:** `cd /home/user/apply && sh hb_run.sh preencher-formulario.js` (Personio sem script próprio nesta caixa)
+- **Gancho:** *"Whether you're an artist, programmer, designer, or have another unique skill set, we'd love to hear from you."* — e o anúncio ainda diz *"If you're a freelancer, we encourage you to use this form as well"*, o que abre a porta de freelance sem visto.
+- **Por que vale:** o mesmo quadro tem **Senior VFX Artist** e **Lead VFX Artist** abertos em `Remote (EU)`, o que prova que a casa contrata arte remota na Europa.
+
+## 3. Chimera Entertainment — speculative application (Munique)
+
+- **Formulário:** `https://chimera-entertainment.jobs.personio.com/job/150955?display=en` → *Apply for this job*
+- **Requisição:** `150955` · **Departamento no ATS:** `Game Design` · **Local:** DE - Munich Office
+- **Faixa publicada:** nenhuma. **Pretensão:** EUR 45.000/ano + abertura padrão
+- **Régua de veto:** 2.737 caracteres. Acertos e classificação: *"Chimera Entertainment is a creative and independent game development studio based in the heart of Munich"* → **falso positivo** (`based in` descrevendo a sede); *"we rank among Germany's leading studios"* → **falso positivo**. **Atenção ao que é real:** o anúncio traz um bloco de **estágio obrigatório** (*"The internship must be mandatory and part of your degree program (Pflichtpraktikum...)"*, *"On-site work in our Munich office (remote work is not possible)"*) — isso vale para **estágio**, e é o trecho a ignorar em candidatura sênior, mas é também o motivo de esta porta ficar em terceiro lugar da faixa.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "150955" "Chimera"` → 1 ocorrência em `processados.csv`, sem marca de envio. **Inédita.**
+- **Script e comando:** `cd /home/user/apply && sh hb_run.sh preencher-formulario.js`
+- **Gancho:** *"Our portfolio spans over 25 published titles – including award-winning franchises like \"Angry Birds Epic\" and \"Angry Birds Evolution.\""* — personagem estilizado de IP licenciada é exatamente o registro do portfólio dele.
+- **Ressalva:** as três vagas técnicas abertas do mesmo quadro estão em **Cebu, Filipinas**, fora do recorte; a porta de Munique é a espontânea.
+
+---
+
+# FAIXA 2 — TEAMTAILOR, VAGA COM FORMULÁRIO SERVIDO
+
+> **Medido hoje em todas as sete:** `GET <url da vaga>/applications/new` devolve **200 com o
+> formulário inteiro no HTML** (`candidate[first_name]`, `candidate[email]`,
+> `candidate[resume]`, `candidate[answers_attributes][N][...]`), e **zero** ocorrência de
+> `recaptcha`, `hcaptcha`, `turnstile`, `datadome` ou `perimeterx`. A lane passa.
+> **Três armadilhas que continuam valendo:** (a) responder pergunta `choice` sem dizer a opção
+> faz o script marcar a **primeira** — e em pergunta de elegibilidade a primeira costuma ser
+> "Yes", ou seja, mentiria; (b) o dropzone do CV carrega em pedaço separado do JavaScript, então
+> **conferir o anexo antes de enviar**; (c) se a tela final disser **"Verify your email"**, a
+> candidatura **não entrou** até o link do email ser aberto.
+
+## 4. ★ Snowprint Studios — Senior 3D Character Artist (Estocolmo) — **PERSONAGEM**
+
+- **Formulário:** `https://snowprintstudios.teamtailor.com/jobs/8341580-senior-3d-character-artist/applications/new`
+- **Anúncio:** `https://snowprintstudios.teamtailor.com/jobs/8341580-senior-3d-character-artist` · publicado **08/09/2026** · departamento `Art`
+- **Requisição:** `8341580` · **Casa:** Snowprint Studios (Estocolmo, Suécia)
+- **Faixa publicada:** nenhuma. **Pretensão:** EUR 45.000/ano (casa média; ≈ SEK 520.000/ano) + *"Open to aligning with your band for the role"*
+- **Régua de veto:** anúncio inteiro lido, 8.874 caracteres → **ZERO acertos dos 22 termos**. Sem veto de residência, de idioma, de autorização ou de presença.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "8341580" "Snowprint"` → `enviados.csv` **0**, `FILA-DO-VINI.md` **0**; 5 ocorrências em `processados.csv` e 1 no painel **sem nenhuma marca de envio** (são a leitura do quadro em rodadas anteriores). O que a casa já tem é o **Connect/banco de talentos, enviado em 07/09** — porta diferente, requisição diferente. Gmail por "Snowprint": 14 linhas em `processados` referem-se ao cadastro do Connect, não a esta vaga. **ROTA LIVRE.**
+- **Perguntas customizadas, medidas no HTML:**
+  | slot | tipo | pergunta (texto literal) | resposta |
+  |---|---|---|---|
+  | 0 | `choice` **obrigatória** | *"Do you need visa or relocation support to work in Sweden?"* (opções Yes/No) | **Yes** (a verdade; `opcao: "Yes"`, nunca por valor) |
+  | 1 | `text` **obrigatória** | *"Please add a link to your portfolio"* | `https://www.artstation.com/viniciuscavalcanti` |
+  Campos de consentimento: `candidate[consent_given]` e `candidate[consent_given_future_jobs]` (marcar os dois). **Não há `candidate[location_ids][]`** nesta vaga.
+- **Script e comando:**
+  `cd /home/user/apply && VINI_TEL='<código do país + número>' sh hb_run.sh apply_teamtailor.js "https://snowprintstudios.teamtailor.com/jobs/8341580-senior-3d-character-artist" snowprint carta_snowprint.txt`
+  (rodar **sem** `--submit` primeiro; as respostas das duas perguntas vão em `/home/user/apply/ansq_snowprint.json`, casando pelo **texto** da pergunta, com `opcao` explícita na `choice`)
+- **Gancho (literal):** *"Would you like to take ownership of character art in a small game team, combining hands-on 3D work with shaping how characters are created and delivered?"* — e o anúncio ainda diz *"You'll be the main in-house character artist on the team"*.
+- **Por que é a primeira da fila:** é a **única vaga aberta de personagem** achada hoje numa lane sem parede, em país do recorte, com a pergunta de visto respondível com a verdade e sem veto escrito.
+
+## 5. Snowprint Studios — Senior 3D Environment Artist (Estocolmo)
+
+- **Formulário:** `https://snowprintstudios.teamtailor.com/jobs/8380596-senior-3d-environment-artist/applications/new`
+- **Requisição:** `8380596` · publicado **15/09/2026** · departamento `Art`
+- **Faixa/pretensão:** igual à #4 (EUR 45.000/ano + abertura)
+- **Régua de veto:** 8.011 caracteres → **zero acertos**.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "8380596" "Snowprint"` → **zero ocorrências nos quatro arquivos**. Inédita.
+- **Perguntas:** as mesmas duas da #4 (`choice` de visto/relocação na Suécia → **Yes**; `text` de portfólio).
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://snowprintstudios.teamtailor.com/jobs/8380596-senior-3d-environment-artist" snowprint-env carta_snowprint_env.txt`
+- **Gancho:** *"You'll create stylized environments, props, and items, and assemble them in Unity to procedurally set-dress, light and build clear, immersive worlds that support the gameplay."* e *"What we'll be looking for in your portfolio: Nicely set dressed, lit and composed stylized environments with props made by yourself."*
+- **Ressalva honesta:** é **ambiente**, não personagem. Entra porque é a mesma casa da #4 (duas requisições, dois envios legítimos) e porque o anúncio pede **estilizado**, que é o registro dele. Mandar as duas na mesma casa é aceitável; a de personagem vai primeiro.
+
+## 6. Gigglebug Entertainment — Open application! (Helsinque / Las Palmas)
+
+- **Formulário:** `https://gigglebug.teamtailor.com/jobs/1838376-open-application/applications/new`
+- **Requisição:** `1838376` · **Locais:** Helsinki (Finlândia) e Las Palmas (Espanha, Gran Canaria)
+- **Faixa:** nenhuma. **Pretensão:** EUR 45.000/ano + abertura
+- **Régua de veto:** 3.188 caracteres → **zero acertos**.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "1838376" "Gigglebug"` → **zero ocorrências nos quatro arquivos** por ID. A casa tem histórico de **cadastro no Connect (27/08)**, que é porta diferente. **Rota livre.**
+- **Perguntas customizadas (nove slots, e três decidem a candidatura):**
+  | slot | tipo | pergunta | resposta |
+  |---|---|---|---|
+  | 0 | text | *"Portfolio link + possible pw"* | `https://www.artstation.com/viniciuscavalcanti` |
+  | 1 | text | *"Add the person, their position, the company and their email for reference call."* | referência da E-Line — **não inventar**: usar só contato que ele já autorizou; se não houver, escrever *"Happy to provide references on request"* |
+  | 2 | text | *"When is your earliest start date?"* | `Immediately / 30 days notice` |
+  | 3 | choice obrigatória | *"Are you already in Finland?"* | **No** |
+  | 5 | choice | *"Are you already in the Canaries?"* | **No** |
+  | 6 | choice | *"Are you willing to relocate in Gran Canarias?"* | **Yes, I am!** |
+  | 7 | choices | *"What type of employment are you most interested in?"* | `Full time` (e `Freelance/Part time` como segunda, se aceitar múltipla) |
+  | 8 | choices | *"How did you hear about us?"* | `SoMe` ou `Through network` — **não** marcar a opção "I know someone from Gigglebug", que pede nome na carta |
+  **Tem `candidate[location_ids][]`** (obrigatório): marcar **Helsinki e Las Palmas**, pela chave `locations` do `ansq_gigglebug.json`.
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://gigglebug.teamtailor.com/jobs/1838376-open-application" gigglebug carta_gigglebug.txt`
+- **Gancho:** o corpo do anúncio é só o título — **não há frase própria para citar**. O gancho honesto sai da própria pergunta do formulário (*"Are you willing to relocate in Gran Canarias?"*) e do catálogo da casa (animação infantil estilizada). **Não inventar frase de anúncio.**
+
+## 7. Untold Studios — General Application (Los Angeles)
+
+- **Formulário:** `https://untoldstdfg1324556.teamtailor.com/jobs/1314008-general-application/applications/new`
+- **Requisição:** `1314008` · **Local:** EUA, Los Angeles · departamento `Untold Studios`
+- **Faixa:** nenhuma. **Pretensão:** USD 100.000/ano (casa grande, EUA; regra de 04/09) + abertura
+- **Régua de veto:** 3.611 caracteres → **zero acertos**. (Autorização nos EUA é **No** + patrocínio **Yes** nas perguntas.)
+- **Dedupe:** `sh automacao/dedupe-agora.sh "1314008" "Untold"` → `enviados.csv` 0, `processados.csv` 0, painel **2 ocorrências sem marca de envio**. Livre.
+- **Perguntas customizadas (cinco, todas `text`):** *"Could you share your salary expectations please?"* → `USD 100,000 – open to aligning with your band for the role`; *"When are you available from?"* → `Immediately / 30 days notice`; *"Could you provide your showreel / portfolio link please?"* → ArtStation; *"Where are you currently based?"* → `Olinda, Pernambuco, Brazil (open to relocation, sponsorship required)`; *"What are your preferred pronouns?"* → `He/Him`.
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://untoldstdfg1324556.teamtailor.com/jobs/1314008-general-application" untold-la carta_untold.txt`
+- **Gancho:** *"Our purpose is to do brilliant creative work, to make content that audiences want to watch & to have fun while we're doing it. Join us!"*
+- **Ressalva honesta:** o corpo da vaga é de **2021** (*"we are opening in sunny Los Angeles, in the Autumn of 2021"*) — é porta espontânea antiga que continua publicada. O valor é entrar no banco de uma casa de VFX com escritório em LA e em Londres, não uma vaga.
+
+## 8. Star Stable Entertainment — Open Application (Estocolmo)
+
+- **Formulário:** `https://starstable.teamtailor.com/jobs/244302-open-application/applications/new`
+- **Requisição:** `244302` · **Local:** Suécia, Estocolmo
+- **Faixa:** nenhuma. **Pretensão:** EUR 45.000/ano + abertura
+- **Régua de veto:** 3.454 caracteres → **zero acertos**.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "244302" "Star Stable"` → **zero ocorrências por ID**. A casa tem Connect já feito (porta diferente). Livre.
+- **Perguntas customizadas:** três slots — dois `text` (um deles rotulado *"Needed for this role"*) e **um `choice` que é o que importa: a lista de áreas**, com as opções `Art`, `Design`, `Animation`, `Production`, `HR/TA/Office`, `Analytics & Insights`, `Marketing`, `Finance/Legal`, `Game Tech`, `Tech`, `QA`, `Internship`, `Other` → **marcar `Art`** (`opcao: "Art"`, explícita).
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://starstable.teamtailor.com/jobs/244302-open-application" starstable carta_starstable.txt`
+- **Gancho:** *"Interested in joining our team but don't see your dream job posted? Leave us your details and if something opens up (which it often does), we will reach out to you!"*
+- **Por que vale:** Star Stable é jogo de **personagem estilizado** (cavalos e avatares), e a escolha de área `Art` põe o cadastro na fila certa.
+
+## 9. Fully — Open application (Gotemburgo, híbrido)
+
+- **Formulário:** `https://fully.teamtailor.com/jobs/6360996-open-application/applications/new`
+- **Requisição:** `6360996` · **Local:** Suécia, Gotemburgo · **Remote status:** Hybrid
+- **Faixa:** nenhuma. **Pretensão:** EUR 45.000/ano + abertura
+- **Régua de veto:** 2.246 caracteres → **zero acertos**.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "6360996" "Fully"` → **zero ocorrências**. Casa inédita na campanha.
+- **Perguntas customizadas:** **nenhuma** (zero slots). Só os campos base + consentimento.
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://fully.teamtailor.com/jobs/6360996-open-application" fully carta_fully.txt`
+- **Gancho:** *"Can't find the right role listed? We're always curious about new talent. Send us your open application and let's explore what we can create together."*
+- **Ressalva honesta:** a Fully é consultoria sueca com **departamento `Games Development`** no próprio menu de carreiras — não é estúdio de animação. Encaixe médio-baixo; entra porque é porta sem atrito e a casa coloca gente em estúdio de jogo.
+
+## 10. North Kingdom — Freelancers of Europe (Suécia)
+
+- **Formulário:** `https://northkingdom.teamtailor.com/jobs/7362964-freelancers-of-europe/applications/new`
+- **Requisição:** `7362964` · publicado **10/03/2026** · **Casa:** North Kingdom (Estocolmo e Skellefteå)
+- **Faixa:** nenhuma. **Pretensão:** EUR 45.000/ano equivalente, ou **dia de freelance** se o formulário pedir — usar a abertura padrão
+- **Régua de veto:** o título já delimita o escopo à **Europa**; sem veto de idioma nem de autorização no texto lido.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "7362964" "North Kingdom"` → **zero ocorrências nos quatro arquivos. Casa NOVA na campanha** (achada hoje pela sondagem de tokens europeus).
+- **Comando:** `sh hb_run.sh apply_teamtailor.js "https://northkingdom.teamtailor.com/jobs/7362964-freelancers-of-europe" northkingdom carta_northkingdom.txt`
+- **Gancho:** o próprio título, *"Freelancers of Europe"*, é o gancho: é registro aberto de freelance para a Europa, o que dispensa visto de trabalho.
+- **Ressalva honesta:** ele mora no Brasil, não na Europa — a porta diz "of Europe". Vale registrar assim mesmo, com a verdade escrita no campo livre, mas o encaixe geográfico é fraco e por isso ela fecha a faixa.
+
+---
