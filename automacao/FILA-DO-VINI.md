@@ -7,8 +7,32 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
-**O número baixou de propósito: são 75 portas, não 77.** A mesma vaga da Framestore aparecia
-**três vezes**, com o mesmo endereço, em dois grupos diferentes. Número inflado não é resultado.
+### 🔴 ENTROU UMA PORTA, e é da EA: Senior Character Artist 215788, EA SPORTS FC Vancouver
+
+`https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788`
+
+**Revalidada em 16/09 às 03h**, na fonte oficial: a requisição continua no portal (listagem
+completa de **325 vagas**, paginada por `jobOffset`) e a página responde **HTTP 200**. Efetiva
+(*Regular Employee*), híbrida, Vancouver. **Faixa publicada pela própria EA: CAD 114.300 a
+156.200** — pela política, pede-se a **base, CAD 114.300**.
+
+**Régua de veto no texto inteiro: um único acerto, e é falso positivo conhecido** —
+`eligib` em *"eligible for bonus and other incentive programs"*. **Nenhum veto escrito.**
+
+**Dedupe, pelo ID e não pelo título:** a irmã **215358** (Character Artist, efetiva, mesmo time)
+foi enviada e confirmada em 07/09, e a **215657** (temporária) em 03/09. A **215788 é requisição
+própria e mais sênior**, com faixa maior. Não é duplicata.
+
+**Por que é com você:** o botão *Next* da tela de informações gerais devolve `Internal server
+error` do Avature em **cinco tentativas**, com e sem anexos, em dois dias diferentes. Não é
+captcha nem falta de conta. **E o erro de fluxo que come a rodada:** você já tem conta desde
+03/09, então **entre pelo login**; o bloco *First time applicant* preenche tudo e no fim devolve
+*"There's an existing record with that email"* sem enviar nada. Campo a campo, com as armadilhas
+da tela, está na página de cliques e em `automacao/respostas-formularios.md`.
+
+**Eram 77 linhas, agora são 76 portas, e as duas mexidas estão escritas.** Saíram duas: a mesma
+vaga da Framestore aparecia **três vezes**, com o mesmo endereço, em dois grupos diferentes, e
+número inflado não é resultado. Entrou uma: a EA 215788 acima.
 
 Nenhuma carta foi escrita duas vezes: o gancho de cada uma sai do anúncio que a campanha leu, a
 semelhança máxima entre duas cartas do lote é de 24% (o teto que a campanha aceita é 55%), e

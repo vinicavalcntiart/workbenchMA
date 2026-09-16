@@ -1198,5 +1198,21 @@
   "dossie": "",
   "nota": "FILA A 07/09. Quadro inteiro listado pela API /careers/list do BambooHR, dez vagas: Senior CG FX Artist, Senior CG Lighting Artist, Senior 3D Animators (Sydney), CFX Artist, Production Coordinator (Madri), Systems Engineer (Storage), People and Culture Manager, Senior 3D Animators (Madri), 3D Animation Lead (Madri) e 'Expression of Interest: 2D Animation Design Artists'. NENHUMA e de personagem, modelagem, texturizacao ou look dev; a unica espontanea aberta e 2D e portanto de outra disciplina. Some-se que o BambooHR inteiro e parede de reCAPTCHA de caixa para esta campanha. Casa tem tambem Jaz",
   "prio": "media"
+ },
+ {
+  "pid": "p100",
+  "grupo": "Parede da plataforma",
+  "grupo_expl": "O formulário lê e anexa, mas o envio não sai daqui. Medido em dois locatários. É o grupo mais incerto: deixe por último.",
+  "casa": "Electronic Arts (EA SPORTS FC)",
+  "vaga": "Senior Character Artist 215788 - faixa publicada, so voce consegue entrar na conta",
+  "local": "Canada (Vancouver, hibrido)",
+  "url": "https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788",
+  "disc": "personagem",
+  "alta": true,
+  "nc": false,
+  "id": 100,
+  "dossie": "**Vaga:** Senior Character Artist, EA SPORTS FC, requisicao **215788**. Vancouver, British Columbia. **Regular Employee** (efetiva), modelo **Hibrido**.\n**Faixa PUBLICADA pela propria EA:** CAD 114.300 a 156.200. Pela politica da campanha, se houver faixa publicada pede-se a **BASE**: **CAD 114.300**, nunca acima nem abaixo.\n**Revalidada em 16/09 as 03h:** a requisicao continua no portal (lista completa de 325 vagas, paginada por jobOffset) e a pagina da vaga responde HTTP 200. Regua de veto no texto inteiro: o UNICO acerto e `eligib` em *\"eligible for bonus and other incentive programs\"*, que e falso positivo conhecido. **Nenhum veto escrito.**\n**POR QUE E COM VOCE, e nao com a automacao:** o botao Next da tela de informacoes gerais devolve `Internal server error` do Avature em **cinco tentativas**, com e sem anexos, em dois dias diferentes. Nao e captcha, nao e falta de conta, nao e rede.\n**O ERRO DE FLUXO QUE COME A RODADA, medido em 07/09:** a tela `ApplicationMethods` tem o login em cima e o bloco **First time applicant** embaixo. Voce JA TEM CONTA (desde 03/09), entao **ENTRE pelo login**. O caminho de candidato novo anexa o CV, le o PDF, preenche tudo e no fim devolve *\"There's an existing record with that email\"* sem enviar nada.\n**Com a sessao aberta o perfil ja vem preenchido** (endereco, telefone, historico, formacao, idiomas, skills, portfolio). Sobram as perguntas da vaga:\n\n| Campo | Resposta |\n|---|---|\n| How did you hear about this opportunity? | EA Careers Website |\n| Are you willing to relocate? | Yes |\n| Have you ever worked at EA in any capacity? | No |\n| How many years of relevant experience | More Than 3 Years (e a faixa mais alta da lista) |\n| Bootcamp/diploma/servico militar nos ultimos 18 meses | No (o mestrado esta EM CURSO, nao concluido) |\n| Cover Letter (arquivo) | Vini_Cavalcanti_Cover_Letter.pdf |\n| Aceite do NDA de entrevista | marcar |\n| Genero (Voluntary Self Disclosure) | Choose not to Disclose |\n| **Do you now or in the future require immigration sponsorship?** | **Yes** — e a verdade e e o campo em que nao se pode errar |\n| Sujeito a restricao que impeca de trabalhar para a EA? | No |\n| I certify that all information is true and complete | marcar |\n\n**Armadilhas da tela, para nao achar que quebrou:** a pagina do Avature as vezes monta VAZIA quando o pacote dela falha na rede, e a saida e **recarregar**; o Continue devolve **502** com frequencia e a saida e reanexar o CV e clicar de novo; o Next do NDA fica desabilitado ate a caixa de aceite ser marcada, e o rotulo dela e **so um asterisco**.\n**A conta:** usuario e o seu email. **A senha esta no documento privado do Drive**, nunca aqui.\n**Dedupe:** a irma **215358** (Character Artist, efetiva, mesmo time) foi ENVIADA e confirmada em 07/09, e a **215657** (temporaria) em 03/09. Esta **215788 e requisicao propria e mais senior**, com faixa maior; nao e duplicata delas.",
+  "nota": "",
+  "prio": "alta"
  }
 ]
