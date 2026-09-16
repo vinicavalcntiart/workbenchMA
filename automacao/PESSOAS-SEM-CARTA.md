@@ -3940,3 +3940,122 @@ email desta rodada das dezenas de casas varridas sem resultado.
   BambooHR com vaga de 3D Artist Generalist, que só trava no captcha, e o `jobs@` que respondeu
   automático; (4) o rodapé do site é **© 2016-2025**; (5) é jogo **mobile infantil**, não animação
   nem jogo de console, o que é o degrau mais baixo de encaixe entre as quatro fichas de hoje.
+
+---
+
+### O QUE MORREU NA RODADA DE 16/09, com a medição, para a próxima não reabrir
+
+**Mortos com o endereço JÁ NA MÃO, o que é o tipo de morte mais caro e mais útil de registrar:**
+
+- **M2 Film / M2 Animation** (Aarhus, DK) — casa **inédita** na campanha (zero em `pessoas.csv`,
+  `enviados.csv`, `alvos.csv`), e ela publica **nome, cargo e email juntos**: a página de vagas
+  `https://m2film.dk/job-type/current-vacancies/` escreve *"kontakte Head of Production **Ole
+  Jørgensen** på oj@m2film.dk"*. **Morreu por escopo geográfico, e a prova está no rodapé do próprio
+  site:** a divisão de animação, **M2 Animation, fica em BANGKOK** (30/1 Soi Sukhumvit 55), fora do
+  escopo do `BRIEF-JOE`; a parte dinamarquesa é **filme publicitário** (*"Danmarks førende leverandør
+  af reklamefilm"*), e a página `/people/` confirma: dos 40 e poucos nomes publicados, os de M2
+  Animation são **produtor e diretor**, nenhum de personagem, e **nenhum com email**. Segundo motivo,
+  também escrito por eles na mesma frase do Ole: *"Bemærk, at ansøgninger ikke modtages på denne
+  mail"* — candidatura não é recebida nesse endereço. **Não gaste carta aqui.**
+- **Autrechose** (Paris, FR) — publica em `https://www.autrechose.fr/contact/` *"Stéphane Bidault /
+  Superviseur VFX / stef@autrechose.fr"*, com nome, cargo e endereço pareados, e ainda convida:
+  *"AutreChose est toujours à la recherche de nouveaux infographistes de talent"*. **Morreu por
+  técnica, pela regra da Krystallplaneten:** o site inteiro só diz *"effets spéciaux numériques"* e
+  *"infographistes 2D & 3D"*, e as palavras **personnage, créature e character não aparecem em
+  lugar nenhum** do domínio. Endereço ótimo, disciplina não provada.
+- **Goodman Brothers** (Sydney, AU) — a home publica, sob *"Meet The Team"*, **Joel Goodman** com
+  `joel@goodmanbrothers.com` e **Elliot Goodman** com `elliot@goodmanbrothers.com`, os dois pareados
+  no `mailto:`. **Morreu por falta de CARGO publicado** (só o terceiro, "Alfie", tem título, "Client
+  Services") **e por falta de prova de personagem**: a casa se descreve como *"a Sydney-based visual
+  effects and post-production studio"* e o portfólio é um mural de vídeos sem disciplina escrita.
+  É a mesma morte do `kela@appelmoes.games`: endereço existe, ficha não.
+- **FIN Design + Effects** (Sydney, AU) — `emily@findesign.com.au` aparece de verdade no HTML, mas
+  **só como segundo destinatário do `mailto:` de "Commercial Enquiries"**
+  (`mailto:tvc@findesign.com.au, emily@findesign.com.au?subject=FIN%20VFX%20-%20TVC%20Enquiry`), sem
+  nome e sem cargo. Não é ficha.
+- **Morgana Studios** (Madrid, ES) — a política de privacidade publica `hernan@morganastudios.com` e
+  nomeia o representante legal como **Miguel Cabañas Becerril**. **A parte local não corresponde ao
+  nome publicado**, então não há pareamento: é endereço sem pessoa identificada.
+- **Moonbug Entertainment** — `sruthi.dhulipala@moonbug.com` está publicado no site, e a própria
+  linha diz o que ela é: *"Media Contact: Sruthi Dhulipala"*. Imprensa, não arte nem contratação.
+
+**Barrados pelo dedupe, e cada um economizou uma carta:**
+
+- **Global Mechanic** (Vancouver, CA) — a varredura de hoje reachou `bruce@globalmechanic.com`
+  (Bruce Alcock, Creative Director & Owner) e `brodie@globalmechanic.com` (Chris Brodie, Executive
+  Producer), pareados no `mailto:` do HTML. **Já foram achados e JÁ FORAM MORTOS em 15/09**, por
+  técnica: mixed media, não CG (`processados.csv` 2483, *"o caso Krystallplaneten da rodada"*).
+  Vancouver é a rota de frente do Vini e dói perder, mas a morte continua válida.
+- **appelmoes games** (NL) — `kela@appelmoes.games` reapareceu na varredura do `/press`. Já está
+  registrado neste arquivo como não-ficha: o site só publica o apelido "Kela", sem nome e sem cargo.
+- **Juice / `j.studio`** (PL/SG) — `a.watras@j.studio` reapareceu na home. **Já está escrito na linha
+  do Aditya Akolkar** em `pessoas.csv` como a segunda prova do formato do domínio. Casa com pessoa.
+- **arx anima** (Viena, AT) — o `/about` publica o CORE Team com cargo (**Dunja Bernatzky**,
+  Co-Founder/CEO/Head of IP; Kris Staber, COO; **Martin Hebestreit, Art Director Special Format**) e
+  a casa faz **Talking Tom and Friends**, que é elenco 3D puro. **Não virou ficha porque o
+  `talent@arxanima.com` JÁ RESPONDEU** em 03/09 (template mandando usar a página de carreiras) **e o
+  Vini já respondeu essa thread** — a conversa é do Comunicador, e o único endereço novo é
+  `md@arxanima.com`, caixa funcional sem nome. **Os dois nomes ficam guardados aqui** para quando
+  aparecer endereço de pessoa.
+- **Caribara Animation** (Paris/Annecy/Angoulême/Liège/**Montréal**) — era um dos **dois itens
+  "NÃO CONFERIDOS"** que a rodada de 15/09 pediu para retomar. **Conferido agora, e o registro de
+  domínio estava incompleto:** `https://caribara-animation.com` devolve **certificado SSL expirado**
+  e `caribara.fr` devolve **403**; o site vivo é **`https://www.caribara-animation.com`**. A página
+  `/studios/` publica o time dos cinco estúdios com nome e cargo (Fabien Baboz, Co-fondateur/CEO;
+  **Florian Thouret, Directeur artistique / Réalisateur**; Stéphane Comparetti, Directeur technique;
+  Michèle Paquin e Pascale Beaulieu, Responsables do estúdio de **Montréal**) e **ZERO email**. A
+  técnica declarada é **2D em primeiro lugar** (*"expertise particulièrement reconnue en animation
+  2D"*, cut-out e tradigital, Toonboom), com 3D como complemento, e cada estúdio tem **formulário
+  próprio de candidatura espontânea** — isso é matéria da frente de formulário, não do Joe.
+- O outro item "não conferido" de 15/09, o **Blender Studio**, **já tem pessoa** em `pessoas.csv`
+  (Julien Kaspar, 14/09, `sem-email`). Não é reabertura.
+
+**O que NÃO rendeu, com número, para ninguém repetir:**
+
+- **`garimpo-cgstudiomap.csv`, a veia que rendeu quatro fichas em 15/09, secou nas rotas de frente.**
+  Varri as **168** casas de Canadá, Reino Unido, Irlanda, nórdicos, Oceania e Bélgica que nunca foram
+  tocadas, e depois **256** de França, Espanha, Polônia, Alemanha, Áustria e Luxemburgo, e **92** dos
+  EUA — cada domínio em até 25 caminhos (`/team`, `/about`, `/crew`, `/people`, `/our-team`,
+  `/contact`, `/studio`, `/privacy`, `/impressum`, `/press`, `/presskit`, `/leadership`, `/jobs` e
+  mais), com decodificação de `data-cfemail` e um segundo nível de links internos. **Endereço de
+  pessoa apareceu em cerca de 40 casas e NENHUMA passou no filtro de disciplina**: são casa de
+  dailies e som (The Post Lounge, 8 endereços `nome.sobrenome@`), post house de cor e online (Nomad,
+  Flavor, Picture Shop), viz de produto e barco (Pixlhut), previs (Proof), agência de publicidade
+  (Epicure, Malherbe), motion design (BUCK, Golden Wolf) e CG automotivo (Rotor).
+- **Universo de jogo do gamedevmap: 757 casas NOVAS e em escopo** de Holanda, nórdicos, Reino Unido,
+  Escócia, Irlanda e Gales, varridas em 14 caminhos. **Cerca de 56 publicam endereço de pessoa, e
+  quase todas são estúdio de uma a três pessoas sem pipeline 3D** — a mesma conclusão de 15/09, agora
+  com número maior. Nenhuma virou ficha.
+- **Casas já qualificadas pela campanha (carta em caixa genérica, sem resposta): 409 domínios**
+  varridos em 24 caminhos, incluindo `/press` e `/presskit`. **Rendeu exatamente as duas fichas com
+  email desta rodada** (BetaDwarf e Young Horses) e mais nada aproveitável. **É a melhor veia que
+  sobrou, e o ganho vem do caminho novo, não do domínio novo.**
+- **`presskit()` sobre os 577 domínios da `alvos.csv`**: 14 casas com presskit legível, **zero
+  endereço de pessoa novo**.
+- **Membros da Animation Ireland** (47 links, dez casas 3D abertas uma a uma: Brown Bag, Giant,
+  Kavaleer, Lighthouse, Dulamán, Studio Meala, Igloo, Whackala, Curiosity, Distillery): **zero
+  endereço de pessoa**, só `info@`/`hello@`.
+- **Animação de Singapura**, que é escopo e estava inexplorada (One Animation/Oddbods, Tiny Island,
+  Sparky, Mediafreaks, Robot Playground, Omens, Scrawl, Mighty Bear): **zero endereço de pessoa**.
+- **Vancouver e Colúmbia Britânica** (Global Mechanic, Cloudhead, Archiact, Piranha Games, SkyBox
+  Labs, East Side Games, Kano, IUGO, Bardel, Yeti Farm Creative): só caixa funcional, e **Bardel
+  responde 403** ao `curl`. O único endereço de pessoa era o da Global Mechanic, já morto.
+- **Campo `recruiter-email` do Teamtailor** testado em 10 domínios de casa que usa Teamtailor e
+  renderiza no próprio site (Ankama, Krea Medie, CI Games, North Kingdom, Revolution, Nolimit City,
+  Gears for Breakfast e outros): **zero**. Confirma o que o brief já dizia: veia rica mas raríssima.
+- **Coreia do Sul** pela política de privacidade (Locus/`locusco.com`, Red Rover, Westworld, Studio
+  Animal): só `info@`. A veia do encarregado de dados coreano segue valendo só para a GIANTSTEP.
+- **Cartoon Forum** (`cartoon-media.eu/forum/projects/discover-the-projects`): a lista dos 75
+  projetos **monta por JavaScript** e o `curl` não vê nem nome de casa nem email. **Não vale rodada
+  sem navegador.**
+- **Gnomon mudou de endereço:** o índice agora é `/news-and-events/events/` e no momento lista **um
+  único evento**, *"Building Real-Time VFX for Borderlands 4"*, que é VFX em tempo real e não
+  personagem. A barra `MORE EVENTS` do rodapé não existe mais nessa página. A veia da escola de arte
+  está, hoje, vazia.
+
+**A REGRA DE MÉTODO QUE SAI DESTA RODADA, e ela é reaproveitável:**
+**nenhum domínio pode ser dado como "sem endereço de pessoa" sem ter tentado `/press`, `/presskit`,
+`/press-kit` e `/pressroom`.** A varredura de 07/09 deu América do Norte como zero depois de testar
+onze caminhos, e a Young Horses estava publicando nome, cargo e email de pessoa em `/press` o tempo
+todo. O `presskit()` do Rami Ismail é um formato padronizado com seção **Team** (nome + cargo) e
+seção **Contact** (endereço de pessoa) — é exatamente o que o Joe procura, num caminho fixo.
