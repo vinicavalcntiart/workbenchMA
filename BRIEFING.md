@@ -2306,8 +2306,8 @@ Lido como regra operacional:
    entregue a ele: ou a automação envia, ou a porta vai por carta para a caixa publicada da casa.
 6. **O painel (`docs/index.html`) se atualiza em toda rodada** que tiver dado novo, e o push
    publica sozinho pelo workflow.
-7. **Meta diária de formulário: 5 candidaturas enviadas e confirmadas por dia, pelo menos 3 de
-   personagem.** Medido, não estimado: entre 06 e 11/09 a campanha fez de 14 a 38 por dia com
+7. **Meta diária de formulário, elevada pelo Vini em 16/09 às 12h50: 10 candidaturas enviadas e
+   confirmadas por dia, pelo menos 5 de personagem.** (A meta inicial de 5/3 valeu só na manhã de 16/09.) Medido, não estimado: entre 06 e 11/09 a campanha fez de 14 a 38 por dia com
    estoque de banco de talentos; em 12/09 fez 3 e em 14 e 15/09 zero, com o estoque seco. Cinco é
    o que a caça diária consegue sustentar sem inflar com ambiente; o placar do dia sai no
    fechamento das 23h30 UTC, com a quebra personagem/ambiente, e dia abaixo da meta se escreve
@@ -2389,3 +2389,22 @@ por estado do portal, do tipo medido em 12/09. A ronda seguinte confere o estado
 prefixo `/job/` (`Sydney/Character-Modeler---..._JR42577`); com o prefixo a URL fica com `/job/`
 duplicado e a tela devolve `1 Error` com spinner, sem formulário. O comentário do topo do script
 promete tirar o prefixo, e a linha 429 não tira.
+
+### 16/09, 12h55 UTC — META SOBE PARA 10 POR DIA, E A VIGIA DAS CASAS PRIORITÁRIAS PASSA A SER HORÁRIA
+
+Palavras dele: *"Quero uma meta grande de vagas de formulario"* e *"se abrir uma vaga compatível
+no grupo disney temos que ser os primeiros a nos inscrever"*.
+
+- **Meta diária: 10 formulários enviados e confirmados, mínimo 5 de personagem.** O placar do dia
+  continua sendo medido, e dia abaixo da meta se escreve como abaixo da meta com a causa (a causa
+  mais provável é estoque, e ela se combate abrindo fonte nova, não inflando com ambiente).
+- **Rotina nova: "Vigia Disney + Netflix + Pixar", de hora em hora (minuto 40), só API.** Requisição
+  nova de arte no grupo Disney ou de personagem na Netflix se aplica na mesma rodada pelo Workday,
+  com a conta dele. A rodada de formulários de 2h continua fazendo a mesma ronda; a vigia horária
+  existe para a janela entre uma rodada e outra.
+- **De onde sai o estoque de formulário hoje, medido no painel às 12h50:** as portas `alta`/`media`
+  sem parede e com personagem são só 8, e quase todas são rota de email. O estoque real está em
+  (a) a faixa `baixa` do painel (92 portas de personagem sem parede escrita, minerada só a partir
+  de 14/09), (b) os bancos de talentos com departamento de personagem (`automacao/bancos-de-talentos-1009.md`
+  e `automacao/FILA-PERSONAGEM-1209.md`), (c) as portas de Greenhouse com código por email, e
+  (d) os locatários Workday e a EA, agora que o login funciona daqui.
