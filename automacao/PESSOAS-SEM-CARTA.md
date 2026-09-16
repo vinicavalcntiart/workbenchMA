@@ -4202,3 +4202,52 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   fora é justamente o que casa desse porte evita; (5) a casa **já levou carta e follow-up**, então esta é
   a terceira batida no mesmo domínio.
 
+---
+
+### Ralph Kamp — **Chairman & CEO** — Timeless Films, Reino Unido — **casa INÉDITA na campanha, e o `mailto` está ancorado no cartão da pessoa**
+
+- **Email:** `ralph@timelessfilms.co.uk` · confiança **alta** · **PUBLICADO pelo próprio estúdio** em
+  **https://timelessfilms.co.uk/about**, aberta nesta rodada, no cartão dele da seção de equipe. **Nada
+  foi montado.**
+- **Pareamento provado no HTML:** cada cartão é `<...>Nome</...>` seguido do cargo e do botão **Send
+  Email** cujo `href` é o `mailto`. A leitura crua, na ordem: `ralph@` logo após
+  *"Ralph Kamp / **Chairman & CEO**"*; `rebecca@` após *"Rebecca Kamp / SVP Production & Marketing"*;
+  `gareth@` após *"Gareth Kamp / SVP Distribution & Production"*; `jon@` após *"Jon Clifford / Head of
+  Technical & Post Production"*; `jade@` após *"Jade Spinks / Contracts & Collections Manager"*. Cinco
+  cartões, cinco endereços, cada parte local igual ao primeiro nome do cartão.
+- **Por que ELE e não outra pessoa da casa:** é uma **empresa de família** e ele é o fundador e CEO —
+  *"Established in 2009 by industry veteran Ralph Kamp (former CEO of Icon and Odyssey Entertainment)
+  with his two children Rebecca and Gareth"*. Em casa desse porte o `BRIEF-JOE` manda ir no dono, que
+  responde ele mesmo. O único outro cargo de ofício é **Jon Clifford, Head of Technical & Post
+  Production**, e a bio dele diz que ele cuida de *"Post Production, technical & legal film delivery and
+  international servicing"*, ou seja **entrega e não elenco**: fica como **SEGUNDA e última** possível.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Timeless Films is a leading independent
+  production company specialising in the development, financing, production and distribution of
+  **animated and family films**, giving it a unique position in the worldwide marketplace. It's a family
+  business with an emphasis on family entertainment."* O encaixe de personagem é o catálogo, escrito por
+  eles na mesma página: **WICKIE THE MIGHTY VIKING**, a sequência *"its **3D** sequel WICKIE AND THE
+  TREASURE OF THE GODS"* e *"**3D CG animated feature** ANIMALS UNITED"*, com *"over $154m in total at
+  the worldwide box office"*; depois *"the **CG animated DRAGON RIDER** from bestselling author Cornelia
+  Funke"*; **JUSTIN AND THE KNIGHTS OF VALOUR (3D)** produzido junto com Antonio Banderas e a Kandor
+  Graphics; **POSTMAN PAT: THE MOVIE (3D)**; **ROCK DOG** e as duas sequências (2022 e 2023);
+  **MONSTER FAMILY** e **MONSTER FAMILY 2**; **PETS UNITED**; **JUNGLE BEAT: THE MOVIE**. Dragão, viking,
+  cão roqueiro e família de monstros é elenco estilizado do começo ao fim. E a casa **produz por dentro**:
+  a bio do Gareth diz que ele está *"heavily involved in the development and production of Timeless films
+  **in house productions**"*, sendo a mais recente **SCROOGE: A CHRISTMAS CAROL**, que *"Netflix released
+  in November 2022 and spent three consecutive weeks on their Global Top Ten Charts"*.
+- **Fora dos EUA?** Sim — Reino Unido, que é rota de frente. **Ressalva de precisão: o site não publica
+  endereço físico nenhum**; o que sustenta o país é o domínio `.co.uk`, a razão social britânica e o
+  rodapé *"© Timeless Films 2026"*. Não escrevi cidade porque a casa não escreve.
+- **Dedupe, arquivos e caixa:** procurei `timelessfilms` e `Timeless` em `enviados.csv`, `alvos.csv`,
+  `automacao/pessoas.csv` e `automacao/garimpo-cgstudiomap.csv`: **zero em todos**. **NA CAIXA:**
+  `search_threads` por `timelessfilms OR "Timeless Films" OR "Ralph Kamp" OR "Rock Dog" OR "Dragon Rider"`
+  devolveu **zero**. **CASA NOVA, nunca recebeu carta nenhuma, PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) é **produtora e distribuidora**, não estúdio com pipeline — o 3D do catálogo
+  foi feito por parceiros (Constantin Film, Kandor Graphics, Mack Animation/Ambient Entertainment), então
+  quem contrata modelador provavelmente **não é ela**; é a mesma ressalva da MovieBrats e da Chouette, e
+  aqui ela é mais forte porque a palavra "studio" não aparece em lugar nenhum; (2) o cargo é **Chairman &
+  CEO**, negócio puro, e a bio dele é de financiamento e distribuição; (3) a casa **não publica página de
+  vagas**, então não há vaga nem convite escrito; (4) o site **não publica endereço nem telefone**, o que
+  é sinal de casa de escritório pequeno; (5) o catálogo mais recente citado é de **2023**, e não há
+  projeto marcado como em produção hoje.
+
