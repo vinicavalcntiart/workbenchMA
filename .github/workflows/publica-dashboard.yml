@@ -27,9 +27,13 @@ name: Publicar dashboard cifrado
 # simplesmente NAO RODAVA, e nao rodar tambem nao falha.
 # As duas branches ficam na lista de proposito: a antiga ainda existe no remoto, e tirar o nome
 # dela faria a mesma armadilha ao contrario se alguem voltar a empurrar por la.
+# 16/09: a campanha passou para a sessao do maestro em Fable, e a branch oficial agora e
+# `claude/vagas-campaign-performance-3mffss`. As duas anteriores continuam na lista pelo mesmo
+# motivo de sempre: tirar o nome de uma branch que ainda existe arma a armadilha ao contrario.
 on:
   push:
     branches:
+      - claude/vagas-campaign-performance-3mffss
       - claude/vini-job-campaign-batch-2-so98fm
       - claude/vini-cavalcanti-job-campaign-gciixk
     paths:

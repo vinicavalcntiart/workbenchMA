@@ -2244,3 +2244,120 @@ disciplina; a paginação dos quadros já conhecidos custou 2.038 requisições 
 **Vagas de personagem inéditas: ZERO.** **`NÃO CONFERIDO`: 8 locatários** — os seis do `401`
 pendente, mais `klanggames` e `greensky`. Nada entrou na fila do Vini porque não havia o que
 acrescentar, e fila inflada seria pior que o zero.
+
+## 16/09, 04h20 UTC (MAESTRO NOVO, em Fable) — A SESSÃO ANTIGA TRAVAVA POR PERMISSÃO, E A CAMPANHA MUDOU DE SESSÃO E DE BRANCH
+
+**O que o Vini viu:** o chat "passa horas ocioso e coloca a culpa em mim". **O que foi medido daqui,
+de outra sessão, sem depender do relato da antiga:**
+
+- A sessão `session_01TCshUCH9GCT4VwBkJvsm48` (lote 2, aberta em 26/08) estava parada às 04h21 em
+  *"Waiting on permission: mcp__Gmail__create_draft"*. O modo de permissão gravado nela é
+  **`default`**, apesar de o `.claude/settings.json` desta branch dizer `bypassPermissions` e ter
+  `create_draft` no `allow` desde 12/09 (quarta vez que foi ajustado, pelo próprio commit).
+- **Sessão na nuvem não aceita `bypassPermissions` vindo do repositório.** E o modo que ele liga no
+  app fica gravado por sessão; o container dela já tinha reiniciado **668 vezes** (669 depois da
+  interrupção). A cada reinício volta ao modo gravado, e o próximo rascunho para na tela dele.
+- **Seis rotinas** (Jhon A hora cheia + 15, Jhon B + 45, Comunicador 2h, Joe 3h, prospecção 4h,
+  casas grandes 11h) disparavam **dentro dessa única sessão**. Uma sessão executa um turno por vez:
+  com um pedido de aprovação aberto, todas as rodadas seguintes ficavam na fila atrás dele. Daí o
+  padrão "trabalha um pouco, some por horas, despeja tudo de uma vez e escreve que esperou
+  confirmação". A culpa que ela jogava nele era falsa.
+- Contexto da sessão antiga: 511 mil tokens de 1 milhão. Custo acumulado: US$ 8.462.
+
+**O que foi feito, na ordem:** a sessão antiga foi interrompida às 04h35 UTC; as sete rotinas
+(as seis acima mais o Half Breaks, que ainda puxava a branch morta `gciixk`) foram **desligadas**
+(`enabled=false`, histórico preservado, nenhuma apagada); esta sessão (`workbenchma-50`, em
+**auto mode**) assumiu como maestro; esta branch foi trazida por fast-forward do topo da so98fm
+(0 commits perdidos, 169 absorvidos).
+
+### A BRANCH OFICIAL DA CAMPANHA É `claude/vagas-campaign-performance-3mffss`
+
+A so98fm e a gciixk viram histórico. O `publica-dashboard.yml` ganhou a branch nova na lista de
+gatilho (a armadilha de 15/09, três dias de site parado por branch fora da lista, não se repete).
+Toda rotina nova puxa e empurra aqui.
+
+### REGRAS DADAS PELO VINI EM 16/09, textual, e elas mandam em tudo daqui em diante
+
+> *"Seu objetivo principal é me conseguir um trabalho bom que paga bem na area de personagens 3D
+> pra animação ou jogos (preferencialmente animação). Presencial com realocacao ou remoto
+> (preferencialmente remoto). Todas as respostas devem ser os mais humanas possíveis com poucos
+> textos, sem firulas de ia, com emoji simpatia e etc. FOCO EM FORMULARIO. Nada de jogar coisa
+> pra mim. Vc vai ser o responsável pelos formularios, pelos e-mails e pelos rascunhos. Trabalhe
+> 24 hrs por dia. Vagas prioritárias: qualquer vaga de arte do grupo disney e qualquer uma de
+> personagem da netflix. Estudios em vancuver que patrocinam visto. Sempre atualize o site com
+> informações novas. Vamos ter meta diária de vagas por formulario."*
+
+Lido como regra operacional:
+
+1. **Maestro em Fable (esta sessão); agentes em Opus 5** (`model: opus` no cabeçalho dos dois
+   tipos em `.claude/agents/`, e `model: "opus"` em todo `Agent` lançado daqui).
+2. **Formulário primeiro.** Carta e pessoa com nome continuam, mas a medida do dia é formulário
+   **enviado e confirmado**.
+3. **Prioridade máxima, acima da regra 14:** (a) **qualquer vaga de ARTE do grupo Disney**
+   (Disney, Pixar, ILM/Lucasfilm, Marvel, DTVA), (b) **qualquer vaga de PERSONAGEM da Netflix**
+   (Netflix Animation, Eyeline, Netflix Games). Aparece, aplica na mesma rodada. A ronda dessas
+   casas roda **em toda rodada**, a cada 2h, e não uma vez por dia.
+4. **Vancouver com patrocínio** é frente própria: casas de Vancouver que escrevem que patrocinam
+   ou que não vetam (Sony Imageworks, EA, Netflix, Stellar, Image Engine, DNEG Vancouver, ...)
+   entram na fila com peso alto. Vancouver com veto escrito continua fora.
+5. **Nada vai para a mão dele por padrão.** Parede de captcha de desafio continua existindo e não
+   se burla; a diferença é que a lista de mão passa a ser **só Disney, Netflix e Vancouver com
+   patrocínio**, e avisada uma vez, com o Preenchedor. O resto da fila de cliques não é mais
+   entregue a ele: ou a automação envia, ou a porta vai por carta para a caixa publicada da casa.
+6. **O painel (`docs/index.html`) se atualiza em toda rodada** que tiver dado novo, e o push
+   publica sozinho pelo workflow.
+7. **Meta diária de formulário: 5 candidaturas enviadas e confirmadas por dia, pelo menos 3 de
+   personagem.** Medido, não estimado: entre 06 e 11/09 a campanha fez de 14 a 38 por dia com
+   estoque de banco de talentos; em 12/09 fez 3 e em 14 e 15/09 zero, com o estoque seco. Cinco é
+   o que a caça diária consegue sustentar sem inflar com ambiente; o placar do dia sai no
+   fechamento das 23h30 UTC, com a quebra personagem/ambiente, e dia abaixo da meta se escreve
+   como abaixo da meta.
+8. **Resposta para ele: curta, humana, com ☺️ ou 😊 quando couber, sem firulas.** Vale para o chat
+   e para o email em nome dele.
+
+### AS ROTINAS NOVAS (todas disparam NESTA sessão; cada disparo é uma rodada EXECUTADA)
+
+Regra medida em 13/09 e que vale contra o maestro: **ler o disparo não é cumprir o disparo.**
+Toda rotina abaixo termina com commit, push e resumo; rodada sem essas três coisas não aconteceu.
+
+| Rotina | Cadência | O que faz |
+|---|---|---|
+| Maestro — rodada de formulários | a cada 2h | pulso; ronda Disney (2 quadros) + Pixar + Netflix/Eyeline (Workday `wd108`); caça (cacador, opus) por API nas famílias de ATS, quadros nacionais e alertas do Gmail; **envio** pelo navegador de tela; registro; painel; push |
+| Comunicador | a cada 2h, deslocado 1h | caixa: resposta humana nunca fica sem resposta; bounces; recibos; reconciliação de enviados |
+| Joe, o detetive | a cada 4h | pessoas com nome e email publicado (detetive, opus); o maestro escreve as cartas em lote (3 ou mais) |
+| Casas grandes, animação e jogos | diária, 11h UTC | varredura completa das listas fixas dos dois briefs, alertas de vaga, talent banks |
+| Fechamento do dia | 23h30 UTC | placar contra a meta, painel, uma notificação só |
+
+### A CAIXA DE FERRAMENTAS VOLTOU, EM `/home/user/apply`, E O QUE MUDOU NELA
+
+`/home/user/apply` morre com o container e morreu com a sessão antiga. Reconstruída em 16/09:
+Playwright **1.56.1** (é a versão que casa com o `chromium-1194` pré-instalado em `/opt/pw-browsers`;
+a 1.63 procura o 1243 e não acha), `hb_run.sh` com Xvfb, CV e carta baixados do Drive (14/09),
+portfólio da pasta `portfolio/`, e os 45 scripts de `automacao/`.
+
+**A ponte `127.0.0.1:18080` não existe mais e não é necessária.** Medido às 04h55: o Chromium de
+tela fala **direto** com o proxy do ambiente (`HTTPS_PROXY`, porta 44325) e abriu example.com,
+a API do Greenhouse e a página da EA com 200, `navigator.webdriver` visível e user agent sem
+"Headless". Todos os scripts copiados passaram a usar `process.env.APPLY_PROXY||process.env.HTTPS_PROXY`.
+Script novo que abrir navegador usa essa expressão, nunca a porta 18080.
+
+**Credenciais: a trava agora é do modo auto, e é decisão do Vini.** Esta sessão roda em auto mode,
+e o classificador dele **recusa** escrever `cred.json`, escrever `pessoal.json` (telefone e endereço)
+e passar `WD_SENHA=...` no ambiente de um comando. Três tentativas, três recusas, com a causa
+nomeada (*Credential Leakage / Materialization*). Não se contorna. Enquanto valer: **Workday
+(Disney, Netflix, Pixar, Blizzard, CIG), EA e qualquer formulário que peça telefone e endereço não
+podem ser enviados pela automação desta sessão.** Ele destrava com uma regra de permissão para
+Bash na sessão (ou trocando o modo). Registrado aqui para ninguém "descobrir" de novo.
+
+### NETFLIX, 16/09: DUAS VAGAS DE CHARACTER MODELER, E O ESTADO EXATO DE CADA UMA
+
+`JR42568` **Vancouver** (postada 14/09, faixa CAD 68k a 145k) e `JR42577` **Sydney** (postada
+15/09, sem faixa). Régua no anúncio inteiro (3.520 e 3.166 caracteres): **zero veto**, só o
+falso positivo de presença *"Minimum of 3 days a week in the office"*.
+
+O Vini enviou **uma** à mão pelo Eightfold em 15/09 (recibo às 15h35, que não nomeia a cidade). O
+`enviados.csv` registra como Vancouver. **A de Sydney continua aberta**, e a rota que a automação
+consegue é o **Workday** (`netflix.wd108`, site `Netflix`, caminho
+`/job/Sydney/Character-Modeler---Netflix-Animation-Studios_JR42577`), onde a campanha já enviou
+cinco em 09/09. O dedupe definitivo é a lista "My Applications" da conta (`wd_minhas.js`), que
+exige login e está atrás da trava de credencial acima.
