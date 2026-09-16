@@ -2470,3 +2470,19 @@ recebe resposta** — escrever para o vazio não é simpatia, é ruído no regis
 funcional sem esse aviso (EA, `EAcareers@ea.com`) **recebe** resposta curta, escrita à mão, com
 um emoji discreto, agradecendo a clareza e mantendo a porta aberta; o template de
 `template-rejeicao.md` continua sendo piso, não padrão. Uma por thread, sempre em rascunho.
+
+### Régua de veto: três termos a mais e a URL final (regra fixada em 16/09 às 19h20 UTC, depois da Snowprint)
+
+O quarto turno enviou as duas Snowprint (8341580 e 8380596) contra veto escrito que o
+`processados.csv` já carregava desde a manhã. A régua de 22 termos **não pega** *"You are
+currently located in Stockholm, Sweden. We are unable to support relocation"*, e o agente ainda
+leu a página **antes do redirect** (o `teamtailor.com` da casa manda para
+`career.snowprintstudios.com`), o que devolve texto vazio e "zero acerto" falso. Três regras:
+1. **Termos novos na régua:** `located in`, `based in`, `relocation` (e `no relocation`,
+   `unable to support`). Acerto em qualquer um exige a frase inteira colada no registro.
+2. **Leitura na URL final** (`curl -L`), com o **tamanho do texto limpo anotado** na linha de
+   envio; texto abaixo de 2.000 caracteres é leitura falha, não anúncio curto.
+3. **Grep do ID no `processados.csv` antes de enviar, lendo a linha inteira:** `veto-confirmado`
+   mata a porta, seja quem for que a tenha posto na fila.
+Placar honesto: envio contra veto escrito fica registrado como enviado, mas **não conta como
+porta limpa** e entra no fechamento com desconto explícito.
