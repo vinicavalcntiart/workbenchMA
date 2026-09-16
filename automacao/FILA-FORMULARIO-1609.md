@@ -17,9 +17,9 @@ faixa, **personagem primeiro**.
 | Sondagens de token cegas | **7.581** (1.454 tokens × Greenhouse/Teamtailor/Personio/Pinpoint + 1.662 tokens europeus × Personio/Teamtailor) |
 | Quadros NOVOS achados por adivinhação de token | **36** (11 Greenhouse, 19 Teamtailor, 18 Personio, com repetição entre listas) |
 | Vagas de PERSONAGEM inéditas nesses quadros novos | **ZERO** — a adivinhação achou quadro, não achou vaga da disciplina |
-| Portas prontas nesta fila | **41** |
-| Portas de personagem/disciplina literal | **9** |
-| Caíram na régua de veto (frase escrita) | **5** |
+| Portas prontas nesta fila | **40** |
+| Portas de personagem/disciplina literal | **8** |
+| Caíram na régua de veto (frase escrita) | **8** |
 | Caíram no dedupe (ID já enviado) | **31** |
 | `NÃO CONFERIDO` | **2** |
 
@@ -107,35 +107,36 @@ Side). Fila inflada seria pior que o número honesto.
 |---|---|---|---|---|---|
 | 29 | Eleventh Hour Games | Senior Environment Artist `8501085002` | Remoto (EUA, núcleo 10h–16h CT) | Greenhouse | ambiente |
 
-## Faixa 6 — JAZZHR: **reCAPTCHA v2 de caixa, medido com clique em 12/09** (parede; só vai à mão, e só o que for Vancouver pela regra de 16/09)
+## Faixa 6 — JAZZHR: **reCAPTCHA v2 de caixa, medido com clique em 12/09** (parede; vai à mão, e pela regra de 16/09 só o que for Vancouver entra na lista da mão dele)
 
 | # | Casa | Porta | País/Cidade | Lane | Disciplina |
 |---|---|---|---|---|---|
-| 30 | **Zoic Studios** | **BC, 3D Character Modeler, Senior** | Canadá (**Vancouver**) | JazzHR (parede) | **PERSONAGEM** |
-| 31 | Certain Affinity | Advanced Material Artist `AgAMjfmeKe` | Canadá (Grande Vancouver, BC) | JazzHR (parede) | **surfacing/material** |
-| 32 | Certain Affinity | Advanced Material Artist `eJTHIpzicy` | Canadá (Grande Toronto, ON) | JazzHR (parede) | **surfacing/material** |
-| 33 | Zoic Studios | BC General Application | Canadá (Vancouver) | JazzHR (parede) | espontânea |
-| 34 | Next Level Games (Nintendo) | General Application | Canadá (Vancouver) | JazzHR (parede) | espontânea |
-| 35 | Zoic Studios | U.S. General Application | EUA (Culver City) | JazzHR (parede) | espontânea |
-| 36 | Obsidian Entertainment | General Application | EUA (Irvine, CA) | JazzHR (parede) | espontânea |
-| 37 | Outplay Entertainment | Speculative Applications | Reino Unido (Dundee) | JazzHR (parede) | espontânea |
+| 30 | **Certain Affinity** | Advanced Material Artist `AgAMjfmeKe` | Canadá (Grande **Vancouver**, BC) | JazzHR (parede) | **surfacing/material** |
+| 31 | Certain Affinity | Advanced Material Artist `eJTHIpzicy` | Canadá (Grande Toronto, ON) | JazzHR (parede) | **surfacing/material** |
+| 32 | Zoic Studios | BC General Application | Canadá (**Vancouver**) | JazzHR (parede) | espontânea (VFX) |
+| 33 | Next Level Games (Nintendo) | General Application | Canadá (**Vancouver**) | JazzHR (parede) | espontânea (jogos) |
+| 34 | Zoic Studios | U.S. General Application | EUA (Culver City) | JazzHR (parede) | espontânea (VFX) |
+| 35 | Obsidian Entertainment | General Application | EUA (Irvine, CA / Remote) | JazzHR (parede) | espontânea (jogos) |
+| 36 | Outplay Entertainment | Speculative Applications | Reino Unido (Dundee) | JazzHR (parede) | espontânea (mobile) |
 
 ## Faixa 7 — RECRUITEE (hCaptcha de imagem **depois** do Send: parede provável)
 
 | # | Casa | Porta | País/Cidade | Lane | Disciplina |
 |---|---|---|---|---|---|
-| 38 | Framestore | 3D Modeller — contrato curto `2120070` | Canadá (Montréal) | Recruitee (parede) | **PERSONAGEM (modelagem)** |
+| 37 | Framestore | 3D Modeller — contrato curto `2120070` | Canadá (Montréal) | Recruitee (parede) | **PERSONAGEM (modelagem)** |
 
 ## Faixa 8 — WORKABLE (Turnstile depois do submit + 429 do IP: parede)
 
 | # | Casa | Porta | País/Cidade | Lane | Disciplina |
 |---|---|---|---|---|---|
-| 39 | Side (PTW) | 3D Character Artist — Talent Pool (EU) | Reino Unido (Londres) | Workable (parede) | **PERSONAGEM** |
-| 40 | Side (PTW) | Senior Texture Artist | Canadá (Toronto) | Workable (parede) | **PERSONAGEM (textura)** |
-| 41 | Side (PTW) | Senior Texture Artist | Canadá (Montréal) | Workable (parede) | **PERSONAGEM (textura)** |
+| 38 | Side (PTW) | 3D Character Artist — Talent Pool (EU) `77511296` | Reino Unido (Londres) | Workable (parede) | **PERSONAGEM** |
+| 39 | Side (PTW) | Senior Texture Artist `59e81e55` | Canadá (Toronto, híbrido) | Workable (parede) | **PERSONAGEM (textura)** |
+| 40 | Side (PTW) | Senior Texture Artist `4552bd5b` | Canadá (Montréal, híbrido) | Workable (parede) | **PERSONAGEM (textura)** |
 
-**Caíram na régua de veto** (frase literal na seção final): Stirling Animation, Image Engine
-General Application, weltenbauer Environment Artist, weltenbauer Tech Artist, Stellar Creative Lab.
+**Caíram na régua de veto** (frase literal na seção final, 8 portas): Stirling Animation,
+Image Engine General Application, weltenbauer Environment Artist, weltenbauer Tech Artist,
+Stellar Creative Lab Modeling Artists, Stellar Creative Lab Surfacing Artists, **Zoic BC 3D
+Character Modeler Senior** e Chimera (só o bloco de estágio, que não derruba a espontânea).
 **Caíram no dedupe** (31 IDs, na seção final). **`NÃO CONFERIDO`:** Liquid Swords (TLS) e
 Side/Workable (corpo do anúncio não lido por 429 do IP).
 
@@ -426,5 +427,210 @@ Side/Workable (corpo do anúncio não lido por 429 do IP).
 - **Formulário:** `https://tapnation.teamtailor.com/connect/candidates/new` · departamentos: `Business Support`, `Monetization & UA`, `Product`, `Tech`, `WEB 3.0` → **marcar `Product`** e dizer a disciplina no campo livre (não há rótulo de arte)
 - **Dedupe:** 1 linha de leitura em `processados.csv`, **zero em `enviados.csv`**. Livre.
 - **Ressalva honesta:** mobile hipercasual; personagem 3D não é o produto. Fecha a faixa por isso.
+
+---
+# FAIXA 4 — PINPOINT, BANCO DE TALENTOS
+
+> **Por que a lane é confiável:** em 10/09 saíram **dez** candidaturas por esta rota, todas com
+> a tela `/themes/<n>/register-your-interest/thanks` registrada em `enviados.csv`. **Zero
+> captcha** no HTML servido. Campos (medidos hoje, iguais nas duas):
+> `#job_seeker_form_job_seeker_first_name`, `_last_name`, `_email`, `#phone-input`,
+> `#job_seeker_form_linkedin_url`, `#personal-summary`, `input[type=file]` para o CV,
+> `#job_seeker_form_process_information` (consentimento) e os multisseletores
+> `job_seeker_form[interest_options][location_ids][]` e `[department_ids][]`.
+> **A armadilha da lane, e ela é infalsificável:** quadro de demonstração traz `Locations` =
+> `Belfast, London, New York, Paris, Sydney, Washington`, `Departments` = `Engineering, Finance,
+> Marketing, Operations, Product, Sales` e `Divisions` = **`ACME`/`Hooli`**. Se aparecer isso, é
+> conta de teste e a candidatura cai num lugar que ninguém abre. **A Moonbug caiu nisso hoje** e
+> está na seção de descarte.
+> **Script:** `pin_interesse.js` (em `automacao/`, não copiado para a caixa nova — copie antes de rodar).
+
+## 27. ★ Hyper Hippo Entertainment — Register Your Interest (Remote Canada)
+
+- **Formulário:** `https://hyperhippo.pinpointhq.com/register-your-interest/new`
+- **País/cidade:** Canadá — **`Remote (Canada)`** é a única localidade oferecida (sede em Kelowna, BC)
+- **Departamentos REAIS (17, quadro configurado de verdade):** `Art`, `Communications`, `Data`, `Engineering`, `Executive`, `Finance & Accounting`, `Game Design`, `Global Platforms & Player Experience (PX)`, `Lab`, `Marketing & Content`, `P&C (Test)`, `People & Culture`, `Player Experience`, `Production (Games)`, `QA`, `UI / UX`, `Workplace & Technology` → **marcar `Art`**
+- **Pretensão (campo livre, se pedir):** CAD 80.000/ano (casa média, regra de 04/09) + abertura padrão
+- **Régua de veto:** nenhum dos 22 termos casa na página. Sem veto escrito.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "hyperhippo" "Hyper Hippo"` → **as dez rotas Pinpoint enviadas em 10/09 são `flixinteractive`, `gameplaygalaxy`, `ingenuitystudios`, `magnopus`, `outpost-vfx`, `pipeworks`, `playground-games`, `rocksteady`, `singularity6` e `wushustudios`. A `hyperhippo` NÃO está entre elas** — a fila de 10/09 listava 11 casas e só 10 saíram. A única ocorrência da casa no painel é a **parede de JavaScript de 08/09**, sem envio. **ROTA LIVRE, e é a sobra da fila daquele dia.**
+- **Pergunta do estúdio (uma só, slot 0, `short_text`, não obrigatória, id `237602`):** *"What are your pronouns?"* → `He/Him`
+- **Comando:** `cp automacao/pin_interesse.js /home/user/apply/ && cd /home/user/apply && VINI_TEL='<código do país + número>' sh hb_run.sh pin_interesse.js hyperhippo`
+- **Gancho:** o quadro tem `Art`, `Game Design` e `Production (Games)` reais e a única localidade é **remoto no Canadá** — remoto no Canadá é exatamente o alvo da regra 4 do Vini (Vancouver/BC com patrocínio), sem custo de visto imediato.
+
+## 28. Sun Creature — Register Your Interest (Copenhague)
+
+- **Formulário:** `https://suncreature.pinpointhq.com/register-your-interest/new`
+- **País/cidade:** Dinamarca, Copenhague (`Locations` = `Copenhagen`, **real**)
+- **Departamentos:** `Engineering, Finance, Marketing, Operations, Product, Sales` → **é o conjunto de fábrica**; quadro meio configurado (localidade real, departamentos de demonstração). **Não há `ACME`/`Hooli`**, então não é conta de teste: é o mesmo caso da Playground Games e da Outpost VFX, que foram enviadas em 10/09. **Marcar `Product`** e dizer a disciplina no `#personal-summary`.
+- **Pretensão:** EUR 45.000/ano + abertura padrão
+- **Régua de veto:** zero acertos na página.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "suncreature" "Sun Creature"` → duas ocorrências em `enviados.csv` e as duas são **carta fria** (`contact@suncreature.com` em 26/08 e 2ª via para `jobs@suncreature.com` em 02/09). **Nenhuma marca de envio por portal. Rota inédita.**
+- **Perguntas do estúdio:** nenhuma (zero slots).
+- **Comando:** `cd /home/user/apply && VINI_TEL='<...>' sh hb_run.sh pin_interesse.js suncreature`
+- **Gancho:** Sun Creature é animação **2D/3D estilizada** de autor (Le Cœur des Lucioles, trailers de Riot) — o `#personal-summary` é o lugar de dizer, com a verdade, que a disciplina é personagem 3D estilizado com grooming.
+- **Ressalva honesta:** o quadro **não tem departamento de arte**, então o cadastro depende de o texto ser lido. Encaixe de estilo alto, precisão de fila baixa.
+
+---
+
+# FAIXA 5 — GREENHOUSE
+
+> **Como a lane se comporta:** o HTML do formulário traz `RECAPTCHA_INVISIBLE_KEY` e
+> `recaptcha.net/recaptcha/enterprise.js` — é **reCAPTCHA invisível/pontuação de sessão**, não
+> caixa de desafio. Pela medida da campanha, **vale tentar**: o Greenhouse manda um **código de
+> segurança por email** e o código só funciona com a sessão viva (rode em segundo plano, espere
+> `needcode_<slug>.txt`, leia o código no Gmail e escreva `code_<slug>.txt` em até seis minutos).
+
+## 29. Eleventh Hour Games — Senior Environment Artist (remoto)
+
+- **Formulário:** `https://job-boards.greenhouse.io/eleventhhourgames/jobs/8501085002`
+- **Requisição:** `8501085002` · **Casa:** Eleventh Hour Games (Last Epoch), quadro do grupo **KRAFTON Americas**
+- **País/cidade:** **Remoto**, com núcleo de horário declarado (10h–16h Central Time). Ele está em UTC-3, o que cai **dentro** da janela.
+- **Faixa publicada:** nenhuma no anúncio. **Pretensão:** USD 100.000/ano (casa grande, regra de 04/09) + abertura padrão — o formulário tem campo **`Desired Salary`**.
+- **Régua de veto:** 35.265 caracteres lidos (API com `content=true`). Três acertos, **os três falsos positivos**: `Polish` casa dentro de *"...through final in-engine implementation and **polish**"*; `authoriz` casa no bloco de EEO sobre veteranos (*"...for which a campaign badge has been **authorized** under the laws administered by the Department of Defense"*). **Nenhum veto escrito de residência, autorização ou idioma.**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "8501085002" "Eleventh Hour"` → `enviados.csv` 0, painel 0, `FILA-DO-VINI.md` 0; 1 linha de leitura em `processados.csv`. **Requisição inédita.**
+- **Perguntas customizadas (22, lidas por `?questions=true`; as que exigem decisão):**
+  | pergunta | resposta |
+  |---|---|
+  | *"Are you able to be fully available during Eleventh Hours Games' core hours (10:00AM - 4:00PM Central Time)?"* | **Yes** (UTC-3 cobre 12h–18h locais) |
+  | *"Do you currently have a remote work setup capable of fulfilling the needs of this role?"* | **Yes** |
+  | *"Do you have experience working in a fully remote studio environment?"* | **Yes** |
+  | *"What environments or areas have you fully owned from concept to final implementation? Please describe your process and responsibilities."* | texto com os mundos do Wingfeather Saga e do trabalho na E-Line |
+  | *"Describe your experience working directly in engine..."* | Unreal/Unity: import, materiais, otimização |
+  | *"How do you approach balancing visual quality with performance constraints? Provide a concrete example."* | exemplo real de orçamento de polígono/textura |
+  | *"What types of environments or worlds are you most experienced building (open worlds, linear levels, stylized, realistic, etc)?"* | **stylized** |
+  | *"Do you have experience creating or maintaining material/shader systems?"* | Yes, Substance + shaders de personagem |
+  | *"Now a fun one! What game have you put the highest amount of playtime hours into throughout your life? More importantly, why do you think that is?"* | resposta humana, curta |
+  | `Desired Salary` | `USD 100,000 — open to aligning with your band for the role` |
+  Campos base: First/Last, Preferred First Name, Email, Phone, Resume/CV, Cover Letter, LinkedIn, Website, `[Privacy Policy]`.
+- **Comando:** `cd /home/user/apply && node apply-greenhouse.js "https://job-boards.greenhouse.io/eleventhhourgames/jobs/8501085002" eleventhhour ans_eleventhhour.json` (sem `--submit` primeiro; depois com, deixando a sessão viva para o código por email)
+- **Gancho:** *"As Senior Environment Artist, you will own environment creation from early concept and blockout through final in-engine implementation and polish."*
+- **Ressalva honesta:** é **ambiente**, não personagem, e é ARPG isométrico. Entra porque é a única requisição aberta e inédita numa lane que passa, é 100% remota e o quadro é da KRAFTON (a mesma dona da PUBG e da Unknown Worlds).
+
+---
+
+# FAIXA 6 — JAZZHR (parede de reCAPTCHA v2 medida; dossiê pronto para a mão)
+
+> **A medida, e ela é de clique, não de suposição:** em 12/09 a campanha preencheu a
+> `Modeling Artists` da Stellar até o fim e clicou em *Submit Application*: **zero POST para o
+> host da casa**, com o `anchor` do reCAPTCHA em `size=normal` e o `bframe` presente, rótulo
+> **"Human Check*"**. Hoje confirmei que **as cinco páginas de candidatura JazzHR que abri
+> trazem `div.g-recaptcha` + `recaptcha/api.js` sem `render=`**, que é a assinatura do **v2 de
+> caixa**. Não se burla. Estas portas são dossiê para a mão dele — e, pela regra de 16/09, só
+> **Vancouver** justifica a mão: #30, #32 e #33.
+> **Campos, iguais nas cinco:** `First Name`, `Last Name`, `Email Address`, `Phone`, `Address`,
+> `Resume`, `Cover Letter` + as perguntas de cada casa.
+
+## 30. Certain Affinity — Advanced Material Artist (Grande Vancouver, BC)
+
+- **Formulário:** `https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Advanced-Material-Artist`
+- **Requisição:** `AgAMjfmeKe` · Full Time, Mid Level · **Canadá, Grande Vancouver (BC)**
+- **Pretensão:** CAD 95.000/ano (casa grande de AAA, regra de 04/09) + abertura padrão
+- **Régua de veto:** 4.042 caracteres → **zero acertos dos 22 termos.** Sem veto escrito (nem residência, nem autorização).
+- **Dedupe:** `sh automacao/dedupe-agora.sh "AgAMjfmeKe" "Certain Affinity"` → `enviados.csv` **0**. O painel registra a **`Senior Material Artist`** da mesma casa como *"preenchida por inteiro e testada — o reCAPTCHA abriu desafio de imagem"*, **sem envio**. O cargo hoje mudou de nome (**Advanced** Material Artist) e o código da requisição é o mesmo `AgAMjfmeKe` do registro antigo: **é a mesma porta, e ela nunca foi enviada.**
+- **Gancho:** *"Would you like to work on some of the greatest franchises in gaming history? What about working on our new original IP?"* — e o anúncio diz *"We are also excited to be the latest recipient of the Canadian Studio of the Year award"*.
+- **Por que é a primeira da faixa:** material/surfacing é meia-irmã da disciplina dele (textura e shading de personagem), e é **Vancouver**, que é a frente de prioridade 4 do Vini.
+
+## 31. Certain Affinity — Advanced Material Artist (Grande Toronto, ON)
+
+- **Formulário:** `https://certainaffinityinc.applytojob.com/apply/eJTHIpzicy/Advanced-Material-Artist`
+- **Requisição:** `eJTHIpzicy` — **é a segunda requisição da MESMA vaga**, publicada para Toronto. O painel já registrava as duas cidades.
+- **Régua, dedupe, pretensão e gancho:** iguais aos da #30 (CAD 95.000).
+- **Ressalva:** mandar as duas é legítimo (requisições distintas), mas se o Jhon A quiser só uma, **Vancouver primeiro**.
+
+## 32. Zoic Studios — BC General Application (Vancouver)
+
+- **Formulário:** `https://zoicstudios.applytojob.com/apply/va0rRqNxqm/BC-General-Application`
+- **Régua de veto:** 4.288 caracteres. O acerto de `based in` é *"Zoic Studios BC Recruitment Team This position is based in Vancouver."* → **falso positivo de local**, não veto (não há "must reside" nesta porta, ao contrário da vaga de personagem da mesma casa, que caiu na régua e está na seção final). Os outros acertos são **rótulos de pergunta do formulário**, não requisito.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "va0rRqNxqm" "Zoic"` → `enviados.csv` tem **duas cartas frias** (jweitzell@ em 05/09, smelchiorre@ em 07/09) e **nenhum envio por portal**. Livre.
+- **Perguntas (as que decidem):** *"What's your citizenship / employment eligibility?"* → **`Non-citizen seeking work authorization`**; *"Eligible to work in Canada?"* → **`I require a Work Permit.`**; *"Have you been a resident in BC since December 31st, 2025?"* → **No** (e escrever a data real de mudança: não houve); *"What is your desired hourly rate?"* → CAD equivalente a CAD 95.000/ano; *"In 150 characters or fewer, tell us what makes you unique..."* → frase humana, com o crédito do Wingfeather Saga.
+- **Gancho:** *"Zoic Studios is a Visual Effects company that specializes in high end visual effects for television, film, and advertising. Our mantra is Visual Evolution."*
+
+## 33. Next Level Games (Nintendo) — General Application (Vancouver)
+
+- **Formulário:** `https://nextlevelgames.applytojob.com/apply/YyYQvToJW1/General-Application`
+- **Régua de veto:** 3.719 caracteres. Único acerto: *"Are you authorized to work in Canada?*"* → é **pergunta obrigatória do formulário**, não veto escrito. Responder **No**, com a verdade, e marcar patrocínio necessário no campo livre.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "YyYQvToJW1" "Next Level Games"` → `enviados.csv` tem **uma carta fria** (`careers@nextlevelgames.com`, 01/09). **Nenhum envio por portal.** Livre.
+- **Pretensão:** CAD 95.000/ano (estúdio da Nintendo) + abertura
+- **Gancho:** o quadro deles é curto e a porta é a espontânea — o gancho honesto é o catálogo (Luigi's Mansion 3, Mario Strikers), personagem estilizado de cabo a rabo. **Não há frase de anúncio para citar nesta porta.**
+
+## 34. Zoic Studios — U.S. General Application (Culver City)
+
+- **Formulário:** `https://zoicstudios.applytojob.com/apply/DoIaRXmt0d/US-General-Application`
+- **Dedupe:** mesmas duas cartas frias da #32; sem envio por portal.
+- **Perguntas:** o bloco de elegibilidade é o americano — responder **No** para autorização nos EUA e **Yes** para patrocínio.
+- **Pretensão:** USD 100.000/ano + abertura. **Ressalva:** a casa marca as vagas de BC como `Contracted`; a porta americana é a de Culver City.
+
+## 35. Obsidian Entertainment — General Application (Irvine, CA)
+
+- **Formulário:** `https://obsidian.applytojob.com/apply/21Ud1IGKcj/General-Application`
+- **Régua de veto:** 3.164 caracteres → **zero acertos.**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "21Ud1IGKcj" "Obsidian"` → `enviados.csv` **0**. O painel registra a revalidação de 05/09: *"a General Application segue aberta no ATS proprio (obsidian.applytojob.com), marcada Remote e Full Time"*, **sem envio**. Livre.
+- **Pretensão:** USD 100.000/ano + abertura
+- **Ressalva:** é Xbox Game Studios; o quadro público de arte da casa hoje não tem personagem, e a espontânea é a única porta.
+
+## 36. Outplay Entertainment — Speculative Applications (Dundee, Reino Unido)
+
+- **Formulário:** `https://outplayentertainment.applytojob.com/apply/CS3Wh2/Speculative-Applications`
+- **Dedupe:** `sh automacao/dedupe-agora.sh "CS3Wh2" "Outplay"` → `enviados.csv` **0**; o painel tem a porta como *"A MAO em 07/09 ... por reCAPTCHA v2 de caixa; formulario mapeado campo a campo"*, **sem envio**. Livre, e o mapa de campos já existe de 07/09.
+- **Pretensão:** GBP 42.000/ano (casa média, Reino Unido) + abertura
+- **Ressalva honesta do próprio painel:** *"Encaixe medio-baixo, e mobile match-3"*. Fecha a faixa.
+
+---
+
+# FAIXA 7 — RECRUITEE
+
+## 37. Framestore — 3D Modeller, contrato curto (Montréal) — **PERSONAGEM (modelagem)**
+
+- **Formulário:** `https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme`
+- **Requisição:** `2120070` · **Local:** Canadá, Montréal (Québec) · **contrato curto**
+- **Faixa publicada:** nenhuma. **Pretensão:** CAD 95.000/ano equivalente, ou taxa semanal proporcional + abertura padrão
+- **Régua de veto:** anúncio lido pela API (`/api/offers/2120070`): **zero veto escrito**. O que existe são **perguntas** de elegibilidade, que se respondem com a verdade.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "2120070" "Framestore"` → `enviados.csv` 0, `FILA-DO-VINI.md` 0; 3 linhas de leitura em `processados.csv` e 2 no painel, **nenhuma com marca de envio**. Livre.
+- **Perguntas customizadas (nove, com id, lidas da API pública):**
+  | id | tipo | pergunta | resposta |
+  |---|---|---|---|
+  | `3148831` | string | Portfolio link | `https://www.artstation.com/viniciuscavalcanti` |
+  | `3148832` | string | Portfolio password | (vazio) |
+  | `3148839` | single_choice | Years of experience in 3D modeling | 10+ (escolher a faixa mais alta oferecida) |
+  | `3148833` | string | Availability date | `Immediately / 30 days notice` |
+  | `3148834` | string | Current Location | `Olinda, Pernambuco, Brazil` |
+  | `3148835` | string | Citizenship | `Brazilian` |
+  | `3148836` | **boolean** | *"Will you need visa sponsorship?"* | **Yes** (a verdade) |
+  | `3148837` | string | Desired salary/rate | CAD, com a abertura padrão |
+  | `3148838` | single_choice | What are your pronouns? | `He/Him` |
+- **Script e comando:** `cd /home/user/apply && VINI_TEL='<...>' sh hb_run.sh apply_recruitee5.js ans_framestore.json framestore` (o `ans.json` usa `texto` por nome de campo, `radios` por id de pergunta e `cover: true`)
+- **Gancho:** *"Modellers are responsible for the production of highly accurate and efficient CG models for use in high-end visual effects films"* e *"Modellers work closely with Texture Artists in order to produce models and UVs that meet the specific requirements of a VFX pipeline"*.
+- **PAREDE ESPERADA, medida em 06/09 nesta mesma casa:** o **hCaptcha de imagem só aparece DEPOIS do clique em Send**. Até lá o formulário aceita tudo. Preencher, tirar o dossiê e, se o hCaptcha abrir, **não insistir**: vira item de mão. E há a ressalva de formato: **contrato curto**, que contraria a preferência dele por vaga fixa.
+
+---
+
+# FAIXA 8 — WORKABLE
+
+> **Estado da lane, medido hoje:** a **leitura** por `https://jobs.workable.com/api/v1/jobs?query=...`
+> **funcionou** (282 resultados para "character artist"), mas o **envio** continua sendo o
+> problema conhecido: Cloudflare **Turnstile que só aparece depois do clique em enviar** e o
+> estrangulamento de IP (`error code: 1015`) no `apply.workable.com`. Trate como parede até
+> alguém medir o contrário. Estão aqui porque são **as três únicas vagas de personagem/textura
+> em escopo que a varredura global achou hoje** e porque o dossiê serve tanto para a mão quanto
+> para uma carta à casa.
+
+## 38. Side (PTW) — 3D Character Artist, Talent Pool (EU), Londres — **PERSONAGEM**
+- **Anúncio:** `https://jobs.workable.com/view/fJyhdFCoapwWKCvpGartD5/3d-character-artist---talent-pool-(eu)-in-london-at-side` · **id** `77511296-932a-4f38-ae1f-0e088c7109ea`
+- **Régua de veto:** corpo lido pela API → **zero acertos dos 22 termos**. O que há é aviso de idioma de **currículo**: *"Only resumes submitted in English will be considered"* → falso positivo (não é exigência de falar outra língua), e o CV dele já é em inglês.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "77511296" "Side"` → zero por ID. A casa aparece no painel como grupo (PTW/Side), **sem envio para esta requisição**.
+- **Pretensão:** GBP 50.000/ano (casa grande, Reino Unido) + abertura
+- **Gancho:** *"Please note, this listing is not for an immediate open position but for our Talent Pool for Co-Development Roles."* — é banco de talentos declarado, o que baixa o custo de uma candidatura honesta.
+
+## 39. Side (PTW) — Senior Texture Artist (Toronto, híbrido) — **PERSONAGEM (textura)**
+- **Anúncio:** `https://jobs.workable.com/view/c6VkX4b2KPumikGpAnF75s/hybrid-artiste-de-texture-senior-%7C-senior-texture-artist-in-toronto-at-side` · **id** `59e81e55-412b-4f48-ac69-0e5a3fbd1e42`
+- **Régua de veto:** **zero acertos**. O anúncio é **bilíngue** (francês primeiro, inglês depois) e **não exige francês em nenhuma frase** — o que derrubaria seria uma exigência escrita, e ela não existe.
+- **Contrato:** *"Contrat: 6+ mois"*, híbrido, Montréal **ou** Toronto.
+- **Pretensão:** CAD 95.000/ano equivalente + abertura
+- **Gancho:** *"Chez Side, nous collaborons avec certains des principaux développeurs de jeux au monde pour résoudre des défis techniques complexes"* (o anúncio traz a versão inglesa logo abaixo).
+
+## 40. Side (PTW) — Senior Texture Artist (Montréal, híbrido) — **PERSONAGEM (textura)**
+- **Anúncio:** `https://jobs.workable.com/view/9yuW35zXXRhYX4wgDGcVSQ/hybrid-artiste-de-texture-senior-%7C-senior-texture-artist-in-montreal-at-side` · **id** `4552bd5b-f2d5-44b4-9c87-7ce06167b010`
+- **É a segunda cidade da MESMA vaga** (o corpo diz *"Lieu : Montréal, Québec ou Toronto, Ontario"*). **Mandar UMA das duas**, não as duas: é o caso exato da regra 18 (mesma requisição em dois locais), e a Rebellion já custou uma batida repetida assim.
+- **Régua, pretensão e gancho:** iguais aos da #39.
 
 ---
