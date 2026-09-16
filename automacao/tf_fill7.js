@@ -27,6 +27,13 @@ const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' 
    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',locale:'en-US'});
  await ctx.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});});
  const p=await ctx.newPage();
+ // PROVA DE REDE, acrescentada em 16/09: o Typeform grava a resposta por POST/PUT na API
+ // dele, e o codigo dessa chamada e a prova mais forte que existe aqui - mais forte que o
+ // texto da tela final, porque ha formularios cuja tela de agradecimento nao tem texto
+ // nenhum (a da Sarofsky devolve so o botao "again" e os icones de compartilhar).
+ const REDE=[];
+ p.on('response',r=>{ const m=r.request().method();
+   if(m!=='GET'&&/typeform|responses|submit/i.test(r.url())) REDE.push(r.status()+' '+m+' '+r.url().slice(0,150)); });
  const feitas=[]; let fimNatural=false; const ULTIMO={n:0}; const PROXIMO={a:null};
  // le o bloco ATIVO (o que contem o activeElement)
  // ARMADILHA 8, e ela substitui todas as heuristicas de foco: cada bloco carrega
@@ -158,9 +165,18 @@ const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' 
       // o statement nao tem numero de pergunta confiavel (medido: ele devolve o mesmo
       // contador da pergunta 1), entao aqui o Enter vai sem prova de numero e a prova vem
       // da leitura do bloco na volta do laco.
+      // DEFEITO MEU, PEGO EM 16/09 NO TYPEFORM DA SAROFSKY E CORRIGIDO AQUI: o segundo Enter
+      // era CEGO, e num formulario em que a pergunta seguinte ao statement e OPCIONAL ele
+      // ANDA DUAS TELAS e deixa essa pergunta em branco (a "How would you best describe
+      // yourself?" da Sarofsky, Question 2 de 11, foi pulada sem aparecer no log). Agora o
+      // segundo Enter so sai se a tela AINDA estiver no statement.
       await p.keyboard.press('Enter'); await p.waitForTimeout(3000);
-      await p.keyboard.press('Enter').catch(()=>{}); await p.waitForTimeout(2500);
-      const dps=await ativo();
+      let dps=await ativo();
+      if(dps.tipo==='statement'){
+        log('  ainda no statement depois do primeiro Enter: mando o segundo');
+        await p.keyboard.press('Enter').catch(()=>{}); await p.waitForTimeout(2500);
+        dps=await ativo();
+      }
       log('  depois do statement o bloco ativo e:',(dps.titulo||'').slice(0,60),'| tipo',dps.tipo);
       if(dps.tipo==='statement'){ log('  continua no statement | PARANDO'); break; }
       PROXIMO.a=dps;
@@ -307,6 +323,7 @@ const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' 
     await p.waitForTimeout(12000);
     log('DEPOIS DO SUBMIT | url:',p.url().slice(0,180));
     log('TEXTO DO SERVIDOR:',(await p.innerText('body').catch(()=>'')).replace(/\s+/g,' ').slice(0,700));
+    log('REDE nao-GET depois do envio:',JSON.stringify(REDE.slice(-12)));
     await p.screenshot({path:'tf7_enviado.png',fullPage:true});
   } else if(SUBMIT) log('NAO CLIQUEI: feitas',feitas.length,'| submit:',!!sub,'| fim natural:',fimNatural,
       '(a trava do fim natural existe porque na rodada das 16h eu cliquei Submit com a pergunta 18 obrigatoria em branco: o servidor nao aceitou e a tela ficou no formulario, ou seja envio nenhum)');
