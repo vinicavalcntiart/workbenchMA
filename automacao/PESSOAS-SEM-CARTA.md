@@ -3800,3 +3800,53 @@ email desta rodada das dezenas de casas varridas sem resultado.
   agora; (4) a casa é pequena e o dinheiro é de investidor (Square Enix, London Venture Partners,
   Makers Fund), o que aperta contratação sênior; (5) a porta de email da casa já foi usada uma vez
   em `info@`, então esta é a segunda batida no mesmo lugar, agora com nome.
+
+---
+
+### Philip Tibitoski — **CEO, Business Development** — Young Horses, Chicago, Estados Unidos — **e esta ficha CORRIGE um negativo escrito em 07/09**
+
+- **Email:** `phil@younghorsesgames.com` · confiança **alta** · **PUBLICADO pelo próprio estúdio**
+  no `presskit()` dele, em **https://younghorsesgames.com/press**, aberto nesta rodada. A mesma
+  página pareia as duas coisas: na seção **Team & Repeating Collaborator**, *"Philip Tibitoski /
+  CEO, Business Development"*, e na seção **Contact**, sob **Business Inquiries** e **Press
+  Requests**, o endereço `phil@younghorsesgames.com`. **Nada foi montado.**
+- **A correção de método, e é o achado mais reaproveitável do dia.** O `processados.csv` linha 1626
+  guarda, da rodada do Joe de 07/09, esta frase: *"AMERICA DO NORTE DEU ZERO. Varridas raiz,
+  /about, /team, /crew, /people, /contact, /leadership, /our-story, /founders, /who-we-are,
+  /careers e politica de privacidade em Tippett, Pipeline Studios, ... **Young Horses**, Sunblink e
+  Tic Toc: nenhuma publica endereco de pessoa, so caixa funcional."* **A conclusão estava errada
+  para a Young Horses, e a causa é a lista de caminhos:** `/press` e `/presskit` não estavam nela.
+  A casa publica endereço de pessoa **e** o time inteiro com cargo, e publica desde sempre.
+  **Regra que sai daí: nenhum domínio se dá como "sem endereço de pessoa" sem ter tentado
+  `/press`, `/presskit`, `/press-kit` e `/pressroom`.**
+- **Por que ELE e não outra pessoa da casa:** o presskit publica **seis** nomes com cargo (Bria
+  Davis, Community Director; Kevin Geisler, CFO/Programmer/Webmaster; **Chris Stallman, Lead
+  Artist**; Philip Tibitoski, CEO/Business Development; Megan Varde, Environment Artist; Kevin
+  Zuhn, Creative Director/Writer/Designer) e **um só endereço**, o do Phil, que serve de contato de
+  negócio e de imprensa. O alvo de arte ideal é o **Chris Stallman, Lead Artist**, e a casa **não
+  publica endereço dele**: fica como **SEGUNDA e última** possível, hoje em `sem-email`.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"As Young Horses we strive to push the
+  boundaries of game design in order to create experiences that players have not seen before...
+  Our goal is to create innovative, intelligent, and charming **entertainment** that can be enjoyed
+  by both children and adults."* O encaixe de personagem é o catálogo: **Bugsnax** é um jogo cujo
+  conteúdo é **um bestiário de criaturas estilizadas** (cada Bugsnak é um personagem modelado), e
+  antes dele veio **Octodad**, que é um polvo num terno. A `alvos.csv` da campanha já registrou a
+  casa como *"Chicago IL; games 3D cartoon (Bugsnax Octodad) com ~10 pessoas; full-time com
+  relocation e opcao de remoto"*, encaixe **forte**.
+- **Fora dos EUA?** **Não** — Chicago, Illinois. Pela regra fixa, a frase de realocação **não**
+  entra nesta carta; o que entra é que a casa escreve, na própria página de vagas, que dá
+  *relocation* e aceita remoto, e a linha de patrocínio precisa ser dita de frente porque o Vini
+  não tem autorização para trabalhar nos EUA.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 193 registra `jobs@younghorsesgames.com` em
+  02/09 com status `enviado`; `processados.csv` 1431 registra o rascunho de follow-up de 07/09 na
+  mesma thread; `pessoas.csv`: **zero** pessoa da casa, e `phil@younghorsesgames.com` não existe em
+  arquivo nenhum. **NA CAIXA:** `search_threads` por `younghorsesgames OR "Young Horses" OR
+  Tibitoski OR Bugsnax` devolveu **uma** thread com **duas mensagens, as duas enviadas** (carta de
+  02/09 e follow-up de 07/09), **sem resposta, sem bounce, sem recusa**. **PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) o cargo é **CEO e desenvolvimento de negócio, não arte**; (2) o mesmo
+  endereço é o de **imprensa**, ou seja é uma caixa que recebe pitch todos os dias e onde carta
+  fria tem chance real de ser lida como PR; (3) **Bugsnax saiu em 2020** e a casa tem cerca de dez
+  pessoas — não há assento de personagem sênior esperando, e o presskit não tem data; (4) é
+  **Estados Unidos**, o que significa patrocínio de visto numa casa pequena, que é exatamente o
+  item que RH generalista usa para cortar; (5) a casa já levou carta **e** follow-up na mesma
+  thread, então esta é a terceira batida, agora com nome.
