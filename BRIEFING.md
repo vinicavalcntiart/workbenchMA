@@ -2460,3 +2460,13 @@ inflar o placar. Defeito do `tf_fill7.js` corrigido nesta rodada: o bloco *state
 Sarofsky ficou em branco no primeiro ensaio); agora o segundo Enter só sai se a tela ainda estiver
 no statement. O script passou a registrar a **rede não-GET** do envio, que é prova mais forte que
 texto de tela — a tela de agradecimento da Sarofsky não tem texto próprio, só o botão "again".
+
+### Recusas: quando responder (regra fixada em 16/09 às 18h30 UTC)
+
+Ordem do Vini de 16/09: responder os emails **inclusive as recusas**, de forma humana e
+simpática, com emoji. A linha que separa: **o endereço aceita resposta?** Recusa vinda de caixa
+que declara *"this email address is not monitored and replies will not be read"* (Netflix) **não
+recebe resposta** — escrever para o vazio não é simpatia, é ruído no registro. Recusa de caixa
+funcional sem esse aviso (EA, `EAcareers@ea.com`) **recebe** resposta curta, escrita à mão, com
+um emoji discreto, agradecendo a clareza e mantendo a porta aberta; o template de
+`template-rejeicao.md` continua sendo piso, não padrão. Uma por thread, sempre em rascunho.
