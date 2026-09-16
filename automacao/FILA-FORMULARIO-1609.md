@@ -20,7 +20,7 @@ faixa, **personagem primeiro**.
 | Portas prontas nesta fila | **40** |
 | Portas de personagem/disciplina literal | **8** |
 | Caíram na régua de veto (frase escrita) | **8** |
-| Caíram no dedupe (ID já enviado) | **31** |
+| Caíram no dedupe (ID já enviado, recusado ou com recibo) | **59** |
 | `NÃO CONFERIDO` | **2** |
 
 **A leitura honesta, e ela manda no resto do dia:** a superfície de *vaga aberta de personagem*
@@ -137,7 +137,7 @@ Side). Fila inflada seria pior que o número honesto.
 Image Engine General Application, weltenbauer Environment Artist, weltenbauer Tech Artist,
 Stellar Creative Lab Modeling Artists, Stellar Creative Lab Surfacing Artists, **Zoic BC 3D
 Character Modeler Senior** e Chimera (só o bloco de estágio, que não derruba a espontânea).
-**Caíram no dedupe** (31 IDs, na seção final). **`NÃO CONFERIDO`:** Liquid Swords (TLS) e
+**Caíram no dedupe** (59 IDs, na seção final). **`NÃO CONFERIDO`:** Liquid Swords (TLS) e
 Side/Workable (corpo do anúncio não lido por 429 do IP).
 
 ---
@@ -634,3 +634,173 @@ Side/Workable (corpo do anúncio não lido por 429 do IP).
 - **Régua, pretensão e gancho:** iguais aos da #39.
 
 ---
+# O QUE CAIU NA RÉGUA DE VETO — com a frase inteira, e a classificação
+
+A régua é a do brief: `authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`,
+`days a week`, `citizen`, `resident`, `right to work`, `only from`, `based in`,
+`French/français`, `Polish`, `German/Deutsch`, `Swedish`, `Danish`, `Dutch`, `Spanish`,
+`Italian`. **Só veto ESCRITO desqualifica**; rótulo de pergunta de formulário e frase de
+benefício não desqualificam, e por isso a classificação vem junto.
+
+| Porta | Frase inteira, literal | Classificação |
+|---|---|---|
+| **Zoic Studios — BC, 3D Character Modeler, Senior** (Vancouver, JazzHR) | *"3D Senior Character Modeler This position is based in Vancouver. **All applicants must reside in British Columbia.**"* | **VETO ESCRITO de residência.** É a melhor vaga de personagem achada hoje e ela morre aqui: ele não reside na BC. A General Application da mesma casa (#32) **não** tem essa frase e continua aberta. |
+| **Stellar Creative Lab — Modeling Artists (Mid & Senior)** (Vancouver, JazzHR) | *"**Eligibility: Legally eligible to work in British Columbia, Canada.**"* e *"All qualified candidates are encouraged to apply, though priority will be given to BC Residents, Canadians and Canadian Permanent Residents."* | **VETO ESCRITO de elegibilidade** na primeira frase; a segunda é só preferência. Some-se a parede de reCAPTCHA v2 medida com clique em 12/09. Dói: é série premium para a **Marvel Animation**, com `characters` no primeiro parágrafo. |
+| **Stellar Creative Lab — Surfacing Artists (Mid & Senior)** (Vancouver, JazzHR) | *"**Eligibility: Legally eligible to work in British Columbia, Canada.**"* | **VETO ESCRITO**, mesmo texto-base da irmã. |
+| **Stirling Animation Studios — Character Modeling and Surfacing Artists** (Escócia, BambooHR `77`) | *"**Artists must be based regionally within the UK (outside the London region)**"* | **VETO ESCRITO de residência.** A disciplina é literal (character, model, texture, Substance), e é a segunda vez que a campanha confirma este veto (já estava escrito em 14/09). |
+| **Image Engine — General Application - Assets (Modeling/Texturing/LookDev/Grooming)** (Vancouver, BambooHR `21`) | o corpo de 490 caracteres traz *"**Candidates are required to be legally eligible to work in Canada**"* (registro de 14/09, reconferido hoje pela API `/careers/21/detail`: departamento `Speculative Application`, `datePosted` 2022-10-04) | **VETO ESCRITO.** Tem a pilha inteira dele no título, grooming incluído, e cai. |
+| **weltenbauer. Software Entwicklung — Environment Artist w/m/d** (Wiesbaden ou Remoto, Personio `2677880`) | *"**Gutes Deutsch und Englisch in Wort und Schrift**"* | **VETO ESCRITO de idioma** (alemão). Mesma família do francês da TAT e do polonês da Anshar. |
+| **weltenbauer. — Tech Artist Character Animation w/m/d** (Wiesbaden ou Remoto, Personio `2692704`) | *"**Gute Deutsch- und Englischkenntnisse in Wort und Schrift**"* | **VETO ESCRITO de idioma.** |
+| Chimera Entertainment — bloco de estágio dentro da espontânea (Munique, Personio `150955`) | *"The internship must be mandatory and part of your degree program (Pflichtpraktikum as defined by your university / study regulations)"* e *"On-site work in our Munich office (remote work is not possible)"* | **NÃO derruba a porta:** o bloco vale para **estágio**. A espontânea sênior continua na fila como #3, e o registro fica para ninguém confundir o parágrafo com veto geral. |
+
+**Falsos positivos que a régua pegou hoje e que NÃO desqualificam nada** (estão escritos aqui
+porque cada um deles já custou uma porta descartada por engano em rodadas passadas):
+*"A modern, centrally located office in Frankfurt, Germany (near Messe)"* e *"Free language
+courses"* (Deck13); *"...studio based in the heart of Munich"* (Chimera); *"...through final
+in-engine implementation and **polish**"* (Eleventh Hour, o termo `Polish`); *"...for which a
+campaign badge has been **authorized** under the laws administered by the Department of
+Defense"* (bloco de EEO, Eleventh Hour); *"if you are based in the EU"* / *"If you are based in
+the UK, you can lodge a complaint with the Information Commissioner's Office"* (política de
+privacidade, **todas** as 146 páginas de Teamtailor Connect); *"Only resumes submitted in
+English will be considered"* (Side); *"This position is based in Vancouver"* na General
+Application da Zoic (local, e sem a frase de residência obrigatória).
+
+---
+
+# O QUE CAIU NO DEDUPE — 59 requisições, por ID
+
+Todas foram testadas com `sh automacao/dedupe-agora.sh "<ID>" "<Casa>"` e com leitura das
+quatro fontes (`enviados.csv`, `automacao/processados.csv`, `docs/index.html`,
+`automacao/FILA-DO-VINI.md`), procurando **marca de envio** junto do ID (`confirmation`,
+`ENVIADA`, `portal-aplicado`, `/thanks`, `jobTasks/completed`, `recibo`, `recusada`).
+
+**Personagem / disciplina literal (21):**
+`8190501` Fatshark Character Artist (enviada e confirmada) · `8311973` Tactical Adventures
+Lead 3D Character Artist (enviada e confirmada; a mesma requisição aparece também no quadro
+`keplerinteractive`, que é o publisher — **um ID, dois quadros**) · `8281687` Airship Character
+Artist e `8281721` Airship Groom Artist (enviadas em 09/09) · `8517790002` e `8520212002`
+Bluehole (enviadas e confirmadas) · `8725151002` Loonshot 3D Character Artist (**recusada**) ·
+`8163170` Riot Principal 3D Character Artist (enviada e confirmada) · `7888172003` e `7888170003`
+Cloud Chamber Lead Character Artist (enviadas, **recusadas**) · `7888173003` e `7888174003` 2K
+Lead Character Artist (espelho das duas de cima, mesmas requisições no quadro do publisher) ·
+`7835808003` 2K Senior Character Artist Burnaby (enviada) · `4363749003` Imageworks Experienced
+Modeler (enviada **duas vezes**, 02/09 e 07/09) · `4363748003` Modeler · `4363798003` Texture
+Artist · `4363799003` Experienced Texture Artist · `6659179003` Look Development Artist ·
+`7529417003` Senior Look Development Montréal (todas Imageworks, todas enviadas) · `8161671`
+Wargaming 3D Character Artist (enviada em 06/09 e **recusada em 10/09** com crítica escrita ao
+portfólio) · `5207518007` Mob Entertainment Senior Character Artist (enviada) · `4318250009`
+Hasbro Lead Character Artist Canadá (enviada, **recusada**) · `5236256007` Absurd Ventures
+Character Art Lead (enviada e confirmada) · `4337820009` Sway Box CG Modeler (enviada) e
+`4337866009` Senior CG Generalist/Modeler (**recusada**) · `5097897007` High Dive Senior Modeler
+(enviada e confirmada).
+
+**Arte adjacente e espontâneas (38):** `8517791002` Bluehole 3D Environment · `8651145002`
+Loonshot 3D Environment Modeler · `5195729007` e `5233607007` Mob (Environment, Hard Surface) ·
+`6020680004` e `6020682004` Epic Modeling Outsource Lead (Cary e Montréal) · `5398064008`,
+`5398038008`, `5398026008` Scopely 3D Artist Barcelona (as três) · `8281404` Envar Senior 3D
+Environment Artist · `8220733` Triband Senior Game Artist · `8131050` Ankama Artiste 3D ·
+`8094866` Sandbox/Stillfront Lead 3D Environment · `8083591` Coffee Stain Art Director ·
+`7964466` Embark Environment Artist · `7918450` CI Games Open Application · `7277761` Funday
+Unsolicited Application · `6958619` Twin Harbour Unsolicited · `5744150` e `5739695` Bulkhead
+Open Application (remoto e in-studio) · `5428747` PFX General Application · `3583177` Axolot
+Open Application · `3257938` Stunlock Open Application · `2814432` Game Boost Open application ·
+`1907255` HypeHype Open Application · `1344945` Lightheart Open Application · `7535230002`
+Unknown Worlds General Application · `4352498005` Crystal Dynamics General Application ·
+`8282003002` Tripwire General Application · `4052911009` NC America Open Applications ·
+`4319957101` Tactile Games Open Applications · `2615138` KING Art Speculative Application ·
+`2385017` Aesir Art Lead · mais as portas de BambooHR já resolvidas: **Offworld `199`** (3D
+Character Artist, enviada à mão em 10/09 com recibo), **ICON Creative `136`**
+(Intermediate Modeling/Texture, enviada em 31/08 com confirmação do ATS) e **Image Engine `28`**
+(Look Development Senior, já trabalhada).
+
+**Connect já cadastrado (64 slugs, por isso fora da faixa 3):** `10chambers`,
+`airshipinteractive`, `anima`, `ankama`, `awaceb`, `axolotgamesab`, `beffio`, `bica`,
+`bulkheadinteractive`, `capsulestudio`, `captureage`, `chopchop`, `cigames`,
+`coffeestainstudios`, `creepyjar`, `delve`, `ember`, `erepublik`, `fabrique`, `facepunch`,
+`fatshark`, `firefly`, `fully`*, `funcom`, `gameboost`, `gigglebug`*, `goals`, `goodbyekansas`,
+`here`, `hero`, `ilogos`, `ilpvfx`, `ioi`, `juice`, `keplerinteractive`, `kindabrave`,
+`lightheartentertainment`, `look`, `madbox`, `mind`, `mindark`, `mob`, `neongiant`, `once`,
+`opusmajor`, `pfx`, `pixiongames`, `power`, `proxima`, `realtime`, `sharkmob`, `sloclap`,
+`snowprintstudios`, `squeeze`, `starbreeze`, `starstable`, `stunlocksstudios`, `sybo`,
+`thegang`, `tic`, `twinharbour`, `vinefx`, `vividgamessa`, `wetaworkshop`.
+(*) `fully` e `gigglebug` aparecem aqui pelo **Connect**; a **vaga aberta** das duas continua
+livre e está nas posições #9 e #6 desta fila — são objetos diferentes, e o dedupe foi feito por
+ID de requisição, não por nome de casa.
+
+**Pinpoint já enviado em 10/09 (10 rotas):** `flixinteractive`, `gameplaygalaxy`,
+`ingenuitystudios`, `magnopus`, `outpost-vfx`, `pipeworks`, `playground-games`, `rocksteady`,
+`singularity6`, `wushustudios` — cada uma com a tela `/themes/<n>/register-your-interest/thanks`
+no `enviados.csv`.
+
+---
+
+# DESCARTES COM MOTIVO ESCRITO (para a próxima rodada não reabrir)
+
+| Porta | Motivo, medido hoje |
+|---|---|
+| **Moonbug Entertainment** (Pinpoint) | **Conta de demonstração.** `Locations` = `Belfast, London, New York, Paris, Sydney, Washington`, `Departments` = `Engineering...Sales` e **`Divisions` = `ACME` e `Hooli`**. É a assinatura infalsificável do quadro de teste; candidatura ali cai em conta sem dono. |
+| **FuturLab, Kaiko, Craftwork, Boxelware, House of Tales** (Personio) | **Quadro de demonstração do Personio, assinatura nova e vale registrar:** os cinco publicam **exatamente as mesmas três vagas** — `SEO Marketing Manager`, `Social Media (Werkstudent/Working Student)` e `Initiativbewerbung/General Application` — e o corpo dos anúncios é **Lorem ipsum** (*"Lorem ipsum dolor sit amet, consetetur sadipscing elitr..."*). É o irmão Personio do `ACME/Hooli` do Pinpoint. **Regra que fica: antes de enfileirar espontânea de Personio, leia o corpo; se for Lorem ipsum e a casa tiver SEO Marketing Manager + Social Media Werkstudent ao lado, é conta de teste.** |
+| **The Logic Factory** (Personio, 3 portas: NL `1233168`, UK `1702359`, USA `1702380`) | **Fora do setor.** *"The Logic Factory (TLF) is a global software company that helps customers make lasting performance improvements in their supply chain"*. Não é jogo nem animação. (A quarta porta da casa é `Open Application India`, fora do recorte geográfico.) |
+| **`buf` no Personio** | **Falso amigo de token.** `buf.jobs.personio.com` é a **becker + flöge GmbH**, ótica e acústica alemã (*"Deine Fähigkeiten in der Augenoptik, Hörakustik oder Verwaltung"*), **não** a BUF Compagnie de VFX francesa. |
+| **`squeeze` no Teamtailor** | **Falso amigo.** `squeeze.teamtailor.com` publica `Massage Therapist` em nove cidades norueguesas — não é a Squeeze Studio Animation do Québec. |
+| **Waypoint** (Teamtailor `8125441`) | **Falso amigo.** É a **Waypoint Port Services**; a pergunta obrigatória do formulário é *"Do you have a valid work permit for the country you have selected?"* sobre uma lista de países de operação portuária. |
+| **Equilibrium** (Teamtailor `7743496`) | **Fora do setor.** As áreas oferecidas são `BD / Sales`, `Marketing & Content`, `Design & UX`, `Finance & Legal`, `People & Operations`, `Community & Ecosystem`, `Research & Strategy` — nenhuma de arte — e uma pergunta obrigatória é *"Do you have experience working in blockchain / Web3 / crypto?"*. |
+| **Bica** (Teamtailor `5804958`) | **Fora do setor.** *"We are actively building a robust talent pipeline to support a wide range of exciting projects with our clients across various industries, including retail, fintech, healthc..."* — consultoria de TI em Sófia. |
+| **Ground Control, Dare, LEVEL, Lunar, Stardust, Chief, Avantis, hôma, Osome, Mill, Fuse, Above, Sunday, Genius, Kinetic, Life, Monster, Neat, Salt, Starship, Stim, Sweetspot, Tribes, Unfold, Yonder, ClickOutMedia, Lingokids, Curio, Fathom, Fortis, Graft, Infinity, Antagonist, Axis, Butter, Eclipse, Doktor, Level** (Teamtailor Connect, livres) | **Fora do setor**, um a um pelo menu de departamentos: paisagismo (`Arboriculture in Maintenance`), trading de energia, companhia aérea, banco, consultoria de RH, engenharia, serviços marítimos, varejo, contabilidade, clínica, etc. Ficam nomeados para ninguém gastar rodada nisso de novo. |
+| **Black Kite — Freelance DMP / Concept Artists** (Teamtailor `8330454`) | **Fora da disciplina:** *"We're looking for fast, creative Digital Matte Painters (DMP) with strong Concept Art skills to join our roster for upcoming short-form commercial projects."* É pintura digital 2D. (O **Connect** da casa, dep. `CG`, continua na fila como #14.) |
+| **Wargaming — CG Artist `8169078` e `8108499`** (Greenhouse) | **Fora do escopo geográfico:** Kyiv, Ucrânia, que não está no recorte (América do Norte, Europa ocidental/UE/UK/Irlanda/Nórdicos, Oceania, Coreia do Sul, Singapura). Registrado porque a requisição é **inédita no dedupe** e só cai pela geografia. |
+| **Bluehole `8517835002`, Loonshot `8084569002` / `8085854002` / `8759149002`, Sharkmob `8378495`, Ankama `457385`** | **Fora da disciplina:** são `Character Concept Artist`, `Sr. Character Concept Artist`, `Pixel Artist (Character)`, `Senior Character Concept Artist` e `Character designer` — **personagem 2D**, e a regra 14 é explícita: candidatura de personagem 2D em casa grande morre na primeira tela e queima a porta da divisão. |
+| **Framestore Creature FX (`2728197`, `2713294`, `2695789`, `513351`), Barnstorm Lead Creature Artist (`176`), DMFX Artiste CFX (`129`)** | **Fora da disciplina:** `creature` aqui é **simulação e rigging** (a contagem do corpo da Barnstorm dá `creature` 23, mas `rig` 25, `simulation` 20 e Houdini 10). A palavra "creature" no título é armadilha conhecida. |
+| **IGG `289`** (BambooHR, 3D Character Artist, Vancouver) | **Veto de residência já registrado no painel em rodada anterior**; presencial integral. |
+| **Streamline Studios `84` e `106`** (BambooHR, Lead/3D Character Artist) | **Fora do escopo geográfico:** Kuala Lumpur, Malásia. |
+| **Rebellion Senior Character Artist (Oxford e Warwick)** (Workable) | **Mesma requisição que ele mandou em 30/08 e que o Talent Team RECUSOU em 01/09**, publicada em duas cidades. Bater de novo seria a segunda batida na mesma porta fechada. |
+| **Keywords / Lakshya (7 vagas de personagem)** | **Fora do escopo geográfico:** Bengaluru, Pune, Gurugram, Ortigas/Pasig. A `Character Artist - Hair Specialist` remota para Canadá/EUA/UK **já está registrada no painel**. |
+| **Chimera 3D Artist Generalist `2628421` e Senior Technical Artist `2628436`** | **Fora do escopo geográfico:** Cebu, Filipinas. (A espontânea de **Munique** da mesma casa é a porta #3.) |
+| **Good Job Games (7 vagas de 3D Artist)** | **Fora do escopo geográfico:** Sarıyer, Istambul, Turquia. |
+| **Vertigo `3D Character Artist`** (Workable) | **Fora do escopo:** Istambul. |
+| **Longdue Games `3D Modeler (Junior)`** (Workable) | **Fora do escopo** (África do Sul) e **júnior**. |
+
+---
+
+# O QUE FICOU `NÃO CONFERIDO` — e resposta vazia não é zero
+
+1. **Liquid Swords — Open Application `1851070`** (Estocolmo, Teamtailor). A página da vaga e o
+   domínio próprio `careers.liquidswords.com` **não passam por esta rede**: `curl` devolve
+   código `000` com erro de conexão segura, e o `jobs.json` do mesmo host responde **200** — ou
+   seja, o quadro está vivo e o problema é o certificado no salto final, a mesma família do
+   `careers.ilpvfx.com` (cert de `x.sni-498-default.ssl.fastly.net`). **Dedupe:** `enviados.csv`
+   0, painel 0; uma linha de leitura em `processados.csv` e uma na `FILA-DO-VINI.md`, sem marca
+   de envio. **Para o Jhon A:** o Chromium dos scripts sobe com `--ignore-certificate-errors`,
+   então **é provável que abra no navegador** — tente e registre o resultado; não escreva "casa
+   sem porta".
+2. **Corpo dos anúncios da Side (#38, #39, #40) lido só pela API do `jobs.workable.com`.** O
+   `apply.workable.com` continua devolvendo estrangulamento de IP, então **a tela real do
+   formulário não foi vista hoje** — o que está escrito sobre Turnstile vem da medição de 06/09,
+   não de hoje.
+3. **Faixa salarial:** nenhuma das 40 portas publica faixa. Todas as pretensões desta fila são
+   **derivadas da regra de 04/09**, não lidas de anúncio.
+4. **O que NÃO foi varrido nesta rodada, e fica nomeado:** Workday (a ronda Disney/Netflix/Pixar
+   é do maestro e da vigia horária), Ashby e Lever (parede conhecida de hCaptcha/reCAPTCHA),
+   SmartRecruiters (DataDome), Dayforce, Oracle/Taleo, Jobvite, Homerun, Breezy e GoHire — o
+   GoHire não foi sondado porque o slug dele tem sufixo de hash (`jobs.gohire.io/<nome>-<hash>`)
+   e não se adivinha; a lista de slugs que a campanha tem é de três casas, nenhuma da disciplina.
+
+---
+
+# NOTA DE FERRAMENTA PARA O JHON A (medido hoje, e economiza rodada)
+
+- **Não existe `apply_personio.js` nem modelo de Connect (`hampa_dep_fix2.js`, `beffio_ok.js`)
+  em `/home/user/apply`.** A caixa reconstruída em 16/09 tem 19 scripts de candidatura, e os
+  três que esta fila mais usa — Personio (faixa 1), Teamtailor Connect (faixa 3) e Pinpoint
+  (faixa 4, `pin_interesse.js` mora em `automacao/`) — **não estão lá**. Copie de `automacao/`
+  o que existir e conte com `preencher-formulario.js` no resto.
+- **O `apply_own.js` de `automacao/` ainda aponta para a ponte morta `127.0.0.1:18080`** (linha
+  13); a cópia de `/home/user/apply` já está corrigida para
+  `process.env.APPLY_PROXY||process.env.HTTPS_PROXY`. **Rode sempre a cópia de
+  `/home/user/apply`**, nunca a do repositório.
+- **Ordem de consumo sugerida para bater a meta de hoje:** #4 (única vaga de personagem sem
+  parede), depois #1–#3 e #5–#10 (espontâneas servidas, atrito mínimo), depois a faixa 3 inteira
+  (Connect, duas etapas por casa — o gargalo é o magic link, então **peça um por vez**), depois
+  #27 e #28 (Pinpoint, lane com dez envios confirmados), depois #29 (Greenhouse, precisa da
+  sessão viva para o código por email). A faixa 6 em diante é dossiê para a mão dele, e pela
+  regra de 16/09 só Vancouver (#30, #32, #33) justifica pedir clique.
