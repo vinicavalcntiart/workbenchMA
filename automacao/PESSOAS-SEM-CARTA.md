@@ -4527,3 +4527,131 @@ Autrechose), e nenhum deles deve virar carta:**
 - **Ralph Kamp (Timeless Films):** rascunho `r7926989738467250603`, gancho no catálogo estilizado e na produção interna (Scrooge na Netflix).
 - **Michał Amielańczyk (Mechanistry):** rascunho `r568634798453027820`, escrita como pedido de encaminhamento a quem manda na arte, porque o cargo é comunicação. Diferente do caso Budge: aqui é casa de dez pessoas e encaminhar é o ofício dele.
 - Lote conferido pelo `confere-carta.py`: limpo, semelhança máxima 37%. Linha do Budge no `pessoas.csv` (campo com vírgula sem aspas) consertada.
+
+## JOE, 16/09/2026 20h35 UTC — UMA FICHA COM ENDEREÇO PUBLICADO, E O RESTO DA RODADA É REGISTRO DE VEIA SECA
+
+**Placar honesto: 1 pessoa com email PUBLICADO, abaixo da meta de 4 a 8.** A causa está medida e
+escrita abaixo, e não é falta de tentativa: **as veias de varredura por domínio que este arquivo
+já registrou como esgotadas continuam esgotadas**, e nesta rodada elas devolveram 63 domínios
+abertos para **um** endereço de pessoa aproveitável. Nada foi inventado para fechar número.
+
+### FICHA 1 — Bruce Alcock, Global Mechanic (Vancouver e Victoria, BC, Canadá)
+
+- **Email: `bruce@globalmechanic.com` — PUBLICADO pela própria casa, confiança ALTA.** Não é
+  montado por padrão de domínio: o nome dele **é** a âncora do `mailto:`.
+- **URL exata aberta nesta rodada:** `https://www.globalmechanic.com/` (rodapé do site, presente
+  em todas as páginas; reconferido também em `https://www.globalmechanic.com/design`). O HTML cru,
+  colado como está:
+  `<a href="mailto:bruce@globalmechanic.com?subject=From%20the%20GM%20Site"><strong>Bruce Alcock</strong></a><strong> </strong>Creative Director & Owner`
+- **ARMADILHA PARA A PRÓXIMA RODADA:** `https://www.globalmechanic.com/contact` **existe e é a
+  página 404 da casa** (*"We couldn't find the page you were looking for"*). Quem varrer só
+  `/contact` escreve "casa sem endereço publicado" e erra — **os endereços moram no rodapé da
+  home**, não em página de contato.
+- **Por que ESSA pessoa e não outra da casa:** o site publica **exatamente duas** pessoas com
+  endereço próprio — *"Bruce Alcock — Creative Director & Owner"* (`bruce@`) e *"Chris Brodie —
+  Executive Producer"* (`brodie@`). A terceira linha do rodapé é **agente**, não a casa:
+  *"U.S. Representation: Liz Shaw"*, `liz@lizlainereps.com`. Pela régua do brief para casa
+  pequena, o alvo é **dono / diretor criativo**, não produção: o Brodie orça e agenda, o Alcock
+  decide o look e quem desenha. **Chris Brodie fica como SEGUNDA e última pessoa possível desta
+  casa**, com endereço já provado, se a primeira carta não voltar.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a home se apresenta como
+  *"Design & animation since 2000"*, e a página `/design` divide o catálogo da própria casa em
+  categorias cuja **primeira é `Character`** (*"Design | Character | Drawing | Kids | Mixed Media |
+  Vector | Painting"*). É nessa palavra que a carta pega.
+- **Casa fora dos EUA: SIM, Canadá (Vancouver e Victoria, BC).** A frase de realocação **entra**, e
+  é a rota de prioridade 1 da campanha.
+- **O que o Gmail devolveu no dedupe:** `mcp__Gmail__search_threads` com
+  `globalmechanic.com OR "Global Mechanic" OR Alcock` devolveu **`{}`** — zero thread, nem enviada
+  nem recebida. `pessoas.csv`, `enviados.csv` e `processados.csv`: **zero** ocorrência de
+  `globalmechanic`; o único acerto do grep por "Global Mechanic" é um resumo de rodada de 15/09 que
+  **não nomeia a casa**. Casa **inédita para a campanha inteira**, e ela estava parada em
+  `automacao/alvos-joe-wikidata.csv` sem ninguém nunca ter aberto.
+- **RESSALVA HONESTA, e ela é grande:** a Global Mechanic é **boutique de design e animação de
+  publicidade, documentário e projeção**, com técnica declarada em mixed media, vetor e pintura —
+  **não é casa de pipeline CG de personagem**. A categoria `Character` do `/design` é **desenho** de
+  personagem, não prova de modelagem 3D. A casa é pequena, **não publica quadro de vagas** (não há
+  `/careers`) e **não há uma linha sobre patrocínio de visto** — ou seja, ela entra pela prioridade
+  geográfica de BC, não por patrocínio provado. O que sustenta a carta é o endereço de um dono
+  acessível. Telefone publicado no rodapé **deliberadamente não registrado**, porque o repositório
+  é público.
+
+### O QUE FOI ABERTO E NÃO TINHA ENDEREÇO DE PESSOA (casa por casa, para ninguém repetir)
+
+- **Vancouver / BC, que é a prioridade 1:** `skyboxlabs.com` (só `info@`, `careers@`, `media@`,
+  `support@`, `businessdevelopment@` — e a casa é boa: *"grown to a studio of over 235 team
+  members"*, NetEase, *"BC's Top Employers"*; **não publica um nome com cargo**),
+  `giantant.ca` (só `newbiz@`; o `/about` lista **24 nomes SEM cargo nenhum** — *"Giant Ant is —
+  Jay Grandin, Leah Nelson, Shawn Hight..."* — e a casa é motion design, morte da BUCK),
+  `blackbirdinteractive.com`, `slickentertainment.com`, `athinkingape.com`, `hotheadgames.com`,
+  `scanlinevfx.com`, `artifexstudios.com`, `iugo.ca`, `arcanastudio.com`,
+  `eastsidegames.com` (só `jobs@eastsidegamestudio.com` e 12 caixas de `zendesk`).
+- **PAREDE MEDIDA, não "casa sem site":** `www.bardel.ca` devolve **HTTP 403 com 103 bytes**,
+  `server: cloudflare`, `ki-edge: v=28.5.0` — é Cloudflare barrando este túnel, e a Bardel é uma
+  das maiores de Vancouver. `bardelentertainment.com` dá **502 no CONNECT**.
+  `www.versatile.media` dá **erro de certificado** (`unable to get local issuer certificate`) mesmo
+  com `--cacert /root/.ccr/ca-bundle.crt`. `ghost.dk` dá **`tlsv1 alert internal error`**.
+  `www.filmgate.se` dá **connection reset**. `svenskanimation.se` dá **502 no CONNECT** e
+  `www.animationdenmark.dk` tem **certificado que não casa com o host**. **Nenhuma dessas é
+  "sem endereço": são NÃO CONFERIDAS, e cabem no navegador de tela.**
+- **Nórdicos, Holanda e Reino Unido abertos sem pessoa:** `gimpville.no`, `ravnstudio.com`,
+  `animaskin.no`, `blackstudios.se` (é blog de artigos, não estúdio), `tumblehead.com`,
+  `kongorange.com`, `ghostship.dk`, `triband.co`, `krillbite.com`, `henchmanandgoon.com`,
+  `megapop.no`, `dirtybit.com`, `antagonist.no`, `sarepta.studio`, `dockhouse.se`, `dupp.se`,
+  `forestlight.se`, `sorenfleng.com`, `fridthjof.com`, `creativebeards.com`, `planetx.nl`,
+  `illuster.nl`, `grendel-games.com`, `triangle-studios.com`, `wispfire.com`, `codeglue.com`,
+  `gridvfx.com` (só `info@`), `baitstudio.com` (só `hello@`), `lupusfilms.com`, `beakus.com`,
+  `kilogramme.co.uk` (só `mail@` e `freelancers@`), `spider-eye.com`, `bluebolt.tv`,
+  `nvizible.com`, `fido.se`, `juice.fi`.
+- **Resto da Europa e Canadá abertos sem pessoa:** `rise-fx.com`, `dwarfanimation.com`,
+  `unitimage.com`, `supamonks.com`, `cube-creative.com`, `fortiche.com`, `mackevision.com`,
+  `luxx.studio`, `lunanime.be`, `giantanimation.ie`, `andmapsandplans.com`, `bigbadboo.ca`,
+  `carbotanimations.com`, `unagistudio.com` (o "endereço de pessoa" era o placeholder
+  `utilisateur@domaine.com`), `sohovfx.com`, `spinvfx.com`, `folksvfx.com`, `obliquefx.com`,
+  `yowzaanimation.com`, `tonicdna.com`, `lolavfx.com`, `bighteam.com`, `bigparkstudios.com`.
+
+### ENDEREÇO ACHADO E MORTO, com o motivo de cada um (nenhum virou ficha, e isso é de propósito)
+
+- **Head Gear Animation** (Toronto) — `susan@headgearanimation.com`, publicado com nome e função em
+  `https://headgearanimation.com/contact`: *"Project requests & Inquiries: Susan Armstrong"*.
+  **Morreu por técnica e por teto:** a própria casa lista as técnicas dela e **3D não está na
+  lista** (*"2D Animation | Stop Motion Animation | Live Action/Combo | Mixed Media"*), e
+  `pessoas.csv` já tem uma pessoa da casa.
+- **Nørlum** (Viborg, DK) — `claus@` e `elena@noerlum.com` reapareceram. **Já registrado:** a
+  Jericca Cleland levou carta em 11/09 e o **Claus Toksvig Kjær já está escrito neste arquivo como
+  "a segunda e última pessoa possível"** e como *"sem prova de 3D"*. Não reabro.
+- **Real by Fake** (Montréal) — `alejandro@` e `mjlachance@realbyfake.com` na home. A casa já tem
+  uma pessoa em `pessoas.csv`; fica como **segunda pessoa possível**, com endereço provado, para
+  uma rodada que precise dela.
+- **Raynault VFX** (Montréal) — `jointheteam@raynault.com` parece pessoa e **não é**: é a caixa de
+  recrutamento. Cuidado com o padrão.
+- **Image Entertainment Corporation** (Magog, QC) — `s.viau@image-cie.com`, publicado com nome e
+  cargo: *"Pour communiquer directement avec le fondateur Sylvain Viau"*. **Morreu porque não é
+  estúdio:** a própria página diz que a empresa existe para *"faire rayonner des films à fort
+  potentiel sur le marché international"*, distribuindo as produções da Iceworks Pictures. É
+  distribuidora de direitos, não contrata artista.
+- **Crafty Apes**, **Guru Studio**, **Ambassadors**, **9 Story / Portfolio Entertainment** — os
+  endereços que parecem de pessoa são **departamentos** (`commercials@`, `pr@`,
+  `business.affairs@`, `peopleandculture@`, `productionservices@`, `finance@`, `development@`,
+  `distribution@`, `accessibility@`, `consumerproducts@`). Nenhum é nome de gente.
+- **Sassybot** (Utrecht) — `johnny@alpha404.com` no `/contact`: **domínio de terceiro**, não da
+  casa. Não registrar como endereço da Sassybot.
+- **Nowhere** (Amsterdã) — `/team` entrega **15 endereços de pessoa** (`bart@`, `janneke@`,
+  `michel@`, ...). **Não é estúdio de animação**: é casa de cultura e aluguel de estúdio
+  (`/ruimtes/...`, `verhuur@nowhere.nl`). Falso amigo, anotado para não voltar.
+- **Barnstorm VFX** — `andie@barnstormvfx.com` apareceu na varredura e **não se confirmou**: ao
+  reabrir `/team` e procurar o contexto do endereço, o `grep` volta **vazio**, ou seja o endereço
+  vem de bloco de script e **não há nome nem cargo pareados**. Sem pareamento não vira ficha.
+
+### A REGRA DE MÉTODO QUE SAI DESTA RODADA, e ela é contra mim mesmo
+
+**Regex de desofuscação com `\s+at\s+` e `\s*\.\s*` FABRICA ENDEREÇO QUE NÃO EXISTE.** Minha
+primeira varredura reportou `lise@mikrofilm.no` como endereço publicado da Mikrofilm (Oslo). Fui
+conferir na fonte: `https://mikrofilm.no/contact` e `https://mikrofilm.no/people` devolvem **a
+mesma casca de SPA, 44.635 bytes, com um único `mailto:` — `post@mikrofilm.no`** — e a string
+`lise` **não aparece uma única vez** no HTML (`grep -ci lise` = **0**). O endereço tinha sido
+**montado pelo meu próprio padrão solto**, a partir de texto qualquer com a palavra "at". Isso é
+exatamente o que o brief proíbe: inventar endereço e chamar de verificado.
+**A regra:** desofuscação só vale nas formas **delimitadas** (`[at]`, `(at)`, `{at}`, `[dot]`,
+`(dot)`, entidade HTML no `href`, `data-cfemail`). A forma solta `nome at dominio ponto tld`
+**não** entra em varredura automática — se existir, se lê no olho, na página. O script desta
+rodada foi corrigido antes de qualquer ficha ser escrita, e nenhuma ficha saiu do padrão solto.
