@@ -4294,3 +4294,42 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   site e não há vaga publicada; (5) castor de city-builder é personagem **pequeno na tela, em escala de
   jogo de construção**, o que usa menos escultura e groom do que o portfólio do Vini mostra.
 
+---
+
+### Ioana Șopov — **co-lead / Art Director** — Gummy Cat, Bucareste, Romênia — **`sem-email`, e o endereço de pessoa que a casa publica NÃO é dela**
+
+- **Email:** **nenhum de pessoa identificada.** Entra como **`sem-email`**, guardando nome, cargo e
+  estúdio, como o `BRIEF-JOE` manda.
+- **Nome e cargo PUBLICADOS pela própria casa** em **https://www.gummycat.com/**, aberta nesta rodada, no
+  bloco *"We are"*: *"**ioana șopov** / co-lead / **art director**"*, ao lado de *"Rareș Cinteză /
+  co-lead / GAME DESIGN"* e *"Andrei Bogdan / LEAD PROGRAMMER"*. **Três nomes, é o time publicado
+  inteiro, e ela é a cadeira de arte.**
+- **O achado que NÃO virou endereço, e o motivo escrito:** o rodapé do site publica
+  `rick@gummycat.com` (além do `hello@gummycat.com` do corpo), e `rick` **não corresponde a nenhum dos
+  três nomes publicados**. Sem pareamento não há pessoa: é o mesmo caso da **Morgana Studios** de hoje de
+  manhã (endereço publicado, pessoa não identificada) e do `kela@appelmoes.games`. **Não usar esse
+  endereço como se fosse dela.**
+- **Por que ELA e não outra pessoa da casa:** dos três, os outros dois são design de jogo e programação.
+  Ela é **art director e co-dona** ao mesmo tempo, que é exatamente a cadeira que o `BRIEF-JOE` quer em
+  casa pequena. Rareș Cinteză fica como **SEGUNDA e última** possível.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Gummy Cat is a **Romanian-based studio
+  comprised of a few folks, keeping each other honest while we make cool video games**"*, e a linha de
+  apresentação do site é *"Studio website for Gummy Cat Studio. Game development, graphic design, **art
+  direction**"*. A `alvos.csv` já registrou a casa como *"Estudio romeno que oferece desenvolvimento;
+  design grafico e direcao de arte"*, encaixe **médio**.
+- **Fora dos EUA?** Sim — Romênia (2 Bulevardul Pierre de Coubertin, București), União Europeia.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 602 registra `hello@gummycat.com` em **06/09** como
+  `enviado`; `alvos.csv` linha 539 traz a casa com encaixe **médio**. `pessoas.csv`: **zero** pessoa da
+  casa. **NA CAIXA:** `search_threads` por `gummycat OR "Gummy Cat" OR Sopov OR "Bear and Breakfast"`
+  devolveu **uma** thread, a própria carta de 06/09 para `hello@`, **sem resposta, sem bounce, sem
+  recusa**. **PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) **não há endereço de pessoa** — se a carta sair, sai para `hello@` com o nome
+  dela na abertura, que é via mais fraca; (2) a página de vagas diz, literalmente, *"no job openings
+  available"*, e a última vaga listada é de **OCT 2020: Project Manager**, ou seja a casa não contrata há
+  cinco anos pelo que publica; (3) o site diz *"Check out our first game"* e **não nomeia o jogo em
+  texto** (está só em imagem), então não consegui provar por leitura do domínio que o título é 3D
+  estilizado — o registro de encaixe vem da `alvos.csv`, não de uma frase da casa, e isso é mais fraco do
+  que a regra da Krystallplaneten exige; (4) são **três pessoas**, porte em que não existe assento de
+  sênior; (5) o cargo dela é `art director` em **caixa baixa** no site, sem bio nenhuma, e não há prova
+  publicada de que a casa faça personagem 3D em vez de 2D.
+
