@@ -3850,3 +3850,45 @@ email desta rodada das dezenas de casas varridas sem resultado.
   **Estados Unidos**, o que significa patrocínio de visto numa casa pequena, que é exatamente o
   item que RH generalista usa para cortar; (5) a casa já levou carta **e** follow-up na mesma
   thread, então esta é a terceira batida, agora com nome.
+
+---
+
+### Brendan Taylor — **Founder & Visual Effects Supervisor** — Mavericks VFX, Toronto, Canadá — **`sem-email`, e a casa é NOVA na campanha**
+
+- **Email:** **nenhum de pessoa.** Entra como **`sem-email`**, guardando nome, cargo e estúdio,
+  exatamente como o `BRIEF-JOE` manda. O único endereço que a casa publica é
+  `info@mavericks-vfx.com`, **caixa funcional vista publicada** no rodapé de todas as páginas
+  (`https://mavericks-vfx.com/about`) — não é montada, mas também não é pessoa.
+- **Nome e cargo PUBLICADOS pela própria casa** em **https://mavericks-vfx.com/about**, aberta nesta
+  rodada, na seção **Our Team**: *"Brendan Taylor — Founder & Visual Effects Supervisor"*, ao lado de
+  *"Paul DeOliveira — Creative Director"* e *"John Morch — Head of Technology"*. **Três nomes, é o
+  time publicado inteiro.**
+- **Por que ELE e não outra pessoa da casa:** dos três, o Paul DeOliveira (Creative Director) é o
+  cargo de arte e fica como **SEGUNDA e última** possível; o John Morch é tecnologia. Escolhi o
+  **fundador e supervisor de VFX** porque em casa desse porte é ele quem abre reel e decide quem
+  entra num projeto, e porque o `BRIEF-JOE` manda ir no dono quando a casa é pequena.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"Mavericks VFX is a Toronto-based studio
+  of passionate filmmakers known for crafting high quality visual effects for film, TV shows,
+  commercials… AND its softball team."* E a prova de disciplina está no menu do portfólio deles, não
+  numa suposição minha: a página **https://mavericks-vfx.com/work/** organiza o trabalho em
+  categorias e **uma delas é literalmente "Creatures"**, ao lado de *"Crowds"*, *"Set Extension &
+  Action"*, *"Snow"* e *"Fire"*, sobre uma lista que inclui **The Handmaid's Tale (trabalho indicado
+  ao Emmy em 2020)**, The Boys, The Expanse, What We Do In The Shadows, Halo e John Wick: Chapter 4.
+  A página **/opportunities/** convida por escrito: *"We'd love to hear from you if you've got what
+  it takes to join our team!"*
+- **Fora dos EUA?** Sim — Canadá (Toronto). **Canadá é o país número um da ordem do `BRIEF-JOE`** e
+  a carta tem de dizer de frente que o Vini precisa de patrocínio, porque é o item que o RH usa para
+  cortar e o supervisor é quem atropela.
+- **Dedupe, arquivos e caixa:** no repositório, `mavericks` só aparece em
+  `automacao/garimpo-cgstudiomap.csv` (linha de 08/09, leitura de **quadro de vaga**:
+  *"pagina de carreiras https://mavericks-vfx.com/opportunities/ lida por curl (483 caracteres...)"*)
+  — **não é envio**. `pessoas.csv`, `enviados.csv`, `alvos.csv` e `PESSOAS-SEM-CARTA.md`:
+  **zero**. **NA CAIXA:** `search_threads` por `mavericks OR "mavericks-vfx" OR "Brendan Taylor"`
+  devolveu **zero**. **CASA NOVA, nunca recebeu carta nenhuma, PRIMEIRA pessoa.**
+- **Ressalva honesta:** (1) **não há endereço de pessoa** — a carta, se sair, sai para
+  `info@mavericks-vfx.com` com o nome dele na abertura, e isso é uma via mais fraca; (2) a categoria
+  *"Creatures"* é de **VFX de série de TV**, ou seja criatura de plano e double digital, **não
+  elenco estilizado de animação**, que é onde o portfólio do Vini ganha; (3) a casa é pequena — três
+  pessoas publicadas — e o quadro de `/opportunities/` monta por JavaScript (*"Powered by"*) e não
+  lista vaga legível por `curl`, então não há vaga provada; (4) o rodapé marca **© 2026**, o que é
+  bom sinal de site vivo, mas o prêmio que a página de About exibe é de **2018**.
