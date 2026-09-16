@@ -38,7 +38,11 @@ const log=(...a)=>console.log('['+slug+']',...a);
   // isso NAO quer dizer que a sessao falhou - a sessao esta posta e o /connect/profile/settings
   // abre com os campos. Barrar por URL foi erro meu e gastou sete links de uso unico.
   // A prova de sessao e o campo #candidate_first_name existir na pagina de perfil.
-  const botao=await p.$('button[type=submit], a[href*="/connect/dashboard"]');
+  // CLIQUE CEGO REMOVIDO as 20h55: nas casas que falham a pagina de confirmacao serve o
+  // FORMULARIO DE INSCRICAO, e um button[type=submit] generico submetia inscricao com email
+  // vazio - candidato a causa da sessao que nao colava. Agora so se clica link EXPLICITO de
+  // dashboard, nunca um submit qualquer.
+  const botao=await p.$('a[href*="/connect/dashboard"]');
   if(botao){ await botao.click({force:true,timeout:8000}).catch(()=>{}); await p.waitForTimeout(3000); }
   // COOKIES: medido as 20h10 - em MAG e Nolimit o banner de cookies COBRE a pagina de
   // perfil e o formulario nem chega a existir no DOM, o que o log leu como "sem sessao".
