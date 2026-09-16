@@ -4059,3 +4059,14 @@ email desta rodada das dezenas de casas varridas sem resultado.
 onze caminhos, e a Young Horses estava publicando nome, cargo e email de pessoa em `/press` o tempo
 todo. O `presskit()` do Rami Ismail é um formato padronizado com seção **Team** (nome + cargo) e
 seção **Contact** (endereço de pessoa) — é exatamente o que o Joe procura, num caminho fixo.
+
+## MAESTRO, 16/09 14h40 UTC — cartas do lote da tarde escritas
+
+- **Steffen Kabbelgaard (BetaDwarf):** rascunho `r-5321101601855303873`, gancho no presskit ("squatting in a
+  university classroom", "fully focused on making Minion Masters"), frase de realocação inteira.
+- **Philip Tibitoski (Young Horses):** rascunho `r938204193825327615`, gancho em Bugsnax como bestiário; casa
+  americana, então sem a frase de realocação e com remoto e patrocínio ditos de frente.
+- **David Lipes (Budge):** SEM carta, de propósito. Encarregado de proteção de dados não é alvo de carta de
+  emprego; a porta da casa é o BambooHR `budge` (3D Artist Generalist), frente de formulário.
+- **Brendan Taylor (Mavericks VFX):** fica `sem-email`, como a ficha diz.
+Lote conferido pelo `confere-carta.py`: limpo, semelhança máxima 32%.
