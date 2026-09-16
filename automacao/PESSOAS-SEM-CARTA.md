@@ -3892,3 +3892,51 @@ email desta rodada das dezenas de casas varridas sem resultado.
   pessoas publicadas — e o quadro de `/opportunities/` monta por JavaScript (*"Powered by"*) e não
   lista vaga legível por `curl`, então não há vaga provada; (4) o rodapé marca **© 2026**, o que é
   bom sinal de site vivo, mas o prêmio que a página de About exibe é de **2018**.
+
+---
+
+### David Lipes — **Responsable de la protection des renseignements personnels (encarregado de dados)** — Budge Studios, Montréal, Canadá — **a ficha mais fraca da rodada, e está aqui com o motivo escrito**
+
+- **Email:** `dave@budgestudios.ca` · confiança **alta** · **PUBLICADO com nome completo pela
+  própria casa** em **https://budgestudios.ca/contact**, aberta nesta rodada. Texto literal da
+  página: *"Responsable de la protection des renseignements personnels: **David Lipes** at
+  dave@budgestudios.ca"*. **Nada foi montado.** É a veia da política de privacidade, a mesma que
+  entregou o Sunho Park da GIANTSTEP em 07/09.
+- **Por que ELE e não outra pessoa da casa:** porque **é a única pessoa com nome que a casa publica
+  em todo o site**. A mesma página de contato só traz caixas funcionais — `jobs@`, `pr@`,
+  `bizdev@`, `privacy@` e o Support — e as páginas `/about-us` e `/careers` não publicam uma única
+  pessoa. Não existe Art Director nem Lead publicado para escolher.
+- **Gancho, com a frase do próprio estúdio entre aspas:** *"At Budge™, our mission is to thrill,
+  educate and entertain children around the world through creative and innovative apps"*, e o pilar
+  que interessa, escrito por eles: *"**Featuring the characters children know and love**, our apps
+  are 100% fun approved by official kid playtesters."* O catálogo prova o 3D de personagem:
+  **Bluey: Let's Play!** (finalista de iPad App of the Year 2024 e Editor's Choice 2023),
+  **PAW Patrol Rescue World** (Kidscreen Best Game App 2023), **Hot Wheels Unlimited** (Kidscreen
+  2022), **Barbie Dreamhouse Adventures** (Kidscreen 2019) e **My Little Pony: Harmony Quest**. A
+  `alvos.csv` já tinha classificado a casa como *"Montreal QC; games apps infantis 3D com
+  personagens licenciados (Bluey PAW Patrol Barbie Miraculous)"*, encaixe **forte**.
+- **Fora dos EUA?** Sim — Canadá (5455 Avenue de Gaspé, Suite 540, Montréal). Canadá é o país
+  número um da ordem do `BRIEF-JOE`, e a linha de patrocínio precisa estar na carta.
+- **Dedupe, arquivos e caixa:** `enviados.csv` linha 205 registra `jobs@budgestudios.ca` em 02/09
+  como `enviado`; `processados.csv` 389 registra a auto-resposta, e 1718 registra o quadro de
+  **BambooHR token `budge`** com a vaga *"Artiste 3D Generaliste / 3D Artist Generalist"*, formulário
+  preenchido inteiro e **nada enviado** porque o reCAPTCHA de caixa aparece depois do Submit.
+  **E o registro que mais importa:** `processados.csv` 2012 mostra que `dave@budgestudios.ca` **já
+  havia sido visto em 10/09**, numa varredura mecânica, como *"UM unico endereco de pessoa novo"* —
+  e **nunca virou ficha nem linha de `pessoas.csv`**. Ou seja: o endereço não é descoberta minha, é
+  achado abandonado que esta rodada está finalmente registrando com nome, cargo e fonte.
+  `pessoas.csv`: **zero** pessoa da Budge. **NA CAIXA:** `search_threads` por `budgestudios OR
+  "Budge Studios" OR Lipes` devolveu **uma** thread: a carta de 02/09 para `jobs@` e uma
+  **auto-resposta automática** de `jobs+noreply@budgestudios.ca` (*"Nous prenons le temps de bien
+  réviser chacune des applications"*). **Nenhuma pessoa respondeu, nenhuma recusa.** PRIMEIRA
+  pessoa.
+- **Ressalva honesta, e ela é a mais dura das quatro fichas:** (1) o cargo publicado é de
+  **proteção de dados**, não de arte nem de recrutamento — é a via mais fraca que o `BRIEF-JOE`
+  admite, e só se justifica porque a carta da campanha fecha pedindo direção (*"if someone else
+  there is the right person for this, just point me"*), que é exatamente o que se pode esperar de um
+  encarregado de dados; (2) os personagens da Budge são **licenciados** (Bluey, PAW Patrol, Barbie,
+  Hot Wheels), então o estilo vem fechado no guia do licenciante e o trabalho é aplicar, não criar —
+  é o oposto do que o portfólio do Vini mostra; (3) a casa **já tem porta viva e melhor**: o
+  BambooHR com vaga de 3D Artist Generalist, que só trava no captcha, e o `jobs@` que respondeu
+  automático; (4) o rodapé do site é **© 2016-2025**; (5) é jogo **mobile infantil**, não animação
+  nem jogo de console, o que é o degrau mais baixo de encaixe entre as quatro fichas de hoje.
