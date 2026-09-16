@@ -60,13 +60,17 @@ const OK_LOCAL=new RegExp('\\b('+[
 let slug='';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ // CONTEXTO PERSISTENTE, um por casa: a sessao do cadastro e a UNICA chance de completar o
+ // perfil (o link de email nao autentica em 15 de 19 locatarios), entao o cookie dela nao
+ // pode morrer com o processo. Assim uma rodada seguinte ainda entra logado.
  for(const casa of CASAS){
  slug=casa.host.split('.')[0];
- const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',
-   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
- const p=await ctx.newPage();
+ const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_tt_'+slug,{
+   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
+   ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',
+   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const p=ctx.pages()[0]||await ctx.newPage();
  const base='https://'+casa.host;
  const rede=[];
  p.on('response',r=>{ if(r.request().method()!=='GET'&&/connect/.test(r.url())) rede.push(r.status()+' '+r.request().method()+' '+r.url().replace(base,'')); });
@@ -75,7 +79,7 @@ const log=(...a)=>console.log('['+slug+']',...a);
      const c=await p.evaluate(()=>{
        const a=[...document.querySelectorAll('button,a,[role=button]')].filter(x=>{
          const t=(x.innerText||'').toLowerCase().replace(/\s+/g,' ').trim();
-         return !!x.offsetParent && /^(accept all cookies|accept all|accept cookies|accept|allow all|godkänn alla|i accept|got it|ok)$/.test(t);
+         return !!x.offsetParent && /^(accept all cookies|accept all|accept cookies|accept|allow all|i accept|got it|ok|aceptar todas las cookies|aceptar todas|aceptar cookies|aceptar|permitir todas|aceitar todos os cookies|aceitar todos|aceitar|godkänn alla|godkänn alla cookies|godta alle|tillad alle|hyväksy kaikki|alle akzeptieren|alle cookies akzeptieren|akzeptieren|tout accepter|accepter tout|accepter|accetta tutti|alles accepteren)$/.test(t);
        });
        if(!a.length) return null; a[0].click(); return (a[0].innerText||'').trim().slice(0,40);
      });
@@ -97,15 +101,24 @@ const log=(...a)=>console.log('['+slug+']',...a);
     alvo.click(); return {rotulo:rot(alvo),value:alvo.value,total:r.length};
   },casa.dep);
   log('   departamento:',JSON.stringify(dep));
-  if(dep.erro){ log('   PARANDO nesta casa: departamento nao casou'); await ctx.close(); continue; }
+  // VARIANTE MEDIDA (Liquid Swords): ha locatario cujo Connect NAO tem passo de
+  // departamento - a lista vem VAZIA e o formulario comeca direto no e-mail. Nesse caso
+  // seguir e correto; parar seria perder a porta. Se ha lista e nada casou, para: marcar
+  // departamento errado e pior que nao marcar.
+  if(dep.erro && (dep.opcoes||[]).length){ log('   PARANDO nesta casa: ha departamentos e nenhum casou'); await ctx.close(); continue; }
+  if(dep.erro){ log('   sem passo de departamento neste locatario: sigo para o e-mail'); }
   await p.waitForTimeout(1500);
   log('   Continue:',JSON.stringify(await p.evaluate(()=>{
     const b=[...document.querySelectorAll('button,input[type=submit]')].filter(x=>!!x.offsetParent)
-      .filter(x=>/^continue$/i.test(((x.innerText||x.value||'')+'').trim()));
-    if(!b.length) return null; b[0].click(); return 'Continue';})));
+      .filter(x=>/^(continue|continuar|next|siguiente|suivant|fortsätt|weiter|volgende)$/i.test(((x.innerText||x.value||'')+'').trim()));
+    if(!b.length) return null; b[0].click(); return ((b[0].innerText||b[0].value||'')+'').trim();})));
   await p.waitForTimeout(4000); await cookies();
-  const em=await p.$('#candidate_email')||await p.$('input[name="candidate[email]"]');
-  if(!em){ log('   SEM campo de email no passo 2'); await ctx.close(); continue; }
+  // MEDIDO na Anima (locatario em espanhol): o rotulo do botao NAO e "Continue" e sim
+  // "Continuar", e com o seletor so em ingles o script ficava no passo 1 e tentava escrever
+  // e-mail numa tela que nao tem o campo (fill estourou 30s). Os botoes passaram a casar em
+  // varios idiomas, e aqui se ESPERA o campo em vez de assumir que ele existe.
+  const em=await p.waitForSelector('#candidate_email, input[name="candidate[email]"]',{timeout:20000}).catch(()=>null);
+  if(!em){ log('   SEM campo de email no passo 2; tela:',JSON.stringify(await p.evaluate(()=>((document.body&&document.body.innerText)||'').replace(/\s+/g,' ').slice(0,180)))); await ctx.close(); continue; }
   await em.fill(P.email); await p.waitForTimeout(500);
   // AS DUAS CAIXAS: a de TERMOS e obrigatoria (o servidor devolve "Terms must be accepted"),
   // e a de contato direto e interesse verdadeiro dele.
@@ -116,8 +129,8 @@ const log=(...a)=>console.log('['+slug+']',...a);
   if(!SUBMIT){ log('   MODO SECO: nao cliquei Connect'); await p.screenshot({path:'tt6_'+slug+'_seco.png',fullPage:true}).catch(()=>{}); await ctx.close(); continue; }
   log('   Connect:',JSON.stringify(await p.evaluate(()=>{
     const b=[...document.querySelectorAll('button,input[type=submit]')].filter(x=>!!x.offsetParent)
-      .filter(x=>/^connect$/i.test(((x.innerText||x.value||'')+'').trim()));
-    if(!b.length) return null; b[0].click(); return 'Connect';})));
+      .filter(x=>/^(connect|conectar|conectarse|connecter|anslut|verbinden)$/i.test(((x.innerText||x.value||'')+'').trim()));
+    if(!b.length) return null; b[0].click(); return ((b[0].innerText||b[0].value||'')+'').trim();})));
   await p.waitForTimeout(8000); await cookies();
   log('   depois do Connect, url:',p.url().replace(base,''),'| tela:',JSON.stringify(await p.evaluate(()=>((document.body&&document.body.innerText)||'').replace(/\s+/g,' ').slice(0,170))));
 
@@ -130,10 +143,20 @@ const log=(...a)=>console.log('['+slug+']',...a);
     await ctx.close(); continue;
   }
   log('SESSAO ABERTA (#candidate_first_name existe)');
+  // LICAO MEDIDA NA ANIMA (16/09): o banner de cookies em ESPANHOL nao casava com a lista de
+  // botoes (so tinha ingles e sueco), o banner cobriu a pagina e TODO campo voltou VAZIO na
+  // leitura de volta - com o log dizendo que escreveu. Se o campo nao confirma, tenta aceitar
+  // cookie de novo e repete uma vez antes de desistir.
   const preenche=async(sel,val)=>{
-    const el=await p.$(sel); if(!el) return null;
-    await el.fill(''); await el.type(val,{delay:20}); await p.waitForTimeout(300);
-    return await p.$eval(sel,x=>x.value);
+    for(let tent=0;tent<2;tent++){
+      const el=await p.$(sel); if(!el) return null;
+      await el.fill('').catch(()=>{}); await el.type(val,{delay:20}).catch(()=>{}); await p.waitForTimeout(400);
+      const lido=await p.$eval(sel,x=>x.value).catch(()=>'');
+      if((lido||'').trim()) return lido;
+      log('   campo',sel,'voltou VAZIO: aceito cookie e tento de novo');
+      await cookies(); await p.waitForTimeout(1200);
+    }
+    return '';
   };
   log('   nome:',JSON.stringify(await preenche('#candidate_first_name',P.nome)));
   log('   sobrenome:',JSON.stringify(await preenche('#candidate_last_name',P.sobrenome)));
@@ -331,5 +354,4 @@ const log=(...a)=>console.log('['+slug+']',...a);
  }catch(e){ log('ERRO',e.message.split('\n')[0]); }
  await ctx.close();
  }
- await b.close();
 })();

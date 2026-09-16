@@ -81,7 +81,7 @@ const log=(...a)=>console.log('['+slug+']',...a);
      const c=await p.evaluate(()=>{
        const a=[...document.querySelectorAll('button,a,[role=button]')].filter(x=>{
          const t=(x.innerText||'').toLowerCase().replace(/\s+/g,' ').trim();
-         return !!x.offsetParent && /^(accept all cookies|accept all|accept cookies|accept|allow all|godkänn alla|i accept|got it|ok)$/.test(t);
+         return !!x.offsetParent && /^(accept all cookies|accept all|accept cookies|accept|allow all|i accept|got it|ok|aceptar todas las cookies|aceptar todas|aceptar cookies|aceptar|permitir todas|aceitar todos os cookies|aceitar todos|aceitar|godkänn alla|godkänn alla cookies|godta alle|tillad alle|hyväksy kaikki|alle akzeptieren|akzeptieren|tout accepter|accepter|accetta tutti|alles accepteren)$/.test(t);
        });
        if(!a.length) return null; a[0].click(); return (a[0].innerText||'').trim().slice(0,40);
      });
