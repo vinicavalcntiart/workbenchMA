@@ -2408,3 +2408,12 @@ no grupo disney temos que ser os primeiros a nos inscrever"*.
   de 14/09), (b) os bancos de talentos com departamento de personagem (`automacao/bancos-de-talentos-1009.md`
   e `automacao/FILA-PERSONAGEM-1209.md`), (c) as portas de Greenhouse com código por email, e
   (d) os locatários Workday e a EA, agora que o login funciona daqui.
+
+### 16/09, 13h05 UTC — INAUGURAÇÃO: 30 FORMULÁRIOS HOJE, ordem do Vini
+
+Palavras dele: *"Vamos hoje como inauguração fazer pelo menos umas 30 vagas por formulario."*
+Meta do dia 16/09: **30 candidaturas por formulário enviadas e confirmadas**, personagem
+primeiro. A meta diária permanente continua 10/5. Dois agentes em paralelo: o Jhon A (único
+navegador da máquina) enviando casa a casa, e um Jhon B triador, sem navegador, montando
+`automacao/FILA-FORMULARIO-1609.md` com dossiês prontos e ordenados do mais fácil para o mais
+difícil, para o Jhon A consumir de cima para baixo. Regra que continua: um navegador por vez.
