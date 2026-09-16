@@ -19,7 +19,7 @@ for(const k of Object.keys(A.texto||{})) if(A.texto[k]==='__TEL__'){
 }
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2800},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  p.on('request',r=>{ if(r.method()==='POST') log('[pedido POST]', r.url().slice(0,110)); });
