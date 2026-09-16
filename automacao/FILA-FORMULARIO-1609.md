@@ -306,3 +306,125 @@ Side/Workable (corpo do anúncio não lido por 429 do IP).
 - **Ressalva honesta:** ele mora no Brasil, não na Europa — a porta diz "of Europe". Vale registrar assim mesmo, com a verdade escrita no campo livre, mas o encaixe geográfico é fraco e por isso ela fecha a faixa.
 
 ---
+# FAIXA 3 — TEAMTAILOR CONNECT (banco de talentos)
+
+> **O que foi medido nas 146 páginas de Connect lidas hoje:** 122 servem formulário de cadastro
+> no HTML; **nenhuma** tem `recaptcha`, `hcaptcha`, `turnstile` ou `datadome`. Os campos do
+> primeiro passo são `candidate[email]`, `candidate[department_id]`, `candidate[role_id]`,
+> `candidate[consent_given]` e `candidate[consent_given_future_jobs]`.
+> **Régua de veto:** as páginas de Connect não têm anúncio. Os únicos acertos dos 22 termos são,
+> em todas elas, o mesmo par de **falsos positivos** da política de privacidade — *"...which you
+> can find listed here if you are based in the EU"* e *"If you are based in the UK, you can lodge
+> a complaint with the Information Commissioner's Office"*. **Nenhum veto escrito em nenhuma.**
+>
+> **AS QUATRO ARMADILHAS DESTA LANE, e todas já custaram candidatura:**
+> 1. **A caixa de consentimento tem um gêmeo escondido com o MESMO `name`** (`input type=hidden value="0"`). `querySelector` pega o escondido, o clique não marca nada e a leitura devolve `false` para sempre. Use `[...document.querySelectorAll('input[name="candidate[consent_given]"]')].find(x=>x.type==='checkbox')`.
+> 2. **Sem consentimento o formulário não cria conta: ele vira login**, e devolve a tela mansa *"If we find a Connect account, a sign in link will be sent"*, que parece sucesso e não é.
+> 3. **O cadastro é em dois passos.** Passo 1 é email + departamento/cargo + consentimento; o perfil (telefone, endereço, CV, departamentos) se completa depois de entrar pelo **magic link** do email. Peça **um link por vez**: cada pedido novo invalida o anterior.
+> 4. **A lista de departamentos fecha em `display:none`** e `check({force:true})` não marca nada sem erro: abra o botão "Select one or more options" e clique em `div[role=menu] button[role=menuitemcheckbox]` casando por **texto exato**, conferindo `.checked` depois. E **recarregue a página** antes de dar por feito.
+>
+> **NÃO HÁ SCRIPT PRONTO PARA O CONNECT em `/home/user/apply`.** Os modelos que funcionavam
+> (`hampa_dep_fix2.js`, `beffio_ok.js`) morreram com o contêiner antigo. Para estas 16 portas:
+> ou o Jhon A refaz o modelo a partir das armadilhas acima, ou preenche pelo
+> `preencher-formulario.js` no navegador de tela. **A prova de que entrou é
+> `/connect/dashboard` listando o cadastro**, não a tela de agradecimento.
+
+## 11. ★ Tactical Adventures — Connect, cargo Lead 3D Character Artist (Paris) — **PERSONAGEM**
+
+- **Formulário:** `https://tacticaladventures.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento **`Art` (`246284`)**, cargo **`Lead 3D Character Artist` (`644185`)** — o outro cargo do mesmo departamento é `Concept Artist` (`644184`), que **não** é dele.
+- **País/cidade:** França, Paris · **Casa:** Tactical Adventures (Solasta, D&D digital)
+- **Pretensão (se o perfil pedir):** EUR 45.000/ano + abertura padrão
+- **Dedupe:** `sh automacao/dedupe-agora.sh "644185" "Tactical Adventures"` → o ID do cargo do Connect não existe em arquivo nenhum. O que a casa já tem: **carta fria para `jobs@tactical-adventures.com` em 02/09** e a **vaga `8311973` (Lead 3D Character Artist) ENVIADA e confirmada** (registro no painel). **Esta porta é o banco de talentos, objeto diferente da vaga** — e é o caminho de ficar na base depois de a requisição fechar. Se o Jhon A preferir não repetir a casa no mesmo dia, esta é a primeira a adiar.
+- **Gancho:** o nome do cargo no próprio menu da casa, **"Lead 3D Character Artist"**, é o gancho: é a casa dizendo que tem cargo de personagem 3D na estrutura dela.
+- **Ressalva honesta:** consentimento não aparece nesta página (`consent_given` = 0 ocorrências), o que significa passo 1 mais curto — mas também que é preciso conferir no `/connect/dashboard` se o cadastro entrou.
+
+## 12. Princess Bento — Connect, cargo Character Artist (Londres) — **PERSONAGEM com ressalva**
+
+- **Formulário:** `https://princessbento.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento `Art` (`488901`), cargo **`Character Artist` (`1240636`)**. O menu tem ainda um departamento **`Character Layout` (`488906`)** com três cargos (`Character Layout Artist 1240655`, `Lead 1240653`, `Supervisor 1240654`).
+- **Dedupe:** `sh automacao/dedupe-agora.sh "1240636" "Princess Bento"` → **zero ocorrências nos quatro arquivos. Casa inédita.**
+- **Gancho:** o menu da casa nomeia `Character Artist` e um departamento inteiro de `Character Layout`.
+- **RESSALVA GRAVE, medida em 12/09 e que fica escrita:** a Princess Bento é casa de **2D** — as vagas publicadas são `2D Rigged Animators`, `EOI - 2D Animation Directors`, `EOI - 2D Art Directors`. O cargo "Character Artist" existe no menu, mas o pipeline é 2D. Encaixe **baixo**; entra na faixa de personagem por honestidade de rótulo, e vai depois da Tactical Adventures.
+
+## 13. Envar Studio — Connect, dep. 3D Art (Oslo)
+
+- **Formulário:** `https://envarstudio.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento **`3D Art` (`395135`)** — o menu tem também `2D Art` (`395308`), `Animation` (`395313`), `Technical Art` (`395321`) e o cargo `3D Environment Artist` (`974955`).
+- **País:** Noruega, Oslo
+- **Dedupe:** `sh automacao/dedupe-agora.sh "395135" "Envar"` → o ID não aparece. A casa já tem **a vaga `8281404` Senior 3D Environment Artist ENVIADA e confirmada em 07/09** (recibo de Soledad Trejo). **O Connect é porta diferente e está livre.**
+- **Gancho:** o próprio departamento `3D Art` no menu, e o histórico: a recrutadora já respondeu a candidatura anterior desta casa.
+
+## 14. Black Kite Studios — Connect, dep. CG (Londres)
+
+- **Formulário:** `https://blackkitestudios.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento **`CG` (`155713`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "155713" "Black Kite"` → ID inédito. A casa tem **envio por Teamtailor em 30/08** (recibo de Angus Edhouse) numa vaga anterior. Connect livre.
+- **Gancho (literal, da página de vaga aberta da casa):** *"Black Kite is an independent creative studio offering world class visual effects and design."*
+
+## 15. Territory Studio — Connect, dep. VFX (Londres)
+
+- **Formulário:** `https://territorystudio.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento **`VFX` (`119793`)** (o outro é `Creative Advertising`, `119792`)
+- **Dedupe:** `sh automacao/dedupe-agora.sh "119793" "Territory Studio"` → **zero em `enviados.csv`**, 1 ocorrência em `processados.csv` sem marca de envio. Livre.
+- **Gancho:** Territory é a casa de UI de cinema (Blade Runner 2049, Guardiões) — o gancho honesto é o departamento `VFX` nomeado no menu; **não citar frase de anúncio, porque não há anúncio nesta rota**.
+
+## 16. Untold Studios — Connect, dep. VFX (Londres / Los Angeles)
+
+- **Formulário:** `https://untoldstdfg1324556.teamtailor.com/connect/candidates/new`
+- **O que marcar:** departamento **`VFX` (`88810`)** (existem também `VFX Pipeline` `89440` e `VFX Production` `89439`)
+- **Dedupe:** `sh automacao/dedupe-agora.sh "88810" "Untold"` → ID inédito; nenhuma marca de envio de Connect para a casa.
+- **Observação de ordem:** é a **mesma casa da porta #7**. Se o Jhon A mandar as duas, manda primeiro a **vaga** (#7) e depois o Connect, nunca o contrário.
+
+## 17. Raw Fury — Connect, cargo Freelancer - 3D Artist (Estocolmo)
+
+- **Formulário:** `https://rawfury.teamtailor.com/connect/candidates/new`
+- **O que marcar:** cargo **`Freelancer - 3D Artist` (`121776`)** (o vizinho é `Freelancer - 2D Artist`, `121777`)
+- **Dedupe:** `sh automacao/dedupe-agora.sh "121776" "Raw Fury"` → **zero ocorrências em `enviados.csv`. Casa inédita como candidatura.**
+- **Gancho:** o cargo de freelance 3D nomeado no menu da própria casa — e freelance dispensa visto, que é o gargalo da campanha.
+- **Ressalva:** a Raw Fury é **publisher**, não estúdio: a arte 3D interna é pequena e o rótulo é de freelance.
+
+## 18. Goodgame Studios — Connect, dep. Game Art (Hamburgo)
+- **Formulário:** `https://goodgamestudios.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`309870`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "309870" "Goodgame"` → ID inédito; `enviados.csv` **0** para a casa. Livre.
+- **Ressalva:** grupo **Stillfront**; o quadro é de jogo de navegador (Empire) e a vaga de arte aberta hoje é *AI Artist - Empire*. Encaixe médio-baixo, porta sem atrito.
+
+## 19. New Moon Production — Connect, dep. Game Art (Hamburgo)
+- **Formulário:** `https://newmoonproduction.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`325621`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "325621" "New Moon Production"` → **zero ocorrências. Casa inédita.**
+- **Ressalva:** mesmo molde de quadro da Goodgame (grupo Stillfront), 17 departamentos e zero cargo listado.
+
+## 20. OFM Studios — Connect, dep. Game Art
+- **Formulário:** `https://ofmstudios.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`374882`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "374882" "OFM Studios"` → **zero em `enviados.csv`**, 1 linha de leitura em `processados.csv`. Livre.
+- **Ressalva honesta:** o quadro tem **zero vaga aberta** (medido em 12/09). É cadastro puro.
+
+## 21. Playa Games — Connect, dep. Game Art (Hamburgo)
+- **Formulário:** `https://playagames.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`339731`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "339731" "Playa Games"` → ID inédito. **ATENÇÃO:** a casa **já recebeu candidatura por Teamtailor em 06/09** (Initiativbewerbung `4985632`, confirmada na tela) e uma carta fria no mesmo dia. O Connect é objeto diferente, mas é **terceira batida na mesma casa** — só mandar se a fila de cima secar.
+
+## 22. Sandbox Interactive — Connect, dep. Game Art (Berlim)
+- **Formulário:** `https://sandboxinteractive.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`359924`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "359924" "Sandbox Interactive"` → ID inédito; a casa tem a vaga `8094866` (Lead 3D Environment Artist) **enviada em 08/09**. Connect livre.
+- **Gancho:** Albion Online é MMO de personagem estilizado com visual próprio.
+
+## 23. Stillfront Group — Connect, dep. Game Art (Estocolmo)
+- **Formulário:** `https://stillfrontgroup.teamtailor.com/connect/candidates/new` · **marcar `Game Art` (`305316`)**
+- **Dedupe:** `sh automacao/dedupe-agora.sh "305316" "Stillfront"` → ID inédito. A casa tem a espontânea da **Twin Harbour (`6958619`) enviada em 06/09** por este mesmo quadro-guarda-chuva.
+- **Ressalva honesta:** é **holding**, não estúdio: o cadastro cai num pool que cobre 20+ estúdios do grupo. Vale como rede, não como vaga.
+
+## 24. Swift Games — Connect, dep. Art (Suécia)
+- **Formulário:** `https://swiftgames.teamtailor.com/connect/candidates/new` · **marcar `Art` (`269483`)**; o único cargo listado é `2D Artist` (`708468`), que **não** é dele — marcar o departamento e dizer a disciplina no campo livre.
+- **Dedupe:** `sh automacao/dedupe-agora.sh "269483" "Swift Games"` → **zero em `enviados.csv`**; 4 linhas de leitura em `processados.csv`. Livre.
+
+## 25. Triband — Connect (Copenhague)
+- **Formulário:** `https://triband.teamtailor.com/connect/candidates/new` · departamentos: `Game Production`, `Internship and Graduate Program`, `Marketing`, `Non-Production` → **marcar `Game Production`** (não há rótulo de arte)
+- **Dedupe:** a casa tem **carta fria para `hello@triband.net` em 06/09**; **nenhuma candidatura por portal**. Connect livre.
+- **Gancho:** WHAT THE GOLF? é humor com personagem estilizado — o encaixe de estilo é bom; o rótulo de departamento é que é genérico.
+
+## 26. TapNation — Connect (Paris)
+- **Formulário:** `https://tapnation.teamtailor.com/connect/candidates/new` · departamentos: `Business Support`, `Monetization & UA`, `Product`, `Tech`, `WEB 3.0` → **marcar `Product`** e dizer a disciplina no campo livre (não há rótulo de arte)
+- **Dedupe:** 1 linha de leitura em `processados.csv`, **zero em `enviados.csv`**. Livre.
+- **Ressalva honesta:** mobile hipercasual; personagem 3D não é o produto. Fecha a faixa por isso.
+
+---
