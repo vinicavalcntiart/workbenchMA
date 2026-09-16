@@ -4657,3 +4657,47 @@ exatamente o que o brief proíbe: inventar endereço e chamar de verificado.
 rodada foi corrigido antes de qualquer ficha ser escrita, e nenhuma ficha saiu do padrão solto.
 
 > **Maestro, 16/09 21h05 UTC:** carta do **Bruce Alcock (Global Mechanic)** escrita e gravada como rascunho `r2057132272551792358` (224 palavras, `confere-carta.py` limpo; sai pelo Apps Script do Vini). **Apparat (Eirik Heldal) e Storm Studios (Espen Nordahl) ficam seguradas até 21/09** pela ressalva de cadência das próprias fichas: as duas casas receberam carta em 11/09 e a Storm ainda tem formulário de 30/08. Marcadas no `pessoas.csv` como `PENDENTE-maestro-escreve-a-partir-de-21-09`.
+
+---
+
+## FICHA NOVA — JHON A, 16/09 às 21h20 UTC: **Secret Level Studios** (Letchworth Garden City, Reino Unido)
+
+**Porta:** a caixa que a própria vaga designa, `jobs@secretlevelstudios.com`, com o assunto que
+a casa escreve no botão: `Art Lead / Director Application`. **Não é formulário** (zero `<form>`
+na página), e é por isso que ela vem como ficha e não como candidatura.
+
+| Campo | Valor |
+|---|---|
+| **Email e confiança** | `jobs@secretlevelstudios.com` — **alta**: está no corpo da vaga *e* no `href` do botão Apply |
+| **Fonte, aberta por mim hoje** | `https://www.secretlevelstudios.com/jobs/art-director` (e a lista em `https://www.secretlevelstudios.com/careers`) |
+| **Vaga** | **Art Lead / Art Director (Character Art)**, full-time, híbrido, Letchworth Garden City |
+| **Fora dos EUA?** | Sim, Reino Unido — cabe a frase de realocação do briefing |
+| **Régua de veto** | URL final, **7.020 caracteres**, cinco acertos e **os cinco falso positivo**: `based in Letchworth Garden City` (sede) e quatro `hybrid` (modelo de trabalho). **Zero** frase de autorização, residência, nacionalidade ou idioma |
+| **Dedupe** | `grep` de `secret level` e `secretlevel` em `enviados.csv`, `processados.csv`, `docs/index.html` e `pessoas.csv`: **zero**. Gmail (`secretlevelstudios OR "Secret Level"`): **nenhuma thread da casa**. Casa e vaga inéditas |
+
+**Por que esta casa e não outra:** é a única porta de **personagem nomeada** que apareceu nesta
+rodada inteira em casa nova, e o texto dela é o ofício dele inteiro. O gancho, literal:
+
+> *"We are looking for someone with a strong background in stylised 3D art, particularly
+> character art, who is comfortable taking assets all the way from concept through to
+> implementation in Unity."*
+
+e, nas responsabilidades:
+
+> *"Design and create 3D stylized characters from concept through to final game implementation.
+> Model, texture, rig, skin and animate hero characters and key assets."*
+
+**O que a casa pede por escrito na candidatura**, e a carta tem de responder às duas coisas:
+*"Send your CV and portfolio to jobs@secretlevelstudios.com. Please include your current
+location and confirm that you're happy with our hybrid working model."* O modelo é **dois dias
+por semana no escritório (terça e quarta) e três remotos**.
+
+**Ressalva honesta, e ela é tripla:**
+1. O cargo é **liderança** (Art Lead / Art Director) e o bloco *highly desirable* pede
+   experiência anterior como Art Lead, Art Director, Lead Artist **ou Senior Artist**. Ele tem a
+   última, mais cinco anos de Senior na E-Line, professor e fundador da própria escola, que é a
+   resposta de liderança que o `BRIEF-JHON` manda dar. Não inventar título que ele não teve.
+2. A vaga pede **rig, skin e animação** de personagem junto da modelagem. Animação não é a força
+   dele, e isso se diz em vez de se esconder.
+3. A vaga **não diz uma palavra sobre patrocínio de visto**, e o híbrido exige presença semanal
+   em Letchworth. O visto precisa ser aberto na carta, não deixado para a entrevista.
