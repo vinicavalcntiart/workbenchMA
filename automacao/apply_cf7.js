@@ -28,6 +28,20 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
   const ctx = await b.newContext({ignoreHTTPSErrors: true, viewport: {width: 1280, height: 2200}, acceptDownloads: true,
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US'});
   const p = await ctx.newPage();
+  // A MENSAGEM NA TELA NAO DISTINGUE A CAUSA, e o JSON distingue. Medido em 16/09 na Gigantic
+  // Duck: o CF7 usa O MESMO texto padrao ("There was an error trying to send your message.
+  // Please try again later.") para `spam`, que e o reCAPTCHA v3 reprovando a sessao por
+  // pontuacao, e para `mail_failed`, que e o servidor de email DELES falhando. As duas coisas
+  // pedem acoes opostas: a primeira o Vini resolve com o navegador dele, a segunda nao se
+  // resolve com navegador nenhum porque o formulario esta quebrado para todo mundo. O campo
+  // `status` da resposta REST diz qual e, com todas as letras, entao ele e escutado aqui.
+  const respostasCF7 = [];
+  p.on('response', async r => {
+    if (!/contact-form-7\/v1\/contact-forms\/\d+\/feedback/.test(r.url())) return;
+    let corpo = '';
+    try { corpo = await r.text(); } catch (e) { corpo = '(ilegivel)'; }
+    respostasCF7.push({http: r.status(), corpo: corpo.slice(0, 900)});
+  });
   try {
     await p.goto(url, {timeout: 120000, waitUntil: 'domcontentloaded'});
     await p.waitForTimeout(4000);
@@ -90,7 +104,26 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     const invalidos = await p.$$eval('.wpcf7-not-valid-tip', es => es.map(e => (e.closest('[class*="wpcf7-form-control-wrap"]') || {}).dataset?.name || e.innerText.trim()));
     const ok = /wpcf7-mail-sent-ok/.test(cls);
     log(ok ? 'SUBMITTED OK' : 'NAO ENVIADO', '| classe:', cls, '| mensagem:', msg, '| campos invalidos:', JSON.stringify(invalidos));
-    if (!ok && !invalidos.length) log('NENHUM campo foi marcado invalido: isso aponta reprovacao por PONTUACAO do reCAPTCHA v3, nao preenchimento. No navegador do Vini a pontuacao e outra.');
+    // O VEREDITO LITERAL. MEDIDO EM 16/09 NA GIGANTIC DUCK: a resposta REST nem sempre e
+    // capturada (o tema pode usar admin-ajax), MAS o CF7 carimba o status na CLASSE DO
+    // FORMULARIO, e essa classe e tao literal quanto o JSON: `wpcf7-form spam` e `spam` com
+    // todas as letras, e nao inferencia. Entao a classe entra como fonte de veredito, ao lado
+    // do JSON, e o "NAO CONFERIDO" fica so para quando NENHUM dos dois aparecer.
+    const statusClasse = (/wpcf7-form\s+(mail-sent-ok|mail-sent-ng|spam|validation-errors|aborted|unaccepted|payment-required)/.exec(cls) || [])[1] || '';
+    if (statusClasse) log('STATUS LITERAL NA CLASSE DO FORMULARIO:', statusClasse);
+    if (statusClasse === 'spam') log('   => SPAM: e o reCAPTCHA v3 reprovando a SESSAO por pontuacao, nao o preenchimento. No navegador dele a pontuacao e outra, e a porta vale o clique.');
+    if (statusClasse === 'mail-sent-ng') log('   => MAIL-SENT-NG: quem falhou foi o servidor de EMAIL DELES. Navegador nenhum conserta isso, e a rota certa e o email da casa.');
+    for (const r of respostasCF7) {
+      let st = '(sem status no corpo)';
+      try { st = JSON.parse(r.corpo).status || st; } catch (e) {}
+      log('RESPOSTA REST DO CF7: HTTP', r.http, '| status literal:', st);
+      log('   corpo:', r.corpo.replace(/\s+/g, ' ').slice(0, 300));
+      if (st === 'spam') log('   => SPAM: e o reCAPTCHA v3 reprovando a SESSAO por pontuacao. No navegador dele a pontuacao e outra, e a porta vale o clique.');
+      if (st === 'mail_failed') log('   => MAIL_FAILED: quem falhou foi o servidor de EMAIL DELES, nao o captcha. Navegador nenhum conserta isso, e a rota certa e o email da casa.');
+      if (st === 'validation_failed') log('   => VALIDATION_FAILED: falta campo. A validacao roda ANTES da checagem de spam, entao isto NAO diz nada sobre o captcha.');
+    }
+    if (!respostasCF7.length) log('NENHUMA resposta REST capturada: este CF7 pode ser antigo (admin-ajax) ou o envio nem saiu. Se a classe trouxe status, ele basta.');
+    if (!ok && !invalidos.length && !respostasCF7.length && !statusClasse) log('NEM campo invalido, NEM resposta REST, NEM status na classe: NAO CONFERIDO. Nao conclua pontuacao sem veredito literal.');
   } catch (e) {
     log('ERR', e.message.split('\n')[0]);
     await p.screenshot({path: `err_${slug}.png`, fullPage: true}).catch(() => {});
