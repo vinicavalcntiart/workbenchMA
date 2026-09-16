@@ -4333,3 +4333,189 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   sênior; (5) o cargo dela é `art director` em **caixa baixa** no site, sem bio nenhuma, e não há prova
   publicada de que a casa faça personagem 3D em vez de 2D.
 
+---
+
+### O QUE MORREU NA RODADA DAS 16h35 DE 16/09, com a medição e a frase da fonte, para a próxima não reabrir
+
+**Morto com o endereço, o nome E o cargo na mão, e é a morte mais caro da rodada:**
+
+- **tinyBuild** (`tinybuild.com`, publisher com braço holandês em Roterdã, `alvos.csv` 420, encaixe
+  **forte**) — a página **https://www.tinybuild.com/contact** publica, no cartão, *"**Creative Director |
+  Tom Brien** | tom@tinybuild.com"* com bio *"Tom Brien grew up being an indie developer... At tinyBuild,
+  he's **the creative drive behind our games**"*, e o `/about` publica *"Alex Nichiporchik | CEO |
+  alex@tinybuild.com"* e *"Jaz Salati | CFO | jaz@tinybuild.com"*. Era a melhor ficha da rodada: cargo
+  criativo, endereço literal, casa de personagem estilizado com ~100 pessoas. **MORREU NO DEDUPE DA
+  CAIXA:** `search_threads` por `tinybuild OR Brien OR Nichiporchik` devolveu a thread da carta de 06/09
+  para `jobs@` **com resposta humana de `olga.barlet@tinybuild.com` em 07/09**: *"Thank you for reaching
+  out and sharing your resume with us... At the moment, we don't have any open positions that align with
+  your..."*, e o Vini **já respondeu** essa thread. Casa que respondeu é do Comunicador, e recusa escrita
+  fecha a porta. **Lição de método, e ela vale mais que a ficha perdida: o dedupe do Gmail tem de vir
+  ANTES de escolher a pessoa, não depois de montar a ficha.**
+
+**Mortos por DISCIPLINA, com endereço e pareamento perfeitos (a regra da Krystallplaneten e da
+Autrechose), e nenhum deles deve virar carta:**
+
+- **Super Spline Studios** (Leamington Spa, Reino Unido) — casa **inédita** na campanha (só aparece em
+  `garimpo-cgstudiomap.csv` 843, leitura de quadro de 08/09, *"nao_encontrada"*), e é **exemplo perfeito
+  da veia 2 desta rodada**: em https://supersplinestudios.com/about o `mailto` está **dentro do cartão da
+  pessoa**, e o HTML cru pareia `aron@` com *"Aron Durkin | Co-Founder | Lead Animator"*, `eoin@` com
+  *"Eoin Loughrey | Director | Lead Animator"* e `james@` com *"James Childs | Co-Founder | Lead
+  Animator"*. A bio do Eoin até fala de personagem: *"started out at Blitz Games - bringing charm and
+  appeal to **characters** such as Donald Duck, Puss in Boots and the infamous Jack Slate"*. **Morreu
+  porque a casa não modela:** ela se descreve no próprio `<title>` como *"UK Games **Animation**
+  Specialist Co-Development Partner"* e o serviço que ela publica é *"**Character rigging**, pipeline set
+  up, implementation, scripts & tools"*. Animação e rigging não são a cadeira do Vini, e o `BRIEF-JOE` já
+  manda tratar rigging como fora (a armadilha do "Creature TD"). `/open-positions/` responde **404**.
+- **Haymaker VFX** (Gotemburgo, Suécia, com braço em Los Angeles) — https://haymakerfx.com/contact publica
+  **oito** pessoas com nome, cargo e endereço, entre elas *"**Alex Hansson / CEO / Head of VFX** /
+  alex.hansson@haymakerfx.com"*, e a página de estúdio ainda lista *"Magnus Engsfors | Creative Director"*
+  e *"Pontus Mattsson | Head of Compositing"*. **Morreu por disciplina:** *"Haymaker VFX is a premiere
+  visual effects studio"* para *"feature films, episodics, and commercials"*, e as palavras
+  **character, creature e animal não aparecem em página nenhuma** que abri. Nórdico e dói perder.
+- **Sparky Animation** (Singapura, que é escopo) — https://sparkyanim.com/our-work-2/ publica
+  *"**Todd Ross** | todd@sparkyanim.com | **Head of Content Sales & Licen[sing]**"*, e a casa é CG de
+  verdade: *"Sparky Animation has stamped its name on some of the best **CGI productions** emerging from
+  Asia"*. **Morreu pelo cargo:** vendas e licenciamento, e a frase que o apresenta é literalmente
+  *"For Content Sales, Licensing and Merchandising enquiries please contact"*. Corrige, com número, a
+  linha de hoje de manhã que dava a animação de Singapura como zero: **há endereço de pessoa lá, só não
+  de arte.**
+- **Head Gear Animation** (Toronto, Canadá) — https://headgearanimation.com/contact publica
+  *"Project requests & Inquiries: **Susan Armstrong** | susan@headgearanimation.com"*. **Morreu por
+  técnica:** o menu de ofícios da casa é *"2D Animation | Stop Motion Animation | Live Action/Combo |
+  Mixed Media"* — **não há 3D**.
+- **Fort York VFX** (Toronto) — https://www.fortyork.tv/about publica quatro pessoas com cargo e endereço
+  (*"Erin Kuttner | EP / Managing Director | erin@fortyork.tv"*, mais Valerie Moss, Armen Bunag e Katie
+  Fowler, todos produção). **Morreu por técnica e cargo:** *"Fort York is a Toronto-based visual effects
+  shop. We specialize in **colour grading, compositing, animation, motion design and graphics**"*.
+- **Bacon X** (Frederiksberg, Copenhague) — https://baconx.com/contact publica `sophie@`, `zara@`,
+  `lorene@`. **Morreu por técnica:** *"BACONX IS A CREATIVE STUDIO... SPECIALIZED IN DELIVERING BESPOKE,
+  BREATHTAKING VISUAL EFFECTS AND **EXCEPTIONAL COLOR GRADING**"*, para *"FILM, ADVERTISING, TELEVISION,
+  AND MUSIC VIDEOS"*.
+- **RedLab** (Toronto) — https://redlabto.com/contact publica três donos com cargo, com o endereço
+  **ofuscado pelo Cloudflare** e decodificado nesta rodada: Mark Stevens (Head of Sales/Owner), Walt
+  Biljan (Colourist/Owner), Andy Hunter (Flame Artist/Owner). **Morreu por técnica:** *"top-tier
+  **post-production** services"*.
+- **Toast** (Helsinque) e **Studio Outo** (Oulu e Helsinque) — as duas publicam a equipe inteira com cargo
+  e endereço (`toast.fi/people` dá nove pessoas, entre elas *"Vesa Vinni | VFX | vesku@toast.fi"*;
+  `outo.fi` dá `jussi@`, `tero@`, `janne@`). **Morreram por técnica:** a Toast é *"Toast offers all **post
+  production** services"* (cor, som, edição) e a Outo é *"**animaatiostudio**"* de animação e ilustração 2D.
+- **Split VFX** (Islândia) e **Helping Hand** (Noruega) — `jon.mar@split.is` e `nils@helpinghand.as`.
+  A Split é VFX e DIT de publicidade e série; a Helping Hand é um homem só: *"**Jeg heter Nils**, og driver
+  Helping Hand sammen med håndplukkede frilansere"*. Nenhuma faz personagem.
+- **Cute Newt** (Londres) — `george@cutenewt.com`, e o nome e o cargo estão publicados com uma credencial
+  boa: *"It was founded by **George Wyman V**, who was the former **Art Director** for the hit game
+  Starbound"*, hoje *"Founder, Director"*. **Morreu por técnica:** Starbound é **pixel 2D**, o jogo novo
+  (*"Wildekin is a work in progress"*) não tem uma linha dizendo 3D, e `/dev-team` responde **404**.
+- **Hammer & Ravens** (Tallinn, Estônia) — `emiliano@hammerandravens.com`, colhido do **`data.xml` do
+  presskit()**, com endereço postal e tudo. **Morreu por técnica:** *"retro-inspired... twin-stick shooter
+  with roguelite mechanics"*, 2D.
+- **Bohemia Interactive** — `dusan.gregor@bistudio.com` e `pavel.krizka@bistudio.com` em `bohemia.net/press`.
+  Contato de imprensa, e a casa é simulação militar realista (Arma, DayZ): **duas razões para não gastar
+  carta**.
+- **Curve Games** (Reino Unido) — `clare.hawkins@curvegames.com`, achado no presskit de
+  `dungeonsofhinterberg.com`, e a própria linha diz o que é: *"**Press Contact**: Clare Hawkins"*. Editora,
+  imprensa, e a casa do jogo é a Microbird, em Viena.
+- **WildBrain** (Vancouver, que é a rota número um) e **Funcom** (Oslo) — as duas publicam endereço de
+  pessoa em **release de imprensa** (`kathleen.persaud@`, `misha.harding@`, `louisa.danquah@`,
+  `shaun.smith@wildbrain.com`; `magnussa@` e `nataschar@funcom.com`). **Morreram pela regra da Moonbug:**
+  relações de mídia não é arte nem contratação. As duas casas **continuam abertas por outra porta** e a
+  WildBrain é Vancouver, ou seja vale uma rodada com alvo de arte.
+- **Emberstorm** (Alemanha) — `reka@emberstorm.de` parece pessoa e **não é**: REKA é o nome do jogo da
+  casa. Não registrar como endereço de pessoa.
+- **Cat-astrophe Games** — `michalis@cat-astrophe-games.com` está na home, e o bloco `FOUNDERS` nomeia
+  *"Paweł Wojciechowicz | CEO"*; **`michalis` não pareia com nome nenhum publicado** e `/team` e `/about`
+  devolvem corpo vazio ao `curl` (montam por JavaScript). Endereço sem pessoa identificada, igual à
+  Morgana Studios.
+- **Lost Again** (Tilburg, Holanda) e **Massive Galaxy** (Lisboa) — os dois têm `presskit()` legível e o
+  contato do `data.xml` é **caixa**: `info@lostagain.nl` e `press-contact@massivegalaxy.com`.
+
+**Barrados pelo dedupe, e cada um economizou uma carta:**
+
+- **Alt.VFX** (Brisbane, Austrália) — a varredura profunda abriu `https://www.altvfx.com/the-team/`, que é
+  a melhor página de equipe que vi hoje: **50 pessoas com cargo** e **14 `mailto` ancorados no cartão**,
+  com o pareamento provável provado na ordem do HTML (`col@` ↔ *"Colin Renshaw | Founder / Director"*,
+  `nick@` ↔ *"Nick Angus | Head of FX"*, `matt@` ↔ *"Matthew Chance | Head of 2D"* e assim por diante), e
+  ainda lista vaga viva (*"LEAD ANIMATOR | Brisbane, Full time, Immediate Start"*). **A casa já está no
+  teto:** `pessoas.csv` 103 tem **Colin Renshaw** (`col@altvfx.com`, carta enviada em 06/09) e 104 tem
+  **Sam Lee, Head of Modelling**, como `sem-email`. Registro o que mudou e o que não: **Sam Lee e Jamie
+  White (Head of 3D) continuam SEM endereço publicado** — os 14 endereços são de fundadores, produção,
+  FX, 2D e operações.
+- **Stardust Effects** (Oslo e Atenas) — `https://stardusteffects.com/about/who-we-are` publica cinco
+  sócios com cargo e endereço, entre eles *"Tony Alamo | VFX Supervisor & Partner | tony@stardusteffects.no"*
+  e *"Anette Gjertsen | Manager & Partner"*. **Teto batido:** `enviados.csv` 355 (`elena@`, 02/09) e 664
+  (`kai@`, 06/09) já são **duas pessoas** da casa, e o Kai está em `pessoas.csv` 98.
+- **Qvisten Animation** (Oslo) — a página de contato publica **onze** pessoas com cargo e endereço,
+  inclusive *"Arnfinn Moseng | HEAD OF STUDIO"* e *"Fredrik Kiøsterud | CEO"*. **Teto batido:**
+  `hedda.toftner@` (HR Manager) levou carta em 26/08 com follow-up e o `rasmus@` (Creative Director) está
+  em `pessoas.csv` 8, com carta enviada em 03/09.
+- **Eallin** (Praga, Bratislava e Estocolmo) — `eva.simonovicova@`, `jozef.elsik@`, `leos.vojtisek@` são
+  novos, mas a casa já tem **duas** pessoas (`pessoas.csv` 16 e 106). **Teto batido.**
+- **Brikk Animation** (Estocolmo) — reapareceu com `3d@brikk.se` e a equipe inteira; a casa já tem **três**
+  pessoas em `pessoas.csv` (15, 147, 148). Fechada.
+- **Magic Lab** (Praga) — `vladimir@magiclab.film` (CEF) e `andrea@magiclab.film` são novos; a casa já tem
+  **duas** (Viktor Plch e Michal Krecek). **Teto batido**, e é a mesma casa que gerou o erro de duplicata
+  de 07/09.
+- **Freefolk** (Londres) — a página de contato publica **treze** pessoas com cargo e endereço, e eu li a
+  lista inteira: são CEO, COO, business development, head of commercial production, produtores e PR.
+  **Não há um cargo de arte ou de CG publicado**, e a Fi Kilroe (CEO) já está em `pessoas.csv` 189.
+- **Blinkink** (Londres) — `alex.halley@`, `ellie.goodwin@` e `shiara.miranda@blinkink.co.uk` são novos, mas
+  a casa já tem o Josef Byrne (`pessoas.csv` 83) e o resto da página `/about` é agente e representante de
+  diretor (`hunkydoryus`, `wearebueno`, `softcitizen`, `freeagent`), não contratação.
+- **Artifex Animation Studios / A.A. Studios** (Montréal) — `aastudios.ca/contact` publica
+  *"Moon Marsolais, **Floor Manager**: mmarsolais@aavfx.com"* e *"Jake McBride, **IT/IO**:
+  jmcbride@aavfx.com"*. **Nenhum é arte**, e o Marc Hall (dono e supervisor) já recebeu carta em 09/09.
+- **La Chouette Compagnie** — os nove `@chouettecie.com` reapareceram na varredura; o Bill Otomo já é ficha
+  desta manhã.
+- **Kalla Gameworks** (Kuopio, Finlândia) — `https://kallagameworks.com/team` publica os seis com cargo e
+  endereço, inclusive *"Timo Hakkarainen | **3D Artist** | timo.hakkarainen@kallagameworks.com"*. **Não é
+  descoberta:** `alvos.csv` 579 já registra a casa com `janne.mikkola@kallagameworks.com` e encaixe
+  **baixa** — *"Estudio pequeno (8 pessoas), um unico 3D Artist"*. É fila, não Joe.
+- **Wonderlust Media** (Canadá, Nova Escócia) — publica *"Christian Rankin | Executive Producer |
+  christian@wonderlustmedia.ca"* **e uma vaga viva de `Senior Art Director`, Full time**, cujo botão Apply
+  é `mailto:ryan@wonderlustmedia.ca?subject=Senior%20Art%20Director`. **Não virou ficha do Joe** porque a
+  casa é *"a passionate collective of designers and animators who love telling colorful and quirky
+  stories"*, ou seja motion e design gráfico, a mesma morte da BUCK e da Golden Wolf. **Mas a vaga é
+  canadense, é de direção de arte e se candidata por email publicado: isso é matéria da frente de
+  formulário/portas, e fica registrado aqui de propósito.**
+
+**O que NÃO rendeu, com número, para ninguém repetir:**
+
+- **414 casas já qualificadas × 22 caminhos = 9.108 URLs.** Devolveu **144** endereços de aparência de
+  pessoa, **134 inéditos**, e virou **duas fichas** (Digital Rain e Mechanistry) mais a morte da tinyBuild.
+  Confirma a medição de hoje de manhã: é a melhor veia que sobrou, e ainda assim rende dois por rodada.
+- **389 domínios de casa de personagem × 22 caminhos.** 174 endereços, 130 inéditos, **zero ficha**: o que
+  aparece são agentes e representantes de diretor de publicidade (`grgdreps`, `beelinereps`,
+  `littlebirdrep`, `hunkydoryus`) e produtores de post house.
+- **698 domínios de rota de frente × 22 caminhos = 15.356 URLs.** 387 endereços, 264 inéditos, e o
+  rendimento foi **post house**: a `company3.com` sozinha deu **vinte** endereços de pessoa, todos de
+  produção e cor. Os únicos chefes de ofício de personagem em escopo que apareceram (Alt.VFX, Qvisten,
+  Stardust) **já estavam no teto**.
+- **Rastreador de segundo nível** (segue os links internos reais em vez de chutar caminho) em 640 domínios,
+  2.387 links: **73 endereços que as três varreduras de caminho NÃO acharam**, ou seja cerca de **17% a
+  mais**. Foi ele que abriu a equipe inteira da Alt.VFX e os sócios da Stardust. **Vale incorporar à
+  rotina:** chutar caminho perde uma página em seis.
+- **`presskit()` e `data.xml`**: presskit legível em cerca de vinte casas; contato de **pessoa** em duas
+  (Hammer & Ravens e Massive Galaxy), as duas mortas. A veia que rendeu hoje de manhã **já foi colhida**.
+- **Buscador por `curl` está fechado nesta máquina**, e isso limita a veia 3 (site pessoal de Lead/Head of
+  Character achado por crédito): `html.duckduckgo.com` e `lite.duckduckgo.com` devolvem página **sem um
+  único link de resultado** e `www.mojeek.com` devolve **384 bytes**. Pela ferramenta de busca, duas
+  consultas devolveram página de portfólio de escola e Wikipédia, **zero site pessoal com email publicado**.
+  **A veia 3 não morreu, mas ela não roda por varredura: precisa de nome vindo de crédito, um por vez.**
+- **Página de mentor de escola de arte, estado de hoje:** `thinktankonline.ca/mentors` devolve **114
+  bytes**, `thinktanktrainingcentre.com` dá **502** no proxy, `lostboys-studios.com/instructors` dá **406**.
+  **`cgspectrum.com/mentors` abre** e publica bio com cargo e casa (*"Matteo is a **Senior Character and
+  Creature Modeler at Framestore, London**"*, *"Jon currently works as a **Lead Character Technical Artist
+  at Striking Distance Studios**"*, *"Since 2015, Anna has worked as a 3D character artist at Riot
+  Games..."*). **Não virou ficha porque não há email** e as casas são grandes (Framestore e Riot já têm
+  gente ou porta de portal), mas **é veia viva para uma rodada de `sem-email`** e está registrada aqui.
+
+**AS DUAS REGRAS DE MÉTODO QUE SAEM DESTA RODADA:**
+
+1. **Endereço escrito em ENTIDADE HTML dentro do `mailto:` é invisível para toda varredura de regex feita
+   nesta campanha até hoje.** A Fabrique d'Images publica o `Co-Director, Head of Animation` com email há
+   anos e nenhuma rodada viu, porque o `href` está em `&#103;.&#118;ia&#108;aneix&#64;...`. A regra de
+   07/09 dizia procurar `data-cfemail` antes de dar um domínio como sem endereço; **ela agora tem uma
+   segunda metade: decodificar entidade HTML no `href` também.**
+2. **O dedupe do Gmail vem ANTES de escolher a pessoa.** A tinyBuild tinha cargo criativo, endereço
+   literal e casa de personagem, e a casa já havia recusado por escrito em 07/09. Montar a ficha primeiro
+   e conferir a caixa depois custa a rodada inteira de uma casa boa.
