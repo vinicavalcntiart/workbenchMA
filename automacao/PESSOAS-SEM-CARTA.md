@@ -6972,3 +6972,5 @@ endereço publicado** — o site segue sem nomear ninguém, e a segunda carta da
 **Uma correção de registro que vale mais que uma ficha:** **a Paladin Studios encerrou operações em
 1º de maio de 2024** e o site continua no ar dizendo *"45+ people"*. Qualquer fila desta campanha que
 a liste está listando uma casa morta.
+
+> **Maestro, 17/09 21h01 UTC:** as três fichas com email desta rodada ficam **SEGURADAS, sem carta**, e o motivo é o que o próprio Joe mediu: The Flying Colour Company publica só Flame/Nuke (composição e acabamento, sem 3D nem criatura); Miomi é um estúdio de uma pessoa em rev share, com a arte terceirizada; The Barn faz serious games de treinamento, sem elenco de personagem e com rodapé de 2021. Carta que não pode afirmar encaixe é carta que queima a única chance da casa e o nome do Vini. A regra de escrever em lote com 3 fichas pressupõe casas da disciplina; estas três não são. Se o Vini quiser que saiam mesmo assim, escrevo em dez minutos. Saldo honesto da rodada do Joe: 4 fichas, 3 com email, 0 cartas, e a veia dos diretórios europeus (Animation in Europe, NAPA, Producentforeningen, Neogames) fechada medida.
