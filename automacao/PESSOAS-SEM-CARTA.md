@@ -5977,3 +5977,62 @@ email em nenhum dos 205 posts. Não voltar.
   que há é abertura a remoto, que é coisa diferente; (6) *Eternal Strands* já lançou em janeiro de
   2025 e o segundo título é *"More details to be shared soon"*, ou seja a casa pode estar em vale de
   produção, quando contratação de arte desacelera.
+
+### FICHA 3 — Clémence Maurer, Root Motion Studio (Montréal, Canadá) — **o `/about` que devolvia zero byte às 08h35 abriu, e é a única ficha da rodada com gancho de criatura na frase de abertura da casa**
+
+- **Email: `clem@rootmotion.games` — PUBLICADO, confiança ALTA quanto ao endereço e MÉDIA quanto ao
+  pareamento.** `mailto:` cru na página de detalhe do diretório da Guilde. O pareamento é por
+  **diminutivo**: a equipe publicada tem **uma única pessoa humana**, *"Clémence Maurer — Creative
+  Director"*, e `clem@` é o diminutivo evidente dela. Nada montado.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/root-motion-studio/`
+  (**200, 34.648 bytes**; HTML cru: `<h2 class="text-flip">Root Motion Studio</h2>` … `<a
+  href="https://rootmotion.games/" class="btn" target="_blank">Consultez le site Web</a>` …
+  `mailto:clem@rootmotion.games`), `https://rootmotion.games/about` (**200, 38.986 bytes**, onde está a
+  seção *Meet the Team*), `https://rootmotion.games/` (**200, 39.277 bytes**, de onde saiu o gancho) e
+  `https://rootmotion.games/news` (**200, 23.668 bytes**). Zero acerto de `Page not found` no texto
+  limpo. **Prova de catch-all:** caminho md5 inexistente devolve **404** com md5 `020301eeb54e…`,
+  diferente do `91e5a4f2ecd6…` do `/about`.
+- **CORREÇÃO DE UMA MEDIÇÃO DE HOJE, e ela é a lição desta ficha:** a nota das 08h35 deste arquivo
+  escreve *"rootmotion.games: o diretório publica `clem@rootmotion.games` e a home tem o melhor gancho
+  de criatura da lista, mas **`/about` devolve zero byte** e a home não nomeia ninguém: fica como a
+  primeira a reabrir na próxima rodada, **com navegador de tela**"*. **Não precisou de navegador:** o
+  mesmo `curl`, quatro horas depois, devolveu **38.986 bytes** com a equipe nomeada. **Zero byte é NÃO
+  CONFERIDO, nunca "casa sem pessoa"** — é a mesma regra do código 000 do `BRIEFING.md`, agora medida
+  no tamanho do corpo. Reabrir custou **uma chamada** e rendeu uma ficha.
+- **Por que ESSA pessoa e não outra da casa:** porque **não há outra pessoa**. O `/about` publica três
+  fichas na seção *Meet the Team* e só uma é profissional: **"Clémence Maurer — Creative Director —
+  Senior World Designer, worked on Deus Ex and Subnautica 2. Water is life!"**. As outras duas são
+  *"Poolpee Champagne — Lead Husband"* e *"Mouton et Mitaine — Cats"*, ou seja a casa é **uma pessoa**,
+  com humor. Ela é fundadora, diretora criativa e a única porta.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a home diz que o jogo de estreia é
+  *"a first-person underwater adventure where you get to see the world from the points of view of a set
+  of **quirky marine creatures, all possessing their own senses**"* e a casa promete *"all kinds of
+  **quirky characters of all species**, backgrounds and habitats!"*; o `/about` traz o manifesto
+  assinado: *"We create immersive, quirky and atmospheric games rooted in the workings and wonders of
+  the real world"* e *"Our games start with genuine curiosity about how the world actually works: the
+  science, the ecosystems, **the creatures** (humans included and welcome!)"*. O jogo é *Suns of the
+  Abyss*. **É o gancho de criatura mais direto que a veia da Guilde produziu em duas rodadas.**
+- **Casa fora dos EUA: SIM, Canadá (Montréal).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `rootmotion OR "Root Motion" OR Maurer OR "Suns of the Abyss"`
+  devolveu **`{}`** — zero thread. **Teto de duas por casa no `in:sent` por domínio
+  `rootmotion.games`: ZERO.** No repositório `rootmotion` aparece em **dois** arquivos e nenhum é
+  carta: a nota de 08h35 deste arquivo e o `censo-guilde-quebec-1709.csv` do Jhon A. **"Clémence
+  Maurer" não aparece em nenhum arquivo.** Casa inédita como contato.
+- **RESSALVA HONESTA, e é a mais pesada das três primeiras fichas:** (1) **a casa é UMA PESSOA** — o
+  `/about` publica um marido e dois gatos como o resto da equipe, e estúdio de uma pessoa **não tem
+  assento sênior pago para abrir**, o que contraria a prioridade da ordem de hoje por casas de mais de
+  dez pessoas; (2) o jogo está em **wishlist**, pré-lançamento, sem editora anunciada e financiado por
+  causa social — o `/about` promete *"We show exactly how we give back to the causes we support with
+  our revenues"*, receita que ainda não existe; (3) **o próprio site avisa que a arte não é dele**:
+  *"Note: Images on this site are placeholders (**some AI-generated**) and will be replaced with actual
+  game artwork"*, ou seja **não há prova de pipeline 3D de personagem montado**, e a carta tem de
+  **perguntar** quem faz o elenco, não supor; (4) a diretora vem de **World Design**, não de arte de
+  personagem, o que muda o vocabulário da carta; (5) o valor declarado *"No violence please"* pode
+  descartar boa parte do portfólio de criatura dele, que tem peça de horror e de combate — a carta
+  deve mostrar a linha estilizada e não a agressiva; (6) o pareamento é por **diminutivo**
+  (`clem@` para Clémence), o que é forte aqui porque a casa tem uma pessoa só, mas **não é o nome
+  completo dentro do endereço** como na Threeclipse.
+- **ARMADILHA QUE ESTA FICHA DEIXA REGISTRADA:** `clem@playtogether-studio.com`, outro membro da mesma
+  Guilde, **não é a mesma pessoa**. O presskit da PlayTogether (`playtogether-studio.com/press`, 200,
+  9.126 bytes, aberto nesta rodada) diz *"I am Clem, a Frenchy game dev who moved in Montreal, Canada
+  about 7 years ago"* e usa `@ClemGameDev`. **Não existe padrão de primeiro nome entre casas.**
