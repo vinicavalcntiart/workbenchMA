@@ -2865,3 +2865,153 @@ considera candidato fora do Reino Unido, com reabertura esperada para 2027; a de
 de direito de trabalho no Canadá (11/09); e a `ovLGAfwg` de Londres é a MESMA requisição que já
 devolveu *"You've already applied"* em 05/09. **Casa fechada, e o zero é de leitura, não de
 tentativa.**
+
+## 17/09, 09h50 UTC (JHON A, quinto turno) — AUDITORIA DAS 176 PORTAS PENDENTES: SEIS REGRAS NOVAS, E DUAS DELAS DESMENTEM REGISTRO DA PRÓPRIA CAMPANHA
+
+Turno de **auditoria**, não de caça: as 176 entradas `done=false` em `alta`/`media` do array
+`PORTAIS` foram extraídas por parser de verdade (`json.loads` linha a linha, **1.073 linhas do
+array, zero falha**) e as **159 de tipo `portal` foram todas revalidadas na fonte**. Duas
+candidaturas saíram (House of How e L'Atelier), 6 portas morreram, 7 saíram da fila com o motivo
+certo e 2 duplicatas foram evitadas pelo dedupe.
+
+### 1. O PORTEIRO DE **PONTUAÇÃO** REPROVA ESTE IP, E ISSO CORRIGE A PREMISSA DE QUE "INVISÍVEL NÃO É PAREDE"
+
+A rodada começou com a regra "reCAPTCHA invisível/v3 **não** é parede". Ela está meio certa:
+invisível quer dizer que **não há desafio para resolver** — não quer dizer que ele deixe passar.
+Quatro medições independentes, cada uma com frase de servidor:
+
+| Casa | Plataforma | O que o servidor devolveu |
+|---|---|---|
+| GSC Game World | PeopleForce (Rails) | **HTTP 422**, *"We could not verify that this application was submitted by a person"* (11/09, 15/09 e **17/09 com a caixa de hoje**) |
+| Gigantic Duck | Contact Form 7 5.9.8 + v3 | classe **`wpcf7-form spam`** com zero campo inválido (06/09 ×2 e 16/09) |
+| EF Games | reCAPTCHA `size=invisible` | mesma família |
+| Screen Burn | BreatheHR, reCAPTCHA no próprio botão (`g-recaptcha btn btn-success`) | mesma família |
+
+> **Regra: porteiro de pontuação com frase de servidor é parede MEDIDA e não se tenta de novo
+> pela mesma rota.** Preencher melhor não muda pontuação de IP de datacenter, e mascarar o
+> navegador para enganar a pontuação **não se faz**. O que continua passando é o que não depende
+> de pontuação: **código por email (Greenhouse), verify-email, login de ATS próprio (Workday,
+> SuccessFactors, Cezanne) e formulário sem captcha nenhum (Tally, Airtable, FormKeep, Cezanne)**.
+
+### 2. A PAREDE DO BAMBOOHR TEM NOME: reCAPTCHA **v2 DE CAIXA**, E O REGISTRO DE 15/09 ESTAVA ERRADO
+
+Em 15/09 a campanha escreveu, em dois locatários (nWave e Image Engine), que o BambooHR tinha
+*"parede de PLATAFORMA e não é captcha"*, porque o clique saía limpo, `checkValidity()` dava
+`true` e **nenhum POST aparecia**. Remedido hoje na **Image Engine** (General Application –
+Assets, Vancouver, `Open` pela API): formulário 100% preenchido com leitura de volta campo a
+campo, radio *Work Permit Required* com `checked=true`, clique por coordenada. Depois do clique:
+`g-recaptcha-response` **vazio**, iframe anchor com **`size=normal`** e **`bframe`** presentes.
+**E a captura decide** (`result_ie21.png`): a caixa *"I'm not a robot"* na tela e a frase em
+vermelho **"Almost there! Please confirm you're not a robot to continue."** É exatamente o que a
+**Budge** já tinha medido em 07/09 e que ninguém ligou aos outros locatários.
+
+**Vale para os 11 locatários com vaga `Open` conferida hoje pela API:** Image Engine 21
+(Vancouver), nWave 121, Budge 26 (Montreal), Offworld 198 (BC), Cinesite Montreal 93, Cinesite
+Vancouver 260, SideFX 87 (Toronto), Soul Assembly 76, BetaDwarf 28, Barnstorm 114 e Gamemode
+One 24 (Halifax). Ferramenta: o `apply_bamboohr.js` ganhou suporte a **RADIO**
+(`A.radio:[{nome,rotulo}]`), porque o grupo `customQuestionAnswers.multi_<id>` não tem
+`label[for]` nem texto no próprio input.
+
+### 3. CAMPO OBRIGATÓRIO VAZIO IMPEDE O CAPTCHA DE APARECER — "NENHUM DESAFIO APARECEU" NÃO PROVA NADA
+
+A **Distillery VFX** (Vancouver) estava no painel com o diagnóstico de 06/09 às 23h30: *"NÃO é
+reCAPTCHA; o que trava são dois dropdowns próprios do Wix"*. Os dropdowns são
+`button[data-hook=dropdown-base][role=combobox]` com o rótulo no `aria-label`, e **abrem com
+clique por COORDENADA** (clique por seletor e `.click()` de dentro da página não abrem — foi isso
+que enganou aquela rodada). Com eles abertos deu para ler as opções de verdade: nível
+`Student/Jr/Mid/Sr/Lead/Supervisor` (não existe "Senior", a certa é **`Sr`**) e status no Canadá
+`Canadian Citizen/Permanent Resident/Open work permit/`**`Need a work permit`** — e a certa vem
+**logo depois** da errada, então casar por pedaço de texto mentiria num campo de autorização.
+Com o formulário 100% completo, o clique em *Apply Now* abriu um modal **"Verification / Please
+confirm you're human"** com a caixa do reCAPTCHA, e na rede saíram só quatro 204 de telemetria do
+Wix, sem nenhum POST de submissão.
+
+> **Regra: campo obrigatório vazio para o envio ANTES do captcha. Logo, "cliquei e nenhum desafio
+> apareceu" não prova ausência de captcha — prova que a validação parou antes. Só se vê o
+> porteiro depois de preencher tudo.**
+
+### 4. FORMULÁRIO COM `target="_blank"` SUBMETE EM ABA NOVA, E ISSO INVERTE A NOSSA PROVA DE NÃO-ENVIO
+
+A **House of How Games** (Senior 3D Artist, Boden) estava registrada desde 07/09 como *"porta sem
+formulário"* porque `houseofhow.com/apply` devolve **420 caracteres** por curl. Renderizado, ele é
+um **FormKeep dentro de iframe**, com 17 campos, **zero captcha nos dois frames**, e um seletor
+`Applying For` que **nomeia "Senior 3D Artist - Sweden"**. Candidatura **enviada às 09h01 UTC**.
+
+O que custou caro: **o form tem `target="_blank"`**. A submissão abre **aba nova**, então (a) o
+log de rede da **página** não vê o POST em `/f/<token>` e (b) **o formulário original continua
+cheio** depois do clique. A campanha usa "formulário ainda cheio depois do clique" como prova de
+que o envio não entrou (Distillery, Stellar, One Of Us) — e **essa prova não vale com
+`target=_blank`**. Acreditei nela e cliquei duas vezes: **duplicata idêntica, declarada no
+`enviados.csv`**. A prova que sobrou é do servidor e é indireta mas sólida: o anexo sobe por
+ActiveStorage **dentro do fluxo de submissão** e o FormKeep devolveu 200 com o registro do blob
+nas duas vezes (268646 às 09h01m51 e 268647 às 09h03m48, mesmo `filename`, `byte_size` 45.459 e
+`checksum`), mais `PUT` 200 no S3 deles.
+
+> **Regra: em formulário com `target="_blank"`, a prova se pega ouvindo o evento de popup do
+> CONTEXTO (`context.on('page')`) e lendo a aba nova. O listener na página não alcança.**
+
+E o achado que justifica o envio contra a linha de requisito: o anúncio exige *"Cleared to work
+and located in Sweden"*, e **o próprio formulário da casa** pergunta *"Are you legally able to
+work in the United States, Sweden or Canada?"* e escreve embaixo *"**This is not a deal breaker**,
+especially for contract, but good to know"*. É mais forte que o caso da Image Engine (onde o
+desmentido era só a existência da opção "Work Permit Required"). Mesmo assim, pela regra de 16/09,
+envio contra requisito escrito de residência **entra no placar com desconto e não conta como porta
+limpa**.
+
+### 5. TEAMTAILOR: SE O EMAIL VIER DE `demo-<slug>.teamtailor-mail.com`, O CADASTRO FOI NUMA DEMO
+
+O dedupe da House of How derrubou um registro de **ontem**: o cadastro de Teamtailor Connect da
+casa feito em 16/09 (departamento Design 344931) foi num locatário **DEMO**. A prova está nos
+próprios emails: os três *"Log in to House of How Games"* vieram de
+**`no-reply@demo-houseofhow.teamtailor-mail.com`** e as boas-vindas dizem *"thank you for showing
+an interest in **demo-techStartupENG**"* — dado de amostra de outra empresa fictícia. O locatário
+real existe (`houseofhow.teamtailor.com` responde 200, título *"Find the fun - House of How
+Games"*) e `demo-houseofhow.teamtailor.com` dá 404: é instância de demonstração servida sob o
+mesmo slug. **Cadastro nessas condições não chega a recrutador nenhum e não se conta como
+candidatura.**
+
+### 6. OS QUATRO FALSOS POSITIVOS QUE A AUDITORIA DESFEZ (dois de morte, dois de veto)
+
+- **"closed"** nas duas Stellar Creative Lab de Vancouver vem da opção do próprio formulário
+  *"I have a **closed** work permit with my current employer"*. As duas requisições estão VIVAS.
+- **"expired"** nas duas Outpost VFX de Montréal é boilerplate do SmartRecruiters; a API devolve
+  `visibility PUBLIC` nas duas.
+- **`located in`** na EF Games é *"EF Games is an exciting new game development studio **located
+  in** the heart of Madrid"* — descreve o estúdio, não restringe o candidato. (O que tira a EF
+  Games da fila é **disciplina**: hard surface e veículo.)
+- **`sponsor`** na Upsurge é o **benefício** *"visa support or **sponsorship** where applicable"* —
+  a casa oferece patrocínio. A parede dela é o Turnstile no POST, medido em 15/09.
+
+> **Regra de método: acerto da régua se lê com a frase inteira colada, e sinal de morte também.**
+> Palavra solta em página de formulário casa com opção de menu, com boilerplate de ATS e com
+> endereço de escritório.
+
+### 7. O QUE A AUDITORIA FECHOU, EM NÚMERO
+
+- **Mortas (6):** One Of Us *Texture Artist* Paris (**HTTP 410**, *"This job is not available
+  anymore"*), Foxie Ventures (404), Passion Pictures (404, e o braço de animação mudou para
+  `passion-animation.com`), TRIXTER (a URL da espontânea dá 404, `/jobs/` vive), Dovetail Games
+  (404) e House of Cool (o token do BambooHR devolve **a home da bamboohr.com** em vez de JSON —
+  o mesmo falso positivo de 200 medido em 07/09 na Budge).
+- **Fora da fila de formulário com o motivo certo (7):** Urban Games (três vagas e nenhuma da
+  disciplina; porta é a página de Contato), HandyGames, Traega e Dreamthorn (**mailto**), Gigantic
+  Duck linha 1514 (**duplicata exata** da outra entrada, inflava a fila), Rainbow SpA
+  (**provável-já-enviada** pelo oráculo do CF7) e EF Games (disciplina). Somam-se Inverge (vaga
+  **fantasma**: a tabela do `/jobs/` linka para uma página em 404 e o rodapé diz *"There are no
+  open positions at this time"*) e Revulo (caixa de contato de quatro campos em `api.form-data.com`).
+- **Duplicatas evitadas (2):** a **Epic/Psyonix** *Modeling Outsource Lead* de **Porto Alegre
+  (6031088004)** e de **Montreal (6020682004)** é a MESMA requisição da de Cary (6020680004),
+  **enviada em 03/09** (dois recibos no Gmail), e a irmã *Hard Surface Outsource Lead* foi
+  **recusada em 14/09**; e a **Netflix**, cuja rota do Workday (`netflix.wd108`, sites Netflix e
+  Eyeline) devolve 48 resultados para "character" sem **nenhuma** nova do nível dele — as duas de
+  Character Modeler (JR42568 Vancouver e JR42577 Sydney) já estão feitas, e o Eyeline só tem vaga
+  em Hyderabad.
+- **Paredes nomeadas por assinatura, sem gastar candidatura:** família **Lever** inteira com
+  **hCaptcha `data-size=large`** (NEOWIZ NOUGH e Onetake, Behaviour, Skydance ×2, Quantic),
+  Certain Affinity idem, família **Recruitee** com o captcha de prova de trabalho (Reality Games,
+  Ten Square, RocketWerkz, Menhir, Framestore), família **Workable** devolvendo **429** em todos
+  os caminhos, e **202** na Digital Sun e na Nice Shoes (assinatura de captcha de borda, a mesma
+  da Triggerfish e da Second Home).
+- **A melhor porta NÃO testada que sobrou:** **Sinn Studio** (Toronto, híbrida), 200, **zero
+  assinatura de captcha**, aplicação montada em JavaScript no `applytojobs.ca` — precisa de
+  navegador e de mapa de campos. Topo da fila da próxima rodada.
