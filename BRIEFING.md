@@ -2525,3 +2525,13 @@ ACM e LinkedIn respondem 403/999 a este túnel: nome por crédito só pelo naveg
 4. **Mínimo de 5 de personagem no sentido estrito não se cumpre por estoque:** o censo inteiro
    tinha uma única porta de personagem sem decisão (Long Leap Games/Xsolla) e ela caiu no hCaptcha.
    O que existe é modelagem nomeada pela casa (DreamWorks, Flavor, TAUNT, Everbloom, Animaj).
+
+### Data de nascimento: existe desde 17/09 03h50 UTC, fora do repositório
+
+O Vini informou a data de nascimento nesta sessão. Ela vive em `/home/user/apply/pessoal.json`
+(`nascimento_iso`, `nascimento_br`, `nascimento_us`) e **nunca entra em arquivo do repositório**,
+que é público. As três portas que dependiam dela (SHIFT UP `3D Character Modeler` em Seul,
+Rainbow SpA em Roma e Milão, Milestone) passam de "bloqueada por campo" a "aberta". Se a caixa de
+ferramentas morrer com o container, a data se recupera com o Vini ou no doc privado do Drive
+*CAMPANHA - dados pessoais dos formulários*, onde ele foi orientado a acrescentar a linha (o
+conector do Drive desta sessão só renomeia e move arquivos, não escreve conteúdo).
