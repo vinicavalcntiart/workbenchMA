@@ -3637,3 +3637,5 @@ sites novos, 31 recentes, zero da disciplina.**
   Characters (Project Based)"* (`o5cgufwL`), **já decidida** no painel: a fonte oficial diz
   **"Remote, BRAZIL"** (o Grackle mostrava só "Remote") e é Project Based — o Brasil está fora do
   recorte, porque o objetivo dele é sair do país.
+
+> **17/09 15h00 UTC, correção:** `mpc.wd1/MPCCareers` **é a Marathon Petroleum** (132 vagas de refinaria e engenharia lidas por API), não a MPC de VFX. A nota das 14h49 que a dava como "132 vagas nunca lidas" está desfeita. `mpc.wd3` também é Marathon. A MPC/Technicolor não tem locatário Workday conhecido.
