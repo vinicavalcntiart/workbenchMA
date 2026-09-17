@@ -4192,3 +4192,129 @@ e a DuskSoft apareceram depois de dois "zero acertos" limpos.
   (`/jobs/nGwy`) e a página está atrás do Turnstile de desafio.
 - **A porta da Virtuos precisa de ferramenta**: preenchedor da família Oracle ou o navegador do
   próprio Vini, e a parede de CA resolvida.
+
+## Jhon A, 17/09 22h26 UTC (décimo segundo turno) — O RESÍDUO DOS AGREGADORES, MINERADO: DOIS PARSERS CONSERTADOS, UMA ROTA NOVA COM 6x A COBERTURA, E UMA ARMADILHA DE DATA QUE ERRA 181 DIAS
+
+Turno de resíduo: as quatro pendências que o turno das 21h20 deixou **medidas e não mineradas**.
+Só `curl`, zero navegador (`ps -eo comm=` devolveu 0 no começo e no fim).
+
+**Números medidos: 4 agregadores, ~1.300 anúncios lidos com data, 84 acertos da disciplina,
+ZERO porta nova, zero candidatura gasta, zero régua rodada (nenhuma candidata passou do
+dedupe).** Os detalhes por fonte estão em oito linhas novas do `automacao/processados.csv`.
+
+| fonte | antes | agora | acertos | porta |
+|---|---|---|---|---|
+| gamejobs.co Atom | 72 h | **14 dias (p1..p11), 1.059 anúncios** | 22 | 0 |
+| Hitmarker | 25 cards (2,5 dias) | **sitemap, 13.453 vagas, 3.008 na janela** | 44 | 0 |
+| gamesjobsdirect.com | "2 ocorrências cruas" | **/art-jobs ?page=1..10, 95 vagas de arte** | 11 | 0 |
+| workwithindies.com | "16 cruas, 0 no parser" | **100 fichas pelo DOM real** | 7 | 0 |
+
+### 1. O `lastmod` DO SITEMAP DA HITMARKER **NÃO É DATA DE PUBLICAÇÃO**, E ERRA ATÉ 181 DIAS
+
+Esta é a regra que o turno entrega e é a que mais custa se ignorada. O `robots.txt` da Hitmarker
+anuncia `sitemap.xml`, que lista `sitemap-jobs.xml/p1`, `/p2` e `/p3`: **13.453 vagas únicas com
+`<lastmod>`, e o `<loc>` é LEGÍVEL** (`casa-titulo-id`, ex. `tentworks-interactive-character-artist-4833499`)
+— o oposto do sitemap da ArtStation, cujo slug é opaco de quatro caracteres. Na janela de 14 dias
+por `lastmod` são **3.008 vagas e 44 acertos** da disciplina, contra **7** das 25 fichas do quadro:
+**seis vezes a cobertura pelo mesmo custo.**
+
+E os 44 acertos viraram zero porta porque **o `lastmod` é carimbo de reindexação**. Conferido
+abrindo a ficha e lendo o `datePosted` do JSON-LD da própria Hitmarker:
+
+| ficha | lastmod | datePosted | erro |
+|---|---|---|---|
+| Tentworks Interactive, Character Artist | 17/09 10:31 | **2026-03-20** | **181 dias** |
+| Vertigo Games, 3D Character Artist | 07/09 | 2026-05-21 | 109 dias |
+| Fatshark, Character Artist | 04/09 | 2026-08-07 | 28 dias |
+| Mob Entertainment, Senior Character Artist | 07/09 | 2026-08-13 | 25 dias |
+
+Nas fichas realmente novas os dois carimbos **batem ao minuto** (EA `4831675`: `lastmod` 06:26 e
+`datePosted` 06:26:00+01:00; People Can Fly `4816557`: 12:45 e 12:45:58; Rebellion `4815456`:
+09:13 e 09:13:24), e é isso que faz a armadilha convincente: ela só aparece na cauda.
+
+> **Regra: `lastmod` de sitemap serve para ORDENAR e para cortar o grosso, NUNCA como recência.
+> A recência se confirma no `datePosted` do JSON-LD da ficha, uma requisição por candidata.**
+> É a irmã do "anúncio refrescado versus vaga nova" do Absurd Ventures, agora com número.
+
+*(De passagem, a Tentworks cairia duas vezes: além dos 181 dias, é **Bengaluru, Índia**, fora do
+escopo por escrito.)*
+
+### 2. TRÊS LIMITES DE PAGINAÇÃO, TODOS DO MESMO TIPO: **HTTP 200 MENTINDO**
+
+- **Hitmarker `/game-art-jobs` NÃO PAGINA, de jeito nenhum.** `?page=2..8`, `?p=2`, `?offset=25`,
+  `?per_page=100`, `?limit=100` e `?sort=date&page=2` devolvem corpo **byte-idêntico de 143.589
+  bytes** com os **mesmos 25 `<article>`**. `/page/2` é 404 com 37.844 bytes (a página de erro
+  cheia já catalogada). A casa é Craft CMS com Sprig/htmx e os `hx-vals` assinados da página
+  cobrem só `timestamp`, `user-menu` e `NewsletterForm`: **não existe componente de lista para
+  paginar, a lista é server-rendered e fixa em 25.** Janela real da rota: **2,5 dias**
+  (17/09 15h45 a 15/09 09h00, mais uma ficha zumbi de 2023-03-30).
+- **gamejobs.co para no `p20`**: `p21` e `p22` devolvem 200 com o conteúdo da `p1`. Cada página
+  cobre ~1,5 dia, então 14 dias = `p1..p11` e o teto do feed é ~30 dias. Bom saber antes de pedir 30.
+- **`sitemap-jobs.xml` tem três filhos**: `/p4`, `/p5` e `/p6` clonam o `/p3` byte a byte.
+
+### 3. OS DOIS PARSERS CONSERTADOS, COM O SELETOR QUE FUNCIONA
+
+- **workwithindies.com (Webflow + Jetboost): 0 → 100 fichas.** A chave é um **input escondido que
+  PRECEDE cada ficha**: `<input type="hidden" class="jetboost-list-item" value="<slug>">`. Cortando
+  o HTML por esse marcador, cada bloco entrega casa em `div.job-card-text.bold`, **título em
+  `div.text-block-28`** (irmão do `<a>`, nunca dentro) e local no **segundo** `job-card-text bold`.
+  São 109 marcadores, 9 deles categorias, **100 vagas**. E as 16 ocorrências cruas de `character`
+  ficam explicadas: quatro vagas × quatro repetições (desktop + `job-link-mobile`).
+  **O que resta de ruim: o quadro não publica data nenhuma** — zero padrão `AAAA-MM-DD` em 158.985
+  bytes —, então recência ali custa uma requisição por ficha.
+- **gamesjobsdirect.com: a HOME NÃO É O QUADRO.** Ela serve um carrossel *recommended jobs* de
+  **cinco** fichas, e foi daí que saíram as "2 ocorrências cruas" do controle. O quadro é
+  **`/art-jobs`**, e ele **pagina de verdade por `?page=N`**: `p1..p10` = **95 vagas de arte
+  únicas** (ids 352499 a 359120). E o título **não está em texto de âncora, está no ATRIBUTO**:
+  `<a href="/job/<casa>/<slug>/<id>" class="job-title" title="TÍTULO">`. Cada ficha traz JSON-LD
+  com `datePosted` e `validThrough`, então esta fonte tem recência de graça como o gamejobs.co.
+
+### 4. A MESMA VAGA DA VIRTUOS TEM AGORA **QUATRO** NUMERAÇÕES, E O AGREGADOR ERRA O ESTÚDIO
+
+`gamesjobsdirect.com/job/**counterpunch-a-virtuos-studio**/lead-character-artist/**359119**`,
+`datePosted 2026-09-17`, anunciada como se fosse da **Counterpunch** (o estúdio americano do
+grupo). O corpo do JSON-LD desmente com estas palavras: *"**Black Shamrock** is looking for an
+experienced Lead Character Artist..."*, e as responsabilidades são as mesmas do anúncio Oracle.
+Somando: `1119730` (gamejobs.co), `2283` (vitrine Oracle), `300001683887839` (RequisitionId) e
+`359119` (gamesjobsdirect).
+
+> **Regra: agregador erra o nome do ESTÚDIO dentro do grupo, então dedupe por nome de casa também
+> falha — o texto do anúncio é o desempate.**
+
+E um beco sem saída para poupar a próxima rodada: o botão *Apply* do gamesjobsdirect é
+`/details/redirect/<slug>/<id>`, que por `curl` devolve **200 de interstitial em JavaScript sem a
+URL de destino no corpo**. Não serve para descobrir o ATS da casa.
+
+### 5. AS TRÊS DA EA VOLTARAM A PARECER PORTA LIMPA, E É UM PROBLEMA ESTRUTURAL
+
+`215667`, `215661` e `215658` (*Character Artist - EA Sports FC*, Vancouver) apareceram **hoje às
+06h25-06h26 em dois agregadores, com `datePosted` de hoje**. Os ids saíram do `hx-vals` da própria
+Hitmarker (`jobs.ea.com/en_US/careers/JobDetail/Character-Artist/<id>`, as três 200 com 95.323
+bytes). O `dedupe-agora.sh` pegou as três, e a decisão já está escrita: **veto da casa por
+escrito, na caixa de 16/09** — *"This position does not support relocation or immigration at this
+time"*.
+
+> **O que isto acrescenta ao método: o agregador não carrega o veto que veio por EMAIL.** Vaga com
+> veto de correspondência **volta a parecer porta limpa a cada varredura**, para sempre, e só o
+> dedupe por ID a segura. Vancouver é a prioridade nº 1 do Vini, então esta é exatamente a linha
+> que uma rodada apressada iria clicar.
+
+### 6. O QUE O ZERO SIGNIFICA, HONESTAMENTE
+
+Dos 84 acertos, **nenhum sobreviveu a dedupe + disciplina + recência**, e nenhuma régua de veto
+foi rodada em URL final porque **não houve candidata** — a ordem certa é dedupe **antes** da régua,
+porque régua em vaga duplicada é turno gasto. Os 22 do gamejobs.co, um por um: Virtuos (a porta de
+21h20), EA ×3 (veto escrito), EA tech art ×2, Side e Sharkmob (concept 2D), People Can Fly (parede
+de verificação humana, dossiê já publicado), Rebellion Oxford ×2 (**recusada em 01/09**), Blizzard
+R028136, Absurd 5236256007 e Riot 8163170 (**enviadas** em 12, 12 e 10/09), Snowprint, Playdead
+(descarte por ambiente em 10/09), Mob/Bladework/Lo-Fi (ambiente), Cloud Imperium (produção),
+Virtuos Stagiaire (estágio), Tripledot e Giants (fora). Do sitemap da Hitmarker os inéditos eram
+quatro e os quatro caíram por data (§1); da gamesjobsdirect o inédito era a Virtuos disfarçada
+(§4) e as duas Netflix *Character Modeler* Vancouver/Sydney, **que são as JR42568 e JR42577 já
+ENVIADAS E CONFIRMADAS em 15 e 16/09**; da workwithindies, DuskSoft (carta de 31/08, `datePosted`
+17/08) e Torpor Games (`datePosted` 24/07, `validThrough` 22/09 — 55 dias, fora da régua de 30,
+e a casa estava registrada como "anúncio FECHADO" e hoje responde 200, ou seja **reabriu velha**).
+
+**1.059 anúncios lidos em 14 dias para zero achado é SAÚDE do estoque, não falha da varredura.**
+O que sobrou de valor é método: duas fontes que devolviam zero falso agora leem o quadro inteiro,
+uma terceira ganhou rota com 6x a cobertura, e a armadilha que anularia essa rota está medida.
