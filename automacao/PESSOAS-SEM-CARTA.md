@@ -5563,3 +5563,41 @@ sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a li
   mundo aberto de orçamento pequeno, onde personagem é feito por três 3D Artists generalistas, sem
   assento nomeado de escultura, groom ou look dev; (5) a casa é de 26 pessoas e não há uma linha
   sobre patrocínio de visto em nenhuma página.
+
+### FICHA 2 — Nathan White, Threeclipse (Montréal, Canadá) — **a casa nomeia "Character Art" no próprio crédito**
+
+- **Email: `nathan.white@threeclipse.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de
+  detalhe do diretório da Guilde. O nome completo está **dentro** do endereço e o mesmo nome
+  aparece com cargo no site da casa, o que fecha o pareamento por duas fontes publicadas.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/threeclipse-inc/`
+  (200, 39.562 bytes; `<h2 class="text-flip">Threeclipse</h2>` … `<a
+  href="mailto:nathan.white@threeclipse.com" class="btn">Contactez le membre par courriel</a>`) e
+  `https://threeclipse.com/` (a home traz os créditos de cada projeto, com nome e função por
+  pessoa). Nenhuma das duas é 404. O `/contact` do site publica **só** `contact@threeclipse.com`,
+  genérico: **quem pareia pessoa e endereço é o diretório**, não o site — é a armadilha do Giant
+  Animation ao contrário.
+- **Por que ESSA pessoa e não outra da casa:** os créditos publicados dão **"Art Director Danny
+  Roberts"** e **"Character Art Andy Whalley"**, que são os alvos de ofício, e **de nenhum dos dois
+  há endereço publicado**. O Nathan White aparece como **Producer · Narrative** no *SYZYGY Tactics*
+  e como **Producer** nos outros dois projetos (a casa brinca com os rótulos: no *Sharkarama* ele é
+  *"DUCK IN CHIEF — Producer"*), ou seja é o produtor que contrata em casa de nove nomes. **A carta
+  pede para ser apontado ao Danny Roberts e ao Andy Whalley.** Danny Roberts fica como **segunda e
+  última pessoa possível**, sem nada montado.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a home diz *"Move the Stars. Independent
+  game studio in Montreal, Canada. Two games shipped, three in orbit."* e o pitch do jogo principal
+  é *"Flesh mutates. Steel advances. Humanity endures."* — o vocabulário de mutação de carne é o
+  gancho de criatura mais direto que apareceu nesta rodada.
+- **Casa fora dos EUA: SIM, Canadá (Montréal).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `threeclipse OR "Threeclipse" OR "Nathan White" OR Syzygy`
+  devolveu **`{}`**. Teto no `in:sent` por domínio: **zero**. No repositório `threeclipse` só
+  aparece em `automacao/censo-canada-gamedevmap-0709.json` e
+  `automacao/censo-canada-hits-0709.json`, os dois censos crus, e **"Nathan White" não aparece em
+  nenhum arquivo**. Casa inédita como contato.
+- **RESSALVA HONESTA:** (1) a casa é **minúscula** — nove nomes nos créditos, com pessoas repetidas
+  em três projetos, o que indica time de contrato e não folha fixa, e **já existe um crédito de
+  Character Art ocupado** (Andy Whalley); (2) os jogos são **tática sci-fi 2D-isométrica, idle e
+  ritmo**, e dois dos três projetos creditam **"2D Art"** explicitamente: **não há prova de
+  pipeline 3D de personagem**, e isso tem de estar na carta como pergunta, não como suposição;
+  (3) o cargo do alvo é produção e narrativa, não arte; (4) não há página de vagas nem uma palavra
+  sobre patrocínio de visto; (5) o site é de uma página só e os projetos são datados de *Winter
+  2026* e *March 2027*, ou seja nada lançado recente que prove elenco 3D.
