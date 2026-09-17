@@ -3362,3 +3362,5 @@ maestro com `mcp__Gmail__reply`**, com `body` e `htmlBody`, e registrada em `pro
 novo continua em rascunho** por limite de ferramenta: o conector do Gmail desta sessão responde a
 thread existente, mas não cria mensagem nova com anexo, e a carta fria leva CV e carta em PDF
 pelo Apps Script. Enquanto isso não muda, a fila de cartas frias é do disparador dele.
+
+> **17/09 13h10 UTC:** `EAcareers@ea.com` respondeu com *"This inbox isn't monitored"* à resposta de recusa. Entra na lista de caixas não monitoradas ao lado de `careers@jobs.netflix.com`: **recusa da EA não recebe resposta.**
