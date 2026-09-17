@@ -6516,3 +6516,48 @@ Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de eq
   único crédito de personagem é de um artista externo; (4) a casa se chama *No Deadlines* e publica
   *"No release date"* — é estúdio de fim de semana virado em tempo integral, com o financiamento
   listado em parceiros públicos (Investissement Québec, Revenu Québec), o que confirma o tamanho.
+
+### FICHA 4 — François Mathieu, Erupting Avocado (Sherbrooke, Québec, Canadá) — **`sem-email`, e a linha vale assim; o caminho era `/about` redirecionando para `/about-3/`**
+
+- **Email: nenhum de pessoa. `confianca = sem-email`.** A casa publica **só** a caixa funcional
+  `info@eruptingavocado.com`, e ela aparece **ofuscada em entidades HTML** em todas as páginas
+  (`&#105;&#110;&#102;&#111;&#64;eru&#112;t&#105;&#110;&#103;a&#118;oc&#97;do.c&#111;m`), que é forma
+  delimitada e por isso desofuscada automaticamente. **Nenhum endereço foi montado.** O diretório da
+  Guilde (**`https://www.laguilde.quebec/membre/erupting-avocado/`**, 200, 48.631 bytes, aberta nesta
+  rodada) publica a **mesma** caixa funcional, o que confirma que não existe endereço de pessoa nesta
+  casa. A linha entra guardando **nome, cargo e estúdio**, como manda a regra, e o Maestro pode
+  escrever para `info@` **endereçando a carta ao François pelo nome**, já que a casa tem duas pessoas.
+- **URL que fecha o pareamento, aberta nesta rodada:** **`https://eruptingavocado.com/about`**, que
+  **redireciona para `https://eruptingavocado.com/about-3/`** (200, 55.325 bytes). O texto publica os
+  dois sócios com cargo, literal: *"Erupting Avocado is an independent video game studio based in
+  **Sherbrooke** and co-founded by **François Mathieu** and **Jonathan Guertin**, two long time
+  friends"*, e depois a seção **The people**: *"**Jonathan Guertin - Programmer**"* e
+  *"**François Mathieu - Designer**"*.
+  **Isto CORRIGE a nota das 12h35**, que registrou a casa como *"presskit nomeia Jonathan and
+  François sem sobrenome e sem cargo"*: o presskit não tem, mas o `/about` tem, e ele só aparece
+  porque o WordPress dela serve o conteúdo em **`/about-3/`**. Para o registro: `/about-us`,
+  `/a-propos`, `/equipe` e `/team` são **404 com "Page not found" no texto limpo** (39.105 a 39.155
+  bytes, que é 404 gordo de tema, não página) e `/presskit` devolve **000** por *connection reset*.
+- **Por que ELE e não o outro da casa:** a casa tem **dois** sócios e os cargos publicados dividem o
+  trabalho sem ambiguidade: o Jonathan é **Programmer** (*"He's the one you have to blame for all the
+  bugs"*) e o François é **Designer**. Numa casa de dois, o designer é quem decide a aparência das
+  criaturas.
+- **Gancho com a frase da própria casa** (`/about-3/` e a home,
+  `https://eruptingavocado.com/`, 200, 56.992 bytes): *"We create dark twisted tales that feature
+  **grotesque creatures**. In these eerie and surreal universes, we engage players in a profoundly
+  disturbing and poetic experience that will haunt them long after they think they're done playing"*,
+  e a meta-descrição da casa: *"indie horror game studio … Creator of **The Repairing Mantis** and
+  **The Hungry Fly**"*. **É o melhor gancho de criatura da rodada, e é frase da própria casa.**
+- **Fora dos EUA: sim** (Sherbrooke, Québec, Canadá) — frase de realocação entra.
+- **O que o Gmail devolveu:** `eruptingavocado OR "Erupting Avocado" OR Guertin OR "Repairing
+  Mantis"` devolveu **`{}`**, e `in:sent` por domínio devolveu **`{}`**. No repositório,
+  `eruptingavocado`, `Erupting Avocado` e `Guertin` dão **0 acerto** em `pessoas.csv`,
+  `enviados.csv`, `processados.csv`, `docs/index.html` e `alvos.csv`. **Casa inédita na campanha, e a
+  caixa `info@` nunca recebeu nada.**
+- **RESSALVA HONESTA:** (1) **não há endereço de pessoa** — a carta, se sair, sai para caixa
+  funcional, e pela medição de 07/09 caixa funcional rende menos que pessoa; (2) **casa de duas
+  pessoas**, logo sem patrocínio de visto e sem requisição; o que ela tem é gancho artístico forte e
+  um designer que provavelmente terceiriza modelagem; (3) o cargo "Designer" não diz se ele é quem
+  esculpe as criaturas ou quem desenha o jogo — a carta deve **perguntar**, não afirmar; (4) o jogo
+  é horror narrativo 2D/3D estilizado e não está confirmado pipeline 3D nesta rodada: a itch.io da
+  casa (`eruptingavocado.itch.io/the-repairing-mantis`) ficou **sem ser aberta** por tempo.
