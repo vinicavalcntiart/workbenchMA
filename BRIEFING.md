@@ -3509,3 +3509,59 @@ O alerta *"Character Art in Canada"* das **12h44 de hoje** oferece a Behaviour c
   para a próxima rodada: os onze estúdios do portal da Microsoft (host IPv6-only, `NÃO CONFERIDO`),
   `cig.wd5`/`deluxe.wd1`/`mpc.wd3` (422), e a Sinn Studio, que já tem parede medida (400 do
   `applytojobs.ca`).
+
+### 15h35 UTC — AS QUATRO FAMÍLIAS QUE FALTAVAM, E TRÊS CORREÇÕES DO MEU PRÓPRIO REGISTRO DE UMA HORA ANTES
+
+Fechando a cobertura por família. **BambooHR:** 68 locatários, 63 com 200, 236 vagas na lista e
+**os 236 detalhes lidos um a um** — 9 publicadas de 15 a 17/09, **zero da disciplina**.
+**Recruitee:** 15 locatários vivos, 131 vagas, 2 recentes, zero. **Breezy:** 8 vivos de 11, 38
+vagas, 3 recentes, zero. Total da rodada, já com as correções abaixo: **12.149 vagas lidas em 409
+quadros de 11 famílias**, e **zero vaga da disciplina publicada hoje ou ontem enviável**.
+
+**Correção 1 — o número do SmartRecruiters que eu escrevi às 15h05 estava inflado e a base contada
+pela metade.** Eu escrevi *"11 bases, 911 vagas"*. As 911 eram o campo **`totalFound`**, ou seja o
+**declarado**, não o lido: com `limit=100` e **sem `offset`** eu lia no máximo 100 por base, e
+`Ubisoft2` declara 296. E eram **25** bases no repositório, não 11 — o primeiro `grep` só pegou a
+forma `api.smartrecruiters.com/v1/companies/<base>` e perdeu a forma
+`jobs.smartrecruiters.com/<base>`, onde vivem **`NBCUniversal3` (o quadro da DreamWorks)**,
+`MikrosAnimation` e `Ludia1`. Refeito com `offset`: **1.340 lidas contra 1.340 declaradas.**
+
+> **Regra: nunca registre como "lidas" um campo que o servidor chama de `total`.** Imprima os dois
+> lado a lado e faça a divergência aparecer — é a mesma regra do `lidas == declarado` das 11h35,
+> aplicada ao erro inverso. E extraia token de quadro por **todas** as formas de URL da
+> plataforma, não só pela forma da API.
+
+**Correção 2 — BambooHR: a lista NÃO tem data e o detalhe TEM.** `<loc>.bamboohr.com/careers/list`
+devolve 200 com a lista inteira e o objeto de vaga **não tem nenhum campo de data** (as chaves são
+`id`, `jobOpeningName`, `departmentId`, `departmentLabel`, `employmentStatusLabel`,
+`employmentType`, `location`, `atsLocation`, `isRemote`, `locationType`). Filtrar recência por ali
+devolve **zero sempre**, e esse zero **não é falso zero de chave errada, é ausência de campo** —
+pela regra do código 000, é **NÃO CONFERIDO**, nunca "nenhuma vaga nova". A data existe em
+`<loc>.bamboohr.com/careers/<id>/detail` → `result.jobOpening.datePosted`. Custa **uma requisição
+por vaga** (236 nesta rodada, todas 200), e isso faz da BambooHR a segunda melhor fonte de
+recência da campanha, depois do `data-datetime` do Hitmarker. Dado de contexto que explica por que
+a família rende pouco: a data mais antiga viva é **2022-10-04** e só 9 das 236 são dos últimos
+três dias — quadro de BambooHR é quase todo estoque velho, e a parede continua sendo o reCAPTCHA
+v2 de caixa das 09h50.
+
+**Correção 3, e é a mais importante — O MEU FILTRO DE DISCIPLINA ERA CEGO PARA `MODELLER` COM DOIS
+L.** O filtro era `charact|creature|modeler|modell?ing|sculpt|textur|surfac|...`. **`modeler`
+exige um L** e **`modell?ing` exige o sufixo `ing`** — então **`MODELLER`, `MODELLERS` e a forma
+britânica que meio setor de VFX usa não casavam com nada**. Quem denunciou foi a BambooHR: a
+**The Embassy** de Vancouver publicou *"Senior Modeller - Expression of Interest"* (id 58) em
+**2026-09-15**, dentro da janela, e saiu do meu filtro marcada `disc=False`.
+
+**O controle foi feito antes de escrever o estrago, e ele é a boa notícia:** reexaminei as **1.989
+linhas recentes** que as nove varreduras do turno tinham guardado em disco, com o regex corrigido
+(`modell?(er|ing|eur|iste)` mais `shader`, `hair`, `fur`, `asset artist`, `3d artist`), e apareceu
+**um** acerto novo em 1.989 — *"Senior Graphics Engineer, Shader Systems"* da Unity, que é
+engenharia. O ponto cego **não custou vaga** nas famílias de ATS deste turno; custou uma na
+BambooHR, que é a única onde o filtro rodou sozinho. E a The Embassy 58 já tinha decisão de 16/09 e
+continua fechada por **veto escrito** lido no JSON da própria API: *"At this time, we are only
+accepting applications from those who are legally eligible to work in Canada and **are currently
+BC residents** or willing to establish BC residency for the duration of the contract."*
+
+> **Regra: `Modeller`, `Modelling` e `Modeleur` entram no filtro de disciplina de toda varredura
+> daqui em diante.** E a regra de método que vale mais: **quando uma varredura devolver zero,
+> REFILTRE O QUE FICOU EM DISCO em vez de rebaixar tudo e refazer** — o disco é barato, o quadro
+> não muda em uma hora, e foi assim que quatro famílias foram reavaliadas em um comando.
