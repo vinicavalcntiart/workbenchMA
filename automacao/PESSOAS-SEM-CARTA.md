@@ -5295,3 +5295,50 @@ irlandês), não por varredura de site.
   direção e indicação; (6) o rodapé diz **© 2025** e nada no site está datado de 2026, então
   *"continua na casa hoje"* está sustentado pelo próprio site e não por fonte com data desta semana.
   Telefone do gabarito deliberadamente não registrado (e nem é real).
+
+### FICHA 4 — Stuart Forrest, Triggerfish Animation Studios (Galway, Irlanda; Manchester, Reino Unido) — **SEM-EMAIL, e a linha vale assim**
+
+- **NOME E CARGO PUBLICADOS, SEM ENDEREÇO. `confianca = sem-email`, e nada foi montado.** O bloco
+  `studio_contacts` do diretório publica **uma única pessoa e ela vem sem a parte de email**, ao
+  contrário de todas as outras casas da mesma página. HTML cru:
+  `<h4>Stuart Forrest</h4> <p class="c_role"> CEO </p> </div>` — não existe `<p class="email">` no
+  cartão dele. O único endereço da página é `hello@triggerfish.com`, caixa genérica.
+- **URL exata aberta nesta rodada:** `https://www.animationireland.com/studios/triggerfish/`.
+- **PAREDE MEDIDA, e ela explica por que o endereço não veio:** `https://www.triggerfish.com/` ,
+  `/contact` , `/about` , `/team` e `/careers` devolvem todas **HTTP 202 com 169 a 176 bytes**, e o
+  corpo é um redirecionamento para captcha:
+  `<meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/?r=%2F&y=ipr:...">`. É **captcha de
+  borda**, e burlar captcha é proibido. A casa fica **não conferida pelo site**, não "sem endereço".
+- **Por que ESSA pessoa:** é a **única** pessoa que a casa publica no diretório, e é o CEO. Não há
+  segunda pessoa para escolher.
+- **Por que a linha vale mesmo sem email, e é o achado de escopo da rodada:** o diretório coloca a
+  Triggerfish **dentro da Irlanda** e escreve o endereço postal da casa —
+  *"F2 CREW Building, Cluain Mhuire Wellpark Road Galway H91 8K85 IRELAND"* — e o texto dela diz
+  *"is a world-renowned animation company with studios in **Cape Town, Manchester** and **Galway**"*.
+  Ou seja: **duas das três casas estão no escopo da campanha** (Irlanda e Reino Unido), e a Cidade do
+  Cabo, que está fora, é só a matriz. E o catálogo é **CG de longa e série**, escrito por eles:
+  *"Adventures in Zambezia"*, *"Khumba"*, *"Seal Team (Netflix)"*, *"Kiya and the Kimoja Heroes
+  (Disney Junior, eOne)"* e *"the Disney+ anthology Kizazi Moto: Generation Fire"*, mais os especiais
+  *Stick Man*, *The Snail and the Whale*, *Revolting Rhymes*, *The Highway Rat* e *Zog* para a Magic
+  Light Pictures e a BBC. É uma das casas de personagem 3D mais fortes que a campanha tocou fora dos
+  Estados Unidos, e ela é **inédita**.
+- **Fora dos EUA: SIM** (Irlanda e Reino Unido; a matriz é África do Sul, fora do escopo).
+- **O que o Gmail devolveu no dedupe:** `triggerfish OR "Stuart Forrest" OR Khumba OR Zambezia`
+  devolveu **UMA thread, e ela não é da casa**: é a carta de 11/09 para **Wayne Thornley**, da
+  Revelator (Dublin), cuja própria carta cita *Adventures in Zambezia* e *Seal Team* — ele é **ex-
+  Triggerfish**, o que é dado útil e não duplicata. **Zero thread da Triggerfish**, zero em
+  `pessoas.csv`, `enviados.csv` e `docs/index.html`; no `processados.csv` a única ocorrência é a lista
+  dos 14 domínios do Jhon A de hoje.
+- **RESSALVA HONESTA:** (1) **sem endereço, não há carta possível** — e é proibido montar
+  `stuart@triggerfish.com` ou `sforrest@`, porque nenhum endereço daquele domínio foi visto publicado;
+  (2) o cargo é **CEO de grupo com três países**, o leitor menos provável de responder email frio;
+  (3) o email da casa (`hello@`) é caixa genérica e gastar a única porta dela num `hello@` seria
+  exatamente o que o brief proíbe em casa grande; (4) a contratação dessa casa provavelmente se faz
+  pela Cidade do Cabo, que está **fora do escopo**, e nada no diretório diz que Galway ou Manchester
+  contratam artista; (5) o site está atrás de captcha, então **não confirmei por segunda fonte** que
+  ele continua CEO — a foto do diretório é de 2020.
+- **O que a próxima rodada deve tentar nesta casa, e eu não tentei:** o site abre em navegador de
+  tela (o captcha é de borda, não bloqueio permanente), e a página de careers deles costuma listar
+  vaga por estúdio. Vale também procurar o endereço publicado em **press release** e em **página de
+  palestrante de festival** (Annecy e Cartoon Forum), porque um CEO que fala em painel costuma ter
+  contato de imprensa nomeado.
