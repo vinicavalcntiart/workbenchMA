@@ -3146,7 +3146,19 @@ genérico de gerador — o próprio rodapé do ADP linka *"Intelligence artifici
 (`#PersonalAddress_country`) é autocomplete com um **input obrigatório IRMÃO de `id` vazio** ao
 lado; escrever *"Brazil"* preenche a caixa visível, o irmão fica vazio e a tela responde
 *"Corrigez les renseignements dans les champs mis en évidence"*. Tem que **escolher da lista** de
-sugestões, como no endereço do Teamtailor. Sem passar a etapa 1 não se vê a etapa de CV nem as
+sugestões, como no endereço do Teamtailor — e aí aparece a armadilha que fecha este item, medida em
+três passadas (repetir o fluxo é barato: o código do ADP chega em 1 a 2 segundos). **Depois de
+clicar a sugestão certa, `inputValue()` do campo de país devolve STRING VAZIA**: a caixa visível é
+limpa e o valor fica em outro lugar do componente, então ler o próprio campo de volta diz "não
+preencheu" quando preencheu. **O sinal de que o país entrou está no campo VIZINHO:** assim que o
+país é escolhido, `#PersonalAddress_state` deixa de ser `input` e passa a ser
+`<div role="combobox" class="vdl-dropdown-list__input-container">` — o formulário **reconstrói** os
+campos de endereço conforme o país, e o preenchedor morre com *"Element is not an `<input>`,
+`<textarea>` or `[contenteditable]` element"*.
+
+> **Regra: em formulário que reconstrói campo conforme o país (ADP WorkForceNow, e é a mesma
+> família do Workday), MAPEIE os campos de novo depois de escolher o país, e não confie na leitura
+> de volta do próprio campo de país — confira no vizinho que mudou de tipo.** Sem passar a etapa 1 não se vê a etapa de CV nem as
 **Questions** — ou seja, **não se sabe** se existe pergunta de autorização com opção de patrocínio,
 que é o único caminho que desmentiria o veto pela regra de 16/09. **Efeito colateral declarado:
 existe hoje um rascunho meu em "En attente de soumission" no ADP da Triple Boris, com nome, e-mail,
