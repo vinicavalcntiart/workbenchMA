@@ -5601,3 +5601,47 @@ sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a li
   (3) o cargo do alvo é produção e narrativa, não arte; (4) não há página de vagas nem uma palavra
   sobre patrocínio de visto; (5) o site é de uma página só e os projetos são datados de *Winter
   2026* e *March 2027*, ou seja nada lançado recente que prove elenco 3D.
+
+### FICHA 3 — David Larochelle, Forge Hammer Entertainment (Québec, Canadá)
+
+- **Email: `david_larochelle@forge-hammer.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na
+  página de detalhe do diretório da Guilde, com o **nome completo dentro do endereço** e o mesmo
+  nome publicado com cargo na home da casa. Repare no formato: **sublinhado**,
+  `nome_sobrenome@`, e não `nome.sobrenome@` — quem tivesse montado pelo padrão mais comum teria
+  errado o endereço de uma casa que publica o endereço certo.
+- **URLs exatas abertas nesta rodada:**
+  `https://www.laguilde.quebec/membre/forge-hammer-entertainment/` (200, 39.266 bytes;
+  `<h2 class="text-flip">Forge Hammer Entertainment</h2>` … `<a
+  href="mailto:david_larochelle@forge-hammer.com" class="btn">Contactez le membre par
+  courriel</a>`) e `https://forge-hammer.com/` (7.090 caracteres de texto limpo, onde está a lista
+  de equipe com cargo). **ARMADILHA PARA A PRÓXIMA RODADA:** `https://forge-hammer.com/team`
+  responde **"Page Not Found | Framer"** apesar de existir o item *Team* no menu — a seção de
+  equipe é **âncora dentro da home**. Quem varrer `/team` escreve "casa sem pessoa" e erra.
+- **Por que ESSA pessoa e não outra da casa:** a home publica sete nomes com cargo, e os dois que
+  interessam são **"David Larochelle — CEO, Co-Fouder & Technical Director"** (o erro de grafia
+  *Co-Fouder* é deles, copiado como está) e **"Aleksei Ovchinnikov — CFO, Co-Founder &
+  Art-Director"**. O Art Director é o alvo de ofício e **não tem endereço publicado**; o CEO tem, e
+  em casa desse tamanho o fundador responde ele mesmo, que é a régra do `BRIEF-JOE` para casa
+  pequena. **A carta pede para ser apontado ao Aleksei Ovchinnikov.** Ele fica como **segunda e
+  última pessoa possível**, sem nada montado. Há também um **"Artem Grigorev — Animation Lead"**
+  publicado, que é animação e não modelagem.
+- **Gancho com a frase do próprio estúdio, entre aspas:** *"Seekers of the Ancient is an open
+  world, dedicated server game, inspired by classic multiplayer RPGs, and crafted by RPG lovers.
+  Explore a beautifully designed world completing quests, **slay monsters**, and gear up as you
+  advance in levels"*, e a casa se descreve como *"We are developers, artists, writers, and
+  foremost, gamers"*, em **Québec, Canada, one of the world's top game development hubs**. Monstro
+  de RPG é elenco de criatura, que é a disciplina dele.
+- **Casa fora dos EUA: SIM, Canadá (Québec).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `forge-hammer OR "Forge Hammer" OR Larochelle OR "Seekers
+  of the Ancient"` devolveu **`{}`**. Teto no `in:sent` por domínio: **zero**. No repositório
+  `forge-hammer` e `Larochelle` **não aparecem em nenhum arquivo** — casa inédita para a campanha
+  inteira, e ela nem estava nos censos do Canadá.
+- **RESSALVA HONESTA:** (1a) o jogo está em **playtest de Steam**, ou seja pré-lançamento, e casa
+  pré-receita raramente abre assento sênior pago; (1b) a home diz **"Partnered with N-Hance
+  Studio"** três vezes, e N-Hance é casa de **serviço de arte terceirizada** — o elenco do jogo
+  pode estar sendo feito FORA, o que muda a carta inteira e tem de ser perguntado; (2) o cargo do
+  alvo é **CEO e direção técnica**, não arte; (3) a equipe publicada tem sete pessoas e nenhum
+  assento de escultura, groom, textura de personagem ou look dev; (4) `/team` é 404 e não há página
+  de vagas nem uma palavra sobre patrocínio de visto; (5) a única caixa que a casa publica no
+  próprio site é `marketing@forge-hammer.com`, o que sugere que o endereço do CEO no diretório é
+  contato de associação, e não porta de recrutamento.
