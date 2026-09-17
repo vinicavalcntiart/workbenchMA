@@ -1,0 +1,139 @@
+# CENSO ARTSTATION x FAMILIAS DE ATS - 17/09/2026, nono turno (Jhon A), 16h20-17h40 UTC.
+# O QUE E: os 3.363 slugs de casa do censo-artstation-1709.csv (mais variantes: slug sem hifen
+#   e slug sem sufixo -studio/-games/-animation/-inc/...) sondados por LEITURA DE API em oito
+#   endpoints: Greenhouse, Lever (us e eu), Ashby, Teamtailor (JSON Feed, chave items),
+#   Recruitee, Breezy e BambooHR. 37.409 sondagens em 4.685 slugs distintos.
+# PARA QUE SERVE: para a campanha NAO REPETIR a sondagem. Quadro que esta aqui ja foi lido.
+# CONTROLE DE FALSO NEGATIVO: 74 sondagens de token vivo conhecido injetadas ao longo da
+#   varredura (riotgames, bhvr, ramp, snowprintstudios, framestore, imageengine, asobostudio)
+#   devolveram 200 em 74 de 74. Logo os 32.446 codigos 404 sao reais e nao tunel estrangulado.
+# ARMADILHA: token que casa NAO prova que e a casa do censo. axis.teamtailor.com e a Crayon
+#   Consulting (TI norueguesa) e nao a Axis Studios; oculus/amazon/parity/polygon-labs/genesis/
+#   hackerone/procreate/zoox sao homonimos de empresa de tecnologia. Confira a casa antes de usar.
+# 214 sondagens devolveram codigo 000: NAO CONFERIDO, nunca zero.
+familia,token,slug_artstation,vagas,disciplina,ja_conhecido,titulos_disciplina,veredito
+bamboo,inibuilds,inibuilds,5,2,nao,3D Artist - Vehicles Team ; 3D Artist - Scenery Team,"5 vagas, 2 acerto(s) da disciplina"
+gh,31stunion,31st-union-games,6,1,nao,Shader Technical Artist,"6 vagas, 1 acerto(s) da disciplina"
+gh,episteme,episteme-productions,2,1,nao,Member of Research Staff (Machine Learning for Neural Circuit Modeling),"2 vagas, 1 acerto(s) da disciplina"
+recruitee,airworks,airworks,4,1,nao,3D Artist - Behind the World’s Greatest Live Shows (NL/ENG),"4 vagas, 1 acerto(s) da disciplina"
+recruitee,zackdfilms,zackdfilms,1,1,nao,3D Generalist,"1 vagas, 1 acerto(s) da disciplina"
+ashby,alden,alden-studios,1,0,nao,,"1 vagas, nenhuma da disciplina"
+ashby,aleph,aleph-media,13,0,nao,,"13 vagas, nenhuma da disciplina"
+ashby,arenanet,arenanet-llc,2,0,nao,,"2 vagas, nenhuma da disciplina"
+ashby,biggergames,bigger-games,13,0,nao,,"13 vagas, nenhuma da disciplina"
+ashby,block-labs,block-labs,4,0,nao,,"4 vagas, nenhuma da disciplina"
+ashby,codeway,codeway,9,0,nao,,"9 vagas, nenhuma da disciplina"
+ashby,customuse,customuse-ltd,1,0,nao,,"1 vagas, nenhuma da disciplina"
+ashby,everai,everai,81,0,nao,,"81 vagas, nenhuma da disciplina"
+ashby,fable,fable-studio,7,0,nao,,"7 vagas, nenhuma da disciplina"
+ashby,found,found-studio,5,0,nao,,"5 vagas, nenhuma da disciplina"
+ashby,genera,genera-games,4,0,nao,,"4 vagas, nenhuma da disciplina"
+ashby,genesis,genesis,64,0,nao,,"64 vagas, nenhuma da disciplina"
+ashby,genies,genies,1,0,nao,,"1 vagas, nenhuma da disciplina"
+ashby,glow,glow-art,19,0,nao,,"19 vagas, nenhuma da disciplina"
+ashby,hackerone,hackerone,17,0,nao,,"17 vagas, nenhuma da disciplina"
+ashby,hivemind,hivemind,1,0,nao,,"1 vagas, nenhuma da disciplina"
+ashby,nirvana,nirvana,6,0,nao,,"6 vagas, nenhuma da disciplina"
+ashby,parity,parity,3,0,nao,,"3 vagas, nenhuma da disciplina"
+ashby,polygon-labs,polygon-labs,3,0,nao,,"3 vagas, nenhuma da disciplina"
+ashby,quorum,quorum,5,0,nao,,"5 vagas, nenhuma da disciplina"
+ashby,savvy,savvy,22,0,nao,,"22 vagas, nenhuma da disciplina"
+ashby,textla,textla,0,0,nao,,zero vaga publicada
+ashby,transfr,transfr,7,0,nao,,"7 vagas, nenhuma da disciplina"
+ashby,tribe-ai,tribe-ai,15,0,nao,,"15 vagas, nenhuma da disciplina"
+ashby,triumph-arcade,triumph-arcade,20,0,nao,,"20 vagas, nenhuma da disciplina"
+ashby,vizcom,vizcom,8,0,nao,,"8 vagas, nenhuma da disciplina"
+bamboo,afternow,afternow,7,0,nao,,"7 vagas, nenhuma da disciplina"
+bamboo,aquifer,aquifer,0,0,nao,,zero vaga publicada
+bamboo,ascend,ascend-games,0,0,nao,,zero vaga publicada
+bamboo,aura,aura-productions,5,0,nao,,"5 vagas, nenhuma da disciplina"
+bamboo,bare,bare-entertainment,20,0,nao,,"20 vagas, nenhuma da disciplina"
+bamboo,biggergames,bigger-games,0,0,nao,,zero vaga publicada
+bamboo,blacklistcreative,blacklist-creative,0,0,nao,,zero vaga publicada
+bamboo,brainrocket,brainrocket,0,0,nao,,zero vaga publicada
+bamboo,bside,b-side-games,0,0,nao,,zero vaga publicada
+bamboo,catface,cat-face,6,0,nao,,"6 vagas, nenhuma da disciplina"
+bamboo,clockwork,clockwork-vfx,1,0,nao,,"1 vagas, nenhuma da disciplina"
+bamboo,clockworklabs,clockwork-labs,3,0,nao,,"3 vagas, nenhuma da disciplina"
+bamboo,cosmic,cosmic-games,2,0,nao,,"2 vagas, nenhuma da disciplina"
+bamboo,cosmos,cosmos-interactive,4,0,nao,,"4 vagas, nenhuma da disciplina"
+bamboo,decentraland,decentraland,0,0,nao,,zero vaga publicada
+bamboo,defiant,defiant-studios,0,0,nao,,zero vaga publicada
+bamboo,derivco,derivco,3,0,nao,,"3 vagas, nenhuma da disciplina"
+bamboo,displaysweet,displaysweet,0,0,nao,,zero vaga publicada
+bamboo,eastsidegames,east-side-games-group,0,0,sim,,zero vaga publicada
+bamboo,edgewood,edgewood,0,0,nao,,zero vaga publicada
+bamboo,eleventhhourgames,eleventh-hour-games-inc,0,0,nao,,zero vaga publicada
+bamboo,europeanrecruitment,european-recruitment,0,0,nao,,zero vaga publicada
+bamboo,fbfx,fbfx-ltd,0,0,nao,,zero vaga publicada
+bamboo,genesis,genesis,3,0,nao,,"3 vagas, nenhuma da disciplina"
+bamboo,highstreet,highstreet,5,0,nao,,"5 vagas, nenhuma da disciplina"
+bamboo,lemonio,lemonio,2,0,nao,,"2 vagas, nenhuma da disciplina"
+bamboo,lumeto,lumeto,0,0,nao,,zero vaga publicada
+bamboo,lunchbox,lunchbox,0,0,nao,,zero vaga publicada
+bamboo,super7,super7-jobs,1,0,nao,,"1 vagas, nenhuma da disciplina"
+breezy,allegorithmic,allegorithmic,0,0,nao,,zero vaga publicada
+breezy,amazon,amazon-studios,0,0,nao,,zero vaga publicada
+breezy,apex-systems,apex-systems,0,0,nao,,zero vaga publicada
+breezy,axis,axis-animation,0,0,nao,,zero vaga publicada
+breezy,fast,fast-art,0,0,nao,,zero vaga publicada
+breezy,framework,framework-games,10,0,nao,,"10 vagas, nenhuma da disciplina"
+breezy,gear,gear-inc,0,0,nao,,zero vaga publicada
+breezy,hackerone,hackerone,0,0,nao,,zero vaga publicada
+breezy,ibloxx-studios-dmcc,ibloxx-studios-dmcc,0,0,nao,,zero vaga publicada
+breezy,imerza,imerza,0,0,nao,,zero vaga publicada
+breezy,immersivetouch,immersivetouch,0,0,nao,,zero vaga publicada
+breezy,marketscale,marketscale,0,0,nao,,zero vaga publicada
+breezy,mooncolony,mooncolony,2,0,nao,,"2 vagas, nenhuma da disciplina"
+breezy,neoscape,neoscape,0,0,nao,,zero vaga publicada
+breezy,oculus,oculus,0,0,nao,,zero vaga publicada
+breezy,playstudios-asia,playstudios-asia,5,0,nao,,"5 vagas, nenhuma da disciplina"
+breezy,production-club,production-club,1,0,nao,,"1 vagas, nenhuma da disciplina"
+breezy,reflection-games-inc,reflection-games-inc,0,0,nao,,zero vaga publicada
+breezy,savvy,savvy,0,0,nao,,zero vaga publicada
+breezy,signature,signature,0,0,nao,,zero vaga publicada
+breezy,test-company,test-company,0,0,nao,,zero vaga publicada
+gh,3lateral,3lateral,0,0,nao,,zero vaga publicada
+gh,aura,aura-productions,5,0,nao,,"5 vagas, nenhuma da disciplina"
+gh,bcc,bcc-media,9,0,nao,,"9 vagas, nenhuma da disciplina"
+gh,bitreactor,bitreactor,0,0,nao,,zero vaga publicada
+gh,blend,blend-studios,12,0,nao,,"12 vagas, nenhuma da disciplina"
+gh,cleo,cleo-studios,6,0,nao,,"6 vagas, nenhuma da disciplina"
+gh,criticalmass,critical-mass,22,0,nao,,"22 vagas, nenhuma da disciplina"
+gh,crystaldynamics,crystal-dynamics-inc,1,0,sim,,"1 vagas, nenhuma da disciplina"
+gh,cubicmotion,cubicmotion,0,0,nao,,zero vaga publicada
+gh,current,current-studios,7,0,nao,,"7 vagas, nenhuma da disciplina"
+gh,deeplocal,deeplocal,3,0,nao,,"3 vagas, nenhuma da disciplina"
+gh,example,example-studio,21,0,nao,,"21 vagas, nenhuma da disciplina"
+gh,found,found-studio,3,0,nao,,"3 vagas, nenhuma da disciplina"
+gh,genesis,genesis,0,0,nao,,zero vaga publicada
+gh,glow,glow-art,0,0,nao,,zero vaga publicada
+gh,humansignal,humansignal,53,0,nao,,"53 vagas, nenhuma da disciplina"
+gh,oceanx,oceanx,9,0,nao,,"9 vagas, nenhuma da disciplina"
+gh,qualia,qualia,20,0,nao,,"20 vagas, nenhuma da disciplina"
+gh,shawnee,shawnee,1,0,nao,,"1 vagas, nenhuma da disciplina"
+gh,twinmotion,twinmotion,0,0,nao,,zero vaga publicada
+gh,vaynermedia,vaynermedia,97,0,nao,,"97 vagas, nenhuma da disciplina"
+lever,activetheory,active-theory-llc,3,0,nao,,"3 vagas, nenhuma da disciplina"
+lever,aleph,aleph-media,102,0,nao,,"102 vagas, nenhuma da disciplina"
+lever,codeway,codeway,0,0,nao,,zero vaga publicada
+lever,dailywire,daily-wire,12,0,nao,,"12 vagas, nenhuma da disciplina"
+lever,fanatee,fanatee-inc,9,0,nao,,"9 vagas, nenhuma da disciplina"
+lever,genesis,genesis,4,0,nao,,"4 vagas, nenhuma da disciplina"
+lever,jito,jito,2,0,nao,,"2 vagas, nenhuma da disciplina"
+lever,lovepop,lovepop,6,0,nao,,"6 vagas, nenhuma da disciplina"
+lever,lumeto,lumeto,0,0,nao,,zero vaga publicada
+lever,plexus,plexus,2,0,nao,,"2 vagas, nenhuma da disciplina"
+lever,procreate,procreate,10,0,nao,,"10 vagas, nenhuma da disciplina"
+lever,winamax,winamax,29,0,nao,,"29 vagas, nenhuma da disciplina"
+lever,zoox,zoox,239,0,nao,,"239 vagas, nenhuma da disciplina"
+recruitee,animus,animus-interactive,0,0,nao,,zero vaga publicada
+recruitee,grafischlyceumutrecht,grafisch-lyceum-utrecht,1,0,nao,,"1 vagas, nenhuma da disciplina"
+recruitee,pebble,pebble,0,0,nao,,zero vaga publicada
+recruitee,spiralyze,spiralyze,1,0,nao,,"1 vagas, nenhuma da disciplina"
+tt,axis,axis-animation,2,0,sim,,"2 vagas, nenhuma da disciplina"
+tt,coatsinksoftware,coatsink-software,0,0,nao,,zero vaga publicada
+tt,faraway,faraway,1,0,nao,,"1 vagas, nenhuma da disciplina"
+tt,labster,labster,0,0,nao,,zero vaga publicada
+tt,portalone,portalone,0,0,nao,,zero vaga publicada
+tt,solidicon,solidicon,0,0,nao,,zero vaga publicada
