@@ -5823,3 +5823,5 @@ Hoho, Lucid Dreams) e **onze por não ter nome e cargo pareados**.
 trabalhados**, que é o estoque mais barato que esta campanha tem hoje para Québec.
 **Veia fechada com prova estrutural:** `animationuk.org/wp-json` não tem campo de pessoa nem de
 email em nenhum dos 205 posts. Não voltar.
+
+> **Maestro, 17/09 09h30 UTC:** lote de três cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 34%): Natasha Collin / Nine Dots `r-2049107334138318933` (a carta diz que o formulário de carreiras não carregou e que um segundo CV ali é a mesma pessoa); Nathan White / Threeclipse `r8052207050396345465` (pergunta se o SYZYGY é 3D); David Larochelle / Forge Hammer `r-4585955390094394768` (pergunta se o elenco é feito na N-Hance ou em casa). **Natalie Molson (Krafton Montréal) não recebe carta:** é a responsável por proteção de dados, cargo fora de alçada para candidatura, e o grupo já recusou duas vezes em setembro; escrever para o DPO leria como uso indevido do endereço. Linha marcada `NAO-ESCREVER`. Saem pelo Apps Script do Vini.
