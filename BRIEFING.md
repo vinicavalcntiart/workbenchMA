@@ -3565,3 +3565,75 @@ BC residents** or willing to establish BC residency for the duration of the cont
 > daqui em diante.** E a regra de método que vale mais: **quando uma varredura devolver zero,
 > REFILTRE O QUE FICOU EM DISCO em vez de rebaixar tudo e refazer** — o disco é barato, o quadro
 > não muda em uma hora, e foi assim que quatro famílias foram reavaliadas em um comando.
+
+### 15h55 UTC — FECHO DA COBERTURA: ARTSTATION É FAMÍLIA NOVA, E TRÊS LOCATÁRIOS DE WORKDAY DA TABELA DESTE BRIEFING ESTÃO COM O NOME ERRADO
+
+**Números finais do turno: 13.040 vagas lidas em 436 quadros de 14 famílias, zero vaga da
+disciplina publicada hoje ou ontem enviável, zero candidatura gasta, zero duplicata.**
+
+**ARTSTATION JOBS é família inédita, e é a mais específica da disciplina que existe.** O
+repositório inteiro citava `artstation.com` **só** como o portfólio dele; o quadro de vagas nunca
+foi tocado em 18 dias. Estado medido, nas duas metades:
+
+- **A metade que abre, de graça e por `curl`:** o `robots.txt` de `artstation.com` **anuncia** um
+  sitemap de vagas que ninguém tinha lido — `/api/v2/jobs/jobs-sitemap-index.xml`, 200, três
+  filhos. O `jobs-sitemap-1.xml` devolve **123 vagas vivas, cada uma com `<loc>` e `<lastmod>`**,
+  ou seja **data de publicação de graça**: 7 com `lastmod` de 16/09, 3 de 14/09, 4 de 10/09, 14 de
+  08/09. Custa **uma requisição** e diz quantas vagas existem e de quando são.
+- **A metade que não abre, e a captura decide:** `/jobs` e `/jobs/<id>` devolvem **403 por `curl`
+  E TAMBÉM NO NAVEGADOR DE TELA**. Abri as sete de ontem uma a uma com o Chromium de tela
+  (`as_le.js`, sessão única): 403 nas sete, título literal *"Just a moment..."*, e a captura
+  `as_ultima.png` mostra o porteiro com nome — **Cloudflare Turnstile de DESAFIO**, caixa
+  *"Verify you are human"* com a marca Epic Games, mais *"One more step — Please complete a
+  security check to continue"* e o IP do datacenter impresso na tela. **É captcha de desafio e não
+  se burla.** A rota de API engana: **tudo** sob `/api/v2/jobs/` devolve 500 *"An unhandled
+  lowlevel error occurred"*, **inclusive rotas que eu inventei** (`/browse.json`, `/index.json`) —
+  logo **500 ali não distingue rota que existe de rota que não existe**, o mesmo problema do 422
+  em camelCase medido hoje às 12h. O `POST` na `search.json` devolve **412 `Invalid CSRF Token`**,
+  o que prova que a rota existe e quer sessão de navegador.
+
+> **ArtStation entra na campanha como ORÁCULO DE RECÊNCIA e como CENSO, nunca como porta de envio.**
+
+**E o subproduto vale mais que a lane:** o terceiro filho,
+`/api/v2/jobs/recruitment-companies-sitemap-1.xml`, responde 200 com 617 KB e **4.720 páginas de
+empresa** (`artstation.com/jobs/c/<slug>`), **sem parede nenhuma** — o Cloudflare barra as vagas,
+não o sitemap. Dedupe por nome normalizado contra `enviados.csv`, `processados.csv`,
+`docs/index.html` e todos os `automacao/*.csv` e `*.md`: **1.357 já conhecidas e 3.363 inéditas**,
+em `automacao/censo-artstation-1709.csv`. A sobreposição de 29% é o controle que diz que o dedupe
+está funcionando. Para comparar tamanho: a Guilde du Québec rendeu **145** casas inéditas hoje, o
+gamedevmap **1.273** no total, a Animation UK **55**. Esta rende **3.363**, e são casas que
+recrutam arte por definição. **Ressalva honesta:** o slug não vem com domínio nem email, e
+`/jobs/c/<slug>` está atrás do mesmo Turnstile — o uso certo é como **lista de nomes para cruzar
+com as famílias de ATS que a campanha já lê por API**, não como fila de formulário.
+
+### TRÊS LOCATÁRIOS DE WORKDAY DA TABELA DA LINHA 1431 DESTE BRIEFING ESTÃO COM O NOME ERRADO
+
+Extraí os locatários do **repositório inteiro** em vez de só da tabela, e apareceram 11 que a
+primeira passada não tinha. O nome errado devolve **422**, e **422 parece quadro vazio**:
+
+| na tabela / no repo | devolve | o locatário REAL | vagas |
+|---|---|---|---|
+| `cig.wd5` | 422 | **`cloudimperiumgames.wd503`** (`CIG_Global_Careers` + `broadbean_external`) | 59 + 57 |
+| `deluxe.wd1` | 422 | **`bydeluxe.wd5/Deluxe_External`** | 39 |
+| `mpc.wd3` | Marathon Petroleum (falso amigo de 12/09) | **`mpc.wd1/MPCCareers`** — a MPC de VFX, **nunca lida por esta campanha** | 132 |
+
+Somam `cae.wd3/career` (338) e `cae.wd3/CaeCareer2` (1). **Cinco pares devolvem 422 e ficam como
+NÃO CONFERIDO, nunca vazios:** `activision.wd1`, `magicleap.wd1`, `netflix.wd1`, `pixar.wd5` e
+`sonyinteractive.wd1` (os três últimos são **pod errado** — os certos são `netflix.wd108` e
+`pixar.wd501`). **E dois devolvem `robots.txt` com 200 sem listar site nenhum** —
+`epicgames.wd5` e `krafton.wd3`: **`robots.txt` vazio de site não prova locatário sem quadro**, e
+isso é um limite do oráculo que a regra de 12/09 não menciona. Total da frente: **626 vagas em 6
+sites novos, 31 recentes, zero da disciplina.**
+
+### PERSONIO E JOBVITE, FECHADOS COM A DISTINÇÃO ENTRE ZERO E NÃO CONFERIDO
+
+- **Personio:** 22 tokens, 18 quadros com vaga, **81 vagas** pelo XML público
+  (`<loc>.jobs.personio.com/xml`). **Zero publicada de 15 a 17/09, e este zero foi conferido:** o
+  campo `createdAt` **existe** no XML (imprimi o primeiro `<position>` da Aesir, `createdAt`
+  2025-10-09) — é quadro de estoque velho, não chave errada.
+- **Jobvite:** 5 tokens, 2 quadros com vaga (`amberstudiocareers` 49, `playground-games` 12),
+  **61 vagas**. A Jobvite **não publica data na lista**, então a família é **NÃO CONFERIDO por
+  recência**, e não "zero recente". O único acerto de disciplina é a Amber Studio *"3D Artist -
+  Characters (Project Based)"* (`o5cgufwL`), **já decidida** no painel: a fonte oficial diz
+  **"Remote, BRAZIL"** (o Grackle mostrava só "Remote") e é Project Based — o Brasil está fora do
+  recorte, porque o objetivo dele é sair do país.
