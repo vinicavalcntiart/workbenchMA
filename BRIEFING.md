@@ -2509,3 +2509,19 @@ do domínio de email, o site manda (Filmic Art virou Filmic Animation, `filmicar
 para `filmic.se`). Veias aposentadas com número: Impressum alemão (22 domínios, zero pessoa) e
 `recruiter-email` do Teamtailor (73 domínios, um endereço já conhecido). MobyGames, GDC Vault,
 ACM e LinkedIn respondem 403/999 a este túnel: nome por crédito só pelo navegador de tela.
+
+### Duas medições do turno de 17/09 01h11 que mudam comando (maestro, 02h40 UTC)
+
+1. **`pgrep -c chrome` devolve 0 com o navegador rodando**, porque o binário do Playwright é
+   `headless_shell`/`chromium`. A regra de "um navegador por vez" passa a ser medida com
+   `pgrep -c -f chrom`, e a limpeza de órfãos com `pkill -f chrom` **só depois de um comando morto**.
+2. **Nunca filtrar a saída de um envio com `grep`**: a linha `VEREDITO` foi cortada e a Flavor
+   recebeu duas respostas idênticas. Antes de repetir um envio, conferir o mtime da captura
+   `*_envio.png`. Detector de captcha de script não decide nada: **quem decide é a captura** (o
+   `apply_lever.js` disse "challenge visible: 0" com o hCaptcha na tela).
+3. **A veia da `/careers` de 8.424 domínios rendeu 10 candidaturas em uma hora e está exaurida em
+   um caminho só** (`/jobs` e `/join-us` deram zero formulário novo). Família Airtable/Tally tem
+   preenchedor próprio (`at_fill2.js`); CF7 5.7.4 carimba a classe `sent`, não `wpcf7-mail-sent-ok`.
+4. **Mínimo de 5 de personagem no sentido estrito não se cumpre por estoque:** o censo inteiro
+   tinha uma única porta de personagem sem decisão (Long Leap Games/Xsolla) e ela caiu no hCaptcha.
+   O que existe é modelagem nomeada pela casa (DreamWorks, Flavor, TAUNT, Everbloom, Animaj).
