@@ -6694,3 +6694,5 @@ desta rodada.
 pessoa em 400 membros, **36 inéditos no repositório**, e a composição deles é escola, áudio, serviço
 e estúdio de uma pessoa) e **`massivefinger.com`** (domínio estacionado num Tumblr vazio, pista
 morta por ausência de casa). **Não reabrir nenhuma das duas.**
+
+> **Maestro, 17/09 17h10 UTC:** lote de quatro cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 40%): Daniel Harris / Le Catnip Collective `r3025175405551741327`; Junel Popp / Ludia `r4755823918947938609` (pede um encaminhamento a quem lidera arte de personagem, e diz que sabe que comunicação não é recrutamento); Alexandre Blanchet / No Deadlines `r1494887751995450760`; e François Mathieu / Erupting Avocado `r-6799941539456297593`, escrita para a caixa `info@` com o nome dele na abertura (caixa: um emoji no fecho). Saem pelo Apps Script do Vini.
