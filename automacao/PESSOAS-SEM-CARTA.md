@@ -5450,3 +5450,5 @@ Meala, Paper Panther, Studio 9, Lazy Sunday, Trinity, e as duas caixas de tercei
 Atomic).
 **Veia nova documentada:** `animationuk.org/wp-json/wp/v2/organisations` (107 membros, 67 inéditos no
 repositório) — **rende universo de casa, não endereço**, medido em 24 domínios com zero pessoa.
+
+> **Maestro, 17/09 05h00 UTC:** lote de três cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 38%): Vanessa Robinson / Little Moon `r8699692104500084818` (a carta diz que o CV já foi ao `jobs@` em 02/09 e que não é primeiro contato); Sean Mullen / Giant Animation `r6091812572875862381` (a carta diz que o `hello@` foi escrito duas vezes sem resposta e que esta é a última tentativa); Joe Nickolls / Timbre Games `r-4328626659316485405` (Vancouver, pede encaminhamento em vez de vaga). Stuart Forrest (Triggerfish) fica `sem-email`. Saem pelo Apps Script do Vini.
