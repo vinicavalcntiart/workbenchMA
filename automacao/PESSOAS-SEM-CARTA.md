@@ -5210,3 +5210,42 @@ irlandês), não por varredura de site.
   (4) o catálogo é **pré-escolar** (*Fia's Fairies*, aprendizado de irlandês), onde personagem é
   simples e groom e escultura pesam pouco, o oposto do que o portfólio dele mostra; (5) a chefia
   publicada tem quatro pessoas, porte que raramente abre assento sênior.
+
+### FICHA 2 — Sean Mullen, Giant Animation (Dublin, Irlanda)
+
+- **Email: `sean@giant.ie` — PUBLICADO, confiança ALTA.** O `mailto:` cru do diretório vem colado ao
+  nome e ao cargo dele:
+  `<h4>Sean Mullen</h4> <p class="c_role"> Creative Director </p> <p class="email"> <a href="mailto:sean@giant.ie">`
+- **URLs exatas abertas nesta rodada:** `https://www.animationireland.com/studios/giant-animation-studios/` ,
+  `https://www.giantanimation.ie/` , `https://www.giantanimation.ie/about` e
+  `https://www.giantanimation.ie/careers`.
+- **ARMADILHA DE DOMÍNIO, e é a da Stunlock ao contrário, dentro de casa:** o site é
+  **`giantanimation.ie`** e o email é **`@giant.ie`**. A rodada de 16/09 20h35 listou
+  `giantanimation.ie` entre os domínios *"abertos sem pessoa"* e **não estava errada**: o site publica
+  só `hello@giant.ie`. Quem tem nome e cargo pareados é o **diretório**, e é ele que entrega os três
+  endereços de pessoa da casa. Endereço montado sobre o domínio do site teria quicado.
+- **Por que ESSA pessoa e não outra da casa:** o diretório publica **três** pessoas, todas com
+  endereço — *Alex Sherwood, CEO / Head of Development* (`alex@`), *Ben Harper, Managing Director*
+  (`ben@`) e *Sean Mullen, Creative Director* (`sean@`). Pela régua do brief, negócio e
+  desenvolvimento ficam atrás do **cargo de ofício criativo**, que é o dele. **Alex Sherwood fica como
+  SEGUNDA e última pessoa possível desta casa**, com endereço já provado.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a home diz
+  *"Giant Animation is an independent **CG** animation studio dedicated to creating and producing
+  world class content for TV and film"*, e o `/about` diz *"With **three full CG pipelines** and
+  scalability for up to **250+ crew**, we're always ready to tackle any new challenge head on"*. O
+  diretório marca a técnica como **`Skills in... 2D, 3D, Interactive, VFX`**.
+- **Fora dos EUA: SIM, Irlanda / UE.** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `giant.ie OR giantanimation OR "Giant Animation" OR Mullen`
+  devolveu **UMA thread com duas mensagens, as duas ENVIADAS para `hello@giant.ie`** (carta fria de
+  **26/08** e follow-up de **02/09**), **sem resposta, sem bounce e sem recusa**. Pelo teto contado no
+  `in:sent` por domínio, a casa está em **zero pessoa** e Sean Mullen é a **primeira**.
+  `pessoas.csv`: zero pessoa da casa; `sean@giant.ie` é inédito no repositório inteiro.
+- **RESSALVA HONESTA:** (1) `https://www.giantanimation.ie/careers` existe e está **vazia** — o título
+  é *CURRENT JOB OPENINGS* e abaixo não há vaga nenhuma, só o endereço da casa; então isto é carta de
+  porta e não resposta a anúncio; (2) é a **terceira mensagem** para a mesma casa em três semanas, e as
+  duas anteriores foram ignoradas — a carta tem de dizer isso, não fingir primeiro contato;
+  (3) *Creative Director* numa casa de serviço quer dizer direção de série, não necessariamente
+  departamento de personagem, e o site **não nomeia** supervisor de personagem, groom nem look dev;
+  (4) o catálogo é TV e conteúdo infantil por encomenda, onde o assento de escultura e groom é raro;
+  (5) o "250+ crew" é **capacidade**, não tamanho atual — a casa é bem menor que isso quando não há
+  série em produção.
