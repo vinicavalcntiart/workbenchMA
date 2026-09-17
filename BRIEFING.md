@@ -3869,3 +3869,157 @@ de título pega.** O único discriminador é o corpo ser texto de exemplo.
 editora — HR Manager, Office Manager, Praktikant e Werkstudent de anúncios), `nextrend-gmbh`
 (Flörsheim — logística de armazém e Salesforce) e `renderthat` (Hamburgo — Account Manager e
 Sales & Client Success). **Nenhum tem departamento de personagem para pedir.**
+
+## 17/09, 19h00 UTC (JHON A, décimo turno) — A PORTA DA SVIPER PASSOU EM TUDO E NÃO SAIU, PORQUE O NAVEGADOR DESTA MÁQUINA NÃO CONFIA NA CA DO PRÓPRIO PROXY
+
+Turno de **uma porta**, a que o adendo das 18h00 deixou no topo da fila: **SVIPER GmbH, Hamburgo,
+`Speculative Application` id 858945**. Ela passou na régua, passou no dedupe quádruplo, o
+formulário foi medido e é do melhor tipo que a campanha conhece — **servido inteiro no HTML e sem
+porteiro nenhum** — e **mesmo assim não houve envio**. O motivo não é a casa: é a nossa máquina, e
+ele para a caixa de ferramentas inteira.
+
+**Nada foi enviado, nada foi começado, zero duplicata, nenhuma tentativa contra veto escrito.**
+
+### 1. A RÉGUA, COLADA, E POR QUE OS TRÊS ACERTOS NÃO SÃO VETO
+
+`python3 automacao/regua-veto.py https://sviper-gmbh.jobs.personio.com/job/858945` — e a URL
+pedida **já é a final**, não há redirect:
+
+```
+PEDIDA : https://sviper-gmbh.jobs.personio.com/job/858945
+FINAL  : https://sviper-gmbh.jobs.personio.com/job/858945
+CARACTERES DO TEXTO LIMPO: 2771
+  [hybrid]     ... Hybrid working model and f lexible working hours - We trust you to organize your 40 working hours ...
+  [internship] ... we usually post all new jobs, internships and working student positions here ...
+  [student]    ... we usually post all new jobs, internships and working student positions here ...
+```
+
+Os três acertos são **benefício** e **frase de vitrine**: `hybrid` é o modelo de trabalho oferecido,
+e `internship`/`student` são a casa dizendo o que ela costuma publicar na página de carreiras.
+**Zero** termo de residência, autorização, cidadania, idioma ou patrocínio. Alemanha é UE e precisa
+de patrocínio, e isso não é veto por si.
+
+### 2. DEDUPE QUÁDRUPLO, E O QUARTO É O QUE O CSV NÃO DÁ
+
+`grep -i sviper` em `enviados.csv` devolveu **0**; em `automacao/processados.csv` e em
+`docs/index.html` devolveu **só o dossiê do próprio turno das 18h00**, que é registro de porta e não
+de envio. O quarto é o Gmail, pela regra de que **recibo é prova e CSV é anotação**:
+`sviper OR from:personio.de OR from:no-reply@personio` devolveu **quatro** recibos de Personio e
+**nenhum desta casa** (`stratosphere-games` 11/09, `aesir` 06/09 e 09/09, `bongfish` 06/09).
+
+**E um dedupe que quase não foi feito:** o `About us` da página diz que a Sviper é a **divisão de
+Hamburgo da THE SANDBOX (DBA)**, o metaverso **voxel** — o que o XML não dizia e o que explica a
+palavra-chave `Voxel` da casa. Isso obriga a conferir o outro nome, e **`Sandbox Interactive`**
+aparece em `enviados.csv` com uma candidatura de **08/09** (Lead 3D Environment Artist, Berlim).
+**São casas diferentes** — Sandbox Interactive é de Berlim, faz Albion Online e é do grupo
+Stillfront — então **não há duplicata**. Fica a regra: `DBA` no corpo do anúncio muda o nome que o
+dedupe tem de procurar, e o nome novo pode colidir com uma casa já tocada.
+
+### 3. O FORMULÁRIO, MEDIDO POR `curl`, E TRÊS CORREÇÕES AO QUE O BRIEF DIZIA
+
+`https://sviper-gmbh.jobs.personio.com/job/858945/apply` devolve **200 com 83.390 bytes** e o
+formulário **inteiro no HTML**. Porteiro: **zero ocorrência** de `recaptcha`, `hcaptcha`,
+`turnstile`, `datadome`, `sitekey`, `challenge`, `perimeterx` e `cloudflare`. Campos:
+`first_name`, `last_name`, `email`, `phone`, `available_from`, `salary_expectations` (todos
+`text`, `maxlength 255`) e quatro `file`: `doc-input-cv`, `-cover-letter`, `-work-sample`,
+`-other`. Botão `button.career-submit-application-btn[type=submit]`.
+
+- **Os obrigatórios desta vaga são Name, Email, EXPECTED SALARY e CV.** A régua do Personio no
+  BRIEF-JHON avisa que o Submit fica cinza sem dizer qual campo falta; aqui a página **diz**, com
+  `* (required)` ao lado de cada um. **Pretensão é obrigatória**, o que torna a regra de 04/09
+  inescapável nesta porta: casa pequena na Europa ocidental são **EUR 45.000**, com a abertura
+  *Open to aligning with your band for the role*.
+- **A carta é OPCIONAL nesta vaga**, então a armadilha da KING Art (carta em `doc-input-other`
+  deixando o Submit cinza) não se aplica — mas a carta vai em `doc-input-cover-letter` de todo
+  jeito, que é onde o brief manda.
+- **Zero checkbox no HTML**, inclusive de consentimento. Não há `location` nem campo de
+  autorização de trabalho: **a verdade sobre patrocínio só cabe na carta**, e é onde ela está.
+
+### 4. `apply_personio.js` NÃO EXISTE, E O `preencher-formulario.js` NUNCA ENVIA
+
+O BRIEF-JHON tem duas linhas de tabela para `apply_personio.js` e o adendo das 18h00 nomeia a
+ferramenta — **e o arquivo não está em `/home/user/apply`**. A reserva óbvia também não serve:
+**`preencher-formulario.js` é BOOKMARKLET para o navegador do Vini** e o cabeçalho dele diz, de
+propósito, *"não clica em enviar, nunca"*. Ou seja, **a fila do Personio estava apontando para uma
+ferramenta fantasma e para uma que não envia.** Escrevi `/home/user/apply/sviper_fill.js` no lugar:
+modo seco por padrão, leitura de volta campo a campo, marcação de caixa só por rótulo reconhecido
+(nunca varredura cega), e prova de envio exigindo **POST 2xx no domínio da casa** mais texto novo
+de tela mais formulário vazio.
+
+### 5. A PAREDE DE VERDADE: `ERR_CERT_AUTHORITY_INVALID` EM **TODO** SITE, E ELA PARA A CAIXA INTEIRA
+
+O `sviper_fill.js` morreu no `page.goto` com **`net::ERR_CERT_AUTHORITY_INVALID`**. Não é a Sviper:
+uma sonda de duas URLs (`sv_probe.js`) falhou **também em `https://example.com`**. O navegador do
+ambiente **não confia na CA do proxy**, embora o `/root/.ccr/README.md` afirme que a base NSS do
+navegador *"já está configurada"*.
+
+**E aqui está o que importa para a campanha, e é maior que esta porta.** Todos os preenchedores da
+caixa de ferramentas contornam isso do mesmo jeito — `sinn_fill.js` linha 17 é o modelo:
+
+```
+chromium.launch({headless:false, proxy:{server:APPLY_PROXY}, args:['--no-sandbox','--ignore-certificate-errors']})
+```
+
+**Essa flag foi NEGADA pelo sistema de permissão, com o motivo `TLS/Auth Weaken`.** Negativa de
+permissão **não se contorna** — é a mesma regra que proíbe burlar captcha. E o caminho legítimo
+que o README prescreve está fechado por falta de ferramenta: **`certutil` não existe nesta
+máquina**, então a CA de `/root/.ccr/ca-bundle.crt` não pode ser importada na base NSS, e o
+Chromium não tem flag de bundle de CA.
+
+> **Regra, e é de operação: enquanto a confiança da CA do proxy não for resolvida no navegador,
+> NENHUM preenchedor desta campanha roda.** Não é defeito de um script, é o arranque de todos.
+> O que continua funcionando é `curl`, que lê o bundle: medir quadro, medir formulário, medir
+> porteiro e passar régua seguem possíveis. **O que não roda é preencher e enviar.** Quem pegar
+> esta lane precisa **pedir ao Vini** uma das duas coisas: liberar a flag para os scripts da caixa,
+> ou instalar a CA de forma que o Chromium a leia.
+
+### 6. POR QUE EU NÃO TENTEI O ENVIO POR HTTP PURO, TENDO PRECEDENTE PARA ISSO
+
+A Milestone saiu sem navegador em 06h27 de hoje, então o precedente existe. **Aqui eu recusei de
+propósito.** Este Personio é **Next.js app-router** e o submit é **server action**, com o id da
+ação escondido no bundle (`assets.cdn.personio.de/artifact-service/personio-jobs/_next/static/chunks/...`),
+mais um upload multipart para `/api/v1/documents` cujo id de documento a ação precisa referenciar.
+A regra que fecha isso é a do Cezanne, escrita às 07h05: **no Personio a tentativa que passa na
+validação JÁ É a candidatura**, então não existe ensaio. Montar isso errado com vinte minutos de
+turno produz **candidatura pela metade**, que é pior que porta não tocada — a casa recebe lixo e a
+rodada seguinte não sabe se pode repetir.
+
+### 7. `txt2pdf.js` USA UM BYTE **NUL** COMO SENTINELA DE URL, E ELE É INVISÍVEL AO LER O ARQUIVO
+
+Gastei uma volta nisto e vale registro, porque é armadilha de leitura e não de código. O
+`automacao/txt2pdf.js` troca cada URL por um marcador antes de escapar o HTML, e o delimitador
+desse marcador é **`\0`**. Lido por `cat`, `sed` ou ferramenta de leitura, **o NUL não aparece**:
+a linha se lê como `return ' ' + (marcas.length - 1) + ' '` e o regex se lê como `/ (\d+) /g`.
+Copiei assim para um script auxiliar e ele **estourou na hora**, com `Cannot read properties of
+undefined (reading 'replace')`, porque `/ (\d+) /g` casa com **qualquer número entre espaços** — e
+a carta tem *"more than 10 years"*, que virou `marcas[10]`, que não existe.
+
+O ferrão é o que **não** acontece: se a carta tivesse onze URLs, `marcas[10]` existiria e o
+gerador trocaria silenciosamente o **"10"** de *"10 years"* por um **link**. **O arquivo do
+repositório está CORRETO** (`sed -n 'l'` mostra os `\000`); o que mente é a leitura dele.
+**Regra: antes de copiar um trecho de script da campanha, confira os bytes com `sed -n 'l'` ou
+`od -c`. Sentinela invisível existe e esta é a nossa.**
+
+### 8. E A REGRA QUE EU SEGUI SOBRE ANEXO, PORQUE ELA QUASE ME PEGOU AO CONTRÁRIO
+
+A carta nasceu de texto escrito nesta rodada e virou `/home/user/apply/carta_sviper.pdf`
+(19 KB) pelo `automacao/txt2pdf.js`, como a regra de 11/09 manda. **Mas não há `pdftotext`,
+`pdftoppm`, `mutool`, `gs`, `pypdf` nem `PyMuPDF` nesta máquina**, e a extração crua devolve lixo
+porque a fonte vai embutida como subconjunto — exatamente o sintoma que fez a regra de 11/09
+proibir o PDF antigo. O jeito de **ler de verdade** o que se vai anexar, sem nenhuma dessas
+ferramentas, é **renderizar o mesmo HTML para PNG e olhar a imagem**. Foi o que fiz, e a captura
+confirmou parágrafo por parágrafo, as três URLs como âncora clicável, nenhum telefone ou endereço
+no corpo e a frase obrigatória *"I am ready to move for the role"* presente. **Regra: sem leitor
+de PDF, a conferência do anexo é a CAPTURA do render, nunca a extração de texto.**
+
+### 9. O QUE FICOU
+
+- A porta segue **no topo da fila e agora com tudo pronto**: `sviper_fill.js` no disco,
+  `carta_sviper.pdf` conferido, respostas decididas (pretensão **EUR 45.000** com a abertura da
+  regra, `available_from` `2026-11-01`, telefone no formato internacional do `pessoal.json`), CV e
+  portfólio escolhidos, e o total dos três anexos bem abaixo dos 20 MB que a casa pede.
+  **Falta uma coisa só: um navegador que confie na CA.**
+- **Fica como NÃO CONFERIDO** se o `available_from` da casa aceita `2026-11-01` como texto ou se é
+  seletor de data, porque isso só se sabe com a página aberta.
+- **Zero navegador aberto no fim do turno** (`ps -eo comm=` devolveu 0; os órfãos do render da
+  carta foram mortos com `pkill -x headless_shell`).
