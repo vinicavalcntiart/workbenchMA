@@ -3028,3 +3028,22 @@ prova a duplicata do item 4 acima, uma por submissão.
 o recibo do FormKeep levou **~2min30** (envio 09h01m51 → recibo 09h04m26; envio 09h03m48 →
 recibo 09h06m22). Esperar 22 ou 45 segundos na tela **nunca** confirmaria. **Nesse tipo de porta,
 a confirmação se busca no Gmail alguns minutos depois — e não se re-clica enquanto isso.**
+
+### 9. A QUINTA MEDIÇÃO DO MESMO PORTEIRO, COM FRASE NOVA: `applytojobs.ca` DEVOLVE 400 E DIZ O NOME
+
+A **Sinn Studio** (Toronto, *General Interest Application* 26552) era a melhor porta **não
+testada** que a auditoria tinha deixado de pé, justamente porque **o HTML não tem assinatura de
+captcha**. Não tem porque o captcha é **reCAPTCHA Enterprise por PONTUAÇÃO**, carregado com
+`render=<sitekey>` — sem `data-size`, sem caixa, sem desafio. Formulário 100% preenchido com
+leitura de volta e as cinco perguntas respondidas com a verdade (autorização no Canadá = **no**,
+mora na GTA = **não**, disposto a se mudar e ir 2× por semana a Liberty Village = **sim, com
+patrocínio**). O clique devolveu **HTTP 400** e a tela a frase literal:
+**"reCAPTCHA verification failed, reason: Unknown reason"**.
+
+> **Consequência de método: `grep` de `recaptcha|hcaptcha|turnstile` no HTML NÃO detecta porteiro
+> de pontuação carregado por `render=`.** A varredura de assinatura serve para achar captcha de
+> **desafio** (e aí economiza candidatura); para porteiro de pontuação ela dá **falso negativo**, e
+> a porta só se classifica preenchendo e clicando. Cinco plataformas, cinco frases de servidor:
+> PeopleForce (422), Contact Form 7 (classe `spam`), `applytojobs.ca` (400), mais EF Games e
+> BreatheHR por assinatura.
+
