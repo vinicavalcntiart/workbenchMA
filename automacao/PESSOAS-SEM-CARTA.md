@@ -6419,3 +6419,57 @@ Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de eq
   (não corre risco de 550 por montagem), mas se a casa tiver um segundo Dan, a carta cai na pessoa
   errada; (4) o `/emplois` da casa diz, medido às 12h35, *"Il n'y a malheureusement aucun poste de
   disponible présentement"* — não há vaga aberta, isto é carta de fila, não candidatura.
+
+### FICHA 2 — Junel Popp, Ludia (Montréal, Québec, Canadá) — **a casa MAIOR da rodada, e o elenco dela é criatura de ponta a ponta**
+
+- **Email: `jpopp@ludia.com` — PUBLICADO, confiança ALTA.** Está em `mailto:` cru na página de
+  detalhe do diretório da Guilde, aberta por mim nesta rodada em
+  **`https://www.laguilde.quebec/membre/ludia/`** (200, 46.120 bytes). É o endereço que a **própria
+  casa** deu à associação como contato dela em 2026, e não um padrão montado.
+- **URL que fecha o pareamento, aberta nesta rodada:**
+  **`http://www.lienmultimedia.com/spip.php?mot7248=`** (200, 35.729 bytes, redireciona para
+  `https://lienmultimedia.com/spip.php?mot7248=`), que é a página de tag *Junel Popp* do **Lien
+  MULTIMÉDIA**, o portal profissional do numérico no Québec. O texto diz literalmente:
+  *"Retour avec **Junel Popp, responsable des communications pour Ludia Corporate**, sur les
+  dernières créations du studio, la place de ses artistes et ses projets à venir"*, datado de
+  *1er février 2020*. A **segunda** fonte, aberta na mesma rodada, é
+  **`https://mobilesyrup.com/2021/09/29/next-levelles-2-square-enix-montreal-gameloft-montreal-ludia/`**
+  (200, 270.392 bytes): *"a cross-studio collaboration founded by Square Enix Montreal's Nedjma
+  Belbahri, Gameloft Montreal's Geneviève Sorel, and **Ludia's Junel Popp**"*, o que a confirma na
+  casa em **setembro de 2021** e a mostra falando pela casa em público.
+- **Por que ELA e não outro da casa:** o site da Ludia **não nomeia uma única pessoa** (a home é SPA
+  de 1.744.630 bytes e publica só `support@` e `press@`; `/team`, `/our-team`, `/people`, `/equipe`
+  e `/press` são 404 de 2.204 bytes, medido às 12h35) e as duas únicas pessoas que o site já nomeou
+  estão num comunicado de 2025: **Jimmy Gendron**, CEO, e **Dominic Bécotte**, ex-CFO — nenhum dos
+  dois é `jpopp`, e nenhum dos dois tem endereço publicado. Ou seja: **o único endereço de pessoa
+  que esta casa publica é o dela**, e o cargo dela (comunicação corporativa) é exatamente o de quem
+  responde email de fora e sabe para qual diretor encaminhar. Pela regra do BRIEF-JOE o alvo ideal
+  em casa grande é recrutador de arte ou Character Art Lead; nenhum dos dois é alcançável aqui, e
+  a alternativa é não escrever para a casa.
+- **Gancho com a frase da própria casa** (`https://www.ludia.com/`, aberta nesta rodada, 200,
+  1.744.630 bytes): *"Our high-quality product portfolio consists of original and world-recognized
+  branded properties including **Jurassic World Alive**, Jurassic World: The Game, DreamWorks'
+  **Dragons: Rise of Berk**, Teenage Mutant Ninja Turtles: Legends"*, *"Over 3.5 million people play
+  our games every month"* e, no bloco de notícia da home, *"**Ludia Back in Quebec Hands** … New
+  Local Ownership to Support Growth, with **50 Jobs Created** and Acquisitions Planned … Montreal,
+  March 4th, 2025"*. **Dinossauro, dragão e tartaruga mutante são elenco de criatura**, e
+  cinquenta contratações anunciadas é a melhor razão de escrever agora que esta rodada achou. A
+  entrevista do Lien MULTIMÉDIA acrescenta a frase certa para a carta: a casa *"valorise le rôle de
+  ses artistes au sein du processus de production des jeux"*.
+- **Fora dos EUA: sim** (Montréal, Canadá) — frase de realocação entra.
+- **O que o Gmail devolveu:** `ludia.com OR Ludia OR Popp` devolveu **`{}`**, e
+  `in:sent (… ludia …)` devolveu **`{}`**. Teto por domínio = **zero**. No repositório,
+  `jpopp@ludia.com`, `ludia.com` e `Junel Popp` dão **0 acerto** em `pessoas.csv`, `enviados.csv`,
+  `processados.csv` e `docs/index.html`. **A maior casa de jogo mobile independente do Canadá nunca
+  recebeu uma mensagem desta campanha.**
+- **RESSALVA HONESTA, e ela é grande:** (1) **a fonte do cargo é de 2020 e a confirmação de casa é
+  de 2021** — pela regra "cargo desatualizado é pior que alvo nenhum", isto seria descarte, e o que
+  o salva é que **o endereço `jpopp@` está publicado no diretório HOJE, em 2026, como contato da
+  casa**: se ela tivesse saído, a Ludia não estaria dando a caixa dela à associação. Ainda assim o
+  cargo pode ter mudado de nome, e a carta não deve afirmar o título; (2) **comunicação não
+  contrata** — ela é porta, não decisor, e o fechamento padrão do BRIEF-JOE ("if someone else there
+  is the right person, just point me") é exatamente o que essa cadeira consegue fazer; (3) a Ludia
+  é **mobile free-to-play**, e o elenco de criatura é de jogo de coleção, não de cinemática: o
+  encaixe do portfólio existe mas é menos óbvio que num AAA de console; (4) a casa **trocou de dono
+  em março de 2025** (saiu da Jam City, voltou a mãos quebequenses), e reorganização nesse tamanho
+  costuma mexer em quem cuida de comunicação.
