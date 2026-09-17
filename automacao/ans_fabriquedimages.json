@@ -1,0 +1,33 @@
+{
+  "_casa": "La Fabrique d'Images (Luxemburgo) - formulario APPLICATION do proprio site, via Google Forms",
+  "_fonte": "https://www.fabrique-d-images.com/jobs/ -> docs.google.com/forms/d/e/1FAIpQLSfE-1d_ZTPaWDb6UKuo9jUKCM3Gg0Ump2U3ZWszlvNbp95gYQ",
+  "_disciplina": "a lista de cargos do proprio formulario tem 3D Charcter Modeling (sic), 3D Texturing & Shading, 3D Hair & Fur Groom e 3D Character Artist",
+  "url": "https://docs.google.com/forms/d/e/1FAIpQLSfE-1d_ZTPaWDb6UKuo9jUKCM3Gg0Ump2U3ZWszlvNbp95gYQ/viewform",
+  "email": false,
+  "texto": {
+    "Last Name": "Cavalcanti",
+    "First Name": "Vini",
+    "Email Address": "@EMAIL@",
+    "Phone Number": "@TEL@",
+    "Link to your Demoreel": "@PORTFOLIO@",
+    "Link to your Portfolio": "@PORTFOLIO@",
+    "Link to your CV": "@SITE@",
+    "Link to your LinkedIn": "@LINKEDIN@"
+  },
+  "dropdown": {
+    "Country of residence": "Brazil"
+  },
+  "radio": {
+    "What are you applying for ?": "Remote Only",
+    "Do you confirm that you are able to work on site in Luxembourg": "No, so I apply for Remote Only",
+    "Do you confirm that you are legally able to work in Europe": "No, I can't work in Europe",
+    "What position are you applying for ?": "3D Charcter Modeling"
+  },
+  "grid": {
+    "What are you area of expertise ?": {
+      "3D Character Modeling": "Expert",
+      "3D Texturing & Shading": "Expert",
+      "3D Hair & Fur Grooming": "Mid"
+    }
+  }
+}

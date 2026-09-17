@@ -22,10 +22,29 @@
 //  4. Radio com opcao "Outro" usa data-value="__other_option__" e, depois do clique, aparece
 //     um input[aria-label="Other response"] que tambem precisa ser preenchido.
 //  5. O botao Submit e um div[role=button], nunca <button>. Idem Next/Back.
+//  6. A GRADE PODE SER DE CHECKBOX e nao de radio, e aparentar a mesma coisa na tela. Medido na
+//     Fabrique d'Images: o FB_PUBLIC_LOAD_DATA_ classifica como tipo 7 igual a grade de radio,
+//     mas o DOM serve div[role=group] com div[role=checkbox] e data-answer-value, e nao
+//     div[role=radiogroup] com div[role=radio]. Procurar so radiogroup devolve "linha nao
+//     achada" numa grade que esta ali na tela.
+//  7. SECAO POR RESPOSTA: o Google Forms pula secoes conforme a resposta. Na Fabrique d'Images,
+//     responder "Remote Only" na primeira tela faz a pergunta de trabalho presencial nunca
+//     aparecer, e a resposta preparada para ela fica pendente sem que nada esteja errado.
+//     Pendencia no fim NAO e defeito automatico: pode ser secao que a rota nao visitou.
 const {chromium}=require('playwright');
 const fs=require('fs');
 const P=require('./pessoal.json');
-const ANS=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));
+// Substituicao de marcador: o ans_<casa>.json pode ir para o repositorio PUBLICO, entao o
+// telefone e o endereco NUNCA aparecem nele. Escreva @TEL@, @TELDIG@, @EMAIL@, @PORTFOLIO@,
+// @LINKEDIN@, @SITE@, @CIDADE@, @PAIS@ e o script troca pelo valor de pessoal.json, que mora
+// fora do repositorio.
+const _P=require('./pessoal.json');
+const _MAP={'@TEL@':_P.telefone_internacional,'@TELDIG@':_P.telefone_digitos,'@EMAIL@':_P.email,'@PORTFOLIO@':_P.portfolio,'@LINKEDIN@':_P.linkedin,'@SITE@':_P.site,'@CIDADE@':_P.cidade,'@PAIS@':_P.pais};
+const _troca=o=>{ if(typeof o==='string'){ let s=o; for(const k in _MAP) s=s.split(k).join(_MAP[k]); return s; }
+  if(Array.isArray(o)) return o.map(_troca);
+  if(o&&typeof o==='object'){ const r={}; for(const k in o) r[k]=_troca(o[k]); return r; }
+  return o; };
+const ANS=_troca(JSON.parse(fs.readFileSync(process.argv[2],'utf8')));
 const SLUG=process.argv[3]||'casa';
 const ENVIAR=(process.argv[4]||'')==='ENVIAR';
 const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
@@ -40,9 +59,13 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
  p.on('request',r=>{ if(r.method()!=='GET') reqs.push([r.method(),r.url()]); });
  p.on('requestfailed',r=>falhas.push([r.method(),r.url(),(r.failure()||{}).errorText]));
  p.on('response',r=>{ if(r.request().method()!=='GET') resps.push([r.status(),r.url()]); });
+ p.on('framenavigated',f=>{ if(f===p.mainFrame()) L('[nav]',f.url()); });
 
  await p.goto(ANS.url,{timeout:120000,waitUntil:'domcontentloaded'});
  await p.waitForTimeout(3500);
+ // ARMADILHA: forms.gle redireciona para docs.google.com e o redirect pode chegar TARDE,
+ // destruindo o contexto no meio do preenchimento. Esperar a URL parar de mudar.
+ for(let k=0,u=p.url();k<8;k++){ await p.waitForTimeout(1200); if(p.url()===u) break; u=p.url(); }
  L('URL inicial:',p.url());
  L('titulo:',await p.title());
  if(/closedform/i.test(p.url())){ L('!! FORMULARIO FECHADO pelo Google (closedform). Nada a fazer.'); await b.close(); return; }
@@ -60,8 +83,19 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
    if(idx<0) return null;
    return (await p.$$('div[role=listitem]'))[idx];
  };
+ // ARMADILHA MEDIDA NA JUMBLA: o Google Forms pode NAVEGAR sozinho no meio do preenchimento
+ // (o forms.gle resolve para docs.google.com com ?usp=send_form e a pagina se recarrega), e
+ // qualquer page.evaluate em curso morre com "Execution context was destroyed". Isso NAO e
+ // defeito do formulario: e so esperar a pagina assentar e refazer a busca.
+ const acharLiR=async alvo=>{
+   for(let k=0;k<3;k++){
+     try{ return await acharLi(alvo); }
+     catch(e){ L('[renav] contexto destruido procurando',alvo.slice(0,30),'- esperando e refazendo'); await p.waitForTimeout(3000); }
+   }
+   return null;
+ };
 
- const pendentes={texto:{...(ANS.texto||{})},radio:{...(ANS.radio||{})},grid:{...(ANS.grid||{})},checkbox:{...(ANS.checkbox||{})}};
+ const pendentes={texto:{...(ANS.texto||{})},radio:{...(ANS.radio||{})},dropdown:{...(ANS.dropdown||{})},grid:{...(ANS.grid||{})},checkbox:{...(ANS.checkbox||{})}};
  const todasVoltas=[];
  let pagina=0;
 
@@ -77,6 +111,7 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
       else if(li.querySelector('input.whsOnd')) t.push('texto');
       const rg=li.querySelectorAll('div[role=radiogroup]').length;
       if(rg===1) t.push('radio'); else if(rg>1) t.push('grid:'+rg);
+      if(li.querySelector('div[role=listbox]')) t.push('dropdown');
       if(li.querySelectorAll('div[role=checkbox]').length) t.push('checkbox');
       out.push([idx,txt,t.join('+')]);
     });
@@ -91,7 +126,7 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
   }
 
   for(const [q,v] of Object.entries(pendentes.texto)){
-    const li=await acharLi(q); if(!li) continue;
+    const li=await acharLiR(q); if(!li) continue;
     await li.scrollIntoViewIfNeeded().catch(()=>{});
     const e=await li.$('textarea')||await li.$('input.whsOnd');
     if(!e){ L('!! sem campo dentro de:',q); continue; }
@@ -101,7 +136,7 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
     L('texto ok:',q.slice(0,48)); delete pendentes.texto[q];
   }
   for(const [q,v] of Object.entries(pendentes.radio)){
-    const li=await acharLi(q); if(!li) continue;
+    const li=await acharLiR(q); if(!li) continue;
     await li.scrollIntoViewIfNeeded().catch(()=>{});
     let alvo=v,outro=null;
     if(typeof v==='object'){ alvo=v.valor||'__other_option__'; outro=v.outro; }
@@ -116,25 +151,50 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
     }
     L('radio ok:',q.slice(0,48),'->',outro!=null?('Outro: '+outro):alvo); delete pendentes.radio[q];
   }
+  for(const [q,v] of Object.entries(pendentes.dropdown||{})){
+    const li=await acharLiR(q); if(!li) continue;
+    await li.scrollIntoViewIfNeeded().catch(()=>{});
+    const lb=await li.$('div[role=listbox]');
+    if(!lb){ L('!! sem listbox em:',q); continue; }
+    await lb.click({timeout:10000}).catch(async()=>{ await lb.evaluate(x=>x.click()); });
+    await p.waitForTimeout(700);
+    // o popup de opcoes fica DENTRO do proprio listbox; escopo obrigatorio para nao
+    // pegar a lista de outro dropdown da mesma tela
+    const op=await lb.$(`div[role=option][data-value="${v}"]`);
+    if(!op){ L('!! opcao de dropdown nao achada:',q,'->',v); await p.keyboard.press('Escape').catch(()=>{}); continue; }
+    await op.click({timeout:10000}).catch(async()=>{ await op.evaluate(x=>x.click()); });
+    await p.waitForTimeout(400);
+    L('dropdown ok:',q.slice(0,48),'->',v); delete pendentes.dropdown[q];
+  }
   for(const [q,linhas] of Object.entries(pendentes.grid)){
-    const li=await acharLi(q); if(!li) continue;
+    const li=await acharLiR(q); if(!li) continue;
     await li.scrollIntoViewIfNeeded().catch(()=>{});
     let feitas=0;
     for(const [rot,op] of Object.entries(linhas)){
       const r=await li.evaluate((el,[rot,op])=>{
         const n=s=>(s||'').toLowerCase().replace(/\s+/g,' ').trim();
-        for(const g of [...el.querySelectorAll('div[role=radiogroup]')]){
+        const grupos=[...el.querySelectorAll('div[role=radiogroup], div[role=group]')];
+        for(const g of grupos){
+          // ARMADILHA DE ROTULO (custou tres ensaios na Fabrique d'Images): o div[role=group] da
+          // linha pode NAO ter aria-label. Nesse caso o rotulo e a PRIMEIRA LINHA do innerText do
+          // PROPRIO grupo; subir para o pai pega a pergunta inteira ou a fila de colunas
+          // (Junior Mid Expert) e nenhuma linha casa nunca.
           let lab=g.getAttribute('aria-label')||'';
+          if(!n(lab)) lab=((g.innerText||'').split('\n')[0])||'';
           if(!n(lab)){ let s=g.parentElement;
             for(let k=0;k<3&&s;k++,s=s.parentElement){ if(n(s.innerText)){ lab=s.innerText.split('\n')[0]; break; } } }
           if(!n(lab).includes(n(rot))) continue;
-          const cand=[...g.querySelectorAll('div[role=radio]')];
+          const cand=[...g.querySelectorAll('div[role=radio], div[role=checkbox]')];
           const c=cand.find(x=>n(x.getAttribute('data-value'))===n(op))
+                ||cand.find(x=>n(x.getAttribute('data-answer-value'))===n(op))
                 ||cand.find(x=>n(x.getAttribute('aria-label')).includes(n(op)));
           if(!c) return 'opcao-nao-achada';
           c.click(); return 'ok';
         }
-        return 'linha-nao-achada';
+        const amostra=[...el.querySelectorAll('div[role=checkbox], div[role=radio]')].slice(0,6)
+          .map(x=>'al='+JSON.stringify(x.getAttribute('aria-label'))+' dv='+JSON.stringify(x.getAttribute('data-value'))+' dav='+JSON.stringify(x.getAttribute('data-answer-value')));
+        const rots=grupos.map(g=>JSON.stringify(g.getAttribute('aria-label')||(g.innerText||'').split('\n')[0]));
+        return 'linha-nao-achada | grupos='+grupos.length+' rotulos='+rots.join(', ')+' | celulas: '+amostra.join(' ;; ');
       },[rot,op]);
       if(r==='ok') feitas++;
       L('   grade',q.slice(0,26),'/',rot.slice(0,32),'->',op,'=',r);
@@ -143,7 +203,7 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
     if(feitas) delete pendentes.grid[q];
   }
   for(const [q,ops] of Object.entries(pendentes.checkbox)){
-    const li=await acharLi(q); if(!li) continue;
+    const li=await acharLiR(q); if(!li) continue;
     for(const op of ops){
       const c=await li.$(`div[role=checkbox][data-answer-value="${op}"], div[role=checkbox][aria-label="${op}"]`);
       if(!c){ L('!! opcao de checkbox nao achada:',q,op); continue; }
@@ -163,9 +223,9 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
       const t=li.querySelector('textarea'), i=li.querySelector('input.whsOnd');
       if(t) out.push([q,'paragrafo',(t.value||'').slice(0,70)+((t.value||'').length>70?'...('+t.value.length+')':'')]);
       else if(i) out.push([q,'texto',i.value]);
-      const g=li.querySelectorAll('div[role=radiogroup]').length;
-      if(g){ const mk=[...li.querySelectorAll('div[role=radio][aria-checked=true]')].map(x=>x.getAttribute('data-value')||x.getAttribute('aria-label'));
-        out.push([q,`radio/grid ${mk.length}/${g}`,mk.join(' | ').slice(0,150)]); }
+      const g=li.querySelectorAll('div[role=radiogroup]').length||li.querySelectorAll('div[role=checkbox]').length;
+      if(g){ const mk=[...li.querySelectorAll('div[role=radio][aria-checked=true],div[role=checkbox][aria-checked=true]')].map(x=>x.getAttribute('aria-label')||x.getAttribute('data-value')||x.getAttribute('data-answer-value'));
+        out.push([q,`radio/grid ${mk.length}/${g}`,mk.join(' ;; ').slice(0,400)]); }
       const o=li.querySelector('input[aria-label="Other response"]');
       if(o&&o.value) out.push([q,'outro',o.value]);
     });
@@ -186,9 +246,9 @@ const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
     continue;
   }
   if(submit){
-    const faltam=Object.keys(pendentes.texto).length+Object.keys(pendentes.radio).length+Object.keys(pendentes.grid).length+Object.keys(pendentes.checkbox).length;
+    const faltam=Object.keys(pendentes.texto).length+Object.keys(pendentes.radio).length+Object.keys(pendentes.dropdown).length+Object.keys(pendentes.grid).length+Object.keys(pendentes.checkbox).length;
     L('ULTIMA TELA. Respostas do arquivo que nunca acharam pergunta:',faltam);
-    if(faltam){ L('   pendentes:',JSON.stringify({...pendentes.texto,...pendentes.radio}).slice(0,200),Object.keys(pendentes.grid)); }
+    if(faltam){ L('   pendentes:',JSON.stringify({...pendentes.texto,...pendentes.radio,...pendentes.dropdown}).slice(0,240),Object.keys(pendentes.grid)); }
     if(!ENVIAR){ L('ENSAIO: nada enviado. Confira os prints gf_'+SLUG+'_seco_p*.png e rode de novo com ENVIAR.'); await b.close(); return; }
     reqs.length=0; resps.length=0; falhas.length=0;
     const urlAntes=p.url();

@@ -1,0 +1,27 @@
+{
+  "_casa": "Jumbla (Melbourne, Australia; estudio remoto desde a pandemia) - Job Opportunities, Expression of Interest",
+  "_fonte": "https://www.jumbla.com/careers -> forms.gle/qPmjP826VqjswxxGA",
+  "_disciplina": "MODELAGEM, nao personagem: o menu de skillset tem 3D Modeller e 3D Texture Artist, e nao ha opcao de personagem. Classificado honestamente como modelagem.",
+  "url": "https://docs.google.com/forms/d/e/1FAIpQLSdT-O8I3ITWkej5wmVOnEt1z5rpN-F4F0PSSyZgbE6768X-hQ/viewform",
+  "email": false,
+  "texto": {
+    "What is your full name?": "Vini Cavalcanti",
+    "What is your email address?": "@EMAIL@",
+    "What is your day rate?": "Open to aligning with your band for the role; as a reference, around AUD 380 per day, and flexible for a longer project block.",
+    "Please link to your online portfolio.": "@PORTFOLIO@"
+  },
+  "dropdown": {
+    "What is your main skillset?": "3D Modeller",
+    "Where are you based?": "Other"
+  },
+  "checkbox": {
+    "What software are you proficient using?": [
+      "Maya",
+      "ZBrush",
+      "Houdini",
+      "Adobe CC Suite",
+      "Unreal Engine"
+    ]
+  },
+  "_nota_url": "ARMADILHA: o forms.gle/... redireciona para o docs.google.com com ?usp=send_form e o redirect pode disparar DEPOIS do carregamento, destruindo o contexto no meio do preenchimento (aconteceu aqui). Usar sempre a URL FINAL resolvida."
+}

@@ -2496,3 +2496,16 @@ de respostas para formulário que ele vai preencher à mão passa pelo dedupe co
 (`enviados.csv`, `processados.csv`, `docs/index.html` e o Gmail: recibo e recusa), e o achado vai
 na **primeira linha** da resposta, antes da carta. Aplicação manual contra veto ou recusa fica
 registrada em `enviados.csv` como "não conta no placar".
+
+### Teto de duas por casa se conta no Gmail, e página 404 derrama email (Joe, 17/09 00h35 UTC)
+
+O Joe tinha ficha pronta do Head of Studio da Qvisten: `pessoas.csv` mostrava uma pessoa da
+casa, o `in:sent` do Gmail mostrava **duas** (a HR Manager de 26/08 não estava no CSV). **Regra:
+o teto de duas pessoas por casa se conta no `in:sent` do Gmail, por domínio, e não no
+`pessoas.csv`.** Segunda regra: página 404 de Squarespace/Webflow devolve 40 a 180 KB com rodapé
+e dados estruturados, e um endereço lido ali não tem nome nem cargo pareados; antes de aceitar um
+endereço, procurar *"Page not found"* no texto limpo. Terceira: quando diretório e site discordam
+do domínio de email, o site manda (Filmic Art virou Filmic Animation, `filmicart.com` redireciona
+para `filmic.se`). Veias aposentadas com número: Impressum alemão (22 domínios, zero pessoa) e
+`recruiter-email` do Teamtailor (73 domínios, um endereço já conhecido). MobyGames, GDC Vault,
+ACM e LinkedIn respondem 403/999 a este túnel: nome por crédito só pelo navegador de tela.

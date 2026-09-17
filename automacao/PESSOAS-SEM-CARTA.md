@@ -5119,3 +5119,5 @@ Por região: **Suécia 2, Reino Unido 1, Dinamarca 1, Estados Unidos 1 (sem-emai
 Uma ficha foi **descartada pelo dedupe na caixa** (Qvisten, que já estava no teto de duas) e **seis
 endereços publicados foram descartados por técnica ou por não serem estúdio** (Dockhus, LEE Film,
 Tulipop, Compass, Made By Us, Sphere/Oasis).
+
+> **Maestro, 17/09 01h25 UTC:** lote de quatro cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par do lote 38%): Andreas Ibohm / Filmic Animation `r1295132988803354840`; Josh Robinson / Time Based Arts `r8492986745259918271` (a carta diz que o Tom não respondeu e que esta é a última tentativa); Ronnie Fridthjof / Fridthjof Animation `r-6682290126727102652` (a carta pergunta se as produções são 3D, porque a técnica não está confirmada); Sofie Edvardsson / Soja `r9001855112013796033`. Jon Robins (Striking Distance) fica `sem-email`. Saem pelo Apps Script do Vini.
