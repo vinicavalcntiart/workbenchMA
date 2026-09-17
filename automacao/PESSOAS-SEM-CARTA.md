@@ -5342,3 +5342,111 @@ irlandês), não por varredura de site.
   vaga por estúdio. Vale também procurar o endereço publicado em **press release** e em **página de
   palestrante de festival** (Annecy e Cartoon Forum), porque um CEO que fala em painel costuma ter
   contato de imprensa nomeado.
+
+### O DEDUPE MATOU DUAS FICHAS QUE EU JÁ TINHA PRONTAS, E AS DUAS LIÇÕES SÃO DIFERENTES
+
+**1. Boulder Media morreu na CAIXA, e não na planilha.** Eu tinha `Paul.O'Flanagan@bouldermedia.tv`
+pronto, **publicado em texto visível E no `href`** do diretório (o apóstrofo do sobrenome está dentro
+do `mailto:` e não corta o link, ao contrário do que a nota de 14/09 registrou), com o cargo
+*Creative Director* colado, numa casa cuja técnica declarada é **2D, 3D e VFX**. **A carta não sai:**
+`mcp__Gmail__search_threads` por `bouldermedia OR "Boulder Media" OR Comerford OR Tyrrell OR
+"O'Flanagan"` devolveu uma thread com **três mensagens**, e a do meio é **resposta humana da própria
+Gillian Comerford, de 15/09**: *"We currently are not hiring for 3D character work and have no 3D on
+our slate for the rest of the year, please do stay tuned to our careers page"*. Pessoa que respondeu
+é do Comunicador, e a casa disse por escrito que **não tem 3D na grade até o fim do ano**. Boulder
+sai da fila do Joe. Fica registrado, para quem voltar: **o endereço do Paul O'Flanagan existe e está
+publicado**, e a correção da nota de 14/09 vale por si.
+
+**2. Cantilever Media eu quase reabri, e a ficha antiga estava certa.** O diretório publica
+`andrew@cantilevermedia.ie` e `andrea@cantilevermedia.ie` em `mailto:` cru, e eu tinha isso como
+"correção da linha `sem-email` de 14/09". **Fui ler a linha antiga inteira antes de escrever, e ela já
+tinha medido o que eu não tinha:** o domínio **`cantilevermedia.ie` é NXDOMAIN** nos quatro tipos de
+registro, com autoridade do registro `.ie`, e o controle (`cantilever.media`, o domínio do site)
+resolve normal. Endereço publicado em domínio que não existe **não é endereço**. A linha continua
+`sem-email` e **não a toquei**. A lição de método: **antes de "corrigir" ficha antiga, leia a ficha
+antiga até o fim** — a minha correção seria um retrocesso. (O site `cantilever.media` também não
+ajuda: devolve 202 KB de casca com **174 caracteres** de texto e zero `mailto:`.)
+
+### CASAS ABERTAS NESTA RODADA SEM ENDEREÇO DE PESSOA APROVEITÁVEL (para ninguém repetir)
+
+- **Irlanda e Irlanda do Norte, pelas 47 páginas de detalhe do diretório + 8 sites:** `curiosity-studio`
+  (só `hello@`), `distillery-films` (Jonathan Clarke, Producer, com **`info@`** no lugar do endereço
+  dele), `dreamlogicstudios` (2D+3D, três nomes — Brian Willis, Kealan O'Rourke, Stephen Smith — e
+  **zero** endereço; `dreamlogic.ie` só publica `info@`), `enter-yes` (Vicki Rock e Kris Kelly, sem
+  endereço; site só `studio@`), `maverick-films` (Zoe Doyle e Deirdre Lyons Doyle, sem endereço),
+  `pioneertown-productions` (Jonathan Loughran e **Will Sliney**, sem endereço, e o site nem responde),
+  `score-draw-media` (**sete** nomes com cargo, inclusive *Hannah Dorman, Concept and Background
+  Artist*, e **nenhum** endereço), `algorithm` (Nick Linders MD e **Cormac Murray, Head of Animation**,
+  só `info@algorithm.ie`), `ink-and-light` (2D+3D+stop motion, Tamsin Lyons e Leevi Lemmetty, sem
+  endereço — já é linha `sem-email` de 14/09), `jam-media` (já é `sem-email` de 14/09),
+  `lighthouse-studios` (**nenhuma** pessoa publicada).
+- **Casas irlandesas com endereço de pessoa que eu NÃO usei, e o motivo de cada uma:**
+  **Igloo Animations** (`paul@iglooanimations.com`, Paul Dowling, Producer) — a casa declara
+  *"2D | Mixed Media | Puppets | Stop Motion | VFX"*, **zero 3D**, é a armadilha da Head Gear;
+  **Studio Meala** (`stephen@studiomeala.com`, Stephan Fagan, MD) — o site escreve
+  *"specialising in high-end **2D** animation"* e a lista de serviços dela vai de storyboard a
+  *2D Animation*, sem 3D; **Paper Panther** (`carol@paperpanther.ie`, Carol Freeman, Founder &
+  Director) — *"an award-winning animation studio specialising in **stopmotion**"*;
+  **Studio 9** (`joe (at) studio9.ie` e `john (at) studio9.ie`, os dois cofundadores, em forma
+  delimitada no próprio site) — a casa é de *"short animations that Engage, Explain and Excite"*,
+  vídeo explicativo, sem prova de 3D nem de personagem; **Lazy Sunday** (`artem@lazysunday.ie`,
+  Artem Vasiliev, CEO) — é *"a new creative label"* de 2024 que desenvolve e produz, animação **e**
+  live-action, sem pipeline próprio; **Whackala** (2D declarado, e os cargos publicados são
+  *Numero Uno*, *Big Cheese* e *The Gaffer*, sem endereço de pessoa); **Dúlamán Studios** (casa nova,
+  publica **Magenta Muraca, Art Director**, mas **nenhum** endereço, e a própria casa escreve
+  *"built with love for **2D** animation"*); **Trinity Motion Pictures** (`conor@trinitypictures.ie`,
+  outro domínio que não o do site — armadilha registrada — mas Conor Harrington é
+  *"producer and financier"* e o `/about` ainda tem o gabarito do Wix vivo na página, com
+  *"Name | Information on person | info@mysite.com"*); **Piranha Bar**, **Atomic Cartoons** e **Zoic**:
+  **teto de duas pessoas já fechado** (a Piranha tem Richard Chaney 03/09 e Gavin Kelly 06/09, e o
+  texto dela é o melhor gancho de personagem 3D da Irlanda, o que dói).
+- **Reino Unido, os 24 domínios novos vindos do `wp-json` da Animation UK** (onze caminhos cada,
+  `mailto:` + `data-cfemail` + formas delimitadas): `bomperstudio.com`, `rustymonkey.com`,
+  `lightrunnerstudio.com`, `madmicrobe.com`, `kinobino.com`, `lightboat.media`, `8lions.com`,
+  `animation-associates.co.uk`, `viridianfx.co.uk`, `dupevfx.com` (só `HELLO@`),
+  `magiclightpictures.com` (só `office@`, **e é a casa do Stick Man e do Zog**),
+  `rumpusanimation.com` (`hello@`, `jobs@`), `brighton-zoo.co.uk`, `lilcritterworkshop.tv`,
+  `noodleandcaboodle.tv`, `sparklegoose.com` (`honk@`), `tentaclemedia.co.uk`, `walkinghouse.uk`,
+  `yamination.com`, `midasvfx.com`, `primaryvfx.com`, `tpovfx.com`, `magicdustvfx.com`,
+  `atelier11.co.uk` (o endereço que parece de pessoa é `production@hazimation.com`, **domínio de
+  terceiro**). **Zero endereço de pessoa em 24 casas.**
+- **Vancouver / BC e Canadá, 20 domínios:** `atomiccartoons.com` (o único endereço de pessoa é
+  `Julia@finchmedia.net`, **agência de imprensa de fora**, e a casa já está no teto),
+  `mainframe.ca` (só `info@`), `bronstudios.com`, `braceyourselfgames.com`, `phoenixlabs.com`,
+  `thecoalitionstudio.com`, `basaltvfx.com`, `sealevelstudios.com`, `wizardstudios.ca`,
+  `roadhouseinteractive.com`, `kabam.com`, `iugo.ca`, `titmouse.net` (só `fan@`, `festivals@`,
+  `tours@`), `distilleryvfx.com` (só `info@` e `jobs@`), `klei.com` (as duas caixas de suporte já
+  conhecidas), `relic.com` (só `info@` e `media@`), `megalomedia.com` (só caixas de **casting** de
+  reality), `digibc.org` (**403**), `zoicstudios.com` (rico em endereço de pessoa e **no teto de
+  quatro**).
+
+### AS PAREDES DESTA RODADA, medidas
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `80.lv/?s=SkyBox+Labs` | **200 com 173 KB e zero link de artigo** | a busca é client-side; a veia de 80.lv **não se lê por `curl`** pela página de busca |
+| `animationmagazine.net/?s=...` | **403, 919 bytes** | fechada a este túnel |
+| `www.triggerfish.com` e quatro caminhos | **202 com 169-176 bytes**, refresh para `/.well-known/sgcaptcha/` | captcha de borda; proibido burlar, casa **não conferida** |
+| `digibc.org/members` e `/member-directory` | **403, 103 bytes** | a associação de tecnologia e criativos da BC está fechada aqui |
+| `sparkcgsociety.org` | **502 no CONNECT** | |
+| `sparkanimation.org` | **certificado expirado** | não é "site morto", é certificado |
+| `mifa-annecy.com` | **502 no CONNECT** | o mercado do Annecy não abre; `annecyfestival.com` abre (200, 88 KB) |
+| `cartoon-media.eu` | 200, mas **não há diretório de membros** | confirma a nota de 11/09 |
+| `animationuk.org/wp-json/wp/v2/members` | **404 `rest_no_route`** | o caminho certo é **`/organisations`** |
+
+### PLACAR HONESTO DA RODADA
+
+**Quatro pessoas novas**, no piso da faixa de 4 a 8: **três com endereço PUBLICADO e confiança ALTA**
+(Little Moon, Giant Animation, Timbre Games) e **uma `sem-email`** (Triggerfish).
+**Nenhum endereço montado por padrão de domínio. Nenhum inventado.**
+Por região: **Irlanda 2, Canadá/Vancouver-BC 1, Irlanda+Reino Unido 1 (`sem-email`)**.
+**Vancouver e BC saiu do zero** depois de duas rodadas em branco, e saiu por **site de estúdio de
+casa nunca aberta**, não por imprensa. **Holanda: zero** (não foi alvo desta rodada). **Nórdicos:
+zero** (não foi alvo).
+Duas fichas prontas foram **jogadas fora pelo dedupe** (Boulder Media, por resposta humana com veto
+escrito de 3D; Cantilever Media, porque a ficha antiga já provava NXDOMAIN) e **oito endereços
+publicados foram descartados por técnica 2D/stop-motion ou por não serem estúdio** (Igloo, Studio
+Meala, Paper Panther, Studio 9, Lazy Sunday, Trinity, e as duas caixas de terceiro da Atelier 11 e da
+Atomic).
+**Veia nova documentada:** `animationuk.org/wp-json/wp/v2/organisations` (107 membros, 67 inéditos no
+repositório) — **rende universo de casa, não endereço**, medido em 24 domínios com zero pessoa.
