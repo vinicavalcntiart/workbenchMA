@@ -4827,3 +4827,77 @@ placar de cada uma **antes** das fichas, porque duas delas deram zero e isso é 
   aqui: **se esta carta não voltar, a Time Based Arts sai da fila de pessoas**, e a única via restante é
   `jobs@` com o nome do Harry Jones. Telefone publicado na página **deliberadamente não registrado**,
   porque o repositório é público.
+
+### FICHA 3 — Ronnie Fridthjof, Fridthjof Animation (Dinamarca) — E ELA CORRIGE A FICHA DE ONTEM
+
+- **Email: `ronnie@fridthjof.com` — PUBLICADO, confiança ALTA.** Não é montado: o endereço está escrito
+  no diretório da associação, imediatamente depois do nome dele.
+- **URL exata aberta nesta rodada:** `https://nordicanimation.com/studios-producers/`. O bloco, na ordem
+  crua em que a página imprime: *"Fridthjof Animation"* → *"Fridthjof Animation is a production company
+  that develops and produces animated feature films and TV-series for kids."* → *"Lotte og Totte"* →
+  **`Fridthjof Animation, Denmark` → `Ronnie Fridthjof` → telefone → `ronnie@fridthjof.com` →
+  `http://www.fridthjof.com/`**. O endereço vem **rodeado pelo nome da casa, pelo nome da pessoa e pelo
+  site da casa**, nessa sequência, que é o mesmo pareamento das fichas nórdicas de 15/09.
+- **ISTO CORRIGE O REGISTRO DE ONTEM.** A rodada de 16/09 às 20h35 listou `fridthjof.com` entre os
+  domínios *"abertos sem pessoa"*. O motivo agora está medido: `https://www.fridthjof.com/` devolve **200
+  com 2,2 MB e apenas quatro linhas de texto** — *"Bundled Page | This page requires JavaScript to
+  display. | F | Unpacking..."*. É **SPA que não renderiza por `curl`**, não casa sem endereço publicado.
+  **Regra que sai daí: "domínio sem endereço" só vale quando o HTML tem texto; página que só diz
+  "requires JavaScript" é NÃO CONFERIDA, e o endereço dela pode estar publicado em diretório de
+  associação, como está aqui.**
+- **Por que ESSA pessoa e não outra da casa:** o diretório publica **um único nome** para esta casa, e é o
+  dele; a casa **leva o nome dele** (Fridthjof), ou seja é o dono. Pela régua do brief para casa pequena,
+  dono e fundador vêm primeiro e costumam responder eles mesmos. Não há segunda pessoa publicada em
+  nenhuma das duas fontes, então **não existe segunda opção para esta casa hoje**.
+- **Gancho com a frase do próprio diretório sobre a casa, entre aspas:** *"Fridthjof Animation is a
+  production company that develops and produces animated feature films and TV-series for kids"*, com
+  *"Lotte og Totte"* como o título que a própria entrada destaca.
+- **Casa fora dos EUA: SIM, Dinamarca.** A frase de realocação **entra**, e é prioridade 2 (nórdicos).
+- **O que o Gmail devolveu no dedupe:** `"Striking Distance" OR strikingdistance OR "Jon Robins" OR
+  fridthjof` devolveu **`{}`**, zero thread. Em `pessoas.csv` a string `fridthjof` aparece **só dentro do
+  texto de dedupe de outra ficha** (a rodada de 15/09 pesquisou o nome e não escreveu ficha nenhuma);
+  `ronnie@fridthjof.com` **não** aparece em `pessoas.csv`, `processados.csv` nem `docs/index.html`.
+  **Casa inédita para a campanha inteira.**
+- **RESSALVA HONESTA, e é a mais pesada das três fichas:** (1) **a técnica não está confirmada.** Nem o
+  diretório nem o site (que não renderiza) dizem se a casa é **2D ou 3D**, e o título que ela destaca,
+  *Lotte og Totte*, é de tradição de livro ilustrado dinamarquês — há chance real de ser **2D**, e 2D é o
+  que matou a Head Gear no registro de ontem. **A carta tem de perguntar em vez de afirmar**, e se a
+  resposta for 2D a casa sai da fila. (2) **O cargo dele não está publicado**: nome, telefone, email e
+  site, sem título; ele é tratado aqui como dono por causa do nome da empresa, o que é inferência razoável
+  e **não** é fato publicado. (3) É **produtora que desenvolve e produz**, não necessariamente estúdio com
+  pipeline interno; pode terceirizar a animação, e nesse caso não contrata artista. Telefone publicado
+  **deliberadamente não registrado**, porque o repositório é público.
+
+### FICHA 4 — Jon Robins, Striking Distance Studios — **SEM-EMAIL**, e a linha vale assim
+
+- **Email: NENHUM. `confianca = sem-email`.** Nada foi montado. Isto não é fracasso: a linha guarda
+  **nome + cargo + estúdio** para a rodada que achar o endereço.
+- **URL exata aberta nesta rodada:** `https://www.cgspectrum.com/mentors` (437 KB, HTTP 200). O texto,
+  literal: *"Jon currently works as a **Lead Character Technical Artist at Striking Distance Studios**
+  where he loves solving problems and helping teams in as many ways as he can."*, e o campo `Known for`
+  do cartão dele diz **`Marvel's Avengers`**.
+- **Por que ESSA pessoa e não outra da casa:** é o **único nome de departamento de personagem** que a
+  página de mentores entrega numa casa que a campanha nunca tocou. A página é rica em nome e cargo (foi
+  ela que devolveu Matteo Sala, *Senior Character and Creature Modeler* da Framestore em Londres, e Anna
+  Beganskaya, 3D character artist), mas essas duas casas **já estão no teto de duas pessoas** (Framestore:
+  Lizi Bedford e Glenn Melenhorst; Riot: três). Striking Distance está em zero.
+- **Gancho, e a honestidade aqui importa:** o gancho **não é do estúdio**, é da bio do próprio mentor, e
+  ela é o que existe: *"where he loves solving problems and helping teams in as many ways as he can"* —
+  uma pessoa que se descreve assim é a que responde um email pedindo direção. O crédito comum é
+  **Marvel's Avengers**, que a página dele imprime.
+- **Casa fora dos EUA: NÃO.** Striking Distance Studios é dos **Estados Unidos** (San Ramon, Califórnia),
+  então **a frase de realocação NÃO entra** e o assunto de autorização de trabalho tem de ser dito de
+  frente, porque nos EUA é a pergunta que mata a conversa.
+- **O que o Gmail devolveu no dedupe:** `"Striking Distance" OR strikingdistance OR "Jon Robins" OR
+  fridthjof` devolveu **`{}`**. Em `pessoas.csv` o único acerto de *"Striking Distance"* é **dentro da
+  ficha do Glauco Longhi** (Santa Monica Studio, 12/09), que menciona a casa de passagem: **não é pessoa
+  desta casa**. Zero em `processados.csv` e `docs/index.html`. **Casa inédita.**
+- **RESSALVA HONESTA, e são quatro:** (1) **sem email não há carta**, e o endereço não foi achado em
+  nenhuma fonte pública nesta rodada; **não monte `jrobins@` nem `jon.robins@`** porque não há um único
+  endereço daquele domínio visto publicado para servir de prova de padrão. (2) O cargo é **Character
+  Technical Artist**, ou seja **rigging e ferramentas**, não escultura nem superfície: ele é colega de
+  departamento, não par de ofício, e a carta tem de pedir **indicação**, não vaga. (3) A casa é **dos EUA
+  e a prioridade da rodada era Vancouver, nórdicos, Holanda e Reino Unido** — esta linha entra como
+  estoque, no fim da fila. (4) A fonte é **página de escola**, não do estúdio, e página de escola
+  envelhece: o cargo está escrito no presente (*"currently works"*), mas **não há data na página**, então
+  a confirmação de que ele continua na casa **não foi feita** e tem de ser feita antes de qualquer carta.
