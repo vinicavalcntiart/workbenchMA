@@ -2535,3 +2535,114 @@ Rainbow SpA em Roma e Milão, Milestone) passam de "bloqueada por campo" a "aber
 ferramentas morrer com o container, a data se recupera com o Vini ou no doc privado do Drive
 *CAMPANHA - dados pessoais dos formulários*, onde ele foi orientado a acrescentar a linha (o
 conector do Drive desta sessão só renomeia e move arquivos, não escreve conteúdo).
+
+## 17/09, 04h30 UTC (JHON A, segundo turno) — CINCO MECANISMOS MEDIDOS, E DOIS DELES SÃO COMANDO ERRADO NO PRÓPRIO BRIEFING
+
+Turno de **uma candidatura**, e ela é a que o dia pedia: **SHIFT UP, `[신규 프로젝트] 3D 캐릭터
+모델러` (3D Character Modeler), Seul, efetiva, requisição 235689 — enviada e confirmada às 03h56
+UTC**, com três provas de servidor (URL `/finish`, texto `지원서를 성공적으로 제출했습니다` e
+recibo de `shiftup@greetinghr.com` **nomeando a vaga**). Era a melhor vaga parada da campanha
+desde 14/09 e o que a destravou foi a data de nascimento.
+
+### 1. `pgrep -c -f chrom` MENTE PARA CIMA, e `pkill -f chrom` MATA O PRÓPRIO SHELL
+
+A regra de 17/09 01h11 trocou `pgrep -c chrome` por `pgrep -c -f chrom`. **O comando novo também
+está errado, por outro motivo:** `-f` casa a linha de comando inteira, e a linha do *próprio*
+`bash -c` que roda o `pgrep` contém a palavra `chrom`. Medido nesta rodada: **`pgrep -c -f chrom`
+devolveu `1` com ZERO navegador aberto**, e eu quase abri um segundo navegador achando que havia
+um vivo.
+
+Pior: **`pkill -f chrom` derruba o próprio comando que o chamou** (saída 144, shell morto no meio
+da rodada), pelo mesmo casamento.
+
+> **As duas formas que medem e não mentem:**
+> - contar: `ps -eo comm= | grep -cE '^(headless_shell|chrome|chromium)$'` (o `comm` é só o nome
+>   do binário, então não há como casar com a linha de comando de quem pergunta);
+> - limpar: `pkill -x headless_shell` (o `-x` casa nome exato e não toca no shell).
+>
+> E a higiene de 12/09 continua valendo e foi confirmada: **o script deixa órfão mesmo quando
+> termina com código 0.** O `su_diag.js` saiu limpo e deixou **2** Chromium vivos.
+
+### 2. NO CONTACT FORM 7, A LISTA DE OBRIGATÓRIOS SAI DO SERVIDOR DE GRAÇA, SEM GASTAR CANDIDATURA
+
+`aria-required="true"` no HTML **não é** requisito de servidor. A campanha classificou a
+**Rainbow SpA** como *"SÓ O VINI PODE, exige data de nascimento"* em 15/09 lendo esse atributo.
+
+**A medição que decide:** um `POST` com **todos os campos vazios** em
+`/wp-json/contact-form-7/v1/contact-forms/<id>/feedback`. O CF7 **valida antes de checar spam**,
+então isso devolve `status: validation_failed` com o array `invalid_fields` **nomeando campo por
+campo** — e **não dispara email nenhum**, não gasta candidatura e não encosta no captcha.
+
+No formulário 6060 da Rainbow o servidor listou **dez** obrigatórios (Impiego, Settore, Ruolo,
+Nome, Cognome, Country, CurrentCity, email, telefono, Messaggio) e **o BirthDate não está entre
+eles**. Consequência que muda decisão: a tentativa de 07/09 (Ruolo `3D Character`, formulário
+inteiro, CV anexado) tinha os dez preenchidos, **passou na validação**, e como campo limpo é a
+assinatura de `mail_sent_ok` do CF7, **ela provavelmente foi entregue**. A porta virou
+**PROVÁVEL-JÁ-ENVIADA e não se reenvia**. A **Milestone** precisa da mesma reconferência antes de
+alguém tratar a data de nascimento como a trava dela.
+
+### 3. A PLATAFORMA GREETING (ATS coreano), TRÊS ARMADILHAS NUMA PORTA SÓ
+
+Vale para toda casa coreana em `career.<casa>.co.kr` (é `made with Greeting`), e **não tem captcha**.
+
+1. **A data de nascimento não é `input`.** O `生년월일` é uma **caixa** com o texto `날짜 선택`;
+   ela não aparece em `document.querySelectorAll('input')`. **Clicar nela revela um input de
+   TEXTO com `placeholder="1990.01.01"`**, e o formato aceito é **`YYYY.MM.DD`** (com ponto).
+2. **O `제출하기` da página não envia: ele abre um MODAL** (`제출 정보 확인`, *"depois de enviar
+   não dá para corrigir"*) que repete a candidatura inteira para conferência. **O envio de
+   verdade é o `제출하기` de DENTRO do modal** — no DOM, o **último** dos dois.
+3. **Consentimento com nome de opcional que é obrigatório.** O `개인정보 선택항목 수집 및 이용 동의`
+   ("itens **opcionais**") é marcado **(필수)** e sem ele o servidor recusa com
+   `필수 동의 항목을 체크해주세요`. São **três** obrigatórios (`필수항목`, `선택항목` e `민감정보`);
+   só o de `제3자` (repasse a terceiros, a fornecedora 주식회사 두들린) é de fato opcional e fica
+   em branco. **Não marque `전체 동의`**, que consentiria o repasse sem necessidade.
+
+Telefone: o seletor abre em `🇰🇷 +82` e **tem que trocar para o Brasil antes de digitar** (a
+opção casa por `브라질`); depois vão só os dígitos, como manda a `regra_telefone`.
+
+### 4. A RÉGUA NÃO TEM COREANO, E A LACUNA JÁ TINHA CUSTADO EM POLONÊS
+
+Na SHIFT UP a régua deu **zero acerto dos 43 termos em 2.062 caracteres**, e isso **não bastava**:
+o anúncio é inteiro em coreano. Conferi à mão **14 termos coreanos de veto** — `비자`/`취업비자`
+(visto), `국적` (nacionalidade), `외국인` (estrangeiro), `거주`/`영주권`/`체류` (residência),
+`병역` (serviço militar), `내국인`, `불가`, `스폰` — e **nenhum aparece**. Os dois acertos
+coreanos são falso positivo: **`한국어` é o seletor de idioma do site** e `필수` é *"portfólio
+obrigatório"*. **Anúncio em língua que a régua não cobre exige a passada à mão, e ela se escreve
+no registro.**
+
+### 5. CAÇA DE TOKEN NOVO EM ASHBY E LEVER: ~40 MIL REQUISIÇÕES, ZERO VAGA DE PERSONAGEM
+
+Os dois universos que faltavam (o repositório conhecia **29** tokens de Ashby e **25** de Lever)
+contra **5.292** nomes do `censo-wikidata` (que só tinham servido para caçar pessoa) e **6.455**
+slugs de segundo nível de domínio, nos quatro hosts. **59 quadros vivos, e por TÍTULO só duas
+vagas da disciplina, as duas mortas** (uma é falso amigo de hardware, a outra é a Asobo, já
+fechada pelo veto de idioma). Pela perna de **animação** (390 nomes) o zero é limpo: **nenhum
+quadro vivo**.
+
+Três coisas para não repetir o gasto:
+- **Decida pelo TÍTULO.** `character` e `modeling` aparecem no **corpo** de quadro que não tem
+  nada da disciplina (frases tipo *"strength of character"*), e montar fila pelo grep do corpo
+  produz fila falsa.
+- **Controle de falso negativo é obrigatório** quando o resultado é "tudo 404": reprovei tokens
+  vivos conhecidos no meio da varredura (`ramp` no Ashby, `asobostudio` no Lever europeu) e os
+  dois deram 200, o que prova que os 404 eram reais e não rede estrangulada. Buraco dito com
+  número: **302 sondagens voltaram código 000** e são falso negativo possível, não medição.
+- **Token conhecido pode escapar da lista de conhecidos.** O `arenanet` apareceu como "token
+  novo" no Ashby e a General Applications dele **já tinha sido enviada em 30/08**: o repositório
+  guarda a casa como `arena.net`, não pelo slug do Ashby. **Dedupe de token se faz pelo NOME da
+  casa também.**
+
+### 6. O HITMARKER TEM PÁGINA DE CATEGORIA QUE ABRE POR `curl`, E A LANE JÁ ESTAVA EXAURIDA
+
+As páginas de SEO (`hitmarker.net/game-art-jobs`, `/gaming-jobs`, `/remote-gaming-jobs`, ...) são
+**renderizadas no servidor** e listam vaga com link, ao contrário de `/jobs?search=`, que devolve
+200 sem nenhum resultado no HTML (a busca é client-side). Serve para leitura rápida por `curl`.
+
+**Mas o rendimento é zero e já era sabido:** o `docs/index.html` registra que em 07/09 o Hitmarker
+foi varrido inteiro **por ID de requisição** (12.966 URLs, 87 sobreviventes, **zero candidatura**).
+Refiz o sitemap hoje: **13.309 URLs, 143 na disciplina**, os mesmos números. As duas que pareciam
+achado caíram no dedupe: a **People Can Fly** *Principal Character Artist* é requisição **nova**
+(`744000149844299`, postada 16/09) mas tem **veto escrito de residência** — *"The role is open to
+candidates only from the game industry who are based in Europe"* — e a **Makeshift Software**
+*Senior Character Modeler* **já foi enviada em 07/09**. Alerta de vaga do LinkedIn repete anúncio
+já trabalhado: a **Absurd Ventures** *Character Art Lead* do alerta de 14/09 foi enviada em 12/09.
