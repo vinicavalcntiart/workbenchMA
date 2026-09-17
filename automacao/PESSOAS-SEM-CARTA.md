@@ -5689,3 +5689,137 @@ sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a li
   pode cair em caixa jurídica na Coreia; (5) **é casa grande, e o `BRIEF-JOE` manda não gastar a
   única carta de casa grande num alvo fraco** — por isso esta linha entra marcada, e o maestro deve
   tratá-la como a última da fila, atrás das três de cima.
+
+### CASAS ABERTAS NESTA RODADA SEM ENDEREÇO DE PESSOA APROVEITÁVEL (para ninguém repetir)
+
+- **Reino Unido, os 19 domínios novos e de baixa menção da Animation UK** (doze caminhos cada, com
+  prova de catch-all por md5 e busca de 404 no texto limpo): `zaratanstudios.com` (só `info@`, e as
+  onze subpáginas são 404 de 1.250 bytes), `eaglevsbat.com` (só `usis@`, e **todas** as páginas
+  internas são 404 de 241.539 bytes, que é o caso de derrame de 404 de 00h35),
+  `twodaughtersentertainment.com` (só `info@` e `development@`), `kingbee.co.uk` (só `info@`),
+  `eggbug.com` (todas as páginas 404), `inflorescencemedia.com` (**zero byte** em todos os
+  caminhos), `plus3k.tv` (só `hello@`, e nove dos doze caminhos são 404), `studioliddell.com`
+  (nenhum `mailto`), `altanimation.com` (só `info@`), `picturesmith.com` (só `newbusiness@`, e sete
+  caminhos são **catch-all** com md5 igual), `3dsparrow.com` (**ver abaixo, é veto de escopo**),
+  `secondhomestudios.com` (parede já registrada), `cakeentertainment.com` (casca de JS já
+  registrada), `brilliantcasting.com`, `peacocksound.co.uk`, `products.hasbro.com`,
+  `mythstudio.co.uk` e `hohoentertainment.com` (**os dois abaixo, com endereço achado e morto**).
+- **Holanda, os 9 domínios inéditos do diretório da Dutch Games Association** (o `members/` dela
+  abre com 927 KB e rende **165 domínios**, dos quais só 9 nunca foram mencionados no repositório):
+  `local-heroes.com`, `studiodeloryan.com`, `silvermonkey.studio` (só `hello@` e `info@`),
+  `gamebakery.nl` (só `info@`), `huntersonstudio.com`, `sanforgestudio.com`,
+  `undreamedgames.com` (zero página viva), `geofront.nl` (só `info@`), `otterworlds.games`.
+  **Zero endereço de pessoa em 9 casas.** A Holanda continua em **zero** e o motivo agora está
+  medido: o universo holandês do diretório **já foi todo tocado** por rodadas anteriores.
+- **Québec e Montréal, os sites das casas do diretório da Guilde que não fecharam pareamento:**
+  `yellowbrickgames.ca` (o diretório publica `tom@yellowbrickgames.ca`, o site tem item *Team* no
+  menu e **`/team` é 404**, o `/press-room` **não nomeia uma pessoa** e o `/about` só diz *"over 60
+  shiny bricks"* — **sem pareamento não vira ficha**), `havenstudios.com` (só
+  `contact@`; o diretório publica `seb@havenstudios.com` e o site **não nomeia ninguém**),
+  `awaceb.com` (o diretório publica `thierryboura@awaceb.com`, o site é uma página com sete
+  palavras e `/team` e `/about` são 404), `squidostudio.com` (o diretório publica
+  `dchartrand@squidostudio.com`; o site publica só `info@` e **nenhuma pessoa**, e a casa é de
+  **jogo de VR**), `luciddreamsstudio.com` (o diretório publica `mgregoire@`, e a própria casa se
+  descreve como *"jeux vidéo **2D** magnifiques"* — morte por técnica), `manavoid.com` e
+  `honestdemon.com` e `iwotgames.com` e `studioimugi.com` (**zero byte** ou 114 bytes de casca),
+  `massivefinger.com` (**connection reset**, não conferida), `studioreverbero.ca` (*"Coming Soon…
+  under construction"*), `anawimstudios.com` (a home tem **duas palavras**),
+  `solitoninteractive.com` (é casa de **tecnologia de engine, física e rede**, e o site ainda tem
+  o gabarito do tema vivo, com *"411 University St, Seattle"* e `engitech@oceanthemes.net`),
+  `egakogames.com` (**ludificação** para educação e marketing, não é estúdio de jogo),
+  `gambitdigital.ca` (é **publisher**, não estúdio), `centuryeggstudios.com` (o jogo é
+  *"a visual novel puzzle game"*), `watchagames.com` (tecnologia de jogo para streamer),
+  `frostune.com` (**áudio**: *"Game Audio Tools, VO Pipelines & Sound Packs"*),
+  `rootmotion.games` (o diretório publica `clem@rootmotion.games` e a home tem o melhor gancho de
+  criatura da lista — *"quirky marine creatures, all possessing their own senses"* — mas **`/about`
+  devolve zero byte e a home não nomeia ninguém**: fica como a primeira a reabrir na próxima
+  rodada, com navegador de tela), `beyond-capture.com` (o diretório publica
+  `graham@beyond-capture.com` e a casa tem estúdio em **Vancouver e Montréal**, o que a tornaria
+  prioridade 1 — mas `/about` e `/team` são **404 de 2.205 bytes** e o site só publica
+  `montreal@`, `vancouver@` e `get-it-done@`: **sem nome nem cargo pareados, não virou ficha**, e é
+  a segunda a reabrir).
+
+### ENDEREÇO ACHADO E DESCARTADO, com o motivo de cada um
+
+- **3D Sparrow Group** (Londres, UK) — a varredura reencontrou os cinco endereços publicados em
+  `3dsparrow.com/about` (**Oli Bernard CEO**, **Debbie MacDonald Creative Director**, **Leo
+  Rakhmanin Studio Director**, **Nick Okorokov COO**, **Anna Voronova Head of Pre-Production**), e a
+  casa é 3D de personagem de verdade (*"3D Sparrow is a unique 3D animation studio making and
+  producing beautiful amazing stories for kids"*, o IP **Booba** descrito como *"A little creature
+  who explores the world like a child"*). **NÃO virou ficha porque a ficha antiga deste arquivo já
+  a matou na geografia**, e eu fui ler a nota antiga inteira antes de "corrigir" — que é a lição de
+  método de 04h35. O que esta rodada acrescenta de novo: o `/about` hoje diz *"3D SPARROW IS
+  HEADQUARTERED IN THE UK WITH OPERATIONS IN UAE (DUBAI)"*, e a home **redireciona para
+  `3dsparrow.ru`** quando o idioma do navegador é russo, com **Yandex Metrika** instalado. A sede
+  britânica continua sendo entidade, e a produção continua fora do escopo. `/careers` segue 404.
+- **Myth Studio** (Londres, UK) — `izzy.hill@mythstudio.co.uk`, publicado com nome e cargo em
+  `mythstudio.co.uk/people` e `/contact` (*"New Business — Izzy Hill"*, e o `/about` publica a
+  chefia inteira: James Finlay Founder/Creative Director, Danny Prothero Creative Director, Jono
+  Kamester Head of Animation). **Morreu por técnica, e a casa é explícita:** *"an animation studio
+  in London that, from early-stage ideation and concepting through to development and delivery,
+  will always prioritise **traditional and handmade techniques** … frame-by-frame animation,
+  exploring textures, or using **handcrafted models**"*. É a armadilha da Head Gear e da Dockhus.
+  Somado a isso, o cargo publicado é **New Business / Head of Client Success and Marketing**, que é
+  porta comercial. Fica registrado com endereço provado para o caso de aparecer 3D.
+- **Hoho Entertainment** (Londres, UK) — `/people` entrega **seis** endereços de pessoa pareados com
+  nome e cargo (`helen.howells@`, `oliver.ellis@`, `justin.wilkes@`, `harriet@`, mais `helen@` e
+  `oliver@`). **Morreu porque não é estúdio:** os quatro cargos publicados são **Joint Managing
+  Director** (dois), **Finance Director** e **Head of Digital, Marketing & E-Commerce**, e as bios
+  falam de *"licensing representation rights"*, *"intellectual property exploitation and
+  royalties"* e de *"acquisition deals"* para biblioteca de programação infantil. É casa de
+  **direitos e licenciamento** (Fifi and the Flowertots, Fluffy Gardens), sem departamento de arte
+  para pedir. Endereços registrados aqui para não se reabrir a página.
+- **Berzerk Studio**, **bkomstudios.com**, **fikaproductions.com**, **kanoapps.com** e
+  **funplus.com** (Québec e Vancouver) — os endereços que parecem de pessoa **não são**:
+  `troublemakeitdouble@`, `cprp@` (é o *responsable de la protection des renseignements
+  personnels*), `cv@`, `corp@`, `bizdev@` e `investment@`. Cuidado com o padrão. **A `bkom` guarda
+  uma armadilha de domínio do tipo Stunlock:** o site é `bkomstudios.com` e o endereço é
+  **`@bkom.com`**.
+- **`coalcar.ca`** — `hire@domain.com` e `info@domain.com`, ou seja **gabarito do tema não
+  preenchido**, o mesmo caso do `utilisateur@domaine.com` da Unagi de 16/09. Não é endereço.
+- **`bit-byterz.com`, `dumbandfat.com`, `northwaygames.com`, `stars-in-shadow.com`,
+  `marieflanagan.com`, `meowza.org`, `catnip-lab.com`, `casimm.com`, `curiobot.com`,
+  `halfasleep.games`, `goldbuginteractive.com`** — endereços de pessoa achados na varredura de 175
+  domínios de Vancouver e Montréal, e **nenhum virou ficha**: quatro são **provedor gratuito**
+  (`@gmail.com`), dois são caixa de personagem de marketing (`player@`, `meowza@`), e nos de
+  primeiro nome (`nick@`, `david@`, `elisa@`, `paul@`) **não há nome nem cargo pareados em página
+  nenhuma** — é o caso Barnstorm. `goldbuginteractive.com` fica anotada como a melhor delas para
+  quem tiver navegador de tela.
+- **`laguilde.quebec`** — `emilien.roscanu@laguilde.quebec`, publicado na política de privacidade
+  da própria associação. **Não é estúdio**, é a associação. Não registrado como via de contato de
+  casa nenhuma.
+
+### AS PAREDES DESTA RODADA, medidas
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `vancouvereconomic.com` | **502 no CONNECT** | não é site morto, é o túnel |
+| `laguildedujeuvideo.com/membres/` | **502 no CONNECT** | **e o conteúdo está em `laguilde.quebec`, que abre** — o que parecia porta fechada era endereço errado, outra vez |
+| `pixelchallenge.ca` | **502 no CONNECT** | palestrante de Québec fechado |
+| `migs.ca` | **202 com 169 bytes** | assinatura de captcha de borda (igual Triggerfish e Second Home) |
+| `thu.gg` | **connection reset** | |
+| `viewconference.it/pages/speakers` | **404 com 11.658 bytes** | o caminho de palestrante mudou; a home não foi conferida |
+| `finnanimation.fi`, `viborgvisuals.dk`, `favex.fi`, `animationquebec.com`, `massivefinger.com` | **502 no CONNECT** ou **reset** | cinco diretórios/sites nórdicos e de Québec **não conferidos**, não "sem endereço" |
+| `norskanimasjon.no`, `animationdenmark.dk`, `animationhub.dk` | **certificado que não casa com o host** | idem, e já registrado em 16/09 |
+| `interactiveontario.com/wp-json/wp/v2/member` | **200 com UM registro** | diretório vazio por API; o tipo `person` são os 30 nomes do conselho da própria associação |
+| `creativebc.com/industry-directories/` | **404 com 153 KB** | 404 gordo que derrama rodapé, exatamente o caso de 00h35 |
+
+### PLACAR HONESTO DA RODADA
+
+**Quatro pessoas novas**, no piso da faixa de 4 a 8, **todas com endereço PUBLICADO** (três em
+`mailto:` cru de diretório + página de equipe do estúdio, uma decodificada de `data-cfemail` com
+nome e cargo na mesma frase). **Nenhum endereço montado por padrão de domínio. Nenhum inventado.**
+Por região: **Canadá 4 — Québec 2, Montréal 2.** **Vancouver e BC: zero** (as duas melhores pistas
+de BC, `beyond-capture.com` e `goldbuginteractive.com`, morreram por **falta de pareamento**, não
+por falta de endereço). **Nórdicos: zero. Holanda: zero, e agora medido. Reino Unido: zero, e o
+motivo é técnica 2D/licenciamento em três casas com endereço publicado.**
+**Três das quatro casas nunca receberam mensagem nenhuma da campanha; a quarta (grupo KRAFTON) tem
+cinco threads RECEBIDAS e zero enviada.**
+Uma ficha antiga foi **relida antes de ser "corrigida"** (3D Sparrow) e continua morta pelo mesmo
+motivo. **Três endereços publicados foram descartados por técnica ou por não ser estúdio** (Myth,
+Hoho, Lucid Dreams) e **onze por não ter nome e cargo pareados**.
+**Veia nova documentada:** `laguilde.quebec/wp-json/wp/v2/membre` + página de detalhe (400 membros,
+339 com email, **127 com forma de pessoa**) — e ela tem **123 endereços de pessoa ainda não
+trabalhados**, que é o estoque mais barato que esta campanha tem hoje para Québec.
+**Veia fechada com prova estrutural:** `animationuk.org/wp-json` não tem campo de pessoa nem de
+email em nenhum dos 205 posts. Não voltar.
