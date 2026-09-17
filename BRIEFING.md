@@ -2724,3 +2724,144 @@ avalia a string como **expressão**, devolve a função (não serializável) e o
 **`undefined`** — gastei uma rodada achando que o seletor não existia. **Função de `evaluate` se
 escreve como função de verdade em Node e se passa por referência**, não como template literal
 (que ainda por cima obriga a escapar `\s` e `\d` duas vezes).
+
+## 17/09, 07h05 UTC (JHON A, quarto turno) — A MILESTONE FOI ENVIADA SEM NAVEGADOR, E QUATRO PAREDES FICARAM COM NOME
+
+Turno de **uma candidatura**, e ela fecha a última das três portas que a data de nascimento
+prendia: **Milestone S.r.l. (Milão), General Application pelo Cezanne OnDemand — ENVIADA E
+CONFIRMADA às 06h27 UTC**, com três provas de servidor (URL final `act1=thankyou` com
+`IdCandidato` cifrado, a tela *"Application Submitted / Registration completed / You have been
+successfully registered"* e o recibo das 06h27m13 vindo de **`Jobs@milestone.it`**, caixa da
+própria casa e não do fornecedor). Conta ativada; senha em `cred.json`, fora do repositório.
+
+### 1. A FAMÍLIA CEZANNE ONDEMAND / INRECRUITING INTEIRA, E ELA NÃO PRECISA DE NAVEGADOR
+
+O formulário mora em `app.php?module=iframeRegister&IdForm=<n>&...&LAC=<locatário>` e **o `curl`
+devolve os 210 KB de HTML com todos os campos**. O envio é um POST multipart para
+`app.php?opmode=guest&module=iframeRegister&act1=saveRegisterForm`, com os escondidos da própria
+sessão (`FW`, `FWM`, `retUrl`, `domOrig`, `d`, `IdForm`) e o `PHPSESSID` do GET. **Zero ocorrência
+de recaptcha, hcaptcha ou turnstile** — o registro de 06/09 que falava de "reCAPTCHA invisível"
+estava errado.
+
+> **Existe oráculo de validação de graça, e ele é DIFERENTE do Contact Form 7.** POST com todos os
+> campos vazios redireciona para `act1=abortMessage&errno=1007` e a tela diz literalmente
+> *"Missing mandatory fields"*. Isso responde SIM/NÃO e **não nomeia campo** (o CF7 nomeia, no
+> `invalid_fields`). Consequência dura: no Cezanne **só se mede na direção do fracasso**, porque
+> tentativa que passa na validação **já é a candidatura**. Não se usa o oráculo para "testar" um
+> formulário que se poderia enviar de verdade.
+
+Quatro mecanismos que custam a rodada se você não souber:
+
+1. **O requisito de servidor está na classe `required`/`requiredCV`**, não no `aria-required`.
+2. **Data de nascimento são DOIS campos**: o visível `field[0][<id>][value]_calview` no formato
+   `dd-M-yyyy` (`05-Mar-1990`) e o escondido `field[0][<id>][value]_cal` em **ISO**. Mandar um só
+   reprova.
+3. **Telefone: o input visível (intl-tel-input) NÃO TEM `name`** e não é postado; quem vale é o
+   escondido `field[0][<id>][value]`, que recebe o internacional sem espaço.
+4. **O widget de endereço não é do Google, é banco próprio com endpoints abertos**:
+   `module=CompanyAutocomplete&action=geolocation_get_nations | get_postal_codes | get_first_levels
+   | get_second_levels | get_autofill_details`, todos POST com `{keyword,offset,limit}` + `nationId`.
+   Para o Brasil a hierarquia tem **dois** níveis (unidade federativa e município) e **o CEP do
+   candidato pode simplesmente não existir no banco deles** — foi o caso: busca por CEP devolveu
+   `total_results 0` e busca por cidade devolveu 21 CEPs de Olinda. O caminho legítimo é o
+   **"Add manually"** do próprio widget (`manually=1`, CEP como texto em `[cap]`, e os códigos
+   REAIS deles nos níveis: `BR_PE`, `BR_2609600`). O servidor aceitou assim.
+
+E o que separa "sem quadro público" de suposição: `module=iframeAnnunci&LAC=<locatário>` responde
+**`Error: invalid user. Publishing Key not set`** quando a casa não publica quadro, e
+`module=iframeJobs` cai na tela de login do recrutador. A Milestone não tem quadro público: a única
+porta é a espontânea.
+
+### 2. GOOGLE FORMS PODE TER PAREDE DE LOGIN, E O `gform_apply.js` MENTE PARA CIMA
+
+A melhor porta que este turno achou é o **LIGHT Recruiting** da **LIGHT Visual Effects** (Royan,
+França + Londres): o seletor `Position` **nomeia `Character Asset Artist`, `Creature Asset Artist`
+e `Groomer`**, o país tem `Brazil`, a pergunta de autorização é *pergunta* (`Do you have a permit
+to work in EU / France?`) e não veto, não pede salário nem anexo.
+
+**Ela não foi enviada porque o formulário exige conta Google**, e o jeito como isso apareceu é a
+lição: o `gform_apply.js` rodou em modo seco **sem um erro**, disse `ok` para radio, dropdown e
+checkbox, e a leitura de volta mostrou **todo o texto do formulário dentro do campo Email**. Só a
+**captura** (`gf_lightvfx_seco_p1.png`) mostrou o modal *"Sign in to continue — To fill out this
+form, you must be signed in. Your identity will remain anonymous."* cobrindo tudo.
+
+> **Regra: em Google Forms, quem decide se a porta abriu é a CAPTURA, nunca o log.** A assinatura
+> da parede é o modal `Sign in to continue`, e o sintoma no log é o derrame de texto no primeiro
+> campo. Não há credencial do Google na caixa de ferramentas; as respostas ficam prontas em
+> `/home/user/apply/ans_lightvfx.json` e a porta vale **dois minutos do Vini logado**.
+
+### 3. RECRUITEE: O `hcaptcha` DO INQUILINO FRAMESTORE É `true` — A RESSALVA DE 16/09 ESTÁ FECHADA
+
+Em 16/09 a varredura do Recruitee deixou **9 inquilinos como NÃO CONFERIDO** por estrangulamento,
+e o `framestore` era um deles. Com **uma requisição em série** a chave aparece no HTML da vaga:
+`"hcaptcha":true`, `siteKey d111bc04-7616-4e05-a1da-9840968d2b88`, host
+`captcha-base.recruiteecdn.com`. Ou seja o formulário da Framestore **está atrás de hCaptcha** e
+não se envia daqui.
+
+E isso importa porque **há vaga viva e inédita lá**: `Blender Generalist - Visual Development
+Artist`, requisição **2718959**, **Montreal**, publicada em **21/08/2026**, time de Visual
+Development do Film & Episodic, com a frase *"move fluidly between modelling, look development,
+lighting and rendering — equally comfortable turning your hand to creatures, environments and
+FX"*. **Sem exigência de francês** (o único acerto de `français` em 7.184 caracteres é o seletor
+de idioma do site) e com a pergunta `Will you need visa sponsorship?` no próprio formulário.
+Dedupe completo feito no Gmail: as quatro threads da casa são as cartas de 06/09 e 08/09, o email
+de 15/09 com assunto `Modeller - Montreal` (que é a OUTRA requisição, já enviada) e o recibo de
+11/07 da `Character & Creature Modeller`. **A rota que o anúncio publica é email para
+`recruiters@framestore.com` com o assunto exato `Film Blender Generalist - Montreal`** — vai para
+a fila de cartas do maestro.
+
+### 4. A VEIA DA ANIMATION UK, MEDIDA ATÉ O FIM: RENDE CASA, NÃO FORMULÁRIO
+
+O `wp-json/wp/v2/organisations` tem **duas** páginas (`per_page=100`): 200 posts, **193 com
+`website_main`**, e cruzando por domínio contra todo o repositório os inéditos são **101**, não 67
+(35 de animação, 55 de facilities, 5 de educação, 5 supporters, 1 patrocinador). Sondei os **90**
+de animação e facilities em oito caminhos, com e sem `www`. Resultado honesto:
+
+- **uma** porta hospedada da disciplina, a **beloFX** (Google Forms, com *"Asset Artists (Modeling
+  / Texturing & Surfacing / Rigging)"* nomeado, e a casa escreve *"We do not accept applications
+  via email"*), e ela morre em **veto escrito**: *"Candidates must reside in the location of the
+  role and have the legal right to work there."* Régua: 2.194 caracteres, acerto em `must reside`
+  e `right to work`. **Não enviada.**
+- **uma** de Airtable, a **Harbor Picture Company** — e ela também está fora, **medida e não
+  suposta**: as opções do campo obrigatório *Department(s) of Interest* são Sales, Dailies,
+  Advertising, Marketing, Studio Services, Sound, Engineering, Operations, Picture Post, Talent,
+  Entertainment, Finance e Advertising Live Action. **Não existe departamento de arte, VFX ou 3D**,
+  e a regra da campanha só conta banco de talentos **com** departamento de arte.
+- o resto é caixa geral (`hello@`, `careers@`, `jobs@`), 404, ou **catch-all**.
+
+> **Armadilha que vale para toda varredura de `/careers`:** catch-all devolve **200 com o mesmo
+> md5** em `/careers`, `/jobs` e num caminho inventado. A Tinmouse Animation parecia ter página de
+> vaga com 40.860 bytes e não tem nenhuma. **Antes de acreditar num 200, peça um caminho que não
+> existe e compare o md5.** Também mede: Cake Entertainment devolve 200 com **um** caractere de
+> texto (site todo em JS), e Second Home Studios responde **202** nos oito caminhos, que é a
+> assinatura de captcha de borda já vista na Triggerfish.
+
+Os 55 membros de "Facilities" são som, cor, editorial e entrega (Envy, Boom, Films@59, Trevanna,
+Soho Editors, Core Post, Radiant, The Look, Cinelab, Pinewood, Lola, Aquarium): **não há
+departamento de personagem para pedir**. Conclusão simétrica à do Joe para endereço de pessoa,
+agora medida para formulário.
+
+### 5. A BUSCA GLOBAL DO WORKABLE CONTINUA VALENDO COMO REDE, E A PAREDE DA FAMÍLIA CONTINUA DE PÉ
+
+Rodei os 14 termos da disciplina nas duas buscas globais (Workable e SmartRecruiters) com corte em
+10/09. O SmartRecruiters devolveu **ruído de engenharia civil** (BIM Modeller, Wastewater
+Modelling, Data Modeler) e uma única da disciplina, a People Can Fly com veto de residência
+europeia. O Workable devolveu três, e **as três já estavam decididas**: Rebellion (aplicada à mão
+em 16/09, com recusa de 01/09 no histórico), Secret 6 (hard surface, não personagem) e **Side,
+`Concept Artist - Character`, remoto no Canadá ou no BRASIL** — e esta merece a frase inteira,
+porque é tentadora e é **fora da disciplina**: o anúncio pede concept art 2D (turnarounds,
+callouts e *model packs* **para** os artistas 3D), e ele é o artista 3D, não o concept artist.
+A Side, além disso, já recusou a Senior 3D Artist em 31/08 e a Senior Texture Artist de
+Montreal/Toronto está atrás de **Cloudflare Turnstile** desde 07/09 — **a lane inteira do Workable
+segue murada para automação** (a remedição da One Of Us em 08/09 diz o mesmo).
+
+### 6. DNEG TEM TRÊS TÍTULOS DA DISCIPLINA NO QUADRO HOJE E NENHUM SE USA — POR VETO JÁ ESCRITO
+
+O Jobvite deles (`jobs.jobvite.com/double-negative-visual-effects`) lista hoje `Character Modeler
+(DNEG Animation)` em 3 locais, `Character Modeller for VFX style Creatures` (Londres) e
+`Modeleur de personnages - Character Modeler` (Montréal). **Li o registro antes de gastar clique**,
+e ele fecha tudo: a recusa de 01/09 diz que a DNEG **suspendeu o patrocínio de visto** e não
+considera candidato fora do Reino Unido, com reabertura esperada para 2027; a de Montreal tem veto
+de direito de trabalho no Canadá (11/09); e a `ovLGAfwg` de Londres é a MESMA requisição que já
+devolveu *"You've already applied"* em 05/09. **Casa fechada, e o zero é de leitura, não de
+tentativa.**
