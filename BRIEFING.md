@@ -4048,3 +4048,147 @@ URL do pulso devolveu 404 para a Framestore Montreal (Blender Generalist, Recrui
 API do quadro mostra a vaga viva desde 21/08. **Regra: revalidação se faz pela API do quadro ou pela
 URL inteira do painel, nunca pela URL impressa pelo pulso.** Um 404 sem a URL final conferida é
 NÃO CONFERIDO, não é vaga expirada.
+
+## 17/09, 21h20 UTC (JHON A, décimo primeiro turno) — OS AGREGADORES PÚBLICOS FILTRADOS POR DATA: O FEED ATOM DO `gamejobs.co` ACHOU A PORTA QUE 436 QUADROS DE ATS NÃO ACHARAM
+
+Veia inédita na campanha: **quadro agregador público, filtrado por data de publicação**. Só `curl`,
+zero navegador aberto (`ps -eo comm=` devolveu 0 no começo e no fim). Janela: 72 h, desde 14/09 20h UTC.
+
+**Números medidos: 11 quadros consultados, 3 deles inacessíveis (dois 403 e um 502 do nosso relay),
+1 morto, ~360 anúncios lidos por título com data, 8 acertos da disciplina na janela, 7 já decididos,
+**UMA porta nova, limpa e pronta**, zero candidatura gasta, zero duplicata, zero tentativa contra
+veto escrito.**
+
+| quadro | estado | o que rendeu na janela de 72 h |
+|---|---|---|
+| **gamejobs.co** (feed Atom) | 200 | **1 porta: Virtuos/Black Shamrock Lead Character Artist** |
+| Hitmarker `/game-art-jobs` | 200, 25 cards | 7 acertos, **todos já decididos** |
+| Hitmarker `/game-concept-art-jobs` | 200, 25 cards | 0 |
+| workwithindies.com | 200 | 2 acertos, os dois fora da janela |
+| gamesjobsdirect.com | 200 | 1 acerto, de 11/08 |
+| remotegamejobs.com | 200 | 2 acertos, nenhum da disciplina |
+| cartoonbrew.com/jobs | 200, 210 KB | **zero ocorrência** da disciplina no HTML inteiro |
+| gracklehq.com/jobs | 200, 411 âncoras | zero ocorrência de `character` |
+| artstation.com sitemap | 200 | 11 vagas na janela, **títulos NÃO CONFERIDO** |
+| awn.com/jobs | **403** | não conferido |
+| vesglobal.org/job-board | **403** | não conferido |
+| creativeheads.net/jobs | 200 | **"Under Reconstruction": o quadro não existe mais** |
+
+### 1. A PORTA: VIRTUOS / BLACK SHAMROCK, `Lead Character Artist`, DUBLIN, PUBLICADA HOJE
+
+`https://fa-exhj-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2283`
+— `ExternalPostedStartDate` **2026-09-17T12:51:15Z**. Discipline cheia (*"Oversee character delivery
+from concept, reference, or scan through sculpting, modeling, texturing, grooming, optimization, and
+final in-engine implementation"*), cargo de **lead**, e o anúncio traz **`Relocation support`** na
+lista de benefícios. Dossiê completo na linha `porta` do `processados.csv`.
+
+**TRÊS IDs PARA A MESMA VAGA, e a regra do id da vitrine cobra pedágio outra vez:** `1119730` no
+agregador, `2283` na vitrine Oracle e **`300001683887839`** como `RequisitionId` do ATS. O que vale
+para dedupe é o terceiro.
+
+### 2. A RÉGUA DE VETO NUM ATS QUE É SPA: **19 CARACTERES NÃO SÃO "ZERO VETO", SÃO LEITURA INVÁLIDA**
+
+`regua-veto.py` na URL final devolveu literalmente:
+
+```
+FINAL  : .../sites/CX_1/job/2283
+CARACTERES DO TEXTO LIMPO: 19
+  ZERO ACERTO dos 43 termos
+```
+
+**Dezenove caracteres.** O Oracle Recruiting Cloud serve casca de SPA; o anúncio inteiro vem por
+API. Quem aceitar esse "zero acerto" está aprovando uma porta sem ter lido uma palavra dela — é a
+irmã exata do falso zero do Teamtailor (chave errada) e do 422 em camelCase: **HTTP 200, nenhuma
+exceção, e o filtro rodando contra nada.**
+
+O que vale é a régua no **texto da casa** lido em
+`/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=<id>,siteNumber=CX_1`
+(o finder é **`ById;Id=`**; `jobId=` devolve **400**), concatenando
+`ExternalDescriptionStr + ExternalQualificationsStr + ExternalResponsibilitiesStr +
+CorporateDescriptionStr + OrganizationDescriptionStr`: **7.761 caracteres e UM acerto**, que é
+`[relocation]` em *"• Relocation support"* — **benefício, o oposto de veto**. `hybrid` nem apareceu
+no texto porque na Oracle isso é campo (`WorkplaceTypeCode: ORA_HYBRID`), não frase.
+
+> **Regra: a régua tem um piso de validade. Abaixo de ~1.000 caracteres de texto limpo o resultado
+> é NÃO CONFERIDO, e a saída tem de ser refeita na fonte que serve o corpo** (API do ATS, JSON-LD
+> do agregador, `/xml` do Personio). Imprimir a contagem já estava certo; faltava a regra de que a
+> contagem baixa INVALIDA o zero.
+
+### 3. O PORTEIRO DO ORACLE RECRUITING FOI MEDIDO NA **CAIXA**, PORQUE A PÁGINA NÃO DIZ NADA
+
+`/job/2283/apply` responde **200 com 1.391 bytes** — casca. O grep de porteiro naquele corpo dá
+`recaptcha 0, hcaptcha 0, turnstile 0, datadome 0, sitekey 0, perimeterx 0, cloudflare 0`, e **esses
+zeros não provam nada**, exatamente como o BRIEFING já avisa.
+
+Quem respondeu foi o Gmail: **`exhj-saasfaprod1.fa.sender@workflow.mail.ap1.cloud.oracle.com`,
+06/09 às 16h05 e 16h07, assinado "Virtuos Career Site"** — *"You must confirm your identity using
+the one-time pass code ... This code will expire in 10 minutes."* Ou seja: **o Oracle Recruiting
+Cloud exige código de uso único por email para criar a conta de candidato, com dez minutos de
+validade** — mesma família do Greenhouse, precisa de **sessão viva** e de leitura do Gmail no mesmo
+minuto. **Não é captcha de desafio, logo não é parede.**
+
+> **Regra: em ATS que é SPA, o porteiro se mede pelo RECIBO que ele já mandou para a nossa caixa,
+> não pelo HTML da página de candidatura.** E dois recibos de código sem nenhum recibo de
+> candidatura são a assinatura de **cadastro começado e abandonado** — que é informação de dedupe,
+> não de envio.
+
+### 4. `Oracle Recruiting Cloud` É FAMÍLIA SEM FERRAMENTA, E A CAMPANHA JÁ TINHA TOCADO ELA SEM SABER
+
+Não existe `apply_oracle.js` (nem equivalente) em `/home/user/apply`, e o `BRIEF-JHON.md` não tem
+linha para a família. A tabela de ATS da campanha cobre 14 famílias e esta não está entre elas —
+apesar de os dois códigos de 06/09 provarem que **alguém já esteve no meio do fluxo dela**. Some-se
+a parede de CA do navegador das 19h00 e o resultado honesto é: **porta medida, não enviada.**
+
+### 5. A CORREÇÃO DE REGISTRO: "IRLANDA SEM VAGA DE ARTE" ERA VERDADE EM 06/09 E É FALSA HOJE
+
+`processados.csv`, 06/09: *"DESCARTADO: ... Na Irlanda só há Lead Programmer, Executive Producer e
+Lighting Artist"*. E hoje mesmo, num turno anterior: *"98 vagas, 4 da disciplina, e as quatro FORA
+DO ESCOPO"* — leitura correta feita **antes das 12h51**. As duas medições estavam certas quando
+foram feitas, e as duas fariam a próxima rodada pular a casa. **O quadro tem 98 requisições agora;
+a nova entrou hoje ao meio-dia.** É a regra da Anshar/BoomBit outra vez, com um agravante novo:
+não basta "abrir o quadro antes de dizer que a casa não tem vaga", **a frase precisa de data e de
+prazo de validade**, porque quadro lido há seis horas já mente.
+
+### 6. O GANCHO QUE A CAIXA ENTREGOU DE GRAÇA
+
+Em **14/09**, Chris McCarthy, do Third Kind Games, recusou a candidatura por domicílio no Reino
+Unido e escreveu, com estas palavras: *"Do look at the Virtuos Studios as they may have relevant
+locations."* **Indicação nominal de gente da indústria, três dias antes desta vaga aparecer com
+`Relocation support` no anúncio.** Vale na carta e na pergunta "como você soube da vaga".
+
+### 7. MÉTODO: PARSER POR ÂNCORA PERDE METADE DO AGREGADOR
+
+Em `workwithindies.com` e `gamesjobsdirect.com` o meu extrator `<a href>...</a>` devolveu **zero
+acertos** — e o controle cru (`grep -o -i character`) devolveu **16 e 2 ocorrências**. O motivo é
+estrutural: o título fica em `<div class="text-block-28">` **irmão** do link (Webflow) ou em
+`<h4>` **dentro** do `<a>` mas com o texto separado por markup. Foi assim que a Keywords Australia
+e a DuskSoft apareceram depois de dois "zero acertos" limpos.
+
+> **Regra: em quadro agregador novo, o zero só vale depois de um controle cru por palavra no HTML
+> inteiro.** É a mesma defesa do falso negativo do Hitmarker das 15h05, e ela precisa virar passo
+> obrigatório, não lembrança.
+
+### 8. QUATRO CORREÇÕES DE ENDEREÇO NA LISTA DE FONTES DA CAMPANHA
+
+- **Hitmarker:** `hitmarker.net/jobs/game-art` devolve **404 com 37.844 bytes** (página de erro
+  cheia, que parece quadro). O endereço certo é **`hitmarker.net/game-art-jobs`**. E `?q=character`
+  devolve 200 com **zero `<article>`**: a busca não é essa rota.
+- **Grackle:** `grackle.com` devolve **`CONNECT tunnel failed, response 502`** pelo nosso relay. O
+  quadro é **`gracklehq.com/jobs`**, que responde 200.
+- **gamejobs.co tem feed Atom não documentado:** `/?format=atom`, 100 entradas por página,
+  `?p=2`/`?p=3` funcionam, cada entrada com `<updated>` preciso e o **JSON-LD `JobPosting` inteiro
+  na página da vaga** (`datePosted`, `validThrough`, `hiringOrganization` e o link do ATS da casa).
+  **É a fonte de recência mais barata da campanha depois do `data-datetime` do Hitmarker**, e ao
+  contrário dele **tem paginação de verdade**.
+- **creativeheads.net sai da lista:** a própria página diz *"CreativeHeads.net — Under
+  Reconstruction"*.
+
+### 9. O QUE FICOU PENDENTE, COM NOME
+
+- **`awn.com/jobs` (403) e `vesglobal.org/job-board` (403)**: porteiro contra este IP, **não
+  vazios**. Ficam NÃO CONFERIDO.
+- **ArtStation:** 11 vagas publicadas na janela (1 em 17/09, 7 em 16/09, 3 em 14/09) com `lastmod`
+  de graça no sitemap, e **os títulos são ilegíveis** — o `<loc>` é slug opaco de quatro caracteres
+  (`/jobs/nGwy`) e a página está atrás do Turnstile de desafio.
+- **A porta da Virtuos precisa de ferramenta**: preenchedor da família Oracle ou o navegador do
+  próprio Vini, e a parede de CA resolvida.
