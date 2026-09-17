@@ -6149,3 +6149,191 @@ email em nenhum dos 205 posts. Não voltar.
   que alvo nenhum — a lista de onze pessoas precisa de confirmação antes de qualquer carta;
   (5) nenhuma palavra sobre **patrocínio de visto** em página nenhuma; (6) a casa é pequena e o jogo de
   captura de criaturas ainda não tem lançamento anunciado no site.
+
+### CASAS ABERTAS NESTA RODADA COM PAREAMENTO FECHADO E **DESCARTADAS POR DISCIPLINA** (endereço existe, alvo não)
+
+São as mais caras de perder, porque o pareamento custou o trabalho todo e o descarte é de uma linha.
+Ficam com o endereço registrado para o dia em que a casa mudar de técnica.
+
+- **Gold Bug Interactive** (Montréal) — `elisa@goldbuginteractive.com` e `paul@goldbuginteractive.com`,
+  **publicados na própria home** (200, 27.738 bytes) junto da seção *Our Core Team*, que pareia quinze
+  nomes com cargo: **Elisa Navarro Chinchilla, CEO Founder**, **Dr. Paul Darvasi, CEO Founder**, Diana
+  Bethzabe Blanquet Trujano Producer, Chris Crowell Master Game Designer, *Mónica Marcela Rodríguez
+  Nieves Artist* e *Rick Ruiz Dana **Cartoonist and Character Designer***. **A nota de 08h35 deixou
+  esta casa como *"a melhor delas para quem tiver navegador de tela"* — não precisou de navegador, o
+  `curl` na home entrega tudo.** E mesmo assim **não virou ficha**: a casa se descreve como *"We make
+  games and simulations for **learning, training**, and a better world"*, *"Serious and Learning
+  Games"*, *"Ludic Virtual Tours, VR, AR, **animation, and comics**"*, com serviços de *"curriculum
+  design"* e *"game-based corporate training"*. O único cargo de personagem publicado é
+  **Cartoonist and Character Designer**, ou seja **2D**, e é a armadilha da Myth Studio outra vez.
+  **Fica com os dois endereços provados**, caso apareça 3D.
+- **Élisa Interactive** (Montréal) — `francoisbelanger@elisainteractive.com`, publicado no diretório,
+  pareado na home (200, 14.225 bytes) com **"François Bélanger — Co-founder, operations and software
+  architecture"**. **Descartada porque não é estúdio:** é *"uma empresa que desenvolve ferramentas de
+  assistência de IA"*, o produto é *"um plugin alimentado por IA que acelera a criação de cenas 3D"* e
+  a própria página de carreiras diz *"**No open positions right now**"*. Dois fundadores, sem
+  departamento de arte.
+- **Wonderkids Studio** (Québec) — `fred@wonderkidsstudio.com`, pareado em `/about-us` (200, 346.588
+  bytes) com **"Fred Faubert … an **executive creative director** who has led studios, creative teams,
+  and AAA productions"**, ao lado de *"Julie Cossette … art director and illustrator"*. **Descartada
+  por tamanho e técnica:** é *"a passionate **husband-and-wife team**"* de duas pessoas, especializada
+  em *"content creation for **kids and preschool** audiences"* e em *"storytelling and visual
+  development"* — criação de IP e serviço criativo, sem pipeline de produção 3D.
+- **The Article 19 Group** (Montréal) — `rob@article19.com`, pareado na home (200, 45.939 bytes) com
+  **"ROBERT GORDON — PRESIDENT & CEO"**. **Descartada por técnica:** *"a leading independent developer
+  of high quality **casual games** … a number of chart-topping **online daily games**"*.
+- **The Tiny Digital Factory** — `sbaudet@tinydigitalfactory.com`, e o descarte **não é meu**: o
+  `censo-guilde-quebec-1709.csv` do Jhon A já a marca `FORA-DA-DISCIPLINA`, *"casa de jogo de corrida"*.
+  Uma linha, como manda a ordem.
+- **Rainbow Studios Montreal** — `jhodges@rainbowstudios.com`. `/about` abre (200, 110.620 bytes) e
+  **não nomeia uma pessoa**: o corpo inteiro é a linha do tempo de *MX vs ATV* e *Monster Jam*.
+  **Descartada duas vezes:** sem pareamento, e a casa é **motorsport**, veículo e não personagem.
+
+### CASAS ABERTAS SEM PAREAMENTO (para ninguém repetir, e o motivo de cada uma)
+
+- **Ludia** (Montréal, a maior perda da rodada) — o diretório publica `jpopp@ludia.com` e a casa é
+  **Jurassic World Alive** e **Dragons: Rise of Berk**, ou seja elenco de criatura de verdade, com
+  *"Over 3.5 million people play our games every month"* e *"500 million downloads"*. `ludia.com/about`
+  abre (**200, 1.751.279 bytes**, é a home em SPA) e **`/team`, `/our-team`, `/people`, `/equipe`,
+  `/press` e `/careers` são todos 404 de 2.204 bytes**. A única pessoa que o site nomeia está num
+  comunicado de março de 2025: *"**Jimmy Gendron** has been appointed Chief Executive Officer"* e
+  *"**Dominic Bécotte**, Ludia's **former** Chief Financial Officer"* — **nenhum dos dois é `jpopp`**, e
+  "Popp" não aparece em byte nenhum da página. **Sem pareamento não vira ficha.** Vale reabrir com
+  crédito de jogo (MobyGames está em 403 por este túnel).
+- **Le Catnip Collective** (Montréal) — plataforma 3D publicado pela **Team17** (*"plateformeur 3D"*, o
+  presskit é explícito) e o próximo título é ***"Architects of Giants"***, que é gancho de criatura. O
+  diretório publica `dan@lecatnipcollective.com`; o site publica `meow@lecatnipcollective.com`. **E
+  `/a-propos` é 404 de 2.204 bytes**, apesar do item *À PROPOS* no menu; `/emplois` (200, 556.129
+  bytes) diz *"Il n'y a malheureusement aucun poste de disponible présentement"* e `/presse` (200,
+  618.559 bytes) é ficha de jogo. **Zero nome de pessoa em três páginas.** É o caso Barnstorm: endereço
+  de primeiro nome sem nome nem cargo em lugar nenhum.
+- **Vox Prima** (Québec) — `mboudreau@voxprima.ca`, e o endereço está **publicado na própria home**
+  (200, 13.011 bytes), com o gancho de criatura mais católico da lista: *"Play as **Theodor of Arles, a
+  retired exorcist knight** called to the Abbey of Saintes-Cendres in 1224 France, where a **demonic
+  presence** has taken hold"*, *"Investigate the source of **corruption**"*. **E a home não escreve um
+  único nome de pessoa.** Barnstorm outra vez, agora doendo mais.
+- **No Deadlines** (Montréal) — `ablanchet@nodeadlines.ca`, e o `/about` (200, 148.772 bytes) **nomeia
+  os três fundadores**: *"Frédéric Bessette (Right) — Benoit Bergeron (Middle) — **Alexandre Blanchet
+  (Left)**"*. **Não virou ficha porque a casa publica nome SEM CARGO**: a legenda é a posição na foto.
+  Nome sem cargo não fecha o pareamento que esta veia exige. Casa de três pessoas, jogo de estratégia
+  co-op.
+- **Trying Errors** (Montréal) — `gabriel.adam@tryingerrors.com`, pareado no `/about` (200, 341.993
+  bytes) com *"**Gabriel 'Sheep' Adam** … The company's (evil?) business head"*. Descartada: casa de
+  **três pessoas e um gato**, fundada em julho de 2025, *"weird and thoughtful **narrative-focused**
+  games"*, sem nada de 3D.
+- **Prism Realm** (Montréal) — o diretório publica `hamedseyf@prismrealm.ca` e **o site fica em
+  `prismrealm.com`** (200, 46.324 bytes), domínio diferente do email, que é a regra de 08/09 aparecendo
+  de novo. O `/about` diz *"our team of **six**"* e publica **só `info@prismrealm.com`**, sem um nome.
+- **Beyond Performance Capture** (Vancouver **e** Montréal — era prioridade 1 e é a segunda derrota
+  registrada nela) — o diretório publica `graham@beyond-capture.com`. A home responde **200 com 741.486
+  bytes** e o corpo é **bundle de JavaScript**: `grep` por nome, por cargo e por `data-cfemail` no HTML
+  inteiro devolve **só código minificado**. **Os doze caminhos (`/about`, `/team`, `/our-team`,
+  `/people`, `/press`, `/news`, `/credits`, `/careers`, `/studio`, `/equipe`, `/notre-equipe`,
+  `/a-propos`) são 404 de 2.204 a 2.206 bytes.** A ordem pediu um caminho a mais por casa: **`/press`,
+  `/news` e `/credits` foram os três caminhos a mais, e os três são 404.** Esta casa **só abre com
+  navegador de tela**, e essa é a conclusão a registrar em vez de repetir a varredura.
+- **Final Strike Games** (que seria **Vancouver/BC, prioridade 1**) — o diretório publica
+  `kevin@finalstrikegames.com` e **nenhum caminho do site abre: `202` com 167 a 179 bytes em treze
+  caminhos**. É a assinatura de **captcha de borda** já registrada para Triggerfish, MIGS e Second
+  Home. **Parede, não casa sem pessoa.**
+- **Massive Finger** (Montréal) — `laurent.mascherpa@massivefinger.com`, com **nome completo dentro do
+  endereço**, o que a torna a melhor pista não fechada da rodada. **`massivefinger.com` devolve `000`
+  em treze caminhos**, igual às 08h35. Segunda medição, mesmo resultado: **NÃO CONFERIDA**, e o
+  controle é que os outros 29 domínios da mesma leva responderam na mesma janela.
+- **Columel** (`jean-gabriel.cauchon@columel.com`, nome completo no endereço) — **`000` em treze
+  caminhos**, na mesma janela. Não conferida.
+- **Virtuos Montreal** — `dcheung@virtuosgames.com`, e `virtuosgames.com` devolve **403 em treze
+  caminhos** (5.322 a 5.400 bytes). Bloqueio de robô, não ausência de página.
+- **Sem nome de pessoa em página nenhuma, um por linha:** `franticsoftware.com` (2.335 bytes **iguais
+  em treze caminhos**, casca de página única), `chasingratsgames.com` (**36.78x bytes em quinze
+  caminhos**, catch-all de SPA), `neon-polygons.com` (**3.138 bytes em doze caminhos**, catch-all),
+  `studionuitsdete.com` (**3.136 bytes em oito caminhos**, catch-all), `naturalrecordsstudios.com`
+  (**114 bytes**, casca), `getluckyvr.com` (a home é só o menu), `sleepingbeastgames.com` (a home tem
+  576 bytes e o `/press` tem 1.041, um presskit vazio), `virtual-tales.com` (862.600 bytes, `/studio`
+  publica **só `info@`**), `wolfhausgames.com` (1.307.304 bytes, *"decades of experience in aaa-gaming
+  & movies"* e **zero nome**), `solideo.ca` (*"dirigé par une seule personne"*),
+  `triplescalegames.com` (plugins de UE5 e experiências UEFN, sem equipe), `lovelace.gg` (é
+  **plataforma de análise de dados** para estúdio, não estúdio), `tobafeu.studio` → redireciona para
+  **`tobafeustudio.com`** (troca de domínio, regra de 08/09) e publica **só primeiro nome**: *Gabriel,
+  Samuel, Émile, Hugo*, sem cargo; `2blocksgames.com` (*"a project primarily developed by **Colin
+  Towle**"*, solo, sem cargo publicado e tower defense 2D), `bycolorstorm.com` (*"All games & apps are
+  created by **Jay Machalani**"*, solo, sem cargo, jogo de gato para celular), `hannagie.com` (é
+  portfólio de **uma ilustradora**, não estúdio), `hardchip.io` (jogo de **projeto de processador**),
+  `freeground.games` (estúdio **Roblox** com *"Our artists, designers and programmers"* e o gancho
+  *"capture Sasquats with your stun lamp and take on missions to **rescue creatures**"*, mas **zero
+  nome de pessoa**), `mage-voyageur.ca`, `quantumduckstudio.com`, `cochleateam.com`,
+  `clever-plays.com`, `tremblayalliance.com`, `vellocetsoftware.com`, `studiocellier.com` (7.289 bytes
+  **iguais em oito caminhos**), `pasgame.ca`, `dragonslumber.com` e `atracktiv.com` (publica só o
+  próprio `stephane@` sem nome).
+- **Casas de gancho de criatura FORTE cujo contato no diretório é caixa funcional, e por isso não
+  entraram nesta veia** (ficam anotadas como alvo de outra veia): **Erupting Avocado** (Sherbrooke,
+  *"dark twisted tales that feature **grotesque creatures**"*, presskit em 200/7.008 bytes nomeia
+  *"**Jonathan** and **François**"* sem sobrenome e sem cargo, só `info@`), **Bold Spirit Game Studio**
+  (fundada por **Maxime Vézina**, de *Assassin's Creed Origins* e *Valhalla*, só `contact@`, home de
+  6.677 bytes), **Breaking Walls** (`/about` em 200/768.733 bytes, *"três veteranos da indústria"*,
+  **zero cargo e zero nome no texto limpo**, só `info@`), **BadRez Games** (*"founded by AAA
+  veterans"*, `/jobs` em 200/732.420 bytes, só `contact@`) e **La Fabrique de Monstres** (*"une
+  centaine de **monstres et créatures**"*, mas é **dublagem e criação sonora**, não arte).
+
+### AS PAREDES DESTA RODADA, medidas, com o controle na mesma janela
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `finalstrikegames.com` | **202 com 167–179 bytes** em 13 caminhos | captcha de borda (Triggerfish / MIGS / Second Home) — **e era Vancouver/BC, prioridade 1** |
+| `massivefinger.com` | **000** em 13 caminhos, **segunda medição** | não conferida; as 08h35 já tinham dado *connection reset* |
+| `columel.com` | **000** em 13 caminhos | não conferida |
+| `virtuosgames.com` | **403** em 13 caminhos | bloqueio de robô |
+| `art4fans.com` | **429** na home e **404 de 320.350 bytes** nos internos | limite de taxa mais 404 gordo que derrama rodapé |
+| `beyond-capture.com` | **200 com 741.486 bytes de bundle JS** e 12 caminhos em 404 | só abre com navegador de tela |
+| `postmeridian.co/studio`, `postmeridian.co/en/studio/` | **404** com item *Studio* vivo no menu | caminho do menu que não é rota |
+| `yellowbrickgames.ca/team`, `yellowbrickgames.ca/presskit` | **404** (o `/team` com item vivo no menu) | o caminho certo é **`/our-team`** |
+| `hatcherygames.com/team`, `/jobs` | **404 de 5.175 bytes**, igual ao md5 de caminho inexistente | site de página única com âncoras |
+| `lecatnipcollective.com/a-propos` | **404 de 2.204 bytes** com item *À PROPOS* vivo no menu | idem |
+
+**Controle da janela, para nenhum destes 000/403/202 ser lido como "casa sem pessoa":** na mesma
+janela e pelo mesmo `curl`, `laguilde.quebec` devolveu **200 em cinco páginas de detalhe**,
+`raccoonlogic.com`, `yellowbrickgames.ca`, `rootmotion.games`, `postmeridian.co` e
+`hatcherygames.com` devolveram **200 com corpo grande**, e as quatro provas de catch-all por md5
+devolveram **404 distinto**. O túnel estava vivo; o problema é o host.
+
+### PLACAR HONESTO DA RODADA
+
+**Cinco pessoas novas**, dentro da faixa de 4 a 8: **quatro com endereço PUBLICADO** (as quatro em
+`mailto:` cru na página de detalhe do diretório da Guilde, todas com o pareamento nome+cargo fechado
+no site da própria casa) e **uma `sem-email`** guardando nome, cargo e casa. **Nenhum endereço montado
+por padrão de domínio. Nenhum inventado. Nenhuma segunda grafia de ninguém.**
+
+**Por região: Canadá 5** — Montréal 2 (Raccoon Logic, Root Motion), Québec City 2 (Yellow Brick
+Games, Hatchery Games) e 1 distribuída Canadá/França (Postmeridian). **Vancouver e BC: ZERO pelo
+terceiro turno seguido**, e o motivo desta vez é parede e não ausência: a única casa de BC da veia,
+**Final Strike Games**, responde `202` com 170 bytes em treze caminhos, e a **Beyond Capture**
+(Vancouver + Montréal) é bundle de JavaScript com doze caminhos em 404. **Nórdicos, Holanda e Reino
+Unido: zero**, porque a veia barata de hoje é do Québec e a ordem mandou gastá-la.
+
+**Por tamanho de casa, que é o que a ordem pediu priorizar:** **Yellow Brick Games com 68 devs** é a
+maior que esta veia produziu em duas rodadas; Raccoon Logic tem 19 com **Senior Character Artist
+nomeado**; Hatchery Games tem 11 com **dois Character Artist nomeados**; Postmeridian tem 9 com
+**Artiste 3D Personnages nomeado**; Root Motion tem **uma**. **Quatro das cinco casas têm assento de
+personagem publicado na equipe**, contra zero das quatro fichas das 08h35 — é a diferença de ter
+filtrado por pipeline antes de gastar a chamada.
+
+**Dedupe:** quatro das cinco casas nunca receberam mensagem nenhuma da campanha (`{}` no Gmail e zero
+no `in:sent` por domínio). A quinta, **Raccoon Logic**, tem **uma** carta enviada em 02/09 para
+`jobs@`, respondida por **autoresponder de `noreply`**, o que a mantém aberta e faz do Reid Schneider
+a **segunda e última** carta possível daquela casa. **Postmeridian não aparece em NENHUM arquivo do
+repositório.**
+
+**Três notas anteriores foram relidas ANTES de serem corrigidas, e duas estavam certas sobre o
+caminho e erradas sobre a casa:** `yellowbrickgames.ca` (o caminho é `/our-team`, não `/team`),
+`rootmotion.games` (zero byte era não conferido) e `goldbuginteractive.com` (não precisou de navegador,
+e mesmo assim morreu por disciplina). **Seis endereços publicados foram descartados com pareamento
+fechado** (Gold Bug com dois, Élisa Interactive, Wonderkids, Article 19, Tiny Digital Factory) e
+**vinte e nove casas foram abertas sem fechar pareamento**.
+
+**Estoque da veia depois desta rodada:** dos 123 endereços de pessoa do diretório da Guilde que
+estavam intocados, esta rodada trabalhou **cerca de 75** (5 viraram ficha, 6 descartados com
+pareamento, o resto sem pareamento ou fora de disciplina). **Sobram cerca de 48**, e eles são a cauda
+mais magra da lista: estúdio de uma pessoa, áudio, serviço, escola e associação. **A veia continua
+viva, mas o rendimento por chamada cai daqui para frente**, e a próxima rodada rende mais atacando as
+casas de gancho forte cujo contato do diretório é caixa funcional (Ludia, Erupting Avocado, Bold
+Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de equipe.
