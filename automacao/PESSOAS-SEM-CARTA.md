@@ -5825,3 +5825,86 @@ trabalhados**, que é o estoque mais barato que esta campanha tem hoje para Qué
 email em nenhum dos 205 posts. Não voltar.
 
 > **Maestro, 17/09 09h30 UTC:** lote de três cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 34%): Natasha Collin / Nine Dots `r-2049107334138318933` (a carta diz que o formulário de carreiras não carregou e que um segundo CV ali é a mesma pessoa); Nathan White / Threeclipse `r8052207050396345465` (pergunta se o SYZYGY é 3D); David Larochelle / Forge Hammer `r-4585955390094394768` (pergunta se o elenco é feito na N-Hance ou em casa). **Natalie Molson (Krafton Montréal) não recebe carta:** é a responsável por proteção de dados, cargo fora de alçada para candidatura, e o grupo já recusou duas vezes em setembro; escrever para o DPO leria como uso indevido do endereço. Linha marcada `NAO-ESCREVER`. Saem pelo Apps Script do Vini.
+
+## JOE, 17/09/2026 12h35 UTC — A VEIA DA GUILDE FECHOU O PAREAMENTO EM **CINCO** CASAS, E DUAS DELAS ERAM "SEM PAREAMENTO" NAS RODADAS ANTERIORES POR **CAMINHO ERRADO**
+
+**O que esta rodada acrescenta de método, antes das fichas, porque vale mais que as fichas:**
+
+1. **`/our-team` não é `/team`, e a Yellow Brick Games provou isso.** A rodada das 08h35 escreveu
+   *"yellowbrickgames.ca: o site tem item Team no menu e `/team` é 404 … sem pareamento não vira
+   ficha"*. **Estava certo sobre `/team` e errado sobre a casa.** `https://yellowbrickgames.ca/our-team/`
+   responde **200 com 298.456 bytes** e publica **a equipe inteira com cargo**, incluindo
+   **Lead Character Artist** e **Senior Character Modeler**. É o caso Forge Hammer ao contrário: lá a
+   equipe era âncora dentro da home, aqui o caminho é `our-team` e não `team`. **Regra: quando o menu
+   diz Team e `/team` é 404, teste `our-team`, `notre-equipe`, `equipe` e `a-propos` antes de escrever
+   "casa sem pessoa".**
+2. **A página `/press-room` não nomeia ninguém, mas os COMUNICADOS QUE ELA LINKA nomeiam todo mundo com
+   cargo.** A mesma nota de 08h35 disse que o `/press-room` da Yellow Brick *"não nomeia uma pessoa"* —
+   e isso é literalmente verdade da página-índice. Os três comunicados oficiais linkados nela dão
+   **"Thomas Giroux, Co-founder and CEO of Yellow Brick Games"**, **"Frédéric St-Laurent B., COO and
+   Co-founder"**, **"Mike Laidlaw, Chief Creative Officer"** e **"Skalski, the studio's Executive
+   Producer and Chief Operating Officer"**. **Regra: página de imprensa é índice, o pareamento está
+   no comunicado.** Foi o que fechou a ficha 2 desta rodada.
+3. **`rootmotion.games/about` devolvia ZERO BYTE às 08h35 e hoje devolve 38.986 bytes com a equipe.**
+   Não mudei de ferramenta: é `curl` nas duas vezes. Ou o site subiu conteúdo novo, ou o zero byte
+   das 08h35 era do túnel. **Nas duas leituras a conclusão é a mesma: zero byte é NÃO CONFERIDO, e
+   reabrir a casa na rodada seguinte custou uma chamada.** Ela virou ficha.
+4. **O mesmo primeiro nome no endereço pode ser DUAS pessoas diferentes em duas casas da mesma
+   lista.** `clem@rootmotion.games` é **Clémence Maurer**, Creative Director. `clem@playtogether-studio.com`
+   é outro Clem, que se descreve no presskit como *"I am Clem, a Frenchy game dev who moved in Montreal"*
+   e usa `@ClemGameDev`. **Não existe padrão de primeiro nome entre casas**, e o pareamento é sempre
+   por casa.
+
+### FICHA 1 — Reid Schneider, Raccoon Logic (Montréal, Canadá) — **a casa tem Senior Character Artist publicado e o endereço de pessoa NÃO estava no site dela**
+
+- **Email: `reid@raccoonlogic.com` — PUBLICADO, confiança ALTA.** Nada montado: está em `mailto:` cru
+  na página de detalhe do diretório da Guilde. **E esta ficha corrige uma linha antiga deste
+  repositório:** a linha de 07/09 da Raccoon Logic no `pessoas.csv` (Erick Bilodeau, `sem-email`) diz
+  *"raccoonlogic.com/about e /privacy só publicam `info@raccoonlogic.com` … sem endereço individual"*.
+  Isso continua **verdade sobre o site** — o `/about` que eu abri hoje termina em `info@raccoonlogic.com`.
+  O endereço de pessoa existe **no diretório da associação**, fora do site. É a armadilha Threeclipse
+  outra vez, e agora numa casa que já estava na fila há dez dias.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/raccoon-logic/` (**200,
+  34.364 bytes**; HTML cru: `<h2 class="text-flip">Raccoon Logic</h2>` … `mailto:reid@raccoonlogic.com`),
+  `https://raccoonlogic.com/about` (**200, 192.108 bytes**, a lista de equipe com cargo) e
+  `https://raccoonlogic.com/games` (**200, 205.763 bytes**, de onde saiu o gancho). Busca de
+  `Page not found` / `page introuvable` no texto limpo: **zero acertos**. **Prova de catch-all:**
+  `https://raccoonlogic.com/<md5 de caminho inexistente>` responde **404** com md5 `ef3416fafe2f…`,
+  diferente do md5 `c119bcf04720…` do `/about` — não é catch-all.
+- **Por que ESSA pessoa e não outra da casa:** o `/about` publica **19 pessoas com cargo**, e o que
+  interessa para esta campanha é que existe **"Pascal Beaulieu — Senior Character Artist"** e
+  **"Erick Bilodeau — Co-founder & Art / Technical Director"**, ou seja **pipeline de personagem com
+  assento nomeado**, o que quase nenhuma casa desta veia tem. **De nenhum dos dois há endereço
+  publicado** — e a linha de 07/09 já tinha tentado o Erick Bilodeau e parou em `sem-email`. O Reid
+  Schneider é **"Co-founder & Head of Studio / Executive Producer"**, tem o endereço publicado, e em
+  casa de 19 pessoas é quem abre requisição. **A carta pede para ser apontado ao Erick Bilodeau
+  (Art/Technical Director) e ao Pascal Beaulieu.** Erick Bilodeau **já está no `pessoas.csv` como
+  `sem-email`** e continua sendo a segunda pessoa possível, sem nada montado.
+- **Gancho com a frase do próprio estúdio, entre aspas:** o `/about` diz *"We are an independent video
+  game development studio founded in 2021 in Montréal … **Hand crafted. Super spicy. Irreverent and
+  earnest.**"* e que *"Many of us previously worked at Typhoon Studios"*. O gancho de ofício está no
+  `/games`, na ficha de *Journey to the Savage Planet*: *"an upbeat first-person adventure game set in
+  a bright and colorful alien world filled with **weird and wonderful creatures**"*, e em *Revenge of
+  the Savage Planet*: *"**Scan, capture and catalogue wonderfully weird plants and creatures**"*.
+  Elenco de criatura estilizada é exatamente o portfólio dele.
+- **Casa fora dos EUA: SIM, Canadá (Montréal).** A frase de realocação **entra**, e é rota de
+  prioridade 1 e 2.
+- **O que o Gmail devolveu no dedupe, e é o dado que decide a ficha:** `raccoonlogic OR "Raccoon Logic"
+  OR "Reid Schneider" OR "Savage Planet"` devolveu **UMA thread**: a carta fria de **02/09** enviada
+  para **`jobs@raccoonlogic.com`**, caixa genérica, com resposta **automática** de
+  `jobs+noreply@raccoonlogic.com` (*"A big thanks for your interest in joining Raccoon Logic! We're
+  always looking for talented individuals"*), ainda **não lida** na caixa. **Teto de duas por casa
+  contado no `in:sent` por domínio `raccoonlogic.com`: UMA.** Então o Reid Schneider é a **segunda e
+  última** carta possível para esta casa na campanha inteira. **"Reid Schneider" não aparece em nenhum
+  arquivo do repositório.** No `enviados.csv` há a linha de 02/09 do `jobs@`; no `alvos.csv` a casa
+  está classificada **A / forte**; em `drafts/raccoon-logic.md` está a carta antiga.
+- **RESSALVA HONESTA:** (1) **nenhum ser humano leu a primeira carta** — a resposta foi autoresponder
+  de `noreply`, o que mantém a casa aberta mas também prova que a caixa `jobs@` é filtro, e a carta
+  nova **não pode se apresentar como primeiro contato**: tem de dizer que o CV já entrou por lá em
+  setembro; (2) **este é o último tiro da casa** pelo teto de duas, e gastá-lo num Executive Producer
+  em vez do Art Director é escolha forçada pela ausência de endereço, não preferência; (3) o cargo é
+  **operações e produção**, não arte; (4) **o assento de Senior Character Artist está OCUPADO** (Pascal
+  Beaulieu) e a casa tem 19 pessoas, o que torna assento sênior novo improvável a curto prazo;
+  (5) o `alvos.csv` registra que a única vaga aberta em 07/09 era **Online Programmer**, e o
+  `/careers` de hoje (130.887 bytes) é o quadro deles, não uma vaga de arte; (6) nenhuma página da
+  casa diz uma palavra sobre patrocínio de visto.
