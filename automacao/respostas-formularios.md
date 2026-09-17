@@ -3786,3 +3786,74 @@ de múltipla escolha descrito nas 03h. O prefixo `A `/`B ` é um **DIV irmão** 
 **Ressalva honesta:** é candidatura **espontânea**, não requisição aberta — a casa não publica
 vaga no momento, e o seletor de disciplina existe porque o formulário é o **banco de talentos
 permanente** dela. E a FOST é casa **pequena** de animação francesa, não estúdio grande.
+## LIGHT Visual Effects (Royan, França + Londres, Reino Unido) — formulário "LIGHT Recruiting" — À MÃO POR **LOGIN DO GOOGLE** (17/09, Jhon A, 4º turno)
+
+**Link:** https://forms.gle/LHYKPPw6JZ6Nmffi8 (chega-se por `lightvfx.com/careers`; a página de
+contato diz, literal: *"To apply, please complete the form provided here"*)
+**Formulário longo:** `docs.google.com/forms/d/e/1FAIpQLSeglZCTlTpCAyw_8bjWp_PS9dPqDt9Cp6IfBjORKJHrMM_9fg/viewform`
+
+**Por que vale, e é a melhor porta que a varredura da Animation UK achou:** o seletor `Position`
+**nomeia o cargo dele em três linhas** — `Character Asset Artist`, `Creature Asset Artist` e
+`Groomer`. Os serviços que a casa publica são *Asset Creation*, *Creature Build*, *Surface
+Modeling* e *Art Direction*, e o toolset declarado é **Houdini, Nuke, Resolve, Blender e Maya**.
+Casa inédita: o domínio só aparecia no `garimpo-cgstudiomap.csv`, sem carta e sem candidatura.
+
+**Por que ficou à mão, e não é captcha:** a captura (`/home/user/apply/gf_lightvfx_seco_p1.png`)
+mostra o modal **"Sign in to continue — To fill out this form, you must be signed in. Your
+identity will remain anonymous."** cobrindo o formulário. É exigência de conta Google do próprio
+dono do formulário. **Aviso para quem repetir:** o `gform_apply.js` roda sem erro nessa parede,
+diz `ok` para radio, dropdown e checkbox e **derrama todo o texto no campo Email** — o log mente
+para cima, só a captura decide.
+
+**Logado na conta dele, são 2 minutos.** As respostas também estão em
+`/home/user/apply/ans_lightvfx.json` (fora do repositório).
+
+| Campo | O que responder |
+|---|---|
+| Email * | `contact@vinicavalcanti.art` |
+| First Name * / Last Name * | `Vini` / `Cavalcanti` |
+| Geographical location (Country) * | `Brazil` (está na lista de 33 países) |
+| Do you have a permit to work in EU / France? * | **`No`** — é a verdade, e é pergunta, não veto |
+| Position * (**caixas de seleção**, 27 cargos) | marcar `Character Asset Artist` **e** `Creature Asset Artist` (o `Groomer` fica de fora de propósito: grooming é apoio, e vai dito na carta) |
+| Professional work experience (level) * | `Senior` |
+| Professional work experience (years) * | `10` |
+| Available from * (campo de data, `mm/dd/yyyy`) | `10/15/2026` |
+| Showreel URL | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn profile URL * | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Cover letter | o texto abaixo |
+
+```
+Registering for Character Asset Artist and Creature Asset Artist.
+
+I am a Senior 3D character artist with more than ten years in stylised characters, and I take an asset end to end: high poly sculpt, retopology, UVs, baking, hand painted and PBR texturing, surfacing and look development, then integration in engine or render. Your services page names Asset Creation, Creature Build and Surface Modeling, and that is the work I do every day. Grooming hair and fur in Houdini is a supporting strength, which fits your toolset.
+
+At Angel Studios I modelled and hand painted the season one characters of The Wingfeather Saga. For almost five years I have been Senior 3D Character Artist at E-Line Media in Arizona, taking Endstar hero characters from the first sculpt into the engine, working remotely with a team in another country and time zone. Before that I did character outsourcing at PUGA Studios.
+
+Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini, Unreal, Unity.
+
+Work authorisation, plainly: I live in Brazil and I do not hold a permit to work in France or the EU, so I would need sponsorship. I am ready to move to Royan or to London for the role, and remote work also works well for me. My academic background helps the visa case: honours degree, postgraduate specialisation in game art, master's in progress, IELTS.
+
+Compensation: open to aligning with your band for the role; as a reference, around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School I teach at: https://vinicavalcanti.com
+```
+
+**Não pede** salário em campo próprio, não pede anexo (portfólio vai por link) e **não pede data
+de nascimento**. Não há veto escrito em nenhuma das páginas da casa. Único email publicado:
+`sales@lightvfx.com` (a página de carreiras manda usar o formulário) — se for por carta, é para
+lá, dizendo que o formulário exige conta Google.
+
+## Milestone S.r.l. (Milão) — General Application pelo Cezanne — ENVIADA E CONFIRMADA 17/09 às 06h27 UTC (Jhon A, 4º turno)
+
+A seção 6 deste arquivo dizia *"à mão por DATA DE NASCIMENTO"*. **Não é mais:** a porta foi
+enviada e confirmada, e as duas travas escritas em 06/09 (Home Address e Date of birth) caíram.
+O que foi declarado, para quem precisar reconferir sem reabrir o formulário: Functional Area
+`Creativity` (valor 9; a lista de 39 não tem arte nem 3D), Qualification `Post lauream
+Specialization` (valor 8), 10 anos de experiência, Portfolio Link do ArtStation, 16 *skills*
+começando por `3D Character Artist` e `Character Modeling`, CV em PDF anexado, privacidade art. 13
+marcada, endereço pelo caminho **"Add manually"** do widget (o CEP dele não existe no banco de
+CEPs do fornecedor) e a data de nascimento nos **dois** campos que o Cezanne exige (visível
+`dd-M-yyyy`, escondido ISO). **Não há campo de mensagem livre**, então a frase de realocação e o
+caso de visto não couberam: isso continua sendo assunto de carta para `Jobs@milestone.it`.
