@@ -3651,7 +3651,7 @@ O registro antigo da campanha dizia "Lever tem hCaptcha no HTML", que o próprio
 
 Depois é só **Submit**. Menos de um minuto.
 
-## FOST Studio (Paris e Angoulême, França) — Tally de recrutamento — MAPEADO E NÃO ENVIADO (17/09, Jhon A)
+## FOST Studio (Paris e Angoulême, França) — Tally de recrutamento — ENVIADA E CONFIRMADA 17/09 às 04h31 UTC (Jhon A, 3º turno)
 
 **Link:** https://tally.so/r/3laXq5 (achado em `fost.studio/jobs`)
 **Por que vale:** estúdio de **animação** francês, e o formulário **nomeia a disciplina dele**:
@@ -3710,23 +3710,79 @@ we can't hire freelancers /!\\* — a casa **não contrata freelance**, e por is
 que resta é a **intermittence** (estatuto de assalariado intermitente do audiovisual francês),
 não prestação de serviço.
 
-### O que FALTA, e é só isso
+### ENVIADA E CONFIRMADA às 04h31 UTC de 17/09 — e as cinco armadilhas que o caminho tinha
 
-**O seletor de disciplina (`Chara Modeling` e companhia) é CONDICIONAL e não aparece no primeiro
-estado da página** — os 32 controles mapeados não o contêm, e uma busca literal por
-`Chara Modeling` no texto visível devolve zero. Ele deve ser revelado por uma resposta anterior
-(provavelmente a primeira pergunta, *"Postulez-vous à une offre d'emploi spécifique ou en
-candidature spontanée ?"*, cujas opções **não são `input`** e por isso não entram no mapa de
-controles). Tentei clicar `Candidature spontanée` por texto exato e **não achei o elemento**, o
-que quer dizer que o rótulo clicável tem outra estrutura (o Tally prefixa a letra de atalho,
-e apareceu como `A Candidature spontanée` na varredura de opções).
+**Três provas, todas do servidor:**
 
-**Próximo passo, concreto:** clicar a opção da primeira pergunta casando por `includes` em vez de
-igualdade (`/Candidature spontanée/`, aceitando o prefixo `A `), remapear, e só então preencher
-tudo **de uma vez** e clicar em enviar **uma única vez**. Ferramentas já no lugar:
-`/home/user/apply/fost_map.js` (mapa por ordem de documento), `/home/user/apply/fost_map2.js`
-(tentativa de revelar o condicional) e `/home/user/apply/ans_fost.json`.
+1. `POST https://api.tally.so/forms/3laXq5/respond` → **200** com o corpo
+   `{"submissionId":"xVo1z6y","respondentId":"J9jEg4Y"}`. É o único `POST` da sessão que não é
+   `/events` (telemetria) nem Sentry, e é ele que cria a resposta.
+2. A tela trocou para **`Form submitted`**, com o texto literal *"Merci d'avoir rempli notre
+   formulaire ! Un mail accusant bonne réception de votre candidature vient de vous être envoyé.
+   (vérifiez vos spams !) A bientôt au studio !"* — captura em `/home/user/apply/fost_envio.png`.
+3. **Recibo no Gmail às 04h31m12**, de `notifications@tally.so`, assunto literal
+   **`[FOST] Candidature`**.
 
-**Segurança de tentar:** pela medição de 17/09, **tentativa incompleta no Tally não cria
-resposta** ("N questions need your attention" e nada é gravado), então errar aqui não gasta
-candidatura nem suja o placar.
+**O que foi declarado:** `Candidature spontanée`; departamentos **`Chara Modeling` + `Groom / CFX`
++ `Texturing`** (o form pede *"maximum 3 main skills"* e foram exatamente três); softwares
+`Blender (3D)`, `Maya`, `Zbrush`, `Substance`, `Photoshop`, `Unity`, `Unreal` (a linha canônica
+dele); contrato **Intermittence**; nível **Senior**; estúdio **Paris + Remote**; projeto
+`KIS - Kindred Spirit`; nacionalidade `Brazilian`; disponibilidade a partir de `2026-10-15`; e uma
+**carta de motivação de 1.348 caracteres em francês**, que cita entre aspas as duas rubricas do
+próprio formulário. **Verdade na autorização:** marcado `No but I can move to France`, e a carta
+diz em francês que ele não vive na França, que pode se mudar e que **precisaria de título de
+trabalho patrocinado pela casa**. **Sem campo de pretensão** (a faixa de EUR 45.000 não teve onde
+entrar) e **sem campo de anexo** — portfólio e demoreel vão por **link**, e as duas senhas de
+portfólio ficaram vazias de propósito porque o portfólio dele é público.
+
+### As cinco armadilhas deste Tally, medidas uma por uma
+
+1. **O formulário tem CINCO páginas, não uma.** A medição de 03h ("todas as perguntas numa página
+   só, o `Next` só valida") estava **errada por consequência**: o `Next` *também* valida, e
+   enquanto falta resposta obrigatória ele fica na mesma página — o que parece "não avança".
+   Preenchida a página, ele **avança de verdade**. As cinco: (1) dados pessoais + contrato +
+   mobilidade + estúdio + nível + disponibilidade; (2) **departamentos e softwares**, onde vive o
+   `Chara Modeling`; (3) a carta de motivação; (4) o consentimento RGPD, que traz o `Submit`; e a
+   (5) tela de confirmação.
+2. **A primeira pergunta é um DROPDOWN disfarçado, não radio.** Ela aparece no mapa de controles
+   como um **`input type=text` SEM placeholder** — era o "campo 0" que o mapa anterior não sabia
+   nomear. Clicar nele abre a lista. Foi por isso que o clique por texto (exato *ou* por
+   `includes`) não achava nada: **a opção não existe no DOM até o dropdown abrir**. E hoje a lista
+   tem **uma opção só**, `Candidature spontanée` — o `2603 - Appel à candidatures` do dossiê das
+   03h **não está mais lá**.
+3. **A pergunta de projetos parece galeria de imagens mas é RADIO.** Cliquei `KIS` e depois `BRU`
+   e o resultado foi **só `BRU` marcado**: clicar o segundo **troca** em vez de somar. Quem
+   quiser dois projetos não consegue, e quem clicar em laço fica com o último.
+4. **O textarea da carta é controlado pelo React: `el.value = ...` NÃO registra.** Setei o valor e
+   despachei `input` e `change`, e o Tally continuou dizendo **`Please enter a value`** com
+   *"1 question needs your attention"*. **`p.fill` escreve de verdade** (conferido: 1.348
+   caracteres no campo). O mesmo vale para o telefone, com um agravante: o `input type=tel`
+   **reformata o que recebe**, e o `p.fill` deixou apenas um prefixo de país errado no campo.
+   Digitar devagar (`p.type` com `delay`) preserva o número — e **o valor do campo tem que ser
+   conferido depois de escrever, nunca presumido**.
+5. **A caixa obrigatória do RGPD se chama `Oui / Yes`, o MESMO rótulo da resposta de
+   *"Avez vous déjà travaillé chez nous ?"* da página 1** — onde a resposta certa é `Non / No`.
+   Uma lista geral de escolhas por rótulo, portanto, **erra a página 1 se incluir `Oui / Yes` e
+   perde o consentimento se não incluir**. A solução que funciona é **condicionar à página**:
+   só clicar `Oui / Yes` quando o texto da página casar `/RGPD|GDPR/`. **Medido:** sem ela o
+   `Submit` é **recusado** com *"1 question needs your attention / Please select an option"*.
+
+**Confirmado de novo, e é o que deixa tentar sem medo:** o primeiro `Submit` desta rodada foi
+**recusado** por falta do consentimento e **nenhuma resposta foi criada** — o `/respond` só
+aparece na rede quando o envio completa. Tentativa incompleta no Tally não gasta candidatura.
+
+**Como ler um `<label>` do Tally sem re-clicar por engano:** o input de cada opção é **escondido**
+e não entra em `querySelectorAll('input')` visível, mas `label.control` (ou `getElementById` do
+`htmlFor`) **devolve o input e o `checked`**. Ler isso antes de clicar é o que evita o desmarque
+de múltipla escolha descrito nas 03h. O prefixo `A `/`B ` é um **DIV irmão** de atalho: casar pelo
+`<label>` já entrega o texto limpo, sem precisar de `includes`.
+
+**Ferramenta final, reutilizável para todo Tally multipágina:**
+`/home/user/apply/fost_fill.js` (`sh hb_run.sh fost_fill.js seco|ENVIAR`). O modo `seco` para
+**antes** do botão da página da carta, porque **todas as páginas deste formulário rotulam o botão
+`Next`** e um clique ali pode já ser o envio. Os diagnósticos ficaram em
+`/home/user/apply/fost_go.js` e `/home/user/apply/fost_d2.js`.
+
+**Ressalva honesta:** é candidatura **espontânea**, não requisição aberta — a casa não publica
+vaga no momento, e o seletor de disciplina existe porque o formulário é o **banco de talentos
+permanente** dela. E a FOST é casa **pequena** de animação francesa, não estúdio grande.
