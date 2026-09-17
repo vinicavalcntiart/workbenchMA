@@ -5121,3 +5121,92 @@ endereços publicados foram descartados por técnica ou por não serem estúdio*
 Tulipop, Compass, Made By Us, Sphere/Oasis).
 
 > **Maestro, 17/09 01h25 UTC:** lote de quatro cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par do lote 38%): Andreas Ibohm / Filmic Animation `r1295132988803354840`; Josh Robinson / Time Based Arts `r8492986745259918271` (a carta diz que o Tom não respondeu e que esta é a última tentativa); Ronnie Fridthjof / Fridthjof Animation `r-6682290126727102652` (a carta pergunta se as produções são 3D, porque a técnica não está confirmada); Sofie Edvardsson / Soja `r9001855112013796033`. Jon Robins (Striking Distance) fica `sem-email`. Saem pelo Apps Script do Vini.
+
+
+---
+
+## JOE, 17/09/2026 04h35 UTC — A VEIA QUE RENDEU FOI A **PÁGINA DE DETALHE DO DIRETÓRIO IRLANDÊS ATÉ O FIM** MAIS UM ACHADO EM VANCOUVER
+
+**O que esta rodada fez de diferente.** A ordem trazia três veias. Digo o placar de cada uma **antes**
+das fichas, porque uma delas é veia nova de verdade e duas deram zero:
+
+1. **Nomes de casa novos do Jhon A (Triggerfish, Dulaman, Whackala, Stiuideo Fia e os outros dos 14):**
+   RENDEU. Mas não pelo site deles: rendeu pela **página de detalhe do diretório**
+   `animationireland.com/studios/<slug>/`, que é a mesma veia de 14/09 e que **nunca tinha sido lida
+   até o fim** — as 47 páginas foram abertas naquele dia, mas os slugs da **página 2** do índice
+   (`/studios/page/2/`) e as casas novas entradas depois **ficaram fora**. Abri as 47 de novo e os 21
+   slugs inéditos, e o bloco `studio_contacts` do HTML entrega `[<h4>Nome</h4>][<p class="c_role">
+   cargo</p>][mailto:]` colado, sem ambiguidade.
+2. **Rodapé de paper e palestra fora da ACM:** não gastei a rodada nisso, porque a rodada de 00h35 já
+   mediu a ACM em 403 e o caminho até o PDF passa por lá. Ver a nota de método no fim.
+3. **Crédito de 80.lv / ArtStation Magazine / Animation Magazine para Vancouver:** **ZERO, e medido.**
+   `80.lv/?s=SkyBox+Labs` responde **200 com 173 KB e nenhum link de artigo no HTML** (a busca é
+   client-side, igual ao `/jobs?search=` do Hitmarker), e `animationmagazine.net/?s=...` responde
+   **403 com 919 bytes**. Vancouver **não saiu por imprensa** nesta rodada — saiu por site de estúdio,
+   e a ficha do Timbre Games abaixo é a prova de que ainda há casa de BC nunca aberta.
+
+**VEIA NOVA, e ela corrige uma linha escrita duas vezes neste repositório.** O `processados.csv` de
+11/09 e de 14/09 diz que `animationuk.org/members` *"monta a lista por JavaScript e o curl só vê
+patrocinador, então só serve com navegador"*. **Está errado por identificador, não por parede:** o
+site é WordPress e o tipo de post `members` tem `rest_base` **`organisations`**, ou seja a lista sai
+inteira por `curl`, sem navegador:
+
+```
+curl -sS "https://www.animationuk.org/wp-json/wp/v2/types"                  # revela rest_base
+curl -sS "https://www.animationuk.org/wp-json/wp/v2/organisations?per_page=100&page=N"
+```
+
+Três páginas, **107 domínios de membro** com `membership_section` (Animation Member, Facilities
+Member, Supporter) e `website_main`. **67 deles não têm uma menção em todo o repositório.** O
+rendimento honesto de endereço, porém, é o mesmo da varredura de casa pequena: varri 24 dos 67 (os de
+animação e VFX) em onze caminhos cada e **não saiu um endereço de pessoa** — só `hello@`, `info@`,
+`office@`, `enquiries@` e, na Atelier 11, um `production@hazimation.com` que é **domínio de
+terceiro**. **A veia rende NOME DE CASA e universo novo, não endereço.** A lista dos 67 fica no
+relatório da rodada, e quem voltar deve ir por diretório de associação com página de detalhe (o
+irlandês), não por varredura de site.
+
+### FICHA 1 — Vanessa Robinson, Little Moon Animation (Dublin, Irlanda)
+
+- **Email: `vanessa@littlemoonanimation.com` — PUBLICADO, confiança ALTA, e confirmado por TRÊS vias
+  independentes.** Nada montado.
+  1. **`mailto:` cru no diretório**, colado ao nome e ao cargo:
+     `<h4>Vanessa Robinson</h4> <p class="c_role"> Creative Producer </p> <p class="email"> <a href="mailto:vanessa@littlemoonanimation.com">`
+  2. **Site da própria casa**, na forma ofuscada **delimitada** (que é a única que o brief autoriza
+     desofuscar): `Creative Producer Vanessa Robinson Contact email: vanessa (at) littlemoonanimation (dot) com`
+  3. **A caixa está VIVA e isso veio da caixa do Vini:** a carta de 02/09 para `jobs@` recebeu
+     auto-resposta enviada de **`vanessa+canned.response@littlemoonanimation.com`**. O `+tag` é da
+     conta dela, ou seja o servidor confirma que a parte local `vanessa` existe e responde.
+- **URLs exatas abertas nesta rodada:** `https://www.animationireland.com/studios/little-moon/` ,
+  `https://www.littlemoonanimation.com/contact` , `https://www.littlemoonanimation.com/about` e
+  `https://www.littlemoonanimation.com/jobs`. Nenhuma é página 404: procurei `Page not found` e
+  `We couldn't find the page` no texto limpo das quatro e não aparece.
+- **Por que ESSA pessoa e não outra da casa:** o `/about` publica a chefia inteira — *"Meet The
+  Executive Team: Vanessa Robinson, Co-Founder & CEO; Eoghan Garvey, Co-Founder & CCO; David
+  McCamley, Creative Director; Lisa O'Connor, Development Producer"* — e **ela é a única com endereço
+  publicado**, além de ser cofundadora, que é a cadeira que o `BRIEF-JOE` manda procurar em casa
+  pequena. **David McCamley (Creative Director) fica como SEGUNDA e última pessoa da casa**, no dia em
+  que um endereço dele aparecer publicado; não montei nada para ele.
+  Registro de divergência de cargo: o diretório a chama **Creative Producer** e o site da casa a
+  chama **Co-Founder & CEO**. Pela regra de 00h35, **o site manda**.
+- **Gancho com a frase do próprio estúdio, entre aspas:** o `/about` escreve
+  *"Little Moon Animation is an award winning **CG** animation studio dedicated to creating compelling
+  projects **full of character** and imaginative story"*, e o diretório marca a técnica da casa como
+  **`Skills in... 3D`** — é a única casa irlandesa do diretório inteiro cuja lista de técnica é **só
+  3D**, sem 2D ao lado. A produção nomeada pela própria casa é *Fia's Fairies*, 26 x 5' para o RTÉjr.
+- **Fora dos EUA: SIM, Irlanda / UE.** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `littlemoonanimation OR "Little Moon" OR Robinson OR "Fia's
+  Fairies"` devolveu **três threads**, e só uma é da casa: a carta de **02/09 para
+  `jobs@littlemoonanimation.com`** e a auto-resposta descrita acima. **Zero carta para pessoa, zero
+  resposta humana, zero recusa, zero bounce.** Pelo teto contado no `in:sent` por domínio, a casa está
+  em **uma mensagem, para caixa genérica**, e Vanessa Robinson é a **primeira pessoa com nome**. Em
+  `pessoas.csv` a casa não tem ninguém (o único acerto de `littlemoon` no arquivo está **dentro** do
+  texto de dedupe de outra ficha de 14/09); `docs/index.html` só registra o `jobs@`.
+- **RESSALVA HONESTA:** (1) o cargo é **produção e negócio** (Creative Producer / CEO), não arte — quem
+  decide o look é o David McCamley, e é dele que não há endereço; (2) `/jobs` diz **"No results found"**
+  e a única vaga arquivada é *Social Media Manager (Part-time)* de junho de 2025, ou seja **não há vaga
+  de personagem**, é carta de porta; (3) a casa já recebeu uma candidatura espontânea em 02/09 e a
+  auto-resposta diz *"We always look forward to going through applications"* — então a carta tem de
+  reconhecer que ela já mandou currículo antes, em vez de se apresentar como primeiro contato;
+  (4) o catálogo é **pré-escolar** (*Fia's Fairies*, aprendizado de irlandês), onde personagem é
+  simples e groom e escultura pesam pouco, o oposto do que o portfólio dele mostra; (5) a chefia
+  publicada tem quatro pessoas, porte que raramente abre assento sênior.
