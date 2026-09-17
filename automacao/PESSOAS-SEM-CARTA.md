@@ -6339,3 +6339,83 @@ casas de gancho forte cujo contato do diretório é caixa funcional (Ludia, Erup
 Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de equipe.
 
 > **Maestro, 17/09 13h00 UTC:** lote de quatro cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 37%): Reid Schneider / Raccoon Logic `r2396450305158256370` (segunda e última da casa; a carta diz que o CV já entrou pelo `jobs@` em setembro); Thomas Giroux / Yellow Brick Games `r-4359768143271621731` (pede encaminhamento ao time de personagem, reconhece os dois assentos ocupados); Clémence Maurer / Root Motion `r-850569016980797566` (casa de uma pessoa, carta pede ser o primeiro nome quando precisar de segunda mão); Wylem Decaille / Postmeridian `r8697704758002840991` (pergunta se querem um segundo artista de personagem quando o mundo crescer). Jonathan Rancourt (Hatchery) fica `sem-email`. Cartas frias saem pelo Apps Script do Vini (limite de ferramenta: o conector não cria mensagem nova com anexo).
+
+## JOE, 17/09/2026 16h35 UTC — A VEIA QUE RENDEU FOI **CRÉDITO DE JOGO E PRESS RELEASE DE PUBLISHER** FECHANDO O PAREAMENTO DE ENDEREÇO QUE JÁ ESTAVA NA MÃO, E A VEIA 3 (`massivefinger` / `columel`) ABRIU NA TERCEIRA MEDIÇÃO **POR CAUSA DO PROTOCOLO**
+
+**As três veias da ordem, com o placar antes das fichas:**
+
+1. **Casas de gancho forte do Québec com contato de caixa funcional, atacadas por crédito de jogo:
+   RENDEU TRÊS DE OITO.** Le Catnip Collective (fechada pelo *boilerplate do press release da Team17*),
+   Ludia (fechada por *entrevista do Lien MULTIMÉDIA* + cruzamento com o diretório de 2026) e Erupting
+   Avocado (fechada pelo **`/about` que redireciona para `/about-3/`**, caminho que a rodada das 12h35
+   não tinha). No Deadlines fechou por **página de créditos do próprio jogo**. Vox Prima, Bold Spirit,
+   Breaking Walls e BadRez continuam sem pareamento, com o motivo de cada uma escrito abaixo.
+2. **A cauda do diretório da Guilde (~48 endereços): ZERO ficha, e agora está medido com número.**
+   Refiz a varredura das **400** páginas de detalhe (`laguilde.quebec/membre/<slug>/`, 400/400 em 200),
+   extraí **129 endereços com forma de pessoa** e cruzei endereço E domínio contra
+   `automacao/*.csv`, `automacao/*.md`, `alvos.csv`, `enviados.csv`, `BRIEFING.md` e `docs/index.html`:
+   **36 nunca mencionados no repositório**. Desses 36, **13 são escola ou universidade** (Rubika,
+   Isart Digital, UQAT, UQTR, Collège LaSalle, Collège Bois-de-Boulogne, CDRIN, CFP Val-d'Or),
+   **6 são áudio ou voz** (SilverJack, Geek Sound Factory, Solutions Audio Nora Hébert, Frostune já
+   registrada), **7 são serviço, tradução, marketing, RH ou plataforma** (ITC Global, Rhum hr,
+   AppMarketingData, Streamforge, Hackquarius, Maitop, Mintbox) e o resto é estúdio de uma pessoa.
+   **A cauda está esgotada como fonte de ficha**, e a razão é estrutural, não de sorte: o diretório
+   ordena por tamanho de cotização, então a cauda É a lista das casas sem departamento.
+3. **`massivefinger.com` e `columel.com`: TERCEIRA MEDIÇÃO, E A RESPOSTA NÃO É "PAREDE".**
+   Em `https://` os dois devolvem **`000` em 12 caminhos** pela terceira vez (controle na mesma
+   janela: `laguilde.quebec` 200 com 48.258 bytes). **Em `http://` os dois devolvem 200.** O que as
+   duas rodadas anteriores leram como parede é **apex sem certificado que casa**:
+   - `columel.com` → `http://columel.com/` responde **200 com 129.875 bytes** e o efetivo é
+     **`https://www.columel.com/`**, que sozinho também dá **200** (o apex `https://columel.com/`
+     continua `000`). **O `www` era a chave.**
+   - `massivefinger.com` → **200 com 888 bytes**, e o corpo é um **`<frameset>` apontando para
+     `https://massivefinger.tumblr.com`**, que abre (200, 21.012 bytes) e tem **269 caracteres de
+     texto**, nenhum nome, nenhum `mailto`. **Não é casa sem pessoa nem parede: é domínio
+     estacionado num Tumblr vazio.** A pista `laurent.mascherpa@massivefinger.com` fica morta por
+     ausência de casa, não por ausência de página. **Não reabrir.**
+   **Regra de método que sai daí, e ela é nova:** antes de escrever `000` como parede, tentar
+   **`http://`** e **`www.`**. Dois dos três "000" da rodada das 12h35 eram protocolo e prefixo.
+
+### FICHA 1 — Daniel Harris, Le Catnip Collective (Montréal, Québec, Canadá)
+
+- **Email: `dan@lecatnipcollective.com` — PUBLICADO, confiança ALTA.** Nada montado: está em
+  `mailto:` cru na página de detalhe do diretório da Guilde, aberta por mim nesta rodada em
+  **`https://www.laguilde.quebec/membre/woodwalker-games/`** (200, 36.170 bytes; o slug é
+  `woodwalker-games`, nome antigo da casa, e é por isso que ninguém tinha achado a página).
+- **URL que fecha o pareamento, aberta nesta rodada:**
+  **`https://www.gamespress.com/Le-Catnip-Collective-and-Team17-Digital-partner-up-for-Jumping-Jazz-Ca`**
+  (200, 44.344 bytes), o *press release oficial* da Team17, cujo boilerplate diz literalmente:
+  *"Founded in Montreal, Canada Le Catnip Collective is an indie developer led by **Cofounders
+  Daniel Harris and Arun Sol Warszawski**. Their first game Jumping Jazz Cats is a feline infused
+  online party game."* O release da Gematsu
+  (`https://www.gematsu.com/2024/10/multiplayer-party-game-jumping-jazz-cats-for-pc-to-be-published-by-team17`,
+  200, 102.454 bytes) confirma a casa e dá o cargo do OUTRO sócio: *"Le Catnip Collective
+  **co-founder and sound designer Arun Sol Warszawski**"*.
+- **Por que ELE e não outro da casa:** a casa tem dois sócios e o diretório publica **um** endereço,
+  `dan@`. O outro sócio é **Arun** e o cargo publicado dele é **sound designer**, ou seja áudio.
+  `dan@` só pode ser **Daniel Harris**, e ele é o sócio que não é de som — é a cadeira de quem
+  decide arte numa casa de dois. **Isto CORRIGE a nota das 12h35**, que deu a casa como
+  "endereço de primeiro nome sem nome nem cargo em lugar nenhum" (caso Barnstorm): o nome e o
+  cargo existem, só não estão no site da casa, e sim no release do publisher.
+- **Gancho com a frase da própria casa** (`https://www.lecatnipcollective.com/`, 200, 591.716 bytes):
+  *"Des jeux vidéo indépendants **infusés de personnalité**, et concoctés pour faire ressortir les
+  zoomies même chez les chats les plus cool"*, o Jumping Jazz Cats é *"un jeu de plateforme en ligne
+  de type party game … un **patte-parkour** … dans un **manoir au style cartoon**"*, e a home anuncia
+  *"Nous travaillons présentement sur notre prochain titre: **Architects of Giants**"*. Plataforma 3D
+  estilizado com elenco de gatos e um próximo título cujo nome é gancho de criatura: é o encaixe
+  mais direto de personagem estilizado desta rodada.
+- **Fora dos EUA: sim** (Montréal, Canadá) — a frase de realocação entra, e o Canadá é o país
+  número um do BRIEF-JOE.
+- **O que o Gmail devolveu:** `lecatnipcollective OR Catnip OR "Jumping Jazz Cats" OR Harris`
+  devolveu **`{}`** (zero threads), e `in:sent (lecatnipcollective OR ...)` devolveu **`{}`**.
+  Teto por domínio = **zero**: esta é a **primeira** pessoa e a primeira mensagem da casa.
+  No repositório, `dan@lecatnipcollective.com`, `lecatnipcollective` e `Daniel Harris` dão
+  **0 acerto** em `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html`.
+- **RESSALVA HONESTA, e são três:** (1) o cargo publicado é **Cofounder**, não um cargo de arte —
+  a casa é pequena demais para ter Art Director, então quem lê a carta é o sócio, o que é bom para
+  resposta e ruim para requisição aberta; (2) o release é de **outubro de 2024** e quem o assina é
+  o publisher, não a casa, então a fonte é oficial mas de segunda mão; (3) o pareamento
+  `dan@` → **Daniel** é leitura de primeiro nome, não igualdade literal: o endereço é publicado
+  (não corre risco de 550 por montagem), mas se a casa tiver um segundo Dan, a carta cai na pessoa
+  errada; (4) o `/emplois` da casa diz, medido às 12h35, *"Il n'y a malheureusement aucun poste de
+  disponible présentement"* — não há vaga aberta, isto é carta de fila, não candidatura.
