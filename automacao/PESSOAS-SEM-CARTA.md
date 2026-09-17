@@ -4703,3 +4703,84 @@ por semana no escritório (terça e quarta) e três remotos**.
    em Letchworth. O visto precisa ser aberto na carta, não deixado para a entrevista.
 
 > **Maestro, 16/09 22h05 UTC:** carta da **Secret Level Studios (Art Lead / Art Director, Character Art)** escrita e gravada como rascunho `r-8873142809096571374`, com o assunto que a casa exige (`Art Lead / Director Application`), 232 palavras, `confere-carta.py` limpo, localização atual e aceite do híbrido escritos como a vaga pede, ressalvas de animação e de visto ditas. O endereço entrou em `ASSUNTO_PROPRIO_PERMITIDOS` do `envia-rascunhos.gs` (anexa CV e carta): **o Vini precisa colar a versão nova do script no Apps Script antes de rodar `enviarRascunhos()`**, senão este rascunho fica parado por assunto fora do padrão.
+
+---
+
+## JOE, 17/09/2026 00h35 UTC — MUDANÇA DE MÉTODO: DIRETÓRIO DE ASSOCIAÇÃO E SITE QUE TROCOU DE DOMÍNIO
+
+**O que esta rodada mudou.** A ordem era abandonar a varredura por domínio de casa pequena (ontem: 63
+domínios abertos, 1 endereço) e trocar por crédito, palestra e rodapé de paper. Fiz as três e digo o
+placar de cada uma **antes** das fichas, porque duas delas deram zero e isso é informação:
+
+- **Crédito de jogo (MobyGames):** `www.mobygames.com/company/...` e `/search/` devolvem **HTTP 403 com
+  5.4 KB** para este túnel. Não é falta de página, é bloqueio. Sem crédito de jogo nesta rodada.
+- **Palestra (GDC):** `schedule.gdconf.com/speaker` devolve **403 / 5.430 bytes**;
+  `schedule2026.gdconf.com` dá **502 no CONNECT**. Lista de palestrante do GDC está fechada aqui.
+- **Rodapé de paper:** `s2025.siggraph.org` e `s2026.siggraph.org` abrem (200), mas
+  **`dl.acm.org` devolve 403** e é lá que moram os PDFs com email de autor. `diglib.eg.org` abre e é
+  quase só academia. `digipro.org` responde **342 bytes** (casca). A veia existe, mas o caminho até o
+  PDF passa pela ACM, que está barrada neste túnel. **Não gaste a próxima rodada tentando pela ACM.**
+- **`recruiter-email` do Teamtailor:** varrido em **73 domínios** nórdicos, britânicos e holandeses
+  (`/`, `/careers`, `/jobs`, `/career`, `/work-with-us`, `/join-us`). Apareceu em **um**, e é o que já
+  estava registrado desde 07/09: `marina.jonsdottir@starbreeze.com`. Confirma o que o brief diz: a veia
+  é rica e **rara**, serve de teste barato, nunca de varredura.
+- **Impressum alemão**, que o brief marcava como "o mais promissor ainda não minerado: varrido em **22
+  domínios** de casas alemãs, austríacas e suíças (`/impressum`, `/datenschutz`, `/legal-notice`,
+  `/imprint`, `/kontakt`, `/legal`). Devolveu **zero endereço de pessoa** — só `newbiz@` e `work@` da
+  Woodblock. A lei alemã obriga a nomear a pessoa responsável, mas **não obriga a publicar o email dela**,
+  e as casas publicam `info@`. **A veia do impressum pode sair da lista de promessas.**
+
+**O que RENDEU foram duas coisas, e as duas são repetíveis:**
+
+1. **Diretório de associação setorial** (`nordicanimation.com/studios-producers/`), que pareia
+   **estúdio + nome + email** em quarenta e nove endereços numa página só. Já tinha sido minerado em
+   15/09, mas **não até o fim**: sobraram casas inteiras sem ficha.
+2. **Site que trocou de domínio**, que é a armadilha inversa da Stunlock. Ver a ficha da Filmic.
+
+### FICHA 1 — Andreas Ibohm, Filmic Animation (Estocolmo, Suécia)
+
+- **Email: `andreas@filmic.se` — PUBLICADO pela própria casa, com nome E cargo ao lado, confiança ALTA.**
+  Nada montado: o endereço está em texto visível, imediatamente abaixo do nome e do título.
+- **URLs exatas abertas nesta rodada:** `https://filmic.se/en/contact/` e `https://filmic.se/en/about/`
+  (o bloco se repete nas duas). O trecho, na ordem em que a página imprime:
+  `Business | Andreas Ibohm | Executive Producer | andreas@filmic.se`, e logo depois
+  `Moa Thenstedt Åkerström | Producer | moa@filmic.se`.
+- **A ARMADILHA DE DOMÍNIO, e ela é o achado de método desta ficha.** O diretório da Nordic Animation
+  publica esta casa como *"Filmic Art, Sweden — Jonathan Knape — `jonathan@filmicart.com`"*. **Não use
+  esse endereço.** `https://www.filmicart.com/` **redireciona para `https://filmic.se/en/`**: a casa
+  mudou de nome comercial (hoje assina **Filmic Animation**) e de domínio de email. `filmicart.com` é o
+  domínio antigo, e um endereço nele é exatamente o tipo de chute que produziu as 17 devoluções de 07/09.
+  É a Stunlock ao contrário: lá o site era `stunlock.com` e o email `@stunlockstudios.com`; aqui o
+  diretório carrega o domínio velho e o site carrega o novo. **Regra: quando o diretório e o site
+  discordarem do domínio, o site manda.**
+- **Por que ESSA pessoa e não outra da casa:** a casa publica **exatamente duas** pessoas com endereço,
+  e as duas são de negócio e produção. O Andreas Ibohm é **Executive Producer**, ou seja o degrau mais
+  alto publicado; a Moa Thenstedt Åkerström é **Producer** e fica como **SEGUNDA e última** pessoa
+  possível. Não há endereço publicado de diretor de arte, e o site diz que a direção de arte é
+  **interna** (*"in-house art direction"*), sem nomear ninguém. Casa de vinte estações, então cabe na
+  régua de casa pequena do brief, onde produtor executivo e dono respondem eles mesmos.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a página de serviços escreve que o time faz
+  *"photo-realistic 3D modeling and lighting or rigging and animation of advanced 3D characters or
+  animals"*, e a casa se apresenta como *"an award winning animation production company, founded in
+  Sweden in 2007"* com força em *"managing large, technical, and highly creative projects in 3D and 2D"*.
+  O portfólio de clientes citado pela própria home tem **Clash Royale, Minecraft e Paradox Interactive**,
+  ou seja **trailer de jogo**, que é onde personagem estilizado aparece.
+- **Casa fora dos EUA: SIM, Suécia (Estocolmo, Gamla Stan).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** a busca `madebyus OR compassfilms OR "Made By Us" OR "Compass
+  Films" OR dockhus OR leefilm OR "Filmic Art" OR Tulipop` devolveu **uma** thread, e ela é da Filmic:
+  carta fria em **02/09 para `jobb@filmic.se`** e follow-up em **07/09 para o mesmo endereço**. As duas
+  foram para **CAIXA funcional**, não para pessoa: ou seja a casa tem **zero pessoa** contatada e o
+  Andreas é a **primeira**, com uma vaga de cota ainda livre depois dele. Em `pessoas.csv` a string
+  `filmicart` só aparece **dentro do texto de dedupe de outra ficha** (a rodada de 15/09 pesquisou e não
+  escreveu ficha); `andreas@filmic.se` e `filmic.se` **não** aparecem em `pessoas.csv`,
+  `processados.csv` nem `docs/index.html`.
+- **RESSALVA HONESTA, e são quatro:** (1) a casa é de **publicidade e trailer**, não de longa de
+  animação nem de pipeline de personagem de filme; o personagem aparece a serviço de marca.
+  (2) O cargo é **produção**, não arte: o Andreas não é o par de ofício dele, é quem decide contratar.
+  (3) A casa **já recebeu duas mensagens** na caixa `jobb@` e não respondeu nenhuma, então a terceira
+  mensagem precisa reconhecer isso em vez de fingir primeiro contato — **a carta é o terceiro toque na
+  mesma casa**, e por isso tem que ir para a pessoa e não para a caixa. (4) A própria página de Talent
+  lista o que a casa procura (*"an experienced Producer, Junior Producer, 3D artist, Comp Artist, 2D
+  Animator, Game Capture Artist, Editor or Illustrator"*): diz **3D artist**, e **não** diz character
+  artist. Telefones publicados ao lado dos dois nomes **deliberadamente não registrados**, porque o
+  repositório é público.
