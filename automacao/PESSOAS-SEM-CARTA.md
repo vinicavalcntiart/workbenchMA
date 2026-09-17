@@ -5908,3 +5908,72 @@ email em nenhum dos 205 posts. Não voltar.
   (5) o `alvos.csv` registra que a única vaga aberta em 07/09 era **Online Programmer**, e o
   `/careers` de hoje (130.887 bytes) é o quadro deles, não uma vaga de arte; (6) nenhuma página da
   casa diz uma palavra sobre patrocínio de visto.
+
+### FICHA 2 — Thomas Giroux, Yellow Brick Games (Québec City + Montréal, Canadá) — **68 devs, Lead Character Artist E Senior Character Modeler publicados, e a casa estava dada como "sem pareamento" às 08h35**
+
+- **Email: `tom@yellowbrickgames.ca` — PUBLICADO, confiança ALTA quanto ao endereço.** `mailto:` cru na
+  página de detalhe do diretório da Guilde. Nada montado.
+- **URLs exatas abertas nesta rodada, e são quatro porque o pareamento exigiu quatro:**
+  1. `https://www.laguilde.quebec/membre/yellow-brick-games/` (**200, 33.944 bytes**; HTML cru:
+     `<h2 class="text-flip">Yellow Brick Games</h2>` … `<a href="http://www.yellowbrickgames.ca"
+     class="btn" target="_blank">Consultez le site Web</a>` … `mailto:tom@yellowbrickgames.ca`).
+  2. `https://yellowbrickgames.ca/our-team/` (**200, 298.456 bytes**) — **o caminho que a rodada das
+     08h35 não testou.** Publica a equipe inteira com cargo, em PRIMEIRO NOME: *ANNE Associate
+     Producer*, *ALEXANDRE Concept Artist*, *FRED Game Director*, *DANIEL Visual Design Director*,
+     **NATALIA Senior Character Modeler**, *JEFF COO & Executive Producer*, *MIKE CCO*,
+     *MARC-ANTOINE Technical Art Director*, *SEBASTIEN Art Director*, **STEPHANIE Lead Character
+     Artist**, *STEVE Animation Director*, *PABLO Technical Rigger*, **THOMAS CEO** e mais uns vinte.
+  3. `https://yellowbrickgames.ca/video-game-industry-veterans-establish-yellow-brick-games-an-independant-studio-in-quebec-city/`
+     (**200, 81.448 bytes**) — comunicado oficial da própria casa, que fecha o sobrenome:
+     *"Laidlaw will be partnering with **Thomas Giroux**, Jeff Skalski, and Frédéric St-Laurent B."*
+     e *"Yellow Brick Games' **Chief Executive Officer, Thomas Giroux**, has a particularly strong
+     track record. Following a successful decade-long career at **Ubisoft Montréal**, Giroux founded
+     Sunny Side Up Creative"*.
+  4. `https://yellowbrickgames.ca/yellow-brick-games-takes-the-self-publishing-route-for-its-upcoming-debut-title-2/`
+     (**200, 80.246 bytes**) — confirma o cargo hoje, assinado: *"**Thomas Giroux, Co-founder and CEO
+     of Yellow Brick Games**"*.
+  Também abri `/press-room` (200, 89.507 bytes), `/about` (200, 87.234), `/games` (200, 91.340) e
+  `/jobs` (200, 103.794). **`/presskit` é 404 de 59.162 bytes** e **`/team` continua 404**, o que
+  confirma a nota antiga sem deixá-la matar a casa. Zero acerto de `Page not found` no texto limpo das
+  páginas boas. **Prova de catch-all:** caminho md5 inexistente devolve **404** com md5 `9270ef6cb180…`,
+  diferente do `2493984abd08…` do `/our-team`.
+- **Por que ESSA pessoa e não outra da casa:** os alvos de ofício seriam **SEBASTIEN, Art Director**,
+  **STEPHANIE, Lead Character Artist** e **NATALIA, Senior Character Modeler** — e **a casa publica
+  esses três só de primeiro nome**, sem sobrenome em página nenhuma, o que torna qualquer endereço
+  para eles um chute. O Thomas Giroux é o **único** cujo nome completo a casa publica, com cargo, nos
+  próprios comunicados, e é **Co-founder e CEO** de uma casa de **68 pessoas** com escritório em
+  Québec City e Montréal. **A carta pede para ser apontado ao Sebastien (Art Director) e à Stephanie
+  (Lead Character Artist), pelos primeiros nomes, que é o que a casa publica.** Não há segunda pessoa
+  possível com endereço, e montar `sebastien@` ou `stephanie@` é proibido.
+- **Gancho com a frase do próprio estúdio, entre aspas:** o `/about` diz *"Growing over 30 employees in
+  its first year, Yellow Brick Games is now a collection of **over 60 shiny bricks**"* e
+  *"We believe in **digital playgrounds**: deeply interactive spaces where player creativity can
+  shine"*; o `/jobs` abre com *"**Brick by Brick, One World at a Time** … brick by brick we are forging
+  the golden path of ethical development"*; o `/games` diz *"Our debut title, **Eternal Strands**,
+  released in January 2025"*. O `/our-team` ainda dá a frase da própria Lead Character Artist:
+  *"It is a truth universally acknowledged, that a person in possession of a video game, must be in
+  want of a good time."*
+- **Casa fora dos EUA: SIM, Canadá (Québec City, com escritório em Montréal).** A frase de realocação
+  **entra**, e é rota de prioridade 1 e 2. O `/jobs` diz, com palavras deles, *"Yellow Brick Games is
+  open to and experienced with **remote work** and work from home situations"* e *"**Over 11
+  nationalities** with a remote work presence on almost every continent"*, que é o sinal mais forte
+  desta rodada de casa que já contratou de fora.
+- **O que o Gmail devolveu no dedupe:** `yellowbrickgames OR "Yellow Brick" OR Giroux OR "Eternal
+  Strands"` devolveu **`{}`** — zero thread, nem enviada nem recebida. **Teto de duas por casa contado
+  no `in:sent` por domínio `yellowbrickgames.ca`: ZERO.** No repositório o domínio aparece em três
+  arquivos e **nenhum é carta**: `censo-canada-gamedevmap-0709.json`, `censo-wikidata.csv` e a nota de
+  08h35 deste próprio arquivo, que é a que a dava como sem pareamento. **"Thomas Giroux" não aparece em
+  nenhum arquivo.** Casa inédita como contato, e é a maior desta rodada.
+- **RESSALVA HONESTA:** (1) o cargo é **CEO**, não arte, e em casa de 68 pessoas o CEO **não** é quem
+  abre portfólio — o valor da carta aqui é o encaminhamento ao Art Director, não a leitura direta;
+  (2) **os dois assentos de personagem estão OCUPADOS** (Lead Character Artist e Senior Character
+  Modeler) e as sete vagas vivas do `/jobs` são *Production Manager – Gameplay*, *Gameplay Camera
+  Specialist*, **Environment Artist**, **Lead World Artist**, *Senior Technical Animator* e *System
+  Designer* — ou seja **só sobrou ambiente e mundo**, que é prioridade 3 pela regra de 10/09, e
+  nenhuma de personagem; (3) o endereço é `tom@`, apelido, e o nome completo vem de comunicado e não
+  do endereço, então **se a caixa for de uso comercial/parceria a carta cai em triagem**; (4) a casa
+  publica a equipe **sem sobrenome de propósito**, o que fecha a porta para o alvo de ofício e é o
+  motivo de esta carta ir ao CEO; (5) nenhuma página diz uma palavra sobre **patrocínio de visto** — o
+  que há é abertura a remoto, que é coisa diferente; (6) *Eternal Strands* já lançou em janeiro de
+  2025 e o segundo título é *"More details to be shared soon"*, ou seja a casa pode estar em vale de
+  produção, quando contratação de arte desacelera.
