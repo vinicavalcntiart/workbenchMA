@@ -3650,3 +3650,83 @@ O registro antigo da campanha dizia "Lever tem hCaptcha no HTML", que o próprio
 - **Consentimento de marketing**: opcional, deixe como preferir
 
 Depois é só **Submit**. Menos de um minuto.
+
+## FOST Studio (Paris e Angoulême, França) — Tally de recrutamento — MAPEADO E NÃO ENVIADO (17/09, Jhon A)
+
+**Link:** https://tally.so/r/3laXq5 (achado em `fost.studio/jobs`)
+**Por que vale:** estúdio de **animação** francês, e o formulário **nomeia a disciplina dele**:
+o seletor de função traz `Chara Modeling`, `Groom / CFX`, `Shading`, `Texturing` e
+`Character Design`. O site diz com todas as letras que **não aceita candidatura por email nem
+telefone** ("We do not accept job or internship applications by email or phone"), então o
+formulário é a única rota. **Não pede data de nascimento.** Casa inédita: zero menção no
+repositório antes de hoje.
+
+**Régua de veto:** rodada na URL final (`https://fost.studio/jobs/`), **1.029 caracteres** de
+texto limpo. Isso fica **abaixo do piso de 2.000**, mas aqui **não é leitura falha**: a página é
+curta de verdade e o texto vem inteiro, do menu ao rodapé e ao aviso de cookie. Três acertos, os
+três em `internship`, e os três são **falso positivo** — dizem que estágio/alternância não entra
+por este formulário e que as ofertas de estágio saem nas redes sociais. **Zero veto** contra ele.
+
+### As duas medições que custam a rodada de quem não souber
+
+1. **O formulário NÃO é wizard de uma pergunta por página.** Ele tem um portão
+   (`C'est compris ! Got it !`) e, depois dele, **todas as perguntas numa página só**. O botão
+   `Next` **não avança**: ele **valida**, e devolve o contador *"N questions need your attention"*.
+   Um andador que trate cada `Next` como página nova **re-clica as mesmas opções** e, em campo de
+   múltipla escolha, **desmarca o que já estava marcado** (medido: o contador subiu de 8 para 13
+   enquanto o laço "avançava").
+2. **O rótulo de cada controle vem DEPOIS dele no DOM.** Num percurso por ordem de documento, o
+   texto que se lê antes do `input` é o da opção **anterior**, então o mapa sai deslocado em um.
+   Os campos de texto se identificam pelo **placeholder**, que é confiável; as opções, não.
+
+### Mapa medido (32 controles, por ordem de documento; índice do controle → o que ele é de verdade)
+
+| Campos de texto (pelo placeholder, confiável) | Resposta |
+|---|---|
+| 5 `NOM / NAME` | Cavalcanti |
+| 6 `Prénom / First name` | Vini |
+| 7 `Email` | o email dele |
+| 8 `Téléphone / Phone` | telefone em formato internacional |
+| 9 `LinkedIn / Online CV` | o LinkedIn dele |
+| 10 `Portfolio` | https://www.artstation.com/viniciuscavalcanti |
+| 11 `Portfolio Password` | **deixar vazio** (portfólio é público) |
+| 12 `Demoreel` | o ArtStation serve |
+| 13 `Demo Password` | **deixar vazio** |
+| 14 `Nationalité / Nationality` | Brazilian |
+| 30 / 31 `Start date` / `End date` (Availability) | opcionais |
+
+| Escolhas (corrigido o deslocamento de um) | O que marcar |
+|---|---|
+| 1–4 projetos em desenvolvimento (SAU *The Wild Inside*, FLK *Flick!*, KIS *Kindred Spirit*, BRU *Brume*) | só se for candidatura a `Appel à candidatures` |
+| 15 `Intermittence / Contract`, 16 `Stage / Internship`, 17 `Alternance / Work-study training` | **15**, a única de emprego |
+| 18 `Oui / Yes`, 19 `Non / No` — *Have you ever worked with us?* | **19** |
+| 20 `Yes`, 21 `No but I can move to France`, 22 `No and I can't move to France` — *Do you live in France?* | **21**, que é a verdade dele |
+| 23 `Paris`, 24 `Angoulême`, 25 `Remote` — *In which studio...* (caixa, aceita mais de uma) | **23 e 25** (realocação primeiro, remoto atrás) |
+| 26 caixa de RQTH (inclusão de pessoa com deficiência) | **não marcar**, não se aplica |
+| 27 `Junior`, 28 `Middle`, 29 `Senior` (nota do próprio form: Senior = 6+ anos) | **29** |
+
+**Aviso escrito no próprio formulário, e ele importa:** */!\ nous n'embauchons pas de freelances /
+we can't hire freelancers /!\\* — a casa **não contrata freelance**, e por isso a opção de contrato
+que resta é a **intermittence** (estatuto de assalariado intermitente do audiovisual francês),
+não prestação de serviço.
+
+### O que FALTA, e é só isso
+
+**O seletor de disciplina (`Chara Modeling` e companhia) é CONDICIONAL e não aparece no primeiro
+estado da página** — os 32 controles mapeados não o contêm, e uma busca literal por
+`Chara Modeling` no texto visível devolve zero. Ele deve ser revelado por uma resposta anterior
+(provavelmente a primeira pergunta, *"Postulez-vous à une offre d'emploi spécifique ou en
+candidature spontanée ?"*, cujas opções **não são `input`** e por isso não entram no mapa de
+controles). Tentei clicar `Candidature spontanée` por texto exato e **não achei o elemento**, o
+que quer dizer que o rótulo clicável tem outra estrutura (o Tally prefixa a letra de atalho,
+e apareceu como `A Candidature spontanée` na varredura de opções).
+
+**Próximo passo, concreto:** clicar a opção da primeira pergunta casando por `includes` em vez de
+igualdade (`/Candidature spontanée/`, aceitando o prefixo `A `), remapear, e só então preencher
+tudo **de uma vez** e clicar em enviar **uma única vez**. Ferramentas já no lugar:
+`/home/user/apply/fost_map.js` (mapa por ordem de documento), `/home/user/apply/fost_map2.js`
+(tentativa de revelar o condicional) e `/home/user/apply/ans_fost.json`.
+
+**Segurança de tentar:** pela medição de 17/09, **tentativa incompleta no Tally não cria
+resposta** ("N questions need your attention" e nada é gravado), então errar aqui não gasta
+candidatura nem suja o placar.
