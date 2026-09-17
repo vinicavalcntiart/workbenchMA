@@ -3015,3 +3015,16 @@ candidatura.**
 - **A melhor porta NÃO testada que sobrou:** **Sinn Studio** (Toronto, híbrida), 200, **zero
   assinatura de captcha**, aplicação montada em JavaScript no `applytojobs.ca` — precisa de
   navegador e de mapa de campos. Topo da fila da próxima rodada.
+
+### 8. FECHO DO TURNO: O RECIBO DA HOUSE OF HOW CHEGOU, E ELE PROVA AS DUAS COISAS
+
+Às 09h04m26 UTC entrou o recibo de **`careers@houseofhow.com`**, assunto literal
+*"Senior 3D Artist - Sweden | Job Application at House of How"*, corpo *"We received your
+application and will be reviewing it shortly."* A candidatura está **confirmada pela caixa da
+própria casa** (não do fornecedor). E às **09h06m22** entrou o **segundo recibo, idêntico** — que
+prova a duplicata do item 4 acima, uma por submissão.
+
+**A medição que fecha o assunto e vale para toda porta sem captcha e sem tela de agradecimento:**
+o recibo do FormKeep levou **~2min30** (envio 09h01m51 → recibo 09h04m26; envio 09h03m48 →
+recibo 09h06m22). Esperar 22 ou 45 segundos na tela **nunca** confirmaria. **Nesse tipo de porta,
+a confirmação se busca no Gmail alguns minutos depois — e não se re-clica enquanto isso.**
