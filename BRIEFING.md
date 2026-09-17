@@ -3639,3 +3639,171 @@ sites novos, 31 recentes, zero da disciplina.**
   recorte, porque o objetivo dele é sair do país.
 
 > **17/09 15h00 UTC, correção:** `mpc.wd1/MPCCareers` **é a Marathon Petroleum** (132 vagas de refinaria e engenharia lidas por API), não a MPC de VFX. A nota das 14h49 que a dava como "132 vagas nunca lidas" está desfeita. `mpc.wd3` também é Marathon. A MPC/Technicolor não tem locatário Workday conhecido.
+
+## 17/09, 17h40 UTC (JHON A, nono turno) — O CENSO DA ARTSTATION CRUZADO COM OITO ENDPOINTS DE ATS: 125 QUADROS VIVOS, ZERO VAGA DA DISCIPLINA, E O MEU PRÓPRIO MEDIDOR ESTAVA ROTULANDO ERRADO
+
+Turno de **cruzamento por leitura de API**, na lane que o hand-back das 14h49 recomendou: os
+**3.363 slugs** de `automacao/censo-artstation-1709.csv` (mais variantes — slug sem hífen e slug
+sem os sufixos `-studio`, `-games`, `-animation`, `-inc`, `-entertainment`, `-vfx`, ...) contra
+**oito endpoints**: Greenhouse, Lever `api.lever.co`, Lever `api.eu.lever.co`, Ashby, Teamtailor
+(`jobs.json`, chave **`items`**, regra das 14h20), Recruitee, Breezy e BambooHR. Paralelismo 4,
+`--max-time 12`, zero navegador aberto (`ps -eo comm=` devolveu 0 no começo e no fim).
+
+**Resultado honesto: 37.409 sondagens em 4.685 slugs distintos, 125 quadros vivos, 1.121 vagas
+lidas por título, CINCO acertos do filtro de disciplina e NENHUM da disciplina de verdade. Zero
+candidatura, zero duplicata, nenhuma tentativa contra veto escrito.** A lista está em
+`automacao/censo-artstation-ats-1709.csv`, para a campanha não repetir a sondagem.
+
+| família | slugs sondados | conferidos | código 000 | quadros vivos |
+|---|---|---|---|---|
+| Greenhouse | 4.677 | 4.637 | 40 | **23** |
+| Lever (`api.lever.co`) | 4.678 | 4.670 | 8 | **13** |
+| Lever (`api.eu.lever.co`) | 4.677 | 4.676 | 1 | **0** |
+| Ashby | 4.677 | 4.676 | 1 | **26** |
+| Teamtailor | 4.675 | 4.557 | **118** | **6** |
+| Recruitee | 4.675 | 4.673 | 2 | **6** |
+| Breezy | 4.675 | 4.670 | 5 | **21** |
+| BambooHR | 4.675 | 4.636 | 39 | **30** |
+| **total** | **37.409** | **37.195** | **214** | **125** |
+
+Dos 125 quadros vivos, **48 publicam zero vaga** (locatário existe, quadro vazio) e 77 têm vaga.
+**Três já eram conhecidos do repositório** (`eastsidegames` no BambooHR, `crystaldynamics` no
+Greenhouse e `axis` no Teamtailor — e este terceiro é o item 3 abaixo).
+
+**Controle de falso negativo, obrigatório quando o resultado é "quase tudo 404":** injetei uma
+sondagem de token vivo conhecido a cada 500 requisições (`riotgames`, `bhvr`, `ramp`,
+`snowprintstudios`, `framestore`, `imageengine`, `asobostudio`). **74 de 74 devolveram 200**, com
+o corpo do tamanho esperado. Logo os **32.446 códigos 404 são medição real**, não túnel
+estrangulado. Os **214 códigos 000** e os **14 códigos 429** ficam como **NÃO CONFERIDO**.
+
+### 1. `write-out` NUM ARQUIVO DE CONFIGURAÇÃO DO `curl` É **GLOBAL**, NÃO POR URL — E O RÓTULO ERRADO NÃO TEM SINTOMA
+
+O primeiro medidor deste turno montou um `-K` com, para cada transferência, um bloco
+`url = ... / output = ... / write-out = "<família>\t<slug>\t%{http_code}..."`. Rodou 6.049
+requisições sem um erro, com a distribuição de códigos perfeitamente plausível (25 × 200,
+757 × 302, 5.349 × 404).
+
+**E os 25 acertos vieram todos rotulados `bamboo / zvoidaristsscompany`**, que é o **último**
+par do arquivo de configuração. Em `curl`, `--write-out` **não é opção por transferência**: a
+última ocorrência no config vale para **todas**, então o formato inteiro — inclusive os rótulos
+que eu tinha escrito à mão — foi o mesmo em 6.049 linhas. Os **códigos estavam certos**; o
+**nome da família e do slug estavam errados em 100% das linhas**.
+
+O que denunciou não foi exceção nenhuma (não houve): foi o **`size_download`**. Os tamanhos dos
+25 acertos eram 282226, 570436, 2487622, 37599, 768921, 7711 e 132291 — exatamente os corpos dos
+meus **tokens de controle**. Um "bamboo" não devolve 2,4 MB de Ashby.
+
+> **Regra: em arquivo de configuração do `curl`, rótulo escrito à mão é global e mente. A
+> identificação da transferência tem que sair de uma VARIÁVEL do próprio `curl`, e a que serve é
+> `%{url_effective}`** — ela é preenchida por transferência mesmo com o formato global. Isto é a
+> mesma família do defeito do Avature de 11h35 (chave natural sobrescrita, HTTP 200 em tudo,
+> nenhum sintoma) e do falso zero do Teamtailor das 14h20: **o número certo ao lado do rótulo
+> errado passa por todos os sinais verdes desta campanha.**
+>
+> **Duas correções de operação no mesmo comando:** (a) `output = "/dev/null"` também é consumido
+> uma vez só, então o corpo das outras transferências vaza para o `stdout` e se mistura com as
+> linhas de status — a saída se separa mandando o status para o outro canal, com
+> `write-out = "%{stderr}%{http_code}\t..."`; (b) `cd X && nohup cmd & sleep N; wc -l arquivo`
+> **não mede o arquivo**: o `&` liga a lista inteira, o `cd` acontece no subshell de fundo e o
+> `wc` roda no diretório antigo. O arquivo existia e eu quase concluí que o comando não subiu.
+
+### 2. O RENDIMENTO DESTE CRUZAMENTO, MEDIDO: 2,7% DE QUADRO VIVO E QUASE TUDO HOMÔNIMO
+
+125 quadros vivos em 4.685 slugs é **2,7%**, e o número esconde o que importa: a **maioria
+esmagadora dos acertos é homônimo de empresa de tecnologia, não a casa de arte do censo.** Entre
+os 125: `oculus`, `amazon`, `parity`, `polygon-labs`, `genesis` (que aparece vivo em **quatro**
+famílias ao mesmo tempo), `hackerone`, `procreate`, `zoox` (239 vagas de carro autônomo),
+`vaynermedia` (97 de publicidade), `aleph` (102), `example` e `test-company`.
+
+O mecanismo é o **encurtamento do slug**: o censo traz `axis-animation`, `31st-union-games`,
+`alden-studios`, e a variante "sem sufixo" produz `axis`, `31stunion`, `alden` — palavras
+genéricas, que é exatamente o que uma empresa qualquer registra como locatário. É a mesma lição
+que o levantamento de 07/09 já tinha escrito (*"quase todos os acertos são homônimos"*) e que a
+caça de token de 04h30 de hoje repetiu; a diferença é que agora ela tem número: **de 125 acertos,
+os plausivelmente da casa certa são 28, e os da disciplina são zero.**
+
+> **Regra: adivinhação de token por encurtamento de nome tem que ser conferida contra a CASA, não
+> contra o código HTTP.** O CSV deste turno já carrega a ressalva escrita na primeira linha.
+
+### 3. O `axis` DO TEAMTAILOR NÃO É A AXIS ANIMATION, E O REPOSITÓRIO JÁ O GUARDAVA COMO SE FOSSE
+
+`automacao/quadros-tt-rec-1545-1009.csv` (colheita de 10/09) lista
+`teamtailor,axis,2,https://axis.teamtailor.com/jobs` numa lista intitulada *"quadros Teamtailor e
+Recruitee inéditos"* montada a partir de **nomes de estúdio**. Lido hoje pelo JSON Feed, o
+locatário `axis` tem duas vagas e as duas são **`Crayon Consulting Academy — Omskoler deg til
+IT-bransjen!`** e **`... Start IT-karrieren med et kompetanseløft`**, em norueguês, de fevereiro de
+2025: é uma **consultoria de TI norueguesa**, não a Axis Animation de Glasgow.
+
+A mesma colheita de 10/09 carrega, na mesma página, `above`, `anima`, `black`, `butter` e
+`bica` — a assinatura da palavra genérica. **Nenhum desses tokens deve ser tratado como quadro
+da casa cujo nome gerou o slug sem antes ler uma vaga e conferir o idioma e o setor.**
+
+### 4. `api.eu.lever.co` DEVOLVEU **ZERO** LOCATÁRIO NOVO EM 4.677 SLUGS, CONTRA 13 DO HOST AMERICANO
+
+A regra de 13/09 diz que o Lever tem **dois hosts de API** e que um token vivo num responde 404 no
+outro — e por isso a campanha passou a sondar os dois. Medido hoje no maior universo que ela já
+usou: o host europeu rendeu **zero** quadro vivo em 4.677 slugs, enquanto o americano rendeu 13,
+e o controle `asobostudio` deu **200 no host europeu** dentro da mesma varredura (então não é
+host morto nem bloqueio). **O host europeu continua valendo para token conhecido, e como rede de
+descoberta ele custa 4.677 requisições por zero.** Na próxima varredura larga, o `eu` entra só
+para os tokens que o host americano recusar.
+
+### 5. OS CINCO ACERTOS DO FILTRO, E POR QUE NENHUM É DA DISCIPLINA
+
+- **iniBuilds** (BambooHR `inibuilds`, casa inédita): `3D Artist - Vehicles Team` e `3D Artist -
+  Scenery Team`. **Fora da disciplina** pelos dois lados: é simulador de voo, e os títulos dizem
+  **veículo** e **cenário** — a mesma gaveta que tirou a EF Games e a Tiny Digital Factory. E a
+  família tem parede medida: **reCAPTCHA v2 de caixa** (regra das 09h50).
+- **31st Union** (Greenhouse `31stunion`, San Mateo): `Shader Technical Artist`. **Disciplina** —
+  é artista técnico de shader, a gaveta do `215687` da EA e do CFX da Untold. Quem escreve o
+  shader não é quem modela o personagem.
+- **Zack D. Films** (Recruitee `zackdfilms`, remoto): o título é `3D Generalist` e **o corpo
+  desmente o título** — *"Zack D. Films ... is looking for highly skilled **Contract 3D
+  Animators**"*, clipes de 20 a 45 segundos, *"flat rate per project"*, publicada em
+  **01/04/2025**. É **animação** e é **gig por projeto**, não emprego da disciplina. Ressalva
+  honesta: ela **não tem veto** (*"welcome candidates from around the world"*) e cita *"character
+  animation, camera work, lookdev, shader effects"* — se a campanha algum dia abrir uma faixa de
+  freelance de animação, esta porta está aberta e sem captcha no JSON.
+- **AirWorks** (Recruitee `airworks`, Weesp, Holanda): `3D Artist - Behind the World's Greatest
+  Live Shows (NL/ENG)`. **Fora da disciplina**: é show de drone, e o próprio título exige
+  **holandês/inglês**.
+- **Episteme** (Greenhouse `episteme`): `Member of Research Staff (Machine Learning for Neural
+  Circuit **Modeling**)`. **Falso positivo do filtro** — `modeling` de neurociência
+  computacional. Fica registrado porque é a terceira forma de falso amigo de `modeling` que a
+  campanha mede, depois do BIM/águas residuais do SmartRecruiters e do *"strength of character"*
+  do corpo de anúncio.
+
+### 6. SEMÂNTICA DE ENDPOINT POR FAMÍLIA, MEDIDA COM TOKEN VIVO E TOKEN MORTO LADO A LADO
+
+Isto vale para qualquer sondagem futura, e cada linha foi medida com um par vivo/morto **antes**
+de a varredura começar (é o que garantiu que nenhum código ficasse ambíguo):
+
+| família | token morto devolve | token vivo devolve |
+|---|---|---|
+| Greenhouse | **404** com 38 bytes | 200 (`{"jobs":[...],"meta":{"total":N}}`) |
+| Lever (us e eu) | **404** com 41 bytes | 200; **quadro vazio é `[]`, 2 bytes** |
+| Ashby | **404** com 9 bytes | 200; vazio é `{"jobs":[]}` |
+| Teamtailor | **404 com ZERO byte** | 200, JSON Feed 1.1, lista em `items` |
+| Recruitee | **404** com 21 bytes | 200 (`offers`) |
+| Breezy | **404 com 3.265 bytes** (página de erro, não JSON) | 200; vazio é `[]` |
+| BambooHR | **302 para a home da bamboohr.com** | 200 (`result`) |
+
+> **Duas armadilhas aqui: o Breezy devolve 3,2 KB no 404, então "corpo grande" não prova quadro;
+> e o BambooHR não devolve 404 nenhum — locatário que não existe é REDIRECT.** Quem sondar a
+> família contando 404 para medir cobertura conta zero e conclui que sondou zero. Foi o `302` que
+> respondeu por 4.609 das minhas sondagens.
+
+### 7. O QUE SOBROU, COM NÚMERO
+
+- **2.255 slugs do plano não foram alcançados** (a varredura foi cortada às 17h39 para caber no
+  turno): são as variantes da segunda metade do alfabeto. A sonda inteira está reproduzível — o
+  plano é `sonda2.cfg`, gerado do censo, e a continuação é rodar do ponto de corte.
+- **214 códigos 000 e 14 códigos 429** ficam como NÃO CONFERIDO, e 118 dos 000 são do Teamtailor,
+  que é a família com mais ruído neste túnel.
+- **A conclusão de lane, e ela é a mesma da Guilde du Québec e da Animation UK:** o censo da
+  ArtStation é excelente como **lista de nomes** e magro como **fila de vaga**. 3.363 casas que
+  recrutam arte por definição renderam **zero** vaga da disciplina nas oito famílias, porque casa
+  de arte pequena não usa ATS com API pública — ela usa formulário do próprio site, que é a lane
+  do censo de caminho (`/careers`), já exaurida em 17/09 01h11. **Se este cruzamento for repetido,
+  o que falta não é mais slug: é outra família de ATS** (Workable por token, SmartRecruiters por
+  base, Personio, Homerun, Recruitee por domínio próprio) ou a leitura do **site** da casa.
