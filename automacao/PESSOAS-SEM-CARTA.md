@@ -6473,3 +6473,46 @@ Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de eq
   encaixe do portfólio existe mas é menos óbvio que num AAA de console; (4) a casa **trocou de dono
   em março de 2025** (saiu da Jam City, voltou a mãos quebequenses), e reorganização nesse tamanho
   costuma mexer em quem cuida de comunicação.
+
+### FICHA 3 — Alexandre Blanchet, No Deadlines Studio (Montréal, Québec, Canadá) — **o pareamento que faltava estava na PÁGINA DE CRÉDITOS DO JOGO, e ela nomeia o assento de personagem da casa**
+
+- **Email: `ablanchet@nodeadlines.ca` — PUBLICADO DUAS VEZES, confiança ALTA.** Uma no `mailto:` cru
+  do diretório (**`https://www.laguilde.quebec/membre/no-deadlines/`**, 200, 35.950 bytes, aberta
+  nesta rodada) e outra **no site da própria casa**, em texto puro, no bloco *Get in touch* de
+  **`https://nodeadlines.ca/about`** (200, 148.772 bytes). Dois lugares, o mesmo endereço: é o caso
+  oposto do Stunlock, e some o risco de 550 por montagem.
+- **URL que fecha o pareamento, aberta nesta rodada:**
+  **`https://nodeadlines.ca/gearupeinstein-credits/`** (200, 142.662 bytes), a página de créditos do
+  jogo **Gear Up Einstein!**, que publica *"Credits — **Developers — Core Team: Frédéric Bessette,
+  Alexandre Blanchet, Benoit Bergeron**"* e depois a seção **Art**, com *"**Sacha Ravenda: Character
+  & Environment Art**"*, *"Sheamus Aaren: UI & Environment Art"*, *"Minhye Kim: UI Art"* e *"David
+  Rousseau: Animation & Environment Art"*. **Isto CORRIGE a nota das 12h35**, que matou a casa
+  porque *"a casa publica nome SEM CARGO: a legenda é a posição na foto"* — a legenda da foto do
+  `/about` não tem cargo mesmo, mas a página de créditos tem, e ela estava linkada no menu do
+  próprio `/about`. **Créditos de jogo no próprio site era a veia da ordem, e aqui ela funcionou
+  literalmente.**
+- **Por que ELE e não outro da casa:** a casa tem **três** sócios (o `/about` diz *"After working in
+  **AAA** for a while, winning many game jams, and developing our own game on weekends, we finally
+  decided to **found No Deadlines in 2021**"*) e o diretório publica **um só** endereço, `ablanchet@`,
+  que é o do **Alexandre Blanchet** e é o mesmo que a casa imprime como contato geral. Os outros dois
+  sócios não têm endereço publicado em lugar nenhum. Pela regra de casa de até 30 pessoas, fundador é
+  alvo de primeira linha.
+- **Gancho com a frase da própria casa:** *"Our mission is to create high-quality cooperative games
+  with a focus on **strategy**, a genre we love that has few co-op offerings"*, e a lista de
+  princípios que eles publicam, *"No limit. No release date · No overtime · More prototypes ·
+  Gameplay first! · **Quality over quantity**"*. O gancho de arte, porém, é o crédito: a casa **não
+  tem artista de personagem interno**, ela creditou **um** nome para *Character & Environment Art*
+  no jogo inteiro. É uma casa que terceiriza exatamente a disciplina do Vini.
+- **Fora dos EUA: sim** (Montréal, 305 rue de Bellechasse, Canadá) — frase de realocação entra.
+- **O que o Gmail devolveu:** `nodeadlines OR "No Deadlines"` devolveu **`{}`**;
+  `Harris OR Blanchet OR "Gear Up Einstein"` devolveu **`{}`**; `in:sent (… nodeadlines …)` devolveu
+  **`{}`**. Teto por domínio = **zero**. No repositório, `ablanchet@nodeadlines.ca`, `nodeadlines` e
+  `Alexandre Blanchet` dão **0 acerto**.
+- **RESSALVA HONESTA, e ela é a mais dura das quatro fichas:** (1) **é uma casa de três pessoas**, o
+  que na prática significa **zero chance de patrocínio de visto** — o valor aqui é contato, indicação
+  e freelance, não vaga; (2) o cargo publicado dele é **"Developers — Core Team"**, função e não
+  título: a casa nunca imprime "CEO", "Art Director" nem nada parecido, e a carta não pode afirmar um
+  título que não existe; (3) o jogo é **estratégia cooperativa**, não jogo movido a personagem, e o
+  único crédito de personagem é de um artista externo; (4) a casa se chama *No Deadlines* e publica
+  *"No release date"* — é estúdio de fim de semana virado em tempo integral, com o financiamento
+  listado em parceiros públicos (Investissement Québec, Revenu Québec), o que confirma o tamanho.
