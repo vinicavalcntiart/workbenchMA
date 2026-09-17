@@ -2646,3 +2646,81 @@ achado caíram no dedupe: a **People Can Fly** *Principal Character Artist* é r
 candidates only from the game industry who are based in Europe"* — e a **Makeshift Software**
 *Senior Character Modeler* **já foi enviada em 07/09**. Alerta de vaga do LinkedIn repete anúncio
 já trabalhado: a **Absurd Ventures** *Character Art Lead* do alerta de 14/09 foi enviada em 12/09.
+
+## 17/09, 05h00 UTC (JHON A, terceiro turno) — A FOST FOI ENVIADA, E O TALLY TEM CINCO ARMADILHAS
+
+Turno de **uma candidatura**, e é a porta que o dia pedia do lado da animação: **FOST Studio
+(Paris e Angoulême), candidatura espontânea pelo Tally `tally.so/r/3laXq5` — ENVIADA E CONFIRMADA
+às 04h31 UTC**, com três provas de servidor (`POST /forms/3laXq5/respond` → 200 com
+`{"submissionId":"xVo1z6y","respondentId":"J9jEg4Y"}`, a tela **`Form submitted`**, e o recibo de
+`notifications@tally.so` com assunto **`[FOST] Candidature`**). É o **primeiro formulário da
+campanha cujo seletor de departamento NOMEIA `Chara Modeling`** — e também `Groom / CFX`,
+`Shading` e `Texturing`. Dossiê completo em `automacao/respostas-formularios.md`.
+
+### 1. "TODAS AS PERGUNTAS NUMA PÁGINA SÓ" ESTAVA ERRADO, E O ERRO É DE INFERÊNCIA
+
+O turno das 03h mediu que *"o `Next` não avança, ele valida"* e concluiu **página única**. As duas
+coisas são verdade ao mesmo tempo e a conclusão não segue: o `Next` valida **e** avança. Enquanto
+falta resposta obrigatória ele **fica na mesma página**, e isso se parece com "não avança". O
+formulário tem **cinco páginas**. **Lição de método:** "o botão não fez nada" é sintoma de
+validação silenciosa, não prova de página única — e se comprova preenchendo tudo, não re-clicando.
+
+### 2. NO TALLY, PERGUNTA PODE SER DROPDOWN DISFARÇADO, E A OPÇÃO NÃO EXISTE NO DOM ATÉ ABRIR
+
+A primeira pergunta da FOST aparece no mapa de controles como um **`input type=text` SEM
+placeholder** — era o "campo 0" que o mapa anterior não sabia nomear. Enquanto ele está fechado,
+**nenhuma das opções existe no DOM**: por isso o clique por texto exato falhou às 03h, e por isso
+o `includes` que aquele turno prescreveu **também falharia**. O caminho é **clicar o input sem
+placeholder** e só então procurar a opção. Na FOST a lista tem **uma opção só** hoje
+(`Candidature spontanée`); o `2603 - Appel à candidatures` que o dossiê das 03h registrou **não
+está mais lá** — quadro de casa pequena muda em horas.
+
+### 3. TRÊS MECANISMOS DE PREENCHIMENTO QUE VALEM PARA TODA A FAMÍLIA TALLY
+
+- **Galeria de imagens pode ser RADIO.** Cliquei dois projetos e ficou **só o segundo**: o clique
+  seguinte **troca** em vez de somar. Parecer grade de miniaturas não diz nada sobre cardinalidade.
+- **`el.value = ...` não escreve em campo controlado pelo React.** Setei o valor e despachei
+  `input` e `change`, e o Tally seguiu dizendo **`Please enter a value`**. **`p.fill` escreve.** E
+  em `input type=tel`, que **reformata** o que recebe, nem o `p.fill` basta: digitar devagar
+  (`p.type` com `delay`) preserva o número. **Regra que fica: depois de escrever, LEIA o valor do
+  campo de volta.** Sem isso eu teria enviado um telefone truncado a um prefixo de país errado.
+- **O input de cada `<label>` é escondido, mas `label.control` devolve ele e o `checked`.** É
+  assim que se cumpre a regra de 03h de não re-clicar (re-clique desmarca múltipla escolha) sem
+  precisar adivinhar estado. E o prefixo `A `/`B ` é um **DIV irmão** de atalho: casar pelo
+  `<label>` já entrega o texto limpo.
+
+### 4. A ARMADILHA MAIS CARA: DOIS RÓTULOS IGUAIS COM RESPOSTAS OPOSTAS NO MESMO FORMULÁRIO
+
+A última página da FOST é o consentimento RGPD, e a caixa **obrigatória** dele se chama
+**`Oui / Yes`** — que é **exatamente** o rótulo da resposta *errada* de *"Avez vous déjà travaillé
+chez nous ?"* na página 1, onde a certa é `Non / No`. Uma lista global de escolhas por rótulo
+**erra a página 1 se incluir `Oui / Yes`, e perde o consentimento se não incluir**. O primeiro
+`Submit` desta rodada foi **recusado** por causa disso (*"1 question needs your attention /
+Please select an option"*).
+
+> **A forma que funciona é condicionar à página:** só clicar `Oui / Yes` quando o texto da página
+> casar `/RGPD|GDPR/`. **Lista de escolhas por rótulo é global e o formulário não é** — quando o
+> mesmo texto aparece em duas perguntas, a escolha tem que ser qualificada pelo contexto.
+
+E o consolo: aquele `Submit` recusado **não criou resposta** (o `/respond` só aparece na rede
+quando o envio completa), o que **reconfirma** que tentativa incompleta no Tally não gasta
+candidatura. Foi por isso que dava para ensaiar até acertar.
+
+### 5. UMA SALVAGUARDA DE ENSAIO QUE QUALQUER PREENCHEDOR DE WIZARD DEVERIA TER
+
+Neste formulário **todas as páginas rotulam o botão `Next`**, inclusive a penúltima. Um ensaio que
+clique `Next` "só para ver a próxima página" pode **enviar sem querer**. O `fost_fill.js` para em
+modo `seco` **antes** do botão da página da carta, e diz por quê. **Se o botão da última página
+tem o mesmo nome do botão de avanço, o modo de ensaio tem que parar por contagem de página, não
+por nome de botão.**
+
+**Ferramenta:** `/home/user/apply/fost_fill.js` (`sh hb_run.sh fost_fill.js seco|ENVIAR`),
+reutilizável para Tally multipágina; diagnósticos em `fost_go.js` e `fost_d2.js`.
+
+### 6. UM ERRO MEU DE FERRAMENTA, PARA NINGUÉM REPETIR
+
+Passei as funções de `page.evaluate` como **string** de arrow function com argumento. O Playwright
+avalia a string como **expressão**, devolve a função (não serializável) e o resultado chega
+**`undefined`** — gastei uma rodada achando que o seletor não existia. **Função de `evaluate` se
+escreve como função de verdade em Node e se passa por referência**, não como template literal
+(que ainda por cima obriga a escapar `\s` e `\d` duas vezes).
