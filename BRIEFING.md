@@ -3351,3 +3351,14 @@ alerta *"New Job Openings at Electronic Arts!"* de `jobnotification@ea.avature.n
 **Disney, Pixar, Netflix e Blizzard** e a conta do Vini já existe em três desses locatários;
 depois Paramount/Nickelodeon, NBCUniversal/DreamWorks, e os quadros de Greenhouse (Riot, Epic,
 Roblox, 2K, Bungie e os oito do grupo PlayStation), que não oferecem alerta nativo.
+
+### Resposta a pessoa sai direto pelo maestro (ordem do Vini, 17/09 12h50 UTC)
+
+O Vini perguntou por que as respostas ficavam em rascunho e disse que isso é jogar
+responsabilidade para ele. Regra a partir de agora: **resposta a mensagem recebida (pessoa,
+caixa funcional que aceita resposta, recusa que merece agradecimento) é enviada na hora pelo
+maestro com `mcp__Gmail__reply`**, com `body` e `htmlBody`, e registrada em `processados.csv` como
+`resposta-enviada`. Nada de rascunho esperando o `enviarRascunhos()`. **Carta fria para endereço
+novo continua em rascunho** por limite de ferramenta: o conector do Gmail desta sessão responde a
+thread existente, mas não cria mensagem nova com anexo, e a carta fria leva CV e carta em PDF
+pelo Apps Script. Enquanto isso não muda, a fila de cartas frias é do disparador dele.
