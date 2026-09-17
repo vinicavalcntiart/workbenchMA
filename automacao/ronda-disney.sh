@@ -28,7 +28,8 @@
 # college/university") mais a disciplina errada: pede formação em Theatre, Digital Media, Graphic
 # or Web Design ou Creative Writing, e é personagem de parque, não 3D. Fica na lista de conhecidos
 # para não reacusar como novidade a cada rodada e fazer a próxima pessoa investigar de novo.
-CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882 10160043}"
+# 10160980 entrou em 17/09: Senior Look Development TD, ILM Londres, ENVIADA E CONFIRMADA pelo Workday na vigia das 10h40.
+CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882 10160043 10160980}"
 UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'
 TMP=$(mktemp -d)
 OK=0
