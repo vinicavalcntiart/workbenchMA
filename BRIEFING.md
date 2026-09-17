@@ -4040,3 +4040,11 @@ não envia formulário.** Isso não é opinião sobre a política — é o estad
 a lane de formulário precisa **pedir ao Vini** antes de abrir o turno, em vez de descobrir no meio
 dele. O que segue funcionando por `curl`: censo de quadro, leitura de vaga, medição de porteiro,
 régua de veto e dedupe.
+
+### Maestro, 17/09 20h30 UTC: a seção 4 do pulso TRUNCA a URL, e a URL cortada devolve 404 de mentira
+
+`automacao/pulso.sh` corta a URL das três vagas `alta` mais antigas para caber na coluna. Curl na
+URL do pulso devolveu 404 para a Framestore Montreal (Blender Generalist, Recruitee 2718959), e a
+API do quadro mostra a vaga viva desde 21/08. **Regra: revalidação se faz pela API do quadro ou pela
+URL inteira do painel, nunca pela URL impressa pelo pulso.** Um 404 sem a URL final conferida é
+NÃO CONFERIDO, não é vaga expirada.
