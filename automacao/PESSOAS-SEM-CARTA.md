@@ -6561,3 +6561,136 @@ Spirit, Breaking Walls, BadRez) **por crédito de jogo**, não por página de eq
   esculpe as criaturas ou quem desenha o jogo — a carta deve **perguntar**, não afirmar; (4) o jogo
   é horror narrativo 2D/3D estilizado e não está confirmado pipeline 3D nesta rodada: a itch.io da
   casa (`eruptingavocado.itch.io/the-repairing-mantis`) ficou **sem ser aberta** por tempo.
+
+### CASAS COM PAREAMENTO FECHADO E **DESCARTADAS POR DISCIPLINA** (o endereço existe e está provado; o alvo não)
+
+- **Columel** (Montréal, membro da Guilde) — **`jean-gabriel.cauchon@columel.com` PUBLICADO**, e o
+  pareamento fechou nesta rodada: `https://www.columel.com/` (200, **129.875 bytes**, e é só o `www`
+  que abre em `https`) publica *"Notre équipe — **Jean-Gabriel Cauchon, Président / Co-fondateur** —
+  **David Pelletier, Développeur / Co-fondateur** — Samuel Leclerc, Développeur"*, com os três
+  endereços em `mailto:` (`jean-gabriel.cauchon@`, `david.pelletier@`, `samuel.leclerc@`, todos
+  `nome.sobrenome@`, o que prova o padrão do domínio). **Descartada porque não é estúdio de arte:**
+  os serviços publicados são *"Accompagnement technologique · Conception et architecture logicielle ·
+  Développement logiciel · Gestion de produit · Gestion de projet · **Service-conseil «staffing»**"*.
+  É consultoria de software, três pessoas, sem departamento de arte. **Duas notas de registro:** a
+  página ainda tem **gabarito de tema não preenchido** (`info@domain.com`, `example@domain.com`,
+  *"PO Box 16122 Collins Street West Victoria 8007 Australia"*), o mesmo caso `coalcar.ca`; e o
+  endereço institucional real dela é `info@columel.com`.
+- **Handmade Creative** (Montréal, remota desde 2017; membro da Guilde) — **`noah@handmadecreative.ca`
+  PUBLICADO** no `mailto:` do diretório, e o pareamento fechou em
+  `https://handmadecreative.ca/about` (200, **442.267 bytes**, aberta nesta rodada):
+  *"**Handmade Creative is led by founding partner and Creative Director Noah Wohl**"*.
+  **Descartada por técnica, e a casa é explícita:** *"we specialize in providing turnkey **animated
+  videos and motion graphics** for our clients"*, e a lista de serviços é *"creative direction,
+  script writing, storyboarding, design and art direction, **character design**, illustration,
+  animation, casting, music, sound design"*. É a armadilha Myth Studio / Lucid Dreams outra vez:
+  o "character design" ali é **2D de vídeo explicativo**, e a casa diz que *"we left our long time
+  offices in Montreal's St-Henri neighborhood to become a **remote first company**"* trabalhando com
+  *"a talented roster of **senior artists from all over the world**"* — sem quadro interno, sem
+  pipeline 3D e sem patrocínio possível. **Fica com o endereço provado** para o dia em que aparecer 3D.
+
+### CASAS ABERTAS SEM PAREAMENTO (para ninguém repetir, e o motivo de cada uma)
+
+- **Vox Prima** (Québec) — `mboudreau@voxprima.ca` continua **publicado na home** (200, 13.011 bytes)
+  e no diretório (`https://www.laguilde.quebec/membre/vox-prima/`, 200, 35.445 bytes), e a casa
+  continua com o melhor gancho de exorcista da lista (*"Play as **Theodor of Arles, a retired exorcist
+  knight** … where a **demonic presence** has taken hold"*). **O que esta rodada acrescenta, para a
+  próxima não repetir os mesmos três passos:** o jogo se chama **Dungeons Of Atonement** e o
+  Steam é **`store.steampowered.com/app/3541790`**, que **redireciona para a home da loja** por este
+  túnel (200 com 1.107.478 bytes da vitrine, sem a página do jogo); a busca do Steam por
+  `Dungeons of Atonement` **não devolve o jogo**; a busca do **Lien MULTIMÉDIA** por *Vox Prima*
+  devolve **47 artigos e nenhum da casa** (casamento por "Prima"); e a única fonte que pareia
+  `mboudreau@` com **Mathieu ("Matt") Boudreau** é **LinkedIn**, que não responde a este túnel.
+  A casa tem ainda `youtube.com/@VoxPrima-o1w` e um Discord, **não abertos**: é por aí que a próxima
+  tentativa deve ir (crédito em vídeo), não por Steam nem por imprensa.
+- **Bold Spirit Game Studio** (Québec) — o diretório publica **só `contact@boldspiritgamestudio.com`**
+  (200, 46.109 bytes, aberta nesta rodada) e `boldspiritgamestudio.com/wp-json/...` é **404 de 1.251
+  bytes** (não é WordPress). Some-se o descarte por disciplina que esta rodada mediu:
+  `gamesfromquebec.com` descreve os dois jogos dela como *"**Red Trigger** is a First Person Shooter
+  (FPS) Puzzle game. Can you infiltrate and corrupt the system?"* e *"**Red Trigger 2** is a FPS.
+  **You play as a virus**"*. **Não há elenco de personagem**, então o nome do fundador (Maxime
+  Vézina, de *AC Origins* e *Valhalla*) não compra nada aqui. **Fechada por disciplina, não por
+  parede.**
+- **Breaking Walls** (Montréal) — o diretório publica só `info@breakingwalls.co` (200, 35.400 bytes).
+  O site é **Squarespace** (o HTML imprime *"This is Squarespace"*), e o atalho de Squarespace
+  `?format=json` e `?format=json-pretty` **não pôde ser medido**: as duas chamadas devolveram
+  **`000` por `Recv failure: Connection reset by peer`**, e o proxy de saída reportou
+  `ws_closed_mid_exchange` para `breakingwalls.co:443`. **NÃO CONFERIDO, não "sem pessoa"** — e o
+  `?format=json` de Squarespace é a primeira coisa a tentar na próxima rodada, porque entrega o texto
+  da página sem o JavaScript.
+- **BadRez Games** (Montréal) — só `contact@badrezgames.com` no diretório (200, 35.547 bytes). O site
+  é **Wix** (o 404 de 2.205 bytes carrega `static.parastorage.com`), e Wix não tem rota pública de
+  conteúdo equivalente ao `wp-json`. Continua *"founded by AAA veterans"* sem um nome.
+- **Cauda do diretório da Guilde, as casas que sobraram e foram abertas nesta rodada** (doze caminhos
+  cada, com 404 medido por tamanho repetido): `beldaxstudio.com` (**000 em 12 caminhos**, e
+  `samuel.tessier@beldaxstudio.com` tem **nome completo no endereço** — é a pista não fechada mais
+  parecida com a Massive Finger, e agora se sabe que vale tentar `http://` e `www.`),
+  `beyionproduction.com` (**200 com 114 bytes em 12 caminhos**, casca; o "site" que o diretório
+  publica para a Studio Beyion é uma **página de LinkedIn**), `cleverclaw.games` (**404 de 15.870
+  bytes em 12 caminhos**), `dawninglight.gg` (home de 1.628 bytes e `/about` de 1.710: **casca de JS
+  com seletor de idioma**), `solipsist.studio` (**3.497 bytes iguais em 12 caminhos**, catch-all, e a
+  casa é *"Volumetric Capture with Consumer Cameras"*, tecnologia e não estúdio),
+  `threewintersgames.com` (home de 16.968 bytes: *"Three Winters Games was **founded by industry
+  veterans** whose work contributed to some of the world's most recognized game franchises"* e
+  **zero nome**, com `/about` e mais dez caminhos em 404 de 3.449 bytes), `kingofthehat.com` (a casa
+  publica `hat@kingofthehat.com` **decodificado de `data-cfemail`** e o diretório publica `ben@`;
+  a home descreve **os personagens do jogo**, não o time, e não há nome de pessoa), `metagone.com`
+  (**403 na home**, 404 de 867 bytes nos internos).
+
+### AS PAREDES E OS NÃO-CONFERIDOS DESTA RODADA, medidos, com o controle na mesma janela
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `https://columel.com/` (apex) | **000** em 12 caminhos, **terceira medição** | **não era parede: `https://www.columel.com/` dá 200 com 129.875 bytes** |
+| `https://massivefinger.com/` (apex) | **000** em 12 caminhos, **terceira medição** | **não era parede: `http://massivefinger.com/` dá 200 com 888 bytes, um `<frameset>` para `massivefinger.tumblr.com`, que abre e está VAZIO** |
+| `breakingwalls.co/about?format=json` | **000**, `Recv failure` + `ws_closed_mid_exchange` no proxy | **não conferido**, duas tentativas |
+| `eruptingavocado.com/presskit` | **000** por *connection reset* (o `/about-3/` abriu na mesma janela) | host instável, não página ausente |
+| `store.steampowered.com/app/3541790` | **200 com 1.107.478 bytes da vitrine**, sem a página do jogo | redirecionamento de loja; Steam **não** serve página de jogo não lançado por este túnel |
+| `beldaxstudio.com` | **000** em 12 caminhos (só `https` testado) | não conferido; tentar `http://` e `www.` |
+| `metagone.com` | **403** na home | bloqueio de robô |
+| `capsulecomputers.com.au`, `godisageek.com` | **403** | imprensa que barra `curl`; **`gamespress.com` e `gematsu.com` abrem e serviram** |
+
+**Controle da janela:** na mesma janela e pelo mesmo `curl`, `laguilde.quebec` devolveu **200 nas 400
+páginas de detalhe** (400/400), `ludia.com` 200 com 1.744.630 bytes, `lecatnipcollective.com` 200 com
+591.716 bytes, `nodeadlines.ca` 200 em três páginas, `eruptingavocado.com` 200 em duas,
+`gamespress.com` 200 com 44.344 e `lienmultimedia.com` 200 com 35.729. O túnel estava vivo; o
+problema é o host.
+
+### PLACAR HONESTO DA RODADA DAS 16h35
+
+**Quatro pessoas novas**, no piso da faixa de 4 a 8: **três com endereço PUBLICADO** (as três em
+`mailto:` cru na página de detalhe do diretório da Guilde, uma delas publicada **também** no site da
+casa) e **uma `sem-email`** guardando nome, cargo e estúdio. **Nenhum endereço montado por padrão de
+domínio. Nenhum inventado. Nenhuma segunda grafia de ninguém.**
+
+**Por região: Canadá 4** — Montréal 3 (Le Catnip Collective, Ludia, No Deadlines) e Sherbrooke 1
+(Erupting Avocado). **Vancouver e BC: ZERO pelo quarto turno seguido**, e desta vez o motivo é a
+ordem: as três veias nomeadas eram todas do Québec. **Nórdicos, Holanda e Reino Unido: zero**, pelo
+mesmo motivo.
+
+**Por tamanho de casa:** a **Ludia** é a maior casa que esta veia produziu em três rodadas
+(*"one of the top independent mobile game publishers in Canada"*, 500 milhões de downloads,
+50 contratações anunciadas em março de 2025); as outras três são de **dois a três sócios**, e isso
+está escrito na ressalva de cada ficha, porque casa de dois não patrocina visto.
+
+**Por disciplina, que é a regra do Vini:** **quatro de quatro têm gancho de personagem ou criatura
+na frase publicada da própria casa** — dinossauro e dragão na Ludia, gato estilizado e
+*Architects of Giants* no Catnip, *"grotesque creatures"* na Erupting Avocado, e na No Deadlines o
+crédito nomeado *"Character & Environment Art"*. **Nenhuma ficha de ambiente.**
+
+**Dedupe:** as **quatro** casas nunca receberam mensagem nenhuma da campanha (`{}` no Gmail por
+domínio e por nome, `{}` no `in:sent`, zero acerto de endereço, domínio e nome em `pessoas.csv`,
+`enviados.csv`, `processados.csv`, `docs/index.html` e `alvos.csv`). **Todas são primeira pessoa e
+primeira mensagem da casa**, logo nenhuma encosta no teto de duas.
+
+**Três notas anteriores foram CORRIGIDAS com a fonte na mão, e as três pelo mesmo motivo: caminho
+errado, não casa sem pessoa.** Le Catnip Collective (o pareamento estava no press release do
+publisher, não no site), No Deadlines (estava em `/gearupeinstein-credits/`, linkada no menu do
+próprio `/about`) e Erupting Avocado (estava em `/about` → **`/about-3/`**). **Duas paredes de duas
+rodadas anteriores caíram por protocolo e prefixo** (`http://` e `www.`), e é a regra de método
+desta rodada.
+
+**Duas veias da ordem fecharam medidas:** a **cauda do diretório da Guilde** (129 endereços de
+pessoa em 400 membros, **36 inéditos no repositório**, e a composição deles é escola, áudio, serviço
+e estúdio de uma pessoa) e **`massivefinger.com`** (domínio estacionado num Tumblr vazio, pista
+morta por ausência de casa). **Não reabrir nenhuma das duas.**
