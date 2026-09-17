@@ -5452,3 +5452,68 @@ Atomic).
 repositório) — **rende universo de casa, não endereço**, medido em 24 domínios com zero pessoa.
 
 > **Maestro, 17/09 05h00 UTC:** lote de três cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 38%): Vanessa Robinson / Little Moon `r8699692104500084818` (a carta diz que o CV já foi ao `jobs@` em 02/09 e que não é primeiro contato); Sean Mullen / Giant Animation `r6091812572875862381` (a carta diz que o `hello@` foi escrito duas vezes sem resposta e que esta é a última tentativa); Joe Nickolls / Timbre Games `r-4328626659316485405` (Vancouver, pede encaminhamento em vez de vaga). Stuart Forrest (Triggerfish) fica `sem-email`. Saem pelo Apps Script do Vini.
+
+---
+
+## JOE, 17/09/2026 08h35 UTC — A VEIA QUE RENDEU FOI O **`wp-json` DO DIRETÓRIO DA GUILDE DU JEU VIDÉO DU QUÉBEC**, E AS DUAS VEIAS DA ORDEM DERAM ZERO
+
+**O placar de cada veia da ordem, antes das fichas, porque duas delas morreram medidas:**
+
+1. **As 101 casas da Animation UK que a rodada de 04h35 não varreu: ZERO, e agora está MEDIDO ATÉ O
+   FIM.** Refiz o `wp-json/wp/v2/organisations` (3 páginas, 205 posts, 101 domínios em
+   `Animation Member` + `Facilities Member`) e cruzei domínio por domínio contra o repositório:
+   **37 nunca mencionados**, e dos 98 `Animation Member` só **13** eram inéditos. Varri os 13 de
+   animação inéditos mais os 6 de mais baixa menção (`3dsparrow.com`, `plus3k.tv`,
+   `studioliddell.com`, `altanimation.com`, `mythstudio.co.uk`, `picturesmith.com`) em doze
+   caminhos cada, com prova de catch-all e busca de 404 no texto limpo. **Nenhuma ficha saiu.**
+   **E o mais importante para ninguém voltar: o campo `member_addresses` do próprio `wp-json`
+   (198 dos 205 posts o têm) contém `member_address`, `member_city`, `member_postcode`,
+   `member_phone`, `member_latitude`, `member_region` e NENHUM campo de pessoa nem de email.**
+   A veia da Animation UK está **fechada como fonte de endereço**, e isso confirma a medição de
+   04h35 com o argumento estrutural, não por amostra. O resto dos 37 inéditos é som, cor,
+   editorial, casting, palco e escola (`boompost`, `corepost`, `radiantpost`, `clearcut.cc`,
+   `cinelab.london`, `ealingstudios.com`, `brilliantcasting.com`, `thesharpproject.co.uk`,
+   `mediacityuk.co.uk`, `nextgenskillsacademy.com`): **não há departamento de personagem para
+   pedir**, que é a mesma conclusão que o `BRIEFING.md` já escreveu para formulário.
+2. **Diretórios de Vancouver e Montréal por `curl`: um rendeu e os outros quatro morreram.**
+   `creativebc.com` abre (200, 195 KB) e **não tem diretório de produtoras**: é agência de governo,
+   e `/industry-directories/` é **404**; o `wp-json/wp/v2/types` dela só expõe `post`, `page`,
+   `tribe_events` e templates do Elementor, sem tipo de membro. `vancouvereconomic.com` e
+   `laguildedujeuvideo.com` dão **502 no CONNECT**. `alliancenumerique.com/membres` e
+   `/repertoire/` **redirecionam para a home** (47 KB) e o `wp-json` dela também não tem tipo de
+   membro. `interactiveontario.com` tem os tipos `member` e `person`, e é armadilha: o `person` são
+   os **30 nomes do conselho da própria associação** e o `member` devolve **UM** registro (XRpanda).
+   **Quem rendeu foi a Guilde, e por outro domínio: `laguilde.quebec`, não `laguildedujeuvideo.com`.**
+3. **Sites pessoais de art director de casa grande de Vancouver/Montréal: ZERO, e não gastei a
+   rodada nisso** depois de reler as paredes de 00h35 (MobyGames 403, GDC 403/502, LinkedIn 999,
+   80.lv busca client-side, animationmagazine 403). As páginas de palestrante que a ordem nomeou
+   também não abrem por este túnel: `pixelchallenge.ca` **502 no CONNECT**, `migs.ca` **202 com 169
+   bytes** (a assinatura de captcha de borda da Triggerfish), `thu.gg` **connection reset**,
+   `viewconference.it/pages/speakers` **404**. `lightboxexpo.com` (200, 151 KB) e
+   `trojan-unicorn.com` (200, 231 KB) abrem e **não são de Vancouver nem de Montréal**.
+
+### A VEIA NOVA, ESCRITA PARA REPETIR: `laguilde.quebec/wp-json/wp/v2/membre` + a página de detalhe
+
+O diretório da **Guilde du jeu vidéo du Québec** é WordPress e o tipo de post de membro tem
+`rest_base` **`membre`** (o mesmo truque de identificador que abriu a Animation UK em 04h35):
+
+```
+curl -sS "https://laguilde.quebec/wp-json/wp/v2/types"                        # revela o rest_base
+curl -sS "https://www.laguilde.quebec/wp-json/wp/v2/membre?per_page=100&page=N"   # 4 páginas, 400 membros
+curl -sS "https://www.laguilde.quebec/membre/<slug>/"                          # a página que tem o EMAIL
+```
+
+**O `acf` da API vem vazio: o endereço está na página de detalhe**, no bloco `membre-actions`, em
+`mailto:` cru ao lado do botão do site (`<a href="https://..." class="btn" target="_blank">Consultez
+le site Web</a><br /><a href="mailto:...">Contactez le membre par courriel</a>`). Abri as **400**
+páginas de detalhe: **339 publicam email**, e depois de cortar caixa funcional (em francês também:
+`courriel@`, `emplois@`, `carrieres@`, `direction@`, `projets@`) e provedor gratuito sobram **127
+endereços com forma de pessoa** em casas de Montréal, Québec e Sherbrooke. É a mesma veia do
+diretório irlandês, agora para a **província mais densa de jogos do Canadá**, que é a rota de
+prioridade 1 e 2 da campanha.
+
+**O limite honesto da veia, e ele é grande:** a página de detalhe **não imprime cargo**, ao
+contrário da irlandesa. Então cada ficha exige o segundo passo — **achar o nome e o cargo na página
+de equipe do próprio estúdio** — e é aí que a maioria morre: de 400 membros, a colheita que
+sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a linha não vira ficha
+(regra Barnstorm / Storm Films).
