@@ -4942,3 +4942,180 @@ placar de cada uma **antes** das fichas, porque duas delas deram zero e isso é 
   sueco** e a carta vai em inglês; casa pequena sueca costuma trabalhar em inglês sem problema, mas isso
   não está escrito em lugar nenhum e é suposição. Telefones publicados ao lado dos três nomes
   **deliberadamente não registrados**, porque o repositório é público.
+
+### O DEDUPE NA CAIXA SALVOU UMA FICHA ERRADA, E É O ACHADO MAIS IMPORTANTE DESTA RODADA
+
+A primeira ficha que eu tinha pronta era **Arnfinn Moseng, HEAD OF STUDIO da Qvisten Animation**
+(`arnfinn.moseng@qvisten.no`, publicado com nome e cargo em `https://www.qvisten.no/contact`, junto de
+onze pessoas da casa). **Ela foi jogada fora, e o motivo é a regra do dedupe na caixa.**
+
+`pessoas.csv` tem **uma** pessoa da Qvisten (Rasmus A. Sivertsen, Creative Director, carta de 03/09). Pela
+planilha, sobrava uma vaga de cota. **A caixa diz outra coisa:** `mcp__Gmail__search_threads` com
+`qvisten OR Moseng OR arnfinn ...` devolveu **duas threads enviadas**, para **duas pessoas diferentes**:
+
+1. `hedda.toftner@qvisten.no` — carta fria em **26/08** e follow-up em **02/09**;
+2. `rasmus@qvisten.no` — carta em **03/09**.
+
+Hedda Toftner é **HR Manager** da casa, ou seja **pessoa com nome**, não caixa funcional — e ela **não
+está em `pessoas.csv`**. Com ela a Qvisten está em **DUAS pessoas** e **a cota da campanha fechou**. Se eu
+tivesse conferido só a planilha, esta rodada teria produzido a terceira carta para a mesma casa.
+
+**A regra, escrita para a próxima rodada:** `pessoas.csv` **não é** o registro completo de quem recebeu
+carta. Cartas escritas antes do arquivo existir, ou por outra frente da campanha, só aparecem no
+**`in:sent` do Gmail**. **Teto de duas por casa se conta no Gmail, por DOMÍNIO, não no CSV.**
+
+### CASAS ABERTAS NESTA RODADA SEM ENDEREÇO DE PESSOA APROVEITÁVEL (para ninguém repetir)
+
+Varredura de `/team`, `/crew`, `/about`, `/people`, `/our-team`, `/about-us`, `/studio`, `/contact`,
+`/company`, `/staff`, `/who-we-are` e `/leadership` em **124 domínios** de casas de animação, jogos e VFX
+das regiões de prioridade, mais `/impressum`, `/datenschutz`, `/legal-notice`, `/imprint`, `/kontakt` e
+`/legal` em 22 domínios de língua alemã.
+
+- **Nórdicos:** `suncreature.com`, `copenhagenbombay.com`, `jafilm.dk`, `m2film.dk`, `sweatbox.dk`,
+  `bacon.dk`, `firstflightfilms.dk`, `astafilm.dk`, `nicedrawings.dk`, `maipo.no` (só `maipo@maipo.no`),
+  `tordenfilm.no` (só `faktura@`), `zigzag.se` (só `Emailanimation@zigzag.se`, que é rótulo grudado no
+  endereço), `pennfilm.se`, `filmtecknarna.se`, `hobbyfilm.se` (só `talk@` e `Invoice@`),
+  `animavitae.com`, `gigglebug.com`, `pyjamafilms.com`, `densisteskilling.no`, `ilpvfx.com` (só `vfx@`),
+  `goodbyekansas.com`, `cinenicfilm.se` (três endereços de pessoa, mas é produtora de **live-action** e
+  documentário).
+- **Holanda:** `submarine.nl` (só `studiotalent@`), `studiopupil.com` (só `dario@`, **já é ficha de
+  13/09**), `polderanimation.nl`, `a-film.com`, `klaar.nl`, `jobjorisenmarieke.nl`, `studiosmack.nl`,
+  `pedri.nl`, `frameorder.com`, `guerrilla-games.com`, `nixxes.com`, `abbeygames.com`, `ronimo.nl`,
+  `triumphstudios.com`, `spellbound.nl`.
+- **Reino Unido e Irlanda:** `blue-zoo.co.uk`, `aardman.com`, `jellyfishpictures.co.uk`,
+  `milk-vfx.com` (o `data-cfemail` **foi decodificado** e dá `info@`, `recruitment@` e `newbusiness@`, os
+  três genéricos), `axisstudiosgroup.com` (cfemail decodificado = `info@`),
+  `lighthousestudios.ie` (cfemail decodificado = `info@`), `oneofus.co.uk`, `territorystudio.com` (só
+  `newprojects@`, `nyc@`, `sf@`, `bcnstaff@`), `paintingpractice.com`, `nexusstudios.com` (só `eps@`,
+  `oc@`, `prmarketing@`), `passion-pictures.com` (o endereço que parece de pessoa é
+  `passiondoccvs@thetalentmanager.com`, **domínio de terceiro**), `coffeeandtv.co.uk`,
+  `aproductions.co.uk`, `wildseedstudios.com`, `sixteensouth.tv` (só `rights@` e `website@`),
+  `mackinnonandsaunders.com`, `studiogobo.com`, `brownbagfilms.com` (só `explore.animation@`,
+  `infobali@`, `infotoronto@`), `cartoonsaloon.ie` (só `festivals@`), `boulder-media.com`, `jam-media.com`,
+  `pinkkongstudios.com`, `kavaleer.com`, `factory.uk.com`, `eyeanimation.co.uk`, `dogeatdogfilms.co.uk`,
+  `secondhomestudios.co.uk`, `flickerpix.com`, `treehouserepublic.com`, `dailymadness.ie`, `distillery.ie`,
+  `themill.com`, `unit.tv`, `finish.co.uk`, `blinkink.co.uk`, `strangebeast.tv`, `electrictheatre.tv`,
+  `calon.tv`, `aplusc.tv`, `owlhousestudios.com`, `windingsnake.com`, `spiteyourface.com`,
+  `creativeassembly.com`, `frontier.co.uk`, `splashdamage.com`, `sumo-digital.com`, `d3tltd.com`,
+  `coatsink.com`, `roll7.com`, `dlalastudios.com`, `payloadstudios.com`, `hutch.io`, `fireproofgames.com`,
+  `mediamolecule.com`, `ninjatheory.com`, `rare.co.uk`.
+- **Canadá:** `wildbrain.com`, `yetifarm.ca`, `stellarcreative.tv`, `copperheart.ca`, `jamfilled.com`,
+  `sinkingship.ca`, `mrxfx.com`, `cvdvfx.com`, `edfilms.net`, `atelieranimation.ca`, `modusfx.com`,
+  `alchemy24.ca`, `fakestudio.tv`, `boatrocker.com` (só `humanresources@`), `windsunsky.com` (só
+  `connect@`), `wowunlimited.com`, `nelvana.com`, `klei.com` (só `indiebox@` e `livesupport@`),
+  `piranhagames.com` (só duas caixas de `zendesk`), `beamdog.com`, `inflexiongames.com`, `ludia.com` (só
+  `Business@`), `frimastudio.com` (só `medias@`), `redbarrelsgames.com`, `panachedigitalgames.com`,
+  `sabotagestudio.com` (só `bugs@`), `thunderlotusgames.com` (só `business@`), `tributegames.com`,
+  `digitalextremes.com`, `capybaragames.com`, `drinkboxstudios.com`, `snowedin.ca`, `otherocean.com`,
+  `arcproductions.com`, `turnipandduck.com`.
+- **Língua alemã, pelo `impressum`:** `rise-fx.com`, `trixter.de`, `pixomondo.com`, `mackevision.com`,
+  `sehsucht.de`, `chimneygroup.com`, `infected.de`, `unexpected.de`, `luxx.studio`,
+  `slaughterhouse-fx.de`, `studio-rakete.de`, `scanlinevfx.com`, `arx-anima.com`, `neopolis.tv`,
+  `studio100animation.net`, `lumatic.eu`, `mokkomedia.de`, `grid-vfx.com`, `kaiserkoi.de`, `tridigital.de`,
+  `maximdigital.de`. **Só a `woodblock.tv` devolveu algo, e era `newbiz@` e `work@`.**
+
+### ENDEREÇO ACHADO E DESCARTADO, com o motivo de cada um
+
+- **Dockhus Animation** (Trollhättan, SE) — `mikael@dockhus.com` (Mikael Lindbom), publicado no diretório
+  da Nordic Animation. **Morreu por técnica, e a casa é explícita:** `dockhusanimation.com/en/` lista o que
+  ela oferece como *"2D animation | Stop motion | Cutout"*. **Zero 3D.** É a armadilha da Head Gear.
+- **LEE Film** (Estocolmo, SE) — `linda@leefilm.se`, publicado **com cargo** no site da própria casa
+  (*"Producer | Linda Hambäck | Email: linda@leefilm.se"*, em `https://leefilm.se/`). **Morreu por
+  técnica:** o catálogo é *The Ape Star*, *Gordon & Paddy* e *Who's who?*, ou seja **2D e stop-motion**.
+  Fica registrado com endereço provado para o caso de aparecer projeto 3D. A mesma página avisa
+  *"We have no possiblites to read and comment new scripts or ideas that are sent to us"* — **isso é sobre
+  roteiro, não sobre candidatura**, e não conta como veto.
+- **Tulipop Studios** (Reykjavík, IS) — `helga@tulipop.com` (Helga Árnadóttir) no diretório. **Morreu por
+  técnica declarada:** `tulipopstudios.com` escreve que *Tulipop: Magical Seasons* é
+  *"high-quality **2D** animated films"*.
+- **Compass Films** (Reykjavík, IS) — `heather@compassfilms.is` no diretório. **Morreu porque não é
+  estúdio:** o site diz ser *"a leading, award-winning film and television production company"*
+  co-fundada por produtores, que também *"offers servicing for international productions, supporting
+  logistics, financing and production arrangements in Iceland"*. É produção e serviços, com animação
+  como uma linha entre outras; o site publica só `info@compassfilms.is`.
+- **Made By Us** (Copenhague, DK) — `kqm@madebyus.dk` (Katrin Quist-Møller) no diretório. **Morreu porque
+  é casa de conceito:** *"et uafhængigt koncept- og produktionshus"*, com live-action, factual e
+  documentário; o site **não publica endereço nenhum**.
+- **Storm Films** (Oslo, NO) — `mbg@stormfilms.no` **não vira ficha**: o endereço só existe dentro do
+  bloco de dados estruturados (`"legalName":"Nedre gate 7d","email":"mbg@stormfilms.no"`) e **não há nome
+  nem cargo pareados** em lugar nenhum; o site é SPA e `/team`, `/about-us` e `/crew` **são a página 404
+  da casa**. É o caso Barnstorm de ontem: sem pareamento não vira ficha.
+- **Animated Company** (Londres, UK) — `douglas@animatedcompany.com` apareceu na varredura e **não se
+  confirma**: ao reabrir, o `grep` pelo endereço volta **vazio** no HTML visível. E a casa se descreve no
+  `<title>` como *"AI Animation & VFX Studio"*, o que a tira da fila por si só.
+- **Plastilin Media** (Imatra, FI) e **UpNorth Film** (Oslo, NO) — os endereços publicados no diretório são
+  `kirilllr@yahoo.com` e `mmotovska@gmail.com`, **caixas pessoais de provedor gratuito**, não endereço
+  institucional. Não registrados como via de contato de estúdio.
+- **Sphere Media / Sphere Animation / Oasis Animation** (Montréal, CA) — a varredura de
+  `oasisanimation.com/contact` devolveu **doze** `data-cfemail`, e a decodificação deu endereços com
+  forma de pessoa (`bdube@`, `mdastous@`, `rchasse@`, `rmouchawar@`, `drozon@`, `rfaour@` em
+  `sphere-media.com` e **`jbeauchemin@sphereanimation.com`**). **Não virou ficha por dois motivos:**
+  (1) a página de contato do grupo publica **só** `info@`, `carrieres@`, `communications@` e `projets@`,
+  e os endereços de pessoa **não estão pareados com nome nem cargo** em nenhuma página que eu tenha
+  conseguido abrir; (2) o próprio grupo descreve a Sphère Animation como
+  *"l'un des plus importants studios d'animation numérique **2D** au Canada"* — **2D**. Anotado com
+  cuidado porque **`oasisanimation.com` passou a devolver 403 de Cloudflare** depois da varredura
+  (bloqueio por taxa, não parede permanente): quem voltar, vá devagar e por uma URL só.
+- **Karrot Animation** (Londres) — `chris@wearekarrot.com` reapareceu em
+  `karrotanimation.com/contact`. **Já está em `pessoas.csv` desde 07/09** e ainda sem carta. Não é nome
+  novo; o que esta rodada acrescenta é a confirmação de que o endereço **continua publicado** e de que o
+  domínio de email (`wearekarrot.com`) é **diferente** do domínio do site (`karrotanimation.com`).
+- **Icon Creative Studio** (Vancouver) e **Timeless Films** (UK) — `carson@iconcreativestudio.com` e
+  `ralph@timelessfilms.co.uk` reconfirmados publicados, e **as duas casas já têm essa pessoa** em
+  `pessoas.csv` (08/09 e 16/09). Não são nomes novos.
+
+### AS TRÊS PAREDES DESTA RODADA, medidas
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `www.mobygames.com/company/...` e `/search/` | **403, 5.4 KB** | crédito de jogo **não** sai por aqui neste túnel |
+| `schedule.gdconf.com/speaker` | **403, 5.430 bytes** | lista de palestrante do GDC fechada |
+| `schedule2026.gdconf.com` | **502 no CONNECT** | idem |
+| `dl.acm.org/doi/proceedings/...` | **403, 5.5 KB** | é onde moram os PDFs de SIGGRAPH e DigiPro com email de autor |
+| `digipro.org` | **200 com 342 bytes** | casca |
+| `ca.linkedin.com/in/...` | **HTTP 999** | LinkedIn público **não abre** por fetch; já era decisão do Vini não usar LinkedIn para casa grande, e agora nem serve para confirmar cargo |
+| `diglib.eg.org` | 200, 476 KB | abre, mas é quase só academia |
+| `s2025.siggraph.org` / `s2026.siggraph.org` | 200 | abrem, mas o PDF com rodapé de autor está na ACM |
+
+### UMA ARMADILHA DE VARREDURA QUE EU MESMO PISEI, e a correção do script
+
+Meu primeiro passe aceitou qualquer resposta com **mais de 800 bytes** como "página existe". **Errado:**
+a página 404 de Squarespace e de Webflow devolve **40 KB a 180 KB** com o rodapé e o bloco de dados
+estruturados inteiros, e **derrama endereço**. Foi assim que `mbg@stormfilms.no` e
+`douglas@animatedcompany.com` entraram na minha lista de candidatos: os dois vieram de páginas **404**
+(`stormfilms.no/team`, `animatedcompany.com/about`). **A correção: antes de acreditar num endereço, procure
+no texto limpo as frases `We couldn't find the page`, `Page not found` e `404` — se estiverem lá, a
+página não existe e o endereço veio do rodapé, sem nome e sem cargo.** Nenhuma ficha desta rodada saiu de
+página 404.
+
+### VANCOUVER E BC, A PRIORIDADE 1, FECHOU EM ZERO — E O MOTIVO É NOMEÁVEL
+
+A ordem da rodada era achar nome de arte com cargo na **SkyBox Labs** (Burnaby, 235 pessoas, NetEase) por
+crédito de jogo, palestra ou artigo, e o mesmo em Blackbird, The Coalition, Relic, Kabam, Phoenix Labs,
+EA Motive, Behaviour e Beenox. **Não saiu uma pessoa, e não é por falta de tentativa: as três fontes de
+nome que essas casas usam estão fechadas neste túnel ao mesmo tempo** — MobyGames (403), GDC (403/502) e
+LinkedIn (999). Sem elas, o que resta é o site do estúdio, e a rodada de ontem já mediu que
+`skyboxlabs.com` publica cinco caixas funcionais e **nenhum nome com cargo**.
+
+**O que a próxima rodada deve tentar em Vancouver, em ordem, porque eu não tentei estes:**
+1. **Crédito no YouTube:** o crédito final do trailer e do vídeo de lançamento costuma listar o time de
+   personagem inteiro com cargo, e `youtube.com` não está barrado.
+2. **80.lv e ArtStation Magazine por busca de texto**, procurando o nome do estúdio no corpo do artigo em
+   vez de no título; ArtStation está em Cloudflare, mas `80.lv` abriu na busca desta rodada.
+3. **Press release da própria casa** (`skyboxlabs.com/news`), que em anúncio de projeto novo às vezes cita
+   o diretor de arte pelo nome.
+4. **Duas casas de BC que esta rodada NÃO conseguiu conferir e que não são parede:** `cvdvfx.com` e
+   `stellarcreative.tv` abriram e não publicam pessoa; mas `bardel.ca` (403 Cloudflare),
+   `versatile.media` (erro de certificado) e `scanlinevfx.com` continuam pendentes de **navegador de
+   tela**, não de `curl`. A Bardel é uma das maiores de Vancouver e segue **não conferida**, não fechada.
+
+### PLACAR HONESTO DA RODADA
+
+**Cinco pessoas novas**, dentro da faixa de 4 a 8, sendo **quatro com endereço PUBLICADO e confiança
+ALTA** (Filmic, Time Based Arts, Fridthjof, Soja) e **uma `sem-email`** (Striking Distance).
+**Nenhum endereço montado por padrão de domínio. Nenhum inventado.**
+Por região: **Suécia 2, Reino Unido 1, Dinamarca 1, Estados Unidos 1 (sem-email)**.
+**Vancouver e BC: zero**, com o motivo medido acima. **Holanda: zero.**
+Uma ficha foi **descartada pelo dedupe na caixa** (Qvisten, que já estava no teto de duas) e **seis
+endereços publicados foram descartados por técnica ou por não serem estúdio** (Dockhus, LEE Film,
+Tulipop, Compass, Made By Us, Sphere/Oasis).
