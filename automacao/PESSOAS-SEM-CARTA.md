@@ -6092,3 +6092,60 @@ email em nenhum dos 205 posts. Não voltar.
   opera em francês; (6) *ALEMOS* é **aventura-exploração com cana de pesca numa ilha maldita**: há
   atmosfera e talvez criatura, mas **o material público não mostra elenco de personagem**, e supor isso
   seria inventar gancho.
+
+### FICHA 5 — Jonathan Rancourt, Hatchery Games (Québec City, Canadá) — **`sem-email`, e é a casa cuja MISSÃO PUBLICADA é criatura**
+
+- **Email: NENHUM. Linha entra como `sem-email`, e isso é resultado, não fracasso.** A casa publica
+  **duas** caixas e as duas são funcionais: `contact@hatcherygames.com` (que é também o endereço que o
+  diretório da Guilde devolve para ela) e **`career@hatcherygames.com`**, este num `mailto:` com
+  assunto pré-montado, cru no HTML: `mailto:career@hatcherygames.com?subject=Job%20application%20-%20Candidature`.
+  **Não montei nem tentarei montar endereço de pessoa aqui:** não há um único endereço individual no
+  domínio, logo não há padrão provado, e inventar `jrancourt@` seria exatamente o chute que produziu as
+  17 devoluções de 07/09. **O que fica registrado como porta viva é a caixa `career@`, e ela satisfaz a
+  regra 3 de 07/09 porque está VISTA PUBLICADA**, com assunto que a própria casa escreveu.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/hatchery-games/` (**200,
+  35.371 bytes**; HTML cru: `<h2 class="text-flip">Hatchery Games</h2>` … `<a
+  href="https://www.hatcherygames.com" class="btn" target="_blank">Consultez le site Web</a>` …
+  `mailto:contact@hatcherygames.com`) e `https://hatcherygames.com/` (**200, 20.008 bytes**), que é um
+  site de **página única com âncoras**: as seções *Mission*, *Culture*, *Team*, *Jobs*, *News* e
+  *Contact* vivem todas na home. Zero acerto de `Page not found` no texto limpo. **Prova de que não é
+  catch-all, e ela importa aqui:** `https://hatcherygames.com/team` e `https://hatcherygames.com/jobs`
+  respondem **404 com 5.175 bytes**, e um caminho md5 inexistente responde **o mesmo 404 de 5.175
+  bytes** — md5 `a3d3b4d4ea71…`, distinto do `e8919ad8fe94…` da home. Ou seja: a casa **tem** página de
+  equipe, ela só não está em `/team`.
+- **Por que ESSA pessoa e não outra da casa:** a seção *Team* publica **onze pessoas com nome e cargo**:
+  *Frédérick Gagnon — Technical Animator*, *Simon Grelier — Technical Director*, **Jonathan Rancourt —
+  Creative Director**, *Carl-Simon Picard — Narrative Director*, **Olenka Denis — Character Artist**,
+  *Jérémy Lebel — VFX Artist*, *Cynthia Vandermouten — Senior Environnement Artist*, *Alexandre
+  Lalancette — Programmer*, *Philippe Pelletier Baribault — Game Designer*, **Erwan Vicente-Pisant —
+  Character Artist** e *Gabriel Bouffard — Animator*. **Não há Art Director nem Head of Art**, então o
+  alvo da regra de casa pequena é o **Creative Director**, que numa casa de onze é quem decide o look e
+  abre requisição. **Segunda e terceira pessoas possíveis, já nomeadas: Olenka Denis e Erwan
+  Vicente-Pisant, os dois Character Artist** — via de colega de ofício, que o `BRIEF-JOE` chama de
+  sempre boa. Nenhum dos três tem endereço.
+- **Gancho com a frase do próprio estúdio, entre aspas, e é a melhor da rodada:** a home abre com a
+  missão entre aspas na própria página: *"**Create unique game experiences showcasing memorable
+  creatures and monsters.**"* Os valores publicados são *"Team Work — Creativity — Ownership"*, e a
+  seção *News* diz *"**Hatchery Games selected as Epic MegaGrants Recipients** — Quebec, April 2022"*.
+  O `censo-guilde-quebec-1709.csv` do Jhon A descreve a casa, com as palavras dela, como *"développeur
+  de jeux vidéo de **capture de créatures** situé dans la ville de Québec"*.
+- **Casa fora dos EUA: SIM, Canadá (Québec City).** A frase de realocação **entra**, rota de prioridade
+  1 e 2.
+- **O que o Gmail devolveu no dedupe:** `hatcherygames OR "Hatchery Games" OR Rancourt` devolveu
+  **`{}`** — zero thread, nem enviada nem recebida. **Teto de duas por casa no `in:sent` por domínio
+  `hatcherygames.com`: ZERO.** No repositório a casa aparece em quatro arquivos e **nenhum é carta**:
+  `censo-canada-gamedevmap-0709.json`, `censo-canada-hits-0709.json`, `fila-gamedevmap-canada.csv`
+  (marcada `pagina-sem-ats`) e `triagem-canada-resto.md`, que registrou em 07/09, com razão, que o
+  acerto de *"Character Artist"* ali era **legenda de foto do time**, não vaga. **Nada disso é
+  pessoa em `pessoas.csv`: `grep` por `olenka` e por `hatchery` no `pessoas.csv` devolve ZERO.** Esta é
+  a primeira linha de pessoa desta casa.
+- **RESSALVA HONESTA:** (1) **não há endereço de pessoa, e o valor desta ficha é o nome guardado**, não
+  uma carta pronta — o único caminho hoje é a caixa `career@`, que é caixa funcional e por isso não é o
+  alvo que o Joe existe para achar; (2) **os dois assentos de Character Artist estão OCUPADOS**, e em
+  casa de onze pessoas um terceiro é improvável; (3) as duas vagas publicadas na home são **Game
+  Writer (freelance)** e **UI Director**, nenhuma da disciplina dele, o que o `triagem-canada-resto.md`
+  já tinha medido; (4) o site **não tem ATS** e a notícia mais recente publicada é de **abril de
+  2022**, ou seja a casa pode estar parada ou com o site desatualizado, e cargo desatualizado é pior
+  que alvo nenhum — a lista de onze pessoas precisa de confirmação antes de qualquer carta;
+  (5) nenhuma palavra sobre **patrocínio de visto** em página nenhuma; (6) a casa é pequena e o jogo de
+  captura de criaturas ainda não tem lançamento anunciado no site.
