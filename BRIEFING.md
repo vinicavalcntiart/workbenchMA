@@ -3047,3 +3047,186 @@ patrocínio**). O clique devolveu **HTTP 400** e a tela a frase literal:
 > PeopleForce (422), Contact Form 7 (classe `spam`), `applytojobs.ca` (400), mais EF Games e
 > BreatheHR por assinatura.
 
+
+## 17/09, 11h20 UTC (JHON A, sexto turno) — O CENSO DA GUILDE DU QUÉBEC: 145 CASAS INÉDITAS, ZERO VAGA DE PERSONAGEM, E TRÊS MECANISMOS NOVOS DE FALSO POSITIVO
+
+Turno de **censo de casa para formulário**, não de prospecção de nome. O diretório da
+`laguilde.quebec` tem 400 membros e a chave que faltava é a taxonomia `type_membre` da API do
+WordPress: **43 = Studios Indépendants (270), 44 = Studios Internationaux (21), 45 = Prestataires
+de services (76), 46 = Institutions (11), 47 = Autres (76)**. Filtrando 43/44 com site publicado
+sobram **206**; o dedupe contra `enviados.csv`, `automacao/processados.csv`, `docs/index.html` e
+`automacao/*.csv` tirou 61 e **145 casas inéditas foram sondadas**. Resultado honesto: **20 portas
+de candidatura abertas e ZERO vaga viva da disciplina de personagem. Nenhuma candidatura enviada.**
+
+### 1. A VAGA DE PERSONAGEM QUE O `grep` ACHOU NÃO EXISTE: É **TEMPLATE DE REPEATER DO WIX**
+
+O HTML cru de `studiosrenart.com/careers` (Les Studios Renart, Saint-Jérôme, QC — casa inédita)
+traz, em **texto limpo**, três títulos exatamente da disciplina: `3D Character Generalist
+On-site(Saint-Jérôme)`, `Character Modeler (Animation)` e `Character Designer`. Parecia o melhor
+achado do dia. Aberta no navegador de verdade, a **mesma** página renderizada diz *"Sorry but
+there's no open jobs available at the moment, come back soon!"* e o seletor **obrigatório**
+`Position` do formulário tem exatamente **duas** opções: vazia e `Spontaneous application`.
+
+> **Regra: título de vaga achado por `grep` em HTML de site Wix pode ser o dado de DESENHO do
+> repeater do Wix Velo (`bundler.wix-code.com`), que viaja no HTML estático e nunca chega à tela.
+> Confirme na página RENDERIZADA, ou no próprio seletor do formulário — que é a fonte mais barata
+> e mais honesta, porque é o que a casa realmente aceita receber.** Isso é irmão do falso positivo
+> de palavra de veto medido hoje às 09h50, e custa igual.
+
+### 2. **WIX FORMS INJETA O reCAPTCHA v2 DE CAIXA SÓ NO CLIQUE** — QUARTA FONTE DE FALSO NEGATIVO DO `grep`
+
+A porta espontânea da Renart (*"Join Our Team / Submit Your Application"*) tem 8 campos (First
+Name, Last Name, Email, Phone, Position, Portfolio URL, LinkedIn URL, Any Comments), **zero isca**,
+zero campo de arquivo, e **antes do clique o HTML inteiro não tem nenhuma assinatura de captcha**:
+`grep -iE 'recaptcha|hcaptcha|turnstile'` devolve **falso**. Preenchi 100% com leitura de volta
+campo a campo (`checkValidity()` true, telefone lido de volta com o código de país certo) e cliquei
+em *Submit*. A tela abriu o modal **"Verification / Please confirm you're human"** com a caixa
+*"I'm not a robot"*, um campo **novo** apareceu no DOM (`g-recaptcha-response` **vazio**), e na
+rede saíram só **204 de telemetria do Wix** (`frog.wix.com/form-builder`,
+`panorama.wixapps.net`) e **nenhum POST de submissão**. Captura `renart_envio.png`, mtime
+`10:36:06Z`, conferido contra a do modo seco (`10:35:00Z`). **Nada enviado, zero duplicata.**
+
+> **Regra: site em Wix com formulário de candidatura conta como parede de captcha de DESAFIO por
+> assinatura de PLATAFORMA, não por assinatura de HTML.** Esta é a **segunda** medição da família
+> (a primeira foi a Distillery VFX, hoje às 09h50, também Wix) e ela **nomeia o mecanismo**: o
+> `g-recaptcha-response` não existe no HTML servido. Consequência imediata de fila: **a RageCure
+> Games (Quebec City), que tem porta espontânea `Submit CV` e também é Wix, fica classificada como
+> parede sem gastar candidatura.**
+
+A lista de fontes de falso negativo do `grep` agora tem quatro: porteiro de pontuação por
+`render=` (09h50), Wix Forms injetado no clique, campo obrigatório vazio que para a validação antes
+do captcha (09h50), e — a nova do item 5 — **CSS de plugin que casa a palavra sem haver captcha**.
+
+### 3. ADP WORKFORCENOW: FAMÍLIA DE ATS NOVA, SEM CAPTCHA NENHUM, E O QUADRO SÓ APARECE COM `timeZoneId`
+
+A **Triple Boris** (Varennes, QC) é casa inédita e o link do ATS **não está na home**: está só na
+página `/carriere/`, num botão do Elementor *"Découvrir tous les postes à combler"* que aponta para
+`workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=<CID>&ccId=19000101_000001`.
+
+**Como se lê o quadro sem navegador, e vale para qualquer inquilino do ADP:**
+
+```
+GET workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions
+    ?cid=<CID>&timeZoneId=America/New_York&locale=fr_CA
+```
+
+> **Armadilha: SEM o parâmetro `timeZoneId` a MESMA URL devolve `{"jobRequisitions":[]}` com HTTP
+> 200** — que é exatamente a cara de casa sem vaga. É a mesma família de erro do `start=` do
+> gamedevmap e do `items` do Teamtailor.
+
+Fluxo inteiro mapeado, **com zero captcha em todas as telas** (nenhum iframe de
+recaptcha/hcaptcha/turnstile em nenhuma etapa): `Postuler` → tela de convidado *"Parlez-nous de
+vous"* → modal *"Obtenir votre code de vérification"* com rádio de **telefone OU e-mail** → código
+de 6 dígitos de **`SecurityServices_NoReply@adp.com`**, assunto *"Voici votre code de vérification
+d'ADP"*, que chega em **1 a 2 segundos** e expira em 15 minutos → `#oneTimePassWord` +
+`#recruitment_login_verifyOTP` → assistente de 4 etapas *Renseignements Personnels / Curriculum
+Vitæ / Questions / Vérifier Et Soumettre*.
+
+**Três armadilhas medidas, as duas primeiras silenciosas:**
+
+1. **O campo de telefone tem seletor de país separado, e a ordem importa.** Escrever o número antes
+   de trocar o país grava o número com o código de país errado na frente. O certo é selecionar o
+   país, **ler de volta que o `select` ficou em `BR`**, esperar, e só então escrever os dígitos.
+2. **O campo do código NÃO é o primeiro `input[type=text]:visible` da página.** Um seletor genérico
+   escreve o código **dentro do campo Prénom** e o botão *Vérifier* fica `disabled` sem dizer por
+   quê. O id certo é `#oneTimePassWord`.
+3. **O clique em *"Remplir votre demande d'emploi"* JÁ CRIA RASCUNHO no lado da casa:** a
+   requisição passa a mostrar **"En attente de soumission"** com a data de hoje, e o
+   `POST /job-application.submit` devolve **200 `"success"`** — e **esse POST não é o envio final**,
+   é a abertura do rascunho. Quem ler o 200 como recibo declara candidatura que não existe.
+
+**Por que não enviei, e isso é o item mais importante:** as *"Qualifications minimales"* do anúncio
+dizem, ao pé da letra, **"Autorisation de travail valide pour être employé au Canada."** Ele não
+tem e precisa de patrocínio — **envio contra veto escrito não se faz**. O contraste vale registro:
+a página de carreira **da própria casa** não pede nada disso (a `regua-veto.py` devolveu **ZERO
+ACERTO dos 43 termos** em `/carriere/` **e** em `/en/career/`) e o texto do ADP é visivelmente
+genérico de gerador — o próprio rodapé do ADP linka *"Intelligence artificielle"*. Ele também
+**não exige francês**: pede *"Excellentes compétences en communication en anglais"*.
+**Onde parei, e é defeito de ferramenta e não parede:** o campo `Pays*`
+(`#PersonalAddress_country`) é autocomplete com um **input obrigatório IRMÃO de `id` vazio** ao
+lado; escrever *"Brazil"* preenche a caixa visível, o irmão fica vazio e a tela responde
+*"Corrigez les renseignements dans les champs mis en évidence"*. Tem que **escolher da lista** de
+sugestões, como no endereço do Teamtailor. Sem passar a etapa 1 não se vê a etapa de CV nem as
+**Questions** — ou seja, **não se sabe** se existe pergunta de autorização com opção de patrocínio,
+que é o único caminho que desmentiria o veto pela regra de 16/09. **Efeito colateral declarado:
+existe hoje um rascunho meu em "En attente de soumission" no ADP da Triple Boris, com nome, e-mail,
+telefone e endereço, e nenhuma candidatura submetida.** Ferramenta: `/home/user/apply/tb_apply.js`.
+
+### 4. DEDUPE DE CENSO: 12 MEMBROS PUBLICAM UM **AGREGADOR** COMO SITE, E ISSO DÁ FALSO POSITIVO EM TODOS
+
+Doze membros da Guilde publicam como "site" um endereço de `store.steampowered.com`, `x.com` ou
+`facebook.com`. Casar **esse** domínio contra o repositório acerta em todos (obviamente
+`steampowered.com` já existe no repositório) e a casa é descartada como "já mencionada" sem nunca
+ter sido tocada. **O certo é trocar o domínio do agregador pelo domínio do e-mail de contato, e
+descartar quando o e-mail também for genérico (`gmail`, `hotmail`).** No mesmo movimento, quatro
+entradas do meu primeiro corte eram a **mesma** linha de Steam repetida.
+
+E a sonda de caminho não basta: além dos 9 caminhos por domínio (`/careers`, `/carrieres`, `/jobs`,
+`/emplois`, `/join-us`, `/nous-rejoindre`, com e sem barra, e `/about/careers`) contra **caminho
+inventado com md5 de referência**, fiz uma **segunda passada lendo a HOME de cada casa** para
+extrair link de carreira e assinatura de ATS. **Foi a segunda passada que achou 6 das 20 portas**,
+entre elas a da Triple Boris — porque o link do ATS estava só na página interna.
+
+### 5. O CSS DO **FORMINATOR** CASA A PALAVRA "recaptcha" SEM HAVER CAPTCHA — E O QUE DECIDE É O `api.js`
+
+`takeoffcreative.com/carrieres/` (TAKEOFF Creative, Montréal) tem formulário **Forminator** com
+campo de arquivo e seletor de posto que inclui **`Application Spontanée`**. O `grep` acerta
+`recaptcha`, mas o acerto vem do **CSS do plugin** (`.forminator-g-recaptcha`): **não há `div
+g-recaptcha` nem `data-sitekey` na página**. O que há é
+`<script src=google.com/recaptcha/api.js?render=6Ld2s8sg...&ver=3.0>`, ou seja o **mesmo porteiro de
+pontuação por `render=`** que a Sinn Studio mediu com HTTP 400. **Regra: em página com Forminator
+(e com qualquer plugin que embarque o CSS do reCAPTCHA), a palavra no HTML é falso positivo; o que
+classifica é o `api.js` e o parâmetro `render=`.** O que tira a TAKEOFF da fila antes do captcha,
+de todo modo, é **disciplina**: é agência de marketing de jogos, e as duas vagas nomeadas são
+produção de figurinas na China e desenvolvimento de negócios.
+
+Mesmo diagnóstico de família na **Loopsin** (Montréal): `/jeux-video/carriere/` tem formulário de
+verdade em francês com **dois** campos de arquivo (`cv` e `lettre-motivation`) e *"Candidature
+spontannée"* escrito na página, e é **Contact Form 7 6.0.3** com `_wpcf7_recaptcha_response` e
+**sem** `data-sitekey`/`data-size` — **reCAPTCHA v3 por pontuação**, a família que a Gigantic Duck
+já mediu três vezes devolvendo a classe `wpcf7-form spam`. Fica como **dossiê para envio à mão**.
+
+### 6. AS OUTRAS 16 PORTAS DO CENSO, E POR QUE CADA UMA MORREU (para ninguém reabrir)
+
+**Vaga expirada ou zero vaga:** Vellocet (Montréal) tinha o título mais promissor do censo,
+`3D character artist`, e as **seis** vagas dizem *"Sorry! This job has expired"* — a API do plugin
+(`wp-json/wp/v2/awsm_job_openings`) devolve **uma** publicada, *Marketing manager* de 2025, e ainda
+por cima o regime é **revenue share** e o perfil é *"currently pursuing or recently graduated"*;
+Paralives Studio (Montréal, 15 pessoas, 800 mil cópias) diz *"We are not currently recruiting"*;
+Something Wicked Games tem *"Our Open Positions / All Departments"* com **zero** vaga e o único
+`<form>` é um Gravity Forms de **um** campo (boletim); Soliton Interactive diz *"No position
+available at the moment"* nas quatro equipes, inclusive *Art & Animation*, e o site ainda tem o
+texto de amostra do tema (`411 University St, Seattle`).
+**Rota de e-mail, vai para a fila de carta:** TREBUCHET (Montréal, VR) — *"N'hésitez pas à
+postuler à tout moment de l'année"* com `jobs@trebuchet.fun`, e os dois formulários
+`trebuchet.fibery.io/@public/forms` são **Support** e **Playtest**, não candidatura; Flying Carpets
+Games — *"please feel free to send us your portfolio"*.
+**Fora da disciplina:** Nekorai Studios (uma vaga, *Développeur de jeux* em Godot — e o ATS é
+**Odoo Recruitment**, outra família nova); The Tiny Digital Factory (Montréal 5 + Lyon 25, ATS
+**Flatchr**, *Executive Producer* e *Lead Game Designer*, e a casa faz **jogo de corrida**, o mesmo
+veto de veículo da EF Games); AlwaysGeeky/Voxies (só *QA Tester*); Pappagallo Games (*"Looking for
+Partners"*, regime de sócio); WildCard Games (*"Apply on LinkedIn"*, e os benefícios em 401k dizem
+que é casa dos EUA); Studio Lazulite (o `forms.gle` da home é *"Studio Lazulite Contact Form"* de
+quatro campos).
+**Catch-all e parede de borda, confirmados com caminho inventado:** Ludociels pour tous — os
+**nove** caminhos devolvem 200 com 9,9 KB (e é associação); Wathitdew Record — catch-all de Wix no
+`/about/careers`; `folklore.games` — *"Bot Verification / Verifying that you are not a robot"* em
+1.667 bytes nos dois caminhos; Super Splendide — `/emplois` é página de **pitch deck** com um PDF e
+um mailto, apesar do nome; CDRIN (Matane) — o único `<form>` do `/a-propos/carrieres/` é o
+Mailchimp do boletim.
+
+### 7. A MELHOR PORTA QUE O CENSO DEIXOU DE PÉ, E O QUE FALTA
+
+**Kabam Montréal.** `kabam.com/careers` responde 200 com 17.354 bytes e o corpo em texto limpo é
+só *"Kabam | The best in mobile gaming"*: **o quadro inteiro é montado em JavaScript** e nenhuma
+assinatura de ATS aparece no HTML servido. Não é catch-all. Casa grande e em Montréal, então se
+houver vaga da disciplina a faixa é **CAD 95.000**. Precisa de navegador — é o topo da fila da
+próxima rodada, junto com a etapa `Pays*` da Triple Boris (que só precisa de escolha na lista de
+sugestões, não de captcha).
+
+**O número que resume o turno e que vale para a próxima decisão de lane:** o diretório de uma
+associação nacional é excelente como **censo** e magro como **fila de vaga**, porque a maioria
+esmagadora dos membros é micro-estúdio — **199 dos 400 são "Studios Indépendants" de uma a três
+pessoas, e casa desse tamanho não tem departamento de personagem para pedir**. É a mesma conclusão
+que a varredura da Animation UK escreveu hoje para os 55 membros de *Facilities*, agora medida no
+Quebec.
