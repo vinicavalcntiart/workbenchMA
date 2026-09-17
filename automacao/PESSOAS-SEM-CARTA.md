@@ -6696,3 +6696,279 @@ e estúdio de uma pessoa) e **`massivefinger.com`** (domínio estacionado num Tu
 morta por ausência de casa). **Não reabrir nenhuma das duas.**
 
 > **Maestro, 17/09 17h10 UTC:** lote de quatro cartas escrito e gravado em rascunho (`confere-carta.py` limpo, pior par 40%): Daniel Harris / Le Catnip Collective `r3025175405551741327`; Junel Popp / Ludia `r4755823918947938609` (pede um encaminhamento a quem lidera arte de personagem, e diz que sabe que comunicação não é recrutamento); Alexandre Blanchet / No Deadlines `r1494887751995450760`; e François Mathieu / Erupting Avocado `r-6799941539456297593`, escrita para a caixa `info@` com o nome dele na abertura (caixa: um emoji no fecho). Saem pelo Apps Script do Vini.
+
+## JOE, 17/09/2026 21h45 UTC — A VEIA (b) DOS DIRETÓRIOS DE ASSOCIAÇÃO **MORREU MEDIDA EM SEIS FONTES**, E O QUE RENDEU FOI A **VARREDURA PARALELA DE 87 DOMÍNIOS DE MEMBRO DA ANIMATION UK + 38 DA DUTCH GAMES ASSOCIATION** — QUATRO FICHAS, TRÊS COM ENDEREÇO PUBLICADO
+
+**Aviso de método antes das fichas, porque ele custou metade do turno:** a varredura da Animation UK
+reencontrou **três casas que este próprio arquivo já tinha matado** (3D Sparrow, Hoho Entertainment,
+King Bee), e eu **fui ler a nota antiga antes de escrever ficha** — que é a lição de 04h35. Só o que
+sobrou depois desse filtro está abaixo.
+
+### FICHA 1 — Simon Wilkinson, The Flying Colour Company (Londres, Reino Unido) — **o endereço vem pareado com o cargo na PRÓPRIA linha de contato, e o `/about-us` fecha o nome completo**
+
+- **Email: `simon@theflyingcolourcompany.com` — PUBLICADO, confiança ALTA.** Aparece em texto puro em
+  **`https://theflyingcolourcompany.com/contact`** (200, **31.316 bytes**, aberta nesta rodada), num
+  bloco que publica **cargo e endereço colados**: *"Reception: tfcc.general@theflyingcolourcompany.com
+  · **Managing Director: simon@theflyingcolourcompany.com** · Head of Production:
+  leonie@theflyingcolourcompany.com · VFX Producer: micheline@theflyingcolourcompany.com"*.
+- **URL que fecha o nome completo, aberta nesta rodada:**
+  **`https://theflyingcolourcompany.com/about-us`** (200, **103.090 bytes**), que publica o quadro com
+  nome e cargo: *"**Simon Wilkinson — Managing Director & Founder**"*, *"**Dominic Thomson — Creative
+  Director & Founder**"*, *"**Leonie Steeger-Byerly — Head of Production**"*, *"Sarah Bolton — Finance
+  Controller"*, *"**Micheline Macavoy — VFX Producer**"* e *"Imogen Burton — Production Assistant"*.
+  O pareamento de três endereços de primeiro nome (`simon@`, `leonie@`, `micheline@`) com três pessoas
+  do mesmo quadro **prova o padrão `primeironome@`** do domínio.
+- **Por que ELE e não outro da casa:** o alvo de arte seria o **Dominic Thomson, Creative Director &
+  Founder** (*"rose quickly through the creative ranks to become a highly successful Henry artist …
+  one of London's top Flame artists for TV and film … capable of leading teams, providing excellent
+  on-set VFX supervision"*), e **o endereço dele NÃO está publicado**. `dominic@` seria **MONTADO**, e
+  a regra medida em 06/09 (cinco de oito montados quicaram) proíbe gastar a única carta de uma casa
+  num endereço montado. Então a ficha vai no **sócio cujo endereço a casa imprime com o cargo**, que
+  é fundador de casa de menos de dez pessoas e pela regra do BRIEF-JOE é alvo de primeira linha.
+  **Fica registrado aqui que `dominic@theflyingcolourcompany.com` é o endereço provável do diretor
+  criativo, e que ele é MONTADO, não verificado.**
+- **Gancho com a frase da própria casa:** *"Simon departed Technicolor to set up an **independently
+  owned VFX Studio focused on its clients, creatives & quality**. This is The Flying Colour Company"*
+  e, do `/about-us`, *"We use industry leading Autodesk Flame and Nuke workstations that are insanely
+  powerful and offer the very best platform for our **highly skilled and creative artists**"*.
+- **Fora dos EUA: sim** (42-44 Carnaby Street, Londres W1F 7QT) — frase de realocação entra.
+- **O que o Gmail devolveu:** `theflyingcolourcompany OR "Flying Colour" OR Wilkinson …` devolveu
+  **`{}`**; `in:sent (theflyingcolourcompany.com …)` devolveu **`{}`**. Teto por domínio = **zero**.
+  No repositório, `flyingcolour` dá **0 acerto** em `PESSOAS-SEM-CARTA.md`, `pessoas.csv`,
+  `enviados.csv`, `processados.csv`, `alvos.csv` e `docs/index.html`. **Casa inédita na campanha.**
+- **RESSALVA HONESTA, e é de disciplina:** (1) a técnica publicada é **Flame, Nuke, data pulls, colour
+  pipeline, DI e finishing** — é **composição e acabamento**, e a casa **não publica nada de 3D nem de
+  criatura**: o encaixe do portfólio do Vini aqui é indireto, e a carta não deve afirmar que a casa faz
+  personagem; (2) o cargo dele é **Managing Director**, ou seja gestão, não arte — quem decide arte é
+  o Dominic, e o valor desta carta é justamente o fechamento padrão do BRIEF-JOE ("if someone else
+  there is the right person, just point me"); (3) é casa de **seis nomes publicados**, logo patrocínio
+  de visto é improvável; (4) o quadro do `/about-us` não tem data, e um Production Assistant pode já
+  ter saído — o que não afeta os dois fundadores.
+
+### FICHA 2 — Saskia Hansen, King Bee Animation (Londres, Reino Unido) — **`sem-email`, e a linha vale assim: o `/about` NOMEIA UMA ART DIRECTOR E UMA CHARACTER DESIGNER que a nota anterior deste arquivo não tinha extraído**
+
+- **Email: nenhum de pessoa. `confianca = sem-email`.** A casa publica **só** `info@kingbee.co.uk`, e
+  ela aparece em `https://kingbee.co.uk/contact` (200, **108.176 bytes**). **Nenhum endereço foi
+  montado.** Isto **confirma** a linha da rodada das 12h35 (*"`kingbee.co.uk` (só `info@`)"*) e
+  **acrescenta o que faltava**: aquela nota mediu o endereço e **não leu o quadro**.
+- **URL que traz nome e cargo, aberta nesta rodada:** **`https://kingbee.co.uk/about`** (200,
+  **159.120 bytes**; `/about-us` devolve o mesmo corpo, mesmo tamanho), que publica o time com cargo:
+  *"Martyn Niman — Company Director"*, *"Kate Patterson — Production Manager"*, *"Marc de Launay —
+  Exec Producer"*, *"Alex Sinclair — Lead Animator"*, *"**Saskia Hansen — Art Director**"*,
+  *"Daisy Linthicum — Story Lead"* e *"**Mya Mcarthy — Character Designer**"*.
+- **Por que ELA e não outro da casa:** é a **única Art Director** nomeada, e pela ordem do BRIEF-JOE em
+  casa pequena o Art Director é alvo 1. A **Mya Mcarthy (Character Designer)** é o segundo nome da casa
+  e fica guardado aqui para a eventual segunda carta, **sem virar ficha nesta rodada** por causa da
+  regra de uma pessoa por casa por rodada.
+- **Gancho com a frase da própria casa:** *"Over the last 23 years, KingBee has built a strong
+  reputation for being a **highly creative studio with a warm friendly approach**"*, *"Our set-up is a
+  team of collaborative directors, artists and storytellers in the studio and **a remote team of
+  talented freelancers working in the UK and beyond**"*, e a frase da própria Saskia no `/about`:
+  *"As a teenager, my anime obsession grew, **inspiring me to draw my own characters** whenever I
+  could. Director Satoshi Kon's work solidified my desire to pursue animation as a career"*.
+- **Fora dos EUA: sim** (Londres) — frase de realocação entra.
+- **O que o Gmail devolveu:** `kingbee OR "King Bee" OR Hansen …` devolveu **`{}`**;
+  `in:sent (kingbee.co.uk …)` devolveu **`{}`**. Teto por domínio = **zero**. No repositório,
+  `kingbee` aparece **uma vez** e só como medição de endereço genérico (12h35); `King Bee`,
+  `Saskia Hansen` e `Mcarthy` dão **0 acerto**. **A casa nunca recebeu mensagem desta campanha.**
+- **RESSALVA HONESTA:** (1) **não há endereço de pessoa** — a carta, se sair, sai para `info@`
+  endereçada a ela pelo nome, e caixa funcional rende menos que pessoa (medição de 07/09); (2) **a
+  técnica publicada é 2D**: as bios citam *"2D animation"*, Winx Club, Scooby Doo, Looney Tunes e
+  Aardman, e o catálogo é *"animated series, educational content to corporate and interactive"* — é a
+  família da armadilha Myth Studio, e **nada no site confirma pipeline 3D**; (3) a casa trabalha com
+  *"remote team of talented freelancers"*, o que significa **freelance, não vaga com patrocínio**;
+  (4) o quadro publicado não tem data.
+
+### FICHA 3 — Thijs Adema, Miomi Game Studio (Países Baixos) — **casa de uma pessoa que PUBLICA que terceiriza a arte, e o crédito do jogo nomeia o estúdio de arte que ela usou**
+
+- **Email: `thijs@miomigamestudio.com` — PUBLICADO, confiança ALTA.** Em texto puro no bloco
+  **Contact** de **`https://miomigamestudio.com/`** (200, **4.188 bytes**, aberta nesta rodada):
+  *"Email: thijs@miomigamestudio.com · LinkedIn: linkedin.com/in/thijs-adema"*. O nome da pessoa está
+  no **título da própria página** (*"Thijs Adema — Miomi Game Studio"*). `/about`, `/team`, `/contact`,
+  `/people`, `/credits`, `/studio` e `/about-us` devolvem **404 com 236 bytes** (404 magro, medido).
+- **Por que ELE e não outro da casa:** **a casa é ele.** O `/` publica *"Miomi Game Studio is a
+  **solo-run game studio** focused on building games through collaboration"*.
+- **Gancho com a frase da própria casa:** *"We work with **developers, artists, and creators** across
+  the game dev community to bring ideas to life. Our projects are built on shared effort and shared
+  reward. We value **transparent rev share agreements** and fair partnerships"*, e o crédito do jogo
+  na mesma página: *"Idle Zoo: Safari Rescue … players grow and manage their own zoo, **unlocking new
+  animals**, and upgrading them … **Developed by: Miomi Game Studio & Ember Whirl · Art by: Ottenhof
+  Design**"*. **A casa imprime que a arte é de fora, com o nome de quem fez.**
+- **Fora dos EUA: sim** (Países Baixos; a casa é membro da Dutch Games Association) — frase de
+  realocação entra, **com cuidado**, porque aqui não há vaga para realocar ninguém.
+- **O que o Gmail devolveu:** `miomi OR Adema …` devolveu **`{}`** e `in:sent (miomigamestudio.com …)`
+  devolveu **`{}`**. Teto por domínio = **zero**. No repositório, `miomi` dá **0 acerto nos cinco
+  arquivos**. (O `Adema` que aparece em `alvos.csv` é casamento parcial dentro de
+  *"marmalade Game Studio"*, não é esta pessoa.) **Casa inédita.**
+- **RESSALVA HONESTA, e ela é a maior das quatro:** (1) **estúdio de uma pessoa, remunerado em rev
+  share** — **zero chance de patrocínio de visto e provavelmente zero dinheiro**; o valor é
+  **contato, rev share e indicação**, e a carta não deve pedir vaga; (2) os jogos publicados são
+  **idle e match-3 para Poki e Facebook Gaming**, arte 2D/estilizada leve, longe de personagem
+  cinematográfico; (3) o próprio crédito diz que a arte vai para um estúdio parceiro
+  (**Ottenhof Design**), que é a pista de arte real desta casa e **não foi aberta nesta rodada por
+  tempo**; (4) não há cargo publicado — *"solo-run"* é a descrição, e a carta não pode inventar título.
+
+### FICHA 4 — Bas van Nuland, The Barn (Países Baixos) — **cinco pessoas, cinco endereços publicados com cargo, e a armadilha de domínio de sempre: o site é `.com`, o email é `.nl`**
+
+- **Email: `Bas@TheBarnGames.nl` — PUBLICADO, confiança ALTA.** Em texto puro no bloco *Ontmoet het
+  team* de **`https://thebarngames.com/about-us`** (200, **94.134 bytes**, aberta nesta rodada; o
+  `/about` devolve o mesmo corpo com os mesmos 94.134 bytes). A casa publica os **cinco** pareados com
+  cargo: *"**Bas van Nuland — Oprichter — Bas@TheBarnGames.nl**"*, *"**Arne Bezuijen — Oprichter —
+  Arne@TheBarnGames.nl**"*, *"Berend Wouda — Ontwikkelaar — Berend@TheBarnGames.nl"*,
+  *"**Linda van Veen — Ontwerper — Linda@TheBarnGames.nl**"* e *"Jelle Groen — Tester —
+  Jelle@TheBarnGames.nl"*.
+  **ARMADILHA DE DOMÍNIO, registrada:** o site responde em **`thebarngames.com`** e os endereços são
+  todos **`@thebarngames.nl`**. É a mesma família do `cantilever.media` / `@cantilevermedia.ie` e do
+  `wanted5games.com` / `@wantedgamestudio.com`. **O endereço a usar é o `.nl`, porque é o que a casa
+  imprime**; nada foi montado.
+- **Por que ELE e não outro da casa:** são **dois fundadores** (`Oprichter`), e pela regra do
+  BRIEF-JOE em casa de até 30 pessoas o fundador é alvo de primeira linha e costuma responder ele
+  mesmo. Os outros três cargos publicados são **Ontwikkelaar** (programador), **Tester** e
+  **Ontwerper** (designer). **A Linda van Veen, `Ontwerper`, é o nome de arte mais próximo da casa** e
+  fica guardado aqui como o segundo alvo, sem virar ficha nesta rodada.
+- **Gancho com a frase da própria casa** (`/about-us`, em neerlandês): *"**Mensen zijn de fundering
+  van bijna elke organisatie.** Blijvend succes hangt af van hun vaardigheden en de manier waarop ze
+  samenwerken. Bij The Barn weten we hoe effectief **serious games** zijn in het faciliteren en
+  trainen van deze belangrijke aspecten. **Sinds 2011** hebben we veel succes gehad hierin."*
+- **Fora dos EUA: sim** (Países Baixos; KVK 83192190, BTW NL862763095B01 impressos no rodapé) — frase
+  de realocação entra.
+- **O que o Gmail devolveu:** `thebarngames OR "The Barn" OR "van Nuland" …` devolveu **`{}`** e
+  `in:sent (thebarngames.nl OR thebarngames.com)` devolveu **`{}`**. Teto por domínio = **zero**.
+  No repositório, `thebarngames` dá **0 acerto nos cinco arquivos** (o `weirdbeard` da mesma lista
+  holandesa já estava medido em 14/09, esta casa não).
+- **RESSALVA HONESTA, e ela é dura:** (1) a casa é de **serious games de treinamento corporativo** —
+  não há elenco de personagem publicado, e é a família do descarte por disciplina (Handmade Creative,
+  Myth Studio); (2) **cinco pessoas**, sem patrocínio de visto; (3) o rodapé imprime
+  **© 2021**, ou seja o site pode estar parado há cinco anos, e é a ressalva mais séria: **cargo e
+  quadro podem estar desatualizados**; (4) o site é **em neerlandês** e a carta do Vini sai em inglês
+  (o que não é parede: a casa tem cliente internacional e o time é holandês, mas vale registrar).
+
+### AS SEIS FONTES DA VEIA (b) QUE MORRERAM MEDIDAS NESTA RODADA — **registro para nenhuma rodada reabrir**
+
+| Fonte da ordem | O que devolveu, medido | Leitura |
+|---|---|---|
+| **Animation in Europe** — `animationineurope.eu/members/` | **404 com 57.650 bytes** (404 gordo de tema) | a federação **não tem diretório de membros** |
+| **Animation in Europe** — home `www.animationineurope.eu/` | **200 com 218.058 bytes** e **UM único email em toda a página: `animationineurope@gmail.com`** | federação de associações, **zero pessoa nomeada com endereço**; o bloco `#board` é servido por JavaScript |
+| **Animation in Europe** — as 27 páginas de país (`/animation-in-netherlands/` 77.015 bytes, `/norway/` 76.820, `/denmark/` 76.749, `/finland/` 77.132, `/germany/` 76.815, `/spain/` 90.545, todas 200) | **ZERO email e ZERO nome de pessoa nas seis abertas**; o texto é **artigo editorial de 2019/2020** sobre financiamento (*"In 2019, there were more than 30 feature-length animated films …"*) | é **reportagem de mercado**, não diretório. **Veia fechada com contagem: 6 países abertos, 0 pessoa.** |
+| **Dutch Animation "NAPA"** — `napa.nl` | **200 com 96.437 bytes**, e é a **Nederlandse Associatie Physician Assistants** (*"Een physician assistant"*, *"kwaliteitsregister"*) | **homônimo médico**, nada de animação. `www.napa.film` e `napafilm.nl` dão **000**. |
+| **Danish Producers (Producentforeningen)** — `producentforeningen.dk/medlemmer` (200, 39.762 bytes), `/medlemsoversigt` e `/om-os/medarbejdere` (**404 de 26.5 KB**) | o `/medlemmer` **não lista membro nenhum**: é a área *"For medlemmer"* com contratos e convenções, e os únicos endereços da página são **`jura@pro-f.dk` e `info@pro-f.dk`** | **lista de membros atrás de login** (`/pcologin/login`). Zero pessoa. |
+| **Finnish Neogames** — `neogames.fi/members/` e `/companies/` | **404 com 39.121 bytes** as duas | a casa **não publica lista de membros**; o site tem `/introducing-neogames/meet-the-team/` (equipe da associação, **não estúdio**) e nenhum diretório. Confirma o `neogames.fi/companies` 404 de 13/09. |
+| **Nórdicos, controle na mesma janela** | `spillprodusentforeningen.no` **000**, `finnanimation.fi/members/` **000**, `animationdenmark.dk/members/` **000**, `norskfilm.no` **000**, `produsentforeningen.no/medlemmer/` **404 de 33.203 bytes**, `nfi.no` **200 com 122.621 bytes** | as três primeiras são **NÃO CONFERIDO por rede** (mesma parede de 14/09), não "casa sem site"; o `nfi.no` abrindo na mesma janela é o controle que prova que o túnel estava vivo |
+
+### A VEIA QUE RENDEU, COM A CONTAGEM HONESTA (e ela custou metade do turno)
+
+1. **Dutch Games Association, membros reabertos** (`dutchgamesassociation.nl/members/`, 200,
+   **926.957 bytes**): extraí **170 domínios**, filtrei os já mencionados no repositório e sobraram
+   **38 estúdios inéditos**; varri os 38 em **8 caminhos cada (304 URLs, 86 respostas 200 com corpo)**
+   com desofuscação de entidade HTML, `data-cfemail` e `[at]`/`[dot]`. **Rendeu 2 fichas**
+   (Miomi, The Barn) e a correção da Paladin abaixo. **A lista continua sendo o que a nota de 14/09
+   já dizia: universo novo de nome de casa, quase nada de endereço de pessoa** — e agora está medido
+   também no sentido inverso: **dos 38 estúdios, 6 publicam endereço de pessoa e 4 deles são casa de
+   uma a cinco pessoas.**
+2. **Animation UK, `wp-json/wp/v2/organisations`** (3 páginas, 200 com 593.771 + 762.453 + 37.680
+   bytes, **205 registros**): extraí **114 domínios**, e **87 estavam inéditos no repositório** — ou
+   seja, os 43 que a rodada de 04h35 deixou sem varrer eram na verdade **87**. Varri os 87 em
+   **8 caminhos cada (696 URLs, 208 respostas 200 com corpo)**. **Rendeu 2 fichas** (Flying Colour e
+   King Bee) e **reencontrou três casas já mortas neste arquivo**, o que é o custo da veia.
+3. **A varredura de 24 estúdios nórdicos e holandeses escolhidos a dedo** (Sharkmob, Neon Giant,
+   The Outsiders, Triband, Ghost Ship, SYBO, Krillbite, Megapop, Dirtybit, Sarepta, Nitro, Dodreams,
+   Mountain Wolf, Abbey, Ronimo, Force Field, Grendel, KeokeN, Codeglue, Nixxes, Il Luster, Polder,
+   Twelve Heads, Buccaneer) em **13 caminhos cada**: **ZERO endereço de pessoa**, só
+   `info@`, `press@`, `contact@`, `support@`, `business@`, `partnership@`. **Isto confirma pela
+   terceira vez que `mailto` em site de estúdio nórdico está esgotado como fonte** — e agora com a
+   lista nominal, para ninguém repetir.
+
+### CASAS COM ENDEREÇO OU NOME ACHADO E **DESCARTADAS**, com o motivo de cada uma
+
+- **Paladin Studios** (Den Haag, Países Baixos) — **A CASA FECHOU, e isto é correção de registro para
+  a campanha inteira.** `https://paladinstudios.com/about` (200, **75.591 bytes**, aberta nesta
+  rodada) abre com o aviso, literal: *"**ANNOUNCEMENT: Our quest has ended, and Paladin has shut down
+  operations on May 1st 2024.** Thank you for your support over the years!"* O `/about` continua
+  publicando `stein@paladinstudios.com` (**Stein Damen, Business Development**), `info@` e `office@`,
+  e continua dizendo *"45+ people"* e *"3D games on all platforms"* — **é um site fantasma**.
+  **Nenhuma linha entrou**, e a casa **não deve** entrar em nenhuma fila desta campanha.
+- **Caboodle** (Amsterdam + Escócia) — `alastair@caboodle.games` e `fernando@caboodle.games`
+  **PUBLICADOS** em `https://caboodle.games/` (200, **237.791 bytes**), pareados em texto puro:
+  *"Caboodle is run by **Alastair Hebson and Fernando Rizo**, a couple of massive game biz nerds who
+  have been in senior roles in game design, development and publishing"*. **Descartada por disciplina:
+  não é estúdio**, é *"boutique **commercial advisors** for self-published game developers … life
+  cycle management, long-tail revenue growth, go-to-market planning"*. **Fica com os dois endereços
+  provados** para o dia em que a campanha precisar de porta de publisher.
+- **The Flying Colour Company, segundo nome** — `dominic@theflyingcolourcompany.com` **NÃO está
+  publicado** e fica aqui marcado como **MONTADO** (padrão `primeironome@` provado por três
+  endereços). **Não usar sem confirmação.**
+- **Hoho Entertainment** (Londres) — `/people` (200) republica os quatro endereços de pessoa com nome
+  e cargo (`helen.howells@`, `oliver.ellis@`, `justin.wilkes@`, `harriet@`). **Já estava descartada
+  neste arquivo em 20h35 de 16/09**, e a leitura de hoje confirma o motivo: *"a children's
+  **production and rights management** company"*, e os quatro cargos são Joint MD comercial, Joint MD
+  de desenvolvimento, Finance Director e Head of Digital/Marketing — **nenhum de arte, sem pipeline
+  interno**.
+- **3D Sparrow Group** (Londres) — a varredura reencontrou os cinco endereços publicados pela
+  **terceira** rodada seguida. **NÃO virou ficha: a nota de 14/09 deste arquivo a mata na geografia**
+  (produção em Krasnogorsk, Rússia, e Dubai; a sede britânica é só a entidade). Li a nota antiga antes
+  de escrever, como manda a lição de 04h35. **Não reabrir.**
+- **Wanted 5 Games** (Haarlem) — `jord@wantedgamestudio.com` continua publicado em
+  `https://wanted5games.com/contact` (200, **8.697 bytes**), e **continua sem sobrenome e sem cargo**:
+  `/about-us` é **404 de 4.608 bytes** e o `/about` (200, 22.923 bytes) não nomeia ninguém. **É
+  exatamente o que a nota de 14/09 registrou, e a conclusão dela segue valendo: sem sobrenome não vira
+  ficha.**
+- **Get Bent Games** (Países Baixos) — `jasper@getbentgames.com` **publicado** na home (200, **1.144
+  bytes**: *"Brewing up some new adventures. Stay tuned! Say hi: jasper@getbentgames.com"*), e
+  **`/about`, `/team`, `/people`, `/contact`, `/credits`, `/about-us` e `/studio` devolvem 500 com 800
+  bytes**. **Sem sobrenome e sem cargo, não virou ficha** — endereço guardado aqui.
+- **Casas holandesas e britânicas abertas e sem uma única pessoa nomeada com endereço** (todas 200,
+  varridas em 8 caminhos): `huntersonstudio.com`, `lucky-kat.com`, `studiointerlude.com`,
+  `twirlbound.com`, `silvermonkey.studio`, `iceberg-games.com`, `ducklandgames.com`,
+  `enchantedworks.nl`, `gamebakery.nl`, `gametailors.com`, `geofront.nl`, `helden-inc.com`,
+  `liriogames.com`, `picomy.com`, `sanforgestudio.com`, `coolgames.com`, `salamandra.uk`,
+  `eggbug.com`, `kinobino.com`, `noodleandcaboodle.tv`, `lilcritterworkshop.tv`,
+  `rumpusanimation.com`, `tentaclemedia.co.uk`, `twodaughtersentertainment.com`. **Quatro delas têm
+  gancho de personagem forte e só caixa funcional**, e vale registrar as frases para o dia em que a
+  campanha decidir escrever para `hello@`: Kino Bino *"We specialise in vibrant 2d animation.
+  Creating, inclusive, **loveable characters**"*, Rumpus *"crafting **captivating characters** and
+  wonderful worlds"*, Noodle & Caboodle *"From the creative director who brought Moonbug's Morphle to
+  Disney+ … create **characters and stories** that have purpose"* e Lil Critter Workshop.
+- **Gabarito de tema confundido com endereço, três casos novos** (a família `info@domain.com` do
+  Columel): `studiobrainmuffin.com/contact` publica **`ceo@business.com`, `cto@business.com`,
+  `design@business.com`, `contact@business.com`**; `stalgard.com` publica **`email@email.com`**;
+  `picturesmith.com` publica **`jane@acme.com`**; `thesharpproject.co.uk/contact` publica
+  **`joey@smith.com`**; `atelier11.co.uk/about-us` publica **`example@mysite.com`** (Wix).
+  **Nenhum é endereço real. Filtro obrigatório em qualquer varredura mecânica.**
+
+### PLACAR HONESTO DA RODADA DAS 21h45
+
+**Quatro pessoas novas**, no **piso** da faixa de 4 a 8: **três com endereço PUBLICADO** (Simon
+Wilkinson, Thijs Adema, Bas van Nuland) e **uma `sem-email`** guardando nome, cargo e estúdio
+(Saskia Hansen, Art Director). **Nenhum endereço montado. Nenhum inventado. Nenhuma segunda pessoa
+de casa nenhuma.**
+
+**Por região, contra a ordem de preferência do turno:** **Reino Unido 2** (Londres 2) e
+**Países Baixos 2**. **Vancouver e BC: ZERO pelo quinto turno seguido** — e o motivo desta vez é que
+as duas veias da ordem eram europeias (diretório de associação europeia e crédito de jogo europeu);
+não abri uma única fonte canadense. **Nórdicos: ZERO, e medido, não presumido** — as seis fontes
+nórdicas da ordem estão na tabela acima, três delas com **000 de rede**, e a varredura de 24 estúdios
+nórdicos escolhidos a dedo deu **zero endereço de pessoa**. **Irlanda, Alemanha, Espanha e Canadá:
+não abertos nesta rodada.**
+
+**Por tamanho de casa, e é a fraqueza da rodada:** nenhuma das quatro passa de **sete nomes
+publicados** (Flying Colour 6, King Bee 7, The Barn 5, Miomi 1). **Nenhuma patrocina visto com
+probabilidade realista**, e isso está escrito na ressalva de cada ficha. A rodada **não achou casa
+grande**, e a razão honesta é a fonte: diretório de associação de animação europeia é povoado por
+casa de serviço e estúdio-boutique.
+
+**Por disciplina:** **duas de quatro têm cargo de arte no nome** (Art Director na King Bee, Creative
+Director & Founder como segundo nome na Flying Colour), **uma é VFX de composição** (Flying Colour),
+**uma é serious games** (The Barn) e **uma é solo que terceiriza arte** (Miomi). **Nenhuma é casa de
+personagem 3D como a 3D Sparrow seria — e essa, que era a melhor, morreu na geografia pela terceira
+vez.**
+
+**Dedupe:** as **quatro** casas nunca receberam nada da campanha (`{}` no Gmail por nome e por casa,
+`{}` no `in:sent` por domínio, e 0 acerto de endereço, domínio e nome em `pessoas.csv`,
+`enviados.csv`, `processados.csv`, `alvos.csv` e `docs/index.html`; a única menção anterior é a linha
+de 12h35 medindo que `kingbee.co.uk` só publica `info@`). **Todas são primeira pessoa e primeira
+mensagem da casa**, logo nenhuma encosta no teto de duas. **Ludia: não achei segundo nome com
+endereço publicado** — o site segue sem nomear ninguém, e a segunda carta da casa continua sem alvo.
+
+**Uma correção de registro que vale mais que uma ficha:** **a Paladin Studios encerrou operações em
+1º de maio de 2024** e o site continua no ar dizendo *"45+ people"*. Qualquer fila desta campanha que
+a liste está listando uma casa morta.
