@@ -5645,3 +5645,47 @@ sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a li
   de vagas nem uma palavra sobre patrocínio de visto; (5) a única caixa que a casa publica no
   próprio site é `marketing@forge-hammer.com`, o que sugere que o endereço do CEO no diretório é
   contato de associação, e não porta de recrutamento.
+
+### FICHA 4 — Natalie Molson, Krafton Montréal (Montréal, Canadá) — **a veia da política de privacidade, e é a ficha mais fraca da rodada**
+
+- **Email: `natalie.molson@krafton.com` — PUBLICADO, confiança ALTA quanto à existência do
+  endereço, e BAIXA quanto ao encaixe do cargo.** O endereço estava **ofuscado pelo Cloudflare**
+  e foi decodificado pela receita do `BRIEF-JOE` (`data-cfemail`, XOR pelo primeiro byte): **cinco**
+  atributos diferentes na mesma página, todos devolvendo o mesmo endereço, o que é a melhor prova
+  de decodificação que existe. Nada foi montado.
+- **URL exata aberta nesta rodada:** `https://kraftonmontreal.com/privacy` (200, 74.209 bytes; zero
+  acerto de `Page not found` no texto limpo). O trecho, colado como está no texto limpo:
+  *"If you have questions or comments about this notice, you may contact our **Data Protection
+  Officer (DPO), Natalie Molson**, by email at [email protected]"*. Ou seja **nome, cargo e
+  endereço na mesma frase**, publicados pela própria casa.
+- **Por que ESSA pessoa e não outra da casa:** porque **não há outra**. O site da Krafton Montréal
+  **não publica uma única pessoa de arte, nem página de equipe**; a varredura de doze caminhos
+  desta rodada devolveu endereço de pessoa **só** na política de privacidade. O contato do
+  diretório da Guilde para a casa é `info.montreal@krafton.com`, caixa funcional. O padrão do
+  domínio fica **provado** (`nome.sobrenome@krafton.com`) e **isso não autoriza montar nada**: a
+  medição de 07/09 mostra que padrão provado não prova caixa viva.
+- **Gancho com a frase do próprio estúdio, entre aspas:** o próprio documento identifica a casa
+  como *"Krafton Montreal"* com endereço na Rue Cathcart, e o grupo é o dono de PUBG e da Unknown
+  Worlds. **Não há frase criativa para citar**, porque o site não tem uma — e é por isso que esta
+  ficha vem com a ressalva escrita no título.
+- **Casa fora dos EUA: SIM, Canadá (Montréal).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe, e é o achado mais delicado desta ficha:** a busca por
+  `krafton OR Molson OR "Krafton Montreal"` devolveu **cinco threads, todas RECEBIDAS e nenhuma
+  enviada** — são recibos e recusas de candidaturas do grupo KRAFTON por portal:
+  `career@krafton.com` com quatro recibos da **Loonshot Games** (3D Environment Artist e 3D
+  Character Artist do *Project AA*, e 3D Environment Modeler do *Project Camp*, em 07, 08, 09 e
+  10/09, dois deles já com **resultado negativo de triagem**) e `no-reply@krafton.com` com o recibo
+  da **Eleventh Hour Games** de 16/09. **Teto de duas por casa no `in:sent` por domínio
+  `krafton.com`: ZERO carta enviada.** Nada em `pessoas.csv`; no `enviados.csv` as ocorrências são
+  as candidaturas de portal da Loonshot e da Eleventh Hour, **outras casas do mesmo grupo**.
+- **RESSALVA HONESTA, e ela é a maior da rodada:** (1) o cargo é **proteção de dados**, não arte nem
+  recrutamento — é a mesma cadeira que rendeu o Sunho Park da GIANTSTEP em 07/09, mas ali a tabela
+  dizia explicitamente `채용 관련`, recrutamento, e **aqui não diz nada disso**: escrever para um DPO
+  sobre vaga é bater na porta errada de propósito, e só se justifica porque **não existe outra porta
+  publicada**; (2) o grupo KRAFTON **já triou e já recusou** o Vini duas vezes em setembro por
+  portal, então a carta não pode se apresentar como primeiro contato com o grupo; (3) a Krafton
+  Montréal é estúdio **novo e sem jogo anunciado**, sem uma palavra pública sobre personagem 3D;
+  (4) o email é `@krafton.com`, matriz coreana, e não um domínio do estúdio de Montréal — a carta
+  pode cair em caixa jurídica na Coreia; (5) **é casa grande, e o `BRIEF-JOE` manda não gastar a
+  única carta de casa grande num alvo fraco** — por isso esta linha entra marcada, e o maestro deve
+  tratá-la como a última da fila, atrás das três de cima.
