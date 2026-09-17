@@ -3242,3 +3242,112 @@ esmagadora dos membros é micro-estúdio — **199 dos 400 são "Studios Indépe
 pessoas, e casa desse tamanho não tem departamento de personagem para pedir**. É a mesma conclusão
 que a varredura da Animation UK escreveu hoje para os 55 membros de *Facilities*, agora medida no
 Quebec.
+
+## 17/09, 11h35 UTC (CAÇADOR, casas grandes) — A EA ME DEVOLVEU "ZERO DA DISCIPLINA" COM SETE CHARACTER ARTIST NO AR, E O QUADRO DA XBOX GAME STUDIOS NÃO ABRE DESTE TÚNEL
+
+Rodada de inventário das duas listas fixas (`BRIEF-GRANDES.md` e `BRIEF-GRANDES-JOGOS.md`), só
+API e `curl`, **zero navegador**. **4.633 vagas lidas em 24 quadros, 81 acertos da régua de
+disciplina, zero vaga inédita de personagem, zero candidatura.** O número por quadro está na
+linha de `varredura` de hoje no `processados.csv`; aqui ficam só os mecanismos.
+
+### 1. UMA VAGA PODE APARECER EM **DUAS ÂNCORAS COM O MESMO `href`**, E A SEGUNDA APAGA O TÍTULO DA PRIMEIRA
+
+A minha primeira leitura do `jobs.ea.com` (Avature) escreveu **"317 de 317 vagas lidas, ZERO da
+disciplina"**. A cobertura estava certa e o zero era **falso**: a EA tem **dez** acertos, entre
+eles **sete Character Artist**.
+
+O mecanismo, e ele não é da EA, é do meu parser: no Avature cada vaga aparece em **duas** âncoras
+com o **mesmo `href`** — a do título e uma segunda cujo texto é **`More Information`**. Eu montei
+o dicionário com a URL como chave (`jobs[href] = titulo`), então a segunda âncora **sobrescreveu
+o título das 317 vagas** pela string `More Information`, e o filtro de disciplina rodou contra
+317 cópias dela.
+
+**O que torna isso perigoso é a ausência de sintoma:** HTTP 200 em todas as páginas, `lidas`
+igual ao `declarado`, nenhuma exceção, nenhum corpo vazio. Todos os sinais que esta campanha usa
+para separar "conferi" de "não conferi" estavam **verdes**.
+
+> **Regra: quando a chave natural do quadro é a URL, confira quantas âncoras existem POR VAGA.**
+> A última que o laço vê é a que manda. Use `setdefault` (primeira leitura vence) ou descarte a
+> âncora de texto genérico, e nunca use atribuição direta.
+>
+> **Regra irmã, e é a que salvou esta leitura: `lidas == declarado` NÃO prova que o campo lido é
+> o título.** Prova só que a paginação cobriu o quadro. Os dois números podem estar certos com o
+> conteúdo inteiro errado.
+
+O que denunciou foi o **controle de falso negativo** que a regra de 17/09 04h30 tornou
+obrigatório quando o resultado é "tudo zero": reli os títulos como **lista** em vez de
+dicionário e `Character Artist - EA Sports FC` apareceu na primeira linha. **Casa grande que
+contrata arte devolvendo zero da disciplina é hipótese a testar, não resultado a registrar.**
+
+### 2. `jobs.careers.microsoft.com` ABRE E A API DELE NÃO: O HOST É **IPv6-ONLY** DESTE TÚNEL
+
+O `BRIEF-GRANDES-JOGOS.md` põe o Microsoft careers como portal que **cobre onze casas** (343 e
+Halo Studios, The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang,
+ZeniMax e Bethesda). Ele **não foi conferido hoje**, e o mecanismo tem nome:
+
+- `https://jobs.careers.microsoft.com/global/en/search` → **HTTP 200** (a casca da SPA abre).
+- `https://gcsservices.careers.microsoft.com/search/api/v1/search?...` → **código 000 em cinco
+  tentativas** (3 por `curl`, 2 por `urllib`), ou seja a conexão nem se estabelece.
+- **Controle na mesma janela**, para o 000 não ser confundido com túnel morto: a API do Greenhouse
+  devolveu **200** e a raiz do próprio `jobs.careers.microsoft.com` devolveu **200**. O túnel
+  estava vivo; o problema é **aquele host**.
+- A causa provável, medida com `getent hosts`: o host resolve **só em IPv6**
+  (`2603:1061:14:b6::1`, via `gcsservices-...z01.azurefd.net`), sem registro A.
+
+> **Código 000 é `NÃO CONFERIDO`, nunca zero** — e a regra ganha um passo: **junte o controle na
+> mesma janela**. Sem o 200 do Greenhouse ao lado, este 000 viraria "a Microsoft não tem vaga da
+> disciplina", e isso apagaria **onze estúdios** da varredura de uma vez.
+
+**Atenção para não contar cobertura duas vezes:** o `xboxgaming.wd1` (sites `External`,
+`Blizzard_External_Careers` e `King_External_Careers`) **foi** lido hoje e cobre Activision,
+Blizzard e King. Ele **não** cobre as onze casas acima, que vivem no portal da Microsoft. Quem
+somar os dois como "família Xbox conferida" infla a varredura.
+
+### 3. O QUE A RODADA ACHOU DE INÉDITO, E POR QUE NENHUM VIROU CANDIDATURA
+
+Cinco requisições inéditas por ID nos três arquivos **e** no Gmail, e as cinco param antes do
+formulário — cada uma por um motivo diferente, todos medidos:
+
+| Requisição | Casa | Por que não foi |
+|---|---|---|
+| `215658` e `215661` Character Artist - EA Sports FC | EA, Vancouver, Temporary, Hybrid | **veto escrito pela casa ontem**: as recusas de 16/09 da `215657` (17h56) e da `215358` (18h26) dizem *"This position does not support relocation or immigration at this time"*, e as duas novas são o mesmo time, cidade e Worker Type, com anúncio de tamanho idêntico (6.476 caracteres nas duas) |
+| `215687` Senior Technical Artist – Character Rigging & Technology | EA, Vancouver ou Orlando | **disciplina**: é rigging e ferramenta (*"character deformation"*, *"scripting/programming in Python or C#"*), a mesma gaveta do Creature TD da ILM |
+| `4c18ce73` Junior Environment Surfacing Artist | Skydance Animation Madrid | **hCaptcha `data-size=large`** medido na própria `/apply` (sitekey `e33f87f8-...`), e é **environment**, prioridade 2 |
+| `f5cdab33` Environment Surfacing Trainee | Skydance Animation Madrid | idem; estágio remunerado **entra** pela regra de 02/09, mas a parede é a mesma |
+
+**A família 215657 / 215358 / 215666 / 215667 / 215658 / 215661** do EA SPORTS FC Vancouver está
+**fechada** enquanto a EA não mudar o texto. O que reabre a EA é outro estúdio (Respawn, BioWare,
+Criterion, Motive) ou outra frase.
+
+E o falso amigo de dedupe que vale registrar: os três títulos do **Eyeline Hyderabad**
+(`JR01060` Groom Artist, `JR41016` Lead Surfacing, `JR41011` Surfacing/Lookdev) dão **zero
+ocorrência por ID** nos arquivos — e **não** são inéditos: o registro de 14/09 os descartou **por
+título**, como fora do escopo geográfico. **Dedupe por ID sozinho declara inédito o que já foi
+decidido por nome.** É a mesma lição do `arenanet` de 17/09 04h30, agora do lado da vaga.
+
+### 4. O ITEM DA ROTINA QUE EU NÃO CUMPRI, COM O MOTIVO
+
+A rotina das casas grandes manda **criar alerta de vaga por email** em todo portal que ofereça, e
+eu **não criei nenhum**. Criar alerta exige confirmação **na tela**, e o portão desta rodada
+liberava o navegador só para vaga de arte inédita do grupo Disney ou de personagem da Netflix —
+e não apareceu nenhuma. Obedeci à ordem mais restritiva e deixo a pendência escrita em vez de
+sumir com ela do resumo.
+
+**Tentei a rota sem navegador antes de desistir**, na melhor candidata:
+`careers.paramount.com/talentcommunity/subscribe/` responde **200** com título *"Subscribe -
+Careers at Paramount"*, mas o único formulário no HTML é o de **login**
+(`frmRMPExistingLogin`, com `action="#"` e `onsubmit="return false;"`) — o formulário de inscrição
+é montado por JavaScript e **não se posta por `curl`**. Assinatura de captcha no HTML: **zero**,
+e isso **não** quer dizer que não há porteiro (a regra de 17/09 09h50 mediu que `grep` de
+`recaptcha|hcaptcha|turnstile` dá falso negativo para porteiro de **pontuação** carregado por
+`render=`).
+
+**Quem tem alerta hoje:** Sony Pictures Imageworks (02/09), Warner Bros. Discovery (04/09), Angel
+Studios (02/09), Brown Bag Films (06/09), LinkedIn (03/09) e **EA**, este confirmado vivo — o
+alerta *"New Job Openings at Electronic Arts!"* de `jobnotification@ea.avature.net` chegou em
+15/09 às 20h47, categoria **Art**.
+
+**Quem não tem, em ordem de valor:** o **Workday** primeiro, porque um alerta por locatário cobre
+**Disney, Pixar, Netflix e Blizzard** e a conta do Vini já existe em três desses locatários;
+depois Paramount/Nickelodeon, NBCUniversal/DreamWorks, e os quadros de Greenhouse (Riot, Epic,
+Roblox, 2K, Bungie e os oito do grupo PlayStation), que não oferecem alerta nativo.
