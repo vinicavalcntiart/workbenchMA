@@ -3364,3 +3364,148 @@ thread existente, mas não cria mensagem nova com anexo, e a carta fria leva CV 
 pelo Apps Script. Enquanto isso não muda, a fila de cartas frias é do disparador dele.
 
 > **17/09 13h10 UTC:** `EAcareers@ea.com` respondeu com *"This inbox isn't monitored"* à resposta de recusa. Entra na lista de caixas não monitoradas ao lado de `careers@jobs.netflix.com`: **recusa da EA não recebe resposta.**
+
+## 17/09, 15h05 UTC (JHON A, oitavo turno) — VARREDURA POR DATA DE PUBLICAÇÃO: 11.289 VAGAS EM 390 QUADROS, TRÊS FALSOS ZEROS E ZERO VAGA ENVIÁVEL
+
+Turno de **recência**, não de fila: a pergunta era "o que a disciplina publicou hoje ou ontem
+nos quadros que a campanha já conhece". Só `curl` e API, **nenhum navegador aberto** (`ps -eo
+comm=` devolveu 0 no começo e nenhum processo foi criado). Resultado honesto: **zero vaga da
+disciplina publicada em 16 ou 17/09 que se possa enviar, e nenhuma candidatura gasta.**
+
+| família | quadros | vagas lidas | publicadas 15–17/09 | acertos da disciplina |
+|---|---|---|---|---|
+| Greenhouse | 81 tokens, 79 com 200 | 1.956 | **70** por `first_published` | **0** |
+| Lever | 26 tokens, 21 vivos | 379 | 7 | 0 |
+| Ashby | 29 tokens, 27 vivos | 365 | 15 | 0 |
+| Teamtailor | 171 locatários, 141 vivos | 1.876 | 553 | 2 |
+| SmartRecruiters | 11 bases | 911 | 91 | 1 |
+| Workday | 31 sites / 20 locatários, 28 com 200 | **3.677** | 221 `Posted Today/Yesterday` | 1 |
+| Workable (busca global) | 14 termos | 2.126 únicos | 432 | 14 (nenhum real) |
+| Hitmarker | categoria `game-art` | 25 | 25 | 7 |
+
+### 1. TRÊS FALSOS ZEROS NA MESMA RODADA, E CADA UM APAGAVA UMA FAMÍLIA INTEIRA
+
+Os três têm a assinatura que a regra do Avature (11h35 de hoje) descreveu: **HTTP 200 em todos
+os quadros, corpo grande, nenhuma exceção, nenhum corpo vazio** — e o filtro rodando contra nada.
+
+1. **Teamtailor.** `<slug>.teamtailor.com/jobs.json` **não** é um objeto com chave `jobs`: é um
+   **JSON Feed 1.1** e a lista mora em **`items`**. As datas se chamam **`date_published`** e
+   **`date_modified`**, não `created_at`/`updated_at`. Com a chave errada a família devolveu
+   *"145 quadros com 200 e ZERO vaga"* — absurdo, e por isso tratado como hipótese. Refeito:
+   1.876 vagas em 141 locatários. Prova de forma: `snowprintstudios.teamtailor.com/jobs.json`
+   devolve 37.599 bytes com `"version":"https://jsonfeed.org/version/1.1"` e `items` com 3 vagas.
+2. **Workable.** O objeto de vaga tem **`created`** e `updated`; `published_on`, `created_at` e
+   `publishedOn` **não existem**. O topo tem **`totalSize`** e **`nextPageToken`**, não `total`
+   nem `results`. E `limit=50` devolve `{"limit":"Must be less than or equal to 20"}` — que é
+   **JSON válido sem a chave `jobs`**, então o laço lê zero linha **sem erro de parse**.
+   Corrigido com `limit=20` + `nextPageToken`: 2.614 linhas, 2.126 anúncios únicos.
+3. **Hitmarker.** O regex de âncora relativa (`href="/jobs/`) acha **zero**, porque a casa
+   escreve o link inteiro com domínio. O que denunciou foi o **controle de falso negativo**: um
+   `grep` cru por `character` no HTML devolveu `Character Artist - EA Sports FC` na hora.
+
+> **Regra: quando um quadro responde 200 e o laço lê ZERO, imprima as chaves do JSON (ou o corpo
+> cru) ANTES de escrever o zero.** O nome da chave da lista e o nome do campo de data são **por
+> plataforma** e não se herdam do brief — este briefing mandava procurar `created_at`/`updated_at`
+> no Teamtailor e `jobs.json` com chave `jobs`, e as duas coisas estão erradas.
+
+**Dois achados úteis do Hitmarker, que valem a lane:** (a) cada card é um `<article>` com um
+`<span data-datetime="2026-09-17T06:30:00+01:00">`, ou seja **o timestamp exato de publicação sem
+abrir a vaga** — é a fonte de recência mais barata que a campanha tem; (b) **`?page=2` devolve os
+MESMOS 25 anúncios** e não existe nenhuma âncora de paginação para `/game-art-jobs` no HTML: a
+categoria inteira são 25 anúncios e **não há página 2**. Paginar com `?page=` contaria duplicata,
+e é a mesma armadilha do `start=` do gamedevmap escrita no `BRIEF-JHON.md`.
+
+### 2. EM WORKDAY, `total` NÃO SERVE DE CONDIÇÃO DE PARADA — SEIS SITES SUBCONTARAM 728 VAGAS
+
+Defeito de **cobertura**, não de zero. O laço parava quando `offset+20 >= total`. **Seis sites
+devolvem `total: 0` com `jobPostings` cheio** e pararam na segunda página: `xboxgaming/External`,
+`warnerbros/global`, `lnw/LightWonderExternalCareers`, `razer/Careers`,
+`spinmaster/SpinMaster_Careers` e `aristocrat/AristocratExternalCareersSite` — 40 lidas em cada,
+240 no total. Refeito com **parada por página vazia** e **dedupe por `externalPath`**: 104, 325,
+110, 168, 55 e 206, ou seja **968**. A cobertura do Workday na rodada foi de 2.949 para **3.677**.
+Nos 968 relidos, zero da disciplina com `Posted Today/Yesterday`.
+
+> **Regra: em Workday, pare quando a página vier vazia ou quando nenhum `externalPath` novo
+> aparecer, e dedupe por `externalPath`.** O dedupe é a mesma defesa da regra de chave natural de
+> quadro (11h35) e aqui também protege do `offset` repetir linha quando `total` é 0.
+
+`cig.wd5`, `deluxe.wd1` e `mpc.wd3` devolvem **422** e ficam como **NÃO CONFERIDO**, nunca vazios.
+
+### 3. AS TRÊS CHARACTER ARTIST DA EA PUBLICADAS HOJE: A RÉGUA NO ANÚNCIO DÁ ZERO, E O VETO ESTÁ NA CAIXA
+
+O Hitmarker entregou **três** `Character Artist - EA Sports FC` com `data-datetime` de
+**2026-09-17T06:30:00+01:00**: 4831675 → req **215667**, 4831671 → **215661**, 4831669 → **215658**.
+Todas Vancouver BC, `Worker Type Temporary Employee`, `Work Model Hybrid`, EA Studios – SPORTS.
+
+**A régua na URL final das três devolve 6.476 caracteres de texto limpo (leitura válida) e ZERO
+veto de texto.** Os dois acertos são falsos positivos de **estrutura**: `français` vem do menu de
+idiomas do portal (*"English - US Chinese English - US Finnish Français Italian Korean..."*) e
+`hybrid` vem do campo `Work Model`.
+
+**O veto existe e está na caixa dele, escrito pela casa, duas vezes ontem**, literal:
+
+> *"Thanks for applying to the Character Artist - EA Sports FC (Req ID 215657) position. **This
+> position does not support relocation or immigration at this time.** This does not disqualify you
+> from other openings at Electronic Arts."*
+
+`EAcareers@ea.com`, 16/09 às **17h56** para a `215657` (`1a0ab5d4551ea3f5`) e às **18h26** para a
+`215358` (`1a0ab78bc574a42e`). Mesmo título, mesma cidade, mesmo `Worker Type`, mesmo time,
+anúncio de tamanho idêntico: a frase é sobre **o cargo**, e ele precisa de realocação.
+**Não enviadas.** Isso fecha a família com o veto **medido dos dois lados** (ausente no anúncio,
+presente na palavra da casa) e dá linha própria à `215667`, que estava citada sem decisão.
+
+> **Regra de método que isso acrescenta: régua limpa no anúncio NÃO é porta limpa.** O veto de
+> uma casa grande pode viver **só na recusa que ela já mandou**, e a recusa vale para as irmãs
+> com mesmo título, cidade e `Worker Type`. O dedupe tem que ler o **Gmail** e não só os três
+> arquivos — e aqui foi o Gmail que decidiu.
+
+### 4. OS OUTROS ACERTOS, COM A FRASE DE CADA UM
+
+- **Untold Studios, `CFX Artist`, Londres, publicada HOJE** (Teamtailor `8394174`, ID inédito nos
+  três arquivos). Régua na URL final: 3.808 caracteres, **zero veto** (os seis acertos são
+  `hybrid` do rótulo *"VFX · London · Hybrid"* repetido no rodapé de vagas relacionadas). Cai por
+  **disciplina**, com a frase colada: *"Professional experience in Houdini. Use of VEX is
+  preferred. **Proficient with Vellum Solver (cloth, feathers, hair)**. Knowledge of muscles in
+  either H20.5 or H21. Able to do strong and procedural CFX setups."* É simulação procedural — a
+  gaveta do Creature TD da ILM e do `215687` da EA, e o filtro de título de 10/09 já tirava CFX.
+  O anúncio **cita** personagem (*"effects that work well with stylised CG and photorealistic
+  characters/creatures"*), e é por isso que passa no filtro de corpo; quem modela personagem não é
+  quem escreve o solver. **O locatário `untoldstdfg1324556` NÃO é demo**: o domínio próprio
+  `careers.untoldstudios.tv` serve o mesmo quadro e o recibo veio de
+  `recruitment@untoldstdfg1324556.teamtailor-mail.com`, **sem** o prefixo `demo-` da regra das 09h50.
+- **People Can Fly `744000149844299`** (SmartRecruiters, ontem): já era `veto-confirmado` desde as
+  03h35 de hoje — *"open to candidates only from the game industry who are based in Europe"*.
+- **Sharkmob `8378495`** `Senior Character Concept Artist` (15/09): 2D, decidida hoje.
+- **Rebellion `Senior Character Artist`** apareceu no Workable em **duas cidades** (Oxford e
+  Warwick, 16/09): é a mesma requisição, enviada à mão em 16/09, recusada em 01/09 e com veto de
+  patrocínio escrito.
+- **Disney/ILM London `10160980`** `Senior Look Development Technical Director`, `Posted Today`:
+  **já enviada e confirmada às 10h49 de hoje** pela Vigia. O dedupe pegou antes do formulário.
+- **Highdive `5097897007`** `Senior Modeler`, Toronto: o Greenhouse mostra `updated_at` 15/09, mas
+  o `first_published` é **02/04** e a candidatura foi **enviada em 06/09**. `updated_at` recente
+  não é vaga nova — só `first_published` responde a pergunta do turno.
+
+### 5. UM ALERTA DO LINKEDIN CONTA A MESMA VAGA DUAS VEZES, EM DOIS IDIOMAS
+
+O alerta *"Character Art in Canada"* das **12h44 de hoje** oferece a Behaviour com etiqueta
+*"Top applicant"*, e o quadro oficial desmente a novidade: `api.lever.co/v0/postings/bhvr` devolve
+34 vagas e as **quatro** da disciplina são anteriores a 15/09 (`976b2a8c` 7 Days to Die de
+**25/08**, `18024240` DbD de 25/06, `86ddd557` de 17/07, `55fa65fe` Senior Texture de 25/08). A
+`976b2a8c` foi enviada em 30/08 e **recusada em 11/09**. O alerta recicla anúncio de três semanas.
+
+> **Armadilha de dedupe nova, e vale para todo alerta do LinkedIn: a MESMA requisição aparece duas
+> vezes na MESMA remessa, com dois `job id` diferentes, uma em inglês e outra em francês**
+> (`4459070278` *Senior 3D Character Artist – 7 Days to Die* e `4459061269` *Artiste de personnages
+> 3D sénior·e – 7 Days to Die*). Quem conta por `job id` do LinkedIn conta duas vagas onde existe
+> uma; o Lever mostra que o título da requisição é bilíngue **num campo só**.
+
+### 6. O QUE SOBROU DE PENDENTE
+
+- **O alerta da Blizzard criado às 13h13/13h17 de hoje mandou DOIS emails de boas-vindas e DOIS de
+  ativação** (13h13m50 e 13h17m10 o "Activate", 13h15m21 e 13h18m10 o "Welcome"), o que é
+  coerente com os dois alertas criados — mas quem for conferir a cadência deve esperar a
+  **primeira remessa com vaga**, que ainda não chegou. Alerta ativado não é alerta entregando.
+- **A lane de recência está coberta e vazia para hoje.** O que ela não cobre e continua valendo
+  para a próxima rodada: os onze estúdios do portal da Microsoft (host IPv6-only, `NÃO CONFERIDO`),
+  `cig.wd5`/`deluxe.wd1`/`mpc.wd3` (422), e a Sinn Studio, que já tem parede medida (400 do
+  `applytojobs.ca`).
