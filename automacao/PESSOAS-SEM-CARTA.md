@@ -5249,3 +5249,49 @@ irlandês), não por varredura de site.
   (4) o catálogo é TV e conteúdo infantil por encomenda, onde o assento de escultura e groom é raro;
   (5) o "250+ crew" é **capacidade**, não tamanho atual — a casa é bem menor que isso quando não há
   série em produção.
+
+### FICHA 3 — Joe Nickolls, Timbre Games (Vancouver, BC, Canadá) — **A PRIORIDADE 1 SAIU DO ZERO**
+
+- **Email: `joe@timbregames.com` — PUBLICADO pela própria casa, confiança ALTA.** É o `href` do único
+  botão de contato do site, embaixo do bloco *"Let's Talk Games."*. HTML cru:
+  `<a href="mailto:joe@timbregames.com?" ... > Email Us! </a>`
+- **URL exata aberta nesta rodada:** `https://timbregames.com` (home, 612 KB). Também abri
+  `https://timbregames.com/about` e `https://timbregames.com/contact` (as duas 200) e
+  `https://timbregames.com/careers`, `/jobs` e `/team` (as três **404**).
+- **Pareamento, dito com honestidade:** o endereço **não** está impresso ao lado do nome dele. O que
+  prova o par é que o site publica **um único endereço** e, no mesmo documento, o bloco *Leadership
+  Team* nomeia quatro pessoas, e **o único Joe é ele**: *"Joe Nickolls, Co-Founder & President"*. A
+  parte local `joe` é do primeiro nome do cofundador, e não há segundo Joe em nenhuma página. Isso é
+  endereço **literal publicado**, não padrão de domínio montado — mas é o botão geral da casa, que por
+  acaso é a caixa de uma pessoa, e isso está dito.
+- **Por que ESSA pessoa e não outra da casa:** o *Leadership Team* publica quatro — *Joe Nickolls,
+  Co-Founder & President*; *Geoff Coates, Co-Founder & Creative Director*; *Campbell Dixon, Technical
+  Director*; *Kyle Jensen, Lead Designer*. **O alvo de ofício seria o Geoff Coates**, cuja bio diz
+  *"Geoff's been making games for over 30 years in Vancouver, mostly as **Art Director at EA, Relic,
+  Capcom**, and other studios, before starting Timbre with Joe in 2020"* — **e dele não há um único
+  endereço publicado, então nada foi montado.** Fica como **SEGUNDA e última pessoa possível**, e a
+  carta para o Joe deve pedir exatamente isso: ser apontado para o Geoff.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a bio dele termina em
+  *"His superpower: **Knowing everyone in the games industry**"*, e a casa escreve como valor número 3
+  *"**Creative Leadership** — Senior game, art, and tech direction from people who've shipped at
+  scale"*. É o fecho fixo da campanha (guardar o nome, encaminhar, ou apontar um nome) escrito pela
+  própria casa.
+- **Fora dos EUA: SIM, Canadá (Vancouver, BC).** A frase de realocação **entra**, e esta é a **rota de
+  prioridade 1 da campanha**, que fechou em zero nas duas rodadas anteriores.
+- **O que o Gmail devolveu no dedupe:** `timbregames OR "Timbre Games" OR Nickolls OR Coates` devolveu
+  **`{}`** — zero thread, nem enviada nem recebida. `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `docs/index.html` e `alvos.csv`: **zero** ocorrência de `timbre` e de `nickolls`. **Casa inédita para
+  a campanha inteira**, e é a primeira casa de BC aberta desde a Global Mechanic.
+- **RESSALVA HONESTA, e ela é pesada:** (1) **o site é de uma página só e as subpáginas estão
+  inacabadas** — `/contact` é o gabarito do Squarespace com *"(555) 555-5555"* e
+  *"email@example.com"*, e `/about` ainda traz o texto de exemplo de uma consultoria (*"Meet Tina...
+  Bloom Coaching"*). Isso indica casa em reconstrução, não operação em regime; (2) **não há `/careers`
+  nem `/jobs`** (os dois 404) e nenhuma vaga publicada; (3) a casa se descreve como *"a small,
+  focused team"* e a seção de jogos é *"Games We've Worked On"*, ou seja **trabalho em jogo de
+  outros**, sem título próprio lançado nomeado no site; (4) **não há uma palavra sobre personagem 3D,
+  escultura, groom ou look dev** — o vocabulário é prototipagem, ferramentas e iteração, e o encaixe do
+  portfólio dele vem da cadeira de direção de arte do Geoff, não de pipeline provado;
+  (5) o cargo do alvo é **presidente**, negócio puro, e a carta só se justifica porque o pedido é
+  direção e indicação; (6) o rodapé diz **© 2025** e nada no site está datado de 2026, então
+  *"continua na casa hoje"* está sustentado pelo próprio site e não por fonte com data desta semana.
+  Telefone do gabarito deliberadamente não registrado (e nem é real).
