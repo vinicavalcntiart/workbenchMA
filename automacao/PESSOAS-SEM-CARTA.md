@@ -5517,3 +5517,49 @@ contrário da irlandesa. Então cada ficha exige o segundo passo — **achar o n
 de equipe do próprio estúdio** — e é aí que a maioria morre: de 400 membros, a colheita que
 sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a linha não vira ficha
 (regra Barnstorm / Storm Films).
+
+### FICHA 1 — Natasha Collin, Nine Dots Studio (Québec, Canadá)
+
+- **Email: `ncollin@ninedotsstudio.com` — PUBLICADO, confiança ALTA.** Não é montado: está em
+  `mailto:` cru na página de detalhe do diretório da Guilde. O que sustenta o **pareamento** é a
+  página de equipe do próprio estúdio, que publica **"Natasha Collin — COO and Executive
+  Producer"**, e ela é a única pessoa da casa cujo sobrenome case com `ncollin`.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/nine-dots/` (200,
+  37.375 bytes; HTML cru colado como está:
+  `<h2 class="text-flip">Nine Dots</h2>` … `<a href="http://www.ninedotsstudio.com" class="btn"
+  target="_blank">Consultez le site Web</a><br /><a href="mailto:ncollin@ninedotsstudio.com"
+  class="btn">Contactez le membre par courriel</a>`) e
+  `https://www.ninedotsstudio.com/about` (a lista de equipe inteira, com cargo). Procurei
+  `Page not found` / `page introuvable` no texto limpo das duas: **zero acertos**, nenhuma é 404.
+- **Por que ESSA pessoa e não outra da casa:** o `/about` publica **26 pessoas com cargo** e o
+  alvo de ofício seria **Alexandre Desveaux, Artistic Director**, ou **Pierrick Archambault, Lead
+  Artist**, com **Pascal Maltais, Florian Chastres e Vincent Bernard como 3D Artist** e **Shun
+  Mastromauro como Texture Artist** — ou seja a casa tem pipeline de personagem de verdade. **De
+  nenhum deles há endereço publicado, e montar `adesveaux@` seria exatamente o chute que produziu
+  as 17 devoluções de 07/09.** A Natasha Collin é a única com endereço publicado e é **COO e
+  Executive Producer**, ou seja quem abre requisição numa casa de 26 pessoas. **A carta tem de
+  pedir para ser apontado ao Alexandre Desveaux**, no padrão Timbre Games. Alexandre Desveaux fica
+  como **segunda e última pessoa possível**, sem nada montado.
+- **Gancho com a frase do próprio estúdio, entre aspas:** o `/about` abre com
+  *"Discover our team — We treat games like art and developers like human beings"*, e o catálogo
+  deles é *Outward*, *Outward 2*, *Witherbloom* e *Lost in Prayer*; o `/careers` publica hoje uma
+  vaga de **Capture Artist**.
+- **Casa fora dos EUA: SIM, Canadá (Québec).** A frase de realocação **entra**, e é rota de
+  prioridade 1.
+- **O que o Gmail devolveu no dedupe:** `mcp__Gmail__search_threads` com
+  `ninedotsstudio OR "Nine Dots" OR Collin OR Outward` devolveu **`{}`** — zero thread, nem
+  enviada nem recebida. Teto de duas por casa contado no `in:sent` por domínio: **zero**. No
+  repositório o domínio aparece em quatro arquivos e **nenhum é carta**: é o censo do gamedevmap,
+  o `censo-wikidata`, e a `FILA-DO-VINI` mais o `processados.csv` de 11/09, que registram a
+  **parede de hidratação** do formulário próprio deles (Next.js que não hidrata por esta rede, o
+  botão `JOIN YOUR CV` sem handler). Ou seja: **a casa foi qualificada e nunca recebeu uma
+  mensagem**. Primeira pessoa com nome.
+- **RESSALVA HONESTA:** (1) o cargo é **operações e produção, não arte** — quem decide o look é o
+  Artistic Director, e dele não há endereço; (2) a candidatura espontânea do formulário próprio
+  **está na fila da mão do Vini desde 11/09** e a carta não pode se apresentar como primeiro
+  contato com a casa sem dizer isso, senão as duas chegam juntas e viram spam; (3) a vaga viva
+  publicada é **Capture Artist**, que é captura de movimento e **não é a disciplina dele** — a
+  categoria `Art` do formulário deles é que é a porta, e ela é espontânea; (4) *Outward* é RPG de
+  mundo aberto de orçamento pequeno, onde personagem é feito por três 3D Artists generalistas, sem
+  assento nomeado de escultura, groom ou look dev; (5) a casa é de 26 pessoas e não há uma linha
+  sobre patrocínio de visto em nenhuma página.
