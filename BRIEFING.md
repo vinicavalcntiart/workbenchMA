@@ -3807,3 +3807,65 @@ de a varredura começar (é o que garantiu que nenhum código ficasse ambíguo):
   do censo de caminho (`/careers`), já exaurida em 17/09 01h11. **Se este cruzamento for repetido,
   o que falta não é mais slug: é outra família de ATS** (Workable por token, SmartRecruiters por
   base, Personio, Homerun, Recruitee por domínio próprio) ou a leitura do **site** da casa.
+
+### 18h00 UTC — SEGUNDA PERNA: PERSONIO E SMARTRECRUITERS, UMA PORTA DE ARTE PRONTA, E O LOCATÁRIO QUE PUBLICA **LOREM IPSUM**
+
+Com o primeiro cruzamento fechado e tempo de turno sobrando, estendi a mesma lane para as duas
+famílias que ele não cobria. **5.360 sondagens** antes do corte de horário (1.990 em Personio,
+`<slug>.jobs.personio.com/xml`, e 3.370 em SmartRecruiters,
+`api.smartrecruiters.com/v1/companies/<slug>/postings`, com e sem hífen), com **13 de 13 controles
+de token vivo** (`NBCUniversal3` e `aesir`) devolvendo 200. Rendeu **seis locatários de Personio
+vivos** e **duas bases de SmartRecruiters com conteúdo** (`1atelier` e `otafest`, nenhuma da
+disciplina).
+
+**A armadilha da família SmartRecruiters, e ela é grave: base que NÃO EXISTE devolve HTTP 200.**
+O corpo é `{"offset":0,"limit":1,"totalFound":0,"content":[]}` com **50 bytes**. O código não
+distingue nada nesta família — quem sondar contando 404 mede cobertura zero, e quem contar 200
+declara 3.370 quadros vivos onde há dois. **O discriminador é o corpo** (`totalFound`, ou o
+tamanho). No Personio a semântica é limpa: locatário morto devolve **307**.
+
+#### A porta que sobrou, medida e deduplicada, e por que ela NÃO foi enviada
+
+**Sviper GmbH, Hamburgo.** Locatário `sviper-gmbh`, uma vaga: **`Speculative Application`**,
+id **858945**, `permanent`, `experienced`, 2 a 5 anos, criada em 19/10/2022. O que a torna porta
+de verdade não é o título, é a classificação que **a própria casa** publica: `occupation`
+**`graphic_arts_and_illustration`**, `occupationCategory` **`creative_and_design`**, e as
+palavras-chave **`Game,3D,Voxel,Artist,UI,UX,Development,tech,Unity developer,Video Games,Mobile
+Games`**. É banco de talentos **com** departamento de arte, que é o que a regra da Harbor Picture
+Company exige para contar. **Dedupe completo: zero ocorrência de `sviper` em `enviados.csv`,
+`automacao/processados.csv` e `docs/index.html`.** Família **sem porteiro** (o Personio é a lane
+sem captcha, medida em 11/09), ferramenta `apply_personio.js`, com as duas armadilhas já escritas
+no `BRIEF-JHON.md`. O XML **não traz corpo de anúncio** (253 caracteres no total), então **a régua
+tem de ser passada na página da vaga antes do envio**. Alemanha é UE e precisa de patrocínio, o
+que não é veto por si.
+
+**Não enviada, e o motivo é de método, não de parede:** às 18h00 não havia tempo de abrir o
+navegador, preencher, anexar e **provar** o envio antes do teto do turno. **Formulário começado
+sem prova é pior que porta não tocada**, porque a rodada seguinte não sabe se pode repetir. Fica
+como **dossiê no topo da fila**, com token, id, rota e dedupe já feitos.
+
+#### CLASSE NOVA DE FALSO POSITIVO: LOCATÁRIO ABANDONADO QUE PUBLICA CANDIDATURA ESPONTÂNEA EM **LOREM IPSUM**
+
+**KARAKTER Design Studio GmbH** e **Pixaera** respondem 200, servem XML válido e publicam
+exatamente as **mesmas três vagas**: `Initiativbewerbung (Festanstellung)` / `General
+Application`, `SEO Marketing Manager` e `Social Media (Werkstudent)` / `(Working Student)`,
+criadas entre **2016 e 2018**. E o corpo inteiro das três, **nos dois locatários**, é
+*"Lorem ipsum dolor sit amet, consetetur sadipscing elitr..."* nas três seções (`Ihre Aufgaben`,
+`Ihr Profil`, `Warum wir?`). **Dois locatários independentes com o mesmo trio de títulos provam
+que é template de Personio nunca configurado, não coincidência.**
+
+Por que isso importa mais do que parece: **a vaga é real em todo sinal legível por máquina** —
+HTTP 200, XML bem formado, título de candidatura espontânea, `employmentType permanent` e um
+`createdAt` que é **data de verdade** (`2018-07-31`). **Nenhum filtro de recência e nenhum filtro
+de título pega.** O único discriminador é o corpo ser texto de exemplo.
+
+> **Regra: antes de aceitar candidatura espontânea de locatário cuja vaga mais nova é de 2016 a
+> 2018, procure `Lorem ipsum` no corpo.** Enviar ali **não** seria duplicata nem envio contra
+> veto — seria **candidatura para o vazio**, que é pior, porque entra no placar como porta gasta e
+> a casa nunca vê nada. É a irmã do locatário `demo-` do Teamtailor medido hoje às 09h50, agora na
+> família Personio e **sem prefixo nenhum no nome que avise**.
+
+**Os outros três Personio vivos, para ninguém reabrir:** `blue-ocean-entertainment-ag` (Stuttgart,
+editora — HR Manager, Office Manager, Praktikant e Werkstudent de anúncios), `nextrend-gmbh`
+(Flörsheim — logística de armazém e Salesforce) e `renderthat` (Hamburgo — Account Manager e
+Sales & Client Success). **Nenhum tem departamento de personagem para pedir.**
