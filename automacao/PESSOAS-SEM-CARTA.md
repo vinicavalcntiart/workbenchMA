@@ -4784,3 +4784,46 @@ placar de cada uma **antes** das fichas, porque duas delas deram zero e isso é 
   Animator, Game Capture Artist, Editor or Illustrator"*): diz **3D artist**, e **não** diz character
   artist. Telefones publicados ao lado dos dois nomes **deliberadamente não registrados**, porque o
   repositório é público.
+
+### FICHA 2 — Josh Robinson, Time Based Arts (Londres, Shoreditch, Reino Unido) — SEGUNDA E ÚLTIMA DESTA CASA
+
+- **Email: `josh@time-based-arts.com` — PUBLICADO pela própria casa, com nome E cargo na mesma linha,
+  confiança ALTA.** Caixa individual, não funcional. Nada montado.
+- **URL exata aberta nesta rodada:** `https://www.timebasedarts.co.uk/contact`, que **redireciona para
+  `https://www.time-based-arts.com/contact`** (outra confirmação da regra de domínio desta rodada: o
+  domínio `.co.uk` é vitrine, o domínio de email é `time-based-arts.com`). A página imprime seis pessoas,
+  nesta ordem, cada nome seguido do cargo e do endereço:
+  `Harry Jones / Talent Enquiries / jobs@`, `Tom Johnson / Managing Director / tom@`,
+  **`Josh Robinson / Deputy Managing Director / EP / josh@`**,
+  `Dan Kreeger / Executive Colour Producer / dan.kreeger@`, `Sian Jenkins / Head of Production / sian@`,
+  `Georgie Evans / New Business / georgie.evans@`.
+- **Por que ESSA pessoa e não outra da casa, e a escolha aqui é entre dois:** o **Tom Johnson (MD) já
+  recebeu** a carta fria em 06/09 e o follow-up em 08/09, sem resposta, então a cota desta casa fecha com
+  **esta segunda pessoa e mais nenhuma**. Das cinco restantes, a Sian Jenkins é produção, o Dan Kreeger é
+  **cor** (nada a ver com personagem), a Georgie Evans é comercial, e o **Harry Jones** é o nome que a casa
+  põe em `Talent Enquiries` — mas o endereço dele é `jobs@`, **caixa compartilhada**, e a carta ficaria
+  onde a campanha já sabe que não é lida. Sobra o **Josh Robinson, Deputy Managing Director / EP**: é o
+  segundo degrau da casa, tem caixa individual publicada, e num estúdio deste porte é quem realmente
+  redistribui um email que o MD não respondeu. **Registro útil para o maestro: `jobs@time-based-arts.com`
+  tem dono com nome, Harry Jones**, e isso serve se algum dia a via de caixa for usada.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a página de contato abre convidando
+  *"Feel free to call or email to discuss who we are, what we do and how we can help collaborate on a
+  project, or even if you'd just like..."*, e o menu do site declara as quatro frentes da casa:
+  **`VFX | Grading | Archive | Art Practice`**. A carta de 06/09 para o Tom já usou a frase da página
+  About sobre querer ouvir artista 2D ou 3D; **a carta nova precisa usar outra frase**, e a de
+  `Art Practice` é a que ainda está livre.
+- **Casa fora dos EUA: SIM, Reino Unido (Londres).** A frase de realocação **entra**.
+- **O que o Gmail devolveu no dedupe:** `time-based-arts OR "Time Based Arts" OR timebasedarts` devolveu
+  **exatamente uma thread**, com **duas mensagens, as duas ENVIADAS pela campanha** para
+  `tom@time-based-arts.com` (06/09 e follow-up de 08/09) e **nenhuma resposta**. Ou seja: a casa **não
+  recusou**, **ninguém de lá respondeu** (a thread é do Joe, não do Comunicador), e `josh@` **não aparece**
+  em `pessoas.csv`, `processados.csv` nem `docs/index.html`. `processados.csv` confirma o histórico em duas
+  linhas de 06 e 07/09.
+- **RESSALVA HONESTA, e são quatro:** (1) a casa é **pós-produção de publicidade** — VFX e color grading —
+  e **não nomeia pipeline de personagem** em lugar nenhum do site; o encaixe é indireto e a carta não pode
+  fingir o contrário. (2) É a **terceira mensagem** da campanha para esta casa em onze dias; duas já foram
+  ignoradas, e a honestidade da abertura é o que evita soar como spam de insistência. (3) O cargo é de
+  **gestão e produção executiva**, não de arte: o Josh não abre ZBrush, ele encaminha. (4) A cota fecha
+  aqui: **se esta carta não voltar, a Time Based Arts sai da fila de pessoas**, e a única via restante é
+  `jobs@` com o nome do Harry Jones. Telefone publicado na página **deliberadamente não registrado**,
+  porque o repositório é público.
