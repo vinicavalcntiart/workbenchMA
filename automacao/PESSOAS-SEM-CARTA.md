@@ -4901,3 +4901,44 @@ placar de cada uma **antes** das fichas, porque duas delas deram zero e isso é 
   estoque, no fim da fila. (4) A fonte é **página de escola**, não do estúdio, e página de escola
   envelhece: o cargo está escrito no presente (*"currently works"*), mas **não há data na página**, então
   a confirmação de que ele continua na casa **não foi feita** e tem de ser feita antes de qualquer carta.
+
+### FICHA 5 — Sofie Edvardsson, Soja (Estocolmo e Tjörn, Suécia)
+
+- **Email: `sofie@soja.se` — PUBLICADO pela própria casa, com nome E cargo no mesmo cartão, confiança
+  ALTA.** Caixa individual. Nada montado.
+- **URL exata aberta nesta rodada:** `https://www.soja.se/om-oss`. A página publica **três** pessoas, cada
+  uma com nome, cargo e endereço, nesta ordem crua: `Simon Österhof / Producent / simon@soja.se`,
+  **`Sofie Edvardsson / Creative Director / sofie@soja.se`**, `Jakob Nyström / Animation Lead /
+  jakob@soja.se`. Conferido também em `https://www.soja.se/kontakt`, que só publica `hej@soja.se` e
+  `jobb@soja.se` — **quem varrer só `/kontakt` conclui "casa sem endereço de pessoa" e erra**, porque as
+  três pessoas moram em `/om-oss` (e `/about` e `/contact` em inglês devolvem **404**, o que engana a
+  varredura: o site é em sueco e os caminhos são `om-oss` e `kontakt`).
+- **Por que ESSA pessoa e não outra da casa:** dos três, o Simon Österhof é **produtor** (e a página de
+  contato diz explicitamente que quem atende o telefone é *"producent-Simon"*, ou seja é a porta
+  comercial) e o Jakob Nyström é **Animation Lead**, que é animação e não modelagem. A **Sofie
+  Edvardsson é Creative Director**, o único cargo de **chefia criativa** publicado, e é exatamente o alvo
+  que o brief manda escolher em casa pequena: quem viu o portfólio e quer a pessoa, não o RH e não o
+  produtor. **Jakob Nyström fica como SEGUNDA e última** pessoa possível, com endereço já provado, se a
+  primeira carta não voltar.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a casa se apresenta como *"en kreativ
+  animationsstudio som funnits sedan 2010"* e diz ter construído *"en djup verktygslåda och en bred
+  palett"* (uma caixa de ferramentas profunda e uma paleta larga). E o detalhe que serve de ponte para o
+  ofício dele: a própria página de contato lista o vocabulário da casa como
+  *"Animation, motion design, explainer, **karaktärsanimation**, voiceover"* — **karaktärsanimation**,
+  animação de personagem, escrita pela casa.
+- **Casa fora dos EUA: SIM, Suécia (Estocolmo e Tjörn, perto de Gotemburgo).** A frase de realocação
+  **entra**, e é prioridade 2 (nórdicos).
+- **O que o Gmail devolveu no dedupe:** `soja.se OR Soja OR Osterhof OR Edvardsson OR "Sofie Edvardsson"`
+  devolveu **`{}`**, zero thread, nem enviada nem recebida. `grep -ic` de `soja|Edvardsson|Osterhof|
+  Nystrom` em `pessoas.csv`, `processados.csv` e `docs/index.html`: **0, 0 e 0**. **Casa inédita para a
+  campanha inteira**, e ela veio do diretório da Nordic Animation, que em 15/09 foi minerado só em parte.
+- **RESSALVA HONESTA, e são quatro:** (1) a casa é de **comunicação, explainer e motion design** — as
+  palavras dela são *"engagera, motivera, förklara eller utbilda"* — e **não** é pipeline de personagem
+  3D; a palavra `karaktärsanimation` aparece num **glossário de termos**, não como capacidade declarada,
+  e isso é bem mais fraco do que um crédito. (2) Não há **nenhuma** menção a 3D, escultura, groom ou
+  look dev no site; o trabalho visível é animação e motion. (3) A casa **não anuncia vaga**: o que a
+  página de contato oferece é **estágio** (*"Vi erbjuder praktikplatser när det är möjligt"*), com
+  `jobb@soja.se` reservado para isso, e estágio não serve para um sênior de dez anos. (4) O site é **em
+  sueco** e a carta vai em inglês; casa pequena sueca costuma trabalhar em inglês sem problema, mas isso
+  não está escrito em lugar nenhum e é suposição. Telefones publicados ao lado dos três nomes
+  **deliberadamente não registrados**, porque o repositório é público.
