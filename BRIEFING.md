@@ -4299,6 +4299,17 @@ time"*.
 > dedupe por ID a segura. Vancouver é a prioridade nº 1 do Vini, então esta é exatamente a linha
 > que uma rodada apressada iria clicar.
 
+**E a ressalva honesta, medida no Gmail e não copiada do registro:** `search_threads` devolveu os
+dois emails de `EAcareers@ea.com` de 16/09 (17h56 e 18h26) e a frase está lá literal — mas eles
+nomeiam **`215657` e `215358`**, que são **as duas já candidatadas**. As três de hoje (`215667`,
+`215661`, `215658`) herdam o veto **por família** (mesmo cargo, mesma Vancouver BC, mesmo
+*Temporary Employee*, mesmo *Hybrid*), não por carta própria. **Cuidado com o dígito: `215667` e
+`215657` diferem em um algarismo e não são a mesma requisição**, e o registro da campanha usa os
+dois números. O 200 da EA não desempata: `jobs.ea.com/.../Character-Artist/<id>` devolve **95.323
+bytes idênticos para os três ids** porque é casca de SPA — pelo piso de validade da régua, "existe"
+ali é **NÃO CONFERIDO**. A decisão prática não muda; a justificativa passa a estar escrita como
+inferência, que é o que ela é.
+
 ### 6. O QUE O ZERO SIGNIFICA, HONESTAMENTE
 
 Dos 84 acertos, **nenhum sobreviveu a dedupe + disciplina + recência**, e nenhuma régua de veto
