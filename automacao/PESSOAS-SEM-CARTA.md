@@ -6036,3 +6036,59 @@ email em nenhum dos 205 posts. Não voltar.
   Guilde, **não é a mesma pessoa**. O presskit da PlayTogether (`playtogether-studio.com/press`, 200,
   9.126 bytes, aberto nesta rodada) diz *"I am Clem, a Frenchy game dev who moved in Montreal, Canada
   about 7 years ago"* e usa `@ClemGameDev`. **Não existe padrão de primeiro nome entre casas.**
+
+### FICHA 4 — Wylem Decaille, Postmeridian (Canadá + França, membro da Guilde du Québec) — **a casa publica um "Artiste 3D, Personnages" nomeado, e isso é raro nesta veia**
+
+- **Email: `wdecaille@postmeridian.co` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de detalhe
+  do diretório da Guilde, com a **inicial mais o sobrenome completo** dentro do endereço, e o mesmo
+  sobrenome publicado com cargo na página de equipe da própria casa. Nada montado. **Repare no
+  domínio: é `.co`, não `.com`** — quem montasse sobre `postmeridian.com` erraria a casa inteira, que é
+  a armadilha da Stunlock.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/postmeridian/` (**200,
+  34.792 bytes**; HTML cru: `<h2 class="text-flip">Postmeridian</h2>` … `mailto:wdecaille@postmeridian.co`),
+  `https://postmeridian.co/team` (**200, 100.612 bytes**, a equipe com cargo; `https://postmeridian.co/equipe`
+  devolve **o mesmo corpo de 100.612 bytes**, é a mesma página em rota bilíngue) e
+  `https://postmeridian.co/` (**200, 100.675 bytes**, de onde saiu o gancho). Zero acerto de
+  `Page not found` / `Cette page n'existe pas` no texto limpo das três. **Prova de catch-all:** caminho
+  md5 inexistente devolve **404** com md5 `065f424f805c…` e corpo de 10.397 bytes, diferente do
+  `e80152bb5f3d…` do `/team`. **ARMADILHA PARA A PRÓXIMA RODADA:** `https://postmeridian.co/studio`
+  e `https://postmeridian.co/en/studio/` respondem **404** (10.379 e 10.324 bytes) **apesar de
+  existir o item *Studio* no menu**, e o rodapé inglês do site é só troca de idioma, não de rota. Quem
+  varrer `/studio` escreve "casa sem pessoa" e erra, exatamente como aconteceu com o `/team` da Forge
+  Hammer e da Yellow Brick.
+- **Por que ESSA pessoa e não outra da casa:** o `/team` publica **nove pessoas com cargo**, e a casa
+  tem **pipeline de personagem com assento nomeado**, o que é raro nesta veia: *"**Matthieu Lemoule
+  Duparc — Artiste 3D, Personnages**"*, ao lado de *"Lea Fages — Directrice artistique"*, *"Leo Brun —
+  Concept artiste"* e *"Martin Cohen — Artiste 3D, Environnement"*. Os alvos de ofício seriam a Lea
+  Fages (direção artística) e o Matthieu Lemoule Duparc (personagem), e **de nenhum dos dois há
+  endereço publicado**. O Wylem Decaille é **Directeur Créatif** e o primeiro nome da lista, ou seja o
+  fundador criativo de uma casa de nove, que é o alvo da regra do `BRIEF-JOE` para casa pequena.
+  **A carta pede para ser apontado à Lea Fages e ao Matthieu Lemoule Duparc.** Lea Fages fica como
+  **segunda e última pessoa possível**, sem nada montado.
+- **Gancho com a frase do próprio estúdio, entre aspas:** a casa assina *"**Façonner les mondes**"* e
+  se descreve como *"Fondé en 2024, notre studio est né entre le Canada et la France … Nous sommes des
+  **artisans qui façonnons des mondes** et des expériences immersives, pour faire voyager et rendre
+  l'horizon un peu plus grand"*; o `/team` abre com *"**Ceux qui font l'aventure.** Postmeridian est
+  une équipe de passionnés répartis entre la France et le Canada. **On transforme des idées en
+  mondes.**"*; e o jogo é *"**ALEMOS: Mist of the Highlands**, une aventure-exploration où un
+  aventurier traverse **une île maudite** à l'aide de sa canne à pêche"*.
+- **Casa fora dos EUA: SIM, Canadá e França.** A frase de realocação **entra**, e a casa cobre duas das
+  faixas de prioridade de uma vez (Canadá e Europa).
+- **O que o Gmail devolveu no dedupe:** `postmeridian OR Decaille OR ALEMOS` devolveu **`{}`** — zero
+  thread, nem enviada nem recebida. **Teto de duas por casa no `in:sent` por domínio `postmeridian.co`:
+  ZERO.** No repositório **`postmeridian` não aparece em NENHUM arquivo** — nem nos censos do Canadá,
+  nem no `censo-guilde-quebec-1709.csv` do Jhon A, nem no painel. **"Decaille" e "Wylem" também não.**
+  Casa **inédita para a campanha inteira**.
+- **RESSALVA HONESTA:** (1) a casa é de **nove pessoas e foi fundada em 2024**, e o financiamento
+  declarado é **Kickstarter** (o rodapé do site inscreve para *"Kickstarter, devlogs, annonces"*) — casa
+  pré-receita raramente abre assento sênior pago, e isso tem de estar na carta como pergunta;
+  (2) **o assento de personagem 3D está OCUPADO** (Matthieu Lemoule Duparc), e há também um Concept
+  artiste e uma Directrice artistique, ou seja o departamento de arte está fechado para o tamanho da
+  casa; (3) **o time é distribuído entre França e Canadá**, o que é bom para remoto e ruim para
+  patrocínio: uma casa sem escritório não patrocina visto, e **nenhuma página diz uma palavra sobre
+  patrocínio ou sobre vagas** — não existe `/careers` nem `/jobs` no menu; (4) o cargo do alvo é
+  **direção criativa**, não arte; (5) o site é inteiro em francês, com o inglês apenas como troca de
+  idioma e **`/en/studio/` respondendo 404**, o que sugere que a carta em inglês é aceitável mas a casa
+  opera em francês; (6) *ALEMOS* é **aventura-exploração com cana de pesca numa ilha maldita**: há
+  atmosfera e talvez criatura, mas **o material público não mostra elenco de personagem**, e supor isso
+  seria inventar gancho.
