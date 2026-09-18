@@ -4692,3 +4692,38 @@ domínio estacionado na Loopia devolve 200 com 974 bytes e o texto `Parked at Lo
 > é a única rota barata que resta para esta lista de nomes, é achar o domínio por **fonte que o
 > publique** (Wikidata, diretório de casa, `site:` de motor de busca no navegador do Vini) em vez
 > de adivinhar.
+
+### 9. ADENDO DAS 02h58 — FORMULÁRIO DE AIRTABLE SE LÊ **INTEIRO POR `curl`**, E A CAMPANHA NÃO SABIA
+
+Isto vale para a família Airtable toda e não para uma porta. O registro de 07/09 (FABLEfx) dizia
+apenas que *"o iframe do Airtable não desenha nenhum campo pelo nosso proxy"* e mandava a porta
+para o navegador do Vini. **Medido hoje na Lunar Animation: o esquema completo do formulário sai
+por `curl`, sem navegador.**
+
+1. A rota **não** é `readSharedViewData` — essa devolve **401 com 3 bytes** sem assinatura, e foi
+   ela que me fez escrever "campos NÃO CONFERIDOS" na primeira versão da ficha. A rota é
+   **`/v0.3/view/<viw>/readSharedFormData`**.
+2. **A URL assinada vem de graça dentro do HTML do embed**, no bloco `window.__stashedPrefetch`,
+   campo `urlWithParams`, já com `requestId`, `accessPolicy`, `expires` e **`signature`**. Não há
+   nada a forjar: é o mesmo pedido que a página faria.
+3. Com essa URL e os cabeçalhos `x-airtable-application-id`, `x-time-zone`, `x-user-locale`,
+   `x-airtable-page-load-id` e `Referer` do embed: **200 com 123.409 bytes**, e dentro vêm
+   `formTable.columns` (tipo de cada campo), `views[0].metadata.form.fieldsByColumnId`
+   (**`required` por campo**) e a `description` que a casa escreve no topo do formulário.
+4. **O `accessPolicy` do compartilhamento anônimo lista as ações permitidas, e elas descrevem o
+   envio:** `readSharedFormData`, **`submitSharedForm`**, `createAttachmentUploadS3Policies`,
+   `createMultipartUpload` (+ get/cancel/complete/listParts) e `materializeUnsyncedRecord` em
+   colunas específicas. Ou seja **anexo e envio de formulário de Airtable são rotas HTTP abertas ao
+   visitante** — o que importa muito enquanto o Chromium desta máquina não arrancar. **Não tentei
+   nenhum POST** (o turno era de medição), então a tela de confirmação e o formato exato do
+   `submitSharedForm` seguem **NÃO CONFERIDOS**.
+5. **O que a rota NÃO entrega:** as linhas das tabelas ligadas (`foreignKey`) vêm com **zero
+   linha**, e o `accessPolicy` não tem ação para listá-las. Na Lunar isso deixa em aberto
+   justamente a lista de `Roll applying for` — que é o que diria se a porta nomeia personagem. A
+   presença de `materializeUnsyncedRecord` sugere que o campo aceita **valor novo digitado**, e
+   isso é hipótese, não medição.
+
+> **Regra: em formulário hospedado, antes de mandar a porta para a mão de alguém, procure no HTML
+> do embed um bloco de *prefetch* com URL assinada.** Foi o que transformou "campos não conferidos"
+> em 16 campos com 14 obrigatórios nomeados, em três minutos e sem navegador. O Tally (regra de
+> 17/09 05h00) e o Typeform têm blocos equivalentes que ninguém abriu ainda.
