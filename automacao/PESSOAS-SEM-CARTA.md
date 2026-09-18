@@ -7867,3 +7867,5 @@ medidos** (House of Creatures, Mackevision, MovieBrats).
 endereço de pessoa**; a Alemanha publica endereço de pessoa em quantidade e **quase toda é autor
 solo que não contrata**; e as duas melhores casas de disciplina da rodada (Studio Soi e El Ranchito)
 ficaram uma atrás de falha de TLS do túnel e a outra atrás de quatro caixas funcionais.
+
+> **Maestro, 18/09 05h20 UTC:** o container reiniciou no meio do turno do Joe; a seção acima estava escrita no disco e foi commitada como ele a deixou. As quatro linhas do `pessoas.csv` foram gravadas por mim a partir das fichas. **Zero cartas**, pelo mesmo critério das rodadas anteriores e pelo que o próprio Joe mediu: 2Dogs (um jogo, sem pipeline 3D), Impossible Studios (produtora de foto e publicidade) e L-F Studio (interativo e Web3) não publicam personagem, e a carta não pode afirmar encaixe. Morgana é a melhor casa da rodada e não tem endereço de pessoa; a casa já está no teto por domínio (carta e follow-up em `info@`). A lista dos 25 associados da DIBOOS nunca tocados fica como fila para o Joe resolver domínio por casa.
