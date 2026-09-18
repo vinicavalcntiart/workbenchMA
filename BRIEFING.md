@@ -5468,3 +5468,11 @@ olhar o conjunto, não a primeira oferta.
 homônimo, 42 vazio, 384 `nao-aplica`** (os `nao-aplica` são as famílias em que a identidade **não**
 sai de graça: Ashby, BambooHR, Greenhouse, Lever, SmartRecruiters, Workable e Workday — essa dívida
 **continua aberta e nomeada**).
+
+## Maestro, 18/09 10h55 UTC: follow-up de 7 dias vira rotina, e o Joe passa a 2h
+
+Vini pediu mais resposta positiva e mais esforço. Três mudanças, todas em vigor:
+
+1. **Follow-up sistemático.** Toda carta fria sem resposta em 7 dias recebe UM lembrete curto, no mesmo fio, enviado direto por `mcp__Gmail__reply` (não rascunho, não Apps Script), com `to` explícito e ZERO emoji. Texto padrão está em `automacao/processados.csv` (linha de 18/09, "follow-ups de 7 dias"). Roda na rodada do Comunicador das 11h05 UTC com a busca `in:sent subject:"Senior Character Artist" older_than:7d newer_than:8d`. Só fio de UMA mensagem. Nunca para casa que recusou, pessoa que respondeu, fio com veto, casa na mão do Vini, ou fio que já tem lembrete. Nunca segundo lembrete. Primeira leva: 36 lembretes em 18/09, lotes de 08 e 09/09.
+2. **Joe a cada 2 horas** (`35 */2`), e as cartas saem na mesma rodada para toda ficha com email publicado dentro da disciplina. Não se espera juntar 3. Casa fora da disciplina continua SEGURADA-pelo-maestro com motivo.
+3. **Gargalo do envio.** Os rascunhos só saem quando o `enviarRascunhos()` roda no Apps Script do Vini. Pedido feito a ele: gatilho de tempo a cada hora. Enquanto não houver, a fila cresce e o Comunicador precisa reconciliar `in:sent` antes de contar.
