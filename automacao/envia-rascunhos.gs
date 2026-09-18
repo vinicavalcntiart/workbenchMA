@@ -2,6 +2,8 @@
 // Roda dentro da SUA conta Google, no Apps Script (script.google.com), sem proxy e sem token.
 //
 // COMO USAR — UMA VEZ SÓ, E NUNCA MAIS. Mudou em 14/09; ver o bloco PILOTO AUTOMÁTICO no fim.
+// 18/09: cole este arquivo de novo por cima do antigo (tem a função enviarCartasDoRepo, que lê as
+// cartas prontas do repositório e envia sem rascunho). Depois rode `instalar` e `armar` UMA vez.
 // 1. Abra https://script.google.com, "Novo projeto", cole este arquivo inteiro.
 // 2. No menu da esquerda, "Serviços" (+), adicione "Gmail API" (fica como serviço avançado "Gmail").
 // 3. Confira PASTA_DRIVE_ID (pasta do Drive com Vini_Cavalcanti_CV.pdf e Vini_Cavalcanti_Cover_Letter.pdf).
@@ -486,6 +488,59 @@ function enviarAssuntoProprio() {
  * NADA DISSO PEDE EDIÇÃO DE CÓDIGO. Era a edição de código que fazia a campanha parar.
  * ============================================================================= */
 
+/* =============================================================================
+ * CARTAS VINDAS DO REPOSITÓRIO (18/09). Motivo: a interface web da sessão do Claude
+ * pede permissão a cada rascunho criado ou editado no Gmail, e o Vini não quer mais
+ * pedido nenhum. Então o maestro deixou de criar rascunho: a carta pronta vai para
+ * o arquivo público automacao/cartas-prontas/fila.json na branch da campanha, e ESTA
+ * função a lê de lá, monta o email com a assinatura e os dois PDFs, e envia.
+ * Dedupe em duas camadas: a propriedade REPO_ENVIADAS guarda os ids já enviados, e
+ * antes de cada envio uma busca na pasta Enviados confere se aquele endereço já
+ * recebeu carta com este assunto (pega até carta antiga mandada por rascunho).
+ * Roda dentro de rodada(), no mesmo gatilho. Não pede nada a ninguém.
+ * ============================================================================= */
+const FILA_URL = "https://raw.githubusercontent.com/vinicavalcntiart/workbenchMA/claude/vagas-campaign-performance-3mffss/automacao/cartas-prontas/fila.json";
+
+function enviarCartasDoRepo() {
+  var resp = UrlFetchApp.fetch(FILA_URL + "?t=" + Date.now(), { muteHttpExceptions: true });
+  if (resp.getResponseCode() !== 200) {
+    Logger.log("fila.json nao respondeu (" + resp.getResponseCode() + "); nada enviado.");
+    return;
+  }
+  var fila = JSON.parse(resp.getContentText()).cartas || [];
+  var props = PropertiesService.getScriptProperties();
+  var feitas = JSON.parse(props.getProperty('REPO_ENVIADAS') || '[]');
+  var pendentes = fila.filter(function (c) { return feitas.indexOf(c.id) < 0; });
+  var sobra = MailApp.getRemainingDailyQuota();
+  Logger.log(fila.length + " cartas na fila do repositorio, " + pendentes.length + " pendentes · cota restante: " + sobra);
+  if (!pendentes.length || sobra <= 0) return;
+  var sig = assinatura();
+  var files = anexos();
+  var n = 0;
+  for (var i = 0; i < pendentes.length; i++) {
+    var c = pendentes[i];
+    if (n >= MAX_POR_EXECUCAO || n >= sobra) { Logger.log("parei no teto desta execucao"); break; }
+    if (!c.para || !c.html || !c.texto) { Logger.log("carta incompleta, pulada: " + c.id); continue; }
+    var assunto = c.assunto || ASSUNTO;
+    // ja recebeu carta com este assunto? (rascunho antigo, envio anterior, ou dedupe falho)
+    var jaTem = GmailApp.search('in:sent to:' + c.para + ' subject:"' + assunto + '"', 0, 1);
+    if (jaTem.length) {
+      Logger.log("PULADA, ja existe carta enviada para " + c.para + ": " + c.id);
+      feitas.push(c.id); props.setProperty('REPO_ENVIADAS', JSON.stringify(feitas));
+      continue;
+    }
+    if (SIMULAR) { Logger.log("enviaria " + c.id + " para " + c.para); n++; continue; }
+    var html = limparLinks(c.html) + "<br><br>-- <br>" + sig;
+    var texto = limparLinks(c.texto);
+    GmailApp.sendEmail(c.para, assunto, texto, { htmlBody: html, attachments: files, name: "Vini Cavalcanti" });
+    feitas.push(c.id); props.setProperty('REPO_ENVIADAS', JSON.stringify(feitas));
+    n++;
+    Logger.log("enviada do repositorio: " + c.id + " -> " + c.para);
+    Utilities.sleep(PAUSA_MS);
+  }
+  Logger.log(n + " cartas do repositorio processadas" + (SIMULAR ? " (simulacao)" : ""));
+}
+
 const GATILHO_ALVO = 'rodada';
 const GATILHO_HORAS = 2;
 
@@ -556,5 +611,10 @@ function rodada() {
     enviarAssuntoProprio();
   } catch (e) {
     Logger.log('ERRO em enviarAssuntoProprio: ' + e);
+  }
+  try {
+    enviarCartasDoRepo();
+  } catch (e) {
+    Logger.log('ERRO em enviarCartasDoRepo: ' + e);
   }
 }

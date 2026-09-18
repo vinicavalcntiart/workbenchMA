@@ -8,7 +8,7 @@
     "mcp__Gmail__reply continua liberado, porque é a via permitida de resposta em thread",
     "que já existe, e é por onde o Comunicador trabalha.",
     "11/09 a noite: acrescentados os verbos de terminal que os agentes mais usam (timeout, pgrep, printf, test, find, seq, stat, sleep) porque o Vini estava tendo de aprovar item por item a noite inteira. Nenhum deles e mais perigoso que o rm e o curl que ja estavam liberados. A lista de deny NAO foi tocada: enviar email, encaminhar, compartilhar arquivo do Drive e push com force continuam bloqueados, e e isso que mantem de pe a regra 'so rascunho, nunca enviar'.",
-    "18/09 14h40: a pedido do Vini ('va adicionando o maximo de coisas no settings pra nao ter que me pedir permissao'), a lista allow passou a cobrir Bash inteiro e os servidores MCP inteiros (Gmail, Google Drive, Claude Code Remote, GitHub). A lista deny continua intacta e tem precedencia: enviar email novo, encaminhar, apagar thread, compartilhar ou apagar arquivo do Drive, push com force e rm -rf / seguem bloqueados."
+    "18/09 15h50: a versao das 14h40 (que acrescentava 'Bash' e servidores MCP inteiros) foi DESFEITA. Depois dela a interface passou a pedir permissao para tudo, inclusive terminal e busca no Gmail, que antes passavam sem pedir. Este arquivo e a copia exata do que funcionava entre 11h36 e 14h40 de 18/09."
   ],
   "permissions": {
     "defaultMode": "bypassPermissions",
@@ -148,16 +148,7 @@
       "Skill",
       "ToolSearch",
       "Monitor",
-      "TaskStop",
-      "Bash",
-      "mcp__Gmail",
-      "mcp__Google_Drive",
-      "mcp__Claude_Code_Remote",
-      "mcp__github",
-      "mcp__Claude_Docs",
-      "NotebookEdit",
-      "ListMcpResourcesTool",
-      "ReadMcpResourceTool"
+      "TaskStop"
     ]
   }
 }
