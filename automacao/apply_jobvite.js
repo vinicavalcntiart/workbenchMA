@@ -159,6 +159,38 @@ const dump=async(p,tag)=>{
       await p.waitForTimeout(350);
     }
   }
+
+  // ACRESCENTADO 18/09 22h47: CAMPO DE AUTOCOMPLETE. Hipotese medida na Blind Squirrel: o
+  // Location do Rippling vem autopreenchido pela geolocalizacao como TEXTO, nao como opcao
+  // escolhida, e o validador proprio do ATS pode recusar em silencio. "auto": [{"rotulo":
+  // "regex do rotulo ou aria-label","texto":"o que digitar","opcao":"regex da sugestao"}]
+  for(const a of (A.auto||[])){
+    const h=await p.evaluateHandle(r=>{
+      const re=new RegExp(r,'i');
+      const es=[...document.querySelectorAll('input')].filter(e=>e.type!=='hidden'&&e.offsetParent!==null);
+      for(const e of es){
+        const lab=((e.labels&&e.labels[0]?e.labels[0].innerText:'')||e.getAttribute('aria-label')||e.placeholder||'').replace(/\s+/g,' ').trim();
+        if(re.test(lab)) return e;
+      }
+      return null;
+    },a.rotulo);
+    const el=h.asElement();
+    if(!el){ log('AUTO rotulo nao achado:',a.rotulo); continue; }
+    await el.scrollIntoViewIfNeeded().catch(()=>{});
+    await el.click({force:true}).catch(()=>{});
+    await el.fill('').catch(()=>{});
+    await el.type(String(a.texto),{delay:110}).catch(e=>log('AUTO digitacao',e.message.split('\n')[0]));
+    await p.waitForTimeout(3500);
+    const sug=await p.$$eval('[role=option], [role=listbox] *, li',es=>es.filter(e=>e.offsetParent!==null)
+      .map(e=>(e.innerText||'').replace(/\s+/g,' ').trim()).filter(t=>t&&t.length<90).slice(0,12)).catch(()=>[]);
+    log('AUTO sugestoes para',a.texto,':',JSON.stringify(sug));
+    let clicou=false;
+    const alvo=p.locator('[role=option]').filter({hasText:new RegExp(a.opcao||a.texto,'i')}).first();
+    if(await alvo.count().catch(()=>0)){ await alvo.click({force:true}).catch(()=>{}); clicou=true; }
+    if(!clicou){ await el.press('ArrowDown').catch(()=>{}); await p.waitForTimeout(400); await el.press('Enter').catch(()=>{}); }
+    await p.waitForTimeout(1500);
+    log('AUTO',a.rotulo,'=> leitura de volta:',await el.inputValue().catch(()=>'?'),'| por opcao:',clicou);
+  }
   await p.waitForTimeout(1500);
   await dump(p,'preenchido');
   await p.screenshot({path:D+'jv_'+slug+'.png',fullPage:true});
