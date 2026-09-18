@@ -9404,3 +9404,43 @@ frase da rodada.
   requirement"*, o que é bom para quem quer realocar e péssimo para quem precisa de patrocínio, e a casa
   **não diz nada sobre visto**; (e) o portfólio de personagem 3D da casa que eu vi é de **2011** (Studio
   Killers), embora a filmografia recente (os filmes do Niko) seja CG de longa.
+
+### FICHA 2 — Sigurd Sørlie, **Pipeline and assets** da Expanse (Oslo, Noruega) — **PUBLICADO, confiança ALTA**, e é a **SEGUNDA E ÚLTIMA** pessoa desta casa
+
+- **EMAIL: `sigurd@expanse.no` — PUBLICADO, confiança ALTA.** Texto puro na seção *People* da raiz, na
+  mesma linha do nome e do cargo, sem ofuscação nenhuma. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://expanse.no/` → final `https://www.expanse.no/` (**200,
+  348.105 bytes**). Os caminhos `/kontakt`, `/team`, `/people`, `/ansatte` e `/yhteystiedot` dão **404 com
+  95.324 bytes** (404 gordo): **a casa inteira mora na raiz**, o que é a mesma forma da Storm Studios de
+  15/09.
+- **MX conferido nesta rodada** (DoH): `ASPMX.L.GOOGLE.COM` e os quatro `ALT` (Google Workspace, vivo).
+- **O que a raiz publica, seis pessoas com cargo, telefone e endereço:** *Fredrik Fottland, Producer and
+  VFX Supervisor*; *Tor Kristian Liseth, Line producer* (`tkl@`); *Jonas Martin Larsen, Head of CG*;
+  *Sigurd Sørlie, Pipeline and assets*; *Eilef Sandnæs, CTO*; *Kristoffer Damskau, Animation Supervisor*.
+  Os telefones existem na fonte e **não são registrados aqui**, porque o repositório é público.
+- **POR QUE ELE, e não outro da casa:** o **Jonas Martin Larsen, Head of CG, já levou carta em 11/09
+  21h27** e não respondeu, então o teto permite exatamente **uma** segunda pessoa e ela tem que ser de
+  outro assento. Dos cinco restantes, o CTO e o Line producer não decidem arte, o Producer/VFX Supervisor
+  é o dono de cliente e não de pipeline, o Animation Supervisor cuida de **movimento** (o ofício do Vini é
+  escultura, superfície e groom), e **o dono do ativo é o Sigurd: o cargo publicado dele é literalmente
+  "Pipeline and assets"**, e personagem é ativo. **Ele é a segunda e última pessoa possível desta casa.**
+- **GANCHO, literal da casa, e é forte:** *"Our latest project, A Mouse Hunt for Christmas, became the most
+  watched film in Norwegian cinemas in 2025. We created around **500 shots with animated hero characters**
+  and visual effects, all from our studio in Oslo, Norway"*. A lista de serviços da mesma página traz
+  *"Modelling and Rigging"* e *"2D and 3D Animation"* como trabalho de casa, e a casa se define assim:
+  *"Expanse is Norwegian for solid all the way through. No veneer. No hollow core"* e *"No army of middle
+  managers between our clients and the artists doing the work"*.
+- **FORA DOS EUA:** sim, Noruega (nórdico, **fora da UE**, dentro do EEE). **A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `expanse.no OR Expanse OR Sørlie OR Sorlie OR Damskau
+  in:anywhere` devolveu **três fios, e só um é da casa**: a carta **ENVIADA** para `jonas@expanse.no` em
+  **11/09 21h27**, assunto exato, **sem resposta e sem recusa** (os outros dois são Deck Nine e Keyframe,
+  que casaram por palavra e não por domínio). `sigurd@expanse.no` dá **zero** em `enviados.csv`,
+  `pessoas.csv`, `alvos.csv`, `processados.csv`, `docs/index.html` e neste arquivo; `pessoas.csv` linha 219
+  confirma que a casa entrou na campanha em 10/09 com o Jonas. **A casa não recusou.**
+- **RESSALVAS HONESTAS:** (a) **é segunda carta e a primeira ficou sem resposta** desde 11/09, então a
+  carta não pode fingir primeiro contato e o mais honesto é dizer que escreveu ao Head of CG antes; (b) **é
+  casa de VFX e cinemática, não de longa de animação de personagem** — o volume dela é plano de efeito, e
+  "hero characters" aparece uma vez, no filme de Natal; (c) o cargo dele é **pipeline**, ou seja ele pode
+  ser o dono técnico do ativo e **não** quem escolhe artista; (d) casa pequena, seis pessoas publicadas, sem
+  página de vaga e sem convite a portfólio — a carta é 100% frio; (e) o site não diz uma palavra sobre
+  visto ou patrocínio.
