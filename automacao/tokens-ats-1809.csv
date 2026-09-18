@@ -714,3 +714,155 @@ workable,streamlinestudios,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-
 workable,supermassivegames,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
 workable,team-17-digital,url,nao,"index.html;quadros-fora-censo-1209.csv;quadros-novos-1009.csv",nao-aplica,,
 workable,velanstudios,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
+#
+# 18/09 20h55 UTC (Jhon A, 22o turno) - CINCO FAMILIAS NOVAS SONDADAS POR SLUG, 21.615 sondagens
+#   sobre 4.323 slugs do painel e do garimpo-cgstudiomap.csv. 136 quadros vivos, 298 vagas,
+#   5 acertos da disciplina e ZERO porta nova enviavel.
+#   DISCRIMINADOR DE CADA FAMILIA, medido com controle negativo E positivo antes de sondar:
+#     breezy   <slug>.breezy.hr/json                       404 nao existe | 200 JSON de vagas
+#     pinpoint <slug>.pinpointhq.com/postings.json          404 nao existe | 200 {data:[...]}
+#     homerun  feed.homerun.co/<slug>                       302 nao existe | 200 Atom
+#     rippling api.rippling.com/platform/api/ats/v1/board/<slug>/jobs  404 | 200 lista
+#     jobvite  jobs.jobvite.com/<slug>                      302 nao existe | 200 quadro (SPA:
+#              a LISTA so existe depois do JavaScript, entao contar vaga aqui pede navegador)
+#   ATENCAO, e a armadilha que domina esta veia: SLUG QUE RESPONDE 200 QUASE NUNCA E A CASA QUE
+#   O NOME SUGERE. rippling/paramount e escola de direcao; pinpoint/embark e Embark Student Corp;
+#   breezy/passion e uma igreja de Atlanta. A coluna identidade diz o que foi MEDIDO: casa-real,
+#   homonimo (com o nome verdadeiro ao lado), demo, alias (redireciona) ou nao-conferido.
+#   NAO CONTE a vaga de token nao-conferido como vaga da industria.
+breezy,agbo,sonda-slug-1809,sim,familiasB-1809,casa-real,"AGBO (veto escrito de autorizacao, 08/09)",17
+breezy,alta,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,amazon,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,attack,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,big-shot-pictures,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,bohemia-interactive,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,brink,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,cloud-imperium-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,cold-iron-studios,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,elliot,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,engine,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,emerald,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,fin-design-effects,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,gaggle,sonda-slug-1809,sim,familiasB-1809,homonimo,Gaggle Net (saude mental escolar),14
+breezy,grinding-gear-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,ground,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,gunzilla-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,infinite,sonda-slug-1809,sim,familiasB-1809,homonimo,Infinite Group (varejo fotografico no Reino Unido),4
+breezy,infusion,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,ingenuity,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,kevin,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,media,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,microsoft,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,mighty,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,motive,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,nathan,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,outside,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,passion,sonda-slug-1809,sim,familiasB-1809,homonimo,igreja Passion City de Atlanta (NAO e a Passion Pictures),11
+breezy,pinata,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,pipeline,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,pixel,sonda-slug-1809,sim,familiasB-1809,homonimo,produtora de publicidade em Nova York,1
+breezy,playdead,sonda-slug-1809,sim,familiasB-1809,casa-real,Playdead,15
+breezy,playstation,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,random,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,relish,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,roblox,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,sandbox,sonda-slug-1809,sim,familiasB-1809,homonimo,CJGeo e Tiny Cargo,3
+breezy,stormind-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,stratosphere,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,sunblink,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,switch,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,tangent,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,unfold,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,victory,sonda-slug-1809,sim,familiasB-1809,homonimo,empresa de TI em Austin,7
+breezy,warhorsestudios,sonda-slug-1809,sim,familiasB-1809,casa-real,Warhorse Studios (recusa em 09/09),4
+breezy,warhorse-studios,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+breezy,xyz,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,amber,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,amplitude,sonda-slug-1809,sim,familiasB-1809,demo,conta de demonstracao do Pinpoint (medida em 11/09),5
+pinpoint,bandainamcomobile,sonda-slug-1809,sim,familiasB-1809,casa-real,Bandai Namco Mobile,5
+pinpoint,blackbirdinteractive,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,brazenanimation,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,ccpgames,sonda-slug-1809,sim,familiasB-1809,alias,301 para fenriscreations (ja enviada 10/09),8
+pinpoint,company,sonda-slug-1809,sim,familiasB-1809,demo,conta de demonstracao do Pinpoint (medida em 11/09),7
+pinpoint,cube,sonda-slug-1809,sim,familiasB-1809,demo,conta de demonstracao do Pinpoint (medida em 11/09),5
+pinpoint,curvedigital,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,embark,sonda-slug-1809,sim,familiasB-1809,homonimo,Embark Student Corp (NAO e a Embark Studios),2
+pinpoint,emerald,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,flixinteractive,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,frontierdevelopments,sonda-slug-1809,sim,familiasB-1809,casa-real,Frontier Developments,4
+pinpoint,framestore,sonda-slug-1809,sim,familiasB-1809,casa-real,Framestore,3
+pinpoint,gameplaygalaxy,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,hercules,sonda-slug-1809,sim,familiasB-1809,homonimo,HerculesAI,4
+pinpoint,hitmarker,sonda-slug-1809,sim,familiasB-1809,homonimo,"Hitmarker (quadro de vagas, nao estudio)",4
+pinpoint,ingenuitystudios,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,kraken,sonda-slug-1809,sim,familiasB-1809,homonimo,Kraken Technologies,4
+pinpoint,kwalee,sonda-slug-1809,sim,familiasB-1809,casa-real,Kwalee (ja conhecida),3
+pinpoint,light,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,4
+pinpoint,magnopus,sonda-slug-1809,sim,familiasB-1809,casa-real,Magnopus (ja conhecida),2
+pinpoint,marshmallow,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,maverick-games,sonda-slug-1809,sim,familiasB-1809,casa-real,Maverick Games (ja conhecida),1
+pinpoint,metropolis,sonda-slug-1809,sim,familiasB-1809,homonimo,Metropolis (estacionamento),5
+pinpoint,moonbug,sonda-slug-1809,sim,familiasB-1809,casa-real,Moonbug Entertainment,5
+pinpoint,obsidian,sonda-slug-1809,sim,familiasB-1809,casa-real,Obsidian (ja conhecida),1
+pinpoint,outpost-vfx,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,pipeworks,sonda-slug-1809,sim,familiasB-1809,casa-real,Pipeworks (ja conhecida),4
+pinpoint,playground-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,realtimeuk,sonda-slug-1809,sim,familiasB-1809,casa-real,RealtimeUK (ja conhecida),3
+pinpoint,refuge,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,4
+pinpoint,rewind,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,3
+pinpoint,richter,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,rocksteady,sonda-slug-1809,sim,familiasB-1809,casa-real,Rocksteady (ja conhecida),5
+pinpoint,ruckus-games,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,sandbox,sonda-slug-1809,sim,familiasB-1809,homonimo,Sandbox_CSM(AC),5
+pinpoint,shortcut,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,singularity6,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,stellar,sonda-slug-1809,sim,familiasB-1809,casa-real,Stellar Entertainment Software,3
+pinpoint,suncreature,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,switch,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,tensquaregames,sonda-slug-1809,sim,familiasB-1809,casa-real,Ten Square Games,4
+pinpoint,triangle,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+pinpoint,volka,sonda-slug-1809,sim,familiasB-1809,casa-real,Volka Games,4
+pinpoint,wushustudios,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,anti,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,armada,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,buck,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,chucklefish,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,crowscrowscrows,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,fabrique,sonda-slug-1809,sim,familiasB-1809,nao-conferido,"2 vagas, identidade nao lida nesta rodada",2
+homerun,random,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+homerun,taylor,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,1
+homerun,twinswans,sonda-slug-1809,sim,familiasB-1809,casa-real,Twin Swans (ja conhecida),0
+homerun,ustwo-games,sonda-slug-1809,sim,familiasB-1809,casa-real,ustwo games (ja conhecida),4
+rippling,amber,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,blind-squirrel-games,sonda-slug-1809,sim,familiasB-1809,casa-real,Blind Squirrel Games,3
+rippling,company,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,crafty,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,28
+rippling,element,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,1
+rippling,factory,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,fern,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,golden,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,7
+rippling,gravity,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,iconic,sonda-slug-1809,sim,familiasB-1809,casa-real,"Iconic Interactive (Londres, AI-native)",5
+rippling,infinite,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,infusion,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,1
+rippling,ingenuity-studios,sonda-slug-1809,sim,familiasB-1809,casa-real,Ingenuity Studios (ja conhecida),0
+rippling,ko-op,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,motion,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,9
+rippling,nomad,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,1
+rippling,paramount,sonda-slug-1809,sim,familiasB-1809,homonimo,escola de direcao na California (NAO e a Paramount),28
+rippling,plastic,sonda-slug-1809,sim,familiasB-1809,homonimo,software em San Francisco (NAO e a Plastic Wax),1
+rippling,refuge-vfx,sonda-slug-1809,sim,familiasB-1809,casa-real,Refuge VFX,0
+rippling,steamroller-animation,sonda-slug-1809,sim,familiasB-1809,casa-real,Steamroller Animation,4
+rippling,taylor,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,6
+rippling,terminal,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,2
+rippling,untold,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+rippling,xyz,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,6
+jobvite,absolute,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+jobvite,beyond,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+jobvite,kixeye,sonda-slug-1809,sim,familiasB-1809,casa-real,KIXEYE (quadro inedito para a campanha; leitura pede navegador),0
+jobvite,kwalee,sonda-slug-1809,sim,familiasB-1809,casa-real,"Kwalee (segundo quadro, alem do Pinpoint)",0
+jobvite,nathan,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,5
+jobvite,playground-games,sonda-slug-1809,sim,familiasB-1809,casa-real,Playground Games (ja conhecida),1
+jobvite,redefine,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+jobvite,ruffiangames,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+jobvite,triton-digital,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
