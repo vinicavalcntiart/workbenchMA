@@ -7869,3 +7869,134 @@ solo que não contrata**; e as duas melhores casas de disciplina da rodada (Stud
 ficaram uma atrás de falha de TLS do túnel e a outra atrás de quatro caixas funcionais.
 
 > **Maestro, 18/09 05h20 UTC:** o container reiniciou no meio do turno do Joe; a seção acima estava escrita no disco e foi commitada como ele a deixou. As quatro linhas do `pessoas.csv` foram gravadas por mim a partir das fichas. **Zero cartas**, pelo mesmo critério das rodadas anteriores e pelo que o próprio Joe mediu: 2Dogs (um jogo, sem pipeline 3D), Impossible Studios (produtora de foto e publicidade) e L-F Studio (interativo e Web3) não publicam personagem, e a carta não pode afirmar encaixe. Morgana é a melhor casa da rodada e não tem endereço de pessoa; a casa já está no teto por domínio (carta e follow-up em `info@`). A lista dos 25 associados da DIBOOS nunca tocados fica como fila para o Joe resolver domínio por casa.
+
+## JOE, 18/09/2026 08h55 UTC — **A ANIMATION UK FOI FECHADA EM 205 MEMBROS (a rodada de 17/09 21h tinha varrido 87 de 198 domínios)**, E A VEIA QUE RENDEU FOI **O SITEMAP DE CADA CASA DEPOIS DO DIFF DE DOMÍNIOS**: DUAS FICHAS COM ENDEREÇO PUBLICADO E TRÊS `sem-email`, UMA DELAS COM O MELHOR CARGO DA SEMANA
+
+**O furo que esta rodada fechou, em número.** O `wp-json` de
+`https://www.animationuk.org/wp-json/wp/v2/organisations?per_page=100&page=N` (3 páginas, **200 /
+593.771 + 762.453 + 37.680 bytes**) publica **205 membros**, e o domínio de cada um mora em
+`meta.website_main` — **91 deles sem protocolo**, que é a razão pela qual as varreduras anteriores
+perderam metade do censo (`curl` sem esquema não abre nada). Consertado o protocolo: **198 domínios
+reais**. Cruzados com o conjunto de **2.750 domínios já tocados** pela campanha (`enviados.csv` +
+`alvos.csv` + `pessoas.csv` + `processados.csv` + este arquivo + `docs/index.html`, regex de domínio
+estendida para `.uk`, `.nl`, `.de`, `.es`, `.ie`, `.eu` e mais 15 TLDs que a versão das 00h55 não
+cobria): **115 já tocados, 83 inéditos.** Dos 83, **31 são de animação ou VFX** e foram varridos aqui
+com 14 caminhos em dois esquemas; os outros 52 são **universidade, seguradora, contabilidade,
+software de gestão, laboratório de filme, som e casa de edição/post puro** — nomeados no fim da
+seção para nenhuma rodada futura gastar requisição neles.
+
+### A VEIA NOVA DESTA RODADA, ESCRITA PARA REPETIR: **O SITEMAP RESOLVE O QUE A LISTA DE CAMINHOS FIXOS NÃO ACHA**
+
+As três fichas de melhor cargo desta rodada **não estavam em nenhum dos 14 caminhos padrão**. Elas
+estavam em `/meet-the-team`, `/info-contact` e `/who-we-are` — nomes de página que só apareceram
+quando eu pedi o **sitemap** de cada casa:
+
+```
+for d in $(cat doms.txt); do
+  for u in "https://www.$d/sitemap.xml" "https://$d/sitemap.xml" \
+           "https://www.$d/sitemap_index.xml" "https://www.$d/page-sitemap.xml"; do
+    curl -sS -L --max-time 20 "$u" | grep -oE "<loc>[^<]+</loc>" | sed 's/<[^>]*>//g'
+  done
+done | grep -iE "team|people|about|contact|staff|crew|studio|jobs|career|who|legal|privacy"
+```
+
+**264 URLs de interesse em 25 das 31 casas**, e dois achados de estrutura que valem sozinhos:
+`banijaykidsandfamily.com` e `disauthority.com` publicam um **`person-sitemap.xml`** (38 e 11
+pessoas nomeadas, uma página por pessoa), e o Squarespace/Wix de casa pequena costuma ter a página
+de equipe num slug inventado (`/lovely-people`, `/info-contact`, `/keyframe-about.html`) que
+**nenhuma lista de caminhos adivinha**. **O custo é 1 a 4 requisições por casa e ele se paga.**
+Onde o caminho fixo deu **500** (`eyebolls.com/team`, 2.105 bytes em nove tentativas), o sitemap
+disse que a página **não existe** — que é informação, não parede.
+
+### FICHA 1 — Genevieve Dexter, **CEO** da Eye Present (Hackney, Londres, Reino Unido) — **PUBLICADO, confiança ALTA, e é a MELHOR FICHA DA RODADA: casa de CG de 50 assentos, nome+cargo+endereço na MESMA LINHA**
+
+- **POR QUE ELA, e não outro da casa.** A casa publica **exatamente dois nomes** — *"The company is
+  headed up by **Genevieve Dexter & Jules Coke**"* — e **só o endereço dela está publicado**. O do
+  Jules Coke não aparece em nenhuma das quatro páginas que o sitemap inteiro da casa contém
+  (`/`, `/work-carson`, `/new-page`, `/info-contact`). Montar `jules@eyepresent.co.uk` seria
+  **endereço MONTADO** e a regra de 06/09 (cinco de oito montados quicaram) proíbe gastar a primeira
+  carta de uma casa nova nisso. **Fica registrado que `jules@eyepresent.co.uk` é palpite, não
+  endereço.** Em casa de 50 pessoas sem recrutador publicado, o BRIEF-JOE manda ir no topo, e aqui
+  o topo tem endereço impresso.
+- **EMAIL: `genevieve.dexter@eyepresent.co.uk` — PUBLICADO, confiança ALTA.** Texto puro, sem
+  ofuscação, sem `data-cfemail`, sem `(at)`. **Nada montado, nenhuma segunda grafia tentada.**
+- **URL exata aberta nesta rodada:** **`http://www.eyepresent.co.uk/info-contact`** (**200, 140.137
+  bytes**), que imprime o pareamento completo em três campos colados: *"Contact — **UK Genevieve
+  Dexter CEO genevieve.dexter@eyepresent.co.uk**"*, seguido do endereço *"Studio Address 1-5 Vyner
+  Street Hackney London UK E2 9DG"*. A home `https://www.eyepresent.co.uk/` (**200, 133.369 bytes**)
+  dá o catálogo. **Nota de método: o `https://www.eyepresent.co.uk/info-contact` não está em nenhuma
+  lista de caminhos padrão — ele saiu do `sitemap.xml`, que tem QUATRO URLs no total.** *(O telefone
+  publicado ao lado é dado de empresa e não vai para o repositório.)*
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"We are a **50 seat CG animation studio**
+  that seeks out well known or unique intellectual properties to develop and produce content for
+  children and family audiences"*, e *"We specialise in **creative adaptation and production**, and
+  have an **unrivalled ability to raise finance** for our chosen projects from a variety of broadcast,
+  commercial, private and government funding"*. Serve porque **"50 seat CG animation studio" é a
+  frase mais próxima da disciplina do Vini que esta campanha achou em duas semanas**: 50 assentos de
+  CG em série infantil é pipeline de personagem, modelagem, rig e groom de ponta a ponta. O catálogo
+  que a home mostra — **Okido, Flix, Best & Bester** — é série CG de personagem.
+- **FORA DOS EUA: SIM, Londres** (1-5 Vyner Street, Hackney, E2 9DG). **A frase de realocação ENTRA**,
+  e o Reino Unido é a prioridade declarada do escopo.
+- **DEDUPE, feito DEPOIS da varredura e ANTES desta ficha:** Gmail
+  `eyepresent OR "Eye Present" OR "Genevieve Dexter" OR "Jules Coke" OR "Serious Lunch"` devolveu
+  **`{}`**; `in:sent (eyepresent.co.uk OR ...)` devolveu **`{}`**. **0 de 2.** Nos arquivos:
+  `eyepresent`, `Genevieve`, `Jules Coke` dão **zero**; `Dexter` dá **6 acertos e todos são a Dexter
+  Studios da Coreia do Sul** (`enviados.csv` 28/08, `alvos.csv` 118, `docs/index.html` 797) — **casa
+  diferente, país diferente, armadilha de sobrenome registrada**; `Eye Present` dá **1 acerto** e é
+  a linha 1913 deste arquivo, onde a casa aparece **como coprodutora citada por outro estúdio**
+  (Pictor, Irlanda), **nunca como casa tocada**. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: não publicado.** A casa **não tem página de carreiras** — o sitemap tem
+  quatro URLs e nenhuma é `/jobs` ou `/careers`. Com 50 assentos é a casa desta rodada com maior
+  chance real de patrocinar, mas **ela não escreve nada sobre isso e eu não vou afirmar.**
+- **RESSALVA HONESTA:** (1) o cargo é **CEO**, ou seja quem decide dinheiro, não quem decide arte —
+  a casa **não publica diretor de arte, supervisor nem recrutador**, então o fechamento padrão do
+  BRIEF-JOE ("se outra pessoa aí é a certa, me aponte") é o que faz esta carta valer; (2) a casa se
+  descreve como **produtora que levanta financiamento e adapta IP**, e os 50 assentos de CG podem ser
+  **capacidade de coprodução e não folha de pagamento própria** — nada no site prova quadro interno
+  de 50 artistas; (3) o site é **minúsculo em conteúdo** (quatro URLs, uma delas chamada `/new-page`
+  e outra `/icons`) e a home traz o texto de gabarito do Squarespace *"This is the index
+  description"*, o que sugere site **desatualizado** — cargo desatualizado é risco, ainda que CEO
+  fundadora seja o cargo mais estável que existe; (4) o endereço é `http://` no sitemap e a página
+  serve por `www`, o que não muda nada mas está registrado.
+
+### FICHA 2 — Pepijn Padberg, **Executive Producer** da Onesize (Amsterdam, Países Baixos) — **PUBLICADO, confiança ALTA, e o DOMÍNIO DO EMAIL NÃO É O DO SITE**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **dois humanos com cargo**, um por escritório:
+  **Pepijn Padberg, Executive Producer, Amsterdam** e **Michele Maples, Executive Producer, Santa
+  Monica, CA**. A Michele está nos **EUA sem visto, fora do escopo**; o Pepijn é o lado holandês, e a
+  regra de uma pessoa por casa por rodada já resolveria o empate de qualquer forma. **Não há diretor
+  de arte, supervisor nem recrutador publicado**, então o produtor executivo é a única porta humana.
+- **EMAIL: `pepijn@onesize.com` — PUBLICADO, confiança ALTA.** Texto puro, três páginas diferentes.
+  **Nada montado.** **Achado de método que vale registrar: o site é `onesize.nl` e o email é
+  `@onesize.com`** — quem montasse endereço pelo domínio do site erraria o TLD. É o mesmo tipo de
+  armadilha do `uniko.com.es` de 05h15, e é a segunda vez em duas rodadas.
+- **URLs exatas abertas nesta rodada:** `https://www.onesize.nl/contact` (**200, 16.020 bytes**),
+  que imprime *"The Netherlands — **Pepijn Padberg / Executive producer / pepijn@onesize.com**"* e,
+  abaixo, *"United States — Michele Maples / Executive producer / michele@onesize.com"*;
+  `https://www.onesize.nl/about` (**200, 26.182 bytes**), que repete o mesmo bloco e dá o perfil da
+  casa; e `https://www.onesize.nl/` (**200, 26.882 bytes**). A página também publica
+  `stage@onesize.com` para *"internships and representation"* e `info@onesize.com` — **as duas são
+  caixa funcional e não viram alvo.**
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Onesize is the agency that stands for
+  **distinctive design in motion**. Our **flexible team of industry-leading experts** offers a full
+  range of services for both brands and agencies — such as branding, TV commercials, and online
+  content: From initial concept, **(art) direction, design, and shoots**, right through to technical
+  and post-production phases"*, e *"ongoing partnerships with clients such as **Disney+**, JDE Peets,
+  **FX Networks**, & Under Armour"*.
+- **FORA DOS EUA: SIM, Amsterdam** (Generaal Vetterstraat 33a, 1059 BT). **A frase de realocação
+  ENTRA**, e a frase única de patrocínio também, por ser União Europeia. **A Holanda é a geografia
+  que esta campanha persegue desde 13/09 e quase nunca abre.**
+- **DEDUPE:** Gmail `onesize OR "Onesize" OR Padberg OR "Michele Maples" OR lemmingfilm` devolveu
+  **`{}`**; `in:sent (onesize.com OR onesize.nl OR ...)` devolveu **`{}`**. **0 de 2.** Nos arquivos,
+  `onesize` e `Padberg` dão **zero acerto nos seis** — e o `onesize.nl` **não estava** no
+  `touched.txt` de 2.750 domínios. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: não publicado**, e a casa não tem `/careers` nem `/jobs`. O `stage@` mostra
+  que ela recebe **estagiário**, o que é sinal de casa que contrata, não de casa que patrocina.
+- **RESSALVA HONESTA, e ela é de disciplina:** a Onesize é **motion design e publicidade**, não
+  personagem. O portfólio publicado é **pacote gráfico de canal (SYFY, NBC Universal), filme de
+  lançamento de camisa do Ajax, TVC da Pepsi e visual ao vivo do Afrojack** — há *"(art) direction"*
+  e *"high-end imagery"*, e há CG, mas **não há um assento de personagem, modelagem ou groom em
+  nenhuma página**. A carta não pode afirmar encaixe de disciplina; o valor dela é Amsterdam,
+  produtor executivo com endereço publicado e a possibilidade de indicação. A casa também se chama
+  **"agency"** e diz ter *"flexible team"*, o que costuma significar **freelance**, e o rodapé
+  ("Website by The Cre8ion.Lab") é a única data indireta do site — **o quadro não tem data**.
