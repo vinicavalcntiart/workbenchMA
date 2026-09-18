@@ -4874,7 +4874,7 @@ piso de 1.000**, então a régua de veto nela é **leitura inválida** e o veto 
   sondar** neste turno por tempo, e são a próxima perna óbvia desta mesma veia — com a vantagem de
   que ali o domínio também já está publicado.
 
-### Adendo das 04h49 — A PERNA CANADENSE DA MESMA VEIA: O BOLSÃO `pagina-sem-ats` ESTÁ ESGOTADO PARA FORMULÁRIO, E O QUE RESTA ALI É CARTA
+### Adendo das 04h38 — A PERNA CANADENSE DA MESMA VEIA: O BOLSÃO `pagina-sem-ats` ESTÁ ESGOTADO PARA FORMULÁRIO, E O QUE RESTA ALI É CARTA
 
 O §7 acima diz que as listas canadenses eram a próxima perna óbvia. Rodei. **Alvo escolhido pelo
 critério da veia**, não por volume: das 426 casas de `automacao/fila-gamedevmap-canada.csv`, 299 já
