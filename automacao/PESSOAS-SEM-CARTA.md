@@ -8330,3 +8330,26 @@ imprimem o endereço dela**; a Espanha da DIBOOS está travada **um nível antes
 domínio (**19 dos 25 associados não têm site na Wikidata e a página da associação não publica um
 único link**); e a Holanda entregou a primeira casa em cinco dias **e um veto escrito novo** na única
 outra casa que tinha endereço de pessoa.
+
+#### ADENDO 09h05 — **A ASSOCIAÇÃO IRMÃ DA DIBOOS É O MESMO BECO, E AGORA ESTÁ MEDIDO: `aepa-animation.com` TAMBÉM NÃO PUBLICA UM ÚNICO LINK DE MEMBRO**
+
+O turno mandou tentar a `aepa-animation.com` para resolver os domínios que a Wikidata não deu.
+**Tentada e fechada.** `https://www.aepa-animation.com/socios/` (**200, 94.995 bytes**) publica
+**19 associadas por RAZÃO SOCIAL e zero `href` externo** — o único link de fora do documento inteiro
+é **`http://www.assisoft.com`**, a agência que fez o site. **É exatamente a mesma estrutura, a mesma
+ausência de link e a MESMA AGÊNCIA da página da DIBOOS** (que também tem `assisoft.com` como único
+`href` externo, conforme a nota das 05h15). `/asociados/` devolve **404 (68.939 bytes, 404 gordo)**.
+O `wp-json/wp/v2/pages?per_page=100` abriu (**200, 199.884 bytes**) e **não tem tipo de conteúdo de
+membro** — não existe `organisations` como na Animation UK.
+
+**Mas ela entrega uma coisa que a DIBOOS não dá, e vale registrar: a RAZÃO SOCIAL**, que é o que
+desfaz homônimo. As 19: *UniKo Estudio Creativo S.L., Paramotion Films S.L., **Tandem Films S.L.**,
+**Asymmetric Univers S.L.**, Hampa Studio S.L., Morgana Studios S.L., Mondo TV Studios, Anima
+Kitchent Media S.L., Sergio Pablos Animation Studios S.L., 3 Doubles Producciones S.L., Rockyn
+Animation S.L., Big Bang Box S.L., LightBox Animation Studios S.L., El Ranchito Imagen Digital
+S.L.U., Wise Blues Studios Valencia S.L., The Frank Barton Company S.L., Mansalva Films, Final
+Frontier Animation & Film Co., Abano Producións*. **Isso CONFIRMA as duas armadilhas de homônimo que
+eu levantei na veia 2:** a associada é **Asymmetric Univers S.L.** (espanhola) e **não** a Asymmetric
+Publications de jogo dos EUA que a Wikidata devolve; e é **Tandem Films S.L.** (espanhola) e **não**
+a Tandem Games. **Quem for resolver esses 19 domínios precisa buscar pela razão social, não pelo
+nome de fantasia** — e nenhuma das duas associações espanholas vai dar o link.
