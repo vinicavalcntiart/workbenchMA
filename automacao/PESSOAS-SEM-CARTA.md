@@ -9482,3 +9482,41 @@ frase da rodada.
   a casa tem **caixa própria de vaga** (`jobs@skjaldborn.com`) publicada ao lado dos fundadores, então
   escrever à sócia é aposta; (e) é casa de IP própria e Kickstarter, ou seja dinheiro de campanha e não de
   encomenda, o que aperta contratação sênior.
+
+### FICHA 4 — Niklas Adolfsson, **Executive Producer** da The Chapel Films (Estocolmo, Suécia) — **PUBLICADO, confiança ALTA**, e é a **SEGUNDA E ÚLTIMA** pessoa desta casa
+
+- **EMAIL: `niklas@thechapelfilms.com` — PUBLICADO, confiança ALTA.** Texto puro no bloco *Contact Us*,
+  logo abaixo de *"New business and other inquiries:"*, na mesma linha do nome e do cargo. **Nada
+  montado.**
+- **URL exata aberta nesta rodada:** `https://thechapelfilms.com/contact` → final
+  `https://www.thechapelfilms.com/contact/` (**200, 89.853 bytes**).
+- **MX conferido nesta rodada** (DoH): `aspmx.l.google.com` e os quatro `alt` (Google Workspace, vivo).
+- **O que a página publica:** dois Executive Producers com nome, cargo, telefone e endereço — *Niklas
+  Adolfsson* (`niklas@`) e *Johan Edström* (`johan@`) — e a mesma página lista os **diretores** da casa
+  sem endereço: *Jonas Odell*, *Olov Burman*, *Anna Mantzaris*. Telefones existem na fonte e **não são
+  registrados aqui**.
+- **POR QUE ELE, e não outro da casa:** **Jonas Odell, Creative Director, levou carta em 11/09 21h26** e
+  não respondeu. Dos dois Executive Producers, **Johan Edström está bloqueado por dedupe de PESSOA, não de
+  casa**: a linha 2994 deste arquivo registra que ele é **a mesma pessoa** que aparece no diretório nórdico
+  como dono da Apparat Filmproduktion (`johan@apparatfilm.se`), e duas casas de uma pessoa não valem duas
+  cartas. Sobra o **Niklas Adolfsson**, que é quem a casa nomeia para *"new business and other
+  inquiries"*. **Segunda e última pessoa desta casa.**
+- **GANCHO, literal da casa:** *"Hi there, we are The Chapel. We are a Stockholm based production company
+  and animation studio, focusing on design-driven visual storytelling using live action, animation and any
+  technique in-between"*, e a própria navegação da casa lista as técnicas uma por uma: *LIVE ACTION | MIXED
+  MEDIA | STOP MOTION | **CGI ANIMATION** | 2D ANIMATION | AI*. Ainda: *"Our directors have created
+  commercials for a number of international clients including BMW, Volvo, IKEA, Facebook and Google"* e
+  *"The Chapel was founded in early 2019"*.
+- **FORA DOS EUA:** sim, Suécia, nórdico e UE. **A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `thechapelfilms OR Adolfsson OR "Chapel Films" OR apparatfilm
+  in:anywhere` devolveu **um fio**: a carta **ENVIADA** para `jonas@thechapelfilms.com` em **11/09 21h26**,
+  assunto exato, **sem resposta e sem recusa**. `niklas@thechapelfilms` dá **zero** em `enviados.csv`,
+  `pessoas.csv`, `alvos.csv`, `processados.csv`, `docs/index.html` e neste arquivo; `enviados.csv` linha 871
+  e `pessoas.csv` linha 237 confirmam a primeira carta.
+- **RESSALVAS HONESTAS:** (a) **segunda carta e a primeira ficou sem resposta**, então a carta assume o
+  contato anterior; (b) **é produtora de publicidade com roster de diretores**, não casa com departamento
+  de personagem — o modelo dela é juntar equipe por projeto, o que é bom para freela e ruim para assento
+  fixo; (c) a lista de técnicas inclui **AI** escrito pela própria casa, o que o maestro deve pesar antes
+  de escrever (a campanha já registrou casas com "AI workflows" na bio como risco); (d) *CGI ANIMATION*
+  é rubrica de navegação e **não vi um frame de personagem 3D** creditado à casa nesta rodada; (e) o cargo
+  é de negócio, não de arte.
