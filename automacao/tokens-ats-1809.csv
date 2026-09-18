@@ -57,6 +57,22 @@
 #   MEDIDO: 161 tokens lidos, 47 casa-real, 103 homonimo, 11 vazio.
 #   O Recruitee ainda REDIRECIONA o slug falso para o slug verdadeiro (sisu -> silverein), o que
 #   e prova mais forte que o company_name: a URL final do curl entrega o locatario real.
+#
+# 18/09 10h40 UTC - ADENDO DO MESMO TURNO: a conferencia de identidade foi ESTENDIDA aos 95
+#   tokens de Teamtailor e Recruitee de origem INDEPENDENTE (os que estavam `nao-aplica`),
+#   porque nessas duas familias a identidade sai de graca e deixar 'NAO CONFERIDO' escrito
+#   custava o mesmo que medir. RESULTADO: 56 casa-real, 8 HOMONIMO e 31 vazio/404.
+#   HOMONIMOS de origem independente, ou seja o erro NAO era so da rodada de adivinhacao:
+#     recruitee/airworks = Airworks Inflatables BV ; recruitee/headfirst = HeadFirst B.V.
+#     recruitee/grafischlyceumutrecht = escola ; teamtailor/parkerschauffeurs = motoristas
+#     teamtailor/podimo = podcast ; teamtailor/egmont = editora ; teamtailor/presto
+#     teamtailor/clickoutmedia = midia de afiliados
+#   ALIAS MORTO: 23 tokens de Teamtailor e 8 de Recruitee respondem 404/erro e varios sao o
+#   MESMO quadro escrito de outro jeito - paradox/paradoxinteractive/paradoxplaza (so
+#   paradox-interactive vive), sybogames (so sybo), stunlockstudios (so stunlocksstudios),
+#   goodbyekansasstudios (so goodbyekansas), envar (so envarstudio), fundagames (so
+#   fundaygames), snowprint (so snowprintstudios). Contar token e contar quadro NAO e a
+#   mesma coisa, e a diferenca aqui e de 31 em 95.
 familia,token,origem,adivinhado,arquivos_de_origem,identidade,nome_real,vagas_1809
 ashby,alden,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
 ashby,aleph,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
@@ -384,10 +400,10 @@ lever,wisdomtree,url,nao,"quadros-novos-wikidata-1509.csv",nao-aplica,,
 lever,zoox,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
 recruitee,11bitstudios,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"11 bit studios",5
 recruitee,adam,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"More Driver Solutions",74
-recruitee,airworks,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
+recruitee,airworks,coluna,nao,"censo-artstation-ats-1709.csv",homonimo,"Airworks Inflatables BV",4
 recruitee,alex,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Nikon Europe B.V.",4
 recruitee,angels,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
-recruitee,animus,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
+recruitee,animus,coluna,nao,"censo-artstation-ats-1709.csv",vazio,"",0
 recruitee,anyone,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Anyone.com",2
 recruitee,assembly,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Assembly",4
 recruitee,blank,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Zenzero",10
@@ -396,7 +412,7 @@ recruitee,bloom,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.cs
 recruitee,brain,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Brainsquare",5
 recruitee,bright,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"BRIGHT Operations GmbH",9
 recruitee,brink,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
-recruitee,careers-analytics,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",nao-aplica,,
+recruitee,careers-analytics,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",vazio,"",0
 recruitee,chaos,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Chaos",16
 recruitee,chimpworks,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
 recruitee,cipsoft,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"CipSoft GmbH",2
@@ -407,28 +423,28 @@ recruitee,clever,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.c
 recruitee,cloudfire,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Cloudfire GmbH",13
 recruitee,cold,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"COLD",1
 recruitee,company3,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Company3",1
-recruitee,crazygames,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+recruitee,crazygames,coluna,nao,"quadros-novos-1009.csv",casa-real,"Maxflow BV / CrazyGames",2
 recruitee,daredevils,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Daredevils",1
-recruitee,dovetailgames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html",nao-aplica,,
+recruitee,dovetailgames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html",casa-real,"Dovetail Games Ltd",2
 recruitee,eleven,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"ELEVEN Consulting Group",1
 recruitee,ember,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Ember",29
 recruitee,emergo,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"E-mergo",6
 recruitee,escape,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Escape B.V.",24
 recruitee,focusentertainment,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Pullup Entertainment",8
-recruitee,focushomeinteractive,url,nao,"quadros-novos-1009.csv;quadros-novos-wikidata-1509.csv",nao-aplica,,
+recruitee,focushomeinteractive,url,nao,"quadros-novos-1009.csv;quadros-novos-wikidata-1509.csv",casa-real,"Pullup Entertainment",8
 recruitee,fourth,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Fourth",1
-recruitee,framestore,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;garimpo-pdf-fontes.csv;index.html;personagem-quadros-1009.csv;processados.csv",nao-aplica,,
-recruitee,grafischlyceumutrecht,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
+recruitee,framestore,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;garimpo-pdf-fontes.csv;index.html;personagem-quadros-1009.csv;processados.csv",casa-real,"Framestore",52
+recruitee,grafischlyceumutrecht,coluna,nao,"censo-artstation-ats-1709.csv",homonimo,"Grafisch Lyceum Utrecht",1
 recruitee,grip,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Grip",3
-recruitee,headfirst,url,nao,"quadros-dominio-1609.csv",nao-aplica,,
+recruitee,headfirst,url,nao,"quadros-dominio-1609.csv",homonimo,"HeadFirst B.V.",25
 recruitee,hiro,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
-recruitee,huuuge,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;fila-remotegamejobs-estudios.csv",nao-aplica,,
+recruitee,huuuge,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;fila-remotegamejobs-estudios.csv",casa-real,"Huuuge Games",7
 recruitee,icon,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Icon Talent",2
 recruitee,illuvium,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
 recruitee,jump,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Jump",3
 recruitee,knuddels,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Knuddels GmbH & Co. KG",5
 recruitee,knuddelsgmbhcokg,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Knuddels GmbH & Co. KG",5
-recruitee,landing,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+recruitee,landing,coluna,nao,"quadros-novos-1009.csv",vazio,"",0
 recruitee,lucidgames,url,suspeito,"quadros-fora-censo-1209.csv;quadros-novos-wikidata-1509.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Lucid Games",1
 recruitee,matt,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Matt Sleeps",8
 recruitee,meta,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Addis Ababa University",1
@@ -437,12 +453,12 @@ recruitee,nimble,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.c
 recruitee,opus,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"OPUS",29
 recruitee,outbox,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Outbox",1
 recruitee,parallel,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Parallel",6
-recruitee,pebble,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
+recruitee,pebble,coluna,nao,"censo-artstation-ats-1709.csv",vazio,"",0
 recruitee,pineapple,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Pineapple Recruiting GmbH",20
-recruitee,playrix,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+recruitee,playrix,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",vazio,"",0
 recruitee,playtestcloud,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"PlaytestCloud GmbH",1
 recruitee,playtestcloudgmbh,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"PlaytestCloud GmbH",1
-recruitee,poppy,url,nao,"quadros-dominio-1609.csv",nao-aplica,,
+recruitee,poppy,url,nao,"quadros-dominio-1609.csv",vazio,"",0
 recruitee,primary,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Primary",1
 recruitee,realitygames,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Reality Games",31
 recruitee,redsky,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Red Sky",15
@@ -454,17 +470,17 @@ recruitee,rooster,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.
 recruitee,sandbox,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
 recruitee,sisu,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Silverein",128
 recruitee,softgames,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"SOFTGAMES",5
-recruitee,spiralyze,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
-recruitee,squeezestudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+recruitee,spiralyze,coluna,nao,"censo-artstation-ats-1709.csv",vazio,"",0
+recruitee,squeezestudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Squeeze Studio Animation",2
 recruitee,storm,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
-recruitee,tagging-server,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+recruitee,tagging-server,coluna,nao,"quadros-novos-1009.csv",vazio,"",0
 recruitee,talent,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Sysmex Iberia",1
 recruitee,tbwa,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"TBWA",5
 recruitee,tensquaregames,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Ten Square Games",11
 recruitee,tributary,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Tributary",1
 recruitee,true,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"TrueFullstaq",6
 recruitee,vertical,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Vertical",2
-recruitee,zackdfilms,coluna,nao,"censo-artstation-ats-1709.csv",nao-aplica,,
+recruitee,zackdfilms,coluna,nao,"censo-artstation-ats-1709.csv",casa-real,"Zack D Films LLC",1
 recruitee,zero,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"zero",20
 smartrecruiters,a44games,url,nao,"quadros-dominio-1609.csv",nao-aplica,,
 smartrecruiters,base,url,nao,"index.html",nao-aplica,,
@@ -499,90 +515,90 @@ smartrecruiters,sr-jobs,url,nao,"processados.csv",nao-aplica,,
 smartrecruiters,techlandsa,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-pdf-fontes.csv;index.html;personagem-quadros-1009.csv",nao-aplica,,
 smartrecruiters,ubisoft2,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-pdf-fontes.csv;index.html;personagem-quadros-1009.csv;processados.csv",nao-aplica,,
 teamtailor,10chambers,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"10 Chambers",0
-teamtailor,2020,url,nao,"quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,2020,url,nao,"quadros-novos-wikidata-1509.csv",casa-real,"20.20",0
 teamtailor,above,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Above Agency",4
-teamtailor,airshipinteractive,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,airshipinteractive,url,nao,"index.html;quadros-fora-censo-1209.csv",casa-real,"Airship",10
 teamtailor,anima,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Ánima",5
-teamtailor,ankama,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;quadros-dominio-1609.csv",nao-aplica,,
+teamtailor,ankama,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;quadros-dominio-1609.csv",casa-real,"Ankama",12
 teamtailor,antagonist,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Antagonist",1
 teamtailor,aonic,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Aonic",2
 teamtailor,avantis,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Avantis",13
 teamtailor,awaceb,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Awaceb",1
 teamtailor,axis,url,suspeito,"censo-artstation-ats-1709.csv;index.html;processados.csv;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"AXIS |",2
-teamtailor,axolotgamesab,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
-teamtailor,beffio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,bespokepixel,url,nao,"index.html;quadros-novos-1009.csv",nao-aplica,,
+teamtailor,axolotgamesab,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Axolot Games",2
+teamtailor,beffio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Beffio",21
+teamtailor,bespokepixel,url,nao,"index.html;quadros-novos-1009.csv",vazio,"",0
 teamtailor,beyondframesentertainment,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Beyond Frames",0
 teamtailor,bica,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Bica",13
 teamtailor,black,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Eventus",79
-teamtailor,blackkitestudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,bulkheadinteractive,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
+teamtailor,blackkitestudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Black Kite Studios",6
+teamtailor,bulkheadinteractive,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"BULKHEAD",6
 teamtailor,butter,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"All Gravy",15
 teamtailor,capsulestudio,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Capsule Studio",0
 teamtailor,captureage,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"CaptureAge",1
 teamtailor,chief,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Chief",9
 teamtailor,chopchop,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"ChopChop",71
-teamtailor,cigames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv;quadros-dominio-1609.csv",nao-aplica,,
-teamtailor,clickoutmedia,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;fila-remotegamejobs-estudios.csv",nao-aplica,,
-teamtailor,coffeestainstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
-teamtailor,creepyjar,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+teamtailor,cigames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv;quadros-dominio-1609.csv",casa-real,"CI Games",5
+teamtailor,clickoutmedia,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;fila-remotegamejobs-estudios.csv",homonimo,"ClickOut Media",2
+teamtailor,coffeestainstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Coffee Stain",1
+teamtailor,creepyjar,coluna,nao,"quadros-novos-1009.csv",casa-real,"Creepy Jar S.A.",2
 teamtailor,curio,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Curio Group",9
 teamtailor,dare,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Dare",4
 teamtailor,delve,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Delve Interim & Search",8
-teamtailor,demo-houseofhow,url,nao,"processados.csv",nao-aplica,,
+teamtailor,demo-houseofhow,url,nao,"processados.csv",vazio,"",0
 teamtailor,doktor,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Doktor.se",52
-teamtailor,ebbsoftware,url,nao,"index.html;quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,ebbsoftware,url,nao,"index.html;quadros-novos-wikidata-1509.csv",casa-real,"Ebb Software",0
 teamtailor,eclipse,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Eclipse Sverige AB",3
-teamtailor,egmont,url,nao,"quadros-dominio-1609.csv",nao-aplica,,
-teamtailor,embarkstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+teamtailor,egmont,url,nao,"quadros-dominio-1609.csv",homonimo,"Egmont",7
+teamtailor,embarkstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Embark Studios",20
 teamtailor,ember,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Ember Korowai Takitini",13
-teamtailor,envar,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,envarstudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,equilibrium,url,nao,"quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,envar,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,envarstudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Envar Studio",3
+teamtailor,equilibrium,url,nao,"quadros-novos-wikidata-1509.csv",vazio,"",0
 teamtailor,erepublik,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"eRepublik Labs",0
-teamtailor,facepunch,url,nao,"fila-gamedevmap-europa.csv;index.html;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,fatshark,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;pessoas.csv",nao-aplica,,
+teamtailor,facepunch,url,nao,"fila-gamedevmap-europa.csv;index.html;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,fatshark,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;pessoas.csv",casa-real,"Fatshark",3
 teamtailor,firefly,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Firefly",13
-teamtailor,foolstheory,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,forthstar,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+teamtailor,foolstheory,url,nao,"index.html;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,forthstar,coluna,nao,"quadros-novos-1009.csv",casa-real,"ForthStar",0
 teamtailor,fortis,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Fortis",4
 teamtailor,fully,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Fully",2
 teamtailor,funcom,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Funcom",6
-teamtailor,fundagames,url,nao,"processados.csv;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,fundaygames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+teamtailor,fundagames,url,nao,"processados.csv;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,fundaygames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Funday Games",2
 teamtailor,fuse,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"FUSE",34
-teamtailor,gameboost,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
-teamtailor,gamecan,url,nao,"index.html;processados.csv;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,gameboost,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Game Boost - Leveling Up Game Production Everywhere",9
+teamtailor,gamecan,url,nao,"index.html;processados.csv;quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,genius,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Genius",1
-teamtailor,ghostshipgames,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,gigglebug,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;processados.csv",nao-aplica,,
+teamtailor,ghostshipgames,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,gigglebug,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;processados.csv",casa-real,"Gigglebug",1
 teamtailor,goals,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"GOALS",0
-teamtailor,goodbyekansas,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,goodbyekansasstudios,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,goodbyekansas,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Goodbye Kansas",2
+teamtailor,goodbyekansasstudios,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,goodgamestudios,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Goodgame Studios",4
 teamtailor,grace,url,suspeito,"processados.csv;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Grace",3
 teamtailor,graft,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Graft",5
 teamtailor,groundcontrol,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Ground Control",22
 teamtailor,habitat,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"HEALTH CITY",100
-teamtailor,hampastudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",nao-aplica,,
+teamtailor,hampastudio,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",casa-real,"Hampa Studio",2
 teamtailor,here,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Here",1
 teamtailor,hero,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Hero",13
 teamtailor,homa,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"hôma",47
 teamtailor,house,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Iam",100
-teamtailor,houseofhow,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
-teamtailor,hypehype,url,nao,"index.html;quadros-novos-wikidata-1509.csv",nao-aplica,,
-teamtailor,ilpvfx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",nao-aplica,,
+teamtailor,houseofhow,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"House of How Games",6
+teamtailor,hypehype,url,nao,"index.html;quadros-novos-wikidata-1509.csv",casa-real,"HypeHype",1
+teamtailor,ilpvfx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",casa-real,"Important Looking Pirates",2
 teamtailor,impact,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"impact",0
-teamtailor,imperiaonline,url,nao,"index.html;quadros-dominio-1609.csv",nao-aplica,,
+teamtailor,imperiaonline,url,nao,"index.html;quadros-dominio-1609.csv",casa-real,"Imperia Online",0
 teamtailor,infinity,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Infinity",7
-teamtailor,invisiblewalls,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,ioi,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
-teamtailor,kavalrigames,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
-teamtailor,keengames,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,keplerinteractive,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,invisiblewalls,url,nao,"index.html;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,ioi,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"IOI",0
+teamtailor,kavalrigames,coluna,nao,"quadros-novos-1009.csv",vazio,"",0
+teamtailor,keengames,url,nao,"index.html;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,keplerinteractive,coluna,nao,"quadros-fora-censo-1209.csv",casa-real,"Kepler Interactive",6
 teamtailor,kindabrave,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Kinda Brave Entertainment Group",0
 teamtailor,kinetic,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Kinetic Software",2
-teamtailor,kixeye,url,nao,"index.html;quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,kixeye,url,nao,"index.html;quadros-novos-wikidata-1509.csv",casa-real,"KIXEYE",0
 teamtailor,lastarrowgames,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Last Arrow Games",1
 teamtailor,level,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"LEVEL",6
 teamtailor,life,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Life Sverige",3
@@ -590,84 +606,84 @@ teamtailor,lightheartentertainment,url,suspeito,"index.html;quadros-fora-censo-1
 teamtailor,lingokids,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Lingokids",1
 teamtailor,liquidswords,url,suspeito,"processados.csv;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Liquid Swords",1
 teamtailor,lunar,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Lunar",15
-teamtailor,madbox,url,nao,"index.html;quadros-fora-censo-1209.csv;quadros-novos-1009.csv",nao-aplica,,
+teamtailor,madbox,url,nao,"index.html;quadros-fora-censo-1209.csv;quadros-novos-1009.csv",casa-real,"Madbox",13
 teamtailor,made,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"MADE",100
-teamtailor,mag,url,nao,"index.html",nao-aplica,,
+teamtailor,mag,url,nao,"index.html",casa-real,"MAG Interactive",1
 teamtailor,mill,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Mill International",0
 teamtailor,mind,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Mind OSS",3
 teamtailor,mindark,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"MindArk",0
-teamtailor,minogames,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,minogames,url,nao,"index.html;quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,mobile,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Mobile 1",83
 teamtailor,monster,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Monster",4
 teamtailor,neat,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Neat",23
 teamtailor,neongiant,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Neon Giant",1
 teamtailor,newmoonproduction,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"New Moon Production",2
 teamtailor,next,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Novati",100
-teamtailor,nolimitcity,url,nao,"index.html;quadros-novos-wikidata-1509.csv",nao-aplica,,
-teamtailor,northkingdom,url,nao,"index.html;quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,nolimitcity,url,nao,"index.html;quadros-novos-wikidata-1509.csv",casa-real,"Nolimit City",0
+teamtailor,northkingdom,url,nao,"index.html;quadros-novos-wikidata-1509.csv",casa-real,"North Kingdom",1
 teamtailor,ofmstudios,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"OFM Studios",0
 teamtailor,once,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"ONCE",17
 teamtailor,opusmajor,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Opus Major",0
 teamtailor,osome,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"OSOME",12
-teamtailor,paradox,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,paradox-interactive,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
-teamtailor,paradoxinteractive,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,paradoxplaza,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,parallax,url,nao,"quadros-novos-wikidata-1509.csv",nao-aplica,,
-teamtailor,parkerschauffeurs,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",nao-aplica,,
-teamtailor,pfx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
+teamtailor,paradox,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,paradox-interactive,coluna,nao,"quadros-novos-1009.csv",casa-real,"Paradox Interactive",20
+teamtailor,paradoxinteractive,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,paradoxplaza,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,parallax,url,nao,"quadros-novos-wikidata-1509.csv",casa-real,"Parallax",0
+teamtailor,parkerschauffeurs,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",homonimo,"Parkers Chauffeurs",1
+teamtailor,pfx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"PFX",10
 teamtailor,pixiongames,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Pixion Games",3
-teamtailor,playagames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
-teamtailor,podimo,url,nao,"quadros-novos-wikidata-1509.csv",nao-aplica,,
+teamtailor,playagames,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"Playa Games",3
+teamtailor,podimo,url,nao,"quadros-novos-wikidata-1509.csv",homonimo,"Podimo",19
 teamtailor,power,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Power Danmark",54
-teamtailor,presto,url,nao,"quadros-dominio-1609.csv",nao-aplica,,
+teamtailor,presto,url,nao,"quadros-dominio-1609.csv",homonimo,"Presto",15
 teamtailor,princessbento,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Princess Bento",4
-teamtailor,radicalforge,url,nao,"processados.csv;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,radicalforge,url,nao,"processados.csv;quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,rawfury,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Raw Fury",3
-teamtailor,rawpowergames-1700833558,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
-teamtailor,realtime,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
-teamtailor,redroverinteractive,coluna,nao,"quadros-novos-1009.csv",nao-aplica,,
+teamtailor,rawpowergames-1700833558,coluna,nao,"quadros-novos-1009.csv",casa-real,"Raw Power Games",2
+teamtailor,realtime,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"REALTIME",1
+teamtailor,redroverinteractive,coluna,nao,"quadros-novos-1009.csv",casa-real,"Red Rover Interactive",0
 teamtailor,revolution,url,suspeito,"quadros-dominio-1609.csv;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"REV",83
 teamtailor,rhino,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Diamond",100
 teamtailor,salt,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"</salt>",2
-teamtailor,sandboxinteractive,url,nao,"fila-gamedevmap-europa.csv;index.html;processados.csv;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,sandboxinteractive,url,nao,"fila-gamedevmap-europa.csv;index.html;processados.csv;quadros-fora-censo-1209.csv",casa-real,"Sandbox Interactive",8
 teamtailor,seven,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Baar",100
 teamtailor,sharkmob,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Sharkmob",6
-teamtailor,sloclap,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,slug,url,nao,"index.html;processados.csv;quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,snowprint,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,sloclap,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Sloclap",1
+teamtailor,slug,url,nao,"index.html;processados.csv;quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,snowprint,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,snowprintstudios,url,suspeito,"index.html;processados.csv;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Snowprint Studios",3
 teamtailor,squeeze,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Squeeze",10
-teamtailor,starbreeze,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;quadros-dominio-1609.csv",nao-aplica,,
+teamtailor,starbreeze,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;quadros-dominio-1609.csv",casa-real,"Starbreeze",2
 teamtailor,stardust,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Stardust",7
 teamtailor,starship,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Starship Technologies",4
-teamtailor,starstable,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+teamtailor,starstable,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Star Stable Entertainment",1
 teamtailor,stillfrontgroup,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Stillfront",36
 teamtailor,stim,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Stim",1
-teamtailor,stunlocksstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
-teamtailor,stunlockstudios,url,nao,"index.html;quadros-fora-censo-1209.csv",nao-aplica,,
+teamtailor,stunlocksstudios,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Stunlock Studios",4
+teamtailor,stunlockstudios,url,nao,"index.html;quadros-fora-censo-1209.csv",vazio,"",0
 teamtailor,sunday,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"sunday",57
 teamtailor,sweet,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Smart",100
 teamtailor,sweetspot,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Sweetspot",0
 teamtailor,swiftgames,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Swift Games",1
-teamtailor,sybo,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",nao-aplica,,
-teamtailor,sybogames,coluna,nao,"quadros-fora-censo-1209.csv",nao-aplica,,
-teamtailor,tacticaladventures,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
+teamtailor,sybo,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;garimpo-cgstudiomap.csv;index.html;processados.csv",casa-real,"SYBO",3
+teamtailor,sybogames,coluna,nao,"quadros-fora-censo-1209.csv",vazio,"",0
+teamtailor,tacticaladventures,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"Tactical Adventures",2
 teamtailor,tapnation,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"TapNation",2
 teamtailor,territorystudio,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Territory Studio",0
 teamtailor,thegang,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"The Gang",0
 teamtailor,triband,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Triband",6
 teamtailor,tribes,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"TRIBES",12
-teamtailor,tt,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",nao-aplica,,
-teamtailor,twinharbour,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",nao-aplica,,
+teamtailor,tt,coluna,nao,"quadros-fora-censo-1209.csv;quadros-novos-1009.csv",vazio,"",0
+teamtailor,twinharbour,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html;processados.csv",casa-real,"Twin Harbour Interactive",12
 teamtailor,unfold,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Unfold",1
 teamtailor,united,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"United",1
 teamtailor,unleash,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",vazio,"",0
-teamtailor,untoldstdfg1324556,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",nao-aplica,,
-teamtailor,vinefx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",nao-aplica,,
+teamtailor,untoldstdfg1324556,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv",casa-real,"Untold Studios",18
+teamtailor,vinefx,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;index.html",casa-real,"Vine FX",2
 teamtailor,vividgamessa,url,suspeito,"index.html;quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",casa-real,"Vivid Games",1
 teamtailor,waypoint,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Waypoint Port Services",3
-teamtailor,wetaworkshop,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;processados.csv",nao-aplica,,
+teamtailor,wetaworkshop,url,nao,"censo-boards-0709.csv;censo-boards-0809.csv;processados.csv",casa-real,"Wētā Workshop",4
 teamtailor,yonder,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Yonder",6
 teamtailor,zero,url,sim,"quadros-fora-censo-1209.csv;quadros-tt-rec-1545-1009.csv",homonimo,"Eleven",51
 workable,580933,url,nao,"index.html",nao-aplica,,
