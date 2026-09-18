@@ -9293,3 +9293,114 @@ au sein du département"*), com o Vini **já respondendo no fio** para `klange@r
   em `info@ghostfx.ca`.
 
 ---
+
+## JOE, 18/09/2026 18h35 UTC — **A VEIA DA `/kontakt` NÓRDICA FOI VARRIDA ATÉ O FIM (49 domínios de estúdio em 22 caminhos, 1.078 requisições) E O ACHADO DE MÉTODO É UM NOVO ESQUEMA DE OFUSCAÇÃO: `data-enc-email` COM **ROT13** MAIS `[at]`, QUE ESCONDEU O CEO DA MAIOR CASA 3D DA FINLÂNDIA DE QUATRO RODADAS ANTERIORES**. SEIS PESSOAS: **CINCO COM ENDEREÇO PUBLICADO**, UMA `sem-email`
+
+**O que foi medido, com número.** Reli o diretório `https://nordicanimation.com/studios-producers/`
+(**200, 169.616 bytes**, os mesmos da rodada das 16h35): **72 domínios**, dos quais **49 são de casa de
+produção** depois de tirar instituto de cinema, fundo, imprensa (`dfi.dk`, `nfi.no`, `filminstitutet.se`,
+`icelandicfilmcentre.is`, `awn.com`, `kidscreen.com`, `tbivision.com`, `nordiskfilmogtvfond.com`,
+`imdb.com`, `youtu.be`, `areena.yle.fi`, `cookiedatabase.org` e afins). Varri **os 49 inteiros** em **22
+caminhos** (`/`, `/kontakt`, `/kontakt-oss`, `/kontakt-os`, `/om-oss`, `/om-os`, `/om`, `/oss`,
+`/ansatte`, `/medarbejdere`, `/yhteystiedot`, `/kontakta-oss`, `/team`, `/about`, `/contact`, `/people`,
+`/crew`, `/staff`, `/studio`, `/us`, `/tiimi`, `/meist`) — **145 respostas 200**, **748 pares
+domínio/endereço** extraídos com decodificação de entidade HTML, `data-cfemail`, `[at]`/`(at)` e
+`[dot]`/`(dot)`.
+
+**Rendimento bruto: 21 domínios com endereço de PESSOA.** Depois de tirar a duplicata
+`www.klippoglim.no`/`klippoglim.no` (8 endereços contados duas vezes) e **seis artefatos de concatenação
+na Qvisten** (o texto colado devolve `153christian.skramm@`, `807hedda.toftner@` e afins — o número do
+telefone encostou no endereço), sobram **73 endereços limpos**, mais **3 decodificados do rot13 da
+`anima.fi`**: **76 endereços de pessoa em 21 casas**. Isso é quatro vezes o que a amostra de 15 casas das
+16h35 tinha medido (19 endereços em 5 casas), e **fecha a veia**: não há 20 domínios por varrer, há 49
+varridos e o diretório está esgotado como fonte de endereço.
+
+### O ACHADO DE MÉTODO: `data-enc-email` COM ROT13, E ELE JÁ CUSTOU QUATRO RODADAS
+
+`anima.fi` (Anima Vitae, Helsinque) é **a maior casa de animação 3D da Finlândia** e o repositório a tinha
+duas vezes como casa sem endereço: o `processados.csv` de 05/09 escreveu *"sem NENHUM email publicado:
+Anima Vitae, Gigglebug e Pyjama Films (Finlândia) ... Marcados no backlog para não repetir a busca de
+contato; a via é o ATS"*, e a rodada de 15/09 repetiu o julgamento ao abrir a Gigglebug. **Estava errado, e
+o motivo é técnico, não de leitura:** a página de contato **não tem `mailto:` nenhum**. Os endereços moram
+em `href="javascript:;"` com o atributo `data-enc-email="naggv.unvxnyn[at]navzn.sv"`, que é **rot13 mais
+`[at]`**, duas camadas empilhadas. `grep mailto` devolve zero; `grep @` devolve zero; a régua de
+`[at]`/`(at)` das rodadas anteriores devolve `naggv.unvxnyn[at]navzn.sv` e joga fora porque `navzn.sv` não
+parece domínio.
+
+> **Regra nova, e ela vale para a campanha inteira: quando a página de equipe imprime nome e cargo mas
+> nenhum `@`, procure `data-enc-email`, `data-email`, `data-mail` e `javascript:;` no `href` ANTES de
+> escrever "casa não publica endereço". Decodifique nesta ordem: entidade HTML, `data-cfemail` (XOR com o
+> primeiro byte), **rot13**, `[at]`/`(dot)`.** O teste de um comando é
+> `python3 -c "import codecs,sys;print(codecs.encode(sys.argv[1],'rot13'))" '<valor>'`: se o TLD virar
+> `.fi`, `.no`, `.se` ou `.com`, era rot13.
+
+### A SEGUNDA ARMADILHA DA MESMA PÁGINA, E ESSA É PIOR PORQUE O ERRO SERIA MEU
+
+No bloco do **Timo Suomi** o texto visível escreve `timo.suomi` e emenda o link cujo rótulo visível é
+`@anima.fi` — lido de olho, o endereço é `timo.suomi@anima.fi`. **Mas o `data-enc-email` daquele mesmo
+link decodifica para `noora.kuronen@anima.fi`**, nome que não aparece em lugar nenhum da página. É âncora
+reaproveitada de uma pessoa que saiu, com o texto trocado em cima e o atributo esquecido embaixo.
+
+> **Regra: em página com endereço codificado, o texto visível e o atributo do link podem discordar, e o
+> atributo é o que o navegador manda. Quando discordam, NÃO registre nenhum dos dois como publicado
+> daquela pessoa** — foi por isso que esta rodada escolheu o **Antti Haikala**, cujo texto e cujo atributo
+> batem (`Antti Haikala | Producer, CEO` imediatamente antes de `naggv.unvxnyn[at]navzn.sv`), e deixou o
+> Timo Suomi fora.
+
+### A TERCEIRA ARMADILHA: `/studio` RESPONDEU **200** E NÃO É PÁGINA DE ESTÚDIO
+
+`anima.fi/studio` devolve **200 com 97.458 bytes** e redireciona para
+`https://anima.fi/works/studio-killers-ode-to-the-bouncer/`, uma página de PROJETO. Os caminhos de equipe
+de verdade (`/team`, `/people`, `/staff`, `/ansatte`, `/yhteystiedot`) dão **404 com 79.9 KB** (404 gordo,
+a mesma família de armadilha da Pyjama). **200 num caminho de equipe não é página de equipe:** confira o
+`url_effective` e o `<title>`. Neste caso o acidente rendeu, porque a página de projeto trouxe a melhor
+frase da rodada.
+
+### FICHA 1 — Antti Haikala, **Producer, CEO** da Anima Vitae (Helsinque, Finlândia) — **PUBLICADO, confiança ALTA**, e é a **PRIMEIRA PESSOA NOMEADA** de uma casa que a campanha já tentou DUAS VEZES por caixa genérica
+
+- **EMAIL: `antti.haikala@anima.fi` — PUBLICADO, confiança ALTA.** Não foi montado: saiu do atributo
+  `data-enc-email="naggv.unvxnyn[at]navzn.sv"` da própria casa, decodificado por rot13 mais `[at]`, no
+  link que fica **imediatamente depois** do bloco de texto *"**Antti Haikala** | Producer, CEO"*. O padrão
+  `nome.sobrenome@anima.fi` fica provado para a casa por este endereço e pelo `timo.suomi` do texto
+  visível, mas **nada nesta ficha depende de padrão**.
+- **URL exata aberta nesta rodada:** `https://anima.fi/contact` → final `https://anima.fi/contact/`
+  (**200, 104.541 bytes**). Também abertas `https://anima.fi/jobs/` (**200, 90.169**) e
+  `https://anima.fi/studio` → `https://anima.fi/works/studio-killers-ode-to-the-bouncer/` (**200,
+  97.458**).
+- **MX conferido nesta rodada** (DNS over HTTPS, porque esta máquina não tem `dig` nem `host`):
+  `ASPMX.L.GOOGLE.COM` com os quatro `ALT` (Google Workspace, vivo).
+- **O que a página publica, seis pessoas com cargo:** Helsinque — *Antti Haikala, Producer, CEO*; *Timo
+  Suomi, Producer*. Kuala Lumpur — *Yuki Pang, Producer, COO*; *Jani "Kurre" Kuronen, Executive Producer*;
+  *Elvis Chew, Studio Director*; *Christine Peh, Chief Financial Officer*.
+- **POR QUE ELE, e não outro da casa:** a casa tem **duas** pessoas em Helsinque e as outras quatro estão
+  em **Kuala Lumpur, que está FORA do escopo geográfico da campanha** (na Ásia só Coreia do Sul e
+  Singapura). Dos dois de Helsinque, o Timo Suomi caiu pela discordância entre texto e atributo descrita
+  acima, e o Antti é **Producer E CEO** de casa de porte médio — no `BRIEF-JOE` é quem decide em casa que
+  não publica ninguém de arte. **Ele é a primeira e, por ora, a única pessoa nomeada possível desta casa.**
+- **GANCHO, e são dois, os dois literais da casa:** a `/jobs` diz *"If you think you would be suitable for
+  joining our animation loving team to create stories and engaging characters, please polish your CV and
+  showreel and wait no further – contact us!"* e ainda *"We are interested to hear your story. What's your
+  experience and passion with 3D animation and what are your future plans?"*; a página de projeto diz
+  *"Anima was a co-producer in this project and was responsible for **modelling and animating the Chubby
+  Cherry character**"*. **A segunda frase é a mais valiosa da rodada inteira**, porque é a casa escrevendo
+  que modelagem de personagem é trabalho feito lá dentro.
+- **FORA DOS EUA:** sim, Finlândia, nórdico e UE. **A frase de realocação entra inteira.**
+- **DEDUPE NA CAIXA, E ELE NÃO VOLTOU VAZIO:** `search_threads` por
+  `anima.fi OR "Anima Vitae" OR Haikala OR "Timo Suomi" in:anywhere` devolveu **um fio com duas
+  mensagens**: carta fria para `info@anima.fi` em **26/08 18h37** e follow-up na mesma thread em **02/09
+  14h53**, as duas com o assunto exato, **sem resposta e sem recusa**. O `enviados.csv` linha 103 confirma
+  a carta e a linha 705 registra uma **terceira** aproximação: *"Open Application Helsinque - Contact Form
+  7 sem captcha - ENVIADA e confirmada na tela"* em **07/09**. `antti.haikala` e `Haikala` dão **zero** em
+  `pessoas.csv`, `enviados.csv`, `alvos.csv`, `processados.csv`, `docs/index.html` e neste arquivo.
+  **A casa NUNCA recusou e NUNCA recebeu carta endereçada a uma pessoa.**
+- **RESSALVAS HONESTAS:** (a) **é a TERCEIRA aproximação da mesma casa** (carta 26/08, follow-up 02/09,
+  formulário 07/09) — a carta **não pode fingir primeiro contato**, igual ao tratamento do Tim Remmers em
+  12/09 e do Claus na Nørlum hoje às 16h35; (b) **o cargo é de produção, não de arte** — a casa não publica
+  ninguém de arte em lugar nenhum do site, e quem contrata artista no dia a dia provavelmente é um
+  supervisor sem nome publicado; (c) **as vagas abertas hoje são TODAS de Kuala Lumpur** (Junior Lighting
+  and Compositing, Senior/FX/Junior FX Artist, Pipeline TD, Junior Pipeline TD, Junior 3D Generalist) e a
+  única porta de Helsinque é a *Open Application* que a campanha já usou em 07/09 — ou seja, **não há
+  assento de personagem anunciado em Helsinque**; (d) o site avisa *"Working on-site is usually a
+  requirement"*, o que é bom para quem quer realocar e péssimo para quem precisa de patrocínio, e a casa
+  **não diz nada sobre visto**; (e) o portfólio de personagem 3D da casa que eu vi é de **2011** (Studio
+  Killers), embora a filmografia recente (os filmes do Niko) seja CG de longa.
