@@ -2875,7 +2875,19 @@ procurando um formulário que a página promete e não tem.
 
 ---
 
-## 50. Playdead — ZBrush Modeler — Copenhague, Dinamarca — É AMBIENTE, VAI POR ÚLTIMO
+## 50. Playdead — ZBrush Modeler — Copenhague, Dinamarca — **ENVIADA PELA AUTOMAÇÃO EM 18/09 ÀS 20h38 UTC, SAIU DA SUA FILA**
+
+> **FECHADO, não clique.** A candidatura saiu na rodada das 20h15 de 18/09 com três provas: **POST 204** em
+> `app.breezy.hr/api/apply/3be060a4fcf301`, URL final em `/apply/submitted` com o texto literal *"Application
+> Submitted. Your application has been submitted successfully. Good luck!"*, e recibo no Gmail às 20h38m58 de
+> `candidate-5023de215a1b01@playdead.breezy-mail.com`. Ela entrou porque a rodada leu **11.015 vagas** (janela de
+> 4 h por API, casas grandes, cinco famílias novas e os alertas da caixa) e **não existe vaga de personagem nova**
+> — é a regra de 10/09 aplicada ao pé da letra: ambiente por último, e só quando não houver personagem.
+> **DUAS CORREÇÕES NO TEXTO ABAIXO:** (1) o comando de disparo aponta para `apply_breezy.js`, que **não existe**
+> em `/home/user/apply` — o que funcionou foi o `apply_own.js`, que já existia, com três capacidades novas
+> (`arquivos`, `marcar`, `proximo`) e o arquivo `ans_playdead.json`; (2) a data de publicação **mudou** de
+> 2026-09-10 para **2026-09-14** no MESMO id, porque o Breezy move o `published_date` no republish.
+
 
 > **Leia esta linha antes de tudo:** a caça das 15h45 de 10/09 leu **359 quadros e 9.345 vagas** e
 > **não achou UMA vaga de personagem nova no mundo**. **Só sobrou ambiente**, e é esta. Ela está
