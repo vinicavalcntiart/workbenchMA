@@ -9560,3 +9560,48 @@ frase da rodada.
   lido numa **lista de prêmios**, não numa página de equipe, e a Gimpville **não publica página de equipe**
   — não há como confirmar pelo site que ele continua na casa hoje, só que estava em 2024; (e) a casa já
   ignorou carta e follow-up.
+
+### FICHA 6 — Kajsa Næss, **Director and partner** da Mikrofilm (Oslo, Noruega) — **PUBLICADO, confiança ALTA**, e **LEIA A RESSALVA DE TÉCNICA ANTES DE ESCREVER: a casa é de traço, e o maestro pode matar esta ficha em cinco segundos**
+
+- **EMAIL: `kajsa@mikrofilm.no` — PUBLICADO, confiança ALTA.** Texto puro na seção *WHO WE ARE*, logo
+  abaixo do nome e do cargo, sem ofuscação. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://mikrofilm.no/people` (**200, 50.058 bytes**); também aberta
+  `https://mikrofilm.no/about` (**200, 53.234 bytes**). `/kontakt`, `/ansatte`, `/team` e
+  `/yhteystiedot` dão **404 com 1.008 bytes** (404 magro): os caminhos que abrem são os ingleses `/people`,
+  `/about` e `/contact`.
+- **MX conferido nesta rodada** (DoH): `mx1/mx2/mx3.pub.mailpod1-osl1.one.com` (one.com, vivo).
+- **O que a página publica, e é o padrão que faz a veia valer:** **dez** pessoas com cargo, e **quatro com
+  endereço individual** — *Lise Fearnley, Producer and partner* (`lise@`); *Tonje Skar Reiersen, Producer
+  and partner* (`tonje@`); *Kajsa Næss, Director and partner* (`kajsa@`); *Cathinka Tanberg, Director and
+  partner* (`cathinka@`). As outras seis (*Kristian Pedersen*, *Torill Kove*, *Robin Jensen*, *Hanne
+  Berkaak*, *Annette Saugestad Helland*, todas *Director and designer*) vêm **sem endereço**. Telefones
+  existem na fonte e **não são registrados aqui**.
+- **POR QUE ELA, e não outra das quatro:** o `BRIEF-JOE` põe **direção antes de produção** em casa
+  pequena, o que corta a Lise e a Tonje (as duas *Producer and partner*). Sobram duas diretoras-sócias, e
+  entre elas a Kajsa é a que a casa credita no **longa** da filmografia (*Titina*, na lista da própria
+  página, ao lado de *The Ape Star* e *Maybe Elephants*), enquanto a Cathinka aparece ligada a curta e
+  encomenda. **Cathinka Tanberg fica guardada como SEGUNDA e última pessoa possível desta casa.**
+- **GANCHO, literal da casa:** *"Mikrofilm is a multi award-winning production and animation company
+  located in Oslo Norway. We are passionate about animation. That may be why our productions have won
+  international acclaim several times, the most profiled probably the **Oscar for the Academy-Award winning
+  film The Danish Poet (2007)**"*, e ainda *"We are proud to be working with some of the best people in the
+  industry, and use our experience and passion to constantly push the limits and create new, animated
+  experiences for the viewing public"*.
+- **FORA DOS EUA:** sim, Noruega. **A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `mikrofilm OR Fearnley OR Tanberg OR "Kajsa" in:anywhere`
+  devolveu **`{}`**. `mikrofilm` dá **zero** em `enviados.csv`, `pessoas.csv` e `alvos.csv`; as 6
+  ocorrências neste arquivo são todas de **lista de domínio varrido sem pessoa** (a linha 8865 da rodada
+  das 08h55 é a última). **CASA NOVA para a campanha, e é a única casa nova desta rodada com endereço de
+  pessoa publicado.**
+- **RESSALVA PRINCIPAL, E ELA É DE TÉCNICA:** **a casa é de animação de AUTOR e de TRAÇO, sem nenhuma
+  declaração de 3D.** O Oscar de *The Danish Poet* é desenho, *Titina* é 2D, o catálogo publicado na
+  `/people` é curta e média-metragem de festival, e cinco das dez pessoas são *Director and designer*, o
+  que é a assinatura de casa autoral: cada filme nasce do traço de um diretor. **Não existe cadeira de
+  personagem 3D publicada em lugar nenhum do site.** Se o maestro segurar por isso, está certo, e a ficha
+  passa a valer como nome guardado.
+- **OUTRAS RESSALVAS:** (a) é **produtora de curta de festival**, financiada por fundo nórdico, e esse
+  modelo quase nunca abre assento sênior fixo; (b) o rodapé da página diz **© 2022**, ou seja a página
+  pode estar velha — os endereços das quatro sócias, porém, batem com o padrão do domínio e o MX está vivo;
+  (c) o cargo dela é **direção**, o que é ótimo para decisão criativa e ruim para contratação
+  administrativa, e a casa não publica nenhum canal de vaga; (d) a filmografia é norueguesa e o site não
+  diz nada sobre visto nem sobre trabalho remoto.
