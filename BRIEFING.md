@@ -5292,3 +5292,146 @@ SmartRecruiters 32 e Workable 28 **todos com origem independente**; Recruitee 18
 **65 adivinhados**, 1 suspeito; Teamtailor 77 independentes, **66 adivinhados**, 29 suspeitos.
 **131 dos 640 tokens da campanha são slug inventado que nunca foi conferido contra o nome da casa**
 — e os dois campos que resolvem isso saem na mesma resposta que a varredura já pede.
+
+## Jhon A, 18/09 10h34 UTC (décimo oitavo turno) — A IDENTIDADE DOS 131 SLUGS INVENTADOS: **103 SÃO DE OUTRA EMPRESA E CARREGAVAM 2.070 VAGAS QUE NUNCA FORAM DA CAMPANHA**; E SUBSTITUIR O RECRUITEE POR CASAS DE VERDADE CUSTOU **12.264 SONDAGENS POR UMA PORTA**
+
+Turno de `curl` e API, **zero navegador** (nenhum processo criado), **zero envio**, zero rascunho.
+Três veias pedidas, as três fechadas com número medido, e **uma porta limpa e inédita no fim**.
+
+**Números do turno: 161 tokens conferidos por identidade, 47 casa real / 103 homônimo / 11 vazio;
+47 quadros reais lidos por inteiro (166 vagas); 12.264 sondagens de slug de Recruitee derivado de
+nome de casa real, 3 respostas 200 e **1 porta**; 47 requisições da Blizzard relidas, zero assento
+novo da disciplina. UMA porta nova no painel, ZERO candidatura gasta.**
+
+### 1. A DÍVIDA DE 08h36 FOI PAGA E O ESTRAGO É MAIOR QUE A AMOSTRA DE OITO LINHAS: **91% DAS VAGAS SOB OS TOKENS ADIVINHADOS SÃO DE OUTRA EMPRESA**
+
+Os 131 adivinhados mais os 30 suspeitos foram lidos um por um, com a identidade tirada **de graça
+no mesmo corpo que a varredura já pede**: `title` do JSON Feed no Teamtailor, `company_name` da
+oferta no Recruitee. O resultado está numa **coluna nova `identidade`** (mais `nome_real` e
+`vagas_1809`) do próprio `automacao/tokens-ats-1809.csv`, sem apagar nada.
+
+| família | classe | tokens | vagas sob eles |
+|---|---|---|---|
+| Teamtailor | casa real | 33 | 90 |
+| Teamtailor | **homônimo** | **61** | **1.609** |
+| Teamtailor | vazio (404) | 1 | 0 |
+| Recruitee | casa real | 14 | 102 |
+| Recruitee | **homônimo** | **42** | **461** |
+| Recruitee | vazio (sem oferta) | 10 | 0 |
+
+**As 47 casas reais somam 192 vagas; os 103 homônimos somam 2.070.** Ou seja **91,5% do volume
+que esses tokens traziam para a contabilidade da campanha é de empresa de outro ramo** — e o peso
+está nos quadros grandes, como já tinha acontecido na caixa alta do SmartRecruiters:
+`house`=**Iam** (100), `next`=**Novati** (100), `made`=**MADE** (100), `rhino`=**Diamond** (100),
+`seven`=**Baar** (100), `sweet`=**Smart** (100), `habitat`=**HEALTH CITY** (100),
+`mobile`=**Mobile 1** (83), `revolution`=**REV** (83), `black`=**Eventus** (79),
+`chopchop`=rede de restaurante (71), `sunday`=POS de restaurante (57), `power`=**Power Danmark**
+(54), `zero`=**Eleven** (51), `sisu`=**Silverein** (128), `adam`=**More Driver Solutions** (74).
+**Só esses dezesseis somam 1.336 vagas.**
+
+**Mecanismo novo, e é mais barato que o `company_name`: o Recruitee REDIRECIONA o slug falso para
+o slug verdadeiro.** `https://sisu.recruitee.com/api/offers/` devolve `302` para
+`https://silverein.recruitee.com/api/offers/`, e `cipsoftgmbh` cai em `cipsoft`. **A URL final do
+`curl -L` já denuncia o locatário real sem abrir o JSON** — o que também quer dizer que dois slugs
+diferentes da fila podem ser **o mesmo quadro**, exatamente o erro de contagem dobrada do §1 de
+08h30, agora por outra porta.
+
+**E há o inverso da armadilha: três slugs mentirosos escondiam casa de verdade.**
+`recruitee/classy` = **Huuuge Games**, `recruitee/focusentertainment` = **Pullup Entertainment**
+(a Focus foi renomeada e o slug ficou), e o contrário em `teamtailor/axis`, que **não** é a Axis
+Studios de animação: é um quadro com vagas da Crayon Consulting.
+
+**Assimetria entre as duas famílias, e ela explica os 11 vazios:** no Teamtailor o `title` sai
+**mesmo com o feed vazio** (10 Chambers, Beyond Frames, GOALS, Kinda Brave, MindArk, Territory
+Studio, The Gang e Capsule Studio são casa real com zero vaga); no Recruitee, **sem oferta não há
+`company_name`**, então identidade nenhuma. Os 11 vazios são 10 do Recruitee mais o único 404
+(`teamtailor/unleash`). **Quadro vazio de Teamtailor tem identidade; quadro vazio de Recruitee
+não tem, e nunca terá por esta rota.**
+
+### 2. OS 47 QUADROS REAIS LIDOS POR INTEIRO: OITO CASAMENTOS DE TÍTULO E **NENHUM VIRA PORTA** — A VEIA RENDE HIGIENE, NÃO VAGA
+
+166 vagas lidas. A régua de título (personagem, criatura, modeling, texture, look dev, 3D artist,
+groom, surfacing, sculpt, hair, cloth, animator, concept) casou oito vezes, e **cada uma morre por
+um motivo escrito**: Snowprint *Senior 3D Character Artist* `8341580` **já enviada em 16/09**;
+Sharkmob *Senior Character Concept Artist* `8378495` **já triada em 17/09 como concept 2D, fora do
+perfil**; Reality Games *3D Generalist* **já está no painel com parede de hCaptcha**, e a régua de
+hoje ainda acha *"in-office position based in the iconic railway station building in Krakow"*;
+Reality Games *Unity Animator* é animação de engine; Funcom *Concept Art Intern* morre no termo
+`internship` da própria régua; Awaceb *Animateur technique* está publicada desde **2023-12-18** e é
+rigging, o mesmo motivo que matou a Beffio. Sobram dois **inéditos nos quatro arquivos** que eu
+**não** promovi porque são animação e não personagem/modelagem/textura/look dev, e ficam nomeados
+para quem quiser mudar a régua: **Last Arrow Games *Senior / Lead Animator* `8196998`** e
+**Princess Bento *2D Rigged Animators* `8327877`**.
+
+> **A conclusão que importa para o planejamento: conferir a identidade dos slugs inventados NÃO
+> achou casa nova. As 47 casas reais escondidas atrás de slug adivinhado já eram TODAS conhecidas
+> da campanha por outro caminho.** O ganho da veia é de **contabilidade** — parar de contar 2.070
+> vagas alheias — e não de estoque.
+
+### 3. SUBSTITUIR OS 65 SLUGS ADIVINHADOS POR CASAS DE VERDADE: **12.264 SONDAGENS, 3 QUADROS, 1 PORTA**
+
+Candidatos montados **só a partir de nome de casa real**, nunca de palavra solta, nas duas rodadas:
+
+| rodada | fonte dos nomes | slugs sondados | respostas 200 |
+|---|---|---|---|
+| A | `censo-artstation-1709.csv` (3.363 páginas de empresa) + `censo-guilde-quebec-1709.csv` (145) | **5.588** | 3 |
+| B | `fila-gamedevmap-*.csv` + `fila-oceania.csv` (4.068 nomes de estúdio) | **6.676** | **0** |
+| **total** | | **12.264** | **3** |
+
+Das três respostas, `cipsoftgmbh` **redireciona** para `cipsoft` (já versionado), `testinc` é a
+conta de teste da própria Recruitee, e **`zackdfilms` é a única que virou porta**. **Controle
+rodado depois do zero da rodada B, no mesmo código e no mesmo processo: `framestore` 200 com 52
+vagas, `zackdfilms` 200, `cipsoft` 200, `naoexiste-zzz-123` não-200.** O zero é do mundo, não da
+rede.
+
+| veia | requisições | portas | custo por porta |
+|---|---|---|---|
+| adivinhar domínio do slug da ArtStation (18/09 02h39) | 15.352 | 3 | 5.117 |
+| **slug de Recruitee a partir de nome de casa real (hoje)** | **12.264** | **1** | **12.264** |
+| extensão por 7 ccTLD (18/09 02h52) | 22.575 | 0 | — |
+
+> **A leitura honesta: a pegada do Recruitee na disciplina já estava esgotada.** Os 65 slugs
+> adivinhados de 10/09 **não escondiam 65 casas** que a campanha não tivesse — eles inflavam a
+> contagem. Trocar falso amigo por casa real devolve **um** quadro, não sessenta e cinco. **Esta
+> lane está fechada por medição, e repeti-la é gastar 12 mil requisições por nada.**
+
+### 4. A PORTA: **ZACK D FILMS, *3D GENERALIST*, REMOTA E POR CONTRATO, COM `lookdev` E `character animation` NO REQUISITO** — E A PAREDE É DE hCAPTCHA
+
+`https://zackdfilms.recruitee.com/o/3d-generalist`, id **2090896**, publicada em **2026-07-20**,
+`remote:true`, `employment_type_code:contract`, pagamento *flat rate per project*.
+**Régua na URL final: 5.240 caracteres de texto limpo e UM único acerto, que é falso positivo de
+idioma** — o termo `proficiency in` existe para pegar exigência de língua e aqui casou com
+*"Proficiency in character animation, camera work, **lookdev**, shader effects, and simulations"*,
+que é exigência de **software**. **Zero termo de residência, visto, realocação ou presença.** O
+`country: United States` é **do cadastro da casa**, não do assento: o anúncio não pede morar lá em
+lugar nenhum. **Dedupe completo e limpo**: `dedupe-agora.sh "2090896" "Zack D Films"` = ID inédito
+nos quatro arquivos e casa sem histórico; `search_threads` por `"Zack D Films" OR zackdfilms OR
+"3D Generalist"` devolve seis fios e **nenhum desta casa** (os de *3D Generalist* são UPP e Bond
+Street Film, de 07 e 08/09). **Porteiro medido no próprio formulário e não suposto**: `/c/new`
+responde 200 com 206.695 bytes e traz `hcaptcha":true` e `captcha-base.recruiteecdn.com`, a **mesma
+assinatura** que fechou Framestore (16/09) e Reality Games (17/09). **Então é fila da mão do Vini,
+não de script: não rode `apply_recruitee5.js` contra ela esperando passar.**
+
+### 5. BLIZZARD: O RÓTULO `Posted Yesterday` **NÃO AVANÇOU DE ONTEM PARA HOJE**, E A "ONDA DE 14 REQUISIÇÕES NOVAS" É EM BOA PARTE RENOMEAÇÃO DE REQUISIÇÃO VELHA
+
+47 requisições únicas por `externalPath`. As catorze de StarCraft continuam marcadas
+**`Posted Yesterday` hoje, 18/09**, depois de terem sido lidas com o mesmo rótulo **ontem às
+08h30** — ou seja **`postedOn` relativo não data requisição nessa faixa e não serve de janela**.
+A prova dura está no **número da requisição** e no **caminho**: dentro da onda "de ontem" estão
+**`R027773`** (Lead Environment Artist) e **`R028002`** (Senior II VFX Artist), **menores** que os
+de requisições marcadas *Posted 6 Days Ago* (`R028112`, `R028136`), e o `externalPath` dos dois
+ainda diz **`Unannounced-Game`** enquanto o título já diz **STARCRAFT**. É **anúncio de projeto**,
+não abertura nova.
+
+**Disciplina: zero requisição nova de personagem, modeling, surfacing ou groom.** As duas de
+personagem do quadro são as já tratadas — `R028136` *Character Artist StarCraft* **enviada 12/09**
+e `R027817` *Lead Character Artist Overwatch* **recusada 12/09**, esta marcada *Posted 17 Days
+Ago*. Irvine/CA segue EUA sem visto. **Para datar requisição do Workday, use o NÚMERO da
+requisição e o `externalPath`, porque o rótulo relativo mente.**
+
+**NÃO CONFERIDOS deste turno, nomeados:** os 479 tokens de origem independente **não** passaram
+por conferência de identidade (ficaram `nao-aplica` na coluna nova) — se algum deles também for
+slug de outra empresa, este turno não mediu; a régua de título dos 47 quadros reais leu **título**,
+não corpo, então vaga de personagem escondida num título genérico passaria batida; e a rodada B do
+Recruitee não testou variação com sufixo (`-studios`, `-games`), só nome como está e nome sem
+separador.
