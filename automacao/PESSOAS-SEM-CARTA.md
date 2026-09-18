@@ -7451,3 +7451,419 @@ vazou é justamente a marca de não reenviar, que é a que não pode se perder. 
 linha é de outra rodada e mexer nela sem ordem apagaria registro de outro agente.**
 
 > **Maestro, 18/09 01h15 UTC:** duas cartas escritas para caixa funcional endereçadas pelo nome, pelo precedente da Erupting Avocado, porque as duas melhores fichas da rodada não têm endereço de pessoa: Simon Lee / Spin VFX `r-1494491703314598138` (careers@spinvfx.com; gancho no cabeçalho "Creature and Character" da casa; cita o formulário de 07/09) e Christine Huot / Mainframe Studios `r6514023738843672030` (info@mainframe.ca; gancho na frase da leadership page; cita a candidatura BambooHR de julho; Vancouver no topo). `confere-carta.py` limpo, pior par 24%. **Seguradas sem carta**, com o motivo que o próprio Joe mediu: Slap Happy (2D de ponta a ponta, e seria a última carta da casa), Curiobot (AR corporativo, sem personagem), Ninja Robot Dinosaur (dev solo). Guru e Atmosphere ficam `sem-email` guardando nome. Linha 353 (Ludia) consertada: a vírgula da nota do bounce tinha vazado para uma 11ª coluna; agora está dentro do campo `situacao`.
+
+## JOE, 18/09/2026 05h15 UTC — **ONTÁRIO ABRIU COM DUAS PESSOAS E MUNIQUE COM UMA; A ESPANHA QUASE VIROU UMA RODADA INTEIRA DE REPETIÇÃO, E O QUE SALVOU FOI O DEDUPE POR ARQUIVO DEPOIS DA VARREDURA**
+
+**O erro que eu cometi nesta rodada e que precisa ficar escrito, porque quase custou a rodada toda.**
+Segui o método do diff das 00h55 corretamente para o Canadá (2.494 domínios tocados montados de
+`enviados.csv` + `alvos.csv` + `pessoas.csv` + `processados.csv` + este arquivo + `docs/index.html`,
+subtraídos das listas canadenses do repositório). **Mas na Espanha eu acrescentei seis domínios À MÃO
+ao lote de varredura** (`elranchito.es`, `usert38.com`, `twinpines.es`, `morganastudios.com`,
+`b-waterstudios.com`, `thefrankbartoncompany.com`), porque tinham aparecido no
+`garimpo-cgstudiomap.csv` e me pareceram boas casas. **Cinco das seis já estavam tocadas**, e o diff
+tinha excluído exatamente essas cinco. O resultado da varredura parecia ouro e era eco:
+
+| Casa que eu "achei" | O que o arquivo já dizia | Estado real |
+|---|---|---|
+| **USER T38** (Madri) — `patricia.cano@`, `nuria.mateos@`, `silvia.lopez@` | `pessoas.csv` linha 96 (Patricia Cano, 06/09) e linha 145 (Nuria Mateos, 08/09) | **TETO FECHADO, 2 de 2** |
+| **The Frank Barton Company** (Madri) — `rudy@` | `pessoas.csv` linha 198 (Rudy Taguri, 08/09) + `enviados.csv` 09/09 e `jobs@` em 04/08 | **TETO FECHADO, 2 de 2** |
+| **B-Water Animation Studios** (Tenerife/Colônia) — `ag@`, `cb@`, `dh@`, `fabian.s@` | `enviados.csv` linha 43: `ag@b-waterstudios.com`, 26/08, **"recusado (resposta calorosa da Operations; sem vaga de Character Artist agora)"** | **RECUSA ESCRITA + pessoa já respondeu. FORA por duas regras** |
+| **El Ranchito VFX** (Madri) | domínio já no conjunto de tocados | só caixa funcional, ver tabela de descartes |
+| **Morgana Studios** (Madri) — `hernan@` | `enviados.csv` 02/09 `info@` + follow-up 07/09, **sem resposta** | **1 de 2, aberta** → virou a ficha 4 |
+
+**A regra que sai daí, e ela é uma emenda ao método das 00h55:** o diff só protege o que passou por
+ele. **Domínio acrescentado à mão depois do diff tem que voltar ao diff**, senão a varredura fica
+excelente e a rodada fica vazia. E o `touched.txt` construído por regex de domínio **não pega casa
+tocada por NOME sem domínio** — a segunda peneira por nome de pessoa e de casa nos cinco arquivos
+é obrigatória, e foi ela que pegou a Patricia Cano e o Rudy Taguri **depois** de eu já ter escrito os
+dois como achado novo no meu rascunho de relatório.
+
+### O QUE A RODADA VARREU, EM NÚMERO
+
+- **Canadá, continuação das 00h55:** 127 domínios novos do `fila-gamedevmap-canada.csv` (Ontário
+  inteiro — Toronto, Ottawa, Hamilton, London, Kitchener, Waterloo, St. Catherines — mais **todo o
+  resto de BC**: Victoria, Kelowna, Burnaby, Richmond, Surrey, Nanaimo, Qualicum) **+ 19 domínios
+  novos do `garimpo-cgstudiomap.csv`** que a rodada anterior não tocou. **146 domínios**, 13 caminhos
+  cada em dois esquemas. **Montréal não foi aberta, por ordem do turno.**
+- **Espanha:** a lista real de membros da DIBOOS, aberta em `https://diboos.com/asociados/`
+  (**200, 131.191 bytes**) — **46 casas nomeadas** — mais as 26 linhas de Espanha e Alemanha do
+  `garimpo-cgstudiomap.csv` e 312 domínios de Madri, Barcelona, Valência, Bilbau, Berlim, Munique,
+  Hamburgo, Stuttgart, Ludwigsburg e Colônia das quatro `fila-gamedevmap-europa*.csv`.
+- **Alemanha:** a lista real de membros da AG Animationsfilm, aberta em
+  `https://www.ag-animationsfilm.de/netzwerk/mitglieder/` (**200, 207.472 bytes**).
+
+### DUAS LISTAS DE ASSOCIAÇÃO ABERTAS, E O QUE CADA UMA ENTREGA DE VERDADE
+
+**1. DIBOOS (`diboos.com/asociados/`, 200, 131.191 bytes) — entrega NOME DE CASA e NENHUM domínio.**
+A página imprime os 46 associados **como texto puro, sem link nenhum para o site de cada um**: os
+únicos `href` externos do documento inteiro são `aepa-animation.com` (a associação irmã),
+`assisoft.com` (a agência que fez o site) e `cookiedatabase.org`. Quem for repetir isto precisa
+resolver nome→domínio por fora, e **resolver é caro**: cada casa vira uma busca. Os 46 nomes, para
+não precisar reabrir: 3 Doubles, 4 Cats Pictures, Abano Producións, Ánima Kitchent, Asymmetric
+Studios, Bamf Producciones, BIG BANG BOX, Binalogue, Bliss, Cornelius Films, DeAPlaneta Kids &
+Family, Dibulitoon Studio, El Ranchito, Filmax, Final Frontier Animation & Film Co., Glow Animation,
+Hampa Studio, ikiru Films, Illusorium Studios, Imagic, Insomne Animation Studio, Jaibo Films, KOTOC,
+LightBox Animation Studios, Mago Production, Mansalva Films, Mondo TV, Morgana Studios, Most Wanted
+Studio, Motion Pictures, Mr Miyagi, Nuts media, Paramotion Films, Peekaboo Animation, Pikkukala,
+Rokyn Animation, Studio Kimichi, Sultana Films, Tandem Films, Teidees, The SPA Studios, TomaVision,
+Toot Toot Kids, Uniko, Wise Blue Studios, WKND. **Cruzados com os cinco arquivos da campanha: 21
+deles já foram tocados** (Peekaboo, Pikkukala, Dibulitoon, KOTOC, Mago Production, TomaVision, Final
+Frontier, Motion Pictures, Hampa, Illusorium, LightBox, Ánima Kitchent, 3 Doubles, Wise Blue, The SPA
+Studios, El Ranchito, Morgana e mais), **e 25 nunca**. Essa lista de 25 é fila de verdade para a
+próxima rodada, e o custo dela é uma resolução de domínio por casa.
+
+**2. AG Animationsfilm (`/netzwerk/mitglieder/`, 200, 207.472 bytes) — entrega 140 domínios e a
+esmagadora maioria é PESSOA FÍSICA, não estúdio.** É uma associação de **autoria**: dos 140 domínios
+extraídos dos `href`, a maioria é portfólio pessoal de diretor e animador independente
+(`agathe-michalski.com`, `jonatan-schwenk.com`, `merlinfluegel.de`, `anneisensee.com`, e mais de
+cem assim), inclusive **seis em `myportfolio.com`, `wordpress.com` e `tumblr.com`**. **Isso é o
+inverso do que a campanha precisa:** são pessoas com nome e email publicados que **não contratam
+ninguém e não patrocinam visto**. Os únicos endereços de casa na lista são Studio Film Bilder
+(`filmbilder.de`), TrickStudio (`trickstudio.de`), Woodblock (`woodblock.tv`), MovieBrats
+(`moviebratspictures.com`), Telescope (`telescopeanimation.com`), House of Creatures
+(`house-of-creatures.de`), Protoplanet (`protoplanet-studio.de`), Traumhaus
+(`traumhaus-studios.de`), Studio Kamp (`studiokamp.com`), Monströös (`monstroos.com`), Daywalker
+(`daywalker-studios.de`) e Mistral (`mistralfilmstudio.com`) — **doze em cento e quarenta**, e nove
+delas já estavam tocadas ou caíram por disciplina (ver tabela de descartes). **Leitura honesta: a AG
+Animationsfilm é a associação errada para esta campanha.** Quem quiser Alemanha de porte precisa da
+lista de VFX e de serviço (RISE, Trixter, Scanline, LUXX, Pixomondo), não da de autoria.
+
+### FICHA 1 — Ken Hall, **Founder, CEO & Creative Director** da 2Dogs Games (Toronto, Ontário, Canadá) — **PUBLICADO, confiança ALTA, e é a melhor da rodada por pareamento de cargo**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **quatro nomes no core team e nenhum outro de
+  arte**: Charles Wright (*"privacy and data management expert"*), Dave Ramnarine (*"Co-Founder, Game
+  Mechanics Lead"*, tabletop e RPG) e M. D. Cooper (*"Writer"*, ficção científica). O Ken Hall é
+  **o único do lado visual**, e o BRIEF-JOE põe fundador e diretor de arte no topo em casa desse
+  tamanho justamente porque ali o diretor é quem atropela o checklist de RH. A bio que a própria casa
+  escreve dele é o argumento inteiro: *"CEO & Founder **Ken Hall** has a 20-year track record of
+  designing and creating award-winning, cutting-edge games for console and PC. Ken is renowned for
+  his **visual storytelling** and his ability to create incredibly immersive worlds."* **Nenhum dos
+  outros três pode virar a segunda carta da casa por disciplina**, então ele é a carta 1 e
+  provavelmente a única.
+- **EMAIL: `ken@2dogsgames.com` — PUBLICADO, confiança ALTA.** Sai de `mailto:` cru, sem ofuscação e
+  sem `data-cfemail`. **Nada montado, e nenhuma segunda grafia tentada.**
+- **URL exata aberta nesta rodada:** `https://2dogsgames.com/` (**200, 99.398 bytes**), que carrega o
+  `mailto:ken@2dogsgames.com`; o pareamento nome+cargo+bio está em
+  `https://2dogsgames.com/about` (**200, 96.236 bytes**).
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"**2Dogs Games Ltd.** is an independent
+  Canadian game development studio, founded in 2017 by **CEO & Creative Director Ken Hall** and
+  formed by a highly experienced team of **industry veterans**"*, e *"Our core team have held **Lead
+  or Senior development positions on numerous cutting-edge AAA projects** across the full range of
+  platforms"*. Serve porque é uma casa de veteranos de AAA que se define como independente, e o Vini
+  é sênior de dez anos falando com um fundador que se define por contar história com imagem.
+- **FORA DOS EUA: SIM, Toronto, Ontário.** **A frase de realocação ENTRA.**
+- **DEDUPE:** Gmail `2dogsgames OR "2Dogs Games" OR "Ken Hall" OR impossiblestudios OR "Impossible
+  Studios" OR "D'Angelo"` devolveu **`{}`**; `in:sent (2dogsgames.com OR impossiblestudios.tv OR
+  "l-f.studio")` devolveu **`{}`** também. **0 de 2.** `2dogsgames`, `2Dogs` e `Ken Hall` dão **zero**
+  acerto em `enviados.csv`, `alvos.csv`, `automacao/pessoas.csv`, `automacao/processados.csv` e
+  `docs/index.html`. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: nulo.** A linha da casa no `fila-gamedevmap-canada.csv` está marcada
+  `sem-pagina-de-carreira` e a varredura desta rodada confirma: não há `/careers` nem `/jobs`.
+- **RESSALVA HONESTA:** casa de um jogo. O site inteiro gira em torno de **Destiny's Sword**, que
+  continua *"em desenvolvimento"*, e **a casa não publica assento de personagem nem pipeline 3D** — o
+  que ela publica de arte é "visual storytelling" e "immersive worlds", que é ambiente e direção, não
+  escultura de personagem. O quadro de pessoas inclui um **Advisory Board de veterano militar e
+  psicólogo clínico**, o que sugere estrutura pequena e financiamento apertado, e **patrocínio de
+  visto é improvável**. O `mailto` do fundador é a força da ficha; o encaixe de disciplina é a
+  fraqueza dela, e a carta não pode afirmar vaga de personagem que não existe.
+
+### FICHA 2 — Marco D'Angelo, **Executive Producer** da Impossible Studios (Toronto, Ontário, Canadá) — **PUBLICADO, confiança ALTA, e é a mais fraca de disciplina entre as quatro**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **exatamente dois humanos com cargo** na
+  página de contato, e o outro é **Olena Sukhina, Finance**, cujo endereço é a caixa funcional
+  `accounts@`. Marco D'Angelo é **a única porta humana do estúdio**, e produtor executivo em casa
+  pequena é quem decide contratação de artista. Não há recrutador nem diretor de arte publicado.
+- **EMAIL: `marco@impossiblestudios.tv` — PUBLICADO, confiança ALTA.** A página imprime nome, cargo,
+  endereço e telefone na mesma linha. **Nada montado.** *(O telefone que a página publica é dado de
+  empresa e não vai para o repositório, pela regra de dado de terceiro.)*
+- **URL exata aberta nesta rodada:** `https://www.impossiblestudios.tv/contact` (**200, 44.588
+  bytes**), que imprime *"**Marco D'Angelo, Executive Producer** — marco@impossiblestudios.tv"*
+  seguido de *"Olena Sukhina, Finance — accounts@impossiblestudios.tv"* e *"General Inquiries —
+  info@impossiblestudios.tv"*. A home, `https://www.impossiblestudios.tv` (**200, 282.104 bytes**),
+  dá o perfil da casa e o roster.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"We're an independent **full-service
+  production house in Toronto** on a mission to **make the impossible possible**"*.
+- **FORA DOS EUA: SIM, Toronto, Ontário** (68 Claremont Street Unit 102). **A frase de realocação
+  ENTRA.**
+- **DEDUPE:** mesma busca da ficha 1, Gmail **`{}`** por nome e por domínio, `in:sent` **`{}`**;
+  **0 de 2**. `impossiblestudios`, `Impossible Studio` e `D'Angelo` dão **zero** acerto nos cinco
+  arquivos. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: nulo.** `sem-pagina-de-carreira` no `fila-gamedevmap-canada.csv`, e a
+  varredura confirma: não existe `/careers`.
+- **RESSALVA HONESTA, e ela é grande.** O `fila-gamedevmap-canada.csv` classifica a casa como
+  **Extended Reality (XR)**, mas o roster que ela mesma publica é de **fotógrafo e diretor de
+  live-action** — Sharon Chetrit, Dan French, Parker Seaman, Aaron Wynia, Daniel Ehrenworth e mais
+  oito, sob as abas *Photographers* e *Directors*. **Não há um único artista 3D no roster e nenhuma
+  menção a personagem, criatura, modelagem ou groom em nenhuma das duas páginas abertas.** É
+  produtora de imagem publicitária, não estúdio de personagem. Entra na rodada porque é nome + cargo
+  + endereço publicado em Ontário, que é a prioridade do turno, e **está declarado aqui que ela vale
+  menos que a ficha 1**: se o maestro só tiver uma carta para gastar, gaste na 2Dogs.
+
+### FICHA 3 — Michael Oettrich, **CEO** da L-F Studio (Munique, Baviera, Alemanha) — **PUBLICADO, confiança ALTA**
+
+- **POR QUE ELE, e não outro da casa.** A casa **não publica mais ninguém**: o único nome do site
+  inteiro, em treze caminhos abertos, é o dele, no rodapé de copyright. Em casa desse tamanho o
+  BRIEF-JOE manda ir no fundador, e aqui não há alternativa.
+- **EMAIL: `michael@l-f.studio` — PUBLICADO, confiança ALTA, e visto em DOIS lugares.** Aparece
+  literal no campo `"email"` do bloco JSON-LD de `Organization` da home **e** na página `/contact`.
+  **Nada montado, nenhuma segunda grafia.**
+- **URL exata aberta nesta rodada:** `https://l-f.studio/` (**200, 96.776 bytes**), que traz no
+  rodapé *"© 2016-2026, **L-F Studio, Inc.** All rights reserved. L-F Studio and its logo are
+  registered trademarks in the US and elsewhere. **CEO Michael Oettrich**"* e, no JSON-LD,
+  `"email":"michael@l-f.studio"` junto do endereço `Rotkreuzplatz, Neuhausen, München`. Também aberta
+  `https://l-f.studio/contact` (**200, 55.582 bytes**), onde o mesmo endereço aparece.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"We are pioneers in the world of interactive
+  experiences. With games like **Firework AR, Solar System AR, and Wynono**, we have already shown how
+  we push the boundaries of entertainment"*, e o projeto que eles mesmos destacam, *"our work with
+  **VR roller coasters**, where we merge the physical sensations of a ride with the infinite
+  possibilities of virtual reality in the **Shanghai Tower**"*.
+- **FORA DOS EUA: SIM, Munique, Alemanha.** **A frase de realocação ENTRA**, e aqui entra também a
+  frase única de patrocínio, porque é União Europeia.
+- **DEDUPE:** Gmail `"l-f.studio" OR "L-F Studio" OR Oettrich OR morganastudios OR "Morgana Studios"
+  OR Lluberes` devolveu **uma** thread, e ela é da **Morgana** (ficha 4), não da L-F.
+  `in:sent (... OR "l-f.studio")` devolveu **`{}`**. **0 de 2.** `l-f.studio`, `L-F Studio` e
+  `Oettrich` dão **zero** acerto nos cinco arquivos. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: nulo**, e a casa não tem página de carreiras.
+- **RESSALVA HONESTA:** **o site é catch-all**. Doze caminhos (`/about`, `/team`, `/our-team`,
+  `/crew`, `/people`, `/studio`, `/staff`, `/leadership`, `/company`, `/about-us`, `/contact-us`) todos
+  devolveram **200 com exatamente 96.776 bytes**, o mesmo corpo da home — o que significa que **não
+  existe página de equipe**, e não que ela esteja escondida. O portfólio é **AR, VR, simulação,
+  rádio lofi e artigo científico** (*"We are listed with ESA Match and regularly publish scientific
+  papers"*), com **zero personagem 3D publicado**, e a própria home avisa *"UPDATES in 2026: new
+  releases and updates are processed and published soon"*, o que sugere casa de pouquíssima gente.
+  Munique é cidade do escopo do turno e o endereço é o mais bem provado da rodada (visto duas vezes),
+  mas **o encaixe de disciplina é fraco** e a carta não pode prometer assento de personagem.
+
+### FICHA 4 — Claudio Lluberes, **Chief Creative Officer** da Morgana Studios (Madri, Espanha) — **`sem-email`, e é a de melhor disciplina da rodada**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **seis nomes com cargo** e ele é o único de
+  criação: Miguel Cabañas (*Chief Executive Officer*), **Claudio Lluberes (*Chief Creative
+  Officer*)**, Jaime Cano (*Chief Operating Officer*), Daysi Cruz (*Business Development Director*),
+  Fernando Chamarro (*Production Coordinator*) e Leticia Tonos (*Director/Writer*). CCO é o cargo que
+  o BRIEF-JOE chama de Head of Art em casa média, e é quem abre portfólio. **A casa está em 1 de 2 e
+  esta é a carta 2, então ele é a última pessoa da Morgana** — Miguel Cabañas fica registrado e não
+  pode virar ficha depois.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA PAREADO. Linha entra como `sem-email`.** **A casa publica
+  `hernan@morganastudios.com`** — endereço de pessoa, PUBLICADO em texto puro no aviso legal, como o
+  contato LSSI de `MORGANA VFX & MOTION S.L.` — **mas "Hernán" não aparece em nenhuma das quatro
+  páginas abertas**, e o quadro de seis pessoas não tem ninguém com esse nome. **Sem pareamento
+  nome+cargo o endereço não vira ficha** (regra Barnstorm), e escrever para ele chamando de Claudio
+  seria mentira. A carta 2 sairia para `info@morganastudios.com`, endereçada ao Claudio pelo nome,
+  pelo precedente da Erupting Avocado. **Nada montado:** o padrão `nome@morganastudios.com` está
+  provado pelo `hernan@` e eu **não** montei `claudio@`, porque padrão é confiança baixa e a casa
+  só tem uma carta restante.
+- **URLs exatas abertas nesta rodada:** `https://morganastudios.com/about` (**200, 101.034 bytes**),
+  que é onde está o quadro de seis nomes com cargo; `https://morganastudios.com/aviso-legal`
+  (**200, 90.896 bytes**, idêntico a `/legal`), onde está o `hernan@` e a razão social;
+  `https://morganastudios.com/politica-de-privacidad` (**200, 93.625 bytes**);
+  `https://morganastudios.com/contact` (**200, 87.398 bytes**, só `info@`); e
+  `https://morganastudios.com/empleo` (**200, 84.829 bytes**). **Correção de registro:** o aviso legal
+  declara que a casa também é dona de **`morganastudiosanimation.com`**, segundo domínio que a
+  campanha não tem em lista nenhuma.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"In a remarkably short time, we've
+  collaborated with illustrious figures like **Juan Luis Guerra**, entrusting us with **the complete
+  animation for his latest film, "Capitán Avispa""*, e *"Alongside this, we launched **YugiBao**...
+  a Web3 Digital Collection with 1,600 assets. We **sold out in just 4 hours**"*. Serve porque
+  animação completa de longa é pipeline de personagem de ponta a ponta, que é exatamente o que o
+  Vini faz.
+- **FORA DOS EUA: SIM, Madri** (C/ Magallanes, 30, 2º B, 28015). **A frase de realocação ENTRA**, e a
+  frase única de patrocínio também, por ser União Europeia.
+- **DEDUPE:** Gmail devolveu **uma** thread, `1a0623df03a0ebd1`, com **duas mensagens de saída e
+  nenhuma de entrada**: carta para `info@morganastudios.com` em **02/09 14h28** e follow-up em
+  **07/09 14h40**, as duas com o assunto padrão da campanha. `in:sent morganastudios.com` confirma as
+  mesmas duas e mais nenhuma: **1 endereço, 1 de 2, a casa está aberta e qualificada** (recebeu,
+  não respondeu, que é o estado que o BRIEF-JOE prefere). `Lluberes` dá **zero** acerto nos cinco
+  arquivos; a `alvos.csv` linha 215 já tinha a casa com nota *"animacao CG VFX e motion boutique;
+  IP original YugiBao... sem vaga aberta"*.
+- **PATROCÍNIO DE VISTO:** não publicado. A casa tem `/empleo` própria (200, 84.829 bytes).
+- **RESSALVA HONESTA:** **sem endereço de pessoa pareado**, e essa é a ficha que mais dói por isso,
+  porque é a de melhor disciplina. A casa é **boutique de VFX e motion** (razão social *MORGANA VFX &
+  MOTION S.L.*), o que a `alvos.csv` já apontava como mistura, e o destaque comercial dela hoje é
+  **Web3 e coleção digital**, não personagem. O texto do `/about` está **desatualizado** — fala de
+  *Capitán Avispa* como *"set to premiere this April"* e o rodapé diz **© 2024** —, então o quadro de
+  seis pessoas pode ter mudado, e **cargo desatualizado é pior que alvo nenhum**: confirmar o Claudio
+  antes de escrever. E a casa **já levou carta e follow-up sem responder**, o que significa que a
+  porta `info@` não funcionou uma vez.
+
+### CASAS ABERTAS NESTA RODADA E **DESCARTADAS**, com o motivo de cada uma
+
+**Espanha, casas de animação de porte abertas e sem endereço de pessoa:**
+- **El Ranchito VFX** (Madri) — a maior perda da rodada por disciplina. `/contact` (**200, 95.350
+  bytes**) publica **quatro caixas funcionais e nenhuma pessoa**: `jobs@`, `international@`,
+  `nacional@`, `comunicacion@`; `/our-team` (**200, 55.786 bytes**) e `/nosotros` (**200, 36.853**)
+  **não pareiam nome com cargo**; o aviso legal (**200, 44.144 bytes**) só dá `lopd@`. **Zero nome.**
+- **Atlantis Animation** (Santa Cruz de Tenerife) — o site **ofusca tudo pelo `data-cfemail` da
+  Cloudflare**, e eu decodifiquei os **oito** blocos de `/`, `/contact`, `/about`, `/aviso-legal` e
+  `/politica-de-privacidad`: saíram **apenas `contact@AtlantisAnimation.com` (cinco vezes) e
+  `DPO@ATLANTISANIMATION.COM` (duas)**. Ofuscação não é sinal de endereço de pessoa escondido; aqui
+  escondia duas caixas funcionais.
+- **Rokyn Animation** (Granada) — só `info@rokynanimation.com`, na home (**200, 177.869 bytes**), no
+  `/aviso-legal` (**200, 99.117**) e no `/politica-de-privacidad` (**200, 107.159**). **Domínio
+  resolvido por busca nesta rodada** (`rokynanimation.com`), que é registro novo para a campanha.
+- **Uniko** (Bilbau) — só `info@uniko.com.es` na home (**200, 81.631 bytes**). **Domínio resolvido
+  por busca:** o site é **`uniko.com.es`**, e não `uniko.es` nem `uniko.com` — registro novo, e é
+  exatamente o tipo de domínio que um chute de cabeça erraria. Casa de 2D e publicidade.
+- **Twin Pines VFX** (Madri) — `/aviso-legal` (**200, 9.651 bytes**) e `/nosotros` (**200, 11.326**)
+  são as duas únicas páginas com corpo próprio; **as outras dezesseis servem 15.650 bytes idênticos
+  (catch-all)**. Só `info@twinpines.es`.
+- **Serena TV** (Madri) — `/contact` (**200, 94.277 bytes**) publica `encina.rivas@intengua.tv`, e
+  esse é **domínio de TERCEIRO**: a `intengua.tv` é a marca irmã de **voz e dublagem**, não a Serena.
+  **Armadilha da mesma família do `/contact` da Cinesite**, e não vira ficha. Da própria Serena só
+  `produccion@`, `proaudio@` e `info@`. A varredura ainda devolveu `encina.rivas@serena.tv`, que é
+  **artefato de concatenação** do HTML e **não é endereço visto**.
+- **Big Bang Box** (Madri) — `/nosotros` (**200, 44.661 bytes**) e `/legal` (**200, 37.177**) abrem e
+  publicam só `contact@bigbangbox.es`. **Zero nome.**
+- **The SPA Studios** (Madri) — home **200, 17.631 bytes** e **nenhum endereço em treze caminhos**.
+  Casa grande de *Klaus*, e a porta de email não existe neste túnel.
+- **Tequila Works** (Madri) — home **200, 1.766 bytes**: casca de JavaScript, **sem endereço e sem
+  nome**. Não é parede, é site que só desenha no cliente.
+- **Sygnatia** (Madri) — `/` (**200, 167.638**), `/contact` (**200, 146.369**) e `/about` (**200,
+  187.734**) abrem e **nenhum dos três publica um único endereço**.
+- **Bloompix Studios** (Barcelona) — **VETO ESCRITO, e é o achado de texto da rodada.** A home
+  (**200, 450.933 bytes**) publica `sergio@bloompixstudios.com` e, na mesma página, esta frase:
+  *"We are currently **not hiring, nor have any open positions**. Please **do not send us your
+  resume or expect us to contact back if you do so**."* **A casa pede para não ser contatada. Fora,
+  e ninguém reabra.** Registro o endereço só para que nenhuma rodada futura o "descubra" e escreva.
+- **3D2D Frente, Birdland Animation, i-Real Studios, La Huella FX, Lanczos, Onirikal, Virtual Art,
+  Free Your Mind, Mediatonic Madrid** — abertas e **sem endereço de pessoa**. Duas notas de método:
+  a **Free Your Mind** (`fym.tv`) publica o **gabarito de tema `email@email.com`** no `/contact`, que
+  **não é endereço** pela regra do turno; a **Virtual Art** (Valência) só tem `empleo@` e `info@`; a
+  **Mediatonic** de Madri só `bizdev@` e `press@`.
+
+**Alemanha:**
+- **Monströös** (Berlim) — publica `marc@monstroos.com` **em texto puro** no `/jobs` (**200, 20.632
+  bytes**), duas vezes, como destino de candidatura: *"please send us selected reference work of
+  yours... to marc@monstroos.com"*. **Descartada por disciplina e por falta de cargo:** a casa se
+  chama *"Studio für **2D Animation** und audiovisuelles Storytelling"* e a vaga aberta é
+  **designer gráfico de PRINT freelance** (dossiês, brochuras, InDesign), com exigência de
+  *"solide Deutschkenntnisse"*. O `marc@` também aparece **sem cargo ao lado**. Guardo o endereço
+  aqui porque é publicado e pode servir outro dia, mas **não vira ficha hoje**.
+- **Studio Kamp** (Berlim) — `david@studiokamp.com` **publicado** na política de privacidade (**200,
+  88.469 bytes**) e o `/studio` (**200, 90.089**) pareia: *"The current physical studio is a
+  calibrated **Dolby Atmos sound studio in Berlin**, owned and run by **David Kamp**"*. **Descartada
+  por disciplina: é casa de SOM.** Foley, mixagem, sound design, field recording. Nome, cargo e
+  endereço perfeitos e disciplina errada.
+- **Zoroarts** (Duisburg) — `mateo.covic@zoroarts.com` publicado na home (**200, 6.618 bytes**).
+  **Descartada: desenvolvedor solo de 24 anos** (*"Mateo is a 24-year-old **solo game developer**"*),
+  sem equipe e sem possibilidade de contratar.
+- **Studio Film Bilder** (Stuttgart) — `/` (**200, 486.821**), `/team` (**200, 571.106**),
+  `/imprint` (**200, 338.852**), `/privacy` (**200, 361.161**) e `/jobs` (**200, 386.392**) abertas:
+  **só `studio@filmbilder.de` em todas as cinco**. Casa histórica de Stuttgart, zero nome de pessoa.
+- **TrickStudio Lutterbeck** (Colônia) — `/`, `/contact`, `/about`, `/team`, `/imprint`,
+  `/privacy-policy` e `/jobs` abertas (13.363 bytes o `/team`): **só `info@trickstudio.de`**.
+- **Sehsucht** (Hamburgo/Berlim) — `/impressum` (**200, 6.941 bytes**) e `/datenschutz` (**200,
+  8.190**): só `contact@sehsucht.de` e `datenschutz@quasi-consult.de`, que é **o escritório de
+  proteção de dados terceirizado**, não a casa. Já tem carta no `enviados.csv`.
+- **Traumhaus Studios** — só `info@` e `jobs@traumhaus-studios.de`. **Telescope Animation** — só
+  `contact@`, e o `/imprint` (242.913 bytes) ainda publica o **gabarito alemão `benutzer@domain.com`**,
+  que não é endereço. **Woodblock** (`woodblock.tv`, Stuttgart) — `/privacy` e `/privacy-policy`
+  abrem com **399.765 bytes e zero endereço**.
+- **House of Creatures, Mackevision (Stuttgart) e MovieBrats Pictures (Munique)** — **catch-all
+  medido, e é para não confundir com parede**: os dezoito caminhos de legal e equipe devolveram
+  **200 com exatamente o mesmo tamanho** em cada casa (23.705, 29.498 e 39.518 bytes
+  respectivamente). **Não existe página de Impressum servida por esses caminhos**, e **zero
+  endereço** saiu das três. O nome "House of Creatures" era a aposta de disciplina da Alemanha nesta
+  rodada e não entregou nada.
+- **Studio Soi (Ludwigsburg), Chimney Pot, Infected Postproduction, The Marmalade, Slick Studio** —
+  **NÃO CONFERIDAS, e a falha é do túnel, não do site.** `studiosoi.com` e `www.studiosoi.com`
+  devolvem **`curl: (35) tlsv1 alert internal error`** nos dois, e `http://studiosoi.com` devolve
+  **301 com 375 bytes** (ou seja, o host existe e redireciona para o `https` que o túnel não fecha);
+  as outras quatro devolvem **`CONNECT tunnel failed, response 502`**. **Protocolo do turno cumprido:
+  `http://` e `www.` tentados antes de qualquer conclusão.** A Studio Soi é a casa de personagem
+  mais óbvia da Alemanha (*Die Sendung mit der Maus*, *Peterson & Findus*) e **fica pendente para a
+  próxima rodada com outro caminho de rede.**
+
+**Canadá, Ontário e resto de BC — 146 domínios varridos, e a colheita de pessoa foi magra:**
+- **Moonray Studios** (Hamilton) — publica `dan@moonraystudios.com` em texto puro no rodapé da home
+  (**200, 13.177 bytes**), precedido de `CONTACT :` e **sem nome nenhum ao lado**; o `/about` (**200,
+  7.455 bytes**) **não nomeia uma única pessoa**. **Sem pareamento nome+cargo não vira ficha**, e é
+  pena, porque a casa é a única de Ontário aberta hoje que **diz "We're hiring!" na própria home**.
+  **Fica marcada como a melhor reabertura de Ontário para quem achar o nome do Dan.**
+- **A City Games** (Toronto) — a varredura devolveu **catorze** endereços que parecem de pessoa
+  (`Carlos@`, `Miguel@`, `Marcos@`, `Kate@`, `Eugen@`, `IMack@`, `RChang@`, `SophiaV@`, `Yomi@`,
+  `Arty@`, `Geo@`, `Gilbertk@`, mais `CEO@` e `Chairman@`). **Descartada:** a página lista os catorze
+  **sem um único cargo ao lado**, e a presença de `CEO@` e `Chairman@` como endereços mostra que é
+  **lista de aliases**, não quadro de pessoas. Catorze endereços sem cargo não são catorze alvos.
+- **Ice VFX** (Montréal) — publica `maria@icevfx.com` e `topher@icevfx.com` na home (**200, 784.681
+  bytes**). **Não abri a casa e não virou ficha por ORDEM DO TURNO**: Montréal está fora desta
+  rodada. Fica guardada, e é a melhor sobra da lista do CGStudioMap.
+- **Black Tabby Games** (Toronto, `abby@`, `tony@`), **2Dogs** (virou ficha 1), **Actual Humans**
+  (Toronto, `jon@`, home de **2.253 bytes**), **Hilltop Studios** (Toronto, `scott@`),
+  **Lummox Labs** (Toronto, `michael@`), **Mighty Yell** (`yell@`), **Klub Kofta** (`bboz@`),
+  **Love Conquers All** (`christine@`), **Globacore** (`creative@`) — **cauda longa de jogo indie
+  2D**, casas de uma a cinco pessoas, sem pipeline de personagem 3D e sem chance de patrocínio.
+  Registrados para não serem "achados" de novo.
+- **Dames Making Games** (`dmg.to`) publica `jennie@jenniefaber.com`, **domínio pessoal de terceiro**;
+  **Insert Disc 5** publica `adrienne.bazir@gmail.com`, **provedor gratuito** (precedente de 17/09);
+  **Jam Hammer** publica `tobiasreaper@iointeractive.com`, **domínio de OUTRA empresa** (IO
+  Interactive) — os três descartados por regra, não por disciplina.
+- **Dark Slope Studios** (Toronto) publica **`you@company.com`** e **Mardonpol** publica
+  **`john@doe.com`**: **gabarito de tema, não endereço**, pela regra do turno. **Aptitude X,
+  Albedo Informatics, Falling Squirrel, Komi Games** devolveram **só endereços
+  `@sentry.wixpress.com` e `@sentry.io`**, que são **telemetria da plataforma Wix** e não gente.
+- **Entertainment Software Association of Canada** (`theesa.ca`) — `dboyd@theESA.Ca` e
+  `jlogue@theESA.Ca` publicados, mas é **associação de lobby, não estúdio**. Fora de escopo.
+- **Beenox, Félix & Paul, Moment Factory** (Montréal) e **Goldtooth, Stormborn, Torpedo, Side Street,
+  Smiley Guy, Deluxe, Fuse FX, Kalos, Pixray, Zink, Little Blackstone, Eggplant, Crafty Apes,
+  Mercury Filmworks** — **retirados do lote antes de gastar requisição**: os três primeiros por
+  serem Montréal, os outros por já terem sido abertos e descartados na rodada das 00h55. **Os nomes
+  deles não estavam no `touched.txt` porque o arquivo cita a CASA e não o DOMÍNIO — subtrair por
+  nome, e não só por regex de domínio, economizou quinze varreduras.**
+
+### PLACAR HONESTO DA RODADA DAS 05h15
+
+**Quatro pessoas novas**, no piso da faixa de 4 a 8: **três com endereço PUBLICADO e confiança
+ALTA** (Ken Hall / 2Dogs Games, Marco D'Angelo / Impossible Studios, Michael Oettrich / L-F Studio)
+e **uma `sem-email`** guardando nome, cargo e casa (Claudio Lluberes / Morgana Studios). **Nenhum
+endereço montado por padrão de domínio. Nenhum inventado. Nenhuma segunda grafia de ninguém** — e
+houve duas oportunidades de errar isso: o `claudio@morganastudios.com` que o padrão `hernan@` teria
+"autorizado", e o `cb@b-waterstudios.com` da casa que já recusou.
+
+**Por região, contra a ordem do turno: Ontário 2, Alemanha 1 (Munique), Espanha 1 (Madri), Canadá
+total 2.** A perna de BC não rendeu pessoa nenhuma: das casas novas de Victoria, Kelowna, Burnaby,
+Nanaimo e Qualicum, **nenhuma publica endereço de pessoa** — o que confirma e estende o achado
+estrutural das 00h55 de que em BC quem publica endereço é casa de um ou dois. **Bilbau, Valência,
+Barcelona, Hamburgo, Stuttgart, Ludwigsburg e Berlim: zero fichas**, com motivo escrito para cada
+casa aberta.
+
+**Por disciplina, e é o ponto fraco desta rodada: NENHUMA das quatro é de personagem.** Ken Hall é
+o mais próximo (*"renowned for his visual storytelling"*, casa de veteranos de AAA) e Claudio
+Lluberes é o de melhor cargo (*Chief Creative Officer* de casa que fez **a animação completa de um
+longa**), mas nem a 2Dogs nem a Morgana publicam assento de personagem. Marco D'Angelo é produtora
+de live-action e Michael Oettrich é AR/VR e pesquisa. **A inversão que a rodada das 00h55 descreveu
+não se repetiu: aqui não houve nem onde havia personagem sem endereço — o que havia de personagem
+de verdade (El Ranchito, The SPA Studios, Studio Soi, House of Creatures) estava sem nome, sem
+endereço ou atrás de falha de túnel.** Dito com a palavra do BRIEF: **só sobrou casa de fora da
+disciplina**, e está declarado em cada ficha.
+
+**Por tamanho de casa:** todas as quatro são **pequenas** (2Dogs quatro nomes, Impossible dois,
+L-F um, Morgana seis). **Nenhuma publica política de visto e o patrocínio é improvável nas quatro**,
+o que está escrito em cada ficha. **A melhor aposta de patrocínio da rodada é a Morgana**, por ser
+União Europeia e ter feito longa com estúdio de fora.
+
+**Dedupe, por casa:** **2Dogs Games, Impossible Studios e L-F Studio estão em 0 de 2** (Gmail `{}`
+por nome e por domínio, `in:sent` `{}`, zero acerto nos cinco arquivos). **Morgana está em 1 de 2 e
+esta é a carta 2**, com `info@` escrito em 02/09, follow-up em 07/09 e **nenhuma resposta**.
+**Três casas foram barradas pelo dedupe depois de eu já ter a pessoa na mão** — USER T38 e Frank
+Barton por teto fechado, B-Water por recusa escrita —, e é a razão pela qual este placar diz quatro
+e não sete.
+
+**Fontes abertas:** 5 (DIBOOS `/asociados/`, AG Animationsfilm `/netzwerk/mitglieder/`,
+`fila-gamedevmap-canada.csv`, `garimpo-cgstudiomap.csv`, as quatro `fila-gamedevmap-europa*.csv`),
+mais duas resoluções de domínio por busca (Rokyn, Uniko). **Casas lidas: 146 domínios do Canadá +
+320 de Espanha e Alemanha + 30 alvos nomeados**, com 13 a 19 caminhos cada em até dois esquemas.
+**Pessoas com email: 3. `sem-email`: 1. Descartes com motivo nomeado: 51 casas**, das quais **1 por
+veto escrito** (Bloompix), **1 por recusa anterior** (B-Water), **2 por teto fechado** (USER T38,
+Frank Barton), **1 por ordem do turno** (Ice VFX / Montréal), **5 por disciplina errada com nome e
+endereço na mão** (Monströös, Studio Kamp, Zoroarts, Bloompix, Impossible parcialmente),
+**4 por domínio de terceiro ou provedor gratuito** (Serena/Intengua, DMG, Insert Disc 5, Jam Hammer),
+**3 por gabarito de tema** (`you@company.com`, `john@doe.com`, `email@email.com`, `benutzer@domain.com`),
+**2 por falta de pareamento nome+cargo** (Moonray, A City Games) e o resto por não publicarem
+endereço de pessoa. **Não conferidos: 5 casas alemãs** (Studio Soi por `tlsv1 alert internal error`,
+e Chimney Pot, Infected, The Marmalade e Slick Studio por `502 no CONNECT`) **e 3 catch-alls
+medidos** (House of Creatures, Mackevision, MovieBrats).
+
+**O que travou, em uma linha:** a Espanha tem casa de personagem de sobra e **quase nenhuma publica
+endereço de pessoa**; a Alemanha publica endereço de pessoa em quantidade e **quase toda é autor
+solo que não contrata**; e as duas melhores casas de disciplina da rodada (Studio Soi e El Ranchito)
+ficaram uma atrás de falha de TLS do túnel e a outra atrás de quatro caixas funcionais.
