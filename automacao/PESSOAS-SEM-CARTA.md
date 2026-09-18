@@ -8000,3 +8000,156 @@ disse que a página **não existe** — que é informação, não parede.
   produtor executivo com endereço publicado e a possibilidade de indicação. A casa também se chama
   **"agency"** e diz ter *"flexible team"*, o que costuma significar **freelance**, e o rodapé
   ("Website by The Cre8ion.Lab") é a única data indireta do site — **o quadro não tem data**.
+
+### FICHA 3 — Timmy Willmott, **CG Supervisor** da Lux Aeterna VFX (Bristol, Reino Unido) — **`sem-email`, e é o PAREAMENTO DE CARGO E DE TÉCNICA MAIS FORTE DA RODADA**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **um quadro de 17 pessoas com nome e cargo**, e
+  o BRIEF-JOE põe supervisor de CG na primeira linha de alvos: *"**Timmy Willmott — CG Supervisor**"*.
+  Os outros candidatos e por que não são eles: **Rob Hifle (Founder & Creative Director)** é a reserva
+  óbvia e fica guardado para a eventual carta 2 **sem virar ficha hoje** (uma pessoa por casa por
+  rodada); **Paul Silcox (VFX Director)** e **Alex Dilworth (Creative Director Design)** são direção,
+  não pipeline; **Clive Llewellyn (FX Supervisor)** é efeito, não personagem; **Paul Greer (Senior CG
+  Artist)** e **Gabriele Grigoletto (FX Artist)** são par de bancada, não quem contrata; **Amy Cattell
+  (Head of Production)** e **Rebecca Vine (Deputy Head of Production)** são produção. O CG Supervisor
+  é **exatamente quem avalia portfólio de modelagem e groom** numa casa desse tamanho.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA. Linha entra como `sem-email`.** A casa publica **duas
+  caixas e as duas são funcionais**: `hop@lavfx.com` (é **Head of Production**, e a página confirma o
+  uso: *"If you'd like to chat about a potential project, please email hop@lavfx.com"*) e
+  `hello@lavfx.com` (*"If you're a freelancer, drop us a line"*). **Nenhum endereço foi montado:** o
+  quadro de 17 nomes **não pareia um único endereço com uma única pessoa**, então não existe padrão
+  provado de domínio e `timmy@lavfx.com` seria invenção. **Se a carta sair, sai para `hello@lavfx.com`
+  — que é literalmente a caixa que a casa aponta para artista — endereçada ao Timmy pelo nome, pelo
+  precedente da Erupting Avocado.**
+- **URLs exatas abertas nesta rodada:** `https://www.lavfx.com/about` (**200, 1.113.007 bytes**), que
+  é onde está o quadro inteiro com cargo; `https://www.lavfx.com/contact` (**200, 141.294 bytes**),
+  de onde saem as duas caixas; `https://www.lavfx.com/careers` (**200, 145.209 bytes**); e
+  `https://www.lavfx.com/` (**200, 561.702 bytes**). O `sitemap.xml` também revelou
+  `/about-1`, `/first-contact` e dois posts de blog (um deles *"studio-and-marketing-assistant-katie-
+  hubbard"*), o que mostra que a casa **publica contratação por post de blog** — veia para quem
+  quiser vigiar a casa.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"We're a **close-knit team with deep
+  specialist experience across a wide range of VFX disciplines**"*; *"For over 30 years we've dared
+  to do things differently... We are **not just a VFX vendor, but a creative technology studio**"*;
+  *"We've built a **lean, scalable studio that combines a core team with a trusted network of
+  specialist artists**"*; e a frase da `/careers`, que é o convite literal: *"We're **always
+  interested to hear from like-minded creatives** who have a unique perspective to bring to our
+  projects. If we don't have an opening right now, feel free to connect hello@lavfx.com so we can
+  **add your details to our talent pool**"*. Serve porque os créditos que a casa cita — *"from
+  **Blue Planet** to **The Crown**"* — são natureza e drama de época, ou seja **criatura e
+  personagem digital**, que é o portfólio do Vini.
+- **FORA DOS EUA: SIM, Bristol** (Malt House Studios, East Tucker Street, Redcliffe, BS1 6LQ). **A
+  frase de realocação ENTRA**, e Bristol é o segundo polo de animação do Reino Unido depois de
+  Londres.
+- **DEDUPE:** Gmail `lavfx OR "Lux Aeterna" OR Willmott OR "Rob Hifle" OR kelebek OR Kaveckait OR
+  "Deborah Thorpe"` devolveu **`{}`**; `in:sent (... lavfx.com ...)` devolveu **`{}`**. **0 de 2.**
+  Nos arquivos, `Lux Aeterna`, `Willmott` e `Hifle` dão **zero acerto**; `lavfx` dá **1 acerto e é
+  falso positivo** — a linha 4610 deste arquivo cita **`lolavfx.com`** (Lola VFX), casa diferente.
+  **Armadilha de substring registrada.** `lavfx.com` **não estava** no `touched.txt`.
+- **PATROCÍNIO DE VISTO: não publicado.** A `/careers` existe e não traz política de imigração; ela
+  manda seguir o LinkedIn *"where we advertise our latest vacancies"*, o que é porta de plataforma e
+  **não porta de email**.
+- **RESSALVA HONESTA:** (1) **sem endereço de pessoa** — é a fraqueza central, e dói porque é a melhor
+  casa da rodada por disciplina; (2) a casa se descreve como **"lean, scalable studio"** com *"trusted
+  network of specialist artists"*, ou seja **núcleo pequeno + freelance**, e o `hello@` é explicitamente
+  a caixa de freelancer: a resposta provável é banco de talentos, não vaga com patrocínio; (3) o forte
+  publicado é **factual, documentário e drama** (composição, FX, design gráfico), e **nenhuma página
+  usa a palavra "character", "creature" ou "groom"** — o encaixe é inferido dos créditos, não afirmado
+  pela casa; (4) o quadro do `/about` **não tem data**.
+
+### FICHA 4 — Giedrė Kaveckaitė, **Head of Art** da Kelebek Media (Reino Unido) — **`sem-email`, e é O MELHOR CARGO QUE ESTA RODADA ACHOU**
+
+- **POR QUE ELA, e não outro da casa.** A casa publica **nove nomes com cargo** e ela é **a única de
+  arte**: *"**Giedrė Kaveckaitė — Head of Art**"*. O resto do quadro é desenvolvimento, publicação,
+  produção e finanças — *"Deborah Thorpe — Founder/Creative Director"*, *"Bill Gordon — Senior
+  Development Consultant"*, *"Helen McAleer — Publishing Director & Exec Producer"*, *"Lord Waheed
+  Alli — Company Advisor"*, *"Matt Porter — Head of Production"*, *"Liz Brion — Chief Financial
+  Officer"*, *"Lesley Hardstaff — Producer"*, *"Kate Mitchell — Distribution Consultant"*. O BRIEF-JOE
+  manda ir em **Head of Art** antes de qualquer outro cargo em casa média, e aqui o cargo existe com
+  nome e sobrenome. **Deborah Thorpe (fundadora e diretora criativa) fica guardada como carta 2 e não
+  vira ficha hoje.**
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA. Linha entra como `sem-email`.** A casa publica **uma única
+  caixa em todas as páginas**, `info@kelebekmedia.com`, e o contato normal é **formulário** (First
+  Name / Last Name / Email / Message). **Nenhum endereço montado, nenhum padrão de domínio provado —
+  não há um só endereço de pessoa no site para servir de prova.** Se a carta sair, sai para `info@`
+  endereçada a ela pelo nome.
+- **URLs exatas abertas nesta rodada:** **`https://www.kelebekmedia.com/meet-the-team`** (**200,
+  614.461 bytes**), que é onde está o quadro de nove nomes com cargo — **e essa URL saiu do
+  `pages-sitemap.xml`, não de lista de caminhos**; `https://www.kelebekmedia.com/contact` (**200,
+  607.098 bytes**); `https://www.kelebekmedia.com/values` (**200, 573.176 bytes**); e
+  `https://www.kelebekmedia.com/` (**200, 712.611 bytes**).
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Kelebek Media is a **creator and producer of
+  beloved children's and family entertainment**, with a passion for creative and engaging
+  storytelling. We create content for **television, film, theatre, and connected media**"*, e *"We are
+  proud to be **the home of Harriet Muncaster's family of publishing brands; Isadora Moon, Emerald,
+  Mirabelle, Victoria Stitch** and The Diary of Wiska Wildflower"*, mais o que está em
+  desenvolvimento: *"**Isadora Moon the Movie** - a family feature based on the best selling series"*
+  e *"**Stitched**, based on Victoria Stitch"*. Serve porque **adaptar livro ilustrado para série e
+  longa é desenho de personagem de ponta a ponta**, e o cargo dela é exatamente o dono dessa decisão.
+- **FORA DOS EUA: SIM, Reino Unido** (*"© 2025 **Kelebek Media Ltd**"*, membro da Animation UK).
+  **A frase de realocação ENTRA.** **Ressalva de registro: a casa NÃO publica endereço postal** — o
+  campo "Address" da `/contact` está **vazio** —, então a cidade não é confirmada e eu não a invento.
+- **DEDUPE:** Gmail (mesma busca da ficha 3, com `kelebek OR Kaveckait OR "Deborah Thorpe"`)
+  devolveu **`{}`**; `in:sent (... kelebekmedia.com ...)` devolveu **`{}`**. **0 de 2.** Nos arquivos,
+  `Kelebek` e `Kaveckait` dão **zero acerto nos seis**, e `kelebekmedia.com` **não estava** no
+  `touched.txt`. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: não publicado, mas há sinal indireto e ele é o melhor da rodada.** A página
+  `/values` declara: *"**We are an equal opportunities employer**"*, *"Diversity and inclusion are at
+  the forefront of everything we do... giving our team a safe and inclusive workplace, **whether it
+  be on site or remote working**"*, e *"We are proud to offer the opportunity for **Albert Sustainable
+  Practice Training to all our colleagues**"*. Casa que escreve política de RH e treinamento de
+  colaborador **tem estrutura de emprego**, não só freelance — é o sinal mais próximo de patrocínio
+  que esta rodada encontrou, **e ainda assim não é promessa de visto e a carta não pode dizer que é**.
+- **RESSALVA HONESTA:** (1) **sem endereço de pessoa**, e o caminho é `info@` ou formulário; (2) **a
+  casa é produtora e detentora de IP, não estúdio de produção**: em nenhuma página ela diz ter
+  pipeline interno, e o quadro de nove pessoas é **quase todo desenvolvimento, publicação,
+  distribuição e finanças** — uma Head of Art sobre nove pessoas pode ser **direção de arte de marca
+  e de licenciamento**, não supervisão de pipeline 3D; (3) **nada no site diz 3D, CG ou personagem
+  em modelagem** — Isadora Moon é ilustração 2D de livro, e a técnica das séries não está declarada,
+  o que põe a casa na família da armadilha Myth Studio; (4) o rodapé diz **© 2025**, então o quadro
+  tem um ano e **cargo desatualizado é pior que alvo nenhum**: confirmar a Giedrė antes de escrever.
+
+### FICHA 5 — Nnanna Kama, **Executive Producer / Director** da VirtX (Reino Unido) — **`sem-email`, e é a ÚNICA CASA DA RODADA QUE PUBLICA UM CHARACTER ARTIST NO PRÓPRIO QUADRO**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **cinco nomes com cargo e bio**, e dois deles
+  são a razão de a casa entrar: *"**Character Artist Florian Budzik** — Florian contributed to the
+  Stay Dry's iconic characters, visual storytelling and design. A graduate of **ISART Digital in
+  Paris**"* e *"**3D Environment Artist Esen Unukogbon**"*, mais dois **3D Generalist** (Fejiro
+  Itimi-Imonikhe, *"bring compelling digital assets to life from **stylized characters** to detailed
+  environmental elements"*, e Uchenna Okiya). **O Character Artist e os generalistas são par de
+  bancada, não quem contrata** — escrever para eles queima a casa sem porta. Quem decide é o
+  **Nnanna Kama**, e a bio dele é o argumento inteiro: *"**Executive Producer/Director** — Nnanna is
+  a **BAFTA nominated creative with close to two decades of experience in the video games industry at
+  companies such as Sony, Sumo Digital and most recently Unity**. He's **passionate about empowering
+  artists** to achieve their highest expression through technology and leadership"*. A produtora
+  Maryjane Universal é o outro cargo sênior e é **comunicação e coaching**, não arte.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA. Linha entra como `sem-email`.** A casa publica **duas
+  caixas funcionais e as duas no OUTRO domínio**: `hello@virtx.uk` (na própria `/team`: *"Get in touch
+  with us at hello@virtx.uk"*) e `services@virtx.uk` (na política de privacidade). **O site é
+  `virtxgroup.com` e os emails são `@virtx.uk`** — segunda armadilha de domínio-cruzado da mesma
+  rodada, depois da Onesize. **Nenhum endereço montado; não há um só endereço de pessoa para provar
+  padrão.**
+- **URLs exatas abertas nesta rodada:** **`https://www.virtxgroup.com/team`** (**200, 879.518
+  bytes**), que traz os cinco nomes com cargo e bio; `https://www.virtxgroup.com/privacy-policy`
+  (**200, 861.349 bytes**); e `https://www.virtxgroup.com/` (**200, 908.913 bytes**). O rodapé fecha
+  a identidade jurídica: *"Copyright © 2026 **VirtX Ltd**"*.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"**Meet the Team** — They make the vision
+  come alive, and **with them, magic becomes possible**"*, e a linha do próprio Nnanna, *"passionate
+  about **empowering artists to achieve their highest expression** through technology and
+  leadership"*. Serve porque é a frase de um veterano de vinte anos de Sony, Sumo e Unity dizendo que
+  o trabalho dele é abrir caminho para artista — que é literalmente o pedido da carta.
+- **FORA DOS EUA: SIM, Reino Unido** (`VirtX Ltd`, domínio `.uk`). **A frase de realocação ENTRA.**
+  **Ressalva de registro: a casa não publica endereço postal nem cidade**, e as bios citam
+  **produções africanas** (MNET, Africa Magic, ROK, ONU) — a operação pode ser distribuída, e eu não
+  invento a cidade.
+- **DEDUPE:** Gmail `VirtX OR "Nnanna Kama" OR "King Banana" OR kingbananatv OR "Katie Simmons" OR
+  eyebolls` devolveu **`{}`**; `in:sent (... virtx.uk OR virtxgroup.com)` devolveu **`{}`**.
+  **0 de 2.** Nos arquivos, `VirtX`, `virtx` e `Nnanna` dão **zero acerto nos seis**. **Primeira
+  pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO: nulo.** Cinco pessoas, nenhuma página de carreiras, nenhuma política.
+- **RESSALVA HONESTA, e ela é grande:** (1) **sem endereço de pessoa**, e a única porta é
+  `hello@virtx.uk`; (2) a casa é **minúscula e de um projeto** — tudo no quadro gira em torno de
+  *"Stay Dry"*, e quatro das cinco bios descrevem o que a pessoa fez **naquele** projeto, o que é
+  perfil de **equipe de produção montada por projeto**, não de folha de pagamento; (3) ela **já tem
+  Character Artist**, o que é bom sinal de disciplina e **mau sinal de vaga** — o assento está
+  ocupado; (4) duas bios mencionam **"AI workflows"** como ferramenta declarada, o que é registro
+  honesto para o maestro decidir se quer escrever; (5) não há data no quadro e não há endereço.
