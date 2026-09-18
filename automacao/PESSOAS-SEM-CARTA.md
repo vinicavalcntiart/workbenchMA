@@ -9444,3 +9444,41 @@ frase da rodada.
   ser o dono técnico do ativo e **não** quem escolhe artista; (d) casa pequena, seis pessoas publicadas, sem
   página de vaga e sem convite a portfólio — a carta é 100% frio; (e) o site não diz uma palavra sobre
   visto ou patrocínio.
+
+### FICHA 3 — Edith Marie Nielsen, **Partner & Producer** da Skjaldborn (Copenhague, Dinamarca) — **PUBLICADO, confiança ALTA**, e é a **SEGUNDA E ÚLTIMA** pessoa desta casa
+
+- **EMAIL: `edith@skjaldborn.com` — PUBLICADO, confiança ALTA.** Texto puro na seção *Our founders* da
+  raiz, ao lado do nome e do cargo. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://skjaldborn.com` (**200, 155.113 bytes**). Todos os caminhos
+  de equipe (`/team`, `/people`, `/contact`, `/kontakt`, `/om-os`, `/medarbejdere`) dão **404 com 906
+  bytes** (404 magro, ao contrário da família nórdica de 404 gordo): **a casa inteira também mora na
+  raiz.**
+- **MX conferido nesta rodada** (DoH): `smtp.google.com` (Google Workspace, vivo).
+- **O que a raiz publica:** três fundadores — *Mikkel Mainz, CEO & Director* (`mikkel@`); *Edith Marie
+  Nielsen, Partner & Producer* (`edith@`); *Thorbjørn Rønje, Partner* (`tr@morph.vc`, **domínio de
+  terceiro, fundo de capital, não é endereço da casa**) — mais as caixas `contact@skjaldborn.com`
+  (*Enquiries*) e `jobs@skjaldborn.com` (*Careers*).
+- **POR QUE ELA, e não outro da casa:** **Mikkel Mainz levou carta em 11/09 21h26** e não respondeu; o
+  terceiro fundador tem endereço em domínio de fundo de investimento e não da casa. **Ela é literalmente a
+  única segunda pessoa possível**, e o cargo ajuda: em casa de pipeline completo quem monta equipe de
+  temporada é o produtor, e a raiz diz que a **segunda temporada de HØJ está em desenvolvimento**.
+- **GANCHO, literal da casa, e diferente do que a primeira carta usou:** a carta de 11/09 já gastou
+  *"full-pipeline animation studio crafting fantastic stories, characters, and worlds"*; o que está livre é
+  o bloco do projeto — *"HØJ | TV series (52x11') | **S01 done | S02 in development** | Dragons, giants,
+  and Norse mythology – what could possibly go wrong?"* — e a linha de origem, *"We develop, produce, and
+  release our own original animation IP, products, and merchandise, enjoyed by millions around the world"*.
+- **FORA DOS EUA:** sim, Dinamarca, UE. **A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `skjaldborn OR Mainz OR "Edith Marie" OR Rønje in:anywhere`
+  devolveu **um fio**: a carta **ENVIADA** para `mikkel@skjaldborn.com` em **11/09 21h26**, assunto exato,
+  abrindo com *"Hi Mikkel, Skjaldborn calls itself a full pipeline studio crafting characters and worlds,
+  and HØJ is dragons, giants and Norse mythology"*, **sem resposta e sem recusa**. `edith@skjaldborn` dá
+  **zero** em todos os arquivos; `enviados.csv` linha 872 e `pessoas.csv` linha 236 confirmam a primeira.
+- **RESSALVAS HONESTAS:** (a) **segunda carta, primeira sem resposta há uma semana**, e a primeira já citou
+  o HØJ — o ângulo novo tem que ser a temporada 2 e não o mesmo argumento; (b) **o cargo é de produção**, e
+  a casa não publica ninguém de arte; (c) **a técnica declarada é 2D**: HØJ e o universo *Tales of
+  Alethrion* são traço, o histórico é Sun Creature, e o trabalho de 2022 anotado na própria linha do tempo
+  é *"storyboarding and compositing on 20 episodes of JaFilm's TV series: Monster Loving Maniacs"* — **não
+  há cadeira de personagem 3D publicada em lugar nenhum**, e se o maestro segurar por isso, está certo; (d)
+  a casa tem **caixa própria de vaga** (`jobs@skjaldborn.com`) publicada ao lado dos fundadores, então
+  escrever à sócia é aposta; (e) é casa de IP própria e Kickstarter, ou seja dinheiro de campanha e não de
+  encomenda, o que aperta contratação sênior.
