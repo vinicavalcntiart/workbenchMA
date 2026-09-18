@@ -5810,3 +5810,111 @@ Relidas na fonte, as três da fatia "formulário próprio sem porteiro" da disci
 > **Regra: "formulário próprio sem porteiro" só se escreve depois de ver um `<form>` com campo de
 > arquivo.** Duas destas três foram registradas como porta de formulário sem isso, e cada uma
 > custou uma leitura de rodada para virar porta de carta.
+
+## Jhon A, 18/09 17h30 UTC (vigésimo primeiro turno) — A ÚNICA VAGA DA DISCIPLINA EM 7.520 É DE PERSONAGEM NA **DREAMWORKS**, E A AUSÊNCIA DO VETO SÓ VALEU PORQUE TEVE **CONTROLE POSITIVO**
+
+Rodada de formulários com três frentes novas (alertas do dia, janela de 8 horas, bancos de
+talentos). **Placar: 0 candidatura enviada, 1 porta de PERSONAGEM achada 36 minutos depois de
+publicada numa casa da regra 14 e entregue à mão dele por captcha de desafio, 0 duplicata, 0
+tentativa contra veto escrito.** Personagem: 1 achada, 0 enviada. Ambiente: 0 — e não por falta de
+estoque de ambiente, mas porque **ambiente não se usa como carro-chefe** e a de personagem veio
+primeiro.
+
+### 1. A PORTA: NBCUniversal `744000150414819`, *Principal Character Artist (Face)*, Montreal
+
+Publicada **hoje às 15h57:55 UTC** (campo `releasedDate` da API do SmartRecruiters) e achada às
+16h33. É personagem de verdade — arte facial, *blendshapes*, *scanning*, anatomia, pipeline de
+personagem modular, Unreal e Metahuman — e a casa é da **regra 14** (DreamWorks inclui
+NBCUniversal). **Parede: DataDome com captcha de desafio**, medido com navegador de verdade e não
+por grep de HTML: o frame principal fica com **0 campos e 0 caracteres em 10 tentativas** e o
+formulário real é um iframe de `geo.captcha-delivery.com` com 16 campos, botões *Verify*/*Send* e o
+texto literal *"Slide right to secure your access ... Automated (bot) activity on your network (IP
+160.79.106.136)"*. Dossiê campo a campo na `FILA-DO-VINI.md`, entrada no painel, e **o
+PushNotification é do maestro** — este agente não tem a ferramenta.
+
+### 2. A REGRA QUE SAI DAQUI, E ELA É SOBRE **PROVAR AUSÊNCIA**
+
+Esta casa carrega o erro mais caro da campanha: em 07/09 três vagas da NBCUniversal em Montréal
+foram recomendadas e morreram no bloco *Eligibility Requirements* (*"Must be legally authorized to
+work in Canada"*), e o `BRIEF-FORCA-TAREFA` fixou *"leia a seção Eligibility Requirements ANTES de
+recomendar"*. Dizer "esta não tem o bloco" é exatamente o tipo de frase que repetiria o erro, então
+ela foi medida **contra um controle com resposta conhecida**, no **payload cru inteiro** e não só
+nas seções do anúncio: a irmã **Lead Environment Artist `744000149923759`** (16/09) traz
+`Eligibility`, `legally authorized`, `authorized to work` e `days a week` nos seus 16.129 bytes; a
+de personagem traz **zero de todos** nos seus 15.598, com o **mesmo conjunto de chaves de topo** e
+as **mesmas quatro seções**.
+
+> **Regra: quando a decisão depende de um bloco estar AUSENTE, a ausência só vale se uma requisição
+> IRMÃ da mesma casa, no mesmo endpoint, mostrar o bloco PRESENTE.** Sem o positivo, "zero acerto"
+> é indistinguível de "li no lugar errado" — e as duas coisas já aconteceram nesta campanha.
+
+**E a régua confirmou outra vez a armadilha do SPA:** a URL final devolve **63 caracteres** de texto
+limpo (leitura inválida pelo piso de ~1.000), e no corpo da API, com 10.706 caracteres, os 3 acertos
+são **falso positivo**: `citizen` é *citizenship* dentro da cláusula antidiscriminação, e os dois
+`visa` estão dentro das palavras **francesas** *visages* e *Visage*. **Acrescente o francês à lista
+de ruído da régua: `visa` casa dentro de `visage`.**
+
+### 3. DOIS DEFEITOS DE MEDIÇÃO MEUS, E UM DELES ESTÁ NO COMANDO QUE O PRÓPRIO BRIEFING MANDA USAR
+
+- **O meu leitor de Teamtailor apagou 150 quadros sem um erro no log.** A primeira passada devolveu
+  *"172 quadros, 0 com HTTP 200, 0 vagas"*, o que era **impossível** contra o controle do próprio
+  dia (14h45 leu 172 quadros e 1.985 vagas). Causa: **o `jobs.json` do Teamtailor é um JSON FEED
+  1.1 e a lista mora na chave `items`, não em `jobs`.** Corrigido, a família dá 129 quadros com 200,
+  **1.988 vagas, 21 na janela e zero da disciplina**. Controles: `airshipinteractive` e `fatshark`
+  devolveram o feed cheio (a *Character Artist* `8190501` visível) e `10chambers` devolveu `items`
+  vazio de verdade. É a **terceira** aparição desta família de defeito (chave errada no Teamtailor,
+  camelCase com 422, `/list` do BambooHR sem campo de data): **chave ausente na resposta não é
+  quadro vazio, é leitor errado, e o sintoma dos dois é idêntico.**
+- **`pgrep -c -f chrom` conta a própria linha de comando que pergunta.** Devolveu **1** com **zero**
+  navegador na máquina, enquanto `ps -eo comm= | grep -cE '^(headless_shell|chrome|chromium)$'`
+  devolveu 0; o `pgrep -a` mostrou que o único casado era o meu próprio bash, porque a linha continha
+  a palavra `chrom`. A troca de 17/09 02h40 está certa no alvo (o binário é `headless_shell`) e
+  **errada na forma**. **Conte por `ps -eo comm=` com âncora, ou leia com `pgrep -a -f chrom` e
+  descarte a linha do próprio comando** — senão um agente desiste de abrir o navegador a que tinha
+  direito.
+
+### 4. AS TRÊS FRENTES, COM NÚMERO E COM O QUE MORREU EM CADA UMA
+
+**Alertas do dia (8 fios lidos inteiros, não pelo snippet): zero.** O *"New jobs at DISNEY"* das
+15h23 tem **quatro** vagas e a única de arte é a `10160980` da ILM Londres, **já enviada em 17/09**
+(o `utm_content` do link entrega o ID sem abrir nada); as outras são ILM **Mumbai** (escopo), e
+comunicação corporativa em Singapura e **Tóquio**. O da **Warner** trouxe, na seção *"modeler
+Jobs"*, um único item: *"Staff, Architect - Tax Systems (OneSource)"*. O do LinkedIn (*Character Art
+in Canada*) trouxe duas da **Light & Wonder** em Montreal, e as duas caem por **dois** motivos
+medidos na fonte: são **2D** (*"7+ years of experience in 2D game art"*, *"Mastery of Adobe
+Photoshop"*, Spine) e são de **05/08**, com `startDate` do próprio empregador — **o alerta parecia
+novidade e tinha 44 dias.**
+
+**Janela de 8 horas (corte 08h30 UTC), 640 tokens do `tokens-ats-1809.csv`:** Greenhouse 95/92/2.124
+vagas/14 na janela; Ashby 54/53/690/1; Lever 47/41/866/2; Teamtailor 172/129/1.988/21; Recruitee
+84/80/674/0; SmartRecruiters 32/32/618/32; Workable 28/15/179/0; BambooHR 128/119/381/0 pela receita
+de 12h45 (filtra título no `/list`, paga `/detail` só nas candidatas). **Total: 7.520 vagas lidas,
+70 publicadas na janela, UM acerto da disciplina.**
+
+**Bancos de talentos: secos, e conferido em vez de re-varrido.** As 11 casas de Pinpoint da fila de
+10/09 têm todas linha em `enviados.csv`; os 17 slugs de Connect com rótulo de personagem já tinham
+cadastro. **A única pendência de personagem que restava na `FILA-PERSONAGEM-1209.md` era a
+`liquidswords`, o slug 6 de 15 nunca lido** — hoje ela ganhou **terceira assinatura de parede de
+rede**: o `jobs.json` prova a *Open Application* `1851070` viva e inédita (zero no `enviados.csv` e
+zero no Gmail), mas `/connect` e a rota de candidatura dão **301** para `careers.liquidswords.com`,
+que falha no TLS com *"no alternative certificate subject name matches target host name"*
+**inclusive com `--cacert /root/.ccr/ca-bundle.crt`**, e o proxy declara `bundleCoversEveryHost:
+true`. Não é recusa do estúdio e não é falta de CA: é a rede entre este contêiner e o domínio
+próprio. **Porta viva atrás de parede de rede**, não porta morta.
+
+### 5. A RONDA DO GRUPO DISNEY DAS 17h20 ACHOU UM ID NOVO, E ELE É O TERCEIRO FALSO AMIGO DE "CHARACTER"
+
+`ronda-disney.sh` por delta (12 consultas, 0 falhas, 13 IDs no ar): **`10160035`**, *Disney Live
+Entertainment Character Content Creator Intern, Spring 2027*, Kissimmee, `startDate` de hoje, nos
+**dois** sites. **A regra 14 não dispara, porque ela exige vaga de ARTE OU MODELAGEM.** O corpo
+(5.151 caracteres) diz que o time cuida de *"written and visual **costume documentation** materials
+... of Character costumes worldwide"*, o que se faz é *"Update, maintain, and **audit** existing
+documentation"* e *"**Edit Character photos** in support of Documentation and Performance Training
+Materials"*, e o requisito é *"Exceptional **organizational** skills, including ... **cataloging**,
+and tracking"* com *"emphasis on Adobe **InDesign**"*. É redação técnica e diagramação de
+documentação de **fantasia de personagem de parque**, mais estágio de 6 meses.
+
+> **Regra: no grupo Disney, `Character` sem 3D ao lado costuma ser personagem de PARQUE** (fantasia,
+> interação, documentação), do mesmo jeito que *Creature TD* é rigging e *Creature FX* é simulação.
+> Junta-se à `10160043` de 15/09. **O título não decide; o corpo decide, e o corpo custa uma chamada
+> de API.**
