@@ -4329,3 +4329,192 @@ e a casa estava registrada como "anúncio FECHADO" e hoje responde 200, ou seja 
 **1.059 anúncios lidos em 14 dias para zero achado é SAÚDE do estoque, não falha da varredura.**
 O que sobrou de valor é método: duas fontes que devolviam zero falso agora leem o quadro inteiro,
 uma terceira ganhou rota com 6x a cobertura, e a armadilha que anularia essa rota está medida.
+
+## Jhon A, 18/09 00h41 UTC (décimo terceiro turno, primeiro do dia novo) — VARREDURA POR DATA DE PUBLICAÇÃO: DUAS PORTAS, E A DE VANCOUVER É A MELHOR DO ESTOQUE
+
+Turno de **recência** nos quadros que a campanha já conhece, janela **17/09 00h00 UTC em diante**.
+Só `curl` e API, **nenhum navegador** (`ps -eo comm=` devolveu 0 no começo e nenhum processo foi
+criado).
+
+**Números medidos: 9 famílias, 506 quadros consultados, 413 com corpo útil, 8.365 vagas lidas,
+274 publicadas desde 17/09, 2 acertos da disciplina, 2 PORTAS PRONTAS, 0 duplicata, 0 vaga vetada,
+0 candidatura gasta.** Nada de NÃO CONFERIDO novo; o que continua não conferido está nomeado no §5.
+
+| família | quadros | com corpo | vagas lidas | publicadas ≥17/09 | acertos | campo de data |
+|---|---|---|---|---|---|---|
+| Greenhouse | 84 (2 em 404) | 70 | 1.963 | 28 | 0 | `first_published` |
+| Lever `api.lever.co` | 30 | 19 | 378 | 2 | 0 | `createdAt` (epoch ms) |
+| Lever `api.eu.lever.co` | 30 | **4** | 26 | 0 | 0 | idem |
+| Ashby | 27 | 21 | 364 | 3 | 0 | **`publishedAt`** |
+| Teamtailor | 167 | 130 | 1.915 | 170 | 0 | `items[].date_published` |
+| Recruitee | 74 | 62 | 662 | 9 | 0 | `published_at` |
+| SmartRecruiters | 43 bases | 37 | 2.696 / 2.722 decl. | 150 | **1** | `releasedDate` |
+| BambooHR | 89 | 54 | 290 (+290 detalhes) | 5 | **1** | `datePosted` do `/detail` |
+| Workday (4 locatários) | 7 sites | 7 | 677 únicas | 55 | 0 | `postedOn` |
+| Workable | 22 | **12** | 76 | 1 | 0 | `published_on` |
+
+**Correção de brief, pequena e que custa uma família:** o campo do Ashby é **`publishedAt`**, não
+`publishedDate`. O do Recruitee é `published_at` e ele **é** distinto de `created_at` e
+`updated_at` (a Framestore mostra os três: `created_at` 15:39:33, `published_at` 15:47:47).
+
+### 1. A PORTA DO TURNO: ICON CREATIVE, `Character Sculptor`, VANCOUVER, PUBLICADA ONTEM
+
+`iconcreative.bamboohr.com/careers/150`, `datePosted` **2026-09-17**, Full-Time, time de Assets,
+Mid-level, faixa **publicada CAD 57.372,12 – 80.730,00**. É a disciplina literal dele: esculpir
+personagem estilizado em ZBrush a partir de concept 2D, e o anúncio escreve que o sculpt tem de
+servir a jusante para *"topology, rigging, deformation, **grooming**, **surfacing**"*, com Maya,
+Marvelous Designer, Substance Painter, Mari **ou Houdini** entre os diferenciais.
+
+**A régua e o piso de validade, nesta ordem:** na **página** ela devolveu **8 caracteres** de texto
+limpo — leitura inválida, **NÃO CONFERIDO**, porque o quadro do BambooHR é SPA — e foi **refeita na
+API** sobre `/careers/150/detail`: **7.393 caracteres e 2 acertos dos 43 termos**, os dois falsos
+positivos de estrutura (`located in` → *"located in the historic Gastown district of Vancouver"*,
+`proficiency in` → *"Advanced proficiency in ZBrush"*). **Zero veto de texto.**
+
+**O sinal de visto é o melhor que este estoque já teve, e ele está no FORMULÁRIO, não no anúncio:**
+a pergunta obrigatória `1528` *"Are you eligible to work in Canada? Please specify your status"* tem
+quatro opções e a quarta é **`I need a work permit` (option id 449)**. A casa **oferece** a resposta
+honesta dele em vez de barrar na porta. Somado ao `RCIC Immigration Coordinator` que eles mantêm
+aberto e à frase *"a diverse team of artists from around the globe who have joined us here in
+British Columbia"*.
+
+> **Regra que este achado acrescenta: o veto — e a ausência dele — pode estar nas OPÇÕES de uma
+> pergunta obrigatória do formulário, e a régua nunca lê isso** porque a régua lê o texto do
+> anúncio. No BambooHR as opções saem de graça no `/careers/<id>/detail`, junto com quais campos
+> são obrigatórios. **Ler o `/detail` é o mesmo custo de ler o anúncio e entrega o dobro.**
+
+**E não é duplicata da 136.** O ID `150` dá **zero ocorrência** nos quatro arquivos e não existe
+nenhuma linha com *Character Sculptor* na campanha. A casa é conhecida: a `136` *Intermediate
+Modeling/Texture Artist* foi **enviada em 31/08** e confirmada, e carta fria saiu em 08/09 para
+`carson@iconcreativestudio.com` (Gmail, fio `1a081fc2df6f2a08`). O registro de 14/09 dizia que a
+`136` era a única da disciplina no quadro e que **o atrito dela era o nível Intermediate**; hoje a
+casa abriu uma de **escultura de personagem**, que é mais perto do centro dele do que a `136` era.
+
+**Vai à mão dele:** reCAPTCHA v2 de caixa acima do *Submit Application*, medido **com clique** em
+06/09 neste mesmo quadro. Comando e as nove perguntas estão na linha do `processados.csv` e no
+painel.
+
+### 2. E O CONTROLE QUE IMPEDE A CONCLUSÃO ERRADA: NO BAMBOOHR O `curl` NÃO VÊ O CAPTCHA, E A FLAG NÃO PREDIZ NADA
+
+O HTML inicial da `150` tem **zero** ocorrência de `recaptcha/api.js`, `g-recaptcha`, `grecaptcha`,
+`siteKey`, `hcaptcha` e `turnstile`. Isso **não** é porta limpa, e o controle prova:
+
+| quadro | `api.js`/`g-recaptcha` no HTML | flag `ATS_CAREERS_SITE_RECAPTCHA` | parede medida com clique |
+|---|---|---|---|
+| `iconcreative/150` | 0 | **presente** | reCAPTCHA v2 de caixa (06/09) |
+| `barnstormvfx/114` | 0 | **presente** | reCAPTCHA v2 de caixa |
+| `offworldindustries/199` | 0 | **AUSENTE** | **reCAPTCHA v2 COM DESAFIO** (09/09) |
+
+> **A flag está anticorrelacionada com a parede**: o único quadro dos três que **não** a traz é o
+> único com desafio por imagem. Ela é lista global de *feature flags* da plataforma e não diz nada
+> sobre o quadro. Isto confirma com número o que o `respostas-formularios.md` já dizia em uma linha
+> (*"o teste de flag no HTML não distingue nada; quem distingue é o clique"*) e **desfaz** a
+> afirmação de 11/09 de que a flag é *"servida em todos os quadros"* — a Offworld não a traz.
+
+### 3. A SEGUNDA PORTA, E O ACHADO DE REGISTRO VALE MAIS QUE ELA: **VETO QUE MORAVA NO TEXTO NÃO SE HERDA**
+
+NBCUniversal, `Lead Material Artist (Character/Wardrobe)`, **Montreal**, SmartRecruiters
+`744000150186264`, `releasedDate` **17/09 17:59:27Z**. Régua na URL final: **10.785 caracteres**
+(leitura válida) e **1 acerto**, `citizen` dentro do parágrafo de igualdade de oportunidade — falso
+positivo de estrutura. **Zero veto.**
+
+A irmã dela, `744000137526669`, mesmo título e mesma Montreal, publicada em 13/07, estava
+registrada desde **07/09** com **veto de residência ESCRITO** na seção *Eligibility Requirements*:
+*"Must be willing to work in our Montreal office a minimum of 4 days a week. **Must be legally
+authorized to work in Canada.**"* Lidas as 2.696 vagas das 43 bases, **ela não existe mais no
+quadro**: saiu e foi substituída às 17h59 de ontem por **duas** requisições novas — esta
+(Character/Wardrobe) e a `744000150187005` (World/Props, fora da disciplina) — **e a seção
+Eligibility Requirements com a frase do veto foi REMOVIDA do texto novo** (zero ocorrência de
+`montreal office` e de `legally authorized` no JSON da API).
+
+> **Regra, e ela conserta pela metade a regra da EA de 17/09: o que decide se um veto se herda por
+> família é ONDE ELE MORAVA.** Veto que veio por **e-mail** (EA, `215657`) o anúncio nunca carrega,
+> então sobrevive a qualquer reescrita e **só o dedupe por ID segura** — foi o caso de ontem. Veto
+> que estava **no texto** morre quando o texto é reescrito, e **herdá-lo é inventar um veto que a
+> casa retirou**. As duas situações têm o mesmo sintoma (anúncio limpo, irmã vetada) e decisão
+> oposta. O desempate é uma pergunta só: *a frase estava no anúncio antigo ou na caixa de e-mail?*
+
+**O que ainda derruba esta vaga, e por isso ela é a segunda e não a primeira:** (a) a qualificação
+básica *"Experience as a Lead on at least one shipped AAA title"*, que ele não tem; (b) Montreal e
+Quebec, que o `BRIEF-JHON` manda por último no Canadá, e o anúncio é **inteiramente bilíngue**
+(o campo `language` do ATS diz `en`, então não há exigência escrita de francês — é sinal, não veto);
+(c) o cargo é de **liderança de time** de material e shader. **Porteiro medido hoje por `curl`:** a
+página abre (200, 132.284 bytes) e a rota de candidatura `oneclick-ui/company/NBCUniversal3/...`
+devolve **403 com 1.717 bytes de DataDome** (objeto `dd`, `host: geo.captcha-delivery.com`,
+`ct.captcha-delivery.com/c.js`). Parede de desafio, vai à mão dele.
+
+### 4. TEAMTAILOR: **77% DO VOLUME E 91% DA RECÊNCIA DESTA FAMÍLIA VÊM DE TOKEN ADIVINHADO**
+
+Dos 167 locatários que o repositório entrega, **61 aparecem só no
+`automacao/quadros-tt-rec-1545-1009.csv`**, que foi uma rodada de **adivinhação de token** de 10/09.
+57 estão vivos e respondem 200 com quadro cheio, e entregam **1.483 das 1.915 vagas lidas** e **154
+das 170 publicadas desde 17/09**. E o campo `title` do próprio JSON Feed **desmente o slug um por
+um**: `house` é a **Iam**, `rhino` é a **Diamond**, `seven` é a **Baar**, `habitat` é a **HEALTH
+CITY**, `black` é a **Eventus** (78 vagas), `butter` é a **All Gravy**.
+
+**A cobertura REAL da família é 106 tokens e 432 vagas, com 16 publicadas desde 17/09 e zero da
+disciplina** — não as 1.915 e 170 que a tabela do §0 mostra, e não os *"141 locatários vivos, 1.876
+vagas"* que este briefing registrou em 17/09 às 15h05. É o mesmo mecanismo de encurtamento de slug
+que o turno das 17h40 mediu na ArtStation e no `axis`, agora medindo a própria contabilidade.
+
+> **Regra: token que entrou por ADIVINHAÇÃO não pode ser guardado no mesmo arquivo e no mesmo
+> formato que token conferido contra a casa** — a varredura seguinte não distingue os dois e soma
+> tudo, e o número inflado passa por todos os sinais verdes. No Teamtailor o desempate custa **zero
+> requisição extra**: o `title` do JSON Feed diz o nome da empresa, e basta compará-lo com o nome da
+> casa antes de contar a vaga.
+
+### 5. WORKABLE: A LANE ABRE POR OUTRA ROTA, E O PORTEIRO DA FAMÍLIA SE LÊ POR `curl`
+
+Duas coisas, e a segunda vale mais.
+
+**(a) A rota que lê.** A campanha media `POST apply.workable.com/api/v3/accounts/<token>/jobs` e
+levava **429 com `error code: 1015`** do Cloudflare desde 07/09 — reconfirmado hoje às 00h29 em
+requisição **única e isolada**. Existe uma segunda rota, e ela é **GET**:
+`https://apply.workable.com/api/v1/widget/accounts/<token>?details=true`, que devolveu **200 com
+243.456 bytes** para `rebellion`, com o quadro inteiro **e o corpo dos anúncios**, e os campos de
+data são **`published_on`** e **`created_at`**. **Ressalva honesta, medida: a rota nova NÃO é imune
+ao 429.** 22 tokens com 8 em paralelo → 4 com 200, 2 com 404, 16 com 429; refeitos em série com 4 s
+→ mais 4; com 12 s → mais 5. **O estrangulamento é de TAXA por endereço de IP, não de rota nem de
+cliente**, e o que a rota nova acrescenta é que a leitura passa quando o ritmo é baixo. Receita:
+um token por vez, GET, ≥12 s de intervalo, nunca em paralelo. **Lidos hoje: 12 quadros, 76 vagas, 1
+publicada em 17/09** (*Chief Financial Officer* da One Of Us, fora da disciplina). Seis tokens
+seguem em 429 e continuam **NÃO CONFERIDOS**: `double-eleven`, `keywords-intl1`, `rebellion`,
+`supermassivegames`, `lighthousegames`, `pikpok`. E `api` é 404 — é ruído da minha própria extração.
+
+**(b) O porteiro, e isto serve para a família inteira.** A página
+`apply.workable.com/j/<shortcode>/apply` serve 7.773 bytes de casca com um bloco
+`window.careers = {...}` em **JSON limpo que DECLARA a configuração de captcha do quadro**. Medido
+na One Of Us: `features.recaptcha` = **false** e `wjb_acp_turnstile_captcha_enabled` = **true** com
+`config.turnstileWidgetSiteKey` = `0x4AAAAAAAVY8hH3nz6RxaK0`. **O porteiro do Workable era coisa de
+abrir navegador e clicar; agora custa uma requisição GET.** É o oposto exato do BambooHR do §2.
+**Ressalva: a chave diz QUE o Turnstile existe, não diz o MODO** — gerenciado, não interativo e
+invisível são coisas diferentes e os dois últimos passam sem clique. O modo fica **NÃO CONFERIDO** e
+não se resolve por `curl`. De passagem, `/j/<shortcode>/apply` devolveu 200 e **zero 429** no mesmo
+minuto em que a API do mesmo host devolvia 1015: **o estrangulamento é por rota de API, não pelo
+host.** (A One Of Us `Modeller` de Paris e a `Look Development Artist` **já estão no painel** com a
+recomendação escrita; não são achado novo e estão fora da janela. Ganharam porteiro medido.)
+
+### 6. WORKDAY: QUATRO DOS SETE SITES **NUNCA PARAM DE PAGINAR**, E A PARADA POR PÁGINA VAZIA NÃO BASTA
+
+O laço com parada por página vazia rodou até o teto de 2.000 em quatro sites:
+`cloudimperiumgames/CIG_Global_Careers` leu **1.999 linhas para 59 vagas únicas**,
+`xboxgaming/External` 1.986 para **106**, `warnerbros/Global` 1.987 para **327**,
+`xboxgaming/King_External_Careers` 1.900 para **19**. Eles **repetem página indefinidamente** para
+qualquer `offset` acima do total real, com `jobPostings` cheio, e a página vazia **nunca chega**.
+
+> **Correção da regra de 17/09 15h05:** *"pare quando a página vier vazia"* **não é suficiente** —
+> em quatro de sete locatários ela nunca vem. A condição que funciona é a outra metade da mesma
+> regra: **pare quando nenhum `externalPath` novo aparecer**, e dedupe por `externalPath`. O total
+> honesto da frente é **677 vagas únicas, 55 com `Posted Today/Yesterday`, zero da disciplina**.
+
+### 7. O CONTROLE DE FALSO NEGATIVO DO FILTRO, E O QUE ELE ACHOU
+
+O filtro de título rodou já com a correção de 17/09 (`modell?(er|ing|eur|iste)`, mais `shader`,
+`hair`, `fur`, `asset artist`, `3d artist`). Depois dele, **segunda passada pelo CORPO** nas 212
+recentes das cinco famílias que entregam o texto do anúncio na mesma resposta: **16 acertos, e os 16
+são ruído** — `character` no sentido de índole em *Executive Assistant* da 2K, em *Communications
+Coordinator* e em *Senior Software Engineer - Roblox Database*; `surfac` dentro de *resurface* em
+suporte técnico da Chaos e da Taboola; o único com escultura de verdade é um *Digital Product
+Designer* de brinquedo da Hasbro em **Hong Kong**, fora do escopo por escrito. O único acerto real
+pelo corpo é o `CFX Artist 8394174` da Untold, **que já tinha decisão de 17/09** por disciplina.
+**Zero acerto novo pelo corpo** — o filtro de título não deixou nada passar nesta rodada.
