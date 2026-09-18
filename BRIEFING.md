@@ -4727,3 +4727,11 @@ por `curl`, sem navegador.**
 > do embed um bloco de *prefetch* com URL assinada.** Foi o que transformou "campos não conferidos"
 > em 16 campos com 14 obrigatórios nomeados, em três minutos e sem navegador. O Tally (regra de
 > 17/09 05h00) e o Typeform têm blocos equivalentes que ninguém abriu ainda.
+
+### Maestro, 18/09 03h20 UTC: como o Airtable se preenche de verdade (Lunar, cinco ensaios para um envio)
+
+1. **Rótulo de tela, não nome de coluna.** O `readSharedFormData` dá os nomes das colunas (`Attachments`, `Current Status`, `Roll applying for`); a tela mostra outros (`Attach CV`, `Current Employment Status`, `Role applying for`). O `at_fill2.js` casa pelo texto da tela. Use `at_dump.js` antes de escrever o `ans_*.json`.
+2. **Campo multilinha do Airtable é `DIV role=textbox contentEditable`**, e o detector de controle do `at_fill2.js` não o via: o texto ia parar no campo anterior. Acrescentei `role=textbox` ao `ehCtrl`. Leitura de volta agora confere.
+3. **Rádio (`LI role=radio`) se marca com seletor de texto exato do Playwright em `marcar`: `css:text="Senior"`.** `:text-is` dentro de `li[...]` devolveu zero. Texto exato entre aspas evita marcar a opção irmã que contém a mesma frase (`None UK or EU National, Currently in the UK...`).
+4. **Regex de opção sempre ancorada e sempre lida no log do ensaio.** `Character|Model` casou `Character Animation`; regex vazia de salário casou a PRIMEIRA faixa (GBP 20 a 24 mil). O log `casou por regex:` existe para isso; ENVIAR só depois de ler cada linha dele.
+5. **Prova do Airtable é o `submitSharedForm` 200 com `rowId`**, e os anexos são `completeMultipartUpload` 200 antes dele. A tela `Thank you for submitting the form!` é a segunda prova, não a primeira.
