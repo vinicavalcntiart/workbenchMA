@@ -5918,3 +5918,126 @@ documentação de **fantasia de personagem de parque**, mais estágio de 6 meses
 > interação, documentação), do mesmo jeito que *Creature TD* é rigging e *Creature FX* é simulação.
 > Junta-se à `10160043` de 15/09. **O título não decide; o corpo decide, e o corpo custa uma chamada
 > de API.**
+
+## Jhon A, 18/09 20h55 UTC (vigésimo segundo turno) — A TARDE AMERICANA DEU **ZERO PERSONAGEM EM 11.015 VAGAS**, A PORTA QUE SAIU FOI A DE AMBIENTE PARADA HÁ OITO DIAS, E AS CINCO FAMÍLIAS NOVAS RENDERAM **ZERO** PORQUE **SLUG QUE RESPONDE 200 QUASE NUNCA É A CASA QUE O NOME SUGERE**
+
+Rodada de formulários cobrindo a janela em que a costa oeste publica. **Placar: 1 candidatura
+ENVIADA E CONFIRMADA (Playdead, ZBrush Modeler, Copenhague), 0 duplicata, 0 tentativa contra veto
+escrito.** Personagem: **0 achada, 0 enviada**. Ambiente: **1**, e ela é o assunto do item 2.
+
+**Os números, por frente:** janela de 4 h (desde 16h00 UTC) em 612 tokens do
+`tokens-ats-1809.csv` — **8.138 vagas, 55 na janela, zero da disciplina**; casas grandes — **2.579
+vagas em 43 quadros, 121 publicadas hoje, zero da disciplina** (Disney por delta, Paramount pelo
+sitemap, Warner pelo oráculo do Workday, Netflix ×2, xboxgaming ×3, Pixar, SPE ×2, Sony global,
+SEGA, Gearbox, Unity, LNW, Spin Master, CIG ×2, Oracle CX da Virtuos, Personio ×23); cinco famílias
+que a campanha não lia por API — **21.615 sondagens, 136 quadros vivos, 298 vagas, 5 acertos e zero
+porta nova**; alertas do Gmail das últimas 6 h — **6 fios lidos inteiros, zero novidade**.
+
+### 1. O DISCRIMINADOR DE CADA FAMÍLIA NOVA, E POR QUE A MEDIÇÃO SÓ VALE COM O CONTROLE NEGATIVO
+
+Antes de sondar 4.323 slugs, cada família levou um par de controles (slug inventado e slug que
+existe), e **três das onze famílias da lista morreram exatamente aí**:
+
+| família | rota | slug inventado | slug real |
+|---|---|---|---|
+| **Breezy** | `<slug>.breezy.hr/json` | 404 | 200 com JSON de vagas |
+| **Pinpoint** | `<slug>.pinpointhq.com/postings.json` | 404 | 200 com `{"data":[…]}` |
+| **Homerun** | `feed.homerun.co/<slug>` | **302** | 200 com Atom |
+| **Rippling** | `api.rippling.com/platform/api/ats/v1/board/<slug>/jobs` | 404 `RESOURCE_NOT_FOUND` | 200 com lista |
+| **Jobvite** | `jobs.jobvite.com/<slug>` | **302** | 200 (mas a lista é SPA: contar vaga pede navegador) |
+| **HiBob** | `<slug>.careers.hibob.com` | **200, 1.342 bytes** | **200, os mesmos 1.342 bytes** |
+| **Zoho Recruit** | `<slug>.zohorecruit.com/jobs/Careers` | **200 com página de erro** | **200 com a mesma página de erro** |
+| **Dover** | `app.dover.com/jobs/<slug>` | **200** | 200 |
+| **iCIMS** | `<slug>.icims.com/jobs/search` | 404 `gone: … dc409` | **404 igual para `scopely` e `jagex`** |
+| **Comeet** | `careers-api/2.0/company/<uid>/positions` | `{"status":400,"message":"Token is missing"}` | idem sem o token |
+| **Polymer** | `jobs.polymer.co/<slug>` | 403 do Cloudflare | 403 do Cloudflare |
+
+> **Regra: família sem discriminador não é família varrida, é família NÃO CONFERIDA.** HiBob, Zoho,
+> Dover, iCIMS, Comeet e Polymer ficam assim — e **nenhuma delas pode ser escrita como "não tem
+> estúdio da área"**, porque a sondagem não sabe distinguir quadro vivo de quadro inexistente. O
+> registro de 09/09 já dizia isso do HiBob (*"o 200 não prova nada"*); hoje a mesma assinatura
+> apareceu no Zoho e no Dover, e o `icims.com` mostrou que **host errado dá 404 em casa que existe**.
+
+### 2. A PORTA QUE SAIU, E ELA É DE AMBIENTE — DITO ASSIM, SEM MAQUIAGEM
+
+**Playdead, `ZBrush Modeler`, Copenhague, requisição Breezy `3be060a4fcf301`.** Três provas: **POST
+204** em `app.breezy.hr/api/apply/3be060a4fcf301`, URL final `/apply/submitted` com *"Application
+Submitted. Your application has been submitted successfully. Good luck!"* e **recibo no Gmail às
+20h38m58** de `candidate-5023de215a1b01@playdead.breezy-mail.com`.
+
+**Ela é ambiente**, e o anúncio não tem a palavra *character* nem *creature*: pede *"create and
+sculpt high quality architectural and organic models within a 3D open world environment"*. Entrou
+pela regra de 10/09 ao pé da letra — **ambiente por último, e só quando não houver nada de
+personagem na rodada** — depois de 11.015 vagas lidas sem uma vaga de personagem nova. A favor dela,
+e é raro nesta campanha: **o próprio anúncio escreve *"We can offer relocation and visa support if
+required"*** e a régua de veto deu **zero** em `authoriz`, `eligib`, `sponsor`, `work permit`,
+`must be based`, `LMIA`, `citizen` e `resident`. A porta estava medida, limpa e **parada desde
+10/09** como item 50 da `FILA-DO-VINI`.
+
+**Resposta conservadora de propósito, e ela fica registrada:** à pergunta *"Have you shipped a 3D
+game before?"* foi respondido **"Yes, 2-4"**, não "Yes, 5+". O repositório prova títulos e projetos,
+não a contagem de jogos lançados, e inflar um campo verificável é mentir.
+
+### 3. TRÊS ARMADILHAS MEDIDAS NO CAMINHO, E A PRIMEIRA ESTAVA NO PRÓPRIO DOSSIÊ DA CAMPANHA
+
+- **O comando de disparo da `FILA-DO-VINI` chama `apply_breezy.js`, que NÃO EXISTE** em
+  `/home/user/apply`. Quem seguisse a receita ao pé da letra perderia a rodada. **Nenhum script novo
+  foi escrito:** o `apply_own.js`, que já existia, ganhou três chaves no JSON de respostas —
+  `arquivos` (anexo, com leitura de volta de `files[0].name` e `.size`), `marcar` (caixa e rádio por
+  `check({force})` com leitura de volta de `.checked`) e `proximo` + `passos` (avanço de seção com a
+  passada de preenchimento repetida). **Por que a passada repete:** no Breezy as seções moram no
+  MESMO DOM sob `ng-show`, então o seletor **acha** o campo e o Playwright se recusa a digitar nele
+  enquanto a seção está escondida — o sintoma é idêntico a "campo não existe" e a causa é outra.
+- **O Breezy PARSEIA o CV e sobrescreve campo que o script já digitou.** O `/api/portal/<slug>/upload`
+  devolve 200 com o JSON do arquivo e o ATS preenche `Work History` e `Education` sozinho; o
+  `Experience Summary` foi digitado com 248 caracteres e lido de volta com **704**. **Conferir a
+  captura depois do anexo deixou de ser opcional nesta família.**
+- **O `published_date` do Breezy MUDA no republish.** A mesma requisição `3be060a4fcf301` era
+  `2026-09-10` na medição de 10/09 e hoje o `/json` devolve `2026-09-14`. **Data não é chave de
+  dedupe nesta família; o id é.**
+
+### 4. A ARMADILHA QUE DOMINA A SONDAGEM POR SLUG: **IDENTIDADE**, E ELA SAI DE GRAÇA
+
+Dos 136 quadros vivos, a maioria dos nomes bonitos **é outra empresa**. Medido um por um:
+`rippling/paramount` são **28 vagas de *Camera Car* numa escola de direção da Califórnia** (e não a
+Paramount da regra 14); `rippling/plastic` é software em San Francisco (e não a Plastic Wax);
+`pinpoint/embark` é a **Embark Student Corp** (e não a Embark Studios); `breezy/passion` é a igreja
+Passion City de Atlanta (e não a Passion Pictures); `breezy/victory`, `breezy/infinite`,
+`breezy/gaggle`, `breezy/sandbox` e `breezy/pixel` são TI, varejo fotográfico, saúde mental escolar,
+engenharia civil e publicidade. **A identidade custa zero requisição extra:** no Pinpoint o
+`<title>` diz *"Jobs at X"*, no Rippling o JSON traz `companyName`, e no Breezy — onde o `<title>` é
+template — ela sai dos **títulos e locais das próprias vagas**.
+
+**E há alias:** `ccpgames.pinpointhq.com/postings.json` responde **301 para
+`fenriscreations.pinpointhq.com`** — a mesma mecânica do `sisu → silverein` medida hoje no Recruitee.
+Sem seguir o redirect, aquele quadro entraria na lista como casa nova; ele é a Fenris Creations, que
+**já recebeu candidatura em 10/09**.
+
+**As casas de verdade que a sondagem achou, e que viraram token no `tokens-ats-1809.csv`:** Pinpoint
+`bandainamcomobile`, `frontierdevelopments`, `moonbug`, `tensquaregames`, `volka`, `stellar`,
+`framestore`; Rippling `blind-squirrel-games` (3 *General Application*), `steamroller-animation`,
+`iconic`, `refuge-vfx`; Jobvite **`kixeye` e `kwalee`**, cujos quadros a campanha não sabia que
+existiam. **Nenhuma com vaga da disciplina hoje.**
+
+**O único candidato que não morreu no dedupe, e por que não foi enviado:** *Mid-Snr Level Generalist
+Artist* da **Iconic Interactive** (Londres, `3f673707-2e02-43a2-85b6-fac6bee2795b`) — corpo de 5.085
+caracteres, cita *character* 2×, *creature* 1×, régua de veto **zero**, e mesmo assim fica de fora
+por três motivos escritos: é **generalista** (última prioridade da regra de 10/09), é **mid-senior**
+(abaixo do nível dele) e a casa se descreve como *"AI-native game development and research studio"*
+com *"experimental AI-assisted workflows"*, que é o mesmo sinal de alerta que a welevel levou em
+02/09. **Porta viva registrada, não fila.**
+
+### 5. OS ALERTAS DA CAIXA: SEIS FIOS, E O QUE PARECIA NOVIDADE ERA VAGA JÁ ENVIADA
+
+O *"New jobs at DISNEY"* das 16h33 tem **duas** vagas, as duas fora do escopo (estágio de
+comunicação em Singapura e comunicação corporativa em **Tóquio**). O do LinkedIn das 17h34 é
+**lembrete de vaga SALVA**, e as cinco já estão resolvidas: Absurd Ventures *Character Art Lead*
+(enviada 12/09), Lightfox (parede de Turnstile), Mob Entertainment (02/09), Blizzard `R028136`
+(12/09) e Netflix *Character Modeler* Vancouver `JR42568` (15/09). O das 16h44 anuncia a *Lead
+Character Artist* da Black Shamrock como novidade — é a requisição **2283 enviada hoje às 11h49**.
+As outras duas são **2D**.
+
+> **Regra: alerta de "vaga salva" do LinkedIn não é descoberta, é retrovisor.** Ele reapresenta o que
+> a campanha já trabalhou, e o dedupe dele se faz pelo nome da casa mais o cargo, porque o link do
+> LinkedIn **não carrega o id do ATS** — ao contrário do alerta da Disney, cujo `utm_content`
+> entrega o id sem abrir nada.
