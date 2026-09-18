@@ -97,11 +97,18 @@ const dump=async(p,tag)=>{
     const todos=await p.$$('input[type=file]');
     log('inputs de arquivo no DOM (visiveis ou nao):',todos.length);
   }
-  for(const f of (A.anexos||[])){
+  // CORRIGIDO 18/09 22h45: a versao antiga jogava TODO arquivo de "anexos" no els[0]. Com dois
+  // arquivos (CV e carta) o segundo sobrescrevia o primeiro no MESMO input, e o campo do outro
+  // ficava vazio -- a tela do Rippling dizia "Cover letter No files added" depois do clique e
+  // isso parecia reset do formulario. Cada arquivo vai para o input do seu indice.
+  for(let ai=0; ai<(A.anexos||[]).length; ai++){
+    const f=A.anexos[ai];
     const els=await p.$$('input[type=file]');
     if(!els.length){ log('MISSING input de arquivo para',f); break; }
-    await els[0].setInputFiles(D+f).catch(e=>log('upload',e.message.split('\n')[0]));
-    log('arquivo =>',f,'( inputs de arquivo na tela:',els.length,')');
+    const alvo=els[Math.min(ai,els.length-1)];
+    await alvo.setInputFiles(D+f).catch(e=>log('upload',e.message.split('\n')[0]));
+    const nm=await alvo.evaluate(e=>e.files&&e.files.length?e.files[0].name+' '+e.files[0].size+'B':'(ZERO ARQUIVO)').catch(()=>'?');
+    log('arquivo',ai,'=>',f,'| input',Math.min(ai,els.length-1),'de',els.length,'| leitura de volta:',nm);
     await p.waitForTimeout(5000);
   }
   for(const [n,f] of Object.entries(A.arquivos||{})){
@@ -180,6 +187,14 @@ const dump=async(p,tag)=>{
       // esta licao: em formulario que escuta evento de mouse de verdade, clique sintetico com
       // force nao conta. Clique pelas COORDENADAS da caixa do botao, e so caia no force se o
       // botao nao tiver caixa.
+      // DIAGNOSTICO 18/09 22h45: antes de culpar porteiro, pergunte se o botao esta DESABILITADO.
+      // Clique em botao disabled nao gera POST e o sintoma e identico a Turnstile invisivel.
+      const est=await bx.evaluate(e=>({dis:e.disabled,aria:e.getAttribute('aria-disabled'),
+        tipo:e.type,form:!!e.form,valido:e.form?e.form.checkValidity():null,
+        invalidos:e.form?[...e.form.querySelectorAll(':invalid')].map(x=>(x.name||x.id||x.tagName)+'/'+(x.type||'')).slice(0,10):[]})).catch(e=>({err:e.message}));
+      log('estado do botao antes do clique:',JSON.stringify(est));
+      const arqs=await p.$$eval('input[type=file]',es=>es.map(e=>e.files&&e.files.length?e.files[0].name:'(vazio)')).catch(()=>[]);
+      log('inputs de arquivo antes do clique:',JSON.stringify(arqs));
       const cx=await bx.boundingBox().catch(()=>null);
       log('clicando no botao declarado:',A.botao,'| caixa:',JSON.stringify(cx));
       if(cx){ await p.mouse.move(cx.x+cx.width/2, cx.y+cx.height/2).catch(()=>{});
