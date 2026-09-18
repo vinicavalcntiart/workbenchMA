@@ -8153,3 +8153,180 @@ disse que a página **não existe** — que é informação, não parede.
   Character Artist**, o que é bom sinal de disciplina e **mau sinal de vaga** — o assento está
   ocupado; (4) duas bios mencionam **"AI workflows"** como ferramenta declarada, o que é registro
   honesto para o maestro decidir se quer escrever; (5) não há data no quadro e não há endereço.
+
+### CASAS ABERTAS NESTA RODADA E **DESCARTADAS**, com o motivo de cada uma
+
+**Animation UK — as 31 casas inéditas de animação e VFX, uma por uma:**
+
+| Casa (domínio) | O que abriu | Motivo do descarte |
+|---|---|---|
+| **Adrenaline Studios** (`adrenaline.global`) | `/` 200 **75.759** e `/privacy-policy` 200 **44.024** | **Disciplina errada, e é a perda mais dolorida por endereço.** Publica **três pessoas com nome, cargo, endereço e telefone** no rodapé — *"**John Harley, Founder & CEO, john@adrenaline.global**"*, *"**Emanuele Latina, Group Operations Director, emanuele@**"*, *"**Wayne Joshua Hirschson, CEO \| Africa, wayne@**"* — mas é **casa de SOM**: dublagem, ADR, casting de voz, audiodescrição, mixagem Dolby Atmos. Precedente do Studio Kamp de 05h15. **Os três endereços ficam registrados aqui e não viram ficha.** |
+| **Eyebolls** (`eyebolls.com`) | `/` 200 **145.121**, `/about` 200 **129.857**, `/contact` 200 **55.836**, `/privacy-policy` 200 **59.374** | **Sem pareamento nome+cargo.** Publica **`rhona@eyebolls.com`** e **`victoria@eyebolls.com`** — endereços de primeiro nome —, mas o que está ao lado de cada um é **função de caixa**, não pessoa: *"Film & TV Enquiries rhona@ / Commercial Enquiries victoria@ / Talent Enquiries talent@ / General Enquiries hello@"*. **O site inteiro não nomeia uma única pessoa**, e `/team`, `/our-team`, `/people`, `/studio`, `/crew`, `/meet-the-team`, `/who-we-are`, `/directors`, `/talent` devolvem **500 com 2.105 bytes** — o sitemap (3 URLs) confirma que **essas páginas não existem**. Pena grande: é estúdio de Edimburgo que se descreve como *"full-service, global production studio... home to a limitless supply of stellar ideas, **and characters who will jump from script to screen**"* e lista **3D Animation** entre os serviços. **A melhor reabertura do Reino Unido para quem achar o sobrenome da Rhona.** |
+| **Artists In Frame** (`artistsinframe.com`) | `/` 200 **284.807**, `/about` 200 **154.454**, `/contact` 200 **216.048** | **Não é estúdio: é AGÊNCIA de representação de fornecedor de VFX** (representa DUPP, PFX, SSVFX, Stardust, Static, VCamCo e Vine FX). Publica `rose@artistsinframe.com` e a fundadora escreve *"I founded Artists in Frame in response to what I've seen over 18 years in the VFX industry"* **sem assinar o nome**. Precedente da Pineapple Recruiting. **Não contrata artista.** |
+| **King Banana** (`kingbananatv.com`) | `/` 200 **279.368**, `/contact` 200 **156.588**, `/who-we-are` 200 **163.713** | **Sem endereço de pessoa.** Só `hello@kingbananatv.com`. O `/who-we-are` **nomeia duas pessoas com cargo** — *"**katie simmons — Creative Director**"* e *"**lotte elwell — Creative Director**"* — e **fica guardado como reabertura**: são duas diretoras criativas de casa pequena, alvo 1 do BRIEF-JOE, sem porta de email. **Oito slugs `/who-we-are-1`, `-1-1`, `-1-1-1`… no sitemap: é Squarespace duplicado, não oito páginas.** |
+| **Lunar FX** (`lunarfx.co.uk`) | `/` 200 **113.238**, `/team` 200 **81.006**, `/contact` 200 **86.750**, `/privacy-policy` 200 **78.690** | **Disciplina errada + gabarito de tema.** Só `info@lunarfx.co.uk`; a home ainda publica **`you@studio.com`**, que é **gabarito e não endereço** (regra do turno). A casa é **matchmove, layout e dados de câmera** — *"Dan and Sam progressed from matchmove and layout artists to lead and supervisory roles"*, *"precise camera tracking and object data"*. O `/team` **não dá sobrenome de ninguém** (só "Dan e Sam"). |
+| **Tinmouse Animation** (`tinmouseanimation.com`) | 14 caminhos, **13 deles servindo 40.860 bytes idênticos (catch-all medido)**; `/about` 200 **30.714** e `/contact` 200 **26.574** com corpo próprio | **Sem endereço de pessoa e disciplina 2D.** Só `hello@tinmouseanimation.com`. Nomeia dois: *"Tom Sanders — Creative Director & Founder"* e *"Mike Foster — Creative Director"*. Casa de **anúncio online, explainer e comunicação interna**, dois nomes no total. |
+| **Picl Animation** (`piclanimation.com`) | `/` 200 **681.349**, `/about` 200 **596.620**, `/contact` 200 **483.748** | **Sem endereço de pessoa.** Só `hello@piclanimation.com`. O `/about` é generoso e **nomeia quatro com cargo** (*"Lauren Orme — Creative Director"*, *"Stephen Thomas — Freelance Director, Producer & Animator"*, *"Connor Jones — Animator"*, *"Otto Taylor-Rickard — Freelance Artist + Animator"*). Cardiff, B Corp. **Dois dos quatro são declaradamente freelance** e a casa diz trabalhar com *"a trusted network of talented collaborators"*. Fica como reabertura do País de Gales. |
+| **Moodus Righteous** (`moodusrighteous.co.uk`) | `/` 200 **27.458**, `/about` 200 **22.434** | **Zero endereço e zero sobrenome.** A casa é *"founded by **siblings Ben and Ellen**"* e **não publica sobrenome nem email** — o único contato é formulário. Dói porque o texto é o mais alinhado da rodada: *"We create bold, **character-driven animated work**"*. **Reabertura para quem achar os sobrenomes.** |
+| **Familiar Shadow** (`familiarshadow.com`) | `/` 200 **222.556** (site de página única) | **Zero endereço de pessoa e zero nome.** Só formulário e um `info@`. Stratford-upon-Avon, faz animação, publicação e jogos, e tem *"mentorship and apprenticeship programme"* — mas **não nomeia um único humano**. |
+| **Kelebek Media** | virou **ficha 4** | — |
+| **Lux Aeterna** | virou **ficha 3** | — |
+| **Eye Present** | virou **ficha 1** | — |
+| **VirtX** | virou **ficha 5** | — |
+| **The Yard VFX** (`theyard-vfx.com`) | `/` 200 **103.651**, `/about` 200 **162.278**, `/team` 200 **88.096**, `/contact` 200 **279.806** | **Sem endereço de pessoa.** Só `contact@` e `pr@`. O `/team` inteiro nomeia **uma** pessoa e ela é **crédito de cliente**, não quadro (*"Janelle Croshaw Ralla — Production VFX Supervisor"*). Casa francesa de criatura, e é perda de disciplina. |
+| **Miaowito Animation** (`miaowito.co.uk`) | `/` 200 **940.931**, `/contact` 200 **371.764**, `/careers` 200 **147.750**, `/privacy-policy` 200 **197.715** | **Sem endereço de pessoa** (só `hello@miaowito.co.uk`) **e VETO PARCIAL ESCRITO:** *"Due to legal reasons Miaowito **cannot accept unsolicited submissions**. Please do not send us your script ideas or novels. They will not be read or kept."* O veto é de **roteiro**, não de portfólio de artista, então a casa não está fora por regra — mas **não há porta de pessoa**. O menu tem `/lovely-people`, que devolveu **000 (não conferido)** em duas tentativas. |
+| **Plastic Milk** (`plasticmilk.co.uk`) | 14 caminhos, **11 servindo 7.296 bytes idênticos (catch-all)**; `/` 200 **42.372** | **Sem endereço de pessoa — e o ACHADO DE MÉTODO DA RODADA.** O site ofusca **por ROT13**, não por entidade HTML nem `data-cfemail`: a varredura devolveu `vasb@cynfgvpzvyx.pb.hx`, `fghqvb@`, `wbof@` e `cevinpl@`, que decodificados são **`info@`, `studio@`, `jobs@` e `privacy@plasticmilk.co.uk`** — **quatro caixas funcionais, nenhuma pessoa.** **ROT13 entra na lista de ofuscações a decodificar**, junto de `(at)`, `[at]`, entidade e `data-cfemail`. |
+| **Space Age Films** (`spaceagefilms.co.uk`) | **12 caminhos, todos 200 com exatamente 472.372 bytes: catch-all total** | **Não existe página de equipe nem de contato** servida por caminho. Zero endereço. **Não é parede, é site de uma página.** |
+| **Alibi Studios** (`alibistudios.co.uk`) | `/` 200 **17.193**, `/team` 200 **17.976** | **Casa MUDOU DE DOMÍNIO e o `/team` está vazio.** Só `production@alibistudios.co.uk`. O sitemap aponta para **`alibi.com`** (`/about`, `/studios`, `/services`, `/portfolio`, `/tax-rebate`) — **registro de correção de domínio para a campanha**, mesma família do achado da ex-Yeti Farm de 00h55. |
+| **Disauthority** (`disauthority.com`) | `/` 200 **251.552**, `/about` 200 **113.472**, `/contact` 200 **93.990**, `/privacy-policy` 200 **77.474** | **Sem endereço de pessoa** (só `bookings@`, `careers@`, `reception@`). Tem **`person-sitemap.xml` com 11 pessoas nomeadas** (James Lambert, Lakshya Upadhyaya, Louis Holder, Raiyan Chinoy, Karla Young, Daryl Gali, Jacob Percival, Marcus Hundsnes, Maria Shevtsova, Zain Haris, Milan Grundza) — **fila de nomes pronta para quem quiser reabrir**, e a casa é **post e finishing**, não personagem. |
+| **Tiger Aspect Kids & Family / Banijay** (`banijaykidsandfamily.com`) | `/` 200 **65.233**, `/about` 200 **59.246**, `/contact` 200 **62.985**, `/people` 200 **28.804** | **Sem endereço de pessoa.** Tem **`person-sitemap.xml` com 38 pessoas nomeadas** (uma página por pessoa) e **nenhum email**. É **grupo internacional de distribuição e produção infantil**, alvo de casa grande, e o `/people` não imprime endereço. **Os 38 nomes ficam registrados como fila de casa grande.** |
+| **The 2D Workshop** (`the2dworkshop.com`) | `/` 200 **1.368.073** | Só `info@the2dworkshop.com`. **Declara 2D no próprio nome.** Sitemap com 38 URLs, **nenhuma de equipe ou contato**. |
+| **Keyframe Studios** (`keyframestudios.co.uk`) | `/` 200 **110.631**, `/jobs` 200 **21.161**, `/keyframe-contact.html` 200 **17.080** | **Zero endereço: o contato é só formulário** (*"Fill out the form below to fire us an email"*). O `/keyframe-about.html` que o sitemap anuncia devolveu **000 (não conferido)**. |
+| **Hocus Pocus Studio** (`hocuspocus.studio`) | `/` 200 **32.554**, `/studio` 200 **25.499**, `/contact` 200 **23.464**, `/jobs` 200 **27.839**, sitemap com **106 URLs** | **Casa DIFERENTE da Hocus Pocus de Lyon que a campanha já escreveu** (`hocuspocus-studio.fr`, carta em 02/09 + follow-up 07/09) — **armadilha de nome homônimo registrada**. Só `mail@` e `jobs@hocuspocus.studio`. Descartada por **disciplina**: o catálogo de serviços do sitemap é **explainer video, corporate video, training video, TV graphics** e páginas de SEO tipo *"best-explainer-video-studios-for-finance"*. |
+| **Moose Brain, Enter Yes, Bonnie and Braw Cartùns, Lexhag, Final Pixel, Streamland Media UK, The Next Valley, Artem** | todas abertas com 200 e corpo (`moosebrainstudio.com` 201.567 / `enteryes.com` 355.094 / `bonnieandbraw.co.uk` 851.918 / `lexhag.co.uk` 292.596 / `finalpixel.com` 784.615 / `streamlandmedia.com` 16.083 / `thenextvalley.com` 18.380 / `artem.com` 109.345) | **Só caixa funcional em todas as oito** (`info@`, `studio@`, `hello@`). **Nota de armadilha na Artem:** a `/careers` (200, 52.654 bytes) publica **quatro endereços `.ac.uk`** (`n.h.morgan@herts.ac.uk`, `pjohnson@aub.ac.uk`, `fashion.contact@arts.ac.uk`, `wimbledon_enquiries@arts.ac.uk`) — são **contatos de UNIVERSIDADE parceira, domínio de terceiro**, não gente da casa. E a Artem é **efeito prático e cenotecnia**, não CG. |
+
+**Os 52 domínios inéditos da Animation UK que NÃO foram varridos, e por quê** (para nenhuma rodada
+futura gastá-los): **universidade e escola** — `nfts.co.uk`, `edgehill.ac.uk`, `herts.ac.uk`,
+`uwl.ac.uk`, `join.mastered.com`; **software, rede e seguro** — `cirkus.com`, `farmerswife.com`,
+`sohonet.co.uk`, `tysers.com`, `ecovis.co.uk`, `aimici.co.uk`; **associação** — `amps.net`;
+**agência** — `thevfxandposttalentagency.com`; **som** — `vaudeville.tv`, `aquariumstudios.co.uk`;
+**laboratório e aluguel** — `cinelab.london`, `salonrentals.com`, `pinewoodgroup.com`,
+`onsight.co.uk`, `hireworks.tv`, `westdigital.co.uk`; **casa de EUA** — `craftyapes.com`,
+`pictureshop.com`, `thethirdfloorinc.com` (as três também **já tocadas por nome**); **já tocadas** —
+`superprod.net` (Wheel In Motion), `vinefx.com`, `grizzle.london` (o Jhon A a pôs na fila de carta
+hoje às 08h30); e **23 casas de edição/post/finishing puro** — `dcreative.co.uk`,
+`dirtylooks.co.uk`, `fusepost.co.uk`, `tvcsoho.com`, `post-super.com`, `residence.pics`,
+`tincanpost.co.uk`, `boompost.co.uk`, `out-post.tv`, `filmsat59.com`, `yellowmoon.net`,
+`radiantpost.co.uk`, `5astudios.co.uk`, `corepost.co.uk`, `thelooklondon.com`, `editstore.tv`,
+`envypost.co.uk`, `platformpp.tv`, `trevannapost.com`, `clearcut.cc`, `gorillagroup.tv`,
+`sohoeditors.com`, `thefinishline.pro`, `indepost.co.uk`. **Isto FECHA a veia da Animation UK: 205
+membros medidos, 198 domínios, nada a reabrir sem mudar de critério.**
+
+### VEIA 2 — DIBOOS: **A RESOLUÇÃO DE DOMÍNIO POR WIKIDATA ACERTOU 6 DE 25, E AS SEIS CASAS NÃO PUBLICAM PESSOA**
+
+O turno pediu resolver o domínio dos 25 associados nunca tocados **sem chutar**. Método usado:
+`action=wbsearchentities` + `action=wbgetentities` da API da Wikidata, lendo **`P856` (official
+website)** — fonte publicada, custo de duas requisições por nome, **e ela devolve `NENHUM` com
+honestidade** em vez de inventar. *(Nota de operação: as 17 primeiras chamadas voltaram **429**; com
+espaçamento de 1,5 s e três tentativas por chamada, passaram.)*
+
+**Resolvidos (6):** Ikiru Films → `ikirufilms.com` · INSOMNE Studio → `insomnestudi.com` *(e note o
+domínio: **`insomnestudi`**, sem o "o" final — chute de cabeça erraria)* · Jaibo Films →
+`jaibofilms.com` · Mondo TV Iberoamerica → `mondotvstudios.com` · Sultana Films →
+`sultanafilms.es` · Teidees Audiovisuals → `teidees.com`. **Nenhum dos seis estava no
+`touched.txt`.**
+
+**Sem entidade ou sem `P856` na Wikidata (19):** 4 Cats Pictures, Abano Producións, Asymmetric
+Studios *(cuidado: a Wikidata devolve **Asymmetric Publications**, casa de JOGO dos EUA — homônimo,
+não é a associada espanhola)*, Bamf Producciones, Binalogue, Bliss, Cornelius Films, DeAPlaneta Kids
+& Family, Filmax, Glow Animation, Imagic *(a Wikidata devolve **Animagic** e **Animagicstudio**,
+nomes parecidos e casas diferentes)*, Mansalva Films, Most Wanted Studio, Mr Miyagi, Nuts media,
+Paramotion Films, Studio Kimichi, Tandem Films *(devolve **Tandem Games**, homônimo)*, Toot Toot
+Kids, WKND. **Estes 19 seguem sem domínio e a fila continua aberta** — o `censo-wikidata.csv` do
+repositório só resolveu **INSOMNE** entre os 25, e a página da DIBOOS continua sem um único `href`
+de membro.
+
+**O que as seis abertas entregaram:** `ikirufilms.com` (`/` 200 **106.214**, `/about` 200 **88.773**,
+`/about-us` 200 **93.822**, `/contacto` 200 **87.345**, `/politica-de-privacidad` 200 **97.108**) —
+**só `info@`, zero nome**. `jaibofilms.com` (`/` 200 **135.576**, `/contact` 200 **39.252**,
+`/aviso-legal` 200 **42.408**) — **só `produccion@`**, e o aviso legal publica
+`notificaciones@akrolis.com.es`, que é **o escritório jurídico terceirizado** (mesma armadilha do
+`datenschutz@quasi-consult.de` da Sehsucht). `sultanafilms.es` (`/` 200 **72.612**, `/aviso-legal`
+200 **59.838**) — **só `contabilidad@`**; a varredura ainda devolveu
+`DonostiaB75154138639432952contabilidad@sultanafilms.es`, que é **artefato de concatenação do HTML e
+não é endereço visto**. `insomnestudi.com` (`/` 200 **126.160**) e `mondotvstudios.com` (`/` 200
+**686.152**) — **zero endereço em qualquer forma**. **`teidees.com` NÃO CONFERIDO:** `/` devolve
+**000 com zero bytes** em `https://www.`, `https://`, `http://www.` e `http://` — e o mais estranho,
+**`/politica-de-privacidad` abriu 200 com 76.308 bytes** na mesma rodada, o que prova que **o host
+existe e a falha é de túnel ou de raiz, não de domínio**. Fica pendente.
+
+### VEIA 3 — HOLANDA: UMA FICHA, UM VETO ESCRITO NOVO E DUAS PAREDES
+
+- **Onesize** → virou **ficha 2**. **Primeira casa holandesa com endereço de pessoa publicado desde
+  13/09.**
+- **Lemming Film** (`lemmingfilm.com`, Amsterdam + Gent) — `/` 200 **43.578**, `/about` 200 **44.790**,
+  `/contact` 200 **20.632**. **VETO ESCRITO, e ele é novo para a campanha.** A casa publica
+  `robijn@lemmingfilm.com` — endereço de pessoa — mas **rotulado `Press inquiries`** e seguido, na
+  mesma linha, de: *"**No advertising / project proposals / unsolicited applications**"*. E abaixo:
+  *"Lemming Film **does not accept any unsolicited screenplays, treatments, or other creative
+  materials. Any such materials will be deleted unread**"*. **A casa pede explicitamente para não
+  receber candidatura espontânea. FORA, e ninguém reabra.** Registro o endereço só para que nenhuma
+  rodada futura o "descubra".
+- **il Luster, Job, Joris en Marieke, Studio Pupil** — **retiradas antes de gastar requisição: os três
+  domínios já estão no `touched.txt`.**
+- **Anikey** — **já descartada por técnica** na linha 2370 deste arquivo (*"specialise in traditional
+  2D digital animation"*). Não reaberta.
+- **Ka-Ching Cartoons** (`ka-chingcartoons.nl`) — **NÃO CONFERIDA:** **000 com zero bytes** em
+  `https://www.`, `https://`, `http://` e também em `kachingcartoons.nl` sem hífen. **Protocolo do
+  turno cumprido antes de concluir.**
+- **Motek** — não aberta: o `motekentertainment` já consta da tabela de varreduras de 15/09 deste
+  arquivo. **Guerrilla** — não aberta, por ordem do turno.
+
+### PLACAR HONESTO DA RODADA DAS 08h55
+
+**Cinco pessoas novas**, dentro da faixa de 4 a 8: **duas com endereço PUBLICADO e confiança ALTA**
+(Genevieve Dexter / Eye Present, Pepijn Padberg / Onesize) e **três `sem-email`** guardando nome,
+cargo e casa (Timmy Willmott / Lux Aeterna, Giedrė Kaveckaitė / Kelebek Media, Nnanna Kama / VirtX).
+**Nenhum endereço montado. Nenhum inventado. Nenhuma segunda grafia de ninguém** — e houve **quatro**
+oportunidades de errar isso: `jules@eyepresent.co.uk` (o sócio da ficha 1, cujo padrão
+`nome.sobrenome@` a própria Genevieve provaria), `timmy@lavfx.com`, `giedre@kelebekmedia.com` e
+`dominic@`-style em qualquer das casas de um endereço só. **Os três endereços de pessoa da Adrenaline
+ficaram registrados e não viraram ficha, por disciplina.**
+
+**Por região:** **Reino Unido 4** (Londres 1, Bristol 1, cidade não publicada 2) e **Países Baixos 1**
+(Amsterdam). **O Reino Unido era a prioridade declarada do turno e ele entregou quatro de cinco.**
+**Espanha (DIBOOS): zero fichas** em seis casas resolvidas e abertas.
+
+**Por disciplina, e é o melhor ponto desta rodada contra as duas anteriores: TRÊS das cinco são de
+personagem ou de CG.** A Eye Present se declara *"**50 seat CG animation studio**"* — a frase mais
+alinhada que esta campanha achou em duas semanas; o Timmy Willmott é **CG Supervisor** com créditos
+de *Blue Planet* e *The Crown*; a Giedrė Kaveckaitė é **Head of Art**, que é o cargo do topo da lista
+do BRIEF-JOE. A VirtX é a **única casa da rodada que publica um Character Artist no próprio quadro**
+(e por isso mesmo o assento está ocupado). A Onesize é a fraca de disciplina e está declarado na
+ficha dela.
+
+**Por tamanho:** Eye Present **50 assentos** (a maior casa que o Joe abre desde 16/09), Lux Aeterna
+**17 nomes**, Kelebek **9**, VirtX **5**, Onesize **2 publicados**. **Nenhuma publica política de
+visto.** O melhor sinal indireto de patrocínio é a **Kelebek** (*"We are an equal opportunities
+employer"* + treinamento Albert para *"all our colleagues"*), e o de maior porte real é a **Eye
+Present**.
+
+**Dedupe, por casa: as CINCO estão em 0 de 2.** Gmail `{}` por nome e por domínio nas quatro buscas,
+`in:sent` por domínio `{}`, e zero acerto nos seis arquivos do repositório. **Três armadilhas de
+substring/homônimo foram pegas pelo dedupe e estão registradas:** `Dexter` bate na **Dexter Studios
+da Coreia do Sul** (6 acertos), `lavfx` bate em **`lolavfx.com`** (Lola VFX) e **Hocus Pocus Studio**
+do Reino Unido é casa **diferente** da Hocus Pocus de Lyon que já levou carta. **Nenhuma casa foi
+barrada por teto fechado nesta rodada** — porque o diff de 2.750 domínios foi feito **antes** da
+varredura, que é a lição das 05h15 aplicada.
+
+**Fontes abertas:** o `wp-json` da Animation UK (3 páginas, 205 membros), **25 sitemaps de casa**
+(264 URLs de interesse, incluindo dois `person-sitemap.xml`), a **API da Wikidata** (26 nomes da
+DIBOOS consultados) e o `automacao/censo-wikidata.csv`. **Casas varridas: 31 do Reino Unido + 6 da
+Espanha + 4 da Holanda = 41**, com 14 a 19 caminhos cada em dois esquemas, mais 3 recuperações por
+`http://`. **Pessoas com email publicado: 2. `sem-email`: 3. Descartes com motivo nomeado: 24 casas
+abertas + 52 domínios retirados antes da requisição**, dos quais **1 por veto escrito** (Lemming
+Film), **1 por veto parcial** (Miaowito, veto de roteiro), **3 por disciplina errada com nome e
+endereço de pessoa na mão** (Adrenaline ×3 nomes, Lunar FX, Artem), **2 por tipo de empresa**
+(Artists In Frame é agência, Banijay é distribuidora), **1 por homônimo** (Hocus Pocus UK),
+**3 por domínio de terceiro** (`.ac.uk` da Artem, `akrolis.com.es` da Jaibo, `sentry.wixpress.com`
+da VirtX), **1 por gabarito de tema** (`you@studio.com` da Lunar FX), **2 por artefato de
+concatenação** (Sultana), **3 por falta de pareamento nome+cargo** (Eyebolls, King Banana, Moodus
+Righteous) e **3 catch-alls medidos** (Space Age 12 caminhos idênticos, Plastic Milk 11, Tinmouse 13).
+**NÃO CONFERIDOS, nomeados: `teidees.com` (raiz 000 em quatro tentativas, mas `/politica-de-privacidad`
+abriu 200), `ka-chingcartoons.nl` (000 em quatro tentativas, com e sem hífen),
+`miaowito.co.uk/lovely-people` e `keyframestudios.co.uk/keyframe-about.html` (000).**
+
+**Dois achados de método que valem mais que uma das fichas:** (1) **o sitemap de cada casa** acha a
+página de equipe que nenhuma lista de caminhos adivinha — **as três melhores fichas desta rodada
+saíram de `/meet-the-team`, `/info-contact` e `/who-we-are`**, e `person-sitemap.xml` existe e
+entrega 38 e 11 nomes de graça; (2) **ROT13 é ofuscação de email em uso** (Plastic Milk) e entra na
+lista a decodificar. **E um terceiro, menor: o email de uma casa pode estar em OUTRO domínio que não
+o do site** — `onesize.nl` → `@onesize.com` e `virtxgroup.com` → `@virtx.uk`, duas vezes na mesma
+rodada. **Quem monta endereço pelo domínio do site erra as duas.**
+
+**O que travou, em uma linha:** o Reino Unido publica **nome e cargo com fartura e endereço de pessoa
+quase nunca** — das 31 casas inéditas da Animation UK, **catorze nomeiam gente com cargo e só duas
+imprimem o endereço dela**; a Espanha da DIBOOS está travada **um nível antes**, na resolução de
+domínio (**19 dos 25 associados não têm site na Wikidata e a página da associação não publica um
+único link**); e a Holanda entregou a primeira casa em cinco dias **e um veto escrito novo** na única
+outra casa que tinha endereço de pessoa.
