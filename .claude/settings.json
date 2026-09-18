@@ -7,7 +7,8 @@
     "numa trava de verdade, que nem eu nem nenhum agente da campanha consegue contornar.",
     "mcp__Gmail__reply continua liberado, porque é a via permitida de resposta em thread",
     "que já existe, e é por onde o Comunicador trabalha.",
-    "11/09 a noite: acrescentados os verbos de terminal que os agentes mais usam (timeout, pgrep, printf, test, find, seq, stat, sleep) porque o Vini estava tendo de aprovar item por item a noite inteira. Nenhum deles e mais perigoso que o rm e o curl que ja estavam liberados. A lista de deny NAO foi tocada: enviar email, encaminhar, compartilhar arquivo do Drive e push com force continuam bloqueados, e e isso que mantem de pe a regra 'so rascunho, nunca enviar'."
+    "11/09 a noite: acrescentados os verbos de terminal que os agentes mais usam (timeout, pgrep, printf, test, find, seq, stat, sleep) porque o Vini estava tendo de aprovar item por item a noite inteira. Nenhum deles e mais perigoso que o rm e o curl que ja estavam liberados. A lista de deny NAO foi tocada: enviar email, encaminhar, compartilhar arquivo do Drive e push com force continuam bloqueados, e e isso que mantem de pe a regra 'so rascunho, nunca enviar'.",
+    "18/09 14h40: a pedido do Vini ('va adicionando o maximo de coisas no settings pra nao ter que me pedir permissao'), a lista allow passou a cobrir Bash inteiro e os servidores MCP inteiros (Gmail, Google Drive, Claude Code Remote, GitHub). A lista deny continua intacta e tem precedencia: enviar email novo, encaminhar, apagar thread, compartilhar ou apagar arquivo do Drive, push com force e rm -rf / seguem bloqueados."
   ],
   "permissions": {
     "defaultMode": "bypassPermissions",
@@ -147,7 +148,16 @@
       "Skill",
       "ToolSearch",
       "Monitor",
-      "TaskStop"
+      "TaskStop",
+      "Bash",
+      "mcp__Gmail",
+      "mcp__Google_Drive",
+      "mcp__Claude_Code_Remote",
+      "mcp__github",
+      "mcp__Claude_Docs",
+      "NotebookEdit",
+      "ListMcpResourcesTool",
+      "ReadMcpResourceTool"
     ]
   }
 }
