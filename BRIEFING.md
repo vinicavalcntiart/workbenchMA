@@ -5043,3 +5043,28 @@ junior** (Xangai) e **Lightfold** (31 dias, um fora da régua, e já descartada 
 > os três deram zero porta nova. **Isso é saúde do estoque, não falha da varredura** — e desta vez
 > a lane veio com dois números que ficam: o erro do `lastmod` e o controle que autoriza o corte.
 > A porta do turno veio da **outra** veia, a de dívida de token, e ela custou 22 requisições.
+
+### 6. ADENDO DAS 06h35 — O CONTROLE QUE DIZ QUANTO ESTA LANE AINDA TEM PARA DAR: **122 DOS 123 ACERTOS SÃO DE CASA QUE A CAMPANHA JÁ TEM**
+
+Antes de fechar o turno, um controle barato e **local, zero requisição**: os 123 acertos de
+disciplina do sitemap (sem o ruído de semicondutor) cruzados **por prefixo de slug** contra
+**3.012 nomes de casa slugificados** do `docs/index.html` (`PORTAIS` e `STUDIOS`) mais
+`enviados.csv`, `processados.csv` e `alvos.csv`.
+
+Sobraram **26 slugs** sem casa conhecida no prefixo, e lidos um a um **só UM é casa realmente
+inédita**: os outros 25 são falha do casamento por prefixo, não casa nova (2K, Avalanche, Playtika,
+PlayStation, Tripledot, Lightfold, Grand Games, Hangar 13, Kojima Productions, Lightspeed,
+Tentworks e NetEase já aparecem no repositório).
+
+A única inédita é a **Pulse Games** (`pulsegames.org`, *"Pulse Works"*, mobile de habilidade com
+prêmio), e ela morre por dois motivos medidos: a vaga `3D Artist 4833582` tem `datePosted`
+**2026-06-11** (98 dias, e o `lastmod` de 17/09 mentia por exatamente esses 98 dias), e **o domínio
+não tem rota de carreira** — `/careers`, `/jobs`, `/vacancies` e `/join-us` dão **404 com o caminho
+inventado também em 404** (não é catch-all, os 404 são reais), a home tem 1.996 caracteres e **zero
+link** de vaga, RH ou candidatura, e a `/candidate-privacy-policy` (200, 21.096 bytes) **não nomeia
+nenhuma** das 16 famílias de ATS conhecidas. Nem porta nem carta.
+
+> **O número para planejar a próxima rodada: o estoque de disciplina do maior agregador de jogos
+> está ~99% coberto pela campanha.** É por isso que três turnos seguidos de agregador deram zero
+> porta e o método é o que sobrou de valor. **A porta deste turno veio da veia de DÍVIDA DE TOKEN,
+> e custou 22 requisições** — ordem de grandeza que a lane dos agregadores não alcança mais.
