@@ -5435,3 +5435,36 @@ slug de outra empresa, este turno não mediu; a régua de título dos 47 quadros
 não corpo, então vaga de personagem escondida num título genérico passaria batida; e a rodada B do
 Recruitee não testou variação com sufixo (`-studios`, `-games`), só nome como está e nome sem
 separador.
+
+### 6. ADENDO DAS 10h41 — O ERRO DE IDENTIDADE **NÃO ERA SÓ DA RODADA DE ADIVINHAÇÃO**: OITO TOKENS DE ORIGEM INDEPENDENTE TAMBÉM APONTAM PARA OUTRA EMPRESA, E **31 DE 95 SÃO ALIAS MORTO**
+
+Fechei o "NÃO CONFERIDO" do §5 em vez de deixá-lo escrito, pela mesma razão do adendo de 08h36:
+nessas duas famílias a identidade sai **de graça**. Os **95** tokens de Teamtailor e Recruitee de
+origem **independente** foram lidos: **56 casa real, 8 HOMÔNIMO, 31 vazio/404**.
+
+**Os oito homônimos que ninguém tinha olhado porque a origem era "independente":**
+`recruitee/airworks` = **Airworks Inflatables BV** (infláveis, não a casa de VFX),
+`recruitee/headfirst` = **HeadFirst B.V.** (agência de colocação),
+`recruitee/grafischlyceumutrecht` = escola, `teamtailor/parkerschauffeurs` = motoristas,
+`teamtailor/podimo` = podcast, `teamtailor/egmont` = editora, `teamtailor/clickoutmedia` = mídia de
+afiliados, `teamtailor/presto`. **Origem independente prova que o token foi visto em algum lugar —
+não prova que ele é a casa que a campanha pensa que é.**
+
+**E o segundo achado é de contagem: 31 dos 95 são alias morto (404), e vários são o MESMO quadro
+escrito de outro jeito.** `paradox`, `paradoxinteractive` e `paradoxplaza` morrem e só
+`paradox-interactive` vive; `sybogames` morre e `sybo` vive; `stunlockstudios` morre e
+`stunlocksstudios` vive; `goodbyekansasstudios` morre e `goodbyekansas` vive; `envar` morre e
+`envarstudio` vive; `fundagames` morre e `fundaygames` vive; `snowprint` morre e
+`snowprintstudios` vive. **Contar token não é contar quadro**, e aqui a diferença é de **31 em 95**
+— o mesmo mecanismo da caixa alta do SmartRecruiters e do redirecionamento do Recruitee, pela
+terceira porta diferente no mesmo dia.
+
+**Curiosidade útil do Recruitee, medida de passagem:** o quadro de `crazygames` devolve **dois
+`company_name` diferentes na mesma lista** (*Maxflow BV* e *CrazyGames*). **O campo é por OFERTA,
+não por locatário** — um quadro pode hospedar duas marcas, e a conferência de identidade tem de
+olhar o conjunto, não a primeira oferta.
+
+**Estado final da coluna `identidade` no `automacao/tokens-ats-1809.csv`: 103 casa-real, 111
+homônimo, 42 vazio, 384 `nao-aplica`** (os `nao-aplica` são as famílias em que a identidade **não**
+sai de graça: Ashby, BambooHR, Greenhouse, Lever, SmartRecruiters, Workable e Workday — essa dívida
+**continua aberta e nomeada**).
