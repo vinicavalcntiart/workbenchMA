@@ -5068,3 +5068,145 @@ nenhuma** das 16 famílias de ATS conhecidas. Nem porta nem carta.
 > está ~99% coberto pela campanha.** É por isso que três turnos seguidos de agregador deram zero
 > porta e o método é o que sobrou de valor. **A porta deste turno veio da veia de DÍVIDA DE TOKEN,
 > e custou 22 requisições** — ordem de grandeza que a lane dos agregadores não alcança mais.
+
+## Jhon A, 18/09 08h30 UTC (décimo sétimo turno) — A VARREDURA POR DATA REFEITA NA MANHÃ EUROPEIA: ZERO PORTA, E TRÊS MEDIDORES DA PRÓPRIA CAMPANHA ESTAVAM ERRADOS (UM DELES INFLA UMA FAMÍLIA EM 91%)
+
+Repetição da varredura diária por **data de publicação** das 00h16, agora na janela
+**"publicado desde 18/09 00h00 UTC"** — o que entrou nas últimas oito horas. Só `curl` e API,
+**zero navegador** (nenhum processo criado), **zero envio**.
+
+**Números medidos: 10 famílias, 468 quadros consultados, 398 com corpo útil, 6.280 vagas lidas,
+69 publicadas dentro da janela, ZERO acerto da disciplina, ZERO porta, ZERO veto, ZERO duplicata,
+ZERO candidatura gasta.**
+
+| família | quadros | com corpo | vagas lidas | publicadas ≥18/09 00h UTC | acertos | campo de data |
+|---|---|---|---|---|---|---|
+| Greenhouse | 79 (2 em 404) | 76 | 1.768 | **2** (ver §2) | 0 | `first_published` |
+| Lever `api.lever.co` | 27 | 19 | 382 (os dois hosts) | 2 | 0 | `createdAt` (epoch ms) |
+| Lever `api.eu.lever.co` | 27 | **3** | (idem) | 0 | 0 | idem |
+| Ashby | 25 | 25 | 362 | 1 | 0 | `publishedAt` |
+| Teamtailor (só tokens **REAIS**) | 89 | 78 | 412 | 10 | 0 | `date_published` |
+| Recruitee | 74 | 74 | 660 | 1 | 0 | `published_at` |
+| SmartRecruiters | **31 únicos** (41 brutos) | 25 | **1.395 únicas por id** | **8** | 0 | `releasedDate` |
+| BambooHR | 87 | 79 | 286 (+286 `/detail`) | **0** | 0 | `datePosted` do `/detail` |
+| Workday (4 locatários, 7 sites) | 7 | 7 | **919 únicas por `externalPath`** | 45 | 0 | `postedOn` |
+| Workable (rota widget, em série) | 22 tokens | 12 | 96 | 0 | 0 | `published_on` |
+
+**Segunda passada pelo CORPO** nas 22 recentes únicas das seis famílias que entregam o texto do
+anúncio na mesma resposta: **3 casamentos de termo e os 3 são ruído** — `surfac` dentro de
+*surface* num *Member of Design Staff - Product* da Arena em Bay Area, e `hair` no *Salon Hair
+Stylist* da Mattel em Dallas (contado duas vezes, pelo motivo do §1). **Zero acerto novo pelo
+corpo**, incluindo a segunda régua de *3D artist com personagem no corpo*.
+
+A regra de parada do Workday por **`externalPath` novo** funcionou nos sete sites e os totais
+casaram com a tabela de 14/09 (CIG 59 vs 60, `External` 105 vs 102, `global` 327 vs 331, Tencent
+304 vs 303): **nenhum site bateu no teto de 2.000**, ao contrário do laço com parada por página
+vazia.
+
+### 1. A LISTA DE TOKENS DO SMARTRECRUITERS TEM DEZ DUPLICATAS QUE SÓ DIFEREM NA CAIXA DA LETRA, E A FAMÍLIA INTEIRA VINHA SENDO CONTADA EM DOBRO
+
+Os pares: `CDPROJEKTRED`/`cdprojektred`, `GIANTSSoftwareGmbH`/`giantssoftwaregmbh`,
+`KeywordsStudios`/`keywordsstudios`, `MattelInc`/`mattelinc`, `NBCUniversal3`/`nbcuniversal3`,
+`OutpostVFX`/`outpostvfx`, `PeopleCanFly`/`peoplecanfly`, `RodeoFX`/`rodeofx`,
+`TechlandSA`/`techlandsa`, `Ubisoft2`/`ubisoft2`. **O endpoint do SmartRecruiters não é sensível à
+caixa**: as duas grafias devolvem o mesmo quadro com os mesmos ids.
+
+| medição | 41 tokens brutos | 31 tokens únicos por caixa |
+|---|---|---|
+| quadros com corpo | 35 | 25 |
+| vagas | **2.664** | **1.395 únicas por id** |
+| publicadas na janela | **14** | **8** |
+
+> **O registro de 00h41 de hoje — *"43 bases, 2.696 vagas, 150 publicadas desde 17/09"* — está
+> inflado em ~91%**, e não por acidente estatístico: **os dez duplicados são justamente os quadros
+> GRANDES da lista** (Ubisoft, Keywords, NBCUniversal, CD Projekt, Mattel), que é o que faz o erro
+> quase dobrar o total. **Regra: contar vaga por ID ÚNICO, nunca por quadro lido, e normalizar
+> token para minúsculo antes de montar a fila.** É o mesmo mecanismo do token adivinhado do
+> Teamtailor, agora na contabilidade de outra família: **número inflado passa por todos os sinais
+> verdes.**
+
+### 2. FATIAR OS DEZ PRIMEIROS CARACTERES DO CAMPO DE DATA RESPONDE "DATA LOCAL DO QUADRO", NÃO "DATA UTC" — E ISSO ESCONDEU DUAS VAGAS DO GREENHOUSE
+
+O `first_published` vem com o **deslocamento de fuso escrito** (`2026-09-17T21:00:00-04:00` = 18/09
+**01h00 UTC**). Medido nas mesmas 1.768 vagas: **pela fatia de string, 0 dentro da janela; lendo o
+deslocamento e convertendo para UTC, 2 dentro da janela.** As duas eram fora da disciplina, então
+não se perdeu porta — mas o mecanismo **apaga vaga das Américas todo dia**, e a varredura das 00h16
+usava a fatia.
+
+Formato conferido em cada família, e ele não é o mesmo em nenhuma:
+
+| família | campo | formato medido | efeito da fatia |
+|---|---|---|---|
+| Greenhouse | `first_published` | deslocamento local (`-04:00`) | **EXCLUI** vaga de dentro |
+| Teamtailor | `date_published` | deslocamento local (`+02:00`) | **INCLUI** vaga de fora |
+| Ashby | `publishedAt` | `...+00:00` / Z | nenhum |
+| SmartRecruiters | `releasedDate` | Z | nenhum |
+| Recruitee | `published_at` | texto com sufixo `UTC` | nenhum |
+| Lever | `createdAt` | epoch em ms | imune |
+| BambooHR | `datePosted` | **só a data, sem hora** | fuso **IRRECUPERÁVEL** por API |
+
+No Teamtailor a conversão correta deu o **mesmo 10** da fatia, porque o deslocamento europeu é
+positivo. **Os dois erros são de sinal oposto e o mesmo código produz os dois**: no Greenhouse
+perde-se vaga das Américas, no Teamtailor conta-se vaga da véspera.
+
+### 3. O 429/1015 DO WORKABLE TRAZ UM CABEÇALHO `Retry-After`, E ELE DIZ QUASE CINCO HORAS: REPETIR DE SEGUNDOS EM SEGUNDOS NÃO SERVE PARA NADA
+
+Medido hoje em requisição **isolada**, espaçada de 20 a 30 s:
+
+| token | resposta | `Retry-After` |
+|---|---|---|
+| `rebellion` | 429, `error code: 1015`, 17 bytes | **17199 s (4h47)** |
+| `pikpok` | 429 | **17178 s (4h46)** |
+| `keywords-intl1` | 429 | **15062 s (4h11)** |
+
+**E o controle que fecha o diagnóstico: `pikpok` devolveu 200 às 08h24 e 429 às 08h27**, quatro
+minutos depois. O bloqueio pega token que **acabou de ser lido com sucesso**, e o relógio é de
+**horas**, servido por `cloudflare` com `cf-ray` (o corpo tem 17 bytes, não é a página HTML de 1015).
+
+> **Isto desmonta a receita que eu mesmo escrevi às 00h41** (*"um token por vez, GET, ≥12 s de
+> intervalo"*) **e a leitura "na terceira passada em série passou" de 06h34**: as duas passaram por
+> **sorte de janela vencida**, não por cadência. **Regra: a lane Workable rende no máximo UMA
+> leitura por token a cada ~5 horas, então ela é varredura de UMA VEZ AO DIA e nunca de todo
+> turno.** E **"NÃO CONFERIDO por 429" deixa de ser cego**: o `Retry-After` diz a hora de voltar.
+> Some-se à regra de 06h34 (o 429 pode ser 404 disfarçado) e a lane fica sem mistério.
+
+Dez tokens em 429 hoje, agora **com hora marcada**: `bardel`, `cause-and-fx`, `double-eleven`,
+`escape-velocity`, `keywords-intl1`, `nexusstudios`, `rebellion`, `streamlinestudios`,
+`supermassive`, `velanstudios`. (`bardel` dá 429 e `bardel-entertainment` dá 200 — são tokens
+distintos, não cadência.)
+
+### 4. SINAL PARA O MAESTRO, E NÃO É PORTA: A BLIZZARD ABRIU ONTEM UMA ONDA DE CATORZE REQUISIÇÕES DE STARCRAFT, SEM UM ASSENTO DE PERSONAGEM
+
+`xboxgaming/wd1/Blizzard_External_Careers`, Irvine/CA, **14 requisições com `Posted Yesterday`**,
+todas do mesmo projeto: Mission Designer ×3, Boss Designer, Combat Designer, Game Designer,
+Cinematics Designer, Lead UI Engineer, Gameplay Engineer, Associate Tech Director, Senior Mission
+Producer, Technical Artist Pipeline, **Senior II VFX Artist** e **Lead Environment Artist**.
+**Zero assento de personagem, modelagem, surfacing ou groom.**
+
+A casa está esgotada para a campanha e o dedupe confirma (`R028136` Character Artist StarCraft
+**enviada 12/09**, `R027817` Lead Character Artist Overwatch **recusada 12/09**, `R028122`
+recusada), e Irvine é **EUA sem visto, fora do escopo**. O que vale é o **calendário**: onda de
+projeto aberta ontem costuma abrir arte de personagem nas semanas seguintes. **Este quadro merece
+leitura diária mesmo com a casa esgotada.**
+
+### 5. O DEDUPE RODOU MESMO SEM ACERTO, DE PROPÓSITO, E O GMAIL CONFIRMOU O ZERO
+
+`sh automacao/dedupe-agora.sh "R028111" "Blizzard"` devolveu **ID inédito nos quatro arquivos** com
+o histórico completo da casa, e `search_threads` na janela `newer_than:1d` com os termos da
+disciplina devolveu **201 fios e nenhum caso novo não tratado** — as duas únicas mensagens novas de
+hoje (3Doubles às 07h19, Snowprint às 06h25) **já estavam registradas pela rodada anterior**.
+**O filtro de data excluiu tudo antes de o dedupe precisar trabalhar, que é a ordem barata.**
+
+**NÃO CONFERIDOS desta varredura, nomeados:** Greenhouse `phoenixlabsyvren` e `supernaturalstudios`
+em 404; 8 tokens sem corpo no BambooHR, 11 no Teamtailor, 6 no SmartRecruiters, 8 no
+`api.lever.co`; e os dez do Workable do §3, com hora de volta.
+
+> **Ressalva honesta do meu próprio medidor, e ela limita tudo acima:** a minha extração por regex
+> sobre os arquivos do repositório montou **89** tokens reais de Teamtailor contra os **106** do
+> registro de 00h41, **27** de Lever contra 30, **79** de Greenhouse contra 84 e **87** de BambooHR
+> contra 89. A diferença é da regex, não da família. **A cobertura de hoje é PISO e não teto:** se
+> houver vaga nova em algum desses ~20 quadros que eu não montei, ela **não foi medida**. Quem
+> repetir esta veia deve montar a fila a partir de uma lista **versionada** de tokens por família,
+> e não reextraí-la a cada turno — é o próximo resíduo nomeado desta lane.
+
+**Zero é resposta medida, não resposta preguiçosa: 6.280 vagas lidas para chegar nele.**
