@@ -7100,3 +7100,96 @@ tem casa de porte, e foi dela que saíram Mainframe e a correção de domínio d
   que é. O quadro publicado **não tem data**, então o Simon Lee pode ter saído. E há homônimo famoso
   na área (*Simon Lee* é nome de mais de um artista de criatura conhecido): **o que eu afirmo é o
   pareamento nome+cargo+casa impresso pela própria Spin**, nada além disso.
+
+### FICHA 3 — Sarah McDonald, **Creative Director, Design** da Guru Studio (Toronto, Canadá) — **`sem-email`, e a única carta que a casa recebeu QUICOU, o que reabre a casa inteira**
+
+- **POR QUE ELA.** A Guru é casa **grande** (25 anos, PAW Patrol, True and the Rainbow Kingdom,
+  Mecha Builders), e pelo BRIEF-JOE em casa grande o alvo é recrutador de arte nomeado ou chefia de
+  arte. O `/about` publica o quadro inteiro com cargo, e o assento de **arte** é o dela:
+  `Sarah McDonald — Creative Director, Design`. Ao lado estão `Gyimah Gariba — Animation Director`,
+  `Andrew Strimaitis — Creative Director, Technology`, `Frank Falcone — President | Executive Creative
+  Director`, `Daniel Rattner — Director, People & Culture`, `Yurie Rocha — VP of Production`. Escolhi
+  a Sarah McDonald e **não** o Daniel Rattner (People & Culture) porque o BRIEF é explícito: em casa
+  onde o RH é generalista, quem atropela o checklist de "precisa de patrocínio" é **quem viu o
+  trabalho**, e design de personagem é o departamento dela. O Gyimah Gariba fica guardado como
+  **segundo e último** nome da casa.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA PUBLICADO. Linha entra como `sem-email`.** O `/contact`
+  (**200, 38.208 bytes**) publica **seis caixas funcionais**: `questions@`, `peopleandculture@`,
+  `productionservices@`, `business.affairs@`, `marketing@` e `sales@gurustudio.com`, e o `/careers`
+  (200, 88.110 bytes) traz `development@`. **Nada montado.** A caixa a usar é
+  **`peopleandculture@gurustudio.com`**, endereçada a ela pelo nome, porque é a única viva de gente.
+- **O DEDUPE AQUI VALE MAIS QUE A FICHA, e é o motivo de a casa estar aberta.** Gmail
+  `gurustudio OR "Guru Studio" OR McDonald OR Falcone` devolveu **quatro** threads: (1) a carta de
+  **26/08 para `info@gurustudio.com`**; (2) **o bounce dela**, de `mailer-daemon@googlemail.com`, com
+  a frase *"the group you tried to contact (info) may not exist, or you may not have permission to post
+  messages to the group"*; (3) e (4) dois confirmadores de **candidatura no BambooHR** (11/07 e 27/08),
+  que são formulário e não carta. O `enviados.csv` registra a linha de 26/08 com status **`bounce`**.
+  **Ou seja: a campanha gastou uma carta num endereço que não existe e nunca falou com a Guru.** O teto
+  fica em **1 de 2** pela contagem literal, mas a única mensagem **não foi entregue**. `McDonald` no
+  `docs/index.html` é **falso positivo**: é a marca *McDonald's* na descrição de outro estúdio.
+  `peopleandculture@`, `Sarah McDonald`, `Gariba` e `Strimaitis` dão **zero** acerto no repositório.
+- **URLs exatas abertas nesta rodada:** `https://gurustudio.com/about` (**200, 90.828 bytes**), que é
+  onde está o pareamento nome+cargo; `https://gurustudio.com/` (**200, 62.105 bytes**);
+  `https://gurustudio.com/contact` (**200, 38.208 bytes**); `https://gurustudio.com/careers`
+  (**200, 88.110 bytes**). **Armadilha de caminho:** `/team`, `/our-team`, `/crew`, `/people`, `/jobs`,
+  `/leadership` e `/who-we-are` todos devolvem **200** servindo o corpo do `/about` ou da home, e não
+  404 — quem varre por tamanho acha que são páginas distintas.
+- **GANCHO com frase do próprio estúdio, entre aspas:** a linha de fundação no `/about`, *"Frank Falcone
+  opens Guru Studio, a new **character-driven animation studio** in the heart of downtown Toronto"*, e
+  na home o projeto que é personagem CG puro: *"Explore how Guru **transformed the iconic Sesame Street
+  Muppets into supersized CG robots**"* (Mecha Builders), além de *"Guru Studio is a leading animation
+  powerhouse transforming ideas into captivating stories loved by audiences worldwide"*.
+  **"character-driven" escrito pela própria casa é o melhor gancho de personagem desta rodada.**
+- **FORA DOS EUA: SIM, Toronto.** **A frase de realocação ENTRA.**
+- **PATROCÍNIO DE VISTO:** a casa **não publica** política; o `/careers` é institucional e manda para
+  o BambooHR.
+- **RESSALVA HONESTA:** **sem endereço de pessoa**, e a caixa de destino é de People & Culture, ou seja
+  exatamente o filtro de RH que o BRIEF diz que descarta em cinco segundos — o nome dela no corpo é o
+  que pode furar isso, e não há garantia. A técnica da casa é **CG de série infantil estilizada** (encaixe
+  bom de estilo, mas é TV kids, não o jogo/filme de criatura), o cargo é **Design** e não modelagem 3D,
+  e o quadro publicado **não tem data**. A casa é grande, logo o BRIEF avisa que lead de casa grande
+  raramente responde email frio.
+
+### FICHA 4 — Christine Huot, **Director, People & Talent** da Mainframe Studios (Vancouver, BC, Canadá) — **`sem-email`, e a descoberta é que a campanha NUNCA escreveu para esta casa, ao contrário do que o repositório parecia dizer**
+
+- **POR QUE ELA, e o raciocínio é do tamanho da casa.** A Mainframe é das maiores de Vancouver
+  (divisão da WOW! Unlimited / WildBrain, ReBoot, Barbie, série longa de CG). Pelo BRIEF-JOE, em casa
+  **grande** o alvo 1 é **recrutador com nome e sobrenome**, porque ali o recrutador *"não é o filtro, é
+  a porta"*, e o lead tem política interna contra responder frio. O quadro publicado tem **catorze
+  nomes** e o único assento de gente/talento nomeado é
+  `Christine Huot — Director, People & Talent`. O de arte mais próximo é
+  `Michael Douglas — Director of Creative Services`, que fica guardado como **segundo e último** nome
+  da casa; `Michael Hefferon — President & Chief Creative Officer` é o fundador-figura e não é alvo de
+  carta fria de candidato. Os outros doze são TI, finanças, jurídico, pós e desenvolvimento.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA PUBLICADO. Linha entra como `sem-email`.** Medido nesta
+  rodada: `https://www.mainframe.ca/connect/` (**200, 99.968 bytes**) publica **um só endereço no HTML
+  inteiro, `info@mainframe.ca`**; `https://www.mainframe.ca/careers/` (**200, 92.632 bytes**) publica
+  **zero endereço**; `/contact` é **404 (81.117 bytes)**. **Nada montado.** Isto **confirma** a nota de
+  17/09 deste arquivo (*"`mainframe.ca` (só `info@`)"*) e acrescenta o que faltava: **aquela nota mediu
+  o endereço e não leu o quadro de pessoas.**
+- **A CORREÇÃO DE REGISTRO, e ela libera duas cartas:** o `enviados.csv` tem uma linha de **07/09 para
+  `jobs@themainframe.com`** sob o nome *"Themainframe"*. **`themainframe.com` NÃO é a Mainframe Studios
+  de Vancouver** — é outro domínio, de outra empresa. O Gmail
+  (`mainframe.ca OR "Mainframe Studios" OR Hefferon OR Huot`) devolveu **uma** thread, e ela é apenas
+  um **confirmador de candidatura do BambooHR de 11/07** (*"Thank you for applying at Mainframe
+  Studios"*), que é formulário e não carta. **`in:sent` por `mainframe.ca`: zero. Portanto a casa está
+  em 0 de 2, não em 1 de 2.** `Huot` dá **zero** acerto em todos os arquivos do repositório.
+- **URLs exatas abertas nesta rodada:** `https://www.mainframe.ca/team/` (**200, 130.914 bytes**), que
+  é a fonte do pareamento nome+cargo; `https://www.mainframe.ca/studio/` (**200, 107.008 bytes**);
+  `https://www.mainframe.ca/connect/` (**200, 99.968 bytes**); `https://www.mainframe.ca/careers/`
+  (**200, 92.632 bytes**).
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Our award-winning leadership team brings a
+  passion for excellence and a spirit of fun to the table every day. Our **collaborative,
+  creative-first approach** has made us the partner of choice for top brands worldwide"*.
+- **FORA DOS EUA: SIM, Vancouver, BC.** **A frase de realocação ENTRA**, e a casa é grande o bastante
+  para ter processo de imigração de verdade, o que a torna a **melhor aposta de patrocínio desta
+  rodada**.
+- **PATROCÍNIO DE VISTO:** não publicado no `/careers`, mas é a casa da rodada com maior chance
+  estrutural (porte + histórico de coprodução internacional).
+- **RESSALVA HONESTA:** **sem endereço de pessoa**, e a carta sairia para `info@mainframe.ca`
+  endereçada a ela — caixa geral de casa grande é o pior canal da campanha. O cargo dela é **talento e
+  cultura**, não arte: é a porta, não quem decide arte. O rodapé da página traz **dois copyrights
+  conflitantes, 2026 e 2019** (*"Copyright 2019 © Mainframe Studios (a division of WOW! Unlimited Media
+  Inc.)"*), então parte do quadro pode estar desatualizada. E o quadro publicado é **só liderança**:
+  nenhum Character Art Lead nem Character Artist aparece, logo não achei o alvo ideal desta casa, achei
+  a porta dela.
