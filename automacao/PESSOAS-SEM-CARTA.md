@@ -9520,3 +9520,43 @@ frase da rodada.
   de escrever (a campanha já registrou casas com "AI workflows" na bio como risco); (d) *CGI ANIMATION*
   é rubrica de navegação e **não vi um frame de personagem 3D** creditado à casa nesta rodada; (e) o cargo
   é de negócio, não de arte.
+
+### FICHA 5 — Lars Erik Hansen, **VFX Supervisor** da Gimpville (Oslo, Noruega) — `sem-email`, e é o nome que faltava na casa que fez **o troll do Trollhunter**
+
+- **SEM ENDEREÇO DE PESSOA, medido nesta rodada:** varri `gimpville.no` nos 22 caminhos e o **único**
+  endereço publicado no domínio é `jobs@gimpville.no` (a `/contact` também traz o `you@company.com` do
+  próprio formulário, que é placeholder do tema). A linha 2638 deste arquivo já tinha medido isso em 15/09
+  e eu **reconfirmei**: a casa não publica endereço de pessoa em lugar nenhum. **NÃO montei
+  `lars.erik@gimpville.no` nem nada parecido**, porque não existe um único endereço de pessoa daquele
+  domínio para provar padrão, e a medição de 06/09 (5 de 8 montados quicaram) fecha a porta.
+- **O QUE A FICHA GUARDA, e é o que vale:** **nome + cargo + casa**, publicados pela própria Gimpville.
+- **URL exata aberta nesta rodada:** `https://gimpville.no/about` (**200, 100.354 bytes**). A página é a
+  lista de prêmios da casa e nomeia a equipe **crédito por crédito**: *"Lars Erik Hansen (VFX supervisor
+  Gimpville), Alex Hansson (VFX supervisor Haymaker) og Andreas Hylander (VFX Producer Haymaker)"* no
+  Amanda Award de **Konvoi (2024)**, e o mesmo nome no **Narvik (2023)**, **Nordsjøen (2022)**,
+  **Skjelvet (2019)**, **Den 12. mann (2018)**, **Bølgen (2016)** e **Nobel (2017)**. **O crédito de 2024
+  é o que sustenta a atualidade**: o `BRIEF-JOE` proíbe cargo desatualizado, e aqui a casa o credita no
+  ano passado.
+- **POR QUE ELE, e não outro da casa:** os outros nomes da mesma página são de **outras casas** (Arne
+  Kaupang, Magnus Olsson da Filmgate, Alexander Kadim da Varg, Morten Jacobsen da Storm, Espen Nordahl da
+  Storm — este último **já tem ficha** de 15/09), e o único nome que a página credita **como Gimpville**
+  em mais de um filme é o Lars Erik Hansen. A linha 2638 tinha registrado *Torgeir Sanders* com a caixa
+  `oslo@` vinda do diretório; Sanders aparece na página de 2017 e Hansen aparece até 2024. **Hansen é o
+  nome mais atual e o mais alto da casa.**
+- **GANCHO, literal da casa:** *"Gimpville delivered the final large troll in the cult classic **Troll
+  Hunter**. The following year the movie won Norwegian Amanda Awards for Best Visual Effects and the Public
+  Choice Award"*. É criatura de tela cheia feita ali dentro, e é o gancho mais próximo do ofício do Vini
+  nesta rodada.
+- **FORA DOS EUA:** sim, Noruega. A frase de realocação entra **quando houver carta**.
+- **DEDUPE NA CAIXA:** `search_threads` por `gimpville OR "Lars Erik Hansen" OR Kaupang OR tulipop
+  in:anywhere` devolveu **um fio**: carta fria para `oslo@gimpville.no` em **28/08 12h26** e follow-up em
+  **07/09 14h14**, as duas com o assunto exato, **sem resposta e sem recusa**. `enviados.csv` linha 150
+  confirma. **Nenhuma pessoa desta casa recebeu carta**, e o nome dele dá **zero** em todos os arquivos.
+- **RESSALVAS HONESTAS:** (a) **sem endereço, esta ficha não vira carta hoje** — ela serve para o dia em
+  que aparecer endereço de pessoa, ou para o maestro decidir escrever ao `jobs@` **citando o nome dele**,
+  que é a terceira aproximação da mesma caixa; (b) a casa é **VFX de longa e reclame norueguês**, não casa
+  de animação de personagem, e o troll é de **2010**; (c) o cargo é de supervisão de efeito, então ele
+  contrata **compositor e FX** com muito mais frequência que modelador de personagem; (d) o nome dele foi
+  lido numa **lista de prêmios**, não numa página de equipe, e a Gimpville **não publica página de equipe**
+  — não há como confirmar pelo site que ele continua na casa hoje, só que estava em 2024; (e) a casa já
+  ignorou carta e follow-up.
