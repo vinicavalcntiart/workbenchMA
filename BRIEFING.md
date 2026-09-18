@@ -5210,3 +5210,85 @@ em 404; 8 tokens sem corpo no BambooHR, 11 no Teamtailor, 6 no SmartRecruiters, 
 > e não reextraí-la a cada turno — é o próximo resíduo nomeado desta lane.
 
 **Zero é resposta medida, não resposta preguiçosa: 6.280 vagas lidas para chegar nele.**
+
+### 6. ADENDO DAS 08h45 — O BURACO ERA MAIOR QUE A MINHA PRÓPRIA RESSALVA: **147 TOKENS ERAM INVISÍVEIS À REGEX DE URL**, E O RECRUITEE TEM UMA RODADA DE ADIVINHAÇÃO QUE NINGUÉM NUNCA NOMEOU
+
+Fechei a ressalva do §5 em vez de deixá-la escrita, e ela era pior do que eu estimei. Todo token
+que mora numa **coluna `token`** de CSV e nunca foi escrito como URL é **invisível** para uma fila
+montada por regex de URL — e é assim que a varredura era montada, na minha de hoje e na de 00h41.
+
+| família | pela regex de URL | só na coluna | união |
+|---|---|---|---|
+| Ashby | 24 | **+30** | 54 |
+| BambooHR | 87 | **+41** | 128 |
+| Lever | 27 | **+20** | 47 |
+| Teamtailor | 155 | +17 | 172 |
+| Greenhouse | 81 | +14 | 95 |
+| Workable | 14 | +14 | 28 |
+| Recruitee | 74 | +10 | 84 |
+| SmartRecruiters | 31 | +1 | 32 |
+| **total** | 493 | **+147** | **640** |
+
+**Varridos os 147 na mesma janela, com a conversão de fuso do §2 aplicada: 199 quadros novos
+(83 no Teamtailor), 2.843 vagas a mais, 123 publicadas a mais dentro da janela, e ZERO acerto da
+disciplina.** O buraco era de **cobertura**, não de resultado — mas ninguém podia saber isso antes
+de medir, e a conclusão *"zero"* de 00h41 foi tirada sem essa metade.
+
+**Números honestos do turno somando as duas passadas: 667 quadros, 9.123 vagas lidas, 192
+publicadas desde 18/09 00h00 UTC, ZERO acerto, ZERO porta.**
+
+**A correção fica em arquivo e não em regra:** `automacao/tokens-ats-1809.csv`, 640 tokens com
+família, origem (`url` ou `coluna`), procedência e arquivos de origem. **Quem repetir esta veia lê
+esse arquivo; não remonta por regex.**
+
+#### 6a. E O ACHADO QUE VALE MAIS QUE OS 147: **A RODADA DE ADIVINHAÇÃO DE 10/09 TAMBÉM PRODUZIU 65 TOKENS DE RECRUITEE**, E TRÊS TURNOS TRATARAM ISSO COMO CENSO
+
+A regra de 00h41 sobre token adivinhado foi escrita **só para o Teamtailor**. Cruzando a
+procedência: dos 84 tokens de Recruitee, **65 vêm exclusivamente do
+`quadros-tt-rec-1545-1009.csv`** e **18 têm origem independente**. Medidos hoje um por um:
+**65 de 65 respondem 200 e 55 têm vaga** — ou seja, **passam por todos os sinais verdes**.
+
+E o Recruitee entrega o desempate **de graça, no mesmo JSON**: o campo **`company_name`** de
+qualquer oferta diz o nome da casa, e ele desmente o slug exatamente como o `title` do Teamtailor:
+
+| slug adivinhado | `company_name` real | vagas |
+|---|---|---|
+| `sisu` | **Silverein** | **128** |
+| `adam` | More Driver Solutions | 74 |
+| `opus` | OPUS | 29 |
+| `escape` | Escape B.V. | 24 |
+| `pineapple` | **Pineapple Recruiting GmbH** (é agência de recrutamento) | 20 |
+| `blank` | Zenzero | 10 |
+| `matt` | Matt Sleeps (colchões) | 8 |
+| `classy` | **Huuuge Games** (casa real, slug mentiroso) | 7 |
+
+> **`sisu` sozinho tem 128 vagas — mais que a soma de vários quadros reais da família — e é uma
+> empresa chamada Silverein, que não é jogo nem VFX.** E ele não é inofensivo: **a única vaga que o
+> Recruitee me devolveu dentro da janela hoje saiu dele** (*Medewerker ontmoetingscentrum*,
+> Amersfoort). Ou seja o número de recência da família estava sendo produzido por um falso amigo.
+>
+> **Regra, agora com as duas famílias: toda rodada de adivinhação de slug de 10/09 contaminou
+> Teamtailor E Recruitee, e o desempate custa ZERO requisição nas duas** — `title` no JSON Feed do
+> Teamtailor, `company_name` na oferta do Recruitee. Comparar com o nome da casa **antes** de contar
+> a vaga.
+
+#### 6b. A ARMADILHA ESTÁ DENTRO DE UM ARQUIVO DESTE REPOSITÓRIO, E O NOME DA COLUNA É QUE ENGANA
+
+O `automacao/quadros-fora-censo-1209.csv` tem uma coluna **`conferido`** e ela diz **`SIM`** para
+`black`, `habitat`, `seven` e `butter` — **os quatro que 00h41 provou não serem casa nenhuma da
+área** (Eventus, HEALTH CITY, Baar, All Gravy). Lido o arquivo, o que ele mediu foi **leitura**:
+`house` e `rhino` estão como `HTTP-403 / NAO`, os outros como `OK / SIM`.
+
+> **`conferido` ali quer dizer LEITURA CONFERIDA, não IDENTIDADE CONFERIDA.** E como aquele arquivo
+> apenas **retestou a mesma lista adivinhada**, ele **não é evidência independente** e não promove
+> token a real — embora qualquer turno que leia a coluna pelo nome conclua o contrário. Por isso o
+> `tokens-ats-1809.csv` **não** conta `quadros-fora-censo-1209.csv` como origem independente, e
+> marca **`suspeito`** (não `nao`) os 29 do Teamtailor e 1 do Recruitee que vieram da adivinhação e
+> **depois foram promovidos** ao `docs/index.html` ou ao `processados.csv`: a promoção pode ter sido
+> feita pela própria rodada que os inventou.
+
+**Procedência final da fila, por família:** Ashby 54, BambooHR 128, Greenhouse 95, Lever 47,
+SmartRecruiters 32 e Workable 28 **todos com origem independente**; Recruitee 18 independentes,
+**65 adivinhados**, 1 suspeito; Teamtailor 77 independentes, **66 adivinhados**, 29 suspeitos.
+**131 dos 640 tokens da campanha são slug inventado que nunca foi conferido contra o nome da casa**
+— e os dois campos que resolvem isso saem na mesma resposta que a varredura já pede.
