@@ -9667,3 +9667,450 @@ armadilha de domínio, `distilleryfilms.ie` **403 em todos os caminhos**, `maver
 > inteiro** (49 de 49 casas, 22 caminhos cada) e a Animation Ireland está **varrida nos 8 domínios que
 > faltavam**. Nenhuma das duas listas tem mais endereço de pessoa para dar. **O que sobra nelas é nome sem
 > endereço**, e isso já está registrado casa por casa aqui e nas rodadas das 16h35, 12h35 e 08h55.
+
+---
+
+## JOE, 18/09/2026 20h35 UTC — **A VEIA QUE RENDEU FOI O `wp-json/wp/v2/membre` DA GUILDE DU JEU VIDÉO DU QUÉBEC LIDO ATÉ O FIM: 426 MEMBROS, NÃO 145**, E O QUE FECHOU AS FICHAS FOI **PAREAR O `mailto:` DO DIRETÓRIO COM O NOME PUBLICADO EM OUTRA FONTE DA PRÓPRIA CASA** (presskit, página do Teamtailor da casa, entrevista de imprensa). SETE PESSOAS: **CINCO COM ENDEREÇO PUBLICADO**, DUAS `sem-email`. E A MIKROS FICOU EM `sem-email` **PORQUE DUAS MONTAGENS EM `rodeofx.com` JÁ QUICARAM NA CAIXA**
+
+**Conjunto de domínios já tocados desta rodada:** 3.067 (`enviados.csv` + `alvos.csv` + `pessoas.csv`
++ `processados.csv` + este arquivo + `docs/index.html`, regex com 40 TLDs). Todo candidato passou pelo
+diff antes da requisição.
+
+### O ACHADO DE MÉTODO: O CENSO DA GUILDE DE 17/09 TINHA **145 CASAS**; O DIRETÓRIO TEM **426 MEMBROS**, E O NÚMERO ESTÁ NO CABEÇALHO DA RESPOSTA
+
+`https://laguilde.quebec/wp-json/wp/v2/membre?per_page=100&page=N` responde 200 e o cabeçalho
+**`x-wp-total: 426`** com **`x-wp-totalpages: 5`**. O `automacao/censo-guilde-quebec-1709.csv` tem
+**145 linhas** — ou seja **281 membros nunca entraram em arquivo nenhum**. Baixei os 426 slugs e as
+**424 páginas de detalhe** (`/membre/<slug>/`, duas falharam por rede), e **367 delas publicam
+`mailto:` cru**.
+
+> **Regra: quando um diretório é WordPress, leia `x-wp-total` ANTES de decidir que a lista acabou.**
+> A rodada de 17/09 mediu a Guilde pela página renderizada e parou em 145; a paginação do REST
+> entrega 426 e custa 5 requisições. **A diferença é 281 casas, e é nelas que estão as fichas de hoje.**
+>
+> **Segunda regra, e é a que transformou "sem pareamento" em ficha:** o `acf` do membro vem **vazio**
+> no REST (`"acf": []`) e a página de detalhe **publica o endereço mas NUNCA o nome da pessoa**. A
+> rodada das 12h35 de 17/09 desistiu de 15 casas por isso (*"sem pareamento não vira ficha"*). O que
+> funciona é **buscar o nome numa segunda fonte DA PRÓPRIA CASA**: o `presskit()` (PlayTogether), a
+> página `/people/<id>-<nome>` do **Teamtailor da própria casa** (Awaceb) ou uma entrevista de
+> imprensa assinada (ManaVoid). Três casas que estavam mortas no arquivo viraram ficha hoje assim.
+
+### A MIKROS: A CASA NÃO PUBLICA ENDEREÇO DE PESSOA, E O PADRÃO DO DONO **JÁ FOI MEDIDO COMO MORTO**
+
+Ordem do maestro para esta rodada: a próxima carta na Mikros é de artista para artista, ao supervisor
+de **modelagem**, não ao RH. Fui buscar o endereço dele e **ele não existe em fonte pública**:
+
+- `mikrosanimation.com/wp-json/wp/v2/people?per_page=100` (**200, 35.276 bytes, 32 pessoas**) traz
+  `title`, `slug`, `link` e a taxonomia `department` — e o campo `content` de **todas as 32 é vazio**.
+  **Zero e-mail no JSON.** A taxonomia (`/wp-json/wp/v2/department`, 200, 28.511) é
+  `leadership-team 13`, `supervisors 17`, `production 1`, `recruitment 2`.
+- `https://www.mikrosanimation.com/en/about/` (**200, 32.568**) imprime os 13 da liderança **com
+  cargo** e **nenhum endereço**; `/en/contact/` (**200, 18.077**) tem **zero `@`**: só "Choose location"
+  e um formulário. `/careers/`, `/en/legal-notice/`, `/en/join-us/`, `/en/people-and-culture/meet-the-team/`
+  e `/sitemap.xml` dão **404 de 15.035 bytes** (404 gordo, a família da Pyjama).
+- A **única** caixa publicada em todo o domínio é **`business@mikrosanimation.com`**, no rodapé das
+  matérias de `Talent Spotlights`. É caixa comercial, não pessoa.
+- **E o padrão do dono está provado MORTO na caixa do Vini**, o que mata a tentação de montar
+  `efrechou@rodeofx.com`: `dferrand@rodeofx.com` (06/09) e `flord@rodeofx.com` (14/09) **as duas
+  voltaram com `550 5.1.1 The email account that you tried to reach does not exist`**. Dois de dois.
+  **Nunca gaste a última carta de uma casa grande num endereço montado — aqui o montado já falhou duas
+  vezes no mesmo domínio.**
+
+**O que a casa PUBLICA e serve para a carta**, se o maestro decidir mandar por `business@` ou pelo fio
+da Kécha: `https://www.mikrosanimation.com/en/news/under-the-mikroscope-eddy-frechou-modelisation-supervisor-at-mikros-animation-paris/`
+(**200, 33.583 bytes**) é uma entrevista do próprio **Eddy Frechou**, e ela entrega o cargo em duas
+grafias (*Modelisation Supervisor* no título de 2023 e **`#FocusArtist - Eddy Frechou, Set Modeling
+Supervisor`** em 30/04/2024), a escola (**ISART Digital**, 2012), o caminho (Studio 100 → Illumination
+→ Mikros como **lead modelling em The Tiger's Apprentice**) e a frase que descreve o trabalho dele:
+*"Helping artists find solutions to their technical problems and giving them advice on modelling or
+technical issues."*
+
+> **Ressalva de disciplina que o maestro tem de ler antes de escrever:** Frechou é **SET** Modeling,
+> isto é modelagem de cenário, não de personagem. Quem há de personagem na casa, pelos próprios
+> títulos publicados nas matérias, é **Sabine Heller** (*"Global Head of Characters and Environments"*
+> nas Tiger Talks de 25/01/2024, hoje listada na liderança como **VP, Creative Operations**), e há
+> ainda *Julia Bordeau, Supervisor Character Surfacing* e *Namyashree Rathnakar, Character Modeler*
+> (Bengaluru, fora do escopo). **Nenhum dos quatro tem endereço publicado.**
+
+### AS CINCO CASAS DE VANCOUVER QUE A REDE NÃO ABRIU ÀS 16h35: **QUATRO ESTÃO MORTAS DE VERDADE E UMA É DA CHINA** — NENHUMA É PAREDE DE REDE
+
+Esta é a correção mais útil da rodada, porque as cinco estavam marcadas **NÃO CONFERIDAS** e isso
+convida a repetir a tentativa toda rodada:
+
+| Casa | O que abriu hoje | Veredito |
+|---|---|---|
+| **Sequence Group** (`sequencegroup.com`) | o TLS continua falhando (`tlsv1 alert internal error`), mas o **Wayback abre**: `web.archive.org/web/20250713110147/http://sequencegroup.com/` (**200, 8.456 bytes**) e o corpo é a **página de domínio estacionado da 1&1**: *"THIS DOMAIN NAME HAS JUST BEEN REGISTERED FOR ONE OF OUR CUSTOMERS!"* | **domínio estacionado, não é a casa.** Não é parede de rede |
+| **Mavericks VFX** (`mavericksvfx.com`) | `CONNECT 502` pelo túnel; o Wayback (`/web/20240618212937/`, **200, 3.764**) devolve *"mavericksvfx.com is unavailable … registered with Gandi.net"* | **domínio expirado/parqueado**; `mavericksvfx.ca` também dá **502** |
+| **Versatile Media** (`versatile.media`) | falha de CA **inclusive com `--cacert /root/.ccr/ca-bundle.crt` e `CURL_CA_BUNDLE`**; o Wayback de **07/06/2026** (**200, 162.675 bytes**) abre e o site é **浙江博采传媒有限公司 (Hangzhou Bocai / Versatile Media, China)**, com HQ chinesa e conteúdo todo em mandarim | **FORA DO ESCOPO GEOGRÁFICO** (na Ásia só Coreia do Sul e Singapura). Morta por regra, não por rede |
+| **Bron Digital** (`brondigital.com`) | `connection reset` no `.com`; **`bron.digital` responde 200** e redireciona para **`/login`** — é a plataforma de produção deles, não site institucional (`/contact`, `/about`, `/team` = **404**). O Wayback do `.com` (**200, 3.474**) é casca de JavaScript | **sem página pública de equipe**; nada para parear |
+| **Slap Happy** | pulada por ordem do maestro | Josh Mepham já respondeu hoje |
+
+> **Regra: `connection reset` e `tlsv1 alert internal error` NÃO provam parede de rede.** Nas três
+> casas de hoje o mesmo sintoma tinha três causas diferentes (domínio estacionado, domínio expirado,
+> casa chinesa com cadeia de certificado própria). **A distinção custa uma consulta ao
+> `archive.org/wayback/available?url=<dominio>`, que passa por este túnel.** O que NÃO passa é o
+> **CDX** (`web.archive.org/cdx/search/cdx` devolve **403 "Blocked by egress policy"**): para listar
+> caminhos arquivados não há como; para abrir UM instantâneo, `web.archive.org/web/<timestamp>/<url>`
+> funciona, com retentativa (uma em cada três falha no meio).
+
+### A ATOMHAWK: O SITE MUDOU DESDE AS 16h35 E AGORA **NOMEIA TRÊS PESSOAS DA LIDERANÇA E TRÊS DA ARTE DE PERSONAGEM** — MAS NENHUM ENDEREÇO DE PESSOA
+
+A nota das 16h35 dizia *"a `/people` lista Character Artist entre as disciplinas e não nomeia uma única
+pessoa"*. **Hoje `/people` redireciona para `/about-us/` (200, 143.007 bytes)** e o que nomeia gente é
+outro caminho, achado pelo `post-sitemap.xml` (**200, 22.871 bytes**):
+
+- `https://atomhawk.com/resources/meet-the-leadership-team/` (**200, 66.586**) — *"**Eddie Visser** has
+  been appointed as **Studio Creative Director** and **Becky Jackson** takes the role of Operations
+  and Commercial Director"*, mais *"**Tim Wilson**, Atomhawk's VP"*.
+- `https://atomhawk.com/resources/round-table-character-art/` (**200, 75.595**) — *"In our very first
+  Discipline Round Table, **Art Directors Drew Whitmore and Dario Jelušić** join **Character Expert
+  Charlie Bowater**"*.
+- **Endereço: só funcional, e vem ofuscado em `data-cfemail`.** Decodificados nesta rodada (XOR com o
+  primeiro byte): `234a4d454c6342574c4e4b4254480d404c4e` → **`info@atomhawk.com`** e
+  `fa899b969f89ba9b8e9597929b8d91d4999597` → **`sales@atomhawk.com`**. Em quatro páginas abertas, **zero
+  endereço de pessoa**, e `atomhawk.com/sitemap.xml` é 404 (o válido é `sitemap_index.xml`).
+
+### O QUE MORREU MEDIDO, PARA NINGUÉM REPETIR
+
+- **`hibernum.com` NÃO É MAIS A HIBERNUM CREATIONS.** O domínio da casa de Montreal hoje serve um
+  **blog de World of Warcraft**: *"Today, hibernum.com is a comprehensive news source for all things
+  World of Warcraft"*, com endereço postal em **Seattle** e telefone `+1 (206) 555-7890` (número de
+  exemplo). O `ernest@hibernum.com` que a varredura extraiu é **do blogueiro**, não do estúdio.
+  Terceira ocorrência da família "domínio de estúdio sequestrado" (Ronimo em 16h35, Tarsier antes).
+- **Sphere Animation / Oasis Animation:** `oasisanimation.com` **redireciona inteiro para
+  `sphere-media.com`**, e a `/en/team/animation/` (**200, 136.125 bytes**) nomeia quatro pessoas —
+  *Judith Beauchemin, Head of Operations*; *Rosalie Bycenko, Producer, Animation*; *Andrea Griffith,
+  VP Content and Development*; *Marianne Culbert, VP Production, Animation*. Os 19 endereços do grupo
+  saem de `data-cfemail` (inclusive `jbeauchemin@sphereanimation.com`). **Não virou ficha por dois
+  motivos:** a Marianne Culbert **já levou carta em 09/09** (`pessoas.csv`) e a própria página declara a
+  casa como *"one of the most important **2D digital animation** studios in Canada"*. **2D declarado.**
+- **Haven Studios** (Sony, Montreal): o diretório publica `seb@havenstudios.com` e a tentação é
+  parear com **Sébastien Puel**, co-fundador. **Ele saiu da Haven em 2022** (*"Haven Studios
+  co-founder Sebastien Puel departs after 10 months"*, Game Developer), e a Jade Raymond saiu em 2025.
+  O site (**200, 76.257**) não nomeia ninguém. **Parear "seb" com um co-fundador que saiu há quatro
+  anos era o erro mais fácil da rodada.**
+- **Virtuos Montreal:** o diretório publica `dcheung@virtuosgames.com`, e o nome é **David J.Y. Cheung**,
+  General Manager do estúdio de Montreal — **que também já deixou o cargo**. Além disso a casa tem
+  candidatura **de hoje** (*Lead Character Artist - 2283*, recibo do Oracle às 11h49) mais duas cartas
+  frias (27/08 `info@`, 06/09 `dub-careers@`). **Não se escreve para ex-chefe de estúdio.**
+- **Studio RuniQ, o caso mais delicado:** a `/team` (**200, 503.240 bytes**) publica **sete pessoas com
+  cargo e endereço individual** e um deles é de uma pessoa **falecida**. A `/news` da própria casa diz,
+  em 11/11/2025: *"We are deeply saddened to share the passing of our friend **Thomas Wilson**,
+  co-founder and Creative Director of RuniQ"* — e **`twilson@studioruniq.com` continua publicado na
+  página de equipe, com a biografia no presente**. **NUNCA escrever para `twilson@studioruniq.com`.**
+  (A ficha 7 abaixo usa outra pessoa da mesma casa.)
+- **Vox Prima** (Québec) continua **sem pareamento**, terceira rodada seguida: `mboudreau@voxprima.ca`
+  está publicado na home (**200, 13.011**) e no diretório, e **nenhuma fonte aberta escreve o nome**.
+  A busca de imprensa de hoje devolveu zero. Segue guardada como endereço provado sem nome.
+- **Solideo** (`mattbog@solideo.ca`, publicado no `/contact` e no diretório): a `/about` diz *"**I'm** a
+  video game developer"* — **casa de uma pessoa só**, e os dois jogos (*Sick Samurai*, *The Life of a
+  Magical Circle*) são de uma pessoa. **Sem cadeira de personagem.** Endereço guardado, sem ficha.
+- **Varredura de apoio, com número:** 78 domínios do censo da Guilde + 60 do `fila-gamedevmap-canada.csv`
+  (filtro Montréal/Québec) + 10 casas indie, **cada um em 11 caminhos** (`/`, `/contact`, `/contact-us`,
+  `/about`, `/about-us`, `/team`, `/equipe`, `/notre-equipe`, `/a-propos`, `/studio`, `/people`) —
+  **1.628 requisições, 467 respostas 200**. Rendimento de endereço de PESSOA no site da própria casa:
+  **quatro** (`studioruniq.com` ×8, `piecesgames.com` ×2, `solideo.ca`, `voxprima.ca`, `bolodilgames.com`,
+  `atracktiv.com`, `nodeadlines.ca`, `playtogether-studio.com`). **O diretório da Guilde rendeu 367.**
+  A lição repete a de 16h35 ao contrário: **para casa pequena de Québec, o diretório da associação é a
+  fonte de endereço, e o site da casa é a fonte de NOME.**
+- **Armadilha de medição minha, e ela custou dois minutos de CPU:** `re.findall` de e-mail em página com
+  **imagem base64 inline** (`data:image/...;base64,` de 1,5 MB numa linha) faz o `[A-Za-z0-9._%+-]+@`
+  retroceder sobre megabytes e o script **estoura o timeout sem erro**. `grep -aoiE` no mesmo arquivo
+  leva milissegundos. **Para varredura em massa use `grep`, não `re` do Python; e se usar Python,
+  corte `data:` antes.**
+
+---
+
+### FICHA 1 — Thierry Boura, **co-fundador e CEO** da **Awaceb** (Montréal, Mile End, Canadá) — **PUBLICADO, confiança ALTA**, e é a casa de *Tchia*
+
+- **EMAIL: `thierryboura@awaceb.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de detalhe
+  do diretório da Guilde, **com nome e sobrenome completos dentro do endereço**. Nada montado, nenhuma
+  segunda grafia.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/studio-awaceb-canada/`
+  (**200**, o `mailto:` está no botão *Contactez le membre par courriel*); o pareamento nome↔cargo vem
+  da **própria casa**: `https://awaceb.teamtailor.com/people/1846126-thierry-boura` (**200, 42.904
+  bytes**, `<title>` = *"Thierry Boura - CEO - Awaceb"*) e `https://awaceb.teamtailor.com/people`
+  (**200, 50.280**), que lista **três pessoas**: `1791840-marilou`, `1846126-thierry-boura` e
+  `1846128-philippe-crifo`. Também abertas `https://www.awaceb.com/` (**200, 369.176**) e
+  `https://www.awaceb.com/tchia` (**200, 798.257**).
+- **POR QUE ELE, e não outro da casa:** a casa nomeia três pessoas e **uma já foi tocada** — o
+  co-fundador **Philippe Crifo** mandou o *Bienvenue à Awaceb* do Connect em **11/09 21h27** e o Vini
+  **respondeu em francês no fio em 14/09**, sem retorno. Boura é o **CEO** e a **segunda e última**
+  pessoa possível desta casa. A terceira, *Marilou*, aparece sem sobrenome.
+- **GANCHO, com as frases da própria casa entre aspas:** a home tem **sete palavras** e todas servem:
+  *"WE MAKE VIDEO GAMES — MONTRÉAL, CANADA — WE MADE TCHIA — **JOIN US FOR THE NEXT THING**"*. A página
+  de *Tchia* entrega o resto: *"Use Tchia's **Soul Jumping** ability to take control of any animal or
+  object"*, *"over **30 playable animals**"*, *"**Diverse characters inspired by New Caledonian
+  culture**"*, *"Hundreds of unlockable cosmetics"* e *"The world of Tchia is inspired by New Caledonia,
+  a tiny island in the Pacific Ocean, **homeland of Awaceb's co-founders**"*. **Trinta animais jogáveis
+  estilizados mais elenco humano é exatamente a cadeira do Vini.**
+- **FORA DOS EUA?** Sim, **Canadá** — e o dado que vale ouro aqui: **a própria casa se mudou de
+  Bordeaux/Nouméa para Montréal depois de *Tchia***. A frase de realocação entra inteira e pode citar
+  de volta que a casa também atravessou o mundo para montar time.
+- **DEDUPE NA CAIXA, e ele não voltou vazio:** `search_threads` por
+  `awaceb OR Tchia OR Boura OR kepler in:anywhere` devolveu **3 fios**: (a) *Bienvenue à Awaceb* de
+  `philippe.crifo@awaceb.teamtailor-mail.com` em 11/09 + resposta do Vini em 14/09; (b) *Login to
+  Awaceb* de `no-reply@awaceb.teamtailor-mail.com` em 16/09; (c) o fio do **Kepler Interactive**
+  (publisher de *Tchia*), com o Simon Sweeney, de 14/09. **`thierryboura` e `Boura` dão zero** em
+  `pessoas.csv`, `enviados.csv`, `alvos.csv`, `processados.csv`, `docs/index.html` e neste arquivo. A
+  casa **nunca recusou** e **nunca recebeu carta endereçada a uma pessoa em `@awaceb.com`**.
+- **RESSALVAS HONESTAS:** (a) **é a terceira aproximação** (cadastro no Connect em 11/09, resposta ao
+  fio do Crifo em 14/09, login em 16/09) — a carta **não pode fingir primeiro contato** e o melhor
+  caminho é assumir: *"I already signed up on your Connect page and wrote to Philippe"*; (b) a casa é
+  **pequena** (uma dúzia de pessoas) e o CEO é produtor, não diretor de arte; (c) o publisher **Kepler**
+  também já está no radar, então o mesmo nome pode chegar por dois lados — não é problema, mas convém
+  o maestro saber; (d) *Tchia* saiu em 2023 e **não há anúncio público do próximo jogo**: a carta
+  precisa apostar no *"JOIN US FOR THE NEXT THING"* e não citar projeto que não existe.
+
+---
+
+### FICHA 2 — Chris Chancey, **co-fundador, President & CEO** da **ManaVoid Entertainment** (Montréal, Mile End, Canadá) — **PUBLICADO, confiança ALTA**
+
+- **EMAIL: `chancey@manavoid.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de detalhe do
+  diretório da Guilde. O endereço é o **sobrenome puro**, e o sobrenome é raro o bastante para não
+  haver ambiguidade na casa. Nada montado.
+- **URLs exatas abertas nesta rodada:** `https://www.laguilde.quebec/membre/manavoid-entertainment-inc/`
+  (**200**, `mailto:` no botão de contato); `https://www.manavoid.com/` (**200, 191.647 bytes**);
+  `https://www.manavoid.com/apropos` (**200, 158.183** — note o caminho **sem hífen**: `/a-propos` é
+  404); `https://www.manavoid.com/contact` (**200**, endereço postal *160, rue Saint-Viateur Est #300,
+  H2T 1A8 Montréal*). O pareamento nome↔cargo vem da imprensa: a entrevista da **MobileSyrup**
+  (02/06/2023, *"Montreal's Manavoid on four-day work weeks, making non-violent games"*) trata **Chris
+  Chancey** como fundador e CEO do estúdio.
+- **POR QUE ELE, e não outro da casa:** a casa **não nomeia ninguém** em nenhuma página própria (a
+  `/apropos` fala da equipe no coletivo) e o diretório publica **um único endereço de pessoa**, o dele.
+  Em casa de porte pequeno o `BRIEF-JOE` manda ir ao fundador, que responde ele mesmo.
+- **GANCHO, com as frases da própria casa entre aspas:** *"Notre mission est de **mélanger les genres et
+  mécaniques connus pour créer de nouvelles expériences**!"*; *"La famille ManaVoid est un heureux
+  mélange multidisciplinaire de gens issus de l'**industrie AAA** ayant travaillé sur des énormes
+  franchises et de jeunes talentueux"*; e o convite literal *"**Découvrez comment faire parti de
+  l'équipe**"*. Os dois projetos em produção são de personagem 3D estilizado: **Roots of Yggdrasil**
+  (*"city-builder narratif, roguelike qui se déroule après Ragnarok … restaurez votre clan viking"*) e
+  **Checkmate Showdown** (*"Les échecs rencontrent les jeux de combat"* — jogo de luta, ou seja elenco
+  de personagens).
+- **FORA DOS EUA?** Sim, **Canadá**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por
+  `manavoid OR Chancey OR Yggdrasil OR playtogether OR "Mad Experiments" OR Marthe in:anywhere` devolveu
+  **um** fio e ele é de **outra casa** (carta de 11/09 para `andres@frostfx.ee`, que cita *Yggdrasil
+  Vikings* como peça do reel da Frost FX). **Zero ocorrência de manavoid ou Chancey** nos quatro
+  arquivos e na caixa. **Casa inédita, primeira pessoa.**
+- **RESSALVAS HONESTAS:** (a) o site é **só em francês** (o botão *Français* não tem par em inglês) —
+  a carta em inglês funciona em Montréal, mas uma linha de abertura em francês ajuda; (b) a nota de
+  17/09 deste arquivo registrou `manavoid.com` como *"zero byte ou 114 bytes de casca"*: **hoje o site
+  está vivo em Squarespace**, então aquela medição está superada e não deve ser reusada; (c) o estúdio
+  se define por *"jeux non-violents"* na imprensa — o portfólio do Vini tem peça de horror e de
+  combate, e a carta deve mostrar a linha estilizada, não a agressiva; (d) **não há vaga publicada**:
+  a casa não tem página de carreira, o pedido é de porta.
+
+---
+
+### FICHA 3 — Clement Marthe, **Founder & Creative Director** da **PlayTogether Studio** (Montréal, Canadá) — **PUBLICADO EM DOIS LUGARES, confiança ALTA**, e ela **fecha o pareamento que a rodada de 17/09 deixou aberto**
+
+- **EMAIL: `clem@playtogether-studio.com` — PUBLICADO, confiança ALTA.** Aparece **duas vezes**: no
+  `mailto:` cru da página de detalhe do diretório da Guilde e no `presskit()` da própria casa, no campo
+  *"Press / Business contact"* e no bloco *Inquiries*.
+- **URL exata aberta nesta rodada:** `https://playtogether-studio.com/press/` (**200, 9.126 bytes**),
+  gerado pelo `presskit()` do Rami Ismail. É ali que o nome está: o bloco **"Team & Repeating
+  Collaborator"** imprime **"Clement Marthe — Founder"**, e o *Factsheet* traz *"Based in Montreal, QC,
+  Canada"*, *"Founding date: November 28th 2019"*, *"Press / Business contact:
+  clem@playtogether-studio.com"* e o social `@ClemGameDev`. Também aberta
+  `https://www.playtogether-studio.com/` (**200, 131.035**), onde ele se apresenta: *"I am Clem, a
+  Frenchy game dev that moved in Montreal, Canada in 2013. **I am the Founder and Creative Director of
+  PlayTogether Studio**"*.
+- **POR QUE ELE, e não outro da casa:** é casa de **uma pessoa** com colaboradores pontuais; o
+  presskit lista um único nome.
+- **A ARMADILHA QUE ESTA FICHA RESOLVE:** a rodada das 12h35 de 17/09 registrou, corretamente, que
+  `clem@rootmotion.games` (**Clémence Maurer**) e `clem@playtogether-studio.com` **não são a mesma
+  pessoa**, mas deixou este segundo **sem nome**. **Agora tem nome, e ele saiu da própria casa:**
+  Clement Marthe, homem, francês, chegou a Montréal em 2013 por marketing numa indie de cinco pessoas
+  e depois passou por um AAA. **Não é a Clémence do Root Motion, e as duas fichas podem coexistir.**
+- **GANCHO, com as frases da própria casa entre aspas:** *"PlayTogether Studio creates games that focus
+  on **cooperative experiences**"*; *"We hope you will have as much fun playing our games as we had
+  making them!"*; e a linha de valores dele: *"keep a total creative freedom, **impact the world in a
+  beneficial way** and keep free time for my family"*. Os jogos são **Run Prop, Run!** (prop hunt, ou
+  seja elenco 3D estilizado e biblioteca de objetos animados) e **Mad Experiments: Escape Room 1 e 2**.
+- **FORA DOS EUA?** Sim, **Canadá**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** a mesma busca da ficha 2 (`playtogether OR "Mad Experiments" OR Marthe`) deu
+  **zero** para esta casa. `playtogether` aparece **uma vez** em `pessoas.csv`, mas dentro da ficha do
+  **Root Motion** como nota de armadilha, **não como carta**. `Marthe` dá zero nos cinco arquivos.
+  **Primeira pessoa, casa inédita.**
+- **RESSALVAS HONESTAS:** (a) é um estúdio de **um homem só** que divide o tempo com *"games for doctors
+  and researchers"* — a chance de haver cadeira paga de personagem é **baixa**, e o valor da carta é
+  rede e indicação, não vaga; (b) *Mad Experiments* é jogo de sala de fuga, com pouco elenco; o encaixe
+  real é o **Run Prop, Run!**; (c) ele mesmo se descreve como vindo de **marketing e game design**, não
+  de arte — o vocabulário da carta deve ser de produção, não de pipeline; (d) fundado em 2019 e sem
+  anúncio novo recente.
+
+---
+
+### FICHA 4 — Eddie Visser, **Studio Creative Director** da **Atomhawk** (Gateshead e Leamington Spa, Reino Unido, + **Vancouver**) — **`sem-email`**, e a casa **só publica `info@` e `sales@`**
+
+- **EMAIL: não existe em fonte pública. `sem-email`.** Onde procurei, com número: `/about-us/` (**200,
+  143.007**), `/contact/` (**200, 112.638**), `/resources/` (**200, 74.830**),
+  `/resources/meet-the-leadership-team/` (**200, 66.586**), `/resources/round-table-character-art/`
+  (**200, 75.595**), `/resources/applicant-qa-guide-character-artist/` (**200, 157.062**),
+  `/resources/applicant-qa-guide-3d-artist/` (**200, 157.387**), `post-sitemap.xml` (**200, 22.871**),
+  `sitemap_index.xml` (**200, 641**). **Os únicos dois endereços do domínio inteiro são
+  `info@atomhawk.com` e `sales@atomhawk.com`**, e os dois vêm ofuscados em `data-cfemail` (decodificação
+  registrada acima). **Nada montado:** a casa é parte do **Sumo Group**, e montar
+  `eddie.visser@atomhawk.com` seria exatamente o erro que a Mikros mostrou custar entrega.
+- **URL exata do NOME e do CARGO:** `https://atomhawk.com/resources/meet-the-leadership-team/` — *"We're
+  pleased to announce that **Eddie Visser** has been appointed as **Studio Creative Director** and Becky
+  Jackson takes the role of Operations and Commercial Director. Together, they will be taking
+  co-leadership of the studio."*
+- **POR QUE ELE, e não outro da casa:** são **seis** nomes publicados (Visser, Becky Jackson, Tim Wilson
+  na liderança; Drew Whitmore e Dario Jelušić como **Art Directors** e Charlie Bowater como *Character
+  Expert* na arte). Escolhi o Visser por uma razão de carreira, não de hierarquia: ele *"brings over two
+  decades of creative expertise through previous roles at **Electronic Arts, Ubisoft, and Next Level
+  Games**"* — e a **Next Level Games** é casa de **personagem 3D estilizado** (Luigi's Mansion 3, Mario
+  Strikers), o mesmo ofício do Vini. **Segunda e terceira opções, se o maestro preferir arte pura:
+  Drew Whitmore e Dario Jelušić.** Charlie Bowater fica fora: é ilustradora 2D.
+- **GANCHO, com as frases da própria casa entre aspas:** do Visser — *"Atomhawk is proudly an **artist and
+  designer-first studio**. We put a focus on creative excellence and a collaborative working style"*; da
+  Becky — *"Leading our teams to deliver projects for world renowned IP such as **Call of Duty, Halo,
+  Mortal Kombat, Age of Empires, PUBG and Pokémon**"*; e do guia de personagem — *"At Atomhawk, your role
+  is part of the **concept art team**, where you will **design characters that live and breathe inside of
+  our clients' worlds**"*.
+- **FORA DOS EUA?** Sim: **Reino Unido** (sede) e **Vancouver, Canadá**. Frase de realocação entra, e
+  vale citar as duas cidades, porque as duas são escopo bom para o Vini.
+- **DEDUPE NA CAIXA:** `search_threads` por `atomhawk OR "Atomhawk" OR Whitmore OR Jelusic in:anywhere`
+  devolveu **`{}`** — zero. `atomhawk` dá **zero** em `pessoas.csv`, `enviados.csv`, `alvos.csv` e
+  `processados.csv`, e **uma** ocorrência neste arquivo: a linha da tabela das 16h35 que a registrou como
+  *"a melhor casa da rodada sem nome para escrever"*. **Casa inédita como carta; hoje ela tem nome, só
+  não tem endereço.**
+- **RESSALVAS HONESTAS, e a primeira é de disciplina:** (a) **na Atomhawk personagem é CONCEITO 2D** —
+  o próprio guia diz que o papel *"is part of the concept art team"* e pede *"sketches"*, *"design
+  process"* e *"iterations"*; a fatia **3D** da casa é declaradamente **hard surface** (*"strong Hard
+  Surface modeling fundamentals … armor, props, vehicles, weapons and mechs"*). **Não há prova pública
+  de cadeira de modelagem de personagem 3D lá dentro**, e a carta tem de **perguntar**, não supor; (b)
+  sem endereço, a carta só pode sair por `info@` ou `sales@`, e nessa forma ela vale menos — o
+  `BRIEF-JOE` conta 7,7% de resposta em pessoa contra 4,9% em caixa genérica; (c) o estúdio é
+  **outsourcing**, o que costuma significar pipeline do cliente e menos autoria; (d) o Visser entrou em
+  2023 e a nota de liderança **não tem data no corpo** — não sei quanto tempo faz.
+
+---
+
+### FICHA 5 — Eddy Frechou, **Set Modeling Supervisor** da **Mikros Animation (A Rodeo FX Company)** — Paris, França — **`sem-email`**
+
+- **EMAIL: não existe em fonte pública. `sem-email`.** Toda a medição está na seção *A MIKROS* acima:
+  32 pessoas no `wp-json` **sem um único e-mail**, `/en/about/` e `/en/contact/` sem `@`, cinco caminhos
+  de equipe em 404 gordo, e **`business@mikrosanimation.com`** como única caixa do domínio. **E o
+  montado está proibido com prova:** `dferrand@` e `flord@rodeofx.com` **quicaram com 550** em 06/09 e
+  14/09.
+- **URLs exatas abertas nesta rodada:** `https://mikrosanimation.com/wp-json/wp/v2/people?per_page=100`
+  (**200, 35.276**), `.../wp/v2/department?per_page=100` (**200, 28.511**),
+  `https://www.mikrosanimation.com/en/about/` (**200, 32.568**),
+  `https://www.mikrosanimation.com/en/contact/` (**200, 18.077**),
+  `https://www.mikrosanimation.com/en/news/under-the-mikroscope-eddy-frechou-modelisation-supervisor-at-mikros-animation-paris/`
+  (**200, 33.583**) e `.../wp/v2/posts?per_page=100&search=character` (**200, 2.061.219**), que é onde
+  aparecem os cargos de personagem da casa.
+- **POR QUE ELE, e não outro da casa:** ordem direta do maestro (artista para artista, ao supervisor de
+  modelagem, nunca ao RH depois da recusa de 17/09). Dos **17 supervisores** da taxonomia, ele é o único
+  com **modelagem** no cargo publicado. **Quem seria melhor por disciplina — e não tem endereço tampouco
+  — é Sabine Heller, *Global Head of Characters and Environments*.** As duas recrutadoras (Cécile
+  Steinlein e Camila Oviedo) estão **fora por ordem do maestro**.
+- **GANCHO, com as frases da própria casa entre aspas:** da entrevista dele — *"Helping artists find
+  solutions to their technical problems and **giving them advice on modelling**"* e *"one day this famous
+  Emmanuel Chapon recommended me to join Mikros Animation as **lead modelling on The Tiger's
+  Apprentice**"*; da casa — *"Whether **photo-real or stylized**, we shape visual languages that reflect
+  the unique spirit of every project"* e a lista de serviços que inclui **"Character & Set Development"**.
+- **FORA DOS EUA?** Sim: **França** (ele) e **Canadá** (a casa tem Montréal). Frase de realocação entra.
+- **DEDUPE NA CAIXA, e ele é o motivo de a casa estar em compasso de espera:**
+  `search_threads` por `mikros OR rodeofx OR Frechou OR "Rodeo FX" in:anywhere` devolveu **quatro fios**:
+  recibo de candidatura (01/09, `notification@rodeofx.com`), **RECUSA em 17/09**
+  (`notifications@rodeofx.com`) com resposta do Vini para `klange@rodeofx.com` no mesmo dia, e **dois
+  quiques de endereço montado** (`dferrand@`, `flord@`). **`Frechou` dá zero** nos quatro arquivos e
+  neste. **A pessoa é inédita; a casa não.**
+- **RESSALVAS HONESTAS:** (a) **a casa recusou em 17/09** e o Vini já respondeu no fio dizendo que fica
+  à disposição se abrir cadeira de personagem ou groom — uma carta ao Frechou é a **quarta** aproximação
+  em 18 dias, e o risco de parecer insistente é real; (b) **Set Modeling é cenário, não personagem**;
+  (c) ele está em **Paris** e a recusa veio do RH de **Montréal** — são times diferentes, o que ajuda,
+  mas também significa que ele pode nada saber da vaga; (d) a entrevista é de **fevereiro de 2023** e a
+  matéria mais nova que o nomeia é de **abril de 2024**: não há prova de que ele continua na casa; (e)
+  sem endereço, não há carta para escrever hoje — esta ficha existe para **guardar o nome e o cargo** e
+  para registrar que o montado está proibido aqui.
+
+---
+
+### FICHA 6 — Gwenael Heliou, **General Manager, Kabam East (Québec e Prince Edward Island)** — **Kabam Montréal** (Longueuil/Montréal, Canadá) — **PUBLICADO, confiança ALTA**, mas **SEGURADA: a casa recusou candidatura em 03/09**
+
+- **EMAIL: `gheliou@kabam.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de detalhe do
+  diretório da Guilde (`https://www.laguilde.quebec/membre/kabam-montreal/`, **200**). Inicial mais
+  sobrenome, e o sobrenome bate com a única pessoa pública da casa em Québec.
+- **URLs abertas nesta rodada:** a página do membro da Guilde; `https://kabam.com/` (**200, 19.044**) e
+  `https://kabam.com/about/` (**200, 17.011**, montada em JavaScript — o texto limpo é só *"Kabam | The
+  best in mobile gaming"*, leitura inválida pelo piso de mil caracteres). O pareamento nome↔cargo vem
+  de fonte pública aberta (perfil público e ficha de diretório: *Gwenael Heliou, General Manager, Kabam
+  East — Québec & Prince Edward Island*).
+- **POR QUE ELE:** é o **único** endereço de pessoa que a Guilde publica para a casa, e é o gerente
+  geral da operação de Québec. Kabam faz **Marvel Contest of Champions**, que é elenco de **personagem
+  3D estilizado** em volume — a casa certa para o portfólio do Vini.
+- **GANCHO:** fraco, e é honesto dizer: o site institucional não entrega frase de texto (é SPA), e a
+  Guilde não publica descrição para esta casa. A frase utilizável é da própria **recusa**: *"we
+  encourage you to keep an eye out on our Careers page and reapply in the future if you see fitting
+  opportunities"*.
+- **FORA DOS EUA?** Sim, **Canadá**. Frase de realocação entra.
+- **DEDUPE NA CAIXA, e é ele que segura a ficha:** `search_threads` por
+  `kabam OR Heliou OR "Contest of Champions" in:anywhere` devolveu **dois fios, os dois do Lever**:
+  recibo de candidatura para **Lead Character Artist** em 30/08 e **recusa em 03/09 18h19** —
+  *"Thank you for your **Lead Character Artist** application! While we appreciate your interest, we
+  regret to inform you that **the position has now been filled**."* **`kabam` dá zero em `pessoas.csv`,
+  `enviados.csv` e `alvos.csv`** (duas ocorrências neste arquivo, do censo de 17/09), então a **pessoa**
+  é inédita.
+- **RESSALVA HONESTA E DECISÃO:** a regra da rodada é **nunca casa que já recusou**, e a Kabam recusou.
+  Mas a recusa é do tipo **"vaga preenchida" com convite explícito a voltar**, não veto de
+  elegibilidade nem *"unable to accept your application"*. **Não escrevi nada e não decidi por cima da
+  regra:** a linha vai ao CSV com `SEGURADA-casa-recusou-0309`. O maestro decide. Outras ressalvas: (a)
+  a ZoomInfo mostra o domínio corporativo dele como **`kabaminc.com`** — a Guilde publica `@kabam.com`,
+  e é esse que está publicado, mas a existência de dois domínios é risco de entrega; (b) o cargo é de
+  **gestão geral**, não de arte; (c) Kabam é **mobile**, e o pipeline de personagem é de orçamento
+  apertado.
+
+---
+
+### FICHA 7 — Dave Bergeron, **Design & Art** do **Studio RuniQ** (Québec, Canadá) — **PUBLICADO na página de equipe da própria casa, confiança ALTA**
+
+- **EMAIL: `dbergeron@studioruniq.com` — PUBLICADO, confiança ALTA.** Texto puro, **na mesma ficha** que
+  o nome, o cargo e a biografia dele, na página de equipe da casa. Sem ofuscação. A casa publica **oito**
+  endereços assim, um por pessoa, e o padrão `inicial+sobrenome@studioruniq.com` fica provado por eles —
+  **mas nada nesta ficha depende de padrão.**
+- **URLs exatas abertas nesta rodada:** `https://www.studioruniq.com/team` (**200, 503.240 bytes**),
+  `https://www.studioruniq.com/games` (**200, 645.599**), `https://www.studioruniq.com/news` (**200,
+  593.578**) e `https://www.studioruniq.com/contact` (**200, 421.655**, só `info@`).
+- **POR QUE ELE, e não outro da casa:** a `/team` publica sete pessoas com cargo, e a divisão é clara —
+  produção (Stéphane Gravel), design e script (Philippe Turcotte), animação e rig (Thomas Rigaud),
+  narrativa (Louis Patalano), engenharia (Gabriel Lachance, Brian Fagnant) e **arte**: *"**DAVE
+  BERGERON** — Design - Art - Jack of All Trades"*. Ele é o **único** com arte no cargo que está vivo e
+  disponível. **O co-fundador e Creative Director Thomas Wilson está FORA por motivo grave: a casa
+  anunciou o falecimento dele em 11/11/2025 e o endereço dele continua publicado.** Registrado acima e
+  repetido aqui: **nunca escrever para `twilson@studioruniq.com`.**
+- **GANCHO, com as frases da própria casa entre aspas:** da biografia dele — *"I worked on some of the
+  biggest game franchises such as **Skylanders** and **Call of Duty** … Now it's time to put all of this
+  to good use and **create a world of our own**"*; e da casa — *"Here are the magic crafters that form
+  the incredible team at RuniQ!"* e *"Unleash your **dragon-morphing** powers in this action-packed
+  side-scrolling brawler! Choose from **8 unique heroes**, each with their own fighting style"*.
+  **Skylanders é personagem 3D estilizado, e é o encontro mais direto com o portfólio do Vini nesta
+  rodada inteira.**
+- **FORA DOS EUA?** Sim, **Canadá**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por
+  `voxprima OR "Vox Prima" OR solideo OR runiq OR "Mount Dragon" in:anywhere` devolveu **`{}`**.
+  `studioruniq` dá **zero** em `pessoas.csv`, `enviados.csv`, `alvos.csv`, `processados.csv` e neste
+  arquivo. **Casa inédita, primeira pessoa.**
+- **RESSALVAS HONESTAS:** (a) **o jogo lançado é 2D** — a própria casa anuncia *"**Hand-drawn** fantasy
+  world"* para *Heroes of Mount Dragon* (Steam em 25/06/2025, consoles em 05/11/2025, mobile em
+  12/12/2025). O 3D estilizado está na **história** da equipe (Skylanders, Crash Bandicoot,
+  Spider-Man), não no produto de hoje; (b) a casa é de **sete pessoas** e acabou de perder o diretor
+  criativo — é provável que não haja orçamento de contratação, e a carta deve ser de rede, com respeito
+  ao momento; (c) **não mencionar a morte do Thomas Wilson na carta**: não é assunto de carta fria de
+  desconhecido; (d) o cargo dele é *"Jack of All Trades"*, então ele não é diretor de arte com poder de
+  requisição.
+
+---
+
+> **O QUE ESTA RODADA DEIXA PARA A PRÓXIMA, em uma linha cada:** (1) o diretório da Guilde tem **367
+> `mailto:` já baixados** e só **sete** foram usados até hoje entre todas as rodadas — a lista completa
+> está reproduzível em cinco requisições REST e é a veia mais barata de Québec; (2) os nomes que faltam
+> parear ali, com endereço já provado, são `alexis@chasingratsgames.com` (Worship, Pikmin-like),
+> `fbohn@triplescalegames.com`, `dchartrand@squidostudio.com`, `kevin@finalstrikegames.com`,
+> `reid@`/`tom@`/`ncollin@` (esses três já viraram carta) e `gab@tobafeu.studio`; (3) **Vox Prima** só
+> abre por crédito de vídeo no YouTube ou Discord, não por Steam nem imprensa; (4) as cinco casas de
+> Vancouver de 16h35 estão **fechadas com veredito**, não pendentes.
