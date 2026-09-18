@@ -9605,3 +9605,65 @@ frase da rodada.
   (c) o cargo dela é **direção**, o que é ótimo para decisão criativa e ruim para contratação
   administrativa, e a casa não publica nenhum canal de vaga; (d) a filmografia é norueguesa e o site não
   diz nada sobre visto nem sobre trabalho remoto.
+
+### O DEDUPE MATOU OU REBAIXOU **NOVE** CASAS COM ENDEREÇO DE PESSOA JÁ NA MÃO, E DUAS DELAS TINHAM O MAIOR ESTOQUE DA VARREDURA
+
+- **Qvisten Animation** (Oslo) — a `/contact` devolveu **11 endereços de pessoa limpos** (`ove@`,
+  `rasmus@`, `raymond@`, `fredrik@`, `hedda.toftner@`, `cecilie.tidemann@`, `christian.skramm@`,
+  `arnfinn.moseng@`, `nikoline.bangen@`, `rebecca.padoin@`, `stian.tveiten@qvisten.no`), o maior estoque do
+  dia. **TETO ATINGIDO**: `hedda.toftner@` em 26/08 e `rasmus@` em 03/09. **Nove nomes novos, nenhuma carta
+  possível.**
+- **Brikk Animation** (Suécia) — **12 endereços de pessoa** na `/contact`. **TETO ATINGIDO**: `work@` em
+  02/09 e `samuel@` (Samuel Fast Hurtigkarl, Creative Director) em 03/09. As linhas 147, 148 e 149 do
+  `pessoas.csv` já guardam *Kristian Andersson (3D Artist)*, *Nils Dahlman (3D Artist)* e *Björn
+  (fundador)* como ficha **sem carta**, e é assim que continuam.
+- **Filmic Art** (Estocolmo) — `andreas@` e `moa@filmic.se`. **TETO ATINGIDO** (03/09 e 06/09, e a carta do
+  Andreas saiu de novo em 17/09 pelo Apps Script). Armadilha de domínio confirmada de novo: o site é
+  `filmicart.com` e o e-mail é `@filmic.se`.
+- **Apparat Studio** (Bergen) — a `/about` publica um **terceiro** nome,
+  `wirat.johannessen@apparat.no`. **TETO ATINGIDO**: Kristian Berg em 11/09 e Eirik Heldal em 15/09.
+- **Animagency** (Vantaa) — `robert@animagency.fi` é segundo endereço publicado e inédito, mas **o Tero
+  Suomela RESPONDEU POSITIVO em 17/09 22h54** pedindo Google Meet. Casa em conversa: **quem trata é o
+  Comunicador, não o Joe.** Fora dos limites.
+- **Nørlum** (`norlum.dk`) e **Pyjama Films** (`pyjama.fi`) — os três endereços de cada uma reapareceram na
+  varredura; as duas viraram ficha **hoje às 16h35** (Claus, segundo e último da Nørlum; Samppa, com Inari
+  Halme guardada como segunda). Nada novo.
+- **GunHil** (Reykjavík) — a `/about` e a `/contact` publicam **só `gunhil@gunhil.com`**, caixa. O
+  `pessoas.csv` já tem **Haukur Sigurjonsson** com `haukur@gunhil.com` vindo do diretório (15/09), o que
+  prova o padrão `nome@gunhil.com`. **Não montei `gunnar@`**: o segundo nome da casa é *Gunnar Karlsson*,
+  cofundador e o lado **visual** dela (*"Gunnar visually created and co-directed Legends of Valhalla –
+  THOR"*, e *The Lost Little Caterpillar* de 2002 é *"the first ever CGI Animated film made in Iceland"*).
+  **É a melhor casa 3D da Islândia para o Vini e a segunda pessoa dela fica sem carta possível hoje, por
+  decisão minha, porque endereço montado não vale.** Registrado para o dia em que a casa publicar.
+- **Klipp og Lim**, **Bivrost Film**, **BCD Film**, **Soja**, **LEE Film**, **Made By Us**, **Dockhus** e
+  **Compass Films** — endereços de pessoa reconfirmados e **todas já registradas como fora da técnica** (2D,
+  bonecos, stop motion, documentário ou agência de comunicação) nas linhas 2670, 2673, 3000, 9075, 9076 e
+  9077. **Não reabrir.**
+
+### CASAS COM NOME OU ENDEREÇO PUBLICADO QUE NÃO VIRARAM FICHA NESTA RODADA, E O MOTIVO
+
+| Casa | O que está publicado | Por que não |
+|---|---|---|
+| **Anima Vitae Kuala Lumpur** (MY) | *Yuki Pang, Producer COO*; *Jani "Kurre" Kuronen, Executive Producer*; *Elvis Chew, Studio Director*; *Christine Peh, CFO*, os quatro com endereço `@animapoint.net` decodificado do rot13 | **FORA DO ESCOPO GEOGRÁFICO**: na Ásia a campanha só aceita Coreia do Sul e Singapura. Quatro endereços de pessoa jogados fora por geografia, e está certo |
+| **Tulipop Studios** (IS) | *Signý Kolbeinsdóttir* e *Helga Árnadóttir*, cofundadoras, com a história do estúdio escrita na `/about` | só `tulipop@tulipop.com` e `sales@tulipop.com`, **caixa e em domínio diferente do site**; e a `/about` **não declara técnica nenhuma** — nem 3D, nem 2D, nem stop motion. Gmail devolveu zero. Guardada, sem ficha |
+| **SkyMagic Group** (NO, Oslo) | nada: *"SkyMagic Group AS develops original animation and sci-fi projects"*, *"We build imaginative worlds with strong characters"* | **zero nome** em 22 caminhos, só `contact@skymagicgroup.com`, e a casa é **desenvolvedora de IP com seção de Investor Relations**, sem equipe e sem produção própria. Domínio inédito, medido, seco |
+| **Curiosity Studio** (IE, Dublin) | uma `/team` de **60.514 bytes** | **é o TEMA NÃO PREENCHIDO**: a página imprime *"Team Member | Photographer | DoB: 10.10.1990 | E-mail: hello@email.com | Based in: New York"* e **Lorem ipsum** nos prêmios, mais `[contact-form-7 404 "Not Found"]`. E o rodapé traz **veto escrito**: *"Please note we do not accept any unsolicited scripts, artwork or ideas for development. They will not be read or returned"*. **Não escrever** |
+| **Score Draw Media** (IE) | *Mark Gordon* (`mark@scoredrawmusic.com`), *Stephen O'Neill* (`stephen@`), *Sam McCann* (`sam@scoredrawmedia.com`), os três com rubrica | é **casa de música para audiovisual** (*"© 2026 Score Draw Music"*), não de animação, e o `mark@` está em **terceiro domínio**. Sem personagem |
+| **Trinity Motion Pictures** (IE) | `conor@trinitypictures.ie` | **armadilha de domínio de novo** (site `trinitymotionpictures.com`, e-mail `trinitypictures.ie`), e a `/about` também serve `info@mysite.com`, placeholder do tema. Live action. Sem ficha |
+
+### A VEIA IRLANDESA: **A ANIMATION IRELAND NÃO CRESCEU DE 52 PARA MAIS, E OS 13 INÉDITOS DELA SÃO QUASE TODOS SERVIÇO, NÃO ESTÚDIO**
+
+`https://www.animationireland.com/studios/` responde **200 com 179.894 bytes** e devolve **51 domínios**
+(a rodada das 16h35 contou 52 incluindo o próprio diretório). O diff contra o conjunto de domínios já
+tocados dá **13 inéditos**, e **cinco caem antes de qualquer requisição** porque não são estúdio:
+`freelancersguide.ie`, `irishanimationawards.ie`, `nationaltalentacademies.ie`, `safetocreate.ie` e
+`statcounter.com`. **Varri os 8 restantes nos 22 caminhos: zero endereço de pessoa em casa de personagem.**
+Placar bruto: `curiositystudio.com` e `dulamanstudios.com` e `whackala.com` só com caixa (`hello@`,
+`info@`), `scoredrawmedia.com` com três nomes de casa de música, `trinitymotionpictures.com` com a
+armadilha de domínio, `distilleryfilms.ie` **403 em todos os caminhos**, `maverickfilms.ie` e
+`pioneertownproductions.com` **000 em todos os 22** (DNS/conexão, não recusa de conteúdo).
+
+> **Conclusão de veia, e ela fecha as duas:** o `nordicanimation.com/studios-producers` está **varrido por
+> inteiro** (49 de 49 casas, 22 caminhos cada) e a Animation Ireland está **varrida nos 8 domínios que
+> faltavam**. Nenhuma das duas listas tem mais endereço de pessoa para dar. **O que sobra nelas é nome sem
+> endereço**, e isso já está registrado casa por casa aqui e nas rodadas das 16h35, 12h35 e 08h55.
