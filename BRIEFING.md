@@ -5211,7 +5211,7 @@ em 404; 8 tokens sem corpo no BambooHR, 11 no Teamtailor, 6 no SmartRecruiters, 
 
 **Zero é resposta medida, não resposta preguiçosa: 6.280 vagas lidas para chegar nele.**
 
-### 6. ADENDO DAS 08h45 — O BURACO ERA MAIOR QUE A MINHA PRÓPRIA RESSALVA: **147 TOKENS ERAM INVISÍVEIS À REGEX DE URL**, E O RECRUITEE TEM UMA RODADA DE ADIVINHAÇÃO QUE NINGUÉM NUNCA NOMEOU
+### 6. ADENDO DAS 08h36 — O BURACO ERA MAIOR QUE A MINHA PRÓPRIA RESSALVA: **147 TOKENS ERAM INVISÍVEIS À REGEX DE URL**, E O RECRUITEE TEM UMA RODADA DE ADIVINHAÇÃO QUE NINGUÉM NUNCA NOMEOU
 
 Fechei a ressalva do §5 em vez de deixá-la escrita, e ela era pior do que eu estimei. Todo token
 que mora numa **coluna `token`** de CSV e nunca foi escrito como URL é **invisível** para uma fila
