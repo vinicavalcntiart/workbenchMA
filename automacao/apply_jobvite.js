@@ -28,7 +28,7 @@ const dump=async(p,tag)=>{
   if(err.length){ log('=== VALIDACAO ('+tag+') ==='); err.forEach(e=>log('   !',e)); }
   return c; };
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2600},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-GB'})).newPage();
  try{
   await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'});
@@ -110,6 +110,48 @@ const dump=async(p,tag)=>{
     await els[els.length-1].setInputFiles(D+f).catch(e=>log('upload',e.message.split('\n')[0]));
     log('arquivo',n,'=>',f); await p.waitForTimeout(4000);
   }
+
+  // ==== ACRESCENTADO 18/09 22h55 (Jhon A), MEDIDO NO RIPPLING DA BLIND SQUIRREL ====
+  // POR QUE: o porRotulo acima casa por e.labels[0], aria-label e placeholder. O Rippling NAO
+  // associa <label for> nas perguntas de questionario: o texto da pergunta e um DIV IRMAO, e o
+  // dump devolve lab:"" em quatro campos OBRIGATORIOS. Sem isto o log diz "MISSING rotulo" e o
+  // formulario reprova no envio por campo vazio, com cara de parede de ATS.
+  // "blocos": [ {"pergunta":"regex do texto da pergunta","valor":"texto a digitar"},
+  //             {"pergunta":"regex","opcao":"regex do texto da opcao"} ]
+  // O container e escolhido pelo .last() do filtro hasText, que e o ancestral MAIS INTERNO
+  // (ordem do documento), e o valor entra sempre com LEITURA DE VOLTA.
+  for(const b of (A.blocos||[])){
+    // CORRIGIDO 18/09 23h05, depois de 8 BLOCOS FALHAREM: o .last() do filtro hasText devolve o
+    // ancestral mais interno, que no Rippling e o DIV DE TEXTO DA PERGUNTA, sem input nenhum
+    // dentro. O sintoma ("BLOCO sem campo") e identico a "pergunta nao existe na tela". O
+    // container precisa casar DUAS condicoes: o texto da pergunta E conter o alvo.
+    const cont = b.opcao!==undefined
+      ? p.locator('div,fieldset,section,li').filter({hasText:new RegExp(b.pergunta,'i')}).filter({hasText:new RegExp(b.opcao.replace(/[\^$]/g,''),'i')}).last()
+      : p.locator('div,fieldset,section,li').filter({hasText:new RegExp(b.pergunta,'i')}).filter({has:p.locator('input,textarea')}).last();
+    if(!(await cont.count().catch(()=>0))){ log('BLOCO nao achado:',b.pergunta.slice(0,45)); continue; }
+    if(b.opcao!==undefined){
+      const alvo=cont.getByText(new RegExp(b.opcao,'i')).last();
+      if(!(await alvo.count().catch(()=>0))){ log('BLOCO sem opcao',b.pergunta.slice(0,32),'quis',b.opcao); continue; }
+      await alvo.scrollIntoViewIfNeeded().catch(()=>{});
+      await alvo.click({force:true,timeout:10000}).catch(e=>log('clique da opcao falhou',e.message.split('\n')[0]));
+      await p.waitForTimeout(500);
+      log('bloco RADIO',b.pergunta.slice(0,38),'=>',b.opcao);
+    } else {
+      // "n": indice do input dentro do bloco. Precisa existir porque um bloco pode ter varios:
+      // o telefone do Rippling tem [seletor de pais, numero] e a data tem [dia, mes, ano].
+      const todos=cont.locator('input[type=text],input:not([type]),textarea');
+      const qtd=await todos.count().catch(()=>0);
+      if(!qtd){ log('BLOCO sem campo',b.pergunta.slice(0,45)); continue; }
+      const el=todos.nth(b.n||0);
+      log('  (bloco',b.pergunta.slice(0,28),'tem',qtd,'inputs, uso o',b.n||0,')');
+      await el.scrollIntoViewIfNeeded().catch(()=>{});
+      await el.click({force:true}).catch(()=>{});
+      await el.fill(String(b.valor)).catch(async()=>{ await el.type(String(b.valor),{delay:4}).catch(()=>{}); });
+      const lido=await el.inputValue().catch(()=>'');
+      log('bloco CAMPO',b.pergunta.slice(0,38),'=>',lido.length?('('+lido.length+' chars) '+lido.slice(0,60)):'(NAO ENTROU NADA)');
+      await p.waitForTimeout(350);
+    }
+  }
   await p.waitForTimeout(1500);
   await dump(p,'preenchido');
   await p.screenshot({path:D+'jv_'+slug+'.png',fullPage:true});
@@ -122,6 +164,36 @@ const dump=async(p,tag)=>{
   const bots=await p.evaluate(()=>[...document.querySelectorAll('button,input[type=submit],input[type=button],a[role=button]')]
     .filter(e=>e.offsetParent!==null).map(e=>({txt:((e.innerText||e.value||'').trim()).slice(0,40),tipo:e.tagName+'/'+(e.type||'')})));
   log('BOTOES NA TELA:',JSON.stringify(bots));
+  // ACRESCENTADO 18/09 23h12 (Jhon A): o laco do assistente abaixo procura o botao por uma
+  // REGEX FIXA de rotulos de Jobvite, e no Rippling o botao de envio se chama "Apply". O log
+  // disse "sem Next e sem envio no passo 1 - parei" com um BUTTON/submit escrito Apply na tela:
+  // ou seja, o preenchimento inteiro foi feito e NADA foi enviado, e isso NAO e parede de ATS.
+  // Quando "botao" vem no ans.json, clique-o por texto exato antes de tentar o assistente.
+  if(A.botao){
+    const bx=p.locator('button[type=submit], button').filter({hasText:new RegExp('^\\s*'+A.botao+'\\s*$','i')}).last();
+    if(await bx.count().catch(()=>0)){
+      await bx.scrollIntoViewIfNeeded().catch(()=>{});
+      await p.waitForTimeout(1200);
+      // CORRIGIDO 18/09 22h40: o click({force}) do locator NAO enviou. O log de 23h15 mostra
+      // zero POST para ats.rippling.com e a tela voltando a "Cover letter No files added", com
+      // os 17 campos cheios na leitura de volta e captcha zero. O apply_own.js ja tinha pago
+      // esta licao: em formulario que escuta evento de mouse de verdade, clique sintetico com
+      // force nao conta. Clique pelas COORDENADAS da caixa do botao, e so caia no force se o
+      // botao nao tiver caixa.
+      const cx=await bx.boundingBox().catch(()=>null);
+      log('clicando no botao declarado:',A.botao,'| caixa:',JSON.stringify(cx));
+      if(cx){ await p.mouse.move(cx.x+cx.width/2, cx.y+cx.height/2).catch(()=>{});
+              await p.waitForTimeout(250);
+              await p.mouse.click(cx.x+cx.width/2, cx.y+cx.height/2).catch(e=>log('clique de mouse falhou',e.message.split('\n')[0])); }
+      else await bx.click({force:true,timeout:20000}).catch(e=>log('clique falhou',e.message.split('\n')[0]));
+      await p.waitForTimeout(25000);
+      log('url pos-clique:',p.url());
+      const t2=(await p.innerText('body').catch(()=>'')).replace(/\s+/g,' ');
+      log('tela pos-clique:',t2.slice(0,1200));
+      const erros=await p.$$eval('[class*="error"],[role="alert"],[class*="invalid"]',es=>[...new Set(es.filter(e=>e.offsetParent!==null).map(e=>(e.innerText||'').replace(/\s+/g,' ').trim()).filter(t=>t&&t.length<160))]).catch(()=>[]);
+      log('erros na tela pos-clique:',JSON.stringify(erros));
+    } else log('botao declarado NAO existe na tela:',A.botao);
+  }
   // ARMADILHA 4: o Jobvite da DNEG e um ASSISTENTE DE VARIOS PASSOS. A primeira tela nao tem
   // botao de envio nenhum, so "Next". Procurar Submit ali e concluir que nao ha porta e erro:
   // avance pelos Next, preenchendo o que aparecer, ate o botao de envio existir.

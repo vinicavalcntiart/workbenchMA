@@ -3208,3 +3208,48 @@ A **Lead Character Artist** (`84`) da mesma casa também passa a régua, mas o c
 **gestão e não arte**: *"responsible for managing and coordinating art-related project plans"*,
 *"oversee the assigning and tracking of art assets"*, *"Create briefs and documentation"*,
 *"Prepare and plan content submission packages for clients"*. Cargo de produção com nome de arte.
+
+## Item novo, 18/09 22h15 UTC (Jhon A) — BLIND SQUIRREL GAMES, *General Application*: formulário limpo, sem captcha de desafio, e o envio não sai deste IP
+
+**Por que vem para a sua mão e não para a automação:** o formulário está **preenchido e medido**
+campo por campo, **não há captcha de desafio nenhum** para resolver, e ainda assim o clique em
+*Apply* não gera **um único POST** para `ats.rippling.com`. Em três tentativas, o que aparece na
+rede é `challenges.cloudflare.com/cdn-cgi/challenge-platform` e
+`ats.rippling.com/cdn-cgi/challenge-platform` respondendo 200 com corpo `{"i":60}`: é **Turnstile
+invisível**, o porteiro da regra 17 do briefing, que pontua a sessão no último clique. Do seu
+navegador, com a sua sessão, ele tende a passar.
+
+- **Endereço do formulário:** `https://ats.rippling.com/blind-squirrel-games/jobs/8f652c14-6e37-45a4-b242-67e942d24ef1/apply?step=application`
+- **Requisição:** uuid `8f652c14-6e37-45a4-b242-67e942d24ef1`. **Cuidado:** o quadro lista *três*
+  "General Application" (Austin TX, Irvine CA, Auckland NZ) e as três são **a mesma requisição**,
+  só muda o `workLocation`. Não são três vagas.
+- **O que a casa é, sem maquiagem:** estúdio independente de **co-desenvolvimento**, campi nos EUA,
+  Colômbia e Nova Zelândia. A candidatura espontânea é do departamento *Development* e **não é vaga
+  de personagem** — o anúncio não tem a palavra *character*. A casa já recebeu carta fria em 02/09 e
+  follow-up em 07/09, sem resposta.
+
+**As respostas, exatamente como foram preenchidas e conferidas na leitura de volta:**
+
+| campo | resposta |
+|---|---|
+| CV | `Vini_Cavalcanti_CV.pdf` (o Rippling parseia o CV e reescreve campo, confira depois de anexar) |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| First / Last name | Vini · Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Current company | E-Line Media |
+| Phone number | seletor **+55 BR** separado, e no campo do número **só os dígitos**, sem código e sem espaço (receita do documento privado do Drive) |
+| Location | campo obrigatório, veio autopreenchido pela geolocalização |
+| LinkedIn / Website | linkedin.com/in/vinicavalcnti · artstation.com/viniciuscavalcanti |
+| Preferred Start Date | 02 / 11 / 2026 |
+| Desired annual salary in USD | **USD 85,000 base, open to aligning with your band for the role.** (POLÍTICA item 3: casa independente, sem faixa publicada) |
+| Do you require sponsorship now or in the future? | **Yes**, com a verdade: não é autorizado a trabalhar nos EUA nem na Nova Zelândia, cinco anos de remoto com time americano, e o caso de visto pelas credenciais acadêmicas |
+| Comfortable with in person work at the studio? | *I am open to full onsite campuses.* |
+| Open to relocating for a hybrid schedule? | *Yes* |
+| Willing to work full-time onsite? | *Strong Yes* |
+| Home Address | está no documento privado do Drive, **não neste repositório** |
+| Did anyone refer you? | *No referral. I am applying directly through your careers board.* |
+| Consentimento de SMS | *No – I do not consent to receiving text messages* |
+
+**Não gaste tentativa em variação de clique.** As três já foram pagas nesta rodada: rótulo do botão
+corrigido, clique sintético com `force`, e clique de mouse nas coordenadas da caixa
+(`{x:1186,y:2548,w:74,h:40}`). Nenhuma produziu POST. O que falta não é código, é sessão.
