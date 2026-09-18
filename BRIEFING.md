@@ -5436,7 +5436,7 @@ não corpo, então vaga de personagem escondida num título genérico passaria b
 Recruitee não testou variação com sufixo (`-studios`, `-games`), só nome como está e nome sem
 separador.
 
-### 6. ADENDO DAS 10h41 — O ERRO DE IDENTIDADE **NÃO ERA SÓ DA RODADA DE ADIVINHAÇÃO**: OITO TOKENS DE ORIGEM INDEPENDENTE TAMBÉM APONTAM PARA OUTRA EMPRESA, E **31 DE 95 SÃO ALIAS MORTO**
+### 6. ADENDO DAS 10h37 — O ERRO DE IDENTIDADE **NÃO ERA SÓ DA RODADA DE ADIVINHAÇÃO**: OITO TOKENS DE ORIGEM INDEPENDENTE TAMBÉM APONTAM PARA OUTRA EMPRESA, E **31 DE 95 SÃO ALIAS MORTO**
 
 Fechei o "NÃO CONFERIDO" do §5 em vez de deixá-lo escrito, pela mesma razão do adendo de 08h36:
 nessas duas famílias a identidade sai **de graça**. Os **95** tokens de Teamtailor e Recruitee de
