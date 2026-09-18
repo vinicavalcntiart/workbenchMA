@@ -8931,3 +8931,365 @@ Industry é bloqueado pelo proxy), e **as duas veias nórdicas que sobraram já 
 significa que **a fronteira útil da caça não é mais "domínio inédito", é "pessoa inédita dentro de
 domínio já resolvido"**; e **Vancouver, que é a primeira prioridade do escopo, continua sem porta**
 porque a associação está fechada e as casas inéditas de lá não publicam um único nome.
+
+---
+
+## JOE, 18/09/2026 16h35 UTC — **A VEIA QUE RENDEU FOI A `/kontakt` DAS CASAS NÓRDICAS DE ANIMAÇÃO QUE O DIRETÓRIO DA NORDIC ANIMATION APONTA MAS NENHUMA RODADA ABRIU**, MAIS DUAS LISTAS CURADAS INÉDITAS (Head Gear Toronto, e o crescimento da Animation Ireland de 42 para 52). CINCO PESSOAS: **DUAS COM ENDEREÇO PUBLICADO**, TRÊS `sem-email`. E O **DEDUPE DO GMAIL MATOU A MELHOR CASA DA RODADA** (Mikros Animation) DEPOIS DE EU JÁ TER O PAREAMENTO NA MÃO
+
+**Conjunto de domínios já tocados, reconstruído do zero nesta rodada** (`enviados.csv` + `alvos.csv`
++ `pessoas.csv` + `processados.csv` + este arquivo + `docs/index.html`, regex com 40 TLDs):
+**3.026 domínios**. Todo candidato passou pelo diff antes da requisição.
+
+### O DEDUPE DO GMAIL MATOU A MIKROS ANIMATION, E ESSE É O ACHADO MAIS CARO DA RODADA
+
+Gastei a melhor veia da rodada na **Mikros Animation** (`mikrosanimation.com`, Montreal/Paris/Bangalore,
+*"A RodeoFX Company"*) e cheguei até o fim: o domínio é **inédito nos 3.026**, a `/about` serve os **13
+nomes da liderança pareados com cargo** em HTML, e — achado de método — **o `wp-json/wp/v2/people?per_page=100`
+responde 200 com 35.276 bytes e 32 pessoas**, com a taxonomia `department` (`leadership-team` 13,
+`supervisors` 17, `production` 1, **`recruitment` 2**) aberta em `/wp-json/wp/v2/department`. Dali saiu
+**Eddy Frechou, Set Modeling Supervisor** (nomeado pela própria casa em
+`/en/news/under-the-mikroscope-eddy-frechou-modelisation-supervisor-at-mikros-animation-paris/`) e as duas
+recrutadoras, **Cécile Steinlein** e **Camila Oviedo**.
+
+**E a casa está morta.** `search_threads` por `mikros OR mikrosanimation OR Delval in:anywhere` devolveu
+**dois fios**: candidatura confirmada em **01/09** (`notification@rodeofx.com`) e **RECUSA em 17/09**
+(`notifications@rodeofx.com`, *"Bien que nous n'ayons actuellement aucun besoin correspondant à votre profil
+au sein du département"*), com o Vini **já respondendo no fio** para `klange@rodeofx.com`. Regra da campanha:
+**nunca casa que já recusou.**
+
+> **A lição, e ela custou meia rodada:** `mikrosanimation.com` **não existe em nenhum dos seis arquivos do
+> repositório** — o dedupe por domínio, por nome e por CSV dava "inédita" nas três formas. Quem pegou foi a
+> caixa, e pegou porque **o recibo e a recusa chegam pelo domínio do DONO (`rodeofx.com`), não pelo domínio
+> da casa (`mikrosanimation.com`)**. Mesma família da armadilha do Personio de 06/09. **Antes de gastar
+> requisição em casa que é subsidiária, busque no Gmail pelo nome da casa E pelo nome do grupo.**
+
+### AS VEIAS DA ORDEM, E O PLACAR HONESTO DE CADA UMA
+
+1. **Créditos/serviço de Vancouver e Toronto — SECA NO ATACADO, E A MEDIÇÃO É GRANDE.** Vancouver está
+   minerada: de 33 nomes de casa testados contra os 3.026, só 11 eram inéditos, e desses
+   `bron.digital`/`brondigital.com` (**connection reset**), `sequencegroup.com` (**`tlsv1 alert internal
+   error`**), `mavericksvfx.com` (**CONNECT 502**), `slaphappy.tv` (**reset**) e `versatile.media` **não
+   abrem por esta rede** — ficam **NÃO CONFERIDAS**, não descartadas. O que rendeu foi **uma lista curada
+   que nenhuma rodada tinha aberto**: `https://www.headgearanimation.com/toronto-animation-studio-list`
+   (**200, 335.048 bytes**), *"Every Toronto Animation Studio in One Big List (45+)"*, **46 domínios, 29
+   inéditos**. Varridos 22 em 15 caminhos: saiu **uma** ficha (GhostFX). O resto é **ilustração médica**
+   (`arterystudios.com`, `axs3d.com`, `vernacularstudios.com` — as três com nome e cargo publicados e
+   **nenhuma com cadeira de personagem**), 2D de irmãos (`solisanimation.com`), motion graphics
+   (`frames-studios.com`) e `dreamfarmstudios.com`, que tem **CHARACTER DESIGN no menu** e devolve **404 em
+   `/team`, `/about`, `/people` e `/crew`**.
+2. **Indie nórdico e holandês com personagem estilizado — O LADO HOLANDÊS MORREU DE NOVO, O NÓRDICO ABRIU.**
+   Fechei a `dutchgamesassociation.nl/members/` (**200, 926.957 bytes**, **160 domínios, 112 inéditos** — a
+   rodada das 12h35 tinha varrido 34) e varri os 24 que parecem estúdio: **o que sai é gente física e
+   consultoria**, e isso agora está medido duas vezes. Dois endereços de pessoa apareceram e os dois morrem
+   na leitura: `reza@lucidwalnut.com` é **consultoria técnica de um homem só** (Reza Hooshangi, Technical
+   Director de *Children of Morta*) e `richie@bearknuckle.org` é uma **Stan Store "under construction"**.
+   `ronimo-games.com` é **domínio sequestrado**: a `/team` (200, 27.580 bytes) serve **blog de conteúdo
+   sobre Team Fortress 2**, não a Ronimo. `tarsier.se` (Little Nightmares, Malmö) abre `/studio` com
+   **164.443 bytes** e **não publica um único nome nem um único e-mail** — `/contact`, `/team`, `/about` e
+   `/careers` todos 404.
+3. **VFX de criatura no Reino Unido fora da Animation UK — UMA FICHA, E O DIRETÓRIO DA UK SCREEN CRESCEU
+   9.** Reli `https://ukscreenalliance.co.uk/directory/` (**200, 394.773 bytes**): **114 domínios** hoje
+   contra os **105** de 14/09. Os 11 inéditos são **laboratório de filme, pós, rede e advogado**
+   (`cinelab.london`, `clearcut.cc`, `sohonet.com`, `harbottle.com`, `thefinishline.pro`,
+   `residence.pics`, `adrenaline.global`, `jfx.world`) — **zero casa de arte**. A ficha de criatura saiu
+   **de fora dos dois diretórios**: Millennium FX, que não está nem na Animation UK (205) nem na UK Screen
+   (114). **Paredes de rede medidas no Reino Unido, para ninguém dar por morto:** `nineteentwenty.com`
+   **403 com 412 bytes**, `luxaeterna.co.uk` **200 com ZERO bytes** em `/team`, `/about`, `/contact` e
+   `/sitemap.xml`, `senatevfx.com` **522 nas quatro variantes** (www, http, com e sem `/contact`), e
+   `cheapshot.tv`, `automatikvfx.com`, `clearangle.com`, `untold.studio`, `zerovfx.co.uk`, `fugitive.tv`
+   e `hivevfx.com` **não responderam nenhuma vez**.
+
+### AS VEIAS QUE ABRI DE PRÓPRIA CONTA, E AS QUATRO QUE MORRERAM MEDIDAS
+
+- **A QUE RENDEU, e é para repetir: a `/kontakt` das casas que o `nordicanimation.com/studios-producers`
+  APONTA e que nenhuma rodada abriu.** Reli o diretório (**200, 169.616 bytes**): **72 domínios**, e o
+  diff contra os 3.026 devolve **35 inéditos**. Varri 15 em 16 caminhos, com os caminhos nórdicos
+  (`/kontakt`, `/om-oss`, `/om`, `/ansatte`, `/medarbejdere`, `/yhteystiedot`, `/kontakta-oss`). **Saíram
+  19 endereços de PESSOA em 5 casas** — de longe o melhor rendimento do dia:
+  `claus@`/`elena@`/`jericca@noerlum.com`; `terhi@`/`inari@`/`samppa@pyjama.fi`;
+  `trond@`/`marianne@`/`ilze@bivrostfilm.no`; `caroline@bcdfilm.se`; e **oito** em `klippoglim.no`.
+  **A distinção que faz a veia valer: o diretório publica UM contato por casa (foi de lá que saiu o
+  `anttu.harlin@gigglebug.fi` de 15/09 e o `ove@qvisten.no`, que é teto); a `/kontakt` da casa publica
+  TODOS, com cargo.** Mineirar o diretório rende um nome; abrir a casa rende três.
+- **MORREU 1 — `gamesdenmark.dk/members/` É UMA IMAGEM PNG, RECONFIRMADO.** Responde **200 com 1.033.058
+  bytes** e `file` diz **`PNG image data, 1200 x 799, 8-bit/color RGBA`**. A nota de 11/09 estava certa.
+  **A armadilha é o tamanho:** 1 MB num `/members/` parece diretório gordo e é um JPEG de mentira. Confira
+  os dois primeiros bytes antes de escrever regex.
+- **MORREU 2 — O `partner-sitemap.xml` DA NEOGAMES (FINLÂNDIA) ENTREGA 446 EMPRESAS E NENHUM DOMÍNIO.** O
+  caminho que a rodada das 12h35 deixou anotado **existe e responde 200 com 53.572 bytes**, com **446
+  `<loc>` em `neogames.fi/?partner=<slug>`**. Abri uma: **200 com 41.239 bytes e o `<main>` inteiro tem
+  UMA palavra**, o nome da empresa. O `partner` **não está exposto no REST** (`/wp-json/wp/v2/partner` =
+  `rest_no_route`; `/wp-json/wp/v2/types` lista só os tipos nativos do WordPress). **A veia entrega LISTA
+  DE NOMES, não porta** — e virar nome em domínio é exatamente o passo que 17/09 mediu como caro. Fica
+  registrado para ninguém gastar 446 requisições atrás de e-mail.
+- **MORREU 3 — CLUSTER COM PRÉDIO PRÓPRIO: O ANÁLOGO DO ARSENALET NÃO EXISTE EM AARHUS NEM EM BRISTOL.**
+  `filmbyaarhus.dk/virksomheder` responde **200 com 34.757 bytes**, diz *"Mere end 100 virksomheder bor i
+  Filmby Aarhus"* e **serve ZERO empresa**: o botão é *"Indlæs flere"*, `?page=1` e `?page=2` devolvem **o
+  mesmo corpo byte a byte**, e o único endereço da página é `filmby@aarhus.dk`. `/spil` e `/film` (200,
+  48.577 e 49.894) são texto de programa, sem lista. `bristolcreativeindustries.com/members/` (**200,
+  116.222 bytes**) tem **zero `href` de membro**. `casoontario.ca` (Computer Animation Studios of Ontario)
+  dá **000 nas duas tentativas**, `creativebc.com/directory/` **404**, `digibc.org/member-directory`
+  **403** (terceira medição), `tiga.org/members` e `ukie.org.uk/membership/our-members` **404**,
+  `accessvfx.org/members/` **500**, `producentforeningen.dk/medlemsliste` abre (200, 28.648) e **empurra a
+  lista para `pro-f.dk/medlemslister-0`, área de associado**.
+- **MORREU 4 — O PROBE DE CPT `people`/`team` DO WORDPRESS EM 271 DOMÍNIOS: **UM** ACERTO, E ERA A MIKROS.**
+  Rodei `/wp-json/wp/v2/{team,people,staff,crew,members,employees,artists,person}?per_page=100` nos **271
+  domínios inéditos de geografia prioritária** (2.168 requisições). **Só `mikrosanimation.com/…/people`
+  devolveu JSON de verdade.**
+  > **Armadilha, e ela custa uma rodada se ninguém escrever:** 12 domínios devolveram **200 com mais de 400
+  > bytes nas OITO bases**, e o **tamanho é idêntico nas oito** — é a página 404 (ou a home) servida por
+  > rota curinga. **Só é endpoint se o tamanho DIFERIR entre as bases.** Teste de um byte: `head -c 2` tem
+  > que dar `[`.
+- **Sitemap de cada casa depois do diff (o método que rendeu às 08h55), rodado nos 271:** **229 sitemaps
+  válidos**, **1.017 URLs** com `team|people|crew|staff|about|contact|leadership`, **207 baixadas**.
+  Rendimento de endereço de pessoa em casa de arte: **zero**. O que a massa devolveu foi **universidade
+  holandesa** (`hhs.nl` sozinha deu mais de 20 endereços de pesquisador) e escritório de contabilidade.
+  **O sitemap é bom para achar o CAMINHO numa casa que você já escolheu; é ruim como rede de arrasto.**
+
+### O DEDUPE MATOU OU REBAIXOU SEIS CASAS COM ENDEREÇO DE PESSOA JÁ NA MÃO
+
+- **Mikros Animation** — recusa de 17/09. Detalhado acima. **Morta.**
+- **Time Based Arts** (Londres) — a varredura devolveu `dan.kreeger@`, `georgie.evans@`, `josh@`, `sian@`
+  e `tom@time-based-arts.com` no `timebasedarts.com` (**200, 167.013 bytes**), domínio que o diff marcava
+  como inédito. **A casa está no TETO**: Tom Johnson levou carta em 06/09 (`pessoas.csv` linha 99) e Josh
+  Robinson em 17/09 (linha 335). **Terceiro domínio da mesma casa, mesmo teto.**
+- **Qvisten Animation** (Oslo) — `ove@qvisten.no` publicado no diretório da Nordic Animation e inédito
+  como endereço. **Teto de duas atingido** (`hedda.toftner@` em 26/08, `rasmus@` em 03/09).
+- **Fenris Creations** (Reykjavík, ex-CCP) — `lon@fenris.com` e `sha@fenris.com` publicados em
+  `fenriscreations.com/contact-us`. **São caixas de ESCRITÓRIO, não de pessoa** (a própria página as rotula
+  *"Fenris London"* e *"Fenris Shanghai"*), e a casa já recebeu candidatura de personagem em 10/09.
+- **Drawesome Pictures** (Viborg) — `sus@drawesomepictures.com` de novo, agora por `drawesomefilms.com`.
+  **Já descartada na linha 3690.** Mantida fora.
+- **Pixray VFX** (Toronto) — **a linha 7291 deste arquivo já mediu a casa como *"só `studio@`"***, e eu
+  reconfirmei (`studio@pixray.ca` e `jobs@pixray.ca`, nada de pessoa). **O que é novo e fica registrado sem
+  virar ficha:** a `/about` publica **"Our Talent" com três nomes e cargos** — *Andrew Szerszen, Visual
+  Effects Director*; *Tom Crawford, Visual Effects Artist*; *Eric Li, Digital Compositor* — e a `/join-us`
+  diz *"Send us your resume and/or demo reel… Contact us at jobs@pixray.ca"*. **Não virou ficha porque a
+  casa se declara de ambiente e FX**: *"We specialize in digital environments, destruction effects, fire
+  simulations, set extensions, and cosmetic enhancements"*. **Zero personagem. Não gaste carta aqui.**
+
+### CASAS COM NOME OU ENDEREÇO PUBLICADO QUE NÃO VIRARAM FICHA, E O MOTIVO
+
+| Casa | O que está publicado | Por que não |
+|---|---|---|
+| **Klipp og Lim** (NO) | **oito** endereços de pessoa com cargo, incluindo `lars@klippoglim.no` *"Rådgiver og AD"* e `svein.erik@` *"Kreativ leder"* | a `/om-oss` (200, 162.257 bytes) declara a casa: design, animação, texto, ilustração, estratégia, foto, filme *"Til og med en dukkemaker"* (até um fabricante de bonecos). É **agência de comunicação**, e a linha 2670 já a registrou como **"2D e bonecos, declarado"** |
+| **Bivrost Film** (NO) | `trond@`, `marianne@`, `ilze@bivrostfilm.no` | **já registrada nas linhas 2426 e 2996** (Trond Jacobsen) |
+| **BCD Film** (SE) | `caroline@bcdfilm.se`, *"Caroline Drab, Producer"* | produtora de **longa e documentário de ação ao vivo**; a linha 2673 já a tinha como **"2D declarado"** e o `/about` de hoje não mostra animação nenhuma |
+| **Stiúideo Fia** (IE, Connemara) | `paul@stiuideofia.ie` (vaza no JSON do Wix da `/contact`) + *"Paul McDonnell… founder and creative director"* | a casa se define **contra** o digital: *"In a fast, digital world, the studio exists to protect physical craft"*, e o ofício é **stop-motion, bonecos, silicone e fabricação escultórica** |
+| **Plastilin Media Oy** (FI, Imatra) | time nomeado no JSON e `character design` entre os serviços | HQ finlandesa é **administrativa**: *"working from there with proven specialists from Spain, Portugal, Israel, Ukraine, Poland, **India, Indonesia, Sri Lanka**"*, e o único endereço é **`plastilin.media.oy@gmail.com`** |
+| **Atomhawk** (Gateshead + Leamington Spa + **Vancouver**) | a `/people` (200, 272.016 bytes) lista **Character Artist** entre as disciplinas de 3D | a página **não nomeia uma única pessoa** e o único canal é formulário. Fica como a melhor casa da rodada **sem nome para escrever** |
+| **Funko Animation Studios** (Bath, UK) | `fasinfo@funko.com` e *"always on the look out for talented people"* | **zero nome** em `/` e `/jobs`; `/contact`, `/about` e `/sitemap.xml` dão 404 |
+| **Millennium FX** | ver ficha 1 | entrou, mas leia a ressalva |
+| **Tarsier / Kalos / Stormborn / Powerhouse / Redefine** | — | só caixa funcional. **Stormborn** (Vancouver) se declara de **simulação e ambiente**: *"large scale destruction setups… volumetric simulations… fluid simulations"*, sem personagem |
+
+---
+
+### FICHA 1 — Claus Toksvig Kjær, **CEO & Producer** da Nørlum (Viborg, Dinamarca) — **PUBLICADO, confiança ALTA**, e é a **SEGUNDA E ÚLTIMA** pessoa desta casa
+
+- **EMAIL: `claus@noerlum.com` — PUBLICADO, confiança ALTA.** Texto puro, na mesma linha do nome e do
+  cargo, sem ofuscação, sem `data-cfemail`, sem `(at)`. **Nada montado, nenhuma segunda grafia.**
+- **URL exata aberta nesta rodada:** `https://norlum.dk/contact` (**200, 22.473 bytes**). O bloco *Team*
+  imprime **três pessoas, cada uma com cargo e caixa individual**: *"**Jericca Cleland** | CCO and Director
+  | jericca@noerlum.com"*, *"**Claus Toksvig Kjær** | CEO & Producer | claus@noerlum.com"*, *"**Elena Ø
+  Alexa** | Producer & Partner | elena@noerlum.com"*. Também aberta `https://norlum.dk/about` (200, 20.984)
+  e o `sitemap.xml` (200, 2.011).
+  **Armadilha de domínio, a mesma da Stellar e da onesize das 08h55:** o site mora em **`norlum.dk`** e o
+  e-mail é **`@noerlum.com`**. `/kontakt`, `/team`, `/people`, `/crew`, `/ansatte` e `/medarbejdere` dão
+  **404 com 3.358 bytes**; o que abre é **`/contact` em inglês**.
+- **POR QUE ELE, e não outro da casa.** São três nomes publicados e **um já foi gasto**: Jericca Cleland
+  (CCO and Director) levou a carta em **11/09 às 21h27** e **não respondeu**. O teto é duas por casa, então
+  sobra **uma** carta e ela tem que ir para quem decide: dos dois restantes, Claus é **CEO**, e Elena Ø
+  Alexa é *Producer & Partner*. Numa casa deste tamanho o CEO abre portfólio; a produtora agenda.
+  **Elena fica sem carta possível, e isso é consequência do teto, não esquecimento.**
+- **Gancho, com a frase do próprio estúdio entre aspas:** a mesma página estampa a citação da casa —
+  **"Animation has never been more relevant to more people than it is today."** — assinada *"Cco and
+  director Jericca cleland"*. E o bloco *Career opportunities* dá a porta por escrito: **"There are no jobs
+  available at the moment. But we're always happy to see your portfolio."**
+- **Fora dos EUA?** Sim, Dinamarca, União Europeia. **A frase de realocação entra.**
+- **Dedupe, feito na caixa antes do arquivo:** `search_threads` por `noerlum OR Norlum OR Cleland
+  in:anywhere` devolveu **um fio só** — a carta **ENVIADA** para `jericca@noerlum.com` em 11/09 21h27, com
+  o assunto exato, **sem resposta e sem recusa**. `claus@noerlum` dá **zero** em `enviados.csv`,
+  `pessoas.csv`, neste arquivo, em `processados.csv`, em `alvos.csv` e em `docs/index.html`.
+  `enviados.csv` linha 888 confirma a primeira carta. **A casa NÃO recusou** — é silêncio, e silêncio
+  libera a segunda.
+- **Ressalva honesta, e são três.** (a) **É segunda carta na mesma casa e a primeira ficou sem resposta** —
+  a carta não pode fingir primeiro contato, tem que assumir a de 11/09, igual ao tratamento do Tim Remmers
+  na Team Reptile em 12/09. (b) **A casa se declara 2D**: os projetos listados na própria navegação vêm
+  rotulados um por um — *Big Hero 6 | The Series* **"2D animation"**, *Calamity* **"2D animation"**,
+  *Spirit Seeker* **"2D animation"**, mais *Long Way North* e *Song of the Sea*. Não há cadeira de
+  personagem 3D declarada. (c) O cargo é **CEO & Producer**, não de arte, e o rodapé da página diz
+  **"2023 ©"**, ou seja a página pode estar velha.
+
+---
+
+### FICHA 2 — Anubhav Pandey, **Creature FX Supervisor** da Tau Films (**Vancouver, BC** + Los Angeles) — `sem-email`, e o gancho é o melhor da rodada
+
+- **SEM ENDEREÇO DE PESSOA, medido nesta rodada:** varri 15 caminhos mais o `sitemap.xml`, com
+  decodificação de entidade HTML, `data-cfemail` e `[at]`/`(dot)`. O único endereço em tudo é
+  **`contact@taufilms.com`**, funcional, e ele está publicado como o canal de candidatura na `/careers`:
+  **"To apply, email contact@taufilms.com with your resume / show reel."** **NADA FOI MONTADO** — nove
+  nomes com cargo num domínio próprio é o cenário clássico de montar `anubhav.pandey@`, e **não montei
+  nenhuma grafia**.
+- **URLs exatas abertas nesta rodada:**
+  - `https://taufilms.com/team` (**200, 114.513 bytes**) — o pareamento. A `OUR TEAM` imprime **nove nomes
+    com cargo**: *John Hughes - Co-Founder / President / Executive Producer*; *Mandeep Singh - Executive
+    Producer / Head of International Production*; *Pranesh Chavan - VFX Supervisor*; *Don MacBain - Senior
+    Producer, Theme Park Attractions*; **"Anubhav Pandey - Creature FX Supervisor"**; *Ronald Khoo - Head of
+    Systems*; *Rochana Jalan - Producer/Production Manager*; *Ming Qiu - Production Manager*; **"Aparna
+    Ambavakar - Senior Talent Manager"**.
+  - `https://taufilms.com/about-us` (**200, 120.439 bytes**) — o gancho.
+  - `https://taufilms.com/contact-us` (**200, 160.772 bytes**) — os seis escritórios, e é aqui que
+    Vancouver aparece literal: **"Tau Films | 12 East 3rd Avenue, #201 | Vancouver, British Columbia, V5T
+    1C3, Canada"**.
+  - `https://taufilms.com/careers` (**200, 126.401 bytes**) — o canal de candidatura e a única vaga aberta.
+  - **Armadilha de caminho medida:** `/contact` e `/our-team-anubhav-pandey` dão **404 com 95.986 bytes**
+    (404 gordo); o `sitemap.xml` só tem página individual de **um** supervisor (`/our-team-pranesh-chavan`),
+    então o cargo do Anubhav existe **só na `/team`**.
+- **POR QUE ELE, e não outro da casa.** Dos nove cargos publicados, **o dele é o único na cadeira de
+  criatura**, que é onde vive grooming — e grooming é metade do que o Vini vende. **Aparna Ambavakar,
+  Senior Talent Manager**, é recrutadora de verdade e fica guardada como a **SEGUNDA e última** desta casa,
+  que é a ordem do BRIEF-JOE se esta primeira der silêncio. John Hughes é fundador mas o cargo é de
+  produção executiva e ele está em Los Angeles.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a `/about-us` conta que o fundador dirigiu a
+  Rhythm & Hues de 1987 a 2013, quando **"the company was renowned for its animation and creature work"** e
+  **"It specialized in photo-real furry creatures, such as the tiger and the orangutan from the Life of Pi,
+  the golden monkey from Golden Compass"**, e fecha com **"Tau Films continues to advance the artistic
+  heritage of R&H."** **"Furry creatures" é grooming dito pela própria casa** — é o gancho mais direto que
+  esta semana produziu.
+- **Fora dos EUA?** **Parcialmente, e é o ponto.** A casa tem escritório em Vancouver, BC, que é a cidade
+  número um da ordem do Vini; o núcleo criativo é Los Angeles. **A frase de realocação entra, mirando
+  Vancouver.**
+- **Dedupe:** `search_threads` por `taufilms OR "Tau Films" OR Pandey in:anywhere` devolveu **`{}`**. Zero
+  acerto para `taufilms`, `Tau Films` e `Pandey` em `enviados.csv`, `pessoas.csv`, neste arquivo,
+  `processados.csv`, `alvos.csv` e `docs/index.html`. **PRIMEIRA PESSOA DA CASA.** `taufilms.com` estava no
+  `garimpo-cgstudiomap.csv` marcado com Vancouver e **nunca foi tocado** — é um dos 122 inéditos de
+  geografia prioritária que este diff levantou.
+- **Ressalva honesta, e ela é grande.** (a) **A base do Anubhav não está publicada.** A própria `/about-us`
+  diz que a casa tem *"a core creative and supervisory team in Los Angeles/North America"* e faz a produção
+  *"with facilities in Kuala Lumpur, Hyderabad, Mumbai, Vancouver, and Beijing"* — ou seja ele pode estar em
+  Hyderabad ou Mumbai, que estão **fora do escopo geográfico da campanha**. O endereço de Vancouver é
+  **instalação de produção**, não o núcleo. (b) A única vaga aberta hoje é **"Pipeline Supervisor |
+  Hyderabad, Kuala Lumpur"**, técnica e fora do perfil: **a carta é de porta, não de vaga.** (c) A herança
+  da R&H é narrativa da casa sobre o passado do fundador em **outra empresa**, não crédito da Tau. (d) Sem
+  endereço de pessoa, a carta cai em `contact@taufilms.com`, que é caixa.
+
+---
+
+### FICHA 3 — Samppa Kukkonen, **Luova johtaja / Animaatio-ohjaaja, perustaja** (Diretor Criativo / Diretor de Animação, cofundador) da Pyjama Films (Helsinque, Finlândia) — **PUBLICADO, confiança ALTA**, e **leia a ressalva ANTES de escrever**
+
+- **EMAIL: `samppa@pyjama.fi` — PUBLICADO, confiança ALTA.** Texto puro, logo abaixo do nome e do cargo,
+  sem ofuscação. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://pyjama.fi/yhteystiedot` (**200, 85.419 bytes**; `/contact`
+  serve a mesma página com os mesmos 85.419 bytes). A página divide o contato por assunto e imprime **três
+  pessoas, cada uma com cargo e caixa individual**:
+  - *"**Terhi Väänänen** | Toimitusjohtaja, perustaja | terhi@pyjama.fi"* (CEO, fundadora)
+  - *"**Inari Halme** | Tuotantopäällikkö | inari@pyjama.fi"* (Gerente de Produção) — e a linha embaixo dela
+    é o achado: **"Inariin voi ottaa yhteyttä tilaustöiden sekä Pyjaman tarjoamien työmahdollisuuksien
+    tiimoilta"** = *fale com a Inari sobre trabalho encomendado e sobre **oportunidades de trabalho** na
+    Pyjama*. **É a casa publicando, por escrito, quem cuida de contratação, com nome e e-mail.**
+  - *"**Samppa Kukkonen** | Animaatio-ohjaaja, perustaja"* no primeiro bloco e *"Luova johtaja, perustaja"*
+    no segundo | samppa@pyjama.fi
+  - **Armadilha de caminho:** `/kontakt`, `/om`, `/om-oss`, `/team`, `/people`, `/crew`, `/ansatte` e
+    `/kontakta-oss` dão **404 com 58.954 bytes** (404 gordo). O que abre é o finlandês `/yhteystiedot`.
+- **POR QUE ELE, e não outro da casa.** O BRIEF-JOE põe **direção de arte primeiro** em casa pequena, antes
+  do fundador e muito antes do recrutador. Samppa é as três coisas ao mesmo tempo: **diretor criativo,
+  diretor de animação e cofundador**, e é quem dirigiu a série carro-chefe. **Inari Halme fica guardada como
+  a SEGUNDA e última** — e ela é a melhor segunda que apareceu hoje, porque a própria casa a nomeia como o
+  canal de vaga. Terhi Väänänen (CEO) fica de fora pelo teto.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a própria ficha dele na página —
+  **"Samppa sai juuri ohjattua Belzebubs-animaatiosarjan ja valmistautuu seuraaviin seikkailuihin"**
+  (*Samppa acabou de dirigir a série de animação Belzebubs e se prepara para as próximas aventuras*).
+- **Fora dos EUA?** Sim, Finlândia, nórdico e União Europeia. **A frase de realocação entra.**
+- **Dedupe:** `search_threads` por `pyjama OR Kukkonen OR Belzebubs in:anywhere` devolveu **`{}`**.
+  `Kukkonen` e `pyjama.fi` dão **zero** em todos os arquivos. **A casa nunca recebeu carta.**
+- **RESSALVA HONESTA, E ELA É A PRINCIPAL DA FICHA: DUAS RODADAS ANTERIORES JÁ OLHARAM ESTA CASA E A
+  DEIXARAM DE FORA.** A linha 2427 deste arquivo registrou *"**Pyjama Films** (FI, Terhi Väänänen)"* em
+  15/09 e a linha 2673 a listou entre as casas postas de lado como **"2D declarado"** em 16/09. **Eu não
+  derrubo esse julgamento, eu acrescento dado a ele:** o que aquelas rodadas tinham era **um nome sem cargo
+  vindo do diretório**; o que esta tem é a `/yhteystiedot` da casa com **três nomes, três cargos e três
+  e-mails**, incluindo o diretor criativo e a pessoa de contratação. **Se o maestro confia no "2D
+  declarado", esta ficha morre em cinco segundos e deve morrer** — *Belzebubs* é série de traço 2D e não há
+  cadeira de personagem 3D publicada em lugar nenhum do site. A segunda ressalva é de idioma: a página é
+  **só em finlandês** e os cargos foram traduzidos por mim, então o "por que ele" da carta está apoiado em
+  tradução, não no original em inglês.
+
+---
+
+### FICHA 4 — Neill Gorton, **Director** da Millennium FX (Aylesbury, Buckinghamshire, Reino Unido) — `sem-email`, e é a casa de criatura fora da Animation UK que a ordem pediu
+
+- **SEM ENDEREÇO DE PESSOA, medido nesta rodada:** 20 caminhos mais `/digital-3d`, `/cvs`, `/credits` e
+  `/hire`, com decodificação de `data-cfemail` do Cloudflare (o link
+  `/cdn-cgi/l/email-protection#bed7d0d8d1fe…` decodifica para **`info@millenniumfx.co.uk`**) e de
+  `[at]`/`(dot)`. Os dois únicos endereços em tudo são **`info@millenniumfx.co.uk`** e
+  **`cvs@millenniumfx.co.uk`**, os dois funcionais. **NADA FOI MONTADO** — três diretores nomeados num
+  domínio próprio é o convite a montar `neill@`, e **não montei nenhuma grafia**.
+- **URLs exatas abertas nesta rodada:**
+  - `https://millenniumfx.co.uk/about/` (**200, 89.209 bytes**) — o pareamento nome + cargo:
+    **"Millennium FX's Directors, Neill Gorton, Rob Mayor, and Kate Walshe are multi-award-winning artists
+    with multiple BAFTA and ROYAL TELEVISION SOCIETY awards"**.
+  - `https://millenniumfx.co.uk/digital-3d/` (**200, 84.375 bytes**) — o gancho, e é o que salva a ficha.
+  - `https://millenniumfx.co.uk/cvs/` (**200, 71.890 bytes**) — o procedimento de candidatura.
+  - `https://millenniumfx.co.uk/contact/` (**200, 87.617**), `/credits/` (200, 85.783), `/hire/` (200, 74.021).
+  - **Armadilha de caminho medida:** `/team`, `/about-us`, `/our-team`, `/people`, `/crew`, `/careers`,
+    `/jobs`, `/studio`, `/press` e `/presskit` dão **404 com 64.309 bytes** (404 gordo). O pareamento mora
+    em `/about/`, com barra.
+- **POR QUE ELE, e não outro da casa.** São exatamente **três** nomes publicados, os três como *Directors*.
+  Dos três, **Neill Gorton é o nome de criatura** — é dele a assinatura de design nos monstros de *Doctor
+  Who* e nas criaturas de *The Witcher*, *The Wolfman* e *Victor Frankenstein*, que é o catálogo que a
+  própria `/about` lista. Rob Mayor e Kate Walshe ficam guardados, e o teto de duas deixa espaço para **um**
+  deles.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a `/digital-3d/` diz, literal, que a casa faz
+  **"3D design and modelling of prosthetics, creatures, props, and costumes"** e que
+  **"Our digital team continue to expand and take an ever more central role in our concept design and
+  manufacturing processes"**. Departamento digital que a casa diz estar **crescendo** e que modela
+  **criatura** é a porta certa para um modelador de personagem.
+- **Fora dos EUA?** Sim, Reino Unido. **A frase de realocação entra.**
+- **Dedupe:** `search_threads` por `millenniumfx OR "Millennium FX" OR Gorton in:anywhere` devolveu
+  **`{}`**. Zero acerto em `enviados.csv`, `pessoas.csv`, neste arquivo, `processados.csv`, `alvos.csv` e
+  `docs/index.html`. **PRIMEIRA PESSOA DA CASA.** E o ponto que interessa à ordem desta rodada: o domínio
+  **não está na Animation UK (205 membros, fechada às 08h55) nem na UK Screen Alliance (114 hoje, 105 em
+  14/09)** — ela é exatamente a casa de criatura britânica de fora dos dois diretórios.
+- **Ressalva honesta, e são quatro.** (a) **A casa contrata FREELANCER, não empregado**, e ela diz isso na
+  `/cvs/`: *"We work with freelancers who we engage on a project by project basis."* Freelance não abre
+  patrocínio de visto, que é o item número um do checklist do Vini. (b) O ofício principal é **prótese,
+  animatrônico, fantasia e modelo físico**; o 3D ali serve a **fabricação** (escaneamento Artec, impressão
+  SLA e FDM), não a renderização de personagem para tela. (c) **Nenhum e-mail de pessoa** — a carta cai em
+  `cvs@` ou `info@`, e a própria página avisa *"we cannot acknowledge receipt of submissions"*. (d) O cargo
+  publicado é *Director* no sentido societário; não há *Art Director* nem *Head of Characters* nomeado.
+
+---
+
+### FICHA 5 — Tom Hillman, **President** da GhostFX (Toronto, Ontário, Canadá) — `sem-email`
+
+- **SEM ENDEREÇO DE PESSOA, medido nesta rodada:** 15 caminhos com decodificação de entidade,
+  `data-cfemail` e `[at]`/`(dot)`. O único endereço em tudo é **`info@ghostfx.ca`**, funcional. **NADA FOI
+  MONTADO** — três nomes com cargo num domínio próprio e **não montei `tom@` nem `thillman@`**.
+- **URLs exatas abertas nesta rodada:** `https://ghostfx.ca/about-us` (**200, 8.712 bytes**) e
+  `https://ghostfx.ca/` (**200, 18.486 bytes**). A `/about-us` publica **três pessoas com cargo**:
+  **"Tom Hillman | President"**, *"Sasha Hillman | Studio Manager"*, *"Ryan lovelock | Animator"*, cada uma
+  com biografia curta.
+  **Armadilha de caminho:** `/about`, `/team`, `/contact`, `/our-team`, `/people`, `/crew`, `/careers`,
+  `/jobs` e `/contact-us` dão **404 com 906 bytes**. O que existe é **`/about-us`**, e só.
+- **POR QUE ELE, e não outro da casa.** Três nomes. Sasha Hillman é **Studio Manager** e a bio dela é de
+  administração e curadoria digital; Ryan Lovelock é **Animator**, ou seja par de ofício e não porta — ele
+  fica como a **SEGUNDA e última** possível, pela via de colega. Tom Hillman é **dono e artista ao mesmo
+  tempo**, que é exatamente o alvo que o BRIEF-JOE manda perseguir em casa de até 30 pessoas.
+- **Gancho, com a frase do próprio estúdio entre aspas:** a bio dele na `/about-us` —
+  **"Tom Hillman is a self-taught multifaceted artist. Using his innovative and cutting edge design
+  principles he has given unique style to well over 2,000 productions in the last thirty-some years that he
+  has directed, produced, or animated going to air on television and film and seen in over 129 countries"**.
+  *"Unique style"* e *"self-taught"* dão um encaixe honesto para quem chega por fora e por portfólio.
+- **Fora dos EUA?** Sim, Canadá (Toronto). **A frase de realocação entra.**
+- **Dedupe:** `search_threads` por `ghostfx OR "Ghost FX" OR Hillman in:anywhere` devolveu **`{}`**. Zero
+  acerto para `ghostfx`, `Ghost FX` e `Hillman` em `enviados.csv`, `pessoas.csv`, neste arquivo,
+  `processados.csv` e `alvos.csv`. **PRIMEIRA PESSOA DA CASA.** A casa saiu da lista curada da Head Gear,
+  fonte que nenhuma rodada anterior abriu, e a linha 7807 deste arquivo — que varreu Toronto às 08h55 —
+  **não menciona GhostFX**.
+- **Ressalva honesta, e ela é dura.** (a) **Três pessoas publicadas**: casa desse tamanho quase nunca
+  patrocina visto, e a `/about-us` é a única página de estrutura que existe. (b) **Nenhuma cadeira de
+  personagem** e nenhum 3D declarado além de *"self-taught 3D animator"* na bio do Ryan. (c) As três bios
+  dizem **"self-taught"**, o que sinaliza oficina generalista de dono, não pipeline. (d) Não há página de
+  vaga nem convite a portfólio: a carta é 100% frio, sem porta declarada. (e) Sem endereço de pessoa, cai
+  em `info@ghostfx.ca`.
+
+---
