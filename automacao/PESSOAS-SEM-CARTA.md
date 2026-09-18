@@ -7383,3 +7383,69 @@ gratuito ou domínio de terceiro, 1 por falta de pareamento, e 53 por não publi
 pessoa). **Paredes e não-conferidos: 15 linhas na tabela acima**, das quais **4 são veias mortas
 medidas** (Creative BC, CASO, Interactive Ontario, Ontario Creates) e **2 são correção de domínio que
 a campanha vinha errando** (`image-engine.com` e `artistsanimation.com`).
+
+### FICHA 7 — Andrew Karr, **Visual Effects Supervisor and Producer** e sócio da Atmosphere Visual Effects (Vancouver, BC, Canadá) — **`sem-email`, achada no tempo que sobrou, e é a melhor de disciplina entre as de Vancouver**
+
+- **POR QUE ELE.** Casa pequena de Vancouver com **dois sócios nomeados**, e o BRIEF-JOE põe
+  **CG Supervisor** e fundador no topo em casa desse tamanho. Entre os dois, o outro sócio é
+  **Tom Archer, Supervising Compositor** (composição e acabamento, a família que o maestro já segurou
+  em 17/09), e o Andrew Karr é o lado **3D**: *"our **Visual Effects Supervisor and Producer**, has
+  worked in Visual Effects for twenty years... Andrew has also **taught 3D at the Vancouver Film
+  School** and the Centre for Digital Imaging and Sound. He has also **won a Primetime Emmy for his
+  work on Battlestar Galactica** and has been nominated another five times"*. Ele **ensina 3D**, o que
+  o põe do mesmo lado da mesa que o Vini, que é fundador de escola e ensina o próprio método — é o
+  gancho mais humano da rodada. Tom Archer fica guardado como **segundo e último** nome da casa.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA PUBLICADO. Linha entra como `sem-email`.** A casa publica
+  **um só endereço em seis páginas**, `info@atmosphere-vfx.com`. **Nada montado.** A carta sairia para
+  `info@` endereçada a ele pelo nome.
+- **URL exata aberta nesta rodada:** `https://atmosphere-vfx.com/about` (**200, 15.184 bytes**), que é
+  onde está o pareamento nome+cargo. Também abertas: `/team` (200, 9.575 bytes), `/our-team` (200,
+  9.579), `/crew` (200, 9.575), `/studio` (200, 9.577) e `/contact` (200, 10.941) — **todas servindo
+  quase o mesmo corpo curto**, porque o site avisa *"Use javascript to get the most from this site"*.
+  **Correção de domínio registrada:** `atmospherevfx.com` **sem hífen está morto nos quatro esquemas**;
+  o domínio vivo é **`atmosphere-vfx.com`**.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"**Atmosphere Visual Effects** was formed in
+  August 2003. Our company principals are..."*, e o crédito que a própria casa escolhe exibir,
+  *"a Primetime Emmy for his work on **Battlestar Galactica**"* e *"from **The X-Files** to The
+  Expance"* (a grafia errada de *The Expanse* é do site, não minha).
+- **FORA DOS EUA: SIM, Vancouver, BC** (`300-177 West 7th Avenue, Vancouver, BC V5Y 1L8` — **o mesmo
+  prédio da The Embassy VFX**, que está vetada e no teto; são casas distintas e a coincidência é de
+  endereço físico, não de empresa). **A frase de realocação ENTRA.**
+- **DEDUPE:** Gmail `atmosphere-vfx OR "Atmosphere Visual Effects" OR "Andrew Karr" OR "Tom Archer"`
+  devolveu **`{}`**. `in:sent` por domínio: **zero, 0 de 2**. `atmosphere-vfx`, `Atmosphere Visual`,
+  `Atmosphere VFX`, `Andrew Karr` e `Tom Archer` dão **zero** acerto em `enviados.csv`, `alvos.csv`,
+  `pessoas.csv` e `docs/index.html`; a única menção no repositório é a linha de método de 10/09 no
+  `processados.csv` citando o garimpo, **não a casa**. **Primeira pessoa e primeira mensagem da casa.**
+- **PATROCÍNIO DE VISTO:** não publicado; a casa tem página `/jobs` própria.
+- **RESSALVA HONESTA:** **sem endereço de pessoa**. O site é de 2003 em estrutura e **depende de
+  JavaScript**, então o quadro de sócios pode estar velho (o rodapé diz 2026, o que ajuda mas não
+  prova). A casa é **VFX de televisão**, não de personagem estilizado: *Battlestar Galactica*,
+  *The X-Files*, *The Expanse* são nave, ambiente e fotorrealismo, e **nada no site nomeia assento de
+  personagem ou criatura** — a carta não pode afirmar encaixe de disciplina, e o que ela tem de
+  verdade é o encontro de dois professores de 3D. Casa pequena, patrocínio improvável.
+
+### ADENDO AO PLACAR, depois da ficha 7
+
+O placar acima foi escrito com seis fichas e **fechou em sete**: a Atmosphere entrou no tempo que
+sobrou, pela mesma veia do diff (o domínio estava no `garimpo-cgstudiomap.csv` como
+`atmosphere-vfx.com` e **não estava** no conjunto de tocados). **Números corrigidos: 7 pessoas novas,
+3 com endereço PUBLICADO e confiança ALTA, 4 `sem-email`. Por região: Vancouver/BC 5, Toronto 2.**
+**Todas as sete são Canadá, e cinco são a prioridade 1 do Vini.** As quatro casas `sem-email` (Spin,
+Guru, Mainframe, Atmosphere) são **as quatro de melhor disciplina e de maior porte** da rodada, e as
+três com endereço são as três mais fracas — a inversão apontada no placar se acentuou com a sétima, e
+é o achado estrutural desta rodada: **em Vancouver, quem publica endereço de pessoa é casa de um ou
+dois; quem tem assento de personagem publica só caixa funcional.**
+
+Duas tentativas finais que **não** renderam, medidas: **MARZ** (`marzvfx.com` e
+`monstersaliensrobotszombies.com` servem **o mesmo corpo de 233.559 bytes**) publica só
+`info@marzvfx.com`; **Rocket 5 Studios** só `hello@`; **`bardelentertainment.com` está morto nos
+quatro esquemas** e a `bardel.ca` segue 403, o que mantém a Bardel **não conferida** pela terceira
+rodada. **Mad Assemblage** nomeia `A K Madhavan, Founder and Director` mas publica só `info@`, e ficou
+de fora por ser casa de serviço sem personagem publicado.
+
+**Um defeito de dado no `pessoas.csv` que não é meu e que o maestro precisa ver:** a **linha 353**
+(Junel Popp, Ludia, 17/09) tem **onze campos em vez de dez** — o campo `situacao` contém uma vírgula
+sem escape, e o pedaço `" NAO REENVIAR"` vazou para uma décima primeira coluna. O conteúdo está
+legível para humano, mas **qualquer leitor de CSV estrito quebra ou desalinha nessa linha**, e o que
+vazou é justamente a marca de não reenviar, que é a que não pode se perder. **Não corrigi porque a
+linha é de outra rodada e mexer nela sem ordem apagaria registro de outro agente.**
