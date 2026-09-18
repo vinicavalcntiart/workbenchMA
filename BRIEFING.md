@@ -4518,3 +4518,14 @@ suporte técnico da Chaos e da Taboola; o único com escultura de verdade é um 
 Designer* de brinquedo da Hasbro em **Hong Kong**, fora do escopo por escrito. O único acerto real
 pelo corpo é o `CFX Artist 8394174` da Untold, **que já tinha decisão de 17/09** por disciplina.
 **Zero acerto novo pelo corpo** — o filtro de título não deixou nada passar nesta rodada.
+
+> **Fecho do §5, medido às 00h41 e corrigindo para cima o número que eu escrevi meia hora antes:**
+> terceira passada em série, 22 s de intervalo, recuperou `rebellion` (200, 32 vagas) e `pikpok`
+> (200 com `jobs` presente e **lista vazia** — quadro vazio MEDIDO, não falso zero). **Total final
+> da família: 14 quadros de 22 tokens, 108 vagas, 1 publicada em 17/09, zero acerto.** Seguem
+> **NÃO CONFERIDOS** com o código: `double-eleven`, `keywords-intl1`, `supermassivegames` e
+> `lighthousegames`, 429/1015 em três ritmos diferentes. E a leitura da Rebellion serve de controle
+> do dedupe: as duas únicas de disciplina do quadro dela são as `Senior Character Artist` de Oxford
+> e Warwick, `published_on` **2026-09-16** — **fora da janela por um dia** — e são a mesma
+> requisição já enviada em 30/08 e recusada em 01/09. **O filtro de data as excluiu antes de o
+> dedupe precisar trabalhar, que é a ordem barata.**
