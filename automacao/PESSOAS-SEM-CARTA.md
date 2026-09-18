@@ -7193,3 +7193,193 @@ tem casa de porte, e foi dela que saíram Mainframe e a correção de domínio d
   Inc.)"*), então parte do quadro pode estar desatualizada. E o quadro publicado é **só liderança**:
   nenhum Character Art Lead nem Character Artist aparece, logo não achei o alvo ideal desta casa, achei
   a porta dela.
+
+### FICHA 5 — Nick Yonge, fundador da Curiobot (Vancouver, BC, Canadá) — **endereço PUBLICADO com o cargo na MESMA frase, e a ficha mais fraca da rodada por disciplina**
+
+- **POR QUE ELE.** Casa de até 30 pessoas: pelo BRIEF-JOE o fundador é alvo de primeira linha porque
+  *"costuma responder ele mesmo"*. A Curiobot é ele: *"Curiobot was incorporated in Vancouver, Canada
+  in 2019. **Our origins lie in video game design. Founder Nick Yonge created krangGAMES Inc in 2010**,
+  his first game design studio - the predecessor to Curiobot"*. **Não há outro nome publicado na casa**,
+  logo não houve escolha entre pessoas.
+- **EMAIL: `nick@curiobot.com` — PUBLICADO, confiança ALTA.** O pareamento está numa frase só, no HTML
+  da home: *"email our founder, **Nick Yonge** (it's pronounced "young") at `nick@curiobot.com`"*, em
+  `mailto:` cru. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://www.curiobot.com/` (**200, 27.681 bytes**). Todos os
+  outros doze caminhos varridos (`/about`, `/about-us`, `/team`, `/our-team`, `/contact`, `/studio`,
+  `/people`, `/crew`, `/careers`, `/jobs`, `/leadership`, `/who-we-are`) devolvem **404 com 196 bytes**
+  (404 magro, medido): **a casa é uma página única**.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Curiobot is a digital production studio. Our
+  Tech division creates engaging **Augmented Reality (AR)** applications for business and media"* e
+  *"We take our **games experience** and build software that is uniquely engaging, informative, and
+  fun"*.
+- **FORA DOS EUA: SIM, Vancouver, BC.** **A frase de realocação ENTRA.**
+- **DEDUPE:** Gmail `curiobot OR Yonge OR nrdland OR "Ninja Robot Dinosaur" OR "Shane Neville"`
+  devolveu **`{}`**. `in:sent` por domínio: **zero, 0 de 2**. `curiobot` e `Yonge` dão **zero** acerto
+  em `enviados.csv`, `alvos.csv`, `pessoas.csv`, `processados.csv` e `docs/index.html`. **Primeira
+  pessoa e primeira mensagem da casa. A casa não aparece em nenhum arquivo do repositório.**
+- **PATROCÍNIO DE VISTO: praticamente nulo**, e está escrito aqui para o maestro não gastar argumento
+  de vaga com ela.
+- **RESSALVA HONESTA, e é a mais dura desta rodada:** a casa **não publica personagem nenhum**. O
+  portfólio é **AR corporativo** (app de compliance para a Bayer, ferramenta de treinamento, app de
+  showroom) e o único vínculo com jogo é a biografia do fundador. **Não há assento de arte 3D, nem
+  elenco, nem criatura.** É casa de uma pessoa, sem dinheiro de contratação provável. O valor desta
+  linha é **contato e indicação em Vancouver**, e a carta **não deve pedir vaga**; se o maestro achar
+  que não paga o custo, esta é a primeira da rodada a segurar. Mantenho a linha porque o endereço é
+  publicado, o pareamento é inequívoco e a geografia é a prioridade 1 do Vini.
+
+### FICHA 6 — Shane Neville, Ninja Robot Dinosaur (Vancouver, BC, Canadá) — **casa de um, e o site diz isso com essas palavras**
+
+- **POR QUE ELE.** Mesma regra do fundador em casa pequena, no caso extremo: o site define a casa
+  **pela pessoa**, *"Ninja Robot Dinosaur is an indie game studio based in Vancouver, Canada,
+  **publishing the games of Shane Neville**"*. Não existe segundo nome.
+- **EMAIL: `shane@nrdland.com` — PUBLICADO, confiança ALTA.** Em texto puro no corpo da home, no
+  markup `<p>Contact: shane@nrdland.com</p>`, sem ofuscação e sem `data-cfemail`. **Nada montado.**
+- **URL exata aberta nesta rodada:** `https://nrdland.com/` (**200, 71.449 bytes**).
+- **GANCHO com frase do próprio estúdio, entre aspas:** a lista de jogos que a própria home publica,
+  *"The Drifting Woods"*, *"Bunker Punks"* e *"Ray Ardent: Science Ninja"*, sob a frase
+  *"publishing the games of Shane Neville"*.
+- **FORA DOS EUA: SIM, Vancouver, BC.** **A frase de realocação ENTRA.**
+- **DEDUPE:** mesma busca da ficha 5, Gmail **`{}`**; `in:sent` por `nrdland.com`: **zero, 0 de 2**;
+  `nrdland`, `Ninja Robot` e `Shane Neville` dão **zero** acerto nos cinco arquivos. **A casa não
+  aparece em nenhum arquivo do repositório.**
+- **PATROCÍNIO DE VISTO: nulo.**
+- **RESSALVA HONESTA:** **desenvolvedor solo**, sem pipeline de personagem 3D publicado (os jogos são
+  2D/estilizados de baixa poligonagem), **zero chance de contratar com patrocínio** e nenhum cargo
+  publicado (a casa não imprime título nenhum, "publishing the games of" é descrição). Vale como
+  **contato de cena em Vancouver**, e é honesto dizer que vale menos que as fichas 1 a 4.
+
+### CASAS DE VANCOUVER E BC ABERTAS NESTA RODADA E **DESCARTADAS**, com o motivo de cada uma
+
+- **The Embassy VFX** (Vancouver) — **era a melhor casa de disciplina que achei na rodada** e está
+  **duplamente fora**. O `/pages/contact` (**200, 39.584 bytes**) publica três pessoas pareadas com
+  cargo: `Winston Helgason, Executive Producer / President, winston@`, `Steve Woo, Head of Studio,
+  swoo@`, `Kenny Solomon, Executive Producer - Los Angeles, kenny@`. **Teto fechado:** Gmail mostra
+  carta para `swoo@` em 06/09 e para `winston@` em 08/09, **2 de 2**. E o `processados.csv` registra
+  em 17/09 **veto escrito de residência**, frase colada: *"we are only accepting applications from
+  those who are legally eligible to work in Canada and are currently BC residents or willing to
+  establish BC residency"*. O gancho dela era o melhor da rodada (*"Creature Converts: How The Embassy
+  Expanded Its CG Repertoire"*, *"Character, Craft and Collaboration: Nissan Snowmen"*) e não serve
+  para nada. **Ninguém reabra.**
+- **The Sequence Group** (Vancouver + Melbourne) — **teto estourado, 3 cartas**: `jobs@` em 26/08 (com
+  follow-up em 02/09), `ian@` em 03/09 e `luke@` em 06/09. O `/about` (**200, 240.458 bytes**) publica
+  `Dan Sioui, Executive Producer, dan@`, `Ian Kirby, Founder & CD, ian@`, `Luke Bicevskis, Partner &
+  CD, luke@`, e um bloco **Key Creatives** com quinze nomes, entre eles **`Andrew West, Art Director`**
+  e `Zach Ng, Senior 3D Generalist` — **nomes bons e inúteis**, porque a casa está fechada.
+- **Slap Happy Cartoons, os outros três sócios** (Kathy Antonsen, Greg Sullivan e a segunda grafia
+  `rdavies@`) — **regra de uma pessoa por casa por rodada**, e com o Josh já escrito a casa fecha no
+  Rob Davies.
+- **Half Asleep** (Vancouver) — `david@halfasleep.games` **publicado** em `mailto:` cru no `/about`
+  (**200, 6.740 bytes**), pareado com *"Hi, my name is **David Huynh**, and I'm an independent designer
+  based in Vancouver, British Columbia"*. **Descartada por disciplina**: o único produto é *Melatonin*,
+  jogo de ritmo 2D feito por uma pessoa, e não há arte 3D nem personagem no portfólio.
+- **Cloudhead Games** (Vancouver/Qualicum) — só `press@cloudheadgames.com` no `/contact`
+  (200, 489.893 bytes). **Sem nome de pessoa em três páginas.** É o caso Barnstorm.
+- **Offworld Industries** (Vancouver) — só `contact@offworldindustries.com` em quatro páginas.
+- **East Side Games** (Vancouver) — o `/contact` (200, 24.150 bytes) devolve **treze caixas
+  `@*.zendesk.com` de suporte de jogo** e `jobs@eastsidegamestudio.com`. **Nenhum nome de pessoa.**
+- **Hothead Games** (Vancouver) — só `contact@` e `info@hotheadgames.com`.
+- **Giant Ant** (Vancouver) — só `newbiz@giantant.ca` em quatro páginas, e o `/about` (241.175 bytes)
+  **não pareia nome com cargo**. Tentei reabrir o `/about` para conferir o quadro e o túnel devolveu
+  **`000` com `ws_closed_mid_exchange`** (falha do proxy, **não é parede do site**): fica **NÃO
+  CONFERIDA**, não fechada.
+- **Sunday Cider** (Vancouver) — só `hello@sundaycider.com`; a varredura ainda devolveu
+  `nsundayciderevents@gmail.com`, que é **artefato de concatenação** do HTML e **não é endereço**.
+- **Blackbird Interactive**, **A Thinking Ape**, **Codename Entertainment** (Victoria),
+  **Hyper Hippo** (Kelowna), **Metalhead Software** (Victoria), **Next Level Games** (Vancouver),
+  **Goldtooth**, **Stormborn VFX**, **Torpedo Pictures**, **Side Street Post**, **Smiley Guy**,
+  **Deluxe Animation**, **Fuse FX**, **Studio Feather**, **Tantrum**, **Atmosphere VFX**
+  (só `info@`), **Kalos Studios** (só `apply@`, `info@`, `production@`), **Pixray** (só `studio@`),
+  **Zink**, **Little Blackstone**, **Eggplant**, **Pure Blink**, **Thinkingbox** (sete caixas
+  funcionais, zero pessoa), **Mad Assemblage**, **Image Engine** (`image-engine.com`, **zero endereço
+  em nove páginas** e já **2 de 2**, com um bounce permanente registrado em 08/09 de endereço
+  montado), **Sony Pictures Imageworks** (só `recruiting@`, `info@`, `icad@`, `mediainquiries@`,
+  `opensource@`), **Animal Logic**, **Digital Domain**, **Lost Boys**, **Nvizible**, **Slick
+  Entertainment** (serve as caixas da Klei), **Crafty Apes** (só `commercials@`, `pr@`, `sales@`),
+  **Cinesite** (o `/contact` só lista endereço de **estúdio parceiro de terceiro**:
+  `info@image-engine.com`, `hello@trixter.de`, `info@latelieranimation.com`, `info@squeezestudio.com`,
+  `kristijan@fx3x.com`, `enquiries@imaginariumstudios.co.uk`, `info@madassemblage.com` —
+  **armadilha de domínio de terceiro, não vira ficha**) — **todas sem endereço de pessoa**.
+- **Northway Games** (Vancouver) — o `/contact` publica `colinnorthway@gmail.com` e
+  `sarahnorthway@gmail.com`. **Descartada**: **provedor gratuito** (precedente das rodadas de 17/09) e
+  casa de duas pessoas sem personagem 3D.
+- **Taqqut Productions** (Iqaluit, Nunavut) — `neil@taqqut.com` sai **decodificado do
+  `data-cfemail`** do `/contact` (200, 39.160 bytes), mas a página o publica **sem nome ao lado**, só
+  como *"For production or creative services inquiries"*, e o `/about` (200, 39.310 bytes) **não nomeia
+  ninguém**. **Sem pareamento nome+cargo não vira ficha** (regra Barnstorm). A casa também é
+  live-action, stop motion e 2D.
+- **Toronto, casas abertas sem endereço de pessoa:** **Guru** (virou ficha `sem-email`), **Spin**
+  (virou ficha `sem-email`), **Pipeline Studios** (`info@`, `production@`, `development@`,
+  `distribution@`, e **todos os caminhos internos em 404 com 0 byte**), **Uken** (`jobs@`, `support@`),
+  **House of Cool** (`info@`, `sales@`), **Industrial Brothers** (`info@`), **9 Story** e
+  **Portfolio Entertainment** (**o mesmo corpo**: `portfolioentertainment.com` **serve o site da 9
+  Story**, com `accessibility@`, `development@`, `distribution@`, `pr@` e
+  `production@brownbagfilms.com`), **Brown Bag Films** (`info@`, `infotoronto@`, `infobali@`,
+  `explore.animation@`, `media@`), **Nelvana** (`info@`), **Big Bad Boo** (`jobs@`), **Sinking Ship**
+  (só o gabarito `user@domain.com`), **Yowza**, **Tonic DNA**, **Secret Location** (`hello@`,
+  `contact@`), **MaxFX** (`contact@`), **Mercury Filmworks** (Ottawa, só `connect@`).
+- **Loogaroo** (Miramichi, NB) — o endereço que parece de pessoa é `meangenefowler@gmail.com` e o
+  outro é `info@websolutions.ca`, **domínio da agência que fez o site**. Descartada.
+
+### AS PAREDES E OS NÃO-CONFERIDOS DESTA RODADA, medidos, com controle na mesma janela
+
+| Fonte | O que devolveu | Leitura |
+|---|---|---|
+| `digibc.org`, `www.digibc.org`, `/member-directory/`, `/members`, `/wp-json/wp/v2/members` | **403 com 103 bytes** em **cinco** caminhos, inclusive por `http://` (que redireciona para `/membership/` e também 403) | a associação de BC segue **fechada a este túnel pela terceira medição**; `http://` e `www.` **foram** tentados, conforme a ordem |
+| `creativebc.com/directory`, `/production-directory` | **404 com 153.511 bytes** (404 gordo, servindo a home) | **não existe diretório de membros**; o `wp-json` abre (**200, 641.283 bytes de rotas**) e os `types` provam o motivo: os únicos post types são `creative-equity-road`, `tribe_venue`, `tribe_organizer`, `tribe_events`, `tec_calendar_embed`. **Veia morta, não parede.** `animationbc.com` **redireciona para `creativebc.com`** |
+| `reeldirectory.creativebc.com` | **000 de rede** | |
+| `vancouvereconomic.com` | **000 de rede** (era **502 no CONNECT** em 17/09) | a Vancouver Economic Commission segue inacessível, agora por outro mecanismo |
+| `sparkcgsociety.org`, `spark-cg.org`, `sparkcg.ca` | **000 de rede** nas três grafias | a Spark CG Society **não tem host vivo neste túnel** em nenhuma das três |
+| `cmpa.ca` | **403 com 1.486 bytes** | a associação de produtores está fechada |
+| `caso.ca` | **200 com 114 bytes** | **114 bytes é página vazia**: a Computer Animation Studios of Ontario não tem site com conteúdo |
+| `interactiveontario.com/wp-json/wp/v2/member` | **200, e `x-wp-total: 1`** | **veia aberta e vazia**: o diretório de membros da Interactive Ontario tem **um** registro público (XRpanda). O type `person` tem 30, mas são **a equipe e o conselho da própria associação**, não gente de estúdio |
+| `ontariocreates.ca/production-directory` e três variantes | **404 com 1.441 bytes** | o diretório de produção não está neste caminho |
+| `bardel.ca` | não retentado nesta rodada | segue **NÃO CONFERIDA** desde 16/09 (403 Cloudflare); é uma das maiores de Vancouver e **precisa de navegador de tela** |
+| `imageengine.com` (sem hífen) | **morto em quatro esquemas** | **correção de domínio**: o certo é **`image-engine.com`**, e quem achou foi o `/contact` da Cinesite. Registro para nenhuma rodada declarar "site morto" |
+| `yetifarmcreative.com` | **redireciona para `artistsanimation.com`** | **correção de registro**: a ex-Yeti Farm (Kelowna) hoje é **Artists Animation**, e o `enviados.csv` mostra **três** cartas para `info@artistsanimation.com` (14/07, 26/08, 01/09) — **casa estourada, e a lista que ainda a chama de Yeti Farm está com nome velho** |
+| `pixomondo.com`, `rocketsciencevfx.com`, `redrovervr.com`, `blueantmedia.com`, `marblemedia.com`, `littleengine.ca`, `byndrbl.com`, `siliconsisters.com`, `llamazoo.com`, `llamazoo.ca`, `atmospherevfx.com` (sem hífen), `metalheadsw.com`, `animism.studio`, `cosavfx.com`, `bootstrapanimation.com`, `nitrogenstudios.com`, `electricplayground.com`, `sunnysidestudios.ca` | **mortos em quatro esquemas** (`https`, `https://www`, `http`, `http://www`) | protocolo da ordem cumprido antes de chamar de parede |
+| `giantant.ca/about` | **000 com `ws_closed_mid_exchange`** | **falha do proxy**, não do site: o mesmo caminho tinha aberto com 241.175 bytes minutos antes. **NÃO CONFERIDO** |
+| `slaphappycartoons.com` em `/crew`, `/jobs`, `/leadership`, `/who-we-are` | **429 com 0 byte** | limite de taxa do meu próprio varredor, **não parede**: as três páginas que importavam abriram |
+
+### PLACAR HONESTO DA RODADA DAS 00h55
+
+**Seis pessoas novas**, dentro da faixa de 4 a 8: **três com endereço PUBLICADO e confiança ALTA**
+(Rob Davies / Slap Happy, Nick Yonge / Curiobot, Shane Neville / Ninja Robot Dinosaur) e **três
+`sem-email`** guardando nome, cargo e casa (Simon Lee / Spin VFX, Sarah McDonald / Guru, Christine
+Huot / Mainframe). **Nenhum endereço montado por padrão de domínio. Nenhum inventado. Nenhuma segunda
+grafia de ninguém** (o `rdavies@` foi visto e descartado em favor do `davies@` que a casa pareia).
+
+**Por região, contra a ordem do turno: VANCOUVER E BC SAÍRAM DO ZERO DEPOIS DE CINCO TURNOS.**
+**Vancouver/BC 4** (Slap Happy, Mainframe, Curiobot, Ninja Robot Dinosaur) e **Toronto 2** (Spin VFX,
+Guru). **Montréal: zero, e de propósito** — a ordem disse não reabrir a Guilde do Québec e eu não abri.
+Nenhuma ficha fora do Canadá.
+
+**Por disciplina, e é o que esta rodada fez melhor que as duas anteriores:** **Simon Lee é
+`Creature Art Director`**, que é o alvo literal do BRIEF-JOE e o melhor pareamento de cargo que este
+arquivo já registrou; **Sarah McDonald é `Creative Director, Design`** numa casa que se define como
+*"character-driven"*; a mesma página da Spin ainda deixa **`Amit Khanna, Head of CG`** e **três CG
+Supervisors nomeados** guardados como reserva. Em troca, **as três fichas com email são as três de
+disciplina mais fraca** (2D na Slap Happy, AR na Curiobot, solo na Ninja Robot), e essa inversão é o
+fato mais importante do placar: **onde há endereço não há personagem, e onde há personagem não há
+endereço.**
+
+**Por tamanho de casa:** **Mainframe e Guru são as duas maiores** (centenas de pessoas, ambas com
+processo de imigração plausível), **Spin é média** (1987, dois escritórios), **Slap Happy tem cinco
+nomes**, **Curiobot e Ninja Robot são de uma pessoa**. **Mainframe é a melhor aposta de patrocínio da
+rodada**; nenhuma das seis publica política de visto, e isso está dito em cada ficha.
+
+**Dedupe, por casa:** **Spin VFX, Mainframe, Curiobot e Ninja Robot estão em 0 de 2** (Gmail `{}` por
+nome e por casa, `in:sent` por domínio zero). **Guru está em 1 de 2 e a única carta QUICOU**
+(`info@gurustudio.com` não existe). **Slap Happy está em 1 de 2 e esta é a carta 2**, com o Josh Mepham
+escrito em 09/09 e **sem resposta**. **Duas correções de registro saíram do dedupe e valem sozinhas:**
+`themainframe.com` **não é** `mainframe.ca` (a campanha nunca escreveu para a Mainframe Studios), e a
+linha de 07/09 da Spin no `enviados.csv` é **formulário, não carta**, logo não consome teto.
+
+**Fontes abertas:** 9 (gamedevmap Canadá do próprio repo, garimpo CGStudioMap do próprio repo, DigiBC,
+Creative BC + `wp-json`, Vancouver Economic Commission, Spark CG em três grafias, CMPA, CASO,
+Interactive Ontario `wp-json`, Ontario Creates). **Casas lidas: 118 domínios varridos** em oito lotes
+paralelos, com 8 a 14 caminhos cada. **Pessoas com email: 3. `sem-email`: 3. Descartes com motivo
+nomeado: 63 casas** (2 por teto estourado, 1 por veto escrito, 4 por disciplina, 2 por provedor
+gratuito ou domínio de terceiro, 1 por falta de pareamento, e 53 por não publicarem endereço de
+pessoa). **Paredes e não-conferidos: 15 linhas na tabela acima**, das quais **4 são veias mortas
+medidas** (Creative BC, CASO, Interactive Ontario, Ontario Creates) e **2 são correção de domínio que
+a campanha vinha errando** (`image-engine.com` e `artistsanimation.com`).
