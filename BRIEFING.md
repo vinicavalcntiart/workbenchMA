@@ -4529,3 +4529,116 @@ pelo corpo é o `CFX Artist 8394174` da Untold, **que já tinha decisão de 17/0
 > e Warwick, `published_on` **2026-09-16** — **fora da janela por um dia** — e são a mesma
 > requisição já enviada em 30/08 e recusada em 01/09. **O filtro de data as excluiu antes de o
 > dedupe precisar trabalhar, que é a ordem barata.**
+
+## Jhon A, 18/09 02h39 UTC (décimo quarto turno) — A VEIA DOS FORMULÁRIOS PRÓPRIOS DO CENSO DA ARTSTATION: O CENSO NÃO TEM DOMÍNIO, E ADIVINHAR DOMÍNIO CUSTA 15.352 REQUISIÇÕES POR TRÊS PORTAS
+
+Turno de **caça por `curl`**, zero navegador (nenhum processo criado), **zero envio**. A lane é a
+que o hand-back mandou: as casas do censo da ArtStation que **não** caíram em família de ATS no
+cruzamento de ontem — 3.363 slugs menos os 112 de `automacao/censo-artstation-ats-1709.csv`, ou
+seja **3.251 casas**.
+
+**Números medidos: 15.352 sondagens de `/careers` em 3.251 casas, 356 hosts vivos, 3.177
+requisições numa segunda perna de 9 caminhos, 1.130 páginas com corpo útil em 263 hosts, 604
+dessas páginas são catch-all, 3 PORTAS, 1 vaga para carta, 11 casas descartadas com motivo, 2
+duplicatas (as duas triviais), 0 candidatura gasta, 0 tentativa contra veto escrito.**
+
+### 1. O CENSO DA ARTSTATION **NÃO TEM DOMÍNIO**, E A PRÓPRIA ARTSTATION NÃO ENTREGA
+
+O `censo-artstation-1709.csv` guarda `slug,pagina_da_casa_no_artstation,observacao` — e nada de
+site. A rota óbvia para descobrir o site é a página da casa, e ela está fechada para este túnel:
+`https://www.artstation.com/jobs/c/<slug>` devolve **403 com 25.307 bytes de desafio Cloudflare**
+(`cf_challenge_text_small` no corpo), `api/v2/companies/<slug>.json` devolve **404** e
+`api/v2/jobs/companies/<slug>.json` devolve **500** (`An unhandled lowlevel error occurred`).
+
+> **Consequência de lane, e ela precifica a veia: para abrir `/careers` de casa do censo da
+> ArtStation, o domínio tem de ser ADIVINHADO do slug.** Foram 5 candidatos por casa
+> (`<slug-sem-hífen>.com`, `<slug-com-hífen>.com`, `.co.uk`, `.de`, `.ca` — os três últimos
+> escolhidos por serem Reino Unido, Alemanha e Canadá, que estão na frente da prioridade).
+> Rendimento: **2,3% dos candidatos respondem 200 com mais de 2 KB**, e a maioria desses é
+> homônimo. É a mesma economia da adivinhação de token de ATS medida em 17/09 às 17h40, agora
+> medida na adivinhação de **domínio**.
+
+### 2. A DISTRIBUIÇÃO INTEIRA, E O CONTROLE QUE DESAMBIGUA O CÓDIGO `000`
+
+15.352 requisições: **13.323 × 000**, 979 × 404, **775 × 200** (397 com >2 KB, 376 com ≤2 KB e
+**2 com zero byte**), 192 × 403, 25 × 202, e a cauda 9×500, 9×406, 7×503, 6×525, 5×401, 4×302,
+3×520, 3×402, 2×526, 2×502, 2×301 e um de cada de 530, 521, 429, 423, 412 e 410.
+
+O `000` é a metade do problema desta veia, porque ele é **ambíguo**: pode ser domínio inexistente
+ou túnel estrangulado, e a regra da campanha manda tratar `000` como NÃO CONFERIDO. **Controle
+rodado no mesmo comando e com o mesmo cliente:** `framestore.com/careers` devolveu **200 com
+51.009 bytes**, `dneg.com/careers` **200 com 160.418**, e um domínio inventado
+(`zzqx-nao-existe-jhon-18set.com`) devolveu **000 com `CONNECT tunnel failed, response 502`**.
+
+> **Logo os 13.323 são, na esmagadora maioria, domínio candidato que não existe — e não medição
+> perdida.** Mas o código **não distingue** inexistente de inalcançável, então eles ficam
+> **NÃO CONFERIDOS no sentido estrito**, junto com os **192 códigos 403** (que podem ser estúdio
+> real atrás de Cloudflare, e essa é a sobra mais promissora desta lane) e os 2 de zero byte.
+
+### 3. O NÚMERO QUE JUSTIFICA O CAMINHO INVENTADO: **53% DAS PÁGINAS 200 SÃO CATCH-ALL**
+
+A segunda perna abriu 9 caminhos em cada um dos 353 hosts inéditos: `/`, `/careers`, `/jobs`,
+`/join`, `/join-us`, `/work-with-us`, `/apply`, `/contact` e **`/zzz-naoexiste-jhon`**, este
+último só para comparar o md5 do texto limpo. Das **1.130 páginas** com 200 e corpo útil,
+**604 (53%) têm o mesmo md5 do caminho inventado**, em **82 hosts**.
+
+A regra de 17/09 (*"antes de acreditar num 200, peça um caminho que não existe e compare o md5"*)
+já estava escrita; o que faltava era o tamanho do problema. **Sem essa comparação, `gfal.com`,
+`gcd.com` e `firstderivative.com` entrariam nesta rodada com oito páginas de carreira cada um** —
+e as três seriam invenção minha.
+
+**E um defeito meu de medidor, que quase virou o número errado no relatório:** a primeira versão
+do analisador testava `nf[0][0]=="200"` achando que `nf[0]` era o código; `nf[0]` era o **HTML**, e
+`nf[0][0]` o primeiro caractere dele (`<`). O teste nunca dava verdadeiro e o relatório dizia
+**"0 hosts com catch-all"** com 604 páginas de catch-all na mão. Não houve exceção nenhuma — o
+sintoma foi um número redondo demais (zero) num lugar onde o BRIEFING já dizia que o valor é alto.
+
+### 4. AS TRÊS PORTAS, EM ORDEM DE PRIORIDADE
+
+- **Lunar Animation Ltd (Sheffield, Reino Unido)** — `lunaranimation.com/apply` é um **iframe de
+  Airtable**, `airtable.com/embed/shri7OjUyyoWWxmsx` (`app2Aa7YAvJBt2sj2` /
+  `viwH8Xm9LeV8x00K3`, lidos do `window.initData` do embed). **Porteiro zero**: nenhuma ocorrência
+  de `recaptcha`, `hcaptcha`, `turnstile`, `datadome` ou `sitekey` nos 104.245 bytes. Régua na
+  `/careers` (1.442 caracteres — a `/apply` tem **137** e é leitura inválida pelo piso de 1.000):
+  zero veto, e a frase é o oposto do veto — *"we are always on the lookout for talented artists
+  from around the world. Apply to join our network of artists"*. Ressalva honesta: é estúdio de
+  **animação** e as duas vagas nomeadas hoje são Senior e Lead **Animator**, fora da disciplina;
+  o que vale é a rede espontânea.
+- **Fanatic Games Ltd (Opava, Chéquia)** — agência de arte que **nomeia** as linhas
+  `Characters, Clothing & Equipment` e `Rigging & Skinning`. `POST` próprio (Kirby, plugin
+  `dreamform`) para `fanaticgames.com/forms/contact`, urlencoded, **zero captcha nas 9 páginas**;
+  o porteiro é **honeypot (`website`) + CSRF (`dreamform-csrf`)**, os dois resolvíveis por `curl`.
+  **Ressalva que enfraquece: não tem campo de arquivo**, e pela régua do `BRIEF-JHON` motor de CMS
+  só conta com arquivo ou pedido de currículo. É porta de **mensagem**, com portfólio por link.
+- **Pikcells Ltd (Huddersfield, Reino Unido)** — três vagas de 3D artist vivas, formulário próprio
+  de SPA (Nuxt) cujo `select name="reason"` tem a opção **`Career`**, ou seja a própria casa
+  declara o formulário de contato como rota de candidatura. **Porteiro NÃO CONFERIDO**
+  (`recaptcha`+`sitekey` no bundle, sem caixa no HTML: provável v3 invisível, que pela regra de
+  17/09 09h50 é porteiro de **pontuação**). Disciplina 3D sim, personagem não (visualização de
+  cozinha e banheiro).
+
+### 5. UMA ARMADILHA NOVA DE MEDIDOR: **PÁGINA DE IFRAME NÃO TEM TEXTO, E FILTRO POR TAMANHO DE TEXTO A DESCARTA**
+
+A `/apply` da Lunar tem **137 caracteres** de texto limpo, porque o formulário inteiro mora num
+`iframe`. Meu primeiro filtro descartava página com menos de 300 caracteres como ruído — e por
+isso **a melhor porta do turno não apareceu na primeira listagem**. Ela só entrou depois de o
+filtro passar a abrir exceção quando o HTML tem `<iframe>` de host de formulário conhecido.
+
+> **Regra: filtro de tamanho de texto e detecção de formulário hospedado são incompatíveis.** A
+> página que só embute Google Forms, Tally, Typeform ou Airtable é, por construção, a página com
+> **menos** texto do site — e é a que mais interessa. Quem varrer `/careers` cortando páginas
+> curtas perde exatamente a família sem captcha. E isso também derruba o uso do piso de 1.000
+> caracteres nessa página: **a régua de veto tem de ser passada na `/careers` ou no anúncio, nunca
+> na página do iframe.**
+
+### 6. O QUE SOBROU, COM NÚMERO, PARA A PRÓXIMA RODADA DESTA LANE
+
+- **192 hosts com 403** nunca foram lidos: é a sobra mais promissora, porque 403 de Cloudflare é
+  sinal de site **real** (o inexistente dá 000).
+- **A veia cobriu 5 TLDs de 3.251 casas.** Ficaram de fora `.fr`, `.nl`, `.es`, `.se`, `.dk`,
+  `.no`, `.fi`, `.be`, `.pl`, `.it`, `.ch`, `.at`, `.ie`, `.studio`, `.art`, `.io` e `.gg` — e a
+  prioridade da campanha (Nórdicos, Holanda, Espanha, Irlanda) está justamente neles. Cada TLDs
+  novo custa ~3.251 requisições e ~4 minutos com `-P 40`.
+- **O rendimento honesto da lane é baixo e agora tem número:** 3 portas por 18.529 requisições.
+  Ela é melhor que a adivinhação de token de ATS (que rendeu zero vaga da disciplina em 37.409
+  sondagens), e pior que ler quadro conhecido por data de publicação (2 portas em 506 quadros).
