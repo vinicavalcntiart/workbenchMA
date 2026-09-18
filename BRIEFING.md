@@ -5656,10 +5656,13 @@ destravado desde as 11h35, **o mesmo clique produziu dois POST 200 no domínio d
 escreveu, literal: **"Message successfully sent. We appreciate that you've taken the time to write
 us. We'll get back to you very soon."**
 
-> **Regra: "zero pedido de rede no clique" é sintoma de CA recusada pelo navegador, não de
-> formulário que recusa robô.** É a mesma causa que tinha segurado a Sviper (medida em 17/09 às
-> 19h00) e que foi consertada trocando o modo da sessão. Toda porta fechada por essa assinatura
-> merece uma segunda tentativa **agora**, e as três da TRIXTER eram a mesma porta.
+> **Regra, e escrita com o cuidado que o caso exige: "zero pedido de rede no clique" é sintoma do
+> NOSSO AMBIENTE, não de formulário que recusa robô.** Eu **não** provei que a falha de 08/09 foi a
+> CA do proxy — aquela medição é de outro contêiner, e o `ERR_CERT_AUTHORITY_INVALID` que parou a
+> caixa inteira só foi nomeado em 17/09 às 19h00. O que está provado é o que vale para a fila: **o
+> mesmo clique, no navegador desta sessão destravado às 11h35, produziu dois POST 200 e a tela de
+> sucesso.** Toda porta fechada por essa assinatura (clique sem pedido de rede, ou erro genérico
+> logo depois do clique) merece **uma segunda tentativa agora**, antes de qualquer caça nova.
 
 **E a correção do registro de 09/09, que estava certo no fato e errado na conclusão:** o
 locatário Personio da TRIXTER não serve página hospedada — `trixter.jobs.personio.com/job/2785192`
