@@ -4667,3 +4667,28 @@ e o corpo diz o que é.
 > abre e **não se vai além disso**: mascarar cliente para passar por filtro de reputação é a mesma
 > coisa que burlar captcha. Essas casas são **item de mão do Vini** ou de outra rede, e o número
 > honesto da lane continua **3 portas**, sem prometer as 192.
+
+### 8. ADENDO DAS 02h52 — SETE ccTLD EUROPEUS A MAIS: 22.575 SONDAGENS, 85 HOSTS NOVOS E **ZERO** PORTA
+
+O §6 dizia que a prioridade da campanha (Nórdicos, Holanda, Espanha, Irlanda) mora nos TLDs que a
+primeira perna não cobriu, e que cada um custa ~3.251 requisições. **Rodei os sete**
+(`.ie`, `.nl`, `.se`, `.es`, `.dk`, `.no`, `.fi`) em `/careers`: **22.575 sondagens, 22.133 códigos
+000, 242 × 404, 165 × 200, 19 × 403, 8 × 202**; 95 hosts com 200 acima de 2 KB, **85 inéditos**;
+segunda perna de 9 caminhos neles (765 requisições, 492 páginas úteis). **Zero porta, zero vaga da
+disciplina, zero candidatura espontânea de casa de arte.**
+
+O que apareceu é **homônimo genérico e domínio estacionado**: `marshall.nl`, `rivian.dk`,
+`hyundai.ie`, `di.se`, `decathlon-united.media`, `relax.no` (que foi o único acerto do filtro de
+disciplina e é **assistente digital norueguês**), `reanime.es` (streaming de anime),
+`arcanetinmen.dk` (blog), `pennypop.ie` (Gravity Forms sem vaga). **Assinatura nova e útil:
+domínio estacionado na Loopia devolve 200 com 974 bytes e o texto `Parked at Loopia`** — dois dos
+"hosts vivos" suecos eram isso.
+
+> **Fecho de lane, e ele corrige para baixo a minha própria recomendação do §6: o gargalo desta
+> veia não é TLD, é o fato de o slug da ArtStation não determinar o domínio.** Os cinco candidatos
+> da primeira perna renderam 3 portas em 15.352 sondagens; os sete ccTLD seguintes renderam **0 em
+> 22.575**, porque o nome curto de casa de arte colide com empresa qualquer em ccTLD europeu
+> tanto quanto colide em `.com`. **Não repita a extensão por TLD.** O que ainda não foi tentado, e
+> é a única rota barata que resta para esta lista de nomes, é achar o domínio por **fonte que o
+> publique** (Wikidata, diretório de casa, `site:` de motor de busca no navegador do Vini) em vez
+> de adivinhar.
