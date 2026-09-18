@@ -5476,3 +5476,133 @@ Vini pediu mais resposta positiva e mais esforço. Três mudanças, todas em vig
 1. **Follow-up sistemático.** Toda carta fria sem resposta em 7 dias recebe UM lembrete curto, no mesmo fio, enviado direto por `mcp__Gmail__reply` (não rascunho, não Apps Script), com `to` explícito e ZERO emoji. Texto padrão está em `automacao/processados.csv` (linha de 18/09, "follow-ups de 7 dias"). Roda na rodada do Comunicador das 11h05 UTC com a busca `in:sent subject:"Senior Character Artist" older_than:7d newer_than:8d`. Só fio de UMA mensagem. Nunca para casa que recusou, pessoa que respondeu, fio com veto, casa na mão do Vini, ou fio que já tem lembrete. Nunca segundo lembrete. Primeira leva: 36 lembretes em 18/09, lotes de 08 e 09/09.
 2. **Joe a cada 2 horas** (`35 */2`), e as cartas saem na mesma rodada para toda ficha com email publicado dentro da disciplina. Não se espera juntar 3. Casa fora da disciplina continua SEGURADA-pelo-maestro com motivo.
 3. **Gargalo do envio.** Os rascunhos só saem quando o `enviarRascunhos()` roda no Apps Script do Vini. Pedido feito a ele: gatilho de tempo a cada hora. Enquanto não houver, a fila cresce e o Comunicador precisa reconciliar `in:sent` antes de contar.
+
+## Jhon A, 18/09 12h45 UTC (décimo nono turno) — A JANELA DE TRÊS DIAS LIDA INTEIRA: **529 QUADROS, 6.310 VAGAS, ZERO PORTA**; E DUAS ARMADILHAS NOVAS, UMA QUE DAVA FALSO ZERO NO BAMBOOHR E OUTRA QUE QUEIMA O CÓDIGO DO MYGREENHOUSE
+
+Turno de caça por data com janela de **três dias** (desde 15/09 00h00 UTC) e de envio. **Zero
+candidatura nova saiu**, e o motivo não é ferramenta: **não existe vaga nova da disciplina para
+enviar**. O que saiu do turno são dois mecanismos medidos e um endereço de alerta destravado.
+
+**Números do turno: 529 quadros de ATS consultados, 6.310 vagas lidas, 405 publicadas na janela
+de 3 dias, 6 acertos de título e 40 de corpo — e os 46 morrem com a frase escrita. Mais 1.345
+anúncios pela busca global de plataforma, 300 pelo feed Atom do `gamejobs.co`, 82 do Personio,
+93 do Oracle CX da Virtuos e 480 do Avature da EA. ZERO porta nova, ZERO duplicata, ZERO
+tentativa contra veto escrito.**
+
+### 1. O `/careers/list` DO BAMBOOHR **NÃO TEM CAMPO DE DATA**, E A FAMÍLIA INTEIRA ME DEVOLVEU "ZERO PUBLICADA NA JANELA"
+
+A primeira passada leu os 128 quadros de BambooHR pelo `/careers/list`, procurou `datePosted` em
+cada vaga e escreveu **382 vagas, 0 publicadas na janela**. O controle que desmentiu é da própria
+campanha: a `150` da ICON Creative tem `datePosted` **2026-09-17** e está registrada desde as
+00h41 — o zero era **impossível**.
+
+Impressa uma vaga inteira do `/careers/list` do `iconcreative`, os campos são `id`,
+`jobOpeningName`, `departmentId`, `departmentLabel`, `employmentStatusLabel`, `employmentType`,
+`location`, `atsLocation`, `isRemote` e `locationType`. **Não existe campo de data nenhum.** O
+`datePosted` só mora em `/careers/<id>/detail`, exatamente como a tabela de campos de data de
+00h41 já dizia — eu é que li a **lista** em vez do **detalhe**.
+
+> **Regra: campo de data AUSENTE da resposta não é "vaga sem data", é ENDPOINT ERRADO — e os dois
+> têm o mesmo sintoma (HTTP 200, nenhuma exceção, zero na janela).** É a mesma família do falso
+> zero do Teamtailor por chave errada e do 422 em camelCase. **Receita barata que fica:** filtre o
+> **título** pela disciplina no `/list`, que é de graça, e só então pague **um** `/detail` por
+> candidata. Custo medido hoje: 128 listas, 21 candidatas, 21 detalhes.
+
+Com a correção, a família devolve **duas** na janela e as duas já eram conhecidas: `iconcreative`
+**150** *Character Sculptor* de 17/09 (parede de reCAPTCHA v2 de caixa, medida **com clique** às
+00h44, está na mão do Vini) e `theembassy` **58** *Senior Modeller* de 15/09, que **já tinha
+decisão de 16/09** e continua fechada pelo mesmo **veto escrito**, lido hoje no JSON da API:
+*"At this time, we are only accepting applications from those who are legally eligible to work in
+Canada and are currently BC residents or willing to establish BC residency for the duration of the
+contract."*
+
+### 2. OS SEIS ACERTOS DE TÍTULO DA JANELA, E CADA UM COM A FRASE QUE O MATA
+
+| vaga | por que não foi |
+|---|---|
+| Tripledot *3D Artist* `4521447101`, 15/09 | **Jakarta** — escopo geográfico (Ásia só Coreia do Sul e Singapura) |
+| People Can Fly *Principal Character Artist* `744000149844299`, 16/09 | **veto-confirmado** desde 17/09; régua hoje: 5.813 caracteres, `[based in]` em *"open to candidates only from the game industry who are based in Europe"* |
+| NBCUniversal *Lead Material Artist (Character/Wardrobe)* `744000150186264`, 17/09 | **já registrada às 00h41**, parede de DataDome |
+| Rebellion *Senior Character Artist* `7DDC80E0FE` (Oxford e Warwick), 16/09 | **mesma requisição enviada em 30/08 e RECUSADA em 01/09** |
+| Mattel *Salon Hair Stylist* | ruído do termo `hair` |
+
+**Controle de falso negativo, que é obrigatório quando o título devolve zero:** segunda passada
+pelo **corpo** nas cinco famílias que entregam o texto do anúncio na mesma resposta, sobre as 405
+da janela — **40 acertos e os 40 são ruído**: `character` no sentido de índole em *Executive
+Assistant* da 2K, em *Communications Coordinator* e em cinco vagas de engenharia da Roblox, em
+*Product Security Analyst* da HackerOne e em *Game Design Intern* da Epic; o único com escultura
+de verdade é um *Digital Product Designer* de brinquedo da Hasbro em **Hong Kong**. **Zero acerto
+novo pelo corpo.**
+
+### 3. AS QUATRO VEIAS DE FORA DA LISTA DE TOKENS, PARA O ZERO NÃO SER ZERO DE COBERTURA CURTA
+
+- **Busca global de plataforma** (a rota de 13/09, que alcança casa que nenhum token cobre):
+  Workable `jobs.workable.com/api/v1/jobs` com `limit=20` em 12 termos → **123 anúncios**, 6 na
+  janela e da disciplina, os 6 já decididos; SmartRecruiters `jobs.smartrecruiters.com/sr-jobs/search`
+  em 12 termos → **1.222 anúncios**, e o único da indústria na janela é a People Can Fly já vetada.
+  Todo o resto é **BIM Modeller, Hydraulic Modeller e Energy Modelling** de engenharia civil
+  (AECOM, ASSYSTEM, AFRY, Egis) — o ruído *fuzzy* que o briefing de 13/09 já nomeava.
+- **`gamejobs.co` pelo feed Atom**, 3 páginas, **300 entradas, todas dentro da janela**: 8 acertos
+  da disciplina e **os oito decididos** (Virtuos `2283` **enviada hoje às 11h49**, três *Character
+  Artist EA Sports FC*, *Senior Technical Artist Character Rigging*, Side concept 2D, People Can
+  Fly e Rebellion).
+- **Personio**, os 23 locatários de jogos e animação que o repositório conhece, pelo `/xml`:
+  **82 vagas e ZERO criada na janela** (a Sviper `858945`, enviada hoje às 11h52, tem `createdAt`
+  de **2022**).
+- **Oracle CX do grupo Virtuos** pelo `hcmRestApi` com `sortBy=POSTING_DATES_DESC`: **93
+  requisições, 6 na janela**, e a única da disciplina é a `2283` já enviada.
+
+**E o controle da EA, porque casa grande devolvendo zero é hipótese e não resultado:** o Avature
+`jobs.ea.com` foi paginado inteiro — **480 vagas em 4 páginas de 120**, já com `setdefault` para a
+âncora *More Information* não sobrescrever o título, que é o defeito medido em 17/09. Os cinco
+*Character Artist* do quadro são a família `215657`/`215658`/`215661`/`215666` de **Vancouver**,
+**fechada por veto escrito da própria casa em 16/09** (*"This position does not support relocation
+or immigration at this time"*); a `216143` *Technical Artist - Character* e a `215687` são
+**rigging**, a gaveta do Creature TD.
+
+### 4. O ALERTA DO MYGREENHOUSE FOI ABERTO ATÉ A TELA DE CRIAR, E DUAS ARMADILHAS FECHARAM O CAMINHO ANTES
+
+A linha `nao-conferido` de hoje localizou o bloco *Create a Job Alert* nos quadros do **2K**,
+**Bungie** e **PlayStation Global** e parou por falta de ferramenta. Escrevi
+`/home/user/apply/gh_alerta.js` (mesmo arranque de TLS de toda a caixa, **nenhuma flag nova**) e
+o caminho inteiro está medido:
+
+1. **O botão `Create alert` NÃO abre modal: ele abre OUTRA ABA**, em
+   `my.greenhouse.io/users/sign_in?job_board=<token>&source=job_alert_board`. Quem olhar só a
+   página original conclui *"o botão não faz nada"* — foi a minha primeira leitura, com `campos`
+   devolvendo os três filtros do quadro e nenhum campo novo.
+2. **As oito caixas do código são componente React de `one-time-code` e `fill()` NÃO GRUDA.** A
+   captura mostrou as oito **vazias** e o `Submit` **cinza**, sem erro nenhum no log. O que grava é
+   **teclado de verdade**: foco na primeira caixa e `keyboard.type(codigo, {delay:140})`.
+3. **O e-mail do código é estrangulado em ~10 minutos, e clicar `Send security code` de novo dentro
+   da janela INVALIDA o código antigo SEM MANDAR OUTRO.** Medido: código das 12h34:55 usado às
+   12h37 → *"Invalid security code"*, porque às 12h36:40 houve um segundo pedido; e **nenhum
+   e-mail novo chegou** entre 12h36 e 12h48. O seguinte só saiu às **12h48:54**, quase catorze
+   minutos depois do primeiro. **Regra: peça o código UMA VEZ por sessão e espere; um segundo
+   clique queima o que já está na caixa.**
+4. **`inputValue()` em caixa que já navegou custa 30 s por chamada**: a leitura de volta das oito
+   travou o script por **quatro minutos** e devolveu `""` — o que parece "o código não gravou" e é
+   o oposto, porque a página **já tinha entrado**. Ler de volta depois de um campo que auto-submete
+   precisa de `timeout` curto, senão o diagnóstico mente e ainda cobra o tempo.
+5. **A tela de criar o alerta exige `Add to alert` ANTES de `Create alert`.** A captura
+   `ghal_2k_5preenchido.png` mostra `character artist` escrito na caixa e o **`Create alert` cinza**:
+   o termo só conta depois de virar ficha. Quem clicar direto no `Create alert` clica num botão
+   desabilitado e **o log não acusa nada**.
+
+**Porteiro da rota, medido:** o quadro do Greenhouse traz `recaptcha` no HTML (é o Enterprise
+invisível do renderer), mas a tela do `my.greenhouse.io` devolve **zero** ocorrência de
+`recaptcha`, `hcaptcha`, `turnstile`, `datadome` e `sitekey`. **Não é captcha de desafio: é código
+por e-mail, a mesma família do Oracle e do Greenhouse de candidatura.**
+
+### 5. O QUE NÃO FOI FEITO, COM O MOTIVO
+
+- **Nenhuma candidatura nova.** O estoque de porta limpa está vazio: as do painel sem parede e da
+  disciplina foram relidas uma a uma e **as 29 já têm decisão escrita** (domínio à venda, casa sem
+  vaga, fora da disciplina, rota de e-mail e não de formulário). As melhores do dia continuam onde
+  estavam: **ICON `150`** (reCAPTCHA v2 de caixa) e **Zack D Films `2090896`** (hCaptcha), as duas
+  na mão do Vini.
+- **A Rising Sun `669` não foi reaberta de propósito.** A decisão de 16/09 é boa e continua
+  valendo: o anúncio pede *"photoreal skin, hair, fur and eye shading"* e ele é de personagem
+  **estilizado**, e a casa acabou de receber a candidatura da `623`.
+- **A Lighthouse Games e a Zack D Films seguem como segunda linha** pela decisão do maestro das
+  06h15 e das 10h15, não por medida nova minha.
