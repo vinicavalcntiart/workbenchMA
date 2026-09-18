@@ -10114,3 +10114,441 @@ outro caminho, achado pelo `post-sitemap.xml` (**200, 22.871 bytes**):
 > `reid@`/`tom@`/`ncollin@` (esses três já viraram carta) e `gab@tobafeu.studio`; (3) **Vox Prima** só
 > abre por crédito de vídeo no YouTube ou Discord, não por Steam nem imprensa; (4) as cinco casas de
 > Vancouver de 16h35 estão **fechadas com veredito**, não pendentes.
+
+---
+
+## JOE, 18/09/2026 22h35 UTC — **A VEIA DO `mailto:` DA GUILDE CONTINUA, MAS O ACHADO DE MÉTODO É OUTRO: O PAREAMENTO NOME↔CARGO VEM DO *PRESS RELEASE ASSINADO PELA CASA*, NÃO DO SITE DELA**. SEIS PESSOAS: **CINCO COM ENDEREÇO PUBLICADO**, UMA `sem-email`. E **QUATRO DAS SEIS CASAS FORAM DADAS COMO MORTAS NA PRÓPRIA RODADA DAS 20h35**, POR "CASCA DE 114 BYTES" E "ZERO NOME"
+
+**Conjunto de dedupe desta rodada:** 1.899 endereços e 1.272 domínios extraídos de `pessoas.csv`,
+`enviados.csv`, `processados.csv`, `alvos.csv`, `docs/index.html` e deste arquivo. Os 367 `mailto:`
+da Guilde baixados às 20h35 foram filtrados contra esse conjunto e por prefixo de caixa funcional:
+sobraram **62 endereços que parecem de pessoa em domínio inédito**. Todos os 28 que viraram
+candidato tiveram o `mailto:` **reconfirmado 200 nesta rodada** na página de detalhe do membro.
+
+### O ACHADO DE MÉTODO: QUANDO O SITE DA CASA NÃO NOMEIA NINGUÉM, QUEM NOMEIA É O *PRESS RELEASE DA PRÓPRIA CASA*
+
+A rodada das 20h35 matou, com medição correta, cinco domínios desta lista:
+`iwotgames.com` (*"zero byte ou 114 bytes de casca"*), `wolfhausgames.com` (*"1.307.304 bytes …
+e **zero nome**"*), `solitoninteractive.com` (*"casa de tecnologia de engine, física e rede"*),
+`centuryeggstudios.com` (*"o jogo é a visual novel puzzle game"*) e `sleepingbeastgames.com`
+(*"a home tem 576 bytes e o `/press` tem 1.041, um presskit vazio"*). **Quatro dessas cinco viraram
+ficha hoje**, e nenhuma por eu ter achado uma página nova no site delas: o site continua mudo.
+
+> **Regra: "o site da casa não nomeia ninguém" NÃO fecha o pareamento. Fecha o pareamento a nota de
+> imprensa em que a casa FALA EM PRIMEIRA PESSOA**, porque nela a pessoa aparece citada com nome e
+> cargo por extenso, e quem redigiu foi a casa (ou a agência de PR contratada por ela). Três formas,
+> todas abertas nesta rodada:
+>
+> 1. **Anúncio de agência de desenvolvimento econômico**, que publica o comunicado inteiro com as
+>    citações. Montréal International deu *"said Stéphane D'Astous, Director of Operations, iwot
+>    Montréal"* — a mesma pessoa cujo `sdastous@iwotgames.com` está no diretório da Guilde.
+> 2. **Newsroom da agência de PR da casa.** `pressreleases.triplepointpr.com` deu
+>    *"said Michael W. Abbott, Co-Founder and COO at Wolf Haus Games"*, e o diretório publica
+>    `abbott@wolfhausgames.com`. **O endereço é o SOBRENOME puro, e o sobrenome estava no release.**
+> 3. **Matéria de abertura de estúdio**, que lista os fundadores um a um com o cargo. A
+>    `indie-games.eu` deu *"strategy and product director Elaine Gusella"* para o
+>    `elaine@heartloopgames.com`.
+>
+> **O custo é de uma busca e uma requisição por casa.** O ganho é que ele reabre exatamente as casas
+> que a varredura de caminhos declara mortas: site de uma página em Wix, `/team` 404, casca de 114
+> bytes. **Casa que acabou de abrir ou que está em pré-lançamento é a que menos publica equipe e a
+> que mais publica release.**
+
+### A SEGUNDA CORREÇÃO DA RODADA DAS 20h35: A SOLITON **TEM** EQUIPE DE ARTE, E A NOTA ANTERIOR SÓ LEU A HOME
+
+A nota de 20h35 fechou `solitoninteractive.com` como *"casa de tecnologia de engine, física e
+rede"*. A home diz isso mesmo (*"We are a boutique game technology organization … expertise in
+engine programming, physics, simulation, and networking"*), **mas a `/team` diz outra coisa**:
+`https://solitoninteractive.com/team` (**200, 157.115 bytes**) nomeia **17 pessoas com cargo**, e
+entre elas **dois 3D Artist (Justin Daigle, Lance L'archevêque), um 3D Animator (Ulysse Bouchard),
+um Technical 3D Animator (Mathieu Archambault) e um Concept Artist (William Wong)**. A `/career`
+(**200, 140.277**) tem uma rubrica chamada **`Art & Animation Team`**. **Existe cadeira de arte
+ali.** A nota anterior não estava errada sobre a home; estava incompleta sobre a casa.
+
+> **Regra: em site de tema comprado, a home descreve o SERVIÇO que a casa vende e a `/team` descreve
+> a casa.** As duas se contradizem com frequência, e quem decide disciplina é a `/team`.
+
+### O QUE MORREU MEDIDO NESTA RODADA, PARA NENHUMA RODADA REABRIR
+
+- **`cprp@bkom.com` continua NÃO sendo endereço de pessoa**, e a nota de 12h35 deste arquivo estava
+  certa (*"é o responsable de la protection des renseignements personnels"*). **O que eu acrescento é
+  o pareamento que faltava:** o rodapé de `https://www.bkom.com/about` (**200, 956.225 bytes**)
+  escreve, em sequência, *"Privacy Policy — Business Administrator — **Serge Mongeau, CEO** —
+  cprp@bkom.com"*. Ou seja, a caixa de privacidade **está publicada com nome e cargo do CEO ao
+  lado**. Vira a ficha 6, como `sem-email`, porque caixa de privacidade não é canal de carta fria.
+- **`sleepingbeastgames.com` tem presskit de verdade, e ele é `presskit/data.xml`.** A nota de 20h35
+  registrou *"um presskit vazio"* porque o HTML é casca de `presskit()` e o conteúdo mora no XML:
+  `https://www.sleepingbeastgames.com/presskit/data.xml` (**200, 6.592 bytes**) entrega
+  `<press-contact>henry@sleepingbeastgames.com</press-contact>`, *"Based in: Montréal, Canada"* e a
+  bio em primeira pessoa *"**Hi, I'm Henry.** In 2012 I quit my job as a programmer at BioWare to
+  spend a year making my own indie games"*. **Não virou ficha por disciplina:** os jogos são
+  *Spaceteam* e *Blabyrinth* (*"procedurally-generated multiplayer escape room"*), casa de uma
+  pessoa, sem personagem 3D. **Regra: `presskit()` que parece vazio pede `presskit/data.xml`.**
+- **`woodrunnergames.com/team` (200, 105.224 bytes) nomeia dez pessoas com cargo e MORRE POR 2D.**
+  Os cargos são *Lead 2D Animator* (Tina Nawrocki), *2D Animator*, *Lead Environment Artist*
+  (Angéline Beaulieu), *Environment Artist*, e o patrocinador é a **TV Paint**. O único endereço é
+  `community@woodrunnergames.com`, ofuscado em `data-cfemail`
+  (`0e677d786e4e6d616076717e75696b6b7f78796865637f227f61`). **Animação 2D declarada por ferramenta.**
+- **Varredura de apoio, com número:** 22 casas maiores de Québec (Rogue Factor, BKOM, Ironbelly,
+  Paper Cult, Scavengers, Borealys, Compulsion, Polymorph, Goose Byte, Fika, Vertex Zero, Sabotage,
+  Red Barrels, Thunder Lotus, Reflector, iLLOGIKA, Invoke, Parabole, Spearhead, Outerminds,
+  Carcajou, WoodRunner) **em 6 caminhos cada** (`/team`, `/about`, `/studio`, `/people`, `/equipe`,
+  `/crew`) — **132 requisições**. Rendimento de endereço de PESSOA: **zero**. O que apareceu foi
+  `pr@`, `cv@`, `bugs@`, `support@`, `info@`, `contact@`, mais **dois gabaritos de tema não
+  preenchidos** (`user@domain.com` na Spearhead, `contact@thunderlotus23.mill3.dev` na Thunder
+  Lotus). **Casa média de Québec não publica pessoa; o diretório da Guilde publica.** É a mesma
+  lição de 20h35, e ela agora está medida duas vezes.
+- **Anawim Studios** (`rodrigo.soria@anawimstudios.com`, nome completo dentro do endereço, publicado
+  no diretório): a home tem **duas palavras** e a busca devolve *"a two-person indie team creating
+  cozy games and practical tools for fellow developers"*, com venda de **assets de Unity e UI
+  customizada**. **Sem cargo publicado e sem cadeira de personagem.** Endereço guardado aqui.
+- **Pas Game Studio** (`alex@pasgame.ca`): a própria home pareia — *"Pas Game Studio is a **one-man**
+  game studio based in Montréal and founded by **Alexandre Declos**"*. **Morreu por ser de uma
+  pessoa só**, igual à Solideo de 20h35. Endereço e pareamento guardados.
+- **Atracktiv** (`stephane@atracktiv.com`): é o caso mais bonito de prova e o mais errado de
+  disciplina. A `https://atracktiv.com/about` (**200, 28.213 bytes**) imprime **o endereço colado no
+  nome e no cargo**: *"**Stéphane Leblond** — Cofondateur, Directeur vente et création —
+  stephane@atracktiv.com"*, e nomeia mais cinco (Julien Leblond, Directeur créatif et innovation;
+  Sébastien Atoch, Directeur de la technologie; e outros). **Não é casa de jogo com elenco:** os
+  clientes citados são **Ford e Loto-Québec** e o produto é experiência interativa de atração.
+  Guardado como endereço duplamente publicado, fora de escopo de disciplina.
+- **Dragon Slumber** (`kevin@dragonslumber.com`): o diretório da Guilde escreve *"fondé en 2013 par
+  **Kevin Giguère**, un programmeur avec plus de 20 ans d'expérience"*, mas `/about`, `/team`,
+  `/staff` e `?page=about` **não repetem o nome no site da casa** (o `?page=about` devolve a home de
+  9.902 bytes). **Pareamento só no diretório, casa de um programador só.** Guardado.
+- **Mortas por disciplina, com a frase da própria casa:** `luciddreamsstudio.com` (*"jeux vidéo
+  **2D**"*, já morta em 20h35), `frostune.com` (*"Game Audio Tools, VO Pipelines & Sound Packs"*),
+  `lovelace.gg` (a `/about` nomeia seis — *Rexhino* CEO, *Romain* Product Owner, *Magalie* CMO,
+  *Antoine* CTO, *Emmanuel* Head of Player Research, *Walter* — e é **plataforma de Community
+  Intelligence**, não estúdio), `whysostudios.ca` (*"Dark Star … command your fleet of spacecraft …
+  in 3D space"*, frota, não elenco), `neon-polygons.com` (*"A LITERAL Puzzle Platformer"*),
+  `ludo.world` (*"jeux mobiles … serious games"*), `freeground.games` (mundos de **Roblox**),
+  `vellocetsoftware.com` (*"the next generation of game developers … students"*),
+  `virtual-tales.com` (a `/studio` tem **604 caracteres de texto** e publica só `info@`),
+  `quantumduckstudio.com` (o `/presskit` é de *Raygun Gadabout*, **lançado em 2020**, e publica só
+  `contact@` e `press@`), `egakogames.com` (`/about` é 404 e a casa é de ludificação).
+
+---
+
+### FICHA 1 — Stéphane D'Astous, **Director of Studio Operations** da **iwot Games Montréal** (Montréal, Canadá) — **PUBLICADO, confiança ALTA**, e é a casa que anunciou **200 a 300 vagas** para um RPG AAA de mundo aberto
+
+- **EMAIL: `sdastous@iwotgames.com` — PUBLICADO, confiança ALTA.** `mailto:` cru no botão
+  *Contactez le membre par courriel* da página de detalhe do diretório da Guilde. Nada montado,
+  nenhuma segunda grafia. O local é `inicial + sobrenome`, e o sobrenome bate com o do release.
+- **URL onde o e-mail está publicado, aberta nesta rodada:**
+  `https://www.laguilde.quebec/membre/iwot-games-montreal/` (**200, 36.007 bytes**).
+- **URL do pareamento nome+cargo, aberta nesta rodada:**
+  `https://www.montrealinternational.com/en/news/the-wheel-of-time-lands-in-montreal/`
+  (**200, 390.897 bytes**, 06/05/2025), que publica o comunicado com as citações e escreve
+  literalmente *"said **Stéphane D'Astous, Director of Operations, iwot Montréal**"* e, no
+  subtítulo, *"industry veteran Stéphane D'Astous is appointed **Director of Studio Operations**"*.
+  O site da casa **não serve**: `iwotgames.com` é um `<script>` de três linhas que joga para
+  `/lander` (**114 bytes**) e `thewheeloftime.com` é casca de JavaScript com `/about`, `/team`,
+  `/studio`, `/careers`, `/jobs`, `/news` e `/press` **todos 404 de 6.603 bytes**.
+- **POR QUE ELE, e não outro da casa:** os dois nomes públicos da casa são **Craig Alexander**
+  (*Studio Head of iwot*, que responde pela divisão inteira, não por Montréal) e o D'Astous, que é
+  **o chefe da operação de Montréal** — ou seja, quem está montando o time local. Ele é o fundador
+  do Eidos-Montréal, e no próprio comunicado é ele quem fala de contratação: *"Given the city's
+  outstanding talent pool and creative energy"*. **A casa nunca recebeu carta de ninguém** e é a
+  primeira pessoa dela.
+- **GANCHO, com as frases da própria casa entre aspas:** o diretório da Guilde (em francês, é a
+  ficha escrita pela casa) entrega o alvo inteiro: *"concevoir un jeu de rôle en monde ouvert (RPG)
+  de **calibre AAA**"*, *"donner vie à l'univers de **Rand al'Thor, des Aes Sedai** et à l'éternel
+  combat entre la Lumière et les Ténèbres"* e o mandato explícito de *"**Établir de nouveaux
+  standards d'immersion, de narration et de qualité artistique** dans le développement de jeux de
+  fantasy"*. E o comunicado dá o número que nenhuma outra casa desta rodada tem: *"With 15 novels …
+  and some **2,750 characters** developed by author Robert Jordan"*, mais *"leading to the creation
+  of **200 to 300 jobs**"*. **Duas mil setecentas e cinquenta personagens de fantasia e um time
+  sendo montado do zero é, literalmente, a cadeira do Vini.**
+- **FORA DOS EUA?** Sim, **Canadá (Montréal)**. A frase de realocação entra inteira, e ela cai bem
+  aqui, porque o comunicado inteiro é sobre gente vindo de fora para Montréal.
+- **DEDUPE NA CAIXA:** `search_threads` por `iwotgames OR "iwot" OR "D'Astous" OR "Wheel of Time"
+  in:anywhere` devolveu **`{}`**, zero fios. Nos arquivos, `iwotgames` aparece **uma única vez**, e
+  é a nota das 20h35 deste próprio arquivo que dava o domínio como casca de 114 bytes; `d'astous`,
+  `wheel of time` e `dastous@` dão **zero** em `pessoas.csv`, `enviados.csv`, `processados.csv`,
+  `alvos.csv` e `docs/index.html`. **Casa inédita, primeira pessoa, nunca recusou.**
+- **RESSALVAS HONESTAS:** (a) o cargo é de **operações**, não de arte — ele não abre ZBrush, e o
+  pedido certo é o de direção (*"point me"*), não o de avaliação de portfólio; (b) o comunicado é de
+  **06/05/2025**, dezesseis meses atrás, e nem o site da casa nem o da franquia confirmam que ele
+  segue no posto (não achei nada dizendo que saiu, mas também não achei confirmação nova — é a
+  regra do *cargo desatualizado* em risco); (c) a casa **não tem site institucional vivo**, o que
+  significa que não há página de carreiras nem endereço alternativo se este quicar; (d) o jogo está
+  em pré-produção longa (*"three-year development process"* na cobertura da Variety), então não há
+  vaga publicada para citar; (e) **`iwot` é grafado em minúscula pela casa** (*"i wot games"*,
+  *"iwot Studios"*) e o diretório escreve *"IWOT Games Montréal"* — usar a grafia do diretório na
+  carta não é erro, mas a da casa é minúscula.
+
+---
+
+### FICHA 2 — Michael W. Abbott, **Co-Founder & COO** da **Wolf Haus Games** (Montréal, Canadá) — **PUBLICADO, confiança ALTA**, e o endereço é **o sobrenome puro**, que estava no release
+
+- **EMAIL: `abbott@wolfhausgames.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de
+  detalhe do diretório da Guilde. O local é **só o sobrenome**, e é por isso que esta ficha só
+  existiu depois do release: sozinho, `abbott@` é um endereço sem pessoa.
+- **URL onde o e-mail está publicado, aberta nesta rodada:**
+  `https://www.laguilde.quebec/membre/jeux-wolf-haus-inc-dba-wolf-haus-games/` (**200, 34.184 bytes**).
+- **URL do pareamento nome+cargo, aberta nesta rodada:**
+  `https://pressreleases.triplepointpr.com/2026/06/10/join-us-wolf-haus-games-doomsday-cult-co-op-comes-to-xbox-and-xbox-game-pass-day-one-in-march-2027/`
+  (**200, 90.488 bytes**, 10/06/2026), release da agência de PR da casa, que cita
+  *"said **Michael W. Abbott, Co-Founder and COO at Wolf Haus Games**"*. O site da casa
+  (`https://www.wolfhausgames.com/`, **200, 1.305.478 bytes**) tem **577 caracteres de texto** e
+  **zero nome**, e `/about-us`, `/team`, `/our-team`, `/press`, `/presskit`, `/press-kit`, `/games`
+  e `/studio-1` são **404 de 2.206 bytes** — exatamente o que matou a casa às 20h35.
+- **POR QUE ELE, e não outro da casa:** a casa **não nomeia ninguém em lugar nenhum do site** e o
+  diretório publica **um único endereço de pessoa**, o dele. É COO e **produtor executivo** de uma
+  casa pequena em pré-lançamento, ou seja quem decide contratação e orçamento de arte. O release o
+  descreve como amigo do fundador *"since film school"*, o que confirma que ele é sócio, não um
+  gerente de passagem.
+- **GANCHO, com as frases da própria casa entre aspas:** a home é curta e serve inteira:
+  *"wolf haus games is a Montreal based GAME studio with **decades of experience in aaa-GAMING &
+  movies**"*, *"**BUILD A DOOMSDAY CULT!**"* e *"We make the games we wanted to play when we were
+  13, because now we're grown ups and nobody can tell us what to do"*. O release dá o jogo:
+  **JOIN US**, co-op de sobrevivência em mundo aberto, *"day one on XBOX Game Pass"* em **março de
+  2027**, em que se *"**recruit converts**, arm them for battle, build their own custom belief
+  system"*, com campanha narrativa de mais de 15 horas. **Culto que recruta convertidos é elenco de
+  personagem estilizado, e é conteúdo que cresce até o lançamento.** E a própria citação do Abbott
+  fala de arte: *"new developers like Wolf Haus Games, who **create colorful worlds with a distinct
+  point of view**"*.
+- **FORA DOS EUA?** Sim, **Canadá (Montréal)**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `wolfhausgames OR "Wolf Haus" in:anywhere` devolveu
+  **`{}`**. (A busca larga com `OR "JOIN US"` devolveu 22 fios e **nenhum é da casa**: são
+  *"Join us on social media"* da Games Jobs Direct, *"we're thrilled that you'd like to join us"* de
+  ATS e boletins do LinkedIn. **Anotado porque o nome do jogo desta casa é uma frase de e-mail
+  automático de ATS, e isso vai poluir todo dedupe futuro dela.**) Nos arquivos, `wolfhaus` aparece
+  **uma vez**, na nota das 20h35 deste arquivo (*"zero nome"*); `abbott` dá **zero** em todos os
+  seis arquivos. **Casa inédita, primeira pessoa, nunca recusou.**
+- **RESSALVAS HONESTAS:** (a) o cargo é **COO**, não arte, e a casa não publica quem dirige arte;
+  (b) a casa tem **um jogo só e ele sai em março de 2027** — o pico de contratação de personagem
+  pode já ter passado, ou pode nem ter começado, e não há como saber pelo material público; (c)
+  **não há página de carreiras** (`/careers` não existe no site), então o pedido é de porta, não de
+  vaga; (d) o release é de **junho de 2026** e o jogo já teve pelo menos duas datas anunciadas
+  (*"Fall release"* em release anterior, março de 2027 neste), o que é sinal de casa apertada de
+  prazo; (e) o tom da casa é **satírico e edgy** (*"dark-comedy"*, *"edgy and satirical open world
+  cult survival"*) — a carta pode ser mais solta que a média, mas não deve imitar a piada.
+
+---
+
+### FICHA 3 — Elaine Gusella, **Co-Founder, Strategy and Product Director** da **HeartLoop Games** (Montréal, Canadá) — **PUBLICADO, confiança ALTA**, e o jogo é **jogo de luta**, ou seja elenco puro
+
+- **EMAIL: `elaine@heartloopgames.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de
+  detalhe do diretório da Guilde. Primeiro nome puro, e **há uma só Elaine entre os quatro
+  fundadores publicados**, então não há ambiguidade.
+- **URL onde o e-mail está publicado, aberta nesta rodada:**
+  `https://www.laguilde.quebec/membre/jeux-heartloop/` (**200, 33.905 bytes**).
+- **URL do pareamento nome+cargo, aberta nesta rodada:**
+  `https://www.indie-games.eu/heartloop-games-opened-its-door-in-montreal-founded-by-former-brass-lion-entertainment-designer/`
+  (**200, 152.194 bytes**), matéria de abertura do estúdio que escreve *"Dorias will serve as the
+  creative director for HeartLoop Games. He is joined by three other co-founders, including
+  **strategy and product director Elaine Gusella**, who previously held a game and marketing
+  director position at Artifact"*, e traz a citação institucional da casa (*"a p[orta-voz]"*):
+  *"Our approach is simple: build things step-by-step, share them with players early, and stay
+  flexible so the game can evolve into the best version of itself"*. O site da casa
+  (`https://heartloopgames.com/`, **200, 74.108 bytes**, WordPress) publica **só
+  `info@heartloopgames.com`** e **nenhum nome**; `/about`, `/team`, `/team-1`, `/our-team`,
+  `/press`, `/presskit`, `/press-kit`, `/games` e `/studio-1` são **404 de 69.281 bytes** (404 gordo).
+- **POR QUE ELA, e não outro da casa:** o diretório publica **um único endereço de pessoa**, o dela.
+  O diretor criativo é **Osama Dorias** e não há endereço dele publicado em nenhuma fonte aberta —
+  montar `osama@` seria exatamente o chute das 17 devoluções. Ela é **sócia fundadora** e dona de
+  *strategy and product*, que numa casa de quatro pessoas é quem decide contratação e terceirização.
+- **GANCHO, com as frases da própria casa entre aspas:** a home entrega tudo e é escrita em primeira
+  pessoa. Do jogo: *"Poly Fighter is a single-player roguelike **fighting game**"*, *"**Unlock a cast
+  of diverse characters**, face secret bosses, and tackle challenging ascension runs"*, *"with its
+  **retro-inspired look, snappy animations**, and banging soundtrack"* e *"pure, expressive arcade
+  combat"*. Da casa: *"HeartLoop is a new indie game studio based in Montreal, Canada, started by a
+  bunch of longtime game devs who still love making cool stuff"* e — e isto é presente de gancho —
+  *"**Montreal can be a very Cold place, but we are very Warm people. 😊**"*, com o emoji que o Vini
+  pede, escrito pela própria casa. **Jogo de luta é a disciplina dele em estado puro: elenco de
+  personagens estilizados, cada um com silhueta, e chefes secretos que são conteúdo novo.**
+- **FORA DOS EUA?** Sim, **Canadá (Montréal)**. Frase de realocação entra — e o *"Montreal can be a
+  very Cold place"* deles é o jeito mais barato de abrir essa linha sem soar súplica.
+- **DEDUPE NA CAIXA:** `search_threads` por `heartloopgames OR HeartLoop OR Gusella OR "Poly
+  Fighter" in:anywhere` devolveu **`{}`**. Nos seis arquivos, `heartloop`, `gusella` e
+  `poly fighter` dão **zero cada**. **Casa totalmente inédita na campanha**, nem no censo da Guilde
+  de 17/09 ela aparece. Nunca recusou, ninguém respondeu.
+- **RESSALVAS HONESTAS:** (a) **"Poly" pode ser 2D.** A home fala de *"retro-inspired look"* e
+  *"arcade"*, e eu **não abri screenshot nem trailer** para confirmar se o jogo é 3D low-poly ou
+  pixel 2D — o nome sugere polígono, e as matérias falam de *"snappy animations"*, mas isso **não é
+  prova**. Se o maestro quiser certeza antes de gastar a carta, a página da Steam resolve em uma
+  requisição; (b) casa de **quatro pessoas em primeiro jogo**, ou seja orçamento de arte curto e
+  provável terceirização pontual, não contratação; (c) o cargo dela é **estratégia e produto**, não
+  arte — o diretor criativo é que decide arte, e é ele que não tem endereço; (d) ela é
+  **coordenadora na Pixelles** (coletivo de mulheres no jogo em Montréal) segundo a busca, o que
+  significa que recebe muita mensagem de quem procura trabalho: a carta precisa ser curta e não
+  pedir favor; (e) o jogo está em **playtest por formulário do Google**, sinal de pré-alfa.
+
+---
+
+### FICHA 4 — Catherine Messier, **COO and Co-Founder** da **Soliton Interactive** (Montréal, Canadá) — **PUBLICADO, confiança ALTA**, e o gancho é **miniatura pintada**, que é escultura estilizada
+
+- **EMAIL: `catherine@solitoninteractive.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página
+  de detalhe do diretório da Guilde. Primeiro nome puro, e a `/team` da casa lista **17 pessoas com
+  cargo e uma única Catherine**, o que fecha o pareamento sem ambiguidade.
+- **URL onde o e-mail está publicado, aberta nesta rodada:**
+  `https://www.laguilde.quebec/membre/soliton-interactive/` (**200, 37.856 bytes**).
+- **URL do pareamento nome+cargo, aberta nesta rodada:** `https://solitoninteractive.com/team`
+  (**200, 157.115 bytes**), que imprime *"**Catherine Messier — COO and Co-Founder**"* na grade da
+  equipe, ao lado de *Liko-Paul Pinsonnault, CEO and Co-Founder* e *Alexandre Ouimet, CTO and
+  Co-Founder*. Também abertas `https://solitoninteractive.com/` (**200, 174.191**) e
+  `https://solitoninteractive.com/career` (**200, 140.277**).
+- **POR QUE ELA, e não outro da casa:** dos três fundadores, **só ela tem endereço publicado**. O
+  CEO e o CTO aparecem na `/team` sem endereço, e montar `liko-paul@` ou `alexandre@` seria chute.
+  Ela é COO de uma casa de 17 pessoas, e nesse porte o `BRIEF-JOE` manda ir ao fundador. **Na fila
+  de arte da casa há dois 3D Artist e um Concept Artist, nenhum com endereço** — ou seja, a via de
+  artista-para-artista não existe aqui.
+- **GANCHO, com as frases da própria casa entre aspas:** o gancho não é o carro-chefe da casa, é o
+  segundo produto, e é ele que serve. Do site: *"**BrushHammer** is a MR/VR cozy painting sim game
+  where you **collect, build, and paint virtual miniatures that feel real**. Customize every detail,
+  show off your creations, and level up your craft"* — e a notícia de **26/08/2026** diz
+  *"**BrushHammer Miniature Painter is OUT NOW on Meta Quest**"*. O outro título é *"**Aeon Wars
+  Tactics**, a turn-based tactical wargame with **digital miniatures** set in a deep sci-fi war epic
+  universe. **Choose your faction, assemble your army**"*. E a ficha do diretório, escrita pela casa,
+  é a frase mais forte de todas: *"le désir fou de briser la frontière entre les réalités physique et
+  digitale afin d'apporter aux jeux vidéo **la beauté des dioramas faits à la main** et le hobby des
+  **jeux de guerre avec miniatures**"*. **Miniatura de mesa é escultura estilizada com silhueta
+  legível e pintura de superfície — é o ofício do Vini traduzido para outra escala**, e um jogo cujo
+  conteúdo É a coleção de miniaturas precisa de miniatura nova para sempre.
+- **FORA DOS EUA?** Sim, **Canadá (Montréal)**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `solitoninteractive OR Soliton OR Messier OR "Aeon
+  Wars" in:anywhere` devolveu **`{}`**. Nos arquivos: `messier` e `aeon wars` dão **zero**;
+  `soliton` casa em `processados.csv` **dentro do registro do censo da Guilde de 17/09** (sondagem de
+  domínio, não carta) e em `PESSOAS-SEM-CARTA.md` na nota das 20h35 (que a deu como casa de
+  tecnologia). **Nenhuma carta saiu para esta casa e nenhuma pessoa dela foi registrada.**
+- **RESSALVAS HONESTAS:** (a) **a `/career` diz, hoje, `Art & Animation Team — No position available
+  at the moment`** — a casa é explícita em não estar contratando arte, e a mesma página convive com
+  *"See our job openings below or **drop us a line**"*, que é a brecha e é dela que a carta tem de
+  partir; (b) o carro-chefe declarado da casa é **tecnologia** (*"boutique game technology
+  organization … engine programming, physics, simulation, and networking"*) e a maioria dos 17
+  cargos é de programação — arte é minoria ali; (c) **o site ainda tem o gabarito do tema vivo**, com
+  *"411 University St, Seattle, USA"*, `engitech@oceanthemes.net` e *"Over 10 years we help companies
+  reach their financial and branding goals"* no rodapé de todas as páginas, e a `/about` é **lorem
+  ipsum inteiro** — casa que não terminou o site pode não ler caixa com atenção; (d) *Maschinen* e
+  *"assemble your army"* sugerem **mecha e hard-surface** em *Aeon Wars*, que não é a força dele: o
+  gancho tem de ser o **BrushHammer** e a palavra *diorama*, não a facção de guerra; (e) o porte é
+  **17 pessoas com quatro estagiários em 2024**, então é casa pequena de verdade.
+
+---
+
+### FICHA 5 — **Flo** (primeiro nome, é o que a casa publica), **Art Director / 3D Artist** da **Century Egg Studios** (Canadá) — **PUBLICADO, confiança ALTA NO ENDEREÇO**, e é **deliberadamente a ficha mais fraca da rodada: a disciplina do jogo joga contra**
+
+- **EMAIL: `Flo@centuryeggstudios.com` — PUBLICADO, confiança ALTA.** `mailto:` cru na página de
+  detalhe do diretório da Guilde, **com a maiúscula do jeito que a casa escreveu**. O local é o nome
+  que a casa usa para ela no próprio site.
+- **URL onde o e-mail está publicado, aberta nesta rodada:**
+  `https://www.laguilde.quebec/membre/century-egg-studios-inc/` (**200, 34.005 bytes**).
+- **URL do pareamento nome+cargo, aberta nesta rodada:** `https://centuryeggstudios.com/`
+  (**200, 166.947 bytes**), seção *About us*, que lista as quatro por nome e cargo: *"**Flo — Art
+  Director, 3D Artist**; Ahria — Lead Engineer, Game Designer; Michelle — Principal Concept Artist,
+  2D Artist; Joan — Creative Director, Narrative Designer"*, sob a frase *"Century Egg Studios is a
+  **women-led studio of 4** tight-knit experienced game developers"*. A mesma página traz o presskit
+  embutido, e o contato de imprensa dele vem **ofuscado em `data-cfemail`**
+  (`ec8489808083ac8f898298999e95898b8b9f98998885839fc28f8381`), que decodifica para a caixa
+  institucional, **não** para o endereço dela — o dela só existe no diretório.
+- **POR QUE ELA, e não outra da casa:** é **a única pessoa de arte 3D com endereço publicado em toda
+  a varredura de 367 endereços do diretório**. As outras três são engenharia, conceito 2D e
+  narrativa. Se a casa vale uma carta, é para ela.
+- **GANCHO, com as frases da própria casa entre aspas:** *"Play as **Bao**, an enthusiastic
+  food-loving kitten! Tasked with keeping her family's restaurant and legacy alive, help **Grandma
+  Lola** by updating her restaurant's menu"*, *"a story about **three generations coming together
+  joined by food**"* e *"This game is for those who love cozy games and food, especially people who
+  grew up staying connected to their **cultural roots through food**"*. Há elenco (a gata Bao, a avó
+  Lola, o deus-gato *GuanNyan*) e há uma Art Director 3D para desenhá-lo.
+- **FORA DOS EUA?** Sim, **Canadá** (a casa escreve só *"Based in Canada - Founded in 2025"*, **sem
+  cidade**, e o diretório é de Québec). Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `centuryegg OR "Century Egg" OR "Lucky Fat Cat"
+  in:anywhere` devolveu **`{}`**. Nos arquivos, `centuryegg` aparece **uma vez**, na nota das 20h35
+  deste arquivo que descartou a casa pelo gênero do jogo; `century egg` e `tiny gems` dão zero.
+  Nunca houve carta.
+- **RESSALVAS HONESTAS, e são muitas, por isso ela é a ficha 5 e não a 1:** (a) **a disciplina joga
+  contra e a casa escreve isso ela mesma**: *"'Lucky Fat Cat Diner' is a **visual novel puzzle game**
+  that has a nostalgic and heart-warming narrative"* — visual novel e puzzle são exatamente as duas
+  categorias que a ordem desta rodada mandou despriorizar, e a rodada das 20h35 já matou a casa por
+  isso; (b) **a cadeira está ocupada por ela mesma**: pedir trabalho de personagem 3D à única Art
+  Director 3D de uma casa de quatro pessoas é pedir a cadeira dela, e isso precisa ser dito na carta
+  como colaboração ou reforço, nunca como candidatura ao posto; (c) **só primeiro nome**, então a
+  carta abre `Hi Flo,` e não há sobrenome para conferir em nenhuma fonte; (d) **casa fundada em
+  2025**, quatro pessoas, jogo **sem data de lançamento** (*"At this time we have no release date"*)
+  — orçamento de contratação improvável; (e) a casa não tem página de carreiras e o único canal
+  institucional é o formulário de newsletter.
+
+---
+
+### FICHA 6 — Serge Mongeau, **CEO** da **BKOM Studios** (Québec City, Canadá) — **`sem-email`**, e a linha existe para **corrigir e completar** a nota de 12h35 sobre o `cprp@`
+
+- **EMAIL: nenhum. `sem-email`.** E isto é uma decisão, não uma falha: o único endereço publicado em
+  todo o domínio é **`cprp@bkom.com`**, e a nota de 12h35 deste arquivo já provou que `cprp` é o
+  *responsable de la protection des renseignements personnels*. **Caixa de privacidade não é canal de
+  carta fria**, e mandar candidatura por ela é o tipo de coisa que queima a casa inteira.
+- **O que eu acrescento à nota anterior, e é o motivo desta linha:** o rodapé de
+  `https://www.bkom.com/about` (**200, 956.225 bytes**, aberta nesta rodada) publica o endereço
+  **com nome e cargo ao lado**, em sequência: *"Privacy Policy — Business Administrator —
+  **Serge Mongeau, CEO** — cprp@bkom.com"*. A nota de 12h35 tinha o endereço e não tinha a pessoa.
+  Agora a campanha tem **nome + cargo + estúdio** guardados, que é exatamente o que uma linha
+  `sem-email` serve para guardar.
+- **URLs abertas nesta rodada:** `https://www.bkom.com/about` (**200, 956.225**) e
+  `https://www.laguilde.quebec/membre/bkom-studios-2/` (o diretório publica **`info@bkom.com`**,
+  caixa genérica). `/team`, `/people`, `/studio`, `/equipe` e `/crew` são **404** (de 857 mil bytes,
+  404 gordo de Wix).
+- **A armadilha de domínio, que continua valendo e que vale repetir:** o site é **`bkom.com`** e o
+  censo antigo da campanha guarda **`bkomstudios.com`** (`censo-wikidata.csv` linha 421,
+  `fila-gamedevmap-canada.csv` linha 90, `garimpo-cgstudiomap.csv` linha 61). É a família Stunlock:
+  **domínio de site diferente do domínio de e-mail**, e quem montar endereço sobre o domínio do
+  censo erra o alvo.
+- **GANCHO, se algum dia houver porta:** *"Proudly crafting games in **Quebec City since 1996**, we
+  are a team of **60+ passionate creators**"*, *"**30 Years** of expertise"*, *"**200+ Games shipped
+  overall**"* e a missão *"Let's light up the gaming world by crafting games that **grab players by
+  the heart**"*.
+- **RESSALVAS HONESTAS:** (a) **a casa hoje se vende como porte e co-desenvolvimento**, não como
+  criação de personagem: *"We port games. We handle certification submissions, platform SDKs,
+  localization and QA"* — em 2.010 caracteres de texto na `/about` **a palavra *character* não
+  aparece nenhuma vez**, e nem *creature*, nem *sculpt*; (b) o cargo é **CEO**, o mais distante
+  possível de quem olha portfólio numa casa de 60 pessoas; (c) a página de carreiras da casa
+  (`jobs.bkom.com`) já está registrada em `garimpo-cgstudiomap.csv` como **precisando de navegador**
+  (corpo de 623 bytes por `curl`), então a via boa aqui é **formulário, não carta**, e essa via é do
+  Jhon, não minha; (d) o nome *Serge Mongeau* é homônimo de um médico e ensaísta quebequense
+  conhecido — **não confundir**, e não usar nada de biografia achada por busca solta.
+
+---
+
+### PLACAR HONESTO DA RODADA DAS 22h35
+
+**Seis pessoas, cinco com endereço PUBLICADO e uma `sem-email`.** Nenhum endereço montado, nenhuma
+segunda grafia, nenhuma casa repetida das já tocadas hoje (Awaceb, ManaVoid, PlayTogether, Studio
+RuniQ, Kabam, Hibernum, Sphere/Oasis, Haven, Virtuos Montréal). **Uma pessoa por casa, seis casas.**
+
+| # | Pessoa | Cargo | Casa | De onde saiu o e-mail | Confiança |
+|---|---|---|---|---|---|
+| 1 | Stéphane D'Astous | Director of Studio Operations | iwot Games Montréal | `mailto:` do diretório da Guilde | **ALTA** |
+| 2 | Michael W. Abbott | Co-Founder & COO | Wolf Haus Games | `mailto:` do diretório da Guilde | **ALTA** |
+| 3 | Elaine Gusella | Co-Founder, Strategy & Product Director | HeartLoop Games | `mailto:` do diretório da Guilde | **ALTA** |
+| 4 | Catherine Messier | COO & Co-Founder | Soliton Interactive | `mailto:` do diretório da Guilde | **ALTA** |
+| 5 | Flo | Art Director / 3D Artist | Century Egg Studios | `mailto:` do diretório da Guilde | **ALTA** |
+| 6 | Serge Mongeau | CEO | BKOM Studios | não há: só a caixa de privacidade `cprp@` | `sem-email` |
+
+**Números da rodada:** 367 `mailto:` da Guilde filtrados contra **1.899 endereços e 1.272 domínios**
+já tocados → **62 candidatos de pessoa em domínio inédito** → **28 páginas de detalhe da Guilde
+reconfirmadas 200** → **~200 requisições** nos sites das casas (10 caminhos em 20 domínios, 8 em 7,
+6 em 22) → **seis fichas**. Rendimento de endereço de pessoa **no site da própria casa**: dois
+(Atracktiv e Sleeping Beast), e **nenhum dos dois virou carta**, os dois por disciplina.
+
+**O que travou, dito sem maquiagem:**
+
+1. **A disciplina é o gargalo, não o endereço.** Dos 62 candidatos com endereço de pessoa em domínio
+   inédito, a maioria morreu por **2D declarado, áudio, ferramenta, serious game, Roblox, puzzle,
+   plataforma de dados ou casa de uma pessoa só** — não por falta de e-mail. Em Québec o diretório
+   da associação é rico em endereço e pobre em casa de personagem 3D, porque o grosso dos 426
+   membros é micro-estúdio, fornecedor de serviço, escola e associação.
+2. **Nenhuma das seis pessoas é de arte, exceto a mais fraca.** Quatro são fundador, COO ou chefe de
+   operações, uma é CEO e **só a Flo é Art Director** — e é justamente a casa cujo jogo é visual
+   novel puzzle. **A veia da Guilde entrega dono de casa pequena, não diretor de arte**, e isso é
+   consistente com o `BRIEF-JOE` (em casa pequena o fundador é o alvo), mas precisa ser dito: não
+   houve nesta rodada nenhum *Character Art Lead* com endereço publicado.
+3. **Não confirmei se *Poly Fighter* é 3D.** É a única lacuna técnica que deixei aberta de propósito,
+   e está escrita na ficha 3. Resolve-se com uma requisição à página da Steam.
+4. **A busca de imprensa é lenta e não escala.** Cada pareamento por release custou uma busca e uma
+   requisição, uma casa por vez. Serve para fechar casa boa que a varredura declarou morta; **não
+   serve para varrer 62 candidatos**.
+
+**A primeira coisa a fazer na próxima rodada**, se a veia da Guilde continuar: os **34 candidatos
+restantes** dos 62 nunca foram abertos (os 28 abertos estão todos resolvidos acima ou na lista de
+mortos). E a regra nova, que é o que esta rodada acrescenta ao método: **para casa nova, em
+pré-lançamento ou de site de uma página, procure o release antes de procurar `/team`.**
