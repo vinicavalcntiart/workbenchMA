@@ -7,6 +7,68 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU UMA PORTA HOJE ÀS 15h57, É DE PERSONAGEM E É DA FAMÍLIA DREAMWORKS — **Principal Character Artist (Face)**, NBCUniversal Montreal
+
+`https://jobs.smartrecruiters.com/NBCUniversal3/744000150414819-principal-character-artist-face-i-artiste-principal-e-personnage-face-`
+
+**Requisição `744000150414819`** (refNumber `51626013`), **publicada hoje às 15h57:55 UTC** e achada
+**36 minutos depois** pela varredura por data das 16h45. Montreal, Quebec, **híbrida**, efetiva,
+*Mid-Senior Level*, função *Art/Creative*. Em 640 quadros e 7.520 vagas lidas na janela de 8 horas,
+**ela é a única da disciplina**.
+
+**Por que é com você, e não é preguiça da automação:** o formulário responde **HTTP 403** e entrega
+**captcha de desafio do DataDome**. Medido com navegador de verdade (Xvfb, nenhum concorrente): o
+frame principal fica com **0 campos e 0 caracteres em 10 tentativas**, e o formulário real é um
+iframe de `geo.captcha-delivery.com` com 16 campos, botões *Verify* e *Send*, e o texto literal
+*"Verification Required ... Slide right to secure your access ... We detected unusual activity from
+your device or network ... Automated (bot) activity on your network (IP 160.79.106.136)"*. É o
+porteiro que cita o IP na tela, exatamente como a regra 17 do briefing descreve. **Na sua rede, com
+a sua sessão, ele não deve nem aparecer.**
+
+**Régua de veto: zero veto escrito** — e a leitura foi feita do jeito difícil de propósito. A URL
+final é SPA e devolve **63 caracteres** de texto limpo, o que pelo piso de ~1.000 é **leitura
+inválida** e não "zero veto"; então a régua correu no **corpo da API**, com 10.706 caracteres. Três
+acertos, **os três falso positivo**: `citizen` é a palavra *citizenship* dentro da cláusula
+antidiscriminação, e os dois `visa` estão dentro das palavras **francesas** *visages* e *Visage*
+(rosto). Zero `relocation`, zero `sponsor`, zero `work permit`, zero exigência de idioma.
+
+**E a parte que mais importa, porque esta casa já custou caro:** em 07/09 três vagas da
+NBCUniversal em Montréal foram recomendadas e morreram no bloco *Eligibility Requirements* (*"Must
+be legally authorized to work in Canada"*). **Esta não tem o bloco, e isso foi provado contra
+controle positivo**, não por leitura otimista: a irmã **Lead Environment Artist `744000149923759`**
+de 16/09 carrega `Eligibility`, `legally authorized`, `authorized to work` e `days a week` no
+**payload cru inteiro**, nas mesmas quatro seções; a de personagem traz **zero de todos**. Mesma
+casa, mesmo endpoint, mesmas chaves — a ausência é real.
+
+**Dedupe quádruplo, feito:** `744000150414819` e `51626013` com **zero ocorrência** em
+`enviados.csv`, `processados.csv`, `docs/index.html` e nesta fila. No Gmail a casa só tem as cartas
+frias de 03/09 (Matt Baer) e 05/09 (Sean Sexton) e o *Express Future Interest Form* de 17/09 —
+**nenhum recibo desta requisição**. Não é duplicata.
+
+#### O que preencher, campo a campo
+
+| Campo | O que vai |
+|---|---|
+| Nome / e-mail | `Vini Cavalcanti` · `contact@vinicavalcanti.art` |
+| Telefone | o seu, formato internacional (não está escrito neste repositório, que é público) |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Links | `artstation.com/viniciuscavalcanti` · `linkedin.com/in/vinicavalcnti` · `vinicavalcanti.com` |
+| **Autorização de trabalho no Canadá** | **a verdade: NÃO** — e **SIM** para "precisa de patrocínio" |
+| **Pretensão** | faixa não publicada, casa grande no Canadá → **CAD 95.000**, com a abertura: *"Open to aligning with your band for the role; as a reference, I'm looking at around CAD 95,000."* |
+| Salário atual | *"Confidential under the NDA of my current contract; happy to discuss ranges during the process."* |
+
+**A ressalva honesta, porque ela pode mudar a sua decisão:** o anúncio é de **realismo facial
+fotorreal em AAA** — *"Strong portfolio demonstrating expertise in high-quality facial modeling and
+realism"*, blendshapes, *scanning*, *performance capture*, Unreal e **Metahuman** — e o seu
+portfólio é personagem **estilizado**. E *Principal* é um degrau acima de sênior. Ela entra porque
+é personagem de verdade (modelagem facial, anatomia, pipeline de personagem modular) e porque a
+regra 14 manda aplicar em qualquer nível e qualquer disciplina de arte do grupo.
+
+**As outras duas da mesma leva de Montreal, se quiser gastar mais de um clique na casa:** *Lead
+Artist (Props)* `744000150413374` e *Principal Vegetation Artist* `744000150412708`, publicadas
+hoje às 15h53 e 15h50, **também sem o bloco de elegibilidade**. As duas são **ambiente**, então
+pela sua regra de 10/09 elas vêm depois — personagem primeiro.
+
 ### 🔴 ENTROU UMA PORTA, e é da EA: Senior Character Artist 215788, EA SPORTS FC Vancouver
 
 `https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788`
