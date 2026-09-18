@@ -4735,3 +4735,141 @@ por `curl`, sem navegador.**
 3. **Rádio (`LI role=radio`) se marca com seletor de texto exato do Playwright em `marcar`: `css:text="Senior"`.** `:text-is` dentro de `li[...]` devolveu zero. Texto exato entre aspas evita marcar a opção irmã que contém a mesma frase (`None UK or EU National, Currently in the UK...`).
 4. **Regex de opção sempre ancorada e sempre lida no log do ensaio.** `Character|Model` casou `Character Animation`; regex vazia de salário casou a PRIMEIRA faixa (GBP 20 a 24 mil). O log `casou por regex:` existe para isso; ENVIAR só depois de ler cada linha dele.
 5. **Prova do Airtable é o `submitSharedForm` 200 com `rowId`**, e os anexos são `completeMultipartUpload` 200 antes dele. A tela `Thank you for submitting the form!` é a segunda prova, não a primeira.
+
+## Jhon A, 18/09 04h33 UTC (décimo quinto turno) — A VEIA DOS CENSOS DE ASSOCIAÇÃO: 73% DAS CASAS JÁ ESTAVAM TOCADAS, E O FURO DO `wp-json` APAGAVA 44% DO CENSO SEM DAR ERRO
+
+Turno de **caça por `curl`**, zero navegador, **zero envio**. A lane é a que o hand-back mandou, e
+ela é a correção do fecho de 02h52: em vez de adivinhar domínio a partir de slug, abrir só as casas
+cujo **domínio a campanha já tem publicado** por censo de associação.
+
+**Números medidos: 286 casas com domínio publicado em 3 censos, 210 já tocadas (73%), 66 alvos,
+585 sondagens em 65 hosts × 9 caminhos, 43 páginas úteis não-catch-all em 31 hosts, 2 PORTAS
+limpas, 2 duplicatas com a frase, 1 casa para a fila de carta, 1 zero-vaga medido em duas rotas,
+14 falsos positivos de disciplina derrubados, 0 candidatura gasta, 0 tentativa contra veto escrito.**
+
+### 1. O CUSTO POR PORTA CAI DUAS ORDENS DE GRANDEZA, E O NÚMERO ESTÁ AQUI
+
+| lane | requisições | portas | requisições por porta |
+|---|---|---|---|
+| adivinhar token de ATS (17/09 17h40) | 37.409 | 0 | — |
+| adivinhar domínio do slug da ArtStation (18/09 02h39) | 15.352 | 3 | 5.117 |
+| extensão por 7 ccTLD (18/09 02h52) | 22.575 | 0 | — |
+| **censo de associação com domínio publicado (agora)** | **585** | **2** | **293** |
+
+> **Regra: a variável que precifica uma veia de caça não é o caminho sondado, é se o DOMÍNIO veio
+> de fonte que o publica ou de adivinhação.** Mesma receita de 9 caminhos, mesmo cliente, mesmo
+> proxy: 293 requisições por porta contra 5.117. E o resto do número é o preço do dedupe: **210 das
+> 286 casas (73%) já estavam tocadas** — os censos de associação de Reino Unido, Irlanda e Nórdicos
+> estão, para efeito de carta, praticamente esgotados. O que sobra neles é porta de formulário.
+
+### 2. O FURO QUE APAGA 44% DE UM CENSO E NÃO LEVANTA EXCEÇÃO NENHUMA
+
+O `wp-json/wp/v2/organisations` da Animation UK entrega **205 membros em três páginas** (98
+Animation Member, 94 Facilities Member, 5 Supporter, 5 Education, 1 Sponsor, 7 sem site) — e não os
+92 que o hand-back dizia. O domínio vem pronto em `meta.website_main`, o que é o ponto da lane.
+
+**Mas 91 dos 205 publicam o domínio SEM PROTOCOLO** (`www.teamfalco.com`, `goldenwolf.tv`,
+`Diceproduction.co.uk`). Meu extrator de host casava `^https?://([^/]+)` e devolvia vazio nesses 91:
+o censo de 205 virou **105 hosts**, sem uma linha de erro. O sintoma foi só um número menor que o
+esperado.
+
+> **Regra: extrator de host em campo de diretório tem de aceitar domínio nu, e o teste de sanidade é
+> comparar a contagem de hosts com a contagem de membros COM site.** É a mesma família do
+> `nf[0][0]=="200"` de 02h39: erro de medidor que não quebra nada e entrega número redondo.
+
+**E um furo de dedupe na mesma família, este com consequência oposta:** o censo da Nordic Animation
+publica `qvistenanimation.no` e a campanha conhece a casa como `qvisten.no`. Casar o **rótulo
+inteiro** do domínio deu NOVO para uma casa que já recebeu duas cartas; só o casamento por
+**prefixo** do rótulo acusou. **Dedupe de censo de associação tem de casar prefixo**, porque a casa
+publica domínio longo no diretório e curto no site.
+
+### 3. O ACHADO DE REGISTRO QUE VALE MAIS QUE AS DUAS PORTAS: **GRUPO SERVE O MESMO FORMULÁRIO EM VÁRIOS DOMÍNIOS**
+
+`lola-post.com` passou limpa pelo dedupe (zero em `enviados.csv`, no painel e no Gmail) e a
+`/careers/speculative-dublin/` dela é, na aparência, porta limpa: **Gravity Forms com campo de
+arquivo de verdade** (`pdf, doc, docx`, 25 MB), nove campos de tela nomeados, **zero** `recaptcha`,
+`hcaptcha`, `turnstile` e `datadome`, e como único porteiro o par do Akismet (`ak_hp_textarea`, que
+é honeypot, e `ak_js`).
+
+O que a derruba está impresso na própria página: o título do formulário é **`Job Application (Milk
+VFX)`** e o texto de carreira diz *"Come work at Milk!"*. Lola Post e Milk VFX são do mesmo grupo
+(Phantom Media Group) e servem o **mesmo formulário na mesma rota** `/careers/speculative-dublin/`
+em domínios irmãos — e a espontânea de Dublin da Milk **já foi enviada e confirmada em 06/09 às
+19h15**.
+
+> **Regra, e ela é irmã da do id de vitrine × id de ATS: grupo de post/VFX repete o formulário de
+> candidatura em vários domínios, e o dedupe por domínio não vê isso.** O desempate custa zero
+> requisição extra: **o título do formulário e o texto da página dizem o nome da casa que RECEBE** —
+> compare-o com a casa do domínio antes de contar a porta. É o mesmo mecanismo que corrigiu a
+> contabilidade do Teamtailor em 17/09 pelo campo `title` do JSON Feed.
+
+### 4. DUAS FAMÍLIAS NOVAS MEDIDAS, E AS DUAS FALTAVAM NAS LISTAS DO BRIEF
+
+- **ASANA FORMS** (`form.asana.com/?k=<chave>&d=<gid>`), na FixFX. Não está em nenhuma lista de
+  família hospedada do `BRIEF-JHON` (Typeform, Google Forms, JotForm, Tally, Airtable, HubSpot).
+  **O esquema NÃO sai por `curl`:** 368 bytes de casca (`title` "Loading... - Form by Asana") e um
+  bundle de **10.653.045 bytes**. Sondei quatro rotas de API (`api/1.0/form_schema`,
+  `api/1.0/forms/<k>`, `app.asana.com/api/1.0/form_metadata/<k>`, `/-/api/forms/<k>`): **as quatro
+  404**, a do `app.asana.com` com o JSON `No matching route for request`. **Parei de adivinhar rota
+  de propósito** — é o mesmo erro que custou 15.352 sondagens há duas horas. Pista para quem abrir
+  navegador: `getFormConfig`, `getFormDetails`, `getFormClusterLocation`, e **17 ocorrências de
+  `recaptcha`** no bundle (a plataforma tem; se está ligado neste formulário, só o clique decide —
+  mesma situação do BambooHR de 00h41).
+- **EPLOY**, na Qvisten (`careers.qvisten.no`). Não está entre os ATS conhecidos nem entre os 12
+  `ATS-NOVO` da `fila-jhon-portas.csv`. Assinatura: ASP.NET WebForms (`__VIEWSTATE`,
+  `__EVENTVALIDATION`, campos `ctl00$...`), rotas `/vacancies/vacancy-search-results.aspx` e
+  `/vacancies/vacancy-apply.aspx?VacancyID=N`, rodapé *Powered by Eploy*, conta de candidato com
+  login social. O quadro dela tem **2 vagas e as duas são espontâneas** (`Speculative Application`
+  e `Speculative Internship Application`, Oslo). **A casa está fora da fila por já ter recebido
+  carta**, mas a lane fica aberta: procurar `careers.<domínio>` + *Powered by Eploy* nos censos que
+  a campanha já tem é rota barata para um ATS inteiro nunca varrido.
+
+### 5. O PORTEIRO DO SQUARESPACE SE LÊ POR `curl`, E O DO BAMBOOHR TAMBÉM QUANDO O QUADRO ESTÁ VAZIO
+
+Duas medições que economizam navegador:
+
+- **Squarespace:** o bloco de contexto no próprio HTML traz `recaptchaEnterpriseContext` com
+  `recaptchaEnterpriseSiteKey`. Na Spud Gun é `6LdDFQwjAAAAAPigEvvPgEVbb7QBm-TkVJdDTlAv`, ou seja
+  **reCAPTCHA Enterprise** — pela regra de 17/09 09h50, porteiro de **pontuação**, não passe livre;
+  o **modo segue NÃO CONFERIDO**. O que o HTML **não** entrega é o formulário: o único `"fields"`
+  do documento é o gabarito genérico de endereço/telefone `GB` da plataforma, e confundi-lo com o
+  formulário da casa daria uma ficha de campos inventada.
+- **BambooHR:** o token do quadro sai do `src` do `jobs2.php` na própria `/careers`, e a existência
+  de vaga se decide por **duas rotas de `curl`** antes de qualquer clique: `careers/list` (na Acamar,
+  `{"meta":{"totalCount":0},"result":[]}`, 37 bytes) e `jobs/embed2.php` (*"We currently have no
+  open positions"*). **O clique do BambooHR de 00h41 só é necessário quando existe requisição.**
+
+### 6. DUAS ARMADILHAS DE MEDIDOR QUE INFLARIAM ESTE RELATÓRIO
+
+1. **Motor de CMS carregado não é formulário renderizado.** A Grizzle tem aba `Artist` com convite
+   escrito (*"Hello fresh talent... include a link to your showreel as well as your current day
+   rate... we do keep all artist enquiries in our database"*), e meu detector marcou Gravity +
+   `recaptcha` + `sitekey`. **Dentro da `div.form__artist` não existe uma única tag `form`** (zero
+   `<form>` na página inteira): o shortcode está morto, sobraram o `spinner.svg` do plugin e a linha
+   *"please use the contact form below"* **comentada no HTML**. **Antes de chamar motor de CMS de
+   porta, conte as tags `form`: zero `form` com plugin carregado = shortcode morto.** A casa virou
+   fila de carta, pelo endereço de função que ela publica na própria aba (decodificável do
+   `data-cfemail` da Cloudflare por XOR, sem navegador).
+2. **O filtro de disciplina deu 14 acertos e os 14 eram ruído.** Na Familiar Shadow, `character` é
+   índole (*"story, character, and choice"*) e `Maya` é a poeta **Maya Angelou** numa epígrafe de
+   rodapé; em 8 hosts o acerto morava em página **catch-all**, idêntica nos 9 caminhos. Ler o
+   contexto de cada acerto custou dois minutos.
+
+**E o inverso, que é o achado de texto do turno:** a Spud Gun escreve *"join our freelance **poor**
+for upcoming projects"* — erro de digitação da própria casa no lugar de *pool*. **Filtro por
+`freelance pool` não acha esta página.** Casa que convida por escrito pode convidar com o texto
+errado, e o piso de caracteres também não ajuda aqui: a `/jobs` dela tem 694 caracteres, **abaixo do
+piso de 1.000**, então a régua de veto nela é **leitura inválida** e o veto fica NÃO CONFERIDO.
+
+### 7. O QUE FICA NÃO CONFERIDO, COM NÚMERO
+
+- **47 códigos `000`** e **8 códigos `202`** (porteiro de borda, família do 202 da Triggerfish) e
+  **10 códigos `403`** nos 65 hosts: NÃO CONFERIDOS pela regra, e pelo adendo de 02h45 os 403 desta
+  rede **não** se abrem trocando User-Agent.
+- **Campos das duas portas**: nenhum medido. Squarespace e Asana desenham o formulário só no
+  cliente, e não há navegador neste turno.
+- **A Guilde du Québec não rendeu**: das 145 linhas do `censo-guilde-quebec-1709.csv`, 98 já estão
+  marcadas `SEM-PAGINA-DE-CARREIRA` e o resto tem veredito escrito de 17/09. **Não é fila nova.**
+  As listas canadenses (`fila-gamedevmap-canada.csv`, `garimpo-cgstudiomap.csv`) ficaram **sem
+  sondar** neste turno por tempo, e são a próxima perna óbvia desta mesma veia — com a vantagem de
+  que ali o domínio também já está publicado.
