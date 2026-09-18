@@ -5632,3 +5632,178 @@ Ventures *Character Art ...* 6 dias).
 
 **Riot e Epic seguem NÃO CONFERIDOS por esta rota:** `job-boards.greenhouse.io/riotgames` devolve
 404 (o quadro vive em `riotgames.com/work-with-us`) e a Epic devolve 403 do próprio site.
+
+## Jhon A, 18/09 15h20 UTC (vigésimo turno) — A TRIXTER ENTROU DEPOIS DE TRÊS PAREDES, E A CAUSA DAS TRÊS ERA A CA DO PROXY; O ESTOQUE DE PORTA LIMPA FOI VARRIDO INTEIRO E DEU **UMA**
+
+Turno de **estoque**, não de caça: nenhuma varredura por data. A ordem era trabalhar (a) as portas
+`done=false` do `PORTAIS` cuja parede registrada NÃO era captcha de desafio, (b) os bancos de
+talentos com departamento de personagem e (c) os locatários Workday e EA com conta em `cred.json`.
+
+**Placar do turno: 1 candidatura ENVIADA E CONFIRMADA (TRIXTER, espontânea, Munique/Berlim), 1
+preenchida sem prova (Fortiche, e a parede dela mudou de nome), 0 duplicatas, 0 tentativas contra
+veto escrito.** Personagem: a TRIXTER é espontânea numa casa de criatura, a Fortiche é
+espontânea com os departamentos *Character modeling*, *Character design*, *Groom* e *Texture*
+marcados. Ambiente: zero.
+
+### 1. A TRIXTER ENTROU, E O QUE A DESTRAVOU FOI O CONSERTO DE TLS DAS 11h35 — NÃO PERSISTÊNCIA
+
+A espontânea da TRIXTER (`2785192`) tinha **três registros de parede**: 06/09 (*"o envio por AJAX
+não chega a sair do nosso ambiente"*), 08/09 (*"instrumentado para registrar TODO pedido não-GET,
+o clique produz ZERO pedidos de rede e a tela escreve Sorry, something went wrong em menos de
+5s"*) e 09/09 (*"PORTA MORTA"*, pelo 307 do locatário Personio). Hoje, com o navegador da caixa
+destravado desde as 11h35, **o mesmo clique produziu dois POST 200 no domínio da casa**
+(`/wp-content/themes/trixter/php/jobs/uploadFiles.php` e `.../uploadJobForm.php`) e a tela
+escreveu, literal: **"Message successfully sent. We appreciate that you've taken the time to write
+us. We'll get back to you very soon."**
+
+> **Regra: "zero pedido de rede no clique" é sintoma de CA recusada pelo navegador, não de
+> formulário que recusa robô.** É a mesma causa que tinha segurado a Sviper (medida em 17/09 às
+> 19h00) e que foi consertada trocando o modo da sessão. Toda porta fechada por essa assinatura
+> merece uma segunda tentativa **agora**, e as três da TRIXTER eram a mesma porta.
+
+**E a correção do registro de 09/09, que estava certo no fato e errado na conclusão:** o
+locatário Personio da TRIXTER não serve página hospedada — `trixter.jobs.personio.com/job/2785192`
+devolve **429 com redirect para `personio.com`** (a tela é o *Vercel Security Checkpoint* do site
+de marketing da Personio) enquanto o **`/xml` do mesmo locatário responde 200** com a requisição
+inteira. Aquela rodada leu isso como *"o feed mente, não é porta"*. **O feed não mente: ele prova a
+requisição, e a porta mora em outro lugar** — no formulário do WordPress da própria casa, que traz
+`job_position_id = 2785192` num campo escondido. Três coisas se juntam para o dedupe da próxima
+rodada: **endereço novo** (`/jobs/job/speculative-job-application/`, sem o `-2` que dá 404), **id
+do Personio** e **POST no domínio da casa**.
+
+**Uma armadilha de prova, do lado oposto da de 07/09:** o formulário da TRIXTER **continua
+preenchido depois do envio que ENTROU**. A campanha usa "formulário ainda cheio" como prova de
+não-envio (Distillery, Stellar, One Of Us) e isso já falhou com `target=_blank` na House of How;
+aqui falha sem `target` nenhum. **A prova é o POST no domínio da casa mais o texto novo da tela.**
+
+### 2. A FORTICHE: O WIDGET QUE TRAVAVA TEM NOME (CHOICES.JS) E A PAREDE QUE SOBROU É O POST PENDURADO
+
+A espontânea da Fortiche (*Arcane*) é a melhor porta de personagem do estoque: os departamentos da
+casa incluem **Character modeling, Character design, Groom e Texture**. Ela estava à mão desde
+27/08 com dois diagnósticos: *"o seletor de local é um widget próprio que o preenchedor não
+consegue marcar"* e *"o servidor deles derruba a conexão no envio"*.
+
+**O primeiro está resolvido.** O widget é **Choices.js** sobre um `<select multiple>` com
+`hidden` e `data-choices-init=1`. Marcar o select por JS deixa **as chips da tela vazias** — e
+biblioteca com estado próprio pode reescrever o select no envio. O caminho que funciona é a UI:
+clicar `.choices__inner`, clicar `.choices__list--dropdown .choices__item--choice` casando por
+**texto exato**, e conferir **dois lugares**, as chips e o `selectedOptions`. Os três passos do
+`cf7mls` passaram cheios, com zero `wpcf7-not-valid-tip`.
+
+> **Armadilha nova e barata:** com o dropdown do Choices **aberto**, a lista fica por cima do botão
+> `NEXT` e o Playwright acusa *"subtree intercepts pointer events"* e queima 30 s de timeout por
+> clique. **`Escape` NÃO fecha** este Choices; o que fecha é **clique fora**, em coordenada neutra.
+
+**O segundo continua, e agora tem nome:** depois do Submit a classe do formulário fica em
+**`cf7mls validating`** por mais de 60 s, o endpoint
+`/wp-json/contact-form-7/v1/contact-forms/11311/feedback` **nunca responde**, a
+`.wpcf7-response-output` fica vazia e **dois recursos do próprio domínio abortam no meio**
+(`net::ERR_ABORTED` em `contact-form-7/includes/css/styles.css` e no `cookieblocker` do Complianz).
+**Não é o reCAPTCHA v3**: pontuação reprovada devolveria `status: spam`, e não veio resposta
+nenhuma. Zero e-mail de `forticheprod.com` na caixa. Pela regra de 07/09 isso é **preenchida sem
+prova**, não vira `done=true`, e **não se reenvia no mesmo dia**. Teste barato que fica para a
+próxima: repetir **com o CV só**, sem o Portfolio de 2,68 MB, para saber se o que derruba é o
+tamanho do POST. Ferramentas: `/home/user/apply/fortiche_fill.js` e `fort_probe.js`.
+
+### 3. O ESTOQUE DE PORTA LIMPA FOI VARRIDO INTEIRO, FAMÍLIA POR FAMÍLIA, E ELE ESTÁ SECO
+
+| Superfície | O que foi lido | Acertos da disciplina | Quantos ainda não tinham candidatura |
+|---|---|---|---|
+| `PORTAIS` `done=false`, tipo portal, alta/média | 622 pendentes, 64 da disciplina lidas uma a uma | 64 | **0 sem parede de desafio** |
+| **Greenhouse**, todos os tokens do `tokens-ats-1809.csv` | 95 quadros, **2.124 vagas** | **40** | **0** (todas enviadas, recusadas ou com decisão escrita) |
+| **Teamtailor**, vaga servida | 172 quadros, **1.985 vagas** pelo `jobs.json` | 12 | **0** (Beffio `6217989`/`7242656`, Fatshark `8190501`, Airship, Snowprint, Kepler/Tactical `8311973`, Sharkmob 2D) |
+| **Teamtailor Connect**, banco de talentos | 172 slugs, **145 páginas vivas** (21×404, 4×403, 2×000) | **17 slugs com rótulo de personagem no menu** | **0 — os 17 já têm cadastro**, provado por e-mail de boas-vindas ou de login na caixa |
+| **Pinpoint**, `bancos-de-talentos-1009.md` | as 11 casas da fila | 11 | **0** (Hyper Hippo segue 404, morta duas vezes) |
+| **Personio**, os 23 locatários que o repositório conhece | `/xml` de cada um | 3 espontâneas vivas | **1: a TRIXTER, enviada hoje** |
+| **Workday** com conta (`disney` ×2 sites, `pixar` ×2, `xboxgaming` ×3, `cloudimperiumgames` ×2, `warnerbros`) | 8 termos de busca por quadro | ILM Londres `10160980`, Blizzard `R028136`, CIG (4, conceito 2D e produção) | **0** — a `10160980` **foi enviada às 11h pelo maestro** e o dedupe pegou |
+| **EA** (`jobs.ea.com`, Avature) | **140 requisições** paginadas | 7 | **0** — família `215657/215658/215661/215666` fechada |
+
+**Os 17 slugs de Connect com personagem no menu, para ninguém remontar a lista:** `10chambers`,
+`airshipinteractive`, `ankama`, `capsulestudio`, `fatshark`, `gameboost`, `goals`,
+`goodbyekansas`, `hampastudio`, `ilpvfx`, `mindark`, `paradox-interactive`, `princessbento`,
+`rawpowergames`, `sloclap`, `stunlocksstudios`, `tacticaladventures`. **A varredura de 12/09 tinha
+medido 15 slugs e achado 2; esta leu os 172 e achou 17** — e o resultado prático é o mesmo, porque
+a onda de cadastros de 06, 07 e 16/09 já cobriu todos. **Custo de descobrir isso: 172 requisições.
+Custo de não saber: uma rodada inteira gastando navegador em cadastro repetido.**
+
+### 4. A TACTICAL ADVENTURES FOI ABORTADA PELO GMAIL, E O DEDUPE POR ID NÃO PEGARIA
+
+A `FILA-FORMULARIO-1609.md` põe o Connect da Tactical Adventures (cargo **Lead 3D Character
+Artist** `644185`) como a porta nº 11 e diz *"o ID do cargo do Connect não existe em arquivo
+nenhum"* — verdade, e mesmo assim a porta está fechada. **A casa RECUSOU a candidatura em 17/09**
+(`guidi-rontani-armand@tacticaladventures.teamtailor-mail.com`, *"we regret to inform you that we
+are unable to accept your application"*), o Vini já respondeu no fio, e a própria recusa diz
+*"Unless you advise us otherwise, we will keep your CV on our database"* — ou seja o banco de
+talentos que o cadastro ia buscar **a casa já concedeu por escrito**. O passo 1 chegou a rodar e a
+tela devolveu *"If we find a Connect account for contact@vinicavalcanti.art, a sign in link will be
+sent"*: **a conta já existia** (o e-mail de login trata o Vini pelo nome), então nada de novo
+entrou no lado do recrutador e **nada foi contado como candidatura**.
+
+> **Regra: dedupe de banco de talentos se faz pela CASA no Gmail, nunca pelo id do cargo.** O id do
+> Connect é inédito por construção — ele não é o id da vaga — e por isso passa limpo pelos quatro
+> arquivos. Quem confia nele reabre casa que acabou de recusar.
+
+### 5. PERSONIO: QUATRO LOCATÁRIOS DA LISTA DO REPOSITÓRIO SÃO CONTA DE DEMONSTRAÇÃO, E A ASSINATURA MAIS BARATA É A **DATA**
+
+O briefing de 09/09 já nomeava a armadilha (*"The Demo Data Ltd. is a fictional company created by
+Personio"*, com Lorem ipsum, medida na Cosmico). Hoje ela apareceu em mais quatro da lista que o
+repositório usa como real: **`futurlab`** (a *General Application* `1790136` é Lorem ipsum
+assinado Demo Data Ltd.), **`boxelware`**, **`craftwork`** e **`houseoftales`**. `breakfirst` e
+`westwood` devolveram 429 e ficam **NÃO CONFERIDOS**, com suspeita alta pelo motivo abaixo.
+
+> **Assinatura nova, e ela custa zero requisição extra:** as cinco *Initiativbewerbung
+> (Festanstellung)* desses locatários têm o **MESMO `createdAt`, `2018-07-31T09:25:04+00:00`**, e o
+> mesmo título em alemão. **Data idêntica ao segundo em locatários diferentes é dado semeado pela
+> plataforma.** Antes de enfileirar espontânea de Personio, compare o `createdAt` com o das outras:
+> se repetir entre casas, é demonstração e a candidatura não chega a recrutador nenhum.
+
+### 6. O QUE O GMAIL DERRUBOU DA FILA DE 16/09, E POR QUE OS CSVs NÃO PEGARAM
+
+A **Faixa 1 inteira** da `FILA-FORMULARIO-1609.md` (Personio: Bongfish `366240`, Deck13
+`2725779`, Chimera `150955`) está marcada lá como *"nenhuma com marca de envio"*. **As três já
+tinham candidatura de 06/09**, e a prova está na caixa, não nos CSVs:
+
+- Bongfish, `bongfish-jobs@m.personio.de`, 06/09 15h40: *"Thank you for your interest in joining
+  our team! We will review your application shortly"*;
+- Deck13, `applications@deck13.com`, 06/09 18h12: *"Thank you so much for sending over your
+  **general application**"* — e **recusa em 16/09** pela mesma caixa;
+- Chimera, `remotecontrol-jobs@m.personio.com`, 06/09 18h23: *"Confirmation of receipt | Your
+  Application at Chimera Entertainment"*, com decisão em 15/09.
+
+**Por que o dedupe por ID falhou:** o recibo do Personio **não cita o número da requisição**, só o
+nome da casa, e as linhas que os CSVs tinham dessas três eram de **carta fria** (`info@`,
+`contact@`). É exatamente a regra de 06/09 (*"a caixa de e-mail guarda candidatura que os CSVs não
+têm"*), e ela vale com força na família Personio. **Antes de gastar navegador em espontânea de
+Personio, busque no Gmail pelo NOME DA CASA e pelo remetente `*@m.personio.*`.**
+
+### 7. A EA: O VETO QUE FECHA A FAMÍLIA **NÃO ESTÁ NO ANÚNCIO**, ESTÁ NAS DUAS RECUSAS
+
+Refeita a leitura do Avature (140 requisições, 7 acertos de título) e **renderizadas** as duas
+pontas da família (`215657` e `215666`): o anúncio tem **6.539 caracteres** e **zero ocorrência**
+de `relocation`, `immigration`, `sponsor`, `work authorization`, `eligible to work`, `resident` e
+`work permit`. A faixa publicada é **CAD 77.700 a 107.900** e o corpo é personagem puro (ZBrush,
+Maya, high-to-low, PBR, UV, roupa e cabelo). **Quem reabrir só o anúncio vai concluir "porta
+limpa" — e vai errar.** O veto é das **duas recusas de 16/09** (`EAcareers@ea.com`, *"This position
+does not support relocation or immigration at this time"*), na mesma cidade, mesmo time e mesmo
+`Worker Type`. A decisão de 17/09 continua valendo e agora está dita com a distinção que faltava:
+**veto de e-mail, não de anúncio.** O que reabre a EA é outro estúdio (Respawn, BioWare, Criterion,
+Motive) ou outra frase.
+
+### 8. TRÊS PORTAS DO PAINEL ESTAVAM CLASSIFICADAS COMO FORMULÁRIO E SÃO E-MAIL
+
+Relidas na fonte, as três da fatia "formulário próprio sem porteiro" da disciplina:
+
+- **Stupendium Softworks** (`/careers/`, 4.624 caracteres, régua só com *"This project is **based
+  in** Unity"*, falso positivo): **não existe `<form>` na página**. O texto diz *"Ready to apply?
+  Send your application to careers@stupendiumsoftworks.com"*. A vaga *3D Artist (Retro-Style)*
+  continua aberta e é da disciplina (*"stylised 3D models inspired by PS1-era aesthetics, spanning
+  both **characters** and environmental assets"*), só **freelance**.
+- **Holonautic** (Suíça): o botão *APPLY NOW* é `mailto:jobs@holonautic.com?subject=Job
+  Application 3D Artist`. Zero formulário.
+- **Digital Domain**: `careers.digitaldomain.com` devolve **connection reset** em quatro variantes
+  de `curl` (HTTP/1.1, UA de navegador, TLS 1.2) e o site institucional só linka para lá **em
+  `http://` puro**, que a ponte deste ambiente recusa. Segue **NÃO CONFERIDO**, não descartada.
+
+> **Regra: "formulário próprio sem porteiro" só se escreve depois de ver um `<form>` com campo de
+> arquivo.** Duas destas três foram registradas como porta de formulário sem isso, e cada uma
+> custou uma leitura de rodada para virar porta de carta.
