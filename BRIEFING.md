@@ -5606,3 +5606,29 @@ por e-mail, a mesma família do Oracle e do Greenhouse de candidatura.**
   **estilizado**, e a casa acabou de receber a candidatura da `623`.
 - **A Lighthouse Games e a Zack D Films seguem como segunda linha** pela decisão do maestro das
   06h15 e das 10h15, não por medida nova minha.
+
+### Adendo das 13h15 do mesmo turno — **OS TRÊS ALERTAS FORAM CRIADOS**, e a conta do MyGreenhouse entregou de graça a lista das 39 candidaturas dele
+
+Fechei a pendência do §4 em vez de deixá-la escrita. **`Your job alerts (4)`** no painel da conta,
+depois de recarregar: **PlayStation Global**, **Bungie** e **2K**, cada um com a etiqueta
+`"character artist" +6`, ao lado do da **Sony Pictures Imageworks** (`Artists`) que existe desde
+02/09. Eram **2** alertas antes do 2K e **4** depois do PlayStation — o número subiu na frente da
+captura, que é a prova que vale. **Sete termos em cada:** `character artist`, `character modeler`,
+`modeler`, `sculptor`, `groom`, `texture artist`, `look development`.
+
+**E o achado que vale mais que os alertas, colhido de carona:** a página inicial da conta mostra
+**`Active applications (39)`**, com cartão por candidatura (casa, cargo e *Applied · N days ago*), e
+a aba **Applications** abre a lista inteira. **A campanha nunca teve isso.** O dedupe de Greenhouse
+era ID em quatro arquivos mais busca no Gmail, e o briefing de 06/09 já tinha medido que a caixa
+guarda candidatura pré-campanha que os CSVs não têm — aqui é a **própria plataforma** declarando as
+39 vivas, com data. Os três cartões visíveis batem com o `enviados.csv` (Eleventh Hour Games
+*Senior Environment Ar...* 2 dias, Absurd Ventures *General Film & TV Appl...* 3 dias, Absurd
+Ventures *Character Art ...* 6 dias).
+
+> **Próxima rodada: ler a aba Applications inteira e cruzar com o `enviados.csv`.** Diferença para
+> mais é candidatura feita e não registrada; diferença para menos é linha de CSV sem candidatura de
+> verdade. **Não abri a lista além dos três cartões de propósito**, para não gastar a sessão que
+> estava criando os alertas — e reentrar custa outro código de dez minutos.
+
+**Riot e Epic seguem NÃO CONFERIDOS por esta rota:** `job-boards.greenhouse.io/riotgames` devolve
+404 (o quadro vive em `riotgames.com/work-with-us`) e a Epic devolve 403 do próprio site.
