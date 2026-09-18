@@ -841,3 +841,12 @@ fora, apesar da palavra "creature". Concept e character design 2D também estão
 
 **E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
 entram, por mais que o título seja perfeito.
+
+
+## 18/09 19h40 (maestro): NEGRITO, FRASE DE DESCULPA E RODAPE
+
+Ordem do Vini depois de ler os rascunhos de hoje:
+1. **Negrito nas credenciais**, como nas cartas de 09/09. No `htmlBody`, `<b>` em: "Senior 3D Character Artist with more than ten years in ...", "The Wingfeather Saga season 1", "E-Line Media", "grooming in Houdini" e "I am ready to move for the role". Quatro a cinco negritos, nunca mais que isso. O `body` (texto puro) fica sem marcacao.
+2. **Nunca uma frase de desculpa ou de aviso** do tipo "First, what this is not: it is not a request for a feedback session" ou "this is ten years in and not an internship enquiry". Um humano le isso e para. Se a carta precisa explicar o que nao e, a abertura esta errada: reescreva a abertura.
+3. Rodape sempre `Site: https://vinicavalcanti.com` (o .art nao tem site). Emoji e ☺️, nunca 😊.
+Os 20 rascunhos da fila foram corrigidos em 18/09 19h40 (negrito, links limpos, .com, duas frases de desculpa removidas: Allimator e Fiilin).
