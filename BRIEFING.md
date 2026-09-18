@@ -4642,3 +4642,28 @@ filtro passar a abrir exceção quando o HTML tem `<iframe>` de host de formulá
 - **O rendimento honesto da lane é baixo e agora tem número:** 3 portas por 18.529 requisições.
   Ela é melhor que a adivinhação de token de ATS (que rendeu zero vaga da disciplina em 37.409
   sondagens), e pior que ler quadro conhecido por data de publicação (2 portas em 506 quadros).
+
+### 7. ADENDO DAS 02h45 — EU CHAMEI OS 192 CÓDIGOS 403 DE "SOBRA MAIS PROMISSORA", E A AMOSTRA DESMENTE ISSO
+
+O §6 acima diz que os 403 são sinal de site real e a melhor sobra da lane. **Medido em 9 dos 192,
+escolhidos por parecerem estúdio de verdade pelo nome** (`oniri-creations.com`, `meshcapade.com`,
+`fireforge-games.com`, `creaznstudio.com`, `dragonflystudio.co.uk`, `andrealphusgames.com`,
+`5th-column.com`, `banzaigames.com`, `rashaadnewsomestudio.com`), com `/careers` e `/jobs`, agora
+**com User-Agent de navegador e `Accept-Language`**: **oito continuam em 403 com o cabeçalho novo**,
+e o corpo diz o que é.
+
+| host | corpo do 403 | o que é |
+|---|---|---|
+| `oniri-creations.com` | *"Just a moment... Enable JavaScript and cookies to continue"* | desafio de JS da Cloudflare |
+| `fireforge-games.com` | *"Accesso bloccato ... provieni da una rete classificata come rischiosa"* | WAF que barra a **classe de rede** deste IP, e diz isso por escrito |
+| `5th-column.com` | `403 Forbidden openresty` | bloqueio de borda |
+| `meshcapade.com` | `AccessDenied` | bucket S3, nem site |
+| `banzaigames.com` | 404 com 55.831 bytes | página de erro gorda, não é `/careers` |
+| `dragonflystudio.co.uk` | **200 com ZERO byte** | NÃO CONFERIDO pela regra |
+
+> **Correção do meu próprio §6: o 403 desta veia não é "site real esperando cabeçalho melhor", é
+> porteiro de borda contra a classe de rede desta máquina** — a mesma família do 202 da
+> Triggerfish e da Second Home, e do porteiro de pontuação de 17/09 09h50. Trocar User-Agent não
+> abre e **não se vai além disso**: mascarar cliente para passar por filtro de reputação é a mesma
+> coisa que burlar captcha. Essas casas são **item de mão do Vini** ou de outra rede, e o número
+> honesto da lane continua **3 portas**, sem prometer as 192.
