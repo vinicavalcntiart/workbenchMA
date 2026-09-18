@@ -8355,3 +8355,579 @@ a Tandem Games. **Quem for resolver esses 19 domínios precisa buscar pela razã
 nome de fantasia** — e nenhuma das duas associações espanholas vai dar o link.
 
 > **Maestro, 18/09 09h25 UTC:** quatro cartas escritas a partir da rodada das 08h55, `confere-carta.py` limpo (pior par 35%): Genevieve Dexter / Eye Present `r-872085649516077703` (direta; a carta diz que sabe que CEO não revisa sculpt e pede o encaminhamento); Timmy Willmott / Lux Aeterna `r-4617635361685789291` (hello@, a caixa que a própria casa aponta para artista, endereçada a ele); Giedrė Kaveckaitė / Kelebek Media `r7241604275705611439` (info@, endereçada à Head of Art, gancho no Isadora Moon the Movie); Nnanna Kama / VirtX `r5223968947252214453` (hello@virtx.uk, gancho na frase da bio dele e no Character Artist que a casa já publica no quadro). **Onesize segurada** (motion design e publicidade, sem personagem). As três de caixa funcional seguem o precedente da Erupting Avocado. Saem pelo Apps Script do Vini.
+
+## JOE, 18/09/2026 12h35 UTC — **A VEIA QUE RENDEU FOI O DIRETÓRIO DO CLUSTER DE ARSENALET (VIBORG) MAIS O DIFF DO `censo-wikidata.csv` POR PAÍS PRIORITÁRIO**, E O DEDUPE MATOU **QUATRO** CANDIDATOS ANTES DE VIRAREM FICHA: SEIS PESSOAS, **DUAS COM ENDEREÇO PUBLICADO**, QUATRO `sem-email`, E O MELHOR CARGO É **LEAD CHARACTER ARTIST**
+
+**O que esta rodada mediu antes de escrever qualquer coisa.** Conjunto de domínios já tocados
+reconstruído do zero (`enviados.csv` + `alvos.csv` + `pessoas.csv` + `processados.csv` + este
+arquivo + `docs/index.html`, regex com 40 TLDs): **2.751 domínios**. Todo candidato desta rodada
+passou por esse diff **antes** da requisição, que é a lição das 05h15 e a das 08h55 aplicadas.
+
+### AS QUATRO VEIAS NOVAS TENTADAS, E O PLACAR HONESTO DE CADA UMA
+
+1. **Diretórios de associação dos países prioritários — TRÊS DOS CINCO ESTÃO MORTOS, MEDIDO:**
+   - **Spillmakerlauget (Noruega)** — `https://spillmakerlauget.no/medlemmer/` responde **200 com
+     170.253 bytes** e o documento inteiro tem **23 domínios externos, e são todos Discord, Webflow,
+     Google Fonts e redes sociais**. O site é uma casca que empurra o visitante para um convite de
+     Discord (`discord.com/invite/mk6PJTG`); `https://spillmakerlauget.no/medlemmer` **sem barra
+     final redireciona para o Discord**. **Zero membro publicado. Não volte aqui.**
+   - **DigiBC (Vancouver)** — `https://digibc.org/members/` e `https://www.digibc.org/member-directory`
+     respondem **403 com 103 bytes**, com e sem User-Agent de Chrome. **Porta fechada medida duas vezes.**
+   - **Swedish Games Industry** (`swedishgames.se`) — **000, `CONNECT tunnel failed, response 502`**
+     do proxy de saída. **NÃO CONFERIDO**, e fica nomeado.
+   - **Neogames (Finlândia)** — a raiz abre (**200, 54.229 bytes**) e o `sitemap_index.xml` mostra que
+     o tipo de conteúdo é **`partner-sitemap.xml`**, não `companies`; `/companies/` e
+     `/finnish-game-companies/` dão **404**. Caminho certo anotado para quem voltar.
+   - **Dutch Games Association** — `https://dutchgamesassociation.nl/members/` abre (**200, 926.957
+     bytes**) e rende **170 domínios, 125 inéditos**. Varridos **34** dos que parecem estúdio: o que
+     saiu foi **freelancer, consultor, escritor de jogo e universidade**, não casa com assento de
+     personagem (`multiversenarratives.com` é *"game writing"* de um homem só, `primeworx.nl` é
+     eventos e aparição de celebridade, `livingstory.nl` é jogo sério corporativo). **A veia abre,
+     mas o conteúdo dela é gente física sem pipeline 3D.** Um achado aproveitado: **Grendel Games**
+     (ficha 5).
+
+2. **O DIRETÓRIO DO CLUSTER DE ARSENALET, VIBORG — ESTA É A VEIA BOA E É PARA REPETIR EM OUTROS
+   CLUSTERS.** `https://arsenalet.dk/companies/companies` (**200, 165.493 bytes**) publica **40+
+   empresas do cluster de animação de Viborg com o endereço de email de cada uma na própria linha**,
+   e em boa parte delas **o endereço é de pessoa**: `henrik@goodjobstudios.com`,
+   `frederikke@happygrove.studio`, `sus@drawesomepictures.com`, `lakstein@studioraevling.com`,
+   `peter@pewtergames.com`, `christian@bachogco.dk`, `soren@sorenfleng.com`, `therese@arsenalet.dk`.
+   **O índice do site não tem link para essa página** — ela só aparece no `href="/companies/companies"`
+   da home (**a home responde 200 com 25.279 bytes e `/medlemmer/`, `/en/members/` e `/virksomheder/`
+   dão 404 com 3.049 bytes**). **Onde procurar o análogo:** cluster com prédio próprio e aluguel de
+   assento (Arsenalet em Viborg, Filmby Aarhus, Game Habitat em Malmö — este último com
+   `gamehabitat.se/members/` em **404 de 306.427 bytes**, ou seja SPA que não serve por `curl`).
+
+3. **`censo-wikidata.csv` filtrado por PAÍS PRIORITÁRIO, e não por associação.** Reino Unido,
+   Holanda, Suécia, Dinamarca, Noruega, Finlândia, Islândia e Irlanda dão **591 domínios, 466
+   inéditos** contra o conjunto de 2.751. **340 varridos** nesta rodada com 10 a 24 caminhos cada
+   em dois esquemas, mais o `sitemap.xml` e o `sitemap_index.xml` de cada um. Foi daí que saíram as
+   fichas 2, 3, 4 e 6. **Rendimento honesto de endereço de PESSOA nessa massa: pouquíssimo** —
+   estúdio de jogos publica `info@`, `press@` e `privacy@` e quase nunca caixa individual. **O que a
+   massa entrega com fartura é PAREAMENTO NOME + CARGO na página de equipe**, e é por isso que
+   quatro das seis fichas são `sem-email`.
+
+4. **O `phApp.ddo` do Phenom People vaza `author.email` no site de carreiras — ACHADO DE MÉTODO
+   NOVO, e ele é da família do `recruiter-email` do Teamtailor.** Em `careers.king.com` o payload
+   JSON embutido na página traz, em cada artigo do blog de carreiras,
+   `"author":{"id":"WsQnUJ","name":null,"email":"helena.jones@king.com",...}`. **O endereço vem
+   escrito literalmente, publicado pela própria empresa, e não é montado por padrão nenhum.** Vale
+   testar em toda casa grande que usa Phenom (o marcador é `assets.phenompeople.com` no HTML):
+   ```
+   curl -sS -L <careers-url> | grep -oE '"author":\{[^}]*\}'
+   ```
+   **Limite duro dessa veia, e ele é grave:** o campo `name` e o campo `designation` vêm **`null`**,
+   ou seja o cargo **não está publicado** e o nome só se lê do local-part. Ver a ressalva da ficha 6.
+
+### O DEDUPE MATOU QUATRO CANDIDATOS JÁ COM ENDEREÇO NA MÃO, E ISSO VALE MAIS QUE UMA FICHA
+
+Quatro casas com endereço de pessoa **publicado e conferido nesta rodada** foram descartadas porque
+este arquivo já as tinha resolvido em rodadas anteriores. **Nenhuma virou ficha:**
+
+- **Gimmick Visual Effects** (Copenhague) — achei `keto@gimmick.dk` (*"Ulla Keto, Studio Manager"*),
+  em `https://www.gimmickvfx.com/contact` (o email está em **`@gimmick.dk`**, domínio diferente do
+  site) e ainda com `jobs@gimmickserver.dk` publicado e o convite *"We are always looking for
+  talented artists"* pedindo Maya, Houdini ou Nuke. **A linha 3701 deste arquivo já registrou a casa
+  como MORTA POR VETO ESCRITO**, e eu reconfirmei a frase no HTML de hoje: *"**Work permit for the EU
+  is needed.**"* **Não reabri. Ninguém reabra.**
+- **Nordisk Film Shortcut Oslo** — a página de contato publica **vinte e cinco** pessoas com nome,
+  cargo e email direto (`ida@shortcutoslo.no` da CEO Ida Fiskerud, mais produtor, post supervisor,
+  colorista, editor e sound designer). **A linha 3693 já tinha medido a casa e a matou pelo motivo
+  certo:** *"não há um único cargo de 3D — é montagem, cor, som e ADR"*. Hoje são 25 e não 18, e
+  **continua não havendo um cargo de 3D**. Registro a contagem nova e mantenho o descarte.
+- **GoodJobStudios** (Viborg) — `henrik@goodjobstudios.com`, *"Henrik Malmgren, CEO & Animation
+  Director"*, publicado no `/contact` da casa **e** no diretório de Arsenalet. **Já descartada na
+  linha 3690** como *"animated illustration & soundtracks"*. Mantido.
+- **Ouros Animation** (Viborg) e **Split VFX** (Reykjavík) — `hello@ouros.net` com *"Rikke Planeta,
+  Founder"* e *"Philip Piaget, Founder"*, e `jon.mar@split.is`. **Já registradas nas linhas 2667 e
+  4402.** Mantidas fora.
+
+**A leitura de método:** a veia de Arsenalet e a dos diretórios nórdicos **já foram mineradas em
+16/09**, e o que elas devolvem hoje é o mesmo material. O diff de domínio não pega isso, porque
+esses domínios **nunca receberam carta** e por isso não estão no `touched.txt` — **quem pega é a
+busca por NOME e por ENDEREÇO dentro deste arquivo**, e ela é obrigatória mesmo quando o diff diz
+"inédito".
+
+---
+
+### FICHA 1 — Stefan Runeberg Fjeldmark, **CEO & Director** da EyeCandyFilm (Copenhague, Dinamarca) — **PUBLICADO, confiança ALTA, e o GANCHO É O MELHOR DA SEMANA: a casa escreve a palavra "characters" na frase que define ela mesma**
+
+- **POR QUE ELE, e não outro da casa.** A `/people` publica **exatamente duas pessoas**: **Stefan
+  Runeberg Fjeldmark, CEO & Director** e **Linni Rita Gad**, cuja bio diz *"Linni manages and
+  oversees all stages of production, from idea to final delivery"* (produção, não arte). A `/about`
+  fecha a escolha sozinha: a casa *"is a Copenhagen based film production company **founded in 2008
+  by director and CEO Stefan Fjeldmark**"*. Em casa de dois nomes publicados, o BRIEF-JOE manda ir no
+  fundador que é **diretor**, porque é quem olha personagem e quem atropela checklist de RH. **Não
+  montei `linni@` nem nada parecido** — o endereço dela também está publicado e continua guardado
+  como a segunda e última pessoa da casa, se o maestro quiser.
+- **EMAIL: `stefanfjeldmark@gmail.com` — PUBLICADO, confiança ALTA.** Texto puro, ao lado do nome
+  dele, sem ofuscação, sem `data-cfemail`, sem `(at)`. **Nada montado, nenhuma segunda grafia.**
+  **Ressalva de forma, e ela é importante:** é um endereço **`@gmail.com`**, não corporativo. Isso
+  **não** o torna montado nem inseguro — quem o publicou foi a empresa, na página de contato dela,
+  como o canal direto do CEO — mas significa que **não serve de prova de padrão de domínio nenhum**
+  para `eyecandyfilm.dk`, e nenhuma rodada futura deve derivar endereço dali.
+- **URLs exatas abertas nesta rodada:**
+  - `https://www.eyecandyfilm.dk/contact/` (**200, 108.540 bytes**) — o pareamento do endereço:
+    *"or if its better for you.. | **Stefan Fjeldmark | stefanfjeldmark@gmail.com** | ... | Linni Rita
+    Gad | linnieyecandyfilm@gmail.com"*, abaixo de *"Eyecandy Film APS | Struenseegade 43, 2nd floor
+    right | 2200 CPH N – DANEMARK"*. O formulário da mesma página tem um seletor com a opção literal
+    **"Job & Internship Inquiries"**, o que prova que a casa espera candidatura por ali.
+  - `https://eyecandyfilm.dk/people/` (**200, 97.980 bytes**) — o pareamento do cargo: *"People |
+    **Stefan Runeberg Fjeldmark | CEO & Director**"*.
+  - `https://www.eyecandyfilm.dk/about/` (**200, 98.281 bytes**) — o perfil da casa e o gancho.
+  - **Armadilha de caminho medida:** `/about-us` dá **404 com 92.112 bytes** (404 gordo, serve o
+    corpo da busca) e **`/people` sem barra final estourou o tempo em 30 e em 40 segundos duas
+    vezes**; com barra final e **sem `www`** abriu na primeira. Registrado para ninguém concluir
+    "página não existe".
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"**We are story driven, we want to know our
+  characters and we can't help looking for perfection design wise**"*, e *"At EyeCandyFilm we develop
+  our own projects, we co-produce and we do service work. Regardless if it's a commercial, a tv-series
+  viewed by billions, a feature or an artsy short film"*, e *"**We love animation, because with
+  animation everything is possible**"*. A bio dele: *"Stefan has a lifelong experience directing and
+  producing animation movies, feature films, tv-series, short films and computer games, **in a variety
+  of styles of animation, mixed media and live action**"*. Serve porque **"we want to know our
+  characters" é literalmente a disciplina do Vini dita pela casa**, e *"a variety of styles"* casa com
+  o portfólio estilizado dele.
+- **FORA DOS EUA: SIM, Copenhague** (Struenseegade 43, 2200 CPH N). **A frase de realocação ENTRA**, e
+  a frase única de patrocínio também, por ser União Europeia. Nórdicos são prioridade declarada do turno.
+- **DEDUPE, feito antes desta ficha:** Gmail
+  `in:anywhere (shortcutoslo OR "Nordisk Film Shortcut" OR Fiskerud OR eyecandyfilm OR "EyeCandy" OR Fjeldmark)`
+  devolveu **`{}`**; `in:sent (... OR eyecandyfilm.dk ... OR stefanfjeldmark)` devolveu **`{}`**.
+  **0 de 2.** Nos arquivos: `eyecandyfilm` e `Fjeldmark` dão **zero** em `enviados.csv`,
+  `automacao/pessoas.csv`, `automacao/processados.csv` e `docs/index.html`. **Uma armadilha de
+  homônimo pega e registrada:** `Eye Candy` bate em **Eye Candy Animation, de Canberra na Austrália**
+  (`fila-oceania.csv` linha 57 e `garimpo-cgstudiomap.csv` linha 16, as duas com 403) — **casa
+  diferente, continente diferente.** A ÚNICA menção à Eye Candy Film no repositório é
+  `garimpo-cgstudiomap.csv` linha 199, de 08/09, e ela diz *"o site RESPONDE mas nao achei pagina de
+  carreiras"*: **é registro de varredura de VAGA, não de carta, e a casa está em 0 de 2.**
+  **PRIMEIRA PESSOA E PRIMEIRA MENSAGEM DA CASA.**
+- **CORREÇÃO QUE ESTA FICHA FAZ NUM REGISTRO ANTIGO:** aquela linha de 08/09 concluiu, correta para o
+  objetivo dela, que **não há página de carreiras** (o `sitemap.xml` não tem URL de vaga). **Continua
+  verdade, e não é o mesmo que "casa sem porta":** a `/contact` publica o endereço do CEO e um seletor
+  de "Job & Internship Inquiries". **Ausência de quadro de vagas não é ausência de porta.**
+- **PATROCÍNIO DE VISTO: não publicado.** A casa não tem `/careers` nem `/jobs`. O sinal indireto é
+  *"we have an extended network of the best talents and studios, who share our ideas **in Denmark,
+  Spain and around the world**"* — casa que coproduz fora, o que não prova patrocínio.
+- **RESSALVA HONESTA:** (1) é uma **produtora de dois nomes publicados**, não um estúdio com quadro de
+  artistas — o trabalho é desenvolvido e **coproduzido**, então pode não haver folha de arte interna
+  para contratar; (2) o endereço é **`@gmail.com`** e, embora publicado pela empresa, é caixa pessoal:
+  se não responder, não há segundo endereço corporativo para tentar; (3) a bio dele cita *"mixed media
+  and live action"* ao lado de animação, e **nada no site nomeia 3D, modelagem, groom ou CG** — a
+  carta **não pode afirmar encaixe de pipeline**, só de disciplina narrativa e de personagem; (4) o
+  site roda **WooCommerce com tela de login e carrinho** e a `/people` tem data de 2021 no markup
+  (`2021-11-28`), o que sugere quadro **não atualizado** — no caso dele o risco é baixo, porque
+  fundador e CEO é o cargo mais estável que existe, mas está dito.
+
+### FICHA 2 — Rob Thornely, **Lead Character Artist** da Firesprite (Liverpool, Reino Unido) — **`sem-email`, E É A MELHOR FICHA DA RODADA POR DISCIPLINA: É O CARGO EXATO DO VINI, NUMA CASA DA PLAYSTATION STUDIOS**
+
+- **POR QUE ELE, e não outro da casa.** A `/studio` publica **dois** depoimentos com nome e cargo:
+  **David Chambers, Lead Cinematic Animator** e **Rob Thornely, Lead Character Artist**. Pelo BRIEF-JOE
+  o alvo 2 em casa grande é **Character Art Lead**, e aqui ele está publicado com nome, cargo e uma
+  frase própria. O Chambers é animação de cinematics, disciplina vizinha e não a do Vini; fica como a
+  segunda e última pessoa da casa. **A casa não publica recrutador nomeado** (o alvo 1 do BRIEF em
+  casa grande), então o lead de personagem é o melhor que existe ali.
+- **EMAIL: NÃO HÁ, e a linha entra com `sem-email` guardando nome, cargo e casa.** Varridos **19
+  caminhos em dois esquemas** (`/`, `/about`, `/about-us`, `/team`, `/our-team`, `/people`, `/studio`,
+  `/contact`, `/jobs`, `/careers`, `/privacy`, `/press`, `/presskit`, `/imprint`, `/legal` e cinco
+  URLs de `/news` que o sitemap deu), com decodificação de entidade HTML, de `data-cfemail` e de
+  `[at]`/`(dot)`: o domínio inteiro publica **dois endereços e os dois são funcionais**,
+  `info@firesprite.com` e `pr@firesprite.com`. **NADA FOI MONTADO.** Tive `rob.thornely@` e
+  `rthornely@` à mão e **não escrevi nenhum dos dois**, pela medição de 06/09 (cinco de oito montados
+  quicaram) e pela regra de 07/09 de nunca tentar duas grafias — e esta é casa grande, onde a regra
+  diz para nunca gastar a única carta num endereço montado. **A carta, se sair, vai para
+  `info@firesprite.com` endereçada a ele pelo nome**, seguindo o precedente da Erupting Avocado.
+- **URLs exatas abertas nesta rodada:**
+  - `https://firesprite.com/studio` (**200, 111.745 bytes**) — o pareamento: *"«Firesprite made
+    set-up and settling in so easy from day one, great IT support, mature systems and understanding
+    teams.» | **Rob Thornely | Lead Character Artist**"*.
+  - `https://www.firesprite.com/careers` (**200, 117.079 bytes**) — os benefícios, e é lá que está o
+    sinal de visto.
+  - `https://www.firesprite.com/contact` (**200**) — os dois endereços funcionais.
+  - **Armadilha de caminho medida:** `https://www.firesprite.com/about` dá **404 com 49.382 bytes**
+    (404 gordo); o corpo com os nomes está em **`/studio`**, que não é o primeiro caminho que se chuta.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"games that take players on thrilling
+  journeys, with **memorable characters and captivating narratives**. We are creators, we are
+  adaptable, we are one, we are Firesprite"*, e *"Join an innovative, creative and collaborative
+  **PlayStation Studio**"*, e *"From multiple awards and prominent nominations across **BAFTA**, The
+  Golden Joysticks, TIGA, DICE, Develop and more"*. Serve porque **"memorable characters" está na
+  frase de identidade da casa**, e o interlocutor é o lead que faz exatamente isso.
+- **FORA DOS EUA: SIM, Liverpool, Reino Unido.** **A frase de realocação ENTRA**, e o Reino Unido é
+  prioridade declarada do turno.
+- **DEDUPE:** Gmail `in:anywhere (firesprite OR Thornely OR ...)` devolveu **`{}`**;
+  `in:sent (... firesprite.com ...)` devolveu **`{}`**; `in:anywhere (Nicholls OR "3D Art Lead" OR ...)`
+  devolveu **`{}`**. **0 de 2.** Nos arquivos: `Firesprite` dá **zero em `enviados.csv` e zero em
+  `automacao/pessoas.csv`**, e as duas únicas menções do repositório são **inventário de quadro de
+  ATS, não carta**: `processados.csv` linha 526 (*"Firesprite tem uma vaga (Cinematic Producer remoto
+  no Reino Unido) ... Nenhuma de arte"*, 03/09) e linha 2258 mais o `docs/index.html` (a contagem do
+  agregador Greenhouse da PlayStation, *"firesprite (1)"*). `Thornely` dá **zero em tudo**.
+  **PRIMEIRA PESSOA DA CASA, E A CAMPANHA NUNCA MANDOU MENSAGEM PARA ELA.**
+- **PATROCÍNIO DE VISTO: não publicado como política, MAS a página de benefícios escreve
+  "relocation assistance".** Frase literal: *"We offer a myriad of other benefits you can choose from
+  and enjoy; from robust learning and development opportunities to level up your career, **to
+  relocation assistance**, financial planning services, eye care support, staff sales"*. **Ajuda de
+  realocação não é patrocínio de visto e eu não vou dizer que é** — mas é o sinal publicado mais forte
+  desta rodada, e numa casa da Sony o quadro de visto do Reino Unido existe de fato.
+- **RESSALVA HONESTA:** (1) **não há endereço de pessoa**, e a carta sairia para `info@` de uma casa
+  grande, que é o pior canal da campanha; (2) o cargo dele é **Lead**, e o BRIEF-JOE é explícito que
+  em casa grande o lead quase nunca responde email frio e há política interna contra isso — o valor
+  aqui é **indicação de colega de ofício**, e o fechamento padrão ("se outra pessoa aí é a certa, me
+  aponte") é o que faz esta carta valer; (3) o nome dele saiu de um **depoimento de marketing na
+  página de carreiras**, que é a forma mais frágil de pareamento: não tem data e **não prova que ele
+  continua na casa hoje** — é exatamente a armadilha de "cargo desatualizado é pior que alvo nenhum",
+  e eu não consegui datar a página; (4) a Firesprite é **PlayStation Studios**, ou seja Sony, e o
+  grupo Sony já tem histórico grande nesta campanha — vale o maestro conferir o teto do grupo antes
+  de escrever, ainda que a Firesprite como casa esteja em 0 de 2.
+
+### FICHA 3 — William T. Nicholls, **3D Art Lead** da Gears for Breakfast (sede na Dinamarca; ele no Reino Unido) — **`sem-email`, E É A SEGUNDA MELHOR POR DISCIPLINA: LEAD DE ARTE 3D NUM ESTÚDIO DE PERSONAGEM ESTILIZADO**
+
+- **POR QUE ELE, e não outro da casa.** A `/about` publica **dez pessoas com nome, cargo e país**, e
+  o único cargo de **arte 3D** é o dele: *"**William T. Nicholls | 3D Art Lead | UK**"*. Ao lado:
+  Jonas Kaerlev (CEO & Studio Director, Denmark), Jenna Brown (Creative Director, Belgium), Sara
+  Holmes (Producer & IP Manager, USA), Martín Baliño (**2D** Art Lead, Argentina), Briar Sovereign
+  (Senior Designer, UK), Zarkith (Programming Lead, USA), Robert Young (QA Lead, UK), Marco "Xara"
+  den Hollander (Senior VFX Artist, The Netherlands), Cameron "Hypo" Turner (Senior Animator, USA).
+  O 2D Art Lead está fora da disciplina, e o CEO fica guardado como a segunda e última pessoa da casa.
+  **CORREÇÃO QUE EU FIZ EM MIM MESMO, e ela vale registrar:** meu primeiro passe automático pareou
+  *"Briar Sovereign = 3D Art Lead"* porque a extração de linhas desalinhou nome e cargo em uma
+  posição. **A leitura do bloco cru desfez o erro**: a Briar é **Senior Designer** e o 3D Art Lead é o
+  Nicholls. **Pareamento automático de página de equipe tem que ser conferido no bloco corrido antes
+  de virar ficha** — foi por um fio que esta rodada não entregou nome com cargo errado.
+- **EMAIL: NÃO HÁ endereço de pessoa, e a linha entra com `sem-email`.** Varridos **24 caminhos em
+  dois esquemas** (`/`, `/about`, `/about/`, `/about-us`, `/team`, `/team/`, `/our-team`, `/people`,
+  `/studio`, `/contact`, `/contact/`, `/careers`, `/jobs`, `/privacy`, `/privacy-policy/`, mais oito
+  URLs `/team/<pessoa>/` que o sitemap deu), com decodificação de entidade, `data-cfemail` e
+  `[at]`/`(dot)`: o domínio inteiro publica **um endereço, e ele é funcional**,
+  `privacy@gearsforbreakfast.com`, na política de privacidade. **NADA FOI MONTADO** — e aqui havia
+  tentação real, porque **existe uma página de perfil por pessoa** (`/team/briar-sovereign/`,
+  `/team/jonas-kaerlev/` e mais seis), o tipo de estrutura que costuma trazer email; **nenhuma delas
+  publica endereço**. A carta, se sair, vai para a única porta escrita: **a própria casa convida,
+  *"please get in touch!"*, e a via publicada é a `/contact`**.
+- **URLs exatas abertas nesta rodada:** `https://www.gearsforbreakfast.com/about` (**200, 75.092
+  bytes**), que traz o quadro de dez pessoas; `https://www.gearsforbreakfast.com/` (**200, 132.748
+  bytes**); e as oito `/team/<pessoa>/` do sitemap. **Achado de estrutura, da mesma família do
+  `person-sitemap.xml` das 08h55: o sitemap desta casa expõe uma URL por pessoa do time**, o que dá
+  a lista de nomes de graça, antes de abrir a página de equipe.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Gears for Breakfast is a **global game
+  development studio based in Denmark**. Founded in 2015, you may know us best for our work on [A Hat
+  in Time]"*, e *"We are a **global company in the truest sense of the word, with members working from
+  across the world**. This collection of skill and talent brings us perspectives from a variety of
+  cultures and backgrounds"*, e *"**We are always looking out for new talent, so please get in
+  touch!**"*. Serve porque **A Hat in Time é personagem 3D estilizado**, que é exatamente o centro do
+  portfólio do Vini, e porque a frase de "membros no mundo todo" é o convite mais explícito a um
+  candidato de fora que esta rodada achou.
+- **FORA DOS EUA: SIM, Dinamarca (sede) e Reino Unido (ele).** **A frase de realocação ENTRA**, e
+  aqui ela tem uma forma melhor do que o normal: **a casa é distribuída e diz isso por escrito**, o
+  que faz de "posso me mudar" um argumento a mais e não o único.
+- **DEDUPE:** Gmail `in:anywhere (... gearsforbreakfast OR "Gears for Breakfast" ...)` devolveu
+  **`{}`** (a única thread que a busca larga trouxe era da **Snowprint Studios**, confirmação de
+  candidatura de 16/09, **falso positivo do operador OR**); `in:anywhere (Nicholls OR "3D Art Lead" ...)`
+  devolveu **`{}`**. **0 de 2.** Nos arquivos: `gearsforbreakfast` dá **zero**; `Gears for Breakfast`
+  dá **dois acertos e nenhum é carta** — `processados.csv` linha 2478 (a varredura de ATS do Wikidata
+  de 15/09) e a linha 4045 **deste arquivo**, que registra a casa como um dos alvos onde o
+  `recruiter-email` do Teamtailor devolveu **zero**. `Nicholls`, `William T` e `Sovereign` dão **zero
+  em `enviados.csv` e em `automacao/pessoas.csv`**. **PRIMEIRA PESSOA DA CASA.**
+- **PATROCÍNIO DE VISTO: não publicado, e aqui o assunto muda de forma.** A casa é **remota e
+  distribuída** (Dinamarca, Bélgica, EUA, Argentina, Reino Unido, Holanda no mesmo quadro de dez),
+  o que sugere **contratação sem mudança de país**, não patrocínio. Para o Vini isso pode valer mais
+  que visto, e o maestro decide como tratar.
+- **RESSALVA HONESTA:** (1) **sem endereço de pessoa**, e a única porta é o formulário e a `/contact`
+  da casa; (2) **o assento de arte 3D está ocupado justamente por ele** — escrever para o 3D Art Lead
+  de uma casa de dez pessoas é pedir indicação, não vaga, e a carta tem que dizer isso; (3) casa de
+  **dez pessoas publicadas**, ou seja orçamento de contratação pequeno e patrocínio improvável;
+  (4) o quadro não tem data no markup e o rodapé diz 2026, o que ajuda e não prova; (5) a página
+  `/jobs` existe no sitemap mas **não abriu conteúdo de vaga** nesta varredura, então **não posso
+  afirmar que há posição aberta**.
+
+### FICHA 4 — Max Boughen, **Studio Art Director** da Stellar Entertainment (Guildford, Reino Unido) — **`sem-email`, MAS É A ÚNICA CASA DA RODADA COM VAGA DE ARTE ABERTA E PUBLICADA**
+
+- **POR QUE ELE, e não outro da casa.** A `/team/` publica **nove** pessoas com cargo: Paul Ross
+  (Founder/CEO), Chris Roberts (Chief Creative Officer), Darren Potter (Head of Development), Doug
+  McConkey (Studio Business Director), **Max Boughen (Studio Art Director)**, David Jefferies
+  (Technical Director), Neil Rubie (CFO), Nicola Head (People & Development Director) e Robert
+  Kennedy (IT Director). **O único cargo de ARTE é o dele**, e o BRIEF-JOE põe Art Director no topo da
+  lista para casa pequena e média. Escolhi ele e **não** a Nicola Head (People & Development) porque
+  o BRIEF é explícito: quem atropela o checklist de patrocínio é quem viu o trabalho, não o RH
+  generalista. **A Nicola Head fica guardada como a segunda e última pessoa da casa**, e ela é a
+  escolha certa se o maestro preferir o caminho formal da vaga aberta.
+- **EMAIL: NÃO HÁ endereço de pessoa, e a linha entra com `sem-email`.** Varridos **16 caminhos em
+  dois esquemas e nos DOIS domínios da casa**, com decodificação de entidade, `data-cfemail` e
+  `[at]`/`(dot)`: o único endereço publicado em tudo é **`contact@stellarentertainment.software`**,
+  funcional, e ele aparece **na política de privacidade**, não na página de contato. **NADA FOI
+  MONTADO** — e aqui a tentação era grande, porque nove nomes com cargo num domínio próprio é o cenário
+  clássico de montar `max.boughen@`; **não montei nenhuma grafia.**
+- **ACHADO DE DOMÍNIO, E É A TERCEIRA VEZ EM TRÊS RODADAS QUE ISSO APARECE:** o `censo-wikidata.csv`
+  registra a casa em **`stellarentertainment.software`**, e o **site institucional vivo mora em
+  `stellar.games`** — domínio diferente. Pior: **o email publicado é do domínio ANTIGO**
+  (`@stellarentertainment.software`) enquanto o site é o novo. **Quem montasse endereço sobre o
+  domínio do site erraria; quem tratasse o domínio do censo como morto perderia a casa.** É a mesma
+  família do `onesize.nl` → `@onesize.com` e do `virtxgroup.com` → `@virtx.uk` das 08h55, e da
+  correção da Artifex de 08/09. **Antes de dar casa por morta ou por sem endereço, procure o outro
+  domínio.**
+- **URLs exatas abertas nesta rodada:** `https://www.stellar.games/team/` (**200, 58.990 bytes**),
+  com os nove pareamentos; `https://www.stellar.games/about-us/` (**200, 55.871 bytes**), com o
+  perfil; `https://www.stellar.games/join-us/`, que é onde estão as vagas; e
+  `https://www.stellar.games/privacy-policy/`, onde o endereço está escrito. O
+  **`team-sitemap.xml`** da casa publica **uma URL por pessoa** (`/team/max-boughen/`,
+  `/team/rob-kennedy/` e as outras), com data de modificação — foi ele que confirmou que o quadro é
+  recente (`2026-07-01`).
+- **VAGA DE ARTE ABERTA E PUBLICADA, na `/join-us/`: "Associate Art Director | Art | Guildford, UK".**
+  Ao lado dela, *"Senior Systems Engineer"*, *"Senior Generalist & Physics Engineer"* e *"Associate
+  Technical Director"*, todas em Guildford. E a casa escreve: *"Can't see your dream role? We are
+  always on the look for new talent, **drop your CV and cover letter into our talent pool** below"*.
+  **Isto sai desta ficha direto para a fila do Vini:** é vaga de arte, é Reino Unido, e o Art Director
+  que receberia a carta é o dono do departamento que abriu a requisição.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"We are on a mission to do something amazing
+  every day. We think building a winning studio is about delivering brilliant experiences for our
+  people, our partners and our players"*, e *"**Talented & experienced developers driving a people
+  centric studio**"*, e *"We are committed to ensuring our current and future members have an exciting
+  studio environment, **the best tools, and the empowerment to deliver their best work**"*.
+- **FORA DOS EUA: SIM, Guildford, Reino Unido.** **A frase de realocação ENTRA.**
+- **DEDUPE, e ele pegou um HOMÔNIMO que teria queimado a rodada:** Gmail
+  `in:anywhere (... stellar.games OR stellarentertainment OR Boughen ...)` devolveu **`{}`**;
+  `in:sent (... stellar.games ...)` devolveu **`{}`**. **0 de 2.** Nos arquivos, `Stellar` dá **um
+  acerto em `enviados.csv` e um em `automacao/pessoas.csv`, e NENHUM DOS DOIS É ESTA CASA**: o do
+  `pessoas.csv` (linha 255) é a **Stellar Creative Lab, estúdio de animação de Vancouver**, ficha de
+  12/09 da Marie Schindler; o do `enviados.csv` (linha 969) é a **House of How Games** e o acerto é
+  por substring no corpo da nota. **Stellar Entertainment de Guildford é casa terceira, distinta das
+  duas.** `Boughen` dá zero em tudo. **PRIMEIRA PESSOA E PRIMEIRA MENSAGEM DA CASA.**
+- **PATROCÍNIO DE VISTO: não publicado.** Sinais indiretos, e são os melhores da rodada depois da
+  Firesprite: *"**As a member of UKIE**, we are passionate about supporting the great work they do as
+  a non-profit, trade association for the UK's games and interactive entertainment industry, and as
+  part of our overall commitment to **fair, diverse, a[nd inclusive]**..."* e *"We are proud to
+  support **Women in Games** and have two Women in Games ambassadors at Stellar"*. **Compromisso
+  declarado de diversidade não é patrocínio e eu não vou dizer que é.**
+- **RESSALVA HONESTA:** (1) **sem endereço de pessoa**; a carta sairia para
+  `contact@stellarentertainment.software`, endereço colhido da **política de privacidade** e não da
+  página de contato, o que pela regra de 07/09 é justamente o tipo de caixa que pode estar morta —
+  **está publicada, mas não está publicada como canal de candidatura**; (2) a Stellar é **casa de
+  porte para outros** (o histórico dela é porte e coprodução de *Elite Dangerous* e afins), e
+  **nada nas páginas abertas nomeia personagem, criatura, groom ou modelagem de personagem** — a
+  vaga aberta é *Associate Art Director*, genérica, e pela regra de 10/09 ("modelagem e superfície
+  genéricas entram depois, e só quando o corpo do anúncio citar personagem") **eu não li o corpo do
+  anúncio nesta rodada e portanto não posso afirmar encaixe**; (3) o quadro publicado é **só
+  liderança**, sem um Character Artist sequer, o que enfraquece a via de indicação por colega de
+  ofício.
+
+### FICHA 5 — Anne Draaisma, **Art Director** da Grendel Games (Leeuwarden, Países Baixos) — **`sem-email`, E O VALOR DELA É FECHAR UM BURACO DE 15/09**
+
+- **POR QUE ELA, e não outro da casa.** A `/about-us/` publica **mais de vinte** pessoas com cargo, e
+  o único cargo de **direção de arte** é o dela: *"**Anne Draaisma | Art Director**"*. Ao lado estão
+  Jan-Jaap Severs (Founder & CEO), Tim Laning (Founder & Commercial Director), Chris Nengerman (Game
+  Design Director), Lena Van (Artist), Friso Roolvink (Game designer), Jenna Kamps (Executive
+  Assistant) e uma dúzia de engenheiros. Pelo BRIEF-JOE, em casa pequena e média o alvo 1 é **Art
+  Director**, antes do fundador. O Tim Laning fica guardado como a segunda e última pessoa da casa.
+- **EMAIL: NÃO HÁ endereço de pessoa, e a linha entra com `sem-email`.** O domínio publica
+  `info@grendelgames.com` e `support@grendelgames.com`, as duas funcionais, mais
+  `support@laptitude.com` de um produto. **NADA FOI MONTADO.**
+- **URL exata aberta nesta rodada:** `https://grendelgames.com/about-us/` (**200, 142.342 bytes**),
+  com o quadro inteiro; também `https://grendelgames.com/contact/` e
+  `https://grendelgames.com/privacy-policy/`. **Nota de acesso:** `https://www.grendelgames.com/about-us`
+  foi **rejeitado pelo proxy de saída dez vezes** (`connect_rejected`, política da organização); a
+  mesma página **abre sem `www`**. Registrado para ninguém dar a casa como morta.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"Grendel is an **internationally recognized
+  game development studio based in the Netherlands**. We specialise in **serious games, simulations
+  and gamification**"*, e *"Our mission is to improve the world. We do this by changing traditional
+  learning methods into **fun and engaging experiences**"*, e *"**Our awards are a testament to our
+  collaborative spirit and dedication to quality**"*.
+- **FORA DOS EUA: SIM, Leeuwarden** (Blokhuisplein 40, 8911 LJ). **A frase de realocação ENTRA**, e a
+  frase única de patrocínio também, por ser União Europeia. **A Holanda é a geografia que esta campanha
+  persegue desde 13/09.**
+- **DEDUPE, e é ele que dá a esta ficha o valor que ela tem:** Gmail
+  `in:anywhere (... grendelgames OR "Grendel Games" OR Draaisma)` devolveu **`{}`**;
+  `in:sent (... grendelgames.com ...)` devolveu **`{}`**. **0 de 2.** Nos arquivos, `Grendel` dá
+  **três acertos e nenhum é carta nem pessoa**: `censo-wikidata.csv` linha 1948 (só o domínio), e as
+  linhas **2352 e 2374 deste arquivo**, da rodada holandesa de 15/09, onde a Grendel aparece numa
+  lista de **quinze casas postas à mão** e é classificada como *"**Só caixa** (`info@`, `office@`,
+  `hello@`)"*. **Ou seja: a rodada de 15/09 mediu o ENDEREÇO da Grendel e parou ali; ela não abriu a
+  página de equipe e não colheu nome nenhum.** Esta ficha acrescenta exatamente o que faltava, o
+  **pareamento nome + cargo**, e o registro fica honesto sobre isso: **a casa não é inédita, a pessoa
+  é.** `Draaisma` dá zero em tudo.
+- **PATROCÍNIO DE VISTO: não publicado**, e a casa não tem `/careers` nem `/jobs` no sitemap.
+- **RESSALVA HONESTA, e é a mais dura desta rodada:** (1) **a disciplina está errada e isso é para o
+  maestro decidir, não para a carta disfarçar** — a Grendel é **jogo sério, simulação e gamificação
+  para saúde e treinamento** (`Grendel Medical`, `Laptitude`, cirurgia laparoscópica), e **nada no
+  site publica personagem, criatura, groom, modelagem 3D ou CG de elenco**; o quadro tem uma
+  *"Artist"* e uma *"Industrial Designer"*, o que sugere arte de interface e de produto; (2) **sem
+  endereço de pessoa**, a carta sairia para `info@`; (3) o rodapé diz **2024**, dois anos atrás, e o
+  quadro pode estar velho — **cargo desatualizado é pior que alvo nenhum** e eu não consegui datar o
+  quadro; (4) a casa já foi varrida em 15/09 e classificada como só-caixa, então **não há surpresa
+  nenhuma de porta aqui**: o que mudou é só o nome.
+
+### FICHA 6 — Helena Jones, **cargo NÃO PUBLICADO** (autora nomeada das *Kingster Career Stories* no site de carreiras), King (Estocolmo, Malmö, Londres, Barcelona, Berlim) — **PUBLICADO, confiança ALTA NO ENDEREÇO E ZERO NO CARGO, E ESTA FICHA É DELIBERADAMENTE A MAIS FRACA DA RODADA**
+
+- **POR QUE ELA, e não outro da casa.** **Não houve escolha entre pessoas: é o único endereço humano
+  que o domínio `king.com` entrega em toda a varredura.** A King não publica quadro de liderança com
+  email, não publica recrutador nomeado, e o único outro endereço que aparece é
+  `candidate-accomodations@activisionblizzard.com`, que é caixa de acessibilidade do grupo e vem com a
+  advertência literal *"**General employment questions cannot be accepted or processed here**"* —
+  portanto **não é porta e não vai ser usada.**
+- **EMAIL: `helena.jones@king.com` — PUBLICADO, confiança ALTA quanto ao ENDEREÇO.** Ele está escrito
+  **literalmente** dentro do payload JSON que o site de carreiras da King renderiza no servidor
+  (`phApp.ddo`, plataforma **Phenom People**), no objeto do artigo *"Breaking Barriers in Berlin:
+  Iulia's Story"*: `"author":{"id":"WsQnUJ","name":null,"email":"helena.jones@king.com","avatarUrl":null,"altText":null,"designation":null,"about":null,"phoneNumber":null}`.
+  **Não é padrão de domínio, não é montado, não é adivinhado: é o endereço que a própria King
+  publicou.** É a mesma família do `recruiter-email` do Teamtailor descrita em 07/09. **Busca no
+  documento inteiro por `@king.com` devolve esse endereço e mais nenhum**, e há um segundo objeto
+  `author` com `email: null` — ou seja o vazamento é de um autor só.
+- **URL exata aberta nesta rodada:** `https://careers.king.com/us/en/about-us` (**200, 91.218 bytes**)
+  e as páginas de artigo do mesmo site (`/us/en/blogarticle/breaking-barriers-in-berlin-iulia's-story`
+  entre outras), varridas a partir do índice `https://careers.king.com/us/en`. **O endereço não
+  aparece em nenhum texto visível da página** — só no JSON, o que explica por que a varredura
+  mecânica de `mailto` de 04/09 não o via.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"King is a leading interactive entertainment
+  company with more than 20 years of history ... including the world-famous **Candy Crush** franchise"*,
+  *"King, a part of Activision Blizzard, which was acquired by Microsoft, has **game studios in
+  Stockholm, Malmö, London, Barcelona and Berlin**"*, e *"**We're challenging ourselves to dream bigger
+  in a seriously playful way**"*.
+- **FORA DOS EUA: SIM, e é o melhor ponto desta ficha** — os cinco estúdios nomeados são **Estocolmo,
+  Malmö, Londres, Barcelona e Berlim**, ou seja Nórdicos, Reino Unido e União Europeia, exatamente a
+  frente do escopo. **A frase de realocação ENTRA.**
+- **DEDUPE:** Gmail `in:anywhere (Nicholls OR "3D Art Lead" OR helena.jones OR "king.com")` devolveu
+  **`{}`**. Nos arquivos: `Helena Jones` e `helena.jones` dão **zero** em `enviados.csv`,
+  `automacao/pessoas.csv`, `automacao/processados.csv`, `automacao/PESSOAS-SEM-CARTA.md` e
+  `docs/index.html`. O acerto de `king.com` no `pessoas.csv` é **falso positivo por substring** (a
+  linha 329 é a **Timeless Films**, do Reino Unido). **PRIMEIRA PESSOA DA CASA.**
+- **PATROCÍNIO DE VISTO: não publicado.** Casa do tamanho da King tem quadro de visto, mas o site
+  não escreve nada e eu não vou afirmar.
+- **RESSALVA HONESTA, e ela é longa de propósito porque esta ficha é frágil em três lugares
+  diferentes:**
+  1. **O CARGO NÃO ESTÁ PUBLICADO.** O campo `designation` vem **`null`**. O que se sabe é que ela é
+     a **autora registrada das histórias de carreira da King**, o que aponta para marca empregadora,
+     comunicação de talento ou recrutamento — **aponta, não prova.** Pelo padrão deste arquivo, a
+     coluna `cargo` fica com a descrição factual e **não com um título inventado**.
+  2. **O NOME SAI DO LOCAL-PART, não de um pareamento.** O campo `name` vem `null`, então "Helena
+     Jones" é a leitura de `helena.jones@`. **O endereço é publicado e real; o nome é a leitura mais
+     óbvia dele, e não uma montagem** — mas se a carta abrir com `Hi Helena,` e o endereço pertencer a
+     uma caixa compartilhada de comunicação, a abertura fica errada. **É risco de forma, e está dito.**
+  3. **RISCO DE GRUPO, e é o mais sério: a King é parte da Activision Blizzard, e a campanha já tem
+     uma RECUSA ESCRITA do grupo.** `processados.csv` linha 2222, 12/09: recusa na **Lead Character
+     Artist – Overwatch (Blizzard, Irvine, CA, requisição R027817)**. **Blizzard e King são estúdios
+     distintos, em países distintos, e a recusa foi de uma candidatura de portal a uma vaga
+     específica, não um pedido para não ser contatado** — pela letra do BRIEF-JOE não há veto à King.
+     **Mas a decisão é do maestro e eu não vou tomá-la numa ficha:** se ele entender que o grupo conta
+     como uma casa, esta ficha não vira carta. Está marcada assim no `pessoas.csv`.
+  4. **Disciplina:** a King é **jogo mobile de puzzle** (*Candy Crush*), e **nada no site nomeia
+     personagem 3D, criatura, groom ou modelagem de elenco**. É a ficha mais distante do portfólio
+     do Vini nesta rodada, e ela entra pelo endereço e pela geografia, não pelo encaixe.
+
+---
+
+### DESCARTES COM MOTIVO NOMEADO, PARA NENHUMA RODADA FUTURA GASTAR REQUISIÇÃO
+
+**Endereço publicado mas SEM pareamento nome + cargo — não vira ficha, por regra:**
+- **nineteentwenty / 1920vfx** (Londres e Bristol, Reino Unido) — `jon@1920vfx.com` publicado no bloco
+  de contato de Londres, e `production@1920vfx.com` no de Bristol, mais `Helloindia@1920vfx.com` em
+  Bangalore. **O site é `nineteen-twenty.com` e o email é `@1920vfx.com`, domínio diferente**, e há um
+  quadro de carreiras próprio em `careers.1920vfx.com` (**200, 54.333 bytes**, e o `recruiter-email`
+  do Teamtailor **não** aparece nele). A casa nomeia os fundadores no texto — *"established in 2013 by
+  producer **Scott Griffin** and Visual Effect Supervisors **Ludo Fealy** and **Chrys Aldred**"* — mas
+  **nenhum deles é o "jon"**, e o site não diz quem é. **Endereço sem nome não é ficha.** Registro os
+  três nomes com cargo para quem achar o pareamento depois.
+- **Split VFX** (Reykjavík) — `jon.mar@split.is` publicado, **nome não publicado em página nenhuma**.
+  E já constava da linha 4402.
+- **Studio Rævling** (Viborg) — `lakstein@studioraevling.com` publicado, e a página de equipe traz
+  **texto de gabarito não editado** (*"John Smith | CEO"*, *"Lorem ipsum dolor sit amet"*,
+  `contact@website.com`). **Nome real não publicado.**
+- **Bunnyhug** (Reino Unido) — a página de equipe pareia *"**Lu Nascimento** | Co-Founder & Art
+  Director"* e *"Zach Soares | Co-Founder & Creative Director"*, **e o domínio do site
+  (`bunnyhuggames.com`) não publica endereço nenhum**; o único endereço da casa é
+  **`hello@bunnyhug.games`**, em OUTRO domínio, e é caixa funcional. **Fica guardado como par nome +
+  cargo sem endereço**, para o maestro decidir se vale carta em `hello@`.
+
+**Morto por disciplina, com nome e cargo na mão:**
+- **Failbetter Games** (Londres) — Paul Arendt (Art Director), Tobias Cook (Lead Artist), Adam Myers
+  (CEO); só `messages@failbettergames.com`, e o catálogo é **narrativo em 2D** (*Fallen London*,
+  *Sunless Sea*). **Sem 3D.**
+- **Ghost Town Games** (Reino Unido) — Phil Duncan (Creative Director); **zero endereço publicado** em
+  16 caminhos, e o quadro cita *"Co Founder of Paper Snake animation studio"* de dois outros nomes.
+- **Hovgaard Games** (Dinamarca) — Jonas Hovgaard (Game Director & Founder), Ana Bolumar (Lead
+  Artist); nenhum endereço de pessoa.
+- **Egmont** (Copenhague) — a casa publica **onze** endereços de pessoa (`amanda.justesen@`,
+  `jesper.eising@` e nove de iniciais), mas é **grupo editorial e de mídia**, não estúdio de
+  personagem. E o `BRIEFING.md` já registra `teamtailor/egmont` como **homônimo de editora**.
+- **B Entertained** (Aarhus) — `martin@bentertained.dk`: é **agência de booking de comédia e
+  stand-up**. Entrou na lista de Arsenalet e sai daqui.
+- **Blazing Griffin** (Glasgow), **Cosmonaut Studios** (Liverpool), **Denki** (Dundee),
+  **Infinite State Games**, **Medallion Games**, **Northplay**, **Midjiwan**, **Kristanix**,
+  **Myrkur Games**, **Michael Levall** — varridos, e são **indie pequeno sem assento de personagem 3D
+  publicado** ou endereço só funcional.
+- **Livingstory**, **PRiME WORX**, **Multiverse Narratives**, **Unigames**, **Cre8Labs**,
+  **Stridequest**, **After Nature Productions**, **Vlinder Media**, **Digital Orphan**,
+  **Liminal Group**, **Studio MX**, **Playstaxel**, **Grendel** (à parte da ficha 5),
+  **BlackMill Games**, **Stellar Entertainment** (à parte da ficha 4) — os treze vieram da Dutch
+  Games Association e **doze são consultoria, escrita de jogo, jogo sério corporativo, evento ou
+  freelancer de um só nome**. `gamebasics.nl` devolve **`dataprotection@miniclip.com` e
+  `info.mnl@miniclip.com`**, porque a casa **foi comprada pela Miniclip** — armadilha de identidade
+  registrada. `teamupdraft.com` devolve **`johngreen@business.com`**, que é **texto de gabarito**, não
+  endereço da casa.
+
+**Retirado ANTES de gastar requisição, por já estar no `touched.txt` de 2.751:** `chimneygroup.com`,
+`fenomen.no`, `fido.se`, `ghost.dk`, `gimpville.no`, `mikrofilm.no`, `tordenfilm.no`, `afilm.dk`,
+`afilm.com`, `noerlum.com`, `hydralab.com`, `sorenfleng.com`, mais **115 dos 170 domínios da Dutch
+Games Association** e **116 dos 199 do `garimpo-cgstudiomap.csv`** dos países prioritários.
+
+**NÃO CONFERIDOS, nomeados, para o registro ficar honesto:** `swedishgames.se` (**000,
+`CONNECT tunnel failed 502`** do proxy, duas tentativas), `zoovfx.com` e `oddbodcreations.com`
+(**000 em `https://www.` e `https://`**), `clothcatanimation.com` (**202 com 168 bytes**, casca),
+`picturesmith.tv` (**403 com 70 bytes**), `tumblehead.dk` (**000 nos dois esquemas** — o site vivo é
+**`tumblehead.com`**, 200 com 192.224 bytes, e publica **só `contact@tumblehead.com`** e nenhum nome),
+`happygrove.studio` (abre **só sem `www`**, 200 com 169.701 bytes, e **não publica nome nenhum** apesar
+de o diretório de Arsenalet dar `frederikke@happygrove.studio`), `animasjon.no` (**erro de TLS,
+`tlsv1 unrecognized name`**) e `norskanimasjon.no` (**certificado não casa com o host**).
+
+### PLACAR HONESTO DA RODADA DAS 12h35
+
+**Seis pessoas novas**, dentro da faixa de 4 a 8: **duas com endereço PUBLICADO**
+(Stefan Runeberg Fjeldmark / EyeCandyFilm, Helena Jones / King) e **quatro `sem-email`** guardando
+nome, cargo e casa (Rob Thornely / Firesprite, William T. Nicholls / Gears for Breakfast, Max Boughen
+/ Stellar Entertainment, Anne Draaisma / Grendel Games).
+
+**Nenhum endereço montado. Nenhum inventado. Nenhuma segunda grafia de ninguém** — e houve **seis**
+oportunidades claras de errar isso: `rob.thornely@firesprite.com` e `rthornely@` (casa grande, padrão
+de domínio nunca provado), `max.boughen@stellar.games` (nove nomes com cargo num domínio próprio),
+`william.nicholls@gearsforbreakfast.com` (existe página de perfil por pessoa), `anne@grendelgames.com`
+e `linni@eyecandyfilm.dk`.
+
+**Por disciplina, e é o melhor ponto desta rodada:** **TRÊS das seis são de personagem ou de arte 3D**
+— **Lead Character Artist** (Thornely, o cargo exato do Vini), **3D Art Lead** (Nicholls, num estúdio
+de personagem estilizado) e **Studio Art Director** com **vaga de Associate Art Director aberta em
+Guildford** (Boughen). A EyeCandyFilm é a que tem o **melhor gancho de personagem em palavras da
+própria casa** (*"we want to know our characters"*). As fracas de disciplina são a Grendel (jogo
+sério de saúde) e a King (puzzle mobile), e as duas estão declaradas na própria ficha.
+
+**Por região:** **Reino Unido 3** (Liverpool, Guildford, e o Nicholls que é UK numa casa dinamarquesa),
+**Dinamarca 2** (Copenhague, sede da Gears), **Países Baixos 1** (Leeuwarden), e a King entra por
+**Estocolmo/Malmö/Londres/Barcelona/Berlim**. **Vancouver: ZERO** — e o motivo está medido, não
+suposto: **DigiBC responde 403 duas vezes** e as quatro casas inéditas de Vancouver do
+`garimpo-cgstudiomap.csv` (Kalos, Stormborn, Goldtooth, Fuse FX) **publicam `info@` e nenhum nome**
+(Stormborn 1.006.521 bytes e Goldtooth 1.028.432 bytes lidos, zero pareamento nome + cargo).
+
+**Por tamanho:** Firesprite é **casa grande** (PlayStation Studios), King é **casa muito grande**
+(Microsoft), Stellar **9 nomes publicados**, Gears **10**, Grendel **20+**, EyeCandyFilm **2**.
+**Nenhuma publica política de visto.** Os dois melhores sinais publicados são a **Firesprite**
+(*"relocation assistance"* escrito na lista de benefícios) e a **Stellar** (membro da UKIE, embaixadoras
+do Women in Games) — e **nenhum dos dois é patrocínio, está dito nas fichas.**
+
+**Dedupe, por casa: as SEIS estão em 0 de 2**, com `{}` em quatro buscas de Gmail por nome e por
+domínio, `in:sent` por domínio `{}`, e conferência nos seis arquivos do repositório. **Quatro
+candidatos com endereço de pessoa na mão foram MORTOS pelo dedupe** (Gimmick por veto escrito de
+`Work permit for the EU is needed`, Shortcut Oslo por zero cargo de 3D, GoodJobStudios por
+`animated illustration`, Ouros e Split por ficha anterior), e **três armadilhas de homônimo e de
+substring foram pegas**: `Stellar` bate na **Stellar Creative Lab de Vancouver** e na **House of How
+Games**, `Eye Candy` bate na **Eye Candy Animation de Canberra**, e `king.com` bate na **Timeless
+Films** por substring.
+
+**Fontes abertas:** o diretório de `arsenalet.dk/companies/companies` (40+ empresas com email na
+linha), a página de membros da Dutch Games Association (170 domínios), o `censo-wikidata.csv`
+filtrado por 8 países prioritários (591 domínios, 466 inéditos), o `garimpo-cgstudiomap.csv` filtrado
+por cidade e por país, e o payload `phApp.ddo` do Phenom People no `careers.king.com`.
+**Casas varridas: 340 domínios**, com 10 a 24 caminhos cada em dois esquemas, mais sitemap e
+sitemap_index de cada um.
+
+**O que travou, em uma linha:** **três dos cinco diretórios de associação dos países prioritários
+estão mortos ou inacessíveis** (Spillmakerlauget virou casca de Discord, DigiBC dá 403, Swedish Games
+Industry é bloqueado pelo proxy), e **as duas veias nórdicas que sobraram já tinham sido mineradas em
+16/09** — quatro candidatos com endereço publicado e conferido caíram no dedupe por isso, o que
+significa que **a fronteira útil da caça não é mais "domínio inédito", é "pessoa inédita dentro de
+domínio já resolvido"**; e **Vancouver, que é a primeira prioridade do escopo, continua sem porta**
+porque a associação está fechada e as casas inéditas de lá não publicam um único nome.
