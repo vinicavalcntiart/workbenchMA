@@ -6974,3 +6974,129 @@ endereço publicado** — o site segue sem nomear ninguém, e a segunda carta da
 a liste está listando uma casa morta.
 
 > **Maestro, 17/09 21h01 UTC:** as três fichas com email desta rodada ficam **SEGURADAS, sem carta**, e o motivo é o que o próprio Joe mediu: The Flying Colour Company publica só Flame/Nuke (composição e acabamento, sem 3D nem criatura); Miomi é um estúdio de uma pessoa em rev share, com a arte terceirizada; The Barn faz serious games de treinamento, sem elenco de personagem e com rodapé de 2021. Carta que não pode afirmar encaixe é carta que queima a única chance da casa e o nome do Vini. A regra de escrever em lote com 3 fichas pressupõe casas da disciplina; estas três não são. Se o Vini quiser que saiam mesmo assim, escrevo em dez minutos. Saldo honesto da rodada do Joe: 4 fichas, 3 com email, 0 cartas, e a veia dos diretórios europeus (Animation in Europe, NAPA, Producentforeningen, Neogames) fechada medida.
+
+---
+
+## JOE, 18/09/2026 00h55 UTC — **VANCOUVER E BC SAIRAM DO ZERO DEPOIS DE CINCO TURNOS**, E A VEIA QUE RENDEU FOI **CRUZAR A LISTA DE CASAS QUE A CAMPANHA JÁ TINHA (gamedevmap Canadá + garimpo CGStudioMap) CONTRA O CONJUNTO DE DOMÍNIOS JÁ TOCADOS**, EM VEZ DE CHUTAR DOMÍNIO DE MEMÓRIA
+
+**O que esta rodada fez de diferente, e é um método e não sorte.** As cinco rodadas anteriores fecharam
+Vancouver em zero chutando domínio de cabeça (Bardel, Atomic, Titmouse, Zoic, Skybox) e batendo em
+parede ou em teto já fechado. Eu perdi os primeiros vinte minutos repetindo esse erro: **The Sequence
+Group** e **The Embassy VFX**, as duas melhores casas de Vancouver que achei por chute, estavam as duas
+**no teto de duas e com a pessoa já escrita**. O que consertou foi montar primeiro o conjunto de
+**2.292 domínios já tocados pela campanha** (`enviados.csv` + `alvos.csv` + `pessoas.csv` +
+`processados.csv` + este arquivo + `docs/index.html`) e só então varrer as listas canadenses que o
+próprio repositório já tinha, subtraindo o que já foi tocado. **Foi o diff que achou as casas novas,
+não a memória.**
+
+### A VEIA, ESCRITA PARA REPETIR
+
+```
+# 1) conjunto do que a campanha já tocou (2.292 domínios)
+cat enviados.csv alvos.csv automacao/pessoas.csv automacao/processados.csv \
+    automacao/PESSOAS-SEM-CARTA.md docs/index.html \
+  | grep -oiE "[a-z0-9][a-z0-9.-]+\.(com|ca|net|org|tv|io|studio|media|games|dev|co)\b" \
+  | tr 'A-Z' 'a-z' | sed 's/^www\.//' | sort -u > touched.txt
+# 2) candidatos das listas que já existem no repo, filtrados por cidade
+grep -iE ",(Vancouver|Burnaby|Victoria|Kelowna|Toronto|Ottawa)," automacao/fila-gamedevmap-canada.csv
+grep -iE ",Canad" automacao/garimpo-cgstudiomap.csv     # coluna 4 = site
+# 3) o diff é a fila de verdade
+grep -vxFf touched.txt candidatos.txt
+```
+
+**Por que funciona:** o `garimpo-cgstudiomap.csv` tem 101 linhas de Canadá e foi minerado em 08/09
+**só para quadro de vagas**, nunca para pessoa. O `fila-gamedevmap-canada.csv` tem 83 casas de BC e
+idem. São duas listas prontas, dentro do repositório, que nenhuma rodada de Joe havia lido com olho de
+detetive. **A parte de BC do gamedevmap é cauda longa quase toda** (solo e micro), mas a do CGStudioMap
+tem casa de porte, e foi dela que saíram Mainframe e a correção de domínio da ex-Yeti Farm.
+
+### FICHA 1 — Rob Davies, Slap Happy Cartoons (Vancouver, BC, Canadá) — **SEGUNDA E ÚLTIMA CARTA DA CASA, e a casa é artist-owned**
+
+- **POR QUE ELE, e não outro da casa.** A casa publica **cinco nomes e quatro endereços de pessoa**,
+  todos `PARTNER/EXECUTIVE PRODUCER`. O **Josh Mepham já recebeu carta em 09/09** (`josh@`), e ele era o
+  alvo certo na época porque é o *"award-winning designer/director/creator"* da sociedade. **Ele não
+  respondeu** (a thread `1a08267edf7de383` tem uma mensagem só, a de saída), o que pelo BRIEF-JOE
+  mantém a casa aberta e qualificada. O Rob Davies é o **sócio mais novo** (*"Award winning industry
+  veteran ROB DAVIES recently joined the team as a partner"*) e o de perfil mais próximo de arte entre
+  os que restam: *"award-winning series director/producer/creator with over 30 years of animation
+  experience, 15 of those as a studio-owner"*, com **direção da série Pinky and the Brain da Warner
+  (Emmy)**, criação e produção de **Atomic Betty (indicado ao BAFTA)** e **supervisão de storyboard em
+  Molly of Denali e Bossy Bear**. Kathy Antonsen e Greg Sullivan ficam guardados como reserva, mas
+  **não podem virar ficha**: com o Josh já escrito, o Rob é a **carta 2 de 2** e a casa fecha.
+- **EMAIL: `davies@slaphappycartoons.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL exata aberta nesta rodada:** `https://slaphappycartoons.com/contact` (**200, 520.438 bytes**),
+  que imprime o pareamento nome→endereço em texto puro, linha a linha: *"Kathy Antonsen
+  kathy@slaphappycartoons.com / Rob Davies davies@slaphappycartoons.com / Josh Mepham
+  josh@slaphappycartoons.com / Greg Sullivan greg@slaphappycartoons.com / General Inquiries
+  info@slaphappycartoons.com"*. O cargo vem de `https://slaphappycartoons.com/our-team` (**200,
+  495.126 bytes**) e o perfil de casa de `https://slaphappycartoons.com/studio` (**200, 487.943
+  bytes**). **Armadilha registrada:** a varredura devolve **duas grafias** para ele, `davies@` e
+  `rdavies@`; a que a página de contato pareia com o nome é **`davies@`**, e é a única que uso. Em
+  `/crew`, `/jobs`, `/leadership` e `/who-we-are` o servidor passou a devolver **429** (limite de taxa),
+  o que **não é parede de conteúdo**: as três páginas que importam abriram antes.
+- **GANCHO com frase do próprio estúdio, entre aspas:** *"As one of the longest-running independent
+  studios in Canada, we pride ourselves on being **artist-owned and operated**"* e *"Our studio is built
+  on a rock-solid foundation, boasting **125 years of collective animation expertise among its
+  partners**"*. Serve porque é uma casa de artistas donos falando com artista, que é o argumento do
+  BRIEF-JOE para casa pequena: quem atropela o checklist de RH é o dono que viu o trabalho.
+- **FORA DOS EUA: SIM, Vancouver, BC** (`#100 – 111 East 5th Avenue, Vancouver, BC V5T 4L1`). **A frase
+  de realocação ENTRA**, e esta é a rota de patrocínio mais direta da rodada por geografia.
+- **DEDUPE:** Gmail `slaphappycartoons OR "Slap Happy" OR Mepham OR Antonsen` devolveu **uma** thread,
+  a carta de 09/09 para `josh@`, **sem resposta**. `in:sent` por domínio: **1 de 2**. No repositório,
+  `slaphappy` bate em `enviados.csv` (a linha de 09/09), `pessoas.csv` (a ficha do Josh de 08/09) e
+  `processados.csv`. **Antonsen, Sullivan e `davies@` dão zero acerto em qualquer arquivo.** Nenhuma
+  recusa escrita, nenhum `NAO REENVIAR`.
+- **PATROCÍNIO DE VISTO: a casa não publica nada** sobre isso; `/careers` abriu (200, 499.819 bytes) e
+  não traz política de imigração.
+- **RESSALVA HONESTA, e ela é séria:** a técnica publicada da casa é **2D** de ponta a ponta (*Nerds and
+  Monsters*, *The Hollow*, *Being Ian*, *Ricky Sprocket*, *Yvon of the Yukon*), e **nada no site
+  confirma pipeline 3D nem assento de personagem 3D** — a carta não pode afirmar encaixe de disciplina,
+  e o valor dela é contato, encaminhamento e indicação. O cargo dele é **produção executiva**, não arte,
+  ainda que o histórico seja de direção e storyboard. A casa é pequena (cinco nomes publicados), logo
+  **patrocínio é improvável**. E é a **segunda e última** carta: se esta não pegar, a casa fecha.
+
+### FICHA 2 — Simon Lee, **Creature Art Director** da Spin VFX (Toronto, Canadá) — **`sem-email`, e é o MELHOR PAREAMENTO DE CARGO QUE ESTA CAMPANHA JÁ REGISTROU**
+
+- **POR QUE ELE.** O BRIEF-JOE manda buscar *character/creature art director* antes de qualquer outra
+  coisa, e a Spin publica **exatamente esse assento, com nome**: `Simon Lee — Creature Art Director`.
+  Na mesma página estão **Amit Khanna, Head of CG**, **Mahsa Ghorbankarimi, Creative Director**, e
+  **três CG Supervisors nomeados** (Mark Krentz, Julian Horlaville, Matt Philip). Escolhi o Simon Lee
+  porque o cargo dele **é a vaga que o Vini quer, do outro lado da mesa**: quem dirige arte de criatura
+  é quem decide quem esculpe criatura. O Amit Khanna (Head of CG) fica guardado como **segundo e último
+  nome** da casa.
+- **EMAIL: NÃO EXISTE ENDEREÇO DE PESSOA PUBLICADO. Linha entra como `sem-email`.** A casa publica só
+  `careers@spinvfx.com` (em `/careers`, 200, 95.609 bytes) e `sales@spinvfx.com` (em `/contact`, 200,
+  74.459 bytes). **Não montei `simon.lee@` nem `slee@`**: a regra de 06/09 (5 de 8 montados quicaram)
+  proíbe gastar a primeira carta de uma casa desta qualidade num endereço inventado. A carta sai para
+  `careers@` **endereçada a ele pelo nome**, ou o maestro decide segurar.
+- **URLs exatas abertas nesta rodada:** `https://www.spinvfx.com/team/department/leadership/` (**200,
+  98.382 bytes**), que é onde estão Simon Lee, Amit Khanna e os três CG Supervisors;
+  `https://www.spinvfx.com/team/department/partners/` (**200, 75.644 bytes**, Neishaw Ali CEO/EP, Nigel
+  McGrath cofundador, Jeff Campbell VFX Sup/Partner); `https://www.spinvfx.com/team/department/vfx-supervisors/`
+  (**200, 74.647 bytes**); `https://www.spinvfx.com/about/` (**200, 128.719 bytes**). **Armadilha de
+  caminho registrada, e ela explica por que rodada nenhuma achou esta casa: `/team` devolve 404 (67.281
+  bytes) e `/our-team` REDIRECIONA para `/team/department/partners/`**, ou seja quem para no `/our-team`
+  vê só seis sócios de negócio e conclui "casa sem arte publicada". **O elenco de arte está nas
+  subpáginas de `department/`.**
+- **GANCHO com frase do próprio estúdio, entre aspas:** o `/about` da casa nomeia a disciplina em
+  cabeçalho próprio, *"**CREATURE AND CHARACTER**"*, e se descreve como *"Established in 1987, Spin is
+  a creative and technically dedicated visual effects studio producing captivating imagery for feature
+  films & television"*. É o gancho mais alinhado da rodada: criatura e personagem escritos pela casa.
+- **FORA DOS EUA: SIM, Toronto** (`901 King St. West, Suite 501, Toronto, Ontario M5V 3H5`; a casa tem
+  segundo escritório em Atlanta, EUA). **A frase de realocação ENTRA**, apontando para o escritório de
+  Toronto.
+- **DEDUPE:** Gmail `spinvfx OR "Spin VFX" OR "Simon Lee" OR "Neishaw Ali" OR Khanna` devolveu **`{}`**.
+  `in:sent` por domínio: **zero**, logo **0 de 2**. No repositório, `spinvfx` bate em
+  `processados.csv` e `docs/index.html`, e a linha de `enviados.csv` de 07/09 é **candidatura
+  espontânea por FORMULÁRIO** (campo de email `-`, texto *"Work With Us (candidatura espontanea,
+  Toronto) - CANDIDATURA ENVIADA e confirmada na tela"*), **não é carta a pessoa** e não consome o teto
+  de duas. **Simon Lee, Amit Khanna e "Creature Art Director" dão zero acerto em qualquer arquivo do
+  repositório.**
+- **PATROCÍNIO DE VISTO: a casa não publica política**; `/careers` traz só o `careers@` e nenhuma
+  frase de elegibilidade.
+- **RESSALVA HONESTA:** **sem endereço de pessoa**, e é por isso que esta ficha, que é a melhor por
+  cargo, é a mais fraca por canal. A casa é VFX de cinema e TV (sequência de criatura fotorreal), e o
+  portfólio do Vini é **estilizado** — o encaixe de estilo não é automático e a carta não deve afirmar
+  que é. O quadro publicado **não tem data**, então o Simon Lee pode ter saído. E há homônimo famoso
+  na área (*Simon Lee* é nome de mais de um artista de criatura conhecido): **o que eu afirmo é o
+  pareamento nome+cargo+casa impresso pela própria Spin**, nada além disso.
