@@ -4873,3 +4873,33 @@ piso de 1.000**, então a régua de veto nela é **leitura inválida** e o veto 
   As listas canadenses (`fila-gamedevmap-canada.csv`, `garimpo-cgstudiomap.csv`) ficaram **sem
   sondar** neste turno por tempo, e são a próxima perna óbvia desta mesma veia — com a vantagem de
   que ali o domínio também já está publicado.
+
+### Adendo das 04h49 — A PERNA CANADENSE DA MESMA VEIA: O BOLSÃO `pagina-sem-ats` ESTÁ ESGOTADO PARA FORMULÁRIO, E O QUE RESTA ALI É CARTA
+
+O §7 acima diz que as listas canadenses eram a próxima perna óbvia. Rodei. **Alvo escolhido pelo
+critério da veia**, não por volume: das 426 casas de `automacao/fila-gamedevmap-canada.csv`, 299 já
+estão marcadas `sem-pagina-de-carreira` e 20 já têm porta de ATS identificada, então o único bolsão
+que interessa a uma caça de **formulário** são as **64 marcadas `pagina-sem-ats`** (carreira viva,
+nenhum ATS conhecido atrás) mais as 17 `site-fora-do-ar` (que pela armadilha escrita no próprio
+arquivo podem ser só `http://` ou `www.` faltando). Dedupe por **prefixo** de rótulo tirou 37 das 81.
+
+**44 hosts × 8 caminhos = 352 sondagens: 182 × 404, 90 × 200, 80 × 000. 54 páginas úteis
+não-catch-all em 26 hosts. ZERO porta de formulário da disciplina.**
+
+O que apareceu foi **rota por e-mail**, duas vezes, e as duas viraram ficha de carta:
+a **Hildring Studios** (Vancouver) com uma vaga VIVA de `3d Environment-artist` para o jogo *Sacre
+Bleu* no Unreal — *"Make + Place some extra set-dressing (models+texture)"*, UV em Blender, shaders,
+**remoto por escrito** e régua limpa nos 1.338 caracteres da própria página — recebida em caixa da
+casa; e a **81monkeys** (Vancouver), com espontânea declarada (*"Send your resume and/or portfolio
+to"*) e a única vaga nomeada marcada `Closed`.
+
+> **Leitura da lane, e ela fecha o bolsão: no Canadá, casa com página de carreira e SEM ATS é indie
+> pequena que recebe por e-mail.** `pagina-sem-ats` não é sinônimo de "formulário próprio a
+> descobrir" — nas 44 medidas, é sinônimo de "endereço de função na página". O que rende nesse
+> bolsão é **carta**, e ele não deve voltar para a fila de formulário.
+
+**Dois controles que evitariam número falso neste adendo, e os dois já têm regra escrita:**
+`flowmotionentertainment.com` devolve 200 com os **mesmos 60.464 bytes nos OITO caminhos, inclusive
+no inventado** (catch-all puro; sem o md5 do `/zzz-naoexiste-jhon18` ela entrava com oito páginas de
+carreira, e o `character` dela é personagem de jogo de cozinha); e `maplepoweredgames.com` devolve
+**200 com 114 bytes e zero caractere de texto** nos oito — **NÃO CONFERIDA**, não "sem porta".
