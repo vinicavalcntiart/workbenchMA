@@ -390,3 +390,17 @@ fora, apesar da palavra "creature". Concept e character design 2D também estão
 
 **E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
 entram, por mais que o título seja perfeito.
+
+## 18/09 23h50 UTC, painel refeito: duas obrigações novas do Comunicador
+
+1. **Etapa do estúdio no `STUDIOS`.** Toda resposta humana muda o SEXTO campo da linha do estúdio
+   em `docs/index.html` (`const STUDIOS`): `respondeu` só enquanto a resposta ainda não foi tratada;
+   `conversa` depois de respondida; `entrevista` quando há Meet, teste ou chamada marcada; `oferta`;
+   `recusado` para recusa humana. A seção "Conversas abertas" e o cartão "estúdios responderam" do
+   painel leem só esse campo. Etapa vazia = "aguardando", e isso esconde a conversa do Vini.
+2. **Agenda.** Entrevista, teste ou chamada com data vira uma linha no `const AGENDA`:
+   `["2026-09-21T16:00:00Z","Casa · Google Meet com Fulano (cargo)","texto curto com fuso e duração"]`
+   (data-hora em UTC; só a data quando o dia ainda não está fechado). Nunca coloque o link do Meet
+   nem telefone: o repositório é público. O painel some com a linha quando a hora passa.
+3. **DAILY com cinco campos** desde 19/09: `[data, emails, respostas humanas, formulários, formulários de personagem]`.
+   Quem fecha o dia recalcula os dois últimos do `enviados.csv` (contagem da rodada de formulários).

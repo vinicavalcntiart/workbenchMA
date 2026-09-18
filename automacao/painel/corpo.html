@@ -1,0 +1,163 @@
+<div class="wrap">
+  <header class="topo">
+    <div class="topo-linha">
+      <div class="logo" aria-hidden="true">VC</div>
+      <div style="min-width:0">
+        <h1>Campanha Vini Cavalcanti</h1>
+        <p class="sub">Senior 3D Character Artist · <span id="updated"></span></p>
+      </div>
+      <button class="btn btn-ghost" id="themeBtn" aria-label="Alternar tema">🌗</button>
+    </div>
+    <nav class="menu" id="menu" aria-label="Seções">
+      <a href="#hoje">Hoje</a>
+      <a href="#acoes">Na sua mão<span class="n" id="nAcoes"></span></a>
+      <a href="#conversas">Conversas<span class="n" id="nConv"></span></a>
+      <a href="#novidades">Novidades<span class="n" id="nNov"></span></a>
+      <a href="#portais">Formulários<span class="n" id="nPort"></span></a>
+      <a href="#grandes">Grandes</a>
+      <a href="#numeros">Números</a>
+      <a href="#joe">Pessoas<span class="n" id="nJoe"></span></a>
+      <a href="#prospec">Prospecção</a>
+      <a href="#kit">Kit</a>
+      <a href="#dossies">Dossiês</a>
+      <a href="#estudios">Estúdios</a>
+    </nav>
+  </header>
+
+  <div class="alerta" id="alerta" role="alert" hidden>✕ <b>Atenção:</b> <span id="alertaMsg"></span></div>
+
+  <section class="sec" id="hoje">
+    <div class="hero">
+      <div class="card placar" id="placar"></div>
+      <div class="card semana"><h3>Últimos 14 dias</h3><div id="semanaChart"></div><div class="leg" id="semanaLeg"></div></div>
+      <div class="card agenda"><h3>Agenda</h3><div id="agendaList"></div></div>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="sec" id="acoes">
+    <h2>🖐️ Na sua mão <span class="badge" id="acoesBadge"></span></h2>
+    <p class="hint">O que a automação não resolve sozinha, em ordem de urgência. Cada cartão leva para o lugar certo.</p>
+    <div class="acoes" id="acoesList"></div>
+  </section>
+
+  <section class="sec" id="conversas">
+    <h2>💬 Conversas abertas <span class="badge" id="convBadge"></span></h2>
+    <p class="hint">Estúdios onde há um humano do outro lado: respondeu, está em conversa, marcou entrevista ou fez oferta.</p>
+    <div class="conv" id="conversasList"></div>
+  </section>
+
+  <section class="sec" id="novidades">
+    <h2>📰 Novidades <span class="badge" id="novBadge"></span></h2>
+    <div class="chips" id="novChips"></div>
+    <div class="feed" id="novList"></div>
+    <button class="mais" id="novMais" type="button">mostrar mais</button>
+  </section>
+
+  <details class="sec" id="portais" open>
+    <summary><h2>📝 Formulários e portais</h2><span class="badge" id="portalBadge"></span></summary>
+    <div class="card" style="margin-bottom:10px">
+      <div class="segbar" id="portalBarra"></div><div class="legend" id="portalBarraLegend"></div>
+      <p class="hint" id="portalHint" style="margin:10px 0 0"></p>
+    </div>
+    <div class="chips" id="portalChips"></div>
+    <div class="controles"><input type="search" id="portalQ" placeholder="Buscar estúdio, país, vaga…" aria-label="Buscar formulários"></div>
+    <div class="lista" id="portalRows"></div>
+    <button class="mais" id="portalMais" type="button">mostrar mais</button>
+  </details>
+
+  <details class="sec" id="grandes">
+    <summary><h2>🏆 Estúdios grandes</h2><span class="badge" id="grandeBadge"></span></summary>
+    <div class="card" style="margin-bottom:10px">
+      <h3>Alerta de vaga nos grandes</h3>
+      <p class="hint">Alerta feito uma vez avisa para sempre. Onde não existe, a vaga só aparece se alguém olhar.</p>
+      <div class="segbar" id="grandeAlerta"></div><div class="legend" id="grandeAlertaLegend"></div>
+      <p class="hint" id="grandeHint" style="margin:10px 0 0"></p>
+    </div>
+    <div class="lista" id="grandeRows"></div>
+  </details>
+
+  <details class="sec" id="numeros" open>
+    <summary><h2>📊 Números da campanha</h2><span class="badge" id="numBadge"></span></summary>
+    <div class="grid2">
+      <div class="card chart"><h3>Formulários por dia</h3><p class="hint">Confirmados no dia, com a parte de personagem em destaque e a linha da meta</p><div id="formsChart"></div><div class="legend" id="formsLeg"></div></div>
+      <div class="card chart"><h3>Emails e respostas humanas por dia</h3><p class="hint">Cartas frias, follow-ups e respostas que saíram, contra o que voltou de gente</p><div id="mailChart"></div><div class="legend" id="mailLeg"></div></div>
+      <div class="card chart"><h3>Funil do email</h3><p class="hint">Só a trilha de email; formulários não passam por aqui</p><div id="funnel"></div></div>
+      <div class="card"><h3>Situação dos emails</h3><p class="hint">Onde está cada email que saiu</p><div class="segbar" id="statusbar"></div><div class="legend" id="statusLegend"></div></div>
+      <div class="card chart" style="grid-column:1 / -1"><h3>Estúdios contatados por país</h3><p class="hint">Sede principal de cada estúdio, email e formulário juntos</p><div id="paises"></div></div>
+    </div>
+  </details>
+
+  <details class="sec" id="joe">
+    <summary><h2>🕵️ Pessoas com nome (o Joe)</h2><span class="badge" id="joeBadge"></span></summary>
+    <p class="hint">Dos <b id="joeTotalEnvios"></b> emails da campanha, só <b id="joeComNome"></b> chegaram a uma pessoa com nome. O Joe caça nome, cargo e endereço publicado. Regra: <b>endereço sem fonte não vira linha</b>.</p>
+    <div class="tiles" id="joeTiles" style="margin:0 0 12px"></div>
+    <div class="chips" id="joeChips"></div>
+    <div class="lista" id="joeRows"></div>
+    <button class="mais" id="joeMais" type="button">mostrar mais</button>
+    <h3 style="margin:18px 0 6px; font-size:13.5px">🔑 Padrões de domínio provados</h3>
+    <div id="joePadroes" class="card" style="overflow-x:auto"></div>
+    <h3 style="margin:18px 0 6px; font-size:13.5px">🧭 Próximos passos da caçada</h3>
+    <div class="acoes" id="joePassos"></div>
+  </details>
+
+  <details class="sec" id="prospec">
+    <summary><h2>🗺️ Prospecção</h2><span class="badge" id="prospecBadge"></span></summary>
+    <p class="hint" id="prospecHint"></p>
+    <div class="lista" id="prospecRows"></div>
+    <div id="prospecFora"></div>
+  </details>
+
+  <details class="sec" id="kit">
+    <summary><h2>🧰 Kit de aplicação</h2><span class="badge">copiar e colar</span></summary>
+    <p class="hint">Respostas prontas para os campos de formulário. Nunca citar o salário da E-Line; pretensão é a do kit.</p>
+    <div class="controles">
+      <label for="kitStudio" class="hint" style="margin:0">Aplicando para:</label>
+      <select id="kitStudio"></select>
+      <span class="hint" id="kitStudioHint" style="margin:0"></span>
+    </div>
+    <div id="kitList"></div>
+  </details>
+
+  <details class="sec" id="preenchedor">
+    <summary><h2>🪄 Preenchedor de formulário</h2><span class="badge">no seu navegador</span></summary>
+    <p class="hint">Favorito que preenche o formulário aberto e para. Não clica em enviar, não anexa arquivo, não toca em captcha. Serve para as portas que só abrem no seu IP.</p>
+    <ol class="hint" style="margin:0 0 10px 18px; line-height:1.7">
+      <li>Digite seu telefone, só dígitos, sem código do país. Fica dentro do favorito, no seu computador.</li>
+      <li>Clique em <b>Gerar</b> e arraste o botão para a barra de favoritos (ou copie e cole no endereço de um favorito novo).</li>
+      <li>Abra um formulário, clique no favorito, confira o painel branco, anexe CV e carta, envie você mesmo.</li>
+    </ol>
+    <div class="controles">
+      <input id="pfTel" type="text" inputmode="numeric" placeholder="telefone, só dígitos" style="min-width:200px">
+      <button class="btn" id="pfGerar" type="button">Gerar</button>
+      <button class="btn" id="pfCopiar" type="button" style="display:none">Copiar</button>
+      <span class="hint" id="pfMsg" style="margin:0"></span>
+    </div>
+    <div id="pfSaida"></div>
+  </details>
+
+  <details class="sec" id="dossies">
+    <summary><h2>🎯 Dossiês por vaga</h2><span class="badge" id="dossieBadge"></span></summary>
+    <p class="hint">Texto já escrito para cada vaga específica: abra o link, cole e envie. Os que ainda dependem de você vêm marcados.</p>
+    <div id="dossieList"></div>
+  </details>
+
+  <details class="sec" id="estudios">
+    <summary><h2>🏢 Estúdios por email</h2><span class="badge" id="tableTitle"></span></summary>
+    <p class="hint">Um estúdio por linha. Marque o andamento (fica salvo neste navegador). Follow-up sugerido: 7 dias depois do envio.</p>
+    <div class="chips" id="stageChips"></div>
+    <div class="controles">
+      <input type="search" id="q" placeholder="Buscar estúdio, país ou email…" aria-label="Buscar estúdios">
+      <button class="btn" id="exportBtn" type="button">⬇ CSV</button>
+      <button class="btn" id="resetBtn" type="button">🧹 Limpar marcações</button>
+    </div>
+    <div class="lista" id="rows"></div>
+    <button class="mais" id="rowsMais" type="button">mostrar mais</button>
+  </details>
+
+  <footer>
+    Fonte: <code>enviados.csv</code>, <code>processados.csv</code> e os arrays de dados desta página, mantidos pelas rotinas da campanha ·
+    <span id="rodapeNums"></span> · marcações manuais ficam só no seu navegador.
+  </footer>
+</div>
+<div id="tooltip" role="status"></div>

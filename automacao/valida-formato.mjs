@@ -23,8 +23,12 @@ const n = v => typeof v === "number" && Number.isFinite(v);
 
 // nome do array -> [descrição legível, validador de uma linha]
 const REGRAS = {
-  DAILY: ["[data, emails enviados, respostas humanas]",
-    r => Array.isArray(r) && r.length === 3 && s(r[0]) && /^\d{4}-\d{2}-\d{2}$/.test(r[0]) && n(r[1]) && n(r[2])],
+  // 19/09: DAILY ganhou dois campos, formularios confirmados e formularios de personagem no dia.
+  // Linha antiga com tres campos continua valida; cinco e o formato novo; quatro e erro de digitacao.
+  DAILY: ["[data, emails enviados, respostas humanas, formularios, formularios de personagem]",
+    r => Array.isArray(r) && (r.length === 3 || r.length === 5) && s(r[0]) && /^\d{4}-\d{2}-\d{2}$/.test(r[0]) && r.slice(1).every(n)],
+  AGENDA: ["[data ISO ou data-hora ISO, titulo, texto, link opcional]",
+    r => Array.isArray(r) && r.length >= 3 && s(r[0]) && /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}(:\d{2})?Z?)?$/.test(r[0]) && s(r[1]) && s(r[2])],
   NOVIDADES: ["[data, tipo, título, texto, link opcional]",
     r => Array.isArray(r) && r.length >= 4 && s(r[0]) && /^\d{4}-\d{2}-\d{2}$/.test(r[0])
          && ["viva","vaga","porta","nao","alerta","envio"].includes(r[1]) && s(r[2]) && s(r[3])],

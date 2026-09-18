@@ -6041,3 +6041,29 @@ As outras duas são **2D**.
 > a campanha já trabalhou, e o dedupe dele se faz pelo nome da casa mais o cargo, porque o link do
 > LinkedIn **não carrega o id do ATS** — ao contrário do alerta da Disney, cujo `utm_content`
 > entrega o id sem abrir nada.
+
+## 18/09 23h50 UTC (maestro): painel refeito do zero, "nova era" da campanha
+
+Pedido do Vini na noite de 18/09 depois do fechamento. O que ficou:
+
+- **Dados e apresentação separados.** `docs/index.html` continua sendo o arquivo único que as rotinas
+  e os scripts leem e escrevem (`pulso.sh`, `poe-no-painel.py`, `conta-hoje.sh`, `garra.sh`,
+  `gera-pessoas.mjs`, `gera-preenchedor.mjs`, `valida-formato.mjs`), com os mesmos arrays, uma linha
+  por registro, `].map(...)` em STUDIOS e PORTAIS e os marcadores de PESSOAS/PADROES e PREENCHEDOR.
+  O visual vive em `automacao/painel/` (`estilo.css`, `corpo.html`, `app.js`) e
+  `python3 automacao/painel/monta-painel.py` recompõe a página transportando os dados byte a byte.
+  **Regra:** mudança de visual se faz nos três arquivos de `automacao/painel/` e depois roda o montador;
+  mudança de dado se faz direto no `docs/index.html`, como sempre.
+- **DAILY ganhou dois campos:** `[data, emails, respostas humanas, formulários confirmados, formulários
+  de personagem]`. O montador com `--daily-de-enviados` recalcula os dois últimos do `enviados.csv`
+  (linha com URL ou sem email = formulário; personagem = character/personagem/creature/groom/vis dev
+  sem environment no cargo). Linha antiga com três campos continua válida.
+- **AGENDA nasceu:** `[dataISO ou data-hora UTC, título, texto, link opcional]`, sem link de Meet nem
+  telefone (repositório público). META = `{formularios:10, personagem:5}` alimenta o placar.
+- **Primeira tela no celular:** meta do dia, últimos 14 dias, agenda, cartões de totais e "Na sua mão".
+  Depois: conversas abertas (etapa do STUDIOS), feed de novidades por dia, formulários em cartões com
+  filtro de personagem e busca, grandes, números, pessoas do Joe, prospecção, kit, preenchedor, dossiês,
+  estúdios por email. Seções pesadas abrem fechadas e lembram a escolha no navegador.
+- **Validação:** `valida-dashboard.sh` passa (DOM falso + formato, agora com DAILY de 3 ou 5 campos e
+  AGENDA); render em Chromium real em 1280 e 390 px e tema escuro, zero erro de console, zero rolagem
+  lateral. Backup da versão antiga não fica no repositório: está no histórico do git (commit anterior).
