@@ -4903,3 +4903,143 @@ to"*) e a única vaga nomeada marcada `Closed`.
 no inventado** (catch-all puro; sem o md5 do `/zzz-naoexiste-jhon18` ela entrava com oito páginas de
 carreira, e o `character` dela é personagem de jogo de cozinha); e `maplepoweredgames.com` devolve
 **200 com 114 bytes e zero caractere de texto** nos oito — **NÃO CONFERIDA**, não "sem porta".
+
+## Jhon A, 18/09 06h34 UTC (décimo sexto turno) — DOIS RESÍDUOS FECHADOS: O PORTEIRO DO WORKABLE É DE **PLATAFORMA** (UMA CHAVE PARA SETE LOCATÁRIOS) E O SITEMAP DA HITMARKER RENDE **ZERO** COM 26 DATAS CONFERIDAS
+
+Turno de resíduo nomeado, só `curl` e API, **zero navegador** (nenhum processo criado) e **zero
+envio**. As duas veias eram as que os meus turnos anteriores deixaram escritas: o sitemap da
+Hitmarker (22h26 de 17/09) e os quatro tokens do Workable em 429 (00h41 de hoje).
+
+**Números medidos: 13.399 vagas do sitemap, 253 acertos de título, 26 `datePosted` conferidos no
+JSON-LD, 15 candidatas dentro dos 30 dias, ZERO porta pela Hitmarker; 22 tokens do Workable lidos
+em série, 11 quadros com 200, 7 porteiros lidos por `curl`, DUAS PORTAS LIMPAS, zero duplicata
+enviada, zero candidatura gasta.**
+
+### 1. AS DUAS PORTAS DO TURNO, E ELAS SAÍRAM DE UMA DÍVIDA DE "NÃO CONFERIDO"
+
+`lighthousegames` estava em 429/1015 desde 07/09 e voltou a dar 429 hoje em dois ritmos. Na
+**terceira** leitura em série, com 25 s de intervalo, a rota `GET
+apply.workable.com/api/v1/widget/accounts/lighthousegames?details=true` devolveu **200 com 85.542
+bytes e 23 vagas**, e duas delas são da disciplina de surfacing, `published_on` **2026-09-04**:
+
+| vaga | shortcode | régua na API | dedupe |
+|---|---|---|---|
+| **Senior** Technical Material/Shader Artist | `E2DF52F9E8` | 2.351 caracteres, único acerto `hybrid` | ID inédito, zero recibo |
+| **Principal** Technical Material/Shader Artist | `2E8906E73E` | 2.452 caracteres, único acerto `hybrid` | ID inédito, zero recibo |
+
+Royal Leamington Spa, Inglaterra, `telecommuting: false`, departamento **Art**, Substance Designer
+e Painter, PBR, *texture authoring* e Master Materials do Unreal no requisito. **A Senior é a que
+cabe** (*strong professional experience*) e a Principal pede *extensive senior or principal-level
+experience* com direção técnica de outros artistas. **Aplicar em uma, não nas duas.**
+
+**A régua de veto repetiu a armadilha do SPA e é bom que tenha repetido:** a URL final da vaga
+devolve **16 caracteres** de texto limpo. Pelo piso de ~1.000 isso é **leitura inválida**, não
+"zero veto" — exatamente o caso de 19 caracteres medido em 21h20 de 17/09. Refeita no corpo da API,
+o único dos 43 termos que aparece é `hybrid`, dentro de *"collaborative, hybrid working
+environment"*: nota de ambiente, não veto. **Zero visto, zero realocação, zero idioma.**
+
+**E a ressalva que enfraquece a ficha é de COERÊNCIA, não de dado, e ela precisa estar escrita:**
+a casa recusou a `Lead Character Artist` em 14/09 às 10h33 com convite explícito a reaplicar, e o
+Vini respondeu no mesmo dia às 13h03, por escrito: *"If a character or modeling seat opens at
+Lighthouse later on, I would be glad to be considered"*. **Estas duas vagas não são assento de
+personagem nem de modelagem, e as duas já estavam abertas (04/09) no dia em que ele escreveu
+isso.** São surfacing de verdade, mas o título traz `Technical`, e a campanha já descartou
+*Technical Artist - Character* por disciplina em 17/09. **A decisão de enviar é do maestro.** As
+duas são fila da mão dele de qualquer jeito, pelo porteiro do §2.
+
+### 2. O PORTEIRO DO WORKABLE É CONFIGURAÇÃO DE **PLATAFORMA**, E ISSO ECONOMIZA UMA REQUISIÇÃO POR TOKEN PARA SEMPRE
+
+Sete locatários lidos em `/<token>/j/<shortcode>/apply` (`lighthousegames`, `jagex-limited`,
+`nexusstudios`, `velanstudios`, `keywords-intl1`, `kingsisle-entertainment-inc`, `one-of-us`):
+**os sete devolvem `features.recaptcha = false`, `wjb_acp_turnstile_captcha_enabled = true` e
+`config.turnstileWidgetSiteKey = 0x4AAAAAAAVY8hH3nz6RxaK0` — a MESMA chave, e nenhuma outra chave
+de captcha no bloco `window.careers`.**
+
+> **Regra: no Workable o Turnstile não é por locatário. Medir UM responde pela FAMÍLIA.** Quadro
+> Workable é fila da mão dele sem gastar requisição de porteiro. O modo do Turnstile (gerenciado,
+> não interativo, invisível) continua **NÃO CONFERIDO** e não se resolve por `curl`.
+
+**Duas correções da receita que eu mesmo escrevi às 00h41:**
+
+- **A rota canônica é com o token.** `apply.workable.com/j/<shortcode>/apply` devolve **301 com 42
+  bytes** (`Redirecting to /<token>/j/<shortcode>/apply`). Quem lê sem `-L` lê 42 bytes e conclui
+  casca vazia. Pedir direto `/<token>/j/<shortcode>/apply` economiza o salto. Um shortcode devolveu
+  **302 com 21 bytes** (`rebellion` `331FDD9137`) — sinal de **requisição fechada**, não de porteiro.
+- **O `/apply` NÃO é imune ao 1015.** Em 00h41 ficou escrito que *"o estrangulamento é por rota de
+  API, não pelo host"* a partir de **uma** requisição isolada. Hoje, em série de 12 s, o `/apply`
+  deu **429 em `beamng`, `double-eleven`, `rebellion`, `bardel`, `cause-and-fx`, `escape-velocity` e
+  `team-17-digital`**, e 200 nos sete acima. **Ressalva honesta do meu próprio medidor:** a primeira
+  passada de `/apply` rodou **em paralelo** com a série da API, então parte desses 429 é pressão
+  minha. O que fica provado é o lado seguro: **`/apply` compartilha o limitador por IP, e requisição
+  isolada passa.**
+
+### 3. `supermassivegames` NÃO ESTAVA ESTRANGULADO: É **404**. E ISSO CONDENA O 429 COMO DIAGNÓSTICO
+
+Ficou dois dias na lista de NÃO CONFERIDO com o código 429/1015 anotado. A terceira leitura
+isolada passou do limitador e a **origem respondeu 404 com 9 bytes**: o token **não existe e nunca
+existiu** — é falso amigo, como o `api` que eu mesmo extraí por erro.
+
+> **Regra: o 429 do Cloudflare é servido ANTES da origem, então 429 nunca distingue token
+> inexistente de token estrangulado.** "NÃO CONFERIDO por 429" pode ser **404 disfarçado**, e o
+> desempate custa uma requisição isolada. Isto vale para toda a lane Workable e para qualquer
+> família atrás de Cloudflare.
+
+Sondando o nome curto, `supermassive` devolve **200 com `{"name":"Supermassive","description":null,"jobs":[]}`**:
+**quadro vazio medido**, e a identidade da casa fica **NÃO CONFERIDA** porque o JSON não traz nada
+que desambigue (regra do falso amigo de token de 15/09). `supermassive-games` deu 429 e segue sem
+leitura.
+
+**Fecho da lane:** de 22 tokens, **11 quadros com 200** (`keywords-intl1` 277 vagas,
+`lighthousegames` 23, `one-of-us` 22, `escape-velocity` 9, `bardel` 8, `double-eleven` 6,
+`cause-and-fx` 4, `kingsisle` 2, mais `pxo`, `streamlinestudios` e `team-17-digital`). Saem de NÃO
+CONFERIDO: **`keywords-intl1`, `double-eleven` e `lighthousegames`** (leitura) e
+**`supermassivegames`** (404). Seguem sem leitura hoje: `big-viking-games-3`, `mino-games` e
+`pikpok`, **e os três já tinham sido lidos antes** — a lane não tem mais buraco que importe.
+Acertos de disciplina no que abriu, todos derrubados com frase: os 6 de `keywords-intl1` são de
+janeiro a julho e os de *Hair Specialist* são da **Lakshya Digital, Índia**; `bardel` é *2D
+Character Layout*; `escape-velocity` é *Gameplay Designer*; e os dois da One Of Us já estão no
+painel com recomendação escrita, de 30/07 e 03/08.
+
+### 4. HITMARKER: A REGRA DO `lastmod` GANHA UM RECORDE DE **563 DIAS** E, DO OUTRO LADO, UM CONTROLE QUE AUTORIZA O CORTE BARATO
+
+`sitemap-jobs.xml/p1..p3` hoje tem **13.399** vagas únicas com `lastmod` (eram 13.453 em 17/09).
+Filtro de título da disciplina: **253 acertos**; corte por `lastmod >= 19/08` (janela de 30 dias):
+**147**; tirado o ruído de semicondutor (`amd-` e `nvidia-` com *modeling engineer* e
+*characterization*), o fora de disciplina (*animator*, *concept*, *producer*, *gameplay designer*,
+*technical artist*, TD) e os *talent pool*: **81 candidatas**. `datePosted` conferido no JSON-LD em
+**26 fichas**, uma requisição por candidata, 26 de 26 com 200.
+
+| medição | 17/09 22h26 | hoje |
+|---|---|---|
+| fichas com as duas datas | 4 | **26** |
+| erro médio | — | **70,7 dias** |
+| mediana | — | **8 dias** |
+| erro máximo | 181 dias | **563 dias** |
+| erro zero | 3 | 6 |
+
+O recorde é `grand-games-senior-3d-artist-4786513`: `lastmod` **14/09/2026** e `datePosted`
+**28/02/2025**. O segundo é `good-job-games-senior-3d-artist-4724831`, 336 dias. A mediana de 8
+dias é o que faz a armadilha convincente: **ela vive só na cauda**.
+
+**E o controle que vale tanto quanto a armadilha:** em **26 de 26 fichas, `lastmod >= datePosted`,
+sem uma exceção**. Ou seja, o carimbo de reindexação nunca é mais antigo que a publicação, e por
+isso **descartar por `lastmod` mais velho que a janela é seguro e não custa requisição**. O que não
+se pode é usar `lastmod` **dentro** da janela como recência.
+
+### 5. AS 15 CANDIDATAS DENTRO DOS 30 DIAS MORRERAM TODAS, E A LISTA COM A FRASE ESTÁ NO `processados.csv`
+
+Nenhuma sobreviveu a dedupe + escopo. As que uma rodada apressada clicaria, porque são de país de
+prioridade 1 e parecem limpas no agregador: **Behaviour Interactive `Senior 3D Character Artist -
+7 Days to Die`** (Montreal) — recibo do Lever de 30/08 **e recusa de 11/09 às 17h17**, as duas
+conferidas hoje no Gmail por `search_threads` e não copiadas do arquivo, com o anúncio **ainda
+vivo** no sitemap; **Behaviour `Senior Texture Artist`** e **Side `Senior Texture Artist`**
+(Montreal), as duas já fila da mão dele por captcha; **Wargaming** (enviada 06/09), **Makeshift ×2**
+(enviada 07/09 e decisão escrita 09/09), **Riot `4744508`** (= req `8163170`, enviada 10/09),
+**Absurd `4786200`** (= `5236256007`, enviada 12/09), **2K e Cloud Chamber** (recusadas 02/09), e
+por escopo **Virtuos** (Ho Chi Minh), **Jam City** (Uruguai), **Superplay** (Tel Aviv), **Virtuos
+junior** (Xangai) e **Lightfold** (31 dias, um fora da régua, e já descartada em 07/09).
+
+> **O que o zero da Hitmarker significa:** três turnos consecutivos mineraram agregador por data e
+> os três deram zero porta nova. **Isso é saúde do estoque, não falha da varredura** — e desta vez
+> a lane veio com dois números que ficam: o erro do `lastmod` e o controle que autoriza o corte.
+> A porta do turno veio da **outra** veia, a de dívida de token, e ela custou 22 requisições.
