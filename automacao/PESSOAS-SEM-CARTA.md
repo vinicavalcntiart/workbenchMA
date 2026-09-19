@@ -11128,3 +11128,73 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   aberto é **formulário** (`/apply/`, via do Jhon), não e-mail; (f) a candidatura de 07/09 registrou faixa
   publicada de CAD 100–120k numa vaga remota mundial de **design técnico**, não de arte — não usar esse
   número como prova de que a casa contrata artista fora do Canadá.
+
+### FICHA 3 — Bernd Lehahn, **Director** (fundador) da **EGOSOFT GmbH** (Würselen, Alemanha) — **PUBLICADO, confiança ALTA**, e a casa escreve **"we provide relocation assistance"**
+
+- **EMAIL: `bernd@egosoft.com` — PUBLICADO, confiança ALTA.** Está escrito, literal, no bloco **Contact**
+  do press kit da própria casa, rotulado *"Business Inquiries"*. **Nada foi montado.** Primeiro nome puro,
+  e **há um só Bernd** em toda a página de equipe, então não há ambiguidade (mesma régua do
+  `yan@artificestudio.com` da Artifice).
+- **URL onde e-mail e cargo estão na MESMA página, aberta nesta rodada:** `https://egosoft.com/press`
+  (**200, 10.706 bytes**). Bloco *"Team & Repeating Collaborator"*: *"**Bernd Lehahn — Director**"*,
+  *"Peter Kullgard — Producer"*, *"Helge Kautz — Fictional Background"*. Bloco *"Contact"*:
+  *"PR, Marketing and Content Creator Inquiries — `gregory@egosoft.com`"*, *"Business Inquiries —
+  `bernd@egosoft.com`"*, *"Support needed? Mail us! — `support@egosoft.com`"*.
+- **ACHADO DE MÉTODO DESTA RODADA, e é um esquema de ofuscação NOVO para este arquivo: o endereço
+  desenhado como IMAGEM.** A página de vagas (`https://www.egosoft.com/company/jobs_en.php`, **200,
+  24.092 bytes**) tem **zero** endereço em texto — `grep` de `@` devolve nada, e nada de `data-cfemail`,
+  ROT13, entidade HTML nem `(at)`. O que está no HTML é:
+  `Jobs @ <img src="/img/egosoft.gif" alt="" width="128"> . com`, ou seja **o domínio é um GIF**. Decodificado
+  à mão pelo contexto: **`jobs@egosoft.com`**. Nenhum decodificador de texto pega isso, e é a quarta camada
+  a checar antes de declarar "casa sem e-mail", ao lado de `data-cfemail`, ROT13 e entidade decimal.
+- **POR QUE ELE, e não outro da casa:** casa independente de **mais de 30 anos** e porte médio, sem
+  recrutador nomeado — nesse tamanho o `BRIEF-JOE` manda ir no fundador, que responde ele mesmo. Dos três
+  publicados, ele é o **Director**; Peter Kullgard é produção e Helge Kautz é *Fictional Background* (roteiro
+  de universo). O `gregory@` é **PR/marketing** e não tem nome ao lado, então não vira ficha pela regra de
+  19/09 (*endereço sem cargo de pessoa publicado ao lado é linha de espera, não ficha*).
+- **O ART DIRECTOR DA CASA EXISTE, TEM ENTREVISTA PUBLICADA E MESMO ASSIM NÃO VIRA FICHA — e isso importa
+  registrar:** a home (`https://www.egosoft.com/`, **200, 168.907 bytes**) publica *"Interview with Lino:
+  Egosoft Art Director"*, em que ele fala em primeira pessoa: *"Yo, my name is **Lino**. I'm the Art
+  Director—that's what they call me. I've been working for more than 14 years at Egosoft … I started at
+  Egosoft as an intern"* e *"It's less about actually doing art than people might think … I'm coordinating a
+  lot, planning tasks for people"*. **É o cargo certo e a casa o publica falando**, mas há **só o primeiro
+  nome** e **nenhum endereço** — montar `lino@` seria o chute das cinco devoluções de 06/09. Fica guardado
+  aqui: quem achar o sobrenome do Lino em fonte pública fecha a **segunda e última** pessoa desta casa.
+- **GANCHO, com as frases da própria casa entre aspas, e o gancho é a FALA DO ART DIRECTOR:** *"You have
+  cool space backgrounds, lots of spaceships, **small ships you can get out of and walk around on**, stations
+  stuck together, **all the different races**. Maybe it's the mixture of races. **We have the Split, and the
+  Split are very unique**"*; *"I like having the **on-foot walking**, even though it's an incredible amount of
+  work to make it function. But it's worth it for the sense of scale"*; e o método dele, que é o que casa com
+  o Vini: *"He gave me the tools to actually **debug my art** … I have my checklist of design principles.
+  Whenever I'm stuck, I open this text file and look through them"*. Do press kit: *"EGOSOFT is one of
+  Germany's leading game developers … entered the international stage with the widely-acclaimed X-Beyond the
+  Frontier space simulation game in 1999"*, *"TRADE FIGHT BUILD THINK is the common headline above all X
+  games"*.
+- **SINAL POSITIVO RARO, E ESCRITO PELA CASA:** a página de vagas diz *"**We provide relocation assistance to
+  make your transition as smooth as possible**"*, *"We offer a fair and competitive salary that reflects your
+  skills and experience"*, *"Health insurance, gym membership"*, *"Our international team enjoys direct lines
+  of communication, flat hierarchies"* e *"Located in the vibrant Meuse-Rhine Euroregion … regardless of
+  whether you ultimately want to live in Germany, the Netherlands or Belgium"*. **Realocação assinada pela
+  casa é o obstáculo número um desta campanha resolvido de antemão**, e é o que sustenta esta ficha apesar
+  da ressalva de disciplina abaixo.
+- **FORA DOS EUA?** Sim, **Alemanha (Würselen, Heidestraße 4, 52146)**. **Frase de realocação entra**, e aqui
+  ela pode citar que a casa já oferece assistência.
+- **DEDUPE NA CAIXA:** `search_threads` por `egosoft OR Egosoft OR Lehahn OR "X4 Foundations" in:anywhere`
+  devolveu **`{}`**. Nos arquivos, `egosoft`, `lehahn` e `x rebirth` dão **zero** em `automacao/pessoas.csv`,
+  `enviados.csv`, `automacao/processados.csv`, `docs/index.html`, `alvos.csv`, `automacao/PESSOAS-SEM-CARTA.md`
+  e `automacao/FILA-DO-VINI.md`. (`x4` casa, mas com **outras** coisas: o `x4` é substring de token de ATS e
+  de nome de arquivo — falso amigo conferido.) **Casa inédita, primeira pessoa, nunca recusou.**
+- **RESSALVAS HONESTAS, e a primeira é séria:** (a) **a arte desta casa é NAVE, não personagem.** O próprio
+  art director descreve o trabalho como *"a small S-sized ship"*, *"low-poly workflows, atlases, trim
+  sheets"*, *"the scrapping ship that takes in scrap"* — é **hard-surface**, e o portfólio do Vini é
+  personagem estilizado e grooming. O que dá liga é *"all the different races"*, *"the Split are very
+  unique"* e o *on-foot walking*, ou seja elenco e criatura **existem** no jogo, mas não são o centro da
+  produção; (b) **não há vaga: "Current openings: None"**, e o único endereço de vaga é `jobs@egosoft.com`,
+  caixa funcional — a carta é de porta e de direção, não candidatura; (c) **a casa exige presença física**:
+  *"The hired individual will need to work in-house, in our studio based in Würselen, Germany"*, com apenas
+  *"remote work when necessary"* — bom para quem quer realocar, mas fecha a porta de remoto; (d) o cargo
+  dele é *Director* de uma casa que tem art director próprio, logo o mais provável é **encaminhamento** para
+  o Lino; (e) o endereço vem rotulado *"Business Inquiries"*, que é escopo mais estreito que uma caixa de
+  fundador — não é recusa escrita como a da Ubisoft Montréal, mas é um filtro; (f) o catálogo inteiro é
+  **um só gênero** desde 1999 (*"EGOSOFT is now exclusively dedicated to setting new standards in the space
+  game genre"*), então não há segunda linha de produto onde personagem possa entrar.
