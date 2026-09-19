@@ -237,3 +237,22 @@ svg text { font:11.5px ui-sans-serif, system-ui, sans-serif; fill:var(--ink-2); 
 footer { color:var(--muted); font-size:12px; margin-top:34px; line-height:1.6; }
 #tooltip { position:fixed; pointer-events:none; z-index:30; display:none; background:var(--surface); color:var(--ink); border:1px solid var(--line-2); border-radius:8px; padding:6px 10px; font-size:12px; box-shadow:var(--shadow); }
 .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+/* modo simples (19/09): tres blocos; o resto atras de "Ver tudo" */
+body:not(.tudo) .so-tudo { display:none !important; }
+body:not(.tudo) .tiles .tile:nth-child(n+5) { display:none; }
+body:not(.tudo) .hero { grid-template-columns:1fr; }
+.simples > h2 { font-size:18px; }
+.simples .hint { font-size:13px; }
+.agora { display:grid; grid-template-columns:1fr 1.5fr; gap:12px; }
+@media (max-width:820px) { .agora { grid-template-columns:1fr; } }
+.agora .conv { grid-template-columns:1fr; }
+.acao .corpo { flex:1; min-width:0; }
+.acao .corpo .p { color:var(--muted); font-weight:400; font-size:12.5px; margin-left:6px; }
+.acao .corpo .txt { font-size:12.5px; color:var(--ink-2); margin-top:2px; }
+.acao .btns { display:flex; gap:6px; flex:none; margin-left:auto; align-items:center; }
+.acao .btns .btn { padding:6px 10px; font-size:12.5px; }
+.acao .btns .btn.ir { background:var(--accent); color:#fff; border-color:var(--accent); }
+.acao .btns .btn.ir:hover { text-decoration:none; }
+div.acao { cursor:default; }
+@media (max-width:560px) { div.acao { flex-wrap:wrap; } div.acao .btns { flex-basis:calc(100% - 36px); margin-left:36px; justify-content:flex-start; } }
