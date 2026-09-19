@@ -3265,3 +3265,59 @@ navegador, com a sua sessão, ele tende a passar.
 **Não gaste tentativa em variação de clique.** As três já foram pagas nesta rodada: rótulo do botão
 corrigido, clique sintético com `force`, e clique de mouse nas coordenadas da caixa
 (`{x:1186,y:2548,w:74,h:40}`). Nenhuma produziu POST. O que falta não é código, é sessão.
+
+---
+
+## Item novo, 19/09 01h50 UTC (Jhon A) — **FOLKS VFX / Pitch Black**, *Asset Generalist Senior Artist*, **Toronto (Ontário), remota**: o anúncio cita *hero characters* e o porteiro é DataDome
+
+**Endereço para clicar (use o de TORONTO, não o de Montreal):**
+`https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004158-asset-generalist-senior-artist-freelance-`
+
+**Por que vem para a sua mão:** o `oneclick-ui` do SmartRecruiters responde **HTTP 403** a este IP e o
+frame principal fica com **0 campos e 0 caracteres em 10 tentativas de 4 s**. O que carrega é um iframe
+de `geo.captcha-delivery.com/captcha/` com 16 campos e o texto literal *"Verification Required … Slide
+right to secure your access … We detected unusual activity from your device or network … Automated (bot)
+activity on your network (IP 160.79.106.129)"* (`interstitial_rules 5,37,42,43,44,45`, ID
+`37f83562-2b03-c4e2-f500-00369f4d2b46`). É **DataDome com desafio de slider mais verificação visual/áudio**,
+que está na lista de captcha que não se burla — e é o mesmo porteiro já medido três vezes nesta família
+(Ubisoft, Outpost, NBCU). **Do seu navegador, com a sua sessão, ele tende a não aparecer.**
+
+**DUAS CORREÇÕES ao que o Job Board 2.0 anotou, e as duas mudam a decisão:**
+
+1. **A nota "Must be based in Quebec" NÃO está no anúncio.** A régua de veto rodou no corpo inteiro
+   (6.424 caracteres de texto limpo) e devolveu **zero acerto dos 43 termos**. A única frase de geografia
+   é **permissiva**: *"Remote candidates within Montreal or Vancouver may also be considered"* na versão
+   de Toronto, e *"Remote candidates within Toronto or Vancouver may also be considered"* na de Montreal.
+   Não existe veto escrito de residência; a nota é do curador do quadro, não da casa.
+2. **São TRÊS anúncios da MESMA requisição, e o que amarra é o `refNumber` REF19P**, idêntico nos três:
+   `7000000000004182` (Montreal, francês, 17/09), `7000000000004158` (**Toronto ON, inglês, 17/09**) e
+   `7000000000004252` (Montreal, inglês, 18/09). **Clique em UM só.** É a armadilha de 19/09 da 31st
+   Union outra vez, agora com o mesmo ATS servindo o mesmo requisito em três anúncios de cidade e idioma
+   diferentes. O de Toronto é o escolhido porque Ontário é Canadá anglófono, que o `BRIEF-JHON` põe na
+   frente do Quebec.
+
+**Por que ela vale o seu minuto:** é a única linha da rodada cujo corpo **cita personagem por escrito** —
+*"Execute advanced asset work including **hero characters** and complex assets"* e *"Lead asset development
+from modelling through final lookdev"* — com Maya, ZBrush, Substance Painter, Mari, Katana e Houdini, que
+é a pilha dele inteira. Remota (`remote: true`), Mid-Senior, publicada 17/09 15h46 UTC.
+
+**Ressalvas honestas, para você decidir com o quadro todo na mão:** o título diz *Freelance* mas o campo
+`typeOfEmployment` da API diz **Full-time / permanent** — os dois se contradizem e só a casa desempata; o
+nível é **Mid-Senior**, um degrau abaixo do dele; e o anúncio da Folks é **generalista de assets**, não
+personagem puro. A casa é conhecida da campanha: o SuccessFactors do grupo Pitch Black devolvia *No jobs
+found* desde 08/09, e a Rising Sun (mesmo grupo) recebeu a *Senior Modelling Artist* em 16/09.
+
+**As respostas para preencher (nada foi enviado, o formulário nunca abriu):**
+
+| campo | resposta |
+|---|---|
+| Nome / Email | Vini · Cavalcanti · contact@vinicavalcanti.art |
+| Telefone | seletor **+55 BR** separado e só os dígitos no campo (receita do documento privado do Drive) |
+| Endereço residencial | está no documento privado do Drive, **não neste repositório** |
+| CV / Portfólio | `Vini_Cavalcanti_CV.pdf` · `artstation.com/viniciuscavalcanti` · `linkedin.com/in/vinicavalcnti` |
+| Autorização de trabalho no Canadá | **Não** — não é cidadão nem residente permanente, **precisa de patrocínio** |
+| Disposto a realocar | **Sim.** *"I am ready to move to Toronto for the role."* |
+| Pretensão (sem faixa publicada, casa média) | **CAD 95.000**, com *"Open to aligning with your band for the role."* |
+| Disponibilidade | 1 de novembro de 2026 |
+| Onde nos achou | Careers board / site |
+
