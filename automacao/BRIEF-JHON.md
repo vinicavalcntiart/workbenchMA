@@ -1007,3 +1007,8 @@ página pública e a API chamada **de dentro** da página, já com o cookie da n
   `disney.wd5` e **não a cobre**.
 - **SONY PICTURES ENTERTAINMENT** (`spe.wd1`): quadro paginado por inteiro, **67 de 67**, zero da
   disciplina. Fecha a ressalva escrita em 09/09.
+
+
+## 19/09 14h00 UTC: commit so do que e seu
+
+Dois agentes commitam no mesmo worktree. `git add <arquivo>` por nome nao basta: `git commit` grava o INDICE INTEIRO, e o arquivo que o outro agente deixou em stage sai dentro do seu commit com a sua mensagem (aconteceu em f9945ba, 19/09 13h). A trava e **`git commit --only <arquivo1> <arquivo2> -m "..."`**, que commita so os arquivos nomeados, esteja o que estiver em stage. Nunca `-A`, nunca `-a`, nunca `--author` (o autor e a configuracao do repositorio; assine a rodada na mensagem). Antes do push: `git pull --rebase --autostash origin claude/vagas-campaign-performance-3mffss`.

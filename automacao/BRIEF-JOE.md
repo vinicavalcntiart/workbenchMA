@@ -850,3 +850,8 @@ Ordem do Vini depois de ler os rascunhos de hoje:
 2. **Nunca uma frase de desculpa ou de aviso** do tipo "First, what this is not: it is not a request for a feedback session" ou "this is ten years in and not an internship enquiry". Um humano le isso e para. Se a carta precisa explicar o que nao e, a abertura esta errada: reescreva a abertura.
 3. Rodape sempre `Site: https://vinicavalcanti.com` (o .art nao tem site). Emoji e ☺️, nunca 😊.
 Os 20 rascunhos da fila foram corrigidos em 18/09 19h40 (negrito, links limpos, .com, duas frases de desculpa removidas: Allimator e Fiilin).
+
+
+## 19/09 14h00 UTC: commit so do que e seu
+
+Dois agentes commitam no mesmo worktree. `git add <arquivo>` por nome nao basta: `git commit` grava o INDICE INTEIRO, e o arquivo que o outro agente deixou em stage sai dentro do seu commit com a sua mensagem (aconteceu em f9945ba, 19/09 13h). A trava e **`git commit --only <arquivo1> <arquivo2> -m "..."`**, que commita so os arquivos nomeados, esteja o que estiver em stage. Nunca `-A`, nunca `-a`, nunca `--author` (o autor e a configuracao do repositorio; assine a rodada na mensagem). Antes do push: `git pull --rebase --autostash origin claude/vagas-campaign-performance-3mffss`.
