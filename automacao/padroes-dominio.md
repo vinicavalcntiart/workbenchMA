@@ -1679,3 +1679,132 @@ o que sai é `info@`, `hello@`, `jobs@`, `sales@`, `contact@`, mais lixo de terc
   Interactive`**, e a página de 404 **contém `info[at]deck13.com` ofuscado**. É o caso exato da
   regra *"200 não prova fonte"* pelo avesso: **um 404 pode conter endereço, e um endereço achado num
   404 não prova que a casa o publica numa página viva.** Confira sempre o `<title>`.
+
+---
+
+## 19/09/2026 12h35 — **A ARMADILHA DO CLOUDFLARE: `data-cfemail` É UM ENDEREÇO, O `href` É A EQUIPE INTEIRA**
+
+**Esta é a correção mais importante que este arquivo recebeu sobre ofuscação, e ela invalida a
+receita que estava escrita aqui.** A receita antiga decodificava `data-cfemail="<hex>"`. O Cloudflare
+protege **cada** endereço de uma página trocando o `href` por
+`/cdn-cgi/l/email-protection#<hex>` e deixando o atributo `data-cfemail` **só no link do rodapé**,
+quando deixa. Resultado medido hoje em três casas:
+
+| casa | `data-cfemail` | `email-protection#` no `href` | o que se perde lendo só o atributo |
+|---|---|---|---|
+| `critcrew.com/team/` | **1** (`hello@critcrew.com`) | **5** | `max@`, `lissi@`, `tascha@`, `joshuasmallard@gmail.com` |
+| `www.stickystonestudio.de/` | **ZERO** | **11** | a equipe inteira, **dez** pessoas |
+| `sleeprunnerstudios.com/about/` | **ZERO** | **5** | a equipe inteira, **cinco** pessoas |
+
+**A decodificação é a mesma nos dois casos:** o primeiro byte do hex é a chave, e cada byte seguinte
+sai por XOR com ela. O que muda é **onde procurar**. Regra nova, e ela é obrigatória:
+
+```
+for m in re.findall(r'data-cfemail="([0-9a-fA-F]+)"', body): dec(m)
+for m in re.findall(r'email-protection#([0-9a-fA-F]+)', body): dec(m)   # ESTA é a que rende
+```
+
+**E o bônus é o pareamento.** A ordem dos payloads `email-protection#` no HTML é **a ordem dos
+cartões renderizados**, então a posição do payload dentro do intervalo entre dois nomes prova de quem
+é o endereço, sem depender do DOM achatado. Foi assim que as quatro fichas de hoje fecharam
+nome↔cargo↔endereço:
+
+- `stickystonestudio.de`: cartão *Jonas Hipp* em 211.710 → *"Lead Artist"* em 211.745 → payload em
+  211.846; e os dez payloads em 203.407 / 205.593 / 207.770 / 209.956 / 211.846 / 213.780 / 215.687 /
+  217.609 / 219.540 / 221.439, na ordem exata dos dez cartões.
+- `sleeprunnerstudios.com`: cartão *Johannes* em 192.240 → *"Character Artist"* em 195.111 → payload
+  em 195.654, com o cartão seguinte só em 200.466.
+- `critcrew.com`: cartão *Tascha* em 18.153 → `<h4 id="lead-artist">` em 18.344 → payload em 19.611,
+  com `>Emily<` em 20.803.
+
+**Aviso de honestidade sobre extrator com vários decodificadores.** Meu extrator anexa o texto
+ROT13 ao fim do corpo, e por um instante eu li `max@critcrew.com` como "achado por ROT13". Não era:
+era do `href`. A conferência que desfez o erro foi buscar `pevgperj` (ROT13 de `critcrew`) no HTML
+cru e achar **zero**. **Quando o extrator tem cinco decodificadores, a ficha tem de dizer QUAL deles
+achou o endereço** — senão declara uma prova que não existe.
+
+### Padrões de domínio provados nesta rodada
+
+- **`stickystonestudio.de`**: **`nome.sobrenome@`**, com dez endereços de prova e todos publicados
+  (`philipp.degasper@`, `jan.huels@`, `luca.forbes@`, `alex.herr@`, `jonas.hipp@`,
+  `florian.schuhmann@`, `jan.eilts@`, `jan.hoffmann@`, `maren.aderhold@`, `robin.meier@`), mais
+  `jobs@`. A trema do sobrenome vira **dígrafo**: *Jan Hüls* é `jan.huels@`, e isso é a casa que
+  escreveu, não eu.
+- **`sleeprunnerstudios.com`**: **primeiro nome puro** (`sebastian@`, `josef@`, `johannes@`,
+  `andreas@`, `tim@`). Cinco de prova, a casa inteira.
+- **`laserbread.games`**: **SOBRENOME PURO** (`fabry@`, `hennemann@`, `lambertz@`), em texto cru sem
+  ofuscação. **E o motivo do padrão está na própria lista: a casa tem DOIS Lukas** (Lukas Fabry e
+  Lukas Lambertz). É a prova empírica de que *primeiro nome puro* não é padrão universal e de que
+  **pareamento é sempre por casa**.
+- **`critcrew.com`**: **primeiro nome puro** (`max@`, `lissi@`, `tascha@`), mais `hello@` e `info@`.
+  **Domínio misto com exceção documentada:** o *Music & Sound Artist* da página usa **gmail pessoal**
+  (`joshuasmallard@gmail.com`), o que na prática marca **freelancer de fora** e não gente de dentro.
+  Sinal útil: endereço de gmail num cartão de equipe é indício de contratado externo.
+- **`levellabs.de`**: **sobrenome puro** (`funke@`, `illmer@`, `zuther@`), três de prova, mais
+  `hello@`. Casa descartada por técnica (jogo 2D), mas o padrão vale.
+- **`corecraft-games.com`**: **`nome.sobrenome@`** (`florian.trippe@`), mais `info@`.
+- **`playzo.de`**: **`nome.sobrenome@`** com transliteração de trema (`christoph.suess@` para
+  *Christoph Süß*, `claudia.stricker@`).
+- **`apparat.no`**: **`nome.sobrenome@`** (`kristian.berg@` já tocado em 11/09, `hakon.nilsen@`
+  publicado na `/om-oss` com o rótulo *"Seniorkonsulent, CEO"*), mais `hei@`. **Å vira `a`**:
+  *Håkon* é `hakon.nilsen@`.
+- **`soja.se`**: **primeiro nome puro** (`sofie@` ↔ Sofie Edvardsson, `simon@` ↔ Simon Österhof,
+  `jakob@` ↔ Jakob Nyström), mais `hej@` e `jobb@`.
+- **`cocoa.fi`**: **domínio misto** — primeiro nome puro na maioria (`anton@` ↔ Anton Molander,
+  `eemeli@` ↔ Eemeli Katajisto, `ilona@` ↔ Ilona Malinen, `dermot@` ↔ Dermot Gallagher, `lotti@`) e
+  **`nome.sobrenome@`** em um (`niko.waaralinna@`), mais `casting@`.
+- **`timelessfilms.co.uk`**: **primeiro nome puro** (`ralph@`, `rebecca@`, `gareth@`, `jon@`,
+  `jade@` ↔ Jade Spinks).
+- **`stormstudios.no`**: **misto, primeiro nome e sobrenome no mesmo domínio** (`havard@` ↔ Håvard
+  Munkejord e `ivar@` ↔ Ivar Rystad pelo primeiro nome; `nordahl@` ↔ Espen Nordahl e `reppen@` ↔
+  Thomas Reppen pelo sobrenome; mais `jrsmith@`, que é inicial+inicial+sobrenome). **Casa no teto de
+  dois, registrada aqui só pelo padrão.**
+
+### MEDIDO: DIRETÓRIO DE ASSOCIAÇÃO NACIONAL É A MELHOR PORTA PARA DOMÍNIO INÉDITO
+
+`https://www.game.de/en/members/` responde **200 com 1.859.335 bytes** e publica **546 membros** do
+*game – Verband der deutschen Games-Branche*, cada um com `<h2>` de razão social e um `href` para o
+site. **452 desses domínios não aparecem em nenhum arquivo deste repositório.** A página **não
+publica nenhum endereço de e-mail e nenhuma pessoa** — `mailto:` dá **zero ocorrências** —, e é
+exatamente por isso que ela serve: **o que ela entrega é DOMÍNIO, e na Alemanha o `/impressum` é
+obrigatório por lei.** Varredura dos 452 em nove caminhos: **166 páginas com endereço** e **83
+endereços com forma de pessoa**. A versão alemã, `https://www.game.de/mitglieder/` (**200, 1.911.642
+bytes**), fica conferida e não varrida.
+
+**Ruído a filtrar nesse diretório, porque ele não é só de estúdio:** advocacia (`*.law`, `bvm-law.de`,
+`boehmert.de`, `bakermckenzie.com`, `cms.law`, `tcilaw.de`, `ihde.de`, `osborneclarke.com`,
+`gvw.com`), universidade e escola (`hdm-stuttgart.de`, `hochschule-macromedia.de`, `bimm-institute.de`,
+`bib.de`, `diploma.de`, `hs-fresenius.de`, `iu.de`, `pixlvisn.com`, `games-academy.de`,
+`animationsinstitut.de`, `th-deg.de`, `h-brs.de`, `hs-offenburg.de`, `hs-furtwangen.de`,
+`ue-germany.com`), feira (`koelnmesse.de`, `leipziger-messe.de`), fomento e associação
+(`gamecity-hamburg.de`, `medianet-bb.de`, `game-up-rlp.de`, `mf-rlp.de`, `esportbund.de`,
+`extendedrealitybb.org`, `spielfabrique.eu`, `booster-space.com`), hardware (`acer.com`, `benq.eu`,
+`tulparnotebook.de`) e braço alemão de casa grande (`activision.com`, `ea.de`, `capcom-germany.de`,
+`bandainamcoent.de`). **Vale marcar o ruído de uma vez: são cerca de 40 dos 452.**
+
+### Falhas de ambiente novas, para não gastar clique de novo
+
+- **`kingart-games.de` não passa verificação de TLS**, com e sem `www`: `curl: (60) SSL certificate
+  problem: unable to get local issuer certificate`. O **`.com` responde** (`kingart-games.com/page/6-impressum`,
+  200, 23.687 bytes). Entra na lista do `gigglebug.fi` e do `knowledgehub.creativebc.com` **só no
+  `.de`**.
+- **`www.spelplan.se`**: falha de TLS, `no alternative certificate subject name matches target host
+  name`. Mesma família.
+- **`animationsbranchen.dk/medlemmer/`** e **`bcanimation.org/members/`**: `curl: (56) CONNECT tunnel
+  failed, response 502`.
+- **`www.animation.no/medlemmer`**: `curl: (35) Recv failure: Connection reset by peer`.
+- **`cartoon-media.eu/members/`**: **404 com 102.328 bytes** — a URL do diretório da Cartoon Media
+  não é essa.
+- **PAREDE DE BORDA `202` COM ~170 BYTES, e agora com três casas:** `finalstrikegames.com` **e**
+  `finalstrikegames.net` (169 a 177 bytes em nove caminhos, e `/people` devolve **403 com 75.193
+  bytes**) e `celrage.com` (202 com 169 bytes na home, que em varredura anterior do mesmo dia tinha
+  respondido 200 com 12.306 bytes — **a parede sobe e desce**). **`202` com corpo minúsculo é
+  captcha de borda, não é casa muda.**
+- **CASCA REPETIDA COM 200, dois casos novos e os dois confirmados em catorze caminhos:**
+  `bohemia.net` serve a MESMA página de **190.4xx bytes** em treze dos catorze (só `/press` difere,
+  com 383.771) e dentro dela o único endereço é `policy@bohemia.net`, que é ruído de *Privacy
+  Policy*; `buf.com` serve a home de **14.466 bytes idênticos** nos catorze, com `jobs_paris@` e
+  `jobs_montreal@`. É a mesma assinatura do `gurustudio.com` e do `gimpville.no`.
+- **`timbregames.com`**: `/our-team`, `/people`, `/crew` e `/studio` devolvem **404 com 124.461
+  bytes** (casca de 404 grande); os caminhos vivos são `/`, `/about`, `/contact` e `/press`, e o
+  único endereço da casa é `joe@timbregames.com`, **já tocado em 17/09**. Casa sem segunda pessoa.
