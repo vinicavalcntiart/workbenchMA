@@ -7552,3 +7552,196 @@ continua carregando o script do Lever e um link de vaga**. O outro token da casa
   Dayforce vivo e confirmado pelo nome social.
 - **MELS, Zoic e Jellyfish** ficaram sem rota achada — `/careers` 404 nas duas primeiras e domínio que
   não resolve na terceira. Não são zero.
+
+## Jhon A, 19/09 16h15-17h55 UTC (trigésimo terceiro turno, a RODADA DE FORMULÁRIOS) — **TRÊS enviadas, e a de PERSONAGEM em VANCOUVER só existe porque eu caí na MESMA armadilha de parser que este arquivo já descrevia, e o CONTROLE POSITIVO me pegou**
+
+**Placar: 3 formulários enviados e confirmados, 0 duplicata, 0 navegador simultâneo** (`pgrep -c chrome`
+= 0 antes de cada uma das seis aberturas). Personagem: **1** (EA `216159`, Vancouver). O placar do dia
+passa de **16 para 19 formulários** e de **2 para 3 de personagem**. Faltam **2 de personagem** para a
+meta de 5.
+
+**Leitura honesta do placar antes de qualquer detalhe:** das três, **uma é requisição nomeada de
+personagem** e as outras duas são **banco de talentos de arte**, e **uma dessas duas saiu pela metade**
+(perfil vazio, sem CV, por erro meu de ferramenta — §4). Quem for estrito conta **2**.
+
+### 1. O QUE PRODUZIU A RODADA NÃO FOI DESCOBERTA, FOI **RELER UMA CASA GRANDE COM O PARSER CERTO**
+
+A EA foi lida inteira: **300 ids únicos em 18 páginas do Avature**. A minha primeira leitura escreveu
+**"300 vagas, ZERO da disciplina"**, e o zero era falso pelo **mesmo mecanismo que este arquivo já
+registra desde 17/09 às 11h35**: no Avature cada vaga aparece em **duas âncoras com o mesmo `href`**, a
+do título e uma cujo texto é `More Information`; dicionário por `href` faz a segunda **sobrescrever os
+300 títulos**.
+
+**Eu reincidi numa armadilha documentada, e o que salvou não foi memória: foi o controle.** Rodei o
+controle positivo que a regra de 17/09 04h30 tornou obrigatório quando o resultado é zero total —
+`artist|art|animat|environment|vfx|ui` sobre os mesmos 300 títulos — e deu **ZERO**. Casa que contrata
+arte não tem zero título com a palavra `artist`: o zero era do meu leitor.
+
+> **Regra nova, e ela é mais barata que "conte as âncoras por vaga": no Avature leia o título do SLUG
+> DA URL (`/JobDetail/<slug>/<id>`), nunca o texto da âncora.** O slug não depende de âncora nenhuma e
+> não tem gêmeo. Relido assim: **39 acertos de arte e NOVE de personagem**, e a `216159` era a única com
+> dedupe limpo.
+
+### 2. A ENVIADA DE PERSONAGEM, COM A PROVA E COM A RESSALVA QUE PODE DERRUBÁ-LA
+
+**Electronic Arts, `Character Artist - EA Sports UFC`, requisição `216159`, Vancouver (British
+Columbia)**, Temporary Employee, híbrida, faixa publicada **CAD 77.700 a 107.900**.
+
+**Três provas, todas de servidor:** (1) URL final `.../careers/Success?jobId=216159&qtvc=0817...`;
+(2) texto na tela *"Thanks for applying to Electronic Arts! We'll take it from here. Our team (actual
+humans, not robots!) will review your application..."*; (3) a lista **Job Applications da própria
+conta** trocou `Finish your application` por `No Pending Actions` na linha `216159 | Open | Vancouver |
+EA Studios - SPORTS | 19-Sep-2026`.
+
+**Régua de veto: 7.164 caracteres** (bem acima do piso), **dois acertos e os dois falsos** — `français`
+é o menu de idioma do próprio site e `hybrid` é o campo `Work Model`. **Zero** de `authorization`,
+`sponsorship`, `visa`, `work permit`, `citizen`, `must reside`.
+
+**Respostas, todas a verdade:** patrocínio de imigração **YES** (*"Do you now or in the future require
+immigration sponsorship to work in the country you are applying to?"*), restrição para trabalhar na EA
+**NO**, realocação **YES**, nunca trabalhou na EA, experiência **More Than 3 Years**, *"completou
+bootcamp/diploma nos últimos 18 meses"* **NO** (o PG Dip fechou em 2022 e o mestrado está em curso —
+**nada COMPLETADO** na janela), origem `EA Careers Website`, certificação de veracidade marcada e NDA
+de entrevista aceito.
+
+**A RESSALVA QUE PODE DERRUBAR A DECISÃO, dita para quem revisar poder discordar:** a EA **recusou em
+16/09 as DUAS irmãs** desta vaga — `215657` (temporária) e `215358` (efetiva), as duas `Character Artist
+- EA Sports FC` em Vancouver — com o mesmo texto escrito: ***"This position does not support relocation
+or immigration at this time"***. E o 17º registro do dia 17/09 **fechou por decisão escrita** as gêmeas
+`215658` e `215661` por causa disso. **Eu enviei mesmo assim**, com três fundamentos: (a) a própria
+carta de recusa diz *"This does not disqualify you from other openings"*; (b) UFC é outra franquia,
+outro time e requisição inédita, então o escopo literal de *"this position"* é diferente; (c) o anúncio
+não tem veto escrito nenhum. **Contra:** o padrão medido é **2 de 2 recusadas pelo motivo que se aplica
+a ele**, no mesmo estúdio e na mesma disciplina. Quem quiser chamar isso de tentativa contra veto tem
+argumento, e o argumento está aqui inteiro. Mais duas ressalvas: o anúncio pede portfólio
+**fotorrealista** (*"photorealistic character creation"*, *"realistic skin, hair, clothing"*) e ele é de
+personagem **estilizado**; e é **contrato temporário**.
+
+**Detalhe de registro, para ninguém achar que eu inventei ano de mestrado:** o bloco `Education` do
+perfil da conta já vinha com mestrado e `Graduation Date 2028-01`, preenchido por uma rodada anterior.
+**Eu não toquei nele** — nem para preencher, nem para "corrigir" no chute.
+
+### 3. O FLUXO DO AVATURE DA EA, MEDIDO INTEIRO, PORQUE ELE TEM QUATRO PARADAS E NENHUMA É CAPTCHA
+
+O `ea_apply.js` tinha o `215788` cravado no código, então nasceram três scripts com o id por argumento
+(`/home/user/apply/ea_job.js`, `ea_eeo.js`, `ea_fim.js`). O caminho é:
+
+| Passo | URL | O que trava |
+|---|---|---|
+| dedupe | `/careers/Profile` → aba `Job Applications` | **a lista da própria conta é o dedupe mais forte que existe nesta casa**; o `/careers/MyApplications` dá "page was not found" |
+| 1 | `ApplicationGeneralInformation?jobId=` | três `select` obrigatórios vazios: `7836`, `17623`, `17624`. **71 campos visíveis, ZERO iframe de captcha** |
+| 2 | `ApplicationEEO?jobId=` | **o checkbox `17505`, cujo `<label>` é literalmente `*`** — é o aceite do **NDA de entrevista**. Sem ele o `Next` não clica e estoura 30 s |
+| 3 | mesma URL | `Voluntary Self Disclosure` (gênero) — respondido `Choose not to Disclose` |
+| 4 | mesma URL | `3679-2` patrocínio, `3679-3` restrição, `3684` certificação → botão `2680-save` rotulado **Submit** |
+
+> **Duas armadilhas que custaram cinco cliques cegos:** (1) **o `innerText` dos botões do Avature é
+> VAZIO** — o rótulo `Next`/`Submit` mora no container pai, então casar por texto do próprio elemento
+> não acha nada e o laço fica clicando em lugar errado. O que acha é **o `id` terminado em `-goto`,
+> `-next` ou `-save`**. (2) **Um `502 "upstream request failed"` apareceu numa tentativa e NÃO é
+> recusa**: a lista da conta continuou com `Finish your application`, ou seja nada havia sido enviado.
+> A candidatura fica **retomável**, e a rota de retomada é o link `Finish your application` da própria
+> lista — o `goto` direto no `ApplicationEEO` reabre o wizard no passo 1.
+
+### 4. A VEIA NOVA QUE RENDEU AS OUTRAS DUAS, E O ERRO MEU QUE ESVAZIOU UMA DELAS
+
+A varredura de bancos de talentos de 10/09 gerou slug a partir dos CSVs de estúdio **da época**, e o
+`censo-artstation-1709.csv` nasceu **sete dias depois**. Então gerar slug daquele censo é chão novo.
+
+- **Pinpoint** (`/register-your-interest/new`), **3.599 slugs**: **19 rotas com 200**, e a assinatura
+  `ACME`/`Hooli` do relatório de 10/09 mata **11** como conta de demonstração (`aquent`, `blend`,
+  `firstderivative`, `habitat`, `labster`, `mayo`, `outform`, `plexus`, `puttshack`, `simwave`, `zoox`).
+  Das 7 reais, **nenhuma é casa de jogo ou animação em escopo**: `enver` é Istambul (fora do recorte),
+  `genesis` é finanças, `spiralyze` é marketing, `volka` é mobile 2D, e `netvrk`, `jetson` e `trace` não
+  são da disciplina. **Zero candidatura, e o zero é de identidade.**
+- **Teamtailor** (`/connect`), **6.000+ slugs** descontando os 173 tokens já conhecidos: **OITO rotas
+  com 200**, e **duas viraram candidatura**.
+
+**Timberline Studio (grupo Kepler Interactive), Los Angeles** — cadastro **completo**: `/connect/dashboard`
+com *"Welcome to Connect"*, `302 POST` em `/connect/candidates` e em `/connect/profile`, e o perfil
+**relido depois de recarregar** devolvendo nome, telefone com `+55` conferido dígito a dígito e
+**`My CV vini_cavalcanti_cv.pdf`**. Questionário de 3 slides respondido, com o pitch de personagem
+escrito; o campo `Address` do questionário **pulado de propósito**, porque endereço é decisão dele. A
+casa diz, na própria página, *"Our games focus on vibrant worlds with unexpected characters"* — e é
+**locatário SEPARADO** do `keplerinteractive` que a `FILA-PERSONAGEM-1209.md` descartou como publisher.
+
+**Coatsink (Sunderland) — e aqui está o erro, escrito inteiro.** A conta existe, com **três provas**
+(`/connect/dashboard` com *"Welcome to Connect"*; recibo `Log in to Coatsink` às 16h58m55 de
+`no-reply@coatsinksoftware.teamtailor-mail.com`; e o servidor respondendo, numa segunda tentativa,
+*"If we find a Connect account for contact@vinicavalcanti.art, a sign in link will be sent"*). **Mas o
+perfil ficou vazio** — sem nome, sem telefone, sem pitch e **sem CV**. O recibo chega com `Hi ,` de nome
+vazio, que é o sintoma.
+
+> **A causa e a regra: eu usei o `apply_tt_connect.js`, que faz SÓ o passo 1 e FECHA o navegador.** E a
+> sessão do cadastro é a **única** chance de preencher o perfil, porque o link *"Log in to Connect"* do
+> e-mail **não autentica** — testei aqui: o link abriu e todo caminho `/connect/*` voltou para a tela
+> *"What interests you?"*, exatamente como o `tt6_completa.js` registra para **15 de 19** locatários (a
+> Coatsink é o 16º). **Em locatário VIRGEM do Connect, rode `tt6_completa.js` DE PRIMEIRA.** Depois de
+> criada a conta, o perfil fica inalcançável para sempre.
+
+**Achado de método que vale para a família inteira: `faraway` é a CONTA DE DEMONSTRAÇÃO DO TEAMTAILOR**,
+o equivalente do `ACME`/`Hooli` do Pinpoint, e a assinatura é infalsificável — título `Far Far Away`,
+departamentos `Ogre Affairs`, `Wranglin' Manager`, `Test Connect Department` e `Test Connect - 2`, e a
+única vaga chamada **`Fairytale Wrangler`**. **Antes de enfileirar quadro do Teamtailor, leia os
+departamentos: se houver `Test Connect` ou nome de conto de fadas, é demo.**
+
+**E uma correção de registro que vale mais que o cadastro:** o painel tinha a Coatsink como
+`coatsink.careers.haileyhr.app`, *"PAGE UNDER MAINTENANCE, COMING SOON, Open positions (0)"*, desde
+07/09. **A casa trocou de ATS.** Hoje `careers.coatsink.com` é Teamtailor vivo, com 10 departamentos
+(`Art` e `Animation` entre eles). **Quadro registrado como morto ou em manutenção merece reconferência
+de FAMÍLIA, não de URL** — o `haileyhr` não existe mais e a URL antiga não aparece nem como pista.
+
+### 5. O ESTOQUE PRONTO DA CAMPANHA ESTÁ SECO, E AQUI ESTÁ O NÚMERO
+
+Conferido **antes** de caçar coisa nova, na ordem que a ordem pedia:
+
+- **(a) Faixa BAIXA do `PORTAIS`, as 92 portas que casam personagem e não têm parede:** lidas uma a uma,
+  e **a faixa baixa não é fila, é cemitério de decisão escrita**. As **duas únicas** sem motivo escrito
+  eram `WarForge Studio` e `Twin Swans`, as duas `Senior 3D Character Artist` **remoto de qualquer
+  lugar**, que era o melhor encaixe possível. **As duas morreram hoje:** o anúncio da WarForge no
+  Hitmarker diz *"This job is closed"* e *"No longer accepting applications"*, e o quadro próprio dela —
+  `careers.warforgestudio.com`, que a campanha não conhecia e que saiu do **link externo no HTML da
+  home**, não de adivinhação de slug — tem 4 vagas e **nenhuma de personagem** (Senior Technical Artist,
+  Senior UI Artist, Level Designer, Senior 3D Animator). A Twin Swans responde 200 mas `/careers` e
+  `/jobs` dão **404 limpo** e a raiz é só a página do jogo *Hunter's Moon*, sem ATS nenhum no HTML.
+- **(b) Bancos de talentos com departamento de personagem:** das **11** casas do
+  `bancos-de-talentos-1009.md`, **DEZ já estão no `enviados.csv` desde 10/09**, e a 11ª (`hyperhippo`) é
+  rota morta confirmada — 404 para qualquer cliente que mande `text/html`. Da `FILA-PERSONAGEM-1209.md`,
+  a Capsule Studio foi enviada em 11/09 e a `liquidswords` é parede de rede com **três** assinaturas.
+- **(c) e (d):** a EA rendeu a única de personagem do dia; o Workday não rendeu nada (§6).
+
+### 6. OS ZEROS MEDIDOS, COM O NÚMERO DE CADA UM
+
+- **Grupo Disney:** `ronda-disney.sh` com **12 de 12** consultas respondendo 200, **13 ids** da
+  disciplina no ar e **ZERO id novo**.
+- **Pixar** (locatário próprio `pixar.wd501`, consulta **sem filtro** e paginada): `total = 3`, e as três
+  são `On-Call Chef`, `Staff Systems Engineer, Data Streaming` e `Senior Research Scientist`.
+- **Netflix/Eyeline** (`netflix.wd108`, 8 termos em cada site): os dois `Character Modeler` são
+  **duplicata confirmada** (`JR42568` Vancouver, à mão em 15/09 e já **recusada** em 17/09; `JR42577`
+  Sydney, enviada em 16/09); `JR42643` `Environment Modeling Lead` Vancouver **já foi enviada em 18/09**;
+  o Eyeline só tem Hyderabad (fora do recorte) mais GenFX em Vancouver, que é FX.
+- **Paramount:** `ronda-paramount.sh`, **296 vagas** pelo sitemap, **1 acerto** e é o falso positivo
+  conhecido (`Sr Data Engineer (Data Architecture and Modeling)`, Nova York).
+- **Janela por data desde 08h00 UTC:** `JANELA_ISO=2026-09-19T08:00:00Z`, **882 quadros de 12 famílias,
+  801 vivos, 9.598 vagas por id único, SEIS na janela** e nenhuma da disciplina (2 `Mental Health
+  Therapist` no Breezy, 3 engenheiros no Greenhouse, 1 `Director, HR` no SmartRecruiters). As **1.344
+  sem data** deram **86 acertos** por palavra-chave e o dedupe fecha todos.
+- **Workday, 47 pares locatário/site × 11 termos = 517 consultas:** fora do já decidido, só `razer`
+  `JR2026007640` (descarte de 10/09 correto: *"This is a review and direction role, not hands-on"*) e os
+  quatro de personagem **conceito/produção** da CIG em `broadbean_external`.
+- **Alertas do Gmail do dia:** os dois de personagem já tinham decisão tomada **hoje mesmo** por outra
+  rodada — Omeda `4466902903` está na mão dele (parede de login do LinkedIn e site de carreiras apagado)
+  e NBCU `744000150414819` é DataDome de desafio, já no painel.
+- **Solidicon** (Suécia, Teamtailor real, departamentos `Arts at SOLIDICON` e `Games at SOLIDICON`):
+  **descarte por disciplina** — é fornecedor de **iGaming e varejo**, e a arte dele é símbolo de slot 2D.
+
+### 7. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **O perfil da Coatsink não foi preenchido e não tem mais como ser** pela automação. Se alguém quiser o
+  CV lá dentro, é login manual dele.
+- **Folks VFX ficou NÃO CONFERIDA de novo.** `careers.folksvfx.com` responde 200 mas serve **2.923
+  caracteres de casca de SuccessFactors**, sem dado de vaga e sem link de Talent Community no HTML. É
+  família que precisa de navegador, e eu escolhi gastar o navegador nas três candidaturas.
+- **Rising Sun Pictures `669` continua NÃO ENVIADA de propósito**, e eu **mantive** a decisão escrita de
+  16/09 em vez de reabri-la: o anúncio exige *"strong portfolio showing PHOTOREAL skin, hair, fur and
+  eye shading"* e a Senior Modelling Artist `623` acabou de entrar na mesma casa.
+- **Crafty Apes (Dayforce) e o quadro de busca da RSP** seguem as duas melhores dívidas de navegador.
