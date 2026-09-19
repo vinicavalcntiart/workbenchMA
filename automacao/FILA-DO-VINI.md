@@ -2424,6 +2424,8 @@ Portfolio: artstation.com/viniciuscavalcanti
 
 ## 36. Jam City — Principal 3D Generalist — San Francisco, EUA (presencial, USD 75.000–120.000)
 
+**✅ ENVIADA por você em 19/09 às 16h14 UTC (Application submitted!, sem captcha). Item fechado.**
+
 **Link direto:** https://jobs.lever.co/jamcity/14272af5-efc7-4150-8b59-dcabdaa8c578/apply
 **Por que vale:** **faixa publicada**, pede personagem explicitamente, ZBrush e Substance, e trata anatomia humana e animal. **Reconferida no ar hoje na API oficial do Lever: "Principal 3D Generalist", San Francisco, CA.**
 **A parede:** hCaptcha de desafio de imagem do Lever.
