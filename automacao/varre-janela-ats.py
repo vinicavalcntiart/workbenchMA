@@ -25,7 +25,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os as _os
 TOK = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'tokens-ats-1809.csv')
 OUT = sys.argv[1] if len(sys.argv) > 1 else '/tmp/janela.csv'
-JANELA = datetime(2026, 9, 18, 16, 0, 0, tzinfo=timezone.utc)
+# JANELA: default 18/09 16h00 UTC, mas sobrescrita pelo ambiente JANELA_ISO
+# (ex.: JANELA_ISO=2026-09-19T00:15:00+00:00) — 19/09 02h20, para nao editar codigo
+# a cada rodada de janela curta.
+_JI = os.environ.get('JANELA_ISO', '').strip()
+JANELA = (datetime.fromisoformat(_JI) if _JI else datetime(2026, 9, 18, 16, 0, 0, tzinfo=timezone.utc))
+if JANELA.tzinfo is None:
+    JANELA = JANELA.replace(tzinfo=timezone.utc)
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
       'Accept': 'application/json,text/xml,*/*'}
 
@@ -294,6 +300,11 @@ K1 = re.compile(r'\b(character|characters|creature|creatures|personagem|personna
 K2 = re.compile(r'\b(model+er|modeling|modelling|modeleur|surfacing|texture|texturing|'
                 r'look\s*dev|lookdev|look\s*development|groom|grooming|hair\s*&?\s*fur|'
                 r'sculptor|zbrush|visual\s*development|vis\s*dev)\b', re.I)
+# K3 = ROTA ESPONTANEA. Achado do 23o turno (19/09 00h50): varredura por titulo de DISCIPLINA
+# e cega para banco de talentos, que e a porta mais barata que existe. Sao DUAS varreduras.
+K3 = re.compile(r'(open\s+application|general\s+application|spontaneous|speculative|unsolicited|'
+                r'expression\s+of\s+interest|general\s+interest|talent\s*(pool|community|network)|'
+                r'register\s+your\s+interest|initiative\s+application|future\s+opportunit)', re.I)
 
 
 def main():
@@ -357,6 +368,8 @@ def main():
                     kw = 'K1'
                 elif K2.search(ti or ''):
                     kw = 'K2'
+                elif K3.search(ti or ''):
+                    kw = 'K3'
                 if kw and (nj in ('SIM', 'SEMDATA')):
                     s['kw'] += 1
                     w.writerow([fa, tk, st[:40], jid, ti, lo, url, dt, nj, kw])
