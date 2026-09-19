@@ -1808,3 +1808,189 @@ bytes**), fica conferida e não varrida.
 - **`timbregames.com`**: `/our-team`, `/people`, `/crew` e `/studio` devolvem **404 com 124.461
   bytes** (casca de 404 grande); os caminhos vivos são `/`, `/about`, `/contact` e `/press`, e o
   único endereço da casa é `joe@timbregames.com`, **já tocado em 17/09**. Casa sem segunda pessoa.
+
+---
+
+## 19/09/2026 14h35 — **TRÊS FORMAS NOVAS DE PROVA E DE RUÍDO, E A MAIS IMPORTANTE É QUE CONTAGEM DE PALAVRA NÃO PROVA DISCIPLINA**
+
+### A PROVA MAIS FORTE QUE EXISTE: O NOME COMO TEXTO DA ÂNCORA DO `mailto:`
+
+Este arquivo já registrava, em 06h35, que o `href` do `mailto:` e o texto visível podem **discordar** na
+mesma página, e que num caso o cartão de uma pessoa apontava para o endereço de outra. O
+`mirebound.com/impressum/` (**200, 280.295 bytes**, `<title>Legal notice</title>`) mostra a forma que
+**não pode** discordar, porque o texto visível da âncora **é o nome da pessoa**:
+
+```html
+<strong>Verantwortliche Personen</strong></span><br><br>
+<a href="mailto:daniel@mirebound.com"><span ...>Daniel Radschun</span></a><br>
+<a href="mailto:kai@mirebound.com"><span ...>Kai Moosmann</span></a>
+```
+
+**Quando o nome está DENTRO do `<a>` que carrega o `mailto:`, o pareamento não depende de adjacência,
+de ordem de payload nem de DOM achatado: é declarado.** Procure por
+`<a[^>]*mailto:([^"]+)"[^>]*>(?:(?!</a>).)*([A-ZÀ-Ü][a-zà-ü]+ [A-ZÀ-Ü][a-zà-ü]+)` antes de qualquer
+heurística de posição. **É a forma de prova de mais alta qualidade deste arquivo.**
+
+### O CONTADOR DE PALAVRA MENTE, E AGORA COM TRÊS CASOS NOMEADOS
+
+Ranqueei ~900 domínios por contagem de palavra de disciplina e os primeiros lugares eram todos lixo:
+
+| o que contei | onde | por que é falso |
+|---|---|---|
+| `3d` = **736** | `ism-agency.com` | **cor hexadecimal em CSS** (`#33dd..`, `#a3d..`). `3d` é a pior palavra-chave possível: bate em hash de CSS, em ID de CDN e em nome de arquivo. |
+| `character` = **3** | `aegicentertainment.com/careers` | **bloco de atributos de RPG usado como piada**: `INT`, `WIS`, `CONST`, **`CHAR`**. |
+| `sculpt` = **1** | a mesma página | **`alt` da capa de um post**: *"a sculpture of a green bush"*. |
+| `creature` = **48** | `audiocreatures.com` | **é o nome da marca.** A casa é estúdio de ÁUDIO. |
+| `hair ` = **96** | `razer.com` | ruído de palavra dentro de palavra (`chair`). |
+
+**Regra: contagem de palavra serve para ORDENAR a fila de leitura, nunca para provar disciplina.
+A prova é a frase lida, e a ficha tem de colar a frase.** Um corolário barato: conte `character` e
+`creature` **fora de atributo** (remova `alt="..."`, `title="..."` e `content="..."` antes de contar),
+e nunca conte `3d` sozinho — conte `3d character`, `3d model`, `3d artist`.
+
+### DUAS FORMAS DE OFUSCAÇÃO NOVAS, AS DUAS TRIVIAIS
+
+- **`insert-coin.ch/about`** (**200, 6.353 bytes**): `simon.broggi at insert-coin.ch`, com **espaço +
+  `at` + espaço**, sem colchete e sem parêntese. O extrator já cobria `[at]`, `(at)` e `{at}`; a
+  variante sem delimitador precisa de `\s+at\s+` → `@` e de `\s+dot\s+` → `.`. **Cuidado com falso
+  positivo:** aplique a substituição só em linha que já contenha algo com cara de domínio.
+- **`bitsoflove.be/contact-us`** (**200, 73.402 bytes**): o endereço geral é literalmente o texto
+  **`email hidden; JavaScript is required`**. É ofuscação por JS puro e **não tem nada para decodificar
+  no HTML**. Nesse caso o que salva é outra página: a mesma `/contact-us` publica `andries@bitsoflove.be`
+  em texto cru no bloco de liderança. **Endereço geral escondido por JS não significa casa muda.**
+
+### RUÍDO NOVO E OBRIGATÓRIO: ENDEREÇO DE MODELO DE CONSTRUTOR DE SITE
+
+Passa em qualquer regex de e-mail e **não existe**. Achados hoje, por domínio:
+
+| endereço | onde apareceu |
+|---|---|
+| `you@studio.com` | `agentape.ai`, `demiurgos.io` |
+| `example@mysite.com` | `ansiblesp.com`, `panivox.com`, `hestiatalent.co.uk` (Wix) |
+| `information@office.com` | `didimo.co` |
+| `user@website.com` | `39pictures.com` |
+| `gebruiker@domein.com` | `sjoerdwennekes.nl` |
+| `correo@dominio.com` | `mechanicgames.net` |
+| `deine@email.de`, `meineEmail@besteURL.de` | `maystudios.net`, `onemanonmars.com` |
+| `max.mustermann@mediamarkt.de`, `fornamn.efternamn@sollentuna.se` | `mediamarkt.de`, `rudbeck.se` |
+| `jane.smith@netlight.com`, `steve@minecraft.net` | `netlight.com`, `creeperhost.net` |
+| `E-mail_-info@edenspiel.com`, `DE368354691contact@rockyoceans.com` | colagem de rótulo/NIF com o endereço, sem espaço |
+
+**As duas últimas linhas são de família diferente e valem nota:** não é modelo, é **texto de rótulo
+colado no endereço por falta de espaço no HTML**. `DE368354691contact@rockyoceans.com` é o NIF alemão
+encostado em `contact@`. **Antes de aceitar um endereço, corte prefixo que não seja caractere válido de
+parte local e confira se o resultado ainda existe na página.**
+
+### PADRÕES DE DOMÍNIO PROVADOS NESTA RODADA
+
+- **`mirebound.com`**: **primeiro nome puro** (`daniel@` ↔ Daniel Radschun, `kai@` ↔ Kai Moosmann), dois
+  de prova, os dois publicados no Impressum como *"Verantwortliche Personen"*. Sem caixa de função.
+- **`lavamachine.com`**: **primeiro nome puro** (`eric@` ↔ Eric Giessmann, `piers@` ↔ Piers Goffart),
+  dois de prova, a casa inteira. Texto cru, zero ofuscação.
+- **`oisoi.studio`**: **primeiro nome puro** (`wim@` ↔ Wim Reygaert), **um** de prova, publicado na
+  `/careers`. O organograma tem doze pessoas e **só ele** tem endereço.
+- **`aegicentertainment.com`**: **primeiro nome puro** (`jordy@`), um de prova, seis vezes em texto e
+  duas em `mailto:`. **Sem sobrenome publicado em nenhuma página.**
+- **`epgames.gg`**: **abreviação do primeiro nome + `.` + sobrenome** (`jen.barba@` ↔ Jennifer Barba),
+  **um** de prova, mais `support@`. **Atenção:** com um só endereço de prova não se sabe se o padrão é
+  `jen.barba@` (abreviado) ou `jennifer.barba@` (inteiro), então `adrian.andres@` e `jorge.oliva@`
+  **são duas montagens sobre uma incerteza, não uma** — o pior caso possível. Não use.
+- **`pong.li`**: **`nome.sobrenome@`** (`dominik.frassmann@`, `doris.grimm@`, `terje.evensen@`), três de
+  prova, mais `ping@` e `presse@`. Casa descartada por disciplina (projeção e instalação), padrão vale.
+- **`fa-berlin.com`**: **inicial + `.` + sobrenome** (`p.djukic@`, `l.thiele@`, `m.ketzscher@`,
+  `m.breckwoldt@`, `s.kamal@`, `m.kamal@`, `h.hochmuth@`, `a.feldman@`, `t.grysczok@`), **nove** de
+  prova, mais `info@`. É **festival**, não estúdio.
+- **`hazardfactory.be`**: **`nome.sobrenome@`** (`robby.lopez@`, `sasha.deblock@`, `wouter.vanderbeken@`),
+  três de prova, e **o domínio do e-mail é diferente do domínio do site** (`the-hazard-factory.com`).
+  **Sinal útil: casa que trocou de nome comercial mantém o domínio antigo no e-mail.**
+- **`baviux.com`**: **inicial + sobrenome, sem ponto** (`sviudes@` ↔ Sergio Viudes, `eballesta@` ↔
+  Estefanía Ballesta), dois de prova.
+- **`mistralfilmstudio.com`**: **sobrenome puro** (`keydel@` ↔ Peter Keydel), um de prova, mais `info@`.
+- **`brainbugs.be`**: **primeiro nome puro** (`bram@` ↔ Bram Allegaert, `lennert@` ↔ Lennert Mottar),
+  mais `hello@` e `info@`.
+- **`rockyoceans.com`**: **primeiro nome puro** (`dirk@`, `claudia@`, `jess@` ↔ Jessica, `andre@`),
+  quatro de prova. Agência de PR, fora de escopo.
+- **`epgames.gg`, `oisoi.studio`, `aegicentertainment.com`**: as três publicam **UM** endereço de pessoa
+  e nenhuma tem segunda pessoa publicada. **Casa pequena europeia publica um endereço, não a equipe.**
+
+### DIRETÓRIOS DE ASSOCIAÇÃO: O QUE ESTÁ VIVO, O QUE CADA UM ENTREGA, E A CONCLUSÃO QUE MUDA A FILA
+
+| diretório | URL viva | status/bytes | entrega |
+|---|---|---|---|
+| **AG Animationsfilm (DE, animação)** | `https://www.ag-animationsfilm.de/netzwerk/mitglieder/` | 200 / 207.472 | **NOME + CARGO + DOMÍNIO + FACETA DE OFÍCIO**, 182 cartões, e `mailto:` = ZERO |
+| UK Screen Alliance (UK, VFX) | `https://www.ukscreenalliance.co.uk/directory/` | 200 / 394.773 | 121 domínios, **89 já no repositório** |
+| Ukie (UK, jogos) | `https://ukie.org.uk/membership-directory` | 200 / 282.156 | 662 domínios, quase todos prestador de serviço |
+| Dataspelsbranschen (SE) | `https://www.dataspelsbranschen.se/medlemmar/` | 200 / 663.981 | 146 domínios, escola e consultoria |
+| SGDA (CH) | `https://www.sgda.ch/members/` | 200 / 516.913 | 144 domínios, portfólio pessoal `.ch` |
+| FLEGA (BE) | `https://www.flega.be/members/` | 200 / 77.154 | 73 domínios, **rendeu duas fichas** |
+| DEV (ES) | `https://dev.org.es/socios/` | 200 / 317.612 | 95 domínios, **rendeu uma ficha** |
+| Dutch Games Association (NL) | `https://dutchgamesassociation.nl/members/` | 200 / 927.128 | 168 domínios, é lista de freelancer |
+| Neogames Finland (FI) | `https://neogames.fi/partner-sitemap.xml` | 200 / 53.572 | **446 NOMES de casa e mais nada** |
+| game.de alemão | `https://www.game.de/mitglieder/` | 200 / 1.911.642 | mesmo conjunto da versão inglesa |
+
+**A CONCLUSÃO, e ela reordena a fila da campanha: diretório de associação de JOGOS entrega prestador de
+serviço (advogado, contador, agência, escola, esports, até bar de jogos); diretório de associação de
+ANIMAÇÃO entrega OFÍCIO (nome, cargo, faceta de personagem).** A Ukie devolveu 369 domínios inéditos e
+**zero** estúdio de personagem, com 22 endereços de pessoa num escritório de advocacia e 11 numa casa de
+gravação de voz. A AG Animationsfilm devolveu 118 inéditos **com nome e cargo já pareados** e uma faceta
+`characterdesign` no `data-post-cat`. **Procure a associação de animação do país, não a de jogos.**
+
+**Estrutura do cartão da AG Animationsfilm, para reaproveitar em qualquer WordPress com filtro MixItUp:**
+
+```
+<article class="grid_teaser mix <facetas separadas por espaço>" data-post-cat="<facetas>">
+  ... <h2>NOME DA PESSOA</h2>
+  <p class="news_teaser teaser_text"> CARGO </p>
+  <p><a href="SITE DO ESTÚDIO" target="_blank">SITE</a></p>
+</article>
+```
+
+As facetas de ofício são `animatorin-de`, `autorin-de`, `regisseurin-de`, **`characterdesign-de`**,
+**`concept...`**, `backgrounddesign-de`, `produzentin-de`, `storyboarderin-de`, mais a faceta de estado
+(`berlin-de`, `bayern-de`, ...). **O `data-post-cat` é o índice de disciplina que nenhum outro diretório
+da campanha tem.**
+
+### A INVERSÃO DE RECEITA QUE ACHOU A LAVAMACHINE
+
+A receita antiga era **domínio → página de equipe → par nome↔cargo↔endereço**. Aqui foi ao contrário e
+por um salto de domínio:
+
+1. O diretório publica *"Eric Giessmann — 3D/VR Artist & Director — `ericgiessmann.com`"* com a faceta
+   `characterdesign-de`. **Nome e cargo de graça.**
+2. `ericgiessmann.com` é site **pessoal** e o endereço que ele publica é **`eric@lavamachine.com`**, de
+   **outro domínio**.
+3. `lavamachine.com` é o estúdio, e **nenhum diretório de estúdio o lista**.
+
+**Regra: quando o site pessoal de um freelancer publica endereço de OUTRO domínio, esse outro domínio é
+um estúdio que os diretórios de estúdio não têm.** Foi assim também que `barbar-studio.de` apontou para
+`caroline@fern.team` e que `thehiddeninstitute.com` apontou para `monjavincent.com` (`m@`, `v@`,
+`institute@`, e o domínio **não resolve** nesta rede).
+
+### FALHAS DE AMBIENTE E ARMADILHAS DE CAMINHO NOVAS
+
+- **`6side.de`**: `/impressum`, `/people` e `/our-team` devolvem **403 com 1.686 bytes**; os outros onze
+  caminhos devolvem **429 com corpo VAZIO**. Só a home responde. Entra na família de parede de borda do
+  `finalstrikegames.com` e do `celrage.com`, com assinatura nova: **429 com zero byte**.
+- **`ukie.org.uk/partner-directory` devolve 200 com `<title>Login</title>`** e `challenges.cloudflare.com`
+  dentro. **Terceira variante de "200 não prova fonte": 200 de tela de login.**
+- **`ukscreenalliance.co.uk/members/` e `/about/members/` devolvem 200 servindo a HOME** (51.042 bytes).
+  Quarta variante: **200 de redirecionamento silencioso para a raiz.**
+- **`wikkl.me` serve a MESMA casca de 32.1xx bytes em dezenove de vinte caminhos** (só `/` e `/contact`
+  diferem). Mesma assinatura do `gurustudio.com`, do `gimpville.no`, do `bohemia.net` e do `buf.com`.
+- **`woodblock.tv/about` devolve 404 com 514.081 bytes** — casca de 404 maior que a home de muita casa.
+- **`epgames.gg/about-us/` devolve 404 de 60.869 bytes** com `<title>404 Not Found | EP Games</title>`;
+  o caminho vivo é **`/about/`**. **`aegicentertainment.com/contact` devolve 404 de 7.031 bytes** com
+  `<title>Website Builder 404</title>`, apesar de existir *"Contact"* no menu.
+- **`protoplanet-studio.de/about` devolve 403 com 239 bytes** e a `/kontakt` não resolve.
+- **Diretórios mortos por ambiente, reconferidos em 19/09 às 14h35:** `animationontario.ca`,
+  `albertascreen.ca`, `dpe-agq.com`, `norskfilmforbund.no`, `gamesindustry.dk`, `spilproducenterne.dk`,
+  `animationdenmark.dk`, `animationsbranchen.dk`, `animationguild.org`, `iidea.it`, `gdacz.cz`,
+  `videogamesbelgium.be` (todos **conexão vazia**); `cmpa.ca/members/` e `iatse.net` (**403**);
+  `accessvfx.org/members` (**500**); `nordicanimation.com/members/` (**404 de 42.698 bytes**);
+  `animationireland.com/members/` (**404 de 119.466 bytes** — o diretório irlandês mudou de caminho
+  outra vez, depois de ter sido varrido em 16h35 de 18/09 com 52 membros).
+- **`neogames.fi`**: `/companies/` e `/members/` dão **404 de 39.121 bytes**, `wp-json/wp/v2/partner` dá
+  **404**, e a página de parceiro (`/?partner=<slug>`, **200, 41.137 bytes**) tem como conteúdo útil **só
+  o nome**: zero `mailto:`, **zero link para o site da empresa**. O único payload aproveitável do
+  Neogames é o `partner-sitemap.xml`, que dá **446 slugs de nome**. **É a doença da página de membro da
+  Guilde do Quebec, agravada: a Guilde ao menos publica o `mailto:`.**
