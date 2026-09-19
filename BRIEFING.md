@@ -6792,3 +6792,199 @@ Intelligent Creatures com o **domínio à venda no GoDaddy**).
   Griffin e Streamline Games → **BambooHR** (lê e não envia); Lost Boys → **JazzHR** (reCAPTCHA v2);
   Immutable → **Lever** (parede); Tanglewood → só Engineering e Tech Artist. **`Streamline Games` é
   a Streamline Studios com outro nome** — o homônimo iludia o dedupe por nome.
+
+## Jhon A, 19/09 10h15-11h30 UTC (vigésimo nono turno) — **ZERO ENVIADA**, e o número é honesto: o estoque enviável do universo conhecido está seco. O que a rodada entrega são **quatro zeros medidos**, **três quadros nacionais que o repositório não tinha** e **um zero falso de receita consertado no Oracle**
+
+Rodada de formulários das 10h15. **Placar: 0 candidatura enviada, 0 duplicata criada, 0 tentativa
+contra veto escrito, 0 navegador aberto** (`pgrep -c chrome` = 0 no começo e no fim). Personagem:
+**0 por título**. O placar do dia continua **10 de 10 formulários** (meta batida) e **1 de 5 de
+personagem**, e esta rodada não mexeu em nenhum dos dois.
+
+**Digo o que isso significa sem maquiagem:** eu não fui atrás de descoberta para fugir de
+formulário chato — eu reli a fila própria do Jhon **primeiro** (§5), e ela estava com as 19 portas
+restantes todas com motivo escrito. O zero é de estoque, não de esforço, e as seções abaixo têm o
+número de cada frente para a próxima rodada não refazer nada disto.
+
+**Números por frente:** janela por data desde 08h15 UTC em **880 quadros de 12 famílias — 799
+vivos, 9.578 vagas por id único, ZERO na janela**; **Workday por API, 22 pares locatário/site × 9
+termos = 198 consultas**, 153 respondendo, 13 acertos e zero enviável; **Oracle CX do grupo Virtuos,
+92 requisições** e 5 acertos, os 5 resolvidos; **Jobylon inteiro pelo sitemap, 9.176 anúncios**, 5
+acertos e os 5 mortos; **Personio, 99 locatários e 447 vagas, com a rota espontânea varrida pela
+primeira vez — 49 rotas**, zero enviável; **sete quadros nacionais sondados** pela associação de
+cada país, mais os dois conhecidos relidos (**108 títulos** na Holanda, **40** na Bélgica).
+
+### 1. O QUE A JANELA POR DATA MEDIU, E O ZERO É LITERAL
+
+`JANELA_ISO=2026-09-19T08:15:00Z python3 automacao/varre-janela-ats.py`: nas duas horas desde o
+28º turno **nenhuma das 12 famílias publicou UMA vaga**. Não é "zero da disciplina": é `janela=0`
+em ashby, bamboohr, breezy, greenhouse, homerun, lever, personio, pinpoint, recruitee, rippling,
+smartrecruiters e teamtailor, ao mesmo tempo.
+
+As **1.344 vagas sem data** (ashby, bamboohr, pinpoint, rippling) foram filtradas por palavra-chave
+sobre o quadro inteiro, como o próprio script manda, e deram **85 acertos**. Deduplicados um a um:
+**74 são BambooHR** (lê e não envia), **8 Ashby** (parede de plataforma), **2 Rippling** (Turnstile
+invisível) e **1 Pinpoint**, que é a `Maverick Games 76058` — e ela é a **mesma porta** do uuid
+`2cfec945`, enviada em 09/09. **Nenhum enviável.**
+
+### 2. O ZERO FALSO QUE EU ACHEI NA RECEITA DO ORACLE, e ele apaga um quadro de 92 requisições
+
+O BRIEFING de 18/09 registra a leitura do grupo Virtuos pelo `hcmRestApi` com
+`sortBy=POSTING_DATES_DESC`. **Rodado exatamente assim hoje, o endpoint responde HTTP 200, com
+`TotalJobsCount: 92` — e `requisitionList` VAZIA.** Quem escreve o zero a partir daí apaga a
+família inteira e o número parece conferido.
+
+O que falta é **um parâmetro**:
+
+    recruitingCEJobRequisitions?onlyData=true&expand=requisitionList
+      &finder=findReqs;siteNumber=CX_1,limit=100,offset=0
+
+> **Regra: em Oracle Recruiting o `TotalJobsCount` vem CERTO mesmo quando a lista vem vazia.**
+> Então `total > 0` com `lista = 0` é assinatura de **parâmetro faltando**, nunca de quadro vazio.
+> É a mesma classe do `items` do Teamtailor e do `CREATED`/`UPDATED` do Workable: **o nome da chave
+> é por plataforma e não se herda do brief.**
+
+Com o `expand` no lugar: 92 requisições, **5 acertos** e os cinco resolvidos — `2283` Lead Character
+Artist (Irlanda) **enviada em 18/09 11h49**; `2273` *Stagiaire Technical Artist - Character
+Pipeline* (França, estágio e pipeline); `2214` China, `2232` e `2183` Vietnã, fora do escopo.
+
+### 3. TRÊS QUADROS NACIONAIS NOVOS, E A ARMADILHA QUE QUASE PRODUZIU TRÊS ZEROS FALSOS DE UMA VEZ
+
+A regra de 12/09 ("antes de varrer um país por estúdio, procure o quadro NACIONAL dele") rendeu
+**três quadros vivos que o repositório não tinha**: **`gda.cz/jobs`** (Chéquia), **`rgda.ro/jobs`**
+(Romênia) e **`www.sgda.ch/jobs`** (Suíça).
+
+**E os três estão vazios agora — medido pelo SERVIDOR, não por grep.** As três páginas respondem
+**200 com 73 KB, 138 KB e 101 KB**, e o grep de disciplina dá **zero nas três**. Só que o texto
+**visível** delas tem **1.455, 2.127 e 1.851 caracteres**: é o menu do site. A lista é desenhada por
+JavaScript.
+
+> **Grep em casca de SPA não é zero, é ausência de medição** — a mesma leitura que o 25º turno
+> aplicou ao SmartRecruiters. O que fecha o assunto é o endpoint: `gda.cz` e `sgda.ch` rodam **WP
+> Job Manager**, e o `admin-ajax.php` com `action=job_manager_get_listings` devolve literalmente
+> `{"found_jobs":false}` com o HTML *"There are no listings matching your search."* **Isso** é zero.
+> Complemento útil: o feed `?feed=rss2&post_type=job_listing` da `gda.cz` serve **3 itens e os três
+> são de 2020** — feed de WP Job Manager serve anúncio expirado, então data é obrigatória ali.
+
+- **Romênia:** o quadro nacional inteiro tem **UMA** vaga, e o link dela é
+  `jobs.smartrecruiters.com/Ubisoft2/744000143504187` = *Data Engineer [The Division 2]*, Bucareste.
+  Fora da disciplina e em família de parede.
+- **Polônia: `gamedev.pl/praca` NÃO É QUADRO DE VAGA.** É um produto de IA (*"Describe a game, play
+  it"*), com **87 caracteres** de texto visível e *"Still loading"*. Falso amigo de URL puro;
+  `spidor.pl/jobs` e `polishgamers.com/jobs` dão 404.
+- **Espanha: não existe quadro.** `dev.org.es` e `aevi.org.es` respondem 200 e **não têm seção de
+  emprego** (`/empleo` e `/bolsa-de-empleo` dão 404). O único link de vaga no site do DEV é a página
+  de carreiras da Ubisoft Barcelona.
+- **Irlanda:** `imirt.ie` confirmado **404** em `/jobs`, `/jobs/` e `/job-board`, o que reconfirma a
+  medição de 12/09.
+- **Nova Zelândia: o quadro existe e está SEM CONTEÚDO, e os "3 acertos de character" são lixo.**
+  `nzgda.com/jobs` responde 200 com 197 KB e o grep acha `character` três vezes — nas **strings de
+  validação de formulário do Squarespace** (`captchaFailure`, `invalidCountryCode`). O `?format=json`
+  da própria CMS mostra o bloco da página como `sqs-layout sqs-grid-12 columns-12 **empty**`, e o
+  sitemap de 377 URLs tem `/jobs` como única URL de vaga.
+
+### 4. AS DUAS ARMADILHAS DE PALAVRA-CHAVE DOS QUADROS NACIONAIS CONHECIDOS, e as duas são de NOME
+
+- **Holanda (108 títulos lidos): existe um ESTÚDIO CHAMADO `Special Character`.** Ele aparece no
+  filtro de empresas ao lado de *Sparrow Night* e *Split Polygon*, e faz o grep de `character`
+  acertar num quadro que **não tem uma vaga de personagem** (o mais perto é *3D Artist Internship*
+  e *Environmental Artist Internship*, estágio). **Nome de casa vira acerto de disciplina.**
+- **Bélgica (40 vagas, 20 por página): `?page=2` devolve os MESMOS 20 anúncios**, exatamente a
+  armadilha do Hitmarker de 17/09. Da disciplina há **uma**: Cyborn *Senior Prop Artist (Hard
+  Surface & Sculpting)* `bf711720`, Antuérpia, on-site, `status: active`.
+
+**E a Cyborn é o caso de escola do segundo argumento do `dedupe-agora.sh`.** O ID `bf711720` passou
+**limpo na seção 1** (inédito nos quatro arquivos). Foi a **seção 3, a do NOME DA CASA**, que matou
+a porta: a Cyborn **já recusou por escrito em 11/09 às 12h07**, no mesmo `jobs@cyborn.be` —
+*"Sadly we currently have no openings in our company for your profile. Please stay tuned on our
+socials and website as this might change in the future."* Somado a isso, o `applyUrl` dela
+(`cyborn.be/jobs/senior-prop-artist.html`) tem **6.276 bytes e um `mailto:`**, sem formulário
+nenhum: **não é porta de formulário.**
+
+**Achado de ferramenta que fica:** o quadro belga tem **API própria em `api.gameindustry.be`**, e
+cada vaga traz `applyUrl`, `applicationEmail`, `status`, `publishedAt` e `expiresAt` no flight data
+do Next.js — é o quadro nacional mais rico que a campanha conhece.
+
+### 5. A ROTA ESPONTÂNEA DO PERSONIO FOI VARRIDA PELA PRIMEIRA VEZ: **49 ROTAS, ZERO ENVIÁVEL**
+
+O 27º turno varreu rota espontânea em Greenhouse, Lever, Ashby, Breezy, Pinpoint e Teamtailor — e
+**deixou o Personio de fora**, que é justamente a única família **sem porteiro** e a que pagou a
+Tangelo hoje às 07h1x. Varridos os **99 locatários** (447 vagas): **49 rotas espontâneas**.
+
+Triadas uma a uma, o rendimento é **zero**, e por três motivos diferentes:
+
+1. **As casas reais de jogo estão TODAS enviadas:** `deck13 2725779` (enviada 06/09, **recusada por
+   Karen Galicia em 16/09**), `chimera-entertainment 150955` (06/09, recusa de robô em 15/09),
+   `bongfish 366240` (06/09), `king-art-gmbh 2615138` (07/09), `stratosphere-games 1318003` (recibo
+   de 11/09) e `tangelo-games 2780991` (hoje).
+2. **Dois são quadro DEMO** pelo discriminador de 19/09 06h15 (`SEO Marketing Manager` +
+   `Social Media (Werkstudent)` + `Initiativbewerbung`): `tiny-roar-gmbh` e `boxelware`. **A
+   Boxelware é casa real** (a do *Avorion*) **com quadro demo**, igual a `futurlab`, `kaiko` e
+   `jumpgate` — a lista de casas reais com conta de teste abandonada só cresce.
+3. **Os 34 tokens genéricos de uma palavra vindos da lane de adivinhação de slug não são do
+   setor**, conferidos pelo `<title>` do próprio quadro: `ada Learning GmbH`, `AURORA`,
+   **`Demo Schweiz AG`** (literalmente demo), `BRIGHT Industrial Investment`, `Closed` (moda),
+   `FLOW media company`, `KIWI.KI`, `Lakestar Advisors` (VC), `Nordic Nutrition`, `north.io`,
+   `Parasol Island` (agência de motion design) e `Secure Cloud Services AG`.
+
+> **O falso amigo mais caro do lote é o token `stark`: é a STARK de Munique, fabricante de DRONE
+> MILITAR**, com 117 vagas de engenharia aeronáutica e **quatro** *Speculative Application*
+> (Amsterdã, Salonica, Estocolmo, Kiev). Ela responde a **todo** filtro de rota espontânea e a
+> **todo** filtro de escopo geográfico europeu. O discriminador é o `<title>` do quadro, que custa
+> uma requisição.
+
+A única casa real do setor ainda não enviada é a **HOLOGATE** (`hologate-gmbh`, Munique, VR de
+atração, 14 vagas com *Lead Technical Artist*). **Não enviada de propósito**, pela regra de
+espontânea só em casa de personagem de peso: VR de atração não tem demanda interna de character art
+e encher o placar com espontânea fraca é pior que o zero.
+
+### 6. A FILA PRÓPRIA DO JHON, RELIDA INTEIRA ANTES DE PROCURAR FORA
+
+Para a próxima rodada não gastar leitura. **PORTAIS: 922 linhas, 487 com `done=false`.** Filtrando
+título da disciplina **ou** rota espontânea **e** sem marca de parede, sobram **19**, e as 19 têm
+motivo escrito e reconferido: Imageworks `7529417003` exige francês; Airship `8281721` já enviada;
+Vertigo Istambul e Amber Brasil fora de escopo; Illumination `88ab5915` com quadro esvaziado; Epic
+`6020680004` já enviada; Golden Hind e Grumpyface com anúncio arquivado do lado deles; Framestore
+`visual-development-artist` pede IA generativa; Awaken Realms com faixa abaixo do piso; Skydance
+`9084fa54` recusada; Room 8 banida por ordem do Vini; Intelligent Creatures com domínio à venda; e
+**About Fun, Alkimia, Bugbear e Playsport são porta de E-MAIL e não de formulário.**
+
+- **Pinpoint:** 46 locatários, 107 vagas pelo `postings.json`, **uma** rota espontânea no universo
+  inteiro (Maverick Games `76058`) e ela é a porta já enviada em 09/09.
+- **Teamtailor Connect:** lane fechada às 08h15 (172 slugs, 145 páginas vivas, 17 com rótulo de
+  personagem, os 17 cadastrados). A melhor casa dela, a **Capsule Studio** de Paris com o
+  departamento `CHARACTER 78709` inteiro, está enviada desde 11/09 com recibo.
+- **Homerun, rota `/open-application` nos 10 tokens: NOVE dão 404** e o único 200 (`fabrique`) não
+  tem formulário. **Lane morta**, e vale riscar.
+- **Jobvite, 9 tokens:** 4 quadros com título (`absolute` 24, `nathan` 40, `playground-games` 12,
+  `triton-digital` 1) e **zero** batendo disciplina ou rota espontânea.
+- **Rippling:** a Blind Squirrel `8f652c14`, que o painel ainda descreve como *"porta viva sem
+  captcha"*, está medida em 18/09 22h15 como **Turnstile invisível** (zero POST para
+  `ats.rippling.com` em três tentativas) e **nem é vaga de personagem**. Segue item da mão dele; não
+  gastei clique.
+
+### 7. O RESTO, EM UMA LINHA CADA
+
+- **Ronda do grupo Disney CONFERIDA às 10h20**, e o zero é medido: 12 de 12 consultas em 200 com
+  JSON real (a janela de manutenção de 06h20–07h24 acabou), 13 IDs da disciplina no ar.
+- **O `ronda-disney.sh` estava reacusando o mesmo ID como novidade a cada rodada.** O `10160035`
+  (*Disney Live Entertainment Character Content Creator Intern*) está classificado desde 18/09 17h20
+  e **nunca tinha entrado no `CONHECIDOS`**, então três rodadas diferentes reabriram a mesma
+  investigação. Acrescentado ao script com o motivo inteiro no comentário. **Classificar sem
+  alimentar a lista de conhecidos é trabalho que se paga toda hora.**
+- **Pixar:** `Pixar_External_Career_Site` responde 200 e `character` devolve `total=0`.
+- **Netflix** (`netflix.wd108/Netflix`, `total=48`): os quatro de personagem estão resolvidos
+  (`JR42568`, `JR42577`, `JR41751`, `JR41777`), e os dois *Environment Modeling Supervisor*
+  (`JR39446`, `JR41734`) foram enviados em 09/09. **Eyeline:** 3 acertos, os três em Hyderabad.
+- **Workday, controle de casa grande:** os dois de personagem da Blizzard são a `R028136`
+  *Character Artist StarCraft*, **recusada hoje às 08h08**, e a `R027817` *Lead Character Artist
+  Overwatch*, recusada em 12/09. Os quatro acertos da **CIG** são *Character **Concept*** (2D) e
+  *Character **Producer***, os dois fora da disciplina.
+- **Seis locatários de Workday ficam NÃO CONFERIDOS, e isso não é zero:** `activision.wd1`,
+  `magicleap.wd1` e `sonyinteractive.wd1` devolvem **422** (nome de site errado — testei 7
+  candidatos por locatário sem acerto), `epicgames.wd5` e `krafton.wd3` devolvem **403**,
+  `bydeluxe.wd5` **404**. A Blizzard é lida de outro jeito (pelo site do `xboxgaming`), mas Epic,
+  KRAFTON e Sony Interactive seguem sem receita neste IP.
+- **Jobylon, a única família sem captcha, varrida inteira:** `sitemap-jobs.xml` com **9.176 anúncios
+  vivos** (eram 9.079 em 18/09) e **5 acertos**, quatro falso amigo de *modelling* financeiro e
+  científico (Etteplan, KPMG, Radboudumc, 247hire) e o quinto é Bond Street Film *3D Generalist*
+  `148210`, **já enviada** (*"Tack för din ansökan!"*).

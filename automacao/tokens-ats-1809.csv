@@ -1056,3 +1056,33 @@ personio,smg,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.
 personio,kiwi,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
 personio,thomas,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
 personio,once,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+# 19/09 10h15-11h30 UTC (Jhon A, 29o turno) - DUAS RECEITAS CONSERTADAS E UMA LANE RISCADA
+# ORACLE RECRUITING (familia fora deste arquivo, locatario fa-exhj-saasfaprod1 site CX_1): a URL
+#   do BRIEFING responde 200 com TotalJobsCount=92 e requisitionList VAZIA. Falta expand. A que
+#   funciona e: /hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true
+#   &expand=requisitionList&finder=findReqs;siteNumber=CX_1,limit=100,offset=0
+#   REGRA: total>0 com lista=0 e parametro faltando, NUNCA quadro vazio.
+# HOMERUN, rota /open-application: dos 10 tokens deste arquivo NOVE dao 404 e o unico 200
+#   (fabrique) nao tem formulario. Lane de rota espontanea do Homerun esta MORTA; nao refaca.
+# JOBVITE, 9 tokens: 4 quadros com titulo (absolute 24, nathan 40, playground-games 12,
+#   triton-digital 1), ZERO batendo disciplina ou rota espontanea.
+# WORKDAY, locatarios NAO CONFERIDOS neste IP (nao e zero): activision.wd1, magicleap.wd1 e
+#   sonyinteractive.wd1 dao 422 (site errado, 7 candidatos testados cada); epicgames.wd5 e
+#   krafton.wd3 dao 403; bydeluxe.wd5 dao 404. A Blizzard le-se por xboxgaming.wd1 no site
+#   Blizzard_External_Careers. Pares que RESPONDEM: xboxgaming.wd1/External,
+#   xboxgaming.wd1/King_External_Careers, xboxgaming.wd1/Blizzard_External_Careers,
+#   cloudimperiumgames.wd503/CIG_Global_Careers, unitytech.wd1/Unity, warnerbros.wd5/global,
+#   lnw.wd5/LightWonderExternalCareers, mpc.wd1/MPCCareers, razer.wd3/Careers,
+#   sega.wd3/sega_careers, spe.wd1/sonypicturesentertainment, tencent.wd1/Tencent_Careers,
+#   netflix.wd108/Netflix, netflix.wd108/Eyeline, pixar.wd501/Pixar_External_Career_Site,
+#   aristocrat.wd3/AristocratExternalCareersSite, cae.wd3/cae, disney.wd5/disneycareer,
+#   disney.wd5/disneycareerdc
+# PERSONIO, rota espontanea varrida pela 1a vez: 99 locatarios, 447 vagas, 49 rotas, ZERO
+#   enviavel. FALSO AMIGO A REGISTRAR: o token `stark` e a STARK de Munique, fabricante de DRONE
+#   MILITAR (117 vagas, 4 Speculative Application). Tokens DEMO novos: tiny-roar-gmbh, boxelware.
+# QUADROS NACIONAIS NOVOS (receita de URL, nao token): gda.cz/jobs e www.sgda.ch/jobs rodam WP
+#   Job Manager - leia por POST admin-ajax.php action=job_manager_get_listings, que devolve
+#   found_jobs:false quando esta vazio; rgda.ro/jobs traz o link da vaga no HTML servido;
+#   gameindustry.be tem API em api.gameindustry.be com applyUrl e applicationEmail por vaga.
+#   NAO SAO QUADRO: gamedev.pl/praca (produto de IA), dev.org.es e aevi.org.es (sem secao),
+#   imirt.ie (404), nzgda.com/jobs (pagina existe e o bloco de conteudo esta EMPTY).

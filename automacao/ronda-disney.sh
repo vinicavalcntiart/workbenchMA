@@ -29,7 +29,15 @@
 # or Web Design ou Creative Writing, e é personagem de parque, não 3D. Fica na lista de conhecidos
 # para não reacusar como novidade a cada rodada e fazer a próxima pessoa investigar de novo.
 # 10160980 entrou em 17/09: Senior Look Development TD, ILM Londres, ENVIADA E CONFIRMADA pelo Workday na vigia das 10h40.
-CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882 10160043 10160980}"
+# 10160035 entrou em 19/09 as 10h20 (Jhon A, 29o turno). Ele JA estava classificado desde 18/09 17h20 e
+# mesmo assim aparecia como "ID NOVO" em TODA ronda, porque nunca entrou nesta lista. Tres rodadas
+# diferentes reabriram a mesma investigacao. E "Disney Live Entertainment Character Content Creator
+# Intern, Spring 2027", Kissimmee FL, e NAO e arte 3D: "character" ali e fantasia de parque (o time
+# produz "written and visual costume documentation materials" em InDesign), com veto ESCRITO no
+# anuncio ("Be enrolled in an accredited college/university"). A regra 14 nao dispara porque ela
+# exige vaga de ARTE OU MODELAGEM. Aparece nos DOIS sites (disneycareer como _10160035 e
+# disneycareerdc como _10160035-1): e a mesma requisicao em dois anuncios de local.
+CONHECIDOS="${1:-10154147 10155895 10155332 10155202 10145923 10157562 10155976 10144787 10126752 10159762 10160266 10159370 10159371 10159882 10160043 10160980 10160035}"
 UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'
 TMP=$(mktemp -d)
 OK=0
