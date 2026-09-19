@@ -6331,3 +6331,171 @@ casual (*"3D assets for in-game environments, props"*, zero *character*), Unity 
 topo da faixa publicada (1.800 a 4.000 EUR/mês) fica abaixo do piso de senior. A rodada já havia
 gasto a cota de ambiente na WildBrain, que é melhor em todos os eixos. Porta mapeada para uma próxima
 rodada virar em um minuto: `estoty.com/form/?id=3d-generalist-mobile-games-on-site`.
+
+## Jhon A, 19/09 02h15-03h40 UTC (vigésimo quinto turno) — **TRÊS ENVIADAS**, E AS TRÊS SAÍRAM DA MESMA FONTE NOVA; O QUE DESTRAVOU A RODADA FOI DESCOBRIR QUE UM AGREGADOR ENTREGA **LOCATÁRIO DE ATS**, NÃO VAGA
+
+Rodada de formulários da madrugada. **Placar: 3 candidaturas ENVIADAS E CONFIRMADAS (Undead Labs,
+Plummy Games, Wonder Works Studio), 0 duplicata enviada, 0 tentativa contra veto escrito.**
+Personagem: **0 enviada por título**, e o motivo é medido, não preguiça — a janela de 2 h deu zero
+da disciplina e a única porta de personagem fresca do mundo nesta madrugada é a **EA Sports UFC de
+Vancouver**, que tem veto de e-mail da própria casa. As três que saíram são **rota espontânea**, e
+nas três a carta nomeia character art por escrito, com a disciplina, o visto e a pretensão dentro.
+
+**Números por frente:** janela por data de 2 h (publicadas desde 00h15 UTC) em 739 quadros de 12
+famílias — **8.416 vagas por id único, 694 quadros vivos, 31 na janela, ZERO da disciplina**;
+1.276 vagas das quatro famílias sem data, com 73 acertos de palavra-chave (21 de disciplina, **os
+21 já triados pelo turno anterior**, e 52 de rota espontânea); dívida do Workday **fechada com
+medição**; fonte nova medida em 35 min e virada em **34 tokens de ATS versionados**.
+
+### 1. AS TRÊS QUE SAÍRAM
+
+- **Undead Labs (Xbox Game Studios), `General Interest Application`, Greenhouse
+  `undeadlabsllc/4025972005`**, 02h47. Provas: URL `/confirmation`, tela *"Thank you for applying.
+  Your application has been received. If there is a fit, someone will be getting back to you."* e o
+  e-mail *Security code for your application to Undead Labs* às 02h46m09. Régua **zero** em 1.836
+  caracteres **com controle positivo** de irmãs do mesmo grupo de leitura. Autorização com a
+  verdade (elegível nos EUA = **No**, patrocínio = **Yes**), os **três** locais marcados,
+  departamento **Art** entre doze, e USD 100.000 na carta. Detalhe da casa: a maior faixa de
+  experiência que o formulário oferece é **`7+`** (as opções são 1-2 até 7+).
+- **Plummy Games, `Open Application`, Teamtailor `plummygames/6670751`**, Tallinn e remoto, 03h00.
+  Provas: URL `/applications/8856cdfa-…/thanks/…` e a tela **"Applied to Open Application"** com
+  *"Thanks for applying. We have received your application and we will be reviewing it shortly."* —
+  **não** apareceu "Verify your email", que é o estado em que a candidatura do Teamtailor não entra,
+  e não há e-mail de verificação na caixa. Régua **zero** em 3.133 caracteres **com controle
+  positivo na irmã do próprio quadro** (`Product Manager 7489647` devolve `hybrid`). Nove
+  obrigatórias com a verdade, país **Brazil** escolhido entre **196 radios de lista escondida**,
+  B2B fora de Moldávia/Estônia = **Yes**, pretensão **3.750 EUR/mês**.
+- **Wonder Works Studio, `General Application`, Breezy `abffc4775170`**, Arlington TX e **remoto de
+  qualquer lugar**, 03h27. Provas: **POST 204** em `app.breezy.hr/api/apply/abffc4775170`, URL
+  `/apply/submitted` e *"Application Submitted. Your application has been submitted successfully.
+  Good luck!"*. Zero captcha. **Ressalva honesta do tamanho da porta:** a descrição vem **vazia** na
+  API e a página dá **824 caracteres**, abaixo do piso de leitura válida — então "zero veto" ali é
+  fraco, é só a constatação de que a casa não escreveu frase nenhuma; e a publicação é de 28/11/2023.
+  **Honeypot `hp_7f2b` presente e deixado vazio — é o MESMO nome medido na Playdead em 06/09, ou
+  seja a isca é da PLATAFORMA Breezy e não daquela casa.**
+
+### 2. A FONTE NOVA, E O ACHADO É QUE ELA DESCOBRE **LOCATÁRIO**, NÃO VAGA
+
+`gamejobs.co` já tinha sido usado uma vez (o feed Atom, em 17/09, que achou o Virtuos 2283). O que
+ninguém tinha usado é a rota **`/search?q=<termo>`**, e ela muda a natureza da fonte:
+
+- é **servida pelo servidor**: 100 cards por consulta, cada card com **título, empresa, local e
+  idade relativa** (`1 hour ago`) em HTML puro, legível por `curl`;
+- e a **página do anúncio carrega o link de Apply para o ATS de verdade**. É isso que faz dela uma
+  máquina de achar **locatário**: `undeadlabsllc`, `plummygames` e `wonder-works-studio-inc` **não
+  estavam** no `tokens-ats-1809.csv`, e por isso nenhuma das 739 sondagens por API os tocava.
+
+**Medido:** 14 consultas de disciplina e de rota espontânea → **742 cards únicos, 573 com ATS
+resolvido, 114 empresas, 40 slugs fora da lista** (34 versionados; `workable/j` é falso, é o formato
+`apply.workable.com/j/<id>`). Os 34 entraram no `tokens-ats-1809.csv` com `origem=gamejobs-co-1909` e
+`identidade=casa-real`, porque o nome da empresa vem do próprio card ao lado do link de apply.
+Entre eles: `greenhouse/zyngacareers` (44 vagas), `greenhouse/taketwo`, `greenhouse/rockstargames`,
+`greenhouse/pokemoncareers`, `workday/tencent.wd1`, `workday/sega.wd3`, `lever/xsolla`,
+`lever/peakgames`, `bamboohr/arvore`.
+
+> **LIMITE MEDIDO, e ele é duro: a página 2 não existe sem conta.** `/search?p=2&q=…` responde
+> **302 para `/login?next=…`**, mesmo com cookie e Referer. O alcance é **100 cards por consulta**, e
+> a largura se compra com **mais consultas** e com os filtros `w=` de local e `c=` de empresa — nunca
+> com paginação. Uma fatia por país (20 locais × character) devolveu 255 cards inéditos e **3** da
+> disciplina, todos de casa já conhecida.
+
+**Lida e descartada no mesmo turno, com medição:** `workwithindies.com` **já tinha sido tocada em
+17/09** e agora está fechada com o motivo certo — o `sitemap.xml` dela tem **1.376 páginas de vaga,
+mas é ARQUIVO, não feed**: guarda anúncios de 2024, e `lastmod` é data de criação/edição do item do
+CMS, não de publicação. O discriminador está **na página**, que traz `Posted <data>` e a frase
+**"This position has been closed."** — e **6 de 6** itens da disciplina que abri estavam fechados,
+inclusive os dois que a categoria `art-animation` ainda lista. **Categoria de agregador não é lista
+de vaga aberta.** E `artstation.com/jobs` **não se lê por `curl` daqui**: `/jobs` e a home devolvem
+**403 de desafio Cloudflare** e o `POST /api/v2/jobs/search.json` devolve **412 `Invalid CSRF
+Token`** (o endpoint de token responde 404). Fica para navegador de verdade, não para varredura.
+
+### 3. A DÍVIDA DO WORKDAY ESTÁ FECHADA, E O QUE A FECHA É O `robots.txt`
+
+`nbcuniversal.wd5`, `takeforward.wd1` e `ea.wd1` **não são locatários do Workday**. O 422 não era
+corpo recusado: é a resposta do host para **inquilino que não existe**, e isso se prova em uma
+requisição, **sem POST e sem adivinhar slug de site**:
+
+> **O `robots.txt` do locatário é o discriminador mais barato do Workday.** `https://<t>.wd<N>.
+> myworkdayjobs.com/robots.txt` devolve **200 e lista TODOS os sites do inquilino** em linhas
+> `Sitemap:`; inquilino inexistente devolve **422**. Controle positivo: `disney.wd5` (só
+> `disneycareer`), `xboxgaming.wd1` (**sete** sites) e `warnerbros.wd5` (`global` e `francais`).
+> Controle negativo: `blizzard.wd5` e `sonypicturesentertainment.wd5` dão **422** — ou seja **422
+> aparece em casa que EXISTE mas está sob outro locatário**, e é exatamente por isso que ele não
+> pode ser lido como "quadro vazio".
+
+Sonda larga para não deixar a dívida no palpite: **13 nomes de inquilino × 9 hosts = 117 consultas,
+zero acerto** (`nbcuniversal`, `nbcuni`, `comcast`, `nbcunicareers`, `takeforward`, `take2`,
+`taketwo`, `take2games`, `rockstargames`, `zynga`, `ea`, `electronicarts`, `eacareers`). **E onde as
+três realmente vivem:** a EA é **Avature** (`jobs.ea.com`, 7 assinaturas no HTML), a Take-Two é
+`careers.take2games.com` (Next.js, e o grupo dela publica em **Greenhouse** — `taketwo`,
+`zyngacareers`, `31stunion`, `sggcareers`), e a NBCUniversal é **SmartRecruiters**. Nenhuma das três
+tem Workday para ler.
+
+**Bônus que o `robots.txt` deu de graça:** o `xboxgaming.wd1` tem **sete** sites e quatro nunca
+foram lidos pela campanha. Lidos agora inteiros: `External` 105 vagas, `Blizzard_External_Careers`
+49, `King_External_Careers` 22, `SS_external` 3, `CentralTech` 2, `DL_external` 0, `HOH` 0. Da
+disciplina existem **duas**, as duas da Blizzard, e as duas **já foram enviadas** (`R028136` em
+12/09, `R027817` em 02/09). A família está medida e seca.
+
+### 4. QUATRO ARMADILHAS MEDIDAS, E A PRIMEIRA É UM BUG **MEU** QUE IA MANDAR DUAS DUPLICATAS
+
+- **`grep -E` com `\|` é PIPE LITERAL, não alternância.** Rodei o dedupe de estúdio com
+  `grep -icE "absurd ventures\|absurdventures"` e ele devolveu **0 nos quatro arquivos** para a
+  Absurd Ventures e para a Mob Entertainment — **as duas já enviadas**, 12/09 e 02/09, cada uma com
+  recibo nomeando a vaga. Em ERE o `\|` casa o caractere `|`, então o padrão virou uma string que
+  não existe em lugar nenhum, e o zero pareceu casa inédita. **O que segurou foi a `garra.sh`**, que
+  confere por URL e por id e respondeu `JA-FEITO` nas duas. **Regra: em `grep -E` a alternância é
+  `|` puro; `\|` só funciona no `grep` básico. E dedupe de nome NUNCA substitui a garra —
+  ele complementa.**
+- **O CHECADOR DE PRÉ-ENVIO MENTE, E MENTIU EM DUAS FAMÍLIAS DIFERENTES NA MESMA RODADA.** O
+  `apply-greenhouse.js` imprimiu **`pre-submit invalid: []`** e o `apply_own.js` imprimiu **`ainda
+  faltam 0`**, os dois com leitura de volta campo a campo bonita — e os dois envios voltaram
+  **sem enviar nada**, com `This field is required` em quatro obrigatórias na Undead Labs e em
+  `Phone*`, `Address*` e `Desired Salary*` na Wonder Works. **Causa comum: os dois validam apenas os
+  seletores/ids que o ARQUIVO DE RESPOSTAS lista.** Arquivo vazio não checa nada e passa limpo.
+  **Regra: o conjunto obrigatório de verdade se lê no HTML do formulário (ou no erro do servidor
+  depois do clique), nunca no checador do preenchedor.** Nas duas casas o custo foi uma corrida
+  perdida, não uma candidatura errada, porque os dois param antes de confirmar.
+- **TERCEIRA APARIÇÃO DA REGRA 18 COM O MECANISMO DE ONTEM: O MESMO REQUISITO EM DOIS QUADROS DE
+  GREENHOUSE.** A `Spontaneous applications` da **Keen Software House** aparece em
+  `keensoftwarehouseas/4057755101` **e** em `kswh/4880719101` — ids de anúncio diferentes, e o
+  **`internal_job_id` é o mesmo, `4045009101`, com `requisition_id` 16**. Ela **já foi enviada em
+  10/09** pelo quadro europeu `kswh`, e o token `keensoftwarehouseas` é novo, então o dedupe por
+  token e por id de anúncio devolvia "casa nova". **O que amarra continua sendo o `internal_job_id`.**
+- **RECRUITEE: A CHAVE DE SITE DO hCAPTCHA NÃO DISCRIMINA NADA.** O `siteKey
+  d111bc04-7616-4e05-a1da-9840968d2b88` e o host `captcha-base.recruiteecdn.com` aparecem no bundle
+  de **TODA** página do Recruitee — medi os dois idênticos em `dovetailgames`, `tensquaregames`,
+  `softgames` e `framestore`. O que discrimina é a flag **`"hcaptcha":true|false`** do próprio
+  locatário. Sondados 30 locatários da lista: **13 com `true`** e **10 sem a chave nenhuma** — e
+  esses 10 são **NÃO CONFERIDO**, não "sem captcha", porque chave ausente é leitor no lugar errado
+  até prova em contrário. Isso **não desfaz** a conclusão de 17/09 sobre a Framestore (a flag dela é
+  `true` mesmo), mas desfaz o **método** com que ela foi escrita.
+
+### 5. O QUE CAIU, E A QUE MAIS DÓI É A PORTA PERFEITA DE UMA HORA
+
+- **EA, `Character Artist - EA Sports UFC`, Vancouver BC, publicada 1 HORA antes da rodada.**
+  Personagem, Vancouver (prioridade 1), casa grande. **Não enviada pelo veto do §7 de 18/09 20h55,
+  que não está no anúncio e sim nas DUAS recusas de 16/09** (`EAcareers@ea.com`, *"This position does
+  not support relocation or immigration at this time"*), mesma cidade e mesmo time. É a terceira vez
+  que a EA Vancouver aparece como porta limpa no anúncio; continua fechada por e-mail.
+- **Epoch Games (SmartRecruiters `EpochGames`), TRÊS vagas de personagem vivas** — `3D Character
+  Artist 744000018988355`, `3D Creature Artist 743999996922277` e `Reallusion Character Creator 3D
+  Artist 744000038014076`, Winston-Salem NC, **remote=true**, casa inédita. **Não enviadas por falta
+  de ferramenta e por parede de plataforma:** `/home/user/apply` não tem preenchedor de
+  SmartRecruiters e a família está medida com **DataDome de desafio** (CDPR, Keywords, NBCU, Folks).
+  O grep de porteiro na página dá **zero** nos 109 KB, e isso **não** é porta limpa — é casca de SPA.
+  Fica como o item de SmartRecruiters mais alinhado que a campanha tem.
+- **Virtuos / Black Shamrock `2283` (Lead Character Artist, Dublin): dívida FECHADA, não é porta.**
+  Ela estava com `enviados.csv` = 0 e por isso parecia porta pronta no topo da fila; a `garra`
+  respondeu `JA-FEITO` e a linha de `processados.csv` mostra **ENVIADA em 18/09 11h49** pelo
+  `apply_oracle.js`, depois da troca de modo da sessão. **A garra não deu falso positivo; o
+  `enviados.csv` é que não tem a linha.** Quem for revisar registro comece por aí.
+- Os 21 acertos de disciplina das quatro famílias sem data (`iconcreative 136`, `igg 289`, `owi 199`,
+  `imageengine 15/21/28`, `theembassy 58`, `stirlinganimation 77/84`, `barnstormvfx 176`, `dmfx 129`,
+  `streamlinestudios 84/106`, `tornbanner 50`, `thatgamecompany`, `triumph 273`) **são exatamente os
+  mesmos 21 do turno das 00h15**, todos já triados. A releitura serviu de controle, não de colheita.
+- Da fatia de rota espontânea nas famílias que o 23º turno não varreu (`recruitee`,
+  `smartrecruiters`, `homerun`, `rippling`): **26 rotas em 2.182 vagas**, e nenhuma enviável —
+  Recruitee com `hcaptcha:true`, SmartRecruiters com DataDome, Rippling com Turnstile invisível já
+  medido, e o resto fora do setor (TBWA é publicidade, Brainsquare e Clarity são TI, Knuddels é
+  plataforma de chat).
