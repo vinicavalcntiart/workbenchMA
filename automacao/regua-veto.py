@@ -24,6 +24,17 @@ TERMOS = [
  'on-site only', 'onsite only', 'in-office', 'no remote', 'not remote', 'hybrid',
  # --- nivel ---
  'internship', 'must be enrolled', 'student',
+ # --- 19/09 20h15: OS TERMOS QUE A STIRLING PROVOU QUE FALTAVAM. A regua tinha 'based in' e
+ # 'must be located', e nenhum dos dois casa com a frase que veta de verdade no anuncio 77 da
+ # Stirling Animation Studios: "Artists must be based regionally within the UK (outside the
+ # M25)". O acerto unico que ela devolveu foi 'hybrid', um falso positivo de beneficio, e a
+ # leitura ingenua seria "zero veto" numa vaga de personagem com veto de residencia ESCRITO.
+ # Mesma familia do erro da Snowprint: a regua so mede o que ela sabe procurar.
+ 'must be based', 'must be a resident', 'must be resident', 'based regionally',
+ 'regionally within', 'based within', 'residency', 'residents', 'resident of',
+ 'local candidates', 'locally based', 'permanent resident', 'pr status',
+ 'open to canadian', 'canadian based', 'uk based', 'us based', 'eu based',
+ 'only accepting applications from',
 ]
 
 def texto(url):
