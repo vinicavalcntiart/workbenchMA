@@ -6634,3 +6634,161 @@ Games** (Quebec City) tem "Apply here" que é **mailto ofuscado pelo Cloudflare*
 (`/cdn-cgi/l/email-protection`), e decodificado dá `jobs@yellowbrickgames.ca` — vira fila de e-mail,
 e a casa já recebeu carta fria em 17/09; e a **Tanglewood** só tem *Open Application* de
 **Engineering** e de **Tech Artist**, fora da disciplina.
+
+## Jhon A, 19/09 06h15-07h30 UTC (vigésimo sétimo turno) — **DUAS ENVIADAS**, e as duas saíram de **FAMÍLIAS QUE A VARREDURA DIÁRIA QUASE NÃO COBRE**; o achado que vale mais é que **o 429 do Workable é do ENDEREÇO DE IP e é POR ROTA**, medido com navegador de verdade
+
+Rodada de formulários das 06h15. **Placar: 2 candidaturas ENVIADAS E CONFIRMADAS (Azra Games,
+Califórnia; Tangelo Games, Barcelona), 0 duplicata enviada, 0 tentativa contra veto escrito.**
+Personagem: **0 enviada por título**, e o motivo está medido no §2 — o estoque de personagem
+nomeado seguiu seco, e as duas que saíram são **rota espontânea** com a disciplina, a realocação,
+o visto e a pretensão escritos dentro da carta.
+
+**Números por frente:** ronda do grupo Disney **NÃO CONFERIDA** (12 de 12 consultas em 303);
+Pixar e Netflix/Eyeline lidos e **zero porta nova**; as 51 portas de personagem da faixa `baixa`
+do PORTAIS relidas **uma por uma**; varredura de rota espontânea em **646 quadros de seis
+famílias** (496 + as 150 do Teamtailor depois de consertar o parser) — **6.669 vagas, 119 rotas
+espontâneas, 58 acertos de disciplina, UMA enviável**; caça de locatário em **14.115 slugs de
+Greenhouse** (102 quadros, **zero casa real**) e em **21.355 slugs de Personio** (99 quadros, **uma
+porta**); `gamejobs.co` com **39 termos novos** (1.306 cards).
+
+### 1. AS DUAS QUE SAÍRAM
+
+- **Azra Games**, `Open Applications`, Greenhouse **`azragamesoa/4345814007`**, Califórnia, 06h45.
+  Provas: URL **`/confirmation`**, tela *"Thank you for applying. Your application has been
+  received. If there is a fit, someone will be getting back to you."* e o **código de segurança**
+  na caixa às 06h44m59. Formulário lido inteiro **antes** pela API com `questions=true`: quatro
+  obrigatórios, **zero pergunta de autorização de trabalho e zero texto livre**, então a carta é
+  tailored e carrega a disciplina, a realocação, o pedido de patrocínio e USD 85.000. **Ressalva
+  honesta:** o corpo do anúncio tem **477 caracteres**, abaixo do piso de leitura válida — "zero
+  veto" ali é ausência de frase, não autorização escrita; e o quadro da casa tem **uma vaga só**,
+  que é esta espontânea.
+- **Tangelo Games**, `Join Tangelo Games – Open Application`, Personio **`2780991`**, Barcelona,
+  07h1x. Provas: **POST 200** em `/api/v1/jobs/2780991/application`, o **texto novo da tela**
+  (*"Thank you for applying! … we'll get in touch with you to discuss the next steps."*) e o
+  formulário esvaziado, com os dois anexos em **POST 200** no `/api/v1/documents`. **Porteiro
+  zero** e **nenhum iframe**. O anúncio **nomeia arte**: *"Whether your background is in Game
+  Development, Art, Product, Marketing, Data, Player Support or another area of the mobile gaming
+  industry"*. **Ressalva honesta:** é casa de jogo **social e casual**, não produção AAA de
+  personagem, então a demanda interna de character art é menor; o gancho é o orçamento apertado de
+  mobile. **Detalhe de preenchimento:** o formulário não tem `doc-input-cover-letter`, só
+  `doc-input-other` — a armadilha da KING Art de 07/09 proíbe carta no `other` **só quando o campo
+  de carta existe**, e aqui ele não existe.
+
+### 2. O QUE FECHA A DÚVIDA DO WORKABLE: **O 429 É DE IP, E É POR ROTA**
+
+A `sonda-workable.js` de 15/09 deixou a pergunta escrita e nunca respondida: *"o 429 é do ENDEREÇO
+DE IP ou do CLIENTE?"*. Medido agora com **Chromium de verdade** (xvfb, 1400x1600) em
+`apply.workable.com/climax-studios/j/301D0CC1F9/apply/`:
+
+| O que | Resultado |
+|---|---|
+| a página `/apply/` no navegador | **274 caracteres**, `inputs=0`, **zero** iframe de Turnstile |
+| `/api/v1/accounts/<t>/jobs` e `/form`, chamados **de dentro da página** (mesma origem, mesmo cookie) | **HTTP 429** nos dois |
+| `/api/v2/accounts/<t>/jobs/<shortcode>` por `curl` | **HTTP 200 com JSON real** (título, local, `published`, `description`, `requirements`, `benefits`) |
+| `/api/v2/accounts/<t>/jobs` (a LISTA) por `curl` | **429** ou **400** |
+
+> **Regra: o navegador leva o MESMO 429 que o `curl`, então o estrangulamento do Workable é do
+> ENDEREÇO DE IP. E ele é POR ROTA: dá para LER vaga por shortcode e NÃO dá para abrir formulário.**
+> Consequência prática: o Workable serve para **triagem barata de anúncio** (régua de veto, data de
+> publicação, local) e continua fechado para envio deste IP. Isto substitui a leitura de 18/09 de
+> que a família era "fila da mão dele pelo porteiro": o porteiro nem chega a aparecer.
+
+E o dedupe que **só o Gmail podia dar**, exatamente o caso do §4 do `dedupe-agora.sh`: a Climax
+Studios parecia casa 100% inédita (zero ocorrência nos quatro arquivos), e a caixa tem recibo de
+**02/07/2026** de `noreply@candidates.workablemail.com` — o Vini **já aplicou** na `Lead Artist`
+(requisição `5900191`) e **consentiu em guardar os dados por 12 meses para vagas futuras**, que é
+exatamente o que a espontânea faz. **Casa inédita no repositório não é casa inédita.**
+
+### 3. DUAS ARMADILHAS DE IDENTIDADE NOVAS, E AS DUAS QUASE VIRARAM DUPLICATA OU FALSO ACHADO
+
+- **No Greenhouse, uma casa pode ter DOIS tokens de board com IDs diferentes para o MESMO
+  anúncio.** A `Spontaneous applications` da **Keen Software House** aparece como `4057755101` no
+  token `keensoftwarehouseas` e como `4880719101` no token `kswh`. O dedupe por ID do primeiro deu
+  **zero nos quatro arquivos**; o segundo foi **enviado e confirmado em 10/09**, e a casa até
+  respondeu dizendo que não há vaga adequada. **Dedupe por ID não basta nem dentro da mesma
+  família: case pelo NOME e pelo TÍTULO também.**
+- **O quadro-modelo do Personio tem VARIANTE EM INGLÊS, e ela derruba três "achados grandes".**
+  11/09 registrou o trio `SEO Marketing Manager + Social Media Werkstudent + Initiativbewerbung`.
+  Em `kaiko`, `futurlab` e `jumpgate` o trio é **`SEO Marketing Manager` + `Social Media (Working
+  Student)` + `General Application`** (ou `Unsolicited Application`), com `office` vazio ou
+  `Remote`. Eram KAIKO (grupo THQ Nordic), FuturLab (*PowerWash Simulator*) e Jumpgate AB, e são
+  **quadro de demonstração**. **Discriminador corrigido: quadro de três vagas em que duas são o SEO
+  Marketing Manager e o Social Media (Working Student) é demo, seja o terceiro item
+  `Initiativbewerbung`, `General Application` ou `Unsolicited Application`.**
+
+### 4. A LANE DE ADIVINHAR TOKEN DE GREENHOUSE ESTÁ MEDIDA E RENDE **ZERO**. A DE PERSONIO RENDEU A CANDIDATURA
+
+As duas foram feitas na mesma rodada, com a mesma fonte de nomes (os 6.337 estúdios das sete filas
+do gamedevmap), e o resultado é oposto:
+
+| Lane | Sondagens | Quadros vivos | Com acerto | Casa real de jogo/arte |
+|---|---|---|---|---|
+| **Greenhouse** (`boards-api…/boards/<slug>/jobs`) | **14.115** | **102** | 13 | **ZERO** |
+| **Personio** (`<slug>.jobs.personio.com/search.json`) | **21.355** | **99** | 22 | **UMA** (Tangelo) |
+
+Os 13 acertos do Greenhouse são **todos falso amigo de token**, conferidos pelo próprio quadro:
+`grey` é a agência de publicidade Grey (tem `Art Director`, de publicidade), `nuro` é o carro
+autônomo (`Generative Modeling for Planning`), `underdog` é aposta esportiva (`Senior Quantitative
+Sports Modeler`), `hazel` é saúde mental (`General Interest Application for Mental Health
+Therapists`), `indigo` é seguradora, `clear` tem `Data Engineer II, Analytics & Modeling`. **Isto
+confirma com número a regra de 18/09** e a lane não deve ser repetida.
+
+> **O Personio valia a rodada porque o `tokens-ats-1809.csv` tinha DOIS tokens dessa família** para
+> um universo que 11/09 media em 121 quadros — ou seja **a varredura diária de 773 quadros
+> praticamente não cobria a única família SEM PORTEIRO da campanha.** Discriminador de inquilino,
+> limpo e barato: **200 é quadro real, 307 é inquilino inexistente** (controle negativo
+> `zzznaoexiste999` → 307; e `trixter` → 307 também, coerente com a medição de 18/09 de que a porta
+> dela migrou para o WordPress da casa).
+
+### 5. O PARSER DO TEAMTAILOR ESTAVA ERRADO DE NOVO, E ELE APAGAVA **173 TOKENS**
+
+A varredura desta rodada leu `<slug>.teamtailor.com/jobs.json` procurando a chave `jobs` e devolveu
+**150 quadros com 200 e ZERO vaga**. É o **mesmo defeito de 17/09** (o arquivo já traz a regra: o
+`jobs.json` é **JSON Feed 1.1** e a lista mora em **`items`**), e ele voltou porque quem escreve o
+varredor novo copia o molde das outras famílias. Com a chave certa: **1.942 vagas em 150 quadros**,
+**42 rotas espontâneas** e os acertos de disciplina da família inteira.
+
+> **Regra que já existia e precisa de lembrete operacional: quadro que responde 200 e devolve ZERO
+> vaga é hipótese, nunca resultado.** Imprima as chaves do JSON antes de escrever o zero.
+
+### 6. O ESTOQUE DE PERSONAGEM DA FAIXA `baixa` FOI RELIDO INTEIRO, E AS 51 PORTAS TÊM MOTIVO ESCRITO
+
+Para a próxima rodada não gastar leitura: das 324 linhas `done=false` da faixa `baixa`, **51 têm
+título da disciplina e nenhuma é porta livre**. Veto de residência ou de patrocínio (Brown Bag
+`VN1902`, Snowprint `8341580`, Imageworks Montréal `7529417003` por francês, IGG `289`, Image
+Engine `28`, Stirling `79`, DreamWorks/NBCU Montréal, thatgamecompany `36e101a4`, AGBO); parede de
+plataforma (as três da NBCU por DataDome, Techland, Ubisoft, Skydance por hCaptcha, e os BambooHR
+que **leem e não enviam**: ICON, IGG, OWI, Streamline, Stirling, Barnstorm, Image Engine, DMFX); já
+enviada ou já recusada (ILM London `Lead Texture`, Epic `Modeling Outsource`, DNEG `ovLGAfwg` —
+o Jobvite responde *"You have already applied"* —, Skydance `9084fa54` recusada em 18/09, Swaybox
+`4337820009`); e fora do escopo por geografia ou natureza (Vertigo de Istambul, Amber Brasil,
+Room 8 **banida por ordem do Vini**, Awaken Realms com faixa publicada de 7.000–9.500 zloty,
+Submarine e Studio Bozzetto — **as duas casas já responderam por e-mail**, Digic com vaga expirada,
+Intelligent Creatures com o **domínio à venda no GoDaddy**).
+
+### 7. O QUE MAIS CAIU, EM UMA LINHA CADA
+
+- **Ronda do grupo Disney: NÃO CONFERIDA, e isso não é zero.** 12 de 12 consultas em **HTTP 303**,
+  que é a assinatura da janela de manutenção do Workday medida em 12/09. Registrado como ausência
+  de medição; a próxima rodada refaz.
+- **Pixar: receita corrigida.** `/wday/cxs/pixar/Pixar` devolve **404**; o site certo é
+  **`Pixar_External_Career_Site`**, e ele responde 200 com **três vagas** (chef, engenharia de dados
+  e pesquisa) — zero da disciplina.
+- **Netflix e Eyeline: zero porta nova, e o zero é de leitura.** As duas `Character Modeler`
+  (`JR42568` Vancouver e `JR42577` Sydney) são duplicatas confirmadas; o Eyeline tem cinco acertos e
+  os cinco em **Hyderabad**.
+- **Os dois alertas de e-mail das 03h não têm porta.** O da Blizzard lista nove vagas e as duas de
+  personagem são a `R027817` (enviada 02/09, **recusada** 12/09) e a `R028136` (enviada 12/09, *Under
+  Review*). O da WBD traz `Staff, Architect - Tax Systems` na consulta de *modeler* e `Advanced
+  Level Artist` de Montréal na de *character artist* — nível, não personagem.
+- **Rushdown Studios `4093292009`: veto de residência por LISTA DE ESTADOS.** O anúncio escreve
+  *"we also support fully remote work for candidates living across New York State or one of the other
+  states in which we're currently registered to conduct business (e.g., CT, DE, GA, KS, MA, MD, NC,
+  OH, PA, TX, WI)"*. Lista fechada de estados é veto de residência de fato, mesmo sem a palavra visa.
+- **`lift` `4768815002` é falso amigo de nome:** não é estúdio, é uma **ONG americana de combate à
+  pobreza** fundada em 1998.
+- **Nove casas novas do `gamejobs.co` resolvidas pelo link de Apply, e o gargalo não é achar, é a
+  família em que elas caem:** Climax, ZeptoLab e Axes In Motion → **Workable** (429 de IP); Blazing
+  Griffin e Streamline Games → **BambooHR** (lê e não envia); Lost Boys → **JazzHR** (reCAPTCHA v2);
+  Immutable → **Lever** (parede); Tanglewood → só Engineering e Tech Artist. **`Streamline Games` é
+  a Streamline Studios com outro nome** — o homônimo iludia o dedupe por nome.
