@@ -6,12 +6,13 @@
         <h1>Campanha Vini Cavalcanti</h1>
         <p class="sub">Senior 3D Character Artist · <span id="updated"></span></p>
       </div>
-      <button class="btn btn-ghost" id="themeBtn" aria-label="Alternar tema">🌗</button>
+      <button class="btn btn-ghost" id="modoBtn" type="button">Ver tudo</button>
+      <button class="btn" id="themeBtn" aria-label="Alternar tema" style="flex:none">🌗</button>
     </div>
-    <nav class="menu" id="menu" aria-label="Seções">
+    <nav class="menu so-tudo" id="menu" aria-label="Seções">
       <a href="#hoje">Hoje</a>
       <a href="#acoes">Na sua mão<span class="n" id="nAcoes"></span></a>
-      <a href="#conversas">Conversas<span class="n" id="nConv"></span></a>
+      <a href="#agora">Conversas<span class="n" id="nConv"></span></a>
       <a href="#novidades">Novidades<span class="n" id="nNov"></span></a>
       <a href="#portais">Formulários<span class="n" id="nPort"></span></a>
       <a href="#grandes">Grandes</a>
@@ -26,25 +27,36 @@
 
   <div class="alerta" id="alerta" role="alert" hidden>✕ <b>Atenção:</b> <span id="alertaMsg"></span></div>
 
-  <section class="sec" id="hoje">
+  <section class="sec simples" id="suavez">
+    <h2>🖐️ Sua vez <span class="badge" id="suaVezBadge"></span></h2>
+    <p class="hint">Só o que depende de você. Cada cartão abre a vaga; marque feito quando enviar.</p>
+    <div class="acoes" id="suaVezList"></div>
+    <button class="mais" id="suaVezMais" type="button">mostrar mais</button>
+    <p class="hint" id="suaVezOutros" style="margin-top:8px"></p>
+  </section>
+
+  <section class="sec simples" id="agora">
+    <h2>💬 Conversas e agenda <span class="badge" id="convBadge"></span></h2>
+    <div class="agora">
+      <div class="card agenda"><h3>Agenda</h3><div id="agendaList"></div></div>
+      <div class="card"><h3>Quem respondeu</h3><p class="hint">Estúdios com um humano do outro lado. As respostas já saíram; aqui você só acompanha.</p><div class="conv" id="conversasList"></div><button class="mais" id="convMais" type="button">mostrar mais</button></div>
+    </div>
+  </section>
+
+  <section class="sec simples" id="hoje">
+    <h2>📊 Placar</h2>
     <div class="hero">
       <div class="card placar" id="placar"></div>
-      <div class="card semana"><h3>Últimos 14 dias</h3><div id="semanaChart"></div><div class="leg" id="semanaLeg"></div></div>
-      <div class="card agenda"><h3>Agenda</h3><div id="agendaList"></div></div>
+      <div class="card semana so-tudo"><h3>Últimos 14 dias</h3><div id="semanaChart"></div><div class="leg" id="semanaLeg"></div></div>
     </div>
     <div class="tiles" id="tiles"></div>
   </section>
 
+  <div class="so-tudo">
   <section class="sec" id="acoes">
     <h2>🖐️ Na sua mão <span class="badge" id="acoesBadge"></span></h2>
     <p class="hint">O que a automação não resolve sozinha, em ordem de urgência. Cada cartão leva para o lugar certo.</p>
     <div class="acoes" id="acoesList"></div>
-  </section>
-
-  <section class="sec" id="conversas">
-    <h2>💬 Conversas abertas <span class="badge" id="convBadge"></span></h2>
-    <p class="hint">Estúdios onde há um humano do outro lado: respondeu, está em conversa, marcou entrevista ou fez oferta.</p>
-    <div class="conv" id="conversasList"></div>
   </section>
 
   <section class="sec" id="novidades">
@@ -159,5 +171,6 @@
     Fonte: <code>enviados.csv</code>, <code>processados.csv</code> e os arrays de dados desta página, mantidos pelas rotinas da campanha ·
     <span id="rodapeNums"></span> · marcações manuais ficam só no seu navegador.
   </footer>
+  </div>
 </div>
 <div id="tooltip" role="status"></div>
