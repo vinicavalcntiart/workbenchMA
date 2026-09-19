@@ -7,6 +7,139 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU EM 19/09 16h30 UTC (Jhon A, 33o turno) — **3D Character Modeler**, **INFOLD GAMES** (Papergames, casa de *Infinity Nikki*), **Los Angeles + Singapura**: personagem por título E por corpo, **zero veto**, casa 100% inédita, e a porta é **login por código de SMS** que só o seu celular recebe
+
+`https://career.infoldgames.com/EN/job/7639286868983384370` ← **ABRA ESTA. É UM CLIQUE: "Continue with Google".**
+`https://career.papegames.com/EN/position/7639286868983384370/detail` ← a que você me mandou (mesma vaga, porta de SMS)
+`https://www.linkedin.com/jobs/view/3d-character-modeler-at-infold-games-4413879564` (o anúncio do seu print)
+
+**Por que é você e não a automação, em uma frase:** a candidatura exige **conta**, e as duas portas
+da casa pedem coisa que eu não tenho — a de Singapura pede **código por SMS no celular** e a de LA
+pede **login do Google ou do LinkedIn**, que são as suas contas pessoais e eu não entro nelas.
+Não é captcha: não existe reCAPTCHA, hCaptcha, Turnstile nem DataDome em nenhuma das duas telas.
+
+**A DESCOBERTA QUE FAZ VALER O CLIQUE: a mesma requisição tem DUAS portas diferentes, e uma é muito
+mais barata que a outra.** Medi as duas hoje:
+
+| Porta | Login que ela exige | Custo para você |
+|---|---|---|
+| **`career.infoldgames.com`** | **Continue with Google** ou **Continue with LinkedIn**, e nada mais (não tem campo de telefone) | **um clique**, você já está logado no Google |
+| `career.papegames.com` (a do seu link) | **só** número de celular + código por SMS, mais Douyin como terceiro | uns dois minutos, e cria conta sozinho |
+
+**As duas servem a MESMA vaga** (o id do anúncio é o mesmo nos dois, `7639286868983384370`), então
+escolha a do Google. **Se preferir a do seu link:** o seletor de país abre com **+65** (Singapura),
+tem **229 códigos** e **+55 Brazil está lá** — troque o código, ponha seu número, clique em
+*Get code*, digite o código do SMS e marque *I have read and agree to the Privacy Statement*.
+A tela avisa que *"An account will be created upon mobile number verification"*, ou seja não
+precisa criar conta antes. Depois do login ele cai direto em `/resume/7639286868983384370/apply`.
+
+**O LinkedIn NÃO resolve:** o anúncio é **offsite apply** (10 ocorrências de `offsite` no HTML de
+convidado, **zero** de *easy apply*), então o botão dele te joga numa dessas duas portas de
+qualquer jeito. Não há atalho ali.
+
+**Por que a vaga vale, com as frases do anúncio:** é **personagem puro**, o que a regra de 10/09
+manda priorizar. *"Responsible for the high-fidelity facial modeling of main characters
+(protagonists, key NPCs), covering the entire pipeline including high-poly sculpting, topology
+optimization, UV unwrapping, and low-poly modeling"*; *"Create cinematic-level facial texture
+assets, including a full set of PBR textures such as Albedo, Normal, Roughness, and SSS Mask"*;
+*"Mentor character modelers within the team"*. Pede **ZBrush, Maya/3ds Max, Substance Painter/Mari
+e UE5**, que é o núcleo dele, e o departamento é o **Z1 Studio** da casa.
+
+**Régua de veto: ZERO acerto dos 43 termos** em **2.402 caracteres** do corpo lido pela API oficial
+(`career.papegames.com/api/v1/job/posts/7639286868983384370`), acima do piso de leitura válida.
+Zero `authorized to work`, zero `visa`, zero `sponsor`, zero `work permit`, zero `based in`, zero
+`relocation`, zero exigência de idioma. **E as duas cidades estão no escopo da campanha:** Los
+Angeles é EUA e **Singapura é uma das duas exceções da Ásia** na regra 5.
+
+**Dedupe, completo:** `dedupe-agora.sh A167711 "Infold Games"` deu **zero nas três seções**;
+`grep -i infold` em `enviados.csv`, `automacao/processados.csv`, `docs/index.html` e nesta fila =
+**zero** (a única ocorrência no repositório inteiro é `infoldgames.com` no `censo-wikidata.csv`, que
+é censo e não candidatura); `garra.sh checa` = **livre**; e no **Gmail** a busca
+`infold OR infoldgames OR papegames OR "Infinity Nikki"` devolveu **{} — nenhum fio, nenhum recibo**.
+Casa 100% inédita na campanha. Greenhouse `infoldgames` e Lever `infold` dão 404, e é por isso que
+nenhuma varredura de ATS tinha achado: **a casa usa Feishu/Lark Hire**, família que a campanha nunca
+tinha visto (zero ocorrência de `feishu`, `lark`, `atsx` e `papegames` no `BRIEFING.md`).
+
+**AS RESPOSTAS, com a verdade (iguais às do `respostas-formularios.md`):**
+
+- Autorizado a trabalhar nos EUA: **No**. Autorizado em Singapura: **No**.
+- Precisa de patrocínio de visto, agora ou no futuro: **Yes**.
+- Disposto a realocar: **Yes**, para **Los Angeles** ou **Singapura**.
+- Anos de experiência: **More than 10 years** (nas escalas fechadas, a faixa mais alta).
+- Pretensão: o anúncio **não publica faixa**, e é casa grande nos EUA, então pela política de 04/09
+  é **USD 100.000**, com a abertura *"Open to aligning with your band for the role; as a reference,
+  I'm looking at around USD 100,000."* **Ressalva honesta: a política do briefing não tem número
+  para Singapura**, então se o formulário perguntar em dólar de Singapura, prefira a frase de
+  abertura sozinha a chutar um valor.
+- Salário atual: *"Confidential under the NDA of my current contract; happy to discuss ranges
+  during the process."*
+- Disponibilidade: *"A standard transition period with my current studio; glad to align dates in
+  the process."*
+- Como ficou sabendo da vaga: **LinkedIn** (foi de onde ela veio de verdade, do seu print).
+- Diversidade (idade, etnia, gênero): **Prefer not to say**.
+- Anexos: `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Portfolio.pdf`.
+
+**TEXTO PARA COLAR — carta / campo de "por que você" (231 palavras, sem emoji porque formulário é
+registro e não conversa):**
+
+```
+Hi Infold Games team,
+
+I'm a senior 3D character artist with over 10 years in stylized characters, and facial work is the part of the pipeline I care most about.
+
+On The Wingfeather Saga at Angel Studios I modeled and hand-painted the season one characters, and at E-Line Media I have spent nearly five years taking hero characters from sculpt to engine: high-poly, retopology, UVs, bakes, PBR textures and LODs. That full-asset ownership is what I would bring to facial assets here, and grooming in Houdini is my extra edge on hair and fur.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+Being honest about fit: my published work is stylized rather than photoreal, and my facial experience sits inside character modeling rather than four years dedicated only to faces. The anatomy, the topology that has to survive animation, the PBR skin and the blendshape work are the same craft, and your posting asks for control between realistic and stylized directions, which is where I am strongest.
+
+I am ready to move to Los Angeles or Singapore for the role. I am not a US or Singapore citizen, so I would need work authorization sponsorship.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+
+Thanks for the read,
+Vini Cavalcanti
+```
+
+**TEXTO PARA COLAR — bio de "tell us about yourself":**
+
+```
+Senior 3D character artist with over 10 years of experience, focused on stylized characters taken from sculpt all the way to engine. Credits include The Wingfeather Saga for Angel Studios and Endstar for E-Line Media, plus outsourcing work at PUGA Studios. I own the whole asset: high-poly sculpting, retopology, UVs, bakes, PBR texturing, LODs and engine integration, with grooming in Houdini as a specialty. I also teach and run my own art school, so mentoring and giving clear technical feedback are part of my daily work.
+```
+
+**TEXTO PARA COLAR — resumo de uma linha:**
+
+```
+Senior 3D character artist, 10+ years, stylized hero characters from sculpt to engine, grooming in Houdini; ready to relocate to Los Angeles or Singapore with visa sponsorship.
+```
+
+**AS RESSALVAS HONESTAS, e são três, porque esta é a parte que mais pesa contra:**
+
+1. **A vaga é realismo facial, e o portfólio dele é estilizado.** Pede *"at least 4 years of
+   in-depth experience specifically in facial modeling"*, *"deep understanding of human facial
+   anatomy (bones, muscles, fat layers, and skin micro-details)"*, *"complete PBR textures for
+   realistic skin"* e *"Familiar with MetaHuman or equivalent level facial asset production
+   standards, with experience in creating BlendShape/FACS expression libraries"*. É a mesma
+   ressalva de registro de estilo que a Wargaming e a Rising Sun já carregam. **O que segura a
+   candidatura de pé é a última linha das qualificações**, e ela é a favor dele:
+   *"with the ability to accurately control the temperament and expressiveness of character faces
+   between highly realistic and stylized art directions"*.
+2. **O anúncio do LinkedIn é de 1 dia, mas a requisição é de MAIO.** O `publish_time` da API é
+   `1778660393058`, que é **13/05/2026**, e o `modify_time` é **14/07/2026**; o `datePosted` do
+   LinkedIn é **18/09/2026 14h29 UTC**. Ou seja o que tem um dia é o **repost**, não a vaga. Ela
+   segue **ativa** (`job_active_status: 1`, `channel_online_status: 0`, e a página responde 200),
+   mas requisição de quatro meses parada é requisição fria.
+3. **"Over 200 applicants"**, escrito na própria página do LinkedIn.
+
+**E uma porta de e-mail que existe, para o maestro decidir, não para você:** a política de
+privacidade da própria casa publica **`careers@infoldgames.com`** com esta frase —
+*"you may contact us by sending an email to careers@infoldgames.com"* — no capítulo *9. Contact Us*
+do documento de recrutamento. É caixa de recrutamento de verdade, mas ela está publicada como
+contato de **privacidade/dados pessoais** dentro do recrutamento, e não como "mande seu CV aqui".
+Fica registrada como rota secundária; **a rota boa é o formulário, e ele é um clique seu.**
+
 ### ✅ REVALIDADA HOJE ÀS 14h50 (19/09) — **Principal Character Artist (Face)**, NBCUniversal/DreamWorks Montreal: **o alerta do LinkedIn é a MESMA vaga de ontem, e ela continua viva e sem veto**
 
 `https://jobs.smartrecruiters.com/NBCUniversal3/744000150414819-principal-character-artist-face-i-artiste-principal-e-personnage-face-`
