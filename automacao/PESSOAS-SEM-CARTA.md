@@ -12337,14 +12337,24 @@ repositório; o que ainda rende é ler o organograma de casa que já se sabe qua
 esgotar: **o cruzamento "casa já tocada, ABAIXO do teto de duas pessoas, com endereço de pessoa novo
 publicado"**. Foi ele que deu **três das cinco fichas** (SSVFX, REALTIME e — por caminho vizinho —
 Jungler). Rodei o cruzamento sobre `automacao/pessoas.csv` × `enviados.csv` × os logs desta rodada e ele
-devolveu **23 casas com vaga de teto e endereço novo**; eu conferi **oito** (SSVFX, REALTIME, Freefolk,
-Real by Fake, Keytoon, DLP Paris, Terminus Studio, Cocoa) e **sobram QUINZE sem leitura de disciplina**,
-entre elas `televisor.pl` (4 endereços novos, `michal.debski@`, `iwona.kachel@`, `karolina.fesolowicz@`,
-`magda.garska@televisor.studio`), `mathematic.tv` (`guilow@`, `hadi@`), `www.helmet.no`
-(`line@`, `oystein@`, `stian@`), `www.millimages.com` (`e.pasquet@`, `j.massimino@`,
-`r.cot-ogryzek@`), `dlpparis.com` (`antoine@`, `cedric@`, `pascal@`, `nathesias@`),
-`terminus-studio.com` (`christophe@`), `www.anima.fi`, `www.frimastudio.com`, `www.frontier.co.uk`,
-`www.jumbla.com`, `www.milford.se`, `www.shedmtl.com`, `bigjumpent.com`, `blinkink.co.uk` e
-`www.reelfx.com`. **O script do cruzamento é reprodutível em vinte linhas: conte pessoas por domínio em
+devolveu **23 linhas**, das quais **duas são as minhas próprias fichas desta rodada** (CoSA e Swiss, que
+acabaram de entrar no `pessoas.csv`), logo **21 casas anteriores com vaga de teto e endereço de pessoa
+novo**. **Eu conferi seis:** SSVFX e REALTIME **viraram ficha**, e Freefolk, Real by Fake, Keytoon e
+Cocoa **viraram descarte medido** (os quatro estão acima, com o motivo). **Sobram QUINZE**, e destas
+**seis já têm descarte registrado em rodada anterior** e só valem reabertura se a casa mudar de página
+(`www.helmet.no` — `line@`, `oystein@`, `stian@`, todos live action; `www.millimages.com` —
+`e.pasquet@`, `j.massimino@`, `r.cot-ogryzek@`, todos vendas/licenciamento; `www.shedmtl.com` —
+`andreanne.denis@`, `catherine.gaucher@`, as duas produção; `www.reelfx.com`; `blinkink.co.uk`, cujos
+três nomes novos são agentes; `bigjumpent.com`, que confessa não fazer 3D ainda). **As NOVE de verdade
+sem leitura de disciplina, e é por elas que a próxima rodada começa:** `televisor.pl` (quatro endereços
+novos — `michal.debski@`, `iwona.kachel@`, `karolina.fesolowicz@`, `magda.garska@televisor.studio` —
+e atenção à armadilha já registrada de o site ser `televisor.pl` e o e-mail `@televisor.studio`),
+`mathematic.tv` (`guilow@`, `hadi@`), `dlpparis.com` (`antoine@`, `cedric@`, `pascal@`, `nathesias@` —
+a casa já tem Federico Costa, *Partner / Art Director*, desde 10/09), `terminus-studio.com`
+(`christophe@` — a casa já tem Anthony Voisin, *CG Supervisor*, desde 10/09), `www.anima.fi`,
+`www.frimastudio.com`, `www.frontier.co.uk`, `www.jumbla.com` e `www.milford.se`. **Eu abri as páginas
+de `dlpparis.com` (200, 45.000 bytes) e `terminus-studio.com` (200, 504.169 bytes) mas NÃO as li: ficam
+as duas como primeiras da fila, e as duas são casas cuja pessoa anterior é justamente de ARTE**, o que
+as torna as de melhor prognóstico da lista. **O script do cruzamento é reprodutível em vinte linhas: conte pessoas por domínio em
 `pessoas.csv` e endereços de pessoa por domínio em `enviados.csv`, tome o máximo dos dois, e fique com
 os domínios em que esse máximo é exatamente 1.**
