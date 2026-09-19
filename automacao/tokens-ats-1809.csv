@@ -914,3 +914,32 @@ smartrecruiters,epochgames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejo
 smartrecruiters,oldskullgames1,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Old Skull Games,
 smartrecruiters,redpointlabs,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,RedPoint Labs,
 teamtailor,plummygames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Plummy Games,
+# 19/09 04h15-05h40 UTC (Jhon A, 26o turno) - LOTE gamejobs-co-1909b: locatarios NOVOS achados
+#   pela SEGUNDA passada no gamejobs.co, agora em LARGURA (60 consultas de disciplina + 42 de rota
+#   espontanea + 18 de termo lateral de personagem, com filtros w= de pais; 966 + 815 + 301 cards
+#   unicos). identidade=casa-real porque o nome da empresa vem do card do agregador ao lado do link
+#   de apply, e a familia vem da URL de Apply lida na PAGINA DO ANUNCIO, nao adivinhada.
+#   CINCO FAMILIAS DE ATS QUE A CAMPANHA NUNCA TINHA VISTO sairam desta passada e ficam anotadas
+#   aqui com o formato de URL, para a proxima rodada nao precisar redescobrir:
+#     polymer     -> https://jobs.polymer.co/<slug>/<id>            (Bladework Games)
+#     hiringthing -> https://<slug>.hiringthing.com/job/<id>/<nome> (Snail Games)
+#     parallel    -> https://www.useparallel.com/<slug>/careers/<id> (Telescope Games)
+#     dover       -> https://app.dover.io/apply/<Empresa>/<uuid>    (Elsewhere)
+#     breathehr   -> https://hr.breathehr.com/v/<slug>-<id>         (Secret Mode)
+#     50skills    -> https://jobs.50skills.com/<slug>/<id>          (Mainframe)
+#   Nenhuma das cinco tem leitor nesta varredura ainda, entao elas NAO entram como linha de token:
+#   entram como receita de URL. Quem escrever o leitor acrescenta a familia ao varre-janela-ats.py.
+greenhouse,mojangab,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Mojang Studios,2
+greenhouse,atariinc,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Atari,12
+greenhouse,sonyinteractiveentertainmentglobal,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Sony Interactive Entertainment (quadro global),192
+greenhouse,rushdownstudios,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Rushdown Studios,
+lever,crytek,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Crytek,7
+lever,spyke-games,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Spyke Games,11
+lever,rovio-2,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Rovio,2
+lever,theorycraftgames,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Theorycraft Games,
+bamboohr,finalstrikegames,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Final Strike Games,3
+bamboohr,pixeltoysltd,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Pixel Toys,14
+ashby,spellbrush,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Spellbrush,11
+smartrecruiters,GIANTSSoftwareGmbH,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,GIANTS Software,4
+smartrecruiters,TechlandSA,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Techland,24
+rippling,chess,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Chess.com,13
