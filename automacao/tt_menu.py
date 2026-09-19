@@ -6,12 +6,24 @@
 # Character Art 873551). Ambos batem.
 import re, sys, json, html
 
+# 19/09 — O ZERO FALSO QUE ESTE ARQUIVO PRODUZIU, e o conserto e de UMA classe de CSS.
+# O Teamtailor trocou a classe do rotulo de `break-words` para `wrap-break-word`. As duas
+# regex abaixo casavam a classe LITERAL, entao o parser passou a devolver ZERO departamento e
+# ZERO cargo em 145 paginas /connect VIVAS. Rodado assim, ele diz "nenhuma casa do Connect tem
+# departamento de personagem" — que e exatamente o zero falso que o BRIEFING chama de erro mais
+# caro da campanha, porque parece trabalho feito.
+# Pego pelos MESMOS DOIS CONTROLES que validaram o arquivo em 12/09: mindark (Character Art
+# 164025) e capsulestudio (departamento CHARACTER 78709). Com a classe antiga os dois davam
+# ZERO com a pagina servindo os departamentos no HTML; com a alternativa abaixo voltaram a bater.
+# REGRA: parser de HTML de terceiro se roda SEMPRE contra um controle de resposta conhecida
+# antes de o numero dele virar conclusao. Classe de CSS de SPA muda sem aviso.
+
 PALAVRAS = re.compile(r'character|creature|modeler|modeling|modelling|sculpt|groom|surfacing|'
                       r'look\s*dev|visual\s*dev|texture|texturing|shading|material', re.I)
 
-DEP = re.compile(r'<span class="break-words overflow-hidden">([^<]*)</span>\s*'
+DEP = re.compile(r'<span class="(?:break-words|wrap-break-word) overflow-hidden">([^<]*)</span>\s*'
                  r'<input[^>]*name="candidate\[department_id\]"[^>]*id="candidate_department_id_(\d+)"', re.S)
-ROLE = re.compile(r'<span class="break-words overflow-hidden">([^<]*)</span>\s*'
+ROLE = re.compile(r'<span class="(?:break-words|wrap-break-word) overflow-hidden">([^<]*)</span>\s*'
                   r'<input[^>]*data-for-department="(\d*)"[^>]*name="candidate\[role_id\]"[^>]*id="candidate_role_id_(\d+)"', re.S)
 
 def limpa(s):
