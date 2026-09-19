@@ -11826,3 +11826,87 @@ os 726 domínios caíram para um punhado de casas realmente inéditas, e o tempo
   para cinema e televisão**, onde personagem entra por show e por contrato curto, e o crédito mais
   forte do Vini é **animação estilizada** (*The Wingfeather Saga*) contra um catálogo **fotorreal** —
   a ponte é criatura, e tem de ser dita sem fingir que é o mesmo ofício.
+
+### FICHA 4 — David Cullinane, **Executive Producer - Games** da **REALTIME** (Westby/Lancashire e Manchester, Reino Unido) — **PUBLICADO, confiança ALTA**, **SEGUNDA E ÚLTIMA** da casa, e a disciplina está no **cardápio de serviço** da casa: *"Creatures & Characters"*
+
+- **EMAIL: `dave@realtimeuk.com` — PUBLICADO, confiança ALTA.** É `mailto:` literal no rodapé do site,
+  **rotulado pela própria casa como o contato de `Games`**. Não foi montado. A ligação
+  **nome ↔ endereço** é feita por ponte entre duas páginas do mesmo domínio, que é o método da Troll VFX
+  registrado às 02h35, e ela fecha por **três caminhos independentes**:
+  1. **Rodapé de `https://www.realtimeuk.com/` (200, 150.032 bytes, aberto nesta rodada)**, bloco
+     *Contact us*, HTML cru: `<a href="mailto:dave@realtimeuk.com">Games</a>`,
+     `<a href="mailto:dave@realtimeuk.com">Episodic &amp; Film</a>`,
+     `<a href="mailto:paul@realtimeuk.com">Automotive</a>`,
+     `<a href="mailto:tony@realtimeuk.com">Immersive</a>` — **quatro endereços, zero nomes**.
+  2. **`https://realtimeuk.com/general-contact/` (200, 69.406 bytes)**, bloco *"DON'T BE SHY, SAY HI"*:
+     *"**David Cullinane — Executive Producer - Games**"*, *"**Paul McSweeney — Head of Automotive**"*,
+     *"**Tony Prosser — CEO**"* — **três nomes com cargo, zero endereços**. O rótulo de divisão do
+     rodapé casa com o cargo **nos três**: `dave@`→Games ↔ *EP - Games*; `paul@`→Automotive ↔ *Head of
+     Automotive*; `tony@`→Immersive ↔ *CEO*. E o primeiro nome casa com o localpart **nos três**.
+  3. **O formato tem prova viva na própria campanha:** `jane@realtimeuk.com` (Jane Forsyth, *Head of
+     Production - Games*) foi publicado, recebeu carta em **07/09** e **entregou, sem bounce**
+     (`enviados.csv:741`). `primeironome@realtimeuk.com` é o padrão da casa, comprovado por entrega.
+- **URL do organograma, aberta nesta rodada:** `https://realtimeuk.com/about` (**200, 66.195 bytes**),
+  seção **Senior Team**, que publica **doze** pessoas com cargo: *Tony Prosser — CEO*, *Annie Shaw —
+  Global Executive Producer*, *Stu Bayley — Director*, *Ian Jones — Director*, *Paul McSweeney — Head of
+  Automotive*, **David Cullinane — Executive Producer - Games**, *Beverley Booth — Finance Director*,
+  *Jane Forsyth — Head of Production - Games*, *Nico Seck — Animation Director*, *Michael Dickinson —
+  Head of Production - Automotive*, *Will Mallet — Head of Systems Technology* e **Ethan Clark — Talent
+  Acquisition Manager**.
+- **POR QUE ELE, e não outro da casa:** **Jane Forsyth, a Head of Production - Games, já recebeu carta
+  em 07/09** e ficou em silêncio. Dos três endereços de pessoa que restam, `paul@` é **automotivo**
+  (divisão errada) e `tony@` é **CEO** de uma casa de quase 30 anos que não vai ler. **`dave@` é a
+  cadeira certa e é uma cadeira DIFERENTE da que já silenciou**: Executive Producer é quem ganha o
+  projeto e monta a equipe dele, um degrau ao lado do Head of Production. E o alvo ideal pelo
+  `BRIEF-JOE` — *"Recrutador de arte com nome e sobrenome … Talent Acquisition"* — **existe e está
+  nomeado (Ethan Clark, Talent Acquisition Manager), mas NÃO tem endereço publicado**: só o relay do
+  Teamtailor (`ethan.clark@realtime.teamtailor-mail.com`), que **não é caixa de pessoa** e que já
+  mandou template automático para o Vini em 27/08. Montar `ethan@realtimeuk.com` seria o chute das
+  cinco devoluções de 06/09, e não vale gastar a última carta da casa nisso.
+- **PROVA DE DISCIPLINA, escrita pela casa no cardápio de serviço dela:** no acordeão **VFX & Animation**
+  da home, os cinco itens são *"Visual Effects"*, **`"Creatures & Characters"`**, **`"Digital Humans"`**,
+  *"In-Engine Games Cinematics"* e *"Pre-Rendered Games Cinematics"*. **Personagem e criatura são linha
+  de serviço nomeada, não inferência de catálogo.** O catálogo confirma: `/jurassic-park/`,
+  `/monster-hunter/`, `/doctor-who-60th-anniversary-special/`, `/steel-hunters/`, `/f1-25/`,
+  `/lockerbie-a-search-for-truth/`, `/nolly/`, mais os posts `/blog/jurassic-park-survival-behind-the-scenes-featurette/`
+  e `/blog/rogue-trooper-teaser/`, e o próprio nome de arquivo de um dos destaques é
+  `woad_raiders_highres.jpg`.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Constantly creative and relentlessly
+  curious**"* (é o título da `/about`, repetido duas vezes na página); *"Realtime is an animation and VFX
+  studio packed with keen eyes and sharp minds … **Technology powers our process, but it's curiosity,
+  collaboration and craft that make it sing**"*; *"With **nearly 30 years of experience**, we're a
+  trusted, hands-on partner known for solving big creative problems with honesty, flexibility, and a
+  love for the challenge"*; e o convite do rodapé da `/general-contact/`: *"**WE'D LOVE TO HEAR FROM
+  YOU**"* e *"**DON'T BE SHY, SAY HI**"*.
+- **FORA DOS EUA?** Sim, **Reino Unido** — dois endereços publicados, *REALTIME North* (Willows Farm
+  Studios, Ballam Road, Westby, PR4 3PN) e *REALTIME Manchester* (Blackfriars House, Parsonage, M3 2JA).
+  **Frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `realtimeuk OR REALTIME OR Cullinane OR Forsyth in:anywhere`
+  devolveu **SEIS** fios, e **`Cullinane` não aparece em nenhum**. São: (1) `1a07b4a1cc606071`, a carta
+  de **07/09 para `jane@realtimeuk.com`**, uma mensagem só, **sem resposta**; (2) `1a044323e7d2b103` e
+  (3) `1a044406d46d1988`, dois **templates automáticos de 27/08** vindos de
+  `ethan.clark@realtime.teamtailor-mail.com` (*"We'll keep your details on file and reach out as soon as
+  a role that aligns with…"* e *"Welcome to REALTIME"*); (4)(5)(6) `1a0783af9b1ee4c0`,
+  `1a07d93030ea6efd` e `1a0ab88c117965cb`, **cinco e-mails de "Log in to REALTIME"** do
+  `no-reply@realtime.teamtailor-mail.com` entre 06/09 e 16/09, que são login do Connect e não
+  conversa. Nos arquivos: `automacao/pessoas.csv:129` (Jane Forsyth), `enviados.csv:741`, `:754` e
+  `:948` (as duas últimas são candidatura pelo portal Pinpoint/Teamtailor) e
+  `automacao/processados.csv:49`. **Cullinane é a SEGUNDA pessoa e o teto fecha aqui.**
+- **RESSALVAS HONESTAS:** (a) **o pareamento nome↔endereço é PONTE, não impressão lado a lado** — o
+  rodapé dá endereço sem nome e a `/general-contact/` dá nome sem endereço; a ponte fecha por rótulo de
+  divisão, por primeiro nome e pela entrega comprovada do `jane@`, mas **se a casa tiver trocado o
+  responsável de Games, a carta chega na mesa certa com o nome errado** — o maestro pode abrir com
+  `Hi Dave,` para reduzir o risco; (b) **o cargo é produção e negócio, não arte** — e a casa **tem**
+  cadeira de arte nomeada (*Nico Seck — Animation Director*, *Stu Bayley* e *Ian Jones — Directors*),
+  **nenhuma com endereço publicado**; (c) **a campanha já bateu quatro vezes nesta casa**: candidatura
+  pelo portal em 27/08, banco de talentos do Pinpoint/Teamtailor em 16/09, carta pessoal para a Jane em
+  07/09 e cinco e-mails de login do Connect — **o Vini já está no banco de talentos deles e o Ethan
+  Clark já mandou o "keep your details on file"**, então o maestro tem de decidir se um segundo nome
+  ajuda ou irrita; (d) metade do negócio da casa é **configurador automotivo e de iate**
+  (`/czinger-3d-configurator/`, `/rimac-nevera-r-configurator/`, `/princess-yachts-3d-configurator/`,
+  `/hennessey-venom-f5-configurator/`, `/lotusevija/`), ou seja produto e não personagem; (e) o site é
+  **Next.js com conteúdo em JSON do Storyblok** e a lista de serviços só aparece no payload, não em
+  HTML legível — `character` dá **2** ocorrências no domínio e as duas dentro desse JSON; (f) o crédito
+  mais forte do Vini é **animação estilizada** e o forte da REALTIME é **cinemática de jogo
+  fotorreal** — a ponte é criatura e personagem de jogo, e tem de ser dita sem fingir que é o mesmo
+  ofício.
