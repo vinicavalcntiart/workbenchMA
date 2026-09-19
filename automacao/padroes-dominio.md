@@ -841,3 +841,117 @@ Manager* não é nenhum dos alvos que o `BRIEF-JOE` manda perseguir em casa gran
 com nome, Character Art Lead, ou artista sênior de dentro). A **Ubisoft Montréal** segue como casa
 sem nenhuma pessoa na campanha — Massive tem uma (`jevgeni.laur@`, que **quicou** em 06/09) e Québec
 tem duas (Henrick Pelletier e Thierry Dansereau).
+
+## PADRÕES NOVOS PROVADOS EM 19/09 ÀS 02h35 (Joe), todos por endereço LITERAL publicado
+
+### FiolaSoft Studio (Praga, Tchéquia) — `nome.sobrenome@fiolasoft.cz`, **sete** endereços provam
+
+| Endereço | Pessoa e cargo | Fonte |
+|---|---|---|
+| `filip.kraucher@fiolasoft.cz` | Filip Kraucher, *Producent* | `https://fiolasoft.cz/about` (200, 22.786 bytes), cartão da seção *Jádro týmu* |
+| `vojta.stransky@fiolasoft.cz` | Vojtěch Stránský, *Programátor* | idem |
+| `vojta.siman@fiolasoft.cz` | Vojta Šiman, *Level Designer* | idem |
+| `tomas.otahal@fiolasoft.cz` | Tomáš Otáhal, *Herní designér* | idem |
+| `jakub.mirejovsky@fiolasoft.cz` | Jakub Miřejovský, *Sound Designer* | idem |
+| `radek.jakl@fiolasoft.cz` | **Radek Jakl, *Vedoucí grafik*** | idem — **virou ficha nesta rodada** |
+| `patrik.strnad@fiolasoft.cz` | Patrik Strnad, *Level Designer* | idem |
+
+**Exceções no mesmo domínio, e elas importam:** o apelido vale (`vojta.siman`, não `vojtech.siman`), e a
+casa usa **outro domínio** para a caixa de negócios (`bd@fiolasoft.com`, rotulada *"Kontaktní osoba Filip
+Kraucher"*) além de `kontakt@fiolasoft.cz`. Não publicado: **Oleksii Avdieichyk** (*3D Grafik*), **Kateřina
+Šumová**, **Rado Markovič**, **Hana Lískovcová**, **Lukáš Jech**.
+
+### Wil Film (Copenhague, Dinamarca) — `nome.sobrenome@wilfilm.dk`, **cinco** endereços provam, **e a casa está VETADA**
+
+| Endereço | Pessoa e cargo | Fonte |
+|---|---|---|
+| `anne.jorgensen@wilfilm.dk` | Anne Jørgensen, *Business & Legal* | `https://wilfilm.dk/team` (200, 129.858 bytes) |
+| `brith.dahl@wilfilm.dk` | Brith Dahl, *CFO* | idem |
+| `jimmi.gravesen@wilfilm.dk` | Jimmi Gravesen, *Head of Technology* | idem |
+| `louise.barkholt@wilfilm.dk` | Louise Barkholt, *Producer* | idem |
+| `morten.stahlhut@wilfilm.dk` | Morten Stahlhut, *Line Producer* | `https://wilfilm.dk/jobs` (200, 82.040 bytes), dentro do anúncio |
+
+**Exceção:** o CEO usa a forma curta, `erik@wilfilm.dk` (Erik Wilstrup) — **carta enviada em 15/09**.
+**NÃO MONTAR NADA NESTE DOMÍNIO, E NÃO MANDAR FOLLOW-UP:** a `/jobs` traz veto de visto por escrito —
+*"**VISA Requirements — Apply for an open position ONLY if you are a EU pass holder.** Unfortunately, the
+process and requirements in order to qualify for a work permit according to the Danish law can be very
+complicated"*. O cargo que a campanha mais quer existe ali (**`Toke Uthaug Rasmussen — Head of
+Modelling`**, mais dois *CG Supervisors*, um *Animation Supervisor*, dois *Concept Artists* e um *CG
+Generalist / Modeler*, pipeline **Maya/NUKE** declarado) e **o endereço dele não é publicado** — o veto
+fecha a porta antes da montagem.
+
+## UMA CAMADA DE OFUSCAÇÃO NOVA, E NENHUM DECODIFICADOR DE TEXTO PEGA: **O DOMÍNIO DESENHADO COMO IMAGEM**
+
+Até 18/09 este arquivo e o `BRIEF-JOE` listavam quatro camadas a decodificar antes de declarar "casa sem
+e-mail": `data-cfemail` do Cloudflare, `data-enc-email` em ROT13, entidade HTML decimal e `(at)`/`(dot)`.
+**Existe uma quinta**, achada em 19/09 na EGOSOFT: a página de vagas
+`https://www.egosoft.com/company/jobs_en.php` (**200, 24.092 bytes**) tem **zero caracteres `@` no HTML
+inteiro** e o que está escrito é
+
+```html
+<div align="center">Jobs @ <img src="/img/egosoft.gif" alt="" border="0" width="128"> . com </div>
+```
+
+ou seja **o domínio é um GIF** entre o `@` e o `.com`, com `alt` vazio. Decodificado pelo contexto:
+`jobs@egosoft.com`. **Como detectar sem abrir a página no olho:** procurar `@` seguido de `<img` na mesma
+linha, ou `<img` cercado por `@` e `.com`/`.de`/`.fr`. Onde isso aparece, o endereço é a concatenação
+`local + @ + nome-do-arquivo-da-imagem + TLD`, e o nome do arquivo (`egosoft.gif`) costuma ser o próprio
+domínio.
+
+## ENDEREÇOS PUBLICADOS ACHADOS EM 19/09 ÀS 02h35 E **NÃO** USADOS, cada um com o motivo
+
+- **`selina@5am-games.com`** (Selina Capol, ***Artist & Co-Founder***), `aleksandra@5am-games.com`
+  (*CTO & Co-Founder*) e `martina@5am-games.com` (*Level Designer & Co-Founder*) — 5am Games, Zurique,
+  Suíça, equipe 100% feminina. Os três pareados na `/about` (200, 139.844 bytes). **Parado por disciplina
+  do produto:** *LETTERS – A written adventure* é jogo de palavra e tipografia, *Konditorei Kritzel* é
+  protótipo de escrita manual para a ZHdK e *Radical Choices* é serious game. **Reabrir se a casa fizer
+  jogo com elenco 3D.**
+- **`till@awfullynicestudios.com`** (Till Aschwanden, *"ART MONKEY"*, e a bio dele diz *"4 years of
+  experience as a **character artist working as a 3D modeler for Blizzard Entertainment**"*) e
+  `rainer@awfullynicestudios.com` (Rainer Zoettl, *"DEV MONKEY"*, ex-Weta Digital e Scanline) — Awfully
+  Nice Studios, Áustria. **Parado por 2D declarado na própria bio** (*"his true passion is in the world of
+  2D … flash and photoshop"*), casa de duas pessoas e rodapé © 2023. **O histórico dos dois é ouro para
+  rede, não para carta de vaga.**
+- **`manu@firm-studio.fr`** (Beard Manuel, *Founder*), `julien@firm-studio.fr` (Amiard Julien, *Founder*),
+  `coralie@firm-studio.fr` (Duarte Coralie, *Head Of Production*), `charlotte@` e `claire@` (*Production*),
+  mais `job@firm-studio.fr` com convite escrito (*"We are always looking for new talents. VFX artists,
+  Artistic directors, 2D and 3D directors, feel free to send us your reel or book"*) — Firm Studio, Paris.
+  **Parado por disciplina:** pós-produção de comercial de beleza e luxo (Guerlain, Chanel, Dior, Bulgari),
+  zero `character`/`creature`/`personnage` no domínio.
+- **`erin@fortyork.tv`** (Erin Kuttner, *EP / Managing Director*), `valerie@`, `armen@`, `katie@` — Fort
+  York VFX, Toronto. **Parado por disciplina:** *"colour grading, compositing, animation, motion design
+  and graphics"*.
+- **`andy@redlabto.com`** (Andy Hunter, *Flame Artist/Owner*), `walt@` (Walt Biljan, *Colourist/Owner*),
+  `mark.s@` (Mark Stevens, *Head of Sales/Owner*) — REDLAB, Toronto. **Parado por disciplina:** cor e Flame.
+- **Oito endereços `nome.sobrenome@thepostlounge.com`** (Kurt Royan *Managing Director*, Georgia Woodward
+  *COO*, Matt Bennett *Creative Supervisor*, e cinco de produção/negócios) — The Post Lounge,
+  Brisbane/Melbourne/Sydney/Gold Coast. **Parado por disciplina:** finalização de pós, zero `character`.
+- **`ryan@builtbysnowman.com`** (Ryan Cash, *Founder & Creative Director*) — Snowman, Toronto. **Parado
+  por disciplina:** *Alto's*, *Where Cards Fall*, *Skate City*, *Pok Pok*.
+- **`olli.etuaho@lockpickle.com`** (Olli Etuaho, fundador **engenheiro** ex-NVIDIA) — Lockpickle,
+  Helsinque. **Parado por cargo e produto:** puzzle, três pessoas, nenhuma cadeira de arte nomeada.
+- **`macura@cinemaxgames.com`** — Cinemax, Praga. **Endereço SEM PESSOA:** o site `cinemax.cz` é SPA e
+  devolve a mesma página de 31.878 bytes sem um nome em `/`, `/about`, `/team` e `/contact`. Armadilha de
+  domínio registrada: site `.cz`, e-mail `@cinemaxgames.com`.
+- **`sinsem@triskell-interactive.com`** — Triskell Interactive, Lannion/Rennes. Sem nome, e *"We are
+  producing **2D games**"*.
+- **`michal@circusatos.com`** e **`bara@circusatos.com`** — Circus Atos, Praga. **Recusa escrita:**
+  *"Currently, we are not looking for any collaborators, and we don't do any contract work."*
+- **`lino@` na EGOSOFT NÃO EXISTE PUBLICADO, e é o cargo certo.** A home da EGOSOFT publica
+  *"Interview with **Lino**: Egosoft **Art Director**"*, com ele em primeira pessoa e 14 anos de casa, mas
+  **só o primeiro nome**. Quem achar o sobrenome dele em fonte pública fecha a **segunda e última** pessoa
+  da EGOSOFT. **Não montar.**
+- **`petja@` e `janne@brinkhelsinki.com` NÃO EXISTEM PUBLICADOS.** A `/team` da Brink nomeia três
+  *Animation Directors* e publica endereço de **um** só (`ilari@`). Petja Salmio e Janne Roivainen ficam
+  sem endereço, e o teto da casa já fechou com Ilari Koskinen (15/09) e Alexander Seraidaris (esta rodada).
+- **`toke.*@wilfilm.dk` NÃO MONTAR** — ver o veto de visto da Wil Film acima.
+
+## Sobre o `john@overthemoongames.com` (Vancouver), agora com o motivo fechado
+
+A nota anterior dizia *"falta o pareamento nome+cargo em fonte aberta"*. O pareamento **existe**, mas não
+serve: `https://www.gamegrin.com/news/the-last-hero-of-nostalgaia-launches-in-2022/` (**200, 45.350
+bytes**, aberta em 19/09) escreve *"has been described as a love letter to Dark Souls and its community by
+**Over The Moon CEO, Jon Warner**"* — é **paráfrase de jornalista de dezembro de 2021**, não a casa falando
+em primeira pessoa, que é o que a regra de 18/09 exige. E `overthemoongames.com` (**200, 472.233 bytes**)
+segue em obra, com três linhas de texto (*"This page requires JavaScript to display. Unpacking…"*).
+**Endereço guardado; carta não, enquanto a casa não voltar a publicar alguma coisa.**
