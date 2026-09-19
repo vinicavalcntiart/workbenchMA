@@ -11067,3 +11067,64 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   *chefe de gráficos* é minha, não da casa — a carta não deve traduzir o cargo dele de volta para ele;
   (f) o site é bilíngue no menu (CZ/EN) mas `/en/about` e `/en/games` devolvem **404 de 6.878 bytes**, então
   a única versão viva é a tcheca, e escrever em inglês é aposta razoável mas é aposta.
+
+### FICHA 2 — Kevin Brunt, **Art Director & Founder** da **Dogfish Games** (Vancouver / Port Coquitlam, BC, Canadá) — **`sem-email`**, e ela fecha o buraco de Vancouver que a rodada das 01h35 registrou como falha
+
+- **EMAIL: NÃO HÁ endereço de pessoa publicado. Linha entra como `sem-email`.** O único endereço em todo o
+  domínio é `contact@dogfishgames.com`, que a própria casa nomeia *"Press contact"* e *"Email Press
+  Contact"*. **Não montei nada**, e este é o caso em que montar seria pior: a casa tem **oito pessoas** e
+  duas grafias plausíveis (`kevin@`, `kevin.brunt@`) sem uma única prova de formato no domínio — é
+  exatamente o chute que quicou cinco vezes em 06/09.
+- **URLs abertas nesta rodada, com o pareamento nome+cargo na primeira:**
+  - `https://dogfishgames.com/` (**200, 34.939 bytes**), seção **Team — "The people behind the game"**,
+    cartão por cartão: *"**Bruno Gruber — Creative Director & Founder**"*, *"**Kevin Brunt — Art Director &
+    Founder**"*, *"Wes Wheeler — Lead Concept Artist"*, *"Amanda Chilton — Principal Level Designer &
+    Technical Designer"*, *"Adam Funari — Senior Tech Artist"*, *"Thomas Fraser — Environment Artist"*,
+    *"Samuel Müller-von Kralik — Programmer"*, *"**Hanna Kime — Senior Character Artist**"*, e por fim
+    *"You? — Join the team"*.
+  - `https://dogfishgames.com/press` (**200, 13.933 bytes**): *"Dogfish Games is an independent studio in
+    Vancouver, BC … Founded by two industry veterans who left bigger studios to build something of their
+    own. **Eight people deep in our first title**"*, *"Founded 2025"*, *"Location Vancouver, BC (+
+    distributed)"*, *"Team size 8 people"*, *"Press contact contact@dogfishgames.com"*.
+  - `https://dogfishgames.com/jobs` (**200, 15.296 bytes**) e
+    `https://dogfishgames.com/blog/creative-bc-grant/` (**200, 12.974 bytes**).
+  - **DETALHE DE MÉTODO:** o site é SPA/Astro e **`/team`, `/about`, `/contact`, `/news` e `/merch`
+    devolvem a mesma casca de 3.449 bytes** — quem varrer por caminho conclui "casa sem equipe". O time,
+    o press kit e as vagas estão todos **na home e em três rotas reais** (`/press`, `/jobs`, `/blog/...`).
+- **POR QUE ELE, e não outro da casa:** dos oito, **ele é o único que junta decisão (Founder) com arte (Art
+  Director)** — o alvo número um do `BRIEF-JOE` em casa pequena, sem RH no meio. O outro fundador, Bruno
+  Gruber, é *Creative Director* (criativo, não arte). **Hanna Kime já ocupa a cadeira de Senior Character
+  Artist**, ou seja a cadeira exata do Vini está preenchida: isso **não** anula a ficha, prova que a
+  disciplina existe e vive na casa, mas obriga a carta a ser de colega e de rede, **nunca** candidatura ao
+  posto dela. Wes Wheeler é conceito (2D) e Thomas Fraser é ambiente.
+- **GANCHO, com as frases da própria casa entre aspas:** *"We believe in crafting games full of mystery,
+  heart, and discovery. Experiences you won't forget once you dive in"*; *"We build with passion, not
+  pressure. No crunch, no shortcuts. Just care and craft"*; e o post de abril de 2026 assinado *"— The
+  Dogfish Games team"*: *"We started Dogfish Games as a small team of people who care deeply about the games
+  we grew up playing … Funding like this means we can keep doing the careful, deliberate work that takes
+  time — prototyping, level design, **art**, audio, all the polish that turns an idea into a game worth
+  playing"*, e *"The grant will go directly into … advancing core development, **hiring local talent**,
+  strengthening our technical infrastructure, and preparing our debut title for the world"*. O boilerplate
+  fecha o tom: *"Founded in 2025 by two neighbours who are both industry veterans … built around a simple
+  belief: that games can touch your soul. The team grew up on SNES, N64, PS1, and PS2, and that era never
+  left them"*.
+- **FORA DOS EUA?** Sim, **Canadá (Vancouver/Port Coquitlam, BC)**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `dogfishgames OR "Dogfish Games" OR Brunt OR "Hanna Kime"
+  in:anywhere` devolveu **`{}`** — **nenhum e-mail já foi para esta casa**. Nos arquivos, `kevin brunt` e
+  `hanna kime` dão **zero** em todos, e `dogfish` aparece **1× em `automacao/processados.csv`** e **1× em
+  `docs/index.html`**: candidatura espontânea **enviada pelo formulário próprio em 07/09**
+  (`https://dogfishgames.com/apply/`, Netlify, sem captcha, *"Thank you! Your form submission has been
+  received"*). **Não é recusa e não é pessoa** — é justamente o caso que o `BRIEF-JOE` manda priorizar:
+  casa já qualificada onde só faltou chegar em alguém. **Primeira pessoa da casa, teto de duas intacto.**
+- **RESSALVAS HONESTAS:** (a) **sem endereço de pessoa a ficha não vira carta hoje** — ela vale como nome,
+  cargo e casa guardados, e como a via de `contact@` já existir publicada; (b) **a cadeira de personagem
+  está ocupada** por Hanna Kime, e as duas vagas que a casa diz que vai abrir são *"Senior Environment
+  Artist"* e *"Senior Programmer"*, nenhuma de personagem — *"Roles we're not hiring for right now, but will
+  be"*; (c) **há um sinal contra a realocação, e é escrito**: o requisito da candidatura geral é *"Based in
+  or willing to work within Canadian time zones"* e o post do grant diz *"hiring local talent"*; (d) a casa
+  tem **um ano de vida** (*"Founded 2025"*), oito pessoas, **título de estreia não anunciado** (*"Unannounced
+  Title … Platform: TBA, Release: TBA"*) e o dinheiro novo é um grant de **CAD 50.000** — orçamento de
+  contratação sênior é improvável; (e) *"No open roles right now — but we're always listening"*, e o canal
+  aberto é **formulário** (`/apply/`, via do Jhon), não e-mail; (f) a candidatura de 07/09 registrou faixa
+  publicada de CAD 100–120k numa vaga remota mundial de **design técnico**, não de arte — não usar esse
+  número como prova de que a casa contrata artista fora do Canadá.
