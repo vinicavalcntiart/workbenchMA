@@ -1133,3 +1133,130 @@ fica: num domínio pequeno convivem tranquilamente quatro formas.
 Narciso Monturiol Nº 6, oficina 108 B, Edificio Destro B, **Parque tecnológico, Paterna, Valencia
 (46980)**"*, e a home diz *"Estudio de animación fundado en **Valencia, España**, en el año 2004"*.
 Fica corrigido aqui para não propagar.
+
+---
+
+## JOE, 19/09 06h35 — **O `href` DO `mailto:` PODE MENTIR, E ELE MENTIU EM DOIS DOMÍNIOS NESTA RODADA**
+
+Até agora este arquivo tratava o `href="mailto:…"` como a leitura confiável e o texto visível como a
+possível decoração. **Medido hoje, é o contrário em duas casas, e numa delas o `href` aponta para
+outra pessoa.**
+
+### `televisor.pl` / `televisor.studio` (TELEVISOR Studio, Varsóvia, grupo PFX)
+
+`https://televisor.pl/contact` (**200, 62.450 bytes**), cartão por cartão:
+
+| Cartão | `href="mailto:…"` | Texto visível |
+|---|---|---|
+| Michał Truszkowski, *Studio Head* | `michal.truszkowski@televisor.pl` | `michal.truszkowski@televisor.studio` |
+| Iwona Kachel, *Head of Postproduction* | `iwona.kachel@televisor.pl` | `iwona.kachel@televisor.studio` |
+| **Michał Dębski**, *Client Partner* | **`mikolaj.valencia@televisor.pl`** | `michal.debski@televisor.studio` |
+| Karolina Fesołowicz, *Client Partner* | `karolina.fesolowicz@televisor.studio` | (igual) |
+| Magda Garska-Pasztelaniec, *Head of Growth* | *(nenhum)* | `magda.garska@televisor.studio` |
+
+**Quem é o certo se resolve pela CAIXA, não por preferência:** a campanha escreveu em **11/09** para
+`michal.truszkowski@televisor.studio` (a forma do **texto visível**) e a busca no Gmail devolve **o
+`SENT` e nenhum mailer-daemon**. Oito dias sem 550: **`@televisor.studio` é a forma viva; `@televisor.pl`
+é a antiga e serve só o site e a caixa funcional `career@televisor.pl`.** E `mikolaj.valencia@` é
+resíduo de quem ocupava a cadeira do Dębski antes — **um `href` pode apontar para uma pessoa que não
+existe mais na casa.**
+
+### `dlpparis.com` (DLP Paris)
+
+`https://www.dlpparis.com/contact` (**200, 45.000 bytes**) tem dois botões escritos `job@dlpparis.com`, e
+**um deles aponta para `mailto:antoine@dlpparis.com`**. Ou seja a casa mostra uma caixa funcional e liga o
+clique numa **pessoa sem nome publicado**. Os endereços de pessoa do domínio, com cargo, são:
+`cedric@` (**Cédric Choppin**, *PARTNER / DIRECTOR*), `federico@` (**Federico Costa**, *PARTNER / ART
+DIRECTOR*, já contatado em 11/09), `pascal@` (**Pascal Chinarro**, *PARTNER*), `nathesias@`
+(**Nathésias Dellevi**, *FINANCIAL MANAGER*), mais `job@` e o `antoine@` órfão.
+**Regra que sai daí: quando `href` e texto discordam, registre OS DOIS e resolva pela caixa (envio
+anterior sem 550) ou por segunda fonte. Nunca escolha só porque um está no código.**
+
+## `wp-json/wp/v2/types` REVELA TIPO DE CONTEÚDO DE PESSOA QUE NÃO ESTÁ NO MENU (achado em 19/09 06h35)
+
+Em WordPress, `https://<dominio>/wp-json/wp/v2/types` lista os *post types* registrados, e às vezes há um
+de **pessoa** que o menu do site não linka. Na TELEVISOR os tipos são
+`post, page, attachment, nav_menu_item, wp_block, wp_template, wp_template_part, wp_global_styles,
+wp_navigation, wp_font_family, wp_font_face, video, reel, **artist**`, e
+`https://televisor.studio/wp-json/wp/v2/artist?per_page=100` (**200, 5.159 bytes**) devolve **quatro
+perfis de artista** que não aparecem em navegação nenhuma: **Hubert Dłużniewski** (*Animation Director &
+Online Artist*), **Krzysztof Fendryk**, **Mieszko Wiśniewski** e **Paweł Krzemiński** (slug
+`artysta-testowy`, ou seja **um registro de TESTE deixado publicado**). A página
+`/artist/hubert-dluzniewski/` (**200, 88.303 bytes**) traz a bio inteira (*"Renowned as the top online
+artist in Warsaw … In 2018, he was recognized as the KTS winner for his groundbreaking 'Robson's bike'
+social campaign animation … 15 years in the post-production and animation industry … notable clients
+including McDonald's and Coca-Cola"*) e **nenhum endereço** além das duas caixas funcionais do rodapé.
+**Vale como fonte de NOME e CARGO, não de endereço.**
+
+E o mesmo `wp-json` dá **prova de disciplina em número**: `.../wp/v2/videos_tax?per_page=100` devolve as
+categorias de trabalho **com a contagem**, e na TELEVISOR a primeira é `character_animation` com **44**
+projetos (contra `motion_design` 142, `food_beverage` 154, `technology` 104, `vfx` 59, `transport` 32,
+`case-study` 29, `health-beauty` 12). **Contagem de taxonomia é melhor prova de disciplina que contagem de
+palavra-chave, porque é a casa classificando o próprio trabalho.**
+
+## A CASA PODE PUBLICAR PESSOA POR **JSON:API DE OUTRO DOMÍNIO** (Frontier, 19/09 06h35)
+
+`https://careers.frontier.co.uk/` (**200, 5.315.420 bytes**) renderiza no servidor o payload do Lever, e
+foi de lá que saiu a Ellie Baldino em 12/09. **O que não estava registrado é que a MESMA página embute
+também um segundo payload, de um Drupal em `cms.zaonce.net`**, e
+`https://cms.zaonce.net/en-GB/jsonapi/node/team_member?page[limit]=50` (**200, 158.950 bytes**) devolve
+**43 membros de equipe com cargo**, entre eles **"India" — *Senior Artist*, cuja bio diz *"current Project
+Lead for the **Character Art** on Planet Zoo … My team and I are responsible for creating all of the cute
+animals you see in-game … I first joined as a **Graduate Artist** in 2018 … then **Full Character
+Artist**, then … **Senior Artist**"***. **Mas os artistas aparecem só com PRIMEIRO NOME** (India, Niki,
+Carla, John, Mike…) e **sem endereço**; nome completo só nos executivos e no conselho (David Braben,
+Jo Cooke, Piers Jackson, Yvonne Dawes…). **Serve para provar que a casa tem time de character art e para
+o gancho de carta; não serve para achar endereço.**
+
+## Endereços de pessoa PUBLICADOS achados em 19/09 06h35 e **NÃO** usados, com o motivo
+
+| Endereço | Pessoa e cargo | Casa | Motivo de não virar carta |
+|---|---|---|---|
+| `cedric@dlpparis.com` | Cédric Choppin, *Partner / Director* | DLP Paris | **morreu por disciplina**: a casa é agência de pós de **beleza e automóvel** (Lancôme, YSL, Nivea, Garnier, Guerlain, Dior, Estée Lauder, Hyundai, Renault); `character` dá **ZERO** em `/`, `/about` e `/contact`, e `/work` responde **404** |
+| `pascal@dlpparis.com`, `nathesias@dlpparis.com`, `antoine@dlpparis.com` | Partner, Financial Manager, e um órfão sem nome | DLP Paris | mesmo motivo, mais o `antoine@` **sem nome publicado** |
+| `steve@jumbla.com.au` | Steve Bradshaw, *Head of Production* | Jumbla (Melbourne) | **está dentro de `<!-- -->` na `/contact`**, ou seja a casa REMOVEU o bloco da tela; e o domínio é `.com.au`, diferente do `jumbla.com` do site |
+| `andrew@jumbla.com` | *(nenhum nome, âncora vazia ao lado de "London")* | Jumbla | `href` sem rótulo e sem nome |
+| `aus@jumbla.com` | rotulado sob *Danielle Kilgour, Executive Producer* | Jumbla | é **caixa funcional** usada como endereço de uma pessoa nomeada; a Danielle fica guardada aqui como nome+cargo **sem endereço** |
+| `yharniman@frontier.co.uk` | Yaz Harniman, *Talent Acquisition Partner* | Frontier Developments | **não é cargo complementar**: a Ellie Baldino, *Talent Acquisition Advisor* e **dona da requisição**, já levou carta em 14/09; escrever ao colega dela é passar por cima. A requisição **"Experienced Character Artist"** (department Art, team **Character**, Cambridge/Hybrid) **continua ABERTA hoje** na API oficial `https://api.eu.lever.co/v0/postings/frontier?mode=json` (**200, 199.544 bytes**, 12 vagas), e o `user` dela no payload **continua sendo a Ellie** |
+| `lmowatt@frontier.co.uk` | Lee Mowatt, *(jobTitle nulo no payload)* | Frontier Developments | endereço publicado **sem cargo** |
+| `paul@snafu-pictures.com`, `ross@snafu-pictures.com`, `natt@`, `joe@`, `joel@`, `tony@` | Paul Schleicher (*Co-founder/EP*), Ross Main (*Production Manager*), Natt Tapley (*Head Writer*), Joe Burns (*Head of Story*), Joel Veitch (*Creator – Bad Dinosaurs*), Tony Orsten (*Chairman*) | Snafu Pictures (Londres) | **morreu por disciplina e por cargo repetido**: `character`, `3D` e `sculpt` dão **ZERO** na `/team` (**200, 38.843 bytes**); é **produtora**, não fábrica, e o Dan Dixon (*Co-founder/EP*, mesmo cargo do Paul) já levou carta em 15/09 |
+| `tash@engine-house.co.uk` | *(sem nome)* | Engine House (Redruth, Cornualha) | o endereço só existe **dentro do JSON-LD `Organization`** como e-mail da empresa, sem nome ao lado, e a `/team` (**200, 136.434 bytes**) publica os perfis **só com primeiro nome** ("Mike, the guy who makes everything look good") |
+| `enna.licht@vfx.at`, `s.s@vfx.at`, `l.n@vfx.at`, `j.j@vfx.at`, `s.i@vfx.at`, `f.w@vfx.at`, `c.m@vfx.at`, `l.g@vfx.at`, `t.r@vfx.at`, `c.p@vfx.at` | Enna Licht (*Editorial/Schnittassistenz*), Svitlana Sergiienko (*VFX Artist*), Lee Niederkofler (*Senior Colorist/Creative Director*), Jacob Jabornig (*Colorist*), Stefan Imnitzer, Flynn Wiesenberger, Charly Müllner, Lisa Isabella Grabner, Thomas Rath, Clemens Puchinger | viennaFX (Viena) | a casa é **cor, mastering e editorial**; o **único** cargo sênior de VFX é o Felix Schruef, que **já é a pessoa registrada** da casa; o CEO **Christian Vollenhofer-Rohlfing** só tem `office@` (funcional); **Sebastian Blatter, *3D Generalist*, não tem endereço** |
+| `thea@ntropic.com`, `helena@ntropic.com`, `mykeb@ntropic.com` | Thea Slevin (*EP, Londres*), Helena Lee (*EP, Nova York*), Myke Brown (*EP, Ho Chi Minh*) | Ntropic | **cinco das seis cadeiras publicadas são Executive Producer**; a Prudence Beecroft (*Managing Director*, Londres) **virou ficha** nesta rodada e fecha o teto. O `helena@` fica como **alternativa documentada**: foi a **própria autorresposta de ausência da Veronika Fontaine** que o indicou por escrito |
+| `f.koenigs@`, `c.patorra@`, `s.grote@`, `a.fox@`, `d.dindar@sluggerfly.com` | Florian Königs (*Programminator*), Christian Patorra (*Game Boy*), Sebastian Grote, Annika Fox, Dilan Dindar | Sluggerfly (Essen) | cargos de programação e design, ou **piada sem função legível**; a Olha Osypenko, a única com `Artist` e `Senior` no título, **virou ficha** |
+| `sander@polderanimation.com` | Sander Kamermans, *Production Design / Set Design* | Polder Animation (Utrecht) | é **ambiente**, a disciplina que a regra do Vini de 10/09 manda deixar por último; o Jean-Paul Tossings (*TD/Rigger*) **virou ficha** |
+| `christophe@terminus-studio.com` | Christophe Moreau, *Co-Founder | VFX Sup.* | Terminus Studio (Nantes) | **virou ficha nesta rodada** |
+| `iwona.kachel@televisor.studio` | Iwona Kachel, *Head of Postproduction* | TELEVISOR (Varsóvia) | **virou ficha nesta rodada** |
+
+### `sluggerfly.com` — sete pessoas em `inicial.sobrenome@` com CARGO DE PIADA
+
+`f.koenigs@`, `d.plassmann@`, `c.patorra@`, `o.osypenko@`, `s.grote@`, `a.fox@`, `d.dindar@`. Fonte:
+`https://sluggerfly.com/` (**200, 12.152 bytes**, âncora `#weare`). **Aviso de uso:** os títulos são
+brincadeira (*Programminator*, *Art Dictator*, *Game Boy*, *Employee of the Month*, *God of Destructive
+Distractions*, *Executive Surpreme Elite Senior Pile Artist*), então **cargo real tem de vir de outra
+fonte** antes de qualquer carta que afirme função.
+
+### `ntropic.com` — duas formas convivendo, e a exceção é a EP mais antiga
+
+`prudence@`, `thea@`, `helena@`, `mykeb@` são **primeiro nome ou nome+inicial**, e
+`veronika.fontaine@` é **`nome.sobrenome`**. Fonte: `https://ntropic.com/about` (**200, 33.894 bytes**).
+Mesma mecânica da Cocoa, onde a exceção era o CEO.
+
+### `polderanimation.com` — primeiro nome, e **com hífen quando o nome é composto**
+
+`bastiaan@`, `sander@` e **`jean-paul@`**. Fonte: `https://www.polderanimation.com/about` (**200, 50.257
+bytes**). O hífen do nome **entra** no local, o que é o oposto do truncamento francês registrado na
+Parmi Les Lucioles (`s.durand@` para Durand-Barracand).
+
+### Armadilha de domínio morto: **`vancouveranimation.ca` NÃO é mais da indústria**
+
+Tentado nesta rodada como porta para casas de Vancouver: responde **200 com 246.641 bytes** e o `<title>`
+é *"Link RTP BEWOKWIN 2026 - Bocoran Game Gacor Malam ini dijamin Wede Nampol"* — **é site de aposta**.
+Domínio expirado e revendido. **200 não é prova de que a fonte existe; confira o `<title>`.**
+No mesmo pedaço de rodada, `digibc.org` (a associação de mídia digital da Colúmbia Britânica) responde
+**403 de 103 bytes** em `/members/`, `/member-directory/` e `/wp-json/wp/v2/pages`, com e sem
+*user-agent* de navegador, e `knowledgehub.creativebc.com/s/funding-recipients` (a lista de bolsistas da
+Creative BC) **falha na verificação de TLS** (`unable to get local issuer certificate`) mesmo com
+`--cacert /root/.ccr/ca-bundle.crt`. **As três portas de Vancouver desta rodada estão fechadas; a
+`creativebc.com/programs-and-funding/interactive-digital-media/` abre (200, 222.768 bytes) mas só linka o
+hub que não abre.**

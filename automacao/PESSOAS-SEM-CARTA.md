@@ -12526,3 +12526,187 @@ prognóstico porque a pessoa anterior é de arte". Metade estava certa: a DLP é
   página da própria casa diz que ela está lá hoje, e o `href` desatualizado do cartão vizinho prova que
   esta página **não é revisada com frequência**; (f) é **pós de publicidade**, onde personagem entra por
   spot e por contrato curto.
+
+### FICHA 3 — Jean-Paul Tossings, **Technical Director / Rigger** e cofundador da **Polder Animation** (Utrecht, Holanda) — **PUBLICADO, confiança ALTA**, SEGUNDA E ÚLTIMA pessoa da casa, e a casa se chama, com as palavras dela, **"a 3D character animation studio"**
+
+- **EMAIL: `jean-paul@polderanimation.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://www.polderanimation.com/about` (**200, 50.257 bytes**). Os três
+  fundadores estão publicados com nome, cargo e `mailto:` — e aqui o `href` **confere** com o rótulo, que é
+  o nome da pessoa: `mailto:bastiaan@polderanimation.com` rotulado *Bastiaan Schravendeel*,
+  `mailto:sander@polderanimation.com` rotulado *Sander Kamermans*, `mailto:jean-paul@polderanimation.com`
+  rotulado *Jean-Paul Tossings*. Os cargos vêm logo abaixo, colados: *"Bastiaan Schravendeel —
+  **Director/Writer/Character modeling**; Sander Kamermans — **Production Design/Set Design**;
+  Jean-Paul Tossings — **Technical Director/Rigger**"*. **Armadilha de caminho:**
+  `https://www.polderanimation.com/team` **não existe** (não resolve), e a `/contact`
+  (**200, 51.473 bytes**) publica **só caixa funcional** (`info@`, `jobs@`, `distribution@`) —
+  é mais um caso do caminho canônico mentindo.
+- **POR QUE ELE, e não outro da casa:** dos três fundadores, o Bastiaan **já recebeu a carta em 11/09 e não
+  respondeu** (e a carta dele, que eu li no `in:sent`, abriu justamente com *"Polder Animation calls itself
+  a 3D character animation studio on its own About page, and yours is the only line there that says
+  character modeling"*). Sobram dois, e a escolha entre eles é de disciplina: o Sander é *Production
+  Design/**Set Design***, que é **ambiente**, a disciplina que a regra do Vini de 10/09 manda deixar por
+  último; o Jean-Paul é **rigger**, que é o colega de bancada imediato de um character artist — quem recebe
+  a malha, quem reclama da topologia, quem sabe se falta gente de personagem. É a via "colega de ofício
+  responde colega de ofício" do `BRIEF-JOE`.
+- **PROVA DE DISCIPLINA, na primeira linha do site:** *"**Polder Animation is a 3D character animation
+  studio based in Utrecht, The Netherlands**"* e *"Our core strength is **narrative, 3D character
+  animation**. With our in-house team we can guide your project from the first concept to the final
+  product"*. O catálogo da `/` (**200, 114.142 bytes**) é elenco estilizado do começo ao fim:
+  **Playmobil – Monster High**, **Playmobil – PAU**, **Fisher-Price Alien Mom**, **Fisher-Price Sheep
+  Dad**, **Fisher-Price Kraken**, **Duck World** (seis peças: *Kart Race*, *Fashion Show*, *Gyro
+  Gearloose*, *Beagle Boys*, *Money Bin*, *Opening*), **Dr. Panda**, **Milly and Nimbus**,
+  **Prinses Arabella**, **UNDONE**, **Hexapus**, **Medical Characters** (três peças), **Trippel Trappel
+  feature film**, **Huuuge Casino**, **McDonald's – Easter Countdown**.
+- **O GANCHO MAIS FORTE DA RODADA, e ele é pessoal dele:** a casa mantém uma seção
+  `https://www.polderanimation.com/learn` (**200, 66.372 bytes**) chamada **"Technical knowledge transfer
+  (for 3D artists)"**, que é material de ensino de **rigging** assinado pelo lado técnico da casa:
+  *"At Polder Animation, we care about **sharing our technical knowledge** with others … The rigging
+  tutorials lay the foundation for solid, reliable, and performance focused rigging and are therefore
+  applicable to a wide-ranging audience, **from students to senior riggers**"*; *"**Mastering Matrices for
+  3D animation** — Matrices are an essential part of the **Technical Director's toolkit**"*; e a frase que
+  entrega um crédito de longa: *"The rigs developed for animation production, such as those created for the
+  **feature film Miss Moxy**, are constructed using a **modular system**"*. **O Vini fundou uma escola e
+  ensina o próprio método** — esta é a única casa da rodada em que o gancho da carta e a credencial de
+  professor dele são a mesma coisa.
+- **GANCHO institucional, palavras da casa:** *"**Everything in house under one roof**"*; *"Polder
+  Animation was founded in **2010**, following our successful collaboration on various projects during our
+  studies. Each of us had a particular area of expertise in 3D animation and filmmaking"*; *"We **thrive on
+  tackling ambitious 3D animation projects** and are ready to bring our creative and technical expertise
+  to yours"*; *"Our passion lies in creating animated films, currently focusing on short films and series,
+  with ambitions to create **longer, more ambitious productions** in the future"*.
+- **FORA DOS EUA?** Sim, **Holanda (Hooghiemstraplein 15, 3514 AX Utrecht; KvK 50845039)**. **Frase de
+  realocação entra**, e a Holanda é uma das três frentes prioritárias desta rodada.
+- **DEDUPE NA CAIXA:** `search_threads` por `polderanimation OR "Polder Animation" OR Tossings OR
+  Kamermans OR Schravendeel in:anywhere` devolveu **UM fio**, o `SENT` de **11/09 às 21h27** para
+  `bastiaan@`, **sem resposta, sem recusa e sem devolução**. Nos arquivos, `polderanimation.com` casa
+  **uma** linha de pessoa em `pessoas.csv` (Bastiaan, 10/09) e **uma** em `enviados.csv` (11/09).
+  **Segundo e último toque no domínio, oito dias depois do primeiro.**
+- **RESSALVAS HONESTAS, e a primeira é séria:** (a) **o personagem desta casa é feito pelo próprio
+  fundador** — a `/about` escreve *"Bastiaan Schravendeel — Director/Writer/**Character modeling**"*, ou
+  seja a cadeira que o Vini quer **já está ocupada pelo dono**, e essa é a razão estrutural para a casa não
+  contratar character artist; (b) **o cargo do Jean-Paul é técnico**, ele rigga e cuida de pipeline, não
+  contrata nem dirige arte; (c) **a casa é de TRÊS pessoas mais equipe por projeto** (fundada em 2010 por
+  três colegas de faculdade), então não há requisição permanente; (d) a `/contact` diz, colado,
+  *"**We currently do not have any openings**, however we are always interested in people to work with.
+  Send your portfolio to jobs@polderanimation.com"* — **existe canal formal publicado e o leitor tem saída
+  fácil de encaminhar sem responder**; (e) `groom`, `sculpt` e `ZBrush` dão **ZERO** no domínio e o
+  ferramental declarado é **Autodesk Maya** (*"While the videos use Autodesk Maya…"*), então a frase de
+  grooming em Houdini tem de entrar como ferramenta dele e não como a deles; (f) o sócio dele **já levou
+  carta e não respondeu** — a segunda carta precisa reconhecer isso.
+
+### FICHA 4 — Olha Osypenko, **"Executive Surpreme Elite Senior Pile Artist"** (é assim, literal, que a casa escreve o cargo) da **Sluggerfly GmbH** (Essen, Alemanha) — **PUBLICADO, confiança ALTA**, SEGUNDA E ÚLTIMA pessoa da casa
+
+- **EMAIL: `o.osypenko@sluggerfly.com` — PUBLICADO, confiança ALTA.** Nada montado, e o pareamento é
+  perfeito porque o `href` do `mailto:` **é** o nome dela.
+- **URL aberta nesta rodada:** `https://sluggerfly.com/` (**200, 12.152 bytes** — o site é uma página só,
+  e a seção de equipe é a âncora `#weare`). HTML cru, colado:
+  `<li> <img src="img/head_olha.png" alt="Olha Osypenko"><a href="mailto:o.osypenko@sluggerfly.com">Olha
+  Osypenko</a><span>Executive Surpreme Elite Senior Pile Artist</span></li>`. A mesma seção publica os
+  **sete** da casa com nome, `mailto:` e cargo: *Florian Königs — Programminator*
+  (`f.koenigs@`), *Dominik Plaßmann — **Art Dictator*** (`d.plassmann@`), *Christian Patorra — Game Boy*
+  (`c.patorra@`), *Olha Osypenko* (`o.osypenko@`), *Sebastian Grote — "My coffee machine is too slow
+  :((("* (`s.grote@`), *Annika Fox — Employee of the Month* (`a.fox@`), *Dilan Dindar — God of Destructive
+  Distractions* (`d.dindar@`). País confirmado no `https://sluggerfly.com/imprint` (**200, 3.857 bytes**):
+  *"**Sluggerfly GmbH — Annastr. 66a — 45130 Essen — Germany** — Register: Florian Königs, Christian
+  Patorra, Dominik Plaßmann — Amtsgericht Essen — HRB 26407"*.
+- **POR QUE ELA, e não outro da casa:** o **Art Dictator** (o diretor de arte, e é assim que ele se
+  intitula) **já recebeu a carta em 11/09 e não respondeu**. Dos seis restantes, os cargos legíveis são
+  programação (*Programminator*) e game design (*Game Boy*), e os outros três são piada pura
+  (*Employee of the Month*, *God of Destructive Distractions*, uma reclamação sobre a máquina de café).
+  **A Olha é a única remanescente cujo título contém a palavra `Artist`, e contém também `Senior`** — é a
+  artista sênior de dentro, que é a via que o `BRIEF-JOE` chama de sempre boa, porque colega de ofício
+  responde colega de ofício e indicação interna pula a fila.
+- **PROVA DE DISCIPLINA, e é a melhor da rodada em jogo:** a casa escreve, na abertura do catálogo,
+  *"We try to create games with **personality, characters you can remember**, and think that dark and funny
+  work well together"*. Os quatro jogos são plataforma **3D de personagem estilizado**: **Super Meat Boy
+  3D** (*"a tough as nails platformer where you play as an **animated cube of meat** who's trying to save
+  his girlfriend (who happens to be **made of bandages**) from an **evil fetus in a jar wearing a tux** –
+  IN 3D!"*), **Hell Pie** (*"Play as **Nate, demon of bad taste**, accompanied by **Nugget the angel** …
+  Your way will be paved with **ugly characters** …"*, com uma seção da página chamada **`Weird
+  Characters`**: *"Meet, fight and talk to a range of **deranged, ugly, friendly, helpul and hostile
+  characters** and entities"*), **Ben and Ed** (*"The player controls **Ed the Zombie**"*) e **Ben and Ed
+  – Blood Party** (*"**customize your zombie**"*). **Criatura estilizada com silhueta forte é literalmente
+  o produto da casa.**
+- **GANCHO, palavras da própria casa:** *"We are Sluggerfly, a **small, independent game development
+  studio**. Founded **2015 in Essen, Germany**, we released our first game Ben and Ed the same year. As a
+  team of **6 game design students**, Sluggerfly already existed from 2009-2010. Back then, the team
+  created the prototype for a game called **Night of Joeanne** as their graduation work. The group split up
+  … at one point, a part of the former team, with the help of a new member, **decided to give it a shot**"*.
+  E o tom da casa, que a carta precisa respeitar: *"If you have questions, feedback, requests or want to
+  **write an angry message**, contact us!"*
+- **FORA DOS EUA?** Sim, **Alemanha (Essen)**. **Frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `sluggerfly OR Osypenko OR "Plassmann" OR ntropic OR Beecroft
+  OR Fontaine in:anywhere` devolveu **UM fio de Sluggerfly**, o `SENT` de **11/09 às 21h27** para
+  `d.plassmann@`, **sem resposta e sem devolução** (a carta abria com *"Sluggerfly says on its own site
+  that it makes games with characters you can remember, and Hell Pie backs that up: Nugget the chubby
+  angel…"*). Nos arquivos, `sluggerfly.com` casa **uma** linha de pessoa em `pessoas.csv` e **uma** em
+  `enviados.csv`, as duas do Dominik. **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS, e a primeira é a que mais pesa:** (a) **o cargo é PIADA e eu não sei a função real
+  dela** — *"Executive Surpreme Elite Senior Pile Artist"* (com o erro de grafia de *Supreme* que está no
+  site) não diz se ela é 3D, 2D, concept ou UI; o que a ficha pode afirmar é que a casa a chama de
+  *Artist* e de *Senior*, e a carta **não pode inventar** a especialidade dela; (b) **a vaga de arte da
+  casa está COMENTADA no HTML**, ou seja fechada: o bloco `<section id="jobs">` contém, dentro de
+  `<!-- -->`, *"- **3D Artist (m/f)** - We are currently looking for a skilled artist to work with us on
+  upcoming projects. You should be able to create high-quality 3d assets with **blender** … We're working
+  with **Unreal Engine 4**"*; o item **`Jobs`** continua no menu apontando para uma seção **vazia**, o que
+  é sinal de site não revisado; (c) **a casa é de SETE pessoas** e uma delas já é o diretor de arte —
+  não há orçamento óbvio para um sênior de fora com patrocínio; (d) o ferramental declarado é **Blender e
+  Unreal 4**, não Maya nem Houdini, e `groom`, `sculpt` e `ZBrush` dão **ZERO** no domínio; (e) o último
+  lançamento grande, *Hell Pie*, é de 2022, e *Super Meat Boy 3D* saiu por **licença de IP de terceiro**
+  (Team Meat), o que faz a casa mais estúdio de encomenda do que de IP própria; (f) `o.osypenko@` **não
+  foi verificado por segunda fonte** — só a página da casa.
+
+### FICHA 5 — Prudence Beecroft, **Managing Director** do escritório de **Londres** da **Ntropic** (Reino Unido; grupo com São Francisco, Nova York, Los Angeles e Ho Chi Minh) — **PUBLICADO, confiança ALTA**, e a casa tem um filtro de portfólio chamado **`CG Characters`**
+
+- **EMAIL: `prudence@ntropic.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://ntropic.com/about` (**200, 33.894 bytes**; o mesmo bloco repete no
+  rodapé de `https://ntropic.com/` — **200, 31.708 bytes** — e de `https://ntropic.com/work` —
+  **200, 43.287 bytes**). O rodapé lista escritório por escritório, e o de Londres vem colado assim:
+  *"**Diespeker Wharf, 38 Graham St, N1 8JX** — +447967078926 — **Prudence Beecroft | Managing Director**
+  — prudence@ntropic.com — **Thea Slevin | Executive Producer** — thea@ntropic.com"*. Os outros são
+  *Veronika Fontaine | Executive Producer* (São Francisco **e** Los Angeles, o mesmo endereço nos dois),
+  *Helena Lee | Executive Producer* (Nova York) e *Myke Brown | Executive Producer* (Ho Chi Minh).
+- **POR QUE ELA, e não outro da casa:** a Veronika Fontaine **já recebeu a carta em 11/09**, e das seis
+  cadeiras publicadas **cinco são Executive Producer**. A Prudence é a **única com cargo de direção**
+  (*Managing Director*) e **o único escritório dela está no Reino Unido**, que é uma das três frentes
+  prioritárias desta rodada — enquanto três dos cinco EPs estão nos Estados Unidos, onde o patrocínio é o
+  mais difícil de todos, e o quarto está fora do escopo geográfico da campanha (Vietnã).
+- **PROVA DE DISCIPLINA, e é taxonomia da própria casa:** o filtro de portfólio de
+  `https://ntropic.com/work` tem **onze** rubricas e uma delas é, literal, **`CG Characters`**, ao lado de
+  *Social*, *2D Motion Graphics*, *Product Demos*, *Photoreal 3D*, *AR/VR/MR*, *Digital OOH*, *Events*,
+  *Live Action*, *Editorial & Finishing*, *Unreal Engine* e *3D Animation*. A mesma lista de onze abre a
+  `/about` como lista de serviços da casa. O portfólio se descreve assim: *"Our team of creatives,
+  designers, **visual FX artists**, colorists, editors, directors, and producers work **intuitively
+  throughout the creative process**"*.
+- **GANCHO, palavras da própria casa:** *"**We are Ntropic. Creating beautiful visual content for every
+  medium**"*; *"**Founded on excellence, shaped by instincts**"*; *"**See what we're made of** — get in
+  touch with us today"*. Os cartazes da vitrine são *Verizon Superbowl Las Vegas Takeover*,
+  *Pepsi Superbowl Las Vegas*, *Amazon Echo Studio*, *Amazon Astro*, *Southern California Edison* (esta
+  **é a que carrega a etiqueta `CG Characters`**), *Le Creuset*, *WhatsApp*, *Naked Juice* e *Banana Boat*.
+- **FORA DOS EUA?** **A cadeira dela é, sim: Londres, Reino Unido.** **Frase de realocação entra**, e a
+  carta deve ser dirigida ao escritório de Londres. **A carta NÃO pode sugerir autorização para trabalhar
+  nos Estados Unidos**, onde está a maior parte do grupo.
+- **DEDUPE NA CAIXA, e ele trouxe uma informação que muda a leitura do domínio:** `sluggerfly OR Osypenko
+  OR "Plassmann" OR ntropic OR Beecroft OR Fontaine in:anywhere` devolveu **dois fios de Ntropic** — o
+  `SENT` de 11/09 às 21h27 para `veronika.fontaine@` e, **três segundos depois**, uma **resposta
+  automática de ausência** dela, que ainda está **não lida** na caixa: *"**V OOO Re: Senior Character
+  Artist**… Thank you for your note. I'm currently **OOO with very limited availability until I return on
+  Monday, September 28th**. Please contact **Helena Lee (helena@ntropic.com)** for assistance"*.
+  **Isto NÃO é resposta humana e a casa NÃO saiu da fila de prospecção** — ninguém leu a carta —, mas é
+  preciso registrar duas coisas: (1) é **prova de que `@ntropic.com` entrega**, o que sustenta a confiança
+  alta desta ficha, e (2) a própria casa **indicou por escrito** um segundo endereço, `helena@ntropic.com`
+  (Helena Lee, EP, Nova York), que fica aqui como **alternativa documentada** caso o maestro prefira a
+  cadeira que o autorresposta apontou. Nos arquivos, `ntropic.com` casa **uma** linha de pessoa em
+  `pessoas.csv` e **uma** em `enviados.csv`. **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS:** (a) **o cargo é gestão, não arte** — Managing Director orça e vende, e o
+  resultado provável é encaminhamento; a casa **não publica nenhum artista, nenhum Art Director e nenhum
+  Head of CG**, só produtores; (b) **`CG Characters` é uma de onze etiquetas e só UM projeto visível da
+  primeira página a carrega** (*Southern California Edison*) — a casa é de **publicidade e finalização**,
+  onde personagem entra por spot, e o núcleo do catálogo é *Editorial & Finishing*, *Photoreal 3D* e
+  *Digital OOH*; (c) **o grupo é majoritariamente americano** (três dos cinco endereços de EP são EUA) e
+  o escritório de Londres é o menor, com **duas** pessoas publicadas; (d) **existe um autorresposta de
+  ausência aberto na caixa até 28/09**, então uma segunda carta ao mesmo domínio agora pode cruzar com o
+  retorno da Veronika — o maestro decide, e a decisão precisa ser consciente; (e) o rodapé marca
+  **`© 2025 Ntropic Group`**, um ano atrás; (f) a casa tem **escritório no Vietnã**, que está **fora do
+  escopo geográfico** da campanha, e é provável que boa parte da fabricação de CG seja feita lá — o que
+  reduz a chance de uma cadeira sênior de personagem em Londres.
