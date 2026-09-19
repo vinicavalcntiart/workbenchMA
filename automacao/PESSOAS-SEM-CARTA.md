@@ -13680,3 +13680,403 @@ equipe** — e isso confirma pela terceira rodada o que o `BRIEF-JOE` já diz da
    (`vfx.at`, `boxelware.de`, `studiosoi.de`, `colossalorder.fi`, `dreamwall.be`, `blue-zoo.co.uk`,
    `littlechicken.nl`) e as que estão no teto (`macguff.fr`, `animationsfabrik.de`, `flipbookstudio.co.uk`,
    `houseofsecrets.nl`, `sehsucht.de`).
+
+---
+
+## JOE, 19/09/2026 12h35 UTC — **QUATRO PESSOAS, QUATRO CASAS INÉDITAS (ZERO TOQUE), TODAS NA ALEMANHA, E TRÊS DAS QUATRO SÓ EXISTEM PORQUE O ENDEREÇO ESTAVA **OFUSCADO PELO CLOUDFLARE NO `href`, NÃO NO `data-cfemail`**
+
+**O achado de método desta rodada vale mais que as fichas, e ele tem duas metades:**
+
+1. **A veia dos 337 domínios em catorze caminhos (`/our-team`, `/the-team`, `/people`, `/crew`,
+   `/infos`, `/a-propos`, `/nosotros`, `/meet-the-team`, `/who-we-are`, `/press`, `/kontakt`,
+   `/om-oss`, `/contacto`, `/equipe`) É POBRE, e agora está MEDIDO.** Varri **330 domínios** do pool
+   `toques=1` nesses catorze caminhos e o universo devolveu **ZERO endereço de pessoa novo aproveitável**.
+   O que saiu foi caixa (`ir@`, `influencer@`, `publishing@`, `b2b@`, `biz-dev@`, `media@`, `join@`,
+   `dibu@`), dois endereços de casa já fechada hoje (`jakob@soja.se` e `simon@soja.se`, e **Soja está na
+   lista de casas fechadas**) e um de casa com lembrete de hoje (`hakon.nilsen@apparat.no`, **Apparat
+   recebeu lembrete às 11h15**). **Duas assinaturas de casca confirmadas de novo:** `bohemia.net`
+   serve a MESMA página de 190.4xx bytes em **treze** dos catorze caminhos, e `buf.com` serve a home de
+   **14.466 bytes idênticos em todos os catorze**. **Esta varredura está encerrada; não vale uma terceira
+   rodada.**
+2. **O CAMINHO QUE RENDEU FOI OUTRO: DIRETÓRIO DE ASSOCIAÇÃO → DOMÍNIOS INÉDITOS → `/impressum` COM
+   DECODIFICAÇÃO.** `https://www.game.de/en/members/` (**200, 1.859.335 bytes**) publica **546
+   membros** do *game – Verband der deutschen Games-Branche* com nome e site, e **452 desses domínios
+   nunca foram mencionados em nenhum arquivo deste repositório**. Varri os 452 em nove caminhos
+   (`/impressum`, `/imprint`, `/team`, `/about`, `/kontakt`, `/ueber-uns`, `/studio`, `/legal-notice`,
+   `/`) com decodificação de `data-cfemail`, `/cdn-cgi/l/email-protection#`, entidade HTML, ROT13 e
+   `[at]`/`[dot]`: **166 páginas com endereço e 83 endereços com forma de pessoa**. As quatro fichas
+   saíram daí. **O diretório da associação não publica UMA pessoa — publica o DOMÍNIO, e o Impressum
+   alemão obriga o resto.**
+3. **A PEGADINHA TÉCNICA QUE QUASE ME FEZ ESCREVER "CASA SEM PESSOA", e ela é nova neste repositório:**
+   nas três casas abaixo o `curl` + regex de e-mail devolve **`MAILS: []`**, e a página publica de
+   quatro a dez endereços de pessoa. O motivo é que o Cloudflare protege **cada endereço** num `href`
+   `/cdn-cgi/l/email-protection#<hex>` e deixa **só um** no atributo `data-cfemail` (o do rodapé).
+   Quem decodifica apenas `data-cfemail` — como a receita que já estava escrita neste arquivo —
+   **acha o `hello@` do rodapé e perde a equipe inteira**. Na Crit Crew: `data-cfemail` = **1**
+   ocorrência (`hello@critcrew.com`), `email-protection#` = **5** (`max@`, `lissi@`, `tascha@`,
+   `joshuasmallard@gmail.com`, `hello@`). Na StickyStoneStudio: `data-cfemail` = **ZERO**,
+   `email-protection#` = **11**. **Regra: decodifique SEMPRE o fragmento do `href`, não só o
+   atributo.** E a ordem dos payloads no HTML é a ordem dos cartões, o que dá **pareamento por
+   posição** verificável — foi assim que as quatro fichas fecharam nome↔cargo↔endereço.
+4. **Uma armadilha de FALSO POSITIVO do meu próprio extrator, registrada para não me enganar de novo:**
+   meu passo de ROT13 anexa o texto decodificado ao fim do corpo, e por um instante eu li
+   `max@critcrew.com` como "vindo do ROT13". **Não vinha.** Vinha do `email-protection#`. Fui conferir
+   `pevgperj` (ROT13 de `critcrew`) no HTML cru e deu **zero**, o que provou que o ROT13 não era a
+   fonte. **Quando um extrator com vários decodificadores acha um endereço, é obrigatório dizer QUAL
+   decodificador o achou** — senão a ficha declara uma prova que não existe.
+
+---
+
+### FICHA 1 — Jonas Hipp, **Lead Artist** da **StickyStoneStudio GmbH** (região de Freiburg im Breisgau, sul da Alemanha) — **PUBLICADO, confiança ALTA**, e é a melhor cadeira de arte da rodada
+
+- **EMAIL: `jonas.hipp@stickystonestudio.de` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://www.stickystonestudio.de/` (**200, 267.280 bytes**, `<title>`
+  *"StickyStoneStudio GmbH – StickyStoneStudio is a young team of gamedevelopers, located near Freiburg
+  im Breisgau, Germany."*). É **página única**: não existe `/team` separada, o bloco de equipe vive na home.
+- **PROVA LITERAL, por posição no HTML cru, e ela é o antídoto da armadilha de cartão trocado:**
+  o cartão `Jonas Hipp` começa em **211.710**, o cargo *"Lead Artist"* em **211.745**, e o `href`
+  `/cdn-cgi/l/email-protection#<hex>` que decodifica (XOR pelo primeiro byte) para
+  `jonas.hipp@stickystonestudio.de` está em **211.846** — dentro do mesmo cartão, antes do cartão
+  seguinte. **A casa publica DEZ endereços, e os dez decodificam na ordem exata dos cartões
+  renderizados:** `philipp.degasper@` (203.407, cartão em 203.246), `jan.huels@` (205.593),
+  `luca.forbes@` (207.770), `alex.herr@` (209.956), **`jonas.hipp@` (211.846)**,
+  `florian.schuhmann@` (213.780), `jan.eilts@` (215.687), `jan.hoffmann@` (217.609),
+  `maren.aderhold@` (219.540, cartão em 219.393), `robin.meier@` (221.439, cartão em 221.290), e
+  `jobs@stickystonestudio.de` (224.508) no fim. **`data-cfemail` nesta página: ZERO ocorrências** —
+  quem só lê o atributo declara a casa muda. Padrão do domínio: **`nome.sobrenome@`**.
+- **O ORGANOGRAMA INTEIRO, como a casa o rotula:** *Philipp Degasper* — **CEO, Game Producer,
+  Programmer**; *Jan Hüls* — **Lead Programmer, IT Administrator**; *Luca Forbes* — **Business
+  Development, PR**; *Alex Herr* — **Lead Game Designer, Sound Designer**; ***Jonas Hipp* — Lead
+  Artist**; *Florian Schuhmann* — **Programmer**; *Jan Eilts* — **2D Artist**; *Jan Hoffmann* —
+  **Game Designer, Programmer**; *Maren Aderhold* — **3D & 2D Artist**; *Robin Meier* — **3D & 2D
+  Artist, VFX**. E um décimo-primeiro cartão vazio: *"You? — Be part of us"*.
+- **POR QUE ELE, e não outro da casa:** a casa tem **quatro cadeiras de arte** (Hipp, Eilts, Aderhold,
+  Meier) e o **Jonas Hipp é o único rotulado *Lead***, isto é quem chefia esse banco e quem diz ao CEO
+  que falta gente. O *Philipp Degasper* (CEO, Game Producer) fica documentado como **segundo e último**
+  da casa, pelo teto de dois. Os outros seis são programação, design, som e negócios.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Stick to Games!**"*; *"StickyStoneStudio
+  is a team of skilled developers, located in the Freiburg area, south Germany. With a passion for
+  modern technologies and creative gamedesign StickyStoneStudio develops and design interactive
+  experiences for the devices of our time. In addition to in-house game productions the team also takes
+  on services in the field of game and app development, as well as **3D visualization with Unity**."*;
+  *"We are proud to be **licensed console developers for Nintendo Switch, Sony PlayStation 4 and 5, and
+  Xbox Series X**"*. Os dois jogos dão o gancho de elenco: **M.O.O.D.S.**, *"**3D-Action-Roguelike** …
+  Blast robots to bits in this action rogue-lite shooter … Modify your weapon, find armor parts and try
+  to survive the endless onslaught of **hostile mechs**! The invention of artificial emotions has
+  brought chaos and destruction over a civilization of **sentient mechs**"*; e **Memorrha**, *"**3D
+  First Person Puzzlegame** … The player goes on a journey of discovery and follows the traces of a
+  mysterious culture."*
+- **CASA FORA DOS EUA? SIM**, Alemanha. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por
+  `critcrew OR "Crit Crew" OR stickystonestudio OR "Sticky Stone"` devolveu **`{}`**, e
+  `Memorrha OR "Trail of Toads" OR Bellfrost OR Windstorm OR "Jonas Hipp" OR Degasper OR "Tascha"`
+  também devolveu **`{}`**. Nos arquivos, `stickystonestudio` dá **ZERO** em `pessoas.csv`,
+  `enviados.csv`, `PESSOAS-SEM-CARTA.md`, `padroes-dominio.md`, `docs/index.html` e `BRIEFING.md`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: NENHUMA. Casa inédita, PRIMEIRA pessoa.** Sem trava de 48h e sem
+  lembrete de hoje.
+- **RESSALVA HONESTA, e ela é de disciplina:** o elenco desta casa é **mecha e robô, não orgânico**.
+  Na página, `character` dá **ZERO**, `creature` **ZERO**, `groom` **ZERO**; `3d`=7, `vfx`=1 e o único
+  acerto de `fur` é ruído dentro de outra palavra. O portfólio do Vini é personagem **estilizado
+  orgânico com grooming em Houdini**, e **esta casa não mostra cabelo nem pelo em lugar nenhum**.
+  Pesa também que (a) dois dos quatro artistas são rotulados *"3D & 2D"*, ou seja generalistas, e a
+  casa vende serviço de XR, web 3D e *gamification*, o que dilui a cadeira; (b) o cartão *"You? — Be
+  part of us"* é convite genérico, **não é requisição aberta** — eu não abri a `/jobs` nesta rodada e
+  não posso afirmar que há vaga.
+
+---
+
+### FICHA 2 — Johannes, **Co-Founder, Character Artist, 3D Generalist** da **Sleeprunner Studios UG** (Bayreuth, Alemanha) — **PUBLICADO, confiança ALTA**, e é a ÚNICA cadeira de personagem achada hoje
+
+- **EMAIL: `johannes@sleeprunnerstudios.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://sleeprunnerstudios.com/about/` (**200, 266.201 bytes**,
+  `<title>ABOUT - SLEEPRUNNER STUDIOS</title>`).
+- **PROVA LITERAL, por posição:** o cartão `Johannes` começa em **192.240**, o cargo
+  *"Character Artist"* aparece em **195.111** e o `href` `/cdn-cgi/l/email-protection#<hex>` que
+  decodifica para `johannes@sleeprunnerstudios.com` está em **195.654**, antes do cartão seguinte
+  (`Andreas` em 200.466). Os cinco cartões decodificam na ordem publicada: `sebastian@` (179.713,
+  cartão 178.782, *"Creative Director"* em 179.184), `josef@` (188.849), **`johannes@` (195.654)**,
+  `andreas@` (201.598), `tim@` (207.299). Padrão do domínio: **primeiro nome puro**. `data-cfemail`:
+  **ZERO** nesta página.
+- **O ORGANOGRAMA INTEIRO, como a casa o rotula:** *Sebastian* — **Co-Founder, Co-CEO, Creative
+  Director**; *Josef* — **Co-Founder, Systems Programmer**; ***Johannes* — Co-Founder, Character
+  Artist, 3D Generalist**; *Andreas* — **Co-Founder, Co-CEO, Programmer, VFX**; *Tim* — **Partner,
+  Technical Artist**. Cinco pessoas, a casa inteira.
+- **POR QUE ELE, e não outro da casa:** é o encontro mais direto da campanha com a cadeira do Vini —
+  **Character Artist E Co-Founder ao mesmo tempo**. O `BRIEF-JOE` diz duas coisas que aqui coincidem:
+  em casa de até 30 pessoas o fundador *"costuma responder ele mesmo"*, e *"character artist sênior de
+  dentro é sempre uma via boa, porque colega de ofício responde colega de ofício"*. Ele é os dois.
+  O *Sebastian* (Co-CEO, Creative Director) fica documentado como **segundo e último** da casa.
+- **GANCHO, com as frases da própria casa entre aspas:** *"We are a **Indie Developer Studio** based in
+  **Bayreuth**, Germany. The company was founded in early **2020** with the goal to develop **core games
+  for PC and consoles**."*; *"Aside from developing our own IPs the studio offers services in the fields
+  of **Co-Development, 3D Visualization, Technical Consulting, and Plugin Development**. Currently we're
+  working on **Trail of Toads, a 3D platformer / Collectathon** and the Remastered Version of
+  **Windstorm: Start of a Great Friendship**."*; *"As members of **game e. V.**, we are part of
+  Germany's leading network for the games industry, driving innovation, collaboration, and gaming
+  culture forward."* O catálogo publicado é *Windstorm: Start of a Great Friendship — Winter Wonderland
+  DLC*, *Windstorm … Remastered*, *Trail of Toads* e *Downfall Hearts*. Endereço legal publicado no
+  rodapé: *"Sleeprunner Studios, Wacholderweg 19, 95445 Bayreuth, Germany"*.
+- **CASA FORA DOS EUA? SIM**, Alemanha. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por
+  `sleeprunner OR "Sleeprunner" OR laserbread OR "Laserbread" OR Lambertz` devolveu **`{}`**, e a busca
+  por `Memorrha OR "Trail of Toads" OR Bellfrost OR Windstorm …` também devolveu **`{}`**. Nos arquivos,
+  `sleeprunner` dá **ZERO** nos seis arquivos do cruzamento.
+- **DATA DO PRIMEIRO TOQUE NA CASA: NENHUMA. Casa inédita, PRIMEIRA pessoa.**
+- **RESSALVA HONESTA, e a primeira delas é estrutural e pesada:** **o sobrenome dele NÃO é publicado**
+  — a casa imprime só *"Johannes"* nos cinco cartões, e não há Impressum aberto nesta rodada que
+  nomeie os sócios, então a carta só pode abrir com o primeiro nome. Segunda, e é a que mais dói:
+  **a cadeira de personagem desta casa já está ocupada por um dos donos**, o que é a pior configuração
+  possível para contratar um character artist sênior — a carta tem de ser de **rede e colaboração**,
+  não de candidatura, e o pedido de "aponte a pessoa certa" é aqui mais realista que o de "me guarde na
+  lista". Terceira: `groom` dá **ZERO** na página (`character`=1, `3d`=3, `vfx`=1); *Windstorm* é jogo de
+  cavalo e *Trail of Toads* é collectathon — 3D estilizado sim, **mas pelo e cabelo não estão provados
+  por leitura desta URL**. Quarta: o menu tem *"Open Positions"* e eu **não abri** a `/jobs` nesta
+  rodada, logo não afirmo que existe vaga.
+
+---
+
+### FICHA 3 — Lukas Lambertz, **Co-Founder | Art Director** da **Laserbread GbR** (Colônia, Alemanha) — **PUBLICADO EM TEXTO CRU, confiança ALTA**
+
+- **EMAIL: `lambertz@laserbread.games` — PUBLICADO, confiança ALTA**, e aqui **sem ofuscação nenhuma**:
+  o endereço está em texto legível no HTML. Nada montado.
+- **URL aberta nesta rodada:** `https://laserbread.games/about/` (**200, 127.255 bytes**,
+  `<title>Games made in Cologne - Laserbread</title>`). Também abri
+  `https://laserbread.games/` (**200, 167.873 bytes**, `<title>Laserbread | Bellfrost | Indie Game
+  Studio from Cologne Germany</title>`).
+- **PROVA LITERAL, com a marcação da própria casa:**
+  `<h4 itemprop="name" class="qodef-m-title">Lukas Lambertz</h4>` em **46.118**, seguido de
+  `<p class="qodef-m-role">Co-Founder | Art Director</p>` em **46.181**, e `lambertz@laserbread.games`
+  em **47.081**, dentro do mesmo cartão. O `itemprop="name"` é **a própria casa declarando que aquilo é
+  um nome de pessoa**, o que é prova melhor que adjacência de texto. Os três cartões: *Lukas Fabry*
+  (38.905) → `fabry@` (39.884); *Sebastian Hennemann* (43.020) → `hennemann@` (44.035); *Lukas
+  Lambertz* (46.118) → `lambertz@` (47.081).
+- **PADRÃO NOVO E INCOMUM, e o motivo dele está na própria lista:** o domínio usa **SOBRENOME PURO**
+  (`fabry@`, `hennemann@`, `lambertz@`), e não primeiro nome. **A razão é visível: a casa tem DOIS
+  Lukas** — Lukas Fabry e Lukas Lambertz. Isto é a prova empírica de que *"primeiro nome puro"* não é
+  padrão universal e que **o pareamento é sempre por casa**, como a rodada das 12h35 de 17/09 já havia
+  escrito para o `clem@`.
+- **O ORGANOGRAMA INTEIRO:** *Lukas Fabry* — **Co-Founder | Game Development Generalist**; *Sebastian
+  Hennemann* — **Co-Founder | Technical Director**; ***Lukas Lambertz* — Co-Founder | Art Director**.
+  Três pessoas, a casa inteira, e a própria casa diz *"a **three-person** indie game studio"*.
+- **POR QUE ELE, e não outro da casa:** é a **única cadeira de arte** das três, e *Art Director* é
+  literalmente o primeiro alvo que o `BRIEF-JOE` lista para casa pequena. Os outros dois são
+  generalista de desenvolvimento e direção técnica. O *Sebastian Hennemann* (Technical Director) fica
+  documentado como **segundo e último**.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Games made in Cologne**"*; *"Laserbread is
+  a **three-person indie game studio** based in **Cologne, Germany**. The company focuses on developing
+  their own projects in the **simulation and city builder genre**. **Systemic gameplay, procedural
+  landscapes and atmospheric art are the heart of their projects**."*; e o jogo, **Bellfrost**:
+  *"**A roguelike city builder** … where you lead an expedition to build settlements against the ice.
+  **Survive harsh winters, fulfill the needs of your villagers, and explore mystical locations with
+  your heroes.** Reclaim the realm one island at a time."*
+- **CASA FORA DOS EUA? SIM**, Alemanha. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por
+  `sleeprunner OR "Sleeprunner" OR laserbread OR "Laserbread" OR Lambertz` devolveu **`{}`**, e a busca
+  com `Bellfrost` devolveu **`{}`**. Nos arquivos, `laserbread` dá **ZERO** nos seis.
+- **DATA DO PRIMEIRO TOQUE NA CASA: NENHUMA. Casa inédita, PRIMEIRA pessoa.**
+- **RESSALVA HONESTA, e ela é a mais dura das três fichas de hoje:** **city builder é a disciplina
+  errada para um portfólio de personagem.** A casa se define por *"procedural landscapes and
+  atmospheric art"*, e `character`, `creature` e `groom` dão **ZERO** nas duas páginas que eu abri; as
+  únicas palavras de elenco são *"villagers"* e *"heroes"*, que num construtor de cidade são unidades
+  pequenas vistas de cima, não personagem de herói com cabelo. Some-se que **são três pessoas e a
+  cadeira de arte já é dele** — não há vaga plausível, e o valor desta carta é rede, não candidatura.
+  **Armadilha de caminho, para o registro:** `/team` e `/impressum` devolvem **404 com 109.802 bytes**
+  e `<title>Page not found - Laserbread</title>`; o caminho vivo é `/about/`, e o legal é
+  `/legal-information/`, que **eu não abri nesta rodada** — logo *Colônia* vem do texto do `/about/` e
+  do `<title>`, **não de um Impressum conferido**.
+
+---
+
+### FICHA 4 — Tascha, **Lead Artist** da **Crit Crew GmbH** (Ludwigstraße 16, 97070 Würzburg, Alemanha) — **PUBLICADO, confiança ALTA**, e é a única da rodada cuja BIO nomeia personagem
+
+- **EMAIL: `tascha@critcrew.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://critcrew.com/team/` (**200, 78.154 bytes**,
+  `<title>Meet the Team</title>`). Também abri `https://critcrew.com/` (**200, 48.749 bytes**,
+  `<title>CritCrew | Games &amp; UX</title>`) e `https://critcrew.com/imprint/` (**200, 18.162
+  bytes**, `<title>Impressum</title>`).
+- **PROVA LITERAL, por posição:** `<h3 class="person-card-heading …">Tascha</h4>` em **18.153**,
+  `<h4 id="lead-artist">Lead Artist</h4>` em **18.344**, e o `href`
+  `/cdn-cgi/l/email-protection#<hex>` que decodifica para `tascha@critcrew.com` em **19.611** —
+  dentro do mesmo cartão, antes de `>Emily<` em **20.803**. Os cinco payloads: `max@` (14.118, cartão
+  `>Max<` em 12.440), `lissi@` (16.960, cartão em 15.304), **`tascha@` (19.611)**,
+  `joshuasmallard@gmail.com` (25.618, cartão `>Joshua<` em 23.494) e `hello@critcrew.com` (76.387, no
+  rodapé). **`data-cfemail` nesta página tem UMA ocorrência e ela decodifica para `hello@critcrew.com`** —
+  quem lê só o atributo conclui *"a casa publica só a caixa"*, e está errado por quatro endereços.
+- **O ORGANOGRAMA INTEIRO, como a casa o rotula:** *Max* — **Designer & Developer, Co-Founder**;
+  *Lissi* — **Designer & Developer, Co-Founder**; ***Tascha* — Lead Artist**; *Emily* — **Developer**
+  (sem endereço publicado); *Joshua* — **Music & Sound Artist** (e o endereço dele é **gmail pessoal**,
+  `joshuasmallard@gmail.com`, o que indica **freelancer de fora**, não gente de dentro). O Impressum
+  fecha dois sobrenomes: *"Crit Crew GmbH, Ludwigstraße 16, 97070 Würzburg … **Vertreten durch Lissi
+  Michler, Max Muthig** … Würzburg HRB 15433"*.
+- **POR QUE ELA, e não outra da casa:** é a **única cadeira de arte** e a única pessoa da casa cuja
+  bio publicada nomeia **desenho de personagem** e **ZBrush**. Max e Lissi são os dois donos e os dois
+  são *"Designer & Developer"* com mestrado em Ciência da Computação; Emily é *Developer*; Joshua é som
+  e é de fora. *Lissi Michler* (Co-Founder) fica documentada como **segunda e última** da casa.
+- **GANCHO, com as frases da própria casa entre aspas, e a melhor é a bio dela:** *"Tascha enjoys
+  nothing more than bringing ideas to life and exploring story telling through concepts and
+  illustrations. While **specializing in character design**, she loves accompanying them with prop
+  design and environment art. Her favorite part of being an artist is exploring new 2D art styles and
+  and **experimenting with 3D tools like Blender and ZBrush**."* Da casa: *"**BETTER DESIGN. BETTER
+  DEV. BETTER UX.**"*; *"As **battle-experienced game & app developers**, we support projects in any
+  stage and area of production. From game design and development through design-mockups, **art assets
+  and prototyping** to SDK integrations, UX reviews and analytics insights - we got you covered."*;
+  *"We are a **battle-experienced team and we have been working together for 6 years**."*
+- **CASA FORA DOS EUA? SIM**, Alemanha. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por
+  `critcrew OR "Crit Crew" OR stickystonestudio OR "Sticky Stone"` devolveu **`{}`**, e a busca com
+  `"Tascha"` devolveu **`{}`**. Nos arquivos, `critcrew` dá **ZERO** nos seis.
+- **DATA DO PRIMEIRO TOQUE NA CASA: NENHUMA. Casa inédita, PRIMEIRA pessoa.**
+- **RESSALVA HONESTA, e são quatro:** (1) **o sobrenome dela NÃO é publicado.** A casa imprime só
+  *"Tascha"*, e o Impressum nomeia **apenas** Lissi Michler e Max Muthig — então não há como escrever
+  o nome completo, e não se deve inventar. (2) **A própria bio dela joga contra o gancho**: diz
+  *"exploring new **2D** art styles"* e põe o 3D como *"**experimenting** with 3D tools"*, e a formação
+  descrita é ilustração e concept art autodidata — **ela é artista 2D que experimenta 3D, não artista
+  de produção 3D**. (3) **A casa não mostra produção de personagem 3D nenhuma**: o portfólio publicado
+  é três jogos de navegador de aprendizagem de idioma para a editora **Hueber** (*"Quiz, racing and
+  basketball"*) e um **boneco interativo com sensor** para a startup **NUVIOX**; a casa se vende como
+  *"Games & UX"* e serviço, com Unity, Cocos2d-x e Bevy. (4) É casa de **cinco pessoas prestando
+  serviço**, o que torna requisição de vaga improvável — e Würzburg é a **mesma cidade** da Gentle
+  Troll descartada hoje às 10h35, casa e domínio diferentes, zero toque, mas o mercado local é o mesmo
+  e o prognóstico não é melhor.
+
+---
+
+### OS DESCARTES DESTA RODADA, COM O MOTIVO MEDIDO
+
+- **Level Labs GmbH** (`levellabs.de`, Rietschelstraße 2, 04177 Leipzig) — **cadeira perfeita, técnica
+  errada, e é o caso Lucid Dreams outra vez.** A `/team` (**200, 24.888 bytes**,
+  `<title>Meet our Team | The engine that moves us forward</title>`) publica três cartões com nome,
+  cargo e endereço em texto cru: *Philipp Illmer* — **CEO, Sound Designer, Programmer**, `illmer@`;
+  **Jenny Funke — Creative Director, Game Artist, Project Manager**, `funke@levellabs.de` (cartão em
+  9.163, cargo logo abaixo, endereço em 10.533, antes do cartão de Daniel Zuther em 12.182, e o `href`
+  de LinkedIn no mesmo cartão é `linkedin.com/in/jennifer-funke-703a6a226`); *Daniel Zuther* —
+  **Executive Director, Programmer, Game Designer**, `zuther@`. Impressum: *"Level Labs GmbH … 04177
+  Leipzig … Vertreten durch: Philipp Illmer"*. **Morreu na técnica, com a frase da própria casa:** o
+  jogo em desenvolvimento é *"**DrillScape** is a **2D** Space-Mining-Roguelike for PC"*, e a bio dela
+  diz *"two years of experience in using **environment art**"*. Casa de 2D e de dois anos de estrada:
+  **não se gasta a primeira carta de uma casa nova numa disciplina que ela não faz.**
+  `funke@levellabs.de` fica guardado no `padroes-dominio.md`.
+- **CoreCraft UG** (`corecraft-games.com`, Im Spredey 1, 44577 Castrop-Rauxel) — **endereço, nome e
+  cargo publicados no mesmo bloco, e a casa é uma pessoa.** A `/about-us` (**200, 594.733 bytes**, Wix)
+  imprime sob o rótulo *"Meet The Team"*: *"**Florian Trippe** | **Managing Director & Founder** |
+  florian.trippe@corecraft-games.com"*, ao lado de `info@corecraft-games.com` e do telefone
+  +49 2305 3083075. **Descartada por porte e por disciplina declarada:** *"CoreCraft is a **small
+  startup** game development studio based in Germany"*, e a filosofia publicada é
+  *"manufactory, polish and **retroscaling**"*, definida pela casa como *"updating or modernizing old
+  or **retro** design philosophy"*. `character`, `creature`, `groom` e `3d` dão **ZERO** na página (o
+  único acerto é `rig`, ruído dentro de outra palavra). Endereço registrado, ficha não aberta.
+- **playzo GmbH** (`playzo.de`, Darmstadt) — **fundador com nome, cargo e endereço publicados, e a
+  disciplina é jogo de navegador.** A home (**200, 55.909 bytes**,
+  `<title>playzo games | Spieleschmiede aus Darmstadt</title>`) publica
+  `christoph.suess@playzo.de` e `claudia.stricker@playzo.de`, e o próprio release da casa assina
+  *"sagt **Christoph Süß, Gründer und Geschäftsführer der Playzo GmbH**"*. **Morreu na disciplina:** o
+  produto é *"Das Strategie-Browsergame **Operation Weltherrschaft** (OPW)"*, 25 anos no ar, mais
+  *Fußballcup*; o único 3D citado é um jogo **encerrado em 2017** (*"Es handelte sich um ein Echtzeit
+  3D-Strategiespiel … Wir haben das Spiel 2017 eingestellt"*). Sem elenco de personagem.
+- **Balanced Code GmbH** (`balancedcode.com`, Binger Str. 41, 55218 Ingelheim am Rhein) — **dois
+  endereços de pessoa publicados e a casa é consultoria.** A `/about` (**200, 11.573 bytes**) publica
+  *"Kevin — CEO & Software Engineer"* (`kevin@`) e *"Lucas — Unity Software Developer and Creative
+  Designer"* (`lucas@`), e a casa se define como *"a small independent studio providing software
+  consulting services for **AI Engineering, Data Engineering and Cloud Software Engineering**"*, que
+  também publica VR/AR. **Não é estúdio de personagem**, e nenhum dos dois tem sobrenome publicado.
+- **Studio Seufz GbR** (`studioseufz.com`, Ostendstrasse 106, 70188 Stuttgart) — **a casa com o maior
+  sinal de disciplina da varredura alemã e ZERO endereço de pessoa.** O `/impressum` (**200, 81.620
+  bytes**) publica **só** `xoxo@studioseufz.com` e nomeia os sócios sob rótulo jurídico:
+  *"vertreten durch die Gesellschafter **Benedikt Hummel, Stefan Michel, Anselm Pyta**"*. **`Vertreten
+  durch` é representante legal, não cargo publicado** — a mesma morte da Chasing Carrots de 10h35 —,
+  então não há cargo para parear e a ficha não abre. Fica registrada como a melhor casa alemã de
+  animação a reabrir por outra fonte (crédito, palestra, imprensa).
+- **KING Art GmbH** (`kingart-games.com`, Kleine Waagestraße 1, 28195 Bremen, ~110 pessoas) —
+  **falha de ambiente e depois casa muda.** O domínio do diretório, `kingart-games.de`, **não passa
+  verificação de TLS** neste ambiente (`curl: (60) SSL certificate problem: unable to get local issuer
+  certificate`, com e sem `www`); o `.com` responde. `/page/1-team` (**200, 30.498 bytes**) é a página
+  *About us* e **não nomeia uma pessoa**; o Impressum só tem `imprint@kingart-games.com` e
+  *"Represented by: Mr Marc König, Mr Jan Theysen"*, outra vez rótulo jurídico. Vale guardar a frase,
+  porque é a melhor da rodada para o caso do Vini: *"We welcome skilled people from all over the world
+  and **we're ready to help those outside the EU with visas**"*, ao lado de *"No Hire & Fire"* e
+  *"We don't believe in crunch"*. **Casa de ~110 pessoas que não publica gente: o padrão de casa grande
+  se confirma.**
+- **CASAS ONDE O ENDEREÇO DE PESSOA APARECEU E A REGRA DE CADÊNCIA OU DE FECHAMENTO BLOQUEOU HOJE:**
+  `apparat.no` (a `/om-oss`, **200, 71.414 bytes**, publica `hakon.nilsen@apparat.no` com o rótulo
+  *"Seniorkonsulent, CEO"* ao lado de `hei@`; **a casa recebeu lembrete de 7 dias às 11h15 de hoje**,
+  primeiro toque `kristian.berg@` em 11/09 21h27 — **não recebe ficha nova hoje**);
+  `soja.se` (a `/om-oss`, **200, 92.896 bytes**, publica `jakob@soja.se` ↔ *Jakob Nyström* e
+  `simon@soja.se` ↔ *"nossa producent **Simon Österhof**"*, e `sofie@` ↔ *Sofie Edvardsson* já levou a
+  carta em 17/09; **Soja está na lista de casas FECHADAS de hoje**);
+  `cocoa.fi` (a `/about`, **200, 90.350 bytes**, publica **sete** endereços com nome —
+  `anton@` ↔ Anton Molander, `eemeli@` ↔ Eemeli Katajisto, `ilona@` ↔ Ilona Malinen, `dermot@` ↔
+  Dermot Gallagher, `lotti@`, `niko.waaralinna@` e `casting@` —, e **Cocoa está na lista de casas
+  FECHADAS de hoje**);
+  `timelessfilms.co.uk` (a `/about`, **200, 30.617 bytes**, publica `ralph@`, `rebecca@`, `gareth@`,
+  `jon@` e `jade@` ↔ *Jade Spinks*; **Timeless está na lista de casas FECHADAS de hoje**);
+  `stormstudios.no` (a home, **200, 798.882 bytes**, publica **cinco** — `havard@`, `nordahl@`,
+  `ivar@` ↔ Ivar Rystad, `reppen@` ↔ Thomas Reppen, `jrsmith@`; **a casa já está NO TETO de dois**:
+  Håvard Munkejord em 10/09 e Espen Nordahl em 15/09, e *"Storm"* também levou lembrete hoje às 11h15);
+  `candlestickgames.ca` (a home, **200, 76.113 bytes**, publica **um** endereço, `laura@`, e ele **já
+  foi tocado em 31/08** — a casa não publica segunda pessoa; texto: *"We are a **female-led boutique
+  game studio** of artists who refused to outgrow the magic of childhood"*).
+- **A VEIA DA GUILDE DO QUÉBEC, RECONTADA COM NÚMERO NOVO E QUASE SECA:** baixei os **426** links de
+  `https://www.laguilde.quebec/wp-sitemap-posts-membre-1.xml` e abri **todos**, com **364 páginas
+  devolvendo `mailto:`**. Filtrando caixa funcional, casa fechada e domínio no teto, sobram **95
+  endereços de forma de pessoa** — e cruzando contra os seis arquivos do repositório, **só 16 nunca
+  foram mencionados**. Desses 16, **nenhum é estúdio de personagem 3D**: são áudio
+  (`patrick.lavoie@geeksoundfactory.com`, `s.lacroix@silverjackstudio.com`,
+  `eleanor@eleanorhebert.com`), IA e voz (`henri@evalabs.ai`, `azad@geniusxr.ai`), consultoria
+  (`cedrics@auradev.ca`, `louis@galaxup.com`, `krobitaille@syllabes.com`,
+  `jayesh@bluemathsoftware.com`, `eric@multimediarts.net`, `lp@lpcaron.com`,
+  `ernests@rebelbinary.com`) e quatro micro-estúdios sem equipe publicada
+  (`virginie@sloeburngames.com`, `lolo@floppygoat.com`, `j@oddbreeze.com`, `julie@gomintbox.ca`).
+  **A página de membro da Guilde NÃO publica nome nem cargo** — conferido outra vez na
+  `https://www.laguilde.quebec/membre/yellow-brick-games/` (**200, 33.944 bytes**), cujo conteúdo útil
+  é só o botão *"Contactez le membre par courriel"* —, então **cada ficha desta veia custa uma segunda
+  fonte de pareamento**, e as baratas já foram todas gastas. **A veia está no fim, e o que sobrou dela
+  está fora de disciplina.**
+- **CASAS DA GUILDE QUE MORRERAM POR DISCIPLINA DECLARADA, para não reabrir:**
+  `chasingratsgames.com` (a própria casa se descreve como *"flavorful **2D** games built around
+  atypical player fantasies"* — `alexis@` sai da fila por técnica, não por falta de pareamento),
+  `triplescalegames.com` (é **uma pessoa**, Frédéric Bohn, que o `fbohn@` confirma por
+  inicial+sobrenome, e a casa vende plugins de UE5 e experiências UEFN),
+  `finalstrikegames.com` **e** `finalstrikegames.net` (**os dois** respondem **202 com 169 a 177
+  bytes** em nove caminhos, e `/people` devolve **403 com 75.193 bytes** — é parede de borda, e o
+  `kevin@` só se pareia por agregador, o que não é fonte publicada: **fica sem ficha**),
+  `celrage.com` (a home, que às 12h35 de hoje devolve **202 com 169 bytes**, é a mesma parede).
+
+### A FILA PRONTA PARA A PRÓXIMA RODADA, EM ORDEM DE PROGNÓSTICO
+
+1. **O RESTO DOS 452 DOMÍNIOS ALEMÃES DO `game.de`, e é de longe a melhor fila que existe hoje.**
+   Varri os 452 em nove caminhos e **166 páginas** devolveram endereço; eu só cheguei a **abrir e ler**
+   cerca de quinze casas. As que ficaram com endereço de pessoa achado e **ainda não lidas**:
+   `stream-punk.com` (`christopher.barr@`, *Managing Director*), `tobspr.io` (`tobias@`, *Tobias
+   Springer, Geschäftsführer*, o autor do *shapez*), `wildriver.games` (`Soeren.lass@`),
+   `mixed.world`, `spellgardengames.com`, `nerdstar.de`, `6side.de`, `pfeffermind.de`,
+   `spielfabrique.eu` (**nove** endereços com nome), `medianet-bb.de` (**dez** endereços com nome, mas
+   é associação, não estúdio) e `games.ellpeck.de`. **Todas com `toques=0`.**
+2. **REFAZER A MESMA RECEITA EM OUTRO PAÍS DA LISTA DE PRIORIDADE.** O que a rodada provou é que
+   **diretório de associação nacional → domínios inéditos → `/impressum` com decodificação de `href`**
+   é a receita mais produtiva que a campanha tem hoje. Ficam **conferidas e vivas** para a próxima:
+   `https://www.game.de/mitglieder/` (**200, 1.911.642 bytes**, a versão alemã, que pode ter membros
+   que a inglesa não tem). Ficam **mortas por ambiente**, medidas hoje: `animationsbranchen.dk`
+   (**CONNECT tunnel failed, 502**), `animation.no` (**connection reset by peer**), `bcanimation.org`
+   (**502**), `www.spelplan.se` (**falha de TLS**, mesma família do `gigglebug.fi`) e
+   `cartoon-media.eu/members/` (**404**). **Achar o diretório vivo dos Nórdicos e da Holanda é a
+   tarefa de método da próxima rodada.**
+3. **AS SEGUNDAS PESSOAS DAS QUATRO CASAS DE HOJE**, já varridas e com endereço provado, para quando a
+   primeira carta sair: `philipp.degasper@stickystonestudio.de` (CEO, Game Producer),
+   `sebastian@sleeprunnerstudios.com` (Co-CEO, Creative Director),
+   `hennemann@laserbread.games` (Technical Director) e `lissi@critcrew.com` (Co-Founder).
+   **Nenhuma delas pode sair antes da primeira**, pela mesma trava da Pyjama.
+4. **O QUE CONTINUA TRAVADO E SÓ DEPENDE DO MAESTRO:** `inari@pyjama.fi`, `arne@thebarngames.nl`,
+   `leonie@theflyingcolourcompany.com`, as seis casas de organograma cheio (`studioruniq.com`,
+   `haymakerfx.com`, `kallagameworks.com`, `teamtumult.ch`, `snafu-pictures.com`,
+   `nutteryentertainment.com`) e agora também `nick@curiobot.com` e `carson@iconcreativestudio.com`,
+   que **têm ficha e não têm carta** — conferido hoje: `curiobot.com` e `iconcreativestudio.com` dão
+   `pessoas=1` e `toques=0`.
+5. **O QUE NÃO VALE MAIS TENTAR**, somando ao que já estava na lista: os **catorze caminhos** do pool
+   de um toque (varredura encerrada com zero), `levellabs.de` (2D), `corecraft-games.com` (retro, uma
+   pessoa), `playzo.de` (browsergame), `balancedcode.com` (consultoria), `studioseufz.com` (sem cargo
+   publicado), `kingart-games.de` (**TLS**) e `kingart-games.com` (casa grande, não publica pessoa),
+   `chasingratsgames.com` (2D), `triplescalegames.com` (uma pessoa, UEFN),
+   `finalstrikegames.com`/`.net` e `celrage.com` (**parede 202 de ~170 bytes**), `bohemia.net` e
+   `buf.com` (**casca repetida**, confirmada em catorze caminhos), `timbregames.com` (só `joe@`, e ele
+   já foi tocado em 17/09; `/our-team`, `/people`, `/crew` e `/studio` são 404 de 124.461 bytes) e
+   `candlestickgames.ca` (só `laura@`, tocado em 31/08).
