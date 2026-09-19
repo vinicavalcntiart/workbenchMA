@@ -11322,3 +11322,64 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   artist; (f) o crédito mais forte do Vini é **animação estilizada** (*The Wingfeather Saga*) e o catálogo
   desta casa é **live action fotorreal** (*SISU*, *The Witcher*, *Steeltown Murders*) — a ponte existe
   (criatura é criatura) mas tem de ser dita com honestidade na carta, sem fingir que é o mesmo ofício.
+
+### FICHA 6 — Alexander Seraidaris, **CEO** da **Brink Helsinki** (Helsinque, Finlândia) — **PUBLICADO, confiança ALTA**, **SEGUNDA E ÚLTIMA** da casa, e esta rodada achou a prova de disciplina que a ficha de 14/09 declarou não ter
+
+- **EMAIL: `allu@brinkhelsinki.com` — PUBLICADO, confiança ALTA.** Está no cartão dele, com nome, cargo e
+  telefone, na seção **Crew** da página de equipe. **Nada foi montado.** Uso o literal publicado no cartão
+  (`allu@`), **não** o `alexandros@brinkhelsinki.com` que também aparece na `/contact`: são a mesma pessoa
+  com dois apelidos de caixa, e a regra da campanha é escrever para a forma que está **pareada com o
+  cargo**.
+- **URL onde e-mail e cargo estão na MESMA página, aberta nesta rodada:** `https://brinkhelsinki.com/team`
+  (**200, 236.860 bytes**). Seção **Animation Directors**: *"Ilari Koskinen — Animation Director —
+  ilari@brinkhelsinki.com"*, *"Petja Salmio — Animation Director"* (**sem endereço**), *"Janne Roivainen —
+  Animation Director"* (**sem endereço**). Seção **Crew**: *"**Alexander Seraidaris — CEO — +358 40 735
+  1415 — allu@brinkhelsinki.com**"*, *"Ilari Koskinen — Executive Producer — ilari@"*, *"Molla Karjaluoto
+  — Executive Producer — molla@"*, *"Ilpo Virtanen — CFO — ilpo@"*.
+- **POR QUE ELE, e não outro da casa:** a ficha de **14/09** desta casa (Ilari Koskinen, Animation
+  Director/EP, carta enviada em **15/09**, sem resposta) **já havia designado por escrito** *"Alexander
+  Seraidaris fica como segunda e última"*. Cumpro isso. Dos quatro do Crew ele é o único com decisão
+  (CEO); Karjaluoto é produção, Virtanen é finanças. **Os dois outros animation directors, que seriam o
+  alvo de arte, não têm endereço publicado** — montar `petja@` ou `janne@` seria o chute das cinco
+  devoluções de 06/09, e não vale gastar a última carta da casa nisso.
+- **A PROVA DE DISCIPLINA QUE FALTAVA, E ELA CORRIGE A RESSALVA (1) DA FICHA DE 14/09.** Aquela ficha
+  registrou, com honestidade, que *"a palavra 3D aparece ZERO vez na página de trabalhos deles"* e que o
+  encaixe era **indireto**. Nesta rodada abri a página de projeto que a `/team` linka e a casa escreve o
+  ofício inteiro:
+  `https://brinkhelsinki.com/work/character-design-for-feature-animation-ro/` (**200**, aberta agora):
+  *"**Our team was responsible for designing over 50 characters for the film**"* (longa-metragem animado
+  **Ro**, com Filmkompaniet e Animoon); *"We worked closely with director to transform the vision of Ro
+  into **unique and memorable characters**"*; *"our **character creation process** always starts with the
+  screenplay … conducting a thorough **character breakdown** … categorizing them as main, supporting, or
+  background characters"*; *"we emphasize **silhouettes** to ensure that each character remains visually
+  distinct"*; *"To convey these emotions effectively, we always create detailed **facial expression
+  sheets**"*; e a frase que fecha o encaixe com o Vini: *"To fully understand a character's form, we create
+  **turnarounds** … Turnarounds are especially vital in **3D** or puppet animation, where **2D drawings are
+  translated into 3D models**"*. **A casa é o lado de cima da esteira do Vini**: ela desenha o turnaround,
+  alguém modela. É esse o argumento da carta.
+- **GANCHO, com as frases da própria casa entre aspas:** *"We are a Helsinki-based creative illustration
+  and animation studio, founded in 2011"*; *"Brink is full of major nerds for the craft, so we are
+  constantly finding ways to improve ourselves. **Creating lovable characters**, engaging design, and
+  captivating animations is what thrives us. The happiest artist makes the best work"*; *"Doing what we
+  love can be risky, but being on the brink means the willingness to take the leap. We're not afraid to
+  throw an oddball pitch to a brief"*; e o convite da `/team`: *"If you're searching for an animation
+  partner, some creative troubleshooting, or just a shoulder to cry on - **drop us a line**!"*
+- **FORA DOS EUA?** Sim, **Finlândia (Helsinque)**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `brinkhelsinki OR "Brink Helsinki" OR Seraidaris OR Koskinen
+  in:anywhere` devolveu **UM** fio: a carta de **15/09 para `ilari@brinkhelsinki.com`** (thread
+  `1a0a1f9da15ff391`), **uma mensagem só, sem resposta, sem recusa e sem follow-up** — e o próprio corpo
+  dela já usou o gancho *"Brink says it has been 'Creating lovable characters' since 2011"*. **`Seraidaris`
+  não aparece em nenhuma mensagem.** Nos arquivos, `brinkhelsinki` casa só com Ilari em
+  `automacao/pessoas.csv:276` e na ficha de 14/09 deste arquivo. **Segunda pessoa, teto fecha aqui.**
+- **RESSALVAS HONESTAS:** (a) **o ofício da casa é 2D**: ela se descreve como *"creative illustration and
+  animation studio"* e o que ela entregou em *Ro* foi **design de personagem em desenho** (esboço, folha de
+  expressão, turnaround), não modelo — o Vini entra como quem **recebe** esse pacote, o que é um encaixe de
+  parceria e de rede, não de vaga; (b) **a carta de 15/09 para o Animation Director da casa, que era o
+  cargo mais próximo da arte, ficou sem resposta** — escrever ao CEO agora é subir na hierarquia depois do
+  silêncio de quem entende do assunto, e o maestro tem de decidir se isso ajuda ou irrita; (c) o cargo é
+  **CEO**, logo o resultado provável é encaminhamento; (d) **não há vaga nem página de carreiras** no
+  domínio (`jobs@brinkhelsinki.com` existe na `/contact`, mas sem anúncio nenhum) — é carta de porta;
+  (e) um dos quatro projetos que a casa destaca é *"AI Animation — OnePlus Nord CE3 5G"*, e o `BRIEFING`
+  já registrou menção a IA como sinal de alerta em welevel, Iconic e Redly — aqui é **um** projeto de
+  cliente entre quatro, não a identidade da casa, mas está dito; (f) o rodapé marca **© 2025**, um ano
+  atrás.
