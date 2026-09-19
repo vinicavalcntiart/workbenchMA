@@ -7942,3 +7942,144 @@ falha no fim é pior que script que não roda, porque o custo é pago antes do e
   eu escolhi não gastar navegador para reconfirmar o que já foi medido em dois locatários.
 - **A `215659` da EA em Vancouver não foi enviada** (§4). Se alguém entender que ilustração de moda
   encosta em visual development de personagem, o argumento contrário está inteiro acima.
+
+## Jhon A, 19/09 20h00-20h30 UTC (trigésimo quinto turno, a rodada de UMA vaga que o Vini mandou) — **UMA enviada e ela é de PERSONAGEM, fechando a meta de 5**; e o achado durável é que **o Breezy pode exigir VERIFICAÇÃO POR CÓDIGO, e as três provas clássicas da família não a detectam**
+
+**Placar: 1 formulário enviado e confirmado, e é de PERSONAGEM por título e por corpo. 0 duplicata,
+0 tentativa contra veto escrito, 0 navegador simultâneo** (`pgrep -c chrome` = 0 antes de cada uma
+das três aberturas, e 0 no fim). O dia fecha em **20 formulários e 5 de personagem**, ou seja **a
+meta de 5 de personagem foi batida**, contra 19 e 4 no fim do 34º turno.
+
+**Omeda Studios Limited, `Senior Character Artist – Outsourcing`, Breezy `02f381de451501`**,
+Worldwide e 100% remoto. Esta é a vaga que às 12h48 de hoje tinha ficado **na mão dele** por parede
+de login do LinkedIn. **O que destravou não fui eu: foi o Vini mandar o link direto do Breezy às
+20h00.**
+
+### 1. A LIÇÃO QUE CUSTOU OITO HORAS DE VAGA VIVA, E ELA É MINHA: **NOME DE CASA NÃO GERA SLUG**
+
+O registro das 12h48 diz, com todas as letras, que os tokens `omeda`, `omedastudios`,
+`omeda-studios` e `predecessor` foram sondados no Breezy e que a família não tinha a casa. **O
+locatário é `omeda-studios-limited`, com o sufixo jurídico**, e ele responde `/json` com 200 e a
+requisição inteira.
+
+> **Regra: "sondei quatro variantes do nome" nunca é "a família não tem esta casa".** É a mesma
+> família de erro do `NBCUniversal3`, do `disneycareerdc`, do `Blizzard_External_Careers` e dos dois
+> hosts do Lever, com um agravante: aqui a variante que faltava era **o nome jurídico completo**
+> (`Limited`, `Inc`, `GmbH`, `AB`, `Ltd`), que é justamente a forma que uma empresa usa para abrir
+> conta em ATS. **A lista de variantes de slug passa a incluir o sufixo jurídico**, e o custo de
+> tentar é uma requisição por sufixo.
+
+E vale dizer o que **não** foi erro: a parede do LinkedIn era real (offsite apply com o destino atrás
+do login, três rotas de redirect em 404) e o `careers.omedastudios.com` em 404 em dezesseis caminhos
+também. **O que estava errado não era nenhuma das duas medições, era a conclusão de que não havia
+porta** — e ela veio de uma sonda de slug incompleta, não das duas paredes.
+
+### 2. O ACHADO DURÁVEL: **O BREEZY PODE EXIGIR CÓDIGO DE VERIFICAÇÃO, E O 204 MENTE POR OMISSÃO**
+
+As três provas que este arquivo ensina desde 06/09 para a família Breezy são **POST 204 em
+`app.breezy.hr/api/apply/<id>`**, **URL `/apply/submitted`** e o texto **"Application Submitted. Your
+application has been submitted successfully. Good luck!"**. As três apareceram aqui, nesta ordem, em
+**4 segundos**.
+
+**E as três acontecem IGUAL sem a candidatura entrar.** O e-mail que chegou às 20h10m12 de
+`no-reply@omeda-studios-limited.breezy-mail.com` **não é recibo**: o assunto é *"Complete your
+application"* e o corpo diz *"One more step! ... Please use the following code to verify your
+application: 3696"*. A rota por trás do botão é `/q/<id>`, e o `input[type=hidden] id="questions"`
+dela define **uma** pergunta:
+
+```
+{"_id":"2f94d9d4c79a01","name":"Verification","questions":[{"text":"Please enter the 4-digit
+verification code from your email:","type":{"id":"verification_code"},"required":true,
+"move_to_stage_id":"applied"}]}
+```
+
+> **`move_to_stage_id: "applied"` é a frase que decide: quem move a candidatura para o estágio
+> Applied é o CÓDIGO, não o envio.** Sem digitá-lo, o candidato fica num estágio anterior com POST
+> 204, URL de sucesso e texto de sucesso na tela. **É o falso positivo mais barato de cometer nesta
+> família e o mais caro de não ver**, porque nada na tela do envio sugere que falta algo.
+
+**Como se fecha, e foi o que se fez:** ler o código no Gmail (`newer_than:1d` mais o nome da casa,
+nunca por remetente, porque `no-reply@<slug>.breezy-mail.com` não é o mesmo remetente do recibo
+`candidate-<id>@<slug>.breezy-mail.com`) e submeter a rota `/q/<id>` com o `bz_form_fill.js`, que já
+existia. Resposta do servidor: **"Responses Submitted. Your responses have been submitted
+successfully. Thanks!"**.
+
+**Por que isso não apareceu na Playdead nem na Wonder Works:** as duas mandaram direto o
+*"Thank you for your application"*. **A verificação é configuração da CASA, não da plataforma**, então
+ela pode aparecer em qualquer locatário sem aviso. A partir de agora, **todo envio de Breezy exige
+olhar a caixa e distinguir `Complete your application` de `Thank you for your application`**.
+
+**Ressalva de prova, dita sem maquiagem:** até o fim do turno o segundo e-mail **não chegou**. Então
+as provas são três de servidor mais o e-mail de verificação, e a entrada no estágio Applied é
+**conclusão do `move_to_stage_id` somada à resposta de sucesso do questionário**, e não um recibo.
+Quem quiser ser estrito conta **duas** provas de envio e uma de verificação.
+
+### 3. O FORMULÁRIO, E O QUE ELE *NÃO* PERGUNTOU É O QUE MAIS PESA
+
+O `application_form` da requisição, lido do JSON embutido na própria página de `/apply`, traz
+`phone_number`, `address`, `work_history`, `education` e `preferred_location` como **`hidden`**, e
+`experience: null` (**nenhum questionário próprio**). Sobraram `name` e `email_address` obrigatórios,
+`resume` obrigatório, e `salary`, `summary`, `headline` e `cover_letter` opcionais.
+
+> **Consequência que a ordem previa e que vale registrar: não havia campo NENHUM de autorização de
+> trabalho ou de patrocínio.** Pela regra de 12/09 ("como faço isto sem esconder nada?"), a verdade
+> foi para a **carta**, que é o único texto livre: que ele não é cidadão do Reino Unido, que qualquer
+> arranjo presencial futuro exigiria patrocínio, e que remoto é o que ele quer. **Campo que não
+> existe não dispensa a divulgação; ela muda de lugar.**
+
+**Régua de veto sobre o texto do BREEZY, e ela corrige o falso positivo de manhã:** **4.769
+caracteres**, muito acima do piso de leitura válida, **ZERO acerto dos 43 termos**. Os três acertos
+que a régua deu às 12h48 eram o **rodapé de idiomas do próprio LinkedIn** (`français`, `deutsch`,
+`svenska`). **Régua na casca de um agregador mede o agregador.**
+
+**E o `/json` desmente um fato que o registro da manhã afirmou:** a vaga **não é "Reino Unido"**.
+`location.country` é `worldwide`, com `remote_details: "Fully remote, no location restrictions"`, e
+**Londres entra só como local secundário, também remoto**. O único requisito de presença é de fuso, e
+é a favor dele: *"Working hours aligned with the UK, or slightly later for more overlap with our
+US-based team"*.
+
+**Pretensão GBP 42.000/ano**, item 3 da política de 04/09 (casa pequena ou média no Reino Unido, um
+degrau abaixo dos GBP 50.000 de casa grande). **O critério de tamanho não foi chute:** a própria
+lista de benefícios oferece **EMI Stock Options**, esquema que a lei britânica restringe a empresa com
+menos de 250 empregados. O anúncio **não publica faixa** (`salary_range.display` vazio), então o item
+1 não se aplica; e 42.000 fica acima do piso geral do Skilled Worker, ou seja não inviabiliza
+patrocínio.
+
+**Carta de 250 palavras**, no teto exato da regra de 10/09, conferida pelas três buscas baratas que
+aquela regra manda fazer: zero travessão, zero capslock que não seja sigla (`PUGA`), zero emoji
+(campo de formulário é **zero emoji** pela tabela de 10/09) e zero ocorrência da palavra proibida. Ela
+cita a frase da casa entre aspas dentro do próprio texto enviado e **responde** a ela em vez de só
+elogiar: *"This is not a pure hero production role. At least half of your time is outsourcing:
+reviewing submissions, giving feedback, and holding the technical line"* → os três anos de
+**outsourcing na PUGA Studios**, que é exatamente o que o anúncio valoriza em *"Time at or with an
+external development partner is a real advantage here"*.
+
+### 4. NASCEU O `apply_breezy.js`, QUE ESTE ARQUIVO REGISTRAVA COMO INEXISTENTE DESDE 18/09
+
+O registro de 18/09 diz: *"o comando de disparo da `FILA-DO-VINI` chama `apply_breezy.js`, que NÃO
+EXISTE em `/home/user/apply`. Quem seguisse a receita ao pé da letra perderia a rodada."* Ele agora
+existe, em `automacao/apply_breezy.js` com cópia em `/home/user/apply`.
+
+**O motivo de ser arquivo novo e não mais uma chave no `apply_own.js` é de ORDEM, e é medido:** o
+Breezy **parseia o CV e sobrescreve campo já digitado** (na Playdead o `cSummary` foi digitado com 248
+caracteres e lido de volta com 704), e o `apply_own.js` preenche `campos` **antes** de `arquivos`, ou
+seja na ordem exatamente errada. Aqui **o anexo vai primeiro**, espera o parse, e só então os campos
+são digitados; e **todo campo é lido de volta depois do parse**. Nesta rodada os cinco voltaram
+`IDÊNTICO ao que mandei`, o que é a primeira vez que a família fecha essa conferência limpa.
+
+Ele também **mede o porteiro no DOM vivo antes de tocar no formulário**, e é assim que "zero captcha"
+deixa de ser leitura de HTML: zero iframe de captcha em **zero** iframe na página,
+`window.grecaptcha`, `hcaptcha` e `turnstile` os três `undefined`, zero ocorrência de `recaptcha`,
+`hcaptcha`, `turnstile`, `sitekey` e `datadome` no `outerHTML`, e zero script de terceiro de desafio.
+O honeypot `hp_7f2b` da plataforma foi conferido **vazio** por leitura de volta, e o script **para**
+se ele tiver sido preenchido.
+
+### 5. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Não houve caça.** A ordem era de uma vaga só, com o link na mão, e a rodada foi inteira nela.
+- **Não foi anexada carta em PDF**, porque **não existe segundo campo de arquivo** nesta requisição:
+  `cResume` é o único, e recebeu o `Vini_Cavalcanti_CV.pdf`. A carta foi para o `cCoverLetter`.
+- **O segundo e-mail da Omeda não chegou** (§2). Se aparecer, é o recibo que fecha a prova.
+- **O locatário Teamtailor da casa (`careers.omedastudios.com`, painel
+  `app.teamtailor.com/companies/JtMUStwpYVA@eu`) continua em 404 em todo caminho** e não foi
+  reconferido. Ele parece abandonado em favor do Breezy, mas isso é leitura, não medição.
