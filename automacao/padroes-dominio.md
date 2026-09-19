@@ -1522,3 +1522,160 @@ knowledgehub; pare de gastar rodada nele.** No mesmo pedaço de rodada, `animall
   `jobs@`. **Casca repetida com 200 não é página de equipe.**
 - **`afilm.dk/studio` e `/meet-the-team` devolvem `508 Resource Limit Is Reached`** (1.006 bytes) —
   hospedagem estourada, não ausência de página. Vale reabrir noutra hora.
+
+---
+
+## RODADA DAS 10h35 DE 19/09 — O JSON EMBUTIDO É MELHOR PROVA QUE O DOM, E SEIS PADRÕES NOVOS
+
+### A REGRA DE MÉTODO, e ela substitui a leitura de DOM como primeira escolha
+
+Em site feito com framework moderno (Next.js, Squarespace, Wix) o pareamento nome↔cargo↔email
+**existe duas vezes na mesma página**: uma no HTML renderizado e outra num **JSON de dados
+embutido**, geralmente num `<script>` de hidratação. **Prefira o JSON**, por uma razão que a
+armadilha de 06h35 deixou clara: no DOM o nome, o cargo e o `href` são **três elementos vizinhos**,
+e vizinhança é inferência; no JSON eles são **três campos do mesmo objeto**, e isso não pode
+discordar. Prova medida hoje, na Brand New School:
+
+```
+{"contact_title":"Human Resources","people":[{"title":"Director of People / HR",
+ "name":"Amanda Collazo","email":"amanda@brandnewschool.com","phone":null}]}
+```
+
+**Como achar:** procure no HTML cru por `"email":"`, `"name":"`, `data-name=`, `__NEXT_DATA__`,
+`"people":[` e `"contact` antes de flatten do DOM. No Wix o mesmo bloco costuma vir **renderizado
+mais de uma vez** — na CarpeDiem o organograma aparece **três vezes** no mesmo arquivo, o que dá
+três leituras independentes da mesma adjacência e vale quase tanto quanto um JSON.
+
+### `carpediemfilmtv.com` — **INICIAIS DO NOME, e este é o único padrão de iniciais com PROVA DE ENTREGA**
+
+Fonte: `https://www.carpediemfilmtv.com/` (**200, 1.144.089 bytes**, aberta em 19/09 às 10h35;
+site Wix de página única, e o `<title>` publica o endereço: *6630 Hutchison Street, Outremont, QC*).
+
+| pessoa | cargo publicado | endereço | regra |
+|---|---|---|---|
+| Anouk L'heureux | Vice Présidente de la production et des opérations | `Al@` | iniciais, **A maiúsculo como publicado** |
+| Sylvie Desrosiers | Vice-president finance | `sd@` | iniciais |
+| July Katherine Bustos | Institutional Affairs Supervisor | `jkb@` | **três** iniciais |
+| Sophie Roy | Director | `sr@` | iniciais |
+| Benoit Godbout | Director / Artistic director | `bg@` | iniciais |
+
+**Por que este padrão vale mais que os outros de iniciais:** o `bg@` ↔ *Benoit Godbout* foi lido
+desta mesma estrutura em 11/09, virou carta e **a carta entregou**, com o cargo certo citado no
+corpo e zero bounce. Ou seja o layout já está **validado por entrega**, não só por leitura.
+**Ressalva que fica registrada:** `Al@`, de duas letras, é o mais frágil da série, e a página
+publica três pessoas **sem** endereço (Gérard Porlon, Nicolas Proulx CPA, Vanessa Loubineau), o que
+prova que o organograma da página não é a folha inteira.
+
+### `heycarbon.com` — **DOMÍNIO MISTO, inicial+sobrenome E primeiro nome puro na MESMA página**
+
+Fonte: `https://heycarbon.com/contact` (**200, 43.997 bytes**, aberta em 19/09 às 10h35).
+`mmcmanus@` = **M**att **McManus** e `ldefelice@` = **L**auren **DeFelice** são inicial+sobrenome,
+mas `gretchen@` = *Gretchen Praeger* é **primeiro nome puro**. **Não extrapole o formato de um
+domínio misto**: aqui o `gretchen@` derrubaria qualquer endereço montado como `gpraeger@`.
+O pareamento é ótimo porque o nome visível está **dentro da âncora do `href`**:
+`<strong><a href="mailto:ldefelice@heycarbon.com">Lauren DeFelice</a></strong><br /> Executive Producer`.
+
+### `timelessfilms.co.uk` — primeiro nome puro, e a equipe vive em `/about` porque `/contact` é 404
+
+Fonte: `https://www.timelessfilms.co.uk/about` (**200, 30.617 bytes**). `ralph@` (Ralph Kamp,
+Chairman & CEO), `rebecca@` (Rebecca Kamp, SVP Production & Marketing), `gareth@` (Gareth Kamp, SVP
+Distribution & Production), `jon@` (Jon Clifford, Head of Technical & Post Production), `jade@`
+(Jade Spinks, Contracts & Collections Manager). **`/contact` devolve 404 de 6.603 bytes** com
+`<title>Not Found</title>`. O template é Bootstrap e traz **tripla** confirmação: `<h4>` com o nome,
+`<h6>` com o cargo e, no botão do modal, `data-name="Jon Clifford" data-job="Head of Technical &amp;
+Post P…" ` ao lado do `mailto:`. **Quando existir `data-name`, confira contra o `<h4>` e o `href`:**
+é justamente o campo que discordou em dois domínios na rodada das 06h35.
+
+### `frostfx.ee` e `take-five.be` — primeiro nome puro, cartão completo com telefone, e caminho fora do canônico
+
+- **`frostfx.ee`** (fonte `https://frostfx.ee/`, **200, 42.023 bytes**): `heiki@` (Heiki Luts,
+  Producer & Supervisor), `marko@` (Marko Post, Producer), `andres@` (Andres Kluge, Creative
+  Supervisor), `martin@` (Martin Turu, Lead Compositor & 3D Generalist), `anton@` (Anton Shtolf,
+  Compositor), `kalev@` (Kalev Mölder, VR & AR Specialist, Developer). A casa é **página única**:
+  `/about`, `/contact`, `/team` e `/impressum` **não existem**. **Endereço sem cadeira, para o
+  registro:** a mesma página imprime `will@frostfx.ee` sob o rótulo `Email:` **sem nome e sem
+  cargo** — é a morte da LudoCraft e da Final Frontier, e não vale ficha.
+- **`take-five.be`** (fonte `https://take-five.be/team`, **200, 583.255 bytes**): `gregory@`
+  (Gregory Zalcman, Producer), `alon@` (Alon Knoll, Producer), `david@` (David Grançon, Producer /
+  production manager), `eric@` (Eric Jaminet, Production Accountant). **`/contact` devolve 404 de
+  2.206 bytes** e a equipe vive só em `/team`.
+
+### `brandnewschool.com`, `mythstudio.co.uk`, `sarofsky.com` — três formatos, e o do meio é o que engana
+
+- **`brandnewschool.com`**: **primeiro nome puro** (`zack@`, `devin@`, `garrett@`, `amanda@`,
+  `gracie@`), **com uma exceção funcional**: a *Controller* Megan Schmidtlein é publicada como
+  `accounting@`. **Rótulo de função no lugar do nome de uma pessoa nomeada** é um caso novo e vale
+  a nota: o nome existe, o cargo existe, e o endereço é de setor.
+- **`mythstudio.co.uk`**: **`nome.sobrenome@`** (`james.finlay@`, `izzy.hill@`), ao lado de
+  `hello@` e `Jobs@` (com J maiúsculo, como a casa escreve). Fonte `https://mythstudio.co.uk/contact`
+  (**200, 20.244 bytes**).
+- **`sarofsky.com`**: **MISTO e com Cloudflare** — `erin@` (Erin Sarofsky, Founder, ECD) é primeiro
+  nome puro, mas `joel.signer@` (Head of Production) e `rudy.downey@` (UK Representative) são
+  `nome.sobrenome@`. Fonte `https://sarofsky.com/contact` (**200, 45.695 bytes**), tudo em
+  `data-cfemail`, e o texto visível mostra `[email protected]` **ao lado** do endereço real, o que
+  faz a página parecer ter dois endereços por pessoa quando tem um.
+
+### `engine-house.co.uk` e `chasing-carrots.com` — endereço bom, cargo que não é cargo
+
+- **`engine-house.co.uk`**: a `/contact` (**200, 128.729 bytes**) publica **um** endereço,
+  `tash@engine-house.co.uk`, **sem nome ao lado**; a `/team` (**200, 136.492 bytes**) nomeia *Mike*,
+  *Jason Robbins* e *Tash Price*, e o que ela imprime como cargo são **piadas**: *"The Guy Who Makes
+  Everything Look Good"*, *"The Movement & Storytelling Expert"*, *"The Story & Strategy Powerhouse"*.
+  Padrão: **primeiro nome puro** (`jason@`, `tash@`). **Cargo de piada não é cargo publicado.**
+- **`chasing-carrots.com`**: o `/impressum` (**200, 60.514 bytes**) imprime *"Vertreten durch:
+  Dominik Schneider, Patrick Wachowiak"* com `dominik@` e `patrick@` logo abaixo. Padrão **primeiro
+  nome puro**, pareado por ordem. **`Vertreten durch` é rótulo jurídico de representante legal, não
+  cargo** — serve para pareamento, não para ficha.
+- **`gentletroll.com`**: a `/about` (**200, 25.515 bytes**) publica sob o rótulo *"Key personal"*
+  `mw@` (Michel Wacker, Founder & CEO, **iniciais**) e `lena.schubert@` (Administration & PR,
+  **nome.sobrenome**). **Domínio misto, e as duas pessoas são a casa inteira.**
+
+### MEDIDO: CASA GRANDE NÃO PUBLICA PESSOA, E AGORA COM NÚMERO
+
+Varredura de **23 caminhos por domínio** em 19/09 às 10h35, e o resultado é **zero endereço de
+pessoa** nas seis casas grandes abertas. O que elas publicam é **rótulo de função**:
+
+| casa | o que publica |
+|---|---|
+| `gurustudio.com` | `peopleandculture@`, `productionservices@`, `business.affairs@`, `questions@`, `marketing@`, `sales@` |
+| `hybride.com` | `bidding@`, `communications@`, `info@`, `support@` |
+| `dexterstudios.com` | `vfx@`, `immersive@`, `theeye@`, `pr@`, `dexterstudios@` |
+| `nexusstudios.com` | `eps@`, `oc@`, `prmarketing@`, `info@`, `jobs@` |
+| `aardman.com` | nenhum endereço em nenhum caminho (a `/contact/` serve a home, `<title>Home | Aardman`) |
+| `macguff.fr` | `recrutement@` e já está **no teto de dois** |
+
+**Guru Studio serve a MESMA casca de 62.105 bytes em nove caminhos diferentes** (`/about`, `/team`,
+`/our-team`, `/people`, `/crew`, `/meet-the-team`, `/who-we-are`, `/impressum`, `/press`, `/om-oss`,
+`/equipe`), todos 200 com `<title>Guru Studio` e só `questions@` dentro. **É a mesma assinatura do
+`gimpville.no`: casca repetida com 200 não é página de equipe.** Só `/contact` e `/contacto`
+(**38.208 bytes**) trazem a lista de setores.
+
+### MEDIDO: O POOL DE "CASA TOCADA SÓ EM CAIXA FUNCIONAL" É POBRE EM GENTE
+
+Cruzamento reproduzido em 19/09 às 10h35: **407 domínios** com `pessoas=0` e `toques=1`, isto é
+casas em que a campanha escreveu para `info@`/`jobs@`/`careers@` e nunca achou uma pessoa.
+Varri **200 deles** em cinco caminhos (`/`, `/contact`, `/about`, `/team`, `/impressum`), com
+decodificação de `data-cfemail`, entidade HTML, ROT13, `data-enc-email` e `(at)`/`(dot)`, e o
+universo inteiro devolveu **DOIS** endereços de pessoa novos: `michalis@cat-astrophe-games.com` e
+`rick@gummycat.com`. **O motivo é circular e óbvio depois de escrito: se a casa publicasse uma
+pessoa, a campanha já teria achado essa pessoa** — a caixa funcional foi usada justamente porque não
+havia nome. **O pool que rende é o de casa com UMA pessoa já tocada** (`pessoas=1 toques=1`), e foi
+ele que deu as seis fichas de 10h35. **Comece sempre por ele.**
+
+Na mesma varredura, **58 domínios de animação inéditos** do `censo-wikidata.csv` (Nórdicos, Holanda,
+Reino Unido, Alemanha, França, Coreia, Irlanda) deram **ZERO** endereço de pessoa em cinco caminhos:
+o que sai é `info@`, `hello@`, `jobs@`, `sales@`, `contact@`, mais lixo de terceiros
+(`dpo-google@google.com`, `privacy@calendly.com`, `dpo@brevo.com`, `hosting@gabia.com`,
+`cloudsupport@blender.org`, `info@archive.org`, `exemple@monsite.com`, `info@domain-evo.com`).
+**Estúdio pequeno de animação europeu quase nunca publica pessoa; o que publica é caixa.**
+
+### Falha de ambiente nova
+
+- **`gigglebug.fi` não passa verificação de TLS**, nem com `www`: `curl: (60) SSL: no alternative
+  certificate subject name matches target host name 'gigglebug.fi'`. Entra na mesma lista do
+  `knowledgehub.creativebc.com` e do `animallogic.ca`. **Não se desliga verificação de TLS** — esta
+  casa só se caça por outra fonte.
+- **`deck13.com/en/contact/` devolve 404** de 53.561 bytes **com `<title>404 Not Found | Deck13
+  Interactive`**, e a página de 404 **contém `info[at]deck13.com` ofuscado**. É o caso exato da
+  regra *"200 não prova fonte"* pelo avesso: **um 404 pode conter endereço, e um endereço achado num
+  404 não prova que a casa o publica numa página viva.** Confira sempre o `<title>`.
