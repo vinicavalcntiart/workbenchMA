@@ -11198,3 +11198,60 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   fundador — não é recusa escrita como a da Ubisoft Montréal, mas é um filtro; (f) o catálogo inteiro é
   **um só gênero** desde 1999 (*"EGOSOFT is now exclusively dedicated to setting new standards in the space
   game genre"*), então não há segunda linha de produto onde personagem possa entrar.
+
+### FICHA 4 — Daniel Kruse, **Animation Lead** da **Sir Lancelot Animation Studio** (Malmö, Suécia) — **PUBLICADO, confiança ALTA**, e é a **SEGUNDA E ÚLTIMA** pessoa desta casa
+
+- **EMAIL: `daniel.kruse@sirlancelot.se` — PUBLICADO, confiança ALTA.** Está no cartão dele, com nome,
+  cargo e telefone, na página de contato. **Nada foi montado**, e o cartão vizinho prova o formato
+  `nome.sobrenome@` uma segunda vez.
+- **URL onde e-mail e cargo estão na MESMA página, aberta nesta rodada:** `https://sirlancelot.se/contact`
+  (**200, 85.146 bytes**). Os dois únicos cartões de pessoa da casa, palavra por palavra:
+  *"**Daniel Claesson — 3D Artist/Houdini Artist — daniel.claesson@sirlancelot.se — +46 709 850220**"* e
+  *"**Daniel Kruse — Animation Lead — daniel.kruse@sirlancelot.se — +46 707 283269**"*.
+- **DETALHE DE MÉTODO, e ele quase me fez perder a ficha:** na varredura automática os endereços saíram
+  **grudados no cargo anterior** — `artistdaniel.claesson@sirlancelot.se` e
+  `leaddaniel.kruse@sirlancelot.se` — porque o cargo e o `mailto:` estão em elementos irmãos sem
+  separador de texto. **Esses dois endereços com prefixo NÃO existem.** O sinal útil é o inverso: o lixo
+  colado no começo (`artist`, `lead`) **é o cargo da pessoa**, e foi ele que me disse que havia um *Lead*
+  na casa antes de eu abrir a página. Quem filtrar endereço por formato joga fora exatamente a linha que
+  informa o cargo.
+- **POR QUE ELE, e não outro da casa:** a casa publica **duas** pessoas e só. **Daniel Claesson já recebeu
+  carta em 09/09** e follow-up em 18/09, sem resposta — então Kruse é a **segunda e última** pessoa desta
+  casa em toda a campanha, e o teto se fecha aqui. *Animation Lead* é a cadeira acima do 3D artist: quem
+  coordena quem modela e anima, e numa casa desse tamanho é quem sabe da próxima contratação.
+- **GANCHO, com as frases da própria casa entre aspas, e o gancho é o CATÁLOGO:** `https://sirlancelot.se/about`
+  (**200, 77.887 bytes**) diz *"We create high end 3D animation, VFX and product visualizations for all
+  digital media"* e *"The studio was founded in 2011, and since then, we have grown and created **lifelike
+  animation and photorealistic 3D** for clients such as **LEGO, Massive – a Ubisoft Studio, IKEA**, Alfa
+  Laval and many more"*. E o `https://sirlancelot.se/work` (**200, 152.479 bytes**) lista título por
+  título o que casa com o Vini: *"**LEGO Mando Grogu**"*, *"**LEGO – Ninjago FREE THE DRAGONS**"*,
+  *"**LEGO – Elves**"*, *"LEGO Star Trek"*, *"LEGO Ideas TinTin"*, *"LEGO Movie 2 – DanceTutorial"*,
+  *"LEGO DinosaurFossils"*, *"**Rainbow 6 – Azami Teaser**"*, *"**Rainbow 6 – Sens Teaser**"*,
+  *"Krumme 6 – VFX"*. **Grogu, dragões de Ninjago, Elves e as operadoras do Rainbow Six são personagem e
+  criatura estilizados, e é o encaixe mais direto desta rodada com o portfólio do Vini.**
+- **CONVITE ABERTO, ESCRITO NA MESMA PÁGINA DO ENDEREÇO:** *"We are always looking for great talent. You
+  can be senior, junior or just looking for an internship, please send us your CV and showreel and we will
+  get back to you if we have any openings"* (`jobs@sirlancelot.se`). É convite explícito e barato de
+  atender, e reforça que a casa não trata carta fria como intrusão.
+- **FORA DOS EUA?** Sim, **Suécia (Malmö, Drottninggatan 38, com a própria casa dizendo *"great connections
+  to Copenhagen"*)**. Frase de realocação entra.
+- **DEDUPE NA CAIXA:** `search_threads` por `sirlancelot OR "Sir Lancelot" OR Kruse in:anywhere` devolveu
+  **UM** fio, e ele é justamente a carta de 09/09 para `daniel.claesson@sirlancelot.se` (thread
+  `1a08268cd87fe004`) com o follow-up de 18/09 na mesma thread, **sem resposta e sem recusa**. **`Kruse`
+  não aparece em nenhuma mensagem.** Nos arquivos, `sirlancelot` casa só com Claesson em
+  `automacao/pessoas.csv` e `enviados.csv`. **Segunda pessoa, teto fecha aqui.**
+- **RESSALVAS HONESTAS, e a primeira é a que o maestro tem de pesar antes de escrever:** (a) **este será o
+  TERCEIRO e-mail da campanha para o mesmo domínio em dez dias** (carta 09/09 e follow-up 18/09 para o
+  colega dele, ambos sem resposta) — a regra da campanha proíbe segundo lembrete, e isto não é lembrete,
+  é pessoa nova, mas numa casa de **duas pessoas** os dois provavelmente dividem a mesma sala e o mesmo
+  filtro; **se o maestro achar que o silêncio do Claesson já é resposta, esta ficha não deve virar carta**;
+  (b) **a casa não escreve a palavra `character` em lugar nenhum** — `character`, `creature`, `groom`,
+  `rigging`, `model`, `Houdini` e `Maya` dão **zero** em `/about`, `/work` e `/contact`; a disciplina está
+  provada pelo **catálogo** (Grogu, Ninjago, Elves, Rainbow Six), não por uma frase deles; (c) o negócio
+  declarado inclui *"product visualizations"* e boa parte da lista é **produto industrial** (Alfa Laval
+  BearingBox/Abatigo/Arctigo, IKEA, MAX IV Laboratory, Sony Xperia, Haki Ställningar), ou seja hard-surface
+  de cliente; (d) é casa de **duas pessoas publicadas**, então não há orçamento nem requisição — o pedido é
+  de rede e de direção, e o canal oficial de currículo (`jobs@sirlancelot.se`) já está publicado, o que dá
+  ao leitor uma saída fácil de encaminhar sem responder; (e) `/breakdowns` está no menu e devolve **404 de
+  74.337 bytes**, sinal de site não revisado; (f) o cargo dele é **animação**, não modelagem — o encaixe é
+  "quem coordena o elenco em movimento", e a conversa de modelagem/grooming é um passo adiante.
