@@ -236,7 +236,38 @@ cidade, nunca nas duas versões, que é a armadilha bilingue da regra do briefin
 **MANDE UMA POR CIDADE E PREFIRA A DE TORONTO**, pela prioridade de Canadá anglófono.
 
 
-### 🔴 ENTROU A MELHOR PORTA DE HOJE E ELA É DE PERSONAGEM POR TÍTULO — **Senior Character Artist – Outsourcing**, Omeda Studios (Reino Unido, remoto)
+### ✅ RESOLVIDO ÀS 20h10 — VOCÊ NÃO PRECISA CLICAR NADA AQUI: **Senior Character Artist – Outsourcing**, Omeda Studios
+
+**O link do Breezy que você mandou às 20h00 era a porta, e a candidatura foi enviada e confirmada dez
+minutos depois.** Requisição `02f381de451501`, em
+`https://omeda-studios-limited.breezy.hr/p/02f381de451501-senior-character-artist-outsourcing`.
+**Porteiro zero**, medido no navegador aberto. Prova: **POST 204** em
+`app.breezy.hr/api/apply/02f381de451501`, URL final `/apply/submitted`, e o texto do servidor
+*"Application Submitted. Your application has been submitted successfully. Good luck!"*. Carta de
+**250 palavras** escrita para a casa, CV anexado, pretensão **GBP 42.000/ano**.
+
+**E a previsão do fim deste item estava certa sobre o mecanismo e errada sobre a família:** ela dizia
+*"o ATS da casa é Teamtailor, que não tem captcha, mas pode exigir verificação por e-mail, e a
+candidatura não entra até alguém abrir o link"*. **A família era BREEZY, e a verificação por e-mail
+existe mesmo.** Chegou um *"One more step!"* com um código de 4 dígitos, e a pergunta por trás dele
+tem `move_to_stage_id: applied` — ou seja, sem digitar o código a candidatura **fica fora do estágio
+Applied com a tela dizendo que foi enviada do mesmo jeito**. O código foi lido no Gmail e submetido, e
+o servidor respondeu *"Responses Submitted. Your responses have been submitted successfully.
+Thanks!"*. **Nada disso sobrou para você.**
+
+**A única coisa que pode pedir sua mão, e só se acontecer:** até o fim do turno **não** chegou o
+segundo e-mail, o *"Thank you for your application"* que a Playdead e a Warhorse mandaram. Se nos
+próximos dias aparecer algum e-mail da Omeda pedindo qualquer coisa, é só repassar.
+
+**Por que a porta não existia às 12h48, e a lição é minha:** eu sondei os tokens `omeda`,
+`omedastudios`, `omeda-studios` e `predecessor` no Breezy e dei a família por morta. O locatário é
+**`omeda-studios-limited`, com o sufixo jurídico**. Nome de casa não gera slug de forma confiável, e
+"sondei quatro variantes" nunca é "a família não tem esta casa".
+
+<details>
+<summary>O que estava escrito aqui antes das 20h10, guardado porque a medição continua valendo</summary>
+
+### 🔴 (histórico) ENTROU A MELHOR PORTA DE HOJE E ELA É DE PERSONAGEM POR TÍTULO — **Senior Character Artist – Outsourcing**, Omeda Studios (Reino Unido, remoto)
 
 `https://www.linkedin.com/jobs/view/4466902903/`
 
@@ -315,6 +346,8 @@ entra até alguém abrir o link**. Abra o e-mail: a página passa a dizer *"Appl
 de destino aparecer, me mande ou cole no painel**: com o link direto a automação envia sozinha, e a
 casa volta a ser fila de agente em vez de fila sua.
 
+
+</details>
 
 ### 🔴 ENTROU UMA PORTA HOJE ÀS 15h57, É DE PERSONAGEM E É DA FAMÍLIA DREAMWORKS — **Principal Character Artist (Face)**, NBCUniversal Montreal
 
