@@ -943,3 +943,116 @@ ashby,spellbrush,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, U
 smartrecruiters,GIANTSSoftwareGmbH,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,GIANTS Software,4
 smartrecruiters,TechlandSA,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Techland,24
 rippling,chess,gamejobs-co-1909b,nao,"gjmap-1909b (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Chess.com,13
+# 19/09 06h15-07h30 UTC (Jhon A, 27o turno) - LOTE personio-1909: os 99 quadros VIVOS de Personio,
+#   achados sondando 21.355 slugs gerados dos 6.337 nomes de estudio das sete filas do gamedevmap.
+#   POR QUE ESTE LOTE EXISTE: esta lista tinha DOIS tokens de Personio (aesir e bongfish) para uma
+#   familia que 11/09 media em 121 quadros, e o Personio e a UNICA familia da campanha SEM PORTEIRO
+#   (medido 11/09, reconfirmado hoje na Tangelo). A varredura diaria de 773 quadros nao a cobria.
+#   DISCRIMINADOR: <slug>.jobs.personio.com/search.json devolve 200 em quadro real e 307 em inquilino
+#   inexistente (controle negativo zzznaoexiste999 -> 307).
+#   ATENCAO, coluna identidade: "quadro-modelo-do-personio" marca o quadro de DEMONSTRACAO da
+#   plataforma, cujo par fixo e SEO Marketing Manager + Social Media (Working Student) ou Social Media
+#   Manager (Werkstudent). A VARIANTE EM INGLES do terceiro item (General Application / Unsolicited
+#   Application, em vez de Initiativbewerbung) enganou a primeira leitura desta rodada e fez KAIKO,
+#   FuturLab e Jumpgate parecerem achado grande. NAO conte vaga desses tokens.
+#   Os que estao em branco na identidade tiveram o quadro LIDO mas a identidade da casa NAO foi
+#   conferida contra o nome, pela regra do falso amigo de token de 15/09 - conferir antes de usar.
+personio,ada,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,amazon,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,dark,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,sports,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,aonic,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,aurora,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,bambino,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,bright,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,cosmico,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,evergreen,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,gro,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,13
+personio,jumpgate,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,nordic,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,north,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,neon,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,19
+personio,act,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,bigpoint,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,bluebackpack,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,btf,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,deep,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,findling,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,flow,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,grizzly,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,lessmore,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,sandbox,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,sidekick,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,stratosphere-games,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,voya,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,yager,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,daedalic,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,deck13,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,new,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,tiny-roar-gmbh,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,aesir,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,15
+personio,chimera-entertainment,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,hologate-gmbh,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,14
+personio,innoactive,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,traviangames,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,atlas,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,10
+personio,capital,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,homa-games,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,2
+personio,innerspace,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,motion,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,art,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,ten,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,all-in,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,bandainamcomobile,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,tangelo-games,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,scs,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,bongfish,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,pioneers,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,6
+personio,purple,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,stillalive,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,stillalive-studios,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,bolt,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,closed,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,14
+personio,daniel,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,futurlab,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,glowmade,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,lighthouse,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,mad,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,atlantis,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,holy,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,42
+personio,sdp,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,upper,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,astragon-entertainment,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,boxelware,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,cureosity-gmbh,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,5
+personio,envision-entertainment,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,hammer,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,7
+personio,kaiko,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,king-art-gmbh,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,limbic-entertainment,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,max,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,tobspr,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,vivid,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,22
+personio,zeitland,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,forward,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,clevr,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,feel,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,fresh,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,stark,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,117
+personio,vstep,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,2
+personio,agens,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,5
+personio,carbon,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,code,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,spectral,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,more,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,quantum,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,liquid-swords,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,oskar,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,4
+personio,pathos,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,lakestar,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,moss,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
+personio,parasol,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,6
+personio,smg,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,1
+personio,kiwi,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,3
+personio,thomas,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",quadro-modelo-do-personio,,3
+personio,once,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search.json)",,,0
