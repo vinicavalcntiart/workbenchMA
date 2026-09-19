@@ -11759,3 +11759,70 @@ os 726 domínios caíram para um punhado de casas realmente inéditas, e o tempo
   mesmo ofício; (f) a palavra `character` aparece **duas vezes** no domínio e as duas dentro da
   taxonomia/rótulo, **não** em frase descrevendo pipeline — `groom`, `rigging`, `Maya`, `ZBrush` e
   `Houdini` dão **zero**, logo não sei que ferramenta a casa usa.
+
+### FICHA 3 — Ciarán Keenan, **Head of Production** da **SSVFX** (Dublin, Irlanda) — **PUBLICADO, confiança ALTA**, **SEGUNDA E ÚLTIMA** da casa, e é a vaga de teto que a fila desta rodada mandou conferir
+
+- **EMAIL: `ckeenan@ssvfx.ie` — PUBLICADO, confiança ALTA.** Nada montado. `mailto:` cru, e o próprio
+  atributo `title` do link repete o endereço, o que é prova dupla na mesma tag.
+- **URL aberta nesta rodada, com nome, cargo e endereço no MESMO bloco:** `https://www.ssvfx.ie/about`
+  (**200, 20.762 bytes**), seção **Meet the Team**. HTML cru, colado:
+  `<div class="personblock …"><h3>Ciarán Keenan</h3> Head of Production <div class="links">
+  <a title="Send email to ckeenan@ssvfx.ie" class="email" href="mailto:ckeenan@ssvfx.ie">Email</a>
+  <a … href="https://www.imdb.com/name/nm4659601/">IMDB</a> <a …
+  href="https://www.linkedin.com/in/ciaran-keenan-gavaghan-572a813a/">LinkedIn</a></div></div>`.
+  A mesma página publica **oito** pessoas com cargo e endereço: *Ciarán Keenan — Head of Production —
+  `ckeenan@`*, *Donal Nolan — VFX Supervisor — `dnolan@`*, *Laura McDowall — VFX Producer —
+  `lmcdowall@`*, *Johnni Kha — VFX Producer — `jkha@`*, *Ronan Gantly — VFX Supervisor — `rgantly@`*,
+  e três do grupo-mãe em **outro domínio**: *Jake Walshe — President & CEO — `jwalshe@screenscene.ie`*,
+  *Mura O'Byrne — VP & CFO — `mobyrne@screenscene.ie`*, *Hubert Montag — COO — `hmontag@screenscene.ie`*.
+- **POR QUE ELE, e não outro da casa:** **Donal Nolan (VFX Supervisor) já recebeu carta em 06/09** e
+  ficou em silêncio, então gastar a última cadeira no **outro** VFX Supervisor (Ronan Gantly) seria
+  bater na mesma porta que já não abriu. *Head of Production* é a cadeira que **contrata**: é quem monta
+  o time de cada show e sabe qual assento abre no próximo. Os dois VFX Producers são subordinados dele
+  nessa cadeia, e os três do `screenscene.ie` são CEO, CFO e COO do grupo, ou seja negócio, não arte.
+- **DISCIPLINA: PROVADA PELO CATÁLOGO, E NÃO POR FRASE DA CASA — e isto é a ressalva principal.**
+  Abri `/`, `/about`, `/work`, `/work/archive` e seis páginas de projeto e as palavras `character`,
+  `creature`, `digital double`, `groom` e `fur` dão **ZERO no domínio inteiro**. O que prova o ofício é
+  a lista de `https://www.ssvfx.ie/work/archive` (**200, 33.990 bytes**, aberta nesta rodada), que é
+  pesada em criatura e personagem digital: **Game of Thrones S8**, **AHSOKA**, **The Mandalorian**,
+  **The Book of Boba Fett**, **Black Panther – Wakanda Forever**, **Thor: Love and Thunder**,
+  **Ms. Marvel**, **Wandavision**, **Black Widow**, **Captain Marvel**, **Willow**, **Shadow and Bone**,
+  **Evil Dead Rise**, **THE PENGUIN**, **SHŌGUN**, **GLADIATOR II**, **3 BODY PROBLEM**, **ECHO**,
+  **Nope**, **Stranger Things**, **Spider-Man: No Way Home**, **Cruella**, **The Nevers**,
+  **Watchmen**, **Lost in Space**. É a mesma prova por catálogo que a ficha da Sir Lancelot usou, com a
+  mesma honestidade: **a casa nunca escreve a palavra personagem**.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**SSVFX is an internationally acclaimed
+  visual effects studio based in Dublin, Ireland. We are a multiple EMMY winning, multiple VES winning
+  & BAFTA nominated company**"*; *"The visual effects studio was founded in 2010. We are a multiple
+  award winning international company based in the heart of Dublin, Ireland. SSVFX is a part of the
+  **Screen Scene** group"* (`/about`); e o contador da própria página: **2 Emmy Winners, 2 Emmy
+  Nominations, 4 VES Winners, 1 BAFTA Nomination, 25+ outros**. O gancho mais concreto para a carta é
+  o projeto mais recente com bicho no título e direção de autor: `https://www.ssvfx.ie/work/the-tiger-gucci`
+  (**200, 14.409 bytes**), onde a casa escreve *"SSVFX were delighted to assist with the new Short Film
+  **THE TIGER** by **Spike Jonze** for Gucci"*.
+- **FORA DOS EUA?** Sim, **Irlanda (Dublin)**. **Frase de realocação entra**, e há um argumento de
+  incentivo do lado deles que a própria `/about` publica: *"Ireland offers a **32% Tax Incentive**
+  scheme (Section 481) for Film, Television & Animation including Post Production and Visual Effects"*.
+- **DEDUPE NA CAIXA:** `search_threads` por `ssvfx OR "Screen Scene" OR Keenan OR Nolan in:anywhere`
+  devolveu **DOIS** fios, os dois sem nenhuma resposta: (1) `1a077806f3e5f684`, carta de **06/09 para
+  `dnolan@ssvfx.ie`**, uma mensagem só, sem resposta e sem follow-up; (2) `1a0623eb0d340aa8`, carta de
+  **02/09 para `recruitment@ssvfx.ie`** com **follow-up em 07/09** na mesma thread, também sem
+  resposta. **`Keenan` não aparece em nenhuma mensagem.** Nos arquivos, `ssvfx` casa com Donal Nolan em
+  `automacao/pessoas.csv:91`, com as duas linhas de `enviados.csv` (273 e 663) e com
+  `docs/index.html:497` e `:933`. **Keenan é a SEGUNDA pessoa e o teto fecha aqui.**
+- **RESSALVAS HONESTAS:** (a) **este será o TERCEIRO e-mail da campanha para o mesmo domínio** —
+  `recruitment@` em 02/09 com follow-up em 07/09, e `dnolan@` em 06/09 —, e é a mesma situação que fez
+  a ficha da Sir Lancelot ser marcada como decisão do maestro: **se o maestro achar que dois silêncios
+  já são resposta, não escrever**; (b) **`character` e `creature` dão ZERO no domínio inteiro**, logo a
+  disciplina está provada por catálogo e não por palavra da casa; (c) **o cargo dele aparece de duas
+  formas diferentes no próprio site**: a `/about` diz *Head of Production*, mas a página do projeto
+  *The Tiger* o credita como *Visual Effects Producer* e lista **outras duas pessoas** nessas cadeiras,
+  *"Head of Studio — **Nicholas Murphy**"* e *"Head of Production — **Kenneth Coyne**"*, **nenhuma das
+  duas com endereço publicado** — ou seja o organograma publicado está desatualizado e pode haver
+  alguém acima dele hoje; (d) a `/recruitment` que está **no menu do rodapé de todas as páginas**
+  devolve **404** (11.394 bytes), então não há vaga conferível pelo site, e o canal formal
+  (`recruitment@ssvfx.ie`) **já foi usado e já levou follow-up**; (e) as páginas de projeto **não têm
+  prosa**: são título e imagem, o que limita o gancho a nome de show; (f) é casa de **VFX de serviço
+  para cinema e televisão**, onde personagem entra por show e por contrato curto, e o crédito mais
+  forte do Vini é **animação estilizada** (*The Wingfeather Saga*) contra um catálogo **fotorreal** —
+  a ponte é criatura, e tem de ser dita sem fingir que é o mesmo ofício.
