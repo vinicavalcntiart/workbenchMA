@@ -12881,3 +12881,385 @@ das vagas de teto que existiam, e é bom saber disso antes de planejar a próxim
    estão registradas no `padroes-dominio.md` com o erro exato de cada uma. A próxima tentativa deveria ir
    por **lista de crédito de produção da BC Film Commission** (`creativebc.com` tem *In Production* e
    *Motion Picture Contacts* no menu, e as duas abriram 200) em vez de por diretório de associação.
+
+---
+
+# RODADA DAS 08h35 UTC DE 19/09 (Joe) — CINCO FICHAS, TODAS A SEGUNDA E ÚLTIMA PESSOA DA CASA
+
+**Como esta rodada foi feita, em uma frase:** a fila de 22 domínios que a rodada das 06h35 deixou
+escrita foi aberta inteira, e ela rendeu **três** fichas; as outras **duas** saíram de reproduzir o
+cruzamento (`pessoas.csv` × `enviados.csv`) recortado pela **prioridade geográfica de hoje** —
+Nórdicos, Holanda, Reino Unido, Coreia e Vancouver. **Confirma pela terceira rodada seguida:** o que
+rende é a SEGUNDA pessoa de casa já tocada uma vez, e as cinco fichas de hoje são exatamente isso.
+
+**Correção de contagem que vale para as próximas rodadas:** contar toque de domínio pelo campo
+`email` do `enviados.csv` **subestima**, porque em muitas linhas de 15/09 em diante o endereço foi
+gravado **dentro da descrição** (`Carta fria para X (cargo) - x@dominio`) e não na coluna `email`.
+Contei com regex na linha inteira **e** cruzei com o campo `situacao` do `pessoas.csv`, e ainda
+assim o juiz final foi a **caixa**: `search_threads` por domínio e sobrenome. Foi ela que matou três
+casas que o arquivo dava como tocadas (ver descartes).
+
+### FICHA 1 — Jakob Nyström, **Animation Lead** da **Soja** (Suécia; Estocolmo e Tjörn) — **PUBLICADO, confiança ALTA**, e é a única cadeira de OFÍCIO da casa
+
+- **EMAIL: `jakob@soja.se` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://soja.se/om-oss-produktionsbolag-animation` (**200, 92.896
+  bytes**; o caminho `/om-oss` redireciona para ela). O bloco *"Soja är ett nyfiket produktionsbolag"*
+  publica **três** cartões e só três, cada um com nome, cargo, endereço e telefone:
+  *"**Simon Österhof | Producent** | simon@soja.se | +46 730 685 293"*, *"**Sofie Edvardsson |
+  Creative Director** | sofie@soja.se | +46 705 788 581"*, *"**Jakob Nyström | Animation Lead** |
+  jakob@soja.se | +46 766 237 427"*.
+- **Armadilha de codificação, e ela já estava anotada:** a página serve alguns endereços com **`%20`
+  colado** (`%20simon@soja.se`, `%20sofie@soja.se`) e um **BOM `U+FEFF`** depois do telefone. O
+  endereço real é sem isso — foi assim que a carta de 17/09 para `sofie@soja.se` entregou.
+- **POR QUE ELE, e não outro da casa:** a **Sofie Edvardsson (Creative Director) recebeu a carta em
+  17/09 às 17h44** e está em silêncio; o **Simon é *Producent*** (produção e orçamento). O Jakob é a
+  **única cadeira de ofício publicada** — *Animation Lead* é quem monta e lidera o time que anima, e
+  é quem sabe ler um portfólio de personagem.
+- **GANCHO, palavras da própria casa:** a `/en` (**200, 117.788 bytes**) diz *"**Soja develops and
+  produces original, co-produced and commissioned projects full of emotion, charm and life**"* e
+  *"work for clients such as **Marvel** and **Meta**"*; o cartaz da vitrine é *"**Ms Marvels
+  fantasies come to life** — Reality cannot contain the fantasies and dreams of main character Kamala
+  Khan… This project let us **sink our teeth into giving animated life to characters like Iron Man,
+  Dr Strange and Black Panther**"*. A página de contato lista o vocabulário da casa,
+  *"Animation, motion design, explainer, **karaktärsanimation**, voiceover"* — foi essa frase que a
+  carta da Sofie citou.
+- **FORA DOS EUA?** **Sim, Suécia. A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `soja.se OR Edvardsson OR Nyström OR pyjama.fi OR Kukkonen OR Halme
+  in:anywhere` devolveu **UM** fio: o `SENT` de 17/09 às 17h44 para `sofie@soja.se`,
+  **sem resposta**. Nos arquivos, `soja.se` casa **uma** linha em `pessoas.csv` e **uma** em
+  `enviados.csv`. **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS:** (a) **intervalo curto** — o primeiro toque foi há cerca de **39 horas**, e
+  a rodada das 06h35 descartou Take Five e Timeless **por esse mesmo motivo** (48 h); o maestro
+  decide se escreve hoje ou segura um dia, e a decisão precisa ser consciente; (b) a casa é de
+  **motion design e animação 2D/publicidade**, não de fabricação 3D: `sculpt`, `groom`, `ZBrush`,
+  `Maya` e `look dev` dão **ZERO** no domínio, e `character` aparece só na descrição do trabalho de
+  *Ms Marvel*, que foi **animação 2D sobre imagem real**; (c) *Animation Lead* num estúdio desse
+  porte tende a ser **animador 2D**, não modelador; (d) a casa é pequena (três cadeiras publicadas) e
+  existe desde 2010, sem sinal de vaga aberta — `careers`/`jobb` só devolve a caixa `jobb@soja.se`.
+
+### FICHA 2 — Runa Haukland, **Project Manager** da **Hyper Games** (Noruega, Oslo) — **PUBLICADO, confiança ALTA**, e é um endereço que a rodada das 06h35 leu a página inteira e NÃO viu
+
+- **EMAIL: `runa@hypergames.no` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://www.hypergames.no/studio` (**200, 58.872 bytes**). O
+  organograma traz **treze** pessoas e **só três com endereço**: *"**Are Sundnes | CEO &
+  Co-founder** | are@hypergames.no"*, *"**Terje Gran | CTO & Co-founder** | terje@hypergames.no"*,
+  *"**Runa Haukland | Project Manager** | runa@hypergames.no"*. As outras dez vêm **só com nome e
+  cargo**, inclusive os quatro artistas (*Mads Frantzen* **Designer & Artist**, *Marcus Kjeldsen*
+  **Artist & Animator**, *Rolf Hove* **Animator & Artist**, *Adriane Brennmoen* **Artist**) e a
+  *Kristina Haley* (**Marketing & Community Manager**).
+- **ACHADO DE MÉTODO, e é autocrítica:** a rodada das 06h35 **leu esta mesma página** e escreveu que
+  os artistas não têm endereço e que a casa *"precisa do segundo sócio (`terje@`, CTO) ou de um
+  endereço de artista"*. **O `runa@` estava na tela e passou batido**, porque a varredura procurou
+  *artista* e *sócio* e não releu a lista inteira. **Regra que sai daí: quando a rodada anterior
+  disser "falta endereço de X", releia a página toda em vez de confiar no resumo dela.**
+- **POR QUE ELA, e não outro da casa:** o **Are Sundnes (CEO) levou a carta em 14/09** e está em
+  silêncio. Sobravam o **Terje Gran, que é CTO** (código, não arte), e a **Kristina**, cujo endereço
+  a `/contact` (**200, 49.618 bytes**) rotula como **chave de imprensa para criador de conteúdo**
+  (*"For content creator key requests use **kristina (at) hypergames.no**"* — publicado com `(at)`,
+  decodificado aqui). Numa casa de treze pessoas, **Project Manager é quem escala quem trabalha em
+  cada jogo**.
+- **GANCHO, palavras da própria casa:** *"**Hyper Games is an independent game studio based in Oslo,
+  Norway. We're most known for our games "Mørkredd", and "Eggggg". We started out in 2012 and now
+  count 13 employees**"*. O catálogo é **IP de personagem licenciado**: *Snufkin — Melody of
+  Moominvalley*, *Moomintroll: Winter's Warmth* (é o título da home de hoje), *Hocus Pocus, Alfie
+  Atkins*, *Lek affär med Alfons Åberg*, *Mørkredd*, *EGGGGG — The Platform Puker*.
+- **FORA DOS EUA?** **Sim, Noruega. A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `hypergames.no OR Sundnes OR Haukland OR ludocraft OR Manninen OR Kuipers
+  in:anywhere` devolveu **dois** fios e nenhum é de resposta: o `SENT` de **14/09 às 17h54** para
+  `are@hypergames.no` (*"…A studio of thirteen people carrying Tove Jansson's characters is exactly
+  the kind of place where character art…"*) e o `SENT` do mesmo minuto para
+  `tony.manninen@ludocraft.com`. Nos arquivos, `hypergames.no` casa **uma** linha em `pessoas.csv` e
+  zero em `enviados.csv` (a carta está registrada no campo `situacao`, ver a correção de contagem no
+  topo). **Segundo e último toque no domínio.**
+- **ALTERNATIVA PUBLICADA DA MESMA CASA**, se o maestro preferir sócio a gerente:
+  **`terje@hypergames.no`** (Terje Gran, *CTO & Co-founder*).
+- **RESSALVAS HONESTAS:** (a) **o cargo não é de arte** — Project Manager agenda e coordena; o
+  resultado provável é encaminhamento aos artistas, que é justamente o que se quer, mas não é
+  decisão de contratação; (b) **`character`, `3D`, `sculpt` e `groom` dão ZERO** no domínio inteiro
+  (o que a página prova é **IP de personagem**, não pipeline de personagem); (c) a casa **já tem
+  quatro artistas em treze pessoas** e nenhum sinal de vaga — não há página `careers`; (d) os jogos
+  são **estilizados e de encomenda de IP de terceiro** (Moomin Characters Oy, Bok- och
+  Alfons-licença), o que aperta orçamento para um sênior de fora com patrocínio.
+
+### FICHA 3 — Jonas Ott, **Owner and Creative Producer** do **Studio CAN** (Holanda, Roterdã) — **PUBLICADO, confiança ALTA**, e é a outra metade de uma casa de DOIS
+
+- **EMAIL: `jonas@studiocan.nl` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://www.studiocan.nl/about` (**200, 690.256 bytes**). O bloco de
+  contato publica **duas** pessoas e só duas: *"**Igor Duspara | Owner and Creative Director** |
+  igor@studiocan.nl | +31(0)6 46003363"* e *"**Jonas Ott | Owner and Creative Producer** |
+  jonas@studiocan.nl"*, mais a funcional `info@studiocan.nl` e o endereço *Oostzeedijk 138, 3063 BJ
+  Rotterdam*.
+- **POR QUE ELE, e não outro da casa:** **a casa tem SÓ DOIS SÓCIOS** e o **Igor Duspara recebeu a
+  carta em 15/09 às 14h15**, sem resposta. O Jonas é literalmente a outra metade da casa; não existe
+  terceira cadeira para gastar.
+- **GANCHO, palavras da própria casa:** *"**Our work tends to be playful and lighthearted, character
+  driven and narrative, with a hint of silliness thrown in for good measure**"* — a mesma frase que a
+  carta do Igor citou — e, na biografia dele, *"**He loves to visually narrate original stories with
+  unusual characters**. Jonas creates worlds filled with atmosphere and emotion"*. A casa também
+  escreve *"If you're looking for animation with an eye for detail and full of reasons to make your
+  audience smile, you've come to the right place"* e *"Together, we CAN take on the world"*.
+- **FORA DOS EUA?** **Sim, Holanda. A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `globalmechanic OR Alcock OR Brodie OR helmet.no OR Somma OR studiocan OR
+  Duspara OR "Studio CAN" in:anywhere` devolveu o `SENT` de **15/09 às 14h15** para
+  `igor@studiocan.nl` (*"Studio CAN says the work tends to be playful and lighthearted, character
+  driven…"*), **sem resposta**. **Segundo e último toque no domínio**, e ele esgota o organograma
+  inteiro.
+- **RESSALVAS HONESTAS, e a primeira é séria:** (a) **a própria biografia dele diz `(2D)`** —
+  *"His experience demonstrates a continued focus on **(2D) animation**, illustration, and
+  storytelling"*, ou seja o *character driven* da casa é personagem **desenhado**, não esculpido;
+  `sculpt`, `groom`, `ZBrush` e `look dev` dão **ZERO** no domínio; (b) **a casa é de duas pessoas**
+  e não há orçamento óbvio para um sênior de fora com patrocínio — nem página de vagas; (c) o cargo é
+  **produção criativa**, não arte; (d) o rodapé marca **`© 2024 by Studio CAN`**, dois anos atrás, e
+  o site é Wix (o que explica os `@sentry.wixpress.com` que a varredura pescou e que **não são
+  endereços de pessoa nenhuma**).
+
+### FICHA 4 — Chris Brodie, **Executive Producer** da **Global Mechanic** (Canadá; Vancouver e Victoria, BC) — **PUBLICADO, confiança ALTA**, e a taxonomia da casa abre com `Character`
+
+- **EMAIL: `brodie@globalmechanic.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URLs abertas nesta rodada:** `https://www.globalmechanic.com/design` (**200, 115.192 bytes**) e o
+  mesmo bloco no rodapé de `https://www.globalmechanic.com/` (**200, 132.138 bytes**). HTML cru:
+  `<a href="mailto:bruce@globalmechanic.com?subject=From%20the%20GM%20Site"><strong>Bruce Alcock</strong></a><strong> </strong>Creative Director &amp; Owner`
+  … `<a href="mailto:brodie@globalmechanic.com?subject=From%20the%20GM%20Site"><strong>Chris Brodie</strong></a><strong> </strong>Executive Producer`.
+  **Conferi texto visível contra `href`**, porque o `href` já mentiu na TELEVISOR e na DLP: aqui o
+  texto visível é o **nome** e o `href` é o endereço, e o par bate nas duas pessoas.
+- **PADRÃO NOVO DE DOMÍNIO, e é o achado técnico da rodada:** o local part do Bruce é o **primeiro
+  nome** (`bruce@`) e o do Chris é o **SOBRENOME** (`brodie@`). **Dois critérios diferentes no mesmo
+  domínio de duas pessoas** — ou seja, este endereço **não sairia de nenhuma montagem por padrão**;
+  ele só existe porque estava publicado. Registrado no `padroes-dominio.md`.
+- **POR QUE ELE, e não outro da casa:** a casa publica **duas** pessoas e só duas, e o **Bruce Alcock
+  (Creative Director & Owner) recebeu a carta em 17/09 às 17h44**, sem resposta.
+- **PROVA DE DISCIPLINA, e é taxonomia da própria casa:** o menu da `/design` tem **seis** rubricas e
+  a **primeira é `Character`** — *"Design | **Character** | Drawing | Kids | Mixed Media | Vector |
+  Painting"*. A carta do Bruce já havia citado isso (*"the first category on your design page is
+  Character"*), e hoje eu reabri a página e a rubrica continua lá, na mesma ordem.
+- **FORA DOS EUA?** **Sim, Canadá (Vancouver e Victoria, BC). A frase de realocação entra.** A mesma
+  página publica *"**U.S. Representation**: Liz Shaw | liz@lizlainereps.com | +1 (312) 961-4444"* —
+  **representante de venda de terceiro, não é da casa** e não deve ser tratada como cadeira.
+- **DEDUPE NA CAIXA:** a mesma busca da ficha 3 devolveu o `SENT` de **17/09 às 17h44** para
+  `bruce@globalmechanic.com` (*"Your site says 'Design & animation since 2000', and the first
+  category on your design page is Character. Most of what Global Mechanic shows is drawn, painted or
+  mixed media…"*), **sem resposta**. **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS:** (a) **intervalo curto** — primeiro toque há cerca de **39 horas**, o mesmo
+  motivo pelo qual a rodada das 06h35 descartou Take Five e Timeless; (b) **a própria carta anterior
+  já reconheceu a fraqueza de disciplina**: *"most of what Global Mechanic shows is drawn, painted or
+  mixed media"* — `Character` é rubrica de **design 2D**, e `sculpt`, `groom`, `ZBrush` e `Maya` dão
+  **ZERO** no domínio; (c) o cargo é **Executive Producer**, negócio e agenda, não arte; (d) o site é
+  Squarespace renderizado por JS e as páginas `/animation`, `/work`, `/services` respondem **404** —
+  o catálogo visível é curto, o que deixa a leitura de porte da casa incompleta; (e) `character`
+  aparece **36 vezes** no HTML bruto da home e **as 36 são texto de validação de formulário**
+  (*"Value should be {0} characters long"*) — **armadilha de contagem: não conte palavra-chave no
+  HTML bruto de Squarespace sem olhar o contexto.**
+
+### FICHA 5 — Niko Waaralinna, **CEO / EP** da **Cocoa** (Cocoa Mediaproductions Oy; Finlândia, Helsinque) — **PUBLICADO, confiança ALTA**, e o padrão do domínio confirma a exceção que o arquivo já tinha anotado
+
+- **EMAIL: `niko.waaralinna@cocoa.fi` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://cocoa.fi/about/` (**200, 90.350 bytes**); o mesmo bloco
+  repete em `https://cocoa.fi/` (**200, 107.833 bytes**) e em `https://cocoa.fi/contact/`
+  (**200, 61.386 bytes**). O bloco **`Executive Producers`** abre com *"**CEO / EP | Niko Waaralinna**
+  | niko.waaralinna@cocoa.fi | +358 40 500 3892"* e segue com *"Charlotte Molander | lotti@cocoa.fi"*,
+  *"Eemeli Katajisto | eemeli@cocoa.fi"*, *"Ilona Malinen | ilona@cocoa.fi"*; embaixo,
+  *"**General inquiries** | Anton Molander | anton@cocoa.fi"*, e na seção **CFX**,
+  *"**HEAD OF STUDIO** | Dermot Gallagher | dermot@cocoa.fi"*. Funcionais: `info@`, `jobs@`,
+  `casting@`.
+- **O PADRÃO DO DOMÍNIO FECHA COM O QUE JÁ ESTAVA ESCRITO:** o `padroes-dominio.md` registrava
+  *"mesma mecânica da Cocoa, onde a exceção era o CEO"* — hoje isso está confirmado na página:
+  **primeiro nome para todos e `nome.sobrenome` só no CEO**.
+- **POR QUE ELE, e não outro da casa:** o **Dermot Gallagher, *Head of Studio* do CFX**, era a melhor
+  cadeira de ofício e **recebeu a carta em 11/09 às 21h27**, sem resposta. Das cadeiras restantes,
+  **três são Executive Producer** e uma é rotulada **`General inquiries`**; o **CEO é a única que
+  decide contratação**.
+- **GANCHO, palavras da própria casa:** *"**Our expertise spans commercials, content, VFX, 3D and
+  sound, bringing ideas to life across every touchpoint**"*; *"We are producers, writers, directors,
+  animators, editors, colorists, **VFX artists**, and sound designers"*; *"**Click yourself to our 3D
+  & VFX studio** and get lost in the possibilities of CGI"*; e, sobre a casa irmã **Boutique
+  Animation**, *"will make you smile with **characters**, carefully crafted design and 2D animation"*.
+  A casa também se apresenta como *"**We are a media first creative company**"* e *"Born in the
+  digital era, we embrace change as a creative advantage"*.
+- **FORA DOS EUA?** **Sim, Finlândia. A frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `pixomondo OR Foakes OR Finlayson OR cocoa.fi OR Gallagher OR strangebeast OR
+  Perryman OR blinkink in:anywhere` devolveu, de Cocoa, **UM** fio: o `SENT` de **11/09 às 21h27**
+  para `dermot@cocoa.fi`, **sem resposta**. **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS:** (a) **o cargo é negócio** — CEO/EP orça e vende, e a casa é **produtora de
+  publicidade** antes de fábrica de CG; (b) a palavra `character` no domínio aparece **na descrição
+  da casa IRMÃ** (*Boutique Animation*, que é **2D**), não na Cocoa; `sculpt`, `groom` e `ZBrush` dão
+  **ZERO**; (c) o núcleo do organograma é **produção**: quatro EPs, um *General inquiries*, e o único
+  cargo de ofício publicado é o que **já não respondeu**; (d) a casa trabalha por **representação
+  exclusiva de diretores** (dez nomes listados, entre eles o próprio Dermot Gallagher e Timo
+  Vuorensola) mais **onze colaboradores** — modelo de freelancer por projeto, não de quadro fixo;
+  (e) existe uma caixa `jobs@cocoa.fi` rotulada *"Want to work with us?"*, e é possível que o CEO
+  simplesmente redirecione para lá.
+
+### OS DESCARTES DESTA RODADA, COM O MOTIVO MEDIDO
+
+- **Blinkink** (`blinkink.co.uk`, Londres) — **tinha a melhor ficha do dia e morreu por VETO ESCRITO
+  na própria página de equipe.** A `/about` (**200, 43.301 bytes**) publica cinco pessoas, três com
+  endereço novo, e a melhor é **Alex Halley, *Head of Production*, `alex.halley@blinkink.co.uk`** (as
+  outras: *Ellie Goodwin*, **Executive Producer**, `ellie.goodwin@`; *Shiara Miranda*, **New Business
+  Lead**, `shiara.miranda@`, que a página também usa como caixa de *New Project Enquiries*; *Bart
+  Yates*, *Executive Producer / Founder*, **sem endereço**). A casa está **abaixo do teto** (o
+  `josef@blinkink.co.uk` levou carta em 06/09 e devolveu **só um autorresposta de ausência**, *"im off
+  till tuesday Josef xx"*, não resposta humana). **O que mata é a frase que a própria página imprime,
+  no fim do bloco de contatos:** *"**Unfortunately we do not accept any unsolicited material and
+  cannot return any unsolicited material sent to us. We do not respond to individual submissions and
+  anything which is sent to us will not be read and will instead be burned.**"* Isso é a casa dizendo
+  por escrito que **não lê material não solicitado**. **Não se gasta carta contra veto escrito**, e
+  isso vale para o `blinkink.co.uk` **e** para o `blinkindustries.tv`, que a mesma página publica.
+- **LudoCraft** (`ludocraft.com`, Oulu) — **endereço novo bom, e ZERO cargo publicado.** A home
+  (**200, 141.716 bytes**, e a `/about` serve a MESMA página) publica só dois endereços, sob rótulos
+  de função e não de pessoa: *"**Business Proposals** | CEO Tony Manninen | tony.manninen@ludocraft.com"*
+  e *"**Career & Support** | marja.kuipers@ludocraft.com"*. O nome **Marja Kuipers** está no local
+  part e **em nenhum outro lugar do site** — não há cargo, não há foto, não há biografia. É a mesma
+  morte da **Final Frontier** (06/09) e do **Michael Diaz**: **cargo inventado é pior que alvo
+  nenhum.** Somou-se a disciplina: `character`, `sculpt` e `groom` dão **ZERO** no domínio e a casa se
+  descreve como *"**Gamified design and development partner**"* que *"combine service design, data
+  analytics and game technology"*. O endereço fica registrado no `padroes-dominio.md` como
+  **`nome.sobrenome@` com rótulo de função**, para o caso de a casa publicar o cargo mais tarde.
+- **Pyjama Films** (`pyjama.fi`, Turku) — **a melhor porta de contratação que eu vi hoje, e ela está
+  travada pela regra da primeira carta.** A `/yhteystiedot` (**200, 85.419 bytes**) publica três
+  pessoas com nome, cargo e endereço — *Terhi Väänänen* (**Toimitusjohtaja, perustaja** = CEO e
+  fundadora, `terhi@`), *Samppa Kukkonen* (**Animaatio-ohjaaja / Luova johtaja, perustaja** = diretor
+  de animação e diretor criativo, fundador, `samppa@`) e **Inari Halme (*Tuotantopäällikkö* = Head of
+  Production, `inari@pyjama.fi`)** — e sobre a Inari a casa escreve, literal: *"**Inariin voi ottaa
+  yhteyttä tilaustöiden sekä Pyjaman tarjoamien työmahdollisuuksien tiimoilta**"*, isto é *"fale com
+  a Inari sobre encomendas **e sobre as oportunidades de trabalho que a Pyjama oferece"*. **É o
+  rótulo de contratação mais explícito da rodada.** Morreu no dedupe: o `pessoas.csv` tem a ficha do
+  **Samppa Kukkonen de 18/09 às 16h35** e a caixa devolve **ZERO** fio de `pyjama.fi` — ou seja **a
+  primeira pessoa da casa ainda não virou carta**. Mesma regra que segurou a Mathematic às 06h35.
+  **`inari@pyjama.fi` é a primeira da fila da próxima rodada, assim que a carta do Samppa sair.**
+  (A `/yhteystiedot` corrige também o `pessoas.csv`, que registra a casa como *Helsinque*: o endereço
+  publicado é **Sirkkalankatu 27, 20700 Turku**.)
+- **The Barn** (`thebarngames.nl`) — **cinco endereços de pessoa com nome e cargo, e a primeira carta
+  não saiu.** A `/about-us` (**200, 94.134 bytes**; o site vive em `thebarngames.com` e o domínio de
+  email é `.nl`) publica *Bas van Nuland* (**Oprichter**, `Bas@`), *Arne Bezuijen* (**Oprichter**,
+  `Arne@`), *Berend Wouda* (**Ontwikkelaar**, `Berend@`), *Linda van Veen* (**Ontwerper**, `Linda@`)
+  e *Jelle Groen* (**Tester**, `Jelle@`). A caixa devolve **ZERO** fio de `thebarngames`, e o
+  `pessoas.csv` tem a ficha do Bas de **17/09 21h45** — **primeira pessoa ainda sem carta**. Pesa
+  também a disciplina: é casa de **serious games de treinamento** (*"serious games ontwikkeling"*) e
+  o segundo melhor cargo (*Arne*, **Oprichter**) é o **mesmo** do Bas.
+- **The Flying Colour Company** (`theflyingcolourcompany.com`, Carnaby Street, Londres) — mesma
+  morte. A `/contact` (**200, 31.318 bytes**) publica três cadeiras por rótulo —
+  *"**Managing Director**: simon@"*, *"**Head of Production**: leonie@"*, *"**VFX Producer**:
+  micheline@"* — e o *Head of Production* seria alvo bom, **mas a página publica só o primeiro nome
+  no endereço e não nomeia ninguém**, e a caixa devolve **ZERO** fio da casa, com a ficha do *Simon
+  Wilkinson* de 17/09 ainda sem carta. **Endereço com rótulo de cargo e sem nome de pessoa não é
+  endereço de pessoa.**
+- **Pixomondo** (`pixomondo.com`) — `joe.finlayson@pixomondo.com` é novo e publicado na home
+  (**200, 558.199 bytes**), e a casa está **ACIMA DO TETO**: a caixa mostra **dois** toques no
+  domínio, o `SENT` de **09/09** para `naomi.foakes@` **e o follow-up de 18/09** no mesmo fio. Teto de
+  dois cumprido; **terceiro e-mail ao domínio é do maestro.**
+- **Freefolk** (`freefolk.com`, Londres e Nova York) — **treze pessoas decodificadas de `data-cfemail`
+  e ZERO ficha, por cargo.** A `/contact` (**200, 23.628 bytes**) publica, todas ofuscadas em
+  Cloudflare, *Fi Kilroe* **CEO / Executive Producer** (`fi@`), *Paul Wright* **COO** (`paulw@`),
+  *Vittorio Giannini* **Director of Business Development & Strategy** (`vittorio@`), *Cheryl Payne*
+  **Head Of Commercial Production** (`cheryl@`), *Laura Ricketts* **EP** (`laura.ricketts@`),
+  *Charles Gillett* **Producer** (`charles@`), *Jessica Verner* **Producer** (`jessica@`), *Meg
+  Guidon* **Film and Episodic EP** (`meg@`), *Hannah Dakin* **Senior Producer** (`hannah.dakin@`),
+  *Regan Perry* **Producer** (`regan.perry@`), *Robyn Guthrie* **Producer** (`robyn.guthrie@`),
+  *Megan Hindle* **VFX Coordinator** (`megan.hindle@`), *Seán O'Keefe* **PR & Marketing Manager**
+  (`sean@`), mais `jobs.ldn@` e `production.ldn@`. **Treze cadeiras e nenhuma de arte**: não há VFX
+  Supervisor, Head of CG, Art Director nem Animation Director publicado. Some-se que a caixa devolve
+  **ZERO** fio de `freefolk` — a Fi Kilroe está como *rascunho-criado* e a primeira carta nunca saiu.
+  O **`charles@freefolk.com` é Charles *Gillett*, não Charles Ellison** — registro isso de propósito,
+  para o nome não disparar o veto errado numa rodada futura.
+- **Helmet** (`helmet.no`) — quatro pessoas publicadas com nome, cargo, telefone e endereço na
+  `/contact` (**200, 130.828 bytes**) e **nenhuma segunda pessoa possível**: *Alexander Somma*
+  (**VFX Supervisor, Creative Director**, `alex@`) é a **única cadeira de arte** e **já levou a carta
+  em 11/09**; as outras três são *Øystein Moe* (**Director, Cinematographer**, `oystein@`), *Line K.
+  Johansen* (**Director, Producer**, `line@`) e *Stian Eriksen* (**Cinematographer, 1st AC**,
+  `stian@`) — **equipe de filmagem, não de CG**. Fica a **correção de arquivo**: o `pessoas.csv`
+  registra a casa como *Oslo*, e o `<title>` do site diz *"Helmet | Film Production & Visual Effects
+  Studio – **Trondheim**, Norway"*.
+- **Studio Pupil** (`studiopupil.com`, Amsterdã) e **Monobanda** (`monobanda.nl`/`monobanda.eu`,
+  Utrecht) — **as duas primeiras da fila das 06h35 e as duas sem segunda pessoa.** Na Pupil, quatro
+  caminhos abertos (`/`, `/contact`, `/people`, `/studio`, entre **200, 53.853** e **55.340 bytes**)
+  devolvem **um único endereço, o `dario@studiopupil.com`**, que levou carta em 14/09. Na Monobanda, o
+  site **mora em outro domínio** (`monobanda.nl` redireciona para `monobanda.eu`) e as três páginas
+  abertas devolvem só `simon@monobanda.nl` (carta em 14/09) e `info@`. **Nas duas, o `user@domain.com`
+  que a varredura pesca é texto de validação de formulário, não endereço.**
+- **Strange Beast** (`strangebeast.tv`, Londres) — três endereços de pessoa novos na `/about`
+  (**200, 28.729 bytes**): `niya.taylor@`, `samg@`, `zoem@`. **Não virou ficha porque a casa está
+  registrada no `pessoas.csv` com decisão de encaixe já tomada** (a linha é a caixa `talent@` com
+  *"sem rascunho por decisão de encaixe"*) e a caixa devolve **ZERO** fio — abrir pessoa aqui é
+  reabrir uma decisão de outra rodada, não fazer dedupe. A mesma página publica
+  `patricia+xavier@freeagents.co`, que é **agente de terceiro**.
+- **Só caixa funcional, nas casas da fila de 22 que eu abri uma por uma:** `gunhil.com`
+  (`gunhil@`, mais o falso positivo `GunHil_logo@2.png`, que é **nome de arquivo**),
+  `tordenfilm.no` (`info@`, `faktura@`), `gimpville.no` (`jobs@` em **dez** caminhos, e nove deles
+  servem a mesma casca de 33.8 KB), `maipo.no` (`maipo@`), `kyka.fo` (`hey@`), `nrdland.com`
+  (`shane@`, que é a pessoa **já registrada**), `northplay.co` (`hey@`), `snowcloud.se`
+  (`contact@`), `pikkukala.com` (**zero** endereço), `truststudio.co.kr` e `kog.co.kr`
+  (`truststudio@` e `KOG@`, os dois em **`data-cfemail`** e os dois **funcionais**), `sweatbox.dk`
+  (`info@`), `afilm.dk` (`info@`, e `/studio` e `/meet-the-team` devolvem **508 Resource Limit Is
+  Reached**), `aardman.com` (**zero** endereço em doze caminhos), `unionvfx.com` (`info@`,
+  `recruit@`), `fablefx.com` (`info@`), `magnopus.com` (**zero**), `wearekarrot.com` (`hello@`),
+  `paperowlfilms.com` (`info@`, `jobs@`), `sixteensouth.tv` (`rights@`, `website@`),
+  `cheersdogears.com` (`hello@`), `altanimation.com` (`info@`), `humain-studios.com` (`greg@`, a
+  pessoa **já registrada**), `rain-games.com` (**zero**, inclusive na `/meet-the-team`),
+  `bucketheadentertainment.com` (`maarten@`, **já registrada**), `l-f.studio` (`michael@`, **já
+  registrada**).
+- **`wilfilm.dk` não foi aberta**, por ordem: **veto escrito de *EU pass holder***.
+- **`submarine.nl` não foi aberta**: o `enviados.csv` registra **`studiotalent@submarine.nl` em 26/08
+  como `recusado (respondido; vagas exigem residência NL/BE)`**. **Casa que respondeu e recusou é
+  território do Comunicador.**
+
+### VANCOUVER PELA BC FILM COMMISSION: A PORTA CONTINUA FECHADA, E AGORA SEI ONDE ELA TRANCA
+
+Ordem desta rodada era entrar por `creativebc.com`, *In Production* e *Motion Picture Contacts*, e não
+por diretório de associação. **Fiz, e o resultado é uma medição, não uma ficha:**
+
+| URL | Resposta | O que tem dentro |
+|---|---|---|
+| `https://www.creativebc.com/in-production/` | **200, 174.540 bytes** (redireciona para `creativebc.com/bc-film-commission/in-production/`) | **Zero endereço de e-mail.** O corpo diz *"Every week, Creative BC publishes a list of current productions that are shooting or about to shoot in British Columbia. **To view current real-time B.C. film productions**…"* e o link vai para o `knowledgehub` |
+| `https://www.creativebc.com/motion-picture-contacts/` | **404, 153.505 bytes** | O rótulo *Motion Picture Contacts* do menu aponta, no HTML, para `https://knowledgehub.creativebc.com/s/industry-contacts/motion-picture` |
+| `https://creativebc.com/bc-film-commission/production-credits/` | **200, 168.875 bytes** | **Zero endereço**; é página de navegação |
+| `https://creativebc.com/bc-film-commission/library-production-services/` | **200, 180.786 bytes** | **Zero endereço**; lista rubricas (*Production Equipment + Suppliers*, *Stages + Studio Facilities*, *Talent + Labour*) que apontam para o mesmo hub |
+| `https://knowledgehub.creativebc.com/s/industry-contacts/motion-picture` | **falha de TLS (código 000)**, *"unable to get local issuer certificate"*, **mesmo com `--cacert /root/.ccr/ca-bundle.crt`** | — |
+
+**Conclusão de método, e ela fecha o assunto por enquanto:** toda lista de contato da Creative BC —
+*Motion Picture Contacts*, *Industry Contacts*, *Funding Recipients*, *In Production* — mora no
+**`knowledgehub.creativebc.com`, que é um Salesforce Experience Cloud e não passa a verificação de
+TLS deste ambiente**. O `creativebc.com` é só a moldura. **Não existe caminho por creativebc sem
+resolver o `knowledgehub`.** A Vancouver desta rodada saiu, em vez disso, de **ler organograma de
+casa de BC já qualificada** — e foi a Global Mechanic.
+
+### ACHADOS DE MÉTODO DESTA RODADA, EM QUATRO LINHAS
+
+1. **`200` com corpo de 404.** `https://www.hypergames.no/services` responde **200 com 42.247 bytes**
+   e o corpo imprime, em texto, **`404 - Page not found`**. É a mesma família do `vancouveranimation.ca`
+   (200 com `<title>` de site de aposta): **confira o corpo, não o código.**
+2. **Contar palavra-chave no HTML bruto de Squarespace dá falso positivo em série.** `character`
+   aparece **36 vezes** na home da Global Mechanic e **as 36 são texto de validação de formulário**
+   (*"Value should be {0} characters long"*, *"invalidEmail … user@domain.com"*). O `user@domain.com`
+   que a varredura pesca em Squarespace e em Wix **nunca é endereço de ninguém**, e os
+   `@sentry.wixpress.com`, `@sentry.io` e `@sentry-next.wixpress.com` são **telemetria**.
+3. **Resumo de rodada anterior não substitui reler a página.** A rodada das 06h35 leu a
+   `hypergames.no/studio` e concluiu que faltava endereço; o `runa@hypergames.no` estava na tela.
+4. **A veia do `wp-json` não deu nada hoje, e isso também é medição.** `/wp-json/wp/v2/types` em
+   `pikkukala.com`, `ludocraft.com`, `rain-games.com` e `cheersdogears.com` responde JSON e **nenhum
+   dos quatro tem tipo de conteúdo de pessoa** (só `page`, `post`, `attachment`, `portfolio`,
+   `elementor_library`, `modula-gallery`, `spectra-popup`, `jp_pay_product`). Em `gigglebug.fi`,
+   `paperowlfilms.com`, `sixteensouth.tv`, `tordenfilm.no` e `maipo.no` **não há wp-json**. A veia
+   rende quando a casa é WordPress **com equipe em CPT**, e nenhuma destas é.
+
+### A FILA PRONTA PARA A PRÓXIMA RODADA, EM ORDEM DE PROGNÓSTICO
+
+1. **`inari@pyjama.fi` (Inari Halme, *Tuotantopäällikkö*, Turku) — primeira da fila, e ela só depende
+   do maestro:** basta a carta do **Samppa Kukkonen** (ficha de 18/09 16h35) sair. A casa publica,
+   por escrito, que a Inari é quem fala de **oportunidade de trabalho**.
+2. **`arne@thebarngames.nl` e `leonie@theflyingcolourcompany.com`** — mesma trava: **a primeira carta
+   da casa ainda não saiu** (fichas de 17/09 do Bas van Nuland e do Simon Wilkinson). Assim que
+   saírem, as duas viram segunda pessoa legítima.
+3. **`terje@hypergames.no` (CTO & Co-founder)** fica como **alternativa documentada** da Hyper Games,
+   caso o maestro prefira sócio a Project Manager — **mas é uma OU outra, porque o teto é dois.**
+4. **As três casas de Vancouver/BC que sobraram abaixo do teto e ainda sem segunda leitura de
+   organograma:** `iconcreativestudio.com` (Carson Loveday, *rascunho-criado*, e a home publica só
+   `carson@` e `inquiries@`), `curiobot.com` (só `nick@`) e `timbregames.com` (só `joe@`). **Nas
+   três, a home de hoje não tem segundo endereço de pessoa** — a próxima tentativa precisa ser por
+   **crédito de produção**, não por página de equipe. E `animallogic.ca` **não abriu**: o proxy
+   registrou *"gateway answered 502 to CONNECT"* para `animallogic.ca:443`.
+5. **`niya.taylor@`, `samg@` e `zoem@strangebeast.tv`** ficam guardados, mas **só o maestro reabre**:
+   a casa tem decisão de encaixe já escrita no `pessoas.csv`.
+6. **O que NÃO vale mais tentar:** `blinkink.co.uk` e `blinkindustries.tv` têm **veto escrito** a
+   material não solicitado; `pixomondo.com` está **no teto de dois**; `submarine.nl` **recusou por
+   e-mail**; `wilfilm.dk` tem **veto de EU pass**; `ludocraft.com` só tem endereço **sem cargo**; e
+   `knowledgehub.creativebc.com` **não passa TLS** neste ambiente.
