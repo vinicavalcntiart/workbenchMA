@@ -7,6 +7,86 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU A MELHOR PORTA DE HOJE E ELA É DE PERSONAGEM POR TÍTULO — **Senior Character Artist – Outsourcing**, Omeda Studios (Reino Unido, remoto)
+
+`https://www.linkedin.com/jobs/view/4466902903/`
+
+**Por que é você e não a automação, em uma frase:** o anúncio é **offsite apply** e o LinkedIn
+**esconde o destino atrás do login**, e o site de carreiras da própria casa
+(`careers.omedastudios.com`, que é Teamtailor) **responde 404 em todo caminho**. Você está logado no
+LinkedIn e **recebeu este mesmo alerta no celular às 12h44 UTC**: para você é um clique no botão
+*Apply*, para mim não existe porta.
+
+**O que foi medido, para você não repetir o caminho:** o HTML de convidado da vaga (334 KB) e a URL
+canônica do `uk.linkedin.com` (354 KB) têm **zero ocorrência de `omedastudios`** e **zero bloco
+JSON-LD**; o único link externo da página é o perfil do recrutador; o botão carrega
+`data-impression-id="public_jobs_apply-link-offsite_contextual-sign-in-modal"` e o modal diz *"Join
+to apply for the Senior Character Artist – Outsourcing role at Omeda Studios"*. As três rotas
+públicas de redirect de *apply* dão 404. No lado da casa: `omedastudios.com` dá 301 para
+`careers.omedastudios.com`, que é Teamtailor da região EU, e devolve **404 em `/`, `/jobs`,
+`/jobs.json`, `/jobs.rss`, `/connect`, `/sitemap.xml`, `/api/v1/jobs`, `/uk/jobs` e mais seis
+caminhos**, sempre com `x-cache: MISS` e `x-request-id` novo — é o servidor deles respondendo, não
+cache velho. O padrão de URL de vaga existe (`/jobs/4912694-qa-lead`, confirmado por terceiro), mas
+**sem o ID numérico da vaga de hoje não há porta**, e as vagas antigas também dão 404.
+
+**A vaga, em números:** publicada hoje ~**06h44 UTC**, achada pelo alerta das 12h44 e trabalhada às
+12h50. **Casa 100% inédita na campanha:** `dedupe-agora.sh 4466902903 omeda` deu ID inédito nos
+quatro arquivos, o grep por `omeda` e `predecessor` em `enviados.csv`, `processados.csv`,
+`docs/index.html` e `alvos.csv` deu zero, e o Gmail com `Omeda OR Predecessor OR Voldex
+newer_than:40d` devolveu **um único fio, que é o próprio alerta de hoje**.
+
+**Régua de veto: ZERO dos 43 termos**, e ela foi feita do jeito difícil. Rodada na URL do LinkedIn
+ela acusa três termos, e **os três são o rodapé de idiomas do próprio LinkedIn** (*français*,
+*deutsch*, *svenska*) — não o anúncio. Rodada sobre o texto do anúncio, **4.199 caracteres** (acima
+do piso de ~1.000), dá **zero**: zero `relocation`, zero `sponsor`, zero `right to work`, zero
+`visa`, zero `work permit`, zero exigência de residência. A única exigência de presença é de **fuso
+horário**, e ela é **a seu favor**: *"Working hours aligned with the UK, or slightly later for more
+overlap with our US-based team"* — o Brasil é justamente *slightly later* que o Reino Unido. O
+anúncio se descreve como *"remote-first game studio"* e lista *"Global, remote team"* nos benefícios.
+
+**O caso a seu favor, com as frases do anúncio:** pede *"5+ years in character art for games, with
+at least one shipped title"*, *"Expert knowledge of ZBrush, Substance Painter and Maya"* e
+*"Hands-on Unreal Engine 5 experience"*; traz *"Hair card and groom creation with FiberShop"* no
+**Nice to Have**, e grooming é o seu diferencial; e valoriza explicitamente quem vem do lado do
+fornecedor — *"Time at or with an external development partner is a real advantage here"*, que é a
+sua experiência de estúdio-fornecedor.
+
+**A ressalva honesta, e ela é dupla — leia antes de clicar:** (1) o próprio anúncio avisa *"Please
+read this part carefully. This is not a pure hero production role. At least half of your time is
+outsourcing: reviewing submissions, giving feedback, and holding the technical line"* e *"If your
+ambition is to spend most of your week sculpting, this isn't the right role for you"*; metade do
+trabalho é revisão e gestão de parceiro. (2) pede *"A strong portfolio of realistic, game-ready
+characters"* e o seu portfólio é **estilizado** — a mesma ressalva de registro de estilo que a
+Wargaming e a Rising Sun já carregam no painel. As duas coisas não impedem a candidatura; elas só
+dizem que o encaixe é de **disciplina certa com ênfase diferente**.
+
+**RESPOSTAS PRONTAS, na ordem em que os formulários pedem:**
+
+- **Autorização de trabalho** — a verdade, sempre: *"I do not currently hold the right to work in
+  the UK and would require visa sponsorship."*
+- **Realocação / disponibilidade** — *"I am ready to move for the role."* E, onde couber mais de uma
+  linha: *"My academic background, with an honors laurea, a postgraduate specialization, a master's
+  in progress, IELTS and publications, makes a strong visa case."*
+- **Fuso horário**, que aqui é campo forte e não fraqueza: *"I work from Brazil, which sits slightly
+  later than the UK — exactly the overlap window the role asks for, and it also covers your US-based
+  team."*
+- **Pretensão** — **GBP 42.000**, que é a faixa do BRIEFING para casa pequena ou média no Reino
+  Unido (o anúncio **não publica faixa**), sempre com *"Open to aligning with your band for the
+  role"*. Nunca revelar o salário atual da E-Line.
+- **Liderança de equipe** — **sim**, com os cinco anos de Senior na E-Line, professor e fundador da
+  própria escola.
+- **Anexos** — `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Portfolio.pdf`, em `/home/user/apply`.
+  Se houver campo de carta, ela ainda **não** foi escrita para esta casa: peça ao maestro, porque o
+  Jhon não escreve carta.
+
+**O que provavelmente te espera do outro lado:** o ATS da casa é **Teamtailor** (confirmado pelos
+cabeçalhos e pelo painel `app.teamtailor.com/companies/JtMUStwpYVA@eu`), que **não tem captcha**,
+mas **pode exigir verificação por e-mail** — a tela diz *"Verify your email"* e **a candidatura não
+entra até alguém abrir o link**. Abra o e-mail: a página passa a dizer *"Applied to"*. **E se a URL
+de destino aparecer, me mande ou cole no painel**: com o link direto a automação envia sozinha, e a
+casa volta a ser fila de agente em vez de fila sua.
+
+
 ### 🔴 ENTROU UMA PORTA HOJE ÀS 15h57, É DE PERSONAGEM E É DA FAMÍLIA DREAMWORKS — **Principal Character Artist (Face)**, NBCUniversal Montreal
 
 `https://jobs.smartrecruiters.com/NBCUniversal3/744000150414819-principal-character-artist-face-i-artiste-principal-e-personnage-face-`
