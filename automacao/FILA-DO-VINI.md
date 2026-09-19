@@ -7,6 +7,101 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU EM 19/09 20h40 UTC (Jhon A, 35o turno) — **Character Sculptor, Adult Series**, **ICON CREATIVE STUDIO**, **VANCOUVER, BC**: a melhor porta de personagem do estoque, e a parede foi medida COM CLIQUE pela **terceira vez** hoje. Você só marca a caixa do reCAPTCHA
+
+`https://iconcreative.bamboohr.com/careers/150` ← **ABRA ESTA. Clique em "Apply for This Job".**
+
+**Por que é você e não a automação, em uma frase:** ao clicar em *Submit Application* o BambooHR
+**injeta** um reCAPTCHA v2 **de caixa de marcar** e nada sai — não é campo faltando, não é POST
+recusado, é porteiro humano, e caixa de desafio não se burla.
+
+**A medição de hoje, 20h30 UTC, com o navegador de verdade e os dois passos separados:**
+
+| Passo | O que o servidor e o DOM devolveram |
+|---|---|
+| Ensaio (sem enviar) | 14 campos e as 9 perguntas preenchidos; CV anexado com `attachTemporary.php` **200** (`errorType: ok`, 45.459 B); **zero** obrigatório vazio; leitura de volta campo a campo conferindo |
+| Envio (com `--submit`) | botão `BUTTON`, **`disabled=false`**, clicado por coordenada; `erros: []` (**nenhuma** validação reclamou); `g-recaptcha-response` = **VAZIO**; iframes `recaptcha/api2/anchor` com **`size=normal`** e `recaptcha/api2/bframe` **presentes**; **nenhum POST de candidatura saiu**; a página voltou ao formulário **ainda cheio** |
+| Controle no Gmail | `from:bamboohr newer_than:1d` = **zero email**. Ou seja não é falso negativo: a candidatura realmente **não** chegou |
+
+`size=normal` **com** `bframe` presente é a assinatura de caixa de desafio que o `BRIEF-JHON`
+manda condenar sem gastar rodada. É a **terceira** medição com clique neste mesmo quadro (06/09,
+18/09 às 00h44 e hoje), e as três deram o mesmo resultado.
+
+**Por que a vaga vale, com as frases do anúncio:** é **escultura de personagem**, o centro exato
+dele, e não disciplina vizinha — *"Sculpt high-quality stylized characters from concept artwork"*,
+*"Advanced proficiency in ZBrush"*, *"Strong understanding of human anatomy, facial anatomy,
+proportion, gesture, silhouette"*, e o anúncio diz que o sculpt tem de servir a jusante para
+*"topology, rigging, deformation, grooming, surfacing, and animation requirements"* — modelagem,
+texturização e groom, os três que ele tem. A casa é a maior de animação CG independente do Canadá,
+em Gastown, entregando para Netflix, Disney+, Apple TV+, Amazon, Peacock e Paramount+.
+
+**FAIXA PUBLICADA: CAD 57.372,12 a 80.730,00**, e o próprio anúncio explica que é o piso do acordo
+coletivo pela lei de transparência salarial da BC (*"the wage displayed reflects the minimum rate
+established under ICON's collective agreement. Additional compensation may be considered based on
+experience"*), ou seja há negociação acima disso.
+
+**O MELHOR SINAL DE VISTO DO ESTOQUE, e ele está nas OPÇÕES de um campo obrigatório:** a pergunta
+`1528` *"Are you eligible to work in Canada? Please specify your status"* tem quatro opções e a
+quarta é **"I need a work permit"** (`option id 449`). A casa **oferece** a resposta honesta dele
+em vez de barrar na porta. Some-se que eles mantêm um **RCIC Immigration Coordinator** aberto no
+mesmo quadro, e a frase do anúncio *"a diverse team of artists from around the globe who have
+joined us here in British Columbia"*.
+
+**RÉGUA DE VETO: ZERO VETO DE TEXTO**, e refeita hoje com a régua corrigida. Cuidado de método que
+vale para todo BambooHR: na PÁGINA a régua lê **8 caracteres** (o quadro é SPA) e isso é leitura
+inválida, não zero. Refeita em `/careers/150/detail`, **7.393 caracteres**, e os acertos são todos
+falsos positivos de estrutura: `located in` vem de *"located in the historic Gastown district"*,
+`proficiency in` de *"Advanced proficiency in ZBrush"*, e `british columbia` das duas frases de
+benefício e da lei de transparência salarial.
+
+**DEDUPE, os quatro arquivos e o Gmail:** a requisição **150 é inédita** (zero ocorrência em
+`enviados.csv`, `processados.csv`, `docs/index.html` e nesta fila) e não existe nenhuma linha com
+"Character Sculptor". A **casa** é conhecida e isso não atrapalha: a candidatura de 31/08 foi para
+a **136**, *Intermediate Modeling/Texture Artist*, outra requisição e outro nível (recibo de
+`notifications@app.bamboohr.com` nomeando o cargo, thread `1a059489a283190b`), e há carta fria de
+08/09 para `carson@iconcreativestudio.com`. **A 150 é escultura de personagem; a 136 era modelagem
+intermediária.** Não é reenvio.
+
+**O QUE DIGITAR, campo por campo (2 minutos).** Endereço, cidade, província, CEP e telefone saem do
+documento privado do Drive *"CAMPANHA - dados pessoais dos formulários"* e **não** entram aqui.
+
+- **Country:** `Brazil` · **Date Available:** `2026-11-01`
+- **Website, Blog or Portfolio:** `https://www.artstation.com/viniciuscavalcanti`
+- **LinkedIn:** `https://www.linkedin.com/in/vinicavalcnti/`
+- **Desired Pay:** `CAD 78,000 - 80,000 (open to your band)`
+- `1531` confortável trabalhando presencial em tempo integral → **Yes**
+- `1533` está atualmente no Canadá → **No**
+- `1529` está ou aceita realocar para a British Columbia → **Yes**
+- `1530` amigos ou família na ICON → **No**
+- `1528` elegibilidade → **I need a work permit**
+- `1532` senha do reel → deixar vazio (o portfólio é público)
+- `1534` quando expira o work permit → não se aplica
+
+**TEXTO PARA COLAR em `1526` (pretensão, obrigatória):**
+
+> Open to aligning with your posted range for the role; as a reference, I am looking at around
+> CAD 78,000 to 80,000, at the upper end of the listed band, given ten-plus years on stylized
+> characters and five as Senior. I am ready to move for the role.
+
+**TEXTO PARA COLAR em `1527` ("anything else", opcional mas é onde o caso de visto entra):**
+
+> Senior 3D Character Artist with more than ten years in stylized characters: sculpt in ZBrush from
+> 2D concept, retopology built for rigging and deformation, texturing in Substance and Mari, and
+> grooming in Houdini — the exact downstream chain your posting names. Credits include The
+> Wingfeather Saga and Endstar. I am ready to move for the role and to be on site in Vancouver full
+> time. On status I am direct: I am not authorized to work in Canada and would need a work permit,
+> which is why I picked that option above rather than a softer one. My academic background, with an
+> honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications,
+> makes a strong visa case.
+
+**ARMADILHA JÁ CATALOGADA NESTE QUADRO:** existe um honeypot chamado `nickname_hpcsaf` com o rótulo
+*"Please leave this field blank"*. **Deixe em branco** — se preenchido, a candidatura é descartada
+em silêncio.
+
+**Custo de não fazer:** é a porta de personagem com melhor sinal de visto do estoque, em Vancouver,
+que é a sua prioridade número um, publicada em 17/09. O arquivo de respostas já está pronto fora do
+repositório em `/home/user/apply/ans_iconcreative150.json`.
+
 ### 🔴 ENTROU EM 19/09 16h30 UTC (Jhon A, 33o turno) — **3D Character Modeler**, **INFOLD GAMES** (Papergames, casa de *Infinity Nikki*), **Los Angeles + Singapura**: personagem por título E por corpo, **zero veto**, casa 100% inédita, e a porta é **login por código de SMS** que só o seu celular recebe
 
 `https://career.infoldgames.com/EN/job/7639286868983384370` ← **ABRA ESTA. É UM CLIQUE: "Continue with Google".**
