@@ -8083,3 +8083,179 @@ se ele tiver sido preenchido.
 - **O locatário Teamtailor da casa (`careers.omedastudios.com`, painel
   `app.teamtailor.com/companies/JtMUStwpYVA@eu`) continua em 404 em todo caminho** e não foi
   reconferido. Ele parece abandonado em favor do Breezy, mas isso é leitura, não medição.
+
+## Jhon A, 19/09 20h15-20h55 UTC (trigésimo quinto turno, a RODADA DE FORMULÁRIOS) — **ZERO envio, e o valor da rodada é que o estoque de personagem deixou de ser "seco" por impressão e passou a ser seco COM A CONTA NA MÃO**; mais uma régua consertada que estava deixando veto de personagem passar limpo
+
+**Placar: 0 formulário enviado, 0 duplicata cometida, 0 navegador simultâneo** (`pgrep -c chrome` = 0
+antes da única abertura, porque outro Jhon A estava na Omeda). Personagem: **0**. Ambiente: **0**.
+
+**E a leitura honesta do placar do dia, lida do arquivo e não da memória:** a ordem que me acordou
+dizia `["2026-09-19",48,3,19,4]` e *"falta 1 de personagem"*. O arquivo, depois do `pull`, dizia
+**`["2026-09-19",48,3,20,5]`**. **A meta do dia já estava fechada quando esta rodada começou** — a
+quinta de personagem é a *Senior Character Artist – Outsourcing* da **Omeda**, enviada às 20h13 pelo
+outro Jhon A. Ou seja o alvo desta rodada (1 de personagem) não existia mais no momento em que ela
+começou, e a regra de ler a DAILY no arquivo foi exatamente o que impediu uma rodada inteira de
+correr atrás de uma meta já batida.
+
+### 1. A ORDEM PEDIA UMA TENTATIVA NOVA NO BAMBOOHR, E ELA FOI FEITA: **TERCEIRA MEDIÇÃO COM CLIQUE NA ICON 150, AGORA COM ENSAIO E ENVIO SEPARADOS — E É ISSO QUE FECHA O VEREDITO POR ELIMINAÇÃO**
+
+As duas medições anteriores (06/09 e 18/09 às 00h44) diziam *"o Submit injeta reCAPTCHA e nada
+sai"*. **Essa frase não separa três coisas diferentes: porteiro, campo obrigatório vazio e POST
+recusado.** Hoje rodei os dois passos em separado, de propósito, e cada um matou uma hipótese:
+
+| Passo | O que o servidor e o DOM devolveram | Hipótese que morre |
+|---|---|---|
+| **Ensaio** (sem `--submit`) | 14 campos + 9 perguntas preenchidos; `Country=Brazil` pelo seletor Fabric; CV anexado com `attachTemporary.php` **200** e `errorType: ok` (45.459 B); **zero** obrigatório vazio depois do anexo; leitura de volta campo a campo; os quatro radios com `checked=true` e os valores certos (`multi_1528 = I need a work permit` value 449, `1531 Yes`, `1533 No`, `1529 Yes`) | **não é campo faltando** |
+| **Envio** (`--submit`) | botão `BUTTON` da Fabric com **`disabled=false`**, rolado e clicado por coordenada (caixa 247×48); lista de erros do formulário voltou **VAZIA**; `g-recaptcha-response` **VAZIO**; `recaptcha/api2/anchor` com **`size=normal`** (chave `6LfZ4KEs…`) **e** `recaptcha/api2/bframe` **os dois presentes**; **nenhum POST de candidatura**; página volta **ainda cheia** | **não é POST recusado nem validação: é porteiro** |
+| **Controle no Gmail** | `from:bamboohr newer_than:1d` → **zero email** | **não é falso negativo** do tipo PlayQ |
+
+**`size=normal` com `bframe` presente é a assinatura de caixa de desafio que o `BRIEF-JHON` manda
+condenar sem gastar rodada.** Não há contorno lícito e nenhum foi tentado. Pela exceção da regra
+(Vancouver com patrocínio) ela **vai para a mão dele**, com dossiê no **topo** de
+`automacao/FILA-DO-VINI.md` trazendo os **dois textos livres escritos por inteiro para colar**, as
+nove respostas honestas, a faixa publicada e o aviso do honeypot `nickname_hpcsaf`. Nota do
+`PORTAIS` agora começa por **`NA MAO DELE:`**, prio **alta**, `done=false`.
+
+**O controle do Gmail merece uma linha própria como método.** A campanha já perdeu duas
+candidaturas da PlayQ por declarar "não enviou" olhando só a tela. Buscar `from:<ats> newer_than:1d`
+depois de todo clique duvidoso custa uma consulta e transforma "acho que não foi" em **medição**.
+
+### 2. OS 12 ITENS DE PERSONAGEM DO BAMBOOHR, QUE O 34º TURNO DEIXOU COMO DÍVIDA, FORAM LIDOS UM A UM — E **DOIS DELES ERAM DUPLICATA QUE NENHUM DEDUPE DE CSV PEGAVA**
+
+Lidos na fonte oficial pelo **`/careers/<id>/detail`**, porque o `/careers/list` não traz o corpo e a
+página é SPA que a régua lê como 8 caracteres. Dedupe nos quatro arquivos **mais o Gmail**.
+
+| # | Requisição | Desfecho, com a frase quando há veto |
+|---|---|---|
+| 1 | `iconcreative` **150** Character Sculptor, Vancouver | **parede** de reCAPTCHA, §1 |
+| 2 | `iconcreative` **136** Intermediate Modeling/Texture, Vancouver | **DUPLICATA**, enviada **31/08**, recibo nomeando o cargo |
+| 3 | `owi` **199** 3D Character Artist, New Westminster BC | **JÁ ENVIADA À MÃO por ele em 10/09** às 04h04 |
+| 4 | `igg` **289** 3D Character Artist, Vancouver | *"Legally eligible to work in Canada - **we are unable to sponsor work permits** for candidates applying for this position"* |
+| 5 | `theembassy` **58** Senior Modeller, Vancouver | *"we are **only accepting applications from** those who are **legally eligible to work in Canada** and are currently **BC residents** or willing to establish BC residency"* |
+| 6-8 | `imageengine` **15**, **21**, **28** | *"required to be **based in British Columbia** and **eligible to work in Canada**"* |
+| 9 | `barnstormvfx` **176** Lead Creature Artist, Montréal | *"This role is open to **Canadian based talent**. Candidates **must be legally authorized to work in Canada**"* **+ disciplina errada** (o corpo é rigging e simulação: rigs em Maya/mGear, cloth/hair/muscle em Houdini) |
+| 10 | `stirlinganimationstudios` **77** Character Modeling and Surfacing | *"Artists **must be based regionally within the UK** (outside the M25)"* — **e a régua não pegava**, §3 |
+| 11-12 | `streamlinestudios` **84** e **106** | Malásia pelo `atsLocation`, e o **argumento novo** abaixo |
+
+**O argumento novo nas duas da Streamline, e ele vale porque o corpo do anúncio CONTRADIZ a decisão
+antiga.** A decisão de 09/09 as tirou por geografia (`atsLocation = Malaysia`, Kuala Lumpur na 106).
+Lendo o corpo hoje, as duas dizem com todas as letras *"This role is **fully remote**"* e *"This is a
+**fully remote**, project-based engagement"*, **zero veto de residência e zero de autorização** — ou
+seja, pelo texto elas pareceriam as portas mais limpas do lote. O que sustenta a decisão antiga é
+outro dado, que não estava escrito: **o `datePosted` da 84 é `2021-12-14` e o da 106 é
+`2024-05-08`.** Requisição parada há quase cinco anos e há mais de dois. **Requisição fria não é
+requisição**, e isso é mais forte que o argumento de país, porque não depende de interpretar
+`atsLocation` contra o corpo.
+
+### 3. A RÉGUA DE VETO ESTAVA DEIXANDO PASSAR VETO DE RESIDÊNCIA EM VAGA DE PERSONAGEM, E O ÚNICO ACERTO QUE ELA DAVA VINHA DE UM **BENEFÍCIO**
+
+`automacao/regua-veto.py` tinha `based in` e `must be located`. **Nenhum dos dois casa com a frase que
+veta de verdade na Stirling 77:** *"Artists **must be based regionally within the UK** (outside the
+M25)"*. O que a régua devolvia era **um** acerto, `hybrid`, e ele vinha de
+*"Scottish-based artists would be welcome to work **hybrid** from our studio in Stirling"* — **frase de
+benefício**. Uma leitura razoável disso é "zero veto de residência" numa vaga de *Character Modeling
+and Surfacing* que tem veto de residência escrito no corpo. É a mesma família do erro da Snowprint
+de 16/09, que custou dois envios.
+
+**Consertado:** 20 termos novos, com o porquê comentado no próprio arquivo — `must be based`,
+`based regionally`, `regionally within`, `based within`, `must be a resident`, `residency`,
+`residents`, `resident of`, `local candidates`, `locally based`, `permanent resident`, `pr status`,
+`open to canadian`, `canadian based`, `uk based`, `us based`, `eu based`,
+`only accepting applications from`. Conferido depois da mudança em `/careers/77/detail` (23.849
+caracteres): os três termos certos acendem, e de lambuja os novos passam a pegar a frase da
+The Embassy 58, que antes saía só por `eligible to work`.
+
+> **REGRA QUE FICA:** **acerto ÚNICO de régua vindo de frase de benefício** (`hybrid`, `flexible`,
+> `remote`, `relocation support`) **não é veto e não é ausência de veto — é sinal de que a lista de
+> termos está cega para a frase daquela casa.** Leia o corpo.
+
+### 4. ILLUMINATION PARIS: O ZERO SAIU DO **JAVASCRIPT DA PRÓPRIA CASA**, SEM NAVEGADOR, E AGORA TEM IDENTIDADE
+
+`illuminationparis.com` **não resolve** deste túnel (http `000` em quatro variantes). Quem responde é
+`illumination.com/careers/` → `/homepage/careers/` (200, 47.615 bytes), que serve 1.108 caracteres de
+texto com *"Current Openings"* e o contador em **"00 00"**: quadro montado por JavaScript, **zero
+marcador de ATS no HTML**. Em vez de abrir navegador, li o script que a própria página carrega,
+`wp-content/themes/illumination/js/careers.js`, e ele diz em texto puro:
+
+```
+fetch("https://api.lever.co/v0/postings/illumination?mode=json")
+```
+
+**Isso fecha o zero do 34º turno com prova de IDENTIDADE:** o token `lever/illumination` não era
+adivinhação, **é o endpoint que a casa usa para desenhar o próprio quadro**, e ele devolve `[]`.
+Conferidos também, todos *Document not found*: host EU, `illuminationparis`,
+`illuminationstudiosparis`, `illuminationentertainment`. E `illumination` no SmartRecruiters da
+NBCUniversal3 devolve 2 vagas, nenhuma de arte.
+
+> **REGRA QUE FICA, e ela é barata:** **antes de abrir navegador em página de carreiras que monta por
+> JavaScript, leia o JS da própria casa.** O nome do arquivo costuma ser óbvio (`careers.js`) e o
+> `fetch` está em texto puro. Mesma família do `const jobsData = []` da Wētā FX.
+
+### 5. OS ZEROS MEDIDOS, COM O NÚMERO DE CADA UM
+
+- **Greenhouse, os 112 tokens nos dois hosts:** 109 vivos, **2.530 vagas**, **30 acertos** de
+  disciplina por título. **Os 30 dedupados um a um: ZERO INÉDITO.** Os únicos dois que só aparecem em
+  arquivo de censo são da Hasbro e os dois estão fora da disciplina (`4250646009` é **engenheiro full
+  stack** de plataforma de personagem com IA; `4293782009` é Manager Digital Product Design em **Hong
+  Kong**). Os outros 28 têm envio, recusa, veto ou entrada de painel — incluindo as quatro do par
+  `2k`/`cloudchamberen` que são **a armadilha do `internal_job_id`**: quatro anúncios, uma requisição.
+- **Workday com conta em `cred.json`, por termo:** `xboxgaming.wd1` nos três sites (`External` 62 para
+  *character* com **zero** acerto de título; `Blizzard_External_Careers` **2 acertos**;
+  `King_External_Careers` zero) e `cloudimperiumgames.wd503` nos dois sites (**4 acertos**). **Os dois
+  da Blizzard já foram:** `R028136` enviada 12/09 e `R027817` enviada 02/09 e **recusada** 12/09. **Os
+  quatro da CIG são concept 2D ou produção.** Somados `spe.wd1` (51 para *character*, zero de título) e
+  `warnerbros.wd5/Global` (333 para *character*, 113 para *modeler*, zero de título).
+- **Painel inteiro por máquina, e não só a faixa baixa:** o `PORTAIS` tem **935 linhas**; filtrando
+  `done=false` mais título ou nota de personagem sobram **31**, e as 31 têm motivo escrito (domínio à
+  venda, casa sem vaga da disciplina, veto de residência, fora do recorte, Room 8 banida por ordem
+  dele, porta de e-mail e não de formulário). Confirma o zero das 18h15, agora sobre **935** e não
+  sobre 51.
+- **Janela por data desde 18h00 UTC** (`JANELA_ISO=2026-09-19T18:00:00Z`): **882 quadros, 801 vivos,
+  9.594 vagas por id único, DUAS na janela** e nenhuma da disciplina (*Senior Staff Program Manager*
+  da discord e *Material Handler-Warehouse* da mattelinc). As **1.342 sem data** deram 86 acertos de
+  palavra-chave, **12 da classe personagem**, e os 12 fecham — os 10 do §2 mais `dmfx` 129,
+  `stirling` 84 e `tornbanner` 50, que são **CFX e rigging**, não arte de personagem.
+- **Grupo Disney:** `ronda-disney.sh`, **12 de 12** consultas em 200, 13 ids no ar, **zero id novo**.
+- **Pixar** (`pixar.wd501`, **sem filtro**, três offsets): `total = 3` — *On-Call Chef*, *Staff Systems
+  Engineer* e *Senior Research Scientist*.
+- **Netflix / Eyeline** (8 termos × 2 sites = 16 consultas, **zero falha**): 13 ids da disciplina no ar
+  e **os 13 com decisão escrita** — inclusive `JR41749`, `JR39273`, `JR41810` e `JR39105`, que o
+  registro do 33º turno **não listava** e que por isso pareciam novos nesta leitura.
+- **Alertas do Gmail do dia:** o da WBD para *modeler* devolve *Staff Architect - Tax Systems*; o da
+  Blizzard devolve *Senior II VFX Artist – STARCRAFT*; o do LinkedIn sobre a Mob Entertainment é
+  lembrete de vaga **salva** (`mobentertainment/5207518007`, enviada em 02/09); o da Infold é a vaga
+  que já está na mão dele. **E um que não é alerta e importa:** `4f23tnwxafhf+bnnx@inbound.workablemail.com`
+  às 15h03 é a **RECUSA da Senior Character Artist da Rebellion** — *"whilst you have an interesting
+  background and experience, unfortunately, we will not be progressing further"*. É resposta de ATS,
+  não humana, mas fecha aquela vaga.
+
+### 6. UMA CORREÇÃO NO REGISTRO DO 34º TURNO: **A RISING SUN NÃO ESTÁ "NÃO CONFERIDA", E NÃO PRECISA DE NAVEGADOR**
+
+O 34º turno listou a RSP como *"NÃO CONFERIDA, família nova, precisa de navegador"* e a chamou de uma
+das duas melhores dívidas da próxima rodada. **Ela está conferida desde 16/09 e o caminho é curl:** o
+`/search` do SuccessFactors devolve 424 caracteres de casca (é SPA), mas
+**`careers.rsp.com.au/sitemap.xml`** lista o grupo Pitch Black inteiro. Lido hoje: **18 vagas**, e as
+da disciplina **todas com decisão** — *Senior Modelling Artist* `603269517` **ENVIADA em 16/09** com
+conta criada, *Senior Look Development Artist* `605921817` e *Environment Artist* `605963417` vistas e
+recusadas com a frase do anúncio. **Zero vaga de personagem nova.** Nota de painel envelhece calada, e
+esta envelheceu para o lado caro: mandaria a próxima rodada gastar navegador em quadro já lido.
+
+### 7. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Não saiu formulário nenhum, e a causa é estoque e não ferramenta.** O navegador funcionou (abriu,
+  preencheu 14 campos, anexou CV com 200 do servidor e leu o DOM depois do clique, duas vezes). Os
+  §2 e §5 são a medição de que não há porta limpa de personagem no universo conhecido, não a desculpa.
+- **A DAILY não foi tocada, e isso é de propósito:** somei **zero** ao valor do arquivo, porque enviei
+  zero. Continua `["2026-09-19",48,3,20,5]`.
+- **Não toquei na Omeda**, por ordem, e o outro Jhon A estava nela. Registro só o que li na caixa sem
+  abrir nada: o e-mail das 20h10 é *"One more step! … verify your application: 3696"*, e **a linha
+  dele já explica que o código foi lido e submetido e que o servidor confirmou** — ou seja não é
+  candidatura pendurada na verificação, que é a armadilha que esse e-mail costuma indicar.
+- **Continuam NÃO CONFERIDOS, com a causa:** **Crafty Apes** (Dayforce, 403 por curl),
+  **Running With Scissors** (403 em três rotas — é bloqueio de robô contra o nosso IP e **não é
+  zero**; a nota do painel de 30/08 dizia "não confirmada" e segue valendo) e o **`/search` do
+  SuccessFactors da RSP por navegador**, que hoje ficou resolvido pelo sitemap e por isso deixou de
+  ser dívida urgente.
+- **A `streamlinestudios` 84 e 106 não foram reabertas para envio**, e agora o argumento contrário
+  está inteiro no §2 para quem quiser discordar: o corpo diz *fully remote* e sem veto, e o que as
+  derruba é geografia **somada** a requisição fria de 2021 e 2024.
