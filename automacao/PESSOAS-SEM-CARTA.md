@@ -11255,3 +11255,70 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   ao leitor uma saída fácil de encaminhar sem responder; (e) `/breakdowns` está no menu e devolve **404 de
   74.337 bytes**, sinal de site não revisado; (f) o cargo dele é **animação**, não modelagem — o encaixe é
   "quem coordena o elenco em movimento", e a conversa de modelagem/grooming é um passo adiante.
+
+### FICHA 5 — Anthony Vanoostendorp, **Head of Production** da **Troll VFX** (Tampere, Finlândia) — **PUBLICADO (ofuscado em `(at)`), confiança ALTA**, e é a ficha com a **MELHOR PROVA DE DISCIPLINA DA RODADA**: a casa vende *"Characters, Creatures & Animations"* com esse nome
+
+- **EMAIL: `anthony@trollvfx.com` — PUBLICADO, confiança ALTA, e estava ofuscado em `(at)`.** O texto
+  visível escreve `anthony(at)trollvfx.com`, sem `mailto:` e sem `@` nenhum no HTML. É exatamente a camada
+  que o `BRIEF-JOE` manda decodificar antes de dizer que não há endereço, e é o **mesmo truque** que a nota
+  de 10/09 já havia registrado nesta casa para o `antti(at)`. **Nada foi montado**: o endereço está escrito,
+  só não está clicável.
+- **URL onde e-mail e cargo estão na MESMA página — e estão no RODAPÉ DE TODAS AS PÁGINAS, aberto nesta
+  rodada:** `https://trollvfx.com/contact` (**200, 20.139 bytes**) e `https://trollvfx.com/jobs`
+  (**200, 15.210 bytes**), bloco final:
+  *"Helsinki — **Antti Kulmala — Executive Producer / CEO — antti(at)trollvfx.com** — +358 (0)40 0819385"*
+  e *"Tampere — **Anthony Vanoostendorp — Head of Production — anthony(at)trollvfx.com** — +358 (0)45
+  1427413"*.
+  **ACHADO DE MÉTODO:** o bloco *"OUR OFFICES"* no corpo da `/contact` e da `/about` mostra o mesmo
+  `anthony(at)trollvfx.com` **como se fosse endereço de escritório, sem nome nenhum ao lado** — quem ler só
+  o corpo conclui "endereço sem pessoa" e descarta pela regra do `rax@threewintersgames.com`. **O
+  pareamento está no RODAPÉ**, que é onde eu não estava olhando nas rodadas anteriores. Vale para qualquer
+  site: **ler o rodapé antes de declarar endereço sem cargo.**
+- **POR QUE ELE, e não outro da casa:** a casa publica **duas** pessoas, uma por escritório. **Antti
+  Kulmala (Helsinque) já recebeu carta em 11/09** (thread `1a08f65cde665d9b`, sem resposta, sem recusa e
+  **sem follow-up**), então Vanoostendorp é a **segunda e última** pessoa desta casa e o teto fecha aqui.
+  *Head of Production* é quem monta o time de cada projeto numa casa de serviço de VFX: não é o cargo de
+  arte, é o cargo que **sabe qual cadeira abre no próximo show**.
+- **GANCHO, com as frases da própria casa entre aspas, e é a prova de disciplina mais direta de toda a
+  rodada** (`https://trollvfx.com/about`, **200, 46.229 bytes**). Na lista de serviços, com esse título:
+  *"**Characters, Creatures & Animations — Telling stories with digital characters and creatures**"*. Ao
+  lado: *"Ideation, Storyboards & Concepts — From ideas to finished designs for production"*,
+  *"Full CG, Dynamics & FX — Creating photoreal worlds and complex effects from scratch"*,
+  *"Set Extensions, Crowds & Vehicles"*, *"Previs, Prep & On-Set Supervision"*. E a identidade:
+  *"Driven by our passion for visual effects, the story of Troll began in 2012. We've evolved from domestic
+  beginnings in Finland to enter the wild international stage. Today, our team delivers visual effects for
+  studios and streamers worldwide"* e *"Naturally, it's a great place to do unnaturally good VFX"*.
+  Catálogo, de `https://trollvfx.com/works` (**200**): *"**Thrash** — Sony — 2026"*, *"**SISU** — Sony —
+  2023"*, *"**The Witcher: Season 3** — Netflix — 2023"*, *"Codename: Annika — SkyShowtime"*, *"Steeltown
+  Murders"*, *"Gold Run — Viaplay"*. **The Witcher é criatura em live action, e é o gancho a usar.**
+- **DOIS SINAIS POSITIVOS ESCRITOS PELA CASA, e os dois atacam o obstáculo número um da campanha:**
+  (1) *"**Join us on-site here in beautiful Finland, or join our team on a remote or hybrid basis!**"*, e
+  (2) a vaga permanente *"**Open Application** — If you would like to join our team on a remote or hybrid
+  basis, and can't find a suitable position, fill out an Open Application"*, com localização declarada
+  *"Tampere, Remote"*. A casa também está **contratando agora**: há uma vaga datada de **17 de setembro de
+  2026** (*Production Finance Manager*, Tampere), o que prova caixa aberta e contratação viva **dois dias
+  antes** desta rodada. E o convite: *"Explore our available positions, or just **drop us a line to put
+  yourself on our radar for future opportunities**!"*
+- **FORA DOS EUA?** Sim, **Finlândia (Tampere, Haarlankatu 4 B, 33230; sede em Tampere e escritório em
+  Helsinque)**. Frase de realocação entra, e aqui ela pode encostar no *remote or hybrid* que a casa
+  mesma escreveu.
+- **DEDUPE NA CAIXA:** `search_threads` por `trollvfx OR "Troll VFX" OR Vanoostendorp OR Kulmala
+  in:anywhere` devolveu **UM** fio: a carta de **11/09 para `antti@trollvfx.com`** (thread
+  `1a08f65cde665d9b`), **uma mensagem só, sem resposta, sem recusa e sem follow-up** (a casa **não** entrou
+  na leva de 36 lembretes de 18/09). **`Vanoostendorp` não aparece em nenhuma mensagem nem em nenhum
+  arquivo do repositório.** Nos arquivos, `trollvfx` casa só com Antti em `automacao/pessoas.csv:216`,
+  `enviados.csv:887` e `automacao/processados.csv:2009`. **Segunda pessoa, teto fecha aqui.**
+- **RESSALVAS HONESTAS:** (a) **o cargo é produção, não arte** — não há diretor de arte, CG supervisor nem
+  character lead nomeado em nenhuma página do domínio, então a melhor saída realista é encaminhamento
+  interno; (b) **é o segundo e-mail da campanha para esta casa**, e a primeira carta (para o CEO) ficou sem
+  resposta — a favor desta ficha pesa que os dois estão em **cidades diferentes** e que **não houve
+  follow-up** no fio do Antti, ou seja este é o segundo toque, não o terceiro; (c) a `/about` tem **texto
+  de recheio não revisado**: os quatro valores da casa (*Quality, Creativity, Teamwork, Innovation*) estão
+  preenchidos com **lorem ipsum**, e o rodapé mostra **`XXXX Troll VFX. All rights reserved`** com o ano
+  não substituído — sinal de site desatualizado, o que enfraquece qualquer inferência tirada de data;
+  (d) a *Open Application* está datada de **16/02/2024**, ou seja é convite antigo ainda no ar, e a **única**
+  vaga real é de **finanças de produção**, não de arte; (e) é casa de **VFX de serviço para filme e
+  televisão**, onde personagem entra por projeto e por contrato curto — não é vaga fixa de character
+  artist; (f) o crédito mais forte do Vini é **animação estilizada** (*The Wingfeather Saga*) e o catálogo
+  desta casa é **live action fotorreal** (*SISU*, *The Witcher*, *Steeltown Murders*) — a ponte existe
+  (criatura é criatura) mas tem de ser dita com honestidade na carta, sem fingir que é o mesmo ofício.
