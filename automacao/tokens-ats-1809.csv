@@ -1086,3 +1086,28 @@ personio,once,personio-1909,nao,"personio-vivos-1909 (sondagem de slug em search
 #   gameindustry.be tem API em api.gameindustry.be com applyUrl e applicationEmail por vaga.
 #   NAO SAO QUADRO: gamedev.pl/praca (produto de IA), dev.org.es e aevi.org.es (sem secao),
 #   imirt.ie (404), nzgda.com/jobs (pagina existe e o bloco de conteudo esta EMPTY).
+# ===== 19/09 14h15-15h20 UTC (Jhon A, 32o turno, RODADA DAS CASAS DE VFX E DE SERVICO DE ANIMACAO)
+# Lidas por inteiro 30 casas. TRES CORRECOES QUE DESMENTEM LINHAS DESTE PROPRIO ARQUIVO:
+#   1. mpc.wd1/MPCCareers NAO e a MPC de VFX: e a MARATHON PETROLEUM (128 vagas de refinaria,
+#      Transport Driver, Refinery Operator, Marine Tankerman). Estava na lista de "pares que
+#      RESPONDEM" como se fosse casa de VFX. A MPC de VFX (mpcvfx.com) nao tem quadro nenhum.
+#   2. rippling/crafty NAO e a Crafty Apes: e distribuidora de BEBIDA E ALIMENTO (Route
+#      Merchandiser, Food & Beverage Associate). A Crafty Apes de verdade e DAYFORCE
+#      (globalus63.dayforcehcm.com/CandidatePortal/en-US/craftyapes), por craftyapes.com/career.
+#   3. pinpoint/realtimeuk NAO e casa-real: as 3 vagas sao Head of DEI London + Marketing Manager
+#      Paris + Customer Service Rep New York, que e o LOTE SEMEADO DE DEMO deste arquivo.
+#   E UM TOKEN MORTO: lever/titmouse da 404 nas tres variantes (o script morto ficou no site da casa).
+familia,token,origem,adivinhado,arquivos_de_origem,identidade,nome_real,vagas_1809
+jobvite,double-negative-visual-effects,vfx-1909,nao,"processados.csv;le-ats.sh",casa-real,"DNEG (unica casa de VFX com quadro no Jobvite; 30 outros slugs de VFX dao !=200)",26
+workday,mpc.wd1/MPCCareers,vfx-1909,nao,"tokens-ats-1809.csv (linha antiga de pares que respondem)",falso-amigo,"Marathon Petroleum Corporation - NAO e a MPC de VFX",128
+rippling,crafty,vfx-1909,nao,"familiasB-1809",falso-amigo,"distribuidora de bebida/alimento - NAO e a Crafty Apes",28
+dayforce,craftyapes,vfx-1909,nao,"craftyapes.com/career",casa-real,"Crafty Apes (quadro NAO CONFERIDO por curl: 403 no jobposting/search)",
+dayforce,cinesite,vfx-1909,nao,"sonda-dayforce.sh",casa-real,"Cinesite | Image Engine Design | L'Atelier Animation | Trixter",
+bamboohr,cinesitelondon,vfx-1909,nao,"cinesite.com/wp-json/cinesite/v1/vacancies",casa-real,"Cinesite London (terceiro locatario da casa, inedito)",1
+workable,pxo,vfx-1909,nao,"pixomondo.com/careers",casa-real,"Pixomondo (200 com ZERO vaga; lane de envio fechada por 1015)",0
+jazzhr,company3,vfx-1909,nao,"company3.com/careers",casa-real,"Company 3 / Method Studios (17 vagas, zero da disciplina; JazzHR e reCAPTCHA v2)",17
+humi,industrialbrothers,vfx-1909,nao,"industrialbrothers.com/careers",casa-real,"Industrial Brothers (FAMILIA INEDITA: <token>.applytojobs.ca; 1 porta com VETO de cidadania)",1
+hireserve,blue-zoo,vfx-1909,nao,"careers.blue-zoo.co.uk",casa-real,"Blue Zoo Animation (envio exige conta com senha BZ_SENHA)",12
+smartrecruiters,PitchBlackCreative,vfx-1909,nao,"folksvfx.com/careers/open-positions",casa-real,"Pitch Black Creative - e o quadro da FOLKS VFX por agencia",21
+own,careers.digitaldomain.com,vfx-1909,nao,"digitaldomain.com/careers",casa-real,"Digital Domain 3.0 - rss.php le o quadro, /description/<id>.pdf e o anuncio, application.php?job_id= e o formulario SEM CAPTCHA, application_submit.php e o POST",78
+own,careers.wetafx.co.nz,vfx-1909,nao,"wetafx.co.nz/careers",casa-real,"Weta FX - a lista vive INLINE no HTML de /jobs como 'const jobsData = []'; hoje VAZIA",0

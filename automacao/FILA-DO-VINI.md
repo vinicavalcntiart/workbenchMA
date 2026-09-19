@@ -7,6 +7,45 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU EM 19/09 15h (Jhon A, 32o turno) — **Asset Generalist Senior Artist** da **FOLKS VFX**, em **TORONTO** e em **MONTREAL**, parede de DataDome
+
+`https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004158` (Toronto, ON)
+`https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004252` (Montréal, QC)
+
+**Por que é você e não a automação, em uma frase:** é **SmartRecruiters**, e o DataDome da
+plataforma nasce **um clique depois do anúncio**, no `/oneclick-ui` — medido em 26º turno em duas
+contas independentes, com `ct.captcha-delivery.com` e página de 0 caractere. A página do anúncio é
+limpa mesmo; o porteiro é no passo do formulário. Para você, logado num navegador de verdade, é um
+clique em *I am interested*.
+
+**O achado que trouxe estas duas portas:** a Folks VFX **não publica no próprio domínio**. O
+`folksvfx.com/careers/open-positions` linka `careers.smartrecruiters.com/PitchBlackCreative/folks-`,
+ou seja o quadro dela vive no SmartRecruiters de uma **agência** (Pitch Black Creative), com 21
+vagas. Procurar por "folks" em qualquer censo de ATS devolve zero por isso.
+
+**Por que ela vale, com as frases do anúncio:** o `typeOfEmployment` da API é **Full-time** (o
+"(Freelance)" do título **não** se confirma no corpo), e o corpo diz *"Execute advanced asset work
+including **hero characters** and complex assets"*, *"Lead asset development from modelling through
+final lookdev"* e pede *"Expert-level proficiency in Maya, ZBrush, Substance Painter, Mari, Katana
+and Houdini"*. É a disciplina dele com todas as letras, em **Canadá anglófono** (Toronto) e em
+Québec, e o anúncio ainda abre remoto entre as três cidades: *"Remote candidates within Montreal or
+Vancouver may also be considered"* (na de Toronto) e *"Remote candidates within Toronto or Vancouver
+may also be considered"* (na de Montréal).
+
+**Régua de veto: ZERO veto real em 4.393 caracteres.** Os dois acertos dos 43 termos são falso
+positivo e ficam escritos: `citizen` aparece dentro da **cláusula de não discriminação**
+(*"...veteran or military status, citizenship, or any other characteristic protected by applicable
+federal, state, provincial, or local law"*) e `proficiency in` é a lista de **softwares**.
+
+**Ressalva honesta, e ela é dupla:** (1) o anúncio **não diz nada sobre patrocínio de visto**, nem a
+favor nem contra — então "sem veto" aqui é **ausência de frase**, não promessa de patrocínio; (2) a
+**terceira** requisição, `7000000000004182` (*Artiste généraliste senior – Assets*, Montréal), é a
+**mesma vaga em francês** (corpo de 4.392 caracteres, espelho do inglês) — manda-se **uma** vez por
+cidade, nunca nas duas versões, que é a armadilha bilingue da regra do briefing.
+
+**MANDE UMA POR CIDADE E PREFIRA A DE TORONTO**, pela prioridade de Canadá anglófono.
+
+
 ### 🔴 ENTROU A MELHOR PORTA DE HOJE E ELA É DE PERSONAGEM POR TÍTULO — **Senior Character Artist – Outsourcing**, Omeda Studios (Reino Unido, remoto)
 
 `https://www.linkedin.com/jobs/view/4466902903/`
