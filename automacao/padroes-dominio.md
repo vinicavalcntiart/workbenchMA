@@ -719,3 +719,98 @@ O talk *"Reinventing a Character Creation Pipeline"* (SIGGRAPH 2021) traz cinco 
 `toddejhill@gmail.com`, `chris.pagoria@gmail.com`. São endereços pessoais **publicados** e ainda
 plausíveis — mas a **Blue Sky fechou em 2021**, então o vínculo morreu junto e não se sabe onde cada
 um está hoje. **Cargo desatualizado é pior que alvo nenhum**: registrado só como aviso.
+
+---
+
+## 19/09/2026 01h35 (Joe) — QUATRO ARMADILHAS DE LEITURA E UMA VEIA MORTA, todas medidas em 2.395 páginas de 1.446 domínios
+
+Nenhum endereço montado saiu desta rodada; as seis fichas são literais publicados. O que vale registrar
+aqui é **por que um endereço publicado pode parecer inexistente**, e **um dominio pode parecer dois**.
+
+### 1. A família Stunlock ganhou um terceiro membro, e ela custou uma carta em 26/08: **MATHEMATIC**
+
+O grupo usa **três** domínios: **`mathematic.tv`** (o estúdio, onde os endereços de pessoa estão
+publicados: `bea@`, `rebecca@`, `guilow@`, `hadi@`, `guillaume.marien@`), **`mathematicfilm.com`** (o
+rótulo de cinema) e **Player Two** como rótulo de jogo. A campanha mandou a carta fria de 26/08 e o
+follow-up de 02/09 para `contact@mathematicfilm.com`, ou seja **para o domínio do rótulo, não para o
+do estúdio**. Zero resposta. **Antes de dar uma casa como "já tocada e silenciosa", confira em qual
+dos domínios dela a carta caiu.**
+
+No mesmo dia apareceu o caso inverso, e ele **furou meu dedupe por endereço**: a **TELEVISOR** publica
+o mesmo Michał Truszkowski como `michal.truszkowski@televisor.pl` (no `mailto:`) **e** como
+`michal.truszkowski@televisor.studio` (no texto visível). Só o segundo está em `enviados.csv`, com
+carta de 11/09. **Duas grafias do domínio da mesma casa derrotam dedupe por endereço; o que segurou
+foi o `search_threads` do Gmail pelo sobrenome.** E a **B-Water** faz o mesmo com `.com` e `.es`
+(`dh@b-waterstudios.com` publicado na `/contact`, e a resposta humana de 26/08 veio de
+`idayra.pd@b-waterstudios.es`).
+
+### 2. `mailto:` em **ENTIDADE HTML DECIMAL** — a Nuttery, e o `grep mailto` cru não vê
+
+`https://nutteryentertainment.com/` publica
+
+```
+mailto:ma&#103;nus&#064;n&#117;tt&#101;rye&#110;&#116;&#101;rt&#097;inme&#110;t&#046;com
+```
+
+que é `magnus@nutteryentertainment.com`. Não é Cloudflare, não é ROT13: é entidade decimal misturada a
+caracteres normais, **letra por letra**, para quebrar raspador de regex. Os três endereços do time
+(`magnus@`, `erik@`, `lee@`) vêm assim. Conserto: `html.unescape` **antes** de qualquer regex de
+e-mail. Ficou incorporado na varredura desta rodada, junto de `data-cfemail`, `data-enc-email` em ROT13
+e `(at)`/`(dot)`.
+
+```sh
+curl -sS -L <url> | python3 -c "import sys,html,re;t=html.unescape(sys.stdin.read());print('\n'.join(sorted(set(re.findall(r'mailto:([^\"\x27?]+)',t)))))"
+```
+
+### 3. **DUPLA** escapagem de entidade em site de construtor — Red Vault, e é o cargo que se perde
+
+Em `https://redvaultinteractive.com/about` o endereço sai com um `unescape`, mas **o cargo não**: o
+texto dos cartões mora em JSON embutido com `&amp;quot;` dentro de `&quot;`. Com uma passada a ficha
+nasce com "Tim Israelsson" e **sem** "Character Artist and Animator". **Duas passadas de
+`html.unescape` viraram regra para site de construtor**, e o controle é simples: se o HTML contém
+`&amp;quot;`, falta uma passada.
+
+### 4. **406 não é 404**: porteiro de cabeçalho, medido na Clever Plays
+
+`clever-plays.com` responde **200 na home** e **406 de 226 bytes** em toda subpágina (`/press-kit`,
+`/about`, `/team`, `/contact`) quando o `curl` vai com User-Agent curto. Com cabeçalho de Chrome
+completo **mais** `Accept: text/html,...` **e** `Accept-Language`, a mesma `/happy-bastards/` devolve
+**200 com 93.204 bytes**. **Quem anotar "406 = página não existe" perde o gancho da casa.** É parente
+do 404 gordo do Wix e do `presskit/data.xml`: **o corpo da resposta mente sobre a existência da
+página.**
+
+### 5. A veia do `recruiter-email` do Teamtailor está MORTA, com número
+
+Varrida em `/careers`, `/career`, `/jobs`, `/careers/`, `/join-us` e `/` nos **1.128 domínios** de
+Canadá, Nórdicos, Holanda, Reino Unido, Oceania e resto da Europa (`censo-wikidata.csv` +
+`garimpo-cgstudiomap.csv`): o campo apareceu em **um único domínio, `stunlock.com`**, que já está
+registrado desde 07/09. **Rendimento novo: zero.** A veia continua rica quando acerta, mas ela é
+**rara demais para varredura** — vale só como teste de uma requisição em casa nova. Não gaste rodada
+nela outra vez.
+
+### 6. Endereços publicados achados e NÃO usados, guardados com o motivo
+
+- **`marika.makaroff@gutsy.fi`** (Marika Makaroff, *Founder & CCO*), **`katherine.senior@gutsy.fi`**
+  (*Commercial Director*) e **`emmi.nilivaara@gutsy.fi`** (*Concept Developer*) — Gutsy Pictures /
+  Gutsy Animations, a casa de **Moominvalley**. Os três publicados com nome, cargo e bio em
+  `https://www.gutsy.fi/`. **Não usar: a página diz *"Gutsy Pictures does not accept unsolicited
+  material."*** Recusa escrita.
+- **`timo.hakkarainen@kallagameworks.com`** (Timo Hakkarainen, **3D Artist**) — Kalla Gameworks,
+  Kuopio, Finlândia. Pareado na home. Parado por disciplina do produto (*The Pegasus Expedition* é
+  grand strategy de frotas). **Reabrir se a casa mudar de produto.**
+- **`mette@galdrastudios.com`** (Mette Jakobsen, *Art & Writing*), `daniel@` e `jesper@` — Galdra
+  Studios, Dinamarca. Parado por **visual novel**.
+- **`Astrid@tripletopping.com`** (Astrid Refstrup, *CEO, Owner, Game-Director*; a mesma página nomeia
+  **Inna Hansen, Art Director and Concept Artist**, sem endereço) — Triple Topping, Dinamarca, saiu de
+  `data-cfemail`. Parado por **2D desenhado à mão**.
+- **`deep@elevenfx.com`** (Deep Chahal, *Co Founder | Director*) — Eleven FX, Auckland. Parado por
+  disciplina: a casa vende edição, VFX e cor, sem pipeline de personagem.
+- **`scott@hilltop.so`** (Scott Christian, *co-founder*, narrativa e música) — Hilltop Studios,
+  Toronto. Parado porque o **diretor de arte da casa declara ilustração 2D** (*"a distinct
+  illustration art style"*, Artiom Komarov) e porque o endereço do lado de arte **não é publicado**.
+- **`rax@threewintersgames.com`** — Three Winters Games, Montréal, casa nova de veteranos. **Endereço
+  sem pessoa:** o local não é nome de ninguém achável e nem a ficha da Guilde nem o site nomeiam
+  alguém. Não vira carta enquanto não houver pareamento.
+- **`john@overthemoongames.com`** — Over The Moon, **Vancouver BC**, que é a primeira prioridade
+  geográfica da campanha. O site está em obra (*"Unpacking…"*, 200, 471.866 bytes, sem uma linha de
+  texto). **Endereço guardado; falta o pareamento nome+cargo em fonte aberta.**
