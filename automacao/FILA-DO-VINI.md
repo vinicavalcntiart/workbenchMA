@@ -3083,6 +3083,18 @@ As outras duas da mesma casa, se quiser aproveitar a sessão já destravada:
 
 ---
 
+## ~~PORTA NOVA — Dirk Interactive, **3D Character Artist – Unreal Engine 5**~~ — **SAIU EM 19/09: A VAGA FECHOU. NÃO ABRA.**
+
+> **Medido em 19/09 às 00h40 UTC, na fonte do próprio empregador, não em agregador.** O
+> `https://dirkinteractive.com/jobs.json` — que é o arquivo que a página de carreiras deles
+> carrega — devolve **`"open": false` nas QUATRO vagas** da casa (`3d-character-artist`,
+> `3d-generalist`, `concept-artist`, `art-director`). E o Google Form da candidatura responde
+> **200 mas com a URL final em `/closedform`**, que é a página de formulário encerrado do Google.
+> **Não é a rede nem o login: a requisição foi encerrada.** Texto original mantido abaixo só para
+> registro. Se a casa reabrir, o dossiê continua válido.
+
+#### (texto original, mantido só para registro; a vaga ESTÁ FECHADA, veja o aviso acima)
+
 ## PORTA NOVA — Dirk Interactive, **3D Character Artist – Unreal Engine 5** (14/09, Jhon caçador)
 
 **É a única porta nova da rodada, e ela é de PERSONAGEM PURO.** Casa inédita em tudo: zero
