@@ -6067,3 +6067,119 @@ Pedido do Vini na noite de 18/09 depois do fechamento. O que ficou:
 - **Validação:** `valida-dashboard.sh` passa (DOM falso + formato, agora com DAILY de 3 ou 5 campos e
   AGENDA); render em Chromium real em 1280 e 390 px e tema escuro, zero erro de console, zero rolagem
   lateral. Backup da versão antiga não fica no repositório: está no histórico do git (commit anterior).
+
+## Jhon A, 19/09 00h15-00h50 UTC (vigésimo terceiro turno) — DUAS ENVIADAS, E A SEGUNDA SÓ EXISTE PORQUE O FILTRO DE **TÍTULO DE DISCIPLINA** NÃO ACHA PORTA CHAMADA "OPEN APPLICATION"
+
+Rodada de formulários na virada do dia UTC. **Placar: 2 candidaturas ENVIADAS E CONFIRMADAS
+(31st Union e Small Giant Games), 0 duplicata, 0 tentativa contra veto escrito.** Personagem:
+**1 achada, 1 enviada** — a 31st Union. A segunda é rota espontânea e **não** conta como
+personagem no DAILY, mesmo a candidatura sendo de personagem por escrito.
+
+**Os números, por frente:** janela de 8 h (publicadas desde 16h00 UTC de 18/09) em 744 quadros de
+12 famílias por API — **8.431 vagas por id único, 699 quadros vivos, 145 vagas na janela, UMA da
+disciplina**; releitura das mesmas 744 sem recorte de data — **115 acertos de palavra-chave, todos
+já triados**; rotas espontâneas nas 4 famílias sem porteiro — **74 rotas em 4.300 vagas, 1 com
+dedupe limpo**; Teamtailor Connect, 172 tokens — **145 páginas vivas, 17 com personagem no menu, os
+17 já com cadastro**; Workday dos locatários conhecidos — **63 de 63 consultas medidas, 6 achados,
+0 enviável**.
+
+### 1. AS DUAS QUE SAÍRAM
+
+**31st Union (2K), `Expert Character Artist`, San Mateo, Greenhouse `7987184003`.** Publicada
+**22h40 UTC de 18/09**, dentro da janela, e era a **única** vaga da disciplina entre as 145. Três
+provas: URL `/jobs/7987184003/confirmation`, tela *"Thank you for applying. Your application has
+been received. If there is a fit, someone will be getting back to you."* e o email *Security code
+for your application to 31st Union* às 00h27m43. Régua de veto **zero**; a própria pergunta de
+patrocínio diz *"Responding Yes to this question will not preclude you from consideration for
+employment"*. Autorização respondida com a verdade (US = **No**, sponsorship = **Yes**) e
+realocação dita marcando **Yes** em *"local to the San Mateo, CA area (or open to relocation) and
+willing to come into the office 3 days a week"*. Faixa **publicada** no anúncio (USD 127.500 a
+188.700), então não houve pretensão inventada.
+
+**Small Giant Games (Zynga/Take-Two), `Open Application`, Helsinki, Greenhouse `5669163004`.**
+Casa **100% inédita**: zero ocorrência do nome e do id em `enviados.csv`, `processados.csv`,
+`docs/index.html`, `FILA-DO-VINI.md` **e zero fio no Gmail**. Mesmas três provas, às 00h45.
+
+### 2. O ACHADO DE MÉTODO, E ELE VALE MAIS QUE A SEGUNDA CANDIDATURA
+
+**Todas as minhas varreduras filtravam por palavra de DISCIPLINA no título.** Esse filtro é cego
+para a porta mais barata que existe, porque ela não se chama *Character Artist*: ela se chama
+*Open Application*, *General Application*, *Speculative*, *Unsolicited*, *Expression of Interest*,
+*Talent Pool*, *Register your interest*, *Initiative Application*, *Future Opportunities*. A regra
+4 do `BRIEF-JHON` já dizia que essas contam e valem envio; o instrumento é que não as procurava.
+
+Varrido por essas palavras **só nas famílias sem porteiro** (`greenhouse`, `teamtailor`, `breezy`,
+`pinpoint` — Lever, Ashby, SmartRecruiters, BambooHR, Recruitee, Rippling e Homerun ficam fora por
+parede ou envio quebrado **já medidos**): **74 rotas**. Setenta e três já estavam resolvidas ou são
+fora do setor, e a leitura honesta disso é que a lane não está virgem. Mas a que sobrou era casa
+nova, e nenhuma varredura por disciplina a acharia **nunca**.
+
+> **Regra: varredura por título de disciplina e varredura por rota espontânea são DUAS
+> varreduras, não uma. Quem faz só a primeira nunca vê banco de talentos.**
+
+### 3. O FORMULÁRIO MUDO, E A CORREÇÃO QUE ELE FORÇOU
+
+O Open Application da Small Giant tem **nome, sobrenome, nome preferido, email, país, telefone,
+dois anexos e uma pergunta voluntária de gênero. Zero campo de texto livre.** A frase obrigatória
+de realocação do `BRIEF-JHON` **não tem onde entrar**, e a carta genérica entrega uma candidatura
+que não diz disciplina, nem visto, nem pretensão.
+
+Conserto: o `apply-greenhouse.js` passou a aceitar as chaves **`cover`** e **`resume`** no arquivo
+de respostas, e a carta foi escrita para esta casa com o `txt2pdf.js` (`carta_sgg.txt` →
+`Vini_Cavalcanti_Cover_Letter_SmallGiant.pdf`): *"I am ready to move to Helsinki for the role"*
+como decisão, character art nomeada como a disciplina, não-cidadania da UE e patrocínio
+declarados com o caso acadêmico de visto, e EUR 55.000 com a abertura da política.
+
+> **Regra: em rota espontânea sem campo de texto, a CARTA é o formulário. Anexar a genérica ali é
+> mandar candidatura muda.**
+
+### 4. TRÊS ARMADILHAS MEDIDAS, E A PRIMEIRA É DE DEDUPE E É NOVA
+
+- **A MESMA REQUISIÇÃO EM DOIS QUADROS DE GREENHOUSE, COM IDS DE ANÚNCIO DIFERENTES.** A *Expert
+  Character Artist* aparece em `31stunion/7987184003` **e** em `2k/7999902003` — ids distintos,
+  mas o **`internal_job_id` é o mesmo, 5882575003**, e o `requisition_id` também, **R_118673**.
+  Dedupe por id de anúncio conta **duas** vagas onde existe **uma**, e enviar nos dois é duplicata.
+  É a regra 18 outra vez, com mecanismo novo: não é vitrine contra ATS, é **o mesmo ATS servindo o
+  mesmo requisito em dois boards** (o do estúdio e o do grupo). **O que amarra é o
+  `internal_job_id`.** Enviei só no quadro do próprio estúdio.
+- **QUATRO FAMÍLIAS NÃO TÊM DATA DE PUBLICAÇÃO NA LISTAGEM.** `ashby`, `bamboohr`, `pinpoint` e
+  `rippling` — **1.276 das 8.431 vagas**. Para elas a janela por data **não existe**, e escrever
+  "zero na janela" seria zero falso. Elas saem marcadas `SEMDATA` e têm de ser filtradas por
+  palavra-chave sobre o quadro inteiro. A varredura ficou versionada com isso escrito dentro, em
+  `automacao/varre-janela-ats.py`.
+- **O `tt_menu.py` ESTAVA CEGO, e produziu um zero falso na minha própria mão.** O Teamtailor
+  trocou a classe do rótulo de `break-words` para **`wrap-break-word`**, e as duas regex casavam a
+  classe literal. Resultado: **zero departamento e zero cargo em 145 páginas `/connect` VIVAS** —
+  ou seja, a conclusão "nenhuma casa do Connect tem departamento de personagem" com as páginas
+  servindo `CHARACTER` no HTML. Pego pelos **mesmos dois controles que validaram o arquivo em
+  12/09** (`mindark` = Character Art 164025, `capsulestudio` = CHARACTER 78709), que voltaram a
+  bater depois do conserto. **Parser de HTML de terceiro se roda sempre contra controle de
+  resposta conhecida antes de o número dele virar conclusão.**
+
+### 5. DUAS DÍVIDAS FECHADAS COM MEDIÇÃO, UMA DELAS SAINDO DA FILA
+
+- **DIRK INTERACTIVE ESTÁ FECHADA.** A *3D Character Artist – UE5* de Vancouver, item novo da
+  `FILA-DO-VINI` de 14/09 e a porta de personagem puro mais alinhada que a fila tinha: o
+  `jobs.json` da própria casa devolve **`open: false` nas QUATRO vagas** e o Google Form
+  redireciona para **`/closedform`**. Não é rede, é vaga encerrada. **Sai da mão dele.**
+- **REDLY GAMES `3c2a1d1e` CONTINUA VIVA e continua item de mão.** *General Interest - Open
+  Application*, Global Remote com **EU e Canadá preferidos**, jogo 3D em UE5, arte citada por
+  escrito, régua de veto **zero**. A parede não é dela: **Ashby é parede de plataforma**, reCAPTCHA
+  v2 invisível com chave única `6LeFb_YUAAAAALUD5h-BiQEp8JaFChe0e0A6r49Y`, já medido em 6 de 6.
+  Ressalva honesta para quem for mandar: a casa se descreve *"pioneering a new approach to game
+  development using emerging technology"*, que é vago mas é o mesmo cheiro do alerta da Iconic.
+
+### 6. O QUE O WORKDAY DEU, E O QUE AINDA NÃO FOI MEDIDO NELE
+
+**63 de 63 consultas com 200 e JSON de verdade** em Blizzard, Xbox `External`, King, Warner
+`global`, Sony Pictures `sonypicturesentertainment`, Sony global e CIG `CIG_Global_Careers`. **Seis
+achados, zero enviável:** os quatro da CIG são **conceito 2D ou producer** (`JR101198-1`,
+`JR101516-1`, `JR101414`, `JR101555-1`) e os dois da Blizzard já foram enviados (`R028136` em
+12/09, `R027817` em 02/09).
+
+**E a parte que NÃO é zero:** na primeira passada eu usei nomes de site errados e levei **404 em
+ZeniMax, SPE e CIG e 422 em NBCUniversal, Take-Two e EA** — 54 consultas que **não mediram nada**.
+Os três primeiros consertei achando o slug certo no próprio repositório. **`nbcuniversal.wd5`,
+`takeforward.wd1` e `ea.wd1` seguem NÃO CONFERIDOS por Workday** (o 422 é corpo recusado, não
+quadro vazio), e isso é dívida aberta, não medição. A NBCU tem lane conhecida por SmartRecruiters
+e a EA tem conta própria em `jobs.ea.com`; nenhuma das duas é substituto da leitura do Workday.
