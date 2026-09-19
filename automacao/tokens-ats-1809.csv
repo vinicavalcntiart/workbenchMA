@@ -866,3 +866,51 @@ jobvite,playground-games,sonda-slug-1809,sim,familiasB-1809,casa-real,Playground
 jobvite,redefine,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
 jobvite,ruffiangames,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
 jobvite,triton-digital,sonda-slug-1809,sim,familiasB-1809,nao-conferido,,0
+# 19/09 02h15-03h15 UTC (Jhon A, 25o turno) - LOTE gamejobs-co-1909: 34 tokens NOVOS, achados
+#   por um caminho que a campanha nao usava. O gamejobs.co tem `/search?q=<termo>` servido pelo
+#   SERVIDOR (100 cards por consulta, com empresa, local e idade relativa no card) e a PAGINA DO
+#   ANUNCIO carrega o link de Apply para o ATS DE VERDADE. Ou seja: ele e uma maquina de descobrir
+#   LOCATARIO de ATS, nao so de descobrir vaga. Medido: 14 consultas de disciplina e de rota
+#   espontanea -> 742 cards unicos, 573 com ATS resolvido, 114 empresas, e 34 locatarios que NAO
+#   estavam nesta lista. Duas candidaturas da rodada sairam exatamente daqui (greenhouse
+#   undeadlabsllc e teamtailor plummygames).
+#   LIMITE MEDIDO: pagina 2 NAO EXISTE sem login - /search?p=2&q=... responde 302 para
+#   /login?next=..., entao o alcance e 100 cards POR CONSULTA e a largura se compra com mais
+#   consultas (e com os filtros `w=` de local e `c=` de empresa), nunca com paginacao.
+#   identidade=casa-real porque o nome da empresa vem do proprio card do agregador, ao lado do
+#   link de apply; nao e adivinhacao de slug. Nao confundir com origem independente de quadro:
+#   quem quiser contar vaga desses tokens leia o quadro.
+ashby,believer,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Believer,
+ashby,sleeper,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Sleeper,
+ashby,tapblaze,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Tapblaze,
+bamboohr,arvore,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Arvore,
+bamboohr,geotechbv,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,GeoTech,
+bamboohr,sg,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Schell Games,
+breezy,wonder-works-studio-inc,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Wonder Works Studio,
+greenhouse,applovin,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,AppLovin,
+greenhouse,bonfirestudiosinc,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Bonfire Studios,
+greenhouse,discord,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Discord,
+greenhouse,keensoftwarehouseas,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Keen Software House,
+greenhouse,kraftonamericas,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Krafton,
+greenhouse,nex,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Nex,
+greenhouse,pokemoncareers,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,The Pokémon Company International,
+greenhouse,pubgmadison,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,PUBG,
+greenhouse,rockstargames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Rockstar,
+greenhouse,skillzinc,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Skillz,
+greenhouse,taketwo,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Take-Two Interactive,
+greenhouse,twitch,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Twitch,
+greenhouse,undeadlabsllc,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Undead Labs,
+greenhouse,wildlifestudios,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Wildlife Studios,
+greenhouse,zyngacareers,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Zynga,
+lever,fliff,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Fliff,
+lever,grand,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Grand Games,
+lever,mistplay,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Mistplay,
+lever,modulate,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Modulate,
+lever,peakgames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Peak,
+lever,xsolla,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Xsolla,
+personio,aesir,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Aesir Interactive,
+personio,bongfish,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Bongfish,
+smartrecruiters,epochgames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Epoch Games,
+smartrecruiters,oldskullgames1,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Old Skull Games,
+smartrecruiters,redpointlabs,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,RedPoint Labs,
+teamtailor,plummygames,gamejobs-co-1909,nao,"gjmap-1909 (search?q= do gamejobs.co, URL de apply do anuncio)",casa-real,Plummy Games,
