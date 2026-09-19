@@ -6499,3 +6499,138 @@ disciplina existem **duas**, as duas da Blizzard, e as duas **já foram enviadas
   Recruitee com `hcaptcha:true`, SmartRecruiters com DataDome, Rippling com Turnstile invisível já
   medido, e o resto fora do setor (TBWA é publicidade, Brainsquare e Clarity são TI, Knuddels é
   plataforma de chat).
+
+## Jhon A, 19/09 04h15-05h50 UTC (vigésimo sexto turno) — **DUAS ENVIADAS**, as duas por banco de talentos do Pinpoint; e o que a rodada realmente descobriu é que **o porteiro do SmartRecruiters está um CLIQUE depois de onde a campanha olhava**
+
+Rodada de formulários das 04h15. **Placar: 2 candidaturas ENVIADAS E CONFIRMADAS (Blackbird
+Interactive, Vancouver; Curve Games, Londres), 0 duplicata, 0 tentativa contra veto escrito.**
+Personagem: **0 enviada**, e o motivo está medido no §3 — o estoque de personagem **nomeado** do
+universo conhecido está seco, e as duas que saíram são **rota espontânea** com a disciplina, o
+visto e a pretensão escritos dentro.
+
+**Números por frente:** janela por data de 2 h (publicadas desde 02h15 UTC) em **773 quadros de 12
+famílias — 9.113 vagas por id único, 726 quadros vivos, 4 na janela, ZERO da disciplina**; os **34
+locatários do lote `gamejobs-co-1909` lidos INTEIROS** pela primeira vez — 33 quadros vivos, **697
+vagas, 21 acertos, 1 núcleo de personagem** (Epoch Games, que cai por trabalho voluntário);
+varredura de palavra-chave sobre o quadro **inteiro** das 773 — **80 acertos de personagem, ZERO
+enviável depois do dedupe um a um**; `gamejobs.co` em largura — **120 consultas, 2.082 cards
+únicos, 14 locatários novos versionados e 5 famílias de ATS inéditas**; Pinpoint —
+**46 locatários sondados no `register-your-interest`, 42 com 200, e apenas DUAS casas reais sem
+cadastro**, que são exatamente as duas candidaturas.
+
+### 1. AS DUAS QUE SAÍRAM
+
+- **Blackbird Interactive**, `Register Your Interest`, Vancouver BC, Pinpoint tema **2873**, 05h2x.
+  Provas: **POST 302** em `/en/themes/2873/register-your-interest`, URL final **`/thanks`** e a tela
+  *"Thanks. You have successfully registered your interest."* Zero iframe de captcha antes e depois
+  do clique. Casa inédita nos quatro arquivos **e** no Gmail (a caixa tem 14 recibos de Pinpoint e
+  nenhum é dela). Régua **zero** em 1.866 caracteres. `Locations` marcado **Vancouver e Remote**;
+  `Departments` deixado **vazio de propósito**, porque o menu desta conta é o genérico do Pinpoint
+  (Engineering, Finance, Marketing, Operations, Product, Sales) e **não tem bucket de Art** — pedir
+  opção que não existe é a armadilha medida na Brazen em 10/09. Disciplina, realocação para
+  Vancouver, falta de autorização no Canadá com pedido de patrocínio e **CAD 95.000** com a abertura
+  da política vão no `Personal Summary`, que é o único campo de texto livre do formulário.
+- **Curve Games / Curve Digital**, `Register Your Interest`, Londres, Pinpoint tema **683**, 05h3x.
+  Mesmas três formas de prova. **Ressalva honesta que enfraquece a porta:** a Curve é **publisher**,
+  não estúdio de produção, então a demanda interna de character art é menor; ela é a segunda porta
+  da rodada porque o lote de personagem nomeado estava seco, não por encaixe.
+
+**Uma ressalva de prova, dita sem maquiagem:** até o fim do turno o **recibo por e-mail das duas
+ainda não havia chegado** (a tela promete *"you will shortly receive a confirmation email"*). Isso
+não é dúvida sobre o envio — texto na tela **e** URL de confirmação são, cada um, prova suficiente
+pela regra de 07/09 — mas quem revisar amanhã deve achar os dois recibos em `pinpoint.email`.
+
+### 2. O ACHADO QUE VALE MAIS QUE AS DUAS: **O DATADOME DO SMARTRECRUITERS ESTÁ NO `/oneclick-ui`, NÃO NO ANÚNCIO**
+
+O 25º turno escreveu que *"o grep de porteiro na página dá zero nos 109 KB, e isso NÃO é porta
+limpa — é casca de SPA"*. **A leitura estava certa e a inferência estava errada**, e a diferença
+importa porque ela muda a sonda.
+
+Medido com navegador de verdade em **duas contas independentes**, uma minúscula e inédita
+(`EpochGames`) e uma alemã (`GIANTSSoftwareGmbH`):
+
+| Passo | O que acontece nas DUAS contas |
+|---|---|
+| `jobs.smartrecruiters.com/<conta>/<id>/apply` | **HTTP 200**, texto real (4.341 e 2.537 caracteres), **zero** requisição de `captcha-delivery`, e **zero campo** (`inputs=0`) |
+| clique em *I am interested* → `/oneclick-ui/company/<conta>/publication/<uuid>` | `ct.captcha-delivery.com/i.js`, `geo.captcha-delivery.com/interstitial/` e `/captcha/`, página com **0 caracteres** |
+
+> **Regra: a página do anúncio do SmartRecruiters é limpa MESMO; o porteiro nasce no passo do
+> formulário.** A sonda barata da família é **clicar uma vez em *I am interested* e olhar a rede** —
+> nunca grepar o HTML do anúncio, que não decide nada nem para um lado nem para o outro. A família
+> segue parede neste IP, agora com a causa no lugar certo. Sonda em `/home/user/apply/sr_step.js`.
+
+### 3. POR QUE ZERO DE PERSONAGEM, COM A CONTA NA MÃO
+
+Varri **K1 sobre o quadro inteiro** das 773 (sem recorte de data): **80 acertos**. Deduplicados um
+a um, **nenhum é enviável**, e a lista existe em `processados.csv` para a próxima rodada não
+refazer: 2K/31stunion enviada em 18/09 (e a irmã é *Concept*, 2D); NBCU `744000150414819` e
+`744000150186264` são DataDome de desafio; People Can Fly `744000149844299` tem veto escrito;
+Ubisoft e Keywords são DataDome; Absurd, Riot `8163170`, Wargaming `8161671` (já **recusada**),
+Fatshark, Hasbro, Mob, Airship, beffio, Kepler/Tactical e Larian estão **enviadas**; Snowprint tem
+veto; as três da Behaviour são hCaptcha (uma recusada, uma enviada à mão, `86ddd557` segue item de
+mão); Frontier e Avalanche foram enviadas à mão em 10/09; Asobo é hCaptcha; thatgamecompany é
+Ashby; ICON `150`, IGG `289`, OWI `199`, Streamline `84`/`106`, Stirling `77`, Barnstorm `176` e
+DMFX `129` são **BambooHR, que lê e não envia**; AGBO tem veto de patrocínio; Bluehole e Loonshot
+já recusaram; Imageworks `4363707003`/`4363708003` é Character **FX** (simulação, fora); Skydance
+`7b435bb2` é *Character Surfacing* **Trainee**.
+
+> **A conclusão operacional, e ela deve guiar a próxima rodada: vaga de personagem nova só entra
+> por LOCATÁRIO NOVO.** Foi por isso que esta rodada gastou o tempo em descoberta de locatário.
+
+### 4. A PORTA DE PERSONAGEM QUE PARECIA A MELHOR DA SEMANA E NÃO É VAGA: **EPOCH GAMES É VOLUNTARIADO**
+
+As três da Epoch (`3D Character Artist`, `3D Creature Artist`, `Reallusion Character Creator 3D
+Artist`, todas `remote=true`, casa inédita) estavam no 25º turno como *"o item de SmartRecruiters
+mais alinhado que a campanha tem"*. Lidas inteiras no navegador, o nível é **`Intern`** e o texto é
+da própria casa: *"Epoch Games is a volunteer-based, all-online, global game development team. We
+have no centrally-located headquarters and are unincorporated at this time"* e *"In this volunteer
+position we are looking for someone who specializes in creating realistic 3D Character Body, Face,
+Hair and/or Clothing/Armor Meshes and Textures"*. Sem salário, sem patrocínio, sem realocação.
+
+> **Regra: título perfeito de personagem em quadro pequeno e antigo merece a leitura do
+> `Company Description` ANTES de virar fila.** Régua de veto não pega isto: não há veto nenhum, a
+> vaga simplesmente não é emprego.
+
+### 5. TRÊS ARMADILHAS MEDIDAS, E AS TRÊS SÃO DE IDENTIDADE OU DE LEITURA
+
+- **TRÊS DOS CINCO LOCATÁRIOS PINPOINT SEM CADASTRO SÃO FALSO AMIGO**, conferidos pelo domínio que a
+  própria página linka: `marshmallow` → `marshmallow.com`, **seguradora** britânica; `richter` →
+  `richter.global`, **consultoria**; `shortcut` → `shortcut.com`, **software de gestão de projeto**.
+  Some-se **seis contas de DEMONSTRAÇÃO** (`frontierdevelopments`, `rewind`, `tensquaregames`,
+  `metropolis`, `hercules`, `amplitude`). **E a assinatura de demo tem VARIANTE que o brief não
+  tinha:** o `volka` serve *Junior Narrative Designer London / Senior Motion Designer Paris / Lead
+  Community Manager New York / Marketing Executive Paris* — conjunto **diferente** dos cinco
+  conhecidos. O discriminador não é a lista literal, é **cargo genérico + Paris/Nova York/Londres +
+  zero vaga técnica**.
+- **A API DO LEVER SERVE ANÚNCIO QUE A CASA RETIROU.** A `Future Opportunities` da **Theorycraft**
+  (`598cb8e2`) vem no `/v0/postings/theorycraftgames` com `hostedUrl` próprio, e o `hostedUrl`
+  responde **404 por curl e por navegador**, assim como o quadro público. **200 na API não é porta
+  viva; confira o `hostedUrl`.** Mesma família do fantasma Quixel.
+- **A REGRA DO `size=` PRECISA DO `bframe`, NÃO DO `size=` SOZINHO.** Medido na família **BreatheHR**
+  (Secret Mode, Sheffield), que é ATS inédito e cujo formulário é Rails legível com 22 campos: a
+  `cap_size.js` lê **`size=invisible`**, o que pela tabela atual seria "sem desafio na carga" — e o
+  **`bframe` está presente, VISÍVEL e com altura 150**, com `refresh_2x.png`, `audio_2x.png` e
+  `/api2/payload` na rede, que é a assinatura do desafio **já desenhado**. O invisible **escalou**.
+  **Discriminador corrigido: bframe visível com altura > 0 é parede, venha com `size=normal` ou com
+  `size=invisible`.**
+
+### 6. A FONTE NOVA EM LARGURA: O QUE ELA RENDEU E ONDE ELA ACABA
+
+`gamejobs.co/search?q=` em três fatias — 60 consultas de disciplina (**966 cards**), 42 de rota
+espontânea (**815**) e 18 de termo lateral de personagem (hair, fur, digital double, likeness,
+blendshape, facial, clothing, armor, blendshape, marvelous designer: **301**). Rendimento honesto:
+**zero casa nova com vaga de personagem viva** — os 68 cards de personagem do núcleo são exatamente
+as casas do §3 — e **14 locatários novos** em famílias que a varredura já lê, versionados como
+`gamejobs-co-1909b`, entre eles **Mojang**, **Atari**, **Crytek**, **Rovio**, **Techland**, **GIANTS
+Software** e o quadro **global** da Sony Interactive com 192 vagas.
+
+**E cinco famílias de ATS que a campanha nunca tinha visto**, anotadas no `tokens-ats-1809.csv` como
+**receita de URL e não como token**, porque token sem leitor produz zero falso: `polymer`
+(`jobs.polymer.co/<slug>/<id>`), `hiringthing`, `parallel` (`useparallel.com`), `dover`
+(`app.dover.io/apply/<Empresa>/<uuid>`), `breathehr` e `50skills`.
+
+**Duas portas que pareciam formulário e não são:** a *Spontaneous Application* da **Yellow Brick
+Games** (Quebec City) tem "Apply here" que é **mailto ofuscado pelo Cloudflare**
+(`/cdn-cgi/l/email-protection`), e decodificado dá `jobs@yellowbrickgames.ca` — vira fila de e-mail,
+e a casa já recebeu carta fria em 17/09; e a **Tanglewood** só tem *Open Application* de
+**Engineering** e de **Tech Artist**, fora da disciplina.
