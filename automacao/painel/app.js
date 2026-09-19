@@ -69,7 +69,7 @@ const isRemoto = p => /remot/i.test((p.country||"")+" "+(p.note||""));
 const prioOf = p => p.prio && PRIO_W.hasOwnProperty(p.prio) ? p.prio : (p.origem==="email" ? "media" : "baixa");
 const MORTA_RE = /VAGA EXPIRADA|SEM VAGAS|NÃO EXISTE|NÃO APLICAR|não está mais|não aparece mais|saiu do ar|estúdio fechado|liquida/i;
 const isMorta = p => MORTA_RE.test(p.note||"") && !isApplied(p);
-const A_MAO_RE = /(?:^|[\s(,;.])[aà]\s+m[ãa]o(?![a-zç])/i;
+const A_MAO_RE = /(?:^|[\s(,;.:])(?:[aà]|na)\s+m[ãa]o(?![a-zç])|m[ãa]o do vini|fila-do-vini/i;
 const GRANDE_MAO_RE = /[àa]\s+m[ãa]o em \d/i;
 const CHAR_RE = /character|personagem|creature|criatura|vis dev|visual development|groom/i;
 const isPersonagem = p => CHAR_RE.test((p.name||"")+" "+(p.note||"").slice(0,200));
@@ -200,7 +200,7 @@ function abrirSecao(id, filtro){
 function renderAcoes(){
   const c = counts(), p = pendencias(), items = [];
   const faltaEnviar = DOSSIES.filter(d=>d[4]);
-  if(c.aberto > 0) items.push(["urgente","🔥","<b>"+c.aberto+" estúdio"+(c.aberto>1?"s":"")+" respondeu"+(c.aberto>1?"ram":"")+"</b> e a conversa ainda está sem sequência","#conversas"]);
+  if(c.aberto > 0) items.push(["urgente","🔥","<b>"+c.aberto+" estúdio"+(c.aberto>1?"s":"")+" respondeu"+(c.aberto>1?"ram":"")+"</b> e a conversa ainda está sem sequência","#agora"]);
   if(faltaEnviar.length > 0) items.push(["urgente","📋","<b>"+faltaEnviar.length+" formulário"+(faltaEnviar.length>1?"s prontos":" pronto")+" para colar</b>, começando por "+esc(faltaEnviar[0][0])+": só falta você enviar","#dossies"]);
   if(p.altas.length > 0) items.push(["urgente","🎯","<b>"+p.altas.length+" vaga"+(p.altas.length>1?"s quentes":" quente")+" sem candidatura</b>, começando por "+esc(p.altas[0].name.split(/ - | \(/)[0]),"#portais","alta"]);
   if(p.aMao.length > 0) items.push(["atencao","🖐️","<b>"+p.aMao.length+" candidaturas só à mão</b>: captcha de desafio, conta com senha ou portal que não abre para a automação","#portais","mao"]);
@@ -222,16 +222,19 @@ function renderAcoes(){
 }
 
 /* ---------- conversas ---------- */
+let convLimite = 6;
 function renderConversas(){
   const vivos = CONTACTED.filter(s=>["respondeu","conversa","entrevista","oferta"].includes(stageKnown(s)));
   const ORD = {oferta:0, entrevista:1, conversa:2, respondeu:3};
   vivos.sort((a,b)=>ORD[stageKnown(a)]-ORD[stageKnown(b)] || b.batch-a.batch);
   const rec = CONTACTED.filter(s=>stageKnown(s)==="recusado").length;
-  $("#conversasList").innerHTML = vivos.length ? vivos.map(s=>{
+  $("#conversasList").innerHTML = vivos.length ? vivos.slice(0, convLimite).map(s=>{
     const st = stageKnown(s);
     return '<div class="c"><div class="n">'+esc(s.name.split(" (")[0])+'</div><div class="p">'+esc(s.country)+' · <a href="mailto:'+esc(s.email)+'">'+esc(s.email)+'</a></div>'
       + '<div class="e"><span class="pill '+STAGE_PILL[st]+'">'+STAGE_LABEL[st]+'</span> <span class="pill mute">carta de '+fmtBR(dataDoLote(s.batch))+'</span></div></div>';
   }).join("") : '<p class="hint">Nenhuma conversa aberta agora. As respostas humanas aparecem aqui quando o Comunicador as registra.</p>';
+  $("#convMais").style.display = vivos.length > convLimite ? "" : "none";
+  $("#convMais").textContent = "mostrar mais ("+Math.max(0,vivos.length-convLimite)+" restantes)";
   $("#convBadge").textContent = vivos.length+" aberta"+(vivos.length===1?"":"s")+" · "+rec+" recusa"+(rec===1?"":"s");
   $("#nConv").textContent = vivos.length || "";
 }
@@ -641,8 +644,51 @@ $("#exportBtn").addEventListener("click", ()=>{
 });
 $("#resetBtn").addEventListener("click", ()=>{ if(window.confirm("Limpar todas as marcações de andamento?")){ progress={}; saveProgress(); renderAll(); } });
 
+
+/* ---------- sua vez (modo simples) ---------- */
+let suaVezLimite = 5;
+function renderSuaVez(){
+  const p = pendencias(); let items = [];
+  const corta = (t,n)=>{ t=String(t||"").replace(/\s+/g," ").trim(); return t.length>n ? t.slice(0,n).replace(/\s\S*$/,"")+"…" : t; };
+  const motivo = note => { const m = String(note||"").match(/(?:NA M[AÃ]O DELE|[àa] m[ãa]o)[^.;]*[.;]?/i); return corta(m ? m[0] : note, 96); };
+  p.aMao.forEach(pt=>items.push({w:prioOf(pt)==="alta"?0:1, cls:prioOf(pt)==="alta"?"urgente":"atencao", ic:isPersonagem(pt)?"🎯":"🖐️", tit:pt.name.split(/ - | \(/)[0], sub:corta(pt.country,40), txt:motivo(pt.note), href:pt.url, key:pt.url, pers:isPersonagem(pt)}));
+  DOSSIES.forEach(d=>{ if(d[4]) items.push({w:0, cls:"urgente", ic:"📋", tit:d[0], sub:d[1], txt:"Texto pronto no dossiê: abra a vaga, cole e envie", href:d[2], key:d[2], alvo:"dossies", pers:CHAR_RE.test(d[1])}); });
+  p.grandeMao.forEach(g=>items.push({w:1, cls:"atencao", ic:"🏆", tit:g[0].split(/[,:(]/)[0].trim(), sub:corta(g[1]||"",40), txt:corta(g[4],96), href:g[2], key:g[2], pers:false}));
+  p.alertaBloq.forEach(g=>items.push({w:2, cls:"info", ic:"🔔", tit:"Alerta de vaga: "+g[0].replace(/\s+Studios$/,""), sub:"dois minutos", txt:"Criar o alerta de vaga no portal; o captcha só passa no seu navegador", href:g[2], key:"alerta:"+g[2], pers:false}));
+  items.sort((a,b)=>a.w-b.w || (b.pers?1:0)-(a.pers?1:0));
+  const todos = items.length;
+  items = items.filter(it=>it.pers || it.w===0);
+  const outros = todos - items.length;
+  const lista = $("#suaVezList");
+  lista.innerHTML = items.length ? items.slice(0,suaVezLimite).map((it,i)=>
+    '<div class="acao '+it.cls+'"><span class="ic">'+it.ic+'</span><div class="corpo"><b>'+esc(it.tit)+'</b><span class="p">'+esc(it.sub)+'</span><div class="txt">'+esc(it.txt)+'</div></div>'
+    + '<div class="btns"><a class="btn ir" href="'+esc(it.href)+'" target="_blank" rel="noopener">Abrir ↗</a>'+(it.alvo?'<a class="btn" href="#'+it.alvo+'">dossiê</a>':'')+(it.key?'<button class="btn feito" type="button" data-key="'+esc(it.key)+'">✓ feito</button>':'')+'</div></div>').join("")
+    : '<div class="acao boa"><span class="ic">✅</span><div class="corpo"><b>Nada na sua mão agora</b><div class="txt">A automação está cuidando do resto. Volte mais tarde ☺️</div></div></div>';
+  lista.querySelectorAll(".feito").forEach(b=>b.addEventListener("click", ()=>{ applied[b.dataset.key] = true; saveApplied(); renderAll(); }));
+  $("#suaVezMais").style.display = items.length > suaVezLimite ? "" : "none";
+  $("#suaVezMais").textContent = "mostrar mais ("+Math.max(0,items.length-suaVezLimite)+" restantes)";
+  $("#suaVezBadge").textContent = items.length ? items.length+" de personagem ou quente" : "em dia";
+  $("#suaVezOutros").innerHTML = outros ? 'Mais <a href="#portais" data-filtro="mao">'+outros+' portas de ambiente ou de segunda linha</a> ficam na lista completa.' : "";
+}
+const MODO_KEY = "campanha-modo";
+function setModo(tudo){
+  document.body.classList.toggle("tudo", !!tudo);
+  $("#modoBtn").textContent = tudo ? "Modo simples" : "Ver tudo";
+  try { localStorage.setItem(MODO_KEY, tudo ? "tudo" : "simples"); } catch(e){}
+}
+$("#modoBtn").addEventListener("click", ()=>setModo(!document.body.classList.contains("tudo")));
+try { setModo(localStorage.getItem(MODO_KEY)==="tudo"); } catch(e){ setModo(false); }
+document.addEventListener("click", e=>{
+  const a = e.target.closest('a[href^="#"]'); if(!a) return;
+  const alvo = document.getElementById(a.getAttribute("href").slice(1));
+  if(alvo && alvo.closest(".so-tudo")) setModo(true);
+});
+$("#suaVezMais").addEventListener("click", ()=>{ suaVezLimite += 6; renderSuaVez(); });
+$("#convMais").addEventListener("click", ()=>{ convLimite += 12; renderConversas(); });
+$("#suaVezOutros").addEventListener("click", e=>{ const a=e.target.closest("a"); if(a){ abrirSecao("portais", a.dataset.filtro); } });
+
 function renderAll(){
-  renderPlacar(); renderSemana(); renderAgenda(); renderTiles(); renderAcoes(); renderConversas(); renderNovidades();
+  renderPlacar(); renderSemana(); renderAgenda(); renderTiles(); renderSuaVez(); renderAcoes(); renderConversas(); renderNovidades();
   renderPortais(); renderGrandes(); renderFormsChart(); renderMailChart(); renderFunnel(); renderStatusBar(); renderPaises();
   renderJoe(); renderProspec(); renderKit(); renderDossies(); renderChips(); renderRows();
 }
