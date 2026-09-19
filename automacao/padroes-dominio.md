@@ -955,3 +955,181 @@ bytes**, aberta em 19/09) escreve *"has been described as a love letter to Dark 
 em primeira pessoa, que é o que a regra de 18/09 exige. E `overthemoongames.com` (**200, 472.233 bytes**)
 segue em obra, com três linhas de texto (*"This page requires JavaScript to display. Unpacking…"*).
 **Endereço guardado; carta não, enquanto a casa não voltar a publicar alguma coisa.**
+
+## PADRÕES PROVADOS EM 19/09/2026 ÀS 04h35 (Joe), todos por endereço LITERAL publicado
+
+Nada aqui é inferido. Cada linha tem pelo menos dois endereços reais do mesmo domínio, e onde o
+domínio usa **mais de um formato** isso está escrito, porque esconder a exceção transforma confiança
+baixa em chute.
+
+### A REGRA NOVA QUE ESTE ARQUIVO AINDA NÃO TINHA: **PRIMEIRO NOME REPETIDO QUEBRA O PADRÃO, E O SEGUNDO HOMÔNIMO LEVA NOME+SOBRENOME COLADO**
+
+A `/nosotros` da **Keytoon Animation Studio** (Paterna, Valência) publica os três da casa e o domínio
+mostra o mecanismo inteiro numa página só:
+
+| Endereço | Pessoa | Cargo |
+|---|---|---|
+| `david@keytoon.com` | **David** Cuevas | Director |
+| `davidlacruz@keytoon.com` | **David** Lacruz | Productor |
+| `jon@keytoon.com` | Jonathan Cuevas | Director |
+
+O padrão da casa é **primeiro nome puro** (`david@`, `jon@`), mas **há dois Davids**, e o segundo
+recebeu **nome+sobrenome colado, sem ponto** (`davidlacruz@`). Isto vale para a campanha inteira:
+**quando um padrão de primeiro nome falha, a alternativa natural não é `nome.sobrenome` — é
+`nomesobrenome` colado**, porque quem configurou a caixa estava resolvendo uma colisão, não mudando de
+convenção. Fonte: `https://www.keytoon.com/nosotros` (200, 149.725 bytes, aberta em 19/09 às 04h35),
+onde os três cartões trazem nome, cargo e `mailto:` no mesmo bloco.
+
+### Freefolk (Londres) — **DUAS formas no mesmo domínio, e a separação é por antiguidade de cadeira**
+
+`https://www.freefolk.com/contact` (**200, 23.628 bytes**) publica **treze** pessoas com cargo, todas
+com o endereço ofuscado em `data-cfemail` do Cloudflare. As formas:
+
+- **Primeiro nome puro** para a direção e a produção sênior: `fi@` (Fi Kilroe, *CEO / Executive
+  Producer*), `paulw@` (Paul Wright, *COO* — **nome + inicial do sobrenome**), `vittorio@` (Vittorio
+  Giannini, *Director of Business Development & Strategy*), `cheryl@` (Cheryl Payne, *Head Of Commercial
+  Production*), `charles@` (Charles Gillett, *Producer*), `jessica@` (Jessica Verner, *Producer*),
+  `meg@` (Meg Guidon, *Film and Episodic Executive Producer*), `sean@` (Seán O'Keefe, *PR & Marketing
+  Manager*).
+- **`nome.sobrenome@`** para quem entrou depois: `laura.ricketts@` (*Executive Producer*),
+  `hannah.dakin@` (*Senior Producer*), `regan.perry@` (*Producer*), `robyn.guthrie@` (*Producer*),
+  `megan.hindle@` (*VFX Coordinator*).
+
+**Leitura:** num domínio assim, para nome novo **tente `nome.sobrenome` primeiro**, porque a forma
+curta está tomada pelos antigos. E note que a casa é *"a registered trading name of **Finish TV Ltd**"*,
+ou seja o grupo tem outro nome jurídico — armadilha de domínio a mais.
+
+### SSVFX (Dublin) — **um formato, DOIS domínios**, o do estúdio e o do grupo-mãe
+
+`inicial+sobrenome@`, e a seção *Meet the Team* de `https://www.ssvfx.ie/about` (**200, 20.762 bytes**)
+publica os oito com `mailto:` cru e com o endereço repetido no atributo `title`:
+
+| Endereço | Pessoa | Cargo |
+|---|---|---|
+| `ckeenan@ssvfx.ie` | Ciarán Keenan | Head of Production |
+| `dnolan@ssvfx.ie` | Donal Nolan | VFX Supervisor |
+| `lmcdowall@ssvfx.ie` | Laura McDowall | VFX Producer |
+| `jkha@ssvfx.ie` | Johnni Kha | VFX Producer |
+| `rgantly@ssvfx.ie` | Ronan Gantly | VFX Supervisor |
+| `jwalshe@screenscene.ie` | Jake Walshe | President & CEO |
+| `mobyrne@screenscene.ie` | Mura O'Byrne | Vice President and CFO |
+| `hmontag@screenscene.ie` | Hubert Montag | COO |
+
+**Os três do topo usam o domínio do grupo (`screenscene.ie`) e o mesmo formato.** Quem procura só o
+domínio do estúdio perde a diretoria inteira.
+
+### REALTIME (Real-Time Visualisation Ltd, Reino Unido) — `primeironome@realtimeuk.com`, com **prova de entrega**
+
+`jane@realtimeuk.com` (Jane Forsyth, *Head of Production - Games*) recebeu carta em **07/09** e
+**entregou, sem bounce** (`enviados.csv:741`). O rodapé de `https://www.realtimeuk.com/` (**200,
+150.032 bytes**) publica mais três `mailto:` **rotulados por divisão e sem nome**: `dave@`→*Games* e
+*Episodic & Film*, `paul@`→*Automotive*, `tony@`→*Immersive*; e
+`https://realtimeuk.com/general-contact/` (**200, 69.406 bytes**) publica os **nomes com cargo e sem
+endereço**: *David Cullinane — Executive Producer - Games*, *Paul McSweeney — Head of Automotive*,
+*Tony Prosser — CEO*. **O casamento fecha nos três por rótulo de divisão E por primeiro nome.**
+Método: quando o rodapé dá endereço sem nome, a página de contato costuma dar nome sem endereço —
+**são as duas metades da mesma tabela**.
+
+### B·Water Animation Studios — **DOIS domínios da mesma casa, com DOIS formatos diferentes**, e é a armadilha mais fina desta rodada
+
+| Domínio | Formato | Endereços reais |
+|---|---|---|
+| `b-waterstudios.com` | **iniciais** (2 letras) | `dh@` (Dirk Hampel, *CEO*), `cb@` (Carlos García, *T. D. Director*), `ag@` (Angélica García, *General Manager*), `info@` |
+| `b-waterstudios.es` | **nome.inicial(is) do sobrenome** | `fabian.s@` (Fabian Schier, *Ex. Producer assistant*), `idayra.pd@`, `juan.cg@`, `andrea.ug@` |
+
+Os quatro primeiros e o `fabian.s@` estão publicados em `https://b-waterstudios.com/contact/`
+(**200, 91.278 bytes**, `dateModified 2025-12-04`), com nome e cargo entre parênteses ao lado de cada
+um. Os três do `.es` são **reais e vivos**: vieram do **Cc de uma resposta que a própria casa mandou ao
+Vini em 26/08** (thread `1a03e2b4fabb6674`, de `idayra.pd@b-waterstudios.es`, Operations Department).
+**Escrever para o `.com` quando a pessoa está no `.es` (ou o contrário) é erro garantido**, e as duas
+formas não se convertem uma na outra.
+
+### Quatro domínios de `nome.sobrenome@` provados por seis ou mais endereços publicados
+
+- **`alteregopost.com`** (Alter Ego — Toronto, Vancouver, Los Angeles) — 6: `greg.edgar@` (*CEO /
+  Managing Partner*), `hilda.pereira@` (*VP / Executive Producer*), `pravina.sippy@* (*EP / LA*),
+  `craig.harris@` (*Managing Partner / Vancouver*), `genna.mcauliffe@` (*EP / Long Form*),
+  `jane.garrah@` (*EP / Colour*). Fonte: `https://www.alteregopost.com/contact` (**200, 53.204 bytes**).
+  **Bônus grande:** a mesma página lista **43 pessoas do time com cargo e SEM endereço**, incluindo
+  *Leonardo Silva — **Head of CG***, *Darren Achim — **Head of VFX***, *David Whiteson — **Head of
+  VFX***, *Erica Hou — **CG Artist*** e *Rob Fisher — Head of Motion Design*. Os endereços deles seriam
+  **montados**, e a casa é grande — **não gastar a única carta num montado**.
+- **`company3.com`** (Company 3) — **23** endereços `nome.sobrenome@` publicados em
+  `https://www.company3.com/contact` (**200**). Uma exceção medida: `lindseyarnold@` (colado) coexiste
+  com `lauren.arnold@`, o que é **outra colisão de sobrenome** resolvida por colagem — mesma mecânica
+  da Keytoon.
+- **`mels-studios.com`** (MELS, Montréal) — 6: `patrick.jutras@quebecormedia.com` (*Président*, e note
+  o **domínio do grupo Québecor**), `auree.lepage@`, `raphael.rainville@`, `frederic.boucher@` (o
+  publicado é `fred.boucher@`, **apelido e não o nome do cartão, que diz "Frederic Boucher"**),
+  `sophie.houle@`, `jerome.bourgault@`. Fonte: `https://www.mels-studios.com/contact/` (**200, 55.020
+  bytes**). **Cuidado: o cartão escreve "Frederic" e a caixa é `fred.`** — o domínio usa o apelido.
+- **`rotorstudios.com`** (Rotor Studios — Sydney, Melbourne, Toronto, Nagoya) — 3 de pessoa
+  (`colin.brennan@`, `kosuke.sawa@`, `shirley.li@`) mais **caixas de cidade** (`sydney@`, `melbourne@`,
+  `toronto@`, `nagoya@`) e `incidents@`. Fonte: `https://www.rotorstudios.com/contact-us`.
+
+### Três domínios franceses de `inicial.sobrenome@`, provados por cinco ou mais
+
+- **`malherbe.paris`** — `e.birnbaum@` (Ella Birnbaum, *Managing & Creative Director*, Nova York),
+  `m.cervantes@` (Maribel Cervantes Ochoa, *General Manager Asia Office & Creative Director*, Xangai),
+  `j.dossantos@` (Johanna Dos Santos, *Chief of Staff*), `m.loiseau@` (Mallorie Loiseau,
+  *Communication & Press relations*), `a.demalherbe@`, mais `myjob@`. Fonte:
+  `https://malherbe.paris/contact-us` (**200, 106.724 bytes**).
+- **`epicure.fr`** — 8: `b.niewiadomskyj@`, `c.cerutti@`, `c.martin@`, `e.dhonner@`, `e.jousse@`,
+  `g.walbron@`, `s.cankaya@`, `s.domange@`.
+- **`parmilesluciolesfilms.fr`** (Valence) — 8 com nome e cargo na `/a-propos` (**200, 32.243 bytes**):
+  `j.ducmauge@` (Jérôme Duc-Maugé, *Producteur délégué*), **`f.bernard@` (François Bernard, *Directeur
+  des productions et directeur studio d'animation*)**, `s.durand@` (Stéphanie Durand-Barracand,
+  *Productrice fiction*), `b.petit@` (Bertrand Petit, *Directeur administratif et financier*),
+  `p.pasquier@`, `i.canal@`, `m.prudon@`, `m.ayroulet@`. Note que **sobrenome composto é truncado no
+  primeiro** (`s.durand@` para Durand-Barracand).
+
+### Dois domínios de `inicial+sobrenome colado`, sem ponto
+
+- **`atlantistv.fr`** (Kingsize / Atlantis TV, Paris) — 5: `cmalige@`, `cvignon@`, `fhouzelle@`,
+  `jgalmisch@`, `jvivier@`.
+- **`magelis.org`** (Pôle Magelis, Angoulême — **é a agência do polo, não um estúdio**) — **14**:
+  `acsabas@`, `camiot@`, `cmirallez@`, `cnivault@`, `dbeauvallet@`, `ejacobjuin@`, `fbaillard@`,
+  `fcros@`, `gzannier@`, `hbrunelle@`, `mmartinot@`, `plefort@`, `sdecros@`, `slilloriemain@`,
+  `smassavie@`, `vmassiat@`. Serve como **porta de rede para os estúdios de Angoulême**, não como casa.
+
+### Cocoa (Helsinque) — mais uma casa com DUAS formas, e a exceção é o CEO
+
+`niko.waaralinna@cocoa.fi` (Niko Waaralinna, *CEO / EP*) é **`nome.sobrenome`**, enquanto todos os
+outros são **primeiro nome ou apelido**: `lotti@` (Charlotte Molander), `eemeli@` (Eemeli Katajisto),
+`ilona@` (Ilona Malinen), `anton@` (Anton Molander), **`dermot@` (Dermot Gallagher, *CFX — HEAD OF
+STUDIO*)**. Fonte: `https://cocoa.fi/contact` (**200, 61.386 bytes**); o mesmo bloco repete em
+`/about/`, `/studio-cocoa/` e `/production-service/`. **Nota de apelido: `lotti@` para Charlotte.**
+
+### Autonomicity Games (Canadá) — `primeironome@acitygames.com` com cinco exceções medidas
+
+`https://www.acitygames.com/team` (**200, 39.697 bytes**) publica uma tabela com **ROLE** e **EMAIL**
+para **quatorze** pessoas. A forma principal é primeiro nome (`eugen@`, `marcos@`, `miguel@`, `kate@`,
+`geo@`, `carlos@`, `yomi@`, `zxander@`), mas há `ceo@` (Sherif Botros), `chairman@` (Ramy Taraboulsi),
+`sophiav@` (Sophia Vong, **nome + inicial**), `gilbertk@` (Gilbert Kong, **nome + inicial**),
+`imack@` e `rchang@` (**inicial + sobrenome**), e `arty@` para **Alexander Melo** (apelido que não vem
+do nome). **Casa registrada como descarte** (ver `PESSOAS-SEM-CARTA.md` desta rodada), mas o padrão
+fica: num domínio pequeno convivem tranquilamente quatro formas.
+
+### Endereços de pessoa PUBLICADOS achados nesta rodada e **NÃO** usados, com o motivo
+
+| Endereço | Pessoa e cargo | Casa | Motivo de não virar carta |
+|---|---|---|---|
+| `cb@b-waterstudios.com` | Carlos García, *T. D. Director* | B·Water (Tenerife/Barcelona/Colônia/Budapeste) | **a casa já respondeu**: `idayra.pd@b-waterstudios.es` escreveu ao Vini em 26/08 e ele respondeu; isto é território do Comunicador, não prospecção |
+| `ericr@lumapictures.com` | Eric Robertson, *New Business* | Luma Pictures (Melbourne/LA/Vancouver) | cargo é venda, e **`recruiting@lumapictures.com` quicou DUAS vezes** (02/09 e 06/09) |
+| `keto@gimmick.dk` | Ulla Keto, *Studio Manager* | Gimmick VFX (Copenhague) | **veto escrito** na `/contact`: *"Work permit for the EU is needed"* |
+| `dermot@cocoa.fi` | Dermot Gallagher, *CFX — Head of Studio* | Cocoa (Helsinque) | a única frase com `characters` do grupo é da **irmã 2D** (*"our wonderful sister company Boutique Animation will make you smile with characters … and 2D animation"*) |
+| `vesku@toast.fi` | Vesa Vinni, *VFX* | Toast Post Production (Helsinque) | post de publicidade de **9 pessoas**, com `AI Services` e `Toastr ai` no menu principal |
+| `tero@outo.fi`, `jussi@outo.fi` | *Creative Lead, Senior-animaattori* (×2) | Studio Outo (Oulu/Helsinque) | `hahmo` (personagem, em finlandês) dá **ZERO** no domínio; é animação de comunicação e ensino |
+| `jon@keytoon.com` | Jonathan Cuevas, *Director* | Keytoon (Paterna, Valência) | **quinto toque no domínio**: `info@` em 04/08, 30/08 e 14/09, `david@` em 09/09 **com follow-up em 18/09**. A disciplina é ótima (*"animación 3D"*, Goya, vaga de **Modelador**) — reabrir só se o maestro quiser |
+| `tom@cosavfx.com` | Tom Mahoney, *Partner / VFX Supervisor* | CoSA VFX | **virou ficha nesta rodada** |
+| `erik@swiss.se` | Erik Holmedal, *Executive Producer* | Swiss International | **virou ficha nesta rodada** |
+| `ckeenan@ssvfx.ie` | Ciarán Keenan, *Head of Production* | SSVFX | **virou ficha nesta rodada** |
+| `dave@realtimeuk.com` | David Cullinane, *Executive Producer - Games* | REALTIME | **virou ficha nesta rodada** |
+
+### Correção de arquivo: a **Keytoon não é de Madri**
+
+`automacao/pessoas.csv:199` registra *"Keytoon Animation Studio, Espanha (Madri)"*. A `/contacto`
+(**200, 150.522 bytes**, aberta em 19/09 às 04h35) diz, colado: *"KEYTOON ANIMATION STUDIO — Ronda
+Narciso Monturiol Nº 6, oficina 108 B, Edificio Destro B, **Parque tecnológico, Paterna, Valencia
+(46980)**"*, e a home diz *"Estudio de animación fundado en **Valencia, España**, en el año 2004"*.
+Fica corrigido aqui para não propagar.
