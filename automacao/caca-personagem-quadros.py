@@ -2,7 +2,7 @@
 # Varredura PERSONAGEM PRIMEIRO: relê os 123 quadros do censo de 08/09 na fonte oficial
 # e devolve SÓ o que é personagem, criatura, groom ou cabelo no TÍTULO.
 # Nada de ambiente, prop, level art, hard surface ou generalista.
-import json, re, sys, urllib.request, urllib.error, csv
+import json, os, re, sys, urllib.request, urllib.error, csv
 from concurrent.futures import ThreadPoolExecutor
 
 CENSO = '/home/user/workbenchMA/automacao/censo-boards-0809.csv'
@@ -167,8 +167,12 @@ vivas = [t for t in tudo if not t[2].startswith('__ERR__')]
 print('linhas lidas:', len(vivas), '| quadros com erro:', len(erros), file=sys.stderr)
 
 hits = [t for t in vivas if ALVO.search(t[2] or '') and not FORA.search(t[2] or '')]
-with open('/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/personagem_hits.csv',
-          'w', newline='', encoding='utf-8') as fh:
+# CONSERTADO EM 19/09 19h UTC (Jhon A, 34o turno): o caminho do scratchpad estava CRAVADO com
+# o id de OUTRA sessao, e por isso o script morria em FileNotFoundError DEPOIS de ler os 123
+# quadros - ou seja, gastava a varredura inteira e nao mostrava o resultado. Agora o destino vem
+# de SAIDA_HITS, ou cai no diretorio corrente, que existe em qualquer sessao.
+SAIDA = os.environ.get('SAIDA_HITS', 'personagem_hits.csv')
+with open(SAIDA, 'w', newline='', encoding='utf-8') as fh:
     w = csv.writer(fh)
     w.writerow(['ats', 'token', 'titulo', 'local', 'url', 'data'])
     for h in sorted(hits, key=lambda x: (x[0], x[1])):

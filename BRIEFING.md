@@ -7745,3 +7745,200 @@ Conferido **antes** de caçar coisa nova, na ordem que a ordem pedia:
   16/09 em vez de reabri-la: o anúncio exige *"strong portfolio showing PHOTOREAL skin, hair, fur and
   eye shading"* e a Senior Modelling Artist `623` acabou de entrar na mesma casa.
 - **Crafty Apes (Dayforce) e o quadro de busca da RSP** seguem as duas melhores dívidas de navegador.
+
+## Jhon A, 19/09 18h15-20h00 UTC (trigésimo quarto turno, a RODADA DE FORMULÁRIOS DE PERSONAGEM) — **UMA enviada e ela é de PERSONAGEM**, numa casa francesa inédita cuja porta o Joe achou 1h40 antes; e o que a rodada entrega de mais durável são **dois censos que fecham, com número, a veia de banco de talentos de personagem**
+
+**Placar: 1 formulário enviado e confirmado, e ele é de PERSONAGEM. 0 duplicata, 0 tentativa contra
+veto escrito, 0 navegador simultâneo** (`pgrep -c chrome` = 0 antes de cada uma das três aberturas).
+O placar do dia vai de **18 para 19 formulários** e de **3 para 4 de personagem**. **Falta 1 de
+personagem** para a meta de 5.
+
+**Leitura honesta antes de qualquer detalhe:** a enviada é **candidatura espontânea**, não requisição
+nomeada. Ela conta como personagem por um motivo verificável e não por generosidade de classificação:
+**o próprio formulário tem um seletor de cargo e o cargo escolhido é literalmente `[Asset]Chara
+artist`, com `Experience = Senior`**. Não é banco de talentos genérico de arte, que é o caso que as
+rodadas anteriores corretamente recusaram contar.
+
+### 1. A ENVIADA, COM AS QUATRO PROVAS E A RESSALVA QUE PODE DERRUBÁ-LA
+
+**NOID Studio, Paris 9º (4 rue Sainte-Cécile)** — candidatura espontânea, `Department = Asset`,
+`Position = [Asset]Chara artist`, `Experience = Senior`, pela porta
+`https://www.noid-studio.com/contact-us/`.
+
+**Quatro provas, três de servidor e uma da casa:** (1) texto na tela, literal, *"Thank you for
+contacting us! We will respond shortly."*; (2) **POST 200** para `noid-studio.com/contact-us/`, o
+único pedido não-GET para o domínio da casa em toda a sessão; (3) o `#gform_2` **saiu do DOM** e o
+campo de e-mail voltou vazio — não é o caso de "formulário que apenas se limpa", porque a confirmação
+do Gravity Forms **substituiu o container**; (4) **e-mail de `jobs@noid-studio.com` às 18h24m31 UTC**,
+assunto `Your job application`: *"Thank you for your application. We will consider it and will not
+hesitate to contact you if we have any positions that match your profile. Have a nice day, **Marion
+Mathiot**"* — e a Marion Mathiot é a **Production Manager** que a própria `/about` publica no
+organograma de sete. O recibo saiu de dentro do estúdio, não de um relay de ATS.
+
+**Gancho com a frase da casa, entre aspas dentro do próprio texto enviado:** a `/about` diz que a NOID
+é *"an independent post-production studio"* que *"specialise in high-end visual effects and CG content
+for films and series"*, e o cardápio de serviços lista *"Asset Creation"* e *"Creature Build"*.
+
+**Realocação sem rodeio, como o Vini pediu:** *"I am ready to move for the role. Paris, on site, is
+what I want, not a fallback."* **Autorização pela verdade, e aqui vale registrar que NÃO havia campo
+obrigando:** o texto declara, por escrito, que ele é brasileiro, **não é cidadão da UE e precisaria de
+patrocínio de visto na França**, com o caso acadêmico de visto. Pretensão **EUR 45.000** (casa
+pequena/média da Europa ocidental pela política de 04/09) com a abertura de alinhamento.
+
+**Régua de veto: 3.288 caracteres, ZERO acerto dos 43 termos.** **Porteiro ZERO, e medido, não
+suposto:** a única ocorrência de `recaptcha` nos 804.452 caracteres da página é a regra de CSS
+`.grecaptcha-badge{display:none}` do tema — sem `api.js`, sem `sitekey`, sem `grecaptcha.execute`, e
+**zero iframe de anchor** com o navegador aberto.
+
+**As ressalvas, ditas para quem revisar poder discordar:** (a) é casa de **VFX de cinema e série**, ou
+seja **fotorreal**, e o portfólio dele é estilizado — o texto enfrenta isso de frente usando os três
+anos de PUGA como a travessia, mas quem for estrito tem argumento; (b) **não existe vaga anunciada de
+personagem**: o `poste-sitemap.xml` da casa tem só `middle-senior-compositing-artist` e dois de
+coordenação, então isto é **fila de futuro**, não requisição aberta.
+
+**Crédito de onde veio:** a casa entrou na campanha **hoje às 16h35**, pelo Anim'annuaire da AFCA, na
+rodada do Joe. Ele guardou o nome de **Abdou Karimi (Head of CG)** sem e-mail e escreveu, com todas as
+letras, que *"a porta desta casa é formulário, não e-mail, e ela vai para quem cuida de portal"*. Esta
+candidatura é essa porta. **A divisão de trabalho funcionou exatamente como está escrita.**
+
+### 2. A ARMADILHA NOVA, E ELA VALE PARA A FAMÍLIA GRAVITY FORMS INTEIRA
+
+O formulário da NOID tem **dois conjuntos de campos para a mesma pergunta**: quatro **campos de
+texto** (`14 Announce title`, `16 Department`, `21 Position`, `17 Experience`) e três **selects**
+(`19 Department`, `20 Position`, `22 Experience`). A `window['gf_form_conditional_logic'][2]` manda
+**mostrar os sete** quando o tipo de contato é `Job & internship inquiries`.
+
+> **Só que os quatro de texto são a variante "cheguei por uma vaga anunciada", e o CSS do tema os
+> mantém `display:none` mesmo com a lógica condicional dizendo `visible`.** O `fill()` do Playwright
+> **estoura 30 s** em *"element is not visible"* e mata a rodada no meio do preenchimento. Foi
+> exatamente o que aconteceu na primeira corrida seca. **Em Gravity Forms, a lógica condicional não é
+> a palavra final sobre visibilidade: quem decide é o `getComputedStyle` do campo.** A corrida seca
+> que lê a visibilidade campo a campo antes de preencher custa dois segundos e evita isso.
+
+Outros dois detalhes medidos, para quem pegar a família de novo: **nenhum** campo é obrigatório do lado
+do servidor (`gfield_required` = 7 ocorrências no arquivo inteiro e **as sete são CSS**), e **a isca é
+o `input_23`**, rotulado `Phone` com a descrição *"This field is for validation purposes and should be
+left unchanged"* — tem de ficar vazia, e a leitura de volta conferiu que ficou.
+
+E a porta é **dupla**: `/contact/` é o `gform_3` em **francês** (opção `Candidature`) e `/contact-us/`
+é o `gform_2` em **inglês** (opção `Job & internship inquiries`). Usei a inglesa, porque o texto livre
+vai em inglês e o rótulo tem de casar com a resposta.
+
+### 3. OS DOIS CENSOS QUE FECHAM A VEIA DE BANCO DE TALENTOS DE PERSONAGEM, COM NÚMERO
+
+A ordem desta rodada mandava, no degrau (d), procurar *"bancos de talentos com departamento de
+personagem"*. Em vez de reler as duas listas antigas e concluir de novo "esgotado", eu medi as
+**famílias inteiras**. As duas estão fechadas, e agora está escrito por quê.
+
+**Teamtailor Connect — 173 tokens, 146 rotas em 200, DEZENOVE com personagem no cardápio, ZERO
+inédita.** O cardápio real de departamento e cargo não sai de `<label>`: **o regex de `<label>` pega
+só o banner de cookie e devolve zero falso**. O par que funciona é
+`<span class="wrap-break-word overflow-hidden">NOME</span>` casado com
+`name="candidate[department_id|role_id]"`, direto do componente React do formulário. Lidos assim, os
+19 que nomeiam personagem são `10chambers` (Lead e Senior Character Artist), `airshipinteractive`,
+`ankama`, `capsulestudio` (departamento **CHARACTER**), `facepunch`, `fatshark` (**Animation &
+Character**), `gameboost`, `goals`, `goodbyekansas` (Character Artist, Creature Artist, **Face
+Modeler**, Lookdev Artist), `hampastudio`, `ilpvfx` (**Model/Texture/Lookdev**), `mindark`
+(**Character Art**), `paradox-interactive`, `princessbento`, `rawpowergames`, `sloclap` (departamento
+**Character Artist**), `stunlocksstudios` e `tacticaladventures`. **Todas as 19 já têm conta ou
+decisão escrita** — e a Tactical Adventures recusou em 17/09 com a própria recusa concedendo o banco
+(*"we will keep your CV on our database"*). Os **5** tokens de Teamtailor que existem no censo da
+ArtStation e **não** estão na lista de tokens também foram sondados: `coatsinksoftware` (conta criada
+hoje), `faraway` (**demo** do Teamtailor), `labster` (edtech — departamentos `Sales`, `Finance`,
+`Nursing`), `solidicon` (iGaming, já descartado) e `portalone` (**rota morta**, 000).
+
+**Pinpoint — 46 tokens conhecidos, 46 em 200, e TRINTA E UM são conta de demonstração.** A assinatura
+já catalogada (departamentos exatamente `Engineering, Finance, Marketing, Operations, Product, Sales`)
+mata `framestore`, `playground-games`, `kwalee`, `obsidian`, `outpost-vfx`, `realtimeuk`,
+`singularity6`, `suncreature`, `wushustudios`, `flixinteractive`, `ingenuitystudios`, `metropolis`,
+`moonbug`, `tensquaregames` e mais. **Dos configurados de verdade, o único com um departamento chamado
+`Character` é a ROCKSTEADY, e ela foi enviada em 10/09.** Os outros configurados são `ccpgames`
+(título `Fenris Creations`, departamento `Art`, enviada), `magnopus` (`Art & Animation`, enviada),
+`pipeworks` (`Art`, enviada), `gameplaygalaxy` (`Art`, enviada), `maverick-games` (`Art`), `volka`
+(mobile 2D, fora), `switch` (`Creative`/`Web`, fora) e cinco fora de setor ou com o banco desligado.
+
+> **A `maverick-games` merece uma linha porque eu escolhi NÃO enviar.** O `register-your-interest` dela
+> é rota inédita e o departamento `Art` é real, mas a **Speculative Application da mesma casa foi
+> enviada em 09/09** e as duas rotas caem na **mesma caixa do mesmo estúdio**. Uma segunda espontânea
+> genérica dez dias depois lê como insistência sem fato novo, e o ganho seria um formulário de
+> **arte**, não de personagem. Fica registrado como decisão, não como pendência.
+
+### 4. A EA RELIDA PELO SLUG: 11 SLUGS DE PERSONAGEM, **ZERO ENVIÁVEL**, E A ÚNICA INÉDITA DE VANCOUVER CAI POR DISCIPLINA
+
+Reli o quadro inteiro pela regra que o turno das 16h15 escreveu — **título pelo slug da URL
+`/JobDetail/<slug>/<id>`, nunca pelo texto da âncora**: 326 declaradas, **320 ids únicos** em 16
+páginas. **Controle positivo: 52 acertos de arte**, então o leitor não está cego. **Personagem: 11
+slugs**, e o resultado é zero enviável, um por um:
+
+| id | slug | o que fecha |
+|---|---|---|
+| 216159 | `Character-Artist-EA-Sports-UFC` | **enviada hoje** às 17h2x |
+| 215657 / 215358 | `Character-Artist-EA-Sports-FC` | **recusadas**: *"does not support relocation or immigration at this time"* |
+| 215658 / 215661 | `Character-Artist` | fechadas por decisão escrita de 17/09, mesmo veto |
+| 215666 | `Character-Artist-II-EA-Sports-FC` | cópia palavra por palavra da 215657 |
+| 215667 | `Character-Artist` | fechada em 16/09 pelo veto da irmã idêntica |
+| 215788 | `Senior-Character-Artist` | na `FILA-DO-VINI` por **defeito de servidor do próprio Avature** em cinco tentativas |
+| 216143 | `Technical-Artist-Character` | **Xangai**, e é rigging |
+| 215913 | `Concept-Artist-Character` | **Xangai**, `0–5 years`, 2D (Photoshop) |
+| 215659 | `Concept-Artist-Characters-EA-SPORTS-FC` | **Vancouver e INÉDITA** — e mesmo assim não enviada, §abaixo |
+
+**A `215659` é o caso que merece o argumento inteiro, porque ela é Vancouver e é inédita.** Não
+enviei, e o motivo é **disciplina**, com a frase colada do anúncio: *"A passion for fashion is a must
+as the main focus for this position will be to concept a multitude of player clothing items for an
+in-game vanity system"* e *"Ability to reinterpret and render realistic real-world fashion garments
+including structural details like hems, seams, pockets, patterns, fit, and folds"*. É **ilustração 2D
+de moda**, não modelagem 3D. Soma-se a isso que ela é da família **EA SPORTS FC de Vancouver**, que
+tem veto escrito de imigração. Também conferidas e fora do recorte: `215670` Concept Artist
+Environment (Vancouver, 2D), `215998` e `215999` Level Artist (Xangai) e `216056` Associate
+Environment Artist (**Kuala Lumpur**).
+
+### 5. OS ZEROS MEDIDOS, COM O NÚMERO DE CADA UM
+
+- **Grupo Disney:** `ronda-disney.sh`, **12 de 12** consultas em 200, **13 ids** da disciplina no ar,
+  **ZERO id novo**.
+- **Pixar** (locatário próprio `pixar.wd501`, site `Pixar_External_Career_Site`, **sem filtro** e
+  paginado em três offsets): `total = 3`, e as três são `On-Call Chef`, `Staff Systems Engineer, Data
+  Streaming` e `Senior Research Scientist`.
+- **Netflix / Eyeline** (`netflix.wd108`, 8 termos × 2 sites = 16 consultas): **todo** id de
+  personagem tem decisão escrita (`JR42568`, `JR42577`, `JR41751`, `JR41777`, `JR42643`, `JR39446`,
+  `JR41734`); o Eyeline tem 5 acertos de `character` e **os cinco em Hyderabad**.
+- **Janela por data desde 16h00 UTC** (`JANELA_ISO=2026-09-19T16:00:00Z`): **882 quadros, 801 vivos,
+  9.595 vagas por id único, ZERO na janela**. As **1.342 sem data** (`ashby`, `bamboohr`, `pinpoint`,
+  `rippling`) deram 86 acertos por palavra-chave e o dedupe fecha todos.
+- **Agregadores abertos** (`caca-agregadores-abertos.py`): **1.245 vagas** em 5 fontes, **zero da
+  disciplina por título**.
+- **Vigia do Job Board 2.0** (`jobboard-mayne.py`): **2.842 linhas, 0 novas, 0 da disciplina**.
+- **Alertas do Gmail do dia, os quatro lidos e todos já decididos:** `2k/7999902003` *Expert Character
+  Artist* é a **MESMA requisição** enviada hoje pelo quadro `31stunion/7987184003` (o
+  `internal_job_id 5882575003` é idêntico — a armadilha de dois quadros do Greenhouse pegando de novo);
+  `7999909003` *Expert Character Concept Artist* é o descarte de 2D de hoje; o do LinkedIn sobre *Senior
+  Character Artist at Mob Entertainment* é **lembrete de vaga SALVA** e a requisição por trás
+  (`mobentertainment/5207518007`) foi enviada em **02/09**; e o da WBD para `character artist` devolve
+  `Advanced Level Artist` de Montréal, que é **nível**, não personagem.
+- **Censo de personagem sobre os 882 quadros:** **13 títulos**, nenhum enviável. Um é Ashby
+  (`thatgamecompany` *3D Character Artist*, **enviada em 31/08** com recibo do próprio Ashby) e os
+  outros **12 são todos BambooHR**, família onde **o envio não sai** (medido em nWave e Image Engine),
+  ou seja item de mão e não formulário — e os 12 já constam do painel ou da fila dele
+  (`iconcreative` 150 *Character Sculptor* e 136, `igg` 289, `owi` 199, `imageengine` 21 e 28,
+  `theembassy` 58, `barnstormvfx` 176 *Lead Creature Artist*, `stirlinganimationstudios` 77,
+  `streamlinestudios` 84 e 106).
+
+### 6. UM DEFEITO DE FERRAMENTA CONSERTADO, E ELE JÁ TINHA CUSTADO UMA VARREDURA INTEIRA
+
+`automacao/caca-personagem-quadros.py` gravava o resultado num caminho de `scratchpad` **cravado com o
+id de OUTRA sessão**. Ele lia os 123 quadros, montava os acertos e **morria em `FileNotFoundError` na
+última linha** — ou seja, gastava a varredura inteira e não mostrava nada. Agora o destino vem de
+`SAIDA_HITS` e, na falta dela, do diretório corrente, que existe em qualquer sessão. **Script que só
+falha no fim é pior que script que não roda, porque o custo é pago antes do erro aparecer.**
+
+### 7. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Falta 1 formulário de personagem** para a meta de 5, e eu não achei o segundo. O estoque de
+  personagem do universo conhecido está seco, e os §3, §4 e §5 são a medição disso, não a desculpa.
+- **A `maverick-games` do Pinpoint continua não enviada de propósito** (§3), e a decisão está escrita
+  para quem quiser discordar.
+- **Os 12 itens de BambooHR de personagem em Vancouver e Montréal** seguem sendo dívida de mão dele, e
+  a família não ganhou tentativa nova nesta rodada: a regra de 15/09 diz que o envio não sai de lá, e
+  eu escolhi não gastar navegador para reconfirmar o que já foi medido em dois locatários.
+- **A `215659` da EA em Vancouver não foi enviada** (§4). Se alguém entender que ilustração de moda
+  encosta em visual development de personagem, o argumento contrário está inteiro acima.
