@@ -11626,3 +11626,79 @@ quase tudo era caixa funcional de imprensa; os personais que apareceram (`ryan@b
 `olli.etuaho@lockpickle.com`, `macura@cinemaxgames.com`, `bernd@egosoft.com`, `jonathan.bouchard@reelfx.com`)
 morreram por disciplina, por cargo ou por falta de nome — **exceto** o da EGOSOFT. **Não gaste rodada
 inteira no `/press`: gaste no `/contact` e no `/team` de lista de VFX.**
+
+---
+
+## JOE, 19/09/2026 04h35 UTC — **A VEIA FOI O MESMO `garimpo-cgstudiomap.csv`, MAS COM UM FILTRO NOVO QUE MUDA O RENDIMENTO: DEDUPE POR DOMÍNIO ANTES DE ABRIR A PÁGINA** — os cinco países que a rodada das 02h35 deixou sem leitura de disciplina (Austrália, Áustria, Bélgica, Espanha, Dinamarca) deram **ZERO ficha**, e o que rendeu foi o resto da lista
+
+**Conjunto de dedupe desta rodada:** **1.994 endereços** e **2.119 domínios** extraídos de `automacao/pessoas.csv`,
+`enviados.csv`, `automacao/processados.csv`, `alvos.csv`, `docs/index.html` e `automacao/PESSOAS-SEM-CARTA.md`.
+A varredura foi refeita do zero (o JSON da rodada anterior era de sessão): **726 domínios não-EUA** do
+`garimpo-cgstudiomap.csv` × **12 caminhos** (`/`, `/contact`, `/contact-us`, `/about`, `/about-us`, `/team`,
+`/our-team`, `/the-team`, `/crew`, `/people`, `/studio`, `/impressum`), com decodificação de `data-cfemail`,
+entidade HTML, ROT13 e `(at)`/`[dot]` em cada corpo de 200.
+
+**O ACHADO DE MÉTODO DESTA RODADA, e ele é o que fez a diferença:** a rodada das 02h35 filtrou os endereços
+achados contra a lista de **endereços** já tocados. Isso deixa passar a casa inteira quando o endereço é novo
+mas o **domínio** já foi gasto — foi assim que `kenny@theembassyvfx.com` apareceu como "novo" numa casa que já
+está **no teto de duas E com veto de visto escrito**. Filtrando por **domínio** antes de abrir qualquer página,
+os 726 domínios caíram para um punhado de casas realmente inéditas, e o tempo foi todo para elas.
+
+### FICHA 1 — Tom Mahoney, **Partner / VFX Supervisor** da **CoSA VFX** (Vancouver e Toronto, Canadá; sede em Los Angeles) — **PUBLICADO, confiança ALTA**, casa **INÉDITA** na campanha inteira
+
+- **EMAIL: `tom@cosavfx.com` — PUBLICADO, confiança ALTA.** Nada montado. O `mailto:` e o pareamento
+  nome+cargo estão no **mesmo parágrafo** do HTML: `<b>Tom Mahoney – Partner / VFX Supervisor</b>` seguido de
+  `<a href="mailto:tom@cosavfx.com">`.
+- **URL aberta nesta rodada:** `https://cosavfx.com/about` (**200, 142.063 bytes**), bloco *"Let's chat!"*:
+  *"Contact us: **Business Development** — hello@cosavfx.com"* e, no parágrafo seguinte, *"**Tom Mahoney –
+  Partner / VFX Supervisor** — tom@cosavfx.com"*. O mesmo par repete em `/contact-us`, `/about-us`,
+  `/our-team`, `/the-team`, `/crew` e `/impressum` (a casa serve a mesma página nesses caminhos).
+  **Armadilha registrada:** a `/contact` "oficial" (`https://cosavfx.com/contact`, **200, 103.586 bytes**)
+  publica **só** `hello@` e `press@` — quem abre apenas a página de contato declara a casa sem pessoa e a
+  perde. O endereço de pessoa está na `/about`.
+- **POR QUE ELE, e não outro da casa:** a CoSA publica **exatamente dois** endereços, um funcional
+  (`hello@`, rotulado *Business Development*) e **um de pessoa**. Dos quatro sócios que a `/company` nomeia
+  pelo primeiro nome (*"Tom and Jon met in the mid-nineties at Mad River Post … In 2004, **Chris and David**
+  joined Tom and Jon"*), **só o Tom tem endereço publicado**, e o cargo dele é o de quem decide elenco de
+  equipe num fornecedor de VFX episódico: **VFX Supervisor**, além de sócio. Montar `jon@`, `chris@` ou
+  `david@` seria o chute das cinco devoluções de 06/09.
+- **PROVA DE DISCIPLINA, escrita pela casa e em caixa alta no site dela:** `https://cosavfx.com/services`
+  (**200, 182.100 bytes**, aberta nesta rodada) lista os serviços um por um e um deles é, literal,
+  **`CHARACTER-DRIVEN CG WORK`**, ao lado de `CONCEPT ART AND DESIGN`, `LOOK DEVELOPMENT AND R&D`,
+  `MATTE PAINTINGS AND ENVIRONMENTS`, `DYNAMICS`, `MOTION CAPTURE`, `DIGITAL MAKE UP & ENHANCEMENT` e
+  `MASSIVE (CROWD SIMULATION)`. **Isto não é inferência de catálogo: é a casa nomeando a disciplina do Vini
+  como linha de serviço.** É o oposto da morte da Firm Studio e da Eleven FX.
+- **GANCHO, com as frases da própria casa entre aspas:** *"We craft worlds without boundaries for ideas
+  beyond imagination"* (`/about`); *"Founded in 2009, CoSA VFX has grown from a small boutique into a
+  thriving visual effects studio operating commercial, episodic, and feature divisions on both the East and
+  West coasts, with offices in **Los Angeles, Atlanta, Vancouver, and Toronto**"*; *"We've received multiple
+  **Emmy** nominations and wins for our work on primetime projects such as **Gotham** (Fox) and
+  **Westworld** (HBO) along with a number of VES Award nominations"*; e a frase da `/employment-opportunities`
+  (**200, 140.938 bytes**), que é o melhor gancho de carta que apareceu hoje: *"CoSA VFX is an **artist
+  owned, artist led** group of collaborators who value every individual for their unique contribution …
+  we know we are the most successful, the most innovative and the most creative when we work together"*,
+  mais *"our studio has a great industry reputation for **talent retention** based on our **artist-focused
+  culture** that advocates for a work-life balance"*.
+- **FORA DOS EUA?** **Parcialmente, e isso é uma ressalva, não um detalhe.** As duas operações canadenses
+  (Vancouver e Toronto) estão no escopo de prioridade 1 da campanha, mas a sede e o telefone publicado
+  (818-358-4147) são de Los Angeles. **A frase de realocação entra**, porque a carta é para as cadeiras
+  canadenses; a carta **não** deve sugerir autorização para trabalhar nos EUA.
+- **DEDUPE NA CAIXA:** `search_threads` por `cosavfx OR "CoSA VFX" OR Mahoney in:anywhere` devolveu
+  **`{}` — zero fio, nenhuma mensagem em nenhuma direção.** Nos arquivos, `cosavfx` e `CoSA VFX` dão
+  **zero** em `automacao/pessoas.csv`, `enviados.csv`, `docs/index.html` e `alvos.csv`; as quatro
+  ocorrências de `cosa` em `automacao/processados.csv` são a palavra "coisa"/"casa" dentro de prosa, não a
+  casa. **Casa inédita, primeira pessoa, teto totalmente aberto.**
+- **RESSALVAS HONESTAS:** (a) **o cargo é supervisão de VFX e negócio, não direção de arte** — não há Art
+  Director, Head of Characters nem Character Lead nomeado em nenhuma página do domínio, então o resultado
+  provável é encaminhamento interno para o recrutamento; (b) a casa é **fornecedor de VFX episódico**, onde
+  personagem entra por show e por contrato curto, e o `/employment-opportunities` manda o candidato para
+  *"VIEW JOBS"* e *"APPLICATION TIPS FROM THE RECRUITMENT TEAM"*, ou seja **existe canal formal publicado**
+  e o leitor tem saída fácil de encaminhar sem responder; (c) **o site tem sinal de desatualização**: a
+  `/about` ainda escreve *"Toronto (**coming 2024**)"* enquanto a `/contact` já anuncia as quatro cidades
+  como existentes, e a `/employment-opportunities` lista **só três** (Atlanta, Vancouver, LA) — as três
+  páginas discordam entre si; (d) no rodapé de todas elas o bloco *RECENT POSTS* mostra um rascunho não
+  apagado, **`HR Responsibilities here`**; (e) o crédito mais forte do Vini é **animação estilizada**
+  (*The Wingfeather Saga*) e o catálogo da CoSA é **live action fotorreal de televisão** (*Gotham*,
+  *Westworld*) — a ponte é o `CHARACTER-DRIVEN CG WORK` que eles mesmos escrevem, e a carta tem de dizer
+  isso sem fingir que é o mesmo ofício; (f) **não conferi vaga aberta**: o quadro fica em ATS externo e
+  este turno é do Jhon A, não meu.
