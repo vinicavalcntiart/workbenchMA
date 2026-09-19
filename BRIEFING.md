@@ -7090,3 +7090,12 @@ communicate design intent to downstream artists"*. Concept 2D está na lista de 
   `sonyinteractiveentertainment`, `bluepoint`, `bluepointgames`, `nixxes`, `valkyrieentertainment`,
   `havenstudios`, `hazelight`, `insomniacgames` — todos **404 de verdade**. Os first-party sem
   quadro próprio se leem pelos dois quadros do grupo.
+
+> **CORREÇÃO DENTRO DO MESMO TURNO, e ela enfraquece o achado acima: o site `External` NÃO era
+> inédito.** O painel registra em 12/09 que ele foi paginado até a página vazia e deu "ZERO de
+> personagem". As duas coisas são verdade ao mesmo tempo: o site foi **lido** em 12/09 e a `R027900`
+> **já existia** (publicada em 19/08), mas passou porque o filtro daquele dia era **só personagem**
+> e ela é **ambiente e escultura de terreno**. Então a lição correta não é "havia um site oculto" —
+> é **filtro de personagem em casa grande esconde a prioridade 2, que em casa grande também se
+> aplica por ordem do Vini**. O que é inédito de verdade é a lista dos **sete** sites do locatário e
+> o fato de a **Activision estar sim neste locatário** (o painel dizia o contrário desde 03/09).
