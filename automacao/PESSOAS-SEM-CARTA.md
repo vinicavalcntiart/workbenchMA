@@ -11910,3 +11910,78 @@ os 726 domínios caíram para um punhado de casas realmente inéditas, e o tempo
   mais forte do Vini é **animação estilizada** e o forte da REALTIME é **cinemática de jogo
   fotorreal** — a ponte é criatura e personagem de jogo, e tem de ser dita sem fingir que é o mesmo
   ofício.
+
+### FICHA 5 — Baptiste Legois, **Head of Production** da **Jungler** (La Plaine Saint-Denis, França) — **PUBLICADO, confiança ALTA**, casa **INÉDITA para carta**, e é a **melhor casa de disciplina da rodada**: o quadro permanente dela tem `3D Modeling - Characters` E `Groom Artist`
+
+- **EMAIL: `baptiste.legois@jungler.tv` — PUBLICADO, confiança ALTA.** Nada montado. `mailto:` cru com
+  o nome e o cargo como elementos irmãos no mesmo `<div class="item">`.
+- **URL aberta nesta rodada, e ela é um ACHADO DE CAMINHO:** `https://www.jungler.tv/infos`
+  (**200, 29.819 bytes**). HTML cru, colado: `<div class="item"><h2 class="item__name">Baptiste
+  Legois</h2> <div class="item__description">Head of Production </div> <a
+  href="mailto:baptiste.legois@jungler.tv" class="item__mail">baptiste.legois@jungler.tv</a></div>`.
+  A mesma seção publica os **quatro** da casa: *Sébastien Pribile — Managing Director, Co-Founder —
+  `sebastien.pribile@`*, *Sun Limet — Managing Director, Co-Founder — `sun.limet@`*, **Baptiste Legois
+  — Head of Production — `baptiste.legois@`**, *Paul Jacamon — Cto — `paul.jacamon@`*.
+  **POR QUE ISSO É ACHADO DE MÉTODO:** eu já havia varrido `jungler.tv` **em 20 caminhos** nesta mesma
+  rodada (`/`, `/contact`, `/contact-us`, `/about`, `/about-us`, `/team`, `/our-team`, `/the-team`,
+  `/crew`, `/people`, `/studio`, `/jobs`, `/careers`, `/legal`, `/mentions-legales`, `/equipe`,
+  `/nous`, `/qui-sommes-nous`, `/privacy`, `/privacy-policy`) e o resultado tinha sido **ZERO
+  endereço** — `/about`, `/team` e `/mentions-legales` dão **404 de 4.364 bytes**. A página de equipe
+  desta casa se chama **`/infos`**, que não está em nenhuma lista de caminhos deste arquivo nem do
+  `BRIEF-JOE`. **`/infos` entra na lista.**
+- **POR QUE ELE, e não outro da casa:** os quatro publicados são dois Managing Directors co-fundadores,
+  um CTO e ele. **Não há Art Director nem CG Supervisor com endereço** — a `/infos` diz apenas, de
+  forma genérica, *"Each of our projects is shaped by a talented roster of **directors and
+  supervisors**"*, e a `/directors` (**200, 19.870 bytes**) **não publica um único e-mail**. Numa casa
+  que mantém **pool permanente de perfis com botão Apply por perfil**, quem é dono desse pool é o
+  **Head of Production**: é ele que decide se um nome entra na lista antes de existir requisição.
+  Os co-fundadores ficam guardados como **segunda pessoa** (`sebastien.pribile@` de preferência, que é
+  o primeiro cartão da página).
+- **PROVA DE DISCIPLINA, e é a mais direta que apareceu hoje:** `https://www.jungler.tv/jobs`
+  (**200, 32.432 bytes**, aberta nesta rodada) abre com *"To complete our teams, we are looking for
+  different profiles"* e lista **21 perfis, cada um com botão `Apply` e local `La Plaine St-Denis,
+  France`**. Entre eles, colados: **`3D Modeling - Characters`**, **`Groom Artist`**,
+  **`3D Look Dev`**, **`3D Surfacing`**, `3D Modeling - Props`, `3D Modeling - Environments`,
+  `3D Generalist`, `3D Rig`, `3D CFX`, `3D Crowd`, `3D Layout`, `3D Lighting`, `3D Animator`,
+  `3D FX artist`, `3D Compositing`, `Matte Painter`, `Pipeline TD`, `Flame Artist`, `Clean Up Artist`,
+  `Motion Designer`, `Storyboard Artist`, `2D Design - Characters`. **`3D Modeling - Characters` mais
+  `Groom Artist` é literalmente o par de palavras do assunto da carta do Vini** (*stylized +
+  grooming*). Não há casa melhor encaixada nesta rodada.
+- **GANCHO, com as frases da própria casa entre aspas:** *"Jungler is a **multidisciplinary animation
+  studio** with a strong experience in producing beautiful, surprising and **challenging projects**. We
+  produce short films, commercials and accompany partners in the production of **feature films** and
+  **series**. Each of our projects is shaped by a talented roster of directors and supervisors who each
+  have **powerful artistic sensibility** and savoir-faire"* (`/infos`). E o gancho concreto é a divisão
+  **Gaming** (`https://www.jungler.tv/gaming`, **200, 26.044 bytes**), cujo catálogo é personagem de
+  jogo estilizado: **`Buzz Lightyear — "To Brawl and Beyond!"`**, **`30 Seconds of Innocence`**,
+  **`30 Seconds to Cross!`**, **`30 Seconds for Revenge!`** e **`Colt Outtakes`** — a família de curtas
+  de *Brawl Stars*. É exatamente a faixa do *Wingfeather*: elenco estilizado, silhueta forte, pelo.
+- **FORA DOS EUA?** Sim, **França** (16 Rue des Céréales, 93210 Saint-Denis; os perfis dizem *La Plaine
+  St-Denis*). **Frase de realocação entra.** E há um dado que ajuda, já medido pela campanha em 09/09:
+  **a casa não exige francês** — a única linha de idioma do quadro é *"Pratique de l'anglais en
+  fonction des projets"*.
+- **DEDUPE NA CAIXA:** `search_threads` por `jungler OR Legois OR Pribile OR Limet in:anywhere`
+  devolveu **`{}` — zero fio, nenhuma mensagem em nenhuma direção. A casa nunca recebeu carta.**
+  Nos arquivos, `jungler` casa com **duas** linhas e **nenhuma é pessoa nem envio**:
+  `automacao/processados.csv:1998`, de 09/09, que registra o quadro JazzHR
+  (`jungler.applytojob.com`) como **porta a ser feita à mão por causa de reCAPTCHA v2**, e
+  `docs/index.html:1308`, a mesma porta na fila do Vini. **Zero em `automacao/pessoas.csv`, zero em
+  `enviados.csv`, zero em `alvos.csv`. Casa inédita para carta, primeira pessoa, teto totalmente
+  aberto.**
+- **RESSALVAS HONESTAS:** (a) **os perfis são pool, não requisição datada** — o próprio texto do quadro
+  diz *"We will get back to you if we have a project"*, e a nota de 09/09 mediu que **cinco dos seis
+  perfis de disciplina estão declarados como `Entry` ou `Student`**, o que é **três degraus abaixo** do
+  Vini; a única de nível aproveitável é *3D Modeling - Environments*, declarada `MID`. **Isto é a
+  favor da carta e não contra**: pool júnior é exatamente o caso em que um sênior não entra pelo
+  formulário e precisa de um humano — mas o maestro tem de saber que **não existe assento sênior
+  anunciado**; (b) **o cargo é produção, não arte**, e o resultado provável é encaminhamento para o
+  supervisor de modelagem; (c) **o portal oficial da casa está atrás de reCAPTCHA v2 com Human Check**,
+  então a carta é o único canal que não depende da mão do Vini — o que aumenta o valor dela, mas também
+  significa que **a casa já publicou um canal formal** e o leitor pode simplesmente apontar para ele;
+  (d) a casa **não escreve a palavra `character` em nenhuma página de trabalho**: `character` dá zero em
+  `/`, `/commercial`, `/gaming` e `/directors`, e as três ocorrências do domínio estão todas **na lista
+  de perfis do `/jobs`** — ou seja a prova é o quadro de contratação, não a prosa institucional;
+  (e) metade do catálogo é **publicidade**, e a divisão `Film & Episodic` está **no menu de todas as
+  páginas e devolve 404 de 4.364 bytes**, o mesmo 404 de `/about`, `/team` e `/mentions-legales` —
+  site com vários links mortos; (f) é casa **multidisciplinar 2D e 3D**, e o quadro tem **oito perfis
+  2D** contra treze 3D, então parte do pipeline é desenho e não modelo.
