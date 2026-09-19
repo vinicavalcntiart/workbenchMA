@@ -12358,3 +12358,171 @@ as duas como primeiras da fila, e as duas são casas cuja pessoa anterior é jus
 as torna as de melhor prognóstico da lista. **O script do cruzamento é reprodutível em vinte linhas: conte pessoas por domínio em
 `pessoas.csv` e endereços de pessoa por domínio em `enviados.csv`, tome o máximo dos dois, e fique com
 os domínios em que esse máximo é exatamente 1.**
+
+## JOE, 19/09/2026 06h35 UTC — **A FILA DAS NOVE CASAS QUE EU MESMO DEIXEI PRONTA ÀS 04h35 RENDEU DUAS FICHAS E MATOU SETE, E O ACHADO DE MÉTODO É O PIOR DE TODOS OS QUE JÁ REGISTREI: O `href` DO `mailto:` E O TEXTO VISÍVEL DO ENDEREÇO DISCORDAM NA MESMA PÁGINA, EM DOIS DOMÍNIOS DIFERENTES, E NUM DELES O CARTÃO DE UMA PESSOA APONTA PARA O ENDEREÇO DE OUTRA QUE JÁ SAIU DA CASA**
+
+**Conjunto de dedupe desta rodada:** **2.156 endereços** e **1.392 domínios** extraídos de `automacao/pessoas.csv`,
+`enviados.csv`, `automacao/processados.csv`, `alvos.csv`, `docs/index.html`, `automacao/PESSOAS-SEM-CARTA.md` e
+`automacao/padroes-dominio.md`. **O cruzamento das vinte linhas foi reproduzido** (script em
+`prep.py` no scratchpad): conta pessoas por domínio em `pessoas.csv`, endereços de pessoa por domínio em
+`enviados.csv`, toma o máximo dos dois e fica com os domínios em que o máximo é exatamente 1 **e** o número
+de toques de envio é no máximo 1 — devolveu **206 domínios**, contra as 23 linhas da versão anterior, porque
+a versão de 04h35 só olhava `pessoas.csv` × `enviados.csv` sem a peneira de toques.
+
+**A PRIMEIRA COISA QUE EU FIZ FOI A ORDEM (a), e ela se pagou:** das NOVE casas da fila das 04h35,
+**quatro estavam acima do teto de toque e eu nem abri a página** (`anima.fi` com TRÊS toques —
+`info@` em 26/08, follow-up em 02/09 e `antti.haikala@` hoje; `frimastudio.com` e `milford.se` com DOIS
+cada; `mathematic.tv` já com ficha PENDENTE de hoje mesmo, das 02h35, da Bea Le Mennec). Das cinco que
+sobraram, **duas viraram ficha** (Terminus e TELEVISOR) e **três morreram medidas** (DLP Paris, Jumbla,
+Frontier). **A fila de 04h35 dizia que `dlpparis.com` e `terminus-studio.com` eram "as de melhor
+prognóstico porque a pessoa anterior é de arte". Metade estava certa: a DLP é a pior da lista.**
+
+### FICHA 1 — Christophe Moreau, **Co-Founder | VFX Supervisor** do **Terminus Studio** (Nantes, França) — **PUBLICADO, confiança ALTA**, SEGUNDA E ÚLTIMA pessoa da casa
+
+- **EMAIL: `christophe@terminus-studio.com` — PUBLICADO, confiança ALTA.** Nada montado. O domínio publica
+  **exatamente três** endereços e só dois são de pessoa: `contact@`, `anthony@` e `christophe@`.
+- **URL aberta nesta rodada:** `https://terminus-studio.com/` (**200, 504.169 bytes** — a casa é uma
+  página única e TODO o conteúdo vive nela). O pareamento nome↔cargo↔endereço está no bloco `the team`,
+  colado: *"**CHRISTOPHE MOREAU** — **Co-Founder | VFX Sup.** — **18 years** of experience in the field of
+  VFX, commercials and animated features. Prometheus, Thor, Enter The Void, Minions, Arthur and the
+  invisibles… Christophe started out as a CG generalist @ **BUF** in 2004 … He joined **MPC** London in
+  2011 to work on Prometheus. In 2014 he joined **Illumination MacGuff** where he participated in the
+  production of **Minions**. In 2017 he joined **ESMA** school in Nantes as compositing instructor …
+  It is in **2023** that he launches Terminus with his partners"*.
+  **Armadilha de caminho, medida e registrada:** `/contact`, `/about`, `/team`, `/studio`, `/equipe`,
+  `/a-propos`, `/infos`, `/meet-the-team` e `/who-we-are` devolvem **404 de 637 bytes, todos os nove**.
+  Quem varre caminho canônico declara esta casa sem equipe e sem endereço. **O `sitemap.xml` responde 200 e
+  tem uma única `<loc>`, a raiz, com `lastmod` de 2026-07-24** — ou seja o sitemap também diz, e diz certo,
+  que a casa é uma página só.
+- **POR QUE ELE, e não outro da casa:** a casa foi fundada por **três** pessoas (*"Our team resulting from
+  the association of **2 professionals from 3D animation & VFX and a production manager**"*), e **só duas
+  têm endereço publicado**: o Anthony Voisin, *Co-Founder | CG Sup.*, que **já recebeu a carta em 11/09 e
+  não respondeu**, e o Christophe. O terceiro sócio, o gerente de produção, **não é nomeado em lugar nenhum
+  do domínio** — montar endereço para ele seria chute. Os dois cargos são **complementares** no sentido do
+  `BRIEF-JOE` (supervisão de CG e lookdev de um lado, supervisão de VFX de live action do outro), que é a
+  condição para a segunda pessoa da mesma casa.
+- **PROVA DE DISCIPLINA, e é a melhor que apareceu hoje, porque a casa se credita a si mesma numa peça de
+  personagem:** na página do projeto **PORCINELLE**, colado: *"Introducing **"Porcinelle"**, the legendary
+  **"half Pig - half Unicorn" character** from the Porcinelle's Flight ride. Original Concept: Jerkride
+  studio. Design: Jeremy Macedo. **Modeling: Karim Robert Eltamer. LookDev & Grooming: TERMINUS**"*.
+  **Grooming de personagem, escrito pela casa como o serviço que ELA prestou.** Some-se as duas peças de
+  **Clash of Clans** (*"Meet Apprentice Warden!"* e *"11th Clashiversary"*, cliente **Supercell**, produção
+  **Supamonks**): *"In partnership with the French Studio Supamonks, Terminus contributed on **Shading,
+  Lighting and Compositing**"*. Personagem estilizado de jogo, que é exatamente a faixa do *Wingfeather*.
+  A palavra `3D` aparece **277 vezes** no domínio, `character` **1** e `groom` **1** — e as duas únicas
+  estão justamente no bloco da Porcinelle, que é conteúdo e não rótulo de formulário.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Terminus** is a french **STUDIO** specialized
+  in **VFX and 3D Animation**"*; *"**Supervision - Live Action VFX - Look Development - Full CG
+  Animation**"*; *"In addition of our CG artists, we make our **senior supervisors** available to supervise
+  all or part of your teams"*; e a definição que a casa usa como assinatura, *"**Terminus** \ tɛʁ.mi.nys\
+  nom masculin, singulier: **Point final au delà duquel l'exploration ne peut continuer**"*. E o gancho de
+  imprensa, que é o mais útil porque diz o que eles querem: a própria home reproduz o artigo
+  *"Meet a young French company specialized in **lookdev, lighting, compositing, and supervision**! … The
+  team chose to focus on a specific part of the production pipeline, the idea being to **work in
+  collaboration with other studios** … the technical choices (including **RenderMan and Unreal**)"*.
+- **FORA DOS EUA?** Sim, **França (Nantes)**. **Frase de realocação entra.** A casa ainda publica, em
+  página própria, o **T.R.I.P.** (*"Tax Rebate for International Productions … up to **40%**"*) e o
+  *"Regional support fund for Film, Visual Effects and Animated Digital Creation"*, o que diz que ela sabe
+  lidar com produção estrangeira — não é prova de patrocínio de visto e **não deve ser citada como se
+  fosse**.
+- **DEDUPE NA CAIXA:** `search_threads` por `dlpparis OR "DLP Paris" OR terminus-studio OR "Terminus
+  Studio" in:anywhere` devolveu **DOIS fios, os dois `SENT` de 11/09 às 21h27**, um para
+  `federico@dlpparis.com` e um para `anthony@terminus-studio.com`, **sem resposta e sem devolução**.
+  Segunda busca, `Moreau OR "christophe@terminus" OR Kachel OR Iwona in:anywhere`, devolveu **`{}`**.
+  Nos arquivos, `terminus-studio.com` casa com **uma** linha em `pessoas.csv` (o Anthony, 10/09) e **uma**
+  em `enviados.csv` (o envio de 11/09). **Segundo toque no domínio, oito dias depois do primeiro, que é o
+  intervalo mais largo de qualquer segunda pessoa desta semana.**
+- **RESSALVAS HONESTAS:** (a) **a casa NÃO fabrica personagem, ela acaba o personagem de outro** — o
+  crédito da Porcinelle escreve *"Modeling: Karim Robert Eltamer"*, um terceiro, e reserva a Terminus o
+  *LookDev & Grooming*; a ponte com o Vini é real mas é a metade de superfície e pelo do ofício dele, não a
+  escultura, e a carta tem de dizer isso sem fingir; (b) **o cargo é supervisão de VFX de live action**, e
+  o catálogo do Christophe (*Prometheus*, *Thor*, *Enter The Void*) é fotorrealista, contra o crédito
+  **estilizado** do Vini; (c) **a casa é jovem e pequena** (fundada em **2023**, três sócios, e a própria
+  frase de venda é *"we can also be the ideal solution to support you during a **one-time surplus of
+  activity**"*), ou seja capacidade contratada por picos, e o resultado provável é banco de freelance e não
+  vaga; (d) **não há Art Director, Head of Characters nem Character Lead** nomeado no domínio; (e) `ZBrush`,
+  `sculpt`, `Houdini` e `personnage` dão **ZERO** no domínio — o pipeline declarado é **RenderMan e
+  Unreal**, e a frase de grooming em Houdini da carta padrão precisa ser dita como ferramenta dele, nunca
+  como se fosse a deles; (f) o Anthony, sócio dele, **já levou carta e não respondeu** — a segunda carta
+  precisa reconhecer isso ou chega como se a casa nunca tivesse sido procurada.
+
+### FICHA 2 — Iwona Kachel, **Head of Postproduction** da **TELEVISOR Studio** (Varsóvia, Polônia; grupo PFX) — **PUBLICADO, confiança ALTA**, SEGUNDA E ÚLTIMA pessoa da casa, e a página tem **`href` mentindo sobre o endereço**
+
+- **EMAIL: `iwona.kachel@televisor.studio` — PUBLICADO em texto visível, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://televisor.pl/contact` (**200, 62.450 bytes**; a mesma página é
+  servida byte a byte em `https://televisor.studio/contact`). O bloco **Team** publica cinco pessoas com
+  nome, cargo e endereço: *"**Michał Truszkowski** — Studio Head — michal.truszkowski@televisor.studio";
+  "**Iwona Kachel** — **Head of Postproduction** — iwona.kachel@televisor.studio — +48 608 358 636";
+  "**Magda Garska-Pasztelaniec** — Head of Growth"; "**Michał Dębski** — Client Partner";
+  "**Karolina Fesołowicz** — Client Partner"*.
+- **O ACHADO DE MÉTODO, e ele é o pior que eu já registrei, porque quebra a regra de ouro de ler o
+  `href`:** nesta página o `href` do `mailto:` e o texto visível **discordam em três dos cinco cartões**.
+  Mapeados um a um, colados:
+
+  | Cartão | `href="mailto:…"` | Texto visível |
+  |---|---|---|
+  | Michał Truszkowski | `michal.truszkowski@televisor.pl` | `michal.truszkowski@televisor.studio` |
+  | Iwona Kachel | `iwona.kachel@televisor.pl` | `iwona.kachel@televisor.studio` |
+  | **Michał Dębski** | **`mikolaj.valencia@televisor.pl`** | `michal.debski@televisor.studio` |
+  | Karolina Fesołowicz | `karolina.fesolowicz@televisor.studio` | (igual) |
+  | Magda Garska-Pasztelaniec | *(nenhum `mailto:`)* | `magda.garska@televisor.studio` |
+
+  **O cartão do Michał Dębski aponta para o endereço de uma "Mikolaj Valencia" que não é nomeada em página
+  nenhuma da casa** — resíduo de quem ocupava a cadeira antes. É a armadilha do `href` invertida: a rodada
+  de 04h35 anotou `michal.debski@televisor.studio` como "endereço novo publicado", e uma varredura que
+  preferisse o `href` teria escrito para a pessoa errada no domínio errado.
+- **COMO EU RESOLVI A DÚVIDA DE GRAFIA SEM CHUTAR, e é o único jeito honesto:** a regra de 07/09 diz que
+  **duas grafias da mesma pessoa significam zero endereço**. Aqui a dúvida é `@televisor.pl` contra
+  `@televisor.studio`, e ela se resolve **pela caixa do Vini, não por preferência minha**: em **11/09 às
+  21h27** a campanha escreveu para `michal.truszkowski@televisor.studio`, a forma do **texto visível**, e
+  `search_threads` por `televisor OR Truszkowski OR Kachel OR Debski OR Fesolowicz in:anywhere` devolve
+  **UM fio, o `SENT`, e NENHUM mailer-daemon**. **Oito dias sem 550 é prova de que `@televisor.studio`
+  entrega.** A forma do `href` (`@televisor.pl`) é a antiga; o domínio `.pl` continua vivo e serve o site,
+  mas o e-mail migrou para o `.studio`. A única caixa que a casa ainda publica em `.pl` é a funcional
+  `career@televisor.pl`.
+- **POR QUE ELA, e não outro da casa:** o Studio Head **já recebeu a carta em 11/09 e não respondeu**, e
+  dos quatro nomes restantes **três são comercial** (Head of Growth e dois Client Partner). A Iwona é a
+  **única remanescente do lado de produção**, e *Head of Postproduction* numa casa de pós é quem monta
+  equipe de artista por projeto. O `wp-json` ainda entrega mais quatro nomes de artista da casa (abaixo),
+  mas **nenhum com endereço**, e o teto de duas fecha aqui.
+- **PROVA DE DISCIPLINA, e ela é a mais forte da rodada porque é NÚMERO da taxonomia da própria casa:**
+  o `wp-json` público de taxonomia (`https://televisor.studio/wp-json/wp/v2/videos_tax?per_page=100`,
+  **200, 5.377 bytes**, aberto agora) devolve as oito categorias de trabalho com a contagem de cada uma, e
+  a primeira é, literal, **`character_animation` / `Character Animation` / count = 44** — contra
+  `motion_design` 142, `food_beverage` 154, `technology` 104, `vfx` 59, `transport` 32, `case-study` 29 e
+  `health-beauty` 12. **A casa mantém 44 projetos classificados por personagem.** Lidos os 44
+  (`?videos_tax=14&per_page=44`, **200, 75.818 bytes**), o catálogo é personagem estilizado de publicidade
+  e **de jogo**: *Match Masters* e *Match Masters 2* (jogo mobile), *Pepsi Monster*, *Pepsi Duel*, *Frugo*,
+  *Redd's*, *Dziki Sad*, *Antybaton*, *Pool Guests*, *Robson's bike*, e **duas de jogo de PC,
+  *Deadfall Adventures* e *Necrovision***. O menu de trabalho do site confirma o mesmo rótulo em texto:
+  *"Work — **Character Animation** — Motion Design — Transport — Technology — VFX — Health & Beauty —
+  Food & Beverage"*.
+- **GANCHO, com as frases da própria casa entre aspas:** *"At TELEVISOR, we don't just tell stories — we
+  **craft visual experiences**"*; *"As part of the globally acclaimed **PFX group**, we are a
+  **multi-award-winning powerhouse in post-production** and creative innovation"*; *"As a creative hub,
+  we're ready to support clients with our in-house **supervisors, animation directors, and art
+  directors**"*; *"**Where artistry meets future-forward technology**"*. E o gancho concreto de peça:
+  a vitrine da home abre com **`LV MURAKAMI - MNNK Bro. (Takashi Murakami & JP THE WAVY)`** para a **Louis
+  Vuitton**, que é personagem estilizado de autor.
+- **FORA DOS EUA?** Sim, **Polônia (Okrężna 8, 02-916 Varsóvia)**. **Frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `televisor OR Truszkowski OR Kachel OR Debski OR Fesolowicz in:anywhere` →
+  **UM fio**, o `SENT` de 11/09 para o Studio Head, **sem resposta, sem recusa, sem devolução**.
+  `Moreau OR "christophe@terminus" OR Kachel OR Iwona in:anywhere` → **`{}`**. Nos arquivos,
+  `televisor.studio` casa com **uma** linha de pessoa em `pessoas.csv` (Michał Truszkowski, 10/09) e
+  **uma** em `enviados.csv` (11/09); `televisor.pl` casa **duas** vezes e **nenhuma é pessoa nem envio**.
+  **Segundo e último toque no domínio.**
+- **RESSALVAS HONESTAS:** (a) **o cargo é pós-produção, não direção de arte** — Head of Postproduction
+  despacha finalização, e o resultado provável é encaminhamento interno; a casa nomeia *"art directors"*
+  na prosa mas **não publica nenhum**; (b) **`Character Animation` é ANIMAÇÃO de personagem, não fabricação
+  de personagem** — `3D` aparece **1 vez** na home, e `sculpt`, `modeling`, `groom`, `look dev` e `creature`
+  dão **ZERO** em todos os caminhos que eu abri; a casa pode terceirizar o asset e só animar, e a carta não
+  pode afirmar que eles modelam; (c) **a casa vende IA na primeira pessoa**, e isso é o sinal que matou a
+  RJDM em 04h35: *"We embrace the latest **AI tools** and cutting-edge technology to streamline workflows …
+  faster and more efficiently than ever"*, com **`TYMBARK AI`** dentro das 44 de personagem e um
+  *"Lamborghini **Inhouse AI Project**"* na vitrine da home — aqui é ferramenta na prosa e não item de
+  menu, que é a diferença da RJDM, mas é ressalva de verdade para uma carta de artista; (d) **parte do
+  catálogo de personagem é antigo** (*Necrovision* e *Deadfall Adventures*, da The Farm 51, são de 2009 e
+  2013), então as 44 não são todas recentes; (e) a Iwona **não foi verificada por segunda fonte** — só a
+  página da própria casa diz que ela está lá hoje, e o `href` desatualizado do cartão vizinho prova que
+  esta página **não é revisada com frequência**; (f) é **pós de publicidade**, onde personagem entra por
+  spot e por contrato curto.
