@@ -6183,3 +6183,25 @@ Os três primeiros consertei achando o slug certo no próprio repositório. **`n
 `takeforward.wd1` e `ea.wd1` seguem NÃO CONFERIDOS por Workday** (o 422 é corpo recusado, não
 quadro vazio), e isso é dívida aberta, não medição. A NBCU tem lane conhecida por SmartRecruiters
 e a EA tem conta própria em `jobs.ea.com`; nenhuma das duas é substituto da leitura do Workday.
+
+## 19/09 01h30 UTC (maestro): vigia do Job Board 2.0 do Chris Mayne, a cada 15 minutos, com candidatura na hora
+
+Ordem do Vini às 01h15: *"coloque um agente opus pra verificar esse google docs sempre que possível por
+novas vagas e aplicar IMEDIATAMENTE. esse link é mt acessado ent quando uma vaga é postada só os 10
+primeiros tem chances"*. O link é o Looker Studio
+`datastudio.google.com/reporting/2f39b56e-7393-4aa2-9fd5-bf8bf615c95f/page/5koHB`, "Animation/VFX/Game
+Industry Job Postings 2.0", tabela mantida à mão por Chris Mayne (camjam26@gmail.com).
+
+- **Como se lê sem tela:** a página é um app JS, mas os dados vêm de UM POST público em
+  `datastudio.google.com/batchedDataV2` (capturado com `/home/user/apply/ls_probe.js`, replay por curl
+  medido às 01h25: 200, 687 KB, 2.842 linhas, 11 colunas, ordenado por data). O corpo do POST está em
+  `automacao/jobboard-mayne-post.json`. Se o `appVersion` mudar, recapturar com o `ls_probe.js`.
+- **`automacao/jobboard-mayne.py`** baixa, compara com `jobboard-mayne-visto.json`, grava as linhas
+  novas em `jobboard-mayne-novas.jsonl` com a marca `disciplina` (título com character, creature,
+  modeler, sculpt, groom, texture, surfacing, look dev, vis dev, 3D artist, generalist, asset) e imprime
+  `NOVAS n DISCIPLINA m`. Primeira execução (01h27): 176 linhas dos últimos 2 dias, 12 da disciplina,
+  entregues na hora ao Jhon A (Opus) para aplicar.
+- **Quatro rotinas** nesta sessão, `:02 :17 :32 :47` (o serviço aceita no máximo uma por hora por
+  rotina), cada uma roda o script e, havendo disciplina nova, lança o `campanha-cacador` em Opus para
+  aplicar na mesma rodada. Parede de captcha vira dossiê e PushNotification, porque aqui a velocidade
+  é o que conta.
