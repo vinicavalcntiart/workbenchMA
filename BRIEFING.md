@@ -7099,3 +7099,222 @@ communicate design intent to downstream artists"*. Concept 2D está na lista de 
 > é **filtro de personagem em casa grande esconde a prioridade 2, que em casa grande também se
 > aplica por ordem do Vini**. O que é inédito de verdade é a lista dos **sete** sites do locatário e
 > o fato de a **Activision estar sim neste locatário** (o painel dizia o contrário desde 03/09).
+
+## Jhon A, 19/09 12h15-13h50 UTC (trigésimo primeiro turno, a PASSADA DE PRIORIDADE 2 nas casas grandes) — **TRÊS enviadas e confirmadas, e as três estavam paradas há 10 dias, 2 meses e 2 meses**; o que produziu o resultado foi trocar *filtro por palavra-chave* por *leitura do quadro inteiro*
+
+**Placar: 3 candidaturas ENVIADAS E CONFIRMADAS (Epic Games, Cary NC; Disney/ILM Vancouver;
+Activision/Infinity Ward, Barcelona), 0 duplicata criada, 0 tentativa contra veto escrito, 3
+alertas novos criados e confirmados.** Personagem **por título: 0** — as três são prioridade 2 ou
+rota espontânea, e o placar do dia passa de **11 para 14 formulários** com **1 de 5 de personagem**.
+Um navegador por vez; `pgrep -c chrome` = 0 no começo e 0 no fim de cada envio.
+
+**Números por frente:** **16 quadros de Greenhouse** das casas grandes, todos HTTP 200, **867 vagas
+por `internal_job_id`, 46 acertos de prioridade 1 ou 2**; **16 sites de Workday em 7 locatários,
+2.791 anúncios únicos** lidos com `searchText` **vazio**, ~50 acertos; janela por data desde 10h15
+em **880 quadros de 12 famílias — 799 vivos, 9.578 vagas, 3 na janela** e as três são engenharia de
+software da Fanatics Collectibles; ronda Disney por palavra-chave **12 de 12 em 200, zero ID novo**.
+
+### 1. A LIÇÃO DO 30º TURNO SE REPETIU TRÊS VEZES NO MESMO DIA, E AGORA TEM NÚMERO
+
+O 30º turno escreveu que *"filtro de personagem em casa grande esconde a prioridade 2"*. Esta rodada
+não achou porta nova em lugar nenhum: **achou três portas velhas que o próprio repositório já
+tinha**, e todas as três morreram de filtro.
+
+| Vaga | Quanto tempo ficou parada | Por que passou |
+|---|---|---|
+| **Epic `6121292004`** Principal Environment Artist, Cary NC | **10 dias** (`done=false` desde 09/09) | a nota dizia *"fica para amanhã pela regra de uma por casa por dia"* e as dez rodadas seguintes filtravam **personagem** |
+| **Activision `R027811`** Environment Art Lead, Barcelona | **2 meses** (`startDate` 17/07) | o site `External` foi paginado em **12/09** e devolveu *"ZERO de personagem"* — verdade e irrelevante |
+| **Disney `10159838`** Spark Animation EOI, ILM Vancouver | publicada **hoje** | o `ronda-disney.sh` consulta **6 termos de disciplina**, e o título dela não tem termo nenhum |
+
+> **Regra operacional que sai daqui, e ela é de método, não de disciplina: em casa grande a leitura
+> é o QUADRO INTEIRO com `searchText` vazio, e o filtro se aplica DEPOIS, em memória.** Filtrar no
+> servidor economiza requisição e paga com vaga invisível. O custo real é baixo: os 2.791 anúncios
+> dos 16 sites de Workday saíram em ~140 requisições.
+
+### 2. AS TRÊS ENVIADAS, COM A PROVA E A RESSALVA
+
+- **Epic Games**, `Principal Environment Artist` (Fortnite), Greenhouse **`epicgames/6121292004`**,
+  `internal_job_id 5189997004`, Cary NC, **12h37**. **Três provas:** URL
+  `/embed/job_app/confirmation?for=epicgames&token=6121292004`; tela *"Thank you for applying. Your
+  application has been received and if it seems like a good fit for the position, we will contact
+  you soon."*; **recibo de `careers-noreply@epicgames.com` às 12h37m05** nomeando a vaga. Código
+  `dSJocN2w` lido no Gmail às 12h36m33 e queimado. **Personagem está NO CORPO e pesa a favor:**
+  *"Push your artistic talent to the limit on a team of world-class environment, character and
+  concept artists"*. Régua de veto em 7.900 chars: **zero veto**; o único `authoriz` é o aviso
+  antiagência. Autorização com a verdade: *require sponsorship* = **Yes** (não existe pergunta de
+  *legally authorized* neste formulário). Pretensão **USD 100.000** na carta. **Ressalva:** é
+  **ambiente** e nível **PRINCIPAL**, pede *"at least 10 years of progressive professional
+  experience creating real-time 3D environments"* e portfólio de *modular kits* e *world-building*
+  que ele não tem; a carta diz isso por escrito e pede encaminhamento ao time de personagem
+  (regra 13). A irmã `6130892004` (*Multiple Locations*, **mesmo** `internal_job_id`) não foi
+  tocada, pela regra 18.
+- **Disney / ILM Vancouver**, `Spark Animation 2026 - Expression of Interest`, Workday
+  **`disney.wd5/disneycareer/10159838`**, Canadá, **12h5x**. **Duas provas:**
+  `jobTasks/completed/application` com *"Application Submitted. Thank you for sharing your story
+  with us! We've received your application."*; e a **Candidate Home** listando *"Spark Animation
+  2026 - Expression of Interest - ILM Vancouver / 10159838 / Application Received / September 19,
+  2026"* na primeira das 7 ativas. **Regra 14** cumprida. É **rota espontânea de casa grande**, e o
+  corpo autoriza: *"We are currently hiring across various different departments and levels in
+  Vancouver. If you don't see a vacancy that matches your profile, you can submit an Expression of
+  Interest application here. We'll be looking at applications across the pipeline."* **Ressalvas:**
+  o corpo tem **978 caracteres**, abaixo do piso de leitura válida, então "zero veto" ali é ausência
+  de frase; o anúncio é follow-up de estande de feira (*"Thanks for meeting us today at Spark
+  Animation 2026!"*) e **ele não esteve lá**, e nada na candidatura afirma o contrário; a categoria
+  declarada do posting é *Production Management (Animation & Visual Effects)*; e **até o fim do turno
+  não havia recibo de `disney@myworkday.com`** na caixa, então são duas provas e não três.
+- **Activision / Infinity Ward**, `Environment Art Lead`, Workday
+  **`xboxgaming.wd1/External/R027811`**, Barcelona, presencial 5 dias, **13h01**. **Três provas:**
+  `jobTasks/completed/application`; Candidate Home com *"Environment Art Lead / R027811 / Under
+  Review / September 19, 2026"* acima da `R027900` de hoje e da `R028112` de 09/09; e **recibo de
+  `activision@myworkday.com` às 13h01m53** nomeando a vaga. Receita do 30º turno (`WD_EDU=DELETE` +
+  `WD_FONTE=company`) **funciona** neste locatário. Autorização com a verdade: *legally authorized*
+  = **No**, *require sponsorship* = **Yes**, *willing to relocate* = **Yes**. Régua de veto em 6.054
+  chars: **zero**. **Ressalva grande, e ela enfraquece a candidatura:** o corpo **não cita
+  personagem em nenhum ponto** (diferente da Epic, que cita) e os dois gates de experiência são
+  intransponíveis no papel — *"7+ years of industry experience creating realistic environments for
+  3rd person games as a Sr. Artist or in an Art Leadership position"* e *"3+ years in a leadership
+  position, supervising artists in creating realistic environments"*. **É a mais fraca das três de
+  hoje** e entrou por casa grande + prioridade 2 + regra 13, não por fit de currículo.
+
+### 3. QUATRO MEDIDORES DA PRÓPRIA CAMPANHA ESTAVAM ERRADOS, E UM DELES POR 13x
+
+- **`netflix.wd108/Netflix` tem `total=645`, não 48.** O número **48** aparece em pelo menos três
+  turnos (27º, 29º, 30º) como se fosse o tamanho do quadro. Ele é o resultado de uma consulta **com
+  filtro**. Com `searchText` vazio o site devolve **645**, e é assim que aparecem a `JR42643`
+  *Environment Modeling Lead* de Vancouver e a `JR41288` *Head of Environments* — as duas já
+  resolvidas no dedupe, mas invisíveis na leitura de 48. **`total` de Workday é do FILTRO, nunca do
+  quadro; sem `searchText` vazio o número não vale.**
+- **`disney.wd5` tem DOIS sites e o `robots.txt` lista UM.** O robots serve só `disneycareer`;
+  `disneycareerdc`, com **707 anúncios**, não está lá e é conhecido por outro caminho desde 09/09.
+  Isto **limita a receita do 30º turno**: o robots do locatário é **piso**, não lista. (No
+  `xboxgaming.wd1` ele lista os sete e acertou; na Disney, não.)
+- **`cloudimperiumgames.wd503` tem um SEGUNDO site que a campanha nunca leu: `broadbean_external`,
+  56 vagas.** Ele é espelho do `CIG_Global_Careers` (59): as mesmas quatro requisições de *Character
+  Concept* e *Character Producer*, com `JR` de sufixo diferente (`JR101198` vs `JR101198-1`). **Zero
+  porta nova, e o zero é medido.**
+- **O `total` do Workday não limita a paginação: passado o fim, ele REPETE a última página.** O
+  primeiro varredor desta rodada parava na página vazia e leu **1.205 linhas para um site de 105
+  vagas** (o `External`), em 61 requisições em vez de 6. **O laço tem de ser limitado por `total`**,
+  nunca por "página vazia". Custou ~15 minutos de rodada.
+
+### 4. A ARMADILHA MAIS CARA DO TURNO É DE FORMULÁRIO, E O MODO SECO NÃO A VÊ
+
+No Greenhouse da **Epic**, a seção de **autoidentificação é OBRIGATÓRIA** (asterisco em todos) e ela
+se revela **dois a dois**, a cada submit que falha. O `pre-submit invalid` do próprio script deu
+**`[]` nas quatro tentativas**, ou seja o **modo seco não vê nada disto**:
+
+| Submit | O que o servidor devolveu |
+|---|---|
+| 1º | `Gender Identity*` **4000367004** + `Transgender Status*` **4000463004** |
+| 2º | `Race/Ethnicity*` **4000464004** + `Veteran Status*` **4000465004** |
+| 3º | o **checkbox** `gdpr_demographic_data_consent_given_1` — *"Please accept the terms to proceed"* |
+| 4º | passou |
+
+> **Regra: submit que falha por campo obrigatório NÃO prova que o resto está certo.** São **cinco**
+> exigências (4 selects + 1 checkbox) e cada rodada de erro mostra só duas. Os quatro selects foram
+> respondidos com **`I don't wish to answer`**, que é opção da própria lista (**não existe** *Decline
+> to self identify* neste board) — resposta verdadeira, nunca valor inventado.
+
+**E isto CORRIGE a nota da 31st Union de hoje 00h28**, que deixou o questionário demográfico em
+branco de propósito porque a página escrevia *"PLEASE DO NOT COMPLETE THESE QUESTIONS IF YOU DO NOT
+RESIDE IN THE UNITED STATES"*. Na Epic os **mesmos** campos têm **asterisco** e não há como enviar
+sem eles. **Vale o asterisco, não a frase de rodapé.**
+
+### 5. `WD_FONTE=company` NÃO FUNCIONA NO LOCATÁRIO DA DISNEY, E A RESPOSTA GRAVADA FICOU ERRADA
+
+A chave nasceu no 30º turno para o `xboxgaming`, onde a lista de fonte é **plana** e **tem** a folha
+*Company Website*. Na Disney a lista é **árvore**, e o nível 1 dela é: *Agency / Vendor / Career
+Event / Email / Employee Referral / Word of Mouth / Job Board / Organization / Print / Newspaper /
+Magazine / Radio / Search Engine / Internet / Sign / Billboard / Social Media / Talent Community*.
+**Não existe folha `Company Website` em lugar nenhum dela.** O script caiu no fallback e gravou
+**Social Media > LinkedIn**, que **não é** onde a vaga foi achada.
+
+> Não é mentira de qualificação, mas é **resposta errada**, e fica escrita sem maquiagem: **na
+> Disney a opção honesta é `Internet` ou `Job Board`**. A chave precisa de uma lista de preferência
+> por locatário, não de um valor único.
+
+### 6. O QUE CAIU NA RÉGUA, COM A FRASE COLADA
+
+- **Naughty Dog `6190399004`** *Senior Environment Lighting Artist (Contingent)*, Santa Monica,
+  **ID inédito nos quatro arquivos** — e morre por **veto escrito de autorização**, primeira linha
+  do anúncio: *"This position is for temporary engagement through our staffing partner, Yoh
+  Enterprise Solutions. **Candidates must be authorized to work in the United States for this
+  position.**"* Some-se disciplina errada (iluminação) e vínculo por agência.
+- **Disney `10155419`** *Design and Motion Graphics Artist*, Burbank, **inédito** — fora da
+  disciplina: *"Minimum of 3 years of professional experience in Graphic Design and Motion Graphics
+  for **advertising**"*, *"Design static assets such as logos, key art, templates"*, e a stack é
+  *Adobe Creative Suite* mais *Microsoft Office*. A regra 14 pede **arte ou modelagem**; design
+  gráfico de publicidade segue na lista de descarte.
+- **Activision `R028078`** *Activision 2027 Summer Internships - Environment Art* — estágio.
+- **Riot `8070799`** e **`7915314`** *Principal/Senior Concept Artist, Environment* — **concept 2D**,
+  na lista de descarte desde 13/09. **Riot `7981132`** *Staff Machine Learning Engineer (Applied
+  Modeling)* e **krafton `8524455002`** *Research Scientist - Generalist Agent* — falso amigo de
+  contador, já nomeados em 10/09.
+- **`siei` `6138372004`/`6127308004`** *3D Artist* e *3D Environmental Artist* do **Team ASOBI** —
+  **Tóquio**, e o Japão está fora do escopo por decisão escrita (idioma, fuso, moeda).
+- **Eyeline `JR41016`/`JR41011`** *Lead Surfacing* e *Surfacing/Lookdev* — **Hyderabad**; e as ~12
+  linhas de Mumbai dos dois sites da Disney (`10152359`, `10146395`, `10160974`, `10146393`,
+  `10155895`, `10155202`, `10155332`, `10152365`, `10154147`) — Índia, fora do escopo.
+- **Já enviadas ou já decididas, reconferidas uma a uma pelo `dedupe-agora.sh`:** Riot `8163170`
+  (10/09), Epic `6001731004` e `6001733004`/`6031088004`/`6020682004` (mesmo `iid`, 03 e 09/09),
+  2K/31st Union `5882575003` e `5882125003` (hoje), Imageworks `6669063003` (09/09), `6659179003`
+  (05/09), `4363748003`/`4363749003`/`4363798003`/`4363799003` (02 a 06/09), `7529417003` (francês),
+  Bluehole `8517790002`/`8517791002`/`8520212002` (07 e 08/09), Loonshot `8725151002`/`8085897002`
+  (recusadas 10/09) e `8651145002` (08/09), Netflix `JR42643` (ontem 16h37), `JR39273`, `JR41753`
+  (descartada 2x por disciplina), Disney `10142674`, `10137201`, `10152415`, `10160278`, `10153285`,
+  `10052606`, **e `10160535`** *Animator* de Sydney, que apareceu na própria **Candidate Home** como
+  *Application Received / September 18* — **a Candidate Home continua sendo a fonte de dedupe mais
+  barata deste locatário, e ela evitou a duplicata de graça.**
+- **Zero acerto de disciplina, medido e não suposto, em:** `warnerbros.wd5/global` (333),
+  `spe.wd1/SonyPicturesEntertainment` (61), `bydeluxe.wd5/Deluxe_External` (42),
+  `xboxgaming/King_External_Careers` (22), `SS_external` (3), `CentralTech` (2), `HOH` (**0 vagas**),
+  `bungie` (5), `thatsnomoonentertainment` (2), `inzoistudio` (1), `studiokraftonboard` (1).
+
+### 7. DOIS ACHADOS DE FERRAMENTA, E UM DELES É SOBRE NÓS
+
+- **`boards-api.greenhouse.io/v1/boards/riotgames/jobs` responde 200 com 155 vagas.** O 30º turno
+  registrou que `job-boards.greenhouse.io/riotgames` dá **302** e que a rota com widget é o
+  `/embed/job_board`. Verdade — mas a **API de boards** nunca precisou de nenhum dos dois: ela serve
+  o quadro inteiro **com `internal_job_id`**, que é a única chave que amarra a mesma requisição em
+  dois quadros. **Para LER, a rota é sempre a boards-api; o embed é para CLICAR.**
+- **`git add` por nome NÃO impede levar arquivo de outro agente, e o `f9945ba` provou isso.** Eu
+  rodei `git add enviados.csv automacao/processados.csv docs/index.html` — três arquivos, por nome, e
+  o commit saiu com **`automacao/FILA-DO-VINI.md`** dentro. A causa não é o gancho (o
+  `.githooks/pre-commit` só roda a validação e não adiciona nada): é que **`git commit` escreve o
+  ÍNDICE INTEIRO**, e outro agente já tinha deixado o arquivo dele **staged**. O gancho não pega isso
+  porque o arquivo é válido.
+
+> **A trava de verdade é `git commit --only <arquivos>`** (ou `git commit -- <paths>`), que ignora o
+> resto do índice. Só `git add` por nome é pedido, não trava — exatamente o argumento do Vini sobre
+> instrução em prompt. O commit `3eb86c5` desta rodada já saiu com `--only`.
+
+### 8. OS TRÊS ALERTAS BARATOS FORAM CRIADOS, E O PAINEL FOI DE 5 PARA 8
+
+`my.greenhouse.io/subscriptions` mostra **`Your job alerts (8)`** com **`Email frequency: Daily`**:
+2K, Bungie, **Insomniac Games**, **Naughty Dog**, PlayStation Global, Riot Games, **Sony Interactive
+Entertainment Inc.** e Sony Pictures Imageworks. Os três novos levam sete palavras cada (*character
+artist, character modeler, modeler, sculptor, groom, texture artist, look development*).
+
+Dois mecanismos reconfirmados, para ninguém escrever "não criou":
+
+1. **O clique em `Create alert` não gera POST visível.** Os três logs terminam em
+   `POSTs novos: []` e a tela navega para `/jobs/search` com o cartão *Dream Job*. **A prova é o
+   `/subscriptions`, e só ele.**
+2. **O digitador das oito caixas de código falhou na Insomniac** (*"AVISO: o codigo nao gravou nas
+   caixas"*, leitura de volta vazia) **e a sessão entrou igual**, porque o `ghst_my.json` guardava
+   login válido. **Código que "não gravou" não é prova de falha**, e o código por e-mail só é
+   necessário quando a sessão expirou.
+
+**Ressalva dos alertas:** o campo **Department ficou em `Select...`** nos três, ou seja o alerta é
+por **palavra** e não por departamento. Na Sony Pictures Imageworks o alerta antigo é por
+departamento (*Artists*), que é o formato **mais largo** dos dois — vale considerar refazer os três
+com departamento quando sobrar rodada.
+
+### 9. A JANELA POR DATA DESDE 10h15: TRÊS VAGAS NO MUNDO INTEIRO, E NENHUMA É DA DISCIPLINA
+
+`JANELA_ISO=2026-09-19T10:15:00Z python3 automacao/varre-janela-ats.py`: **880 quadros, 799 vivos,
+9.578 vagas**, e **3 na janela** — `fanaticscollectibles` `4408329009` *Senior Engineer, Android*,
+`4408401009` *Senior Engineer, iOS* e `4408295009` *Software Engineer, Android*, publicadas entre
+11h45 e 11h47 UTC. As **1.344 sem data** (ashby, bamboohr, pinpoint, rippling) deram os **mesmos 85
+acertos** já triados pelo 29º turno às 08h15, e a repetição serviu de controle: **o estoque dessas
+quatro famílias não mudou em quatro horas.**
