@@ -814,3 +814,30 @@ nela outra vez.
 - **`john@overthemoongames.com`** — Over The Moon, **Vancouver BC**, que é a primeira prioridade
   geográfica da campanha. O site está em obra (*"Unpacking…"*, 200, 471.866 bytes, sem uma linha de
   texto). **Endereço guardado; falta o pareamento nome+cargo em fonte aberta.**
+
+---
+
+## ADENDO DE 19/09 ÀS 02h35 (Joe) — **UBISOFT reprovada com endereço literal DE 2026, e o detalhe do HÍFEN**
+
+O padrão `nome.sobrenome@ubisoft.com` estava provado por **rodapé de paper do SIGGRAPH de 2019**
+(seção "UBISOFT — padrão provado por três endereços literais"), e a nota de 12/09 registra que
+rodapé de paper prova **formato** e não **vigência da caixa**. Agora existe uma prova **de hoje**, na
+página que o próprio grupo mantém:
+
+| Endereço | Pessoa e cargo | Fonte, aberta em 19/09 às 02h35 |
+|---|---|---|
+| `antoine.leduc-labelle@ubisoft.com` | **Antoine Leduc-Labelle, Public Relations Manager** | `https://montreal.ubisoft.com/press` (**200, 209.240 bytes**; `/en/press` devolve a mesma página), bloco *"Media contact"* |
+
+**O que isso acrescenta, e é acionável:** o sobrenome composto entra **com o hífen preservado**
+(`leduc-labelle`, e não `leduclabelle` nem `leduc.labelle`). Toda montagem futura em `ubisoft.com`
+para nome composto tem de manter o hífen do sobrenome e o ponto só entre nome e sobrenome. Isso
+também reduz um pouco a leitura de 06/09 para **este** domínio: o formato segue vivo em 2026, o que
+não muda a régua — montado continua **BAIXA**, porque o que falha é a caixa da pessoa, não o formato.
+
+**E por que este endereço NÃO virou ficha nem carta** (registrado aqui para nenhuma rodada reabrir):
+a própria página escreve, na linha de baixo, ***"*For media requests only. For all other requests,
+write to infomtl@ubisoft.com"***. É recusa de escopo por escrito. Somado a isso, *Public Relations
+Manager* não é nenhum dos alvos que o `BRIEF-JOE` manda perseguir em casa grande (recrutador de arte
+com nome, Character Art Lead, ou artista sênior de dentro). A **Ubisoft Montréal** segue como casa
+sem nenhuma pessoa na campanha — Massive tem uma (`jevgeni.laur@`, que **quicou** em 06/09) e Québec
+tem duas (Henrick Pelletier e Thierry Dansereau).
