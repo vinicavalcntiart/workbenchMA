@@ -6988,3 +6988,105 @@ Vertigo Istambul e Amber Brasil fora de escopo; Illumination `88ab5915` com quad
   vivos** (eram 9.079 em 18/09) e **5 acertos**, quatro falso amigo de *modelling* financeiro e
   científico (Etteplan, KPMG, Radboudumc, 247hire) e o quinto é Bond Street Film *3D Generalist*
   `148210`, **já enviada** (*"Tack för din ansökan!"*).
+
+## Jhon A, 19/09 11h00-12h00 UTC (trigésimo turno, rodada das CASAS GRANDES) — **1 candidatura enviada e confirmada, 1 alerta criado e confirmado, e a vaga enviada estava escondida num site de Workday que a campanha nunca tinha varrido**
+
+Inventário completo das duas listas fixas (`BRIEF-GRANDES.md` e `BRIEF-GRANDES-JOGOS.md`), todo por
+API e com zero navegador na fase de leitura. **Placar: 1 enviada (R027900, Activision/Elsewhere),
+1 alerta novo (Riot), 1 vaga nova na janela de 24 h (2K, concept 2D, descartada com a frase colada),
+0 duplicata, 0 tentativa contra veto escrito.** Um navegador por vez, `pgrep -c chrome` = 0 no
+começo e no fim.
+
+### 1. A REGRA QUE SAI DAQUI: **locatário de Workday não é um quadro, é uma FAMÍLIA de sites — e o robots.txt do locatário lista todos**
+
+A campanha lia `xboxgaming.wd1` **só** pelo site `Blizzard_External_Careers` (49 vagas). O
+`robots.txt` do locatário lista **SETE**: `Blizzard_External_Careers`, **`External` (105 vagas, o
+da Activision)**, `King_External_Careers` (22), `CentralTech` (2), `SS_external` (3), `DL_external`
+(0) e `HOH` (0). O `External` **já era conhecido pela URL** — a *Associate Art Director* `R028122`
+foi enviada por ele em 09/09 — e **nunca havia sido varrido por API**. Varrendo os sete apareceu a
+`R027900` *Senior (or above) Environment Artist - Terrain* da **Elsewhere Entertainment** (Varsóvia
+ou Malmö), publicada em **19/08** e com **zero ocorrência** nos quatro arquivos do dedupe: dezoito
+dias de vaga viva invisível para a campanha porque um site do mesmo locatário não era lido.
+**ENVIADA E CONFIRMADA às 11h34** (Candidate Home com `R027900 / Under Review / September 19, 2026`
++ recibo de `activision@myworkday.com` nomeando a vaga). Ressalva escrita na ficha: **não é
+personagem**, entra pela prioridade 2, e o precedente é a `R028112` de ambiente enviada em 09/09.
+
+### 2. DUAS ARMADILHAS NOVAS DE WORKDAY, as duas já consertadas no `wd_geral.js`
+
+- **`Field of Study` e `To (Actual or Expected)` OBRIGATÓRIOS na Educação.** O `xboxgaming/External`
+  é o primeiro locatário medido que exige os dois, e o passo 2 devolve `Errors Found` nomeando-os.
+  **A campanha não tem esses dados conferidos**: o mestrado na UNICAP é em *Creative Industries* e
+  está **em andamento**, e o ano esperado de conclusão não está escrito no repositório nem no
+  documento privado do Drive. **Inventar ano em formulário é mentira**, então nasceu a chave
+  `WD_EDU=DELETE`, que remove o bloco de Educação e deixa a formação **só no CV anexado**. O Review
+  mostra `Education: No Response` de propósito.
+- **A fonte herdada do rascunho passava por verdadeira e não era.** O rascunho trazia
+  `How Did You Hear About Us? = Job Board`, que está na lista de respostas aceitas do script e por
+  isso **nunca era refeita** — só que esta vaga foi achada no Workday da **própria casa**. Entraram
+  `WD_FONTE=company` (põe a folha *Company Website* acima das categorias, porque neste locatário a
+  lista é **PLANA** e tem *Company Website* e *Job Board* no mesmo nível) e `WD_FONTE_REFAZ=1` (refaz
+  resposta já gravada). Valor final conferido na tela: **Company Website**.
+
+### 3. O ALERTA DO RIOT EXISTE, e o que dizia 404 era 302
+
+O registro de 18/09 deixou Riot e Epic como não conferidos porque
+`job-boards.greenhouse.io/riotgames` "devolve 404". **Não devolve: dá 302** para
+`riotgames.com/en/work-with-us/welcome` (o do Epic vai para `epicgames.com/careers/jobs`). A rota
+que serve o quadro **com o widget** é **`/embed/job_board?for=<token>`**, que responde 200 com o
+`<div class="job-alert">` e o botão *Create alert*. Servem *Create alert* no embed: `riotgames`,
+`2k`, `insomniac`, `naughtydog`, `siei`, `bungie`. **Epic (53 KB) e Roblox (71 KB) respondem 200 com
+ZERO ocorrência da palavra `alert` no HTML — widget desligado pela casa, e isso é zero medido.**
+
+> **PROVA de alerta é o painel `https://my.greenhouse.io/subscriptions`, e não `/` nem `/profile`.**
+> Os dois últimos **não listam alerta nenhum** (a home hoje mostra *Dream Job* e *Recommended
+> Roles*), e foi isso que quase me fez escrever "não criou". O `/subscriptions` mostra
+> **`Your job alerts (5)` / `Email frequency: Daily`** com 2K, Bungie, PlayStation Global, **Riot
+> Games** e Sony Pictures Imageworks — eram **4** em 18/09. Confirmado também que o **POST de
+> criação não aparece no listener** (a tela navega para a busca), então a conferência exige login
+> novo: para isso existe o `gh_alertas_conferir.js`, que agora guarda a sessão em `ghst_my.json`
+> para não queimar um código por e-mail em cada leitura.
+
+### 4. TRÊS LOCATÁRIOS SAEM DE "NÃO CONFERIDO" — nenhum deles pelo Workday
+
+Códigos de hoje, para não reabrir a mesma porta: `epicgames.wd5` responde robots 200 **sem sitemap
+nenhum** e `/External` e `/EpicGames` dão **404** no endpoint de jobs; `krafton.wd3/KRAFTON` dá
+**403** e `/External` 404; `sonyinteractive.wd1`, `activision.wd1` e `magicleap.wd1` dão **422** no
+robots **e** no endpoint, ou seja o locatário não existe com esse nome. **A leitura é Greenhouse:**
+Epic = `epicgames` (150 vagas, 9 acertos), KRAFTON = cinco quadros do grupo (`krafton` 60,
+`bluehole` 18, `loonshotgames` 23, `inzoistudio` 1, `studiokraftonboard` 1), Sony Interactive =
+`siei` (61) e `sonyinteractiveentertainmentglobal` (192). Corrigido também: **`bydeluxe.wd5/Deluxe_External`
+responde 200 com 42 vagas** (o registro de hoje 08h dizia 404, era o nome do site errado) e
+**`cloudimperiumgames.wd503/CIG_Global_Careers` responde 200 com 59** (`.wd1`, `.wd3`, `cig.wd5` e
+`cig.wd3` dão 422).
+
+### 5. A ÚNICA VAGA NOVA DE 24 HORAS, e ela é descarte
+
+**2K / 31st Union, `Expert Character Concept Artist`**, `internal_job_id 5882125003`, publicada
+**18/09 23h04 UTC**, nos dois quadros (`2k/7999909003` e `31stunion/7986014003`) — **a mesma
+armadilha de dedupe de ontem, agora confirmada como padrão da casa: dois anúncios, um
+`internal_job_id`**. Descartada por disciplina, com a frase colada: *"Typically 8+ years of
+professional concept art experience"*, *"Expert proficiency with industry-standard 2D concept-art
+tools"*, *"Strong understanding of how concept art translates into 3D production and how to
+communicate design intent to downstream artists"*. Concept 2D está na lista de descarte desde 13/09.
+
+### 6. O RESTO DO INVENTÁRIO, EM UMA LINHA CADA
+
+- **Disney:** `ronda-disney.sh` com 12 de 12 consultas em 200, 13 IDs da disciplina no ar e **zero
+  ID novo** — zero medido.
+- **Warner:** 333 vagas lidas **uma a uma** por paginação de 20 no `warnerbros.wd5/global` e **zero
+  título da disciplina**; o sitemap de `careers.wbd.com` (386 URLs, 333 de vaga) confirma **um único
+  título de arte no quadro inteiro** (`R000106508` *Advanced Level Artist*, já registrado). Os dois
+  números casam, ou seja é a mesma fonte lida por dois caminhos.
+- **Netflix:** `total=48`, 8 acertos e **todos já resolvidos**; Eyeline com 3, os três em Hyderabad.
+- **Pixar:** quatro sites no robots, `character` com `total=0` no principal e 1 vaga no de tecnologia.
+- **NBCUniversal:** 369 + 7 vagas lidas por inteiro, 9 acertos de arte e **todos já registrados**.
+- **Paramount:** 296 vagas no sitemap e o único acerto é o falso positivo conhecido de *Data
+  Architecture and Modeling*.
+- **Lever:** `skydance` 26 (10 de arte, uma inédita e é *Environment Set Dressing Trainee* de 01/09,
+  fora da janela), `bentoboxent` 1, `illumination` **0** (quadro segue esvaziado).
+- **Tokens que NÃO existem, e isso fecha a caça de slug do grupo PlayStation:** `santamonica`,
+  `santamonicastudio`, `sonysantamonica`, `suckerpunch`, `suckerpunchproductions`, `bend`,
+  `bendstudio`, `guerrilla`, `guerrillagames`, `mediamolecule`, `mediamoleculestudio`, `playstation`,
+  `sonyinteractiveentertainment`, `bluepoint`, `bluepointgames`, `nixxes`, `valkyrieentertainment`,
+  `havenstudios`, `hazelight`, `insomniacgames` — todos **404 de verdade**. Os first-party sem
+  quadro próprio se leem pelos dois quadros do grupo.
