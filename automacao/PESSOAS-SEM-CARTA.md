@@ -13263,3 +13263,420 @@ casa de BC já qualificada** — e foi a Global Mechanic.
    material não solicitado; `pixomondo.com` está **no teto de dois**; `submarine.nl` **recusou por
    e-mail**; `wilfilm.dk` tem **veto de EU pass**; `ludocraft.com` só tem endereço **sem cargo**; e
    `knowledgehub.creativebc.com` **não passa TLS** neste ambiente.
+
+# RODADA DAS 10h35 UTC DE 19/09 (Joe) — SEIS FICHAS, AS SEIS COM ENDEREÇO PUBLICADO E CONFIANÇA ALTA, ZERO MONTADO, E AS SEIS SÃO A SEGUNDA PESSOA DE UMA CASA JÁ TOCADA
+
+**Como esta rodada foi feita, em uma frase:** reproduzi o cruzamento (`pessoas.csv` × `enviados.csv` ×
+`processados.csv`, com regex na linha inteira e não só na coluna `email`), que devolveu **744 domínios**
+com no máximo uma pessoa e no máximo um toque, e em vez de abrir página por página **varri o pool inteiro
+por script** — `/`, `/contact`, `/about`, `/team` e `/impressum` em **337 domínios de uma pessoa** e
+**407 de zero pessoa**, decodificando `data-cfemail`, entidade HTML, ROT13, `data-enc-email` e `(at)`/`(dot)`
+— e só abri a olho os domínios em que o script achou endereço de PESSOA inédito. Rendeu **seis fichas**.
+
+**O ACHADO DE MÉTODO DESTA RODADA, E É O MELHOR ANTÍDOTO QUE JÁ APARECEU PARA A ARMADILHA DO `href` DE
+06h35:** em site feito com framework moderno (Next.js, Squarespace, Wix) o pareamento nome↔cargo↔email
+**existe duas vezes na mesma página** — uma no HTML renderizado e outra num **JSON embutido de dados**. Na
+Brand New School o JSON traz `{"title":"Director of People / HR","name":"Amanda Collazo","email":"amanda@brandnewschool.com","phone":null}`,
+isto é nome, cargo e endereço **no mesmo objeto**, o que torna impossível o cartão de uma pessoa apontar
+para o endereço de outra. **Procurar o JSON antes de ler o DOM é mais rápido e mais seguro.** E no Wix da
+CarpeDiem o bloco de equipe é renderizado **três vezes** no mesmo HTML, o que dá três leituras
+independentes da mesma adjacência.
+
+**A SEGUNDA MEDIÇÃO QUE VALE PARA AS PRÓXIMAS RODADAS, E ELA CORTA TRABALHO:** o pool de **casa tocada só
+em caixa funcional** (407 domínios, `pessoas=0 toques=1`) é **pobre em gente**, e agora está medido: 200
+domínios varridos em cinco caminhos devolveram **dois** endereços de pessoa novos no universo inteiro
+(`michalis@cat-astrophe-games.com` e `rick@gummycat.com`). O motivo é circular e óbvio depois de escrito:
+**se a casa publicasse uma pessoa, a campanha já teria achado essa pessoa** — a caixa funcional foi usada
+justamente porque não havia nome. O pool que rende é o outro, o de **casa com UMA pessoa já tocada**, e ele
+rendeu as seis fichas de hoje. **Na próxima rodada, comece pelo pool de uma pessoa e não pelo de zero.**
+
+**A TERCEIRA MEDIÇÃO: CASA GRANDE NÃO PUBLICA GENTE.** Varri Aardman, Guru Studio, Hybride, Dexter Studios,
+Nexus Studios e Mac Guff em todo o repertório de caminhos (23 caminhos cada) e o resultado é **zero pessoa**
+nas seis: Guru publica `peopleandculture@`, `productionservices@`, `business.affairs@`, `questions@`,
+`marketing@` e `sales@`; Hybride publica `bidding@`, `communications@`, `info@` e `support@`; Dexter publica
+`vfx@`, `immersive@`, `theeye@` e `pr@`; Nexus publica `eps@`, `oc@`, `prmarketing@`, `info@` e `jobs@`,
+todos rótulo de função sem nome. **Casa grande se caça por CRÉDITO e por palestra, nunca por página de
+equipe** — e isso confirma pela terceira rodada o que o `BRIEF-JOE` já diz da prioridade de alvo.
+
+---
+
+### FICHA 1 — Lauren DeFelice, **Executive Producer** da **Carbon** (Nova York, EUA) — **PUBLICADO, confiança ALTA**, e o pareamento é o mais limpo da rodada
+
+- **EMAIL: `ldefelice@heycarbon.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://heycarbon.com/contact` (**200, 43.997 bytes**, efetiva
+  `https://heycarbon.com/contact/`, `<title>Contact - Carbon</title>`).
+- **PROVA LITERAL, e aqui o `href` e o nome visível estão DENTRO DA MESMA ÂNCORA**, o que fecha a armadilha
+  de 06h35 de saída. HTML cru, colado: `<p> <strong><a href="mailto:ldefelice@heycarbon.com">Lauren
+  DeFelice</a></strong><br /> Executive Producer<br />`. O endereço postal vem no mesmo bloco:
+  *"28 W. 25th Street, 3rd Floor New York, NY 10010 — T +1 212 981 5000 — F +1 212 568 7882"*. A casa
+  publica **três** cadeiras e só três: **Lauren DeFelice, Executive Producer** (Nova York, `ldefelice@`),
+  **Gretchen Praeger, Executive Producer** (*"8924 Lindblade Street Culver City, CA 90232"*, `gretchen@`) e
+  o **Matt McManus** do `mmcmanus@`, que **já levou a carta em 06/09** e não respondeu.
+- **POR QUE ELA, e não outra da casa:** as três cadeiras publicadas são EP de escritórios diferentes, então
+  o critério não é hierarquia, é geografia e ordem da própria página. O `mmcmanus@` está gasto; das duas
+  restantes, a Lauren é a de **Nova York**, que a página lista primeiro e que é o escritório de maior porte
+  na descrição. A Gretchen Praeger fica documentada como a **terceira**, e terceiro e-mail ao domínio é do
+  maestro, pelo teto de dois.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Carbon** is an independent creative production
+  studio for artists and clients that enjoy the journey as much as the destination."*; e a linha de serviços,
+  que é a prova de disciplina escrita pela própria casa: *"From design, direction, and live action production
+  to **character animation**, motion graphics, color grading, CGI, and photoreal visual effects, we're adept
+  at using any technique to bring great ideas to life."* E o melhor de todos, porque é um convite literal
+  impresso na própria página de contato: *"**Get in touch with your reel, software skills, IG, LinkedIn
+  and/or website!**"*
+- **CASA FORA DOS EUA? NÃO.** Nova York, Chicago e Culver City. **A frase de realocação NÃO entra**, pela
+  regra do briefing.
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `heycarbon` devolve **UM** fio — `SENT`
+  de **06/09 12h48** para `mmcmanus@heycarbon.com`, abrindo *"Hi Matt"*, **sem nenhuma resposta**. **Zero**
+  fio de `ldefelice@` e **zero** de `gretchen@`. No cruzamento a casa sai como `pessoas=1 toques=1`, abaixo
+  do teto.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 06/09/2026 12h48 UTC** — mais de doze dias, muito acima das 48h.
+- **RESSALVA HONESTA:** Executive Producer é cadeira de **produção**, não de arte, e a casa **não publica
+  nenhum cargo de arte** no `/contact`. A contagem literal na página é `character`=1, `animation`=1,
+  `creature`=0, `groom`=0, `3d`=0 — ou seja *"character animation"* aparece **uma vez**, numa lista de
+  serviços, e na Carbon isso é sobretudo motion e 2D, não personagem 3D de produção longa. E não sei se
+  `ldefelice@` é a caixa dela ou de uma assistente de produção.
+
+---
+
+### FICHA 2 — Jon Clifford, **Head of Technical & Post Production** da **Timeless Films** (Londres, Reino Unido) — **PUBLICADO, confiança ALTA**, com TRIPLA conferência contra a armadilha do `href`
+
+- **EMAIL: `jon@timelessfilms.co.uk` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://www.timelessfilms.co.uk/about` (**200, 30.617 bytes**, efetiva
+  `https://timelessfilms.co.uk/about`, `<title>Timeless Films</title>`).
+- **PROVA LITERAL, com as três camadas conferindo entre si.** HTML cru do cartão dele:
+  `<h4 class="text-center text-lg-left text-primary">Jon Clifford</h4>` … `<h6 class="text-center
+  text-lg-left font-weight-light">Head of Technical & Post Production</h6>` … `<a
+  href="mailto:jon@timelessfilms.co.uk" class="btn btn-outline-primary">Send Email</a> <a href="#" …
+  data-name="Jon Clifford" data-job="Head of Technical &amp; Post P…`. **O `<h4>`, o `href` e o
+  `data-name` do modal dizem a mesma coisa** — e o `data-name` é justamente o campo que discordou em dois
+  domínios na rodada das 06h35, então conferi os três. A casa publica **cinco** cartões: *Ralph Kamp*
+  (**Chairman & CEO**, `ralph@`, **tocado em 17/09**), *Rebecca Kamp* (**SVP Production & Marketing**,
+  `rebecca@`), *Gareth Kamp* (**SVP Distribution & Production**, `gareth@`), *Jon Clifford* (**Head of
+  Technical & Post Production**, `jon@`) e *Jade Spinks* (**Contracts & Collections Manager**, `jade@`).
+- **POR QUE ELE, e não outro da casa:** os três Kamp são a família dona e a página diz isso sem rodeio,
+  *"Established in 2009 by industry veteran **Ralph Kamp** (former CEO of Icon and Odyssey Entertainment)
+  with his two children **Rebecca and Gareth**"* — são financiamento, distribuição e marketing, e o Ralph
+  já levou a carta. A Jade é contratos e cobrança. **O Jon Clifford é a única cadeira técnica e de imagem
+  da casa inteira**, isto é quem decide pipeline e quem escolhe fornecedor de 3D.
+- **GANCHO, com as frases da própria casa entre aspas:** *"Timeless Films is a leading independent
+  production company specialising in the **development, financing, production and distribution of animated
+  and family films**"*; *"Since its inception Timeless has partnered on five films with Constantin Film, the
+  hugely successful German-language children's favourite **WICKIE THE MIGHTY VIKING**, its **3D** sequel
+  **WICKIE AND THE TREASURE OF THE GODS** and **3D CG animated feature ANIMALS UNITED**"*; e o catálogo, que
+  é uma fileira de elenco estilizado: *"**JUSTIN AND THE KNIGHTS OF VALOUR (3D)**"* com a KANDOR Graphics,
+  *"**ROCK DOG** from Academy Award nominated writer/director **Ash Brannon (TOY STORY 2)**"* com duas
+  sequências, *"**PETS UNITED**"*, *"**KOATI**, a beautiful, 2D animated feature from Latin America"*,
+  *"**EXTINCT** … directed by **David Silverman (The Simpsons Movie)**"* e *"the animated musical
+  **SCROOGE: A CHRISTMAS CAROL**, a **Netflix Original Film**"*.
+- **CASA FORA DOS EUA? SIM**, Reino Unido. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `timelessfilms` devolve **UM** fio —
+  `SENT` de **17/09 17h44** para `ralph@timelessfilms.co.uk`, abrindo *"Hi Ralph, Wickie, Dragon Rider, Rock
+  Dog and Monster Family are a catalogue of stylized casts…"*, **sem resposta**. **Zero** fio de `jon@`,
+  `rebecca@`, `gareth@` e `jade@`. Cruzamento: `pessoas=1 toques=1`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 17/09/2026 17h44 UTC.** **RESSALVA DE CADÊNCIA, e ela é a mesma que
+  segurou a Soja e a Global Mechanic às 08h35:** no momento desta ficha faz **~40h50m**, e as 48h só vencem
+  **19/09 às 17h44**. **O maestro segura esta carta até lá**, ou decide escrever sabendo do intervalo.
+- **RESSALVA HONESTA:** a Timeless é **produtora, financiadora e distribuidora**, não estúdio com pipeline
+  interno — o 3D das obras dela é feito por parceiros (Constantin Film, KANDOR Graphics), e um *Head of
+  Technical & Post Production* dessa casa contrata **pós-produção e entrega**, não necessariamente
+  modelador de personagem. Pesa também uma armadilha de caminho que vale registrar: **`/contact` devolve
+  404 (6.603 bytes, `<title>Not Found</title>`)** e a equipe inteira vive em `/about` — quem varre caminho
+  canônico declara esta casa sem endereço nenhum.
+
+---
+
+### FICHA 3 — Heiki Luts, **Producer & Supervisor** da **Frost FX** (Tallinn, Estônia) — **PUBLICADO, confiança ALTA**, e a casa publica o organograma inteiro com telefone
+
+- **EMAIL: `heiki@frostfx.ee` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://frostfx.ee/` (**200, 42.023 bytes**, `<title>Frost FX</title>`). A
+  casa é **página única**: `/about`, `/contact`, `/team` e `/impressum` não existem como caminho separado e
+  todo o organograma vive na raiz.
+- **PROVA LITERAL:** o bloco `Team` publica **seis** cartões, cada um com nome, cargo, endereço e telefone,
+  colados: *"**Heiki Luts** | **Producer & Supervisor** | heiki@frostfx.ee | +372 5664 4502"*, *"**Marko
+  Post** | **Producer** | marko@frostfx.ee | +372 5242 095"*, *"**Andres Kluge** | **Creative Supervisor** |
+  andres@frostfx.ee | +372 5106 356"*, *"**Martin Turu** | **Lead Compositor & 3D Generalist** |
+  martin@frostfx.ee"*, *"**Anton Shtolf** | **Compositor** | anton@frostfx.ee"* e *"**Kalev Mölder** | **VR
+  & AR Specialist, Developer** | kalev@frostfx.ee"*. HTML cru do dele, com href igual ao texto visível:
+  `<li><a class="hover-animation" href="mailto:heiki@frostfx.ee">heiki@frostfx.ee</a></li>`.
+- **POR QUE ELE, e não outro da casa:** o **Andres Kluge, Creative Supervisor**, já recebeu a carta em
+  **11/09** e não respondeu. Das cinco cadeiras restantes, três são execução (Compositor, Lead Compositor,
+  VR/AR Developer) e duas são produção. Entre o **Marko Post (Producer)** e o Heiki, o Heiki é o que
+  **acumula supervisão** — *Producer & Supervisor* —, e supervisor é quem pede artista, não quem só fecha
+  orçamento. O Marko Post fica documentado como terceiro, segurado pelo teto.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Frost FX** has been delivering **3D animation
+  and visual effects** for feature films and commercials all over the world for **over 14 years**."*; *"Our
+  creative team offers expertise from **pre-shoot consultations, shoot supervisions** to the creation of
+  complex post-production solutions for **any area of computer generated imagery**."*; e a frase de casa que
+  é boa de citar porque é orgulho local: *"**FrostFx has its headquarters in the nordic Tallinn, Estonia**,
+  where the wifi connections reach the deepest of forests and the e-State is embedded in the fastest of
+  internet connections."* **E a porta de contratação, escrita pela própria casa:** *"**Wish to join our
+  team?** Take a second to fill this form. Please attach your CV and reel URL. *You can also send us an
+  e-mail: jobs@frostfx.ee"*.
+- **CASA FORA DOS EUA? SIM**, Estônia, União Europeia. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `frostfx` devolve **UM** fio — `SENT` de
+  **11/09 21h27** para `andres@frostfx.ee`, abrindo *"Hi Andres, Your reel is what brought me here: the
+  Shedevr dragon and the Yggdrasil Vikings and Jungle Book spots are creature and character CG, and as
+  Creative Supervisor at Frost FX you are the person…"*, **sem resposta**. **Zero** fio de `heiki@`,
+  `marko@`, `martin@`, `anton@` e `kalev@`. Cruzamento: `pessoas=1 toques=1`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 11/09/2026 21h27 UTC** — mais de sete dias, acima das 48h.
+- **RESSALVA HONESTA:** *Producer & Supervisor* pode muito bem ser supervisão **de filmagem**, on-set, e não
+  de CG — a própria página diz *"pre-shoot consultations, shoot supervisions"*. A casa **não publica nenhuma
+  cadeira de arte nem de modelagem**, e na página de hoje `character`, `creature` e `groom` dão **ZERO**
+  (`3d`=3, `rig`=2, `animation`=2): **a prova de disciplina de personagem vem do reel e da carta de 11/09,
+  não do texto lido hoje.** E são seis pessoas publicadas, ou seja casa pequena, com pouca chance de ter
+  verba de patrocínio de visto.
+- **ACHADO EXTRA, que é linha de espera e não ficha:** a mesma página imprime `will@frostfx.ee` sob o rótulo
+  *"Email:"*, **sem nome e sem cargo ao lado**. É a mesma morte da LudoCraft e da Final Frontier: endereço
+  sem cadeira publicada não é alvo. Fica registrado no `padroes-dominio.md`.
+
+---
+
+### FICHA 4 — Anouk L'heureux, **Vice Présidente de la production et des opérations** da **CarpeDiem Film & TV** (Outremont, Montreal, Canadá) — **PUBLICADO, confiança ALTA**, e é a única ficha de CANADÁ da rodada
+
+- **EMAIL: `Al@carpediemfilmtv.com` — PUBLICADO, confiança ALTA**, e **com o `A` maiúsculo do jeito que a
+  casa escreveu**. Nada montado.
+- **URL aberta nesta rodada:** `https://www.carpediemfilmtv.com/` (**200, 1.144.089 bytes**, `<title>CarpeDiem
+  Film & TV | Production animation | 6630 Hutchison Street, Outremont, QC, Canada</title>`). É um Wix de
+  página única e o próprio `<title>` publica o endereço e o país.
+- **PROVA LITERAL, com TRÊS leituras independentes da mesma adjacência:** o bloco de equipe aparece
+  renderizado **três vezes** no mesmo HTML e nas três a ordem é idêntica — *"Anouk L'heureux"* → *"Vice
+  Présidente de la production et des opérations"* → *"Al@carpediemfilmtv.com"*, nas posições 762.144 /
+  762.704 / 763.267, depois 1.110.489 / 1.110.902 / 1.111.317, e por fim num bloco compacto em 1.136.406 /
+  1.136.562 / 1.136.861. A casa publica **cinco** cadeiras com endereço: *Anouk L'heureux* (**VP production
+  et opérations**, `Al@`), *Sylvie Desrosiers* (**Vice-president finance**, `sd@`, +1 514 212-4785), *July
+  Katherine Bustos* (**Institutional Affairs Supervisor**, `jkb@`, +1 514 270-2522 ext. 233), *Sophie Roy*
+  (**Director**, `sr@`, ext. 267) e *Benoit Godbout* (**Director / Artistic director**, `bg@`, **tocado em
+  11/09**). Três pessoas aparecem **sem** endereço: *Gérard Porlon* (Corporate Accountant), *Nicolas Proulx
+  CPA* (Controller) e *Vanessa Loubineau* (Legal collaborator).
+- **A PROVA DE QUE A ADJACÊNCIA DESTE WIX NÃO MENTE, e ela é empírica:** o pareamento `bg@` ↔ **Benoit
+  Godbout** foi lido **desta mesma estrutura** em 11/09, virou carta, e a carta **entregou** — fio `SENT`
+  vivo, zero bounce, e a carta cita o cargo certo (*"You are listed on the CarpeDiem team page as Director
+  and Artistic director"*). Ou seja este layout já foi validado por entrega, o que é bem mais forte que ler
+  o DOM e torcer.
+- **POR QUE ELA, e não outra da casa:** o Benoit Godbout, que era o alvo óbvio de arte, já levou a carta e
+  não respondeu. Das quatro cadeiras restantes, duas são finanças e uma é assuntos institucionais. **A Anouk
+  L'heureux é produção e operações**, isto é a cadeira que **monta equipe de produção** — e o cargo dela é
+  hierarquicamente o mais alto dos cinco. Some-se que é **Canadá**, o primeiro país da ordem de prioridade
+  do `BRIEF-JOE`.
+- **GANCHO, com as frases da própria casa entre aspas:** *"productions are intended to **please and bring
+  together the whole family**; they are aimed at children and **the inner child is each of us**. We create
+  **meaningful intellectual properties that last in time**."*; *"…is gifted with **local Quebec expertise**
+  and sometimes with international collaboration, to develop **large-scale productions** with an
+  experiential and societal focus."*; e os valores que a casa lista, *"**Transparency, creativity, gathering
+  people together and sharing knowledge**"*. O catálogo dá o gancho de elenco: *"**Butterfly Tale** is a
+  tale of adventure, self-realization and heroism told with humor…"*, *"**Racetime** is the sequel to the
+  highly successful **Snowtime!** which won the 2015…"*, *"All Elli wanted was a family to love. But finding
+  one turned out to be a ghostly affair…"* (**Elli and her monster team**) e *"**Young Monarchs** must train
+  at the Academy before they are allowed to go on migration…"*
+- **CASA FORA DOS EUA? SIM**, Canadá. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `carpediemfilmtv` devolve **UM** fio —
+  `SENT` de **11/09 21h27** para `bg@carpediemfilmtv.com`, **sem resposta**. **Zero** fio de `Al@`, `sd@`,
+  `jkb@` e `sr@`. Cruzamento: `pessoas=1 toques=1`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 11/09/2026 21h27 UTC** — acima das 48h.
+- **RESSALVA HONESTA, e ela é específica deste endereço:** `Al@` são **iniciais**, não nome, e num domínio
+  inteiro de iniciais (`sd@`, `jkb@`, `sr@`, `bg@`) **um endereço de duas letras é o mais frágil da série**
+  — se existir outro A.L. na casa, `Al@` pode ser dele, e as três pessoas publicadas sem endereço mostram
+  que o organograma da página não é a folha de pagamento inteira. **O maestro deve copiar a grafia
+  publicada, `Al@` com A maiúsculo.** Pesa também a disciplina: `character`, `groom` e `3d` dão **ZERO** na
+  página (`animation`=2, e está no `<title>`); a prova de que a casa faz elenco 3D vem do **catálogo**
+  (Snowtime, Racetime, Butterfly Tale, Elli) e não do texto lido hoje.
+
+---
+
+### FICHA 5 — David Grançon, **Producer / production manager** da **Take Five** (Bruxelas, Bélgica) — **PUBLICADO, confiança ALTA**
+
+- **EMAIL: `david@take-five.be` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://take-five.be/team` (**200, 583.255 bytes**, efetiva
+  `https://www.take-five.be/team`, `<title>ABOUT US | Take Five</title>`).
+- **PROVA LITERAL:** o bloco `TEAM` publica quatro cartões com nome, cargo, endereço e telefone, colados:
+  *"**Gregory Zalcman** | **Producer** | gregory@take-five.be | +32 476 53 27 07"*, *"**Alon Knoll** |
+  **Producer** | alon@take-five.be | +32 475 93 55 00"*, *"**David Grançon** | **Producer / production
+  manager** | david@take-five.be | +32 479 26 48 68"* e *"**Eric Jaminet** | **Production Accountant** |
+  eric@take-five.be | +32 471 91 06 81"*. HTML cru, com href igual ao texto visível: `<a
+  data-auto-recognition="true" href="mailto:david@take-five.be">david@take-five.be</a>`.
+- **POR QUE ELE, e não outro da casa:** o **Gregory Zalcman** já levou a carta em **17/09**; o **Eric
+  Jaminet** é contabilidade de produção. Sobram dois cargos de *Producer*, e o **David Grançon acumula
+  *production manager***, que num estúdio de série animada é literalmente **quem escala e contrata equipe**.
+  O Alon Knoll fica documentado como terceiro, segurado pelo teto de dois.
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Take Five** was born from a simple yet powerful
+  ambition: **to produce works that evoke emotions and resonate with audiences**. Every project begins with
+  a meeting, **a spark**, that deserves to be brought to the screen."*; *"In 2009, Take Five took its first
+  steps into **live-action short films**. In 2015, a pivotal encounter with director **Sacha Feiner** marked
+  a turning point"*; *"…marked **Take Five's entry into the world of animation**. This success laid the
+  foundation for enriching collaborations with talents such as **Bruno Tondeur and Hannah Letaïf**."*; *"This
+  film embodies **Take Five's DNA: cinema that is both demanding and accessible**, rooted in emotion and
+  designed to connect with audiences."* E o gancho de produção que a carta de 17/09 já usou e que segue
+  valendo: **Carbone 14 animando Nino Dino em Blender, 78 episódios de sete minutos**.
+- **CASA FORA DOS EUA? SIM**, Bélgica. **A frase de realocação ENTRA.**
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `take-five` devolve **UM** fio — `SENT`
+  de **17/09 17h45** para `gregory@take-five.be`, abrindo *"Hi Gregory, Carbone 14 is animating Nino Dino in
+  Blender, 78 episodes of seven minutes…"*, **sem resposta**. **Zero** fio de `david@`, `alon@` e `eric@`.
+  Cruzamento: `pessoas=1 toques=1`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 17/09/2026 17h45 UTC.** **RESSALVA DE CADÊNCIA:** faz **~40h50m**, e as
+  48h vencem **19/09 às 17h45**. Esta casa **já foi segurada por este mesmo motivo na rodada das 06h35**;
+  segue segurada, e o maestro decide.
+- **RESSALVA HONESTA:** a Take Five é **produtora**, live action e animação coproduzida, **sem pipeline 3D
+  interno** — o Blender do Nino Dino é do **Carbone 14**, não dela. Na página, `character`, `creature`,
+  `groom` e `3d` dão **ZERO** (`animation`=4). E o segundo melhor cargo da casa, o do Alon Knoll, é **o
+  mesmo** do Gregory que já foi tocado, o que enfraquece o argumento de complementaridade de cadeira.
+  Armadilha de caminho, para o registro: **`/contact` devolve 404 (2.206 bytes)** e a equipe vive só em
+  `/team`.
+
+---
+
+### FICHA 6 — Amanda Collazo, **Director of People / HR** da **Brand New School** (Los Angeles, com Nova York e Londres; EUA) — **PUBLICADO, confiança ALTA**, e é recrutador por AUSÊNCIA de cadeira de arte, não por preferência
+
+- **EMAIL: `amanda@brandnewschool.com` — PUBLICADO, confiança ALTA.** Nada montado.
+- **URL aberta nesta rodada:** `https://brandnewschool.com/contact` (**200, 181.114 bytes**, efetiva
+  `https://www.brandnewschool.com/contact`, `<title>Contact</title>`).
+- **PROVA LITERAL, em DUAS camadas da mesma página, e as duas concordam.** HTML renderizado: `<p
+  class="js-location-item typo-p2">Amanda Collazo</p><p class="js-location-item typo-p2">Director of People
+  / HR</p><a href="mailto:amanda@brandnewschool.com" class="js-location-item typo-p2">amanda@brandnewschool.com</a>`.
+  E o **JSON de dados embutido na própria página**:
+  `{"contact_title":"Human Resources","people":[{"title":"Director of People / HR","name":"Amanda Collazo","email":"amanda@brandnewschool.com","phone":null}]}`.
+  **Nome, cargo e endereço no MESMO objeto** — é o antídoto exato da armadilha de 06h35, porque num objeto
+  único o cartão de uma pessoa não pode apontar para o endereço de outra.
+- **O ORGANOGRAMA INTEIRO, como a casa o rotula:** *New Business* = **Zack Kortright**, *Director of
+  Marketing and Partnerships, Partner*, `zack@`; *Operations* = **Devin Brook**, *Chief Operating and
+  Financial Officer*, `devin@`; *Production* = **Garrett Braren**, *Managing Director*, `garrett@`
+  (**tocado em 06/09**); *Finance* = **Megan Schmidtlein**, *Controller*, `accounting@`; *Human Resources* =
+  **Amanda Collazo**, *Director of People / HR*, `amanda@`; *Press* = **Gracie Gutierrez**, *Marketing
+  Manager*, `gracie@`.
+- **POR QUE ELA, e não outra da casa:** o Garrett Braren, que é o *Managing Director* e está sob o rótulo
+  **Production**, já recebeu em 06/09 e não respondeu. E **a casa não publica UMA cadeira de arte** — nem
+  Art Director, nem Creative Director, nem Head of Art: das cinco restantes, duas são marketing, uma é
+  finanças e uma é COO/CFO. A regra do `BRIEF-JOE` diz que recrutador entra *"só se não houver ninguém de
+  arte para achar"*, e este é exatamente o caso. **Amanda Collazo é a única cadeira de contratação
+  publicada.**
+- **GANCHO, com as frases da própria casa entre aspas:** *"**Our studios are designed to inspire.**"*; *"Our
+  studios were **designed by us, for us**. Like our projects, they have **won many awards**, been featured in
+  countless publications, and continue to be a source of inspiration."* E os três escritórios, que a página
+  publica com endereço e horário: *"Los Angeles — 1100 S. La Brea Avenue, Los Angeles, CA 90019"*, *"New York
+  City — 121 Varick Street, 11th Fl., New York, NY 10013"* e *"London — 17d Perseverance Works, 38 Kingsland
+  Road, Shoreditch, London, E2 8DD"*.
+- **CASA FORA DOS EUA? NÃO**, a casa é dos EUA (Los Angeles e Nova York) **com escritório em Londres**.
+  **A frase de realocação NÃO entra** pela regra. Nuance útil para o maestro: **o escritório de Londres é a
+  única das três portas que não exige patrocínio**, mas o contato de RH publicado é **global**, não por
+  escritório, então não há como endereçar só Londres por esta porta.
+- **DEDUPE FEITO, e o que o Gmail devolveu:** `search_threads` por `brandnewschool` devolve **UM** fio —
+  `SENT` de **06/09 12h48** para `garrett@brandnewschool.com`, abrindo *"Hi Garrett"*, **sem resposta**.
+  **Zero** fio de `amanda@`, `zack@`, `devin@` e `gracie@`. Cruzamento: `pessoas=1 toques=1`.
+- **DATA DO PRIMEIRO TOQUE NA CASA: 06/09/2026 12h48 UTC** — acima das 48h.
+- **RESSALVA HONESTA, e é a mais pesada das seis:** RH **é o filtro** que o próprio `BRIEF-JOE` descreve
+  como o que descarta em cinco segundos por falta de autorização de trabalho, e aqui não há diretor de arte
+  para atropelar essa linha. Some-se que a página de contato não tem **uma palavra** de personagem, 3D,
+  animação ou VFX: `character`, `3d`, `animation`, `vfx` e `groom` dão **ZERO**, e o único acerto de `rig`
+  é ruído dentro de outra palavra. **A prova de disciplina desta casa não está nesta página** — quem escrever
+  precisa buscar o gancho no portfólio da BNS, não no `/contact`.
+
+---
+
+### OS DESCARTES DESTA RODADA, COM O MOTIVO MEDIDO
+
+- **Helmet** (`helmet.no`, Oslo) — **quatro pessoas publicadas com nome, cargo, endereço e telefone, e
+  NENHUMA cadeira de arte.** A `/contact` (**200, 130.828 bytes**) publica *"**Alexander Somma** | VFX
+  Supervisor, Creative Director | alex@helmet.no | +47 958 00 508"* (**tocado 11/09 21h27**), *"**Øystein
+  Moe** | Director, Cinematographer | oystein@ | +47 413 05 955"*, *"**Line K. Johansen** | Director,
+  Producer | line@ | +47 975 08 056"* e *"**Stian Eriksen** | Cinematographer, 1st AC | stian@ | +47 412 11
+  911"*, mais `contact@helmet.no`. A casa está **abaixo do teto** e o `href` confere com o texto visível nos
+  quatro. **O que mata é a disciplina:** gasta a segunda e última carta da casa num *Director/Producer* ou
+  num *Cinematographer* de uma casa que se descreve como *"**Limitless storytelling — Production & Visual
+  Effects**"*, com `character`, `creature`, `groom` e `3d` em **ZERO** na página. `line@helmet.no` (Line K.
+  Johansen, **Director, Producer**) fica **documentada como a melhor das três** para o maestro reabrir se
+  quiser — é a única cadeira de produção —, mas eu não gasto a última carta de uma casa em cadeira de câmera.
+- **Sarofsky** (`sarofsky.com`, Chicago) — **cadeira perfeita, casa errada para personagem.** A `/contact`
+  (**200, 45.695 bytes**, efetiva `https://www.sarofsky.com/contact/`) publica, com `data-cfemail` do
+  Cloudflare decodificado nesta rodada, *"**Erin Sarofsky** | Founder, ECD | erin@sarofsky.com"* (**tocada
+  11/09 21h27**), *"**Rudy Downey** | UK Representative | rudy.downey@"* e *"**Joel Signer** | **Head of
+  Production** | joel.signer@ | +1 773.230.9831"*, sob o rótulo que a casa mesma abrevia, *"HOP"*. Head of
+  Production é exatamente a cadeira que o `BRIEF-JOE` quer. **Morreu na leitura de disciplina da `/us`**
+  (**200, 96.280 bytes**): `design`=**12**, `animation`=2, `character`=**1**, `3d`=**ZERO**, `creature` e
+  `groom`=**ZERO**, e a casa se define como *"Sarofsky brings kinship and excellence to the intersection of
+  **art, design, technology, and film production**"* — é **design e sequência de títulos**, não elenco 3D.
+  **Não se gasta a segunda e última carta de uma casa numa disciplina que ela não faz.** `joel.signer@` fica
+  guardado.
+- **Myth Studio** (`mythstudio.co.uk`, 107 Mare Street Studios, Londres) — **endereço novo com cargo
+  publicado, e o cargo é marketing.** A `/contact` (**200, 20.244 bytes**) publica três endereços e só um de
+  pessoa: sob o rótulo *New Business*, *"**Izzy Hill** | **Head of Client Success & Marketing** |
+  izzy.hill@mythstudio.co.uk"*, ao lado de `hello@` e `Jobs@`. O `james.finlay@` levou a carta em **15/09
+  14h15** e não respondeu. **Client Success & Marketing não contrata artista**, e a `/studio` não acrescenta
+  nenhuma outra pessoa. Fica registrado o padrão `nome.sobrenome@` do domínio.
+- **Engine House** (`engine-house.co.uk`) — **endereço publicado, nome publicado, e ZERO cargo de
+  verdade.** A `/contact` (**200, 128.729 bytes**) publica **um** endereço, `tash@engine-house.co.uk`, **sem
+  nome nenhum ao lado**; a `/team` (**200, 136.492 bytes**) nomeia três pessoas — *Mike*, *Jason Robbins* e
+  *Tash Price* — mas o que ela imprime como cargo são **piadas**: *"The Guy Who Makes Everything Look
+  Good"*, *"The Movement & Storytelling Expert"* e *"The Story & Strategy Powerhouse"*. O `jason@` já levou a
+  carta em **11/09**. **Cargo inventado é pior que alvo nenhum** — é a mesma morte da LudoCraft (Marja
+  Kuipers) e da Final Frontier (Michael Diaz). O pareamento `tash@` ↔ *Tash Price* é forte por primeiro nome
+  único, então o endereço fica no `padroes-dominio.md`; a ficha, não.
+- **Gentle Troll Entertainment** (`gentletroll.com`, Juliuspromenade 3, 97070 Würzburg) — **segunda pessoa
+  publicada e o cargo é administração.** A `/about` (**200, 25.515 bytes**) publica, sob o rótulo *"Key
+  personal"*, *"**Michel Wacker** | Founder & CEO | mw@gentletroll.com"* (**tocado**) e *"**Lena Schubert** |
+  **Administration & PR** | lena.schubert@gentletroll.com"*. Pesa a disciplina: a casa se vende como
+  *"**Serious Games, Games for**…"* no próprio `<title>` e escreve *"games which explain complex
+  correlations through play"* — a mesma faixa que matou a LudoCraft. Descartada por cargo **e** por
+  disciplina.
+- **Chasing Carrots** (`chasing-carrots.com`, Hornbergstrasse 94, 70188 Stuttgart) — **pareamento por
+  ordem de Impressum, e isso não é cargo.** O `/impressum` (**200, 60.514 bytes**) imprime *"Chasing Carrots
+  GmbH & Co. KG … **Vertreten durch: Dominik Schneider, Patrick Wachowiak** … E-Mail:
+  patrick@chasing-carrots.com / E-Mail: dominik@chasing-carrots.com"*. O `dominik@` já foi tocado, e o
+  `patrick@` pareia com **Patrick Wachowiak** por primeiro nome. **Mas *"Vertreten durch"* é rótulo jurídico
+  de representante legal, não cargo publicado**, e o catálogo da casa (*Halls of Torment*, *Good Company*,
+  *Pressure Overdrive*, *Cosmonautica*) é pixel e low-poly, sem elenco de personagem 3D. Endereço registrado
+  no `padroes-dominio.md`, ficha não aberta.
+- **CASAS ACIMA DO TETO, medidas na caixa e não abertas:** `macguff.fr` (**DOIS** toques — `recrutement@` em
+  28/08 e follow-up em 07/09, e a casa devolveu autorresposta francesa nas duas), `animationsfabrik.de`
+  (**DOIS**, `anne.weiss@` em 02/09 e follow-up em 07/09), `flipbookstudio.co.uk` (**DOIS**, `jobs@` em
+  26/08 e follow-up em 02/09), `houseofsecrets.nl` (**DOIS**, `info@` em 27/08 e follow-up em 02/09),
+  `sehsucht.de` (**DOIS**, `contact@` em 02/09 e follow-up em 07/09).
+- **CASAS QUE JÁ RESPONDERAM, e por isso não recebem carta de pessoa nova:** `vfx.at` (**resposta humana**
+  do Felix em 09/09: *"we are a very small team handling small VFX tasks - mostly clean ups, element comps,
+  GFX"*), `boxelware.de` (**resposta humana** do Konstantin: *"Unfortunately we currently don't have any
+  open positions… I'd love to keep you in mind"*), `studiosoi.de` (**resposta humana**: *"Currently we are
+  not looking for additional 3D artists"* e o aviso sobre o prazo da administração alemã), `colossalorder.fi`
+  (**resposta humana** da Emmi: *"I'm afraid we don't have open positions at the moment"*), `dreamwall.be`
+  (resposta da `emma.dupire@` mandando usar o portal Talentsquare), `blue-zoo.co.uk` (a equipe de
+  recrutamento respondeu duas vezes mandando usar o site de carreiras), `littlechicken.nl` (autorresposta
+  pedindo reenvio para o endereço da disciplina).
+- **CASAS COM A PRIMEIRA CARTA AINDA NÃO ENVIADA, ou seja segunda pessoa TRAVADA** (mesma regra que segurou
+  a Pyjama às 08h35), e nas três o script achou organograma cheio hoje: **`studioruniq.com`** (`/team` com
+  **seis** endereços de iniciais novos — `bfagnant@`, `glachance@`, `lpatalano@`, `pturcotte@`, `sgravel@`,
+  `trigaud@` — e a ficha do `dbergeron@` ainda sem carta), **`snafu-pictures.com`** (`/team` e `/about` com
+  `joe@`, `joel@`, `natt@`, `tony@`, e a ficha do `dan@` sem carta) e **`teamtumult.ch`** (`/about` com
+  **oito** primeiros nomes — `amelie@`, `beni@`, `daniel@`, `fredi@`, `justine@`, `maru@`, `nina@` — e a
+  ficha do `quack@` sem carta). **As três são a fila da próxima rodada, na hora em que a primeira carta
+  sair.** Também travadas pelo mesmo motivo: `haymakerfx.com` (`/contact` com seis `nome.sobrenome@`),
+  `kallagameworks.com` (`/team` com cinco `nome.sobrenome@`), `brimstone.games` (`erik@`, `rasmus@`),
+  `nutteryentertainment.com` (`erik@`, `lee@`) e `redvaultinteractive.com` (`max@`, `noah.sassner@`).
+- **FALHA DE AMBIENTE, para não se gastar clique de novo:** `gigglebug.fi` **não passa verificação de TLS**
+  neste ambiente, nem com `www` — `curl: (60) SSL: no alternative certificate subject name matches target
+  host name`. Entra na mesma lista do `knowledgehub.creativebc.com`. **Não se desliga verificação de TLS**,
+  então esta casa só se caça por outra fonte.
+
+### A FILA PRONTA PARA A PRÓXIMA RODADA, EM ORDEM DE PROGNÓSTICO
+
+1. **`inari@pyjama.fi`** segue a primeira da fila e segue dependendo só do maestro: basta a carta do
+   **Samppa Kukkonen** sair. Junto dela, e pela mesma trava, `arne@thebarngames.nl` e
+   `leonie@theflyingcolourcompany.com`.
+2. **As seis casas de organograma cheio cuja primeira carta ainda não saiu**, em ordem de prognóstico:
+   **`studioruniq.com`** (Quebec, seis endereços novos, e é **Canadá**), **`haymakerfx.com`** (seis
+   `nome.sobrenome@`), **`kallagameworks.com`** (Finlândia, cinco `nome.sobrenome@`), **`teamtumult.ch`**
+   (oito primeiros nomes), **`snafu-pictures.com`** (quatro) e **`nutteryentertainment.com`** (dois). **Todas
+   já estão varridas e com os endereços anotados acima** — na hora em que a primeira carta de cada uma sair,
+   a segunda pessoa é ficha de cinco minutos.
+3. **`gretchen@heycarbon.com`** (Executive Producer, Culver City) e **`alon@take-five.be`** (Producer) e
+   **`marko@frostfx.ee`** (Producer) ficam como **terceira pessoa documentada** das casas de hoje — e
+   terceiro e-mail ao domínio **é do maestro**, pelo teto de dois.
+4. **O pool que ainda não foi varrido**: dos 337 domínios de uma pessoa eu varri os 337 em cinco caminhos,
+   mas **só em cinco caminhos**. Os caminhos que já abriram casa e que NÃO entraram nesta varredura são
+   `/our-team`, `/the-team`, `/people`, `/crew`, `/infos`, `/a-propos`, `/nosotros`, `/meet-the-team`,
+   `/who-we-are`, `/press`, `/kontakt`, `/om-oss`, `/contacto` e `/equipe`. **Rodar os 337 domínios nesses
+   catorze caminhos é a varredura de melhor prognóstico que sobrou**, e o script já está escrito.
+5. **O que NÃO vale mais tentar**, somando ao que já estava na lista: `sarofsky.com` (disciplina de design,
+   não de personagem), `gentletroll.com` (serious games e cargo de administração), `engine-house.co.uk`
+   (cargo é piada, não cargo), `mythstudio.co.uk` (só marketing), `chasing-carrots.com` (Impressum sem
+   cargo), `helmet.no` (nenhuma cadeira de arte), `gigglebug.fi` (**TLS**), e as casas que responderam
+   (`vfx.at`, `boxelware.de`, `studiosoi.de`, `colossalorder.fi`, `dreamwall.be`, `blue-zoo.co.uk`,
+   `littlechicken.nl`) e as que estão no teto (`macguff.fr`, `animationsfabrik.de`, `flipbookstudio.co.uk`,
+   `houseofsecrets.nl`, `sehsucht.de`).
