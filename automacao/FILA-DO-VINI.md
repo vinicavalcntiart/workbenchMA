@@ -7,6 +7,63 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### ✅ REVALIDADA HOJE ÀS 14h50 (19/09) — **Principal Character Artist (Face)**, NBCUniversal/DreamWorks Montreal: **o alerta do LinkedIn é a MESMA vaga de ontem, e ela continua viva e sem veto**
+
+`https://jobs.smartrecruiters.com/NBCUniversal3/744000150414819-principal-character-artist-face-i-artiste-principal-e-personnage-face-`
+`https://www.linkedin.com/jobs/view/4469197089/` (o mesmo anúncio, pela rota do seu alerta)
+
+**Não é porta nova, e é por isso que esta entrada é curta:** o alerta *"Character Art in Canada"*
+das **14h44** trouxe a requisição **`744000150414819`** (ref `51626013`), que já está com **dossiê
+campo a campo mais abaixo nesta fila**, escrito em 18/09 às 16h45. Não abri nada duas vezes: o que
+fiz hoje foi **revalidar** e trazer o que faltava.
+
+**O que foi medido agora, ponto por ponto:**
+- **Viva:** a API do SmartRecruiters devolve `active=true`, `visibility=PUBLIC`, `releasedDate`
+  `2026-09-18T15:57:55Z`, e a URL final do anúncio responde **HTTP 200**.
+- **Única:** li por inteiro os dois quadros da casa (`NBCUniversal3` + `NBCUniversal1`,
+  **375 requisições únicas**) e esta é a **única** *Principal Character Artist (Face)* — o alerta não
+  está apontando para uma segunda vaga com o mesmo título.
+- **Régua de veto rerodada** nos 10.585 caracteres do corpo da API, com os 43 termos do
+  `regua-veto.py`: **3 acertos, os três falso positivo** e os mesmos de ontem — `citizenship` dentro
+  da cláusula antidiscriminação e dois `visa` dentro das palavras **francesas** *visages* e *Visage*.
+  Zero `Eligibility`, zero `legally authorized`, zero `days a week`, zero `work permit`, zero
+  `sponsor`, zero `relocat`, zero exigência de francês no **payload cru**.
+- **Controle positivo, e hoje ele veio DOBRADO** (a regra da casa: ausência só vale contra irmã que
+  mostre o bloco presente): `744000137526729` (*Lead Character Artist, Body/Crowd, Face, Hair &
+  Wardrobe*, 13/07) e `744000149923759` (*Lead Environment Artist*, 16/09) trazem, cada uma, no mesmo
+  endpoint, *"**Eligibility Requirements** ... Must be willing to work in our Montreal office a
+  minimum of 4 days a week. **Must be legally authorized to work in Canada.**"* A de personagem não
+  tem o bloco. **A ausência é real.**
+- **Dedupe:** `dedupe-agora.sh 744000150414819 NBCUniversal` + grep de *Principal Character Artist* e
+  *(Face)*: **zero em `enviados.csv`** (nunca enviada), e as ocorrências em `processados.csv`,
+  `docs/index.html` e nesta fila são **o registro de ontem**, não candidatura. No **Gmail**,
+  `NBCUniversal OR DreamWorks OR smartrecruiters newer_than:3d` devolveu **uma** thread, e é o
+  próprio alerta do LinkedIn — **nenhum recibo** desta requisição.
+
+**A rota nova que eu trouxe, e ela é para o seu celular:** o anúncio do LinkedIn é **offsite apply**
+(10 ocorrências de `offsite` no HTML de convidado de 311.727 caracteres, e **zero** `smartrecruiters`
+e `NBCUniversal3` — o destino fica atrás do login). Ou seja: o botão *Apply* do alerta te joga no
+**mesmo `/oneclick-ui`** que dá 403 de DataDome para a automação, e **no seu navegador logado ele não
+deve nem aparecer**. Pelo alerta é um toque; por mim não existe porta.
+
+**As respostas, com a verdade, iguais às do dossiê abaixo:** autorização para trabalhar no Canadá
+**NÃO**; precisa de patrocínio **SIM**; disposto a realocar **SIM** (e a vaga é **híbrida** em
+Montréal, `#410, 6300 du Parc Avenue`); pretensão pela política do briefing, faixa não publicada e
+casa grande no Canadá → **CAD 95.000**, com a abertura *"Open to aligning with your band for the
+role; as a reference, I'm looking at around CAD 95,000."*; salário atual *"Confidential under the NDA
+of my current contract."*
+
+**A ressalva honesta continua a mesma, e ela não melhorou com a revalidação:** é **realismo facial
+fotorreal AAA** (blendshapes, *scanning*, *performance capture*, Metahuman) e o seu portfólio é
+**estilizado**; *Principal* é um degrau acima de sênior. Ela está aqui porque é personagem por
+título e por corpo, em casa da regra 14.
+
+**ORDEM DENTRO DA CASA, se for gastar mais de um clique:** personagem primeiro. *Lead Artist (Props)*
+`744000150413374` e *Principal Vegetation Artist* `744000150412708` (ambas de 18/09, também sem o
+bloco de elegibilidade) são **ambiente** e vêm depois. E **não clique** na *Lead Character Artist*
+`744000137526729`: ela é a que **tem** o veto escrito de autorização e de 4 dias no escritório.
+
+
 ### 🔴 ENTROU EM 19/09 15h (Jhon A, 32o turno) — **Asset Generalist Senior Artist** da **FOLKS VFX**, em **TORONTO** e em **MONTREAL**, parede de DataDome
 
 `https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004158` (Toronto, ON)
