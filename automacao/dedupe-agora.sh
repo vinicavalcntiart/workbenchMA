@@ -32,6 +32,14 @@ if [ -z "$ID" ]; then
   exit 2
 fi
 RAIZ=$(cd "$(dirname "$0")/.." && pwd)
+# 19/09 09h (Jhon A): a SECAO 3 estava cega para ENVIO. Ela greppa o nome da casa e depois
+# filtrava as linhas so por parede/captcha/recusa/veto/duplicata, ou seja jogava fora exatamente
+# a linha que diz "CANDIDATURA CONFIRMADA". Custou uma DUPLICATA real hoje: a Senior Facial
+# Character TD da Insomniac (Greenhouse 6143980004) foi enviada em 31/08 e o registro desse envio
+# vive SO no docs/index.html, descrito por TITULO e SEM o id - invisivel para a secao 1, que casa
+# por ID, e descartado pela secao 3, que casa por nome. Agora o filtro da secao 3 mantem tambem
+# as marcas de ENVIO, e o head subiu de 12 para 20 porque casa grande enche as primeiras linhas
+# com parede antes de chegar no envio.
 ARQS="$RAIZ/enviados.csv $RAIZ/automacao/processados.csv $RAIZ/docs/index.html $RAIZ/automacao/FILA-DO-VINI.md"
 
 echo "== 1. TODAS as ocorrências do ID $ID =="
@@ -65,7 +73,7 @@ if [ -n "$CASA" ]; then
   for a in $ARQS; do
     [ -f "$a" ] || continue
     grep -i -o -- ".\{0,60\}$CASA.\{0,220\}" "$a" 2>/dev/null \
-      | grep -i -- "parede\|captcha\|datadome\|turnstile\|hcaptcha\|recaptcha\|recusa\|veto\|duplicata\|JA-FEITO\|nao enviar" \
+      | grep -i -- "parede\|captcha\|datadome\|turnstile\|hcaptcha\|recaptcha\|recusa\|veto\|duplicata\|JA-FEITO\|nao enviar\|CANDIDATURA CONFIRMADA\|ENVIADA E CONFIRMADA\|ENVIADA\|portal-aplicado\|portal-enviado\|Application Submitted\|/confirmation\|/thanks\|Thank you for applying" \
       | head -12 | sed "s|^|    [$(basename "$a")] |"
   done
   echo "    (se aparecer parede aqui, NÃO abra o navegador: é fila da mão dele)"
