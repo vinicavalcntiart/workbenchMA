@@ -12710,3 +12710,174 @@ prognóstico porque a pessoa anterior é de arte". Metade estava certa: a DLP é
   **`© 2025 Ntropic Group`**, um ano atrás; (f) a casa tem **escritório no Vietnã**, que está **fora do
   escopo geográfico** da campanha, e é provável que boa parte da fabricação de CG seja feita lá — o que
   reduz a chance de uma cadeira sênior de personagem em Londres.
+
+### OS DESCARTES DESTA RODADA, COM O MOTIVO MEDIDO (e sete deles são casas que a fila das 04h35 chamava de boas)
+
+- **DLP Paris** (`dlpparis.com`, Paris) — a fila das 04h35 punha esta casa **em primeiro lugar**, "porque a
+  pessoa anterior é de arte". **Morreu por disciplina, e o catálogo é inequívoco:** a `/` (**200, 101.649
+  bytes**) lista **quarenta** peças e são **Lancôme (×3), YSL (×3), Nivea (×2), Garnier, Guerlain, Dior
+  (×2), Estée Lauder, L'Occitane, Helena-nada, Cartier, Louis Vuitton, Gucci Aria, Diadermine,
+  Cheestring, Nutella, Hyundai, Renault, DS4, DS-Etense, Haier, Three, Talan, Orveda, Ponds** — beleza,
+  cosmético e automóvel. O título da própria home é **`DLP PARIS – POST PRODUCTION AGENCY`** e a `/about`
+  se descreve como *"a **director-driven full feature design, animation and VFX studio**"* com *"expert
+  digital craftsmen in our atelier"*. **`character` dá ZERO** em `/`, `/about` e `/contact`; `/work`,
+  `/team` e `/studio` respondem **404**; o rodapé marca **`2019 DLP PARIS`**. É a mesma morte da Firm
+  Studio e da Eleven FX. Os quatro endereços de pessoa (`cedric@` *Partner/Director*, `pascal@`
+  *Partner*, `nathesias@` *Financial Manager*, e o `antoine@` órfão) vão para o `padroes-dominio.md`.
+- **Jumbla** (`jumbla.com`, Melbourne e Londres) — **morreu por três motivos, e o primeiro é de método:**
+  o único nome novo com cargo, **Steve Bradshaw, *Head of Production*, `steve@jumbla.com.au`, está DENTRO
+  DE UM COMENTÁRIO HTML** na `/contact` (**200, 80.934 bytes**), isto é a casa **tirou** o bloco da tela —
+  e o domínio dele (`.com.au`) é diferente do domínio do site. O `andrew@jumbla.com` é uma **âncora vazia**
+  ao lado de "London", sem nome. E **Danielle Kilgour, *Executive Producer*** está nomeada, mas o endereço
+  que a casa põe ao lado dela é a **caixa funcional `aus@jumbla.com`**. Sobre isso, **a disciplina não
+  sustenta a carta**: a casa é *"a global animation and **motion graphics** partner"*, o catálogo é
+  *Corporate, Government & Education / Broadcast Design & Events*, as duas vagas abertas da `/careers`
+  (**200, 74.243 bytes**) são **`UE, AE, C4D` freelance** e **`2D Motion Designer`**, e `Character Design`
+  aparece só como um item da lista de doze serviços do rodapé. `groom`, `sculpt`, `modelling` = **ZERO**.
+- **Frontier Developments** (`frontier.co.uk`, Cambridge) — **morreu por cargo não complementar, e isso é
+  uma decisão, não um acaso.** Os dois endereços novos são **Yaz Harniman, *Talent Acquisition Partner***,
+  e **Lee Mowatt, *sem cargo no payload***, e a pessoa já contatada é a **Ellie Baldino, *Talent
+  Acquisition Advisor* E DONA DA REQUISIÇÃO**, que levou carta em **14/09** e não respondeu. Escrever ao
+  colega de equipe dela cinco dias depois é passar por cima de quem despacha a vaga. **O que esta rodada
+  ganhou aqui é informação, não ficha:** a `https://api.eu.lever.co/v0/postings/frontier?mode=json`
+  (**200, 199.544 bytes**) mostra que a **`Experienced Character Artist` (department `Art`, team
+  `Character`, Cambridge/Hybrid) CONTINUA ABERTA HOJE**, entre 12 vagas, e que no payload da
+  `https://careers.frontier.co.uk/` (**200, 5.315.420 bytes**) o `user` dessa requisição **continua sendo
+  a Ellie**. Também abriu ali o JSON:API de `cms.zaonce.net` (ver `padroes-dominio.md`), que publica **43
+  membros de equipe com cargo**, inclusive a **"India", *Senior Artist* e *Project Lead for the Character
+  Art on Planet Zoo*** — **só primeiro nome e sem endereço**, então não vira linha.
+- **Anima Vitae** (`anima.fi`), **Frima Studio** (`frimastudio.com`), **Milford** (`milford.se`) —
+  **nem abri a página: estão acima do teto de toque.** Anima com **TRÊS** (`info@` em 26/08, follow-up em
+  02/09 e `antti.haikala@` **hoje**), Frima com **DOIS** (`info@` 02/09 e `jimmy.lemay@` 06/09), Milford
+  com **DOIS** (`careers@` 02/09 e `demian.zarins@` 07/09). É a mesma regra que fez o maestro segurar a
+  SSVFX às 06h00 e a Sir Lancelot. **A varredura ainda achou `helsinki@anima.fi` e `kualalumpur@anima.fi`
+  como novos, e os dois são caixa de cidade, não pessoa.**
+- **Mathematic Studio** (`mathematic.tv`) — **já tem ficha PENDENTE de hoje**, das 02h35 (Bea Le Mennec,
+  *Head Of Studio*). Os dois endereços novos da varredura, `guilow@` e `hadi@`, são o que a própria ficha
+  dela já registrou como as outras cadeiras (EP e sócio-produtor). **Não se abre segunda pessoa no mesmo
+  dia em que a primeira ainda não virou carta.**
+- **Studio RuniQ** (`studioruniq.com`, Québec) e **Mikrofilm** (`mikrofilm.no`, Oslo) — **as duas estão
+  SEGURADAS PELO MAESTRO por disciplina**, e eu confirmei o motivo em vez de reabrir. Na RuniQ a `/team`
+  (**200, 503.199 bytes**) publica **oito** pessoas com cargo e endereço (`sgravel@` *Production -
+  Operations*, `pturcotte@` *Design & Scripting*, **`twilson@` *Design - Art - Story*** — ex-*Guitar
+  Hero*, *Spider-Man*, *Skylanders*, *Crash Bandicoot*, *Call of Duty* —, `trigaud@` *Animation - Rig -
+  VFX*, `dbergeron@` *Design - Art*, `lpatalano@` *Storytelling*, `glachance@` *Engineering*,
+  `bfagnant@`), e **`character` dá ZERO no domínio inteiro**, o que confirma a leitura do maestro de que o
+  jogo lançado é 2D desenhado à mão. Na Mikrofilm a `/people` (**200, 50.028 bytes**) publica **quatro
+  sócias com endereço** (`lise@` Lise Fearnley *Producer and partner*, `tonje@` Tonje Skar Reiersen
+  *Producer and partner*, `kajsa@` Kajsa Næss *Director and partner*, `cathinka@` Cathinka Tanberg
+  *Director and partner*) e **cinco diretores sem endereço**, e **`3D` e `character` dão ZERO** — é casa
+  de autor e de traço (*The Danish Poet*, *Titina*, *Me and My Moulton*), exatamente como estava escrito.
+- **Parasol Island** (`parasol-island.com`, Düsseldorf/Munique/Berlim) — **a melhor página da rodada e
+  mesmo assim ZERO ficha, porque a casa JÁ RESPONDEU.** A `/about` (**200, 463.090 bytes**) publica
+  **nove** pessoas com nome, cargo e endereço **todos ofuscados em `data-cfemail`**, e decodificados dão o
+  organograma inteiro (ver `padroes-dominio.md`), incluindo o alvo perfeito no papel: **Philippe Stalla,
+  *Partner, Animation*, `philippe.stalla@parasol-island.com`**. **Morreu na caixa:** `search_threads`
+  devolveu **TRÊS fios** — o `SENT` de 02/09 para `hr@`, e **duas respostas de `hr@parasol-island.com`**,
+  em **03/09** (*"deine Nachricht hat die Insel erreicht! … **Aktuell sind unsere Kapazitäten
+  abgedeckt**, aber das kann sich ändern"*, que é um não educado) e em **06/09** (*"deine Bewerbung hat
+  die Insel erreicht!"*). O `pessoas.csv:` já registrava a Sebastian Druschel com
+  `sem-carta: estudio ja respondeu, thread do Comunicador`. **Casa que respondeu é território do
+  Comunicador, e isso vale mesmo quando a resposta é automática de RH.**
+- **Snafu Pictures** (Londres) — seis endereços novos com nome e cargo na `/team` (**200, 38.843 bytes**),
+  e **morreu por disciplina somada a cargo repetido**: `character`, `3D` e `sculpt` dão **ZERO** na
+  página, a casa se define como *"a London based **Animation Production Company**"* (produtora, não
+  fábrica), e o melhor endereço novo é **Paul Schleicher, *Co-founder/EP*, o MESMO cargo do Dan Dixon**,
+  que levou carta em 15/09.
+- **Engine House** (Redruth, Cornualha) — `tash@engine-house.co.uk` **não é de pessoa nenhuma**: existe
+  só dentro do bloco JSON-LD `Organization` da `/team` (**200, 136.434 bytes**), como e-mail da empresa, e
+  os perfis da equipe são publicados **só com primeiro nome** (*"Mike is the visual brain of Engine
+  House"*). **Endereço sem nome não é endereço de pessoa.**
+- **viennaFX** (`vfx.at`, Viena) — a `/team` (**200, 123.443 bytes**) publica **treze** pessoas, e mesmo
+  assim **não há segunda pessoa possível**: o único cargo sênior de VFX é o **Felix Schruef**, que **já é
+  a pessoa registrada** da casa; o **CEO Christian Vollenhofer-Rohlfing só tem `office@`** (funcional); o
+  único **3D Generalist**, *Sebastian Blatter*, **não tem endereço**; e o resto é cor, mastering e
+  *Schnittassistenz*. **Ainda aparece nesta página texto de lorem ipsum sob dois nomes que não são de
+  ninguém da casa** (*Phyllis Price*, *Jeremy Phillips*, com *"Donec eget risus diam…"* de placeholder) —
+  **armadilha nova: nome de template de tema pode parecer pessoa.**
+- **Final Frontier** (`finalfrontier.tv`, Barcelona/Madri/Buenos Aires/LA/Xangai/Singapura) — **seis
+  endereços de pessoa novos e ZERO ficha, pelo motivo exato que a campanha já registrou em 06/09:** a
+  `/about` (**200, 175.457 bytes**) publica **nome, cidade, telefone e e-mail** de cada representante
+  (*Marcus Lansdell* Barcelona/Nova York, *Juan Manuel Freire* Madri, *Julieta Zajaczkowski* Buenos
+  Aires, *Michael Diaz* LA, *Yeeman Lin* Xangai, *Gustavo Karam* Singapura) e **não publica CARGO de
+  nenhum**. O `pessoas.csv` já tem o Michael Diaz com a nota *"SEM CARTA nesta rodada de propósito: a
+  página publica nome, cidade e email mas NÃO publica cargo, e cargo inventado é pior que alvo nenhum"*.
+  **A leitura se mantém**, e vale registrar que a disciplina **ajudaria** (a lista de serviços tem
+  **`Character Development`** e o rodapé diz *"Crafting designs, **characters** and stories in all styles,
+  and from every time zone"*), além de a casa ter **`AI`** e **`NFT`** na mesma lista de serviços.
+- **Take Five / Carbone 14** (Bruxelas) e **Timeless Films** (Reino Unido) — endereços novos com nome
+  (`alon@`, `david@`, `eric@take-five.be`; `gareth@`, `jade@`, `jon@`, `rebecca@timelessfilms.co.uk`),
+  mas **as duas receberam carta em 17/09, há dois dias**. Segunda carta a uma casa com 48 horas de
+  intervalo é a regra dos dias seguidos sendo quebrada. Na Timeless ainda pesa que `character` dá **ZERO**
+  na `/about` (**200, 30.617 bytes**).
+- **Carbon** (`heycarbon.com`) — os dois endereços novos são **Lauren DeFelice** (Nova York) e **Gretchen
+  Praeger** (Chicago), e a `/contact` (**200, 43.995 bytes**) só tem **Nova York, Chicago e Culver City**
+  mais representantes de venda terceirizados (`@grgdreps.com`, `@stellarmass.co`, `@funkhaus.us`, que são
+  **de terceiros**). **Casa 100% americana** e `character` = **1**.
+- **Hyper Games** (Oslo) — `kristina@hypergames.no` é novo e a `/contact` o publica com `(at)`
+  (*"For content creator key requests use **kristina (at) hypergames.no**"*), mas o cargo dela na `/studio`
+  (**200, 58.456 bytes**) é **Marketing & Community Manager**, e o rótulo do endereço na página de contato
+  é **chave de imprensa para criador de conteúdo**, não contratação. Os quatro artistas da casa (*Mads
+  Frantzen* **Designer & Artist**, *Marcus Kjeldsen* **Artist & Animator**, *Rolf Hove* **Animator &
+  Artist**, *Adriane Brennmoen* **Artist**) **não têm endereço publicado**, e os dois sócios (`are@`,
+  `terje@`) já estão registrados em rodada anterior. **A casa é boa de disciplina** (*Snufkin: Melody of
+  Moominvalley*, *Moomintroll: Winter's Warmth*, *Mørkredd*, *Eggggg*) e **fica na fila**, precisando de
+  um endereço de artista ou do segundo sócio.
+- **HiFi 3D** (Nova York) — `jon@` e `szymon@` são **Jonathan Dorfman** e **Szymon Weglarski**, os dois
+  *Executive Producer + **Creative Director***, publicados com nome e cargo na `/contact`
+  (**200, 61.415 bytes**), numa casa que se apresenta como *"NYC VFX & Animation"* e tem uma aba de menu
+  chamada **`Direction / Jon & Szymon`**. **Fica na fila e não virou ficha por geografia:** é casa
+  americana sem escritório fora, e esta rodada tinha ordem explícita de pôr Vancouver, Nórdicos, Holanda e
+  Reino Unido na frente. A mesma página vaza `maria@stenzandlew.tv` e `sharon@stenzandlew.tv`, que são
+  **representantes de venda terceirizados**.
+- **A cauda da varredura** — dos **96 domínios** com endereço novo, **48 devolveram só caixa funcional**
+  (`info@`, `press@`, `jobs@`, `support@`, `hello@`, `enquiries@`, `recruit@`, `salesteam@`,
+  `publishing@`, `community@`, `admin@`, `casting@`, `de.help@king.com`, `biz@krafton.com`,
+  `collab@team-reptile.com`), e vale registrar três casas de escopo prioritário que **publicam só
+  funcional**: **Massive** já estava anotada, e agora **Starbreeze** (`info@`), **Submarine**
+  (`info@`, `jobs@`) e **Dexter Studios** (Coreia do Sul: `recruit@`, `vfx@`, `pr@`, `immersive@`,
+  `theeye@`) entram na mesma lista.
+
+### VARREDURA COM NÚMERO, PARA A PRÓXIMA RODADA NÃO REPETIR
+
+| Lista e recorte | Domínios | Caminhos | Domínios com endereço NOVO | Casas com pessoa nova aproveitável | Fichas |
+|---|---|---|---|---|---|
+| Fila das NOVE casas que a rodada das 04h35 deixou escrita | **9** | à mão | 5 (4 acima do teto de toque) | 2 | **2** (Terminus, TELEVISOR) |
+| Cruzamento reproduzido (`pessoas.csv` × `enviados.csv`, máximo = 1 **e** toques ≤ 1) | **206** | **22** (`/`, `/contact`, `/contact-us`, `/about`, `/about-us`, `/team`, `/our-team`, `/the-team`, `/crew`, `/people`, `/studio`, `/impressum`, `/infos`, `/nosotros`, `/a-propos`, `/meet-the-team`, `/who-we-are`, `/kontakt`, `/om-oss`, `/equipe`, `/contacto`, `/careers`) | **96** | ~25 | **3** (Polder, Sluggerfly, Ntropic) |
+| Leitura à mão de organograma das casas que sobraram | 16 | — | — | — | **0 adicionais**, 13 descartes medidos |
+| Vancouver: `creativebc.com` + `knowledgehub.creativebc.com` + `digibc.org` + `vancouveranimation.ca` | 4 fontes | — | — | — | **0** (três portas fechadas: 403, falha de TLS e domínio revendido para site de aposta) |
+
+**Em número: 215 domínios em 22 caminhos, cerca de 4.500 requisições, mais 4 fontes de Vancouver,
+renderam CINCO fichas — e as cinco saíram de LER ORGANOGRAMA DE CASA JÁ QUALIFICADA, nenhuma de casa
+inédita.** Confirma e endurece a conclusão das 04h35: **varredura larga nas listas deste repositório está
+em rendimento decrescente; o que rende é a segunda pessoa de casa que já foi tocada uma vez.** Das cinco
+fichas, **as cinco são a SEGUNDA E ÚLTIMA pessoa da casa** — ou seja esta veia acaba de consumir cinco
+das vagas de teto que existiam, e é bom saber disso antes de planejar a próxima.
+
+### A FILA PRONTA PARA A PRÓXIMA RODADA, em ordem
+
+1. **O cruzamento continua com 206 domínios e eu só li organograma de 16.** O arquivo de trabalho é
+   `scan.json` no scratchpad (por domínio, por URL, com o tamanho da resposta e os endereços novos).
+   **Os que sobraram com endereço de pessoa novo e ainda SEM leitura de disciplina, em ordem de
+   prognóstico:** `fabrique-d-images.com` (Luxemburgo, quatro `inicial.sobrenome@` — **mas confira o
+   teto: são TRÊS toques**), `studiopupil.com`, `submarine.nl`, `monobanda.nl`, `thebarngames.nl`,
+   `polyesterstudio.com`, `sphereanimation.com`, `wilfilm.dk`, `northplay.co`, `snowcloud.se`,
+   `soja.se` (atenção: os quatro endereços vêm com `%20` colado, `%20simon@soja.se` e
+   `%20sofie@soja.se`, e o local real é sem isso), `gunhil.com`, `tordenfilm.no`, `gimpville.no`,
+   `maipo.no`, `pikkukala.com`, `pyjama.fi`, `ludocraft.com`, `gigglebug.fi`, `l-f.studio`,
+   `kyka.fo`, `nrdland.com`, `truststudio.co.kr` e `kog.co.kr` (Coreia do Sul está no escopo).
+2. **`hypergames.no` e `hifi3d.com`** são as duas casas boas que esta rodada deixou de fora **por
+   endereço de cargo errado** (marketing) e **por geografia** (Nova York). A Hyper Games precisa do
+   segundo sócio (`terje@`, CTO) ou de um endereço de artista; a HiFi 3D tem **dois Creative Director com
+   nome e endereço publicados** e só precisa que a rodada aceite uma casa americana.
+3. **`philippe.stalla@parasol-island.com` (*Partner, Animation*) está decodificado e guardado no
+   `padroes-dominio.md`** — é o melhor cargo que apareceu hoje e **só o maestro pode liberar**, porque a
+   casa respondeu duas vezes por `hr@` e a thread é do Comunicador.
+4. **A veia do `wp-json` merece uma rodada inteira.** Nesta rodada ela deu, de graça, o tipo `artist`
+   escondido da TELEVISOR e a contagem de taxonomia que virou prova de disciplina. **Teste barato em toda
+   casa WordPress:** `/wp-json/wp/v2/types` para achar tipo de conteúdo de pessoa fora do menu, e
+   `/wp-json/wp/v2/<taxonomia>?per_page=100` para a contagem por categoria de trabalho.
+5. **Vancouver continua em zero por porta fechada, não por falta de casa.** As três fontes que eu tentei
+   estão registradas no `padroes-dominio.md` com o erro exato de cada uma. A próxima tentativa deveria ir
+   por **lista de crédito de produção da BC Film Commission** (`creativebc.com` tem *In Production* e
+   *Motion Picture Contacts* no menu, e as duas abriram 200) em vez de por diretório de associação.

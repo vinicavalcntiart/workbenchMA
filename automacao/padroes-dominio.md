@@ -1260,3 +1260,103 @@ Creative BC) **falha na verificação de TLS** (`unable to get local issuer cert
 `--cacert /root/.ccr/ca-bundle.crt`. **As três portas de Vancouver desta rodada estão fechadas; a
 `creativebc.com/programs-and-funding/interactive-digital-media/` abre (200, 222.768 bytes) mas só linka o
 hub que não abre.**
+
+### `parasol-island.com` (Parasol Island, Düsseldorf/Munique/Berlim) — **NOVE pessoas em `nome.sobrenome@`, todas ofuscadas em `data-cfemail` e todas decodificadas aqui**
+
+Fonte: `https://parasol-island.com/about` (**200, 463.090 bytes**, aberta em 19/09 às 06h35). Na tela a
+página imprime `[email protected]` em todos; o par nome↔cargo↔endereço sai de percorrer o documento e
+casar cada `data-cfemail` com o último nome antes dele:
+
+| Endereço decodificado | Pessoa | Cargo |
+|---|---|---|
+| `moritz.vonschroetter@` | Moritz von Schrötter | *Founder & Managing Partner* |
+| `philip.hansen@` | Philip Hansen | *Founder & Director* |
+| **`philippe.stalla@`** | **Philippe Stalla** | ***Partner, Animation*** |
+| `sebastian.druschel@` | Sebastian Druschel | *Founder & Managing Director* |
+| `till.emken@` | Till Emken | *Partner, Client Services* |
+| `nils.hartmann@` | Nils Hartmann | *Chief …ive Officer, Managing Partner* (este aparece **em texto puro**, não ofuscado) |
+| `hr@` | Merle Muß | *HR* |
+| `accounting@` | Melanie Fischer | *Head of Accounting* |
+| `hombre@` | Mila Mardan | *Office Management Düsseldorf* — e note que **`hombre@` é também a caixa geral da casa**, repetida sob os três endereços de escritório |
+
+**Sobrenome composto NÃO é truncado** (`moritz.vonschroetter@` para *von Schrötter*), o que é o oposto do
+padrão francês da Parmi Les Lucioles. **A casa está FORA da fila de prospecção porque JÁ RESPONDEU duas
+vezes por `hr@` (03/09 e 06/09, a primeira dizendo *"Aktuell sind unsere Kapazitäten abgedeckt"*)** —
+território do Comunicador. O `philippe.stalla@` fica guardado aqui para o maestro decidir.
+
+### `studioruniq.com` (Studio RuniQ, Québec) — oito em **`inicial+sobrenome@`**, com cargo e biografia
+
+`sgravel@` (Stéphane Gravel, *Production - Operations*), `pturcotte@` (Philippe Turcotte, *Design &
+Scripting*), `twilson@` (Thomas Wilson, *Design - Art - Story*), `trigaud@` (Thomas Rigaud, *Animation -
+Rig - VFX*), `dbergeron@` (Dave Bergeron, *Design - Art*), `lpatalano@` (Louis Patalano, *Storytelling*),
+`glachance@` (Gabriel Lachance, *Engineering*), `bfagnant@`. Fonte: `https://studioruniq.com/team`
+(**200, 503.199 bytes**; `/en/team` serve a mesma página byte a byte e `/equipe` não resolve).
+**Casa SEGURADA pelo maestro** (jogo lançado é 2D à mão), e `character` dá **ZERO** no domínio inteiro,
+o que confirma a leitura.
+
+### `mikrofilm.no` (Mikrofilm, Oslo) — quatro sócias em **primeiro nome**, e cinco diretores SEM endereço
+
+`lise@` (Lise Fearnley, *Producer and partner*), `tonje@` (Tonje Skar Reiersen, *Producer and partner*),
+`kajsa@` (Kajsa Næss, *Director and partner*), `cathinka@` (Cathinka Tanberg, *Director and partner*),
+mais `post@` (funcional). **Sem endereço:** Kristian Pedersen, Torill Kove, Robin Jensen, Hanne Berkaak,
+Annette Saugestad Helland, os cinco *Director and designer*. Fonte: `https://mikrofilm.no/people`
+(**200, 50.028 bytes**). **`3D` e `character` dão ZERO no domínio** — casa de autor e de traço, já
+segurada.
+
+### `finalfrontier.tv` (Final Frontier) — seis em **primeiro nome**, e a casa NÃO PUBLICA CARGO
+
+`marcus@` (Marcus Lansdell, Barcelona/Nova York), `juanma@` (Juan Manuel Freire, Madri), `julieta@`
+(Julieta Zajaczkowski, Buenos Aires), `michael@` (Michael Diaz, LA), `yeeman@` (Yeeman Lin, Xangai),
+`gustavo@` (Gustavo "Gus" Karam, Singapura), mais `hello@` e `iwanttobe@` (funcional, e o
+`iwanttobe@finalfrontier.tv` é a caixa de candidatura). Fonte: `https://finalfrontier.tv/about`
+(**200, 175.457 bytes**). **Cada cartão traz nome, cidade, telefone e e-mail e NENHUM cargo** — é a razão
+registrada em 06/09 para a casa não virar carta, e ela continua valendo. A mesma página vaza
+`hello@1stlevel.games` e `hello@silk-gallery.com`, que são **as marcas irmãs**.
+
+### `heycarbon.com` (Carbon) — **`inicial+sobrenome@` e primeiro nome convivendo**, tudo nos EUA
+
+`ldefelice@` (Lauren DeFelice, Nova York), `gretchen@` (Gretchen Praeger, Chicago), `mmcmanus@`
+(Matt McManus, *Managing Director*, Culver City). Fonte: `https://heycarbon.com/contact` (**200, 43.995
+bytes**). **A mesma página publica representantes de venda de TERCEIROS** (`jake@stellarmass.co`,
+`jill@`/`breanne@`/`maggie@`/`oren@grgdreps.com`, `sunoo@funkhaus.us`) — **não são da casa.**
+
+### `hifi3d.com` (HiFi 3D, Nova York) — primeiro nome, com os DOIS Creative Director publicados
+
+`jon@` (Jonathan Dorfman, *Executive Producer + Creative Director*), `szymon@` (Szymon Weglarski,
+*Executive Producer + Creative Director*), `andrea@` (Andrea Sertz Jew, *Executive Producer + Sales*),
+mais `staffing@` e `contact@`. Fonte: `https://www.hifi3d.com/contact` (**200, 61.415 bytes**). O menu da
+casa tem uma aba literal **`Direction / Jon & Szymon`**. **A página vaza `maria@stenzandlew.tv` e
+`sharon@stenzandlew.tv`, que são representantes de venda TERCEIRIZADOS.** Casa boa, fora da rodada só por
+geografia (100% americana).
+
+### `vfx.at` (viennaFX, Viena) — **`inicial.inicial@` com UMA exceção, e a página tem NOME DE TEMPLATE**
+
+O padrão é a inicial do nome mais a inicial do sobrenome: `l.n@` (Lee Niederkofler), `j.j@` (Jacob
+Jabornig), `s.i@` (Stefan Imnitzer), `f.w@` (Flynn Wiesenberger), `c.m@` (Charly Müllner), `l.g@`
+(Lisa Isabella Grabner), `f.s@` (Felix Schruef), `s.s@` (Svitlana Sergiienko), `t.r@` (Thomas Rath),
+`c.p@` (Clemens Puchinger), mais `office@`. **A exceção é `enna.licht@` (Enna Licht, *Editorial /
+Schnittassistenz*), que é `nome.sobrenome`** — num domínio de dez iniciais. Fonte:
+`https://vfx.at/team` (**200, 123.443 bytes**).
+**ARMADILHA NOVA, e é para registrar: a mesma página publica DOIS NOMES DE TEMPLATE como se fossem
+pessoas** — *Phyllis Price* e *Jeremy Phillips*, cada um com biografia em **lorem ipsum** (*"Donec eget
+risus diam. In sit amet felis malesuada…"*) e **sem endereço**. Nome numa página de equipe **sem endereço
+e com texto de placeholder ao lado não é pessoa da casa**; é o tema que a casa esqueceu de limpar, igual
+ao endereço de Brooklyn e aos `techlink@qode.com` da Karandash.
+
+### `snafu-pictures.com` (Snafu Pictures, Londres) — oito em primeiro nome, e o domínio do advogado é OUTRO
+
+`dan@` (Dan Dixon, *Co-founder/EP*), `paul@` (Paul Schleicher, *Co-founder/EP*), `tony@` (Tony Orsten,
+*Chairman*), `ross@` (Ross Main, *Production Manager*), `natt@` (Natt Tapley, *Head Writer & Creative
+Development*), `joel@` (Joel Veitch, *Creator – Bad Dinosaurs*), `joe@` (Joe Burns, *Head of Story*),
+mais `accounts@` (Beatriz Sardiña Prego, *Production Accountant*). Fonte:
+`https://www.snafu-pictures.com/team` (**200, 38.843 bytes**). **Tony Morris, *Legal Counsel*, é publicado
+com `hey@snafu-productions.com` — domínio DIFERENTE**, mais uma armadilha de domínio vizinho.
+
+### `jumbla.com` — a caixa funcional usada como endereço DE UMA PESSOA NOMEADA, e o bloco COMENTADO
+
+`soto@` (Marie Soto, *Executive Producer*, Madri) é o único endereço de pessoa vivo e visível. **Danielle
+Kilgour, *Executive Producer*, Melbourne, é nomeada e o endereço ao lado dela é `aus@jumbla.com`**, caixa
+funcional. **Steve Bradshaw, *Head of Production*, `steve@jumbla.com.au` (domínio DIFERENTE do site), está
+dentro de `<!-- -->`** na `/contact` (**200, 80.934 bytes**), ou seja removido da tela. E
+`andrew@jumbla.com` é uma **âncora `<a>` vazia** colada ao lado de "London", sem rótulo e sem nome.
+**Três formas distintas de endereço que parece publicado e não está.**
