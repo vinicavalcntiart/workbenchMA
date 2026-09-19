@@ -11383,3 +11383,246 @@ Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, S
   já registrou menção a IA como sinal de alerta em welevel, Iconic e Redly — aqui é **um** projeto de
   cliente entre quatro, não a identidade da casa, mas está dito; (f) o rodapé marca **© 2025**, um ano
   atrás.
+
+---
+
+### RESUMO DA RODADA DAS 02h35 DE 19/09
+
+| # | Pessoa | Cargo | Casa | País | De onde saiu o e-mail | Confiança |
+|---|---|---|---|---|---|---|
+| 1 | Radek Jakl | **Vedoucí grafik** (chefe de gráficos) | FiolaSoft Studio | Tchéquia (Praga) | `mailto:` no cartão da `/about` | **ALTA** |
+| 2 | Kevin Brunt | **Art Director & Founder** | Dogfish Games | Canadá (Vancouver/Port Coquitlam) | — nome e cargo na home; **`sem-email`** | `sem-email` |
+| 3 | Bernd Lehahn | Director (fundador) | EGOSOFT GmbH | Alemanha (Würselen) | texto do bloco *Contact* do press kit | **ALTA** |
+| 4 | Daniel Kruse | **Animation Lead** | Sir Lancelot Animation Studio | Suécia (Malmö) | cartão da `/contact` | **ALTA** |
+| 5 | Anthony Vanoostendorp | Head of Production | Troll VFX | Finlândia (Tampere) | rodapé de todas as páginas, ofuscado em `(at)` | **ALTA** |
+| 6 | Alexander Seraidaris | CEO | Brink Helsinki | Finlândia (Helsinque) | cartão da seção *Crew* da `/team` | **ALTA** |
+
+**Cinco com endereço PUBLICADO, uma `sem-email`, ZERO montado. Uma pessoa por casa.** Geografia: Nórdicos
+**3**, Europa central/leste **2**, Canadá **1**. Três das seis são **segunda e última** pessoa da casa
+(Sir Lancelot, Troll, Brink), e as três dizem isso na cara, com o número do fio da carta anterior.
+
+**QUATRO CAMADAS DE OFUSCAÇÃO DECODIFICADAS NESTA RODADA, e uma é nova para este arquivo:**
+`(at)` (Troll VFX), entidade HTML e `data-cfemail` (nos varredores), e — **NOVA** — **o domínio desenhado
+como IMAGEM**: a página de vagas da EGOSOFT escreve `Jobs @ <img src="/img/egosoft.gif"> . com` e tem
+**zero** `@` em texto no HTML inteiro. Nenhum decodificador pega isso; só o olho no HTML cru.
+
+**DOIS ACHADOS DE MÉTODO QUE MUDAM A LEITURA DE VARREDURA:**
+
+1. **O lixo colado no começo do endereço É o cargo.** Na Sir Lancelot a varredura devolveu
+   `artistdaniel.claesson@` e `leaddaniel.kruse@` porque o cargo e o `mailto:` são irmãos sem separador.
+   Esses endereços não existem — mas o prefixo (`artist`, `lead`) **informou que havia um Lead na casa
+   antes de eu abrir a página**. Quem filtra endereço por formato joga fora a linha que mais informa.
+2. **Ler o RODAPÉ antes de declarar "endereço sem cargo".** Na Troll VFX o corpo da `/contact` mostra
+   `anthony(at)trollvfx.com` como endereço de escritório, **sem nome nenhum** — pela regra do
+   `rax@threewintersgames.com` isso morre. O pareamento *"Anthony Vanoostendorp — Head of Production"*
+   está no **rodapé de todas as páginas**. O mesmo vale para a FiolaSoft, em que o `mailto:` vem **ANTES**
+   do nome no HTML (fileira de ícones no topo do cartão): casar `mailto:` com o nome de cima erra uma
+   pessoa inteira.
+
+### AS DUAS PISTAS QUE A RODADA DAS 01h35 DEIXOU PRONTAS: **AS DUAS MORRERAM NA LEITURA DE DISCIPLINA**
+
+- **La Chouette Compagnie** (Montreuil/Angoulême, França) — os nove `@chouettecie.com` foram
+  reconfirmados no HTML cru de `https://www.chouetteco.com/` (**200, 1.006.598 bytes**). **Não abri ficha,
+  por três motivos medidos:** (1) **Bill Otomo, o *Directeur artistique*, já recebeu carta em 17/09**, ou
+  seja a melhor cadeira da casa já foi gasta e um segundo nome seria o de produção, jurídico ou escrita;
+  (2) **a prova de personagem 3D continua não existindo em palavra da casa.** Abri o `pages-sitemap.xml`
+  e as páginas `/droners`, `/azuro`, `/tinbots`, `/taki`, `/catalogue` e `/jobs` (todas **200**, 590 a 708
+  KB) e leu-se o texto de todas: as sinopses descrevem criatura à vontade (*"Une brigade de dragons au
+  service des créatures fantastiques"*, *"AZURO … le seul dragon du Royaume à être né bleu comme l'azur, et
+  à cracher de l'eau plutôt que du feu"*, *"Des robots extraordinaires et loufoques"*) **mas nenhuma diz a
+  técnica**. As 194 ocorrências de `3D` no HTML são **JavaScript do Wix** (`BgFake3D`, nomes de módulo),
+  conferidas uma por uma — **não** conteúdo; (3) **a única vaga de arte aberta é `Storyboard Artist
+  Senior` (TAKI, 93100 Montreuil)**, que é 2D, ao lado de *Business & Legal Affairs Junior*. O rodapé ainda
+  marca *"© 2021 by Chouette Co."*. **Registro para não reabrir:** os endereços (`claire@`, `antoine@`,
+  `marie@`, `brice@`, `gaelle@`, `moira@`, `sylvain@`, `guillaume@`, `mariam@chouettecie.com`) estão vivos
+  e pareados na home, e **`sylvain@chouettecie.com` (Sylvain Dos Santos, *Directeur de la création*)
+  continua sendo a segunda e última** — mas só vale a carta **se** alguma página da casa passar a dizer
+  CGI, 3D ou o nome de um software.
+- **Firm Studio** (75010 Paris) — `https://firm-studio.fr/contact/` (**200, 32.503 bytes**) publica
+  **sete** endereços com nome e cargo, e o pareamento é perfeito: *"Founders — **Beard Manuel**
+  manu@firm-studio.fr; **Amiard julien** julien@firm-studio.fr"*, *"Head Of Production — **Duarte
+  coralie** coralie@"*, *"Production — **BRISEBARRE Charlotte** charlotte@; **GARRAUD Claire** claire@"*,
+  mais `contact@` e `job@`. A casa até **convida**: *"We are always looking for new talents. VFX artists,
+  Artistic directors, 2D and 3D directors, feel free to send us your reel or book — job@firm-studio.fr"*.
+  **Morreu por disciplina, e é a mesma morte da Eleven FX:** `https://firm-studio.fr/about/` (**200,
+  37.459 bytes**) diz *"We are a visual studio **dedicated to film post-production** … from TV and cinema
+  commercials, digital content, music videos to feature films"* e lista o parque de **AVID, PREMIERE, DA
+  VINCI RESOLVE, FLAME/FLAME ASSIST/FLARE**, com *"FAUBOURG — Our 3D VFx and animation studio"* como uma
+  linha só. O portfólio inteiro é **beleza e luxo**: *GUERLAIN L'HEURE BLEUE*, *GUERLAIN VÉTIVER FAUVE*,
+  *CHANEL ROUGE ALLURE VELVET*, *DIOR Homme*, *BULGARI Eternally Reborn*, *KATE SPADE*, *ANGÈLE*. **Zero**
+  `character`, `creature` ou `personnage` no domínio. Os sete endereços ficam registrados aqui; a carta
+  não, porque montagem de perfume não abre cadeira de personagem.
+
+### VANCOUVER: SAIU DO ZERO COM **UMA** FICHA, E A VEIA NOVA É **A LISTA DE PREMIADOS DA CREATIVE BC**
+
+A rodada das 01h35 registrou "zero Vancouver" como falha. Fonte nova desta rodada, e ela é **curada,
+datada e pequena**: o anúncio oficial da **Creative BC** de 10/04/2026,
+`https://creativebc.com/2026/04/six-b-c-game-studios-receive-300000-through-new-early-stage-growth-program/`
+(**200**, aberta nesta rodada), que nomeia **as seis casas do Video Games Early Stage Growth Program** e
+**linka o domínio de cada uma** — e é daí que saíram os domínios certos, que eu tinha chutado errado antes:
+`dogfishgames.com`, `weweremonkeys.com`, `2tg.io`, `secretplan.ca`, `bramvale.com` (a sexta, *Let Us Cook
+Games*, não tem domínio no release). O release também traz a casa falando em primeira pessoa, que é a regra
+de 18/09: *"**Nancy Duguay and Fred Howard, Owners, Let Us Cook Games**, Program Recipients — «Being
+selected … means so much as a tiny, self-funded studio working on our debut title **Portabellows**»"*.
+A lista irmã, `https://cmf-fmc.ca/news/five-bc-based-video-game-studios-to-receive-funding-through-new-cmf-creative-bc-program/`
+(**200**), nomeia mais quatro: **Critical Path Games** (Burnaby), **Blue Wizard Digital** (Comox), **Kano
+Applications** (Victoria) e **Brace Yourselves Games** (Vancouver).
+
+**Rendimento medido, para a próxima rodada não repetir:** dos dez domínios de BC, **um** virou ficha
+(Dogfish). Os outros nove, um por um: `weweremonkeys.com` (**200, 13.923 bytes**) é **dupla de direção de
+videoclipe** (*Of Monsters and Men*, Taylor Swift, Hendrick's Gin), não casa de personagem;
+`bramvale.com` devolve **857 bytes iguais em todo caminho** (casca); `2tg.io` só publica `hi@2tg.io`;
+`secretplan.ca` só tem `support@friendshapedgames.com` (outro domínio, e é suporte);
+`criticalpathgames.com` redireciona tudo para `info@critpath.com`; `kanoapps.com` publica `corp@` e
+`jobs@`; `bluewizarddigital.com`, `braceyourselvesgames.com` e o domínio de *Let Us Cook* **não
+responderam** a nenhuma das rotas. **Nenhum endereço de pessoa em nove casas.**
+
+**E a Over The Moon (Vancouver) continua sem virar ficha, agora com o motivo fechado.** O pareamento
+existe, mas é fraco e velho: `https://www.gamegrin.com/news/the-last-hero-of-nostalgaia-launches-in-2022/`
+(**200, 45.350 bytes**, aberta nesta rodada) escreve *"has been described as a love letter to Dark Souls
+and its community by **Over The Moon CEO, Jon Warner**"* — **paráfrase de jornalista, de dezembro de 2021,
+e não a casa falando em primeira pessoa**, que é o que a regra de 18/09 exige. Pior: `overthemoongames.com`
+(**200, 472.233 bytes**) segue em obra, com **três linhas de texto** (*"This page requires JavaScript to
+display. Unpacking…"*) e o único endereço do domínio é `john@overthemoongames.com`, sem cargo ao lado.
+**Endereço guardado no `padroes-dominio.md`; ficha não.**
+
+### O QUE MORREU MEDIDO NESTA RODADA, PARA NENHUMA RODADA REABRIR
+
+- **Ubisoft Montréal** — `antoine.leduc-labelle@ubisoft.com` (**Public Relations Manager**) publicado em
+  `https://montreal.ubisoft.com/press` (**200, 209.240 bytes**). **Morreu por recusa de escopo escrita na
+  própria página:** *"*For media requests only. For all other requests, write to infomtl@ubisoft.com"*,
+  somado a cargo que não é alvo em casa grande. **O endereço foi para `automacao/padroes-dominio.md`**,
+  porque reprova `nome.sobrenome@ubisoft.com` com fonte **de 2026** (a prova anterior era rodapé de paper
+  de 2019) e mostra que **sobrenome composto mantém o hífen**.
+- **5am Games** (Zurique, Suíça) — a `/about` (**200, 139.844 bytes**) publica os três cartões com nome,
+  cargo e e-mail: *"Aleksandra Iakusheva — CTO & Co-Founder — aleksandra@5am-games.com"*, *"Martina Hotz —
+  Level Designer & Co-Founder — martina@"*, *"**Selina Capol — Artist & Co-Founder — selina@5am-games.com**"*.
+  Pareamento perfeito e a cadeira de arte identificada. **Morreu por disciplina do produto:** *LETTERS – A
+  written adventure* é jogo de **palavra e tipografia**, *Konditorei Kritzel* é protótipo de **escrita
+  manual para crianças da ZHdK** e *Radical Choices* é **serious game** sobre radicalização. Zero elenco 3D.
+- **Awfully Nice Studios** (Áustria) — `till@awfullynicestudios.com` e `rainer@` publicados com bio na
+  `/about` (**200, 81.778 bytes**), e o pareamento é ótimo: *"**TILL ASCHWANDEN — ART MONKEY** … He has 4
+  years of experience as a **character artist working as a 3D modeler for Blizzard Entertainment**"*.
+  **Morreu por 2D declarado pela própria bio** — *"but his true passion is in the world of **2D** … He
+  primarily dwells in **flash and photoshop**"*, e *The Bug Butcher* é 2D —, agravado por casa de **duas**
+  pessoas e rodapé **© 2023**. É a morte da Triple Topping outra vez.
+- **Wil Film** (Copenhague, Dinamarca) — e este é o descarte mais importante da rodada, porque a casa **já
+  recebeu carta**. A `/team` (**200, 129.858 bytes**) é um achado enorme: pipeline **Maya/NUKE** declarado,
+  **`nome.sobrenome@wilfilm.dk` provado cinco vezes** (`anne.jorgensen@`, `brith.dahl@`, `jimmi.gravesen@`,
+  `louise.barkholt@`, `morten.stahlhut@`) e a equipe traz **`Toke Uthaug Rasmussen — Head of Modelling`**,
+  além de dois *CG Supervisors*, um *Animation Supervisor*, dois *Concept Artists* e um *CG Generalist /
+  Modeler*. **Morreu por VETO DE VISTO ESCRITO**, na `/jobs` (**200, 82.040 bytes**): *"**VISA
+  Requirements — Apply for an open position ONLY if you are a EU pass holder.** Unfortunately, the process
+  and requirements in order to qualify for a work permit according to the Danish law can be very
+  complicated"*. O endereço do *Head of Modelling* **não** está publicado, e a carta de **15/09** para
+  `erik@wilfilm.dk` (CEO) foi mandada **sem que esse veto estivesse registrado** — fica anotado aqui para
+  o Comunicador não gastar follow-up. `/jobs` também diz *"There are no current job openings"*.
+- **Snowman** (Toronto) — `ryan@builtbysnowman.com` publicado em `https://builtbysnowman.com/press`
+  (**200, 7.968 bytes**) com o pareamento na mesma linha: *"Press Inquiries — **Ryan Cash, Founder &
+  Creative Director**"*. **Morreu por disciplina:** o catálogo é *Alto's Adventure/Odyssey* (silhueta 2D),
+  *Where Cards Fall*, *Skate City*, *Pok Pok Playroom* (aprendizado infantil) e apps (*Checkmark*,
+  *Circles*, *Shifts*) — nada de personagem modelado.
+- **Reel FX** (Montréal) — `jonathan.bouchard@reelfx.com` publicado na `/contact` (**200, 132.087 bytes**),
+  mas o rótulo ao lado é **"Privacy Officer"**. Cargo errado, e a casa já tem uma pessoa (Chuck Peil, EVP
+  BizDev, 07/09). Não vira ficha.
+- **Fort York VFX** (Toronto) e **REDLAB** (Toronto) — duas casas **inéditas** com pareamento perfeito e
+  **quatro e três** endereços de pessoa. Fort York: *"Erin Kuttner — EP / Managing Director — erin@"*,
+  *"Valerie Moss — Senior Producer"*, *"Armen Bunag — Producer"*, *"Katie Fowler — Producer"*. REDLAB:
+  *"Mark Stevens — Head of Sales/Owner"*, *"Walt Biljan — Colourist/Owner — walt@"*, *"Andy Hunter —
+  **Flame Artist/Owner** — andy@"*. **As duas morreram por disciplina:** Fort York se descreve como
+  *"visual effects shop. We specialize in **colour grading, compositing, animation, motion design and
+  graphics**"* e REDLAB é cor e Flame; `character` e `creature` dão **zero** nos dois domínios.
+- **Wizz / QUAD GROUP** (Clichy, França) — quatro endereços publicados com cargo na `/about` (**200,
+  145.093 bytes**), **os quatro *Executive Producer*** (Amanda Stubbs, Matthieu Poirier, Ilona Marcus,
+  Claire Madigan). **Morreu por não ter cadeira de arte e por disciplina difusa:** *"we're WIZZ. You can
+  think of us as a **graphics laboratory**. We love 2D, 3D, stop motion, and mixed media"*, zero
+  `character`, rodapé **© 2023**.
+- **SHED** (Montréal) — `andreanne.denis@` (*Producer*) e `catherine.gaucher@` (*Producer*, Toronto)
+  publicados na `/contact` (**200, 26.917 bytes**). **Morreu por cargo e disciplina:** só produção, e zero
+  `character`/`creature` no domínio. A casa já tem Renaud Côté (EP, 03/09).
+- **Millimages** (Paris) — a `/team` (**200**) pareia `e.pasquet@` (*International Sales Manager*),
+  `j.massimino@` (*Licensing Manager*) e `r.cot-ogryzek@` (*International Sales Manager*), e o *General
+  Director* Adrien Moretto aparece com o campo de e-mail literalmente escrito **`placeholder`**.
+  **Morreu por cargo e por técnica:** os filtros da própria casa listam *"Animation Types: **Papermotion,
+  Stopmotion**"*. Casa já tem Fatima Hannat (Head of Studio, 07/09).
+- **Helmet** (Trondheim, Noruega) — a `/contact` (**200, 130.828 bytes**) publica os quatro: Alexander
+  Somma (*VFX Supervisor, Creative Director*, **já com carta em 10/09**), *"Øystein Moe — Director,
+  Cinematographer"*, *"Line K. Johansen — Director, Producer"*, *"Stian Eriksen — Cinematographer, 1st
+  AC"*. **Morreu para a segunda pessoa:** os três restantes são **live action** e `character`, `creature`,
+  `3D`, `animation` e `model` dão **zero** na página.
+- **The Post Lounge** (Brisbane/Melbourne/Sydney/Gold Coast) — casa inédita com **oito** endereços
+  `nome.sobrenome@thepostlounge.com` pareados com cargo na `/contact` (**200, 41.243 bytes**). **Morreu por
+  disciplina:** os oito são *Managing Director*, *COO*, *Senior Post Producer* ×2, *Executive Post
+  Producer*, *Business Development Manager*, *Client Partnerships* e um *Creative Supervisor*; `character`,
+  `creature`, `3d`, `animation` e `model` dão **zero** na página. É pós-produção de finalização.
+- **Cinemax** (Praga) — `macura@cinemaxgames.com` publicado no press kit (**200, 6.796 bytes**) como *Press
+  Contact* **e** *Business Contact*, e *The Keep* é dungeon crawler 3D com monstro, ou seja a disciplina
+  ajudaria. **Morreu por endereço sem pessoa:** `cinemax.cz` é SPA e `/`, `/about`, `/team` e `/contact`
+  devolvem a **mesma página de 31.878 bytes sem um nome**. É a morte do `rax@threewintersgames.com`.
+  Registro a armadilha de domínio: o site é `cinemax.cz` e o e-mail é `@cinemaxgames.com`.
+- **Lockpickle** (Helsinque) — `olli.etuaho@lockpickle.com` publicado no press kit (**200, 11.401 bytes**)
+  e a prosa do próprio press kit pareia: *"Lockpickle was founded in December 2018 by ex-NVIDIA engineer
+  **Olli Etuaho**"*, *"a Finnish independent game studio made out of Olli Etuaho, Ville Paloheimo and Harry
+  Damm"*. **Morreu por cargo e produto:** ele é **engenheiro**, não há cadeira de arte nomeada, e o
+  catálogo é *Puddle Knights*, *Robotry!* e *The Everything Building* — puzzle de três pessoas.
+- **Robot House Games** (Portsmouth) — press kit é **uma pessoa** (*"My name is John and I make things"*)
+  e o corpo do kit está em **lorem ipsum**. Casa de uma pessoa só: fora pela regra da Honest Demon.
+- **Triskell Interactive** (Lannion/Rennes) — `sinsem@triskell-interactive.com` publicado como *"Press /
+  Business contact"* sem nome. **Morreu por 2D declarado:** *"We are producing **2D games** for PC in an
+  unique Victorian Steampunk universe!"*. O press kit ainda cospe **warnings de PHP** na tela.
+- **Circus Atos** (Praga) — `michal@` (*"Michal Berlinger — Game developer and designer working in
+  Unity"*) e `bara@circusatos.com` (*"Bára Podhorská — Graphic designer"*) publicados com bio.
+  **Morreu por recusa escrita:** *"**Currently, we are not looking for any collaborators, and we don't do
+  any contract work.** Thank you for your understanding"*, e o time é hobby (*"Games are our hobby, and we
+  devote them most of our spare time besides our regular jobs"*) com catálogo aquarela 2D.
+- **Formant** (Winnipeg) e **Worldweaver** (Reino Unido) — os dois vieram da varredura do
+  `censo-wikidata.csv` como "jogos" e **nenhum dos dois é casa de jogo**: Formant é **uma pessoa** (Tyler
+  Johnston-Kent, marca-guarda-chuva de música, web e jogos) e Worldweaver é **consultoria de software**
+  (*"a UK software consultancy … bespoke business systems, apprenticeship and training-management
+  platforms, **3D product configurators**"*). Erro de classe do censo, anotado.
+- **Studio 1-2** (Herning, Dinamarca) — quatro pessoas com nome, cargo e e-mail, **e três dos quatro
+  endereços são de OUTROS domínios** (`rj@kameli.dk`, `katrine@broendstudio.dk`, `edit@fjordvisuals.dk`),
+  o que parecia um achado de rede. **Morreu por ser aluguel de estúdio e equipamento** (*"Ansvarlig for
+  udlejning af lokaler og bygning"*, *"Ansvarlig for salg og udlejning af udstyr"*) — outro erro de classe
+  do censo.
+- **Arx Anima** (Viena) — reconfirmada morta pela nota anterior deste arquivo: o `talent@arxanima.com`
+  **já respondeu** em 03/09 com template mandando usar a página de carreiras. Os nomes (Dunja Bernatzky,
+  Kris Staber, **Martin Hebestreit — Art Director Special Format**, **Marica Ilickovic Ivanovic — Talent
+  Acquisition**) seguem publicados na `/about` (**200, 391.166 bytes**) e **sem nenhum endereço de
+  pessoa**: só `mail@`, `talent@`, `md@`, `Vienna@`, `Madrid@` e `hessen@`. **Não reabri.**
+- **Haymaker FX**, **Qvisten**, **Studio AKA** e **Slap Happy Cartoons** — apareceram na varredura com
+  endereços novos e **todas estão fechadas**: Haymaker por **veto escrito** já registrado em 10/09
+  (*"Only candidates eligible to work within the EU/Europe will be considered"*); Qvisten, Studio AKA e
+  Slap Happy por **teto de duas pessoas já atingido** (Qvisten: `rasmus@` 03/09 e `hedda.toftner@` 26/08
+  com follow-up; Studio AKA: três linhas em `pessoas.csv`; Slap Happy: Josh Mepham 08/09 e Rob Davies
+  18/09). **Timeless Films** tem uma vaga de teto sobrando, mas os quatro endereços restantes
+  (`rebecca@`, `gareth@`, `jon@`, `jade@`) são **vendas, distribuição, pós-técnica e contratos** — não há
+  cadeira de arte, porque a casa é financiadora e vendedora e a fabricação vai para Mack Animation,
+  Constantin e Locksmith. **Mikrofilm** também tem vaga, mas os três endereços restantes são dois
+  produtores e uma diretora de casa **2D/stop-motion**.
+
+### VARREDURA COM NÚMERO, PARA A PRÓXIMA RODADA NÃO REPETIR
+
+| Lista e recorte | Domínios | Caminhos | Domínios com algum e-mail | Fichas |
+|---|---|---|---|---|
+| `censo-wikidata.csv` Reino Unido, **`/crew`, `/our-team`, `/the-team`** + 5 outros | **316** | 8 | 17 | **0** |
+| `censo-wikidata.csv` Canadá, `/crew`, `/our-team`, `/the-team`, `/studio`, `/about-us`, `/people` | **185** | 7 | 17 | **0** |
+| `censo-wikidata.csv` Alemanha/Áustria/Suíça, **`/impressum`, `/imprint`** + 8 | **143** | 10 | **62** | **1** (EGOSOFT) |
+| `censo-wikidata.csv` França/Bélgica/Espanha/Itália/Polônia/Tchéquia/Portugal | **371** | 14 | **94** | **1** (FiolaSoft) |
+| `censo-wikidata.csv` Nórdicos/Oceania/Coreia/Singapura/Irlanda/Holanda | **389** | 14 | **102** | **0** |
+| `censo-wikidata.csv` **todos os 1.371 inéditos**, só `/press`, `/presskit`, `/press-kit`, `/media` | **1.371** | 7 | **190** | **0** |
+| `censo-wikidata.csv` classe `animacao`, fora dos EUA, 15 caminhos | **141** | 15 | **60** | **0** |
+| **`garimpo-cgstudiomap.csv` inteiro menos EUA** (fonte 3DVF), 12 caminhos | **724** | 12 | **345** | **3** (Sir Lancelot, Troll, Brink) |
+
+**A VEIA QUE RENDEU FOI O `garimpo-cgstudiomap.csv`: 724 domínios, 345 com e-mail, TRÊS fichas.** É a
+lista de casas de VFX e animação do 3DVF, e ela ganha das listas de jogo por um motivo estrutural: **casa
+de serviço de VFX publica gente com cargo porque precisa ser encontrada por cliente**, enquanto casa de
+jogo publica `hello@` porque não quer ser encontrada por candidato. A segunda melhor foi o **`/impressum`
+alemão** (62 domínios com e-mail em 143), que é obrigação legal e por isso quase sempre entrega **um nome**
+— mas entrega o nome do **Geschäftsführer**, quase nunca o de arte.
+
+**E o `/press` sozinho, sobre 1.371 domínios, deu ZERO ficha.** Ele achou **190** domínios com e-mail, e
+quase tudo era caixa funcional de imprensa; os personais que apareceram (`ryan@builtbysnowman.com`,
+`olli.etuaho@lockpickle.com`, `macura@cinemaxgames.com`, `bernd@egosoft.com`, `jonathan.bouchard@reelfx.com`)
+morreram por disciplina, por cargo ou por falta de nome — **exceto** o da EGOSOFT. **Não gaste rodada
+inteira no `/press`: gaste no `/contact` e no `/team` de lista de VFX.**
