@@ -11702,3 +11702,60 @@ os 726 domínios caíram para um punhado de casas realmente inéditas, e o tempo
   *Westworld*) — a ponte é o `CHARACTER-DRIVEN CG WORK` que eles mesmos escrevem, e a carta tem de dizer
   isso sem fingir que é o mesmo ofício; (f) **não conferi vaga aberta**: o quadro fica em ATS externo e
   este turno é do Jhon A, não meu.
+
+### FICHA 2 — Erik Holmedal, **Executive Producer** da **Swiss International** (Estocolmo, Suécia) — **PUBLICADO com `data-cfemail` DECODIFICADO, confiança ALTA**, casa **INÉDITA**, e a disciplina está numa **categoria de portfólio chamada `Creatures`**
+
+- **EMAIL: `erik@swiss.se` — PUBLICADO, confiança ALTA, e ofuscado em `data-cfemail` do Cloudflare.**
+  Nada montado. No texto visível a página imprime `[email protected]`; o endereço real está no atributo
+  `data-cfemail="c7a2b5aeac87b4b0aeb4b4e9b4a2"`, que decodificado (XOR com o primeiro byte) dá
+  **`erik@swiss.se`**. O segundo cartão da mesma página, `data-cfemail="31585f575e7142465842421f4254"`,
+  dá `info@swiss.se` — ou seja o domínio confere e os dois estão no mesmo `<div>`.
+- **URL aberta nesta rodada, com nome e cargo no MESMO parágrafo:** `https://swiss.se/contact`
+  (**200, 39.024 bytes**). HTML cru, colado: `<p><strong>Erik Holmedal</strong> Executive Producer<br />
+  <a href="/cdn-cgi/l/email-protection#..."><span class="__cf_email__"
+  data-cfemail="c7a2b5aeac87b4b0aeb4b4e9b4a2">[email protected]</span></a></p>`.
+- **POR QUE ELE, e não outro da casa:** **ele é a única pessoa nomeada no domínio inteiro.** Varri
+  `/`, `/contact`, `/about`, `/career`, `/internship`, `/breakdowns`, `/vfx-advertising/*` e
+  `/vfx-film-tv/` e não existe página de equipe: os outros dois endereços do domínio são `info@` e a
+  caixa do formulário. Não há Art Director, CG Supervisor nem 3D Lead publicado, então **não há
+  segundo nome para escolher** — e montar qualquer coisa a partir de `erik@` seria chute.
+- **PROVA DE DISCIPLINA, e ela é boa porque é taxonomia da própria casa:** em
+  `https://swiss.se/vfx-advertising/` (**200, 61.464 bytes**) o portfólio tem **exatamente dois
+  filtros de categoria**, `Automotive` e **`Creatures`** (`href="https://swiss.se/vfx-advertising/creatures"`),
+  e a página da categoria (**200, 61.206 bytes**, aberta agora) devolve **18 projetos** — *Nothing Phone (2)
+  "Come to the bright side!"*, *Coop Prix "Fort gjort"*, *Coop Prix "The race"*, *ATG "Öppna din dörr"*,
+  *Samsung Neo QLED 8K*, *Nothing Ear (2)*, *Coop Mega "Lenge leve julemagien"*, *Håkan Hellström*.
+  **A casa classifica o próprio trabalho por criatura**, o que é o oposto da morte da Firm Studio.
+  Em cima disso, `https://swiss.se/vfx-film-tv/` (**200, 45.283 bytes**) abre com **`Netflix – Troll`**,
+  que é longa de **criatura CG gigante**, ao lado de *Little Match Girl*, *A Living Soul* e *Hypnotisören*.
+- **GANCHO, com as frases da própria casa entre aspas:** *"We started Swiss in 2002, out of a desire to
+  create groundbreaking VFX together with directors and creatives. Our career set off big time when we
+  got the opportunity to produce the video for **Moby's "In This World"** … we swiftly managed to follow
+  up the success with a number of **IKEA spots** for the US market"*; *"We've managed to hire some of the
+  industry's best colourists, **VFX virtuouses** and online artists"*; e a frase de vitrine, que é a que
+  eu usaria na carta: *"**Every day, we realize stories. We materialize fantasies. And we make motion
+  even more exciting**"*. Da `/career` (**200, 47.546 bytes**): *"We're a bunch of dedicated problem
+  solvers, always searching for new angles and perspectives. **And for new talents, of course**"*, com
+  **vaga permanente aberta**: *"**Open application** — Tell us a bit about yourself as we may have
+  something coming up!"*.
+- **FORA DOS EUA?** Sim, **Suécia (Estocolmo, Hammarbybacken 27)**. **Frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `swiss.se OR "Swiss International" OR Holmedal in:anywhere`
+  devolveu **`{}` — zero fio**. Nos arquivos, `swiss.se`, `Swiss International` e `Holmedal` dão
+  **zero ocorrência** em `automacao/pessoas.csv`, `enviados.csv`, `automacao/processados.csv`,
+  `docs/index.html`, `alvos.csv` e neste próprio arquivo. **Casa inédita, primeira pessoa.**
+  **Armadilha de nome registrada:** o domínio é `swiss.se`, a casa é sueca e a marca é *Swiss
+  International* — nada a ver com Suíça nem com a companhia aérea; o próprio site brinca com isso com
+  um logo `nottheairline_2.png` na página de contato.
+- **RESSALVAS HONESTAS:** (a) **o cargo é produção, não arte** — Executive Producer é quem orça e monta
+  equipe, e o resultado provável é encaminhamento; (b) **as duas vagas datadas da casa são `FX Artist` e
+  `Nuke Artist`**, ou seja efeito e composição, **não** personagem — o que abre a porta é a *Open
+  application*; (c) **sinal forte de site desatualizado**: o rodapé de todas as páginas marca
+  **`© 2019`**, e a `/career` imprime na tela o shortcode não renderizado
+  **`[mailpoet_form id="1"]`**; (d) `/what-we-do` e `/about-us`, que estão **no próprio menu**, devolvem
+  **404**, e o conteúdo real vive em `/about` e `/vfx-advertising/` — menu apontando para página morta;
+  (e) é casa de **VFX de publicidade**, onde criatura entra por spot e por contrato curto, e a única
+  peça de longa que ela mostra em destaque é de **criatura fotorreal** (*Troll*) contra o crédito
+  **estilizado** do Vini (*The Wingfeather Saga*) — a ponte existe e tem de ser dita sem fingir que é o
+  mesmo ofício; (f) a palavra `character` aparece **duas vezes** no domínio e as duas dentro da
+  taxonomia/rótulo, **não** em frase descrevendo pipeline — `groom`, `rigging`, `Maya`, `ZBrush` e
+  `Houdini` dão **zero**, logo não sei que ferramenta a casa usa.
