@@ -10991,3 +10991,79 @@ nomeados na mesma página) e Firm Studio (`manu@`/`julien@firm-studio.fr`, *Foun
 endereço e pareamento e só precisam da prova de personagem.** E os **310 domínios do Reino Unido** do
 `censo-wikidata.csv` foram varridos em 6 caminhos, mas **sem** `/crew`, `/our-team` e `/the-team`, que
 são os caminhos que o `BRIEF-JOE` diz render em casa de VFX.
+
+---
+
+## JOE, 19/09/2026 02h35 UTC — **AS DUAS PISTAS QUE A RODADA DAS 01h35 DEIXOU PRONTAS MORRERAM NA LEITURA DE DISCIPLINA (Chouette e Firm Studio), E A VEIA QUE RENDEU FOI O `/impressum` E O `/press` DE DOMÍNIOS INÉDITOS DO `censo-wikidata.csv`** — o `/crew`, `/our-team` e `/the-team` dos 316 domínios do Reino Unido deram **ZERO pessoa**
+
+**Conjunto de dedupe desta rodada:** **1.959 endereços** e **2.096 domínios** extraídos de `automacao/pessoas.csv`,
+`enviados.csv`, `automacao/processados.csv`, `alvos.csv`, `docs/index.html`, `automacao/PESSOAS-SEM-CARTA.md`,
+`automacao/FILA-DO-VINI.md`, `BRIEFING.md` e `automacao/ESTUDIOS-SEM-CARTA.md`. Cada ficha levou
+`search_threads` no Gmail pelo domínio, pelo sobrenome e pelo nome do jogo **antes** de ser escrita.
+
+**Diff novo, e ele é o ativo desta rodada:** dos **1.659** domínios de país prioritário do `censo-wikidata.csv`,
+**1.371 não aparecem em nenhum arquivo do repositório**. A quebra por país do que ainda não foi tocado:
+Reino Unido 279, Canadá 140, França 131, Alemanha 117, Polônia 89, Coreia do Sul 81, Suécia 81, Austrália 68,
+Espanha 68, Holanda 47, Finlândia 37, Itália 36, Tchéquia 30, Dinamarca 22, Singapura 16, Nova Zelândia 15,
+Áustria 14, Suíça 12, Bélgica 12, Noruega 10.
+
+---
+
+### FICHA 1 — Radek Jakl, **Vedoucí grafik** (chefe de gráficos / art lead) da **FiolaSoft Studio** (Praga, Tchéquia) — **PUBLICADO, confiança ALTA**
+
+- **EMAIL: `radek.jakl@fiolasoft.cz` — PUBLICADO, confiança ALTA.** `mailto:` cru na fileira de ícones do
+  cartão dele na página de equipe. **NADA FOI MONTADO**, e o formato `nome.sobrenome@fiolasoft.cz` aparece
+  publicado **sete vezes** na mesma página (`filip.kraucher@`, `vojta.stransky@`, `vojta.siman@`,
+  `tomas.otahal@`, `jakub.mirejovsky@`, `radek.jakl@`, `patrik.strnad@`), o que dá dupla confirmação: a
+  parte local casa com o nome impresso **e** o `mailto:` está dentro do cartão da própria pessoa.
+- **URL onde o e-mail e o cargo estão publicados na MESMA página, aberta nesta rodada:**
+  `https://fiolasoft.cz/about` (**200, 22.786 bytes**; o alias `https://fiolasoft.cz/o-nas` devolve a mesma
+  página, mesmo tamanho). Seção **JÁDRO TÝMU** e **DALŠÍ TÝMOVÍ HRÁČI**, cartão por cartão:
+  *"Filip Kraucher — PRODUCENT"*, *"VOJTĚCH STRÁNSKÝ — PROGRAMÁTOR"*, *"VOJTA ŠIMAN — LEVEL DESIGNER"*,
+  *"Kateřina Šumová — Level & Lighting Artist"*, *"Lukáš Jech — Programmer"*, *"**Oleksii Avdieichyk — 3D
+  Grafik**"*, *"RADO MARKOVIČ — GRAFICKÝ DESIGNÉR"*, *"Hana Lískovcová — Level Artist"*, *"Tomáš Otáhal —
+  HERNÍ DESIGNÉR"*, *"JAN ŠEVČÍK — MUSIC COMPOSER"*, *"JAKUB MIŘEJOVSKÝ — SOUND DESIGNER"*,
+  *"**RADEK JAKL — VEDOUCÍ GRAFIK**"*, *"PATRIK STRNAD — LEVEL DESIGNER"*.
+- **DETALHE DE MÉTODO, e ele quase inverteu o pareamento:** no HTML o `mailto:` vem **ANTES** do nome, porque
+  a fileira de ícones sociais é impressa no topo do cartão e o nome logo abaixo. Quem casar `mailto:` com o
+  nome que vem **acima** dele erra uma pessoa inteira. O que fecha a leitura sem dúvida é a parte local
+  bater com o nome (`radek.jakl` ↔ *RADEK JAKL*), e isso vale para os sete endereços.
+- **POR QUE ELE, e não outro da casa:** `VEDOUCÍ GRAFIK` é, literalmente, *chefe de gráficos* — a cadeira
+  que decide arte numa casa de 13 pessoas sem recrutador, que é o alvo número um do `BRIEF-JOE` em casa
+  pequena. Os outros dois de arte não servem: **Oleksii Avdieichyk** é *3D Grafik* (é a cadeira do próprio
+  Vini, pedir a ele é pedir o posto dele) e **Rado Markovič** é *grafický designér* (design gráfico, não
+  personagem). Level Artist, Level & Lighting Artist e Level Designer são ambiente, despriorizado pela regra
+  de 10/09. O produtor **Filip Kraucher** fica como **SEGUNDA e última** pessoa desta casa, e o endereço
+  dele já está publicado duas vezes (`filip.kraucher@fiolasoft.cz` no cartão e `bd@fiolasoft.com` no rodapé,
+  como *"Kontaktní osoba"*).
+- **GANCHO, com as frases da própria casa entre aspas** (de `https://fiolasoft.cz/` e
+  `https://fiolasoft.cz/games`, **200, 15.728 e 15.955 bytes**, abertas nesta rodada):
+  *"Jsme skupina kreativních lidí a už od roku 2002 pracujeme v oboru mediální produkce"* (grupo de gente
+  criativa, no ramo desde 2002); *"Naše specializace je vytváření her bohatých na vyprávění příběhu se
+  smysluplnými výzvami"*; *"Designujeme hry se smysluplnými nástrahami a výzvami, světy, kde rozhodnutí
+  skutečně něco znamenají a dokáží změnit svět či **postavy**"* — *postavy* é **personagem**, e é a casa
+  escrevendo a palavra. O produto de gancho é o jogo NOVO, não o antigo:
+  *"**MATCHO** — HÝBEJ SE, STŘÍLEJ, PŘEMÝŠLEJ … Zahraj si revoluční **FPS** se spoj-tři mechanismy …
+  Zachraň Zemi před záhadnou **mimozemskou invazí** a připoj se k Maxovi na cestě za nalezením léku na jeho
+  vážnou nemoc"* (FPS, invasão alienígena, protagonista chamado Max — elenco e criatura em 3D, e a casa tem
+  um *3D Grafik* contratado para isso). Fecha o quadro o manifesto deles: *"Říkáme tomuto stylu vývoje
+  „crystal design“, což je reprezentováno naším krystalem v logu"*.
+- **FORA DOS EUA?** Sim, **Tchéquia (Praga, Kandertova 129/19, IČ 09154035)**. **Frase de realocação entra.**
+- **DEDUPE NA CAIXA:** `search_threads` por `fiolasoft OR FiolaSoft OR Jakl OR Blackhole OR Matcho
+  in:anywhere` devolveu **`{}`**. Nos arquivos, `fiolasoft`, `blackhole`, `matcho` e `radek jakl` dão
+  **zero** em `automacao/pessoas.csv`, `enviados.csv`, `automacao/processados.csv`, `docs/index.html`,
+  `alvos.csv`, `automacao/PESSOAS-SEM-CARTA.md` e `automacao/FILA-DO-VINI.md`. **Casa inédita, primeira
+  pessoa, nunca recusou, teto de duas segue com uma vaga.**
+- **RESSALVAS HONESTAS:** (a) **o catálogo pesa contra**: o jogo de estreia, *BLACKHOLE* (2015), é descrito
+  pela própria casa como *"animovaná **2D** sci-fi dobrodružná plošinovka"*, e os títulos antigos estão
+  rotulados *"2D PUZZLE"* um por um — o 3D da casa é **MATCHO**, que ainda está *"Brzy"* (em breve), sem
+  data; (b) **a `/services` está velha e enfraquece a ficha**: ela declara *"K vývoji používáme **GameMaker:
+  Studio** od YoYo Games"* e lista PS Vita e Google+, ou seja pipeline 2D e página não revisada — quem
+  responder pode responder que a casa não faz 3D; (c) **a casa não é só jogo**: a mesma `/services` vende
+  desenvolvimento web, produção de vídeo e áudio, marketing, copywriting e DTP, e a `/projects` lista dois
+  programas de TV (*INDIAN*, *FILMOVÉ NOVINKY*) e um portal (*NERDFIX*) — parte grande da receita não é jogo;
+  (d) **não há vaga**: *"Aktuálně nemáme volné pozice v našem týmu"* — não é recusa, mas o pedido tem de ser
+  de porta e de direção, nunca candidatura a posto; (e) o cargo está publicado **em tcheco** e a tradução
+  *chefe de gráficos* é minha, não da casa — a carta não deve traduzir o cargo dele de volta para ele;
+  (f) o site é bilíngue no menu (CZ/EN) mas `/en/about` e `/en/games` devolvem **404 de 6.878 bytes**, então
+  a única versão viva é a tcheca, e escrever em inglês é aposta razoável mas é aposta.
