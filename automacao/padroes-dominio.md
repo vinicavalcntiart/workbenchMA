@@ -1360,3 +1360,165 @@ funcional. **Steve Bradshaw, *Head of Production*, `steve@jumbla.com.au` (domín
 dentro de `<!-- -->`** na `/contact` (**200, 80.934 bytes**), ou seja removido da tela. E
 `andrew@jumbla.com` é uma **âncora `<a>` vazia** colada ao lado de "London", sem rótulo e sem nome.
 **Três formas distintas de endereço que parece publicado e não está.**
+
+### `globalmechanic.com` (Global Mechanic, Vancouver e Victoria, BC) — **DOIS critérios diferentes no mesmo domínio de DUAS pessoas**
+
+`bruce@` é **primeiro nome** (Bruce Alcock, *Creative Director & Owner*) e `brodie@` é **SOBRENOME**
+(Chris Brodie, *Executive Producer*). Fonte: `https://www.globalmechanic.com/design` (**200, 115.192
+bytes**, aberta em 19/09 às 08h35) e o mesmo bloco no rodapé de `https://www.globalmechanic.com/`
+(**200, 132.138 bytes**). **Num domínio de duas pessoas os dois critérios são diferentes, logo
+NENHUM endereço desta casa sairia de montagem por padrão** — é o contraexemplo mais limpo do arquivo
+contra endereço montado. A mesma página publica `liz@lizlainereps.com` (*Liz Shaw*,
+*U.S. Representation*), que é **representante de venda de terceiro**.
+**Armadilha de contagem:** `character` aparece **36 vezes** no HTML bruto da home e **as 36 são
+texto de validação de formulário do Squarespace** (*"Value should be {0} characters long"*,
+*"Email addresses should follow the format user@domain.com"*). A taxonomia de verdade está na
+`/design`, e ela é *"Character | Drawing | Kids | Mixed Media | Vector | Painting"*.
+
+### `hypergames.no` (Hyper Games, Oslo) — primeiro nome, e **só TRÊS das treze pessoas têm endereço**
+
+`are@` (Are Sundnes, *CEO & Co-founder*), `terje@` (Terje Gran, *CTO & Co-founder*), **`runa@`
+(Runa Haukland, *Project Manager*)**, mais `kristina@` (Kristina Haley, *Marketing & Community
+Manager*), que a `/contact` publica **com `(at)`**: *"For content creator key requests use
+**kristina (at) hypergames.no**"*. Fonte: `https://www.hypergames.no/studio` (**200, 58.872 bytes**).
+Os quatro artistas da casa (*Mads Frantzen*, *Marcus Kjeldsen*, *Rolf Hove*, *Adriane Brennmoen*)
+aparecem **com nome e cargo e sem endereço**.
+**ARMADILHA NOVA E BARATA DE CAIR: `https://www.hypergames.no/services` responde 200 com 42.247
+bytes e o corpo imprime, em texto, `404 - Page not found`.** É a família do `vancouveranimation.ca`
+(200 com `<title>` de site de aposta): **200 não prova página; leia o corpo.**
+
+### `soja.se` (Soja, Estocolmo e Tjörn) — primeiro nome, com **`%20` e BOM colados no href**
+
+`simon@` (Simon Österhof, *Producent*), `sofie@` (Sofie Edvardsson, *Creative Director*), **`jakob@`
+(Jakob Nyström, *Animation Lead*)**, mais `hej@` e `jobb@` (funcionais). Fonte:
+`https://soja.se/om-oss-produktionsbolag-animation` (**200, 92.896 bytes**; `/om-oss` redireciona
+para lá). A página serve alguns endereços como **`%20simon@soja.se`** e **`%20sofie@soja.se`**, com
+um **BOM `U+FEFF`** depois do telefone; **o local real é sem o `%20`**, e a entrega da carta de 17/09
+para `sofie@soja.se` prova isso. A mesma página vaza `rosemarie.strand@folketsbio.se`, que é
+**distribuidora parceira**, não da casa.
+
+### `studiocan.nl` (Studio CAN, Roterdã) — primeiro nome, e a casa tem **SÓ DUAS pessoas**
+
+`igor@` (Igor Duspara, *Owner and Creative Director*) e **`jonas@` (Jonas Ott, *Owner and Creative
+Producer*)**, mais `info@`. Fonte: `https://www.studiocan.nl/about` (**200, 690.256 bytes**).
+**O teto de dois toques esgota o organograma inteiro desta casa.** Site Wix: os
+`@sentry.wixpress.com`, `@sentry-next.wixpress.com` e `@sentry.io` que a varredura pesca são
+**telemetria**, e `user@domain.com` / `name@email.com` são **texto de validação de formulário**.
+
+### `cocoa.fi` (Cocoa Mediaproductions Oy, Helsinque) — **primeiro nome para todos e `nome.sobrenome` SÓ no CEO**, confirmado na página
+
+`niko.waaralinna@` (**Niko Waaralinna, *CEO / EP*** — a exceção), `lotti@` (Charlotte Molander, *EP*),
+`eemeli@` (Eemeli Katajisto, *EP*), `ilona@` (Ilona Malinen, *EP*), `anton@` (Anton Molander,
+rótulo *General inquiries*), `dermot@` (Dermot Gallagher, **CFX / HEAD OF STUDIO**), mais `info@`,
+`jobs@` (*"Want to work with us?"*) e `casting@`. Fonte: `https://cocoa.fi/about/` (**200, 90.350
+bytes**; o mesmo bloco em `/` — 200, 107.833 bytes — e em `/contact/` — 200, 61.386 bytes).
+**Isto confirma, com a página na mão, a nota que o arquivo já trazia** (*"mesma mecânica da Cocoa,
+onde a exceção era o CEO"*). A casa irmã é **Boutique Animation** (2D).
+
+### `freefolk.com` (Freefolk, Londres e Nova York) — **treze pessoas, TODAS em `data-cfemail`, e nenhuma de arte**
+
+Decodificadas de `https://freefolk.com/contact/` (**200, 23.628 bytes**, aberta em 19/09 às 08h35).
+O padrão é **primeiro nome** e vira **`nome.sobrenome`** quando o primeiro nome colide:
+
+| Endereço | Pessoa | Cargo |
+|---|---|---|
+| `fi@` | Fi Kilroe | *CEO / Executive Producer* |
+| `paulw@` | Paul Wright | *Chief Operating Officer* |
+| `vittorio@` | Vittorio Giannini | *Director of Business Development & Strategy* |
+| `cheryl@` | Cheryl Payne | *Head Of Commercial Production* |
+| `laura.ricketts@` | Laura Ricketts | *Executive Producer* |
+| `charles@` | **Charles Gillett** | *Producer* |
+| `jessica@` | Jessica Verner | *Producer* |
+| `meg@` | Meg Guidon | *Film and Episodic Executive Producer* |
+| `hannah.dakin@` | Hannah Dakin | *Senior Producer* |
+| `regan.perry@` | Regan Perry | *Producer* |
+| `robyn.guthrie@` | Robyn Guthrie | *Producer* |
+| `megan.hindle@` | Megan Hindle | *VFX Coordinator* |
+| `sean@` | Seán O'Keefe | *PR & Marketing Manager* |
+
+Funcionais: `jobs.ldn@`, `production.ldn@`. **Treze cadeiras e nenhuma de arte** — sem VFX
+Supervisor, sem Head of CG, sem Art Director. **Aviso de homônimo, para não disparar veto errado: o
+`charles@freefolk.com` é Charles *Gillett*, e não tem relação com o Charles Ellison que a campanha
+não contata.**
+
+### `blinkink.co.uk` (Blinkink, Londres) — **cinco pessoas publicadas e VETO ESCRITO na mesma página**
+
+`josef@` (Josef Byrne, *Executive Producer*), `ellie.goodwin@` (Ellie Goodwin, *Executive Producer*),
+`shiara.miranda@` (Shiara Miranda, *New Business Lead*, e a página usa o mesmo endereço como caixa de
+*New Project Enquiries*), **`alex.halley@` (Alex Halley, *Head of Production*)**; *Bart Yates*
+(*Executive Producer / Founder*) aparece **sem endereço**. Mais `hello@` e
+`HELLO@BLINKINDUSTRIES.TV` (a divisão irmã, **domínio diferente**). Fonte:
+`https://www.blinkink.co.uk/about` (**200, 43.301 bytes**).
+**A MESMA PÁGINA IMPRIME O VETO, e ele vale para os dois domínios:** *"**Unfortunately we do not
+accept any unsolicited material and cannot return any unsolicited material sent to us. We do not
+respond to individual submissions and anything which is sent to us will not be read and will instead
+be burned.**"* **Casa com veto escrito a material não solicitado não recebe carta fria.** A página
+publica ainda representantes de terceiros que **não são da casa**: `bryan@`/`millie@wearebueno.com`,
+`gisela@`/`nata@hunkydoryus.com`, `rowley@rowleysamuel.com`, `tess@softcitizen.com`,
+`alexa@freeagent.uk.com`.
+
+### `ludocraft.com` (LudoCraft, Oulu) — **`nome.sobrenome@` sob RÓTULO DE FUNÇÃO, e o cargo não é publicado**
+
+`tony.manninen@` vem rotulado *"**Business Proposals** | CEO Tony Manninen"* e
+**`marja.kuipers@`** vem rotulado só *"**Career & Support**"* — **sem cargo, sem foto e sem
+biografia; o nome dela existe apenas dentro do local part**. Fonte: `https://ludocraft.com/`
+(**200, 141.716 bytes**; `/about` serve a MESMA página byte a byte). **Endereço de pessoa com rótulo
+de função e sem cargo publicado não vira carta** — é a morte da Final Frontier e do Michael Diaz.
+
+### `theflyingcolourcompany.com` (The Flying Colour Company, Carnaby Street, Londres) — **cargo publicado SEM nome**
+
+`simon@` sob *"Managing Director"*, `leonie@` sob *"Head of Production"*, `micheline@` sob
+*"VFX Producer"*, mais `tfcc.general@` sob *"Reception"*. Fonte:
+`https://www.theflyingcolourcompany.com/contact` (**200, 31.318 bytes**). **A página publica o CARGO
+e o PRIMEIRO NOME dentro do endereço, e não nomeia ninguém** — é o espelho exato da armadilha da
+Engine House (nome sem endereço). **Cargo sem nome de pessoa é meio par, não par.**
+
+### `helmet.no` (Helmet, **Trondheim** e não Oslo) — quatro em primeiro nome, e só UMA cadeira de arte
+
+`alex@` (Alexander Somma, *VFX Supervisor, Creative Director*), `oystein@` (Øystein Moe, *Director,
+Cinematographer*), `line@` (Line K. Johansen, *Director, Producer*), `stian@` (Stian Eriksen,
+*Cinematographer, 1st AC*), mais `contact@`. Fonte: `https://helmet.no/contact` (**200, 130.828
+bytes**). **Correção de arquivo:** o `pessoas.csv` registra a casa em *Oslo*; o `<title>` do site diz
+*"Helmet | Film Production & Visual Effects Studio – **Trondheim**, Norway"*.
+
+### `densisteskilling.no` (Den Siste Skilling, Bergen) — **o href tem o domínio ESCRITO ERRADO**
+
+A `/` (**200, 32.011 bytes**) e a `/about-2/` (**200, 30.442 bytes**) publicam `post@densisteskilling.no`
+**e** `post@den**i**ssteskilling.no` — o segundo é **erro de digitação da própria casa dentro do
+`mailto`**. **Armadilha nova: endereço publicado pode trazer o domínio da casa errado**; confira o
+domínio caractere por caractere contra o domínio do site.
+
+### `truststudio.co.kr` e `kog.co.kr` (Coreia do Sul) — **`data-cfemail` protegendo caixa FUNCIONAL**
+
+Decodificados nesta rodada: `truststudio@truststudio.co.kr` (fonte:
+`https://truststudio.co.kr/contact/`, **200, 18.055 bytes**, e `/studio/`, **200, 18.690 bytes**) e
+`KOG@KOG.CO.KR` (fonte: `https://www.kog.co.kr/`, **200, 481.049 bytes**, e `/en`, **200, 478.196
+bytes**). **Os dois são o nome da empresa como local part, ou seja funcional** — a ofuscação
+Cloudflare aqui não esconde pessoa nenhuma. **Decodificar `cfemail` é obrigatório, mas decodificar
+não garante pessoa.**
+
+### `knowledgehub.creativebc.com` — **a porta de Vancouver tranca SEMPRE no mesmo lugar**
+
+Medido em 19/09 às 08h35, e agora com o mapa completo: `creativebc.com/bc-film-commission/in-production/`
+(**200, 174.540 bytes**), `creativebc.com/bc-film-commission/production-credits/` (**200, 168.875
+bytes**) e `creativebc.com/bc-film-commission/library-production-services/` (**200, 180.786 bytes**)
+abrem e têm **ZERO endereço de e-mail**; `creativebc.com/motion-picture-contacts/` responde **404**.
+Todas as listas de contato — *Motion Picture Contacts*, *Industry Contacts*, *Funding Recipients*,
+*In Production* em tempo real — apontam para **`knowledgehub.creativebc.com`, um Salesforce
+Experience Cloud que falha na verificação de TLS** (`unable to get local issuer certificate`) mesmo
+com `--cacert /root/.ccr/ca-bundle.crt`. **Não existe caminho por creativebc sem resolver o
+knowledgehub; pare de gastar rodada nele.** No mesmo pedaço de rodada, `animallogic.ca:443` devolveu
+**`gateway answered 502 to CONNECT`** no proxy.
+
+### Falsos positivos de varredura que valem uma linha cada
+
+- **Squarespace e Wix**: `user@domain.com`, `name@email.com`, `email@example.com`, `you@company.com`
+  são **texto de validação de formulário**; `@sentry.io`, `@sentry.wixpress.com`,
+  `@sentry-next.wixpress.com` são **telemetria**. Nenhum é endereço de pessoa.
+- **`GunHil_logo@2.png`** (em `https://gunhil.com/about/`, **200, 58.490 bytes**) casa com regex de
+  e-mail e é **nome de arquivo de imagem retina**.
+- **`gimpville.no` serve a MESMA casca de ~33.8 KB em nove caminhos diferentes** (`/about-us`,
+  `/team`, `/people`, `/studio`, `/kontakt`, `/om-oss`, `/company`, `/en`), todos com 200 e só
+  `jobs@`. **Casca repetida com 200 não é página de equipe.**
+- **`afilm.dk/studio` e `/meet-the-team` devolvem `508 Resource Limit Is Reached`** (1.006 bytes) —
+  hospedagem estourada, não ausência de página. Vale reabrir noutra hora.
