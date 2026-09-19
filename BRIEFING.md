@@ -6205,3 +6205,129 @@ Industry Job Postings 2.0", tabela mantida à mão por Chris Mayne (camjam26@gma
   rotina), cada uma roda o script e, havendo disciplina nova, lança o `campanha-cacador` em Opus para
   aplicar na mesma rodada. Parede de captcha vira dossiê e PushNotification, porque aqui a velocidade
   é o que conta.
+
+## Jhon A, 19/09 01h30-02h15 UTC (vigésimo quarto turno) — O VIGIA DO JOB BOARD 2.0 ESTREIA COM 12 LINHAS, E **NOVE JÁ TINHAM DECISÃO OU ESTAVAM FORA DE ESCOPO**
+
+Primeira rodada de candidatura movida pelo vigia do Job Board 2.0 do Chris Mayne, com a ordem do
+Vini de aplicar na hora porque só os dez primeiros candidatos têm chance. **Placar: 1 candidatura
+ENVIADA E CONFIRMADA (WildBrain 5648), 1 parede com dossiê (Folks VFX), 4 duplicatas seguradas pelo
+dedupe, 3 fora de escopo, 1 veto de estrutura e 1 dívida fechada com navegador.** Personagem:
+**0 enviada**, e o motivo é medido — as três portas de personagem das 12 linhas estão fechadas.
+
+**O rendimento honesto do quadro novo, porque ele vai ser usado todo dia:** das 12 linhas da
+disciplina, **nove não eram trabalho novo** (4 duplicatas, 3 fora de escopo, 1 parede já na mão dele,
+1 veto de estrutura) e **três eram porta de verdade** — WildBrain, Folks e Estoty. Ele não é fonte
+ruim; ele é **retrovisor com três portas novas por leitura**, e o custo de separar uma coisa da outra
+é o dedupe. Quem aplicar da lista sem dedupe bate em porta fechada nove vezes em doze.
+
+### 1. A QUE SAIU, E ELA É DE AMBIENTE — DITO ASSIM
+
+**WildBrain Studios, `Senior Modeler/Surfacer (Feature - Environments)`, Vancouver BC, requisição
+TalentSoft `2026-5648`.** Duas provas: texto do servidor na tela, *"Personal information has been
+saved successfully. Your application to the 2026-5648 - Senior Modeler/Surfacer (Feature -
+Environments) job opening has been successfully sent"* com o cabeçalho *"Thank you for your
+application!"*, e **recibo no Gmail às 01h42m55** de `studio.jobs@wildbrain.com` (thread
+`1a0b754b40d217a4`), *"Thank you for taking the time to complete your application…"*.
+
+**É ambiente e o anúncio não tem a palavra *character* nem *creature*:** pede *"Hard surface models
+in Maya according to model sheets"*, *"Sculpt models with Zbrush according to the references
+provided"*, *"Model trees procedurally with Houdini"* e *"create Set models & Props"*. Entrou pela
+regra de 10/09 ao pé da letra — **ambiente por último, e só quando não houver nada de personagem na
+rodada** — e a condição estava medida, não suposta: **EA 215667** tem veto escrito da casa, **ICON
+150** é reCAPTCHA v2 de caixa na mão dele e **Folks REF19P** é DataDome medido nesta mesma rodada.
+A favor dela: Vancouver BC (prioridade 1), Senior, efetiva e **sindicalizada (IATSE Local 938)**,
+faixa publicada CAD 1.595 a 1.850 por semana, régua de veto com **um** acerto e ele é falso positivo
+de estrutura (*hybrid* no campo Job location).
+
+### 2. O ACHADO QUE VALE MAIS QUE A CANDIDATURA: **PERFIL GUARDADO CARREGA DECISÃO VELHA**
+
+O TalentSoft guarda as respostas no **perfil do candidato** e as reapresenta em toda candidatura
+nova. Duas estavam erradas desde o envio de 27/08 da Groom Supervisor 5580:
+
+- *"If relocation is required for this position, what is your situation?"* estava em **"I am unable
+  to relocate at this time"**. Ou seja: **o perfil dele dizia por escrito, para a casa, o CONTRÁRIO
+  da ordem do Vini de 06/09**, e foi assim que a candidatura de 27/08 saiu. Trocado para *"I am
+  willing to relocate"*.
+- *"Salary expectations"* estava em **$50.000 - $60.000**, abaixo do piso de CAD 80.000 da regra de
+  04/09 **e abaixo da faixa publicada da própria vaga**. Trocado para *80.000 - $90.000*, que é a
+  base da faixa. É o mesmo defeito do padrão morto no código, com mecanismo novo: aqui o valor baixo
+  não estava no script, estava no **perfil do ATS**.
+- Menor, mas do mesmo tipo: *Availability date* estava em 7/10/2026, data **já passada**.
+
+> **Regra: em ATS com conta (TalentSoft, Workday, SuccessFactors) o formulário não nasce vazio, ele
+> nasce com a resposta que alguém deu meses atrás. Leia CADA campo pré-preenchido antes de enviar.**
+> A correção é de perfil, então ela vale para as próximas candidaturas da casa — e é por isso que
+> vale mais que a candidatura.
+
+Autorização respondida com a verdade e ela já estava certa: *"Are you eligible to work in Canada?"*
+= **"I do not have a work permit"** (opção 2659, entre cinco).
+
+### 3. DUAS ARMADILHAS DE FERRAMENTA, E A PRIMEIRA ESCREVE NO CAMPO ERRADO SEM ERRO NENHUM
+
+- **O `apply_talentsoft.js` mira campo por SUFIXO DE NAME (`name$=`), e neste formulário DOIS campos
+  se chamam `ShortText2`** (Country e Access Password) **e DOIS se chamam `LongText1`** (Availability
+  comment e Other links). Mirar por sufixo escreve no campo errado **sem levantar exceção** — é a
+  mesma família da armadilha do `id` vazio do iCheck e do campo errado do BambooHR. O `wb_fill.js`
+  mira pelo **id exato do ASP.NET** e faz leitura de volta campo a campo.
+- **O banner de cookies Didomi (`#didomi-host`) intercepta o clique de login E o de Apply**, e o
+  sintoma é `Timeout 30000ms exceeded` com o log dizendo *"element is visible, enabled and stable"*.
+  Isso parece portal quebrado e é cortina; derrubou a primeira sonda desta rodada por inteiro. Fechar
+  por `#didomi-notice-agree-button` e **remover o `#didomi-host` do DOM**. Não está no
+  `apply_talentsoft.js`.
+
+### 4. A PAREDE, E ELA VEM COM DUAS CORREÇÕES AO PRÓPRIO QUADRO
+
+**Folks VFX / Pitch Black, `Asset Generalist Senior Artist`, refNumber `REF19P`.** DataDome com
+desafio de slider: o `oneclick-ui` devolve **403**, o frame principal fica com **0 campos e 0
+caracteres em 10 tentativas** e o que carrega é `geo.captcha-delivery.com/captcha/` com *"Slide right
+to secure your access"*. Dossiê na `FILA-DO-VINI.md`. E as duas correções:
+
+1. **A nota "Must be based in Quebec" NÃO está no anúncio.** Régua no corpo inteiro, 6.424 caracteres:
+   **zero acerto dos 43 termos**. A única frase de geografia é **permissiva** — *"Remote candidates
+   within Montreal or Vancouver may also be considered"*. **Nota de curador de quadro não é frase da
+   casa, e não vira veto escrito.**
+2. **São TRÊS anúncios da MESMA requisição** — `7000000000004182` (Montreal, francês),
+   `7000000000004158` (**Toronto ON, inglês**) e `7000000000004252` (Montreal, inglês) — **e o que
+   amarra é o `refNumber` REF19P**, idêntico nos três. É a armadilha da 31st Union de ontem com
+   mecanismo novo: **o mesmo ATS servindo o mesmo requisito em três anúncios de CIDADE E IDIOMA
+   diferentes**. Dedupe por id de anúncio contaria três vagas onde existe uma. O escolhido é o de
+   **Toronto**, porque Ontário é Canadá anglófono e o `BRIEF-JHON` o põe na frente do Quebec. E é a
+   única linha da rodada cujo corpo cita personagem: *"Execute advanced asset work including hero
+   characters and complex assets"*.
+
+### 5. A REGRA 18 SEGUROU A ILM LONDON OUTRA VEZ, E AGORA O MECANISMO É O PRÓPRIO VIGIA
+
+O quadro entregou *Look Development TD (Senior) – ILM London* pela **URL de vitrine**
+`disneycareers.com/.../391/100752248368`, e o id de vitrine **100752248368 tem zero ocorrência no
+repositório** — passaria limpo por qualquer dedupe de id. O botão Apply aponta para o Workday
+`…_10160980/apply`, e a requisição **10160980 foi ENVIADA E CONFIRMADA em 17/09**.
+
+> **Regra: o vigia do Job Board 2.0 entrega URL de VITRINE. Toda linha de `disneycareers.com` que vier
+> dele tem de ter o Apply aberto e o id do Workday extraído ANTES do dedupe**, porque o dedupe pelo
+> número da vitrine devolve zero em vaga já enviada.
+
+### 6. O VETO QUE A RÉGUA NÃO VÊ: **AS OPÇÕES DO SELECT**
+
+**Stim Studio, `Modeling and Look Dev Artist`, Angoulême, não enviada.** Régua no anúncio: zero veto
+de residência. Mas a pergunta obrigatória *"Are you legally entitled to work in Europe ?"* tem **cinco
+opções e nenhuma é a verdade dele**: *"Yes, in France, Canaries and Belgium"*, *"Only in France"*,
+*"Only in Belgium"*, *"Only in Canary Islands"* e *"I'm unsure of my status to work in Europe"*. As
+quatro primeiras são declaração falsa de direito de trabalho; a quinta é falsa sobre o conhecimento
+dele, porque ele **sabe** que não é cidadão da UE. E **não existe campo de texto livre** onde a
+ressalva pudesse ser escrita.
+
+> **Regra: formulário cujo select de elegibilidade não oferece a opção verdadeira é VETO DE
+> ESTRUTURA, e ele conta como veto mesmo com a régua dando zero no anúncio — porque a régua lê o
+> ANÚNCIO, não as opções do formulário.** O que reabre a Stim é a rota espontânea, que aceita remoto
+> pelas palavras deles e não tem esse select (já usada em 05/09).
+
+### 7. A CIDADE DO QUADRO ESTAVA ERRADA, E ISSO É TERCEIRA CAMADA DE DEDUPE
+
+**Estoty:** o quadro anota *"Vilnius Lithuania"*; a página do anúncio diz **"Art / Riga / Full-time
+(on-site)"** e o rodapé assina *SIA Estoty, Reg.No 40103567138*, que é registro **letão**. A casa tem
+os dois estúdios e esta vaga é de **Riga**. Lida só com navegador, porque o `curl` devolve 936
+caracteres de casca de Next.js contra 3.589 no navegador. **Não enviada:** é ambiente e prop em mobile
+casual (*"3D assets for in-game environments, props"*, zero *character*), Unity obrigatório, Mid, e o
+topo da faixa publicada (1.800 a 4.000 EUR/mês) fica abaixo do piso de senior. A rodada já havia
+gasto a cota de ambiente na WildBrain, que é melhor em todos os eixos. Porta mapeada para uma próxima
+rodada virar em um minuto: `estoty.com/form/?id=3d-generalist-mobile-games-on-site`.
