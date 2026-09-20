@@ -16626,3 +16626,174 @@ para fazer.
    isso. O que falta ali é **crédito de filme** ou **página de evento de escola de arte**, não mais um
    `/member-directory`.
 5. **Os 67 domínios do sudeste da Europa**, intocados pela terceira rodada seguida.
+
+---
+
+## RODADA DAS 22h35 DE 20/09 (Joe) — CARTOON FORUM: OS CO-PRODUTORES, E O TLD ERRADO QUE MATOU CINCO CASAS ÀS 20h35
+
+**A correção de método que paga a rodada, e ela é embaraçosa de tão simples:** às 20h35 eu dei
+seis casas 3D do Cartoon Forum como *"domínio não resolve (CONNECT tunnel 502)"* e as arquivei.
+**Eu tinha inventado os domínios.** A ficha da feira **publica o site da casa** num `<a href>`, e
+os TLDs reais são outros: `bigideafarm.com` (não `.de`), `wonderlegends.com` (não `.pl`),
+`mark13.com/pbt-films` (a Peng! Boom! Tschak! não tem domínio próprio). Pior: **a Big Idea Farm
+não atende em HTTPS** — `https://bigideafarm.com/` devolve `000 ERR` e `http://bigideafarm.com/`
+devolve **200 com 28.112 bytes**. Um prober que só fala HTTPS declara a casa morta.
+
+> **REGRA QUE FICA: nunca monte o domínio de uma casa achada em feira. A ficha da feira tem o
+> link. E teste HTTP quando o HTTPS der `000`.**
+
+**E a veia nova de verdade:** às 20h35 eu só li o campo `Main Producer`. O campo **`Co-Producers`
+também nomeia empresa + país + pessoa**, e foi dele que saiu a única ficha de confiança ALTA
+desta rodada.
+
+### FICHA 1 — Dominique "FLINX" Schuchmann, Exec. Producer, PENG! BOOM! TSCHAK! - Films (grupo M.A.R.K.13), Stuttgart, Alemanha — `flinx@mark13.com` — **ALTA**
+
+- **URL aberta nesta rodada:** `https://www.mark13.com/pbt-films` — **200, 760.347 bytes**.
+- **Texto literal que prova nome e cargo**, no rodapé do bloco de contato:
+  `TALK TO: Dominique FLINX Schuchmann Exec. Producer Holger Weiss Exec. Producer PENG! BOOM! TSCHAK! - Films GmbH & Co.KG ... 70188 Stuttgart`
+- **O endereço está PUBLICADO como `mailto:`, e em TEXTO CLARO, não em entidade.** Conferi:
+  `'mailto:flinx' in html` = `True`. O maestro **não precisa** de `html.unescape` aqui. Os dois
+  `mailto` da página são `flinx@mark13.com?subject=inquiry` e `holger.weiss@mark13.com?subject=inquiry`.
+- **Por que ESSA pessoa e não a outra da casa:** a página nomeia **dois** Exec. Producers, e a
+  ficha do Cartoon Forum nomeia especificamente o Dominique como o contato da co-produção 3D.
+  Literal da feira: `Co-Producers / Primal Shape / (Italy) / Andrea Giro / Peng! Boom! Tschak! - Fìlms / (Germany) / Dominique Schuchmann`.
+- **Disciplina, pela rubrica da própria feira** (`Technique / 3D computer`), no projeto
+  *The Adventures of Icarus and Ariadne*, `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-646856-646875` (200, 60.324 bytes):
+  série de **26 x 22'**, `Technique / 3D computer`, `Country / Poland`, `Countries / Germany & Italy`.
+- **Gancho, com a frase da própria casa entre aspas:** a página se apresenta como
+  `"PENG! BOOM! TSCHAK! - FILMS | The M.A.R.K.13 - Group"` e o convite dela é literal:
+  **"TALK TO:"** seguido do nome dele. É uma casa que pede para ser procurada por pessoa, não por caixa.
+- **Fora dos EUA (Alemanha):** sim — **a frase de realocação entra**.
+- **Dedupe:** `mcp__Gmail__search_threads` com `bigideafarm OR wonderlegends OR bigbadboo OR mark13 OR pianosano OR "mondotv-france"` devolveu **`{}` — zero thread**. No repositório, `mark13` = 0
+  ocorrências em `pessoas.csv`, `ESTUDIOS-SEM-CARTA.md` e `enviados.csv`; `Peng` e `Schuchmann` só
+  aparecem na linha narrativa de `processados.csv` desta veia. **Casa inédita.**
+- **RESSALVA HONESTA, e é séria:** o site é Wix, e **na ordem do DOM o `mailto:flinx@` aparece logo
+  depois da imagem `M13_www_people_Holger.jpg`**. Ou seja a ordem do HTML **não** confirma o
+  pareamento; o que confirma é (i) o *local part* `flinx` ser o apelido impresso no meio do nome
+  dele no texto visível (`Dominique **FLINX** Schuchmann`) e (ii) a feira nomear o Dominique. Se o
+  maestro quiser risco zero, `holger.weiss@mark13.com` é o mesmo cargo na mesma casa e o pareamento
+  dele é inequívoco. **Segunda ressalva:** a casa é de **produção executiva**, não de
+  produção 3D interna — o 3D de *Icarus* provavelmente é feito na Wonder Legends (PL) e na Primal
+  Shape (IT). Ele é a porta de um consórcio, não o chefe de um pipeline de personagem.
+- **Segunda pessoa da casa, guardada para outra rodada (não escrever agora):**
+  Holger Weiss, Exec. Producer, `holger.weiss@mark13.com`.
+
+### FICHA 2 — Lars Wagner, Managing Director, Big Idea Farm UG, Alemanha — **sem-email**
+
+- **URLs abertas nesta rodada:** `http://bigideafarm.com/index.php/imprint` (**200, 18.728 bytes**),
+  `/index.php/about-us` (200, 27.750) e `/index.php/contact-us` (200, 28.443). A home é
+  `http://bigideafarm.com/` (200, 28.112) — **só HTTP**.
+- **Texto literal do Impressum, que prova nome e cargo:**
+  `Imprint Big Idea Farm UG ... Managing Director: Lars Wagner Email: This email address is being protected from spambots. You need JavaScript enabled to view it. VAT ID: DE345437709`
+- **POR QUE NÃO TEM EMAIL, e é uma TERCEIRA família de ocultação** — diferente das duas que já
+  estão escritas (entidade HTML do `antispambot()` do WordPress, e `data-cfemail` do Cloudflare):
+  é o **Joomla**, que troca o endereço por essa frase no HTML **servido** e remonta por JS. Rodei o
+  prober corrigido (html.unescape + data-cfemail + `(at)`/`(dot)`) nas cinco páginas e deu **ZERO**;
+  `mailto` = 0, `addy` = 0, `unescape` = 0, `document.write` = 0. **Não há o que decodificar: o
+  endereço não está na página.** Precisa de navegador que execute JS — é dívida de navegador, não
+  de prober.
+- **Por que ESSA pessoa:** é a **única** pessoa nomeada em todo o site, e a feira a confirma por
+  caminho independente: `Main Producer / Big Idea Farm / (Germany) / Lars Wagner`.
+- **Disciplina:** *Rock Me Amadeus!*, `Technique / 3D computer`, `26 x 22'`,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-641816-643980` (200, 68.926 bytes).
+- **Gancho, frase da casa entre aspas:** `"Founded by Lars Wagner, former General Manager of Disney Channel and longtime brand strategist, Big Idea Farm is rooted in 30+ years of media leadership"`.
+- **Fora dos EUA (Alemanha):** sim — realocação entra.
+- **Dedupe:** Gmail `{}`; `bigideafarm` = 0 no repositório.
+- **RESSALVA HONESTA, e ela é o ponto fraco da ficha:** a casa **não é estúdio de personagem**. Ela
+  se descreve como `"We focus on creating and scaling IP, producing family-focused premium content, and leading innovative collaborations across Europe and beyond"` — é marca e IP. O 3D do
+  *Rock Me Amadeus!* é dos co-produtores (Animoon/PL, que já tem linha, e Markand/AT). **Ficha de
+  porta comercial, não de contratante de pipeline.**
+
+### FICHA 3 — Wojciech Karubin, co-fundador e produtor, Wonder Legends Studio, Polônia — **sem-email**
+
+- **URLs abertas nesta rodada:** `https://www.wonderlegends.com/` e mais seis rotas (`/team`,
+  `/about`, `/about-us`, `/contact`, `/kontakt`, `/people`) — **200 em todas as sete e 5.500 bytes
+  IDÊNTICOS nas sete**. É casca de SPA.
+- **O que o prober corrigido devolveu:** **`hello@wonderlegends.com`** nas sete, e **nada mais** —
+  **uma caixa funcional, zero pessoa**.
+- **Texto literal da feira que prova nome, cargo e disciplina:**
+  `Main Producer / Wonder Legends Studio / (Poland) / Wojciech Karubin` e a biografia que ele mesmo
+  submeteu: `"Wojciech Karubin is a Polish producer and narrative designer specializing in original transmedia IP development. He is the co-founder of Wonder Legends Studio, where he leads the creative development of video games and animated series."`
+- **Por que ESSA pessoa:** ele acumula **Author, Scriptwriter, Director e Main Producer** na mesma
+  ficha — é a casa inteira numa pessoa.
+- **Disciplina:** `Technique / 3D computer` na mesma ficha (60.324 bytes), e a bio diz
+  **"video games and animated series"**, as duas frentes do Vini.
+- **Fora dos EUA (Polônia):** sim — realocação entra.
+- **Dedupe:** Gmail `{}`; `wonderlegends` e `Karubin` = 0 no repositório.
+- **RESSALVA HONESTA:** casca de SPA de 5.500 bytes significa que **pode existir página de equipe
+  renderizada por JS que eu não vi** — é dívida de navegador. E a bio fala de *"award-winning
+  documentaries"*, o que dilui o foco em personagem.
+
+### FICHA 4 — Markus Andorfer, Markand Media, Áustria — **sem-email**
+
+- **URLs abertas nesta rodada:** `https://markand.media` (**200, 27.353 bytes**) e
+  `/impressum`, `/kontakt`, `/datenschutz` — **404 com 11.888 bytes cada**.
+- **Prober corrigido: ZERO endereço** em todas. **Um site austríaco sem Impressum acessível é
+  anomalia legal** (a ÖWGB exige), então o Impressum provavelmente existe noutra rota — dívida.
+- **Texto literal da feira:** `Co-Producers / Markand Media / (Austria) / Markus Andorfer`.
+- **Disciplina:** *Rock Me Amadeus!*, `Technique / 3D computer` (68.926 bytes).
+- **Fora dos EUA (Áustria):** sim — realocação entra.
+- **Dedupe:** Gmail `{}`; `Andorfer` = 0 no repositório.
+- **RESSALVA HONESTA:** a feira **não dá cargo**, só o nome ao lado da empresa na rubrica
+  `Co-Producers` — presumo "produtor" pela rubrica e **digo que é presunção**. Não sei o tamanho da
+  casa nem se ela tem pipeline 3D próprio.
+
+### FICHA 5 — Ivan Rouveure, Mondo TV France, França — **sem-email**
+
+- **Texto literal da feira:** `Main Producer / Mondo TV France / (France) / Ivan Rouveure`, e a
+  ficha traz a biografia do time em primeira pessoa:
+  `"I'm Creative Producer at MondoTV France. My job is to find new projects, and to supervise the artistic part of the productions since 2020."`
+- **URL da feira:** `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-108973-645261` (200, 58.458 bytes), projeto *Space Academy*,
+  `Technique / 3D computer`, `Children 9-11 (Tweens)`.
+- **O que travou:** `http://www.mondotv-france.com` (o domínio **publicado pela própria ficha**)
+  **não respondeu em nenhuma das 17 rotas** do prober — zero `200`.
+- **Fora dos EUA (França):** sim — realocação entra.
+- **Dedupe:** Gmail `"mondo tv"` devolveu **duas threads e as duas são da Blue Spirit**
+  (`eleanor@spirit-prod.com` 09/09 + followup 18/09, e `contact.france@spirit-prod.com` 26/08 +
+  followup 02/09) — **nenhuma da Mondo TV**. `Mondo TV` = 0 em `pessoas.csv` e `enviados.csv`.
+- **RESSALVA HONESTA, e ela é dupla:** (i) a frase em primeira pessoa está no bloco de biografias
+  **junto com Thomas Blanc e Jeremy Chateigner**, e eu **não consigo provar pela página qual dos
+  três a escreveu** — pela rubrica é do produtor, mas *"by position of annotation"* é exatamente o
+  que o brief proíbe. **Então o cargo "Creative Producer" NÃO está confirmado para o Ivan
+  Rouveure**; o que está confirmado é o nome dele pareado com `Mondo TV France` na rubrica
+  `Main Producer`. (ii) Mondo TV é grupo italiano grande — a filial francesa pode não decidir
+  contratação de artista.
+
+### FICHA 6 — Idris Lettifi, Piano Sano, França — **sem-email**
+
+- **URLs abertas nesta rodada:** `https://pianosano.com` (200, 136.152 bytes), `/about` (200,
+  138.358), `/contact` (200, 109.088), `/legal` (200, 114.764), `/mentions-legales` (200, 119.713)
+  e mais 11 rotas a 75.540 bytes.
+- **Prober corrigido: `contact@pianosano.com` e SÓ ele**, nas dezesseis. **Uma caixa funcional.**
+  Isto **reconfirma** com o prober corrigido o que às 20h35 tinha sido medido com o prober cru.
+- **Texto literal da feira:** `Main Producer / Piano Sano / (France) / Idris Lettifi`, projeto
+  *Zombie Kidz*, `Technique / 3D computer`,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-646083-646921` (200, 54.772 bytes).
+- **Fora dos EUA (França):** sim — realocação entra.
+- **Dedupe:** Gmail `{}` para `pianosano`; `Piano Sano` e `Lettifi` = 0 no repositório.
+- **RESSALVA HONESTA:** sem cargo publicado (só a rubrica `Main Producer` da feira) e **a mais
+  fraca das seis**, porque a casa publica **uma** caixa e nada mais — nenhum sinal de equipe 3D
+  interna.
+
+### AS QUE EU RECUSEI NESTA RODADA, COM MOTIVO MEDIDO
+
+- **Igloo Studio (Tailândia) / Nat Yoswatananont**, co-produtora de *Atta Slam*: **VETO de
+  região** — Ásia só Coreia do Sul e Singapura. E *Atta Slam* é da **Submarine**, que tem
+  **recusa humana com veto NL/BE**. Morta duas vezes.
+- **Big Bad Boo Studios / Shabnam Rezaei**, co-produtora de *Mitten Pals*: abri
+  `https://bigbadboo.com/` (200, **236.132** bytes), `/about` (200, 196.283), `/about-us` (200,
+  196.284), `/contact` e `/contact-us` (200, 119.165 cada) e `/team` (**404**, 68.868). **`mailto`
+  = 0 e `data-cfemail` = 0 em todas**, e o prober corrigido deu **zero endereço**. Uma casa de
+  236 KB sem um único endereço no HTML. **Não virou ficha porque eu não tenho cargo publicado dela
+  nesta rodada** — fica como dívida barata (o nome e a casa estão registrados aqui).
+- **Method Animation / Katell France**: o domínio publicado pela ficha é
+  `https://mediawankidsandfamily.com` (200, 248.407 bytes) e ele tem **/team com 300.217 bytes**.
+  O prober corrigido colheu **só caixas do grupo Mediawan** — `contact.mkf@mediawan.eu`,
+  `sales.mkf@mediawan.eu`, `licensing.mkf@mediawan.eu`, `rgpd@mediawan.com` — e **zero pessoa**.
+  Bônus da /team: ela publica endereços de **terceiros** (`animation@palomaronline.com`,
+  `contact@somewhereanimation.com`, `hello@wildseedstudios.com`, `info@toon2tango.com`,
+  `info@submarine.nl`) — é a mesma armadilha de agente/terceiro já escrita na veia britânica.
+- **Gringo Films / Steve Hudson** (*Stitch Head*, 3D computer): **a ficha da feira não publica
+  domínio da Gringo** — o único link da ficha é `https://www.fabrique-d-images.com/`, que é a
+  co-produtora **e já tem linha em `pessoas.csv`** (Fabrique d'Images). Sem site da casa, sem
+  ficha.
