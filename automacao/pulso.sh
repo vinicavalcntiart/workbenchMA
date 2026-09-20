@@ -43,13 +43,16 @@ while j<len(h):
 # de seguranca, para um pulso nunca mais ficar cego por pontuacao.
 arr=json.loads(re.sub(r',(\s*[\]}])', r'\1', h[i:j+1]))
 pend=[r for r in arr if len(r)>=7 and r[5] is False]
-mural=re.compile(r'captcha|datadome|recaptcha|hcaptcha|parede|muro|à mão|a mao|expirad|morta|esgotad|teto de|veto escrito',re.I)
+mural=re.compile(r'captcha|datadome|recaptcha|hcaptcha|parede|muro|à mão|a mao|expirad|morta|esgotad|teto de|veto escrito|veto|duplicata|ja enviada|já enviada|recusad|deslistad|already applied|descartad|fora d[ao] (escopo|geografia)|revalidad|quadro vazio',re.I)
 perso=re.compile(r'character|personagem|creature|criatura|modeler|modelagem|sculpt|groom',re.I)
+# 20/09 22h4x: a nota (r[4]) e onde a campanha escreve o motivo de a porta NAO ser de personagem
+# ('ZERO VAGA DE PERSONAGEM' contava como personagem), entao o filtro le so o titulo e exclui a negacao.
+nega=re.compile(r'ZERO (vaga|na disciplina)|zero vaga|SEM VAGA|falsos? positivo',re.I)
 print('   total %d  |  pendentes %d' % (len(arr), len(pend)))
 for p in ('alta','media','baixa'):
     f=[r for r in pend if r[6]==p]
     livres=[r for r in f if not mural.search(r[4])]
-    pc=[r for r in livres if perso.search(r[0]+' '+r[4])]
+    pc=[r for r in livres if perso.search(r[0]) and not nega.search(r[0])]
     print('   %-6s pendentes %3d | sem parede %3d | DESSAS de personagem %3d'
           % (p, len(f), len(livres), len(pc)))
     for r in pc[:4]:
