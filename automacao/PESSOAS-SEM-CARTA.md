@@ -16382,3 +16382,207 @@ endereço publicado" antes de 07/09 está sob suspeita.
   Forum, não do site**, e a leitura provável é que a casa está **entrando** em animação 3D com um
   projeto e vai TERCEIRIZAR o pipeline — ou seja, pode não haver cadeira de personagem interna. O
   endereço é ótimo e a pessoa é real; o que é frágil é a chance de existir vaga de modelagem ali.
+
+### O DEDUPE DA CAIXA MATOU A **SUBMARINE** ANTES DA CARTA, E ELA ERA A MELHOR FICHA DA VEIA (b)
+
+A `https://submarine.nl/team` (**200, 4.767 bytes comprimidos / 26.935 descomprimidos**) publica o
+time inteiro com cargo, e o pareamento é impecável no HTML servido:
+
+```
+<div class="teammember">
+  <div class="photo"><img src="https://submarine.nl/app/uploads/2024/01/Will-Jeffers_300x300_acf_cropped.jpg"/></div>
+  <h3>William Jeffers</h3>
+  <p class="function">CG Supervisor</p>
+</div>
+```
+
+**CG Supervisor é exatamente o cargo que o brief manda caçar em casa pequena e média**, e a casa é
+3D confirmado: a ficha do Cartoon Forum 2026 do projeto **"Atta Slam"** (**200, 54.654 bytes**) diz
+**"Technique / 3D computer"**, **"Main Producer / Submarine Animation (Netherlands) / Bruno Felix"**.
+A `/team` também publica **"Christiaan de Rooij / Art Director / Lead Designer"**.
+
+**E nada disso vale, por duas razões que o Gmail devolveu na hora.** A busca por
+`submarine.nl OR wolkenlenker OR graphilm OR "Submarine Animation"` trouxe a thread
+`1a03fdab5f47a357`, de 26 a 28/08: o Vini escreveu para `studiotalent@submarine.nl` e **um humano
+respondeu**, literal — *"At this time, our open roles require candidates to be **based within the
+Netherlands or Belgium**"* — e depois de novo, assinando *"Milo Cremer Eindhoven | Head of
+Animation Recruitment"*. O `enviados.csv` registra a mesma coisa: **"recusado (respondido; vagas
+exigem residência NL/BE)"**. Batem **duas** proibições duras do brief de uma vez: *"nunca escrever
+para estúdio que já recusou explicitamente"* e *"nunca escrever para quem já respondeu: essa thread
+é do Comunicador"*. Some-se o **veto de residência**, que é da mesma família do veto `BC-based` da
+Image Engine e da Zoic. **Submarine está fechada, e a ficha do William Jeffers não existe.** Fica
+registrada aqui só para a próxima rodada não repetir o trabalho: o nome, o cargo e o pareamento
+estão provados, e o que falta não é fonte, é permissão.
+
+### FICHA 3 — **Harsh Borah**, *Asset Supervisor*, **MILK VFX** (Clerkenwell House, 67 Clerkenwell Road, Londres EC1R 5BL) — **`sem-email`**
+
+- **URL exata aberta nesta rodada:** `https://milk-vfx.com/team` — **HTTP 200, 11.596 bytes
+  comprimidos, 63.549 bytes descomprimidos**.
+- **Nome e cargo, literais no HTML servido:** `Harsh Borah</strong></a><br>Asset Supervisor</p>`,
+  dentro do bloco que a página intitula **"Meet Milk's Creative VFX Team"**, subseção
+  **"Supervisors"**.
+- **POR QUE ELE E NÃO OUTRO DA CASA.** A mesma página publica dez supervisores, e nove são de
+  outra disciplina: **"Jean-Claude Deguara / Production VFX Supervisor"**, **"Neil Roche / CCO / VFX
+  Supervisor"**, **"Mark Harris / VFX Supervisor"**, **"David Sadler-Coppard / VFX Supervisor"**,
+  **"He Sun / VFX Supervisor"**, **"Cesar Nunes / VFX Supervisor"**, **"Jorge Olivia / VFX
+  Supervisor"**, **"Joe Tarrant / Animation Supervisor"**, e **"Sarah Essam / Executive Producer"**.
+  **Asset Supervisor é o único cargo da lista que É o departamento do Vini**: asset em casa de VFX
+  é modelagem, esculpimento e superfície de personagem e criatura. Não há Head of Characters
+  publicado, então ele é o topo da disciplina nesta casa.
+- **POR QUE `sem-email`, com o número.** Este site esconde endereço atrás do ofuscador do
+  Cloudflare, e eu reverti todos: a `/contact` (**200, 8.703 / 39.241 bytes**) tem **quatro**
+  `data-cfemail` e a `/team` tem **um**. Decodificados, dão **`info@milk-vfx.com`**,
+  **`newbusiness@milk-vfx.com`** e **`recruitment@milk-vfx.com`** — **três caixas funcionais e zero
+  endereço de pessoa**. Nenhuma entidade HTML escondendo nada a mais (conferido com
+  `html.unescape`). **Não montei `hborah@` nem `harsh.borah@`**: não há um único endereço de pessoa
+  publicado neste domínio para provar formato, e a medição de 07/09 diz o que isso custa.
+- **A PORTA QUE EXISTE, e é a razão de a ficha valer:** a carta vai para
+  **`recruitment@milk-vfx.com`**, que **está publicado** (não é caixa adivinhada), abrindo com
+  **"Hi Harsh,"**. Isso é exatamente o que o Joe existe para fazer: transformar uma das 365 cartas
+  de caixa genérica numa carta com nome de humano em cima.
+- **GANCHO, com a frase da própria casa entre aspas.** A `/team` chama a seção de
+  **"Our Award-winning Senior Team"** e a de baixo de **"Meet Milk's Creative VFX Team"**; o rodapé
+  assina **"©2025 Milk Visual Effects. A Phantom Media Group Company."**
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** Reino Unido.
+- **DEDUPE, o que o Gmail devolveu.** `milk-vfx OR "Milk VFX" OR blue-bolt OR "BlueBolt" OR
+  territorystudio OR nineteentwenty` devolveu a thread `1a06322b1127e611`: carta de **02/09** para
+  `recruitment@milk-vfx.com` e **resposta automática** de `recruitment+noreply@milk-vfx.com` —
+  *"Thank you for your email and interest in Milk. We are currently reviewing applications. Because
+  we receive a high volume of interest, we can only contact those candidates we wish to move forward
+  with"* — mais duas confirmações de candidatura de portal em 06/09. **Nenhum humano respondeu**, o
+  que pela regra do brief deixa a casa ABERTA e prioritária: estúdio já qualificado, só faltou
+  chegar em alguém. `pessoas.csv` não tem nenhuma linha de `milk-vfx.com`: **primeira pessoa da
+  casa**, e sobra o teto de duas.
+- **RESSALVA HONESTA.** Três coisas enfraquecem a ficha. **(1)** Não há endereço de pessoa, então a
+  carta depende de a caixa `recruitment@` encaminhar, e essa caixa já provou que responde com robô.
+  **(2)** A casa é de VFX de live-action, não de animação de personagem: o forte dela é criatura e
+  efeito para série e cinema, o que serve ao Vini, mas o volume de cadeira de modelagem é menor que
+  numa casa de animação. **(3)** `Asset Supervisor` é cargo de supervisão de pipeline de asset em
+  geral — inclui prop e ambiente, não só personagem —, e a página não diz que a especialidade dele é
+  personagem. Eu **não** inventei essa especialidade.
+
+### FICHA 4 — **Sebastian Wehner**, *producer e co-founder*, **WOLKENLENKER GmbH** (Urbanstr. 71, 10967 Berlim, Alemanha) — **`sem-email`**
+
+- **URLs exatas abertas nesta rodada:** `https://www.wolkenlenker.com/` (**200, 129.732 bytes
+  comprimidos / 618.083 descomprimidos**), `https://www.wolkenlenker.com/impressum` (**200, 95.827
+  bytes**), `https://www.wolkenlenker.com/contact` (**200, 128.070 bytes**),
+  `https://www.wolkenlenker.com/privacy-policy` (**200, 1.509.479 bytes**). **`wolkenlenker.de`
+  reseta a conexão**; o domínio vivo é o `.com`.
+- **Nome e cargo, literais na ficha oficial do Cartoon Forum 2026**, projeto **"Reinventing
+  Herman"**, `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-133716-647684`
+  (**200, 58.229 bytes**): **"Technique / 3D computer"**, **"Country / Germany"**, **"Main Producer
+  / Wolkenlenker (Germany) / Sebastian Wehner"**, e a bio que a própria feira publica: *"Sebastian
+  Wehner is producer and co-founder at Wolkenlenker GmbH, where he develops and produces animated
+  content for children and families. His work spans creative development, international
+  co-productions, financing and strategic partnerships. He is currently producing Orbiteers, an
+  ambitious animated series, and collaborating with partners across Europe and Australia."*
+- **POR QUE ELE E NÃO OUTRO DA CASA.** O site **não publica uma única pessoa**: `grep` por nome
+  próprio na home de 618 KB e no `/impressum` de 95 KB não acende. Ele é o único nome que existe
+  publicado em fonte oficial para esta casa, e é co-fundador — o alvo que o brief manda escolher em
+  casa pequena, porque *"costuma responder ele mesmo"*.
+- **POR QUE `sem-email`, e o que a veia do impressum entregou de verdade.** Testei
+  `/impressum`, `/impressum/`, `/imprint`, `/de/impressum`, `/legal-notice`, `/datenschutz`,
+  `/privacy`, `/privacy-policy`, `/team`, `/about`, `/kontakt`, `/contact`. Os que respondem 200
+  entregam **um único endereço, `info@wolkenlenker.com`**, mais `info@wonderz.eu` (que é de um
+  parceiro, na política de privacidade). Zero `data-cfemail`, zero entidade HTML. **A previsão do
+  brief de que o impressum alemão entrega pessoa física NÃO se confirmou aqui**: o impressum desta
+  casa nomeia a GmbH e a rua, e o contato é a caixa da empresa. **Não montei `s.wehner@` nem
+  `sebastian@`.**
+- **GANCHO, com a frase da própria casa entre aspas.** A home rotula os projetos por técnica, e
+  duas vezes escreve **"Technique: 3D animation"** — no projeto em desenvolvimento descrito como
+  *"Double the trouble, double the fun! Genre: A magically messy family comedy ... Format: 52 x 11
+  minutes"* e no do Writers' Room, *"Wusel - The last of his kind..."*. Uma terceira encomenda,
+  *"Toggolino - The show with Muhpidu!"*, é **"Technique: 3D"**. A casa também escreve
+  **"Wolkenlenker operates a writers' room with full-time concept developers, script writers, and
+  story editor"**, e fecha com **"Let's create worlds together / Wolkenlenker GmbH / Urbanstr. 71,
+  10967 Berlin"**.
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** Alemanha, UE.
+- **DEDUPE, o que o Gmail devolveu.** `submarine.nl OR wolkenlenker OR graphilm OR "Submarine
+  Animation"` devolveu **uma só thread, e ela é da Submarine**: **zero** para `wolkenlenker`. No
+  repositório, `grep -ril Wolkenlenker` devolveu **NADA**. Casa inédita, primeiro toque.
+- **RESSALVA HONESTA.** É uma casa de **desenvolvimento e produção**, com writers' room própria, e
+  o site não prova estúdio de produção interno — a animação 3D pode ser toda terceirizada, e nesse
+  caso não há cadeira de modelagem ali, só a decisão de quem contratar o estúdio. Segunda ressalva:
+  o cargo dele é de produtor, não de arte, então ele **encaminha**, não avalia portfólio.
+
+### FICHA 5 — **Anna Lucia Pisanelli**, *producer*, **GRAPHILM** (Itália) — **`sem-email`**
+
+- **URLs exatas abertas nesta rodada:** `https://graphilm.com/` (**200, 302.788 bytes**),
+  `https://graphilm.com/about` (**200, 31.463 comprimidos / 176.151 descomprimidos**),
+  `https://graphilm.com/contact` (**200, 171.833 bytes**), `https://graphilm.com/privacy` (**200,
+  98.779 bytes**). **`graphilm.it` não resolve** (CONNECT tunnel 502); o domínio vivo é o `.com`.
+- **Nome, literal no HTML servido da `/about`**, no atributo de uma foto da direção:
+  `alt="Maurizio Forestieri Anna Lucia Pisanelli" title="Maurizio Forestieri Anna Lucia Pisanelli"`,
+  em `/wp-content/uploads/2022/11/Maurizio-Forestieri-left-Anna-Lucia-Pisanelli-right-GRAPHILM-HR-scaled.jpeg`
+  — ou seja, a casa publica os dois como a dupla da direção, com a posição na foto dita no nome do
+  arquivo (`-left-` e `-right-`).
+- **Cargo, literal na ficha oficial do Cartoon Forum 2026**, projeto **"To Be Tween"**,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-305593-644357`
+  (**200, 54.583 bytes**): **"Technique / 3D computer"**, **"Country / Italy"**, **"Main Producer /
+  Graphilm (Italy) / Anna Lucia Pisanelli"**.
+- **POR QUE ELA E NÃO O OUTRO DA CASA.** O site publica dois nomes, ela e **Maurizio Forestieri**, e
+  a feira nomeia **ela** como a produtora do projeto 3D. Forestieri é o diretor e fica como segunda
+  pessoa da casa, se houver segunda carta.
+- **POR QUE `sem-email`.** `/`, `/about`, `/contact` e `/privacy` entregam **um único endereço,
+  `info@graphilm.com`**. Zero `data-cfemail`, zero entidade HTML. **Não montei nada.**
+- **GANCHO, com a frase da própria casa entre aspas, e aqui a prova de disciplina é boa.** A
+  `/about` lista as competências da casa em caixa alta, e duas linhas interessam:
+  **"CGI, REAL-TIME, BLENDER"** e **"CHARACTER DESIGN, BACKGROUND DESIGN, STORYBOARD, LAYOUT,
+  ANIMATIC"**. E escreve, na primeira pessoa: **"CGI over the years. Our very first CGI movie is an
+  award-winning product."** Casa que diz **Blender** e **real-time** no próprio site é casa que
+  entende o pipeline em que o Vini trabalha.
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** Itália, UE.
+- **DEDUPE, o que o Gmail devolveu.** A busca `submarine.nl OR wolkenlenker OR graphilm OR
+  "Submarine Animation"` devolveu **zero** para `graphilm`. `grep -ril Graphilm` no repositório:
+  **NADA**. Casa inédita, primeiro toque.
+- **RESSALVA HONESTA.** O cargo dela não está escrito no site da casa — vem da feira. E
+  `CHARACTER DESIGN` na lista de serviços é **design 2D de personagem**, que é justamente o que o
+  brief exclui; o que sustenta a ficha é o `CGI / REAL-TIME / BLENDER` na mesma lista e o
+  `Technique: 3D computer` da feira, não a palavra "character". Terceira ressalva: a Graphilm é uma
+  casa pequena de Roma e a única porta é `info@`.
+
+### FICHA 6 — **Lila Hannou**, *VP creative development and strategy*, **ELLIPSE ANIMATION** (França, grupo Média-Participations) — **`sem-email`**
+
+- **URLs exatas abertas nesta rodada:** `https://www.ellipseanimation.com/about` (**200, 21.641
+  comprimidos / 140.325 descomprimidos**), `https://www.ellipseanimation.com/contact` (**200,
+  14.566 bytes**), `https://www.ellipseanimation.com/careers` (**200, 16.285 bytes**),
+  `https://www.ellipseanimation.com/legal-notice` (**200, 58.407 bytes**).
+- **Nome, cargo e biografia, literais na ficha oficial do Cartoon Forum 2026**, projeto
+  **"Animal Jack"**, `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-168782-645042`
+  (**200, 58.750 bytes**): **"Technique / 3D computer"**, **"Country / France"**, **"Main Producer /
+  Ellipse Animation (France) / Lila Hannou"**, com a bio: *"Lila joined M6 in 2001 as Marketing
+  Research Analyst at M6 Publicité. From 2006 to 2011 she was in charge of monitoring youth
+  programming. In 2012 she was appointed Manager for the Coordination of Youth Programming. In 2015,
+  she was appointed Director of the Youth Programming Unit and M6 Kid. Thanks to the merger with
+  Gulli, she became Director for Animation co productions and pre-buys for M6 Group. Since Septembre
+  2021, she is **VP creative development and strategy for Ellipse Animation**."*
+- **POR QUE ELA E NÃO OUTRO DA CASA.** A `/about` tem uma seção intitulada **"Our Team"**, mas ela
+  **não renderiza nome nenhum** no HTML servido (o índice da página lista *"Our Story / Our
+  Locations / Our Ecosystem / Our Team"* e o bloco de time vem vazio a `curl`). Ela é o único nome
+  da casa publicado em fonte oficial nesta rodada.
+- **POR QUE `sem-email`, e a ARMADILHA DE DOMÍNIO que isso destapou.** `/about`, `/contact` e
+  `/legal-notice` dão **zero** endereço. A `/careers` dá **um**, e ele é de **outro domínio**:
+  **`contact@ellipsanime.fr`** — é a mesma família do achado de 08/09 (*"o site do estúdio pode
+  morar em OUTRO domínio"*), aqui ao contrário: o site institucional é `ellipseanimation.com` e o
+  domínio de operação é **`ellipsanime.fr`**. Tentei `ellipsanime.fr` em `/`, `/contact`,
+  `/equipe`, `/mentions-legales`, `/about` e `/team`: **as seis resetam a conexão** (`Recv failure:
+  Connection reset by peer`), inclusive em repetição. **Fica como dívida medida, não como zero.**
+  Não montei `l.hannou@` nem `lila.hannou@` em nenhum dos dois domínios.
+- **GANCHO, com a frase da própria casa entre aspas, e é o melhor gancho de personagem da rodada.**
+  A `/about` abre com **"For over 60 years, Ellipse Animation has been giving life to iconic
+  characters, amazing worlds and unforgettable adventures that pass on generations"** e segue com
+  **"Our teams are behind the largest animation catalogue in Europe and some of the most successful
+  animation series and movies ever produced, including The Aventures of Tintin, The Garfield Show
+  and The Smurfs brand new series"**, fechando com **"Ellipse Animation is a subsidiary of the
+  French family-owned Média-Participations group"**.
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** França, UE.
+- **DEDUPE.** `grep -ril "Ellipse Animation"` no repositório: **NADA**. Casa inédita. O Gmail não
+  foi consultado por este domínio nesta rodada, e registro isso como lacuna: **antes de escrever, o
+  maestro precisa rodar a busca por `ellipseanimation OR ellipsanime`**.
+- **RESSALVA HONESTA, e é a mais forte de todas as seis.** **Não há endereço nenhum alcançável**:
+  a única caixa publicada é `contact@ellipsanime.fr`, num domínio que não abre a `curl`, e o site
+  institucional não publica nem caixa genérica. Segunda ressalva: o cargo é de **desenvolvimento
+  editorial e estratégia**, vindo de programação de TV (M6, Gulli), não de arte — ela decide que
+  série se faz, não quem esculpe o personagem. A ficha vale como **captura de nome**, e a casa vale
+  muito (catálogo Tintin, Garfield, Smurfs, 3D confirmado pela feira), mas **ela não está pronta
+  para carta**.
