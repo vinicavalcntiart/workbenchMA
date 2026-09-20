@@ -7,6 +7,16 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🟡 ENTROU EM 20/09 11h50 UTC (Jhon B, casas grandes) — **ALERTA DE VAGA DA MICROSOFT / XBOX GAME STUDIOS**, três cliques, sem captcha
+
+`https://careers.microsoft.com/careers/join?domain=microsoft.com` ← **ABRA ESTA.** Cobre 343 (Halo), The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang, ZeniMax e Bethesda, e a campanha nunca teve alerta nenhum desse grupo.
+
+A automação preencheu nome, sobrenome, e-mail e país, subiu o CV (POST 200) e parou no campo
+obrigatório **"Desired area of work"**, um seletor de tags cuja lista não se deixa ler por script.
+Escolha **Art** (ou o mais próximo de *Art / Animation / Games*), clique em **Join Talent Network**
+(o botão, não o link do menu) e pronto. Controle: um e-mail de `microsoft.com` ou `eightfold.ai`
+na caixa confirma.
+
 ### 🔴 ENTROU EM 20/09 05h40 UTC (Jhon A, rodada 04h15) — **ONZE PORTAS DE ASHBY ABREM DO SEU NAVEGADOR SEM CAPTCHA NENHUM**, e o rótulo "reCAPTCHA invisível" que as segurava desde 11/09 estava ERRADO
 
 **O que foi medido hoje, com clique:** o Ashby não pede desafio. Ele recusa **por reputação do IP** da
