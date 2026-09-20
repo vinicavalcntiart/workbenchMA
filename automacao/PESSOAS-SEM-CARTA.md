@@ -16257,3 +16257,128 @@ candidatas legítimas a navegador de verdade. `satu.fi` **000** (CONNECT tunnel 
 a própria página explica por quê: **"OBS! För att komma i kontakt med produktionsbolagen nedan,
 vänligen gå in på respektive produktionsbolags hemsidan för kontaktinformation"** — a associação
 sueca **decidiu** não publicar contato.
+
+---
+
+## JOE, 20/09/2026 20h35 UTC — **A VEIA DO DIA É O CARTOON FORUM 2026: CADA FICHA DE PROJETO PUBLICA `Technique` + `Country` + `Main Producer` COM A PESSOA NOMEADA, E 16 DOS 65 PROJETOS SÃO `3D computer`**. E o achado de método que vale mais que as fichas: **o meu próprio prober de `mailto:` lia HTML CRU e por isso é CEGO a endereço codificado em entidade HTML** — foi exatamente assim que a M2 Animation escondeu `Owen.Hurley@M2animation.com` de quatro varreduras. **SEIS FICHAS: duas com endereço PUBLICADO e confiança ALTA, quatro `sem-email`**, seis casas INÉDITAS, seis países (Dinamarca/Tailândia, Estônia, Holanda, Reino Unido, Alemanha, Itália). **Zero endereço montado.** Chrome estava vivo (`pgrep -c chrome` = **11**), então **não abri navegador** e Vancouver ficou sem porta pela segunda rodada seguida — mas agora **medida casa por casa**, não só na associação.
+
+### O ACHADO DE MÉTODO QUE PAGA A RODADA, com o número dos dois grepes lado a lado
+
+A M2 Animation publica o e-mail de cada pessoa da chefia na página de perfil dela. Eu rodei
+`grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}'` no HTML servido de **16 perfis** e recebi
+**ZERO**. Rodando o MESMO regex depois de `html.unescape`, os mesmos 16 arquivos entregaram
+**SEIS endereços reais**. O motivo está no HTML servido, e é o `antispambot()` do WordPress:
+
+```
+<div class="employee--full__email"><a href="mailto:Ow&#101;&#110;&#46;&#72;&#x75;&#x72;&#x6c;&#x65;&#x79;&#64;M&#50;&#97;&#110;&#105;&#x6d;&#x61;&#x74;&#x69;&#x6f;n&#46;&#99;&#111;&#109;" rel="nofollow">
+```
+
+**A receita, que o maestro também precisa usar para reconferir:**
+
+```sh
+curl -sS -L --compressed -A "Mozilla/5.0" https://m2animation.com/people/owen-hurley/ \
+ | python3 -c "import sys,re,html;s=sys.stdin.read();print(sorted(set(re.findall(r'[\w.%+-]+@[\w.-]+\.[a-z]{2,}',html.unescape(re.sub(r'<[^>]+>',' ',s)),re.I))))"
+```
+
+**Consequência que fica escrita, e ela é maior que esta rodada:** a varredura mecânica de `mailto:`
+dada como esgotada em 04/09 rodou com regex em HTML cru. **Ela não via `&#101;` nem `data-cfemail`.**
+Duas famílias de ocultação, e o brief só tinha registrado a segunda. Todo domínio dado como "sem
+endereço publicado" antes de 07/09 está sob suspeita.
+
+### FICHA 1 — **Owen Hurley**, *Head of Studio*, **M2 ANIMATION** (grupo dinamarquês M2 Animation Group a/s; estúdios em Bangkok, Mumbai, Aarhus e Los Angeles) — `Owen.Hurley@M2animation.com` — **ALTA, PUBLICADO PELA PRÓPRIA CASA**
+
+- **URL exata aberta nesta rodada:** `https://m2animation.com/people/owen-hurley/` — **HTTP 200,
+  18.493 bytes comprimidos, 67.290 bytes descomprimidos**. A página é o perfil individual dele.
+- **O endereço, literal no HTML servido** (entidade HTML, ver o achado acima), dentro de
+  `<div class="employee--full__email">`, decodificado: **`Owen.Hurley@M2animation.com`**. A própria
+  `https://m2animation.com/contact-us/` (**200, 19.588 bytes**) manda ir ali, por escrito:
+  *"Meet Our **Key Team Members** for **personal contact info** and to learn more about our team."*
+- **Nome e cargo, literais na página de equipe** `https://m2animation.com/people/` (**200, 21.310
+  bytes**), no bloco *"Leadership & Strategy"*: **"Owen Hurley / Head of Studio / M2 Animation"**.
+- **POR QUE ELE E NÃO OUTRO DA CASA.** A mesma `/people/` publica **56 pessoas com cargo**, e a
+  chefia de disciplina está toda lá: **"Roheem Chaiya Naheem / Modelling Supervisor"**,
+  **"Dominic Heuw / Surfacing Supervisor"**, **"Rishab Suresh Chitroda / Head of Animation"**,
+  **"Ian Cumming / Art Director"**, **"Benz Dejvisidh Vongchinsri / Art Director"**. Eu abri os
+  perfis dos cinco: **nenhum publica e-mail** (decodificados, dão vazio). Dos 16 perfis que abri, só
+  seis publicam endereço, e são todos de chefia: Owen Hurley, `Rene@M2animation.com` (René Sánchez
+  Jessen, CEO), `mads@m2animation.com` (Mads Munk, Founder, M2 Group), `ole@m2animation.com` (Ole
+  Holm Christensen, Executive Producer), `kylie.ellis@m2animation.com` (Kylie Ellis, Head of
+  Production) e `helle.madsen@m2film.dk` (Helle Hunskjær Madsen, HR Business Partner, Aarhus).
+  Entre os seis, **Owen Hurley é o único que a própria casa descreve como decisor CRIATIVO** —
+  a bio dele diz *"inspiring Creative Studio Head, Director and Producer"* e
+  *"Extensive CGI Animation direction experience"*. CEO e Founder não olham portfólio; a HR de
+  Aarhus é RH generalista, que é exatamente o filtro que o brief manda contornar.
+- **GANCHO, com a frase da própria casa entre aspas.** A `/people/` termina com
+  **"Animation department 350 cool people"**, e a `/team` (**200, 21.018 bytes**) abre com
+  **"TEAM MEKBOTS: ANIMAL RESCUE ... a 78-episode animated series now streaming on Peacock Kids
+  Jr."** e **"As a full-service studio, we managed every stage of production, from development to
+  completion."** O catálogo de trabalho da casa é criatura e personagem em volume: o sitemap de
+  links da home lista **nove** páginas de Warhammer (`/work/warhammer-blacktalon-series-games-workshop/`,
+  `/work/warhammer-kill-team-cinematic-death-korps-ork/`, `/work/warhammer-the-horus-heresy-cinematic-trailer/`,
+  `/work/warhammer-pariah-nexus-games-workshop/` e mais), além de `/work/lego-friends-heartlake-city-series/`,
+  `/work/get-rolling-with-otis-series-apple-tv-plus/` e `/work/disney-jr-kindergarten-the-musical/`.
+  Para a carta, o gancho forte é **o Ork do Kill Team e o Death Korps**: cinematic de criatura, que é
+  o que o Vini faz. O gancho pessoal está na bio dele, literal: *"Owen Hurley's Emmy nominated,
+  diverse career has taken him from London and Sydney, to **Vancouver**, Los Angeles, from Bangalore
+  and Mumbai, to Paris and now Bangkok"*.
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** Grupo dinamarquês, sede de holding na
+  Dinamarca, e o rodapé de toda página escreve **"Operating studios in Denmark, Bangkok and Los
+  Angeles. M2 Animation Group a/s is owned by the privately-owned Danish holding company M2 Group a/s."**
+- **DEDUPE, o que o Gmail devolveu.** `mcp__Gmail__search_threads` com
+  `m2animation OR "M2 Animation" OR jafilm OR "Ja Film" OR madebyus OR ncreations OR toolboxfilm`
+  devolveu **`{}`** — zero thread. No repositório, `grep -ril m2animation.com` em `*.csv`, `*.html`
+  e `*.md` devolveu **NADA**. Casa 100% inédita, primeiro toque.
+- **RESSALVA HONESTA, e ela é a mais séria desta rodada.** A `/contact-us/` escreve
+  **"state-of-the-art studios in Bangkok, Mumbai, and office in Denmark and Los Angeles"**, e a bio
+  do Owen termina em **"and now Bangkok"**. **Tailândia e Índia estão FORA do escopo geográfico da
+  campanha** (Ásia só Coreia do Sul e Singapura, e nada de Índia). Ou seja: o alvo é legítimo e o
+  endereço é real, mas **a cadeira de personagem desta casa provavelmente é em Bangkok**, e só
+  Aarhus e Los Angeles estão no escopo. O maestro precisa decidir isso ANTES de gastar a carta, e
+  se mandar, não deve nomear cidade nenhuma. Segunda ressalva, menor: com 350 a 450 pessoas a casa
+  é GRANDE, e pela regra do brief casa grande responde melhor a sourcer e a lead de personagem que
+  a chefe de estúdio — só que nenhum dos dois publica endereço aqui. **Segunda pessoa da casa, já
+  documentada para o dia em que a primeira carta sair:** `Rene@M2animation.com`, René Sánchez
+  Jessen, CEO, que é também o nome que a **Producentforeningen** dinamarquesa publica como
+  *"Ejere / CEO"* da M2 Animation.
+
+### FICHA 2 — **Anneli Ahven**, *produtsent* (produtora), **KOPLI KINOKOMPANII** (Tallinn, Estônia) — `anneli@kinokompanii.ee` — **ALTA, PUBLICADO PELA PRÓPRIA CASA, e o nome e o cargo também**
+
+- **ARMADILHA DE DOMÍNIO, e ela derruba quem tentar o nome óbvio:** `koplikinokompanii.ee` e
+  `kopli.ee` dão **CONNECT tunnel 502** (não resolvem). O domínio vivo é **`kinokompanii.ee`**, sem
+  o "kopli". Segunda armadilha: **a casa reseta a primeira conexão** — o primeiro GET devolve
+  `Recv failure: Connection reset by peer` e o segundo devolve 200. É o mesmo comportamento da
+  A Film Estonia anotado às 06h35, e um prober de uma tentativa registra `000` e dá a casa por morta.
+- **URLs exatas abertas nesta rodada:** `https://kinokompanii.ee/` (**200, 33.135 bytes**),
+  `https://www.kinokompanii.ee/et/kontakt/` (**200, 31.195 bytes**) e
+  `https://www.kinokompanii.ee/et/meist/` (**200, 32.781 bytes**).
+- **O endereço, literal no HTML servido** do rodapé, em `<p><span>`, sem ofuscação nenhuma
+  (zero `data-cfemail`, zero entidade): **`© Kopli Kinokompanii`** … **`E-post: anneli@kinokompanii.ee`**.
+- **Nome e cargo, literais na `/et/meist/`**, sob o título **"Võtmeinimesed"** (pessoas-chave):
+  **"Anneli Ahven, produtsent"**, seguido de *"Anneli on õppinud saksa keelt Eesti
+  Humanitaarinstituudis ning filmiproduktsiooni Hamburgi Ülikooli filmiosakonnas Saksamaal. Ta on
+  tegutsenud aktiivselt filmitegijana alates 1995. aastast."* e *"Anneli kuulub Eesti Filmitootjate
+  Liitu ning töötab Balti Filmi- ja Meediakoolis dotsendi ja produktsiooniõppe juhatajana. Samuti
+  on ta Euroopa Filmiakadeemia liige."* (membro da associação estoniana de produtores, docente e
+  chefe do curso de produção na Baltic Film and Media School, membro da Academia de Cinema Europeia).
+- **POR QUE ELA E NÃO OUTRO DA CASA.** A `/et/meist/` publica **UMA** pessoa-chave, e é ela. Não há
+  outro nome no site.
+- **GANCHO, com a frase da própria fonte entre aspas.** O gancho NÃO vem do site da casa, e isto é
+  a parte importante da ficha: vem da **ficha oficial do Cartoon Forum 2026**,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-...`
+  do projeto **"Nate in A Pickle"**, que pareia, em campos rotulados:
+  **"Technique / 3D computer"**, **"Country / Estonia"**, **"Main Producers / Kopli Kinokompanii
+  (Estonia) / Anneli Ahven"**. É a mesma pessoa, com o mesmo cargo, num projeto de animação 3D
+  apresentado em Toulouse em **14-17 de setembro de 2026**, ou seja **seis dias atrás**.
+- **FORA DOS EUA: SIM, a frase de realocação ENTRA.** Estônia, UE.
+- **DEDUPE, o que o Gmail devolveu.** `grep -ril` por `kinokompanii` e por `Kopli Kinokompanii` em
+  todo o repositório devolveu **NADA**, em nenhum arquivo. Casa inédita, primeiro toque. (O Gmail
+  não foi consultado por este domínio especificamente porque o repositório já provou casa inédita, e
+  o `enviados.csv` é a fonte de verdade de envio; registro a diferença de método honestamente.)
+- **RESSALVA HONESTA, e é séria.** A `/et/meist/` descreve uma casa de **live-action**, não de
+  animação: a lista de serviços é *"Võttepaikade otsingut ja lubade korraldamist"* (locação e
+  licenças), *"Professionaalsete näitlejate ja taustanäitlejate castingut"* (casting de atores),
+  *"Operaatoritööd, heli ja valgustust (DoP, helirežissöörid, valgustusmeeskond)"*. Os filmes do
+  site (*Luulur*, *Morten*, *Punane*, *Elu õpetaja*) são live-action. **A prova de 3D é do Cartoon
+  Forum, não do site**, e a leitura provável é que a casa está **entrando** em animação 3D com um
+  projeto e vai TERCEIRIZAR o pipeline — ou seja, pode não haver cadeira de personagem interna. O
+  endereço é ótimo e a pessoa é real; o que é frágil é a chance de existir vaga de modelagem ali.
