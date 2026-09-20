@@ -16586,3 +16586,43 @@ estão provados, e o que falta não é fonte, é permissão.
   série se faz, não quem esculpe o personagem. A ficha vale como **captura de nome**, e a casa vale
   muito (catálogo Tintin, Garfield, Smurfs, 3D confirmado pela feira), mas **ela não está pronta
   para carta**.
+
+### FECHAMENTO DA RODADA DAS 20h35 — **SEIS PESSOAS, DUAS COM ENDEREÇO PUBLICADO E ALTA, QUATRO `sem-email`, ZERO MONTADO**
+
+| # | Pessoa | Cargo | Casa | País | Endereço | Confiança |
+|---|---|---|---|---|---|---|
+| 1 | Owen Hurley | Head of Studio | M2 Animation | Dinamarca (grupo) / estúdios Bangkok, Mumbai, Aarhus, LA | `Owen.Hurley@M2animation.com` | **ALTA, publicado** |
+| 2 | Anneli Ahven | produtsent | Kopli Kinokompanii | Estônia | `anneli@kinokompanii.ee` | **ALTA, publicado** |
+| 3 | Harsh Borah | Asset Supervisor | Milk VFX | Reino Unido | — (porta: `recruitment@milk-vfx.com`, publicado) | `sem-email` |
+| 4 | Sebastian Wehner | producer e co-founder | Wolkenlenker GmbH | Alemanha | — (porta: `info@wolkenlenker.com`) | `sem-email` |
+| 5 | Anna Lucia Pisanelli | producer | Graphilm | Itália | — (porta: `info@graphilm.com`) | `sem-email` |
+| 6 | Lila Hannou | VP creative development and strategy | Ellipse Animation | França | — (**sem porta alcançável**) | `sem-email` |
+
+**Seis casas inéditas, seis países, todas primeiro toque em pessoa nomeada. Nenhum endereço
+montado por padrão de domínio.** Duas de seis com endereço publicado é pouco, e o motivo está
+medido: **35 domínios sondados em até 12 caminhos cada, 38 endereços colhidos no Reino Unido e na
+Irlanda e ZERO em forma de pessoa da própria casa**; em Vancouver, **12 casas sondadas em 9 rotas e
+zero endereço de pessoa**. Onde ainda há nome é em **página de equipe sem e-mail**, e é por isso que
+quatro das seis fichas são `sem-email`. Elas continuam valendo: a carta vai para a caixa
+**publicada** da casa, aberta com o nome do humano em cima, que é exatamente o que o Joe existe
+para fazer.
+
+**A ORDEM PARA A PRÓXIMA RODADA, em ordem de prognóstico:**
+
+1. **O ARQUIVO DO CARTOON MOVIE.** A veia deste dia rende mais em longa que em série, porque longa
+   3D vem de casa maior. `/archives` responde **404** e a página do Movie diz, literal:
+   **"The selected projects for Cartoon Movie 2027 will be announced in December 2026. Find the
+   selection of Cartoon Movie 2026 projects in the archives."** O arquivo existe; achar a URL dele é
+   a dívida número 1.
+2. **REPROCESSAR OS 426 DOMÍNIOS ANTIGOS COM O PROBER CORRIGIDO** (`html.unescape` mais reversão de
+   `data-cfemail`). É a consequência direta do achado da M2 e é a veia mais barata que sobrou. Nesta
+   rodada eu só rodei uma **amostra de controle de 21 domínios**, e ela deu zero — então o prognóstico
+   é incerto, não alto. Mas o custo é uma linha de python.
+3. **AS SEIS CASAS 3D DO CARTOON FORUM SEM DOMÍNIO RESOLVIDO**, todas com nome e cargo já pareados:
+   Elysian Dreams (CZ), Big Idea Farm (DE), Gringo Films (DE), Wonder Legends Studio (PL), Markand
+   Media (AT) e o `ellipsanime.fr` que reseta em seis rotas. Viram ficha `sem-email` barata.
+4. **VANCOUVER, mas por OUTRA veia.** Está provado que o problema não é falta de diretório: as casas
+   de BC **não publicam endereço de pessoa** — as grandes publicam caixa funcional e as pequenas nem
+   isso. O que falta ali é **crédito de filme** ou **página de evento de escola de arte**, não mais um
+   `/member-directory`.
+5. **Os 67 domínios do sudeste da Europa**, intocados pela terceira rodada seguida.
