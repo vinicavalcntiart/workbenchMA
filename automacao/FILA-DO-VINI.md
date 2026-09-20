@@ -7,6 +7,51 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
+### 🔴 ENTROU EM 20/09 05h40 UTC (Jhon A, rodada 04h15) — **ONZE PORTAS DE ASHBY ABREM DO SEU NAVEGADOR SEM CAPTCHA NENHUM**, e o rótulo "reCAPTCHA invisível" que as segurava desde 11/09 estava ERRADO
+
+**O que foi medido hoje, com clique:** o Ashby não pede desafio. Ele recusa **por reputação do IP** da
+sessão e escreve o motivo na tela: *"Your application submission was flagged as possible spam"* e
+*"Turn off your VPN or proxy"*. Do seu computador, com a sua rede, ele aceita: as três candidaturas
+de Ashby que a campanha já tem (thatgamecompany, redlygames, stellarentertainment) saíram exatamente
+assim, pela sua mão.
+
+**As onze portas, todas sem veto escrito, formulário curto (nome, e-mail, CV, LinkedIn, portfólio):**
+
+| Casa | Quadro | Nota |
+|---|---|---|
+| Redly Games (Finlândia, remoto global, EU/Canadá preferidos) | https://jobs.ashbyhq.com/redlygames/3c2a1d1e-5e80-4b4e-895d-f43d0efe4d3b/application | General Interest, a que foi clicada hoje |
+| ArenaNet (Bellevue, EUA) | https://jobs.ashbyhq.com/arenanet | abra o quadro e escolha a de personagem ou a espontânea |
+| Chromatic | https://jobs.ashbyhq.com/chromatic | idem |
+| Colonist | https://jobs.ashbyhq.com/colonist | idem |
+| Interplay | https://jobs.ashbyhq.com/interplay | idem |
+| Stellar Entertainment (Reino Unido) | https://jobs.ashbyhq.com/stellarentertainment | segunda requisição da casa, se houver de personagem |
+| Vizcom | https://jobs.ashbyhq.com/vizcom | idem |
+| Kolibri Games (Berlim) | https://jobs.ashbyhq.com/kolibrigames | idem |
+| Immutable (Sydney) | https://jobs.ashbyhq.com/immutable | idem |
+| Jito | https://jobs.ashbyhq.com/jito | idem |
+| Daily Wire (Nashville) | https://jobs.ashbyhq.com/dailywire | animação própria (Bentkey); espontânea |
+
+Texto para o campo de carta: o mesmo bloco ATS da fila de cliques (sem emoji). Autorização de
+trabalho sempre com a verdade.
+
+### 🔴 REVALIDADA EM 20/09 05h40 UTC — **Character Artist – Hair Specialist**, **Keywords Studios / Lakshya Digital**, remoto (Canadá, EUA, Reino Unido): a régua de 82 termos dá **ZERO acerto** no anúncio inteiro
+
+`https://apply.workable.com/keywords-intl1/j/CA33DB1208/` ← **ABRA ESTA do seu navegador.**
+
+A decisão antiga de "exige residência" apoiava-se na linha *Location: Canada, US, UK*, que é lista de
+local e **não** veto escrito. O que bloqueia a automação é só a parede do Workable (Turnstile de
+plataforma, recusa deste IP). Do seu navegador o Workable passa. É a **única vaga só de grooming de
+personagem** que a campanha já viu. Requisições vivas hoje: `9b90b38f` e `be8477ea` (Canadá e Reino
+Unido). Se ao abrir a página disser "expired", registre e siga.
+
+### 🟡 DOIS LINKS DO SEU PDF ("Links Jobs - Rodrigo.pdf") SÓ ABREM LOGADO — custo de um minuto
+
+1. `tinyurl.com/mapOfStudios` → Google My Maps em modo de edição, pede login. Se você abrir logado e
+   exportar o KML (menu ⋮ → "Exportar para KML/KMZ"), mande o arquivo; eu varro as casas.
+2. `tinyurl.com/Animation-VFX-Game-job-studios` → planilha do Google não compartilhada com a conta
+   da campanha (`export?format=csv` dá 401). Compartilhe com contact@vinicavalcanti.art como leitor,
+   ou baixe o CSV e mande. Até lá a fonte fica como **não lida**, não como "sem resultado".
+
 ### 🔴 ENTROU EM 19/09 20h40 UTC (Jhon A, 35o turno) — **Character Sculptor, Adult Series**, **ICON CREATIVE STUDIO**, **VANCOUVER, BC**: a melhor porta de personagem do estoque, e a parede foi medida COM CLIQUE pela **terceira vez** hoje. Você só marca a caixa do reCAPTCHA
 
 `https://iconcreative.bamboohr.com/careers/150` ← **ABRA ESTA. Clique em "Apply for This Job".**
