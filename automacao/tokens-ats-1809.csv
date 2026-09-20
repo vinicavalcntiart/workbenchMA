@@ -1111,3 +1111,21 @@ hireserve,blue-zoo,vfx-1909,nao,"careers.blue-zoo.co.uk",casa-real,"Blue Zoo Ani
 smartrecruiters,PitchBlackCreative,vfx-1909,nao,"folksvfx.com/careers/open-positions",casa-real,"Pitch Black Creative - e o quadro da FOLKS VFX por agencia",21
 own,careers.digitaldomain.com,vfx-1909,nao,"digitaldomain.com/careers",casa-real,"Digital Domain 3.0 - rss.php le o quadro, /description/<id>.pdf e o anuncio, application.php?job_id= e o formulario SEM CAPTCHA, application_submit.php e o POST",78
 own,careers.wetafx.co.nz,vfx-1909,nao,"wetafx.co.nz/careers",casa-real,"Weta FX - a lista vive INLINE no HTML de /jobs como 'const jobsData = []'; hoje VAZIA",0
+#
+# ZOHO RECRUIT, entrada de 20/09 (Jhon A, 37o turno). A familia estava marcada como SEM
+# DISCRIMINADOR desde 18/09; o discriminador foi achado em 19/09 e reconfirmado hoje com 3
+# controles positivos e 2 negativos: <slug>.zohorecruit.com/jobs/Careers responde 200 SEMPRE,
+# e o que separa e o TAMANHO - slug inexistente fecha em 2.608-2.610 bytes, slug vivo passa de
+# 1,7 MB. O quadro se le do <input type=hidden id="jobs">, ANCORANDO na tag (regex solto casa
+# o input vizinho e devolve zero falso). A familia NAO tem data de publicacao: filtro por
+# palavra-chave sobre o quadro inteiro, como ashby e bamboohr. Varredura de hoje: 55.524
+# sondagens (22.575 base + 32.949 variantes com sufixo juridico, estas ZERO vivas), 96
+# locatarios vivos, 232 vagas, ZERO de personagem. Os seis abaixo sao os da industria; todos
+# com banco de talentos DESLIGADO (register=false no pageJson), ou seja nenhum oferece porta.
+familia,token,origem,adivinhado,arquivos_de_origem,identidade,nome_real,vagas_1809
+zohorecruit,sphere-media,zoho-2009,nao,"spheremedia.ca/offres-demploi (rec_embed_js)",casa-real,"Sphere Media (Montreal) - 6 vagas, zero da disciplina; VP respondeu 18/09 que e estudio 2D e contrata no Canada",6
+zohorecruit,niceshoes,zoho-2009,nao,"sondagem por slug 1909",casa-real,"Nice Shoes (NY e Toronto, animacao/VFX/cor) - ZERO vaga, register=false",0
+zohorecruit,taufilms,zoho-2009,nao,"sondagem por slug 1909",casa-real,"Tau Films - 1 vaga, Pipeline Supervisor em Hyderabad (fora da disciplina e do recorte)",1
+zohorecruit,bkomstudios,zoho-2009,nao,"sondagem por slug 2009; jobs.bkom.com/jobs/Careers",casa-real,"BKOM Studios (Quebec City) - 1 vaga, 3D Gameplay Animator freelance; casa ja descartada no painel em 07/09",1
+zohorecruit,illogika,zoho-2009,nao,"sondagem por slug 2009",casa-real,"iLLOGIKA Studios (Montreal) - ZERO vaga; a /carrieres manda CV para info@illogika.com, rota de carta e nao de formulario",0
+zohorecruit,scavengers,zoho-2009,nao,"sondagem por slug 2009",casa-real,"Scavengers Studio (Quebec; SEASON, Darwin Project) - ZERO vaga; a /careers manda 'apply at info@scavengers.ca', rota de carta",0
