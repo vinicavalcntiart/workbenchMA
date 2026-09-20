@@ -16069,3 +16069,66 @@ você" — e ela veio da mesma página que deu o nome, não de bajulação.
    Pachacamac AIE, BD Animation; *Norbert*: Aquí y Allí Films, Vista Sur). Ou seja a mão que
    modela personagem costuma estar no estúdio parceiro, não aqui. O que mantém a ficha de pé é o
    rótulo `OUTSOURCING / WORK FOR HIRE` que o próprio ICEX carimba na ficha dela.
+
+---
+
+### 3) **Julio Covacho** — CEO, **Untaled Entertainment** (Madri, Espanha) — `julio@untaled.com` — **PUBLICADO no catálogo oficial, confiança ALTA, e o SITE NÃO PUBLICA E-MAIL NENHUM**
+
+**E-MAIL E CONFIANÇA.** `julio@untaled.com`, **ALTA por ser literal**, vindo do bloco impresso da
+ficha da casa no PDF oficial do ICEX `Who is Who — Animation from Spain 2026`
+(200, 20.849.262 bytes, re-baixado nesta rodada):
+**`CONTACT Julio Covacho CEO julio@untaled.com`**, com **`TECHNIQUE 3D`**,
+**`PORTFOLIO MONSTER KIDS / GEOFABLES`**, `FORMAT WEBSERIE / 5 X 1'`,
+`TARGET UPPER PRE-SCHOOL (5-6)`, `STATUS DEVELOPMENT`. **Nada montado.**
+**E este é o ponto que decide a ficha:** eu abri `https://untaled.com/contacto/` (**200, 69.693
+bytes**) e ele **não publica endereço nenhum** — só formulário e um link de LinkedIn.
+`grep` de `@` no HTML servido dá **zero** e-mail. Quem varrer o site à procura de `mailto:`,
+que é a varredura mecânica que o `BRIEF-JOE.md` dá por esgotada, **não acha esta casa**.
+Sem o catálogo do ICEX ela não existiria para a campanha.
+
+**URL EXATA ABERTA NESTA RODADA**: `https://untaled.com/` **200, 66.333 bytes** ·
+`https://www.untaled.com/sitemap_index.xml` 200/394 → `https://untaled.com/page-sitemap.xml`
+(**7 URLs, o site inteiro**) · `https://untaled.com/sobre-nosotros/` **200, 80.087 bytes** ·
+`https://untaled.com/contacto/` **200, 69.693 bytes** · `https://untaled.com/en/inicio-english/`
+**200, 59.761 bytes**.
+
+**POR QUE ESSA PESSOA E NÃO OUTRA DA CASA.** Não há outra: o site **não tem página de equipe**
+(as 7 URLs do `page-sitemap.xml` são home, sobre, contato, duas de política e duas de idioma) e
+**não publica nome nenhum**. O único nome que existe em fonte pública é o que a própria casa
+mandou para o catálogo do ICEX, e ele é **CEO** de uma casa pequena — que é exatamente a cadeira
+que a régua de tamanho do `BRIEF-JOE.md` manda procurar em estúdio pequeno, porque lá quem decide
+contratação é o dono.
+
+**GANCHO COM A FRASE DA PRÓPRIA CASA, entre aspas, e as duas estão no HTML servido por `curl`
+(conferido com `grep -o`, não só no navegador).**
+
+- Home: **"Somos una productora audiovisual especializada en animación 2D, 3D y CGI"**.
+- `/sobre-nosotros/`: **"Un equipo con más de 30 años de experiencia"**.
+- E do catálogo do ICEX, que é texto que a casa escreveu sobre ela mesma, a prova de **personagem**:
+  **"Row, Row, Row is a 3D animated musical comedy-adventure about four unusual friends — a cat, a
+  dog, a goat and a very curious dinosaur"**, com **"Monster Kids"** no portfólio.
+  Quatro protagonistas animais em 3D é personagem, e é por aí que a carta entra.
+
+**CASA FORA DOS EUA: SIM** (Madri). **A frase fixa de realocação ENTRA.**
+
+**DEDUPE, nos quatro lugares.**
+- `pessoas.csv`: **0**. `enviados.csv`: **0**.
+- `processados.csv` / `PESSOAS-SEM-CARTA.md`: só a minha nota das 16h35, que listava
+  `julio@untaled.com` entre os endereços **não abertos** e a casa entre as
+  **"quatro que ficaram a uma frase da ficha"**. A frase que faltava era a disciplina 3D no site
+  da própria casa, e ela apareceu na home.
+- **NA CAIXA**: `mcp__Gmail__search_threads` com
+  `untaled OR capitanarana OR "Capitán Araña" OR nexuspixelforge OR hianimation OR scanmenow OR mrklausstudio`
+  devolveu **`{}`** — zero thread.
+
+**RESSALVA HONESTA, e é a ficha mais fraca das três.**
+
+1. **O site tem SETE páginas e NENHUM portfólio.** Não há uma peça, um frame, um reel. A prova de
+   que a casa faz personagem 3D vem **do catálogo do ICEX**, não de uma página da casa — e o
+   catálogo é texto que a própria casa submeteu, então é fonte dela, mas é **fonte de feira**, que
+   descreve intenção tanto quanto entrega. `Monster Kids` e `Geofables` estão em `DEVELOPMENT`.
+2. **Metade do modelo de negócio dela é FERRAMENTA, não arte.** O `/sobre-nosotros/` diz que além
+   das IPs próprias eles prestam serviço a estúdios de animação em apoio técnico e desenvolvimento
+   de ferramentas e software. Casa que vende pipeline contrata engenheiro antes de contratar
+   modelador, e isso é o mesmo defeito que o `BRIEF-JOE.md` registra na veia de código aberto.
+3. **A palavra `character`/`personaje` não aparece em nenhuma das cinco páginas abertas.**
