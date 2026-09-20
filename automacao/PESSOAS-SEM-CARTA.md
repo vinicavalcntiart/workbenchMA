@@ -16132,3 +16132,90 @@ contratação é o dono.
    de ferramentas e software. Casa que vende pipeline contrata engenheiro antes de contratar
    modelador, e isso é o mesmo defeito que o `BRIEF-JOE.md` registra na veia de código aberto.
 3. **A palavra `character`/`personaje` não aparece em nenhuma das cinco páginas abertas.**
+
+---
+
+### 4) **Richard Claus** — produtor e diretor, **Cool Beans BV** (Amsterdã, Holanda) — `rc@coolbeanspix.com` — **PUBLICADO com o NOME COLADO NO ENDEREÇO dentro da mesma tag, confiança ALTA**
+
+**Esta é a melhor ficha da rodada, e ela não veio do ICEX: veio da veia (c), da ordem geográfica
+do Vini — Holanda é o terceiro país da lista.** A porta é um diretório de associação **inédito na
+campanha**: a **NAPA (Nederlandse Audiovisuele Producenten Alliantie)**.
+
+**A VEIA, porque ela é repetível e barata.** `producentenalliantie.nl/members/` renderiza
+`Loading members...` e nada mais — é aplicação React. O bundle
+`https://www.producentenalliantie.nl/assets/js/App.js` (200, **1.141.895 bytes**) tem a URL da API
+escrita em texto claro: **`https://www.producentenalliantie.nl/filterlist.json`** (200,
+**18.711 bytes**), que devolve **85 membros** com os campos `bedrijfsnaam`, **`contactpersoon`**,
+`categorie` e `url`. Filtrando `categorie` por `Animation` sobram **22 casas holandesas com pessoa
+de contato já nomeada pela associação**. Abri **12** fichas de membro e **três** publicam endereço
+em forma de pessoa: `rc@coolbeanspix.com` e `cn@coolbeanspix.com` (Cool Beans),
+`jolande@phantavision.com` (Phanta Animation) e `corine@studiobiarritz.nl` (Studio Biarritz).
+
+**E-MAIL E CONFIANÇA.** `rc@coolbeanspix.com`, **ALTA**, e **sem uma vírgula de inferência**: o
+site da própria casa publica nome e endereço **dentro do mesmo bloco, um colado no outro**, e é
+assim no HTML servido por `curl`:
+
+```html
+<h4 style="color:black">Richard Claus</h4>
+<p>rc@coolbeanspix.com</p>
+```
+
+seguido de `<h4>Chantal Nissen</h4><p>cn@coolbeanspix.com</p>` e
+`<h4>Rienkje Attoh</h4><p>ra@coolbeanspix.com</p>`. **Não é pareamento por posição de anotação** —
+que é o erro que eu proibi às 16h35 — porque o nome é o irmão imediato do endereço na árvore, e as
+iniciais confirmam (`rc` = Richard Claus). Segunda fonte, independente: a ficha da casa na NAPA
+(`https://www.producentenalliantie.nl/members/cool-beans.html`, **200, 11.009 bytes**) publica
+**`Richard Claus & Chantal Nissen`** com `rc@coolbeanspix.com, cn@coolbeanspix.com`.
+
+**URL EXATA ABERTA NESTA RODADA.** `https://www.coolbeanspix.com/` **200, 60.618 bytes**
+(o domínio **sem `www` responde 403** — a casa só existe pelo `www`, e quem testar só a forma curta
+a dá como morta) · `https://www.producentenalliantie.nl/filterlist.json` 200/18.711 ·
+`https://www.producentenalliantie.nl/members/cool-beans.html` 200/11.009.
+
+**POR QUE ESSA PESSOA E NÃO OUTRA DA CASA.** A casa publica **três** produtores com endereço.
+**Richard Claus é o único dos três que também DIRIGE**, e dirige exatamente os longas 3D: a própria
+página credita **`DIRECTED BY RICHARD CLAUS, KARSTEN KIILERICH`** em *Panda Bear in Africa* e em
+*The Little Vampire 3D*, e **`DIRECTED BY JOSÉ ZELADA, RICHARD CLAUS`** em *Ainbo*. Quem julga um
+reel de personagem é a cadeira de direção, não a de produção — é a regra do `BRIEF-JOE.md` de que
+quem atropela a fila do RH é quem viu o trabalho e quer a pessoa. Chantal Nissen e Rienkje Attoh
+ficam como segunda pessoa possível da casa, **nunca antes de a carta dele sair**.
+
+**GANCHO COM A FRASE DA PRÓPRIA CASA, entre aspas, tudo no HTML servido.**
+
+- *Panda Bear in Africa*: **"YEAR / FORMAT 2024 / 3D ANIMATION / FEATURE FILM"**, com a sinopse
+  **"A fun and adventurous young Panda travels from China to Africa to rescue his best friend,
+  Jielong the Dragon, who has been kidnapped"** e **"OFFICIAL SELECTION ANNECY FESTIVAL 2024"**.
+- *The Little Vampire 3D*: **"THE NETHERLANDS' FIRST-EVER 3D ANIMATED FEATURE FILM"**,
+  **"WORLD WIDE BOX OFFICE $14 MILLION"**.
+- *Ainbo — Spirit of the Amazon*: **"2021 / 3D ANIMATION / FEATURE FILM"**, **"MORE THAN $11
+  MILION BOX OFFICE WORLDWIDE"**, com **"her spirit guides Vaca and Dillo"**.
+
+**Três longas 3D de personagem dirigidos pela mesma pessoa que lê o e-mail.** É o gancho mais forte
+que esta rodada produziu, e ele é criatura por criatura: panda, dragão, vampiro, guias-espírito.
+
+**CASA FORA DOS EUA: SIM** (Joop Geesinkweg 501, Amsterdã). **A frase fixa de realocação ENTRA.**
+
+**DEDUPE, nos quatro lugares.**
+- `pessoas.csv`: **0** para `cool beans` e **0** para `coolbeanspix`. `enviados.csv`: **0**.
+- `processados.csv`: **0**. A casa é **inédita na campanha inteira** — `grep -ril` em todo o
+  repositório (`*.csv`, `*.md`, `*.html`) devolve **ZERO arquivo**.
+- **NA CAIXA**: `mcp__Gmail__search_threads` com
+  `coolbeanspix OR "Cool Beans" OR "Richard Claus" OR phantavision OR "Phanta" OR frameorder`
+  devolveu **`{}`** — zero thread.
+
+**RESSALVA HONESTA, e são três.**
+
+1. **Cool Beans é PRODUTORA, e a mão que modela está no estúdio irmão.** A própria página credita
+   **"ANIMATION STUDIOS KATUNI, A. FILM"** nos três longas. Katuni é a casa de animação de Amsterdã
+   do mesmo grupo e **A. Film** é dinamarquesa. A carta chega em quem **decide e financia**, não em
+   quem abre o Maya. O lado bom, e ele é real: o mesmo Richard Claus aparece como
+   **`rc@katuni.eu`** no rodapé, ou seja ele está no topo do grupo que **inclui** o estúdio de
+   animação.
+2. **DOIS endereços da mesma pessoa no mesmo site** (`rc@coolbeanspix.com` e `rc@katuni.eu`, e
+   ainda `rc@cometfilm.com` da irmã alemã). Pela regra de 07/09 — **nunca duas grafias da mesma
+   pessoa** — registrei **só** `rc@coolbeanspix.com`, que é o da casa que a NAPA lista. Os outros
+   dois **não devem ser usados**, nem como segunda tentativa no mesmo dia.
+3. **Boa parte do catálogo é LIVE ACTION** (*An Act of Defiance*, *The Price of Sugar*,
+   *The Heineken Kidnapping*, *Black Butterflies*), e a palavra `character` aparece **uma única
+   vez** em 22.247 caracteres de texto. A prova de disciplina é o rótulo `3D ANIMATION / FEATURE
+   FILM` repetido em três fichas de filme, não um vocabulário de departamento de personagem.
