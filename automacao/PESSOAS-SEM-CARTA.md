@@ -15895,3 +15895,105 @@ A ordem mandava achar o equivalente do ICEX em Portugal (ICA), França (Unifranc
 6. **NÃO ESCREVI CARTA NENHUMA E NÃO CRIEI RASCUNHO NENHUM.** As seis linhas novas de `pessoas.csv` estão com `rascunho=PENDENTE-maestro-escreve`. As ferramentas de escrita do Gmail não estão na minha lista.
 7. **NÃO TOQUEI em `enviados.csv` nem em `docs/index.html`** (Jhon A em paralelo). O `git pull` do início respondeu `Already up to date`.
 8. **DATAS SEGURADAS, sem mudança, mais duas entradas novas:** `mpavlisova@madfingergames.com` **22/09** · segundas pessoas (Gdaniec, Mróz, Knopova, Jůzová, Baltrūnaitė, Rossides, Toušek, Ratajczak, Krpan J., Cvangová, Juza, Cebrián, `vera@perfectstormstudio`) **22/09 e só se a primeira carta saiu** · Emmanuelle Vincent **23/09** · Ars Thanea / `danuta.godloza@` **24/09** · IBRIDO, Badi Badi, Lightbox, El Ranchito **28/09** · **NUNCA:** Hampa, Charles Ellison, About Fun, B-Water, **e agora ÁNIMA KITCHENT** · **SEGURADAS:** MGL Creative **e agora 3DOUBLES (não antes de outubro, e como reconexão)** · Ucrânia fora do escopo · Room 8 group excluído · Ásia só Coreia do Sul e Singapura (**é por esta regra que a Digitoonz ficou de fora**) · **NOVA segunda pessoa desta rodada, a partir de 22/09 e só depois da primeira carta:** **`ben.dubois@wearecovert.com`** (Ben Dubois, *EP / Head of Client Partnerships*, We Are Covert — **confirmado na `/contact/` da casa com navegador**, segunda e última da casa).
+
+
+## JOE, 20/09/2026 18h35 UTC — **A VEIA (a) FOI ATÉ OS ~34 ENDEREÇOS QUE AS 16h35 DEIXARAM SEM DOMÍNIO ABERTO, E O ACHADO QUE PAGA A RODADA É UM DEDUPE: A MELHOR CASA DA LISTA (`tomavision.net`, 70 a 100 ARTISTAS, *Space Jam* e *Merry Little Batman*) JÁ ESTÁ NO TETO DE DUAS DESDE 07/09 — EU ABRI CINCO PÁGINAS DELA ANTES DE DESCOBRIR**
+
+Rodada das 18h35 de 20/09. O maestro escreve as cartas; aqui só ficha. Nenhuma carta escrita,
+nenhum rascunho criado, `rascunho=PENDENTE-maestro-escreve` em todas as linhas novas.
+
+**O PDF do ICEX foi RE-BAIXADO e RE-PARSEADO nesta rodada** (não reaproveitei nota):
+`https://www.icex.es/content/dam/icex/asset-generales/documentos/agenda-icex/documentos-apoyo-actividades/animation-from-spain-2026-guia.pdf`
+→ **200, 20.849.262 bytes**, 1.303 objetos, **153 páginas**, 150 com texto, **173.331 caracteres**
+reconstruídos por `/Type /Page` + `zlib`. O parser confirma o formato descrito às 16h35: cada ficha
+tem `TECHNIQUE` e um bloco `CONTACT` com **nome, cargo e e-mail na mesma linha**. Filtrei por
+`TECHNIQUE` antes de gastar GET, como a minha própria nota das 16h35 mandava.
+
+**14 domínios abertos nesta rodada** (home + `sitemap.xml` + `sitemap_index.xml` cada, e depois as
+páginas que o sitemap apontou): `untaled.com` 200/66.333 · `capitanarana.com` 200/83.318 ·
+`apocalipsisproducciones.com` 200/1.051.672 · `sbriller.com` 200/347.445 ·
+`nexuspixelforge.com` 200/1.096.694 · `scanmenow.es` **200 com 321 bytes (casca vazia)** ·
+`mrklausstudio.com` 200/505.234 · `lamadriguerastudio.com` 200/103.043 · `hianimation.com` 200/15.986 ·
+`tomavision.net` 200/254.761 · `baleuko.com` 200/20.304 · `brooderlab.studio` 200/110.134 ·
+`mostwantedstudio.com` 200/129.954 · `zip-zap.es` **403 com 318 bytes**.
+
+**TRÊS FICHAS, as três com e-mail PUBLICADO e confiança ALTA, zero montado.** Três casas inéditas,
+todas na Espanha, todas primeiro toque.
+
+---
+
+### 1) **Gonzalo Carrión** — CEO & Executive Producer, **Nexus Pixel Forge** (Madri, Espanha) — `gonzalo@nexuspixelforge.com` — **PUBLICADO, confiança ALTA, e em DUAS fontes independentes**
+
+**E-MAIL E CONFIANÇA.** `gonzalo@nexuspixelforge.com`, **ALTA**, porque ele aparece **escrito
+literalmente** em duas fontes que não dependem uma da outra, e **nada foi montado**:
+
+- **(a) o rodapé do site da própria casa**, em toda página que eu abri nesta rodada. Conferido no
+  HTML SERVIDO por `curl`, não só no navegador: `grep -o "gonzalo@nexuspixelforge.com"` acende em
+  `https://www.nexuspixelforge.com/animation` (**200, 700.173 bytes**). O rodapé publica **dois**
+  endereços, `gonzalo@nexuspixelforge.com` e `peter@nexuspixelforge.com`, e **só o primeiro tem
+  nome e cargo pareados em outra fonte** — o segundo fica sem nome e por isso não entra em linha
+  nenhuma.
+- **(b) a ficha da casa no PDF oficial do ICEX** `Who is Who — Animation from Spain 2026`
+  (200, 20.849.262 bytes, re-baixado nesta rodada), bloco literal:
+  **`CONTACT Gonzalo Carrión CEO & Executive Producer gonzalo@nexuspixelforge.com`**, categoria
+  `SERVICES`, rótulo **`SERVICES VFX, VIRTUAL PRODUCTION & ANIMATION`**.
+
+**URL EXATA ABERTA NESTA RODADA** (seis páginas, todas 200):
+`https://www.nexuspixelforge.com/` 200/1.096.694 · `/sitemap.xml` 200/743 →
+`/pages-sitemap.xml` (28 URLs) · `/animation` 200/700.173 · `/vfx` 200/703.538 ·
+`/firelight` 200/707.781 · `/raised-by-monsters` 200/698.241 · `/theforge` 200/694.196 ·
+`/pixelsmiths` 200/681.551 · `/projects` 200/655.125.
+
+**POR QUE ESSA PESSOA E NÃO OUTRA DA CASA.** A casa publica exatamente **dois** endereços e **um
+nome**. `peter@` não tem nome em nenhuma página, e associar um nome a ele seria inferência de
+posição — o erro que eu mesmo proibi às 16h35 no caso de `asebastian@ikirufilms.com`. Sobra o
+Gonzalo, e a cadeira é a certa pela régua de tamanho do `BRIEF-JOE.md`: casa pequena/média se
+aborda pelo **fundador ou diretor**, e aqui ele é **CEO & Executive Producer** da casa que monta as
+equipes. As páginas `/firelight` e `/raised-by-monsters` nomeiam quatro fundadores de estúdios
+**parceiros** (Marc Martín, Yensen Quintero, Berni López, Gaspar Segura), e eles **não** entram
+nesta ficha: são outra pessoa jurídica, sem endereço publicado, e cada um deles seria uma casa nova.
+
+**GANCHO COM A FRASE DA PRÓPRIA CASA, entre aspas, e as três estão no HTML servido.**
+
+1. `/animation`: **"At Nexus Pixel Forge, we produce 3D, 2D, and traditional animation"**, e a mesma
+   frase segue: **"brings together a range of specialties from cinematic direction and design to
+   branding and real-time production"**.
+2. `/raised-by-monsters` (estúdio do grupo): **"an animation studio for film, video games,
+   commercials, and virtual production"**, com **"a state-of-the-art motion capture stage and deep
+   expertise in Unreal Engine as Authorized Service Partners of Epic Games"** e
+   **"from dynamic cinematics to immersive real-time experiences"**.
+3. `/firelight`: os fundadores **"have extensive backgrounds in the entertainment industry, having
+   worked with prestigious companies such as Netflix, Riot Games, Marvel, Sony Pictures, Red Bull,
+   and Blizzard Entertainment"**.
+
+**O gancho mais forte para o Vini é o 2 somado ao 3: cinemática de jogo.** É o encaixe mais direto
+do portfólio dele fora de série de animação, e é a mesma matéria que deu o nome — não é elogio
+genérico colado em cima de um e-mail.
+
+**CASA FORA DOS EUA: SIM** (Madri, Espanha, `Madrid, ES` no próprio rodapé). **A frase fixa de
+realocação ENTRA**, e o negrito de `I want to relocate` vale aqui.
+
+**DEDUPE, e ele foi feito nos quatro lugares.**
+- `pessoas.csv`: **0** (nem `nexuspixelforge`, nem `Nexus Pixel`).
+- `enviados.csv`: **0**.
+- `processados.csv`: aparece **só** na minha própria nota das 16h35, como endereço **não aberto**,
+  com prognóstico alto. Nenhuma carta, nenhum toque.
+- **NA CAIXA** (`mcp__Gmail__search_threads`, consulta
+  `untaled OR capitanarana OR "Capitán Araña" OR nexuspixelforge OR hianimation OR scanmenow OR mrklausstudio`):
+  **`{}`, zero thread**. A casa nunca foi tocada por nenhum caminho.
+
+**RESSALVA HONESTA, e ela é dupla.**
+
+1. **A palavra `character` NÃO EXISTE em nenhuma das seis páginas que eu abri.** A prova de
+   disciplina é indireta: animação 3D + cinemática + captura de movimento + Unreal. Quem quiser
+   personagem literal no site desta casa não vai achar.
+2. **Esta casa é uma COALIÇÃO, e isso corta nos dois sentidos.** O próprio ICEX a descreve como
+   **"a coalition of elite visual effects, animation, pre-viz, cinematics, and virtual production
+   studios"** com **"Spain's largest VFX and animation talent network; over 300 artists"**. Ou seja
+   ela **agencia** equipe mais do que emprega: a carta pode render encaminhamento a estúdio do grupo
+   em vez de vaga direta. E tem mais: **o MESMO Gonzalo Carrión aparece SEGUNDA VEZ no ICEX**, na
+   ficha da `GCE VFX` (`CONTACT Gonzalo Carrión Executive & Business Consultant
+   gonzalo.carrion@gcevfx.com`), que é **consultoria de incentivo fiscal**, não estúdio.
+   **Uma pessoa, dois endereços.** Registrei **só** `gonzalo@nexuspixelforge.com`, pela regra de
+   07/09 de **nunca duas grafias/variantes da mesma pessoa** — `gonzalo.carrion@gcevfx.com` fica
+   **riscado da fila** e não deve receber carta nenhuma.
