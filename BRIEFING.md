@@ -8259,3 +8259,226 @@ esta envelheceu para o lado caro: mandaria a próxima rodada gastar navegador em
 - **A `streamlinestudios` 84 e 106 não foram reabertas para envio**, e agora o argumento contrário
   está inteiro no §2 para quem quiser discordar: o corpo diz *fully remote* e sem veto, e o que as
   derruba é geografia **somada** a requisição fria de 2021 e 2024.
+
+## Jhon A, 20/09 10h15-11h4x UTC (trigésimo sétimo turno, a RODADA DE FORMULÁRIOS) — **DUAS enviadas e as DUAS são de PERSONAGEM**, e as duas só existem porque uma plataforma de ATS inteira estava invisível para a campanha por causa de um endereço errado **no sitemap da própria plataforma**
+
+**Placar: 2 formulários enviados e confirmados, 2 de PERSONAGEM, 0 de ambiente, 0 duplicata
+cometida, 1 duplicata evitada, 0 navegador simultâneo** (`pgrep -c chrome` = 0 antes de cada uma
+das três aberturas; havia **outro agente com um monitor `until pgrep -c chrome` esperando a vez**,
+e por isso o navegador foi usado só onde rendia candidatura e devolvido). DAILY de 20/09 passou de
+`["2026-09-20",0,0,5,0]` para `["2026-09-20",0,0,7,2]`.
+
+As duas: **Hidden Acorn**, *3D Character Artist in Unreal*, Redwood City CA (GoHire 287431) e
+**Hug & Roll Gaming**, *3D Character Artists*, Redwood City CA (GoHire 296565). **As duas casas são
+100% inéditas** — zero ocorrência nos quatro arquivos, garra livre e zero fio no Gmail.
+
+### 1. A VEIA NOVA: `jobs.gohire.io/sitemap.txt` TEM A PLATAFORMA INTEIRA, E O 404 DELE É UM **FALSO ZERO DE PLATAFORMA**
+
+A campanha conhecia o GoHire desde 09/09 como *"família de ATS nova, e ela PASSA"*, mas **só por um
+locatário** (Makeshift Software), que tinha sido achado por agregador. O caminho para a plataforma
+inteira é barato e estava a um `robots.txt` de distância:
+
+```
+jobs.gohire.io/robots.txt   ->  Sitemap: http://jobs.gohire.io/sitemap.txt
+jobs.gohire.io/sitemap.txt  ->  1.682.290 bytes, 20.470 URLs de anúncio de TODAS as casas
+```
+
+(Em `http://` puro ele responde **301**; peça em `https://`.)
+
+**E agora a armadilha, que apaga as 20.470 de uma vez e não dá erro nenhum:** o sitemap publica o
+endereço com o **ID NUMÉRICO** do cliente, e **toda URL nessa forma devolve 404** com a frase
+*"the job you are looking for has been archived"*. Só a forma com o **HASH** do cliente responde.
+Medido nos dois sentidos **na mesma vaga viva** `300872`:
+
+| Forma | Código | Bytes |
+|---|---|---|
+| `makeshift-software-`**`10013422`**`/associate-character-artist-300872/` | **404** | 4.031 |
+| `makeshift-software-`**`hnqmphxc`**`/associate-character-artist-300872/` | **200** | 20.934 |
+
+Quem lê o sitemap e segue as URLs que ele mesmo publica conclui **"20.470 anúncios, todos
+arquivados"** e escreve zero na plataforma inteira. É a família do `const jobsData = []` da Wētā e
+do `size=normal`: número certo, zero falso.
+
+**O CONVERSOR EXISTE, É PÚBLICO E SEM CHAVE**, e foi lido do JavaScript do próprio quadro de busca
+da plataforma (`jobs.gohire.io/assets/js/boardScript.js`, função `openJobClick`) — mesma lição de
+19/09 20h15: **leia o JS da casa antes de abrir navegador**.
+
+```
+POST https://api.gohire.io/getJobId      (multipart, campo jobId=<número>)
+ -> JSON com companyName, jobTitle, jobType, jobCounty, countryName, faixa salarial,
+    daysAgo e applyUrl/careersUrl em BASE64. O applyUrl decodificado traz o HASH.
+    jobId=287431 -> "Hidden Acorn" -> https://jobs.gohire.io/ogTHESQz/287431
+```
+
+**Rendimento honesto da veia, com a conta na mão:** 20.470 URLs, **482** acertos do vocabulário
+largo de arte 3D no slug, e de **personagem exatamente CINCO** — `hidden-acorn` 287431 e
+`hug-and-roll-gaming` 296565 (as duas inéditas e **enviadas hoje**), `lightfold` 298040 (já
+descartada por nível e geografia) e `makeshift` 299993 e 300872. Todo o resto é **falso positivo de
+palavra**: *certified yoga sculpt instructor*, *activity teachers art and craft sculpture*,
+*wetpour surfacing operative*, *principal playable character designer* (design de jogo, e é da
+própria Hitmarker), *associate art director characters concepts lighting and vfx* da NBCUniversal e
+*3d artist interior design renderings*.
+
+### 2. O ACHADO QUE MAIS VALE PARA A CAMPANHA INTEIRA: **O `422` DO GOHIRE É ORÁCULO DE DEDUPE GRÁTIS, NÃO DESTRUTIVO, E PROVA RETROATIVA DE ENTREGA**
+
+A nota de 09/09 dizia, com razão, que *"a tela de enviado do widget do GoHire é desenhada NO
+CLIENTE a partir de um 200 sem campo `error`, então ela não é prova independente"*. Isso deixava sem
+resposta a pergunta que apareceu hoje: **e quando o clique parece ter falhado?**
+
+Foi exatamente o que aconteceu na Hidden Acorn. O `apply_gohire.js` espera **14 segundos fixos**
+depois do clique e lê a tela; **o botão do GoHire fica em spinner mais que isso**, então o script leu
+a página ainda cheia e logou **`NAO CONFIRMADA` numa candidatura que estava em voo**. A captura
+provou: botão laranja com o ícone de carregamento girando.
+
+Reclicar o Submit com os mesmos dados devolveu, **do servidor**:
+
+```
+HTTP 422   api.gohire.io/apply?clientHash=ogTHESQz&jobId=287431
+{ "error": "You have already applied for this job" }
+```
+
+**Duas coisas de uma vez, e as duas resolvem classes de problema:**
+
+1. **A plataforma NÃO cria duplicata, ela RECUSA.** Reenviar no GoHire é seguro.
+2. **O 422 é prova RETROATIVA, do servidor, de que a candidatura anterior entrou** — que é
+   precisamente a prova que a tela do cliente não dava.
+
+> **REGRA QUE FICA:** envio duvidoso no GoHire se resolve **reclicando**, e a resposta diz em qual
+> dos dois mundos você está: `200` com *Application Sent* (entrou agora) ou `422 already applied`
+> (tinha entrado antes). É o oposto da armadilha do BambooHR, onde reclicar não decide nada.
+
+Nasceu `/home/user/apply/gh_submit2.js`, que **espera a RESPOSTA** de `/apply` (`waitForResponse`,
+120 s) em vez do relógio, e imprime status e corpo. Medição pequena de lambuja: o
+`intl-tel-input` do widget nasce em **`iti__gb`** nesta rede, e não em `iti__us` como o
+`BRIEF-JHON` registra; a rede de segurança de digitar `+55` corrige nos dois casos.
+
+### 3. A BUSCA PÚBLICA DO LINKEDIN, SEM LOGIN: **3.140 ANÚNCIOS, 128 CASAS DE PERSONAGEM, ZERO PORTA INÉDITA — E A RECEITA DA ORDEM TINHA UMA ARMADILHA QUE MATA O FILTRO DE PAÍS**
+
+A rota funciona e não pede login:
+
+```
+GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search
+      ?keywords=<termo>&location=<local>&start=<n>
+```
+
+Devolve HTML de cards com `data-entity-urn="urn:li:jobPosting:<id>"`, título, casa, cidade e um
+`<time datetime="YYYY-MM-DD">` com a publicação. **O passo real é 10, não 25** (pedir `start=25`
+salta 15); pare quando vierem menos de 10 cards.
+
+> **ARMADILHA QUE INVALIDA A RECEITA, e ela é silenciosa: somar `f_TPR=r86400` a
+> `location=<país>` faz o LinkedIn IGNORAR o `location`** e devolver um lote genérico dos EUA.
+> Medido: com os dois juntos, 9 termos × 13 locais × 3 páginas renderam **80 anúncios e todos dos
+> EUA**, com *Petco groomer*, *Ulta stylist* e *Costco cake decorator* no meio. Tirando o `f_TPR`, a
+> MESMA consulta em `Canada` devolve Behaviour, EA Sports, 2K Burnaby e NBCUniversal Montréal, e em
+> `France` devolve Asobo, Ubisoft Montpellier e Stim Studio. **Quem confia no filtro de 24 h conclui
+> que não existe vaga de personagem na Europa.**
+
+**O número honesto:** 3.140 anúncios únicos em 15 termos × 38 locais, **206** acertos de palavra de
+disciplina, **128** casas distintas com vaga de personagem, **73** casas ausentes do repositório e
+**as 73 fora do escopo ou da disciplina** (pet grooming, engenharia civil holandesa, PhD de
+modelagem ecológica, modelista automotivo, *Cartier sculpteur*). Das casas do escopo, **toda vaga de
+personagem no Canadá e na Europa já tinha decisão escrita**: Behaviour (hCaptcha do Lever),
+Cloud Chamber (francês), EA Sports (veto escrito de relocação), 31st Union (enviada 19/09),
+Rebellion (recusa de 19/09 15h03), Omeda (enviada 19/09), Blue Zoo (veto no título), Keywords
+Hair Specialist (fila dele), Avalanche `8f7bd580`, Asobo `1ab1d28f`, Frontier, People Can Fly
+`744000149844299`, Skydance Grooming TD `9ad28cab`, Highdive `5097897007`, Stim Studio (lida 19/09,
+é ambiente e prop), Side (Workable, parede de IP), Rodeo FX (DataDome), Netflix e Stellar.
+
+**Este zero é uma boa notícia disfarçada:** ele confirma, com **fonte independente e 3.140
+anúncios**, que a cobertura de personagem em Canadá e Europa está de fato completa — o que até hoje
+era impressão.
+
+**LIMITE MEDIDO, e ele corrige a ordem:** a página pública `/jobs/view/<id>` **não expõe o
+`applyUrl`**. O alvo do *"Apply on company website"* fica atrás de login e o único link de ação no
+HTML é `/signup/cold-join`. Ou seja o LinkedIn serve para **descobrir** casa, título, data e
+**o corpo inteiro do anúncio** — `/jobs-guest/jobs/api/jobPosting/<id>` devolve a descrição completa,
+ótimo para passar a régua de graça —, mas a rota até o ATS tem de ser achada no site da casa.
+**Controle positivo da régua feito nesse corpo:** o anúncio da Zoic acende `must reside`,
+`must be located in` e `candidates must be located`, então a régua lê mesmo o texto vindo do
+LinkedIn e os zeros dela ali valem.
+
+### 4. DUAS DUPLICATAS QUE NÃO SAÍRAM, E O MECANISMO DA PRIMEIRA É NOVO: **O GOHIRE TROCA O TÍTULO E O SLUG MANTENDO O ID**
+
+O LinkedIn anunciava *Senior Character Artist* da Makeshift em Columbus, publicada 04/09. O painel
+registrava *Senior Character Modeler* **299993** **enviada em 07/09**. Pareciam duas vagas. O quadro
+de hoje lista `senior-character-artist-`**`299993`** — **mesmo número, slug e título diferentes**.
+**Dedupe por slug ou por título dava rota livre** e mandaria a segunda candidatura para a requisição
+que já recebeu a primeira.
+
+> **REGRA QUE FICA: no GoHire o dedupe é pelo número final da URL, nunca pelo slug.** É a mesma
+> família da regra do `internal_job_id` do Greenhouse e da vitrine contra o ATS da Disney.
+
+A única de personagem de fato nova da casa é a **Associate Character Artist 300872**, **não
+enviada** por nível (Associate, e ele é Senior com 10+ anos) e porque a casa já recebeu **duas**
+candidaturas da campanha.
+
+### 5. O SITE DO EYELINE NO WORKDAY FOI **RENOMEADO**, E A RECEITA DA CAMPANHA PRODUZIA FALSO ZERO
+
+A receita manda ler o Eyeline em `netflix.wd108` site **`Eyeline_Studios`**, e o registro de 19/09
+20h15 diz *"8 termos × 2 sites = 16 consultas, **zero falha**"*. **Hoje esse site devolve 404 nas
+oito consultas.** Pela regra escrita hoje às 06h15 (*"o código de status do `/wday/cxs` discrimina
+quatro estados e três deles não são zero"*), **404 em site não é quadro vazio, é nome errado.**
+Sondados cinco nomes: `Eyeline_Studios` 404, `EyelineStudios` 404, `Eyeline_Studios_Careers` 404,
+`Netflix_Eyeline` 404 e **`Eyeline` 200**.
+
+Com o nome certo o quadro tem **três** vagas da disciplina e **as três em Hyderabad**, fora do
+escopo por ordem do briefing: `JR01060` Groom Artist, `JR41011` Surfacing/Lookdev Artist e
+`JR41016` Lead Surfacing Artist. **O zero continua zero, mas antes de hoje ele era um zero de leitor
+quebrado com a mesma cara de zero medido.** Corrija a receita: **site do Eyeline = `Eyeline`**.
+
+### 6. OS ZEROS MEDIDOS, COM O NÚMERO DE CADA UM
+
+- **Grupo Disney:** `ronda-disney.sh`, **12 de 12** consultas responderam, 13 ids da disciplina no
+  ar, **zero id novo**.
+- **Pixar** (locatário próprio `pixar.wd501`, **sem filtro**): 200, `total = 3`, e as três fora da
+  disciplina — *On-Call Chef*, *Staff Systems Engineer Data Streaming*, *Senior Research Scientist*.
+- **Netflix** (`netflix.wd108`, site `Netflix`, 8 termos): **10 ids da disciplina no ar e os 10 com
+  decisão** — `JR42568` Character Modeler Vancouver e `JR42577` Character Modeler Sydney (as duas já
+  em `enviados.csv`), `JR41751` Character Modeling Supervisor Sydney (enviada **duas** vezes, 31/08 e
+  08/09, duplicata já registrada), `JR39105` e `JR41810` Head of CFX (fora), `JR41777` Character
+  Designer Ink (2D, fora), `JR39273`/`JR41749` Environment Surfacing Supervisor e
+  `JR39446`/`JR41734` Environment Modeling Supervisor (ambiente, último lugar pela regra de 10/09).
+- **Zoic Studios, Vancouver, 3D Senior Character Modeler:** veto escrito **duas vezes** —
+  *"All applicants **must reside in British Columbia**"* e *"Candidates **MUST be located in British
+  Columbia**. This is a remote (work from home) position. Zoic does not cover relocation costs"*.
+  Régua: dez acertos em 3.409 caracteres. **A casa nunca tinha recebido candidatura por FORMULÁRIO**,
+  só duas cartas frias (05/09 e 07/09), então valia a leitura.
+- **Quadros de arte e animação e agregadores da ordem, 18 endereços, ZERO vaga lida.** Parede de
+  **Cloudflare** (403 com *"Just a moment..."*): `awn.com/jobs` e `/jobs/search`, `coroflot.com`,
+  `creativepool.com`, `productionhub.com`, `mandy.com`, `womeninanimation.org` (redireciona para
+  `wearewia.org`), `jooble.org`, `indeed.com` (403 com 27.775 bytes), `adzuna.ca` e `adzuna.co.uk`.
+  **403 simples de servidor, não Cloudflare:** `vesglobal.org` em três rotas, 103 bytes.
+  **NÃO EXISTEM, e a ordem e o repositório descrevem errado:** `animationguild.org/job-board` é 404
+  e `animationguild.org/jobs/` é um **artigo de blog de 01/04/2015** de Steve Hulett com conselhos
+  de networking, zero vaga; `animationmagazine.net/jobs/` e `/category/jobs/` são 404 **com 316 KB
+  de página de erro**, o que engana quem olha só o tamanho. **200 mas casca de SPA:**
+  `therookies.co/jobs` (redireciona para `/blog/jobs/`), `dribbble.com/jobs`, `krop.com`.
+  **Cartoon Brew:** 200 com 209 KB e o texto útil é *"This is awkward"*, zero link de vaga.
+  **Nenhum destes zeros é zero de estoque; são zeros de ACESSO.**
+
+### 7. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Não abri navegador nos 403 de Cloudflare.** São candidatos legítimos a navegador de verdade, e
+  ficaram de fora porque o navegador foi gasto onde rendeu candidatura, com outro agente na fila.
+- **Não toquei nas três dívidas nomeadas:** `careers.wetafx.co.nz`, **Blue Zoo** (Eploy pagina por
+  POST de viewstate, 6 de 18 vagas sem leitura) e `vfxjobs.uk`. **São as melhores dívidas da próxima
+  rodada**, e as três precisam de navegador.
+- **A FILA DO VINI não recebeu item novo, e o número é ZERO.** Não porque ninguém olhou: é que a
+  única família trabalhada (GoHire) **não tem captcha nenhum**, então não houve parede de desafio
+  para mandar à mão.
+- **O sitemap do GoHire foi minerado por PALAVRA no slug, não anúncio por anúncio.** Resolver as
+  20.470 pelo `getJobId` custaria 20.470 requisições e não foi feito; se a próxima quiser fechar a
+  plataforma com prova, o custo está dito.
+- **Ficou sem árbitro escrito a contradição de pretensão salarial** que as duas faixas absurdas do
+  GoHire expuseram (USD 2.000–5.000 **por mês** na Hidden Acorn, USD 15–40 **por hora** na Hug &
+  Roll): a regra de 04/09 manda *pedir a base da faixa publicada*, e a mesma regra proíbe *pedir
+  abaixo do piso legal da ocupação*, que é onde a base das duas cai. **Os dois formulários não têm
+  campo de pretensão**, então nada foi declarado e nada saiu errado — mas isso vai reaparecer.
+- **Ressalva honesta sobre as duas enviadas, e ela é forte:** Hidden Acorn e Hug & Roll Gaming são
+  as duas de **Redwood City**, as duas se apresentam como *"a new game studio based in the San
+  Francisco Bay Area, building our first title: a competitive real-time strategy game"*, as duas com
+  o mesmo par de vagas (personagem + UI/UX) e as duas em GoHire. **Podem ser o mesmo time sob dois
+  nomes.** São contas, hashes e requisições diferentes, então não é duplicata de requisição, mas se
+  for a mesma casa as duas cartas chegam na mesma caixa. E a da Hidden Acorn é requisição de
+  **10/05/2026** (quatro meses) cujo anúncio **também pede CV por e-mail**, ou seja o formulário
+  pode não ser a rota que eles leem.
