@@ -15997,3 +15997,75 @@ realocação ENTRA**, e o negrito de `I want to relocate` vale aqui.
    **Uma pessoa, dois endereços.** Registrei **só** `gonzalo@nexuspixelforge.com`, pela regra de
    07/09 de **nunca duas grafias/variantes da mesma pessoa** — `gonzalo.carrion@gcevfx.com` fica
    **riscado da fila** e não deve receber carta nenhuma.
+
+---
+
+### 2) **Tania Palma** — Line Producer, **Capitán Araña S.L.** (Madri, Espanha) — `tania.capitanarana@gmail.com` — **PUBLICADO no catálogo oficial, confiança ALTA, e a MELHOR PROVA DE PERSONAGEM DA RODADA**
+
+**E-MAIL E CONFIANÇA.** `tania.capitanarana@gmail.com`, **ALTA por ser literal**, e o motivo de ser
+literal e não montado é o bloco impresso da ficha da casa no PDF do ICEX
+`Who is Who — Animation from Spain 2026` (200, 20.849.262 bytes, re-baixado nesta rodada):
+**`CONTACT Tania Palma Line Producer tania.capitanarana@gmail.com`**, com
+**`TECHNIQUE 3D`**, **`PORTFOLIO OZZY / SUPERKLAUS / NORBERT`**, `FORMAT FEATURE FILM / 85'`,
+`STATUS PRE-PRODUCTION` e o rótulo **`OUTSOURCING / WORK FOR HIRE`**.
+**Nada foi montado**, e repare que o endereço **não é do domínio da casa** — é um Gmail com o nome
+da empresa no local-part. Exatamente por isso ele **não poderia** ter sido deduzido por padrão:
+qualquer montagem sobre `@capitanarana.com` teria batido na porta errada. É o mesmo mecanismo da
+Stunlock registrado no `BRIEF-JOE.md` (site `stunlock.com`, e-mail `@stunlockstudios.com`).
+
+**URL EXATA ABERTA NESTA RODADA**, e o site é a segunda fonte, a que prova a disciplina:
+`https://capitanarana.com/` **200, 83.318 bytes** · `https://www.capitanarana.com/sitemap.xml`
+**200, 8.341 bytes** (17 URLs) · `https://www.capitanarana.com/en/ozzy` **200, 80.312 bytes** ·
+`https://www.capitanarana.com/en/norbert` **200, 76.619 bytes**.
+
+**POR QUE ESSA PESSOA E NÃO OUTRA DA CASA.** O site publica **um único** endereço,
+`capitan@capitanarana.com`, que é **caixa da casa e não de pessoa**, e **não publica quadro de
+equipe** — o `sitemap.xml` inteiro tem 17 URLs e nenhuma é `/equipo`, `/team` ou `/about`. As
+pessoas nomeadas nas páginas de filme são **crédito de produção terceirizada** (diretor, produtor
+executivo, diretor de arte, diretor de animação de cada longa), **sem endereço nenhum**, e associar
+um deles a um e-mail seria inferência de posição, que é o erro que eu proibi às 16h35. Sobra a
+**única** pessoa que a casa pareou ela mesma com um endereço, no catálogo oficial: **Tania Palma,
+Line Producer**. E a cadeira não é ruim: em longa de animação em **pré-produção**, quem monta
+cronograma e contrata equipe é a produção de linha.
+
+**GANCHO COM A FRASE DA PRÓPRIA CASA, entre aspas, e as duas estão no HTML servido por `curl`.**
+
+- `https://www.capitanarana.com/en/ozzy` abre com o rótulo literal **"OZZY  3D Animation"** e a
+  sinopse **"Ozzy will have to avoid danger and find strength in his new friends, Chester, Fronky
+  and Doc to escape the prison and return home safely"**, e — o que faz a diferença para uma carta
+  de artista de personagem — a ficha técnica da própria casa credita
+  **"Art director: Esteban Martín · Character design: Oscar Jiménez"**.
+  **É a única casa da rodada inteira que escreve a palavra `Character` numa função de crédito.**
+- `https://www.capitanarana.com/en/norbert`: **"NORBERT  3D Animation"**, com
+  **"Accompanied by his bizarre companions, he will share adventures, fun and dangers in an attempt
+  to save Colorlandia"**.
+
+Três longas 3D de personagem **entregues ou em produção** (*Ozzy*, distribuído pela Buena Vista
+International, com participação de Atresmedia, Movistar+ e **Disney**; *SuperKlaus*; *Norbert*,
+distribuído por **The Walt Disney Company**) é matéria real e verificável para a frase do "por que
+você" — e ela veio da mesma página que deu o nome, não de bajulação.
+
+**CASA FORA DOS EUA: SIM** (Calle Toledo 120, Madri). **A frase fixa de realocação ENTRA.**
+
+**DEDUPE, nos quatro lugares.**
+- `pessoas.csv`: **0** para `capitanarana` e **0** para `Capitán Araña`.
+- `enviados.csv`: **0**.
+- `processados.csv` e `PESSOAS-SEM-CARTA.md`: só a minha nota das 16h35, que listava a casa como
+  **"a uma frase da ficha"** e dizia textualmente *"eu NÃO ABRI O DOMÍNIO"*. **Agora abri.**
+- **NA CAIXA**: `mcp__Gmail__search_threads` com
+  `untaled OR capitanarana OR "Capitán Araña" OR nexuspixelforge OR hianimation OR scanmenow OR mrklausstudio`
+  devolveu **`{}`** — zero thread, nenhum contato anterior por caminho nenhum.
+
+**RESSALVA HONESTA, e são três, a primeira é a que mais pesa.**
+
+1. **É Gmail, não domínio corporativo.** Endereço pessoal de trabalho publicado num catálogo
+   oficial vale e é literal, mas não tem a durabilidade de uma caixa `@empresa`: se ela sair da
+   casa, o endereço continua vivo e a carta vai para uma pessoa que não decide mais nada ali.
+2. **`Line Producer` é cadeira de cronograma e orçamento, não de portfólio.** Ela pode encaminhar,
+   e o fecho fixo da campanha ("*if someone else there is the right person for this, just point me*")
+   é feito exatamente para isso — mas ela não é quem olha um reel de personagem.
+3. **A casa é produtora, e boa parte do catálogo dela é LIVE ACTION.** A home destaca *"UN HIJO"*,
+   com atores, e os longas de animação saem **em coprodução** (*Ozzy*: Arcadia Motion Pictures,
+   Pachacamac AIE, BD Animation; *Norbert*: Aquí y Allí Films, Vista Sur). Ou seja a mão que
+   modela personagem costuma estar no estúdio parceiro, não aqui. O que mantém a ficha de pé é o
+   rótulo `OUTSOURCING / WORK FOR HIRE` que o próprio ICEX carimba na ficha dela.
