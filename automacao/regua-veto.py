@@ -35,6 +35,21 @@ TERMOS = [
  'local candidates', 'locally based', 'permanent resident', 'pr status',
  'open to canadian', 'canadian based', 'uk based', 'us based', 'eu based',
  'only accepting applications from',
+ # --- 20/09 00h50 (Jhon A, 37o turno): A TERCEIRA RECORRENCIA DA MESMA CEGUEIRA. A regua
+ # ja tinha sido consertada pela Snowprint (16/09) e pela Stirling (19/09), e mesmo assim
+ # devolveu UM UNICO acerto no anuncio 254 da Crafty Apes ("CG Artist (Assets) Mid/Senior -
+ # London"), e esse acerto era 'proficiency in', vindo de "Expert proficiency in
+ # industry-standard software" - frase de REQUISITO TECNICO, nao de veto. A frase que
+ # restringe de verdade esta na segunda linha do anuncio e a regua nao a conhecia:
+ #     "Contract - 100% Remote within the UK"
+ # A familia do erro e sempre a mesma: a regua sabe procurar "based in <pais>" e nao sabe
+ # procurar "<modalidade> within <pais>". Como a campanha caca muito cargo REMOTO, e
+ # justamente em vaga remota que essa forma aparece, o buraco era do tamanho da veia.
+ 'within the uk', 'within the us', 'within the usa', 'within canada', 'within the eu',
+ 'within the uk only', 'remote within', 'remote in the uk', 'remote in the us',
+ 'remote in canada', 'anywhere in the uk', 'anywhere in the us', 'anywhere in canada',
+ 'work from the uk', 'work from canada', 'located within', 'reside within',
+ 'authorized to work in', 'authorised to work in', 'restricted to candidates',
 ]
 
 def texto(url):
