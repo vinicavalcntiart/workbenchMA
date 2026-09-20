@@ -16219,3 +16219,41 @@ que esta rodada produziu, e ele é criatura por criatura: panda, dragão, vampir
    *The Heineken Kidnapping*, *Black Butterflies*), e a palavra `character` aparece **uma única
    vez** em 22.247 caracteres de texto. A prova de disciplina é o rótulo `3D ANIMATION / FEATURE
    FILM` repetido em três fichas de filme, não um vocabulário de departamento de personagem.
+
+---
+
+### FECHAMENTO DA RODADA DAS 18h35 — **QUATRO FICHAS, AS QUATRO COM ENDEREÇO PUBLICADO E CONFIANÇA ALTA, ZERO MONTADO**
+
+Três da Espanha, pela veia (a) do ICEX, e **uma da Holanda, pela veia (c)** — que é o terceiro país
+da ordem geográfica do Vini e a **melhor ficha do dia**.
+
+**O DEDUPE QUE PAGA A RODADA, e ele é um erro meu de ordem.** `tomavision.net` era a melhor casa da
+lista do ICEX: 70 a 100 artistas, *Space Jam: A New Legacy*, *Merry Little Batman*, *The Second Best
+Hospital in the Galaxy*, *The Day The Earth Blew Up*; a `/the-studio/` publica
+**"We have teams for all departments: Storyboard, Animatics, Concept, Background, Visual Development,
+Layout, Modeling, Texturing, Matte Painting, Shading, Rigs… Software: Photoshop / Toon Boom Harmony /
+Maya"** e a `/the-family/` diz **"To be able to develop such a cute character as Hanna"**. E o alvo
+que o ICEX dá é **Carmen Marro, `Talent Coordinator & Business Operations`** — o melhor cargo de
+toda a lista, porque é a cadeira que recruta. **A casa já está no teto de duas desde 07/09**: carta
+de 02/09 em `hola@tomavision.net`, lembrete de 07/09 na thread `1a0623ccc0bfb0d5`, e a linha da
+Carmen **já existe** em `pessoas.csv` com rascunho `r9005577539287733486`.
+**Eu abri cinco páginas dela antes de descobrir.** A regra que fica é chata e é minha:
+**o dedupe vem ANTES do GET, não depois.**
+
+**OS ZEROS DA VEIA (b), com o número de cada um.** `screenaustralia.gov.au` expõe um tipo de post
+`contact` em **doze** sitemaps, o primeiro com **1.001 URLs** de pessoa — e a página de pessoa é uma
+**casca**: `/contact/emma-greenhill/` são **170.686 bytes** de navegação com **zero e-mail** de
+pessoa. `pisf.pl` entregou a **Production Guide** em PDF (**6.397.276 bytes**, 28 páginas, **280
+e-mails**), mas as colunas literais são `COMPANY WEBSITE CONTACT EMAIL CONTACT TELEPHONE`:
+**não existe coluna de nome**, e o arquivo é de 2021. `NewPolishShorts_2025.pdf` (**18.141.727
+bytes**, 203 páginas) tem **zero** e-mail. `ica-ip.pt` tem **18.920 URLs** e o único catálogo é de
+**obra**, não de empresa. **O padrão do ICEX não se repete em agência pública de cinema:** feira
+publica pessoa, agência publica obra.
+
+**OS ZEROS DA VEIA (c).** `digibc.org` responde **403** em três rotas e `animvfxbc.ca` **403/404** —
+**Vancouver, que é o primeiro da ordem do Vini, ficou sem porta nova nesta rodada**, e as duas são
+candidatas legítimas a navegador de verdade. `satu.fi` **000** (CONNECT tunnel 502),
+`animatieproducenten.nl` **000**. `filmtvp.se/medlemmar/` abre com **102 membros e zero e-mail**, e
+a própria página explica por quê: **"OBS! För att komma i kontakt med produktionsbolagen nedan,
+vänligen gå in på respektive produktionsbolags hemsidan för kontaktinformation"** — a associação
+sueca **decidiu** não publicar contato.
