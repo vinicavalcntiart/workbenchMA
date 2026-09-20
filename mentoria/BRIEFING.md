@@ -95,7 +95,22 @@ Quando a mensagem do aluno for específica (pergunta de preço, de nível, de so
 horário), responder a pergunta primeiro, no primeiro parágrafo, e só depois o resto do
 modelo, cortando o que não interessa.
 
+## Modelo aprovado para compra de curso (20/09, rascunho para Sol Valvoi)
+Chega aviso da Hotmart ("Congratulations! You have just sold a copy of the product ...") com nome
+e e-mail do comprador. Rascunho novo para o comprador, curto: agradecer, "Vini Cavalcanti here",
+convite do Discord, "any questions, just reply". Assunto: `Thank you for getting {{Course}}`.
+
+```html
+<p>Hi {{Name}} ☺️</p>
+<p>Vini Cavalcanti here. Thank you for getting <b>{{Course}}</b>! I hope you enjoy the course.</p>
+<p>You are welcome to join the school's Discord. It is free, and it is where students share their work and get feedback:<br>
+👉 <a href="https://discord.gg/MuEwrCS46r">Join the Discord</a></p>
+<p>If you have any questions along the way, just reply to this email. I am here to help ✨</p>
+```
+(mesma assinatura e mesmo `div` de estilo do modelo da mentoria)
+
 ## Registro de contatos
 | Data | Nome | E-mail | Mensagem | Estado |
 |---|---|---|---|---|
 | 11/09/2026 | Shreya Sateesh | shreyanimates@gmail.com | "I wanted to inquire about the mentorship program." | Rascunho pronto no Gmail (draft `r-393674080718726483`), aguardando o Vini enviar |
+| 20/09/2026 | Sol Valvoi | sol.valvoi@icloud.com | Comprou Intro to ZBrush: Mushroom (Hotmart HP3645967361) | Rascunho de agradecimento pronto no Gmail (draft `r4677622785483422638`), aguardando o Vini enviar |
