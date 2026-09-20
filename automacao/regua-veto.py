@@ -50,6 +50,22 @@ TERMOS = [
  'remote in canada', 'anywhere in the uk', 'anywhere in the us', 'anywhere in canada',
  'work from the uk', 'work from canada', 'located within', 'reside within',
  'authorized to work in', 'authorised to work in', 'restricted to candidates',
+ # 20/09 08h15 - A FORMA "<REGIAO> ONLY", QUE COSTUMA VIR ENTRE PARENTESES E NAO CASAVA
+ # COM NADA. Medida no anuncio Senior Character LookDev Artist da Novaquark (Paris, WTTJ).
+ # A linha que restringe e a ultima do bloco Key information:
+ #     "Location: Full remote possible (Europe only)"
+ # A regua devolveu UM UNICO acerto, 'francais', e ele vinha do SELETOR DE IDIOMA do
+ # proprio Welcome to the Jungle, ou seja do cromo do site e nao do anuncio - exatamente o
+ # padrao do acerto unico de frase de beneficio que o registro de 19/09 20h15 manda
+ # desconfiar. Os termos de regiao que existiam eram todos da forma 'within the <pais>' e
+ # 'based in <pais>'; a forma POSPOSITIVA '<regiao> only' nao estava em nenhum. Ela e
+ # comum justamente em vaga REMOTA de contrato, que e onde a campanha mais procura.
+ 'europe only', 'europe-only', 'eu only', 'eea only', 'emea only', 'uk only',
+ 'us only', 'usa only', 'canada only', 'ireland only', 'germany only', 'france only',
+ 'residents only', 'citizens only', 'nationals only', 'eu residents', 'eu citizens only',
+ 'must reside in', 'must live in', 'must be located in', 'must be based out of',
+ 'based in europe', 'within europe', 'anywhere in europe', 'remote in europe',
+ 'remote within europe', 'open to candidates in', 'candidates must be located',
 ]
 
 def texto(url):
