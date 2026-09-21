@@ -8544,3 +8544,79 @@ data de nascimento nem link de Meet.
 
 **12. Resposta ao Vini em PT-BR**, curta, humana, sem enfeite, ☺️ só quando o dia merece. O que ele
 precisa é do placar, do que travou com a causa, e do que muda na próxima.
+
+## Jhon A, 21/09 03h00-03h2x UTC (RODADA DE FORMULÁRIO) — **uma enviada, de PERSONAGEM, e uma FAMÍLIA DE ATS INTEIRA mapeada por curl: o Flatchr tem oráculo de locatário público e a candidatura sai sem navegador**
+
+**Placar: 1 formulário enviado e confirmado por DUAS provas de servidor independentes, 1 de personagem, 0 de ambiente, 0 duplicata cometida, 0 navegador aberto** (`pgrep -c chrome` = 0 no começo e nenhuma abertura: a rodada inteira, inclusive o envio, saiu por `curl` e `requests`). DAILY de 21/09 passou de `["2026-09-21",0,0,3,2]` para `["2026-09-21",0,0,4,3]`.
+
+A enviada: **HARI / Studio HARI**, Paris 11e, **candidature spontanée** do Flatchr (`vacancy_id 424047`, slug `vq5r6pyaexgpammv-candidature-spontanee`). Casa 100% inédita: garra `livre`, zero ocorrência de `studiohari`/`hari-studios`/`haristudios` nos três arquivos e **zero fio no Gmail antes do envio**.
+
+### 1. A PROVA, e ela é dupla e do servidor
+
+```
+POST careers.flatchr.io/vacancy/vq5r6pyaexgpammv-candidature-spontanee  ->  HTTP 200
+Gmail 03h05m52s, de thread-gj29nxl@mail.flatchr.io:
+  "Merci pour votre candidature chez Hari Studios !"
+  "Nous avons bien reçu votre candidature pour le poste de Candidature spontanée."
+```
+
+O 200 sozinho **não bastaria**, e isso fica escrito: o corpo dele é o objeto da **vaga**, não um id de candidato. Quem fecha o caso é o recibo na caixa. O que o 200 prova é o lado do JS: o próprio quadro só navega para `/apply/success` quando `status===200` e manda para `/apply/error` em qualquer outra coisa.
+
+### 2. POR QUE ESTA PORTA VALE: banco de talentos **com departamento de personagem declarado pela casa**
+
+O formulário da espontânea tem campo **obrigatório** `Spécialités` (tipo `tag`), e as opções que a própria HARI publica incluem **Character Modeling, Texturing, Look Dev, Visual Development, Hair, Cloth e Rig**. Marcadas as quatro que ele sustenta. Gancho colado da página aberta e conferida por mim: *"Vous rejoignez un studio 3D de 200 passionnés, artistes et techniciens, qui place la narration au cœur du réacteur. Chaque personnage, chaque épisode, chaque plan est un défi créatif"*. É o estúdio do Grizzy & les Lemmings (Grizzyverse).
+
+### 3. A FAMÍLIA FLATCHR, VARRIDA PELA PRIMEIRA VEZ — as rotas, todas públicas e sem chave, lidas do JS do próprio quadro
+
+O Flatchr aparecia **4 vezes no repositório, todas incidentais** (The Tiny Digital Factory, censo da Guilde du jeu vidéo du Québec, 17/09). Hoje ficou aberto, e o caminho todo saiu de `_next/static/chunks/3022`, que é mais uma vez a lição de 19/09: **leia o JS da casa antes de abrir navegador**.
+
+| O que | Rota |
+|---|---|
+| **ORÁCULO DE LOCATÁRIO** | `GET api.flatchr.io/company/<slug>/slug` → **200** = existe, **400** com a frase literal *"Company `<slug>` does not exist"* = não existe |
+| Vaga por slug, sem o locatário | `GET api.flatchr.io/vacancy/<vacancySlug>?lng=fr&fields=company,questions,address` |
+| Site de carreira | `GET api.flatchr.io/websites/<slug>/<locale>` e `/company/<slug>/websites/infos` |
+| O quadro | `careers.flatchr.io/fr/company/<slug>/` → `__NEXT_DATA__` com `props.data.items[].vacancy` e `props.data.spontaneousV`, **com as perguntas do formulário E as opções**. `<slug>.flatchr.io` é alias do mesmo app |
+| **ENVIO** | `POST careers.flatchr.io/vacancy/<vacancySlug>`, multipart `data=<json>` + `file=<CV>` |
+
+**O `data` é um JSON**: `firstname`, `lastname`, `email`, `phone`, `comment` (a motivação), `consent`, `urls` como **array de strings** (o cliente achata o objeto `{linkedin,github,twitter,other}` antes de enviar), `json:true` e `answers:[{question:<id>,value:"a;b;c"}]`. **Candidatura inteira por curl.**
+
+### 4. DUAS ARMADILHAS MEDIDAS, e a primeira perde a resposta em silêncio
+
+**(a) A MESMA pergunta existe com ids DIFERENTES na mesma casa.** Na HARI, `Spécialités` é **303545** na vaga de TI e **183880** na candidatura espontânea. A ordem que me chegou trazia o 303545, que é o da vaga errada. Responder com o id do irmão não dá erro: a resposta simplesmente não pertence àquele formulário. **Regra: o id de pergunta se lê do objeto `spontaneousV` (ou do `items[]` daquela vaga), nunca do outro.**
+
+**(b) Campo `tag` é CAIXA DE MARCAR MÚLTIPLA, valor unido por `;` — e ele é `creatable`.** O JSON que o servidor devolveu no 200 traz, em cada tag desta casa, `"multiple":true,"creatable":true`. Isso resolveu um problema de **honestidade**, não de técnica: o campo **obrigatório** `École` só oferece escolas **francesas** (MOPA, ArtFX, Rubika, Gobelins, ESMA, Emile Cohl, École des Nouvelles Images, Parallel 14, Georges Méliès) e ele não frequentou nenhuma. Nenhuma foi marcada. Foi respondida **a verdade em texto livre**, `Aucune de ces écoles (formation au Brésil)`, e a motivação repete isso por escrito. Pela regra 4 do contrato, era isso ou nada — e a plataforma aceitou.
+
+### 5. O NÚMERO DO MAPEAMENTO, medido e não estimado
+
+**4.433 slugs candidatos** (gerados de 1.182 nomes de casa de animação, jogo e VFX francófona: 988 tirados das linhas francófonas de `alvos.csv` e das 41 planilhas de `automacao/`, mais 194 de uma lista curada com Xilam, Mediawan, Cube, Fortiche, Illumination Mac Guff e TeamTO), mais uma primeira passada de 1.830. Resultado pelo oráculo:
+
+```
+LOCATÁRIOS CONFIRMADOS (200) ....... 17
+400 "does not exist" ............... 4.417
+FALHA DE REDE / NÃO CONFERIDO ...... 0
+```
+
+**Os 17:** `haristudios` (Hari Studios), `asobostudio` (Asobo), `animaj` (ANIMAJ), `zeiltproductions` (Zeilt, Luxemburgo), `gameloft`, `amplitudestudios`, `novaquark`, `ohbibi`, `thetinydigitalfactory`, `stim` (Stim Studio), `fost`, `stardust` (QA de jogo), `dream` (= Milan, editora, fora), `latelier` (L'Atelier 42), `8sec`, `gon` (G-ON) e `triskell`. Lista com o estado de cada quadro em **`automacao/censo-flatchr-2109.csv`**.
+
+**E o número que o Vini vai querer:** **quadros que responderam com conteúdo = 3 de 17** (`haristudios`, `amplitudestudios`, `thetinydigitalfactory`). **Vagas publicadas somadas nesses 3 = 1** (o *Technicien.ne IT* da HARI). **Vagas da disciplina = ZERO.** **Candidatura espontânea da disciplina = UMA, a da HARI, e ela foi enviada hoje.**
+
+**As candidatas óbvias da ordem NÃO são locatárias, e isso está medido:** `xilam`, `mediawan`, `cubecreative`, `fortiche`, `teamto` e `macguff` devolveram todas **400 "does not exist"**, junto com Ubisoft, Dontnod, Quantic Dream, Arkane, Behaviour, Eidos, Rodeo FX, Mikros e todas as variantes de slug geradas para elas.
+
+**Cinco locatárias são SEGUNDA PORTA de casa que a campanha já conhece:** Asobo (já tem decisão escrita em `1ab1d28f`), ANIMAJ (`ans_animaj.json`), Stim (lida 19/09, ambiente e prop), FOST (`ans_fost.json`) e Zeilt (`inspect_zeilt2.json`). **Dedupe dessas é pelo id da requisição, nunca pela plataforma.**
+
+### 6. OS 14 QUADROS QUE NÃO ABREM SÃO **NÃO CONFERIDOS QUANTO A VAGA**, E NÃO ZERO — com a causa medida
+
+O locatário existe (200 no oráculo), **o registro de site de carreira existe e está publicado** (`api.flatchr.io/websites/<slug>/fr` responde 200 com `"published":true` para `zeiltproductions`, `animaj` e `gameloft`), e mesmo assim `careers.flatchr.io/fr/company/<slug>/` devolve **404 de verdade** (`page: "/404-not-found"`) — em `fr`, em `en`, sem locale, sem barra final e também em `<slug>.flatchr.io`, conferido **três vezes seguidas** na Zeilt. E a rota que listaria as vagas desses locatários, `api.flatchr.io/company/<slug>/vacancies`, **existe e devolve 401 Unauthorized**. Ou seja a vaga desses 14 só é alcançável por link direto `careers.flatchr.io/vacancy/<slug>` publicado em outro lugar.
+
+**Controle que explica um deles:** a única vaga conhecida da Zeilt no Flatchr, `xzbpjpoko3py51y0-graphiste-rendering-lighting`, está com `status: 0` e `end_date` de **2021** pela API — fechada. **Contra-controle que impede a conclusão fácil:** a Amplitude responde **200 com zero vaga**, então 404 de quadro **não** é sinônimo de "casa sem vaga".
+
+**Tentativa de resolver os 14 pelo site da própria casa, feita e FALHADA, com o número:** 16 casas, **33 URLs** de home e de `/careers`, `/jobs` e `/recrutement` abertas por curl, e **zero** link para `careers.flatchr.io` no HTML. **Esse zero é FRACO** e não fecha nada: a maioria dessas páginas é SPA em JavaScript. É dívida de navegador.
+
+### 7. O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Não abri navegador, nem uma vez.** Os 14 quadros de 404 e os 33 endereços de SPA das casas locatárias são exatamente o que um navegador resolveria, e ficaram de fora porque a candidatura do dia não precisou dele. **É a melhor dívida desta veia.**
+- **Não fechei o Flatchr como plataforma.** O oráculo é por slug e **não existe listagem pública de locatários**: `www.flatchr.io/sitemap.xml` tem 5,7 MB e **733 URLs, todas de marketing**, zero locatário; `careers.flatchr.io/sitemap.xml` e `/sitemap.txt` devolvem **301**; `robots.txt` só bloqueia bots nomeados. Então **17 é o piso medido, não o total**: qualquer casa cujo slug meu dicionário não gerou continua invisível. O custo de subir o piso está dito: mais nomes no dicionário, uma requisição por slug.
+- **Não testei a rota de envio com resposta de erro.** O único POST da rodada deu 200 de primeira, então **não sei o que o servidor devolve quando falta um campo obrigatório**, e por isso não posso afirmar que o Flatchr valida `answers` do lado dele. Não vou reenviar para descobrir.
+- **Não sei se o `École` respondido em texto livre passa o filtro interno deles.** A plataforma aceitou (`creatable:true`), mas se a triagem da HARI procurar egresso de escola francesa, esta candidatura cai lá. **É a ressalva que mais enfraquece a ficha de hoje.**
+- **A FILA DO VINI não recebeu item novo, e o número é ZERO** — o Flatchr **não tem captcha nenhum** no caminho de candidatura, então não houve parede para mandar à mão. E nada de Disney, Netflix ou Vancouver apareceu.
+- **Não toquei em `automacao/pessoas.csv` nem em `automacao/PESSOAS-SEM-CARTA.md`**, por ordem. Ambiente e props ficaram fora do escopo, por ordem.
