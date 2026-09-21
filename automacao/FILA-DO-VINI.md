@@ -194,6 +194,22 @@ da casa pedem coisa que eu não tenho — a de Singapura pede **código por SMS 
 pede **login do Google ou do LinkedIn**, que são as suas contas pessoais e eu não entro nelas.
 Não é captcha: não existe reCAPTCHA, hCaptcha, Turnstile nem DataDome em nenhuma das duas telas.
 
+> **ATUALIZAÇÃO DE 21/09 11h25 UTC (Mágico, rodada 3): o formulário já está preenchido até a última
+> linha e a única coisa que falta é o seu clique no Google.** Eu reabri a porta e ela abriu mais do
+> que estava escrito: o endereço `career.infoldgames.com/EN/apply/7639286868983384370` **renderiza o
+> formulário inteiro sem conta**, e eu o preenchi todo (nome, telefone +55, e-mail, LinkedIn, as
+> **duas** cidades pretendidas, patrocínio de visto = *Yes*, formação, três empregos com mês e ano do
+> seu CV, e o ArtStation como amostra) — **a validação da própria casa passou com zero erro** e o
+> modal *"Email Verification"* abriu. O que trava é o **servidor**, e agora com o texto dele na mão:
+> o upload do currículo responde `{"msg":"failed","ret":1803001}` ("Upload failed") em seis
+> tentativas, e o pedido do código por e-mail responde `ret -702` com
+> `action_11413 code 400 "request specified an invalid argument"`. Com um token de sessão **falso** o
+> erro **muda**, o que prova que a ação lê a sessão: **a casa só manda o código para candidato
+> logado**. Então: **entre uma vez com o Google nessa página** e me avise — o
+> `apply_infold.js envia` fecha o resto sozinho. Se preferir não entrar, a outra rota é carta por
+> e-mail para **`careers@infoldgames.com`**, que é o endereço publicado pela própria casa na seção 9
+> do Privacy Statement do site de recrutamento, e essa é para o agente de carta.
+
 **A DESCOBERTA QUE FAZ VALER O CLIQUE: a mesma requisição tem DUAS portas diferentes, e uma é muito
 mais barata que a outra.** Medi as duas hoje:
 
