@@ -8663,3 +8663,71 @@ ordem do Vini de 19/09: naquele quadro só os dez primeiros candidatos têm chan
 **A lição de método, e ela vale para qualquer automação nova:** caminho de aviso que nunca foi
 exercitado é caminho que não existe. Quando o caso raro é justamente o caso que importa, ele tem de
 ser testado de propósito, com disparo à mão, antes de ser necessário.
+
+## Jhon A, 21/09 04h2x-04h4x UTC (RODADA DE FORMULÁRIOS) — **os 14 quadros de 404 do Flatchr ficaram RESOLVIDOS, e não por navegador: a causa é `status=0` da CONTA do locatário, lido numa rota pública. As candidaturas espontâneas dos 17 eram UMA, e ela já tinha sido enviada às 03h05**
+
+**Placar: 0 formulário enviado nesta parte, 0 duplicata cometida, 0 navegador aberto** (`pgrep -c chrome` = 0 no começo e nenhuma abertura: a veia inteira saiu por `curl`). A ordem pedia 16 candidaturas espontâneas e o número real, medido, é **ZERO restantes** — não por falha de acesso, mas porque **elas não existem**.
+
+### 1. O DISCRIMINADOR, e ele explica os 14 de uma vez
+
+A rota `GET api.flatchr.io/company/<slug>/slug` é pública, sem chave, e devolve o objeto da empresa **com o campo `status`**. Medido nos 17:
+
+```
+status=1 (conta ATIVA) ....... 3   haristudios, amplitudestudios, thetinydigitalfactory
+status=0 (DESATIVADA) ........ 14  todas as outras
+```
+
+**São exatamente os 3 quadros que abrem e exatamente os 14 que não abrem.** Correlação perfeita, n=17, zero exceção. E a resposta dos 14 **não é 404, é `307` com `location: /fr/404-not-found`** — redirecionamento do servidor, decidido antes de qualquer JavaScript. A leitura de 03h2x que chamou isso de "404 de verdade" estava certa no efeito e incompleta na causa; **fica corrigido aqui, com a medição nova ao lado da antiga**: a causa é conta desativada, não defeito de rota.
+
+**Consequência para a dívida de navegador: ela morreu sem precisar do navegador.** 307 do servidor não muda com navegador, com locale, com `<slug>.flatchr.io` nem com rede diferente. **Os 14 quadros estão RESOLVIDOS: 14 de 14, com causa nomeada.** O que ficou escrito em 03h2x — "é dívida de navegador", "a melhor dívida desta veia" — **estava errado**, e o erro custaria uma rodada de navegador inteira.
+
+### 2. O NÚMERO QUE A ORDEM PEDIU: candidaturas espontâneas dos 17 = **1**, e não 17
+
+Nos 3 locatários de conta ativa, o `props.data` do próprio quadro 200 foi lido campo por campo:
+
+| Locatário | `items` | `spontaneousV` | `spontaneousApply` |
+|---|---|---|---|
+| `haristudios` | 1 (*Technicien.ne IT*) | `vq5r6pyaexgpammv-candidature-spontanee` | presente |
+| `amplitudestudios` | **0** | **AUSENTE** | **AUSENTE** |
+| `thetinydigitalfactory` | **0** | **AUSENTE** | **AUSENTE** |
+
+Ou seja: **Amplitude e The Tiny Digital Factory são casas ativas no Flatchr e não publicam candidatura espontânea nenhuma.** As duas chaves foram conferidas, não só uma. **A única espontânea da família era a da HARI, e ela foi enviada às 03h05 desta mesma madrugada.** Não havia 16 portas para abrir; havia zero.
+
+### 3. A PORTA DE CANDIDATURA DOS 14 ESTÁ FECHADA NO SERVIDOR, com o controle que existia
+
+Única vaga conhecida de locatário desativado: a da Zeilt, `xzbpjpoko3py51y0-graphiste-rendering-lighting`.
+
+```
+GET api.flatchr.io/vacancy/<slug>?lng=fr&fields=company,questions,address  -> 200
+     status: 0 | end_date: 2021-11-15 | published: null | company.status: 0 | questions: []
+GET careers.flatchr.io/fr/vacancy/<slug>/apply/   -> 307  location: /fr/404-not-found
+CONTROLE (locatário ativo, HARI):
+GET careers.flatchr.io/fr/vacancy/gv4a8d0wvj7pkxjr-technicien-it.../apply/  -> 200
+```
+
+Duas coisas úteis aqui, e uma delas derruba uma frase de 03h2x. **O objeto da vaga continua público** mesmo com a conta desativada — dá para ler título, corpo e empresa. **Mas a página de candidatura não existe**, então "a vaga desses 14 só é alcançável por link direto `careers.flatchr.io/vacancy/<slug>`", escrito em 03h2x, **é falso**: link direto também cai no 404.
+
+### 4. NÃO EXISTE LISTAGEM PÚBLICA DE VAGA POR LOCATÁRIO, e agora está medido em 18 rotas
+
+Testado contra `haristudios`, onde a resposta certa é conhecida (1 vaga + 1 espontânea), para que rota que devolvesse vazio fosse detectada como falso zero:
+
+```
+401 Unauthorized ..... company/<slug>/vacancies  e  company/<hashId>/vacancies
+404 Not Found ........ company/<slug>/{vacancy,offers,jobs,spontaneous,vacancies/published,vacancies/public}
+                       websites/<slug>/{fr/vacancies,vacancies}
+                       {vacancies, vacancies/search, search/vacancies, jobs, vacancies/public,
+                        multiposting/vacancies, feeds/vacancies, indeed/vacancies, vacancies/sitemap}
+200 .................. company/<slug>/slug            (empresa, COM o status)
+200 .................. company/<slug>/websites/infos  (hash id da empresa + idiomas)
+```
+
+**`api.flatchr.io/vacancy/search` NÃO é rota de busca**: o 400 dela é `"Vacancy search does not exist"`, isto é o `search` foi lido como *slug* de vaga. O `"q is not allowed"` que apareceu primeiro engana — os únicos parâmetros aceitos em `/vacancy/<slug>` são `lng` e `fields`. **Registro isso porque eu quase escrevi "achei a busca global do Flatchr" com base numa mensagem de validação.**
+
+**Rota nova e útil: `GET api.flatchr.io/company/<slug>/websites/infos`** devolve o **hash id** da empresa (o `k0M5O9ybBbpxbQBy` da HARI), a lista de idiomas e a descrição em HTML, sem chave. E `GET api.flatchr.io/websites/<slug>/<lang>` devolve o tema do site de carreira. **Atenção:** `published:true` e `hasWebsiteSubscription` **não** servem de discriminador — 16 dos 17 têm `published:true` e **todos os 17**, inclusive a HARI que funciona, têm `hasWebsiteSubscription:false`. Quem decide é o `status` da empresa, e só ele.
+
+### 5. O QUE ESTA PARTE DA RODADA NÃO FEZ
+
+- **Não separei "vaga fechada" de "conta desativada"** como causa do 404 da página de candidatura. A única amostra que tenho, a da Zeilt, tem **os dois** zeros ao mesmo tempo (`vacancy.status=0` e `company.status=0`). Para separar seria preciso um locatário desativado com vaga aberta, e eu não tenho nenhum. **É a ressalva que mais enfraquece o §3.**
+- **Não provei que locatário desativado nunca recebe candidatura**, porque não fiz POST em nenhum. Não vou fazer: seria candidatura em vaga de 2021, fora da disciplina, de casa que não tem porta.
+- **Não subi o piso de 17 locatários.** Continua valendo o que foi dito em 03h2x: sem listagem pública, 17 é piso de dicionário, não total. E agora o piso útil é menor ainda — **3 contas ativas**, das quais 1 já candidatada.
+- **Não reabri a fila do PORTAIS**, porque ela está com **12 de 12 `done=true`**: não há formulário parado esperando o Jhon.
