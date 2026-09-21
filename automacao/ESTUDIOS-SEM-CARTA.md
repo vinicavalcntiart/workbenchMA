@@ -267,3 +267,33 @@ PLEASE ATTACH YOUR PORTFOLIO"* — a casa convidando. Aqui os campos dizem o con
 
 Portanto **as cinco esperam o `create_draft`**, junto com as cinco pessoas do Joe. Dez cartas prontas
 para sair em lote.
+
+---
+
+## FICHA NOVA — 21/09/2026 02h15 UTC (Jhon A, rodada de descoberta por API, sem navegador)
+
+### Framestore — **Blender Generalist**, Londres, Reino Unido — requisição Recruitee **2709436**
+
+**Rascunho: `PENDENTE-maestro-escreve`. Eu não escrevo carta.**
+
+| Campo | Valor |
+|---|---|
+| **Caixa** | `recruiters@framestore.com` — **confiança ALTA**: não é endereço montado, está escrito dentro do próprio anúncio como rota de candidatura |
+| **Assunto EXIGIDO pelo anúncio** | `Film Blender Generalist - London` (o anúncio dita o assunto; não inventar outro) |
+| **Fonte aberta por mim nesta rodada** | `https://framestore.recruitee.com/api/offers/` — HTTP 200, 802.774 bytes, 53 ofertas. Anúncio: `https://framestore.recruitee.com/o/blender-generalist` |
+| **Prova de que vive** | `status: "published"`, `published_at: "2026-08-13 10:10:25 UTC"`, `close_at: null` |
+| **Casa fora dos EUA?** | **SIM** (Londres, GB) → **usar a frase fixa de realocação da regra 10** |
+| **Régua de veto** | **ZERO acerto** dos 110 termos em 4.342 caracteres de descrição + requisitos |
+| **Dedupe** | `2709436` tem **zero ocorrência** em `enviados.csv`, `automacao/processados.csv` e `docs/index.html`. No Gmail, a busca `framestore` devolve 6 fios da casa e **nenhum menciona Londres/Blender Generalist**: o de 15/09 é `Modeller - Montreal`, o de 19/09 01h26 é `Film Blender Generalist - **Montreal**` (requisição 2718959), os outros são cartas a pessoas e a candidatura de julho à Character & Creature Modeller |
+
+**Por que esta pessoa/caixa e não outra da casa:** a casa não publica endereço de ninguém (medido em 06/09 nos nove caminhos de contato: só caixas de departamento). E o teto de duas cartas a pessoas **já está cheio** — Lizi Bedford em 06/09 e Glenn Melenhorst em 08/09. A `recruiters@` não é contorno do teto: é a rota que o anúncio manda usar.
+
+**Gancho com a frase do estúdio, entre aspas:** *"As part of our Visual Development team, you'll bridge the gap between initial concepting and final VFX execution. Blender is central to how our VisDev team designs and crafts key sequences early in production — extensively powering our work on shows like IF, Loki S2, and How To Train Your Dragon."* — **visual development é literalmente metade do cargo que a regra 2 do briefing define para ele, e Blender é ferramenta do dia a dia dele.**
+
+**Perguntas que a carta precisa responder** (vêm do `open_questions` da própria oferta, então não há como o formulário pedir algo que a carta não trouxe): Showreel/Portfolio Link (obrigatório), Availability date, Citizenship, Current location, *"Are you open to relocating to London, UK?"* (booleano → **Yes**), Desired annual salary (**£ GBP**).
+
+**A RESSALVA QUE ENFRAQUECE ESTA FICHA, e são três:**
+1. É **contrato**, não efetiva (`employment_type_code: "contract"`), e o BRIEF-JHON põe efetiva na frente dentro da mesma faixa.
+2. O corpo pede foto-realismo por escrito (*"assets that hold up to photoreal scrutiny"*) contra portfólio **estilizado**. O que atravessa é anatomia, silhueta, topologia e material — é o mesmo argumento que a carta de 19/09 desta casa já usou, e ele deve ser dito em voz alta, não escondido.
+3. **Dosagem:** a caixa `recruiters@framestore.com` já recebeu **três** mensagens da campanha em uma semana (15/09 Modeller Montréal, 19/09 carta fria, 19/09 candidatura Montréal 2718959). Uma quarta é decisão de quem escreve, não minha.
+
