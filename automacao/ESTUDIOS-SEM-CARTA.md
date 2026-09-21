@@ -629,3 +629,22 @@ os três morrem:
 - **Não toquei em `enviados.csv`, `docs/index.html`, `automacao/pessoas.csv` nem em
   `automacao/censo-personio-dach-2109.csv`**, por ordem. **A FILA DO VINI não recebeu item novo:
   ZERO** — não houve captcha nem parede, porque não houve envio.
+
+### 8. O DEDUPE NA CAIXA, que é o que o `BRIEF-JOE.md` manda fazer ("o dedupe se faz na caixa, não no arquivo") — e ele acrescentou uma prova que nenhum arquivo tinha
+
+- **Airborn Studios** — `search_threads airborn` → **2 fios, os dois só de saída**. 26/08 para
+  `jobs@airborn-studios.com` com `mailer-daemon` respondendo *"Address not found... the address
+  couldn't be found, or is unable to receive mail"*; 26/08 para `contact@airborn-studios.com`
+  entregue; follow-up em 07/09 na mesma thread. **ZERO resposta, humana ou de robô, em 26 dias.** A
+  caixa confirma o arquivo: a carta não é a porta desta casa. **A rota do §1 é.**
+- **Blue Backpack** — e aqui a caixa sabe mais que o arquivo. Carta em 06/09 para
+  `info@bluebackpack.com` e **resposta HUMANA em 08/09**, de `r.may@bluebackpack.com`: *"Thank you
+  for your application and your interest. Unfortunately we do not have any open vacancies at the
+  moment, but please feel free to look out for new vacancies on our website."* Vini já respondeu em
+  08/09. **Isto CORROBORA a medição do quadro**: o Personio da casa devolve zero vaga e a própria
+  pessoa de RH escreve que não há vaga — duas fontes independentes com o mesmo número. A casa fica
+  como **vigia**, não como carta nova, e **não abro ficha de pessoa** para ela: já existe fio humano
+  vivo e a ordem proíbe segunda pessoa de casa nenhuma.
+- **astragon**, **Glowmade**, **tobspr**, **Zeitland** — `search_threads` devolveu **`{}`** nas duas
+  consultas, isto é **zero fio**. Virgens na caixa. (Resposta vazia aqui **é** zero de verdade,
+  porque `{}` é o que a ferramenta devolve para zero item, e não falha.)
