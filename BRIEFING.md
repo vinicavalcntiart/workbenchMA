@@ -8620,3 +8620,22 @@ O locatário existe (200 no oráculo), **o registro de site de carreira existe e
 - **Não sei se o `École` respondido em texto livre passa o filtro interno deles.** A plataforma aceitou (`creatable:true`), mas se a triagem da HARI procurar egresso de escola francesa, esta candidatura cai lá. **É a ressalva que mais enfraquece a ficha de hoje.**
 - **A FILA DO VINI não recebeu item novo, e o número é ZERO** — o Flatchr **não tem captcha nenhum** no caminho de candidatura, então não houve parede para mandar à mão. E nada de Disney, Netflix ou Vancouver apareceu.
 - **Não toquei em `automacao/pessoas.csv` nem em `automacao/PESSOAS-SEM-CARTA.md`**, por ordem. Ambiente e props ficaram fora do escopo, por ordem.
+
+## 21/09, 03h5x — **A ROTA DA SESSÃO IRMÃ (Cowork) NÃO EXISTE NESTA CONTA, e isso muda o que se pode prometer sobre parede de rede**
+
+Medido pelo Mágico na rodada 3: `list_environments` devolve **um** ambiente, `Default`, do tipo
+`anthropic_cloud`. Sessão irmã criada daqui sai **pelo mesmo proxy**, com a **mesma reputação de
+IP**. Portanto:
+
+- **Ninguém deve propor "abrir outra sessão" como saída** para Ashby (recusa por pontuação de IP),
+  Workable (429 do Cloudflare contra a nossa rede), DataDome ou qualquer porteiro que julgue rede.
+  O resultado é o mesmo erro, com custo a mais.
+- O que resolve porteiro de rede continua sendo **o navegador do Vini**, que é outra rede e outra
+  sessão. É a única rota diferente que a campanha tem.
+- O que **não** é porteiro de rede (campo obrigatório, conta faltando, teste técnico, consentimento
+  que não sai no corpo) não melhora em rede nenhuma, e por isso não vai para a mão dele.
+
+**Consequência prática para a régua de parede:** antes de chamar algo de parede de rede, é preciso o
+texto do servidor. Parede de conta (Infold), defeito de página (Microsoft), anexo recusado por
+Cloudflare no POST (eRecruiter) e teste técnico (Zack D Films) são quatro coisas diferentes, e só a
+terceira melhora com rede diferente.
