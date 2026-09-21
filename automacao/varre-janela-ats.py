@@ -310,13 +310,27 @@ K3 = re.compile(r'(open\s+application|general\s+application|spontaneous|speculat
 def main():
     pares = []
     extra = os.environ.get('EXTRA_TOKENS', '')
+    # 21/09 04h5x (maestro): a coluna `identidade` marca HOMONIMO, ou seja token que existe mas
+    # pertence a empresa que NAO e o estudio (agencia de trabalho temporario italiana, academia,
+    # loja). Medido no proprio arquivo: 125 das 944 linhas sao homonimo e elas carregam 2.237 das
+    # 4.000 vagas, ou seja 56% do volume lido era ruido POR DEFINICAO, e o Jhon A media ~60 linhas
+    # de lixo por janela. Passam a ser puladas, com DUAS travas contra filtro silencioso: o numero
+    # pulado e IMPRESSO, e INCLUI_HOMONIMOS=1 traz todos de volta sem editar codigo.
+    inclui_hom = os.environ.get('INCLUI_HOMONIMOS', '').strip() in ('1', 'sim', 'true')
+    hom_pulados = []
     with open(TOK, newline='', encoding='utf-8') as fh:
         for row in csv.DictReader(l for l in fh if not l.startswith('#')):
             fa = (row.get('familia') or '').strip().lower()
             tk = (row.get('token') or '').strip()
             if not fa or not tk or fa in SKIP or fa not in FAM:
                 continue
+            if not inclui_hom and (row.get('identidade') or '').strip().lower() == 'homonimo':
+                hom_pulados.append('%s:%s(%s)' % (fa, tk, (row.get('nome_real') or '?').strip()))
+                continue
             pares.append((fa, tk))
+    if hom_pulados:
+        print('homonimos PULADOS: %d (INCLUI_HOMONIMOS=1 traz de volta)' % len(hom_pulados), flush=True)
+        print('  exemplos: %s' % '; '.join(hom_pulados[:6]), flush=True)
     if extra:
         for p in extra.split(','):
             if ':' in p:
