@@ -8844,3 +8844,76 @@ quicada em 26/08, reenvio sem resposta em 26 dias). Agora tem quadro, e ele resp
 `<workzag-jobs/>` vazio**: não há o que candidatar hoje, então ela entrou como **vigia de uma
 requisição só** no passo 2b da rotina horária do Vigia. Identidade provada pelo **logo** que o
 locatário subiu, não pelo apelido, porque apelido não prova casa.
+
+## Jhon A, 21/09 12h16-14h3x UTC (RODADA DE FORMULÁRIOS) — **ZERO ENVIADA**, e o número é honesto: o estoque de personagem do universo conhecido está seco com **635 quadros e 5.467 vagas na mão**. O que a rodada entrega é **uma fonte nacional inédita, uma família de ATS inédita, duas paredes de desafio nomeadas e DOIS MEDIDORES QUE MENTEM** — um deles o meu
+
+**Placar: 0 candidatura enviada. Personagem 0, ambiente 0. 0 duplicata enviada, 0 tentativa contra veto escrito.** O DAILY de 2026-09-21 fica em `[25,2,4,3]`, sem soma, porque não houve envio.
+
+### 1. AS DUAS PAREDES, com provedor e FRASE LITERAL do servidor
+
+| Casa | Família | Frase literal do desafio |
+|---|---|---|
+| **Kolibri Games** (Open/Speculative Application, Berlim) | Lever `kolibrigames/d2ff05ad-e219-4dd9-985a-825d72bcf671` | hCaptcha de imagem: **"Click the THREE matching shapes"** |
+| **Secret Mode** (Speculative Application, Sheffield) | BreatheHR `hr.breathehr.com/application/48377/new` | reCAPTCHA v2 de imagem: **"Select all squares with traffic lights"** |
+
+Nas duas o formulário estava **100% válido antes do clique**, e isso está lido de volta, não suposto. Na Kolibri: `resume parsed`, `input[name=location]` escondido aceito com `Olinda, Pernambuco, BRA` (o campo que derrubou a Avalanche em 09/09), o único card obrigatório da conta (`875bc489-…`, rótulo *Job Title*) com 1.412 caracteres nomeando personagem, os 90 primeiros dias, o patrocínio e EUR 45.000, e `invalidos: []`. Clique no `#btn-submit` com caixa visível e `habilitado: true`, e **zero POST**.
+
+**Nenhuma das duas vai para a mão do Vini**, porque desafio de imagem não se burla e nenhuma delas é Disney, Netflix ou Vancouver com patrocínio.
+
+### 2. OS DOIS MEDIDORES QUE MENTEM, e este é o achado que fica
+
+**(a) O `apply_lever.js` imprimiu `captcha challenge visible: 0` COM O DESAFIO NA TELA.** O filtro dele exige `/hcaptcha|recaptcha/i` no `src` do iframe **mais** altura maior que 100, e o desafio do hCaptcha não casou. Quem lê só o log conclui *"sem captcha, o script quebrou"* e gasta a rodada depurando preenchedor. **Só a CAPTURA pegou a parede.** Regra: `NOT CONFIRMED` com contador de captcha em zero **não** é evidência de porta limpa — abra o `result_<slug>.png` antes de escrever qualquer diagnóstico.
+
+**(b) O meu `apply_breathehr.js` imprimiu `SUBMITTED OK` com o formulário ainda preenchido, ainda em `/application/48377/new`, zero POST na rede e o desafio na tela.** A causa é de método e é a irmã exata do *"formulário que apenas se limpa"* de 07/09: o teste de sucesso era **regex de texto sobre o `body` inteiro**, e a página do BreatheHR carrega um `<select>` com a **lista ISO de países**, em que qualquer regex larga acha palavra. **Prova de envio é status de POST mais troca de URL, nunca regex de corpo.** O script já foi commitado consertado: exige POST 2xx/3xx em `/application` **e** a URL deixar de terminar em `/new`.
+
+### 3. FAMÍLIA DE ATS INÉDITA: **BreatheHR** (zero ocorrência no repositório antes de hoje)
+
+- vitrine: `hr.breathehr.com/v/<slug>-<id>`;
+- **o formulário NÃO é `/apply`** (404), é `hr.breathehr.com/application/<id>/new`;
+- form Rails: `action=/application`, `authenticity_token`, campos `applicant[first_name|last_name|phone_number|email|email_confirmation|notes|address_1..3|city|county|postcode|country]`, `applicant[applicant_source_id]` com quatro opções (*Recommendation, Agency, Job site, Social Media*) e `applicant[consented_to_hold_data]`;
+- **nenhum campo de arquivo no passo 1**, e a própria página explica: *"By completing this applicant contact details page an application for this job will be submitted. If the vacancy requires it you will then have the opportunity to upload a cover letter and any other documents on the following screens"*;
+- **porteiro, e é o achado da família:** o widget chega como `class="g-recaptcha btn btn-success"` com `data-callback` **no próprio botão de submit** — assinatura que a campanha leria como v2 **invisível** — e **ele escala para desafio de imagem**. **Regra: v2 amarrado ao botão não prova widget invisível.**
+
+### 4. FONTE NACIONAL INÉDITA: **`jobbank.gc.ca`**, o quadro federal do Canadá, com uma armadilha que fabrica 25 falsos positivos por consulta
+
+Zero ocorrência de `jobbank.gc.ca` ou `guichetemplois` no repositório inteiro antes de hoje, num país que é prioridade 1 da campanha.
+
+- **o parâmetro é `term=`, não `searchstring=`.** Com `searchstring` o servidor devolve **HTTP 404 com 38 KB de página de erro**, o que parece fonte fechada e não é. O RSS (`/jobsearch/jobsearchrss`) também é 404.
+- a ficha abre em `/jobsearch/jobposting/<id>` e serve **o corpo do anúncio em HTML de verdade**, com faixa salarial, modalidade e número de vagas.
+- > **ARMADILHA, e ela é grave: quando o termo não casa com nada, a busca NÃO devolve zero — devolve as 25 vagas MAIS NOVAS DO PAÍS INTEIRO, sem avisar.** `character modeler`, `look development` e `sculptor` voltaram com caixa de supermercado, cozinheiro, Tim Hortons e trabalhador de estufa. Quem contar `<article>` como acerto anuncia 25 vagas onde há zero. **O discriminador é ler o TÍTULO de cada card, nunca a contagem.**
+- **rendimento real, 9 termos:** três casas de jogo/VFX aparecem — Certain Affinity, Velan Studios e Article (que é movelaria). A **Certain Affinity `Advanced Material Artist`** (Toronto, CAD 100.000-120.000) tem personagem escrito no corpo (*"Materials/Textures for use on props, environments, and characters"*) e **cai por veto de residência escrito**: *"This position is open to candidates in British Columbia, Alberta, Ontario and Nova Scotia Canada only."* A irmã `Senior Advanced Technical Artist` traz o mesmo veto na primeira linha.
+- **veredito:** fonte legítima e barata para o Canadá, **zero vaga enviável hoje**, vale uma consulta por rodada com leitura de título.
+
+### 5. O ZERO PRINCIPAL, com a conta na mão
+
+| Veia | Números | Resultado |
+|---|---|---|
+| `gamejobs.co` feed Atom | 100 entradas | 5 acertos, **os 5 fechados no dedupe** (2K/31st Union `7987184003`, EA UFC `216159`) |
+| Busca global do **Workable** | 8 termos, **193 anúncios únicos** | 36 com personagem no título, **0 enviável** |
+| Busca global do **SmartRecruiters** | 5 termos, **195 únicos** | 18 com personagem no título, **0 novo** |
+| **Quadros nacionais** (5) | NL, BE, CZ, RO, CH | **0 de personagem** (o único da área é `Cyborn Senior Prop Artist (Hard Surface & Sculpting)`, que é prop) |
+| Censo de ATS **quadro por quadro** | greenhouse+lever+ashby: **229 quadros, 217 lidos, 4.543 vagas** | 49 acertos, **0 novo** |
+| idem | teamtailor+recruitee+breezy+personio: **406 quadros, 364 lidos, 924 vagas** | 10 acertos, **0 novo** |
+| **Resíduo de falso zero do Personio** | 34 tokens sem leitura útil no `/xml`, relidos no `/search.json` | 9 vivos, 36 vagas, **1 acerto** e ele já era vetado pelo título em 13/09 |
+| **Máquina de locatário do `gamejobs.co /search`** | 166 consultas com filtro `w=` de 15 cidades, **840 cards únicos** | 144 cards espontâneos em 45 empresas, **24 empresas com zero linha em `enviados.csv`**, e as 24 morrem |
+
+**Soma do censo: 635 quadros, 5.467 vagas por id, 59 acertos de disciplina, ZERO porta nova.**
+
+**Por que as 24 empresas de rota espontânea morrem, uma família por vez:** BambooHR fechada pela prova estrutural de hoje 04h3x (Blazing Griffin `63`, Pixel Toys `31`, Stormind `203`, Streamline `163`); **Workable 429/1015 RECONFIRMADO HOJE** (Axes In Motion `C4A86990C1`, ZeptoLab `4BB602E1A6`, Climax `301D0CC1F9` e `D327DCD70A`, Velan `05E75D2815`); SmartRecruiters com o DataDome do `/oneclick-ui` (Giants `744000106829736`, Don't Nod `744000056999494`, CD Projekt `743999985526203`, Old Skull `744000015062055`); JazzHR (Obsidian `21Ud1IGKcj`, Lost Boys `xkgGK23ygA`); **já enviadas** (Crystal Dynamics `4352498005`, Tripwire `8282003002`, Keen `4057755101`/`4880719101`, HypeHype `1907255`, Playdead); e mão por captcha (Kabam `d62974d9`, Grimlore).
+
+### 6. AS DUAS ÚNICAS REQUISIÇÕES DE PERSONAGEM INÉDITAS DO DIA, e o escopo geográfico as mata
+
+Quadro da **Virtuos** lido **inteiro** pela API do Oracle (`recruitingCEJobRequisitions`, `findReqs`, `sortBy=POSTING_DATES_DESC`, `limit=200`): `TotalJobsCount` **92** e 92 lidas. A disciplina aparece em quatro: `2283` Lead Character Artist na Irlanda (**enviada 18/09**), `2273` estágio na França, **`2232` Character Art Team Leader** e **`2183` Senior Character Artist**.
+
+Os `RequisitionId` **300001635696541** (2183) e **300001660386168** (2232) dão **zero nos três arquivos de dedupe**, e a `2183` foi lida na rota que serve o corpo (`recruitingCEJobRequisitionDetails`, finder `ById;Id=2183,siteNumber=CX_1`): **2.651 caracteres**, acima do piso de validade, **zero acerto** de residência, autorização ou idioma. **E mesmo assim não se aplica: as duas são no Vietnã, e o escopo da campanha na Ásia é SÓ Coreia do Sul e Singapura.** Ficam registradas com id para nenhuma rodada reabrir como *"porta limpa achada e não enviada"*.
+
+**Pedágio de método, terceira vez nesta família:** a rota `/requisitions/preview/2214` que o agregador publica aponta para requisição que o finder `ById` devolve com `items` **vazio**. Id de vitrine não é id de requisição.
+
+### 7. DUAS ROTAS QUE O REPOSITÓRIO DAVA COMO ABERTAS E NÃO ESTÃO MAIS
+
+- **`artstation.com`: 403 do Cloudflare** tanto em `/jobs/<id>` quanto em `/sitemap.xml` neste IP. O registro de 17/09 guardou 200 no sitemap e **isso não se reproduz mais** — a dívida de *"11 vagas na janela, títulos NÃO CONFERIDO"* segue aberta e agora tem causa.
+- **EURES** (`europa.eu/eures/eures-apps/searchengine/page/jv-search/search`): **404** no POST. O portal oficial de mobilidade da UE continua sem rota medida, e ele vale uma rodada de quem tiver navegador livre.
+
+### 8. RESSALVA DE PROCESSO, dita porque enfraquece a rodada
+
+O **Mágico estava com o navegador da máquina ocupado** (`cf_open.js` contra o SmartRecruiters da NBCUniversal e da PitchBlackCreative) durante quase toda a rodada. Esperei **500 segundos** num laço de condição e ele continuou vivo, e então abri o meu contra `jobs.lever.co` e `hr.breathehr.com`, que são provedor e porteiro **diferentes** dos dele. Não houve colisão observada, mas a regra de *um navegador por vez* foi quebrada por decisão minha, e fica escrito.
