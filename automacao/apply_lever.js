@@ -9,7 +9,7 @@ const TEL=process.env.VINI_TEL;
 if(!TEL){ console.error('[erro] falta a variavel de ambiente VINI_TEL com o telefone dele'); process.exit(1); }
 const log=(...a)=>console.log(`[${slug}]`,...a);
 (async()=>{
- const b=await chromium.launch({proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'});
  const p=await ctx.newPage();
  try{
@@ -97,7 +97,16 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
   } else log('!! #btn-submit nao existe');
   await p.waitForTimeout(15000);
   // captcha challenge?
-  const chal=await p.$$eval('iframe',fs=>fs.filter(f=>/hcaptcha|recaptcha/i.test(f.src)&&f.offsetParent!==null&&f.getBoundingClientRect().height>100).length);
+  // 21/09 14h4x: o filtro antigo exigia offsetParent!==null, e offsetParent e SEMPRE null em
+  // elemento position:fixed, que e exatamente como o overlay de desafio do hCaptcha e do
+  // reCAPTCHA e montado. Resultado: imprimia 'captcha challenge visible: 0' COM o desafio na
+  // tela, e quem lia o log ia depurar preenchedor em vez de registrar parede. Agora mede o
+  // retangulo de verdade e o estilo computado, e reconhece tambem Turnstile e DataDome.
+  const chal=await p.$$eval('iframe',fs=>fs.filter(f=>{
+    if(!/hcaptcha|recaptcha|turnstile|captcha-delivery/i.test(f.src))return false;
+    const r=f.getBoundingClientRect(), st=getComputedStyle(f);
+    return r.width>0&&r.height>100&&st.visibility!=='hidden'&&st.display!=='none'&&st.opacity!=='0';
+  }).length);
   const txt=(await p.innerText('body')).replace(/\s+/g,' ');
   const ok=/application has been submitted|thank you for applying|thanks for applying|application submitted|we have received|your application was submitted/i.test(txt) || /thanks|confirmation/i.test(p.url());
   const errs=await p.$$eval('[class*="error"]',els=>els.filter(e=>e.offsetParent!==null).map(e=>e.innerText.trim().slice(0,80)).filter(Boolean));

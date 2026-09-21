@@ -15,7 +15,7 @@ for (const k of Object.keys(A.texto || {})) {
 }
 const log = (...a) => console.log('[' + slug + ']', ...a);
 (async () => {
-  const b = await chromium.launch({ headless: false, proxy: { server: 'http://127.0.0.1:18080' }, args: ['--no-sandbox', '--ignore-certificate-errors'] });
+  const b = await chromium.launch({ headless: false, proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY}, args: ['--no-sandbox', '--ignore-certificate-errors'] });
   const ctx = await b.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1400, height: 2200 }, userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US' });
   const p = await ctx.newPage();
   p.on('response', r => { if (r.request().method() === 'POST') log('[rede]', r.status(), r.url().slice(0, 110)); });

@@ -8,7 +8,7 @@ const [url,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const LOGIN=process.env.TS_LOGIN, SENHA=process.env.TS_SENHA; const D=__dirname+'/';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1300,height:2600},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-CA'})).newPage();
  const dump=async(tag)=>{
   const c=await p.evaluate(()=>[...document.querySelectorAll('input,select,textarea')].filter(e=>e.type!=='hidden'&&e.offsetParent!==null)

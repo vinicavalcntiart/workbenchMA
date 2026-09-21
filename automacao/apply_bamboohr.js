@@ -10,7 +10,7 @@ const D = __dirname;
 const log = (...a) => console.log('[' + slug + ']', ...a);
 
 (async () => {
-  const b = await chromium.launch({proxy: {server: 'http://127.0.0.1:18080'}, args: ['--no-sandbox', '--ignore-certificate-errors']});
+  const b = await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY}, args: ['--no-sandbox', '--ignore-certificate-errors']});
   const p = await (await b.newContext({ignoreHTTPSErrors: true, viewport: {width: 1280, height: 2600}, userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US'})).newPage();
   // Sem log de rede, "RESULTADO DUVIDOSO" nao distingue tres coisas muito diferentes: campo
   // obrigatorio vazio, POST recusado por captcha, e envio que deu certo mas nao mudou a tela.

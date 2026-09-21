@@ -9,7 +9,7 @@ const [passosFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submi
 const S=JSON.parse(fs.readFileSync(passosFile)); const D=__dirname+'/';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:900},locale:'en-GB'})).newPage();
  // so o que esta DENTRO da janela conta como pergunta atual
  const visivel=async()=>p.evaluate(()=>{

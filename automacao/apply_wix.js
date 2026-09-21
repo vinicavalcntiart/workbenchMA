@@ -12,7 +12,7 @@ const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname;
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',acceptDownloads:true,
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  p.on('response',async r=>{ if(r.request().method()==='POST'&&!/recaptcha|sentry|analytics|beat|bi\.wix/i.test(r.url())){ let t=''; try{t=(await r.text()).slice(0,200);}catch(e){} log('[rede POST]',r.status(),r.url().slice(0,110),t.replace(/\s+/g,' ')); } });

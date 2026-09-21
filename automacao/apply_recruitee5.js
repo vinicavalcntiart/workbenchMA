@@ -10,7 +10,7 @@ const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname+'/';
 const B={name:'Vini Cavalcanti',email:'contact@vinicavalcanti.art',phone:process.env.VINI_TEL||''};
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2600},locale:'en-US'})).newPage();
  try{
   await p.goto(A.url,{timeout:120000,waitUntil:'domcontentloaded'});

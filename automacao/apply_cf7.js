@@ -24,7 +24,7 @@ const A = JSON.parse(fs.readFileSync(ansFile, 'utf8'));
 const log = (...a) => console.log('[' + slug + ']', ...a);
 
 (async () => {
-  const b = await chromium.launch({headless: false, proxy: {server: 'http://127.0.0.1:18080'}, args: ['--no-sandbox', '--ignore-certificate-errors']});
+  const b = await chromium.launch({headless: false, proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY}, args: ['--no-sandbox', '--ignore-certificate-errors']});
   const ctx = await b.newContext({ignoreHTTPSErrors: true, viewport: {width: 1280, height: 2200}, acceptDownloads: true,
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US'});
   const p = await ctx.newPage();
