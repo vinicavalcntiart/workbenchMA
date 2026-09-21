@@ -297,3 +297,161 @@ para sair em lote.
 2. O corpo pede foto-realismo por escrito (*"assets that hold up to photoreal scrutiny"*) contra portfólio **estilizado**. O que atravessa é anatomia, silhueta, topologia e material — é o mesmo argumento que a carta de 19/09 desta casa já usou, e ele deve ser dito em voz alta, não escondido.
 3. **Dosagem:** a caixa `recruiters@framestore.com` já recebeu **três** mensagens da campanha em uma semana (15/09 Modeller Montréal, 19/09 carta fria, 19/09 candidatura Montréal 2718959). Uma quarta é decisão de quem escreve, não minha.
 
+
+---
+
+## ROTAS NOVAS — 21/09/2026 04h35-05h5x UTC (Joe, rodada de ROTA e não de carta)
+
+**Ordem desta rodada, e ela veio da minha própria nota das 02h35:** com o Apps Script parado
+desde 19/09 01h26 e 53 rascunhos na fila, carta nova entra em fila parada. Então o alvo virou
+**rota que envia sozinha**. Zero rascunho criado, zero carta. O que segue é para a mão do Jhon A.
+
+**Placar honesto: 3 rotas de casa INÉDITA entregues, 1 recusada por disciplina com o texto que a
+recusou, 0 candidatura enviada (não é meu papel), 0 navegador aberto.** E o achado que vale mais
+que as três rotas é uma **armadilha de falso positivo no Pinpoint** que eu mesmo quase publiquei
+como verdade (§4).
+
+### ROTA 1 — **Unbroken Studios**, El Segundo (LA South Bay), Califórnia, **EUA** — a melhor das três
+
+| Campo | Valor |
+|---|---|
+| **Família de ATS** | **Pinpoint** — `https://unbrokenstudios.pinpointhq.com/` (conta REAL: título `Jobs at Unbroken Studios \| Unbroken Studios Careers`) |
+| **Quadro** | `https://unbrokenstudios.pinpointhq.com/postings.json` → **HTTP 200, 11 bytes, `{"data":[]}`** = conta viva com **ZERO vaga publicada** |
+| **Quadro próprio** | `https://unbrokenstudios.com/` (200, 204.385 bytes), ancora `#careers` na própria home |
+| **Candidatura espontânea** | **SIM, e convidada por escrito** — mas por **e-mail**, não por formulário: o único `href` de carreira da home inteira é `mailto:careers@unbrokenstudios.com` |
+| **Casa fora dos EUA?** | **NÃO. É dos EUA.** → **a frase de realocação NÃO entra** (regra 10) |
+| **Dedupe** | Gmail `search_threads` em `unbrokenstudios OR "Unbroken Studios" OR unbroken` → **`{}`**, e `"unbrokenstudios.com" OR Persson OR Gelius OR "Quidditch Champions"` → **`{}`**. No repositório, `unbrokenstudios` e `careers@unbrokenstudios.com` = **0 ocorrências** em `pessoas.csv`, `processados.csv`, `docs/index.html` e `enviados.csv`. **CASA INÉDITA, primeiro toque.** |
+
+**A frase da casa que prova a disciplina, entre aspas e da página aberta por mim nesta rodada**
+(`https://unbrokenstudios.com/`, seção GET TO KNOW US, cartão de equipe): a casa publica
+**`Michelle Persson — Character Art Director`**, no departamento `Artist`. **Não é inferência:
+é o cargo de direção de arte de PERSONAGEM escrito pela própria casa.** Ao lado dela a home
+publica `Leon Brazil — Studio Technical Animation Director`, `Ronny Kim — Principal Animator`,
+`Jordan Jones — Expert Technical Animator`, `Yanni Tripolitis — Lead VFX Artist`,
+`Autumn Clarey — Lead Environment Artist` e `Rich Wong — Expert Environment Artist`.
+
+**E a frase que convida a espontânea, literal:** *"Find A Home With Us — Currently, we have no
+open roles, but we're always looking for amazing talent. Get in touch"*, seguida de
+*"Careers — Nilla Gelius, HR Director — careers@unbrokenstudios.com"*.
+
+**Porte e crédito, para o gancho:** *"Unbroken Studios is an LA based team of 30 developers with
+proven track records of working on some of the most memorable franchises such as Battlefield,
+Call of Duty, God of War and the Arkham Series"*, e o catálogo publicado é
+**Harry Potter: Quidditch Champions (2024)**, **Suicide Squad: Kill the Justice League (co-dev)**
+e **Fractured Lands**. Casa de 30 pessoas → pela regra do BRIEF-JOE o alvo é fundador/diretor de
+arte, não recrutador.
+
+**RESSALVA QUE ENFRAQUECE ESTA ROTA, e são três:**
+1. **A rota não é formulário, é caixa funcional.** `careers@` é lido por RH, e o primeiro item do
+   checklist de RH é autorização de trabalho — que aqui é o pior caso possível, porque **a casa é
+   dos EUA e ele não tem autorização nos EUA**. Isso não invalida a rota; muda quem precisa ler a
+   carta, e é por isso que o nome da **Michelle Persson** tem de aparecer no corpo.
+2. **Zero vaga hoje.** `postings.json` = `{"data":[]}`. Quem for aqui vai de espontânea, e a
+   própria casa diz que é isso que ela aceita agora.
+3. **Não achei endereço de pessoa nenhuma.** Os três endereços publicados são `bizdev@`,
+   `careers@` e `press@`. Nada foi montado.
+
+### ROTA 2 — **Veles Productions Sp. z o.o.**, Varsóvia (Praga-Południe), **Polônia**
+
+| Campo | Valor |
+|---|---|
+| **Família de ATS** | **SmartRecruiters**, locatário `VelesProductionsSpZOo` |
+| **Quadro** | `https://api.smartrecruiters.com/v1/companies/VelesProductionsSpZOo/postings?limit=100` → **200, 10.781 bytes, `totalFound: 9`**. Página humana: `https://jobs.smartrecruiters.com/VelesProductionsSpZOo` (200) |
+| **Candidatura espontânea** | **NÃO.** As 9 requisições são todas nomeadas; não há *General Application*, e a busca por `talent pool / talent community / general application / spontaneous` na página de carreira devolveu **zero acerto** |
+| **Casa fora dos EUA?** | **SIM** (Polônia/UE) → **a frase de realocação entra** |
+| **Dedupe** | Gmail `velesproductions OR "Veles Productions" OR Veles` → **`{}`**. Repositório: `velesproductions` = **0 ocorrências**. **CASA INÉDITA.** |
+
+**AQUI A LIÇÃO DA HARI SE INVERTE, E É O ACHADO DESTA ROTA.** Na HARI a disciplina estava no
+domínio do ATS e não no site. Na Veles é **o mesmo fenômeno com o sinal trocado, e ele derruba a
+casa**: quem prova personagem é **só** o ATS, e o site da casa prova o contrário.
+
+- **No ATS** (`.../postings/743999909941063`, aberto e lido por mim nesta rodada), a vaga
+  *3D Character Rigging Artist (freelancer)* exige, literal: *"Excellent knowledge of rigging
+  techniques for bipeds, quadrupeds, and complex creatures"* e *"Strong understanding of anatomy,
+  kinematics, and deformation principles"*. As 9 requisições incluem ainda *3D Senior Animator*
+  (duas, uma freelance) e *PhD Animation Expert*.
+- **No site da própria casa** (`https://velesproductions.com/`, 200, 79.521 bytes, 2.878
+  caracteres de texto visível), a prosa inteira é **produção virtual e ambiente**:
+  *"Virtual Production & Broadcast Studio"*, *"XR and FX Services for the most demanding clients
+  worldwide"*, *"3D BIOMES — We specialize in creating custom virtual sets for our clients using
+  Unreal Engine"*, *"3D ASSETS — We offer high quality 3D photo scanning products"*. Portfólio:
+  noite eleitoral polonesa, comercial de sorvete, cenário virtual de Tóquio para videoclipe.
+
+**RESSALVA QUE ENFRAQUECE ESTA ROTA, e ela é séria:** o único cargo de personagem da casa é
+**RIGGING**, que está **fora da disciplina dele** pela regra que o BRIEFING já fixou para o
+"Creature TD" da ILM. E o resto é ambiente e cenário virtual, que é o que o Vini mediu em 10/09
+como perda de tempo. **Fica registrada como rota de casa inédita com departamento de personagem
+declarado, não como encaixe.** Se alguém for, vai por espontânea que não existe, ou seja: vai por
+e-mail — e para isso o site publica o padrão `inicial+sobrenome@velesproductions.com` **provado
+por quatro endereços literais** (`abenbenek@`, `apaprocki@`, `dzwierzchowska@`, `yheydlauf@`),
+mais `office@`, `us.office@` e `rentalstudio@`. **Padrão provado é confiança BAIXA, e não gastei
+carta nenhuma nele.**
+
+### ROTA 3 — **Lockwood Publishing**, Nottingham, **Reino Unido**
+
+| Campo | Valor |
+|---|---|
+| **Família de ATS** | **Workable** |
+| **Rota de LEITURA (funciona)** | `https://jobs.workable.com/view/nkVHue9fSxHKBeokz9JJUd/remote-digital-fashion-designer-(all-levels%2C-speculative)-in-united-kingdom-at-lockwood-publishing` |
+| **Rota de ENVIO** | **PAREDE JÁ MEDIDA.** `apply.workable.com/api/v3/accounts/<token>/jobs`, `/api/v2/...` e `apply.workable.com/lockwood-publishing/` devolveram **429 com 17 bytes nos três**, nos tokens `lockwood-publishing`, `lockwoodpublishing` e `lockwood`. É o mesmo 429 de IP que a rodada de 19/09 mediu com Chromium de verdade na Climax |
+| **Candidatura espontânea** | **SIM, e é o próprio título:** *"Digital Fashion Designer (All Levels, Speculative)"*, publicada em **08/07/2026**, `workplace: remote`, Reino Unido |
+| **Quadro próprio** | **MORTO:** `https://www.lockwoodpublishing.com/careers/` devolve **404** com corpo de S3 (`NoSuchKey ... 404.html`). O `href` existe na home e a página por trás dele não |
+| **Casa fora dos EUA?** | **SIM** (Reino Unido) → **a frase de realocação entra** |
+| **Dedupe** | Gmail `Lockwood OR "Avakin" OR lockwoodpublishing` → **`{}`**. Repositório: `lockwood` = **0 ocorrências**. **CASA INÉDITA.** |
+
+**A frase da casa, entre aspas, do texto de empresa do próprio anúncio:** *"Lockwood Publishing is
+one of the leading independent UK mobile games companies. Our most successful product to date is a
+3D virtual world on mobile called Avakin Life."* E do corpo da vaga: *"Fashion is one of the
+biggest reasons players express themselves in Avakin Life."*
+
+**RESSALVA QUE ENFRAQUECE ESTA ROTA, e são três:**
+1. **A disciplina é marginal.** Roupa de avatar em mundo 3D é vizinha de personagem, mas o cargo é
+   **design de moda**, e o anúncio põe **IA no centro**: *"You'll combine creativity, commercial
+   awareness and AI-powered workflows"*, *"As a Digital Fashion & AI Designer"*. Não é escultura de
+   personagem. **Não apresente como encaixe forte.**
+2. **O envio está atrás do 429 de IP**, que a campanha já mediu como parede de rede — e pela nota
+   de 03h5x de hoje, sessão irmã não resolve, porque sai pelo mesmo proxy.
+3. A vaga é de **08/07/2026**, dois meses e meio atrás. Especulativa envelhece menos que
+   requisição, mas envelhece.
+
+### RECUSADA COM O TEXTO QUE A RECUSOU — **TRICK 3D**, Atlanta, EUA (SmartRecruiters `TRICK3D`)
+
+Locatário real e inédito (`.../companies/TRICK3D/postings` → 200, `totalFound: 2`;
+`trick 3d` e `TRICK3D` = **0 ocorrências** no repositório; Gmail `{}`). **Morreu por disciplina, e
+com a frase da própria casa:** *"TRICK 3D sits at the forefront of immersive content and technology
+innovation in VR, AR, MR and much more... our client roster includes CNN, Cartoon Network, Delta
+Air Lines, Georgia Power, Jones Lang LaSalle (JLL), Intercontinental Hotel Group (IHG)"*. As duas
+requisições são **TECHNICAL ARTIST** (Unreal, *"crafts blueprints and code"*) e **Head of
+Accounts**. Zero personagem, zero criatura, em 6.556 bytes de anúncio. Registro para ninguém
+reabrir.
+
+### §4 — **A ARMADILHA DO PINPOINT, E EU QUASE A PUBLIQUEI COMO VERDADE**
+
+No primeiro minuto desta rodada eu sondei `https://framestore.pinpointhq.com/postings.json`,
+recebi **200 com 26.307 bytes de JSON real** (com texto de benefícios, DEI e tudo) e **ia escrever
+que a Framestore tem quadro no Pinpoint**. Fui ler os títulos antes. São estes três:
+
+```
+Head of DEI - UK      | 320821 | London
+Marketing Manager     | 320822 | Paris
+Customer Service Rep  | 320823 | New York
+```
+
+**É o conteúdo de DEMONSTRAÇÃO do Pinpoint.** Medido nos 20 locatários que sondei: **11 servem
+exatamente esse conjunto** (`Head of DEI - Belfast / - US / - UK`, `Marketing Manager`,
+`Customer Service Rep`, com Londres/Paris/Nova York), entre eles **a própria Framestore**, mais
+Ajax Creative, Bigger Games, First Derivative, Labster, OUTFORM, Penumbra, Plexus, Production Club,
+Puttshack e Simwave.
+
+> **REGRA QUE FICA: no Pinpoint, 200 com JSON GRANDE não prova quadro vivo. O discriminador é a
+> string `Head of DEI` no corpo: se ela está lá, a conta existe e nunca foi povoada.** Contar bytes
+> ou contar itens registra 11 quadros onde existem zero.
+
+**O controle que valida o oráculo, e ele passou:** `naoexiste999xyz`, `zzqqwwertyuiop` e
+`pixarcharacterhouse9` devolveram **404 com 11.684 bytes** os três, e a raiz deles serve
+`<title>404 Not Found</title>`. Ou seja **200 continua provando que a CONTA existe** — só não prova
+que ela tem vaga. E conta povoada de verdade se reconhece pelo tamanho **com** a ausência do
+`Head of DEI`: Bending Spoons (41.303), Zoox (46.684), Spiralyze (423.354).
+
+**E é por isso que a Unbroken Studios é a rota boa desta rodada:** o `{"data":[]}` de 11 bytes dela
+é honesto — conta real, zero vaga, e a casa **diz isso por escrito** na própria home.
