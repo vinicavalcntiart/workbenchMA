@@ -8731,3 +8731,80 @@ Testado contra `haristudios`, onde a resposta certa é conhecida (1 vaga + 1 esp
 - **Não provei que locatário desativado nunca recebe candidatura**, porque não fiz POST em nenhum. Não vou fazer: seria candidatura em vaga de 2021, fora da disciplina, de casa que não tem porta.
 - **Não subi o piso de 17 locatários.** Continua valendo o que foi dito em 03h2x: sem listagem pública, 17 é piso de dicionário, não total. E agora o piso útil é menor ainda — **3 contas ativas**, das quais 1 já candidatada.
 - **Não reabri a fila do PORTAIS**, porque ela está com **12 de 12 `done=true`**: não há formulário parado esperando o Jhon.
+
+## Jhon A, 21/09 04h3x-04h5x UTC (segunda parte da RODADA DE FORMULÁRIOS) — **ZERO envio, e os quatro zeros estão medidos um por um. O achado que fica é uma PROVA ESTRUTURAL: o BambooHR serve UMA ÚNICA chave de reCAPTCHA de caixa para TODOS os locatários, então a família inteira está fechada e não há locatário para caçar**
+
+**Placar desta parte: 0 formulário enviado, 0 duplicata cometida, 1 navegador usado e devolvido** (`pgrep -c chrome` = 0 antes de abrir). Digo isso na primeira linha porque a ordem pedia envio e **não houve envio**, e inflar não serve.
+
+### 1. A FILA DO JHON ESTÁ VAZIA, e isso é um número, não uma impressão
+
+`PORTAIS` do `docs/index.html`: **12 entradas, 12 com `done=true`, zero com `done=false`**. Não existe formulário parado esperando o Jhon. Por isso a rodada foi para descoberta por API, que é o que o brief manda quando a fila acaba.
+
+### 2. VARREDURA DE JANELA DAS FAMÍLIAS DE ATS: 9.622 vagas e **ZERO** requisição nova da disciplina
+
+`varre-janela-ats.py` com `JANELA_ISO=2026-09-19T00:00:00Z` (2,5 dias) sobre os 1.131 tokens de `tokens-ats-1809.csv`:
+
+```
+quadros=882  vivos=801  vagas=9.622  na janela=153  sem data=1.340  acerto de palavra=86
+```
+
+**Das 153 que estão na janela com data de verdade, nenhuma é de estúdio e nenhuma é da disciplina**: enfermeira, varejo da Mattel, dezenas de estágios da NBCUniversal e call center italiano. **Achado de limpeza para a próxima:** os tokens `teamtailor` `habitat`, `made`, `next`, `revolution`, `seven` e `zero` são **agências de trabalho temporário italianas**, não estúdios — elas sozinhas produzem ~60 linhas de ruído por janela e deviam sair da lista de tokens.
+
+**Dos 17 títulos de personagem que apareceram (todos `SEMDATA`, porque BambooHR e Ashby não publicam data na listagem), os 17 já tinham decisão escrita.** Conferido um por um, por URL exata e pela garra: `iconcreative/136` e `owi/199` **JA-FEITO**; `imageengine/21` e `theembassy/58` veto escrito de residência em BC; `igg/289` veto escrito de patrocínio; `iconcreative/150` e `barnstormvfx/176` já estão na mão do Vini por captcha; `thatgamecompany` não patrocina; `stirling` contrato e residência no UK; `streamlinestudios` 84 e 106 com decisão de 20/09; `dmfx` e `tornbanner` são CFX e rigging; `triumph` é modelagem industrial. **Zero novo, e o zero é medido.**
+
+### 3. **A PROVA ESTRUTURAL DO BAMBOOHR**, e ela vale mais que a candidatura que eu não consegui
+
+A campanha já tinha medido reCAPTCHA de caixa com clique em **seis** locatários (ICON, Image Engine, Soul Assembly, Barnstorm, BetaDwarf, Cinesite) e `respostas-formularios.md` já dizia *"o captcha é do BambooHR e não do estúdio"*. **Só que isso era indução por repetição, não prova.** Hoje ficou provado, e por um caminho barato: abri o formulário de **três locatários sem nenhuma relação entre si** e li o iframe do próprio Google.
+
+```
+gurustudio.bamboohr.com/careers/11        (Toronto)
+iommediaventures.bamboohr.com/careers/22  (Halifax)
+exient.bamboohr.com/careers/58            (Malta)
+
+recaptcha/api2/anchor?...&k=6LfZ4KEsAAAAAP7osErua7mOIzcdDjnUdaZfp08m&...&size=normal
+   -> A CHAVE DE SITE E BYTE POR BYTE A MESMA NOS TRES.
+      So o parametro co= muda, porque co= e a ORIGEM em base64, isto e o dominio do locatario.
+   api.js?onload=onRecaptchaLoad&render=EXPLICIT  -> nao e v3
+   anchor com size=normal + bframe presente      -> v2 DE CAIXA, exige clique humano
+   campo g-recaptcha-response existe no HTML e fica VAZIO
+```
+
+**A chave pertence ao BambooHR, não ao estúdio.** Consequência dura e útil: **não existe locatário do BambooHR com a porta sem caixa**, e procurar "um locatário sem captcha" dentro dos 134 tokens da família é trabalho perdido. A família inteira está fechada para a automação desta sessão, e agora com a causa localizada no byte, não na estatística. **Medido sem enviar nada e sem materializar dado pessoal nenhum.**
+
+### 4. OITO PORTAS DE ESPONTÂNEA ABERTAS, SEM VETO E SEM PERGUNTA — e todas as oito param no mesmo porteiro
+
+Conferidas uma por uma no `/careers/<id>/detail` da própria API, todas com `jobOpeningStatus: Open`, **sem veto geográfico escrito e com ZERO pergunta no formulário**:
+
+| Porta | Onde | Por que valia |
+|---|---|---|
+| `gurustudio/11` | **Toronto, Ontário** | CG de personagem; o anúncio convida a *"send us your application, specifying what position you want"* |
+| `iommediaventures/22` | **Halifax, Nova Escócia** | **estúdio de animação 3D**, casa 100% inédita para a campanha |
+| `mercuryfilmworks/118` | **Ottawa, Ontário** | casa inédita, e diz *"encouraged to apply regardless of where they live"* — mas é casa de **2D** |
+| `cinesitelondon/148` | Londres | animação e VFX 3D |
+| `amuseanimation/164` | Las Palmas | 2D e 3D, publicada 15/09 |
+| `blazinggriffin/63` | Glasgow | jogos |
+| `pixeltoysltd/31` | Leamington Spa | jogos |
+| `exient/58` | Malta | jogos |
+
+**Nenhuma foi enviada, e o motivo é um só: o porteiro do §3.** Elas **não vão para a mão do Vini**, pela regra 7 do contrato — nenhuma é Disney, Netflix ou Vancouver com patrocínio. Ficam nomeadas aqui para que a próxima rodada **não as redescubra como "porta nova aberta"**: são portas abertas com porteiro provado. `afternow/26` foi olhada e descartada — é agência digital na Croácia, fora da disciplina.
+
+### 5. GOHIRE E FLATCHR REMINERADOS: os dois deram zero, com o número
+
+**GoHire** (a família sem captcha, a que rendeu as duas de 20/09): `sitemap.txt` responde 200 com 1.682.994 bytes e **20.490 URLs** (eram 20.470 em 20/09 e 20.488 na medição das 00h15 de hoje, ou seja **+2 na madrugada**). Minerado por dois vocabulários: **disciplina no slug = 14 acertos, e os 14 já têm decisão**; **porta espontânea no slug = 12 acertos e nenhum é estúdio** (empresa de resíduos de Bristol, consultoria econômica, fintech, engenharia de software, call center na Grécia).
+
+**Flatchr**, subindo o piso de 17 que eu mesmo deixei em aberto às 03h2x: dicionário ampliado com **193 nomes curados** de casa francófona de animação, VFX e jogo (Xilam, Mediawan, Fortiche, Mac Guff, TeamTO, Ankama, Blue Spirit, Superprod, Miyu, Mikros, Rodeo, Squeeze, Mélusine, Quantic Dream, Dontnod, Arkane, Shiro, Sandfall, Larian, Fishing Cactus e mais), gerando **1.184 slugs** pelo oráculo público.
+
+```
+1.184 consultas  ->  9 acertos  |  1.175 "does not exist"  |  0 falha de rede
+Os 9 acertos sao TODOS locatarios ja conhecidos do censo de 03h2x. ZERO locatario novo.
+```
+
+**O piso de 17 não subiu**, e agora com custo pago em vez de ressalva. Isso reforça o §2 da parte anterior: a família Flatchr está exaurida para esta campanha — 3 contas ativas, 1 espontânea, já enviada.
+
+### 6. O QUE ESTA RODADA NÃO FEZ
+
+- **NÃO ENVIOU NADA.** O placar do dia continua **4 formulários, 3 de personagem**, e a meta de 10 com 5 não avançou nesta rodada. Dito sem enfeite.
+- **Não cliquei em Submit em nenhum formulário do BambooHR.** Parei no diagnóstico do captcha porque (a) 7 locatários e uma chave única já respondem a pergunta e (b) os formulários de Guru, IoM, Cinesite, Amuse, Blazing Griffin e Mercury pedem **telefone e endereço**, e o classificador do modo auto desta sessão já recusou materializar esse dado três vezes, com a causa nomeada. **Ressalva honesta: eu não tenho o texto do servidor recusando o POST nesses sete** — tenho a variante do captcha (`size=normal`, `render=explicit`) e a chave única. Para os seis locatários medidos com clique antes de hoje, o texto existe; para estes, não. É indução forte, não prova de servidor.
+- **Não consegui separar, na parte anterior, "vaga fechada" de "conta desativada"** no 404 da candidatura do Flatchr. Segue sendo a ressalva mais fraca do dia.
+- **Não mexi em `tokens-ats-1809.csv`** para tirar as sete agências italianas, apesar de ter medido o ruído: mexer em arquivo de fila no fim de rodada é como se cometem os conflitos com outros agentes. **Fica recomendado, não feito.**
+- **Não toquei em `automacao/pessoas.csv` nem em `automacao/PESSOAS-SEM-CARTA.md`**, por ordem. Ambiente e props fora do escopo, por ordem. **A FILA DO VINI não recebeu item novo: ZERO.**
