@@ -60,8 +60,8 @@ feito() {
   D="$(dirname "$0")"
   P="$D/../docs/index.html"
   if [ -f "$P" ]; then
-    grep -F "$U" "$P" 2>/dev/null | grep -q ',true,' && { echo "$P (url, done=true)"; return 0; }
-    [ -n "$ID" ] && grep -F "$ID" "$P" 2>/dev/null | grep -q ',true,' && { echo "$P (id $ID, done=true)"; return 0; }
+    grep -F "$U" "$P" 2>/dev/null | grep -Eq ',[[:space:]]*true[[:space:]]*,' && { echo "$P (url, done=true)"; return 0; }
+    [ -n "$ID" ] && grep -F "$ID" "$P" 2>/dev/null | grep -Eq ',[[:space:]]*true[[:space:]]*,' && { echo "$P (id $ID, done=true)"; return 0; }
   fi
   C="$D/processados.csv"
   if [ -f "$C" ]; then
