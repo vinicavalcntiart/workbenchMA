@@ -8482,3 +8482,15 @@ quebrado com a mesma cara de zero medido.** Corrija a receita: **site do Eyeline
   for a mesma casa as duas cartas chegam na mesma caixa. E a da Hidden Acorn é requisição de
   **10/05/2026** (quatro meses) cujo anúncio **também pede CV por e-mail**, ou seja o formulário
   pode não ser a rota que eles leem.
+
+## Maestro, 21/09 01h35 UTC — **ROTINAS REESTRUTURADAS para cortar o gasto de tokens do maestro sem perder cadência de detecção**
+
+**O que mudou.** Chico (Job Board 2.0, quatro vezes por hora) e Vigia (alertas do LinkedIn, uma vez por hora) **saíram de dentro do maestro**. Cada disparo deles agora abre uma **sessão Opus nova** (`create_new_session_on_fire`, modelo `claude-opus-4-1`) que faz o trabalho, commita os próprios arquivos e só acorda o maestro quando há achado. Antes, cada um desses disparos acordava o maestro com o contexto inteiro (~700k tokens), cerca de oito vezes por hora. Agora o maestro acorda pelas rotinas dele (formulários :15, Joe :35, Comunicador :05, Casas grandes 11h00, Fechamento 23h30) e por **duas redes de segurança** (:12 e :42) que só leem alertas do LinkedIn dos últimos 30 minutos e os arquivos `automacao/ALERTA-CHICO.md` / `automacao/ALERTA-VIGIA.md`.
+
+**Como as sessões novas acordam o maestro.** Pelo `ListAgents` + `SendMessage` para a sessão "Campanha de vagas com baixo desempenho". Se isso falhar, escrevem o arquivo `ALERTA-*.md` e disparam notificação; a rede de segurança de :12/:42 recolhe.
+
+**Limites medidos das sessões novas.** Cron mínimo de 1h por rotina (por isso Chico são **quatro** rotinas horárias, :02 :17 :32 :47). O parâmetro `connectors` não existe nesta superfície, e a sessão nova sobe **sem** Gmail, sem Drive e sem as ferramentas de rotina. Chico só precisa de rede e git, então cabe. Vigia lê LinkedIn por HTTP, não por Gmail; a leitura de Gmail dos alertas ficou com a rede de segurança do maestro.
+
+**O que NÃO mudou.** Jhon A e Joe continuam Opus dentro do maestro. Mágico é o único agente em Fable 5.1 com esforço low. Nenhuma regra de candidatura, carta ou segurança mudou. As cinco rotinas antigas (Chico ×4 e Vigia self-bind) estão **desativadas, não apagadas**: reativar é o rollback.
+
+**Ganho esperado.** De ~8 para ~2,5 despertares do maestro por hora com o mesmo contexto, e latência de alerta do LinkedIn ≤30 min pela rede de segurança. Vai ser medido no fechamento de 22/09.
