@@ -17390,3 +17390,144 @@ escrita na cabeça.**
    caso da segunda), e nenhuma das duas tem domínio publicado em lugar nenhum que eu tenha aberto.
    **Não inventei `everybodyonboard.fr` nem `willproduction.fr`.** Ficam em
    `dominios-sem-pessoa.csv` com `sem-dominio-publicado`.
+
+## RODADA DAS 04h35 DE 21/09 (Joe) — **ALVO TROCADO POR ORDEM: ROTA, NÃO CARTA.** O Apps Script não roda desde 19/09 01h26 e a fila está em 53, então carta nova entraria em fila parada. **UMA ficha de pessoa, e ela só existe porque a casa NÃO tem rota de formulário: o quadro Pinpoint dela está com `{"data":[]}`.** As três rotas de quadro estão em `ESTUDIOS-SEM-CARTA.md`, que é de onde o Jhon A lê
+
+**Placar: 1 ficha de pessoa (teto da ordem era 3), 3 rotas de quadro de casa INÉDITA, 1 casa
+recusada por disciplina com o texto que a recusou, 0 rascunho criado, 0 navegador aberto,
+0 endereço montado, 0 segunda pessoa de casa nenhuma.**
+
+**Por que só UMA ficha, dito antes do resto:** a ordem foi explícita — pessoa só em casa **sem**
+rota de formulário. Das casas inéditas que achei, duas têm rota de formulário (Veles no
+SmartRecruiters com 9 requisições, Lockwood com espontânea viva no Workable) e por isso **não
+geram ficha de pessoa nenhuma**, por regra. Sobrou uma, e ela é boa.
+
+### O QUE ESTA RODADA MEDIU DE MÉTODO, EM ORDEM DE VALOR
+
+**1. A ARMADILHA DO PINPOINT, e eu quase publiquei o falso positivo.** `postings.json` devolve o
+conjunto de **demonstração** do Pinpoint (`Head of DEI - Belfast / - US / - UK`,
+`Marketing Manager`, `Customer Service Rep`, com Londres/Paris/Nova York) em **11 dos 20**
+locatários que sondei — **inclusive em `framestore.pinpointhq.com`, com 26.307 bytes de JSON que
+parecem reais**. Eu ia escrever "a Framestore tem quadro no Pinpoint" com base no tamanho da
+resposta. O discriminador é a string `Head of DEI` no corpo. Detalhe completo no §4 do
+`ESTUDIOS-SEM-CARTA.md`. **O oráculo de CONTA continua válido:** três slugs inventados
+(`naoexiste999xyz`, `zzqqwwertyuiop`, `pixarcharacterhouse9`) deram **404 com 11.684 bytes** os
+três.
+
+**2. NO PERSONIO, `/xml` PERDE 1 EM 4 LOCATÁRIOS VIVOS.** Medido nos 8 locatários vivos que achei:
+a raiz `https://<slug>.jobs.personio.de/` e `/search.json` devolveram **200 em 8 de 8**, e
+**`/xml` devolveu 404 em 2 de 8** (`3dqr-gmbh` e `hfv`). Quem fizer censo de Personio pelo feed XML
+registra 6 onde existem 8. **O oráculo é a raiz ou o `/search.json`, nunca o `/xml`.** Amostra
+pequena (n=8), dito como é. Controle do lado negativo: slug inexistente devolve **307**, não 404.
+
+**3. CORREÇÃO NO QUE O BRIEFING ESCREVEU EM 13/09 SOBRE A BUSCA GLOBAL DO SMARTRECRUITERS.** A
+tabela de 13/09 registra a rota como
+`jobs.smartrecruiters.com/sr-jobs/search?keyword=<termo>&limit=100&offset=<n>`, ou seja **como se
+paginasse**. **Não pagina.** Medido em `environment artist`: `offset=0`, `offset=100`,
+`offset=100&limit=100` e `page=2` devolveram os **mesmos 94 itens, com o mesmo primeiro título**
+(`Store Hiring and Training Lead`), e `totalFound` fixo em 1.877 nas quatro. **A cobertura dessa
+fonte vem só de variedade de TERMO, não de página** — quem escrever "paginei os 20.942" está
+errado. Fica a medição nova ao lado da antiga, como manda a regra 9 do contrato.
+
+**4. A BUSCA GLOBAL DO WORKABLE FOI RELIDA OITO DIAS DEPOIS E O RESULTADO FOI O MESMO ZERO, agora
+com o triplo de leitura.** Em 13/09 o Jhon B leu 1.047 anúncios em 14 termos e concluiu "zero vaga
+nova". Eu li **1.486 anúncios únicos** em **43 termos** (incluindo termos em francês, espanhol,
+alemão, italiano, polonês, holandês, finlandês e sueco, e nome de ferramenta), paginando de
+verdade pelo `pageToken` até 10 páginas por termo. Das que passam disciplina **e** escopo, as casas
+são **Side, Rebellion, One Of Us, Keywords, Sperasoft, Sawhorse e Bardel — todas já no
+repositório**, e a única inédita é a Lockwood. **Segunda medição independente do mesmo negativo:
+a busca global do Workable é rede de segurança, não mina.** Nota lateral: o `limit=100` que o
+BRIEFING diz devolver 400 é verdade, mas **sem parâmetro `limit` nenhum** a rota devolve 20 por
+página e pagina limpo — não precisa de `limit=20`.
+
+**5. O CENSO QUE NINGUÉM TINHA FEITO, e o rendimento honesto dele.** Os **3.358 slugs de casa do
+`censo-artstation-1709.csv`** (mais a variante sem hífen: **5.725 slugs distintos**) foram sondados
+em **três famílias que o censo de 17/09 NÃO cobriu** — Pinpoint, Personio e SmartRecruiters — num
+total de **17.175 requisições**. Resultado: **19 contas de Pinpoint** (das quais 11 são o conteúdo
+de demonstração do §1 e 6 estão com zero vaga), **12 locatários de Personio** e **9 de
+SmartRecruiters**. **3 sondagens não conferidas** (código 000/ERR), nunca zero. Lista completa em
+`automacao/censo-pinpoint-personio-sr-2109.csv`. **Das 40 contas, casas inéditas E da disciplina:
+uma, a Unbroken Studios.** O dicionário do ArtStation é de indie minúsculo e de empresa de
+tecnologia homônima, e isso agora está medido nestas três famílias também.
+
+### FICHA 1 — **Nilla Gelius**, *Director, HR & Studio Operations*, **UNBROKEN STUDIOS** (2120 Park Place, Suite 110, El Segundo, CA 90245, **EUA**) — `careers@unbrokenstudios.com` — **ALTA de endereço (PUBLICADO), com a ressalva de que é CAIXA FUNCIONAL COM DONO NOMEADO**
+
+- **URL aberta por mim nesta rodada:** `https://unbrokenstudios.com/` — **HTTP 200, 204.385 bytes,
+  4.736 caracteres de texto visível**. Mais o quadro:
+  `https://unbrokenstudios.pinpointhq.com/postings.json` — **200, 11 bytes, `{"data":[]}`** — e a
+  raiz dele, `https://unbrokenstudios.pinpointhq.com/` — **200, 75.363 bytes**, título
+  `Jobs at Unbroken Studios | Unbroken Studios Careers`.
+- **O endereço é PUBLICADO e vem COM nome e cargo colados nele**, em texto visível no rodapé de
+  contato da home, literal: *"Careers — Nilla Gelius, HR Director — careers@unbrokenstudios.com"*.
+  Ao lado, *"BIZDEV — Paul Ohanian, Chief Executive Officer — bizdev@unbrokenstudios.com"* e
+  *"Press — Robert Peeler, Community Manager — press@unbrokenstudios.com"*. O cargo completo dela
+  aparece no cartão de equipe: **`Nilla Gelius — Director, HR & Studio Operations`**. **Zero
+  `data-cfemail`, zero entidade HTML, zero base64, zero `(at)`. NADA FOI MONTADO:**
+  `nilla@unbrokenstudios.com`, `ngelius@` e `nilla.gelius@` não existem em lugar nenhum e não foram
+  escritos em lugar nenhum.
+- **POR QUE ESSA PESSOA E NÃO OUTRA DA CASA, e a resposta tem duas metades.** A casa publica 30
+  nomes com cargo, e a pessoa certa pela regra do BRIEF-JOE seria a **`Michelle Persson — Character
+  Art Director`**, que é literalmente a diretora de arte de personagem de uma casa de 30 pessoas.
+  **Ela não tem endereço publicado, e eu não montei nenhum.** Dos 30 nomes, os **únicos três** com
+  endereço são os do rodapé, e o de carreira é o dela. Então a carta vai para a Nilla **nomeando a
+  Michelle no corpo** — que é exatamente a terceira saída barata do fechamento fixo
+  (*"if someone else there is the right person for this, just point me"*).
+- **GANCHO COM A FRASE DA PRÓPRIA CASA, entre aspas, da página que eu abri:**
+  *"Unbroken Studios is an LA based team of 30 developers with proven track records of working on
+  some of the most memorable franchises such as Battlefield, Call of Duty, God of War and the
+  Arkham Series"*, e o convite explícito à espontânea: *"Find A Home With Us — Currently, we have
+  no open roles, but we're always looking for amazing talent. Get in touch"*. Catálogo publicado:
+  **Harry Potter: Quidditch Champions (2024)**, **Suicide Squad: Kill the Justice League (co-dev,
+  2024)**, **Fractured Lands**, **Fantastic Plastic Squad**. E a frase de porte que explica por que
+  vale: *"At the heart of our culture is creating a small studio with a strong sense of community
+  and the ability for everyone to have an impact."*
+- **A PROVA DE PERSONAGEM 3D ESTÁ NA PÁGINA DA PRÓPRIA CASA**, e é cargo, não inferência: além da
+  **Character Art Director**, a home publica `Leon Brazil — Studio Technical Animation Director`,
+  `Ronny Kim — Principal Animator`, `Jordan Jones — Expert Technical Animator`,
+  `Yanni Tripolitis — Lead VFX Artist`, `Autumn Clarey — Lead Environment Artist` e
+  `Rich Wong — Expert Environment Artist`. Departamento de personagem com direção própria, num
+  estúdio de 30.
+- **CASA FORA DOS EUA? NÃO — é dos EUA (El Segundo, Califórnia).** Portanto **a frase de realocação
+  NÃO entra** (regra 10).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em
+  `unbrokenstudios OR "Unbroken Studios" OR unbroken` → **`{}`**; e em
+  `"unbrokenstudios.com" OR Persson OR Gelius OR "Quidditch Champions"` → **`{}`**. No repositório,
+  buscando pelo **ENDEREÇO** e não pelo nome da casa: `careers@unbrokenstudios.com` = **0**,
+  `unbrokenstudios` = **0**, `Persson` = **0**, `Gelius` = **0** em `pessoas.csv`,
+  `processados.csv`, `docs/index.html` e `enviados.csv`. **CASA INÉDITA, primeiro toque.**
+- **AS RESSALVAS HONESTAS, e a primeira é a pior:**
+  1. **É caixa de RH numa casa dos EUA, e ele não tem autorização para trabalhar nos EUA.** O
+     BRIEF-JOE diz, com razão, que RH generalista descarta isso em cinco segundos sem abrir o
+     ArtStation. Esta ficha é **exatamente** o alvo que aquela regra manda evitar — e entra mesmo
+     assim por um motivo só: **é o único endereço que a casa publica**, e a casa convida espontânea
+     por escrito. Quem escrever tem de nomear a Michelle Persson no corpo, ou a carta morre no
+     checklist.
+  2. **Zero vaga hoje.** O quadro Pinpoint responde `{"data":[]}`. Não há requisição para citar, e
+     o gancho tem de ser o catálogo e o convite, não uma vaga.
+  3. **Cargo não reconferido fora do site da casa.** O cargo dela e o da Michelle vêm **só** da
+     home (fonte oficial da própria casa, e é o que a regra pede), mas eu **não** cruzei com
+     LinkedIn nem com crédito de jogo. Pela regra de 03/09, cargo desatualizado é pior que alvo
+     nenhum, e a home de 2026 é o melhor que tenho por `curl`.
+  4. **É caixa funcional.** Pela regra de 07/09, caixa funcional precisa ser vista publicada — e
+     esta está, em texto visível, com dono nomeado. Isso é o melhor caso de `careers@` que a
+     campanha já registrou, e continua sendo `careers@`.
+
+### O QUE ESTA RODADA NÃO FEZ, dito para a próxima não supor que fez
+
+- **Não criei rascunho nenhum** e não escrevi carta: as ferramentas de escrita do Gmail não estão
+  na minha lista, e a regra é "agente acha e verifica, maestro escreve".
+- **Não gastei a rodada em segunda pessoa de casa nenhuma**, por ordem. A A Film Estonia
+  (Kristel Tõldsepp, `kristel@afilm.ee`, endereço PUBLICADO e disciplina 3D provada três vezes)
+  **continua na mesa** desde 02h35, esperando o envio da carta do Meelis Arulepp.
+- **Não toquei em `enviados.csv`, `docs/index.html` nem `automacao/censo-flatchr-2109.csv`.** O
+  Jhon A está neles.
+- **Não abri navegador.** As seis dívidas de navegador nomeadas na ordem (`melusinestudio.com`,
+  `animoon.pl`, `storytoys.com`, `bigideafarm.com`, `wonderlegends.com`, `digibc.org`) continuam
+  intactas, e por ordem.
+- **Não subi o piso do censo.** 5.725 slugs vieram de **um** dicionário, o do ArtStation. Casa cujo
+  slug esse dicionário não gera continua invisível nas três famílias, e o custo de subir é conhecido:
+  mais nomes, uma requisição por slug por família.
+- **Não testei o envio de nenhuma das três rotas.** Não é meu papel, e no caso da Lockwood a parede
+  de 429 já está medida desde 19/09.
+- **Não achei endereço de pessoa para a Michelle Persson**, que é a pessoa que a regra realmente
+  queria. Isso é a maior perda da rodada e está dita em voz alta.
