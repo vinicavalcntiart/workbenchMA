@@ -8639,3 +8639,27 @@ IP**. Portanto:
 texto do servidor. Parede de conta (Infold), defeito de página (Microsoft), anexo recusado por
 Cloudflare no POST (eRecruiter) e teste técnico (Zack D Films) são quatro coisas diferentes, e só a
 terceira melhora com rede diferente.
+
+## 21/09, 04h15 — **O DESPERTAR POR `SendMessage` NÃO EXISTE NAS SESSÕES EXTERNAS, e isso foi descoberto por TESTE e não por acidente**
+
+Em 01h35 eu montei o Chico e o Vigia fora do maestro com dois caminhos de aviso: caminho 1 por
+`ListAgents` + `SendMessage` para esta sessão, caminho 2 por arquivo `automacao/ALERTA-*.md`. **O
+caminho 1 nunca funcionou.** Como todas as rodadas deram "nada novo", ele nunca foi exercitado, e a
+campanha teria descoberto isso na primeira vaga de verdade, que é o pior momento possível.
+
+**O teste:** às 02h29 eu disparei o Chico à mão com ordem de exercitar o despertar sem inventar
+vaga. Ele rodou (Sonnet, 55k de contexto, 4.409 tokens de saída, 24 centavos) e **não chegou
+mensagem nenhuma aqui**. A lista de ferramentas da sessão dele, lida no registro da própria sessão,
+é: `Bash, Write, Edit, Read, Glob, Grep, Agent, NotebookEdit, WebFetch, WebSearch, TaskStop,
+SearchMcpRegistry, SuggestConnectors, ListConnectors, Artifact`. **Não há `ListAgents`, não há
+`SendMessage`, não há `PushNotification`.**
+
+**A arquitetura nova, já aplicada nas cinco rotinas:** o arquivo `ALERTA-*.md` commitado e
+empurrado é o **único** caminho de despertar, e o push é o sinal. As redes de segurança do maestro
+passaram de duas para **quatro por hora** (`:12`, `:27`, `:42`, `:57`), então a latência do Job
+Board caiu de 30 para **15 minutos**. Isso custa dois despertares leves a mais por hora e paga pela
+ordem do Vini de 19/09: naquele quadro só os dez primeiros candidatos têm chance.
+
+**A lição de método, e ela vale para qualquer automação nova:** caminho de aviso que nunca foi
+exercitado é caminho que não existe. Quando o caso raro é justamente o caso que importa, ele tem de
+ser testado de propósito, com disparo à mão, antes de ser necessário.
