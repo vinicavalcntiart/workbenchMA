@@ -16964,3 +16964,47 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
   (`TV commercials and digital campaigns`, `360˚ videos and AR projects`), não de série longa.
 - **Segunda pessoa da casa, guardada (não escrever agora):** Horia Manolache, creative director,
   `horia.manolache@vana.ro`.
+
+### FICHA 4 — Nicolas Monteiro, Creative Producer, Brain Comet, Paris, França — `nico@brain-comet.com` — **ALTA de endereço, BAIXA de disciplina**
+
+- **URL aberta nesta rodada:** `https://www.brain-comet.com/` — **200, 995.111 bytes**. O site é
+  **Wix de página única**: `/team`, `/about`, `/contact` e mais seis rotas devolvem **404 com
+  2.206 bytes**, e o texto útil do site inteiro tem **1.513 caracteres**.
+- **Texto literal que prova nome e cargo**, no bloco `CREATIVE TEAM`:
+  `CREATIVE TEAM CREATIVE PRODUCERS JOHN BANANA Mail NICOLAS MONTEIRO Mail ART DIRECTOR MATHILDE MICHEA THIBAUT SCALESSE THIBAUD POURPLANCHE DEVELOPMENT ONDINE PORTIER Mail PRODUCTION DIANE CAMPOS Mail AURELIE GARNIER Mail`
+- **Como o endereço se prova, e é o mesmo molde do TrickStudio:** os botões `Mail` são `mailto:` e
+  cada um encosta no nome do seu cartão. Extraí os nove e **os nove batem**:
+  `john@` no cartão `JOHN BANANA`, `nico@` no cartão `NICOLAS MONTEIRO`, `ondine@` em
+  `ONDINE PORTIER`, `diane@` em `DIANE CAMPOS`, `aurelie@` em `AURELIE GARNIER`,
+  `françois@` em `FRANÇOIS ROLLET`, `clement@` em `CLEMENT PICHON`, `lou@` em `LOU COLLONGE-SENS`.
+  O nono é a caixa da casa, `contact@brain-comet.com`, escrita em texto visível sob `CONTACT`.
+  **Nenhum endereço foi montado.**
+- **Por que ESSA pessoa e não outra da casa:** os `CREATIVE PRODUCERS` são dois. John Banana é o
+  fundador e vem do estúdio dele (`Digital Banana studio`); o Nicolas é o produtor criativo que a
+  feira nomeia: `Main Producer / Brain Comet / (France) / Nicolas Monteiro`.
+- **Disciplina pela rubrica da feira:** projeto *Adonis*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-435234-645473`
+  (**200, 54.860 bytes**), `Format TV series`, `Duration 13 x 26'`, `Target audience Teenagers 12-15`,
+  **`Techniques 2D computer, 3D computer, Drawing, Cut-out & Painting`**, `Country France`,
+  `Adaptation from "Reminiscence Adonis" (Webtoon)`. **Quarto dos 9 projetos que o filtro antigo
+  perdia** — e note que aqui `3D computer` está no MEIO de uma lista de cinco técnicas, que é
+  exatamente o caso que um `==` perde.
+- **Gancho, com a frase da própria casa entre aspas:**
+  **"Founded in 2021 by John Banana (Digital Banana studio) Brain Comet is a production company specializing in the development of original series and films with strong international potential"**,
+  e o lema impresso no topo é **"We come in pitch"**. A casa se declara
+  **"part of the STUDIO TF1"** e lista como parceiros `DIGITAL BANANA STUDIO`, `BLUE SPIRIT`,
+  `STUDIO TF1`.
+- **Fora dos EUA (França):** sim — **a frase de realocação entra**.
+- **Dedupe:** Gmail com `"brain comet"` (na consulta da ficha 1) devolveu **`{}`**; `brain-comet`
+  = 0 em `pessoas.csv`, `enviados.csv` e `ESTUDIOS-SEM-CARTA.md`. **Casa inédita.** *Atenção do
+  maestro:* a Brain Comet lista a **Blue Spirit** como parceira, e a Blue Spirit **já recebeu duas
+  cartas** (`eleanor@spirit-prod.com` 09/09 + follow-up 18/09; `contact.france@spirit-prod.com`
+  26/08 + follow-up 02/09). São empresas diferentes e caixas diferentes, mas o mundo é pequeno.
+- **RESSALVA HONESTA, e ela é forte o bastante para o maestro segurar:** **a palavra `3D` não
+  aparece nenhuma vez no site da Brain Comet.** A casa se descreve como empresa de
+  **desenvolvimento** de IP (`World builders`, `IP-driven creators, strategic storytellers`), e
+  diz que vai `from animation to live-action` — ela não tem pipeline, ela empacota projeto e
+  manda produzir fora (Digital Banana, Blue Spirit). Quem vai modelar o personagem de *Adonis*
+  quase certamente **não é a Brain Comet**. O endereço é ótimo; a casa é uma porta, não uma vaga.
+- **Segunda pessoa da casa, guardada (não escrever agora):** John Banana, Creative Producer e
+  fundador, `john@brain-comet.com`.
