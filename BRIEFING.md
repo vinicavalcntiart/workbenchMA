@@ -8808,3 +8808,39 @@ Os 9 acertos sao TODOS locatarios ja conhecidos do censo de 03h2x. ZERO locatari
 - **Não consegui separar, na parte anterior, "vaga fechada" de "conta desativada"** no 404 da candidatura do Flatchr. Segue sendo a ressalva mais fraca do dia.
 - **Não mexi em `tokens-ats-1809.csv`** para tirar as sete agências italianas, apesar de ter medido o ruído: mexer em arquivo de fila no fim de rodada é como se cometem os conflitos com outros agentes. **Fica recomendado, não feito.**
 - **Não toquei em `automacao/pessoas.csv` nem em `automacao/PESSOAS-SEM-CARTA.md`**, por ordem. Ambiente e props fora do escopo, por ordem. **A FILA DO VINI não recebeu item novo: ZERO.**
+
+## 21/09, 07h1x — **QUATRO REGRAS NOVAS DE DEDUPE E DE CENSO, todas nascidas de erro medido hoje**
+
+**1. A FÁBRICA DE FALSA ESPONTÂNEA DO PERSONIO, e ela fura o dedupe por id.** O Personio semeia conta
+nova com um conjunto fixo de vagas de demonstração: `SEO Marketing Manager`, `Social Media
+(Working Student/Werkstudent)` e uma de `General Application` / `Initiativbewerbung` /
+`Unsolicited Application`. Medido em **18 locatários**, e **17 anunciam porta de espontânea que não
+existe**. É pior que o `Head of DEI` do Pinpoint: lá o demo repete o mesmo id em todo mundo, **aqui
+cada locatário recebe id PRÓPRIO, então o dedupe por id passa limpo e o falso positivo entra no
+painel**. Discriminadores: o conjunto de títulos, e o `<title>` da página sem nome de empresa.
+Armadilha dentro da armadilha: `fatsharkstudios` traz o endereço real da Fatshark em Estocolmo nas
+três vagas de demo, ou seja **locatário verdadeiro com vaga falsa**.
+
+**2. DEDUPE POR ID É OBRIGATÓRIO E INSUFICIENTE.** Três modos de falha, os três medidos hoje:
+a Bongfish (06/09) está no painel e em `processados.csv` mas **não tem linha em `enviados.csv`**;
+a Lightbox `2316473` dá **zero nos dois CSVs** e só o painel sabe; e a vaga de Cebu `2628421` foi
+vetada em 13/09 **pelo título**, sem id anotado. **Grep de ID, de NOME DA CASA e de TÍTULO, nos três
+arquivos.** Registro antigo sem id é a causa raiz das três.
+
+**3. O ORÁCULO DO PERSONIO TEM TRÊS RESPOSTAS, não duas.** A versão que eu escrevi às 06h35 ("307 =
+não é locatário, 200 = existe") **esconde locatário vivo**: **15 de 73 deram 404 no `/xml` e 200 na
+raiz, e cinco desses têm vaga de verdade**. A queda certa é **404 → raiz → `/search.json`**. É também
+por isso que `astragon` e `limbic` deram 307 no meu censo DACH e quem abre é o slug **com** sufixo
+(`astragon-entertainment`, `limbic-entertainment`, os dois 404 no `/xml`).
+
+**4. GUARDE OS NEGATIVOS DO CENSO.** A rodada do Flatchr das 04h5x gerou 1.184 apelidos, guardou só
+os 9 acertos e jogou o dicionário fora; a rodada das 06h35 não teve como subtrair e **perguntou de
+novo**. Eu mesmo perdi um dicionário de 112 apelidos às 05h3x pelo mesmo motivo. Guardar negativo
+custa bytes. Não guardar custa a rodada seguinte.
+
+**E a porta que apareceu:** **AIRBORN STUDIOS** (`airbornstudios.jobs.personio.de`), a primeira casa
+da `alvos.csv`, referência mundial em personagem estilizado, estava **SEM-PORTA desde 04/09** (carta
+quicada em 26/08, reenvio sem resposta em 26 dias). Agora tem quadro, e ele responde **200 com
+`<workzag-jobs/>` vazio**: não há o que candidatar hoje, então ela entrou como **vigia de uma
+requisição só** no passo 2b da rotina horária do Vigia. Identidade provada pelo **logo** que o
+locatário subiu, não pelo apelido, porque apelido não prova casa.
