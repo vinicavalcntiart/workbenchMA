@@ -17748,3 +17748,40 @@ vetos estavam escritos, e o `pessoas.csv` devolvia zero para os dois endereços.
 - **Não achei endereço para as duas pessoas que a disciplina realmente queria** (Josh Lennen, na
   Digital CyberCherries, e Katie Noble, na Saltstone). Isso é a maior perda da rodada e está dita em
   voz alta: as duas cartas dependem de o leitor encaminhar.
+
+### 5. ADENDO DA MESMA RODADA (depois das duas fichas, com o tempo que sobrou): **A VEIA `/careers` + `/jobs` COMO FONTE DE ENDEREÇO DE PESSOA FOI MEDIDA EM 1.040 DOMÍNIOS DE PAÍS PRIORITÁRIO — ela EXISTE, e o que ela devolve hoje é sobretudo casa que a campanha JÁ TEM**
+
+**O que rodou:** os 1.040 domínios de Canadá, Reino Unido, Holanda, Suécia, Noruega, Dinamarca,
+Finlândia e Islândia que saem de `garimpo-cgstudiomap.csv` + `censo-wikidata.csv`, em sete caminhos
+de vaga (`/careers`, `/jobs`, `/vacancies`, `/recruitment`, `/join-us`, `/work-with-us`,
+`/careers/jobs`), extraindo endereço **em forma de pessoa** com decodificação de `data-cfemail`,
+entidade HTML e `%40`. Cerca de **7.300 requisições**. A ideia é a que o BRIEF não cobria: **o
+anúncio de vaga costuma escrever "mande para <pessoa>@", e isso é endereço PUBLICADO**, não montado.
+
+**Rendimento honesto: 41 domínios com endereço de pessoa, e ZERO ficha nova.** O motivo, um por um:
+
+| Casa | Endereço publicado na página de vaga | Por que não virou ficha |
+|---|---|---|
+| **Wil Film** (Copenhague) | `morten.stahlhut@wilfilm.dk`, pareado com o cargo dentro do anúncio (*"send your application to Line Producer Morten Stahlhut at:"*) | **VETO DE VISTO ESCRITO**, já registrado em 19/09: *"Apply for an open position ONLY if you are a EU pass holder"*. A casa está fechada e o Erik Wilstrup já recebeu carta em 15/09 |
+| **Aardman** (Bristol) | `pauline.mallam@aardman.com` | **Já é ficha** de 09/09 (*Equality, Diversity and Inclusion Manager*) |
+| **Humain** (Reino Unido) | `greg@humain-studios.com` + `maeve@humain.co.uk` (**armadilha de domínio: dois domínios na mesma página**) | **Já é ficha** de 14/09 (Greg Maguire, fundador, ex-Creature Supervisor da ILM) |
+| **Brink Helsinki** | `ilari@` e `molla@brinkhelsinki.com` | **TETO BATIDO**: Ilari Koskinen (14/09) e Alexander Seraidaris (19/09) |
+| **Electric Square** (Brighton) | `charlotte.pook@electricsquare.com` | **TETO BATIDO**: Charlotte Pook e Nathan Gouveia, os dois de 07/09 |
+| **Starbreeze** | `marina.jonsdottir@starbreeze.com` (campo `recruiter-email` do Teamtailor) | Já conhecido desde 07/09 |
+| **Alter Ego Post** (**Toronto + VANCOUVER + Los Angeles**) | **OITO** endereços de pessoa com cargo na `/careers` (200, 53.193 bytes): Greg Edgar *CEO/Managing Partner*, **Craig Harris *Managing Partner / Vancouver***, Hilda Pereira *VP/EP*, Pravina Sippy *EP/LA*, Genna McAuliffe *EP/Long Form*, Jane Garrah *EP/Colour*, mais `careers@` | **MORREU POR DISCIPLINA**, e é a morte da BUCK e da Golden Wolf outra vez: a casa se descreve como *"a diverse team of experts in the art of colour grading, visual effects and motion design"*, os três menus são **Colour / VFX & Finishing / Motion Design**, e **nenhum dos oito cargos é de arte ou de CG** — são CEO, produtores executivos e vendas. Zero 3D, zero personagem, zero criatura nas páginas. **Registro os oito aqui para ninguém reabrir a casa achando que achou Vancouver** |
+| **Owl House Studios** (Reino Unido) | `john@owlhousestudios.com`, com o cargo colado: *"John Cope — Partner & Producer, responsible for onboarding of new team members"* — é literalmente a porta de contratação | **MORREU POR DISCIPLINA, e pela definição que a própria casa dá de 3D**: a home vende *"traditional 2D, 3D and Stop Motion"*, mas o item 3D diz *"Layering of multiple 2D animated objects to create a multi-dimensional movie"*, ou seja **2,5D**, e a carteira de clientes é videoclipe (Steven Wilson, Metallica, Opeth). Sem pipeline 3D, sem escultura |
+| **Stardust Effects** (Oslo + Atenas) | só `mail@stardusteffects.no` | Formulário de vaga lista *3D Generalist*, *Effects*, *TD* e pergunta Houdini/Maya/Unreal — **é rota de formulário (matéria do Jhon), não pessoa** |
+| **Solid Clouds** (Reykjavík) | `stefangun@solidclouds.com` na `/jobs` (**armadilha de domínio: site `.is`, email `.com`**) | Endereço **sem nome e sem cargo ao lado** — o `stefangun` não é pareado com pessoa nenhuma na página, e a casa é de jogo de estratégia (*Starborne*). Fica registrado, não virou ficha |
+| Barnstorm (`andie@`), Global Mechanic (`brodie@`), ICON (`carson@`), Cocoa (`anton@cocoa.fi`), Filimundus (`linus.feldt@`), Zoic (`zoic-ep@`) | publicados | **todos já estão em `pessoas.csv`** |
+| Beenox, Capybara, BUF, Guru, HB Studios, Frima, Freefolk, IOI, King, EA, Frontier, Dambuster, Coldwood, Fast Travel, Noodlecake, Sabotage, Krillbite, Midjiwan, Metanet, Mercury Filmworks, Portfolio/9 Story, Funko Animation, Gagarin, Gamedia, Hydralab, Shortcut Oslo, Switch, Magmic, Volta, Taqqut, By The Booth, Fort York, Animated Company, Drawesome, Filmic Art, Xicat, Player Unknown, Radical Forge, Size Five, Inkle, Canalside, airG, Lightbrick, NetEase Montréal, Pocket Sized Hands, Starship, Ko-op | — | caixa funcional, imagem `@2x.png` lida como email, placeholder de template, ou endereço de **outro** domínio (agência, ATS, grupo) |
+
+**Duas regras que saem deste adendo:**
+
+1. **A veia `/careers` como fonte de PESSOA é boa e é barata, mas ela é de CONFIRMAÇÃO nesta altura
+   da campanha.** Das 41 casas, **seis** já estavam em `pessoas.csv` e **quatro** estavam no teto ou
+   com veto. Quem rodar isto de novo precisa **subtrair o repositório ANTES de abrir a página**, e
+   não depois, ou repete o meu gasto.
+2. **O campo `recruiter-email` do Teamtailor foi medido pela segunda vez, agora em 1.040 domínios ×
+   7 caminhos: devolveu UM, e é o `marina.jonsdottir@starbreeze.com` que já se conhecia.** A nota de
+   07/09 (*"rica mas rara"*) fica confirmada com número maior: **a veia é rara mesmo, e não vale
+   varredura ampla** — vale um teste de duas requisições em casa nova.
