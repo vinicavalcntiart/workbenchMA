@@ -70,7 +70,7 @@ assim, pela sua mão.
 Texto para o campo de carta: o mesmo bloco ATS da fila de cliques (sem emoji). Autorização de
 trabalho sempre com a verdade.
 
-> **CORREÇÃO DE 21/09 11h4x UTC (Mágico): a tabela acima promete mais do que existe, e eu medi as
+> **CORREÇÃO DE 21/09 03h37 UTC (Mágico): a tabela acima promete mais do que existe, e eu medi as
 > onze uma a uma.** Pela API pública da plataforma e, onde ela dá 404, pela API interna do próprio
 > quadro: **`kolibrigames`, `immutable` e `dailywire` devolvem `jobBoard: null`** — não existe
 > quadro nesses três endereços; **`jito` só responde como `jito-labs`** e são quatro vagas de cripto
@@ -210,7 +210,7 @@ da casa pedem coisa que eu não tenho — a de Singapura pede **código por SMS 
 pede **login do Google ou do LinkedIn**, que são as suas contas pessoais e eu não entro nelas.
 Não é captcha: não existe reCAPTCHA, hCaptcha, Turnstile nem DataDome em nenhuma das duas telas.
 
-> **ATUALIZAÇÃO DE 21/09 11h25 UTC (Mágico, rodada 3): o formulário já está preenchido até a última
+> **ATUALIZAÇÃO DE 21/09 03h26 UTC (Mágico, rodada 3): o formulário já está preenchido até a última
 > linha e a única coisa que falta é o seu clique no Google.** Eu reabri a porta e ela abriu mais do
 > que estava escrito: o endereço `career.infoldgames.com/EN/apply/7639286868983384370` **renderiza o
 > formulário inteiro sem conta**, e eu o preenchi todo (nome, telefone +55, e-mail, LinkedIn, as
