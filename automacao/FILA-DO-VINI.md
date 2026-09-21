@@ -7,15 +7,41 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
-### 🟡 ENTROU EM 20/09 11h50 UTC (Jhon B, casas grandes) — **ALERTA DE VAGA DA MICROSOFT / XBOX GAME STUDIOS**, três cliques, sem captcha
+### 🟠 ATUALIZADO 21/09 02h5x UTC (Mágico) — **ALERTA DE VAGA DA MICROSOFT / XBOX GAME STUDIOS**: a barreira de área foi resolvida, mas apareceu uma NOVA e ela não é captcha
 
-`https://careers.microsoft.com/careers/join?domain=microsoft.com` ← **ABRA ESTA.** Cobre 343 (Halo), The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang, ZeniMax e Bethesda, e a campanha nunca teve alerta nenhum desse grupo.
+`https://careers.microsoft.com/careers/join?domain=microsoft.com` ← Cobre 343 (Halo), The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang, ZeniMax e Bethesda, e a campanha nunca teve alerta nenhum desse grupo.
 
-A automação preencheu nome, sobrenome, e-mail e país, subiu o CV (POST 200) e parou no campo
-obrigatório **"Desired area of work"**, um seletor de tags cuja lista não se deixa ler por script.
-Escolha **Art** (ou o mais próximo de *Art / Animation / Games*), clique em **Join Talent Network**
-(o botão, não o link do menu) e pronto. Controle: um e-mail de `microsoft.com` ou `eightfold.ai`
-na caixa confirma.
+**O que mudou:** o campo "Desired area of work" (que travava a rodada de 20/09) foi resolvido —
+é um react-select v1 que abre por mousedown e "Design & Creative" é escolhido e gravado
+corretamente, confirmado na tela. Não é mais parede.
+
+**O que apareceu no lugar, medido em CINCO tentativas reais de envio (não é palpite):** o clique
+em "Join Talent Network" sempre dispara o POST real (`/api/apply/v2/resume?domain=microsoft.com&
+source=talentnetwork`), mas o servidor devolve, sempre, `HTTP 400` com o corpo literal
+`{"message": "Please try again"}`. Nas cinco tentativas testei formas diferentes de marcar a
+caixa obrigatória "I agree to receive electronic communication..." (clique no ícone visível,
+clique real no input escondido, clique via label, tecla Espaço, combinação de todas) e CONFIRMEI
+por leitura do corpo real enviado (`postData()`, não a leitura de volta da tela) que o campo
+`notifications_checkbox_accepted` do formulário sai **sempre `false`** no POST, mesmo quando o
+ícone mostra marcado e o `<input>` real mostra `checked:true` no DOM. Ou seja: a marcação visual
+não é a mesma coisa que o estado que o formulário de fato envia — parece bug de sincronização
+da própria página da Microsoft/Eightfold, não campo obrigatório esquecido por nós.
+
+**Por que isto pode ser rate-limit e não bug de checkbox:** as cinco tentativas foram todas com a
+mesma identidade (mesmo CV, candidato reconhecido pelo servidor como `enc_id R3AV9MGO6b8`) em
+menos de 20 minutos. O erro genérico "Please try again", idêntico em todas as tentativas
+independente do estado real da caixa, é a assinatura clássica de bloqueio anti-abuso, não de
+validação de campo. Zero captcha, zero desafio de imagem, zero Turnstile: o reCAPTCHA v3
+invisível da página RODA sozinho e devolve token (`rresp`) sem pedir nada visível — não há
+desafio interativo aqui, então este item **não se qualifica** para "prova de desafio interativo".
+
+**Recomendação para reabrir:** esperar pelo menos algumas horas (o bloqueio, se for por IP/
+identidade, deve resetar) e tentar UMA VEZ pelo navegador do Vini (rede e sessão diferentes das
+nossas, tal como a família Ashby). Passos: abrir a URL, anexar o CV, escolher a área de trabalho
+mais próxima de Art/Design (aparece como **"Design & Creative"** na lista), marcar a caixa de
+consentimento e clicar em **Join Talent Network** (o botão do formulário, não o link do menu, que
+só reabre a página numa aba nova sem POST nenhum). Controle: um e-mail de `microsoft.com` ou
+`eightfold.ai` na caixa confirma.
 
 ### 🔴 ENTROU EM 20/09 05h40 UTC (Jhon A, rodada 04h15) — **ONZE PORTAS DE ASHBY ABREM DO SEU NAVEGADOR SEM CAPTCHA NENHUM**, e o rótulo "reCAPTCHA invisível" que as segurava desde 11/09 estava ERRADO
 
