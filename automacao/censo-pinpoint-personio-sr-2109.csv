@@ -1,0 +1,67 @@
+# CENSO PINPOINT x PERSONIO x SMARTRECRUITERS - Joe, 21/09/2026 04h35-05h5x UTC. So curl, zero navegador, zero envio.
+# O QUE E: os 3.358 slugs de casa do censo-artstation-1709.csv, mais a variante sem hifen (5.725 slugs distintos),
+#   sondados nas TRES familias que o censo de 17/09 NAO cobriu. O de 17/09 cobriu Greenhouse, Lever, Ashby,
+#   Teamtailor, Recruitee, Breezy e BambooHR; estas tres ficaram de fora e nunca tinham sido sondadas com este dicionario.
+# TOTAL: 17.175 requisicoes (5.725 x 3). Aqui estao SO as respostas positivas; o resto e inexistente e nao interessa guardar.
+# NAO CONFERIDO: 3 sondagens devolveram codigo 000 ou ERR (1 em cada familia). Nunca conte isso como zero.
+#
+# ORACULOS, com o controle de cada um medido nesta rodada:
+#   pinpoint        GET https://<slug>.pinpointhq.com/postings.json  -> 200 = CONTA existe | 404 (11.684 bytes) = nao existe
+#                   CONTROLE: naoexiste999xyz, zzqqwwertyuiop e pixarcharacterhouse9 deram 404 os tres.
+#   personio        GET https://<slug>.jobs.personio.de/             -> 200 = locatario existe | 307 = nao existe
+#                   NAO use /xml: ele devolveu 404 em 2 de 8 locatarios VIVOS (3dqr-gmbh, hfv). /search.json deu 200 em 8 de 8.
+#   smartrecruiters GET https://api.smartrecruiters.com/v1/companies/<slug>/postings?limit=1 -> le totalFound
+#                   ATENCAO: slug inexistente devolve 200 com 50 bytes e totalFound=0, NAO 404. O oraculo e o totalFound.
+#
+# A ARMADILHA QUE ESTA RODADA MEDIU, E ELA INVALIDA CONTAGEM POR BYTE NO PINPOINT:
+#   postings.json devolve o conjunto de DEMONSTRACAO do Pinpoint (Head of DEI - Belfast / - US / - UK,
+#   Marketing Manager, Customer Service Rep, em Londres/Paris/Nova York) em 11 dos 20 locatarios sondados,
+#   INCLUSIVE em framestore.pinpointhq.com, com 26.307 bytes de JSON que parecem reais (tem texto de beneficios e de DEI).
+#   O discriminador e a string 'Head of DEI' no corpo. Quem conta bytes ou conta itens registra 11 quadros onde existem ZERO.
+#
+# RENDIMENTO HONESTO: 40 contas achadas, e casa INEDITA E da disciplina = UMA, a Unbroken Studios.
+#   O dicionario do ArtStation e feito de indie minusculo e de empresa de tecnologia homonima, e isso agora
+#   esta medido tambem nestas tres familias, nao so nas oito de 17/09.
+#
+# COLUNAS: familia,slug,casa,http,tamanho_ou_vagas,veredito
+familia,slug,casa,http,tamanho_ou_vagas,veredito
+pinpoint,ajaxcreative,Ajax Creative,200,40281,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,bendingspoons,Bending Spoons,200,41303,"CONTA REAL com vaga de verdade (sem ""Head of DEI"")"
+pinpoint,biggergames,Bigger Games,200,42204,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,bildstudios,Bild Studios,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,firstderivative,First Derivative,200,26325,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,genesis,Genesis Global,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,jetson,Jetson,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,labster,Labster,200,40256,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,netvrk,NETVRK,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,outform,OUTFORM,200,26293,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,penumbrainc,Penumbra Inc.,200,26305,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,plexus,Plexus,200,40240,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,productionclub,Production Club,200,40284,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,puttshack,Puttshack,200,37216,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,simwave,Simwave,200,40267,"CONTA REAL, conteudo de DEMONSTRACAO (string ""Head of DEI"" no corpo) = quadro NUNCA POVOADO"
+pinpoint,spiralyze,Spiralyze,200,423354,"CONTA REAL com vaga de verdade (sem ""Head of DEI"")"
+pinpoint,structurefi,Structure Financial,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,unbrokenstudios,Unbroken Studios,200,11,"CONTA REAL, ZERO vaga publicada ({""data"":[]})"
+pinpoint,zoox,Zoox,200,46684,"CONTA REAL com vaga de verdade (sem ""Head of DEI"")"
+personio,3dqr-gmbh,,200,59780,"1 vaga, Initiativbewerbung; casa de realidade aumentada | ATENCAO: /xml devolve 404 nesta conta VIVA - o oraculo e a raiz ou /search.json"
+personio,blue-ocean-entertainment-ag,,200,101562,"6 vagas de produto/RH/office - editora, zero pipeline"
+personio,demodern,,200,80237,"4 vagas: Initiativbewerbung, Digital Art Director / Designer, New Business Manager, Senior Digital Projektmanager - agencia digital, zero personagem"
+personio,factory42,,200,60041,"2 vagas, as DUAS Initiativbewerbung (espontanea) - zero titulo de disciplina"
+personio,hfv,,200,65581,2 vagas: DFB-MOBIL TEAMER*IN e Pflichtpraktikant*in PR - fora do ramo | ATENCAO: /xml devolve 404 nesta conta VIVA - o oraculo e a raiz ou /search.json
+personio,karakter-design-studio-gmbh,,200,75484,"quadro vivo; casa JA no repositorio (docs/index.html, processados.csv)"
+personio,nextrend-gmbh,,200,90974,quadro vivo; casa JA no repositorio
+personio,pixaera,,200,70478,quadro vivo; casa JA no repositorio
+personio,realworld-one,,200,88412,"4 vagas de estrategia/engenharia/seguranca - treinamento industrial em VR, zero arte"
+personio,renderthat,,200,75523,quadro vivo; casa JA no repositorio
+personio,simpleshow,,200,74056,"3 vagas: SEO Marketing Manager, Social Media, Initiativbewerbung - video explicativo 2D"
+personio,sviper-gmbh,,200,56515,quadro vivo; casa JA no repositorio (enviados.csv)
+smartrecruiters,1atelier,,200,2 vagas (totalFound),2 vagas - casa ja no repositorio
+smartrecruiters,activisionpublishing,,200,1 vagas (totalFound),1 vaga - casa grande ja conhecida
+smartrecruiters,gearinc,,200,2 vagas (totalFound),"2 vagas - Gear Inc, Vietna, FORA DO ESCOPO"
+smartrecruiters,glasseggdigitalmedia,,200,10 vagas (totalFound),"10 vagas - Glass Egg, Vietna, FORA DO ESCOPO geografico"
+smartrecruiters,griffithuniversity,,200,44 vagas (totalFound),"44 vagas - universidade australiana, fora do ramo"
+smartrecruiters,otafest,,200,1 vagas (totalFound),1 vaga - convencao
+smartrecruiters,sixense,,200,1 vagas (totalFound),1 vaga
+smartrecruiters,trick3d,,200,2 vagas (totalFound),"2 vagas (TECHNICAL ARTIST, Head of Accounts) - INEDITA e RECUSADA por disciplina: VR/AR/MR para marca, zero personagem"
+smartrecruiters,zeoalliance,,200,3 vagas (totalFound),3 vagas
