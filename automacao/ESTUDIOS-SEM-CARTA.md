@@ -455,3 +455,177 @@ que ela tem vaga. E conta povoada de verdade se reconhece pelo tamanho **com** a
 
 **E é por isso que a Unbroken Studios é a rota boa desta rodada:** o `{"data":[]}` de 11 bytes dela
 é honesto — conta real, zero vaga, e a casa **diz isso por escrito** na própria home.
+
+---
+
+## Joe, 21/09 06h35-08h UTC — **ROTAS, NÃO PESSOAS: o dicionário que faltava, resolvido contra os dois oráculos. 24.431 sondagens, 76 locatários, e ZERO porta enviável nova — as quatro portas de espontânea que apareceram eram TODAS nossas, e o dedupe pegou as quatro**
+
+**Placar sem enfeite: 0 carta, 0 rascunho, 0 formulário enviado, 0 navegador aberto, 0 duplicata
+cometida.** Censo inteiro em `automacao/censo-oraculos-2109.csv` (24.431 linhas, positivo **e**
+negativo). O que esta seção entrega é **rota de quadro** — e a rota que vale por si é uma só, mas é
+a casa número 1 da `alvos.csv`.
+
+### 1. A ROTA QUE VALE A RODADA — **AIRBORN STUDIOS**, Berlim, Alemanha
+
+- **Rota:** `https://airbornstudios.jobs.personio.de/` · quadro por `GET .../xml` → **HTTP 200 com
+  72 bytes**, isto é `<workzag-jobs/>` bem formado e **vazio: ZERO vaga publicada hoje**. Não é
+  resposta vazia, é XML válido com zero `<position>`.
+- **POR QUE ISTO É ACHADO E NÃO TRIVIALIDADE:** a Airborn é a **primeira linha da `alvos.csv`**
+  (*"Referência mundial em personagens estilizados (Overwatch; Spyro; Crash 4; Ori; Fortnite); rede
+  de artistas remotos"*) e estava registrada em `processados.csv` de 04/09 dentro da lista de casas
+  **SEM-PORTA**, junto com Ember Lab, Nuare e Goodbye Kansas. A carta de 26/08 para `jobs@`
+  **quicou** (*"Address not found"*), o reenvio para `contact@` foi entregue e **nunca teve resposta
+  humana**, e o follow-up de 07/09 morreu na mesma thread. **Agora a casa tem porta**: ela recruta
+  por Personio próprio, e isso não estava em lugar nenhum do repositório.
+- **A IDENTIDADE ESTÁ PROVADA, e não por slug.** O `<title>` da raiz vem **vazio** (`Jobs at`), que
+  é exatamente a marca de conta-casca. Então eu fui ao logo que o locatário subiu,
+  `https://assets.cdn.personio.de/logos/321299/social/dc2fd2f545abd7a479a677472f9041c2.png` →
+  **200, PNG de 1170x420**, e a imagem é **o logotipo da Airborn Studios** (a palavra AIRBORN com a
+  seta azul ascendente, e STUDIOS embaixo). Abri e olhei nesta rodada. Dos 10 locatários de título
+  vazio e quadro vazio, **nove têm o logo em 404** (conta nunca configurada) e **este é o único com
+  logo de verdade**.
+- **Dedupe, nos três arquivos:** `airborn` = 2 em `enviados.csv` (as duas cartas de 26/08), 4 em
+  `automacao/processados.csv`, 2 em `docs/index.html` — **e nenhuma das oito linhas menciona
+  Personio, quadro, portal ou candidatura.** A casa é conhecida; **a rota é nova.**
+- **O que fazer com ela, e é só isto:** é **alvo de vigia**, uma URL só, e o `/xml` é o endpoint
+  mais barato que existe para vigiar (72 bytes quando vazio). Quando abrir personagem, abre ali
+  antes de abrir em agregador. **Não há o que candidatar hoje**, e dizer o contrário seria inventar.
+
+### 2. AS OUTRAS ROTAS DE LOCATÁRIO VIVO COM IDENTIDADE CONFERIDA — todas com o número, todas de quadro vazio ou fora da disciplina
+
+| Casa (identidade lida por mim) | Rota | Quadro medido hoje |
+|---|---|---|
+| **Glowmade** (Guildford, Reino Unido) | `glowmade.jobs.personio.de` | **0 vaga**. Título vazio; identidade provada pelo **logo** (o mascote da Glowmade, `logos/269999`). `/xml` deu 404 e a raiz 200 — sem a queda para a raiz, este locatário teria sumido do censo |
+| **astragon Entertainment GmbH** (Mönchengladbach, DE) | `astragon-entertainment.jobs.personio.de` | **0 vaga**. `astragon` = **0 ocorrência** nos quatro arquivos: casa inédita. **O censo DACH de 05h5x mediu `astragon` como 307 "não é locatário"** — o locatário é o slug **com o sufixo**, e é exatamente por isso que a ordem pedia dicionário novo |
+| **Limbic Entertainment** (Langen, DE) | `limbic-entertainment.jobs.personio.de` | **0 vaga**. Mesma história: o censo DACH mediu `limbic` como 307. Casa **já conhecida** (1 em `enviados.csv`, 5 em `processados.csv`, 2 no painel) |
+| **Bandai Namco Mobile** (Barcelona, ES) | `bandainamcomobile.jobs.personio.de` | **0 vaga**. Casa já conhecida (4 em `processados.csv`, 2 no painel) |
+| **tobspr Games GmbH** (DE, *shapez*) | `tobspr.jobs.personio.de` | **0 vaga** |
+| **Zeitland media & games GmbH** (DE) | `zeitland.jobs.personio.de` | **0 vaga**. Mesmo **logo 5455** da rcp — ver §4 |
+| **Blue Backpack GmbH** (DE) | `bluebackpack.jobs.personio.de` | **0 vaga** |
+| **Booming Games** (Malta / Remoto UE) | `booming-games.jobs.personio.de` | **4 vagas**, e a única de arte é `Technical Artist` **727284** (dedupe = 0 nos três arquivos, é inédita). **Fora da disciplina**: casa de *slot game*, zero personagem |
+| **Envision Entertainment GmbH** (Ingelheim, DE) | `envision-entertainment.jobs.personio.de` | **1 vaga**, `QA Internship` **1111501**. Fora da disciplina |
+| **Aesir Interactive** (Munique, DE) | `aesir.jobs.personio.de` | **15 vagas**, e **rota já conhecida** (o `Art Lead` 2385017 foi candidatado e confirmado em 06/09). Inéditas hoje e **todas fora da disciplina de personagem**: `2D Artist` 2380486, `VFX Artist` 2751097, `Technical Animator` 1773596, `Technical Art Lead` 2754909 |
+| **remote control productions GmbH** + **Chimera Entertainment GmbH** (Munique) | `remotecontrol.` e `chimera-entertainment.jobs.personio.de` | **4 vagas, e é UM quadro só** — ver §4. Espontânea `150955` **já enviada e confirmada em 06/09** |
+| **stillalive studios GmbH** (Innsbruck, AT) | `stillalive-studios.jobs.personio.de` | **0 vaga**, e é a **segunda porta** do `stillalive` que o censo DACH já tinha medido com zero |
+| **Lightbox Animation** (Madri/remoto) | `lightbox-animation-studios.jobs.personio.de` | **1 vaga**, `Mid/Senior CFX Artist` **2316473** — **JÁ ENVIADA E CONFIRMADA em 06/09**, ver §3 |
+
+**Homônimos que o slug entregaria como estúdio e não são, medidos um por um pelo `<title>` da
+raiz** — registro para ninguém reabrir: `buf` é a ótica **becker + flöge** de Hannover (não a BUF de
+Paris), `milk` é uma agência de eventos de Colônia (não a Milk VFX de Londres), `union` tem quadro
+**em alemão** (não a Union VFX de Londres), `atlantis` é marcenaria em Berlim, `aurora` é logística
+em Mudau, `vivid` é a fintech (não a Vivid Games), `circus` é cozinha robótica de Munique, `forward`
+é consultoria, `findling` vende SEO, `flow` é a FLOW media de Berlim, `cyan` é a cyan Security
+Group, `smg` é a REO Regionalentwicklung Oberland, `sdp` é a treeva, `alchemy` é a Alchemy
+Technology Services, `code` é a CODE Education, `mad` é a MAD Ventures, `lakestar` é fundo de
+capital, `spectral` é engenharia em Amsterdã (o logo diz **Spectral**, sem "Games"), `adhoc` é a
+ahjobs, `agens` é serviço de mercado de trabalho de Berlim.
+
+### 3. **AS QUATRO PORTAS DE ESPONTÂNEA QUE APARECERAM ERAM TODAS NOSSAS, E O DEDUPE POR ID PEGOU AS QUATRO**
+
+Isto é o §4 da ordem cumprido antes de qualquer anúncio, e o resultado **justifica a ordem**:
+
+| Porta | Casa | O que o dedupe devolveu |
+|---|---|---|
+| `1318003` `Initiative Application` | Stratosphere Games, Berlim | **DUPLICATA.** `enviados.csv` **1**, `processados.csv` **3**, painel **2** — enviada em **11/09** |
+| `2780991` `Join Tangelo Games – Open Application` | Tangelo Games, Barcelona | **DUPLICATA.** `enviados.csv` **1**, `processados.csv` **2**, painel **1** — enviada e confirmada em **19/09** |
+| `2316473` `Mid/Senior CFX Artist` | Lightbox Animation | **DUPLICATA, E SÓ O PAINEL SABIA.** `enviados.csv` **0**, `processados.csv` **0**, `docs/index.html` **1**: *"CANDIDATURA ENVIADA e CONFIRMADA em 06/09"* |
+| `150955` `speculative application (f/m/d)` | Chimera Entertainment, Munique | **DUPLICATA.** Enviada e confirmada em 06/09 (`remotecontrol-jobs@m.personio.com`, *"Confirmation of receipt"*), recusa de robô em 15/09 |
+
+> **A ordem avisou que dedupe só por `enviados.csv` é insuficiente, e a Lightbox é o SEGUNDO caso
+> depois da Bongfish: id `2316473` dá ZERO em `enviados.csv` E ZERO em `processados.csv`, e só
+> aparece no painel.** Se eu tivesse conferido dois arquivos em vez de três, teria anunciado porta
+> aberta numa candidatura de 06/09.
+
+**E há um terceiro modo de falha do dedupe, que esta rodada mediu e que o id não resolve.** A única
+vaga **da disciplina** do censo é `3D Artist Generalist - Modelling & Texturing` **2628421** (rcp /
+Chimera, criada em 08/05/2026). **Dedupe por id = ZERO nos três arquivos.** Mas o `BRIEFING.md` de
+13/09 já a tinha, **pelo título**: *"O único acerto de título em 46 quadros de Personio (Chimera
+Entertainment, 3D Artist Generalist — Modelling & Texturing) caiu na geografia: o posto é em Cebu,
+nas Filipinas"*. O registro antigo **não guardou o id**, como já tinha acontecido com a Deck13 e com
+a Bento Box. **Regra: grep de id, de NOME DE CASA e de TÍTULO — o id sozinho dá falso negativo
+sempre que o registro antigo não anotou número.** O veto geográfico das Filipinas continua valendo.
+
+### 4. DUAS COISAS DE MÉTODO QUE MUDAM A CONTA DE QUALQUER CENSO DE PERSONIO
+
+**(a) O `/xml` tem TRÊS respostas, e a terceira esconde locatário vivo.** A ordem me deu o oráculo
+como "307 = não é locatário, 200 = existe". **O 404 existe**, e **15 dos 73 locatários (20,5%)**
+responderam 404 no `/xml` e **200 na raiz** — entre eles a Glowmade, a astragon, a Limbic e a
+Lightbox. **Cinco dos 15 têm vaga de verdade.** Com o oráculo como estava escrito, esses 15 sairiam
+do censo como se não existissem. O aviso já estava no repositório desde 05h5x (`3dqr-gmbh` e `hfv`)
+e hoje ficou medido em escala. **A queda certa é: 404 → raiz → `/search.json`.**
+
+**(b) Locatário se conta por conjunto de id, não por slug.** `chimera-entertainment` e
+`remotecontrol` publicam **os mesmos quatro ids** (150955, 2628402, 2628421, 2628436): é **um**
+quadro com dois endereços. E o **logo `5455` é o mesmo** em `chimera-entertainment`,
+`remotecontrol`, `stillalive-studios` e `zeitland` — quatro slugs do grupo remote control
+productions de Munique. Contar 73 locatários como 73 organizações **infla**.
+
+### 5. **A FÁBRICA DE FALSA ESPONTÂNEA DO PERSONIO** — pior que a armadilha do Pinpoint, porque o dedupe por id passa limpo
+
+O Personio semeia conta nova com **três vagas de demonstração**:
+
+```
+"SEO Marketing Manager"
+"Social Media (Working Student)"  /  "Social Media (Werkstudent)"
+"General Application" | "Initiativbewerbung (Festanstellung)" | "Unsolicited Application"
+```
+
+**19 locatários de hoje têm esse conjunto, e 17 anunciam uma porta de espontânea que não é porta
+nenhuma:** `amazon` 1680079, `aquila` 2481248, `art` 403330, `bambino` 1339804, `boxelware`
+1352937, `clevr` 725941, `fatsharkstudios` 219149, `fresh` 2101011, `frvr` 1499268, `futurlab`
+1790136, `grizzly` 1761231, `jumpgate` 264765, `kaiko` 1436787, `new` 2019492, `sandbox` 1566871,
+`sports` 1823201, `vrtual-x` 561941.
+
+> **Por que é pior que o `Head of DEI` do Pinpoint:** lá o conteúdo de demonstração repete o **mesmo
+> id** em todos os locatários. **Aqui cada locatário recebe id PRÓPRIO**, então o grep de id nos três
+> arquivos devolve zero e a porta falsa entra no painel como achado novo. **Os discriminadores são
+> dois:** o conjunto de títulos acima, e o `<title>` da raiz **sem nome de empresa** (`Jobs at`,
+> `Jobs bei`, `Trabajos en`) ou literalmente `Demo Schweiz AG` / `Demo Datos`.
+
+**E a leitura fácil está errada:** a conta pode ser **da casa de verdade** e as vagas serem de
+demonstração. O `fatsharkstudios` traz o **endereço real da Fatshark em Estocolmo**
+(`Rosenlundsgatan 29C`) nas três vagas de demo. Nesse caso **o locatário é verdadeiro e a VAGA é
+falsa**, e é essa distinção que decide se se candidata.
+
+### 6. FLATCHR: o piso de 17 subiu para 20 locatários e o rendimento útil é **ZERO**, agora com custo pago
+
+2.233 sondagens (dicionário francófono novo, vindo do gamedevmap França/Bélgica/Suíça/Canadá e das
+linhas sem rota de `dominios-sem-pessoa.csv`), **0 falha de rede, 0 429**. Três locatários novos, e
+os três morrem:
+
+- `totem` → **conta ATIVA** (`status=1`), mas `name=TOTEM`, `web=totemformation.fr`: **escola de
+  formação**, não estúdio. Fora da disciplina.
+- `millionvictories` → `status=0`, **conta desativada**. Pela correlação perfeita medida em 04h2x
+  (n=17, zero exceção), conta desativada **não abre quadro**.
+- `helios` → `status=0` e `web` **vazio**: desativada e sem nem domínio publicado.
+
+**A família Flatchr segue exaurida para esta campanha**, e agora o piso é 20 em vez de 17.
+
+### 7. O QUE ESTA RODADA NÃO FEZ
+
+- **Não escreveu carta, não criou rascunho e não abriu ficha de pessoa nenhuma.** A ordem autorizava
+  **uma** ficha se aparecesse casa inédita com personagem provado **e sem** rota de formulário, e
+  esse caso **não apareceu**: a única casa inédita de peso do censo (astragon) **tem** rota de
+  quadro, e a Airborn, que é a casa de personagem, também passou a ter. Pela convenção
+  `ROTA-DE-QUADRO` de `dominios-sem-pessoa.csv`, casa com quadro **não precisa de pessoa**.
+- **Não sondei o Personio com o dicionário do ArtStation de novo**, porque os 5.907 slugs de 17/09 e
+  de 04h35 foram subtraídos de propósito. Isso significa que **este censo não é um censo do
+  Personio**: é o censo do **dicionário novo**. Casa cujo apelido nenhuma das duas listas gerou
+  continua invisível, e isso não tem como ser medido por dentro — **não existe listagem pública de
+  locatário em nenhuma das duas famílias.**
+- **Não abri o quadro dos 19 locatários de demonstração para confirmar que o formulário deles
+  responde.** A ressalva honesta: eu provo que o **conteúdo** é de demonstração (conjunto de títulos
+  + título de página sem empresa), **não** provo que o POST seria recusado. Não vou testar: seria
+  candidatura de mentira numa conta de avaliação.
+- **Não resolvi a identidade de nove locatários** (`amber`, `amc`, `carbon`, `cradle`,
+  `liquid-swords`, `milford`, `pathos`, `capital`, `homa-games`): título vazio **e** logo em 404.
+  Dois deles doem, e digo qual é o custo: `amber` e `amc` seriam a **Amber** e a **AMC Studio**, as
+  duas romenas e as duas de *outsourcing* de personagem. **Não escrevi que são elas**, porque slug
+  não prova casa. Resolver isso exige o site da casa dizendo qual é o quadro dela, e aí é dívida de
+  navegador nas que são SPA.
+- **Não gerei apelido com sufixo para nome de duas palavras ou mais.** Foi escolha de custo: teria
+  multiplicado 22.289 por cerca de seis. **Isso é um buraco real do dicionário** — se existir
+  `nomecomposto-studio.jobs.personio.de`, ele não foi perguntado.
+- **Não toquei em `enviados.csv`, `docs/index.html`, `automacao/pessoas.csv` nem em
+  `automacao/censo-personio-dach-2109.csv`**, por ordem. **A FILA DO VINI não recebeu item novo:
+  ZERO** — não houve captcha nem parede, porque não houve envio.
