@@ -274,7 +274,7 @@ para sair em lote.
 
 ### Framestore — **Blender Generalist**, Londres, Reino Unido — requisição Recruitee **2709436**
 
-**Rascunho: `PENDENTE-maestro-escreve`. Eu não escrevo carta.**
+**Rascunho: `RASCUNHO CRIADO r-3381507690627153907 (maestro, 21/09 02h5x; assunto exato exigido pelo anuncio, modo ATS sem emoji, 244 palavras, respostas do open_questions dentro: portfolio, localizacao atual, cidadania com patrocinio, disponibilidade, pretensao GBP 50.000 pelo item de casa grande da politica de 04/09). Sai na proxima rodada do enviarRascunhos do Vini.`. Eu não escrevo carta.**
 
 | Campo | Valor |
 |---|---|
