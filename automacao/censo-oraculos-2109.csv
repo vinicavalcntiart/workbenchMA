@@ -53,7 +53,11 @@
 #   O PERSONIO SEMEIA CONTA NOVA COM UM CONJUNTO DE TRES VAGAS DE DEMONSTRACAO:
 #       "SEO Marketing Manager" + "Social Media (Working Student|Werkstudent)"
 #       + "General Application" | "Initiativbewerbung (Festanstellung)" | "Unsolicited Application"
-#   19 locatarios de hoje tem esse conjunto, e 17 deles anunciam uma porta de espontanea que NAO E PORTA NENHUMA.
+#   18 locatarios de hoje tem DUAS OU MAIS dessas chaves, e 17 deles anunciam uma porta de espontanea que NAO E
+#   PORTA NENHUMA. (CORRECAO da primeira versao deste cabecalho, que escreveu 19: o numero contado e 18. O 19o e o
+#   breakfirst, que tem UMA chave so e por isso NAO entra na conta - mas ele traz seis vagas no bloco de ids
+#   CONSECUTIVO 2603797..2603802, misturando SEO, motorista em Frankfurt, consultor de seguranca e Bewerberpool,
+#   o que e demonstracao por outro molde. Fica como SUSPEITO, nao como medido.)
 #   E PIOR QUE A ARMADILHA DO PINPOINT ("Head of DEI"), por um motivo de metodo: no Pinpoint o conteudo de demo
 #   repete o MESMO id; aqui CADA locatario recebe id PROPRIO (amazon 1680079, art 403330, boxelware 1352937,
 #   fatsharkstudios 219149, jumpgate 264765 ...), entao DEDUPE POR ID PASSA LIMPO e o falso positivo entra.

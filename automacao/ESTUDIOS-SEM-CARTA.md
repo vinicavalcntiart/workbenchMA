@@ -570,8 +570,8 @@ O Personio semeia conta nova com **três vagas de demonstração**:
 "General Application" | "Initiativbewerbung (Festanstellung)" | "Unsolicited Application"
 ```
 
-**19 locatários de hoje têm esse conjunto, e 17 anunciam uma porta de espontânea que não é porta
-nenhuma:** `amazon` 1680079, `aquila` 2481248, `art` 403330, `bambino` 1339804, `boxelware`
+**18 locatários de hoje têm DUAS OU MAIS dessas chaves, e 17 anunciam uma porta de espontânea que
+não é porta nenhuma:** `amazon` 1680079, `aquila` 2481248, `art` 403330, `bambino` 1339804, `boxelware`
 1352937, `clevr` 725941, `fatsharkstudios` 219149, `fresh` 2101011, `frvr` 1499268, `futurlab`
 1790136, `grizzly` 1761231, `jumpgate` 264765, `kaiko` 1436787, `new` 2019492, `sandbox` 1566871,
 `sports` 1823201, `vrtual-x` 561941.
@@ -648,3 +648,28 @@ os três morrem:
 - **astragon**, **Glowmade**, **tobspr**, **Zeitland** — `search_threads` devolveu **`{}`** nas duas
   consultas, isto é **zero fio**. Virgens na caixa. (Resposta vazia aqui **é** zero de verdade,
   porque `{}` é o que a ferramenta devolve para zero item, e não falha.)
+
+### 9. DUAS CORREÇÕES DAS MINHAS PRÓPRIAS CONTAS, feitas aqui porque a regra 9 do contrato manda corrigir por escrito com a medição nova ao lado da antiga
+
+**(a) Eram 18 locatários de demonstração, não 19.** A primeira versão do §5 e do cabeçalho do censo
+escreveu **19**; o número contado é **18** (dois ou mais títulos do conjunto). O 19º é o
+`breakfirst`, que tem **uma chave só** e por isso não entra na conta — mas ele traz seis vagas no
+bloco de ids **consecutivo** `2603797..2603802`, misturando SEO Marketing Manager, motorista em
+Frankfurt, consultor júnior de segurança de TI, atendimento (Werkstudent) e `Bewerberpool`. É
+demonstração por outro molde, e fica **SUSPEITO, não medido**. Corrigido nos dois arquivos.
+
+**(b) O meu vocabulário de espontânea tem um buraco, e ele quase custou a porta da Stratosphere.**
+A lista automática procurava `Initiativbewerbung`, `Unsolicited application`, `General Application`,
+`Open Application`, `Speculative`, `candidature spontanée`, `Talent Pool` e `Bewerberpool` — e
+**não** `Initiative Application`, que é justamente como a **Stratosphere Games** chama a dela
+(`Initiative Application (Part-time/Full-time)`, id `1318003`). O filtro a perdeu; **quem a pegou
+foi a leitura título por título do quadro**, e é só por isso que ela entrou no dedupe do §3 (onde
+se provou duplicata de 11/09). **Acrescente `Initiative Application` ao vocabulário.** A lição é a
+mesma de sempre nesta campanha: **filtro de palavra decide o que se olha, nunca o que existe.**
+
+**Portanto o número final das portas de espontânea reais é 10, não 9:** as 9 que o filtro achou
+mais a `Initiative Application`. Das 10, **apenas 3 são porta distinta de casa do ramo** — Chimera
+`150955` (que aparece duas vezes, em dois slugs do mesmo quadro), Stratosphere `1318003` e Tangelo
+`2780991` — **e as três já eram nossas.** As outras 7 são homônimo fora do ramo: `aurora`
+(logística em Mudau), `breakfirst` (suspeito de demo), `buf` (ótica em Hannover), `cosmico`
+(Milão), `flow` (FLOW media de Berlim), `lakestar` (fundo de capital).
