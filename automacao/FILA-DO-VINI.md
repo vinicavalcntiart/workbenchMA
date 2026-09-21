@@ -7,7 +7,7 @@ recomendacoes e bio (texto) especificas pra cada estudio"*. A página tinha os e
 dossiê campo a campo, mas não o texto. Agora cada porta abre em três blocos com botão de copiar:
 **carta escrita para aquela vaga**, **bio de "tell us about yourself"** e **resumo de uma linha**.
 
-### 🟠 ATUALIZADO 21/09 02h5x UTC (Mágico) — **ALERTA DE VAGA DA MICROSOFT / XBOX GAME STUDIOS**: a barreira de área foi resolvida, mas apareceu uma NOVA e ela não é captcha
+### 🟣 ROTA COWORK — atualizado 21/09 13h UTC (Mágico) — **MICROSOFT / XBOX GAME STUDIOS**: o formulário agora sai COMPLETO campo por campo e o servidor ainda recusa. Não é captcha, não é campo faltando, não é login: é reputação da sessão
 
 `https://careers.microsoft.com/careers/join?domain=microsoft.com` ← Cobre 343 (Halo), The Coalition, Rare, Obsidian, inXile, Double Fine, Playground, Turn 10, Mojang, ZeniMax e Bethesda, e a campanha nunca teve alerta nenhum desse grupo.
 
@@ -42,6 +42,14 @@ mais próxima de Art/Design (aparece como **"Design & Creative"** na lista), mar
 consentimento e clicar em **Join Talent Network** (o botão do formulário, não o link do menu, que
 só reabre a página numa aba nova sem POST nenhum). Controle: um e-mail de `microsoft.com` ou
 `eightfold.ai` na caixa confirma.
+
+> **MEDIÇÃO DE 21/09 ~13h UTC (Mágico), e ela derruba o diagnóstico da madrugada.** Eu interceptei o **corpo cru** do POST (gravado em `/home/user/apply/ms_corpo_post.txt`, 4.657 bytes, multipart de doze campos) e li campo por campo. **O campo que a rodada das 02h5x acusava não é o campo de consentimento.** O que o formulário serializa como consentimento é `emailSubscription`, e ele sai **`accepted`**, correto; o `notifications_checkbox_accepted=false` é outro campo e é inerte — a prova é que o servidor **tem** mensagem específica para consentimento faltando (*"You must accept the communications agreement to continue"*) e não é essa que ele devolve. **O que realmente estava incompleto eram as duas perguntas de lista**, que saíam sem a chave `values` nenhuma: agora saem respondidas com a verdade, `whenAreYouWillingToMakeACareerMove` = *Within the next few months* e `forUsOnly:DoYouHaveActiveSecurityClearance?` = *Not Currently Active* (as opções reais foram medidas: **não existe "No"** na de clearance). O `recaptcha_token` sai **presente, 200 caracteres** (reCAPTCHA v3 invisível, chave `6LfwboYUAAAAAJb6QcVuRXi7R9pTqgGKF6TnNzia`) — **zero desafio interativo nesta página**. Com tudo isso, e com `erros: []` na tela, o POST continua devolvendo **HTTP 400** e o corpo literal **`{"message": "Please try again"}`**: três medições novas hoje, oito no total, nove horas depois das primeiras, o que mata a hipótese de janela de tempo.
+>
+> **Camada nomeada: reputação da sessão.** Corpo completo + zero erro de campo + token v3 emitido = pontuação de bot. É rede e navegador que resolvem, não trabalho seu. **Se você abrir uma vez:** a URL é a de cima, anexe o CV, escolha **Design & Creative** em *Desired area of work*, responda as duas listas, marque a caixa de consentimento e clique no **botão** *Join Talent Network* (não o link do menu, que só reabre a página). Controle: e-mail de `microsoft.com` ou `eightfold.ai` na caixa.
+>
+> **Três armadilhas de método que ficaram medidas e servem para outras páginas:** (1) o react-select múltiplo deixa o menu **aberto** depois da escolha e o menu cobre a caixa de consentimento logo abaixo — o clique seguinte caiu numa **opção** e gravou uma segunda área (*Administration*) sem ninguém ver; (2) clique de DOM dentro de `page.evaluate` marca na tela e **não** entra no estado do React que o formulário serializa, só clique de ponteiro de verdade move; (3) id que começa com dígito é id válido em HTML e seletor CSS **inválido**.
+>
+> **O que eu não fiz, e digo por quê:** a última medição que separaria pontuação de bot de bug de sincronização era reescrever no corpo o campo inerte para casar com o que a tela mostra. O portão de permissão do ambiente recusou a ação duas vezes e eu **não** contornei.
 
 ### 🔴 ENTROU EM 20/09 05h40 UTC (Jhon A, rodada 04h15) — **ONZE PORTAS DE ASHBY ABREM DO SEU NAVEGADOR SEM CAPTCHA NENHUM**, e o rótulo "reCAPTCHA invisível" que as segurava desde 11/09 estava ERRADO
 
@@ -86,13 +94,19 @@ trabalho sempre com a verdade.
 > da disciplina dele hoje.** Não gaste clique aqui; a reputação de IP do Ashby nem chegou a ser o
 > problema.
 
-### 🔴 REVALIDADA EM 20/09 05h40 UTC — **Character Artist – Hair Specialist**, **Keywords Studios / Lakshya Digital**, remoto (Canadá, EUA, Reino Unido): a régua de 82 termos dá **ZERO acerto** no anúncio inteiro
+### 🟣 ROTA COWORK — **Character Artist – Hair Specialist**, **Keywords Studios / Lakshya Digital**, remoto (Canadá, EUA, Reino Unido): régua de 82 termos com **ZERO acerto**, e a camada não é Turnstile, é **HTTP 429 do Cloudflare por IP**
 
 `https://apply.workable.com/keywords-intl1/j/CA33DB1208/` ← **ABRA ESTA do seu navegador.**
 
 A decisão antiga de "exige residência" apoiava-se na linha *Location: Canada, US, UK*, que é lista de
-local e **não** veto escrito. O que bloqueia a automação é só a parede do Workable (Turnstile de
-plataforma, recusa deste IP). Do seu navegador o Workable passa. É a **única vaga só de grooming de
+local e **não** veto escrito. **A camada foi medida de novo em 21/09 ~12h UTC e o rótulo "Turnstile de
+plataforma" estava errado:** `apply.workable.com` devolve **HTTP 429** com o corpo literal **`error code:
+1015`** (limite de taxa do Cloudflare posto pela própria zona) em **todos** os caminhos e em duas
+medições separadas por ~25 minutos — a página `/keywords-intl1/j/CA33DB1208/` e as **duas** rotas de API
+(`/api/v2/...` e `/api/v1/accounts/keywords-intl1/jobs/CA33DB1208`). Nenhuma delas chega a servir
+Turnstile: o 429 vem antes, no porteiro de borda. **A rota de API foi tentada antes de aceitar a
+parede**, como estava mandado, e o feed alternativo `www.workable.com/api/v1/widget/accounts/keywords-intl1` devolve **HTTP 404 `{"result":"NOT_FOUND"}`**.
+É porteiro de **IP**, então é rede diferente que resolve. Do seu navegador o Workable passa. É a **única vaga só de grooming de
 personagem** que a campanha já viu. Requisições vivas hoje: `9b90b38f` e `be8477ea` (Canadá e Reino
 Unido). Se ao abrir a página disser "expired", registre e siga.
 
@@ -104,7 +118,7 @@ Unido). Se ao abrir a página disser "expired", registre e siga.
    da campanha (`export?format=csv` dá 401). Compartilhe com contact@vinicavalcanti.art como leitor,
    ou baixe o CSV e mande. Até lá a fonte fica como **não lida**, não como "sem resultado".
 
-### 🔴 ENTROU EM 19/09 20h40 UTC (Jhon A, 35o turno) — **Character Sculptor, Adult Series**, **ICON CREATIVE STUDIO**, **VANCOUVER, BC**: a melhor porta de personagem do estoque, e a parede foi medida COM CLIQUE pela **terceira vez** hoje. Você só marca a caixa do reCAPTCHA
+### 🟣 ROTA COWORK — **Character Sculptor, Adult Series**, **ICON CREATIVE STUDIO**, **VANCOUVER, BC**: a melhor porta de personagem do estoque. Camada = **reCAPTCHA v2 de caixa, chave única do BambooHR**, e isso não volta mais como item de clique
 
 `https://iconcreative.bamboohr.com/careers/150` ← **ABRA ESTA. Clique em "Apply for This Job".**
 
@@ -195,11 +209,13 @@ documento privado do Drive *"CAMPANHA - dados pessoais dos formulários"* e **n�
 *"Please leave this field blank"*. **Deixe em branco** — se preenchido, a candidatura é descartada
 em silêncio.
 
+> **RECONFERIDA VIVA em 21/09 ~12h UTC (Mágico):** `GET iconcreative.bamboohr.com/careers/150/detail` devolve **HTTP 200** com 22.206 bytes e o JSON diz `jobOpeningName` *"Character Sculptor, Adult Series (On-Site)"*, `jobOpeningStatus` **Open**, Vancouver / British Columbia / Canada, 7.690 caracteres de descrição. **Não remexi o reCAPTCHA**: ele já está provado como parede de plataforma, uma única chave de reCAPTCHA v2 de caixa servindo `gurustudio/11`, `iommediaventures/22` e `exient/58`. É rede e navegador que abrem.
+
 **Custo de não fazer:** é a porta de personagem com melhor sinal de visto do estoque, em Vancouver,
 que é a sua prioridade número um, publicada em 17/09. O arquivo de respostas já está pronto fora do
 repositório em `/home/user/apply/ans_iconcreative150.json`.
 
-### 🔴 ENTROU EM 19/09 16h30 UTC (Jhon A, 33o turno) — **3D Character Modeler**, **INFOLD GAMES** (Papergames, casa de *Infinity Nikki*), **Los Angeles + Singapura**: personagem por título E por corpo, **zero veto**, casa 100% inédita, e a porta é **login por código de SMS** que só o seu celular recebe
+### 🟣 ROTA COWORK — **3D Character Modeler**, **INFOLD GAMES** (Papegames, casa de *Infinity Nikki*), **Los Angeles + Singapura**: personagem por título E por corpo, **zero veto**, casa 100% inédita. Camada = **login obrigatório** (conta Google ou LinkedIn), com o formulário já preenchido até a última linha
 
 `https://career.infoldgames.com/EN/job/7639286868983384370` ← **ABRA ESTA. É UM CLIQUE: "Continue with Google".**
 `https://career.papegames.com/EN/position/7639286868983384370/detail` ← a que você me mandou (mesma vaga, porta de SMS)
@@ -225,6 +241,8 @@ Não é captcha: não existe reCAPTCHA, hCaptcha, Turnstile nem DataDome em nenh
 > `apply_infold.js envia` fecha o resto sozinho. Se preferir não entrar, a outra rota é carta por
 > e-mail para **`careers@infoldgames.com`**, que é o endereço publicado pela própria casa na seção 9
 > do Privacy Statement do site de recrutamento, e essa é para o agente de carta.
+
+> **DIAGNÓSTICO FECHADO em 21/09 ~12h UTC (Mágico), com endpoint, status e corpo, que era o que faltava.** **Endpoint:** `https://chaos.infoldgames.com/v2/engine` — uma rota só, por ação numerada. **Status: HTTP 200 sempre**; a casa não usa código HTTP para erro, o erro vive no campo `ret` do corpo, e foi por isso que a rodada anterior não tinha número para mostrar. Conferido hoje com corpo vazio: HTTP 200 e `{"ret":-100}`. **Os dois corpos que seguram a candidatura:** upload do currículo → `{"msg":"failed","ret":1803001}` (seis tentativas); pedido do código por e-mail → `ret -702` com `action_11413 code 400 "request specified an invalid argument"`. Com token de sessão **falso** o erro **muda**, o que prova que a ação lê a sessão. **Camada: login obrigatório**, e a credencial é conta pessoal sua. Zero reCAPTCHA, zero hCaptcha, zero Turnstile, zero DataDome nas duas telas.
 
 **A DESCOBERTA QUE FAZ VALER O CLIQUE: a mesma requisição tem DUAS portas diferentes, e uma é muito
 mais barata que a outra.** Medi as duas hoje:
@@ -348,7 +366,7 @@ do documento de recrutamento. É caixa de recrutamento de verdade, mas ela está
 contato de **privacidade/dados pessoais** dentro do recrutamento, e não como "mande seu CV aqui".
 Fica registrada como rota secundária; **a rota boa é o formulário, e ele é um clique seu.**
 
-### ✅ REVALIDADA HOJE ÀS 14h50 (19/09) — **Principal Character Artist (Face)**, NBCUniversal/DreamWorks Montreal: **o alerta do LinkedIn é a MESMA vaga de ontem, e ela continua viva e sem veto**
+### 🟣 ROTA COWORK — **Principal Character Artist (Face)**, NBCUniversal/DreamWorks Montreal: viva e sem veto, reconferida em 21/09. Camada = **DataDome**, com 403 e o texto do porteiro na mão
 
 `https://jobs.smartrecruiters.com/NBCUniversal3/744000150414819-principal-character-artist-face-i-artiste-principal-e-personnage-face-`
 `https://www.linkedin.com/jobs/view/4469197089/` (o mesmo anúncio, pela rota do seu alerta)
@@ -381,6 +399,8 @@ fiz hoje foi **revalidar** e trazer o que faltava.
   `NBCUniversal OR DreamWorks OR smartrecruiters newer_than:3d` devolveu **uma** thread, e é o
   próprio alerta do LinkedIn — **nenhum recibo** desta requisição.
 
+> **CAMADA MEDIDA EM 21/09 ~12h30 UTC (Mágico), em dois passos, e agora com número.** Viva: `api.smartrecruiters.com/v1/companies/NBCUniversal3/postings/744000150414819` → **HTTP 200**, `visibility PUBLIC`, `refNumber 51626013`. (1) O clique em *I'm interested* leva a `jobs.smartrecruiters.com/oneclick-ui/company/NBCUniversal3/publication/fc8ae191-5044-4ed4-af71-6f9cf934e6b2` e essa página volta com **0 input e 0 caractere de texto**, com `ct.captcha-delivery.com/i.js` carregado. (2) A mesma URL com navegador de verdade devolve **HTTP 403**, 3.088 bytes de HTML e **0 caractere de texto**, e o HTML é o interstitial do DataDome, literal: iframe de `geo.captcha-delivery.com/interstitial/`, `title="DataDome Device Check"`, hash `E5A9F170BDF11F4EA91D813241166A`. **A rota de API foi tentada antes de aceitar a parede:** o POST público de candidatura do SmartRecruiters **não existe** neste deployment — `POST api.smartrecruiters.com/v1/companies/NBCUniversal3/postings/<id>/candidates` devolve **HTTP 404** com o corpo `Cannot POST /public-posting-api/api-v1/...`, e `/configuration` e `/application-form` dão o mesmo 404; só o GET de leitura existe. **Precedente que mostra que a rota do seu navegador funciona:** as duas candidaturas de SmartRecruiters da campanha (Ubisoft2 `744000144027102` e People Can Fly `744000134528029`) saíram pela sua mão em 10/09.
+
 **A rota nova que eu trouxe, e ela é para o seu celular:** o anúncio do LinkedIn é **offsite apply**
 (10 ocorrências de `offsite` no HTML de convidado de 311.727 caracteres, e **zero** `smartrecruiters`
 e `NBCUniversal3` — o destino fica atrás do login). Ou seja: o botão *Apply* do alerta te joga no
@@ -405,7 +425,7 @@ bloco de elegibilidade) são **ambiente** e vêm depois. E **não clique** na *L
 `744000137526729`: ela é a que **tem** o veto escrito de autorização e de 4 dias no escritório.
 
 
-### 🔴 ENTROU EM 19/09 15h (Jhon A, 32o turno) — **Asset Generalist Senior Artist** da **FOLKS VFX**, em **TORONTO** e em **MONTREAL**, parede de DataDome
+### 🟣 ROTA COWORK — **Asset Generalist Senior Artist** da **FOLKS VFX**, em **TORONTO** e em **MONTREAL**. Camada = **DataDome**, e o formulário do outro lado é o *Easy apply* curto
 
 `https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004158` (Toronto, ON)
 `https://jobs.smartrecruiters.com/PitchBlackCreative/7000000000004252` (Montréal, QC)
@@ -415,6 +435,8 @@ plataforma nasce **um clique depois do anúncio**, no `/oneclick-ui` — medido 
 contas independentes, com `ct.captcha-delivery.com` e página de 0 caractere. A página do anúncio é
 limpa mesmo; o porteiro é no passo do formulário. Para você, logado num navegador de verdade, é um
 clique em *I am interested*.
+
+> **RECONFERIDAS E REMEDIDAS EM 21/09 ~12h40 UTC (Mágico).** As duas requisições respondem **HTTP 200** na API do SmartRecruiters, `visibility PUBLIC`, `refNumber REF19P`. **Régua de veto refeita por mim no anúncio inteiro:** 4.436 caracteres, 110 termos, **2 acertos e os dois falso positivo** (`citizenship` na cláusula antidiscriminação e `proficiency in` na lista de softwares). Disciplina conferida no corpo: *"Execute advanced asset work including **hero characters** and complex assets"* — personagem nomeado como o trabalho, e as duas ocorrências de *environment* são *"production environment"*. **Camada:** o *Easy apply* `oneclick-ui/company/PitchBlackCreative/publication/ce055c02-8de1-4450-959c-a1b250864774` devolveu **HTTP 403** com os assets de captcha do DataDome servidos (`geo.captcha-delivery.com/captcha/?initialCid=...`, `ct.captcha-delivery.com/captcha.1.34.0.202609211.js` e o template de `static.captcha-delivery.com`), página com **0 campo e 0 caractere** depois de esperar 90 s **por condição**. **O achado dito inteiro para não virar lenda:** numa das aberturas essa MESMA URL **passou** — HTTP 200, título *"Easy apply - Asset Generalist Senior Artist (Freelance) - FOLKS"*, 83.583 bytes — e na abertura seguinte a conta escalou para o captcha cheio. **Eu parei aí de propósito:** insistir em impressão digital de navegador para vencer um anti-bot é contornar controle de segurança, não destravar formulário. Do seu navegador é um clique em *I am interested* e um formulário curto.
 
 **O achado que trouxe estas duas portas:** a Folks VFX **não publica no próprio domínio**. O
 `folksvfx.com/careers/open-positions` linka `careers.smartrecruiters.com/PitchBlackCreative/folks-`,
@@ -619,28 +641,15 @@ Artist (Props)* `744000150413374` e *Principal Vegetation Artist* `7440001504127
 hoje às 15h53 e 15h50, **também sem o bloco de elegibilidade**. As duas são **ambiente**, então
 pela sua regra de 10/09 elas vêm depois — personagem primeiro.
 
-### 🔴 ENTROU UMA PORTA, e é da EA: Senior Character Artist 215788, EA SPORTS FC Vancouver
+### ✅ SAIU DA FILA EM 21/09 ~12h5x UTC — **Senior Character Artist 215788, EA SPORTS FC Vancouver: ENVIADA, e você não precisa clicar em nada**
 
-`https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788`
+A parede que segurava esta porta desde o começo de setembro **não era captcha nem rede**: era defeito **temporário** do lado da EA, registrado como se fosse permanente. O botão *Next* da tela de informações gerais, que devolvia *Internal server error* em cinco tentativas em dois dias diferentes, hoje devolveu **HTTP 302** e avançou para `ApplicationEEO`. O que faltava de verdade eram **três selects obrigatórios vazios**: *How did you hear about this opportunity* → `EA Careers Website`, anos de experiência → `More Than 3 Years`, e a de boot camp → `No`. Leitura de volta: **zero obrigatório visível vazio**.
 
-**Revalidada em 16/09 às 03h**, na fonte oficial: a requisição continua no portal (listagem
-completa de **325 vagas**, paginada por `jobOffset`) e a página responde **HTTP 200**. Efetiva
-(*Regular Employee*), híbrida, Vancouver. **Faixa publicada pela própria EA: CAD 114.300 a
-156.200** — pela política, pede-se a **base, CAD 114.300**.
+**Prova de servidor, dupla:** o POST do botão *Submit* (`2680-save`, tela `ApplicationEEO?jobId=215788`) devolveu **HTTP 302** e a página seguinte diz, com estas palavras, *Thanks for applying to Electronic Arts! We'll take it from here.*; e chegou **recibo da própria EA** (`EAcareers@ea.com`, 12:57:11Z) com o assunto *Thanks for applying to Senior Character Artist - EA Sports FC (Req ID 215788) at Electronic Arts!*
 
-**Régua de veto no texto inteiro: um único acerto, e é falso positivo conhecido** —
-`eligib` em *"eligible for bonus and other incentive programs"*. **Nenhum veto escrito.**
+**Autorização respondida com a verdade, e ela desqualifica na hora em muita casa:** *"Do you now or in the future require immigration sponsorship to work in the country you are applying to?"* → **Yes**; restrição que impeça trabalhar na EA → **No**; *"I certify that all information on this application is true and complete"* → marcado.
 
-**Dedupe, pelo ID e não pelo título:** a irmã **215358** (Character Artist, efetiva, mesmo time)
-foi enviada e confirmada em 07/09, e a **215657** (temporária) em 03/09. A **215788 é requisição
-própria e mais sênior**, com faixa maior. Não é duplicata.
-
-**Por que é com você:** o botão *Next* da tela de informações gerais devolve `Internal server
-error` do Avature em **cinco tentativas**, com e sem anexos, em dois dias diferentes. Não é
-captcha nem falta de conta. **E o erro de fluxo que come a rodada:** você já tem conta desde
-03/09, então **entre pelo login**; o bloco *First time applicant* preenche tudo e no fim devolve
-*"There's an existing record with that email"* sem enviar nada. Campo a campo, com as armadilhas
-da tela, está na página de cliques e em `automacao/respostas-formularios.md`.
+**Dedupe antes de preencher, pela fonte do candidato:** a lista de candidaturas da própria conta EA mostra 214789, 215358, 215644, 215657 e 215660 já enviadas e a **215788 ainda sem candidatura**. Ressalva escrita: duas entradas antigas do painel chamavam a 215788 de repetida da 215358 do mesmo time; a fila revalidada em 16/09 desfez essa leitura por **ID e nível**, e foi a fila que eu segui. Faixa publicada pela EA: **CAD 114.300 a 156.200**.
 
 ### 🟢 ENTRARAM MAIS DUAS, achadas cruzando o painel com a página (16/09, 03h30)
 
@@ -716,7 +725,9 @@ Achadas varrendo BambooHR com controle 200 nas duas pontas. As duas estão **pre
 campo a campo em modo seco**; o que trava não é captcha, é uma parede da plataforma (detalhe no fim).
 Do seu lado é abrir o link, clicar **Apply for This Job** e repetir o que está na tabela.
 
-### 1. nWave — Bruxelas, Bélgica — https://nwave.bamboohr.com/careers/121
+### 1. 🟣 ROTA COWORK — nWave — Bruxelas, Bélgica — https://nwave.bamboohr.com/careers/121
+
+> **21/09 ~12h UTC (Mágico): viva e mandada para ROTA COWORK numa linha.** `HTTP 200`, 12.779 bytes, `jobOpeningName` *Speculative Applications*, `jobOpeningStatus` **Open**, Brussels / Belgium. Camada = **reCAPTCHA v2 de caixa, chave única do BambooHR** — já provado, não remexi. Dedupe que precisa estar escrito: a casa tem **duas** cartas frias em `enviados.csv` (28/08 e 03/09) e as **duas quicaram**, então a casa nunca foi alcançada e esta porta não é duplicata.
 
 A melhor porta de formulário em dias, e o motivo é a pergunta obrigatória de departamento: ela oferece
 **Character_Modeling (CHR_MOD)** e **Character_Surfacing/Grooming (CHR_SHD)**. É o cargo dele com todas
@@ -756,7 +767,9 @@ Portfolio: https://www.artstation.com/viniciuscavalcanti
 **O formulário manda submeter uma vez por departamento.** Vale submeter uma segunda vez em
 **CHR_SHD**, trocando só a primeira frase do segundo parágrafo.
 
-### 2. Image Engine — Vancouver, Canadá — https://imageengine.bamboohr.com/careers/21
+### 2. 🟣 ROTA COWORK — Image Engine — Vancouver, Canadá — https://imageengine.bamboohr.com/careers/21
+
+> **21/09 ~12h UTC (Mágico): viva e mandada para ROTA COWORK numa linha.** `HTTP 200`, 12.986 bytes, `jobOpeningName` *General Application - Assets (Modeling/Texturing/LookDev/Grooming)* — o título nomeia **grooming**, que é o diferencial dele —, `jobOpeningStatus` **Open**, Vancouver / British Columbia / Canada. Camada = **reCAPTCHA v2 de caixa, chave única do BambooHR**. Dedupe: a casa tem uma carta **entregue** em 06/09 e uma que quicou em 08/09, e esta porta é **banco de talentos oficial**, outra rota e não reenvio.
 
 `General Application - Assets (Modeling/Texturing/LookDev/Grooming)`. Eu tinha fechado esta porta porque
 o anúncio traz, em vermelho: *"Candidates are required to be based in British Columbia and eligible to
@@ -3321,7 +3334,7 @@ Para você não gastar minuto reabrindo o que já foi decidido.
 
 **Idioma eliminatório:** Sony Pictures Imageworks Senior Look Development Artist (Montréal) e Rodeo FX *Artiste de développement visuel Senior* exigem francês fluente — francês já derrubou duas candidaturas desta campanha.
 
-**Porta quebrada ou conta obrigatória:** Gamecan (certificado TLS quebrado do lado deles, ninguém consegue aplicar), ZEILT (exige conta e as vagas pedem endereço fiscal no Québec), Mainframe (UKG Ready com conta de candidato), Ánima Kitchent (InfoJobs exige conta), FIN Design (portal exige conta), EA Vancouver 215788 (a requisição devolve *Internal server error* no lado da EA em cinco tentativas; se quiser tentar, entre na sua conta e veja em *Job Applications* se aparece "Finish your application").
+**Porta quebrada ou conta obrigatória:** Gamecan (certificado TLS quebrado do lado deles, ninguém consegue aplicar), ZEILT (exige conta e as vagas pedem endereço fiscal no Québec), Mainframe (UKG Ready com conta de candidato), Ánima Kitchent (InfoJobs exige conta), FIN Design (portal exige conta), ~~EA Vancouver 215788~~ **ENVIADA em 21/09 ~12h5x UTC** — o *Internal server error* era defeito temporário do lado da EA, o mesmo botão devolveu HTTP 302 hoje e a candidatura foi até o fim, com recibo da EA.
 
 **Quadros que não abriram e não confirmam vaga da sua disciplina:** KingsIsle, PikPok, Velan, Digital Domain, Digital Sun, Electric Theatre, Arkane, Tarsier, Carbonated, PLAYERUNKNOWN, VSTEP.
 
@@ -3523,7 +3536,7 @@ painel e o motivo está escrito lá.
 | Gameloft Montréal (Lead 3D Character Artist, Disney Dreamlight Valley) | Canadá (Montréal) | à mão, motivo na nota do painel | https://www.artstation.com/jobs/Rdml |
 | Offworld Industries (Squad) | Canadá (New Westminster, BC, presencial) | reCAPTCHA | https://owi.bamboohr.com/careers/199 |
 | Streamline Studios | Remoto (global) | reCAPTCHA | https://streamlinestudios.bamboohr.com/careers/84 |
-| Electronic Arts Vancouver (EA Sports FC) | Canadá (Vancouver) | à mão, motivo na nota do painel | https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788 |
+| ~~Electronic Arts Vancouver (EA Sports FC)~~ | Canadá (Vancouver) | **ENVIADA 21/09 ~12h5x UTC, com recibo da EA** | https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788 |
 | Mainframe Studios | Canadá | à mão, motivo na nota do painel | https://www.mainframe.ca/careers/ |
 | Stairway Games | Remoto | à mão, motivo na nota do painel | https://stairwaygames.com/careers |
 | VOID Interactive | Irlanda/Remoto (UE) | à mão, motivo na nota do painel | https://voidinteractive.net/careers/ |
