@@ -16872,3 +16872,56 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
   ou seja **uma** pessoa de 3D numa equipe de nove. É casa de 2D com 3D quando o projeto pede.
 - **Segunda pessoa da casa, guardada (não escrever agora):** Matthias Bruhn,
   Geschäftsführer / Regisseur, `matt@trickstudio.de`.
+
+### FICHA 2 — Bára Chaberová, producer, Bionaut Animation, Bionaut s.r.o., Praga, Chéquia — `bara@bionaut.cz` — **ALTA**
+
+- **URLs abertas nesta rodada:** `https://bionaut.cz/kontakt` — **200, 69.134 bytes**;
+  `https://bionaut.cz/vodni-dracci-na-uteku/` — **200, 54.254 bytes**; `https://bionaut.cz/o-nas/`
+  (via `/about`) — **200, 50.862 bytes**; home **200, 83.409 bytes**.
+- **Texto literal que prova nome, cargo e endereço**, na `/kontakt`, na coluna `Producenti`:
+  `Bára Chaberová producer, Bionaut Animation bara(at)bionaut.cz`
+  O endereço está em **`mailto:` de verdade** no `href` (`mailto:bara@bionaut.cz`) e escrito
+  `bara(at)bionaut.cz` no texto visível — é a casa escondendo do robô, não de mim. **Nada montado.**
+- **A página inteira pareia nome + cargo + e-mail em 23 endereços**, o que torna o pareamento
+  dela inequívoco: `Vratislav Šlajer head producer & managing director vratislav(at)bionaut.cz`,
+  `Jakub Košťál producer, international coproductions jakub(at)bionaut.cz`,
+  `Petr Cífka producer, Czech projects petrc(at)bionaut.cz`, e assim por diante.
+- **Por que ESSA pessoa e não outra da casa, e a escolha é contra a feira:** a feira nomeia
+  **Jakub Košťál** (`Co-Producer / Bionaut / (Czechia) / Jakub Kostal`). Eu escolhi a **Bára**
+  porque o cargo dela é literalmente **`producer, Bionaut Animation`** — ela é a produtora do
+  *label de animação* da casa — e porque é **ela** que a própria casa credita como `producentka`
+  no único projeto em que a Bionaut publica 3D. O Jakub é de **co-produção internacional**, que é
+  a porta do negócio, não a porta do pipeline. Fica guardado como segunda pessoa.
+- **Disciplina NA PRÓPRIA PÁGINA DA CASA, e é o texto mais limpo que achei nesta rodada:** a
+  página do longa *Axolotlové: Vodní dráčci na útěku* traz, em campo rotulado,
+  **"technika animace: 2D & 3D"**, e o filme é de personagem declarado:
+  **"Po hádce s otcem axolotl Axl (10) uteče z domu... s jeho malou sestrou Lotou (8)"**
+  (depois de uma briga com o pai, o axolote Axl, de 10 anos, foge de casa, com a irmãzinha Lota,
+  de 8). Nos créditos da mesma página: `Bára Chaberová , producentka`.
+- **Disciplina também pela rubrica da feira:** projeto *Scope of the Universe*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-644951-647403`
+  (**200, 58.847 bytes**), `Format TV series`, `Duration 7 x 20'`,
+  **`Techniques 3D computer & Painting`**, `Country Norway`, `Country Czechia`,
+  `Main Producer LØV Film (Norway) Lillian Løvseth`, `Co-Producer Bionaut (Czechia) Jakub Kostal`.
+  **Outro dos 9 projetos que o filtro antigo perdia** (a técnica vem misturada com `Painting`).
+- **Gancho, com a frase da própria casa entre aspas:** a `/o-nas` escreve
+  **"Bionaut stabilně vytváří zázemí pro vznik různých žánrů s ohledem na jejich specifičnost: Bionaut Animation pro animaci, Bionaut Docs pro dokumenty a Bionaut Dark pro temné hororové a thrillerové projekty"**
+  — a casa mantém um label só de animação, e a Bára é a produtora dele. A casa se apresenta como
+  **"přední česká filmová a televizní produkce, oceněná Českým lvem"** (produtora líder, prêmio
+  Leão Tcheco) e o `/o-nas` acrescenta `držitel ocenění Mezinárodní Emmy`.
+- **Fora dos EUA (Chéquia):** sim — **a frase de realocação entra**.
+- **Dedupe:** `mcp__Gmail__search_threads` com
+  `dealproductions OR melusinestudio OR loevfilm OR bionaut OR vana.ro OR "will-studio" OR "gringo films"`
+  devolveu **`{}` — zero thread**. No repositório: `bionaut` = 0 em `pessoas.csv`, `enviados.csv`
+  e `ESTUDIOS-SEM-CARTA.md`; `Chaberov` = 0 em `pessoas.csv` e `enviados.csv`. **Casa inédita.**
+  (Atenção do maestro: a **three bohemians**, também de Praga, já é ficha de 20/09 — é casa
+  diferente, não é duplicata.)
+- **RESSALVA HONESTA, e é dupla:** (i) a Bionaut é antes de tudo uma **produtora de imagem real**
+  — o catálogo dela na home tem 30 títulos e a maioria é série e longa live-action (`#martyisdead`,
+  `Pouta`, `Králové Šumavy`); a animação é um label dentro dela, e o 3D aparece em **um** projeto,
+  ainda **`ve vývoji`** (em desenvolvimento), não entregue. (ii) A `/kontakt` publica **23**
+  endereços de pessoa, o que é ótimo para achar gente e **péssimo** como sinal de exclusividade:
+  esta é uma caixa que recebe muito e-mail frio.
+- **Segunda pessoa da casa, guardada (não escrever agora):** Jakub Košťál,
+  `producer, international coproductions`, `jakub@bionaut.cz` — que é justamente quem a feira
+  nomeia, se o maestro preferir entrar pela porta da co-produção.
