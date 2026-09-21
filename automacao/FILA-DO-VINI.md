@@ -70,6 +70,22 @@ assim, pela sua mão.
 Texto para o campo de carta: o mesmo bloco ATS da fila de cliques (sem emoji). Autorização de
 trabalho sempre com a verdade.
 
+> **CORREÇÃO DE 21/09 11h4x UTC (Mágico): a tabela acima promete mais do que existe, e eu medi as
+> onze uma a uma.** Pela API pública da plataforma e, onde ela dá 404, pela API interna do próprio
+> quadro: **`kolibrigames`, `immutable` e `dailywire` devolvem `jobBoard: null`** — não existe
+> quadro nesses três endereços; **`jito` só responde como `jito-labs`** e são quatro vagas de cripto
+> nos EUA; **`interplay` não é a Interplay dos jogos**, é um *venture studio* de Nova York (Bowery
+> Legal, Vandrel, Lykos: advogado de M&A, engenheiro mecânico, sócio de private equity), 18 anúncios
+> e zero de arte; **`arenanet` General Applications já foi enviada em 30/08** (recibo do Ashby no
+> Gmail) e a outra vaga da casa é de engenharia; **`stellarentertainment` já tem candidatura** e hoje
+> só tem Talent Pool e engenharia; **`chromatic`** é ferramenta de desenvolvedor e **`vizcom`** é
+> ferramenta de IA de desenho, as duas sem nada de personagem; e o **`colonist`** só tem *UI Artist*
+> (com "AI first-mindset") e um *Talent Pool* cujos campos obrigatórios pedem o **perfil dele no
+> colonist.io**, um **quiz sobre o produto** e duas respostas livres, uma delas com a instrução
+> escrita *"Please don't use AI. We appreciate a genuine answer."* **Resultado: das onze, zero vaga
+> da disciplina dele hoje.** Não gaste clique aqui; a reputação de IP do Ashby nem chegou a ser o
+> problema.
+
 ### 🔴 REVALIDADA EM 20/09 05h40 UTC — **Character Artist – Hair Specialist**, **Keywords Studios / Lakshya Digital**, remoto (Canadá, EUA, Reino Unido): a régua de 82 termos dá **ZERO acerto** no anúncio inteiro
 
 `https://apply.workable.com/keywords-intl1/j/CA33DB1208/` ← **ABRA ESTA do seu navegador.**
