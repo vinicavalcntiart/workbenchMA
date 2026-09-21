@@ -16797,3 +16797,78 @@ desta rodada.
   domínio da Gringo** — o único link da ficha é `https://www.fabrique-d-images.com/`, que é a
   co-produtora **e já tem linha em `pessoas.csv`** (Fabrique d'Images). Sem site da casa, sem
   ficha.
+
+## RODADA DAS 00h35 DE 21/09 (Joe) — **O FILTRO `Technique / 3D computer` DAS DUAS RODADAS ANTERIORES ESTAVA APERTADO DEMAIS: SÃO 26 FICHAS COM 3D NO CARTOON FORUM, NÃO 17** — as 9 que faltavam escrevem a técnica MISTURADA (`2D computer & 3D computer`, `2D computer, 3D computer, Drawing, Cut-out & Painting`, `3D computer & Painting`) e nenhuma delas tinha sido aberta
+
+**O achado de método, e ele é meu erro corrigido pela terceira vez na mesma veia.** Às 20h35 de
+20/09 o filtro foi `'3D' in tech` depois de remover o soft hyphen, e o resultado foi **16 + 1**.
+Às 22h35 a reconferência achou **17**. Nesta rodada eu reparsei as **65 fichas** com o mesmo
+`replace('­','')` mas lendo o rótulo no **plural** também (`Techniques`, não só `Technique`),
+e o número saltou para **26**. As 9 novas são exatamente as que **misturam técnicas**: o rótulo da
+feira vira `Techniques` (com `s`) e o valor deixa de ser a string limpa `3D computer`.
+
+> **REGRA QUE FICA: na ficha do Cartoon Forum o rótulo é `Technique` quando há UMA técnica e
+> `Techniques` quando há mais de uma. Quem casa só `Technique / 3D computer` perde TODO projeto
+> híbrido — e projeto híbrido 2D+3D é onde mora o modelador de personagem, porque alguém tem que
+> construir o personagem em 3D para o 2D deitar em cima.**
+
+**E o Cartoon Movie 2026 (dívida número 1 de duas rodadas) está PAGO e MEDIDO, com o resultado
+contra a veia:** a rota existe, a lista existe, e **os projetos não estão mais no ar**. O detalhe
+está na linha da veia (a) em `processados.csv`. Resumo: a página de arquivo
+`/movie/archives/cartoon-movie-2026/projects-2` responde **200 com 47.449 bytes** e **não tem
+`var items`** — o corpo inteiro dela, sem menu e sem rodapé, tem **1.930 caracteres de texto**.
+A lista de 50 longas só existe no **Wayback**, e das 49 fichas individuais **só 9 foram
+arquivadas**. Dessas 9, **duas** trazem 3D, e as duas morreram no dedupe ou na disciplina.
+
+**SEIS FICHAS: quatro com endereço PUBLICADO e confiança ALTA, duas `sem-email`.** Zero endereço
+montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, França, Bélgica).
+`pgrep -c chrome` = **0** e mesmo assim **não abri navegador** — nenhuma das seis precisou.
+
+### FICHA 1 — Richard Lutterbeck, Geschäftsführer / Produzent, TrickStudio Lutterbeck GmbH, Köln, Alemanha — `ricci@trickstudio.de` — **ALTA**
+
+- **URLs abertas nesta rodada:** `http://www.trickstudio.de/team` — **200, 13.363 bytes**; e
+  `http://www.trickstudio.de/` — **200, 17.022 bytes**.
+- **QUARTA FAMÍLIA DE OCULTAÇÃO DE E-MAIL, e é inédita no repositório: BASE64.** As três já
+  escritas são entidade HTML (`antispambot()` do WordPress), `data-cfemail` (Cloudflare) e
+  remoção total (Joomla). O TrickStudio publica o endereço **codificado em base64 no texto
+  visível do cartão**, e o JS o decodifica na tela. O prober de `mailto:` devolve **zero** na
+  `/team`; o que a página serve é, literalmente:
+  `Richard Lutterbeck Geschäftsführer / Produzent cmljY2lAdHJpY2tzdHVkaW8uZGU=`
+  e `base64.b64decode('cmljY2lAdHJpY2tzdHVkaW8uZGU=')` = **`ricci@trickstudio.de`**.
+- **Por que o pareamento é seguro e não é ordem-de-DOM solta:** os nove cartões da `/team` seguem
+  o mesmo molde `<h2>NOME</h2> CARGO <base64>`, e os nove decodificam para um *local part* que
+  bate com a pessoa do cartão (`bWF0dEB0cmlja3N0dWRpby5kZQ==` = `matt@` no cartão
+  `Matthias Bruhn Geschäftsführer / Regisseur`; `b2xhZkB0cmlja3N0dWRpby5kZQ==` = `olaf@` no cartão
+  `Olaf Kamin Senior Animator / Regisseur / Designer`; e assim nos nove). O de Richard é
+  `ricci@`, que é o apelido dele — **é a mesma classe de prova do `flinx@mark13.com` de ontem, só
+  que aqui o molde se repete nove vezes na mesma página**.
+- **Por que ESSA pessoa e não outra da casa:** a `/team` publica **dois** Geschäftsführer —
+  Richard Lutterbeck (`Produzent`) e Matthias Bruhn (`Regisseur`). Escolhi o **produtor** porque é
+  quem contrata, e porque é **ele** que a feira nomeia:
+  `Co-Producers / ... / Trickstudio Lutterbeck / (Germany) / Richard Lutterbeck`.
+- **Disciplina, pela rubrica da própria feira:** projeto *Mini Missions*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-581822-646989`
+  (**200, 56.283 bytes**), `Format TV series`, `Duration 52 x 11'`,
+  **`Techniques 2D computer & 3D computer`**, `Country Belgium`, `Countries France, Germany & Luxembourg`.
+  **Este é um dos 9 projetos que o filtro antigo perdia.**
+- **Disciplina NA PRÓPRIA PÁGINA DA CASA, que é o que o maestro exige:** a home escreve, em
+  alemão e sem intermediário:
+  **"vom simplen Legetrick über klassischen 2D-Zeichentrick bis zu komplexen 3D-Animationen: wir finden für jedes Projekt und jedes Budget die passende Form"**
+  (do simples recorte, passando pelo desenho 2D clássico, até **animações 3D complexas**). E os
+  trabalhos em destaque são de **personagem**: `Molly Monster - Der Kinofilm`,
+  `Fritzi & Sophie - Grenzenlose Freundschaft`, `Schalotte - eine Zwiebel für alle Fälle`.
+- **Gancho, com a frase da própria casa entre aspas:**
+  **"Wir sind eines der ältesten unabhängigen Animationsstudios in Deutschland. Seit über 30 Jahren produzieren wir Animationen für Jung & Alt"** — casa independente, 30 anos, Colônia.
+- **Fora dos EUA (Alemanha):** sim — **a frase de realocação entra**.
+- **Dedupe:** `mcp__Gmail__search_threads` com
+  `funnytales OR "funny tales" OR caimans OR "brain comet" OR wailingwolves OR 20stm OR trickstudio`
+  devolveu **`{}` — zero thread**. No repositório: `trickstudio` = 0 em `pessoas.csv`,
+  `enviados.csv` e `ESTUDIOS-SEM-CARTA.md`; `Lutterbeck` = 0 em `pessoas.csv` e `enviados.csv`.
+  **Casa inédita, primeiro toque.**
+- **RESSALVA HONESTA:** o endereço **não** é `mailto:` — é base64 no texto, decodificado por mim.
+  Está publicado, mas quem conferir com `grep mailto` vai achar que eu inventei. Segunda ressalva:
+  a casa é pequena e o 3D dela é **uma das formas** que ela oferece, não o pipeline principal — o
+  cartão que prova 3D dentro da equipe é `Patrick Knott / Compositor / 3D-Designer / Sounddesigner / IT-Administrator`,
+  ou seja **uma** pessoa de 3D numa equipe de nove. É casa de 2D com 3D quando o projeto pede.
+- **Segunda pessoa da casa, guardada (não escrever agora):** Matthias Bruhn,
+  Geschäftsführer / Regisseur, `matt@trickstudio.de`.
