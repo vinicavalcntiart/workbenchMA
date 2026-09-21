@@ -17050,3 +17050,49 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
   `part of the Menagerie Media Group`; os dois projetos publicados (`Test Site!`, `Amalur Profezia`)
   estão em produção, e um deles se chama literalmente *Test Site!* — pode não haver equipe interna
   nenhuma.
+
+### FICHA 6 — Steve Hudson (no registro: Stephen Hudson), Managing Director, GRINGO films GmbH, Colônia, Alemanha — **sem-email**
+
+- **URLs abertas nesta rodada:** `https://www.gringo-films.com/legal-notes/` — **200, 26.932 bytes**;
+  `/hire-me-2/` (que é a página `Contact`) — **200, 26.137 bytes**; home — **200, 25.372 bytes**;
+  e o índice `wp-json/wp/v2/pages` — **200, 470 bytes**, que devolve o site inteiro em **quatro
+  páginas** (`stitchhead`, `stitch-head-2`, `legal-notes`, `hire-me-2`).
+- **Como achei o domínio, e isto importa porque a regra de ontem proíbe montar domínio de casa de
+  feira:** a ficha do Cartoon Forum **não** publica `<a href>` para a Gringo (o único link dela é
+  para uma crítica no *Screen Daily*). Então **não inventei** `gringofilms.de` como na rodada das
+  20h35: fui buscar e o domínio veio publicado de fora, `www.gringo-films.com`, e o próprio
+  `legal-notes` da casa confirma o domínio no corpo da página (`www.gringo-films.com`).
+- **Texto literal que prova nome e cargo**, no `legal-notes`:
+  `Address GRINGO films GmbH Neue Maastrichter Str. 12-14 50672 Cologne Germany Contact mail@gringo-films.com www.gringo-films.com Managing Directors Sonja Ewers, Stephen Hudson Register entry ... Registry court: District court Cologne Registry number: HRB 64307`
+- **POR QUE `sem-email`:** o site inteiro publica **um** endereço, `mail@gringo-films.com`, que é
+  **caixa funcional**. Não há endereço de pessoa em nenhuma das quatro páginas. **Nada foi montado.**
+- **Disciplina pela rubrica da feira:** projeto *Stitch Head* (série),
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-646809-647006`
+  (**200, 58.457 bytes**), `Format TV series`, `Duration 26 x 13'`, `Children 6-9 (Kids)`,
+  **`Technique 3D computer`**, `Country Germany`, `Country Luxembourg`,
+  `Main Producer Gringo Films (Germany) Steve Hudson`,
+  `Co-Producer Fabrique d'images (Luxembourg) Mark Mertens`.
+- **Biografia que a própria pessoa submeteu à feira, e é o que prova a ligação dele com o 3D:**
+  `Steve Hudson — Born in the UK, living in Germany. Writer-Director of Stitch Head (2025) (family animated feature)`.
+- **Por que ESSA pessoa:** a casa tem **dois** nomes públicos e os dois são Managing Director. O
+  Steve é o que a feira nomeia e o que assina a direção do longa 3D. A alternativa de mesmo cargo
+  é **Sonja Ewers**, que é o lado produtor da dupla.
+- **Gancho, com a frase da própria casa entre aspas:** o site é pequeno demais para dar uma frase
+  boa — o que ele publica é só **"GRINGO films GmbH"**, **"Stitch Head"** e **"Contact"**. O
+  gancho tem que vir da feira: **"Writer-Director of Stitch Head (2025) (family animated feature)"**
+  e a série 3D de 26 x 13' que ele está levantando a partir do longa.
+- **Fora dos EUA (Alemanha):** sim — realocação entra, se a carta sair.
+- **Dedupe:** Gmail com `"gringo films"` devolveu **`{}`**; `gringo` = 0 em `pessoas.csv`,
+  `enviados.csv` e `ESTUDIOS-SEM-CARTA.md`; `Steve Hudson` e `Sonja Ewers` = 0 em `pessoas.csv` e
+  `enviados.csv`. **Casa inédita.** *Nota:* o co-produtor do mesmo projeto é a **Fabrique
+  d'images**, que já tem **3 linhas em `enviados.csv`** — não tocar nela.
+- **RESSALVA HONESTA, e é a mais séria desta rodada:** o `legal-notes` da Gringo traz uma
+  **objeção expressa** ao uso do contato ali publicado —
+  **"GRINGO films GmbH hereby expressly objects to the use by third parties of contact information published on this site under the legal notes obligation, for the purpose of sending any advertisement or information material not expressly requested"**.
+  É a cláusula padrão de Impressum alemão e mira **publicidade**, não candidatura; mas está escrita
+  e o maestro tem que decidir com ela na mão. **Segunda ressalva:** o site da Gringo **não mostra
+  3D de personagem em lugar nenhum** — as páginas `stitchhead` e `stitch-head-2` renderizam com
+  **zero caractere de texto útil**, e a home inteira tem **1 linha**. A prova de 3D é a rubrica da
+  feira e a biografia dele, não a página da casa. **Terceira:** a Gringo é uma casa de
+  **dois sócios** que terceiriza a animação (o longa foi feito com parceiros), então ela não tem
+  pipeline de personagem interno.
