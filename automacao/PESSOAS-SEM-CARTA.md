@@ -17096,3 +17096,297 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
   feira e a biografia dele, não a página da casa. **Terceira:** a Gringo é uma casa de
   **dois sócios** que terceiriza a animação (o longa foi feito com parceiros), então ela não tem
   pipeline de personagem interno.
+
+## RODADA DAS 02h35 DE 21/09 (Joe) — **A FILA DAS 65 PESSOAS DO CARTOON FOI ABERTA E ELA É POBRE DE ENDEREÇO: 65 nomes com cargo e casa pareados devolveram UM endereço de pessoa publicado, e a casa dele não passa na disciplina.** O que esta rodada entrega de duradouro é o conserto de um FALSO NEGATIVO DE TLS e o arquivo `dominios-sem-pessoa.csv`, pedido em três rodadas e finalmente escrito
+
+**O rendimento medido da veia (c), para a próxima rodada não repetir o otimismo da minha nota de
+00h35.** Eu escrevi ali que as duas rotas de palestrante eram *"a fila mais barata da próxima
+rodada"*. Abri as duas (`/business/speakers` **200, 264.059 bytes, 31 itens**;
+`/springboard/speakers-experts` **200, 290.476 bytes, 34 itens**), reparsei os 65 itens e
+**descobri um campo que a nota de 00h35 não tinha visto: `search`, que traz o PAÍS**, e um
+`modal-<id>` por pessoa com **biografia inteira**. Isso é bom e é o único ganho da veia. O
+problema é o que vem depois:
+
+- Dos **65**, **11** não têm cargo nem casa (só nome), **19** são emissora, distribuidor,
+  fundo, agência regional ou consultor individual (BBC ×2, ARTE, France Télévisions, RTVE, DR,
+  Warner Bros. Discovery, Banijay, Mediawan, CAKE, DeAPlaneta, IPR.VC, Magelis, Panteia, SETT,
+  Under The Milky Way, Weigoldmedia, 8 Lions, Floating Island) — **não são alvo desta campanha**.
+- Das casas de produção que sobraram, **8 já estavam fechadas antes de eu abrir nada**: Nørlum
+  (teto de duas, Jericca Cleland e Claus Toksvig Kjaer), Morgana Studios (ficha `sem-email` de
+  18/09 + `info@` com carta e follow-up), JAM Media (ficha `sem-email` de 14/09, Alan Shannon —
+  e o palestrante Mark Cumberton é **justamente a segunda pessoa**, proibida nesta rodada),
+  IBRIDO (SEGURADA até 28/09), Fiilin Good Films (rascunho corrigido em 18/09), Chouette
+  Compagnie (morta por disciplina em 19/09), beQ entertainment (morta por disciplina em 19/09,
+  é agência de intermediação) e Studio 100 International (braço de licenciamento, sem pipeline).
+- **Sobraram 9 casas para abrir**, e o resultado endereço por endereço está no
+  `dominios-sem-pessoa.csv` desta rodada.
+
+**A LIÇÃO QUE VALE MAIS QUE AS FICHAS, E É UMA QUINTA CAUSA DE "DOMÍNIO MORTO": TLS COM NOME
+ERRADO NO CERTIFICADO.** Três casas desta rodada devolveram **`curl` código 0, zero byte** em
+`https://` e eu quase as registrei como domínio morto, que foi exatamente o erro da Artifex
+corrigido em 08/09. O `curl -I` mostra a causa real:
+
+```
+curl: (60) SSL: no alternative certificate subject name matches target host name 'studiohari.com'
+```
+
+Não é domínio morto, é **certificado que cobre só o destino do redirecionamento**. Pedindo a
+mesma URL em `http://` e deixando o `-L` seguir, as três abriram e revelaram o domínio de
+verdade:
+
+| Pedido em `https://` | Resultado | Pedido em `http://` | Domínio real |
+|---|---|---|---|
+| `studiohari.com` | **0, zero byte** | 200, 11.859 bytes | **`hari-studios.com`** |
+| `threewise.co.uk` | **0, zero byte** | 429 | `threewise.tumblr.com` |
+| `passion-paris.com` | **0, zero byte** | 404 → 200 | **`passion-pictures.com/paris`** |
+
+> **REGRA QUE FICA: `curl` código 0 com zero byte em `https://` NÃO é domínio morto até o mesmo
+> pedido ter sido feito em `http://` com `-L`.** É a quinta cara de "porta fechada que é endereço
+> errado", junto com o site em outro domínio (Artifex/`aastudios.ca`), o e-mail em outro domínio
+> (Stunlock, Nørlum), o site do Workday renomeado (Eyeline) e o `robots.txt` que lista rota morta.
+> Confira com `getent hosts <dominio>` antes de concluir: as três tinham **DNS OK**.
+
+**SEXTA FAMÍLIA DE OCULTAÇÃO DE E-MAIL, achada e NÃO resolvida: substituição por JavaScript.**
+A `animoon.pl/en/contact/` (200, 3.829 bytes) serve, no texto visível, literalmente
+`[javascript protected email address]`, e o único `mailto:` do HTML é `mailto:\`. O prober das
+quatro famílias (`data-cfemail`, entidade HTML, `(at)/(dot)`, base64) devolve **zero** e a
+regex de e-mail cai em iscas embaralhadas (`Oo9hHnakd0XxfbPIsLvTA_t2MNzmEl5rFqSeKC@Q.uYij`) que
+**não são endereços**. **Isto exige navegador** e vai para a fila do Mágico. Registro para que
+ninguém conclua que a Animoon não publica endereço: ela publica, atrás de JS.
+
+### FICHA 1 — Dominiks Jarmakovičs, CFO / Producer, Studio Locomotive, Riga, Letônia — `dominiks@studiolocomotive.lv` — **ALTA de endereço, SEGURADA-por-disciplina**
+
+- **URLs abertas nesta rodada:** `https://studiolocomotive.lv/` — **200, 15.779 bytes** (o site
+  é de página única: `/contact`, `/about-us` e `/services` devolvem **404 com 6.798 bytes** cada,
+  e todo o conteúdo mora na home); e `https://www.cartoon-media.eu/springboard/speakers-experts`
+  — **200, 290.476 bytes**, item `656091`.
+- **Texto literal que prova nome, cargo e endereço**, no bloco `About us` da home, em três
+  cartões idênticos:
+  `Roberts Vinovskis CEO, Founder RV@LOCOMOTIVE.LV` / `Dominiks Jarmakovičs CFO, Producer DOMINIKS@LOCOMOTIVE.LV` / `Elīna Reinholde Production Manager ELINA@LOCOMOTIVE.LV`
+- **ARMADILHA DE DOMÍNIO, e é uma variante nova da armadilha da Stunlock: o TEXTO VISÍVEL e o
+  `href` discordam.** O texto imprime `DOMINIKS@LOCOMOTIVE.LV` (sem o `studio`), e o `mailto:`
+  do `href` da mesma linha diz **`dominiks@studiolocomotive.lv`** (com o `studio`). Os três
+  cartões fazem isso, e a caixa da casa aparece nos dois lugares como `office@locomotive.lv`.
+  **Quem copiar o texto visível monta um endereço que a casa não usa no link.** Registro os dois
+  e uso o do `href`, que é o que a casa mandou o navegador abrir. **Nada foi montado.**
+- **Por que ESSA pessoa e não outra da casa:** são três nomes publicados. O Roberts Vinovskis é
+  CEO e fundador, a Elīna é Production Manager, e o Dominiks é **o único que a feira nomeia**
+  (`Dominiks Jarmakovics | Managing Director | Studio Locomotive`, categoria `key-creative`).
+- **O cargo da feira e o cargo da casa NÃO BATEM, e eu fico com o da casa:** a Cartoon escreve
+  `Managing Director`; a própria `/` da casa escreve **`CFO, Producer`**. Pela regra de que cargo
+  desatualizado é pior que alvo nenhum, registro `CFO, Producer` e anoto a divergência.
+- **Gancho, com a frase da própria casa entre aspas:**
+  **"Studio Locomotive was established in 1995 and is based in Riga, Latvia. Company produces fiction, creative documentaries and animation, mostly focusing on feature length projects"**,
+  e a biografia que ele mesmo submeteu à feira: **"He has produced numerous international feature, documentary, and animated films. Recent credits include 'Holy Destructors' (2025, IDFA Best Director, PÖFF Best Documentary), 'Lotus' (2024, PÖFF, Rotterdam, Helsinki IFF), and 'My Love Affair with Marriage' (2022, Tribeca, Annecy, Karlovy Vary, EFA nominee)"**.
+- **Fora dos EUA (Letônia, UE):** sim — a frase de realocação entraria.
+- **POR QUE SEGURADA-POR-DISCIPLINA, e o motivo é um número, não uma impressão:** contei as
+  palavras `3D`, `CGI`, `character`, `Blender`, `Maya` e `Unreal` nos **3.451 caracteres de texto
+  útil** da única página que a casa tem. **Resultado: ZERO de cada uma.** A lista de `SERVICES`
+  que a casa publica é inteiramente de produção de imagem real —
+  `Line producing & production management`, `Location scouting & permit management`,
+  `Casting & talent coordination`, `Art department & set construction`,
+  `Crew & equipment coordination`, `Post-production supervision & delivery` — e metade da página
+  é sobre **incentivo fiscal** (`30% National Cash Rebate`, `25% Riga Film Fund Rebate`). O único
+  título animado do catálogo de 29 projetos, *My Love Affair with Marriage*, é **animação 2D
+  desenhada** da Signe Baumane. **A casa não é do ofício do Vini**, e a rubrica da feira aqui não
+  socorre: o Studio Locomotive não aparece em nenhuma das 27 fichas 3D do Cartoon Forum 2026 —
+  ele entrou por ser palestrante, não por ter projeto 3D.
+- **Dedupe NA CAIXA:** `mcp__Gmail__search_threads` com
+  `studiolocomotive OR locomotive.lv OR Jarmakovics OR studiohari OR "Studio HARI" OR Charier OR dealproductions OR melusinestudio OR "Melusine" OR caimans OR funnytales OR Kazantzis`
+  devolveu **`{}` — zero thread**. No repositório: `locomotive` = 0 em `pessoas.csv`,
+  `enviados.csv`, `docs/index.html`, `ESTUDIOS-SEM-CARTA.md` e `alvos.csv`. **Casa inédita.**
+- **RESSALVA HONESTA:** o endereço é bom e a casa não serve. É a ficha mais bem documentada da
+  rodada e **provavelmente não deve virar carta nenhuma** — se o maestro escrever, escreve para
+  um produtor de documentário e imagem real que nunca contratou modelador de personagem, e gasta
+  a única carta da casa nisso. Segunda ressalva: o cartão dele na home vem com o texto de
+  gabarito **"some text here about the person"** por cima dos três nomes, ou seja a página está
+  publicada pela metade e pode estar desatualizada.
+
+### FICHA 2 — Josselin Charier, co-fundador e co-CEO, HARI (Studio HARI), Paris, França — **sem-email**
+
+- **URLs abertas nesta rodada:** `http://studiohari.com/` → redireciona para
+  **`https://hari-studios.com/`** — **200, 11.859 bytes**; `/contact/` — **200, 12.664**;
+  `/a-propos/` (via `/about`) — **200, 18.133**; `/recrutements/` — **200, 16.841**;
+  `/recrutement/` — **200, 12.562**; `/productions/` — **200, 11.184**;
+  `/mentions-legales/` — **200, 11.004**; `/politique-de-confidentialite/` — **200, 12.050**;
+  `/equipe/`, `/l-equipe/`, `/team/` e `/jobs/` — **404 com 39.906 bytes**.
+  E `https://www.cartoon-media.eu/business/speakers` — **200, 264.059**, item `670672`.
+- **Esta é a casa que só abriu por causa da lição de TLS acima**: `https://studiohari.com/`
+  devolve código 0 e zero byte, com `getent hosts` OK. Sem o segundo pedido em `http://` eu teria
+  escrito "domínio morto" e a casa não existiria nesta rodada.
+- **Texto literal que prova nome e cargo, e vem de DUAS páginas independentes da casa:** o
+  `mentions-legales` escreve `Editeur : Hari / Siège social : 166, boulevard Voltaire – 75011 PARIS / Direction de la publication : Josselin Charier / Antoine Rodelet`;
+  e a `/a-propos/` escreve
+  **"De la petite équipe réunie autour de Josselin Charier et Antoine Rodelet au tout début en 2006, HARI est devenu un grand studio de classe mondiale réunissant une équipe de 150 artistes extrêmement talentueux et passionnés"**.
+  A feira confirma o cargo por caminho independente: `Josselin Charier | Co-founder and co-CEO | HARI`.
+- **POR QUE `sem-email`:** as oito páginas da casa publicam **três** endereços e **nenhum é de
+  pessoa**: `contact@studiohari.com` (na política de privacidade), `sales@hari-international.tv`
+  (vendas, na `/contact/`) e `harishopclients@studiohari.com` com o espelho
+  `harishopclients@gmail.com` (as duas do **serviço pós-venda da loja de produto derivado**, que
+  aparecem em TODAS as páginas por estarem no rodapé). Não há `data-cfemail`, não há base64, não
+  há `(at)`. **Nada foi montado** — registro que `josselin@hari-studios.com` e
+  `j.charier@studiohari.com` não existem em lugar nenhum deste repositório e não foram escritos
+  por mim em lugar nenhum.
+- **Por que ESSA pessoa:** a casa publica **dois** nomes e os dois são co-fundadores e diretores
+  de publicação. O Josselin é o que a feira nomeia e o que aparece primeiro nas duas páginas.
+  Antoine Rodelet fica como segunda pessoa possível, se um dia houver endereço.
+- **Gancho, com a frase da própria casa entre aspas:**
+  **"Nous sommes reconnus internationalement comme des maîtres du cartoon. Nous renouvelons le genre grâce à une narration non dialoguée très structurée, centrée sur les intentions des personnages"**
+  — narrativa sem diálogo, construída sobre a **intenção do personagem**, que é a frase mais
+  próxima do ofício do Vini que apareceu nesta rodada inteira. O catálogo publicado é
+  *Grizzy & les Lemmings* (3 temporadas mais *World Tour* e *Bébé Lemmings*), *Mystery Lane*,
+  *La Famille Weasy*, *La Chouette & Co*, *Pipas & Douglas*, *Les Gees*, *Leon*.
+- **Fora dos EUA (França, UE):** sim — a frase de realocação entraria.
+- **Dedupe NA CAIXA:** a mesma consulta da ficha 1 devolveu **`{}`**. No repositório: `hari-studios`,
+  `studiohari` e `Charier` = **0** em `pessoas.csv`, `enviados.csv`, `docs/index.html`,
+  `ESTUDIOS-SEM-CARTA.md` e `alvos.csv`. **Casa inédita.** *Atenção:* `hari` sozinho dá 7 acertos
+  em `pessoas.csv` e **todos são substring de outra palavra** — foi conferido um por um, é a
+  mesma armadilha que quase me fez perder a duplicata da A Film Estonia nesta rodada.
+- **RESSALVA HONESTA, e ela é o motivo de esta ficha também ser SEGURADA-por-disciplina:** **a
+  palavra `3D` não aparece uma única vez em nenhuma das oito páginas da HARI.** *Grizzy & les
+  Lemmings* é, de fato, animação CGI de personagem — mas isso é conhecimento meu de fora, não
+  texto publicado pela casa, e a regra do maestro exige a prova **na página dela mesma**. A casa
+  se chama de "maîtres du cartoon" e não nomeia técnica em lugar nenhum. Segunda ressalva: o site
+  vivo é do braço de **distribuição e loja** (`Ce site est opéré par la société HARI
+  INTERNATIONAL... la filiale de distribution du groupe HARI`), o que explica por que os únicos
+  endereços publicados são de vendas e de pós-venda de camiseta. Terceira, e é a mais útil para
+  outro agente: a casa tem **página de vagas própria e viva** (`/recrutements/`, com
+  `Consultez les offres d'emploi` e um filtro), e diz
+  **"La gamme d'opportunités chez Hari est très large. Des rôles créatifs et de production, aux domaines techniques tels que les effets visuels"**
+  — **150 artistas, porta de candidatura publicada, e isso é fila do Jhon A, não minha.**
+- **Segunda pessoa da casa, guardada (não escrever agora):** Antoine Rodelet, co-fundador e
+  co-CEO, sem endereço publicado.
+
+### FICHA 3 — Fabien Renelli, Mélusine Studio, Luxemburgo — **sem-email, e DÍVIDA DE NAVEGADOR**
+
+- **URLs abertas nesta rodada:** `https://www.melusinestudio.com/` — **200 e apenas 1.184
+  bytes**; e `?entity=11` (a URL exata que a ficha da feira publica), `/contact`, `/team`,
+  `/jobs` e até `/api/entities` — **todas 200 com os MESMOS 1.184 bytes**. É uma casca de SPA
+  que serve o mesmo esqueleto para qualquer caminho. `mailto` = 0, `data-cfemail` = 0, base64 =
+  0, `(at)` = 0.
+- **Tentei a regra da Artifex (site institucional em outro domínio) e ela falhou aqui:**
+  `melusineproductions.com`, `studio352.lu` e `melusine.lu` devolvem **código 0 em `http://` E em
+  `https://`**, e desta vez é domínio morto de verdade, porque o teste de `http://` (a lição
+  desta rodada) também deu zero.
+- **Texto literal que prova nome e casa**, na ficha da feira, projeto *Les Sacrifiés*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-...-649469`
+  (id `649469`): `Main Producer Deal Productions (Luxembourg) Alexandra Hoesdorff`,
+  **`Co-Producer Mélusine Studio (Luxembourg) Fabien Renelli`**,
+  **`Techniques 2D computer, 3D computer, Drawing & Painting`**, `Format TV series`.
+  A ficha publica o `<a href>` da casa (`https://www.melusinestudio.com/?entity=11`), então o
+  domínio **não foi montado por mim**.
+- **POR QUE `sem-email`:** a casa não serve HTML nenhum a `curl`. **Nada foi montado.**
+- **POR QUE ESSA PESSOA:** é o **único** nome que a feira pareia com a Mélusine, sob a rubrica
+  `Co-Producer`. Registro que isso é **rubrica de feira, não cargo declarado pela casa** — a
+  mesma ressalva da ficha do Jhonie Aelbrecht de 00h35.
+- **Fora dos EUA (Luxemburgo, UE):** sim.
+- **Dedupe NA CAIXA:** `{}` na consulta conjunta. No repositório, `melusine` aparece **uma única
+  vez** em `pessoas.csv` e é **dentro da string de uma consulta de dedupe da rodada de 00h35**,
+  não uma linha de pessoa; `enviados.csv`, `docs/index.html` e `alvos.csv` dão **0**. **Casa
+  inédita, primeiro toque.**
+- **RESSALVA HONESTA, e é dupla:** (i) **a disciplina não foi provada e não pode ser provada por
+  `curl`** — quem decide é a página da casa, e a página da casa não abre sem JS; o que existe é a
+  rubrica `2D computer, 3D computer, Drawing & Painting` de um projeto que ainda é pitch. Por
+  isso a ficha entra **SEGURADA-por-disciplina** até o Mágico abrir a SPA. (ii) A produtora
+  principal do mesmo projeto, a **Deal Productions**, foi aberta nesta rodada e **morreu por
+  disciplina com número** (ver abaixo) — se a Mélusine também for só um braço de co-produção, o
+  projeto inteiro não tem pipeline de personagem.
+
+### O QUE MORREU POR DISCIPLINA NESTA RODADA, com o texto que matou cada um
+
+Nenhum destes virou linha em `pessoas.csv`, e todos viraram linha em `dominios-sem-pessoa.csv`.
+
+- **Funny Tales (Grécia) / Dimitrios Kazantzis, General Manager & Executive Producer** — é a
+  morte mais limpa da rodada, porque **a casa se autodeclara no `<title>` e no rodapé**:
+  `Funny Tales | 2D animation studio, Greece` e `FUNNY TALES 2D Animation Studio.`
+  (`http://www.funnytales.eu` → **200, 5.007 bytes**; `/contact`, `/team` e `/about` devolvem
+  **500** com um erro de Joomla vazando caminho de servidor). A rubrica da feira dizia
+  `Techniques 2D computer, 3D computer, Drawing, Cut-out & Painting` para *Anemos Anima* — ou
+  seja **a feira listou 3D numa casa que se chama de estúdio 2D no próprio título da página.**
+  > **REGRA QUE FICA: quando a rubrica `Techniques` da feira e o `<title>` da casa se
+  > contradizem, vale o `<title>` da casa.** A feira registra a intenção do PITCH; o site
+  > registra o que a casa sabe fazer. Isto vale para as outras 8 fichas híbridas do Cartoon
+  > Forum que ainda não foram abertas.
+- **Deal Productions (Luxemburgo) / Alexandra Hoesdorff, co-fundadora e CEO** — `/about` (200,
+  103.935 bytes) e `/contact` (200, 106.207) abertas. **`3D`, `animation` e `animated` = ZERO
+  ocorrências nos 1.720 caracteres de texto da `/about`.** A casa se declara
+  **"a Luxembourg-based production company engaged in the development, financing, packaging and production of independently produced motion pictures and TV programs in all media worldwide"**,
+  com **"Our mandate is to deliver high-quality, international, broadly commercial products, with a feminine touch"**
+  e um time de **dez pessoas** vindas de Warner, Disney, DreamWorks, Fox, Paramount, Sony. É
+  produtora de **imagem real**, e o único endereço publicado é `info@dealproductions.com`.
+- **Caïmans Productions (França) / Daniel Sauvage, co-fundador** — `http://www.caimans-prod.com`
+  (200, 17.599) e `/fr/contact/` (200, 19.427) abertas; `/equipe` e `/fr/mentions-legales/` dão
+  **404**. Endereços publicados: `info@` e `scenario@caimans-prod.com`, **os dois funcionais**. A
+  casa se descreve como **"une société française indépendante fondée en 2002... produit des courts et longs métrages, animation, documentaires et séries TV"**,
+  e o catálogo de ~70 títulos que ela lista na navegação é esmagadoramente **documentário, curta
+  e longa de imagem real** (*Abderrahmane Sissako*, *Louis de Funès*, *Hitchcock et la Nouvelle
+  Vague*, *René Clément*). Zero personagem 3D.
+- **Studio Locomotive** — ver ficha 1: entregue, mas **SEGURADA**, com o zero contado.
+- **HARI** — ver ficha 2: entregue, mas **SEGURADA**, porque a palavra `3D` não existe no site.
+- **Misty Fox (Olga Cherepanova, Creative Producer)** — `https://mistyfox.me/` **200, 35.009
+  bytes**, e publica **um** endereço, `office@mistyfox.me`, funcional. **VETO DE REGIÃO ANTES DA
+  DISCIPLINA: a casa é da UCRÂNIA**, que não está no escopo escrito no `BRIEF-JOE.md` (América do
+  Norte, Reino Unido, Irlanda, Nórdicos, União Europeia, Oceania, e na Ásia só Coreia do Sul e
+  Singapura). Não abri mais nada dela.
+- **Alopra Estúdio (Nicholas Paim)**, co-produtora do projeto da Mago — **VETO DE REGIÃO: Brasil**,
+  proibido em letra do briefing.
+- **Studio 100 International (Martin Krieger, CEO; Manuela Schöbel-Lumb, Producer)** —
+  `studio100international.com` (200, 16.559) e `studio100media.com` (200, 32.987, redireciona
+  para `studio100group.com`): **zero endereço em qualquer família de ocultação**, e é o braço de
+  **licenciamento e distribuição** do grupo, não o estúdio. A produção fica na Studio 100
+  Animation e na Flying Bark, que são outras entidades.
+- **MAUR Film (Martin Vandas, CEO)** — `maurfilm.com` (200, 45.905, redireciona para `/cs/`)
+  publica **`vandasova@maurfilm.com`**, que é endereço de pessoa e é **de OUTRA pessoa** (a
+  sócia, não o palestrante). A casa é de **stop-motion e 2D de autor** (a biografia dele na feira
+  fala de Cristal d'Annecy e indicação ao Oscar em animação de festival). Não abri a
+  `/kontakt` — morreu por disciplina antes.
+
+### DUPLICATAS QUE NÃO SAÍRAM, E UMA DELAS ERA UM ENDEREÇO PUBLICADO NOVO QUE EU TIVE DE DEIXAR NA MESA
+
+**A regra do dedupe pelo ENDEREÇO salvou esta rodada duas vezes, e nas duas eu já tinha a ficha
+escrita na cabeça.**
+
+1. **A Film Estonia / Kristel Tõldsepp, Executive Producer, `kristel@afilm.ee`.** Abri
+   `https://www.afilm.ee/` (**200, 10.822 bytes**) e o bloco `Get in Touch` publica, em `mailto:`
+   **e** em texto puro, `Kristel Tõldsepp Executive Producer kristel@afilm.ee` e
+   `Meelis Arulepp Director meelis@afilm.ee`. Endereço **PUBLICADO, confiança ALTA**, e a
+   disciplina é a **melhor de todas as rodadas do Cartoon**: a própria casa escreve, três vezes,
+   **"A Film Estonia produced 20 minutes of 3D character animation"** (*Albert*),
+   **"produced ca 20 minutes of 3D character animation"** (*Niko 2*) e
+   **"produced 15 minutes of 3D character animation"** (*Olsen Gang in Deep Trouble*), mais
+   **"provided pre-production services, incl. character and prop designs"** (*Alfie Atkins*).
+   **E ELA NÃO PODE SAIR:** a casa **já é ficha de 20/09** com **Meelis Arulepp**
+   (`pessoas.csv` linha 496), a carta dele **ainda não foi enviada** (o Gmail devolve zero thread
+   para `afilm.ee`, `A Film Estonia` e `Arulepp`, e o Apps Script não roda desde 19/09 01h26), e
+   a ordem desta rodada é explícita: **nenhuma segunda pessoa de casa nenhuma.** Fica registrada
+   aqui como **SEGUNDA E ÚLTIMA pessoa da A Film Estonia, pronta para o dia depois do envio da
+   primeira**, com endereço, cargo e disciplina já provados.
+   *Nota de método:* eu quase perdi esta duplicata porque procurei `a film` em `pessoas.csv`,
+   vi 23 acertos, tratei como substring e segui. Só achei ao rodar o cruzamento automático de
+   TODAS as casas das fichas 3D contra o arquivo. **Substring de nome de casa não é dedupe.**
+2. **Dwarf Animation Studio / Olivier Pinol.** A feira publica `Dwarf Entertainment (France)
+   Olivier Pinol` e o `<a href>` da ficha aponta para `dwarfanimation.com`. Abri sete páginas
+   (`/` 200 135.920; `/contact` 200 181.252; `/careers` 200 127.692; `/the-vision` 200 182.764;
+   `/the-forge` 200 169.201; `/legal-notices` 200 128.601; `/about`, `/team`, `/jobs` e
+   `/mentions-legales` **404**) e a casa publica **só funcionais**: `forge@`, `marketing@`. O
+   `legal-notices` nomeia `Le Directeur de la publication du Site est Olivier Pinol`. **Ele já é
+   ficha de 19/09** (`pessoas.csv` linha 455), com endereço, e a casa já está no painel como
+   porta de portal. **Zero ficha nova.** Fica o registro de que a `/careers` dela hoje diz
+   `Open positions no position available`, e que a disciplina dela é a mais forte da rodada:
+   `Ladybug & Cat Noir: The Movie`, `Miraculous: the Tv Shows (TF1/Disney+)`,
+   `Trash Truck (Netflix/Glen Keane Productions)`, `Monsters at Work (Pixar/Disney+)`,
+   `My Dad the Bounty Hunter (Netflix)`, com pipeline em **Unreal Engine** e render farm em GPU.
+3. **Primal Shape (Andrea Giro)** — já é ficha de 20/09 (Barbara Dossi) **e já tem candidatura
+   enviada e confirmada em 20/09 pelo formulário oficial**. A `/contact` publica quatro caixas
+   (`info@`, `jobs@`, `production@`, `business@`) e **nenhuma de pessoa**.
+4. **Mago Production (Peter Keydel)** e **Watch Next Media (Philippe Alessandri)** — o Gmail
+   devolveu **quatro threads**: carta + follow-up para `jobs@magoproduction.com` (02/09 e 07/09,
+   com duas confirmações automáticas de recebimento) e carta + follow-up para
+   `contact@watchnextmedia.com` (28/08 e 07/09). As duas casas estão no painel com entrega `ok`.
+5. **Everybody on Board Productions (Didier Creste)** e **Will Production (Didier Falk)** — as
+   duas são casas inéditas com projeto 3D no Cartoon Forum, e **as duas ficaram fechadas pela
+   regra de não montar domínio**: a ficha de cada projeto publica `<a href>` só para as
+   co-produtoras (Watch Next Media no caso da primeira; 20STM, Fabrique d'Images e TrickStudio no
+   caso da segunda), e nenhuma das duas tem domínio publicado em lugar nenhum que eu tenha aberto.
+   **Não inventei `everybodyonboard.fr` nem `willproduction.fr`.** Ficam em
+   `dominios-sem-pessoa.csv` com `sem-dominio-publicado`.
