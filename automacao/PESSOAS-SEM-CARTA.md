@@ -17008,3 +17008,45 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
   quase certamente **não é a Brain Comet**. O endereço é ótimo; a casa é uma porta, não uma vaga.
 - **Segunda pessoa da casa, guardada (não escrever agora):** John Banana, Creative Producer e
   fundador, `john@brain-comet.com`.
+
+### FICHA 5 — Jhonie Aelbrecht, Wailing Wolves, Gent, Bélgica — **sem-email**
+
+- **URLs abertas nesta rodada:** `https://wailingwolves.com/about.html` — **200, 11.111 bytes**;
+  `/contact.html` — **200, 12.959 bytes**; `/services.html` — **200, 16.785 bytes**;
+  `/projects.html` — **200, 14.275 bytes**; home — **200, 21.888 bytes**.
+- **Texto literal que prova nome e casa**, na `/contact.html`:
+  `Contact us Please email us at info [at] wailingwolves [dot com] Gent Jhonie Aelbrecht Dendermondsesteenweg 48-002, 9000 Gent info [at] wailingwolves [dot com]`
+- **POR QUE NÃO TEM E-MAIL, e é ofuscação de texto, não de código:** o site inteiro publica
+  **um** endereço, e o publica escrito **`info [at] wailingwolves [dot com]`** — não há `mailto:`,
+  não há `data-cfemail`, não há base64, não há entidade. Rodei o prober corrigido nas cinco
+  páginas: `mailto` = **0**, `data-cfemail` = **0**, endereço em texto = **0**. O único endereço
+  reconstruível é `info@`, que é **caixa funcional**, e a regra do brief é clara sobre não gastar
+  a única carta de uma casa num endereço que não é de pessoa. **Nada foi montado:** eu **não**
+  escrevi `jhonie@wailingwolves.com`, embora o padrão de nome estivesse na cara.
+- **Disciplina NA PRÓPRIA PÁGINA DA CASA:** a `/about.html` escreve
+  **"Wailing Wolves is an independent production studio based in Ghent, Belgium. Our aim is to (co-)produce 2D and 3D animation movies and series"**
+  — a casa diz **3D** com todas as letras, na própria página. O menu de serviços ainda tem âncoras
+  para `#rigging/dispatching/consulting` e `#tool-development`, que é vocabulário de pipeline 3D.
+- **Disciplina também pela rubrica da feira:** projeto *Emotsters*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-499602-647109`
+  (**200, 68.794 bytes**), `Format TV series`, `Duration 26 x 11'`, `Children 5-7 (Bridge)`,
+  **`Techniques 2D computer & 3D computer`**, `Country Germany`,
+  `Main Producer Blaue Pampelmuse (Germany) Carol Ratajczak`,
+  `Co-Producer Wailing Wolves (Belgium) Jhonie Aelbrecht`. **Quinto dos 9 que o filtro antigo perdia.**
+- **Por que ESSA pessoa:** é a **única** pessoa nomeada no site inteiro, e ela está no cartão do
+  escritório de Gent. A feira a confirma por caminho independente, como co-produtora do projeto.
+- **Gancho, com a frase da própria casa entre aspas:**
+  **"Animation is ingrained in our DNA, whether it's our own IP or co-productions"** (`/services.html`).
+- **Fora dos EUA (Bélgica):** sim — realocação entra, se a carta chegar a sair.
+- **Dedupe:** Gmail com `wailingwolves` devolveu **`{}`**; `wailingwolves` = 0 em `pessoas.csv`,
+  `enviados.csv` e `ESTUDIOS-SEM-CARTA.md`; `Aelbrecht` = 0 em `pessoas.csv` e `enviados.csv`.
+  **Casa inédita.** *Nota para o maestro:* a produtora principal do mesmo projeto é a **Blaue
+  Pampelmuse** de Carol **Ratajczak**, que está na lista de **segundas pessoas seguradas até
+  22/09** — são casas diferentes, mas se as duas cartas saírem juntas elas chegam ao mesmo projeto.
+- **RESSALVA HONESTA, e é dupla:** (i) **o cargo dele não está publicado pela casa.** O site põe o
+  nome sob o rótulo `Gent`, que é escritório, não função. O que existe é a rubrica `Co-Producers`
+  da feira, que o trata como o contato da co-produção — registrei como *co-produtor pela rubrica
+  da feira*, e isso é rubrica, **não** cargo declarado pela casa. (ii) A casa é minúscula e é
+  `part of the Menagerie Media Group`; os dois projetos publicados (`Test Site!`, `Amalur Profezia`)
+  estão em produção, e um deles se chama literalmente *Test Site!* — pode não haver equipe interna
+  nenhuma.
