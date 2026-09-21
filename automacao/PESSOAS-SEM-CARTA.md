@@ -16925,3 +16925,42 @@ montado. Seis casas inéditas, cinco países (Alemanha ×2, Chéquia, Romênia, 
 - **Segunda pessoa da casa, guardada (não escrever agora):** Jakub Košťál,
   `producer, international coproductions`, `jakub@bionaut.cz` — que é justamente quem a feira
   nomeia, se o maestro preferir entrar pela porta da co-produção.
+
+### FICHA 3 — Anca Manolache, creative director e co-fundadora, VÂNĂ Animation Studio, Bucareste, Romênia — `anca.manolache@vana.ro` — **ALTA (com ressalva de disciplina, ver abaixo)**
+
+- **URLs abertas nesta rodada:** `https://www.vana.ro/about` — **200, 157.628 bytes**;
+  `https://www.vana.ro/contact` — **200, 143.958 bytes**; home **200, 186.351 bytes**.
+- **Texto literal que prova nome e cargo**, na `/about`:
+  **"Headed by creative directors Anca Manolache and Horia Manolache and animation director Andrei Câmpan, VÂNĂ Animation Studio is a full house of very talented Romanian & French artists"**
+- **Texto literal que prova o endereço**, no cartão de contato das duas páginas:
+  `Anca Manolache 0040 741 253 585 anca.manolache@vana.ro` (e `Horia Manolache ... horia.manolache@vana.ro`).
+  Está em `mailto:` no `href`. **Não montei nada** — os dois endereços vêm impressos, um por cartão.
+  (O telefone está na página; **não o copio para cá nem para a carta**, repositório é público.)
+- **A `/contact` reforça o pareamento e diz para onde vai portfólio:**
+  `Enquiries ... anca.manolache@vana.ro` e, logo abaixo, `Jobs — Animations, Illustrations, Design. Send your portfolio here hey@vana.ro`.
+- **Por que ESSA pessoa e não outra da casa:** a casa tem **três** nomes públicos e os três são
+  creative/animation director. A Anca é a que a própria `/contact` põe na linha de `Enquiries`, e
+  é a que a feira nomeia primeiro: `Main Producers / VÂNĂ Animation Studio / (Romania) / Anca Elena Manolache / Horia Manolache`.
+- **Disciplina pela rubrica da feira:** projeto *In the Workfield*,
+  `https://www.cartoon-media.eu/forum/projects/discover-the-projects/project-cartoonforumprojectsubmissionform-647263-647328`
+  (**200, 64.441 bytes**), `Format TV series`, `Duration 10 x 20'`,
+  **`Techniques 2D computer & 3D computer`**, `Country Romania`. **Terceiro dos 9 projetos que o
+  filtro antigo perdia.**
+- **Gancho, com a frase da própria casa entre aspas:** a lista de serviços da `/about` traz, em
+  itens separados, **"2D Character Rig Animation"**, **"3D Illustration"**, **"Character Design"**,
+  `Concept Art`, `Art Direction`. E a casa se assina **"Animating from Bucharest"**.
+- **Fora dos EUA (Romênia):** sim — **a frase de realocação entra**.
+- **Dedupe:** Gmail (mesma consulta da ficha 2, que incluía `vana.ro`) devolveu **`{}`**; no
+  repositório `vana.ro` = 0 em `pessoas.csv`, `enviados.csv` e `ESTUDIOS-SEM-CARTA.md`, e
+  `Manolache` = 0 em `pessoas.csv` e `enviados.csv`. **Casa inédita, primeiro toque.**
+- **RESSALVA HONESTA, e ela é o motivo de o maestro poder segurar esta ficha:** a casa **se
+  declara 2D na primeira linha da própria `/about`** —
+  **"A leading animation studio in the Romanian market, we are known for pursuing excellence in the craft of 2D animated stories"**.
+  O 3D que ela publica é **`3D Illustration`**, que é imagem parada, e o item de personagem que ela
+  publica é **`2D Character Rig Animation`**. Ou seja: a casa mostra **3D** e mostra **personagem**,
+  mas **não mostra 3D de personagem** na própria página — quem casa os dois é só a rubrica
+  `Techniques 2D computer & 3D computer` da feira, para um projeto que ainda é pitch. **É o mesmo
+  padrão que fez o maestro segurar a Kopli.** Segunda ressalva: é casa de comercial e campanha
+  (`TV commercials and digital campaigns`, `360˚ videos and AR projects`), não de série longa.
+- **Segunda pessoa da casa, guardada (não escrever agora):** Horia Manolache, creative director,
+  `horia.manolache@vana.ro`.
