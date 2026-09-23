@@ -24,6 +24,16 @@ Na semana passada o limite acabou na segunda (21/09) e a campanha ficou parada a
   - E avisar o Vini em uma linha, sem susto.
 - Na quarta de manhã, com o limite zerado, tudo volta ao ritmo normal.
 
+## Rota do clique (23/09/2026, aprovada pelo Vini: "isso é mt legal do link de eu só fazer a parte do captcha")
+
+Formulário com caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha) NÃO é mais parede:
+1. O maestro abre o navegador na nuvem (Kernel, stealth desligado), preenche tudo, anexa o CV e confere campo por campo.
+2. Manda para o Vini o link da tela ao vivo (`browser_live_view_url`), só no chat e nunca no repositório, com o nome da casa e da vaga.
+3. O VINI clica na verificação. O maestro nunca clica, nunca resolve e nunca burla a caixa.
+4. O maestro confere o texto de confirmação do servidor, registra e fecha o navegador.
+
+Juntar várias portas numa leva só (várias abas ou navegadores prontos), para o Vini clicar tudo de uma vez. O CV vai por link que expira sozinho (litterbox 72h), nunca no repositório.
+
 ## Onde está o resto
 
 Regras da campanha, cartas, veto, salário e segurança: `automacao/BRIEFING.md`. Regras de carta e email pros estúdios (emoji ☺️ 😊, sem travessão, sem a palavra Brazil) estão lá e continuam valendo.
