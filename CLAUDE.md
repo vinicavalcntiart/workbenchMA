@@ -44,6 +44,12 @@ Formulário com caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha) NÃO é mais
 
 Juntar várias portas numa leva só (várias abas ou navegadores prontos), para o Vini clicar tudo de uma vez. O CV vai por link que expira sozinho (litterbox 72h), nunca no repositório.
 
+## Estúdios grandes: aplica de todo jeito (ordem do Vini, 23/09/2026)
+
+*"a gnt aplica pra dreamworks de todo jeito. lembra que disney, dreamworks, warner etc prioridade"*
+
+Vaga de arte em Disney (Disney Animation, Pixar, ILM, Lucasfilm, Marvel), DreamWorks/NBCUniversal, Warner Bros., Netflix, Sony Pictures Animation e casas desse porte: APLICA mesmo quando o anúncio puxa para 2D, vis dev ou algo vizinho de personagem 3D. Não descarta por "fora da disciplina". A regra de sem ambiente e sem props continua valendo. NDA, assinatura eletrônica e declaração legal dentro do formulário ficam para o próprio Vini clicar e assinar na tela ao vivo.
+
 ## Onde está o resto
 
 Regras da campanha, cartas, veto, salário e segurança: `automacao/BRIEFING.md`. Regras de carta e email pros estúdios (emoji ☺️ 😊, sem travessão, sem a palavra Brazil) estão lá e continuam valendo.
