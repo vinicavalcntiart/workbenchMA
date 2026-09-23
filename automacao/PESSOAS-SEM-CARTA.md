@@ -17982,3 +17982,48 @@ a leitura de disciplina tem de vir antes do endereço.
   4. A ficha da Telefilm põe telefone de código 403 (Alberta) para ela; **não registrei telefone**, e
      isso não muda a casa, que é de Vancouver.
 
+### FICHA 4 — **Louis-Simon Ménard**, *President* (presidente e fundador do grupo), **DIGITAL DIMENSION** (Montréal, QC, **Canadá**) — `lsmenard@digitaldimension.com` — **ALTA (PUBLICADO pela Telefilm Canada)** — **SEGUNDA E ÚLTIMA aproximação da campanha a esta casa, e a mais fraca das quatro**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/digital-dimension/` (ferramenta de página):
+  *"Louis-Simon Ménard — Title: President — Email: lsmenard@digitaldimension.com"*, *"François Garcia —
+  VP Business Development — fgarcia@digitaldimension.com"* (também o `General Email` da ficha) e
+  *"Guy Harvey — Minister of Content — gharvey@digitaldimension.com"*.
+  `https://www.digitaldimension.com/` (**200, 167.823 bytes**), `/careers` (**200, 164.820 bytes**) e
+  `/contact` (**200, 133.297 bytes**): o site publica só `info@digitaldimension.com`.
+- **NADA MONTADO.** Os três endereços estão escritos pela Telefilm, no padrão `inicial+sobrenome@`
+  que ela mesma mostra três vezes.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Os três publicados são presidente, desenvolvimento de
+  negócio e conteúdo; ninguém de arte. Em casa média o BRIEF-JOE manda ir em quem decide, e ele é o
+  fundador. O **Guy Harvey** (*"Minister of Content"*) fica anotado como a alternativa se o maestro
+  preferir o lado criativo, **mas não os dois**: esta é a última vaga da casa.
+- **GANCHO, com a frase da própria casa entre aspas:** na Telefilm, escrita pela casa, *"Digital
+  Dimension is a forward-thinking 3D animation studio that specializes in the creation of TV Series and
+  feature films."* E na `/careers`: *"At Digital Dimension it’s all about the people. From our animator
+  to our accountant we are all creative resourceful storytellers passionate by our work."* e *"We are
+  always looking for imaginative team player who share our philosophy and who want to make the
+  impossible, possible."*
+- **FORA DOS EUA? SIM**, Montréal. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em
+  `digitaldimension OR "Digital Dimension" OR lsmenard OR gharvey` → **duas** threads, **as duas
+  enviadas por nós e sem resposta**: (a) **14/07**, carta de antes da campanha a `info@`; (b) **26/08**,
+  carta da campanha a `info@`, com **lembrete no mesmo fio em 02/09**. No repositório: `lsmenard`,
+  `gharvey`, `fgarcia` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html`;
+  `enviados.csv` tem as duas cartas a `info@`; `alvos.csv` descreve o grupo como *"séries CG
+  (Saturday); cinemáticas (Meduzarts; KRAKN)"*. **Primeira PESSOA da casa, e segunda e última carta da
+  campanha.** É o caso que o BRIEF-JOE põe na frente: casa qualificada que recebeu carta e não
+  respondeu, onde faltou chegar em alguém.
+- **RESSALVAS HONESTAS, e são as que fazem desta a última da fila:**
+  1. **O site está parado em 2022.** O rodapé diz *"© 2022 Digital Dimension Entertainment Group"*, a
+     home só mostra *"Rendering / Imaginieries — Two distinctive creative studios"* e as páginas
+     `/rendering` e `/imaginieries` dão **404**. **A frase de 3D vem da ficha da Telefilm, que não tem
+     data.** Eu não provei produção em 2026.
+  2. **O braço de 3D de série pode ter mudado de nome.** A busca devolve matérias de 2021 (AWN,
+     Animation Magazine, Cartoon Brew; **não abri**) sobre a **KRAKN Animation**, joint venture dele com
+     a Lex+Otis em Montréal e Los Angeles para *"high-end 3D series and features"*. `krakn.com` devolveu
+     **114 bytes** e `kraknanimation.com` **não respondeu**: não consegui provar que a KRAKN está viva.
+  3. **Três cartas a `info@` sem resposta** (uma antes da campanha, uma na campanha e um lembrete). A
+     carta ao presidente precisa reconhecer isso em meia linha e não fingir primeiro contato.
+  4. Presidente de grupo raramente responde candidato; o pedido é apontar quem cuida de talento de
+     personagem 3D.
+
