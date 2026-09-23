@@ -207,6 +207,25 @@ def _socket_id(ng, name):
     return None
 
 
+def _set_input(mod, name, value):
+    """Define uma entrada do modificador. Blender 5.2 trocou as custom
+    properties por RNA (mod.properties.inputs[id].value); versoes anteriores
+    usam mod[id]."""
+    ident = _socket_id(mod.node_group, name)
+    props = getattr(mod, "properties", None)
+    inputs = getattr(props, "inputs", None) if props is not None else None
+    if inputs is not None:
+        item = None
+        try:
+            item = inputs[ident]
+        except (KeyError, TypeError, IndexError):
+            item = inputs.get(ident) if hasattr(inputs, "get") else None
+        if item is not None:
+            item.value = value
+            return
+    mod[ident] = value
+
+
 def _ensure_modifier(owner, col):
     mod = owner.modifiers.get(MOD_NAME)
     ng = _build_nodegroup()
@@ -214,8 +233,8 @@ def _ensure_modifier(owner, col):
         mod = owner.modifiers.new(MOD_NAME, 'NODES')
         mod.node_group = ng
         mod.show_expanded = False
-    mod[_socket_id(ng, "Colecao")] = col
-    mod[_socket_id(ng, FEED_INPUT)] = owner.groom_hide.feed
+    _set_input(mod, "Colecao", col)
+    _set_input(mod, FEED_INPUT, owner.groom_hide.feed)
     idx = list(owner.modifiers).index(mod)
     if idx != 0:
         with bpy.context.temp_override(object=owner):
@@ -226,7 +245,7 @@ def _ensure_modifier(owner, col):
 def _sync_feed(owner):
     mod = owner.modifiers.get(MOD_NAME) if owner else None
     if mod and mod.node_group:
-        mod[_socket_id(mod.node_group, FEED_INPUT)] = owner.groom_hide.feed
+        _set_input(mod, FEED_INPUT, owner.groom_hide.feed)
         owner.update_tag()
 
 
@@ -285,7 +304,10 @@ def _park_curves(context, owner, hide_mask):
     hide_idx = np.nonzero(hide_mask)[0].tolist()
     keep_idx = np.nonzero(~hide_mask)[0].tolist()
 
+    if owner.modifiers.get(MOD_NAME) is None:
+        owner.groom_hide.feed = _generates_children(context, owner)
     col = _ensure_collection(context, owner)
+    _ensure_modifier(owner, col)
     order = 1 + max((o.groom_hide.order for o in _parked_sets(owner)), default=0)
 
     park = owner.copy()
@@ -306,10 +328,6 @@ def _park_curves(context, owner, hide_mask):
 
     park.data.remove_curves(indices=keep_idx)
     cd.remove_curves(indices=hide_idx)
-
-    if owner.modifiers.get(MOD_NAME) is None:
-        owner.groom_hide.feed = _generates_children(context, owner)
-    _ensure_modifier(owner, col)
     return park, len(hide_idx)
 
 
