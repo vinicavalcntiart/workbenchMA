@@ -114,3 +114,4 @@ convite do Discord, "any questions, just reply". Assunto: `Thank you for getting
 |---|---|---|---|---|
 | 11/09/2026 | Shreya Sateesh | shreyanimates@gmail.com | "I wanted to inquire about the mentorship program." | Rascunho pronto no Gmail (draft `r-393674080718726483`), aguardando o Vini enviar |
 | 20/09/2026 | Sol Valvoi | sol.valvoi@icloud.com | Comprou Intro to ZBrush: Mushroom (Hotmart HP3645967361) | Rascunho de agradecimento pronto no Gmail (draft `r4677622785483422638`), aguardando o Vini enviar |
+| 22/09/2026 | Stanislav | stanislavpostolovskiy12@gmail.com | 4 perguntas: escolhe o personagem? requisito de dificuldade? perguntas fora das sessões? sessões pagas depois do fim? | Rascunho pronto no Gmail (draft `r-1466894231428855755`), aguardando o Vini enviar. Respostas de dificuldade e de continuação foram suposição minha, conferir |
