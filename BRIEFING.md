@@ -8917,3 +8917,14 @@ Os `RequisitionId` **300001635696541** (2183) e **300001660386168** (2232) dão 
 ### 8. RESSALVA DE PROCESSO, dita porque enfraquece a rodada
 
 O **Mágico estava com o navegador da máquina ocupado** (`cf_open.js` contra o SmartRecruiters da NBCUniversal e da PitchBlackCreative) durante quase toda a rodada. Esperei **500 segundos** num laço de condição e ele continuou vivo, e então abri o meu contra `jobs.lever.co` e `hr.breathehr.com`, que são provedor e porteiro **diferentes** dos dele. Não houve colisão observada, mas a regra de *um navegador por vez* foi quebrada por decisão minha, e fica escrito.
+
+
+## POLITICA DE DIARIA (23/09, decisao delegada pelo Vini)
+
+Palavras dele: *"vc que decide os valores. n sou eu. vc fez um calculo com base em chances de eu conseguir o emprego e valor de mercado"*.
+
+- **Diaria padrao: 350 euros por dia**, flexivel em contrato longo, e cotacao por personagem quando o estudio mandar o briefing.
+- Por que 350: artista 3D senior freelancer na Europa costuma cobrar de 300 a 450 euros por dia. 350 fica no meio, nao assusta estudio pequeno (que e quem pede diaria) e nao desvaloriza o Vini.
+- Estudio grande ou fotorreal de VFX pode ouvir 400. Estudio de 2 a 5 pessoas pode ouvir 300 se a conversa pedir.
+- Ja usada em 23/09 com Christophe Petit (The Beast Makers, pelo LinkedIn, enviado pelo Vini), Dovydas (Animatrix) e Ulrich (Digital CyberCherries).
+- Isso vale para contrato e diaria. Para vaga fixa segue a politica salarial da linha 132.
