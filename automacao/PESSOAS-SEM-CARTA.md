@@ -17785,3 +17785,108 @@ anúncio de vaga costuma escrever "mande para <pessoa>@", e isso é endereço PU
    7 caminhos: devolveu UM, e é o `marina.jonsdottir@starbreeze.com` que já se conhecia.** A nota de
    07/09 (*"rica mas rara"*) fica confirmada com número maior: **a veia é rara mesmo, e não vale
    varredura ampla** — vale um teste de duas requisições em casa nova.
+
+---
+
+## RODADA DAS 17h35 UTC DE 23/09 (Joe) — **A VEIA NOVA É O DIRETÓRIO OFICIAL DA TELEFILM CANADA (`rdvcanada.ca/en/directories/companies/<slug>/`): CADA FICHA DE EMPRESA PUBLICA *NOME + CARGO + E-MAIL DIRETO* DE UMA A TRÊS PESSOAS**, e ele abriu **duas das maiores casas de Vancouver** que a campanha tinha como parede (Bardel, 403 no `curl` desde 16/09) ou como `sem-email` (Mainframe). QUATRO FICHAS, **as quatro com endereço PUBLICADO e confiança ALTA, zero montado**, todas no Canadá (prioridade 2), duas delas casa grande
+
+**Placar: 4 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Quarta-feira, ritmo controlado: parei em quatro.
+
+**A prioridade 1 do Vini (Disney, DreamWorks, Warner, Sony Pictures Animation) deu ZERO endereço
+publicado, e o motivo está medido, não suposto:** Disney (6 pessoas), Pixar (3), DreamWorks (3),
+Sony Pictures Animation (2 + Mingjue Chen), Imageworks (4), ILM (2) e Netflix (fechada por padrão)
+**já estão no teto de duas**. A Warner é a única casa grande com vaga: Charles Ellison é proibido, e
+**Warner Bros. Games Montréal** (`wbgamesmontreal.com/contact`, 200, 153.314 bytes) publica só
+`infomtl@wbgames.com`. Também medidos sem pessoa: **DNEG** (`/contact` publica sete caixas
+funcionais, `dneg-animation@`, `art@`, `pr@` etc., zero nome), **Illumination Studios Paris**
+(`/contact`, `/careers`, `/internships-2026/`, `/pipeline/`, `/privacy/`, `/legal-notice/`: só
+`recruitment@illuminationparis.com`, `recruitment@illuminationstudiosparis.com` e `contact@`),
+**Remedy** (`press@`, `feedback@`, `privacy@`). ACM DL e o índice Kesen do SIGGRAPH respondem **403**
+para `curl` e para a ferramenta de leitura, então a veia do rodapé de paper **está fechada daqui**.
+
+**COMO A VEIA FUNCIONA, para repetir:**
+1. `rdvcanada.ca` é **WordPress atrás de Sucuri**. O primeiro `curl` passou (200, 222.355 bytes na
+   ficha da Mainframe); os seguintes voltaram **307 com 1.359 bytes de desafio JavaScript**. **Eu
+   NÃO resolvi o desafio** (é trava anti-robô; resolver seria burlar). A leitura seguiu pela
+   ferramenta de busca de página (WebFetch), que recebe a ficha inteira.
+2. A lista sai da API do próprio site, lida pela mesma ferramenta:
+   `https://rdvcanada.ca/wp-json/wp/v2/companies?per_page=100&search=<termo>&_fields=slug,link`.
+   `search=animation` devolveu **100 fichas** (a página 2 dá 400), `search=3D` **18**,
+   `search=effects` **10**, `search=studio` **100**.
+3. Cada ficha (`/en/directories/companies/<slug>/`) traz descrição escrita **pela própria casa**,
+   `General Email` e um bloco de contato com **nome, cargo e e-mail** de até três pessoas.
+
+**FICHAS DO DIRETÓRIO ABERTAS E DESCARTADAS NESTA RODADA (para ninguém reabrir):**
+- **Squeeze** (`fhoude@`, CEO; `vbernier@`, Business Development) — **casa que já recusou**: Sophie
+  Vigne recusou em 14/07 por prazo de permissão de trabalho (`enviados.csv`). Fora para sempre.
+- **Caribara Montréal** (`guillaume.dubois@caribara-montreal.com`, CEO) — **um humano já respondeu**
+  (Pascale Beaulieu, 16/09): o fio é do Comunicador.
+- **Folks** (`mlelievre@folksvfx.com`, *Head of VFX Film Relations & Strategy*) — a casa já tem
+  Amélie Poitras (presidente, 19/09) e o cargo é comercial; não gasto a segunda vaga nisso.
+- **WildBrain**, **Corus Studios**, **Nelvana** (`julia.dodge@corusent.com`) — os três publicam **só
+  gente de vendas e distribuição**.
+- **Guru Studio** — só `sales@` e `productionservices@`. **ICON Creative Studio** — só
+  `carson@`, que já é a ficha 187. **Blue Ant Studios** — três nomes, **nenhum e-mail**.
+- **Lakeside Animation** (`courtney.wolfson@`, `iouri.stepanov@`) — North Bay (Ontário), a home
+  vende *"Pre-Production / Production / Post Production / Story Editing / Concept Design /
+  Storyboarding"* e o destaque é o curta 2D *Tied Up*: **não há pipeline 3D de personagem na página**.
+- **House of Cool** (`wes@`, `ricardo@`, `rebecca@`) — pré-produção 2D (*"a leader in the
+  pre-production animation industry"*). **Brain Power Studio** (`stan@`, EVP de distribuição) e
+  **Cheshire Smile** (`tim@`, Saskatchewan, infantil 2D) — fora do ofício.
+
+**O QUE FICA DE FILA NESTA VEIA:** as fichas da busca `search=animation` que eu **não** abri
+(Coop Touski, Punch!, Doberman, Yowza, NNN Vision, Pink Parrot, That Animation Company, 1844
+Studios, Shocap, Mad Goose, Flying Kraken, Crooked City, Next Pixel, Laughing Dragon, Jerryco,
+Azar, Oasis, Toondraw, Epic Worlds, Bellatorem, Big Bad Boo, Mercury Filmworks, Syon, Cloudrise,
+Sleepy Dog, Awesometown, Studios Vox Populi, Imaginary Spaces) — quase todas pequenas ou 2D, então
+a leitura de disciplina tem de vir antes do endereço.
+
+### FICHA 1 — **Sanja Zoric**, *Vice-President of Operations*, **BARDEL ENTERTAINMENT** (Vancouver, BC, **Canadá**; segundo escritório em Montréal) — `szoric@bardel.ca` — **ALTA (PUBLICADO pela Telefilm Canada, no bloco de contato da ficha da casa)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/bardel-entertainment/` (lida pela ferramenta de
+  página; o `curl` recebe o desafio Sucuri de 1.359 bytes, que eu não burlei). Texto literal do
+  bloco: *"Contact Person — Sanja Zoric — Vice-President of Operations — szoric@bardel.ca"*;
+  `General Email: info@bardel.ca`; `Website: http://www.bardel.ca`.
+  `https://www.bardel.ca/`, `https://bardel.ca/contactus/` e `https://bardel.ca/careers/` (as três
+  pela mesma ferramenta, porque o `curl` leva 403 do Cloudflare desde 16/09). **A casa não publica
+  e-mail nenhum no próprio site**: a `/contactus/` é só formulário, com os endereços de Vancouver e
+  de Montréal, e a `/careers/` só tem o botão *"See Jobs"* para `apply.workable.com/bardel-entertainment/`.
+- **NADA MONTADO.** O endereço está escrito pela Telefilm, agência federal, no perfil que a própria
+  Bardel alimenta. Zero `data-cfemail`, zero `[at]`; o domínio é o mesmo do site.
+- **ELA AINDA ESTÁ LÁ:** a busca pública devolve o LinkedIn dela como *"Sanja Zoric, CIM, C.Mgr. -
+  Bardel Entertainment"* e o organograma público do The Org como *"Vice President Operations at
+  Bardel Entertainment"*. **Eu não abri essas duas páginas** (LinkedIn não se abre sem login); o que
+  eu li foi o resumo da busca, que também diz que ela entrou em 2005 como office manager e foi
+  promovida durante o salto da casa *"from 70 employees to over 300 in 6 months"*.
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** Pelo BRIEF-JOE, casa grande pede recrutador de arte com
+  nome. **A Bardel não publica recrutador nenhum**, nem no site nem na Telefilm; a única pessoa com
+  e-mail publicado em qualquer fonte oficial é ela. Vice-presidente de **operações** é quem monta
+  equipe de produção numa casa de serviço, então ela é **a porta**, não o filtro. A carta tem de pedir
+  o que custa pouco: guardar o nome ou apontar quem cuida de talento para personagem 3D.
+- **GANCHO, com a frase da própria casa entre aspas** (home `bardel.ca`):
+  *"Bardel is a leading 2D, 3D, and hybrid animation studio based in North America and made up of
+  world-class creators and storytellers."* E o convite que serve de fecho: *"Our team is made up of a
+  cast of crazy characters and we hope you'll be another one."* Na Telefilm, a descrição escrita pela
+  casa: *"Bardel Entertainment is an internationally recognized, Emmy award-winning studio that has
+  led the animation industry for over 35 years."*
+- **3D DE PERSONAGEM NA CASA:** a home lista *Sausage Party: Foodtopia*, *The Dragon Prince* e *Diary of
+  a Wimpy Kid: The Last Straw*, e a palavra **3D** está na frase de apresentação. A casa é mista (muito
+  2D, *Rick and Morty*), então a carta fala de personagem 3D estilizado e não de 2D.
+- **FORA DOS EUA? SIM**, Vancouver. **A frase de realocação ENTRA**, uma vez, afirmativa.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `bardel OR "bardel.ca" OR Zoric` →
+  **`{}`**. No repositório, pelo ENDEREÇO: `szoric` e `Zoric` = **0** em `pessoas.csv`,
+  `enviados.csv`, `processados.csv`, `docs/index.html`, `PESSOAS-SEM-CARTA.md`,
+  `ESTUDIOS-SEM-CARTA.md` e `alvos.csv`; `bardel` = **0** em `pessoas.csv` e em `enviados.csv` (as
+  menções em `processados.csv` e aqui são as notas de *"403 Cloudflare, dívida de navegador"*).
+  **CASA INÉDITA EM PESSOA E EM CARTA. PRIMEIRA pessoa.**
+- **RESSALVAS HONESTAS:**
+  1. **Não é arte.** Operações numa casa de 400 e tantas pessoas; ela pode simplesmente não
+     responder a candidato, e a política de casa grande costuma mandar tudo para o Workable.
+  2. **A ficha da Telefilm não tem data.** O cargo bate com o que a busca pública diz hoje, mas eu não
+     abri o LinkedIn nem o The Org.
+  3. **Patrocínio de visto não publicado** em lugar nenhum das páginas que abri.
+  4. **Rota de formulário existe** (`apply.workable.com/bardel-entertainment/`), e o `processados.csv`
+     registra o Workable como parede de robô para esta máquina. A carta não substitui candidatura:
+     se abrir vaga de personagem lá, ela vai para a rota do clique.
+
