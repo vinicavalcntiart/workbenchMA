@@ -208,21 +208,25 @@ def _socket_id(ng, name):
 
 
 def _set_input(mod, name, value):
-    """Define uma entrada do modificador. Blender 5.2 trocou as custom
-    properties por RNA (mod.properties.inputs[id].value); versoes anteriores
-    usam mod[id]."""
+    """Define uma entrada do modificador.
+
+    Blender 5.2 trocou as custom properties por RNA gerada em tempo de
+    execucao: mod.properties.inputs.<identificador>.value (acesso por
+    atributo; o acesso por colchete cai no armazenamento bruto e nao serve).
+    Versoes anteriores usam mod[<identificador>].
+    """
     ident = _socket_id(mod.node_group, name)
     props = getattr(mod, "properties", None)
     inputs = getattr(props, "inputs", None) if props is not None else None
     if inputs is not None:
-        item = None
-        try:
-            item = inputs[ident]
-        except (KeyError, TypeError, IndexError):
-            item = inputs.get(ident) if hasattr(inputs, "get") else None
-        if item is not None:
+        item = getattr(inputs, ident, None)
+        if item is not None and hasattr(item, "value"):
             item.value = value
             return
+        raise RuntimeError(
+            f"Groom Hide: nao achei a entrada '{name}' ({ident}) em "
+            f"mod.properties.inputs desta versao do Blender ({bpy.app.version_string})"
+        )
     mod[ident] = value
 
 
