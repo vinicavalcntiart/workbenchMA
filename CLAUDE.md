@@ -24,6 +24,16 @@ Na semana passada o limite acabou na segunda (21/09) e a campanha ficou parada a
   - E avisar o Vini em uma linha, sem susto.
 - Na quarta de manhã, com o limite zerado, tudo volta ao ritmo normal.
 
+### Ritmo das rotinas (decidido pelo maestro em 23/09, com o "vc que sabe" do Vini)
+
+O que mais gasta é o maestro acordar: cada despertar relê a conversa inteira. Por isso, de quarta a segunda:
+- Rede de segurança: só a de :42 (trig_01XUe3Qj8bxANngmsKhc1RVX). As de :12, :27 e :57 ficam DESLIGADAS.
+- Mágico: DESLIGADO (trig_019tKzRZmB2x5Y7nGiTgpLi2). O trabalho dele virou a rota do clique, que só o maestro faz.
+- Joe: a cada 4h (35 1-23/4).
+- Sem mudança: Chico 4x/h e Vigia Disney/Netflix/Pixar 1x/h (Sonnet, sessões próprias), formulários a cada 2h, Comunicador a cada 2h, estúdios grandes 11h, fechamento 23h30.
+- Estimativa: de ~146 para ~56 despertares do maestro por dia (uns 60% a menos), sem perder vaga, porque quem acha vaga nova é o Chico e o Vigia.
+- NA TERÇA KAMIKAZE: religar as redes de :12, :27 e :57 e voltar o Joe para 2h. Na quarta, desligar de novo.
+
 ## Rota do clique (23/09/2026, aprovada pelo Vini: "isso é mt legal do link de eu só fazer a parte do captcha")
 
 Formulário com caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha) NÃO é mais parede:
