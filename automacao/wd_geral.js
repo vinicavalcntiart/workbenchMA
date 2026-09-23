@@ -32,13 +32,15 @@
 //     secao e voluntaria.
 const {chromium}=require('playwright');
 const fs=require('fs');
-const C=require('./cred.json');
+const C=(()=>{ try{ return require('./cred.json'); }catch(e){ return {email:process.env.WD_EMAIL||'', padrao_campanha:process.env.WD_SENHA||''}; } })();
+if(!C.email||!C.padrao_campanha){ console.log('faltam WD_EMAIL/WD_SENHA (ou cred.json)'); process.exit(2); }
 const [host,site,jobpath,slug]=process.argv.slice(2);
 const enviar=(process.argv[6]||'')==='ENVIAR';
 const estado='wdst_'+slug+'.json';
 const CV='/home/user/apply/Vini_Cavalcanti_CV.pdf';
 const SITES=['https://www.artstation.com/viniciuscavalcanti','https://www.linkedin.com/in/vinicavalcnti/','https://vinicavalcanti.com'];
-const D={tel:process.env.VINI_TEL||'', rua:process.env.VINI_RUA||'', cep:process.env.VINI_CEP||'', cidade:'Olinda'};
+const P=(()=>{ try{ return require('./pessoal.json'); }catch(e){ return {}; } })();
+const D={tel:process.env.VINI_TEL||P.telefone_digitos||'', rua:process.env.VINI_RUA||P.endereco1||'', cep:process.env.VINI_CEP||P.cep||'', cidade:P.cidade||'Olinda'};
 const SAL=process.env.VINI_SAL||'Open to aligning with your band for the role.';
 const txt=async p=>(await p.innerText('body')).replace(/\n{2,}/g,'\n');
 const passo=async p=>{ const m=(await txt(p)).match(/current step (\d) of (\d)/); return m?{n:+m[1],de:+m[2]}:{n:0,de:0}; };
@@ -69,6 +71,14 @@ const RESP=[
  // dado pessoal dele, a preferencia e a opcao que nao revela nada; so se ela nao existir e que
  // entra a resposta verdadeira.
  ['please select your gender', ['I do not wish to answer','I don\'t wish to answer','Decline','Prefer not','Do not wish','Male']],
+ // Disney AUSTRALIA (ILM Sydney, 18/09): o passo 3 tem TRES perguntas obrigatorias que nenhum
+ // outro locatario Disney pediu, e sem elas o Save and Continue devolve "Errors Found" e o fluxo
+ // trava tres vezes e para sem enviar. Os rotulos nao casam com nenhuma regra antiga:
+ // "any relatives working" nao casa com 'are you related' nem com 'relative or person with whom'.
+ // As tres respostas sao verdadeiras e conservadoras.
+ ['any relatives working', ['No']],
+ ['been interviewed by any employee', ['No']],
+ ['convicted of a criminal', ['No']],
  ['evidence of your identity', ['No']],
  ['authorisation to work', ['No']],
  ['star citizen community', ['No']],
@@ -215,7 +225,10 @@ async function fonte(p){
   // lista do que e VERDADE para ele: qualquer outra coisa e para apagar, nunca para aceitar.
   const VERDADE=/linkedin|job board|search engine|internet|social media|company (web)?site|career site|other/i;
   const bom=async()=>{ if(!(await ok())) return false; return VERDADE.test(await rotuloSel()); };
-  if(await bom()) return true;
+  // WD_FONTE_REFAZ=1 refaz a resposta mesmo quando a que esta gravada passa na lista de
+  // verdade: e o caso do rascunho herdado, em que "Job Board" sobrou de uma candidatura
+  // anterior achada por agregador e a desta rodada foi achada no site da propria casa.
+  if(await bom() && process.env.WD_FONTE_REFAZ!=='1') return true;
   const src=await p.$('#source--source');
   if(!src){ console.log('   !! fonte obrigatoria mas #source--source nao existe neste locatario'); return false; }
 
@@ -275,15 +288,27 @@ async function fonte(p){
   // LinkedIn, vaga achada por agregador (Grackle, Hitmarker, RemoteGameJobs) responde Other,
   // porque nenhum locatario lista esses agregadores pelo nome. Sem a variavel, o padrao
   // continua sendo o de antes, LinkedIn primeiro.
-  const PREF_PLANA=(process.env.WD_FONTE||'linkedin').toLowerCase()==='other'
-    ? [/^other$/i, /^company website$/i, /^linkedin$/i]
-    : [/^linkedin$/i, /^company website$/i, /^other$/i];
+  // 19/09 (Jhon A): faltava o caso mais comum da ronda das casas grandes - vaga achada no
+  // PROPRIO Workday da casa, por API do locatario. Nesse caso a verdade e "Company Website",
+  // e nem LinkedIn nem Other descrevem o que aconteceu. WD_FONTE=company cobre isso.
+  const WDF=(process.env.WD_FONTE||'linkedin').toLowerCase();
+  const PREF_PLANA = WDF==='other'   ? [/^other$/i, /^company website$/i, /^linkedin$/i]
+                   : WDF==='company' ? [/^company web ?site$/i, /^company site$/i, /^career site$/i, /^other$/i]
+                   :                   [/^linkedin$/i, /^company website$/i, /^other$/i];
   const folhaPlana=(ops)=>{
     for(const re of PREF_PLANA){ const a=ops.find(o=>re.test(o.trim())); if(a) return a; }
     return null;
   };
+  // 19/09: com WD_FONTE=company a FOLHA vem antes da categoria, senao a lista PLANA deste
+  // locatario (que tem "Company Website" e "Job Board" no mesmo nivel) sempre grava Job Board.
   const escolhe=(ops,nivel)=> nivel===1
-    ? (ops.find(o=>/^social media$/i.test(o)) || ops.find(o=>/social media/i.test(o)) ||
+    ? ((WDF==='company' ? folhaPlana(ops) : null) ||
+       // 23/09 (King, R028171): a lista do King_External_Careers e PLANA e tem a folha
+       // "LinkedIn" no nivel 1, ao lado de "Search Engine (Google, etc.)". Sem esta linha o
+       // WD_FONTE=linkedin caia na regra de categoria e gravava Search Engine, que e mentira
+       // para vaga achada por alerta do LinkedIn. Folha literal LinkedIn no nivel 1 e verdade.
+       (WDF==='linkedin' ? (ops.find(o=>/^linkedin$/i.test(o.trim())) || null) : null) ||
+       ops.find(o=>/^social media$/i.test(o)) || ops.find(o=>/social media/i.test(o)) ||
        ops.find(o=>/^job board$/i.test(o)) || ops.find(o=>/job board/i.test(o)) ||
        ops.find(o=>/search engine|internet/i.test(o)) ||
        folhaPlana(ops))
@@ -419,7 +444,7 @@ async function perguntas(p){
 }
 
 (async()=>{
- const b=await chromium.launch({proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
  const opts={ignoreHTTPSErrors:true,viewport:{width:1400,height:2200},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'};
  if(fs.existsSync(estado)) opts.storageState=estado;
  const ctx=await b.newContext(opts);
@@ -547,6 +572,32 @@ async function perguntas(p){
        if(alvo){ await clicaOpcao(p,alvo); console.log('   grau =>', alvo); }
        else { console.log('   graus:', ops.join(' | ').slice(0,300)); await p.keyboard.press('Escape'); }
        await p.waitForTimeout(2000);
+     }
+     // 19/09 (Jhon A) - xboxgaming.wd1/External e o PRIMEIRO locatario medido que faz
+     // "Field of Study" e "To (Actual or Expected)" OBRIGATORIOS no bloco de Educacao, e o
+     // passo 2 devolve "Errors Found" com esses dois nomes. A campanha NAO tem esses dados
+     // conferidos: o mestrado na UNICAP esta EM ANDAMENTO (Creative Industries) e o ano
+     // esperado de conclusao nunca foi escrito pelo Vini em lugar nenhum. Inventar ano em
+     // formulario e mentira, e a regra da campanha e verdade sempre. Com WD_EDU=DELETE o
+     // bloco de Educacao sai e a formacao fica so no CV, que e o documento de registro.
+     if(process.env.WD_EDU==='DELETE'){
+       for(let k=0;k<3;k++){
+         const r=await p.evaluate(()=>{
+           const inp=document.querySelector('input[id$="--schoolName"]');
+           if(!inp) return 'sem bloco de educacao';
+           let el=inp, btn=null;
+           for(let i=0;i<8 && el;i++){
+             el=el.parentElement; if(!el) break;
+             btn=[...el.querySelectorAll('button')].find(b=>/^delete$/i.test((b.innerText||'').trim()));
+             if(btn) break;
+           }
+           if(!btn) return 'sem botao Delete junto da educacao';
+           btn.click(); return 'clicado';
+         });
+         console.log('   WD_EDU=DELETE ->', r);
+         if(r!=='clicado') break;
+         await p.waitForTimeout(3500);
+       }
      }
    }
 
