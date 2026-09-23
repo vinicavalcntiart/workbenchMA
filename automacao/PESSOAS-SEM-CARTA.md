@@ -17935,3 +17935,50 @@ a leitura de disciplina tem de vir antes do endereço.
      candidatura quando abrir vaga de personagem.
   4. **Patrocínio de visto não publicado.**
 
+### FICHA 3 — **Hasmi Ferguson**, *Producer* e **cofundadora**, **STELLAR CREATIVE LAB** (Vancouver, BC, **Canadá**) — `hasmi.ferguson@stellarcreativelab.com` — **ALTA (PUBLICADO pela Telefilm Canada)** — **SEGUNDA E ÚLTIMA pessoa da casa**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/stellar-creative-lab/` (ferramenta de página):
+  *"Hasmi Ferguson — Job Title: Producer — Email: hasmi.ferguson@stellarcreativelab.com"* e
+  *"Bert Van Brande — Job Title: VFX Producer — Email: bert.vanbrande@stellarcreativelab.com"*; o
+  `General Email` da ficha é **o dela**, não o `hello@`.
+  `https://www.stellarcreativelab.com/our-studio` (**200, 391.667 bytes**): *"We are a high-end
+  animation studio founded by industry veterans Hasmi Ferguson and Bert Van Brande."*
+  `https://www.stellarcreativelab.com/` (**200, 628.185 bytes**): os créditos de *Marvel Zombies*
+  terminam em *"Producer - Hasmi Ferguson"*.
+- **NADA MONTADO.** O padrão `nome.sobrenome@` não foi deduzido: está escrito duas vezes pela
+  Telefilm, para ela e para o sócio.
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** A ficha de 12/09 (Marie Schindler, *HR Manager*,
+  `sem-email`) registrou que a casa publica **treze** nomes e **nenhum Head of Art, Art Director ou
+  supervisor de assets**. Os dois únicos com endereço publicado são os **cofundadores**. Numa casa
+  deste porte o BRIEF-JOE manda ir em quem dirige, e dos dois ela é a produtora-geral (o sócio é
+  *VFX Producer*) e a pessoa que a própria Telefilm põe como contato principal. **Com ela a casa
+  fecha no teto de duas pessoas** (Marie + Hasmi); o Bert Van Brande fica registrado e não cabe.
+- **GANCHO, com a frase da própria casa entre aspas** (home):
+  *"At Stellar we turn ideas into captivating designs, give life to engaging characters, invent
+  fascinating worlds and weave immersive stories to create unforgettable experiences."* E o chamado
+  que conecta com a candidatura de hoje: *"MARVEL ZOMBIES JOIN US FOR SEASON 2! Check out open
+  positions on ‘Work with Us’"*. Na `/our-studio`: *"Along with our Teams, we have exceptional
+  experience in Features and Series, in both 2D and CG Animation, VFX, Theme Park Immersive Films and
+  Cinematics."*
+- **FORA DOS EUA? SIM**, Vancouver. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em
+  `stellarcreativelab OR "Stellar Creative" OR "Hasmi" OR "Van Brande"` → **quatro** threads, **nenhuma
+  resposta humana**: (a) **carta fria de 14/09 17h54 UTC para `hello@stellarcreativelab.com`**, uma
+  mensagem só no fio; (b) recibo automático do JazzHR (`noreply@applytojob.com`) de **31/08**; (c) recibo
+  do JazzHR de **HOJE, 23/09 15h01 UTC** (*Modeling Artists - Mid & Senior*, a candidatura da rota do
+  clique); (d) alerta do LinkedIn. No repositório: `hasmi.ferguson@` e `bert.vanbrande@` = **0** em
+  `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html` (o nome dela aparece só como
+  texto na linha da Marie).
+- **QUANDO MANDAR, e isto importa:** a candidatura de portal saiu **hoje**. A carta **não sai antes de
+  25/09**, para não colar em dia seguido, e ela tem de **citar a candidatura de *Modeling Artists* de
+  23/09**: a carta vira o reforço humano de uma candidatura que já existe, não um pedido solto.
+- **RESSALVAS HONESTAS:**
+  1. **A casa já recebeu muito da campanha:** carta a `hello@` (14/09), duas candidaturas no JazzHR
+     (31/08 e 23/09). Esta é a última aproximação possível, então a carta tem de ser curta e útil.
+  2. **Ela é produtora, não diretora de arte.** A casa não publica ninguém de arte com endereço.
+  3. **O anúncio de hoje pede elegibilidade de trabalho**, e a resposta dada foi a verdadeira
+     (*"Non-citizen seeking work authorization"*). Patrocínio não está publicado.
+  4. A ficha da Telefilm põe telefone de código 403 (Alberta) para ela; **não registrei telefone**, e
+     isso não muda a casa, que é de Vancouver.
+
