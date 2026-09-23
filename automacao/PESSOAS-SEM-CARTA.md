@@ -17890,3 +17890,48 @@ a leitura de disciplina tem de vir antes do endereço.
      registra o Workable como parede de robô para esta máquina. A carta não substitui candidatura:
      se abrir vaga de personagem lá, ela vai para a rota do clique.
 
+### FICHA 2 — **Michael Hefferon**, *President & Chief Creative Officer*, **MAINFRAME STUDIOS** (Vancouver, BC, **Canadá**) — `michael@mainframe.ca` — **ALTA (PUBLICADO pela Telefilm Canada)** — **SEGUNDA E ÚLTIMA aproximação da casa**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/mainframe-studios/` — o **primeiro `curl` passou
+  (200, 222.355 bytes)** e o HTML trazia `michael@`, `kim@`, `tgreen@`, `aboyes@` e `info@mainframe.ca`;
+  a leitura pela ferramenta de página pareou nome, cargo e endereço: *"Michael Hefferon – President &
+  Chief Creative Officer – michael@mainframe.ca"*, *"Kim Dent Wilder – Executive Vice President –
+  kim@mainframe.ca"*, *"Tanya Green – SVP Development & Current Series – tgreen@mainframe.ca"*.
+  (`aboyes@` aparece no HTML **sem nome ao lado** na leitura; não usei.)
+  `https://www.mainframe.ca/team/` (**200, 130.914 bytes**) confirma hoje *"Michael Hefferon President &
+  Chief Creative Officer"* no topo da equipe. `https://www.mainframe.ca/studio/` (**200, 107.008
+  bytes**) é a fonte do gancho.
+- **NADA MONTADO.** Endereço escrito pela Telefilm no perfil da casa; domínio igual ao do site.
+- **POR QUE ELE, E POR QUE ISSO CORRIGE A NOTA DE 18/09.** A ficha de 18/09 (Christine Huot,
+  *Director, People & Talent*, `sem-email`) dizia que o Hefferon *"é o fundador-figura e não é alvo de
+  carta fria de candidato"*. Isso valia quando nenhum nome da casa tinha endereço. **Hoje os únicos
+  três endereços de pessoa publicados em fonte oficial são de executivos** (ele, a EVP e a SVP de
+  desenvolvimento), e entre os três **ele é o chefe criativo**: é o único cujo cargo tem a palavra
+  *Creative*. A Christine continua sem endereço, então a carta vai para ele **nomeando a Christine
+  Huot e o Michael Douglas (*Director of Creative Services*)** como as pessoas para quem ele pode
+  apontar, que é a terceira saída barata do fechamento fixo.
+- **GANCHO, com a frase da própria casa entre aspas** (`/studio/`):
+  *"With our state of the art 3D, 2D, Unreal & hybrid pipelines we’re able to bring any and every story
+  to life."* e *"Headquartered in Vancouver, BC, Mainframe has been on the forefront of animation since
+  our inception in 1993."* Na Telefilm, escrito pela casa: *"Founded in 1993, Mainframe created the
+  very first fully-CG TV series, ReBoot."*
+- **FORA DOS EUA? SIM**, Vancouver. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em
+  `mainframe.ca OR "Mainframe Studios" OR Hefferon OR Huot` → **duas** threads: (a) confirmação do
+  BambooHR de **11/07** (*"Thank you for applying at Mainframe Studios"*, General Application), que é
+  formulário; (b) **carta fria de 19/09 01h24 UTC para `info@mainframe.ca`, aberta com "Hi Christine"**,
+  **sem resposta**. No repositório: `michael@mainframe`, `kim@mainframe`, `tgreen@mainframe` e
+  `Hefferon` como endereço = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv` e
+  `docs/index.html` (o nome só aparece na ficha de 18/09). **Logo esta é a SEGUNDA e ÚLTIMA carta da
+  casa**; depois dela a Mainframe fecha no teto. A primeira foi há quatro dias, não em dia seguido.
+- **RESSALVAS HONESTAS:**
+  1. **Presidente de casa grande raramente responde candidato.** É exatamente o aviso do BRIEF-JOE
+     para casa grande. O que a carta pode pedir é que ele **encaminhe** à Christine Huot; se ela pedir
+     reunião ou tempo dele, morre.
+  2. **A carta de 19/09 já foi escrita para a Christine** via `info@`. A segunda não pode repetir o
+     texto: tem de ser curta, dizer que escreveu para a caixa geral e agora procura quem decide arte.
+  3. **A porta de formulário é a UKG** (conta obrigatória, registrada no painel). Carta não substitui
+     candidatura quando abrir vaga de personagem.
+  4. **Patrocínio de visto não publicado.**
+
