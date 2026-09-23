@@ -8,7 +8,8 @@
     "mcp__Gmail__reply continua liberado, porque é a via permitida de resposta em thread",
     "que já existe, e é por onde o Comunicador trabalha.",
     "11/09 a noite: acrescentados os verbos de terminal que os agentes mais usam (timeout, pgrep, printf, test, find, seq, stat, sleep) porque o Vini estava tendo de aprovar item por item a noite inteira. Nenhum deles e mais perigoso que o rm e o curl que ja estavam liberados. A lista de deny NAO foi tocada: enviar email, encaminhar, compartilhar arquivo do Drive e push com force continuam bloqueados, e e isso que mantem de pe a regra 'so rascunho, nunca enviar'.",
-    "18/09 15h50: a versao das 14h40 (que acrescentava 'Bash' e servidores MCP inteiros) foi DESFEITA. Depois dela a interface passou a pedir permissao para tudo, inclusive terminal e busca no Gmail, que antes passavam sem pedir. Este arquivo e a copia exata do que funcionava entre 11h36 e 14h40 de 18/09."
+    "18/09 15h50: a versao das 14h40 (que acrescentava 'Bash' e servidores MCP inteiros) foi DESFEITA. Depois dela a interface passou a pedir permissao para tudo, inclusive terminal e busca no Gmail, que antes passavam sem pedir. Este arquivo e a copia exata do que funcionava entre 11h36 e 14h40 de 18/09.",
+    "23/09 14h3x, PEDIDO DIRETO DO VINI ('ainda ta pedindo pra permitir uma vez, ajuste'): liberadas por NOME, uma a uma, as seis ferramentas do navegador Kernel usadas nos formularios (abrir/fechar navegador, rodar Playwright, clicar, comando na maquina do navegador, curl do navegador, busca na documentacao). O servidor inteiro NAO foi liberado (licao de 18/09), e ficaram FORA as ferramentas de cofre, credencial, chave de API e cartao. A lista deny nao foi tocada."
   ],
   "permissions": {
     "defaultMode": "bypassPermissions",
@@ -148,7 +149,13 @@
       "Skill",
       "ToolSearch",
       "Monitor",
-      "TaskStop"
+      "TaskStop",
+      "mcp__Kernel__manage_browsers",
+      "mcp__Kernel__execute_playwright_code",
+      "mcp__Kernel__computer_action",
+      "mcp__Kernel__exec_command",
+      "mcp__Kernel__browser_curl",
+      "mcp__Kernel__search_docs"
     ]
   }
 }
