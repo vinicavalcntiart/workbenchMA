@@ -18027,3 +18027,89 @@ a leitura de disciplina tem de vir antes do endereço.
   4. Presidente de grupo raramente responde candidato; o pedido é apontar quem cuida de talento de
      personagem 3D.
 
+
+## RODADA DAS 21h35 UTC DE 23/09 (Joe) — **A FILA DA TELEFILM (`rdvcanada.ca`) FOI ATÉ O FIM NAS BUSCAS `animation`, `3D`, `CGI`, `CG`, `VFX`, `visual effects`, `animated`, `character`, `game`, `studio`, `story` e `Vancouver`, E RENDEU QUATRO FICHAS, AS QUATRO COM ENDEREÇO PUBLICADO E CONFIANÇA ALTA, ZERO MONTADO, TODAS NO CANADÁ**. A melhor é a **IoM Media Ventures** (Halifax), que escreve na própria página de carreiras *"We support Permanent Residence applications"* e cujo publicado é o **Executive Creative Director**, co-criador de *Oddbods* e diretor de animação de *Star Wars: The Clone Wars*
+
+**Placar: 4 fichas ALTA, 0 montado, 0 `sem-email`, 0 rascunho, 0 carta.** Quarta-feira, ritmo controlado: parei em quatro.
+
+**Nórdicos, Holanda e Reino Unido deram ZERO nesta rodada, com a conta na mão.** Varredura de `/`, `/contact`, `/about`, `/team`, `/people`, `/careers`, `/jobs`, `/studio`, `/impressum`, `/privacy`, `/press`, `/kontakt`, `/legal` (com decodificação de `data-cfemail`, `/cdn-cgi/l/email-protection#`, entidade HTML e `recruiter-email`) em **34 domínios sem pessoa com endereço na campanha** (Studio Liddell já recebeu formulário em 02/09 e Magic Light já tem um nome em `pessoas.csv`; os outros 32 estavam zerados em `pessoas.csv` e `enviados.csv`): Creative Assembly, Mediatonic, Studio Gobo, Lockwood, MachineGames, Tarsier, Hazelight, Toadman, Mojang, Housemarque, Frogmind, Snow Castle, Dirtybit, Triumph, Nixxes, Ronimo, Paladin, D3T, Coconut Lizard, Nice Studio, Studio Liddell, Tiger Aspect, Plug-in Media, Dot to Dot, Chocolate Tribe, Trunk, Hullabaloo, Ink Robin, Fourth Wall, Silvergate, Coolabi, Magic Light, Cosgrove Hall Fitzpatrick, Moth. **Só caixa funcional** (`press@`, `bizdev@`, `info@`, `office@`, `jobs@d3t.co.uk` atrás do Cloudflare, `general@tigeraspect.co.uk`); o único endereço de pessoa foi `stein@paladinstudios.com` (Paladin, Haia, jogos mobile/VR, sem cargo pareado e sem personagem): **não virou ficha**. A regra de 04/09 continua de pé: página de estúdio europeu já está minerada, e o que rende é diretório oficial com bloco de contato.
+
+**DESCARTADAS NA FILA DA TELEFILM, para ninguém reabrir:**
+- **Copernicus Studios** (Halifax; `paul.rigg@`, `mathew.huerto@`, `marc.hartlen@copernicus.ca`): **2D**. A `/the-studio/` (lida pelo `wp-json`, porque as páginas dão 202 de desafio) diz *"combine with classical 2D animation techniques"*, o portfólio é *Teen Titans Go!*, *Solar Opposites*, *Curious George*, e a `/contact/` diz *"we do not respond to individual submissions"*. Já tomou carta a `info@` em 26/08 e lembrete em 02/09.
+- **Flying Kraken** (BC; `greg@flyingkraken.com`, Creative Director): boutique de **design 2D** e direção de arte. **Laughing Dragon** (*"2D cut out style"*), **Bon Jam** (*"2D animations"*), **Crooked City** (videoclipe), **Doberman Pictures** (*"focuses on pre-production"*), **Shocap** (XR ao vivo), **Pink Parrot Media** (vendas), **Epic Worlds** (licenciamento), **Woolf+Lapin**, **Normal Studio**, **Titan1**, **Lumi Creative**, **Shadow Pine**, **Angry Pumpkin**, **Syrup**, **CAOS**, **Coyle**, **Studio Niloc**, **Mad Goose** (o contato é Gmail pessoal): fora do ofício ou sem pipeline 3D de personagem.
+- **Blue Bug Entertainment** (`jaubert@bluebugentertainment.com`, *"3D-CG Animated Feature Film"*): o site dá **Cloudflare 1016, DNS de origem morto**. Sem prova de vida, não entra.
+- **Azar Animation** (Vancouver, `davoud@azaranimation.com`, CEO): site Wix de uma tela, `/about`, `/team` e `/careers` dão 404; sem prova de 3D. Fica como reserva fraca.
+- **Unstandard Studio** (`eddy@unstandardstudio.com`, cofundador): 3D estilizado de verdade, mas casa minúscula e só em francês; não gasto carta de pessoa nisso.
+- **Big Bad Boo** (já tem pessoa em `pessoas.csv`), **L'Atelier Animation** e **Cinesite** (**no teto de duas**), **Yowza** (a própria página diz que não há vaga, e o `processados.csv` já registra isso).
+
+### FICHA 1 — **Phillip Stamp**, *Executive Creative Director* e sócio, **IoM MEDIA VENTURES / "Island of Misfits"** (Halifax, NS, **Canadá**) — `phillip.stamp@iom-media.com` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/iom-media-ventures/` (ferramenta de página; o `curl` recebe 406 da Sucuri, que eu não burlei): *"Phillip Stamp — Executive Creative Director — phillip.stamp@iom-media.com"*, ao lado de *"Dana Landry — President, CEO — dana.landry@iom-media.com"* e *"Kendra Lundy — Director of Development and Studio Operations — kendra.lundy@iom-media.com"*.
+  `https://www.iom-media.com/about` (**200, 78.000 bytes**): *"Phillip Stamp / Executive Creative Director"* e a biografia.
+  `https://www.iom-media.com/careers` (**200, 74.947 bytes**), `https://www.iom-media.com/` (**200, 108.773 bytes**) e `https://www.iom-media.com/contact` (**200, 75.667 bytes**): o site não publica e-mail nenhum (só o link do BambooHR).
+- **NADA MONTADO.** O `nome.sobrenome@` está escrito pela Telefilm **três vezes**, para três pessoas da casa.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Casa pequena/média: o BRIEF-JOE manda ir em quem decide arte. A própria casa escreve que ele *"oversees all original property development and sales efforts, while also steering the creative direction on all animation service projects"*. O CEO (Dana Landry) é o lado financeiro e de distribuição (ex-CEO da DHX); a Kendra Lundy é operações. Ele é o único dos três que é artista.
+- **GANCHO, com a frase da própria casa entre aspas** (`/about`): *"Prior to DHX, Phillip co-founded One Animation in Singapore, where he produced, wrote and directed the long-running series Rob the Robot, and co-created the international hit series Oddbods. In 2004, Phillip began work at Lucasfilm Animation, where he served as Animation Director on the Emmy award-winning Star Wars: The Clone Wars."* Na `/careers`: *"Join the fastest growing CG animation studio in Halifax, Nova Scotia"* e *"If you are a passionate artist looking for an opportunity to grow your skillset in a collaborative environment, we'd like to hear from you!"*
+- **PATROCÍNIO, e é o que faz desta a melhor da rodada.** Na mesma `/careers`, literal: ***"We support Permanent Residence applications"***, e *"Gain a flexible work environment with options for remote and in-studio positions"*. É a primeira casa desta veia que escreve isso.
+- **3D DE PERSONAGEM NA CASA:** *"the fastest growing CG animation studio"*; a home lista *L'il Stompers*, *Toof & Doof* e *Death Travelers*; a Telefilm diz *"Whether working with 2D, 3D, CGI animation…"*. *Oddbods* (o crédito dele) é CG de personagem estilizado, exatamente o registro do Vini.
+- **FORA DOS EUA? SIM**, Halifax. **A frase de realocação ENTRA**, uma vez, afirmativa.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `iom-media OR "IoM Media" OR "Phillip Stamp" OR "Dana Landry" OR "Kendra Lundy"` → **duas** threads, **as duas recibo automático do BambooHR** (`notifications@app.bamboohr.com`, *"Thank you for applying at IoM Media Ventures"*, General Application de **14/07** e de **01/09**). **Nenhuma carta e nenhuma resposta humana.** No repositório: `phillip.stamp`, `Stamp` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv`, `docs/index.html` e aqui; `processados.csv` registra a General Application de 01/09. **Primeira PESSOA da casa.**
+- **RESSALVAS HONESTAS:**
+  1. **Duas candidaturas espontâneas pelo BambooHR sem resposta** (julho e setembro). A carta tem de dizer em meia linha que já aplicou pelo portal e agora escreve para quem dirige a criação.
+  2. **A ficha da Telefilm não tem data.** A biografia dele está na `/about` de hoje, mas não provei cargo em 2026 por fonte datada.
+  3. **"Support Permanent Residence" não é o mesmo que patrocinar permissão de trabalho de estrangeiro fora do Canadá.** É o sinal mais forte da veia, não uma garantia.
+  4. A casa também faz 2D e interativo; a carta fala de personagem 3D estilizado.
+
+### FICHA 2 — **Sean Patrick O'Reilly**, *CEO/Founder*, **ARCANA STUDIO** (Burnaby, BC, região de **Vancouver**, **Canadá**) — `sean@arcana.com` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/arcana-studio-2/` (ferramenta de página): *"Sean Patrick O'Reilly — CEO — sean@arcana.com"* e *"Reanna Cameron — Head of Sales — sales@arcana.com"*; `General Email: sales@arcana.com`.
+  `https://arcana.com/meet-the-team/` (**200, 88.499 bytes**): *"Sean Patrick O'Reilly / CEO/Founder"*, e a equipe com *"Gary Yuen / Senior Modeler/Character Designer"*, *"Tristan Zarin / 3D Modeler"*, *"Clint Gamble / Animation Director"*, *"Kyle Lopez / 3D Animator"*.
+  `https://arcana.com/our-studio/` (**200, 93.082 bytes**), `https://arcana.com/careers/` (**200, 82.828 bytes**), `https://arcana.com/` (**200, 104.298 bytes**), `https://arcana.com/contact/` (**200, 26.439 bytes**, só formulário, endereço em Burnaby e em Pequim).
+- **NADA MONTADO.** O site não publica e-mail nenhum; o endereço está escrito pela Telefilm.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Casa de até umas 20 pessoas na página de equipe: o BRIEF-JOE manda ir no **fundador**, que costuma responder ele mesmo. Os outros publicados com e-mail são só `sales@`. O *Animation Director* (Clint Gamble) e a *Head of Production* não têm endereço publicado em fonte nenhuma que eu abri.
+- **GANCHO, com a frase da própria casa entre aspas** (`/meet-the-team/`): *"Arcana's employees make us a 'farm to fork' company as we produce all of our content with our incredibly talented staff."* Na `/our-studio/`: *"Arcana's library of wholly owned intellectual properties contain well over 5,000 characters that transcend gender, age, and cultural and geographic boundaries."* Na `/careers/`: *"WE ARE HIRING!"* e *"With the expansion into the new studio space and our developing projects, we are happy to welcome new people into are ever-growing team."*
+- **3D DE PERSONAGEM NA CASA:** longas CG próprios na home (*Panda vs. Aliens*, *The Legend of Hallowaiian*, *Howard Lovecraft and the Undersea Kingdom*, *The Steam Engines of Oz*, *Heroes of the Golden Mask*) e equipe com modelador sênior de personagem e animadores 3D. **Dentro da disciplina.**
+- **FORA DOS EUA? SIM**, Burnaby (Vancouver). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `arcana.com OR "Arcana Studio" OR "O'Reilly" arcana` → **`{}`**. `arcana` sozinho → **uma** thread, e é **falso positivo**: carta a `jobs@studioevil.com` (a Studio Evil faz *Dice of Arcana*). No repositório: `sean@arcana`, `arcana.com` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv`; o `docs/index.html` registra que o Vini **aplicou na Arcana em 01/09** (formulário do site, que não deixa recibo na caixa). **Primeira PESSOA e primeira carta da casa.**
+- **RESSALVAS HONESTAS:**
+  1. **A candidatura de 01/09 foi por formulário, sem resposta.** A carta deve mencioná-la em meia linha.
+  2. **A `/careers/` diz "WE ARE HIRING!" mas o botão "View Openings" não mostrou vaga** nas páginas que abri; não sei se há requisição viva.
+  3. **Patrocínio não publicado.** Vancouver é o cluster do Global Talent Stream, mas a casa não escreve nada sobre isso.
+  4. O escritório de Pequim sugere que parte da produção pode sair de lá.
+
+### FICHA 3 — **Maurine Fauvert**, *President, Producer* e cofundadora, **HOPLITE STUDIO** (Montréal, QC, **Canadá**, com base também na França) — `maurinefauvert@hoplitevfx.com` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/hoplite-studio/` (ferramenta de página): *"Maurine Fauvert — President, Producer — maurinefauvert@hoplitevfx.com"*; `General Email: contact@hoplitevfx.com`. (O segundo contato da ficha é um freelancer com Gmail pessoal: **não registrado**.)
+  `https://hoplitevfx.com/team/` (**200, 30.366 bytes**): *"Maurine Fauvert, producer, production coordinator, president, and co-founder of Hoplite Studio"*.
+  `https://hoplitevfx.com/about/` (**200, 31.025 bytes**), `https://hoplitevfx.com/` (**200, 29.631 bytes**) e `https://hoplitevfx.com/contact` (**200, 31.898 bytes**, redireciona para `/fr/contact/`): o site publica só `contact@hoplitevfx.com`.
+- **NADA MONTADO.** Endereço escrito pela Telefilm, domínio igual ao do site.
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** Casa pequena: ela é a única pessoa nomeada no site e a cofundadora. Não há diretor de arte publicado.
+- **GANCHO, com a frase da própria casa entre aspas** (`/about/`): *"From character performance to full cinematic sequences, we support your projects through a end-to-end approach or by reinforcing your in-house teams, adapting efficiently to your production needs and pipelines."* Na `/team/`: *"Whether it's hyper-realistic CGI or stylized cartoons, we seamlessly adapt to any style, bringing your vision to life with precision and creativity."* e *"Our artists have honed their skills at world-class studios like MPC, Framestore, ILM, and Mikros Animation"*. Na Telefilm: *"Hoplite is a Montreal-based studio specializing in high-end CGI and cinematics for video games and marketing."*
+- **3D DE PERSONAGEM NA CASA:** *"A 3D Animation Studio Dedicated to High-End CGI"*, cinemáticas de jogo e *"character performance"*; a própria página credita um pacote de textura de pele (*"VFace pack 89 for skin texture maps"*). **Dentro da disciplina**, e o *"reinforcing your in-house teams"* é a porta natural para freelance/contrato.
+- **FORA DOS EUA? SIM**, Montréal. **A frase de realocação ENTRA** (ou a oferta de contrato remoto, se o maestro preferir: casa que reforça equipes costuma contratar por projeto).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `hoplitevfx OR "Hoplite" OR Fauvert` → **`{}`**. No repositório: `hoplitevfx`, `Fauvert` = **0** em todos os arquivos; `processados.csv` só cita a Hoplite de passagem, em 10/09, entre casas que *"publicam nome e cargo mas NENHUM endereco de pessoa"*. **CASA INÉDITA: zero carta, zero candidatura, primeira pessoa.**
+- **RESSALVAS HONESTAS:**
+  1. **Casa pequena** e de serviço: a demanda é por projeto, não vaga fixa. A diária de 350 euros do BRIEFING serve aqui.
+  2. **Montréal e França**: o francês pode pesar; o site é bilíngue.
+  3. **Ela é produtora, não diretora de arte.**
+  4. Patrocínio não publicado.
+
+### FICHA 4 — **Qiao Dan**, *Art Director*, **NEXT PIXEL ENTERTAINMENT** (Vancouver, BC, **Canadá**; escritórios também em Nice, Nova Délhi e Pequim) — `jqiao@nxtpxl.com` — **ALTA de ENDEREÇO (PUBLICADO pela Telefilm Canada)**, **MÉDIA de disciplina** — **a mais fraca das quatro**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/next-pixel-entertainment/` (ferramenta de página): *"Name: Qiao Dan — Job Title: Art Director — Email: jqiao@nxtpxl.com"* e *"Name: Nitin Singh — Job Title: CEO, Producer — Email: nchhikara@nxtpxl.com"*; `General Email: info@nxtpxl.com`; província *British Columbia*.
+  `https://www.nxtpxl.com/` (**200, 7.702 bytes**), `https://www.nxtpxl.com/jobs` (**200, 4.707 bytes**), `https://www.nxtpxl.com/projects/ray-and-pi` (**200, 6.764 bytes**) e a API pública `https://www.nxtpxl.com/api/jobs` → **`[]`** (nenhuma vaga aberta hoje). O site não publica e-mail nenhum.
+- **NADA MONTADO.** Endereço escrito pela Telefilm.
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** É **Art Director**, o alvo número 1 do BRIEF-JOE para casa pequena/média, e o único outro publicado é o CEO/produtor.
+- **GANCHO, com a frase da própria casa entre aspas** (`/`): *"We create original animated films, series, and characters."* e *"Human-led. We do not use generative AI to create our artwork or animation."* Na `/jobs`: *"Join an artist-led animation studio building original films, series, and characters."* e *"Animation / Performance that makes every character feel alive."* Na `/projects/ray-and-pi`: *"These production renders offer a first look at the visual language taking shape behind Ray and Pi."*
+- **3D DE PERSONAGEM NA CASA: PROVÁVEL, NÃO PROVADO.** *Ray and Pi* é longa próprio *"in production"* e a casa fala em *"production renders"*, mas **nenhuma página que eu abri escreve 3D ou CG**.
+- **FORA DOS EUA? SIM**, Vancouver. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `nxtpxl OR "Next Pixel" OR "Qiao Dan" OR chhikara` → **`{}`**. No repositório: `nxtpxl`, `jqiao`, `Qiao`, `next pixel` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv`, `docs/index.html`; só aparece aqui, na lista de fila da rodada das 17h35. **CASA INÉDITA: zero toque.**
+- **RESSALVAS HONESTAS:**
+  1. **O nome e o endereço não batem**: a ficha escreve *"Qiao Dan"* e o endereço é `jqiao@`. Pode ser ordem chinesa (sobrenome Qiao) com um nome ocidental que começa com J. **Na saudação, usar só o que está publicado** ("Hi Qiao Dan,") ou abrir sem nome próprio; não inventar o J.
+  2. **Disciplina 3D não provada** (acima).
+  3. **Zero vaga aberta** na API da casa hoje.
+  4. A produção pode estar em Délhi ou Pequim, e não em Vancouver; a Telefilm só diz BC.
