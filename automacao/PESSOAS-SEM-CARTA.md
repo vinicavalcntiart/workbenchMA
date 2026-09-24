@@ -18382,3 +18382,80 @@ a leitura de disciplina tem de vir antes do endereço.
 - **POR QUE ELE:** é o chefe do departamento em que o Vini entraria, numa casa que escreve *Groom* nos serviços.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `isaranimation OR "Studio Isar" OR Mauche in:anywhere` → carta fria para `info@` em **27/08** e follow-up em **02/09**, **zero resposta**.
 - **RESSALVA:** sem porta pessoal; se o maestro quiser insistir na casa, a única porta publicada que ainda não foi usada é `jobs@isaranimation.com` (caixa funcional, vista em `/en/jobs/`).
+
+## RODADA DAS 13h35 UTC DE 24/09 (Joe): MAGELIS E AMCRS ESTÃO ESGOTADOS PARA `mailto:` VISÍVEL, E A VEIA QUE RENDEU FOI O RESTO DO **GAMES FROM SPAIN - WHO IS WHO 2024** DO ICEX. **Quatro fichas com endereço PUBLICADO como texto e `mailto:` e confiança ALTA, mais uma `sem-email`; zero montado.** As cinco na Espanha, as cinco casas com ZERO linha em `pessoas.csv` e ZERO thread na caixa
+
+**Placar: 4 fichas ALTA, 1 `sem-email`, 0 montado, 0 campo oculto, 0 rascunho, 0 carta, 0 commit.** Quinta-feira, ritmo controlado.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Pôle Image Magelis, o resto das fichas.** Baixei as **55** fichas das listagens `activite/animation/` (2 páginas), `activite/vr-ar-3d/` (2) e `activite/jeu-video/` (2). **Só quatro trazem `mailto:` visível:** Ellipse (já usada às 09h35), La Station Animation (`jobs.angouleme@`, caixa funcional; os pessoais `christian@` e `franck@` estão **só no campo oculto**), Borderline Films (`mailto:emilie.chaulet@` ao lado da *Nathalie Biquet*, nome e endereço **não casam**, e é produtora de curta 2D) e a associação SO Games. Todo o resto (Fost, Bobbypills, Chouette Compagnie `marie@`, Malil'Art `romuald@`, Studio Nyx `romain.soulie@`, Opia Games sem nada) está **só no `email_entreprise` oculto**, que a regra desta rodada não aceita. **Magelis fechado.**
+- **AMCRS, as 45 fichas.** Fora as já usadas, os `mailto:` de pessoa são Accenture Song, gretels gold (financiamento), UP Designstudio (animação industrial), Zeitland (apps), Sola Media, FFL (laboratório) e escolas. A única casa 3D de personagem que sobrava, **Red Parrot Studios** (*"atemberaubende 3D-Animation für die ganze Familie (Peterchens Mondfahrt, Tafiti)"*), só publica `info@`. **AMCRS fechado.**
+- **Animation Ireland** (`animationireland.com/studios/`, 47 fichas com nome + cargo + `mailto:`): **já minerado por outra rodada**, as casas 3D (Giant, Trickshot, Boulder, Elk, Engine House, Sixteen South) têm linha em `pessoas.csv`. **Animation from Spain 2026**: idem, todas as casas 3D já têm ficha ou descarte escrito.
+- **Screen Flanders** (`screenflanders.be/en/facilities/animation`): os `mailto:` de pessoa são de casas 2D e stop-motion (A Private View, Animal Tank, Pimple). As casas 3D (Fabrique Fantastique, Creative Conspiracy/Spicy Acorn, Cyborn, Walking The Dog, Wailing Wolves) só publicam `info@`, e os sites delas também (Thuristar e Squarefish idem).
+- **Pictanovo** (`guidedelimage.pictanovo.com/annuaire/structures/<id>`, varridos os ids 1 a 1500, **242 fichas vivas**): quase só prestador de filmagem e som; a única casa 3D é a Trimaran VFX (VFX de live action, não personagem). O PDF `ecosysteme_anim_hdf.pdf` dá 404.
+- **Games from Spain 2025 e 2023**: os dois PDFs dão 404 (`who-is-who-games-2025-guia.pdf` e `estaticos/guia-games-from-spain.pdf`). Só o de 2024 está vivo.
+- **Descartados no próprio PDF de 2024:** Aruma Studios (**já recusou**: *"we dont do 3D"*, 08/09), Digital Sun (contato é *Business Development* e o site está atrás do desafio do Cloudflare, não deu para provar que ele continua lá), Titutitech (casa de porte e co-desenvolvimento; *"several 2D and 3D projects"* não prova personagem), Vermila (contato é *People, Office & Culture Manager*, horror realista), Pentakill (o site virou `daloar.com`, domínio do e-mail em dúvida), Voragine (2D pixel art), Creek Games (domínio estacionado), PlayStark e Synergy (proxy recusou a conexão), Abylight (já recebeu candidatura de portal em 06/09; *One Military Camp* sem prova de 3D na página aberta).
+
+### FICHA 1: **Javier Ramello**, *CEO* (cofundador), **HEROBEAT STUDIOS** (Barcelona, **Espanha**) — `jramello@herobeatstudios.com` — **ALTA (PUBLICADO como texto e `mailto:` no catálogo oficial do ICEX)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.icex.es/content/dam/icex/asset-generales/documentos/agenda-icex/documentos-apoyo-actividades/guia-games-from-spain-2024.pdf` (**200, 36.640.922 bytes, 127 páginas**), **p. 39**: *"CONTACT JAVIER RAMELLO CEO jramello@herobeatstudios.com"*, com a anotação `mailto:jramello%40herobeatstudios.com`. `https://herobeatstudios.com/` (**200, 141.690 bytes**; notícia de **23/09/2026** sobre gamescom e PAX West). `https://herobeatstudios.com/wilderings` (200). `https://herobeatstudios.com/job-openings/` (*"We currently have no job openings"*). `https://gamersocialclub.ca/2026/04/22/an-exclusive-interview-with-the-ceo-of-herobeat-studios-developers-of-rewilders-the-lost-spring/` (**200**): *"interview the CEO of Herobeat Studios, Javier Ramello Marchioni"*, abril de 2026. O cargo está vivo.
+- **NADA MONTADO.** Endereço escrito no PDF e no link.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Casa pequena de dois fundadores; ele é o CEO e o único nome publicado com e-mail. O site só tem formulário.
+- **GANCHO, com a frase da casa entre aspas.** Do site (`/wilderings`): *"Wilderings is an open-world action roguelite with creature collection and metroidvania-style progression"* e *"Collect unique creatures with active abilities, status effects, and passive bonuses."* Do ICEX (p. 39): *"Explore various 3D side-scrolling areas and defend your tiny furballs"* e *"this 2023 BAFTA award winning experience"* (*Endling*). A demo nova esteve na gamescom de agosto de 2026.
+- **3D DE PERSONAGEM: PROVADO.** *Endling* é 3D (frase do ICEX acima) com a raposa e os filhotes como personagem; o jogo novo é de **coleção de criaturas** (página da casa). Criatura estilizada é o terreno do Vini.
+- **FORA DOS EUA? SIM**, Barcelona. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `herobeatstudios OR herobeat OR Ramello in:anywhere` → **`{}`**; `from:`/`to:` do domínio → **`{}`**. No repositório: `herobeat` = **0** em `pessoas.csv` e `enviados.csv`; só aparece num censo de domínio de 20/09 que achou zero pessoa. **CASA INÉDITA, primeiro toque.**
+- **RESSALVAS HONESTAS:**
+  1. **O catálogo é de 2024.** O cargo foi reconfirmado numa entrevista de abril de 2026, mas o endereço literal só aparece no PDF.
+  2. **O nome do jogo mudou**: a imprensa de abril chama de *Rewilders: The Lost Spring*, o site da casa hoje chama de *Wilderings: The Lost Spring*. A carta deve usar o nome do site.
+  3. Ele é **CEO e CTO**, perfil técnico, não diretor de arte. Casa sem vaga aberta hoje.
+
+### FICHA 2: **Paco (Francisco) Encinas**, *CEO* (fundador), **RECOTECHNOLOGY** (Madrid, **Espanha**) — `pacoencinas@recotech.es` — **ALTA (PUBLICADO como texto e `mailto:` no catálogo oficial do ICEX)**
+
+- **URLs abertas por mim nesta rodada:** o mesmo PDF do ICEX, **p. 64**: *"CONTACT PACO ENCINAS CEO pacoencinas@recotech.es"*, com a anotação `mailto:pacoencinas%40recotech.es`. `https://recotech.es/` (**200, 124.619 bytes**). `https://recotech.es/juegos/el-coco/` (**200, 116.027 bytes**; lançamento em **28/11/2025**). `https://recotech.es/juegos/pocoyo/` (200). `https://recotech.es/aviso-legal/` (200: *"Recotechnology S.L. Domicilio: C/ Miguel Yuste 17 ... Madrid 28037"*; só `info@` no site).
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Fundador e CEO de casa pequena; é o único nome publicado. O site só dá `info@`.
+- **GANCHO, com a frase da casa entre aspas** (`/juegos/el-coco/`): *"EL COCO es un juego de acción roguelike en 3D que nos sumerge en la historia de un chico atrapado en Lo Incierto, un lugar habitado por criaturas de sueños y pesadillas."* E no ICEX: *"create own brands ... through alliances with publishing, audiovisual (animation series, TV …), merchandising and toys"*.
+- **3D DE PERSONAGEM: PROVADO** em página da casa (roguelike 3D de personagem e criaturas), mais *Pocoyo Party* (*"Juega con todos los personajes principales de la serie"*) e *Baby Shark Sing & Swim Party* no portfólio.
+- **FORA DOS EUA? SIM**, Madrid. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `recotech OR Recotechnology OR Encinas in:anywhere` → **`{}`**; `from:`/`to:` do domínio → **`{}`**. No repositório: `recotech` = **0** em todos os arquivos. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Catálogo de 2024**; fundador desde 2012, não costuma mudar de casa. Não achei página de 2026 que repita o cargo com o nome, só o LinkedIn na busca (não aberto).
+  2. O jogo principal **já saiu** (novembro de 2025): pode não haver produção de personagem aberta agora.
+  3. Casa pequena, também de licença infantil (*Pocoyo*, *Baby Shark*, *Bratz*).
+
+### FICHA 3: **Jordi Arnal**, *CEO*, **KANEDA GAMES** (Gavà, perto de Barcelona, **Espanha**) — `jordi.arnal@kaneda-games.com` — **ALTA (PUBLICADO como texto e `mailto:` no catálogo oficial do ICEX)**
+
+- **URLs abertas por mim nesta rodada:** o mesmo PDF do ICEX, **p. 41**: *"CONTACT JORDI ARNAL CEO jordi.arnal@kaneda-games.com"*, com a anotação `mailto:jordi.arnal%40kaneda-games.com`. `https://www.kaneda-games.com/` (**200, 70.016 bytes**): *Zaya: Rise to the Gods* em destaque e seis jogos da série *Smoots*; endereço *"C/. Mare de Déu de Montserrat, 70 local, 08850 Gavà"*; só `info@` no site.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** CEO de casa pequena de serviço e jogo próprio; único nome publicado.
+- **GANCHO, com a frase da casa entre aspas.** Da home: *"Durante los últimos años hemos realizado desde pequeños videojuegos de tipo serious games hasta proyectos de mayor envergadura en 3D"* e o lema *"Creamos mundos que desafían a los dioses"*. Do ICEX (p. 41): *"This game shows the Smoots characters with a cartoon style"* e *"Play with 12 Different characters with their own stats."*
+- **3D DE PERSONAGEM: PROVADO POR DUAS PÁGINAS JUNTAS** (a casa diz 3D na home; o ICEX diz elenco de personagens cartoon). Nenhuma das duas diz as duas coisas na mesma frase.
+- **FORA DOS EUA? SIM.** **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `kaneda-games OR "Kaneda Games" OR Arnal in:anywhere` → **`{}`**; `from:`/`to:` do domínio → **`{}`**. No repositório: `kaneda` = **0**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Catálogo de 2024**, sem página de 2026 com o nome dele.
+  2. Casa de **serviço a cliente com "precios competitivos"**: verba curta, e o forte deles é jogo arcade de esporte.
+  3. A prova de personagem é a mais fraca das quatro (duas páginas somadas).
+
+### FICHA 4: **Celer Gutiérrez Dávila**, *Game Director & Co-CEO*, **UPRISING STUDIOS** (Salamanca, **Espanha**) — `celer@uprising-studios.com` — **ALTA (PUBLICADO como texto e `mailto:` no catálogo oficial do ICEX)**
+
+- **URLs abertas por mim nesta rodada:** o mesmo PDF do ICEX, **p. 77**: *"CONTACT CELER GUTIÉRREZ DÁVILA Game Director & Co-CEO celer@uprising-studios.com"*, com a anotação `mailto:celer%40uprising-studios.com`. `https://uprising-studios.com/` (**200, 255.301 bytes**) e `https://uprising-studios.com/about-us` (200; só `contact@` no site). `https://store.steampowered.com/app/645320/SCARF/?l=english` (200; *"Developer: Uprising Studios"*). `https://store.steampowered.com/app/2968270/Toymaker_Threads_of_Joy/?l=english` (200; *"Release Date: Coming soon"*).
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Diretor de jogo e sócio numa casa pequena: é quem decide o time. Único nome publicado.
+- **GANCHO, com a frase da casa entre aspas.** De `/about-us`: *"We created Scarf, with a lote of love, with the publishing help of THQ Nordic."* e *"Toymaker, a project that mixes our hometown and sewing."* Da Steam: *"Scarf is an adventure game that combines puzzles and 3D platforming ... with the help of your partner, a dragon-shaped scarf."* Do ICEX: *"Its last published project, a 3D adventure game, was funded by THQ Nordic"*.
+- **3D DE PERSONAGEM: PROVADO PARA O JOGO ANTERIOR** (plataforma 3D com protagonista e parceiro dragão). **NÃO provado para o atual**: *Toymaker* é simulador de costura de pelúcia, e não achei frase que diga 3D.
+- **FORA DOS EUA? SIM.** **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `uprising-studios OR "Uprising Studios" OR Celer in:anywhere` → **`{}`**; `from:`/`to:` do domínio → **`{}`**. No repositório: `uprising` = **0**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Casa muito pequena e em Kickstarter** (*"now part of the team is spread throughout Spain"*): contratação improvável, vale como contato e indicação.
+  2. O jogo atual pode não ser 3D.
+  3. Catálogo de 2024.
+
+### FICHA 5 (`sem-email`): **Mario Menéndez Stabile**, *CEO*, **OPHION STUDIOS** (Valência e Madri, **Espanha**)
+
+- **URLs abertas por mim nesta rodada:** o mesmo PDF do ICEX, **p. 106**: *"CONTACT MARIO MENÉNDEZ STABILE CEO contact@ophionstudios.com"* e *"we specialize in pre production and art production (Characters, Environment, Weapons, Vehicles)"*, *"partnerships with industry titans like Sony, Disney, and Konami"*. `https://www.ophionstudios.com/about` (**200, 170.683 bytes**): *"Based in Valencia, Spain, we specialize in character, concept art and high-fidelity 3D scanning, delivering assets that integrate seamlessly into modern AAA and AA production pipelines."* `/`, `/contact` (200) e `/team`, `/careers` (404): só `contact@ophionstudios.com`.
+- **SEM E-MAIL DE PESSOA, NADA MONTADO.** O ICEX pareia o nome dele com a caixa `contact@`, que é genérica.
+- **POR QUE ELE:** é o CEO de uma casa de **terceirização de arte cuja especialidade escrita é personagem**, o encaixe mais exato do PDF inteiro.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `ophionstudios OR "Ophion" OR Stabile in:anywhere` → **`{}`**. No repositório: `ophion` = **0** em todos os arquivos. **Casa nunca tocada.**
+- **RESSALVA:** a única porta publicada é `contact@ophionstudios.com` (caixa de empresa, visível no site e no PDF). Se o maestro quiser a casa, é por ela, com carta de caixa genérica que cita o nome dele.
