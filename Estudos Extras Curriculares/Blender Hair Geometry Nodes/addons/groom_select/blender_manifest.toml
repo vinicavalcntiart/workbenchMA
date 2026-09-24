@@ -1,0 +1,11 @@
+schema_version = "1.0.0"
+
+id = "groom_select"
+version = "0.1.0"
+name = "Groom Select"
+tagline = "Seleciona guias de hair curves por atributo e salva a selecao como atributo"
+maintainer = "Vini Cavalcanti"
+type = "add-on"
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+tags = ["Sculpt", "Modeling"]
