@@ -1725,3 +1725,31 @@ ATS nenhum acha, e concluiria "casa sem vaga" com a casa contratando.
 Some-se ao `chopchop` (rede de fast-food sueca), ao `mpc.wd1` (Marathon Petroleum) e ao `icon.wd3`
 (pesquisa clínica). **Token que casa com o nome não prova que é a casa**, e o preço de conferir é
 uma leitura do primeiro título do quadro.
+
+## REGRA DO VINI, 24/09: NAVEGADOR REMOTO (KERNEL) É SEMPRE STEALTH, E O CAPTCHA SE ESPERA
+
+Ordem dele em 24/09, em três frases: **stealth sempre ligado neste repositório**, **o proxy
+padrão do stealth não se desliga**, e **se aparecer captcha ou teste parecido, espera que o
+navegador resolve sozinho**. O código que obedece isso é `automacao/navegador_kernel.py`:
+`abrir()` nasce com `stealth=True` fixo (não é parâmetro de propósito), `esperar_desafio()`
+espera até 3 minutos sem clicar em nada, e `fechar()` derruba a sessão. Ninguém chama
+`Kernel().browsers.create` direto. A chave vem de `KERNEL_API_KEY` no ambiente e nunca entra
+no repositório. Nesta sessão do Claude o conector do Kernel entra por OAuth e dispensa a chave.
+
+**Medido em 24/09, três alvos que o curl não abria:**
+
+| Alvo | curl (registro antigo) | Kernel stealth, esperando o solver |
+|---|---|---|
+| `jobs.lever.co/larian` | "Lever é parede" (hCaptcha + Cloudflare) | **abriu**, HTTP 200, 205 links, lista de vagas inteira |
+| `artstation.com/jobs` | 403, interstitial do Cloudflare | **bloqueado**: "One more step", 4 minutos, solver de Turnstile deu `success` a cada 20 s e o Cloudflare desafiou de novo, em ciclo, nomeando o IP do proxy |
+| `eyecandyanimation.com` | 403 nas três variações | **bloqueado**: "Performing security verification", 50 s parado |
+
+**O que isso muda na prática:**
+1. A etiqueta `bloqueado` da varredura (`varre-quadros.py`) ganha uma segunda tentativa
+   barata: abrir com `navegador_kernel.abrir()` antes de mandar para a fila do Vini. O
+   Lever inteiro sai da lista de paredes para LEITURA.
+2. Desafio que continua depois de `esperar_desafio()` é reputação de IP, não defeito do
+   solver. Registra `bloqueado` e segue. Desligar o proxy para testar foi tentado em 24/09,
+   a página caiu (`Page crashed`) e o Vini vetou a ideia na hora.
+3. A regra 17 continua: o último clique de envio de formulário é no navegador do Vini. O
+   stealth serve para DESCOBRIR e CONFIRMAR vaga (regra 6), não para enviar.
