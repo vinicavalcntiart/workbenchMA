@@ -8940,3 +8940,19 @@ Palavras dele: *"Eu n te dei essa regra de assinar termos juridicos em momento N
 - Só vai para o Vini a caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha), pela rota do clique do CLAUDE.md.
 - Os arquivos `ans_spa_*.json` e qualquer `ans_*.json` com nota "fica DESMARCADA para o Vini" estão superados por esta ordem.
 - **Anos de experiência em animação (resposta do Vini, 24/09 01h2x UTC: "Msm experiência de jogos"):** a mesma faixa da experiência profissional total. Em lista de faixas, marcar a maior que caiba em mais de dez anos (ex.: `7+` na Sony Pictures Animation). Não chamar o Vini para essa pergunta.
+
+## QUEIXA DO VINI, 24/09/2026 ~15h UTC: INEFICIENCIA DO MAESTRO
+
+Palavras dele: *"Pse se vc fizesse tudo n precisariamos passar por isso"* e *"registre minha queixa a sua ineficiencia"*.
+
+O que aconteceu e custou tempo dele hoje:
+- O navegador da DreamWorks (Rough Layout) expirou por tempo enquanto se esperava uma resposta dele, e o formulário teve de ser refeito do zero. O da Redly Games expirou do mesmo jeito e a porta se perdeu.
+- A pergunta de autoidentificação ("Hispanic or Latino?") só foi descoberta no fim do formulário, depois de tudo preenchido, e travou o envio.
+- O maestro gastou mensagens explicando limites em vez de entregar.
+
+Correções, valendo para todo agente:
+1. Navegador da rota do clique abre com tempo longo (timeout de pelo menos 4 horas) e nunca pode expirar com porta pendente.
+2. Antes de preencher, ler o formulário inteiro e levantar TODAS as perguntas que só o Vini responde; perguntar tudo de uma vez, no começo, numa mensagem só.
+3. Respostas pessoais dele ficam no arquivo pessoal fora do repositório (/home/user/apply/pessoal.json) e são reutilizadas sem perguntar de novo (autoidentificação EEO já guardada em 24/09).
+4. Portas com captcha vão numa leva só por dia, com tudo pronto; nada de mandar link solto que depende de ele estar online naquele minuto.
+5. Menos explicação, mais entrega: limite se diz em uma linha, e a mensagem segue com o que foi feito.
