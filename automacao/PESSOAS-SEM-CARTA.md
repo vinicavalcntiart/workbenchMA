@@ -18537,3 +18537,87 @@ a leitura de disciplina tem de vir antes do endereço.
   1. **SEGUNDA e ÚLTIMA pessoa da casa**, e a primeira carta saiu **há três dias**: não mandar em dia seguido a outra carta da casa.
   2. Ela é produtora vinda de TV e documentário, não diretora de arte; a carta pede direção, não vaga.
   3. A carta do Richard já citou o site da casa; esta tem de usar gancho diferente (a Katuni e os filmes novos em desenvolvimento).
+
+## RODADA DAS 21h35 UTC DE 24/09 (Joe): FORA DE VANCOUVER E DA ESPANHA, E A VEIA NOVA FOI O **CATÁLOGO DE EMPRESAS DO RELATÓRIO OFICIAL DA PARP** (Polônia), O IRMÃO DO CATÁLOGO DO ICEX. **Cinco fichas novas com endereço PUBLICADO e confiança ALTA; zero montado.** França, Reino Unido ×2, Polônia ×2. Todas em casa INÉDITA na campanha
+
+**Placar: 5 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit.** Alemanha e Bélgica: zero ficha, com a conta abaixo.
+
+**O MÉTODO, para repetir:**
+1. **`nav.py`** (o `navsweep.py` da rodada de 17h35 com mais palavras de menu: `mentions`, `equipe`, `ueber-uns`, `zespol`, `o-nas`, `a-propos`, `karriere`, `kariera`, `presse`) em **1.513 domínios INÉDITOS** tirados de `fila-gamedevmap-europa*.csv` e `censo-wikidata.csv` (Reino Unido 544, Alemanha 345, França 330, Polônia 223, Bélgica 57, resto dos Nórdicos 13), já sem o que as varreduras de 17h35 cobriram (`navdoms.tsv`, `navdoms2.tsv`) e sem nenhum domínio que aparece em `enviados.csv`, `processados.csv`, `pessoas.csv`, `docs/index.html` ou neste arquivo. Rendeu **284 domínios com endereço** e quase tudo é casa de uma ou duas pessoas, 2D, simulador ou caixa de função. Mais **~130 domínios à mão** (animação francesa, belga e alemã sem carta; estúdios médios de jogo do Reino Unido, Alemanha, Polônia e Bélgica sem carta) e **345 Impressums alemães** por caminho direto (`/impressum`, `/imprint`, `/legal-notice`).
+2. **O relatório `The Game Industry of Poland 2025` da PARP** (`https://en.parp.gov.pl/storage/publications/pdf/EBOOK-GAM-WCAG_27112025.pdf`, **200, 5.462.037 bytes**, 27/11/2025) tem um **catálogo de empresas** com site e e-mail de contato por casa. O texto sai dos `TJ` do PDF sem biblioteca (a ligadura `fi` some: `ofce@` é `office@`, `yingwildhog` é `flyingwildhog`). **Os e-mails em forma de pessoa do catálogo:** `lukasz.rosinski@varsav.com`, `p.pacynko@falseprophet.dev`, `pawel.lekki@exorstudios.com`, `maciej.dobrowolski@starward.co`, `pawel.miechowski@11bitstudios.com`, `ksasorski@drago-entertainment.com`, `m.janowski@enstudios.pl`, `m.szukajt@galaktus.pl`, `pkwiatkowski@umiart.pl`, `natalia@scansfactory.com`, `wpolak@wwpol.com`, `robert@grailteam.com`. Dois viraram ficha; o resto está abaixo.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Polônia, do catálogo da PARP:** **EXOR Studios** (`pawel.lekki@`, sócio e cofundador; *The Riftbreaker* é top-down de mecha, sem cadeira de personagem); **Starward** e **11 bit** já levaram carta em caixa genérica (06/09 e 02/09) e a ordem desta rodada é casa sem ninguém; **DRAGO** e **eNStudios** já estão no repositório; **Galaktus** é agência de marketing; **UmiArt** é 2D; **Scans Factory** é fotogrametria; **Grail Team** é IA. Os catálogos de feira da PARP (`Polish companies at GDC/TGS/gamescom`, em `parp.gov.pl/images/...` e `fers.parp.gov.pl`) devolvem **página de bloqueio Incapsula de ~960 bytes**: não insisti.
+- **Alemanha:** 345 domínios pela navegação e 345 Impressums por caminho direto deram só casa de uma pessoa ou fora da disciplina. **Wolpertinger Games** (Munique, `s.bender@wolpertingergames.com`, *Press & Business Contact* e *Managing Director* no Impressum) fica fora: *Survivor Mercs* tem na Steam as etiquetas **`2.5D` e `Pixel Graphics`**. **Icebird Studios** (`w.emmer@`, Geschäftsführer): *EverRail* é sobrevivência com trem, e a casa é da rede **Aesir**, que já levou carta. **Farbspiel Interactive** (Colônia): site parado em 2021, só primeiros nomes. **Pithead Studio** (Björn Pankratz): só `welcome@`.
+- **Bélgica:** **Studio Tolima** (`benlegavidya@`, Ben Lega): *Koira* é **2D desenhado à mão**. **Godspear**, **CatLab**, **Briganti** (*Dungeon Alchemist*), **Icetesy**: fora da disciplina ou uma pessoa só. O catálogo *Belgian Games @ gamescom 2025* (`source.flandersinvestmentandtrade.com`) dá **erro de certificado** no curl e **503** no WebFetch.
+- **França:** o AFJV (`emploi.afjv.com`) tem **Lead 3D Character Artist na Tactical Adventures** (setembro), mas a casa **RECUSOU o Vini em 17/09**; *Character Artist* na Asobo (veto de francês de 08/09); *Art Director* na Kalank Games (Angoulême, sem endereço de pessoa). **Gaumont** publica endereço de pessoa, mas só de distribuição de cinema.
+- **Reino Unido:** **Interior Night** (*As Dusk Falls*) só publica `jobs@` e a vaga diz *"We are exclusively looking for UK based candidates"*; **Balloon Studios** (`laure@`): *Botany Manor* não tem personagem; **Toxic Games**: só comercial.
+
+### FICHA 1: **Pierre-Luc Vettier**, *CEO / Creative Director / Head of Business Dev*, **ZERO GAMES STUDIOS** (região de Paris, **França**) — `pierre-luc.vettier@zerogamesstudios.com` — **ALTA (PUBLICADO na página de equipe da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.zerogamesstudios.com/our-team` (**200, 796.990 bytes**): *"CEO Creative Director Head of Business Dev"* colado a *"Pierre-Luc VETTIER"*, e o bloco *"Contact / Business inquiries: pierre-luc.vettier@zerogamesstudios.com laure.lequellec@zerogamesstudios.com"*; o time tem *"Lydie LAVENU / Game Artist Character Artist"* e a linha do tempo diz *"The studio is now counting more than 30 people"*. `https://www.zerogamesstudios.com/blog/serious-sam-shatterverse-is-now-available` (**200**). `https://store.steampowered.com/app/2067210/` (*Serious Sam: Shatterverse*, Behaviour, 31/08/2026, etiquetas `3D`, `Cartoony`, `Hero Shooter`). **NADA MONTADO.**
+- **POR QUE ELE:** casa de 30 e poucas pessoas; o CEO é também diretor criativo e é quem o site põe como porta de negócio. A outra pessoa do mesmo bloco, Laure Le Quellec, é *Business Developer* (especialista em Japão), sem ligação com arte.
+- **FRASES DA CASA, literais:**
+  - *"As fans of Serious Sam, Zero Games Studios development team is very proud to have been part of this project and would like to thank Behaviour Interactive for their trust and kindness."* — `https://www.zerogamesstudios.com/blog/serious-sam-shatterverse-is-now-available`
+  - *"Independent creators of video games, mobile apps and innovative technologies since 2013. Specialized in Unity and Unreal Engine development, we put our skills and good mood at the service of video game publishers and studios."* — `https://www.zerogamesstudios.com/`
+- **FORA DOS EUA? SIM**, França. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `zerogamesstudios OR "Zero Games" OR Vettier OR ...` → **`{}`**; `from:/to:(zerogamesstudios.com ...)` → **`{}`**; `"Serious Sam Shatterverse"` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. É casa de **co-desenvolvimento e work-for-hire** (*"WORK FOR HIRE / CO-DEVELOPMENT / PORTING"*): o personagem vem de projeto de cliente, e o crédito da Steam do *Shatterverse* só mostra a Behaviour.
+  2. **Casa francesa.** O site é todo em inglês e não achei `français courant` nem `bilingue`, mas a regra de 11/09 manda conferir antes da carta.
+  3. A porta oficial de vaga é `jobs@zerogamesstudios.com` (*"We're open to junior candidates"*).
+
+### FICHA 2: **Aimee Lingman**, *Executive Producer* de *Paleo Pines* e contato oficial da casa, **ITALIC PIG** (Holywood, Irlanda do Norte, **Reino Unido**) — `aimee@italicpig.com` — **ALTA (PUBLICADO pareado ao nome no comunicado da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.gamespress.com/en-US/A-New-Path-for-Paleo-Pines-How-Italic-Pig-and-Its-Community-Saved-the-` (**200, 40.481 bytes**, *"Press release 4/1/2026"*): *"Italic Pig is a UK-based Indie Games Studio. For more information, please reach out to Aimee Lingman aimee@italicpig.com"*. `https://italicpig.com/` (**200**): `mailto:aimee@italicpig.com` no ícone de e-mail e `"email":"aimee@italicpig.com"` no schema.org. `https://www.italicpig.com/italic-pig/category/Paleo+Pines` (**200**): rodapé *"140 High Street, Holywood, Northern Ireland, BT18 9HS, United Kingdom aimee@italicpig.com"*. Cargo: `https://filmstories.co.uk/features/paleo-pines-interview-italic-pig-on-making-a-life-sim-with-dinosaurs/` (**200**): *"We talk to executive producer Aimee Lingman"*. **NADA MONTADO.**
+- **POR QUE ELA:** é o nome que a casa põe em todo comunicado de 2026 (*"said Aimee, speaking on behalf of the Paleo Pines team"*) e o e-mail do próprio site; o site não publica diretor de arte nem equipe.
+- **FRASES DA CASA, literais:**
+  - *"Befriend a colourful herd of dinosaurs, discover the treats and skills that make each one special, and enlist their help as you plant, grow and harvest your crops."* — `https://italicpig.com/`
+  - *"we’ve recently begun dipping our toes into the waters of animation and series development."* — `https://italicpig.com/`
+- **3D DE PERSONAGEM: PROVADO** (Steam `https://store.steampowered.com/app/1202200/`: etiquetas `Dinosaurs`, `Cute`, `Creature Collector`, `3D`; o update de abril trouxe o **Spinosaurus** com padrões e cores).
+- **FORA DOS EUA? SIM**, Irlanda do Norte. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `italicpig OR "Italic Pig" OR Lingman OR "Paleo Pines"` → **`{}`**; `from:/to:(italicpig.com)` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. Ela é produção e marketing, não arte.
+  2. **Verba curta, escrita pela própria casa:** *"when traditional funding dried up"* (foram ao Kickstarter); o update de 13/07/2026 foi anunciado como *"the second and final major update stemming from the highly successful Paleo Pines Players’ Choice Kickstarter campaign"* (`https://www.gamespress.com/Italic-Pig-Launches-Significant-Update-for-Paleo-Pines-Introducing-new`, **200**), e o próximo projeto não está publicado. Sem vaga.
+  3. O endereço é só primeiro nome e é também o contato geral da casa.
+
+### FICHA 3: **Łukasz Rosiński**, *CEO (Prezes Zarządu)*, **VARSAV GAME STUDIOS** (Varsóvia, **Polônia**) — `lukasz.rosinski@varsav.com` — **ALTA (PUBLICADO em duas fontes independentes)**
+
+- **URLs abertas por mim nesta rodada:** `https://varsav.com/relacje-inwestorskie/` (**200, 105.710 bytes**): *"RELACJE INWESTORSKIE: Łukasz Rosiński: lukasz.rosinski@varsav.com"*. `https://en.parp.gov.pl/storage/publications/pdf/EBOOK-GAM-WCAG_27112025.pdf` (**200**): entrada *"Varsav Game Studios www.varsav.com, lukasz.rosinski@varsav.com"*, *"Team size: 35"*. Cargo: `https://varsav.com/en/about-us/` (**200**): *"MANAGEMENT AND SUPERVISORY BOARD ŁUKASZ ROSIŃSKI CEO"*. `https://store.steampowered.com/app/1920290/` (*Barkour*, VARSAV, **Q4 2026**, etiquetas `Dogs`, `Stylized`, `Cartoony`, `Character Customization`, `3D Platformer`). **NADA MONTADO.**
+- **POR QUE ELE:** é o único nome com endereço publicado; a casa (35 a 40 pessoas) não publica diretor de arte. O jogo que está em produção é **um cachorro agente secreto estilizado**: personagem e pelo, o encaixe mais direto desta rodada.
+- **FRASES DA CASA, literais:**
+  - *"VARSAV is specialised in developing games with an animal main protagonist as well as creating exceptional mechanics, unique art and engaging gameplay."* — `https://varsav.com/en/about-us/`
+  - *"Dangerous, and yet undeniably adorable, he’s the perfect mix of agent and man’s best friend."* — `https://varsav.com/en/portfolio/barkour/`
+- **FORA DOS EUA? SIM**, Polônia. **A frase de realocação ENTRA.** Gancho de **grooming in Houdini** cabe (protagonista de pelo).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `varsav OR Rosiński OR Rosinski OR Barkour ...` → **`{}`**; `from:/to:(varsav.com)` → **`{}`**; `"Bee Simulator"` → **`{}`**. Repositório: só uma linha de 06/09 em `processados.csv` dizendo que a `/rekrutacja` era página inacabada; **nenhuma carta, nenhuma pessoa**.
+- **RESSALVAS HONESTAS:**
+  1. É CEO de perfil financeiro (mercado de capitais, empresa na NewConnect), e o endereço é o de **relações com investidor**: carta curta, pedindo direção.
+  2. A página de recrutamento do site estava inacabada em 06/09; não há vaga publicada.
+
+### FICHA 4: **Piotr Pacynko**, *Founder and Director*, **FALSE PROPHET** (Varsóvia, **Polônia**) — `p.pacynko@falseprophet.dev` — **ALTA (PUBLICADO no catálogo oficial da PARP)**
+
+- **URLs abertas por mim nesta rodada:** `https://en.parp.gov.pl/storage/publications/pdf/EBOOK-GAM-WCAG_27112025.pdf` (**200**): entrada *"False Prophet www.falseprophet.dev, p.pacynko@falseprophet.dev"*, *"Next big thing: BANSHEE: Demon Girl"*, *"Team size: 10"*. Nome e cargo: `https://bansheevideogame.com/?page_id=307` (**200**): *"Piotr Pacynko, founder and director explains"*; `https://falseprophet.dev/` (**200**): *"Established in 2019 by Piotr Pacynko, False Prophet is a seasoned team of developers based in Warsaw (Poland)."* `https://store.steampowered.com/app/2989840/` (*BANSHEE: Demon Girl*, Early Access, etiquetas `Souls-like`, `3D`, `Third Person`, `Stealth`, `Dark Fantasy`). **NADA MONTADO.**
+- **POR QUE ELE:** fundador e diretor de uma casa de 10 pessoas cujo jogo inteiro gira em volta de **uma heroína em terceira pessoa**; em casa desse tamanho ele decide.
+- **FRASES DA CASA, literais:**
+  - *"BANSHEE: Demon Girl is a single-player third-person soulsborne stealth-action game."* — `https://falseprophet.dev/`
+  - *"Swing a katana, move like a ninja, seduce like a geisha, and unleash vampiric powers."* — `https://falseprophet.dev/`
+- **FORA DOS EUA? SIM**, Polônia. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `falseprophet OR "False Prophet" OR Pacynko` → **`{}`**; `bansheevideogame` → **`{}`**; `from:/to:(falseprophet.dev)` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. O endereço vem do **catálogo do governo (nov/2025)**, não do site da casa, que só publica `media@bansheevideogame.com`.
+  2. O estilo é **sombrio e semirrealista**, não estilizado; na carta, puxar pelo personagem e não pelo estilo.
+  3. Casa de 10 pessoas em Early Access: verba curta.
+
+### FICHA 5: **Bobby Thandi**, *Founder + CEO*, **XR GAMES** (Leeds, **Reino Unido**) — `bobby.thandi@xrgames.io` — **ALTA (PUBLICADO em `mailto:` no site da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://xrgames.io/` (**200**): na notícia do *Smash Eat Grow*, `<h3>Press Contact</h3>` seguido de `<a href="mailto:bobby.thandi@xrgames.io">`. `https://xrgames.io/about` (**200, 272.226 bytes**): *"Bobby Thandi Founder + CEO"*, ao lado de *"Chuan Liu VP Games"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o único endereço de pessoa que a casa publica; o VP Games e os chefes de área não têm endereço.
+- **FRASES DA CASA, literais:**
+  - *"Players are alien Smashers, come to Earth to wreak havoc!"* — `https://xrgames.io/`
+  - *"We work closely with AAA game studios and movie studios such as Sony Pictures to bring movie licences to life in VR."* — `https://xrgames.io/about`
+- **FORA DOS EUA? SIM**, Leeds. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `xrgames OR "XR Games" OR Thandi OR "Smash Eat Grow"` → **`{}`**; `from:/to:(xrgames.io)` → **`{}`**. Repositório: nenhuma carta nem pessoa.
+- **RESSALVAS HONESTAS:**
+  1. **CASA DE VR, e a rodada de 19/09 20h35 já a pôs de lado** (*"casa de VR (`xrgames.io`, `rezzil.com`, fora por ordem)"*), junto da ordem daquele dia contra pintura e ferramenta de VR. Aqui há personagem (os *Smashers* alienígenas, com cabelo e barba de cosmético na notícia; *Angry Birds VR*; *HITMAN 3 VR*), então a ficha entra, mas **o maestro decide** se VR com personagem vale carta.
+  2. Casa média e o endereço é de imprensa: CEO não é a melhor porta; não achei recrutador nem diretor de arte com endereço.
