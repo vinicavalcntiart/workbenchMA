@@ -18459,3 +18459,81 @@ a leitura de disciplina tem de vir antes do endereço.
 - **POR QUE ELE:** é o CEO de uma casa de **terceirização de arte cuja especialidade escrita é personagem**, o encaixe mais exato do PDF inteiro.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `ophionstudios OR "Ophion" OR Stabile in:anywhere` → **`{}`**. No repositório: `ophion` = **0** em todos os arquivos. **Casa nunca tocada.**
 - **RESSALVA:** a única porta publicada é `contact@ophionstudios.com` (caixa de empresa, visível no site e no PDF). Se o maestro quiser a casa, é por ela, com carta de caixa genérica que cita o nome dele.
+
+## RODADA DAS 17h35 UTC DE 24/09 (Joe): FORA DA ESPANHA, E A VEIA QUE PAGOU FOI UM PROBER NOVO QUE **SEGUE O MENU DA HOME** EM VEZ DE ADIVINHAR CAMINHO. **Três fichas novas com endereço PUBLICADO e confiança ALTA, mais um UPGRADE de `sem-email` para ALTA; zero montado.** Suécia, Reino Unido, Holanda ×2. **Vancouver: zero**, com a conta abaixo
+
+**Placar: 3 fichas novas ALTA + 1 upgrade (Julien Kaspar), 0 montado, 0 rascunho, 0 carta, 0 commit.** Quinta-feira, ritmo controlado. Abaixo da meta de quatro NOVAS: são três novas e uma que volta à fila.
+
+**O MÉTODO, para repetir:** `navsweep.py` baixa a home, segue só os links internos cujo caminho bate com `team|people|about|contact|kontakt|om-oss|ansatte|medarbe|yhteys|over-ons|crew|staff|who-we-are|company|studio|impressum` (até 12), e decodifica entidade HTML, `%40`, `data-cfemail`, `/cdn-cgi/l/email-protection#` e `[at]`/`(at)`/`(dot)`. Rodou em **1.070 domínios** das filas gamedevmap (Suécia 544, Holanda 185, Finlândia 104, BC 78, Dinamarca 63, Irlanda 41, Noruega 39), **886** do `garimpo-cgstudiomap.csv` + `censo-wikidata.csv` (Reino Unido 375, Canadá 294, Nórdicos ~180, Holanda 30) e **~180 escolhidos à mão**. Rendeu ~500 endereços em forma de pessoa **inéditos no repositório**, e quase todos são de casa minúscula fora da disciplina (serious game, VR, som, cassino, simulação). O achado que vale a regra: **o `href` da Untold é `mailto: garreth@...` com ESPAÇO depois dos dois-pontos**, e é por isso que três varreduras anteriores na mesma página não viram o endereço de carreiras.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Vancouver, zero:** as 78 casas de BC da fila gamedevmap não publicam pessoa (só `puzzlewarriors@casimm.com`, `meowza@`, Nintendo); DNEG (Jobvite `double-negative-visual-effects`, 97 vagas, **tem** *Character Modeler (DNEG Animation)* em 3 locais e *Groom TD (DNEG ANIM)* em Londres) não põe e-mail em página de vaga; WildBrain só publica PR e relações com investidor (Toronto); Job Bank do Canadá tem *3D artist* com LMIA mas a porta é *Direct Apply* (conta), sem e-mail; `arbeidsplassen.nav.no` (Noruega): 94 anúncios de *3D/animasjon/spillutvikler/animator*, zero estúdio.
+- **Teamtailor em domínio próprio** (18 casas: Snowprint, Fatshark, Sharkmob, Embark, Hazelight, Ghost Ship, Funcom, Neon Giant, Resolution, Redhill, Radical Forge, Coatsink, Bulkhead, Arrowhead, Fingersoft, Starbreeze, Coffee Stain, Stunlock): o bloco *Recruiter* vem **vazio** e `/sections/<id>?job_id=<id>` devolve a casca vazia (772 bytes). Nas descrições de vaga, o único e-mail de pessoa é `maria.sjoman@coffeestain.com`, **já ficha de 12/09**.
+- **Frontier**: `yharniman@frontier.co.uk` continua no payload, mas **a casa RECUSOU** (Lever, 17/09, *Experienced Character Artist*). Fechada.
+- **Milford**: `johan.gustafsson@milford.se` (Executive Producer) está publicado, mas **Ladan Adhami, do recrutamento, já respondeu em 08/09** (*"Demian forwarded your application"*). A casa é do Comunicador.
+- **Giant Animation**: `alex@giant.ie` publicado, mas a carta ao Sean (17/09) se apresentou como *"last try"*. Não abrir terceira porta.
+- **Brimstone** (*Super Battle Golf*, `rasmus@brimstone.games`, CEO): a própria casa escreve *"we do not hire within the US, Canada, or the rest of the Americas"* (já registrado em 06/09). Veto.
+- **Critical Force** (Finlândia): `veli-pekka@criticalforce.fi` está atrás do botão *Press Contact* (ofuscado pelo Cloudflare) e o `/news` tem as duas notícias, *"Veli-Pekka Piirainen back as the CEO"* e *"passes the torch to Miikka Lehtonen"*, e não dá para provar qual é a atual. Não gasto.
+- **Anikey** (`albert@anikey.nl`, fundador): 2D declarado (linha 2370). **Walking The Dog** (`eric.goossens@`): já no teto. **Studio AKA**: acima do teto. **Qvisten**, **Storm**: teto. **Helmet** (Øystein Moe, Stian Eriksen): filmagem ao vivo. **Red Pipe** (15 pessoas com e-mail): casa de ÁUDIO. **Toast** (Helsinque): pós-produção e cor. **Tiny Rebel**: cervejaria. **Odd Raven**: parada desde 2021 (só programadores). **Engine House**: segunda porta possível é `mike@` (novos projetos e parcerias), e a Tash Price está em licença; reserva fraca.
+
+### FICHA 1 (UPGRADE): **Julien Kaspar**, *3D Artist* (módulo *Sculpt, Paint & Texture*), **BLENDER STUDIO** (Amsterdã, **Holanda**) — `julien@blender.org` — **ALTA (PUBLICADO como autor de commit no Gitea oficial do Blender)**
+
+- **O que mudou:** a linha dele de 14/09 estava `sem-email`, e a nota daquele dia dizia que montar `julien@` em cima do padrão seria chute. **Hoje o endereço literal apareceu**: `https://projects.blender.org/api/v1/repos/studio/asset-bundles/commits` (**200**) devolve `{"name": "Julien Kaspar", "email": "julien@blender.org", "date": "2026-01-30..."}` no commit `https://projects.blender.org/studio/asset-bundles/commit/ed2a64eaa9500d4758a90f37046963394f833d60`, e são **12 commits dele** com esse endereço. **NADA MONTADO.** A linha foi atualizada no lugar (não duplicada).
+- **Vínculo reconfirmado hoje:** `https://studio.blender.org/about/` (**200, 68.477 bytes**): *"Julien Kaspar / 3D Artist"* na equipe; `https://www.blender.org/about/people/` (**200**): *"Julien Kaspar / 3D Artist · Blender Studio / Germany"*.
+- **POR QUE ELE:** é escultor e artista 3D de personagem dentro de um time pequeno; colega de ofício responde colega de ofício. O Art Director (Andy Goralczyk) não tem endereço publicado em lugar nenhum que eu abri.
+- **FRASES DA CASA, literais:**
+  - *"We’re a small and very international team based in Amsterdam, one of the most liveable places in the world."* — `https://www.blender.org/jobs/`
+  - *"Asset and character creation workflows with emphasis on rigging and shading"* (o que o longa *OVERGROWN* vai produzir e documentar) — `https://studio.blender.org/films/overgrown/`
+  - Reserva: *"After 20 years of short films, Blender Studio is ready to tackle an ambitious new project: a feature film!"* — mesma URL.
+- **FORA DOS EUA? SIM**, Amsterdã. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `blender.org OR "Blender Studio" OR Siddi OR "Julien Kaspar"` → **`{}`**; `from:blender.org OR to:blender.org OR "jobs@blender.org" OR Goralczyk` → **`{}`**. No repositório: só a linha dele de 14/09.
+- **RESSALVAS HONESTAS:**
+  1. O endereço vem de **metadado de commit**, não de página de contato. É o endereço que ele usa para trabalhar, mas não foi publicado *para* receber candidatura.
+  2. A casa vive de assinatura, contrata pouco, e a porta oficial é `jobs@blender.org` (publicado, ofuscado, na `/jobs/`), com a promessa *"Applicants to Blender jobs will get a reply whether or not we take the application further."*
+  3. O filme em produção agora (*Cowboi*) é **NPR e Grease Pencil**; o encaixe de 3D de personagem é o longa *OVERGROWN*, ainda em desenvolvimento.
+  4. **Segunda e última pessoa possível:** Francesco Siddi, *General Manager* do Blender Studio (e *CEO · Board Chairman* do Blender), `francesco@blender.org`, publicado como autor de commit de **14/09/2026** em `studio/blender-studio`.
+
+### FICHA 2: **Tilla Segerstedt**, *Founder & CEO*, **AURORA ARTS AB** (Skövde, **Suécia**) — `tilla.s@auroraartsstudio.com` — **ALTA (PUBLICADO na página de equipe da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.auroraartsstudio.com/the-team` (**200**): *"Tilla | Segerstedt | Founder & CEO | tilla.s@auroraartsstudio.com"*, e o resto do time com endereço: Gustav Johansson (*3D Artist*), Jens Söderlund (*Producer & Animator*), Luis Gomez Vecchio (*Gameplay programmer*), Leia Gripencreutz (*Marketing & Community Manager*); endereço postal *"Aurora Arts AB | Kanikegränd 3B | 549 34 SKÖVDE"*. `https://www.auroraartsstudio.com/` (**200**): *"Early Access Launch Q1 2027"*. `https://store.steampowered.com/app/2363200/?l=english` (**200**): *Developer: Aurora Arts*; etiquetas **Stylized, 3D, Cute, Character Customization, Third Person**.
+- **NADA MONTADO.** O formato `nome.inicial@` é o que a página escreve; não inventar outra grafia.
+- **POR QUE ELA:** casa de cinco pessoas; a fundadora é quem decide. O único artista 3D do time é júnior de cargo (*3D Artist*) e o jogo é de **criatura**, o que dá espaço para um sênior de personagem.
+- **FRASES DA CASA, literais:**
+  - *"Collect magical creatures in undiscovered lands and fight with your companions against the dangers lurking in the wilds of Saltwick!"* — `https://www.auroraartsstudio.com/`
+  - *"Make your new house a home, craft, collect, befriend people and Faeons alike, and explore a magical world inspired by Zelda: Breath of the Wild and the creations of Studio Ghibli."* — `https://www.auroraartsstudio.com/`
+  - Reserva, da Steam: *"Fae & Fauna is an open world creature collecting role-playing game combining the very best elements of the genre!"* — `https://store.steampowered.com/app/2363200/`
+- **3D DE PERSONAGEM: PROVADO** (etiquetas *Stylized* e *3D* na Steam; criaturas *Faeons* e criação de personagem jogável).
+- **FORA DOS EUA? SIM**, Suécia. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `auroraartsstudio OR "Aurora Arts" OR Segerstedt OR "Fae & Fauna"` → **`{}`**. Repositório: **zero** em `pessoas.csv`, `processados.csv`, `enviados.csv`, `docs/index.html` e neste arquivo. **CASA INÉDITA, primeiro toque.**
+- **RESSALVAS HONESTAS:**
+  1. Casa indie pequena, jogo ainda não lançado: verba curta, contratação por projeto, **nenhum sinal de patrocínio de visto**.
+  2. A frase do time na mesma página (*"...do what they do best – create the magic in question."*) tem travessão; não usar essa na carta.
+
+### FICHA 3: **Garreth Gaydon**, *Careers* (rótulo publicado pela casa), **UNTOLD STUDIOS** (Londres, **Reino Unido**) — `garreth@untoldstudios.tv` — **ALTA (PUBLICADO em `mailto:` na página de contato)**
+
+- **URL aberta por mim nesta rodada:** `https://untoldstudios.tv/contact` (**200, 49.243 bytes**), HTML literal: `<h3>GENERAL ENQUIRIES</h3> <p><a href="mailto: garreth@untoldstudios.tv"><strong>GARRETH GAYDON</strong></a><br /> CAREERS</p>`, repetido nos blocos de Londres e das outras regiões. **Note o espaço depois de `mailto:`.** NADA MONTADO.
+- **POR QUE ELE:** a casa o põe como **a porta de carreiras**, e o Teamtailor dela confirma: o *"Welcome to Untold Studios!"* que o Vini recebeu em 11/07 vem assinado `garreth.gaydon@untoldstdfg1324556.teamtailor-mail.com`. Casa grande de VFX: o recrutador é a porta, não o filtro (regra do BRIEF-JOE).
+- **FRASES DA CASA, literais:**
+  - *"Working alongside director Olivia Newman, our Film & Episodic team brought Marcellus to life through character design, animation, performance and meticulous VFX craft - creating an octopus with real personality, warmth and emotional depth."* — `https://untoldstudios.tv/vfx` (tem um hífen solto; na carta, citar só até *"meticulous VFX craft"* ou parafrasear).
+  - *"We are always looking for innovative, creative people who share our sense of optimism to join our community."* — `https://untoldstudios.tv/careers`
+- **FORA DOS EUA? SIM**, Londres. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `untoldstudios OR "Untold Studios" OR Gaydon` → 9 threads: carta fria em `hello@` (26/08, follow-up 02/09), **carta ao Luke Groves em 06/09 (sem resposta)**, duas candidaturas *General Application* no Teamtailor (11/07 e 06/09, só recibo automático), avisos de login e o *Welcome* automático. **Nenhuma recusa, nenhuma resposta humana.**
+- **RESSALVAS HONESTAS:**
+  1. **É a SEGUNDA e ÚLTIMA pessoa da casa** (teto de duas com Luke Groves).
+  2. O *Welcome* de julho foi mensagem automática do Teamtailor com o nome dele, não resposta humana. Se o maestro contar isso como contato prévio, a ficha cai.
+  3. A Untold é VFX de publicidade e de filme/episódico; o personagem está provado por Marcellus, não é casa de personagem estilizado. Patrocínio de visto no Reino Unido não está escrito.
+
+### FICHA 4: **Chantal Nissen**, *Producer* da Cool Beans e contato da **Katuni Animation**, **COOL BEANS BV / KATUNI** (Amsterdã, **Holanda**) — `cn@coolbeanspix.com` — **ALTA (PUBLICADO em duas fontes independentes)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.coolbeanspix.com/` (**200, 60.618 bytes**; atenção: sem `www` dá 403): *"Cool Beans and its producers Richard Claus, Chantal Nissen and Rienkje Attoh have a proven track record of successful international co-productions"*, *"Chantal Nissen | cn@coolbeanspix.com"* e, no bloco da Katuni, *"Chantal: chantal@katuni.eu"*. `https://www.producentenalliantie.nl/members/cool-beans.html` (**200**): *"Richard Claus & Chantal Nissen"*, `rc@coolbeanspix.com, cn@coolbeanspix.com`, *"Cool Beans BV is run by producers Richard Claus and Chantal Nissen"*. NADA MONTADO.
+- **POR QUE ELA:** a NAPA diz que a casa é tocada por dois produtores, ela e o Richard; o Richard já recebeu a carta. Ela aparece também como contato da **Katuni**, que é o estúdio de animação 3D, ou seja, quem contrata artista. Entre os dois endereços dela, `cn@coolbeanspix.com` tem duas fontes; `chantal@katuni.eu` é o da casa que faz a animação.
+- **FRASES DA CASA, literais:**
+  - *"Katuni Animation is the animation arm of Cool Beans, located in the heart of Amsterdam, specializing in high-quality computer-animation."* — `https://www.coolbeanspix.com/`
+  - *"Currently Katuni is in active development of several new animated movies, both 3D and 2D."* — `https://www.coolbeanspix.com/`
+  - Reserva: *"THE NETHERLANDS' FIRST-EVER 3D ANIMATED FEATURE FILM"* (*The Little Vampire 3D*) — mesma URL.
+- **FORA DOS EUA? SIM**, Amsterdã. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `coolbeanspix OR "Cool Beans" OR Nissen` → **1 thread**: a carta ao **Richard Claus em 21/09**, sem resposta. Nada para ela.
+- **RESSALVAS HONESTAS:**
+  1. **SEGUNDA e ÚLTIMA pessoa da casa**, e a primeira carta saiu **há três dias**: não mandar em dia seguido a outra carta da casa.
+  2. Ela é produtora vinda de TV e documentário, não diretora de arte; a carta pede direção, não vaga.
+  3. A carta do Richard já citou o site da casa; esta tem de usar gancho diferente (a Katuni e os filmes novos em desenvolvimento).
