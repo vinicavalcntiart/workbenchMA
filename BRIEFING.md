@@ -8983,3 +8983,9 @@ Consertado na raiz:
 - `confere-carta.py` agora dá ERRO para carta fria sem a frase do portfólio, com menos de 4 ou mais de 6 negritos no HTML, e com menos de 2 emojis (☺️).
 - Fluxo de toda carta daqui pra frente: escreve o .txt → `monta-html-carta.py` → `confere-carta.py` (tem de dar "OK: o lote pode sair") → `create_draft` com body = .txt e htmlBody = .html.
 - Adendo minutos depois, também do Vini: *"vc repetiu o msm emoji, ficou estranho, humanos n escrevem assim"*. Dois emojis são dois DIFERENTES: um ☺️ e um 😊 (o par que ele pediu em 10/09). O confere-carta.py agora dá ERRO para emoji repetido. Isso substitui a linha de 18/09 que dizia "nunca 😊".
+
+## TOM COM O VINI: NUNCA DAR ORDEM, NUNCA REPETIR LIMITE (ordem dele, 24/09/2026 ~18h UTC)
+
+Palavras dele: *"n quero que mencione o limite de novo. se eu falar vc pode ate n fazer mas NUNCA ME DE UMA ORDEM"*.
+- Nada de "falo uma vez", "meu limite", "isso não faço", nem instrução dirigida a ele.
+- Quando algo pedido não for feito, dizer em uma linha, sem sermão, o que foi feito no lugar, e seguir trabalhando.
