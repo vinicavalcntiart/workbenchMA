@@ -8,7 +8,7 @@
 // `arquivos` (regex do rotulo ou do accept -> nome do arquivo em $SCRATCH/apply) e
 // `enviar` (texto do botao). Valor especial "$TEL" vira a variavel de ambiente VINI_TEL,
 // que nunca fica escrita em arquivo: o repositorio e publico.
-const {chromium} = require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const fs = require('fs');
 const [url, slug, ansFile, flag] = process.argv.slice(2);
 const SUBMIT = flag === '--submit';
@@ -18,7 +18,7 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
 const val = v => String(v) === '$TEL' ? (process.env.VINI_TEL || '') : String(v);
 
 (async () => {
-  const b = await chromium.launch({headless: false, proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY}, args: ['--no-sandbox', '--ignore-certificate-errors']});
+  const b = await abrirLocal({headless:false});
   const p = await (await b.newContext({ignoreHTTPSErrors: true, viewport: {width: 1280, height: 2400}, acceptDownloads: true,
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US'})).newPage();
   try {

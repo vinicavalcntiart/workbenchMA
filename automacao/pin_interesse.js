@@ -10,7 +10,7 @@
 // confere o que ficou escrito na tela.
 //
 // Uso: VINI_TEL='...' sh hb_run.sh pin_interesse.js <respostas.json> <slug> [--submit]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname;
 for(const k of Object.keys(A.texto||{})) if(A.texto[k]==='__TEL__'){
@@ -19,7 +19,7 @@ for(const k of Object.keys(A.texto||{})) if(A.texto[k]==='__TEL__'){
 }
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2800},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  p.on('request',r=>{ if(r.method()==='POST') log('[pedido POST]', r.url().slice(0,110)); });

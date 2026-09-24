@@ -7,17 +7,13 @@
 // com contexto PERSISTENTE em disco (prof_tt_<slug>), para as duas etapas partilharem cookie.
 // Uso: sh hb_run.sh tt4_mesma_sessao.js pede <host>
 //      sh hb_run.sh tt4_mesma_sessao.js abre <host> <link-do-email>
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const ETAPA=process.argv[2], HOST=process.argv[3], LINK=process.argv[4];
 const P=JSON.parse(fs.readFileSync('/home/user/apply/pessoal.json','utf8'));
 const slug=HOST.split('.')[0];
 const log=(...a)=>console.log('['+slug+'/'+ETAPA+']',...a);
 (async()=>{
- const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_tt_'+slug,{
-   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   ignoreHTTPSErrors:true,viewport:{width:1280,height:1200},locale:'en-US',
-   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const ctx=await abrirPerfil('/home/user/apply/prof_tt_'+slug,{headless:false,args:['--disable-blink-features=AutomationControlled'],ignoreHTTPSErrors:true,viewport:{width:1280,height:1200},locale:'en-US',userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
  const p=ctx.pages()[0]||await ctx.newPage();
  const cookies=async()=>{
    for(let v=0;v<3;v++){

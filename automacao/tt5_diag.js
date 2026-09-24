@@ -8,12 +8,11 @@
 // link de email nunca foi necessario.
 // Este script so LE: passo a passo do formulario, com screenshot de cada tela.
 // Uso: sh hb_run.sh tt5_diag.js <host>
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const HOST=process.argv[2]; const slug=HOST.split('.')[0];
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1400},locale:'en-US',
    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
  const p=await ctx.newPage();

@@ -1,7 +1,7 @@
 // Dump de formulario proprio (Wix, WordPress, Apps Script). Uso: sh hb_run.sh own_dump.js <url>
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  await p.goto(process.argv[2],{waitUntil:'domcontentloaded',timeout:120000}); await p.waitForTimeout(9000);

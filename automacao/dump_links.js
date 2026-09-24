@@ -1,6 +1,6 @@
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:3000},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-GB'})).newPage();
  await p.goto(process.argv[2],{timeout:120000,waitUntil:'networkidle'}).catch(()=>{});
  await p.waitForTimeout(9000);

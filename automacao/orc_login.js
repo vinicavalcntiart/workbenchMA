@@ -12,16 +12,12 @@
 //
 // Uso: sh hb_run.sh orc_login.js <url da vaga> <tag>
 //      escreva o codigo em /home/user/apply/code_<tag>.txt quando needcode_<tag>.txt aparecer.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const URL=process.argv[2], TAG=process.argv[3]||'orc';
 const P=JSON.parse(fs.readFileSync('/home/user/apply/pessoal.json','utf8'));
 const log=(...a)=>console.log('['+TAG+']',...a);
 (async()=>{
- const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_oracle_'+TAG,{
-   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   ignoreHTTPSErrors:true,viewport:{width:1400,height:1600},locale:'en-US',
-   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const ctx=await abrirPerfil('/home/user/apply/prof_oracle_'+TAG,{headless:false,args:['--disable-blink-features=AutomationControlled'],ignoreHTTPSErrors:true,viewport:{width:1400,height:1600},locale:'en-US',userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
  const p=ctx.pages()[0]||await ctx.newPage();
  const rede=[]; p.on('response',r=>{ if(r.request().method()!=='GET') rede.push(r.status()+' '+r.request().method()+' '+r.url().split('/').slice(-1)[0].slice(0,60)); });
  const tela=async n=>log(n,JSON.stringify(await p.evaluate(()=>({url:location.href.slice(-70),

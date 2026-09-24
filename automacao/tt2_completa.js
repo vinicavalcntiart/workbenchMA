@@ -11,7 +11,7 @@
 // O questionario /connect/questions/start e apenas LIDO e despejado no log, nunca respondido
 // no chute.
 // Uso: sh hb_run.sh tt2_completa.js <link-de-acesso> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 // Uso novo: sh hb_run.sh tt2_completa.js <arquivo-com-um-link-por-linha> [ENVIAR]
 // UM navegador por vez e UMA sessao por link (o link de acesso do Connect e de USO UNICO:
 // medido as 19h20, quando um diagnostico gastou o link do Territory e a sessao seguinte caiu
@@ -22,8 +22,7 @@ const P=JSON.parse(fs.readFileSync('/home/user/apply/pessoal.json','utf8'));
 let slug='';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  for(const link of LINKS){
  slug=new URL(link).hostname.split('.')[0];
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1400},locale:'en-US',

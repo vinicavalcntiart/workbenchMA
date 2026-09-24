@@ -16,7 +16,7 @@
 //            be accepted") + botao "Connect"
 // Logo depois disso a sessao esta posta e /connect/profile/settings serve o formulario.
 // Uso: sh hb_run.sh tt6_completa.js <arquivo com "host|regex-do-departamento" por linha> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const CASAS=fs.readFileSync(process.argv[2],'utf8').split('\n').map(x=>x.trim()).filter(x=>x&&!/^#/.test(x))
   .map(l=>{const [h,d]=l.split('|'); return {host:h.trim(), dep:(d||'art').trim()};});
 const SUBMIT=process.argv.includes('ENVIAR');
@@ -65,11 +65,7 @@ const log=(...a)=>console.log('['+slug+']',...a);
  // pode morrer com o processo. Assim uma rodada seguinte ainda entra logado.
  for(const casa of CASAS){
  slug=casa.host.split('.')[0];
- const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_tt_'+slug,{
-   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',
-   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const ctx=await abrirPerfil('/home/user/apply/prof_tt_'+slug,{headless:false,args:['--disable-blink-features=AutomationControlled'],ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
  const p=ctx.pages()[0]||await ctx.newPage();
  const base='https://'+casa.host;
  const rede=[];

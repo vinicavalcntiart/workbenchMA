@@ -3,9 +3,9 @@
 // formulario so existe depois do clique em "Apply Now". Lembrete do brief: 200 no curl de SPA
 // e a casca, nao a porta, e quem da veredito e o clique.
 // Uso: sh hb_run.sh gohire_probe.js <url>
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},locale:'en-US',
   userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'});
  const p=await ctx.newPage();

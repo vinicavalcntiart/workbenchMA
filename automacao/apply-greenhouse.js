@@ -1,5 +1,5 @@
 // Greenhouse job-boards filler. Uso: node apply_gh.js <url> <slug> <answers.json> [--submit]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,ansFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile));
 // O telefone NAO fica escrito aqui: este repositorio e publico. Ele vem da variavel de
@@ -23,7 +23,7 @@ const log=(...a)=>console.log(`[${slug}]`,...a);
 (async()=>{
  // Half Breaks, rodada 1: modo headless levava a recusa seca de sessao em varios ATS.
  // Tela de verdade e o padrao agora; rode sempre por hb_run.sh, que sobe o Xvfb.
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'});
  const p=await ctx.newPage();
  try{

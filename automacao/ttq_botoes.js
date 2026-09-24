@@ -1,14 +1,11 @@
 // Diagnostico: lista TODO botao/link/submit visivel no slide indicado do questionario Connect.
 // Nasceu porque o avanco do ultimo slide ("Pitch yourself") devolveu null: a lista de rotulos
 // aceitos (next|continue|save|submit|done|finish|skip) nao cobria o rotulo real da casa.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const HOST=process.argv[2], ROTA=process.argv[3]||'/connect/questions/pitch';
 const slug=HOST.split('.')[0];
 (async()=>{
- const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_tt_'+slug,{
-   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const ctx=await abrirPerfil('/home/user/apply/prof_tt_'+slug,{headless:false,args:['--disable-blink-features=AutomationControlled'],ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US'});
  const p=ctx.pages()[0]||await ctx.newPage();
  await p.goto('https://'+HOST+ROTA,{timeout:90000,waitUntil:'domcontentloaded'});
  await p.waitForTimeout(4000);

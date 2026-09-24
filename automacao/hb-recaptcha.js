@@ -1,8 +1,8 @@
 // Half Breaks: o board do Greenhouse carrega reCAPTCHA ou nao? Sem enviar nada.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const urls=process.argv.slice(2);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1000}});
  for(const u of urls){
   const p=await ctx.newPage(); const hits=[];

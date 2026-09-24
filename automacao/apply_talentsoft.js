@@ -3,12 +3,12 @@
 // ARMADILHA 1: candidatura exige CONTA. O botao Apply leva a /my-account/log-in.aspx.
 // ARMADILHA 2: a pagina de login tem TRES campos de senha (a caixa lateral tambem tem um) e
 // TRES botoes de submit. Mire pelo sufixo do name, nunca pelo primeiro que aparecer.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const [url,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const LOGIN=process.env.TS_LOGIN, SENHA=process.env.TS_SENHA; const D=__dirname+'/';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1300,height:2600},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-CA'})).newPage();
  const dump=async(tag)=>{
   const c=await p.evaluate(()=>[...document.querySelectorAll('input,select,textarea')].filter(e=>e.type!=='hidden'&&e.offsetParent!==null)

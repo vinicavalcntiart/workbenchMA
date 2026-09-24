@@ -1,7 +1,7 @@
 // Homerun (multi-aba, AngularJS). uso: node apply_homerun.js <respostas.json> <slug> [--submit]
 // json: {"url":"...","texto":{"#id":"valor"},"perguntas":{"2372108":"texto"},
 //        "simnao":{"2372204":"yes"},"cv":"Vini_Cavalcanti_CV.pdf"}
-const { chromium } = require('playwright'); const fs = require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs = require('fs');
 const [ansFile, slug, flag] = process.argv.slice(2); const SUBMIT = flag === '--submit';
 const A = JSON.parse(fs.readFileSync(ansFile)); const D = __dirname;
 // O telefone NUNCA fica escrito no arquivo de respostas: o repositorio e PUBLICO e o
@@ -15,7 +15,7 @@ for (const k of Object.keys(A.texto || {})) {
 }
 const log = (...a) => console.log('[' + slug + ']', ...a);
 (async () => {
-  const b = await chromium.launch({ headless: false, proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY}, args: ['--no-sandbox', '--ignore-certificate-errors'] });
+  const b = await abrirLocal({headless:false});
   const ctx = await b.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1400, height: 2200 }, userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US' });
   const p = await ctx.newPage();
   p.on('response', r => { if (r.request().method() === 'POST') log('[rede]', r.status(), r.url().slice(0, 110)); });

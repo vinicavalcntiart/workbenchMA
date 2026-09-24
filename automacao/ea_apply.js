@@ -1,13 +1,12 @@
 // UMA tentativa de envio na EA 215788 (Senior Character Artist, EA Sports FC Vancouver).
 // Entra pelo LOGIN da conta, abre ApplicationGeneralInformation, preenche SO o que esta
 // vazio e VISIVEL, le de volta, e clica em Next. Se vier Internal server error, registra.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const C=JSON.parse(fs.readFileSync('/home/user/apply/cred.json')).ea;
 const JOB='215788'; const SUBMIT=process.argv.includes('ENVIAR');
 const log=(...a)=>console.log('[ea]',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1366,height:1100},
    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',locale:'en-US'});
  await ctx.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});});

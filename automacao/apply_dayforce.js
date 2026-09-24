@@ -11,7 +11,7 @@
 // ARMADILHA 4, medida em 08/09: el.fill() PINTA o campo mas nao avisa o framework. A validacao
 // segue dizendo "required" com o texto na tela e a leitura de volta diz VAZIO com razao.
 // Use o setter nativo mais input/change/blur, que e o mesmo remedio do setv do workable2.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,ansFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile));
 const D='/tmp/claude-0/-home-user-workbenchMA/98c8eec1-87ea-55f1-bd77-423c5af62326/scratchpad/apply/';
@@ -33,7 +33,7 @@ const setv=async(p,sel,val)=>{
 };
 
 (async()=>{
- const b=await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal();
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1300,height:2600},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-CA'});
  const p=await ctx.newPage();
 

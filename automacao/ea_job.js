@@ -3,14 +3,13 @@
 // FLUXO MEDIDO: Login -> MyApplications (dedupe da fonte do candidato) -> ApplicationMethods?jobId=
 // -> ApplicationGeneralInformation?jobId= -> Next -> (proximos passos, se houver).
 // Uso: sh hb_run.sh ea_job.js <jobId> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const C=JSON.parse(fs.readFileSync('/home/user/apply/cred.json')).ea;
 const JOB=process.argv[2]; const SUBMIT=process.argv.includes('ENVIAR');
 if(!JOB){ console.log('falta o jobId'); process.exit(1); }
 const log=(...a)=>console.log('[ea'+JOB+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1366,height:1100},
    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',locale:'en-US'});
  await ctx.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});});

@@ -5,12 +5,12 @@
 // tentativa - a familia estava condenada como "parede de plataforma" sem nunca ter sido clicada.
 // ARMADILHA: o PRIMEIRO input[type=file] da pagina e o "Autofill from resume", nao o campo de
 // curriculo. O campo de verdade e #_systemfield_resume. Anexar no errado deixa o obrigatorio vazio.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const CV='/home/user/apply/Vini_Cavalcanti_CV.pdf';
 const log=(...a)=>console.log(`[${slug}]`,...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-GB'})).newPage();
  try{
   await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'});

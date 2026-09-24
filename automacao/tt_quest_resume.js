@@ -13,7 +13,7 @@
 // nunca o retorno do evaluate.
 //
 // Uso: sh hb_run.sh tt_quest_resume.js <host> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const HOST=process.argv[2]; const SUBMIT=process.argv.includes('ENVIAR');
 if(!HOST){ console.log('falta o host'); process.exit(1); }
 const slug=HOST.split('.')[0];
@@ -22,11 +22,7 @@ const PITCH='Senior 3D character artist, 10+ years on stylized characters for an
 const OK_LOCAL=/\b(remote|anywhere|worldwide|hybrid|flexible|work from home|united kingdom|uk|england|scotland|wales|northern ireland|ireland|london|brighton|manchester|liverpool|leeds|bristol|cambridge|oxford|guildford|sheffield|newcastle|glasgow|edinburgh|dundee|belfast|dublin|galway|walsall|leamington|france|paris|lyon|germany|berlin|hamburg|munich|spain|madrid|barcelona|portugal|lisbon|italy|milan|rome|netherlands|amsterdam|belgium|brussels|sweden|stockholm|malmo|denmark|copenhagen|norway|oslo|finland|helsinki|poland|warsaw|krakow|canada|toronto|vancouver|montreal|ottawa|united states|usa|los angeles|new york|seattle|austin|australia|sydney|melbourne|new zealand|auckland|brazil|brasil|olinda|recife)\b/i;
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const ctx=await chromium.launchPersistentContext('/home/user/apply/prof_tt_'+slug,{
-   headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',
-   userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const ctx=await abrirPerfil('/home/user/apply/prof_tt_'+slug,{headless:false,args:['--disable-blink-features=AutomationControlled'],ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'});
  const p=ctx.pages()[0]||await ctx.newPage();
  const base='https://'+HOST; const rede=[];
  p.on('response',r=>{ if(r.request().method()!=='GET'&&/connect/.test(r.url())) rede.push(r.status()+' '+r.request().method()+' '+r.url().replace(base,'')); });

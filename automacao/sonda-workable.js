@@ -14,13 +14,12 @@
 //   (b) a API que o proprio quadro chama, feita de dentro da pagina (mesma origem, mesmo cookie).
 //
 //   cd /home/user/apply && sh hb_run.sh wk_nav.js
-const {chromium} = require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const ALVOS = ['oneofus', 'lighthousegames', 'moonbug'];
 const log = (...a) => console.log('[wk]', ...a);
 
 (async () => {
-  const b = await chromium.launch({proxy: {server: 'http://127.0.0.1:18080'},
-    args: ['--no-sandbox', '--ignore-certificate-errors']});
+  const b = await abrirLocal();
   const ctx = await b.newContext({ignoreHTTPSErrors: true, viewport: {width: 1280, height: 1600},
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',
     locale: 'en-US'});

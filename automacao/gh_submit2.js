@@ -3,14 +3,14 @@
 // resposta chegar. Resultado: log "NAO CONFIRMADA" com a candidatura em voo. Esta variante
 // (1) espera pela RESPOSTA do POST /apply em vez de por tempo fixo, e (2) so declara veredito
 // depois de o spinner sair.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,coverFile]=process.argv.slice(2);
 const D=__dirname; const TEL=process.env.VINI_TEL;
 const B={first:'Vini',last:'Cavalcanti',email:'contact@vinicavalcanti.art',tel:TEL,cv:D+'/Vini_Cavalcanti_CV.pdf'};
 const carta=fs.readFileSync(coverFile,'utf8').trim();
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1000},acceptDownloads:true,locale:'en-US',
   userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'});
  const p=await ctx.newPage();

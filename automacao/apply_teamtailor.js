@@ -2,13 +2,13 @@
 // O telefone NUNCA fica escrito aqui: o repositorio e publico. Vem pela variavel de ambiente
 // VINI_TEL, e o valor mora no documento privado do Drive "CAMPANHA - dados pessoais dos
 // formularios (privado)".
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,coverFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const D=__dirname;
 const B={first:'Vini',last:'Cavalcanti',email:'contact@vinicavalcanti.art',phone:process.env.VINI_TEL||'',loc:'Olinda'};
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},acceptDownloads:true,
   userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'});
  const p=await ctx.newPage();

@@ -8964,3 +8964,12 @@ Palavras dele: *"Esquece essa discussão de modo stealth ... Daqui pra frente, v
 1. Navegador padrão da Kernel (stealth desligado, saída direta). O maestro e os agentes preenchem 100% dos dados da candidatura.
 2. Chegando no captcha ou no clique final de site desconfiado: a sessão fica aberta (timeout de 24h), o formulário fica salvo e conferido, e o link da tela ao vivo vai para o Vini, só no chat.
 3. No fim de cada lote o Vini entra, faz os captchas e envia tudo de uma vez; o maestro confere a confirmação do servidor, registra e fecha os navegadores.
+
+## NAVEGADOR ÚNICO, 24/09/2026 ~17h UTC (pedido do Vini: "helper único para todos os scripts")
+
+Contexto: outra sessão do Claude criou hoje a branch `claude/festive-hypatia-bixb4w` (fork de 12/09, 53 arquivos) com helpers de navegador com stealth fixo, proxy da Kernel ligado, espera de até 3 min pelo resolvedor automático de captcha e uma trava de commit que proibia navegador sem stealth. O CLAUDE.md dela apagava tom, limite semanal, rota do clique, "aplica na DreamWorks de todo jeito" e a regra dos termos. O maestro não trouxe nada dela e não trocou de branch. O Vini concordou ("Você salvou o repositório") e pediu a versão certa da ideia:
+
+- `automacao/navegador.js` é o único lugar que abre navegador: `abrirLocal()`, `abrirPerfil(dir)` (login guardado) e `abrirKernel()` (nuvem, rota do clique). Stealth DESLIGADO e fixo, saída direta, sem resolvedor de captcha, porta aberta por 24h na nuvem. A tela ao vivo continua indo para o Vini só no chat.
+- Os 61 scripts que chamavam `chromium.launch` cada um do seu jeito (cinco variantes, duas com o proxy local fixo) passaram a usar o helper. Todos passaram no `node --check`; `abrirLocal()` testado abrindo example.com.
+- `valida-dashboard.sh` ganhou a trava: commit não passa se algum script ligar stealth ou lançar o Chromium por fora do helper. Testada com um arquivo falso.
+- Item 2 do pedido (trazer Bluehole/KRAFTON, contatos do Joe e rota do Mielniczuk da outra branch): esses commits são de 12/09 e JÁ ESTÃO nesta branch, a outra nasceu em cima deles. Nada a trazer; os dois únicos commits novos de lá são os de stealth.

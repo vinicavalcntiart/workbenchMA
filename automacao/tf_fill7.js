@@ -15,14 +15,13 @@
 //    O SINAL CERTO E ÚNICO: o bloco ATIVO é o que CONTÉM document.activeElement — input
 //    nas perguntas de texto, FIELDSET nas de múltipla escolha.
 // Uso: sh hb_run.sh tf_fill7.js <url> <respostas.json> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const [url,ansFile]=process.argv.slice(2); const SUBMIT=process.argv.includes('ENVIAR');
 const A=JSON.parse(fs.readFileSync(ansFile,'utf8'));
 const log=(...a)=>console.log('[tf]',...a);
 const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:900},
    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',locale:'en-US'});
  await ctx.addInitScript(()=>{Object.defineProperty(navigator,'webdriver',{get:()=>undefined});});

@@ -1,7 +1,7 @@
 // Preenchedor de formulario proprio com campos por name/id. Uso: sh hb_run.sh apply_own.js <respostas.json> <slug> [--submit]
 // json: {"url","campos":{"#id":"valor"},"selects":{"#position":"3D Generalist"},"botao":"SUBMIT"}
 // O telefone entra como __TEL__ e vem de VINI_TEL: o repositorio e publico.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname;
 // 19/09 (25o turno): o marcador __ENDERECO__ entrou aqui pelo mesmo motivo do __TEL__, e a
@@ -24,7 +24,7 @@ for(const k of Object.keys(A.campos||{})){
 }
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  // LICAO DE 09/09 NA FUTURE ASSOCIATE: a primeira versao so escutava 'response' e o log saiu

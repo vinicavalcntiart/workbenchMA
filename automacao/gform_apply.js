@@ -31,7 +31,7 @@
 //     responder "Remote Only" na primeira tela faz a pergunta de trabalho presencial nunca
 //     aparecer, e a resposta preparada para ela fica pendente sem que nada esteja errado.
 //     Pendencia no fim NAO e defeito automatico: pode ser secao que a rota nao visitou.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const fs=require('fs');
 const P=require('./pessoal.json');
 // Substituicao de marcador: o ans_<casa>.json pode ir para o repositorio PUBLICO, entao o
@@ -50,7 +50,7 @@ const ENVIAR=(process.argv[4]||'')==='ENVIAR';
 const L=(...a)=>console.log('[gform:'+SLUG+']',...a);
 
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal({headless:false});
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'});
  const p=await ctx.newPage();

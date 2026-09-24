@@ -2,13 +2,13 @@
 // Porteiro: reCAPTCHA v2 INVISIVEL amarrado ao BOTAO (class="g-recaptcha btn" + data-callback),
 // nao ha caixa de desafio na carga. So o clique decide.
 // uso: node apply_breathehr.js <url_do_/application/<id>/new> <slug> <ans.json> [--submit]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador'); const fs=require('fs');
 const [url,slug,ansFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile,'utf8'));
 const TEL=process.env.VINI_TEL; if(!TEL){console.error('falta VINI_TEL');process.exit(1);}
 const L=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal();
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},locale:'en-GB',userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'});
  const p=await ctx.newPage();
  try{

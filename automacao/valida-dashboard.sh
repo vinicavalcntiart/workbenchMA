@@ -200,4 +200,15 @@ cp "$DIR/valida-dashboard.js" "$TMP/stub.js"
 # Rodar sem lancar nao basta: uma entrada de NOVIDADES caida dentro do DAILY nao
 # quebra a pagina, ela publica "19406porta6" no lugar do total de emails. Este
 # segundo passo confere o formato de cada linha dos arrays de dados.
+# TRAVA DO NAVEGADOR (24/09/2026). Todo script abre navegador por automacao/navegador.js, com
+# stealth DESLIGADO e saida direta: a caixa "sou humano" e do Vini (rota do clique, CLAUDE.md).
+# Nenhum script liga stealth, proxy da Kernel ou lanca o Chromium por conta propria.
+NAV=$(grep -rnE "stealth *: *true|stealth *= *True|chromium\.launch(PersistentContext)?\(" \
+      --include='*.js' --include='*.mjs' --include='*.py' "$DIR" 2>/dev/null | grep -v '/navegador.js:' | grep -v '/txt2pdf.js:' || true)
+if [ -n "$NAV" ]; then
+  echo "FALHA DE NAVEGADOR: stealth ligado ou navegador lancado fora de automacao/navegador.js."
+  echo "$NAV"
+  exit 1
+fi
+
 node "$DIR/valida-formato.mjs" "$DIR/../docs/index.html"

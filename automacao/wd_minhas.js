@@ -22,7 +22,7 @@
 // devolvem HTTP 406. Nao insista neles.
 //
 // A sessao AINDA precisa ser de navegador logado: a chamada vai com os cookies da pagina.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const fs=require('fs');
 const C=require('./cred.json');
 const [host,site,slug]=process.argv.slice(2);
@@ -39,7 +39,7 @@ const estado='wdst_'+slug+'.json';
 const L=(...a)=>console.log('[minhas]',...a);
 (async()=>{
   L('locatario:',LOC,'| site:',site,'| entrada propria?',!!CRED,'| nota:',(CRED&&CRED.nota)||'(sem)');
-  const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+  const b=await abrirLocal({headless:false});
   const opts={ignoreHTTPSErrors:true,viewport:{width:1400,height:2000},locale:'en-US',
     userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'};
   if(fs.existsSync(estado)) opts.storageState=estado;

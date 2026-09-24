@@ -23,7 +23,7 @@
 //      log; nada de chute. Na GOALS a resposta de "Do you live in Europe?" foi NAO, que e a
 //      verdade e custa.
 // Uso: sh hb_run.sh tt3_quest.js <arquivo-com-um-link-por-linha> [ENVIAR]
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrirLocal,abrirPerfil}=require('./navegador'); const fs=require('fs');
 const LINKS=fs.readFileSync(process.argv[2],'utf8').split('\n').map(x=>x.trim()).filter(x=>/^https/.test(x));
 const SUBMIT=process.argv.includes('ENVIAR');
 const P=JSON.parse(fs.readFileSync('/home/user/apply/pessoal.json','utf8'));
@@ -66,8 +66,7 @@ const OK_LOCAL=new RegExp('\\b('+[
 let slug='';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},
-   args:['--no-sandbox','--ignore-certificate-errors','--disable-blink-features=AutomationControlled']});
+ const b=await abrirLocal({headless:false,args:['--disable-blink-features=AutomationControlled']});
  for(const link of LINKS){
  slug=new URL(link).hostname.split('.')[0];
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:1500},locale:'en-US',

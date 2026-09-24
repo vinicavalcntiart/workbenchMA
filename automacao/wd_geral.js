@@ -30,7 +30,7 @@
 //     "Save and Continue" e a rodada gasta uma iteracao a toa.
 // 12. "Please select your gender" e obrigatorio na Disney do Canada apesar do texto dizer que a
 //     secao e voluntaria.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrirLocal}=require('./navegador');
 const fs=require('fs');
 const C=(()=>{ try{ return require('./cred.json'); }catch(e){ return {email:process.env.WD_EMAIL||'', padrao_campanha:process.env.WD_SENHA||''}; } })();
 if(!C.email||!C.padrao_campanha){ console.log('faltam WD_EMAIL/WD_SENHA (ou cred.json)'); process.exit(2); }
@@ -444,7 +444,7 @@ async function perguntas(p){
 }
 
 (async()=>{
- const b=await chromium.launch({proxy:{server:process.env.APPLY_PROXY||process.env.HTTPS_PROXY},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirLocal();
  const opts={ignoreHTTPSErrors:true,viewport:{width:1400,height:2200},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'};
  if(fs.existsSync(estado)) opts.storageState=estado;
  const ctx=await b.newContext(opts);
