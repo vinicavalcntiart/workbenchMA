@@ -18273,3 +18273,112 @@ a leitura de disciplina tem de vir antes do endereço.
   2. **Só em francês** no site; em Québec.
   3. **Não mandar no mesmo dia da 10e Ave**: as duas casas dividem o mesmo longa, e duas cartas iguais chegando juntas às duas pontas de um projeto soam como disparo em massa.
   4. Localização conflitante (Alberta na Telefilm, Québec no site).
+
+## RODADA DAS 09h35 UTC DE 24/09 (Joe): DOIS DIRETÓRIOS DE POLO REGIONAL QUE NINGUÉM TINHA ABERTO PAREIAM NOME + CARGO + E-MAIL, O **PÔLE IMAGE MAGELIS** (Angoulême) E O **ANIMATION MEDIA CLUSTER REGION STUTTGART** (AMCRS), MAIS O **GAMES FROM SPAIN** DO ICEX. **Seis fichas com endereço PUBLICADO e confiança ALTA, mais uma `sem-email`; zero montado.** Três na França, duas na Alemanha, uma na Espanha. Nenhuma no Canadá: a Telefilm está esgotada e eu não voltei nela
+
+**Placar: 6 fichas ALTA, 1 `sem-email`, 0 montado, 0 rascunho, 0 carta, 0 commit.** Quinta-feira, ritmo controlado.
+
+**AS TRÊS VEIAS NOVAS, para repetir:**
+1. **Pôle Image Magelis** (`magelis.org/annuaire-entreprises/activite/animation/`, 40 fichas em 2 páginas; também `/activite/vr-ar-3d/` e `/activite/jeu-video/`, mais 33). Cada ficha traz um bloco **CONTACTS** com nome e cargo de uma a quatro pessoas e, no HTML, o endereço de cada casa. **Ele aparece de dois jeitos, e isso muda a força da prova:** (a) como `mailto:` ao lado do nome (Ellipse); (b) só no campo oculto `email_entreprise` do formulário *"Contactez cette entreprise"* (`value='fperreau@superprod.net'`), que é o endereço para onde o próprio diretório manda a mensagem, mas não aparece como texto (Superprod, 2 Minutes). Os dois são endereço literal, não montado. O segundo é mais fraco e vai marcado assim na linha. Varredura: `grep -oE "[a-z.]+@dominio" ficha.html`.
+2. **AMCRS** (`amcrs.de/mitglieder/`, 45 fichas `amcrs.de/porfolio/<slug>/`): bloco **KONTAKT** com nome, cargo e `mailto:` direto. Rendeu Psyop, LAVAlabs e, fora da disciplina ou já visto: Pixomondo (`sabrina.christoforidis@pixomondo.com`, *Head of Studio Operations*; a casa já tem a Naomi Foakes e está sem resposta), RISE FX (`matthias.winter@risefx.com`, *Head of Studio*, **veto de autorização de trabalho na UE escrito desde 02/09**), SERU (só `info@`), Studio Soi (já recusou), M.A.R.K.13 (no teto).
+3. **Games from Spain - Who is Who 2024** (ICEX, PDF de 36,6 MB, 127 páginas): bloco **CONTACT** com nome, cargo e `mailto:` em anotação, casa por casa. **O PDF de 2025 dá 404.** O `pypdf` do sistema quebra (`_cffi_backend`); num venv próprio (`python3 -m venv venv && venv/bin/pip install pypdf`) ele lê texto e anotação sem problema. É irmão do *Animation from Spain* já minerado, e **só este é de jogos**.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **AnimFrance** (`animfrance.fr/adherents`, 71 sites de associados): só nome da casa e site. A varredura com decodificação de `data-cfemail` e entidade nos 34 domínios nunca tocados deu **zero pessoa de arte** (sites em JS; só `bayardjeunesseproduction.com` publica cinco nomes, e é editora).
+- **Animation Germany / German Films** (`animationgermany.de`, brochuras de longas 2024 e 2025): **crédito de estúdio por filme, zero e-mail de pessoa.** Serve para provar 3D (foi daí que saiu o crédito da LAVAlabs em *Stitch Head*).
+- **Studio Isar Animation** (Munique, Studio 100): `/en/team/` publica **Dirk Mauche, Head of Assets**, e **Florian Wittmann, CG Supervisor/Pipeline TD**, **sem e-mail**; o site só tem `info@` (já recebeu carta e follow-up) e `jobs@`. O Dirk Mauche entrou como linha `sem-email` (ficha 7, abaixo), porque é o alvo exato: a casa escreve *"From our CGI studio in Munich"* e lista *"Character Design"* e *"Modeling, Groom, Environments, Lookdev"* nos serviços (`/en/about-us/`).
+- **Traumhaus Studios** (Erfurt): só `info@` e `jobs@`; CEO Michael Luda sem e-mail. **Caribara Angoulême** (`emily@caribara.com`, Emily Ponsard, diretora do estúdio): **a casa já recusou por humano** (`p.beaulieu@caribara.com`, 16/09, *"nous n'avons pas de poste actuellement"*). Descartada.
+- **Streamlight Animation** (Magelis, `benjaminbenquet@`): o domínio virou site de jogo de cartas em hindi. Morto. **Toon Factory** (`thierry.berthier@toonfactory.fr`): catálogo 2D. **Rebound CG** (`apapot@reboundcg.com`, *Head of Studio*): jogo de esporte mobile. **Xilam Angoulême** (`emabit-audoin@xilam.com`): o cargo só aparece em LinkedIn e o site da Xilam dá erro de certificado e 503; ficou fora por falta de página aberta que prove o cargo. **Brave Zebra** (`axel.garcia@bravezebra.com`, ICEX): o site está atrás do captcha da SiteGround e não consegui abrir página que prove personagem 3D.
+- Diretórios que não abriram: `occitanie-films.fr/annuaire` (busca em JS), `auvergnerhonealpes-cinema.fr` (sem diretório de empresa), `filmfund.lu` (certificado incompleto), `animationireland.com/careers` (só 2 vagas vivas; o Wayback reseta a conexão).
+
+### FICHA 1: **François Perreau**, *Directeur du studio Angoulême*, **SUPERPROD STUDIO** (Angoulême, **França**) — `fperreau@superprod.net` — **ALTA (PUBLICADO no HTML da ficha oficial do Pôle Image Magelis, campo oculto do formulário de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.magelis.org/annuaire-entreprises/91880/superprod-studio/` (**200, 1.165.810 bytes**): CONTACTS *"Clément Calvet (Président & Producteur) ; Jérémie Fajner (Directeur Général) ; François Perreau (Directeur du studio Angoulême)"*, e no HTML `value='fperreau@superprod.net'` (o `email_entreprise` do formulário). `https://www.superprod.net/`: **1.054 bytes**, app em JavaScript, nenhum texto.
+- **NADA MONTADO.** O endereço está escrito no HTML da ficha; o nome do usuário casa com o diretor nomeado.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** É o único dos três nomes com endereço, e é quem dirige a unidade que faz o 3D. Os outros dois são o presidente e o diretor-geral do grupo.
+- **GANCHO, com a frase da casa entre aspas** (ficha Magelis): *"Situés à Paris et Angoulême, Superprod Studio est spécialisé dans la production de séries d'animation, de longs et courts métrages d'animation ainsi que de publicités."* e, sobre *Go! Go! Cory Carson* (Netflix, Kuku Studios): *"Prestataire : Superprod Studio (toute la fabrication 3D des assets à l'image finale)"*.
+- **3D DE PERSONAGEM: PROVADO** na ficha: série 3D de personagem com a fabricação inteira dos assets feita pela casa.
+- **FORA DOS EUA? SIM**, França. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `superprod OR Perreau OR fperreau in:anywhere` → **duas threads, as duas confirmações automáticas do portal werecruit** de 27/08 (espontânea e *Mid/Senior Character Designer* em Milão). Nenhum humano, nenhuma recusa. No repositório: `fperreau` e `Perreau` = **0**; `Superprod` = 0 em `pessoas.csv`.
+- **RESSALVAS HONESTAS:**
+  1. **Endereço fraco na forma:** está no campo oculto do formulário, não escrito na tela. É literal e é o endereço que o diretório usa, mas não é o mesmo que um `mailto:` visível.
+  2. **Casa grande** (a imprensa fala em cerca de 600 pessoas no grupo): o alvo ideal seria recrutador de arte, e nenhum está publicado.
+  3. O Vini **já aplicou pelo portal em 27/08** e ninguém respondeu. A carta não pode fingir que é o primeiro contato.
+  4. Francês provável como língua de trabalho.
+
+### FICHA 2: **Anthony Combeau**, *Directeur du Studio / Directeur Général Adjoint*, **2 MINUTES** (Angoulême; sede em Paris, **França**) — `acombeau@2minutes.fr` — **ALTA (PUBLICADO no HTML da ficha oficial do Pôle Image Magelis, campo oculto do formulário de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.magelis.org/annuaire-entreprises/92217/2-minutes/` (**200, 1.195.471 bytes**): *"Jean-Michel Spiner (Président) ; Anthony Combeau (Directeur du studio Angoulême)"*, `value='acombeau@2minutes.fr'`. `https://2minutes.fr/studios/` (**200, 211.954 bytes**): *"Anthony COMBEAU Directeur du Studio / Directeur Général Adjoint"*. `https://2minutes.fr/productions/` (categoria `animation-3d`): *Zombillénium*, *Les légendaires*, *Pat & Stan*, *Zak & Wowo*, *Oum, le dauphin blanc*, *Chico Chica Boumba*, *Alien Zoo*. `https://www.2minutes.fr/`: *"environ 120 personnes"*. `https://2minutes.fr/contacts/`: só formulário.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Dirige o estúdio de fabricação desde 2005 e é diretor-geral adjunto desde 2023: é quem monta equipe. O site publica mais três nomes (Spiner, Sarrazin, Parias), todos sem e-mail.
+- **GANCHO, com a frase da casa entre aspas** (`/studios/`): *"Fondé en 2003 à Angoulême, 2 Minutes Animation est le studio de fabrication historique de 2 Minutes. Ses équipes peuvent assurer toutes les étapes de fabrication d'une série ou d'un long métrage d'animation en 2D ou 3D"*. *Zombillénium* é o gancho de longa mais conhecido.
+- **3D DE PERSONAGEM: PROVADO NA CASA**, pela lista de produções 3D de personagem no site dela.
+- **FORA DOS EUA? SIM**, França. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `2minutes.fr OR Combeau OR "2 Minutes" OR Zombillenium in:anywhere` → **`{}`**. No repositório: `2minutes.fr` e `Combeau` = **0** em todos os arquivos. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **A ficha Magelis marca só "Production 2D" para Angoulême.** O 3D está provado na casa, não nesta unidade.
+  2. Mesmo endereço fraco na forma da ficha 1 (campo oculto).
+  3. Francês provável. Casa média, cerca de 120 pessoas, com estúdios também na Réunion e em Nanquim.
+
+### FICHA 3: **Arnaud Réguillet**, *Directeur du studio d'Angoulême*, **ELLIPSE ANIMATION / ELLIPSE STUDIO** (Angoulême; grupo Média-Participations, **França**) — `a.reguillet@ellipseanimation.com` — **ALTA (PUBLICADO como `mailto:` ao lado do nome, na ficha Magelis)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.magelis.org/annuaire-entreprises/92199/dargaud-media-ellipse-studio/` (**200, 1.147.815 bytes**): *"Arnaud Réguillet (Directeur du studio d'Angoulême) <a href='mailto:a.reguillet@ellipseanimation.com'>"*. `https://www.ellipseanimation.com/angouleme-arnaud-reguillet/` (comunicado de 18/01/2023). `https://www.ellipseanimation.com/production/the-smurfs/` e `/production/the-marsupilamis/`: as duas *"TECHNIQUE 3D CGI"*.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Dirige a unidade que faz o 3D, e o comunicado diz que ele trabalha junto com o *"CG General Supervisor Laurent Panissier"* (sem e-mail publicado; fica guardado aqui). A diretora-geral Caroline Duvochel está na mesma ficha, sem e-mail.
+- **GANCHO, com a frase da casa entre aspas** (comunicado): *"Ellipse Studio Angouleme will be moving into new offices with 660 m2 floor space and will treble the number of workstations, going from around 50 to 160"*, para trabalhar em *"The Marsupilamis for Groupe M6, The Smurfs season 3 for TF1 and Nickelodeon"*. E na página dos Smurfs: *"a brand new dynamic 3D version of this perennial favourite"*.
+- **3D DE PERSONAGEM: PROVADO** em página própria (duas séries *"3D CGI"* de personagem, feitas nesta unidade).
+- **FORA DOS EUA? SIM**, França. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `ellipseanimation OR Ellipse OR Reguillet OR "Réguillet" OR Hannou in:anywhere` → **`{}`**. No repositório: a casa tem **uma** linha, Lila Hannou (20/09, `sem-email`). `a.reguillet` = **0**. **Com esta linha a casa chega ao TETO DE DUAS.**
+- **RESSALVAS HONESTAS:**
+  1. **Casa grande de grupo** (260 postos entre Paris e Angoulême, pelo comunicado): o alvo é diretor de unidade porque é a única porta publicada.
+  2. O cargo vem de um comunicado de 2023; a ficha Magelis, viva hoje, repete o cargo.
+  3. Francês provável.
+
+### FICHA 4: **Matthias Bäuerle**, *Creative Director* (abriu a unidade de Stuttgart em 2021), **PSYOP** (Psyop Media Company Germany GmbH, Stuttgart, **Alemanha**) — `mbauerle@psyop.tv` — **ALTA (PUBLICADO como `mailto:` no bloco KONTAKT da ficha oficial do AMCRS)**
+
+- **URLs abertas por mim nesta rodada:** `https://amcrs.de/porfolio/psyop/`: *"Matthias Bäuerle Creative Director Psyop Media Company Germany GmbH Mörikestraße 9 70178 Stuttgart"*, `mailto:mbauerle@psyop.tv` e `mailto:hello@psyop.com`; projetos *"Supercell – Brawl Stars | Ubisoft – Anno 117 | Dreamgames – Royal Kingdom"*. `https://www.psyop.com/studios/psyop` (**200, 67.379 bytes**): divisões *"Animation + AI Artistry … Gaming … Character Studio"*, trabalhos *"animation • gaming Riot Games GODS ft. New Jeans"* e *"animation • gaming Dream Games Royal Kingdom"*.
+- **NADA MONTADO.** O domínio do e-mail é `psyop.tv`, e o site é `psyop.com`. Vale o literal publicado, como no caso da Stunlock.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** É o único nome da unidade europeia e é quem a fundou. Casa média na Europa: vai-se no diretor criativo.
+- **GANCHO, com a frase da casa entre aspas** (AMCRS): *"Die erste europäische Niederlassung öffnete 2021 in Stuttgart, als der langjährige Creative Director & VFX Supervisor Matthias Bäuerle aus New York City zurückkehrte."* E o *Character Studio* da página da casa, com os cinemáticos de *Brawl Stars* e *GODS*.
+- **3D DE PERSONAGEM: PROVADO** (divisão *Character Studio* e cinemáticos 3D de personagem estilizado para jogos, na página da casa).
+- **FORA DOS EUA? SIM**, Stuttgart. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `psyop OR mbauerle OR Bauerle OR "Bäuerle" in:anywhere` → só a confirmação automática do Jotform da candidatura **CG Modeler de 27/08**. Nenhum humano. No repositório: `mbauerle` e `Bäuerle` = **0**; `Psyop` = 0 em `pessoas.csv`.
+- **RESSALVAS HONESTAS:**
+  1. **A unidade de Stuttgart é pequena**; o grosso da casa está em Nova York e Los Angeles.
+  2. Ele é diretor criativo e supervisor de VFX, não lead de personagem.
+  3. Já existe candidatura de portal sem resposta.
+
+### FICHA 5: **Alexandra Stautmeister**, *VFX & Animation Producer*, **LAVALABS MOVING IMAGES** (Stuttgart; também Düsseldorf, Frankfurt, Berlim e Potsdam, **Alemanha**) — `alexandra.stautmeister@lavalabs.de` — **ALTA (PUBLICADO como `mailto:` no bloco KONTAKT da ficha oficial do AMCRS)**
+
+- **URLs abertas por mim nesta rodada:** `https://amcrs.de/porfolio/lavalabs-moving-images/`: *"Scherin Rajakumaran Executive VFX Producer Alexandra Stautmeister VFX & Animation Producer"*, `mailto:scherin.rajakumaran@lavalabs.de` e `mailto:alexandra.stautmeister@lavalabs.de`; projetos *"The Assessment Stitch Head Kleo (Staffel 1) Die Chaosschwestern The Dive"*. `https://lavalabs.de/about-us` (**200, 12.002 bytes**). `https://www.animationgermany.de/fileadmin/mediapool_animationgermany/pdfs/Brochure_AnimationGermany_2025.pdf` (German Films): *Stitch Head*, *"ANIMATION STUDIOS Studio Rakete, Assemblage Entertainment, LAVAlabs, Pixomondo"*.
+- **NADA MONTADO.**
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** É a produtora de animação, quem escala equipe de personagem num longa. A alternativa é o Scherin Rajakumaran (*Executive VFX Producer*), com endereço publicado na mesma ficha, para o dia em que ela não responder.
+- **GANCHO, com a frase da casa entre aspas** (`/about-us`): *"We have over ten years of experience creating high-class visual effects, including CGI, compositing, design, 2D and 3D animation, colour grading and premium finishing for films, series, commercials and live media"*. E o crédito de estúdio de animação em *Stitch Head* (2025).
+- **3D DE PERSONAGEM: PROVADO POR PÁGINA DE TERCEIRO.** A casa escreve 3D e *"CG Animation"*; o personagem aparece no crédito de estúdio de animação de um longa 3D, na brochura da German Films.
+- **FORA DOS EUA? SIM**, Alemanha. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `lavalabs OR Stautmeister OR Rajakumaran in:anywhere` → **`{}`**. No repositório: `lavalabs` só aparece numa lista de nomes de uma rodada antiga; zero linha, zero carta. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Casa de VFX, publicidade e evento antes de ser casa de personagem.** O personagem está num crédito só.
+  2. Alemão provável.
+
+### FICHA 6: **Abraham Cózar**, *Founder*, **CHIBIG** (Valência, **Espanha**) — `abraham@chibig.com` — **ALTA (PUBLICADO no catálogo oficial *Games from Spain - Who is Who 2024* do ICEX)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.icex.es/content/dam/icex/asset-generales/documentos/agenda-icex/documentos-apoyo-actividades/guia-games-from-spain-2024.pdf` (**200, 36.640.922 bytes, 127 páginas**), p. 21: *"Chibig creates cozy and friendly games for everyone since 2017"* … *"CONTACT ABRAHAM COZAR Founder abraham@chibig.com"*, com a anotação `mailto:abraham@chibig.com`. `https://chibig.com/`, `https://chibig.com/project/bels-fanfare/`, `https://chibig.com/bels-fanfare-summer-gamedev-recap-update/` (09/09/2026) e `https://chibig.com/contact/` (só `info@` e `support@`).
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Fundador de casa indie: é quem decide. É o único nome publicado.
+- **GANCHO, com a frase da casa entre aspas** (`/project/bels-fanfare/`): *"Bel's Fanfare is an immersive RPG with exploration and combat inspired by the Zelda 3D classics."* E no diário de 09/09: *"We also worked very, very hard on character animations and environments"*. Na home: *"Our games are created putting the artistic value first."*
+- **3D DE PERSONAGEM: PROVADO** (RPG 3D estilizado em produção, com personagens, na página da casa; *Mika and the Witch's Mountain* e *Summer in Mara* são da mesma linha).
+- **FORA DOS EUA? SIM**, Espanha. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `chibig OR Cozar OR "Cózar" in:anywhere` → **uma thread, só enviada**: carta fria para `info@chibig.com` em **02/09** e follow-up em **07/09**, **zero resposta**. No repositório: `abraham@chibig.com` e `Cozar` = **0**. **Primeira carta a uma pessoa da casa.**
+- **RESSALVAS HONESTAS:**
+  1. **O catálogo é de 2024** (o de 2025 dá 404). Fundador não costuma mudar de casa.
+  2. **Estúdio indie com jogo em Kickstarter**: verba curta e contratação por projeto.
+  3. A casa já recebeu duas cartas genéricas sem resposta. **Não mandar antes de uma semana do follow-up**, o que já passou.
+
+### FICHA 7 (`sem-email`): **Dirk Mauche**, *Head of Assets*, **STUDIO ISAR ANIMATION** (Munique, grupo Studio 100, **Alemanha**)
+
+- **URLs abertas por mim nesta rodada:** `https://www.isaranimation.com/en/team/` (**200, 29.961 bytes**): *"Dirk Mauche Head of Assets"*, e também *"Florian Wittmann CG Supervisor/Pipeline TD"* e *"Laura Langhammer Head of Studio"*. `https://www.isaranimation.com/en/about-us/`: *"From our CGI studio in Munich"*, e *"Character Design"* e *"Modeling, Groom, Environments, Lookdev, Lighting, FX"* nos serviços. `/en/contact/` e `/en/jobs/`: só `info@` e `jobs@`.
+- **SEM E-MAIL, NADA MONTADO.** A busca pelo domínio devolveu só as páginas da casa e agregador pago de contato, que não uso.
+- **POR QUE ELE:** é o chefe do departamento em que o Vini entraria, numa casa que escreve *Groom* nos serviços.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `isaranimation OR "Studio Isar" OR Mauche in:anywhere` → carta fria para `info@` em **27/08** e follow-up em **02/09**, **zero resposta**.
+- **RESSALVA:** sem porta pessoal; se o maestro quiser insistir na casa, a única porta publicada que ainda não foi usada é `jobs@isaranimation.com` (caixa funcional, vista em `/en/jobs/`).
