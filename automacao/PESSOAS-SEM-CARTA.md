@@ -18113,3 +18113,103 @@ a leitura de disciplina tem de vir antes do endereço.
   2. **Disciplina 3D não provada** (acima).
   3. **Zero vaga aberta** na API da casa hoje.
   4. A produção pode estar em Délhi ou Pequim, e não em Vancouver; a Telefilm só diz BC.
+
+## RODADA DAS 01h35 UTC DE 24/09 (Joe) — **A TELEFILM TEM UM SEGUNDO DIRETÓRIO QUE NINGUÉM TINHA ABERTO: `producers` (1.401 produtores, 123 marcados `animation`), e o de empresas não tem 100 casas de animação, tem 348.** Quatro fichas, as quatro com endereço PUBLICADO pela Telefilm e confiança ALTA, zero montado, todas no Canadá. **Nórdicos, Holanda e Reino Unido deram ZERO ficha de novo**, e desta vez com cinco fontes novas medidas (lista abaixo). **Aviso honesto de qualidade: nenhuma das quatro é uma casa forte de personagem 3D.** A melhor por disciplina é a New Machine (produtora executiva de um longa 3D), e a mais fraca é a Lofty Sky (o 3D não aparece escrito em nenhuma página que eu abri)
+
+**Placar: 4 fichas ALTA, 0 montado, 0 `sem-email`, 0 rascunho, 0 carta.** Quarta-feira, ritmo controlado.
+
+**COMO A VEIA NOVA FUNCIONA, para repetir:**
+1. `https://rdvcanada.ca/wp-json/wp/v2/types` lista os tipos do site: além de `companies` existe **`producers`**, que nenhuma rodada tinha lido (`grep "directories/producers"` = 0 no repositório antes de hoje).
+2. `.../wp-json/wp/v2/companies?per_page=100&page=N&_fields=slug,class_list,content` pagina as **1.318 empresas inteiras** (14 páginas, `x-wp-total: 1318`). O filtro certo não é `search=animation` (que para em 100), é a classe **`companies_sector-animation`** dentro de `class_list`: **348 casas**.
+3. `.../wp-json/wp/v2/producers?per_page=100&page=N&_fields=slug,class_list,yoast_head_json.description` dá os **1.401 produtores**; a descrição Yoast traz *"<nome> from <empresa>"* e a classe **`producers_kinds-animation`** marca 123 deles. A ficha (`/en/directories/producers/<slug>/`) publica **e-mail direto** e, no rodapé, um bloco **"Similar profiles"** com o e-mail de mais quatro produtores.
+4. **A Sucuri corta o `curl` depois de uns 12 GETs seguidos** (307 de desafio ou 403). **Não burlei.** A API em JSON passou quase toda; as fichas HTML seguiram pela ferramenta de página (WebFetch), como na rodada de 23/09.
+
+**FONTES NOVAS PARA NÓRDICOS, HOLANDA E REINO UNIDO, medidas hoje, e todas deram ZERO ficha:**
+- **JobTech da Suécia** (`jobsearch.api.jobtechdev.se` e `historical.api.jobtechdev.se`), o Platsbanken oficial, que ninguém tinha lido: anúncio vivo traz `application_contacts` com nome e e-mail, **o histórico apaga o contato** (1.102 anúncios do grupo *Designer inom spel och digitala medier* desde 06/2024, zero contato). Nos vivos (14 buscas), as únicas casas de jogo com pessoa são **ELK Studios** (`louise.helin@elk-studios.com`, *2D Game Artist*) e **Hacksaw Studios**, as duas de **cassino online**. Fora do escopo.
+- **Screen Producers Ireland** (`screenproducersireland.com/directory`, 251 fichas, cada uma com **nome do contato e e-mail**): só 17 marcam *Animation*, são produtoras, e nenhuma é casa de personagem 3D (Paper Owl já tem pessoa; Lighthouse Studios é 2D).
+- **Pact** (Reino Unido, `find-a-member`): 63 casas de *Children's Animation*, mas a ficha pública **não tem e-mail** (só endereço e telefone).
+- **gamescom** (`exhibitors.gamescom.global`): *"Log in for contact details"*. Fechado sem login.
+- **4RFV** (diretório britânico de broadcast, categoria *Animation - 3D Computer Generated*): vídeo corporativo e arquitetura.
+- Domínios de casas médias varridos com decodificação de `data-cfemail` e entidade HTML (**115 domínios**, entre eles Dlala, Magic Notion, Brightrock, Lab42, Silent Games, Dream Harvest, Steel City, Tag, Denki, Ripstone, Image & Form, Lionbite, Metacore, Traplight, Myrkur, Lucid, Once Were Farmers, Ferly, Ape Film, Tonic, Th1ng, A Large Evil Corporation, Glassworks, Nvizible, Ghost VFX, Duckling, CAOZ, RVX, Picasso, Hornet, Coffee & TV, Lola Post, Jelly, PostPanic, Planet Nemo, Dream Wall, Belvision, Nozon, Tuffi, Fisher King, Radiator, Parabel, Cyborn, Gimpville, Zoink, Liquid Swords, Frictional, Red Thread, Kong Orange, Ragesquid, Playtonic, Radical Forge, Coatsink, Hello Games, Glowmade, Wushu): **só caixa funcional**, ou pessoa de vendas sem sobrenome (`tim@hellogames.co.uk`, *Business / Press*; `rob@lola-post.com`, *New Business*).
+
+**A ÚNICA PESSOA NÓRDICA NOVA COM ENDEREÇO PUBLICADO, e por que não virou ficha:** **Chimney** (Estocolmo) publica na `https://www.chimney.se/contact` seis nomes com e-mail (*CO-PRODUCTION Fredrik Zander*, *ADVERTISING Freddy Forelius / Henric Larsson*, *SCRIPTED Pia Åstrand / Joakim Dahl*, *AI-STUDIO Giulio Musi*), e a `/talent` escreve *"Henric Larsson HEAD OF PRODUCTION"* (a `/news` o chama de CEO). **Mas a casa é pós-produção** (*"exceptional, cost-effective post-production"*), com sete pessoas de VFX, som, cor e montagem, uma frente nova de IA e fusão anunciada com a One Post. Nada de personagem nem criatura em página que eu abri. Gmail `{}` para `chimney.se`, `chimney`, `Henric Larsson`. Fica aqui, com o endereço, para o maestro decidir; eu não gastaria carta.
+
+**DESCARTADAS NESTA RODADA, para ninguém reabrir:**
+- **Zoot Pictures** (Winnipeg; `leslea@zootpictures.com`, `leif@`, `orlando@`): o 3D é real (*Chums*, série pré-escolar em CG, pela Animation Magazine), mas o estúdio nasceu como projeto de mentoria indígena com equipe local de Saskatchewan e Manitoba, e o site dá **468** (bloqueio de robô) para `curl` e para a ferramenta de página. Reserva fraca.
+- **That Animation Company** (Halifax; `lchadwick@`, `scooke@`): a `/services` vende animação médica (*"Mode of Action (MOA) Animation"*) e visualização aérea.
+- **Studios Vox Populi** (3D de caricatura, *Ici Laflaque*): o contato do CEO é um `@me.com` pessoal. Não registro.
+- **Sardine Productions** virou **Sphere Media**; **Yeti Farm** virou **Artists Animation** (2D Harmony, já contatada em 01/09); o domínio da **Awesometown** não é mais dela; **Gasolina Studios** é 2D e contrata em Monterrey; **Good fish** e **Chrystelle Maechler** publicam Gmail; **See Creature** é stop-motion; **Couleur.tv** é 2D e VR; **Imagine Create** (Vancouver, *The Labradoodles* em desenvolvimento) não publica e-mail na ficha.
+- **Rodeo FX Animation** (Marie-Cécile Dahan) e **Thunderbird Entertainment** (`nhuynh@thunderbird.tv`, grupo da Atomic Cartoons): as duas casas já estão no teto de duas pessoas, e a Mikros (Rodeo) já recusou.
+- **Storm Studios**, **Mikrofilm**, **Gutsy** e **M2**: já mineradas ou no teto.
+
+### FICHA 1 — **Colin Curwen**, *Executive Producer* (e o nome à frente da casa), **NEW MACHINE STUDIOS** (Saturna, BC, pela Telefilm; Calgary, AB, pelo painel; **Canadá**) — `colin@newmachinestudios.com` — **ALTA (PUBLICADO pela Telefilm Canada)** — **a melhor da rodada por disciplina**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/producers/colin-curwen/` (**200, 221.782 bytes** por `curl`): *"Colin Curwen | New Machine Studios | Saturna, British Columbia"*, `mailto:colin@newmachinestudios.com`, *"Sector of activity | Animation"*, em desenvolvimento *"In the Shadow of the Sequoia | Caleb Hystad | Animation"* e *"Fat'N'Harry | Colin Curwen | Animation"*, concluído *"Sunburnt Unicorn | Nick Johnson | Animation | English | Year: 2024 | Running time: 81"*. O mesmo endereço volta no bloco *"Similar profiles"* da própria página.
+  `https://www.sunburntunicornfilm.com/productionteam` (**200, 30.727 bytes**): *"colin curwen executive producer (New machine studios)"* e *"scott ormsby character modeler"*.
+  `https://www.newmachinestudios.com/` (**200, 1.036 bytes**): só *"...will be back. We're making a new site so watch these floating bubbles for now."*; `/about`, `/team`, `/careers`, `/contact` e `/work` dão **404**.
+- **NADA MONTADO.** Endereço escrito pela Telefilm, domínio igual ao do site.
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** É a única pessoa publicada da casa em qualquer fonte que eu abri, e ele assina a produção executiva do longa e dirige um dos dois projetos de animação em desenvolvimento. Casa minúscula: o BRIEF-JOE manda ir em quem decide.
+- **GANCHO, com a frase da própria casa entre aspas** (`sunburntunicornfilm.com/productionteam`): *"Created in Alberta and British Columbia Canada, this feature length, 3D animated film was produced by NICK JOHNSON in association with SQUID BRAIN STUDIOS and NEW MACHINE STUDIOS"*. E na Telefilm: *"Fat'N'Harry | Colin Curwen | Animation"* e *"In the Shadow of the Sequoia | Caleb Hystad | Animation"*, os dois em desenvolvimento.
+- **3D DE PERSONAGEM NA CASA:** longa 3D de personagem (*Sunburnt Unicorn*, Annecy 2024, Contrechamp) com modelador de personagem creditado. **Dentro da disciplina**, e com dois longas de animação por fazer.
+- **FORA DOS EUA? SIM**, Canadá. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `newmachinestudios OR "New Machine Studios" OR Curwen OR "Sunburnt Unicorn"` → **`{}`**; `(zoot OR "lofty" OR mystic OR kaibou OR "new machine") in:anywhere` → **`{}`**. No repositório: `newmachinestudios` e `Curwen` = **0** em `pessoas.csv`, `enviados.csv` e `processados.csv`. O `docs/index.html` tem a casa desde 08/09 como *"SITE FORA DO AR ... sem conteúdo nem formulário"*, e o `canada-reabertos-07-09.csv` a marca `VAZIO_OU_JS`. **Primeira pessoa e primeira carta da casa: a Telefilm abre uma porta que o painel dava como fechada.**
+- **RESSALVAS HONESTAS:**
+  1. **Site fora do ar há pelo menos 16 dias.** A prova de vida é a ficha da Telefilm com dois projetos em desenvolvimento, não o site.
+  2. **Quem fez o 3D do longa pode ter sido a Squid Brain Studios**, parceira do diretor. A New Machine assina produção executiva e distribuição (a NMS Releasing, do mesmo Colin, vende o filme).
+  3. **Local incerto:** Saturna (ilha no sul da BC, pela Telefilm) contra Calgary (pelo painel). Não é Vancouver.
+  4. Casa pequena, demanda por projeto: a carta deve oferecer contrato e personagem para *Fat'N'Harry* e *Sequoia*, não pedir vaga.
+
+### FICHA 2 — **Ashkan Rahgozar**, *Director* (fundador e CEO da Hoorakhsh Studios, de Teerã, parceira da casa), **MYSTIC HOUSE ANIMATION** (Thornhill, Toronto, ON, **Canadá**) — `ashkan@mystichouse.ca` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/mystic-house-production/` (**200, 216.537 bytes** por `curl`, antes do corte da Sucuri): *"Mystic House Production is an animation studio providing a wide range of services from animated series, shorts and features, to music-videos and ads in a high-quality scale. We welcome any co-production and service collaborations."*, `mailto:business@mystichouse.ca`, `mailto:ashkan@mystichouse.ca`, e o bloco *"Ashkan Rahgozar | Director | +49 ..."* (telefone alemão, não registro o número).
+  `https://rdvcanada.ca/en/directories/producers/arman-rahgozar/` (ferramenta de página): o outro sócio publica só `Business@mystichouse.ca`.
+  `https://mystichouse.ca/about/` (**200, 13.044 bytes**), `https://mystichouse.ca/production/` (**200, 13.433 bytes**) e `https://mystichouse.ca/contact/` (**200, 13.186 bytes**; o e-mail está em `data-cfemail`, decodificado: `business@mystichouse.ca`).
+  `https://en.wikipedia.org/wiki/Ashkan_Rahgozar` (**200**) e `https://www.annecyfestival.com/about/archives/2021/2021-programme/2021-index:proj-20217055` (**200**).
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** É o diretor e o criador dos longas, e é o único publicado com endereço próprio (o Arman só tem a caixa `business@`). Casa pequena: vai-se em quem decide.
+- **GANCHO, com a frase da própria casa entre aspas** (`/about/`): *"Welcome to Mystic House Animation, a premier 2D and 3D animation studio based in Toronto. Our passion lies in creating original content that delights children and families around the world."* e *"In recent years, we've proudly co-produced various animation series and films in collaboration with our respected European partners."* A `/production/` lista, entre outros, *MOONBOUND*, *DIE MUKLAS* e *TAFITI*, que pelo que se sabe são longas alemães em CG (não abri página que diga isso nem que diga qual parte a casa fez).
+- **3D DE PERSONAGEM NA CASA: DECLARADO, NÃO PROVADO NOS PROJETOS PRÓPRIOS.** A casa se diz *"2D and 3D"*, mas o longa dela, *The Dragon's Treasure*, está no Annecy como *"Techniques used: 2D computer"*, e a Wikipédia diz que a Hoorakhsh *"produces 2D"*. O 3D, se existir, está no serviço para os parceiros europeus.
+- **FORA DOS EUA? SIM**, Toronto. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `mystichouse OR "Mystic House" OR Rahgozar` → **`{}`**. No repositório: `mystichouse` e `Rahgozar` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv`, `docs/index.html` e aqui. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **A produção pesada é da Hoorakhsh, em Teerã**; Toronto parece ser a ponte de coprodução. Uma vaga em Toronto não está provada.
+  2. **O diretor tem telefone alemão** na própria ficha: ele pode estar na Europa, não no Canadá.
+  3. **3D não provado** nos projetos próprios (acima).
+  4. Zero vaga ou página de carreiras (`/careers` e `/team` dão 404).
+
+### FICHA 3 — **Brice Garnier**, *CEO*, **KAÏBOU PRODUCTION** (Montréal, QC, **Canadá**) — `bgarnier@kaibouproduction.ca` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/kaibou-production/` (**200, 51.691 bytes** por `curl`): *"Kaïbou Production is specialized in two spheres of activity : the production and co-production of feature-length animation and the production services of feature films and tv series (animation, VFX, live action)."*, e o bloco *"Brice Garnier | CEO | ... | Email"*, *"Anne Pagès | Line Producer"*, *"Léa Drainville-Mongeau | Projects Coordinator"*, com `mailto:bgarnier@kaibouproduction.ca`, `apages@` e `ldmongeau@`. Produções: *"Pachamama | Juan Antin | ... | 2018 | 70"* e *"April and the Extraordinary World | ... | 2015 | 105"*.
+  `https://kaibouproduction.ca/` — **`curl` com conexão resetada cinco vezes e 503 pela ferramenta de página.** Não consegui abrir o site.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** CEO de casa pequena; os outros dois publicados são produção de linha e coordenação. A ficha de produtores da Telefilm também o traz, com **MIFA de 2020 a 2026** seguidos: é quem vai ao mercado buscar serviço.
+- **GANCHO, com a frase da própria casa entre aspas** (Telefilm): *"the production services of feature films and tv series (animation, VFX, live action)"*. O crédito de *Pachamama* (2018) é o gancho mais concreto.
+- **3D DE PERSONAGEM NA CASA: POSSÍVEL, NÃO PROVADO.** *Pachamama* é, pelo que se sabe, CG (não abri página que diga), *April* é 2D, e a casa vende serviço de animação e VFX sem dizer a técnica.
+- **FORA DOS EUA? SIM**, Montréal. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `kaibouproduction OR "Kaïbou" OR Kaibou OR "Brice Garnier"` → **`{}`**. No repositório: `kaibou` = **0** em todos os arquivos; `Garnier` só casa com outras pessoas (fichas antigas de outras casas), nunca com ele. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Site fora do ar hoje** (reset e 503). A prova de vida é a ficha da Telefilm, que mostra MIFA 2026.
+  2. **Casa de serviço de produção**, possivelmente sem equipe fixa de arte; a demanda é por projeto.
+  3. Montréal: o francês pode pesar.
+  4. Disciplina 3D não provada (acima).
+
+### FICHA 4 — **Jason Loftus**, *CEO & Executive Producer*, **LOFTY SKY ENTERTAINMENT** (Toronto, ON, **Canadá**) — `jasonl@loftysky.com` — **ALTA (PUBLICADO pela Telefilm Canada)** — **a mais fraca das quatro por disciplina**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/producers/jason-loftus/` (ferramenta de página; o `curl` recebeu **403** da Sucuri, que eu não burlei). Pedi à ferramenta a lista literal de `mailto:` e ela devolveu **`jasonl@loftysky.com` — Jason Loftus, Lofty Sky Entertainment**; em desenvolvimento *"Shanghai Ballade (Animation, English/Mandarin) — Budget: $2.5M-$5M"*.
+  `https://rdvcanada.ca/en/directories/companies/lofty-sky-entertainment/` (**200, 219.284 bytes** por `curl`): *"Lofty Sky is an innovative film, television, and digital media production company. Based in Toronto, Canada, the studio is led by Peabody Award-winning filmmaker Jason Loftus"*; o contato da empresa é `marketing@loftysky.com` (Judith Cheung, *Creative and Marketing Director*).
+  `https://loftysky.com/team/` (**200, 14.150 bytes**): *"Jason Loftus CEO & Executive Producer"*. `https://loftysky.com/` (**200**), `https://loftysky.com/work/` (**200**), `https://loftysky.com/projects/sky-of-tides/` (**200**), `/projects/sky-of-tides-atla/` (**200**) e `/projects/eternal-spring/` (**200**). O site publica só `hello@loftysky.com`.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Casa pequena dirigida por ele; a outra pessoa publicada é marketing.
+- **GANCHO, com a frase da própria casa entre aspas** (`/team/`): *"We produce documentaries, series, games, virtual reality, children's entertainment, and animation that entertain, educate, and inspire."* Na `/projects/sky-of-tides-atla/`: *"For a limited time, our original animated series is available exclusively inside the Sky of Tides game!"* Na home: *"Eternal Spring Feature-length animated documentary (and accompanying VR short film). Canada's Official Oscar® Entry for 2023."*
+- **3D DE PERSONAGEM NA CASA: NÃO PROVADO.** Animação, jogo narrativo e VR, sim; a palavra 3D não aparece em página que eu abri. *Sky of Tides* é *"Narrative Sci-fi Visual Novel"*.
+- **FORA DOS EUA? SIM**, Toronto. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `loftysky OR "Lofty Sky" OR Loftus` → **`{}`**. No repositório: `loftysky` e `Loftus` = **0** em todos os arquivos. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **O catálogo é metade documentário** (*Ask No Questions*, *Confucius Was A Foodie*).
+  2. **3D não provado** (acima); o que pede artista de personagem é *Shanghai Ballade*, ainda em desenvolvimento.
+  3. **O endereço veio pela ferramenta de página, não por `curl`**: a Sucuri cortou. Pedi a lista literal duas vezes e as duas trouxeram o mesmo `jasonl@loftysky.com`.
+  4. Os temas da casa são sensíveis (perseguição religiosa na China). A carta fala de personagem, e só.
