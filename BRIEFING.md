@@ -8928,3 +8928,14 @@ Palavras dele: *"vc que decide os valores. n sou eu. vc fez um calculo com base 
 - Estudio grande ou fotorreal de VFX pode ouvir 400. Estudio de 2 a 5 pessoas pode ouvir 300 se a conversa pedir.
 - Ja usada em 23/09 com Christophe Petit (The Beast Makers, pelo LinkedIn, enviado pelo Vini), Dovydas (Animatrix) e Ulrich (Digital CyberCherries).
 - Isso vale para contrato e diaria. Para vaga fixa segue a politica salarial da linha 132.
+
+## ORDEM DO VINI, 24/09/2026 01h1x UTC: TERMO DE FORMULÁRIO NÃO VAI PARA A MÃO DELE
+
+Palavras dele: *"Eu n te dei essa regra de assinar termos juridicos em momento NENHUM. Eu disse sobre capitcha APENAS ... o humano sou eu e vc é como se fosse meu mouse"* e *"Register isso pra n me incomoda novamente"*.
+
+- A frase que dizia que NDA, assinatura eletrônica e declaração legal ficavam para o Vini foi escrita pelo maestro em 23/09, não por ele. Está REVOGADA (CLAUDE.md já corrigido).
+- Vale para todo agente (maestro, Jhon, Mágico, cacador): termo de envio de material (SUBMISSION RELEASE da Sony Pictures Animation e parecidos), aceite de política de privacidade, NDA de candidatura, declaração de veracidade e caixas de consentimento DENTRO do formulário são marcadas pela automação, e a candidatura segue sem chamar o Vini.
+- Resposta de fato continua sempre com a verdade: autorização de trabalho, anos de experiência e pretensão pela política.
+- Código de segurança por email (Greenhouse, Oracle): a automação lê no Gmail e usa. Não chama o Vini.
+- Só vai para o Vini a caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha), pela rota do clique do CLAUDE.md.
+- Os arquivos `ans_spa_*.json` e qualquer `ans_*.json` com nota "fica DESMARCADA para o Vini" estão superados por esta ordem.
