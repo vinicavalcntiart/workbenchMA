@@ -8956,3 +8956,11 @@ Correções, valendo para todo agente:
 3. Respostas pessoais dele ficam no arquivo pessoal fora do repositório (/home/user/apply/pessoal.json) e são reutilizadas sem perguntar de novo (autoidentificação EEO já guardada em 24/09).
 4. Portas com captcha vão numa leva só por dia, com tudo pronto; nada de mandar link solto que depende de ele estar online naquele minuto.
 5. Menos explicação, mais entrega: limite se diz em uma linha, e a mensagem segue com o que foi feito.
+
+## FLUXO FECHADO COM O VINI, 24/09/2026 ~15h3x UTC (vale para todo agente)
+
+Palavras dele: *"Esquece essa discussão de modo stealth ... Daqui pra frente, vamos focar só no que já está funcionando."*
+
+1. Navegador padrão da Kernel (stealth desligado, saída direta). O maestro e os agentes preenchem 100% dos dados da candidatura.
+2. Chegando no captcha ou no clique final de site desconfiado: a sessão fica aberta (timeout de 24h), o formulário fica salvo e conferido, e o link da tela ao vivo vai para o Vini, só no chat.
+3. No fim de cada lote o Vini entra, faz os captchas e envia tudo de uma vez; o maestro confere a confirmação do servidor, registra e fecha os navegadores.
