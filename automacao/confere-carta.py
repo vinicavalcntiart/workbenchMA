@@ -28,7 +28,7 @@ LIMITE_PALAVRAS = 250
 # Emoji por tipo de carta, tabela do briefing. (minimo, maximo)
 EMOJI = {
     'humana':   (1, 2),   # resposta calorosa a pessoa que escreveu
-    'fria':     (1, 2),   # carta fria para pessoa com NOME
+    'fria':     (2, 2),   # carta fria: DOIS, cobranca do Vini em 24/09 ('pouco emoji')
     'generica': (0, 1),   # caixa generica, 1 no fecho
     'recusa':   (0, 0),   # recusa e follow-up de silencio: emoji soa desdem
     'ats':      (0, 0),   # campo de formulario: ZERO
@@ -180,6 +180,21 @@ def confere(txt, html=None, tipo='fria', nome=''):
     elif len(set(re.findall(r'\b[A-Z][a-z]{3,}\b', txt))) < 8:
         avisos.append('a carta fala em "your studio" e cita poucos nomes proprios: '
                       'pode nao ter gancho real na casa.')
+
+    # ---- 9. NEGRITO E FRASE DO PORTFOLIO (cobranca do Vini em 24/09: "o email ta sem
+    # negritos e com pouco emoji". Os 16 envios das 16h03 de 24/09 sairam sem nenhum <b> e
+    # sem a frase fixa do portfolio, porque esta conferencia nao olhava nenhum dos dois.)
+    if tipo in ('fria', 'generica'):
+        if not re.search(r'more than 45 projects with over 60 characters', txt):
+            erros.append('FRASE DO PORTFOLIO AUSENTE (BRIEFING regra 9): "My portfolio holds '
+                         'more than 45 projects with over 60 characters ...".')
+        if html is not None:
+            nb = len(re.findall(r'<b>|<strong>', html, re.I))
+            if nb < 4:
+                erros.append('%d negrito(s) no htmlBody; o minimo e 4 (BRIEF-JOE, negrito '
+                             'estrategico). Gere o HTML com automacao/monta-html-carta.py.' % nb)
+            elif nb > 6:
+                erros.append('%d negritos no htmlBody; teto de 6.' % nb)
 
     return erros, avisos
 

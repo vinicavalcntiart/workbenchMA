@@ -8973,3 +8973,12 @@ Contexto: outra sessão do Claude criou hoje a branch `claude/festive-hypatia-bi
 - Os 61 scripts que chamavam `chromium.launch` cada um do seu jeito (cinco variantes, duas com o proxy local fixo) passaram a usar o helper. Todos passaram no `node --check`; `abrirLocal()` testado abrindo example.com.
 - `valida-dashboard.sh` ganhou a trava: commit não passa se algum script ligar stealth ou lançar o Chromium por fora do helper. Testada com um arquivo falso.
 - Item 2 do pedido (trazer Bluehole/KRAFTON, contatos do Joe e rota do Mielniczuk da outra branch): esses commits são de 12/09 e JÁ ESTÃO nesta branch, a outra nasceu em cima deles. Nada a trazer; os dois únicos commits novos de lá são os de stealth.
+
+## CARTAS SEM NEGRITO E COM POUCO EMOJI: COBRANÇA DO VINI, 24/09/2026 ~18h UTC
+
+Palavras dele: *"o email ta sem negritos e com pouco emoji"*. Ele tinha razão, e não só na carta da Lunar: os 16 envios do Apps Script das 16h03 de hoje (Chibig, Psyop, Ellipse, Unstandard, Mystic House, New Machine, Hoplite, Arcana, IOM, Bardel, Mainframe, Illogic, Cube, Herobeat, Recotech e mais um) saíram com ZERO negrito, sem a frase fixa do portfólio (regra 9) e com um só ☺️. Já foram, não dá para consertar. O motivo: o confere-carta.py não olhava nenhum dos três.
+
+Consertado na raiz:
+- `automacao/monta-html-carta.py carta.txt` gera o `carta.html` com o negrito fixo do BRIEF-JOE (anos de carreira, Wingfeather, E-Line Media, 45 projetos/60 personagens, "I am ready to move for the role", grooming in Houdini quando houver) e links com âncora limpa (`artstation.com/viniciuscavalcanti`).
+- `confere-carta.py` agora dá ERRO para carta fria sem a frase do portfólio, com menos de 4 ou mais de 6 negritos no HTML, e com menos de 2 emojis (☺️).
+- Fluxo de toda carta daqui pra frente: escreve o .txt → `monta-html-carta.py` → `confere-carta.py` (tem de dar "OK: o lote pode sair") → `create_draft` com body = .txt e htmlBody = .html.
