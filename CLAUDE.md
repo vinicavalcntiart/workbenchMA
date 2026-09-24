@@ -48,7 +48,9 @@ Juntar várias portas numa leva só (várias abas ou navegadores prontos), para 
 
 *"a gnt aplica pra dreamworks de todo jeito. lembra que disney, dreamworks, warner etc prioridade"*
 
-Vaga de arte em Disney (Disney Animation, Pixar, ILM, Lucasfilm, Marvel), DreamWorks/NBCUniversal, Warner Bros., Netflix, Sony Pictures Animation e casas desse porte: APLICA mesmo quando o anúncio puxa para 2D, vis dev ou algo vizinho de personagem 3D. Não descarta por "fora da disciplina". A regra de sem ambiente e sem props continua valendo. NDA, assinatura eletrônica e declaração legal dentro do formulário ficam para o próprio Vini clicar e assinar na tela ao vivo.
+Vaga de arte em Disney (Disney Animation, Pixar, ILM, Lucasfilm, Marvel), DreamWorks/NBCUniversal, Warner Bros., Netflix, Sony Pictures Animation e casas desse porte: APLICA mesmo quando o anúncio puxa para 2D, vis dev ou algo vizinho de personagem 3D. Não descarta por "fora da disciplina". A regra de sem ambiente e sem props continua valendo.
+
+**Termos do formulário (ordem do Vini, 24/09/2026):** *"Eu n te dei essa regra de assinar termos juridicos em momento NENHUM ... o humano sou eu e vc é como se fosse meu mouse"*. Termo de envio de material (SUBMISSION RELEASE da Sony e parecidos), aceite de política de privacidade, NDA de candidatura e declaração de veracidade dentro do formulário: o maestro marca e envia sozinho, sem chamar o Vini. Resposta de fato (anos de experiência, autorização de trabalho, pretensão) continua sempre com a verdade. Só a caixa "sou humano" (captcha) segue indo para o clique do Vini, pela rota do clique.
 
 ## Onde está o resto
 
