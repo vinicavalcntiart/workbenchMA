@@ -18213,3 +18213,63 @@ a leitura de disciplina tem de vir antes do endereço.
   2. **3D não provado** (acima); o que pede artista de personagem é *Shanghai Ballade*, ainda em desenvolvimento.
   3. **O endereço veio pela ferramenta de página, não por `curl`**: a Sucuri cortou. Pedi a lista literal duas vezes e as duas trouxeram o mesmo `jasonl@loftysky.com`.
   4. Os temas da casa são sensíveis (perseguição religiosa na China). A carta fala de personagem, e só.
+
+## RODADA DAS 05h35 UTC DE 24/09 (Joe): A TELEFILM ESTÁ ESGOTADA PARA 3D DE PERSONAGEM. **Duas fichas, as duas com endereço PUBLICADO e confiança ALTA, zero montado, zero `sem-email`, abaixo da meta de quatro.** As duas saíram da mesma página: o crédito de *Lydia and the Mist Rider*, longa 3D de 2026 da 10e Ave, que nomeia a Unstandard como segundo estúdio de animação
+
+**Placar: 2 fichas ALTA, 0 montado, 0 `sem-email`, 0 rascunho, 0 carta.** Quinta-feira, ritmo controlado.
+
+**POR QUE SÓ DUAS, com a conta na mão.** Reli os dados que a rodada da 01h35 guardou no scratchpad (`all_1..14.json` = 1.318 empresas, `anim.json` = 348 de animação, `prod_1..15.json` = 1.401 produtores) em vez de pedir tudo de novo, e a Sucuri já cortava o `curl` na primeira requisição (406 e 307); segui pela ferramenta de página, sem burlar.
+- Das 348 casas de animação, **só 12 escrevem 3D na descrição**, e só a 10e Ave e a L'Atelier são casa de longa 3D de personagem. Das 62 já vistas (SEEN), as de 3D estão no teto, já responderam, estão mortas ou foram descartadas por disciplina.
+- Das 970 empresas **sem** a classe de animação, filtrei por 3D/CG/VFX/animat/character: nenhuma casa de personagem 3D (só produtora de ficção, XR, pós-produção e compositor).
+- Dos 1.401 produtores, listei os 180 cuja empresa tem nome de estúdio: todos já vistos, de venda (WildBrain, Guru: só `sales@` e `productionservices@`), de ficção ou em Gmail/Yahoo.
+- **Creative BC e Ontario Creates** já estão medidas como zero no repositório (404 no diretório, e o sitemap da Ontario Creates só traz funcionários dela). `animvfxbc.ca` agora redireciona para `digibc.org`, que dá **403**. Não repeti.
+
+**DESCARTADAS NESTA RODADA, para ninguém reabrir:**
+- **nGenious Studio** (`ericgd@ngeniousstudio.com`, Eric Gervais-Desprès, President, publicado pela Telefilm): **foi comprada pela Tonic DNA em 2023** (Cartoon Brew e Animation Magazine) e o Eric virou head de R&D de lá. A Tonic está no teto de duas. O domínio dá 502 no túnel.
+- **Epic Story Media** (`ken.faier@epicstorymedia.com`, CEO): casa de franquia e licenciamento, sem estúdio; a home não escreve 3D nem CG.
+- **Titan1Studios** (`wes@titan1studios.com`, VP Content): home sem uma palavra de animação, 3D ou personagem.
+- **Yowza Animation** (`heatherw@`, `sallyw@`, `jessicad@yowzaanimation.ca`): a própria Telefilm diz *"classical animation, traditional 2D animation, and 2D/3D hybrid"*, classe `sector-2d`.
+- **PUNCH! Animation** (`jmongeau@punchanim.com`): nenhum 3D escrito. **Astronaught Media** e **Productions Toska**: só Gmail e Yahoo. **Salambo Productions** (`sparizeau@`, `mbeaudet@salamboproductions.com`): *Professeur Zarbi* é recorte 2D, e o site dá certificado autoassinado. **Studio Ishiwata** (`layth@studioishiwata.com`): estúdio de compositor.
+- **L'Atelier Animation**: a Telefilm publica `louis-philippe.vermette@latelieranimation.com` sem cargo, e a casa já teve o Benoit Blouin (19/09), a candidatura espontânea (17/09) e a segunda tentativa de 07/09. Não gasto a segunda vaga do teto num nome sem cargo.
+- **Jam Filled**: 3D provado (*"2D and 3D animation"*, hoje da Blue Ant), mas já teve **cinco** aproximações (duas cartas, follow-up, duas Expressions of Interest com resposta do `careers@`). O site só publica `contact@`.
+- **Studios Vox Populi**: o CEO só publica `@me.com`. **ICON Creative**: a Telefilm só repete o `carson@`, que já é ficha.
+- `animationdirectory.ca` (Canadian Animation Directory, **inédito no repositório**): a ficha tem só formulário, zero e-mail, e o site para em 2022. Não rende.
+
+### FICHA 1: **Nancy Florence Savard**, *President, Producer*, **10e AVE PRODUCTIONS / 10e AVE ANIMATION** (Saint-Augustin-de-Desmaures, Québec, QC, **Canadá**) — `nsavard@10ave.com` — **ALTA (PUBLICADO pela Telefilm Canada)**. **A melhor da rodada.**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/10th-ave-productions/` (ferramenta de página): *"Nancy Florence Savard - President, Producer - nsavard@10ave.com"*, e ainda `rangele@10ave.com` (Production Coordinator), `jgirard@10ave.com` (Production Assistant) e `productions@10ave.com`. Produções: *Lydia and the Mist Rider* (2026), *Katak, the Brave Beluga* (2023), *Félix and the Treasure of Morgäa* (2021).
+  `https://10ave.com/en/10th-ave-animation/`: *"3D creation and animation company for the production of feature films and TV series"*, serviços *"Character Design"*, *"Modeling"*, *"Texture"*, e a equipe (Jean-François Tremblay, Executive Producer; Yann Tremblay, Animation Director; **Rafaël Doray, CG Supervisor**; **Chantale Boudreau, Lead 3d texture artist**; Alexandre Melançon, Pipeline TD).
+  `https://10ave.com/en/katakbravebeluga/`: *"3D Animated feature film"*, com Nancy Florence Savard como produtora.
+  `https://10ave.com/en/lydia-and-the-mist-rider/`: *"3D Animated feature film"*, *"Animated Feature Film Completed (2026) 80 MINUTES"*, diretores *"Nancy Florence Savard, Emilie Rosas, and Philippe Arseneau Bussières"*, *"Animation Studios: 10e Ave Animation and Unstandard Studio"*.
+  `https://10ave.com/en/felix-and-the-treasure-of-morgaa/`: *"3D Animated feature film"*.
+  O `curl` no `10ave.com` leva **202 de 169 bytes** com refresh para `/.well-known/sgcaptcha/` (SiteGround, o mesmo que a rodada de 19/09 registrou). **Não burlei**: li pela ferramenta de página.
+- **NADA MONTADO.** Endereço escrito pela Telefilm, no mesmo domínio do site.
+- **POR QUE ELA E NÃO OUTRA PESSOA DA CASA.** Casa média de Québec: pelo BRIEF-JOE, o alvo é quem decide. Ela é presidente, produziu os três longas 3D e codirigiu o último. O **CG Supervisor Rafaël Doray** seria o alvo de arte ideal, mas **nenhum endereço dele está publicado**; fica guardado aqui para o dia em que a presidente encaminhar.
+- **GANCHO, com a frase da própria casa entre aspas** (`10ave.com/en/10th-ave-animation/`): *"3D creation and animation company for the production of feature films and TV series"*. E *Lydia and the Mist Rider*, longa 3D lançado em 20/02/2026 e codirigido por ela, é o gancho mais concreto; *Katak* passou de 1,5 milhão de dólares de bilheteria (página do filme).
+- **3D DE PERSONAGEM NA CASA: PROVADO** em página própria: três longas *"3D Animated feature film"* com personagem (Katak, Félix, Lydia) e *"Character Design"* e *"Modeling"* escritos na página da divisão.
+- **FORA DOS EUA? SIM**, Québec. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `search_threads` em `10ave.com OR Savard OR "10th Ave" OR "10e Ave" OR Katak` → **uma thread só**, enviada: a carta fria para `talent@10ave.com` em **26/08** e o follow-up em **02/09**, **zero resposta**. `(nsavard OR "Nancy Florence" OR from:10ave.com) in:anywhere` → **`{}`**. No repositório: `Savard` e `nsavard` = **0** em `pessoas.csv`; o painel e o `enviados.csv` têm só a carta do `talent@`. As rodadas de 19/09 já tinham escolhido a Nancy como alvo, mas só tinham `productions@10ave.com`, e a seguraram **até 26/09** pelo ritmo de lembrete.
+- **RESSALVAS HONESTAS:**
+  1. **Segurar até 26/09**, como as rodadas de 19/09 decidiram: a casa já teve carta e lembrete na caixa genérica. O que muda hoje é que agora existe o endereço **direto** dela.
+  2. **Francês pesa**: casa de Québec, lançamentos em francês primeiro.
+  3. Nenhuma página de vaga ou de carreira no site (a rodada de 19/09 já registrou isso); a demanda é por longa.
+  4. A casa escreve *"10th Ave does not accept any unsolicited projects"*. Isso é sobre projeto de roteiro, não sobre currículo, mas a carta não pode soar como proposta de projeto.
+
+### FICHA 2: **Eddy Georges**, *Co-Founder*, **UNSTANDARD STUDIO** (Québec, QC, **Canadá**; a Telefilm marca Alberta, o site e o telefone 418 dizem Québec) — `eddy@unstandardstudio.com` — **ALTA (PUBLICADO pela Telefilm Canada)**
+
+- **URLs abertas por mim nesta rodada:**
+  `https://rdvcanada.ca/en/directories/companies/unstandard-studio/` (ferramenta de página): *"Eddy Georges (Co-Founder): eddy@unstandardstudio.com"*, e `andrew@unstandardstudio.com` (Andrew Cyr-Marcoux, *Director of Photography*). Descrição: *"Unstandard Studio is a 3D animation studio based in Quebec, specializing in immersive virtual reality (VR) experiences, stylized short films and visual effects (VFX)."*
+  `https://www.unstandardstudio.com/en` (**curl 200, 944.063 bytes**, Wix): título *"Unstandard Studio | Studio Animation 3D Québec"*, curtas *"THE LOST ECHO Status: Coming soon Format: 3D Animation"*, *"DEATH ONCE WALTZED Status: In production Format: 3D Animation"*, *"PLAYGROUND Status: In development Format: 3D Animation"*; endereço *"3333 Carrefour Street A291"*; o site só publica `info@unstandardstudio.com`. `/about`, `/contact`, `/team` e `/services` dão 404.
+  `https://10ave.com/en/lydia-and-the-mist-rider/`: *"Animation Studios: 10e Ave Animation and Unstandard Studio"*, num *"3D Animated feature film"* de 2026.
+- **NADA MONTADO.**
+- **POR QUE ELE E NÃO OUTRA PESSOA DA CASA.** Casa minúscula: vai-se no fundador. O outro nome publicado é diretor de fotografia.
+- **GANCHO, com a frase da própria casa entre aspas** (Telefilm): *"a 3D animation studio based in Quebec, specializing in ... stylized short films"*. E o crédito de estúdio de animação em *Lydia and the Mist Rider* (página da 10e Ave), que é a prova de personagem.
+- **3D DE PERSONAGEM NA CASA: PROVADO, mas por página de TERCEIRO.** A própria casa escreve 3D e *"stylized"*; o personagem aparece no crédito de animação de um longa 3D de personagem, na página da 10e Ave. Na página dela o que aparece é curta 3D, publicidade e videoclipe.
+- **FORA DOS EUA? SIM**, Québec. **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `(unstandardstudio OR "Unstandard" OR "Eddy Georges" OR Cyr-Marcoux) in:anywhere` → **`{}`**. No repositório: `unstandard` = **0** em `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html`. **CASA INÉDITA.** A rodada da 01h35 a tinha descartado numa linha (*"casa minúscula e só em francês"*), **sem ter visto o crédito do longa**, que é o que muda a ficha.
+- **RESSALVAS HONESTAS:**
+  1. **Casa minúscula**, e o portfólio do site é quase todo publicidade e videoclipe.
+  2. **Só em francês** no site; em Québec.
+  3. **Não mandar no mesmo dia da 10e Ave**: as duas casas dividem o mesmo longa, e duas cartas iguais chegando juntas às duas pontas de um projeto soam como disparo em massa.
+  4. Localização conflitante (Alberta na Telefilm, Québec no site).
