@@ -196,6 +196,12 @@ def confere(txt, html=None, tipo='fria', nome=''):
             elif nb > 6:
                 erros.append('%d negritos no htmlBody; teto de 6.' % nb)
 
+    # ---- 10. EMOJI REPETIDO (Vini, 24/09: "vc repetiu o msm emoji, ficou estranho, humanos
+    # n escrevem assim"). Dois emojis na carta = dois DIFERENTES, o par dele e ☺️ e 😊.
+    usados = re.findall(r'\u263a\ufe0f?|\U0001F60A', txt)
+    if len(usados) >= 2 and len(set(u.rstrip('\ufe0f') for u in usados)) < len(usados):
+        erros.append('EMOJI REPETIDO: %s. Use o par do Vini, um ☺️ e um 😊.' % ' '.join(usados))
+
     return erros, avisos
 
 

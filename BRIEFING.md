@@ -8982,3 +8982,4 @@ Consertado na raiz:
 - `automacao/monta-html-carta.py carta.txt` gera o `carta.html` com o negrito fixo do BRIEF-JOE (anos de carreira, Wingfeather, E-Line Media, 45 projetos/60 personagens, "I am ready to move for the role", grooming in Houdini quando houver) e links com âncora limpa (`artstation.com/viniciuscavalcanti`).
 - `confere-carta.py` agora dá ERRO para carta fria sem a frase do portfólio, com menos de 4 ou mais de 6 negritos no HTML, e com menos de 2 emojis (☺️).
 - Fluxo de toda carta daqui pra frente: escreve o .txt → `monta-html-carta.py` → `confere-carta.py` (tem de dar "OK: o lote pode sair") → `create_draft` com body = .txt e htmlBody = .html.
+- Adendo minutos depois, também do Vini: *"vc repetiu o msm emoji, ficou estranho, humanos n escrevem assim"*. Dois emojis são dois DIFERENTES: um ☺️ e um 😊 (o par que ele pediu em 10/09). O confere-carta.py agora dá ERRO para emoji repetido. Isso substitui a linha de 18/09 que dizia "nunca 😊".
