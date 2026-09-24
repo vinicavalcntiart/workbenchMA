@@ -8939,3 +8939,4 @@ Palavras dele: *"Eu n te dei essa regra de assinar termos juridicos em momento N
 - Código de segurança por email (Greenhouse, Oracle): a automação lê no Gmail e usa. Não chama o Vini.
 - Só vai para o Vini a caixa "sou humano" (Turnstile, reCAPTCHA, hCaptcha), pela rota do clique do CLAUDE.md.
 - Os arquivos `ans_spa_*.json` e qualquer `ans_*.json` com nota "fica DESMARCADA para o Vini" estão superados por esta ordem.
+- **Anos de experiência em animação (resposta do Vini, 24/09 01h2x UTC: "Msm experiência de jogos"):** a mesma faixa da experiência profissional total. Em lista de faixas, marcar a maior que caiba em mais de dez anos (ex.: `7+` na Sony Pictures Animation). Não chamar o Vini para essa pergunta.
