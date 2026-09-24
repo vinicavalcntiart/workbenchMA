@@ -3,11 +3,11 @@
 // Jobvite) e quase sempre significa uma de duas coisas: o formulario vive num IFRAME, ou o
 // SPA ainda nao tinha montado quando a leitura aconteceu. Este script separa as duas.
 // Uso: sh hb_run.sh sr_one.js <url> <slug>
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel');
 const [URL,SLUG]=process.argv.slice(2);
 const log=(...a)=>console.log('['+SLUG+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'sr_one',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1300,height:2400},acceptDownloads:true,
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'})).newPage();
  p.on('response',r=>{ const u=r.url(); if(/api|graphql|oneclick|publication/i.test(u) && r.status()>=400) log('RESP', r.status(), u.slice(0,140)); });

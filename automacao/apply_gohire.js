@@ -11,7 +11,7 @@
 //    invisiveis do tradutor do Google, entao escolher frame "pelo que tem mais campos" cai
 //    neles. O criterio certo e o ENDERECO do frame.
 // 4. Nenhum captcha no DOM depois do clique. Mas quem da veredito e o clique no Submit.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const [url,slug,coverFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const D=__dirname;
 const TEL=process.env.VINI_TEL;
@@ -23,7 +23,7 @@ const carta=fs.readFileSync(coverFile,'utf8').trim();
 const log=(...a)=>console.log('['+slug+']',...a);
 
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'apply_gohire',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const ctx=await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2200},acceptDownloads:true,locale:'en-US',
   userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'});
  const p=await ctx.newPage();

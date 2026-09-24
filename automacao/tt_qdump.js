@@ -3,10 +3,10 @@
 // sem o tipo nao da para escrever o ansq_*.json sem adivinhar (e adivinhar tipo choice ja
 // marcou "Yes" sozinho em campo de elegibilidade uma vez).
 // Uso: sh hb_run.sh tt_qdump.js <url>
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel');
 const url=process.argv[2];
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'tt_qdump',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2400},
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'})).newPage();
  await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'}); await p.waitForTimeout(4000);

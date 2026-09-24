@@ -9,7 +9,7 @@
 // ALEATORIOS POR SESSAO (input-yCcsXfwX, input-yAcsXfwV...). Preencher por name e impossivel:
 // o que serve para a proxima vaga e casar pelo TEXTO DO ROTULO. Por isso o arquivo de
 // respostas deste ATS e uma lista de pares [regex do rotulo, resposta].
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const [url,slug,ansFile,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname+'/';
 const log=(...a)=>console.log('['+slug+']',...a);
@@ -28,7 +28,7 @@ const dump=async(p,tag)=>{
   if(err.length){ log('=== VALIDACAO ('+tag+') ==='); err.forEach(e=>log('   !',e)); }
   return c; };
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'apply_jobvite',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2600},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-GB'})).newPage();
  try{
   await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'});

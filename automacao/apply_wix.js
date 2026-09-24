@@ -7,12 +7,12 @@
 //    curriculo e qual e a carta so se sabe pelo texto da SECAO em volta. Foi exatamente a
 //    armadilha do BambooHR em 09/09, onde o primeiro campo era a carta e o obrigatorio era o
 //    CV. Aqui o script LE o texto em volta de cada um e diz no log onde pos cada arquivo.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname;
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'apply_wix',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',acceptDownloads:true,
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  p.on('response',async r=>{ if(r.request().method()==='POST'&&!/recaptcha|sentry|analytics|beat|bi\.wix/i.test(r.url())){ let t=''; try{t=(await r.text()).slice(0,200);}catch(e){} log('[rede POST]',r.status(),r.url().slice(0,110),t.replace(/\s+/g,' ')); } });

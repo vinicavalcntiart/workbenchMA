@@ -1,10 +1,10 @@
 // Despeja os campos de um formulario PROPRIO (nao ATS): nome, tipo, rotulo, obrigatoriedade e
 // opcoes de select/radio. Serve para escrever o arquivo de respostas sem adivinhar nada.
 // Uso: sh hb_run.sh dump_form.js <url> [seletor-do-botao-que-abre-o-form]
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrir:abrirNavegador}=require('./navegador_kernel');
 const [url,abrir]=process.argv.slice(2);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrirNavegador({nome:'dump_form',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2200},
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',locale:'en-US'})).newPage();
  await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'}); await p.waitForTimeout(4000);

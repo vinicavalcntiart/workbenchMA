@@ -1,6 +1,6 @@
 // Recruitee generico. uso: node apply_recruitee.js <ans.json> <slug> [--submit]
 // ans.json: {"url":"...","texto":{"<nomeDoCampo>":"valor"},"radios":{"<id da pergunta>":"Yes|No"},"cover":true}
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const [ansFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname+'/';
 // TELEFONE NUNCA NO CODIGO: o repositorio e PUBLICO e a porta do valida-dashboard.sh reprova.
@@ -10,7 +10,7 @@ const A=JSON.parse(fs.readFileSync(ansFile)); const D=__dirname+'/';
 const B={name:'Vini Cavalcanti',email:'contact@vinicavalcanti.art',phone:process.env.VINI_TEL||''};
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'apply_recruitee5',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2600},locale:'en-US'})).newPage();
  try{
   await p.goto(A.url,{timeout:120000,waitUntil:'domcontentloaded'});

@@ -30,7 +30,7 @@
 //     "Save and Continue" e a rodada gasta uma iteracao a toa.
 // 12. "Please select your gender" e obrigatorio na Disney do Canada apesar do texto dizer que a
 //     secao e voluntaria.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel');
 const fs=require('fs');
 const C=require('./cred.json');
 const [host,site,jobpath,slug]=process.argv.slice(2);
@@ -419,7 +419,7 @@ async function perguntas(p){
 }
 
 (async()=>{
- const b=await chromium.launch({proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'wd_geral'}); // stealth sempre ligado (regra do Vini, 24/09)
  const opts={ignoreHTTPSErrors:true,viewport:{width:1400,height:2200},userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'};
  if(fs.existsSync(estado)) opts.storageState=estado;
  const ctx=await b.newContext(opts);

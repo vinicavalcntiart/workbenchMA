@@ -4,12 +4,12 @@
 //    trava com "Please make a selection". Clique no ROTULO da opcao ("Senior"), nao na letra.
 // 2) innerText do body traz perguntas fora da tela, entao conferir a pergunta pelo body inteiro
 //    da falso OK. Confira pelo bloco de pergunta VISIVEL no viewport.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const [passosFile,slug,flag]=process.argv.slice(2); const SUBMIT=flag==='--submit';
 const S=JSON.parse(fs.readFileSync(passosFile)); const D=__dirname+'/';
 const log=(...a)=>console.log('['+slug+']',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'apply_typeform2',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:900},locale:'en-GB'})).newPage();
  // so o que esta DENTRO da janela conta como pergunta atual
  const visivel=async()=>p.evaluate(()=>{

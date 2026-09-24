@@ -6,12 +6,12 @@
 // pergunta: o navegador chega a EMITIR o GET do Apps Script? Se emite, as duas tentativas de
 // antes tambem emitiram e o estudio ja tem o registro. Se nao emite, nao chegou nada.
 // Nenhuma linha nova e criada porque nada sai da maquina.
-const {chromium}=require('playwright'); const fs=require('fs');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel'); const fs=require('fs');
 const A=JSON.parse(fs.readFileSync('ans_futureassoc.json'));
 for(const k of Object.keys(A.campos)) if(A.campos[k]==='__TEL__') A.campos[k]=process.env.VINI_TEL;
 const log=(...a)=>console.log('[fa-teste]',...a);
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'fa_teste',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1400,height:2600},locale:'en-US',
    userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'})).newPage();
  let viuSheet=false, viuW3=false;

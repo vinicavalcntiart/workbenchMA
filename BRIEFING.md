@@ -1744,6 +1744,21 @@ no repositório. Nesta sessão do Claude o conector do Kernel entra por OAuth e 
 | `artstation.com/jobs` | 403, interstitial do Cloudflare | **bloqueado**: "One more step", 4 minutos, solver de Turnstile deu `success` a cada 20 s e o Cloudflare desafiou de novo, em ciclo, nomeando o IP do proxy |
 | `eyecandyanimation.com` | 403 nas três variações | **bloqueado**: "Performing security verification", 50 s parado |
 
+**Enforcement, feito em 24/09 depois da segunda ordem dele (padronizar no repositório inteiro):**
+- `automacao/navegador_kernel.js` (Node) e `navegador_kernel.py` (Python): `abrir()` com
+  `stealth` fixo, proxy padrão ligado, `close()` que derruba a sessão, `esperarDesafio()`.
+- **Os 36 scripts `apply_*.js`, `*_dump.js`, `probe_*.js` e afins foram migrados**: nenhum
+  chama mais `chromium.launch()`; todos chamam `abrir({nome})` do helper. O corpo deles não
+  mudou (`b.newContext()`, `b.newPage()`, `b.close()` continuam iguais). O proxy local
+  `127.0.0.1:18080` saiu junto: o navegador agora roda na nuvem do Kernel.
+- `automacao/valida-stealth.sh`, chamado pelo `.githooks/pre-commit`: recusa commit com
+  launch fora do helper, com `stealth: false`, `disable_default_proxy`, `clear_proxy` ou
+  proxy `direct`, e recusa se o helper perder o `STEALTH = true`.
+- `CLAUDE.md` na raiz, bloco em todo `automacao/BRIEF-*.md` e em `.claude/agents/*.md`:
+  qualquer agente novo adota isto sem perguntar e sem cair em navegador sem stealth.
+- Preenchimento e extração continuam 100% automáticos até o limiar de envio (`--submit`
+  só com autorização do Vini, e o clique final é dele).
+
 **O que isso muda na prática:**
 1. A etiqueta `bloqueado` da varredura (`varre-quadros.py`) ganha uma segunda tentativa
    barata: abrir com `navegador_kernel.abrir()` antes de mandar para a fila do Vini. O

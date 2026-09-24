@@ -1,4 +1,7 @@
-# pip install -r automacao/requirements-kernel.txt
-# Navegador remoto sempre stealth: automacao/navegador_kernel.py
+# Python:  pip install -r automacao/requirements-kernel.txt
+# Node:    npm install playwright   (no diretorio de onde os scripts rodam; o navegador e remoto,
+#          entao PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 basta, nao precisa baixar Chromium)
+# Chave:   export KERNEL_API_KEY=...   (nunca no repositorio)
+# Navegador remoto sempre stealth: automacao/navegador_kernel.js e navegador_kernel.py
 kernel>=0.111.0
 playwright>=1.45

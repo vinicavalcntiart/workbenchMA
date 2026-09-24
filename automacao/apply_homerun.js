@@ -1,3 +1,4 @@
+const {abrir}=require('./navegador_kernel');
 // Homerun (multi-aba, AngularJS). uso: node apply_homerun.js <respostas.json> <slug> [--submit]
 // json: {"url":"...","texto":{"#id":"valor"},"perguntas":{"2372108":"texto"},
 //        "simnao":{"2372204":"yes"},"cv":"Vini_Cavalcanti_CV.pdf"}
@@ -15,7 +16,7 @@ for (const k of Object.keys(A.texto || {})) {
 }
 const log = (...a) => console.log('[' + slug + ']', ...a);
 (async () => {
-  const b = await chromium.launch({ headless: false, proxy: { server: 'http://127.0.0.1:18080' }, args: ['--no-sandbox', '--ignore-certificate-errors'] });
+  const b=await abrir({nome:'apply_homerun',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
   const ctx = await b.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1400, height: 2200 }, userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36', locale: 'en-US' });
   const p = await ctx.newPage();
   p.on('response', r => { if (r.request().method() === 'POST') log('[rede]', r.status(), r.url().slice(0, 110)); });

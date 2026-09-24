@@ -1,7 +1,7 @@
-const {chromium}=require('playwright');
+const {chromium}=require('playwright'); const {abrir}=require('./navegador_kernel');
 const url=process.argv[2];
 (async()=>{
- const b=await chromium.launch({headless:false,proxy:{server:'http://127.0.0.1:18080'},args:['--no-sandbox','--ignore-certificate-errors']});
+ const b=await abrir({nome:'probe_recruitee_campos',headless:false}); // stealth sempre ligado (regra do Vini, 24/09)
  const p=await (await b.newContext({ignoreHTTPSErrors:true,viewport:{width:1280,height:2600},locale:'en-US'})).newPage();
  await p.goto(url,{timeout:120000,waitUntil:'domcontentloaded'});
  await p.waitForTimeout(9000);

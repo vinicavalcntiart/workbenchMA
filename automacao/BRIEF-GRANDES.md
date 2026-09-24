@@ -95,3 +95,13 @@ temporário também vale. Isso não muda a carta, que continua vendendo o perfil
 - `automacao/processados.csv`: uma linha por candidatura (tipo `portal-aplicado`), por alerta
   criado (tipo `alerta-criado`) e por vaga nova vista (tipo `vaga-nova`).
 - Entrada na newsletter (array NOVIDADES) quando aplicar em vaga de personagem de estúdio grande.
+
+## NAVEGADOR: SEMPRE KERNEL EM MODO STEALTH (ordem do Vini, 24/09)
+
+Todo navegador desta campanha nasce por `automacao/navegador_kernel.js` (Node, `abrir()`) ou
+`automacao/navegador_kernel.py` (Python, `abrir()`), com `stealth` fixo e proxy padrão ligado.
+Nunca `chromium.launch()` direto, nunca desligar stealth ou proxy: o gancho de commit recusa.
+Captcha, Cloudflare ou Turnstile: **espera** com `esperarDesafio(page)`, não clica; o Kernel
+resolve sozinho. Passou de 3 minutos, é reputação de IP: registre `bloqueado` e siga.
+Preenchimento e extração são 100% automáticos até o limiar de envio; o clique final é do Vini.
+Regra completa em `CLAUDE.md` na raiz. Não pergunte se deve usar stealth: a resposta é sim.

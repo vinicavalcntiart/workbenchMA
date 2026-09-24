@@ -390,3 +390,13 @@ fora, apesar da palavra "creature". Concept e character design 2D também estão
 
 **E o escopo geográfico corta antes de tudo:** as vagas de personagem da Disney em Mumbai não
 entram, por mais que o título seja perfeito.
+
+## NAVEGADOR: SEMPRE KERNEL EM MODO STEALTH (ordem do Vini, 24/09)
+
+Todo navegador desta campanha nasce por `automacao/navegador_kernel.js` (Node, `abrir()`) ou
+`automacao/navegador_kernel.py` (Python, `abrir()`), com `stealth` fixo e proxy padrão ligado.
+Nunca `chromium.launch()` direto, nunca desligar stealth ou proxy: o gancho de commit recusa.
+Captcha, Cloudflare ou Turnstile: **espera** com `esperarDesafio(page)`, não clica; o Kernel
+resolve sozinho. Passou de 3 minutos, é reputação de IP: registre `bloqueado` e siga.
+Preenchimento e extração são 100% automáticos até o limiar de envio; o clique final é do Vini.
+Regra completa em `CLAUDE.md` na raiz. Não pergunte se deve usar stealth: a resposta é sim.

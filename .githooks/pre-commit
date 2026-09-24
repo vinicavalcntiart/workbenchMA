@@ -25,4 +25,12 @@ if [ -f automacao/valida-dashboard.sh ]; then
     exit 1
   fi
 fi
+if [ -f automacao/valida-stealth.sh ]; then
+  if ! sh automacao/valida-stealth.sh; then
+    echo ""
+    echo "!! COMMIT BLOQUEADO: navegador fora do helper ou stealth desligado."
+    echo "   Regra do Vini, 24/09: todo navegador nasce por automacao/navegador_kernel.{js,py}, stealth fixo."
+    exit 1
+  fi
+fi
 exit 0
