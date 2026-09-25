@@ -9042,3 +9042,17 @@ Palavras dele: *"a unica coisa é o captcha. o resto vc faz. vc n me incomoda. s
 ## MEDIDO EM 25/09 ~21h UTC: O NAVEGADOR NA NUVEM PASSA DO DATADOME DO SMARTRECRUITERS
 
 Seis candidaturas saíram hoje pelo `/oneclick-ui` do SmartRecruiters no navegador na nuvem (Kernel, stealth desligado), sem desafio nenhum: Rodeo FX (duas), CD Projekt RED, GIANTS, Ubisoft Montpellier e DON'T NOD Montréal. Toda porta marcada "à mão por DataDome" volta a ser envio do maestro. Receita: `api.smartrecruiters.com/v1/companies/<conta>/postings/<id>` para conferir `active`, depois o link "I'm interested" da página da vaga. As perguntas ficam em shadow DOM: a lista de opções é achada pelo `aria-controls` do combobox, e o país do telefone às vezes precisa ser escolhido à mão (Brazil +55).
+
+## REVISÃO DE 25/09 (pedida pelo Vini): POR QUE O DIA FICOU PARADO ATÉ AS 20H
+
+- **Placar real:** das 00h às 20h UTC, zero formulário enviado pelo maestro sozinho. Rodadas de 04h15, 06h15, 08h15, 12h15, 14h15 e 16h15 fecharam com "zero envio".
+- **Causa 1, parede errada:** DataDome, reCAPTCHA invisível, "spam" e 403 foram medidos do ambiente local e tratados como parede. O lote inteiro de sexta foi empurrado para o clique do Vini, inclusive a GSC, que não tinha caixa nenhuma. No navegador na nuvem, as mesmas portas passaram sem desafio: 6 envios entre 20h30 e 21h35.
+- **Causa 2, prioridade invertida:** as rodadas gastaram o tempo em ronda Disney/Pixar/Netflix e em varredura de vaga nova, que rendem zero há dias. A fila parada ficou intocada: CD Projekt RED, GIANTS, DON'T NOD e Ubisoft Montpellier esperavam desde 06-07/09.
+- **Causa 3, sem freio de ritmo:** às 14h o placar era 0 de 10, e a rodada ainda anotou "sem caça nova (ritmo controlado)".
+- **Causa 4, agente sem a ferramenta certa:** o caçador das 20h não tem navegador na nuvem. Concluiu "estoque esgotado", e estava errado.
+- **Erro de preenchimento:** texto no campo numérico de salário da GSC, que o Vini teve de refazer.
+- **Correção aplicada:** o prompt da rodada de formulários (trig_01U8f6QngoUURwqjGKVrrCgt) foi reescrito.
+  - O envio pelo navegador na nuvem vem primeiro.
+  - Parede passa a ser só a caixa "sou humano" visível.
+  - Há um freio de ritmo às 14h e às 20h UTC.
+  - A fila de ~180 portas marcadas como parede no painel é revisitada antes de qualquer caça.
