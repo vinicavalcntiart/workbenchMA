@@ -9032,3 +9032,9 @@ Palavras dele: *"vc só manda o link SE TIVER CAPTCHA. PONTO. n aceito mais nenh
 - Link para o Vini só quando houver captcha visível (caixa ou desafio de imagem).
 - Se o site recusar o envio do maestro sem mostrar captcha (ex.: "spam" por pontuação invisível), o maestro registra e segue para a próxima porta, sem link e sem pedir nada ao Vini.
 - Não inventar regra nova, não explicar regra, não dar ordem.
+
+## ORDEM DO VINI, 25/09 ~19h UTC: A ÚNICA COISA DELE É O CAPTCHA
+
+Palavras dele: *"a unica coisa é o captcha. o resto vc faz. vc n me incomoda. se me incomodar eu vou criar outro chat"*.
+- O Vini só é chamado para captcha visível. Todo o resto (preencher, enviar, corrigir, decidir porta, cartas, registro) o maestro faz sozinho, sem perguntar e sem pedir nada a ele.
+- Mensagens para ele: curtas, só resultado. Sem regra, sem explicação de processo.
