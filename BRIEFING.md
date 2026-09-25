@@ -9008,3 +9008,19 @@ A semana do limite vira na quarta 30/09 às 04:00 BRT (07:00 UTC). Terça é par
 - Fechamento 23h30 com o placar; o lote das 01:00 UTC entra na conta de terça no registro. Quarta 07:00 UTC desliga os extras.
 **Adendo 25/09 ~01h30 UTC (o Vini viu no painel a lista de portas "quentes" abertas):** das 34 portas quentes sem candidatura, a maioria ficou parada por captcha antes de a rota do clique existir (23/09). Checagem rápida de hoje (a página responde): GSC Game World 3D Character Artist (S.T.A.L.K.E.R. 2), NEOWIZ/NOUGH 3D Character Modeler, Dreamthorn Principal Character Artist, LIGHT VFX Character Asset Artist, Framestore Blender Generalist (Londres), Behaviour Senior Texture Artist (DbD), Rodeo FX Senior Lookdev, Stellar Creative Lab Surfacing (série Marvel), Side Senior Texture Artist, Gaijin Lead Material & Texture, Certain Affinity Senior Material, Budge 3D Generalist. Mortas hoje: Skydance Senior Grooming TD e Framestore 3D Modeller Montreal (404). Na segunda, cada uma passa pela régua inteira (anúncio lido, veto, dedupe); as vivas entram no lote de terça 22h em ondas de até 5 navegadores, personagem primeiro. Ambiente (Pixel Zoo, Crytivo, ZeniMax Environment, Skydance Environment Surfacing) fica fora.
 - Lembretes agendados nesta sessão: renovar CV 26/09 12:00 UTC, preparação 28/09 22:00 UTC, montar o lote 29/09 23:30 UTC.
+
+## LOTE DE SEXTA 25/09: 10 PORTAS PRIORITÁRIAS (pedido do Vini, 25/09 ~01h UTC)
+
+*"escolha pelo menos 10 prioritarios pra amnh pra gnt n perder tempo"*. Escolhidas das portas quentes paradas, com o anúncio aberto à 01h UTC (navegador local) e sem veto escrito encontrado:
+1. Dreamthorn (Cakefish), Principal Character Artist. Noruega, "all positions are remote", fantasia estilizada. Antes só tinha ido email (02/09).
+2. GSC Game World, 3D Character Artist (S.T.A.L.K.E.R. 2). Praga, Kyiv ou remoto na Europa. Antes só email (11/09).
+3. Infold Games / Papergames, 3D Character Modeler.
+4. LIGHT VFX, formulário de talentos (Houdini, Nuke, Blender, Maya).
+5. Behaviour Interactive, Senior Texture Artist (Dead by Daylight).
+6. Rodeo FX, Senior Lookdev Artist (várias vagas).
+7. Side, Senior Texture Artist (Montreal ou Toronto, híbrido, contrato de 6+ meses).
+8. Gaijin Entertainment, Lead Material & Texture Artist (ajuda de realocação para Hungria, Chipre, Alemanha e outros).
+9. Certain Affinity, Advanced Material Artist.
+10. Gigantic Duck, 3D Artist (Bombergrounds, remoto).
+Descartadas na mesma checagem: Framestore Blender Generalist ("only open to those in the UK or with the right to work in the UK", "We cannot provide visas"), Stellar Surfacing ("Legally eligible to work in British Columbia"), NEOWIZ (anúncio em coreano, presencial), Skydance Grooming TD e Framestore Montreal (404), Reality Games (presencial em Cracóvia).
+Execução: sexta 10:00 UTC (lembrete agendado). Sem captcha vai direto; com captcha vai em ondas de até 5 para o clique do Vini.
