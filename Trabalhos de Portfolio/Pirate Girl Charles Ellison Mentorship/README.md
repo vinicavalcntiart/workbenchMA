@@ -1,4 +1,4 @@
-# Pirate Girl — Mentoria Charles Ellison
+# Pirate Girl, Mentoria Charles Ellison
 
 Personagem estilizada para animação ou game, baseada em concept 2D do próprio
 Charles Ellison (Character Art Director, Warner Bros. Animation). As sessões em
@@ -45,10 +45,10 @@ leitura do coque em preto, o passe está forte demais.
 
 ## Arquivos desta pasta
 
-- `plano_madrugada_grooming.md` — o plano da noite: ordem de ataque, stack de
+- `plano_madrugada_grooming.md`: o plano da noite: ordem de ataque, stack de
   nodes, mapa Houdini → Blender, blocos de tempo e regra de parada.
-- `plano_fim_de_semana.md` — sábado e domingo, até a peça fechada.
-- `diario.md` — o safeplace. Uma entrada por sessão, sem filtro.
+- `plano_fim_de_semana.md`: sábado e domingo, até a peça fechada.
+- `diario.md`: o safeplace. Uma entrada por sessão, sem filtro.
 
 ## Ferramentas de apoio já no repositório
 

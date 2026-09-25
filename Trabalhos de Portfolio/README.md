@@ -8,13 +8,13 @@ aqui mora o que vira peça de portfólio. O PDF fechado continua em `portfolio/`
 
 ## Projetos
 
-- `Pirate Girl Charles Ellison Mentorship/` — personagem estilizada (alchemist /
+- `Pirate Girl Charles Ellison Mentorship/`: personagem estilizada (alchemist /
   pirate girl) feita na mentoria do Charles Ellison. Em produção: grooming no
   Blender com Geometry Nodes, sem addon, com entrega da personagem inteira no
   fim de semana de 26 e 27 de setembro de 2026.
 
 ## Estrutura padrão de cada projeto
 
-- `README.md` — brief, régua de qualidade, estado do pipeline e o que falta.
-- `plano_*.md` — planos de entrega, com blocos de tempo e regra de parada.
-- `diario.md` — registro por sessão: o que saiu, o que travou, como estava a cabeça.
+- `README.md`: brief, régua de qualidade, estado do pipeline e o que falta.
+- `plano_*.md`: planos de entrega, com blocos de tempo e regra de parada.
+- `diario.md`: registro por sessão: o que saiu, o que travou, como estava a cabeça.
