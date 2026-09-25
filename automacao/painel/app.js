@@ -199,25 +199,18 @@ function abrirSecao(id, filtro){
 }
 function renderAcoes(){
   const c = counts(), p = pendencias(), items = [];
-  const faltaEnviar = DOSSIES.filter(d=>d[4]);
-  if(c.aberto > 0) items.push(["urgente","🔥","<b>"+c.aberto+" estúdio"+(c.aberto>1?"s":"")+" respondeu"+(c.aberto>1?"ram":"")+"</b> e a conversa ainda está sem sequência","#agora"]);
-  if(faltaEnviar.length > 0) items.push(["urgente","📋","<b>"+faltaEnviar.length+" formulário"+(faltaEnviar.length>1?"s prontos":" pronto")+" para colar</b>, começando por "+esc(faltaEnviar[0][0])+": só falta você enviar","#dossies"]);
-  if(p.altas.length > 0) items.push(["urgente","🎯","<b>"+p.altas.length+" vaga"+(p.altas.length>1?"s quentes":" quente")+" sem candidatura</b>, começando por "+esc(p.altas[0].name.split(/ - | \(/)[0]),"#portais","alta"]);
-  if(p.aMao.length > 0) items.push(["atencao","🖐️","<b>"+p.aMao.length+" candidaturas só à mão</b>: captcha de desafio, conta com senha ou portal que não abre para a automação","#portais","mao"]);
-  if(p.grandeMao.length > 0) items.push(["atencao","🏆","<b>"+p.grandeMao.length+" portais de estúdio grande só abrem na sua mão</b> ("+p.grandeMao.map(g=>esc(g[0].split(/[,:(]/)[0].trim())).join(", ")+")","#grandes"]);
-  if(p.alertaBloq.length > 0) items.push(["atencao","🔔","<b>"+p.alertaBloq.length+" alertas de vaga travados no captcha</b> ("+p.alertaBloq.map(g=>esc(g[0].replace(/\s+Studios$/,""))).join(", ")+"): dois minutos cada","#grandes"]);
-  if(p.pedidas.length > 0) items.push(["atencao","📝","<b>"+p.pedidas.length+" "+(p.pedidas.length>1?"estúdios pediram":"estúdio pediu")+" candidatura por formulário</b> na resposta ao seu email","#portais","abertas"]);
-  if(c.drafts > 0) items.push(["info","✉️","<b>"+c.drafts+" rascunho"+(c.drafts>1?"s":"")+"</b> no Gmail esperando o Apps Script (enviarRascunhos)","#estudios"]);
-  const devidos = STUDIOS.filter(followUpDevido);
-  if(devidos.length > 0) items.push(["info","⏰","<b>Follow-up vencido</b> em "+devidos.length+" estúdio"+(devidos.length>1?"s":"")+" sem resposta; o Comunicador manda o lembrete de 7 dias às 11h05","#estudios"]);
-  if(items.length===0) items.push(["boa","✅","<b>Tudo em dia.</b> Nada pendente na sua mão agora",""]);
+  if(c.aberto > 0) items.push(["urgente","🔥","<b>"+c.aberto+" estúdio"+(c.aberto>1?"s":"")+" respondeu"+(c.aberto>1?"ram":"")+"</b>: a resposta sai na próxima rodada da caixa","#agora"]);
+  if(p.aMao.length > 0) items.push(["info","🤖","<b>"+p.aMao.length+" portas com captcha ou login</b>: eu preencho e junto no lote do clique quando valer","#portais","mao"]);
+  if(p.altas.length > 0) items.push(["info","🎯","<b>"+p.altas.length+" vaga"+(p.altas.length>1?"s quentes":" quente")+" sem candidatura</b> na lista, a maioria com veto escrito; a rodada de formulários reconfere","#portais","alta"]);
+  if(p.grandeMao.length > 0) items.push(["info","🏆","<b>"+p.grandeMao.length+" portais de estúdio grande</b> com parede ("+p.grandeMao.map(g=>esc(g[0].split(/[,:(]/)[0].trim())).join(", ")+")","#grandes"]);
+  if(items.length===0) items.push(["boa","✅","<b>Tudo em dia.</b>",""]);
   const PESO = {urgente:0, atencao:1, info:2, boa:3};
   items.sort((a,b)=>PESO[a[0]]-PESO[b[0]]);
   $("#acoesList").innerHTML = items.map(([cls,ic,txt,href,filtro])=>
     '<a class="acao '+cls+'" href="'+(href||"#hoje")+'"'+(filtro!==undefined?' data-filtro="'+filtro+'"':'')+' data-alvo="'+(href||"").slice(1)+'"><span class="ic">'+ic+'</span><span>'+txt+'</span><span class="go">ver →</span></a>').join("");
   $("#acoesList").querySelectorAll(".acao").forEach(a=>a.addEventListener("click", ()=>abrirSecao(a.dataset.alvo, a.dataset.filtro)));
   const urg = items.filter(i=>i[0]==="urgente").length;
-  $("#acoesBadge").textContent = urg ? urg+" urgente"+(urg>1?"s":"") : items[0][0]==="boa" ? "em dia" : items.length+" itens";
+  $("#acoesBadge").textContent = urg ? urg+" urgente"+(urg>1?"s":"") : "em dia";
   $("#nAcoes").textContent = urg || "";
 }
 
@@ -645,30 +638,28 @@ $("#exportBtn").addEventListener("click", ()=>{
 $("#resetBtn").addEventListener("click", ()=>{ if(window.confirm("Limpar todas as marcações de andamento?")){ progress={}; saveProgress(); renderAll(); } });
 
 
-/* ---------- sua vez (modo simples) ---------- */
+/* ---------- sua vez (modo simples) ----------
+   25/09/2026: "agora que nao tem mais nada manual basicamente" (Vini). O maestro preenche todo
+   formulario e escreve toda carta; o que sobra para ele e so: entrevista marcada, conversa de
+   estudio sem resposta e o lote do clique (caixa "sou humano"), cujo link vai SO no chat. */
 let suaVezLimite = 5;
 function renderSuaVez(){
-  const p = pendencias(); let items = [];
-  const corta = (t,n)=>{ t=String(t||"").replace(/\s+/g," ").trim(); return t.length>n ? t.slice(0,n).replace(/\s\S*$/,"")+"…" : t; };
-  const motivo = note => { const m = String(note||"").match(/(?:NA M[AÃ]O DELE|[àa] m[ãa]o)[^.;]*[.;]?/i); return corta(m ? m[0] : note, 96); };
-  p.aMao.forEach(pt=>items.push({w:prioOf(pt)==="alta"?0:1, cls:prioOf(pt)==="alta"?"urgente":"atencao", ic:isPersonagem(pt)?"🎯":"🖐️", tit:pt.name.split(/ - | \(/)[0], sub:corta(pt.country,40), txt:motivo(pt.note), href:pt.url, key:pt.url, pers:isPersonagem(pt)}));
-  DOSSIES.forEach(d=>{ if(d[4]) items.push({w:0, cls:"urgente", ic:"📋", tit:d[0], sub:d[1], txt:"Texto pronto no dossiê: abra a vaga, cole e envie", href:d[2], key:d[2], alvo:"dossies", pers:CHAR_RE.test(d[1])}); });
-  p.grandeMao.forEach(g=>items.push({w:1, cls:"atencao", ic:"🏆", tit:g[0].split(/[,:(]/)[0].trim(), sub:corta(g[1]||"",40), txt:corta(g[4],96), href:g[2], key:g[2], pers:false}));
-  p.alertaBloq.forEach(g=>items.push({w:2, cls:"info", ic:"🔔", tit:"Alerta de vaga: "+g[0].replace(/\s+Studios$/,""), sub:"dois minutos", txt:"Criar o alerta de vaga no portal; o captcha só passa no seu navegador", href:g[2], key:"alerta:"+g[2], pers:false}));
-  items.sort((a,b)=>a.w-b.w || (b.pers?1:0)-(a.pers?1:0));
-  const todos = items.length;
-  items = items.filter(it=>it.pers || it.w===0);
-  const outros = todos - items.length;
+  const c = counts(), items = [];
+  const agora = Date.now();
+  (typeof AGENDA !== "undefined" ? AGENDA : []).forEach(a=>{
+    const t = new Date(a[0].length>10 ? a[0] : a[0]+"T23:59:00Z");
+    if(t - agora > -6*3600e3) items.push({cls:"urgente", ic:"🤝", tit:a[1], sub:a[0].slice(0,16).replace("T"," "), txt:a[2]||"", href:a[3]||"#agora"});
+  });
+  if(c.aberto > 0) items.push({cls:"urgente", ic:"💬", tit:c.aberto+" estúdio"+(c.aberto>1?"s":"")+" esperando resposta", sub:"conversas", txt:"Eu respondo na rodada da caixa; aqui é só para você acompanhar.", href:"#agora"});
   const lista = $("#suaVezList");
-  lista.innerHTML = items.length ? items.slice(0,suaVezLimite).map((it,i)=>
+  lista.innerHTML = items.length ? items.slice(0,suaVezLimite).map(it=>
     '<div class="acao '+it.cls+'"><span class="ic">'+it.ic+'</span><div class="corpo"><b>'+esc(it.tit)+'</b><span class="p">'+esc(it.sub)+'</span><div class="txt">'+esc(it.txt)+'</div></div>'
-    + '<div class="btns"><a class="btn ir" href="'+esc(it.href)+'" target="_blank" rel="noopener">Abrir ↗</a>'+(it.alvo?'<a class="btn" href="#'+it.alvo+'">dossiê</a>':'')+(it.key?'<button class="btn feito" type="button" data-key="'+esc(it.key)+'">✓ feito</button>':'')+'</div></div>').join("")
-    : '<div class="acao boa"><span class="ic">✅</span><div class="corpo"><b>Nada na sua mão agora</b><div class="txt">A automação está cuidando do resto. Volte mais tarde ☺️</div></div></div>';
-  lista.querySelectorAll(".feito").forEach(b=>b.addEventListener("click", ()=>{ applied[b.dataset.key] = true; saveApplied(); renderAll(); }));
+    + '<div class="btns"><a class="btn ir" href="'+esc(it.href)+'"'+(/^https?:/.test(it.href)?' target="_blank" rel="noopener"':'')+'>Abrir ↗</a></div></div>').join("")
+    : '<div class="acao boa"><span class="ic">✅</span><div class="corpo"><b>Nada esperando você</b><div class="txt">Eu preencho os formulários e escrevo as cartas. Quando juntar vagas com a caixa "sou humano", te mando o link no chat e você só clica ☺️</div></div></div>';
   $("#suaVezMais").style.display = items.length > suaVezLimite ? "" : "none";
   $("#suaVezMais").textContent = "mostrar mais ("+Math.max(0,items.length-suaVezLimite)+" restantes)";
-  $("#suaVezBadge").textContent = items.length ? items.length+" de personagem ou quente" : "em dia";
-  $("#suaVezOutros").innerHTML = outros ? 'Mais <a href="#portais" data-filtro="mao">'+outros+' portas de ambiente ou de segunda linha</a> ficam na lista completa.' : "";
+  $("#suaVezBadge").textContent = items.length ? items.length+" com você" : "em dia";
+  $("#suaVezOutros").innerHTML = "";
 }
 const MODO_KEY = "campanha-modo";
 function setModo(tudo){
