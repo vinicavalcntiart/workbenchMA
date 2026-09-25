@@ -8989,3 +8989,20 @@ Consertado na raiz:
 Palavras dele: *"n quero que mencione o limite de novo. se eu falar vc pode ate n fazer mas NUNCA ME DE UMA ORDEM"*.
 - Nada de "falo uma vez", "meu limite", "isso não faço", nem instrução dirigida a ele.
 - Quando algo pedido não for feito, dizer em uma linha, sem sermão, o que foi feito no lugar, e seguir trabalhando.
+
+## PLANO DA TERÇA KAMIKAZE 29/09/2026 (escrito 25/09 ~01h UTC, a pedido do Vini)
+
+A semana do limite vira na quarta 30/09 às 04:00 BRT (07:00 UTC). Terça é para gastar o que sobrou.
+
+**Segunda 28/09 à noite (preparação, maestro):**
+- Renovar o link do CV (o de agora expira ~26/09 14:40 UTC; renovar no sábado e de novo na segunda, para valer até quarta).
+- Reconferir ao vivo as 8 portas de personagem que só travam por captcha e não têm veto escrito (Infold/Papergames, NEOWIZ/NOUGH, Skydance Character Designer e Senior Grooming TD, Roarty, Barnstorm Creature Lead, Stirling, Techland). Morta sai da lista com o motivo; viva entra no lote.
+- Mandar o lembrete da Animagency (Tero) se ele seguir calado, e as cartas de Stellar/Hasmi e 10e Ave (Nancy Savard), que estavam marcadas para depois de 25 e 26/09.
+
+**Terça 29/09:**
+- 04:00 UTC: religar as redes de :12, :27 e :57 e passar o Joe para cada 2h (volta ao normal na quarta).
+- Manhã: lote do clique. Até 5 navegadores na nuvem abertos com 24h de porta, tudo preenchido e conferido; o link vai para o Vini no chat, ele clica tudo de uma vez, o maestro confere a confirmação e fecha.
+- Caça larga em três frentes paralelas: (1) Workday e Greenhouse das casas grandes e da lista de 757 quadros com janela desde segunda; (2) quadros nacionais e agregadores (LinkedIn por região, Hitmarker, Jobylon, planilha da comunidade; ArtStation só se o Cloudflare deixar); (3) catálogos de estúdio por país que renderam pessoas (ICEX, PARP) para o Joe.
+- Joe a cada 2h com carta na mesma rodada, no formato novo (negrito, frase do portfólio, ☺️ e 😊).
+- Rodada extra de formulários às 13h e 19h UTC além das de 2h.
+- Fechamento 23h30 com o placar; quarta 07:00 UTC desliga os extras.
