@@ -54,6 +54,15 @@ e-mail ao aluno segue os fatos acima, não a página.
    aluno do corpo do aviso e criar o rascunho endereçado a ele.
 10. **Só rascunho.** Quem envia é o Vini.
 11. Assinatura: `Vini Cavalcanti / Senior 3D Character Artist / vinicavalcanti.com`.
+12. **"Hoje" e "amanhã" se contam no fuso de Recife (America/Recife, UTC-3), nunca em UTC.**
+    Erro de 24/09: às 21:50 de quinta em Recife já era sexta em UTC, e um e-mail ao Ray saiu
+    com "today" para uma sessão que era "tomorrow". O Vini enviou antes da correção. Conferir
+    o relógio local antes de escrever qualquer data relativa.
+13. **Agenda da mentoria fica em contact@vinicavalcanti.art.** O conector do Google Calendar
+    precisa estar autorizado nessa conta (ou a agenda compartilhada com edição). Remarcar é
+    `update_event` no evento "Vini Cavalcanti Mentorship (Nome)" com `notificationLevel: ALL`,
+    que já avisa o aluno pelo próprio Agenda. Os blocos "Busy" são do agente `AGENDA_MENTORIA`
+    e se ajustam sozinhos; não mexer.
 
 ## Modelo aprovado (11/09, rascunho para Shreya Sateesh)
 Assunto: `Re: Mentorship inquiry`
@@ -115,3 +124,4 @@ convite do Discord, "any questions, just reply". Assunto: `Thank you for getting
 | 11/09/2026 | Shreya Sateesh | shreyanimates@gmail.com | "I wanted to inquire about the mentorship program." | Rascunho pronto no Gmail (draft `r-393674080718726483`), aguardando o Vini enviar |
 | 20/09/2026 | Sol Valvoi | sol.valvoi@icloud.com | Comprou Intro to ZBrush: Mushroom (Hotmart HP3645967361) | Rascunho de agradecimento pronto no Gmail (draft `r4677622785483422638`), aguardando o Vini enviar |
 | 22/09/2026 | Stanislav | stanislavpostolovskiy12@gmail.com | 4 perguntas: escolhe o personagem? requisito de dificuldade? perguntas fora das sessões? sessões pagas depois do fim? | Rascunho pronto no Gmail (draft `r-1466894231428855755`), aguardando o Vini enviar. Respostas de dificuldade e de continuação foram suposição minha, conferir |
+| 24/09/2026 | Ray Blair | saycebuckley2@yahoo.com | Sessão de 25/09 11:30 remarcada para 02/10 11:30 BRT (compromisso de trabalho imprevisto) | Evento movido no Agenda e e-mail enviado pelo Vini |
