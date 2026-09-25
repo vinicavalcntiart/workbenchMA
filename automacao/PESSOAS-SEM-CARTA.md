@@ -18696,3 +18696,88 @@ a leitura de disciplina tem de vir antes do endereço.
   1. **O endereço está publicado como o contato para denunciar golpe de recrutamento**, não como caixa de candidatura, e a home manda falar com ela **pelo LinkedIn**. Um e-mail curto e pessoal cabe; não tratar como porta de candidatura.
   2. **Personagem NÃO está provado.** A casa é de co-dev, porte, certificação, ferramentas e UI (*"feature co-dev, porting and cert, tools development, rendering and UI/UX"*); a arte aparece como serviço (*"Artistic Direction, Art and Animation"*, *"creating 2D or 3D art"*). O quadro Workable (`apply.workable.com/snowed-in-studios-3/`) respondeu **1015 (limite de taxa)** e eu não li as vagas.
   3. É casa da **Keywords Studios**. O Vini se candidatou em 23/09 à *Character Artist - Hair Specialist* da Keywords/Lakshya (Workable `keywords-intl1`), que é outra casa do grupo. Se o maestro contar o grupo como uma casa só, a ficha fica para depois.
+
+## RODADA DAS 05h35 UTC DE 25/09 (Joe): ALEMANHA, ÁUSTRIA, FINLÂNDIA E NORUEGA DERAM ZERO FICHA, E QUEM PAGOU FOI O **GAMEDEVMAP DOS ESTADOS UNIDOS** (20 estados, 2.114 casas, 918 domínios que nenhuma varredura tinha tocado). **Quatro fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** As quatro nos EUA, as quatro em casa INÉDITA na campanha (zero linha no repositório, zero thread na caixa)
+
+**Placar: 4 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit** (o pedido desta rodada foi sem commit). Sexta-feira, ritmo controlado. **Alemanha, Áustria, Finlândia, Noruega e Coreia: zero ficha**, com a conta abaixo. Casa de outsourcing de arte dos EUA com diretor de arte publicado: **nenhuma**; a mais perto disso é a Run Games (ficha 1), que faz *work for hire* e porte.
+
+**O MÉTODO, para repetir:** o mesmo `nav.py` das rodadas anteriores (segue o menu da home; decodifica entidade HTML, `%40`, `data-cfemail`, `[at]`), agora em fontes que ninguém tinha aberto:
+1. **`gamesmap.de`** (o diretório oficial do game-verband): a home devolve **2.784.804 bytes** com o JSON de **1.776 empresas** embutido (nome, cidade, site, e-mail de contato, categorias). Tirados os domínios já varridos e já no repositório, sobraram **1.140**; o `nav.py` rodou em todos.
+2. **`pgda.at/members/`** (Pioneers of Game Development Austria, 200, 167.285 bytes): 41 domínios, 28 inéditos.
+3. **`neogames.fi/partner-sitemap.xml`** (450 fichas de parceiro sem domínio): gerei `<slug>.fi`, `<slug>.com`, `<slug>games.com`, `<slug>.games`, **1.937 domínios candidatos**, e passei o `nav.py`.
+4. **`gamecompanies.com/industries/europe/norwegian-game-industry/companies`** (Noruega, 13 casas inéditas com site).
+5. **`games-career.com`** (quadro de vagas do setor na Alemanha): 36 vagas ativas; a página traz *Contact Person* com nome e cargo, e o e-mail vem cifrado pelo `linkTo_UnCryptMailto` do TYPO3 (deslocamento **-5**, decodificador em `t3dec.py` no scratchpad). Todos os decifrados são caixa de função (`jobs@mipumi.com`, `hiring@therabytes.de`, `bewerbung@lotum.de`) ou de casa fora da disciplina.
+6. **`gamedevmap.com`, EUA**, 20 estados (Califórnia 889, Washington, Texas, Nova York, Massachusetts, Carolina do Norte, Oregon, Flórida, Illinois, Geórgia, Colorado, Utah, Maryland, Pensilvânia, Minnesota, Arizona, Michigan, Virgínia, Ohio, Nova Jersey): **2.114 casas**, **918 domínios inéditos** de tipo *Developer*, *Developer and Publisher*, *Other* e *Service*. Rendeu **316 linhas** de endereço e as quatro fichas.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Alemanha (gamesmap, 1.140 domínios):** quase tudo agência, escola, esports, som, serious game ou casa de uma pessoa. As casas de jogo com endereço em forma de pessoa não fazem personagem 3D: **Gentleforge** (`mtr@gentleforge.com`, XR e trabalho por contrato, site com © 2021), **Hallgrim Games** (`christopher@`, puzzle e deck-builder), **Kastanie Eins** (`clemens.petzold@`, serious games), **Witchmade** (`shelley@`, trio de 2D, ilustração e animação à mão), **Cobalt Corax** (`david@`, jogo de ritmo), **Rudy Games** (Áustria, `gerti@`/`dani@`/`mani@`, jogo de tabuleiro com app). **Realmforge, Claymore, Flying Sheep, Clockstone, Kunst-Stoff, Tiny Roar, Bytro, Socialspiel, Grimbart Tales, Tiny Beast, Brainseed** (domínios testados à mão): nenhum endereço de pessoa publicado. **Ulysses Films, Motionworks, Arx Anima, Hahn Film, TrickStudio, Scopas, Mimic, Exozet**: zero pessoa (a Arx Anima só publica caixa por cidade).
+- **Áustria (PGDA, 28 inéditos):** **Immerea** (`michael@`, `flavia@`, `manuel@`) é VR de instalação artística; **Toplitz** só `influencer@`; **Simuverse** só `bewerbung@`. **Mi'pu'mi** tem vaga de *Head of Game Design & -Art* no games-career com a *Karin Sigle, Staff Development Manager*, mas o e-mail decifrado é `jobs@mipumi.com`, e a casa já está no repositório.
+- **Finlândia (1.937 domínios de chute conferido):** **Anima Vitae** já é carta (19/09). **Mouka Filmi** (`juha@`, `sami@`, `jukka@`) é casa de documentário; **New Dawn** (Turku) é filmagem ao vivo e publicidade; **Korpi Games** (`ville.rautiainen@`, `jesse.passoja@`) é VR; **Immersal** é tecnologia de AR; **Rehaboo** é reabilitação em VR; **Colditch** é consultoria de IA; **Road to Vostok** é um desenvolvedor sozinho, tiro realista.
+- **Noruega (13 casas):** só a **Ablemagic** publica equipe com endereço, e é edtech em norueguês. **Snowcastle Games** (*Earthlock*), **Snow Cannon**, **Epictale**, **Ravn Studio**, **Retrogene**, **Encircle**: zero endereço de pessoa.
+- **Coreia:** o `k-gameroadshow.com` (diretório da KOCCA) **é barrado pelo proxy** (`connect_rejected`) e dá `EAI_AGAIN` no WebFetch. **Iconix, Anipen, Tuttifrutti**: só `ethics@`, `biz@` e encarregado de dados em coreano. **SAMG, Grafizix, Locus, Vive Studios, WYSIWYG, 4th Creative Party**: zero endereço.
+- **Outsourcing de arte dos EUA:** **Heavy Iron** (Keywords) só `talktous@heavy-iron.com`; **Magic Pencil** e **Polygonal Mind** recusam TLS/conexão; **Brain Zoo, Sprite Animation, Evil Eye, Kuku** abrem e não publicam pessoa; **Meta 3D Studios** (`randy@`, currículo para vaga) faz app de marca e AR; **Studio Showoff** (Melbourne, representada pela Psyop) é **animação 2D quadro a quadro**; **Devoted Studios** já está no repositório.
+- **EUA, com endereço de pessoa e sem ficha:** **Counterplay Games** (*Godfall*, *Armatus*, Emeryville) tem `keith@counterplay.co` **só no JSON-LD** da home (campo `"email"` do Squarespace), sem nome ao lado em lugar nenhum da página: é metadado, não publicação; fica como **reserva** se o maestro aceitar (seria o Keith Lee, CEO, mas a página não diz). **GoodbyeWorld Games** (`will@goodbyeworldgames.com`, Will Hellwarth, *Studio Director*, em `/team`): *Before Your Eyes* é de 2021 e o projeto atual é RPG de mesa. **Self Hunter Studio** (`evan_hill@`): RPG de podcast de comédia. **Monothetic**: certificado TLS quebrado.
+
+### FICHA 1: **Michael A. Marzola**, *President / Creative Director* e cofundador, **RUN GAMES** (Los Angeles e Seattle, **EUA**) — `michael.marzola@run-games.com` — **ALTA (PUBLICADO em `mailto:` com nome e cargo no bloco de contato da home)**
+
+- **URLs abertas por mim nesta rodada:** `https://run-games.com/` (**200, 232.100 bytes**), HTML literal: `<h3>Michael A. Marzola</h3><p><em>President / Creative Director</em></p><p><a href="mailto:michael.marzola@run-games.com">michael.marzola@run-games.com</a></p>`; no bloco de fundadores, *"MICHAEL MARZOLA Creative Director at Run Games Los Angeles"*, ao lado de *"DOGAN KOSLU Partner, Founder and former President of Treyarch (Activision)"*; endereço *"Seattle Studio - PIKE PLACE 2125 Western Ave Suite 302"*. `https://store.steampowered.com/app/2593870/?l=english` (**200**): *Football Heroes League*, desenvolvedor **Run Games**, 01/05/2025, etiquetas `3D`, `Colorful`, `Stylized`, `Third Person`. **NADA MONTADO.**
+- **POR QUE ELE:** é o diretor criativo e sócio fundador de uma casa pequena e veterana; o outro endereço de pessoa é o do *Technical Director* (Nathan Lazur), que não é arte.
+- **GANCHO DE OURO:** a Run Games **portou dois jogos da E-Line Media**, a casa onde o Vini está hoje: *"Beyond Blue is an underwater sea life exploration game made with support from the same team behind BBC’s Blue Planet. Run Games ported the PC game to Apple platforms, PS4, and Xbox One."* e *Endless Mission* (*"Publisher: E-Line Media"*) — `https://run-games.com/`. Cliente em comum, sem precisar dizer que o Vini trabalhou nesses dois títulos (não trabalhou, que eu saiba).
+- **FRASES DA CASA, literais:**
+  - *"Run Games is proud to support other developers and publishers creating outstanding entertainment."* — `https://run-games.com/`
+  - *"Choose from a diverse roster of extraordinary characters, with more to come throughout Early Access"* — `https://store.steampowered.com/app/2593870/` (texto da própria casa na Steam, sobre o *Football Heroes League*)
+  - Reserva: *"Run Games is most known for the Football Heroes franchise first established across mobile devices and later expanded to PC and Nintendo Switch."* — `https://run-games.com/`
+- **3D DE PERSONAGEM: PROVADO** pelo *Football Heroes League* (elenco de personagens com habilidades, etiquetas `Stylized` e `Third Person`, *"Unlock new characters and customize your look"*).
+- **FORA DOS EUA? NÃO.** Casa americana: **a frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `run-games.com OR "Run Games" OR Marzola OR "Football Heroes" OR Lazur` → **`{}`**; `from:/to:(run-games.com ...)` → **`{}`**. Repositório: **zero** em `pessoas.csv`, `processados.csv`, `enviados.csv`, `docs/index.html` e neste arquivo. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. O rodapé do site diz **© 2024** e o bloco do jogo ainda fala em *"UNANNOUNCED UE5 SPORTS GAME"*; quem prova que a casa está viva em 2025 é a Steam (*Football Heroes League*, maio de 2025, em Early Access). Não há página de vaga aberta (o menu tem *Jobs*, mas não abri vaga nenhuma).
+  2. A casa é mais de engenharia e porte do que de arte; o personagem está no jogo próprio, não no *work for hire*.
+  3. Os dois endereços têm cargo *President*; o Marzola é o de arte e criação.
+
+### FICHA 2: **Chris Wade**, fundador e *Creative Director*, **LUCKSHOT GAMES** (Austin, Texas, **EUA**) — `chris@luckshotgames.com` — **ALTA (PUBLICADO em `mailto:` no botão de contato de todas as páginas, com o primeiro nome dele no corpo)**
+
+- **URLs abertas por mim nesta rodada:** `https://luckshotgames.com/about` (**200, 141.657 bytes**): *"Hey, Chris here. I started Luckshot Games back in 2015 to make innovative, high quality games filled to the brim with character and charm."*, e o botão do cabeçalho `href="mailto:chris@luckshotgames.com?subject=Let's%20work%20together!&body=Hi%20Chris%2C..."`. `https://luckshotgames.com/` (**200, 112.696 bytes**). Sobrenome e cargo: `https://gamersocialclub.ca/2026/01/12/big-hops-interview-creative-director-chris-wade-talks-3d-platformers-kickstarter-and-more/` (**200**): *"Big Hops is a 3D platformer creative director and Luckshot Games founder Chris Wade has been cooking away at for over six years."* `https://store.steampowered.com/app/1221480/?l=english` (**200**): *Big Hops*, **Luckshot Games**, 12/01/2026, etiquetas `Cute`, `Colorful`, `3D Platformer`, `Family Friendly`; *"Just added: 8 Player Co-op"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o fundador e o único endereço de pessoa que a casa publica; em casa pequena ele decide.
+- **FRASES DA CASA, literais:**
+  - *"Use parkour and your tongue to explore 3 huge, colorful worlds full of charming animal friends and discover a huge range of surprising, playful interactions with veggies and gadgets!"* — `https://luckshotgames.com/`
+  - *"I started Luckshot Games back in 2015 to make innovative, high quality games filled to the brim with character and charm."* — `https://luckshotgames.com/about`
+  - Reserva, da Steam: *"Collect bugs, upgrade your backpack, and make animal friends as you go!"* — `https://store.steampowered.com/app/1221480/`
+- **3D DE PERSONAGEM: PROVADO** (protagonista sapo em 3D, amigos animais, roupas e chapéus colecionáveis; na entrevista: *"Outfits, Hats"* na lista de coleção).
+- **FORA DOS EUA? NÃO.** **A frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `luckshotgames OR Luckshot OR "Big Hops" OR "Chris Wade" OR "Sausage Sports"` → **`{}`**; `from:/to:(luckshotgames.com ...)` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. O endereço é o do botão *"Let's work together!"*, que a casa montou para **pitch** (`body=Hi Chris, I have a great pitch for you!`): é caixa dele, mas não foi publicada para candidatura. Carta curta e pedindo direção.
+  2. O pareamento nome↔endereço no site é pelo primeiro nome (*"Hey, Chris here"* + `mailto:chris@`); o sobrenome e o cargo vêm da entrevista de janeiro de 2026.
+  3. Casa indie pequena, jogo lançado em janeiro e recebendo atualização; sem vaga aberta e sem sinal de patrocínio de visto.
+
+### FICHA 3: **Jin-Young Sohn**, *3D Art and Level Design* e cofundador(a), **MOON LAGOON** (Austin, Texas, **EUA**) — `jin@loddlenaut.com` — **ALTA (PUBLICADO em `mailto:` com o nome, no bloco *Contact* do press kit)**
+
+- **URLs abertas por mim nesta rodada:** `https://loddlenaut.com/presskit` (**200, 229.309 bytes**), HTML literal: `General Inquiries <a href="mailto:hello@loddlenaut.com">hello@loddlenaut.com</a> Ricardo Escobar <a href="mailto:ricardo@loddlenaut.com">ricardo@loddlenaut.com</a> Jin-Young Sohn <a href="mailto:jin@loddlenaut.com">jin@loddlenaut.com</a>`; nos créditos, *"Jin-Young Sohn 3D Art and Level Design Co-founder of Moon Lagoon"* e *"Ricardo Escobar Programming and Tech Art Co-founder of Moon Lagoon"*. `https://loddlenaut.com/` (**200, 209.810 bytes**). `https://store.steampowered.com/app/1644940/?l=english` (**200**): *Loddlenaut*, **Moon Lagoon**, 16/11/2023, etiquetas `Cute`, `Creature Collector`, `3D`, `Cozy`. **NADA MONTADO.**
+- **POR QUE ELA/ELE:** é **a artista 3D** da casa (colega de ofício), com endereço próprio publicado ao lado do nome. O outro sócio é programação.
+- **FRASES DA CASA, literais:**
+  - *"Raise axolotl-like aliens called “loddles” that grow based on what they eat"* — `https://loddlenaut.com/presskit`
+  - *"Moon Lagoon is a two-person indie game studio based in Austin, TX."* — `https://loddlenaut.com/presskit`
+  - Reserva: *"Loddles are seemingly amphibious alien creatures that resemble axolotls with flowy tails and external gills."* — `https://loddlenaut.com/`
+- **3D DE PERSONAGEM: PROVADO** (criaturas em 3D que crescem e mudam conforme a comida; etiqueta `Creature Collector`).
+- **FORA DOS EUA? NÃO.** **A frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `loddlenaut OR "Moon Lagoon" OR "Jin-Young Sohn" OR "Ricardo Escobar"` → **`{}`**; `from:/to:(loddlenaut.com)` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Casa de DUAS pessoas**, com um jogo lançado em 2023 e nenhum projeto novo anunciado no site: não há cadeira para contratar. O valor é o de colega que responde colega e pode indicar.
+  2. O press kit não diz o gênero da pessoa; na carta, `Hi Jin-Young,` sem pronome.
+  3. O endereço está no domínio do jogo (`loddlenaut.com`), não num domínio da empresa.
+
+### FICHA 4: **Jason Jolley**, cofundador (*"one of the 3 creators of Stolen Realm"*), **BURST2FLAME GAMES** (Los Angeles, **EUA**) — `jason@burst2flame.com` — **ALTA (PUBLICADO em `mailto:` como o contato da casa, na home)**
+
+- **URLs abertas por mim nesta rodada:** `https://burst2flame.com/` (**200, 513.188 bytes**), HTML literal `Email: <a data-auto-recognition="true" href="mailto:jason@burst2flame.com">jason@burst2flame.com</a>` no bloco *CONTACT US*. Nome e papel: `https://www.thexboxhub.com/an-exclusive-interview-with-jason-jolley-one-of-the-three-creators-behind-stolen-realm/` (**200**, fev/2023): *"I’m Jason Jolley and I’m one of the 3 creators of Stolen Realm. I mostly write code and we all help with game design."* `https://store.steampowered.com/app/1330000/?l=english` (**200**): *Stolen Realm*, **Burst2Flame Games**, 08/03/2024, etiquetas `Character Customization`, `Party-Based RPG`, `Online Co-Op`, `Fantasy`. **NADA MONTADO.**
+- **POR QUE ELE:** é um dos três sócios e o único endereço que a casa publica.
+- **FRASES DA CASA, literais:**
+  - *"Burst2Flame Games was founded by three friends who spent years making games on the side in their spare time."* — `https://burst2flame.com/`
+  - *"The game's success allowed them to finally quit their day jobs and focus full-time on crafting immersive gaming experiences."* — `https://burst2flame.com/`
+  - Reserva, da Steam: *"you control up to 6 heroes, solo or through online co-op, venturing forth in adventures set in a high-fantasy, low-poly world."* — `https://store.steampowered.com/app/1330000/`
+- **FORA DOS EUA? NÃO.** **A frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `burst2flame OR Burst2Flame OR "Stolen Realm" OR "Jason Jolley"` → **`{}`**; `from:/to:(burst2flame.com)` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS, e é a ficha mais fraca das quatro:**
+  1. **Ele é programador** (*"I mostly write code"*), não arte.
+  2. O estilo é **low-poly** (*"a high-fantasy, low-poly world"*), longe do personagem estilizado de alto detalhe do portfólio do Vini; o gancho é a personalização de herói (*"extreme character customization"*, na mesma entrevista).
+  3. Casa de três sócios; o projeto novo é *Stolen Realm Survivors*, no mesmo estilo. Sem vaga.
