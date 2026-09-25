@@ -55,11 +55,11 @@ leitura do coque em preto, o passe está forte demais.
 Quando um addon próprio deixa de ser "addon de terceiro" fica a seu critério,
 mas os dois estão prontos e testados na 5.2, caso a sessão precise:
 
-- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/addons/groom_hide/` —
+- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/addons/groom_hide/`:
   esconde guias no Sculpt Curves (H, Shift+H, Alt+H). É o que aparece no painel
   Groom Hide da screenshot.
-- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/addons/groom_select/` —
+- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/addons/groom_select/`:
   seleciona guias por atributo.
-- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/pesquisa_hair_geonodes.md` —
+- `Estudos Extras Curriculares/Blender Hair Geometry Nodes/pesquisa_hair_geonodes.md`:
   a pesquisa de material. O artigo do tenp-kukan (seção 2.2) é o dicionário
   node a node da Essentials, útil se algum node se comportar de forma estranha.
