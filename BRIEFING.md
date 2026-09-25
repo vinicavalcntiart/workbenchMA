@@ -9024,3 +9024,11 @@ A semana do limite vira na quarta 30/09 às 04:00 BRT (07:00 UTC). Terça é par
 10. Gigantic Duck, 3D Artist (Bombergrounds, remoto).
 Descartadas na mesma checagem: Framestore Blender Generalist ("only open to those in the UK or with the right to work in the UK", "We cannot provide visas"), Stellar Surfacing ("Legally eligible to work in British Columbia"), NEOWIZ (anúncio em coreano, presencial), Skydance Grooming TD e Framestore Montreal (404), Reality Games (presencial em Cracóvia).
 Execução: sexta 10:00 UTC (lembrete agendado). Sem captcha vai direto; com captcha vai em ondas de até 5 para o clique do Vini.
+
+## ORDEM DO VINI, 25/09 ~18h50 UTC: LINK SÓ COM CAPTCHA VISÍVEL
+
+Palavras dele: *"vc só manda o link SE TIVER CAPTCHA. PONTO. n aceito mais nenhuma regra"*.
+- Formulário sem caixa "sou humano" visível: o maestro preenche E ENVIA sozinho. Nada de mandar link "para garantir".
+- Link para o Vini só quando houver captcha visível (caixa ou desafio de imagem).
+- Se o site recusar o envio do maestro sem mostrar captcha (ex.: "spam" por pontuação invisível), o maestro registra e segue para a próxima porta, sem link e sem pedir nada ao Vini.
+- Não inventar regra nova, não explicar regra, não dar ordem.
