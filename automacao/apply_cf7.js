@@ -88,7 +88,9 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
 
     if (!SUBMIT) { log('DRY RUN'); await b.close(); return; }
 
-    const sb = await p.$('form.wpcf7-form input[type="submit"]:visible, form.wpcf7-form button[type="submit"]:visible');
+    // 25/09 (Frima): o botao pode ser <button class="wpcf7-submit"> SEM type, que e submit por padrao
+    // e nao casa com [type="submit"]; a classe wpcf7-submit e a marca do proprio CF7.
+    const sb = await p.$('form.wpcf7-form input[type="submit"]:visible, form.wpcf7-form button[type="submit"]:visible, form.wpcf7-form .wpcf7-submit:visible');
     if (!sb) { log('SEM BOTAO DE ENVIO VISIVEL'); await b.close(); return; }
     await sb.click();
     // O CF7 responde por AJAX; 40 s cobre upload de anexo grande.
@@ -102,7 +104,12 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
     const cls = await p.$eval('form.wpcf7-form', e => e.className).catch(() => '');
     const msg = (await p.$eval('.wpcf7-response-output', e => e.innerText).catch(() => '')).replace(/\s+/g, ' ');
     const invalidos = await p.$$eval('.wpcf7-not-valid-tip', es => es.map(e => (e.closest('[class*="wpcf7-form-control-wrap"]') || {}).dataset?.name || e.innerText.trim()));
-    const ok = /wpcf7-mail-sent-ok/.test(cls);
+    // 21/09 (David Grette, CF7 6.1.7): a classe de sucesso passou a ser so `sent` (sem `wpcf7-mail-sent-ok`),
+    // e o script deu FALSO NEGATIVO com o servidor devolvendo status mail_sent e 'Done!'. Veredito agora:
+    // status REST mail_sent OU classe mail-sent-ok OU classe `sent` isolada. (Portado da copia de
+    // /home/user/apply para esta, a do repositorio, em 25/09: as duas tinham divergido.)
+    const restOk = respostasCF7.some(r => /"status"\s*:\s*"mail_sent"/.test(r.corpo));
+    const ok = restOk || /wpcf7-mail-sent-ok/.test(cls) || /(^|\s)sent(\s|$)/.test(cls);
     log(ok ? 'SUBMITTED OK' : 'NAO ENVIADO', '| classe:', cls, '| mensagem:', msg, '| campos invalidos:', JSON.stringify(invalidos));
     // O VEREDITO LITERAL. MEDIDO EM 16/09 NA GIGANTIC DUCK: a resposta REST nem sempre e
     // capturada (o tema pode usar admin-ajax), MAS o CF7 carimba o status na CLASSE DO
