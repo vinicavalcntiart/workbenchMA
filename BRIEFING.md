@@ -9001,8 +9001,9 @@ A semana do limite vira na quarta 30/09 às 04:00 BRT (07:00 UTC). Terça é par
 
 **Terça 29/09:**
 - 04:00 UTC: religar as redes de :12, :27 e :57 e passar o Joe para cada 2h (volta ao normal na quarta).
-- Manhã: lote do clique. Até 5 navegadores na nuvem abertos com 24h de porta, tudo preenchido e conferido; o link vai para o Vini no chat, ele clica tudo de uma vez, o maestro confere a confirmação e fecha.
+- **Lote do clique às 22h de Brasília (01:00 UTC de 30/09), horário escolhido pelo Vini em 25/09.** Preparação a partir das 23:30 UTC de terça. Até 5 navegadores na nuvem abertos com 24h de porta, tudo preenchido e conferido; o link vai para o Vini no chat, ele clica tudo de uma vez, o maestro confere a confirmação e fecha.
 - Caça larga em três frentes paralelas: (1) Workday e Greenhouse das casas grandes e da lista de 757 quadros com janela desde segunda; (2) quadros nacionais e agregadores (LinkedIn por região, Hitmarker, Jobylon, planilha da comunidade; ArtStation só se o Cloudflare deixar); (3) catálogos de estúdio por país que renderam pessoas (ICEX, PARP) para o Joe.
 - Joe a cada 2h com carta na mesma rodada, no formato novo (negrito, frase do portfólio, ☺️ e 😊).
 - Rodada extra de formulários às 13h e 19h UTC além das de 2h.
-- Fechamento 23h30 com o placar; quarta 07:00 UTC desliga os extras.
+- Fechamento 23h30 com o placar; o lote das 01:00 UTC entra na conta de terça no registro. Quarta 07:00 UTC desliga os extras.
+- Lembretes agendados nesta sessão: renovar CV 26/09 12:00 UTC, preparação 28/09 22:00 UTC, montar o lote 29/09 23:30 UTC.
