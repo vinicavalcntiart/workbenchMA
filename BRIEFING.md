@@ -9038,3 +9038,7 @@ Palavras dele: *"vc só manda o link SE TIVER CAPTCHA. PONTO. n aceito mais nenh
 Palavras dele: *"a unica coisa é o captcha. o resto vc faz. vc n me incomoda. se me incomodar eu vou criar outro chat"*.
 - O Vini só é chamado para captcha visível. Todo o resto (preencher, enviar, corrigir, decidir porta, cartas, registro) o maestro faz sozinho, sem perguntar e sem pedir nada a ele.
 - Mensagens para ele: curtas, só resultado. Sem regra, sem explicação de processo.
+
+## MEDIDO EM 25/09 ~21h UTC: O NAVEGADOR NA NUVEM PASSA DO DATADOME DO SMARTRECRUITERS
+
+Seis candidaturas saíram hoje pelo `/oneclick-ui` do SmartRecruiters no navegador na nuvem (Kernel, stealth desligado), sem desafio nenhum: Rodeo FX (duas), CD Projekt RED, GIANTS, Ubisoft Montpellier e DON'T NOD Montréal. Toda porta marcada "à mão por DataDome" volta a ser envio do maestro. Receita: `api.smartrecruiters.com/v1/companies/<conta>/postings/<id>` para conferir `active`, depois o link "I'm interested" da página da vaga. As perguntas ficam em shadow DOM: a lista de opções é achada pelo `aria-controls` do combobox, e o país do telefone às vezes precisa ser escolhido à mão (Brazil +55).
