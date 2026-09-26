@@ -3,13 +3,13 @@
 Síntese de trabalho, escrita a partir das fontes desta pasta. Cada afirmação
 aponta o arquivo de onde veio, em `[colchetes]`. O que não tem colchete é
 julgamento meu e deve ser tratado como opinião de quem leu tudo isso, não como
-fonte. Última revisão: 2026-09-26.
+fonte. Última revisão: 2026-09-26, com as transcrições das palestras incorporadas.
 
 Caminhos abreviados:
 `manual/` = `../blender-manual-5.2-lts/manual/`,
 `api/` = `../blender-python-api-5.2/api/`,
 `int/` = `essentials-internals/`, `dev/` = `blender-dev/`,
-`com/` = `comunidade/`, `jp/` = `blogs-jp-zh/`.
+`com/` = `comunidade/`, `jp/` = `blogs-jp-zh/`, `pal/` = `palestras/`.
 
 ---
 
@@ -73,6 +73,137 @@ isso que um groomer de produção pediu aos devs em 2022: uma cadeia em camadas
 de guia, interpolação e clump, controlando cada nível, porque "só adicionar
 ruído ainda parece procedural" [com/devtalk-24686-...md, post 1]. Os nodes
 saíram desenhados para isso.
+
+---
+
+## 2b. Como quem faz groom de verdade trabalha
+
+Isto vem das transcrições das palestras da Blender Conference, de artistas
+que entregaram groom realista em produção com hair curves. É a parte mais
+valiosa da base, porque ninguém escreve isso em manual.
+
+**Prepare o scalp antes de qualquer guia**
+[pal/bcon2023-daniel-bystedt-...md; pal/bcon2025-kerstin-schmidbauer-...md]:
+
+- **Hair cap**: uma malha de crescimento separada da cabeça, para o groom não
+  depender da topologia nem da densidade do personagem. É ela que entra como
+  Surface nos modificadores.
+- **Topologia e UV fechadas antes do groom.** As curvas vivem no espaço UV.
+  UV sobreposta dá "Invalid Surface UVs"; UDIM pode, overlap não. Costura
+  central "quase fundida" por espelhamento se resolve com Merge by Distance no
+  editor de UV.
+- **Risca**: vertex group marcando a linha da risca e uma hard edge dividindo
+  a cap em duas metades. Isso é o que faz a interpolação respeitar a risca.
+- **Referência por subespécie e estação**, antes de abrir o Blender. Misturar
+  fotos de indivíduos, regiões ou estações diferentes dá um híbrido que não
+  convence. Desenhe por cima da referência onde o pelo muda de tipo e a
+  direção, para não decidir isso já em 3D.
+
+**Esculpir guias**
+[pal/bcon2023-daniel-bystedt-...md; pal/bcon2025-kerstin-schmidbauer-...md]:
+
+- Comece com **2 pontos por guia** para definir direção no corpo inteiro;
+  suba para 3, e só cabelo comprido precisa de 8. Guia de 8 pontos no início
+  se emaranha e atravessa a malha. Quando precisar de forma detalhada, Resample
+  Curve para 15 pontos e aplique.
+- Comb em modo **Projected**, não esférico, para pentear atrás sem a esfera
+  bloquear.
+- **Scale Uniform desligado** no Grow: o fio continua na direção existente em
+  vez de escalar da raiz.
+- Paint Selection em modo **Curve** para selecionar fio inteiro; serve para
+  encher comprimento de uma área e ajustar depois.
+- Guia nova com nada selecionado nasce sozinha selecionada: penteie a direção
+  dela antes que as vizinhas comecem a interpolar.
+- Densidade de guias **uniforme e sem buraco**. Buraco vira careca, e
+  deformação de rig amplia o buraco. Excesso vira blob e render lento.
+- Guia presa dentro da malha em área fina: Puff; se não sair, apague e
+  recrie. "Não lute contra o sistema."
+- Mudou topologia depois do groom: **Snap to Nearest Surface** no Sculpt
+  resolve quase tudo.
+
+**Organização do groom**
+[pal/bcon2026-steve-chow-...md; pal/bcon2025-kerstin-schmidbauer-...md]:
+
+- Regiões por **grandes formas**, não por variação. Um gato inteiro em duas
+  regiões, cabeça e corpo, com a linha de corte atrás das bochechas seguindo a
+  estrutura do modelo. Os modificadores cuidam de densidade, espessura e forma;
+  no sistema antigo cada variação exigia mais uma camada.
+- Região por **vertex group**, não por textura: é dado do próprio modelo e não
+  quebra quando o arquivo muda de lugar. Textura só onde precisa de resolução
+  maior que a malha.
+- Muitos vertex groups por região e por efeito é normal. Desligue o
+  Interpolate enquanto pinta pesos.
+- **Pinte em camadas coloridas** para depurar: Store Named Attribute por
+  camada, cor no shader, e você enxerga onde cada clump está. O mesmo truque
+  serviu para discutir o groom com cliente por e-mail.
+
+**A ordem que funcionou em produção**
+[pal/bcon2026-steve-chow-...md; pal/bcon2023-daniel-bystedt-...md]:
+
+- Corpo de gato: **Clump, depois Curl, depois Frizz**. Muitos clumps, cada um
+  suave; ponta afiada lê como falso na hora. Frizz por último e sutil; forte
+  fica sujo.
+- **Existing Guide Map desligado no Clump e no Curl.** Chow desligou só no
+  Clump e o Curl seguiu as guias esparsas antigas, dando "permanente"
+  indesejado. Os dois têm que falar a mesma língua. Com o toggle desligado, a
+  densidade dos clumps sai da Guide Distance, sem plantar guia à mão.
+- Bystedt usou **duas camadas de clump**, largo e fino, cada uma com seu
+  seed e seu ruído, para não sobrepor igual.
+- Noise com **Offset per Curve ligado** e escala reduzida ao longo da curva
+  para não estourar o comprimento. Roll na ponta, porque cabelo real não
+  termina reto.
+- Trim com **aleatoriedade de comprimento** é citado por dois palestrantes como
+  o que separa real de uniforme.
+- Modificador de comprimento na posição errada da stack quebra tudo que vem
+  depois, em silêncio.
+
+**Fendas no pelo** [pal/bcon2026-steve-chow-...md]: onde a pele estica, o pelo
+abre. Sem isso o gato vira pelúcia. Trim controlado por **textura** pintada,
+porque vertex weight fica grosseiro na densidade da malha. Quatro regras
+juntas: distribuição aleatória, comprimentos variados, ponta afunilada em
+diamante, curvatura variada. Armadilha: ligar a textura no painel não faz
+nada; tem que entrar no editor e ligar no input certo.
+
+**Undercoat e topcoat** [pal/bcon2026-steve-chow-...md]: gato tem duas
+pelagens. O topcoat, mais longo, mais aleatório e com muito menos fios, entra
+só depois que o shader do undercoat fechou, senão é retrabalho. Ele existe
+para suavizar a silhueta e dar a borda fofa. "Seis milhões de fios bagunçados
+não são melhores que seis mil com camadas boas."
+
+**Densidade por textura** [pal/bcon2023-daniel-bystedt-...md]: mapa pintado
+com branco denso, cinza 50% base, preto sem cabelo, ligado no Density Mask
+por Image Texture, Named Attribute do UV e Color Ramp cortando logo acima de
+0,5. Mais um multiplicador global de densidade exposto no modificador, para
+baixar tudo quando a cena pesa.
+
+**A risca** [pal/bcon2023-daniel-bystedt-...md]: copie a cap, apague tudo
+menos a linha central pelo peso "Parting Center", e cole as raízes próximas
+nessa linha com Mix. Para o volume que sobe na risca: Deform Curves on Surface
+com Surface Normal Displacement, dirigido por Geometry Proximity até a linha
+central, Map Range e Float Curve, sem mexer nas raízes exatas.
+
+**Shading de pelo denso** [pal/bcon2026-steve-chow-...md]: camada interna
+escurece e parece sujeira. Transparent BSDF misturado por Light Path para a
+sombra ficar um pouco transparente. Gradiente raiz-ponta por cima. Se o
+viewport não atualizar depois de mexer no shader, alterne Solid e Rendered.
+
+**Groom como entrega de produção** [pal/bcon2026-christopher-strommer-...md]:
+variações de groom para o cliente escolher à distância; fios soltos de
+propósito para pegar luz de contraluz; passes de cabelo com hold-out, com
+Shadow Catcher e sem hold-out para a composição; crescimento de cabelo é um
+keyframe de 15 frames no Trim.
+
+**Hair cards a partir do groom** [pal/bcon2024-sara-matsumoto-...md]: mecha
+renderizada em câmera ortográfica gera as texturas; Curve to Mesh com perfil
+Arc de 3 lados para card e Spiral para tubo; Curve Tangent no Tilt para o card
+seguir a superfície; UV construída com Capture Attribute e Store Named
+Attribute; raiz colada por Geometry Proximity. O resultado continua editável
+com os mesmos pincéis e assets. A palestrante passou a preferir mesh a curvas
+para render de personagem completo, por estabilidade e tempo.
+
+**Shape key de cabelo** [pal/bcon2025-kerstin-schmidbauer-...md]: não existe
+nativo. Set Position com Mix entre a Position de dois objetos de cabelo por
+Sample Index, fator num driver. Quebra se a contagem de curvas mudar.
 
 ---
 
@@ -382,6 +513,14 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Viewport travando | Densidade alta com deformadores ligados | Viewport Amount baixo; desligar deformadores ao esculpir; dividir em objetos | com/blenderartists-1460445-...md |
 | Pincel não faz nada | Use Sculpt Collision em malha densa | Desligar colisão, resolver com Shrinkwrap depois | com/blenderartists-1460445-...md |
 | Textura não aparece nas curvas | Mapeamento de UV das curvas | Ver post dedicado | jp/ja-tenp-kukan-2025-10-hair-curves-problema-textura-nao-aparece.md |
+| "Invalid surface UVs" com UV certa | UV sobreposta, ou costura espelhada quase fundida | Sem overlap (UDIM pode); Merge by Distance no UV Editor | pal/bcon2025-kerstin-schmidbauer-...md |
+| Careca depois do rig deformar | Buraco na densidade de guias, ampliado pela deformação | Adicionar guias no vazio; densidade de guias uniforme | pal/bcon2025-kerstin-schmidbauer-...md |
+| Pelo nascendo dentro da boca | Superfície fina embaixo do pincel de densidade | Separar essa parte da malha; sem superfície, sem pelo | pal/bcon2025-kerstin-schmidbauer-...md |
+| Marca escura de comprimento desigual | Grow/Shrink não pegou todos os fios | Apagar e re-adicionar com o pincel Density na área | pal/bcon2025-kerstin-schmidbauer-...md |
+| Curvas flutuando após editar topologia | UV intacta, superfície mudou | Snap to Nearest Surface no Sculpt | pal/bcon2025-kerstin-schmidbauer-...md |
+| Curl virou "permanente" | Curl seguindo guide map antigo | Existing Guide Map desligado no Clump e no Curl | pal/bcon2026-steve-chow-...md |
+| Textura ligada no Trim não faz nada | Input não ligado no editor | Entrar no grupo e ligar a textura no input certo | pal/bcon2026-steve-chow-...md |
+| Pelo denso escuro por dentro | Sombra sólida entre camadas | Transparent BSDF por Light Path no shader | pal/bcon2026-steve-chow-...md |
 | Sim explode | Curva dentro de collider em rest; escala do objeto | Shrinkwrap antes; aplicar escala | com/devtalk-45449-...md |
 | Sim com jitter | Filhos regenerados por frame | Simular guias, interpolar depois | com/devtalk-45449-...md |
 
