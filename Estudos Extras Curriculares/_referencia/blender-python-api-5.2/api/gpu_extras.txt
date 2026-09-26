@@ -1,0 +1,7 @@
+GPU Utilities (gpu_extras)
+
+Submodules
+
+gpu_extras submodule (gpu_extras.batch)
+
+gpu_extras submodule (gpu_extras.presets)

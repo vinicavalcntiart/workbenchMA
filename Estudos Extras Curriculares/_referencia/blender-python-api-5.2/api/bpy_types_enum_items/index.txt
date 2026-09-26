@@ -1,0 +1,419 @@
+Shared Enum Items
+
+Id Type Items
+
+Object Mode Items
+
+Workspace Object Mode Items
+
+Object Empty Drawtype Items
+
+Object Gpencil Type Items
+
+Metaelem Type Items
+
+Color Space Convert Default Items
+
+Proportional Falloff Items
+
+Proportional Falloff Curve Only Items
+
+Snap Source Items
+
+Snap Element Items
+
+Snap Animation Element Items
+
+Curve Fit Method Items
+
+Mesh Select Mode Items
+
+Mesh Select Mode Uv Items
+
+Mesh Delimit Mode Items
+
+Mesh Walk Delimit Edge Loop Items
+
+Mesh Walk Delimit Edge Ring Items
+
+Mesh Walk Delimit Face Loop Items
+
+Space Graph Mode Items
+
+Space File Browse Mode Items
+
+Space Sequencer View Type Items
+
+Space Type Items
+
+Space Image Mode Items
+
+Space Image Mode All Items
+
+Space Action Mode Items
+
+Fileselect Params Sort Items
+
+Asset Access Items
+
+Region Type Items
+
+Region Panel Category Items
+
+Object Modifier Type Items
+
+Constraint Type Items
+
+Boidrule Type Items
+
+Strip Modifier Type Items
+
+Strip Video Modifier Type Items
+
+Strip Sound Modifier Type Items
+
+Strip Scale Method Items
+
+Object Shaderfx Type Items
+
+Modifier Triangulate Quad Method Items
+
+Modifier Triangulate Ngon Method Items
+
+Modifier Shrinkwrap Mode Items
+
+Shrinkwrap Type Items
+
+Shrinkwrap Face Cull Items
+
+Node Warning Type Items
+
+Image Type All Items
+
+Image Color Mode Items
+
+Image Color Depth Items
+
+Image Generated Type Items
+
+Normal Space Items
+
+Normal Swizzle Items
+
+Bake Save Mode Items
+
+Bake Margin Type Items
+
+Bake Target Items
+
+Views Format Items
+
+Views Format Multilayer Items
+
+Views Format Multiview Items
+
+Stereo3D Display Items
+
+Stereo3D Anaglyph Type Items
+
+Stereo3D Interlace Type Items
+
+Exr Codec Items
+
+Color Sets Items
+
+Beztriple Keyframe Type Items
+
+Beztriple Interpolation Mode Items
+
+Beztriple Interpolation Easing Items
+
+Fcurve Auto Smoothing Items
+
+Keyframe Handle Type Items
+
+Driver Target Rotation Mode Items
+
+Keyingset Path Grouping Items
+
+Keying Flag Items
+
+Keying Flag Api Items
+
+Fmodifier Type Items
+
+Motionpath Bake Location Items
+
+Motionpath Display Type Items
+
+Motionpath Range Items
+
+Event Value Items
+
+Event Direction Items
+
+Event Type Items
+
+Event Type Mask Items
+
+Operator Type Flag Items
+
+Operator Return Items
+
+Operator Property Tag Items
+
+Shared Automasking Flag Items
+
+Brush Sculpt Brush Type Items
+
+Brush Vertex Brush Type Items
+
+Brush Weight Brush Type Items
+
+Brush Gpencil Types Items
+
+Brush Gpencil Vertex Types Items
+
+Brush Gpencil Sculpt Types Items
+
+Brush Gpencil Weight Types Items
+
+Brush Curves Sculpt Brush Type Items
+
+Brush Image Brush Type Items
+
+Brush Curve Preset Items
+
+Grease Pencil Selectmode Items
+
+Stroke Depth Order Items
+
+Axis Xy Items
+
+Axis Xyz Items
+
+Axis Flag Xyz Items
+
+Symmetrize Direction Items
+
+Texture Type Items
+
+Light Type Items
+
+Lightprobes Type Items
+
+Unpack Method Items
+
+Object Type Items
+
+Object Rotation Mode Items
+
+Object Type Curve Items
+
+Rigidbody Object Type Items
+
+Rigidbody Object Shape Items
+
+Rigidbody Constraint Type Items
+
+Object Axis Items
+
+Object Axis Flip Items
+
+Bake Pass Type Items
+
+Bake Pass Filter Type Items
+
+Keymap Propvalue Items
+
+Operator Context Items
+
+Wm Report Items
+
+Wm Job Type Items
+
+Property Type Items
+
+Property Subtype Items
+
+Property Subtype String Items
+
+Property Subtype Number Items
+
+Property Subtype Number Array Items
+
+Property Unit Items
+
+Property Flag Items
+
+Property Flag Enum Items
+
+Property Override Flag Items
+
+Property Override Flag Collection Items
+
+Property String Search Flag Items
+
+Shading Type Items
+
+Navigation Mode Items
+
+Node Socket In Out Items
+
+Node Socket Type Items
+
+Node Tree Interface Item Type Items
+
+Node Socket Structure Type Items
+
+Node Math Items
+
+Mapping Type Items
+
+Node Vec Math Items
+
+Node Boolean Math Items
+
+Node Compare Operation Items
+
+Node Integer Math Items
+
+Node Float To Int Items
+
+Node Map Range Items
+
+Node Clamp Items
+
+Node Compositor Extension Items
+
+Node Compositor Interpolation Items
+
+Ramp Blend Items
+
+Prop Dynamicpaint Type Items
+
+Clip Editor Mode Items
+
+Icon Items
+
+Uilist Layout Type Items
+
+Linestyle Color Modifier Type Items
+
+Linestyle Alpha Modifier Type Items
+
+Linestyle Thickness Modifier Type Items
+
+Linestyle Geometry Modifier Type Items
+
+Window Cursor Items
+
+Dt Method Vertex Items
+
+Dt Method Edge Items
+
+Dt Method Loop Items
+
+Dt Method Poly Items
+
+Dt Mix Mode Items
+
+Dt Layers Select Src Items
+
+Dt Layers Select Dst Items
+
+Context Mode Items
+
+Preference Section Items
+
+Attribute Type Items
+
+Attrtype Items
+
+Attr Storage Type Items
+
+Color Attribute Type Items
+
+Attribute Type With Auto Items
+
+Attribute Domain Items
+
+Attribute Domain Edge Face Items
+
+Attribute Domain Only Mesh Items
+
+Attribute Domain Only Mesh No Edge Items
+
+Attribute Domain Only Mesh No Corner Items
+
+Attribute Domain Point Face Curve Items
+
+Attribute Domain Point Edge Face Curve Items
+
+Attribute Curves Domain Items
+
+Color Attribute Domain Items
+
+Attribute Domain Without Corner Items
+
+Attribute Domain With Auto Items
+
+Geometry Component Type Items
+
+Node Combsep Color Items
+
+Node Socket Data Type Items
+
+Node Geometry Curve Handle Side Items
+
+Node Geometry Mesh Circle Fill Type Items
+
+Volume Grid Data Type Items
+
+Collection Color Items
+
+Strip Color Items
+
+Subdivision Uv Smooth Items
+
+Subdivision Boundary Smooth Items
+
+Transform Orientation Items
+
+Velocity Unit Items
+
+Curves Type Items
+
+Curves Handle Type Items
+
+Curve Normal Mode Items
+
+Geometry Nodes Gizmo Color Items
+
+Geometry Nodes Linear Gizmo Draw Style Items
+
+Asset Import Method Items
+
+Particle Edit Hair Brush Items
+
+Particle Edit Disconnected Hair Brush Items
+
+Keyframe Paste Offset Items
+
+Keyframe Paste Offset Value Items
+
+Keyframe Paste Merge Items
+
+Transform Pivot Full Items
+
+Transform Mode Type Items
+
+Nla Mode Extend Items
+
+Nla Mode Blend Items
+
+Keyblock Type Items
+
+Asset Library Type Items
+
+File Path Foreach Flag Items

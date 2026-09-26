@@ -1,0 +1,1923 @@
+bpy_struct
+
+Subclasses
+
+AOV(bpy_struct)
+
+AOVs(bpy_prop_collection)
+
+ActionChannelbag(bpy_struct)
+
+ActionChannelbagFCurves(bpy_prop_collection)
+
+ActionChannelbagGroups(bpy_prop_collection)
+
+ActionChannelbags(bpy_prop_collection)
+
+ActionGroup(bpy_struct)
+
+ActionLayer(bpy_struct)
+
+ActionLayers(bpy_prop_collection)
+
+ActionPoseMarkers(bpy_prop_collection)
+
+ActionSlot(bpy_struct)
+
+ActionSlots(bpy_prop_collection)
+
+ActionStrip(bpy_struct)
+
+ActionStrips(bpy_prop_collection)
+
+Addon(bpy_struct)
+
+AddonPreferences(bpy_struct)
+
+Addons(bpy_prop_collection)
+
+AnimData(bpy_struct)
+
+AnimDataDrivers(bpy_prop_collection)
+
+AnimViz(bpy_struct)
+
+AnimVizMotionPaths(bpy_struct)
+
+AnnotationFrame(bpy_struct)
+
+AnnotationFrames(bpy_prop_collection)
+
+AnnotationLayer(bpy_struct)
+
+AnnotationLayers(bpy_prop_collection)
+
+AnnotationStroke(bpy_struct)
+
+AnnotationStrokePoint(bpy_struct)
+
+AnnotationStrokePoints(bpy_prop_collection)
+
+AnnotationStrokes(bpy_prop_collection)
+
+AnyType(bpy_struct)
+
+Area(bpy_struct)
+
+AreaSpaces(bpy_prop_collection)
+
+ArmatureBones(bpy_prop_collection)
+
+ArmatureConstraintTargets(bpy_prop_collection)
+
+ArmatureEditBones(bpy_prop_collection)
+
+AssetLibrary(bpy_struct)
+
+AssetLibraryCollection(bpy_prop_collection)
+
+AssetLibraryReference(bpy_struct)
+
+AssetMetaData(bpy_struct)
+
+AssetRepresentation(bpy_struct)
+
+AssetShelf(bpy_struct)
+
+AssetTag(bpy_struct)
+
+AssetTags(bpy_prop_collection)
+
+AssetWeakReference(bpy_struct)
+
+Attribute(bpy_struct)
+
+AttributeGroupCurves(bpy_prop_collection)
+
+AttributeGroupGreasePencil(bpy_prop_collection)
+
+AttributeGroupGreasePencilDrawing(bpy_prop_collection)
+
+AttributeGroupMesh(bpy_prop_collection)
+
+AttributeGroupPointCloud(bpy_prop_collection)
+
+BakeSettings(bpy_struct)
+
+BezierSplinePoint(bpy_struct)
+
+BlendData(bpy_struct)
+
+BlendDataActions(bpy_prop_collection)
+
+BlendDataAnnotations(bpy_prop_collection)
+
+BlendDataArmatures(bpy_prop_collection)
+
+BlendDataBrushes(bpy_prop_collection)
+
+BlendDataCacheFiles(bpy_prop_collection)
+
+BlendDataCameras(bpy_prop_collection)
+
+BlendDataCollections(bpy_prop_collection)
+
+BlendDataCurves(bpy_prop_collection)
+
+BlendDataFonts(bpy_prop_collection)
+
+BlendDataGreasePencilsV3(bpy_prop_collection)
+
+BlendDataHairCurves(bpy_prop_collection)
+
+BlendDataImages(bpy_prop_collection)
+
+BlendDataLattices(bpy_prop_collection)
+
+BlendDataLibraries(bpy_prop_collection)
+
+BlendDataLights(bpy_prop_collection)
+
+BlendDataLineStyles(bpy_prop_collection)
+
+BlendDataMasks(bpy_prop_collection)
+
+BlendDataMaterials(bpy_prop_collection)
+
+BlendDataMeshes(bpy_prop_collection)
+
+BlendDataMetaBalls(bpy_prop_collection)
+
+BlendDataMovieClips(bpy_prop_collection)
+
+BlendDataNodeTrees(bpy_prop_collection)
+
+BlendDataObjects(bpy_prop_collection)
+
+BlendDataPaintCurves(bpy_prop_collection)
+
+BlendDataPalettes(bpy_prop_collection)
+
+BlendDataParticles(bpy_prop_collection)
+
+BlendDataPointClouds(bpy_prop_collection)
+
+BlendDataProbes(bpy_prop_collection)
+
+BlendDataScenes(bpy_prop_collection)
+
+BlendDataScreens(bpy_prop_collection)
+
+BlendDataSounds(bpy_prop_collection)
+
+BlendDataSpeakers(bpy_prop_collection)
+
+BlendDataTexts(bpy_prop_collection)
+
+BlendDataTextures(bpy_prop_collection)
+
+BlendDataVolumes(bpy_prop_collection)
+
+BlendDataWindowManagers(bpy_prop_collection)
+
+BlendDataWorkSpaces(bpy_prop_collection)
+
+BlendDataWorlds(bpy_prop_collection)
+
+BlendFileColorspace(bpy_struct)
+
+BlendImportContext(bpy_struct)
+
+BlendImportContextItem(bpy_struct)
+
+BlendImportContextItems(bpy_prop_collection)
+
+BlendImportContextLibraries(bpy_prop_collection)
+
+BlendImportContextLibrary(bpy_struct)
+
+BlenderRNA(bpy_struct)
+
+BoidRule(bpy_struct)
+
+BoidSettings(bpy_struct)
+
+BoidState(bpy_struct)
+
+Bone(bpy_struct)
+
+BoneCollection(bpy_struct)
+
+BoneCollectionMemberships(bpy_prop_collection)
+
+BoneCollections(bpy_prop_collection)
+
+BoneColor(bpy_struct)
+
+BoolAttributeValue(bpy_struct)
+
+BrushCapabilities(bpy_struct)
+
+BrushCapabilitiesImagePaint(bpy_struct)
+
+BrushCapabilitiesSculpt(bpy_struct)
+
+BrushCapabilitiesVertexPaint(bpy_struct)
+
+BrushCapabilitiesWeightPaint(bpy_struct)
+
+BrushCurvesSculptSettings(bpy_struct)
+
+BrushGpencilSettings(bpy_struct)
+
+ByteColorAttributeValue(bpy_struct)
+
+ByteIntAttributeValue(bpy_struct)
+
+CacheFileLayer(bpy_struct)
+
+CacheFileLayers(bpy_prop_collection)
+
+CacheObjectPath(bpy_struct)
+
+CacheObjectPaths(bpy_prop_collection)
+
+CameraBackgroundImage(bpy_struct)
+
+CameraBackgroundImages(bpy_prop_collection)
+
+CameraDOFSettings(bpy_struct)
+
+CameraStereoData(bpy_struct)
+
+ChannelDriverVariables(bpy_prop_collection)
+
+ChildParticle(bpy_struct)
+
+ClothCollisionSettings(bpy_struct)
+
+ClothSettings(bpy_struct)
+
+ClothSolverResult(bpy_struct)
+
+CollectionChild(bpy_struct)
+
+CollectionChildren(bpy_prop_collection)
+
+CollectionExport(bpy_struct)
+
+CollectionExports(bpy_prop_collection)
+
+CollectionImport(bpy_struct)
+
+CollectionLightLinking(bpy_struct)
+
+CollectionObject(bpy_struct)
+
+CollectionObjects(bpy_prop_collection)
+
+CollisionSettings(bpy_struct)
+
+ColorManagedDisplaySettings(bpy_struct)
+
+ColorManagedInputColorspaceSettings(bpy_struct)
+
+ColorManagedSequencerColorspaceSettings(bpy_struct)
+
+ColorManagedViewSettings(bpy_struct)
+
+ColorMapping(bpy_struct)
+
+ColorRamp(bpy_struct)
+
+ColorRampElement(bpy_struct)
+
+ColorRampElements(bpy_prop_collection)
+
+ConsoleLine(bpy_struct)
+
+Constraint(bpy_struct)
+
+ConstraintTarget(bpy_struct)
+
+ConstraintTargetBone(bpy_struct)
+
+Context(bpy_struct)
+
+CryptomatteEntry(bpy_struct)
+
+CurveMap(bpy_struct)
+
+CurveMapPoint(bpy_struct)
+
+CurveMapPoints(bpy_prop_collection)
+
+CurveMapping(bpy_struct)
+
+CurvePaintSettings(bpy_struct)
+
+CurvePoint(bpy_struct)
+
+CurveProfile(bpy_struct)
+
+CurveProfilePoint(bpy_struct)
+
+CurveProfilePoints(bpy_prop_collection)
+
+CurveSlice(bpy_struct)
+
+CurveSplines(bpy_prop_collection)
+
+Depsgraph(bpy_struct)
+
+DepsgraphObjectInstance(bpy_struct)
+
+DepsgraphUpdate(bpy_struct)
+
+DisplaySafeAreas(bpy_struct)
+
+DopeSheet(bpy_struct)
+
+Driver(bpy_struct)
+
+DriverTarget(bpy_struct)
+
+DriverVariable(bpy_struct)
+
+DynamicPaintBrushSettings(bpy_struct)
+
+DynamicPaintCanvasSettings(bpy_struct)
+
+DynamicPaintSurface(bpy_struct)
+
+DynamicPaintSurfaces(bpy_prop_collection)
+
+EQCurveMappingData(bpy_struct)
+
+EditBone(bpy_struct)
+
+EffectorWeights(bpy_struct)
+
+EnumPropertyItem(bpy_struct)
+
+Event(bpy_struct)
+
+FCurve(bpy_struct)
+
+FCurveKeyframePoints(bpy_prop_collection)
+
+FCurveModifiers(bpy_prop_collection)
+
+FCurveSample(bpy_struct)
+
+FFmpegSettings(bpy_struct)
+
+FModifier(bpy_struct)
+
+FModifierEnvelopeControlPoint(bpy_struct)
+
+FModifierEnvelopeControlPoints(bpy_prop_collection)
+
+FieldSettings(bpy_struct)
+
+FileAssetSelectIDFilter(bpy_struct)
+
+FileBrowserFSMenuEntry(bpy_struct)
+
+FileHandler(bpy_struct)
+
+FileSelectEntry(bpy_struct)
+
+FileSelectIDFilter(bpy_struct)
+
+FileSelectParams(bpy_struct)
+
+Float2AttributeValue(bpy_struct)
+
+Float4AttributeValue(bpy_struct)
+
+Float4x4AttributeValue(bpy_struct)
+
+FloatAttributeValue(bpy_struct)
+
+FloatColorAttributeValue(bpy_struct)
+
+FloatVectorAttributeValue(bpy_struct)
+
+FloatVectorValueReadOnly(bpy_struct)
+
+FluidDomainSettings(bpy_struct)
+
+FluidEffectorSettings(bpy_struct)
+
+FluidFlowSettings(bpy_struct)
+
+ForeachGeometryElementGenerationItem(bpy_struct)
+
+ForeachGeometryElementInputItem(bpy_struct)
+
+ForeachGeometryElementMainItem(bpy_struct)
+
+FreestyleLineSet(bpy_struct)
+
+FreestyleModuleSettings(bpy_struct)
+
+FreestyleModules(bpy_prop_collection)
+
+FreestyleSettings(bpy_struct)
+
+Function(bpy_struct)
+
+GPencilInterpolateSettings(bpy_struct)
+
+GPencilSculptGuide(bpy_struct)
+
+GPencilSculptSettings(bpy_struct)
+
+GeometryNodeClosureToListItem(bpy_struct)
+
+GeometryNodeClosureToListItems(bpy_prop_collection)
+
+GeometryNodeFieldToGridItem(bpy_struct)
+
+GeometryNodeFieldToGridItems(bpy_prop_collection)
+
+GeometryNodeFieldToListItem(bpy_struct)
+
+GeometryNodeFieldToListItems(bpy_prop_collection)
+
+Gizmo(bpy_struct)
+
+GizmoGroup(bpy_struct)
+
+GizmoGroupProperties(bpy_struct)
+
+GizmoProperties(bpy_struct)
+
+Gizmos(bpy_prop_collection)
+
+GreasePencilDashModifierSegment(bpy_struct)
+
+GreasePencilDrawing(bpy_struct)
+
+GreasePencilFrame(bpy_struct)
+
+GreasePencilFrames(bpy_prop_collection)
+
+GreasePencilLayerMask(bpy_struct)
+
+GreasePencilLayerMasks(bpy_prop_collection)
+
+GreasePencilTimeModifierSegment(bpy_struct)
+
+GreasePencilTreeNode(bpy_struct)
+
+GreasePencilv3LayerGroup(bpy_prop_collection)
+
+GreasePencilv3Layers(bpy_prop_collection)
+
+Header(bpy_struct)
+
+Histogram(bpy_struct)
+
+ID(bpy_struct)
+
+IDMaterials(bpy_prop_collection)
+
+IDOverrideLibrary(bpy_struct)
+
+IDOverrideLibraryProperties(bpy_prop_collection)
+
+IDOverrideLibraryProperty(bpy_struct)
+
+IDOverrideLibraryPropertyOperation(bpy_struct)
+
+IDOverrideLibraryPropertyOperations(bpy_prop_collection)
+
+IDPropertyWrapPtr(bpy_struct)
+
+IKParam(bpy_struct)
+
+ImageFormatSettings(bpy_struct)
+
+ImagePackedFile(bpy_struct)
+
+ImagePreview(bpy_struct)
+
+ImageUser(bpy_struct)
+
+IndexSwitchItem(bpy_struct)
+
+Int2AttributeValue(bpy_struct)
+
+IntAttributeValue(bpy_struct)
+
+KeyConfig(bpy_struct)
+
+KeyConfigPreferences(bpy_struct)
+
+KeyConfigurations(bpy_prop_collection)
+
+KeyMap(bpy_struct)
+
+KeyMapItem(bpy_struct)
+
+KeyMapItems(bpy_prop_collection)
+
+KeyMaps(bpy_prop_collection)
+
+Keyframe(bpy_struct)
+
+KeyingSet(bpy_struct)
+
+KeyingSetInfo(bpy_struct)
+
+KeyingSetPath(bpy_struct)
+
+KeyingSetPaths(bpy_prop_collection)
+
+KeyingSets(bpy_prop_collection)
+
+KeyingSetsAll(bpy_prop_collection)
+
+LatticePoint(bpy_struct)
+
+LayerCollection(bpy_struct)
+
+LayerObjects(bpy_prop_collection)
+
+LayoutPanelState(bpy_struct)
+
+LibraryWeakReference(bpy_struct)
+
+Lightgroup(bpy_struct)
+
+Lightgroups(bpy_prop_collection)
+
+LineStyleAlphaModifiers(bpy_prop_collection)
+
+LineStyleColorModifiers(bpy_prop_collection)
+
+LineStyleGeometryModifiers(bpy_prop_collection)
+
+LineStyleModifier(bpy_struct)
+
+LineStyleTextureSlots(bpy_prop_collection)
+
+LineStyleThicknessModifiers(bpy_prop_collection)
+
+Linesets(bpy_prop_collection)
+
+LoopColors(bpy_prop_collection)
+
+Macro(bpy_struct)
+
+MaskLayer(bpy_struct)
+
+MaskLayers(bpy_prop_collection)
+
+MaskParent(bpy_struct)
+
+MaskSpline(bpy_struct)
+
+MaskSplinePoint(bpy_struct)
+
+MaskSplinePointUW(bpy_struct)
+
+MaskSplinePoints(bpy_prop_collection)
+
+MaskSplines(bpy_prop_collection)
+
+MaterialGPencilStyle(bpy_struct)
+
+MaterialLineArt(bpy_struct)
+
+MaterialSlot(bpy_struct)
+
+Menu(bpy_struct)
+
+MeshAutomaskingSettings(bpy_struct)
+
+MeshEdge(bpy_struct)
+
+MeshEdges(bpy_prop_collection)
+
+MeshLoop(bpy_struct)
+
+MeshLoopColor(bpy_struct)
+
+MeshLoopColorLayer(bpy_struct)
+
+MeshLoopTriangle(bpy_struct)
+
+MeshLoopTriangles(bpy_prop_collection)
+
+MeshLoops(bpy_prop_collection)
+
+MeshNormalValue(bpy_struct)
+
+MeshPolygon(bpy_struct)
+
+MeshPolygons(bpy_prop_collection)
+
+MeshSkinVertex(bpy_struct)
+
+MeshSkinVertexLayer(bpy_struct)
+
+MeshStatVis(bpy_struct)
+
+MeshUVLoop(bpy_struct)
+
+MeshUVLoopLayer(bpy_struct)
+
+MeshVertex(bpy_struct)
+
+MeshVertices(bpy_prop_collection)
+
+MetaBallElements(bpy_prop_collection)
+
+MetaElement(bpy_struct)
+
+Modifier(bpy_struct)
+
+MotionPath(bpy_struct)
+
+MotionPathVert(bpy_struct)
+
+MovieClipProxy(bpy_struct)
+
+MovieClipScopes(bpy_struct)
+
+MovieClipUser(bpy_struct)
+
+MovieReconstructedCamera(bpy_struct)
+
+MovieTracking(bpy_struct)
+
+MovieTrackingCamera(bpy_struct)
+
+MovieTrackingDopesheet(bpy_struct)
+
+MovieTrackingMarker(bpy_struct)
+
+MovieTrackingMarkers(bpy_prop_collection)
+
+MovieTrackingObject(bpy_struct)
+
+MovieTrackingObjectPlaneTracks(bpy_prop_collection)
+
+MovieTrackingObjectTracks(bpy_prop_collection)
+
+MovieTrackingObjects(bpy_prop_collection)
+
+MovieTrackingPlaneMarker(bpy_struct)
+
+MovieTrackingPlaneMarkers(bpy_prop_collection)
+
+MovieTrackingPlaneTrack(bpy_struct)
+
+MovieTrackingPlaneTracks(bpy_prop_collection)
+
+MovieTrackingReconstructedCameras(bpy_prop_collection)
+
+MovieTrackingReconstruction(bpy_struct)
+
+MovieTrackingSettings(bpy_struct)
+
+MovieTrackingStabilization(bpy_struct)
+
+MovieTrackingTrack(bpy_struct)
+
+MovieTrackingTracks(bpy_prop_collection)
+
+NDOFMotionEventData(bpy_struct)
+
+NlaStrip(bpy_struct)
+
+NlaStripFCurves(bpy_prop_collection)
+
+NlaStrips(bpy_prop_collection)
+
+NlaTrack(bpy_struct)
+
+NlaTracks(bpy_prop_collection)
+
+Node(bpy_struct)
+
+NodeClosureInputItem(bpy_struct)
+
+NodeClosureInputItems(bpy_prop_collection)
+
+NodeClosureOutputItem(bpy_struct)
+
+NodeClosureOutputItems(bpy_prop_collection)
+
+NodeCombineBundleItem(bpy_struct)
+
+NodeCombineBundleItems(bpy_prop_collection)
+
+NodeCompositorFileOutputItem(bpy_struct)
+
+NodeCompositorFileOutputItems(bpy_prop_collection)
+
+NodeEnumItem(bpy_struct)
+
+NodeEvaluateClosureInputItem(bpy_struct)
+
+NodeEvaluateClosureInputItems(bpy_prop_collection)
+
+NodeEvaluateClosureOutputItem(bpy_struct)
+
+NodeEvaluateClosureOutputItems(bpy_prop_collection)
+
+NodeFunctionFormatStringItem(bpy_struct)
+
+NodeFunctionFormatStringItems(bpy_prop_collection)
+
+NodeGeometryBakeItem(bpy_struct)
+
+NodeGeometryBakeItems(bpy_prop_collection)
+
+NodeGeometryCaptureAttributeItem(bpy_struct)
+
+NodeGeometryCaptureAttributeItems(bpy_prop_collection)
+
+NodeGeometryForeachGeometryElementGenerationItems(bpy_prop_collection)
+
+NodeGeometryForeachGeometryElementInputItems(bpy_prop_collection)
+
+NodeGeometryForeachGeometryElementMainItems(bpy_prop_collection)
+
+NodeGeometryRepeatOutputItems(bpy_prop_collection)
+
+NodeGeometrySimulationOutputItems(bpy_prop_collection)
+
+NodeGeometryViewerItem(bpy_struct)
+
+NodeGeometryViewerItems(bpy_prop_collection)
+
+NodeIndexSwitchItems(bpy_prop_collection)
+
+NodeInputs(bpy_prop_collection)
+
+NodeInternalSocketTemplate(bpy_struct)
+
+NodeLink(bpy_struct)
+
+NodeLinks(bpy_prop_collection)
+
+NodeMenuSwitchItems(bpy_prop_collection)
+
+NodeOutputs(bpy_prop_collection)
+
+NodePanelState(bpy_struct)
+
+NodeRaycastSampleAttributeItem(bpy_struct)
+
+NodeRaycastSampleAttributeItems(bpy_prop_collection)
+
+NodeSeparateBundleItem(bpy_struct)
+
+NodeSeparateBundleItems(bpy_prop_collection)
+
+NodeSocket(bpy_struct)
+
+NodeTreeInterface(bpy_struct)
+
+NodeTreeInterfaceItem(bpy_struct)
+
+NodeTreePath(bpy_struct)
+
+Nodes(bpy_prop_collection)
+
+NodesModifierBake(bpy_struct)
+
+NodesModifierBakeDataBlocks(bpy_prop_collection)
+
+NodesModifierBakes(bpy_prop_collection)
+
+NodesModifierDataBlock(bpy_struct)
+
+NodesModifierPanel(bpy_struct)
+
+NodesModifierPanels(bpy_prop_collection)
+
+NodesModifierProperties(bpy_struct)
+
+NodesModifierPropertiesEmpty(bpy_struct)
+
+NodesModifierWarning(bpy_struct)
+
+ObjectBase(bpy_struct)
+
+ObjectConstraints(bpy_prop_collection)
+
+ObjectDisplay(bpy_struct)
+
+ObjectLightLinking(bpy_struct)
+
+ObjectLineArt(bpy_struct)
+
+ObjectModifiers(bpy_prop_collection)
+
+ObjectShaderFx(bpy_prop_collection)
+
+Operator(bpy_struct)
+
+OperatorMacro(bpy_struct)
+
+OperatorOptions(bpy_struct)
+
+OperatorProperties(bpy_struct)
+
+PackedFile(bpy_struct)
+
+Paint(bpy_struct)
+
+PaintModeSettings(bpy_struct)
+
+PaletteColor(bpy_struct)
+
+PaletteColors(bpy_prop_collection)
+
+Panel(bpy_struct)
+
+Particle(bpy_struct)
+
+ParticleBrush(bpy_struct)
+
+ParticleDupliWeight(bpy_struct)
+
+ParticleEdit(bpy_struct)
+
+ParticleHairKey(bpy_struct)
+
+ParticleKey(bpy_struct)
+
+ParticleSettingsTextureSlots(bpy_prop_collection)
+
+ParticleSystem(bpy_struct)
+
+ParticleSystems(bpy_prop_collection)
+
+ParticleTarget(bpy_struct)
+
+PathCompare(bpy_struct)
+
+PathCompareCollection(bpy_prop_collection)
+
+Point(bpy_struct)
+
+PointCache(bpy_struct)
+
+PointCacheItem(bpy_struct)
+
+PointCaches(bpy_prop_collection)
+
+Pose(bpy_struct)
+
+PoseBone(bpy_struct)
+
+PoseBoneConstraints(bpy_prop_collection)
+
+Preferences(bpy_struct)
+
+PreferencesApps(bpy_struct)
+
+PreferencesAssetLibraries(bpy_struct)
+
+PreferencesEdit(bpy_struct)
+
+PreferencesExperimental(bpy_struct)
+
+PreferencesExtensions(bpy_struct)
+
+PreferencesFilePaths(bpy_struct)
+
+PreferencesInput(bpy_struct)
+
+PreferencesKeymap(bpy_struct)
+
+PreferencesSystem(bpy_struct)
+
+PreferencesView(bpy_struct)
+
+PrimitiveBoolean(bpy_struct)
+
+PrimitiveFloat(bpy_struct)
+
+PrimitiveInt(bpy_struct)
+
+PrimitiveString(bpy_struct)
+
+Property(bpy_struct)
+
+PropertyGroup(bpy_struct)
+
+PropertyGroupItem(bpy_struct)
+
+QuaternionAttributeValue(bpy_struct)
+
+RaytraceEEVEE(bpy_struct)
+
+ReadOnlyInteger(bpy_struct)
+
+Region(bpy_struct)
+
+RegionView3D(bpy_struct)
+
+RenderEngine(bpy_struct)
+
+RenderLayer(bpy_struct)
+
+RenderPass(bpy_struct)
+
+RenderPasses(bpy_prop_collection)
+
+RenderResult(bpy_struct)
+
+RenderSettings(bpy_struct)
+
+RenderSlot(bpy_struct)
+
+RenderSlots(bpy_prop_collection)
+
+RenderView(bpy_struct)
+
+RenderViews(bpy_prop_collection)
+
+RepeatItem(bpy_struct)
+
+Report(bpy_struct)
+
+RetimingKey(bpy_struct)
+
+RetimingKeys(bpy_prop_collection)
+
+RigidBodyConstraint(bpy_struct)
+
+RigidBodyObject(bpy_struct)
+
+RigidBodyWorld(bpy_struct)
+
+SPHFluidSettings(bpy_struct)
+
+SceneDisplay(bpy_struct)
+
+SceneEEVEE(bpy_struct)
+
+SceneGpencil(bpy_struct)
+
+SceneHydra(bpy_struct)
+
+SceneObjects(bpy_prop_collection)
+
+SceneRenderView(bpy_struct)
+
+Scopes(bpy_struct)
+
+ScriptDirectory(bpy_struct)
+
+ScriptDirectoryCollection(bpy_prop_collection)
+
+SequenceEditor(bpy_struct)
+
+SequenceTimelineChannel(bpy_struct)
+
+SequencerCacheOverlay(bpy_struct)
+
+SequencerCompositorModifierProperties(bpy_struct)
+
+SequencerCompositorModifierPropertiesEmpty(bpy_struct)
+
+SequencerPreviewOverlay(bpy_struct)
+
+SequencerTimelineOverlay(bpy_struct)
+
+SequencerToolSettings(bpy_struct)
+
+ShaderFx(bpy_struct)
+
+ShapeKey(bpy_struct)
+
+ShapeKeyBezierPoint(bpy_struct)
+
+ShapeKeyCurvePoint(bpy_struct)
+
+ShapeKeyPoint(bpy_struct)
+
+Short2AttributeValue(bpy_struct)
+
+SimulationStateItem(bpy_struct)
+
+SoftBodySettings(bpy_struct)
+
+Space(bpy_struct)
+
+SpaceClipOverlay(bpy_struct)
+
+SpaceDopeSheetOverlay(bpy_struct)
+
+SpaceImageOverlay(bpy_struct)
+
+SpaceNodeEditorPath(bpy_prop_collection)
+
+SpaceNodeOverlay(bpy_struct)
+
+SpaceUVEditor(bpy_struct)
+
+Spline(bpy_struct)
+
+SplineBezierPoints(bpy_prop_collection)
+
+SplinePoint(bpy_struct)
+
+SplinePoints(bpy_prop_collection)
+
+SpreadsheetColumn(bpy_struct)
+
+SpreadsheetColumnID(bpy_struct)
+
+SpreadsheetRowFilter(bpy_struct)
+
+SpreadsheetTable(bpy_struct)
+
+SpreadsheetTableID(bpy_struct)
+
+SpreadsheetTables(bpy_prop_collection)
+
+Stereo3dDisplay(bpy_struct)
+
+Stereo3dFormat(bpy_struct)
+
+StringAttributeValue(bpy_struct)
+
+Strip(bpy_struct)
+
+StripColorBalanceData(bpy_struct)
+
+StripCrop(bpy_struct)
+
+StripElement(bpy_struct)
+
+StripElements(bpy_prop_collection)
+
+StripModifier(bpy_struct)
+
+StripModifiers(bpy_prop_collection)
+
+StripProxy(bpy_struct)
+
+StripTransform(bpy_struct)
+
+StripsMeta(bpy_prop_collection)
+
+StripsTopLevel(bpy_prop_collection)
+
+Struct(bpy_struct)
+
+StudioLight(bpy_struct)
+
+StudioLights(bpy_prop_collection)
+
+TexMapping(bpy_struct)
+
+TexPaintSlot(bpy_struct)
+
+TextBox(bpy_struct)
+
+TextCharacterFormat(bpy_struct)
+
+TextLine(bpy_struct)
+
+TextboxState(bpy_struct)
+
+TextureSlot(bpy_struct)
+
+Theme(bpy_struct)
+
+ThemeBoneColorSet(bpy_struct)
+
+ThemeClipEditor(bpy_struct)
+
+ThemeCollectionColor(bpy_struct)
+
+ThemeCommon(bpy_struct)
+
+ThemeCommonAnim(bpy_struct)
+
+ThemeCommonCurves(bpy_struct)
+
+ThemeConsole(bpy_struct)
+
+ThemeDopeSheet(bpy_struct)
+
+ThemeFileBrowser(bpy_struct)
+
+ThemeFontStyle(bpy_struct)
+
+ThemeGradientColors(bpy_struct)
+
+ThemeGraphEditor(bpy_struct)
+
+ThemeImageEditor(bpy_struct)
+
+ThemeInfo(bpy_struct)
+
+ThemeNLAEditor(bpy_struct)
+
+ThemeNodeEditor(bpy_struct)
+
+ThemeOutliner(bpy_struct)
+
+ThemePreferences(bpy_struct)
+
+ThemeProperties(bpy_struct)
+
+ThemeRegions(bpy_struct)
+
+ThemeRegionsAssetShelf(bpy_struct)
+
+ThemeRegionsChannels(bpy_struct)
+
+ThemeRegionsScrubbing(bpy_struct)
+
+ThemeRegionsSidebars(bpy_struct)
+
+ThemeSequenceEditor(bpy_struct)
+
+ThemeSpaceGeneric(bpy_struct)
+
+ThemeSpaceGradient(bpy_struct)
+
+ThemeSpreadsheet(bpy_struct)
+
+ThemeStatusBar(bpy_struct)
+
+ThemeStripColor(bpy_struct)
+
+ThemeStyle(bpy_struct)
+
+ThemeTextEditor(bpy_struct)
+
+ThemeTopBar(bpy_struct)
+
+ThemeUserInterface(bpy_struct)
+
+ThemeView3D(bpy_struct)
+
+ThemeWidgetColors(bpy_struct)
+
+ThemeWidgetStateColors(bpy_struct)
+
+TimelineMarker(bpy_struct)
+
+TimelineMarkers(bpy_prop_collection)
+
+Timer(bpy_struct)
+
+ToolSettings(bpy_struct)
+
+TransformOrientation(bpy_struct)
+
+TransformOrientationSlot(bpy_struct)
+
+UDIMTile(bpy_struct)
+
+UDIMTiles(bpy_prop_collection)
+
+UILayout(bpy_struct)
+
+UIList(bpy_struct)
+
+UIPieMenu(bpy_struct)
+
+UIPopover(bpy_struct)
+
+UIPopupMenu(bpy_struct)
+
+USDHook(bpy_struct)
+
+UVLoopLayers(bpy_prop_collection)
+
+UVProjector(bpy_struct)
+
+UnifiedPaintSettings(bpy_struct)
+
+UnitSettings(bpy_struct)
+
+UnknownType(bpy_struct)
+
+UserAssetLibrary(bpy_struct)
+
+UserExtensionRepo(bpy_struct)
+
+UserExtensionRepoCollection(bpy_prop_collection)
+
+UserSolidLight(bpy_struct)
+
+UvSculpt(bpy_struct)
+
+VertexGroup(bpy_struct)
+
+VertexGroupElement(bpy_struct)
+
+VertexGroups(bpy_prop_collection)
+
+View2D(bpy_struct)
+
+View3DCursor(bpy_struct)
+
+View3DOverlay(bpy_struct)
+
+View3DShading(bpy_struct)
+
+ViewLayer(bpy_struct)
+
+ViewLayerEEVEE(bpy_struct)
+
+ViewLayers(bpy_prop_collection)
+
+ViewerPath(bpy_struct)
+
+ViewerPathElem(bpy_struct)
+
+VolumeDisplay(bpy_struct)
+
+VolumeGrid(bpy_struct)
+
+VolumeGrids(bpy_prop_collection)
+
+VolumeRender(bpy_struct)
+
+WalkNavigation(bpy_struct)
+
+Window(bpy_struct)
+
+Windows(bpy_prop_collection)
+
+WorkSpaceTool(bpy_struct)
+
+WorldLighting(bpy_struct)
+
+WorldMistSettings(bpy_struct)
+
+XrActionMap(bpy_struct)
+
+XrActionMapBinding(bpy_struct)
+
+XrActionMapBindings(bpy_prop_collection)
+
+XrActionMapItem(bpy_struct)
+
+XrActionMapItems(bpy_prop_collection)
+
+XrActionMaps(bpy_prop_collection)
+
+XrComponentPath(bpy_struct)
+
+XrComponentPaths(bpy_prop_collection)
+
+XrEventData(bpy_struct)
+
+XrNavigation(bpy_struct)
+
+XrSessionSettings(bpy_struct)
+
+XrSessionState(bpy_struct)
+
+XrUserPath(bpy_struct)
+
+XrUserPaths(bpy_prop_collection)
+
+XrViewfinderState(bpy_struct)
+
+wmOwnerID(bpy_struct)
+
+wmOwnerIDs(bpy_prop_collection)
+
+wmTools(bpy_prop_collection)
+
+class bpy.types. bpy_struct
+
+built-in base class for all classes in bpy.types.
+
+as_pointer ( )
+
+Returns the memory address which holds a pointer to Blender’s internal data
+
+Returns :
+
+int (memory address).
+
+Return type :
+
+int
+
+Note
+
+This is intended only for advanced script writers who need to
+pass blender data to their own C/Python modules.
+
+driver_add ( path , index = -1 , / )
+
+Adds driver(s) to the given property
+
+Parameters :
+
+path ( str ) – path to the property to drive, analogous to the fcurve’s data path.
+
+index ( int ) – array index of the property drive. Defaults to -1 for all indices or a single channel if the property is not an array.
+
+Returns :
+
+The driver added or a list of drivers when index is -1.
+
+Return type :
+
+bpy.types.FCurve | list[ bpy.types.FCurve ]
+
+driver_remove ( path , index = -1 , / )
+
+Remove driver(s) from the given property
+
+Parameters :
+
+path ( str ) – path to the property to drive, analogous to the fcurve’s data path.
+
+index ( int ) – array index of the property drive. Defaults to -1 for all indices or a single channel if the property is not an array.
+
+Returns :
+
+Success of driver removal.
+
+Return type :
+
+bool
+
+get ( key , default = None , / )
+
+Returns the value of the custom property assigned to key or default
+when not found (matches Python’s dictionary function of the same name).
+
+Parameters :
+
+key ( str ) – The key associated with the custom property.
+
+default ( Any ) – Optional argument for the value to return if
+key is not found.
+
+Returns :
+
+Custom property value or default.
+
+Return type :
+
+Any
+
+Note
+
+Limited to: Types with Custom Property Support .
+
+id_properties_clear ( )
+
+Remove the parent group for an RNA struct’s custom IDProperties.
+
+id_properties_ensure ( )
+
+Returns :
+
+the parent group for an RNA struct’s custom IDProperties.
+
+Return type :
+
+idprop.types.IDPropertyGroup
+
+id_properties_ui ( key , / )
+
+Parameters :
+
+key ( str ) – String name of the property.
+
+Returns :
+
+An object used to manage an IDProperty’s UI data.
+
+Return type :
+
+bpy.types.IDPropertyUIManager
+
+is_property_hidden ( property , / )
+
+Check if a property is hidden.
+
+Parameters :
+
+property ( str ) – Property name.
+
+Returns :
+
+True when the property is hidden.
+
+Return type :
+
+bool
+
+is_property_overridable_library ( property , / )
+
+Check if a property is overridable.
+
+Parameters :
+
+property ( str ) – Property name.
+
+Returns :
+
+True when the property is overridable.
+
+Return type :
+
+bool
+
+is_property_readonly ( property , / )
+
+Check if a property is readonly.
+
+Parameters :
+
+property ( str ) – Property name.
+
+Returns :
+
+True when the property is readonly (not writable).
+
+Return type :
+
+bool
+
+is_property_set ( property , / , * , ghost = True )
+
+Check if a property is set, use for testing operator properties.
+
+Parameters :
+
+property ( str ) – Property name.
+
+ghost ( bool ) –
+Used for operators that re-run with previous settings.
+In this case the property is not marked as set,
+yet the value from the previous execution is used.
+
+In rare cases you may want to set this option to false.
+
+Returns :
+
+True when the property has been set.
+
+Return type :
+
+bool
+
+Note
+
+Properties defined at run-time store the values of the properties as custom-properties.
+
+This method checks if the underlying data exists, causing the property to be considered set .
+
+A common pattern for operators is to calculate a value for the properties
+that have not had their values explicitly set by the caller
+(where the caller could be a key-binding, menu-items or Python script for example).
+
+In the case of executing operators multiple times, values are re-used from the previous execution.
+
+For example: subdividing a mesh with a smooth value of 1.0 will keep using
+that value on subsequent calls to subdivision, unless the operator is called with
+that property set to a different value.
+
+This behavior can be disabled using the SKIP_SAVE option when the property is declared (see: bpy.props ).
+
+The ghost argument allows detecting how a value from a previous execution is handled.
+
+When true: The property is considered unset even if the value from a previous call is used.
+
+When false: The existence of any values causes is_property_set to return true.
+
+While this argument should typically be omitted, there are times when
+it’s important to know if a value is anything besides the default.
+
+For example, the previous value may have been scaled by the scene’s unit scale.
+In this case scaling the value multiple times would cause problems, so the ghost argument should be false.
+
+items ( )
+
+Returns the items of this objects custom properties (matches Python’s
+dictionary function of the same name).
+
+Returns :
+
+custom property key, value pairs.
+
+Return type :
+
+idprop.types.IDPropertyGroupViewItems
+
+Note
+
+Limited to: Types with Custom Property Support .
+
+keyframe_delete ( data_path , * , index = -1 , frame = None , group = '' )
+
+Remove a keyframe from this properties fcurve.
+
+Parameters :
+
+data_path ( str ) – path to the property to remove a key, analogous to the fcurve’s data path.
+
+index ( int ) – array index of the property to remove a key. Defaults to -1 removing all indices or a single channel if the property is not an array.
+
+frame ( float | None ) – The frame on which the keyframe is deleted. None (the default) uses bpy.context.scene.frame_current .
+
+group ( str ) – The name of the group the F-Curve should be added to if it doesn’t exist yet.
+
+Returns :
+
+Success of keyframe deletion.
+
+Return type :
+
+bool
+
+keyframe_insert ( data_path , * , index = -1 , frame = None , group = '' , options = set() , keytype = 'KEYFRAME' )
+
+Insert a keyframe on the property given, adding fcurves and animation data when necessary.
+
+Parameters :
+
+data_path ( str ) – path to the property to key, analogous to the fcurve’s data path.
+
+index ( int ) – array index of the property to key.
+Defaults to -1 which will key all indices or a single channel if the property is not an array.
+
+frame ( float | None ) – The frame on which the keyframe is inserted. None (the default) uses bpy.context.scene.frame_current .
+
+group ( str ) – The name of the group the F-Curve should be added to if it doesn’t exist yet.
+
+options ( set [ Literal [ 'INSERTKEY_NEEDED' , 'INSERTKEY_VISUAL' , 'INSERTKEY_REPLACE' , 'INSERTKEY_AVAILABLE' , 'INSERTKEY_CYCLE_AWARE' ] ] ) –
+Optional set of flags:
+
+INSERTKEY_NEEDED Only insert keyframes where they’re needed in the relevant F-Curves.
+
+INSERTKEY_VISUAL Insert keyframes based on ‘visual transforms’.
+
+INSERTKEY_REPLACE Only replace already existing keyframes.
+
+INSERTKEY_AVAILABLE Only insert into already existing F-Curves.
+
+INSERTKEY_CYCLE_AWARE Take cyclic extrapolation into account (Cycle-Aware Keying option).
+
+keytype ( Literal [ 'KEYFRAME' , 'BREAKDOWN' , 'MOVING_HOLD' , 'EXTREME' , 'JITTER' , 'GENERATED' ] ) – Type of the key.
+
+Returns :
+
+Success of keyframe insertion.
+
+Return type :
+
+bool
+
+This is the most simple example of inserting a keyframe from Python.
+
+import bpy
+
+obj = bpy . context . object
+
+# Set the keyframe at frame 1.
+obj . location = ( 3.0 , 4.0 , 10.0 )
+obj . keyframe_insert ( data_path = "location" , frame = 1 )
+
+Note that when keying data paths which contain nested properties this must be
+done from the ID subclass, in this case the Armature rather
+than the bone.
+
+import bpy
+from bpy.props import (
+FloatProperty ,
+PointerProperty ,
+)
+
+# Define a nested property.
+class MyPropGroup ( bpy . types . PropertyGroup ):
+nested : FloatProperty ( name = "Nested" , default = 0.0 )
+
+# Register it so its available for all bones.
+bpy . utils . register_class ( MyPropGroup )
+bpy . types . Bone . my_prop = PointerProperty (
+type = MyPropGroup ,
+name = "MyProp" ,
+)
+
+# Get a bone.
+obj = bpy . data . objects [ "Armature" ]
+arm = obj . data
+
+# Set the keyframe at frame 1.
+arm . bones [ "Bone" ] . my_prop . nested = 10
+arm . keyframe_insert (
+data_path = 'bones["Bone"].my_prop.nested' ,
+frame = 1 ,
+group = "Nested Group" ,
+)
+
+keys ( )
+
+Returns the keys of this objects custom properties (matches Python’s
+dictionary function of the same name).
+
+Returns :
+
+custom property keys.
+
+Return type :
+
+idprop.types.IDPropertyGroupViewKeys
+
+Note
+
+Limited to: Types with Custom Property Support .
+
+path_from_id ( property = '' , / )
+
+Returns the data path from the ID to this object (string).
+
+Parameters :
+
+property ( str ) – Optional property name which can be used if the path is
+to a property of this object.
+
+Returns :
+
+The path from bpy.types.bpy_struct.id_data
+to this struct and property (when given).
+
+Return type :
+
+str
+
+path_from_module ( property = '' , index = -1 , / )
+
+Returns the full data path to this struct (as a string) from the bpy module.
+
+Parameters :
+
+property ( str ) – Optional property name to get the full path from
+
+index ( int ) – Optional index of the property.
+“-1” means that the property has no indices.
+
+Returns :
+
+The full path to the data.
+
+Return type :
+
+str
+
+Raises :
+
+ValueError –
+if the input data cannot be converted into a full data path.
+
+Note
+
+Even if all input data is correct, this function might
+error out because Blender cannot derive a valid path.
+The incomplete path will be printed in the error message.
+
+path_resolve ( path , coerce = True , / )
+
+Returns the property from the path, raise an exception when not found.
+
+Parameters :
+
+path ( str ) – path which this property resolves.
+
+coerce ( bool ) – optional argument, when True, the property will be converted
+into its Python representation.
+
+Returns :
+
+Property value or property object.
+
+Return type :
+
+Any | bpy.types.bpy_prop
+
+pop ( key , default = None , / )
+
+Remove and return the value of the custom property assigned to key or default
+when not found (matches Python’s dictionary function of the same name).
+
+Parameters :
+
+key ( str ) – The key associated with the custom property.
+
+default ( Any ) – Optional argument for the value to return if
+key is not found.
+
+Returns :
+
+Custom property value or default.
+
+Return type :
+
+Any
+
+Note
+
+Limited to: Types with Custom Property Support .
+
+property_overridable_library_set ( property , overridable , / )
+
+Define a property as overridable or not (only for custom properties!).
+
+Parameters :
+
+property ( str ) – Property name.
+
+overridable ( bool ) – Overridable status to set.
+
+Returns :
+
+True when the overridable status of the property was successfully set.
+
+Return type :
+
+bool
+
+property_unset ( property , / )
+
+Unset a property, will use default value afterward.
+
+Parameters :
+
+property ( str ) – Property name.
+
+rna_ancestors ( )
+
+Return the chain of data containing this struct, if known.
+The first item is the root (typically an ID), the last one is the immediate parent.
+May be empty.
+
+Returns :
+
+a list of this object’s ancestors.
+
+Return type :
+
+list[ bpy.types.bpy_struct ]
+
+type_recast ( )
+
+Return a new instance, this is needed because types
+such as textures can be changed at runtime.
+
+Returns :
+
+a new instance of this object with the type initialized again.
+
+Return type :
+
+bpy.types.bpy_struct
+
+values ( )
+
+Returns the values of this objects custom properties (matches Python’s
+dictionary function of the same name).
+
+Returns :
+
+custom property values.
+
+Return type :
+
+idprop.types.IDPropertyGroupViewValues
+
+Note
+
+Limited to: Types with Custom Property Support .
+
+id_data
+
+The bpy.types.ID object this data-block is from or None, (not available for all data types) (readonly)
+
+Type :
+
+bpy.types.ID
+
+Special Methods
+
+__contains__ ( item )
+
+Parameters :
+
+item ( object ) – Item to test for membership.
+
+Return type :
+
+bool
+
+__eq__ ( other )
+
+Parameters :
+
+other ( object ) – The other operand.
+
+Return type :
+
+bool
+
+__ge__ ( other )
+
+Parameters :
+
+other ( Self ) – The other operand.
+
+Return type :
+
+bool
+
+__getitem__ ( key )
+
+Parameters :
+
+key ( int ) – Index or key.
+
+Return type :
+
+float
+
+__gt__ ( other )
+
+Parameters :
+
+other ( Self ) – The other operand.
+
+Return type :
+
+bool
+
+__hash__ ( )
+
+Return type :
+
+int
+
+__le__ ( other )
+
+Parameters :
+
+other ( Self ) – The other operand.
+
+Return type :
+
+bool
+
+__lt__ ( other )
+
+Parameters :
+
+other ( Self ) – The other operand.
+
+Return type :
+
+bool
+
+__ne__ ( other )
+
+Parameters :
+
+other ( object ) – The other operand.
+
+Return type :
+
+bool
+
+__repr__ ( )
+
+Return type :
+
+str
+
+__setitem__ ( key , value )
+
+Parameters :
+
+key ( int ) – Index or key.
+
+value ( object ) – Value to assign.
+
+__str__ ( )
+
+Return type :
+
+str
