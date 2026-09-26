@@ -18781,3 +18781,13 @@ a leitura de disciplina tem de vir antes do endereço.
   1. **Ele é programador** (*"I mostly write code"*), não arte.
   2. O estilo é **low-poly** (*"a high-fantasy, low-poly world"*), longe do personagem estilizado de alto detalhe do portfólio do Vini; o gancho é a personalização de herói (*"extreme character customization"*, na mesma entrevista).
   3. Casa de três sócios; o projeto novo é *Stolen Realm Survivors*, no mesmo estilo. Sem vaga.
+
+## RODADA DAS 13h35 UTC DE 26/09 (Joe): **ZERO FICHA.** Teto de ~20 minutos esgotado sem nenhum endereço de pessoa PUBLICADO em casa de personagem nas praças pedidas (Vancouver, Nórdicos, Holanda, Reino Unido). Zero montado, zero rascunho, zero commit
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Varredura de menu (`navsweep.py`) em 34 domínios que as filas `navdoms*.tsv` não tinham**, escolhidos à mão: Vancouver (Archiact, IUGO, Cloud Chamber, Thunderbird, Stargate, Ghost VFX, Hinterland, Big Rock, Spire, Lighthouse Animation), Nórdicos (Goodbye Kansas, Fido, Sybo, Ka-Ching, Thunderful, Pieces, Might and Delight, Toadman, Unknown Worlds, Zordix), Holanda (Submarine, Triumph, Ronimo, Il Luster), Reino Unido e Irlanda (Axis, Jellyfish, Steel City, Nexus, Blue Zoo, Coconut Lizard, Wonder People, Supermassive, Lighthouse Games, Maverick). Rendeu só caixa de função (Nexus: comercial, filme e episódico, imprensa; Supermassive: `develop@`; Triumph: secretaria). **Nenhuma pessoa.**
+- **ArtStation** (`/users/<nome>.json`): **403 do desafio do Cloudflare.** Não se contorna.
+- **Índices abertos de palestras do SIGGRAPH 2024 e 2025** (`siggraph.org/wp-content/uploads/...`): **desafio em JavaScript do Sucuri.** Não se contorna. A veia de rodapé de paper (DNEG, Scanline, Image Engine em Vancouver) fica para quando houver um espelho aberto dos PDFs.
+- **Catálogos do MIFA 2025 e 2026** (`annecyfestival.com/sites/default/files/...`, 200, 3,6 MB e 4,5 MB, 25 e 33 páginas): pelo tamanho é o prospecto de venda de estande, não o diretório de expositores; a extração de texto passou de 2 minutos e foi parada. Não confirmado.
+- **`dutchgameindustry.directory`**: a OpenAPI (`/api/openapi.yaml`) confirma que a ficha de empresa não tem campo de contato nem de e-mail. Fechado de vez.
+- **Pavilhão alemão da GDC** (`gdc.german-pavilion.com`): aplicação em JavaScript, a ficha de expositor devolve 404 no curl.
