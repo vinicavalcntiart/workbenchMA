@@ -1,0 +1,84 @@
+---
+titulo: Blender 5.2 LTS Release Notes: Physics (Geometry Nodes Hair & Cloth Dynamics)
+autor: n/d (Blender Developer Documentation)
+url: https://developer.blender.org/docs/release_notes/5.2/physics/
+data: n/d (Blender 5.2 LTS)
+idioma: en
+coletado_em: 2026-09-26
+---
+
+Blender 5.2 LTS: Physics
+¶
+There are new
+experimental
+Geometry Nodes based physics systems for hair and cloth. They are experimental in this release because it's hard to lock in the design without more widespread testing first. So while we try not to break them in the next release, it's hard to be sure it won't happen yet. Feedback can be posted on
+devtalk
+.
+Cloth Dynamics
+¶
+The new experimental
+Cloth Dynamics
+modifier and node group can just be added to any mesh to give it cloth-like behavior. It supports various features built-in like pinning, stretchiness/bendiness controls and tearing.
+The asset can also be used as a node group.
+Hair Dynamics
+¶
+Hair works similarly but requires a bit more setup because it requires a surface the hair is attached to. When using the updated
+Empty Hair
+operator in the add menu, this setup is done automatically.
+Note how this also adds the new
+Capture Rest Geometry
+modifier to the surface mesh. This is required for the dynamics modifier to know how the surface changed from the rest to the deformed state. This data is stored in the new
+geometry bundles
+.
+A fully procedural setup within Geometry Nodes is possible too.
+Effectors
+¶
+An effector is anything that impacts the simulation. The Hair and Cloth Dynamics groups have a bunch of built-in effectors for ease-of-use like gravity and surface collision.
+It's also possible to pass in additional effectors though. Currently, there are three types of customizable effectors availble:
+Collider
+: Any
+closed
+mesh can be used as collider.
+Custom Force
+: A specialized effector that allows computing custom force vectors for each point.
+Custom Effector
+: Allows injecting fully custom behavior at specific stages into the simulation by using a closure.
+Additional effectors can be added to the dynamics assets in two ways:
+Effector Collection: One can create a collection containing objects which have effector information stored.
+Effector Bundle: In a node-based workflow, one can also create a bundle containing an arbitrary number of effectors.
+Colliders
+¶
+A collider object is created by adding a
+Collider
+modifier to it. This uses the geometry at that point in the modifier stack as collision mesh.
+In a fully procedural setup, one can use the collider effector bundle and pass into the dynamics node. To pass in multiple effectors, a
+Combine Bundle
+node can be used.
+It works the same way for hair.
+Forces
+¶
+Besides the built-in gravity, there are no ready-to-use forces for this system yet. However, one can easily build custom forces.
+This setup can also be modified to create custom force objects. The
+Set Effector
+asset attaches effector bundles to a geometry so that the simulation finds it later on. This also works very well together with the new support for
+Geometry Nodes on Empty objects
+.
+Custom Effectors
+¶
+Custom effectors can be used to inject fully custom behavior into the simulation using closures. It runs at the specified stage (e.g. "Post Solve") in the simulation loop. Since the geometry is in simulation space (which usually matches world space unless otherwise specified), the
+To World Transform
+is provided which contains information for how to transform the geometry into world space, from which it could be transformed into any space as necessary.
+Custom geometry effector
+Filters
+¶
+Effectors can have a filter to determine which geometries they affect. The filtering system uses tags. Each simulated geometry can have one or multiple tags. An effector can then specify which tags it should affect.
+XPBD Solver
+¶
+The Cloth and Hair Dynamics assets are internally powered by a new built-in XPBD Solver node. It does the heavy lifting solving various constraint types. The assets build a use-case specific declarative system around this built-in node. For more advanced users, there are two main approaches of customizing the simulation at a deeper level:
+Adapt the Hair/Cloth Dynamics node groups. These are fairly hackable, i.e. one can just add or remove constraints as needed in a declarative fashion. With this one is building on top of the
+XPBD Simulation
+framework.
+Build a completely new simulation system directly on top of the
+built-in XPBD Solver
+node. This is quite a bit harder as the solver needs a lot of information in the form of typed bundles and attributes.
+Built-in XPBD Solver node
