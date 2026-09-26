@@ -18791,3 +18791,65 @@ a leitura de disciplina tem de vir antes do endereço.
 - **Catálogos do MIFA 2025 e 2026** (`annecyfestival.com/sites/default/files/...`, 200, 3,6 MB e 4,5 MB, 25 e 33 páginas): pelo tamanho é o prospecto de venda de estande, não o diretório de expositores; a extração de texto passou de 2 minutos e foi parada. Não confirmado.
 - **`dutchgameindustry.directory`**: a OpenAPI (`/api/openapi.yaml`) confirma que a ficha de empresa não tem campo de contato nem de e-mail. Fechado de vez.
 - **Pavilhão alemão da GDC** (`gdc.german-pavilion.com`): aplicação em JavaScript, a ficha de expositor devolve 404 no curl.
+
+## RODADA DAS 17h35 UTC DE 26/09 (Joe): A VEIA NOVA FOI O **CAMPO `website` DA LOJA STEAM** (jogo 3D estilizado, fofo e cartunesco, ordenado por avaliações) SEGUIDO DE **PRESS KIT** (`/presskit`, `/press`, `/press-kit`, `/press/sheet.php` do presskit()). **Três fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** EUA, Nova Zelândia, Canadá. Abaixo da meta de quatro. **Vancouver, Nórdicos, Holanda e Reino Unido: zero de novo.** Emails completos fora do repositório (repositório público); aqui vão mascarados
+
+**Placar: 3 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit** (o pedido desta rodada foi sem commit).
+
+**O MÉTODO, para repetir:** `store.steampowered.com/search/results/?tags=<A>,<B>&category1=998&sort_by=Reviews_DESC&infinite=1&json=1` (200, 100 jogos por página) com as etiquetas Stylized+3D (4252,4191), Cartoony+3D (4195,4191), Cute+3D (4726,4191) e Cartoon+3D (4562,4191), seis páginas cada: **1.879 jogos**. Depois `store.steampowered.com/api/appdetails?appids=<id>` (a chave da resposta pode ser OUTRO appid, pegar o primeiro valor) para tirar o campo `website`. Tirados os domínios de `covered.txt` e os que já aparecem no repositório: **607 domínios inéditos**. Neles rodou o `navsweep.py` com `press|media-kit` no filtro de menu e os caminhos fixos `/presskit`, `/press`, `/press-kit`, `/presskit/`. Rendeu **191 linhas** de endereço. **Por que paga:** o jogo costuma morar num domínio próprio (tipo `animalkind.gg`, `loddlenaut.com`), que nenhum diretório de estúdio lista, e o press kit publica o contato com nome.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Casa de uma pessoa só** (não tem cadeira): Nobody Crown (`eric@`, Pensilvânia, *"Team Size: 1"*), byteparrot (`hannes@`, Linz, *Slopecrashers*, *"a solo indie dev studio by Austrian developer Johannes Lugstein"*), Alien Fruit (`moss@`, *"debut solo title"*, pixel retrô), Trickymadness, Mr. Sleepy Man, jellebooij, munted finger.
+- **Contato é de imprensa ou de publisher, não da casa:** Team17 no press kit do *Dredge* (quatro pessoas de marketing), Stride PR (*Button City*, *The Gardens Between*), Tara Bruno PR (Annapurna), Evolve PR (DreadXP), Squido Studio (*No More Rainbows*, dois de marketing), PQube (publisher britânico, `andy@` só em metadado de autor de página).
+- **Fora da disciplina ou fraca:** Charles Games (Praga, `lukas.kolek@` CEO e `ondrej.paska@` CTO em `/about-us/`: jogo narrativo, *Playing Kafka*), Byting Games (Kempten, `julian@`, *"Two guys making small games"*, *Stuntboost* é corrida de manobra), Kindred Games (`michael@`/`janna@` em `/contact`, sem cargo, jogo de 2020), Greylock (*Severed Steel*, tiro em primeira pessoa), Rudiment (golfe), Krayfish (quebra-cabeça de gota d'água), Autumn Pioneer (*Shashingo*, aprender japonês com foto).
+- **Out of Time** (`outoftime.studio/about`, França): seis endereços `nome.sobrenome@` na página de equipe, **mas a página ainda é rascunho** (*"Petit texte de présentation ... Lorem ipsum dolor sit amet"*, cada pessoa com *"Jobs here"* no lugar do cargo, telefone `+33 1 23 45 67 89`). Não se ficha pessoa de página de exemplo.
+- **`impress.games`** (5.508 press kits no `sitemap-presskits.xml`, 200): a página é SvelteKit e o `__data.json` só traz SEO; o contato vem por JavaScript da CDN. Não minerado.
+- **Steam `appdetails`** limita por taxa depois de ~1.500 chamadas seguidas (volta vazio, não 429).
+
+### FICHA 1: **Steven Jian**, *CEO* e cofundador, **UNCOMMON GAMES** (San Francisco, **EUA**) — `s***@uncommon.gg` — **ALTA (PUBLICADO em `mailto:` como *Business Inquiries* no press kit do jogo da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://animalkind.gg/press-kit` (**200, 31.820 bytes**), HTML literal: `Contacts Business Inquiries s***@uncommon.gg Press Inquiries b***@uncommon.gg` e `href="mailto:s***@uncommon.gg?subject=Business%20Inquiry%20-%20Animalkind%20by%20Uncommon%20Games"`; o mesmo press kit diz *"Developer: Uncommon Games Based in San Francisco, California"*. `https://animalkind.gg/about` (**200, 16.371 bytes**). `https://animalkind.gg/careers` (**200**): *"Sorry, no open roles at the moment!"*. Sobrenome e cargo: `https://www.pcgamer.com/games/survival-crafting/how-a-hardcore-survival-game-morphed-into-an-open-world-town-builder-where-you-play-as-a-corgi-mech-pilot/` (**200, 1.969.914 bytes**): *"I met with Steven Jian, CEO of Uncommon Games, at GDC in March"*. `https://store.steampowered.com/app/2997840/?l=english` (**200**; *Animalkind*, Early Access desde 30/03/2026). **NADA MONTADO.**
+- **POR QUE ELE:** é o CEO e cofundador, e o endereço dele é o de negócios que a casa publica; o outro endereço (`b***@`) é de imprensa e sem sobrenome. Casa de veteranos, pequena, onde o sócio decide.
+- **FRASES DA CASA, literais:**
+  - *"Uncommon Games is a game studio founded and backed by industry veterans. We have extensive experience developing games that have been played by millions of players around the world. Our team has worked at companies like Zynga, Disney, and Microsoft."* — `https://animalkind.gg/about`
+  - *"We believe that happy teams build great games."* — `https://animalkind.gg/about`
+  - *"Play as an adorable animal! Choose from options including a corgi, a tuxedo cat, and a North American trash panda (common raccoon) - each with unique and aww-some animations."* — `https://animalkind.gg/press-kit`
+- **3D DE PERSONAGEM:** provado em parte (elenco de animais jogáveis e recrutáveis, *"recruit a variety of characters to join you"*); o mundo é **voxel** (*"The world of Animalkind is voxel-based"*, PC Gamer).
+- **FORA DOS EUA? NÃO.** Casa americana: **a frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `uncommon.gg OR animalkind OR "Uncommon Games" OR "Steven Jian"` (com lixeira) → **`{}`**; `from:uncommon.gg OR to:uncommon.gg` (junto com os outros domínios da rodada) → **`{}`**. Repositório: **zero** para `uncommon.gg`, `animalkind` e `Steven Jian` em `enviados.csv`, `processados.csv`, `pessoas.csv`, `docs/index.html` e neste arquivo. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. O pareamento no site é pelo primeiro nome (`s***@` + *Business Inquiries*); o sobrenome e o cargo vêm da PC Gamer. Os três fundadores (Brent Tam, Hasham Ali, Steven Jian) aparecem só num resumo de busca, não numa página que eu abri.
+  2. **Sem vaga** (*"no open roles"*) e sem sinal de patrocínio. O endereço é de negócios, não de candidatura.
+  3. Estilo **voxel** e fofo: é personagem, mas longe do estilizado de alto detalhe do portfólio do Vini.
+
+### FICHA 2: **Mitch (Duncan)**, cofundador, **EAT PANT GAMES** (Wellington, **NOVA ZELÂNDIA**) — `m***@eatpantgames.com` — **ALTA (PUBLICADO em `mailto:` no ícone de contato da home da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.eatpantgames.com/` (**200, 565.548 bytes**, depois de 301 do domínio sem `www`), HTML literal: `<a data-testid="linkElement" href="mailto:m***@eatpantgames.com" target="_self"`. `https://eatpantgames.com/presskit/` (**200, 817.735 bytes**; o botão *"contact email"* do press kit é outro endereço, `t***@eatpantgames.com`, caixa do jogo). Nome: `https://www.qualbert.com/teeto-interview-with-eat-pant-games/` (**200**): *"I'm Mitch and this is Ellie. We're Eat Pant Games, and we make Teeto."*; `https://ladiesgamers.com/interview-eat-pant-games-teeto/` (**200**): *"We spoke with Mitch and Ali about their journey from “game-adjacent” creatives to indie developers"*. `https://store.steampowered.com/app/2783370/?l=english` (**200**): *Teeto*, **Eat Pant Games**, 15/07/2026, etiquetas `3D Platformer`, `Collectathon`, `Character Customization`, `3D`, `Cute`, `Colorful`. **NADA MONTADO.**
+- **POR QUE ELE:** é um dos dois sócios da casa (um casal) e o único endereço de pessoa que ela publica.
+- **FRASES DA CASA, literais:**
+  - *"Eat Pant Games is a small family studio in Wellington, New Zealand - and we are working on our debut title - Teeto."* — `https://eatpantgames.com/presskit/`
+  - *"Teeto is a 3D platformer adventure where players guide a small, blue blob named Teeto and their energetic bunny companion, Nory, on a journey to save a world consumed by shadow creatures."* — `https://eatpantgames.com/presskit/`
+  - Reserva: *"we make very serious video games"* — `https://www.eatpantgames.com/`
+- **3D DE PERSONAGEM: PROVADO** (dupla protagonista blob e coelha em 3D, criaturas de sombra, *"a cast of quirky characters"*, etiqueta `Character Customization`). Home anuncia o próximo: *"shared custody coming soon!"*.
+- **FORA DOS EUA? SIM** (Nova Zelândia, Oceania, dentro do escopo). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `eatpantgames OR "Eat Pant" OR Teeto OR "Mitch Duncan"` (com lixeira) → **`{}`**; `from:eatpantgames.com OR to:eatpantgames.com` → **`{}`**. Repositório: **zero**. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. **Sobrenome não provado em página aberta:** *Duncan* aparece só no título de um resultado de busca do LinkedIn (não aberto, sem login). Na carta, `Hi Mitch,`.
+  2. A sócia aparece como *Ali* numa entrevista e *Ellie* na outra; não uso o nome dela.
+  3. Casa de **duas pessoas**, jogo de estreia lançado em julho de 2026 com apoio do CODE (fundo público neozelandês): não há cadeira aberta. O valor é colega que pode indicar ou chamar para o próximo jogo.
+
+### FICHA 3: **Zachary Beauchamp**, cofundador, **TOKUPOP INC.** (**CANADÁ**, cidade não publicada) — `Z***@tokupop.ca` — **ALTA (PUBLICADO em texto, com nome completo, na página About da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://tokupop.ca/about` (**200, 130.490 bytes**), texto literal: *"Founded in 2023 by Zachary Beauchamp and Zoran Simić, TokuPop Inc. is an enthusiastic video game developer dedicated to creating immersive and engaging gaming experiences. ... Contact us at Z***@tokupop.ca"*. `https://www.tokupop.ca/games/excidio-the-kaiju-simulator` (**200, 153.784 bytes**). `https://store.steampowered.com/app/1594130/?l=english` (**200**): *Excidio The Kaiju Simulator*, **TokuPop**, 1.0 em 21/02/2026, etiquetas `3D`, `Third Person`, `Cartoony`, `Dinosaurs`, `Dragons`. **NADA MONTADO.**
+- **POR QUE ELE:** é o sócio que administra a casa e o único endereço de pessoa que ela publica; o outro sócio (Zoran Simić) não tem endereço.
+- **FRASES DA CASA, literais:**
+  - *"While our headquarters are based in Canada, our talented team of developers hails from around the globe, bringing diverse perspectives and expertise to our projects."* — `https://tokupop.ca/about`
+  - *"At TokuPop, we believe in making games that we want to play!"* — `https://tokupop.ca/about`
+  - *"Immerse yourself as one of three unique kaiju, Excidio, Golem or Raijin!"* — `https://store.steampowered.com/app/1594130/`
+- **3D DE PERSONAGEM: PROVADO** (três kaiju jogáveis, mais personagens convidados de outros jogos: *"we crossed over with 13AM game's "Dawn of the Monsters" by adding their character "Megadon" as a playable monster!"*). Segundo jogo no menu: *Excidio Kaiju Rumble*.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `tokupop OR Excidio OR Beauchamp OR "Zoran"` (com lixeira) → **`{}`**; `from:tokupop.ca OR to:tokupop.ca` → **`{}`**. Repositório: **zero** para `tokupop` e `Excidio`; *Beauchamp* só aparece como Marie-Claude Beauchamp da Carpe Diem (outra pessoa, outra casa). **CASA INÉDITA.**
+- **RESSALVAS HONESTAS, e é a mais fraca das três:**
+  1. Casa de **dois sócios** com time remoto espalhado; ele é o lado de gestão, não arte (a arte original é do Zoran, desenvolvedor sérvio).
+  2. O site é um Google Sites e não diz a cidade; *"headquarters are based in Canada"* é tudo o que há.
+  3. Sem vaga, sem sinal de patrocínio, e o estilo é kaiju cartunesco de física e destruição, não personagem de alto detalhe.
