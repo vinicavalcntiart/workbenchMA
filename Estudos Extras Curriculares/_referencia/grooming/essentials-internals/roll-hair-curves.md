@@ -1,0 +1,307 @@
+# Roll Hair Curves
+
+Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+
+## Interface
+- OUTPUT Geometry (Geometry, default None)
+- INPUT Geometry (Geometry, default None)
+- INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend overall effect
+- INPUT Subdivision (Int, default 1, min 0, max 6) — Subdivision level applied before deformation
+- INPUT Variation Level (Int, default 10, min 0, max 100) — Level of smoothing on the roll path to include shape variation
+- INPUT Roll Length (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Length of each curve to be rolled
+- INPUT Roll Radius (Float, default 0.05, min 0.0, max 3.4028234663852886e+38) — Radius of the rolls
+- INPUT Roll Depth (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Depth offset of the roll
+- INPUT Roll Taper (Float, default 0.0, min 0.0, max 1.0) — Taper of the roll
+- INPUT Retain Overall Shape (Float, default 0.0, min 0.0, max 1.0) — Offset the roll along the original curve to retain shape
+- INPUT Roll Direction (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Axis around which each curve is rolled
+- INPUT Random Orientation (Float, default 0.5, min 0.0, max 1.0) — Amount of randomization of the direction of the roll
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Preserve Length (Bool, default False) — Preserve each curve's length during deformation
+
+## Nodes (159)
+- **Compare.005** [FunctionNodeCompare] {operation=EQUAL, data_type=INT, mode=ELEMENT}
+    inputs livres: B = 0
+- **Switch.004** [GeometryNodeSwitch] {input_type=INT}
+    inputs livres: True = 12
+- **Set Spline Type** [GeometryNodeCurveSplineType]
+- **Set Spline Resolution** [GeometryNodeSetSplineResolution]
+- **Separate Components** [GeometryNodeSeparateComponents]
+- **Group Input.022** [NodeGroupInput]
+- **Group.004** [GeometryNodeGroup] -> grupo 'Smooth Hair Curves'
+    inputs livres: Amount = 1.0; Shape = 0.0; Weight = 1.0; Lock Tips = True; Preserve Length = False
+- **Capture Attribute.002** [GeometryNodeCaptureAttribute] {domain=CURVE}
+- **Capture Attribute.001** [GeometryNodeCaptureAttribute] {domain=CURVE}
+- **Capture Attribute.003** [GeometryNodeCaptureAttribute] {domain=CURVE}
+- **Sample Curve** [GeometryNodeSampleCurve] {data_type=FLOAT_VECTOR, mode=LENGTH}
+- **Group Input.023** [NodeGroupInput]
+- **Set Position.002** [GeometryNodeSetPosition]
+- **Compare.004** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=INT, mode=ELEMENT}
+    inputs livres: B = 0
+- **Join Geometry** [GeometryNodeJoinGeometry]
+- **Group Output** [NodeGroupOutput]
+- **Capture Attribute.008** [GeometryNodeCaptureAttribute] {domain=POINT}
+- **Vector Math.027** [ShaderNodeVectorMath] {operation=DOT_PRODUCT}
+- **Vector Math.029** [ShaderNodeVectorMath] {operation=DOT_PRODUCT}
+- **Vector Math.026** [ShaderNodeVectorMath] {operation=DOT_PRODUCT}
+- **Combine XYZ** [ShaderNodeCombineXYZ]
+- **Curve Tangent.002** [GeometryNodeInputTangent]
+- **Normal.001** [GeometryNodeInputNormal]
+- **Vector Math.032** [ShaderNodeVectorMath] {operation=CROSS_PRODUCT}
+- **Vector Math.025** [ShaderNodeVectorMath] {operation=SUBTRACT}
+- **Position.005** [GeometryNodeInputPosition]
+- **Group Input.007** [NodeGroupInput]
+- **Math.015** [ShaderNodeMath] {operation=MULTIPLY}
+- **Random Value** [FunctionNodeRandomValue] {data_type=FLOAT}
+    inputs livres: Min = -3.1416; Max = 3.1416
+- **Group.007** [GeometryNodeGroup] -> grupo 'Curve Info'
+- **Group Input.004** [NodeGroupInput]
+- **Vector Math.007** [ShaderNodeVectorMath] {operation=PROJECT}
+- **Vector Math.008** [ShaderNodeVectorMath] {operation=SUBTRACT}
+- **Compare.001** [FunctionNodeCompare] {operation=NOT_EQUAL, data_type=VECTOR, mode=ELEMENT}
+    inputs livres: B = (0.0, 0.0, 0.0); Epsilon = 0.0
+- **Vector Math.009** [ShaderNodeVectorMath] {operation=NORMALIZE}
+- **Switch** [GeometryNodeSwitch] {input_type=VECTOR}
+- **Vector Rotate** [ShaderNodeVectorRotate]
+    inputs livres: Center = (0.0, 0.0, 0.0)
+- **Evaluate on Domain.004** [GeometryNodeFieldOnDomain] {data_type=FLOAT_VECTOR, domain=CURVE}
+- **Group Input.009** [NodeGroupInput]
+- **Group.005** [GeometryNodeGroup] -> grupo 'Restore Curve Segment Length'
+    inputs livres: Factor = 1.0; Pin at Parameter = 0.0
+- **Math.003** [ShaderNodeMath] {operation=COSINE}
+- **Math.002** [ShaderNodeMath] {operation=SINE}
+- **Math.007** [ShaderNodeMath] {operation=MULTIPLY}
+- **Math.006** [ShaderNodeMath] {operation=MULTIPLY}
+- **Math.004** [ShaderNodeMath] {operation=SUBTRACT}
+- **Vector Math** [ShaderNodeVectorMath] {operation=SCALE}
+- **Vector Math.004** [ShaderNodeVectorMath] {operation=ADD}
+- **Vector Math.002** [ShaderNodeVectorMath] {operation=SCALE}
+- **Vector Math.005** [ShaderNodeVectorMath] {operation=SCALE}
+- **Vector Math.003** [ShaderNodeVectorMath] {operation=ADD}
+- **Vector Math.006** [ShaderNodeVectorMath] {operation=CROSS_PRODUCT}
+- **Math.008** [ShaderNodeMath] {operation=MULTIPLY}
+- **Position** [GeometryNodeInputPosition]
+- **Mix.001** [ShaderNodeMix] {data_type=VECTOR, blend_type=MIX}
+- **Group Input.002** [NodeGroupInput]
+- **Vector Math.001** [ShaderNodeVectorMath] {operation=ADD}
+- **Math.017** [ShaderNodeMath] {operation=DIVIDE}
+    inputs livres: Value = 6.2832
+- **Group Input.006** [NodeGroupInput]
+- **Group Input.010** [NodeGroupInput]
+- **Set Position** [GeometryNodeSetPosition]
+    inputs livres: Offset = (0.0, 0.0, 0.0)
+- **Compare.003** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=FLOAT, mode=ELEMENT}
+    inputs livres: B = 0.0
+- **Boolean Math** [FunctionNodeBooleanMath] {operation=AND}
+- **Mix.006** [ShaderNodeMix] {data_type=VECTOR, blend_type=MIX}
+- **Position.006** [GeometryNodeInputPosition]
+- **Capture Attribute.007** [GeometryNodeCaptureAttribute] {domain=POINT}
+- **Position.004** [GeometryNodeInputPosition]
+- **Group Input** [NodeGroupInput]
+- **Group** [GeometryNodeGroup] -> grupo 'Curve Info'
+- **Math.009** [ShaderNodeMath] {operation=MINIMUM}
+- **Group Input.012** [NodeGroupInput]
+- **Group Input.011** [NodeGroupInput]
+- **Math.016** [ShaderNodeMath] {operation=MULTIPLY}
+- **Math** [ShaderNodeMath] {operation=SUBTRACT}
+- **Group.001** [GeometryNodeGroup] -> grupo 'Curve Info'
+- **Evaluate on Domain.001** [GeometryNodeFieldOnDomain] {data_type=FLOAT, domain=CURVE}
+- **Capture Attribute.009** [GeometryNodeCaptureAttribute] {domain=POINT}
+- **Spline Resolution** [GeometryNodeInputSplineResolution]
+- **Set Spline Type.001** [GeometryNodeCurveSplineType]
+- **Group.003** [GeometryNodeGroup] -> grupo 'Curve Segment'
+- **Accumulate Field** [GeometryNodeAccumulateField] {data_type=FLOAT, domain=POINT}
+- **Group.002** [GeometryNodeGroup] -> grupo 'Curve Info'
+- **Math.014** [ShaderNodeMath] {operation=MULTIPLY}
+- **Math.013** [ShaderNodeMath] {operation=DIVIDE}
+- **Switch.001** [GeometryNodeSwitch] {input_type=FLOAT}
+- **Group Input.008** [NodeGroupInput]
+- **Compare.002** [FunctionNodeCompare] {operation=EQUAL, data_type=FLOAT, mode=ELEMENT}
+    inputs livres: B = 0.0; Epsilon = 0.0
+- **Vector Math.014** [ShaderNodeVectorMath] {operation=CROSS_PRODUCT}
+- **Normal** [GeometryNodeInputNormal]
+- **Curve Tangent.001** [GeometryNodeInputTangent]
+- **Separate XYZ** [ShaderNodeSeparateXYZ]
+- **Vector Math.016** [ShaderNodeVectorMath] {operation=SCALE}
+- **Vector Math.030** [ShaderNodeVectorMath] {operation=SCALE}
+- **Vector Math.031** [ShaderNodeVectorMath] {operation=ADD}
+- **Vector Math.013** [ShaderNodeVectorMath] {operation=ADD}
+- **Vector Math.012** [ShaderNodeVectorMath] {operation=SCALE}
+- **Subdivide Curve.004** [GeometryNodeSubdivideCurve]
+- **Math.022** [ShaderNodeMath] {operation=POWER}
+    inputs livres: Value = 2.0
+- **Math.023** [ShaderNodeMath] {operation=SUBTRACT}
+    inputs livres: Value = 1.0
+- **Group Input.014** [NodeGroupInput]
+- **Compare** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=FLOAT, mode=ELEMENT}
+    inputs livres: B = 0.0
+- **Spline Parameter** [GeometryNodeSplineParameter]
+- **Math.001** [ShaderNodeMath] {operation=SUBTRACT}
+- **Evaluate on Domain** [GeometryNodeFieldOnDomain] {data_type=FLOAT, domain=CURVE}
+- **Group Input.005** [NodeGroupInput]
+- **Math.012** [ShaderNodeMath] {operation=MULTIPLY}
+- **Math.005** [ShaderNodeMath] {operation=DIVIDE}
+- **Mix** [ShaderNodeMix] {data_type=FLOAT, blend_type=MIX}
+    inputs livres: A = 1.0
+- **Group Input.001** [NodeGroupInput]
+- **Math.011** [ShaderNodeMath] {operation=SUBTRACT}
+    inputs livres: Value = 1.0
+- **Math.010** [ShaderNodeMath] {operation=DIVIDE}
+- **Group Input.003** [NodeGroupInput]
+- **Hash Value** [FunctionNodeHashValue] {data_type=INT}
+    inputs livres: Seed = -615487
+
+## Ligacoes (188)
+- Group.004.Geometry -> Sample Curve.Curves
+- Group.Length -> Math.Value
+- Math.Value -> Sample Curve.Length
+- Math.009.Value -> Math.Value
+- Group.001.Curve Index -> Sample Curve.Curve Index
+- Capture Attribute.003.Geometry -> Capture Attribute.001.Geometry
+- Capture Attribute.001.Geometry -> Capture Attribute.002.Geometry
+- Sample Curve.Tangent -> Capture Attribute.001.Value
+- Mix.001.Result -> Vector Math.001.Vector
+- Capture Attribute.001.Value -> Vector Math.Vector
+- Evaluate on Domain.004.Value -> Vector Math.002.Vector
+- Spline Parameter.Length -> Math.001.Value
+- Switch.001.Output -> Math.002.Value
+- Switch.001.Output -> Math.003.Value
+- Math.006.Value -> Vector Math.Scale
+- Vector Math.Vector -> Vector Math.003.Vector
+- Vector Math.002.Vector -> Vector Math.003.Vector
+- Math.004.Value -> Vector Math.002.Scale
+- Math.001.Value -> Compare.A
+- Math.Value -> Math.001.Value
+- Math.001.Value -> Math.005.Value
+- Math.002.Value -> Math.006.Value
+- Math.003.Value -> Math.007.Value
+- Math.012.Value -> Math.005.Value
+- Math.012.Value -> Math.006.Value
+- Math.012.Value -> Math.007.Value
+- Capture Attribute.001.Value -> Vector Math.006.Vector
+- Evaluate on Domain.004.Value -> Vector Math.006.Vector
+- Vector Math.006.Vector -> Vector Math.005.Vector
+- Math.008.Value -> Vector Math.005.Scale
+- Vector Math.003.Vector -> Vector Math.004.Vector
+- Vector Math.005.Vector -> Vector Math.004.Vector
+- Vector Math.004.Vector -> Vector Math.001.Vector
+- Group.Length -> Math.009.Value
+- Math.001.Value -> Math.010.Value
+- Group.Length -> Math.010.Value
+- Math.010.Value -> Math.011.Value
+- Evaluate on Domain.Value -> Math.012.Value
+- Mix.Result -> Math.012.Value
+- Math.011.Value -> Mix.B
+- Group Input.001.Roll Taper -> Mix.Factor
+- Math.007.Value -> Math.004.Value
+- Evaluate on Domain.Value -> Math.004.Value
+- Capture Attribute.003.Value -> Mix.001.A
+- Position.Position -> Mix.001.B
+- Math.017.Value -> Math.008.Value
+- Group Input.002.Retain Overall Shape -> Mix.001.Factor
+- Group.002.Curve Index -> Accumulate Field.Group ID
+- Group.003.Segment Length -> Math.013.Value
+- Math.014.Value -> Accumulate Field.Value
+- Math.013.Value -> Math.014.Value
+- Math.012.Value -> Math.013.Value
+- Compare.Result -> Math.014.Value
+- Math.016.Value -> Evaluate on Domain.001.Value
+- Capture Attribute.001.Value -> Vector Rotate.Axis
+- Math.015.Value -> Vector Rotate.Angle
+- Random Value.Value -> Math.015.Value
+- Group Input.004.Random Orientation -> Math.015.Value
+- Group Input.005.Roll Radius -> Evaluate on Domain.Value
+- Switch.Output -> Vector Rotate.Vector
+- Group Input.006.Roll Depth -> Math.017.Value
+- Math.001.Value -> Math.008.Value
+- Compare.001.Result -> Switch.Switch
+- Vector Math.009.Vector -> Switch.True
+- Group Input.007.Roll Direction -> Vector Math.007.Vector
+- Group Input.007.Roll Direction -> Vector Math.008.Vector
+- Vector Math.007.Vector -> Vector Math.008.Vector
+- Vector Math.008.Vector -> Vector Math.009.Vector
+- Group Input.007.Roll Direction -> Compare.001.A
+- Math.005.Value -> Switch.001.True
+- Compare.002.Result -> Switch.001.Switch
+- Group Input.008.Roll Taper -> Compare.002.A
+- Accumulate Field.Leading -> Switch.001.False
+- Group Input.010.Factor -> Compare.003.A
+- Compare.003.Result -> Boolean Math.Boolean
+- Group.004.Geometry -> Capture Attribute.003.Geometry
+- Vector Math.012.Vector -> Vector Math.013.Vector
+- Vector Math.016.Vector -> Vector Math.013.Vector
+- Normal.Normal -> Vector Math.012.Vector
+- Normal.Normal -> Vector Math.014.Vector
+- Vector Math.014.Vector -> Vector Math.016.Vector
+- Compare.Result -> Boolean Math.Boolean
+- Boolean Math.Boolean -> Set Position.Selection
+- Sample Curve.Position -> Capture Attribute.003.Value
+- Capture Attribute.007.Geometry -> Group.004.Geometry
+- Position.004.Position -> Capture Attribute.007.Value
+- Capture Attribute.002.Value -> Switch.False
+- Sample Curve.Normal -> Capture Attribute.002.Value
+- Capture Attribute.001.Value -> Vector Math.007.Vector
+- Vector Rotate.Vector -> Evaluate on Domain.004.Value
+- Vector Math.025.Vector -> Vector Math.026.Vector
+- Separate XYZ.X -> Vector Math.012.Scale
+- Separate XYZ.Y -> Vector Math.016.Scale
+- Vector Math.013.Vector -> Vector Math.031.Vector
+- Vector Math.030.Vector -> Vector Math.031.Vector
+- Curve Tangent.001.Tangent -> Vector Math.030.Vector
+- Separate XYZ.Z -> Vector Math.030.Scale
+- Vector Math.025.Vector -> Vector Math.029.Vector
+- Vector Math.025.Vector -> Vector Math.027.Vector
+- Normal.001.Normal -> Vector Math.032.Vector
+- Curve Tangent.002.Tangent -> Vector Math.032.Vector
+- Vector Math.032.Vector -> Vector Math.027.Vector
+- Curve Tangent.002.Tangent -> Vector Math.029.Vector
+- Normal.001.Normal -> Vector Math.026.Vector
+- Curve Tangent.001.Tangent -> Vector Math.014.Vector
+- Vector Math.026.Value -> Combine XYZ.X
+- Vector Math.027.Value -> Combine XYZ.Y
+- Vector Math.029.Value -> Combine XYZ.Z
+- Capture Attribute.002.Geometry -> Capture Attribute.008.Geometry
+- Combine XYZ.Vector -> Capture Attribute.008.Value
+- Capture Attribute.008.Value -> Separate XYZ.Vector
+- Position.006.Position -> Mix.006.A
+- Vector Math.001.Vector -> Mix.006.B
+- Compare.Result -> Mix.006.Factor
+- Set Position.Geometry -> Set Position.002.Geometry
+- Vector Math.031.Vector -> Set Position.002.Offset
+- Capture Attribute.007.Value -> Vector Math.025.Vector
+- Position.005.Position -> Vector Math.025.Vector
+- Group Input.022.Variation Level -> Group.004.Iterations
+- Group Input.023.Variation Level -> Compare.004.A
+- Compare.004.Result -> Set Position.002.Selection
+- Mix.006.Result -> Set Position.Position
+- Group Input.011.Factor -> Math.016.Value
+- Set Position.002.Geometry -> Group.005.Curves
+- Capture Attribute.007.Value -> Group.005.Reference Position
+- Group Input.009.Preserve Length -> Group.005.Selection
+- Separate Components.Mesh -> Join Geometry.Geometry
+- Separate Components.Point Cloud -> Join Geometry.Geometry
+- Separate Components.Volume -> Join Geometry.Geometry
+- Separate Components.Instances -> Join Geometry.Geometry
+- Set Spline Resolution.Curve -> Join Geometry.Geometry
+- Join Geometry.Geometry -> Group Output.Geometry
+- Group Input.Geometry -> Separate Components.Geometry
+- Group.007.Curve ID -> Random Value.ID
+- Group.005.Curves -> Set Spline Type.Curve
+- Set Spline Type.Curve -> Set Spline Resolution.Curve
+- Separate Components.Curve -> Capture Attribute.009.Geometry
+- Capture Attribute.009.Geometry -> Set Spline Type.001.Curve
+- Spline Resolution.Resolution -> Capture Attribute.009.Value
+- Subdivide Curve.004.Curve -> Set Position.Geometry
+- Math.022.Value -> Math.023.Value
+- Math.023.Value -> Subdivide Curve.004.Cuts
+- Group Input.014.Subdivision -> Math.022.Value
+- Capture Attribute.008.Geometry -> Subdivide Curve.004.Curve
+- Set Spline Type.001.Curve -> Capture Attribute.007.Geometry
+- Capture Attribute.009.Value -> Compare.005.A
+- Compare.005.Result -> Switch.004.Switch
+- Capture Attribute.009.Value -> Switch.004.False
+- Switch.004.Output -> Set Spline Resolution.Resolution
+- Evaluate on Domain.001.Value -> Math.009.Value
+- Group Input.012.Roll Length -> Math.016.Value
+- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Group Input.003.Seed -> Hash Value.Value
+- Hash Value.Hash -> Random Value.Seed
