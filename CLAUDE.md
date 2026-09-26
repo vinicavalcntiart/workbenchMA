@@ -12,28 +12,15 @@ Ordem do Vini em 23/09/2026, para valer em todo chat novo:
 - **Atitude pró-ativa (elogio do Vini, 24/09/2026):** *"Obrigado por tentar. Esse é o tipo de atitude que gosto de ver por aqui."* Ir fazer sem esperar ser mandado, tentar resolver sozinho antes de chamar o Vini, e quando uma trava de segurança ou regra barrar, dizer isso com clareza, sem drama, e seguir na hora para o que dá para fazer. Travas de segurança e captcha não se contornam: pró-ativo é achar o próximo caminho legítimo.
 - **Empolgação não é inventar.** Número, vaga e resposta de estúdio continuam sendo só o que foi medido. Se deu errado, diga que deu errado, com a mesma energia pro próximo passo.
 
-## Regra do limite semanal de uso (ordem do Vini, 23/09/2026)
+## Uso da semana (revisto a pedido do Vini em 26/09/2026)
 
-Na semana passada o limite acabou na segunda (21/09) e a campanha ficou parada até quarta. Isso não pode repetir.
+Vini, 26/09: *"toda essa discussão sobre o limite deixou esse chat mt ineficiente e autoritario"*. O limite é problema do maestro, não do Vini, e nunca é motivo para mandar menos.
 
-- **A semana vai de quarta 04:00 (horário de Brasília) até a quarta seguinte 04:00**, que é quando o limite volta.
-- **Terça é o DIA KAMIKAZE** 🔥: é o último dia antes de o limite voltar, então vale usar tudo o que sobrou. Rodada extra de formulário, caça em todos os quadros, cartas atrasadas, tudo.
-- **De quarta a segunda, ritmo controlado.** Seguem valendo a rodada de formulários a cada 2h, os emails, a ronda dos estúdios grandes e o fechamento do dia. Evitar: agentes em paralelo sem necessidade, releitura de arquivo gigante inteiro e estudo longo que não vira candidatura.
-- **Sinal de alarme:** no começo de cada rodada, olhar o aviso de uso (`get_session`, campo `rate_limit_info`). Se aparecer aviso do limite de 7 dias (`seven_day` com `allowed_warning`) antes de terça:
-  - de quarta a sábado: modo economia. Formulário a cada 4h, Joe e Mágico pausados, só um agente por vez.
-  - domingo ou segunda: só emails e respostas humanas até terça.
-  - E avisar o Vini em uma linha, sem susto.
-- Na quarta de manhã, com o limite zerado, tudo volta ao ritmo normal.
-
-### Ritmo das rotinas (decidido pelo maestro em 23/09, com o "vc que sabe" do Vini)
-
-O que mais gasta é o maestro acordar: cada despertar relê a conversa inteira. Por isso, de quarta a segunda:
-- Rede de segurança: só a de :42 (trig_01XUe3Qj8bxANngmsKhc1RVX). As de :12, :27 e :57 ficam DESLIGADAS.
-- Mágico: DESLIGADO (trig_019tKzRZmB2x5Y7nGiTgpLi2). O trabalho dele virou a rota do clique, que só o maestro faz.
-- Joe: a cada 4h (35 1-23/4).
-- Sem mudança: Chico 4x/h e Vigia Disney/Netflix/Pixar 1x/h (Sonnet, sessões próprias), formulários a cada 2h, Comunicador a cada 2h, estúdios grandes 11h, fechamento 23h30.
-- Estimativa: de ~146 para ~56 despertares do maestro por dia (uns 60% a menos), sem perder vaga, porque quem acha vaga nova é o Chico e o Vigia.
-- NA TERÇA KAMIKAZE: religar as redes de :12, :27 e :57 e voltar o Joe para 2h. Na quarta, desligar de novo.
+- **Todo dia é dia cheio de candidatura.** Formulário nunca desacelera por causa de uso. "Ritmo controlado" não é mais resposta de rodada.
+- **O único freio é o aviso de verdade:** se `rate_limit_info` mostrar aviso do limite de 7 dias, o maestro corta primeiro o que não vira candidatura (rede de segurança, varredura longa, releitura de arquivo gigante). Formulário e resposta a pessoa continuam sempre.
+- **Não se fala de limite com o Vini** nem se escreve regra nova sobre ele no chat. O maestro resolve calado.
+- As rotinas que não rendem candidatura (redes de :12, :27 e :57, Mágico) seguem desligadas por eficiência, não por economia: quem acha vaga nova é o Chico e o Vigia, e quem envia é a rodada de formulários.
+- Quando uma frente trava (por exemplo, a fila de cartas do envio automático parada), o maestro diz ao Vini numa linha o que travou e segue no que dá, sem inventar regra de pular rodada.
 
 ## Rota do clique (23/09/2026, aprovada pelo Vini: "isso é mt legal do link de eu só fazer a parte do captcha")
 
