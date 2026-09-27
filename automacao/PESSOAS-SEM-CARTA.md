@@ -19190,3 +19190,19 @@ a leitura de disciplina tem de vir antes do endereço.
 - **FORA DOS EUA? SIM.** **A frase de realocação ENTRA.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `valuesvalue OR "Values Value" OR Loktionova` e endereço exato (com lixeira) → **`{}`**; `to:/from:valuesvalue.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
 - **RESSALVAS HONESTAS:** a mesma home publica `talent@` como a porta de quem procura emprego, então escrever à fundadora é aposta; os clientes puxam para mobile; nenhuma vaga de personagem vista. É a mais fraca das oito.
+
+## RODADA 27/09 (Joe, ficha avulsa): KOLIBRI GAMES, porta espontanea do Lever parada em hCaptcha de imagem
+
+### FICHA: **caixa do time de recrutamento** da **KOLIBRI GAMES** (Berlim, **ALEMANHA**; grupo Ubisoft) - `j***@kolibrigames.com` - **ALTA (PUBLICADO em texto puro, caixa geral, nao pessoa)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.kolibrigames.com/contact/` (**200, 21.150 bytes**): *"Career For job inquiries, please contact our recruiting team."* seguido do endereco. `https://www.kolibrigames.com/website-privacy-policy/` (**200, 84.184 bytes**): o mesmo endereco como contato do banco de candidatos. `https://www.kolibrigames.com/career/` (**200, 110.050 bytes**). **NADA MONTADO.**
+- **POR QUE A CAIXA E NAO UMA PESSOA:** a casa e media (~115 pessoas), entao o alvo certo seria o diretor de arte, **Daniel Lopez, Studio Art Director** (*"This new department is led by our Studio Art Director, Daniel Lopez."*, `https://www.kolibrigames.com/blog/game-design-behind-the-scenes/`, post de 09/01/2023). **Ele nao tem endereco publicado** em pagina aberta (ArtStation `danlop77` deu 403), entao entra como `sem-email` e a carta vai para a caixa pedindo encaminhamento ao time de arte.
+- **FRASES DA CASA, literais:**
+  - *"they're all friendly, approachable and stylized while remaining essentially "realistic""* (estilo da casa) - `/blog/how-to-get-a-job-at-kolibri-games-game-artist/`, 18/01/2021
+  - *"Our recruiters and hiring managers look at your portfolios before they look at your CVs"* - mesmo post
+  - *"Moving to another country can be stressful. Our HR team will guide and support you, making sure that you (and your family) make your way to Berlin as smoothly as possible"* - `/career/`
+  - *"The cornerstones of our strategy for the art department are scalability and quality."* (Daniel Lopez) - post de 2023
+- **FORA DOS EUA? SIM** (Alemanha). **A frase de realocacao ENTRA**, e a propria casa publica apoio a mudanca para Berlim.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `kolibri OR kolibrigames.com OR "Kolibri Games"` -> **`{}`**; `in:anywhere (kolibrigames OR kolibri OR "Idle Miner")` -> **`{}`**; `in:anywhere (to:jobs@... OR from:kolibrigames.com OR "Daniel Lopez")` -> **`{}`**. Repositorio: zero em `enviados.csv` e `pessoas.csv`; `processados.csv` so tem a descoberta de 19/09 e a parede de hCaptcha de imagem no Lever `d2ff05ad` de 21/09, **nunca envio. CASA NOVA PARA CARTA.**
+- **DESCARTADA:** Marina Ivanovic, ex-Head of Recruitment. Um resumo de busca liga a ela um endereco pessoal vindo de resposta no Glassdoor, mas o Glassdoor deu 403 (nao vi o endereco em pagina aberta) e ela **saiu para a Klarna em 09/2021**. `press.kolibrigames.com` nao resolve mais.
+- **RESSALVAS HONESTAS:** caixa geral, nao pessoa; os posts com os ganchos sao de 2021 e 2023 e a permanencia do Daniel nao esta provada; a casa e mobile idle em Unity e se diz de generalistas (*"we don't have dedicated texture artists, concept artists, modelers"*; *"Do you do ultra-realistic ZBrush sculpts? That's wonderful, but we won't use them in Idle Restaurant Tycoon."*); o quadro de hoje tem 4 vagas e **zero de arte**.
