@@ -19087,3 +19087,106 @@ a leitura de disciplina tem de vir antes do endereço.
 - **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `umeshulovers OR "Umeshu Lovers" OR Sarrailh OR l*** (local do endereço)` (com lixeira) → **`{}`**; `to:/from:umeshulovers.com` → **`{}`**. Repositório: só a varredura de vaga de 31 casas em `processados.csv` (sem vaga publicada). **Nenhuma carta.**
 - **RESSALVAS HONESTAS:** ele é comunicação, não arte; a casa já tem lead e artista de personagem; sem vaga publicada.
+
+## RODADA DAS 13h35 UTC DE 27/09 (Joe): VEIA NOVA, **RECRUTADORES ESPECIALIZADOS EM GAMES, ANIMAÇÃO E VFX** que publicam o endereço pessoal na página de equipe (o gamedevmap secou). **Oito fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Reino Unido ×4, Suíça, EUA, Austrália e uma agência remota de origem ucraniana. Uma pessoa por agência, todas INÉDITAS na campanha. Email completo fora do repositório (repositório público); aqui vai mascarado
+
+**Placar: 8 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit** (o pedido desta rodada foi sem commit e sem carta).
+
+**O MÉTODO:** home de cada agência por curl, depois até 12 páginas internas com palavra de equipe no caminho (team, people, about, consultant, meet, contact), com entidade HTML, `%40`, `[at]`, `(at)` e `data-cfemail` decodificados. O diretório `https://www.gamesjobsdirect.com/games-industry-recruiters` deu o domínio novo da Aardvark Swift (`aswift.com`; o antigo dá reset) e a Conkerberry. MX conferido nos oito domínios (todos vivos). Dedupe no Gmail com lixeira, por marca, sobrenome, domínio do site, **domínio do ENDEREÇO** e endereço exato: **`{}` para as oito**. Repositório: zero nas oito (a Amiqus só aparece como alerta de vaga do LinkedIn em 25/09 e numa nota de varredura de 20/09).
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Skillsearch** (Brighton): quem cuida de arte é o Associate Director Joe McKernan (`j***@skillsearch.com`), e ele é o dono da vaga **Character Artist ref 10616, JÁ ENVIADA em 24/09** (recibo automático dele na caixa às 15h03). Não é pessoa nova: o toque dele é o follow-up único de 01/10, no mesmo fio.
+- **Pentasia**: é recrutamento de **apostas e iGaming** (*"the world's leading online betting and Gaming recruitment agency"*), não de videogame. A anotação das 09h35 estava errada nisso.
+- **Big Fish Recruitment** (rec2rec e educação), **Mustard FX** (o único nome do time é o diretor de operações, vindo de arquitetura), **Haptic** (só `hannah@` em mailto escondido, sem sobrenome), **8Bit** (só imprensa com nome), **Games Recruit, Rachelle Lewis Talent, Grey Matter, Talk Recruitment, Aquent, Onward, European Tech Recruit** (só caixa geral).
+- **Sem conexão** (reset, 000 ou desafio 202): Datascope, Specialmove, OPM Response, Liquid Talent, Dragonfly, Mirrorball, MegaCorp, Interactive Selection, Digital Artist Management, Game Logic.
+
+### FICHA 1: **Margaret Smith**, *Senior Recruiter, Creative Team* (página dela: *"Art & Animation Team Lead"*), **AARDVARK SWIFT** (Rotherham, **REINO UNIDO**) — `m***@aswift.com` — **ALTA (PUBLICADO em `mailto:` no cartão dela)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.aswift.com/consultants` (**200, 511.105 bytes**): *"Margaret Smith / Senior Recruiter - Creative Team"* com o `mailto:`. `https://www.aswift.com/consultants/margaret-smith` (**200, 508.170 bytes**): título *"Aardvark Swift | Margaret Smith Art & Animation Team Lead"*, descrição *"Recruitment Team Lead for Art and Animation video games jobs."* `https://www.aswift.com/employers/visa-support` (**200, 509.403 bytes**). **NADA MONTADO.**
+- **POR QUE ELA:** é quem a agência põe à frente de **arte e animação**. Os outros endereços do quadro são de engenharia, operações e do CEO.
+- **FRASES DA CASA, literais:**
+  - *"Aardvark Swift are working with immigration specialists Fragomen LLP"* — `/employers/visa-support` (a agência já lida com visto, o gancho mais útil para o Vini)
+  - *"We excel at putting great candidates together with studios that fit their skills and career aspirations."* — `/about-us`
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `aswift OR "Aardvark Swift" OR aardvarkswift` e endereço exato (com lixeira) → **`{}`**; `to:/from:aswift.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** as vagas no cartão dela hoje são de programação, marketing e design (Berlim, Liubliana, Reino Unido), nenhuma de personagem; o texto dela diz que veio de 20 anos de recrutamento de engenharia.
+
+### FICHA 2: **Mihai Gabriel Ionescu**, *Talent Finder* focado em artistas e designers, **INGAME RECRUITMENT** (Londres, **REINO UNIDO**) — `m***@ingamerecruitment.com` — **ALTA (PUBLICADO na página de equipe e na página dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.ingamerecruitment.com/cm/about-us/team` (**200, 62.752 bytes**). `https://www.ingamerecruitment.com/cm/about-us/team/Mihai` (**200, 59.109 bytes**): *"Talent Finder"* com o endereço. `https://www.ingamerecruitment.com/careers/29468/index0/Director-Realistic-3d-Characters-Art-Remote-Europe-1733789` (**200, 68.962 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** dos cinco nomes da casa, é o único que escreve que cobre arte; os outros são programação, comercial e o fundador.
+- **VAGA DE PERSONAGEM NO QUADRO DELE:** *"Director Realistic 3d Characters Art - Remote"*, ref 1733789, postada em **24/09/2026**, Europa, AAA.
+- **FRASES DA CASA, literais (página dele):**
+  - *"Nowadays I'm vertically focused on hiring Designers and Artists for some of the best studios around the world"*
+  - *"I'm interested in the stories behind how some of the masterpieces in the gaming industry have been developed"*
+- **FORA DOS EUA? SIM** (Reino Unido; a vaga é remota na Europa). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `ingamerecruitment OR "InGame Recruitment" OR Ionescu` e endereço exato (com lixeira) → **`{}`**; `to:/from:ingamerecruitment.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** a vaga do quadro pede *"3+ years of leadership experience as a Team Lead or Project Lead in Realistic 3D Character Art"* e é realista, então a carta pede a ele as vagas de personagem estilizado, não essa; ele é *Talent Finder* (sourcer), não consultor sênior.
+
+### FICHA 3: **Simon Davies**, *Founder and Director*, **DAX / DIGITAL ARTS XCHANGE** (Londres, **REINO UNIDO**; escritórios em Valência e Lisboa) — `s***@wearedax.io` — **ALTA (PUBLICADO no rodapé do site)**
+
+- **URLs abertas por mim nesta rodada:** `https://wearedax.io/` (**200, 223.527 bytes**): *"E-mail: s***@wearedax.io"*. `https://wearedax.io/recruitment-dax-vfx-animation-games-immersive/` (**200, 153.667 bytes**): *"Our Team / Simon Davies / Founder and Director"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o fundador e o único endereço publicado numa casa de três pessoas.
+- **FRASES DA CASA, literais:**
+  - *"Powering Creativity with Exceptional Talent across VFX, Animation, Games and Immersive Studios"* — home
+  - *"With over 20 years of in-house Talent Acquisition experience, our team partners with VFX, Animation, Virtual Production and Games Studios"* — about
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `wearedax OR "Digital Arts Xchange" OR "Simon Davies"` e endereço exato (com lixeira) → **`{}`**; `to:/from:wearedax.io` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** o endereço funciona como contato geral da casa; nenhuma vaga de personagem vista (o quadro de vagas é à parte e não foi aberto).
+
+### FICHA 4: **Tiffany Feeney**, fundadora e headhunter de animação e VFX (ex-recrutadora da **DreamWorks Animation**), **TALENT OUTPOST GmbH** (**SUÍÇA**) — `t***@talent-outpost.com` — **ALTA, com ressalva (PUBLICADO em `mailto:`, não em texto)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.talent-outpost.com/quote-carousel-1/full-and-amazing-team` (**401 de página com senha do Squarespace, 337.934 bytes, servida aberta**): link *"In the meantime, you can click here to e-mail Talent Outpost directly"* apontando para o endereço dela. `https://www.talent-outpost.com/about-tiffany-feeney` (**200, 233.844 bytes**). **NADA MONTADO.**
+- **POR QUE ELA:** é a dona da agência e a própria recrutadora; já contratou para estúdio de animação grande.
+- **FRASES DA CASA, literais (`/about-tiffany-feeney`):**
+  - *"Tiffany Feeney, the founder of Talent Outpost GmbH, is an executive headhunter for the animation and vfx industry."*
+  - *"She has hired talented people for over 50 animated films and vfx features, tv series, and commercials for global studios including Aardman Animations, Blue Sky Studios, and Sergio Pablos Animation Studio."*
+  - *"Before starting her recruiting consultancy, she worked as a recruiter at Google, DreamWorks Animation, and Zynga."*
+- **FORA DOS EUA? SIM** (Suíça). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `talent-outpost OR "Talent Outpost" OR Feeney` e endereço exato (com lixeira) → **`{}`**; `to:/from:talent-outpost.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** o endereço está num link e no JSON de configuração do site, não escrito por extenso; a caixa visível é `hello@`. Vagas atuais não vistas.
+
+### FICHA 5: **Chris Molleson**, *Senior Consultant*, **AMIQUS** (Warrington, **REINO UNIDO**) — `c***@amiqus.com` — **ALTA (PUBLICADO em `mailto:` no cartão dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.amiqus.com/meet-the-team` (**200, 287.546 bytes**): *"Chris Molleson / Senior Consultant"* com o `mailto:`. `https://www.amiqus.com/art-jobs` (**200, 351.103 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** a página não diz a especialidade de ninguém; a busca aberta liga ele a arte (post da própria Amiqus *"Amiqus' Chris Molleson is recruiting for a Generalist 3D Artist"* e anúncios dele de *Senior Character Animator* e *UI Artist*).
+- **FRASES DA CASA, literais:**
+  - *"Whether you're a generalist, a character specialist, or a wizard of environments, there's a place for your creativity here."* — `/art-jobs`
+  - *"We're not only recruiters, we're immersed in the games industry and proud to support it's success."* — `/meet-the-team`
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `amiqus OR Molleson` e endereço exato (com lixeira) → **um fio só, e é alerta do LinkedIn** (*"Amiqus ... is hiring a Art Director"*, 25/09, sem pessoa); `to:/from:amiqus.com` → **`{}`**. Repositório: só o mesmo alerta e uma nota de varredura. **Nenhuma carta, nenhuma pessoa.**
+- **RESSALVAS HONESTAS:** a ligação dele com arte vem de busca, **não de página aberta** (o post do Facebook é parede de login); o quadro de vagas da Amiqus carrega por JavaScript e não foi lido.
+
+### FICHA 6: **Marc Mencher**, fundador (*"Game Programmer gone GameRecruiter"*), **GAMERECRUITER** (**EUA**) — `M***@grcoo.com` — **ALTA (PUBLICADO em `mailto:` no cartão dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://gamerecruiter.com/who-we-are/` (**200, 122.660 bytes**): cartão *"Marc Mencher"* com o `mailto:` (domínio `grcoo.com`, diferente do site). **NADA MONTADO.**
+- **POR QUE ELE:** é o único nome publicado da agência.
+- **FRASES DA CASA, literais (`/who-we-are/`):**
+  - *"We're not outsiders. We know the game industry from creative to code."*
+  - *"Marc Mencher is a Game Programmer gone GameRecruiter specializing in staffing the Game and Digital Entertainment Industries."*
+- **FORA DOS EUA? NÃO** (EUA). **A frase de realocação NÃO entra por sede**; a carta pode dizer do patrocínio se o maestro quiser.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `grcoo OR gamerecruiter OR Mencher` e endereço exato (com lixeira) → **`{}`**; `to:/from:grcoo.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** generalista de games, não de arte; nenhuma vaga de personagem vista.
+
+### FICHA 7: **Bronwynn Lusted**, *Director*, **CONKERBERRY GAMES RECRUITMENT** (Sydney, **AUSTRÁLIA**) — `b***@conkerberry.com.au` — **ALTA (PUBLICADO em texto puro no cabeçalho de todas as páginas)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.conkerberry.com.au/` (**200, 11.018 bytes**) e `https://www.conkerberry.com.au/about.htm` (**200, 9.069 bytes**): *"Bronwynn Lusted (Director) ... b***@conkerberry.com.au"*. **NADA MONTADO.**
+- **POR QUE ELA:** é a diretora e o único nome da agência; o site tem listas de vaga separadas para *3D Artists*, *Animators* e *Art Directors*.
+- **FRASES DA CASA, literais (home):**
+  - *"We are a small and efficient Recruitment company specialising in the Games industry Australia wide."*
+  - *"Our staff have career backgrounds in both IT and Art so hope we bring an understanding to the recruitment we do in these areas."*
+  - *"For Games development companies we provide a competitively priced and accurate service locating skilled people, both locally and overseas."*
+- **FORA DOS EUA? SIM** (Austrália). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `conkerberry OR Lusted OR bronwynn` (com lixeira) → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** site antigo (*last-modified* 17/10/2024); agência pequena; as vagas só chegam por lista do Google Groups.
+
+### FICHA 8: **Tanja Loktionova**, *Founder, Co-owner*, **VALUES VALUE** (fundada em Kyiv, **UCRÂNIA**; equipe 100% remota em Chipre, Polônia, Croácia, Chéquia, Geórgia e Ucrânia) — `t***@valuesvalue.com` — **ALTA (PUBLICADO no bloco de contato da home)**
+
+- **URLs abertas por mim nesta rodada:** `https://valuesvalue.com/` (**200, 164.713 bytes**): *"Tanja Loktionova / FOUNDER / t***@valuesvalue.com"*. `https://valuesvalue.com/about-us-values-value-team/` (**200, 143.804 bytes**): *"FOUNDER, CO OWNER ... Game Changer by GamesIndustry.biz"*. `https://ingamejob.com/en/company/values-value` (**200**; vagas de Technical Artist e Level Artist). **NADA MONTADO.**
+- **POR QUE ELA:** é a fundadora e um dos dois nomes com endereço publicado (o outro é a COO).
+- **FRASES DA CASA, literais (home):**
+  - *"WE MATCH GAMES INDUSTRY TALENTS WITH GREAT COMPANIES"*
+  - *"The candidate is our core value, as a game recruitment agency we stand up for the employee's right to decent working conditions and a comfortable job change process."*
+- **FORA DOS EUA? SIM.** **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `valuesvalue OR "Values Value" OR Loktionova` e endereço exato (com lixeira) → **`{}`**; `to:/from:valuesvalue.com` → **`{}`**. Repositório: zero. **AGÊNCIA INÉDITA.**
+- **RESSALVAS HONESTAS:** a mesma home publica `talent@` como a porta de quem procura emprego, então escrever à fundadora é aposta; os clientes puxam para mobile; nenhuma vaga de personagem vista. É a mais fraca das oito.
