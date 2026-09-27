@@ -437,6 +437,15 @@ Observado em teste headless, nao em fonte externa:
   depois do Interpolate, e o caminho de mascara mais simples.
 - **Curve Info (Essentials) → Random** funciona nos filhos: um valor 0 a 1 por
   curva. Com Map Range vira variacao de qualquer float input.
+  **Observado em producao (2026-09-27, 5.2 LTS)**: e o padrao do Blender
+  Studio para randomizar Factor e Shape do Clump (e Curl, Trim): Curve Info
+  Random → Map Range (ex. 0,4 a 1,0) → Factor. Por fio, sem Create Guide
+  Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
+  Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
+  Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
+  Map Range → Color Ramp → Viewer (Ctrl+Shift+clique), com a geometria do
+  Viewer vinda da saida do Clump. Curve Info nao tem Seed: Math Add + Fraction
+  antes do Map Range, ou Random Value com ID vazio e Seed.
 - **Named Attribute nao le `.selection`.** Atributo interno com ponto no nome
   volta zero. A selecao do Sculpt nao entra no tree diretamente.
 - **Curves > Set Attribute** (bpy.ops.curves.attribute_set) so funciona em
