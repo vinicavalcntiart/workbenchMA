@@ -392,6 +392,31 @@ leia com Named Attribute, ligue no input.
 
 ---
 
+## 8b. Fields: o que foi testado em bpy 5.0.1 (2026-09-27)
+
+Observado em teste headless, nao em fonte externa:
+
+- **Vertex group pintado no scalp atravessa o Interpolate Hair Curves** e
+  aparece nos filhos como atributo float no dominio de curva, com o mesmo
+  nome e os valores 0 a 1 preservados. Named Attribute com o nome do grupo,
+  depois do Interpolate, e o caminho de mascara mais simples.
+- **Curve Info (Essentials) → Random** funciona nos filhos: um valor 0 a 1 por
+  curva. Com Map Range vira variacao de qualquer float input.
+- **Named Attribute nao le `.selection`.** Atributo interno com ponto no nome
+  volta zero. A selecao do Sculpt nao entra no tree diretamente.
+- **Curves > Set Attribute** (bpy.ops.curves.attribute_set) so funciona em
+  Edit Mode, e grava valor cheio em tudo que estava selecionado, inclusive
+  ponto com selecao 0,4. E mascara dura. Mascara suave nas proprias curvas so
+  vem do scalp (Weight Paint) ou do addon Groom Select desta pasta.
+- **Move to Nodes** existe como `bpy.ops.object.geometry_nodes_move_to_nodes`
+  e no menu do modificador [manual/modeling/modifiers/introduction.rst].
+- Suave e duro em qualquer modo de pintura e a curva de **Falloff** do pincel
+  (Smoother ate Constant, ou Custom); Hardness separado so existe no Sculpt
+  de malha [manual/sculpt_paint/brush/falloff.rst;
+  manual/sculpt_paint/brush/brush_settings.rst].
+
+---
+
 ## 9. Animação e deformação
 
 - Deform Curves on Surface no fim da stack, Surface Rest Position ligado no
