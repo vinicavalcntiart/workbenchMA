@@ -31,7 +31,7 @@ full character. isso é perda de tempo."*
 A rodada das 10h45 achou 268 quadros conhecidos fora do censo e leu 95, **mas não gravou
 quais**. Sem essa lista não dá para subtrair, então em vez de adivinhar eu **refiz o
 cruzamento inteiro e li os 290**, e gravei a lista para que isto nunca mais se perca:
-**`automacao/quadros-fora-censo-1209.csv`**, uma linha por token, com status, contagem de
+**`arquivo/levantamentos/quadros-fora-censo-1209.csv`**, uma linha por token, com status, contagem de
 vagas e a coluna `conferido`.
 
 O cruzamento novo (798 arquivos do repositório, 10 famílias de ATS) bate com o da rodada
@@ -286,7 +286,7 @@ finalista pela fonte oficial, com a régua termo a termo e a frase transcrita; (
 `dedupe-agora.sh` por ID **com o nome da casa**, mais conferência no **Gmail por janela de
 tempo**; (9) os que sobraram foram medidos contra a regra do Vini de 10/09.
 
-Arquivos escritos por esta rodada: **este**, `automacao/quadros-fora-censo-1209.csv` e uma
+Arquivos escritos por esta rodada: **este**, `arquivo/levantamentos/quadros-fora-censo-1209.csv` e uma
 linha em `automacao/processados.csv`. `enviados.csv`, `docs/index.html` e
 `automacao/FILA-DO-VINI.md` **não foram tocados** — a fila não mudou porque não havia o que
 pôr nela.

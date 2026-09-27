@@ -8,7 +8,7 @@ este arquivo e acrescentei **uma** linha em `automacao/processados.csv`.
 
 Lido antes de começar, por inteiro: `BRIEFING.md` (inclusive as seções novas do fim, que são
 as que mudam a triagem), `automacao/BRIEF-JHON.md` e
-`automacao/caca-join-greenhouse-1109.md`, que é a rodada que esta aqui re-tria.
+`arquivo/relatorios/caca-join-greenhouse-1109.md`, que é a rodada que esta aqui re-tria.
 
 ---
 

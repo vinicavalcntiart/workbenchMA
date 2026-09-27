@@ -2289,7 +2289,7 @@ Texto de `Information for the recruiter`:
 
 ## Floating Rock (Wellington, Nova Zelândia) — Character Artist do Kyōryū — À MÃO por reCAPTCHA
 
-Achada em 07/09 pela fatia JHONB, na fila `automacao/fila-oceania.csv` (linha marcada ARTE).
+Achada em 07/09 pela fatia JHONB, na fila `arquivo/levantamentos/fila-oceania.csv` (linha marcada ARTE).
 Estúdio pequeno de Wellington que **acabou de assinar com um publisher** e está montando o time do
 Kyōryū, e a vaga é literalmente a dele: *"We're looking for a creature-oriented Character Artist to
 bring Kyōryū's re-engineered dinosaurs to life. Translate our concept arts to a 3D model for the
@@ -2787,7 +2787,7 @@ mesmas vinte vagas para qualquer coisa que se digite — foi isso que escondeu a
 A leitura confiável é **paginar por `jobOffset`, 20 por página**; `jobRecordsPerPage=100` não
 funciona, o servidor devolve 20 do mesmo jeito. O script está em `automacao/lista-ea.sh` e roda
 em cerca de um minuto com **uma conexão sequencial**; o retrato de 07/09 está em
-`automacao/ea-portal-0709.csv`.
+`arquivo/levantamentos/ea-portal-0709.csv`.
 
 **O resultado desmente a expectativa mais cara do dia.** A esperança escrita era que "Canadá
 anglófono e Europa estão todos aí dentro" por causa de BioWare, Motive, Criterion, DICE e Maxis.

@@ -1,6 +1,6 @@
 # Colheita europeia do gamedevmap — 08/09
 
-Fila gerada: `automacao/fila-gamedevmap-europa.csv` (4148 linhas de dado + cabeçalho).
+Fila gerada: `arquivo/levantamentos/fila-gamedevmap-europa.csv` (4148 linhas de dado + cabeçalho).
 Escopo: os 17 países europeus pedidos, mais Austrália e Nova Zelândia no fim.
 
 ---

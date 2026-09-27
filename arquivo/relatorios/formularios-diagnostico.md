@@ -164,7 +164,7 @@ confirmação.
 
 **Conclusão que corrige a rodada 3:** carregar reCAPTCHA não é o mesmo que barrar. É
 verificação por pontuação de sessão, e a mesma rede pode passar num board e falhar em
-outro no mesmo dia. Então a medição prévia (`automacao/hb-recaptcha.js`) serve para
+outro no mesmo dia. Então a medição prévia (`arquivo/ferramentas-antigas/hb-recaptcha.js`) serve para
 **avisar o risco**, não para desistir: **tentar o envio continua obrigatório** mesmo em
 board que carrega o desafio. Só depois de o envio ser recusado é que a vaga vai para a
 fila do Vini.
@@ -247,7 +247,7 @@ sozinha é adivinhação. Onde existe API do próprio ATS, é ela que vale.
    no `apply_gh.js` em 04/09**, junto com o modo de tela de verdade por padrão; falta
    levar para o `apply_arrow.js`, o `apply_pgi.js` e os scripts de Airtable e Lever.
 4. Medir o reCAPTCHA do board **antes** de preencher, em todo ATS que tenha essa
-   configuração por cliente (`automacao/hb-recaptcha.js` faz isso para o Greenhouse), e
+   configuração por cliente (`arquivo/ferramentas-antigas/hb-recaptcha.js` faz isso para o Greenhouse), e
    mandar direto para a fila do Vini o que já se sabe que vai ser recusado no envio.
 5. Procurar rota legítima antes de declarar muro: página do próprio estúdio, API pública
    do ATS, email de recrutamento publicado, candidatura espontânea. A Piranha Games

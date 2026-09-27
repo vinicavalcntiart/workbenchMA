@@ -1,7 +1,7 @@
 # Caça ao Workday — LOTE 3 — 10/09/2026, madrugada
 
-Terceira varredura do Workday, feita depois de ler `automacao/caca-workday.md` (lote 1),
-`automacao/caca-workday-lote2.md` (lote 2) e `automacao/PROXIMA-RODADA-workday.md`. Tudo abaixo foi
+Terceira varredura do Workday, feita depois de ler `arquivo/relatorios/caca-workday.md` (lote 1),
+`arquivo/relatorios/caca-workday-lote2.md` (lote 2) e `arquivo/relatorios/PROXIMA-RODADA-workday.md`. Tudo abaixo foi
 rodado com `python3`/`requests` e `curl`, **nenhum navegador foi aberto** (o Chrome estava com outro
 agente, `pgrep -c chrome` = 10 durante a sessão inteira). Nada foi enviado, nenhum formulário foi
 preenchido, e `docs/index.html`, `enviados.csv` e `automacao/FILA-DO-VINI.md` **não foram tocados**.
@@ -413,7 +413,7 @@ com `sh automacao/dedupe-agora.sh <ID> "<Casa>"`, nos quatro arquivos.
 | `JR101515` | Vehicle Artist, Cloud Imperium Manchester | **ENVIADA em 09/09** |
 
 **Confirmação útil para a próxima rodada: a fila do lote 1 está inteiramente consumida.** As oito de
-`automacao/PROXIMA-RODADA-workday.md` foram resolvidas — sete enviadas e uma (`JR41753`, Ink)
+`arquivo/relatorios/PROXIMA-RODADA-workday.md` foram resolvidas — sete enviadas e uma (`JR41753`, Ink)
 recusada com motivo escrito — e a reauditoria de hoje não achou nenhuma delas reaberta.
 
 **Dois casos que caíram ANTES do dedupe mas que o dedupe também pegaria, e vale registrar:**
@@ -509,7 +509,7 @@ estratégia no meio do caminho não custou nada. **Nenhum navegador.** Ordem:
    grandes de jogos, animação, VFX, brinquedo, cassino, parque e tecnologia (minúscula sem
    pontuação, primeira palavra, iniciais, forma com hífen, e sufixos `tech`/`studios`/`games`/
    `entertainment`/`interactive`/`group` — foi um sufixo desses que revelou `unitytech` no lote 2),
-   mais os 886 nomes de estúdio de `automacao/garimpo-cgstudiomap.csv`, mais 255 nomes curados à mão
+   mais os 886 nomes de estúdio de `arquivo/levantamentos/garimpo-cgstudiomap.csv`, mais 255 nomes curados à mão
    para cobrir os buracos do gerador (siglas de 2 e 3 letras como `sky`, `bbc`, `wbd`, `lnw`, e
    última-palavra como `imageworks`). **Foi dessa lista curada que saíram `sky` e `lnw`.**
 2. **Sondagem de locatário** — `GET robots.txt`, **83.175 requisições**, em quatro fases: 337 slugs

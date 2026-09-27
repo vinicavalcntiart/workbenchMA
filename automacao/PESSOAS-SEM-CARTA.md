@@ -438,7 +438,7 @@ não prova cargo atual**, e cargo desatualizado é pior que alvo nenhum. Descart
   company founded in 2006 by academy member Olcun Tan"**, e a mesma página declara que **"SCRTLB was
   founded in 2013 out of Gradient Effects as a branch dedicated to animation and VFX for blockbuster
   movies."**
-- **Como a casa apareceu:** filtro do `automacao/garimpo-cgstudiomap.csv` por
+- **Como a casa apareceu:** filtro do `arquivo/levantamentos/garimpo-cgstudiomap.csv` por
   `ja_na_campanha=nao` + `tem_vaga_disciplina=sim` + observação **ALTA**, dentro do escopo — sobraram
   **quatro** casas, e esta é a única dos EUA sem pessoa registrada.
 - **Por que ELE:** casa pequena que **não publica o nome de mais ninguém**, nem de arte nem de RH;
@@ -1245,7 +1245,7 @@ Claesson) e **Troll VFX** (Antti Kulmala) já receberam carta em 09/09 e 11/09.
   patrocínio.
 - **Dedupe, feito na caixa:** `pessoas.csv`, `enviados.csv`, `processados.csv` e `docs/index.html`
   dão **zero** para `brinkhelsinki`, `Koskinen` e `Seraidaris`; a única ocorrência no repositório
-  inteiro é uma linha do `automacao/garimpo-cgstudiomap.csv`, que é lista de garimpo e **não**
+  inteiro é uma linha do `arquivo/levantamentos/garimpo-cgstudiomap.csv`, que é lista de garimpo e **não**
   registro de contato. O **Gmail devolveu ZERO** para `brinkhelsinki OR Brink OR Koskinen OR
   Seraidaris`. **CASA NOVA**, PRIMEIRA pessoa; Alexander Seraidaris fica como segunda e última.
 - **Ressalva honesta, três, e a primeira é medida:** (1) **a palavra "3D" aparece ZERO vez na
@@ -1302,7 +1302,7 @@ escopo mudar, os cinco endereços já estão mapeados aqui. O `/careers` deles r
 **2. DUAS CASAS QUE PARECIAM ACHADO NOVO JÁ TINHAM CARTA, e as duas vieram da mesma armadilha.**
 **Sir Lancelot Animation Studio** (Malmö; Daniel Claesson, 3D/Houdini Artist) recebeu carta em
 **09/09**, e **Troll VFX** (Antti Kulmala, EP/CEO) em **11/09**. As duas apareceram na varredura
-desta rodada porque o `automacao/garimpo-cgstudiomap.csv` ainda as marca como
+desta rodada porque o `arquivo/levantamentos/garimpo-cgstudiomap.csv` ainda as marca como
 `ja_na_campanha=nao`. **Esse campo está desatualizado e não serve de dedupe**: o que vale é
 procurar o domínio e o sobrenome em `pessoas.csv` e `enviados.csv`, e depois no Gmail.
 
@@ -1880,7 +1880,7 @@ Gillian Comerford já é ficha da casa e a carta dela nem saiu ainda; ele fica c
 - **Fora dos EUA?** Sim — **Reino Unido (Irlanda do Norte)**. Realocação vale, e **não** se fala
   em União Europeia.
 - **Dedupe, feito na caixa:** **zero em `enviados.csv`** — a casa **nunca recebeu carta**. As três
-  ocorrências no repositório **não são contato**: `automacao/caca-sem-ats-1109.md` registra a
+  ocorrências no repositório **não são contato**: `arquivo/relatorios/caca-sem-ats-1109.md` registra a
   **porta** (`https://paperowlfilms.com/careers`, HTTP 200) e nunca escreveu, e
   `europa-mr-reabertos-07-09.csv` e `processados.csv` são listas de garimpo. O **Gmail devolveu
   ZERO** para `paperowlfilms OR "Paper Owl" OR McGuiness OR McGuinness`. **PRIMEIRA pessoa da
@@ -2346,7 +2346,7 @@ ninguém refazer:
 + `/jobs` + `/careers`, e em parte deles também `/presskit`, `/crew`, `/studio`, `/impressum`,
 `/colofon`):**
 
-- **Os 51 estúdios holandeses** do `automacao/fila-gamedevmap-ch-fi-nl.csv` (a lista vai só de
+- **Os 51 estúdios holandeses** do `arquivo/levantamentos/fila-gamedevmap-ch-fi-nl.csv` (a lista vai só de
   *Abbey Games* a *KeokeN*, porque o arquivo está **truncado em K** — anotado abaixo), **mais 15
   postos à mão** para cobrir o L–Z: Nixxes, Paladin, Ronimo, Triumph, Two Tribes, Total Mayhem,
   Triangle, Grendel, W!Games, IJsfontein, Gamious, KeokeN, Force Field, Vanguard e Sassybot.
@@ -2433,7 +2433,7 @@ Berg é a primeira — **mas o cargo dele não está em lugar nenhum**: `apparat
 conteúdo é montado por JavaScript, `/about` dá 404, e o nome "Heldal" **não aparece** no HTML
 servido.
 
-**Também fica anotado um defeito de arquivo:** `automacao/fila-gamedevmap-ch-fi-nl.csv` tem **51
+**Também fica anotado um defeito de arquivo:** `arquivo/levantamentos/fila-gamedevmap-ch-fi-nl.csv` tem **51
 linhas de Holanda e elas param em "KeokeN Interactive"**, ou seja a colheita do gamedevmap foi
 **truncada na letra K** e nunca cobriu L–Z. Quem for refazer a Holanda pelo gamedevmap precisa
 saber disso — eu supri o buraco à mão com 15 casas, mas não é a lista completa.
@@ -3018,7 +3018,7 @@ de cenário, que é AMBIENTE e está vetado pela regra do Vini de 10/09**. O ún
 
 ## RODADA DAS 21h35 DE 15/09/2026 — JOE, A PARTIR DO CENSO WIKIDATA DE ANIMAÇÃO
 
-**De onde saiu:** `automacao/alvos-joe-wikidata.csv`, 167 estúdios de animação inéditos com site
+**De onde saiu:** `arquivo/levantamentos/alvos-joe-wikidata.csv`, 167 estúdios de animação inéditos com site
 oficial. **O aviso do maestro estava certo e foi o achado central da rodada:** o Wikidata
 classifica por rótulo, e a lista é dominada por casas de **2D, stop motion e produção pura**. A
 varredura automática de **153 domínios × até 20 caminhos** (`/contact`, `/about`, `/team`,
@@ -3420,7 +3420,7 @@ rastreador que, diferente da varredura de caminhos chutados de 15/09, **segue os
 reais** de cada site (`/contact`, `/team`, `/about`, `/impressum`, `/kontakt`, `/over-ons`,
 `/jobs` …) e **decodifica `data-cfemail` do Cloudflare**, a lista de 167 casas devolveu endereço
 de pessoa em pouquíssimos domínios, e **um só virou ficha** (MovieBrats). O que rendeu de verdade
-foi **`automacao/garimpo-cgstudiomap.csv`**: 480 casas de CG/VFX/animação que o repositório já
+foi **`arquivo/levantamentos/garimpo-cgstudiomap.csv`**: 480 casas de CG/VFX/animação que o repositório já
 conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 6 fichas.
 
 | Pessoa | Cargo | Casa | País | Endereço | Confiança |
@@ -3463,7 +3463,7 @@ conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 
   (FABLEfx UK LTD, Covent Garden). A frase fixa de realocação entra inteira.
 - **Dedupe NA CAIXA:** `search_threads` por `fablefx OR "FABLEfx" OR Steveman` devolveu **zero**.
   No repositório, `fablefx` só aparece em dois lugares e **nenhum é carta**:
-  `automacao/garimpo-cgstudiomap.csv` (08/09, checagem de quadro de vaga: *"a pagina de carreiras
+  `arquivo/levantamentos/garimpo-cgstudiomap.csv` (08/09, checagem de quadro de vaga: *"a pagina de carreiras
   responde HTTP 200 mas o corpo tem apenas 290 caracteres… PRECISA DE NAVEGADOR"*) e
   `automacao/BRIEF-JHON.md` (07/09, o caso do **Airtable embutido** que não desenha campo pelo
   proxy). **A casa nunca recebeu carta. PRIMEIRA pessoa desta casa.**
@@ -3501,7 +3501,7 @@ conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 
 - **Fora dos EUA?** Sim — França (3 square de la Tour Maubourg, Paris 7e), União Europeia.
 - **Dedupe NA CAIXA:** `search_threads` por `kippik` (na consulta conjunta com chouette, switchent
   e lagoonstudios) devolveu **zero**, e a busca por `Fuminier` também. No repositório, `kippik` só
-  aparece em `automacao/garimpo-cgstudiomap.csv`, numa checagem de **quadro de vaga** de 08/09
+  aparece em `arquivo/levantamentos/garimpo-cgstudiomap.csv`, numa checagem de **quadro de vaga** de 08/09
   (*"Pagina de carreiras lida (mailto:jobs@kippik.fr): nenhum titulo da disciplina"*). **Nenhuma
   carta saiu para esta casa. PRIMEIRA pessoa.**
 - **Ressalva honesta:** (1) é casa **pequena** — três sócios e equipe enxuta, *"Our scale enables
@@ -3576,7 +3576,7 @@ conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 
   país do `BRIEF-JOE`**, e é onde a carta precisa dizer de frente que ele precisa de patrocínio,
   porque é o item que o RH usa para cortar e o supervisor é quem atropela.
 - **Dedupe NA CAIXA:** `search_threads` por `switchent OR "Switch VFX"` e por `Campfens` devolveu
-  **zero** nas duas. No repositório, `switchent` só aparece em `automacao/garimpo-cgstudiomap.csv`,
+  **zero** nas duas. No repositório, `switchent` só aparece em `arquivo/levantamentos/garimpo-cgstudiomap.csv`,
   e a linha diz exatamente que a casa **não tem quadro de vagas achável**: *"MEDIDO 08/09: o site
   RESPONDE, mas nao achei pagina de carreiras. Varri os links da home, chutei 14 caminhos"*.
   **Nenhuma carta. PRIMEIRA pessoa.** E a ausência de quadro é justamente o caso em que a carta
@@ -3622,7 +3622,7 @@ conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 
   um anúncio vivo (Head of International Sales), o que prova que a casa está contratando.
 - **Fora dos EUA?** Sim — França (Montreuil e Angoulême), União Europeia.
 - **Dedupe NA CAIXA:** `search_threads` por `chouette OR chouettecie` e por `Otomo` devolveu
-  **zero** nas duas. No repositório, `chouette` aparece em `automacao/garimpo-cgstudiomap.csv`
+  **zero** nas duas. No repositório, `chouette` aparece em `arquivo/levantamentos/garimpo-cgstudiomap.csv`
   (08/09: *"a pagina de carreiras responde HTTP 200 mas o corpo tem apenas 409 caracteres… o quadro
   monta em JavaScript"*) e uma vez em `fila-remotegamejobs-estudios.csv`, que é **outra coisa**
   (`chouette.itch.io`, da *Jellyfish Parade*, nos Estados Unidos — falso amigo conferido e
@@ -3739,7 +3739,7 @@ conhecia por quadro de vaga e que **nunca receberam carta nenhuma**. São 4 das 
   links) é quase toda de **artista individual e casa de 2D ou stop motion**, e não de estúdio 3D.
   Rendeu as três mortes alemãs acima. Não vale outra rodada.
 
-**A veia que rendeu, e é para repetir:** `automacao/garimpo-cgstudiomap.csv` tem **480 casas de
+**A veia que rendeu, e é para repetir:** `arquivo/levantamentos/garimpo-cgstudiomap.csv` tem **480 casas de
 CG, VFX e animação com site vivo que nunca receberam carta nenhuma** — elas entraram no
 repositório em 08/09 só para checar **quadro de vaga**, e o quadro é justamente o que quase
 nenhuma delas publica de forma legível por `curl`. Quatro das seis fichas de hoje saíram dali.
@@ -3880,7 +3880,7 @@ email desta rodada das dezenas de casas varridas sem resultado.
   a carta tem de dizer de frente que o Vini precisa de patrocínio, porque é o item que o RH usa para
   cortar e o supervisor é quem atropela.
 - **Dedupe, arquivos e caixa:** no repositório, `mavericks` só aparece em
-  `automacao/garimpo-cgstudiomap.csv` (linha de 08/09, leitura de **quadro de vaga**:
+  `arquivo/levantamentos/garimpo-cgstudiomap.csv` (linha de 08/09, leitura de **quadro de vaga**:
   *"pagina de carreiras https://mavericks-vfx.com/opportunities/ lida por curl (483 caracteres...)"*)
   — **não é envio**. `pessoas.csv`, `enviados.csv`, `alvos.csv` e `PESSOAS-SEM-CARTA.md`:
   **zero**. **NA CAIXA:** `search_threads` por `mavericks OR "mavericks-vfx" OR "Brendan Taylor"`
@@ -4239,7 +4239,7 @@ achar endereço, é achar endereço **de gente de arte, em casa de personagem, q
   endereço físico nenhum**; o que sustenta o país é o domínio `.co.uk`, a razão social britânica e o
   rodapé *"© Timeless Films 2026"*. Não escrevi cidade porque a casa não escreve.
 - **Dedupe, arquivos e caixa:** procurei `timelessfilms` e `Timeless` em `enviados.csv`, `alvos.csv`,
-  `automacao/pessoas.csv` e `automacao/garimpo-cgstudiomap.csv`: **zero em todos**. **NA CAIXA:**
+  `automacao/pessoas.csv` e `arquivo/levantamentos/garimpo-cgstudiomap.csv`: **zero em todos**. **NA CAIXA:**
   `search_threads` por `timelessfilms OR "Timeless Films" OR "Ralph Kamp" OR "Rock Dog" OR "Dragon Rider"`
   devolveu **zero**. **CASA NOVA, nunca recebeu carta nenhuma, PRIMEIRA pessoa.**
 - **Ressalva honesta:** (1) é **produtora e distribuidora**, não estúdio com pipeline — o 3D do catálogo
@@ -4565,7 +4565,7 @@ abertos para **um** endereço de pessoa aproveitável. Nada foi inventado para f
   nem recebida. `pessoas.csv`, `enviados.csv` e `processados.csv`: **zero** ocorrência de
   `globalmechanic`; o único acerto do grep por "Global Mechanic" é um resumo de rodada de 15/09 que
   **não nomeia a casa**. Casa **inédita para a campanha inteira**, e ela estava parada em
-  `automacao/alvos-joe-wikidata.csv` sem ninguém nunca ter aberto.
+  `arquivo/levantamentos/alvos-joe-wikidata.csv` sem ninguém nunca ter aberto.
 - **RESSALVA HONESTA, e ela é grande:** a Global Mechanic é **boutique de design e animação de
   publicidade, documentário e projeção**, com técnica declarada em mixed media, vetor e pintura —
   **não é casa de pipeline CG de personagem**. A categoria `Character` do `/design` é **desenho** de
@@ -5590,8 +5590,8 @@ sobreviveu ao pareamento nome+cargo+endereço foi **três**. Sem pareamento a li
 - **Casa fora dos EUA: SIM, Canadá (Montréal).** A frase de realocação **entra**.
 - **O que o Gmail devolveu no dedupe:** `threeclipse OR "Threeclipse" OR "Nathan White" OR Syzygy`
   devolveu **`{}`**. Teto no `in:sent` por domínio: **zero**. No repositório `threeclipse` só
-  aparece em `automacao/censo-canada-gamedevmap-0709.json` e
-  `automacao/censo-canada-hits-0709.json`, os dois censos crus, e **"Nathan White" não aparece em
+  aparece em `arquivo/levantamentos/censo-canada-gamedevmap-0709.json` e
+  `arquivo/levantamentos/censo-canada-hits-0709.json`, os dois censos crus, e **"Nathan White" não aparece em
   nenhum arquivo**. Casa inédita como contato.
 - **RESSALVA HONESTA:** (1) a casa é **minúscula** — nove nomes nos créditos, com pessoas repetidas
   em três projetos, o que indica time de contrato e não folha fixa, e **já existe um crédito de
@@ -6998,8 +6998,8 @@ cat enviados.csv alvos.csv automacao/pessoas.csv automacao/processados.csv \
   | grep -oiE "[a-z0-9][a-z0-9.-]+\.(com|ca|net|org|tv|io|studio|media|games|dev|co)\b" \
   | tr 'A-Z' 'a-z' | sed 's/^www\.//' | sort -u > touched.txt
 # 2) candidatos das listas que já existem no repo, filtrados por cidade
-grep -iE ",(Vancouver|Burnaby|Victoria|Kelowna|Toronto|Ottawa)," automacao/fila-gamedevmap-canada.csv
-grep -iE ",Canad" automacao/garimpo-cgstudiomap.csv     # coluna 4 = site
+grep -iE ",(Vancouver|Burnaby|Victoria|Kelowna|Toronto|Ottawa)," arquivo/levantamentos/fila-gamedevmap-canada.csv
+grep -iE ",Canad" arquivo/levantamentos/garimpo-cgstudiomap.csv     # coluna 4 = site
 # 3) o diff é a fila de verdade
 grep -vxFf touched.txt candidatos.txt
 ```
@@ -14169,7 +14169,7 @@ equipe** — e isso confirma pela terceira rodada o que o `BRIEF-JOE` já diz da
 - **POR QUE ELE:** é o **único endereço de pessoa publicado** na casa, e a própria casa o aponta como a porta de contratação. O Art Director (Gert Van Goethem) seria o alvo preferido do BRIEF-JOE, mas `gert@` seria **montado** e a regra desta rodada é clara: montado não vale.
 - **DISCIPLINA, e é a mais frágil das cinco, dita com o que é:** a prova é o **`alt` de um banner escrito pela própria casa** — *"Banner of the game **Wait What's That** with the logo and **game characters**"* — mais o organograma, que tem **Art director e 3D artist** como cadeiras nomeadas, mais a biografia do sócio: *"**Xander used to work as a technical artist in the 3D animation sector** and made VR projects in the after hours"*. A casa se define como *"We make virtual and mixed reality experiences for artists and creatives"* e *"We enrich people's lives by sparking and nurturing creativity through immersive technologies"*.
 - **Ganchos da casa:** *"Their first title, **Painting VR**, originated from one of Xander's side projects during the 2020 lockdown. After its release on Meta App Lab in 2021, it was enthusiastically received by both users and the press"*; *"Over the years, the studio **grew to a team of over 10 people**, continuously exploring new ways to nurture creativity through virtual reality"*.
-- **DEDUPE:** `search_threads` por `oisoi OR "Oisoi" OR Reygaert OR "Painting VR"` devolveu **`{}`**. `grep -ril oisoi` devolve **um** arquivo, `automacao/fila-gamedevmap-europa.csv`, e a linha é *"Oisoi Studios,Extended Reality (XR),Ghent,Vlaanderen,Belgium,**https://paintingvr.xyz/**,NOVO,em-escopo,site vivo, porta de carreiras nao localizada no HTML"* — ou seja **a campanha tinha a casa na fila sob o domínio ERRADO (`paintingvr.xyz`, o do produto) e desistiu por "porta de carreiras não localizada"**, quando o domínio real é `oisoi.studio` e a `/careers` existe e publica um endereço de pessoa. `enviados.csv`: **0**. `pessoas.csv`: **0**.
+- **DEDUPE:** `search_threads` por `oisoi OR "Oisoi" OR Reygaert OR "Painting VR"` devolveu **`{}`**. `grep -ril oisoi` devolve **um** arquivo, `arquivo/levantamentos/fila-gamedevmap-europa.csv`, e a linha é *"Oisoi Studios,Extended Reality (XR),Ghent,Vlaanderen,Belgium,**https://paintingvr.xyz/**,NOVO,em-escopo,site vivo, porta de carreiras nao localizada no HTML"* — ou seja **a campanha tinha a casa na fila sob o domínio ERRADO (`paintingvr.xyz`, o do produto) e desistiu por "porta de carreiras não localizada"**, quando o domínio real é `oisoi.studio` e a `/careers` existe e publica um endereço de pessoa. `enviados.csv`: **0**. `pessoas.csv`: **0**.
 - **PRIMEIRO TOQUE NA CASA: NENHUM.**
 - **CASA FORA DOS EUA (Bélgica): a frase de realocação ENTRA**, e Gante é endereço físico publicado.
 - **RESSALVAS honestas:** (1) **o catálogo não é personagem** — Painting VR, Wait What's That e First Touch são ferramentas criativas de VR; `character` aparece **uma** vez na home e **dentro de um atributo `alt`**, e `groom`, `creature` e `sculpt` dão **ZERO**. **Atributo `alt` de banner é a prova mais fraca que já aceitei numa ficha, e está dito.** (2) A casa já tem **Art director e 3D artist** contratados, os dois ocupados. (3) O cargo dele é CEO com carreira em **música e cinema** (*"Wim spent most of his career creating music and films"*), não em arte 3D: quem julga portfólio ali é o Gert. (4) A `/careers` oferece **estágio** (*"Are you a student or a fresh graduate? We offer internships!"*) — a carta não pode soar como consulta de estágio, o que o BRIEF proíbe explicitamente.
@@ -14961,7 +14961,7 @@ equipe** — e isso confirma pela terceira rodada o que o `BRIEF-JOE` já diz da
 - **Disciplina, frase do catálogo da SPPA:** *"…włączając development – od pisania scenariuszy, poprzez **projektowanie postaci** i teł, storyboardy… Studio pracuje w oparciu o stworzony przez siebie proces produkcji animacji **2D i 3D**… Używane przez studio oprogramowanie to Toonboom Harmony Network, Flash, After Effects, **Blender, 3D Max, Maya**… Grupa Smacznego produkuje też **gry i multimedia** dla dzieci."* E o próprio site tem a rota `https://www.g-s.pl/serwisy/cinematiki` (200) com o trabalho **"Zid Journey"** — ou seja **cinemática de jogo está no menu de serviços da casa**.
 - **Por que ele e não o Łukasz Kacprowicz (prezes) nem o Marcin Wasilewski:** **o único endereço individual publicado é o dele**; os outros dois cofundadores aparecem com bio na `/o-nas` e **sem endereço**. Endereço publicado vence cadeira melhor sem endereço.
 - **EUA ou não / idioma:** **não é dos EUA** (ul. Batorego 9/1, 80-251 Gdańsk) → **realocação ENTRA**. Site **PL com versão `/en/`**; a `/o-nas` que li está em polonês.
-- **Dedupe:** Gmail, mesma consulta do item 1 → **`{}`, zero fio**. Nos arquivos: `Jaszczurowski` = **zero**; `g-s.pl` aparece **uma vez**, em `automacao/garimpo-cgstudiomap.csv`, como **linha de censo** (`Grupa Smacznego / GS Animation, Polônia, ja_na_campanha=nao`) — **nunca como pessoa, nunca como envio**. **Primeiro toque.**
+- **Dedupe:** Gmail, mesma consulta do item 1 → **`{}`, zero fio**. Nos arquivos: `Jaszczurowski` = **zero**; `g-s.pl` aparece **uma vez**, em `arquivo/levantamentos/garimpo-cgstudiomap.csv`, como **linha de censo** (`Grupa Smacznego / GS Animation, Polônia, ja_na_campanha=nao`) — **nunca como pessoa, nunca como envio**. **Primeiro toque.**
 - **Ressalva honesta:** (1) o catálogo visível da casa é **série infantil de TV** (*Basia*, *Mami Fatale*, *Kajko i Kokosz*) e o pipeline de produção é **Toon Boom Harmony** — é casa **2D com 3D ao lado**, não casa de personagem CG; (2) o cargo é **vice-presidente / produtor / diretor**, não arte, e o "ilustrador" está no passado dele; (3) ele **está no conselho da SPPA e foi presidente dela por cinco anos** — isso explica por que a ficha dele no catálogo é tão completa e **não** prova assento de arte aberto; (4) `https://g-s.pl` **sem `www` devolve 403**: só `https://www.g-s.pl` responde.
 
 #### 4) Mariusz Radomski — **Dash Dot Creations** (Wrocław, Polônia) — `mariusz@dashdot.pl` — confiança **ALTA no endereço, mas a casa é a mais frágil da rodada**
@@ -14980,7 +14980,7 @@ equipe** — e isso confirma pela terceira rodada o que o `BRIEF-JOE` já diz da
 - **A DIVERGÊNCIA ENTRE O CATÁLOGO E O SITE, e ela é o dado:** a SPPA publica como contato da casa **`GRZEGORZ HANDZLIK | greg_han@orangeanimation.pl | +48 602 259 111`**, e descreve a casa como fundada em 1995 por ele, *"wielokrotnie nagradzanego polskiego reżysera i producenta oraz byłego **opiekuna artystycznego Hanna Barbera Polska**"* — ex-supervisor artístico da Hanna Barbera Polska. **Mas o site da própria casa, hoje, não traz o nome dele em lugar nenhum**: o bloco de contato é dos Pewny, e a razão social do rodapé é `Orangeanimation Sp. z o.o.`, Kozy. **Escolhi o endereço do SITE (mais recente) e não o do catálogo**, e registro `greg_han@` como pista de segunda pessoa **com a suspeita explícita de que pode ser de quem já saiu**.
 - **Por que ele:** é o **único endereço de domínio próprio publicado com cargo** na casa (a co-produtora usa Gmail), e em casa desse tamanho o produtor é quem abre e fecha assento.
 - **EUA ou não / idioma:** **não é dos EUA** (Ul. Odysei 29, 43-344 Bielsko-Biała; faturamento em Kozy) → **realocação ENTRA**. Site **PL com toggle EN**; a página que li está em polonês.
-- **Dedupe:** Gmail, mesma consulta do item 2 → **`{}`, zero fio**. Nos arquivos: existe registro **de 07/09** em `automacao/processados.csv` e em `automacao/europa-mr-reabertos-07-09.csv` — *"agente EUROPEU: estudio real (Bielsko-Biala, Polonia), vagas abertas de Rigger e Animador 2D em Toon Boom, fora do ofertorio 3D dele. Contato kontakt@orangeanimation.pl, **nao usado** por fraco encaixe"*. Ou seja: **a casa foi olhada e NENHUM e-mail foi enviado**. **Primeiro toque**, e a linha de pessoa é inédita.
+- **Dedupe:** Gmail, mesma consulta do item 2 → **`{}`, zero fio**. Nos arquivos: existe registro **de 07/09** em `automacao/processados.csv` e em `arquivo/levantamentos/europa-mr-reabertos-07-09.csv` — *"agente EUROPEU: estudio real (Bielsko-Biala, Polonia), vagas abertas de Rigger e Animador 2D em Toon Boom, fora do ofertorio 3D dele. Contato kontakt@orangeanimation.pl, **nao usado** por fraco encaixe"*. Ou seja: **a casa foi olhada e NENHUM e-mail foi enviado**. **Primeiro toque**, e a linha de pessoa é inédita.
 - **Ressalva honesta:** (1) a triagem de 07/09 **já reprovou a casa por encaixe** — as vagas abertas eram **Rigger** e **animador 2D em Toon Boom**; esta ficha reabre a casa **por pessoa**, não por vaga, e o maestro precisa saber disso; (2) o cargo é **produtor**, não arte; (3) é casa de **serviço de série infantil**, 2D com 3D ao lado — o 3D dela aparece sobretudo como **renderfarm e rendering 4K/8K** num aviso de fundo europeu, não como elenco de personagem; (4) **não sei se Grzegorz Handzlik continua na casa**, e a ausência dele no site é a única evidência que tenho.
 
 ### O QUE ESTA RODADA **NÃO** FEZ, dito para a próxima não supor que fez
@@ -17446,7 +17446,7 @@ em **três famílias que o censo de 17/09 NÃO cobriu** — Pinpoint, Personio e
 total de **17.175 requisições**. Resultado: **19 contas de Pinpoint** (das quais 11 são o conteúdo
 de demonstração do §1 e 6 estão com zero vaga), **12 locatários de Personio** e **9 de
 SmartRecruiters**. **3 sondagens não conferidas** (código 000/ERR), nunca zero. Lista completa em
-`automacao/censo-pinpoint-personio-sr-2109.csv`. **Das 40 contas, casas inéditas E da disciplina:
+`arquivo/levantamentos/censo-pinpoint-personio-sr-2109.csv`. **Das 40 contas, casas inéditas E da disciplina:
 uma, a Unbroken Studios.** O dicionário do ArtStation é de indie minúsculo e de empresa de
 tecnologia homônima, e isso agora está medido nestas três famílias também.
 
@@ -17519,7 +17519,7 @@ tecnologia homônima, e isso agora está medido nestas três famílias também.
 - **Não gastei a rodada em segunda pessoa de casa nenhuma**, por ordem. A A Film Estonia
   (Kristel Tõldsepp, `kristel@afilm.ee`, endereço PUBLICADO e disciplina 3D provada três vezes)
   **continua na mesa** desde 02h35, esperando o envio da carta do Meelis Arulepp.
-- **Não toquei em `enviados.csv`, `docs/index.html` nem `automacao/censo-flatchr-2109.csv`.** O
+- **Não toquei em `enviados.csv`, `docs/index.html` nem `arquivo/levantamentos/censo-flatchr-2109.csv`.** O
   Jhon A está neles.
 - **Não abri navegador.** As seis dívidas de navegador nomeadas na ordem (`melusinestudio.com`,
   `animoon.pl`, `storytoys.com`, `bigideafarm.com`, `wonderlegends.com`, `digibc.org`) continuam

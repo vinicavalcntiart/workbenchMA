@@ -1,6 +1,6 @@
 # Triagem da fatia TORONTO da fila do gamedevmap (Canadá)
 
-Data: 08/09. Fonte: `automacao/fila-gamedevmap-canada.csv`, linhas 168-255 (Toronto) mais as
+Data: 08/09. Fonte: `arquivo/levantamentos/fila-gamedevmap-canada.csv`, linhas 168-255 (Toronto) mais as
 18 linhas da região ampliada que o brief mandou incluir. Só `curl` e `WebFetch`; nenhum
 navegador foi aberto. Nada foi commitado, nada foi enviado.
 

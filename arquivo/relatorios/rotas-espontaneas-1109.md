@@ -25,7 +25,7 @@ em 10/09, **secou** — dez dos onze slugs já receberam candidatura e o décimo
 em §5, §6 e §7 — não é "não achei", é "medi e não existe".
 
 **Correção de premissa, e ela precisa ficar escrita:** o briefing desta rodada dizia que a
-campanha "nunca varreu Homerun". **Varreu:** `automacao/caca-breezy-homerun.md`, 09/09,
+campanha "nunca varreu Homerun". **Varreu:** `arquivo/relatorios/caca-breezy-homerun.md`, 09/09,
 3.521 slugs testados, 3 quadros vivos, 1 rota espontânea, já usada. Não refiz a varredura de
 slug; refiz só as rotas dos inquilinos vivos, que é o que ainda podia ter mudado.
 

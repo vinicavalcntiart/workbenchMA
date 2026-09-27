@@ -1,6 +1,6 @@
 # Triagem do que faltava no mapa 3DVF — rodada da noite de 08/09/2026
 
-Arquivo trabalhado: `automacao/garimpo-cgstudiomap.csv`.
+Arquivo trabalhado: `arquivo/levantamentos/garimpo-cgstudiomap.csv`.
 Escopo desta rodada: **as 491 linhas `nao_verificado` mais o re-teste das 130 `site-fora-do-ar`** = **621 linhas**.
 As 268 linhas que já tinham veredito (`sim`, `nao`, `nao_encontrada`, `precisa-de-navegador`) **não foram tocadas** — conferido por comparação linha a linha contra a cópia de antes: 0 alterações indevidas.
 

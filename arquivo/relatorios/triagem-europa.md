@@ -1,6 +1,6 @@
 # Triagem da fila europeia do gamedevmap — 08/09
 
-Fonte: `automacao/fila-gamedevmap-europa.csv` (4.148 estúdios, 777 já triados na colheita).
+Fonte: `arquivo/levantamentos/fila-gamedevmap-europa.csv` (4.148 estúdios, 777 já triados na colheita).
 Esta rodada resolveu **1.664 linhas**: 1.651 que estavam `nao-triado` e 13 que estavam em `porta-ok`
 e ganharam veredito de vaga depois de eu abrir o anúncio.
 

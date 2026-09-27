@@ -17,9 +17,9 @@ De onde vieram as 509:
 | Fonte | Entradas marcadas como porta fechada | Quantas reabri |
 |---|---|---|
 | `PORTAIS` do `docs/index.html` (748 linhas) | 195 casaram com as palavras-chave; 108 sobraram depois de tirar censo e candidatura já enviada; **48 reconferidas uma a uma** | 14 |
-| `automacao/garimpo-cgstudiomap.csv` (`site-fora-do-ar`) | **130, todas reconferidas** | 5 com porta de carreiras; 23 sites vivos |
-| `automacao/fila-gamedevmap-canada.csv` (`site-fora-do-ar` + `bloqueado:*`) | **21 reconferidas** (3 das 24 não tinham URL utilizável) | 2 sites vivos, 0 porta de carreiras |
-| `automacao/fila-gamedevmap-europa.csv` (`porta-sem-resposta`) | **310 URLs únicas, todas reconferidas** | 3 |
+| `arquivo/levantamentos/garimpo-cgstudiomap.csv` (`site-fora-do-ar`) | **130, todas reconferidas** | 5 com porta de carreiras; 23 sites vivos |
+| `arquivo/levantamentos/fila-gamedevmap-canada.csv` (`site-fora-do-ar` + `bloqueado:*`) | **21 reconferidas** (3 das 24 não tinham URL utilizável) | 2 sites vivos, 0 porta de carreiras |
+| `arquivo/levantamentos/fila-gamedevmap-europa.csv` (`porta-sem-resposta`) | **310 URLs únicas, todas reconferidas** | 3 |
 
 **A hipótese se confirma, mas em escala muito menor do que os seis casos de hoje sugeriam.**
 Ela vale forte para um subgrupo específico e não vale para a maioria. O número honesto está

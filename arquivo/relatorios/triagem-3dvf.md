@@ -1,6 +1,6 @@
 # Triagem dos estúdios novos do mapa 3DVF — rodada de 08/09/2026
 
-Arquivo trabalhado: `automacao/garimpo-cgstudiomap.csv` (889 linhas de dados).
+Arquivo trabalhado: `arquivo/levantamentos/garimpo-cgstudiomap.csv` (889 linhas de dados).
 **Nenhum e-mail, rascunho ou formulário foi tocado. Nenhum arquivo compartilhado foi editado. Nenhum navegador foi aberto** — todo o trabalho saiu de `curl`, WebSearch e WebFetch, com `https://` e User-Agent de Chrome em todas as chamadas.
 
 ---

@@ -415,7 +415,7 @@ endereço é o site.**
 Medido em 07/09 pela fatia COLHEITA. A rodada anterior varreu os quadros de ATS conhecidos, achou
 **46 vagas da disciplina que a garra dizia nunca terem sido tocadas**, aplicou em duas e passou o
 número adiante **sem gravar o censo em lugar nenhum**. Refazer custou vinte minutos, e o pior é
-que o número já não valia: refeito o censo (`automacao/censo-boards-0709.csv`, 173 tokens, 123
+que o número já não valia: refeito o censo (`arquivo/levantamentos/censo-boards-0709.csv`, 173 tokens, 123
 quadros, **2.791 vagas**, 165 da disciplina, 74 fora do painel), a conferência no **Gmail** mostrou
 que a maioria dessas 74 **já tinha recebido candidatura nas horas anteriores** — Envar, Bluehole
 duas, Loonshot, Playdead, Beffio três, Ankama, Bulkhead duas, Stunlocks, Gigglebug, Star Stable —
@@ -1900,7 +1900,7 @@ zero dos dezessete termos. **Alvo novo achado justamente por desconfiar do relat
 
 ## 08/09, 23h — A COLUNA `ja_no_painel` DO CENSO MENTE, e ela mente do jeito mais caro
 
-O `automacao/censo-boards-0709.csv` tem 2.791 requisições e uma coluna `ja_no_painel` com os
+O `arquivo/levantamentos/censo-boards-0709.csv` tem 2.791 requisições e uma coluna `ja_no_painel` com os
 valores `nova` e `JA-FEITO`. **Ela erra para o lado do falso "nova"**, que é o lado que faz mandar
 candidatura repetida.
 

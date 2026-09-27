@@ -62,8 +62,8 @@ exatamente da disciplina dele.**
 
 **Teste barato de recibo, como você mandou:** `grep "<id>/confirmation"` e `grep -i "<id>.*ENVIADA"`
 nos quatro arquivos → **0 em todas as 48 combinações**. Nunca foi enviada.
-Fora dos quatro arquivos, `jungler` aparece só em `automacao/garimpo-cgstudiomap.csv`,
-`automacao/garimpo-cgstudiomap.md` e `automacao/fila-remotegamejobs-estudios.csv` — **três arquivos
+Fora dos quatro arquivos, `jungler` aparece só em `arquivo/levantamentos/garimpo-cgstudiomap.csv`,
+`arquivo/relatorios/garimpo-cgstudiomap.md` e `arquivo/levantamentos/fila-remotegamejobs-estudios.csv` — **três arquivos
 de fila, zero candidatura.** É o padrão UFX: casa fichada, porta nunca aberta.
 
 **Régua de vinte termos + idioma local, rodada no texto INTEGRAL da página de candidatura

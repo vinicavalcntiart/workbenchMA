@@ -1448,7 +1448,7 @@ conta como candidatura pela regra da campanha). **Sem captcha.**
 | `Gender` | Prefer Not To Say |
 | Aceite obrigatório | *Allow us to process your personal information* |
 
-O texto do **Personal Summary** (1.441 caracteres, já escrito) está em `automacao/ans_fenris.json`,
+O texto do **Personal Summary** (1.441 caracteres, já escrito) está em `arquivo/respostas-antigas/ans_fenris.json`,
 no campo `#personal-summary` — é só copiar.
 
 **Por que eu não fechei, sem maquiar.** O envio saiu e o servidor recusou com
@@ -3458,7 +3458,7 @@ procurando um formulário que a página promete e não tem.
 > **não achou UMA vaga de personagem nova no mundo**. **Só sobrou ambiente**, e é esta. Ela está
 > aqui em último lugar de propósito. **Se houver qualquer coisa de personagem em pé** — a Razer
 > `JR2026007640`, a Skydance Grooming `9ad28cab` do item 23, ou qualquer uma das travadas por
-> captcha — **essa vai primeiro e esta espera.** Dossiê completo em `automacao/caca-1545-1009.md`.
+> captcha — **essa vai primeiro e esta espera.** Dossiê completo em `arquivo/relatorios/caca-1545-1009.md`.
 
 **Anúncio:** https://playdead.breezy.hr/p/3be060a4fcf301-zbrush-modeler — **HTTP 200 hoje**
 **Candidatura:** https://playdead.breezy.hr/p/3be060a4fcf301-zbrush-modeler/apply — **HTTP 200 hoje**

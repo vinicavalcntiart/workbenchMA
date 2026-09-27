@@ -1,6 +1,6 @@
 # Garimpo cgstudiomap.org — rodada de 08/09/2026
 
-Arquivo companheiro: `automacao/garimpo-cgstudiomap.csv` (889 linhas de dados).
+Arquivo companheiro: `arquivo/levantamentos/garimpo-cgstudiomap.csv` (889 linhas de dados).
 Rodada de **levantamento apenas**. Nenhum e-mail, rascunho ou formulário foi tocado. Nenhum arquivo compartilhado foi editado. Nenhum navegador foi aberto (`pgrep -c chrome` = 0 no início; todo o trabalho saiu de `curl` e WebFetch).
 
 ---

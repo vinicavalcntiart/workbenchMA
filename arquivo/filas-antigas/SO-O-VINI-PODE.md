@@ -203,7 +203,7 @@ fora do seu escopo. Foram sete requisições da sua disciplina dentro do escopo 
 verdade, todas em Vancouver**. Quatro já foram enviadas.
 
 Receita campo a campo e as armadilhas em `automacao/respostas-formularios.md`; o censo em
-`automacao/ea-portal-0709.csv` e o script `automacao/lista-ea.sh`, que refaz tudo em um minuto.
+`arquivo/levantamentos/ea-portal-0709.csv` e o script `automacao/lista-ea.sh`, que refaz tudo em um minuto.
 
 ---
 

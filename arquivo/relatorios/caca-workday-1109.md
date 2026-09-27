@@ -1,7 +1,7 @@
 # Caça ao Workday — 11/09/2026, tarde — RODADA DE ZERO PERSONAGEM
 
 Quarta varredura do Workday, feita depois de ler `BRIEFING.md` inteiro, `automacao/BRIEF-JHON.md`
-e `automacao/caca-workday-lote3.md`. Tudo abaixo saiu de `python3`/`requests` e `curl`.
+e `arquivo/relatorios/caca-workday-lote3.md`. Tudo abaixo saiu de `python3`/`requests` e `curl`.
 **Nenhum navegador foi aberto.** Nada foi enviado, nenhum formulário foi preenchido, e
 `enviados.csv`, `automacao/pessoas.csv` e `docs/index.html` **não foram tocados**.
 
@@ -52,7 +52,7 @@ no mapa da campanha, e eles renderam ZERO vaga de personagem.** Nenhuma linha fo
 - **Não** repetiu a sondagem dos 1.365 slugs contra Greenhouse e Ashby (deu zero).
 - **Não** repetiu a varredura dos 6.260 domínios (85 quadros novos, zero personagem).
 - **Não** repetiu os 5.448 slugs do lote 3: a lista desta rodada foi montada nova, a partir de
-  `automacao/censo-boards-0809.csv`, `automacao/backlog-estudios.md`, `docs/index.html` e de nomes
+  `arquivo/levantamentos/censo-boards-0809.csv`, `automacao/backlog-estudios.md`, `docs/index.html` e de nomes
   de casas grandes de jogos, animação, VFX, brinquedo, mídia, cassino, parque e tecnologia.
   **Onde houve sobreposição com o lote 3, ela aparece medida na §3**: dos 77 locatários que
   existem, 32 já estavam no mapa e 45 são novos.

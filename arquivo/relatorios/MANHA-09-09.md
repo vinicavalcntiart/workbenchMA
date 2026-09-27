@@ -57,7 +57,7 @@ atravessa sozinho, e a prova são as três de hoje de manhã: ILM Vancouver, Net
 Netflix Surfacing, as três enviadas e confirmadas sem você. As cinco que sobraram são da Netflix e
 da Eyeline, casas que já receberam candidatura hoje, e saem na virada da rodada. **Eu mando.**
 
-Estão em **`automacao/PROXIMA-RODADA-workday.md`**, com host, quadro, caminho da vaga e a pretensão
+Estão em **`arquivo/relatorios/PROXIMA-RODADA-workday.md`**, com host, quadro, caminho da vaga e a pretensão
 a usar em cada uma. O comando é sempre o mesmo, trocando quatro argumentos, e sem a palavra
 `ENVIAR` no fim ele **para na tela de revisão** para você conferir.
 

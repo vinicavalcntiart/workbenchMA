@@ -491,7 +491,7 @@ estúdio, e quadro que hoje está em 302 pode estar em 200 na semana que vem.**
   tinha marcado como "sem vaga".
 - **Limite conhecido 1:** sondar `<slug>.pinpointhq.com` **não acha quadro servido só em domínio
   próprio**. A Fenris só apareceu porque a campanha já sabia o domínio. **Conferido no resultado
-  da varredura de domínio que o Jhon rodou em paralelo** (`automacao/quadros-novos-1009.csv`, 4.500
+  da varredura de domínio que o Jhon rodou em paralelo** (`arquivo/levantamentos/quadros-novos-1009.csv`, 4.500
   domínios sondados, 85 quadros novos): ali existe **uma única linha `pinpoint`**, e é a
   `gameplaygalaxy`, que a minha varredura de slug já tinha achado. Ou seja, para o Pinpoint, o eixo
   de domínio **não acrescentou nada** ao eixo de slug nesta rodada. O buraco continua sendo o

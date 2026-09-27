@@ -112,7 +112,7 @@ verdade sob Xvfb. São duas causas somadas, e uma delas era escolha nossa.
 
 Por isso a regra nova: **candidatura roda com tela de verdade**, pelo `hb_run.sh`, que
 sobe o Xvfb junto com a ponte de rede. O detalhe todo está em
-`automacao/formularios-diagnostico.md`.
+`arquivo/relatorios/formularios-diagnostico.md`.
 
 ## Método
 
@@ -122,7 +122,7 @@ visto a tela de confirmação.
 
 ## O que ele entrega
 
-- `automacao/formularios-diagnostico.md`: o livro-caixa. Uma linha por formulário
+- `arquivo/relatorios/formularios-diagnostico.md`: o livro-caixa. Uma linha por formulário
   testado, com a classe do bloqueio, a prova (status HTTP, texto da tela) e o desfecho.
 - Correções nos scripts de `$SCRATCH/apply`, cada uma com o caso que a motivou.
 - Dossiês novos ou corrigidos no painel, para o que sobrar de verdade para o Vini.

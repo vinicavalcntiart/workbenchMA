@@ -3,7 +3,7 @@
 Rodado em 08/09/2026. Ferramentas: `curl` e APIs publicas dos ATS. **Nenhum navegador foi aberto.**
 Nada foi enviado, nenhum formulario preenchido, nenhum arquivo compartilhado da campanha foi tocado.
 
-Saida de dados: `automacao/garimpo-pdf-fontes.csv` (454 linhas).
+Saida de dados: `arquivo/levantamentos/garimpo-pdf-fontes.csv` (454 linhas).
 
 ---
 

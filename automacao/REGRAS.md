@@ -1,0 +1,57 @@
+# Regras em uso da campanha (fonte única, atualizada em 27/09/2026)
+
+Este é o resumo do que vale HOJE. O `CLAUDE.md` manda em tudo (quem decide é o Vini, tom, rota
+do clique, estúdios grandes). Os `BRIEF-*.md` têm o passo a passo de cada frente. O `BRIEFING.md`
+da raiz é o diário da campanha desde 26/08: serve para consulta e história, não para regra nova.
+Em conflito, vale nesta ordem: o que o Vini disse no chat, `CLAUDE.md`, este arquivo, os `BRIEF-*`,
+o `BRIEFING.md`.
+
+## Quem é o Vini, em uma linha
+Senior 3D Character Artist, 10+ anos em personagem estilizado: The Wingfeather Saga (Angel
+Studios, elenco da 1ª temporada modelado e pintado à mão), Endstar (E-Line Media, quase 5 anos,
+do sculpt à engine), grooming em Houdini como diferencial. Portfolio artstation.com/viniciuscavalcanti,
+LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicavalcanti.art, que não tem site).
+
+## O que se busca
+- **Cargo:** personagem 3D (modelagem, escultura, textura e look dev de personagem, vis dev). Grooming é diferencial, vaga só de groom é plano B.
+- **Nunca:** ambiente, props, veículos, hard surface.
+- **Estúdio grande** (lista no CLAUDE.md): aplica também em 2D, vis dev, direção de arte e vizinhos de personagem (rig, CFX, look dev, textura), em qualquer senioridade, mesmo com veto escrito de residência.
+- **Porta de entrada:** vaga de outra função numa casa sem vaga de personagem vale, pedindo encaminhamento no campo livre.
+- **Onde:** América do Norte, Europa (com Reino Unido, Irlanda e Nórdicos), Oceania, Coreia do Sul e Singapura. Fora: Japão, Índia, Brasil, resto da Ásia. Remoto primeiro, presencial com visto vale.
+
+## Metas
+- **10 formulários enviados e confirmados por dia, no mínimo 5 de personagem.** Enviar vem antes de varrer.
+- Prova de envio é só uma destas: URL de confirmação, texto do servidor ou recibo por email.
+
+## Formulários
+- Tudo é trabalho do maestro pelo navegador na nuvem: DataDome, 403, "spam", conta, código por email, termos e consentimentos.
+- Só a caixa "sou humano" VISÍVEL vai para o Vini, na leva das 8h47 de Recife (CLAUDE.md, rota do clique).
+- **Antes de enviar:** anúncio inteiro lido na fonte oficial do empregador (job board só descobre, nunca confirma); régua de veto (`automacao/regua-veto.py`); dedupe por ID da requisição no ATS, por URL e pelo nome da casa em `enviados.csv`, `automacao/processados.csv`, `docs/index.html` e na caixa do Gmail (`automacao/garra.sh`, `automacao/dedupe-agora.sh`). Quem diz qual vaga recebeu a candidatura é o email de confirmação.
+- **Veto que derruba** (em casa que não é grande): idioma local exigido por escrito (ex.: francês no Quebec, espanhol, polonês), residência ou cidadania exigida por escrito, "sem patrocínio" escrito, estágio.
+- **Respostas de fato, sempre a verdade:** autorização de trabalho "No" e patrocínio "Yes" fora do Brasil; anos de experiência reais; nunca revelar o salário da E-Line (NDA).
+- **CV:** só por link que expira (litterbox 72h, gravado no scratchpad `cv-url.txt`), conferido com `%PDF-` e tamanho antes de anexar. Nunca no repositório.
+
+## Pretensão salarial (regra do Vini, 04/09)
+1. Anúncio com faixa publicada: pedir a base da faixa, desde que acima do piso legal de visto do país (se a base ficar abaixo, pedir o piso ou o topo da faixa).
+2. Sem faixa, casa grande: USD 100.000 · CAD 95.000 · GBP 50.000 · EUR 55.000 · AUD 110.000.
+3. Sem faixa, casa pequena ou média, ou cargo abaixo de sênior: USD 85.000 · CAD 80.000 · GBP 42.000 · EUR 45.000 · AUD 95.000.
+4. Campo livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." Campo numérico: só o número.
+
+## Cartas e emails para estúdios
+- **Carta fria para pessoa** (Joe): assunto fixo `Senior Character Artist · Wingfeather Saga credit · stylized + grooming`, sem emoji no assunto; abre com o nome; uma frase de por que aquela pessoa, com a frase da casa entre aspas; teto de 250 palavras; frase do portfólio ("My portfolio holds more than **45 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it"); fecho pedindo direção; fora dos EUA, "I am ready to move for the role, and I would need visa sponsorship."; rodapé Portfolio / LinkedIn / Site. Detalhes em `BRIEF-JOE.md`.
+- **Conferência antes do rascunho:** `python3 automacao/confere-carta.py` e HTML por `automacao/monta-html-carta.py`; semelhança acima de 60% entre cartas, reescrever.
+- **Proibido em carta:** a palavra Brazil, travessão, floreio de IA, email montado por padrão de domínio (só vale email publicado numa página aberta).
+- **Emoji em email para estúdio:** ☺️ e 😊, um por lugar; 1 a 2 em carta para pessoa e em resposta a pessoa (inclusive recusa escrita por pessoa); 1 em carta para caixa geral; zero em formulário de ATS e em follow-up de silêncio.
+- **Envio das cartas:** o maestro deixa o rascunho; quem envia é o programa do Vini no Google (`automacao/envia-rascunhos.gs`, gatilho de 2 em 2 horas depois de instalado e armado).
+- **Respostas:** pessoa que escreve recebe resposta na mesma rodada (`BRIEF-COMUNICADOR.md`); recusa de robô não se responde; convite para entrevista, teste, salário ou oferta vira rascunho pronto e aviso imediato ao Vini.
+- **Follow-up:** um só, 7 dias depois, no mesmo fio, sem emoji, nunca para quem já recusou ou respondeu.
+- **Nunca escrever para Charles Ellison** (foi professor do Vini). Não cobrar a Margot Ingrassia (Imageworks) na thread de julho; a Imageworks segue alvo normal.
+
+## Segurança do repositório (ele é público)
+Nunca entra no repositório: telefone, endereço, senhas, salário da E-Line, data de nascimento,
+respostas de EEO, links de Meet, link da tela ao vivo, CV, email completo de pessoa (no repositório
+vai mascarado, `j***@dominio.com`; o completo fica só no scratchpad). Dados pessoais dos formulários
+moram em `/home/user/apply/pessoal.json`, fora do repositório. Nunca `git add -A`; commit arquivo por arquivo.
+
+## Onde fica cada coisa
+Ver `LEIA-ME.md` na raiz.

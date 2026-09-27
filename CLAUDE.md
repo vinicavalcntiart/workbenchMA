@@ -59,4 +59,8 @@ Vaga de arte em Disney (Disney Animation, Pixar, ILM, Lucasfilm, Marvel), DreamW
 
 ## Onde está o resto
 
-Regras da campanha, cartas, veto, salário e segurança: `automacao/BRIEFING.md`. Regras de carta e email pros estúdios (emoji ☺️ 😊, sem travessão, sem a palavra Brazil, frase de realocação "I am ready to move for the role, and I would need visa sponsorship.") estão lá e continuam valendo. Em conflito com este arquivo, vale este arquivo.
+- `LEIA-ME.md`: o mapa das pastas da campanha.
+- `automacao/REGRAS.md`: o resumo de tudo que vale hoje (busca, metas, formulários, salário, cartas, segurança). Regras de carta pros estúdios (emoji ☺️ 😊, sem travessão, sem a palavra Brazil, "I am ready to move for the role, and I would need visa sponsorship.") estão lá.
+- `automacao/BRIEF-*.md`: o passo a passo de cada frente.
+- `BRIEFING.md`: o diário da campanha desde 26/08, para consulta. Em conflito com este arquivo ou com o REGRAS.md, vale este arquivo, depois o REGRAS.md.
+- `arquivo/`: o que saiu de circulação, guardado para consulta.

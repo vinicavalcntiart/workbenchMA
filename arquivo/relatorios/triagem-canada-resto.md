@@ -1,6 +1,6 @@
 # Triagem do RESTO do Canada (tudo que nao e Vancouver, Montreal nem Toronto)
 
-Fatia: 176 estudios da `automacao/fila-gamedevmap-canada.csv`, colhidos do gamedevmap em 08/09.
+Fatia: 176 estudios da `arquivo/levantamentos/fila-gamedevmap-canada.csv`, colhidos do gamedevmap em 08/09.
 Nao encostei em Toronto e regiao. Alem dos quatro satelites nomeados no brief (Mississauga,
 Markham, Oakville, Waterloo) tambem deixei **Scarborough, Vaughan e Bradford** para o agente de
 Toronto, porque sao GTA e o risco de dois agentes escreverem a mesma linha nao vale 3 estudios.

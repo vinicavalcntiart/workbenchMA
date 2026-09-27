@@ -34,7 +34,7 @@ Os dois IDs saíram exatos. Só então varri os 15.
 
 Cada verdicto negativo passou por **duas checagens independentes**: o parser (que só olha rótulos de `<label>` de departamento e cargo) e um `grep` cru das 14 palavras-chave no arquivo inteiro. Os dois concordaram nos 14 slugs. A divergência útil apareceu na `princessbento`, onde o `grep` cru acusou `material` e o parser não: era texto de privacidade ("audition **material**s"), não rótulo de menu. O parser estava certo; registro isso porque mostra que o filtro por rótulo é o que vale.
 
-O parser validado ficou em `automacao/tt_menu.py`. Uso: `python3 automacao/tt_menu.py <arquivo.html>`.
+O parser validado ficou em `arquivo/ferramentas-antigas/tt_menu.py`. Uso: `python3 arquivo/ferramentas-antigas/tt_menu.py <arquivo.html>`.
 
 `pgrep -c chrome` foi 0 no começo e 0 no fim. **Nenhum navegador foi aberto nesta rodada.**
 

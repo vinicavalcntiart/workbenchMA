@@ -106,7 +106,7 @@ ficha responde essa pergunta explicitamente.
   Macleod, formerly of Rockstar Games"). A frase de realocação ENTRA.
 - **Dedupe:** `grep -i vertpaint` no repositório inteiro só bate em
   `automacao/backlog-estudios.md` (a lista de reserva de onde o nome saiu) e em
-  `automacao/garimpo-pdf-fontes.csv` (garimpo, sem contato). **Zero** em `alvos.csv`,
+  `arquivo/levantamentos/garimpo-pdf-fontes.csv` (garimpo, sem contato). **Zero** em `alvos.csv`,
   `enviados.csv`, `pessoas.csv`, `processados.csv` e `docs/index.html`. **Gmail conferido
   nesta rodada** (`"314 Arts" OR 314arts OR vertpaint`): **zero threads**.
 
@@ -165,8 +165,8 @@ ficha responde essa pergunta explicitamente.
   bloco emenda direto em "BUILDING PARTNERSHIPS ... Get in touch!"), então não há anúncio
   para responder: a via é carta fria pelo `info@`.
 - **Dedupe:** `grep -i "hyper luminal"` bate em quatro arquivos e **nenhum é envio**:
-  `automacao/backlog-estudios.md` (lista de reserva), `automacao/fila-gamedevmap-europa.csv`
-  e `automacao/garimpo-pdf-fontes.csv` (garimpo), e `automacao/caca-breezy-homerun.md`, onde
+  `automacao/backlog-estudios.md` (lista de reserva), `arquivo/levantamentos/fila-gamedevmap-europa.csv`
+  e `arquivo/levantamentos/garimpo-pdf-fontes.csv` (garimpo), e `arquivo/relatorios/caca-breezy-homerun.md`, onde
   a única menção é o quadro `hyperluminal` do Join.com listado como **vivo e com zero vaga
   publicada**. **Zero** em `alvos.csv`, `enviados.csv`, `pessoas.csv`, `processados.csv` e
   `docs/index.html`. **Gmail conferido nesta rodada** (`hyperluminal OR "Hyper Luminal"`):
@@ -206,7 +206,7 @@ ficha responde essa pergunta explicitamente.
   como vaga. Como carta fria, porém, é das melhores portas da rodada, porque o convite a
   artista externo está escrito.
 - **Dedupe:** `grep -i cahoots` no repositório bate só em `automacao/backlog-estudios.md`
-  (lista de reserva) e `automacao/garimpo-pdf-fontes.csv` (garimpo). **Zero** em
+  (lista de reserva) e `arquivo/levantamentos/garimpo-pdf-fontes.csv` (garimpo). **Zero** em
   `alvos.csv`, `enviados.csv`, `pessoas.csv`, `processados.csv` e `docs/index.html`.
   **Gmail conferido nesta rodada** (`cahoots OR cahootsstudios OR "magic beans"`): **zero
   threads**.
@@ -461,7 +461,7 @@ que ela tem vaga. E conta povoada de verdade se reconhece pelo tamanho **com** a
 ## Joe, 21/09 06h35-08h UTC — **ROTAS, NÃO PESSOAS: o dicionário que faltava, resolvido contra os dois oráculos. 24.431 sondagens, 76 locatários, e ZERO porta enviável nova — as quatro portas de espontânea que apareceram eram TODAS nossas, e o dedupe pegou as quatro**
 
 **Placar sem enfeite: 0 carta, 0 rascunho, 0 formulário enviado, 0 navegador aberto, 0 duplicata
-cometida.** Censo inteiro em `automacao/censo-oraculos-2109.csv` (24.431 linhas, positivo **e**
+cometida.** Censo inteiro em `arquivo/levantamentos/censo-oraculos-2109.csv` (24.431 linhas, positivo **e**
 negativo). O que esta seção entrega é **rota de quadro** — e a rota que vale por si é uma só, mas é
 a casa número 1 da `alvos.csv`.
 
@@ -627,7 +627,7 @@ os três morrem:
   multiplicado 22.289 por cerca de seis. **Isso é um buraco real do dicionário** — se existir
   `nomecomposto-studio.jobs.personio.de`, ele não foi perguntado.
 - **Não toquei em `enviados.csv`, `docs/index.html`, `automacao/pessoas.csv` nem em
-  `automacao/censo-personio-dach-2109.csv`**, por ordem. **A FILA DO VINI não recebeu item novo:
+  `arquivo/levantamentos/censo-personio-dach-2109.csv`**, por ordem. **A FILA DO VINI não recebeu item novo:
   ZERO** — não houve captcha nem parede, porque não houve envio.
 
 ### 8. O DEDUPE NA CAIXA, que é o que o `BRIEF-JOE.md` manda fazer ("o dedupe se faz na caixa, não no arquivo") — e ele acrescentou uma prova que nenhum arquivo tinha

@@ -8,7 +8,7 @@ Não toquei em `enviados.csv`, em `automacao/FILA-DO-VINI.md` nem em `docs/index
 este arquivo e acrescentei **uma** linha em `automacao/processados.csv`.
 
 Lido antes de começar: `BRIEFING.md` (inclusive as cinco seções novas de 11/09 no fim),
-`automacao/BRIEF-JHON.md`, e `automacao/caca-ashby-lever-1109.md`, que é o formato desta
+`automacao/BRIEF-JHON.md`, e `arquivo/relatorios/caca-ashby-lever-1109.md`, que é o formato desta
 entrega e a lista do que **não** precisava ser refeito.
 
 ---
@@ -72,10 +72,10 @@ enviado. A chave continua no HTML e não serve para nada.
 
 ## 2. O QUE ESTA RODADA NÃO REFEZ, e por quê
 
-- **Não repeti Ashby, Lever nem Personio.** `automacao/caca-ashby-lever-1109.md` fechou as três
+- **Não repeti Ashby, Lever nem Personio.** `arquivo/relatorios/caca-ashby-lever-1109.md` fechou as três
   hoje: Ashby parede (reCAPTCHA v2 invisível 6/6), Lever parede (hCaptcha + Cloudflare 8/8),
   Personio sem porteiro (21.208 slugs, 121 quadros, 1 rota nova já enviada).
-- **Não repeti Workday.** `automacao/caca-workday-1109.md` o varreu hoje: zero personagem.
+- **Não repeti Workday.** `arquivo/relatorios/caca-workday-1109.md` o varreu hoje: zero personagem.
 - **Não repeti Teamtailor, Recruitee, Pinpoint, Homerun nem BambooHR.** Todos varridos e
   registrados entre 09/09 e 11/09.
 - **Não varri Workable em volume.** O enunciado condicionava isso a medir a porta antes de

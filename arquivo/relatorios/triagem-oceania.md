@@ -1,6 +1,6 @@
 # TRIAGEM OCEANIA (+ cauda longa europeia) — 08/09
 
-Fonte: `automacao/fila-gamedevmap-europa.csv` (o arquivo tem nome de Europa mas trouxe a Oceania junto).
+Fonte: `arquivo/levantamentos/fila-gamedevmap-europa.csv` (o arquivo tem nome de Europa mas trouxe a Oceania junto).
 Metodo: so `curl` (UA de Chrome, sempre `https://`), WebSearch e WebFetch. Nenhum navegador foi aberto.
 Nenhum email, rascunho, formulario ou envio. Nenhum commit, nenhum push.
 

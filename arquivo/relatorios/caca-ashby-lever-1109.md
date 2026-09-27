@@ -8,10 +8,10 @@ Não toquei em `enviados.csv` nem em `docs/index.html`. Criei este arquivo e acr
 **uma** linha em `automacao/processados.csv`.
 
 Lido antes de começar: `BRIEFING.md`, `automacao/BRIEF-JHON.md`,
-`automacao/rotas-espontaneas-1109.md` (formato desta entrega),
-`automacao/caca-workday-1109.md` (para não repetir o Workday),
-`automacao/caca-ashby-bamboo-gohire-0909.md` (a varredura anterior de Ashby e Lever) e
-`automacao/caca-personio-0909.md`.
+`arquivo/relatorios/rotas-espontaneas-1109.md` (formato desta entrega),
+`arquivo/relatorios/caca-workday-1109.md` (para não repetir o Workday),
+`arquivo/relatorios/caca-ashby-bamboo-gohire-0909.md` (a varredura anterior de Ashby e Lever) e
+`arquivo/relatorios/caca-personio-0909.md`.
 
 ---
 
@@ -64,10 +64,10 @@ razão pela qual eu me recuso a concluir ausência de DataDome no SmartRecruiter
 
 ## 2. O QUE ESTA RODADA NÃO REFEZ, e por quê
 
-- **Não repeti o Workday.** `automacao/caca-workday-1109.md` o varreu hoje: 1.942 slugs
+- **Não repeti o Workday.** `arquivo/relatorios/caca-workday-1109.md` o varreu hoje: 1.942 slugs
   inéditos, 29.130 sondagens, **zero personagem**.
 - **Não repeti Teamtailor, Recruitee, Pinpoint nem Homerun.**
-  `automacao/rotas-espontaneas-1109.md` fechou os quatro hoje.
+  `arquivo/relatorios/rotas-espontaneas-1109.md` fechou os quatro hoje.
 - **Não refiz a varredura de disciplina do Ashby e do Lever de 09/09.** A de 09/09 procurava
   **vaga aberta** (3.230 slugs, 35 quadros Ashby, 19 Lever, 2 linhas de fila). Esta procura
   outra coisa: o **anúncio de candidatura espontânea**. São recortes diferentes no mesmo
@@ -448,7 +448,7 @@ vaga é **`/search.json`**, que respondeu **200 em 121 de 121**.
 
 **Vagas da disciplina em todo o Personio: UMA**, a `3D Artist Generalist - Modelling &
 Texturing` da Chimera, **em Cebu, nas Filipinas** — fora do escopo, e já registrada assim em
-`automacao/caca-personio-0909.md`. Nada mudou nesse ponto em dois dias.
+`arquivo/relatorios/caca-personio-0909.md`. Nada mudou nesse ponto em dois dias.
 
 ---
 

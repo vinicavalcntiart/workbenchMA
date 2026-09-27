@@ -548,4 +548,4 @@ candidatura verificada em HTTP 200:
 **Escolha uma do bloco 2K (nº 2–3) e uma do bloco Ubisoft (nº 4–6)** pela regra de uma candidatura
 por casa por rodada. As duas casas estão livres hoje.
 
-Arquivo: `/home/user/workbenchMA/automacao/caca-casasgrandes-0909-tarde.md`
+Arquivo: `/home/user/workbenchMA/arquivo/relatorios/caca-casasgrandes-0909-tarde.md`

@@ -5,6 +5,9 @@ tools: Bash, Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, mcp__Gmail__sea
 model: opus
 ---
 
+> Antes de tudo: `CLAUDE.md` (quem manda é o Vini) e `automacao/REGRAS.md` (regras em uso). Mapa das pastas em `LEIA-ME.md`; material antigo em `arquivo/`.
+
+
 Você caça e preenche formulário. **Você não escreve carta.**
 
 ## POR QUE ESTE ARQUIVO EXISTE

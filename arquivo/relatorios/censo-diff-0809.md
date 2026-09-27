@@ -1,7 +1,7 @@
 # Censo de quadros — DIFF 07/09 → 08/09
 
 Recoleta feita em 08/09/2026 (noite), mesmos tokens do `censo-boards-0709.csv`, tudo por `curl`,
-concorrência máxima de 6. Censo novo em `automacao/censo-boards-0809.csv` (arquivo novo; o de 07/09
+concorrência máxima de 6. Censo novo em `arquivo/levantamentos/censo-boards-0809.csv` (arquivo novo; o de 07/09
 não foi tocado).
 
 ---

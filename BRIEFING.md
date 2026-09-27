@@ -1,4 +1,6 @@
 # Campanha de emprego do Vini Cavalcanti — briefing
+
+> **27/09/2026: este arquivo virou o DIÁRIO da campanha.** As regras em uso estão resumidas em `automacao/REGRAS.md`, o mapa das pastas em `LEIA-ME.md`, e quem manda é o `CLAUDE.md`. Em conflito, vale o CLAUDE.md, depois o REGRAS.md.
 Atualizado em 31/08/2026. Painel ao vivo: https://vinicavalcntiart.github.io/workbenchMA/
 
 ## Quem é
@@ -1281,7 +1283,7 @@ uma vaga da disciplina que nenhuma dessas varreduras podia ter achado:
 
 **A causa é de cobertura, e ela está medida:** o quadro é **JazzHR** (`<slug>.applytojob.com`), e o
 JazzHR **não existe no censo**. Contagem feita agora: `applytojob` aparece **0 vez** em
-`automacao/censo-boards-0809.csv` e **0 vez** em `automacao/quadros-fora-censo-1209.csv`, enquanto o
+`arquivo/levantamentos/censo-boards-0809.csv` e **0 vez** em `arquivo/levantamentos/quadros-fora-censo-1209.csv`, enquanto o
 repositório já conhece **13 tokens** dessa plataforma. A família inteira nunca tinha sido lida.
 
 **Varri os 12 tokens vivos por `curl` nesta rodada: 49 vagas.** A disciplina aparece em duas casas
@@ -2416,7 +2418,7 @@ Palavras dele: *"Vamos hoje como inauguração fazer pelo menos umas 30 vagas po
 Meta do dia 16/09: **30 candidaturas por formulário enviadas e confirmadas**, personagem
 primeiro. A meta diária permanente continua 10/5. Dois agentes em paralelo: o Jhon A (único
 navegador da máquina) enviando casa a casa, e um Jhon B triador, sem navegador, montando
-`automacao/FILA-FORMULARIO-1609.md` com dossiês prontos e ordenados do mais fácil para o mais
+`arquivo/filas-antigas/FILA-FORMULARIO-1609.md` com dossiês prontos e ordenados do mais fácil para o mais
 difícil, para o Jhon A consumir de cima para baixo. Regra que continua: um navegador por vez.
 
 ### 16/09, terceiro turno (17h00–18h00 UTC) — DUAS ROTAS NOVAS PROVADAS E UMA PAREDE FECHADA
@@ -3653,7 +3655,7 @@ sem os sufixos `-studio`, `-games`, `-animation`, `-inc`, `-entertainment`, `-vf
 **Resultado honesto: 37.409 sondagens em 4.685 slugs distintos, 125 quadros vivos, 1.121 vagas
 lidas por título, CINCO acertos do filtro de disciplina e NENHUM da disciplina de verdade. Zero
 candidatura, zero duplicata, nenhuma tentativa contra veto escrito.** A lista está em
-`automacao/censo-artstation-ats-1709.csv`, para a campanha não repetir a sondagem.
+`arquivo/levantamentos/censo-artstation-ats-1709.csv`, para a campanha não repetir a sondagem.
 
 | família | slugs sondados | conferidos | código 000 | quadros vivos |
 |---|---|---|---|---|
@@ -3728,7 +3730,7 @@ os plausivelmente da casa certa são 28, e os da disciplina são zero.**
 
 ### 3. O `axis` DO TEAMTAILOR NÃO É A AXIS ANIMATION, E O REPOSITÓRIO JÁ O GUARDAVA COMO SE FOSSE
 
-`automacao/quadros-tt-rec-1545-1009.csv` (colheita de 10/09) lista
+`arquivo/levantamentos/quadros-tt-rec-1545-1009.csv` (colheita de 10/09) lista
 `teamtailor,axis,2,https://axis.teamtailor.com/jobs` numa lista intitulada *"quadros Teamtailor e
 Recruitee inéditos"* montada a partir de **nomes de estúdio**. Lido hoje pelo JSON Feed, o
 locatário `axis` tem duas vagas e as duas são **`Crayon Consulting Academy — Omskoler deg til
@@ -4447,7 +4449,7 @@ devolve **403 com 1.717 bytes de DataDome** (objeto `dd`, `host: geo.captcha-del
 ### 4. TEAMTAILOR: **77% DO VOLUME E 91% DA RECÊNCIA DESTA FAMÍLIA VÊM DE TOKEN ADIVINHADO**
 
 Dos 167 locatários que o repositório entrega, **61 aparecem só no
-`automacao/quadros-tt-rec-1545-1009.csv`**, que foi uma rodada de **adivinhação de token** de 10/09.
+`arquivo/levantamentos/quadros-tt-rec-1545-1009.csv`**, que foi uma rodada de **adivinhação de token** de 10/09.
 57 estão vivos e respondem 200 com quadro cheio, e entregam **1.483 das 1.915 vagas lidas** e **154
 das 170 publicadas desde 17/09**. E o campo `title` do próprio JSON Feed **desmente o slug um por
 um**: `house` é a **Iam**, `rhino` é a **Diamond**, `seven` é a **Baar**, `habitat` é a **HEALTH
@@ -4535,7 +4537,7 @@ pelo corpo é o `CFX Artist 8394174` da Untold, **que já tinha decisão de 17/0
 
 Turno de **caça por `curl`**, zero navegador (nenhum processo criado), **zero envio**. A lane é a
 que o hand-back mandou: as casas do censo da ArtStation que **não** caíram em família de ATS no
-cruzamento de ontem — 3.363 slugs menos os 112 de `automacao/censo-artstation-ats-1709.csv`, ou
+cruzamento de ontem — 3.363 slugs menos os 112 de `arquivo/levantamentos/censo-artstation-ats-1709.csv`, ou
 seja **3.251 casas**.
 
 **Números medidos: 15.352 sondagens de `/careers` em 3.251 casas, 356 hosts vivos, 3.177
@@ -4878,7 +4880,7 @@ piso de 1.000**, então a régua de veto nela é **leitura inválida** e o veto 
 ### Adendo das 04h38 — A PERNA CANADENSE DA MESMA VEIA: O BOLSÃO `pagina-sem-ats` ESTÁ ESGOTADO PARA FORMULÁRIO, E O QUE RESTA ALI É CARTA
 
 O §7 acima diz que as listas canadenses eram a próxima perna óbvia. Rodei. **Alvo escolhido pelo
-critério da veia**, não por volume: das 426 casas de `automacao/fila-gamedevmap-canada.csv`, 299 já
+critério da veia**, não por volume: das 426 casas de `arquivo/levantamentos/fila-gamedevmap-canada.csv`, 299 já
 estão marcadas `sem-pagina-de-carreira` e 20 já têm porta de ATS identificada, então o único bolsão
 que interessa a uma caça de **formulário** são as **64 marcadas `pagina-sem-ats`** (carreira viva,
 nenhum ATS conhecido atrás) mais as 17 `site-fora-do-ar` (que pela armadilha escrita no próprio
@@ -5275,7 +5277,7 @@ qualquer oferta diz o nome da casa, e ele desmente o slug exatamente como o `tit
 
 #### 6b. A ARMADILHA ESTÁ DENTRO DE UM ARQUIVO DESTE REPOSITÓRIO, E O NOME DA COLUNA É QUE ENGANA
 
-O `automacao/quadros-fora-censo-1209.csv` tem uma coluna **`conferido`** e ela diz **`SIM`** para
+O `arquivo/levantamentos/quadros-fora-censo-1209.csv` tem uma coluna **`conferido`** e ela diz **`SIM`** para
 `black`, `habitat`, `seven` e `butter` — **os quatro que 00h41 provou não serem casa nenhuma da
 área** (Eventus, HEALTH CITY, Baar, All Gravy). Lido o arquivo, o que ele mediu foi **leitura**:
 `house` e `rhino` estão como `HTTP-403 / NAO`, os outros como `OK / SIM`.
@@ -7926,7 +7928,7 @@ Environment Artist (**Kuala Lumpur**).
 
 ### 6. UM DEFEITO DE FERRAMENTA CONSERTADO, E ELE JÁ TINHA CUSTADO UMA VARREDURA INTEIRA
 
-`automacao/caca-personagem-quadros.py` gravava o resultado num caminho de `scratchpad` **cravado com o
+`arquivo/ferramentas-antigas/caca-personagem-quadros.py` gravava o resultado num caminho de `scratchpad` **cravado com o
 id de OUTRA sessão**. Ele lia os 123 quadros, montava os acertos e **morria em `FileNotFoundError` na
 última linha** — ou seja, gastava a varredura inteira e não mostrava nada. Agora o destino vem de
 `SAIDA_HITS` e, na falta dela, do diretório corrente, que existe em qualquer sessão. **Script que só
@@ -8597,7 +8599,7 @@ LOCATÁRIOS CONFIRMADOS (200) ....... 17
 FALHA DE REDE / NÃO CONFERIDO ...... 0
 ```
 
-**Os 17:** `haristudios` (Hari Studios), `asobostudio` (Asobo), `animaj` (ANIMAJ), `zeiltproductions` (Zeilt, Luxemburgo), `gameloft`, `amplitudestudios`, `novaquark`, `ohbibi`, `thetinydigitalfactory`, `stim` (Stim Studio), `fost`, `stardust` (QA de jogo), `dream` (= Milan, editora, fora), `latelier` (L'Atelier 42), `8sec`, `gon` (G-ON) e `triskell`. Lista com o estado de cada quadro em **`automacao/censo-flatchr-2109.csv`**.
+**Os 17:** `haristudios` (Hari Studios), `asobostudio` (Asobo), `animaj` (ANIMAJ), `zeiltproductions` (Zeilt, Luxemburgo), `gameloft`, `amplitudestudios`, `novaquark`, `ohbibi`, `thetinydigitalfactory`, `stim` (Stim Studio), `fost`, `stardust` (QA de jogo), `dream` (= Milan, editora, fora), `latelier` (L'Atelier 42), `8sec`, `gon` (G-ON) e `triskell`. Lista com o estado de cada quadro em **`arquivo/levantamentos/censo-flatchr-2109.csv`**.
 
 **E o número que o Vini vai querer:** **quadros que responderam com conteúdo = 3 de 17** (`haristudios`, `amplitudestudios`, `thetinydigitalfactory`). **Vagas publicadas somadas nesses 3 = 1** (o *Technicien.ne IT* da HARI). **Vagas da disciplina = ZERO.** **Candidatura espontânea da disciplina = UMA, a da HARI, e ela foi enviada hoje.**
 

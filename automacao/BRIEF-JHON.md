@@ -52,7 +52,7 @@ Ele estava certo, e dá para medir. **A colheita do gamedevmap tinha coberto Eur
 campanha junto com a Europa.
 
 Colhido em 08/09: **487 estúdios canadenses no gamedevmap, dos quais 61 a campanha já tinha tocado
-e 426 nunca foram tocados.** Estão em `automacao/fila-gamedevmap-canada.csv`, ordenados por
+e 426 nunca foram tocados.** Estão em `arquivo/levantamentos/fila-gamedevmap-canada.csv`, ordenados por
 Vancouver (68), Montréal (87) e Toronto (88) primeiro, depois Edmonton, Halifax, Quebec City,
 Calgary e o resto.
 
@@ -92,7 +92,7 @@ método: o detector procurava **um** formato, `<form>` com campo de arquivo **e*
 fora, quem está num ATS que a lista não tinha, e quem monta a porta em JavaScript ficaram todos
 invisíveis. **Varredura estreita mede o que ela sabe procurar, não o que existe.**
 
-A fila refeita está em `automacao/fila-jhon-portas.csv`, já sem os 116 domínios que não recebem
+A fila refeita está em `arquivo/levantamentos/fila-jhon-portas.csv`, já sem os 116 domínios que não recebem
 email, já ordenada por Canadá e depois Europa, e classificada por **tipo de porta**, porque cada
 tipo se trabalha de um jeito:
 
@@ -222,7 +222,7 @@ sem `--submit` eles preenchem, tiram print e mostram a leitura de volta, sem env
 ## ADIVINHAR O TOKEN DO ATS a partir do nome do estudio, e isso ACHA PORTA QUE VARREDURA DE SITE NAO ACHA
 
 Medido em 07/09 na fatia EUA/Oceania e vale para qualquer fatia. Peguei os **730 nomes de estudio**
-das filas `usa_resultado.csv` e `automacao/fila-oceania.csv` e gerei **1.548 tokens** possiveis de
+das filas `usa_resultado.csv` e `arquivo/levantamentos/fila-oceania.csv` e gerei **1.548 tokens** possiveis de
 quadro: nome sem espaco, nome com hifen, e nome **sem os sufixos** studios, studio, games, game,
 entertainment, animation, interactive, productions, inc, llc, vfx. Depois bati um por um contra a
 API publica de cada ATS, com dez conexoes.
@@ -612,7 +612,7 @@ proibição do briefing, que existia contra testes que nunca liberavam nada e po
 nada. Este decide um lado: quando ele acusa `size=normal`, você economiza a rodada inteira; quando
 ele fica em silêncio, o veredito continua sendo o clique.
 
-A sonda está em `automacao/cap_size.js`.
+A sonda está em `arquivo/ferramentas-antigas/cap_size.js`.
 
 ---
 
@@ -987,7 +987,7 @@ AUSÊNCIA DE MEDIÇÃO.**
 
 O estrangulamento do Workable era conhecido só por `curl`, o que deixava viva a hipótese de ser
 defeito do **cliente** (sem TLS de Chrome, sem cookie, sem `sec-ch-ua`). Foi medido em **navegador
-de verdade** (`automacao/sonda-workable.js`, que roda com `cp automacao/sonda-workable.js /home/user/apply/ && cd /home/user/apply && sh hb_run.sh sonda-workable.js`), três locatários, as duas vias na mesma sessão: a
+de verdade** (`arquivo/ferramentas-antigas/sonda-workable.js`, que roda com `cp arquivo/ferramentas-antigas/sonda-workable.js /home/user/apply/ && cd /home/user/apply && sh hb_run.sh sonda-workable.js`), três locatários, as duas vias na mesma sessão: a
 página pública e a API chamada **de dentro** da página, já com o cookie da navegação.
 
 **Seis medições, seis vezes `429`, e o corpo diz `error code: 1015`** — o limitador de taxa da

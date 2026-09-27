@@ -50,7 +50,7 @@ tratar o fecho atual como intocável.
 a um na ordem de envio (o primeiro leva A, o segundo B, e assim por diante), o
 que deixa as duas metades parecidas em país e em data: 56 com A, 55 com B.
 
-**Onde está o registro.** `automacao/followup-0709.csv`, coluna `fecho` (A ou B)
+**Onde está o registro.** `arquivo/followups/followup-0709.csv`, coluna `fecho` (A ou B)
 e coluna `coorte`. A coorte `26/08-01/09` (101 estúdios, enviados em 07/09) levou
 o fecho A e serve de base histórica, mas **o teste controlado é só a coorte
 02/09**, porque é a única onde os dois fechos saíram no mesmo dia para públicos

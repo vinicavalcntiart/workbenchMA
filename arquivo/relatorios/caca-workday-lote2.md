@@ -1,6 +1,6 @@
 # Caça ao Workday — LOTE 2 — 09/09/2026
 
-Segunda varredura do Workday, feita depois de ler `automacao/caca-workday.md` (lote 1) e usando o
+Segunda varredura do Workday, feita depois de ler `arquivo/relatorios/caca-workday.md` (lote 1) e usando o
 mesmo oráculo do `robots.txt`. Tudo abaixo foi **rodado com `curl`/`python3` nesta sessão**, no
 máximo 5 conexões simultâneas, **nenhum navegador aberto**. Nada foi commitado, nada foi enviado,
 nenhum formulário foi preenchido, e `docs/index.html`, `enviados.csv`, `automacao/processados.csv`
