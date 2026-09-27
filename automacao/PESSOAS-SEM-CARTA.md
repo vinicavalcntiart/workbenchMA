@@ -19398,3 +19398,15 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? SIM** (Dinamarca). **A frase de realocação ENTRA.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (ghostvfx OR "Ghost VFX" OR andreaskj OR "Kjær-Jensen" OR "Kjaer-Jensen")` → **`{}`**; endereço exato → **`{}`**. Repositório: zero. **CASA INÉDITA NA CAMPANHA.**
 - **RESSALVAS HONESTAS:** a página About é de 2023 (rodapé *"© 2023"*) e a bio do Bluesky dá outro cargo (*Lighting Lead*), então o cargo exato hoje é incerto, mas as duas fontes o põem na Ghost; ele é de luz e CG, não de personagem; o endereço é do domínio pessoal dele, não da casa.
+
+### FICHA 5: **Edouard Caplain**, *Art Director* (bio do Bluesky; o site dele diz *"Visual Development/Concept Art"*), **DON'T NOD** (Paris, **FRANÇA**; segundo estúdio em Montréal) — `e***@gmail.com` — **ALTA (PUBLICADO em texto na home do site dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://edouardcaplain.org/` (**200, 2.614 bytes**): *"Edouard Caplain | DONTNOD Entertainment Visual Development/Concept Art e***@gmail.com Life is Strange 2 | Life is Strange | Jusant | Alien: Isolation"*. `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=edouardcaplain.bsky.social` (**200**): *"art director @dontnod / jusant, concept art for life is strange & alien isolation"*, última postagem em 08/04/2026. `https://dont-nod.com/en/` (**200, 145.636 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** diretor de arte de uma casa de jogo narrativo 3D em que personagem é o centro. A candidatura espontânea foi para Montréal; ele é a porta humana em Paris, onde a direção de arte mora.
+- **FRASES DA CASA, literais (`dont-nod.com/en/`):**
+  - *"We are an independent video game developer and publisher based in Paris and Montreal, creating powerful and immersive narrative experiences."*
+  - *"The Lonesome Guild is a colorful top-down ARPG featuring a loveable cast of characters on an adventure of impossible odds... unless they team up."*
+- **CASA E DISCIPLINA:** **DENTRO** (jogo narrativo 3D de personagem: *Life is Strange*, *Lost Records: Bloom & Rage*, *Aphelion*).
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA** (em carta para a Europa, com a frase de patrocínio da UE).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (dontnod OR "don't nod" OR edouardcaplain OR Caplain)` → só o recibo da **candidatura espontânea de DON'T NOD Montréal em 25/09** (SmartRecruiters). **Nenhuma recusa, nenhuma resposta humana.** Endereço exato → **`{}`**. Repositório: `enviados.csv` 25/09 (Montréal, personagem); zero pessoa em `pessoas.csv`. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** ele é concept 2D e ambiente (*Jusant*), não personagem 3D; o endereço é gmail pessoal; a casa recebeu candidatura há dois dias, então a carta não deve sair colada nela; o chefe de personagem da casa (Juliette, *Lead Character Artist @Dontnod Montréal*) não tem endereço publicado.
