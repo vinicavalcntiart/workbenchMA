@@ -19253,3 +19253,22 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
   1. É caixa geral, não recrutamento.
   2. A frase dele é de 2022, e que ele é lead hoje vem só da bio do Bluesky, que não tem data.
   3. Os sites do Carlos Pardo (2d.fr e pardo.pro) só trazem um endereço num **campo oculto do PayPal da loja**. Isso não é contato publicado e foi descartado.
+
+### FICHA 3: **Alena Dubrovina**, *Art Director* (personagem), **LARIAN STUDIOS** (Gent, **BÉLGICA**, e mais seis estúdios): **sem-email**
+- **Nome e cargo:** https://www.gnomon.edu/news-and-events/events/character-creation-in-baldur-s-gate-3-with-larian-studios/ (200). O texto diz *"Now an Art Director, she focuses on character art to enhance player experiences and reach a broad audience."* Segunda opção: **Luna De Groote**, *Associate Character Art Lead*, na mesma página. Terceira: Joachim Vleminckx, *Art Director*, pelo índice de busca. O email dele só aparece em fonte paga, que não foi usada.
+- **Onde procurei o email:**
+  - https://larian.com/contact (200) tem `info@larian.com` (bloco "General" e rodapé "Business contact"), `press@` e `support@`.
+  - https://larian.com/privacy (200) tem `privacy@`.
+  - `/careers` e quebec.larian.com não trazem caixa de recrutamento.
+  - A API do Lever `larian` (200) não traz email nenhum.
+- **POR QUE ELA:** é a diretora de arte cuja carreira inteira é personagem, e a vaga é a espontânea de arte da casa.
+- **FRASES DA CASA, literais** (vaga 4fd694b3, https://jobs.lever.co/larian/4fd694b3-ece7-4307-9949-15cac512a815, API 200 hoje):
+  - *"We’re always looking to connect with talented and passionate developers — especially those with expertise in concept and 2D art."*
+  - *"These roles typically involve generating visual ideas and illustrations that guide the look and feel of characters, environments, props, and UI across our worlds."*
+- **FORA DOS EUA? SIM.** A frase de realocação ENTRA.
+- **O QUE O GMAIL DEVOLVEU:** duas threads de `no-reply@hire.lever.co`, o recibo de 07/09 (Character Artist Open Application) e a automática de 08/09 *"While we may not have a role that suits your profile right now, we will keep your details..."*. `in:sent to:larian.com` devolveu `{}`, e "Dubrovina" e "De Groote" também `{}`.
+- **MELHOR CANAL PÚBLICO:** `info@larian.com`, caixa geral e de negócios publicada na página de contato.
+- **RESSALVAS HONESTAS:**
+  1. **Esta mesma pessoa foi DESCARTADA em 12/09** (acima, neste arquivo) por causa da mensagem de 08/09. Essa mensagem é automática do Lever e não recusa escrita por pessoa, e o maestro reabriu a casa hoje. A decisão é dele e do Vini.
+  2. A vaga é de concept e 2D, e o Vini é 3D de personagem.
+  3. `info@` não é caixa de recrutamento.
