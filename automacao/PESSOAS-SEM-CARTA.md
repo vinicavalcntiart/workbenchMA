@@ -19272,3 +19272,67 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
   1. **Esta mesma pessoa foi DESCARTADA em 12/09** (acima, neste arquivo) por causa da mensagem de 08/09. Essa mensagem é automática do Lever e não recusa escrita por pessoa, e o maestro reabriu a casa hoje. A decisão é dele e do Vini.
   2. A vaga é de concept e 2D, e o Vini é 3D de personagem.
   3. `info@` não é caixa de recrutamento.
+
+## RODADA DAS 17h35 UTC DE 27/09 (Joe): VEIA NOVA, A **BIO PÚBLICA DE ARTISTA NO BLUESKY E NO MASTODON** (quem diz o emprego atual numa casa do escopo) SEGUIDA DO **SITE PESSOAL** DA PESSOA. **Quatro fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Duas em **Vancouver**, uma nos **Nórdicos** (Estocolmo), uma no **Reino Unido**. Holanda: zero. Email completo fora do repositório (repositório público); aqui vai mascarado
+
+**Placar: 4 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Casas já tratadas nesta tarde (Kolibri, Behaviour, Quantic Dream, Larian) ficaram de fora.
+
+**O MÉTODO, para repetir:**
+1. `https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?limit=100&q=<termo>` (aberta, sem login, com `cursor`), com termos de cargo ("lead character artist", "art director", "head of art"...), nome de casa ("Media Molecule", "Guerrilla", "Remedy"...) e cargo mais cidade ("character artist Vancouver", "art director Stockholm"...). **37.274 perfis lidos.** Filtro: a bio diz o emprego ATUAL (`at <casa>` ou `@<casa>`), cargo de personagem ou de chefia de arte, e nada de `ex-`, `formerly`, `open to work`.
+2. `https://<instância>/api/v1/directory?local=true&limit=80&offset=N` no `mastodon.gamedev.place` (7.340 contas) e no `mastodon.art` (8.000), e `/api/v2/search?type=accounts&q=` sem paginação (a paginação pede login).
+3. Para cada pessoa boa, o site pessoal (da bio, dos campos do Mastodon ou achado por busca), com entidade HTML, `%40`, `[at]` e `data-cfemail` decodificados.
+- **Rendimento honesto:** 115 perfis dizem trabalhar hoje numa casa do escopo com cargo de arte, mas **só uma minoria publica endereço**. O que mais sobra é nome e cargo sem email (lista abaixo, para a próxima rodada).
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Nome e cargo atuais, sem endereço publicado** (bio sem email e site sem email ou inexistente): Alexander Birtles (*Lead Character Artist at Rebellion*, Oxford), Eugenia Peruzzo (*Lead Character Artist @Screen Burn Interactive*, Glasgow; `screenburn.com` só tem `hello@`), Nele Steenput (*Senior Character Artist at nDreams*), Juhani Jokinen (*Associate Art Director at Remedy*; `artofjokinen.com` só tem formulário), John Crossland (*Principal Character Artist @Remedy*), Palle (*Character Art Director at Ubisoft Massive*, Malmö), Jose David Cifuentes Ulloa (*Senior Character Artist @ Avalanche Studios*, Malmö), Colin Penty (*Technical Art Director at The Coalition*, Vancouver), Johnny Fehr (*Texture and lookdev artist at DNEG*, Vancouver), Vicci S (*Recruiter for IO Interactive*), Helm (*Art Director @ Mojang*), Lewis Blythe (*Senior Character Artist at Second Star Games*, Manchester).
+- **Freelancer sem casa** (bio com email, mas sem vínculo atual): Paula Lucas (Escócia, *"Freelance Schedule Open"*), Micaela Dawn (Canadá, site diz *"freelance Illustrator and video-game Art Director"*), Joost Eggermont (Holanda; o vínculo com a Geometric Interactive não aparece no site da casa, e a casa já levou carta em `info@` em 06/09).
+- **Xavier Coelho-Kostolny** (`xavierck.com`, endereço publicado, *"character team management"*): a bio do Mastodon diz *Character customization lead at Hidden Path Entertainment*, mas a busca aberta liga o nome a outra empresa hoje. Vínculo atual não confirmado, EUA. Fica de reserva.
+- **Casas que já recusaram ou no teto:** Wizards of the Coast (recusa de 10/09), LAIKA, Framestore, Frontier, Atomic Cartoons e Guerrilla (no teto de duas pessoas), Rovio (duas pessoas).
+- **Veia de contato no corpo do anúncio de ATS** (Greenhouse, Lever, Ashby, Recruitee, Personio, Teamtailor, BambooHR, Breezy e SmartRecruiters dos 1.083 tokens de `tokens-ats-1809.csv`): o campo `metadata` do Greenhouse publica o recrutador com email em poucas casas (Hasbro/Wizards, LAIKA). As casas de jogo que apareceram já estavam no repositório (Coffee Stain, Tactical Adventures com recusa em 17/09) ou fora do ramo. Veia fechada.
+- **Links de saída das páginas de equipe** (1.407 domínios do Canadá, Nórdicos, Holanda, Reino Unido e Irlanda, seguindo o link para o site pessoal de cada pessoa): 119 sites pessoais, nenhum de pessoa de personagem numa casa do escopo com endereço. Veia fechada.
+
+### FICHA 1: **Nicholas Kole**, *Illustrator & Character Designer* (freelance; hoje *"building something special with the incredible talents at Studio MDHR"*), **STUDIO MDHR** (ele mora em **Vancouver, BC**, **CANADÁ**) — `n***@nicholaskole.art` — **ALTA (PUBLICADO em texto na página About do site dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.nicholaskole.art/about` (**200, 115.206 bytes**): *"email: n***@nicholaskole.art"* ao fim da bio. `https://mastodon.art/api/v1/accounts/lookup?acct=Nicholaskole` (**200**): *"Principal Concept Artist @ Phoenix Labs. Worked on: Spyro Reignited, Crash Bandicoot 4, Disney's Lorcana, Sonic Prime & Wingfeather saga."* (última postagem em 2022, então a Phoenix Labs é passado). `https://www.studiomdhr.com/` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** é **colega de crédito na The Wingfeather Saga**, o mesmo título que é a prova mais forte do Vini. Designer de personagem que mora em Vancouver e trabalha para meia indústria (*"Disney, Dreamworks, Blizzard, Bungie, Skydance, Guerilla Games, Toys For Bob, Hasbro, Mattel, Warner Brothers, Riot Games, Shining Isle, Phoenix Labs, EA Games"*). Não contrata, mas indica, e colega de ofício responde colega de ofício.
+- **FRASES, literais (site dele):**
+  - *"You may recognize his recent work from the Spyro Reignited Trilogy, Crash Bandicoot 4, The Wingfeather Saga, or the cards of Disney's Lorcana!"*
+  - *"For the last 15+ years he's worked across film, television, publishing, video games, trading cards & toys, on the road from Rhode Island to Vancouver BC where he now lives"*
+- **CASA E DISCIPLINA:** Studio MDHR é **FORA da disciplina** (2D desenhado à mão, *Cuphead*). A ficha vale pela pessoa, não pela casa.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (Kole OR nicholaskole OR "Studio MDHR" OR studiomdhr)` → **`{}`**; `in:anywhere ("Phoenix Labs" OR phxlabs OR "Nicholas Kole" OR "nicholaskole.art")` → **`{}`**. Repositório: zero (a Phoenix Labs só aparece como porta quebrada em 07/09).
+- **RESSALVAS HONESTAS:** ele é designer 2D e freelance, não chefe de personagem 3D; é possível que já conheça o Vini pela Wingfeather, e a carta deve partir disso; nenhuma vaga ligada a ele.
+
+### FICHA 2: **Graeme McCormack**, *Character concept artist at Hinterland* (*"Senior/lead concept artist for 13+ years"*), **HINTERLAND STUDIO** (Vancouver, BC, **CANADÁ**) — `g***@wizardsandunicorns.com` — **ALTA (PUBLICADO em `mailto:` no cabeçalho do site dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://wizardsandunicorns.com/` (**200, 73.461 bytes**; título *"Wizards & Unicorns – Graeme McCormack"*; `<li class="mail"><a href="mailto:g***@wizardsandunicorns.com">`). `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=drawcoolshit.bsky.social` (**200**): *"Character concept artist at Hinterland. Senior/lead concept artist for 13+ years. Vancouver, B.C. wizardsandunicorns.com"*, com postagem em 15/08/2026. `https://hinterlandgames.com/` (**200, 346.981 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** é quem desenha os personagens da casa, isto é, trabalha colado no time que modela o que ele desenha. Casa média, sem recrutador de arte com nome publicado.
+- **FRASES DA CASA, literais (home):**
+  - *"BLACKFROST: THE LONG DARK 2 Coming soon to Early Access."*
+  - *"Experience innovative gameplay while losing yourself in our stunning worlds."*
+- **CASA E DISCIPLINA:** **DENTRO** (jogo 3D com personagem, visual pintado estilizado).
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (hinterland OR hinterlandgames OR McCormack OR wizardsandunicorns)` → **`{}`**; `in:anywhere ("g***@..." OR "Graeme McCormack" OR "The Long Dark")` (endereço exato) → **`{}`**. Repositório: a General Application do site foi enviada em 01/09 (processados.csv), sem resposta na caixa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** concept 2D, não lead de personagem 3D; a página de carreiras monta por JavaScript e não li vaga; não achei frase de patrocínio de visto escrita pela casa.
+
+### FICHA 3: **Daniel Bystedt**, *Head of Creative*, **GOODBYE KANSAS STUDIOS** (Estocolmo, **SUÉCIA**) — `d***@gmail.com` — **ALTA quanto a ser PUBLICADO (página de contato do blog dele), com ressalva de idade da página**
+
+- **URLs abertas por mim nesta rodada:** `https://dbystedt.wordpress.com/about/` (**200, 86.580 bytes**): *"My name is Daniel Bystedt and I'm a passionate character artist."* e *"mail: d***@gmail.com"*. `https://career.goodbyekansas.com/people/2240038-daniel-bystedt` (**200, 45.136 bytes**), a página de pessoas do próprio Teamtailor da casa: título *"Daniel Bystedt - Head of Creative - Goodbye Kansas"*. `https://www.goodbyekansas.com/` (**200, 51.048 bytes**). Bluesky `3dbystedt.bsky.social`: *"Head of Creative Department at Goodbye Kansas Studios. Senior concept and 3d artist"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o chefe criativo da casa e veio de **modelagem de personagem e criatura, look dev e groom** (resumo público do perfil dele). É o leitor que entende o groom em Houdini do Vini sem explicação.
+- **FRASES DA CASA, literais (home):** *"Digital Humans Reel"*, *"Metro 2039"*, *"World of Warcraft: Midnight Expansion Housing Feature Tonal Trailers"*, *"Indiana Jones & The Great Circle Cinematics and Gameplay"*.
+- **CASA E DISCIPLINA:** **DENTRO** (personagem, criatura, humano digital e groom em cinemática de jogo).
+- **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (goodbyekansas OR "Goodbye Kansas" OR Bystedt)` → carta para `hello@` em 26/08 com follow-up em 02/09 (sem resposta), boas-vindas do Connect de 02/09 e avisos de login; **nenhuma recusa e nenhuma resposta humana**. `in:anywhere` pelo endereço exato → **`{}`**. Repositório: `enviados.csv` 26/08 (caixa genérica) e o cadastro no Connect de 02/09; zero pessoa em `pessoas.csv`. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** o endereço é gmail pessoal numa página antiga do blog (o texto ainda diz *"senior character artist"*, cargo anterior), então pode ser caixa pouco lida; a mesma página publica um celular, que não registrei; a casa já recebeu duas mensagens na caixa geral.
+
+### FICHA 4: **Gaby Wilde**, *Senior character artist at Media Molecule* (bio dela), **MEDIA MOLECULE** (Guildford, **REINO UNIDO**; Sony Interactive Entertainment) — `g***@gabywilde.xyz` — **ALTA quanto a ser PUBLICADO (bio pública do Bluesky), com ressalva de vínculo**
+
+- **URLs abertas por mim nesta rodada:** `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=surfwilde.bsky.social` (**200**): *"Senior character artist at Media Molecule ✨ ... Contact: g***@gabywilde.xyz"*, com postagens até 25/09/2026. `https://gabywilde.carrd.co/` (**200, 131.675 bytes**; *"GabyWIldeLTD"*, *"Character Concept Art/VisDev"*). `https://www.mediamolecule.com/` e `/careers` (**200**). **NADA MONTADO.**
+- **POR QUE ELA:** artista sênior de personagem estilizado dentro de uma casa da Sony. Em casa grande o primeiro alvo seria recrutador de arte, e não há um com endereço publicado; a via é a colega de ofício, para indicação.
+- **FRASES DA CASA, literais:**
+  - *"We create inspiring entertainment that empowers player expression and fosters positive communities."* (home)
+  - *"we are always on the lookout for talented people to bring new ideas, perspectives (and personalities!) to the team."* (`/careers`)
+- **CASA E DISCIPLINA:** **DENTRO** (personagem estilizado, *Dreams*, *Tearaway*).
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere ("Media Molecule" OR mediamolecule OR gabywilde OR "Gaby Wilde" OR surfchild)` → **`{}`**. Repositório: a casa só aparece numa planilha de censo de 16/09. **Casa sem contato anterior.**
+- **RESSALVAS HONESTAS:** o carrd, o ArtStation e o LinkedIn (pela busca) apresentam ela como freelance com empresa própria, então a ligação com a Media Molecule pode ser contrato e não emprego; o domínio `gabywilde.xyz` é recusado pelo proxy desta máquina e não pude abrir o site nem conferir o servidor de email; o quadro da SIE no Greenhouse não tem vaga em Guildford hoje.
