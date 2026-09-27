@@ -19386,3 +19386,15 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? SIM pela sede** (Austrália), **mas** as vagas abertas hoje pedem *"US or Canada | Remote"* ou *"Pacific time zone"*. A frase de realocação pode entrar; o ponto mais forte é que a casa trabalha remota.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (glitchprod OR "Glitch Productions" OR davidoneacre OR Oneacre OR doodley)` → **`{}`**; endereço exato → **`{}`**. Repositório: só a vaga morta de 05/09 em `processados.csv` (quadro JazzHR desativado, vagas freelance). **CASA SEM CONTATO ANTERIOR.**
 - **RESSALVAS HONESTAS:** ele é generalista (animação e rig também), não chefe de personagem; o endereço é gmail pessoal que ele usa também para o canal do YouTube, então a caixa recebe muito; a Glitch já contratou 3D como freelance, e não há vaga 3D de personagem aberta hoje (só *3D Lighting Supervisor*, contrato).
+
+### FICHA 4: **Andreas Kjær-Jensen**, *CG Supervisor* (página About do site dele; a bio do Bluesky diz *"Lighting Lead @ Ghost VFX"*), **GHOST VFX** (Copenhague, **DINAMARCA**) — `a***@andreaskj.com` — **ALTA (PUBLICADO em `mailto:` no botão *Contact me* da página About)**
+
+- **URLs abertas por mim nesta rodada:** `https://andreaskj.com/about` (**200, 25.293 bytes**): *"Hi, I'm a CG Supervisor working in Feature Film and TV. Currently I'm employed as a CG Supervisor at Ghost VFX in Copenhagen."*, com `mailto:` do endereço. `https://andreaskj.com/` (**200, 27.643 bytes**; posts do blog até *"Lattice Deform Rig Component in Houdini APEX Jan 8, 2026"*). `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=andreask-j.bsky.social` (**200**; última postagem em 08/01/2026). `https://ghostvfx.com/` (**200, 15.708 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** é supervisor numa casa nórdica de VFX e **escreve tutorial de Houdini** (*"Creating and animating a Bird in Houdini (+ Solaris Feather Export HDA)"*, *"Creating a Sci-Fi Sequence using Houdini Solaris (The Gnomon Workshop)"*). O groom em Houdini do Vini fala a língua dele sem tradução. Na Ghost não há nome de arte com endereço publicado.
+- **FRASES DA CASA, literais (home):**
+  - *"Award-winning visual effects for film, television, and games. Crafted in Copenhagen since 1999."*
+  - *"Ghost VFX is an award-winning visual effects studio crafting film, television, and games - from Star Trek and Star Wars to Troll and Fast X."*
+- **CASA E DISCIPLINA:** **DENTRO** (VFX de filme e série com criatura: *Troll*, *Star Wars*). A casa publica também `jobs@ghostvfx.com` como caixa de carreiras.
+- **FORA DOS EUA? SIM** (Dinamarca). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (ghostvfx OR "Ghost VFX" OR andreaskj OR "Kjær-Jensen" OR "Kjaer-Jensen")` → **`{}`**; endereço exato → **`{}`**. Repositório: zero. **CASA INÉDITA NA CAMPANHA.**
+- **RESSALVAS HONESTAS:** a página About é de 2023 (rodapé *"© 2023"*) e a bio do Bluesky dá outro cargo (*Lighting Lead*), então o cargo exato hoje é incerto, mas as duas fontes o põem na Ghost; ele é de luz e CG, não de personagem; o endereço é do domínio pessoal dele, não da casa.
