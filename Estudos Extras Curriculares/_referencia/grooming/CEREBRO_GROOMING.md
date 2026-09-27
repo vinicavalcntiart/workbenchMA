@@ -392,6 +392,18 @@ leia com Named Attribute, ligue no input.
 
 ---
 
+**Observado em produção (2026-09-27, Blender 5.2 LTS)**: Image Texture com
+Named Attribute do UV ligado no Density Mask, sobre um plano de uma face só,
+gerou zero fios. Causa: o Density Mask entra no Density Factor do Distribute
+Points on Faces [int/interpolate-hair-curves.md, ligação 227] e esse campo é
+avaliado nos cantos das faces e interpolado dentro delas. Com a mancha branca
+no meio da imagem, os quatro cantos leem preto e a face inteira vale zero.
+Regra: Density Mask tem resolução de vértice (bom para vertex group); imagem
+com detalhe vai no slot **Mask Texture** (ícone de imagem abaixo do Density
+Mask), que amostra por ponto depois da distribuição e não depende da malha
+[manual interpolate_hair_curves.rst, dica em Mask Texture]. Os dois se
+multiplicam. O UV do Mask Texture vem do Surface UV Map do objeto Curves.
+
 ## 8b. Fields: o que foi testado em bpy 5.0.1 (2026-09-27)
 
 Observado em teste headless, nao em fonte externa:
@@ -529,6 +541,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 
 | Sintoma | Causa provável | O que fazer | Fonte |
 |---|---|---|---|
+| Density Mask por Image Texture não gera nada, ou some tudo | Density Mask é lido nos cantos das faces; malha pobre lê preto nos cantos | Usar o slot Mask Texture do node (amostra por ponto) ou subdividir o scalp; Density Mask só para vertex group | int/interpolate-hair-curves.md; manual interpolate_hair_curves.rst |
 | Interpolate não gera nada | Surface não atribuída, UV map errado, ou Rest Position sem malha em repouso | Conferir Surface e Surface UV Map no Interpolate; testar com Rest Position desligado | jp/ja-tenp-kukan-2025-11-hair-curves-guia-completo.md |
 | Filhos atravessam a pele | Guias esculpidas sem colisão; ruído empurrou para dentro | Shrinkwrap Hair Curves no fim; Use Sculpt Collision ao pentear | int/shrinkwrap-hair-curves.md |
 | Filhos flutuam ou entram na malha subdividida | Subdivision Surface não aplicado no scalp | Aplicar o Subdivision no scalp, ou scalp separado | com/blenderartists-1621672-...md |
