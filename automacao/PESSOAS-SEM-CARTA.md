@@ -19206,3 +19206,30 @@ a leitura de disciplina tem de vir antes do endereço.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `kolibri OR kolibrigames.com OR "Kolibri Games"` -> **`{}`**; `in:anywhere (kolibrigames OR kolibri OR "Idle Miner")` -> **`{}`**; `in:anywhere (to:jobs@... OR from:kolibrigames.com OR "Daniel Lopez")` -> **`{}`**. Repositorio: zero em `enviados.csv` e `pessoas.csv`; `processados.csv` so tem a descoberta de 19/09 e a parede de hCaptcha de imagem no Lever `d2ff05ad` de 21/09, **nunca envio. CASA NOVA PARA CARTA.**
 - **DESCARTADA:** Marina Ivanovic, ex-Head of Recruitment. Um resumo de busca liga a ela um endereco pessoal vindo de resposta no Glassdoor, mas o Glassdoor deu 403 (nao vi o endereco em pagina aberta) e ela **saiu para a Klarna em 09/2021**. `press.kolibrigames.com` nao resolve mais.
 - **RESSALVAS HONESTAS:** caixa geral, nao pessoa; os posts com os ganchos sao de 2021 e 2023 e a permanencia do Daniel nao esta provada; a casa e mobile idle em Unity e se diz de generalistas (*"we don't have dedicated texture artists, concept artists, modelers"*; *"Do you do ultra-realistic ZBrush sculpts? That's wonderful, but we won't use them in Idle Restaurant Tycoon."*); o quadro de hoje tem 4 vagas e **zero de arte**.
+
+## RODADA DO JOE, 27/09 ~17h30 UTC: AS TRÊS CASAS DO LEVER QUE SAÍRAM DA LEVA (Behaviour, Quantic Dream, Larian)
+
+Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então cada vaga vira carta para uma pessoa. **Nenhuma das três casas publica endereço de pessoa.** As três ficaram como `sem-email`, sem nada montado. Fontes pagas (ZoomInfo, RocketReach, ContactOut) mostram endereços dessas casas, mas não foram usadas.
+
+### FICHA 1: **Emilie Benabou**, *Talent Acquisition Manager*, **BEHAVIOUR INTERACTIVE** (Montreal, **CANADÁ**): **sem-email**
+- **Nome e cargo:** https://ca.linkedin.com/in/ebenabou, lida pelo índice de busca porque o LinkedIn devolve 999. Segunda opção de recrutamento: Gregory Lee, *Director, Talent Acquisition & People Operations*. Segunda opção de arte: **Ghislain Barbe**, *Art Director*, que fez o visual da franquia sci-fi *Heavy Gear* (https://en.wikipedia.org/wiki/Ghislain_Barbe, 200).
+- **Onde procurei o email:**
+  - https://www.bhvr.com/contact/ (200) tem só `pr@` e `bizdev@`.
+  - https://www.bhvr.com/privacy-policy/ (200) tem só `privacy@`, `privacyofficer@` e `support@`.
+  - https://www.bhvr.com/internship/ tem só `stages@`, que é para estágio.
+  - A API do Lever `bhvr` (200, 34 vagas) não traz email nenhum.
+- **POR QUE ELA:** a casa tem mais de 1.200 pessoas, e em casa grande vai primeiro o recrutador. Não há recrutador *de arte* com nome público.
+- **FRASES DA CASA, literais:**
+  - Anúncio 86ddd557: *"If you love creating sci-fi humans this job is for you."*
+  - https://www.bhvr.com/jobs/: *"Talent knows no frontiers! Here is what you can expect if you are applying from outside Canada."* A mesma página fala do time de *Immigration and Mobility*.
+- **FORA DOS EUA? SIM.** A frase de realocação ENTRA.
+- **O QUE O GMAIL DEVOLVEU:**
+  - Recibos de 30/08 (7 Days to Die) e de 10/09 (DbD Character 18024240).
+  - **RECUSA escrita de 11/09** na 7 Days to Die: *"we have decided to move forward with other candidates"*.
+  - `in:sent to:bhvr.com` devolveu `{}`. Repositório: nenhuma carta.
+- **MELHOR CANAL PÚBLICO:** nenhum de candidatura. A porta é só o Lever, e `pr@` e `bizdev@` não servem.
+- **RESSALVAS HONESTAS:**
+  1. A recusa de 11/09 esbarra no limite do BRIEF-JOE e já derrubou a ficha da Daniela Pinto em 12/09. A decisão é do maestro e do Vini.
+  2. A 55fa65fe é textura **para ambiente** (*"textures and materials for environments"*), e em 25/09 o Vini decidiu pular essa vaga.
+  3. A 86ddd557 pede realismo alto.
+  4. Eric Bourdages publica endereço pessoal em ericbourdages.com, mas saiu da Behaviour. Descartado como porta.
