@@ -404,6 +404,29 @@ Mask), que amostra por ponto depois da distribuição e não depende da malha
 [manual interpolate_hair_curves.rst, dica em Mask Texture]. Os dois se
 multiplicam. O UV do Mask Texture vem do Surface UV Map do objeto Curves.
 
+**Observado em produção (2026-09-27, Blender 5.2 LTS): máscara por imagem
+com cadeia de nodes.** Os inputs Surface e Surface UV Map não aparecem mais
+no Interpolate Hair Curves: o menu Surface Input Type tem Attached, Input e
+Object, e no padrão Attached o node lê o scalp e a UV direto do Object Data
+do Curves (campos Surface e Surface UV Map, os mesmos do Ctrl+P). Fonte:
+manual generate_hair_curves.rst, linhas 26 a 41, e curves_new/properties.rst,
+linhas 27 a 40. O jeito de sampler uma imagem por fio com cadeia livre de
+nodes, testado e funcionando:
+
+1. Interpolate com Density Mask 1.0 e Mask Texture vazio.
+2. Depois dele, Named Attribute (Vector) `surface_uv_coordinate`. Esse é o
+   atributo oficial de fixação no scalp, gravado em todo filho pelo Interpolate
+   [int/interpolate-hair-curves.md, linhas 61 e 182].
+3. Attribute -> Vector do Image Texture.
+4. Color -> cadeia livre (Color Ramp, Math, Mix, Separate Color para R, G e B
+   como três máscaras).
+5. Resultado -> Random Value (Boolean) em Probability -> Delete Geometry
+   (Curve) em Selection. Boolean Math NOT antes se branco deve manter.
+
+A mesma Named Attribute alimenta Trim, Clump, Frizz, Curl e raio: qualquer
+parâmetro por fio vira textura. Se a UV do scalp mudar, rodar Snap to Nearest
+Surface nas guias [manual curves_new/properties.rst, linha 44].
+
 ## 8b. Fields: o que foi testado em bpy 5.0.1 (2026-09-27)
 
 Observado em teste headless, nao em fonte externa:
