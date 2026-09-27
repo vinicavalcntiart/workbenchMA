@@ -19010,3 +19010,80 @@ a leitura de disciplina tem de vir antes do endereço.
 - **FORA DOS EUA? NÃO** (Michigan). **A frase de realocação NÃO entra.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `willwinn OR "Will Winn" OR "Andrew Dennis" OR "Plunder Panic" OR BlastBall` (com lixeira) → **`{}`**; `to:/from:willwinn.games` → **`{}`**. Repositório: só no censo do Wikidata. **CASA INÉDITA.**
 - **RESSALVAS HONESTAS:** a casa contrata sobretudo aluno e ex-aluno da Michigan State (a frase dela mesma), o que puxa para júnior; sem vaga publicada; o sênior de fora com patrocínio é improvável aqui.
+
+## RODADA DAS 09h35 UTC DE 27/09 (Joe): A EUROPA CONTINENTAL DO GAMEDEVMAP (os 1.230 domínios que as 05h35 deixaram de fora). **Cinco fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Espanha (Saber Interactive Madrid, **casa grande**), Alemanha, Itália, França e uma casa remota com sede em San Francisco. Email completo fora do repositório (repositório público); aqui vai mascarado
+
+**Placar: 5 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit** (o pedido desta rodada foi sem commit e sem carta).
+
+**O MÉTODO:** `joe0535/targets.tsv` menos `wave1.txt` e `wave2.txt` = **1.230 domínios** (Alemanha 261, França 257, Polônia 161, Espanha 160, Itália 69, "Global" 51, Suíça 49, Bélgica 46, Chéquia 46, Áustria 30, Portugal 27 e resto). Prober `joe0935/nav.py` = o `j1735_nav.py` com mais palavras de menu (Impressum, Imprint, mentions, équipe, equipo, nosotros, o-nas, zespół, kontakt, karriere, kariera, chi-siamo, über-uns) e teto de 20 páginas por casa, com entidade HTML, `%40`, `[at]` e `data-cfemail` decodificados. **1.230 de 1.230 processados; 425 endereços em 272 domínios**, quase tudo caixa de função, imprensa terceirizada, editora ou casa de uma pessoa só.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Amberdive Interactive** (Hamburgo): a página de equipe publica os quatro endereços, mas a casa **já está no TETO DE DUAS** (`contact@` em 06/09 e `l***@amberdive.com` em 09/09, com follow-up em 18/09). O filtro de "já coberto" não pegou porque o gamedevmap guarda `amberdive-interactive.com` e o endereço é `@amberdive.com`: **o dedupe tem de ser pelo domínio do ENDEREÇO, não pelo do site.**
+- **1000 Orks** (Osnabrück, `j***@1000orks.com` no Impressum): a página diz *"we are currently only looking for German citizens"*. Veto escrito, e o jogo é pixel art.
+- **Pentasia** (agência de recrutamento de games do Reino Unido, dezenas de `nome.sobrenome@` de recrutador): não é estúdio; fica anotada como fonte possível para outra frente.
+- **Saber Interactive, formulário da home:** a opção *Jobs* manda para `d***@saber3d.com` e `j***@saber3d.com`, só em valor escondido de `<option>`, sem nome nem cargo. Não vira ficha.
+- Sem personagem 3D ou fora do alvo: Charles Games (FMV e quadrinho), Kobold Games (jogo sério), Rat King (dupla), Doublequote (card battler 2D), Farbspiel (só primeiro nome), Stigma Studios (uma pessoa que vende asset), Icebird e Astragon (trem e simulador), Bippinbits, Attu, Raba, Upfall e Resistance 204X (2D ou programação), Selkie Harbour, Hammer Labs, Godspear, Triple O (IA generativa).
+
+### FICHA 1: **C. Donnelly**, recrutamento de arte (post em primeira pessoa, *"I'm #hiring"*), **SABER INTERACTIVE MADRID** (Alcobendas, **ESPANHA**; casa grande, 15 estúdios) — `c***@saber3d.com` — **ALTA quanto a ser PUBLICADO (texto da página de carreiras da própria Saber), com ressalva de idade**
+
+- **URLs abertas por mim nesta rodada:** `https://saber.games/careers-senior-level-artists/` (**200, 83.958 bytes**): *"We at SABER INTERACTIVE MADRID are seeking Senior Level Artists to join us! ... If you want to be a part of this amazing journey and working remotely is an option please message me or email c***@saber3d.com"*. `https://saber.games/` (**200**; `saber3d.com` redireciona para lá): *"Saber Interactive is a worldwide publisher and developer consisting of 15 studios in the Americas and Europe."* **NADA MONTADO.**
+- **POR QUE ESSA PESSOA:** é quem a própria Saber pôs como destino de **artista sênior** em Madri. Em casa grande o recrutador é a porta (BRIEF-JOE). Nenhum outro endereço com nome foi publicado.
+- **FRASES DA CASA, literais:**
+  - *"We have some super amazing well known AAA console projects you will all want to be a part of, all Action and very very exciting."* — página de carreiras
+  - *"Saber Interactive is a worldwide publisher and developer consisting of 15 studios in the Americas and Europe."* — home
+- **3D DE PERSONAGEM: PROVADO** (*Warhammer 40,000: Space Marine 2*, *World War Z*; na fila, *John Wick*, *Turok: Origins*, *Hellraiser: Revival* em 08/10/2026). É AAA realista, não estilizado.
+- **FORA DOS EUA? SIM** (Madri). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `saber3d OR "saber.games" OR "Saber Interactive" OR Donnelly OR c*** (local do endereço)` (com lixeira) → **`{}`**; `to:/from:saber3d.com` → **`{}`**. Repositório: só duas linhas de varredura de vaga em `processados.csv` (Huntflow `saberhr`, zero vaga de personagem). **Nenhuma carta, nenhuma pessoa.**
+- **RESSALVAS HONESTAS:**
+  1. A página é **©2023**: a pessoa pode ter saído, e aí o endereço quica.
+  2. **O primeiro nome não está na página**, só o `c***`. A busca aberta mostra um perfil "Cassandra Donnelly ... Saber Interactive" no LinkedIn, que eu **não abri** (HTTP 999). A carta abre sem o primeiro nome ou citando o post.
+  3. É a primeira carta da casa grande: vale conferir antes se a Saber não tem vaga de personagem viva no ATS para ir por formulário junto.
+
+### FICHA 2: **Jörn Friedrichs**, *Geschäftsführer* e artista 3D, **HURDY-GURDY GAMES** (Düsseldorf, **ALEMANHA**) — `j***@hurdy-gurdy-games.com` — **ALTA (PUBLICADO na home e no Impressum da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://hieronymus-game.com/` (**200, 8.768 bytes**): *"E-Mail: j***@hurdy-gurdy-games.com"*. `https://hieronymus-game.com/Impressum.html` (**200, 45.464 bytes**): *"Vertretungsberechtigter Geschäftsführer: Jörn Friedrichs ... E-Mail: j***@hurdy-gurdy-games.com"*. `https://hieronymus-game.com/hurdy-gurdy-games/` (**200, 8.719 bytes**): *"Cloth 3D models by Jörn Friedrichs"*. `https://store.steampowered.com/app/2518790/` (**200**): *Hieronymus*, a anunciar, *"Looking for publisher"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o sócio-gerente e o artista 3D da casa (a busca aberta o descreve como *"3D Artist"* que criou o jogo com a concept artist Julia Goerke-Milde). É o único endereço publicado.
+- **FRASES DA CASA, literais (`https://hieronymus-game.com/`):**
+  - *"Our games are like the sound of a hurdy-gurdy: handcrafted, a bit weird and grotesque, but inspired by historical sources."*
+  - *"Explore the weird, surreal worlds of the medieval painter Hieronymus Bosch. Encounter grotesque creatures and make use of a variety of historical weapons and alchemy to unravel your families' mysteries."*
+  - *"No generative AI is used for our Artworks."*
+- **3D DE PERSONAGEM: PROVADO** (criaturas de Bosch para capturar e domar, protagonista Helena van Aken, o Dr. Georg Faustus como companheiro). Criatura grotesca estilizada, bom casamento com a escultura do Vini.
+- **FORA DOS EUA? SIM** (Alemanha). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `hurdy-gurdy-games OR "Hurdy-Gurdy" OR Hieronymus OR Friedrichs OR hieronymus-game` (com lixeira) → **`{}`**; `to:/from:hurdy-gurdy-games.com` → **`{}`**. Repositório: zero. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:** núcleo de três ou quatro pessoas; jogo sem editora e sem data; parte do trabalho é jogo educativo para museu; sem vaga.
+
+### FICHA 3: **Roberto Digiglio**, *Creative Director* e cofundador, **FUTURATS** (Turim, **ITÁLIA**) — `r***@futurats.com` — **ALTA (PUBLICADO no press kit, em `data-cfemail` decodificado, ao lado do nome e do cargo)**
+
+- **URLs abertas por mim nesta rodada:** `https://futurats.com/presskit/` (via `/press`, **200, 17.710 bytes**): *"Roberto Digiglio - Creative Director & Co-Founder ( r***@futurats.com )"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o diretor criativo; o time listado não tem artista de personagem (só *"2D/3D Artist"* e *"3D Artist Environment Artist"*), então a decisão de arte é dele.
+- **FRASES DA CASA, literais (`https://futurats.com/presskit/`):**
+  - *"We design and produce original titles with a strong visual identity and a distinctive creative voice, combining bold aesthetics with solid, systemic game design."*
+  - *"Alongside our original IPs, we collaborate with international partners on high-profile productions, providing expertise in game design, prototyping, art direction, concept art, and 3D development."*
+- **3D DE PERSONAGEM: PROVÁVEL** (*Warhammer 40,000: Battlesector* com a Slitherine, DLCs *Deeds of the Fallen*, *Black Legion* e *Ultramarines*: unidades e heróis de facção).
+- **FORA DOS EUA? SIM** (Itália). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `futurats OR FutuRats OR Digiglio OR Battlesector` (com lixeira) → **`{}`**; `to:/from:futurats.com` → **`{}`**. Repositório: zero. **CASA INÉDITA.** Reserva: Riccardo Pasquali, *Game Director* e cofundador (`r***@futurats.com`, outro endereço, mesma página).
+- **RESSALVAS HONESTAS:** estratégia por turnos vista de cima (personagem pequeno na tela); casa de uns dez; sem vaga; jogo próprio ainda não anunciado.
+
+### FICHA 4: **Paul Svoboda**, arte (cofundador; *"Environment, Characters"* nos créditos de *Dreamscaper*), **AFTERBURNER STUDIOS** (100% remota; sede declarada em San Francisco, **EUA**, e Canadá) — `p***@theafterburnerstudios.com` — **ALTA (PUBLICADO em `mailto:` no cartão dele na página Team)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.theafterburnerstudios.com/team/` (**200, 58.495 bytes**): *"Paul Svoboda Art"* com o `mailto:`. `https://www.theafterburnerstudios.com/work-with-us/` (**200**): *"We've been fully remote from the start, with team members across the globe"*, *"No Currently Open Roles"*. `https://dreamscaper.wiki.gg/wiki/Afterburner_Studio` (**200**): *"based in San Francisco, California and Canada"*, *"Paul Svoboda - Environment, Characters"*. Steam `2659410` (**200**): *Elta: Defy All Gods*, Focus Entertainment, Q1 2027, etiquetas `Stylized`, `3D Platformer`, `3D Fighter`. Steam `1040420` (**200**): *Dreamscaper*, 91% positivo em 1.338 análises. **NADA MONTADO.**
+- **POR QUE ELE:** é o dono da arte numa casa de três fundadores, e é ele quem faz personagem (crédito do jogo).
+- **FRASES DA CASA, literais:**
+  - *"Our focus is to make evocative action experiences that put fun first."* — `/team/`
+  - *"Building action-focused games with a healthy dose of heart since 2018"* — home
+- **3D DE PERSONAGEM: PROVADO** (*Dreamscaper*, protagonista Cassidy e elenco de Redhaven; *Elta*, protagonista com um deus-dragão companheiro). 3D estilizado de ação, o terreno do Vini.
+- **FORA DOS EUA? NÃO pela sede** (San Francisco). **A frase de realocação NÃO entra**; a casa é remota.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `theafterburnerstudios OR "Afterburner Studios" OR Dreamscaper OR Svoboda OR "Elta"` (com lixeira) → **`{}`**; `to:/from:theafterburnerstudios.com` → **`{}`**. Repositório: zero. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:** sem vaga aberta; casa pequena; o gamedevmap a listou como "Global", ela não é europeia.
+
+### FICHA 5: **Loïc Ralet Marion**, *Head of Communications* (contato de imprensa e negócios), **UMESHU LOVERS** (Toulouse, **FRANÇA**) — `l***@umeshulovers.com` — **ALTA (PUBLICADO no press kit da casa)**
+
+- **URLs abertas por mim nesta rodada:** `https://umeshulovers.com/index.php/presskit-umeshu-lovers/` (**200, 239.370 bytes**): *"Press and business inquiries contact@... l***@umeshulovers.com"* e, na equipe, *"Loïc Ralet Marion, Head of Communications"*, *"Sylvain Sarrailh, Art Director, Co-founder"*, *"Mickael Lelièvre, Lead 3D Character Artist"*, *"Alexandre Arpentinier, 3D Character Artist"*. `https://umeshulovers.com/index.php/contact/` (**200**): só `contact@` e `application@`. **NADA MONTADO.**
+- **POR QUE ELE:** é o único endereço de pessoa que a casa publica. Quem decide arte é o Sylvain Sarrailh, sem endereço; a carta pede encaminhamento a ele ou ao lead de personagem.
+- **FRASES DA CASA, literais (press kit):**
+  - *"The art team and the dev team work together to create games with strong art direction and innovative mechanics."*
+  - *"Umeshu Lovers is both a visual development and a game develoment studio, founded in 2018 by concept artist Sylvain Sarrailh and game designer Arnaud Mollé."*
+- **3D DE PERSONAGEM: PROVADO** (equipe de ~20 com *Lead 3D Character Artist* e *3D Character Artist*; *Forest of Liars*, *Danghost*, *Graine*; vis dev para *"animated movies, book illustration, video games"*).
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `umeshulovers OR "Umeshu Lovers" OR Sarrailh OR l*** (local do endereço)` (com lixeira) → **`{}`**; `to:/from:umeshulovers.com` → **`{}`**. Repositório: só a varredura de vaga de 31 casas em `processados.csv` (sem vaga publicada). **Nenhuma carta.**
+- **RESSALVAS HONESTAS:** ele é comunicação, não arte; a casa já tem lead e artista de personagem; sem vaga publicada.
