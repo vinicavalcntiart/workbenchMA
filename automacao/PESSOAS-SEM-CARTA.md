@@ -19233,3 +19233,23 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
   2. A 55fa65fe é textura **para ambiente** (*"textures and materials for environments"*), e em 25/09 o Vini decidiu pular essa vaga.
   3. A 86ddd557 pede realismo alto.
   4. Eric Bourdages publica endereço pessoal em ericbourdages.com, mas saiu da Behaviour. Descartado como porta.
+
+### FICHA 2: **Mike-Amir El Frangi**, *Lead Character Artist*, **QUANTIC DREAM** (Paris, **FRANÇA**; grupo NetEase): **sem-email**
+- **Cargo:** vem da bio pública dele no Bluesky, *"Lead Character Artist @Quantic Dream"*, lida pela API aberta em `public.api.bsky.app ... getProfile?actor=mike-amir.bsky.social`. Em 2022 ele se apresentava como *"Principal Character Artist at Quantic Dream"* (https://gamesartist.co.uk/the-ammut/, 200). Segunda opção: **Carlos Pardo ("Made")**, *Associate Art Director* de Star Wars Eclipse, pela bio do Bluesky e do Mastodon.
+- **Onde procurei o email:**
+  - https://www.quanticdream.com/en/contact (200) tem o botão "General inquiries" que leva a `contact@quanticdream.com`.
+  - https://www.quanticdream.com/fr/mentions-legales (200) traz `contact@`, que estava escondido pelo Cloudflare e foi decodificado.
+  - https://www.quanticdream.com/en/privacy-policy (200) tem só `privacy@`.
+  - `/en/careers` e `/en/recruitment` (200) não trazem email nenhum.
+  - O ArtStation dele deu 403.
+- **POR QUE ELE:** é o lead de personagem, e em primeira pessoa diz que o estilo preferido é o estilizado.
+- **FRASES, literais:**
+  - Dele: *"I love working on any type of character in any given style, my personal favourite being stylized characters"* (gamesartist.co.uk).
+  - Da casa (https://www.quanticdream.com/en/careers): *"Our projects are developed across Paris and Montreal, with the spirit “two studios, one team”."*
+- **FORA DOS EUA? SIM.** A frase de realocação ENTRA.
+- **O QUE O GMAIL DEVOLVEU:** `{}` para quanticdream, "Quantic Dream", to/from quanticdream.com, "El Frangi" e contact@. **Casa sem contato anterior.** A Candidature Spontanée cc1dacb2 está viva na API EU hoje, sem descrição e sem exigência de francês por escrito.
+- **MELHOR CANAL PÚBLICO:** `contact@quanticdream.com`, caixa geral publicada pela casa. A carta pode pedir encaminhamento ao Mike-Amir pelo nome.
+- **RESSALVAS HONESTAS:**
+  1. É caixa geral, não recrutamento.
+  2. A frase dele é de 2022, e que ele é lead hoje vem só da bio do Bluesky, que não tem data.
+  3. Os sites do Carlos Pardo (2d.fr e pardo.pro) só trazem um endereço num **campo oculto do PayPal da loja**. Isso não é contato publicado e foi descartado.
