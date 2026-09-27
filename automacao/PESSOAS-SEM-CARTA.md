@@ -19372,7 +19372,7 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
   - Da casa (descrição): *"From Montreal to Mumbai, London to Los Angeles, FOLKS unite diverse talent and rich experience across 900+ artists."*
 - **CASA E DISCIPLINA:** **DENTRO** (VFX de série e filme com personagem e criatura; *IT: Welcome to Derry* indicado ao Emmy).
 - **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
-- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (folksvfx OR "Folks VFX" OR felixfeu OR "felix.ars" OR "Felix Feu" OR "fuse group")` → só a carta do Vini para Amélie Poitras (presidente) em **21/09**, sem resposta. Endereço exato → **`{}`**. Repositório: Amélie Poitras em `pessoas.csv` (19/09). **Ele é a segunda pessoa da casa, o teto.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (folksvfx OR "Folks VFX" OR felixfeu OR "Felix Feu" OR "fuse group")` → só a carta do Vini para Amélie Poitras (presidente) em **21/09**, sem resposta. Endereço exato → **`{}`**. Repositório: Amélie Poitras em `pessoas.csv` (19/09). **Ele é a segunda pessoa da casa, o teto.**
 - **RESSALVAS HONESTAS:** a última postagem dele no Bluesky é de janeiro de 2025 e o currículo do site para em 2024, então a permanência na casa se apoia no site (trabalhos de 2025) e no título do LinkedIn visto pelo buscador; o endereço é hotmail pessoal; a casa recebeu carta há seis dias.
 
 ### FICHA 3: **David Oneacre**, *Lead 3D Generalist* (bio do Bluesky; o site diz *"Senior 3D Generalist"*), **GLITCH PRODUCTIONS** (sede em Sydney, **AUSTRÁLIA**; equipe remota em larga parte no fuso do Pacífico) — `d***@gmail.com` — **ALTA (PUBLICADO em texto na página About do site dele e na bio pública do Bluesky)**
