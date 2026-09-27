@@ -19361,3 +19361,16 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere ("blue zoo" OR blue-zoo OR bluezoo OR noronha OR mcnoronha)` → carta fria para `recruitment@` em 26/08, resposta de 27/08 (*"The best way for our recruitment team to review your work is via our careers website"*), boas-vindas do portal e recibo da candidatura especulativa em 27/08. **Nenhuma recusa.** Endereço exato → **`{}`**. Repositório: zero pessoa da casa em `pessoas.csv`.
 - **RESSALVAS HONESTAS:** ela vem de 2D e vis dev (Photoshop, Toon Boom), não de 3D de personagem; o endereço é gmail pessoal; a casa já pediu que a candidatura passe pelo portal, então a carta pede direção e não vaga.
+
+### FICHA 2: **Félix Feu Arsenault**, *CG Supervisor*, **FOLKS VFX** (Montréal, **CANADÁ**; grupo com Toronto, Bogotá, Londres, Los Angeles e Mumbai) — `f***@hotmail.com` — **ALTA (PUBLICADO em `mailto:` na página de currículo do site dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://felixfeu.com/resume` (**200, 55.744 bytes**): *"Félix Feu CG Sup @ Folks VFX Montreal, Canada"*, *"November 2021 - Present CG Supervisor at Folks VFX"*, com o `mailto:` do endereço. `https://felixfeu.com/` (**200, 33.824 bytes**; a lista de trabalhos começa por *"Heated Rivalry - S01 - Crave"* e *"Twisted Metal S02 - Sony"*). `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=felixfeu.bsky.social` (**200**): *"CG Supervisor Folks VFX at day, weirdo at night."* `https://folksvfx.com/` (**200, 170.496 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** supervisor de CG que **veio de personagem** (*"Sr. Character Artist at Scavengers Studio"*, *"Character Artist at CDRIN"*, *"3D Asset Lead at Folks VFX"*) e lista como habilidade *"Character Modeling"*, *"Digital Sculpting"* e *"FACS/Blendshapes"*. É o leitor que entende o portfólio do Vini, e supervisor de CG é quem pede gente para a equipe de assets.
+- **FRASES, literais:**
+  - Dele (currículo): *"An experienced supervisor and artist who has worked on 50+ realistic and stylized projects in Games, Film, TV and Research"*
+  - Da casa (home): *"We don't just build worlds. We build the teams that build better worlds."*
+  - Da casa (descrição): *"From Montreal to Mumbai, London to Los Angeles, FOLKS unite diverse talent and rich experience across 900+ artists."*
+- **CASA E DISCIPLINA:** **DENTRO** (VFX de série e filme com personagem e criatura; *IT: Welcome to Derry* indicado ao Emmy).
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (folksvfx OR "Folks VFX" OR felixfeu OR "felix.ars" OR "Felix Feu" OR "fuse group")` → só a carta do Vini para Amélie Poitras (presidente) em **21/09**, sem resposta. Endereço exato → **`{}`**. Repositório: Amélie Poitras em `pessoas.csv` (19/09). **Ele é a segunda pessoa da casa, o teto.**
+- **RESSALVAS HONESTAS:** a última postagem dele no Bluesky é de janeiro de 2025 e o currículo do site para em 2024, então a permanência na casa se apoia no site (trabalhos de 2025) e no título do LinkedIn visto pelo buscador; o endereço é hotmail pessoal; a casa recebeu carta há seis dias.
