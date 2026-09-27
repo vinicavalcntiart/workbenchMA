@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groom em Geometry Nodes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f4f2; --surface:#ffffff; --surface2:#e9ebe7; --ink:#1c1f22; --ink2:#454b51; --muted:#767d84;
+  --line:#d6dad5; --accent:#b8632b; --accent-ink:#8a4718; --accent-soft:#f6e6da;
+  --geo:#2f8f65; --vec:#7a63b8; --flt:#8d8d8d; --int:#3f8fa8; --bool:#c96aa1;
+  --warn-ink:#8f2a1f; --warn-bg:#fbe9e5; --ok-ink:#1f6b48; --ok-bg:#e3f2ea;
+  --shadow:0 1px 2px rgba(20,25,30,.06),0 8px 24px rgba(20,25,30,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#15181c; --surface:#1e2227; --surface2:#262b31; --ink:#e8eaec; --ink2:#b7bdc4; --muted:#868e96;
+    --line:#30373e; --accent:#dd8a4f; --accent-ink:#f2ad76; --accent-soft:#33261c;
+    --geo:#4fbf8a; --vec:#a693e6; --flt:#a5a5a5; --int:#5db3cc; --bool:#e08ac0;
+    --warn-ink:#ff9a8c; --warn-bg:#3a201c; --ok-ink:#7fd6ab; --ok-bg:#1c2f26;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#15181c; --surface:#1e2227; --surface2:#262b31; --ink:#e8eaec; --ink2:#b7bdc4; --muted:#868e96;
+  --line:#30373e; --accent:#dd8a4f; --accent-ink:#f2ad76; --accent-soft:#33261c;
+  --geo:#4fbf8a; --vec:#a693e6; --flt:#a5a5a5; --int:#5db3cc; --bool:#e08ac0;
+  --warn-ink:#ff9a8c; --warn-bg:#3a201c; --ok-ink:#7fd6ab; --ok-bg:#1c2f26;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{font-family:Archivo,"Source Sans 3",system-ui,sans-serif;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-top:.2em}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1rem;font-weight:600}
+code,.node{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em}
+.node{background:var(--surface2);border:1px solid var(--line);border-radius:4px;padding:.05em .4em;white-space:nowrap}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.4em}
+li{margin:.25em 0}
+.eyebrow{font-family:Archivo,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:0 4rem}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:48px}
+@media (max-width:980px){.layout{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);align-self:start;font-size:.92rem;padding-top:2.2rem}
+.toc a{display:block;color:var(--ink2);text-decoration:none;padding:.22em 0 .22em .8em;border-left:2px solid var(--line)}
+.toc a:hover{color:var(--ink);border-color:var(--accent)}
+.toc .t{font-family:Archivo,sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:1.2em 0 .4em}
+main{max-width:780px}
+header.hero{padding-block:3.2rem 2.4rem;border-bottom:1px solid var(--line);margin-bottom:2.5rem}
+header.hero p.lead{font-size:1.25rem;color:var(--ink2);max-width:60ch;margin-top:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.chip{font-size:.85rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.2em .8em;color:var(--ink2)}
+section{margin-bottom:3.4rem;scroll-margin-top:24px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;margin-bottom:1rem}
+.num{font-family:Archivo,sans-serif;font-weight:700;font-size:1.05rem;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;margin-top:.15rem}
+.step .why{color:var(--ink2);margin-top:.3rem}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.25rem;box-shadow:var(--shadow);margin:1.1rem 0}
+.box h4{margin-bottom:.5rem}
+.do ol{counter-reset:s;list-style:none;padding-left:0}
+.do ol li{position:relative;padding-left:2rem;margin:.45em 0}
+.do ol li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:.1em;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--surface2);border:1px solid var(--line);font:600 .8rem/1.45rem Archivo,sans-serif;text-align:center;color:var(--ink2)}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn-ink);border-radius:6px;padding:.8rem 1rem;margin:1rem 0}
+.warn b{color:var(--warn-ink)}
+.ok{background:var(--ok-bg);border-left:4px solid var(--ok-ink);border-radius:6px;padding:.8rem 1rem;margin:1rem 0}
+.ok b{color:var(--ok-ink)}
+.src{font-size:.85rem;color:var(--muted);margin-top:.6rem}
+.src code{font-size:.82em}
+table{border-collapse:collapse;width:100%;font-size:.95rem;margin:.6rem 0 1.2rem}
+th,td{text-align:left;vertical-align:top;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+th{font-family:Archivo,sans-serif;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td:first-child{white-space:nowrap}
+.tbl{overflow-x:auto}
+.vals td:nth-child(2){font-variant-numeric:tabular-nums;white-space:nowrap}
+figure{margin:1.4rem 0}
+figure img{display:block;max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+figcaption{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+figure svg{max-width:100%;height:auto;display:block}
+.fig2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fig2 figure{margin:0}
+.pipe{list-style:none;padding:0;margin:1rem 0;display:grid;gap:0}
+.pipe li{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:12px;align-items:start;padding:.55rem 0;position:relative}
+.pipe li::before{content:"";position:absolute;left:1.05rem;top:0;bottom:0;width:2px;background:var(--line)}
+.pipe li:first-child::before{top:50%}.pipe li:last-child::before{bottom:50%}
+.pipe .dot{width:2.2rem;height:2.2rem;border-radius:50%;background:var(--surface);border:2px solid var(--geo);display:grid;place-items:center;font:600 .8rem Archivo,sans-serif;position:relative;color:var(--ink)}
+.pipe .dot.g2{border-color:var(--accent)}.pipe .dot.g3{border-color:var(--vec)}.pipe .dot.g4{border-color:var(--flt)}.pipe .dot.g5{border-color:var(--int)}
+.pipe .lbl{display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:baseline}
+.pipe .lbl small{color:var(--muted)}
+.grp{font-family:Archivo,sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.8rem 0 0 3.2rem}
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:1rem}
+.vid{display:block;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.vid img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.vid .b{padding:.7rem .85rem}
+.vid .b b{display:block;font-family:Archivo,sans-serif;font-size:.95rem;line-height:1.25}
+.vid .b span{display:block;font-size:.83rem;color:var(--muted);margin-top:.25rem}
+.vid:hover{border-color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;font-size:.9rem;color:var(--ink2);margin:.6rem 0 1rem}
+.legend i{display:inline-block;width:.8em;height:.8em;border-radius:50%;margin-right:.35em;vertical-align:-.05em}
+details{border:1px solid var(--line);border-radius:8px;background:var(--surface);margin:.5rem 0}
+summary{cursor:pointer;padding:.7rem 1rem;font-weight:600;font-family:Archivo,sans-serif;font-size:.98rem}
+details div{padding:0 1rem .9rem}
+kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surface2);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:.05em .4em}
+.glossary dt{font-weight:600;font-family:Archivo,sans-serif;margin-top:.6rem}
+.glossary dd{margin:0 0 .3rem;color:var(--ink2)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="layout">
+<nav class="toc" aria-label="Sumário">
+  <div class="t">Base</div>
+  <a href="#modelo">Como o sistema pensa</a>
+  <a href="#antes">Antes de começar</a>
+  <div class="t">Passo a passo</div>
+  <a href="#p1">1. Guias</a>
+  <a href="#p2">2. Interpolar</a>
+  <a href="#p3">3. Clump em níveis</a>
+  <a href="#p4">4. Noise e Frizz</a>
+  <a href="#p5">5. Curl, Roll, Braid</a>
+  <a href="#p6">6. Comprimento e raio</a>
+  <a href="#p7">7. Pele e animação</a>
+  <a href="#p8">8. Máscaras</a>
+  <a href="#p9">9. Shading</a>
+  <a href="#p10">10. Física</a>
+  <div class="t">Depois</div>
+  <a href="#perf">Performance</a>
+  <a href="#receitas">Receitas de produção</a>
+  <a href="#problemas">Problemas comuns</a>
+  <a href="#videos">Palestras</a>
+  <a href="#glossario">Glossário</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="eyebrow">Blender 5.2 LTS · Hair Curves + Geometry Nodes</div>
+  <h1>Groom em Geometry Nodes</h1>
+  <p class="lead">Do primeiro fio ao render, em linguagem de artista. Cada passo diz o que fazer, o que cada botão significa e o que dá errado. Tudo vem de fontes verificadas: manual, código dos node groups e quem entregou groom realista em produção.</p>
+  <div class="chips">
+    <span class="chip">Cabelo humano</span><span class="chip">Fur de criatura</span><span class="chip">Barba, sobrancelha, cílio</span><span class="chip">Só ferramentas nativas</span>
+  </div>
+</header>
+
+<section id="modelo">
+  <div class="eyebrow">Base</div>
+  <h2>Como o sistema pensa</h2>
+  <p>Tudo que você vai fazer cabe em três camadas. Se um problema aparece, ele está em uma delas, e saber em qual economiza horas.</p>
+
+  <figure>
+    <svg viewBox="0 0 760 300" role="img" aria-label="Diagrama das três camadas: as guias no objeto Curves entram na stack de modificadores, que gera o resultado avaliado. Os pincéis do modo Sculpt agem só nas guias. O viewport desenha o resultado avaliado e, por cima, o cage das guias." style="color:var(--ink)">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+      <g font-family="Archivo, sans-serif" font-size="13" fill="currentColor">
+        <rect x="20" y="70" width="200" height="110" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="120" y="98" text-anchor="middle" font-weight="700">1 · GUIAS</text>
+        <text x="120" y="120" text-anchor="middle" font-size="12">objeto Curves</text>
+        <text x="120" y="138" text-anchor="middle" font-size="12">poucas curvas, esculpidas</text>
+        <text x="120" y="156" text-anchor="middle" font-size="12">presas ao scalp por UV</text>
+
+        <rect x="280" y="70" width="200" height="110" rx="10" fill="none" stroke="var(--geo)" stroke-width="2"/>
+        <text x="380" y="98" text-anchor="middle" font-weight="700">2 · STACK</text>
+        <text x="380" y="120" text-anchor="middle" font-size="12">modificadores de</text>
+        <text x="380" y="138" text-anchor="middle" font-size="12">Geometry Nodes, em ordem</text>
+        <text x="380" y="156" text-anchor="middle" font-size="12">Interpolate, Clump, Noise…</text>
+
+        <rect x="540" y="70" width="200" height="110" rx="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <text x="640" y="98" text-anchor="middle" font-weight="700">3 · RESULTADO</text>
+        <text x="640" y="120" text-anchor="middle" font-size="12">milhares de filhos</text>
+        <text x="640" y="138" text-anchor="middle" font-size="12">gerados, não editáveis</text>
+        <text x="640" y="156" text-anchor="middle" font-size="12">é o que renderiza</text>
+
+        <line x1="222" y1="125" x2="276" y2="125" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah)"/>
+        <text x="249" y="115" text-anchor="middle" font-size="11">entra</text>
+        <line x1="482" y1="125" x2="536" y2="125" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah)"/>
+        <text x="509" y="115" text-anchor="middle" font-size="11">gera</text>
+
+        <rect x="20" y="220" width="200" height="50" rx="8" fill="var(--surface2)" stroke="none"/>
+        <text x="120" y="242" text-anchor="middle" font-size="12" font-weight="600">Pincéis do Sculpt</text>
+        <text x="120" y="259" text-anchor="middle" font-size="11">Comb, Puff, Density…</text>
+        <line x1="120" y1="218" x2="120" y2="184" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah)"/>
+        <text x="132" y="204" font-size="11">só mexem aqui</text>
+
+        <rect x="540" y="220" width="200" height="50" rx="8" fill="var(--surface2)" stroke="none"/>
+        <text x="640" y="242" text-anchor="middle" font-size="12" font-weight="600">Viewport no Sculpt</text>
+        <text x="640" y="259" text-anchor="middle" font-size="11">resultado + cage das guias</text>
+        <line x1="640" y1="218" x2="640" y2="184" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="580" y1="220" x2="180" y2="184" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="380" y="292" text-anchor="middle" font-size="11">o cage desenha as guias por cima do resultado</text>
+      </g>
+    </svg>
+    <figcaption>As guias são as únicas coisas que você toca com a mão. Tudo o mais é consequência da stack.</figcaption>
+  </figure>
+
+  <ul>
+    <li><b>Não dá para esculpir um filho.</b> Se um fio interpolado está errado, o conserto é numa guia perto dele ou num node da stack.</li>
+    <li><b>Poucas guias, muitos filhos.</b> Quem tenta esculpir milhares de curvas trava o viewport e conclui que o sistema é ruim. Era só isso que faltava entender.</li>
+    <li><b>Um groom são vários objetos.</b> Scalp, franja, sobrancelha, cílio, barba. Em fur: corpo, orelha, bigode. Cada objeto tem sua stack e sua densidade. Para copiar a stack de um para outro: <kbd>Ctrl</kbd>+<kbd>L</kbd>, Copy Modifiers, e depois reatribua a superfície no Interpolate.</li>
+  </ul>
+  <div class="src">Fontes: <code>grooming/CEREBRO_GROOMING.md</code> seção 1; <code>blender-dev/studio-blender-2023-procedural-hair-nodes.md</code>; <code>comunidade/blenderartists-1460445-...md</code>.</div>
+</section>
+
+<section id="antes">
+  <div class="eyebrow">Base</div>
+  <h2>Antes de começar</h2>
+  <p>Três coisas resolvidas antes da primeira guia evitam refazer o groom inteiro depois.</p>
+  <div class="box do">
+    <h4>Checklist</h4>
+    <ol>
+      <li><b>Hair cap.</b> Uma malha de crescimento separada da cabeça, com a topologia que o cabelo pede, não a que o rosto pede. É ela que entra como Surface em todos os modificadores.</li>
+      <li><b>UV sem sobreposição.</b> As curvas vivem no espaço UV. UV empilhada dá o erro "Invalid surface UVs". UDIM pode. Se a costura central do espelho ficou "quase colada", Merge by Distance no editor de UV.</li>
+      <li><b>Topologia e UV fechadas.</b> Mudar depois obriga a reposicionar as guias. Textura e rig não atrapalham o groom e podem vir depois.</li>
+      <li><b>Risca marcada.</b> Um vertex group na linha da risca e uma hard edge dividindo a cap em duas metades. É isso que faz a interpolação respeitar a risca.</li>
+      <li><b>Referência por subespécie e estação.</b> Misturar fotos de indivíduos, regiões ou estações diferentes dá um híbrido que não convence. Desenhe por cima da referência onde o pelo muda de tipo e a direção, para não decidir isso já em 3D.</li>
+    </ol>
+  </div>
+  <div class="src">Fontes: <code>palestras/bcon2023-daniel-bystedt-...md</code>; <code>palestras/bcon2025-kerstin-schmidbauer-...md</code>.</div>
+</section>
+
+<section id="stack">
+  <div class="eyebrow">Visão geral</div>
+  <h2>A stack que funciona</h2>
+  <p>Esta é a ordem dos modificadores num groom realista. Gerar primeiro, estruturar, detalhar, e Deform Curves on Surface sempre por último. Cada passo abaixo explica um item.</p>
+  <div class="legend"><span><i style="background:var(--geo)"></i>gera</span><span><i style="background:var(--accent)"></i>estrutura</span><span><i style="background:var(--vec)"></i>detalha</span><span><i style="background:var(--flt)"></i>finaliza</span><span><i style="background:var(--int)"></i>anima</span></div>
+  <ol class="pipe">
+    <li><span class="dot">1</span><span class="lbl"><span class="node">Interpolate Hair Curves</span><small>gera os filhos a partir das guias</small></span></li>
+    <li><span class="dot g2">2</span><span class="lbl"><span class="node">Create Guide Index Map</span><small>escolhe guias de clump grandes</small></span></li>
+    <li><span class="dot g2">3</span><span class="lbl"><span class="node">Clump Hair Curves</span><small>mechas grandes</small></span></li>
+    <li><span class="dot g2">4</span><span class="lbl"><span class="node">Create Guide Index Map</span><small>guias de clump pequenas</small></span></li>
+    <li><span class="dot g2">5</span><span class="lbl"><span class="node">Clump Hair Curves</span><small>sub-mechas</small></span></li>
+    <li><span class="dot g3">6</span><span class="lbl"><span class="node">Hair Curves Noise</span><small>ondulação que vizinhos compartilham</small></span></li>
+    <li><span class="dot g3">7</span><span class="lbl"><span class="node">Frizz Hair Curves</span><small>crespo fio a fio, flyaways</small></span></li>
+    <li><span class="dot g3">8</span><span class="lbl"><span class="node">Curl / Roll / Braid</span><small>só se o cabelo pede</small></span></li>
+    <li><span class="dot g4">9</span><span class="lbl"><span class="node">Trim Hair Curves</span><small>comprimento com variação</small></span></li>
+    <li><span class="dot g4">10</span><span class="lbl"><span class="node">Set Hair Curve Profile</span><small>raio da raiz à ponta</small></span></li>
+    <li><span class="dot g4">11</span><span class="lbl"><span class="node">Shrinkwrap Hair Curves</span><small>tira o que entrou na pele</small></span></li>
+    <li><span class="dot g5">12</span><span class="lbl"><span class="node">Deform Curves on Surface</span><small>segue a animação do scalp</small></span></li>
+  </ol>
+  <div class="warn"><b>A ordem importa de verdade.</b> Um modificador de comprimento na posição errada quebra tudo que vem depois, em silêncio. Foi uma das lições citadas por quem fez um gato fotorrealista com este sistema.</div>
+  <div class="src">Fontes: <code>blogs-jp-zh/ja-tenp-kukan-2025-09-hair-curves-nodes-geometria.md</code>; <code>comunidade/devtalk-24686-...md</code> (a cadeia em camadas pedida aos devs em 2022); <code>palestras/bcon2026-steve-chow-...md</code>.</div>
+</section>
+
+<section id="p1">
+  <div class="step"><span class="num">1</span><div><h2>Esculpir as guias</h2><p class="why">Aqui você define a forma. Tudo depois é multiplicação do que você fez aqui.</p></div></div>
+
+  <div class="box do">
+    <h4>Como fazer</h4>
+    <ol>
+      <li>Selecione a hair cap. <kbd>Shift</kbd>+<kbd>A</kbd>, Curve, <b>Empty Hair</b>. Isso já prende o objeto ao scalp e ao UV map dele.</li>
+      <li>Entre em <b>Sculpt Mode</b>. Nada aparece ainda; é normal.</li>
+      <li>Pincel <b>Add</b> ou <b>Density</b> para plantar guias. Ligue <b>X Symmetry</b>. Em áreas finas (orelha, pálpebra), ligue <b>Front Faces Only</b> para não plantar do lado errado.</li>
+      <li>Comece com <b>2 pontos por guia</b>. Defina a direção do cabelo inteiro assim. Guia de 8 pontos no começo se emaranha e atravessa a malha.</li>
+      <li>Pincel <b>Comb</b> em modo <b>Projected</b>, não esférico. Assim você penteia a parte de trás sem a esfera bloquear.</li>
+      <li>Suba os pontos por guia só depois: 3 costuma bastar, 8 só para cabelo comprido. Para forma bem detalhada, aplique um Resample Curve com 15 pontos.</li>
+      <li>Pincel <b>Grow/Shrink</b> com <b>Scale Uniform desligado</b>: o fio continua na direção existente em vez de escalar da raiz.</li>
+      <li>Pincel <b>Puff</b> com Strength baixo (0,25) para levantar da pele. Guia presa dentro da malha: Puff; se não sair, apague e recrie.</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h4>Regras que evitam retrabalho</h4>
+    <ul>
+      <li><b>Densidade de guias uniforme, sem buraco.</b> Buraco vira careca, e deformação de rig amplia o buraco. Excesso vira blob e render lento.</li>
+      <li><b>Guia nova com nada selecionado nasce sozinha selecionada.</b> Penteie a direção dela antes que as vizinhas comecem a influenciar.</li>
+      <li><b>Paint Selection em modo Curve</b> seleciona o fio inteiro. Bom para encher comprimento numa área e ajustar depois.</li>
+      <li><b>Use Sculpt Collision</b> evita a guia entrar no scalp. Se os pincéis travarem com ela ligada (acontece em malha densa), desligue e resolva a penetração no fim com Shrinkwrap.</li>
+      <li><b>Mudou a topologia depois?</b> Snap to Nearest Surface, no menu do Sculpt, resolve quase tudo.</li>
+    </ul>
+  </div>
+
+  <div class="tbl"><table class="vals">
+    <tr><th>Valor de partida</th><th>Fur de gato</th><th>De onde vem</th></tr>
+    <tr><td>Density, modo Auto</td><td>Distance Min 0,02 m · Length 0,1 m · 6 pontos</td><td>blog 点P空間</td></tr>
+    <tr><td>Grow/Shrink, mínimo</td><td>0,07 m rosto · 0,05 m e 0,03 m perto de olho e nariz</td><td>blog 点P空間</td></tr>
+    <tr><td>Colisão no Comb</td><td>0,002 m</td><td>blog 点P空間</td></tr>
+    <tr><td>Puff</td><td>Strength 0,25</td><td>blog 点P空間</td></tr>
+  </table></div>
+  <div class="src">Fontes: <code>palestras/bcon2023-daniel-bystedt-...md</code>; <code>palestras/bcon2025-kerstin-schmidbauer-...md</code>; <code>blogs-jp-zh/ja-tenp-kukan-2025-10-hair-curves-fur.md</code>; <code>manual/sculpt_paint/curves_sculpting/brushes/</code>.</div>
+</section>
+
+<section id="p2">
+  <div class="step"><span class="num">2</span><div><h2>Interpolate Hair Curves</h2><p class="why">Transforma dezenas de guias em milhares de filhos. É o node mais importante da stack, e o que mais gente configura errado.</p></div></div>
+
+  <figure><img src="img/node-types_GeometryNodeInterpolateCurves.webp" alt="Node nativo Interpolate Curves, que trabalha por dentro do Interpolate Hair Curves" width="360"><figcaption>Por dentro, o Interpolate Hair Curves usa este node nativo. "Interpolation Guides" no painel é o Max Neighbors dele: quantas guias cada filho mistura.</figcaption></figure>
+
+  <div class="box">
+    <h4>O que cada campo significa</h4>
+    <div class="tbl"><table>
+      <tr><th>Campo</th><th>Em português claro</th></tr>
+      <tr><td>Surface</td><td>A hair cap. Sem ela, nada nasce.</td></tr>
+      <tr><td>Surface Rest Position</td><td>Ligue. Os filhos nascem na malha em repouso, e o Deform Curves on Surface no fim da stack faz o cabelo acompanhar a animação.</td></tr>
+      <tr><td>Follow Surface Normal</td><td>Alinha o filho à normal da pele. Bom para fur curto; ruim para cabelo comprido que cai.</td></tr>
+      <tr><td>Part by Mesh Islands</td><td>Filho só interpola de guia da mesma ilha da malha. É o único "region map" exposto. A hard edge da risca funciona por isso.</td></tr>
+      <tr><td>Interpolation Guides</td><td>Quantas guias cada filho mistura. 1 copia a guia mais próxima (mechas duras). 4 a 6 suaviza.</td></tr>
+      <tr><td>Distance to Guides</td><td>Filhos só nascem a essa distância de uma guia. Serve para tufo, barba rala, ou "só onde eu plantei".</td></tr>
+      <tr><td>Distribution</td><td>Poisson Disk espalha parelho. Random dá aglomerados. Realismo costuma preferir Poisson.</td></tr>
+      <tr><td>Density</td><td>Fios por metro quadrado. Fur precisa de dezenas de milhares; scalp humano, milhares.</td></tr>
+      <tr><td>Density Mask</td><td>Float de 0 a 1 vindo de um atributo pintado. Onde tem cabelo e onde não tem.</td></tr>
+      <tr><td>Mask Texture</td><td>Imagem. A cor vira um único número; máscara é preto e branco. Um mapa RGB dá três máscaras se você separar canais no editor.</td></tr>
+      <tr><td>Viewport Amount</td><td>Fração da densidade só no viewport. 0,1 a 0,3 enquanto trabalha, 1,0 para render.</td></tr>
+      <tr><td>Seed</td><td>Muda o sorteio. Mude cedo, não no fim.</td></tr>
+    </table></div>
+  </div>
+
+  <div class="warn"><b>Subdivision Surface no scalp é um problema real.</b> Os filhos seguem a malha subdividida, mas as guias ficam na malha base, e Rest Position piora. Não há solução oficial. Aplique o Subdivision no scalp antes de groomar, ou use uma hair cap já subdividida.</div>
+  <div class="ok"><b>Bom sinal:</b> se mudar a densidade não faz o cabelo "pular", o setup está saudável. Isso era um bug da primeira versão, já corrigido, mas ainda vale definir a densidade cedo.</div>
+  <div class="src">Fontes: <code>essentials-internals/interpolate-hair-curves.md</code>; <code>comunidade/blenderartists-1621672-...md</code>; <code>comunidade/devtalk-27601-...md</code> posts 5 e 7.</div>
+</section>
+
+<section id="p3">
+  <div class="step"><span class="num">3</span><div><h2>Clump em níveis</h2><p class="why">É o que separa "cabelo de CG" de cabelo. Um clump grande e um clump pequeno, cada um com suas guias.</p></div></div>
+
+  <figure>
+    <svg viewBox="0 0 760 240" role="img" aria-label="Três painéis: fios interpolados soltos; depois agrupados em mechas grandes por clump de nível 1; depois cada mecha grande subdividida em sub-mechas por clump de nível 2." style="color:var(--ink)">
+      <g font-family="Archivo, sans-serif" font-size="12" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill-opacity="1">
+        <!-- painel 1: soltos -->
+        <text x="120" y="20" text-anchor="middle" stroke="none" font-weight="700">Só interpolado</text>
+        <g stroke-opacity=".9">
+          <path d="M30 210 C34 160 26 120 32 60" fill="none"/><path d="M48 210 C44 160 54 120 46 60" fill="none"/><path d="M66 210 C70 160 62 120 68 60" fill="none"/><path d="M84 210 C80 160 90 120 82 60" fill="none"/><path d="M102 210 C106 160 98 120 104 60" fill="none"/><path d="M120 210 C116 160 126 120 118 60" fill="none"/><path d="M138 210 C142 160 134 120 140 60" fill="none"/><path d="M156 210 C152 160 162 120 154 60" fill="none"/><path d="M174 210 C178 160 170 120 176 60" fill="none"/><path d="M192 210 C188 160 198 120 190 60" fill="none"/><path d="M210 210 C214 160 206 120 212 60" fill="none"/>
+        </g>
+        <text x="120" y="232" text-anchor="middle" stroke="none" font-size="11">uniforme, sem estrutura</text>
+
+        <!-- painel 2: clump nivel 1 -->
+        <text x="380" y="20" text-anchor="middle" stroke="none" font-weight="700">Clump nível 1</text>
+        <g stroke="var(--accent)">
+          <path d="M290 210 C300 150 318 100 325 60" fill="none"/><path d="M304 210 C310 150 320 100 325 60" fill="none"/><path d="M318 210 C320 150 323 100 325 60" fill="none"/><path d="M332 210 C330 150 327 100 325 60" fill="none"/><path d="M346 210 C340 150 330 100 325 60" fill="none"/><path d="M360 210 C350 150 332 100 325 60" fill="none"/>
+          <path d="M400 210 C410 150 428 100 435 60" fill="none"/><path d="M414 210 C420 150 430 100 435 60" fill="none"/><path d="M428 210 C430 150 433 100 435 60" fill="none"/><path d="M442 210 C440 150 437 100 435 60" fill="none"/><path d="M456 210 C450 150 440 100 435 60" fill="none"/><path d="M470 210 C460 150 442 100 435 60" fill="none"/>
+        </g>
+        <circle cx="325" cy="60" r="4" fill="var(--accent)" stroke="none"/><circle cx="435" cy="60" r="4" fill="var(--accent)" stroke="none"/>
+        <text x="380" y="232" text-anchor="middle" stroke="none" font-size="11">Guide Distance grande, poucas guias</text>
+
+        <!-- painel 3: clump nivel 2 -->
+        <text x="640" y="20" text-anchor="middle" stroke="none" font-weight="700">Clump nível 2 por cima</text>
+        <g stroke="var(--accent)">
+          <path d="M550 210 C560 160 575 110 585 60" fill="none"/><path d="M562 210 C568 160 578 110 585 60" fill="none"/><path d="M574 210 C574 160 582 110 585 60" fill="none"/>
+          <path d="M592 210 C596 160 600 110 606 60" fill="none"/><path d="M604 210 C604 160 604 110 606 60" fill="none"/><path d="M616 210 C612 160 608 110 606 60" fill="none"/>
+          <path d="M660 210 C670 160 685 110 695 60" fill="none"/><path d="M672 210 C678 160 688 110 695 60" fill="none"/><path d="M684 210 C684 160 692 110 695 60" fill="none"/>
+          <path d="M702 210 C706 160 710 110 716 60" fill="none"/><path d="M714 210 C714 160 714 110 716 60" fill="none"/><path d="M726 210 C722 160 718 110 716 60" fill="none"/>
+        </g>
+        <g fill="var(--vec)" stroke="none"><circle cx="585" cy="60" r="3.5"/><circle cx="606" cy="60" r="3.5"/><circle cx="695" cy="60" r="3.5"/><circle cx="716" cy="60" r="3.5"/></g>
+        <text x="640" y="232" text-anchor="middle" stroke="none" font-size="11">Guide Distance pequena, mais guias</text>
+      </g>
+    </svg>
+    <figcaption>Cada nível de clump precisa das suas próprias guias. Um Create Guide Index Map antes de cada Clump grava um mapa novo.</figcaption>
+  </figure>
+
+  <div class="box do">
+    <h4>Como fazer</h4>
+    <ol>
+      <li>Adicione <span class="node">Create Guide Index Map</span> com <b>Guide Distance</b> grande (mechas grandes). Ele escolhe guias e grava o atributo <code>guide_curve_index</code>.</li>
+      <li>Adicione <span class="node">Clump Hair Curves</span> com <b>Existing Guide Map</b> ligado. Factor alto, Shape positivo, um pouco de Tip Spread, Preserve Length ligado.</li>
+      <li>Repita os dois com <b>Guide Distance</b> menor. Factor mais baixo. São as sub-mechas.</li>
+      <li>Quer controlar a quantidade de mechas sem plantar guia? Desligue <b>Existing Guide Map</b> no Clump e mexa só em Guide Distance. Foi assim que um British Shorthair fotorrealista ganhou muitos clumps, cada um suave.</li>
+    </ol>
+  </div>
+
+  <div class="tbl"><table>
+    <tr><th>Campo</th><th>O que faz</th></tr>
+    <tr><td>Factor</td><td>1,0 é convergência total. Nível 1 alto, nível 2 mais baixo.</td></tr>
+    <tr><td>Shape</td><td>0 constante, 0,5 linear raiz-ponta. Cabelo real converge mais na ponta, então positivo.</td></tr>
+    <tr><td>Tip Spread</td><td>Impede que as pontas se juntem num ponto só. Sempre um pouco.</td></tr>
+    <tr><td>Clump Offset</td><td>Desloca cada mecha numa direção aleatória. Quebra o padrão radial.</td></tr>
+    <tr><td>Distance Falloff / Threshold</td><td>Limitam a influência de cada guia por distância. Sem eles, guia longe puxa curva longe.</td></tr>
+    <tr><td>Guide Mask</td><td>Float 0 a 1: quem pode virar guia. Pinte para excluir regiões.</td></tr>
+    <tr><td>Guide Index</td><td>Só para uso em nodes. O valor -987654 significa "não fornecido". Mexer nele no painel apaga o clump.</td></tr>
+  </table></div>
+
+  <div class="box">
+    <h4>Ver as mechas em cores</h4>
+    <ol class="do" style="padding-left:0">
+      <li>Depois do Clump, no editor de nodes: <span class="node">Named Attribute</span> tipo Integer, nome <code>guide_curve_index</code>.</li>
+      <li><span class="node">Random Value</span> tipo Vector, Min 0, Max 1, com o índice no <b>ID</b>.</li>
+      <li><span class="node">Viewer</span> recebendo a geometria e o vetor, tipo do item em Color. Overlays, Viewer Node ligado.</li>
+    </ol>
+    <p style="margin:0">Para deixar permanente: <span class="node">Store Named Attribute</span> tipo Color no domínio Curve, nome <code>clump_color</code>, e um node Attribute no material. Bystedt colore cada camada de clump com uma cor para ver como se misturam.</p>
+  </div>
+
+  <div class="warn"><b>Curl também usa guide map.</b> Se você desligar Existing Guide Map só no Clump, o Curl segue as guias antigas e o cabelo ganha um "permanente" indesejado. Desligue nos dois.</div>
+  <div class="src">Fontes: <code>essentials-internals/create-guide-index-map.md</code>; <code>essentials-internals/clump-hair-curves.md</code>; <code>manual/modeling/geometry_nodes/hair/guides/clump_hair_curves.rst</code>; <code>palestras/bcon2026-steve-chow-...md</code>; <code>palestras/bcon2023-daniel-bystedt-...md</code>.</div>
+</section>
+
+<section id="p4">
+  <div class="step"><span class="num">4</span><div><h2>Noise e Frizz</h2><p class="why">Parecem iguais no painel e não são. Um é ondulação, o outro é crespo.</p></div></div>
+
+  <figure>
+    <svg viewBox="0 0 760 200" role="img" aria-label="Dois painéis: no Noise, fios vizinhos ondulam juntos porque leem a mesma textura; no Frizz, cada ponto de cada fio desloca sozinho." style="color:var(--ink)">
+      <g font-family="Archivo, sans-serif" font-size="12" fill="currentColor" stroke="currentColor" stroke-width="1.6" fill-opacity="1">
+        <text x="190" y="20" text-anchor="middle" stroke="none" font-weight="700">Hair Curves Noise</text>
+        <g stroke="var(--vec)">
+          <path d="M60 180 C40 150 80 120 60 90 C40 60 70 50 60 30" fill="none"/>
+          <path d="M100 180 C80 150 120 120 100 90 C80 60 110 50 100 30" fill="none"/>
+          <path d="M140 180 C120 150 160 120 140 90 C120 60 150 50 140 30" fill="none"/>
+          <path d="M180 180 C160 150 200 120 180 90 C160 60 190 50 180 30" fill="none"/>
+          <path d="M220 180 C200 150 240 120 220 90 C200 60 230 50 220 30" fill="none"/>
+          <path d="M260 180 C240 150 280 120 260 90 C240 60 270 50 260 30" fill="none"/>
+          <path d="M300 180 C280 150 320 120 300 90 C280 60 310 50 300 30" fill="none"/>
+        </g>
+        <text x="190" y="196" text-anchor="middle" stroke="none" font-size="11">vizinhos ondulam juntos: textura lida pela raiz</text>
+
+        <text x="570" y="20" text-anchor="middle" stroke="none" font-weight="700">Frizz Hair Curves</text>
+        <g stroke="var(--vec)">
+          <polyline points="440,180 446,160 438,140 447,118 441,98 449,78 443,58 450,40 446,30" fill="none"/>
+          <polyline points="480,180 474,158 483,142 476,120 485,100 478,80 486,60 480,42 484,30" fill="none"/>
+          <polyline points="520,180 527,162 516,144 525,122 518,102 528,82 521,62 526,44 522,30" fill="none"/>
+          <polyline points="560,180 553,160 563,140 555,118 565,98 557,78 566,58 559,40 562,30" fill="none"/>
+          <polyline points="600,180 607,158 597,142 606,120 598,100 608,80 601,60 606,42 603,30" fill="none"/>
+          <polyline points="640,180 634,162 645,144 636,122 646,102 638,82 647,62 640,44 643,30" fill="none"/>
+          <polyline points="680,180 687,160 677,140 688,118 679,98 689,78 681,58 688,40 684,30" fill="none"/>
+        </g>
+        <text x="570" y="196" text-anchor="middle" stroke="none" font-size="11">cada ponto sorteia sozinho: nenhum fio parece o vizinho</text>
+      </g>
+    </svg>
+    <figcaption>Noise lê uma textura de ruído pela posição da raiz, por isso vizinhos se parecem. Frizz sorteia por ponto.</figcaption>
+  </figure>
+
+  <div class="tbl"><table>
+    <tr><th>Campo</th><th>Noise</th><th>Frizz</th></tr>
+    <tr><td>Distance</td><td colspan="2">Quanto o fio se afasta da forma original. Comece em 0,01 m e olhe no viewport.</td></tr>
+    <tr><td>Shape</td><td colspan="2">0 constante, 0,5 linear da raiz para a ponta, 1 só na ponta, negativo mais na raiz.</td></tr>
+    <tr><td>Cumulative Offset</td><td colspan="2">Ligado, cada ponto herda o deslocamento dos anteriores e a curva vai se afastando. Desligado é tremor local.</td></tr>
+    <tr><td>Scale</td><td>Tamanho da onda no espaço.</td><td>não existe</td></tr>
+    <tr><td>Scale along Curve</td><td>Tamanho da onda ao longo do fio. Reduza para não estourar o comprimento.</td><td>não existe</td></tr>
+    <tr><td>Offset per Curve</td><td>Ligue para quebrar a coerência entre fios quando ela ficar óbvia.</td><td>não existe</td></tr>
+    <tr><td>Preserve Length</td><td colspan="2">Ligue nos dois. Senão a deformação estica o fio.</td></tr>
+  </table></div>
+
+  <div class="box">
+    <h4>Flyaways sem node dedicado</h4>
+    <p>Duplique o Frizz ou o Trim e ligue um <span class="node">Random Value</span> booleano na <b>Selection</b>, com Probability entre 0,1 e 0,5. Uma fração dos fios recebe Frizz forte e comprimento maior. No tutorial de fur: Length Factor 1,5 a 1,8 e Random Offset 0,3 m. Alternativa: um objeto Curves separado só de flyaways, com <span class="node">Duplicate Hair Curves</span> e densidade baixa.</p>
+    <p style="margin:0">Fios soltos de propósito também são o que pega a luz numa contraluz. Foi assim que o groom do Seth Rogen leu como real diante de uma janela estourada.</p>
+  </div>
+  <div class="warn"><b>Frizz por último e sutil.</b> Exagerar deixa o pelo com aparência suja. Ele existe para tirar a obediência excessiva dos fios, não para desenhar o cabelo.</div>
+  <div class="src">Fontes: <code>essentials-internals/hair-curves-noise.md</code>; <code>essentials-internals/frizz-hair-curves.md</code>; <code>blogs-jp-zh/ja-tenp-kukan-2025-10-hair-curves-fur.md</code>; <code>palestras/bcon2026-steve-chow-...md</code>; <code>palestras/bcon2026-christopher-strommer-...md</code>.</div>
+</section>
+
+<section id="p5">
+  <div class="step"><span class="num">5</span><div><h2>Curl, Roll e Braid</h2><p class="why">Entram só quando o cabelo pede. São pesados e cada um tem um jeito de usar.</p></div></div>
+  <div class="tbl"><table>
+    <tr><th>Node</th><th>Para quê</th><th>Ponto de partida</th></tr>
+    <tr><td>Curl Hair Curves</td><td>Cacho por mecha. Usa guide map, então respeita o Existing Guide Map igual ao Clump.</td><td>Ondulado: Guide Distance 0,25 m, Subdivision 3, Curl Start 2, Radius 0,25 m, Frequency 1,5</td></tr>
+    <tr><td>Roll Hair Curves</td><td>Enrola a ponta. Cabelo real não termina reto; um Roll leve na ponta é um dos truques de Bystedt.</td><td>Factor baixo, Roll Length curto, Random Orientation ligado</td></tr>
+    <tr><td>Braid Hair Curves</td><td>Trança de três fios com elástico opcional.</td><td>Guide Distance 1,6 m, Subdivision 3, Braid Start 0,6, Radius 0,45 m</td></tr>
+  </table></div>
+  <p>Afro é a pilha mais cara que existe neste sistema: Clump, Noise, Curl e Roll juntos. Viewport Amount baixo enquanto trabalha.</p>
+  <div class="src">Fontes: <code>blogs-jp-zh/ja-tenp-kukan-2025-09-hair-curves-nodes-geometria.md</code>; <code>palestras/bcon2023-daniel-bystedt-...md</code>; <code>palestras/bcon2026-steve-chow-...md</code>.</div>
+</section>
+
+<section id="p6">
+  <div class="step"><span class="num">6</span><div><h2>Comprimento e raio</h2><p class="why">Dois palestrantes diferentes disseram a mesma coisa: variação de comprimento é o que separa real de uniforme.</p></div></div>
+
+  <div class="box">
+    <h4>Trim Hair Curves</h4>
+    <ul>
+      <li><b>Replace Length</b> define comprimento absoluto. <b>Length Factor</b> multiplica o original. Escolha um.</li>
+      <li><b>Random Offset</b> é a variação sem a qual toda ponta fica na mesma linha. Sempre algum valor.</li>
+      <li><b>Mask</b> aceita atributo pintado: vira mapa de comprimento. Por textura fica mais fino que por vertex group.</li>
+      <li><b>Pin at Parameter</b> segura a curva num ponto do comprimento.</li>
+      <li><b>Scale Uniform</b> desligado corta; ligado encolhe a curva inteira.</li>
+    </ul>
+    <h4>Set Hair Curve Profile</h4>
+    <ul>
+      <li><b>Radius</b> é o raio base. <b>Shape</b> e <b>Factor Min/Max</b> desenham o afinamento raiz-ponta. Shape 1 afeta só a ponta, perto de 0 a curva inteira, negativo mais a raiz.</li>
+      <li>Ajuste pelo render, não pelo viewport. Quanto mais fino, mais curvas você precisa e mais caro o render.</li>
+      <li>Perfil com raio diferente por ponto só aparece no Cycles. EEVEE e Workbench não desenham isso.</li>
+    </ul>
+  </div>
+  <div class="tbl"><table class="vals">
+    <tr><th>Raio usado nas fontes</th><th>Valor</th><th>Contexto</th></tr>
+    <tr><td>Corpo de gato</td><td>0,003 m</td><td>fur curto</td></tr>
+    <tr><td>Dentro da orelha</td><td>0,001 m</td><td>fur muito fino</td></tr>
+    <tr><td>Bigode</td><td>0,01 m, Shape 0,8</td><td>fio grosso afinando</td></tr>
+    <tr><td>Sobrancelha para textura</td><td>0,01 m</td><td>bake em câmera ortográfica</td></tr>
+    <tr><td>Cabelo humano em escala real</td><td>comece em 0,0003 m</td><td>julgamento; ajuste no render</td></tr>
+  </table></div>
+  <div class="src">Fontes: <code>essentials-internals/trim-hair-curves.md</code>; <code>essentials-internals/set-hair-curve-profile.md</code>; <code>blogs-jp-zh/ja-tenp-kukan-2025-10-hair-curves-fur.md</code>; <code>comunidade/devtalk-27601-...md</code> post 1; <code>palestras/bcon2025-kerstin-schmidbauer-...md</code>.</div>
+</section>
+
+<section id="p7">
+  <div class="step"><span class="num">7</span><div><h2>Pele e animação</h2><p class="why">Dois nodes no fim da stack. Um tira o que entrou na pele; o outro faz o cabelo seguir o personagem.</p></div></div>
+  <div class="box">
+    <h4>Shrinkwrap Hair Curves</h4>
+    <p>Depois de qualquer deformação que possa empurrar ponto para dentro. <b>Above Surface</b> em 0 e <b>Offset Distance</b> com uma folga empurram os pontos internos para fora. <b>Lock Roots</b> ligado. Serve também para fur molhado colado na pele.</p>
+    <h4>Deform Curves on Surface</h4>
+    <p style="margin:0">Sempre o último. Exige Surface Rest Position ligado no Interpolate. Com um <b>Surface Normal Displacement</b> dirigido por distância até a risca (Geometry Proximity, Map Range, Float Curve), ele também dá o volume que sobe na risca sem mexer nas raízes exatas.</p>
+  </div>
+  <figure><img src="img/node-types_GeometryNodeAttachHairCurvesToSurface.webp" alt="Node Attach Hair Curves to Surface" width="320"><figcaption>Attach Hair Curves to Surface, da mesma família: religa curvas à superfície quando você as trouxe de outro lugar.</figcaption></figure>
+  <div class="src">Fontes: <code>essentials-internals/shrinkwrap-hair-curves.md</code>; <code>comunidade/devtalk-27601-...md</code> post 9; <code>palestras/bcon2023-daniel-bystedt-...md</code>.</div>
+</section>
+
+<section id="p8">
+  <div class="step"><span class="num">8</span><div><h2>Máscaras e atributos</h2><p class="why">A regra do sistema: pinte no scalp, leia com Named Attribute, ligue no campo. Tudo que é float no painel aceita.</p></div></div>
+  <div class="box">
+    <h4>Vertex group ou textura?</h4>
+    <div class="tbl"><table>
+      <tr><th></th><th>Vertex group</th><th>Textura</th></tr>
+      <tr><td>Resolução</td><td>Limitada pela densidade da malha</td><td>Tão fina quanto o pixel</td></tr>
+      <tr><td>Portabilidade</td><td>Dado do próprio modelo; não quebra ao mover arquivo</td><td>Caminho externo pode quebrar</td></tr>
+      <tr><td>Uso típico</td><td>Regiões, densidade, clump</td><td>Fendas do pelo, detalhe fino</td></tr>
+    </table></div>
+    <p>Muitos vertex groups por região e por efeito é normal num groom completo. Desligue o Interpolate enquanto pinta pesos.</p>
+    <h4>Densidade por textura, do jeito de Bystedt</h4>
+    <ol class="do" style="padding-left:0">
+      <li>Mapa pintado: branco denso, cinza 50% base, preto sem cabelo.</li>
+      <li>No editor: <span class="node">Image Texture</span> lendo o UV por <span class="node">Named Attribute</span>, depois um <span class="node">Color Ramp</span> cortando logo acima de 0,5.</li>
+      <li>Saída no <b>Density Mask</b> do Interpolate. Exponha um multiplicador global de densidade no modificador para baixar tudo quando a cena pesar.</li>
+    </ol>
+    <h4>Grupos de guias</h4>
+    <p style="margin:0">Atributos booleanos por curva marcam grupos. Named Attribute, Separate Geometry, e cada grupo ganha sua faixa da stack. Quando as faixas se repetem, é hora de um node group com parâmetros, ou de um inteiro <code>region</code> num For Each Element.</p>
+  </div>
+  <div class="warn"><b>Ligar a textura no painel não faz nada.</b> É preciso entrar no editor de nodes e ligar no input certo. "Quase todo mundo cai nessa", segundo quem apresentou o gato na BCON 2026.</div>
+  <div class="src">Fontes: <code>palestras/bcon2026-steve-chow-...md</code>; <code>palestras/bcon2025-kerstin-schmidbauer-...md</code>; <code>palestras/bcon2023-daniel-bystedt-...md</code>; <code>essentials-internals/interpolate-hair-curves.md</code>.</div>
+</section>
+
+<section id="p9">
+  <div class="step"><span class="num">9</span><div><h2>Shading no Cycles</h2><p class="why">Principled Hair BSDF. Só Cycles tem shader de cabelo; EEVEE serve para preview.</p></div></div>
+  <figure><img src="img/node-types_ShaderNodeBsdfHairPrincipled.webp" alt="Node Principled Hair BSDF" width="300"><figcaption>Principled Hair BSDF no modo Melanin Concentration, o mais realista.</figcaption></figure>
+  <div class="fig2">
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-melanin.jpg" alt="Escala de Melanin"><figcaption>Melanin: quantidade de pigmento, de loiro claro a preto.</figcaption></figure>
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-melanin-redness.jpg" alt="Escala de Melanin Redness"><figcaption>Melanin Redness: proporção de feomelanina, do castanho ao ruivo.</figcaption></figure>
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-random-color.jpg" alt="Random Color"><figcaption>Random Color: variação por fio. O manual é explícito: cabelo realista precisa disso.</figcaption></figure>
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-roughness.jpg" alt="Roughness"><figcaption>Roughness: brilho ao longo do fio.</figcaption></figure>
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-radial-roughness.jpg" alt="Radial Roughness"><figcaption>Radial Roughness: espalhamento perpendicular.</figcaption></figure>
+    <figure><img src="img/render_shader-nodes_shader_hair-principled_demo-tint.jpg" alt="Tint"><figcaption>Tint: tingimento por cima do pigmento.</figcaption></figure>
+  </div>
+  <div class="tbl"><table class="vals">
+    <tr><th>Ponto de partida</th><th>Valores</th><th>De onde vem</th></tr>
+    <tr><td>Cabelo preto</td><td>Melanin 0,859 · Redness 0,145 · Roughness 0,223 · Radial 0,355</td><td>blog 点P空間</td></tr>
+    <tr><td>Fur de gato</td><td>Roughness 0,7 · Radial 0,3 a 0,5 · Random Roughness 0,1 a 0,2</td><td>blog 点P空間</td></tr>
+    <tr><td>Bigode branco</td><td>Roughness 0,5</td><td>blog 点P空間</td></tr>
+  </table></div>
+  <div class="box">
+    <h4>Decisões que importam</h4>
+    <ul>
+      <li><b>Modelo Chiang ou Huang.</b> Chiang é o padrão. Huang, desde a 4.0, aceita seção elíptica via Aspect Ratio (0,5 a 1,0 conforme o tipo de cabelo) e desde a 4.2 troca near e far field pela distância da câmera. Pode ficar lento em roughness baixo e "achatado" em close.</li>
+      <li><b>Gradiente raiz-ponta e cor por fio.</b> Curve Info no shader: Intercept para raiz-ponta, Random para variar por fio.</li>
+      <li><b>Pelo denso escurece por dentro</b> e parece sujeira. Transparent BSDF misturado por Light Path para a sombra ficar um pouco transparente.</li>
+      <li><b>Viewport não atualizou depois de mexer no shader?</b> Alterne Solid e Rendered.</li>
+      <li><b>Preview no EEVEE:</b> Curve Shape em Strip e Additional Subdivision 3.</li>
+    </ul>
+  </div>
+  <div class="src">Fontes: <code>manual/render/shader_nodes/shader/hair_principled.rst</code>; <code>blogs-jp-zh/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md</code>; <code>blender-dev/devdocs-4.0-cycles-principled-hair-huang.md</code>; <code>blender-dev/devdocs-4.2-cycles-huang-hair.md</code>; <code>palestras/bcon2026-steve-chow-...md</code>.</div>
+</section>
+
+<section id="p10">
+  <div class="step"><span class="num">10</span><div><h2>Física na 5.2</h2><p class="why">Existe, é nativa, e é experimental por rótulo oficial. Saiba o que quebra antes de usar em produção.</p></div></div>
+  <figure><img src="img/node-types_GeometryNodeHairDynamics.webp" alt="Node group Hair Dynamics" width="320"><figcaption>Hair Dynamics: um node group sobre o XPBD Solver, com modos Animation e Physics.</figcaption></figure>
+  <div class="box do">
+    <h4>Setup</h4>
+    <ol>
+      <li>O operador Empty Hair da 5.2 já adiciona o modificador <b>Capture Rest Geometry</b> à superfície. Sem ele a física não sabe o que é repouso.</li>
+      <li>Adicione <span class="node">Hair Dynamics</span>. Modo Physics.</li>
+      <li>Comece com Substeps e Constraint Iterations baixos e suba só se instabilizar.</li>
+      <li>Colliders: qualquer mesh fechada com o modificador Collider.</li>
+    </ol>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Parâmetro</th><th>Significa</th></tr>
+    <tr><td>Stretchiness</td><td>0 não estica. 1 deixa o fio crescer até dez vezes sob a própria gravidade.</td></tr>
+    <tr><td>Bendiness / Root Bendiness</td><td>Quanto dobra ao longo do fio e na raiz.</td></tr>
+    <tr><td>Structure Randomness</td><td>Variação aleatória de stretch e bend por ponto.</td></tr>
+    <tr><td>Mass, Friction, Damping</td><td>Massa como fator de influência, não valor real; atrito com superfície; amortecimento linear e angular.</td></tr>
+  </table></div>
+  <div class="fig2">
+    <figure><img src="img/modeling_geometry-nodes_simulation_hair-dynamics_shear-example1.png" alt="Exemplo de shear do Hair Dynamics 1"><figcaption>Exemplo do manual da 5.2.</figcaption></figure>
+    <figure><img src="img/modeling_geometry-nodes_simulation_hair-dynamics_shear-example2.png" alt="Exemplo de shear do Hair Dynamics 2"><figcaption>Mesma cena com outro comportamento de dobra.</figcaption></figure>
+  </div>
+  <div class="warn"><b>O que quebra, segundo quem testou:</b> attach à superfície duas vezes mais lento que o Surface Deform antigo; cabelo dentro de collider em repouso explode e não há collision offset (Shrinkwrap depois da sim é a gambiarra); escala do objeto propaga errado; regenerar filhos a cada frame dá jitter. Simule guias e gere filhos depois.</div>
+  <p><b>Plano B, que funcionava antes e ainda funciona:</b> proxy mesh gerado das curvas, Cloth no proxy com vertex groups, Surface Deform devolvendo o movimento às curvas.</p>
+  <div class="src">Fontes: <code>manual/modeling/geometry_nodes/simulation/hair_dynamics.rst</code>; <code>blender-dev/devdocs-5.2-physics.md</code>; <code>blender-dev/code-blender-2026-07-geometry-nodes-physics.md</code>; <code>comunidade/devtalk-45449-...md</code>; <code>comunidade/blenderartists-1407111-...md</code>.</div>
+</section>
+
+<section id="perf">
+  <div class="eyebrow">Depois</div>
+  <h2>Performance</h2>
+  <ul>
+    <li><b>Viewport Amount</b> no Interpolate: 0,1 a 0,3 enquanto pentear, 1,0 para render.</li>
+    <li><b>Densidade real por objeto</b>, não global. Corpo de gato 10.000 e mais; volume extra em pescoço 50.000. Um cavalo precisou de 3,5 milhões de filhos porque a distribuição é por área, não por guia. Use Distance to Guides e Density Mask para não gastar densidade onde não aparece.</li>
+    <li><b>Desligue os deformadores enquanto esculpe guias.</b> Ligue no fim.</li>
+    <li><b>Reduza pontos por curva.</b> Cada ponto é geometria no render.</li>
+    <li><b>Seis milhões de fios bagunçados não são melhores que seis mil com camadas boas.</b> A frase é de quem fez o gato fotorrealista.</li>
+  </ul>
+  <div class="src">Fontes: <code>blogs-jp-zh/ja-tenp-kukan-2025-10-hair-curves-fur.md</code>; <code>comunidade/blenderartists-1460445-...md</code>; <code>palestras/bcon2026-steve-chow-...md</code>.</div>
+</section>
+
+<section id="receitas">
+  <div class="eyebrow">Depois</div>
+  <h2>Receitas de produção</h2>
+  <p>O que artistas fizeram em projetos reais com este sistema. Cada receita vem de uma palestra da Blender Conference, transcrita na base.</p>
+
+  <details open><summary>Cabelo humano com risca (Bystedt, BCON 2023)</summary><div>
+    <ol>
+      <li>Hair cap separada, vertex group da risca e hard edge dividindo em duas metades.</li>
+      <li>Guias com Resample Curve a 15 pontos para forma detalhada.</li>
+      <li>Duas camadas de clump, largo e fino, cada uma com seu seed e seu ruído.</li>
+      <li>Noise com Offset per Curve ligado e escala reduzida ao longo da curva. Roll leve na ponta.</li>
+      <li>Densidade por textura com Color Ramp cortando em 0,5, para resolver a calvície na risca.</li>
+      <li>Risca: copie a cap, apague tudo menos a linha central pelo peso "Parting Center", e cole as raízes próximas nessa linha com Mix. Volume subindo na risca com Deform Curves on Surface e Surface Normal Displacement por proximidade.</li>
+      <li>Store Named Attribute com uma cor por camada, só para depurar no viewport.</li>
+    </ol>
+  </div></details>
+
+  <details><summary>Fur curto e denso, gato British Shorthair (Steve Chow, BCON 2026)</summary><div>
+    <ol>
+      <li>Antes de abrir o Blender, mapeie qual modificador resolve qual problema do pelo.</li>
+      <li>Só duas regiões, cabeça e corpo, com a linha de corte atrás das bochechas. Regiões por vertex group.</li>
+      <li>Clump, depois Curl, depois Frizz. Existing Guide Map desligado nos dois primeiros, densidade dos clumps pela Guide Distance. Muitos clumps, cada um suave.</li>
+      <li>Fendas onde a pele estica: Trim por textura pintada, com distribuição aleatória, comprimentos variados, ponta em diamante e curvatura variada. Sem fendas o gato vira pelúcia.</li>
+      <li>Shader: Transparent BSDF por Light Path para a sombra interna não virar sujeira. Gradiente raiz-ponta por cima.</li>
+      <li>Topcoat duplicado só depois que o shader do undercoat fechou: mais longo, mais aleatório, muito menos fios. É ele que dá a borda fofa.</li>
+    </ol>
+  </div></details>
+
+  <details><summary>Pelo de animal em escala (Kerstin Schmidbauer, BCON 2025)</summary><div>
+    <ol>
+      <li>Referência por subespécie e estação; desenhe direção e mudanças de tipo por cima das fotos.</li>
+      <li>Topologia e UV fechadas. UV sem overlap.</li>
+      <li>Guias com 2 pontos até a direção estar definida no corpo inteiro. Densidade de guias uniforme.</li>
+      <li>Um objeto por região anatômica: face, bochecha, orelha interna e externa, pescoço, corpo, cauda, patas. Cuidado nas costuras.</li>
+      <li>Vertex group por região e por efeito (densidade, clump, noise, trim). Interpolate desligado enquanto pinta.</li>
+      <li>Ordem: direção geral primeiro, detalhe individual depois. Trim com aleatoriedade e Frizz são os dois "essenciais para realismo".</li>
+      <li>Shape key de cabelo não existe: Set Position com Mix entre a Position de dois objetos de cabelo por Sample Index, fator num driver. Quebra se a contagem de curvas mudar.</li>
+    </ol>
+  </div></details>
+
+  <details><summary>Groom para comercial com ator real (Christopher Strommer, BCON 2026)</summary><div>
+    <ol>
+      <li>Empty Hair na malha, Sculpt, guias. Em minutos há um groom razoável; os assets do Asset Browser fazem o resto.</li>
+      <li>Várias variações de groom (curliness, frizz, noise, clumpiness, cor) para o cliente escolher à distância.</li>
+      <li>Partes do groom coloridas de forma diferente para discutir por e-mail.</li>
+      <li>Fios soltos de propósito para pegar luz numa contraluz estourada.</li>
+      <li>Passes: cabelo com hold-out, com Shadow Catcher, e sem hold-out para pintar de volta. Crescimento instantâneo de cabelo é um keyframe de 15 frames no Trim.</li>
+    </ol>
+  </div></details>
+
+  <details><summary>Hair cards a partir do groom, ainda editável (Sara Matsumoto, BCON 2024)</summary><div>
+    <ol>
+      <li>Mecha em hair curves num plano, renderizada em câmera ortográfica: Depth, Normal, Position, AO.</li>
+      <li>Resample Curve, depois Curve to Mesh com perfil Arc de 3 lados para card e Spiral para tubo. Curve Tangent no Tilt para o card seguir a superfície.</li>
+      <li>UV construída com Capture Attribute e Store Named Attribute; raiz colada por Geometry Proximity.</li>
+      <li>O resultado continua editável com os mesmos pincéis e assets.</li>
+    </ol>
+  </div></details>
+</section>
+
+<section id="problemas">
+  <div class="eyebrow">Depois</div>
+  <h2>Problemas comuns</h2>
+  <div class="tbl"><table>
+    <tr><th>Sintoma</th><th>Causa provável</th><th>O que fazer</th></tr>
+    <tr><td>Interpolate não gera nada</td><td>Surface não atribuída, UV map errado, ou Rest Position sem malha em repouso</td><td>Conferir Surface e Surface UV Map; testar com Rest Position desligado</td></tr>
+    <tr><td>Filhos atravessam a pele</td><td>Guias sem colisão; ruído empurrou para dentro</td><td>Shrinkwrap no fim; Use Sculpt Collision ao pentear</td></tr>
+    <tr><td>Filhos flutuam ou entram na malha subdividida</td><td>Subdivision Surface não aplicado no scalp</td><td>Aplicar o Subdivision no scalp, ou hair cap separada</td></tr>
+    <tr><td>"Invalid surface UVs"</td><td>UV sobreposta, costura espelhada quase fundida, ou UV Smooth do Subdivision</td><td>Sem overlap; Merge by Distance no UV Editor; UV Smooth em None</td></tr>
+    <tr><td>Cabelo pula ao mudar densidade</td><td>Guia promovida muda de ID</td><td>Definir densidade cedo</td></tr>
+    <tr><td>Clump sumiu</td><td>Mexeu no Guide Index (-987654)</td><td>Voltar ao valor; usar Guide Distance e Existing Guide Map</td></tr>
+    <tr><td>Curl virou "permanente"</td><td>Curl seguindo guide map antigo</td><td>Existing Guide Map desligado no Clump e no Curl</td></tr>
+    <tr><td>Textura ligada no Trim não faz nada</td><td>Input não ligado no editor</td><td>Entrar no grupo e ligar no input certo</td></tr>
+    <tr><td>Careca depois do rig deformar</td><td>Buraco na densidade de guias, ampliado pela deformação</td><td>Adicionar guias no vazio</td></tr>
+    <tr><td>Pelo nascendo dentro da boca</td><td>Superfície fina embaixo do pincel</td><td>Separar essa parte da malha</td></tr>
+    <tr><td>Marca escura de comprimento desigual</td><td>Grow/Shrink não pegou todos os fios</td><td>Apagar e re-adicionar com Density na área</td></tr>
+    <tr><td>Curvas flutuando após editar topologia</td><td>Superfície mudou</td><td>Snap to Nearest Surface</td></tr>
+    <tr><td>Viewport travando</td><td>Densidade alta com deformadores ligados</td><td>Viewport Amount baixo; desligar deformadores; dividir em objetos</td></tr>
+    <tr><td>Pincel não faz nada</td><td>Use Sculpt Collision em malha densa</td><td>Desligar colisão; Shrinkwrap depois</td></tr>
+    <tr><td>Pelo denso escuro por dentro</td><td>Sombra sólida entre camadas</td><td>Transparent BSDF por Light Path</td></tr>
+    <tr><td>Sim explode</td><td>Curva dentro de collider; escala do objeto</td><td>Shrinkwrap antes; aplicar escala</td></tr>
+    <tr><td>Sim com jitter</td><td>Filhos regenerados por frame</td><td>Simular guias, interpolar depois</td></tr>
+  </table></div>
+  <div class="src">Fonte consolidada: <code>grooming/CEREBRO_GROOMING.md</code> seção 14, com a origem de cada linha.</div>
+</section>
+
+<section id="videos">
+  <div class="eyebrow">Depois</div>
+  <h2>Palestras para assistir</h2>
+  <p>Todas transcritas na base, com resumo técnico em português. Os links abrem no YouTube.</p>
+  <div class="videos">
+    <a class="vid" href="https://www.youtube.com/watch?v=Kx88edAbiek" target="_blank" rel="noopener"><img src="img/yt_Kx88edAbiek.jpg" alt=""><div class="b"><b>Character grooming with the new hair system</b><span>Daniel Bystedt · BCON 2023 · 41 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=SYR4oBiezbc" target="_blank" rel="noopener"><img src="img/yt_SYR4oBiezbc.jpg" alt=""><div class="b"><b>Every Hair Deliberate: A Photoreal Cat in Hair Curves</b><span>Steve Chow · BCON 2026 · 23 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=ZrBbNhCgGww" target="_blank" rel="noopener"><img src="img/yt_ZrBbNhCgGww.jpg" alt=""><div class="b"><b>A million little curves: creating hair for animals</b><span>Kerstin Schmidbauer · BCON 2025 · 54 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=t9vW-93qaN4" target="_blank" rel="noopener"><img src="img/yt_t9vW-93qaN4.jpg" alt=""><div class="b"><b>Grooming Seth Rogen</b><span>Christopher Strommer · BCON 2026 · 22 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=vXBL-oiqY7Q" target="_blank" rel="noopener"><img src="img/yt_vXBL-oiqY7Q.jpg" alt=""><div class="b"><b>Mesh Hair with Geometry Nodes and Hair Curves</b><span>Sara Matsumoto · BCON 2024 · 43 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=sfUDDKSx-1c" target="_blank" rel="noopener"><img src="img/yt_sfUDDKSx-1c.jpg" alt=""><div class="b"><b>Hair Simulation: From Cosmos Laundromat to Geometry Nodes</b><span>Lukas Tönne · BCON 2025 · 50 min</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=PWxxqKk4zsg" target="_blank" rel="noopener"><img src="img/yt_PWxxqKk4zsg.jpg" alt=""><div class="b"><b>NEW Hair Dynamics in Blender 5.2</b><span>KennyPhases · YouTube</span></div></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=gCQN5vNgHiI" target="_blank" rel="noopener"><img src="img/yt_gCQN5vNgHiI.jpg" alt=""><div class="b"><b>How to Make Procedural Fur in Blender Geometry Nodes</b><span>Blender Studio · 3.5, conceitos ainda válidos</span></div></a>
+  </div>
+</section>
+
+<section id="glossario">
+  <div class="eyebrow">Referência</div>
+  <h2>Glossário</h2>
+  <dl class="glossary">
+    <dt>Guia</dt><dd>Curva original no objeto Curves. A única coisa que você esculpe.</dd>
+    <dt>Filho</dt><dd>Curva gerada pelo Interpolate a partir das guias. Não é editável.</dd>
+    <dt>Cage</dt><dd>Desenho das guias por cima do resultado, no modo Sculpt. Nenhum modificador filtra o cage.</dd>
+    <dt>Hair cap</dt><dd>Malha de crescimento separada da cabeça, com a topologia que o cabelo pede.</dd>
+    <dt>Guide map</dt><dd>Atributo <code>guide_curve_index</code>: qual guia cada curva segue no clump, no curl e na trança.</dd>
+    <dt>Existing Guide Map</dt><dd>Toggle que faz o node reaproveitar o guide map que já está na geometria.</dd>
+    <dt>Surface Rest Position</dt><dd>Interpolar sobre a malha em repouso, para o Deform Curves on Surface animar depois.</dd>
+    <dt>Density Mask</dt><dd>Float de 0 a 1 que multiplica a densidade. Vem de atributo pintado.</dd>
+    <dt>Field</dt><dd>Valor que varia por elemento. Todo float dos hair nodes aceita um.</dd>
+    <dt>Undercoat e topcoat</dt><dd>As duas pelagens de um animal: densa e curta por baixo, longa e rala por cima.</dd>
+  </dl>
+</section>
+
+<section id="fontes">
+  <div class="eyebrow">Referência</div>
+  <h2>Fontes</h2>
+  <p>Tudo aqui vem da base local em <code>Estudos Extras Curriculares/_referencia/</code>. Os caminhos citados em cada seção são relativos a <code>_referencia/grooming/</code>, <code>_referencia/blender-manual-5.2-lts/manual/</code> e <code>_referencia/blender-python-api-5.2/api/</code>.</p>
+  <ul>
+    <li><b>Síntese:</b> <code>grooming/CEREBRO_GROOMING.md</code>, com cada afirmação citada.</li>
+    <li><b>Como cada node funciona por dentro:</b> <code>grooming/essentials-internals/</code>, dump dos 27 node groups da Essentials.</li>
+    <li><b>Palestras transcritas:</b> <code>grooming/palestras/</code>, 10 arquivos.</li>
+    <li><b>Devs e comunidade:</b> <code>grooming/blender-dev/</code> e <code>grooming/comunidade/</code>, 40 fontes.</li>
+    <li><b>Valores e receitas:</b> <code>grooming/blogs-jp-zh/</code>, 23 artigos.</li>
+    <li><b>Manual oficial 5.2 LTS</b> e <b>API Python 5.2</b>, completos.</li>
+  </ul>
+  <p style="color:var(--muted);font-size:.9rem">Figuras dos nodes e do shader: manual do Blender, CC-BY-SA 4.0. Miniaturas das palestras: YouTube, canal oficial do Blender. Página gerada em 27/09/2026 a partir da base; onde uma afirmação é julgamento e não fonte, o texto diz.</p>
+</section>
+</main>
+</div>
+</div>
+
+</html>
