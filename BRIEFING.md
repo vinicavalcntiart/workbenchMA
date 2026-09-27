@@ -19,11 +19,11 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
 7. **Salário:** ver a POLÍTICA DE PRETENSÃO no fim deste arquivo (regra do Vini, 04/09): pede-se a **base da faixa publicada**; sem faixa publicada, USD 100.000 em estúdio grande e USD 85.000 no resto, com equivalentes por país. Nunca abaixo do piso legal de visto. **Nunca revelar o salário da E-Line** (quebra de NDA).
 8. **Right to work:** nunca mentir em caixa de autorização de trabalho. Responder "No" para EUA e "Yes" para sponsorship, e vender o caso de visto no campo de texto livre.
 9. **Frase fixa de portfólio** (usar sempre, com negrito nos trechos indicados): "My portfolio holds more than **45 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it."
-10. **Frase fixa de realocação** (só para estúdios FORA dos EUA): "I'm open to relocating as well; my academic background (honors laurea, postgraduate specialization, master's in progress, IELTS, publications) makes a strong visa case."
+10. **Frase fixa de realocação** (só para estúdios FORA dos EUA), a que está em uso desde setembro: "I am ready to move for the role, and I would need visa sponsorship." (A versão antiga, "I'm open to relocating as well; my academic background ... makes a strong visa case.", saiu de uso.)
 11. **Proibido em carta:** a palavra Brazil, travessão, floreio de IA. **Emoji saiu desta lista em 10/09 por ordem do Vini, que o cobrou tres vezes: ver a regra do emoji no fim deste arquivo.**
 12. **Ponto forte a usar:** artista de jogos entrega o asset inteiro (high poly, retopo, UV, bake, textura, LODs, engine). Artista de animação/VFX costuma ser especialista de uma etapa só. Isso é vantagem, nunca lacuna.
 13. **Porta de entrada:** ele aplica de propósito em vagas de outra função onde não há vaga de personagem, apostando em encaminhamento interno. Não tratar como engano. Em campo livre, declarar na primeira linha que a área dele é personagem e pedir o encaminhamento.
-14. **PRIORIDADE MÁXIMA, regra dele em 04/09: vaga de arte ou modelagem em Disney, DreamWorks, Paramount ou Warner se aplica NA HORA, nunca só se registra.** Vale para o grupo inteiro de cada uma: Disney inclui Pixar, Lucasfilm e ILM, Marvel e Disney Television Animation; DreamWorks inclui NBCUniversal; Paramount inclui Nickelodeon e Skydance; Warner inclui Warner Bros. Animation e Cartoon Network. **Esta regra passa por cima de qualquer rotina que mande "só ler e registrar", inclusive a de prospecção.** A ordem é: achou, abre a fonte oficial, aplica. Só depois registra no painel. Se o formulário estiver atrás de verificação humana, o dossiê de copiar e colar vai para o painel **e o Vini é avisado por PushNotification na mesma rodada**, nunca no resumo do fim do dia. O motivo é o custo: vaga de personagem em casa grande vive poucos dias, e quatorze já morreram nesta campanha antes de dar tempo.
+14. **PRIORIDADE MÁXIMA, regra dele em 04/09: vaga de arte ou modelagem em Disney, DreamWorks, Paramount ou Warner se aplica NA HORA, nunca só se registra.** Vale para o grupo inteiro de cada uma: Disney inclui Pixar, Lucasfilm e ILM, Marvel e Disney Television Animation; DreamWorks inclui NBCUniversal; Paramount inclui Nickelodeon e Skydance; Warner inclui Warner Bros. Animation e Cartoon Network. **Esta regra passa por cima de qualquer rotina que mande "só ler e registrar", inclusive a de prospecção.** A ordem é: achou, abre a fonte oficial, aplica. Só depois registra no painel. Se o formulário estiver atrás de caixa "sou humano" visível, ele fica preenchido no navegador na nuvem e entra na leva da manhã (ver CLAUDE.md, rota do clique); se for vaga de personagem, o Vini é avisado na hora, numa linha, para decidir se passa pelo computador antes. O motivo é o custo: vaga de personagem em casa grande vive poucos dias, e quatorze já morreram nesta campanha antes de dar tempo.
 15. **Alerta antes de varredura.** Em toda casa grande, criar o alerta de vaga por email é prioridade permanente, porque ele funciona sozinho e não depende de agente nenhum rodar. Ativos hoje: Disney (disneycareers, categoria Animation and Visual Effects), Sony Pictures Imageworks (MyGreenhouse, departamento Artists), Paramount (jobs2web) e Warner Bros. Discovery (careers.wbd.com, palavra-chave character artist, **recriado e ATIVADO em 05/09**). **Regra aprendida em 05/09, e ela custou um dia de vigilância na Warner:** alerta com dupla confirmação por email só conta como ativo **depois de ver a tela de ativação**. O da Warner foi criado em 04/09, anotado aqui como ativo, e nunca funcionou: o link de ativação expirou sem clique e a página respondeu `TOKEN IS EXPIRED`. Criar não é ativar.
 
 16. **Fonte fixa de vagas, dada pelo Vini em 05/09:** a planilha pública
@@ -44,9 +44,9 @@ Senior 3D Character Artist, 10+ anos em personagens estilizados.
     `automacao/preencher-formulario.js`, é injetado no painel por
     `automacao/gera-preenchedor.mjs` e vira um favorito na barra do navegador dele, com
     o telefone embutido só ali (nunca no repositório). **Ele não clica em enviar, não
-    anexa arquivo e não encosta em captcha.** Toda vaga que a automação não conseguir
-    enviar deve sair para a fila dele com esta instrução, e não mais só com o dossiê de
-    copiar e colar.
+    anexa arquivo e não encosta em captcha.** **SUPERADA em 25-27/09:** o maestro preenche e envia
+    pelo navegador na nuvem; para o Vini só vai a caixa "sou humano" visível, na leva da manhã
+    (CLAUDE.md). Nenhuma vaga volta para a fila dele como tarefa.
 
 18. **Antes de aplicar, conferir requisição e não id de URL (erro meu em 05/09).** A varredura
     dos grandes tratou como nova a `7888174003` do Greenhouse da 2K, Lead Character Artist em
@@ -114,6 +114,7 @@ Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Juli
   alcançável até aparecer outro nome.
 
 ## Pendências dele
+**Atualizado em 27/09:** nada aqui é tarefa do Vini. O que sobrou desta lista (Fortiche, alertas de vaga nos ATS) é do maestro; o único ponto que depende do Vini é a caixa "sou humano", na leva da manhã.
 - Formulário da **Fortiche** (envio falhou em 27/08).
 - **Walt Disney Animation Studios**, único dos grandes sem candidatura.
 - Assinar alerta de vaga nos ATS: Insomniac, Pixar, Disney, Nickelodeon, PlayStation, Blizzard.
@@ -127,7 +128,7 @@ Passion Republic (em análise), TAT Productions (vaga nomeada + recrutadora Juli
 - Monitor a cada 2h: lê respostas, bounces e confirmações de ATS; responde recusa com template; notifica no celular se pedirem entrevista, teste ou portfólio.
 - Prospecção a cada 4h: varre vagas remotas primeiro, revalida vagas antigas, alimenta o painel e a newsletter.
 - Envio: os rascunhos da campanha (assunto fixo) saem pelo Apps Script `automacao/envia-rascunhos.gs`, na conta do Vini, com assinatura e anexos; ele roda à mão (40 por execução) ou por acionador de tempo, se ele ligar. O monitor marca os estúdios como enviados quando vê a mensagem em Enviados.
-- Formulários: a automação preenche formulários sem captcha de desafio pelo navegador headless (Greenhouse, Ashby, Breezy, JotForm, Teamtailor Connect, formulários próprios); hCaptcha, reCAPTCHA de caixa, Turnstile, DataDome e portais com conta ficam para o Vini, listados em `automacao/respostas-formularios.md`.
+- Formulários (atualizado em 27/09): o maestro preenche e envia tudo pelo navegador na nuvem, inclusive DataDome, 403, portais com conta e código por email. Para o Vini só vai a caixa "sou humano" visível, na leva das 8h47 de Recife (CLAUDE.md, rota do clique).
 
 ## POLÍTICA DE PRETENSÃO SALARIAL (decisão do Vini em 04/09, substitui a faixa antiga)
 
