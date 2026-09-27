@@ -18905,3 +18905,108 @@ a leitura de disciplina tem de vir antes do endereço.
 - **Creative Europe MEDIA (DEVVGIM)**: a lista de selecionados só sai pelo portal de Funding & Tenders, sem o site das casas; não minerado.
 
 **LEITURA HONESTA:** fundo público de jogo financia sobretudo casa nova de uma a três pessoas, e essa casa publica `hello@` ou o gmail do fundador, raramente um endereço de pessoa de arte. As listas de beneficiário também se sobrepõem muito ao que o repositório já cobre (5 de 19 no Canadá, 6 de 16 na Noruega, 13 de 44 na Dinamarca). Para personagem nas praças prioritárias, a próxima tentativa deveria ser por créditos de jogo 3D estilizado de casa média (art director e lead de personagem nomeados) cruzados com site pessoal que publique email, e não por lista de casa.
+
+## RODADA DAS 05h35 UTC DE 27/09 (Joe): VEIA NOVA, O GAMEDEVMAP (casas que nunca entraram em fila). **Sete fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Três no **Canadá** (Montréal, Edmonton, Toronto), duas no **Reino Unido**, uma na **Austrália**, uma nos **EUA**. Nórdicos e Holanda: zero (quase tudo já estava coberto). Email completo fora do repositório (repositório público); aqui vai mascarado
+
+**Placar: 7 fichas ALTA, 0 montado, 0 rascunho, 0 carta, 0 commit** (o pedido desta rodada foi sem commit e sem carta).
+
+**O MÉTODO:** `terca100/gdmx/master-ord.csv` (5.884 casas do gamedevmap) menos `covered.txt` e menos todo domínio que já aparece em `enviados.csv`, `processados.csv`, `pessoas.csv`, `docs/index.html` e neste arquivo: **4.277 domínios inéditos**. Passei **3.047** pelo `j1735_nav.py` (menu da home mais `/presskit`, `/press`, `/press-kit`; entidade HTML, `%40`, `[at]` e `data-cfemail` decodificados): 1.182 de Canadá, Nórdicos, Holanda, Reino Unido, Irlanda, Austrália e Nova Zelândia, e 1.865 dos EUA. Renderam **222 e 411 domínios com algum endereço**, quase tudo caixa de função, gmail, casa de uma pessoa, imprensa ou editora. As sete abaixo são as que têm pessoa com nome, cargo que decide arte (ou fundador de casa pequena) e endereço literal na página da casa. **Os 1.230 inéditos de Alemanha, França, Polônia, Espanha e resto da Europa não foram varridos nesta rodada.**
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Hole in the Sleeve** (Londres, 100% remota, *STORROR Parkour Pro*, tem *Character Artist* na equipe e vaga aberta de *Technical Animator*): o único endereço é `h***@holeinthesleeve.com`, o destino dos botões *Mail* de `/general-4` (Jobs), mas **a Hannah não está na página de equipe nem entre os diretores da Companies House** (Hawley, Pirola, Shuhumi, Taylor, Wangerin). Sem sobrenome e sem cargo: fica de reserva, é a porta de vagas da casa.
+- **Wahoo Studios / NinjaBee** (Utah, *Keflings*): `b***@wahoo.com` do **Brent Fox, Art Director**, publicado em `wahoo.com/contact.html`, mas o site é **©2014** e diz *"20 years exp"* e *"25 years exp"* na mesma página. Endereço de site parado: risco alto de quique.
+- **Toxic Games** (Brighton): a Art Director (Mimi Chio) não tem endereço; o publicado é de negócios de outra pessoa. **Thunderbox** (adaptação de jogo de tabuleiro), **Stellar Jockeys** (*Brigador*, mecha, e o endereço é do sócio de negócios), **Finite Reflection** (pixel art), **Redemption Road** (três endereços sem nome nem cargo), **Monothetic** (site ©2017), **Dangleverse** (hóquei com tapete físico), **Powerhoof** e **Effort Star** (2D), **Minskworks** (dupla, low-poly), **Namazu** (só técnico e marketing): sem ficha.
+
+### FICHA 1: **Keith Ebanks**, cofundador e *art director*, **MOONCUBE GAMES** (Montréal, **CANADÁ**) — `K***@mooncubegames.com` — **ALTA (PUBLICADO em texto no press kit da casa, como *"Press Contact: Keith"*)**
+
+- **URLs abertas por mim nesta rodada:** `https://mooncubegames.com/home/spirit-city-lofi-sessions-press-kit/` (**200, 134.948 bytes**), texto literal: *"Press Contact: Keith K***@Mooncubegames.com"*. `https://mooncubegames.com/` (**200, 128.360 bytes**). `https://indie-hive.com/mooncube-games-interview/` (**200**): *"The team consists of three co-founding members, Keith, the art director, designer and programmer Felix, and Alex who is the audio director and business manager."* `https://howtomarketagame.com/2024/04/15/spirit-city-lofi-sessions-how-shrinking-down-lead-to-huge-success/` (**200**): *"The studio was created in 2021 by Keith Ebanks, Félix-Antoine Dupéré and Alexandre Gendron"*. `https://store.steampowered.com/app/2113850/` (**200**): *Spirit City: Lofi Sessions*, 08/04/2024, etiquetas `Cozy`, `Character Customization`, `Cute`, `Creature Collector`. **NADA MONTADO.** O sobrenome sai das duas entrevistas, pareado pelo primeiro nome do press kit.
+- **POR QUE ELE:** é o diretor de arte e um dos três sócios; numa casa de três, é quem escolhe o artista. É o único endereço de pessoa que a casa publica (o outro é um gmail genérico).
+- **FRASES DA CASA, literais (`https://mooncubegames.com/`):**
+  - *"We hope to do this by creating rich, unique worlds, with a diverse cast of memorable characters."*
+  - *"At Mooncube Games we want to create games that promote positive and uplifting experiences that align with our core values of kindness, empathy and inclusivity."*
+- **3D DE PERSONAGEM: PROVADO** (*"customizing your character and your spirit companion"*; *"cute spirits will start showing up"*; etiqueta `Character Customization`). Estilizado fofo, o terreno do Vini. O jogo vendeu *"over 55,000 units"* na primeira semana (How To Market A Game) e segue com DLC.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `mooncubegames OR Mooncube OR "Keith Ebanks" OR "Spirit City"` (com lixeira) → **`{}`**; `to:/from:mooncubegames.com` → **`{}`**. Repositório: só no censo do gamedevmap e numa sondagem de Personio (`NAO-E-LOCATARIO`); **nenhuma carta, nenhum formulário.** **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. O endereço é de **imprensa** no press kit, não de candidatura.
+  2. Casa de **três sócios**, sem vaga publicada e sem página de carreiras.
+  3. Montréal: o site é em inglês, mas a razão social é *"Jeux vidéo Mooncube inc."*; não há nada escrito sobre francês.
+
+### FICHA 2: **Isaac Otway**, fundador e *producer*, **CRIMSON HERRING STUDIOS** (Edmonton, Alberta, **CANADÁ**) — `i***@crimsonherring.com` — **ALTA (PUBLICADO como *Business Inquiries* no press kit, em `data-cfemail` decodificado)**
+
+- **URLs abertas por mim nesta rodada:** `https://crimsonherring.com/presskit/` (**200, 97.447 bytes**): no bloco *Team*, *"Isaac Otway Founder, Producer Andre Da Rosa Technical Director Scott Penner Creative Director ... Tarik Boussekine Art Director"*; no bloco *Contact*, *Business Inquiries* com `data-cfemail` que decodifica para o endereço dele (a outra caixa, *Press Requests*, é `info@`). `https://crimsonherring.com/careers/` (**200**): *"NO POSITIONS CURRENTLY HIRING PLEASE CHECK BACK!"*. `https://store.steampowered.com/app/1674920/` (**200**): *Sovereign Syndicate*, 15/01/2024, etiquetas `CRPG`, `Isometric`, `Steampunk`, `Character Customization`. **NADA MONTADO.**
+- **POR QUE ELE:** é o fundador e o único endereço de pessoa publicado. O *Art Director* (Tarik Boussekine) não tem endereço.
+- **FRASES DA CASA, literais (`https://crimsonherring.com/presskit/`):**
+  - *"At Crimson Herring Studios, we aim to tell profound stories through immersive video games by letting well-crafted narratives lead our development efforts."*
+  - *"We're an indie studio headquartered in Edmonton, Alberta, Canada with a talented, diverse, remote-working team."*
+- **3D DE PERSONAGEM: PROVADO** (Steam: *"Play as three characters, each with their own skills and motivations. Customize your characters with narrative choices"*; a PC Gamer destacou que dá para jogar com um minotauro alcoólatra).
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.** O time é remoto.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `crimsonherring OR "Crimson Herring" OR "Isaac Otway" OR "Sovereign Syndicate"` (com lixeira) → **`{}`**; `to:/from:crimsonherring.com` → **`{}`**. Repositório: só uma sondagem de Personio. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:**
+  1. Ele é **produtor**, não arte; o diretor de arte fica sem endereço.
+  2. Carreiras diz que não há vaga, e o último post do site é de uma promoção de verão na Steam. Não há próximo jogo anunciado.
+  3. Isométrico: personagem visto de cima, menos detalhe que o portfólio do Vini.
+
+### FICHA 3: **Alyssa Carey**, *Creative Director* (dirige arte, mundo e level design), **LUNARCH STUDIOS** (Toronto, **CANADÁ**) — `a***@lunarchstudios.com` — **ALTA (PUBLICADO na seção *The Leadership Team* da home, como `a*** [@] lunarchstudios.com`)**
+
+- **URLs abertas por mim nesta rodada:** `http://lunarchstudios.com/` (**200, 18.495 bytes**; o `https` falha no certificado da casa): *"Alyssa Carey Creative Director a*** [@] lunarchstudios.com"* e *"At Lunarch, Alyssa directs worldbuilding, level design, and art."* A seção dela é **visível** (conferido no HTML: só a ficha do *Lead Engineer* está comentada). *"Lunarch Studios Inc. is a Canadian-controlled private corporation based in Toronto, Ontario, Canada."* `https://store.steampowered.com/app/2071500/` (**200**): *Islands of Insight*, 13/02/2024, publicado pela Behaviour Interactive. **NADA MONTADO.**
+- **POR QUE ELA:** é quem dirige a arte da casa (a frase da própria página). Os outros quatro endereços visíveis são do CEO, da direção técnica, da produção e do design.
+- **FRASES DA CASA, literais (`http://lunarchstudios.com/`):**
+  - *"Over time, Lunarch has grown into a multi-talented 20-person team of gifted math nerds, scientists, engineers, and technical professionals."*
+  - *"We currently have no open positions. Nonetheless, if you can offer something unique or extraordinary, please feel free to get in touch."*
+  - *"The Islands of Insight development team is available for new work."* (a lista de serviços inclui *"Character customization systems"* e *"Technical art and animation"*)
+- **3D DE PERSONAGEM: FRACO.** *Islands of Insight* é quebra-cabeça em primeira pessoa num mundo aberto 3D (Unreal); o personagem é avatar customizável, não elenco.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `lunarchstudios OR "Lunarch" OR "Alyssa Carey" OR "Islands of Insight"` (com lixeira) → **`{}`**; `to:/from:lunarchstudios.com` → **`{}`**. Repositório: só uma triagem antiga (`| 430 | Lunarch Studios | prismata.net | TLS não sobe |`), sem carta. **CASA INÉDITA para carta.**
+- **RESSALVAS HONESTAS:**
+  1. **A casa está se oferecendo para trabalho sob contrato** (*"available for new work"*), sinal de que o jogo terminou e não há projeto próprio: pouca chance de contratar agora.
+  2. O forte da casa é quebra-cabeça e sistema, não personagem.
+  3. O `https` do site falha (certificado); a página abre por `http`.
+
+### FICHA 4: **Simon Pearce**, cofundador e *head of art*, **GLITCH GAMES** (Cheltenham, **REINO UNIDO**) — `s***@glitchgames.co.uk` — **ALTA (PUBLICADO em `mailto:` no botão *Email* do perfil dele na página About)**
+
+- **URLs abertas por mim nesta rodada:** `https://glitch.games/about` (**200, 29.649 bytes**): *"Simon Pearce CO-FOUNDER / ART / NOT A BAFTA WINNER Simon is head of arting at Glitch. If something needs to be arted up, he's the guy we speak to."*, com `mailto:` do endereço dele (o outro é do Graham Ranson, código, e a caixa geral é `hey@`). `https://glitch.games/` (**200, 53.933 bytes**): *"Glitch Games Ltd is a company registered in England and Wales"*, catálogo de 17 jogos, post no Bluesky de 04/08/2026. **NADA MONTADO.**
+- **POR QUE ELE:** é o dono da arte da casa, em casa de dois sócios.
+- **FRASES DA CASA, literais:**
+  - *"We make first-person puzzle mysteries for people who like getting stuck."* — `https://glitch.games/`
+  - *"On average, 1 in 3 Glitch employees have a BAFTA award."* — `https://glitch.games/about`
+- **3D DE PERSONAGEM: NÃO PROVADO.** Quebra-cabeça em primeira pessoa (*Forever Lost*, *The Novus Project*, *Mini Escapes*), cenário e objeto; não há elenco.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `glitchgames OR glitch.games OR "Glitch Games" OR "Simon Pearce"` (com lixeira) → **`{}`**; `to:glitchgames.co.uk` → **`{}`**. Repositório: zero. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:** casa de dois sócios, sem vaga, e o trabalho é cenário e objeto (fora do alvo do Vini). Vale como colega de arte que pode indicar; é das mais fracas da rodada.
+
+### FICHA 5: **Claire Govier**, cofundadora (comunidade e redes), contato de **vagas**, **FLEETYARD STUDIOS** (Dunster, Somerset, **REINO UNIDO**) — `c***@fleetyard.co.uk` — **ALTA (PUBLICADO na home como *"Job Vacancies"* e *"Business/Press"*)**
+
+- **URLs abertas por mim nesta rodada:** `https://fleetyard.co.uk/` (redireciona a `http://starshipsimulator.co.uk/`, **200, 64.873 bytes**): *"Job Vacancies c***@fleetyard.co.uk Business/Press c***@fleetyard.co.uk"*. `https://wiki.starshipsimulator.co.uk/index.php?title=Fleetyard_Studios` (**200**): *"Fleetyard Studios was established in 2020 by Dan Govier and his wife, Claire Govier"*; *"Claire Govier : Co-founder and Community & Social Media Manager."* `https://store.steampowered.com/app/1332100/` (**200**): *Starship Simulator*, lançamento a anunciar, Unreal Engine 5. **NADA MONTADO.**
+- **POR QUE ELA:** é o endereço que a própria casa publica para **vagas**, e é sócia.
+- **FRASES DA CASA, literais (`https://fleetyard.co.uk/`):**
+  - *"Explore a procedurally generated 1:1 scale Milky Way galaxy"*
+  - *"Watch the stars drifting by the windows from the comfort of your starship's lounge while you soar through the galaxy at 300ly/h."*
+- **3D DE PERSONAGEM: NÃO PROVADO.** Simulador de nave (o foco é a nave: *"designed in CAD software"*). Existem papéis de tripulação (*Captain*, *Pilot*, *Science Officer*), mas não há arte de personagem mostrada.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `fleetyard OR starshipsimulator OR "Claire Govier" OR "Starship Simulator"` (com lixeira) → **`{}`**; `to:fleetyard.co.uk` → **`{}`**. Repositório: só a menção num relatório antigo de raiz 404 e uma sondagem de Personio. **CASA INÉDITA para carta.**
+- **RESSALVAS HONESTAS:** ela é comunidade, não arte; a casa é o casal mais colaboradores; o jogo é **nave e hard surface**, que o Vini não faz. A mais fraca da rodada: só entra porque o endereço é o de vagas de uma casa de Reino Unido financiada (Kickstarter de mais de £400 mil, segundo a busca; não abri a página do Kickstarter).
+
+### FICHA 6: **Mark Fenollar**, *Creative Director*, **LUCERNAL** (Melbourne, **AUSTRÁLIA**) — `m***@lucernal.com` — **ALTA (PUBLICADO em texto na página Studio, logo abaixo da bio dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.lucernal.com/about` (**200, 387.967 bytes**): *"Mark Fenollar (Creative Director) is passionate about creative media, games and architecture with over 14 years' industry experience."* e *"Contact: f***@lucernal.com m***@lucernal.com"*; *"Fiona Johnson (Production Director) ... Alongside practice management, Fiona is a 3D generalist and animator."* `https://store.steampowered.com/app/1571860/` (**200**): *Little Ruin*, lançamento a anunciar, etiquetas `Stylized`, `Colorful`, `Isometric`, `Story Rich`. **NADA MONTADO.**
+- **POR QUE ELE:** é o diretor criativo; a sócia cuida de produção. Reserva: a Fiona (`f***@lucernal.com`), 3D generalista e animadora.
+- **FRASES DA CASA, literais:**
+  - *"We are a hybrid creative practice which explores modes of critical representation and immersive landscapes through video game development and architectural visualisation."* — `https://www.lucernal.com/about`
+  - *"In this atmospheric isometric adventure, you'll play as Isobel, a teenage girl entangled in the machinations of colonial civil unrest in a crumbling, war-ravaged society."* — Steam 1571860
+- **3D DE PERSONAGEM: PROVÁVEL** (protagonista Isobel, estilizado, isométrico), sem arte de personagem aberta por mim.
+- **FORA DOS EUA? SIM** (Austrália). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `lucernal OR "Little Ruin" OR "Mark Fenollar" OR "Fenollar"` (com lixeira) → **`{}`**; `to:/from:lucernal.com` → **`{}`**. Repositório: só a palavra numa triagem antiga de bio de funcionário. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:** a casa é também um escritório de visualização de arquitetura; o jogo ainda não saiu; casa de dois, sem vaga. Isométrico.
+
+### FICHA 7: **Andrew Dennis**, *Art Director*, **WILL WINN GAMES** (Okemos, Michigan, **EUA**) — `a***@willwinn.games` — **ALTA (PUBLICADO na página About, ao lado do nome e do cargo)**
+
+- **URLs abertas por mim nesta rodada:** `https://willwinn.games/about/` (**200, 177.475 bytes**): *"CAPTAINS Brian Winn President Studio Director ... Andrew Dennis Art Director a***@willwinn.games"*; na tripulação, *"Nikolas Galaitsis Character Artist"*. `https://willwinn.games/blastball` (**200**). `https://store.steampowered.com/app/3170060/` (**200**): *BlastBall: All-Stars*, Early Access, Q4 2026, etiquetas `Party Game`, `Sports`, `Cute`, `Physics`. `https://store.steampowered.com/app/1455900/` (**200**): *Plunder Panic*, 2022, `Pixel Graphics`. **NADA MONTADO.**
+- **POR QUE ELE:** é o diretor de arte, e a casa tem um artista de personagem sob ele. É o cargo exato que a regra pede para casa pequena.
+- **FRASES DA CASA, literais (`https://willwinn.games/about/`):**
+  - *"We are dedicated to creating engaging video games that enrich lives and strengthen connections among players."*
+  - *"Located near MSU, we maintain a close partnership with the university, offering employment, mentorship, and guidance to students and graduates of MSU's top-ranked game design programs."*
+- **3D DE PERSONAGEM: PROVÁVEL** (*BlastBall: All-Stars*, esporte de festa com *"zany abilities"* e *Character Artist* no time); o jogo anterior é pixel art.
+- **FORA DOS EUA? NÃO** (Michigan). **A frase de realocação NÃO entra.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `willwinn OR "Will Winn" OR "Andrew Dennis" OR "Plunder Panic" OR BlastBall` (com lixeira) → **`{}`**; `to:/from:willwinn.games` → **`{}`**. Repositório: só no censo do Wikidata. **CASA INÉDITA.**
+- **RESSALVAS HONESTAS:** a casa contrata sobretudo aluno e ex-aluno da Michigan State (a frase dela mesma), o que puxa para júnior; sem vaga publicada; o sênior de fora com patrocínio é improvável aqui.
