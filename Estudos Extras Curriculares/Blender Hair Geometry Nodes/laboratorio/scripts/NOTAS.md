@@ -72,3 +72,4 @@
 - Bake: node Bake no fim (Animation, 1-12, Disco): play 353 -> 9 ms/quadro; bake 8 s; 282 MB (23,5 MB/quadro, 1,44M pts). Por script o Bake vem sem item (bake_items.new('GEOMETRY','Geometry')).
 - Pictorico: nsurf = Surface Normal do Generate -> shader Attribute -> Vector Transform Normal Obj->World -> Normal do Toon Diffuse. Cor clump_a (2cm) matiz + clump_b (6mm) valor. Buracos 12% por clump. Guarda 1,5% escura quase nao le.
 - Cel: Sample Nearest Surface (proxy, Normal) -> nvol -> Toon Diffuse+Glossy Normal (Vector Transform Obj->World). Terminador limpo. GR Normal da Malha + GR Cabelo Cel validados.
+- Chapeu: copa e aba separados; Shrinkwrap cabeca Above 1 Factor = Raycast(copa,+Z) OR Raycast(aba,-Z). Atravessando parede: 1568 -> 0. Chapeu inteiro para cima = tudo cola; so copa = 1644.

@@ -750,6 +750,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Reproduzir groom animado pesado | Node Bake (Animation) no fim: 353 → 9 ms por quadro | 17.63 |
 | Pelo pictórico | normal da pele no fio (Toon) + cor por clump e sub-clump | 17.64 |
 | Cel-shading no cabelo | normal da malha proxy (Sample Nearest Surface) no Toon | 17.65 |
+| Cabelo sob chapéu | Shrinkwrap na cabeça com Factor = copa acima OU aba abaixo (dois Raycasts) | 17.66 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2131,3 +2132,23 @@ malha), com uma esfera lisa de 12,5 cm como proxy. As mechas ganham um lado
 claro e um escuro coerentes. Armadilha: o ahoge, que sai da esfera, ficou
 escuro; tudo que deve receber a luz do volume precisa estar dentro ou
 colado na malha proxy.
+
+### 17.66 Cabelo embaixo do chapéu [img/74_chapeu_sheet]
+
+Chapéu = copa (cilindro) + aba (disco), **objetos separados**. Depois da
+mecha, um Shrinkwrap Hair Curves na cabeça (Above Surface 1, Offset 3 mm,
+Lock Roots) com **Factor = máscara "acima da aba"**:
+
+- Raycast na **copa**, direção (0,0,1): bate = ponto embaixo da copa.
+- Raycast na **aba**, direção (0,0,−1): bate = ponto acima da aba.
+- Boolean OR das duas → Factor.
+
+| Máscara | Pontos atravessando a parede da copa |
+|---|---|
+| Sem ajuste | 1.568 de 154 mil |
+| Raio para cima no chapéu inteiro (copa + aba juntas) | cabelo **inteiro** colado no crânio: embaixo da aba larga tudo "está sob o chapéu" |
+| Raio para cima só na copa | 1.644: não pega o fio que sai pela parede lateral |
+| **Copa para cima OU aba para baixo** | **0** |
+
+O que está acima da aba cola no crânio (escondido pelo chapéu); o que está
+abaixo cai normal.
