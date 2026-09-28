@@ -2473,3 +2473,7 @@ para o shader. 23,5 mil fios, 141 mil pontos, render 720 px em 10 s.
   atributos (17.15, 17.64), não a melanina.
 - O branco embaixo do queixo fica na sombra: em personagem, ponha a região
   clara onde a luz principal bate, ou compense com emissão/luz de preenchimento.
+- **Confirmado** refazendo só o material: Toon Diffuse (Size 0,6, Smooth 0,2)
+  com cor = Mix(laranja, creme, `branco`) → Mix(…, quase preto, `orelha`) e
+  Normal = `nvol` da GR Normal da Malha com o corpo. Laranja saturado, queixo
+  branco e ponta da orelha escura aparecem [img/finais/91_raposa_toon].
