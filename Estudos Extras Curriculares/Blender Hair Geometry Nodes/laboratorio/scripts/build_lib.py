@@ -481,6 +481,39 @@ rn = g.n('GeometryNodeInputRadius'); mu = g.n('ShaderNodeMath', props={'operatio
 sr = g.n('GeometryNodeSetCurveRadius'); g.l(dl.outputs['Geometry'], sr.inputs['Curve']); g.l(mu.outputs[0], sr.inputs['Radius'])
 g.l(sr.outputs['Curve'], o); libs.append(g.ng)
 
+# 22. Corte pela Malha
+g = G("GR Corte pela Malha", "Apaga os pontos do fio que passam da malha (raio do centro do objeto para fora). Corte reto: o fio cai natural e para na malha. Depois do Clump/Onda.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+mal = g.inp("Malha do corte", 'NodeSocketObject', desc="Malha em volta da cabeca; precisa conter todo o scalp")
+o = g.out("Geometry", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(mal, oi.inputs['Object'])
+ps = g.n('GeometryNodeInputPosition'); nr = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(ps.outputs[0], nr.inputs[0])
+rc = g.n('GeometryNodeRaycast'); g.l(oi.outputs['Geometry'], rc.inputs['Target Geometry']); g.l(ps.outputs[0], rc.inputs['Source Position']); g.l(nr.outputs[0], rc.inputs['Ray Direction']); rc.inputs['Ray Length'].default_value = 10.0
+nt_ = g.n('FunctionNodeBooleanMath', props={'operation':'NOT'}); g.l(rc.outputs['Is Hit'], nt_.inputs[0])
+dl = g.n('GeometryNodeDeleteGeometry', props={'domain':'POINT'}); g.l(geo, dl.inputs['Geometry']); g.l(nt_.outputs[0], dl.inputs['Selection'])
+g.l(dl.outputs['Geometry'], o); libs.append(g.ng)
+
+# 23. Comprimento ate a Malha
+g = G("GR Comprimento até a Malha", "Cada fio vira reta da raiz ate onde bate na malha (normal do scalp + vies). Trolls, espetado, moicano. Depois da GR Densidade Livre (usa n_raiz); depois ligue Clump.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+mal = g.inp("Malha da forma", 'NodeSocketObject', desc="Precisa conter todo o scalp, senao o fio nasce fora e desce")
+vi = g.inp("Viés", 'NodeSocketVector', (0.0,0.0,1.5), desc="Somado a normal do scalp. (0,0,1,5) = sobe (Trolls)")
+pts = g.inp("Pontos", 'NodeSocketInt', 24, 2, 1000)
+o = g.out("Geometry", 'NodeSocketGeometry')
+rs = g.n('GeometryNodeResampleCurve'); g.l(geo, rs.inputs['Curve']); g.l(pts, rs.inputs['Count'])
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(mal, oi.inputs['Object'])
+cr = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+na = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="n_raiz")
+ad0 = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(na.outputs['Attribute'], ad0.inputs[0]); g.l(vi, ad0.inputs[1])
+nd = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(ad0.outputs[0], nd.inputs[0])
+rc = g.n('GeometryNodeRaycast'); g.l(oi.outputs['Geometry'], rc.inputs['Target Geometry']); g.l(cr.outputs['Root Position'], rc.inputs['Source Position']); g.l(nd.outputs[0], rc.inputs['Ray Direction']); rc.inputs['Ray Length'].default_value = 10.0
+sp = g.n('GeometryNodeSplineParameter')
+k = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sp.outputs['Factor'], k.inputs[0]); g.l(rc.outputs['Hit Distance'], k.inputs[1])
+sc_ = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0], sc_.inputs[0]); g.l(k.outputs[0], sc_.inputs['Scale'])
+ad = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Root Position'], ad.inputs[0]); g.l(sc_.outputs[0], ad.inputs[1])
+st = g.n('GeometryNodeSetPosition'); g.l(rs.outputs['Curve'], st.inputs['Geometry']); g.l(ad.outputs[0], st.inputs['Position'])
+g.l(st.outputs['Geometry'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

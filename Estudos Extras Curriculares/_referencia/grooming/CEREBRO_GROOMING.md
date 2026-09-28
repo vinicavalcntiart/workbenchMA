@@ -716,6 +716,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Corte reto pela malha | Raycast do ponto para fora; sem acerto → Delete Point | 17.40 |
 | Cabelo Trolls | raiz → Raycast (normal + viés para cima) até elipsoide alto; Clump 0,45 | 17.40 |
 | Afro que enche | casca renderizada + pelo curto cacheado nascendo nela | 17.41 |
+| Menos fios, mesma cobertura | scalp com a cor da raiz: 60 mil/m² cobre como 300 mil | 17.42 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1009,7 +1010,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e um node groups "GR" e dois materiais, marcados como asset, feitos com as
+Vinte e três node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1018,8 +1019,8 @@ receitas desta seção e validados abrindo o .blend do zero:
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
-  Câmera (21 grupos)
-  [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet].
+  Câmera, GR Corte pela Malha, GR Comprimento até a Malha (23 grupos)
+  [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
@@ -1468,7 +1469,8 @@ antes do Interpolate:
   simplesmente não faz nada.
 
 Pronto em **GR Forma por Malha** (entradas: Malha da forma, Força, Cola a
-partir de). Validado carregando do .blend.
+partir de). Validado carregando do .blend. Os dois usos de 17.40 estão em GR
+Corte pela Malha e GR Comprimento até a Malha.
 
 ### 17.40 Raycast na malha: corte reto e cabelo Trolls [img/46_ray_sheet, 47_sheet]
 
@@ -1518,3 +1520,23 @@ massa foi separar **forma** e **textura**:
 1,7 milhão de pontos; a casca esconde o interior, então não precisa de fio
 lá dentro. Falta refinar a borda da abertura, que mostra a espessura zero da
 casca.
+
+### 17.42 Scalp pintado com a cor da raiz [img/48_scalp_sheet]
+
+Zero node. O scalp (ou a região do cabelo na textura da cabeça) recebe a cor
+da raiz: aqui um Principled marrom escuro (0,06; 0,028; 0,014), roughness
+0,6, no objeto scalp 0,4% acima da cabeça, visível no render.
+
+Medido com render de máscara (pele emissiva verde, scalp azul, cabelo preto),
+pixels de pele à mostra no topo da cabeça, vista de cima:
+
+| Fios/m² | Fios | Pele | Scalp pintado |
+|---|---|---|---|
+| 60.000 | 2.900 | 4.606 px | **461 px** |
+| 150.000 | 7.600 | 1.799 px | 354 px |
+| 300.000 | 15.400 | 809 px | 262 px |
+
+**60 mil fios com scalp pintado mostram menos pele que 300 mil sem pintar**:
+um quinto dos fios para a mesma cobertura. Na risca e no redemoinho, onde o
+cabelo abre, a diferença é a maior. Para estilizado, combine com densidade
+baixa e fio grosso: é o que deixa o groom leve na viewport.

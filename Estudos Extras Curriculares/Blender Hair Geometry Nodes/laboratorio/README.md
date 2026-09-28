@@ -37,6 +37,8 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Física Estilizada | Hair Dynamics nas guias, segura o penteado | antes do Interpolate, num modificador só das guias |
 | GR Rabo de Cavalo | junta tudo num elástico e deixa cair | depois da Densidade Livre, antes da Mecha |
 | GR Forma por Malha | as guias colam numa malha simples (a silhueta) | nas guias, antes do Interpolate |
+| GR Corte pela Malha | corte reto: apaga o que passa da malha | depois da Mecha/Onda |
+| GR Comprimento até a Malha | fio reto da raiz até a malha (Trolls, espetado) | depois da Densidade Livre, antes do Clump |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
