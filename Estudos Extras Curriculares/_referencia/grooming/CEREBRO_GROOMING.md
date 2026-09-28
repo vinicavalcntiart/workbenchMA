@@ -776,6 +776,7 @@ estão resumidas em 17.0):
 | Pelo arrepiado (susto) | animar o Levanta da GR Pentear por Curva | 17.83 |
 | Mão/objeto passando pelo cabelo | GR Desviar de Objeto depois do Shrinkwrap | 17.84 |
 | Anel de brilho de anime | faixa na coordenada Object (não no Intercept) → Emission | 17.85 |
+| Franja reta ou em bicos | GR Corte pela Malha com a borda da frente na altura da franja | 17.86 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2627,3 +2628,17 @@ depende da luz. No shader:
 
 O anel fica preso à cabeça e se move com ela (coordenada do objeto). Nada
 no Geometry Nodes: só o material.
+
+### 17.86 Franja reta ou em bicos pela malha de corte [img/100_franja_sheet]
+
+GR Corte pela Malha com uma esfera (20 × 20 × 25 cm) sem as faces da frente
+abaixo de Z = 3,5 cm: o fio que desce na frente passa da malha nessa altura e
+é cortado. Franja em bicos: a altura da borda varia em seno ao longo do X
+(3,5 cm − 1,5 cm × \|sen(140 x)\|). 19,4 mil fios, fio 30 cm.
+
+- A malha de corte desenha **o corte inteiro**: no teste, a esfera de 20 cm
+  também cortou as costas na altura do queixo (virou um bob com franja).
+  Modele a malha como o contorno final do penteado, frente e costas.
+- Mais simples que a franja por região de 17.24 quando o corte é "de
+  tesoura" (reto ou serrilhado); a de 17.24 serve para franja que muda de
+  direção.
