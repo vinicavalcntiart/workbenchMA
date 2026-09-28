@@ -205,6 +205,7 @@ fora = g.inp("Para fora", 'NodeSocketBool', False, desc="Ligado = flip anos 60. 
 rl = g.inp("Comprimento do rolo", 'NodeSocketFloat', 0.06, 0.0, 10.0, "", 'DISTANCE')
 rr = g.inp("Raio do rolo", 'NodeSocketFloat', 0.02, 0.0, 10.0, "", 'DISTANCE')
 var = g.inp("Variação por mecha", 'NodeSocketFloat', 0.4, 0.0, 1.0, "0,4 = comprimento entre 60% e 140%", 'FACTOR')
+sub_ = g.inp("Subdivisão", 'NodeSocketInt', 1, 0, 6, "Pontos x2 por nivel. Depois de Cacho/Onda use 0: com 2, 2 M de pontos viraram 8 M (+5,9 s)")
 sd = g.inp("Seed", 'NodeSocketInt', 0)
 o = g.out("Geometry", 'NodeSocketGeometry')
 rt = g.n('GeometryNodeGroup', group=EG['Curve Root'])
@@ -214,8 +215,8 @@ lo = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); lo.inputs[0].default
 hi = g.n('ShaderNodeMath', props={'operation':'ADD'}); hi.inputs[0].default_value = 1.0; g.l(var, hi.inputs[1])
 r = g.n('FunctionNodeRandomValue', props={'data_type':'FLOAT'}); g.l(guide_id(g), r.inputs['ID']); g.l(lo.outputs[0], r.inputs['Min']); g.l(hi.outputs[0], r.inputs['Max']); g.l(sd, r.inputs['Seed'])
 ml = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(r.outputs['Value'], ml.inputs[0]); g.l(rl, ml.inputs[1])
-ro = g.n('GeometryNodeGroup', group=EG['Roll Hair Curves'], Factor=1.0, Subdivision=2, Random_Orientation=0.0, Preserve_Length=True)
-g.l(geo, ro.inputs['Geometry']); g.l(sc.outputs[0], ro.inputs['Roll Direction']); g.l(ml.outputs[0], ro.inputs['Roll Length']); g.l(rr, ro.inputs['Roll Radius']); g.l(sd, ro.inputs['Seed'])
+ro = g.n('GeometryNodeGroup', group=EG['Roll Hair Curves'], Factor=1.0, Random_Orientation=0.0, Preserve_Length=True)
+g.l(sub_, ro.inputs['Subdivision']); g.l(geo, ro.inputs['Geometry']); g.l(sc.outputs[0], ro.inputs['Roll Direction']); g.l(ml.outputs[0], ro.inputs['Roll Length']); g.l(rr, ro.inputs['Roll Radius']); g.l(sd, ro.inputs['Seed'])
 g.l(ro.outputs['Geometry'], o); libs.append(g.ng)
 
 # 11. Tranca Grossa

@@ -59,3 +59,4 @@
 - Destaque: Random Boolean 0,10 ID guide_curve_index (3% = ~3 mechas escondidas) -> Store destaque -> Tint/melanina + Curl Factor. Vampira: raiz Y<-3,5cm e |X|<3cm. Molhado: mecha 1,2cm fecha 12% tip 0, mel .95 rough .15. Ahoge: raiz <6mm da coroa -> Set Position arco.
 - Trim alonga: LF 0,5=12 cm, 1,5=36 cm (Scale Uniform on/off), 2=47,9 cm (fio 24 cm).
 - Pentear por curva: Curve to Points (Evaluated) Tangent -> Store fluxo_t -> Sample Nearest raiz -> Sample Index -> projeta no plano (normal = Root Direction) -> Mix(fluxo, normal, 0,35) -> raiz + dir*Length. Reta = redemoinho na ponta; espiral; zigue-zague. GR Pentear por Curva validado.
+- Custo: cadeia original (Ponta Virada Sub 2 depois do Cacho) 6759 ms 8,18M pts; otimizada (Ponta Virada Sub 0 antes de Onda/Cacho) 721 ms 2,06M. Roll depois do cacho mesmo Sub 0 = +1,4 s. Sub 0/1/2 visualmente iguais a 70 cm. GR Ponta Virada expoe Subdivisao (padrao 1).

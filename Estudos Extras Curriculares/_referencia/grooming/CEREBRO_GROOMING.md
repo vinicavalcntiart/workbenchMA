@@ -614,6 +614,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Cabeça atravessa o cabelo na animação | Sem Deform Curves on Surface, ou ele antes do Interpolate | Deform no fim da cadeia; Add Rest Position no scalp | lab 17.46 |
 | Padrão de cor escorrega quando anima | Textura por Position lida depois do Deform | Calcular antes do Deform ou usar surface_uv_coordinate | lab 17.46 |
 | Contorno (casca invertida) deixa tudo preto | A casca bloqueia os raios de sombra | Factor = Maximum(Backfacing, 1 − Is Camera Ray) | lab 17.47 |
+| Groom de repente pesado (segundos por avaliação) | Roll/Ponta Virada depois do Curl, com Subdivision 2: pontos × 4 | Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1 | lab 17.54 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -735,6 +736,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Mecha colorida, mecha branca, molhado, ahoge | seleção por mecha → atributo `destaque` → shader e Set Position | 17.52 |
 | Alongar fios | Trim Length Factor > 1 (1,5 = +50%) | 17.52 |
 | Direção do pelo por curva desenhada | Tangente da curva mais próxima projetada na pele | 17.53 |
+| Cadeia leve | Ponta Virada antes de Onda/Cacho, Subdivisão 0 ou 1: 9× mais rápido | 17.54 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1825,3 +1827,32 @@ pelo deita nessa direção. Logo depois de gerar os fios (Generate Hair Curves,
 
 Pronto em **GR Pentear por Curva** (Curva de fluxo, Levanta), validado do
 .blend. Várias curvas no mesmo objeto funcionam: vale a mais próxima.
+
+### 17.54 Custo de cada grupo da biblioteca [img/61_roll_sheet]
+
+Cadeia completa, 300 mil/m² = 15,4 mil fios, 4 núcleos. Tempo de avaliação
+acumulado (mede o grupo ligando um por vez):
+
+| Grupo | Ordem original | Pontos | Ordem otimizada | Pontos |
+|---|---|---|---|---|
+| Densidade Livre | 24 ms | 185 mil | 22 ms | 185 mil |
+| Mecha Estilizada | +32 | | +41 | |
+| Volume na Raiz | +9 | | +7 | |
+| Strays em Arco | +117 | | +101 | |
+| Ponta Virada | (depois do cacho) | | **+93, Subdivisão 0** | 185 mil |
+| Onda S | +85 | 526 mil | +95 | 526 mil |
+| Cacho por Mecha | +305 | 2,06 M | +349 | 2,06 M |
+| Ponta Virada, Subdivisão 2 | **+5.912** | **8,18 M** | | |
+| **Total** | **6.759 ms** | 8,18 M | **721 ms** | 2,06 M |
+
+- **O Roll (GR Ponta Virada) tem Subdivision própria.** Cada nível dobra os
+  pontos, e ele subdivide o que já foi subdividido pela Onda e pelo Cacho.
+  Mesmo com Subdivisão 0, depois do cacho ele custou 1,4 s: o Roll é caro
+  por ponto.
+- Regra: **Ponta Virada antes de Onda e Cacho**, Subdivisão 0 ou 1.
+  Visualmente 0, 1 e 2 ficaram quase iguais numa cabeça a 70 cm (154 mil,
+  295 mil e 578 mil pontos).
+- Viewport 0,25 na cadeia otimizada: 171 ms (3,7 mil fios).
+- A GR Ponta Virada agora expõe **Subdivisão** (padrão 1; antes era 2 fixo).
+- Ordem completa que funciona: Densidade → Mecha → Volume → Strays → Ponta
+  Virada → Onda ou Cacho → Cor → (Deform) → Profile.

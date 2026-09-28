@@ -60,8 +60,12 @@ Colisores. Não ligue Surface Collision no scalp. Vento: entrada Vento
 
 ## Ordem que funciona
 
-GR Densidade Livre → GR Mecha Estilizada → GR Strays em Arco → GR Cacho por
-Mecha → GR Cor por Mecha → Set Hair Curve Profile → Set Material.
+GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em
+Arco → GR Ponta Virada → GR Onda S ou GR Cacho por Mecha → GR Cor por Mecha →
+Set Hair Curve Profile → Set Material.
+
+Ponta Virada depois do Cacho, com Subdivisão 2, deixou a cadeia 9× mais lenta
+(6,8 s contra 0,72 s, CEREBRO 17.54).
 
 Para variações, ligue um único node Integer no Seed de todos os grupos.
 
