@@ -767,6 +767,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Tranças box | GR Trança Grossa com Tamanho da trança ~1,5 cm, Guias por fio 1 | 17.75 |
 | Barba longa de fio ou em blocos | Guias Procedurais na região; Chunky + Cel + Contorno para blocos | 17.76 |
 | Menor groom estilizado | Value → Interpolate → Clump 0,25 → Profile → Material (5 nodes, 46 ms) | 17.77 |
+| Animal com tufos e manchas por região | máscaras de posição → Trim e atributos; cor por Color Ramp, não melanina | 17.78 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2451,3 +2452,24 @@ O Clump é o node que mais muda a leitura por custo. Tudo depois dele é
 personalidade. O salto de custo vem do Curl (Subdivision multiplica
 pontos, 17.14 e 17.54): comece a sessão com os 5 nodes e ligue o Curl no
 fim.
+
+### 17.78 Cabeça de raposa: comprimento e cor por região [img/91_raposa_sheet]
+
+Cabeça com focinho e orelhas (cones) numa malha com UV. Generate Hair
+Curves 120 mil/m² (2 cm) → GR Pentear por Curva (curva reta do focinho para
+trás) → **comprimento por região**: Length Factor = 1 + 2,2 × max(bochecha,
+ponta da orelha), com bochecha = Smooth Step de \|X\| (6 → 9,5 cm) ×
+Smooth Step de Z (2 → −3 cm) e ponta da orelha = Smooth Step de Z (15 → 17,5
+cm) → Clump 8 mm → atributos `branco` (queixo e peito) e `orelha` (ponta)
+para o shader. 23,5 mil fios, 141 mil pontos, render 720 px em 10 s.
+
+- Leu como raposa: o redemoinho do focinho vem da curva de fluxo, e o
+  **tufo na ponta da orelha** saiu da máscara de altura.
+- Os atributos estavam certos (6.406 fios `branco`, 201 `orelha`), mas **não
+  apareceram**: com Principled Hair, melanina 0,02 e redness 1 continua
+  laranja-claro, e a ponta com +0,5 de melanina não contrastou sob luz de
+  cima. Zerar a redness onde é branco ajudou pouco. Para manchas de cor bem
+  definidas em estilizado, use Principled BSDF ou Toon com Color Ramp nos
+  atributos (17.15, 17.64), não a melanina.
+- O branco embaixo do queixo fica na sombra: em personagem, ponha a região
+  clara onde a luz principal bate, ou compense com emissão/luz de preenchimento.
