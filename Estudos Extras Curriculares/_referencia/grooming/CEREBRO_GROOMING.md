@@ -1593,6 +1593,14 @@ massa foi separar **forma** e **textura**:
 lá dentro. Falta refinar a borda da abertura, que mostra a espessura zero da
 casca.
 
+Variações só trocando a malha [img/88_afros_sheet]: casca larga e baixa
+(20 × 19 × 13 cm), casca alta (15 × 16 × 22 cm) e **dois puffs** (duas
+esferas de 7,5 cm juntadas num objeto, 19,7 mil fios). O node tree é o
+mesmo. Limite visto: o recorte do rosto feito por faces fica em degrau e a
+borda oca aparece de frente. Para produção, modele a abertura com borda
+virada para dentro (Solidify curto na casca) ou esconda com cabelo da linha
+do rosto (GR Guias Procedurais na hairline).
+
 ### 17.42 Scalp pintado com a cor da raiz [img/48_scalp_sheet]
 
 Zero node. O scalp (ou a região do cabelo na textura da cabeça) recebe a cor
