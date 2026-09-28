@@ -621,6 +621,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Interpolate não gera filhos com guias de Grease Pencil ou Curve | Falta o bundle de fixação (surface_geometry/surface_uv_map) | Set Attachment Surface antes; não use Attach Hair Curves (1 ponto) | lab 17.71 |
 | Grupos GR quebrados ao abrir em outra máquina | Utilitários do Essentials (Curve Root, Rest Surface...) vieram linkados com caminho da instalação | Tornar local antes de salvar (feito na biblioteca do laboratório) | lab 17.72 |
 | Cabeça inteira vira uma trança só | GR Trança Grossa antiga com Guide Distance fixo 0,3 m | Use o Tamanho da trança (~1,5 cm) | lab 17.75 |
+| Cabelo cai para o lado errado em cabeça inclinada | Gravidade das guias procedurais é o −Z do objeto | Modele a cabeça em pé; em cena, física ou Simulation to World | lab 17.87 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -777,6 +778,7 @@ estão resumidas em 17.0):
 | Mão/objeto passando pelo cabelo | GR Desviar de Objeto depois do Shrinkwrap | 17.84 |
 | Anel de brilho de anime | faixa na coordenada Object (não no Intercept) → Emission | 17.85 |
 | Franja reta ou em bicos | GR Corte pela Malha com a borda da frente na altura da franja | 17.86 |
+| Groom não muda ao mover o personagem | tudo é local ao objeto; gravidade procedural = −Z do objeto | 17.87 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2642,3 +2644,21 @@ abaixo de Z = 3,5 cm: o fio que desce na frente passa da malha nessa altura e
 - Mais simples que a franja por região de 17.24 quando o corte é "de
   tesoura" (reto ou serrilhado); a de 17.24 serve para franja que muda de
   direção.
+
+### 17.87 A biblioteca é local ao objeto (e a gravidade também)
+
+Cadeia Guias Procedurais → Densidade → Mecha → Volume → Ponta Virada →
+Onda S, com cabeça, scalp e cabelo filhos de um Empty. Diferença máxima na
+posição local de cada ponto em relação ao conjunto na origem:
+
+| Conjunto | Diferença máxima |
+|---|---|
+| Deslocado (0,6; 0,3; 1,5 m) | **0** em todos os grupos |
+| Girado (25° em X, 60° em Z) | 0,0000002 m até a Ponta Virada; 0,08 mm depois da Onda S (arredondamento) |
+
+Mover ou girar o personagem **não muda o groom**. Consequência: a
+"gravidade" da GR Guias Procedurais e da GR Rabo de Cavalo é o **−Z do
+objeto**, não do mundo. Personagem modelado em pose deitada ou com a
+cabeça inclinada na pose de repouso recebe gravidade inclinada junto.
+Modele a cabeça em pé; para cabelo que cai com o mundo em cena animada,
+use a física (17.25) ou o Simulation to World vazio (17.26).

@@ -110,3 +110,4 @@
 - Desvio depois do Shrinkwrap: 0 dentro em q13 e q25. GR Desviar de Objeto validado (0 pts). Biblioteca 34 grupos.
 - Anel anime: TexCoord Object Z + 3*|p|^2 -> MapRange -> Ramp constant 0,52-0,57 -> Emission. Intercept = degraus.
 - Franja: GR Corte pela Malha esfera 20x20x25 sem faces frente z<3,5cm (bico: seno). A malha corta o penteado inteiro (costas viraram bob).
+- Invariancia: conjunto deslocado dif 0; girado 2e-7 m (Onda 8e-5). Groom local. Gravidade procedural = -Z do objeto.
