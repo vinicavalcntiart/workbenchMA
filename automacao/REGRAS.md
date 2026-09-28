@@ -29,6 +29,7 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 - Lever (jobs.lever.co, hCaptcha "secure-api") não entra na leva: a verificação recusa o navegador na nuvem mesmo com a caixa marcada pelo Vini e apaga o CV (4 de 4 tentativas: Behaviour 25/09 x2, Kolibri 27/09 x2), e o navegador local cai no mesmo desafio. Vaga boa no Lever vira carta a pessoa (Joe).
 - **Antes de enviar:** anúncio inteiro lido na fonte oficial do empregador (job board só descobre, nunca confirma); régua de veto (`automacao/regua-veto.py`); dedupe por ID da requisição no ATS, por URL e pelo nome da casa em `enviados.csv`, `automacao/processados.csv`, `docs/index.html` e na caixa do Gmail (`automacao/garra.sh`, `automacao/dedupe-agora.sh`). Quem diz qual vaga recebeu a candidatura é o email de confirmação.
 - **Veto que derruba** (em casa que não é grande): idioma local exigido por escrito (ex.: francês no Quebec, espanhol, polonês), residência ou cidadania exigida por escrito, "sem patrocínio" escrito, estágio.
+- **Respostas prontas do Vini (28/09):** idiomas = português nativo, inglês fluente, espanhol básico; anos de experiência = 10; pergunta "que jogos você joga" = sempre um jogo do próprio estúdio da vaga.
 - **Respostas de fato, sempre a verdade:** autorização de trabalho "No" e patrocínio "Yes" fora do Brasil; anos de experiência reais; nunca revelar o salário da E-Line (NDA).
 - **CV:** só por link que expira (litterbox 72h, gravado no scratchpad `cv-url.txt`), conferido com `%PDF-` e tamanho antes de anexar. Nunca no repositório.
 
