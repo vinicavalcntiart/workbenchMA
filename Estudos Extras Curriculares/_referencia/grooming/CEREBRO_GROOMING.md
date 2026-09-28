@@ -751,6 +751,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Pelo pictórico | normal da pele no fio (Toon) + cor por clump e sub-clump | 17.64 |
 | Cel-shading no cabelo | normal da malha proxy (Sample Nearest Surface) no Toon | 17.65 |
 | Cabelo sob chapéu | Shrinkwrap na cabeça com Factor = copa acima OU aba abaixo (dois Raycasts) | 17.66 |
+| Cabelo apoiado nos ombros | Shrinkwrap no tronco, Above 0, nas guias e no fim | 17.67 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2152,3 +2153,21 @@ Lock Roots) com **Factor = máscara "acima da aba"**:
 
 O que está acima da aba cola no crânio (escondido pelo chapéu); o que está
 abaixo cai normal.
+
+### 17.67 Cabelo longo apoiado nos ombros [img/75_ombro_sheet]
+
+Fio de 40 cm, tronco (elipsoide 44 × 24 × 32 cm) + pescoço num objeto só.
+Shrinkwrap Hair Curves com Surface = **tronco**, Above Surface 0, Offset
+4 mm, Smoothing 3, Lock Roots:
+
+| Onde | Pontos dentro do tronco |
+|---|---|
+| Sem | **9,8%** (o cabelo some dentro dos ombros) |
+| Nas guias e de novo no fim | 0,20% |
+| Só no fim | 0,30% |
+
+- O cabelo desliza pela superfície do ombro e apoia; não precisa de física
+  para pose parada.
+- Nas guias sai um pouco mais natural (os filhos já nascem entre guias
+  apoiadas); no fim é o que garante zero.
+- Mesma peça serve de colisão com roupa (gola, capuz): troque o Surface.
