@@ -477,6 +477,15 @@ Observado em teste headless, nao em fonte externa:
   antes do Map Range, ou Random Value com ID vazio e Seed.
 - **Named Attribute nao le `.selection`.** Atributo interno com ponto no nome
   volta zero. A selecao do Sculpt nao entra no tree diretamente.
+- **Selecao da viewport so entra por node tool** (2026-09-28). O node
+  Selection so existe no Tool context [manual/modeling/geometry_nodes/tools.rst;
+  geometry/read/selection.rst]. Receita "Salvar Selecao": editor em Tool,
+  Usage Tool, modo Edit, tipo Curves; Group Input (Geometry, string Nome) →
+  Store Named Attribute (Boolean, Curve) com Value = Selection → Output.
+  Roda pelo menu Non-Assets em Edit Mode; o Nome aparece no redo. Cada
+  execucao substitui o conjunto; para somar, Boolean Math OR com o Named
+  Attribute antigo. Diagrama: laboratorio/img/118_node_tool_selecao.png.
+  Nao executado aqui: o operador de node tool nao existe no bpy headless.
 - **Curves > Set Attribute** (bpy.ops.curves.attribute_set) so funciona em
   Edit Mode, e grava valor cheio em tudo que estava selecionado, inclusive
   ponto com selecao 0,4. E mascara dura. Mascara suave nas proprias curvas so
