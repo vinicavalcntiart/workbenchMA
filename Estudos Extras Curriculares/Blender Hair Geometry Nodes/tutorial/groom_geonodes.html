@@ -841,6 +841,9 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <tr><td>Shrinkwrap na cabeça depois do Braid</td><td>o Braid afunda 58% do trecho do crânio</td></tr>
 <tr><td>Normal de uma malha lisa no shader</td><td>cel-shading e pelo pictórico com 2 nodes</td></tr>
 <tr><td>Node Bake para reproduzir</td><td>353 ms viram 9 ms por quadro</td></tr>
+<tr><td>Região com direção própria: segundo conjunto de guias + GR Transição</td><td>a direção das guias domina; as raízes dos dois ramos são idênticas</td></tr>
+<tr><td>Exportar em USD</td><td>Alembic perde todos os atributos (cor por mecha, UV da raiz)</td></tr>
+<tr><td>Multidão com Shift+D do conjunto</td><td>Alt+D empilha o cabelo na cabeça original; Collection Instance repete igual</td></tr>
 </table></div>
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
   <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 35 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
@@ -850,7 +853,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Ponta Virada → GR Onda S ou GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
     <li>Para variações, ligue um único node Integer no Seed de todos.</li>
   </ol></div>
-<p>A pasta <code>laboratorio/exemplos/</code> tem três cenas prontas feitas só com a biblioteca: cacheada com vento, criatura pictórica e anime com cel-shading. Nenhum arquivo externo.</p>
+<p>A pasta <code>laboratorio/exemplos/</code> tem o arquivo de partida <code>comeco_rapido.blend</code> e três cenas prontas feitas só com a biblioteca: cacheada com vento, criatura pictórica e anime com cel-shading. Nenhum arquivo externo.</p>
 <figure><img src="img/lab/21_lib_sheet.jpg" alt="Quatro cabeças com estilos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro grooms montados só com os grupos GR: fita, Merida, onda S com Toon e mecha chunky.</figcaption></figure>
   <h2 id="lab-estilo" style="margin-top:2rem">Estilizado</h2>
 <h3 style="margin-top:1.6rem">Mecha em fita (Pixar)</h3>
@@ -977,6 +980,14 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <div class="box do"><h4>Como fazer</h4><ol><li>Chapéu: copa e aba em objetos separados. Shrinkwrap na cabeça com Factor = Raycast para cima na copa <b>ou</b> para baixo na aba. Pontos furando a copa: 1.568 → 0.</li><li>Ombros: Shrinkwrap no tronco com Above Surface 0. Pontos dentro dos ombros: 9,8% → 0,2%.</li></ol></div>
 <figure><img src="img/lab/74_chapeu_sheet.jpg" alt="Três cabeças de chapéu" loading="lazy" style="width:100%;height:auto"><figcaption>Sem ajuste, máscara com a aba (tudo cola) e a máscara certa.</figcaption></figure>
 <figure><img src="img/lab/75_ombro_sheet.jpg" alt="Três bustos com cabelo longo" loading="lazy" style="width:100%;height:auto"><figcaption>Sem colisão o cabelo some nos ombros; com Shrinkwrap no tronco, apoia.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Pipeline: USD, Alembic e custo de render</h3>
+<div class="tbl"><table>
+<tr><th>Formato</th><th>O que chega do outro lado</th></tr>
+<tr><td>Alembic</td><td>fios, pontos e raio. <b>Nenhum atributo</b>, nem cor, mesmo com as opções ligadas</td></tr>
+<tr><td>USD</td><td>fios, raio e quase todos os atributos: cor por mecha, <code>guide_curve_index</code>, <code>surface_uv_coordinate</code></td></tr>
+</table></div>
+<p>No render, 28 vezes mais fios custaram só 2,2 vezes o tempo (2,4 mil fios em 5,1 s; 70 mil em 11,4 s). O caro é avaliar a cadeia, não renderizar.</p>
+<figure><img src="img/lab/110_copias_sheet.jpg" alt="Três fileiras de cabeças" loading="lazy" style="width:100%;height:auto"><figcaption>Shift+D varia, Collection Instance repete igual, Alt+D empilha o cabelo na primeira cabeça.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Um groom, várias cabeças</h3>
 <p>A mesma cadeia procedural serviu numa cabeça redonda, ovo e larga sem mudar nenhum valor. Para criança, use <b>escala de objeto não aplicada</b>: todas as distâncias escalam juntas.</p>
 <figure><img src="img/lab/51_heads_sheet.jpg" alt="Seis cabeças com o mesmo penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Com a malha escalada, fio, mecha e onda continuam em tamanho de adulto. Com a escala do objeto, sai réplica exata.</figcaption></figure>
