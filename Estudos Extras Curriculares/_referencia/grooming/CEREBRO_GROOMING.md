@@ -760,6 +760,26 @@ valem direto para uma cabeça humana em metros. Scripts em
 `Blender Hair Geometry Nodes/laboratorio/scripts/`, folhas de contato em
 `laboratorio/img/`. Cada receita cita a folha.
 
+### 17.0 As regras que mais pesaram (resumo do laboratório)
+
+| # | Regra | Por quê (medido) | Onde |
+|---|---|---|---|
+| 1 | Value node no Density do Interpolate | o painel trava em 10.000/m² (~420 fios na cabeça) | 17.1 |
+| 2 | Curl: Frequency = voltas por metro ÷ 3; nunca sorteada por fio | Frequency por fio desmancha o cacho | 17.1, 17.3 |
+| 3 | Clump Shape 0,25 | Shape 0 abre careca na raiz | 17.2 |
+| 4 | Aleatório por mecha: ID = `guide_curve_index` | por fio vira ruído | 17.3, 17.5 |
+| 5 | Noise/Frizz cumulativos antes de Curl, Braid e Subdivide | o deslocamento cresce com o número de pontos | 17.7 |
+| 6 | Ponta Virada (Roll) antes de Onda/Cacho, Subdivisão 0 ou 1 | 6,8 s → 0,7 s | 17.54 |
+| 7 | Shrinkwrap com Above Surface 0 | 0,5 (padrão) achata o groom inteiro | 17.24 |
+| 8 | Deform Curves on Surface é o último node de forma | nas guias, a raiz descola 12,6 mm; posição lida depois dele escorrega 46% | 17.46 |
+| 9 | Feche a topologia do scalp antes de pentear | Triangulate re-sorteia todas as raízes | 17.38 |
+| 10 | Scalp pintado com a cor da raiz | 60 mil fios cobrem como 300 mil | 17.42 |
+| 11 | Escala de objeto não aplicada | o groom inteiro escala junto (criança = réplica) | 17.45 |
+| 12 | Depois do Braid (trança), Shrinkwrap na cabeça | o Braid afunda 58% do trecho do crânio | 17.61 |
+| 13 | Normal de uma malha lisa no shader | cel-shading e pelo pictórico com 2 nodes | 17.64, 17.65 |
+| 14 | Node Bake para reproduzir groom animado | 353 → 9 ms por quadro | 17.63 |
+| 15 | Física: guias com UV de fixação, Substeps 40, Collider por coleção | sem UV explode; Surface Collision no scalp explode | 17.25 |
+
 ### 17.1 Armadilhas da 5.2 medidas
 
 - **Scalp.** O Interpolate acha o scalp pelo Object Data do Curves (Surface e
