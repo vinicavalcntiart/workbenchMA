@@ -690,7 +690,8 @@ para transcrições da Blender Conference, quando houver legenda.
 ## 17. Laboratório: receitas testadas em bpy 5.2.2 (2026-09-28)
 
 **Índice rápido** (a receita completa está na subseção; a biblioteca pronta,
-em `laboratorio/receitas_grooming.blend`, 17.19):
+em `laboratorio/receitas_grooming.blend`, 17.19; as regras que mais pesaram
+estão resumidas em 17.0):
 
 | Quero | Faça | Onde |
 |---|---|---|
@@ -770,6 +771,10 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Animal com tufos e manchas por região | máscaras de posição → Trim e atributos; cor por Color Ramp, não melanina | 17.78 |
 | Máscara de região sem vertex group | GR Máscara por Posição (caixa suave pela raiz) | 17.79 |
 | Moicano / crista | raspado + Comprimento até a Malha misturados por Máscara por Posição | 17.80 |
+| Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
+| Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
+| Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
+| Renders de referência | `laboratorio/img/finais/` | 17.22 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
