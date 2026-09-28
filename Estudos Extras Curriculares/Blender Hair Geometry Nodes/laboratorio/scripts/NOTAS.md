@@ -108,3 +108,4 @@
 - Controle na viewport: Empty -> Object Info (Original) Scale Z -> MapRange 1..2 -> Levanta. Keyframe na escala funciona.
 - Mao: Empty esfera R 4,5cm empurra pontos (max(R-d,0) na direcao) + Shrinkwrap: q25 1773 -> 0; q13 (mao no cranio) 650: Shrinkwrap devolve para dentro da mao.
 - Desvio depois do Shrinkwrap: 0 dentro em q13 e q25. GR Desviar de Objeto validado (0 pts). Biblioteca 34 grupos.
+- Anel anime: TexCoord Object Z + 3*|p|^2 -> MapRange -> Ramp constant 0,52-0,57 -> Emission. Intercept = degraus.

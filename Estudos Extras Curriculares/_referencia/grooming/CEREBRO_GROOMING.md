@@ -775,6 +775,7 @@ estão resumidas em 17.0):
 | Cacho em cabelo curto | raio relativo ao comprimento manda, não as voltas | 17.82 |
 | Pelo arrepiado (susto) | animar o Levanta da GR Pentear por Curva | 17.83 |
 | Mão/objeto passando pelo cabelo | GR Desviar de Objeto depois do Shrinkwrap | 17.84 |
+| Anel de brilho de anime | faixa na coordenada Object (não no Intercept) → Emission | 17.85 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2608,3 +2609,21 @@ basta; 7 nodes.
 Pronto em **GR Desviar de Objeto** (Objeto, Raio). Validado do .blend: 0
 pontos dentro de 4,4 cm do Empty. Serve para ombro, gola, mão, chapéu
 redondo: um Empty no centro e o raio certo.
+
+### 17.85 Anel de brilho de anime [img/99_anel_sheet]
+
+Sobre o GR Cabelo Cel (17.65), uma faixa de brilho desenhada, que não
+depende da luz. No shader:
+
+1. Texture Coordinate **Object** → Z + 3 × (x² + y² + z²) (a faixa desce
+   nas laterais acompanhando a curva do crânio) → Map Range −0,1 → 0,2.
+2. Color Ramp **Constant**: preto, branco de 0,52 a 0,57, preto.
+3. Rampa → Strength de uma Emission rosa-clara (0,8) → Add Shader com o Toon.
+
+| Faixa lida em | Resultado |
+|---|---|
+| Hair Info **Intercept** (0,22 a 0,30 do fio) | degraus: cada fio começa numa altura diferente |
+| **Coordenada do objeto** | arco contínuo contornando a cabeça |
+
+O anel fica preso à cabeça e se move com ela (coordenada do objeto). Nada
+no Geometry Nodes: só o material.
