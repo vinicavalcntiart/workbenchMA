@@ -657,6 +657,8 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Pelo denso escuro por dentro | Sombra sólida entre camadas | Transparent BSDF por Light Path no shader | pal/bcon2026-steve-chow-...md |
 | Sim explode | Curva dentro de collider em rest; escala do objeto | Shrinkwrap antes; aplicar escala | com/devtalk-45449-...md |
 | Sim com jitter | Filhos regenerados por frame | Simular guias, interpolar depois | com/devtalk-45449-...md |
+| Cílio em fileira única, parece pente | Scalp é uma faixa estreita e plana: todas as normais iguais | Usar 2 ou 3 loops que dobram a borda da pálpebra como scalp | lab 17.97 |
+| Cílio curto, sumindo para dentro da pálpebra | Normal do scalp para dentro | Recalculate Outside no scalp; conferir com Face Orientation | lab 17.97 |
 
 ---
 
@@ -725,7 +727,7 @@ estão resumidas em 17.0):
 | Muitos cortes rápido; ombré | uma árvore, só números; Intercept → Color Ramp | 17.33 |
 | Limpar ruído | Blend Hair Curves 1 cm; Smooth só com Shape 0,8 | 17.34 |
 | Vento | Scene Time → seno + Noise 4D → Custom Force → Effectors; força 0,12 | 17.35 |
-| Cílios | faixa da esfera do olho ×1,06; Para fora 1, gravidade −1,3 | 17.36 |
+| Cílios | margem arredondada da pálpebra como scalp (normal para fora); tufos + canto externo longo | 17.97 (17.36 superado) |
 | Cabelo crescendo | Scene Time − atraso por mecha → Trim Length Factor, Replace off | 17.37 |
 | Multidão (LOD) | distância raiz-câmera → Random Boolean → Delete; raio × 1/√fração | 17.38 |
 | Silhueta por malha simples | Geometry Proximity na malha → Mix com Spline Parameter → Set Position nas guias | 17.39 |
@@ -789,6 +791,7 @@ estão resumidas em 17.0):
 | Quanto custa mais fio no render | 28× fios = 2,2× tempo; o caro é avaliar a cadeia | 17.94 |
 | Sobrancelha expressiva | escala de um Empty → offset (levantar e franzir) | 17.95 |
 | Personagem com cortina e balanço | dois ramos de guias + GR Balanço + Transição | 17.96 |
+| Cílio cartoon cheio, em camadas | scalp = margem da pálpebra (−10° a 90°), Clump 1,8 mm, Trim por X | 17.97 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -836,6 +839,7 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 17 | Região com direção própria (franja, costeleta): segundo conjunto de guias + GR Transição | a direção das guias domina; Trim e empurrão não bastam. As raízes dos dois ramos são idênticas | 17.91 |
 | 18 | Para levar o groom a outro programa, USD | Alembic perde todos os atributos (cor por mecha, UV da raiz); USD leva | 17.93 |
 | 19 | Multidão: Shift+D do conjunto e reapontar o Surface | Alt+D empilha o cabelo na cabeça original; Collection Instance repete igual | 17.59 |
+| 20 | Scalp de cílio = margem arredondada da pálpebra, com a normal para fora | faixa plana dá uma fileira só (pente); normal invertida faz o fio nascer para dentro | 17.97 |
 
 ### 17.1 Armadilhas da 5.2 medidas
 
@@ -1465,6 +1469,8 @@ depois, no segundo modificador. Deslocamento médio das pontas no X (fio 30 cm):
 - Para vento de outra direção, troque o eixo do Combine XYZ; não gire nada.
 
 ### 17.36 Cílios estilizados [img/40_lash_sheet]
+
+> **Superado por 17.97.** O Vini apontou (2026-09-28) que estes cílios saem numa fileira só, como se o scalp fosse uma edge. Correto: a faixa na esfera do olho não tem espessura. Mantido como referência do erro.
 
 O teste 17.32 escondia os cílios porque a região ficava na cabeça, atrás do
 globo ocular. A superfície certa é a **pálpebra**: uma faixa da própria
@@ -2888,3 +2894,51 @@ Na primeira versão, dois erros de ordem que as regras já previam:
   pontos): o Noise cumulativo dobrou e os strays explodiram (regra 5).
 - Balanço com amplitude 0,22 rad: no quadro 7 a franja cobria o rosto.
   0,12 rad é o limite para franja curta não invadir o olho.
+
+### 17.97 Cílios cartoon em camadas: a pálpebra é o scalp [img/115_cilios_palpebra_sheet]
+
+Crítica do Vini (2026-09-28) aos cílios do 17.36: "o scalp é como uma edge,
+não tem geração em outros eixos, só na horizontal". Causa: a faixa na esfera
+do olho tem 5 mm de altura e nenhuma espessura. Todas as normais ficam quase
+iguais e o Generate Hair Curves solta uma fileira única.
+
+Correção, sem node novo:
+
+1. **Scalp = a borda arredondada da pálpebra**, não uma faixa plana. Na
+   malha de produção, selecione os 2 ou 3 loops que dobram a margem da
+   pálpebra, do lado de fora (em cima) até o lado da abertura, e separe
+   como objeto do scalp. No lab foi um tubo de raio 1,6 mm na margem, com
+   a faixa entre −10° e 90° (0° = para fora do olho, 90° = para a
+   abertura).
+2. **Confira a normal** (Face Orientation azul para fora). Com a normal
+   invertida os fios nasceram para dentro da pálpebra e pareceram curtos
+   e grudados: foi o primeiro erro deste teste.
+3. GR Guias Procedurais: Para fora 1, Gravidade −1,3, 9 a 12 mm, sem
+   colisão com a cabeça. Com a Cabeça (colisão) o offset de 6 mm do
+   Shrinkwrap achatou os cílios para trás.
+4. **Canto externo mais longo** (4 nodes): Curve Root → Separate X → Map
+   Range Smoothstep (X do canto interno → X do canto externo, 0,5 → 1) →
+   Trim Hair Curves Length Factor, Replace Length e Scale Uniform
+   desligados. Gere com o comprimento do canto externo; o Trim encurta o
+   resto.
+5. **Tufos cartoon**: Clump Hair Curves, Guide Distance 1,8 mm, Shape 0,3,
+   Tip Spread 0,2 mm. Profile raio 0,3 mm, Shape 0,8.
+
+| Variante | Fios por olho | Resultado |
+|---|---|---|
+| Faixa na esfera (17.36) | 65 | fileira única, pente |
+| Tubo, só normal, 1,2 milhão/m² | 204 | linha de cílio real com profundidade e leque radial |
+| + Clump 1,8 mm + canto longo, 2 milhões/m² | 333 | cílio Disney: massa escura na raiz, pontas em tufos |
+| Clump 3 mm, raio 0,5 mm, Shape do clump 0,5 | 258 | chunky DreamWorks: poucas pontas grossas |
+
+Por que funciona: na margem arredondada a normal varia em dois eixos. Ao
+longo do arco ela abre o leque radial. Na espessura, as fileiras de trás
+sobem e as da frente avançam. A densidade alta vira volume, não parede.
+
+Gravidade (medida com a normal certa): −0,6 deixa os cílios quase retos
+para a frente; −1,3 dá a curva para cima do cartoon; −1,8 (variante chunky)
+deixa os tufos quase verticais.
+
+Script: `laboratorio/scripts/r115_lash_lid.py` (variantes a a e; env PSI,
+GRAV, COL, SIDE).
+
