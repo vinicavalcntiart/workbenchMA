@@ -622,6 +622,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Grupos GR quebrados ao abrir em outra máquina | Utilitários do Essentials (Curve Root, Rest Surface...) vieram linkados com caminho da instalação | Tornar local antes de salvar (feito na biblioteca do laboratório) | lab 17.72 |
 | Cabeça inteira vira uma trança só | GR Trança Grossa antiga com Guide Distance fixo 0,3 m | Use o Tamanho da trança (~1,5 cm) | lab 17.75 |
 | Cabelo cai para o lado errado em cabeça inclinada | Gravidade das guias procedurais é o −Z do objeto | Modele a cabeça em pé; em cena, física ou Simulation to World | lab 17.87 |
+| Cópias do personagem carecas ou com o mesmo cabelo | Alt+D compartilha o Surface (cabelo vai para a cabeça original); Collection Instance reusa o mesmo objeto | Shift+D do conjunto e reapontar o Surface | lab 17.59 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -2058,6 +2059,17 @@ foi ajustado à mão. Render 900 px com as quatro: 17,5 s.
   inteiro fixo exposto no modificador.
 - Pronto em **GR Semente do Objeto** (saídas Seed, Aleatório A, B e C),
   validado do .blend: três posições deram 0,422, 0,097 e 0,191.
+
+Como multiplicar o personagem importa [img/110_copias_sheet]:
+
+| Como | Resultado |
+|---|---|
+| **Shift+D** (Curves com dados próprios, Surface apontando para a HairCap da cópia) | cada um com cabelo diferente (o teste acima) |
+| **Collection Instance** | os quatro **idênticos**: a instância reusa o mesmo objeto avaliado, a posição da instância não chega no Self Object |
+| **Alt+D** (dados compartilhados) | o Surface está nos dados: as cópias plantam cabelo na HairCap original, **empilhado na primeira cabeça**, e as outras ficam carecas |
+
+Para multidão com variação: Shift+D do conjunto (cabeça, HairCap, Cabelo)
+e reapontar o Surface; ou instâncias com variação pela cor/material apenas.
 
 ### 17.60 Meio preso com dois grupos prontos [img/67_meiopreso_sheet]
 

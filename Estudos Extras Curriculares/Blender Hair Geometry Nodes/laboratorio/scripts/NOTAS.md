@@ -119,3 +119,4 @@
 - Cortina PARCIAL: Roll para fora na frente vira tufo para cima; empurrao lateral cobre a testa mas o V e fraco. Falta risca em ilhas.
 - Cortina RESOLVIDA: 2 ramos Guias Procedurais (cabelo; franja 14cm tras -0,9 lado 1,1) -> Densidade -> Resample 24 -> Transicao com Mascara frente -> Mecha + Lado da Risca, ilhas. Mesmo scalp/seed = mesmas raizes.
 - Costeleta: teste INVALIDO: scalp do lab recorta |x|>8cm z<2,5cm y<2,5cm (orelha+costeleta) -> 0 raizes na regiao. Refazer com hair cap que inclua costeleta.
+- Copias: Shift+D ok (variacao); Collection Instance = todos iguais; Alt+D = Surface compartilhado, cabelo empilhado na cabeca original, copias carecas.
