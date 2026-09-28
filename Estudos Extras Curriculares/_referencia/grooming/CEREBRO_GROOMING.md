@@ -487,7 +487,21 @@ Observado em teste headless, nao em fonte externa:
   Ramp) ou Point (varia no fio, ex. Spline Parameter → Color Ramp), Name
   `cor`. No material: Attribute Type **Geometry**, mesmo nome → Color do
   Principled Hair BSDF em Direct Coloring. Direct Coloring clareia: use tons
-  mais escuros [img/124_cor_atributo_sheet, 124_cor_atributo_nodes]. Por fio, sem Create Guide
+  mais escuros [img/124_cor_atributo_sheet, 124_cor_atributo_nodes].
+- **Edit Mode sempre mostra as guias originais** (2026-09-28): Delete ou
+  Separate Geometry no modificador nao escondem nada no Edit Mode. E o
+  Curves de cabelo **nao tem Hide/Reveal** na 5.2 (bpy.ops.curves sem hide;
+  manual modeling/curves_new sem Show/Hide; o Hide de curve.rst e do Curve
+  antigo). Duas saidas nativas:
+  1. Node tool "Selecionar Conjunto": Named Attribute (Boolean, Name do
+     input) → **Set Selection** (Spline) → Output; Identifier
+     `curves.selecionar_conjunto`, Modes Edit e Sculpt
+     [img/125_tool_selecionar_conjunto]. Nao executado aqui (sem UI).
+  2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
+     principal, Object Info (Relative) de cada conjunto → Join Geometry com a
+     propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
+     dois objetos deram 15.495 filhos, igual a um objeto so. Edita um objeto
+     por vez (Local View, tecla /). Por fio, sem Create Guide
   Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
   Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
   Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
