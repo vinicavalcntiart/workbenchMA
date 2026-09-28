@@ -783,6 +783,7 @@ estão resumidas em 17.0):
 | Hairline suave na testa | campo de posição no Density Mask (1 → 0,08 nos últimos 3,5 cm) | 17.89 |
 | Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
 | Franja cortina | dois conjuntos de guias procedurais misturados por Transição + risca em ilhas | 17.91 |
+| Pontos certos para cada comprimento | Resample em modo Length depois do Trim | 17.92 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2765,3 +2766,19 @@ seed**: o Interpolate distribui as raízes igual e a contagem de pontos bate.
 Medido: A e B com 20.869 fios e 500.856 pontos, diferença máxima entre as
 raízes **0 mm**. A distribuição depende do scalp, da densidade e do seed,
 não das guias.
+
+### 17.92 Resample por comprimento em corte de camadas [img/108_resample_sheet]
+
+Topo cortado a 12% (Máscara por Posição + Trim), resto 30 cm, Onda S
+depois do Resample:
+
+| Resample | Pontos | Avaliação | Visual |
+|---|---|---|---|
+| Count 24 | 1,36 M | 187 ms | — |
+| **Length 1,25 cm** | 1,27 M | 171 ms | igual |
+
+Ganho pequeno (7%) porque só o topo é curto. Count fixo gasta os mesmos
+pontos em fio de 3 cm e de 30 cm; em pelo com comprimentos muito
+diferentes (17.78, bochecha 2,2× e corpo 1×) ou com muitos fios curtos, o
+modo Length rende mais. Regra: Resample **Length** quando o Trim deixa
+comprimentos muito variados; Count quando o corte é uniforme.
