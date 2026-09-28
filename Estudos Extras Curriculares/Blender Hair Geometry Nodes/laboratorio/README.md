@@ -27,6 +27,10 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Onda S | onda plana de desenho | depois da Mecha |
 | GR Cor por Mecha | grava `mecha_rand` para o shader | em qualquer ponto depois da Mecha |
 | GR Mecha Chunky | fios viram fitas de malha torcidas | último |
+| GR Ponta Virada | ponta para fora (flip) ou para dentro, variando por mecha | depois da Mecha |
+| GR Trança Grossa | trança de raio constante | depois de Densidade Livre com Distância das guias ~0,02 |
+| GR Corte por Região | curto onde o vertex group vale 0, sem clump ali | depois do Interpolate |
+| GR Pelo em Tufos | pelo estilizado com subpelo e pelo de guarda opcionais | sozinho, no lugar do Interpolate |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e

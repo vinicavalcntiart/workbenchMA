@@ -194,6 +194,91 @@ cmx = g.n('ShaderNodeCombineXYZ'); g.l(mx, cmx.inputs['X']); g.l(mx, cmx.inputs[
 g.l(cmn.outputs[0], mr.inputs[7]); g.l(cmx.outputs[0], mr.inputs[8])
 g.l(mr.outputs['Vector'], o); libs.append(g.ng)
 
+
+# 10. Ponta Virada
+g = G("GR Ponta Virada", "Roll com a direcao radial: ponta vira para fora (flip) ou para dentro. Roll Direction do Essentials e 'para onde enrola', nao eixo.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+fora = g.inp("Para fora", 'NodeSocketBool', False, desc="Ligado = flip anos 60. Desligado = ponta para dentro")
+rl = g.inp("Comprimento do rolo", 'NodeSocketFloat', 0.06, 0.0, 10.0, "", 'DISTANCE')
+rr = g.inp("Raio do rolo", 'NodeSocketFloat', 0.02, 0.0, 10.0, "", 'DISTANCE')
+var = g.inp("Variação por mecha", 'NodeSocketFloat', 0.4, 0.0, 1.0, "0,4 = comprimento entre 60% e 140%", 'FACTOR')
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+rt = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+sw = g.n('GeometryNodeSwitch', props={'input_type':'FLOAT'}); sw.inputs['False'].default_value = -1.0; sw.inputs['True'].default_value = 1.0; g.l(fora, sw.inputs['Switch'])
+sc = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(rt.outputs['Root Position'], sc.inputs[0]); g.l(sw.outputs[0], sc.inputs['Scale'])
+lo = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); lo.inputs[0].default_value = 1.0; g.l(var, lo.inputs[1])
+hi = g.n('ShaderNodeMath', props={'operation':'ADD'}); hi.inputs[0].default_value = 1.0; g.l(var, hi.inputs[1])
+r = g.n('FunctionNodeRandomValue', props={'data_type':'FLOAT'}); g.l(guide_id(g), r.inputs['ID']); g.l(lo.outputs[0], r.inputs['Min']); g.l(hi.outputs[0], r.inputs['Max']); g.l(sd, r.inputs['Seed'])
+ml = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(r.outputs['Value'], ml.inputs[0]); g.l(rl, ml.inputs[1])
+ro = g.n('GeometryNodeGroup', group=EG['Roll Hair Curves'], Factor=1.0, Subdivision=2, Random_Orientation=0.0, Preserve_Length=True)
+g.l(geo, ro.inputs['Geometry']); g.l(sc.outputs[0], ro.inputs['Roll Direction']); g.l(ml.outputs[0], ro.inputs['Roll Length']); g.l(rr, ro.inputs['Roll Radius']); g.l(sd, ro.inputs['Seed'])
+g.l(ro.outputs['Geometry'], o); libs.append(g.ng)
+
+# 11. Tranca Grossa
+g = G("GR Trança Grossa", "Braid com raio constante (Shape 0, Factor Min 0,7). Use depois de um Interpolate com Distance to Guides ~0,02: uma tranca por guia.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+rad = g.inp("Raio", 'NodeSocketFloat', 0.016, 0.0, 1.0, "", 'DISTANCE')
+fq = g.inp("Cruzamentos", 'NodeSocketFloat', 1.0, 0.0, 100.0, "Frequency: 2 = fechada, 0,5 = solta")
+ini = g.inp("Começa em", 'NodeSocketFloat', 0.12, 0.0, 1.0, "", 'FACTOR')
+fmin = g.inp("Espessura na ponta", 'NodeSocketFloat', 0.7, 0.0, 10.0, "Factor Min. 0 afina ate sumir")
+o = g.out("Geometry", 'NodeSocketGeometry')
+br = g.n('GeometryNodeGroup', group=EG['Braid Hair Curves'], Factor=1.0, Subdivision=2, Shape=0.0, Factor_Max=1.0, Guide_Distance=0.3, Existing_Guide_Map=False)
+g.l(geo, br.inputs['Geometry']); g.l(rad, br.inputs['Radius']); g.l(fq, br.inputs['Frequency']); g.l(ini, br.inputs['Braid Start']); g.l(fmin, br.inputs['Factor Min'])
+g.l(br.outputs['Geometry'], o); libs.append(g.ng)
+
+# 12. Corte por Regiao
+g = G("GR Corte por Região", "Encurta onde o vertex group do scalp vale 0 e desliga o clump ali. Vertex group chega nos fios como atributo de Curve.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+vg = g.inp("Vertex group (1 = longo)", 'NodeSocketString', "topo")
+ln = g.inp("Comprimento curto", 'NodeSocketFloat', 0.025, 0.0, 10.0, "", 'DISTANCE')
+gd = g.inp("Tamanho da mecha", 'NodeSocketFloat', 0.02, 0.0, 1.0, "", 'DISTANCE')
+sh = g.inp("Shape do clump", 'NodeSocketFloat', 0.25, -1.0, 1.0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+na = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT'}); g.l(vg, na.inputs['Name'])
+inv = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); inv.inputs[0].default_value = 1.0; g.l(na.outputs['Attribute'], inv.inputs[1])
+tr = g.n('GeometryNodeGroup', group=EG['Trim Hair Curves'], Replace_Length=True, Scale_Uniform=False, Random_Offset=0.004)
+g.l(geo, tr.inputs['Geometry']); g.l(ln, tr.inputs['Length']); g.l(inv.outputs[0], tr.inputs['Mask'])
+cl = g.n('GeometryNodeGroup', group=EG['Clump Hair Curves'], Tip_Spread=0.002, Preserve_Length=True, Existing_Guide_Map=False)
+g.l(tr.outputs['Geometry'], cl.inputs['Geometry']); g.l(na.outputs['Attribute'], cl.inputs['Factor']); g.l(gd, cl.inputs['Guide Distance']); g.l(sh, cl.inputs['Shape'])
+g.l(cl.outputs['Geometry'], o); libs.append(g.ng)
+
+# 13. Pelo em Tufos
+g = G("GR Pelo em Tufos", "Pelo estilizado de personagem: Interpolate denso + Clump pequeno Shape 0,25. Opcional subpelo e pelo de guarda.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+den = g.inp("Fios por m2", 'NodeSocketFloat', 1.5e6, 0.0, 1e9)
+va = g.inp("Viewport", 'NodeSocketFloat', 0.2, 0.0, 1.0, "", 'FACTOR')
+td = g.inp("Tamanho do tufo", 'NodeSocketFloat', 0.008, 0.0, 1.0, "", 'DISTANCE')
+rad = g.inp("Raio do fio", 'NodeSocketFloat', 0.0003, 0.0, 1.0, "", 'DISTANCE')
+sub = g.inp("Subpelo", 'NodeSocketBool', False, desc="Camada curta (45%) sem clump, 2x densidade")
+gua = g.inp("Pelo de guarda", 'NodeSocketBool', False, desc="Poucos fios 1,4x mais longos e 3x mais grossos")
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+def interp_node(dmul, seed_off):
+    it = g.n('GeometryNodeGroup', group=EG['Interpolate Hair Curves']); g.l(geo, it.inputs['Geometry']); g.l(va, it.inputs['Viewport Amount'])
+    m = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(den, m.inputs[0]); m.inputs[1].default_value = dmul; g.l(m.outputs[0], it.inputs['Density'])
+    a = g.n('FunctionNodeIntegerMath', props={'operation':'ADD'}); g.l(sd, a.inputs[0]); a.inputs[1].default_value = seed_off; g.l(a.outputs[0], it.inputs['Seed'])
+    return it
+def prof(src, rmul):
+    p = g.n('GeometryNodeGroup', group=EG['Set Hair Curve Profile'], Shape=0.5, Factor_Min=0.0, Factor_Max=1.0); g.l(src, p.inputs['Geometry'])
+    m = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(rad, m.inputs[0]); m.inputs[1].default_value = rmul; g.l(m.outputs[0], p.inputs['Radius']); return p.outputs['Geometry']
+top = interp_node(1.0, 0)
+cl = g.n('GeometryNodeGroup', group=EG['Clump Hair Curves'], Factor=1.0, Shape=0.25, Tip_Spread=0.001, Preserve_Length=True, Existing_Guide_Map=False)
+g.l(top.outputs['Geometry'], cl.inputs['Geometry']); g.l(td, cl.inputs['Guide Distance']); g.l(sd, cl.inputs['Seed'])
+top_o = prof(cl.outputs['Geometry'], 1.0)
+un = interp_node(2.0, 11)
+ut = g.n('GeometryNodeGroup', group=EG['Trim Hair Curves'], Replace_Length=False, Length_Factor=0.45, Scale_Uniform=True, Random_Offset=0.2); g.l(un.outputs['Geometry'], ut.inputs['Geometry'])
+un_o = prof(ut.outputs['Geometry'], 0.5)
+gu = interp_node(0.02, 23)
+gt = g.n('GeometryNodeGroup', group=EG['Trim Hair Curves'], Replace_Length=False, Length_Factor=1.4, Scale_Uniform=True); g.l(gu.outputs['Geometry'], gt.inputs['Geometry'])
+gu_o = prof(gt.outputs['Geometry'], 3.0)
+e = g.n('GeometryNodeGeometryToInstance')  # placeholder removido abaixo
+g.ng.nodes.remove(e)
+s1 = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(sub, s1.inputs['Switch']); g.l(un_o, s1.inputs['True'])
+s2 = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(gua, s2.inputs['Switch']); g.l(gu_o, s2.inputs['True'])
+j = g.n('GeometryNodeJoinGeometry'); g.l(s2.outputs[0], j.inputs[0]); g.l(top_o, j.inputs[0]); g.l(s1.outputs[0], j.inputs[0])
+g.l(j.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

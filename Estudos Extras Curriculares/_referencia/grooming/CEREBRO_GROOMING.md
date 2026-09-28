@@ -940,14 +940,35 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Nove node groups "GR" e dois materiais, marcados como asset, feitos com as
+Treze node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
-  Mecha, GR Mecha Chunky, GR Ver em Cores.
+  Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
+  Grossa, GR Corte por Região, GR Pelo em Tufos (13 grupos)
+  [img/21_lib_sheet, 23_lib2_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
 problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
 mecha**, senão mechas vizinhas se cruzam em X.
+
+### 17.20 Ponta virada com Roll (flip e ponta para dentro) [img/22_roll_sheet, 22c_roll_sheet, t_roll.py]
+
+**Roll Direction não é eixo**, apesar da descrição dizer "axis". Por dentro, o
+Roll tira do vetor a componente ao longo do fio e usa o que sobra como o lado
+para onde a ponta enrola. Medido na ponta, Roll Length 0,06 e Roll Radius
+0,02, Random Orientation 0:
+
+| Roll Direction | Ponta, distância horizontal do eixo da cabeça |
+|---|---|
+| sem Roll | 14,4 cm |
+| Curve Root → Root Position | **17,8 cm: vira para fora** (flip anos 60) |
+| − Root Position (Vector Math Scale −1) | **10,2 cm: enrola para dentro** (bob) |
+| Cross(Root Position, Z) | igual a sem Roll: enrola de lado |
+| eixo fixo no mundo | cada lado da cabeça enrola para um lado |
+
+Nos dois casos a ponta sobe cerca de 6 cm. Roll Length sorteado por mecha (0,6
+a 1,4 × o valor, ID = `guide_curve_index`) fica mais natural. Pronto em GR
+Ponta Virada.
