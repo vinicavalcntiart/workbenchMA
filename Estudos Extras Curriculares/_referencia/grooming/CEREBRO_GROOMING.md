@@ -787,6 +787,7 @@ estão resumidas em 17.0):
 | Pontos certos para cada comprimento | Resample em modo Length depois do Trim | 17.92 |
 | Levar o groom para outro programa | USD leva os atributos; Alembic só posição e raio | 17.93 |
 | Quanto custa mais fio no render | 28× fios = 2,2× tempo; o caro é avaliar a cadeia | 17.94 |
+| Sobrancelha expressiva | escala de um Empty → offset (levantar e franzir) | 17.95 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2843,3 +2844,17 @@ de 26 cm com mecha:
 bem abaixo do linear (BVH). O custo pesado está na **avaliação do Geometry
 Nodes e na memória** (17.14, 17.54), não no render. Para agilidade, economize
 pontos na cadeia antes de economizar fios no render.
+
+### 17.95 Sobrancelha expressiva por um Empty [img/113_sobrancelha_sheet]
+
+Sobrancelha de 17.32 (GR Guias Procedurais na região, 900 mil/m², Clump 4
+mm) + um Empty "CTRL_sobrancelha". Depois do Clump, Set Position Offset Z =
+
+- **levantar**: (Escala Z − 1) × 1,2 cm;
+- **franzir**: (Escala X − 1) × −1 cm × Map Range(\|X\| do ponto, 1,2 → 5 cm
+  vira 1 → 0) (só a ponta interna desce).
+
+Escala (1,1,2) = surpresa, (2,1,1) = bravo. O animador anima o Empty.
+Ressalva: o offset move a raiz junto e a sobrancelha **descola** da pele. Em
+toon isso passa (sobrancelha "flutuando" é convenção); para ficar colada,
+anime a pele com shape key e use Deform Curves on Surface (17.46).
