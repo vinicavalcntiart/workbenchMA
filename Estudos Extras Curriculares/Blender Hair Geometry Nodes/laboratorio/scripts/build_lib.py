@@ -502,7 +502,11 @@ ps = g.n('GeometryNodeInputPosition'); nr = g.n('ShaderNodeVectorMath', props={'
 rc = g.n('GeometryNodeRaycast'); g.l(oi.outputs['Geometry'], rc.inputs['Target Geometry']); g.l(ps.outputs[0], rc.inputs['Source Position']); g.l(nr.outputs[0], rc.inputs['Ray Direction']); rc.inputs['Ray Length'].default_value = 10.0
 nt_ = g.n('FunctionNodeBooleanMath', props={'operation':'NOT'}); g.l(rc.outputs['Is Hit'], nt_.inputs[0])
 dl = g.n('GeometryNodeDeleteGeometry', props={'domain':'POINT'}); g.l(geo, dl.inputs['Geometry']); g.l(nt_.outputs[0], dl.inputs['Selection'])
-g.l(dl.outputs['Geometry'], o); libs.append(g.ng)
+# sem malha ligada: passa direto (antes apagava tudo)
+dsz = g.n('GeometryNodeAttributeDomainSize', props={'component':'MESH'}); g.l(oi.outputs['Geometry'], dsz.inputs['Geometry'])
+has = g.n('FunctionNodeCompare', props={'data_type':'INT','operation':'GREATER_THAN'}); _ins = [x for x in has.inputs if x.type=='INT']; g.l(dsz.outputs['Point Count'], _ins[0]); _ins[1].default_value = 0
+swt = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(has.outputs[0], swt.inputs['Switch']); g.l(geo, swt.inputs['False']); g.l(dl.outputs['Geometry'], swt.inputs['True'])
+g.l(swt.outputs[0], o); libs.append(g.ng)
 
 # 23. Comprimento ate a Malha
 g = G("GR Comprimento até a Malha", "Cada fio vira reta da raiz ate onde bate na malha (normal do scalp + vies). Trolls, espetado, moicano. Depois da GR Densidade Livre (usa n_raiz); depois ligue Clump.")

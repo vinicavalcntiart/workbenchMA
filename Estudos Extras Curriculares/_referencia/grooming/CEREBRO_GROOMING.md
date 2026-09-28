@@ -616,6 +616,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Contorno (casca invertida) deixa tudo preto | A casca bloqueia os raios de sombra | Factor = Maximum(Backfacing, 1 − Is Camera Ray) | lab 17.47 |
 | Groom de repente pesado (segundos por avaliação) | Roll/Ponta Virada depois do Curl, com Subdivision 2: pontos × 4 | Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1 | lab 17.54 |
 | Topo careca ou com ruído depois de trançar | Braid junta o fio inteiro na guia e afunda o trecho do crânio (58% dentro) | Shrinkwrap na cabeça depois do Braid (GR Trança Grossa com Cabeça ligada) | lab 17.61 |
+| Groom sumiu inteiro | GR Corte pela Malha sem malha ligada (versão antiga) | Atualize a biblioteca ou ligue a malha | lab 17.62 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -745,6 +746,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cada cópia com cabelo diferente | Hash da posição do Self Object no Seed e nos Random | 17.59 |
 | Meio preso, mistura regional | GR Transição com Fator = máscara de região; B = GR Rabo de Cavalo | 17.60 |
 | Trança lateral no ombro | Rabo de Cavalo com amarração lateral e Para trás −0,5 → Trança Grossa com a cabeça ligada | 17.61 |
+| Fio saindo por dentro da pele | Shrinkwrap antes de Onda/Cacho (barato); no fim só para render (9× mais caro) | 17.62 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2002,3 +2004,36 @@ trançado de 17.31 era isso.
 
 - Loiro platinado (melanina 0,02) some em pele clara: use 0,1 a 0,15 e scalp
   pintado (17.42).
+
+### 17.62 Auditoria: quanto cabelo entra na cabeça, grupo por grupo
+
+Cadeia típica, 15 mil fios, porcentagem de pontos dentro da cabeça
+(raio < 99,5 mm) depois de cada grupo:
+
+| Depois de | Dentro | Pontos |
+|---|---|---|
+| GR Guias Procedurais | 0,10% | 3 mil |
+| GR Densidade Livre (Interpolate) | **1,71%** | 188 mil |
+| GR Mecha Estilizada | 2,19% | |
+| GR Volume na Raiz | 1,14% (empurra para fora) | |
+| GR Strays em Arco | 1,17% | |
+| GR Ponta Virada | 2,29% | 360 mil |
+| GR Onda S | 2,25% | 1,05 M |
+| GR Cacho por Mecha | 2,54% | 4,15 M |
+
+- O próprio **Interpolate já põe 1,7% dos pontos dentro**: o filho nasce
+  entre guias e corta a curvatura do crânio. Não é bug de grupo.
+- Limpeza com Shrinkwrap Hair Curves (Above 0, Offset 3 mm, sem
+  suavização), medida:
+
+| Onde | Dentro | Avaliação |
+|---|---|---|
+| Sem | 2,34% | 1,1 s |
+| **Antes de Onda e Cacho** | 1,32% | 1,95 s |
+| No fim da cadeia | 0,00% | **9,7 s** |
+
+  Regra: na viewport, Shrinkwrap antes de Onda/Cacho (pouco ponto). Para o
+  render final, se ainda aparecer fio saindo da pele, um no fim.
+- **Bug corrigido: a GR Corte pela Malha sem malha ligada apagava todos os
+  fios** (o Raycast não acerta nada e o Delete leva tudo). Agora, sem malha,
+  passa direto.
