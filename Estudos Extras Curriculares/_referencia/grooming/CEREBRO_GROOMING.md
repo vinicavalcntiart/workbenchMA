@@ -494,6 +494,9 @@ Observado em teste headless, nao em fonte externa:
 
 - Deform Curves on Surface no fim da stack, Surface Rest Position ligado no
   Interpolate [jp/ja-tenp-kukan-2025-09-hair-curves-nodes-geometria.md].
+  Medido na 5.2.2 (lab 17.46): no fim gruda a raiz (0,06 mm); nas guias antes
+  do Interpolate não segura (12,6 mm). No 5.2 o socket chama "Resting
+  Surface" e vem ligado.
 - Shrinkwrap Hair Curves depois de qualquer deformação que possa empurrar
   ponto para dentro da pele: Offset Distance, Above Surface, Smoothing Steps,
   Lock Roots [int/shrinkwrap-hair-curves.md]. Foi pedido por Bystedt para fur
@@ -608,6 +611,8 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Variação "por fio" sai como ruído, fita enrugada | Random Value sem ID num input de ponto sorteia por ponto | Evaluate on Domain (Curve) depois do Random Value | lab 17.3, 17.11 |
 | Mechas mudam de lugar depois de mexer no scalp | Remesh/Decimate/Triangulate mudam a ordem das faces, que semeia a distribuição | Fechar a topologia do scalp antes de pentear | lab 17.38 |
 | Fios descem ou somem com Raycast na malha | Raiz fora da malha | A malha tem que conter todo o scalp | lab 17.40 |
+| Cabeça atravessa o cabelo na animação | Sem Deform Curves on Surface, ou ele antes do Interpolate | Deform no fim da cadeia; Add Rest Position no scalp | lab 17.46 |
+| Padrão de cor escorrega quando anima | Textura por Position lida depois do Deform | Calcular antes do Deform ou usar surface_uv_coordinate | lab 17.46 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -720,6 +725,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Hair cards para jogo | Curve to Mesh com perfil em linha, normal = Tangent × n_raiz, UV em Face Corner | 17.43 |
 | Listra, mancha, roseta no pelo | textura na raiz → atributo → cor + Trim 40% | 17.44 |
 | Mesmo groom em outra cabeça ou criança | troque scalp e colisão; criança = escala de objeto não aplicada | 17.45 |
+| Cabelo seguir cabeça animada | Deform Curves on Surface no fim; padrões por posição antes dele | 17.46 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1599,9 +1605,9 @@ relevo, não como pintura. Corpo de 15 cm de raio, 1,5 M fios/m², tufos de 8 mm
   de pelagem.
 - Escala da textura é em metros do objeto: Scale 3 num corpo de 30 cm dá
   duas faixas; 7 dá listra de tigre.
-- Em personagem animado, troque Root Position por `surface_uv_coordinate`
-  (17.27): posição muda quando o corpo deforma e o padrão escorrega
-  (dedução, não medido aqui).
+- Em personagem animado, calcule o padrão **antes** do Deform Curves on
+  Surface ou use `surface_uv_coordinate` (17.27). Medido em 17.46: depois
+  do Deform, 46% dos fios trocaram de cor.
 
 ### 17.45 Um groom, várias cabeças [img/51_heads_sheet]
 
@@ -1625,3 +1631,28 @@ cabeças de formatos diferentes, trocando só o scalp e a cabeça de colisão:
 - Formato diferente (ovo, larga) não pede ajuste: as guias saem da normal e
   o Shrinkwrap segura no crânio novo.
 - A contagem acompanha a área em metros do objeto: cabeça larga ganha fios.
+
+### 17.46 Cabeça que deforma: onde vai o Deform Curves on Surface [img/52_deform_sheet]
+
+Scalp e cabeça com shape key (inclina 5 cm e estica 2 cm no topo), scalp com
+**Add Rest Position** ligado (Object Data), guias com
+`surface_uv_coordinate`, Interpolate com Resting Surface ligado (padrão).
+Medido com a shape key em 0 e em 1, mesmos fios:
+
+| Onde está o Deform Curves on Surface | Raiz até o scalp deformado | Padrão por posição muda | Padrão por UV muda |
+|---|---|---|---|
+| Nenhum | 12,7 mm (máx. 40) | 0% | 0% |
+| Nas guias, antes do Interpolate | 12,6 mm (máx. 40) | 42% | 39% |
+| No fim, padrão calculado **depois** dele | **0,06 mm** | **46%** | 0% |
+| **No fim, padrão calculado antes dele** | **0,06 mm** | **0%** | **0%** |
+
+1. **Deform Curves on Surface é o último node de forma** (depois de Clump,
+   Curl etc., antes de Profile e Material). Nas guias antes do Interpolate
+   não serve: os filhos nascem na superfície em repouso e a cabeça atravessa
+   o cabelo.
+2. Tudo que lê **Position** (textura por posição, máscara por região,
+   distância à câmera) vem **antes** do Deform, ou lê
+   `surface_uv_coordinate`. Depois dele o padrão escorrega: 46% dos fios
+   trocaram de cor com uma inclinação de 5 cm. Isso confirma a nota de 17.44.
+3. Sem Add Rest Position no scalp, o Rest Surface avisa "Missing rest
+   geometry on surface" (visto no dump do grupo, 5.2.2).
