@@ -826,6 +826,8 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Reprodução lenta</td><td>Node Bake no fim</td></tr>
     <tr><td>Desenhar as guias</td><td>GR Guias Desenhadas (Grease Pencil)</td></tr>
     <tr><td>Máscara de região sem pintar</td><td>GR Máscara por Posição</td></tr>
+    <tr><td>Balanço sem física</td><td>GR Balanço nas guias</td></tr>
+    <tr><td>Região com direção própria</td><td>Segundo conjunto de guias + GR Transição</td></tr>
   </table></div>
 
 <h3 style="margin-top:1.6rem">As regras que mais pesaram</h3>
@@ -841,7 +843,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <tr><td>Node Bake para reproduzir</td><td>353 ms viram 9 ms por quadro</td></tr>
 </table></div>
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 33 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 35 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
@@ -932,6 +934,11 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Cabelo flutuando, sem física</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Nas guias, depois de um Resample 24: Noise Texture <b>4D</b>, Vector = Position, W = Seconds × 0,4, Scale 7.</li><li>Color − 0,5, vezes Spline Parameter<sup>1,5</sup> × 0,2 → Offset do Set Position. A raiz fica parada e a onda anda pelo fio.</li><li>Pronto em <b>GR Flutuar</b>. Serve de vento barato para personagem de fundo.</li></ol></div>
 <figure><img src="img/lab/64_agua.gif" alt="Cabelo loiro flutuando" loading="lazy" style="width:100%;height:auto"><figcaption>Cabelo embaixo d'água: gravidade 0,15 e para trás 0,9 nas guias, Noise 4D por cima.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Balanço, susto e mão, sem física</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li><b>GR Balanço</b> nas guias: gira cada ponto em volta da raiz com um seno defasado ao longo do fio. Atraso 0 balança em bloco; 2,5 rad dá o follow-through.</li><li>Susto: anime o Levanta da GR Pentear por Curva. Um Empty com a escala Z ligada no Levanta vira um controle na viewport.</li><li>Mão passando: <b>GR Desviar de Objeto</b> depois do Shrinkwrap. O cabelo abre caminho para um Empty animado.</li></ol></div>
+<figure><img src="img/lab/103_balanco_2.5.gif" alt="Cabelo balançando" loading="lazy" style="width:100%;height:auto"><figcaption>Balanço com a ponta atrasada em relação à raiz.</figcaption></figure>
+<figure><img src="img/lab/97_arrepio.gif" alt="Criatura arrepiando" loading="lazy" style="width:100%;height:auto"><figcaption>Pelo arrepiado com um input animado.</figcaption></figure>
+<figure><img src="img/lab/98_pente.gif" alt="Esfera passando pelo cabelo" loading="lazy" style="width:100%;height:auto"><figcaption>A mão abre caminho no cabelo.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Cabeça que deforma</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Ligue <b>Add Rest Position</b> no scalp (Object Data).</li><li><b>Deform Curves on Surface é o último node de forma</b>, depois de Clump, Curl e cortes.</li><li>Tudo que lê posição (textura, máscara, distância) vem antes dele, ou lê <code>surface_uv_coordinate</code>.</li></ol></div>
 <figure><img src="img/lab/52_deform_sheet.jpg" alt="Quatro cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem Deform, ou com ele nas guias, a cabeça atravessa o cabelo. No fim, a raiz fica a 0,06 mm; o padrão por posição só fica parado se vier antes.</figcaption></figure>
@@ -1023,6 +1030,17 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Animal estilizado</h3>
 <p>Comprimento e cor por região com máscaras de posição: tufo na ponta da orelha, bochechas longas, queixo claro. <b>Manchas de cor saem com Mix de cor no Toon</b>, não com melanina: melanina baixa continua laranja.</p>
 <figure><img src="img/lab/91_raposa_sheet.jpg" alt="Duas raposas" loading="lazy" style="width:100%;height:auto"><figcaption>Principled Hair com melanina (manchas somem) e Toon com Mix de cor (aparecem).</figcaption></figure>
+<h3 style="margin-top:1.6rem">Franjas e hairline</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Franja reta ou em bicos: GR Corte pela Malha com a borda da frente na altura da franja. A malha corta o penteado inteiro.</li><li>Franja cortina: <b>dois conjuntos de guias</b> do mesmo scalp (cabelo e franja) misturados pela GR Transição com a máscara da frente. As raízes dos dois são idênticas.</li><li>Hairline suave: campo de posição no Density Mask do Interpolate. Babyhairs: um segundo Interpolate só na faixa da borda, curto, com 150 mil por m².</li></ol></div>
+<figure><img src="img/lab/100_franja_sheet.jpg" alt="Três franjas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem corte, franja reta e em bicos.</figcaption></figure>
+<figure><img src="img/lab/107_cortina_sheet.jpg" alt="Duas franjas cortina" loading="lazy" style="width:100%;height:auto"><figcaption>Um conjunto de guias com Trim contra dois conjuntos misturados.</figcaption></figure>
+<figure><img src="img/lab/104_hairline_sheet.jpg" alt="Três hairlines" loading="lazy" style="width:100%;height:auto"><figcaption>Hairline, babyhair demais e babyhair na medida.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Anime: anel de brilho</h3>
+<p>No material do GR Cabelo Cel: uma faixa na <b>coordenada Object</b> (não no Intercept, que sai em degraus) vira Emission somada ao Toon.</p>
+<figure><img src="img/lab/99_anel_sheet.jpg" alt="Três cabelos rosa" loading="lazy" style="width:100%;height:auto"><figcaption>Cel, anel pelo Intercept e anel pela coordenada do objeto.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cabeça modelada inclinada</h3>
+<p>Todo o groom é local ao objeto: mover o personagem não muda nada, e a gravidade das guias é o −Z do objeto. A entrada <b>Gravidade do mundo</b> da GR Guias Procedurais faz o cabelo cair reto mesmo com a cabeça girada.</p>
+<figure><img src="img/lab/102_gravmundo_sheet.jpg" alt="Duas cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Gravidade do objeto e do mundo com a cabeça girada 50°.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
 <p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
 <figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
