@@ -18,6 +18,9 @@ PSI0, PSI1 = [float(x) for x in os.environ.get("PSI","-10,90").split(",")]
 COL = os.environ.get("COL","none")
 GRAV = os.environ.get("GRAV")
 SIDE = os.environ.get("SIDE")
+RG = os.environ.get("RG")   # "min,max": gravidade aleatoria por cilio
+ROFF = float(os.environ.get("ROFF","0"))
+DENS = os.environ.get("DENS")
 BETA = math.radians(30)            # abertura: margem 30 graus acima do centro do olho, na frente
 UP = Vector((0, math.sin(BETA), math.cos(BETA)))      # lado "palpebra" do plano
 FW = Vector((0, -math.cos(BETA), math.sin(BETA)))     # direcao da margem no meio do arco
@@ -79,21 +82,36 @@ def groom(surf, name, sx, L, grav, dens, rad, shp, corner=None, clump=None, ctip
     cd = bpy.data.hair_curves.new(name); g = link(bpy.data.objects.new(name, cd)); cd.surface = surf; cd.surface_uv_map = "UVMap"
     t = Tree(name)
     x = t.add('GeometryNodeGroup', group=GR["GR Guias Procedurais"])
-    for kk,v in {"Cabeça (colisão)": (head if COL=="head" else None), "Comprimento": L, "Para fora": 1.0, "Para o lado da risca": 0.0, "Para trás": 0.0, "Gravidade": (float(GRAV) if GRAV else grav), "Guias por m2": dens}.items(): x.inputs[kk].default_value = v
+    for kk,v in {"Cabeça (colisão)": (head if COL=="head" else None), "Comprimento": L, "Para fora": 1.0, "Para o lado da risca": 0.0, "Para trás": 0.0, "Gravidade": (float(GRAV) if GRAV else grav), "Guias por m2": (float(DENS) if DENS else dens)}.items(): x.inputs[kk].default_value = v
     t.chain(x, 'Geometry', 'Guias')
+    if RG:   # gravidade por cilio: Index -> Evaluate on Domain (Curve) -> Random Value -> Gravidade
+        lo, hi = [float(v) for v in RG.split(",")]
+        ix = t.add('GeometryNodeInputIndex'); ev = t.add('GeometryNodeFieldOnDomain', props={'domain':'CURVE','data_type':'INT'})
+        t.link(ix.outputs[0], ev.inputs[0])
+        rv = t.add('FunctionNodeRandomValue', props={'data_type':'FLOAT'})
+        mn = [i for i in rv.inputs if i.name=='Min' and i.type=='VALUE'][0]; mx_ = [i for i in rv.inputs if i.name=='Max' and i.type=='VALUE'][0]
+        mn.default_value, mx_.default_value = lo, hi; rv.inputs['Seed'].default_value = 7
+        t.link(ev.outputs[0], rv.inputs['ID'])
+        t.link([o for o in rv.outputs if o.type=='VALUE'][0], x.inputs['Gravidade'])
     if corner:   # canto externo mais longo: Trim por X da raiz (interno->externo)
         rt = t.add('GeometryNodeGroup', group=EG['Curve Root']); sp = t.add('ShaderNodeSeparateXYZ'); t.link(rt.outputs['Root Position'], sp.inputs[0])
         mr = t.add('ShaderNodeMapRange', props={'interpolation_type':'SMOOTHSTEP'}); mr.clamp = True
         t.link(sp.outputs['X'], mr.inputs['Value'])
         mr.inputs['From Min'].default_value = sx*(EC[0]-ER); mr.inputs['From Max'].default_value = sx*(EC[0]+ER)
         mr.inputs['To Min'].default_value = corner; mr.inputs['To Max'].default_value = 1.0
-        tr = t.eg(EG['Trim Hair Curves'], Scale_Uniform=False, Replace_Length=False)
+        tr = t.eg(EG['Trim Hair Curves'], Scale_Uniform=False, Replace_Length=False, Random_Offset=ROFF)
         t.link(mr.outputs['Result'], tr.inputs['Length Factor'])
     if clump:
         t.eg(EG['Clump Hair Curves'], Factor=1.0, Shape=cshape, Tip_Spread=ctip, Preserve_Length=True, Guide_Distance=clump, Existing_Guide_Map=False, Seed=3)
     t.eg(EG['Set Hair Curve Profile'], Radius=rad, Shape=shp, Factor_Min=0.0, Factor_Max=1.0)
     set_mat(t, hair_mat("lash", melanin=1.0, redness=0.2, roughness=0.3)); apply_tree(g, t.finish())
-    st = stats(g); print("INFO", V, name, st.get('curves'), st.get('points')); return g
+    st = stats(g); print("INFO", V, name, st.get('curves'), st.get('points'), st.get('err',''))
+    if name=="c1":
+        ev_=g.evaluated_get(bpy.context.evaluated_depsgraph_get()).data; import statistics as S_
+        zs=[ev_.points[i].position.z for i in range(len(ev_.points)) if i%12==11]; print("TIPZ_SD_mm", round(S_.pstdev(zs)*1000,2))
+    for md in g.modifiers:
+        pass
+    return g
 
 for i, sx in enumerate((-1, 1)):
     if V == "a": groom(lid_old(eyes[i]), f"c{i}", sx, 0.009, -1.3, 250000.0, 0.0005, 0.8)
