@@ -607,6 +607,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Cacho vira cilindro liso | Frequency variando por fio; a hélice vem da guia | Frequency fixa ou por mecha (ID = guide_curve_index); Radius pode variar por fio | lab 17.3 |
 | Variação "por fio" sai como ruído, fita enrugada | Random Value sem ID num input de ponto sorteia por ponto | Evaluate on Domain (Curve) depois do Random Value | lab 17.3, 17.11 |
 | Mechas mudam de lugar depois de mexer no scalp | Remesh/Decimate/Triangulate mudam a ordem das faces, que semeia a distribuição | Fechar a topologia do scalp antes de pentear | lab 17.38 |
+| Fios descem ou somem com Raycast na malha | Raiz fora da malha | A malha tem que conter todo o scalp | lab 17.40 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -712,6 +713,9 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo crescendo | Scene Time − atraso por mecha → Trim Length Factor, Replace off | 17.37 |
 | Multidão (LOD) | distância raiz-câmera → Random Boolean → Delete; raio × 1/√fração | 17.38 |
 | Silhueta por malha simples | Geometry Proximity na malha → Mix com Spline Parameter → Set Position nas guias | 17.39 |
+| Corte reto pela malha | Raycast do ponto para fora; sem acerto → Delete Point | 17.40 |
+| Cabelo Trolls | raiz → Raycast (normal + viés para cima) até elipsoide alto; Clump 0,45 | 17.40 |
+| Afro que enche | casca renderizada + pelo curto cacheado nascendo nela | 17.41 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1465,3 +1469,52 @@ antes do Interpolate:
 
 Pronto em **GR Forma por Malha** (entradas: Malha da forma, Força, Cola a
 partir de). Validado carregando do .blend.
+
+### 17.40 Raycast na malha: corte reto e cabelo Trolls [img/46_ray_sheet, 47_sheet]
+
+Outra forma de usar a malha proxy (17.39): em vez de colar o fio nela, a
+malha **mede** o comprimento ou **corta**.
+
+**Corte pela malha (bob reto), 5 nodes depois do Clump:**
+Position → Normalize (direção do centro da cabeça para fora) → Raycast
+(Target = malha via Object Info Relative, Source = Position, Direction =
+Normalize, Length 1) → Is Hit → NOT → Delete Geometry **Point**. Ponto
+dentro da malha acerta o raio e fica; ponto fora não acerta e é apagado. O fio
+cai natural e para na linha da malha: corte reto de verdade, diferente do
+bob colado de 17.39, onde as pontas dobram.
+
+**Comprimento até a malha (radial), 9 nodes depois da GR Densidade Livre:**
+Resample 24 → Raycast da raiz (Curve Root) na direção `n_raiz` (+ um viés,
+ex. (0,0,1,5) para subir) → Position = raiz + direção × Spline Parameter ×
+Hit Distance → Set Position → Clump.
+
+| Variante | Resultado |
+|---|---|
+| **Trolls**: elipsoide alto (16 × 16 × 35 cm), direção normal + (0,0,1,5), Clump GD 4 cm **Factor 0,45**, Profile Shape 0,1 | chama lisa e alta: silhueta Trolls |
+| Mesmo com Clump Factor 1 | tufo espetado (as mechas fecham em ponta) |
+| Afro radial (esfera 19 cm) + Curl | silhueta certa, mas **espetado**: fios radiais divergem e não enchem, mesmo com 31 mil fios e cacho de 1 cm |
+
+Armadilhas medidas:
+- **A malha tem que conter todo o scalp.** Elipsoide mais estreito que a
+  cabeça na altura das orelhas: 671 fios de 15 mil nasceram fora da malha e
+  desceram. Com a malha maior, 0.
+- Clump **Guide Distance 0,2 m** num fio de 30 cm juntou 15 mil fios em 2
+  mechas. Guide Distance é o tamanho da mecha em metros.
+
+### 17.41 Afro estilizado: casca sólida + pelo curto [img/47_sheet]
+
+Afro com fio da raiz até a borda não enche (17.28, 17.40). O que leu como
+massa foi separar **forma** e **textura**:
+
+1. Malha do afro (esfera 17 × 17,5 × 16 cm, aberta no rosto e embaixo),
+   **renderizada** com material marrom quase preto, roughness 0,9. Ela é o
+   volume.
+2. Um Curves com Surface = essa malha (precisa de UV). GR Guias Procedurais
+   como gerador: Comprimento 3,5 cm, Para fora 1, Gravidade 0, 150.000/m²
+   (42 mil fios); Cabeça (colisão) = a própria malha.
+3. Resample 40 → Clump GD 8 mm Shape 0,2 → Curl raio 3 mm, Frequency 45
+   (135 voltas/m ≈ 5 voltas), Subdivision 0 → Profile 0,6 mm.
+
+1,7 milhão de pontos; a casca esconde o interior, então não precisa de fio
+lá dentro. Falta refinar a borda da abertura, que mostra a espessura zero da
+casca.
