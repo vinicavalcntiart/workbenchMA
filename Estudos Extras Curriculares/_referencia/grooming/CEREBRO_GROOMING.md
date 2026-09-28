@@ -773,6 +773,7 @@ estão resumidas em 17.0):
 | Moicano / crista | raspado + Comprimento até a Malha misturados por Máscara por Posição | 17.80 |
 | Undercut | Trim 5% fora da Máscara por Posição (altura e lateral) + Volume na Raiz | 17.81 |
 | Cacho em cabelo curto | raio relativo ao comprimento manda, não as voltas | 17.82 |
+| Pelo arrepiado (susto) | animar o Levanta da GR Pentear por Curva | 17.83 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2563,3 +2564,17 @@ basta.
 **Medido**: raio 9 a 12 mm (~15% do comprimento), 14 a 20 voltas/m (~1
 volta) e mecha 1,8 cm → **cachinhos de desenho separados**, cada mecha um
 cacho. É o controle certo para cabelo curto cacheado estilizado.
+
+### 17.83 Pelo arrepiado (susto) animado por um valor [img/97_arrepio_sheet, 97_arrepio.gif]
+
+A fonte da DreamWorks (`estilizado/artigo-dreamworks-puss-in-boots-fur.md`,
+princípio 5) diz que o groom estilizado continuou respondendo à pose, com o
+pelo "em pé" no susto. Em GN isso é **um input**: o Levanta da GR Pentear
+por Curva, animado.
+
+Scene Time Seconds → Map Range **Smooth Step** (0,3 s → 0,6 s vira 0,3 →
+0,95) → Levanta. Criatura pictórica de 17.64, 27,5 mil fios. O pelo sai de
+deitado para em pé em 0,3 s e a silhueta incha, sem simulação.
+
+Na animação real, troque o Scene Time por uma propriedade do rig (Attribute
+de objeto ou um driver no input do modificador).
