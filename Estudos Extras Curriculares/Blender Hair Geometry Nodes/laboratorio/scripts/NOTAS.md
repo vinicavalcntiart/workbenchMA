@@ -106,3 +106,4 @@
 - Cacho curto confirmado: raio 9-12mm + 14-20 v/m + mecha 1,8cm = cachinhos de desenho separados.
 - Arrepio: Levanta do Pentear por Curva = smoothstep(Seconds 0,3..0,6 -> 0,3..0,95). Silhueta incha.
 - Controle na viewport: Empty -> Object Info (Original) Scale Z -> MapRange 1..2 -> Levanta. Keyframe na escala funciona.
+- Mao: Empty esfera R 4,5cm empurra pontos (max(R-d,0) na direcao) + Shrinkwrap: q25 1773 -> 0; q13 (mao no cranio) 650: Shrinkwrap devolve para dentro da mao.

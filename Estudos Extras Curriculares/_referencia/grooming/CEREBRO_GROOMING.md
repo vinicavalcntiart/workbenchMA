@@ -774,6 +774,7 @@ estão resumidas em 17.0):
 | Undercut | Trim 5% fora da Máscara por Posição (altura e lateral) + Volume na Raiz | 17.81 |
 | Cacho em cabelo curto | raio relativo ao comprimento manda, não as voltas | 17.82 |
 | Pelo arrepiado (susto) | animar o Levanta da GR Pentear por Curva | 17.83 |
+| Mão/objeto passando pelo cabelo | Empty → empurrar para fora de uma esfera (7 nodes) | 17.84 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2582,3 +2583,24 @@ Map Range 1 → 2 vira 0,3 → 0,95 → Levanta. Keyframes na escala do Empty
 (1 no quadro 8, 2 no 16) arrepiaram o pelo igual [img/97b_arrepio_ctrl.gif].
 O animador mexe num objeto da cena, sem abrir o node tree; o Empty pode
 ser filho do rig.
+
+### 17.84 Mão ou objeto passando pelo cabelo [img/98_pente.gif]
+
+Sem física: um Empty (a "mão", com uma esfera de 3,5 cm filha dele) empurra
+os pontos para fora. Depois da Mecha:
+
+Object Info (Empty, Relative) → Position − Location → Length e Normalize →
+penetração = max(R − distância, 0), R = 4,5 cm → Set Position Offset =
+direção × penetração → Shrinkwrap na cabeça (Above 0).
+
+Pontos dentro da esfera, medido:
+
+| Quadro | Sem desvio | Com desvio |
+|---|---|---|
+| 25 (mão ao lado do cabelo) | 1.773 | **0** |
+| 13 (mão encostada no crânio) | 1.747 | 650 |
+
+No quadro 13, o Shrinkwrap depois devolve os fios para fora da cabeça,
+para dentro da mão: cabeça e mão disputam o mesmo espaço. Para contato
+com a pele, ponha o desvio **depois** do Shrinkwrap ou use R maior que a
+mão. Animar o Empty basta; 7 nodes.
