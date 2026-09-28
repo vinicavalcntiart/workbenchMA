@@ -468,7 +468,11 @@ Observado em teste headless, nao em fonte externa:
   curva. Com Map Range vira variacao de qualquer float input.
   **Observado em producao (2026-09-27, 5.2 LTS)**: e o padrao do Blender
   Studio para randomizar Factor e Shape do Clump (e Curl, Trim): Curve Info
-  Random → Map Range (ex. 0,4 a 1,0) → Factor. Por fio, sem Create Guide
+  Random → Map Range (ex. 0,4 a 1,0) → Factor. Refeito em bpy 5.2.2
+  (2026-09-28): Curve Info fica em Add > Hair > Read; Map Range com Clamp;
+  Factor fixo 1 deixa todas as mechas pontudas e iguais, 0,4 a 1,0 solta
+  fios, 0 a 1 vira frizz [img/121_clump_random_sheet, 121_clump_random_nodes;
+  scripts/r121_clump_random.py]. Por fio, sem Create Guide
   Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
   Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
   Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
