@@ -55,3 +55,4 @@ Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recib
 | CayPlay Studios | Spontaneous Application | Google Form só abre com conta Google | n | https://forms.gle/pjFVG3oEvA9vxtS18 |
 | Super Spline Studios | Formulário de candidatura | Google Form só abre com conta Google | n | https://forms.gle/Hy2DSc11gBzGb9hJ8 |
 | Paramount | Senior Designer, Toy & Illustration (req 1430792500, Los Angeles, USD 74.400-93.000) | senha da conta no SuccessFactors (career41.sapsf.com) | n | https://careers.paramount.com |
+| Hasbro / Wizards of the Coast | Principal Character Artist (req 68744377699, Durham NC), achada por busca 28/09, inédita no dedupe | o site careers.hasbro.com não abre a partir da nuvem (falha de TLS do próprio servidor); abre no navegador da leva | s | https://careers.hasbro.com/careers/job/68744377699 |
