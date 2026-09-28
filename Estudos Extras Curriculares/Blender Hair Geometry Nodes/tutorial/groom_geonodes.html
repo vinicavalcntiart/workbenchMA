@@ -113,8 +113,6 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 </style>
 </head>
 <body>
-
-
 <div class="wrap">
 <div class="layout">
 <nav class="toc" aria-label="Sumário">
@@ -148,6 +146,10 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <a href="#lab-proc">Sem esculpir</a>
   <a href="#lab-presos">Presos e rosto</a>
   <a href="#lab-fisica">Física</a>
+  <a href="#lab-malha">Forma por malha</a>
+  <a href="#lab-anim">Animação</a>
+  <a href="#lab-prod">Produção</a>
+  <a href="#lab-detalhes">Detalhes e estilo</a>
   <div class="t">Depois</div>
   <a href="#perf">Performance</a>
   <a href="#receitas">Receitas de produção</a>
@@ -809,10 +811,16 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Física sem desabar</td><td>Bendiness 0, Substeps 40</td></tr>
     <tr><td>Penteado sem esculpir</td><td>GR Guias Procedurais num Curves vazio</td></tr>
     <tr><td>Rabo de cavalo, coque</td><td>GR Rabo de Cavalo</td></tr>
+    <tr><td>Silhueta sem esculpir guia</td><td>Malha proxy: GR Forma por Malha</td></tr>
+    <tr><td>Vento</td><td>Custom Force no Effectors: entrada Vento da GR Física Estilizada</td></tr>
+    <tr><td>Cabelo seguir animação</td><td>Deform Curves on Surface no fim</td></tr>
+    <tr><td>Menos fios, mesma cobertura</td><td>Scalp com a cor da raiz</td></tr>
+    <tr><td>Cards para jogo</td><td>GR Hair Cards e Convert &gt; Mesh</td></tr>
+    <tr><td>Traço de desenho</td><td>GR Contorno</td></tr>
   </table></div>
 
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 18 node groups prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 26 node groups e 4 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
@@ -873,6 +881,61 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <div class="box do"><h4>Como fazer</h4><ol><li>Snap to Nearest Surface nas guias. Sem o UV de fixação, a simulação explode.</li><li>Modificador 1, só nas guias: Hair Dynamics em <b>Physics (Experimental)</b>, Bendiness 0, Root Bendiness 0, <b>Substeps 40</b>.</li><li>Modificador 2: a cadeia de groom (Interpolate e o resto).</li><li>Colisão: modificador Collider na cabeça inteira, dentro de uma coleção, e a coleção no Effectors Collection. Surface Collision no scalp explodiu em todos os testes.</li></ol></div>
 <figure><img src="img/lab/28d_dyn_sheet.jpg" alt="Três cabeças: espetado, caído e espetado" loading="lazy" style="width:100%;height:auto"><figcaption>Penteado espetado: sem simular, simulado no padrão (desaba) e simulado com Bendiness 0 e Substeps 40 (mantém).</figcaption></figure>
 <figure><img src="img/lab/29_giro_padrao_espaco_mundo.gif" alt="Animação de cabeça girando com cabelo balançando" loading="lazy" style="width:100%;height:auto"><figcaption>Cabeça girando com o Simulation to World vazio: o cabelo atrasa e passa do ponto. Ligar a Transform do próprio objeto ali deixa o cabelo rígido.</figcaption></figure>
+<h2 id="lab-malha" style="margin-top:2rem">Forma por malha</h2>
+<p>Uma malha simples em volta da cabeça define a silhueta. Trocar de corte vira trocar de malha.</p>
+<h3 style="margin-top:1.6rem">Silhueta por malha proxy</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Modele uma esfera deformada em volta da cabeça, aberta no rosto e embaixo.</li><li>Nas <b>guias</b>, antes do Interpolate: Object Info (Relative) → Geometry Proximity (Faces).</li><li>Mix Vector entre Position e a posição da Proximity, Factor = Spline Parameter → Map Range (0 a 0,35) → Set Position.</li><li>Pronto em <b>GR Forma por Malha</b>.</li></ol></div>
+<figure><img src="img/lab/45_shell_sheet.jpg" alt="Bob, topete e afro com e sem malha proxy" loading="lazy" style="width:100%;height:auto"><figcaption>Bob e topete saem da malha. O afro vira casca oca: forma de volume não cola em superfície.</figcaption></figure>
+<div class="warn"><b>Mix em modo Vector:</b> a saída válida é a segunda. Ligar a de Color não dá erro e o Set Position não faz nada.</div>
+<h3 style="margin-top:1.6rem">Corte reto e cabelo Trolls</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Corte: Position → Normalize → Raycast na malha → NOT Is Hit → Delete Geometry <b>Point</b>. O fio cai natural e para na malha. Pronto em <b>GR Corte pela Malha</b>.</li><li>Trolls: cada fio vira reta da raiz até onde o raio bate na malha, na direção da normal + (0; 0; 1,5). Clump Guide Distance 4 cm, <b>Factor 0,45</b>. Pronto em <b>GR Comprimento até a Malha</b>.</li><li>A malha precisa conter todo o scalp. Raiz fora da malha = fio que desce.</li></ol></div>
+<figure><img src="img/lab/46_ray_sheet.jpg" alt="Afros radiais e bob cortado" loading="lazy" style="width:100%;height:auto"><figcaption>Afro radial fica espetado: fios radiais divergem. O bob da direita é o corte reto pela malha.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Afro que enche</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>A malha do afro é renderizada, marrom quase preto. Ela é o volume.</li><li>Um Curves com Surface nessa malha: GR Guias Procedurais, 3,5 cm, para fora 1, gravidade 0, 150.000 por m².</li><li>Resample 40 → Clump 8 mm → Curl raio 3 mm, Frequency 45, Subdivision 0.</li></ol></div>
+<figure><img src="img/lab/47_sheet.jpg" alt="Afro por casca e dois cabelos Trolls" loading="lazy" style="width:100%;height:auto"><figcaption>Afro por casca + pelo curto; Trolls espetado (Clump 1) e macio (Clump 0,45).</figcaption></figure>
+<h2 id="lab-anim" style="margin-top:2rem">Animação</h2>
+<h3 style="margin-top:1.6rem">Vento</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Scene Time Seconds → seno de 1,5 s → rajada de 20% a 100% no X.</li><li>Mais Noise Texture <b>4D</b> (Vector = Position, W = Seconds) − 0,5, para as mechas saírem de fase.</li><li>Soma → Custom Force → entrada <b>Effectors</b> do Hair Dynamics. Força 0,04 = brisa; <b>0,12 = vento de cena</b>.</li><li>Pronto na entrada Vento da <b>GR Física Estilizada</b>.</li></ol></div>
+<figure><img src="img/lab/39_vento_0.12.gif" alt="Cabelo balançando ao vento" loading="lazy" style="width:100%;height:auto"><figcaption>Vento 0,12 num fio de 30 cm: as pontas vão até 11 cm para o lado.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cabelo crescendo</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>No fim da cadeia, antes do Profile: Trim Hair Curves com Replace Length desligado.</li><li>Length Factor = Clamp(Seconds × 0,8 − atraso por mecha, 0,02).</li><li>Atraso = Random 0 a 0,4 com ID = <code>guide_curve_index</code>. Pronto em <b>GR Crescer</b>.</li></ol></div>
+<figure><img src="img/lab/41_crescer_por_mecha.gif" alt="Cabelo cacheado crescendo" loading="lazy" style="width:100%;height:auto"><figcaption>Cada mecha cresce pelo caminho final. Com Scale Uniform ligado, o cacho encolhe e vira escama.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Transição entre penteados</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Resample 64 depois da mecha: os dois penteados precisam da mesma contagem de pontos.</li><li>Ramo B com o cacho (Subdivisão 0). Sample Index de B → Mix com a posição de A → Set Position.</li><li>Fator animado com atraso por mecha. Parado em 0,5, vira um terceiro penteado. Pronto em <b>GR Transição</b>.</li></ol></div>
+<figure><img src="img/lab/55_transicao_liso_cacheado.gif" alt="Cabelo liso virando cacheado" loading="lazy" style="width:100%;height:auto"><figcaption>Liso para cacheado em 1,2 s, mecha por mecha.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cabeça que deforma</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Ligue <b>Add Rest Position</b> no scalp (Object Data).</li><li><b>Deform Curves on Surface é o último node de forma</b>, depois de Clump, Curl e cortes.</li><li>Tudo que lê posição (textura, máscara, distância) vem antes dele, ou lê <code>surface_uv_coordinate</code>.</li></ol></div>
+<figure><img src="img/lab/52_deform_sheet.jpg" alt="Quatro cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem Deform, ou com ele nas guias, a cabeça atravessa o cabelo. No fim, a raiz fica a 0,06 mm; o padrão por posição só fica parado se vier antes.</figcaption></figure>
+<h2 id="lab-prod" style="margin-top:2rem">Produção</h2>
+<h3 style="margin-top:1.6rem">Scalp com a cor da raiz</h3>
+<p>Zero node. Pinte o scalp com a cor da raiz. Medido por máscara: <b>60 mil fios por m² com scalp pintado mostram menos pele que 300 mil sem pintar</b>.</p>
+<figure><img src="img/lab/48_scalp_sheet.jpg" alt="Cinco topos de cabeça" loading="lazy" style="width:100%;height:auto"><figcaption>Pele aparecendo no topo com e sem scalp pintado, em três densidades.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Multidão: LOD por distância</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Logo depois do Interpolate: distância da raiz até a câmera (Object Info em Relative).</li><li>Map Range de 1 m a 8 m → fração de 1 a 0,04 → Random Boolean → Delete Geometry (Curve).</li><li>Depois do Profile: raio × 1/√fração, para manter a cobertura. Pronto em <b>GR LOD por Câmera</b>.</li></ol></div>
+<figure><img src="img/lab/42_lod_sheet.jpg" alt="Cabeças a 0,75, 2,5 e 6 metros" loading="lazy" style="width:100%;height:auto"><figcaption>A 6 m, 31% dos fios com raio compensado ficam iguais ao groom cheio. O ganho é memória e avaliação.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Hair cards para jogo</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Densidade Livre com 8.000 a 20.000 por m²: um card por fio.</li><li>Set Curve Normal em Free com <b>Cross(Tangent; n_raiz)</b>: o card deita no crânio. Só a normal deixa ele de pé.</li><li>Curve to Mesh com perfil em linha e Radius no Scale; UV = Store Named Attribute 2D Vector, Face Corner, <code>UVMap</code>.</li><li>Object &gt; Convert &gt; Mesh: o UV vira UV map real e o FBX sai com ele. Pronto em <b>GR Hair Cards</b>.</li></ol></div>
+<figure><img src="img/lab/49_cards_sheet.jpg" alt="Cabeças com hair cards" loading="lazy" style="width:100%;height:auto"><figcaption>Minimum Twist gira, normal da raiz deixa de pé, o produto vetorial deita. À direita, o grupo da biblioteca.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Um groom, várias cabeças</h3>
+<p>A mesma cadeia procedural serviu numa cabeça redonda, ovo e larga sem mudar nenhum valor. Para criança, use <b>escala de objeto não aplicada</b>: todas as distâncias escalam juntas.</p>
+<figure><img src="img/lab/51_heads_sheet.jpg" alt="Seis cabeças com o mesmo penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Com a malha escalada, fio, mecha e onda continuam em tamanho de adulto. Com a escala do objeto, sai réplica exata.</figcaption></figure>
+<div class="warn"><b>Feche a topologia do scalp antes de pentear.</b> Triangulate ou reordenar faces re-sorteia todas as raízes e muda as mechas de lugar, mesmo com a forma igual.</div>
+<h2 id="lab-detalhes" style="margin-top:2rem">Detalhes e estilo</h2>
+<h3 style="margin-top:1.6rem">Cílios</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>A superfície é a pálpebra: uma faixa da esfera do olho, logo acima do centro, 6% maior.</li><li>GR Guias Procedurais: 9 mm, para fora 1, <b>gravidade −1,3</b> (curva para cima), 250.000 por m².</li><li>Raio 0,5 mm, Shape 0,8. Estilo Disney: só o canto externo, 6 fios grossos.</li></ol></div>
+<figure><img src="img/lab/40_lash_sheet.jpg" alt="Três olhos com cílios" loading="lazy" style="width:100%;height:auto"><figcaption>Faixa alta vira escova; na linha da pálpebra vira leque; no canto externo, cílio de desenho.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Pelagem com padrão</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Textura na raiz: Wave Bands (listra), Voronoi (mancha), anel do Voronoi (roseta).</li><li>Store Named Attribute <code>padrao</code> por curva.</li><li>Trim com Length Factor = 1 − 0,4 × padrao, e o mesmo atributo na melanina. O padrão vira relevo.</li></ol></div>
+<figure><img src="img/lab/50_pattern_sheet.jpg" alt="Quatro esferas com pelagem" loading="lazy" style="width:100%;height:auto"><figcaption>Só cor fica chapado; cor mais comprimento lê como pelagem.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Redemoinho</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Nas guias: Vector Rotate em volta da coroa, eixo = normal da coroa.</li><li>Ângulo = Spline Parameter × falloff (1 na coroa, 0 a 7 cm) × força.</li><li>Shrinkwrap depois. Força 3,5 só em cabelo curto; em fio longo, até 1,5.</li></ol></div>
+<figure><img src="img/lab/54_whorl_sheet.jpg" alt="Quatro cabeças vistas de cima" loading="lazy" style="width:100%;height:auto"><figcaption>Em fio de 16 cm, 3,5 rad joga as mechas para fora. Em 7 cm, desenha o redemoinho.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Contorno de desenho</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Na malha das mechas: Flip Faces → Set Position (Normal × −2,5 mm) → material do contorno → Join com a malha.</li><li>Material: Mix entre Emission preta e Transparent com Factor = <b>Maximum(Backfacing; 1 − Is Camera Ray)</b>.</li><li>Só Backfacing deixa o cabelo inteiro preto: a casca bloqueia a luz. Pronto em <b>GR Contorno</b>.</li></ol></div>
+<figure><img src="img/lab/53_toon_sheet.jpg" alt="Quatro cabeças com mechas de malha" loading="lazy" style="width:100%;height:auto"><figcaption>Sem contorno, casca bloqueando a luz, e contorno só para a câmera em 1,2 e 2,5 mm.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
+<p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
+<figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
   <div class="src">Fontes: <code>_referencia/grooming/CEREBRO_GROOMING.md</code>, seção 17; scripts e folhas em <code>laboratorio/</code>.</div>
 </section>
 

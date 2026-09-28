@@ -730,6 +730,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Contorno de desenho | casca invertida no GN + material só para raio de câmera | 17.47 |
 | Redemoinho | Vector Rotate em volta da coroa, ângulo × falloff × Spline Parameter | 17.48 |
 | Transição ou mistura de penteados | Resample igual → Sample Index de B → Mix com A | 17.49 |
+| Personagem completo sem esculpir | Guias Procedurais → Física → Densidade → Mecha → Strays → Cacho → Cor | 17.50 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1729,3 +1730,27 @@ Um penteado vira outro sem simulação. Depois da GR Mecha Estilizada:
   comprimento de A.
 
 Pronto em **GR Transição** (Penteado A, Penteado B, Fator), validado do .blend.
+
+### 17.50 Personagem inteiro só com a biblioteca [img/56_hero_sheet, finais/56_hero_biblioteca, 56_hero.gif]
+
+Teste de integração: um personagem com cabelo, cílios e sobrancelha, zero
+escultura, todos os grupos na mesma cadeia, carregados do .blend:
+
+- **Cabelo**: GR Guias Procedurais (26 cm) → GR Física Estilizada (Vento
+  0,06, Movimento 0,3, Substeps 20) → Shrinkwrap na cabeça → GR Densidade
+  Livre 220 mil/m² → GR Mecha Estilizada → GR Strays em Arco → GR Cacho por
+  Mecha (18–30 voltas/m, raio 9–14 mm) → GR Cor por Mecha → Profile → GR
+  Cabelo Cor por Mecha. 11,5 mil fios, 517 mil pontos.
+- **Cílios** (17.36) e **sobrancelha** (17.32) com a GR Guias Procedurais
+  como gerador. **Scalp pintado** (17.42).
+- Render 900 px, 48 amostras: 103 s (CPU, 4 núcleos).
+
+Os grupos convivem sem ajuste interno. O que precisou de ajuste foi **design**:
+
+| Versão | Problema | Ajuste |
+|---|---|---|
+| v1 | cachos da linha da testa caem na frente do rosto | **Para trás 0,25 → 0,6** nas guias |
+| v1 | topo crespo e escuro | Cacho **Começa em 0,15 → 0,35**: o topo fica liso e o cacho nasce na altura da orelha |
+
+Regra: em cabelo cacheado estilizado, o cacho começa depois do topo; a
+silhueta de cima é lisa e lê a forma do crânio.

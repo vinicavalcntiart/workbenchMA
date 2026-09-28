@@ -54,3 +54,4 @@
 - Contorno: Flip Faces + Offset -Normal*esp + material Mix(Emission preta, Transparent, Max(Backfacing, 1-IsCameraRay)) + Join. So Backfacing = tudo preto (casca bloqueia sombra). 2,5 mm legivel. Transparent bounces 64.
 - Redemoinho: nas guias, Vector Rotate (Center C, Axis C normalizado, Angle = Spline Param x MapRange(dist raiz-C 0..7cm -> 1..0) x forca) + Shrinkwrap. Curto 7 cm 3,5 rad = claro; longo 16 cm: 1,5 max (3,5 voa).
 - Transicao: Resample 64 -> ramo B (Cacho Sub 0) -> Sample Index(B, Position, Index) -> Mix(A pos, B) -> Set Position. Fator smoothstep(Seconds - atraso por mecha). Fator 0,5 = terceiro penteado (onda larga). GR Transicao validado.
+- Hero integrado (r56): toda a cadeia da biblioteca + cilios + sobrancelha + scalp pintado funciona junto. Ajustes de design: Para tras 0,6 (franja cobria o rosto com 0,25), Cacho Comeca em 0,35 (0,15 = topo crespo). 11,5k fios, 517k pts, 900 px 48 spp 103 s.
