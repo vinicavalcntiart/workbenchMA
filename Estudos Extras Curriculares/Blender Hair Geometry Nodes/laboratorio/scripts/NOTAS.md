@@ -117,3 +117,4 @@
 - Hairline: Density Mask = MapRange(z - y, 0,09..0,125 -> 1..0,08). Gradiente na testa. 28,9k -> 25,5k.
 - Babyhairs: 2o Interpolate Density Mask faixa 0,112-0,124, Trim 2,5cm +-1, Noise 4mm; 150k/m2 ok, 900k = penugem.
 - Cortina PARCIAL: Roll para fora na frente vira tufo para cima; empurrao lateral cobre a testa mas o V e fraco. Falta risca em ilhas.
+- Cortina RESOLVIDA: 2 ramos Guias Procedurais (cabelo; franja 14cm tras -0,9 lado 1,1) -> Densidade -> Resample 24 -> Transicao com Mascara frente -> Mecha + Lado da Risca, ilhas. Mesmo scalp/seed = mesmas raizes.

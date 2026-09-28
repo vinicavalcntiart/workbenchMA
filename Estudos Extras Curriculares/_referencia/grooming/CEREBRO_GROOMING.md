@@ -782,7 +782,7 @@ estão resumidas em 17.0):
 | Balanço com follow-through sem física | Vector Rotate na raiz com seno defasado pelo Spline Parameter | 17.88 |
 | Hairline suave na testa | campo de posição no Density Mask (1 → 0,08 nos últimos 3,5 cm) | 17.89 |
 | Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
-| Franja cortina (parcial) | Trim na frente + empurrão lateral por sinal de X; Roll falha | 17.91 |
+| Franja cortina | dois conjuntos de guias procedurais misturados por Transição + risca em ilhas | 17.91 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2725,7 +2725,7 @@ fora 1, Para o lado 1,2, Para trás 0,4, Gravidade 0,3, **12.000 guias/m²**
 até zero). Material claro separado. Sem Interpolate: poucas vibrissas
 grossas leem melhor que muitas finas.
 
-### 17.91 Franja cortina: parcial [img/106_cortina_sheet]
+### 17.91 Franja cortina [img/106_cortina_sheet, 107_cortina_sheet]
 
 Máscara por Posição na frente (Y < −4,5 cm, Altura > 3 cm) → Trim para 42%
 na máscara → abrir para os lados.
@@ -2748,5 +2748,16 @@ visual praticamente igual. Diagnóstico: **a direção das guias domina**; com
 Para o lado 0,6, os fios da risca já saem para os lados e o Trim só os
 encurta lá. A franja cortina precisa de **guias próprias** caindo sobre a
 testa e abrindo em arco (um segundo conjunto de guias procedurais, ou
-guias desenhadas 17.71, misturado pela GR Transição com a máscara). Fica
-como próximo teste.
+guias desenhadas 17.71, misturado pela GR Transição com a máscara).
+
+**Resolvido assim** [img/107_cortina_sheet]: do mesmo Curves vazio, dois
+ramos GR Guias Procedurais → GR Densidade Livre → Resample 24:
+- A, cabelo: 30 cm, para fora 0,35, lado 0,6, para trás 0,2, gravidade 2,2;
+- B, franja: **14 cm, para fora 0,5, lado 1,1, para trás −0,9 (para
+  frente), gravidade 1,4**.
+
+GR Transição (A, B) com Fator = GR Máscara por Posição (frente Y < −3 cm,
+altura > 3,5 cm, \|X\| < 5 cm), depois Mecha com GR Lado da Risca e scalp
+em duas ilhas. Mechas curtas saem da risca e abrem em arco pelos lados da
+testa. Funciona porque os dois ramos saem do **mesmo scalp com o mesmo
+seed**: o Interpolate distribui as raízes igual e a contagem de pontos bate.
