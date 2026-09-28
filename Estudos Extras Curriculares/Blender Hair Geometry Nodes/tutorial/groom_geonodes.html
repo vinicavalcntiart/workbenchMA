@@ -113,6 +113,8 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 </style>
 </head>
 <body>
+
+
 <div class="wrap">
 <div class="layout">
 <nav class="toc" aria-label="Sumário">
@@ -139,6 +141,11 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <a href="#t6">Dados entre modificadores</a>
   <a href="#t7">Regiões e tabelas</a>
   <a href="#t8">Exemplo completo</a>
+  <div class="t">Laboratório</div>
+  <a href="#lab">Receitas testadas</a>
+  <a href="#lab-lib">Biblioteca pronta</a>
+  <a href="#lab-estilo">Estilizado</a>
+  <a href="#lab-fisica">Física</a>
   <div class="t">Depois</div>
   <a href="#perf">Performance</a>
   <a href="#receitas">Receitas de produção</a>
@@ -390,7 +397,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <p style="margin:0">Para deixar permanente: <span class="node">Store Named Attribute</span> tipo Color no domínio Curve, nome <code>clump_color</code>, e um node Attribute no material. Bystedt colore cada camada de clump com uma cor para ver como se misturam.</p>
   </div>
 
-  <div class="warn"><b>Curl também usa guide map.</b> Se você desligar Existing Guide Map só no Clump, o Curl segue as guias antigas e o cabelo ganha um "permanente" indesejado. Desligue nos dois.</div>
+  <div class="warn"><b>Curl também usa guide map.</b> Medido na 5.2: o Clump grava o mapa que usou, e o Curl com <b>Existing Guide Map ligado</b> segue as mesmas mechas. É isso que faz o cacho acompanhar a mecha. O risco é o contrário: desligado no Curl, ele cria o próprio mapa com Guide Distance 0,1, poucas guias, e o cabelo ganha um "permanente". Se desligar, iguale o Guide Distance ao do Clump.</div>
   <div class="src">Fontes: <code>essentials-internals/create-guide-index-map.md</code>; <code>essentials-internals/clump-hair-curves.md</code>; <code>manual/modeling/geometry_nodes/hair/guides/clump_hair_curves.rst</code>; <code>palestras/bcon2026-steve-chow-...md</code>; <code>palestras/bcon2023-daniel-bystedt-...md</code>.</div>
 </section>
 
@@ -452,7 +459,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <div class="step"><span class="num">5</span><div><h2>Curl, Roll e Braid</h2><p class="why">Entram só quando o cabelo pede. São pesados e cada um tem um jeito de usar.</p></div></div>
   <div class="tbl"><table>
     <tr><th>Node</th><th>Para quê</th><th>Ponto de partida</th></tr>
-    <tr><td>Curl Hair Curves</td><td>Cacho por mecha. Usa guide map, então respeita o Existing Guide Map igual ao Clump.</td><td>Ondulado: Guide Distance 0,25 m, Subdivision 3, Curl Start 2, Radius 0,25 m, Frequency 1,5</td></tr>
+    <tr><td>Curl Hair Curves</td><td>Cacho por mecha. Usa guide map, então respeita o Existing Guide Map igual ao Clump.</td><td>O Curl dá 3 × Frequency voltas por metro. Cabeça real: cacho Merida Radius 0,01 e Frequency 9 a 10; onda Radius 0,015 e Frequency 3. Subdivision 2.</td></tr>
     <tr><td>Roll Hair Curves</td><td>Enrola a ponta. Cabelo real não termina reto; um Roll leve na ponta é um dos truques de Bystedt.</td><td>Factor baixo, Roll Length curto, Random Orientation ligado</td></tr>
     <tr><td>Braid Hair Curves</td><td>Trança de três fios com elástico opcional.</td><td>Guide Distance 1,6 m, Subdivision 3, Braid Start 0,6, Radius 0,45 m</td></tr>
   </table></div>
@@ -780,6 +787,79 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <div class="src">Fontes: <code>manual/sculpt_paint/curves_sculpting/introduction.rst</code>; <code>comunidade/devtalk-27601-...md</code> post 11; teste em bpy 5.0.1.</div>
 </section>
 
+<section id="lab">
+  <div class="eyebrow">Laboratório</div>
+  <h2>Receitas testadas no Blender 5.2</h2>
+  <p>Tudo nesta parte foi montado e renderizado no Blender 5.2.2, numa cabeça em escala real (10 cm de raio). Então os números funcionam direto no seu arquivo. Cada receita tem uma folha de teste com o antes e o depois.</p>
+<figure><img src="img/lab/triptico.jpg" alt="Três renders: bob castanho, cachos ruivos e bicho de pelo com olhos grandes" loading="lazy" style="width:100%;height:auto"><figcaption>Três estilos feitos só com a biblioteca de node groups do laboratório: bob com mecha em fita, cachos por mecha e bicho de pelo em tufos.</figcaption></figure>
+  <h3 style="margin-top:1.6rem">Quero... faço</h3>
+  <div class="tbl"><table>
+    <tr><th>Quero</th><th>Faço</th></tr>
+    <tr><td>Mais de 10.000 fios por m²</td><td>Node <span class="node">Value</span> ligado no Density. O campo do painel trava.</td></tr>
+    <tr><td>Mecha de desenho, sem careca</td><td>Clump com Shape 0,25</td></tr>
+    <tr><td>Cacho definido</td><td>Clump, depois Curl. Frequency = voltas por metro ÷ 3</td></tr>
+    <tr><td>Cada mecha com seu cacho</td><td>Random Value com ID = <code>guide_curve_index</code></td></tr>
+    <tr><td>Fio solto bonito</td><td>4% dos fios com Noise, antes do Curl</td></tr>
+    <tr><td>Muitas versões rápido</td><td>Um Integer no Seed de todos os nodes</td></tr>
+    <tr><td>Risca seca</td><td>Scalp em duas ilhas + Group ID pelo lado da raiz</td></tr>
+    <tr><td>Ponta virada</td><td>Roll Direction = posição da raiz (para fora) ou o negativo (para dentro)</td></tr>
+    <tr><td>Volume na raiz</td><td>Normal do Interpolate empurrando o fio</td></tr>
+    <tr><td>Física sem desabar</td><td>Bendiness 0, Substeps 40</td></tr>
+  </table></div>
+
+  <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 16 node groups prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <div class="box do"><h4>Como usar</h4><ol>
+    <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
+    <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
+    <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
+    <li>Para variações, ligue um único node Integer no Seed de todos.</li>
+  </ol></div>
+<figure><img src="img/lab/21_lib_sheet.jpg" alt="Quatro cabeças com estilos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro grooms montados só com os grupos GR: fita, Merida, onda S com Toon e mecha chunky.</figcaption></figure>
+  <h2 id="lab-estilo" style="margin-top:2rem">Estilizado</h2>
+<h3 style="margin-top:1.6rem">Mecha em fita (Pixar)</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Clump Hair Curves: Guide Distance 0,02, Factor 1, Preserve Length ligado.</li><li><b>Shape 0,25.</b> É a receita de um node só.</li><li>Quer mais controle? Shape 0, e no Factor ligue Spline Parameter → Map Range (From 0 a 0,3, To 0 a 1, Clamp). Tip Spread 0,004.</li></ol></div>
+<figure><img src="img/lab/04_ribbon_sheet.jpg" alt="Seis variações de clump vistas de costas" loading="lazy" style="width:100%;height:auto"><figcaption>Shape 0 abre careca; Shape 0,5 só fecha a ponta; Shape 0,25 e a rampa de 0,3 dão mecha de desenho com raiz coberta.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cachos (Merida)</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Clump primeiro (Shape 0,25), depois Curl Hair Curves com Existing Guide Map ligado.</li><li><b>Frequency ≈ voltas por metro ÷ 3.</b> Merida: Radius 0,01, Frequency 9 a 10. Mola apertada: Radius 0,007, Frequency 20.</li><li>Subdivision 2. A 3 fica igual no render com o dobro de pontos.</li><li>Variação: Random Value com ID = Named Attribute (Integer) <code>guide_curve_index</code> no Radius e na Frequency.</li></ol></div>
+<div class="warn"><b>Frequency nunca por fio.</b> O Curl calcula a hélice na guia. Radius pode variar por fio; Frequency por fio desmancha o cacho.</div>
+<figure><img src="img/lab/06_curlfreq_sheet.jpg" alt="Seis cabeças com cachos de frequências diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Frequency 1 quase não enrola numa cabeça real. De 5 a 20, onda até mola.</figcaption></figure>
+<figure><img src="img/lab/07c_curlvar_sheet.jpg" alt="Dois grooms: um cacheado, um liso quebrado" loading="lazy" style="width:100%;height:auto"><figcaption>Esquerda: Radius sorteado por fio, cacho mais cheio. Direita: Frequency sorteado por fio, o cacho some.</figcaption></figure><h3 style="margin-top:1.6rem">Onda de desenho (Rapunzel)</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Subdivide Curve, Cuts 2.</li><li>Offset de um Set Position = eixo lateral × seno × rampa.</li><li>Eixo lateral: Normalize(Cross(Tangent; 0,0,1)). Seno: Sine(Spline Parameter Length × 2π ÷ período + fase por mecha).</li><li>Amplitude menor que o tamanho da mecha: 1,5 cm com período de 10 cm. Pronto em GR Onda S.</li></ol></div>
+<figure><img src="img/lab/09_swave_sheet.jpg" alt="Quatro cabeças loiras com ondas" loading="lazy" style="width:100%;height:auto"><figcaption>Onda plana em S com fase sorteada por mecha.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cor de desenho</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Random Value com ID = <code>guide_curve_index</code> → Store Named Attribute (Float, Curve) chamado <code>mecha_rand</code>.</li><li>No shader: Attribute <code>mecha_rand</code> → Map Range (0,3 a 0,65) → Melanin.</li><li>Raiz escura: Hair Info → Intercept → Map Range → soma na melanina. Em ruivo e loiro, escureça pouco.</li></ol></div>
+<figure><img src="img/lab/10_color_sheet.jpg" alt="Quatro variações de cor" loading="lazy" style="width:100%;height:auto"><figcaption>Cor por mecha dá faixas de tom de desenho. Por fio (Hair Info Random) só suja.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Fio solto em arco</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Curve Info → Random → Compare (Less Than 0,04).</li><li>Liga no Factor de um Hair Curves Noise: Distance 0,04, Shape 0,7, Offset per Curve 1, Cumulative ligado.</li><li><b>Antes do Curl.</b> Depois dele, o Cumulative multiplica pela quantidade de pontos e os fios explodem.</li></ol></div>
+<figure><img src="img/lab/13b_seed_sheet.jpg" alt="Seis cabeças cacheadas e lisas" loading="lazy" style="width:100%;height:auto"><figcaption>Com os strays antes do Curl e um Seed mestre: três variações, e a mesma árvore faz liso, ondulado e cacheado.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Risca seca</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Rasgue o scalp na risca (duas ilhas). Interpolate com Part by Mesh Islands.</li><li>Create Guide Index Map com Group ID = Compare(Curve Root → Root Position X &gt; 0).</li><li>Clump com Existing Guide Map ligado, <b>sem</b> ligar o Guide Index. Ligado, o Clump grava um mapa errado para os nodes depois dele.</li></ol></div>
+<figure><img src="img/lab/17_part_sheet.jpg" alt="Três riscas vistas de cima" loading="lazy" style="width:100%;height:auto"><figcaption>Vista de cima: scalp inteiro, duas ilhas, duas ilhas com Group ID.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Ponta virada</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Roll Hair Curves, Random Orientation 0.</li><li>Roll Direction = Curve Root → Root Position: a ponta vira para fora. Com Scale −1: enrola para dentro.</li><li>O Roll Direction não é eixo: é para onde a ponta enrola.</li></ol></div>
+<figure><img src="img/lab/22c_roll_sheet.jpg" alt="Quatro cortes com pontas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem Roll, flip para fora, ponta para dentro, e para dentro com comprimento por mecha.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Volume na raiz e comprimento por mecha</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Store Named Attribute (Vector, Curve) <code>n_raiz</code> com a saída Surface Normal do Interpolate.</li><li>Set Position: Offset = <code>n_raiz</code> × Map Range(Spline Parameter Factor, 0 a 0,15 → 0 a 0,03, Clamp). Topete.</li><li>Comprimento por mecha: Random Value (0,7 a 1, ID da guia) no Length Factor do Trim.</li></ol></div>
+<figure><img src="img/lab/24b_proc_sheet.jpg" alt="Quatro variações de volume" loading="lazy" style="width:100%;height:auto"><figcaption>O Displace Hair Curves com Surface Normal não moveu nada no teste; o Set Position com a normal do Interpolate funciona.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Franja</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Vertex group <code>franja</code> na frente do topo.</li><li>Trim (Replace Length 0,09, Mask = franja), depois Displace Hair Curves (Vector 0; −0,06; −0,03, Factor = franja).</li><li>Shrinkwrap Hair Curves na cabeça com <b>Above Surface 0</b>. O padrão 0,5 achata o groom inteiro.</li></ol></div>
+<figure><img src="img/lab/27b_fringe_sheet.jpg" alt="Quatro franjas" loading="lazy" style="width:100%;height:auto"><figcaption>Com Above Surface 0 a franja assenta na testa; com 0,5 o cabelo todo gruda na cabeça.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Pelo de personagem (DreamWorks)</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Interpolate denso (1,5 milhão por m²) → Clump Guide Distance 0,008, Shape 0,25.</li><li>Sem clump, vira feltro. Shape 0 abre a pele.</li><li>Camadas: subpelo curto e denso + pelo de guarda raro e grosso, cada um num ramo, juntos por Join Geometry.</li></ol></div>
+<figure><img src="img/lab/14_fur_sheet.jpg" alt="Quatro esferas peludas" loading="lazy" style="width:100%;height:auto"><figcaption>Feltro, tufo estilizado, pele aparecendo e duas camadas.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Trança e mecha de malha</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Trança grossa: Braid Hair Curves com Shape 0 e Factor Min 0,7. Interpolate com Distance to Guides 0,02.</li><li>Mecha de malha: Resample 24 → Set Hair Curve Profile → Curve to Mesh com perfil achatado.</li><li><b>Ligue um node Radius no Scale do Curve to Mesh.</b> Solto, cada mecha vira um tubo de 1 metro.</li></ol></div>
+<figure><img src="img/lab/16b_chunky_sheet.jpg" alt="Seis cabeças com mechas de malha" loading="lazy" style="width:100%;height:auto"><figcaption>Mecha de malha: tubo, fita achatada e fita torcida por mecha.</figcaption></figure>
+
+  <h2 id="lab-fisica" style="margin-top:2rem">Física</h2>
+<h3 style="margin-top:1.6rem">Simular sem perder o penteado</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Snap to Nearest Surface nas guias. Sem o UV de fixação, a simulação explode.</li><li>Modificador 1, só nas guias: Hair Dynamics em <b>Physics (Experimental)</b>, Bendiness 0, Root Bendiness 0, <b>Substeps 40</b>.</li><li>Modificador 2: a cadeia de groom (Interpolate e o resto).</li><li>Colisão: modificador Collider na cabeça inteira, dentro de uma coleção, e a coleção no Effectors Collection. Surface Collision no scalp explodiu em todos os testes.</li></ol></div>
+<figure><img src="img/lab/28d_dyn_sheet.jpg" alt="Três cabeças: espetado, caído e espetado" loading="lazy" style="width:100%;height:auto"><figcaption>Penteado espetado: sem simular, simulado no padrão (desaba) e simulado com Bendiness 0 e Substeps 40 (mantém).</figcaption></figure>
+<figure><img src="img/lab/29_giro_padrao_espaco_mundo.gif" alt="Animação de cabeça girando com cabelo balançando" loading="lazy" style="width:100%;height:auto"><figcaption>Cabeça girando com o Simulation to World vazio: o cabelo atrasa e passa do ponto. Ligar a Transform do próprio objeto ali deixa o cabelo rígido.</figcaption></figure>
+  <div class="src">Fontes: <code>_referencia/grooming/CEREBRO_GROOMING.md</code>, seção 17; scripts e folhas em <code>laboratorio/</code>.</div>
+</section>
+
 <section id="perf">
   <div class="eyebrow">Depois</div>
   <h2>Performance</h2>
@@ -814,7 +894,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <ol>
       <li>Antes de abrir o Blender, mapeie qual modificador resolve qual problema do pelo.</li>
       <li>Só duas regiões, cabeça e corpo, com a linha de corte atrás das bochechas. Regiões por vertex group.</li>
-      <li>Clump, depois Curl, depois Frizz. Existing Guide Map desligado nos dois primeiros, densidade dos clumps pela Guide Distance. Muitos clumps, cada um suave.</li>
+      <li>Clump, depois Curl, depois Frizz. Densidade dos clumps pela Guide Distance, com Existing Guide Map desligado no Clump. Muitos clumps, cada um suave. (Na 5.2, deixe o Curl com Existing ligado; ver o aviso do Clump.)</li>
       <li>Fendas onde a pele estica: Trim por textura pintada, com distribuição aleatória, comprimentos variados, ponta em diamante e curvatura variada. Sem fendas o gato vira pelúcia.</li>
       <li>Shader: Transparent BSDF por Light Path para a sombra interna não virar sujeira. Gradiente raiz-ponta por cima.</li>
       <li>Topcoat duplicado só depois que o shader do undercoat fechou: mais longo, mais aleatório, muito menos fios. É ele que dá a borda fofa.</li>
@@ -864,7 +944,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>"Invalid surface UVs"</td><td>UV sobreposta, costura espelhada quase fundida, ou UV Smooth do Subdivision</td><td>Sem overlap; Merge by Distance no UV Editor; UV Smooth em None</td></tr>
     <tr><td>Cabelo pula ao mudar densidade</td><td>Guia promovida muda de ID</td><td>Definir densidade cedo</td></tr>
     <tr><td>Clump sumiu</td><td>Mexeu no Guide Index (-987654)</td><td>Voltar ao valor; usar Guide Distance e Existing Guide Map</td></tr>
-    <tr><td>Curl virou "permanente"</td><td>Curl seguindo guide map antigo</td><td>Existing Guide Map desligado no Clump e no Curl</td></tr>
+    <tr><td>Curl virou "permanente"</td><td>Curl seguindo um mapa esparso</td><td>Existing Guide Map ligado no Curl logo depois do Clump; se desligar, Guide Distance igual ao do Clump</td></tr>
     <tr><td>Textura ligada no Trim não faz nada</td><td>Input não ligado no editor</td><td>Entrar no grupo e ligar no input certo</td></tr>
     <tr><td>Careca depois do rig deformar</td><td>Buraco na densidade de guias, ampliado pela deformação</td><td>Adicionar guias no vazio</td></tr>
     <tr><td>Pelo nascendo dentro da boca</td><td>Superfície fina embaixo do pincel</td><td>Separar essa parte da malha</td></tr>
@@ -930,4 +1010,5 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 </div>
 </div>
 
+</body>
 </html>

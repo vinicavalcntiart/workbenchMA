@@ -143,10 +143,18 @@ valiosa da base, porque ninguém escreve isso em manual.
 - Corpo de gato: **Clump, depois Curl, depois Frizz**. Muitos clumps, cada um
   suave; ponta afiada lê como falso na hora. Frizz por último e sutil; forte
   fica sujo.
-- **Existing Guide Map desligado no Clump e no Curl.** Chow desligou só no
-  Clump e o Curl seguiu as guias esparsas antigas, dando "permanente"
-  indesejado. Os dois têm que falar a mesma língua. Com o toggle desligado, a
-  densidade dos clumps sai da Guide Distance, sem plantar guia à mão.
+- **Existing Guide Map desligado no Clump e no Curl** (relato do Chow). Ele
+  desligou só no Clump e o Curl seguiu as guias esparsas antigas, dando
+  "permanente" indesejado. Com o toggle desligado, a densidade dos clumps sai
+  da Guide Distance, sem plantar guia à mão.
+  **Medido na 5.2.2 (2026-09-28, t_chow.py), o caso não se reproduz**: com um
+  mapa esparso antigo na geometria (6 guias), o Clump com Existing desligado
+  (GD 0,02) regrava o atributo com o mapa dele (117), e o Curl com Existing
+  **ligado** usa esses 117. Ou seja: na 5.2, Clump → Curl com Existing ligado
+  é o que faz o cacho acompanhar a mecha (17.3). O risco agora é o contrário:
+  **Curl com Existing desligado cria o próprio mapa com o Guide Distance
+  padrão de 0,1**, poucas guias, e aí sim dá "permanente". Se desligar no
+  Curl, iguale o Guide Distance ao do Clump.
 - Bystedt usou **duas camadas de clump**, largo e fino, cada uma com seu
   seed e seu ruído, para não sobrepor igual.
 - Noise com **Offset per Curve ligado** e escala reduzida ao longo da curva
@@ -610,7 +618,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Pelo nascendo dentro da boca | Superfície fina embaixo do pincel de densidade | Separar essa parte da malha; sem superfície, sem pelo | pal/bcon2025-kerstin-schmidbauer-...md |
 | Marca escura de comprimento desigual | Grow/Shrink não pegou todos os fios | Apagar e re-adicionar com o pincel Density na área | pal/bcon2025-kerstin-schmidbauer-...md |
 | Curvas flutuando após editar topologia | UV intacta, superfície mudou | Snap to Nearest Surface no Sculpt | pal/bcon2025-kerstin-schmidbauer-...md |
-| Curl virou "permanente" | Curl seguindo guide map antigo | Existing Guide Map desligado no Clump e no Curl | pal/bcon2026-steve-chow-...md |
+| Curl virou "permanente" | Curl seguindo um mapa esparso (antigo, ou o próprio com Guide Distance 0,1) | Na 5.2: Existing Guide Map ligado no Curl logo depois do Clump; se desligar, Guide Distance igual ao do Clump | pal/bcon2026-steve-chow-...md; lab t_chow.py |
 | Textura ligada no Trim não faz nada | Input não ligado no editor | Entrar no grupo e ligar a textura no input certo | pal/bcon2026-steve-chow-...md |
 | Pelo denso escuro por dentro | Sombra sólida entre camadas | Transparent BSDF por Light Path no shader | pal/bcon2026-steve-chow-...md |
 | Sim explode | Curva dentro de collider em rest; escala do objeto | Shrinkwrap antes; aplicar escala | com/devtalk-45449-...md |
