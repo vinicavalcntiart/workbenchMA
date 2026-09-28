@@ -796,6 +796,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <h2>Receitas testadas no Blender 5.2</h2>
   <p>Tudo nesta parte foi montado e renderizado no Blender 5.2.2, numa cabeça em escala real (10 cm de raio). Então os números funcionam direto no seu arquivo. Cada receita tem uma folha de teste com o antes e o depois.</p>
 <figure><img src="img/lab/triptico_v2.jpg" alt="Três personagens: cacheada, criatura peluda e anime azul" loading="lazy" style="width:100%;height:auto"><figcaption>Três personagens sem nenhuma guia esculpida, só com a biblioteca: cachos por mecha com física, criatura com pelo pictórico, anime com cel-shading e contorno.</figcaption></figure>
+<figure><img src="img/lab/cardapio_estilos.jpg" alt="Doze cortes e pelagens" loading="lazy" style="width:100%;height:auto"><figcaption>Cardápio do laboratório: cada imagem tem o número da receita no cérebro.</figcaption></figure>
 <figure><img src="img/lab/triptico.jpg" alt="Três renders: bob castanho, cachos ruivos e bicho de pelo com olhos grandes" loading="lazy" style="width:100%;height:auto"><figcaption>Três estilos feitos só com a biblioteca de node groups do laboratório: bob com mecha em fita, cachos por mecha e bicho de pelo em tufos.</figcaption></figure>
   <h3 style="margin-top:1.6rem">Quero... faço</h3>
   <div class="tbl"><table>
@@ -823,6 +824,8 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Pelo seguindo uma direção</td><td>GR Pentear por Curva</td></tr>
     <tr><td>Cel-shading no cabelo</td><td>GR Normal da Malha + GR Cabelo Cel</td></tr>
     <tr><td>Reprodução lenta</td><td>Node Bake no fim</td></tr>
+    <tr><td>Desenhar as guias</td><td>GR Guias Desenhadas (Grease Pencil)</td></tr>
+    <tr><td>Máscara de região sem pintar</td><td>GR Máscara por Posição</td></tr>
   </table></div>
 
 <h3 style="margin-top:1.6rem">As regras que mais pesaram</h3>
@@ -838,13 +841,14 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <tr><td>Node Bake para reproduzir</td><td>353 ms viram 9 ms por quadro</td></tr>
 </table></div>
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 31 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 33 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
     <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Ponta Virada → GR Onda S ou GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
     <li>Para variações, ligue um único node Integer no Seed de todos.</li>
   </ol></div>
+<p>A pasta <code>laboratorio/exemplos/</code> tem três cenas prontas feitas só com a biblioteca: cacheada com vento, criatura pictórica e anime com cel-shading. Nenhum arquivo externo.</p>
 <figure><img src="img/lab/21_lib_sheet.jpg" alt="Quatro cabeças com estilos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro grooms montados só com os grupos GR: fita, Merida, onda S com Toon e mecha chunky.</figcaption></figure>
   <h2 id="lab-estilo" style="margin-top:2rem">Estilizado</h2>
 <h3 style="margin-top:1.6rem">Mecha em fita (Pixar)</h3>
@@ -887,6 +891,10 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <div class="box do"><h4>Como fazer</h4><ol><li>Crie um objeto Curves vazio e aponte o Surface para a hair cap.</li><li>Generate Hair Curves: Poisson Disk, 4.000 por m² (cerca de 200 guias), 12 pontos.</li><li>Set Position com uma parábola: sai pela normal, vai para o lado da risca, cai com a gravidade.</li><li>Shrinkwrap na cabeça, Above Surface 0. Daí em diante, a cadeia normal.</li><li>Pronto em <b>GR Guias Procedurais</b>. Bob: para fora 0,4, lado 0,35, gravidade 1,2. Espetado: para fora 1,2, gravidade 0.</li></ol></div>
 <figure><img src="img/lab/31_procguides_sheet.jpg" alt="Quatro cabeças com penteados diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro penteados sem esculpir uma guia: só comprimento, para fora, lado e gravidade mudam.</figcaption></figure>
 <figure><img src="img/lab/37_gallery_sheet.jpg" alt="Galeria de oito cortes" loading="lazy" style="width:100%;height:auto"><figcaption>Uma árvore, oito cortes, com cor ombré por Intercept. O preto saiu cinza: no modo Direct Coloring, preto precisa de Melanin.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Guias desenhadas com Grease Pencil</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Desenhe poucos traços em volta da cabeça.</li><li>No Curves vazio: <b>GR Guias Desenhadas</b> com o Grease Pencil ligado. Por dentro: Grease Pencil to Curves → Set Attachment Surface.</li><li>Daí a cadeia normal. 14 traços viraram 11,5 mil fios.</li></ol></div>
+<div class="warn"><b>Na 5.2 o vínculo com o scalp viaja com a geometria.</b> Curva vinda de Grease Pencil ou de um objeto Curve chega sem ele, e o Interpolate não gera filhos. Set Attachment Surface resolve; Attach Hair Curves to Surface deixa fios de 1 ponto.</div>
+<figure><img src="img/lab/80_gpencil_sheet.jpg" alt="Traços e cabelo" loading="lazy" style="width:100%;height:auto"><figcaption>14 traços de Grease Pencil e o cabelo gerado a partir deles.</figcaption></figure>
 <h2 id="lab-presos" style="margin-top:2rem">Presos e rosto</h2>
 <h3 style="margin-top:1.6rem">Rabo de cavalo, maria-chiquinha e coque</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>GR Rabo de Cavalo depois da Densidade Livre: cada fio vai até o elástico, cola no crânio e cai.</li><li>Maria-chiquinha: ligue no ponto de amarração um vetor com X = sinal do X da raiz × 8,5 cm.</li><li>Coque: enrole a cauda numa espiral com a <b>mesma fase para todos os fios</b>, como uma corda.</li><li>Cacho ou onda na cauda: o "Começa em" tem que ser maior que o "Até a amarração".</li></ol></div>
@@ -945,6 +953,9 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Cada cópia com cabelo diferente</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Self Object → Object Info → Location → <b>Hash Value</b> (Vector).</li><li>Esse inteiro no Seed de todos os grupos e no ID de Random Values: tamanho da mecha, voltas por metro, comprimento, cor.</li><li>Duplique cabeça, scalp e cabelo juntos. Cada cópia sorteia o seu. Pronto em <b>GR Semente do Objeto</b>.</li></ol></div>
 <figure><img src="img/lab/66_multidao.jpg" alt="Quatro cabeças com cabelos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro cópias, o mesmo node tree: preto, loiro, castanho e ruivo, cada uma com comprimento e cacho próprios.</figcaption></figure>
+<h3 style="margin-top:1.6rem">O mínimo que já é estilizado</h3>
+<p>Value → Interpolate → <b>Clump Shape 0,25</b> → Profile → Material. Cinco nodes, 46 ms, e já lê como mecha de desenho. Tudo depois é personalidade.</p>
+<figure><img src="img/lab/90_minimo_sheet.jpg" alt="Três cabelos" loading="lazy" style="width:100%;height:auto"><figcaption>4 nodes, 5 nodes com Clump, 7 com Curl e Roll.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Reproduzir groom pesado: Bake</h3>
 <p>Node Bake no fim da cadeia, modo Animation. Com 1,4 milhão de pontos animados, a reprodução foi de <b>353 ms para 9 ms por quadro</b>. Custa disco: 23 MB por quadro nessa densidade.</p>
 <h3 style="margin-top:1.6rem">Fio saindo pela pele</h3>
@@ -999,6 +1010,19 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <div class="box do"><h4>Como fazer</h4><ol><li>Guarde a normal da pele (pelo) ou de uma malha lisa em volta do cabelo num atributo.</li><li>No shader: Attribute → Vector Transform (Normal, Object → World) → Normal do Toon.</li><li>A luz agrupa em massas, como pintura. Cor por clump e sub-clump reforça a pincelada. Pronto em <b>GR Normal da Malha</b> + material <b>GR Cabelo Cel</b>.</li></ol></div>
 <figure><img src="img/lab/72_pictorico_sheet.jpg" alt="Três criaturas peludas" loading="lazy" style="width:100%;height:auto"><figcaption>Principled Hair fio a fio, Toon com a normal da pele, e com buracos entre clumps.</figcaption></figure>
 <figure><img src="img/lab/73_normal_sheet.jpg" alt="Três bobs em Toon" loading="lazy" style="width:100%;height:auto"><figcaption>Normal do fio, do scalp e da malha proxy: só a proxy dá o terminador limpo.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cortes: undercut, moicano, despenteado</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li><b>GR Máscara por Posição</b>: um campo 0 a 1 por fio numa caixa suave (altura, lateral, frente). Serve em Trim, Transição, Clump.</li><li>Undercut: Trim a 5% fora da máscara do topo. Limite a lateral, não só a altura.</li><li>Moicano: raspado e crista (GR Comprimento até a Malha) misturados pela GR Transição com a máscara.</li><li>Despenteado: Rotate e Noise nas <b>guias</b>, strays nos filhos. As mechas continuam coesas.</li></ol></div>
+<figure><img src="img/lab/94_cap_sheet.jpg" alt="Três undercuts" loading="lazy" style="width:100%;height:auto"><figcaption>Undercut no scalp curto do laboratório e numa hair cap real, de frente e de costas.</figcaption></figure>
+<figure><img src="img/lab/93_moicano.jpg" alt="Moicano verde" loading="lazy" style="width:100%;height:auto"><figcaption>Moicano com três grupos prontos.</figcaption></figure>
+<figure><img src="img/lab/84_despenteado_sheet.jpg" alt="Quatro níveis de bagunça" loading="lazy" style="width:100%;height:auto"><figcaption>Penteado, rotação, noise e strays.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Texturas: afro, dreads, tranças box, cacho curto</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Afro que enche: casca renderizada + pelo curto cacheado nela. Recorte do rosto por elipse e Solidify de 2 cm na casca.</li><li>Dreads: 2.200 fios por m², Onda S com período de 25 cm, Mecha Chunky redonda, relevo por Noise.</li><li>Tranças box: GR Trança Grossa com <b>Tamanho da trança</b> 1,5 cm e Guias por fio 1.</li><li>Cacho curto: o raio relativo ao comprimento manda. Raio ~15% do fio e uma volta dão cachinho de desenho.</li></ol></div>
+<figure><img src="img/lab/88_afros_sheet.jpg" alt="Três afros" loading="lazy" style="width:100%;height:auto"><figcaption>Só trocando a malha: largo, alto e dois puffs.</figcaption></figure>
+<figure><img src="img/lab/86_box_sheet.jpg" alt="Tranças box" loading="lazy" style="width:100%;height:auto"><figcaption>Tranças box com o novo parâmetro de tamanho.</figcaption></figure>
+<figure><img src="img/lab/96_curto_sheet.jpg" alt="Três cabelos curtos cacheados" loading="lazy" style="width:100%;height:auto"><figcaption>Voltas por metro quase não mudam; o raio maior faz o cachinho.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Animal estilizado</h3>
+<p>Comprimento e cor por região com máscaras de posição: tufo na ponta da orelha, bochechas longas, queixo claro. <b>Manchas de cor saem com Mix de cor no Toon</b>, não com melanina: melanina baixa continua laranja.</p>
+<figure><img src="img/lab/91_raposa_sheet.jpg" alt="Duas raposas" loading="lazy" style="width:100%;height:auto"><figcaption>Principled Hair com melanina (manchas somem) e Toon com Mix de cor (aparecem).</figcaption></figure>
 <h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
 <p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
 <figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
