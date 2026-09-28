@@ -2124,3 +2124,10 @@ em volta do cabelo (a de 17.39):
 Pronto em **GR Normal da Malha** (entrada Malha; sem malha passa direto) e
 no material **GR Cabelo Cel** (lê `nvol`). Para pelo, ligue o próprio corpo
 como Malha.
+
+Também funciona em mecha de malha (17.56) [img/63_npr_cel]: GR Normal da
+Malha **antes** da GR Mecha Chunky (o Curve to Mesh leva o atributo para a
+malha), com uma esfera lisa de 12,5 cm como proxy. As mechas ganham um lado
+claro e um escuro coerentes. Armadilha: o ahoge, que sai da esfera, ficou
+escuro; tudo que deve receber a luz do volume precisa estar dentro ou
+colado na malha proxy.

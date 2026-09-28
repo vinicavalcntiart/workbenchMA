@@ -13,14 +13,17 @@ def toon(name, col, size=0.5):
     nt.links.new(d.outputs[0], o.inputs['Surface']); return m
 head.data.materials.append(toon("pele", (0.95,0.72,0.58), 0.7))
 # cabelo toon azul
-hm = MAT["GR Cabelo Toon"].copy(); hm.name = "cabelo_toon"
+hm = MAT["GR Cabelo Cel"].copy(); hm.name = "cabelo_cel"
 for n in hm.node_tree.nodes:
     if n.bl_idname=='ShaderNodeBsdfToon' and n.component=='DIFFUSE': n.inputs['Color'].default_value=(0.05,0.12,0.45,1)
-    if n.bl_idname=='ShaderNodeBsdfToon' and n.component=='GLOSSY': n.inputs['Color'].default_value=(0.35,0.55,0.9,1)
+    if n.bl_idname=='ShaderNodeBsdfToon' and n.component=='GLOSSY': n.inputs['Color'].default_value=(0.45,0.65,1.0,1)
 w = toon("olho", (0.97,0.97,0.97), 0.9); k = toon("iris", (0.02,0.02,0.05), 0.9)
 for sx in (-1,1):
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.02, location=(sx*0.036,-0.086,0.0)); e=bpy.context.object; e.scale=(0.8,0.5,1.2); e.data.materials.append(w); bpy.ops.object.shade_smooth()
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.012, location=(sx*0.034,-0.096,-0.002)); p=bpy.context.object; p.scale=(0.8,0.5,1.3); p.data.materials.append(k); bpy.ops.object.shade_smooth()
+pm = bpy.data.meshes.new("proxy"); bm = bmesh.new(); bmesh.ops.create_uvsphere(bm, u_segments=48, v_segments=24, radius=0.125); bmesh.ops.translate(bm, vec=(0,0.01,0.0), verts=bm.verts); bm.to_mesh(pm); bm.free()
+for p_ in pm.polygons: p_.use_smooth = True
+proxy = link(bpy.data.objects.new("proxy", pm)); proxy.hide_render = True
 cd = bpy.data.hair_curves.new("vazio"); g = link(bpy.data.objects.new("groom", cd)); cd.surface = scalp; cd.surface_uv_map = "UVMap"
 t = Tree("npr")
 x = t.add('GeometryNodeGroup', group=GR["GR Guias Procedurais"])
@@ -39,6 +42,7 @@ zz = t.add('ShaderNodeMath', props={'operation':'ADD'}); t.link(z1.outputs[0], z
 cb = t.add('ShaderNodeCombineXYZ'); t.link(yy.outputs[0], cb.inputs['Y']); t.link(zz.outputs[0], cb.inputs['Z'])
 ad = t.add('ShaderNodeVectorMath', props={'operation':'ADD'}); t.link(cr.outputs['Root Position'], ad.inputs[0]); t.link(cb.outputs[0], ad.inputs[1])
 s = t.add('GeometryNodeSetPosition'); t.chain(s); t.link(c1.outputs[0], s.inputs['Selection']); t.link(ad.outputs[0], s.inputs['Position'])
+nm = t.add('GeometryNodeGroup', group=GR["GR Normal da Malha"]); nm.inputs["Malha"].default_value = proxy; t.chain(nm)
 ch = t.add('GeometryNodeGroup', group=GR["GR Mecha Chunky"]); ch.inputs["Raio"].default_value = 0.018; ch.inputs["Achatamento"].default_value = 0.3; ch.inputs["Torção máx (voltas)"].default_value = 0.0; t.chain(ch, 'Geometry', 'Mesh')
 sm = t.add('GeometryNodeSetMaterial'); sm.inputs['Material'].default_value = hm; t.chain(sm)
 c = t.add('GeometryNodeGroup', group=GR["GR Contorno"]); t.chain(c, 'Mesh', 'Mesh'); c.inputs["Espessura"].default_value = 0.0022
