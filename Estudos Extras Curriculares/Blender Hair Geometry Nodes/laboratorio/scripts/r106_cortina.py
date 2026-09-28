@@ -7,15 +7,20 @@ reset(); EG = essentials()
 with bpy.data.libraries.load(LIB, link=False, assets_only=True) as (src, dst): dst.node_groups = [n for n in src.node_groups if n.startswith("GR ")]
 GR = {n.name:n for n in bpy.data.node_groups}
 head, scalp = make_head(nape=-0.7, front_cut=0.75); head.data.materials.append(skin_mat()); scalp.hide_render = True
+exec('def split_scalp' + '(scalp):\n    """Rasga o scalp em x=0: vira duas ilhas."""\n    bm = bmesh.new(); bm.from_mesh(scalp.data)\n    bmesh.ops.bisect_plane(bm, geom=bm.verts[:]+bm.edges[:]+bm.faces[:], plane_co=(0,0,0), plane_no=(1,0,0))\n    edges = [e for e in bm.edges if all(abs(v.co.x) < 1e-6 for v in e.verts)]\n    bmesh.ops.split_edges(bm, edges=edges)\n    bm.to_mesh(scalp.data); bm.free()\n')
+if 'ilhas' in sys.argv: split_scalp(scalp)
 cd = bpy.data.hair_curves.new("vazio"); g = link(bpy.data.objects.new("groom", cd)); cd.surface = scalp; cd.surface_uv_map = "UVMap"
 t = Tree("ct")
 def grp(name, **kw):
     n = t.add('GeometryNodeGroup', group=GR[name])
     for k,v in kw.items(): n.inputs[k].default_value = v
     return n
-x = grp("GR Guias Procedurais", **{"Cabeça (colisão)": head, "Comprimento": 0.30, "Para fora": 0.35, "Para o lado da risca": 0.25, "Para trás": 0.2, "Gravidade": 2.2}); t.chain(x, 'Geometry', 'Guias')
+x = grp("GR Guias Procedurais", **{"Cabeça (colisão)": head, "Comprimento": 0.30, "Para fora": 0.35, "Para o lado da risca": (0.6 if "ilhas" in sys.argv else 0.25), "Para trás": 0.2, "Gravidade": 2.2}); t.chain(x, 'Geometry', 'Guias')
 d = grp("GR Densidade Livre", **{"Viewport": 1.0, "Fios por m2": 300000.0}); t.chain(d)
-m = grp("GR Mecha Estilizada", **{"Tamanho da mecha": 0.014}); t.chain(m, m.inputs[0].name, m.outputs[0].name)
+m = grp("GR Mecha Estilizada", **{"Tamanho da mecha": 0.014})
+if "ilhas" in sys.argv:
+    ls_ = t.add('GeometryNodeGroup', group=GR["GR Lado da Risca"]); t.link(ls_.outputs[0], m.inputs["Group ID"])
+t.chain(m, m.inputs[0].name, m.outputs[0].name)
 base = t.geo
 if V == "cortina":
     mk = grp("GR Máscara por Posição", **{"Frente máx (Y)": -0.045, "Altura mín": 0.03, "Borda suave": 0.012})
@@ -37,4 +42,4 @@ if V == "cortina":
 c = grp("GR Cor por Mecha"); t.chain(c, c.inputs[0].name, c.outputs[0].name)
 profile(t, EG, radius=0.0005); set_mat(t, hair_mat("h", melanin=0.45, redness=0.6)); apply_tree(g, t.finish())
 print("INFO", V, stats(g).get('curves'))
-shot(f"106_{V}", res=420, samples=16, cam_loc=(0.12,-0.62,0.02), target=(0,0,-0.03), lens=46)
+shot(f"106_{V}{'_ilhas' if 'ilhas' in sys.argv else ''}", res=420, samples=16, cam_loc=(0.12,-0.62,0.02), target=(0,0,-0.03), lens=46)

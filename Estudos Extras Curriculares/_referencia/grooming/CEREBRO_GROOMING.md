@@ -2737,5 +2737,11 @@ na máscara → abrir para os lados.
 
 Para a cortina de verdade faltam: risca no meio (scalp em duas ilhas, 17.13)
 e o empurrão lateral crescer mais cedo no fio. Testado s^0,6 × 9 cm: abre
-um pouco mais no centro, mas a franja fica rala e sem o "V" limpo. Não
-resolvido nesta sessão; o próximo passo é a risca em duas ilhas.
+um pouco mais no centro, mas a franja fica rala e sem o "V" limpo.
+
+Terceiro passo: **scalp em duas ilhas** (17.13) + GR Lado da Risca no Group
+ID da Mecha + Para o lado 0,6 nas guias. Sai um "V" limpo no meio e o
+cabelo emoldura o rosto, mas a parte curta da franja fica escondida nas
+laterais. Resultado: risca central com moldura, ainda não a cortina curta.
+O que falta, a testar: o comprimento curto só nos primeiros 3 cm de cada
+lado da risca (máscara pela distância à risca, não pela frente toda).
