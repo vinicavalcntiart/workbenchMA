@@ -788,6 +788,7 @@ estão resumidas em 17.0):
 | Levar o groom para outro programa | USD leva os atributos; Alembic só posição e raio | 17.93 |
 | Quanto custa mais fio no render | 28× fios = 2,2× tempo; o caro é avaliar a cadeia | 17.94 |
 | Sobrancelha expressiva | escala de um Empty → offset (levantar e franzir) | 17.95 |
+| Personagem com cortina e balanço | dois ramos de guias + GR Balanço + Transição | 17.96 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2873,3 +2874,17 @@ interna −9 mm), Add Rest Position ligado nela, Deform Curves on Surface no
 fim da cadeia. As três expressões leem e a raiz fica a **0,3 mm** da pele
 deformada em todas. Numa cabeça real, a região é parte da malha do rosto e
 usa as mesmas shape keys do rig facial.
+
+### 17.96 Personagem final: cortina + balanço [img/114_final_sheet, finais/114_final_cortina, 114_final.gif]
+
+Integração das receitas novas, só biblioteca: HairCap real em duas ilhas;
+dois ramos (cabelo 32 cm e franja 14 cm, 17.91), cada um com Resample 24 →
+**GR Balanço** → Shrinkwrap → Densidade 260 mil/m² → Resample 24; GR
+Transição com GR Máscara por Posição; Mecha com GR Lado da Risca; Cor por
+Mecha; sobrancelha por região. 18 mil fios, 434 mil pontos, 900 px em 94 s.
+
+Na primeira versão, dois erros de ordem que as regras já previam:
+- **GR Strays em Arco depois de um Resample 24** (os filhos tinham 12
+  pontos): o Noise cumulativo dobrou e os strays explodiram (regra 5).
+- Balanço com amplitude 0,22 rad: no quadro 7 a franja cobria o rosto.
+  0,12 rad é o limite para franja curta não invadir o olho.
