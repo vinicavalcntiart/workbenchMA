@@ -733,6 +733,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Personagem completo sem esculpir | Guias Procedurais → Física → Densidade → Mecha → Strays → Cacho → Cor | 17.50 |
 | Procedural e depois esculpir | Apply no modificador das guias; mantém UV de fixação e id | 17.51 |
 | Mecha colorida, mecha branca, molhado, ahoge | seleção por mecha → atributo `destaque` → shader e Set Position | 17.52 |
+| Alongar fios | Trim Length Factor > 1 (1,5 = +50%) | 17.52 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1795,3 +1796,7 @@ por mecha** + Store Named Attribute `destaque` (Float, Curve) lido no shader:
   curva (17.15).
 - A seleção por mecha (ID da guia) mantém a mecha inteira coesa; por fio,
   sairia salpicado.
+- **Trim Hair Curves também alonga.** Medido (fio de 24 cm, Replace Length
+  desligado): Length Factor 0,5 = 12 cm; 1,5 = 36 cm (com e sem Scale
+  Uniform); 2 = 47,9 cm. No teste da mecha colorida, o Trim 1,25 com Mask =
+  seleção deixou só ela mais longa.
