@@ -685,6 +685,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Crespo | ≥ 8 pontos por volta | 17.28 |
 | Penteado sem esculpir | Generate Hair Curves + parábola + Shrinkwrap | 17.29 |
 | Rabo de cavalo | Mix(raiz, amarração) até t, depois cai; Shrinkwrap | 17.30 |
+| Maria-chiquinha, rabo trançado, coque | campo na amarração; Braid depois; espiral de fase única | 17.31 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1209,3 +1210,24 @@ as raízes estão. Depois da GR Densidade Livre:
 **Regra**: o "Começa em" do Cacho ou da Onda tem que ser maior que tf, senão o
 cacho começa em cima do crânio e bagunça a parte presa. Abertura de 1,2 cm
 deixa a cauda fina demais; 3 cm lê bem. Pronto em GR Rabo de Cavalo.
+
+### 17.31 Maria-chiquinha, rabo trançado e coque [img/35_updos_sheet, 35b_bun_sheet]
+
+Todos em cima da GR Rabo de Cavalo:
+
+- **Maria-chiquinha**: um campo no socket Amarração. X = Sign(Root Position
+  X) × 0,085, Y 0,035, Z 0,03. Cada lado vai para o seu elástico, e a risca
+  central sai limpa sem mais nada.
+- **Rabo trançado**: GR Trança Grossa depois, com "Começa em" 0,4 (maior que o
+  "Até a amarração"). Funciona, mas a trança sai fina e o topo ganha textura
+  de ruído; precisa de ajuste.
+- **Coque**: depois do rabo com cauda 0, um Set Position enrola a parte depois
+  do elástico numa espiral no plano perpendicular à direção do elástico: raio
+  de 3 a 4 mm crescendo até 2,2 a 3 cm, 2,2 a 3 voltas, subindo 1,8 cm.
+  **Fase e raio iguais para todos os fios** (a cauda é uma corda). O único
+  sorteio por fio é um deslocamento de 6 a 8 mm, a espessura da corda.
+  Com fase e raio sorteados por fio, o primeiro teste virou uma nuvem.
+
+Regra geral que sai daqui: **forma coletiva (coque, corda, trança) usa valores
+iguais para o grupo; variação por fio só para textura**. É o mesmo princípio
+da Frequency do Curl (17.3).
