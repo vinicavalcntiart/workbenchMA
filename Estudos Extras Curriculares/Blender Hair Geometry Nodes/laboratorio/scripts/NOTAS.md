@@ -48,3 +48,4 @@
 - Scalp pintado (cor da raiz, 0,06/0,028/0,014): pele a mostra no topo (mascara emissiva) 60k/m2 4606 -> 461 px; 150k 1799 -> 354; 300k 809 -> 262. 60k pintado < 300k sem pintar.
 - Biblioteca 23 grupos: + GR Corte pela Malha, GR Comprimento ate a Malha. Validado do .blend (Trolls pontas acima de 6 cm; corte ponta mais baixa -10,8 cm).
 - Cards: normal Free = Cross(Tangent, n_raiz) deita (0,76); n_raiz deixa de pe (0,12); Minimum Twist 0,74 gira. UV = Store FLOAT2 CORNER 'UVMap'; Object > Convert > Mesh vira UV map real; FBX ok. 20k/m2 = 860 cards, 15,8k tris. new_from_object falha em Curves com saida mesh (usar convert).
+- Padrao no pelo: Root Position -> Wave Bands Z Scale 7 Dist 8 (listra) / Voronoi F1 Scale 12 MapRange 0,40->0,34 (mancha) / anel 0,26-0,30 x 0,44-0,40 (roseta) -> Eval Curve -> Store padrao -> Trim LF 1-0,4*padrao (Scale Uniform) + Melanin 0,3-1. Relevo le como pelagem.

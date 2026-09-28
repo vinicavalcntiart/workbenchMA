@@ -718,6 +718,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Afro que enche | casca renderizada + pelo curto cacheado nascendo nela | 17.41 |
 | Menos fios, mesma cobertura | scalp com a cor da raiz: 60 mil/m² cobre como 300 mil | 17.42 |
 | Hair cards para jogo | Curve to Mesh com perfil em linha, normal = Tangent × n_raiz, UV em Face Corner | 17.43 |
+| Listra, mancha, roseta no pelo | textura na raiz → atributo → cor + Trim 40% | 17.44 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1575,3 +1576,28 @@ deitado no crânio, 0 = de pé):
 - Card precisa de scalp pintado (17.42): com poucos cards a pele aparece.
 
 Pronto em **GR Hair Cards** + material **GR Card Alpha**, validado do .blend.
+
+### 17.44 Pelagem com padrão: listra, mancha, roseta [img/50_pattern_sheet]
+
+Um atributo por fio controla **cor e comprimento** juntos; o padrão lê como
+relevo, não como pintura. Corpo de 15 cm de raio, 1,5 M fios/m², tufos de 8 mm.
+
+1. Curve Root → Root Position → textura:
+   - **Listra**: Wave Texture Bands, direção Z, Scale 7, Distortion 8 →
+     Map Range 0,62–0,68 → 0–1.
+   - **Mancha**: Voronoi F1, Scale 12, Distance → Map Range 0,40 → 0,34
+     (invertido: perto do centro da célula = 1).
+   - **Roseta** (onça): o anel do Voronoi = Map Range 0,26–0,30 × Map Range
+     0,44–0,40.
+2. Evaluate on Domain (Curve) → Store Named Attribute `padrao` (Float, Curve).
+3. Trim Length Factor = 1 − 0,4 × padrao (Scale Uniform ligado): a parte
+   escura fica 40% mais curta e afunda.
+4. Shader: Attribute `padrao` → Map Range 0,3–1 → Melanin, Redness 1.
+
+- Só cor (escala 3): faixa chapada. Cor + comprimento: sulco com leitura
+  de pelagem.
+- Escala da textura é em metros do objeto: Scale 3 num corpo de 30 cm dá
+  duas faixas; 7 dá listra de tigre.
+- Em personagem animado, troque Root Position por `surface_uv_coordinate`
+  (17.27): posição muda quando o corpo deforma e o padrão escorrega
+  (dedução, não medido aqui).
