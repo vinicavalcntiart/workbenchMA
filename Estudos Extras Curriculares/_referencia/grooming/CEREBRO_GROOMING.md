@@ -1900,6 +1900,9 @@ acumulado (mede o grupo ligando um por vez):
   Visualmente 0, 1 e 2 ficaram quase iguais numa cabeça a 70 cm (154 mil,
   295 mil e 578 mil pontos).
 - Viewport 0,25 na cadeia otimizada: 171 ms (3,7 mil fios).
+- Conferido que o **render usa 100%** com Viewport 0,25: a viewport avaliou
+  633 fios contra 2.950, e o render cobriu a mesma área (15,7% contra 15,4%
+  dos pixels). Deixe a GR Densidade Livre no padrão 0,25 sem medo.
 - A GR Ponta Virada agora expõe **Subdivisão** (padrão 1; antes era 2 fixo).
 - Ordem completa que funciona: Densidade → Mecha → Volume → Strays → Ponta
   Virada → Onda ou Cacho → Cor → (Deform) → Profile.
