@@ -766,6 +766,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Dreadlocks | 2.200/m² → Onda S lenta → Mecha Chunky redonda → relevo por Noise | 17.74 |
 | Tranças box | GR Trança Grossa com Tamanho da trança ~1,5 cm, Guias por fio 1 | 17.75 |
 | Barba longa de fio ou em blocos | Guias Procedurais na região; Chunky + Cel + Contorno para blocos | 17.76 |
+| Menor groom estilizado | Value → Interpolate → Clump 0,25 → Profile → Material (5 nodes, 46 ms) | 17.77 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2435,3 +2436,18 @@ Na versão em blocos, a normal da cabeça embaixo do queixo aponta para
 baixo, e a barba toda ficou no lado escuro do Toon. Para barba, use como
 Malha da GR Normal da Malha uma esfera/casca na frente do rosto (a barba
 "olha" para a câmera), não a cabeça.
+
+### 17.77 O mínimo de nodes que ainda é um groom estilizado [img/90_minimo_sheet]
+
+Mesmas guias, 12,8 mil fios:
+
+| Nodes | Cadeia | Avaliação | Leitura |
+|---|---|---|---|
+| 4 | Value → Interpolate → Set Hair Curve Profile → Set Material | 23 ms | massa lisa, "peruca" |
+| **5** | + **Clump Shape 0,25** | 46 ms | **mechas de desenho**: já é estilizado |
+| 7 | + Curl (Sub 2) + Roll (Sub 0) | 646 ms | cachos com ponta virada |
+
+O Clump é o node que mais muda a leitura por custo. Tudo depois dele é
+personalidade. O salto de custo vem do Curl (Subdivision multiplica
+pontos, 17.14 e 17.54): comece a sessão com os 5 nodes e ligue o Curl no
+fim.
