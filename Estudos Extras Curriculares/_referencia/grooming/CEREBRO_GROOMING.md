@@ -644,3 +644,66 @@ Pastas: `essentials-internals/` para o que cada node faz por dentro;
 `blender-dev/` para o que os devs decidiram e por quê; `comunidade/` para o
 que quebra na prática; `blogs-jp-zh/` para valores e receitas; `palestras/`
 para transcrições da Blender Conference, quando houver legenda.
+
+---
+
+## 17. Laboratório: receitas testadas em bpy 5.2.2 (2026-09-28)
+
+Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
+(raio 10 cm, scalp 0,052 m², fios de 24 a 28 cm, 160 a 220 guias). Os valores
+valem direto para uma cabeça humana em metros. Scripts em
+`Blender Hair Geometry Nodes/laboratorio/scripts/`, folhas de contato em
+`laboratorio/img/`. Cada receita cita a folha.
+
+### 17.1 Armadilhas da 5.2 medidas
+
+- **Scalp.** O Interpolate acha o scalp pelo Object Data do Curves (Surface e
+  Surface UV Map). Não precisa de nada na frente. Colocar Attach Hair Curves to
+  Surface com Named Attribute "UVMap" no Surface UV Map **quebra** o groom
+  (fios de 1 ponto): o campo é lido nas curvas, que não têm UVMap.
+- **Density trava em 10.000 por m² no painel.** Em escala real isso dá uns 420
+  fios na cabeça inteira. Um node **Value** ligado no socket Density passa do
+  limite: 100.000 deu 5.088 fios, 300.000 deu 15.500.
+- **Curl: voltas por metro = 3 × Frequency** (dentro do grupo, Segment Length
+  acumulado × Frequency × 3). Frequency 1 num fio de 28 cm é menos de uma
+  volta. O valor depende da escala da cena.
+
+### 17.2 Mecha estilizada (Pixar/Disney) [img/03_shape_sheet, 04_ribbon_sheet]
+
+Clump com Guide Distance 0,02, Factor 1, Preserve Length ligado. O que decide
+o visual é o **Shape**:
+
+| Shape | Resultado |
+|---|---|
+| 0 | Fecha desde a raiz, abre careca no topo |
+| 0,25 | Mechas marcadas, raiz coberta. **A receita de 1 node** |
+| 0,5 (padrão) | Fecha só nas pontas, "vassoura" |
+| 1,0 | Quase não junta |
+
+Distance Falloff de 0,006 a 0,01 apaga o clump; não use para estilizado.
+
+**Mecha em fita** (3 nodes a mais, controle total): Shape 0, e o Factor vem de
+Spline Parameter → Map Range (From 0 a 0,3, To 0 a 1, Clamp) → Factor do
+Clump. Mais Tip Spread 0,004. A rampa segura a raiz aberta e fecha a mecha a
+partir de 30% do fio. Rampa 0,15 é cedo demais e abre buraco.
+
+### 17.3 Cachos definidos (Merida) [img/06_curlfreq_sheet, 07_curlvar_sheet]
+
+Cadeia: Interpolate → Clump (Shape 0,25, GD 0,02) → Curl (Existing Guide Map
+ligado, Subdivision 3, Curl Start 0,08) → Set Hair Curve Profile.
+
+| Visual | Radius | Frequency |
+|---|---|---|
+| Cacho em mola, Merida | 0,010 a 0,011 | 9 a 10 |
+| Mola apertada | 0,007 | 20 |
+| Onda aberta | 0,012 | 5 |
+
+- Clump antes do Curl, com Existing Guide Map ligado no Curl: o cacho
+  acompanha a mecha.
+- **Variação por mecha**: Random Value (Float) com **ID = Named Attribute
+  (Integer) `guide_curve_index`** no Radius (0,007 a 0,016) e na Frequency
+  (6 a 13). Cada mecha ganha seu cacho e a definição fica.
+- **Variação por fio** (ID vazio) desfaz a definição e vira massa felpuda.
+  Serve para realismo, não para estilizado.
+- Custo: Subdivision 3 leva 12 pontos para 89 por fio. 20 mil fios = 1,8
+  milhão de pontos.

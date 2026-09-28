@@ -1,0 +1,10 @@
+import sys; sys.path.insert(0,'.')
+from lab import *
+EG, head, scalp, g = base_scene()
+t = Tree("base")
+interp(t, EG, density=300000.0)
+profile(t, EG, radius=0.0003)
+set_mat(t, hair_mat("castanho", melanin=0.7, redness=0.4, roughness=0.3))
+apply_tree(g, t.finish())
+print(stats(g))
+shot("00_base_sem_clump", res=512, samples=16)
