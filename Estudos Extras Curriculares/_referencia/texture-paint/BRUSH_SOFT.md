@@ -9,7 +9,11 @@ Os números vêm de `scripts/brush_soft_sim.py`, que reproduz as fórmulas do
 código. **Não foi pintado na interface**: o bpy headless não abre viewport.
 Confirmar no Blender do Vini.
 
-![comparativo](img/brush_soft_sheet.jpg)
+![cartões dos brushes](img/brush_cards_sheet.jpg)
+
+Um cartão por brush em `img/cards/`: falloff com os pontos para copiar,
+um dab, o traço e o corte do traço (laranja) contra o dab (tracejado).
+Comparativo antigo, só com traços: `img/brush_soft_sheet.jpg`.
 
 ## Por que o Paint Soft parece duro
 
@@ -63,7 +67,7 @@ saturar: o degradê ocupa o traço todo.
    os pontos (0; 1), (0,25; 0,45), (0,6; 0,1), (1; 0).
 5. Salve as mudanças no asset.
 
-## Hardness pela curva Custom
+## Hardness pela curva Custom (Accumulate desligado)
 
 O próprio Paint Hard do Essentials é uma curva Custom com os pontos
 (0,75; 1), (0,81; 0,95), (0,96; 0,06), (1; 0). É a curva Smooth comprimida
@@ -77,8 +81,13 @@ para depois de 0,75. Para qualquer hardness h, use os pontos:
 | 4 | 1 | 0 |
 
 Antes do primeiro ponto a curva fica em 1 (extensão Horizontal, conferido
-no bpy). Salve um asset por hardness que você usa, por exemplo 0, 0,5 e
-0,8.
+no bpy). **Deixe o Accumulate desligado no hardness**: a soma ao longo do
+traço amacia qualquer curva, e o hardness 0,8 com Accumulate virou um
+degradê largo (borda 0,50 R, cartão 07). Sem Accumulate, o traço segue o
+dab: hardness 0,5 dá borda 0,16 R e 0,8 dá 0,07 R.
+
+Resumo: **Accumulate para soft e airbrush; desligado para hardness médio
+ou alto.** Salve um asset para cada um.
 
 ## Diferenças que continuam
 
