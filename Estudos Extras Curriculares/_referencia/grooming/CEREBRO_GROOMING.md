@@ -740,6 +740,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Criatura completa | Pentear por Curva + listra no dorso + barriga clara | 17.55 |
 | Anime / NPR | 3.000/m², Mecha Chunky raio 1,8 cm sem torção, Toon, Contorno | 17.56 |
 | Cabelo flutuando / vento barato | Noise 4D com W = tempo × Spline Parameter^1,5 no offset das guias | 17.57 |
+| Cabelo que esparrama no chão | profundidade abaixo do piso vira deslocamento para fora | 17.58 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1910,3 +1911,23 @@ render 320 px: 37 s.
 
 Mesma receita serve de "vento contínuo" barato para cabelo de fundo, onde a
 física (17.35) seria cara demais.
+
+### 17.58 Cabelo longo que chega ao chão [img/65_chao_sheet]
+
+Fio de 1,1 m, chão a 55 cm abaixo do centro da cabeça. Nas guias (Resample
+60), antes do Interpolate, oito nodes:
+
+1. Profundidade = max(Z do chão − Z do ponto, 0).
+2. Direção horizontal = Normalize(X, Y + 0,05, 0) (do centro para fora).
+3. Offset = direção × profundidade + (0, 0, profundidade) → Set Position.
+
+Todo ponto que furaria o chão sobe até ele e anda para fora o mesmo tanto:
+o cabelo **esparrama** em volta, em vez de atravessar. Depois do Interpolate,
+um Set Position com Z = max(Z, chão) segura os filhos que furam entre duas
+guias.
+
+- Shrinkwrap com Above Surface no chão empilharia tudo no ponto de contato
+  (projeta para cima, não para fora).
+- As mechas no chão ficam retas e radiais; para leitura orgânica, um Noise
+  leve depois da dobra.
+- 10,4 mil fios × 60 pontos = 626 mil pontos.
