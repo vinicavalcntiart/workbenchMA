@@ -728,6 +728,23 @@ sw = g.n('GeometryNodeSwitch', props={'input_type':'FLOAT'}); g.l(inv, sw.inputs
 ev = g.n('GeometryNodeFieldOnDomain', props={'domain':'CURVE','data_type':'FLOAT'}); g.l(sw.outputs[0], ev.inputs[0])
 g.l(ev.outputs[0], o); libs.append(g.ng)
 
+# 34. Desviar de Objeto
+g = G("GR Desviar de Objeto", "Empurra o cabelo para fora de uma esfera em volta de um objeto (Empty, mao, ombro). Anime o objeto: o cabelo abre caminho, sem fisica. Coloque DEPOIS do Shrinkwrap na cabeca.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+ob = g.inp("Objeto", 'NodeSocketObject', desc="Centro da esfera de desvio")
+ra = g.inp("Raio", 'NodeSocketFloat', 0.045, 0.0, 10.0, "Raio da esfera de desvio", 'DISTANCE')
+o = g.out("Geometry", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(ob, oi.inputs['Object'])
+ps = g.n('GeometryNodeInputPosition')
+dv = g.n('ShaderNodeVectorMath', props={'operation':'SUBTRACT'}); g.l(ps.outputs[0], dv.inputs[0]); g.l(oi.outputs['Location'], dv.inputs[1])
+ln = g.n('ShaderNodeVectorMath', props={'operation':'LENGTH'}); g.l(dv.outputs[0], ln.inputs[0])
+nd = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(dv.outputs[0], nd.inputs[0])
+pe = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(ra, pe.inputs[0]); g.l(ln.outputs['Value'], pe.inputs[1])
+mx = g.n('ShaderNodeMath', props={'operation':'MAXIMUM'}); g.l(pe.outputs[0], mx.inputs[0]); mx.inputs[1].default_value = 0.0
+sc_ = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0], sc_.inputs[0]); g.l(mx.outputs[0], sc_.inputs['Scale'])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(sc_.outputs[0], st.inputs['Offset'])
+g.l(passthru(g, ob, geo, st.outputs[0], 'MESH') if False else st.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

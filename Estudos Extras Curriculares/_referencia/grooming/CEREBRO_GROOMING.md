@@ -774,7 +774,7 @@ estão resumidas em 17.0):
 | Undercut | Trim 5% fora da Máscara por Posição (altura e lateral) + Volume na Raiz | 17.81 |
 | Cacho em cabelo curto | raio relativo ao comprimento manda, não as voltas | 17.82 |
 | Pelo arrepiado (susto) | animar o Levanta da GR Pentear por Curva | 17.83 |
-| Mão/objeto passando pelo cabelo | Empty → empurrar para fora de uma esfera (7 nodes) | 17.84 |
+| Mão/objeto passando pelo cabelo | GR Desviar de Objeto depois do Shrinkwrap | 17.84 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -1098,7 +1098,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Trinta e três node groups "GR" e cinco materiais, marcados como asset, feitos com as
+Trinta e quatro node groups "GR" e cinco materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -2601,6 +2601,10 @@ Pontos dentro da esfera, medido:
 | 13 (mão encostada no crânio) | 1.747 | 650 |
 
 No quadro 13, o Shrinkwrap depois devolve os fios para fora da cabeça,
-para dentro da mão: cabeça e mão disputam o mesmo espaço. Para contato
-com a pele, ponha o desvio **depois** do Shrinkwrap ou use R maior que a
-mão. Animar o Empty basta; 7 nodes.
+para dentro da mão: cabeça e mão disputam o mesmo espaço. **Desvio depois
+do Shrinkwrap**: 0 pontos dentro nos dois quadros (medido). Animar o Empty
+basta; 7 nodes.
+
+Pronto em **GR Desviar de Objeto** (Objeto, Raio). Validado do .blend: 0
+pontos dentro de 4,4 cm do Empty. Serve para ombro, gola, mão, chapéu
+redondo: um Empty no centro e o raio certo.
