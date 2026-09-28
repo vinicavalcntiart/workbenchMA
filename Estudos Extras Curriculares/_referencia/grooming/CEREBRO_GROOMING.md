@@ -2858,3 +2858,8 @@ Escala (1,1,2) = surpresa, (2,1,1) = bravo. O animador anima o Empty.
 Ressalva: o offset move a raiz junto e a sobrancelha **descola** da pele. Em
 toon isso passa (sobrancelha "flutuando" é convenção); para ficar colada,
 anime a pele com shape key e use Deform Curves on Surface (17.46).
+
+Testado com a raiz presa (offset × Spline Parameter) [img/113b_sobrancelha_sheet]:
+a "surpresa" vira sobrancelha **arrepiada** (os fios levantam, a forma não
+sobe) e o "bravo" quase não lê. A expressão vem de mover a forma inteira;
+mexer só nos fios serve para textura (susto, 17.83), não para expressão.
