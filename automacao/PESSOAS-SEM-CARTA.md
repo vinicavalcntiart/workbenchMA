@@ -19422,3 +19422,80 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (ronashtiani OR Ashtiani OR "Last Arrow")` → boas-vindas do Teamtailor assinadas por Becki Leggatt em **11/09** e a resposta do Vini a ela em **14/09**, sem retorno. **Nenhuma recusa.** Endereço exato → **`{}`**. Repositório: Atomhawk tem Eddie Visser (outra casa); Last Arrow sem pessoa em `pessoas.csv`. **Ele seria a segunda pessoa da casa** (a primeira foi a Becki, pela caixa do Teamtailor).
 - **RESSALVAS HONESTAS:** a mais fraca das seis. O site dele não cita a Last Arrow (fala de conselho da Steamforged e de consultoria), e o site da casa não cita ele; a disciplina da casa não está provada; a casa já recebeu o Vini em 14/09 sem responder.
+
+## RODADA DE 28/09 (Joe): PRIORIDADE DO LEVER (NOUGH, DREAM GAMES, BLACKBIRD) E A VEIA DO BLUESKY COM ESTÚDIOS NOVOS (Polônia, Vancouver/Ontário, Copenhague), SEGUIDA DO **SITE PESSOAL** OU DO **BEHANCE** DA PESSOA. **Quatro fichas com endereço PUBLICADO e confiança ALTA, mais uma caixa de recrutamento publicada no anúncio (NOUGH). Zero montado.** Email completo fora do repositório (repositório público); aqui vai mascarado
+
+**Placar: 4 pessoas ALTA + 1 caixa ALTA sem nome, 0 montado, 0 rascunho, 0 carta.**
+
+**CASAS DA PRIORIDADE SEM PESSOA NOVA, E POR QUÊ:**
+- **Behaviour Interactive e Kabam:** as duas **recusaram por escrito** (Behaviour 11/09, *"we have decided to move forward with other candidates"*; Kabam 03/09, *"the position has now been filled"*). Regra da rodada: nunca casa que recusou. Ninguém novo.
+- **Larian e Quantic Dream:** cada uma já tem ficha de 27/09 com rascunho para a caixa geral. Achei **Artem Shapiro** (*Senior 3D Character Artist | Larian Studios*, Bluesky), sem email em linktree nem em lugar aberto. Na Quantic, **Carlos Pardo ("Made")**, *Associate Art Director*: o único endereço dele nos sites `2d.fr` e `pardo.pro` é um campo **escondido de PayPal** (`name="business"`), não um contato publicado, então **não conta**.
+- **Blackbird Interactive (Vancouver):** a API do Lever (`blackbirdinteractive`, 4 vagas: General Application, Senior Level Designer, Senior Technical Artist, VFX Artist) e as páginas `/careers` e `/contact` não trazem endereço nenhum. Brennan Massicotte (*Art Director & Concept Artist*) só publica ArtStation (403 daqui), Patreon e redes, sem email. Chris Williams (*Studio Art Director*) e Lisha Leston só aparecem mascarados em base paga. **Sem ficha.**
+- **Kolibri:** já tem duas linhas (caixa e Daniel Lopez), teto atingido.
+
+**MEDIDO E SEM FICHA, para ninguém reabrir:**
+- **Wargaming:** Marlene Lynn Beumker (*3D Character Artist at Wargaming*, Chipre) publica email na bio do Bluesky, mas a **Wargaming recusou por escrito em 10/09 e 13/09**. Fora.
+- **Armadilha de homônimo:** Dean Wilson, *Art director at Playtonic*: o `deanwilsonart.com` com email é de um **pintor a óleo de Lincoln**, sem uma palavra sobre jogos. Não dá para provar que é ele.
+- **Palle Hoffstein**, *Character Art Director at Ubisoft Massive* (Malmö): nome e cargo atuais, sem endereço publicado em página aberta (só base paga). Massive já tem Jevgeni Laur.
+- **Endereço só em resumo de buscador ou página bloqueada:** Colleen Larson (Naughty Dog; a fonte é o ArtStation, 403). Oscar Hallberg (*Senior Character Artist @ Arrowhead*), Sander Flisijn (*Lead Character Artist at Bloober Team*, site só com formulário), Brendon Bengtson (*Lead Character Artist @ Crystal Dynamics*, sites sem email), Madeleine Herold (*Senior 3D Character Artist, Gearbox Quebec*): sem endereço aberto.
+
+### FICHA 1: **Diren Ayhan**, *Visual Development Lead*, **DREAM GAMES** (Istambul, **TURQUIA**; segundo escritório em Londres) — `d***@gmail.com` — **ALTA (PUBLICADO em texto no perfil público do Behance dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.behance.net/direnayhan` (**200, 888.135 bytes**): o endereço aparece em texto na linha de detalhes do perfil (`<span>d***@gmail.com</span>`), junto de *"Comic Artist, Illustrator, Character Designer"* e *"Istanbul, Turkey"*. `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=direndraws.bsky.social` (**200**): *"Visual Development Lead at Dream Games"*. `https://theorg.com/org/dream-games/org-chart/diren-ayhan` (**200**): *"Lead Visual Development Artist at Dream Games"*. `https://api.lever.co/v0/postings/dreamgames?mode=json` (**200, 21 vagas**): tem **Visual Development Artist** (Istambul) aberta, `https://jobs.lever.co/dreamgames/7d2e95ca-ef9c-4ff8-b856-319eedc12b66`, e **Marketing Illustrator**. **NADA MONTADO.**
+- **POR QUE ELE:** lidera o time de vis dev, que é o time da vaga aberta. O chefe de arte da casa é Serdar Yılmaz (cofundador, *Chief Art Officer*), sem email público; o líder de 3D, Mehmet Fırat, também não tem endereço aberto. Diren é o líder de arte mais próximo da vaga com endereço publicado.
+- **FRASES DA CASA, literais:**
+  - Home `https://www.dreamgames.com/` (**200**): *"Our games are loved worldwide, entertaining millions of players daily with enjoyable characters, a vibrant universe, and engaging puzzles."*
+  - About `https://www.dreamgames.com/about-us` (**200**): *"By connecting the creativity of Istanbul with the global reach of London, we foster a culture where innovation and excellence come to life."*
+- **CASA E DISCIPLINA:** personagem estilizado de jogo mobile (*Royal Match*, *Royal Kingdom*), casa grande (avaliada em quase US$ 5 bi). A vaga aberta é de vis dev 2D, vizinha de personagem.
+- **FORA DOS EUA? SIM** (Turquia, com escritório em Londres). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `neowiz OR nough OR "dream games" OR dreamgames OR blackbird...` → **`{}`**. `in:anywhere (... diren OR direnayhan ...)` → nada da casa nem dele. `"Royal Match"` → **`{}`**. Endereço exato → **`{}`**. Repositório: zero pessoa da casa em `pessoas.csv`.
+- **RESSALVAS HONESTAS:** a Turquia fica na borda do escopo (Europa); se o Vini preferir, o gancho é o escritório de Londres. Ele é 2D (quadrinho, ilustração, design de personagem), não 3D. O Behance não cita a Dream Games (o vínculo vem do Bluesky, sem postagem, e do The Org). A vaga aberta pede vis dev 2D, não modelagem.
+
+### FICHA 2: **Jan Ditlev**, *Art Director at Rovio Copenhagen* (bio do Bluesky), **ROVIO** (Copenhague, **DINAMARCA**; grupo SEGA) — `j***@gmail.com` — **ALTA (PUBLICADO em texto na página About do site dele e na home)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.janditlev.com/about` (**200, 12.354 bytes**): *"Hello, I'm Jan Ditlev, a Concept Artist, Illustrator, Story Artist, and Art Director working across games, film, TV, comics, and toys."*, *"Contact J***@gmail.com"* e *"CLIENTS: Rovio Wargaming.net IOI Interactive Sony Santa Monica Avalanche Studio..."*. `https://www.janditlev.com/` (**200, 7.625 bytes**; o mesmo endereço). `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=janditlev.bsky.social` (**200**): *"• Art Director at Rovio Copenhagen, SEGA• & Comic book artist • www.janditlev.com"*. **NADA MONTADO.**
+- **POR QUE ELE:** dirige a arte do estúdio de Copenhague, que é casa média dentro de um grupo grande. Quem dirige a arte vê o portfólio e puxa a pessoa; caixa geral de Rovio não existe para candidato.
+- **FRASES DA CASA, literais:**
+  - `https://www.rovio.com/about-us/` (**200**): *"OUR VISION Crafting joyful experiences that connect generations. OUR MISSION We craft joy."*
+  - `https://www.rovio.com/careers/` (**200**): *"We craft joy for a living, with a team of highly skilled and passionate people who want to spread the delight of games."*
+- **CASA E DISCIPLINA:** **DENTRO** (personagem estilizado é o coração da casa: Angry Birds em jogo, filme e animação).
+- **FORA DOS EUA? SIM** (Dinamarca, Nórdicos). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (rovio OR ditlev ...)` → nada de Rovio nem dele (os resultados foram só Wargaming e Snowprint). Endereço exato → **`{}`**. Repositório: zero pessoa da Rovio em `pessoas.csv`.
+- **RESSALVAS HONESTAS:** a última postagem dele no Bluesky é de **26/02/2025**, e o site lista a Rovio como *cliente*, ao lado de outras casas, então ele pode ser freelancer ou ter saído. É concept 2D e storyboard, não 3D. Não conferi vaga aberta de personagem na Rovio nesta rodada.
+
+### FICHA 3: **Brenton Goodwin**, *Lead Character Artist @ People Can Fly* (bio do Bluesky), **PEOPLE CAN FLY** (Varsóvia, **POLÔNIA**, com estúdios no Reino Unido, na Irlanda e na América do Norte) — `b***@gmail.com` — **ALTA (PUBLICADO em texto na página About do site dele e no JSON-LD da página)**
+
+- **URLs abertas por mim nesta rodada:** `http://brenton3d.com/about/` (**200, 49.626 bytes**): *"Brenton Goodwin Lead Character Artist - Asset Supervisor - 3D Generalist"*, *"Please contact me for access to a gallery of more current work that cannot be shown publicly."* e, no fim, *"Brenton b***@gmail.com"*; o JSON-LD da página traz o mesmo `"email"` e `"address":"Sydney\nAustralia"`. `http://www.brenton3d.com/` (**200, 72.092 bytes**; mesmo endereço). `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=klowwn.bsky.social` (**200**): *"The Toppest Gun Lead Character Artist @ People Can Fly"*, última postagem em **07/06/2026**. **NADA MONTADO.**
+- **POR QUE ELE:** é o líder de personagem da casa, e colega de ofício responde colega de ofício. Numa casa desse porte o recrutador seria a primeira via, mas não há recrutador de arte com nome e email publicados; ele é o nome de personagem mais alto com endereço aberto.
+- **FRASES DA CASA, literais:**
+  - Home `https://peoplecanfly.com/` (**200**): *"People Can Fly, established in 2002, is a global video game development company operating in Poland, the UK, Ireland, and North America. We are one of the leading Unreal Engine studios in the industry."*
+  - About `https://peoplecanfly.com/about-us` (**200**): *"Today we are a major AAA games development studio, operating on two continents."*
+- **CASA E DISCIPLINA:** **DENTRO** (personagem 3D em Unreal: *Outriders*, *Gears of War: E-Day* com a Microsoft).
+- **FORA DOS EUA? SIM** (Polônia; o estúdio de Nova York é a exceção). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere ("people can fly" OR peoplecanfly OR goodwin OR brenton3d ...)` → só o **recibo do SmartRecruiters de 10/09** (*"Thank you for applying to People Can Fly"*). **Nenhuma recusa.** Endereço exato → **`{}`**. Repositório: zero pessoa da casa em `pessoas.csv`.
+- **RESSALVAS HONESTAS:** o site dá Sydney como endereço, e ele pode trabalhar remoto ou o site pode estar desatualizado. O estilo da casa puxa para o realista (tiro e ação), não para o estilizado. Já existe candidatura de 10/09 em aberto, então a carta pede direção e não repete a candidatura.
+
+### FICHA 4: **Hanyang Ng**, *Senior Digital Artist at Digital Extremes* (concept de criatura e personagem), **DIGITAL EXTREMES** (London, Ontário, **CANADÁ**; ele mora na Colúmbia Britânica) — `n***@gmail.com` — **ALTA (PUBLICADO em texto na página About do site dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.nghydesign.com/about` (**200, 140.040 bytes**): *"I'm a Senior Digital Artist in Digital Extremes. I also specialized in Creature designs and Keyframe Concepts/ Illustrations. Currently based in B.C, Canada."* e *"For inquiries, contact me at: n***@gmail.com"*; projetos: *Warframe*, *Soulframe*. `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=hanyangng.bsky.social` (**200**): *"Sr Digital Artist at Digital Extremes by day ☀️ Creature concept artist by night 🌙"*. **NADA MONTADO.**
+- **POR QUE ELE:** é artista sênior de dentro, e a indicação de dentro pula a fila; o Vini já tem candidatura de 06/09 na casa, sem resposta. A primeira pessoa da casa (Michael Skyers, 18/09) ficou sem email.
+- **FRASES DA CASA, literais:**
+  - `https://www.digitalextremes.com/about` (**200**): *"Leading with community-first development, Digital Extremes has stayed at the forefront of the video game industry for more than 25 years."*
+  - Mesma página: *"With more than 450 staff across Canada and global locations, Digital Extremes' diverse team brings innovation, imagination and passion to its studio culture."*
+- **CASA E DISCIPLINA:** **DENTRO** (personagem e criatura 3D: *Warframe*, *Soulframe*, que é estilizado).
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (... "digital extremes" OR digitalextremes OR hanyang OR warframe)` → recibo de **06/09** (*"Your Concept Artist application has been received"*) e o código de segurança do Greenhouse. **Nenhuma recusa.** Endereço exato → **`{}`**. Repositório: Michael Skyers (sem email) em `pessoas.csv`, e ele seria **a segunda e última pessoa da casa**.
+- **RESSALVAS HONESTAS:** ele é concept 2D, não 3D. A última postagem no Bluesky é de **10/02/2025**. Não é líder, então a carta pede indicação e direção, não vaga.
+
+### FICHA 5 (caixa sem nome): **Caixa de recrutamento da NEOWIZ**, publicada no próprio anúncio de **3D Character Modeler do NOUGH Studio** (*Lies of P*), **NEOWIZ / NOUGH STUDIO** (Pangyo, **COREIA DO SUL**) — `t***@neowiz.com` — **ALTA (PUBLICADO em texto no anúncio: "※ 문의 : ...")**
+
+- **URLs abertas por mim nesta rodada:** `https://api.lever.co/v0/postings/neowiz?mode=json` (**200, 22 vagas**; um único endereço em todas, este). Anúncio `https://jobs.lever.co/neowiz/5ad83a87-38c2-4441-81da-5ab73e3217fc`, *"[NOUGH Studio] P의 거짓 차기작 3D 캐릭터 모델러"* (3D Character Modeler do próximo *Lies of P*), com fecho *"※ 문의 : t***@neowiz.com"* (문의 = contato para dúvidas). Há também *Character Concept Artist* (`ab204112`) e *Senior VFX* (`06c0b582`) no mesmo estúdio. **NADA MONTADO.**
+- **NOME ÚTIL, SEM EMAIL:** **Changkyu Noh (노창규, "DIEV")**, *Art Director* de *Lies of P* (post oficial da conta Lies of P no X: *"the game's art director, Changkyu Noh"*). Sem endereço aberto (ArtStation 403, blog Naver não aberto).
+- **POR QUE A CAIXA:** é a rota que o próprio anúncio dá para dúvida sobre a vaga, e o formulário do Lever não aceita daqui. Não há recrutador com nome público.
+- **FRASES DA CASA, literais (do anúncio):**
+  - *"NOUGH Studio는 "Games by Gamers"라는 가치를 최우선으로 삼아 게임을 만듭니다."* (o estúdio põe o valor **"Games by Gamers"** acima de tudo). Para a carta em inglês, a parte citável é *"Games by Gamers"*.
+  - *"우리는 전 세계 인재들과 함께 일하며 최적의 결과물을 만들어냅니다."* (trabalhamos com talentos do mundo todo).
+- **CASA E DISCIPLINA:** **DENTRO** (personagem e criatura 3D em Unreal Engine 5: pede *"스컬프팅, 로우폴 모델링, UV, PBR 텍스처링"*, 3 anos ou mais como character artist).
+- **FORA DOS EUA? SIM** (Coreia do Sul). **A frase de realocação ENTRA.**
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `neowiz OR nough ...` → **`{}`**; `"Lies of P"` e `"Changkyu"` → **`{}`**; endereço exato → **`{}`**. Repositório: zero linha da NEOWIZ.
+- **RESSALVAS HONESTAS:** o anúncio é todo em coreano e pede o nome em hangul no formulário (*"이름란에는 영문명이 아닌 한글명을 기입해주세요"*), trabalho presencial na sede de Pangyo, e o estilo é realista sombrio, não estilizado. Coreano não aparece como requisito escrito, mas o processo todo corre em coreano. É caixa, não pessoa.
