@@ -123,3 +123,4 @@
 - Alembic: 7653/260202 e raio 0,254 mm intactos; atributos customizados perdidos (so position, radius, resolution). 0,11 s, 4,2 MB.
 - Alembic: nenhum atributo (nem cor com vcolors/uvs/custom props). USD: leva UVMap, cores, guide_curve_index, n_raiz, surface_uv_coordinate etc (perde id, resolution). 0,64 s 8,7 MB.
 - Render x fios: 2,4k 5,1 s; 7,6k 6,6; 23k 8,2; 70k 11,4 (540px 32spp). Sublinear.
+- UX: 35 grupos asset com descricao; dicas (tooltip) em todas as entradas, com valores medidos.

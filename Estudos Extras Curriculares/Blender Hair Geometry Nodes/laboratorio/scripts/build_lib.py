@@ -831,6 +831,55 @@ for ng in libs:
 for m in mats:
     m.use_fake_user = True; m.asset_mark(); m.asset_data.tags.new("grooming")
 for ng in libs: ng.use_fake_user = True
+
+# dicas das entradas (tooltip), com valores medidos no laboratorio
+DICAS = {
+ "Seed": "Ligue o mesmo Integer em todos os grupos: um numero = uma variacao do penteado",
+ "Raio mín": "Raio do cacho. Em fio curto, ~15% do comprimento da cacho de desenho (CEREBRO 17.82)",
+ "Raio máx": "Raio maximo sorteado por mecha",
+ "Voltas por metro máx": "Voltas por metro maximas, sorteadas por mecha",
+ "Começa em": "Fracao do fio onde o efeito comeca. 0,35 deixa o topo liso",
+ "Pontos": "Pontos por fio depois do Resample",
+ "Material": "Material do contorno (GR Contorno: so a camera ve a casca)",
+ "Nome do atributo": "Nome lido no shader (Attribute node)",
+ "Vertex group (1 = longo)": "Vertex group do scalp: 1 fica longo, 0 fica curto",
+ "Comprimento curto": "Comprimento onde o vertex group vale 0",
+ "Tamanho da mecha": "Guide Distance do Clump, em metros. 0,02 = mecha de 2 cm",
+ "Shape do clump": "0,25 = mecha de desenho com raiz coberta; 0 abre careca",
+ "Guias por fio": "Quantas guias cada fio mistura. 1 = fio segue uma guia so (trancas box)",
+ "Velocidade": "Velocidade da ondulacao (W da Noise 4D por segundo)",
+ "Força": "0 desliga, 1 efeito total",
+ "Pontos por guia": "Pontos de cada traco depois do Resample",
+ "Comprimento": "Comprimento das guias em metros (escala real: 0,22 bob, 0,34 longo)",
+ "Para o lado da risca": "Empurra para longe da risca (sinal do X da raiz). 0,35 bob; 1,2 sobrancelha",
+ "Para trás": "Positivo penteia para tras; negativo traz para frente (franja, barba)",
+ "Risca X": "Posicao da risca em X (metros do objeto)",
+ "Posição da risca X": "Posicao da risca em X (metros do objeto)",
+ "Câmera": "Camera da cena; a distancia e medida da raiz ate ela",
+ "Raio": "Raio em metros",
+ "Torção máx (voltas)": "Torcao sorteada por mecha. 0 = mechas de anime limpas",
+ "Pontos por mecha": "Resolucao ao longo da mecha de malha",
+ "Imagem": "Imagem pintada no UV do scalp: preto apaga, branco mantem",
+ "Altura mín": "Z minimo da raiz (metros do objeto)", "Altura máx": "Z maximo da raiz",
+ "Lateral mín (|X|)": "Distancia minima do centro em X", "Lateral máx (|X|)": "Distancia maxima do centro em X",
+ "Frente máx (Y)": "Y maximo da raiz (negativo = frente do rosto)",
+ "Inverter": "Troca dentro por fora",
+ "Fios por m2": "Densidade. Cabeca real (~0,05 m2): 300.000 = ~15 mil fios",
+ "Viewport": "Fracao na viewport; o render usa 100% (medido)",
+ "Tamanho do tufo": "Guide Distance do tufo em metros. 0,008 = tufo de 8 mm",
+ "Raio do fio": "Raio do fio de pelo em metros",
+ "Comprimento do rolo": "Quanto da ponta enrola, em metros",
+ "Raio do rolo": "Raio do enrolado da ponta, em metros",
+ "Cabeça (colisão)": "Objeto da cabeca inteira (Shrinkwrap)",
+ "Comprimento da cauda": "Comprimento da cauda depois do elastico, em metros",
+ "Pontos por fio": "Resample de cada fio antes de reposicionar",
+ "Subdivisão": "Cortes do Subdivide antes da onda. 2 = suave; mais pontos = mais custo",
+ "Valor": "Numero a ver em cores", "Mín": "Valor que vira azul", "Máx": "Valor que vira vermelho",
+}
+for ng in libs:
+    for it in ng.interface.items_tree:
+        if getattr(it, 'in_out', '') == 'INPUT' and not it.description and it.name in DICAS:
+            it.description = DICAS[it.name]
 OUTF = sys.argv[-1]
 localize()
 bpy.ops.wm.save_as_mainfile(filepath=OUTF, compress=True)
