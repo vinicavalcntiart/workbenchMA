@@ -24,9 +24,9 @@ if V == "cortina":
     # abre para os lados: offset lateral = sign(x raiz) * s^2 * 5 cm * mascara, e um pouco para tras
     cr = t.add('GeometryNodeGroup', group=EG['Curve Root']); sx = t.add('ShaderNodeSeparateXYZ'); t.link(cr.outputs['Root Position'], sx.inputs[0])
     sg = t.add('ShaderNodeMath', props={'operation':'SIGN'}); t.link(sx.outputs['X'], sg.inputs[0])
-    sp = t.add('GeometryNodeSplineParameter'); s2 = t.add('ShaderNodeMath', props={'operation':'POWER'}); t.link(sp.outputs['Factor'], s2.inputs[0]); s2.inputs[1].default_value = 1.5
+    sp = t.add('GeometryNodeSplineParameter'); s2 = t.add('ShaderNodeMath', props={'operation':'POWER'}); t.link(sp.outputs['Factor'], s2.inputs[0]); s2.inputs[1].default_value = 0.6
     k = t.add('ShaderNodeMath', props={'operation':'MULTIPLY'}); t.link(s2.outputs[0], k.inputs[0]); t.link(mk.outputs[0], k.inputs[1])
-    vx = t.add('ShaderNodeMath', props={'operation':'MULTIPLY'}); t.link(sg.outputs[0], vx.inputs[0]); vx.inputs[1].default_value = 0.06
+    vx = t.add('ShaderNodeMath', props={'operation':'MULTIPLY'}); t.link(sg.outputs[0], vx.inputs[0]); vx.inputs[1].default_value = 0.09
     cb = t.add('ShaderNodeCombineXYZ'); t.link(vx.outputs[0], cb.inputs['X']); cb.inputs['Y'].default_value = 0.015
     of = t.add('ShaderNodeVectorMath', props={'operation':'SCALE'}); t.link(cb.outputs[0], of.inputs[0]); t.link(k.outputs[0], of.inputs['Scale'])
     stp = t.add('GeometryNodeSetPosition'); t.link(tr.outputs[0], stp.inputs['Geometry']); t.link(of.outputs[0], stp.inputs['Offset'])

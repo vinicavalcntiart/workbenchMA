@@ -2736,5 +2736,6 @@ na máscara → abrir para os lados.
 | Offset = sinal(X da raiz) × s^1,5 × 6 cm × máscara, + Shrinkwrap | a franja aparece e cobre a testa, mas o "V" da cortina ainda é fraco |
 
 Para a cortina de verdade faltam: risca no meio (scalp em duas ilhas, 17.13)
-e o empurrão lateral crescer mais cedo no fio (expoente menor ou
-amplitude maior). Não resolvido nesta sessão.
+e o empurrão lateral crescer mais cedo no fio. Testado s^0,6 × 9 cm: abre
+um pouco mais no centro, mas a franja fica rala e sem o "V" limpo. Não
+resolvido nesta sessão; o próximo passo é a risca em duas ilhas.
