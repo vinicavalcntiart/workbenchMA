@@ -7,6 +7,15 @@ reset(); EG = essentials()
 with bpy.data.libraries.load(LIB, link=False, assets_only=True) as (src, dst): dst.node_groups = [n for n in src.node_groups if n.startswith("GR ")]
 GR = {n.name:n for n in bpy.data.node_groups}
 head, scalp = make_head(); head.data.materials.append(skin_mat())
+if 'cap' in sys.argv:   # hair cap realista: desce pela nuca atras das orelhas
+    me = head.data.copy(); me.name = "cap"; bm_ = bmesh.new(); bm_.from_mesh(me); R = 0.1
+    def keep(c):
+        if c.y < -0.55*R and c.z < 0.62*R: return False            # rosto
+        if abs(c.x) > 0.8*R and c.z < 0.25*R and c.y < 0.25*R: return False  # orelha e costeleta
+        if c.y > 0.15*R: return c.z > -0.70*R                        # nuca desce
+        return c.z > -0.15*R
+    bmesh.ops.delete(bm_, geom=[f for f in bm_.faces if not keep(f.calc_center_median())], context='FACES'); bm_.to_mesh(me); bm_.free()
+    scalp.data = me
 sm_ = bpy.data.materials.new("sc"); sm_.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(0.1,0.06,0.04,1); scalp.data.materials.append(sm_)
 cd = bpy.data.hair_curves.new("vazio"); g = link(bpy.data.objects.new("groom", cd)); cd.surface = scalp; cd.surface_uv_map = "UVMap"
 t = Tree("uc")
@@ -28,4 +37,4 @@ t.geo = tr.outputs[0]
 c = grp("GR Cor por Mecha"); t.chain(c, c.inputs[0].name, c.outputs[0].name)
 profile(t, EG, radius=0.0005); set_mat(t, hair_mat("h", melanin=0.75, redness=0.5)); apply_tree(g, t.finish())
 print("INFO", V, stats(g).get('curves'))
-shot(f"94_{V}", res=420, samples=16, cam_loc=(0.55,-0.45,0.08), target=(0,0,0.0), lens=46)
+shot(f"94_{V}{'_cap' if 'cap' in sys.argv else ''}", res=420, samples=16, cam_loc=((0.45,0.55,0.02) if "costas" in sys.argv else (0.55,-0.45,0.08)), target=(0,0,-0.02), lens=46)

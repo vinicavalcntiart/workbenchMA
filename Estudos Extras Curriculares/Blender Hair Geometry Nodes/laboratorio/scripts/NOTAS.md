@@ -100,3 +100,4 @@
 - GR Mascara por Posicao (campo): caixa suave na raiz. Validado: z>5cm -> Trim 40%; 8833/4842/1775. Biblioteca 33 grupos.
 - Moicano: A raspado (Trim 6mm + Shrinkwrap) / B Comprimento ate a Malha (elipsoide 3x16x20) + Mecha; Transicao Fator = Mascara Posicao |x|<1,8cm z>2cm. 18k fios.
 - Undercut: mascara topo z>7,5 e |x|<5 cm invertida -> Trim 1..0,05. So altura 5,5 nao raspa as laterais.
+- Undercut com hair cap real (nuca ate -7 cm): 22,6k fios, raspado completo. Scalp de teste era curto.

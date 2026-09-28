@@ -2532,3 +2532,9 @@ Máscara por Posição invertida → 1 a 0,05) → Cor por Mecha. 18 mil fios.
 
 A máscara de undercut precisa limitar a lateral (\|X\|), não só a altura.
 Scalp pintado escuro faz o raspado ler como sombra de cabelo curto.
+
+Refeito com **hair cap realista** (desce até 7 cm abaixo do centro na nuca,
+recorta rosto e orelhas) [img/94_cap_sheet]: mesmo node tree, 22,6 mil
+fios; nuca e laterais raspadas aparecem inteiras por trás. Confirma o
+limite anotado no início da seção 17: a receita estava certa, o scalp de
+teste é que era curto.
