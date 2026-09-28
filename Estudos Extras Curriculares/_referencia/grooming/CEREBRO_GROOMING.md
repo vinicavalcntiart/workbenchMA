@@ -761,6 +761,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Parâmetro de valor único variando por região | dois ramos + GR Transição com máscara | 17.70 |
 | Desenhar as guias | Grease Pencil to Curves → Set Attachment Surface → Densidade | 17.71 |
 | Mandar biblioteca de grupos para outra máquina | tornar locais os utilitários que o Essentials traz linkados | 17.72 |
+| Despenteado com mechas coesas | Rotate + Noise nas guias; strays nos filhos | 17.73 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2342,3 +2343,20 @@ esses vieram como link.
   Library apontando para a pasta de instalação, torne os dados locais antes
   de salvar. (Não testei se uma instalação 5.2 diferente reencontra esses
   links sozinha; tornar local elimina a dúvida.)
+
+### 17.73 Despenteado controlado (bedhead) [img/84_despenteado_sheet]
+
+Cabelo curto (13 cm) de guias procedurais. A bagunça vai **nas guias**
+(200 curvas de 12 pontos, custo quase zero), antes do Shrinkwrap e do
+Interpolate, para as mechas continuarem coesas:
+
+| Nível | Node nas guias | Leitura |
+|---|---|---|
+| 0 | nenhum | penteado |
+| 1 | Rotate Hair Curves, Random Offset 0,5 rad | mechas apontando para lados diferentes |
+| 2 | + Hair Curves Noise, 2 cm, Scale 6, Offset per Curve 1 | forma quebrada, ainda em mechas |
+| 3 | + GR Strays em Arco 6% (nos filhos) | "acabei de acordar" |
+
+Bagunça nos **filhos** (depois do Interpolate) quebraria as mechas por
+dentro e custaria por ponto; nas guias, a Mecha Estilizada ainda junta tudo.
+Um Integer ligado nos Seeds sorteia outra bagunça.

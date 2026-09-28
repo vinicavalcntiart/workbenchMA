@@ -87,3 +87,4 @@
 - Viewport 0,25: eval viewport 633 fios vs 2950; render cobertura 15,7% vs 15,4% (render usa 100%).
 - Biblioteca tinha 8 node groups LINKADOS (utilitarios do Essentials) com caminho do meu ambiente. lab.localize() (make_local em laco + remove libraries) antes de salvar. Exemplos em laboratorio/exemplos validados (0 libs, render ok).
 - Atras da orelha: FUNCIONOU com orelha saindo ~2 cm (tie sign(x)*10,8cm, 3,5, 0,5; mascara |x| 2,5-4,5, y 7->4, z 9->7 cm).
+- Despenteado: nas guias Rotate Random Offset 0,5 + Noise 2cm Scale 6 OffsetPerCurve 1; strays 6% nos filhos. Mechas coesas.
