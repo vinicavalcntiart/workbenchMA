@@ -28,9 +28,22 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Keywords Studios (Austrália) | General Expressions of Interest | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/keywordsstudios/744000113045937 |
 | 28/09 | Entropy Studio | Recruitment (3D Modeler organic/character) | site (Wix, reCAPTCHA de caixa) | s | https://www.entropystudio.net/jobs |
 | 28/09 | Outplay Entertainment | Speculative Applications | JazzHR (reCAPTCHA de caixa) | n | https://www.outplay.com/careers/speculative-applications/ |
-| 27/09 | Jungler | (quadro JazzHR, Paris) | JazzHR | s | https://jungler.applytojob.com/apply/2Ft7PxD7Nn |
+| 28/09 | Squeeze Animation Studios | Candidatures spontanées / Spontaneous Application | recruitee | n | https://squeezestudio.recruitee.com/o/candidatures-spontanees |
+| 28/09 | Crazy Maple Studio | General Application - Join Our Talent Community | workable | n | https://apply.workable.com/j/B780A35D5F |
+| 28/09 | Framestore | Expression of Interest 2026 - Melbourne | recruitee | n | https://framestore.recruitee.com/o/expression-of-interest-2026-melbourne |
+| 28/09 | tensquaregames | Future opportunities (f/m/d) | recruitee | n | https://career.tensquaregames.com/o/future-opportunities-fmd |
+| 28/09 | Stellar Creative Lab | Surfacing/Texture Artists (Mid & Senior), Vancouver BC | JazzHR | n | https://stellarcreativelab.applytojob.com/apply/j7JwsT6x1k/Surfacing-Artists-Mid-Senior |
+| 28/09 | One Of Us | Modeller (Paris) | Workable | n | https://apply.workable.com/one-of-us/j/37A7BBA51D/ |
+| 28/09 | Sawhorse Productions | Roblox 3D Artist (Generalist) | Workable | n | https://jobs.workable.com/view/9y3NLEKKUMBiKp1pAHM1E7/remote-roblox-3d-artist-in-los-angeles-at-sawhorse-productions |
+| 28/09 | Nexus Studios | General Application | Workable | n | https://apply.workable.com/j/4F41AEB27C |
+| 28/09 | Velan Studios | General Application | Workable | n | https://apply.workable.com/velanstudios/j/05E75D2815/ |
+| 28/09 | Lighthouse Games | Senior Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/E2DF52F9E8/ |
+| 28/09 | Lighthouse Games | Principal Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/2E8906E73E/ |
+| 28/09 | Obsidian Entertainment | General Application | JazzHR | n | https://obsidian.applytojob.com/apply/21Ud1IGKcj |
+| 28/09 | Homa Games | Senior 3D Gameplay Artist (Generalist) | workable | n | https://apply.workable.com/homa-games/j/DE453781D2/ |
+| 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
 
-Sem recibo da leva de 27/09 (conferir no Gmail antes de refazer): Framestore Montreal (Généraliste Blender), Obsidian, Mediawan.
+Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
 ## Precisam da conta do Vini (não é caixinha, é login dele)
 
