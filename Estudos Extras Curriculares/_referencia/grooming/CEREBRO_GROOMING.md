@@ -785,7 +785,7 @@ estão resumidas em 17.0):
 | Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
 | Franja cortina | dois conjuntos de guias procedurais misturados por Transição + risca em ilhas | 17.91 |
 | Pontos certos para cada comprimento | Resample em modo Length depois do Trim | 17.92 |
-| Levar o groom para outro programa | Alembic: fios e raio intactos, atributos customizados não vão | 17.93 |
+| Levar o groom para outro programa | USD leva os atributos; Alembic só posição e raio | 17.93 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2803,7 +2803,7 @@ diferentes (17.78, bochecha 2,2× e corpo 1×) ou com muitos fios curtos, o
 modo Length rende mais. Regra: Resample **Length** quando o Trim deixa
 comprimentos muito variados; Count quando o corte é uniforme.
 
-### 17.93 Exportar o groom em Alembic
+### 17.93 Exportar o groom: Alembic ou USD
 
 Objeto Curves com a cadeia (Densidade → Mecha → Onda S → Profile), File >
 Export > Alembic, só o selecionado, avaliação Render, 1 quadro:
@@ -2815,6 +2815,11 @@ Export > Alembic, só o selecionado, avaliação Render, 1 quadro:
 | Atributos | UVMap, guide_curve_index, id, n_raiz, position, radius, resolution, surface_uv_coordinate | **só position, radius, resolution** |
 
 Export em 0,11 s, 4,2 MB. A geometria e a espessura chegam intactas; os
-atributos de grooming **não** vão (sem `surface_uv_coordinate`, sem
-`mecha_rand` etc.). Material que lê atributo (GR Cabelo Cor por Mecha) perde
-a cor por mecha do outro lado: asse a cor antes, ou recrie o atributo.
+atributos de grooming **não** vão. Testado também atributo de cor (Color,
+Point e Curve), 2D Vector e Float, com Vertex Colors, UVs e Custom
+Properties ligados no exportador: **nenhum** sobreviveu no Alembic.
+
+**USD** (File > Export > USD, só selecionado, avaliação Render): 0,64 s,
+8,7 MB, e voltaram **UVMap, cor_mecha, cor_curva, guide_curve_index, n_raiz,
+peso, surface_uv_coordinate, uv_teste** (só `id` e `resolution` ficaram).
+Para levar o groom com cor por mecha e máscaras, use USD.

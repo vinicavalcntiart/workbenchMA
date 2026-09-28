@@ -121,3 +121,4 @@
 - Costeleta: teste INVALIDO: scalp do lab recorta |x|>8cm z<2,5cm y<2,5cm (orelha+costeleta) -> 0 raizes na regiao. Refazer com hair cap que inclua costeleta.
 - Copias: Shift+D ok (variacao); Collection Instance = todos iguais; Alt+D = Surface compartilhado, cabelo empilhado na cabeca original, copias carecas.
 - Alembic: 7653/260202 e raio 0,254 mm intactos; atributos customizados perdidos (so position, radius, resolution). 0,11 s, 4,2 MB.
+- Alembic: nenhum atributo (nem cor com vcolors/uvs/custom props). USD: leva UVMap, cores, guide_curve_index, n_raiz, surface_uv_coordinate etc (perde id, resolution). 0,64 s 8,7 MB.
