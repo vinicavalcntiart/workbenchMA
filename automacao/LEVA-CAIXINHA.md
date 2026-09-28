@@ -6,48 +6,40 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 | data | casa | cargo | família | personagem | URL |
 |---|---|---|---|---|---|
-| 28/09 | Ludia | General Application / Candidature spontanée | BambooHR | n | https://ludia.bamboohr.com/careers/62 |
+| 28/09 | Entropy Studio | Recruitment (3D Modeler organic/character) | site (Wix, reCAPTCHA de caixa) | s | https://www.entropystudio.net/jobs |
+| 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
+| 28/09 | Obsidian Entertainment | General Application | JazzHR | n | https://obsidian.applytojob.com/apply/21Ud1IGKcj |
+| 28/09 | Framestore | Expression of Interest 2026 - Melbourne | recruitee | n | https://framestore.recruitee.com/o/expression-of-interest-2026-melbourne |
+| 28/09 | Keywords Studios (Austrália) | General Expressions of Interest | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/keywordsstudios/744000113045937 |
+| 28/09 | Crafty Apes | General Expression of Interest | Dayforce | n | https://jobs.dayforcehcm.com/en-US/craftyapes/CANDIDATEPORTAL |
+| 28/09 | Palomar Animation (Mediawan) | Candidatura | site | n | https://mediawankidsandfamily.com/jobs |
+| 28/09 | Lighthouse Games | Senior Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/E2DF52F9E8/ |
+| 28/09 | Lighthouse Games | Principal Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/2E8906E73E/ |
+| 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
+| 28/09 | Stellar Creative Lab | Surfacing/Texture Artists (Mid & Senior), Vancouver BC | JazzHR | n | https://stellarcreativelab.applytojob.com/apply/j7JwsT6x1k/Surfacing-Artists-Mid-Senior |
+| 28/09 | One Of Us | Modeller (Paris) | Workable | n | https://apply.workable.com/one-of-us/j/37A7BBA51D/ |
+| 28/09 | Velan Studios | General Application | Workable | n | https://apply.workable.com/velanstudios/j/05E75D2815/ |
+| 28/09 | Nexus Studios | General Application | Workable | n | https://apply.workable.com/j/4F41AEB27C |
+| 28/09 | Homa Games | Senior 3D Gameplay Artist (Generalist) | workable | n | https://apply.workable.com/homa-games/j/DE453781D2/ |
+| 28/09 | Sawhorse Productions | Roblox 3D Artist (Generalist) | Workable | n | https://jobs.workable.com/view/9y3NLEKKUMBiKp1pAHM1E7/remote-roblox-3d-artist-in-los-angeles-at-sawhorse-productions |
+| 28/09 | Outplay Entertainment | Speculative Applications | JazzHR (reCAPTCHA de caixa) | n | https://www.outplay.com/careers/speculative-applications/ |
 | 28/09 | Hypixel | 3D Artist - Minecraft Project | BambooHR | n | https://hypixel.bamboohr.com/careers/54 |
 | 28/09 | Stardock | Don't see an opening for you? | BambooHR | n | https://stardock.bamboohr.com/careers/28 |
-| 28/09 | Triotech | Candidatures spontanées | BambooHR | n | https://triotech.bamboohr.com/careers/29 |
 | 28/09 | Budge Studios | Artiste 3D Généraliste / 3D Artist | BambooHR | n | https://budge.bamboohr.com/careers/26 |
-| 28/09 | Stormind Games | Candidatura | BambooHR | n | https://stormindgames.bamboohr.com/careers/203 |
 | 28/09 | Amuse Animation | Concept Designer | BambooHR | n | https://amuseanimation.bamboohr.com/careers/180 |
-| 28/09 | Crafty Apes | General Expression of Interest | Dayforce | n | https://jobs.dayforcehcm.com/en-US/craftyapes/CANDIDATEPORTAL |
+| 28/09 | Ludia | General Application / Candidature spontanée | BambooHR | n | https://ludia.bamboohr.com/careers/62 |
+| 28/09 | Stormind Games | Candidatura | BambooHR | n | https://stormindgames.bamboohr.com/careers/203 |
+| 28/09 | Grimlore Games (Munique) | Open Application (m/f/d) | site (WPForms, reCAPTCHA de caixa; comando: node apply/site/grimlore.js ENVIAR) | n | https://grimloregames.com/open-application/ |
 | 28/09 | Screen Burn Interactive | Speculative Application | BreatheHR | n | https://hr.breathehr.com/application/34692/new |
 | 28/09 | Secret Mode | Speculative Application | BreatheHR | n | https://hr.breathehr.com/application/48377/new |
 | 28/09 | Sans Strings Studio | Expression of Interest | site (bitforms) | n | https://sansstrings.studio/careers/ |
 | 28/09 | VFX Legion | Artist Application | site (Everest Forms) | n | https://vfxlegion.com/join-us/ |
-| 28/09 | Palomar Animation (Mediawan) | Candidatura | site | n | https://mediawankidsandfamily.com/jobs |
 | 28/09 | Menhir FX | Candidature spontanée | site (Gravity Forms) | n | https://menhirfx.com/en/recruitment-2/ |
-| 28/09 | NBCUniversal (jogos Montreal) | Lead Technical Artist | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/NBCUniversal3/744000138731580 |
-| 28/09 | Ubisoft Annecy | Technical Animation Director [AAA] | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000140063175 |
-| 28/09 | Ubisoft Montreal | Technical Animation Director | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000139154617 |
-| 28/09 | Ubisoft Montreal | Technical Art Director (Unreal) | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000137122146 |
-| 28/09 | Ubisoft Paris | Senior Technical Artist (Tool & Art Pipelines) | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000110207267 |
-| 28/09 | Keywords Studios (Austrália) | General Expressions of Interest | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/keywordsstudios/744000113045937 |
-| 28/09 | Entropy Studio | Recruitment (3D Modeler organic/character) | site (Wix, reCAPTCHA de caixa) | s | https://www.entropystudio.net/jobs |
-| 28/09 | Outplay Entertainment | Speculative Applications | JazzHR (reCAPTCHA de caixa) | n | https://www.outplay.com/careers/speculative-applications/ |
 | 28/09 | Squeeze Animation Studios | Candidatures spontanées / Spontaneous Application | recruitee | n | https://squeezestudio.recruitee.com/o/candidatures-spontanees |
-| 28/09 | Crazy Maple Studio | General Application - Join Our Talent Community | workable | n | https://apply.workable.com/j/B780A35D5F |
-| 28/09 | Framestore | Expression of Interest 2026 - Melbourne | recruitee | n | https://framestore.recruitee.com/o/expression-of-interest-2026-melbourne |
-| 28/09 | tensquaregames | Future opportunities (f/m/d) | recruitee | n | https://career.tensquaregames.com/o/future-opportunities-fmd |
-| 28/09 | Stellar Creative Lab | Surfacing/Texture Artists (Mid & Senior), Vancouver BC | JazzHR | n | https://stellarcreativelab.applytojob.com/apply/j7JwsT6x1k/Surfacing-Artists-Mid-Senior |
-| 28/09 | One Of Us | Modeller (Paris) | Workable | n | https://apply.workable.com/one-of-us/j/37A7BBA51D/ |
-| 28/09 | Sawhorse Productions | Roblox 3D Artist (Generalist) | Workable | n | https://jobs.workable.com/view/9y3NLEKKUMBiKp1pAHM1E7/remote-roblox-3d-artist-in-los-angeles-at-sawhorse-productions |
-| 28/09 | Nexus Studios | General Application | Workable | n | https://apply.workable.com/j/4F41AEB27C |
-| 28/09 | Velan Studios | General Application | Workable | n | https://apply.workable.com/velanstudios/j/05E75D2815/ |
-| 28/09 | Lighthouse Games | Senior Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/E2DF52F9E8/ |
-| 28/09 | Lighthouse Games | Principal Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/2E8906E73E/ |
-| 28/09 | Obsidian Entertainment | General Application | JazzHR | n | https://obsidian.applytojob.com/apply/21Ud1IGKcj |
-| 28/09 | Homa Games | Senior 3D Gameplay Artist (Generalist) | workable | n | https://apply.workable.com/homa-games/j/DE453781D2/ |
-| 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
 | 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
-| 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
-| 28/09 | Ubisoft Reflections (Newcastle) | Senior Technical Animator [Rainbow Six] (744000120685617) | SmartRecruiters (DataDome) | n | https://jobs.smartrecruiters.com/Ubisoft2/744000120685617 |
-| 28/09 | Grimlore Games (Munique) | Open Application (m/f/d) | site (WPForms, reCAPTCHA de caixa; comando: node apply/site/grimlore.js ENVIAR) | n | https://grimloregames.com/open-application/ |
+| 28/09 | Crazy Maple Studio | General Application - Join Our Talent Community | workable | n | https://apply.workable.com/j/B780A35D5F |
+| 28/09 | Triotech | Candidatures spontanées | BambooHR | n | https://triotech.bamboohr.com/careers/29 |
 
-Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
 ## Precisam da conta do Vini (não é caixinha, é login dele)
 
@@ -59,3 +51,9 @@ Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recib
 | Super Spline Studios | Formulário de candidatura | Google Form só abre com conta Google | n | https://forms.gle/Hy2DSc11gBzGb9hJ8 |
 | Hasbro / Wizards of the Coast | Principal Character Artist (req 68744377699, Durham NC), achada por busca 28/09, inédita no dedupe | o site careers.hasbro.com não abre a partir da nuvem (falha de TLS do próprio servidor); abre no navegador da leva | s | https://careers.hasbro.com/careers/job/68744377699 |
 
+Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador local e pelas APIs, sem Kernel:
+- Caixa "sou humano" VISÍVEL de novo: BambooHR x7 (reCAPTCHA 304x78), Screen Burn e Secret Mode (BreatheHR, o clique do enviar abre o desafio; preenchimento testado, nada enviado), Sans Strings, VFX Legion, Palomar/Mediawan, Menhir (hCaptcha), Outplay, Stellar, Obsidian, Asterman, Grimlore (304x150, preenchida e lida de volta). Squeeze e Framestore Melbourne (Recruitee, hCaptcha no envio, como no Ten Square e no Framestore Blender). Crafty Apes: desafio do reCAPTCHA no envio (medido 20/09).
+- Keywords EOI: vaga viva, mas o navegador local cai no bloqueio do DataDome ("Access is temporarily restricted", sem desafio para clicar), então só a nuvem abre; a caixa "Slide right" fica para o Vini.
+- Workable (Lighthouse x3, Velan, Nexus, Homa, One Of Us, StoryToys, Sawhorse): vaga viva pela API do jobs.workable.com. Crazy Maple General Application não aparece nesse índice; a página do apply.workable.com devolveu 429 (limite do Workable para o nosso IP), então essas linhas não tiveram a caixinha vista hoje.
+- Saíram (já enviadas em 28/09, recibo em enviados.csv): NBCUniversal Lead Technical Artist, Ubisoft Annecy, Ubisoft Montreal x2, Ubisoft Paris, Ubisoft Reflections. Saiu também Ten Square Games Future opportunities (mesma casa do Art Lead enviado em 28/09).
+- Não estão mais na leva por já terem saído: Barnstorm (BambooHR 114, enviada em 23/09), Framestore Montreal, Jungler (recusou em 22/09), Stirling, Relic, NEOWIZ/NOUGH, Skydance.
