@@ -1080,3 +1080,19 @@ solver não converge. **Substeps é a alavanca eficiente.** Massa não muda a
 queda, porque a gravidade acelera qualquer massa igual. Para estilizado:
 Bendiness 0, Root Bendiness 0, Substeps 40, e aumente Bendiness só onde quer
 movimento.
+
+### 17.26 Movimento: Simulation to World [img/29_motion_sheet e os dois GIFs]
+
+Cabeça, scalp e guias filhos de um Empty que gira 60° e volta (quadros 1 a
+36), Hair Dynamics com Bendiness 0,5, Root 0,1, Substeps 20.
+
+- **Simulation to World vazio (padrão)**: a simulação é em espaço de mundo. O
+  cabelo atrasa no giro e passa do ponto na volta. É o que dá vida.
+  [img/29_giro_padrao_espaco_mundo.gif]
+- **Self Object → Object Info → Transform ligado no Simulation to World**: a
+  simulação passa a ser no espaço do objeto. O cabelo segue a cabeça quase
+  rígido, sem inércia. [img/29_giro_transform_do_objeto_rigido.gif]
+
+Uso: deixe vazio para ter balanço. Ligue uma transformação (de um osso raiz ou
+de um Empty que acompanha o personagem) quando o deslocamento grande do
+personagem andando não deve virar inércia no cabelo.
