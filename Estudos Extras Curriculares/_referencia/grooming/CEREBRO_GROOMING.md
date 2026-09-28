@@ -747,6 +747,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Meio preso, mistura regional | GR Transição com Fator = máscara de região; B = GR Rabo de Cavalo | 17.60 |
 | Trança lateral no ombro | Rabo de Cavalo com amarração lateral e Para trás −0,5 → Trança Grossa com a cabeça ligada | 17.61 |
 | Fio saindo por dentro da pele | Shrinkwrap antes de Onda/Cacho (barato); no fim só para render (9× mais caro) | 17.62 |
+| Reproduzir groom animado pesado | Node Bake (Animation) no fim: 353 → 9 ms por quadro | 17.63 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2051,3 +2052,24 @@ Cadeia típica, 15 mil fios, porcentagem de pontos dentro da cabeça
   Padrão da correção, útil para qualquer grupo seu: Object Info do objeto
   → Domain Size (Point Count) → Compare > 0 → Switch (Geometry) entre a
   entrada e o resultado.
+
+### 17.63 Node Bake: groom animado pesado em tempo real
+
+Groom animado (GR Flutuar nas guias → Densidade 300 mil/m² → Mecha →
+Cacho → Cor → Profile), 1,44 milhão de pontos. Node **Bake** no fim da
+cadeia, modo Animation, quadros 1 a 12, alvo Disco:
+
+| | Tempo por quadro na reprodução |
+|---|---|
+| Sem Bake | 353 ms |
+| **Com Bake** | **9 ms** (39× mais rápido) |
+
+- Bake de 12 quadros: 8 s. Disco: **282 MB** (23,5 MB por quadro nessa
+  densidade). Para cena longa, faça o Bake **antes** do que multiplica
+  pontos (antes do Cacho) ou baixe a densidade da viewport.
+- Criado por script, o node Bake vem **sem item**: a saída fica vazia e o
+  cabelo some. Na interface ele já vem com Geometry; por Python, adicione
+  com `bake_items.new('GEOMETRY', 'Geometry')`.
+- Operador: `object.geometry_node_bake_single` (session_uid do objeto, nome
+  do modificador, bake_id), com `bake_mode = 'ANIMATION'` e intervalo
+  próprio no item de bake do modificador.
