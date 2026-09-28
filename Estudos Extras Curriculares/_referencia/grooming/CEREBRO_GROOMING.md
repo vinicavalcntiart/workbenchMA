@@ -472,7 +472,16 @@ Observado em teste headless, nao em fonte externa:
   (2026-09-28): Curve Info fica em Add > Hair > Read; Map Range com Clamp;
   Factor fixo 1 deixa todas as mechas pontudas e iguais, 0,4 a 1,0 solta
   fios, 0 a 1 vira frizz [img/121_clump_random_sheet, 121_clump_random_nodes;
-  scripts/r121_clump_random.py]. Por fio, sem Create Guide
+  scripts/r121_clump_random.py].
+  **So nas pontas** (2026-09-28, bpy 5.2.2): o Factor do Clump e avaliado por
+  ponto (multiplica a curva do Shape antes do Mix, ver
+  essentials-internals/clump-hair-curves.md), entao aceita mascara ao longo
+  do fio. Spline Parameter → Map Range (From 0,6 a 1,0) → Factor de um Mix
+  Float; A = 1; B = Curve Info Random → Map Range (To 0,3 a 1,0); Mix →
+  Factor do Clump. Corpo fechado, cada ponta solta de um jeito. Sem node:
+  **Tip Spread** (6 mm) abre as pontas. **Curve Tip nao serve**: Tip
+  Selection marca so o ultimo ponto, o cone continua igual
+  [img/122_clump_pontas_sheet, 122_clump_pontas_nodes]. Por fio, sem Create Guide
   Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
   Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
   Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
