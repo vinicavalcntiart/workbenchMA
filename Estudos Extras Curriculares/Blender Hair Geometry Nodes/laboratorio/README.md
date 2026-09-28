@@ -19,6 +19,7 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 
 | Grupo | Faz o quê | Onde vai na cadeia |
 |---|---|---|
+| GR Guias Desenhadas | traços de Grease Pencil viram guias presas ao scalp | antes de tudo, num Curves vazio |
 | GR Guias Procedurais | gera guias penteadas sem esculpir (Curves vazio com Surface) | antes de tudo, opcional |
 | GR Densidade Livre | Interpolate sem a trava de 10.000 fios/m² | primeiro |
 | GR Mecha Estilizada | mecha em fita, raiz coberta | depois do Interpolate |

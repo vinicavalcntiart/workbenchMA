@@ -1072,7 +1072,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Trinta e um node groups "GR" e cinco materiais, marcados como asset, feitos com as
+Trinta e dois node groups "GR" e cinco materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -2297,3 +2297,8 @@ Nota de laboratório: em modo sem interface, só ter um Grease Pencil na cena
 fez o Cycles tentar abrir EGL e o render parou; aplicar o modificador e
 apagar o Grease Pencil antes do render resolveu. Na interface isso não
 acontece.
+
+Pronto em **GR Guias Desenhadas** (entrada Grease Pencil). O grupo tira o
+scalp do próprio Curves vazio com **Get Attachment Surface** e passa para o
+Set Attachment Surface em modo Geometry: o artista só liga o Grease Pencil.
+Validado do .blend: 11.455 fios.

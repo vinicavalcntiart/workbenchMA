@@ -686,6 +686,22 @@ sns = g.n('GeometryNodeSampleNearestSurface', props={'data_type':'FLOAT_VECTOR'}
 st = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT_VECTOR','domain':'POINT'}, Name="nvol"); g.l(geo, st.inputs['Geometry']); g.l(sns.outputs['Value'], st.inputs['Value'])
 g.l(passthru(g, mal, geo, st.outputs['Geometry'], 'MESH'), o); libs.append(g.ng)
 
+# 32. Guias Desenhadas
+g = G("GR Guias Desenhadas", "Tracos de Grease Pencil viram guias presas ao scalp do proprio Curves (Set Attachment Surface). Use num Curves vazio com Surface; depois ligue a cadeia normal (GR Densidade Livre...). Nao use Attach Hair Curves: vira fio de 1 ponto.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+gpi = g.inp("Grease Pencil", 'NodeSocketObject', desc="Objeto Grease Pencil com os tracos (placement Surface)")
+pts = g.inp("Pontos por guia", 'NodeSocketInt', 16, 2, 500)
+o = g.out("Guias", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(gpi, oi.inputs['Object'])
+g2c = g.n('GeometryNodeGreasePencilToCurves'); g.l(oi.outputs['Geometry'], g2c.inputs['Grease Pencil']); g2c.inputs['Layers as Instances'].default_value = False
+rl = g.n('GeometryNodeRealizeInstances'); g.l(g2c.outputs['Curves'], rl.inputs[0])
+rs = g.n('GeometryNodeResampleCurve'); g.l(rl.outputs[0], rs.inputs['Curve']); g.l(pts, rs.inputs['Count'])
+ga = g.n('GeometryNodeGroup', group=EG['Get Attachment Surface']); g.l(geo, ga.inputs[0])
+sa = g.n('GeometryNodeGroup', group=EG['Set Attachment Surface']); g.l(rs.outputs['Curve'], sa.inputs['Geometry'])
+sa.inputs['Mode'].default_value = 'Geometry'
+g.l(ga.outputs['Surface Geometry'], sa.inputs['Surface Geometry']); g.l(ga.outputs['Surface UV Map'], sa.inputs['Surface UV Map'])
+g.l(sa.outputs['Geometry'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
