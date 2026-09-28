@@ -1,20 +1,16 @@
 # Interpolate Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
 - OUTPUT Guide Index (Int, default 0, min -2147483648, max 2147483647) — Index of the main guide curve per curve
 - OUTPUT Surface Normal (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Normal direction of the surface mesh at the attachment point
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
-- INPUT Surface Input Type (Menu, default Object) — Select the input type for the surface geometry.
-- INPUT Surface (Geometry, default None) — Surface geometry for generation
-- INPUT Surface (Object, default None) — Surface object for generation (needs matching transforms)
-- INPUT Surface UV Map (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Surface UV map used for attachment
-- INPUT Surface Rest Position (Bool, default False) — Set the surface mesh into its rest position before attachment
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
+- INPUT Resting Surface (Bool, default True) — Use the surface's resting state to preserve stability under deformation
 - INPUT Follow Surface Normal (Bool, default False) — Align the interpolated curves to the surface normal
 - INPUT Part by Mesh Islands (Bool, default True) — Use mesh islands of the surface geometry for parting
-- INPUT Interpolation Guides (Int, default 4, min 1, max 2147483647) — Amount of guides to be used for interpolation per curve
+- INPUT Interpolation Guides (Int, default 4, min 1, max 8) — Amount of guides to be used for interpolation per curve
 - INPUT Distance to Guides (Float, default 0.0, min 0.0, max 3.4028234663852886e+38) — Distance around each guide to spawn interpolated curves
 - [painel] Distribution
 - INPUT Distribution Method (Menu, default Random)
@@ -24,21 +20,11 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Viewport Amount (Float, default 1.0, min 0.0, max 1.0) — Factor applied on the density for the viewport
 - INPUT Seed (Int, default 0, min -2147483648, max 2147483647) — Random seed for the operation
 
-## Nodes (194)
+## Nodes (184)
 - **Group Input** [NodeGroupInput]
-- **Separate Components** [GeometryNodeSeparateComponents]
-- **Join Geometry.001** [GeometryNodeJoinGeometry]
 - **Capture Attribute.007** [GeometryNodeCaptureAttribute] {domain=CURVE}
-- **Named Attribute** [GeometryNodeInputNamedAttribute] {data_type=FLOAT_VECTOR}
-    inputs livres: Name = rest_position
-- **Set Position** [GeometryNodeSetPosition]
-    inputs livres: Offset = (0.0, 0.0, 0.0)
 - **Switch** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Group Input.005** [NodeGroupInput]
-- **Group Input.013** [NodeGroupInput]
-- **Object Info** [GeometryNodeObjectInfo] {transform_space=ORIGINAL}
-    inputs livres: As Instance = False
-- **Group Input.011** [NodeGroupInput]
 - **Interpolate Curves.003** [GeometryNodeInterpolateCurves]
     inputs livres: Max Neighbors = 1
 - **Delete Geometry** [GeometryNodeDeleteGeometry] {domain=POINT, mode=ALL}
@@ -50,7 +36,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Group Input.008** [NodeGroupInput]
 - **Capture Attribute.003** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Switch.005** [GeometryNodeSwitch] {input_type=GEOMETRY}
-- **Group Input.017** [NodeGroupInput]
 - **Random Value** [FunctionNodeRandomValue] {data_type=BOOLEAN}
 - **Compare.001** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=INT, mode=ELEMENT}
     inputs livres: B = 0
@@ -71,7 +56,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Sample Nearest.008** [GeometryNodeSampleNearest] {domain=POINT}
 - **Sample Index** [GeometryNodeSampleIndex] {data_type=BOOLEAN, domain=CURVE}
 - **Group Input.009** [NodeGroupInput]
-- **Group.001** [GeometryNodeGroup] -> grupo 'Hair Attachment Info'
+- **Group.001** [GeometryNodeGroup] -> grupo 'Attachment Info'
 - **Sample Nearest.003** [GeometryNodeSampleNearest] {domain=POINT}
 - **Sample Nearest.004** [GeometryNodeSampleNearest] {domain=POINT}
 - **Index.003** [GeometryNodeInputIndex]
@@ -82,7 +67,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Named Attribute.001** [GeometryNodeInputNamedAttribute] {data_type=FLOAT_VECTOR}
     inputs livres: Name = surface_uv_coordinate
 - **Sample UV Surface** [GeometryNodeSampleUVSurface] {data_type=FLOAT_VECTOR}
-- **Group Input.007** [NodeGroupInput]
 - **Capture Attribute** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Compare.007** [FunctionNodeCompare] {operation=NOT_EQUAL, data_type=FLOAT, mode=ELEMENT}
     inputs livres: B = 0.0; Epsilon = 0.0
@@ -159,21 +143,20 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
     inputs livres: False = 0
 - **Set ID** [GeometryNodeSetID]
 - **Group Output** [NodeGroupOutput]
-- **Menu Switch** [GeometryNodeMenuSwitch] {data_type=GEOMETRY}
-- **Group Input.018** [NodeGroupInput]
-- **Switch.017** [GeometryNodeSwitch] {input_type=GEOMETRY}
-- **Compare.005** [FunctionNodeCompare] {operation=EQUAL, data_type=INT, mode=ELEMENT}
-    inputs livres: B = 0
-- **Domain Size.003** [GeometryNodeAttributeDomainSize]
 - **Menu Switch.001** [GeometryNodeMenuSwitch] {data_type=GEOMETRY}
 - **Group Input.019** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
+- **Join Geometry.002** [GeometryNodeJoinGeometry]
+- **Switch.007** [GeometryNodeSwitch] {input_type=GEOMETRY}
+- **Group Input.006** [NodeGroupInput]
+- **Rest Surface** [GeometryNodeGroup] -> grupo 'Rest Surface'
+- **Get Hair Surface Geometry** [GeometryNodeGroup] -> grupo 'Get Hair Surface Geometry'
 
-## Ligacoes (239)
+## Ligacoes (226)
 - Capture Attribute.001.Geometry -> Distribute Points on Faces.Mesh
 - Capture Attribute.010.Geometry -> Interpolate Curves.Points
-- Switch.017.Output -> Set Position.Geometry
-- Named Attribute.Attribute -> Set Position.Position
 - Switch.009.Output -> Interpolate Curves.Point Up
 - Capture Attribute.004.Geometry -> Sample UV Surface.Mesh
 - Switch.008.Output -> Interpolate Curves.Guide Up
@@ -191,9 +174,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.002.Density -> Math.006.Value
 - Math.007.Value -> Distribute Points on Faces.Distance Min
 - Group Input.002.Density -> Math.008.Value
-- Set Position.Geometry -> Switch.True
-- Switch.017.Output -> Switch.False
-- Group Input.005.Surface Rest Position -> Switch.Switch
+- Get Hair Surface Geometry.Surface Geometry -> Switch.False
+- Group Input.005.Resting Surface -> Switch.Switch
 - Math.009.Value -> Distribute Points on Faces.001.Density
 - Distribute Points on Faces.Points -> Switch.001.True
 - Distribute Points on Faces.001.Points -> Switch.001.False
@@ -205,7 +187,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.003.Seed -> Distribute Points on Faces.001.Seed
 - Group Input.003.Seed -> Distribute Points on Faces.Seed
 - Is Viewport.Is Viewport -> Switch.004.Switch
-- Group Input.007.Surface UV Map -> Sample UV Surface.UV Map
 - Join Geometry.Geometry -> Set ID.Geometry
 - Capture Attribute.Geometry -> Capture Attribute.003.Geometry
 - Group Input.008.Mask Texture -> Image Texture.Image
@@ -234,14 +215,12 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Sample Index.001.Value -> Compare.006.A
 - Curve to Points.Points -> Sample Nearest.004.Geometry
 - Switch.005.Output -> Sample Nearest.003.Geometry
-- Separate Components.Curve -> Interpolate Curves.003.Guide Curves
+- Get Geometry Component.Component -> Interpolate Curves.003.Guide Curves
 - Delete Geometry.001.Geometry -> Interpolate Curves.003.Points
-- Separate Components.Curve -> Interpolate Curves.Guide Curves
+- Get Geometry Component.Component -> Interpolate Curves.Guide Curves
 - Capture Attribute.005.Geometry -> Capture Attribute.010.Geometry
 - Compare.006.Result -> Separate Geometry.001.Selection
 - Separate Geometry.001.Inverted -> Capture Attribute.005.Geometry
-- Group Input.011.Surface -> Object Info.Object
-- Named Attribute.Exists -> Set Position.Selection
 - Sample UV Surface.Value -> Switch.008.True
 - Capture Attribute.Value -> Switch.009.True
 - Group Input.014.Follow Surface Normal -> Switch.008.Switch
@@ -285,20 +264,13 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Sample Nearest.004.Index -> Sample Index.004.Index
 - Sample Index.004.Value -> Set Position.002.Position
 - Position.001.Position -> Sample Index.004.Value
-- Separate Components.Mesh -> Join Geometry.001.Geometry
-- Separate Components.Point Cloud -> Join Geometry.001.Geometry
-- Set ID.Geometry -> Join Geometry.001.Geometry
-- Separate Components.Volume -> Join Geometry.001.Geometry
-- Separate Components.Instances -> Join Geometry.001.Geometry
-- Group Input.Geometry -> Separate Components.Geometry
 - Capture Attribute.002.Geometry -> Capture Attribute.006.Geometry
 - Group Input.009.Density Mask -> Sample UV Surface.002.Value
 - Set Position.002.Geometry -> Delete Geometry.001.Geometry
 - Switch.Output -> Sample UV Surface.002.Mesh
 - Curve to Points.Points -> Sample Nearest.008.Geometry
 - Sample Nearest.008.Index -> Sample Index.Index
-- Separate Components.Curve -> Sample Index.Geometry
-- Group Input.007.Surface UV Map -> Sample UV Surface.002.UV Map
+- Get Geometry Component.Component -> Sample Index.Geometry
 - Sample Index.Value -> Delete Geometry.001.Selection
 - Group.001.Attachment UV -> Sample UV Surface.002.Sample UV
 - Sample UV Surface.002.Value -> Compare.004.B
@@ -326,23 +298,25 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Switch.Output -> Capture Attribute.004.Geometry
 - Normal.Normal -> Capture Attribute.004.Value
 - Capture Attribute.004.Value -> Sample UV Surface.Value
-- Separate Components.Curve -> Curve to Points.Curve
-- Group Input.017.Surface UV Map -> Capture Attribute.003.Value
-- Join Geometry.001.Geometry -> Group Output.Geometry
+- Get Geometry Component.Component -> Curve to Points.Curve
 - Curve to Points.Points -> Sample Index.004.Geometry
 - Compare.007.Result -> Boolean Math.001.Boolean
 - Capture Attribute.001.Value -> Switch.011.True
-- Object Info.Geometry -> Menu Switch.Object
-- Group Input.018.Surface Input Type -> Menu Switch.Menu
-- Menu Switch.Output -> Switch.017.False
-- Domain Size.003.Point Count -> Compare.005.A
-- Group Input.013.Surface -> Menu Switch.Geometry
-- Separate Components.Mesh -> Switch.017.True
-- Menu Switch.Output -> Domain Size.003.Geometry
-- Compare.005.Result -> Switch.017.Switch
 - Group Input.019.Distribution Method -> Menu Switch.001.Menu
-- Separate Components.Grease Pencil -> Join Geometry.001.Geometry
 - Switch.015.Output -> Hash Value.Value
 - Curve of Point.Index in Curve -> Hash Value.Seed
 - Hash Value.Hash -> Set ID.ID
 - Switch.005.Output -> Separate Geometry.001.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.002.Geometry
+- Set ID.Geometry -> Join Geometry.002.Geometry
+- Switch.007.Output -> Group Output.Geometry
+- Join Geometry.002.Geometry -> Switch.007.True
+- Get Hair Surface Geometry.Exists -> Switch.007.Switch
+- Rest Surface.Rest Surface -> Switch.True
+- Get Hair Surface Geometry.Surface Geometry -> Rest Surface.Surface
+- Get Geometry Component.Component -> Get Hair Surface Geometry.Geometry
+- Group Input.006.Geometry -> Switch.007.False
+- Get Hair Surface Geometry.Surface UV Map -> Sample UV Surface.002.UV Map
+- Get Hair Surface Geometry.Surface UV Map -> Sample UV Surface.UV Map
+- Get Hair Surface Geometry.Surface UV Map -> Capture Attribute.003.Value

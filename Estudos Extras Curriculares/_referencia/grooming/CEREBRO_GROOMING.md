@@ -296,6 +296,25 @@ Named Attribute "guide_curve_index"]. É assim que dois Clumps seguidos podem
 usar guias diferentes: um Create Guide Index Map antes de cada um grava um
 mapa novo.
 
+**Dois Clumps em fila, testado em bpy 5.2.2 (2026-09-28, 1600 fios retos
+em grade, script test_2clumps.py).** O usuário reportou que "mecha dentro da
+mecha" com dois Clumps não funcionava na 5.2. Confirmado, e a causa é dupla:
+
+- O Clump **grava** `guide_curve_index` na saída (o Create Guide Index Map
+  interno tem um Store Named Attribute). Então o segundo Clump, com Existing
+  Guide Map ligado (padrão), reaproveita as guias do primeiro e o resultado é
+  idêntico ao primeiro sozinho: diferença máxima de posição 0,0.
+- Com Factor 1,0 no primeiro, as pontas já convergiram; o segundo, mesmo com
+  Existing Guide Map desligado, só troca fios de mecha (saltos de até 15 cm),
+  sem criar sub-mechas: 108 grupos antes, 108 depois.
+
+O que funciona: **Clump grande com Factor 0,5** (Guide Distance 0,08), depois
+**Clump pequeno com Factor 1,0, Guide Distance 0,02, Existing Guide Map
+desligado, Seed diferente**. Resultado: 1043 grupos a 5 mm dentro de 495
+grupos a 3 cm. Ordem inversa (pequeno antes, grande depois com Factor 0,5 e
+Existing desligado) dá hierarquia parecida. A regra: o primeiro nível nunca
+fecha tudo, e o segundo nível sempre ignora o mapa herdado.
+
 **O sentinela -987654.** É o valor "não fornecido" do input Guide Index. Se
 você mexer nele no painel, o clump some. Esse input existe para a versão em
 nodes, não para o modificador [com/devtalk-27601-...md, posts 9 e 11].
@@ -405,18 +424,20 @@ Mask), que amostra por ponto depois da distribuição e não depende da malha
 multiplicam. O UV do Mask Texture vem do Surface UV Map do objeto Curves.
 
 **Observado em produção (2026-09-27, Blender 5.2 LTS): máscara por imagem
-com cadeia de nodes.** Os inputs Surface e Surface UV Map não aparecem mais
-no Interpolate Hair Curves: o menu Surface Input Type tem Attached, Input e
-Object, e no padrão Attached o node lê o scalp e a UV direto do Object Data
-do Curves (campos Surface e Surface UV Map, os mesmos do Ctrl+P). Fonte:
-manual generate_hair_curves.rst, linhas 26 a 41, e curves_new/properties.rst,
-linhas 27 a 40. O jeito de sampler uma imagem por fio com cadeia livre de
+com cadeia de nodes.** Os inputs Surface, Surface UV Map e Surface Input Type
+não existem mais no Interpolate Hair Curves da 5.2.2 [int/interpolate-hair-
+curves.md, interface]: o node lê o scalp e a UV do bundle de attachment do
+próprio objeto Curves, pelo grupo interno Get Hair Surface Geometry (campos
+Surface e Surface UV Map em Object Data, os mesmos do Ctrl+P). O Generate Hair
+Curves mantém um menu Surface Source (Attached ou Object) [int/generate-hair-
+curves.md; manual generate_hair_curves.rst]. Campos do objeto: manual
+curves_new/properties.rst, seção Surface. O jeito de sampler uma imagem por fio com cadeia livre de
 nodes, testado e funcionando:
 
 1. Interpolate com Density Mask 1.0 e Mask Texture vazio.
 2. Depois dele, Named Attribute (Vector) `surface_uv_coordinate`. Esse é o
    atributo oficial de fixação no scalp, gravado em todo filho pelo Interpolate
-   [int/interpolate-hair-curves.md, linhas 61 e 182].
+   [int/interpolate-hair-curves.md, Store Named Attribute `surface_uv_coordinate`, domínio Curve].
 3. Attribute -> Vector do Image Texture.
 4. Color -> cadeia livre (Color Ramp, Math, Mix, Separate Color para R, G e B
    como três máscaras).
@@ -574,6 +595,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Sintoma | Causa provável | O que fazer | Fonte |
 |---|---|---|---|
 | Density Mask por Image Texture não gera nada, ou some tudo | Density Mask é lido nos cantos das faces; malha pobre lê preto nos cantos | Usar o slot Mask Texture do node (amostra por ponto) ou subdividir o scalp; Density Mask só para vertex group | int/interpolate-hair-curves.md; manual interpolate_hair_curves.rst |
+| Segundo Clump não cria sub-mechas | Clump grava `guide_curve_index`; o segundo herda o mapa (Existing Guide Map ligado) ou não sobra espalhamento (Factor 1,0 no primeiro) | Primeiro Clump Factor 0,5; segundo com Guide Distance menor, Factor 1,0, Existing Guide Map desligado, Seed diferente | testado bpy 5.2.2, seção 5 |
 | Interpolate não gera nada | Surface não atribuída, UV map errado, ou Rest Position sem malha em repouso | Conferir Surface e Surface UV Map no Interpolate; testar com Rest Position desligado | jp/ja-tenp-kukan-2025-11-hair-curves-guia-completo.md |
 | Filhos atravessam a pele | Guias esculpidas sem colisão; ruído empurrou para dentro | Shrinkwrap Hair Curves no fim; Use Sculpt Collision ao pentear | int/shrinkwrap-hair-curves.md |
 | Filhos flutuam ou entram na malha subdividida | Subdivision Surface não aplicado no scalp | Aplicar o Subdivision no scalp, ou scalp separado | com/blenderartists-1621672-...md |

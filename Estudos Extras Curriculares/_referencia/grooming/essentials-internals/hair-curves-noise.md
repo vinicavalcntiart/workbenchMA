@@ -1,6 +1,6 @@
 # Hair Curves Noise
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
@@ -9,15 +9,14 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Cumulative Offset (Bool, default True) — Apply offset cumulatively (previous points affect points after)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Overall factor for the deformation
 - INPUT Distance (Float, default 0.01, min 0.0, max 3.4028234663852886e+38) — Overall distance factor for the deformation
-- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of amount along each curve (0=constant, 0.5=linear)
+- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of amount along each curve (0 = constant, 0.5 = linear)
 - INPUT Scale (Float, default 1.0, min -10000.0, max 10000.0) — Scale of the noise texture by root position
 - INPUT Scale along Curve (Float, default 1.0, min 0.0, max 10000.0) — Scale of noise texture along each curve
 - INPUT Offset per Curve (Float, default 0.0, min -10000.0, max 10000.0) — Random offset of noise texture for each curve
 - INPUT Seed (Int, default 0, min -10000, max 10000) — Seed value for randomization
 - INPUT Preserve Length (Bool, default False) — Preserve the length of the curves on a segment basis
 
-## Nodes (100)
-- **Separate Components** [GeometryNodeSeparateComponents]
+## Nodes (92)
 - **Group Input** [NodeGroupInput]
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Group Output** [NodeGroupOutput]
@@ -108,8 +107,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Math.003** [ShaderNodeMath] {operation=ADD}
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 368741
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (116)
+## Ligacoes (104)
 - Set Spline Type.Curve -> Set Position.Geometry
 - Vector Math.006.Vector -> Separate XYZ.Vector
 - Curve Tangent.Tangent -> Vector Math.Vector
@@ -144,11 +145,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Vector Math.013.Vector -> Vector Math.015.Vector
 - Compare.Result -> Boolean Math.Boolean
 - Group Input.008.Preserve Length -> Boolean Math.Boolean
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Vector Math.015.Vector -> Switch.True
 - Group Input.005.Cumulative Offset -> Switch.Switch
 - Boolean Math.Boolean -> Group.005.Selection
@@ -198,7 +194,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Switch.004.Output -> Set Spline Resolution.001.Resolution
 - Group Input.003.Seed -> Random Value.ID
 - Set Spline Resolution.001.Curve -> Capture Attribute.001.Geometry
-- Separate Components.Curve -> Capture Attribute.003.Geometry
 - Position.001.Position -> Capture Attribute.003.Value
 - Position.002.Position -> Vector Math.007.Vector
 - Capture Attribute.003.Value -> Vector Math.007.Vector
@@ -207,5 +202,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.004.Shape -> Group.Shape
 - Hash Value.Hash -> Random Value.Seed
 - Group.004.Curve ID -> Random Value.001.ID
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Group Input.003.Seed -> Hash Value.Value
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.003.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

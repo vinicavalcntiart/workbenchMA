@@ -1,15 +1,17 @@
 # Generate Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
 - OUTPUT Curves (Geometry, default None)
 - OUTPUT Surface Normal (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Normal direction of the surface mesh at the attachment point
-- INPUT Surface (Geometry, default None) — Surface geometry for generation
+- INPUT Hair Surface (Geometry, default None) — Surface geometry or hair geometry with existing surface attachment for reference
+- INPUT Surface Source (Menu, default Attached)
 - INPUT Surface (Object, default None) — Surface object for generation (needs matching transforms)
 - INPUT Surface UV Map (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Surface UV map used for attachment
-- INPUT Surface Rest Position (Bool, default False) — Set the surface mesh into its rest position before attachment
+- INPUT Resting Surface (Bool, default True) — Use the surface's resting state to preserve stability under deformation
+- INPUT Attach to Surface (Bool, default True) — Attach the generated hair curves to the surface geometry for dynamics
 - INPUT Hair Length (Float, default 1.0, min 0.0, max 3.4028234663852886e+38) — Length of the generated hair curves
 - INPUT Hair Material (Material, default None) — Material of the generated hair curves
 - INPUT Control Points (Int, default 12, min 2, max 100000) — Amount of control points of the generated hair curves
@@ -21,7 +23,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Viewport Amount (Float, default 1.0, min 0.0, max 1.0) — Factor applied on the density for the viewport
 - INPUT Seed (Int, default 0, min -2147483648, max 2147483647) — Random seed for the operation
 
-## Nodes (78)
+## Nodes (87)
 - **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Input.013** [NodeGroupInput]
 - **Join Geometry.001** [GeometryNodeJoinGeometry]
@@ -52,17 +54,9 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
     inputs livres: Max Neighbors = 1
 - **Switch** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Group Input.005** [NodeGroupInput]
-- **Compare.002** [FunctionNodeCompare] {operation=EQUAL, data_type=INT, mode=ELEMENT}
-    inputs livres: B = 0
-- **Domain Size.001** [GeometryNodeAttributeDomainSize]
-- **Switch.007** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Group Input.011** [NodeGroupInput]
-- **Object Info** [GeometryNodeObjectInfo] {transform_space=ORIGINAL}
+- **Object Info** [GeometryNodeObjectInfo] {transform_space=RELATIVE}
     inputs livres: As Instance = False
-- **Set Position** [GeometryNodeSetPosition]
-    inputs livres: Offset = (0.0, 0.0, 0.0)
-- **Named Attribute** [GeometryNodeInputNamedAttribute] {data_type=FLOAT_VECTOR}
-    inputs livres: Name = rest_position
 - **Compare.001** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=INT, mode=ELEMENT}
     inputs livres: B = 0
 - **Capture Attribute.005** [GeometryNodeCaptureAttribute] {domain=POINT}
@@ -97,21 +91,27 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Menu Switch** [GeometryNodeMenuSwitch] {data_type=GEOMETRY}
 - **Group Input.006** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
+- **Set Surface Geometry** [GeometryNodeGroup] -> grupo 'Set Attachment Surface'
+    inputs livres: Mode = Geometry; Surface Object
+- **Switch.006** [GeometryNodeSwitch] {input_type=GEOMETRY}
+- **Group Input.014** [NodeGroupInput]
+- **Get Rest Geometry.001** [GeometryNodeGroup] -> grupo 'Rest Surface'
+- **Get Attachment Surface** [GeometryNodeGroup] -> grupo 'Get Attachment Surface'
+- **Menu Switch.001** [GeometryNodeMenuSwitch] {data_type=GEOMETRY}
+- **Group Input.016** [NodeGroupInput]
+- **Switch.003** [GeometryNodeSwitch] {input_type=VECTOR}
 
-## Ligacoes (93)
+## Ligacoes (106)
 - Switch.Output -> Distribute Points on Faces.Mesh
 - Capture Attribute.005.Geometry -> Interpolate Curves.Points
-- Switch.007.Output -> Set Position.Geometry
-- Named Attribute.Attribute -> Set Position.Position
 - Capture Attribute.002.Geometry -> Store Named Attribute.Geometry
 - Math.011.Value -> Distribute Points on Faces.Density Max
 - Math.006.Value -> Math.007.Value
 - Group Input.002.Density -> Math.006.Value
 - Math.007.Value -> Distribute Points on Faces.Distance Min
 - Group Input.002.Density -> Math.008.Value
-- Set Position.Geometry -> Switch.True
-- Switch.007.Output -> Switch.False
-- Group Input.005.Surface Rest Position -> Switch.Switch
+- Menu Switch.001.Output -> Switch.False
+- Group Input.005.Resting Surface -> Switch.Switch
 - Math.009.Value -> Distribute Points on Faces.001.Density
 - Distribute Points on Faces.Points -> Switch.001.True
 - Distribute Points on Faces.001.Points -> Switch.001.False
@@ -125,7 +125,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.003.Seed -> Distribute Points on Faces.Seed
 - Is Viewport.Is Viewport -> Switch.004.Switch
 - Capture Attribute.Geometry -> Capture Attribute.003.Geometry
-- Group Input.007.Surface UV Map -> Capture Attribute.003.Value
 - Group Input.008.Mask Texture -> Image Texture.Image
 - Capture Attribute.003.Value -> Image Texture.Vector
 - Image Texture.Color -> Random Value.Probability
@@ -145,29 +144,23 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.011.Surface -> Object Info.Object
 - Resample Curve.Curve -> Set Material.Geometry
 - Group Input.012.Hair Material -> Set Material.Material
-- Named Attribute.Exists -> Set Position.Selection
-- Domain Size.001.Point Count -> Compare.002.A
-- Compare.002.Result -> Switch.007.Switch
 - Switch.001.Output -> Capture Attribute.Geometry
 - Capture Attribute.Value -> Group Output.Surface Normal
 - Group Input.001.Viewport Amount -> Clamp.Value
 - Group Input.018.Control Points -> Resample Curve.Count
-- Group Input.013.Surface -> Join Geometry.001.Geometry
-- Set ID.Geometry -> Join Geometry.001.Geometry
+- Group Input.013.Hair Surface -> Join Geometry.001.Geometry
+- Switch.006.Output -> Join Geometry.001.Geometry
 - Join Geometry.001.Geometry -> Group Output.Geometry
-- Group Input.013.Surface -> Separate Components.Geometry
+- Group Input.013.Hair Surface -> Separate Components.Geometry
 - Store Named Attribute.Geometry -> Set ID.Geometry
 - Vector.Vector -> Interpolate Curves.Guide Up
 - Capture Attribute.Value -> Interpolate Curves.Point Up
-- Separate Components.Mesh -> Switch.007.False
 - Group Input.Hair Length -> Curve Line.Length
 - Switch.005.Output -> Capture Attribute.005.Geometry
-- Set ID.Geometry -> Group Output.Curves
+- Switch.006.Output -> Group Output.Curves
 - Interpolate Curves.Curves -> Capture Attribute.002.Geometry
 - Capture Attribute.003.Value -> Capture Attribute.002.Value
 - Capture Attribute.002.Value -> Store Named Attribute.Value
-- Object Info.Geometry -> Switch.007.True
-- Separate Components.Mesh -> Domain Size.001.Geometry
 - Group Input.004.Density Mask -> Math.010.Value
 - Group Input.009.Density Mask -> Distribute Points on Faces.Density Factor
 - Group Input.010.Seed -> Random Value.Seed
@@ -179,3 +172,20 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Capture Attribute.005.Value -> Hash Value.Value
 - Curve of Point.Index in Curve -> Hash Value.Seed
 - Hash Value.Hash -> Set ID.ID
+- Set ID.Geometry -> Set Surface Geometry.Geometry
+- Switch.003.Output -> Set Surface Geometry.Surface UV Map
+- Menu Switch.001.Output -> Set Surface Geometry.Surface Geometry
+- Set Surface Geometry.Geometry -> Switch.006.True
+- Set ID.Geometry -> Switch.006.False
+- Group Input.014.Attach to Surface -> Switch.006.Switch
+- Menu Switch.001.Output -> Get Rest Geometry.001.Surface
+- Get Rest Geometry.001.Rest Surface -> Switch.True
+- Group Input.013.Hair Surface -> Get Attachment Surface.Geometry
+- Group Input.016.Surface Source -> Menu Switch.001.Menu
+- Object Info.Geometry -> Menu Switch.001.Object
+- Get Attachment Surface.Surface UV Map -> Switch.003.True
+- Group Input.007.Surface UV Map -> Switch.003.False
+- Switch.003.Output -> Capture Attribute.003.Value
+- Separate Components.Mesh -> Menu Switch.001.Input
+- Get Attachment Surface.Surface Geometry -> Menu Switch.001.Attached
+- Menu Switch.001.Attached -> Switch.003.Switch

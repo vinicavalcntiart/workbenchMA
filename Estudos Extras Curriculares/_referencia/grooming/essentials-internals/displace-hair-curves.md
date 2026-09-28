@@ -1,12 +1,12 @@
 # Displace Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (may include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to scale overall displacement
-- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0=constant, 0.5=linear)
+- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0 = constant, 0.5 = linear)
 - INPUT Object Space (Object, default None) — Object used to define the displacement space
 - INPUT Displace Vector (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Vector for displacement
 - [painel] Surface Normal
@@ -17,10 +17,9 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Surface UV Map (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Surface UV map used to sample the normal for displacement
 - INPUT Surface Normal Distance (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Amount of displacemement along the surface normal
 
-## Nodes (55)
+## Nodes (46)
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Group Output** [NodeGroupOutput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Input** [NodeGroupInput]
 - **Compare.003** [FunctionNodeCompare] {operation=NOT_EQUAL, data_type=INT, mode=ELEMENT}
     inputs livres: B = 0
@@ -40,7 +39,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Vector Math.002** [ShaderNodeVectorMath] {operation=SCALE}
 - **Vector Math.001** [ShaderNodeVectorMath] {operation=SCALE}
 - **Vector Math.003** [ShaderNodeVectorMath] {operation=ADD}
-- **Group** [GeometryNodeGroup] -> grupo 'Hair Attachment Info'
+- **Group** [GeometryNodeGroup] -> grupo 'Attachment Info'
 - **Vector Math.004** [ShaderNodeVectorMath] {operation=SCALE}
 - **Group Input.003** [NodeGroupInput]
 - **Object Info.001** [GeometryNodeObjectInfo] {transform_space=ORIGINAL}
@@ -64,8 +63,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Switch** [GeometryNodeSwitch] {input_type=VECTOR}
     inputs livres: False = (0.0, 0.0, 0.0)
 - **Group Input.010** [NodeGroupInput]
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (59)
+## Ligacoes (45)
 - Group Input.001.Object Space -> Object Info.Object
 - Spline Parameter.Factor -> Group.001.Value
 - Vector Math.Vector -> Vector Rotate.Vector
@@ -75,7 +76,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Vector Math.001.Vector -> Vector Math.002.Vector
 - Group Input.002.Factor -> Vector Math.002.Scale
 - Group Input.003.Surface -> Object Info.001.Object
-- Group Input.005.Surface UV Map -> Group.Surface UV Map
 - Switch.001.Output -> Vector Math.003.Vector
 - Group Input.007.Shape -> Group.001.Shape
 - Group Input.008.Displace Vector -> Vector Math.Vector
@@ -88,12 +88,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Compare.003.Result -> Switch.001.Switch
 - Group Input.008.Displace Vector -> Switch.001.False
 - Group.001.Value -> Vector Math.001.Scale
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.001.Curve -> Set Spline Resolution.001.Curve
 - Capture Attribute.002.Geometry -> Set Spline Type.Curve
@@ -102,14 +97,15 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Compare.004.Result -> Switch.004.Switch
 - Capture Attribute.002.Value -> Switch.004.False
 - Switch.004.Output -> Set Spline Resolution.001.Resolution
-- Group Input.Geometry -> Separate Components.Geometry
 - Join Geometry.Geometry -> Group Output.Geometry
 - Set Spline Type.Curve -> Set Position.Geometry
 - Vector Math.003.Vector -> Vector Math.001.Vector
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Object Info.001.Geometry -> Menu Switch.Object
 - Group Input.009.Surface -> Menu Switch.Geometry
-- Menu Switch.Output -> Group.Surface Geometry
+- Menu Switch.Output -> Group.Hair Curves
 - Group Input.004.Surface Input Type -> Menu Switch.Menu
 - Vector Math.004.Vector -> Switch.True
 - Group Input.010.Surface Normal -> Switch.Switch
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

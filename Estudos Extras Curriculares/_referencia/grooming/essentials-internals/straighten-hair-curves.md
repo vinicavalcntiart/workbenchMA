@@ -1,15 +1,15 @@
 # Straighten Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Amount (Float, default 1.0, min -1.0, max 1.0) — Amount of straightening
-- INPUT Shape (Float, default 0.0, min -1.0, max 1.0) — Shape of the influence along curves (0=constant, 0.5=linear)
+- INPUT Shape (Float, default 0.0, min -1.0, max 1.0) — Shape of the influence along curves (0 = constant, 0.5 = linear)
 - INPUT Preserve Length (Bool, default True) — Preserve each curve's length during deformation
 
-## Nodes (67)
+## Nodes (59)
 - **Group Output** [NodeGroupOutput]
 - **Switch.001** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Compare.008** [FunctionNodeCompare] {operation=NOT_EQUAL, data_type=FLOAT, mode=ELEMENT}
@@ -25,7 +25,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
     inputs livres: Pin at Parameter = 0.0
 - **Capture Attribute.001** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Position.002** [GeometryNodeInputPosition]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Input.002** [NodeGroupInput]
 - **Spline Resolution** [GeometryNodeInputSplineResolution]
 - **Capture Attribute.002** [GeometryNodeCaptureAttribute] {domain=CURVE}
@@ -66,8 +65,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Math** [ShaderNodeMath] {operation=MINIMUM}
     inputs livres: Value = 1.0
 - **Math.001** [ShaderNodeMath] {operation=MULTIPLY}
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (72)
+## Ligacoes (60)
 - Capture Attribute.001.Geometry -> Set Position.001.Geometry
 - Group.003.Root Position -> Mix.002.A
 - Group.004.Root Position -> Mix.002.B
@@ -99,13 +100,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Compare.004.Result -> Switch.001.Switch
 - Group Input.007.Amount -> Compare.008.A
 - Switch.001.Output -> Group Output.Geometry
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
 - Join Geometry.Geometry -> Switch.001.False
-- Group Input.002.Geometry -> Separate Components.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.Curve -> Set Spline Resolution.001.Curve
 - Group.006.Curves -> Set Spline Type.Curve
@@ -114,10 +110,11 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Capture Attribute.002.Value -> Switch.004.False
 - Switch.004.Output -> Set Spline Resolution.001.Resolution
 - Capture Attribute.002.Geometry -> Set Spline Type.001.Curve
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Set Spline Type.001.Curve -> Capture Attribute.001.Geometry
 - Group Input.009.Amount -> Compare.006.A
 - Compare.006.Result -> Boolean Math.003.Boolean
 - Group Input.008.Geometry -> Switch.001.True
 - Group Input.008.Geometry -> Sample Index.Geometry
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry
+- Group Input.002.Geometry -> Get Geometry Component.Geometry

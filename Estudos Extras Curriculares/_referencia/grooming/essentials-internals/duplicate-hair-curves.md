@@ -1,23 +1,22 @@
 # Duplicate Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
 - OUTPUT Guide Index (Int, default 0, min -2147483648, max 2147483647) — Guide index map that was used for the operation
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Amount (Int, default 10, min 0, max 2147483647) — Amount of duplicates per curve
 - INPUT Viewport Amount (Float, default 1.0, min 0.0, max 1.0) — Percentage of amount used for the viewport
 - INPUT Radius (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Radius in which the duplicate curves are offset from the guides
 - INPUT Distribution Shape (Float, default 0.0, min -10.0, max 10.0) — Shape of distribution from center to the edge around the guide
 - INPUT Tip Roundness (Float, default 0.0, min 0.0, max 1.0) — Offset of the curves to round the tip
 - INPUT Even Thickness (Bool, default False) — Keep an even thickness of the distribution of duplicates
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 
-## Nodes (87)
+## Nodes (79)
 - **Group Input** [NodeGroupInput]
 - **Group Output** [NodeGroupOutput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Math.053** [ShaderNodeMath] {operation=ARCCOSINE}
 - **Math.055** [ShaderNodeMath] {operation=DIVIDE}
     inputs livres: Value = 1.5708
@@ -94,8 +93,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
 - **Hash Value.001** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 296
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (107)
+## Ligacoes (95)
 - Join Geometry.001.Geometry -> Group Output.Geometry
 - Capture Attribute.Geometry -> Duplicate Elements.Geometry
 - Capture Attribute.001.Geometry -> Capture Attribute.Geometry
@@ -174,17 +175,13 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Join Geometry.Geometry -> Set ID.Geometry
 - Duplicate Elements.Geometry -> Capture Attribute.002.Geometry
 - Vector Math.004.Vector -> Evaluate on Domain.001.Value
-- Separate Components.Mesh -> Join Geometry.001.Geometry
-- Separate Components.Point Cloud -> Join Geometry.001.Geometry
-- Separate Components.Volume -> Join Geometry.001.Geometry
-- Separate Components.Instances -> Join Geometry.001.Geometry
 - Switch.001.Output -> Join Geometry.001.Geometry
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Curve -> Capture Attribute.001.Geometry
 - Capture Attribute.001.Value -> Group Output.Guide Index
-- Separate Components.Grease Pencil -> Join Geometry.001.Geometry
 - Hash Value.Hash -> Set ID.ID
 - Capture Attribute.Value -> Hash Value.Value
 - Duplicate Elements.Duplicate Index -> Hash Value.Seed
 - Group Input.001.Seed -> Hash Value.001.Value
 - Hash Value.001.Hash -> Random Value.001.Seed
+- Get Geometry Component.Component -> Capture Attribute.001.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.001.Geometry

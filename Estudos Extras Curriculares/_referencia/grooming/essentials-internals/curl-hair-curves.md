@@ -1,6 +1,6 @@
 # Curl Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
@@ -13,16 +13,15 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Factor End (Float, default 1.0, min 0.0, max 10000.0) — Factor for the radius at the curl end
 - INPUT Frequency (Float, default 1.0, min 0.0, max 10000.0) — Frequency factor of the curls
 - INPUT Random Offset (Float, default 0.25, min 0.0, max 1.0) — Amount of random offset per curve
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 - [painel] Guide Map
 - OUTPUT Guide Index (Int, default 0, min -2147483648, max 2147483647) — Guide index map that was used for the operation
-- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to be used. This input has priority
+- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to use. This input has priority.
 - INPUT Guide Distance (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Minimum distance between two guides for new guide map
 - INPUT Guide Mask (Float, default 1.0, min 0.0, max 1.0) — Mask for which curves are eligible to be selected as guides
 - INPUT Existing Guide Map (Bool, default True) — Use the existing guide map attribute if available
 
-## Nodes (124)
-- **Separate Components** [GeometryNodeSeparateComponents]
+## Nodes (116)
 - **Group Input** [NodeGroupInput]
 - **Subdivide Curve.002** [GeometryNodeSubdivideCurve]
 - **Math.003** [ShaderNodeMath] {operation=POWER}
@@ -123,13 +122,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Capture Attribute** [GeometryNodeCaptureAttribute] {domain=CURVE}
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 91487
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (137)
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
+## Ligacoes (125)
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
 - Set Spline Type.Curve -> Group.Geometry
 - Capture Attribute.004.Geometry -> Set Position.001.Geometry
@@ -192,7 +188,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.012.Random Offset -> Math.014.Value
 - Group Input.005.Subdivision -> Math.003.Value
 - Math.003.Value -> Math.004.Value
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.001.Curve -> Set Spline Resolution.001.Curve
 - Capture Attribute.002.Geometry -> Set Spline Type.Curve
@@ -230,5 +225,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Evaluate on Domain.Value -> Math.021.Value
 - Switch.001.Output -> Capture Attribute.Geometry
 - Switch.005.Output -> Capture Attribute.Value
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Group Input.001.Seed -> Hash Value.Value
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

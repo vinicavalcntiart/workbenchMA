@@ -1,9 +1,9 @@
 # Curve Info
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
-- OUTPUT Curve Index (Int, default 0, min -2147483648, max 2147483647) — Index of each Curve
+- OUTPUT Curve Index (Int, default 0, min -2147483648, max 2147483647) — Index of each curve
 - OUTPUT Curve ID (Int, default 0, min -2147483648, max 2147483647) — ID of each curve
 - OUTPUT Length (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Length of each curve
 - OUTPUT Direction (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Direction from root to tip of each curve

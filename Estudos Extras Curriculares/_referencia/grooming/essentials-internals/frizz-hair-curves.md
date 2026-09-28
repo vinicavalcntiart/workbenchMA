@@ -1,19 +1,19 @@
 # Frizz Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
 - OUTPUT Offset Vector (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Vector by which each point was offset during deformation
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Cumulative Offset (Bool, default True) — Apply offset cumulatively (previous points affect points after)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend overall effect
 - INPUT Distance (Float, default 0.01, min 0.0, max 3.4028234663852886e+38) — Overall distance factor for the deformation
-- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0=constant, 0.5=linear)
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0 = constant, 0.5 = linear)
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 - INPUT Preserve Length (Bool, default False) — Preserve each curve's length during deformation
 
-## Nodes (78)
+## Nodes (70)
 - **Math.001** [ShaderNodeMath] {operation=MULTIPLY}
 - **Group Input.001** [NodeGroupInput]
 - **Group Input.006** [NodeGroupInput]
@@ -47,7 +47,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Position.001** [GeometryNodeInputPosition]
 - **Capture Attribute.003** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Group Input** [NodeGroupInput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Set Spline Type** [GeometryNodeCurveSplineType]
 - **Spline Resolution** [GeometryNodeInputSplineResolution]
 - **Capture Attribute.002** [GeometryNodeCaptureAttribute] {domain=CURVE}
@@ -80,8 +79,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Group Input.003** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 64785
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (93)
+## Ligacoes (81)
 - Set Spline Type.Curve -> Set Position.Geometry
 - Random Value.Value -> Separate XYZ.Vector
 - Curve Tangent.Tangent -> Vector Math.Vector
@@ -116,11 +117,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Vector Math.013.Vector -> Vector Math.015.Vector
 - Compare.Result -> Boolean Math.Boolean
 - Group Input.008.Preserve Length -> Boolean Math.Boolean
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Vector Math.015.Vector -> Switch.True
 - Group Input.005.Cumulative Offset -> Switch.Switch
 - Boolean Math.Boolean -> Group.005.Selection
@@ -153,10 +149,11 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Position.002.Position -> Vector Math.007.Vector
 - Capture Attribute.003.Value -> Vector Math.007.Vector
 - Vector Math.007.Vector -> Capture Attribute.001.Value
-- Separate Components.Curve -> Capture Attribute.003.Geometry
 - Capture Attribute.003.Geometry -> Capture Attribute.002.Geometry
 - Set Spline Resolution.001.Curve -> Capture Attribute.001.Geometry
 - Capture Attribute.001.Value -> Group Output.Offset Vector
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Hash Value.Hash -> Random Value.Seed
 - Group Input.003.Seed -> Hash Value.Value
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Get Geometry Component.Component -> Capture Attribute.003.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry

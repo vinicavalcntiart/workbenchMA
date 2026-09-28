@@ -1,12 +1,12 @@
 # Clump Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend overall effect
-- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0=constant, 0.5=linear)
+- INPUT Shape (Float, default 0.5, min -1.0, max 1.0) — Shape of the influence along curves (0 = constant, 0.5 = linear)
 - INPUT Tip Spread (Float, default 0.0, min 0.0, max 10.0) — Distance of random spread at the curve tips
 - INPUT Clump Offset (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Offset of each clump in a random direction
 - INPUT Distance Falloff (Float, default 0.0, min 0.0, max 3.4028234663852886e+38) — Falloff distance for the clumping effect (0 means no falloff)
@@ -15,14 +15,13 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Preserve Length (Bool, default False) — Preserve each curve's length during deformation
 - [painel] Guide Map
 - OUTPUT Guide Index (Int, default 0, min -2147483648, max 2147483647) — Guide index map that was used for the operation
-- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to be used. This input has priority
+- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to use. This input has priority.
 - INPUT Guide Distance (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Minimum distance between two guides for new guide map
 - INPUT Guide Mask (Float, default 1.0, min 0.0, max 1.0) — Mask for which curves are eligible to be selected as guides
 - INPUT Existing Guide Map (Bool, default True) — Use the existing guide map attribute if available
 
-## Nodes (144)
+## Nodes (136)
 - **Group Input.003** [NodeGroupInput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Output.001** [NodeGroupOutput]
 - **Join Geometry.001** [GeometryNodeJoinGeometry]
 - **Capture Attribute** [GeometryNodeCaptureAttribute] {domain=POINT}
@@ -148,9 +147,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Switch.004** [GeometryNodeSwitch] {input_type=FLOAT}
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 148762
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (184)
-- Group Input.003.Geometry -> Separate Components.Geometry
+## Ligacoes (172)
 - Capture Attribute.Geometry -> Group.003.Geometry
 - Accumulate Field.002.Total -> Sample Index.Value
 - Capture Attribute.Geometry -> Sample Index.Geometry
@@ -249,10 +249,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Hash Value.Hash -> Random Value.Seed
 - Hash Value.Hash -> Random Value.001.Seed
 - Capture Attribute.001.Value -> Evaluate at Index.001.Index
-- Separate Components.Mesh -> Join Geometry.001.Geometry
-- Separate Components.Point Cloud -> Join Geometry.001.Geometry
-- Separate Components.Volume -> Join Geometry.001.Geometry
-- Separate Components.Instances -> Join Geometry.001.Geometry
 - Set Spline Resolution.001.Curve -> Join Geometry.001.Geometry
 - Join Geometry.001.Geometry -> Group Output.001.Geometry
 - Set Position.Geometry -> Group.005.Curves
@@ -266,7 +262,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.011.Guide Index -> Switch.003.True
 - Boolean Math.001.Boolean -> Boolean Math.002.Boolean
 - Capture Attribute.001.Value -> Group Output.001.Guide Index
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.001.Curve -> Set Spline Resolution.001.Curve
 - Set Spline Type.002.Curve -> Capture Attribute.Geometry
@@ -298,5 +293,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Compare.006.Result -> Boolean Math.Boolean
 - Compare.007.Result -> Boolean Math.Boolean
 - Boolean Math.Boolean -> Switch.004.Switch
-- Separate Components.Grease Pencil -> Join Geometry.001.Geometry
 - Group Input.005.Seed -> Hash Value.Value
+- Get Geometry Component.Geometry -> Join Geometry.001.Geometry
+- Group Input.003.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry

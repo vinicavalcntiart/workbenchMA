@@ -1,6 +1,6 @@
 # Create Guide Index Map
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
@@ -13,7 +13,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Guide Mask (Float, default 1.0, min 0.0, max 1.0) — Mask for which curves are eligible to be selected as guides
 - INPUT Group ID (Int, default 0, min -2147483648, max 2147483647) — ID to group curves together for guide map creation
 
-## Nodes (102)
+## Nodes (94)
 - **Set Position.002** [GeometryNodeSetPosition]
 - **Switch.002** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Set Position** [GeometryNodeSetPosition]
@@ -29,7 +29,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Compare.004** [FunctionNodeCompare] {operation=GREATER_THAN, data_type=FLOAT, mode=ELEMENT}
     inputs livres: B = 0.0
 - **Group Input** [NodeGroupInput]
-- **Separate Components.001** [GeometryNodeSeparateComponents]
 - **Group Input.003** [NodeGroupInput]
 - **Capture Attribute.003** [GeometryNodeCaptureAttribute] {domain=CURVE}
 - **Group Input.010** [NodeGroupInput]
@@ -95,8 +94,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Sample Index.001** [GeometryNodeSampleIndex] {data_type=INT, domain=POINT}
 - **Store Named Attribute** [GeometryNodeStoreNamedAttribute] {data_type=INT, domain=CURVE}
     inputs livres: Name = guide_curve_index
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (131)
+## Ligacoes (119)
 - Capture Attribute.Value -> Group Output.Guide Index
 - Capture Attribute.006.Geometry -> Capture Attribute.001.Geometry
 - Group Input.001.Guide Distance -> Merge by Distance.Distance
@@ -138,14 +139,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Sample Nearest.005.Index -> Switch.001.True
 - Sample Nearest.007.Index -> Switch.001.False
 - Switch.001.Output -> Sample Index.Index
-- Separate Components.001.Mesh -> Join Geometry.001.Geometry
-- Separate Components.001.Point Cloud -> Join Geometry.001.Geometry
-- Separate Components.001.Volume -> Join Geometry.001.Geometry
-- Separate Components.001.Instances -> Join Geometry.001.Geometry
 - Capture Attribute.002.Geometry -> Join Geometry.001.Geometry
 - Join Geometry.001.Geometry -> Group Output.Geometry
-- Separate Components.001.Curve -> Capture Attribute.003.Geometry
-- Group Input.Geometry -> Separate Components.001.Geometry
 - Separate Components.Curve -> Curve to Points.001.Curve
 - Capture Attribute.001.Geometry -> Curve to Points.Curve
 - Set Position.Geometry -> Merge by Distance.Geometry
@@ -197,4 +192,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Capture Attribute.005.Geometry -> Switch.True
 - Capture Attribute.Geometry -> Store Named Attribute.Geometry
 - Capture Attribute.Value -> Store Named Attribute.Value
-- Separate Components.001.Grease Pencil -> Join Geometry.001.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.001.Geometry
+- Get Geometry Component.Component -> Capture Attribute.003.Geometry

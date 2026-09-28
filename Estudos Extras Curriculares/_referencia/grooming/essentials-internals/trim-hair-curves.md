@@ -1,10 +1,10 @@
 # Trim Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Scale Uniform (Bool, default False) — Scale each curve uniformly to reach the target length
 - INPUT Length Factor (Float, default 1.0, min 0.0, max 10000.0) — Multiply the original length by a factor
 - INPUT Replace Length (Bool, default True) — Use the length input to fully replace the original length
@@ -12,15 +12,14 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Mask (Float, default 1.0, min 0.0, max 1.0) — Mask to blend overall effect
 - INPUT Random Offset (Float, default 0.0, min 0.0, max 3.4028234663852886e+38) — Trim hair curves randomly up to a certain amount
 - INPUT Pin at Parameter (Float, default 0.0, min 0.0, max 1.0) — Pin each curve at a certain point for the operation
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 
-## Nodes (104)
+## Nodes (96)
 - **Capture Attribute** [GeometryNodeCaptureAttribute] {domain=CURVE}
 - **Group Input.002** [NodeGroupInput]
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Group Output** [NodeGroupOutput]
 - **Switch.001** [GeometryNodeSwitch] {input_type=GEOMETRY}
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group.006** [GeometryNodeGroup] -> grupo 'Curve Info'
 - **Set Position.002** [GeometryNodeSetPosition]
 - **Group Input.009** [NodeGroupInput]
@@ -92,8 +91,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Group Input.005** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = 14699
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (126)
+## Ligacoes (114)
 - Random Value.Value -> Math.Value
 - Math.Value -> Math.002.Value
 - Mix.001.Result -> Math.003.Value
@@ -162,13 +163,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Vector Math.009.Vector -> Set Position.002.Offset
 - Position.001.Position -> Vector Math.009.Vector
 - Vector Math.003.Vector -> Vector Math.009.Vector
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Join Geometry.Geometry -> Group Output.Geometry
 - Switch.001.Output -> Join Geometry.Geometry
-- Separate Components.Curve -> Capture Attribute.Geometry
 - Spline Length.Point Count -> Math.016.Value
 - Set Position.003.Geometry -> Switch.001.True
 - Set Position.002.Geometry -> Group.004.Curves
@@ -184,7 +180,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.006.Random Offset -> Math.Value
 - Group Input.007.Length -> Switch.True
 - Group Input.008.Replace Length -> Switch.Switch
-- Group Input.009.Geometry -> Separate Components.Geometry
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Group Input.005.Seed -> Hash Value.Value
 - Hash Value.Hash -> Random Value.Seed
+- Group Input.009.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

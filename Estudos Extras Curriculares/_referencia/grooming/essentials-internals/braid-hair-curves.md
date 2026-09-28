@@ -1,6 +1,6 @@
 # Braid Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
@@ -29,14 +29,13 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Hair Tie Scale (Float, default 1.0, min -10000.0, max 10000.0) — Scale of the hair tie instance
 - [painel] Guide Map
 - OUTPUT Guide Index (Int, default 0, min -2147483648, max 2147483647) — Guide index map that was used for the operation
-- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to be used. This input has priority
+- INPUT Guide Index (Int, default -987654, min -2147483648, max 2147483647) — Guide index map to use. This input has priority.
 - INPUT Guide Distance (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Minimum distance between two guides for new guide map
 - INPUT Guide Mask (Float, default 1.0, min 0.0, max 1.0) — Mask for which curves are eligible to be selected as guides
 - INPUT Existing Guide Map (Bool, default True) — Use the existing guide map attribute if available
 
-## Nodes (262)
+## Nodes (254)
 - **Join Geometry** [GeometryNodeJoinGeometry]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Input** [NodeGroupInput]
 - **Spline Resolution** [GeometryNodeInputSplineResolution]
 - **Capture Attribute.003** [GeometryNodeCaptureAttribute] {domain=CURVE}
@@ -259,13 +258,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Join Geometry.001** [GeometryNodeJoinGeometry]
 - **Switch** [GeometryNodeSwitch] {input_type=GEOMETRY}
 - **Group Input.023** [NodeGroupInput]
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (311)
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
+## Ligacoes (299)
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
 - Set Spline Type.002.Curve -> Group.Geometry
 - Capture Attribute.006.Geometry -> Set Position.001.Geometry
@@ -450,7 +446,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Math.010.Value -> Math.011.Value
 - Group Input.005.Subdivision -> Math.010.Value
 - Math.011.Value -> Subdivide Curve.002.Cuts
-- Separate Components.Curve -> Capture Attribute.003.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.003.Value
 - Set Spline Type.001.Curve -> Set Spline Resolution.001.Curve
 - Group.006.Curve ID -> Random Value.ID
@@ -501,4 +496,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Join Geometry.001.Geometry -> Switch.True
 - Join Geometry.Geometry -> Switch.False
 - Group Input.023.Hair Tie -> Switch.Switch
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.003.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

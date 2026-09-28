@@ -1,11 +1,11 @@
 # Curve Segment
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
-- OUTPUT Segment Length (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Distance to previous point on curve
-- OUTPUT Segment Direction (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Direction from previous neighboring point on segment
-- OUTPUT Neighbor Index (Int, default 0, min -2147483648, max 2147483647) — Index of previous neighboring point on segment
+- OUTPUT Segment Length (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Distance to the previous point on the curve
+- OUTPUT Segment Direction (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Direction from the previous neighboring point on the segment
+- OUTPUT Neighbor Index (Int, default 0, min -2147483648, max 2147483647) — Index of the previous neighboring point on the segment
 
 ## Nodes (20)
 - **Vector Math.009** [ShaderNodeVectorMath] {operation=NORMALIZE}

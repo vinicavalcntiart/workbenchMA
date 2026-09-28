@@ -1,10 +1,10 @@
 # Shrinkwrap Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Surface Input Type (Menu, default Object) — Select the input type for the surface geometry.
 - INPUT Surface (Object, default None) — Surface object used for shrinkwrap
 - INPUT Surface (Geometry, default None) — Surface geometry used for shrinkwrap
@@ -14,8 +14,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Smoothing Steps (Int, default 0, min 0, max 2147483647) — Amount of steps of smoothing applied after shrinkwrap
 - INPUT Lock Roots (Bool, default True) — Lock the position of root points
 
-## Nodes (96)
-- **Separate Components** [GeometryNodeSeparateComponents]
+## Nodes (88)
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Position.001** [GeometryNodeInputPosition]
 - **Vector Math.003** [ShaderNodeVectorMath] {operation=ADD}
@@ -95,8 +94,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
     inputs livres: Value = -1.0
 - **Menu Switch** [GeometryNodeMenuSwitch] {data_type=GEOMETRY}
 - **Group Input.009** [NodeGroupInput]
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (111)
+## Ligacoes (99)
 - Menu Switch.Output -> Capture Attribute.Geometry
 - Normal.Normal -> Capture Attribute.Value
 - Capture Attribute.Geometry -> Sample Nearest Surface.Mesh
@@ -154,12 +155,7 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Sample Nearest Surface.Value -> Vector Math.005.Vector
 - Vector Math.005.Vector -> Vector Math.004.Vector
 - Capture Attribute.Value -> Sample Nearest Surface.Value
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
-- Group Input.Geometry -> Separate Components.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.001.Curve -> Set Spline Resolution.001.Curve
 - Capture Attribute.002.Value -> Compare.004.A
@@ -168,7 +164,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Switch.006.Output -> Set Spline Resolution.001.Resolution
 - Capture Attribute.002.Geometry -> Set Spline Type.002.Curve
 - Set Position.Geometry -> Set Spline Type.001.Curve
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Compare.001.Result -> Boolean Math.003.Boolean
 - Compare.005.Result -> Boolean Math.003.Boolean
 - Group Input.006.Above Surface -> Compare.005.A
@@ -184,4 +179,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.008.Surface -> Menu Switch.Geometry
 - Object Info.001.Geometry -> Menu Switch.Object
 - Group Input.009.Surface Input Type -> Menu Switch.Menu
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry

@@ -1,11 +1,11 @@
 # Roll Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
 - INPUT Geometry (Geometry, default None)
-- INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend overall effect
+- INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend the overall effect
 - INPUT Subdivision (Int, default 1, min 0, max 6) — Subdivision level applied before deformation
 - INPUT Variation Level (Int, default 10, min 0, max 100) — Level of smoothing on the roll path to include shape variation
 - INPUT Roll Length (Float, default 0.1, min 0.0, max 3.4028234663852886e+38) — Length of each curve to be rolled
@@ -15,17 +15,16 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - INPUT Retain Overall Shape (Float, default 0.0, min 0.0, max 1.0) — Offset the roll along the original curve to retain shape
 - INPUT Roll Direction (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Axis around which each curve is rolled
 - INPUT Random Orientation (Float, default 0.5, min 0.0, max 1.0) — Amount of randomization of the direction of the roll
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 - INPUT Preserve Length (Bool, default False) — Preserve each curve's length during deformation
 
-## Nodes (159)
+## Nodes (151)
 - **Compare.005** [FunctionNodeCompare] {operation=EQUAL, data_type=INT, mode=ELEMENT}
     inputs livres: B = 0
 - **Switch.004** [GeometryNodeSwitch] {input_type=INT}
     inputs livres: True = 12
 - **Set Spline Type** [GeometryNodeCurveSplineType]
 - **Set Spline Resolution** [GeometryNodeSetSplineResolution]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Group Input.022** [NodeGroupInput]
 - **Group.004** [GeometryNodeGroup] -> grupo 'Smooth Hair Curves'
     inputs livres: Amount = 1.0; Shape = 0.0; Weight = 1.0; Lock Tips = True; Preserve Length = False
@@ -149,8 +148,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Group Input.003** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = -615487
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (188)
+## Ligacoes (176)
 - Group.004.Geometry -> Sample Curve.Curves
 - Group.Length -> Math.Value
 - Math.Value -> Sample Curve.Length
@@ -277,17 +278,11 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Set Position.002.Geometry -> Group.005.Curves
 - Capture Attribute.007.Value -> Group.005.Reference Position
 - Group Input.009.Preserve Length -> Group.005.Selection
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.Curve -> Join Geometry.Geometry
 - Join Geometry.Geometry -> Group Output.Geometry
-- Group Input.Geometry -> Separate Components.Geometry
 - Group.007.Curve ID -> Random Value.ID
 - Group.005.Curves -> Set Spline Type.Curve
 - Set Spline Type.Curve -> Set Spline Resolution.Curve
-- Separate Components.Curve -> Capture Attribute.009.Geometry
 - Capture Attribute.009.Geometry -> Set Spline Type.001.Curve
 - Spline Resolution.Resolution -> Capture Attribute.009.Value
 - Subdivide Curve.004.Curve -> Set Position.Geometry
@@ -302,6 +297,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Switch.004.Output -> Set Spline Resolution.Resolution
 - Evaluate on Domain.001.Value -> Math.009.Value
 - Group Input.012.Roll Length -> Math.016.Value
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Group Input.003.Seed -> Hash Value.Value
 - Hash Value.Hash -> Random Value.Seed
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Component -> Capture Attribute.009.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry

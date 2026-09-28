@@ -1,20 +1,19 @@
 # Smooth Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Amount (Float, default 1.0, min -1.0, max 1.0) — Amount of smoothing
-- INPUT Shape (Float, default 0.0, min -1.0, max 1.0) — Shape of the influence along curves (0=constant, 0.5=linear)
+- INPUT Shape (Float, default 0.0, min -1.0, max 1.0) — Shape of the influence along curves (0 = constant, 0.5 = linear)
 - INPUT Iterations (Int, default 10, min 0, max 10000) — Amount of smoothing steps
 - INPUT Weight (Float, default 0.5, min 0.0, max 1.0) — Weight used for smoothing
 - INPUT Lock Tips (Bool, default False) — Lock tip position when smoothing
 - INPUT Preserve Length (Bool, default True) — Preserve each curve's length during deformation
 
-## Nodes (90)
+## Nodes (82)
 - **Group Input** [NodeGroupInput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Capture Attribute.001** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Position.007** [GeometryNodeInputPosition]
 - **Set Spline Resolution.001** [GeometryNodeSetSplineResolution]
@@ -81,8 +80,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Boolean Math.003** [FunctionNodeBooleanMath] {operation=AND}
 - **Group** [GeometryNodeGroup] -> grupo 'Curve Tip'
 - **Boolean Math.007** [FunctionNodeBooleanMath] {operation=AND}
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (95)
+## Ligacoes (83)
 - Capture Attribute.001.Geometry -> Set Position.005.Geometry
 - Position.006.Position -> Blur Attribute.004.Value
 - Group Input.002.Iterations -> Blur Attribute.004.Iterations
@@ -112,15 +113,9 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Vector Math.003.Vector -> Set Position.005.Offset
 - Vector Math.002.Vector -> Vector Math.003.Vector
 - Group Input.003.Iterations -> Compare.A
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.001.Curve -> Join Geometry.Geometry
-- Separate Components.Curve -> Capture Attribute.002.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.002.Value
 - Set Spline Type.Curve -> Set Spline Resolution.001.Curve
-- Group Input.Geometry -> Separate Components.Geometry
 - Boolean Math.005.Boolean -> Boolean Math.007.Boolean
 - Group.001.Curves -> Set Spline Type.Curve
 - Capture Attribute.002.Value -> Compare.003.A
@@ -153,4 +148,6 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Compare.Result -> Boolean Math.001.Boolean
 - Group Input.008.Geometry -> Switch.True
 - Boolean Math.002.Boolean -> Boolean Math.007.Boolean
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Get Geometry Component.Component -> Capture Attribute.002.Geometry

@@ -1,20 +1,19 @@
 # Blend Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (may include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to blend overall effect
 - INPUT Blend Radius (Float, default 0.05, min 0.0, max 3.4028234663852886e+38) — Radius to select neighbors for blending
 - INPUT Blend Neighbors (Int, default 10, min 1, max 2147483647) — Amount of neighbors used for blending
 - INPUT Preserve Length (Bool, default False) — Preserve each curve's length during deformation
 
-## Nodes (36)
+## Nodes (28)
 - **Position** [GeometryNodeInputPosition]
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Group Output** [NodeGroupOutput]
-- **Separate Components** [GeometryNodeSeparateComponents]
 - **Capture Attribute** [GeometryNodeCaptureAttribute] {domain=POINT}
 - **Group Input.005** [NodeGroupInput]
 - **Group Input** [NodeGroupInput]
@@ -35,8 +34,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Mix.001** [ShaderNodeMix] {data_type=VECTOR, blend_type=MIX}
 - **Group** [GeometryNodeGroup] -> grupo 'Restore Curve Segment Length'
     inputs livres: Factor = 1.0; Pin at Parameter = 0.0
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (45)
+## Ligacoes (33)
 - Curve to Points.002.Points -> Merge by Distance.Geometry
 - Capture Attribute.Geometry -> Curve to Points.002.Curve
 - Interpolate Curves.003.Curves -> Interpolate Curves.002.Guide Curves
@@ -58,12 +59,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.Preserve Length -> Group.Selection
 - Position.Position -> Capture Attribute.Value
 - Capture Attribute.Value -> Group.Reference Position
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Group.Curves -> Join Geometry.Geometry
 - Join Geometry.Geometry -> Group Output.Geometry
-- Separate Components.Curve -> Capture Attribute.Geometry
-- Group Input.005.Geometry -> Separate Components.Geometry
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
+- Group Input.005.Geometry -> Get Geometry Component.Geometry
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Get Geometry Component.Component -> Capture Attribute.Geometry

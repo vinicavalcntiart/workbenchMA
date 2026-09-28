@@ -1,19 +1,18 @@
 # Rotate Hair Curves
 
-Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
+Fonte: Essentials asset library do Blender 5.2.2 LTS (arquivo procedural_hair_node_assets.blend). Dump automatico: interface, nodes internos com valores padrao, e ligacoes. Serve para entender COMO cada node group funciona por dentro.
 
 ## Interface
 - OUTPUT Geometry (Geometry, default None)
-- INPUT Geometry (Geometry, default None) — Input Geometry (May include other than curves)
+- INPUT Geometry (Geometry, default None) — Input geometry (may include geometry other than curves)
 - INPUT Factor (Float, default 1.0, min 0.0, max 1.0) — Factor to influence the rotation angle
 - INPUT Axis (Vector, default (0.0, 0.0, 0.0), min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Rotation axis (default: tangent at root)
 - INPUT Angle (Float, default 0.0, min -3.4028234663852886e+38, max 3.4028234663852886e+38) — Angle of rotation
 - INPUT Random Offset (Float, default 0.3491, min 0.0, max 3.4028234663852886e+38) — Random offset to the rotation angle per curve
 - INPUT Lock Ends (Bool, default False) — Lock rotation to the axis between the curve ends
-- INPUT Seed (Int, default 0, min -10000, max 10000) — Random Seed for the operation
+- INPUT Seed (Int, default 0, min -10000, max 10000) — Random seed for the operation
 
-## Nodes (52)
-- **Separate Components** [GeometryNodeSeparateComponents]
+## Nodes (44)
 - **Join Geometry** [GeometryNodeJoinGeometry]
 - **Group Output** [NodeGroupOutput]
 - **Compare.004** [FunctionNodeCompare] {operation=EQUAL, data_type=INT, mode=ELEMENT}
@@ -54,8 +53,10 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - **Group Input.001** [NodeGroupInput]
 - **Hash Value** [FunctionNodeHashValue] {data_type=INT}
     inputs livres: Seed = -87614
+- **Get Geometry Component** [GeometryNodeGetGeometryComponent]
+    inputs livres: Type = Curve; Remove = True
 
-## Ligacoes (54)
+## Ligacoes (42)
 - Set Spline Type.Curve -> Set Position.Geometry
 - Vector Rotate.Vector -> Set Position.Position
 - Position.Position -> Vector Rotate.Vector
@@ -73,14 +74,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Evaluate on Domain.002.Value -> Switch.003.Switch
 - Group.003.Direction -> Switch.003.True
 - Group Input.002.Lock Ends -> Evaluate on Domain.002.Value
-- Separate Components.Mesh -> Join Geometry.Geometry
-- Separate Components.Point Cloud -> Join Geometry.Geometry
-- Separate Components.Volume -> Join Geometry.Geometry
-- Separate Components.Instances -> Join Geometry.Geometry
 - Set Spline Resolution.Curve -> Join Geometry.Geometry
 - Join Geometry.Geometry -> Group Output.Geometry
-- Group Input.Geometry -> Separate Components.Geometry
-- Separate Components.Curve -> Capture Attribute.Geometry
 - Spline Resolution.Resolution -> Capture Attribute.Value
 - Capture Attribute.Geometry -> Set Spline Type.Curve
 - Set Position.Geometry -> Set Spline Type.001.Curve
@@ -95,6 +90,8 @@ Fonte: Essentials asset library do Blender 5.0.1 (arquivo procedural_hair_node_a
 - Group Input.004.Angle -> Math.001.Value
 - Group Input.005.Axis -> Switch.003.False
 - Group Input.006.Factor -> Math.Value
-- Separate Components.Grease Pencil -> Join Geometry.Geometry
 - Group Input.001.Seed -> Hash Value.Value
 - Hash Value.Hash -> Random Value.Seed
+- Get Geometry Component.Geometry -> Join Geometry.Geometry
+- Get Geometry Component.Component -> Capture Attribute.Geometry
+- Group Input.Geometry -> Get Geometry Component.Geometry
