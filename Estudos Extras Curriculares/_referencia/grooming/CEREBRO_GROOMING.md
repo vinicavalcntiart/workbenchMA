@@ -2557,7 +2557,9 @@ Fio de 7 cm, hair cap real, 450 mil/m² (29 mil fios, 1,3 M pontos), mecha
 
 As três leram quase iguais. Em fio curto, o **raio do cacho em relação ao
 comprimento** manda: raio de 5 mm num fio de 7 cm já é 7% do comprimento,
-e qualquer número de voltas vira textura. Para cacho definido em cabelo
-curto (cachinho de desenho), aumente o raio relativo (~15% do
-comprimento, 1 cm aqui) e baixe as voltas; para textura crespa, o padrão
+e qualquer número de voltas vira textura. Para textura crespa, o padrão
 basta.
+
+**Medido**: raio 9 a 12 mm (~15% do comprimento), 14 a 20 voltas/m (~1
+volta) e mecha 1,8 cm → **cachinhos de desenho separados**, cada mecha um
+cacho. É o controle certo para cabelo curto cacheado estilizado.

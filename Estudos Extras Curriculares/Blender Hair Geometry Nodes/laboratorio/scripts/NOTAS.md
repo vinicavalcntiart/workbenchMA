@@ -103,3 +103,4 @@
 - Undercut com hair cap real (nuca ate -7 cm): 22,6k fios, raspado completo. Scalp de teste era curto.
 - lab.make_head(nape=-0.7) = hair cap real (nuca). Padrao continua o antigo (reprodutibilidade).
 - Cacho curto (7 cm, raio 4-6mm): 20-36 / 45-60 / 70-90 voltas/m leram iguais (textura). Raio relativo manda.
+- Cacho curto confirmado: raio 9-12mm + 14-20 v/m + mecha 1,8cm = cachinhos de desenho separados.

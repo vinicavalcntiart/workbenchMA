@@ -16,9 +16,9 @@ def grp(name, **kw):
     return t.chain(n, n.inputs[0].name, n.outputs[0].name)
 grp("GR Guias Procedurais", **{"Cabeça (colisão)": head, "Comprimento": 0.07, "Para fora": 0.8, "Para o lado da risca": 0.2, "Para trás": 0.2, "Gravidade": 0.3})
 grp("GR Densidade Livre", **{"Viewport": 1.0, "Fios por m2": 450000.0})
-grp("GR Mecha Estilizada", **{"Tamanho da mecha": 0.01})
-vpm = {"baixo": (20.0, 36.0), "medio": (45.0, 60.0), "alto": (70.0, 90.0)}[V]
-grp("GR Cacho por Mecha", **{"Voltas por metro mín": vpm[0], "Voltas por metro máx": vpm[1], "Raio mín": 0.004, "Raio máx": 0.006, "Começa em": 0.1})
+grp("GR Mecha Estilizada", **{"Tamanho da mecha": (0.018 if V=="raio" else 0.01)})
+vpm = {"baixo": (20.0, 36.0), "medio": (45.0, 60.0), "alto": (70.0, 90.0), "raio": (14.0, 20.0)}[V]
+grp("GR Cacho por Mecha", **{"Voltas por metro mín": vpm[0], "Voltas por metro máx": vpm[1], "Raio mín": (0.009 if V=="raio" else 0.004), "Raio máx": (0.012 if V=="raio" else 0.006), "Começa em": 0.1})
 grp("GR Cor por Mecha")
 profile(t, EG, radius=0.0005); set_mat(t, hair_mat("h", melanin=0.95, redness=0.3)); apply_tree(g, t.finish())
 print("INFO", V, stats(g).get('curves'), stats(g).get('points'))
