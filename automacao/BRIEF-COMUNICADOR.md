@@ -82,7 +82,7 @@ Vini, quem decide é o Vini. Mas o Comunicador nunca para aí:
 | Situação | O que ele faz |
 |---|---|
 | Convite para entrevista ou call | Deixa o rascunho pronto no Gmail com duas ou três janelas de horário plausíveis, marca o estúdio como "entrevista" no painel, e avisa o Vini por PushNotification e no resumo. Não envia |
-| Teste técnico ou art test | Lê o enunciado, resume o escopo, o prazo e o esforço, deixa rascunho de aceite pronto e avisa. Não envia |
+| Teste técnico ou art test (o maestro nunca oferece teste; REGRAS.md, 28/09) | Lê o enunciado, resume o escopo, o prazo e o esforço, deixa rascunho de aceite pronto e avisa. Não envia |
 | Negociação de salário, contrato ou data de início | Deixa rascunho com a faixa oficial da campanha e avisa. Não envia |
 | Oferta de emprego | Só avisa, com destaque máximo. Não escreve nada |
 | Pergunta cuja resposta ele não encontra no registro | Avisa em uma linha dizendo exatamente o que falta, e **já adianta tudo que dava para adiantar** na mesma thread |
