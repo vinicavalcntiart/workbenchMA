@@ -703,6 +703,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Rabo de cavalo | Mix(raiz, amarração) até t, depois cai; Shrinkwrap | 17.30 |
 | Maria-chiquinha, rabo trançado, coque | campo na amarração; Braid depois; espiral de fase única | 17.31 |
 | Sobrancelha, barba, bigode | região recortada + GR Guias Procedurais como gerador | 17.32 |
+| Muitos cortes rápido; ombré | uma árvore, só números; Intercept → Color Ramp | 17.33 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1267,3 +1268,25 @@ O "Lado" usa o sinal do X da raiz: na sobrancelha e no bigode isso penteia
 para fora a partir do centro do rosto, que é o sentido natural. Gravidade
 negativa curva para cima. Os cílios (67 fios) ficaram escondidos atrás dos
 olhos: precisam de mais comprimento e de uma região na borda da pálpebra.
+
+### 17.33 Uma árvore, oito cortes; cor ombré [img/37_gallery_sheet]
+
+Mesmo tree de grupos GR (Guias Procedurais → Densidade Livre → Mecha →
+Volume → Strays → Cacho, Onda ou Ponta Virada → Cor por Mecha → Profile),
+trocando só números:
+
+| Corte | Comprimento | Para fora | Lado | Gravidade | Extra |
+|---|---|---|---|---|---|
+| Bob | 20 cm | 0,4 | 0,35 | 1,2 | Ponta para dentro |
+| Longo ondulado | 34 cm | 0,4 | 0,25 | 2,2 | Onda S |
+| Cacheado volumoso | 24 cm | 0,8 | 0,45 | 0,5 | Cacho por Mecha |
+| Espetado | 12 cm | 1,2 | 0,1 | 0 | nada |
+| Flip anos 60 | 18 cm | 0,45 | 0,3 | 1,4 | Ponta para fora, Volume 3 cm |
+| Curto cacheado | 12 cm | 0,9 | 0,2 | 0,3 | Cacho 4 a 7 mm, 50 a 80 voltas/m |
+| Longo liso | 36 cm | 0,35 | 0,2 | 2,6 | Ponta para dentro |
+
+**Ombré**: Hair Info → Intercept → Color Ramp (cor da raiz em 0,45, cor da
+ponta em 0,95), multiplicado por Attribute `mecha_rand` (Map Range 0,7 a 1,2)
+para variar por mecha, no Color do Principled Hair em Direct Coloring.
+**Preto em Direct Coloring (0,02) saiu cinza**, confirmando 17.15. Para preto e
+castanho escuro, use Melanin.
