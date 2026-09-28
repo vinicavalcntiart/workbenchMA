@@ -617,6 +617,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Groom de repente pesado (segundos por avaliação) | Roll/Ponta Virada depois do Curl, com Subdivision 2: pontos × 4 | Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1 | lab 17.54 |
 | Topo careca ou com ruído depois de trançar | Braid junta o fio inteiro na guia e afunda o trecho do crânio (58% dentro) | Shrinkwrap na cabeça depois do Braid (GR Trança Grossa com Cabeça ligada) | lab 17.61 |
 | Groom sumiu inteiro | GR Corte pela Malha sem malha ligada (versão antiga) | Atualize a biblioteca ou ligue a malha | lab 17.62 |
+| Cor do cabelo mais escura que a receita | Shape 3D Curves; as receitas foram calibradas em Rounded Ribbons | Baixe a melanina ou use Ribbons | lab 17.68 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -752,6 +753,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cel-shading no cabelo | normal da malha proxy (Sample Nearest Surface) no Toon | 17.65 |
 | Cabelo sob chapéu | Shrinkwrap na cabeça com Factor = copa acima OU aba abaixo (dois Raycasts) | 17.66 |
 | Cabelo apoiado nos ombros | Shrinkwrap no tronco, Above 0, nas guias e no fim | 17.67 |
+| Cor diferente do laboratório | Shape das curvas no Cycles: Ribbons (lab) sai ~2× mais claro que 3D Curves | 17.68 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -779,6 +781,7 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 13 | Normal de uma malha lisa no shader | cel-shading e pelo pictórico com 2 nodes | 17.64, 17.65 |
 | 14 | Node Bake para reproduzir groom animado | 353 → 9 ms por quadro | 17.63 |
 | 15 | Física: guias com UV de fixação, Substeps 40, Collider por coleção | sem UV explode; Surface Collision no scalp explode | 17.25 |
+| 16 | Confira o Shape das curvas no Cycles antes de ajustar cor | Ribbons sai ~2× mais claro que 3D Curves com a mesma melanina | 17.68 |
 
 ### 17.1 Armadilhas da 5.2 medidas
 
@@ -2196,3 +2199,24 @@ Shrinkwrap Hair Curves com Surface = **tronco**, Above Surface 0, Offset
 - Nas guias sai um pouco mais natural (os filhos já nascem entre guias
   apoiadas); no fim é o que garante zero.
 - Mesma peça serve de colisão com roupa (gola, capuz): troque o Surface.
+
+### 17.68 Forma da curva no Cycles muda a cor [img/77_shape_sheet]
+
+Render Properties > Curves > **Shape**. A cena nova do bpy 5.2.2 vem em
+**Rounded Ribbons**, e todo o laboratório (17.1 a 17.67) foi renderizado
+assim. Mesmo groom (cachos, raio 0,8 mm, melanina 0,4), close, 24 amostras:
+
+| Shape | Tempo | Luminância média do cabelo | Leitura |
+|---|---|---|---|
+| Rounded Ribbons | 18,4 s | **0,343** | dourado claro |
+| 3D Curves | 24,3 s | **0,184** | castanho escuro, sombra própria entre fios |
+| Linear 3D Curves | **11,9 s** | 0,216 | quase igual ao 3D, o mais rápido |
+
+- **Os valores de melanina do laboratório estão calibrados em Ribbons.**
+  Em 3D Curves o mesmo valor sai com cerca de metade do brilho. Para bater
+  a cor, baixe a melanina ao trocar para 3D.
+- Ribbon é uma fita virada para a câmera: some a sombra entre fios, o
+  cabelo fica mais claro e mais chapado, o que já é meio caminho para o
+  estilizado.
+- Linear 3D Curves foi o mais rápido e ficou perto do 3D: bom para cacho
+  grosso em close.

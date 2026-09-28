@@ -75,3 +75,4 @@
 - Chapeu: copa e aba separados; Shrinkwrap cabeca Above 1 Factor = Raycast(copa,+Z) OR Raycast(aba,-Z). Atravessando parede: 1568 -> 0. Chapeu inteiro para cima = tudo cola; so copa = 1644.
 - Ombros: Shrinkwrap tronco Above 0 off 4mm smooth 3: dentro 9,8% -> 0,2% (guias+fim) / 0,3% (fim).
 - Atras da orelha: NAO CONCLUSIVO (orelha de teste rasa, escondida). r76_orelha.py.
+- Shape Cycles: bpy 5.2.2 cena nova = RIBBONS (todo o lab). Lum cabelo: RIBBONS 0,343 18,4 s; THICK 0,184 24,3 s; THICK_LINEAR 0,216 11,9 s. Melanina do lab calibrada em Ribbons.
