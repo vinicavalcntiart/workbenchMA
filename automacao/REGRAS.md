@@ -34,7 +34,7 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 - **Veto que derruba** (em casa que não é grande): idioma local exigido por escrito (ex.: francês no Quebec, espanhol, polonês), residência ou cidadania exigida por escrito, "sem patrocínio" escrito, estágio.
 - **Respostas prontas do Vini (28/09):** idiomas = português nativo, inglês fluente, espanhol básico; anos de experiência = 10; pergunta "que jogos você joga" = sempre um jogo do próprio estúdio da vaga.
 - **Respostas de fato, sempre a verdade:** autorização de trabalho "No" e patrocínio "Yes" fora do Brasil; anos de experiência reais; nunca revelar o salário da E-Line (NDA).
-- **CV:** só por link que expira (litterbox 72h, gravado no scratchpad `cv-url.txt`), conferido com `%PDF-` e tamanho antes de anexar. Nunca no repositório.
+- **CV (Vini, 28/09): sempre ANEXADO, o PDF de verdade.** Email: anexo no rascunho. Formulário: upload do arquivo. NUNCA link do Google Drive (a pasta do Drive guarda dados privados do Vini), nunca link no corpo da carta. Se o formulário só aceitar link, o link é o litterbox 72h conferido com `%PDF-`; se o litterbox falhar, a vaga espera, e não vai com link do Drive. Nunca no repositório.
 
 ## Pretensão salarial (regra do Vini, 04/09)
 1. Anúncio com faixa publicada: pedir a base da faixa, desde que acima do piso legal de visto do país (se a base ficar abaixo, pedir o piso ou o topo da faixa).
