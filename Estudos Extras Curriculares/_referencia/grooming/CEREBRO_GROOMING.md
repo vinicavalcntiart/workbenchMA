@@ -1984,6 +1984,11 @@ Evaluate on Domain (Curve) → Fator da Transição.
   cauda.
 - A mesma ideia vale para qualquer mistura regional de penteados: franja de
   um, nuca de outro.
+- **Não conclusivo:** "atrás da orelha" com a mesma técnica (amarração atrás
+  de cada orelha pelo sinal do X da raiz, máscara na lateral). A orelha de
+  teste era rasa demais (sai 9 mm do crânio) e ficou escondida em todas as
+  versões; o lado puxado abriu, mas não deu para julgar a orelha. Refazer
+  com orelha real (script `r76_orelha.py`).
 
 ### 17.61 Trança lateral no ombro e o Braid que afunda o crânio [img/68_elsa_compare]
 

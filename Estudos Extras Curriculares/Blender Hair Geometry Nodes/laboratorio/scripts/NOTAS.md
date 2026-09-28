@@ -74,3 +74,4 @@
 - Cel: Sample Nearest Surface (proxy, Normal) -> nvol -> Toon Diffuse+Glossy Normal (Vector Transform Obj->World). Terminador limpo. GR Normal da Malha + GR Cabelo Cel validados.
 - Chapeu: copa e aba separados; Shrinkwrap cabeca Above 1 Factor = Raycast(copa,+Z) OR Raycast(aba,-Z). Atravessando parede: 1568 -> 0. Chapeu inteiro para cima = tudo cola; so copa = 1644.
 - Ombros: Shrinkwrap tronco Above 0 off 4mm smooth 3: dentro 9,8% -> 0,2% (guias+fim) / 0,3% (fim).
+- Atras da orelha: NAO CONCLUSIVO (orelha de teste rasa, escondida). r76_orelha.py.
