@@ -374,6 +374,41 @@ for x in w.inputs:
     if x.name == 'Surface' and x.type == 'OBJECT': g.l(cab, x)
 g.l(w.outputs['Geometry'], o); libs.append(g.ng)
 
+
+# 18. Rabo de Cavalo
+g = G("GR Rabo de Cavalo", "Reposiciona cada fio: da raiz ate o ponto de amarracao (colado no cranio pelo Shrinkwrap) e dali cai abrindo. Use depois da GR Densidade Livre; a forma das guias nao importa.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+cab = g.inp("Cabeça (colisão)", 'NodeSocketObject')
+tie = g.inp("Amarração", 'NodeSocketVector', (0.0, 0.105, -0.01), desc="Ponto do elastico, em coordenadas do objeto", subtype='TRANSLATION')
+tf = g.inp("Até a amarração", 'NodeSocketFloat', 0.35, 0.05, 0.95, "Fracao do fio gasta ate o elastico", 'FACTOR')
+cl = g.inp("Comprimento da cauda", 'NodeSocketFloat', 0.26, 0.0, 10.0, "", 'DISTANCE')
+ab = g.inp("Abertura", 'NodeSocketFloat', 0.03, 0.0, 1.0, "Quanto a cauda abre na ponta", 'DISTANCE')
+tr = g.inp("Para trás", 'NodeSocketFloat', 0.25, -2.0, 2.0)
+pts = g.inp("Pontos por fio", 'NodeSocketInt', 24, 4, 500)
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+rs = g.n('GeometryNodeResampleCurve'); g.l(geo, rs.inputs['Curve']); g.l(pts, rs.inputs['Count'])
+sp = g.n('GeometryNodeSplineParameter'); rt = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+a = g.n('ShaderNodeMapRange'); a.clamp=True; g.l(sp.outputs['Factor'], a.inputs['Value']); g.l(tf, a.inputs['From Max'])
+b = g.n('ShaderNodeMapRange'); b.clamp=True; g.l(sp.outputs['Factor'], b.inputs['Value']); g.l(tf, b.inputs['From Min'])
+mx = g.n('ShaderNodeMix', props={'data_type':'VECTOR'}); g.l(a.outputs['Result'], mx.inputs['Factor']); g.l(rt.outputs['Root Position'], mx.inputs[4]); g.l(tie, mx.inputs[5])
+dv = g.n('ShaderNodeCombineXYZ'); dv.inputs['Z'].default_value = -1.0; g.l(tr, dv.inputs['Y'])
+dn = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(dv.outputs[0], dn.inputs[0])
+bl = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(b.outputs['Result'], bl.inputs[0]); g.l(cl, bl.inputs[1])
+drop = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(dn.outputs[0], drop.inputs[0]); g.l(bl.outputs[0], drop.inputs['Scale'])
+r = g.n('FunctionNodeRandomValue', props={'data_type':'FLOAT_VECTOR'}, Min=(-1,-1,-0.3), Max=(1,1,0.3)); g.l(sd, r.inputs['Seed'])
+ev = g.n('GeometryNodeFieldOnDomain', props={'domain':'CURVE','data_type':'FLOAT_VECTOR'}); g.l(r.outputs['Value'], ev.inputs[0])
+ab2 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(b.outputs['Result'], ab2.inputs[0]); g.l(ab, ab2.inputs[1])
+sprd = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(ev.outputs[0], sprd.inputs[0]); g.l(ab2.outputs[0], sprd.inputs['Scale'])
+t1 = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(mx.outputs[1], t1.inputs[0]); g.l(drop.outputs[0], t1.inputs[1])
+t2 = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(t1.outputs[0], t2.inputs[0]); g.l(sprd.outputs[0], t2.inputs[1])
+spn = g.n('GeometryNodeSetPosition'); g.l(rs.outputs['Curve'], spn.inputs['Geometry']); g.l(t2.outputs[0], spn.inputs['Position'])
+w = g.n('GeometryNodeGroup', group=EG['Shrinkwrap Hair Curves'], Factor=1.0, Offset_Distance=0.004, Above_Surface=0.0, Smoothing_Steps=2, Lock_Roots=True)
+g.l(spn.outputs['Geometry'], w.inputs['Geometry'])
+for x in w.inputs:
+    if x.name == 'Surface' and x.type == 'OBJECT': g.l(cab, x)
+g.l(w.outputs['Geometry'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

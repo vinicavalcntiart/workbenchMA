@@ -684,6 +684,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Máscara por imagem | `surface_uv_coordinate` → Image Texture → Random → Delete | 17.27 |
 | Crespo | ≥ 8 pontos por volta | 17.28 |
 | Penteado sem esculpir | Generate Hair Curves + parábola + Shrinkwrap | 17.29 |
+| Rabo de cavalo | Mix(raiz, amarração) até t, depois cai; Shrinkwrap | 17.30 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -977,14 +978,15 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Dezessete node groups "GR" e dois materiais, marcados como asset, feitos com as
+Dezoito node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
   Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
-  Imagem, GR Física Estilizada, GR Guias Procedurais (17 grupos)
+  Imagem, GR Física Estilizada, GR Guias Procedurais, GR Rabo de Cavalo (18
+  grupos)
   [img/21_lib_sheet, 23_lib2_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
@@ -1188,3 +1190,22 @@ Bloqueio de penteado em segundos, antes de esculpir. Parte de um objeto Curves
 Pronto em **GR Guias Procedurais**. Validado: um groom completo com 10 nodes,
 só grupos GR, sem uma guia esculpida. Para refinar, aplique o modificador e
 esculpa por cima das guias geradas.
+
+### 17.30 Rabo de cavalo procedural [img/33_pony_sheet, 34_pony_lib_sheet]
+
+Reposiciona cada fio a partir da raiz; a forma das guias não importa, só onde
+as raízes estão. Depois da GR Densidade Livre:
+
+1. Resample Curve, 24 pontos.
+2. Set Position, **Position** (não Offset) =
+   Mix Vector(Root Position, ponto da amarração, Map Range(t, 0 a tf))
+   + Normalize(0, para trás, −1) × Map Range(t, tf a 1) × comprimento da cauda
+   + Random Vector por curva (Evaluate on Domain) × abertura × Map Range(t, tf a 1).
+   Com tf = 0,35 (fração do fio até o elástico) e abertura 0,03.
+3. Shrinkwrap na cabeça, Above Surface 0: o trecho até o elástico cola no
+   crânio.
+4. Mecha Estilizada (1,2 cm), e Onda ou Cacho só na cauda.
+
+**Regra**: o "Começa em" do Cacho ou da Onda tem que ser maior que tf, senão o
+cacho começa em cima do crânio e bagunça a parte presa. Abertura de 1,2 cm
+deixa a cauda fina demais; 3 cm lê bem. Pronto em GR Rabo de Cavalo.

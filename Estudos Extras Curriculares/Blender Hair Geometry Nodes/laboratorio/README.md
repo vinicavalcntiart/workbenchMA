@@ -35,6 +35,7 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Volume na Raiz | empurra o fio pela normal do scalp, raiz parada | depois da Mecha |
 | GR Máscara por Imagem | apaga fios onde a imagem é preta; devolve o cinza para reusar | depois do Interpolate |
 | GR Física Estilizada | Hair Dynamics nas guias, segura o penteado | antes do Interpolate, num modificador só das guias |
+| GR Rabo de Cavalo | junta tudo num elástico e deixa cair | depois da Densidade Livre, antes da Mecha |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
