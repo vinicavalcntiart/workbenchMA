@@ -785,6 +785,7 @@ estão resumidas em 17.0):
 | Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
 | Franja cortina | dois conjuntos de guias procedurais misturados por Transição + risca em ilhas | 17.91 |
 | Pontos certos para cada comprimento | Resample em modo Length depois do Trim | 17.92 |
+| Levar o groom para outro programa | Alembic: fios e raio intactos, atributos customizados não vão | 17.93 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2801,3 +2802,19 @@ pontos em fio de 3 cm e de 30 cm; em pelo com comprimentos muito
 diferentes (17.78, bochecha 2,2× e corpo 1×) ou com muitos fios curtos, o
 modo Length rende mais. Regra: Resample **Length** quando o Trim deixa
 comprimentos muito variados; Count quando o corte é uniforme.
+
+### 17.93 Exportar o groom em Alembic
+
+Objeto Curves com a cadeia (Densidade → Mecha → Onda S → Profile), File >
+Export > Alembic, só o selecionado, avaliação Render, 1 quadro:
+
+| | Antes | Depois de reimportar |
+|---|---|---|
+| Fios / pontos | 7.653 / 260.202 | 7.653 / 260.202 |
+| Raio médio | 0,254 mm | 0,254 mm |
+| Atributos | UVMap, guide_curve_index, id, n_raiz, position, radius, resolution, surface_uv_coordinate | **só position, radius, resolution** |
+
+Export em 0,11 s, 4,2 MB. A geometria e a espessura chegam intactas; os
+atributos de grooming **não** vão (sem `surface_uv_coordinate`, sem
+`mecha_rand` etc.). Material que lê atributo (GR Cabelo Cor por Mecha) perde
+a cor por mecha do outro lado: asse a cor antes, ou recrie o atributo.
