@@ -707,3 +707,65 @@ ligado, Subdivision 3, Curl Start 0,08) → Set Hair Curve Profile.
   Serve para realismo, não para estilizado.
 - Custo: Subdivision 3 leva 12 pontos para 89 por fio. 20 mil fios = 1,8
   milhão de pontos.
+
+### 17.4 Ondas (Rapunzel, Moana) [img/08_waves_sheet, 09_swave_sheet]
+
+- **Hair Curves Noise** amostra o ruído pela posição da raiz (dentro: Noise
+  Texture com Scale 5 × posição × Scale). Em escala real, Scale 1 não faz
+  nada. **Scale 10 + Scale along Curve 8 + Distance 0,015** dá onda orgânica.
+- **Curl com Frequency 3 e Radius 0,015** dá onda de praia estilizada. É
+  hélice, então tem volume.
+- **Onda plana em "S"** (visual de desenho), 8 nodes sem grupo: Subdivide
+  Curve (Cuts 2) → Set Position com Offset = eixo lateral × seno × rampa.
+  - eixo lateral = Normalize(Cross(Tangent, 0,0,1))
+  - seno = Sine(Spline Parameter Length × 2π/período + fase)
+  - fase por mecha = Random Value (0 a 2π) com ID = `guide_curve_index`
+  - rampa = Map Range(Spline Parameter Factor, 0 a 0,2 → 0 a amplitude, Clamp)
+  - **Amplitude 2 cm, período 12 cm** = S limpo. Sem a fase por mecha, fica
+    padrão de carimbo.
+
+### 17.5 Cor estilizada por mecha [img/10_color_sheet]
+
+- Geometria: Random Value (Float) com ID = `guide_curve_index` → Store Named
+  Attribute (Float, **Curve**) com nome `mecha_rand`.
+- Shader: Attribute `mecha_rand` → Map Range (To 0,3 a 0,65) → Melanin do
+  Principled Hair. Dá faixas de tom por mecha, o "brilho de desenho".
+- Hair Info → Random (por fio) só suja o tom. Não serve para estilizado.
+- **Raiz escura**: Hair Info → Intercept → Map Range (From 0 a 0,25, To 0,45 a
+  0, Clamp) somado à melanina.
+
+### 17.6 Strays e flyaways [img/11_strays_sheet, 12_arcs_sheet]
+
+Seletor: Curve Info → Random → Compare (Less Than) → Factor do node.
+
+| Visual | Fração | Node e valores |
+|---|---|---|
+| Realista, zigue-zague | 0,12 | Frizz, Distance 0,02, Cumulative |
+| **Estilizado, arco limpo** | 0,04 | Hair Curves Noise, Distance 0,04, Shape 0,7, Scale 3, Offset per Curve 1, Cumulative |
+| Arco dramático | 0,04 | o mesmo com Distance 0,07 |
+
+Ligar o mesmo Compare no Mask de um Trim com Length Factor 1,25 deixa realista
+e bagunçado demais para estilizado.
+
+### 17.7 Cumulative Offset depende da quantidade de pontos [t_cumul.py]
+
+Medido na ponta do fio, Distance 0,02:
+
+| Pontos por fio | Noise, Cumulative ligado | Frizz, Cumulative ligado | Qualquer um, desligado |
+|---|---|---|---|
+| 12 | 6,3 cm | 6,0 cm | 1,2 a 2,7 cm |
+| 34 | 19 cm | 10,5 cm | igual |
+| 78 | 44 cm | 16 cm | igual |
+
+Noise cresce em linha reta, Frizz como passeio aleatório. **Regra: Noise e
+Frizz com Cumulative vão antes de qualquer node que subdivide** (Curl,
+Braid, Subdivide Curve). Com strays depois do Curl (89 pontos), os fios
+explodiram para cima [img/13_seed_sheet vs 13b_seed_sheet].
+
+### 17.8 Seed mestre: variações com um número [img/13b_seed_sheet]
+
+Um node **Integer** ("Seed mestre") → um **Integer Math Add** por node, com um
+deslocamento fixo (0, 1, 2, 3...) → Seed de Interpolate, Clump, Curl, Random
+Value e Noise. Mudar um número troca o groom inteiro sem repetir padrão entre
+nodes. A mesma árvore faz liso, ondulado ou cacheado mudando só a Frequency do
+Curl (0 desliga, 3 onda, 9 cacho).
