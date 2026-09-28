@@ -732,6 +732,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Transição ou mistura de penteados | Resample igual → Sample Index de B → Mix com A | 17.49 |
 | Personagem completo sem esculpir | Guias Procedurais → Física → Densidade → Mecha → Strays → Cacho → Cor | 17.50 |
 | Procedural e depois esculpir | Apply no modificador das guias; mantém UV de fixação e id | 17.51 |
+| Mecha colorida, mecha branca, molhado, ahoge | seleção por mecha → atributo `destaque` → shader e Set Position | 17.52 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1776,3 +1777,21 @@ Profile rodou em cima sem ajuste.
 
 Fluxo: procedural para chegar em 80% em minutos; Apply; esculpir os 20%
 que dão personalidade (franja, mecha de destaque, assimetria).
+
+### 17.52 Mecha de destaque, mecha branca, molhado e ahoge [img/58_destaque_sheet]
+
+Quatro variações de personagem com 3 a 10 nodes cada, todas por **seleção
+por mecha** + Store Named Attribute `destaque` (Float, Curve) lido no shader:
+
+| Variação | Seleção | O que muda |
+|---|---|---|
+| **Mecha colorida** | Random Value **Boolean**, Probability 0,10, ID = `guide_curve_index` | Tint azul e melanina 0,05 no shader; Curl com Factor = seleção (só elas enrolam). 3% deu ~3 mechas, escondidas atrás; **10% = 1.831 fios**, aparece |
+| **Mecha branca** (Vampira) | raiz com Y < −3,5 cm e \|X\| < 3 cm (frente, na risca) | Map Range destaque → melanina 0,8 → 0,03 |
+| **Molhado** | nenhuma | Mecha 1,2 cm, fecha em 12%, Tip Spread 0; melanina 0,95, roughness 0,15 |
+| **Ahoge** | raiz a menos de 6 mm de um ponto da coroa | Set Position com Selection: raiz + (0; −0,07 t²; 0,09 t − 0,05 t²) = arco para cima e para frente |
+
+- Tint no modo Melanin fica dessaturado (azul acinzentado). Para cor viva,
+  melanina bem baixa e aceite o tom pastel, ou use Principled BSDF na
+  curva (17.15).
+- A seleção por mecha (ID da guia) mantém a mecha inteira coesa; por fio,
+  sairia salpicado.
