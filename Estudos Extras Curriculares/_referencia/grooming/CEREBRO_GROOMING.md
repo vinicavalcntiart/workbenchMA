@@ -1601,6 +1601,13 @@ borda oca aparece de frente. Para produção, modele a abertura com borda
 virada para dentro (Solidify curto na casca) ou esconda com cabelo da linha
 do rosto (GR Guias Procedurais na hairline).
 
+Testado [img/47_borda_sheet]: recorte do rosto por **elipse** (22 × 19 cm
+no plano XZ, numa esfera de 128 × 64 segmentos) + modificador **Solidify
+2 cm para dentro** na casca. A borda da abertura ganha espessura coberta de
+pelo e perde o degrau; não aparece mais o oco. Com elipse pequena demais
+(17 × 15 cm) o afro engole o rosto: dimensione o recorte pela vista de
+frente.
+
 ### 17.42 Scalp pintado com a cor da raiz [img/48_scalp_sheet]
 
 Zero node. O scalp (ou a região do cabelo na textura da cabeça) recebe a cor

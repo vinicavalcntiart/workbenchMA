@@ -9,9 +9,14 @@ with bpy.data.libraries.load(LIB, link=False, assets_only=True) as (src, dst):
 GR = {n.name:n for n in bpy.data.node_groups}
 def shell_mesh(sc, c, cut_face=True, zcut=-1):
     me = bpy.data.meshes.new("shell"); bm = bmesh.new(); bm.loops.layers.uv.new("UVMap")
-    r = bmesh.ops.create_uvsphere(bm, u_segments=48, v_segments=24, radius=1.0, calc_uvs=True)
+    r = bmesh.ops.create_uvsphere(bm, u_segments=(128 if 'borda' in sys.argv else 48), v_segments=(64 if 'borda' in sys.argv else 24), radius=1.0, calc_uvs=True)
     bmesh.ops.scale(bm, vec=sc, verts=bm.verts); bmesh.ops.translate(bm, vec=c, verts=bm.verts)
-    kill = [f for f in bm.faces if f.calc_center_median().z < zcut or (cut_face and f.calc_center_median().y < -0.09 and f.calc_center_median().z < 0.04)]
+    if "borda" in sys.argv:
+        # recorte do rosto por elipse no plano XZ, em malha densa (sem degrau)
+        def dentro(c): return c.y < -0.02 and (c.x/0.11)**2 + ((c.z+0.035)/0.095)**2 < 1.0
+        kill = [f for f in bm.faces if f.calc_center_median().z < zcut or (cut_face and dentro(f.calc_center_median()))]
+    else:
+        kill = [f for f in bm.faces if f.calc_center_median().z < zcut or (cut_face and f.calc_center_median().y < -0.09 and f.calc_center_median().z < 0.04)]
     bmesh.ops.delete(bm, geom=kill, context='FACES'); bm.to_mesh(me); bm.free()
     for p in me.polygons: p.use_smooth = True
     return link(bpy.data.objects.new("shell", me))
@@ -20,6 +25,8 @@ if V.startswith("afro"):
     sh = shell_mesh((0.17,0.175,0.16), (0,0.015,0.02), zcut=-0.11)
     m = bpy.data.materials.new("massa"); b = m.node_tree.nodes['Principled BSDF']; b.inputs['Base Color'].default_value = (0.03,0.016,0.009,1); b.inputs['Roughness'].default_value = 0.9
     sh.data.materials.append(m)
+    if "borda" in sys.argv:
+        so = sh.modifiers.new("esp", 'SOLIDIFY'); so.thickness = 0.02; so.offset = -1.0
     cd = bpy.data.hair_curves.new("fur"); fur = link(bpy.data.objects.new("fur", cd)); cd.surface = sh; cd.surface_uv_map = "UVMap"
     t = Tree("afro")
     x = t.add('GeometryNodeGroup', group=GR["GR Guias Procedurais"])
@@ -54,4 +61,4 @@ elif V.startswith("trolls"):
     profile(t, EG, radius=0.0006, shape=0.1)
     set_mat(t, hair_mat("c", melanin=0.0, redness=0.0, roughness=0.5, tint=(0.95,0.22,0.55))); apply_tree(g, t.finish())
     print("INFO", V, stats(g).get('curves'), stats(g).get('points'))
-shot(f"47_{V}", res=420, samples=16, cam_loc=(0.8,-1.1,0.35) if V.startswith("trolls") else (0.50,-0.66,0.10), target=(0,0,0.18) if V.startswith("trolls") else (0,0,-0.02), lens=38 if V.startswith("trolls") else 42)
+shot(f"47_{V}{'_borda' if 'borda' in sys.argv else ''}", res=420, samples=16, cam_loc=(0.8,-1.1,0.35) if V.startswith("trolls") else (0.50,-0.66,0.10), target=(0,0,0.18) if V.startswith("trolls") else (0,0,-0.02), lens=38 if V.startswith("trolls") else 42)
