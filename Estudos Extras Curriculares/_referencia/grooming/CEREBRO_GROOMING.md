@@ -1136,6 +1136,9 @@ receitas desta seção e validados abrindo o .blend do zero:
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha, GR
   Contorno e GR Cabelo Cel.
+- Toda entrada tem dica ao passar o mouse, com os valores medidos aqui.
+  Nenhum dado linkado (17.72). Arquivo de partida e três cenas prontas em
+  `laboratorio/exemplos/`.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
 problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
