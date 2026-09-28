@@ -786,6 +786,7 @@ estão resumidas em 17.0):
 | Franja cortina | dois conjuntos de guias procedurais misturados por Transição + risca em ilhas | 17.91 |
 | Pontos certos para cada comprimento | Resample em modo Length depois do Trim | 17.92 |
 | Levar o groom para outro programa | USD leva os atributos; Alembic só posição e raio | 17.93 |
+| Quanto custa mais fio no render | 28× fios = 2,2× tempo; o caro é avaliar a cadeia | 17.94 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2825,3 +2826,20 @@ Properties ligados no exportador: **nenhum** sobreviveu no Alembic.
 8,7 MB, e voltaram **UVMap, cor_mecha, cor_curva, guide_curve_index, n_raiz,
 peso, surface_uv_coordinate, uv_teste** (só `id` e `resolution` ficaram).
 Para levar o groom com cor por mecha e máscaras, use USD.
+
+### 17.94 Tempo de render contra quantidade de fios
+
+Cycles CPU (4 núcleos), 540 px, 32 amostras, cabeça inteira no quadro, fio
+de 26 cm com mecha:
+
+| Fios/m² | Fios | Render |
+|---|---|---|
+| 50 mil | 2,4 mil | 5,1 s |
+| 150 mil | 7,6 mil | 6,6 s |
+| 450 mil | 23 mil | 8,2 s |
+| 1,35 M | 70 mil | 11,4 s |
+
+28× mais fios custaram 2,2× o tempo: o render de curvas no Cycles escala
+bem abaixo do linear (BVH). O custo pesado está na **avaliação do Geometry
+Nodes e na memória** (17.14, 17.54), não no render. Para agilidade, economize
+pontos na cadeia antes de economizar fios no render.
