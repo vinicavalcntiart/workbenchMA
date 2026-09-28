@@ -18,7 +18,7 @@ def link(ob, coll=None):
     (coll or bpy.context.scene.collection).objects.link(ob); return ob
 
 # ---------- cabeca e scalp ----------
-def make_head(radius=0.1, scalp_cut=-0.15, front_cut=0.55, subdiv=64):
+def make_head(radius=0.1, scalp_cut=-0.15, front_cut=0.55, subdiv=64, nape=None):
     """Cabeca = esfera. Scalp = calota superior (z > scalp_cut*R), sem a testa/rosto (y < -front_cut*R e z<0.55R)."""
     me = bpy.data.meshes.new("head")
     bm = bmesh.new(); bm.loops.layers.uv.new("UVMap")
@@ -34,7 +34,8 @@ def make_head(radius=0.1, scalp_cut=-0.15, front_cut=0.55, subdiv=64):
         c = f.calc_center_median()
         face = (c.y < -front_cut*radius and c.z < 0.62*radius)   # rosto/testa
         low = c.z < scalp_cut*radius
-        sides = (abs(c.x) > 0.8*radius and c.z < 0.25*radius and c.y < 0.2*radius)  # orelhas
+        if nape is not None and c.y > 0.15*radius: low = c.z < nape*radius   # hair cap real: nuca desce
+        sides = (abs(c.x) > 0.8*radius and c.z < 0.25*radius and c.y < (0.25 if nape is not None else 0.2)*radius)  # orelhas
         if face or low or sides: kill.append(f)
     bmesh.ops.delete(bm, geom=kill, context='FACES')
     bm.to_mesh(sm); bm.free()
