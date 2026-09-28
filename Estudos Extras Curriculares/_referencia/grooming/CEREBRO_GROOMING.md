@@ -706,6 +706,8 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Sobrancelha, barba, bigode | região recortada + GR Guias Procedurais como gerador | 17.32 |
 | Muitos cortes rápido; ombré | uma árvore, só números; Intercept → Color Ramp | 17.33 |
 | Limpar ruído | Blend Hair Curves 1 cm; Smooth só com Shape 0,8 | 17.34 |
+| Vento | Scene Time → seno + Noise 4D → Custom Force → Effectors; força 0,12 | 17.35 |
+| Cílios | faixa da esfera do olho ×1,06; Para fora 1, gravidade −1,3 | 17.36 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1305,3 +1307,55 @@ Groom com Noise forte (Distance 0,012, Scale 20, cumulativo), depois:
 | **Blend Hair Curves**, raio 0,01, 10 vizinhos | limpa o ruído e deixa as mechas coesas; a melhor limpeza para estilizado |
 | Straighten Hair Curves 0,5 | alisa pela metade |
 | Rotate Hair Curves, Random Offset 0,6 rad | varia a direção por fio e encorpa a silhueta |
+
+### 17.35 Vento com Custom Force [img/39_wind_sheet, 39_vento_0.04.gif, 39_vento_0.12.gif]
+
+Custom Force é o asset de efetor do mesmo arquivo do Hair Dynamics
+(`geometry_nodes_dynamics_assets.blend`). Sua saída **Force** é um Bundle que
+entra no socket **Effectors** do Hair Dynamics. Oito nodes:
+
+1. Scene Time **Seconds** × (2π ÷ 1,5 s) → Sine → Multiply Add (×0,4 + 0,6)
+   = rajada que oscila entre 20% e 100%.
+2. × Força → Combine XYZ no X = direção do vento.
+3. Turbulência: Noise Texture **4D**, Vector = Position, **W = Seconds**,
+   Scale 15 → Color − 0,5 → Scale (Força × 1,2).
+4. Soma 2 + 3 → Custom Force **Force** → Hair Dynamics **Effectors**.
+
+Guias com Bendiness 0,3, Root Bendiness 0,05, Substeps 20; o groom vem
+depois, no segundo modificador. Deslocamento médio das pontas no X (fio 30 cm):
+
+| Força | q12 | q24 | q36 | q48 |
+|---|---|---|---|---|
+| 0 | −0,2 cm | −0,2 | −0,2 | −0,2 |
+| 0,04 | +3,4 | +0,7 | +2,4 | +3,9 |
+| **0,12** | **+8,5** | +1,8 | +6,9 | **+10,9** |
+
+- 0,04 é brisa quase invisível no render; **0,12** é vento de cena.
+- A rajada lenta (seno) dá o ritmo; o Noise 4D faz as mechas se moverem
+  fora de fase. Só o seno = cabelo inteiro balançando como um bloco.
+- Custo: 48 quadros de simulação + render 320 px em 37 s (4 núcleos).
+- Para vento de outra direção, troque o eixo do Combine XYZ; não gire nada.
+
+### 17.36 Cílios estilizados [img/40_lash_sheet]
+
+O teste 17.32 escondia os cílios porque a região ficava na cabeça, atrás do
+globo ocular. A superfície certa é a **pálpebra**: uma faixa da própria
+esfera do olho, 6% maior.
+
+1. Copie a malha do olho e apague tudo menos a faixa logo acima do centro
+   (em coordenadas locais do olho: Z 1 a 6 mm, só a frente). Escala 1,06.
+2. GR Guias Procedurais nessa faixa: Comprimento 9 mm, Para fora 1,
+   **Gravidade −1,3** (negativa = curva para cima), 250.000 guias/m²
+   (~65 por olho).
+3. Sem Interpolate e sem Clump. Set Hair Curve Profile raio 0,5 mm,
+   **Shape 0,8** (afina bem na ponta).
+
+| Variante | Resultado |
+|---|---|
+| Faixa alta (Z 5 a 13 mm) | leque vertical, parece escova |
+| **Linha da pálpebra, fora 1, grav −1,3** | leque curvo acompanhando o olho |
+| Só canto externo (x > 4 mm), 6 fios, raio 0,9 mm | cílio "Disney" de 3 a 6 fios grossos |
+| Clump 2,5 mm | tufos: pouco ganho no estilizado |
+
+Regra: a curva vem de **Para fora** (sai da pálpebra) + gravidade negativa
+(sobe no fim). Comprimento acima de 70% do raio do olho fica cartunesco.
