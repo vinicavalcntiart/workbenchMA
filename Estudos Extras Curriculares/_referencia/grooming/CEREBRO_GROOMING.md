@@ -649,6 +649,34 @@ para transcrições da Blender Conference, quando houver legenda.
 
 ## 17. Laboratório: receitas testadas em bpy 5.2.2 (2026-09-28)
 
+**Índice rápido** (a receita completa está na subseção; a biblioteca pronta,
+em `laboratorio/receitas_grooming.blend`, 17.19):
+
+| Quero | Faça | Onde |
+|---|---|---|
+| Passar de 10.000 fios/m² | Value node no Density | 17.1 |
+| Mecha estilizada, raiz coberta | Clump Shape 0,25, ou Shape 0 + Factor em rampa até 0,3 | 17.2 |
+| Cacho definido | Clump → Curl Frequency ≈ voltas/m ÷ 3, Subdivision 2 | 17.3, 17.23 |
+| Cacho variando | Random por mecha (ID = `guide_curve_index`); Frequency nunca por fio | 17.3 |
+| Onda de desenho | Onda S, amplitude menor que a mecha | 17.4 |
+| Cor de desenho | `mecha_rand` por mecha no shader + raiz escura por Intercept | 17.5 |
+| Fio solto estilizado | 4% dos fios com Noise cumulativo, **antes** do Curl | 17.6, 17.7 |
+| Variações rápidas | Seed mestre | 17.8 |
+| Pelo de personagem | tufos GD 8 mm Shape 0,25; sem clump vira feltro | 17.9, 17.16 |
+| Trança | Braid Shape 0, Factor Min 0,7 | 17.10 |
+| Cabelo "esculpido" | Curve to Mesh com Radius ligado no Scale | 17.11 |
+| Risca seca | ilhas + Group ID; não ligar Guide Index no Clump se vier Curl | 17.13, 17.18 |
+| Deixar leve | ordem Clump → Trim → Noise → Frizz → Profile → Curl; Viewport 0,25 | 17.14 |
+| Corte curto nas laterais | vertex group no Trim Mask e no Clump Factor | 17.17 |
+| Ponta virada | Roll Direction = ± posição da raiz | 17.20 |
+| Volume na raiz | normal do Interpolate → Set Position | 17.21 |
+| Franja | Trim → Displace por região → Shrinkwrap Above 0 | 17.24 |
+| Física sem desabar | guias com UV, Bendiness 0, Substeps 40, Collider na cabeça | 17.25 |
+| Balanço no giro | Simulation to World vazio | 17.26 |
+| Máscara por imagem | `surface_uv_coordinate` → Image Texture → Random → Delete | 17.27 |
+| Crespo | ≥ 8 pontos por volta | 17.28 |
+
+
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
 (raio 10 cm, scalp 0,052 m², fios de 24 a 28 cm, 160 a 220 guias). Os valores
 valem direto para uma cabeça humana em metros. Scripts em
@@ -1113,3 +1141,15 @@ Confirma a receita de 8 (observado em produção). A GR Máscara por Imagem
 devolve também o cinza da imagem por fio, para reusar em Trim, Clump e Curl.
 GR Física Estilizada carregada do .blend: 1,5 cm de queda em 36 quadros,
 igual ao teste manual de 17.25.
+
+### 17.28 Cacho apertado e crespo: pontos por volta [img/30_coily_sheet, 30b_coily_sheet]
+
+- Crespo estilizado: raio 2 a 4,5 mm, 110 a 180 voltas por metro. Num fio de
+  16 a 20 cm são 20 a 30 voltas.
+- Com Curl Subdivision 3 (89 pontos) a mola **serrilha**; com 2, vira zigue-
+  zague. **Regra: pelo menos 8 pontos por volta.** Resample Curve (Count 200)
+  antes do Curl, com Subdivision 0.
+- Custo: 36 mil fios × 200 pontos = 7,2 milhões de pontos. Crespo estilizado
+  pede menos fios e mechas maiores.
+- A silhueta redonda de afro vem das **guias** (esculpidas), não dos nodes.
+  Guias retas e radiais dão silhueta de escova, com qualquer node depois.
