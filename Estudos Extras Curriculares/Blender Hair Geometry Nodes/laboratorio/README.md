@@ -55,6 +55,7 @@ vento, criatura pictórica e anime com cel-shading. Veja `exemplos/README.md`.
 | GR Normal da Malha | grava a normal de uma malha lisa para o material GR Cabelo Cel | no fim, antes do material |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
+| GR Máscara por Posição | campo 0-1 por fio numa caixa suave (altura, lateral, frente) | em Fator, Length Factor, Factor de qualquer grupo |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e

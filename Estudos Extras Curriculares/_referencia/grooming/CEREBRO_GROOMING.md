@@ -768,6 +768,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Barba longa de fio ou em blocos | Guias Procedurais na região; Chunky + Cel + Contorno para blocos | 17.76 |
 | Menor groom estilizado | Value → Interpolate → Clump 0,25 → Profile → Material (5 nodes, 46 ms) | 17.77 |
 | Animal com tufos e manchas por região | máscaras de posição → Trim e atributos; cor por Color Ramp, não melanina | 17.78 |
+| Máscara de região sem vertex group | GR Máscara por Posição (caixa suave pela raiz) | 17.79 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1082,7 +1083,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Trinta e dois node groups "GR" e cinco materiais, marcados como asset, feitos com as
+Trinta e três node groups "GR" e cinco materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -2477,3 +2478,15 @@ para o shader. 23,5 mil fios, 141 mil pontos, render 720 px em 10 s.
   com cor = Mix(laranja, creme, `branco`) → Mix(…, quase preto, `orelha`) e
   Normal = `nvol` da GR Normal da Malha com o corpo. Laranja saturado, queixo
   branco e ponta da orelha escura aparecem [img/finais/91_raposa_toon].
+
+### 17.79 GR Máscara por Posição [img/92_lib_mascara]
+
+A máscara "caixa suave pela raiz" apareceu em seis receitas (meio preso,
+orelha, mecha por região, raposa, chapéu, mecha branca). Virou grupo de
+campo: **GR Máscara por Posição**, entradas Altura mín/máx, Lateral mín/máx
+(\|X\|), Frente mín/máx (Y), Borda suave, Inverter; saída 0 a 1 por fio.
+
+Ligue a saída no Fator da GR Transição, no Length Factor do Trim (via Map
+Range), no Factor de Clump/Curl/Shrinkwrap ou num Store Named Attribute
+para o shader. Validado: Altura mín 5 cm, Trim 100% → 40% = topo curto;
+8.833 fios na máscara, 4.842 fora, 1.775 na borda suave.

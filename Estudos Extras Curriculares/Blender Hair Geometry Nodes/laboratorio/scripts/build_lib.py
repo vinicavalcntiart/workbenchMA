@@ -703,6 +703,31 @@ sa.inputs['Mode'].default_value = 'Geometry'
 g.l(ga.outputs['Surface Geometry'], sa.inputs['Surface Geometry']); g.l(ga.outputs['Surface UV Map'], sa.inputs['Surface UV Map'])
 g.l(sa.outputs['Geometry'], o); libs.append(g.ng)
 
+# 33. Mascara por Posicao
+g = G("GR Máscara por Posição", "Campo 0-1 por fio (lido na raiz) dentro de uma caixa suave: alturas, lateral e frente/tras em metros do objeto. Liga em Fator da GR Transicao, Length Factor do Trim, Factor de Clump/Curl, ou num Store para o shader.")
+g.ng.is_modifier = False
+zmin = g.inp("Altura mín", 'NodeSocketFloat', -10.0, -1e4, 1e4, "", 'DISTANCE'); zmax = g.inp("Altura máx", 'NodeSocketFloat', 10.0, -1e4, 1e4, "", 'DISTANCE')
+xmin = g.inp("Lateral mín (|X|)", 'NodeSocketFloat', 0.0, 0.0, 1e4, "", 'DISTANCE'); xmax = g.inp("Lateral máx (|X|)", 'NodeSocketFloat', 10.0, 0.0, 1e4, "", 'DISTANCE')
+ymin = g.inp("Frente mín (Y)", 'NodeSocketFloat', -10.0, -1e4, 1e4, "Y negativo = frente do rosto", 'DISTANCE'); ymax = g.inp("Frente máx (Y)", 'NodeSocketFloat', 10.0, -1e4, 1e4, "", 'DISTANCE')
+bo = g.inp("Borda suave", 'NodeSocketFloat', 0.015, 0.0001, 1.0, "Largura da transicao", 'DISTANCE')
+inv = g.inp("Inverter", 'NodeSocketBool', False)
+o = g.out("Máscara", 'NodeSocketFloat')
+cr = g.n('GeometryNodeGroup', group=EG['Curve Root']); sx = g.n('ShaderNodeSeparateXYZ'); g.l(cr.outputs['Root Position'], sx.inputs[0])
+ax = g.n('ShaderNodeMath', props={'operation':'ABSOLUTE'}); g.l(sx.outputs['X'], ax.inputs[0])
+def faixa(val, lo, hi):
+    a1 = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(lo, a1.inputs[0]); g.l(bo, a1.inputs[1])
+    m1 = g.n('ShaderNodeMapRange', props={'interpolation_type':'SMOOTHSTEP'}); m1.clamp = True; g.l(val, m1.inputs['Value']); g.l(a1.outputs[0], m1.inputs['From Min']); g.l(lo, m1.inputs['From Max'])
+    a2 = g.n('ShaderNodeMath', props={'operation':'ADD'}); g.l(hi, a2.inputs[0]); g.l(bo, a2.inputs[1])
+    m2 = g.n('ShaderNodeMapRange', props={'interpolation_type':'SMOOTHSTEP'}); m2.clamp = True; g.l(val, m2.inputs['Value']); g.l(a2.outputs[0], m2.inputs['From Min']); g.l(hi, m2.inputs['From Max'])
+    mu = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(m1.outputs['Result'], mu.inputs[0]); g.l(m2.outputs['Result'], mu.inputs[1]); return mu.outputs[0]
+fz = faixa(sx.outputs['Z'], zmin, zmax); fx = faixa(ax.outputs[0], xmin, xmax); fy = faixa(sx.outputs['Y'], ymin, ymax)
+p1 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(fz, p1.inputs[0]); g.l(fx, p1.inputs[1])
+p2 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(p1.outputs[0], p2.inputs[0]); g.l(fy, p2.inputs[1])
+iv = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); iv.inputs[0].default_value = 1.0; g.l(p2.outputs[0], iv.inputs[1])
+sw = g.n('GeometryNodeSwitch', props={'input_type':'FLOAT'}); g.l(inv, sw.inputs['Switch']); g.l(p2.outputs[0], sw.inputs['False']); g.l(iv.outputs[0], sw.inputs['True'])
+ev = g.n('GeometryNodeFieldOnDomain', props={'domain':'CURVE','data_type':'FLOAT'}); g.l(sw.outputs[0], ev.inputs[0])
+g.l(ev.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
