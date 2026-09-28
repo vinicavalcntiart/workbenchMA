@@ -781,6 +781,7 @@ estão resumidas em 17.0):
 | Groom não muda ao mover o personagem | tudo é local ao objeto; gravidade procedural = −Z do objeto | 17.87 |
 | Balanço com follow-through sem física | Vector Rotate na raiz com seno defasado pelo Spline Parameter | 17.88 |
 | Hairline suave na testa | campo de posição no Density Mask (1 → 0,08 nos últimos 3,5 cm) | 17.89 |
+| Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2713,3 +2714,12 @@ faixa da borda (Map Range 0,112 → 0,124 vira 0 → 1), Trim Replace Length
 |---|---|
 | 900 mil/m², faixa 2 cm | faixa de penugem que esconde a hairline |
 | **150 mil/m², faixa 1,2 cm** | fiozinhos soltos na borda |
+
+### 17.90 Vibrissas (bigode de animal) [img/finais/91_raposa_vibrissas]
+
+Região recortada do focinho (20 faces dos dois lados), um Curves com Surface
+nela e só a **GR Guias Procedurais** como gerador: Comprimento 9 cm, Para
+fora 1, Para o lado 1,2, Para trás 0,4, Gravidade 0,3, **12.000 guias/m²**
+(26 fios). Set Hair Curve Profile raio 0,6 mm, **Shape 0,9** (afina quase
+até zero). Material claro separado. Sem Interpolate: poucas vibrissas
+grossas leem melhor que muitas finas.
