@@ -820,6 +820,7 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 14 | Node Bake para reproduzir groom animado | 353 → 9 ms por quadro | 17.63 |
 | 15 | Física: guias com UV de fixação, Substeps 40, Collider por coleção | sem UV explode; Surface Collision no scalp explode | 17.25 |
 | 16 | Ajuste a cor no Shape do render final (Ribbons ou 3D Curves) | em close de fio grosso, Ribbons sai ~2× mais claro; em vista normal < 7% | 17.68 |
+| 17 | Região com direção própria (franja, costeleta): segundo conjunto de guias + GR Transição | a direção das guias domina; Trim e empurrão não bastam. As raízes dos dois ramos são idênticas | 17.91 |
 
 ### 17.1 Armadilhas da 5.2 medidas
 
@@ -2761,3 +2762,6 @@ altura > 3,5 cm, \|X\| < 5 cm), depois Mecha com GR Lado da Risca e scalp
 em duas ilhas. Mechas curtas saem da risca e abrem em arco pelos lados da
 testa. Funciona porque os dois ramos saem do **mesmo scalp com o mesmo
 seed**: o Interpolate distribui as raízes igual e a contagem de pontos bate.
+Medido: A e B com 20.869 fios e 500.856 pontos, diferença máxima entre as
+raízes **0 mm**. A distribuição depende do scalp, da densidade e do seed,
+não das guias.
