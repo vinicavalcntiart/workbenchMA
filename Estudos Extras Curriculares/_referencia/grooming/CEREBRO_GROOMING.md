@@ -749,6 +749,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Fio saindo por dentro da pele | Shrinkwrap antes de Onda/Cacho (barato); no fim só para render (9× mais caro) | 17.62 |
 | Reproduzir groom animado pesado | Node Bake (Animation) no fim: 353 → 9 ms por quadro | 17.63 |
 | Pelo pictórico | normal da pele no fio (Toon) + cor por clump e sub-clump | 17.64 |
+| Cel-shading no cabelo | normal da malha proxy (Sample Nearest Surface) no Toon | 17.65 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1042,7 +1043,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Trinta node groups "GR" e quatro materiais, marcados como asset, feitos com as
+Trinta e um node groups "GR" e cinco materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1053,10 +1054,10 @@ receitas desta seção e validados abrindo o .blend do zero:
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
   Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
   Contorno, GR Transição, GR Pentear por Curva, GR Semente do Objeto, GR Flutuar, GR
-  Chão (30 grupos)
+  Chão, GR Normal da Malha (31 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
-- Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
-  Contorno.
+- Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha, GR
+  Contorno e GR Cabelo Cel.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
 problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
@@ -2101,3 +2102,25 @@ buracos entre grupos; guarda grossa como acento). Na criatura de 17.55:
 A normal da pele é o truque de maior efeito com menos nodes (2 no GN, 2 no
 shader). Personagem que se move: o Vector Transform Object → World é o que
 mantém certo.
+
+### 17.65 Cel-shading de cabelo com a normal de uma malha lisa [img/73_normal_sheet]
+
+A mesma ideia de 17.64 para cabelo humano estilizado. Em vez da normal do
+fio (que acende fio a fio), o shader usa a normal da **malha proxy lisa**
+em volta do cabelo (a de 17.39):
+
+1. No fim da cadeia: Object Info (malha, Relative) → **Sample Nearest
+   Surface** (Value = Normal da malha) → Store Named Attribute `nvol`
+   (Vector, Point).
+2. Shader: Attribute `nvol` → Vector Transform (Normal, Object → World) →
+   Normal do Toon Diffuse **e** do Toon Glossy.
+
+| Normal usada | Leitura |
+|---|---|
+| Do fio (padrão) | brilhos brancos espalhados fio a fio |
+| `n_raiz` (normal do scalp) | chapado, pouco volume |
+| **Da malha proxy** | um terminador de luz limpo no bob inteiro e um brilho em faixa: cel-shading |
+
+Pronto em **GR Normal da Malha** (entrada Malha; sem malha passa direto) e
+no material **GR Cabelo Cel** (lê `nvol`). Para pelo, ligue o próprio corpo
+como Malha.

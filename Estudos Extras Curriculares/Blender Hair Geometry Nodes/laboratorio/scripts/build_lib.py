@@ -675,6 +675,17 @@ ad = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(s1.outputs[0], 
 st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(ad.outputs[0], st.inputs['Offset'])
 g.l(st.outputs[0], o); libs.append(g.ng)
 
+# 31. Normal da Malha
+g = G("GR Normal da Malha", "Grava 'nvol' = normal da malha lisa mais proxima (proxy da silhueta ou o proprio corpo). O material GR Cabelo Cel usa essa normal: a luz agrupa em massas, como cel-shading.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+mal = g.inp("Malha", 'NodeSocketObject', desc="Malha lisa em volta do cabelo (a mesma da GR Forma por Malha serve) ou o corpo, para pelo")
+o = g.out("Geometry", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(mal, oi.inputs['Object'])
+nn = g.n('GeometryNodeInputNormal')
+sns = g.n('GeometryNodeSampleNearestSurface', props={'data_type':'FLOAT_VECTOR'}); g.l(oi.outputs['Geometry'], sns.inputs['Mesh']); g.l(nn.outputs[0], sns.inputs['Value'])
+st = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT_VECTOR','domain':'POINT'}, Name="nvol"); g.l(geo, st.inputs['Geometry']); g.l(sns.outputs['Value'], st.inputs['Value'])
+g.l(passthru(g, mal, geo, st.outputs['Geometry'], 'MESH'), o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
@@ -716,7 +727,17 @@ def mat_card():
     cr2 = nt.nodes.new('ShaderNodeMix'); cr2.data_type='RGBA'; cr2.inputs[6].default_value=(0.05,0.02,0.01,1); cr2.inputs[7].default_value=(0.22,0.10,0.045,1)
     nt.links.new(sep.outputs['Y'], cr2.inputs[0]); nt.links.new(cr2.outputs[2], b.inputs['Base Color'])
     return m
-mats = [mat_mecha(), mat_toon(), mat_card(), MCONT]
+
+def mat_cel():
+    m = bpy.data.materials.new("GR Cabelo Cel"); nt = m.node_tree; nt.nodes.clear(); out = nt.nodes.new('ShaderNodeOutputMaterial')
+    d = nt.nodes.new('ShaderNodeBsdfToon'); d.component='DIFFUSE'; d.inputs['Color'].default_value=(0.55,0.22,0.08,1); d.inputs['Size'].default_value=0.6; d.inputs['Smooth'].default_value=0.03
+    gl = nt.nodes.new('ShaderNodeBsdfToon'); gl.component='GLOSSY'; gl.inputs['Color'].default_value=(0.9,0.7,0.5,1); gl.inputs['Size'].default_value=0.12; gl.inputs['Smooth'].default_value=0.05
+    ad = nt.nodes.new('ShaderNodeAddShader'); nt.links.new(d.outputs[0], ad.inputs[0]); nt.links.new(gl.outputs[0], ad.inputs[1]); nt.links.new(ad.outputs[0], out.inputs['Surface'])
+    a = nt.nodes.new('ShaderNodeAttribute'); a.attribute_name = 'nvol'
+    vt = nt.nodes.new('ShaderNodeVectorTransform'); vt.vector_type='NORMAL'; vt.convert_from='OBJECT'; vt.convert_to='WORLD'; nt.links.new(a.outputs['Vector'], vt.inputs[0])
+    nt.links.new(vt.outputs[0], d.inputs['Normal']); nt.links.new(vt.outputs[0], gl.inputs['Normal'])
+    return m
+mats = [mat_mecha(), mat_toon(), mat_card(), MCONT, mat_cel()]
 
 for ng in libs:
     ng.asset_mark(); ng.asset_data.description = ng.description

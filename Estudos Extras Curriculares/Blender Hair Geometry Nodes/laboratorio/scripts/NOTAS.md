@@ -71,3 +71,4 @@
 - Sem objeto ligado: Forma por Malha colapsava no centro, Comprimento ate a Malha zerava, Pentear por Curva levantava tudo, Corte apagava. Todos com passthru (Object Info -> Domain Size -> Compare > 0 -> Switch). Revalidado com objeto (Trolls 6,2 cm, espiral, malha).
 - Bake: node Bake no fim (Animation, 1-12, Disco): play 353 -> 9 ms/quadro; bake 8 s; 282 MB (23,5 MB/quadro, 1,44M pts). Por script o Bake vem sem item (bake_items.new('GEOMETRY','Geometry')).
 - Pictorico: nsurf = Surface Normal do Generate -> shader Attribute -> Vector Transform Normal Obj->World -> Normal do Toon Diffuse. Cor clump_a (2cm) matiz + clump_b (6mm) valor. Buracos 12% por clump. Guarda 1,5% escura quase nao le.
+- Cel: Sample Nearest Surface (proxy, Normal) -> nvol -> Toon Diffuse+Glossy Normal (Vector Transform Obj->World). Terminador limpo. GR Normal da Malha + GR Cabelo Cel validados.

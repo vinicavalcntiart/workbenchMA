@@ -46,12 +46,13 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Semente do Objeto | Seed e aleatórios diferentes por cópia do objeto | fora da cadeia, nos Seeds |
 | GR Flutuar | ondulação animada sem física (água, vento de fundo) | nas guias depois de um Resample, ou nos fios |
 | GR Chão | cabelo longo esparrama no piso em vez de atravessar | nas guias; de novo depois do Interpolate com Espalhar desligado |
+| GR Normal da Malha | grava a normal de uma malha lisa para o material GR Cabelo Cel | no fim, antes do material |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
-**GR Cabelo Toon**, **GR Card Alpha** para os cards e **GR Contorno** para o traço.
+**GR Cabelo Toon**, **GR Card Alpha** para os cards e **GR Contorno** para o traço, e **GR Cabelo Cel** (lê a normal da GR Normal da Malha).
 
 ## Física
 
