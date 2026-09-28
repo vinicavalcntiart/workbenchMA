@@ -25,4 +25,14 @@ t.chain(m, m.inputs[0].name, m.outputs[0].name)
 c = t.add('GeometryNodeGroup', group=GR["GR Cor por Mecha"]); t.chain(c, c.inputs[0].name, c.outputs[0].name)
 profile(t, EG, radius=0.0005); set_mat(t, hair_mat("h", melanin=0.8, redness=0.4)); apply_tree(g, t.finish())
 print("INFO", stats(g).get('curves'))
+me2 = head.data.copy(); bm2 = bmesh.new(); bm2.from_mesh(me2)
+bmesh.ops.delete(bm2, geom=[f for f in bm2.faces if not (abs(f.calc_center_median().x) > 0.08 and -0.045 < f.calc_center_median().z < 0.03 and -0.05 < f.calc_center_median().y < -0.015)], context='FACES')
+bm2.to_mesh(me2); bm2.free(); reg = link(bpy.data.objects.new("costeleta", me2)); reg.scale = (1.003,)*3; reg.hide_render = True
+cc = bpy.data.hair_curves.new("cost"); gc = link(bpy.data.objects.new("costeleta_pelo", cc)); cc.surface = reg; cc.surface_uv_map = "UVMap"
+tc = Tree("cost"); x = tc.add('GeometryNodeGroup', group=GR["GR Guias Procedurais"])
+for kk,v in {"Cabeça (colisão)": head, "Comprimento": 0.035, "Para fora": 0.3, "Para o lado da risca": 0.0, "Para trás": 0.0, "Gravidade": 3.0, "Guias por m2": 700000.0}.items(): x.inputs[kk].default_value = v
+tc.chain(x, 'Geometry', 'Guias')
+tc.eg(EG['Clump Hair Curves'], Factor=0.8, Shape=0.3, Tip_Spread=0.0005, Preserve_Length=True, Guide_Distance=0.005, Existing_Guide_Map=False, Seed=1)
+profile(tc, EG, radius=0.0004); set_mat(tc, hair_mat("c", melanin=0.8, redness=0.4)); apply_tree(gc, tc.finish())
+print("COST2 fios", stats(gc).get('curves'))
 shot("109_costeleta", res=420, samples=16, cam_loc=(0.62,-0.30,0.0), target=(0,0,0.0), lens=46)

@@ -799,7 +799,11 @@ abaixo disso atrás. Receitas de nuca e lateral (undercut 17.81, orelha
 máscaras precisam ser ajustadas à sua hair cap. O scalp de teste também
 **não cobre a costeleta** (recorta \|X\| > 8 cm abaixo de 2,5 cm junto com a
 orelha): um teste de costeleta com a regra 17 deu 0 raízes na região e não
-vale como resultado. Os valores
+vale como resultado. Refeito como **região própria** recortada da cabeça
+(igual a sobrancelha e barba, 17.32): GR Guias Procedurais 3,5 cm,
+gravidade 3, 700 mil/m² (3,6 mil fios), Clump 5 mm. Lê como costeleta;
+saiu em bloco retangular porque a região recortada é um retângulo: dê à
+região o formato final da costeleta [img/109_costeleta]. Os valores
 valem direto para uma cabeça humana em metros. Scripts em
 `Blender Hair Geometry Nodes/laboratorio/scripts/`, folhas de contato em
 `laboratorio/img/`. Cada receita cita a folha.
