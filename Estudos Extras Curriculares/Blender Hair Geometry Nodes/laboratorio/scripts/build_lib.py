@@ -382,6 +382,7 @@ outw = g.inp("Para fora", 'NodeSocketFloat', 0.4, 0.0, 3.0, "0,4 cai rente; 0,8 
 lado = g.inp("Para o lado da risca", 'NodeSocketFloat', 0.35, -2.0, 2.0)
 tras = g.inp("Para trás", 'NodeSocketFloat', 0.2, -2.0, 2.0)
 grav = g.inp("Gravidade", 'NodeSocketFloat', 1.2, 0.0, 10.0, "1,2 bob; 2,2 longo caido; 0 espetado")
+gmundo = g.inp("Gravidade do mundo", 'NodeSocketBool', False, desc="Desligado: gravidade no -Z do objeto. Ligado: no -Z do mundo (cabeca modelada inclinada). Nao anima: e lida na rotacao original do objeto")
 risca = g.inp("Risca X", 'NodeSocketFloat', 0.0, -10.0, 10.0, "", 'DISTANCE')
 dens = g.inp("Guias por m2", 'NodeSocketFloat', 4000.0, 0.0, 1e6, "4000 ~ 200 guias numa cabeca real")
 sd = g.inp("Seed", 'NodeSocketInt', 0)
@@ -405,7 +406,12 @@ gl_ = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(grav, gl_.input
 gz = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(t2.outputs[0], gz.inputs[0]); g.l(gl_.outputs[0], gz.inputs[1])
 ng_ = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(gz.outputs[0], ng_.inputs[0]); ng_.inputs[1].default_value = -1.0
 gv = g.n('ShaderNodeCombineXYZ'); g.l(ng_.outputs[0], gv.inputs['Z'])
-off = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(lin.outputs[0], off.inputs[0]); g.l(gv.outputs[0], off.inputs[1])
+# gravidade do mundo: gira (0,0,-g) pela rotacao inversa do proprio objeto
+so_ = g.n('GeometryNodeSelfObject'); oiw = g.n('GeometryNodeObjectInfo', props={'transform_space':'ORIGINAL'}); g.l(so_.outputs[0], oiw.inputs['Object'])
+ivr = g.n('FunctionNodeInvertRotation'); g.l(oiw.outputs['Rotation'], ivr.inputs['Rotation'])
+rv_ = g.n('FunctionNodeRotateVector'); g.l(gv.outputs[0], rv_.inputs['Vector']); g.l(ivr.outputs['Rotation'], rv_.inputs['Rotation'])
+swg = g.n('GeometryNodeSwitch', props={'input_type':'VECTOR'}); g.l(gmundo, swg.inputs['Switch']); g.l(gv.outputs[0], swg.inputs['False']); g.l(rv_.outputs[0], swg.inputs['True'])
+off = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(lin.outputs[0], off.inputs[0]); g.l(swg.outputs[0], off.inputs[1])
 spn = g.n('GeometryNodeSetPosition'); g.l(gen.outputs['Geometry'], spn.inputs['Geometry']); g.l(off.outputs[0], spn.inputs['Offset'])
 w = g.n('GeometryNodeGroup', group=EG['Shrinkwrap Hair Curves'], Factor=1.0, Offset_Distance=0.006, Above_Surface=0.0, Smoothing_Steps=3, Lock_Roots=True)
 g.l(spn.outputs['Geometry'], w.inputs['Geometry'])

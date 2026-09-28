@@ -2662,3 +2662,11 @@ objeto**, não do mundo. Personagem modelado em pose deitada ou com a
 cabeça inclinada na pose de repouso recebe gravidade inclinada junto.
 Modele a cabeça em pé; para cabelo que cai com o mundo em cena animada,
 use a física (17.25) ou o Simulation to World vazio (17.26).
+
+Nova entrada **Gravidade do mundo** na GR Guias Procedurais
+[img/102_gravmundo_sheet]: Self Object → Object Info (Original) → Rotation
+→ Invert Rotation → Rotate Vector aplicado ao vetor de gravidade. Com a
+cabeça girada 50°, o deslocamento médio raiz → ponta em X foi de −43,7 cm
+(gravidade do objeto, cabelo inclinado junto) para **+3,2 cm** (reto para
+baixo). Ela lê a rotação do objeto: serve para pose de repouso inclinada;
+animar a rotação reposiciona o cabelo quadro a quadro, sem inércia.
