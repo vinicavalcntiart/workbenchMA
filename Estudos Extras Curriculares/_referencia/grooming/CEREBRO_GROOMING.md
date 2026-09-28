@@ -1103,7 +1103,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Trinta e quatro node groups "GR" e cinco materiais, marcados como asset, feitos com as
+Trinta e cinco node groups "GR" e cinco materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -2687,3 +2687,7 @@ cabeça.
 Período 1 s = um passo por lado a 24 fps. Para sincronizar com a
 animação, troque o Scene Time por um valor do rig (o controle por Empty de
 17.83). Nove nodes, custo de nada (feito nas guias).
+
+Pronto em **GR Balanço** (Amplitude, Período, Atraso, Eixo). Validado do
+.blend: ponta média em X nos quadros 1, 7, 13 e 19 = +7,7; +6,2; −6,7;
+−5,2 cm (ciclo de 1 s).

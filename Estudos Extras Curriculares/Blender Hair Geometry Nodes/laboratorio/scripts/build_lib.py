@@ -751,6 +751,27 @@ sc_ = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0
 st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(sc_.outputs[0], st.inputs['Offset'])
 g.l(passthru(g, ob, geo, st.outputs[0], 'MESH') if False else st.outputs[0], o); libs.append(g.ng)
 
+# 35. Balanco
+g = G("GR Balanço", "Balanco animado sem fisica com follow-through: gira cada ponto em volta da raiz com seno defasado ao longo do fio. Nas guias (Resample 24 antes), antes do Interpolate; Shrinkwrap depois.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+am = g.inp("Amplitude", 'NodeSocketFloat', 0.35, 0.0, 6.3, "Angulo na ponta (rad)")
+pe = g.inp("Período", 'NodeSocketFloat', 1.0, 0.01, 100.0, "Segundos por ciclo")
+at = g.inp("Atraso", 'NodeSocketFloat', 2.5, 0.0, 20.0, "Defasagem raiz -> ponta (rad). 0 = balanca em bloco")
+ei = g.inp("Eixo", 'NodeSocketVector', (0.0,1.0,0.0), desc="Eixo de giro. (0,1,0) = lado a lado; (1,0,0) = frente e tras")
+o = g.out("Geometry", 'NodeSocketGeometry')
+cr = g.n('GeometryNodeGroup', group=EG['Curve Root']); sp = g.n('GeometryNodeSplineParameter'); stt = g.n('GeometryNodeInputSceneTime')
+tau = g.n('ShaderNodeMath', props={'operation':'DIVIDE'}); tau.inputs[0].default_value = 2*math.pi; g.l(pe, tau.inputs[1])
+w = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(stt.outputs['Seconds'], w.inputs[0]); g.l(tau.outputs[0], w.inputs[1])
+lg = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sp.outputs['Factor'], lg.inputs[0]); g.l(at, lg.inputs[1])
+ph = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(w.outputs[0], ph.inputs[0]); g.l(lg.outputs[0], ph.inputs[1])
+sn = g.n('ShaderNodeMath', props={'operation':'SINE'}); g.l(ph.outputs[0], sn.inputs[0])
+a1 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sn.outputs[0], a1.inputs[0]); g.l(sp.outputs['Factor'], a1.inputs[1])
+a2 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(a1.outputs[0], a2.inputs[0]); g.l(am, a2.inputs[1])
+ps = g.n('GeometryNodeInputPosition')
+vr = g.n('ShaderNodeVectorRotate', props={'rotation_type':'AXIS_ANGLE'}); g.l(ps.outputs[0], vr.inputs['Vector']); g.l(cr.outputs['Root Position'], vr.inputs['Center']); g.l(ei, vr.inputs['Axis']); g.l(a2.outputs[0], vr.inputs['Angle'])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(vr.outputs[0], st.inputs['Position'])
+g.l(st.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

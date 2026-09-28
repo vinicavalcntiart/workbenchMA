@@ -113,3 +113,4 @@
 - Invariancia: conjunto deslocado dif 0; girado 2e-7 m (Onda 8e-5). Groom local. Gravidade procedural = -Z do objeto.
 - GR Guias Procedurais: entrada Gravidade do mundo (Invert Rotation da Self Object). Cabeca girada 50: x raiz->ponta -43,7 -> +3,2 cm.
 - Balanco: guias Resample 24, VectorRotate Y center raiz angle 0,35*s*sin(2pi t - 2,5 s). Atraso 0 = bloco; 2,5 = S follow-through.
+- GR Balanco validado: ponta x 7,7/6,2/-6,7/-5,2 cm. Biblioteca 35 grupos.

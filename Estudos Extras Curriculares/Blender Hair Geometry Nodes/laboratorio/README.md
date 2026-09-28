@@ -54,6 +54,7 @@ vento, criatura pictórica e anime com cel-shading. Veja `exemplos/README.md`.
 | GR Chão | cabelo longo esparrama no piso em vez de atravessar | nas guias; de novo depois do Interpolate com Espalhar desligado |
 | GR Normal da Malha | grava a normal de uma malha lisa para o material GR Cabelo Cel | no fim, antes do material |
 | GR Desviar de Objeto | o cabelo abre caminho para um objeto animado (mão, ombro) | no fim, depois do Shrinkwrap |
+| GR Balanço | balanço animado com follow-through, sem física | nas guias, antes do Interpolate |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Máscara por Posição | campo 0-1 por fio numa caixa suave (altura, lateral, frente) | em Fator, Length Factor, Factor de qualquer grupo |
