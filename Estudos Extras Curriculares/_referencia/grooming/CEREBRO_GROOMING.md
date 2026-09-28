@@ -717,6 +717,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo Trolls | raiz → Raycast (normal + viés para cima) até elipsoide alto; Clump 0,45 | 17.40 |
 | Afro que enche | casca renderizada + pelo curto cacheado nascendo nela | 17.41 |
 | Menos fios, mesma cobertura | scalp com a cor da raiz: 60 mil/m² cobre como 300 mil | 17.42 |
+| Hair cards para jogo | Curve to Mesh com perfil em linha, normal = Tangent × n_raiz, UV em Face Corner | 17.43 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1010,7 +1011,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e três node groups "GR" e dois materiais, marcados como asset, feitos com as
+Vinte e quatro node groups "GR" e três materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1019,9 +1020,10 @@ receitas desta seção e validados abrindo o .blend do zero:
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
-  Câmera, GR Corte pela Malha, GR Comprimento até a Malha (23 grupos)
+  Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards (24
+  grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
-- Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
+- Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon e GR Card Alpha.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
 problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
@@ -1540,3 +1542,36 @@ pixels de pele à mostra no topo da cabeça, vista de cima:
 um quinto dos fios para a mesma cobertura. Na risca e no redemoinho, onde o
 cabelo abre, a diferença é a maior. Para estilizado, combine com densidade
 baixa e fio grosso: é o que deixa o groom leve na viewport.
+
+### 17.43 Hair cards para jogo a partir do groom [img/49_cards_sheet]
+
+O mesmo scalp e as mesmas guias geram cards (fitas planas com UV) para
+engine. GR Densidade Livre com densidade **baixa** (8.000 a 20.000/m² = 280
+a 860 cards) e depois:
+
+1. Resample 10 → Set Hair Curve Profile (Radius = meia largura, 9 mm;
+   Shape 0,4 afina para a ponta).
+2. **Set Curve Normal, modo Free, Normal = Cross(Tangent, `n_raiz`)**.
+3. Spline Parameter → Store Named Attribute `v` (Point).
+4. Perfil: Curve Line (−1,0,0) a (1,0,0) → Store `u` = Spline Parameter.
+5. Curve to Mesh, **Scale = Radius** (17.11) → Combine XYZ(u, v) → Store
+   Named Attribute **2D Vector, Face Corner, nome `UVMap`**.
+
+Orientação do card, medida como |normal do card · direção radial| (1 =
+deitado no crânio, 0 = de pé):
+
+| Normal da curva | Valor | Leitura |
+|---|---|---|
+| Minimum Twist (padrão) | 0,74 | gira sem controle ao longo do fio |
+| `n_raiz` | **0,12** | de pé: o card some de frente |
+| **Tangent × `n_raiz`** | **0,76** | deitado, estável |
+
+- 860 cards = 15,8 mil triângulos.
+- **Exportar**: Object > Convert > Mesh no objeto Curves. O atributo
+  `UVMap` vira UV map real e o FBX sai com ele (testado, 7.911 faces).
+- Material GR Card Alpha: alpha procedural = faixas de fio (Noise esticado
+  40× no U) × borda (1 − |2u−1|⁴) × ponta (1 − v³); raiz mais escura por v.
+  Para engine, troque por uma textura de fios; o UV já está pronto.
+- Card precisa de scalp pintado (17.42): com poucos cards a pele aparece.
+
+Pronto em **GR Hair Cards** + material **GR Card Alpha**, validado do .blend.

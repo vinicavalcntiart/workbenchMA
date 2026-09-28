@@ -514,6 +514,31 @@ ad = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Roo
 st = g.n('GeometryNodeSetPosition'); g.l(rs.outputs['Curve'], st.inputs['Geometry']); g.l(ad.outputs[0], st.inputs['Position'])
 g.l(st.outputs['Geometry'], o); libs.append(g.ng)
 
+# 24. Hair Cards
+g = G("GR Hair Cards", "Cada fio vira um card (fita plana com UV) deitado no cranio: normal da curva = Tangent x n_raiz. Use depois da GR Densidade Livre com densidade baixa (8.000-20.000/m2). Material: GR Card Alpha.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+lw = g.inp("Meia largura", 'NodeSocketFloat', 0.009, 0.0, 1.0, "Metade da largura do card na raiz", 'DISTANCE')
+afi = g.inp("Afinar", 'NodeSocketFloat', 0.4, 0.0, 1.0, "Shape do Set Hair Curve Profile", 'FACTOR')
+pts = g.inp("Pontos", 'NodeSocketInt', 10, 2, 200, "Segmentos ao longo do card")
+o = g.out("Mesh", 'NodeSocketGeometry')
+rs = g.n('GeometryNodeResampleCurve'); g.l(geo, rs.inputs['Curve']); g.l(pts, rs.inputs['Count'])
+pr = g.n('GeometryNodeGroup', group=EG['Set Hair Curve Profile'], Factor_Min=0.0, Factor_Max=1.0); g.l(rs.outputs['Curve'], pr.inputs['Geometry']); g.l(lw, pr.inputs['Radius']); g.l(afi, pr.inputs['Shape'])
+na = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="n_raiz")
+tg = g.n('GeometryNodeInputTangent'); cx = g.n('ShaderNodeVectorMath', props={'operation':'CROSS_PRODUCT'}); g.l(tg.outputs[0], cx.inputs[0]); g.l(na.outputs['Attribute'], cx.inputs[1])
+sn = g.n('GeometryNodeSetCurveNormal'); g.l(pr.outputs['Geometry'], sn.inputs['Curve']); sn.inputs['Mode'].default_value = 'Free'; g.l(cx.outputs[0], sn.inputs['Normal'])
+sp = g.n('GeometryNodeSplineParameter')
+sv = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT','domain':'POINT'}, Name="v"); g.l(sn.outputs['Curve'], sv.inputs['Geometry']); g.l(sp.outputs['Factor'], sv.inputs['Value'])
+ln = g.n('GeometryNodeCurvePrimitiveLine', Start=(-1.0,0.0,0.0), End=(1.0,0.0,0.0))
+sp2 = g.n('GeometryNodeSplineParameter')
+su = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT','domain':'POINT'}, Name="u"); g.l(ln.outputs[0], su.inputs['Geometry']); g.l(sp2.outputs['Factor'], su.inputs['Value'])
+cm = g.n('GeometryNodeCurveToMesh'); g.l(sv.outputs['Geometry'], cm.inputs['Curve']); g.l(su.outputs['Geometry'], cm.inputs['Profile Curve'])
+rr = g.n('GeometryNodeInputRadius'); g.l(rr.outputs[0], cm.inputs['Scale'])
+au = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT'}, Name="u"); av = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT'}, Name="v")
+cb = g.n('ShaderNodeCombineXYZ'); g.l(au.outputs['Attribute'], cb.inputs['X']); g.l(av.outputs['Attribute'], cb.inputs['Y'])
+uv = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT2','domain':'CORNER'}, Name="UVMap"); g.l(cm.outputs['Mesh'], uv.inputs['Geometry']); g.l(cb.outputs[0], uv.inputs['Value'])
+ss = g.n('GeometryNodeSetShadeSmooth'); g.l(uv.outputs['Geometry'], ss.inputs['Geometry'])
+g.l(ss.outputs['Geometry'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
@@ -535,7 +560,27 @@ def mat_toon():
     gl = nt.nodes.new('ShaderNodeBsdfToon'); gl.component='GLOSSY'; gl.inputs['Color'].default_value=(1,0.85,0.7,1); gl.inputs['Size'].default_value=0.08; gl.inputs['Smooth'].default_value=0.1; gl.location=(0,-100)
     a = nt.nodes.new('ShaderNodeAddShader'); a.location=(250,0)
     nt.links.new(d.outputs[0], a.inputs[0]); nt.links.new(gl.outputs[0], a.inputs[1]); nt.links.new(a.outputs[0], out.inputs['Surface']); return m
-mats = [mat_mecha(), mat_toon()]
+
+def mat_card():
+    m = bpy.data.materials.new("GR Card Alpha"); nt = m.node_tree; b = nt.nodes['Principled BSDF']; b.inputs['Roughness'].default_value=0.45
+    uvn = nt.nodes.new('ShaderNodeUVMap'); uvn.uv_map='UVMap'
+    sep = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(uvn.outputs[0], sep.inputs[0])
+    mp = nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value=(40,1.5,1); nt.links.new(uvn.outputs[0], mp.inputs[0])
+    nz = nt.nodes.new('ShaderNodeTexNoise'); nz.noise_dimensions='2D'; nz.inputs['Scale'].default_value=1.0; nz.inputs['Detail'].default_value=2; nt.links.new(mp.outputs[0], nz.inputs['Vector'])
+    cr = nt.nodes.new('ShaderNodeMapRange'); cr.inputs['From Min'].default_value=0.45; cr.inputs['From Max'].default_value=0.55; nt.links.new(nz.outputs['Fac'], cr.inputs['Value'])
+    e1 = nt.nodes.new('ShaderNodeMath'); e1.operation='MULTIPLY_ADD'; e1.inputs[1].default_value=2; e1.inputs[2].default_value=-1; nt.links.new(sep.outputs['X'], e1.inputs[0])
+    e2 = nt.nodes.new('ShaderNodeMath'); e2.operation='ABSOLUTE'; nt.links.new(e1.outputs[0], e2.inputs[0])
+    e3 = nt.nodes.new('ShaderNodeMath'); e3.operation='POWER'; e3.inputs[1].default_value=4; nt.links.new(e2.outputs[0], e3.inputs[0])
+    e4 = nt.nodes.new('ShaderNodeMath'); e4.operation='SUBTRACT'; e4.inputs[0].default_value=1; nt.links.new(e3.outputs[0], e4.inputs[1])
+    p1 = nt.nodes.new('ShaderNodeMath'); p1.operation='POWER'; p1.inputs[1].default_value=3; nt.links.new(sep.outputs['Y'], p1.inputs[0])
+    p2 = nt.nodes.new('ShaderNodeMath'); p2.operation='SUBTRACT'; p2.inputs[0].default_value=1; nt.links.new(p1.outputs[0], p2.inputs[1])
+    a1 = nt.nodes.new('ShaderNodeMath'); a1.operation='MULTIPLY'; nt.links.new(cr.outputs['Result'], a1.inputs[0]); nt.links.new(e4.outputs[0], a1.inputs[1])
+    a2 = nt.nodes.new('ShaderNodeMath'); a2.operation='MULTIPLY'; nt.links.new(a1.outputs[0], a2.inputs[0]); nt.links.new(p2.outputs[0], a2.inputs[1])
+    nt.links.new(a2.outputs[0], b.inputs['Alpha'])
+    cr2 = nt.nodes.new('ShaderNodeMix'); cr2.data_type='RGBA'; cr2.inputs[6].default_value=(0.05,0.02,0.01,1); cr2.inputs[7].default_value=(0.22,0.10,0.045,1)
+    nt.links.new(sep.outputs['Y'], cr2.inputs[0]); nt.links.new(cr2.outputs[2], b.inputs['Base Color'])
+    return m
+mats = [mat_mecha(), mat_toon(), mat_card()]
 
 for ng in libs:
     ng.asset_mark(); ng.asset_data.description = ng.description
