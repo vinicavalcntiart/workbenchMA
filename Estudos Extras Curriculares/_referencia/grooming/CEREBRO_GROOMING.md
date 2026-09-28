@@ -711,6 +711,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cílios | faixa da esfera do olho ×1,06; Para fora 1, gravidade −1,3 | 17.36 |
 | Cabelo crescendo | Scene Time − atraso por mecha → Trim Length Factor, Replace off | 17.37 |
 | Multidão (LOD) | distância raiz-câmera → Random Boolean → Delete; raio × 1/√fração | 17.38 |
+| Silhueta por malha simples | Geometry Proximity na malha → Mix com Spline Parameter → Set Position nas guias | 17.39 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1004,16 +1005,17 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Dezoito node groups "GR" e dois materiais, marcados como asset, feitos com as
+Vinte e um node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
   Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
-  Imagem, GR Física Estilizada, GR Guias Procedurais, GR Rabo de Cavalo (18
-  grupos)
-  [img/21_lib_sheet, 23_lib2_sheet].
+  Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
+  Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
+  Câmera (21 grupos)
+  [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
@@ -1419,8 +1421,47 @@ Mesmo processo, só a fração mudando (12.865 fios no groom cheio):
 **Ordem das faces do scalp define a distribuição.** No laboratório, o scalp
 gerado por script saía com ordem de faces diferente a cada execução, e o
 Interpolate dava 12.843 a 12.865 fios com mechas em lugares diferentes. Numa
-.blend salva a ordem é estável. Consequência prática (deduzida do teste, não
-medida com Remesh): **Remesh, Decimate,
-Triangulate ou Sort Elements no scalp reembaralham o groom** (fios e mechas
-mudam de lugar), mesmo com a forma idêntica. Mexa na topologia do scalp antes
-de pentear, nunca depois.
+.blend salva a ordem é estável. Medido na mesma malha, mesma forma:
+
+| Mudança no scalp | Fios | Raiz mais próxima | Ponta mais próxima |
+|---|---|---|---|
+| Sort Elements aleatório (faces) | 12.862 → 12.849 | 0,98 mm | 5,2 mm |
+| Triangulate | 12.849 → 12.864 | 0,97 mm | 5,4 mm |
+
+0,98 mm é a distância esperada entre duas distribuições independentes com
+esse espaçamento: **todas as raízes foram re-sorteadas** e as mechas mudaram
+de lugar (pontas 5 mm). Remesh e Decimate mudam a topologia ainda mais.
+Feche a topologia do scalp antes de pentear, nunca depois.
+
+### 17.39 Silhueta por malha proxy [img/45_shell_sheet, 45_lib6_sheet]
+
+Técnica do laboratório (as fontes de estúdio desta base não citam): o artista
+modela uma malha simples em volta da cabeça, o "capacete" da silhueta, e as
+guias colam nela. Trocar de corte = trocar a malha. Sete nodes nas **guias**,
+antes do Interpolate:
+
+1. Object Info (a malha), **Relative** → Geometry → Geometry Proximity
+   (Faces) → Position.
+2. Spline Parameter Factor → Map Range clamp, From Max **0,35** (a partir
+   de 35% do fio ele está na malha).
+3. Mix **Vector**: A = Position, B = posição da Proximity, Factor = 2 →
+   Set Position.
+
+| Forma | Sem proxy | Com proxy |
+|---|---|---|
+| **Bob** (esfera 14,5 × 15 × 13 cm, cortada em z −13 cm) | fios longos caindo | bob limpo; as pontas dobram na borda da malha e fecham a linha do corte |
+| **Topete** (esfera deslocada para frente e para cima) | fios espetados para trás | corte curto com volume na frente |
+| Afro (esfera 19 cm) + Curl | cachos espalhados | **casca oca**: o volume fica numa camada só; afro continua dependendo das guias (17.28) |
+
+- Funciona para formas de **superfície** (bob, topete, capacete, franja
+  reta). Para formas de **volume** (afro, nuvem), não.
+- Malha aberta: apague a parte do rosto e a de baixo. Onde a malha acaba, as
+  pontas dobram na borda; isso é o que dá o bob.
+- O fio encurta ou estica para caber na malha; o comprimento das guias vira
+  secundário.
+- Armadilha medida: no Mix em modo Vector, a saída válida é a segunda
+  (índice 1). Ligar a de Color (desativada) não dá erro e o Set Position
+  simplesmente não faz nada.
+
+Pronto em **GR Forma por Malha** (entradas: Malha da forma, Força, Cola a
+partir de). Validado carregando do .blend.

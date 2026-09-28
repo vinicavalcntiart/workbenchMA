@@ -36,6 +36,9 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Máscara por Imagem | apaga fios onde a imagem é preta; devolve o cinza para reusar | depois do Interpolate |
 | GR Física Estilizada | Hair Dynamics nas guias, segura o penteado | antes do Interpolate, num modificador só das guias |
 | GR Rabo de Cavalo | junta tudo num elástico e deixa cair | depois da Densidade Livre, antes da Mecha |
+| GR Forma por Malha | as guias colam numa malha simples (a silhueta) | nas guias, antes do Interpolate |
+| GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
+| GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
@@ -46,7 +49,8 @@ Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
 Guias com Snap to Nearest Surface. Modificador 1 só com GR Física
 Estilizada. Modificador 2 com a cadeia de groom. Colisão: modificador
 Collider na cabeça inteira, a cabeça numa coleção, a coleção na entrada
-Colisores. Não ligue Surface Collision no scalp.
+Colisores. Não ligue Surface Collision no scalp. Vento: entrada Vento
+(0,04 brisa, 0,12 vento de cena) e Direção do vento.
 
 ## Ordem que funciona
 

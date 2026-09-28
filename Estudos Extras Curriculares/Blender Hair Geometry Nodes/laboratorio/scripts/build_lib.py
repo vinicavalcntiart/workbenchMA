@@ -315,7 +315,7 @@ g.l(dl.outputs['Geometry'], o); g.l(sw.outputs[0], vo); libs.append(g.ng)
 
 # 16. Fisica Estilizada
 DYN = os.path.join(bpy.utils.system_resource('DATAFILES'),'assets','nodes','geometry_nodes_dynamics_assets.blend')
-with bpy.data.libraries.load(DYN, link=False) as (src, dst): dst.node_groups = ['Hair Dynamics']
+with bpy.data.libraries.load(DYN, link=False) as (src, dst): dst.node_groups = ['Hair Dynamics','Custom Force']
 HD = bpy.data.node_groups['Hair Dynamics']
 g = G("GR Física Estilizada", "Hair Dynamics nas GUIAS com valores que seguram penteado estilizado (Bendiness 0, Root 0, Substeps 40). Guias precisam de Snap to Nearest Surface. Coloque ANTES do Interpolate.")
 geo = g.inp("Guias", 'NodeSocketGeometry')
@@ -324,6 +324,8 @@ raiz = g.inp("Raiz solta", 'NodeSocketFloat', 0.0, 0.0, 1.0, "Root Bendiness", '
 sub = g.inp("Substeps", 'NodeSocketInt', 40, 1, 200, "40 segura o penteado (queda 1,5 cm). 10 = padrao, desaba")
 grav = g.inp("Gravidade", 'NodeSocketFloat', 1.0, 0.0, 2.0, "Multiplica 9,81 m/s2", 'FACTOR')
 col = g.inp("Colisores", 'NodeSocketCollection', desc="Colecao com objetos que tem o modificador Collider (ex.: a cabeca inteira). Nao use Surface Collision no scalp: explode.")
+vf = g.inp("Vento", 'NodeSocketFloat', 0.0, 0.0, 2.0, "Forca do vento. 0,04 brisa; 0,12 vento de cena (fio 30 cm)")
+vd = g.inp("Direção do vento", 'NodeSocketVector', (1.0,0.0,0.0), desc="Para onde o vento sopra")
 o = g.out("Guias", 'NodeSocketGeometry')
 hd = g.n('GeometryNodeGroup', group=HD)
 hd.inputs['Mode'].default_value = 'Physics (Experimental)'
@@ -331,6 +333,23 @@ g.l(geo, hd.inputs['Hair']); g.l(mov, hd.inputs['Bendiness']); g.l(raiz, hd.inpu
 gm = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); gm.inputs[0].default_value = (0,0,-9.81); g.l(grav, gm.inputs['Scale'])
 for s_ in hd.inputs:
     if s_.name == 'Gravity' and s_.type == 'VECTOR': g.l(gm.outputs[0], s_)
+# vento: rajada seno 1,5 s (20-100%) + turbulencia Noise 4D -> Custom Force -> Effectors
+stt = g.n('GeometryNodeInputSceneTime')
+w1 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(stt.outputs['Seconds'], w1.inputs[0]); w1.inputs[1].default_value = 2*math.pi/1.5
+sn = g.n('ShaderNodeMath', props={'operation':'SINE'}); g.l(w1.outputs[0], sn.inputs[0])
+gu = g.n('ShaderNodeMath', props={'operation':'MULTIPLY_ADD'}); g.l(sn.outputs[0], gu.inputs[0]); gu.inputs[1].default_value = 0.4; gu.inputs[2].default_value = 0.6
+fz = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(gu.outputs[0], fz.inputs[0]); g.l(vf, fz.inputs[1])
+nd = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(vd, nd.inputs[0])
+bs = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0], bs.inputs[0]); g.l(fz.outputs[0], bs.inputs['Scale'])
+ps = g.n('GeometryNodeInputPosition')
+nz = g.n('ShaderNodeTexNoise'); nz.noise_dimensions = '4D'; nz.inputs['Scale'].default_value = 15.0; nz.inputs['Detail'].default_value = 1.0
+g.l(ps.outputs[0], nz.inputs['Vector']); g.l(stt.outputs['Seconds'], nz.inputs['W'])
+ce = g.n('ShaderNodeVectorMath', props={'operation':'SUBTRACT'}); g.l(nz.outputs['Color'], ce.inputs[0]); ce.inputs[1].default_value = (0.5,0.5,0.5)
+tk = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(vf, tk.inputs[0]); tk.inputs[1].default_value = 1.2
+tb = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(ce.outputs[0], tb.inputs[0]); g.l(tk.outputs[0], tb.inputs['Scale'])
+fv = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(bs.outputs[0], fv.inputs[0]); g.l(tb.outputs[0], fv.inputs[1])
+cf = g.n('GeometryNodeGroup', group=bpy.data.node_groups['Custom Force']); g.l(fv.outputs[0], cf.inputs['Force'])
+g.l(cf.outputs['Force'], [x for x in hd.inputs if x.name=='Effectors' and x.type=='BUNDLE'][0])
 g.l(hd.outputs['Hair'], o); libs.append(g.ng)
 
 
@@ -408,6 +427,59 @@ g.l(spn.outputs['Geometry'], w.inputs['Geometry'])
 for x in w.inputs:
     if x.name == 'Surface' and x.type == 'OBJECT': g.l(cab, x)
 g.l(w.outputs['Geometry'], o); libs.append(g.ng)
+
+# 19. Forma por Malha
+g = G("GR Forma por Malha", "Puxa as guias para a superficie de uma malha simples (o 'capacete' da silhueta). A partir de 'Cola a partir de' o fio fica na malha. Use nas GUIAS, antes do Interpolate.")
+geo = g.inp("Guias", 'NodeSocketGeometry')
+mal = g.inp("Malha da forma", 'NodeSocketObject', desc="Malha aberta em volta da cabeca (esfera deformada, sem a parte do rosto)")
+fo = g.inp("Força", 'NodeSocketFloat', 1.0, 0.0, 1.0, "", 'FACTOR')
+cl = g.inp("Cola a partir de", 'NodeSocketFloat', 0.35, 0.01, 1.0, "Fracao do fio onde ele ja esta colado na malha", 'FACTOR')
+o = g.out("Guias", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(mal, oi.inputs['Object'])
+gp = g.n('GeometryNodeProximity', props={'target_element':'FACES'}); g.l(oi.outputs['Geometry'], gp.inputs[0])
+sp = g.n('GeometryNodeSplineParameter')
+mr = g.n('ShaderNodeMapRange'); mr.clamp = True; g.l(sp.outputs['Factor'], mr.inputs['Value']); g.l(cl, mr.inputs['From Max']); g.l(fo, mr.inputs['To Max'])
+ps = g.n('GeometryNodeInputPosition')
+mx = g.n('ShaderNodeMix', props={'data_type':'VECTOR'}); g.l(mr.outputs['Result'], mx.inputs[0]); g.l(ps.outputs[0], mx.inputs[4]); g.l(gp.outputs['Position'], mx.inputs[5])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(mx.outputs[1], st.inputs['Position'])
+g.l(st.outputs['Geometry'], o); libs.append(g.ng)
+
+# 20. Crescer
+g = G("GR Crescer", "Animacao: cada mecha cresce pelo caminho final com atraso sorteado. Coloque no fim, antes do Set Hair Curve Profile. Precisa de guide_curve_index (Clump antes).")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+vel = g.inp("Velocidade", 'NodeSocketFloat', 0.8, 0.0, 100.0, "Comprimento por segundo (1 = fio inteiro em 1 s)")
+at = g.inp("Atraso por mecha", 'NodeSocketFloat', 0.4, 0.0, 10.0, "Segundos x velocidade de diferenca entre mechas")
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+stt = g.n('GeometryNodeInputSceneTime')
+rv = g.n('FunctionNodeRandomValue', props={'data_type':'FLOAT'}); g.l(guide_id(g), rv.inputs['ID']); g.l(at, rv.inputs['Max']); g.l(sd, rv.inputs['Seed'])
+ev = g.n('GeometryNodeFieldOnDomain', props={'domain':'CURVE','data_type':'FLOAT'}); g.l(rv.outputs['Value'], ev.inputs[0])
+mu = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(stt.outputs['Seconds'], mu.inputs[0]); g.l(vel, mu.inputs[1])
+su = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(mu.outputs[0], su.inputs[0]); g.l(ev.outputs[0], su.inputs[1])
+cp = g.n('ShaderNodeClamp'); g.l(su.outputs[0], cp.inputs['Value']); cp.inputs['Min'].default_value = 0.02
+tr = g.n('GeometryNodeGroup', group=EG['Trim Hair Curves'], Replace_Length=False, Scale_Uniform=False)
+g.l(geo, tr.inputs['Geometry']); g.l(cp.outputs[0], tr.inputs['Length Factor'])
+g.l(tr.outputs['Geometry'], o); libs.append(g.ng)
+
+# 21. LOD por Camera
+g = G("GR LOD por Câmera", "Multidao: apaga fios longe da camera e engrossa os que ficam (raio x 1/raiz da fracao). Coloque no fim, depois do Set Hair Curve Profile.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+cam = g.inp("Câmera", 'NodeSocketObject')
+pe = g.inp("Perto", 'NodeSocketFloat', 1.0, 0.0, 1e4, "Ate aqui, 100% dos fios", 'DISTANCE')
+lo = g.inp("Longe", 'NodeSocketFloat', 8.0, 0.0, 1e4, "Daqui em diante, o minimo", 'DISTANCE')
+mi = g.inp("Mínimo", 'NodeSocketFloat', 0.04, 0.001, 1.0, "Fracao que fica longe", 'FACTOR')
+o = g.out("Geometry", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(cam, oi.inputs['Object'])
+cr = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+di = g.n('ShaderNodeVectorMath', props={'operation':'DISTANCE'}); g.l(cr.outputs['Root Position'], di.inputs[0]); g.l(oi.outputs['Location'], di.inputs[1])
+mr = g.n('ShaderNodeMapRange'); mr.clamp = True; g.l(di.outputs['Value'], mr.inputs['Value']); g.l(pe, mr.inputs['From Min']); g.l(lo, mr.inputs['From Max']); mr.inputs['To Min'].default_value = 1.0; g.l(mi, mr.inputs['To Max'])
+rb = g.n('FunctionNodeRandomValue', props={'data_type':'BOOLEAN'}); g.l(mr.outputs['Result'], rb.inputs['Probability'])
+nt_ = g.n('FunctionNodeBooleanMath', props={'operation':'NOT'}); g.l([x for x in rb.outputs if x.type=='BOOLEAN'][0], nt_.inputs[0])
+dl = g.n('GeometryNodeDeleteGeometry', props={'domain':'CURVE'}); g.l(geo, dl.inputs['Geometry']); g.l(nt_.outputs[0], dl.inputs['Selection'])
+iq = g.n('ShaderNodeMath', props={'operation':'INVERSE_SQRT'}); g.l(mr.outputs['Result'], iq.inputs[0])
+rn = g.n('GeometryNodeInputRadius'); mu = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(rn.outputs[0], mu.inputs[0]); g.l(iq.outputs[0], mu.inputs[1])
+sr = g.n('GeometryNodeSetCurveRadius'); g.l(dl.outputs['Geometry'], sr.inputs['Curve']); g.l(mu.outputs[0], sr.inputs['Radius'])
+g.l(sr.outputs['Curve'], o); libs.append(g.ng)
 
 # materiais
 def mat_mecha():
