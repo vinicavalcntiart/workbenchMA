@@ -145,6 +145,8 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <a href="#lab">Receitas testadas</a>
   <a href="#lab-lib">Biblioteca pronta</a>
   <a href="#lab-estilo">Estilizado</a>
+  <a href="#lab-proc">Sem esculpir</a>
+  <a href="#lab-presos">Presos e rosto</a>
   <a href="#lab-fisica">Física</a>
   <div class="t">Depois</div>
   <a href="#perf">Performance</a>
@@ -805,10 +807,12 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Ponta virada</td><td>Roll Direction = posição da raiz (para fora) ou o negativo (para dentro)</td></tr>
     <tr><td>Volume na raiz</td><td>Normal do Interpolate empurrando o fio</td></tr>
     <tr><td>Física sem desabar</td><td>Bendiness 0, Substeps 40</td></tr>
+    <tr><td>Penteado sem esculpir</td><td>GR Guias Procedurais num Curves vazio</td></tr>
+    <tr><td>Rabo de cavalo, coque</td><td>GR Rabo de Cavalo</td></tr>
   </table></div>
 
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 16 node groups prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 18 node groups prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
@@ -852,6 +856,18 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <div class="box do"><h4>Como fazer</h4><ol><li>Trança grossa: Braid Hair Curves com Shape 0 e Factor Min 0,7. Interpolate com Distance to Guides 0,02.</li><li>Mecha de malha: Resample 24 → Set Hair Curve Profile → Curve to Mesh com perfil achatado.</li><li><b>Ligue um node Radius no Scale do Curve to Mesh.</b> Solto, cada mecha vira um tubo de 1 metro.</li></ol></div>
 <figure><img src="img/lab/16b_chunky_sheet.jpg" alt="Seis cabeças com mechas de malha" loading="lazy" style="width:100%;height:auto"><figcaption>Mecha de malha: tubo, fita achatada e fita torcida por mecha.</figcaption></figure>
 
+<h2 id="lab-proc" style="margin-top:2rem">Penteado sem esculpir</h2>
+<h3 style="margin-top:1.6rem">Guias procedurais</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Crie um objeto Curves vazio e aponte o Surface para a hair cap.</li><li>Generate Hair Curves: Poisson Disk, 4.000 por m² (cerca de 200 guias), 12 pontos.</li><li>Set Position com uma parábola: sai pela normal, vai para o lado da risca, cai com a gravidade.</li><li>Shrinkwrap na cabeça, Above Surface 0. Daí em diante, a cadeia normal.</li><li>Pronto em <b>GR Guias Procedurais</b>. Bob: para fora 0,4, lado 0,35, gravidade 1,2. Espetado: para fora 1,2, gravidade 0.</li></ol></div>
+<figure><img src="img/lab/31_procguides_sheet.jpg" alt="Quatro cabeças com penteados diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro penteados sem esculpir uma guia: só comprimento, para fora, lado e gravidade mudam.</figcaption></figure>
+<figure><img src="img/lab/37_gallery_sheet.jpg" alt="Galeria de oito cortes" loading="lazy" style="width:100%;height:auto"><figcaption>Uma árvore, oito cortes, com cor ombré por Intercept. O preto saiu cinza: no modo Direct Coloring, preto precisa de Melanin.</figcaption></figure>
+<h2 id="lab-presos" style="margin-top:2rem">Presos e rosto</h2>
+<h3 style="margin-top:1.6rem">Rabo de cavalo, maria-chiquinha e coque</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>GR Rabo de Cavalo depois da Densidade Livre: cada fio vai até o elástico, cola no crânio e cai.</li><li>Maria-chiquinha: ligue no ponto de amarração um vetor com X = sinal do X da raiz × 8,5 cm.</li><li>Coque: enrole a cauda numa espiral com a <b>mesma fase para todos os fios</b>, como uma corda.</li><li>Cacho ou onda na cauda: o "Começa em" tem que ser maior que o "Até a amarração".</li></ol></div>
+<figure><img src="img/lab/34_pony_lib_sheet.jpg" alt="Três rabos de cavalo" loading="lazy" style="width:100%;height:auto"><figcaption>Rabo baixo, rabo alto com onda e rabo com cacho.</figcaption></figure>
+<figure><img src="img/lab/35_updos_sheet.jpg" alt="Três penteados presos" loading="lazy" style="width:100%;height:auto"><figcaption>Maria-chiquinha, rabo trançado e o primeiro coque, que virou nuvem porque a fase foi sorteada por fio.</figcaption></figure><figure><img src="img/lab/35b_bun_sheet.jpg" alt="Dois coques" loading="lazy" style="width:100%;height:auto"><figcaption>Coque com fase única: a cauda enrola como uma corda.</figcaption></figure><h3 style="margin-top:1.6rem">Sobrancelha, barba e bigode</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Recorte cada região da cabeça numa malha própria, como uma hair cap.</li><li>Um Curves vazio por região com GR Guias Procedurais direto como gerador. Pelo curto não precisa de Interpolate.</li><li>Sobrancelha: 1,4 cm, lado 1,2, gravidade −0,4. Barba: 1,8 cm, gravidade 1. Clump de 4 a 5 mm.</li></ol></div>
+<figure><img src="img/lab/36_face_sheet.jpg" alt="Rosto com sobrancelhas, barba e bigode" loading="lazy" style="width:100%;height:auto"><figcaption>O sinal do X da raiz penteia sobrancelha e bigode para fora a partir do centro do rosto.</figcaption></figure>
   <h2 id="lab-fisica" style="margin-top:2rem">Física</h2>
 <h3 style="margin-top:1.6rem">Simular sem perder o penteado</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Snap to Nearest Surface nas guias. Sem o UV de fixação, a simulação explode.</li><li>Modificador 1, só nas guias: Hair Dynamics em <b>Physics (Experimental)</b>, Bendiness 0, Root Bendiness 0, <b>Substeps 40</b>.</li><li>Modificador 2: a cadeia de groom (Interpolate e o resto).</li><li>Colisão: modificador Collider na cabeça inteira, dentro de uma coleção, e a coleção no Effectors Collection. Surface Collision no scalp explodiu em todos os testes.</li></ol></div>
