@@ -771,6 +771,7 @@ estão resumidas em 17.0):
 | Animal com tufos e manchas por região | máscaras de posição → Trim e atributos; cor por Color Ramp, não melanina | 17.78 |
 | Máscara de região sem vertex group | GR Máscara por Posição (caixa suave pela raiz) | 17.79 |
 | Moicano / crista | raspado + Comprimento até a Malha misturados por Máscara por Posição | 17.80 |
+| Undercut | Trim 5% fora da Máscara por Posição (altura e lateral) + Volume na Raiz | 17.81 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2511,3 +2512,18 @@ GR Transição (A, B) com Fator = **GR Máscara por Posição** (Lateral máx
 Scalp pintado. A crista abre em leque porque o viés para cima se soma à
 normal do crânio; para crista em lâmina reta, zere o X da direção (Viés
 maior ou uma malha mais fina).
+
+### 17.81 Undercut masculino estilizado [img/94_undercut_sheet]
+
+GR Guias Procedurais (12 cm; topete: para fora 0,9, lado 0,2, para trás 0,8;
+de lado: para fora 0,6, lado 1,0) → Densidade 350 mil/m² → GR Volume na
+Raiz → GR Mecha Estilizada 1,8 cm → Trim com Length Factor = Map Range(GR
+Máscara por Posição invertida → 1 a 0,05) → Cor por Mecha. 18 mil fios.
+
+| Máscara do topo | Resultado |
+|---|---|
+| Só altura > 5,5 cm | laterais continuam compridas: nesta cabeça quase todo o scalp lateral está acima disso |
+| **Altura > 7,5 cm e \|X\| < 5 cm** | laterais raspadas (5%), topo inteiro |
+
+A máscara de undercut precisa limitar a lateral (\|X\|), não só a altura.
+Scalp pintado escuro faz o raspado ler como sombra de cabelo curto.
