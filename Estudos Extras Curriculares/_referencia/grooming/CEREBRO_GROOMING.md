@@ -742,6 +742,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo flutuando / vento barato | Noise 4D com W = tempo × Spline Parameter^1,5 no offset das guias | 17.57 |
 | Cabelo que esparrama no chão | profundidade abaixo do piso vira deslocamento para fora | 17.58 |
 | Cada cópia com cabelo diferente | Hash da posição do Self Object no Seed e nos Random | 17.59 |
+| Meio preso, mistura regional | GR Transição com Fator = máscara de região; B = GR Rabo de Cavalo | 17.60 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1956,3 +1957,21 @@ foi ajustado à mão. Render 900 px com as quatro: 17,5 s.
   inteiro fixo exposto no modificador.
 - Pronto em **GR Semente do Objeto** (saídas Seed, Aleatório A, B e C),
   validado do .blend: três posições deram 0,422, 0,097 e 0,191.
+
+### 17.60 Meio preso com dois grupos prontos [img/67_meiopreso_sheet]
+
+Nenhum node novo: **GR Transição** com A = cabelo solto e B = o mesmo cabelo
+passado pela **GR Rabo de Cavalo** (amarração em (0; 9,5 cm; 4,5 cm), atrás
+da coroa). O Fator é a máscara de "quem vai preso":
+
+Curve Root → Z da raiz → Map Range **Smooth Step** 3,5 cm → 5,5 cm → 0 a 1 →
+Evaluate on Domain (Curve) → Fator da Transição.
+
+- Os dois ramos precisam da mesma contagem de pontos: Resample 24 antes de
+  separar (a GR Rabo de Cavalo usa 24 por padrão).
+- O Smooth Step evita a linha dura entre preso e solto.
+- Resultado: topo liso puxado para trás, resto solto. A cauda some dentro do
+  cabelo solto de mesma cor; para destacar, dê cor (17.52) ou cacho só à
+  cauda.
+- A mesma ideia vale para qualquer mistura regional de penteados: franja de
+  um, nuca de outro.

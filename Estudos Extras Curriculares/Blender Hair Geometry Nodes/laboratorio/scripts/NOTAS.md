@@ -65,3 +65,4 @@
 - Chao: guias Resample 60 -> d=max(FZ-z,0); offset = normalize(x,y+0,05,0)*d + (0,0,d). Filhos: z=max(z,FZ). Shrinkwrap empilharia. Mechas retas no chao: Noise depois.
 - Multidao por copia: Self Object -> Object Info Location -> Hash Value (Vector) -> Seeds + Random IDs (mecha, voltas, trim, obj_rand no shader). 4 copias, 1 arvore, 4 cabelos. GR Semente do Objeto validado (0,422/0,097/0,191).
 - Biblioteca 30 grupos: + GR Flutuar, GR Chao. Validado juntos: z min -0,547 com piso -0,55.
+- Meio preso: Resample 24 -> A solto, B = Rabo de Cavalo (tie 0,.095,.045) -> Transicao Fator = smoothstep(z raiz 3,5..5,5 cm) por curva. Topo liso; cauda some no solto.
