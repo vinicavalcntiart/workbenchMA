@@ -795,6 +795,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
   <div class="eyebrow">Laboratório</div>
   <h2>Receitas testadas no Blender 5.2</h2>
   <p>Tudo nesta parte foi montado e renderizado no Blender 5.2.2, numa cabeça em escala real (10 cm de raio). Então os números funcionam direto no seu arquivo. Cada receita tem uma folha de teste com o antes e o depois.</p>
+<figure><img src="img/lab/triptico_v2.jpg" alt="Três personagens: cacheada, criatura peluda e anime azul" loading="lazy" style="width:100%;height:auto"><figcaption>Três personagens sem nenhuma guia esculpida, só com a biblioteca: cachos por mecha com física, criatura com pelo pictórico, anime com cel-shading e contorno.</figcaption></figure>
 <figure><img src="img/lab/triptico.jpg" alt="Três renders: bob castanho, cachos ruivos e bicho de pelo com olhos grandes" loading="lazy" style="width:100%;height:auto"><figcaption>Três estilos feitos só com a biblioteca de node groups do laboratório: bob com mecha em fita, cachos por mecha e bicho de pelo em tufos.</figcaption></figure>
   <h3 style="margin-top:1.6rem">Quero... faço</h3>
   <div class="tbl"><table>
@@ -820,10 +821,24 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Groom pesado de repente</td><td>Ponta Virada antes do Cacho, Subdivisão 0 ou 1</td></tr>
     <tr><td>Cada cópia diferente</td><td>GR Semente do Objeto nos Seeds</td></tr>
     <tr><td>Pelo seguindo uma direção</td><td>GR Pentear por Curva</td></tr>
+    <tr><td>Cel-shading no cabelo</td><td>GR Normal da Malha + GR Cabelo Cel</td></tr>
+    <tr><td>Reprodução lenta</td><td>Node Bake no fim</td></tr>
   </table></div>
 
+<h3 style="margin-top:1.6rem">As regras que mais pesaram</h3>
+<div class="tbl"><table>
+<tr><th>Regra</th><th>Por quê</th></tr>
+<tr><td>Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1</td><td>6,8 s viraram 0,7 s</td></tr>
+<tr><td>Deform Curves on Surface é o último node de forma</td><td>antes, a raiz descola; depois dele, padrão por posição escorrega</td></tr>
+<tr><td>Feche a topologia do scalp antes de pentear</td><td>Triangulate re-sorteia todas as raízes</td></tr>
+<tr><td>Scalp pintado com a cor da raiz</td><td>60 mil fios cobrem como 300 mil</td></tr>
+<tr><td>Escala de objeto não aplicada</td><td>o groom escala junto</td></tr>
+<tr><td>Shrinkwrap na cabeça depois do Braid</td><td>o Braid afunda 58% do trecho do crânio</td></tr>
+<tr><td>Normal de uma malha lisa no shader</td><td>cel-shading e pelo pictórico com 2 nodes</td></tr>
+<tr><td>Node Bake para reproduzir</td><td>353 ms viram 9 ms por quadro</td></tr>
+</table></div>
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 30 node groups e 4 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 31 node groups e 5 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
@@ -930,6 +945,20 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Cada cópia com cabelo diferente</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Self Object → Object Info → Location → <b>Hash Value</b> (Vector).</li><li>Esse inteiro no Seed de todos os grupos e no ID de Random Values: tamanho da mecha, voltas por metro, comprimento, cor.</li><li>Duplique cabeça, scalp e cabelo juntos. Cada cópia sorteia o seu. Pronto em <b>GR Semente do Objeto</b>.</li></ol></div>
 <figure><img src="img/lab/66_multidao.jpg" alt="Quatro cabeças com cabelos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro cópias, o mesmo node tree: preto, loiro, castanho e ruivo, cada uma com comprimento e cacho próprios.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Reproduzir groom pesado: Bake</h3>
+<p>Node Bake no fim da cadeia, modo Animation. Com 1,4 milhão de pontos animados, a reprodução foi de <b>353 ms para 9 ms por quadro</b>. Custa disco: 23 MB por quadro nessa densidade.</p>
+<h3 style="margin-top:1.6rem">Fio saindo pela pele</h3>
+<p>O próprio Interpolate põe 1,7% dos pontos dentro da cabeça. Um Shrinkwrap antes de Onda e Cacho reduz para 1,3% por 0,85 s; no fim zera, mas custa 9× mais. Use o do fim só no render.</p>
+<h3 style="margin-top:1.6rem">Shape das curvas no Cycles</h3>
+<p>Rounded Ribbons (padrão) e 3D Curves ficam a menos de 7% de brilho na vista normal. Em close de fio grosso, o Ribbon sai quase 2× mais claro. Ajuste a cor no Shape do render final.</p>
+<figure><img src="img/lab/77_shape_sheet.jpg" alt="Três closes de cacho" loading="lazy" style="width:100%;height:auto"><figcaption>Mesma melanina em Ribbons, 3D Curves e Linear 3D Curves, em close de fio grosso.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Comprimento pintado e mecha por região</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Comprimento: <code>surface_uv_coordinate</code> → Image Texture → Map Range (0,35 a 1,1) → Trim Length Factor.</li><li>Mecha larga no topo e fina embaixo: dois ramos de GR Mecha Estilizada do mesmo Interpolate, misturados pela GR Transição com a altura da raiz.</li></ol></div>
+<figure><img src="img/lab/79_clumpreg_sheet.jpg" alt="Três cortes com mechas de tamanhos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Mecha de 8 mm, de 3,5 cm, e as duas por região.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Chapéu e ombros</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Chapéu: copa e aba em objetos separados. Shrinkwrap na cabeça com Factor = Raycast para cima na copa <b>ou</b> para baixo na aba. Pontos furando a copa: 1.568 → 0.</li><li>Ombros: Shrinkwrap no tronco com Above Surface 0. Pontos dentro dos ombros: 9,8% → 0,2%.</li></ol></div>
+<figure><img src="img/lab/74_chapeu_sheet.jpg" alt="Três cabeças de chapéu" loading="lazy" style="width:100%;height:auto"><figcaption>Sem ajuste, máscara com a aba (tudo cola) e a máscara certa.</figcaption></figure>
+<figure><img src="img/lab/75_ombro_sheet.jpg" alt="Três bustos com cabelo longo" loading="lazy" style="width:100%;height:auto"><figcaption>Sem colisão o cabelo some nos ombros; com Shrinkwrap no tronco, apoia.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Um groom, várias cabeças</h3>
 <p>A mesma cadeia procedural serviu numa cabeça redonda, ovo e larga sem mudar nenhum valor. Para criança, use <b>escala de objeto não aplicada</b>: todas as distâncias escalam juntas.</p>
 <figure><img src="img/lab/51_heads_sheet.jpg" alt="Seis cabeças com o mesmo penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Com a malha escalada, fio, mecha e onda continuam em tamanho de adulto. Com a escala do objeto, sai réplica exata.</figcaption></figure>
@@ -963,6 +992,13 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Meio preso</h3>
 <p>Sem node novo: GR Transição com A = solto, B = o mesmo cabelo pela GR Rabo de Cavalo, e Fator = altura da raiz (Smooth Step de 3,5 a 5,5 cm). O topo vai preso, o resto fica solto.</p>
 <figure><img src="img/lab/67_meiopreso_sheet.jpg" alt="Quatro vistas de um penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Solto, rabo em tudo, meio preso de costas e de lado.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Trança lateral no ombro</h3>
+<p>GR Rabo de Cavalo com a amarração na nuca, de lado, e Para trás −0,5 (a cauda vai para frente), seguido da GR Trança Grossa. <b>Ligue a cabeça na entrada nova da Trança Grossa</b>: o Braid junta o fio inteiro na guia e afunda o trecho do crânio.</p>
+<figure><img src="img/lab/68_elsa_compare.jpg" alt="Antes e depois da trança lateral" loading="lazy" style="width:100%;height:auto"><figcaption>Em cima, topo careca pelo Braid. Embaixo, com o Shrinkwrap dentro do grupo.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Pelo pictórico e cel-shading</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Guarde a normal da pele (pelo) ou de uma malha lisa em volta do cabelo num atributo.</li><li>No shader: Attribute → Vector Transform (Normal, Object → World) → Normal do Toon.</li><li>A luz agrupa em massas, como pintura. Cor por clump e sub-clump reforça a pincelada. Pronto em <b>GR Normal da Malha</b> + material <b>GR Cabelo Cel</b>.</li></ol></div>
+<figure><img src="img/lab/72_pictorico_sheet.jpg" alt="Três criaturas peludas" loading="lazy" style="width:100%;height:auto"><figcaption>Principled Hair fio a fio, Toon com a normal da pele, e com buracos entre clumps.</figcaption></figure>
+<figure><img src="img/lab/73_normal_sheet.jpg" alt="Três bobs em Toon" loading="lazy" style="width:100%;height:auto"><figcaption>Normal do fio, do scalp e da malha proxy: só a proxy dá o terminador limpo.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
 <p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
 <figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
