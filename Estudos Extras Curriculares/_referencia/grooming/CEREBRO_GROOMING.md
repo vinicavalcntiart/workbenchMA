@@ -620,6 +620,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Cabelo escurece no close de fio grosso | Shape 3D Curves faz sombra entre fios; Ribbons não | Ajuste a cor no Shape do render final; em vista normal a diferença é < 7% | lab 17.68 |
 | Interpolate não gera filhos com guias de Grease Pencil ou Curve | Falta o bundle de fixação (surface_geometry/surface_uv_map) | Set Attachment Surface antes; não use Attach Hair Curves (1 ponto) | lab 17.71 |
 | Grupos GR quebrados ao abrir em outra máquina | Utilitários do Essentials (Curve Root, Rest Surface...) vieram linkados com caminho da instalação | Tornar local antes de salvar (feito na biblioteca do laboratório) | lab 17.72 |
+| Cabeça inteira vira uma trança só | GR Trança Grossa antiga com Guide Distance fixo 0,3 m | Use o Tamanho da trança (~1,5 cm) | lab 17.75 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -763,6 +764,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Mandar biblioteca de grupos para outra máquina | tornar locais os utilitários que o Essentials traz linkados | 17.72 |
 | Despenteado com mechas coesas | Rotate + Noise nas guias; strays nos filhos | 17.73 |
 | Dreadlocks | 2.200/m² → Onda S lenta → Mecha Chunky redonda → relevo por Noise | 17.74 |
+| Tranças box | GR Trança Grossa com Tamanho da trança ~1,5 cm, Guias por fio 1 | 17.75 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2380,3 +2382,20 @@ Normal × valor → Set Position Offset. Scalp pintado escuro. 62 mil faces.
 - Cor: Principled BSDF marrom 0,06 com roughness 0,75 ainda leu marrom
   médio acinzentado; para dread escura, baixe a cor base (≈0,03) ou use o
   GR Cabelo Cel com a normal de uma casca (17.65).
+
+### 17.75 Tranças box (muitas tranças finas) [img/86_box_sheet]
+
+GR Guias Procedurais (34 cm) → GR Densidade Livre (400 mil/m², **Guias
+por fio 1**) → GR Trança Grossa com **Tamanho da trança 1,5 cm**, raio 4
+mm, Cruzamentos 6, Começa em 0,03, cabeça ligada. ~21 mil fios, 940 mil
+pontos. Scalp pintado escuro.
+
+**Bug da biblioteca achado aqui:** a GR Trança Grossa tinha o Guide Distance
+interno do Braid **fixo em 0,3 m** (feito para o rabo de cavalo, onde todos
+os fios vão numa trança só). Na cabeça inteira, isso juntou tudo **numa
+única trança**. Agora o grupo expõe **Tamanho da trança** (padrão 0,3, o
+comportamento antigo; ~1,5 cm para tranças box). Regressão das tranças
+antigas: sem mudança.
+
+- Guias por fio 1 no Interpolate: cada filho segue uma guia só, e a trança
+  não mistura duas guias vizinhas.

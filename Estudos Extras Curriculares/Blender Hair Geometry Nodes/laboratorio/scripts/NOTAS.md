@@ -89,3 +89,4 @@
 - Atras da orelha: FUNCIONOU com orelha saindo ~2 cm (tie sign(x)*10,8cm, 3,5, 0,5; mascara |x| 2,5-4,5, y 7->4, z 9->7 cm).
 - Despenteado: nas guias Rotate Random Offset 0,5 + Noise 2cm Scale 6 OffsetPerCurve 1; strays 6% nos filhos. Mechas coesas.
 - Dreads: 2200/m2 -> Onda S periodo 25cm amp 1cm -> Chunky achat 1 raio 7mm torcao 0 48 pts -> Noise Scale 180 +-1,2mm na normal. Onda padrao = macarrao.
+- Trancas box: GR Tranca Grossa tinha Guide Distance fixo 0,3 (tudo numa tranca). Exposto 'Tamanho da tranca' (padrao 0,3). Box: 1,5 cm, raio 4mm, cruz 6, Guias por fio 1, 400k/m2.
