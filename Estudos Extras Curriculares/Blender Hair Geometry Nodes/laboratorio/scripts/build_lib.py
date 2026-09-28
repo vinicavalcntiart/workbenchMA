@@ -226,10 +226,20 @@ rad = g.inp("Raio", 'NodeSocketFloat', 0.016, 0.0, 1.0, "", 'DISTANCE')
 fq = g.inp("Cruzamentos", 'NodeSocketFloat', 1.0, 0.0, 100.0, "Frequency: 2 = fechada, 0,5 = solta")
 ini = g.inp("Começa em", 'NodeSocketFloat', 0.12, 0.0, 1.0, "", 'FACTOR')
 fmin = g.inp("Espessura na ponta", 'NodeSocketFloat', 0.7, 0.0, 10.0, "Factor Min. 0 afina ate sumir")
+cab = g.inp("Cabeça (colisão)", 'NodeSocketObject', desc="Opcional. Depois de GR Rabo de Cavalo, o Braid puxa o trecho do cranio para dentro da cabeca (58% dos pontos); com a cabeca aqui, um Shrinkwrap devolve para fora")
 o = g.out("Geometry", 'NodeSocketGeometry')
 br = g.n('GeometryNodeGroup', group=EG['Braid Hair Curves'], Factor=1.0, Subdivision=2, Shape=0.0, Factor_Max=1.0, Guide_Distance=0.3, Existing_Guide_Map=False)
 g.l(geo, br.inputs['Geometry']); g.l(rad, br.inputs['Radius']); g.l(fq, br.inputs['Frequency']); g.l(ini, br.inputs['Braid Start']); g.l(fmin, br.inputs['Factor Min'])
-g.l(br.outputs['Geometry'], o); libs.append(g.ng)
+sw_ = g.n('GeometryNodeGroup', group=EG['Shrinkwrap Hair Curves'], Factor=1.0, Offset_Distance=0.004, Above_Surface=0.0, Smoothing_Steps=2, Lock_Roots=True)
+g.l(br.outputs['Geometry'], sw_.inputs['Geometry'])
+for x in sw_.inputs:
+    if x.name == 'Surface' and x.type == 'OBJECT': g.l(cab, x)
+# sem cabeca ligada: passa direto
+oi_ = g.n('GeometryNodeObjectInfo'); g.l(cab, oi_.inputs['Object'])
+dsz = g.n('GeometryNodeAttributeDomainSize', props={'component':'MESH'}); g.l(oi_.outputs['Geometry'], dsz.inputs['Geometry'])
+has = g.n('FunctionNodeCompare', props={'data_type':'INT','operation':'GREATER_THAN'}); _ins = [x for x in has.inputs if x.type=='INT']; g.l(dsz.outputs['Point Count'], _ins[0]); _ins[1].default_value = 0
+swt = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(has.outputs[0], swt.inputs['Switch']); g.l(br.outputs['Geometry'], swt.inputs['False']); g.l(sw_.outputs['Geometry'], swt.inputs['True'])
+g.l(swt.outputs[0], o); libs.append(g.ng)
 
 # 12. Corte por Regiao
 g = G("GR Corte por Região", "Encurta onde o vertex group do scalp vale 0 e desliga o clump ali. Vertex group chega nos fios como atributo de Curve.")

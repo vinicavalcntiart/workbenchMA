@@ -615,6 +615,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Padrão de cor escorrega quando anima | Textura por Position lida depois do Deform | Calcular antes do Deform ou usar surface_uv_coordinate | lab 17.46 |
 | Contorno (casca invertida) deixa tudo preto | A casca bloqueia os raios de sombra | Factor = Maximum(Backfacing, 1 − Is Camera Ray) | lab 17.47 |
 | Groom de repente pesado (segundos por avaliação) | Roll/Ponta Virada depois do Curl, com Subdivision 2: pontos × 4 | Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1 | lab 17.54 |
+| Topo careca ou com ruído depois de trançar | Braid junta o fio inteiro na guia e afunda o trecho do crânio (58% dentro) | Shrinkwrap na cabeça depois do Braid (GR Trança Grossa com Cabeça ligada) | lab 17.61 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -743,6 +744,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo que esparrama no chão | profundidade abaixo do piso vira deslocamento para fora | 17.58 |
 | Cada cópia com cabelo diferente | Hash da posição do Self Object no Seed e nos Random | 17.59 |
 | Meio preso, mistura regional | GR Transição com Fator = máscara de região; B = GR Rabo de Cavalo | 17.60 |
+| Trança lateral no ombro | Rabo de Cavalo com amarração lateral e Para trás −0,5 → Trança Grossa com a cabeça ligada | 17.61 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1975,3 +1977,28 @@ Evaluate on Domain (Curve) → Fator da Transição.
   cauda.
 - A mesma ideia vale para qualquer mistura regional de penteados: franja de
   um, nuca de outro.
+
+### 17.61 Trança lateral no ombro e o Braid que afunda o crânio [img/68_elsa_compare]
+
+Trança estilo Elsa com dois grupos: GR Rabo de Cavalo com a amarração na
+nuca, de lado (7,5; 6; −7 cm), **Para trás −0,5** (a cauda vai para frente,
+por cima do ombro), cauda 30 cm → GR Trança Grossa (raio 2,2 cm, Começa em
+0,38, Cruzamentos 1).
+
+**Bug achado e medido:** o Braid Hair Curves junta os filhos na guia pelo
+fio **inteiro**, não só a partir do Braid Start. Depois da GR Rabo de
+Cavalo, o trecho da raiz até a amarração foi puxado para dentro da cabeça:
+
+| Cadeia | Pontos do 1º terço dentro da cabeça |
+|---|---|
+| Rabo de Cavalo sozinho | 0% |
+| Rabo de Cavalo → Trança Grossa | **58%** (o topo parece careca) |
+| → Trança Grossa → Shrinkwrap na cabeça (Above 0, Offset 4 mm) | 0,6% |
+
+Correção na biblioteca: a **GR Trança Grossa ganhou a entrada opcional
+Cabeça (colisão)**. Com a cabeça ligada, ela aplica o Shrinkwrap depois do
+Braid; sem nada ligado, passa direto como antes. O "topo com ruído" do rabo
+trançado de 17.31 era isso.
+
+- Loiro platinado (melanina 0,02) some em pele clara: use 0,1 a 0,15 e scalp
+  pintado (17.42).

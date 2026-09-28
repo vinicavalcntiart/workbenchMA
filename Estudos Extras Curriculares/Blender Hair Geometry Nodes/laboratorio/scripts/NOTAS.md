@@ -66,3 +66,4 @@
 - Multidao por copia: Self Object -> Object Info Location -> Hash Value (Vector) -> Seeds + Random IDs (mecha, voltas, trim, obj_rand no shader). 4 copias, 1 arvore, 4 cabelos. GR Semente do Objeto validado (0,422/0,097/0,191).
 - Biblioteca 30 grupos: + GR Flutuar, GR Chao. Validado juntos: z min -0,547 com piso -0,55.
 - Meio preso: Resample 24 -> A solto, B = Rabo de Cavalo (tie 0,.095,.045) -> Transicao Fator = smoothstep(z raiz 3,5..5,5 cm) por curva. Topo liso; cauda some no solto.
+- Tranca: Braid (GR Tranca Grossa) depois do Rabo de Cavalo afunda o trecho do cranio (58% do 1/3 inicial dentro da cabeca). Shrinkwrap depois = 0,6%. GR Tranca Grossa ganhou entrada Cabeca (colisao) com Switch por Domain Size. Elsa: tie (0,075,0,06,-0,07), Para tras -0,5.
