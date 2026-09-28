@@ -21,10 +21,6 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Palomar Animation (Mediawan) | Candidatura | site | n | https://mediawankidsandfamily.com/jobs |
 | 28/09 | Menhir FX | Candidature spontanée | site (Gravity Forms) | n | https://menhirfx.com/en/recruitment-2/ |
 | 27/09 | Jungler | (quadro JazzHR, Paris) | JazzHR | s | https://jungler.applytojob.com/apply/2Ft7PxD7Nn |
-| 28/09 | Sans Strings Studio | Expression of Interest | site (bitforms) | n | https://sansstrings.studio/careers/ |
-| 28/09 | VFX Legion | Artist Application | site (Everest Forms) | n | https://vfxlegion.com/join-us/ |
-| 28/09 | Palomar Animation (Mediawan) | Candidatura | site | n | https://mediawankidsandfamily.com/jobs |
-| 28/09 | Menhir FX | Candidature spontanée | site (Gravity Forms) | n | https://menhirfx.com/en/recruitment-2/ |
 
 Sem recibo da leva de 27/09 (conferir no Gmail antes de refazer): Framestore Montreal (Généraliste Blender), Obsidian, Mediawan.
 
