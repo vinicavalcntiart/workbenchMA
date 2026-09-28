@@ -26,6 +26,8 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Ubisoft Montreal | Technical Art Director (Unreal) | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000137122146 |
 | 28/09 | Ubisoft Paris | Senior Technical Artist (Tool & Art Pipelines) | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/Ubisoft2/744000110207267 |
 | 28/09 | Keywords Studios (Austrália) | General Expressions of Interest | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/keywordsstudios/744000113045937 |
+| 28/09 | Entropy Studio | Recruitment (3D Modeler organic/character) | site (Wix, reCAPTCHA de caixa) | s | https://www.entropystudio.net/jobs |
+| 28/09 | Outplay Entertainment | Speculative Applications | JazzHR (reCAPTCHA de caixa) | n | https://www.outplay.com/careers/speculative-applications/ |
 | 27/09 | Jungler | (quadro JazzHR, Paris) | JazzHR | s | https://jungler.applytojob.com/apply/2Ft7PxD7Nn |
 
 Sem recibo da leva de 27/09 (conferir no Gmail antes de refazer): Framestore Montreal (Généraliste Blender), Obsidian, Mediawan.
