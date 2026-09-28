@@ -44,6 +44,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
 | 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
 | 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
+| 28/09 | Ubisoft Reflections (Newcastle) | Senior Technical Animator [Rainbow Six] (744000120685617) | SmartRecruiters (DataDome) | n | https://jobs.smartrecruiters.com/Ubisoft2/744000120685617 |
 
 Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
@@ -55,5 +56,5 @@ Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recib
 | LIGHT Visual Effects | Careers (personagem 3D) | Google Form só abre com conta Google | s | https://forms.gle/LHYKPPw6JZ6Nmffi8 |
 | CayPlay Studios | Spontaneous Application | Google Form só abre com conta Google | n | https://forms.gle/pjFVG3oEvA9vxtS18 |
 | Super Spline Studios | Formulário de candidatura | Google Form só abre com conta Google | n | https://forms.gle/Hy2DSc11gBzGb9hJ8 |
-| Paramount | Senior Designer, Toy & Illustration (req 1430792500, Los Angeles, USD 74.400-93.000) | senha da conta no SuccessFactors (career41.sapsf.com) | n | https://careers.paramount.com |
 | Hasbro / Wizards of the Coast | Principal Character Artist (req 68744377699, Durham NC), achada por busca 28/09, inédita no dedupe | o site careers.hasbro.com não abre a partir da nuvem (falha de TLS do próprio servidor); abre no navegador da leva | s | https://careers.hasbro.com/careers/job/68744377699 |
+
