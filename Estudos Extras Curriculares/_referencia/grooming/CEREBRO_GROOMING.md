@@ -765,6 +765,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Despenteado com mechas coesas | Rotate + Noise nas guias; strays nos filhos | 17.73 |
 | Dreadlocks | 2.200/m² → Onda S lenta → Mecha Chunky redonda → relevo por Noise | 17.74 |
 | Tranças box | GR Trança Grossa com Tamanho da trança ~1,5 cm, Guias por fio 1 | 17.75 |
+| Barba longa de fio ou em blocos | Guias Procedurais na região; Chunky + Cel + Contorno para blocos | 17.76 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2418,3 +2419,19 @@ antigas: sem mudança.
   Shrinkwrap (4 a 6 mm, intencional) e o Guide Distance 0,1 do Curl dentro
   da GR Cacho por Mecha. Medido: com Existing Guide Map ligado, trocar esse
   valor para 0,01 mudou **0,0** na geometria. Ele é ignorado.
+
+### 17.76 Barba longa: fio contra blocos [img/89_barba_sheet]
+
+Região da barba recortada da cabeça (17.32), GR Guias Procedurais como
+gerador (7 a 8 cm, para fora 0,6 a 0,7, **Para trás −0,3** = para frente,
+gravidade 1,4 a 1,5).
+
+| Versão | Nodes depois das guias | Leitura |
+|---|---|---|
+| Fio | 600 mil/m², Clump 8 mm, raio 0,4 mm, Principled Hair | barba cheia, realista estilizada |
+| Blocos | 4.000/m² → GR Mecha Chunky (raio 1,2 cm, torção 0,15) → GR Normal da Malha (cabeça) → GR Cabelo Cel → GR Contorno 2 mm | barba de desenho em placas |
+
+Na versão em blocos, a normal da cabeça embaixo do queixo aponta para
+baixo, e a barba toda ficou no lado escuro do Toon. Para barba, use como
+Malha da GR Normal da Malha uma esfera/casca na frente do rosto (a barba
+"olha" para a câmera), não a cabeça.

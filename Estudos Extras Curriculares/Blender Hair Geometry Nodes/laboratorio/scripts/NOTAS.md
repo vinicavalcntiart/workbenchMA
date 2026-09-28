@@ -93,3 +93,4 @@
 - Auditoria valores fixos: Curl GD 0,1 na GR Cacho por Mecha ignorado com Existing ON (diferenca 0,0). Resto so Offset de Shrinkwrap.
 - Afro casca variacoes: larga, alta, dois puffs (mesmo node tree). Recorte do rosto em degrau + borda oca de frente: usar Solidify curto ou hairline procedural.
 - Borda do afro: recorte eliptico 22x19 cm em esfera 128x64 + Solidify 2 cm (offset -1): sem degrau, sem oco. Elipse 17x15 engole o rosto.
+- Barba: fio 600k/m2 clump 8mm; blocos 4000/m2 Chunky raio 1,2cm + Cel + Contorno. Normal da cabeca deixa a barba escura (aponta para baixo): usar casca frontal.
