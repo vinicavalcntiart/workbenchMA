@@ -539,6 +539,31 @@ uv = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT2','domain'
 ss = g.n('GeometryNodeSetShadeSmooth'); g.l(uv.outputs['Geometry'], ss.inputs['Geometry'])
 g.l(ss.outputs['Geometry'], o); libs.append(g.ng)
 
+# 25. Contorno
+def mat_contorno():
+    m = bpy.data.materials.new("GR Contorno"); nt = m.node_tree; nt.nodes.clear()
+    o = nt.nodes.new('ShaderNodeOutputMaterial'); gm = nt.nodes.new('ShaderNodeNewGeometry'); tr = nt.nodes.new('ShaderNodeBsdfTransparent')
+    em = nt.nodes.new('ShaderNodeEmission'); em.inputs['Color'].default_value=(0.02,0.01,0.005,1)
+    lp = nt.nodes.new('ShaderNodeLightPath'); inv = nt.nodes.new('ShaderNodeMath'); inv.operation='SUBTRACT'; inv.inputs[0].default_value=1.0; nt.links.new(lp.outputs['Is Camera Ray'], inv.inputs[1])
+    mxm = nt.nodes.new('ShaderNodeMath'); mxm.operation='MAXIMUM'; nt.links.new(gm.outputs['Backfacing'], mxm.inputs[0]); nt.links.new(inv.outputs[0], mxm.inputs[1])
+    mx = nt.nodes.new('ShaderNodeMixShader'); nt.links.new(mxm.outputs[0], mx.inputs[0]); nt.links.new(em.outputs[0], mx.inputs[1]); nt.links.new(tr.outputs[0], mx.inputs[2]); nt.links.new(mx.outputs[0], o.inputs['Surface'])
+    return m
+MCONT = mat_contorno()
+g = G("GR Contorno", "Contorno de nanquim por casca invertida, feito no GN (sem modificador). Para malha (GR Mecha Chunky). Material GR Contorno: so raios de camera veem a casca, senao ela bloqueia a luz. Cycles: Transparent bounces >= 32.")
+geo = g.inp("Mesh", 'NodeSocketGeometry')
+es = g.inp("Espessura", 'NodeSocketFloat', 0.0025, 0.0, 1.0, "2,5 mm le como traco de desenho a 70 cm", 'DISTANCE')
+mt = g.inp("Material", 'NodeSocketMaterial')
+o = g.out("Mesh", 'NodeSocketGeometry')
+fl = g.n('GeometryNodeFlipFaces'); g.l(geo, fl.inputs['Mesh'])
+nn = g.n('GeometryNodeInputNormal'); ng_ = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(es, ng_.inputs[0]); ng_.inputs[1].default_value = -1.0
+sc_ = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nn.outputs[0], sc_.inputs[0]); g.l(ng_.outputs[0], sc_.inputs['Scale'])
+sp = g.n('GeometryNodeSetPosition'); g.l(fl.outputs[0], sp.inputs['Geometry']); g.l(sc_.outputs[0], sp.inputs['Offset'])
+sm = g.n('GeometryNodeSetMaterial'); g.l(sp.outputs[0], sm.inputs['Geometry']); g.l(mt, sm.inputs['Material'])
+j = g.n('GeometryNodeJoinGeometry'); g.l(geo, j.inputs[0]); g.l(sm.outputs[0], j.inputs[0])
+g.l(j.outputs[0], o); libs.append(g.ng)
+for it in g.ng.interface.items_tree:
+    if getattr(it, 'name', '') == "Material" and it.in_out == 'INPUT': it.default_value = MCONT
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
@@ -580,7 +605,7 @@ def mat_card():
     cr2 = nt.nodes.new('ShaderNodeMix'); cr2.data_type='RGBA'; cr2.inputs[6].default_value=(0.05,0.02,0.01,1); cr2.inputs[7].default_value=(0.22,0.10,0.045,1)
     nt.links.new(sep.outputs['Y'], cr2.inputs[0]); nt.links.new(cr2.outputs[2], b.inputs['Base Color'])
     return m
-mats = [mat_mecha(), mat_toon(), mat_card()]
+mats = [mat_mecha(), mat_toon(), mat_card(), MCONT]
 
 for ng in libs:
     ng.asset_mark(); ng.asset_data.description = ng.description

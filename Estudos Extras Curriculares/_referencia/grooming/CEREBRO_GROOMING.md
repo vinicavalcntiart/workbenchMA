@@ -613,6 +613,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Fios descem ou somem com Raycast na malha | Raiz fora da malha | A malha tem que conter todo o scalp | lab 17.40 |
 | Cabeça atravessa o cabelo na animação | Sem Deform Curves on Surface, ou ele antes do Interpolate | Deform no fim da cadeia; Add Rest Position no scalp | lab 17.46 |
 | Padrão de cor escorrega quando anima | Textura por Position lida depois do Deform | Calcular antes do Deform ou usar surface_uv_coordinate | lab 17.46 |
+| Contorno (casca invertida) deixa tudo preto | A casca bloqueia os raios de sombra | Factor = Maximum(Backfacing, 1 − Is Camera Ray) | lab 17.47 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -726,6 +727,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Listra, mancha, roseta no pelo | textura na raiz → atributo → cor + Trim 40% | 17.44 |
 | Mesmo groom em outra cabeça ou criança | troque scalp e colisão; criança = escala de objeto não aplicada | 17.45 |
 | Cabelo seguir cabeça animada | Deform Curves on Surface no fim; padrões por posição antes dele | 17.46 |
+| Contorno de desenho | casca invertida no GN + material só para raio de câmera | 17.47 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1019,7 +1021,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e quatro node groups "GR" e três materiais, marcados como asset, feitos com as
+Vinte e cinco node groups "GR" e quatro materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1028,10 +1030,11 @@ receitas desta seção e validados abrindo o .blend do zero:
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
-  Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards (24
-  grupos)
+  Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
+  Contorno (25 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
-- Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon e GR Card Alpha.
+- Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
+  Contorno.
 
 Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
 problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
@@ -1656,3 +1659,28 @@ Medido com a shape key em 0 e em 1, mesmos fios:
    trocaram de cor com uma inclinação de 5 cm. Isso confirma a nota de 17.44.
 3. Sem Add Rest Position no scalp, o Rest Surface avisa "Missing rest
    geometry on surface" (visto no dump do grupo, 5.2.2).
+
+### 17.47 Contorno de nanquim nas mechas de malha [img/53_toon_sheet]
+
+Para cabelo em malha (GR Mecha Chunky, 17.11) com GR Cabelo Toon. Casca
+invertida feita **dentro do Geometry Nodes**, sem modificador Solidify:
+
+1. Flip Faces na malha → Set Position Offset = Normal × (−espessura) →
+   Set Material "contorno" → Join Geometry com a malha original.
+2. Material do contorno: Mix Shader entre Emission quase preta e Transparent,
+   Factor = **Maximum(Backfacing, 1 − Is Camera Ray)**.
+
+| Versão | Resultado |
+|---|---|
+| Factor = só Backfacing | **cabelo inteiro preto**: a casca bloqueia os raios de sombra e de luz |
+| Factor = Maximum(Backfacing, 1 − Is Camera Ray) | contorno certo: só a câmera vê a casca |
+| Espessura 1,2 mm | traço fino, quase some a 70 cm |
+| **Espessura 2,5 mm** | traço de desenho legível |
+
+- A casca dobra as faces (40,6 mil → 79 a 84 mil).
+- Cycles: Transparent Max Bounces ≥ 32 (usei 64); com muitas mechas
+  sobrepostas o padrão 8 pode escurecer.
+- Espessura em metros do objeto: com escala de objeto (17.45), o traço
+  acompanha.
+
+Pronto em **GR Contorno** + material **GR Contorno**, validado do .blend.

@@ -40,12 +40,13 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Corte pela Malha | corte reto: apaga o que passa da malha | depois da Mecha/Onda |
 | GR Comprimento até a Malha | fio reto da raiz até a malha (Trolls, espetado) | depois da Densidade Livre, antes do Clump |
 | GR Hair Cards | fitas planas com UV para jogo (Convert > Mesh e FBX) | depois da Densidade Livre com 8.000-20.000/m² |
+| GR Contorno | traço de desenho em volta das mechas de malha | depois da GR Mecha Chunky |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
-**GR Cabelo Toon**, e **GR Card Alpha** para os cards.
+**GR Cabelo Toon**, **GR Card Alpha** para os cards e **GR Contorno** para o traço.
 
 ## Física
 
@@ -61,3 +62,7 @@ GR Densidade Livre → GR Mecha Estilizada → GR Strays em Arco → GR Cacho po
 Mecha → GR Cor por Mecha → Set Hair Curve Profile → Set Material.
 
 Para variações, ligue um único node Integer no Seed de todos os grupos.
+
+Personagem animado: Deform Curves on Surface é o último node de forma (depois
+de Mecha, Cacho, Onda, Corte pela Malha), com Add Rest Position ligado no
+scalp. Tudo que lê posição vem antes dele (CEREBRO 17.46).
