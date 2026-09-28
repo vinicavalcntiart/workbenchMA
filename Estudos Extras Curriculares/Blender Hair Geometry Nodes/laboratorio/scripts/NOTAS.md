@@ -98,3 +98,4 @@
 - Raposa: comprimento por regiao (bochecha, ponta orelha) ok; cor por melanina nao contrasta (branco 0,02 ainda laranja; ponta +0,5 fraca): usar Principled BSDF/Toon com Color Ramp.
 - Raposa Toon: Mix de cor pelos atributos + nvol do corpo -> manchas aparecem. Confirma: cor de mancha por Color/Mix, nao melanina.
 - GR Mascara por Posicao (campo): caixa suave na raiz. Validado: z>5cm -> Trim 40%; 8833/4842/1775. Biblioteca 33 grupos.
+- Moicano: A raspado (Trim 6mm + Shrinkwrap) / B Comprimento ate a Malha (elipsoide 3x16x20) + Mecha; Transicao Fator = Mascara Posicao |x|<1,8cm z>2cm. 18k fios.

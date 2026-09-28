@@ -769,6 +769,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Menor groom estilizado | Value → Interpolate → Clump 0,25 → Profile → Material (5 nodes, 46 ms) | 17.77 |
 | Animal com tufos e manchas por região | máscaras de posição → Trim e atributos; cor por Color Ramp, não melanina | 17.78 |
 | Máscara de região sem vertex group | GR Máscara por Posição (caixa suave pela raiz) | 17.79 |
+| Moicano / crista | raspado + Comprimento até a Malha misturados por Máscara por Posição | 17.80 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2490,3 +2491,18 @@ Ligue a saída no Fator da GR Transição, no Length Factor do Trim (via Map
 Range), no Factor de Clump/Curl/Shrinkwrap ou num Store Named Attribute
 para o shader. Validado: Altura mín 5 cm, Trim 100% → 40% = topo curto;
 8.833 fios na máscara, 4.842 fora, 1.775 na borda suave.
+
+### 17.80 Moicano com três grupos prontos [img/93_moicano]
+
+Da mesma GR Densidade Livre (350 mil/m²), dois ramos:
+
+- **A, raspado**: Trim Replace Length 6 mm → Shrinkwrap na cabeça (Above 0,
+  Offset 2 mm) → Resample 12.
+- **B, crista**: GR Comprimento até a Malha (elipsoide 3 × 16 × 20 cm sobre
+  a linha do meio, Viés (0,0,0,8), 12 pontos) → GR Mecha Estilizada 1,5 cm.
+
+GR Transição (A, B) com Fator = **GR Máscara por Posição** (Lateral máx
+1,8 cm, Altura mín 2 cm, borda 6 mm). 18 mil fios, 217 mil pontos.
+Scalp pintado. A crista abre em leque porque o viés para cima se soma à
+normal do crânio; para crista em lâmina reta, zere o X da direção (Viés
+maior ou uma malha mais fina).
