@@ -2399,3 +2399,7 @@ antigas: sem mudança.
 
 - Guias por fio 1 no Interpolate: cada filho segue uma guia só, e a trança
   não mistura duas guias vizinhas.
+- Auditoria de valores fixos nos outros grupos: só sobraram Offset do
+  Shrinkwrap (4 a 6 mm, intencional) e o Guide Distance 0,1 do Curl dentro
+  da GR Cacho por Mecha. Medido: com Existing Guide Map ligado, trocar esse
+  valor para 0,01 mudou **0,0** na geometria. Ele é ignorado.

@@ -90,3 +90,4 @@
 - Despenteado: nas guias Rotate Random Offset 0,5 + Noise 2cm Scale 6 OffsetPerCurve 1; strays 6% nos filhos. Mechas coesas.
 - Dreads: 2200/m2 -> Onda S periodo 25cm amp 1cm -> Chunky achat 1 raio 7mm torcao 0 48 pts -> Noise Scale 180 +-1,2mm na normal. Onda padrao = macarrao.
 - Trancas box: GR Tranca Grossa tinha Guide Distance fixo 0,3 (tudo numa tranca). Exposto 'Tamanho da tranca' (padrao 0,3). Box: 1,5 cm, raio 4mm, cruz 6, Guias por fio 1, 400k/m2.
+- Auditoria valores fixos: Curl GD 0,1 na GR Cacho por Mecha ignorado com Existing ON (diferenca 0,0). Resto so Offset de Shrinkwrap.
