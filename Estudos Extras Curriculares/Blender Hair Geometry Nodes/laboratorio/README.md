@@ -42,6 +42,7 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Hair Cards | fitas planas com UV para jogo (Convert > Mesh e FBX) | depois da Densidade Livre com 8.000-20.000/m² |
 | GR Contorno | traço de desenho em volta das mechas de malha | depois da GR Mecha Chunky |
 | GR Transição | anima ou mistura dois penteados com a mesma contagem de pontos | depois de separar os ramos A e B |
+| GR Pentear por Curva | pelo curto deita no sentido de uma curva desenhada | logo depois de gerar os fios |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |

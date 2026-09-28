@@ -579,6 +579,32 @@ g.l(sp.outputs[0], o); libs.append(g.ng)
 for it in g.ng.interface.items_tree:
     if getattr(it, 'name', '') == "Fator" and it.in_out == 'INPUT': it.hide_value = False
 
+# 27. Pentear por Curva
+g = G("GR Pentear por Curva", "Deita cada fio na direcao da curva de fluxo mais proxima, projetada na pele. Para pelo curto de criatura. Use logo depois de gerar os fios (Generate Hair Curves ou guias); a normal vem da direcao da raiz.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+cv = g.inp("Curva de fluxo", 'NodeSocketObject', desc="Objeto Curve desenhado sobre o corpo, no sentido do pelo")
+lv = g.inp("Levanta", 'NodeSocketFloat', 0.35, 0.0, 1.0, "0 = deitado na pele, 1 = em pe", 'FACTOR')
+o = g.out("Geometry", 'NodeSocketGeometry')
+oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'RELATIVE'}); g.l(cv, oi.inputs['Object'])
+c2p = g.n('GeometryNodeCurveToPoints', props={'mode':'EVALUATED'}); g.l(oi.outputs['Geometry'], c2p.inputs['Curve'])
+cap = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT_VECTOR','domain':'POINT'}, Name="fluxo_t"); g.l(c2p.outputs['Points'], cap.inputs['Geometry']); g.l(c2p.outputs['Tangent'], cap.inputs['Value'])
+cr = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+sn = g.n('GeometryNodeSampleNearest', props={'domain':'POINT'}); g.l(cap.outputs[0], sn.inputs['Geometry']); g.l(cr.outputs['Root Position'], sn.inputs['Sample Position'])
+fx = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="fluxo_t")
+si = g.n('GeometryNodeSampleIndex', props={'data_type':'FLOAT_VECTOR','domain':'POINT'}); g.l(cap.outputs[0], si.inputs['Geometry']); g.l(fx.outputs['Attribute'], si.inputs['Value']); g.l(sn.outputs['Index'], si.inputs['Index'])
+nrm = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(cr.outputs['Root Direction'], nrm.inputs[0])
+dt = g.n('ShaderNodeVectorMath', props={'operation':'DOT_PRODUCT'}); g.l(si.outputs[0], dt.inputs[0]); g.l(nrm.outputs[0], dt.inputs[1])
+s1 = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nrm.outputs[0], s1.inputs[0]); g.l(dt.outputs['Value'], s1.inputs['Scale'])
+pj = g.n('ShaderNodeVectorMath', props={'operation':'SUBTRACT'}); g.l(si.outputs[0], pj.inputs[0]); g.l(s1.outputs[0], pj.inputs[1])
+nd = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(pj.outputs[0], nd.inputs[0])
+mx = g.n('ShaderNodeMix', props={'data_type':'VECTOR'}); g.l(lv, mx.inputs[0]); g.l(nd.outputs[0], mx.inputs[4]); g.l(nrm.outputs[0], mx.inputs[5])
+nd2 = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(mx.outputs[1], nd2.inputs[0])
+spp = g.n('GeometryNodeSplineParameter')
+of = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd2.outputs[0], of.inputs[0]); g.l(spp.outputs['Length'], of.inputs['Scale'])
+ps = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Root Position'], ps.inputs[0]); g.l(of.outputs[0], ps.inputs[1])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(ps.outputs[0], st.inputs['Position'])
+g.l(st.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

@@ -734,6 +734,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Procedural e depois esculpir | Apply no modificador das guias; mantém UV de fixação e id | 17.51 |
 | Mecha colorida, mecha branca, molhado, ahoge | seleção por mecha → atributo `destaque` → shader e Set Position | 17.52 |
 | Alongar fios | Trim Length Factor > 1 (1,5 = +50%) | 17.52 |
+| Direção do pelo por curva desenhada | Tangente da curva mais próxima projetada na pele | 17.53 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1027,7 +1028,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e seis node groups "GR" e quatro materiais, marcados como asset, feitos com as
+Vinte e sete node groups "GR" e quatro materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1037,7 +1038,7 @@ receitas desta seção e validados abrindo o .blend do zero:
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
   Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
-  Contorno, GR Transição (26 grupos)
+  Contorno, GR Transição, GR Pentear por Curva (27 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
   Contorno.
@@ -1800,3 +1801,27 @@ por mecha** + Store Named Attribute `destaque` (Float, Curve) lido no shader:
   desligado): Length Factor 0,5 = 12 cm; 1,5 = 36 cm (com e sem Scale
   Uniform); 2 = 47,9 cm. No teste da mecha colorida, o Trim 1,25 com Mask =
   seleção deixou só ela mais longa.
+
+### 17.53 Pentear pelo de criatura com uma curva [img/60_flow_sheet]
+
+O artista desenha um objeto Curve sobre o corpo, no sentido do pelo, e o
+pelo deita nessa direção. Logo depois de gerar os fios (Generate Hair Curves,
+60.000/m², 3,5 cm):
+
+1. Object Info (a curva, Relative) → Curve to Points (Evaluated) → Store
+   Named Attribute `fluxo_t` = saída **Tangent** do Curve to Points.
+2. Sample Nearest (esses pontos, posição = raiz) → Sample Index (`fluxo_t`).
+3. Projeta no plano da pele: fluxo − normal × (fluxo · normal) → Normalize.
+   A normal pode ser a **Root Direction** do Curve Root: o fio recém-gerado
+   sai pela normal.
+4. Direção = Mix(fluxo, normal, **Levanta 0,35**) → Position = raiz +
+   direção × Spline Parameter **Length** → Set Position. Depois Clump 8 mm.
+
+| Curva | Resultado |
+|---|---|
+| Reta da frente para trás | pelo corre para trás; **redemoinho natural** na ponta onde a curva começa |
+| Espiral em volta do corpo | pelo gira na diagonal |
+| Zigue-zague no dorso | desenho em espinha de peixe na linha das costas |
+
+Pronto em **GR Pentear por Curva** (Curva de fluxo, Levanta), validado do
+.blend. Várias curvas no mesmo objeto funcionam: vale a mais próxima.
