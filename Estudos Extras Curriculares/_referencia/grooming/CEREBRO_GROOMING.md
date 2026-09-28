@@ -1711,6 +1711,10 @@ Medido com a shape key em 0 e em 1, mesmos fios:
    trocaram de cor com uma inclinação de 5 cm. Isso confirma a nota de 17.44.
 3. Sem Add Rest Position no scalp, o Rest Surface avisa "Missing rest
    geometry on surface" (visto no dump do grupo, 5.2.2).
+4. **Resting Surface do Interpolate ligado** (padrão). Desligado, na mesma
+   cena: a contagem muda com a deformação (**7.834 → 8.446 fios**: fios
+   aparecem e somem a cada quadro) e as raízes descolam **16 mm** em média
+   (máx. 43 mm), mesmo com o Deform no fim.
 
 ### 17.47 Contorno de nanquim nas mechas de malha [img/53_toon_sheet]
 

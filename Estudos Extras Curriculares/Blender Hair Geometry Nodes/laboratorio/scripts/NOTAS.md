@@ -83,3 +83,4 @@
 - Grease Pencil guias: Object Info GP -> GP to Curves -> Realize -> Resample 16 -> Set Attachment Surface (obj scalp, UVMap) -> Densidade. 14 tracos -> 11,5k fios. Sem Set: sem filhos. Attach: 1 ponto. Bundle surface_geometry/surface_uv_map. Headless: GP na cena -> EGL trava render (aplicar e apagar GP).
 - GR Guias Desenhadas: Get Attachment Surface do Curves vazio -> Set Attachment Surface (Geometry). Validado 11.455 fios. Biblioteca 32 grupos.
 - Curve comum como guia: sem Set = 12 curvas; com Set Attachment (Get do Curves vazio) = 10.412.
+- Resting Surface off (cabeca com shape key): fios 7834 -> 8446 entre key 0 e 1; raiz 16,4 mm (max 42,9) mesmo com Deform no fim. On: 0,07 mm e contagem estavel.
