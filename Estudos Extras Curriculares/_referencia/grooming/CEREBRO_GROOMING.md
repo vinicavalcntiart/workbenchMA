@@ -772,6 +772,7 @@ estão resumidas em 17.0):
 | Máscara de região sem vertex group | GR Máscara por Posição (caixa suave pela raiz) | 17.79 |
 | Moicano / crista | raspado + Comprimento até a Malha misturados por Máscara por Posição | 17.80 |
 | Undercut | Trim 5% fora da Máscara por Posição (altura e lateral) + Volume na Raiz | 17.81 |
+| Cacho em cabelo curto | raio relativo ao comprimento manda, não as voltas | 17.82 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2542,3 +2543,21 @@ teste é que era curto.
 A GR Rabo de Cavalo também foi refeita na hair cap real [img/95_pony_cap_sheet]:
 os fios da nuca sobem até o elástico e cobrem a parte de trás (19,4 mil
 fios contra 15,7 mil). Nenhum ajuste no grupo.
+
+### 17.82 Cacho em cabelo curto [img/96_curto_sheet]
+
+Fio de 7 cm, hair cap real, 450 mil/m² (29 mil fios, 1,3 M pontos), mecha
+1 cm, GR Cacho por Mecha com raio 4 a 6 mm:
+
+| Voltas por metro | Voltas no fio | Leitura |
+|---|---|---|
+| 20–36 (padrão do grupo) | 1,5 a 2,5 | textura crespa miúda |
+| 45–60 | 3 a 4 | igual |
+| 70–90 | ~5 a 6 | igual, só mais densa |
+
+As três leram quase iguais. Em fio curto, o **raio do cacho em relação ao
+comprimento** manda: raio de 5 mm num fio de 7 cm já é 7% do comprimento,
+e qualquer número de voltas vira textura. Para cacho definido em cabelo
+curto (cachinho de desenho), aumente o raio relativo (~15% do
+comprimento, 1 cm aqui) e baixe as voltas; para textura crespa, o padrão
+basta.
