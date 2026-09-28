@@ -2704,3 +2704,12 @@ antes da testa afinam até 8% da densidade. 28,9 mil → 25,5 mil fios.
   precisa de vertex group. Com vertex group pintado, é o mesmo socket.
 - Numa cabeça real, troque a fórmula por distância até a borda (vertex
   group com gradiente, ou Geometry Proximity até uma curva da hairline).
+
+**Babyhairs**: um segundo Interpolate das mesmas guias, Density Mask = só a
+faixa da borda (Map Range 0,112 → 0,124 vira 0 → 1), Trim Replace Length
+2,5 cm com Random Offset 1 cm, Noise 4 mm Scale 40 → Join com o cabelo.
+
+| Densidade do ramo baby | Leitura |
+|---|---|
+| 900 mil/m², faixa 2 cm | faixa de penugem que esconde a hairline |
+| **150 mil/m², faixa 1,2 cm** | fiozinhos soltos na borda |
