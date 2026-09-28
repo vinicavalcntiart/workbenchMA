@@ -857,6 +857,11 @@ Vista de cima, mesmo groom:
 O Group ID aceita qualquer inteiro: uma máscara de região pintada no scalp
 serve para franja, nuca e laterais que nunca se misturam.
 
+**Cuidado com esse ligamento** (ver 17.18): o Clump com Guide Index ligado
+junta certo, mas grava `guide_curve_index` com o mapa dele. Se vier Curl ou
+Braid depois, use Create Guide Index Map com Group ID + Clump com Existing
+Guide Map ligado, **sem** ligar o Guide Index.
+
 ### 17.14 Custo por node e ordem da cadeia [t_perf.py, t_perf2.py]
 
 62 mil fios, 12 pontos cada, CPU de 4 núcleos, avaliação sem render:
@@ -900,3 +905,49 @@ Mesma cor base (0,30; 0,11; 0,04), mesmo groom:
   `guide_curve_index`) → Selection de um Delete Geometry (Curve). Some o tufo
   inteiro. Em pele clara vira mancha branca; só funciona com subpelo ou pele
   escura por baixo.
+
+### 17.17 Regiões com vertex group: corte curto nas laterais [img/20b_regions_sheet]
+
+Na 5.2, o vertex group pintado no scalp chega nos fios como atributo Float de
+Curve com o mesmo nome (medido). Com um grupo `topo` (1 em cima, 0 nas
+laterais e na nuca):
+
+- Trim Hair Curves com Replace Length ligado, Length 0,025 e **Mask = 1 −
+  topo** (Math Subtract) encurtou 22% dos fios para 2,5 cm.
+- Clump com o mesmo cabelo curto faz espetinhos. **Factor do Clump = topo**
+  desliga o clump na área curta, que vira máquina baixa limpa.
+
+### 17.18 Achado: Clump com Guide Index ligado grava o mapa errado [t_clumpgi.py]
+
+Medido, 15 mil fios, Create Guide Index Map com Guide Distance 0,02 (117
+guias) ligado no Guide Index de um Clump com Guide Distance 0,1 (padrão):
+
+| Situação | Mapa que o Clump usa | `guide_curve_index` que ele grava |
+|---|---|---|
+| Guide Index ligado, Existing desligado | 117 | **7** |
+| Guide Index ligado, Existing ligado | 116 | **6** |
+| Guide Index solto, Existing ligado | 117 | 117 |
+
+O Clump junta com o mapa que recebeu, mas grava no atributo o mapa que ele
+mesmo calcula com o Guide Distance interno. Qualquer node depois com
+Existing Guide Map (Curl, Braid, outro Clump) lê o mapa errado. Na prática:
+os cachos seguiram 6 guias gigantes e o cabelo "sumiu" do render
+[img/21d_sheet].
+
+**Regra**: para passar um mapa próprio (com Group ID, por exemplo), use Create
+Guide Index Map antes e o Clump com **Existing Guide Map ligado, sem ligar
+Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
+
+### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
+
+Nove node groups "GR" e dois materiais, marcados como asset, feitos com as
+receitas desta seção e validados abrindo o .blend do zero:
+
+- GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
+  Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
+  Mecha, GR Mecha Chunky, GR Ver em Cores.
+- Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
+
+Como usar e ordem da cadeia: `laboratorio/README.md`. A validação achou o
+problema de 17.18 e a regra da Onda S: **amplitude menor que o tamanho da
+mecha**, senão mechas vizinhas se cruzam em X.

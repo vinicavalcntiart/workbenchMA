@@ -273,3 +273,11 @@ def fur_scene(**kw):
     reset(); EG = essentials()
     body = make_body(); body.data.materials.append(skin_mat())
     g = fur_guides(body, **kw); return EG, body, g
+
+def vgroup(scalp, name, fn):
+    """Cria vertex group no scalp com peso fn(co) em coordenadas de mundo."""
+    vg = scalp.vertex_groups.new(name=name); mw = scalp.matrix_world
+    for v in scalp.data.vertices:
+        w = max(0.0, min(1.0, fn(mw @ v.co)))
+        vg.add([v.index], w, 'REPLACE')
+    return vg
