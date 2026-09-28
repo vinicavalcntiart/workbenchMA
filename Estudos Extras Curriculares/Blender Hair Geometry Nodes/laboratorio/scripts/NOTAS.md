@@ -80,3 +80,4 @@
 - Comprimento por textura: surface_uv_coordinate -> Image -> MapRange 0,35..1,1 -> Eval Curve -> Trim LF. Faixas = camadas; UV do scalp define onde.
 - Regressao (05:12): 19 scripts t_lib*.py rodam sem erro no .blend atual (31 grupos); 23_lib2_sheet visualmente igual.
 - Mecha por regiao: 2 ramos Mecha 3,5cm e 8mm do mesmo Interpolate -> Transicao Fator smoothstep(z 3..7cm). Sem costura.
+- Grease Pencil guias: Object Info GP -> GP to Curves -> Realize -> Resample 16 -> Set Attachment Surface (obj scalp, UVMap) -> Densidade. 14 tracos -> 11,5k fios. Sem Set: sem filhos. Attach: 1 ponto. Bundle surface_geometry/surface_uv_map. Headless: GP na cena -> EGL trava render (aplicar e apagar GP).

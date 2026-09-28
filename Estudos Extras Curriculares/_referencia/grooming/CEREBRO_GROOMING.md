@@ -618,6 +618,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Topo careca ou com ruído depois de trançar | Braid junta o fio inteiro na guia e afunda o trecho do crânio (58% dentro) | Shrinkwrap na cabeça depois do Braid (GR Trança Grossa com Cabeça ligada) | lab 17.61 |
 | Groom sumiu inteiro | GR Corte pela Malha sem malha ligada (versão antiga) | Atualize a biblioteca ou ligue a malha | lab 17.62 |
 | Cabelo escurece no close de fio grosso | Shape 3D Curves faz sombra entre fios; Ribbons não | Ajuste a cor no Shape do render final; em vista normal a diferença é < 7% | lab 17.68 |
+| Interpolate não gera filhos com guias de Grease Pencil ou Curve | Falta o bundle de fixação (surface_geometry/surface_uv_map) | Set Attachment Surface antes; não use Attach Hair Curves (1 ponto) | lab 17.71 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -756,6 +757,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cor muda no close | Shape das curvas: em close de fio grosso, Ribbons sai ~2× mais claro que 3D Curves | 17.68 |
 | Comprimento pintado | surface_uv_coordinate → Image Texture → Map Range → Trim Length Factor | 17.69 |
 | Parâmetro de valor único variando por região | dois ramos + GR Transição com máscara | 17.70 |
+| Desenhar as guias | Grease Pencil to Curves → Set Attachment Surface → Densidade | 17.71 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2262,3 +2264,36 @@ sem Resample. A passagem entre regiões não mostra costura.
 
 Serve para qualquer parâmetro "de valor único" por região: dois ramos +
 Transição com uma máscara (vertex group, textura, posição).
+
+### 17.71 Guias desenhadas com Grease Pencil [img/80_gpencil_sheet]
+
+Desenhe poucos traços de Grease Pencil em volta da cabeça (no Blender,
+placement Surface faz a raiz nascer no couro) e use como guias. No Curves
+(Surface = scalp):
+
+1. Object Info (o Grease Pencil, Relative) → **Grease Pencil to Curves**
+   (Layers as Instances desligado) → Realize Instances → Resample 16.
+2. **Set Attachment Surface** (Essentials 5.2): Surface Object = scalp,
+   Surface UV Map = Named Attribute `UVMap`.
+3. Daí em diante, a cadeia normal (GR Densidade Livre → Mecha → ...).
+
+Resultado: **14 traços → 11,5 mil fios**, 184 mil pontos.
+
+| Entre os traços e o Interpolate | Resultado |
+|---|---|
+| Nada | o Interpolate não gera filhos (só os 14 traços saem) |
+| **Set Attachment Surface** | funciona |
+| Attach Hair Curves to Surface (com ou sem Set antes) | fios de **1 ponto** (o mesmo problema de 17.1) |
+
+**Achado de bastidor da 5.2:** o vínculo com o scalp não é só o Surface do
+objeto Curves. Ele viaja num **Geometry Bundle** junto da geometria
+(itens `surface_geometry` e `surface_uv_map`; ver
+`essentials-internals/set-attachment-surface.md`). Curva que nasce fora do
+objeto Curves (Grease Pencil, Curve comum, Mesh to Curve) chega sem esse
+bundle, e o Interpolate não acha onde plantar. Set Attachment Surface cria o
+bundle.
+
+Nota de laboratório: em modo sem interface, só ter um Grease Pencil na cena
+fez o Cycles tentar abrir EGL e o render parou; aplicar o modificador e
+apagar o Grease Pencil antes do render resolveu. Na interface isso não
+acontece.
