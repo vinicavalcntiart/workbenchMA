@@ -310,3 +310,17 @@ def attach_uv(g, scalp, uvname="UVMap"):
         cd.attributes.new("surface_uv_coordinate", 'FLOAT2', 'CURVE')
     cd.attributes["surface_uv_coordinate"].data.foreach_set('vector', out)
     return len(cd.curves)
+
+def localize():
+    """Torna local todo dado linkado (Essentials puxa utilitarios linkados) e remove as bibliotecas."""
+    for _ in range(10):
+        linked = [i for coll in (bpy.data.node_groups, bpy.data.materials, bpy.data.images, bpy.data.textures, bpy.data.objects, bpy.data.meshes) for i in coll if i.library]
+        if not linked: break
+        for i in linked:
+            try: i.make_local()
+            except Exception as e: print("make_local falhou", i.name, e)
+    for lib in list(bpy.data.libraries):
+        try: bpy.data.libraries.remove(lib)
+        except Exception as e: print("lib", lib.filepath, e)
+    left = [i.name for i in bpy.data.node_groups if i.library]
+    print("LOCALIZE linkados restantes:", left, "bibliotecas:", len(bpy.data.libraries))

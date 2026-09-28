@@ -619,6 +619,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Groom sumiu inteiro | GR Corte pela Malha sem malha ligada (versão antiga) | Atualize a biblioteca ou ligue a malha | lab 17.62 |
 | Cabelo escurece no close de fio grosso | Shape 3D Curves faz sombra entre fios; Ribbons não | Ajuste a cor no Shape do render final; em vista normal a diferença é < 7% | lab 17.68 |
 | Interpolate não gera filhos com guias de Grease Pencil ou Curve | Falta o bundle de fixação (surface_geometry/surface_uv_map) | Set Attachment Surface antes; não use Attach Hair Curves (1 ponto) | lab 17.71 |
+| Grupos GR quebrados ao abrir em outra máquina | Utilitários do Essentials (Curve Root, Rest Surface...) vieram linkados com caminho da instalação | Tornar local antes de salvar (feito na biblioteca do laboratório) | lab 17.72 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -758,6 +759,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Comprimento pintado | surface_uv_coordinate → Image Texture → Map Range → Trim Length Factor | 17.69 |
 | Parâmetro de valor único variando por região | dois ramos + GR Transição com máscara | 17.70 |
 | Desenhar as guias | Grease Pencil to Curves → Set Attachment Surface → Densidade | 17.71 |
+| Mandar biblioteca de grupos para outra máquina | tornar locais os utilitários que o Essentials traz linkados | 17.72 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2316,3 +2318,24 @@ Attachment Surface antes (Get Attachment Surface do Curves vazio, modo
 Geometry) dá **10.412**. Então curvas extraídas de malha (Mesh to Curve de
 mechas esculpidas no ZBrush) ou desenhadas como Bezier servem de guia pelo
 mesmo caminho.
+
+### 17.72 Biblioteca própria: Essentials traz utilitários linkados
+
+Ao abrir `receitas_grooming.blend` fora do meu ambiente, **8 node groups
+estavam linkados** por caminho relativo a arquivos da instalação usada no
+laboratório: Curve Info, Curve Root, Curve Segment, Curve Tip, Get
+Attachment Surface, Get Rest Geometry, Rest Surface (do
+`procedural_hair_node_assets.blend`) e Edge Length (do
+`geometry_nodes_essentials.blend`). São os utilitários que Interpolate,
+Clump e cia. usam por dentro. Mesmo fazendo Append dos grupos do Essentials,
+esses vieram como link.
+
+- Corrigido: a biblioteca e os exemplos (`laboratorio/exemplos/`) agora são
+  salvos depois de tornar tudo local (`make_local` em laço até não sobrar
+  link, e as bibliotecas removidas). Conferido: 0 bibliotecas externas,
+  exemplos renderizando.
+- **Para quem monta biblioteca própria**: antes de mandar o .blend para
+  outra máquina, olhe o Outliner no modo Blender File. Se aparecer alguma
+  Library apontando para a pasta de instalação, torne os dados locais antes
+  de salvar. (Não testei se uma instalação 5.2 diferente reencontra esses
+  links sozinha; tornar local elimina a dúvida.)

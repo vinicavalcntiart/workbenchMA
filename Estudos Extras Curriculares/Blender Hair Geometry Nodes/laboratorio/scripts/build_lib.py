@@ -762,5 +762,6 @@ for m in mats:
     m.use_fake_user = True; m.asset_mark(); m.asset_data.tags.new("grooming")
 for ng in libs: ng.use_fake_user = True
 OUTF = sys.argv[-1]
+localize()
 bpy.ops.wm.save_as_mainfile(filepath=OUTF, compress=True)
 print("SALVO", OUTF, [n.name for n in libs], [m.name for m in mats])

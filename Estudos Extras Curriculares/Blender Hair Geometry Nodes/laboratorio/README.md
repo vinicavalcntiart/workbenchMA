@@ -15,6 +15,11 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 2. No Geometry Nodes do seu Curves, Shift+A > a biblioteca > grupos "GR".
 3. Ou File > Append > `receitas_grooming.blend` > NodeTree.
 
+## Exemplos prontos
+
+A pasta `exemplos/` tem três cenas montadas só com a biblioteca: cacheada com
+vento, criatura pictórica e anime com cel-shading. Veja `exemplos/README.md`.
+
 ## Os grupos
 
 | Grupo | Faz o quê | Onde vai na cadeia |
