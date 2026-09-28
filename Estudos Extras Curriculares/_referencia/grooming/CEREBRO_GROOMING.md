@@ -748,6 +748,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Trança lateral no ombro | Rabo de Cavalo com amarração lateral e Para trás −0,5 → Trança Grossa com a cabeça ligada | 17.61 |
 | Fio saindo por dentro da pele | Shrinkwrap antes de Onda/Cacho (barato); no fim só para render (9× mais caro) | 17.62 |
 | Reproduzir groom animado pesado | Node Bake (Animation) no fim: 353 → 9 ms por quadro | 17.63 |
+| Pelo pictórico | normal da pele no fio (Toon) + cor por clump e sub-clump | 17.64 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2073,3 +2074,30 @@ cadeia, modo Animation, quadros 1 a 12, alvo Disco:
 - Operador: `object.geometry_node_bake_single` (session_uid do objeto, nome
   do modificador, bake_id), com `bake_mode = 'ANIMATION'` e intervalo
   próprio no item de bake do modificador.
+
+### 17.64 Pelo pictórico (DreamWorks recente) [img/72_pictorico_sheet]
+
+Aplicando os princípios coletados em `estilizado/artigo-dreamworks-puss-in-boots-fur.md`
+e `estilizado/artigo-dreamworks-wild-robot-painterly.md` (cor por clump e
+sub-clump como pincelada; pelo respondendo à luz como superfície contínua;
+buracos entre grupos; guarda grossa como acento). Na criatura de 17.55:
+
+1. **Normal da pele no fio.** Logo depois do Generate Hair Curves: Store
+   Named Attribute `nsurf` (Vector, Curve) = saída Surface Normal. No
+   shader: Attribute `nsurf` → Vector Transform (Normal, Object → World) →
+   **Normal** de um Toon BSDF Diffuse (Size 0,55, Smooth 0,25).
+2. **Cor em dois níveis.** Clump 2 cm → Random por `guide_curve_index` =
+   `clump_a` (matiz: Color Ramp laranja → ocre). Clump 6 mm (sub-clump) →
+   outro Random = `clump_b` (valor 0,75 a 1,15, multiplicado).
+3. **Buracos.** Random Boolean 12% por clump grande → Delete Geometry.
+4. **Guarda.** 1,5% dos fios, Trim 1,5×, raio 1,2 mm, cor escura, Join.
+
+| Versão | Leitura |
+|---|---|
+| Principled Hair por fio | brilho e sombra fio a fio: textura, não pincelada |
+| **Toon com a normal da pele + cor por clump** | a luz agrupa em massas grandes, como bola pintada; manchas de cor por tufo |
+| + buracos e guarda | quebras de borda aparecem; a guarda escura quase não lê nessa escala (precisaria ser mais longa e mais rara) |
+
+A normal da pele é o truque de maior efeito com menos nodes (2 no GN, 2 no
+shader). Personagem que se move: o Vector Transform Object → World é o que
+mantém certo.
