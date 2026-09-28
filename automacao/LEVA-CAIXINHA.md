@@ -39,6 +39,8 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
 | 28/09 | Crazy Maple Studio | General Application - Join Our Talent Community | workable | n | https://apply.workable.com/j/B780A35D5F |
 | 28/09 | Triotech | Candidatures spontanées | BambooHR | n | https://triotech.bamboohr.com/careers/29 |
+| 28/09 | Epic Games | Senior Technical Artist 6139762004 (Fortnite Events, Cary NC) | Greenhouse, Cloudflare 'Verify you are human' visivel | n | https://job-boards.greenhouse.io/epicgames/jobs/6139762004 |
+| 28/09 | Epic Games | Senior Technical Artist 6143677004 (multiplos locais EUA) | Greenhouse, Cloudflare 'Verify you are human' visivel | n | https://job-boards.greenhouse.io/epicgames/jobs/6143677004 |
 
 
 ## Precisam da conta do Vini (não é caixinha, é login dele)
