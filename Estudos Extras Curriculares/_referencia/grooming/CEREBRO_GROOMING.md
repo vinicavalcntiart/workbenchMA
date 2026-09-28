@@ -2538,3 +2538,7 @@ recorta rosto e orelhas) [img/94_cap_sheet]: mesmo node tree, 22,6 mil
 fios; nuca e laterais raspadas aparecem inteiras por trás. Confirma o
 limite anotado no início da seção 17: a receita estava certa, o scalp de
 teste é que era curto.
+
+A GR Rabo de Cavalo também foi refeita na hair cap real [img/95_pony_cap_sheet]:
+os fios da nuca sobem até o elástico e cobrem a parte de trás (19,4 mil
+fios contra 15,7 mil). Nenhum ajuste no grupo.
