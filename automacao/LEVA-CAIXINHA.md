@@ -43,6 +43,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Homa Games | Senior 3D Gameplay Artist (Generalist) | workable | n | https://apply.workable.com/homa-games/j/DE453781D2/ |
 | 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
 | 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
+| 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
 
 Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
