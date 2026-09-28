@@ -737,6 +737,8 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Alongar fios | Trim Length Factor > 1 (1,5 = +50%) | 17.52 |
 | Direção do pelo por curva desenhada | Tangente da curva mais próxima projetada na pele | 17.53 |
 | Cadeia leve | Ponta Virada antes de Onda/Cacho, Subdivisão 0 ou 1: 9× mais rápido | 17.54 |
+| Criatura completa | Pentear por Curva + listra no dorso + barriga clara | 17.55 |
+| Anime / NPR | 3.000/m², Mecha Chunky raio 1,8 cm sem torção, Toon, Contorno | 17.56 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1856,3 +1858,33 @@ acumulado (mede o grupo ligando um por vez):
 - A GR Ponta Virada agora expõe **Subdivisão** (padrão 1; antes era 2 fixo).
 - Ordem completa que funciona: Densidade → Mecha → Volume → Strays → Ponta
   Virada → Onda ou Cacho → Cor → (Deform) → Profile.
+
+### 17.55 Criatura inteira: fluxo, listra e barriga [img/finais/62_criatura]
+
+Corpo em gota (frente mais larga), Generate Hair Curves 90 mil/m² (27,6 mil
+fios, 4 cm) → **GR Pentear por Curva** (curva reta do focinho à cauda,
+Levanta 0,4) → Clump 1,2 cm → Noise leve (3 mm) → listras (Wave Bands Y,
+Scale 6, Distortion 5) × máscara de dorso (Z da raiz 0 a 6 cm) → Trim 35%
+mais curto na listra → atributo `barriga` (Z da raiz −2 a −8 cm) clareia a
+melanina em 0,22. Render 900 px, 40 amostras: 24 s.
+
+- O redemoinho do focinho veio de graça: é onde a curva de fluxo começa.
+- Listra só no dorso = multiplicar o padrão por uma rampa de altura da raiz.
+
+### 17.56 NPR estilo anime: mechas de malha + Toon + contorno [img/63_npr_sheet, finais/63_npr_anime]
+
+GR Guias Procedurais (20 cm, para fora 0,7, lado 0,5, gravidade 1,3) → GR
+Densidade Livre → ahoge (17.52) → **GR Mecha Chunky** → Toon azul → **GR
+Contorno** 2,2 mm; a cabeça também recebe o GR Contorno (1,8 mm) num
+modificador próprio. Fundo claro só para a câmera: no World, Mix entre fundo
+escuro e claro com Factor = Is Camera Ray (senão o fundo claro vira luz e
+lava o Toon).
+
+| Versão | Resultado |
+|---|---|
+| 2.500/m², raio 1,1 cm | careca: ~130 fitas finas |
+| 9.000/m², raio 1 cm, torção 0,5 | capacete bagunçado: fitas torcidas em todas as direções |
+| **3.000/m², raio 1,8 cm, torção 0** | mechas largas de anime, franja lendo em blocos |
+
+Regra para NPR: **poucas mechas largas e sem torção**. A leitura vem do
+contorno e da forma de cada bloco, não da quantidade.
