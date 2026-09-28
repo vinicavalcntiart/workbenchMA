@@ -853,7 +853,7 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Ponta Virada → GR Onda S ou GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
     <li>Para variações, ligue um único node Integer no Seed de todos.</li>
   </ol></div>
-<p>A pasta <code>laboratorio/exemplos/</code> tem o arquivo de partida <code>comeco_rapido.blend</code> e três cenas prontas feitas só com a biblioteca: cacheada com vento, criatura pictórica e anime com cel-shading. Nenhum arquivo externo.</p>
+<p>Toda entrada dos grupos tem dica ao passar o mouse, com os valores medidos. A pasta <code>laboratorio/exemplos/</code> tem o arquivo de partida <code>comeco_rapido.blend</code> e três cenas prontas feitas só com a biblioteca: cacheada com vento, criatura pictórica e anime com cel-shading. Nenhum arquivo externo.</p>
 <figure><img src="img/lab/21_lib_sheet.jpg" alt="Quatro cabeças com estilos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro grooms montados só com os grupos GR: fita, Merida, onda S com Toon e mecha chunky.</figcaption></figure>
   <h2 id="lab-estilo" style="margin-top:2rem">Estilizado</h2>
 <h3 style="margin-top:1.6rem">Mecha em fita (Pixar)</h3>
@@ -942,6 +942,9 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <figure><img src="img/lab/103_balanco_2.5.gif" alt="Cabelo balançando" loading="lazy" style="width:100%;height:auto"><figcaption>Balanço com a ponta atrasada em relação à raiz.</figcaption></figure>
 <figure><img src="img/lab/97_arrepio.gif" alt="Criatura arrepiando" loading="lazy" style="width:100%;height:auto"><figcaption>Pelo arrepiado com um input animado.</figcaption></figure>
 <figure><img src="img/lab/98_pente.gif" alt="Esfera passando pelo cabelo" loading="lazy" style="width:100%;height:auto"><figcaption>A mão abre caminho no cabelo.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Sobrancelha expressiva</h3>
+<p>Um Empty com a escala ligada num offset levanta e franze a sobrancelha, mas descola a raiz. Para produção: <b>shape keys na região da sobrancelha</b> e Deform Curves on Surface no fim; a raiz fica a 0,3 mm da pele.</p>
+<figure><img src="img/lab/113c_sobrancelha_sheet.jpg" alt="Três expressões" loading="lazy" style="width:100%;height:auto"><figcaption>Neutro, surpresa e bravo por shape key.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Cabeça que deforma</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Ligue <b>Add Rest Position</b> no scalp (Object Data).</li><li><b>Deform Curves on Surface é o último node de forma</b>, depois de Clump, Curl e cortes.</li><li>Tudo que lê posição (textura, máscara, distância) vem antes dele, ou lê <code>surface_uv_coordinate</code>.</li></ol></div>
 <figure><img src="img/lab/52_deform_sheet.jpg" alt="Quatro cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem Deform, ou com ele nas guias, a cabeça atravessa o cabelo. No fim, a raiz fica a 0,06 mm; o padrão por posição só fica parado se vier antes.</figcaption></figure>
@@ -1052,6 +1055,10 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Cabeça modelada inclinada</h3>
 <p>Todo o groom é local ao objeto: mover o personagem não muda nada, e a gravidade das guias é o −Z do objeto. A entrada <b>Gravidade do mundo</b> da GR Guias Procedurais faz o cabelo cair reto mesmo com a cabeça girada.</p>
 <figure><img src="img/lab/102_gravmundo_sheet.jpg" alt="Duas cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Gravidade do objeto e do mundo com a cabeça girada 50°.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Personagem final: cortina e balanço</h3>
+<p>Dois conjuntos de guias (cabelo e franja), cada um com GR Balanço, misturados pela GR Transição, risca em duas ilhas e sobrancelha por região. A primeira versão errou em dois pontos que as regras já previam: strays depois de um Resample que dobra os pontos, e balanço forte demais para franja curta.</p>
+<figure><img src="img/lab/114_final_sheet.jpg" alt="Duas versões do personagem" loading="lazy" style="width:100%;height:auto"><figcaption>Com os erros de ordem e corrigido.</figcaption></figure>
+<figure><img src="img/lab/114_final.gif" alt="Personagem balançando o cabelo" loading="lazy" style="width:100%;height:auto"><figcaption>Balanço de 0,12 rad com follow-through.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
 <p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
 <figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
