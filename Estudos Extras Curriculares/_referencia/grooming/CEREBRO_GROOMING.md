@@ -831,6 +831,8 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 15 | Física: guias com UV de fixação, Substeps 40, Collider por coleção | sem UV explode; Surface Collision no scalp explode | 17.25 |
 | 16 | Ajuste a cor no Shape do render final (Ribbons ou 3D Curves) | em close de fio grosso, Ribbons sai ~2× mais claro; em vista normal < 7% | 17.68 |
 | 17 | Região com direção própria (franja, costeleta): segundo conjunto de guias + GR Transição | a direção das guias domina; Trim e empurrão não bastam. As raízes dos dois ramos são idênticas | 17.91 |
+| 18 | Para levar o groom a outro programa, USD | Alembic perde todos os atributos (cor por mecha, UV da raiz); USD leva | 17.93 |
+| 19 | Multidão: Shift+D do conjunto e reapontar o Surface | Alt+D empilha o cabelo na cabeça original; Collection Instance repete igual | 17.59 |
 
 ### 17.1 Armadilhas da 5.2 medidas
 
