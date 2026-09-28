@@ -754,6 +754,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo sob chapéu | Shrinkwrap na cabeça com Factor = copa acima OU aba abaixo (dois Raycasts) | 17.66 |
 | Cabelo apoiado nos ombros | Shrinkwrap no tronco, Above 0, nas guias e no fim | 17.67 |
 | Cor muda no close | Shape das curvas: em close de fio grosso, Ribbons sai ~2× mais claro que 3D Curves | 17.68 |
+| Comprimento pintado | surface_uv_coordinate → Image Texture → Map Range → Trim Length Factor | 17.69 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2230,3 +2231,21 @@ assim. Mesmo groom (cachos, raio 0,8 mm, melanina 0,4), close, 24 amostras:
   estilizado.
 - Linear 3D Curves foi o mais rápido e ficou perto do 3D: bom para cacho
   grosso em close.
+
+### 17.69 Comprimento pintado numa textura [img/78_comprimento_sheet]
+
+Mesma cadeia da máscara por imagem (17.27), agora no comprimento. Depois do
+Clump:
+
+Named Attribute `surface_uv_coordinate` → Image Texture (a pintura) → Map
+Range (0 → 1 vira **0,35 → 1,1**) → Evaluate on Domain (Curve) → **Trim
+Length Factor** (Replace Length desligado).
+
+- Branco = fio 10% mais longo, preto = 35% do comprimento. Qualquer imagem
+  em cinza pintada no UV do scalp (Texture Paint, ou exportada do ZBrush
+  como polypaint).
+- Faixas alternadas no U deram camadas longas e curtas; gradiente deu um
+  lado mais curto. O **layout de UV do scalp** decide onde cada faixa cai:
+  pinte em cima do scalp, não no espaço de UV às cegas.
+- Mais fino que vertex group (resolução da imagem) e reutilizável entre
+  personagens com o mesmo UV de scalp.
