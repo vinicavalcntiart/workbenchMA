@@ -780,6 +780,7 @@ estão resumidas em 17.0):
 | Franja reta ou em bicos | GR Corte pela Malha com a borda da frente na altura da franja | 17.86 |
 | Groom não muda ao mover o personagem | tudo é local ao objeto; gravidade procedural = −Z do objeto | 17.87 |
 | Balanço com follow-through sem física | Vector Rotate na raiz com seno defasado pelo Spline Parameter | 17.88 |
+| Hairline suave na testa | campo de posição no Density Mask (1 → 0,08 nos últimos 3,5 cm) | 17.89 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2691,3 +2692,15 @@ animação, troque o Scene Time por um valor do rig (o controle por Empty de
 Pronto em **GR Balanço** (Amplitude, Período, Atraso, Eixo). Validado do
 .blend: ponta média em X nos quadros 1, 7, 13 e 19 = +7,7; +6,2; −6,7;
 −5,2 cm (ciclo de 1 s).
+
+### 17.89 Linha do cabelo suave (hairline) [img/104_hairline_sheet]
+
+A borda do scalp recortado dá uma linha seca na testa. Campo no **Density
+Mask** do Interpolate: Position → d = Z − Y (cresce para frente e para
+baixo) → Map Range clamp 0,09 → 0,125 vira **1 → 0,08**. Os últimos ~3,5 cm
+antes da testa afinam até 8% da densidade. 28,9 mil → 25,5 mil fios.
+
+- O Density Mask aceita campo (lido nos pontos da distribuição): não
+  precisa de vertex group. Com vertex group pintado, é o mesmo socket.
+- Numa cabeça real, troque a fórmula por distância até a borda (vertex
+  group com gradiente, ou Geometry Proximity até uma curva da hairline).

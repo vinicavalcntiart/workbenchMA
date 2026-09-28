@@ -114,3 +114,4 @@
 - GR Guias Procedurais: entrada Gravidade do mundo (Invert Rotation da Self Object). Cabeca girada 50: x raiz->ponta -43,7 -> +3,2 cm.
 - Balanco: guias Resample 24, VectorRotate Y center raiz angle 0,35*s*sin(2pi t - 2,5 s). Atraso 0 = bloco; 2,5 = S follow-through.
 - GR Balanco validado: ponta x 7,7/6,2/-6,7/-5,2 cm. Biblioteca 35 grupos.
+- Hairline: Density Mask = MapRange(z - y, 0,09..0,125 -> 1..0,08). Gradiente na testa. 28,9k -> 25,5k.
