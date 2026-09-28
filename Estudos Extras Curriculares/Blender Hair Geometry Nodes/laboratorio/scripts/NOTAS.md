@@ -12,3 +12,7 @@
 - Strays: Curve Info Random -> Compare Less Than 0,12 -> Factor do Frizz (Distance 0,02, Cumulative, Preserve Length). Com Trim Length Factor 1,25 no Mask fica realista/bagunçado. Frizz so na ponta com 4 mm nao aparece.
 - Stray estilizado (arco limpo): Curve Info Random < 0,04 -> Factor do Hair Curves Noise (Distance 0,04, Shape 0,7, Scale 3, Offset per Curve 1, Cumulative ligado, Preserve Length). 7 cm = dramatico. Frizz = zigue-zague realista.
 - Curve to Mesh 5.2: entrada Scale solta NAO usa o raio do fio (tubos de 1 m). Ligar node Radius no Scale.
+- Risca limpa: scalp em 2 ilhas (Part by Mesh Islands) + Create Guide Index Map com Group ID = Compare(Curve Root.x > 0) -> Guide Index do Clump.
+- Custo (62 mil fios, 4 nucleos): Interpolate 76 ms, Clump +161, Noise +412, Frizz +90, Curl Sub2 +303 (4x pontos), Trim depois do Curl +905. Ordem otimizada (Clump Trim Noise Frizz Profile Curl) 1374 ms vs ingenua 2143. Viewport Amount 0,25: 288 ms.
+- Shading (mesma cor 0.30,0.11,0.04): Principled Hair modo Color clareia muito (Chiang) e dessatura (Huang). Principled BSDF nas curvas = cor fiel. Toon BSDF diffuse Size .6 + glossy Size .15 = faixa de brilho chapada. Gradiente: Hair Info Intercept -> Color Ramp -> Base Color.
+- Guard hairs: ramo extra 30 mil/m2, Trim 1,4, raio 0,0009 sem clump = franja fina na silhueta. Buracos: Random Value Boolean (Prob 0,18, ID=guide_curve_index) -> Delete Geometry Curve; mostra pele: precisa subpelo/pele escura.

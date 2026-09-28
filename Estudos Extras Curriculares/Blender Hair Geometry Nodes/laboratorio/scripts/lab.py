@@ -159,9 +159,9 @@ def stage(cam_loc=(0.42,-0.62,0.10), target=(0,0,-0.06), lens=50, res=640, sampl
         if typ=='AREA': L.size = size
         o = link(bpy.data.objects.new(name, L)); o.location = loc
         dd = Vector(target)-Vector(loc); o.rotation_euler = dd.to_track_quat('-Z','Y').to_euler(); return o
-    light("key",'AREA',(0.35,-0.35,0.45),14,0.3,(1,0.95,0.9))
-    light("rim",'AREA',(-0.3,0.4,0.3),16,0.2,(0.8,0.9,1))
-    light("fill",'AREA',(-0.45,-0.25,0.0),4,0.4)
+    light("key",'AREA',(0.35,-0.35,0.45),LIGHT_K*14,0.3,(1,0.95,0.9))
+    light("rim",'AREA',(-0.3,0.4,0.3),LIGHT_K*16,0.2,(0.8,0.9,1))
+    light("fill",'AREA',(-0.45,-0.25,0.0),LIGHT_K*4,0.4)
     w = bpy.data.worlds.new("w"); sc.world = w
     w.node_tree.nodes['Background'].inputs[0].default_value=(bg,bg,bg*1.1,1)
     return cam
@@ -197,6 +197,7 @@ def set_mat(t, mat):
     n = t.add('GeometryNodeSetMaterial'); n.inputs['Material'].default_value = mat
     return t.chain(n)
 
+LIGHT_K = 1.0
 OUT = os.path.join(LAB, "out"); os.makedirs(OUT, exist_ok=True)
 def shot(name, **stage_kw):
     stage(**stage_kw)

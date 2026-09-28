@@ -842,3 +842,61 @@ confirmados no laboratório:
   na seção 5.
 - **Fita torcida com Set Curve Tilt** (BlenderArtists, 2022). A dúvida sem
   resposta do fórum, variar a torção por mecha, está resolvida em 17.11.
+
+### 17.13 Risca limpa [img/17_part_sheet]
+
+Vista de cima, mesmo groom:
+
+1. Scalp inteiro: risca borrada, fios atravessando.
+2. Scalp rasgado em duas ilhas na risca, Interpolate com Part by Mesh Islands:
+   a interpolação respeita, mas o **Clump ainda puxa fio de um lado para o
+   outro**.
+3. Duas ilhas **+ Create Guide Index Map com Group ID** = Compare (Curve Root →
+   Root Position X > 0), ligado no Guide Index do Clump: **risca seca**.
+
+O Group ID aceita qualquer inteiro: uma máscara de região pintada no scalp
+serve para franja, nuca e laterais que nunca se misturam.
+
+### 17.14 Custo por node e ordem da cadeia [t_perf.py, t_perf2.py]
+
+62 mil fios, 12 pontos cada, CPU de 4 núcleos, avaliação sem render:
+
+| Node | Custo adicionado |
+|---|---|
+| Interpolate | 76 ms |
+| Clump | 161 ms |
+| **Hair Curves Noise** | **412 ms** (o deformador mais caro) |
+| Frizz | 90 ms |
+| Curl Subdivision 2 | 303 ms, e multiplica os pontos por 4 |
+| Trim depois do Curl | 905 ms |
+| Set Hair Curve Profile | 110 ms |
+
+- **Ordem otimizada**: Clump → Trim → Noise → Frizz → Profile → Curl (o que
+  subdivide por último). 2,1 s caiu para 1,4 s, mesmo resultado.
+- **Viewport Amount 0,25** no Interpolate: 1,35 s caiu para 0,29 s. Render
+  continua com a densidade cheia.
+- Noise e Frizz com Cumulative também precisam vir antes do Curl (17.7).
+
+### 17.15 Shading estilizado [img/18b_shading_sheet]
+
+Mesma cor base (0,30; 0,11; 0,04), mesmo groom:
+
+- **Principled Hair, modo Direct Coloring**: Chiang clareia muito a cor
+  (espalhamento múltiplo), Huang clareia e dessatura. Para castanho escuro,
+  escolha uma cor bem mais escura que o alvo ou use Melanin.
+- **Principled BSDF comum nas curvas**: a cor sai como escolhida. Bom para
+  estilizado e para a mecha chunky.
+- **Toon BSDF**: Diffuse (Size 0,6, Smooth 0,05) + Glossy (Size 0,15, Smooth
+  0,02) num Add Shader dá a faixa de brilho chapada de desenho. Funciona em
+  curvas no Cycles.
+- **Gradiente raiz → ponta**: Hair Info → Intercept → Color Ramp → Base Color.
+
+### 17.16 Pelo de guarda e buracos (DreamWorks) [img/19_guard_sheet]
+
+- **Guarda**: um ramo extra do mesmo Group Input com Interpolate 30 mil/m²,
+  sem clump, Trim Length Factor 1,4, raio 0,0009 (3× o pelo base). Join
+  Geometry. Aparece como franja fina na silhueta.
+- **Buracos de propósito**: Random Value **Boolean** (Probability 0,18, ID =
+  `guide_curve_index`) → Selection de um Delete Geometry (Curve). Some o tufo
+  inteiro. Em pele clara vira mancha branca; só funciona com subpelo ou pele
+  escura por baixo.
