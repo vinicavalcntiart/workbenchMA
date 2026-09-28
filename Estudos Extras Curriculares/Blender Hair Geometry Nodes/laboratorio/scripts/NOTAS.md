@@ -55,3 +55,4 @@
 - Redemoinho: nas guias, Vector Rotate (Center C, Axis C normalizado, Angle = Spline Param x MapRange(dist raiz-C 0..7cm -> 1..0) x forca) + Shrinkwrap. Curto 7 cm 3,5 rad = claro; longo 16 cm: 1,5 max (3,5 voa).
 - Transicao: Resample 64 -> ramo B (Cacho Sub 0) -> Sample Index(B, Position, Index) -> Mix(A pos, B) -> Set Position. Fator smoothstep(Seconds - atraso por mecha). Fator 0,5 = terceiro penteado (onda larga). GR Transicao validado.
 - Hero integrado (r56): toda a cadeia da biblioteca + cilios + sobrancelha + scalp pintado funciona junto. Ajustes de design: Para tras 0,6 (franja cobria o rosto com 0,25), Cacho Comeca em 0,35 (0,15 = topo crespo). 11,5k fios, 517k pts, 900 px 48 spp 103 s.
+- Hibrido: Apply no modificador GR Guias Procedurais = 240 guias reais com surface_uv_coordinate, id e surface. Cadeia completa com Deform roda em cima. Hero GIF 48 quadros com fisica e vento 149 s.

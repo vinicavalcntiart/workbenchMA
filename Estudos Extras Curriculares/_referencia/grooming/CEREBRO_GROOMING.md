@@ -731,6 +731,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Redemoinho | Vector Rotate em volta da coroa, ângulo × falloff × Spline Parameter | 17.48 |
 | Transição ou mistura de penteados | Resample igual → Sample Index de B → Mix com A | 17.49 |
 | Personagem completo sem esculpir | Guias Procedurais → Física → Densidade → Mecha → Strays → Cacho → Cor | 17.50 |
+| Procedural e depois esculpir | Apply no modificador das guias; mantém UV de fixação e id | 17.51 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1743,7 +1744,8 @@ escultura, todos os grupos na mesma cadeia, carregados do .blend:
   Cabelo Cor por Mecha. 11,5 mil fios, 517 mil pontos.
 - **Cílios** (17.36) e **sobrancelha** (17.32) com a GR Guias Procedurais
   como gerador. **Scalp pintado** (17.42).
-- Render 900 px, 48 amostras: 103 s (CPU, 4 núcleos).
+- Render 900 px, 48 amostras: 103 s (CPU, 4 núcleos). GIF de 48 quadros
+  com física e vento, 360 px: 149 s.
 
 Os grupos convivem sem ajuste interno. O que precisou de ajuste foi **design**:
 
@@ -1754,3 +1756,23 @@ Os grupos convivem sem ajuste interno. O que precisou de ajuste foi **design**:
 
 Regra: em cabelo cacheado estilizado, o cacho começa depois do topo; a
 silhueta de cima é lisa e lê a forma do crânio.
+
+### 17.51 Híbrido: começar procedural, terminar esculpindo [img/57_hibrido_sheet]
+
+GR Guias Procedurais num Curves vazio → **Apply** no modificador
+(Ctrl+A no modificador). Resultado medido: 240 guias reais, 2.880 pontos,
+com `surface_uv_coordinate`, `id` e o Surface apontando para o scalp. Ou seja,
+as guias aplicadas:
+
+- abrem no **Sculpt Mode** de curves para ajuste à mão;
+- servem direto para a GR Física Estilizada e para o Deform Curves on
+  Surface (têm a coordenada de fixação, 17.25 e 17.46);
+- mantêm o `id` estável, que o Interpolate usa para não "pular" quando a
+  densidade muda (seção 8).
+
+No teste, as guias do lado direito foram puxadas para fora por script
+(simulando o pincel) e a cadeia Densidade Livre → Mecha → Cor → Deform →
+Profile rodou em cima sem ajuste.
+
+Fluxo: procedural para chegar em 80% em minutos; Apply; esculpir os 20%
+que dão personalidade (franja, mecha de destaque, assimetria).
