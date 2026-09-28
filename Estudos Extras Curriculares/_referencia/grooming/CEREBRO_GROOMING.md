@@ -748,6 +748,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo que esparrama no chão | profundidade abaixo do piso vira deslocamento para fora | 17.58 |
 | Cada cópia com cabelo diferente | Hash da posição do Self Object no Seed e nos Random | 17.59 |
 | Meio preso, mistura regional | GR Transição com Fator = máscara de região; B = GR Rabo de Cavalo | 17.60 |
+| Cabelo atrás da orelha | Transição + Rabo de Cavalo com amarração atrás de cada orelha | 17.60 |
 | Trança lateral no ombro | Rabo de Cavalo com amarração lateral e Para trás −0,5 → Trança Grossa com a cabeça ligada | 17.61 |
 | Fio saindo por dentro da pele | Shrinkwrap antes de Onda/Cacho (barato); no fim só para render (9× mais caro) | 17.62 |
 | Reproduzir groom animado pesado | Node Bake (Animation) no fim: 353 → 9 ms por quadro | 17.63 |
@@ -2020,11 +2021,13 @@ Evaluate on Domain (Curve) → Fator da Transição.
   cauda.
 - A mesma ideia vale para qualquer mistura regional de penteados: franja de
   um, nuca de outro.
-- **Não conclusivo:** "atrás da orelha" com a mesma técnica (amarração atrás
-  de cada orelha pelo sinal do X da raiz, máscara na lateral). A orelha de
-  teste era rasa demais (sai 9 mm do crânio) e ficou escondida em todas as
-  versões; o lado puxado abriu, mas não deu para julgar a orelha. Refazer
-  com orelha real (script `r76_orelha.py`).
+- **Atrás da orelha** [img/76_orelha_sheet]: mesma técnica. B = GR Rabo de
+  Cavalo com Amarração = (sinal do X da raiz × 10,8 cm; 3,5 cm; 0,5 cm),
+  atrás de cada orelha, Até a amarração 0,3. Fator = três Smooth Steps
+  multiplicados sobre a raiz: \|X\| de 2,5 a 4,5 cm, Y de 7 a 4 cm, Z de 9 a
+  7 cm (lateral acima da orelha). A orelha fica à mostra e o cabelo passa
+  por trás. Primeira tentativa, com uma orelha que saía só 9 mm do crânio,
+  não deu para julgar; com orelha saindo ~2 cm, funcionou.
 
 ### 17.61 Trança lateral no ombro e o Braid que afunda o crânio [img/68_elsa_compare]
 

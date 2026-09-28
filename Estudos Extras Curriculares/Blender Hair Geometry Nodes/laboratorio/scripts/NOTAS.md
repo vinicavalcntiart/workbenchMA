@@ -86,3 +86,4 @@
 - Resting Surface off (cabeca com shape key): fios 7834 -> 8446 entre key 0 e 1; raiz 16,4 mm (max 42,9) mesmo com Deform no fim. On: 0,07 mm e contagem estavel.
 - Viewport 0,25: eval viewport 633 fios vs 2950; render cobertura 15,7% vs 15,4% (render usa 100%).
 - Biblioteca tinha 8 node groups LINKADOS (utilitarios do Essentials) com caminho do meu ambiente. lab.localize() (make_local em laco + remove libraries) antes de salvar. Exemplos em laboratorio/exemplos validados (0 libs, render ok).
+- Atras da orelha: FUNCIONOU com orelha saindo ~2 cm (tie sign(x)*10,8cm, 3,5, 0,5; mascara |x| 2,5-4,5, y 7->4, z 9->7 cm).

@@ -7,7 +7,7 @@ EG, head, scalp, g = base_scene(length=0.26, gravity=4.5, spread=0.45, outward=0
 with bpy.data.libraries.load(LIB, link=False, assets_only=True) as (src, dst): dst.node_groups = [n for n in src.node_groups if n.startswith("GR ")]
 GR = {n.name:n for n in bpy.data.node_groups}
 for sx in (-1,1):
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.025, location=(sx*0.099,0.0,-0.015)); e = bpy.context.object; e.scale=(0.35,0.75,1.0); bpy.ops.object.shade_smooth(); e.data.materials.append(head.data.materials[0])
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.03, location=(sx*0.108,0.005,-0.02)); e = bpy.context.object; e.scale=(0.45,0.7,1.1); bpy.ops.object.shade_smooth(); e.data.materials.append(head.data.materials[0])
 t = Tree("or")
 def grp(name, **kw):
     n = t.add('GeometryNodeGroup', group=GR[name])
