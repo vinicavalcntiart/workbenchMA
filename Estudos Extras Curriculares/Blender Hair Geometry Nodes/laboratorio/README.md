@@ -31,10 +31,20 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Trança Grossa | trança de raio constante | depois de Densidade Livre com Distância das guias ~0,02 |
 | GR Corte por Região | curto onde o vertex group vale 0, sem clump ali | depois do Interpolate |
 | GR Pelo em Tufos | pelo estilizado com subpelo e pelo de guarda opcionais | sozinho, no lugar do Interpolate |
+| GR Volume na Raiz | empurra o fio pela normal do scalp, raiz parada | depois da Mecha |
+| GR Máscara por Imagem | apaga fios onde a imagem é preta; devolve o cinza para reusar | depois do Interpolate |
+| GR Física Estilizada | Hair Dynamics nas guias, segura o penteado | antes do Interpolate, num modificador só das guias |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |
 
 Materiais: **GR Cabelo Cor por Mecha** (lê `mecha_rand` e escurece a raiz) e
 **GR Cabelo Toon**.
+
+## Física
+
+Guias com Snap to Nearest Surface. Modificador 1 só com GR Física
+Estilizada. Modificador 2 com a cadeia de groom. Colisão: modificador
+Collider na cabeça inteira, a cabeça numa coleção, a coleção na entrada
+Colisores. Não ligue Surface Collision no scalp.
 
 ## Ordem que funciona
 

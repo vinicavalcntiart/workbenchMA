@@ -296,6 +296,43 @@ sc = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(n.outputs['At
 spn = g.n('GeometryNodeSetPosition'); g.l(geo, spn.inputs['Geometry']); g.l(sc.outputs[0], spn.inputs['Offset'])
 g.l(spn.outputs['Geometry'], o); libs.append(g.ng)
 
+
+# 15. Mascara por Imagem
+g = G("GR Máscara por Imagem", "Apaga fios onde a imagem e preta, lendo o UV da raiz (surface_uv_coordinate). Depois do Interpolate; a cor pode passar por qualquer cadeia antes.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+img = g.inp("Imagem", 'NodeSocketImage')
+inv = g.inp("Inverter", 'NodeSocketBool', False, desc="Ligado: apaga onde e branco")
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Geometry", 'NodeSocketGeometry'); vo = g.out("Valor da imagem", 'NodeSocketFloat', "Cinza da imagem na raiz de cada fio: reuse em Trim, Clump, Curl")
+na = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="surface_uv_coordinate")
+tx = g.n('GeometryNodeImageTexture'); g.l(img, tx.inputs['Image']); g.l(na.outputs['Attribute'], tx.inputs['Vector'])
+sw = g.n('GeometryNodeSwitch', props={'input_type':'FLOAT'}); g.l(inv, sw.inputs['Switch']); g.l(tx.outputs['Color'], sw.inputs['False'])
+one = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); one.inputs[0].default_value = 1.0; g.l(tx.outputs['Color'], one.inputs[1]); g.l(one.outputs[0], sw.inputs['True'])
+rv = g.n('FunctionNodeRandomValue', props={'data_type':'BOOLEAN'}); g.l(sw.outputs[0], rv.inputs['Probability']); g.l(sd, rv.inputs['Seed'])
+nt = g.n('FunctionNodeBooleanMath', props={'operation':'NOT'}); g.l(rv.outputs[3] if len(rv.outputs)>3 else rv.outputs[0], nt.inputs[0])
+dl = g.n('GeometryNodeDeleteGeometry', props={'domain':'CURVE'}); g.l(geo, dl.inputs['Geometry']); g.l(nt.outputs[0], dl.inputs['Selection'])
+g.l(dl.outputs['Geometry'], o); g.l(sw.outputs[0], vo); libs.append(g.ng)
+
+# 16. Fisica Estilizada
+DYN = os.path.join(bpy.utils.system_resource('DATAFILES'),'assets','nodes','geometry_nodes_dynamics_assets.blend')
+with bpy.data.libraries.load(DYN, link=False) as (src, dst): dst.node_groups = ['Hair Dynamics']
+HD = bpy.data.node_groups['Hair Dynamics']
+g = G("GR Física Estilizada", "Hair Dynamics nas GUIAS com valores que seguram penteado estilizado (Bendiness 0, Root 0, Substeps 40). Guias precisam de Snap to Nearest Surface. Coloque ANTES do Interpolate.")
+geo = g.inp("Guias", 'NodeSocketGeometry')
+mov = g.inp("Movimento", 'NodeSocketFloat', 0.0, 0.0, 1.0, "Bendiness. 0 segura a forma; 0,5 balanca", 'FACTOR')
+raiz = g.inp("Raiz solta", 'NodeSocketFloat', 0.0, 0.0, 1.0, "Root Bendiness", 'FACTOR')
+sub = g.inp("Substeps", 'NodeSocketInt', 40, 1, 200, "40 segura o penteado (queda 1,5 cm). 10 = padrao, desaba")
+grav = g.inp("Gravidade", 'NodeSocketFloat', 1.0, 0.0, 2.0, "Multiplica 9,81 m/s2", 'FACTOR')
+col = g.inp("Colisores", 'NodeSocketCollection', desc="Colecao com objetos que tem o modificador Collider (ex.: a cabeca inteira). Nao use Surface Collision no scalp: explode.")
+o = g.out("Guias", 'NodeSocketGeometry')
+hd = g.n('GeometryNodeGroup', group=HD)
+hd.inputs['Mode'].default_value = 'Physics (Experimental)'
+g.l(geo, hd.inputs['Hair']); g.l(mov, hd.inputs['Bendiness']); g.l(raiz, hd.inputs['Root Bendiness']); g.l(sub, hd.inputs['Substeps']); g.l(col, hd.inputs['Effectors Collection'])
+gm = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); gm.inputs[0].default_value = (0,0,-9.81); g.l(grav, gm.inputs['Scale'])
+for s_ in hd.inputs:
+    if s_.name == 'Gravity' and s_.type == 'VECTOR': g.l(gm.outputs[0], s_)
+g.l(hd.outputs['Hair'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

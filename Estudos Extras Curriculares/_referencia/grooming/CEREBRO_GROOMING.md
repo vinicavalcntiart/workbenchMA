@@ -940,13 +940,14 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Catorze node groups "GR" e dois materiais, marcados como asset, feitos com as
+Dezesseis node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
   Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
-  Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz (14 grupos)
+  Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
+  Imagem, GR Física Estilizada (16 grupos)
   [img/21_lib_sheet, 23_lib2_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
@@ -1096,3 +1097,19 @@ Cabeça, scalp e guias filhos de um Empty que gira 60° e volta (quadros 1 a
 Uso: deixe vazio para ter balanço. Ligue uma transformação (de um osso raiz ou
 de um Empty que acompanha o personagem) quando o deslocamento grande do
 personagem andando não deve virar inércia no cabelo.
+
+### 17.27 Máscara por imagem validada no laboratório [t_mask.py, t_lib3.py]
+
+Imagem 64×64 metade preta (u < 0,5), metade branca, 15.669 fios:
+
+| Método | Fios que sobraram no preto |
+|---|---|
+| sem máscara | 4.890 |
+| slot Mask Texture do Interpolate | 56, na borda (interpolação Linear) |
+| cadeia: Named Attribute `surface_uv_coordinate` → Image Texture (Closest) → Random Value Boolean (Probability) → NOT → Delete Geometry (Curve) | 0 |
+| GR Máscara por Imagem (Linear) | 53 |
+
+Confirma a receita de 8 (observado em produção). A GR Máscara por Imagem
+devolve também o cinza da imagem por fio, para reusar em Trim, Clump e Curl.
+GR Física Estilizada carregada do .blend: 1,5 cm de queda em 36 quadros,
+igual ao teste manual de 17.25.
