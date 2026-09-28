@@ -782,6 +782,7 @@ estão resumidas em 17.0):
 | Balanço com follow-through sem física | Vector Rotate na raiz com seno defasado pelo Spline Parameter | 17.88 |
 | Hairline suave na testa | campo de posição no Density Mask (1 → 0,08 nos últimos 3,5 cm) | 17.89 |
 | Vibrissas de animal | Guias Procedurais na região do focinho, 26 fios, Shape 0,9 | 17.90 |
+| Franja cortina (parcial) | Trim na frente + empurrão lateral por sinal de X; Roll falha | 17.91 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2723,3 +2724,17 @@ fora 1, Para o lado 1,2, Para trás 0,4, Gravidade 0,3, **12.000 guias/m²**
 (26 fios). Set Hair Curve Profile raio 0,6 mm, **Shape 0,9** (afina quase
 até zero). Material claro separado. Sem Interpolate: poucas vibrissas
 grossas leem melhor que muitas finas.
+
+### 17.91 Franja cortina: parcial [img/106_cortina_sheet]
+
+Máscara por Posição na frente (Y < −4,5 cm, Altura > 3 cm) → Trim para 42%
+na máscara → abrir para os lados.
+
+| Como abrir | Resultado |
+|---|---|
+| GR Ponta Virada "para fora" na máscara | **falhou**: na frente do topo a raiz aponta para cima, o "para fora" enrola para cima e a franja virou um tufo espetado |
+| Offset = sinal(X da raiz) × s^1,5 × 6 cm × máscara, + Shrinkwrap | a franja aparece e cobre a testa, mas o "V" da cortina ainda é fraco |
+
+Para a cortina de verdade faltam: risca no meio (scalp em duas ilhas, 17.13)
+e o empurrão lateral crescer mais cedo no fio (expoente menor ou
+amplitude maior). Não resolvido nesta sessão.
