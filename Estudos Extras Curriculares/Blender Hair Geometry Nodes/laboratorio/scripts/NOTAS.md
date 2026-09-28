@@ -78,3 +78,5 @@
 - Shape Cycles: bpy 5.2.2 cena nova = RIBBONS (todo o lab). Lum cabelo: RIBBONS 0,343 18,4 s; THICK 0,184 24,3 s; THICK_LINEAR 0,216 11,9 s. Melanina do lab calibrada em Ribbons.
 - CORRECAO 17.68: vista normal (0,5 mm, cabeca inteira, so cabelo) Ribbons x 3D < 7% (mel .2/.4/.6/.8 -> 3D .2/.38/.56/.8). Diferenca 2x so em close de fio grosso.
 - Comprimento por textura: surface_uv_coordinate -> Image -> MapRange 0,35..1,1 -> Eval Curve -> Trim LF. Faixas = camadas; UV do scalp define onde.
+- Regressao (05:12): 19 scripts t_lib*.py rodam sem erro no .blend atual (31 grupos); 23_lib2_sheet visualmente igual.
+- Mecha por regiao: 2 ramos Mecha 3,5cm e 8mm do mesmo Interpolate -> Transicao Fator smoothstep(z 3..7cm). Sem costura.

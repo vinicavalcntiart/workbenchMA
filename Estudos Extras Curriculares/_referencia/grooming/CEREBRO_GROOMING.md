@@ -755,6 +755,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo apoiado nos ombros | Shrinkwrap no tronco, Above 0, nas guias e no fim | 17.67 |
 | Cor muda no close | Shape das curvas: em close de fio grosso, Ribbons sai ~2× mais claro que 3D Curves | 17.68 |
 | Comprimento pintado | surface_uv_coordinate → Image Texture → Map Range → Trim Length Factor | 17.69 |
+| Parâmetro de valor único variando por região | dois ramos + GR Transição com máscara | 17.70 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2249,3 +2250,15 @@ Length Factor** (Replace Length desligado).
   pinte em cima do scalp, não no espaço de UV às cegas.
 - Mais fino que vertex group (resolução da imagem) e reutilizável entre
   personagens com o mesmo UV de scalp.
+
+### 17.70 Tamanho de mecha diferente por região [img/79_clumpreg_sheet]
+
+O Guide Distance do Clump é um valor só. Para mecha larga no topo e fina
+nas laterais: dois ramos da mesma Densidade Livre, GR Mecha Estilizada com
+**3,5 cm** e com **8 mm**, misturados pela **GR Transição** com Fator =
+Z da raiz → Map Range Smooth Step 3 → 7 cm. Os dois ramos têm a mesma
+contagem de pontos (vêm do mesmo Interpolate), então a Transição funciona
+sem Resample. A passagem entre regiões não mostra costura.
+
+Serve para qualquer parâmetro "de valor único" por região: dois ramos +
+Transição com uma máscara (vertex group, textura, posição).
