@@ -703,8 +703,17 @@ ligado, Subdivision 3, Curl Start 0,08) → Set Hair Curve Profile.
 - **Variação por mecha**: Random Value (Float) com **ID = Named Attribute
   (Integer) `guide_curve_index`** no Radius (0,007 a 0,016) e na Frequency
   (6 a 13). Cada mecha ganha seu cacho e a definição fica.
-- **Variação por fio** (ID vazio) desfaz a definição e vira massa felpuda.
-  Serve para realismo, não para estilizado.
+- **Variação por fio** [img/07b_curlvar_sheet, 07c_curlvar_sheet], corrigido
+  depois de isolar: o Curl calcula a hélice na **guia** (Sample Curve pelo
+  índice da guia, dentro do grupo) e aplica nos filhos.
+  - **Radius por fio funciona**: Random Value → Evaluate on Domain (Curve) →
+    Radius. Cacho mais cheio, ainda definido.
+  - **Frequency por fio quebra**: a hélice do filho desencontra da guia e o
+    cacho vira cilindro liso. Frequency só fixa ou por mecha (ID =
+    `guide_curve_index`).
+  - Random Value **sem ID e sem Evaluate on Domain** num input de ponto
+    sorteia **por ponto**, não por fio. No Curl vira massa felpuda; no Set
+    Curve Tilt, fita enrugada. Esse foi o erro do primeiro teste.
 - Custo: Subdivision 3 leva 12 pontos para 89 por fio. 20 mil fios = 1,8
   milhão de pontos.
 
@@ -769,3 +778,67 @@ deslocamento fixo (0, 1, 2, 3...) → Seed de Interpolate, Clump, Curl, Random
 Value e Noise. Mudar um número troca o groom inteiro sem repetir padrão entre
 nodes. A mesma árvore faz liso, ondulado ou cacheado mudando só a Frequency do
 Curl (0 desliga, 3 onda, 9 cacho).
+
+### 17.9 Pelo estilizado de personagem (DreamWorks) [img/14_fur_sheet]
+
+Esfera de 15 cm, guias de 3,5 cm penteadas para baixo.
+
+| Visual | Receita | Fios |
+|---|---|---|
+| Feltro, "bicho de pelúcia" | Interpolate 3 M/m², sem clump | 846 mil |
+| **Tufo estilizado** | Interpolate 1,5 M/m² → Clump GD 0,008, Shape 0,25, Tip Spread 0,001 | 423 mil |
+| Pele aparecendo | o mesmo com Shape 0 | 423 mil |
+| Macio realista | subpelo (3 M/m², Trim 0,45) + topo (0,6 M/m², Clump GD 0,01, Trim 1,15), Join Geometry | 1 milhão |
+
+Sem clump o pelo vira feltro, o problema que o Steve Chow descreve na palestra
+[pal/bcon2026-steve-chow-photoreal-cat-hair-curves.md]. As duas camadas são
+dois ramos saindo do mesmo Group Input, cada um com seu Interpolate e Seed,
+juntados por Join Geometry.
+
+### 17.10 Trança [img/15_braid_sheet, 15b_braid_sheet]
+
+Uma guia na nuca, Interpolate com **Distance to Guides 0,02** (só nasce fio
+perto da guia), Density 4 M/m², Braid Hair Curves com Guide Distance 0,3 (uma
+trança por guia) e Existing Guide Map desligado.
+
+- Frequency maior dá mais cruzamentos: 2 = fechada, 0,5 = solta.
+- Shape 0,5 com Factor Min 0 (padrão) afina a trança até sumir.
+- **Trança grossa estilizada**: Radius 0,016 a 0,02, **Shape 0, Factor Min
+  0,7**.
+- Flare Length 0,05 com Opening 0,025 vira um disco achatado na ponta.
+  Começar bem menor.
+
+### 17.11 Mecha "chunky" em malha (cabelo esculpido) [img/16b_chunky_sheet]
+
+Cabelo de personagem "de brinquedo": poucas mechas grossas viradas em malha.
+
+1. Interpolate com Density 3.000 a 6.000 por m² (150 a 300 mechas).
+2. Resample Curve, Count 24.
+3. Set Hair Curve Profile: Radius 0,004 a 0,006, Shape 0,3, Factor Min 0
+   (ponta afiada).
+4. (opcional) Set Curve Tilt = Spline Parameter × π: fita torcida.
+5. Curve to Mesh: Profile = Curve Circle (Resolution 10) com Transform Scale
+   Y 0,35 (fita achatada). **Ligar um node Radius no Scale do Curve to
+   Mesh.** Na 5.2, com o Scale solto, o perfil ignora o raio do fio e cada
+   mecha vira um tubo de 1 metro.
+6. Set Shade Smooth, material de malha comum (Principled BSDF, Coat 0,4).
+
+Torção por mecha: Random Value (−π a π) → Evaluate on Domain (Curve) →
+multiplica o Spline Parameter. Sem o Evaluate on Domain, sorteia por ponto e
+a fita enruga [img/16_chunky_sheet]. Render: 2,5 a 3 s por quadro.
+
+### 17.12 Fontes estilizadas e princípios de estúdio
+
+Pasta `estilizado/` (coleta de 2026-09-28): 12 fontes com URL verificada,
+`SINTESE.md` com 13 princípios. Os vídeos do YouTube ficaram sem transcrição
+(bloqueio do ambiente); os arquivos têm descrição e capítulos. Princípios
+confirmados no laboratório:
+
+- **Cor por mecha, não por fio** (DreamWorks, Gato de Botas: manchas de cor
+  "como pinceladas") = 17.5.
+- **Poucas guias grandes definem a silhueta** (Pixar, Brave: 1.500 guias para
+  111 mil curvas) = a base de todos os testes aqui.
+- **Clump em camadas, macro depois detalhe** = 17.2 e o teste dos dois Clumps
+  na seção 5.
+- **Fita torcida com Set Curve Tilt** (BlenderArtists, 2022). A dúvida sem
+  resposta do fórum, variar a torção por mecha, está resolvida em 17.11.

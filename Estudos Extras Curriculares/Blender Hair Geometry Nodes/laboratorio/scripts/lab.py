@@ -229,3 +229,46 @@ def run_variants(tag, variants, build, res=480, samples=16, cols=None, **shot_kw
     sp = sheet(paths, labels, os.path.join(OUT, f"{tag}_sheet.png"), cols=cols or len(paths))
     for x in info: print("INFO", tag, x)
     print("SHEET", sp); return sp
+
+# ---------- pelo ----------
+def make_body(radius=0.15, subdiv=64):
+    me = bpy.data.meshes.new("body")
+    bm = bmesh.new(); bmesh.ops.create_uvsphere(bm, u_segments=subdiv, v_segments=subdiv//2, radius=radius, calc_uvs=True)
+    bm.to_mesh(me); bm.free()
+    for p in me.polygons: p.use_smooth = True
+    return link(bpy.data.objects.new("body", me))
+
+def fur_guides(surf, n=500, pts=6, length=0.03, lift=0.45, seed=2, R=0.15):
+    """Guias curtas: saem pela normal e deitam para baixo ao longo da superficie."""
+    rnd = random.Random(seed); me = surf.data; me.calc_loop_triangles()
+    tris=[]; tot=0
+    for t in me.loop_triangles:
+        a,b,c = [me.vertices[i].co.copy() for i in t.vertices]; ar=((b-a).cross(c-a)).length/2; tris.append((a,b,c,ar)); tot+=ar
+    curves=[]
+    for _ in range(n):
+        r=rnd.uniform(0,tot); acc=0
+        for a,b,c,ar in tris:
+            acc+=ar
+            if acc>=r: break
+        u,v=rnd.random(),rnd.random()
+        if u+v>1: u,v=1-u,1-v
+        p0=a+(b-a)*u+(c-a)*v; nrm=p0.normalized()
+        down=(Vector((0,0,-1)) - nrm*nrm.dot(Vector((0,0,-1))))
+        if down.length<1e-4: down=Vector((1,0,0))
+        down.normalize()
+        cur=[]; seg=length/(pts-1)
+        for i in range(pts):
+            tt=i/(pts-1)
+            d=(nrm*lift*(1-tt)+down*(1-lift*(1-tt))).normalized()
+            p = p0 if i==0 else cur[-1]+d*seg
+            if p.length<R*1.01: p=p.normalized()*R*1.01
+            cur.append(p.copy())
+        curves.append(cur)
+    cd=bpy.data.hair_curves.new("fur"); cd.add_curves([pts]*len(curves))
+    cd.attributes['position'].data.foreach_set('vector',[c for cur in curves for v in cur for c in v])
+    ob=link(bpy.data.objects.new("fur",cd)); cd.surface=surf; cd.surface_uv_map="UVMap"; return ob
+
+def fur_scene(**kw):
+    reset(); EG = essentials()
+    body = make_body(); body.data.materials.append(skin_mat())
+    g = fur_guides(body, **kw); return EG, body, g

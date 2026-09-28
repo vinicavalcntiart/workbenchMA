@@ -1,0 +1,20 @@
+import sys; sys.path.insert(0,'.')
+from lab import *
+reset(); EG = essentials()
+head, scalp = make_head()
+g = comb_guides(scalp, n=150)
+print("grupos:", len(EG))
+# A: Interpolate direto (surface so no Object Data)
+t = Tree("A"); t.eg(EG['Interpolate Hair Curves'], Density=200.0); ngA = t.finish()
+m = apply_tree(g, ngA); print("A so Interpolate:", stats(g))
+g.modifiers.remove(m)
+# B: Attach Hair Curves to Surface antes
+t = Tree("B")
+at = t.add('GeometryNodeGroup', group=EG['Attach Hair Curves to Surface'])
+print("Attach inputs:", [ (s.name, s.bl_idname) for s in at.inputs])
+at.inputs['Surface Object'].default_value = scalp
+uv = t.add('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="UVMap")
+t.link(uv.outputs['Attribute'], at.inputs['Surface UV Map'])
+t.chain(at)
+t.eg(EG['Interpolate Hair Curves'], Density=200.0); ngB = t.finish()
+apply_tree(g, ngB); print("B Attach+Interpolate:", stats(g))
