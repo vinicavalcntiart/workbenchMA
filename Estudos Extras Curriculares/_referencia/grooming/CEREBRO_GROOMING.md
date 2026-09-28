@@ -702,6 +702,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Penteado sem esculpir | Generate Hair Curves + parábola + Shrinkwrap | 17.29 |
 | Rabo de cavalo | Mix(raiz, amarração) até t, depois cai; Shrinkwrap | 17.30 |
 | Maria-chiquinha, rabo trançado, coque | campo na amarração; Braid depois; espiral de fase única | 17.31 |
+| Sobrancelha, barba, bigode | região recortada + GR Guias Procedurais como gerador | 17.32 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1247,3 +1248,22 @@ Todos em cima da GR Rabo de Cavalo:
 Regra geral que sai daqui: **forma coletiva (coque, corda, trança) usa valores
 iguais para o grupo; variação por fio só para textura**. É o mesmo princípio
 da Frequency do Curl (17.3).
+
+### 17.32 Pelos do rosto estilizados [img/36_face_sheet]
+
+Cada região é uma malha recortada da cabeça (como uma hair cap), com um objeto
+Curves vazio apontando para ela. **GR Guias Procedurais serve direto como
+gerador**: pelo curto não precisa de Interpolate. Depois, Clump pequeno e Set
+Hair Curve Profile afinando a ponta.
+
+| Região | Comprimento | Para fora | Lado | Gravidade | Fios/m² | Clump |
+|---|---|---|---|---|---|---|
+| Sobrancelha | 1,4 cm | 0,25 | 1,2 | −0,4 (sobe) | 600 mil | 4 mm |
+| Barba | 1,8 cm | 0,5 | 0,15 | 1,0 | 900 mil | 5 mm |
+| Bigode | 2 cm | 0,4 | 1,4 | 0,6 | 900 mil | 5 mm |
+| Cílio | 1 cm | 0,9 | 0,3 | −1,6 | 120 mil | sem |
+
+O "Lado" usa o sinal do X da raiz: na sobrancelha e no bigode isso penteia
+para fora a partir do centro do rosto, que é o sentido natural. Gravidade
+negativa curva para cima. Os cílios (67 fios) ficaram escondidos atrás dos
+olhos: precisam de mais comprimento e de uma região na borda da pálpebra.
