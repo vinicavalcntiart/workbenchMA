@@ -482,7 +482,13 @@ Observado em teste headless, nao em fonte externa:
   geometry/read/selection.rst]. Receita "Salvar Selecao": editor em Tool,
   Usage Tool, modo Edit, tipo Curves; Group Input (Geometry, string Nome) →
   Store Named Attribute (Boolean, Curve) com Value = Selection → Output.
-  Roda pelo menu Non-Assets em Edit Mode; o Nome aparece no redo. Cada
+  Roda em Edit Mode pelo menu **so com icone** no fim do header da
+  viewport, depois de Segments (ICON_FILE_HIDDEN, secao "Non-Assets";
+  node_group_operator.cc da 5.2). So aparece com Types = Curves e Modes =
+  Edit marcados nos popovers do header do editor. O input Name precisa de
+  Default preenchido, senao roda sem gravar; o Nome tambem aparece no redo.
+  Erros vistos com o Vini: Selection ligado no socket Selection do Store em
+  vez do Value, e Store em Float. Cada
   execucao substitui o conjunto; para somar, Boolean Math OR com o Named
   Attribute antigo. Diagrama: laboratorio/img/118_node_tool_selecao.png.
   Nao executado aqui: o operador de node tool nao existe no bpy headless.
