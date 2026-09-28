@@ -796,7 +796,10 @@ Limite da cabeça de teste: o scalp termina **2 cm abaixo do centro** da
 esfera, também na nuca e nas laterais. Uma hair cap real desce 6 a 8 cm
 abaixo disso atrás. Receitas de nuca e lateral (undercut 17.81, orelha
 17.60) mostram menos cabelo curto que numa cabeça real; as alturas das
-máscaras precisam ser ajustadas à sua hair cap. Os valores
+máscaras precisam ser ajustadas à sua hair cap. O scalp de teste também
+**não cobre a costeleta** (recorta \|X\| > 8 cm abaixo de 2,5 cm junto com a
+orelha): um teste de costeleta com a regra 17 deu 0 raízes na região e não
+vale como resultado. Os valores
 valem direto para uma cabeça humana em metros. Scripts em
 `Blender Hair Geometry Nodes/laboratorio/scripts/`, folhas de contato em
 `laboratorio/img/`. Cada receita cita a folha.
