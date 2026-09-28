@@ -488,7 +488,15 @@ Observado em teste headless, nao em fonte externa:
   Edit marcados nos popovers do header do editor. O input Name precisa de
   Default preenchido, senao roda sem gravar; o Nome tambem aparece no redo.
   Erros vistos com o Vini: Selection ligado no socket Selection do Store em
-  vez do Value, e Store em Float. Cada
+  vez do Value, e Store em Float.
+  **Causa real de "nao aparece" (5.2.0 e 5.2.2):** o tool local precisa do
+  **Identifier** no popover Options do header do editor (propriedade
+  `node_tool_idname`). Vazio, o grupo nao e registrado como operador e o
+  painel mostra "Missing operator identifier" [node_group_operator.cc,
+  custom_idname_for_group; space_node.py; conferido na tag v5.2.0]. Formato:
+  minusculas, numeros e _, exatamente um ponto, ex. `curves.salvar_selecao`
+  [wm_operators.cc, operator_idname_ok_or_report_impl]. Grupo novo via API
+  nasce com o campo vazio (bpy 5.2.2). Cada
   execucao substitui o conjunto; para somar, Boolean Math OR com o Named
   Attribute antigo. Diagrama: laboratorio/img/118_node_tool_selecao.png.
   Nao executado aqui: o operador de node tool nao existe no bpy headless.
