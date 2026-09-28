@@ -1041,3 +1041,42 @@ Vertex group `franja` na frente do topo. Ordem que funciona:
 
 **Above Surface 0,5 (padrão) puxa também o que está fora da cabeça e achata o
 groom inteiro.** Para colisão, sempre 0.
+
+### 17.25 Física 5.2: simular as guias e manter o penteado estilizado [img/28_dyn_sheet, 28c_dyn_sheet, 28d_dyn_sheet; t_dyn_dbg.py, t_dyn_hold.py]
+
+Hair Dynamics (asset em `geometry_nodes_dynamics_assets.blend`), aplicado só
+nas 260 guias; Interpolate e o resto da cadeia vêm em outro modificador
+depois. Manual: `modeling/geometry_nodes/simulation/hair_dynamics.rst`.
+
+**Armadilhas medidas:**
+
+- O Mode vem em **Animation** (só segue a superfície). Para física, "Physics
+  (Experimental)". O socket de entrada chama "Hair".
+- **Guias sem `surface_uv_coordinate` explodem**: a raiz é presa pelo UV, e
+  sem ele todas ficam no UV (0,0). No Blender: Snap to Nearest Surface nas
+  guias antes de simular. O scalp precisa ter UV.
+- **Surface Collision com o scalp explodiu** em todas as repetições (pontas
+  subindo 25 a 50 cm já no quadro 3): as raízes estão sobre o próprio
+  colisor. O caminho estável: **Collider** (asset) num modificador da cabeça
+  inteira, a cabeça numa coleção, a coleção no **Effectors Collection** do
+  Hair Dynamics. Estável até o quadro 48. Neste teste nenhum ponto chegou a
+  encostar na cabeça, então o efeito do Collider em si não ficou provado.
+
+**Segurar um penteado estilizado contra a gravidade** (groom espetado, queda
+média da ponta no quadro 36):
+
+| Configuração | Queda | Custo por quadro |
+|---|---|---|
+| Padrão (Bendiness 0,5, Root 0,2, Substeps 10, Steps 15) | 12,5 cm, desaba | 26 ms |
+| Bendiness 0,05 ou 0, Root 0,02 ou 0 | 12,4 cm, igual | 26 ms |
+| Constraint Steps 60 | 5,4 cm | 81 ms |
+| Constraint Steps 120 | 2,8 cm | 152 ms |
+| **Bendiness 0, Root 0, Substeps 40** | **1,5 cm, mantém** | **84 ms** |
+| Steps 60 + gravidade 1/4 | 1,5 cm | 79 ms |
+| Mass 0,001 | igual ao padrão | — |
+
+Leitura: com os valores padrão, a rigidez pedida não é cumprida porque o
+solver não converge. **Substeps é a alavanca eficiente.** Massa não muda a
+queda, porque a gravidade acelera qualquer massa igual. Para estilizado:
+Bendiness 0, Root Bendiness 0, Substeps 40, e aumente Bendiness só onde quer
+movimento.

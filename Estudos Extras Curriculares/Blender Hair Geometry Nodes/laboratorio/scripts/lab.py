@@ -21,7 +21,8 @@ def link(ob, coll=None):
 def make_head(radius=0.1, scalp_cut=-0.15, front_cut=0.55, subdiv=64):
     """Cabeca = esfera. Scalp = calota superior (z > scalp_cut*R), sem a testa/rosto (y < -front_cut*R e z<0.55R)."""
     me = bpy.data.meshes.new("head")
-    bm = bmesh.new(); bmesh.ops.create_uvsphere(bm, u_segments=subdiv, v_segments=subdiv//2, radius=radius, calc_uvs=True)
+    bm = bmesh.new(); bm.loops.layers.uv.new("UVMap")
+    bmesh.ops.create_uvsphere(bm, u_segments=subdiv, v_segments=subdiv//2, radius=radius, calc_uvs=True)
     bm.to_mesh(me); bm.free()
     head = link(bpy.data.objects.new("head", me))
     for p in me.polygons: p.use_smooth = True
@@ -234,7 +235,8 @@ def run_variants(tag, variants, build, res=480, samples=16, cols=None, **shot_kw
 # ---------- pelo ----------
 def make_body(radius=0.15, subdiv=64):
     me = bpy.data.meshes.new("body")
-    bm = bmesh.new(); bmesh.ops.create_uvsphere(bm, u_segments=subdiv, v_segments=subdiv//2, radius=radius, calc_uvs=True)
+    bm = bmesh.new(); bm.loops.layers.uv.new("UVMap")
+    bmesh.ops.create_uvsphere(bm, u_segments=subdiv, v_segments=subdiv//2, radius=radius, calc_uvs=True)
     bm.to_mesh(me); bm.free()
     for p in me.polygons: p.use_smooth = True
     return link(bpy.data.objects.new("body", me))
@@ -281,3 +283,27 @@ def vgroup(scalp, name, fn):
         w = max(0.0, min(1.0, fn(mw @ v.co)))
         vg.add([v.index], w, 'REPLACE')
     return vg
+
+def attach_uv(g, scalp, uvname="UVMap"):
+    """Grava surface_uv_coordinate nas guias (equivale ao Snap to Nearest Surface)."""
+    from mathutils.bvhtree import BVHTree
+    from mathutils.geometry import barycentric_transform
+    import numpy as np
+    me = scalp.data; me.calc_loop_triangles(); mw = scalp.matrix_world
+    verts = [mw @ v.co for v in me.vertices]
+    tris = [tuple(t.vertices) for t in me.loop_triangles]
+    bvh = BVHTree.FromPolygons(verts, tris)
+    uvl = me.uv_layers[uvname].data
+    cd = g.data; P = np.zeros(len(cd.points)*3, np.float32); cd.attributes['position'].data.foreach_get('vector', P); P = P.reshape(-1,3)
+    out = []
+    for c in cd.curves:
+        co, n, idx, d = bvh.find_nearest(Vector(P[c.first_point_index]))
+        lt = me.loop_triangles[idx]
+        a,b,cc = [verts[i] for i in lt.vertices]
+        ua,ub,uc = [Vector((*uvl[l].uv, 0)) for l in lt.loops]
+        uv = barycentric_transform(co, a, b, cc, ua, ub, uc)
+        out += [uv.x, uv.y]
+    if "surface_uv_coordinate" not in cd.attributes:
+        cd.attributes.new("surface_uv_coordinate", 'FLOAT2', 'CURVE')
+    cd.attributes["surface_uv_coordinate"].data.foreach_set('vector', out)
+    return len(cd.curves)
