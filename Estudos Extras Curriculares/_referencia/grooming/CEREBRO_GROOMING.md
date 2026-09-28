@@ -729,6 +729,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cabelo seguir cabeça animada | Deform Curves on Surface no fim; padrões por posição antes dele | 17.46 |
 | Contorno de desenho | casca invertida no GN + material só para raio de câmera | 17.47 |
 | Redemoinho | Vector Rotate em volta da coroa, ângulo × falloff × Spline Parameter | 17.48 |
+| Transição ou mistura de penteados | Resample igual → Sample Index de B → Mix com A | 17.49 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1022,7 +1023,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e cinco node groups "GR" e quatro materiais, marcados como asset, feitos com as
+Vinte e seis node groups "GR" e quatro materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1032,7 +1033,7 @@ receitas desta seção e validados abrindo o .blend do zero:
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
   Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
-  Contorno (25 grupos)
+  Contorno, GR Transição (26 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
   Contorno.
@@ -1706,3 +1707,25 @@ Interpolate:
 A rotação desloca a ponta proporcional à distância dela até o eixo: em fio
 longo, use até ~1,5 rad; 3,5 só em cabelo curto. Várias coroas = some
 os ângulos de cada uma.
+
+### 17.49 Transição entre penteados [img/55_morph_sheet, 55_transicao_liso_cacheado.gif, 55_lib_fator05]
+
+Um penteado vira outro sem simulação. Depois da GR Mecha Estilizada:
+
+1. **Resample 64** (os dois penteados precisam da mesma contagem de pontos).
+2. Ramo B: GR Cacho por Mecha com **Subdivisão 0** (senão muda a contagem).
+3. Sample Index (Geometry = B, Value = Position, Index = Index) → Mix
+   Vector (A = Position, B = amostra) → Set Position em A.
+4. Fator = Map Range **Smooth Step** (Scene Time Seconds − atraso por mecha
+   0 a 0,5 s; de 0,3 s a 1,2 s → 0 a 1).
+
+- 10 mil fios × 64 pontos, 24 quadros + render em 43 s.
+- O atraso por mecha (Random com ID = `guide_curve_index`) faz o cacho
+  "enrolar" em ondas pela cabeça, em vez de tudo junto.
+- **Fator parado em 0,5 é um terceiro penteado** (onda larga entre liso e
+  cacheado): a transição também serve de slider de estilo.
+- O fio cacheado é mais curto no espaço; durante a transição o cabelo
+  "sobe". Para manter o comprimento, faça B com Preserve Length e mesmo
+  comprimento de A.
+
+Pronto em **GR Transição** (Penteado A, Penteado B, Fator), validado do .blend.

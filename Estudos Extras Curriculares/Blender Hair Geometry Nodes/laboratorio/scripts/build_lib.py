@@ -564,6 +564,21 @@ g.l(j.outputs[0], o); libs.append(g.ng)
 for it in g.ng.interface.items_tree:
     if getattr(it, 'name', '') == "Material" and it.in_out == 'INPUT': it.default_value = MCONT
 
+# 26. Transicao
+g = G("GR Transição", "Anima de um penteado para outro: cada ponto de A vai ate o ponto de mesmo indice em B. A e B precisam da mesma contagem de pontos (Resample antes de separar; Curl com Subdivisao 0).")
+ga = g.inp("Penteado A", 'NodeSocketGeometry')
+gb = g.inp("Penteado B", 'NodeSocketGeometry')
+fa = g.inp("Fator", 'NodeSocketFloat', 0.0, 0.0, 1.0, "0 = A, 1 = B. Aceita campo: Scene Time - atraso por mecha", 'FACTOR')
+o = g.out("Geometry", 'NodeSocketGeometry')
+pB = g.n('GeometryNodeInputPosition'); ix = g.n('GeometryNodeInputIndex')
+si = g.n('GeometryNodeSampleIndex', props={'data_type':'FLOAT_VECTOR','domain':'POINT'}); g.l(gb, si.inputs['Geometry']); g.l(pB.outputs[0], si.inputs['Value']); g.l(ix.outputs[0], si.inputs['Index'])
+pA = g.n('GeometryNodeInputPosition')
+mx = g.n('ShaderNodeMix', props={'data_type':'VECTOR'}); g.l(fa, mx.inputs[0]); g.l(pA.outputs[0], mx.inputs[4]); g.l(si.outputs[0], mx.inputs[5])
+sp = g.n('GeometryNodeSetPosition'); g.l(ga, sp.inputs['Geometry']); g.l(mx.outputs[1], sp.inputs['Position'])
+g.l(sp.outputs[0], o); libs.append(g.ng)
+for it in g.ng.interface.items_tree:
+    if getattr(it, 'name', '') == "Fator" and it.in_out == 'INPUT': it.hide_value = False
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
