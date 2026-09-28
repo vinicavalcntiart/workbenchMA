@@ -185,9 +185,9 @@ def confere(txt, html=None, tipo='fria', nome=''):
     # negritos e com pouco emoji". Os 16 envios das 16h03 de 24/09 sairam sem nenhum <b> e
     # sem a frase fixa do portfolio, porque esta conferencia nao olhava nenhum dos dois.)
     if tipo in ('fria', 'generica'):
-        if not re.search(r'more than 45 projects with over 60 characters', txt):
+        if not re.search(r'(?:more than 45|47) projects with over 60 characters', txt):
             erros.append('FRASE DO PORTFOLIO AUSENTE (BRIEFING regra 9): "My portfolio holds '
-                         'more than 45 projects with over 60 characters ...".')
+                         '47 projects with over 60 characters ..." (numero do Vini, 28/09).')
         if html is not None:
             nb = len(re.findall(r'<b>|<strong>', html, re.I))
             if nb < 4:

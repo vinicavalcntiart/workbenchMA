@@ -13,7 +13,7 @@ NEGRITO = [
     r'Senior 3D Character Artist with more than (?:ten|10) years',
     r'The Wingfeather Saga season 1',
     r'E-Line Media',
-    r'more than 45 projects with over 60 characters',
+    r'(?:more than 45|47) projects with over 60 characters',
     r'I am ready to move for the role',
     r'grooming in Houdini',
 ]
