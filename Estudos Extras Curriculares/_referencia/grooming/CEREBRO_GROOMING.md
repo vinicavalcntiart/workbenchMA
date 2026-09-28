@@ -739,6 +739,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cadeia leve | Ponta Virada antes de Onda/Cacho, Subdivisão 0 ou 1: 9× mais rápido | 17.54 |
 | Criatura completa | Pentear por Curva + listra no dorso + barriga clara | 17.55 |
 | Anime / NPR | 3.000/m², Mecha Chunky raio 1,8 cm sem torção, Toon, Contorno | 17.56 |
+| Cabelo flutuando / vento barato | Noise 4D com W = tempo × Spline Parameter^1,5 no offset das guias | 17.57 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1888,3 +1889,24 @@ lava o Toon).
 
 Regra para NPR: **poucas mechas largas e sem torção**. A leitura vem do
 contorno e da forma de cada bloco, não da quantidade.
+
+### 17.57 Cabelo flutuando (embaixo d'água) sem simulação [img/64_agua_sheet, 64_agua.gif]
+
+Nas guias, depois da GR Guias Procedurais (34 cm, para fora 0,6, lado 0,5,
+**para trás 0,9, gravidade 0,15**) e de um Resample 24:
+
+1. Scene Time Seconds × 0,4 → W de uma Noise Texture **4D**, Vector =
+   Position, **Scale 7**, Detail 0.
+2. Color − 0,5 → × (Spline Parameter^1,5 × **0,2**) → Set Position Offset.
+
+A raiz fica parada, a ponta ondula até 10 cm, e a onda anda pelo fio porque a
+Noise é lida na posição de cada ponto. 24 quadros a cada 3 (72 quadros),
+render 320 px: 37 s.
+
+| Versão | Resultado |
+|---|---|
+| Gravidade −0,3, Scale 4, amplitude 0,12 | chafariz rígido para cima, mexe pouco |
+| **Gravidade 0,15, para trás 0,9, Scale 7, amplitude 0,2** | cabelo deitado para trás, ondulando como na água |
+
+Mesma receita serve de "vento contínuo" barato para cabelo de fundo, onde a
+física (17.35) seria cara demais.
