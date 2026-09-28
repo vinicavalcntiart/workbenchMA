@@ -2302,3 +2302,10 @@ Pronto em **GR Guias Desenhadas** (entrada Grease Pencil). O grupo tira o
 scalp do próprio Curves vazio com **Get Attachment Surface** e passa para o
 Set Attachment Surface em modo Geometry: o artista só liga o Grease Pencil.
 Validado do .blend: 11.455 fios.
+
+Vale para **objeto Curve comum** também (medido): 12 guias num Curve POLY,
+Object Info → Interpolate dá **12** curvas (nenhum filho); com Set
+Attachment Surface antes (Get Attachment Surface do Curves vazio, modo
+Geometry) dá **10.412**. Então curvas extraídas de malha (Mesh to Curve de
+mechas esculpidas no ZBrush) ou desenhadas como Bezier servem de guia pelo
+mesmo caminho.
