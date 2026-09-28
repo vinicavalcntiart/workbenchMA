@@ -481,7 +481,13 @@ Observado em teste headless, nao em fonte externa:
   Factor do Clump. Corpo fechado, cada ponta solta de um jeito. Sem node:
   **Tip Spread** (6 mm) abre as pontas. **Curve Tip nao serve**: Tip
   Selection marca so o ultimo ponto, o cone continua igual
-  [img/122_clump_pontas_sheet, 122_clump_pontas_nodes]. Por fio, sem Create Guide
+  [img/122_clump_pontas_sheet, 122_clump_pontas_nodes].
+- **Atributo de cor** (2026-09-28, bpy 5.2.2): Store Named Attribute tipo
+  **Color**, dominio Spline (uma cor por fio, ex. Curve Info Random → Color
+  Ramp) ou Point (varia no fio, ex. Spline Parameter → Color Ramp), Name
+  `cor`. No material: Attribute Type **Geometry**, mesmo nome → Color do
+  Principled Hair BSDF em Direct Coloring. Direct Coloring clareia: use tons
+  mais escuros [img/124_cor_atributo_sheet, 124_cor_atributo_nodes]. Por fio, sem Create Guide
   Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
   Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
   Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
