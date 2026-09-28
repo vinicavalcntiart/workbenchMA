@@ -333,6 +333,47 @@ for s_ in hd.inputs:
     if s_.name == 'Gravity' and s_.type == 'VECTOR': g.l(gm.outputs[0], s_)
 g.l(hd.outputs['Hair'], o); libs.append(g.ng)
 
+
+# 17. Guias Procedurais
+g = G("GR Guias Procedurais", "Gera guias penteadas sem esculpir: Generate Hair Curves + parabola (para fora, lado da risca, para tras, gravidade) + Shrinkwrap. Use num objeto Curves vazio com Surface; depois ligue a cadeia normal.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+cab = g.inp("Cabeça (colisão)", 'NodeSocketObject', desc="Objeto da cabeca inteira para o Shrinkwrap")
+L = g.inp("Comprimento", 'NodeSocketFloat', 0.22, 0.0, 10.0, "", 'DISTANCE')
+outw = g.inp("Para fora", 'NodeSocketFloat', 0.4, 0.0, 3.0, "0,4 cai rente; 0,8 volume; 1,2 espetado")
+lado = g.inp("Para o lado da risca", 'NodeSocketFloat', 0.35, -2.0, 2.0)
+tras = g.inp("Para trás", 'NodeSocketFloat', 0.2, -2.0, 2.0)
+grav = g.inp("Gravidade", 'NodeSocketFloat', 1.2, 0.0, 10.0, "1,2 bob; 2,2 longo caido; 0 espetado")
+risca = g.inp("Risca X", 'NodeSocketFloat', 0.0, -10.0, 10.0, "", 'DISTANCE')
+dens = g.inp("Guias por m2", 'NodeSocketFloat', 4000.0, 0.0, 1e6, "4000 ~ 200 guias numa cabeca real")
+sd = g.inp("Seed", 'NodeSocketInt', 0)
+o = g.out("Guias", 'NodeSocketGeometry')
+gen = g.n('GeometryNodeGroup', group=EG['Generate Hair Curves'])
+gen.inputs['Control Points'].default_value = 12; gen.inputs['Distribution Method'].default_value = 'Poisson Disk'
+g.l(geo, gen.inputs['Hair Surface']); g.l(L, gen.inputs['Hair Length']); g.l(dens, gen.inputs['Density']); g.l(sd, gen.inputs['Seed'])
+sp = g.n('GeometryNodeSplineParameter'); rt = g.n('GeometryNodeGroup', group=EG['Curve Root'])
+sx = g.n('ShaderNodeSeparateXYZ'); g.l(rt.outputs['Root Position'], sx.inputs[0])
+dx = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(sx.outputs['X'], dx.inputs[0]); g.l(risca, dx.inputs[1])
+sg = g.n('ShaderNodeMath', props={'operation':'SIGN'}); g.l(dx.outputs[0], sg.inputs[0])
+sl = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sg.outputs[0], sl.inputs[0]); g.l(lado, sl.inputs[1])
+dirv = g.n('ShaderNodeCombineXYZ'); g.l(sl.outputs[0], dirv.inputs['X']); g.l(tras, dirv.inputs['Y'])
+om1 = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(outw, om1.inputs[0]); om1.inputs[1].default_value = 1.0
+nn = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(gen.outputs['Surface Normal'], nn.inputs[0]); g.l(om1.outputs[0], nn.inputs['Scale'])
+a1 = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(nn.outputs[0], a1.inputs[0]); g.l(dirv.outputs[0], a1.inputs[1])
+lt = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sp.outputs['Factor'], lt.inputs[0]); g.l(L, lt.inputs[1])
+lin = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(a1.outputs[0], lin.inputs[0]); g.l(lt.outputs[0], lin.inputs['Scale'])
+t2 = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sp.outputs['Factor'], t2.inputs[0]); g.l(sp.outputs['Factor'], t2.inputs[1])
+gl_ = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(grav, gl_.inputs[0]); g.l(L, gl_.inputs[1])
+gz = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(t2.outputs[0], gz.inputs[0]); g.l(gl_.outputs[0], gz.inputs[1])
+ng_ = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(gz.outputs[0], ng_.inputs[0]); ng_.inputs[1].default_value = -1.0
+gv = g.n('ShaderNodeCombineXYZ'); g.l(ng_.outputs[0], gv.inputs['Z'])
+off = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(lin.outputs[0], off.inputs[0]); g.l(gv.outputs[0], off.inputs[1])
+spn = g.n('GeometryNodeSetPosition'); g.l(gen.outputs['Geometry'], spn.inputs['Geometry']); g.l(off.outputs[0], spn.inputs['Offset'])
+w = g.n('GeometryNodeGroup', group=EG['Shrinkwrap Hair Curves'], Factor=1.0, Offset_Distance=0.006, Above_Surface=0.0, Smoothing_Steps=3, Lock_Roots=True)
+g.l(spn.outputs['Geometry'], w.inputs['Geometry'])
+for x in w.inputs:
+    if x.name == 'Surface' and x.type == 'OBJECT': g.l(cab, x)
+g.l(w.outputs['Geometry'], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

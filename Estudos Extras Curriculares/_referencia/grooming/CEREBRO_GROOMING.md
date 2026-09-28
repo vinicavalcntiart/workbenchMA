@@ -683,6 +683,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Balanço no giro | Simulation to World vazio | 17.26 |
 | Máscara por imagem | `surface_uv_coordinate` → Image Texture → Random → Delete | 17.27 |
 | Crespo | ≥ 8 pontos por volta | 17.28 |
+| Penteado sem esculpir | Generate Hair Curves + parábola + Shrinkwrap | 17.29 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -976,14 +977,14 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Dezesseis node groups "GR" e dois materiais, marcados como asset, feitos com as
+Dezessete node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
   Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
   Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz, GR Máscara por
-  Imagem, GR Física Estilizada (16 grupos)
+  Imagem, GR Física Estilizada, GR Guias Procedurais (17 grupos)
   [img/21_lib_sheet, 23_lib2_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
@@ -1161,3 +1162,29 @@ igual ao teste manual de 17.25.
   pede menos fios e mechas maiores.
 - A silhueta redonda de afro vem das **guias** (esculpidas), não dos nodes.
   Guias retas e radiais dão silhueta de escova, com qualquer node depois.
+
+### 17.29 Guias procedurais: penteado sem esculpir [img/31_procguides_sheet, 32_zero_sculpt]
+
+Bloqueio de penteado em segundos, antes de esculpir. Parte de um objeto Curves
+**vazio** com Surface definida:
+
+1. **Generate Hair Curves**: Poisson Disk, 4.000 por m² (cerca de 200 guias
+   numa cabeça real), 12 pontos, Hair Length L. Sai reto pela normal.
+2. **Set Position**, Offset = (Surface Normal × (para fora − 1) + (sinal de
+   Root X, 0, 0) × lado + (0, para trás, 0)) × L × t − Z × gravidade × L × t²,
+   com t = Spline Parameter Factor. É uma parábola: sai, vai para o lado da
+   risca e cai.
+3. **Shrinkwrap Hair Curves** na cabeça, Above Surface 0, Offset 0,006,
+   Smoothing 3.
+4. Daí em diante, a cadeia normal (Interpolate, Mecha...).
+
+| Penteado | Para fora | Lado | Gravidade | Comprimento |
+|---|---|---|---|---|
+| Bob liso | 0,4 | 0,35 | 1,2 | 22 cm |
+| Longo ondulado (+ Onda S) | 0,4 | 0,25 | 2,2 | 34 cm |
+| Volume cacheado (+ Cacho) | 0,8 | 0,45 | 0,5 | 24 cm |
+| Espetado | 1,2 | 0,1 | 0 | 12 cm |
+
+Pronto em **GR Guias Procedurais**. Validado: um groom completo com 10 nodes,
+só grupos GR, sem uma guia esculpida. Para refinar, aplique o modificador e
+esculpa por cima das guias geradas.
