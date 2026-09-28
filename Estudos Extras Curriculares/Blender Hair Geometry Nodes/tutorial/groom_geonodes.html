@@ -817,14 +817,17 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
     <tr><td>Menos fios, mesma cobertura</td><td>Scalp com a cor da raiz</td></tr>
     <tr><td>Cards para jogo</td><td>GR Hair Cards e Convert &gt; Mesh</td></tr>
     <tr><td>Traço de desenho</td><td>GR Contorno</td></tr>
+    <tr><td>Groom pesado de repente</td><td>Ponta Virada antes do Cacho, Subdivisão 0 ou 1</td></tr>
+    <tr><td>Cada cópia diferente</td><td>GR Semente do Objeto nos Seeds</td></tr>
+    <tr><td>Pelo seguindo uma direção</td><td>GR Pentear por Curva</td></tr>
   </table></div>
 
   <h3 id="lab-lib" style="margin-top:1.6rem">A biblioteca pronta</h3>
-  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 26 node groups e 4 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
+  <p>O arquivo <code>laboratorio/receitas_grooming.blend</code> tem 30 node groups e 4 materiais prontos, com nomes começando por "GR" e entradas em português. Todos foram testados abrindo o arquivo do zero.</p>
   <div class="box do"><h4>Como usar</h4><ol>
     <li>Edit &gt; Preferences &gt; File Paths &gt; Asset Libraries &gt; <b>+</b>. Aponte para a pasta <code>laboratorio</code>.</li>
     <li>No Geometry Nodes do seu Curves: Shift+A, a biblioteca, os grupos GR.</li>
-    <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
+    <li>Ordem: GR Densidade Livre → GR Mecha Estilizada → GR Volume na Raiz → GR Strays em Arco → GR Ponta Virada → GR Onda S ou GR Cacho por Mecha → GR Cor por Mecha → Set Hair Curve Profile.</li>
     <li>Para variações, ligue um único node Integer no Seed de todos.</li>
   </ol></div>
 <figure><img src="img/lab/21_lib_sheet.jpg" alt="Quatro cabeças com estilos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro grooms montados só com os grupos GR: fita, Merida, onda S com Toon e mecha chunky.</figcaption></figure>
@@ -903,6 +906,9 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Transição entre penteados</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Resample 64 depois da mecha: os dois penteados precisam da mesma contagem de pontos.</li><li>Ramo B com o cacho (Subdivisão 0). Sample Index de B → Mix com a posição de A → Set Position.</li><li>Fator animado com atraso por mecha. Parado em 0,5, vira um terceiro penteado. Pronto em <b>GR Transição</b>.</li></ol></div>
 <figure><img src="img/lab/55_transicao_liso_cacheado.gif" alt="Cabelo liso virando cacheado" loading="lazy" style="width:100%;height:auto"><figcaption>Liso para cacheado em 1,2 s, mecha por mecha.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cabelo flutuando, sem física</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Nas guias, depois de um Resample 24: Noise Texture <b>4D</b>, Vector = Position, W = Seconds × 0,4, Scale 7.</li><li>Color − 0,5, vezes Spline Parameter<sup>1,5</sup> × 0,2 → Offset do Set Position. A raiz fica parada e a onda anda pelo fio.</li><li>Pronto em <b>GR Flutuar</b>. Serve de vento barato para personagem de fundo.</li></ol></div>
+<figure><img src="img/lab/64_agua.gif" alt="Cabelo loiro flutuando" loading="lazy" style="width:100%;height:auto"><figcaption>Cabelo embaixo d'água: gravidade 0,15 e para trás 0,9 nas guias, Noise 4D por cima.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Cabeça que deforma</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Ligue <b>Add Rest Position</b> no scalp (Object Data).</li><li><b>Deform Curves on Surface é o último node de forma</b>, depois de Clump, Curl e cortes.</li><li>Tudo que lê posição (textura, máscara, distância) vem antes dele, ou lê <code>surface_uv_coordinate</code>.</li></ol></div>
 <figure><img src="img/lab/52_deform_sheet.jpg" alt="Quatro cabeças inclinadas" loading="lazy" style="width:100%;height:auto"><figcaption>Sem Deform, ou com ele nas guias, a cabeça atravessa o cabelo. No fim, a raiz fica a 0,06 mm; o padrão por posição só fica parado se vier antes.</figcaption></figure>
@@ -916,6 +922,14 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Hair cards para jogo</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Densidade Livre com 8.000 a 20.000 por m²: um card por fio.</li><li>Set Curve Normal em Free com <b>Cross(Tangent; n_raiz)</b>: o card deita no crânio. Só a normal deixa ele de pé.</li><li>Curve to Mesh com perfil em linha e Radius no Scale; UV = Store Named Attribute 2D Vector, Face Corner, <code>UVMap</code>.</li><li>Object &gt; Convert &gt; Mesh: o UV vira UV map real e o FBX sai com ele. Pronto em <b>GR Hair Cards</b>.</li></ol></div>
 <figure><img src="img/lab/49_cards_sheet.jpg" alt="Cabeças com hair cards" loading="lazy" style="width:100%;height:auto"><figcaption>Minimum Twist gira, normal da raiz deixa de pé, o produto vetorial deita. À direita, o grupo da biblioteca.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Custo e ordem da cadeia</h3>
+<p>Medido com 15 mil fios. A GR Ponta Virada tem subdivisão própria: depois do cacho, com Subdivisão 2, a cadeia foi de 0,7 s para <b>6,8 s</b> e de 2 para 8 milhões de pontos. <b>Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1.</b> Na tela, 0, 1 e 2 ficaram iguais.</p>
+<figure><img src="img/lab/61_roll_sheet.jpg" alt="Três cortes com ponta virada" loading="lazy" style="width:100%;height:auto"><figcaption>Ponta Virada com Subdivisão 0, 1 e 2: 154 mil, 295 mil e 578 mil pontos.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Procedural e depois esculpir</h3>
+<p>Aplique (Apply) o modificador da GR Guias Procedurais. As guias viram curvas reais, com <code>surface_uv_coordinate</code> e <code>id</code>: abrem no Sculpt Mode e servem para física e Deform. Chegue a 80% no procedural e esculpa o resto.</p>
+<h3 style="margin-top:1.6rem">Cada cópia com cabelo diferente</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Self Object → Object Info → Location → <b>Hash Value</b> (Vector).</li><li>Esse inteiro no Seed de todos os grupos e no ID de Random Values: tamanho da mecha, voltas por metro, comprimento, cor.</li><li>Duplique cabeça, scalp e cabelo juntos. Cada cópia sorteia o seu. Pronto em <b>GR Semente do Objeto</b>.</li></ol></div>
+<figure><img src="img/lab/66_multidao.jpg" alt="Quatro cabeças com cabelos diferentes" loading="lazy" style="width:100%;height:auto"><figcaption>Quatro cópias, o mesmo node tree: preto, loiro, castanho e ruivo, cada uma com comprimento e cacho próprios.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Um groom, várias cabeças</h3>
 <p>A mesma cadeia procedural serviu numa cabeça redonda, ovo e larga sem mudar nenhum valor. Para criança, use <b>escala de objeto não aplicada</b>: todas as distâncias escalam juntas.</p>
 <figure><img src="img/lab/51_heads_sheet.jpg" alt="Seis cabeças com o mesmo penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Com a malha escalada, fio, mecha e onda continuam em tamanho de adulto. Com a escala do objeto, sai réplica exata.</figcaption></figure>
@@ -933,6 +947,22 @@ kbd{font-family:"JetBrains Mono",monospace;font-size:.82em;background:var(--surf
 <h3 style="margin-top:1.6rem">Contorno de desenho</h3>
 <div class="box do"><h4>Como fazer</h4><ol><li>Na malha das mechas: Flip Faces → Set Position (Normal × −2,5 mm) → material do contorno → Join com a malha.</li><li>Material: Mix entre Emission preta e Transparent com Factor = <b>Maximum(Backfacing; 1 − Is Camera Ray)</b>.</li><li>Só Backfacing deixa o cabelo inteiro preto: a casca bloqueia a luz. Pronto em <b>GR Contorno</b>.</li></ol></div>
 <figure><img src="img/lab/53_toon_sheet.jpg" alt="Quatro cabeças com mechas de malha" loading="lazy" style="width:100%;height:auto"><figcaption>Sem contorno, casca bloqueando a luz, e contorno só para a câmera em 1,2 e 2,5 mm.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Mecha colorida, mecha branca, molhado e ahoge</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Selecione por mecha: Random Boolean com ID = <code>guide_curve_index</code> (10% das mechas), ou pela posição da raiz (frente, coroa).</li><li>Grave a seleção num atributo e use no shader (tinta, melanina) e no Factor de Curl ou Set Position.</li><li>Ahoge: a mecha mais perto da coroa ganha um arco para cima com Set Position.</li><li>Trim com Length Factor acima de 1 <b>alonga</b>: 1,5 leva 24 cm a 36 cm.</li></ol></div>
+<figure><img src="img/lab/58_destaque_sheet.jpg" alt="Cinco variações de um mesmo corte" loading="lazy" style="width:100%;height:auto"><figcaption>Base, mechas coloridas e cacheadas, mecha branca na frente, molhado e ahoge.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Pelo de criatura penteado por curva</h3>
+<div class="box do"><h4>Como fazer</h4><ol><li>Desenhe um objeto Curve sobre o corpo, no sentido do pelo.</li><li>Curve to Points (Evaluated) → guarda a Tangent → Sample Nearest da raiz → projeta a direção no plano da pele.</li><li>Direção = Mix(fluxo; normal; 0,35) → raiz + direção × comprimento. Pronto em <b>GR Pentear por Curva</b>.</li></ol></div>
+<figure><img src="img/lab/60_flow_sheet.jpg" alt="Três corpos peludos" loading="lazy" style="width:100%;height:auto"><figcaption>Curva reta, espiral e zigue-zague. Onde a curva começa nasce um redemoinho.</figcaption></figure>
+<figure><img src="img/lab/62_criatura.jpg" alt="Criatura peluda de olhos grandes" loading="lazy" style="width:100%;height:auto"><figcaption>Criatura inteira: pelo por curva, listra só no dorso, barriga mais clara.</figcaption></figure>
+<h3 style="margin-top:1.6rem">NPR estilo anime</h3>
+<p>GR Mecha Chunky + Toon + GR Contorno. O que funcionou: <b>poucas mechas largas e sem torção</b> (3.000 por m², raio 1,8 cm, torção 0). Com 9.000 fitas torcidas vira capacete bagunçado. Fundo claro só para a câmera, senão ele ilumina e lava o Toon.</p>
+<figure><img src="img/lab/63_npr_sheet.jpg" alt="Duas cabeças com cabelo azul de desenho" loading="lazy" style="width:100%;height:auto"><figcaption>Torção 0,5 com fitas finas contra mechas largas sem torção.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Cabelo que chega ao chão</h3>
+<p>Nas guias, a profundidade de cada ponto abaixo do piso vira deslocamento para fora: o cabelo esparrama em vez de atravessar. Shrinkwrap no chão empilharia tudo no ponto de contato. Pronto em <b>GR Chão</b>.</p>
+<figure><img src="img/lab/65_chao_sheet.jpg" alt="Cabelo longo atravessando e esparramando no chão" loading="lazy" style="width:100%;height:auto"><figcaption>Fio de 1,1 m: atravessando o piso e dobrando para fora.</figcaption></figure>
+<h3 style="margin-top:1.6rem">Meio preso</h3>
+<p>Sem node novo: GR Transição com A = solto, B = o mesmo cabelo pela GR Rabo de Cavalo, e Fator = altura da raiz (Smooth Step de 3,5 a 5,5 cm). O topo vai preso, o resto fica solto.</p>
+<figure><img src="img/lab/67_meiopreso_sheet.jpg" alt="Quatro vistas de um penteado" loading="lazy" style="width:100%;height:auto"><figcaption>Solto, rabo em tudo, meio preso de costas e de lado.</figcaption></figure>
 <h3 style="margin-top:1.6rem">Personagem inteiro com a biblioteca</h3>
 <p>Guias procedurais, física com vento, mecha, strays, cacho, cor, cílios, sobrancelha e scalp pintado numa cena só. Os grupos convivem sem ajuste; o que mudou foi design: <b>Para trás 0,6</b> para a franja sair do rosto e <b>cacho começando em 35%</b> para o topo ficar liso.</p>
 <figure><img src="img/lab/56_hero_biblioteca.jpg" alt="Personagem de cabelo cacheado ruivo escuro com cílios e sobrancelhas" loading="lazy" style="width:100%;height:auto"><figcaption>11,5 mil fios, 517 mil pontos, nenhuma guia esculpida.</figcaption></figure>
