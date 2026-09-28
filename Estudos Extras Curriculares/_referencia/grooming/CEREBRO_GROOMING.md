@@ -617,7 +617,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Groom de repente pesado (segundos por avaliação) | Roll/Ponta Virada depois do Curl, com Subdivision 2: pontos × 4 | Ponta Virada antes de Onda e Cacho, Subdivisão 0 ou 1 | lab 17.54 |
 | Topo careca ou com ruído depois de trançar | Braid junta o fio inteiro na guia e afunda o trecho do crânio (58% dentro) | Shrinkwrap na cabeça depois do Braid (GR Trança Grossa com Cabeça ligada) | lab 17.61 |
 | Groom sumiu inteiro | GR Corte pela Malha sem malha ligada (versão antiga) | Atualize a biblioteca ou ligue a malha | lab 17.62 |
-| Cor do cabelo mais escura que a receita | Shape 3D Curves; as receitas foram calibradas em Rounded Ribbons | Baixe a melanina ou use Ribbons | lab 17.68 |
+| Cabelo escurece no close de fio grosso | Shape 3D Curves faz sombra entre fios; Ribbons não | Ajuste a cor no Shape do render final; em vista normal a diferença é < 7% | lab 17.68 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -753,7 +753,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Cel-shading no cabelo | normal da malha proxy (Sample Nearest Surface) no Toon | 17.65 |
 | Cabelo sob chapéu | Shrinkwrap na cabeça com Factor = copa acima OU aba abaixo (dois Raycasts) | 17.66 |
 | Cabelo apoiado nos ombros | Shrinkwrap no tronco, Above 0, nas guias e no fim | 17.67 |
-| Cor diferente do laboratório | Shape das curvas no Cycles: Ribbons (lab) sai ~2× mais claro que 3D Curves | 17.68 |
+| Cor muda no close | Shape das curvas: em close de fio grosso, Ribbons sai ~2× mais claro que 3D Curves | 17.68 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -781,7 +781,7 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 13 | Normal de uma malha lisa no shader | cel-shading e pelo pictórico com 2 nodes | 17.64, 17.65 |
 | 14 | Node Bake para reproduzir groom animado | 353 → 9 ms por quadro | 17.63 |
 | 15 | Física: guias com UV de fixação, Substeps 40, Collider por coleção | sem UV explode; Surface Collision no scalp explode | 17.25 |
-| 16 | Confira o Shape das curvas no Cycles antes de ajustar cor | Ribbons sai ~2× mais claro que 3D Curves com a mesma melanina | 17.68 |
+| 16 | Ajuste a cor no Shape do render final (Ribbons ou 3D Curves) | em close de fio grosso, Ribbons sai ~2× mais claro; em vista normal < 7% | 17.68 |
 
 ### 17.1 Armadilhas da 5.2 medidas
 
@@ -2212,9 +2212,19 @@ assim. Mesmo groom (cachos, raio 0,8 mm, melanina 0,4), close, 24 amostras:
 | 3D Curves | 24,3 s | **0,184** | castanho escuro, sombra própria entre fios |
 | Linear 3D Curves | **11,9 s** | 0,216 | quase igual ao 3D, o mais rápido |
 
-- **Os valores de melanina do laboratório estão calibrados em Ribbons.**
-  Em 3D Curves o mesmo valor sai com cerca de metade do brilho. Para bater
-  a cor, baixe a melanina ao trocar para 3D.
+- **A diferença depende da escala do fio na tela.** Mesma cabeça em vista
+  normal (fio de 0,5 mm, cabeça inteira no quadro, só o cabelo na medição):
+
+| Melanina | Ribbons | 3D Curves com a mesma luminância |
+|---|---|---|
+| 0,2 | 0,347 | 0,2 (0,324) |
+| 0,4 | 0,234 | 0,38 (0,230) |
+| 0,6 | 0,176 | 0,56 (0,180) |
+| 0,8 | 0,141 | 0,8 (0,138) |
+
+  Na vista normal os dois ficam a menos de 7%: as receitas valem igual.
+  Só em **close com fio grosso** (0,8 mm, cacho ocupando o quadro) o Ribbon
+  sai quase 2× mais claro. Nesse caso, confira a cor em 3D Curves.
 - Ribbon é uma fita virada para a câmera: some a sombra entre fios, o
   cabelo fica mais claro e mais chapado, o que já é meio caminho para o
   estilizado.

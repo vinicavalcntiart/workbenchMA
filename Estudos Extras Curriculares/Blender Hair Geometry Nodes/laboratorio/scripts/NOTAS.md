@@ -76,3 +76,4 @@
 - Ombros: Shrinkwrap tronco Above 0 off 4mm smooth 3: dentro 9,8% -> 0,2% (guias+fim) / 0,3% (fim).
 - Atras da orelha: NAO CONCLUSIVO (orelha de teste rasa, escondida). r76_orelha.py.
 - Shape Cycles: bpy 5.2.2 cena nova = RIBBONS (todo o lab). Lum cabelo: RIBBONS 0,343 18,4 s; THICK 0,184 24,3 s; THICK_LINEAR 0,216 11,9 s. Melanina do lab calibrada em Ribbons.
+- CORRECAO 17.68: vista normal (0,5 mm, cabeca inteira, so cabelo) Ribbons x 3D < 7% (mel .2/.4/.6/.8 -> 3D .2/.38/.56/.8). Diferenca 2x so em close de fio grosso.
