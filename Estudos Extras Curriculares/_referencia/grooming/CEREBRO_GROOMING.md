@@ -2576,5 +2576,9 @@ Scene Time Seconds → Map Range **Smooth Step** (0,3 s → 0,6 s vira 0,3 →
 0,95) → Levanta. Criatura pictórica de 17.64, 27,5 mil fios. O pelo sai de
 deitado para em pé em 0,3 s e a silhueta incha, sem simulação.
 
-Na animação real, troque o Scene Time por uma propriedade do rig (Attribute
-de objeto ou um driver no input do modificador).
+Na animação real, troque o Scene Time por um **controle na viewport**
+(testado): um Empty "CTRL_susto" → Object Info (Original) → **Scale Z** →
+Map Range 1 → 2 vira 0,3 → 0,95 → Levanta. Keyframes na escala do Empty
+(1 no quadro 8, 2 no 16) arrepiaram o pelo igual [img/97b_arrepio_ctrl.gif].
+O animador mexe num objeto da cena, sem abrir o node tree; o Empty pode
+ser filho do rig.

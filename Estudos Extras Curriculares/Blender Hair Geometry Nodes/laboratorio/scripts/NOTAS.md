@@ -105,3 +105,4 @@
 - Cacho curto (7 cm, raio 4-6mm): 20-36 / 45-60 / 70-90 voltas/m leram iguais (textura). Raio relativo manda.
 - Cacho curto confirmado: raio 9-12mm + 14-20 v/m + mecha 1,8cm = cachinhos de desenho separados.
 - Arrepio: Levanta do Pentear por Curva = smoothstep(Seconds 0,3..0,6 -> 0,3..0,95). Silhueta incha.
+- Controle na viewport: Empty -> Object Info (Original) Scale Z -> MapRange 1..2 -> Levanta. Keyframe na escala funciona.
