@@ -2037,3 +2037,17 @@ Cadeia típica, 15 mil fios, porcentagem de pontos dentro da cabeça
 - **Bug corrigido: a GR Corte pela Malha sem malha ligada apagava todos os
   fios** (o Raycast não acerta nada e o Delete leva tudo). Agora, sem malha,
   passa direto.
+- Teste de todos os grupos que pedem objeto, **sem o objeto ligado**
+  (comprimento médio do fio; referência 23,8 cm):
+
+| Grupo | Antes | Depois da correção |
+|---|---|---|
+| GR Forma por Malha | pontas colapsam no centro da cabeça (10,9 cm) | passa direto |
+| GR Comprimento até a Malha | **fio com 0 cm** | passa direto |
+| GR Pentear por Curva | tudo em pé pela normal | passa direto |
+| GR Corte pela Malha | **0 fios** | passa direto |
+| GR Rabo de Cavalo, GR Trança Grossa, GR LOD por Câmera | funcionam sem objeto (só perdem a colisão ou o LOD) | igual |
+
+  Padrão da correção, útil para qualquer grupo seu: Object Info do objeto
+  → Domain Size (Point Count) → Compare > 0 → Switch (Geometry) entre a
+  entrada e o resultado.

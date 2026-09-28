@@ -30,6 +30,14 @@ class G:
 def guide_id(g):
     na = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'INT'}, Name="guide_curve_index"); return na.outputs['Attribute']
 
+def passthru(g, obj_sock, geo_in, geo_out, comp):
+    """Sem objeto ligado (ou objeto vazio), devolve a geometria de entrada."""
+    oi_ = g.n('GeometryNodeObjectInfo'); g.l(obj_sock, oi_.inputs['Object'])
+    dsz = g.n('GeometryNodeAttributeDomainSize', props={'component':comp}); g.l(oi_.outputs['Geometry'], dsz.inputs['Geometry'])
+    has = g.n('FunctionNodeCompare', props={'data_type':'INT','operation':'GREATER_THAN'}); _ins = [x for x in has.inputs if x.type=='INT']; g.l(dsz.outputs['Point Count'], _ins[0]); _ins[1].default_value = 0
+    swt = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(has.outputs[0], swt.inputs['Switch']); g.l(geo_in, swt.inputs['False']); g.l(geo_out, swt.inputs['True'])
+    return swt.outputs[0]
+
 libs = []
 
 # 1. Densidade Livre
@@ -453,7 +461,7 @@ mr = g.n('ShaderNodeMapRange'); mr.clamp = True; g.l(sp.outputs['Factor'], mr.in
 ps = g.n('GeometryNodeInputPosition')
 mx = g.n('ShaderNodeMix', props={'data_type':'VECTOR'}); g.l(mr.outputs['Result'], mx.inputs[0]); g.l(ps.outputs[0], mx.inputs[4]); g.l(gp.outputs['Position'], mx.inputs[5])
 st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(mx.outputs[1], st.inputs['Position'])
-g.l(st.outputs['Geometry'], o); libs.append(g.ng)
+g.l(passthru(g, mal, geo, st.outputs['Geometry'], 'MESH'), o); libs.append(g.ng)
 
 # 20. Crescer
 g = G("GR Crescer", "Animacao: cada mecha cresce pelo caminho final com atraso sorteado. Coloque no fim, antes do Set Hair Curve Profile. Precisa de guide_curve_index (Clump antes).")
@@ -527,7 +535,7 @@ k = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(sp.outputs['Facto
 sc_ = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0], sc_.inputs[0]); g.l(k.outputs[0], sc_.inputs['Scale'])
 ad = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Root Position'], ad.inputs[0]); g.l(sc_.outputs[0], ad.inputs[1])
 st = g.n('GeometryNodeSetPosition'); g.l(rs.outputs['Curve'], st.inputs['Geometry']); g.l(ad.outputs[0], st.inputs['Position'])
-g.l(st.outputs['Geometry'], o); libs.append(g.ng)
+g.l(passthru(g, mal, geo, st.outputs['Geometry'], 'MESH'), o); libs.append(g.ng)
 
 # 24. Hair Cards
 g = G("GR Hair Cards", "Cada fio vira um card (fita plana com UV) deitado no cranio: normal da curva = Tangent x n_raiz. Use depois da GR Densidade Livre com densidade baixa (8.000-20.000/m2). Material: GR Card Alpha.")
@@ -618,7 +626,7 @@ spp = g.n('GeometryNodeSplineParameter')
 of = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd2.outputs[0], of.inputs[0]); g.l(spp.outputs['Length'], of.inputs['Scale'])
 ps = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Root Position'], ps.inputs[0]); g.l(of.outputs[0], ps.inputs[1])
 st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(ps.outputs[0], st.inputs['Position'])
-g.l(st.outputs[0], o); libs.append(g.ng)
+g.l(passthru(g, cv, geo, st.outputs[0], 'CURVE'), o); libs.append(g.ng)
 
 # 28. Semente do Objeto
 g = G("GR Semente do Objeto", "Seed e numeros aleatorios diferentes para cada copia do objeto (hash da posicao). Duplique o personagem e cada copia ganha cabelo diferente com o mesmo node tree.")
