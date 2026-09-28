@@ -2743,5 +2743,10 @@ Terceiro passo: **scalp em duas ilhas** (17.13) + GR Lado da Risca no Group
 ID da Mecha + Para o lado 0,6 nas guias. Sai um "V" limpo no meio e o
 cabelo emoldura o rosto, mas a parte curta da franja fica escondida nas
 laterais. Resultado: risca central com moldura, ainda não a cortina curta.
-O que falta, a testar: o comprimento curto só nos primeiros 3 cm de cada
-lado da risca (máscara pela distância à risca, não pela frente toda).
+Testada a máscara só perto da risca (\|X\| < 3,5 cm, frente, topo):
+visual praticamente igual. Diagnóstico: **a direção das guias domina**; com
+Para o lado 0,6, os fios da risca já saem para os lados e o Trim só os
+encurta lá. A franja cortina precisa de **guias próprias** caindo sobre a
+testa e abrindo em arco (um segundo conjunto de guias procedurais, ou
+guias desenhadas 17.71, misturado pela GR Transição com a máscara). Fica
+como próximo teste.

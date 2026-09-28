@@ -23,7 +23,7 @@ if "ilhas" in sys.argv:
 t.chain(m, m.inputs[0].name, m.outputs[0].name)
 base = t.geo
 if V == "cortina":
-    mk = grp("GR Máscara por Posição", **{"Frente máx (Y)": -0.045, "Altura mín": 0.03, "Borda suave": 0.012})
+    mk = grp("GR Máscara por Posição", **({"Frente máx (Y)": -0.03, "Altura mín": 0.04, "Lateral máx (|X|)": 0.035, "Borda suave": 0.01} if "risca" in sys.argv else {"Frente máx (Y)": -0.045, "Altura mín": 0.03, "Borda suave": 0.012}))
     mr = t.add('ShaderNodeMapRange'); t.link(mk.outputs[0], mr.inputs['Value']); mr.inputs['To Min'].default_value = 1.0; mr.inputs['To Max'].default_value = 0.42
     tr = t.add('GeometryNodeGroup', group=EG['Trim Hair Curves']); tr.inputs['Replace Length'].default_value = False; t.link(base, tr.inputs['Geometry']); t.link(mr.outputs['Result'], tr.inputs['Length Factor'])
     # abre para os lados: offset lateral = sign(x raiz) * s^2 * 5 cm * mascara, e um pouco para tras
