@@ -779,7 +779,12 @@ estão resumidas em 17.0):
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
-(raio 10 cm, scalp 0,052 m², fios de 24 a 28 cm, 160 a 220 guias). Os valores
+(raio 10 cm, scalp 0,052 m², fios de 24 a 28 cm, 160 a 220 guias).
+Limite da cabeça de teste: o scalp termina **2 cm abaixo do centro** da
+esfera, também na nuca e nas laterais. Uma hair cap real desce 6 a 8 cm
+abaixo disso atrás. Receitas de nuca e lateral (undercut 17.81, orelha
+17.60) mostram menos cabelo curto que numa cabeça real; as alturas das
+máscaras precisam ser ajustadas à sua hair cap. Os valores
 valem direto para uma cabeça humana em metros. Scripts em
 `Blender Hair Geometry Nodes/laboratorio/scripts/`, folhas de contato em
 `laboratorio/img/`. Cada receita cita a folha.
