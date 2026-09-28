@@ -45,6 +45,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
 | 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
 | 28/09 | Ubisoft Reflections (Newcastle) | Senior Technical Animator [Rainbow Six] (744000120685617) | SmartRecruiters (DataDome) | n | https://jobs.smartrecruiters.com/Ubisoft2/744000120685617 |
+| 28/09 | Grimlore Games (Munique) | Open Application (m/f/d) | site (WPForms, reCAPTCHA de caixa; comando: node apply/site/grimlore.js ENVIAR) | n | https://grimloregames.com/open-application/ |
 
 Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
