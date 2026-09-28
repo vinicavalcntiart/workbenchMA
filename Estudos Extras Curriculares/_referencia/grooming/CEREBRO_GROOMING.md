@@ -602,6 +602,22 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 
 | Sintoma | Causa provável | O que fazer | Fonte |
 |---|---|---|---|
+| Density não passa de 10.000 no painel; cabeça real fica rala | Campo do Interpolate com máximo 10.000 fios/m² | Value node ligado no socket Density (ou GR Densidade Livre) | lab 17.1 |
+| Cacho quase não aparece | Curl dá 3 × Frequency voltas por metro; em escala real Frequency 1 é menos de uma volta | Frequency ≈ voltas/m ÷ 3 (Merida ≈ 9 a 10) | lab 17.1, 17.3 |
+| Cacho vira cilindro liso | Frequency variando por fio; a hélice vem da guia | Frequency fixa ou por mecha (ID = guide_curve_index); Radius pode variar por fio | lab 17.3 |
+| Variação "por fio" sai como ruído, fita enrugada | Random Value sem ID num input de ponto sorteia por ponto | Evaluate on Domain (Curve) depois do Random Value | lab 17.3, 17.11 |
+| Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
+| Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
+| Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
+| Onda S faz trançado em X | Amplitude maior que o tamanho da mecha | Amplitude menor que a mecha (1,5 cm para mechas de 2 cm) | lab 17.19 |
+| Ponta enrola de lado com Roll | Roll Direction é para onde a ponta enrola, não o eixo | Roll Direction = ± Root Position | lab 17.20 |
+| Displace Hair Curves por normal não faz nada | Precisa do UV do scalp para amostrar a normal | Surface Normal do Interpolate guardada em atributo + Set Position | lab 17.21 |
+| Shrinkwrap achata o groom inteiro | Above Surface 0,5 (padrão) puxa também o que está fora | Above Surface 0 para colisão | lab 17.24 |
+| Simulação explode no quadro 1 | Guias sem surface_uv_coordinate; ou Surface Collision com o próprio scalp | Snap to Nearest Surface; Collider na cabeça via Effectors Collection | lab 17.25 |
+| Penteado estilizado desaba na física | Solver não converge com Substeps 10; Bendiness baixo não basta | Bendiness 0, Root 0, Substeps 40 | lab 17.25 |
+| Cabelo não balança quando a cabeça gira | Transform do próprio objeto ligada no Simulation to World | Deixar vazio (espaço de mundo) | lab 17.26 |
+| Mola crespa serrilhada | Menos de 8 pontos por volta | Resample antes do Curl, Subdivision 0 | lab 17.28 |
+| Coque ou corda vira nuvem | Fase e raio sorteados por fio numa forma coletiva | Valores iguais para o grupo; sorteio só na espessura | lab 17.31 |
 | Density Mask por Image Texture não gera nada, ou some tudo | Density Mask é lido nos cantos das faces; malha pobre lê preto nos cantos | Usar o slot Mask Texture do node (amostra por ponto) ou subdividir o scalp; Density Mask só para vertex group | int/interpolate-hair-curves.md; manual interpolate_hair_curves.rst |
 | Segundo Clump não cria sub-mechas | Clump grava `guide_curve_index`; o segundo herda o mapa (Existing Guide Map ligado) ou não sobra espalhamento (Factor 1,0 no primeiro) | Primeiro Clump Factor 0,5; segundo com Guide Distance menor, Factor 1,0, Existing Guide Map desligado, Seed diferente | testado bpy 5.2.2, seção 5 |
 | Interpolate não gera nada | Surface não atribuída, UV map errado, ou Rest Position sem malha em repouso | Conferir Surface e Surface UV Map no Interpolate; testar com Rest Position desligado | jp/ja-tenp-kukan-2025-11-hair-curves-guia-completo.md |
