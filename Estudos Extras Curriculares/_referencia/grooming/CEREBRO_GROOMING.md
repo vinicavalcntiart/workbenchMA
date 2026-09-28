@@ -779,6 +779,7 @@ estão resumidas em 17.0):
 | Anel de brilho de anime | faixa na coordenada Object (não no Intercept) → Emission | 17.85 |
 | Franja reta ou em bicos | GR Corte pela Malha com a borda da frente na altura da franja | 17.86 |
 | Groom não muda ao mover o personagem | tudo é local ao objeto; gravidade procedural = −Z do objeto | 17.87 |
+| Balanço com follow-through sem física | Vector Rotate na raiz com seno defasado pelo Spline Parameter | 17.88 |
 | Princípios de estúdio (Pixar, Disney, DreamWorks) | fontes coletadas e resumidas | 17.12 |
 | Material estilizado | Principled BSDF para cor fiel; Toon diffuse + glossy | 17.15 |
 | Biblioteca pronta (33 grupos) | `laboratorio/receitas_grooming.blend` e `laboratorio/exemplos/` | 17.19 |
@@ -2670,3 +2671,19 @@ cabeça girada 50°, o deslocamento médio raiz → ponta em X foi de −43,7 cm
 (gravidade do objeto, cabelo inclinado junto) para **+3,2 cm** (reto para
 baixo). Ela lê a rotação do objeto: serve para pose de repouso inclinada;
 animar a rotação reposiciona o cabelo quadro a quadro, sem inércia.
+
+### 17.88 Balanço de caminhada com follow-through, sem física [img/103_balanco_sheet, 103_balanco_2.5.gif]
+
+Nas guias (Resample 24), antes do Interpolate. Vector Rotate eixo Y,
+Center = Root Position, Angle = **0,35 × s × sen(2π t / 1 s − atraso × s)**,
+com s = Spline Parameter e t = Scene Time Seconds. Depois Shrinkwrap na
+cabeça.
+
+| Atraso | Leitura |
+|---|---|
+| 0 | pêndulo rígido: o cabelo gira em bloco |
+| **2,5 rad** | a ponta chega depois da raiz; o fio faz curva em S (follow-through) |
+
+Período 1 s = um passo por lado a 24 fps. Para sincronizar com a
+animação, troque o Scene Time por um valor do rig (o controle por Empty de
+17.83). Nove nodes, custo de nada (feito nas guias).
