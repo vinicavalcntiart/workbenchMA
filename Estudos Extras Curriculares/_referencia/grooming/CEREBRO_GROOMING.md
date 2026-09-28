@@ -1011,3 +1011,33 @@ Dois defeitos que ficaram visíveis e viram regra:
   penteadas no redemoinho ou volume menor ali (vertex group no Volume).
 - **Raiz escura em ruivo e loiro**: +0,45 de melanina na raiz faz a linha do
   cabelo parecer castanha. Para cabelo claro, use +0,1 a +0,2.
+
+### 17.23 Quantos pontos o cacho precisa [img/26_pts_sheet]
+
+13 mil fios cacheados, 400 px:
+
+| Configuração | Pontos por fio | Avaliação | Render | Visual |
+|---|---|---|---|---|
+| Curl Subdivision 1 | 23 | 96 ms | 9,0 s | poligonal, pedaços soltos |
+| **Curl Subdivision 2** | 45 | 156 ms | 7,8 s | **igual à 3** |
+| Curl Subdivision 3 | 89 | 234 ms | 7,8 s | referência |
+| Resample 30 + Subdivision 0 | 30 | 129 ms | 8,6 s | aceitável |
+
+O Cycles quase não sente a quantidade de pontos (ele suaviza a curva). O
+custo está na avaliação e na memória. **Subdivision 2** é o padrão do GR
+Cacho por Mecha.
+
+### 17.24 Franja e colisão com a cabeça [img/27_fringe_sheet, 27b_fringe_sheet]
+
+Vertex group `franja` na frente do topo. Ordem que funciona:
+
+1. Trim Hair Curves: Replace Length ligado, Length 0,09, **Mask = franja**.
+   Antes do Displace, para medir o fio original.
+2. Displace Hair Curves: Displace Vector (0; −0,06; −0,03), Shape 0,5,
+   **Factor = franja**. Sozinho, atravessa a testa.
+3. **Shrinkwrap Hair Curves**: Surface = o objeto da cabeça (não o scalp),
+   **Above Surface 0**, Offset Distance 0,004, Smoothing Steps 2, Lock Roots
+   ligado. Empurra para fora só o que entrou.
+
+**Above Surface 0,5 (padrão) puxa também o que está fora da cabeça e achata o
+groom inteiro.** Para colisão, sempre 0.
