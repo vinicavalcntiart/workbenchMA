@@ -762,6 +762,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Desenhar as guias | Grease Pencil to Curves → Set Attachment Surface → Densidade | 17.71 |
 | Mandar biblioteca de grupos para outra máquina | tornar locais os utilitários que o Essentials traz linkados | 17.72 |
 | Despenteado com mechas coesas | Rotate + Noise nas guias; strays nos filhos | 17.73 |
+| Dreadlocks | 2.200/m² → Onda S lenta → Mecha Chunky redonda → relevo por Noise | 17.74 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -2360,3 +2361,22 @@ Interpolate, para as mechas continuarem coesas:
 Bagunça nos **filhos** (depois do Interpolate) quebraria as mechas por
 dentro e custaria por ponto; nas guias, a Mecha Estilizada ainda junta tudo.
 Um Integer ligado nos Seeds sorteia outra bagunça.
+
+### 17.74 Dreadlocks estilizados [img/85_dreads_sheet]
+
+Uma dread = um fio grosso de malha. GR Guias Procedurais (30 cm) → GR
+Densidade Livre com só **2.200/m²** (~110 dreads) → GR Onda S → **GR Mecha
+Chunky com Achatamento 1** (tubo redondo), raio 7 mm, torção 0, 48 pontos →
+relevo: Noise Texture (Scale 180, Detail 3) na posição → Map Range ±1,2 mm →
+Normal × valor → Set Position Offset. Scalp pintado escuro. 62 mil faces.
+
+| Versão | Leitura |
+|---|---|
+| Onda S padrão (período 10 cm, 1,5 cm) | ondas miúdas: parece macarrão |
+| **Período 25 cm, amplitude 1 cm** | cordas pesadas caindo: dread |
+
+- A Onda S é calibrada para mecha de fio fino; em peça grossa, aumente o
+  período com a espessura.
+- Cor: Principled BSDF marrom 0,06 com roughness 0,75 ainda leu marrom
+  médio acinzentado; para dread escura, baixe a cor base (≈0,03) ou use o
+  GR Cabelo Cel com a normal de uma casca (17.65).
