@@ -719,6 +719,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Menos fios, mesma cobertura | scalp com a cor da raiz: 60 mil/m² cobre como 300 mil | 17.42 |
 | Hair cards para jogo | Curve to Mesh com perfil em linha, normal = Tangent × n_raiz, UV em Face Corner | 17.43 |
 | Listra, mancha, roseta no pelo | textura na raiz → atributo → cor + Trim 40% | 17.44 |
+| Mesmo groom em outra cabeça ou criança | troque scalp e colisão; criança = escala de objeto não aplicada | 17.45 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1601,3 +1602,26 @@ relevo, não como pintura. Corpo de 15 cm de raio, 1,5 M fios/m², tufos de 8 mm
 - Em personagem animado, troque Root Position por `surface_uv_coordinate`
   (17.27): posição muda quando o corpo deforma e o padrão escorrega
   (dedução, não medido aqui).
+
+### 17.45 Um groom, várias cabeças [img/51_heads_sheet]
+
+A cadeia GR Guias Procedurais → Densidade Livre → Mecha Estilizada → Onda S
+→ Cor por Mecha (zero escultura) foi aplicada sem mexer em nenhum valor em
+cabeças de formatos diferentes, trocando só o scalp e a cabeça de colisão:
+
+| Cabeça | Fios | Resultado |
+|---|---|---|
+| Redonda | 15.662 | referência |
+| Ovo (0,9 × 1 × 1,25) | 16.999 | o penteado acompanha o crânio alto |
+| Larga (1,25 × 1,1 × 0,88) | 18.304 | acompanha; mais área, mais fios |
+| Criança, malha 0,7 | 7.683 | fio, mecha e onda continuam em metros de adulto: tudo parece grande |
+| Criança, malha 0,7, Comprimento × 0,7 | 7.697 | melhor, mas mecha e onda ainda grandes |
+| **Criança, escala do objeto 0,7** | 15.536 | **réplica exata do adulto** |
+
+- Geometry Nodes trabalha no espaço do objeto. Cabeça, scalp e Curves com
+  **escala de objeto não aplicada** escalam todas as distâncias juntas:
+  comprimento, mecha, onda, cacho e raio do fio. Não aplique a escala se
+  quiser que o groom acompanhe.
+- Formato diferente (ovo, larga) não pede ajuste: as guias saem da normal e
+  o Shrinkwrap segura no crânio novo.
+- A contagem acompanha a área em metros do objeto: cabeça larga ganha fios.
