@@ -6,7 +6,6 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 | data | casa | cargo | família | personagem | URL |
 |---|---|---|---|---|---|
-| 28/09 | Stim Studio (Angoulême) | Character Lookdev Artist, série Rabbids (1 ano, início 26/10) | site próprio (reCAPTCHA de caixa) | s | https://www.stimstudio.com/en/careers/character-lookdev-artist/ |
 | 28/09 | Ludia | General Application / Candidature spontanée | BambooHR | n | https://ludia.bamboohr.com/careers/62 |
 | 28/09 | Hypixel | 3D Artist - Minecraft Project | BambooHR | n | https://hypixel.bamboohr.com/careers/54 |
 | 28/09 | Stardock | Don't see an opening for you? | BambooHR | n | https://stardock.bamboohr.com/careers/28 |

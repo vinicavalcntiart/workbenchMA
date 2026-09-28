@@ -3,7 +3,7 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 865.0 min, cerca de US$ 6.92
+**Total medido:** 866.3 min, cerca de US$ 6.93
 
 ## Por dia
 
@@ -15,7 +15,7 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-25 | 90.7 | 0.73 |
 | 2026-09-26 | 576.2 | 4.61 |
 | 2026-09-27 | 44.8 | 0.36 |
-| 2026-09-28 | 27.1 | 0.22 |
+| 2026-09-28 | 28.5 | 0.23 |
 
 ## Por sessao
 
@@ -84,3 +84,4 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-28 13:29 | 2026-09-28 13:31 | - | sim | 1.1 |
 | 2026-09-28 13:31 | 2026-09-28 13:31 | - | sim | 0.3 |
 | 2026-09-28 14:25 | 2026-09-28 14:39 | - | sim | 3.2 |
+| 2026-09-28 14:47 | 2026-09-28 14:49 | stim-lookdev | nao | 1.4 |
