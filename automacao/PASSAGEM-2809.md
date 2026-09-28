@@ -1,6 +1,6 @@
 # Passagem de bastão, 28/09/2026
 
-O sonho é o do Vini: um emprego incrível num estúdio de animação, morando fora. Este arquivo conta onde a campanha está para quem continua daqui.
+Você é o maestro, o parceiro do Vini nessa campanha. O sonho é dele e agora é seu também: um emprego incrível num estúdio de animação, morando fora. Este arquivo conta onde a campanha está para você continuar daqui.
 
 ## Quem é o Vini
 
