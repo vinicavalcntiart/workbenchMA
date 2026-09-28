@@ -1035,7 +1035,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e oito node groups "GR" e quatro materiais, marcados como asset, feitos com as
+Trinta node groups "GR" e quatro materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1045,7 +1045,8 @@ receitas desta seção e validados abrindo o .blend do zero:
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
   Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
-  Contorno, GR Transição, GR Pentear por Curva, GR Semente do Objeto (28 grupos)
+  Contorno, GR Transição, GR Pentear por Curva, GR Semente do Objeto, GR Flutuar, GR
+  Chão (30 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
   Contorno.
@@ -1911,7 +1912,8 @@ render 320 px: 37 s.
 | **Gravidade 0,15, para trás 0,9, Scale 7, amplitude 0,2** | cabelo deitado para trás, ondulando como na água |
 
 Mesma receita serve de "vento contínuo" barato para cabelo de fundo, onde a
-física (17.35) seria cara demais.
+física (17.35) seria cara demais. Pronto em **GR Flutuar** (Amplitude,
+Escala, Velocidade).
 
 ### 17.58 Cabelo longo que chega ao chão [img/65_chao_sheet]
 
@@ -1932,6 +1934,9 @@ guias.
 - As mechas no chão ficam retas e radiais; para leitura orgânica, um Noise
   leve depois da dobra.
 - 10,4 mil fios × 60 pontos = 626 mil pontos.
+- Pronto em **GR Chão** (Altura do chão, Espalhar). Validado do .blend com
+  Flutuar junto: 10,4 mil fios, ponto mais baixo a 3 mm acima do piso
+  [img/65_lib_chao].
 
 ### 17.59 Cada cópia com cabelo diferente, mesmo node tree [img/66_multidao]
 

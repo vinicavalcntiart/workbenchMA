@@ -44,6 +44,8 @@ escala real (raio 10 cm). As conclusões estão no cérebro, seção 17:
 | GR Transição | anima ou mistura dois penteados com a mesma contagem de pontos | depois de separar os ramos A e B |
 | GR Pentear por Curva | pelo curto deita no sentido de uma curva desenhada | logo depois de gerar os fios |
 | GR Semente do Objeto | Seed e aleatórios diferentes por cópia do objeto | fora da cadeia, nos Seeds |
+| GR Flutuar | ondulação animada sem física (água, vento de fundo) | nas guias depois de um Resample, ou nos fios |
+| GR Chão | cabelo longo esparrama no piso em vez de atravessar | nas guias; de novo depois do Interpolate com Espalhar desligado |
 | GR Crescer | animação: cada mecha cresce pelo caminho final | no fim, antes do Set Hair Curve Profile |
 | GR LOD por Câmera | multidão: menos fios longe, fio mais grosso | no fim, depois do Set Hair Curve Profile |
 | GR Ver em Cores | número vira azul/vermelho no Viewer | fora da cadeia |

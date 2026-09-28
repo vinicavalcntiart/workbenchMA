@@ -617,6 +617,42 @@ for k, sock in ((1, o_a), (2, o_b), (3, o_c)):
 g.ng.is_modifier = False
 libs.append(g.ng)
 
+# 29. Flutuar
+g = G("GR Flutuar", "Ondulacao animada sem fisica: Noise 4D com W = tempo, mais forte na ponta. Cabelo embaixo d'agua ou vento barato de fundo. Nas guias (Resample 24 antes) ou nos fios.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+am = g.inp("Amplitude", 'NodeSocketFloat', 0.2, 0.0, 10.0, "0,2 = ponta ate ~10 cm", 'DISTANCE')
+es = g.inp("Escala", 'NodeSocketFloat', 7.0, 0.0, 1000.0, "Tamanho da onda (Noise Scale)")
+vel = g.inp("Velocidade", 'NodeSocketFloat', 0.4, 0.0, 100.0)
+o = g.out("Geometry", 'NodeSocketGeometry')
+stt = g.n('GeometryNodeInputSceneTime'); wt = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(stt.outputs['Seconds'], wt.inputs[0]); g.l(vel, wt.inputs[1])
+ps = g.n('GeometryNodeInputPosition')
+nz = g.n('ShaderNodeTexNoise'); nz.noise_dimensions='4D'; nz.inputs['Detail'].default_value = 0.0; g.l(ps.outputs[0], nz.inputs['Vector']); g.l(wt.outputs[0], nz.inputs['W']); g.l(es, nz.inputs['Scale'])
+ce = g.n('ShaderNodeVectorMath', props={'operation':'SUBTRACT'}); g.l(nz.outputs['Color'], ce.inputs[0]); ce.inputs[1].default_value = (0.5,0.5,0.5)
+sp = g.n('GeometryNodeSplineParameter'); pw = g.n('ShaderNodeMath', props={'operation':'POWER'}); g.l(sp.outputs['Factor'], pw.inputs[0]); pw.inputs[1].default_value = 1.5
+mu = g.n('ShaderNodeMath', props={'operation':'MULTIPLY'}); g.l(pw.outputs[0], mu.inputs[0]); g.l(am, mu.inputs[1])
+of = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(ce.outputs[0], of.inputs[0]); g.l(mu.outputs[0], of.inputs['Scale'])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(of.outputs[0], st.inputs['Offset'])
+g.l(st.outputs[0], o); libs.append(g.ng)
+
+# 30. Chao
+g = G("GR Chão", "Cabelo longo que chega ao chao esparrama para fora em vez de atravessar: a profundidade abaixo do piso vira deslocamento horizontal. Nas guias (Resample 60 antes); depois do Interpolate ligue de novo com Espalhar desligado.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+fz = g.inp("Altura do chão", 'NodeSocketFloat', -0.55, -1e4, 1e4, "Z do piso no espaco do objeto", 'DISTANCE')
+esp = g.inp("Espalhar", 'NodeSocketBool', True, desc="Ligado: dobra para fora. Desligado: so segura acima do piso (para os filhos)")
+o = g.out("Geometry", 'NodeSocketGeometry')
+ps = g.n('GeometryNodeInputPosition'); sx = g.n('ShaderNodeSeparateXYZ'); g.l(ps.outputs[0], sx.inputs[0])
+fz2 = g.n('ShaderNodeMath', props={'operation':'ADD'}); g.l(fz, fz2.inputs[0]); fz2.inputs[1].default_value = 0.003
+dp = g.n('ShaderNodeMath', props={'operation':'SUBTRACT'}); g.l(fz2.outputs[0], dp.inputs[0]); g.l(sx.outputs['Z'], dp.inputs[1])
+mx = g.n('ShaderNodeMath', props={'operation':'MAXIMUM'}); g.l(dp.outputs[0], mx.inputs[0]); mx.inputs[1].default_value = 0.0
+hz = g.n('ShaderNodeCombineXYZ'); g.l(sx.outputs['X'], hz.inputs['X']); g.l(sx.outputs['Y'], hz.inputs['Y'])
+nd = g.n('ShaderNodeVectorMath', props={'operation':'NORMALIZE'}); g.l(hz.outputs[0], nd.inputs[0])
+sw = g.n('GeometryNodeSwitch', props={'input_type':'FLOAT'}); g.l(esp, sw.inputs['Switch']); sw.inputs['False'].default_value = 0.0; g.l(mx.outputs[0], sw.inputs['True'])
+s1 = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(nd.outputs[0], s1.inputs[0]); g.l(sw.outputs[0], s1.inputs['Scale'])
+up = g.n('ShaderNodeCombineXYZ'); g.l(mx.outputs[0], up.inputs['Z'])
+ad = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(s1.outputs[0], ad.inputs[0]); g.l(up.outputs[0], ad.inputs[1])
+st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(ad.outputs[0], st.inputs['Offset'])
+g.l(st.outputs[0], o); libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()

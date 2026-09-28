@@ -64,3 +64,4 @@
 - Agua: guias L 34cm fora .6 lado .5 tras .9 grav .15 -> Resample 24 -> Offset = (Noise4D(pos, W=t*0,4, Scale 7)-0,5)*s^1,5*0,2. Grav -0,3/Scale 4/0,12 = chafariz rigido.
 - Chao: guias Resample 60 -> d=max(FZ-z,0); offset = normalize(x,y+0,05,0)*d + (0,0,d). Filhos: z=max(z,FZ). Shrinkwrap empilharia. Mechas retas no chao: Noise depois.
 - Multidao por copia: Self Object -> Object Info Location -> Hash Value (Vector) -> Seeds + Random IDs (mecha, voltas, trim, obj_rand no shader). 4 copias, 1 arvore, 4 cabelos. GR Semente do Objeto validado (0,422/0,097/0,191).
+- Biblioteca 30 grupos: + GR Flutuar, GR Chao. Validado juntos: z min -0,547 com piso -0,55.
