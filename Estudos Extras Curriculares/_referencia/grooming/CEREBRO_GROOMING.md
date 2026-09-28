@@ -617,6 +617,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Penteado estilizado desaba na física | Solver não converge com Substeps 10; Bendiness baixo não basta | Bendiness 0, Root 0, Substeps 40 | lab 17.25 |
 | Cabelo não balança quando a cabeça gira | Transform do próprio objeto ligada no Simulation to World | Deixar vazio (espaço de mundo) | lab 17.26 |
 | Mola crespa serrilhada | Menos de 8 pontos por volta | Resample antes do Curl, Subdivision 0 | lab 17.28 |
+| Smooth deixa o topo careca | Shape 0 alisa a curva da raiz que deita o fio | Shape 0,8, ou Blend Hair Curves | lab 17.34 |
 | Coque ou corda vira nuvem | Fase e raio sorteados por fio numa forma coletiva | Valores iguais para o grupo; sorteio só na espessura | lab 17.31 |
 | Density Mask por Image Texture não gera nada, ou some tudo | Density Mask é lido nos cantos das faces; malha pobre lê preto nos cantos | Usar o slot Mask Texture do node (amostra por ponto) ou subdividir o scalp; Density Mask só para vertex group | int/interpolate-hair-curves.md; manual interpolate_hair_curves.rst |
 | Segundo Clump não cria sub-mechas | Clump grava `guide_curve_index`; o segundo herda o mapa (Existing Guide Map ligado) ou não sobra espalhamento (Factor 1,0 no primeiro) | Primeiro Clump Factor 0,5; segundo com Guide Distance menor, Factor 1,0, Existing Guide Map desligado, Seed diferente | testado bpy 5.2.2, seção 5 |
@@ -704,6 +705,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Maria-chiquinha, rabo trançado, coque | campo na amarração; Braid depois; espiral de fase única | 17.31 |
 | Sobrancelha, barba, bigode | região recortada + GR Guias Procedurais como gerador | 17.32 |
 | Muitos cortes rápido; ombré | uma árvore, só números; Intercept → Color Ramp | 17.33 |
+| Limpar ruído | Blend Hair Curves 1 cm; Smooth só com Shape 0,8 | 17.34 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1290,3 +1292,16 @@ ponta em 0,95), multiplicado por Attribute `mecha_rand` (Map Range 0,7 a 1,2)
 para variar por mecha, no Color do Principled Hair em Direct Coloring.
 **Preto em Direct Coloring (0,02) saiu cinza**, confirmando 17.15. Para preto e
 castanho escuro, use Melanin.
+
+### 17.34 Limpar um groom bagunçado [img/38_cleanup_sheet, 38b_smooth_sheet]
+
+Groom com Noise forte (Distance 0,012, Scale 20, cumulativo), depois:
+
+| Node | Resultado |
+|---|---|
+| Smooth Hair Curves, Shape 0 (padrão), 10 ou 30 iterações | **Topo careca**: alisa a curva perto da raiz, que é o que deita o fio no crânio |
+| Smooth, Shape 0,5 | ainda careca no topo |
+| **Smooth, Shape 0,8**, 20 iterações | limpa e mantém a raiz |
+| **Blend Hair Curves**, raio 0,01, 10 vizinhos | limpa o ruído e deixa as mechas coesas; a melhor limpeza para estilizado |
+| Straighten Hair Curves 0,5 | alisa pela metade |
+| Rotate Hair Curves, Random Offset 0,6 rad | varia a direção por fio e encorpa a silhueta |
