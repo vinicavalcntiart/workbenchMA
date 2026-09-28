@@ -68,6 +68,6 @@ Ver `LEIA-ME.md` na raiz.
 *"amanhã é o dia kamikaze, significa que preciso gastar todos os meus créditos do claude com candidaturas ... na quarta reseta."*
 
 - Na terça tudo roda no máximo, com todas as frentes em paralelo. Quem decide o ritmo é o Vini. O maestro não segura trabalho.
-- Rodadas de formulário de hora em hora: a de :15 das horas pares e a extra de :53. Jhon B caça de hora em hora (:45 todo dia e a extra das horas pares). O Mágico destrava portas às :25 das horas ímpares. O Joe roda a cada 2h. A leva do clique é de manhã.
+- Rodadas de formulário de hora em hora: a de :15 das horas pares e a extra de :53. Jhon B caça de hora em hora (:45 todo dia e a extra das horas pares). Sem Mágico (Vini, 28/09: o navegador na nuvem substitui); porta travada sem caixinha vai pela nuvem na própria rodada de formulários. O Joe roda a cada 2h. A leva do clique é de manhã.
 - Ordem de envio: primeiro as 27 prontas de /home/user/apply/terca-prontas.json, depois a FILA-TERCA e as portas travadas.
 - Na quarta as rotinas extras de terça param sozinhas, porque o agendamento delas é só para o dia 2.
