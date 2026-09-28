@@ -53,7 +53,9 @@ def comb_guides(scalp, n=180, pts=12, length=0.28, gravity=4.0, R=0.1, spread=0.
     me.calc_loop_triangles()
     for t in me.loop_triangles:
         a,b,c = [mw @ me.vertices[i].co for i in t.vertices]
+        a,b,c = sorted((a,b,c), key=lambda v: (round(v.x,6),round(v.y,6),round(v.z,6)))
         tris.append((a,b,c,((b-a).cross(c-a)).length/2))
+    tris.sort(key=lambda t: tuple(round(x,6) for x in (t[0]+t[1]+t[2])))   # ordem da malha varia entre execucoes
     tot = sum(t[3] for t in tris)
     roots = []
     for _ in range(n):
@@ -246,7 +248,8 @@ def fur_guides(surf, n=500, pts=6, length=0.03, lift=0.45, seed=2, R=0.15):
     rnd = random.Random(seed); me = surf.data; me.calc_loop_triangles()
     tris=[]; tot=0
     for t in me.loop_triangles:
-        a,b,c = [me.vertices[i].co.copy() for i in t.vertices]; ar=((b-a).cross(c-a)).length/2; tris.append((a,b,c,ar)); tot+=ar
+        a,b,c = sorted([me.vertices[i].co.copy() for i in t.vertices], key=lambda v: (round(v.x,6),round(v.y,6),round(v.z,6))); ar=((b-a).cross(c-a)).length/2; tris.append((a,b,c,ar)); tot+=ar
+    tris.sort(key=lambda t: tuple(round(x,6) for x in (t[0]+t[1]+t[2])))
     curves=[]
     for _ in range(n):
         r=rnd.uniform(0,tot); acc=0

@@ -606,6 +606,7 @@ jp/ja-tenp-kukan-2025-09-principled-hair-bsdf-material.md]:
 | Cacho quase não aparece | Curl dá 3 × Frequency voltas por metro; em escala real Frequency 1 é menos de uma volta | Frequency ≈ voltas/m ÷ 3 (Merida ≈ 9 a 10) | lab 17.1, 17.3 |
 | Cacho vira cilindro liso | Frequency variando por fio; a hélice vem da guia | Frequency fixa ou por mecha (ID = guide_curve_index); Radius pode variar por fio | lab 17.3 |
 | Variação "por fio" sai como ruído, fita enrugada | Random Value sem ID num input de ponto sorteia por ponto | Evaluate on Domain (Curve) depois do Random Value | lab 17.3, 17.11 |
+| Mechas mudam de lugar depois de mexer no scalp | Remesh/Decimate/Triangulate mudam a ordem das faces, que semeia a distribuição | Fechar a topologia do scalp antes de pentear | lab 17.38 |
 | Strays explodem para cima depois do cacho | Noise/Frizz com Cumulative depois de um node que subdivide | Noise e Frizz cumulativos antes de Curl, Braid e Subdivide | lab 17.7 |
 | Cachos seguem poucas guias gigantes, cabelo "some" | Clump com Guide Index ligado grava guide_curve_index com o próprio Guide Distance | Não ligar Guide Index; Create Guide Index Map antes e Clump com Existing Guide Map ligado | lab 17.18 |
 | Mecha de malha vira tubo de 1 metro | Curve to Mesh 5.2 com Scale solto ignora o raio do fio | Node Radius no Scale do Curve to Mesh | lab 17.11 |
@@ -708,6 +709,8 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Limpar ruído | Blend Hair Curves 1 cm; Smooth só com Shape 0,8 | 17.34 |
 | Vento | Scene Time → seno + Noise 4D → Custom Force → Effectors; força 0,12 | 17.35 |
 | Cílios | faixa da esfera do olho ×1,06; Para fora 1, gravidade −1,3 | 17.36 |
+| Cabelo crescendo | Scene Time − atraso por mecha → Trim Length Factor, Replace off | 17.37 |
+| Multidão (LOD) | distância raiz-câmera → Random Boolean → Delete; raio × 1/√fração | 17.38 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1359,3 +1362,65 @@ esfera do olho, 6% maior.
 
 Regra: a curva vem de **Para fora** (sai da pálpebra) + gravidade negativa
 (sobe no fim). Comprimento acima de 70% do raio do olho fica cartunesco.
+
+### 17.37 Cabelo crescendo (animação procedural) [img/41_grow_sheet, 41_crescer_por_mecha.gif]
+
+Efeito mágico estilo Trolls, sem keyframe. Seis nodes no fim da cadeia, antes
+do Profile:
+
+1. Scene Time **Seconds** → Multiply Add (× 0,8) = velocidade.
+2. Random Value Float 0 a 0,4, **ID = Named Attribute int
+   `guide_curve_index`** → Evaluate on Domain (Curve) = atraso por mecha.
+3. Subtract (1 − 2) → Clamp (mín 0,02) → **Trim Hair Curves Length Factor**,
+   Replace Length **desligado**, Scale Uniform desligado.
+
+| Variante | Resultado |
+|---|---|
+| **Corte, atraso por mecha** | cada mecha cresce pelo caminho final, em blocos; o melhor para estilizado |
+| Scale Uniform ligado | o cacho inteiro encolhe junto: viram escamas coladas no crânio |
+| Atraso por fio (sem ID) | crescimento macio e uniforme, sem leitura de mecha |
+
+- Trim no fim porque o fio cresce já penteado, cacheado e com clump.
+- O Profile vem **depois** do Trim: a ponta afina em qualquer comprimento.
+- Custo: Trim depois do Curl é o node mais caro da cadeia (17.14). Nos 10
+  mil fios deste teste, 24 quadros + render em 43 s. Para cena longa, faça
+  cache (Bake) do modificador.
+- Termina em 2 s com esses valores. Para mudar a duração, mexa só no × 0,8.
+
+### 17.38 LOD por distância da câmera (multidão) [img/42_lod_sheet]
+
+Truque de multidão: longe da câmera, menos fios e fio mais grosso para manter
+a cobertura. Nove nodes logo **depois do Interpolate** (tudo que vem depois
+já processa menos fios):
+
+1. Object Info (a câmera), **Relative** → Location. Relative põe a câmera
+   no espaço do objeto do cabelo; sem isso a distância erra quando o
+   personagem se move.
+2. Curve Root → Root Position; Vector Math **Distance** (raiz, câmera).
+3. Map Range, clamp: 1 m → 8 m vira **1 → 0,04** = fração que fica.
+4. Random Value **Boolean**, Probability = fração → Boolean NOT →
+   Delete Geometry (Curve).
+5. Depois do Profile: Radius × **Inverse Sqrt**(fração) → Set Curve Radius.
+   Raiz quadrada porque cobertura é área: com 1/4 dos fios, raio × 2.
+
+Mesmo processo, só a fração mudando (12.865 fios no groom cheio):
+
+| Distância | Fios | Pontos | Avaliação | Visual |
+|---|---|---|---|---|
+| 0,75 m | 12.865 (100%) | 154 mil | 40 ms | idêntico |
+| 2,5 m | 10.237 (80%) | 123 mil | 39 ms | idêntico |
+| **6 m** | **4.055 (31%)** | **49 mil** | **22 ms** | igual; leve falha no topo |
+
+- O ganho é memória e avaliação, não render: o Cycles levou o mesmo tempo
+  (1,3 a 1,6 s) com a cabeça pequena no quadro. Numa multidão de 100
+  personagens, 15 milhões de pontos viram 5.
+- Sem o Set Curve Radius a cabeça distante fica rala e transparente.
+
+**Ordem das faces do scalp define a distribuição.** No laboratório, o scalp
+gerado por script saía com ordem de faces diferente a cada execução, e o
+Interpolate dava 12.843 a 12.865 fios com mechas em lugares diferentes. Numa
+.blend salva a ordem é estável. Consequência prática (deduzida do teste, não
+medida com Remesh): **Remesh, Decimate,
+Triangulate ou Sort Elements no scalp reembaralham o groom** (fios e mechas
+mudam de lugar), mesmo com a forma idêntica. Mexa na topologia do scalp antes
+de pentear, nunca depois.
