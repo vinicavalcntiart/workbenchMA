@@ -52,3 +52,4 @@
 - Varias cabecas: mesma cadeia (Guias Procedurais...) em ovo/larga funciona sem ajuste. Crianca com malha 0,7 = distancias de adulto; escala de OBJETO 0,7 (nao aplicada) = replica exata (15.536 fios, igual ao adulto).
 - Deform Curves on Surface (shape key inclina 5 cm): sem = raiz 12,7 mm; nas guias antes do Interpolate = 12,6 mm + filhos embaralham; no fim = 0,06 mm. Padrao por Position depois do Deform troca 46%; antes do Deform ou por surface_uv_coordinate 0%. Scalp com add_rest_position_attribute.
 - Contorno: Flip Faces + Offset -Normal*esp + material Mix(Emission preta, Transparent, Max(Backfacing, 1-IsCameraRay)) + Join. So Backfacing = tudo preto (casca bloqueia sombra). 2,5 mm legivel. Transparent bounces 64.
+- Redemoinho: nas guias, Vector Rotate (Center C, Axis C normalizado, Angle = Spline Param x MapRange(dist raiz-C 0..7cm -> 1..0) x forca) + Shrinkwrap. Curto 7 cm 3,5 rad = claro; longo 16 cm: 1,5 max (3,5 voa).

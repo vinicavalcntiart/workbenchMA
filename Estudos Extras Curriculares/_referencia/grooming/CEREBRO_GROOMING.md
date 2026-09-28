@@ -728,6 +728,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Mesmo groom em outra cabeça ou criança | troque scalp e colisão; criança = escala de objeto não aplicada | 17.45 |
 | Cabelo seguir cabeça animada | Deform Curves on Surface no fim; padrões por posição antes dele | 17.46 |
 | Contorno de desenho | casca invertida no GN + material só para raio de câmera | 17.47 |
+| Redemoinho | Vector Rotate em volta da coroa, ângulo × falloff × Spline Parameter | 17.48 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1684,3 +1685,24 @@ invertida feita **dentro do Geometry Nodes**, sem modificador Solidify:
   acompanha.
 
 Pronto em **GR Contorno** + material **GR Contorno**, validado do .blend.
+
+### 17.48 Redemoinho na coroa [img/54_whorl_sheet]
+
+Oito nodes nas **guias**, depois da GR Guias Procedurais e antes do
+Interpolate:
+
+1. Curve Root → Distance até o ponto da coroa C (aqui 3,5 cm atrás do topo).
+2. Map Range clamp: 0 → 7 cm vira **1 → 0** (falloff).
+3. Ângulo = Spline Parameter × falloff × força.
+4. **Vector Rotate** Axis Angle: Vector = Position, Center = C, Axis = C
+   normalizado (a normal da coroa), Angle = 3 → Set Position.
+5. Shrinkwrap Hair Curves na cabeça (Above 0) para nada entrar no crânio.
+
+| Força (rad na ponta) | Fio 16 cm | Fio 7 cm |
+|---|---|---|
+| 1,5 | espiral suave | (não testado) |
+| **3,5** | mechas saem voando da cabeça | **redemoinho claro** |
+
+A rotação desloca a ponta proporcional à distância dela até o eixo: em fio
+longo, use até ~1,5 rad; 3,5 só em cabelo curto. Várias coroas = some
+os ângulos de cada uma.
