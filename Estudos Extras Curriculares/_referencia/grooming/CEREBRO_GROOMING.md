@@ -940,13 +940,13 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Treze node groups "GR" e dois materiais, marcados como asset, feitos com as
+Catorze node groups "GR" e dois materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
   Arco, GR Cacho por Mecha (em voltas por metro), GR Onda S, GR Cor por
   Mecha, GR Mecha Chunky, GR Ver em Cores, GR Ponta Virada, GR Trança
-  Grossa, GR Corte por Região, GR Pelo em Tufos (13 grupos)
+  Grossa, GR Corte por Região, GR Pelo em Tufos, GR Volume na Raiz (14 grupos)
   [img/21_lib_sheet, 23_lib2_sheet].
 - Materiais GR Cabelo Cor por Mecha e GR Cabelo Toon.
 
@@ -972,3 +972,42 @@ para onde a ponta enrola. Medido na ponta, Roll Length 0,06 e Roll Radius
 Nos dois casos a ponta sobe cerca de 6 cm. Roll Length sorteado por mecha (0,6
 a 1,4 × o valor, ID = `guide_curve_index`) fica mais natural. Pronto em GR
 Ponta Virada.
+
+### 17.21 Variação procedural sem pintar [img/24_proc_sheet, 24b_proc_sheet, t_proc.py]
+
+- **Comprimento por mecha**: Random Value (0,7 a 1,0, ID = `guide_curve_index`)
+  → Length Factor do Trim (Replace Length desligado). Barra recortada.
+- **Clump quebrado por ruído 3D**: Noise Texture (Scale 25, Detail 0) na
+  Root Position do Curve Root → Map Range (0,4 a 0,6 → 0,15 a 1, Clamp) →
+  Factor do Clump. Regiões mais soltas sem pintar.
+- **Volume na raiz**: o **Displace Hair Curves com Surface Normal não moveu
+  nada** (medido: raiz, meio e ponta iguais) sem o UV do scalp. O que
+  funciona, 4 nodes: a saída **Surface Normal do Interpolate** → Store Named
+  Attribute (Vector, Curve) `n_raiz`; depois Set Position com Offset =
+  `n_raiz` × Map Range(Spline Parameter Factor, 0 a rampa → 0 a volume,
+  Clamp). A raiz fica parada.
+
+| Volume | Rampa | Terço do fio se afasta | Visual |
+|---|---|---|---|
+| 1,5 cm | 0,3 | +1,1 cm | volume leve |
+| 3 cm | 0,15 | +2,3 cm | topete, volume de princesa |
+
+Pronto em GR Volume na Raiz (a GR Densidade Livre grava o `n_raiz`).
+
+### 17.22 Renders finais feitos só com a biblioteca [img/finais/]
+
+1024 px, 64 amostras, Cycles CPU de 4 núcleos:
+
+| Estilo | Cadeia de grupos GR | Fios | Tempo |
+|---|---|---|---|
+| Pixar (bob) | Densidade 450 mil/m² → Mecha (2,2 cm, Lado da Risca) → Volume 2 cm/0,2 → Strays 3% → Ponta Virada p/ dentro → Cor por Mecha | 23 mil | 94 s |
+| Disney (Merida) | Densidade 350 mil/m² → Mecha 1,8 cm → Volume 2,5 cm → Strays 3% → Cacho por Mecha (0,9 a 1,6 cm, 22 a 38 voltas/m) → Cor por Mecha | 18 mil (1,6 M pontos) | 229 s |
+| DreamWorks (bicho) | Pelo em Tufos (tufo 9 mm, subpelo, guarda) → Cor por Mecha | 1,28 milhão | 213 s |
+
+Dois defeitos que ficaram visíveis e viram regra:
+
+- **Redemoinho no polo**: onde todas as guias saem de um ponto (o topo da
+  esfera), o volume na raiz vira um nó escuro. Na cabeça real: guias
+  penteadas no redemoinho ou volume menor ali (vertex group no Volume).
+- **Raiz escura em ruivo e loiro**: +0,45 de melanina na raiz faz a linha do
+  cabelo parecer castanha. Para cabelo claro, use +0,1 a +0,2.

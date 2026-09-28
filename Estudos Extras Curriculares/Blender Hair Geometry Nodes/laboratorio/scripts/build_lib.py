@@ -33,7 +33,7 @@ def guide_id(g):
 libs = []
 
 # 1. Densidade Livre
-g = G("GR Densidade Livre", "Interpolate Hair Curves sem a trava de 10.000 fios/m2 do painel. Testado bpy 5.2.2.")
+g = G("GR Densidade Livre", "Interpolate Hair Curves sem a trava de 10.000 fios/m2 do painel. Grava n_raiz (normal do scalp) para GR Volume na Raiz. Testado bpy 5.2.2.")
 geo = g.inp("Geometry", 'NodeSocketGeometry')
 den = g.inp("Fios por m2", 'NodeSocketFloat', 300000.0, 0.0, 1e8, "Cabeça real (~0,05 m2): 300.000 = ~15 mil fios")
 va = g.inp("Viewport", 'NodeSocketFloat', 0.25, 0.0, 1.0, "Fração na viewport. Render usa 100%", 'FACTOR')
@@ -44,7 +44,10 @@ sd = g.inp("Seed", 'NodeSocketInt', 0)
 o = g.out("Geometry", 'NodeSocketGeometry'); gi_o = g.out("Guide Index", 'NodeSocketInt')
 it = g.n('GeometryNodeGroup', group=EG['Interpolate Hair Curves'])
 for a,b in ((geo,'Geometry'),(den,'Density'),(va,'Viewport Amount'),(ng_,'Interpolation Guides'),(dg,'Distance to Guides'),(pm,'Part by Mesh Islands'),(sd,'Seed')): g.l(a, it.inputs[b])
-g.l(it.outputs['Geometry'], o); g.l(it.outputs['Guide Index'], gi_o); libs.append(g.ng)
+# guarda a normal da raiz para GR Volume na Raiz
+stn = g.n('GeometryNodeStoreNamedAttribute', props={'data_type':'FLOAT_VECTOR','domain':'CURVE'}, Name="n_raiz")
+g.l(it.outputs['Geometry'], stn.inputs['Geometry']); g.l(it.outputs['Surface Normal'], stn.inputs['Value'])
+g.l(stn.outputs['Geometry'], o); g.l(it.outputs['Guide Index'], gi_o); libs.append(g.ng)
 
 # 2. Mecha Estilizada
 g = G("GR Mecha Estilizada", "Clump com Factor em rampa ao longo do fio: mecha em fita sem careca na raiz. Shape 0 interno.")
@@ -278,6 +281,20 @@ s1 = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(sub, s1.inp
 s2 = g.n('GeometryNodeSwitch', props={'input_type':'GEOMETRY'}); g.l(gua, s2.inputs['Switch']); g.l(gu_o, s2.inputs['True'])
 j = g.n('GeometryNodeJoinGeometry'); g.l(s2.outputs[0], j.inputs[0]); g.l(top_o, j.inputs[0]); g.l(s1.outputs[0], j.inputs[0])
 g.l(j.outputs[0], o); libs.append(g.ng)
+
+
+# 14. Volume na Raiz
+g = G("GR Volume na Raiz", "Empurra o fio pela normal do scalp (atributo n_raiz da GR Densidade Livre), raiz parada. 3 cm + rampa 0,15 = topete.")
+geo = g.inp("Geometry", 'NodeSocketGeometry')
+vol = g.inp("Volume", 'NodeSocketFloat', 0.015, -1.0, 1.0, "Distancia maxima do empurrao", 'DISTANCE')
+rp = g.inp("Sobe até", 'NodeSocketFloat', 0.3, 0.001, 1.0, "Fracao do fio onde o volume ja e total. Menor = mais topete", 'FACTOR')
+o = g.out("Geometry", 'NodeSocketGeometry')
+n = g.n('GeometryNodeInputNamedAttribute', props={'data_type':'FLOAT_VECTOR'}, Name="n_raiz")
+sp = g.n('GeometryNodeSplineParameter'); mr = g.n('ShaderNodeMapRange'); mr.clamp = True
+g.l(sp.outputs['Factor'], mr.inputs['Value']); g.l(rp, mr.inputs['From Max']); g.l(vol, mr.inputs['To Max'])
+sc = g.n('ShaderNodeVectorMath', props={'operation':'SCALE'}); g.l(n.outputs['Attribute'], sc.inputs[0]); g.l(mr.outputs['Result'], sc.inputs['Scale'])
+spn = g.n('GeometryNodeSetPosition'); g.l(geo, spn.inputs['Geometry']); g.l(sc.outputs[0], spn.inputs['Offset'])
+g.l(spn.outputs['Geometry'], o); libs.append(g.ng)
 
 # materiais
 def mat_mecha():
