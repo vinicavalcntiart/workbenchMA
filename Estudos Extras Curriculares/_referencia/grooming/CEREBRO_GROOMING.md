@@ -741,6 +741,7 @@ em `laboratorio/receitas_grooming.blend`, 17.19):
 | Anime / NPR | 3.000/m², Mecha Chunky raio 1,8 cm sem torção, Toon, Contorno | 17.56 |
 | Cabelo flutuando / vento barato | Noise 4D com W = tempo × Spline Parameter^1,5 no offset das guias | 17.57 |
 | Cabelo que esparrama no chão | profundidade abaixo do piso vira deslocamento para fora | 17.58 |
+| Cada cópia com cabelo diferente | Hash da posição do Self Object no Seed e nos Random | 17.59 |
 
 
 Tudo aqui foi renderizado em Cycles numa cabeça de teste em **escala real**
@@ -1034,7 +1035,7 @@ Guide Index**. Ou iguale o Guide Distance do Clump ao do mapa.
 
 ### 17.19 Biblioteca pronta: `laboratorio/receitas_grooming.blend` [img/21_lib_sheet]
 
-Vinte e sete node groups "GR" e quatro materiais, marcados como asset, feitos com as
+Vinte e oito node groups "GR" e quatro materiais, marcados como asset, feitos com as
 receitas desta seção e validados abrindo o .blend do zero:
 
 - GR Densidade Livre, GR Mecha Estilizada, GR Lado da Risca, GR Strays em
@@ -1044,7 +1045,7 @@ receitas desta seção e validados abrindo o .blend do zero:
   Imagem, GR Física Estilizada (com entrada de Vento, 17.35), GR Guias
   Procedurais, GR Rabo de Cavalo, GR Forma por Malha, GR Crescer, GR LOD por
   Câmera, GR Corte pela Malha, GR Comprimento até a Malha, GR Hair Cards, GR
-  Contorno, GR Transição, GR Pentear por Curva (27 grupos)
+  Contorno, GR Transição, GR Pentear por Curva, GR Semente do Objeto (28 grupos)
   [img/21_lib_sheet, 23_lib2_sheet, 45_lib6_sheet, 47_lib7_sheet].
 - Materiais GR Cabelo Cor por Mecha, GR Cabelo Toon, GR Card Alpha e GR
   Contorno.
@@ -1931,3 +1932,22 @@ guias.
 - As mechas no chão ficam retas e radiais; para leitura orgânica, um Noise
   leve depois da dobra.
 - 10,4 mil fios × 60 pontos = 626 mil pontos.
+
+### 17.59 Cada cópia com cabelo diferente, mesmo node tree [img/66_multidao]
+
+Self Object → Object Info (Original) → **Location → Hash Value (Vector)** =
+um inteiro diferente para cada cópia. Ligue esse inteiro:
+
+- no **Seed** de todos os grupos (Densidade, Mecha, Cacho, Cor);
+- no **ID** de Random Values que sorteiam por personagem: tamanho da mecha
+  (1,2 a 2,8 cm), voltas por metro (4 a 40), Trim (55% a 105%) e um atributo
+  `obj_rand` que o shader usa para melanina (0,08 a 0,95) e redness.
+
+Quatro cópias (cabeça, scalp e Curves duplicados juntos, o Curves com o
+mesmo node tree): preto longo, loiro curto, castanho médio, ruivo longo. Nada
+foi ajustado à mão. Render 900 px com as quatro: 17,5 s.
+
+- Mover a cópia muda o cabelo dela. Para travar, troque Location por um
+  inteiro fixo exposto no modificador.
+- Pronto em **GR Semente do Objeto** (saídas Seed, Aleatório A, B e C),
+  validado do .blend: três posições deram 0,422, 0,097 e 0,191.

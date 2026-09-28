@@ -606,6 +606,17 @@ ps = g.n('ShaderNodeVectorMath', props={'operation':'ADD'}); g.l(cr.outputs['Roo
 st = g.n('GeometryNodeSetPosition'); g.l(geo, st.inputs['Geometry']); g.l(ps.outputs[0], st.inputs['Position'])
 g.l(st.outputs[0], o); libs.append(g.ng)
 
+# 28. Semente do Objeto
+g = G("GR Semente do Objeto", "Seed e numeros aleatorios diferentes para cada copia do objeto (hash da posicao). Duplique o personagem e cada copia ganha cabelo diferente com o mesmo node tree.")
+o_s = g.out("Seed", 'NodeSocketInt'); o_a = g.out("Aleatório A", 'NodeSocketFloat'); o_b = g.out("Aleatório B", 'NodeSocketFloat'); o_c = g.out("Aleatório C", 'NodeSocketFloat')
+so = g.n('GeometryNodeSelfObject'); oi = g.n('GeometryNodeObjectInfo', props={'transform_space':'ORIGINAL'}); g.l(so.outputs[0], oi.inputs['Object'])
+hv = g.n('FunctionNodeHashValue'); hv.data_type = 'VECTOR'; g.l(oi.outputs['Location'], hv.inputs['Value'])
+g.l(hv.outputs[0], o_s)
+for k, sock in ((1, o_a), (2, o_b), (3, o_c)):
+    r = g.n('FunctionNodeRandomValue', props={'data_type':'FLOAT'}); g.l(hv.outputs[0], r.inputs['ID']); r.inputs['Seed'].default_value = k; g.l(r.outputs['Value'], sock)
+g.ng.is_modifier = False
+libs.append(g.ng)
+
 # materiais
 def mat_mecha():
     m = bpy.data.materials.new("GR Cabelo Cor por Mecha"); nt = m.node_tree; nt.nodes.clear()
