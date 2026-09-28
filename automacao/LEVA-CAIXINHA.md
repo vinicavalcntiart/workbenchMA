@@ -42,6 +42,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Obsidian Entertainment | General Application | JazzHR | n | https://obsidian.applytojob.com/apply/21Ud1IGKcj |
 | 28/09 | Homa Games | Senior 3D Gameplay Artist (Generalist) | workable | n | https://apply.workable.com/homa-games/j/DE453781D2/ |
 | 28/09 | Lighthouse Games | Art Director | workable | n | https://apply.workable.com/lighthousegames/j/E54718A088/ |
+| 28/09 | Asterman | Candidatura espontânea (Vilnius) | site (reCAPTCHA de caixa) | n | https://asterman.org/vacancies |
 
 Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recibo em 28/09). Jungler saiu da leva: Baptiste Legois respondeu em 22/09 que não há projeto de personagem 3D agora.
 
@@ -53,3 +54,4 @@ Sem recibo da leva de 27/09: Obsidian e Mediawan (Framestore Montreal teve recib
 | LIGHT Visual Effects | Careers (personagem 3D) | Google Form só abre com conta Google | s | https://forms.gle/LHYKPPw6JZ6Nmffi8 |
 | CayPlay Studios | Spontaneous Application | Google Form só abre com conta Google | n | https://forms.gle/pjFVG3oEvA9vxtS18 |
 | Super Spline Studios | Formulário de candidatura | Google Form só abre com conta Google | n | https://forms.gle/Hy2DSc11gBzGb9hJ8 |
+| Paramount | Senior Designer, Toy & Illustration (req 1430792500, Los Angeles, USD 74.400-93.000) | senha da conta no SuccessFactors (career41.sapsf.com) | n | https://careers.paramount.com |
