@@ -3,24 +3,22 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 695.8 min, cerca de US$ 5.57
+**Total medido:** 676.6 min, cerca de US$ 5.41
 
 ## Por dia
 
 | dia (UTC) | minutos | US$ estimado |
 |---|---|---|
-| 2026-09-25 | 33.8 | 0.27 |
+| 2026-09-25 | 8.6 | 0.07 |
 | 2026-09-26 | 576.2 | 4.61 |
 | 2026-09-27 | 44.8 | 0.36 |
 | 2026-09-28 | 28.5 | 0.23 |
-| 2026-09-29 | 12.5 | 0.10 |
+| 2026-09-29 | 18.6 | 0.15 |
 
 ## Por sessao
 
 | aberta em (UTC) | fechada em (UTC) | nome | sem tela | minutos |
 |---|---|---|---|---|
-| 2026-09-25 20:13 | 2026-09-25 20:31 | rodeo-lookdev | nao | 15.8 |
-| 2026-09-25 20:33 | 2026-09-25 20:47 | - | nao | 9.5 |
 | 2026-09-25 22:16 | 2026-09-27 02:24 | - | nao | 8.6 |
 | 2026-09-26 00:16 | 2026-09-27 02:22 | - | nao | 8.2 |
 | 2026-09-26 00:19 | 2026-09-26 00:20 | - | nao | 1.0 |
@@ -39,3 +37,5 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-28 14:25 | 2026-09-28 14:39 | - | sim | 3.2 |
 | 2026-09-28 14:47 | 2026-09-28 14:49 | stim-lookdev | nao | 1.4 |
 | 2026-09-29 00:44 | 2026-09-29 00:57 | kamikaze-2909 | nao | 12.5 |
+| 2026-09-29 01:04 | 2026-09-29 01:14 | bardel-cfx | nao | 5.9 |
+| 2026-09-29 01:11 | 2026-09-29 01:12 | side-latam-char | nao | 0.1 |
