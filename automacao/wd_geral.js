@@ -66,6 +66,9 @@ async function clicaOpcao(p, nome){
 
 // Regras mais especificas primeiro: a busca para no primeiro trecho que casa.
 const RESP=[
+ ['veteran status',['I do not wish to answer','I don\'t wish to answer','I do not wish','Decline','Prefer not','I am not a protected veteran']],
+ ['race category',['I do not wish to answer','I don\'t wish to answer','I do not wish','Decline','Prefer not']],
+ ['disability',['I do not want to answer','I do not wish to answer','I don\'t wish to answer','Decline','Prefer not']],
  // A Disney do Canada marca "Please select your gender" com asterisco de OBRIGATORIO no meio de
  // um bloco que se apresenta como voluntario, e sem resposta o passo 4 nao passa. Na duvida sobre
  // dado pessoal dele, a preferencia e a opcao que nao revela nada; so se ela nao existir e que
@@ -351,6 +354,8 @@ async function fonte(p){
 }
 
 async function perguntas(p){
+  // Disney (29/09): passo 3 traz checkbox-group obrigatorio 'potential reasons were important'; marca dois motivos verdadeiros.
+  try{ const cb=p.locator('fieldset input[type=checkbox][id*="80e74446762e100116719db255220006"]'); const n=await cb.count(); for(let k=0;k<n;k++){ const id=await cb.nth(k).getAttribute('id'); const t=await p.locator('label[for="'+id+'"]').innerText().catch(()=>''); if(/^(Company reputation|Company's social responsibility)$/.test(t.trim())){ await cb.nth(k).check({force:true}).catch(()=>{}); console.log('   motivo marcado:',t.trim()); } } }catch(e){}
   for(const bt of await p.$$('button[aria-haspopup="listbox"]')){
     const rot=await bt.evaluate(e=>{ let n=e.parentElement, t=''; for(let i=0;i<6&&n;i++){ t=(n.innerText||'').replace(/\s+/g,' ').trim(); if(t.length>25) break; n=n.parentElement; } return t.slice(0,300); }).catch(()=>'');
     const atual=(await bt.innerText().catch(()=>'')).trim();
