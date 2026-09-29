@@ -510,7 +510,18 @@ Observado em teste headless, nao em fonte externa:
      Spline ou Point, All → Output), testado no 5.2.0 com interface
      (scripts/t_node_tool_delete_520_gui.py): 8 guias → 4, e todos os
      atributos (os dois conjuntos e um float) continuaram. Nao reproduziu o
-     "Delete apaga atributos" relatado; pendente ver o grafo do Vini.
+     "Delete apaga atributos" com Delete Geometry.
+     **Causa achada no grafo do Vini (2026-09-29, reproduzido no 5.2.0 com
+     interface, scripts/t_node_tool_separate_520_gui.py):** Named Attribute →
+     Set Selection → **Separate Geometry sem nada no Selection** → Output pelo
+     **Inverted**. Selection solto = tudo verdadeiro, o Inverted sai vazio e o
+     tool grava curvas vazias: 8 guias → 0, sobra so `position`. Ligando o
+     Named Attribute tambem no Selection do Separate: 8 → 4, atributos
+     preservados. Regra: tool que devolve geometria vazia apaga as curvas de
+     verdade (store_result_geometry troca a geometria inteira). Para apagar
+     conjunto nao precisa de Set Selection [img/126_tool_apagar_corrigido].
+     Observado em producao (Vini, 5.2.0): no viewport dele as guias pareciam
+     continuar e os atributos sumiam.
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
