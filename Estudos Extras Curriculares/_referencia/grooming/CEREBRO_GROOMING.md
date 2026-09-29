@@ -496,7 +496,16 @@ Observado em teste headless, nao em fonte externa:
   1. Node tool "Selecionar Conjunto": Named Attribute (Boolean, Name do
      input) → **Set Selection** (Spline) → Output; Identifier
      `curves.selecionar_conjunto`, Modes Edit e Sculpt
-     [img/125_tool_selecionar_conjunto]. Nao executado aqui (sem UI).
+     [img/125_tool_selecionar_conjunto].
+     **Testado no Blender 5.2.0 com interface (2026-09-29, Xvfb,
+     scripts/t_node_tools_520_gui.py):** com o Identifier preenchido os dois
+     tools viram operadores (`bpy.ops.curves.salvar_selecao`,
+     `bpy.ops.curves.selecionar_conjunto`). Selecionar Conjunto marcou
+     exatamente as guias do atributo; Salvar Selecao gravou o novo conjunto.
+     Em Edit e em Sculpt, **nenhum atributo sumiu** (boolean, float, cor,
+     surface_uv_coordinate). O codigo so remove atributos anonimos
+     (store_result_geometry). Observado em producao (Vini, 5.2.0): Set
+     Selection funciona; o que apagava atributos era o Delete, nao o tool.
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
@@ -537,7 +546,7 @@ Observado em teste headless, nao em fonte externa:
   nasce com o campo vazio (bpy 5.2.2). Cada
   execucao substitui o conjunto; para somar, Boolean Math OR com o Named
   Attribute antigo. Diagrama: laboratorio/img/118_node_tool_selecao.png.
-  Nao executado aqui: o operador de node tool nao existe no bpy headless.
+  Executado depois no Blender 5.2.0 com interface: funciona (ver abaixo).
 - **Curves > Set Attribute** (bpy.ops.curves.attribute_set) so funciona em
   Edit Mode, e grava valor cheio em tudo que estava selecionado, inclusive
   ponto com selecao 0,4. E mascara dura. Mascara suave nas proprias curvas so
