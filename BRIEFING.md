@@ -1725,3 +1725,17 @@ ATS nenhum acha, e concluiria "casa sem vaga" com a casa contratando.
 Some-se ao `chopchop` (rede de fast-food sueca), ao `mpc.wd1` (Marathon Petroleum) e ao `icon.wd3`
 (pesquisa clínica). **Token que casa com o nome não prova que é a casa**, e o preço de conferir é
 uma leitura do primeiro título do quadro.
+
+---
+
+## Mentoria (trilha separada da campanha)
+Alunos da escola (vinicavalcanti.com) já pagaram e têm o link de agendamento para marcar
+one-on-one uma vez por semana ou mais, até fechar o projeto, que costuma durar 10 semanas.
+Link: https://calendar.app.google/tFZdRSApDvE1xqsS8
+
+Problema resolvido em `mentoria/`: convite de reunião da E-Line entra na agenda como "sem
+resposta", o Vini não confirma, o agendamento do Google trata como horário livre e o aluno
+marca em cima. O agente `mentoria/agente-agenda.gs` roda no Apps Script da conta dele a cada
+15 minutos e converte cada compromisso não confirmado num bloqueio próprio, que o
+agendamento é obrigado a respeitar. Ele **só tira disponibilidade, nunca abre horário**.
+Instalação e limites em `mentoria/README.md`.
