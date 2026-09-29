@@ -17,3 +17,19 @@ Para começar um personagem: abra `comeco_rapido.blend`, troque a cabeça e a
 HairCap pelas suas (a HairCap precisa de UV), aponte o Surface do objeto
 Cabelo para a sua HairCap e ajuste os números da GR Guias Procedurais.
 Viewport vem em 0,25 (o render usa 100%).
+
+## tools_conjuntos_guias.blend
+
+Três node tools para conjuntos de guias, testados no Blender 5.2.0. Entre no
+Edit Mode do objeto Cabelo e use o ícone depois de Segments:
+
+- **Salvar Seleção** (`curves.salvar_selecao`): grava as guias selecionadas
+  num atributo booleano. Troque o nome no painel de redo.
+- **Selecionar Conjunto** (`curves.selecionar_conjunto`): seleciona só as
+  guias de um atributo.
+- **Apagar Conjunto** (`curves.apagar_conjunto`): apaga as guias do
+  atributo; os outros atributos ficam.
+
+O modificador Surface Deform é o último, com o botão Edit Mode desligado: no
+5.2, com guias reais, ligado ele fecha o Blender ao entrar no Edit Mode.
+

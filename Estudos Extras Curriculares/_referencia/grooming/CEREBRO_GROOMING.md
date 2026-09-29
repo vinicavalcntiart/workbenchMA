@@ -528,6 +528,26 @@ Observado em teste headless, nao em fonte externa:
      mais antigo; o menu roda o grafo velho e a correcao na copia nao tem
      efeito. Options mostra "Duplicates". Ao duplicar um tool, troque o
      Identifier.
+- **Arquivo pronto dos tools** (2026-09-29, validado no Blender 5.2.0 com
+  interface): `laboratorio/exemplos/tools_conjuntos_guias.blend`, com 313
+  guias reais, conjuntos Front_Guides_02_R (57) e Back_Guides_01_R (185) e
+  os tools Salvar Selecao, Selecionar Conjunto e Apagar Conjunto
+  [img/127_tools_arquivo_520, 127_tool_apagar_conjunto;
+  scripts/mk_tools_conjuntos.py, t_tools_conjuntos_520_gui.py]. Resultado:
+  seleciona exatamente 57, salva 57, apaga 313 → 256 com todos os atributos.
+  Achados no caminho:
+  1. **Tool precisa de Fake User**: grupo de tool sem usuario nao e salvo no
+     .blend e some ao reabrir. (Criado pela interface pode ja vir com Fake
+     User; nao conferido.)
+  2. **Crash do Edit Mode**: com guias reais, Deform Curves on Surface depois
+     do Interpolate (no mesmo tree ou como modificador depois) fecha o
+     Blender ao entrar no Edit Mode, 5.2.0 e 5.2.2, deterministico com -t 1.
+     Com o Deform antes do Interpolate, ou com o botao Edit Mode do
+     modificador do Deform desligado, abre sempre. Mantem a regra 8: Deform
+     por ultimo, so desligado no Edit Mode. Com guias procedurais (0 curvas
+     originais) nao acontece.
+  3. Guias vindas de modificador aplicado trazem lixo da malha (UVMap e
+     .uv_select_*); limpar.
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
@@ -921,6 +941,7 @@ valem direto para uma cabeça humana em metros. Scripts em
 | 6 | Ponta Virada (Roll) antes de Onda/Cacho, Subdivisão 0 ou 1 | 6,8 s → 0,7 s | 17.54 |
 | 7 | Shrinkwrap com Above Surface 0 | 0,5 (padrão) achata o groom inteiro | 17.24 |
 | 8 | Deform Curves on Surface é o último node de forma | nas guias, a raiz descola 12,6 mm; posição lida depois dele escorrega 46% | 17.46 |
+| 8b | Com guias reais, Deform depois do Interpolate: botão **Edit Mode** do modificador desligado | ligado, o Edit Mode fecha o Blender (5.2.0 e 5.2.2) | 8b |
 | 9 | Feche a topologia do scalp antes de pentear | Triangulate re-sorteia todas as raízes | 17.38 |
 | 10 | Scalp pintado com a cor da raiz | 60 mil fios cobrem como 300 mil | 17.42 |
 | 11 | Escala de objeto não aplicada | o groom inteiro escala junto (criança = réplica) | 17.45 |
