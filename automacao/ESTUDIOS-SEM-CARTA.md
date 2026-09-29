@@ -688,3 +688,5 @@ mais a `Initiative Application`. Das 10, **apenas 3 são porta distinta de casa 
 - **Dedupe:** enviados.csv 0, processados.csv 0, tokens-ats-1809.csv 0, Gmail search_threads `negativedamage OR "Negative Damage"` devolveu `{}` (zero fio).
 - **Ressalva honesta:** e freelance por periodo definido, nao emprego com visto; casa minuscula. E o anuncio pede taxa preferida: numero que so o Vini da (nao inventar); a carta pode dizer "happy to align on a day rate or project fee that fits your production budget" sem numero, ou o maestro pergunta a ele.
 - **Status:** rascunho r4070576618947385415 (29/09 14h1x, confere-carta OK; taxa sem numero, em aberto).
+
+- **Frogwares (Irlanda/Ucrania, Sherlock Holmes, The Sinking City), caixa geral de talentos t***@frogwares.com (publicada em frogwares.com/careers):** carta fria de caixa, frase da casa "creating fresh narratives backed with engaging gameplay mechanics"; dedupe Gmail 0 (inbox, enviados e rascunhos), processados.csv so a linha sem-porta de 29/09 22h45. Status: rascunho r-6124482875336680430 (29/09, confere-carta OK, 192 palavras, sem anexo; o CV e o PDF vao pelo programa do Vini no envio).
