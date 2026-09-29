@@ -20048,3 +20048,91 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** nenhuma além de estágio.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (goodbyekansas OR "Goodbye Kansas") -in:sent` → Welcome automático (Daniel Axelsson, 02/09) e logins. **Nenhuma recusa.** Repositório: a ficha do Daniel Bystedt; o endereço, **zero**.
 - **RESSALVAS HONESTAS:** (1) **o cargo dele não está publicado em nenhuma página que abri**; a busca aberta só liga o nome à casa; (2) a carta do Daniel Bystedt pode já ter saído: se saiu, esta espera uma semana.
+
+## RODADA DE 29/09 17h35 UTC (Joe): VEIA NOVA, **A PÁGINA INDIVIDUAL `/people/<id>-<nome>` DO TEAMTAILOR** (a ficha de cada funcionário no site de carreiras imprime nome, cargo e `mailto:` do endereço de trabalho, publicado pela própria casa) mais a veia do `/connect` em **casas Teamtailor que a varredura anterior não tinha** (achadas pelos remetentes de boas-vindas na caixa do Vini e pelas URLs de carreira já citadas no repositório). **Sete fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Suécia ×2, Portugal, Reino Unido ×3 (uma também na Dinamarca), EUA. Emails completos fora do repositório (repositório público); aqui vão mascarados
+
+**Placar: 7 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Nenhuma das sete casas recusou o Vini nem avisou que só contrata local (conferido no `processados.csv` e na caixa). Nenhuma repete as treze casas que já saíram hoje.
+
+**O QUE A VARREDURA DEU, medido, para ninguém repetir:**
+- **A veia que rendeu (nova):** `/people` de ~350 sites Teamtailor → **1.309 páginas individuais** lidas; as que trazem `mailto:` são poucas (cerca de 60), quase todas de RH. Daí saíram Funcom e Kepler. Depois, o `/connect` de 229 sites Teamtailor citados no repositório e ainda não varridos deu Chief Rebel, Steel City, LEGO Digital Play e AdHoc.
+- **O dedupe pelo `pessoas.csv` NÃO BASTA:** as cartas de 28/09 a `richard@coatsink.com` (Coatsink), `peter.twiby@legodigitalplay.com` (LEGO Digital Play), `linnea.tegelberg@starstable.com` (Star Stable) e `nina@fundaygames.dk` (Funday) **saíram pela caixa e não estão no `pessoas.csv`**. Por isso Coatsink, Star Stable e Funday saíram desta rodada, e na LEGO Digital Play a Karina é a **segunda e última** pessoa.
+- **Da reserva da rodada anterior:** Sharkmob entra (abaixo). Star Stable e Funday já receberam carta (28/09). SYBO (sem sobrenome), Starbreeze (endereço de pessoa que o LinkedIn liga a outra empresa), The Gang e Vine FX (fora da disciplina) ficaram fora.
+- **Fora por trava:** Sandbox Interactive e Stillfront (a Sandbox recusou o Vini em 21/09; o Simon Guenther, *Head of Talent Acquisition* da Stillfront, é do mesmo grupo), Cast Iron Games (o formulário da casa exige morar no Reino Unido, `processados.csv` 07/09), Vivid Games (a Sylwia Polaczyk já respondeu em 15/09), Last Arrow (Pneuma, mesmo filtro de residência da Cast Iron), Coffee Stain (a Maria Sjöman já está no arquivo), Tanglewood (engenharia), Fingersoft (2D), iLogos (Ucrânia).
+- **Veia que morreu:** e-mails dentro do texto das vagas Teamtailor (`jobs.json`, 141 achados, só um de casa de jogos que ainda não estava no arquivo).
+
+### FICHA 1: **Matea Žižak**, *HR Manager* da **CHIEF REBEL** (*Fellowship*; Estocolmo, **SUÉCIA**) — `m***@chiefrebel.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://jobs.chiefrebel.com/connect` (**200, 72.038 bytes**): *"Contact us directly at m***@chiefrebel.com"* e *"you can reach us by sending an email to m***@chiefrebel.com"*. `https://www.chiefrebel.com/about/` (**200**). `https://www.chiefrebel.com/announcing-fellowship/` (**200**). Cargo: busca aberta (theorg.com, *"Matea Zizak - HR Manager at Chief Rebel"*; ex-Avalanche Studios). **NADA MONTADO.**
+- **POR QUE ELA:** casa de ~40 pessoas; é a chefe de RH e o único endereço de pessoa que a casa publica. O diretor de arte (André) aparece no site só pelo primeiro nome, sem endereço.
+- **FRASE DA CASA, literal** (`chiefrebel.com/about/`): *"We aim to become the number one stylized game studio in Stockholm"* e *"If you love stylized art in games, this is the right place for you."*
+- **OBRA DE PERSONAGEM:** *Fellowship* (com a Arc Games): *"a diverse roster of heroes"* num jogo de masmorra cooperativo (`/announcing-fellowship/`). Casa de arte **estilizada**, o forte do Vini.
+- **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA:** *"I am ready to move for the role, and I would need visa sponsorship."*
+- **VAGA ABERTA:** nenhuma hoje (`jobs.json` vazio).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (chiefrebel OR "Chief Rebel" OR zizak)` → **`{}`**. Repositório: zero em `pessoas.csv`, `processados.csv` e `enviados.csv`. **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) o cargo vem de agregador aberto, não de página da casa; (2) RH, não arte; (3) sem vaga aberta.
+
+### FICHA 2: **Ana Castilho**, *Senior HR Business Partner Lisbon* da **FUNCOM** (*Dune: Awakening*, *Conan Exiles*; Lisboa, **PORTUGAL**, sede em Oslo, Noruega) — `a***@funcom.com` — **ALTA (PUBLICADO pela casa na página dela)**
+
+- **URLs abertas por mim nesta rodada:** `https://jobs.funcom.com/people/735201-ana-castilho` (**200, 63.250 bytes**): *"Ana Castilho Senior HR Business Partner Lisbon – Operations Email a***@funcom.com"*. `https://www.funcom.com/` (**200, 68.972 bytes**). **NADA MONTADO.**
+- **POR QUE ELA:** casa grande (Oslo, Lisboa, Bucareste, Carolina do Norte, dentro da Tencent); pelo BRIEF, em casa grande o RH/recrutamento é a porta, e ela é a única pessoa da casa com endereço publicado.
+- **FRASE DA CASA, literal** (`funcom.com`): *"we charge into game development with the determination to create games with unique personality and soul."*
+- **OBRA DE PERSONAGEM:** *Conan Exiles* e *Dune: Awakening* (criador de personagem 3D realista), e a casa já anunciou *Senior Character Artist* e *Associate Lead Character Artist* no mesmo site.
+- **FORA DOS EUA? SIM** (Portugal/Noruega). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma no `jobs.json` hoje. O perfil Connect do Vini existe desde 07/09.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (funcom OR castilho)` → só a carta genérica de 06/09 ao `contact@funcom.com` (sem resposta) e o Welcome do Connect (Diana Stoian, 06/09). **Nenhuma recusa.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) ela cuida do escritório de Lisboa; a carta pode pedir que ela repasse ao time de arte de Oslo; (2) sem vaga aberta hoje.
+
+### FICHA 3: **Jess Pearce**, *People Partner* da **KEPLER INTERACTIVE** (publisher e grupo de estúdios de *Clair Obscur: Expedition 33*, *Sifu*; Londres, **REINO UNIDO**) — `j***@kepler-interactive.com` — **ALTA (PUBLICADO pela casa na página dela e no `/connect` da Timberline)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.kepler-interactive.com/people/1362943-jess-pearce` (**200, 48.139 bytes**): *"Jess Pearce People Partner – People Email j***@kepler-interactive.com"*. `https://timberline.teamtailor.com/connect` (**200**): *"Contact us directly at j***@kepler-interactive.com"*. `https://www.kepler-interactive.com/` (**200, 42.515 bytes**). `https://careers.kepler-interactive.com/jobs.json` (**200**; *Lead 3D Character Artist*, Paris, 02/09). **NADA MONTADO.**
+- **POR QUE ELA:** é a pessoa de RH do grupo e o nome por trás das boas-vindas do Connect da Timberline e da Ebb Software; o quadro do grupo tem **Lead 3D Character Artist** aberto em Paris.
+- **FRASE DA CASA, literal** (`kepler-interactive.com`): *"Kepler curates its partnerships with developers worldwide to showcase some of the newest and most brilliant ideas in gaming that combine experimental game design with unique art direction."*
+- **OBRA DE PERSONAGEM:** *Clair Obscur: Expedition 33* (grupo de heróis 3D, o destaque da home).
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** *Lead 3D Character Artist* (Paris) no quadro do grupo.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (kepler-interactive OR "Jess Pearce")` → os Welcomes pelo relé (Timberline 19/09, Ebb 16/09) e a resposta do Vini ao Simon Sweeney **pelo relé** (14/09, sem resposta). Nenhum email ao endereço dela. **Nenhuma recusa.** Repositório: zero pessoa da Kepler.
+- **RESSALVAS HONESTAS:** (1) a Sloclap, do mesmo grupo, recebeu ficha hoje (Alexandra Maingard): as duas cartas não podem sair iguais; (2) a vaga de Lead em Paris pode ser da Tactical Adventures, onde o Vini já falou com o Armand pelo relé.
+
+### FICHA 4: **Macy Corbett**, People & HR da **STEEL CITY INTERACTIVE** (*Undisputed*; Sheffield, **REINO UNIDO**) — `m***@steelcityinteractive.co.uk` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.steelcityinteractive.co.uk/connect` (**200**): *"Contact us directly at m***@steelcityinteractive.co.uk."*. `https://gamedevheroes.co/2026-game-dev-heroes/announcing-the-game-dev-heroes-2026-shortlists/` (**200, 98.405 bytes**): categoria *"People & HR"* → *"Macy Corbett , Steel City Interactive"*. `https://www.steelcityinteractive.co.uk/` (**200, 94.362 bytes**). `https://careers.steelcityinteractive.co.uk/people` (**200**; *"now employs 70 people"*). **NADA MONTADO.**
+- **POR QUE ELA:** casa de 70 pessoas; ela é a pessoa de gente/RH que a casa publica e foi finalista de prêmio da indústria nessa categoria.
+- **FRASE DA CASA, literal** (`steelcityinteractive.co.uk`): *"Born out of passion for video games and boxing"*.
+- **OBRA DE PERSONAGEM:** *Undisputed*, jogo de boxe com dezenas de lutadores reais em 3D.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma hoje; o Connect do Vini foi criado hoje às 00h40.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (steelcityinteractive OR "Steel City Interactive" OR "Macy Corbett")` → só o Welcome do Connect (Nathan Fisher, 29/09) e o login. **Nenhuma recusa.** Repositório: só o Connect de hoje. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) o título exato dela não está publicado, só a categoria do prêmio; (2) *Undisputed* é realista, não estilizado.
+
+### FICHA 5: **Karina Sharipova**, *Senior Manager, Executive Recruitment* da **LEGO DIGITAL PLAY** (Londres, **REINO UNIDO**, e Copenhague, **DINAMARCA**) — `k***@legodigitalplay.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.legodigitalplay.com/connect` (**200**): *"Contact us directly at k***@legodigitalplay.com"*. `https://careers.legodigitalplay.com/jobs.json` (**200**; 17 vagas, Londres e Copenhague). Cargo: busca aberta (theorg.com, *"Senior Manager, Executive Recruitment at LEGO"*; LinkedIn *"building out LEGO Digital Play"*). **NADA MONTADO.**
+- **POR QUE ELA:** casa grande (Grupo LEGO), em fase de montar o time; recrutamento é a porta.
+- **FRASE DA CASA, literal** (texto dos anúncios da casa): *"We aim to reach every kid on the planet, their parents, and adult fans of LEGO—and provide them with meaningful, magical, and playful new experiences."*
+- **OBRA DE PERSONAGEM:** o produto novo não foi anunciado; o gancho é o universo de personagens da LEGO. A casa anuncia *Senior Software Engineer, Animation*.
+- **FORA DOS EUA? SIM** (Reino Unido/Dinamarca). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma de arte hoje.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (legodigitalplay OR "LEGO Digital Play" OR Sharipova)` → o Welcome do Connect (16/09) e **a carta do Vini de 28/09 ao Peter Twiby** (*Senior Talent Acquisition Partner*, `p***@legodigitalplay.com`), sem resposta e **fora do `pessoas.csv`**. A Karina é a **segunda e última** pessoa da casa.
+- **RESSALVAS HONESTAS:** (1) ela recruta executivos; (2) a carta ao Peter saiu ontem: esta espera uma semana sem resposta antes de sair; (3) sem vaga de arte.
+
+### FICHA 6: **Josefina Håvik**, *HR Business Partner* da **SHARKMOB** (Tencent; *Exoborne*, *Vampire: The Masquerade – Bloodhunt*; Malmö, **SUÉCIA**, e Londres) — `j***@sharkmob.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://career.sharkmob.com/connect` (**200**): *"please use the below stated contact details; Sharkmob j***@sharkmob.com"*. `https://career.sharkmob.com/` (**200**; *Senior Character Concept Artist*, Malmö, 15/09). Cargo: busca aberta (*HR Business Partner*). **NADA MONTADO.**
+- **POR QUE ELA:** casa grande da Tencent com vaga de personagem aberta; é o único endereço de pessoa publicado pela casa.
+- **FRASE DA CASA, literal** (`career.sharkmob.com`): *"We want to work on games that people talk about and remember, that capture our imagination and bring people together."*
+- **OBRA DE PERSONAGEM:** *Bloodhunt* (vampiros do universo *Vampire: The Masquerade*) e *Exoborne*, *"our first original IP"*.
+- **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** *Senior Character Concept Artist* (Malmö, presencial). Casa grande, então vizinho de personagem vale.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (sharkmob OR havik) -from:teamtailor-mail.com` → **`{}`**. Repositório: só o Connect de 07/09. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) **a busca aberta diz que ela saiu de licença-maternidade e que a casa buscava substituta por um ano**; se o email voltar resposta automática, a porta é o Connect; (2) cargo só pela busca.
+
+### FICHA 7: **Tom Fieldhouse**, recrutamento e RH da **ADHOC STUDIO** (*Dispatch*; Los Angeles, **EUA**; ele trabalha do Reino Unido) — `t***@adhocla.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.adhocla.com/connect` (**200**): *"Contact us directly at t***@adhocla.com."*. `https://careers.adhocla.com/people` (**200**; *"Coworkers 35"*). `https://adhocstudio.com/` (**200, 111.460 bytes**). Cargo: busca aberta (*"handles all things recruitment & HR for AdHoc Studio"*). **NADA MONTADO.**
+- **POR QUE ELE:** casa de 35 pessoas, é quem cuida de todo o recrutamento e assinou o Welcome do Connect do Vini hoje.
+- **FRASE DA CASA, literal** (`adhocstudio.com`): *"We make story-driven games where the choices and consequences are yours."*
+- **OBRA DE PERSONAGEM:** *Dispatch* (2025), *"praised for its rare blend of character-driven story and player agency"*, com *"more than 4 million players"* e prêmios BAFTA.
+- **FORA DOS EUA? NÃO** (EUA). **Entra a frase de patrocínio, NÃO a de realocação.**
+- **VAGA ABERTA:** nenhuma hoje; o Connect do Vini foi criado hoje às 00h40.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (adhocla OR "AdHoc Studio" OR adhocstudio OR Fieldhouse)` → só o Welcome (29/09) e o login. **Nenhuma recusa.** Repositório: só o Connect de hoje. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) casa nos EUA; (2) o visual de *Dispatch* é de animação 2D, então a carta deve falar do trabalho em personagem, não de 3D; (3) sem vaga aberta.
