@@ -673,3 +673,18 @@ mais a `Initiative Application`. Das 10, **apenas 3 são porta distinta de casa 
 `2780991` — **e as três já eram nossas.** As outras 7 são homônimo fora do ramo: `aurora`
 (logística em Mudau), `breakfirst` (suspeito de demo), `buf` (ótica em Hannover), `cosmico`
 (Milão), `flow` (FLOW media de Berlim), `lakestar` (fundo de capital).
+
+---
+
+## FICHA NOVA 29/09 ~14h UTC (frente kamikaze Nordicos+Benelux+DACH): Negative Damage, Alkmaar (Holanda)
+
+- **Vaga:** Freelance 3D Character Artist (remote), publicada HOJE 29/09 (quadro nacional holandes, expira 28/12/2026).
+- **Fonte aberta por mim:** https://www.dutchgamesindustry.nl/job/negativedamage-character-artist (pagina da empresa: https://www.dutchgamesindustry.nl/company/negativedamage ; site https://www.negativedamage.nl so tem ancora #jobs apontando para o mesmo anuncio).
+- **Caixa (publicada, botao "Apply for this position" do anuncio, email decodificado da protecao Cloudflare):** `j***@negativedamage.nl` (o botao Apply Now leva para esse endereco; confianca ALTA, e o unico canal de candidatura). Nao ha formulario: a candidatura e por email, por isso vira carta.
+- **Por que a casa:** estudio de 3 pessoas, fundado em 2026, primeiro jogo; so esta vaga e a de ambiente abertas. Personagem estilizado e o centro da vaga.
+- **Gancho, frase do estudio entre aspas:** "The characters we have in mind have no facial features, so personality and emotion need to come primarily from strong silhouettes, exaggerated proportions, clothing, posture and animation." e "We care much more about strong artistic choices and character than high-fidelity detail." Encaixe direto com Wingfeather (elenco estilizado pintado a mao) e Endstar (sculpt ate a engine, sistema modular). Pedem tambem "Modular character systems", "Rigging and skinning" e "Unity".
+- **O que pedem no email:** "portfolio, availability, preferred rate (hourly/day rate or project-based), and a short introduction to the kind of work you enjoy doing."
+- **Fora dos EUA:** sim (Holanda). Vaga remota freelance, sem veto de residencia escrito ("working remotely with our team in the Netherlands"); conta na cota de ate 30% de remoto do dia, sem mudanca de pais.
+- **Dedupe:** enviados.csv 0, processados.csv 0, tokens-ats-1809.csv 0, Gmail search_threads `negativedamage OR "Negative Damage"` devolveu `{}` (zero fio).
+- **Ressalva honesta:** e freelance por periodo definido, nao emprego com visto; casa minuscula. E o anuncio pede taxa preferida: numero que so o Vini da (nao inventar); a carta pode dizer "happy to align on a day rate or project fee that fits your production budget" sem numero, ou o maestro pergunta a ele.
+- **Status:** PENDENTE-maestro-escreve.
