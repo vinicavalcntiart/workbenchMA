@@ -3,25 +3,19 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 662.5 min, cerca de US$ 5.30
+**Total medido:** 52.9 min, cerca de US$ 0.42
 
 ## Por dia
 
 | dia (UTC) | minutos | US$ estimado |
 |---|---|---|
-| 2026-09-26 | 565.4 | 4.52 |
-| 2026-09-27 | 44.8 | 0.36 |
 | 2026-09-28 | 28.5 | 0.23 |
-| 2026-09-29 | 23.9 | 0.19 |
+| 2026-09-29 | 24.5 | 0.20 |
 
 ## Por sessao
 
 | aberta em (UTC) | fechada em (UTC) | nome | sem tela | minutos |
 |---|---|---|---|---|
-| 2026-09-26 04:16 | 2026-09-27 04:21 | - | nao | 4.8 |
-| 2026-09-26 06:17 | 2026-09-28 13:26 | - | nao | 560.6 |
-| 2026-09-27 02:03 | 2026-09-27 02:08 | groom-pesquisa | sim | 4.5 |
-| 2026-09-27 03:18 | 2026-09-28 13:26 | ajudante1-terca100 | nao | 40.2 |
 | 2026-09-28 02:44 | 2026-09-28 02:44 | sr-probe | nao | 0.1 |
 | 2026-09-28 02:50 | 2026-09-28 02:50 | sr-probe | nao | 0.1 |
 | 2026-09-28 02:50 | 2026-09-28 02:50 | t | nao | 0.1 |
@@ -38,3 +32,7 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-29 02:09 | 2026-09-29 02:12 | - | nao | 3.3 |
 | 2026-09-29 10:16 | 2026-09-29 10:17 | - | sim | 1.3 |
 | 2026-09-29 10:50 | 2026-09-29 10:51 | - | sim | 0.5 |
+| 2026-09-29 13:26 | 2026-09-29 13:27 | uk-workable | nao | 0.2 |
+| 2026-09-29 13:29 | 2026-09-29 13:31 | uk-workable | nao | 0.2 |
+| 2026-09-29 13:32 | 2026-09-29 13:32 | uk-workable | nao | 0.1 |
+| 2026-09-29 13:32 | 2026-09-29 13:33 | uk-workable | nao | 0.2 |
