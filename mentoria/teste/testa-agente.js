@@ -2,7 +2,15 @@ require('./stubs.js');
 const fs = require('fs'), vm = require('vm');
 
 const dia = (iso) => new Date(iso);
-const AMANHA = '2026-09-04';
+
+// Datas relativas ao dia em que o teste roda. Com data fixa no código, a suíte passa
+// na semana em que foi escrita e quebra depois, porque o agente só varre de agora até
+// o horizonte: fixture no passado simplesmente não é lida.
+const diaISO = (n) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo',
+  year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(Date.now() + n * 86400000));
+const AMANHA = diaISO(1);
+const DEPOIS_DE_AMANHA = diaISO(2);
+const SEMANA_DEPOIS = diaISO(9);   // 8 dias de vão: cabe o mesmo dia da semana duas vezes
 
 // ---- agenda falsa ----
 const fontes = [
@@ -117,9 +125,13 @@ ok(cancel[0].metodo === 'CANCEL' && cancel[0].inicio.toISOString() === '2026-09-
 ok(lerIcs(['BEGIN:VEVENT','UID:y','DTSTART;VALUE=DATE:20260904','END:VEVENT'].join('\r\n'))[0].inicio === null, 'ignora evento de dia inteiro');
 
 console.log('== janela protegida ==');
-CFG.JANELAS_PROTEGIDAS = [{ dias: [5], de: '12:00', ate: '13:30', motivo: 'almoço' }];
-const janelas = janelasProtegidas(new Date(`${AMANHA}T00:00:00-03:00`), new Date('2026-09-12T00:00:00-03:00'), 'America/Sao_Paulo');
-ok(janelas.length === 2 && janelas[0].chave === 'janela:2026-09-04:12:00-13:30' && janelas[1].chave === 'janela:2026-09-11:12:00-13:30', 'gera a janela nas duas sextas da faixa (' + janelas.map(j => j.chave).join(', ') + ')');
+const semanaDeAmanha = new Date(`${AMANHA}T12:00:00-03:00`).getUTCDay();
+CFG.JANELAS_PROTEGIDAS = [{ dias: [semanaDeAmanha], de: '12:00', ate: '13:30', motivo: 'almoço' }];
+const janelas = janelasProtegidas(new Date(`${AMANHA}T00:00:00-03:00`), new Date(`${SEMANA_DEPOIS}T00:00:00-03:00`), 'America/Sao_Paulo');
+ok(janelas.length === 2 &&
+   janelas[0].chave === `janela:${AMANHA}:12:00-13:30` &&
+   janelas[1].chave === `janela:${diaISO(8)}:12:00-13:30`,
+   'gera a janela nos dois mesmos dias da semana dentro da faixa (' + janelas.map(j => j.chave).join(', ') + ')');
 
 console.log('== não repete aviso do mesmo conflito ==');
 resetProps();
@@ -138,7 +150,7 @@ const emCima = { id: 'sessao-tarde', summary: 'Vini Cavalcanti Mentorship', stat
   start: { dateTime: `${AMANHA}T18:00:00-03:00` }, end: { dateTime: `${AMANHA}T19:00:00-03:00` },
   attendees: [{ self: true, responseStatus: 'accepted' }, { email: 'atrasado@escola.com', displayName: 'Caio Lima' }] };
 const comAntecedencia = { id: 'sessao-ok', summary: 'Vini Cavalcanti Mentorship', status: 'confirmed',
-  created: '2026-08-20T10:00:00-03:00',
+  created: `${diaISO(-20)}T10:00:00-03:00`,
   start: { dateTime: `${AMANHA}T20:00:00-03:00` }, end: { dateTime: `${AMANHA}T21:00:00-03:00` },
   attendees: [{ self: true, responseStatus: 'accepted' }, { email: 'certinho@escola.com' }] };
 fontes.push(emCima, comAntecedencia);
@@ -198,7 +210,7 @@ elineEventos.push(
     start: { dateTime: `${AMANHA}T09:30:00-03:00` }, end: { dateTime: `${AMANHA}T10:00:00-03:00` },
     attendees: [{ self: true, responseStatus: 'declined' }] },
   { id: 'feriado-trabalho', summary: 'Company holiday', status: 'confirmed',
-    start: { date: AMANHA }, end: { date: '2026-09-05' } },
+    start: { date: AMANHA }, end: { date: DEPOIS_DE_AMANHA } },
 );
 CFG.CALENDARIOS_FONTE = ['primary'];                       // de propósito: sem a E-Line aqui
 CFG.AGENDAS_SEMPRE_BLOQUEIAM = ['c_eline@group.calendar.google.com'];
