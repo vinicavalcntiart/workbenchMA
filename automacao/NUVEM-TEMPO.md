@@ -3,21 +3,19 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 140.2 min, cerca de US$ 1.12
+**Total medido:** 139.2 min, cerca de US$ 1.11
 
 ## Por dia
 
 | dia (UTC) | minutos | US$ estimado |
 |---|---|---|
-| 2026-09-28 | 4.8 | 0.04 |
-| 2026-09-29 | 135.4 | 1.08 |
+| 2026-09-28 | 1.4 | 0.01 |
+| 2026-09-29 | 137.8 | 1.10 |
 
 ## Por sessao
 
 | aberta em (UTC) | fechada em (UTC) | nome | sem tela | minutos |
 |---|---|---|---|---|
-| 2026-09-28 13:31 | 2026-09-28 13:31 | - | sim | 0.3 |
-| 2026-09-28 14:25 | 2026-09-28 14:39 | - | sim | 3.2 |
 | 2026-09-28 14:47 | 2026-09-28 14:49 | stim-lookdev | nao | 1.4 |
 | 2026-09-29 00:44 | 2026-09-29 00:57 | kamikaze-2909 | nao | 12.5 |
 | 2026-09-29 01:04 | 2026-09-29 01:14 | bardel-cfx | nao | 5.9 |
@@ -36,3 +34,5 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-29 13:59 | 2026-09-29 13:59 | qube-3d-artist | nao | 0.2 |
 | 2026-09-29 15:05 | 2026-09-29 15:05 | - | sim | 0.3 |
 | 2026-09-29 17:04 | 2026-09-29 19:13 | leva2909 | nao | 108.8 |
+| 2026-09-29 20:55 | 2026-09-29 20:57 | epic-6008376004 | nao | 0.1 |
+| 2026-09-29 20:58 | 2026-09-29 21:00 | teste | nao | 2.3 |
