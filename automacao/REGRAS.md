@@ -69,5 +69,6 @@ Ver `LEIA-ME.md` na raiz.
 
 - Na terça tudo roda no máximo, com todas as frentes em paralelo. Quem decide o ritmo é o Vini. O maestro não segura trabalho.
 - Rodadas de formulário de hora em hora: a de :15 das horas pares e a extra de :53. Jhon B caça de hora em hora (:45 todo dia e a extra das horas pares). Sem Mágico (Vini, 28/09: o navegador na nuvem substitui); porta travada sem caixinha vai pela nuvem na própria rodada de formulários. O Joe roda a cada 2h. A leva do clique é de manhã.
+- **Formulário é o que garante o emprego (Vini, 29/09).** Formulário vem sempre na frente. Carta é complemento, nunca o foco. Na terça, o Joe extra foi desligado e a força vai toda para caçar e enviar formulário.
 - Ordem de envio: primeiro as 27 prontas de /home/user/apply/terca-prontas.json, depois a FILA-TERCA e as portas travadas.
 - Na quarta as rotinas extras de terça param sozinhas, porque o agendamento delas é só para o dia 2.
