@@ -61,3 +61,4 @@ Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador 
 - Não estão mais na leva por já terem saído: Barnstorm (BambooHR 114, enviada em 23/09), Framestore Montreal, Jungler (recusou em 22/09), Stirling, Relic, NEOWIZ/NOUGH, Skydance.
 
 | Glinda Games | 3D Artist, Melbourne (Wix) | reCAPTCHA "I'm not a robot" visível ao clicar Submit; formulário todo preenchido, CV nos 2 campos, Type=Artist (29/09) | n | https://www.glindagames.com/jobs/apply |
+| Streamline Studios (frente remota, 29/09) | 3D Character Artist, freelancer remoto (BambooHR 106) | reCAPTCHA "I am not a robot" visível ao clicar Submit; tudo preenchido e lido de volta, CV no Resume, taxa USD 40/h, disponível em 13/10; ressalva: anúncio diz "fully remote" mas local do ATS é Kuala Lumpur, não diz "qualquer país" | s | https://streamlinestudios.bamboohr.com/careers/106 |
