@@ -85,3 +85,22 @@ Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador 
 | 29/09 | PlaySide Studios (Melbourne, frente AU/NZ) | Expression of Interest (Employment Hero, Port Melbourne, presencial; única porta aberta da casa) | Employment Hero exige conta: o "Continue with email" abre reCAPTCHA de imagem ("Select all squares with stairs") visível antes de criar a conta; nada preenchido além do email; perfil local em /home/user/apply/prof_eh | n | https://employmenthero.com/jobs/position/playside-studios-ltd-expression-of-interest/ |
 | 29/09 | Funko | 3D Digital Sculptor (Everett, WA, presencial; USD 31,54-39,42/h) | Jobvite (reCAPTCHA de imagem no Send Application; tudo preenchido, CV e carta anexados, EEO em branco) | s | https://jobs.jobvite.com/funko/job/ogyRAfwZ/apply |
 | 29/09 | Metricminds (Frankfurt, mocap e personagem digital; híbrido) | Unsolicited Application (BambooHR 39) | reCAPTCHA "I'm not a robot" visível; testado no local: dados e Province ok, Country Brazil; ressalva: Cover Letter é obrigatório (o script pôs o CV nele, refazer com a carta em PDF e o CV no Resume), perguntas UE=No e visto Germany=Yes, e o e-mail do formulário deve ser conferido | n | https://metricmindsgmbh.bamboohr.com/careers/39 |
+
+
+## LEVA 30/09 manhã (preparada em 29/09 à noite, nada enviado, sem Kernel)
+
+11 portas, personagem e casa grande primeiro. Vaga viva conferida por curl/API em 29/09; dedupe (dedupe-agora.sh e enviados.csv) zero envio; Gmail sem recibo de nenhuma (newer_than:10d). Respostas campo por campo ficam fora do repositório.
+
+1. Hasbro / Wizards of the Coast, Principal Character Artist (req 68744377699, Durham NC), personagem, casa grande. https://careers.hasbro.com/careers/job/68744377699 . Eightfold, só abre no navegador do computador; caixa ainda NÃO vista (só fica se mostrar a caixa).
+2. Funko, 3D Digital Sculptor (Everett WA), personagem. https://jobs.jobvite.com/funko/job/ogyRAfwZ/apply . reCAPTCHA de imagem no Send Application. Pergunta pendente do Vini: "vai continuar no emprego atual?".
+3. HyperVR Games, 3D Character Artist (Riga, remoto), personagem. https://gb.ingamejob.com/en/job/3d-character-artist-74 . reCAPTCHA de caixa no modal Apply.
+4. Entropy Studio, 3D Modeler Organic / Character (Zaragoza), personagem. https://www.entropystudio.net/jobs . reCAPTCHA v2 com desafio de imagem.
+5. Halfbrick Studios, Expression of Interest WORLDWIDE (Role = Senior 3D Character Artist). https://www.halfbrick.com/expression-of-interest . reCAPTCHA de caixa 304x78.
+6. Plastic Wax (Sydney), Recruitment Form. https://www.plasticwax.com/careers . reCAPTCHA de caixa em modal, só depois do Submit; conferir se há campo de CV.
+7. Metricminds (Frankfurt), Unsolicited Application (BambooHR 39). https://metricmindsgmbh.bamboohr.com/careers/39 . reCAPTCHA de caixa; carta em PDF obrigatória.
+8. Grimlore Games (Munique), Open Application. https://grimloregames.com/open-application/ . reCAPTCHA de caixa; CV por link litterbox gerado no envio.
+9. Blowfish Studios (Sydney), Expression of Interest. https://www.blowfishstudios.com/careers . reCAPTCHA enterprise ao clicar Submit; o Submit de 29/09 limpou o formulário sem confirmação e sem recibo, refazer.
+10. Palomar Animation (Mediawan Kids & Family), candidatura espontânea. https://mediawankidsandfamily.com/jobs . reCAPTCHA de caixa.
+11. PlaySide Studios (Melbourne), Expression of Interest (presencial). https://employmenthero.com/jobs/position/playside-studios-ltd-expression-of-interest/ . reCAPTCHA de imagem antes da conta.
+
+Saíram da leva em 29/09 à noite: Jungler (vaga de ambiente e a casa disse em 22/09 que não há projeto de personagem 3D); Side LATAM (já enviada e confirmada em 27/09, recibo no Gmail); Amuse Animation Concept Designer (2D temporário, casa pequena); Behaviour e outras Lever com hCaptcha (falham até na mão do Vini); Infold, LIGHT, CayPlay e Super Spline (login Google ou LinkedIn, seção "Precisam da conta do Vini"); e todas as linhas desta tabela que já têm recibo de 29/09 em enviados.csv (Epic x6, Lighthouse x3, StoryToys, Obsidian, Framestore Melbourne, Crafty Apes, Stellar, One Of Us, Velan, Nexus, Homa, Sawhorse, Outplay, BambooHR x7, Screen Burn, Secret Mode, Sans Strings, VFX Legion, Menhir, Squeeze, Asterman, Crazy Maple, Triotech, Blind Squirrel, Glinda, Streamline, One Man, Cinesite London, Climax, Bardel, Floating Rock).
