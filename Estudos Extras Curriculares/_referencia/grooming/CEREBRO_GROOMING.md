@@ -501,7 +501,12 @@ Observado em teste headless, nao em fonte externa:
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
      dois objetos deram 15.495 filhos, igual a um objeto so. Edita um objeto
-     por vez (Local View, tecla /). Por fio, sem Create Guide
+     por vez (Local View, tecla /).
+  **Select by Attribute nao existe para Curves na 5.2**: so para malha
+  (`bpy.ops.mesh.select_by_attribute`, usa o atributo booleano ativo). Em
+  `bpy.ops.curves` e `bpy.ops.sculpt_curves` so ha select_all, random,
+  ends, linked, more/less e grow [blender-python-api-5.2]. Por atributo, so
+  com o node tool (Set Selection). Por fio, sem Create Guide
   Index Map; da o visual de fios escapando da mecha. Random por mecha (Random
   Value com ID = Guide Index) e outro efeito, mais raro. Tip Spread e Clump
   Offset ja sao aleatorios por dentro, so o Seed do Clump. Para ver em cores:
