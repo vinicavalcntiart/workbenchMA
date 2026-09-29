@@ -548,6 +548,11 @@ Observado em teste headless, nao em fonte externa:
      originais) nao acontece.
   3. Guias vindas de modificador aplicado trazem lixo da malha (UVMap e
      .uv_select_*); limpar.
+  4. Arquivo salvo com o editor de nodes **pinado** num grupo de tool fechou
+     o Blender 5.2.0 ao abrir com interface (software GL daqui; nao sei se
+     acontece com GPU). Sem pin, o editor perde o grupo ao abrir. O arquivo
+     final usa o layout padrao, abre em Edit Mode e traz o texto LEIA-ME
+     (scripts/mk_tools_conjuntos_leiame.py) [img/128_checklist_tool].
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
