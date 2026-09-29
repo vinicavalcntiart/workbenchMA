@@ -20431,3 +20431,13 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** a *Expression of Interest* mundial da casa está na leva da caixinha (29/09, reCAPTCHA); conferir se já saiu antes da carta.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (halfbrick OR Hodapp)` → **nada**; `to:halfbrick.com` → nada. Repositório: só a porta EOI na leva de hoje. **Casa inédita na caixa.**
 - **RESSALVAS HONESTAS:** (1) marketing, não arte; (2) parte do catálogo é 2D (*Fruit Ninja* clássico); a carta fala do 3D de *Jetpack Joyride Racing*.
+
+## RODADA 29/09 noite, frente D (Joe): Quantic Dream, Kolibri Games, Behaviour, Frontier - porta Lever com hCaptcha
+
+**Resultado: ZERO ficha nova com email de pessoa publicado. Nenhuma linha nova no pessoas.csv (sem fonte, a linha nao existe; as fichas de 27/09 e 28/09 continuam valendo).**
+
+- **FRONTIER DEVELOPMENTS (Cambridge, Reino Unido): FORA.** Ellie Baldino recebeu carta em 14/09; a casa recusou em 17/09 e esta marcada Fechada desde 24/09 (ficha da Yaz Harniman, 28/09, NAO-ESCREVER).
+- **BEHAVIOUR INTERACTIVE (Montreal, Canada): FORA.** A casa recusou por escrito em 11/09 (7 Days to Die). Ficha da Emilie Benabou de 27/09 segue `sem-email`, segurada.
+- **QUANTIC DREAM (Paris, Franca; fora dos EUA, frase de realocacao entra):** reaberto https://www.quanticdream.com/en/contact e https://www.quanticdream.com/en/careers (200): so caixa geral `contact@`, nenhum email de pessoa. Busca web devolveu o nome Amelie Dufresne (Senior Talent Acquisition Advisor), mas so em listagem de ZoomInfo/RocketReach (fonte paga, nao aberta), sem email publicado: NAO entra. Mike-Amir El Frangi (Lead Character Artist) segue `sem-email`; ja existe rascunho para a caixa geral (27/09).
+- **KOLIBRI GAMES (Berlim, Alemanha; fora dos EUA, frase de realocacao entra):** reaberto https://www.kolibrigames.com/contact/ (200): publicados `jobs@`, `info@` e `community@`, todos caixa, nenhum de pessoa. Daniel Lopez (Studio Art Director) segue `sem-email`. Um resumo de busca atribui a Marina Ivanovic (ex-Lead Recruiter, saiu em 2021) um endereco por padrao de dominio, nao visto em pagina aberta: DESCARTADO, e seria montado (BAIXA).
+- Dedupe desta rodada: repositorio conferido (pessoas.csv, PESSOAS-SEM-CARTA.md, processados.csv); Gmail nao reconsultado porque nao houve ficha nova.
