@@ -20332,3 +20332,102 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** a `/careers` manda para o quadro de vagas (Workable, com a parede de rede já registrada em 09/09).
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (pixomondo OR PXO)` → a carta à Naomi (09/09) e o follow-up (18/09). **Nenhuma resposta, nenhuma recusa.**
 - **RESSALVAS HONESTAS:** (1) **é a mais fraca das oito**: cargo comercial numa divisão de produção virtual (PXO Clara), longe de personagem; (2) sem obra de personagem conferida; (3) a carta deve pedir encaminhamento ao time de arte ou ao recrutamento.
+
+## RODADA 29/09 noite, frente C (Joe): AUSTRÁLIA, NOVA ZELÂNDIA, NÓRDICOS, COREIA DO SUL E SINGAPURA. **Oito fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Suécia ×2, Dinamarca, Finlândia, Nova Zelândia, Austrália ×3. Coreia e Singapura: zero (abaixo, o porquê). Emails completos fora do repositório (repositório público); aqui vão mascarados
+
+**Placar: 8 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Nenhuma das oito casas recusou o Vini nem avisou que só contrata local (conferido no `processados.csv` e na caixa). Nenhuma repete as vinte casas que já saíram hoje nem as fichas das frentes A e B. **Nenhuma é de arte**: nesta região, nenhuma casa publica endereço de diretor de arte ou lead de personagem nas páginas que abri; o que existe publicado é gente de RH/talento, fundador e contato de imprensa.
+
+**O QUE A VARREDURA DEU, medido, para ninguém repetir:**
+- **Veias rodadas:** `/connect` do Teamtailor em ~100 domínios nórdicos e 80 da Oceania/Ásia (prefixos `careers.`, `jobs.`, `career.`, `jobb.`, `karriar.` etc.); `/people` e o bloco *Contact* das páginas de vaga em 289 sites Teamtailor já conhecidos; páginas de equipe/contato e **sitemaps de notícias e press releases** (o bloco *"Press Contact"* no pé do release) de 533 domínios da região (censo Wikidata + listas próprias). **A Oceania não usa Teamtailor** (zero em 80 domínios); o que rendeu lá foi o press release.
+- **ACHADO QUE O `pessoas.csv` NÃO MOSTRA (dedupe só pela caixa):** em **28/09** saíram cartas para `katherine@hazelight.se` (Hazelight), `sebastian.marcus@arrowheadgs.com` (Arrowhead) e `jael.melzer@resolutiongames.com` (Resolution Games), **nenhuma no `pessoas.csv`**. A da Jael **quicou (550 5.1.1, endereço não existe)**. Por isso Hazelight e Arrowhead ficaram fora, e a Natalie (abaixo) é a **segunda e última** da Resolution.
+- **Fora por trava:** Snowprint (a Sofia Broberger **recusou** a candidatura em 18/09 pelo ponto de realocação, e o Vini respondeu); MindArk (a Madeleine **escreveu** em 11/09 e o Vini respondeu em 14/09: pessoa que respondeu); Lightheart (recusa de 15/09); Gigglebug (a casa se declara *"go-to provider of joy-inducing 2D animation"*: 2D puro; a Sanni Vainio ficou fora por isso); Pyjama Films (2D declarado); Metacore (*Merge Mansion*, 2D); Qvisten e Alt.VFX (teto de duas); Stunlock (Helena já no arquivo); Starbreeze (Marina já recebeu carta em 07/09); Fridthjof e sleetfleet (já receberam carta); Grace Studio (agência digital, não jogo); Black Kite (Londres, fora da frente); Redpipe (áudio); General Arcade (Singapura, só engenharia de porte).
+- **Endereços publicados mas velhos demais para gastar carta** (reserva, só se faltar): Rising Sun Pictures, `a***@rsp.com.au` (Anna Hodge, *Manager, Training and Education*, release de 05/2022); Digital Confectioners, `r***@digitalconfectioners.com` (Romy Gellen, contato do release de 09/2022, cargo não publicado).
+- **Coreia do Sul e Singapura: zero.** Shift Up, Pearl Abyss, Devsisters, Nexon, Krafton, Nimble Neuron, Dexter, Mintrocket, CRT Games, Mighty Bear, Virtuos, Sparky, Tiny Island: só caixa genérica (`ir@`, `recruit@`, `hello@`) ou nada. O Virtuos tem padrão de domínio conhecido, mas **montado é proibido**.
+
+### FICHA 1: **Vera Schwarz**, *Research & Talent Partner* da **TRIBAND** (*What the Golf?*, *What the Car?*; Copenhague, **DINAMARCA**) — `v***@triband.net` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.triband.net/connect` (**200, 54.806 bytes**): *"Contact us directly at v***@triband.net."*. `https://careers.triband.net/jobs/7957664-expert-game-designer` (**200, 76.762 bytes**): bloco *"Contact | Vera Schwarz | Research & Talent Partner"*. `https://triband.net/people` (**200**; ela na equipe). `https://triband.net/` (**200**). **NADA MONTADO.**
+- **POR QUE ELA:** é a pessoa de talento que a própria casa põe como contato das vagas; casa de ~50 pessoas.
+- **FRASE DA CASA, literal** (`triband.net`): *"Triband is a comedy games studio in Copenhagen, Denmark | Our goal is to make everyone laugh!"*
+- **OBRA DE PERSONAGEM:** *WHAT THE BAT?* (*"a silly game about going through life with baseball bats for hands"*) e *WHAT THE CAR?* (*"Absurd Racing Adventure about a car with legs!"*). 3D estilizado e cômico.
+- **FORA DOS EUA? SIM** (Dinamarca). **A frase de realocação ENTRA**, e a casa abre a porta: a vaga atual de *Expert Game Designer* diz *"we also consider people located outside of Denmark and provide financial (and moral!) support with visa application and relocation."*
+- **VAGA ABERTA:** só design (*Expert Game Designer*, *Game Director*). Nenhuma de arte hoje.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (triband OR vera@triband.net)` → carta genérica ao `hello@` (06/09, só resposta automática) e o recibo da candidatura de 06/09 assinado por ela pelo relé do Teamtailor. **Nenhuma recusa, nenhuma resposta humana.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) as duas vagas de arte anteriores (*Senior Game Artist* 8220733 e *Senior 3D Artist* 8450633) diziam *"not offering relocation for this one"* e eram de generalista/ambiente; a carta deve pedir a vaga de personagem futura, citando o apoio a visto da vaga atual; (2) RH/talento, não arte.
+
+### FICHA 2: **Natalie Mellin**, *Head of People & Culture* da **RESOLUTION GAMES** (*Demeo x Dungeons & Dragons: Battlemarked*; Estocolmo, **SUÉCIA**) — `n***@resolutiongames.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://jobs.resolutiongames.com/connect` (**200, 73.702 bytes**): *"please use the below stated contact details; Resolution Games n***@resolutiongames.com"*. `https://jobs.resolutiongames.com/` (**200, 158.890 bytes**). Cargo: `https://www.webwire.com/ViewPressRel.asp?aId=281883` (**200**; release da casa: *"Natalie Mellin is Resolution Games's new Head of People & Culture"*). **NADA MONTADO.**
+- **POR QUE ELA:** chefe de pessoas e do time executivo; é o único endereço de pessoa que a casa publica hoje, e o da recrutadora (Jael) **quicou** em 28/09.
+- **FRASE DA CASA, literal** (`jobs.resolutiongames.com`): *"we focus on craft, collaboration, and games that bring people together through play."*
+- **OBRA DE PERSONAGEM:** *Demeo x Dungeons & Dragons: Battlemarked* (heróis em miniatura 3D; *"Campaign III: Twilight's End"* acabou de sair, home de `resolutiongames.com`).
+- **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma (*"No matching jobs"*); o departamento *Game Art* existe no quadro. Connect do Vini feito em 07/09.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (resolutiongames OR "Resolution Games" OR Melzer)` → Welcome do Connect (Jael, 07/09), login, e **a carta de 28/09 à Jael que quicou (550 5.1.1)**, fora do `pessoas.csv`. **Nenhuma recusa.** A Natalie é a **segunda e última** da casa.
+- **RESSALVAS HONESTAS:** (1) o cargo vem de um release antigo (aquisição da Zero Index) republicado pela Webwire, não de página atual da casa; (2) o quique da Jael mostra rotatividade de caixa na casa: se esta também quicar, a porta é o Connect; (3) RH, não arte.
+
+### FICHA 3: **Annika Stråth Roslund**, *Publishing and Operations* da **BEYOND FRAMES ENTERTAINMENT** (dona da Cortopia, *GORN 2*; Estocolmo, **SUÉCIA**) — `a***@beyondframes.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://jobs.beyondframes.com/connect` (**200, 50.823 bytes**): *"Contact us directly at a***@beyondframes.com."*. `https://jobs.beyondframes.com/people/816110-annika` (**200, 40.645 bytes**; *"Annika | Publishing and Operations"*, *"Co-workers About 30"*). `https://beyondframes.com/about-us/` (**200**). Sobrenome e cargo: busca aberta (theorg.com, *"Chief Talent Officer"*; LinkedIn, *"Head of Studio at Cortopia"*). **NADA MONTADO.**
+- **POR QUE ELA:** grupo de ~30 pessoas; ela cuida de talento do grupo e chefia a Cortopia, o estúdio que faz os jogos.
+- **FRASE DA CASA, literal** (`beyondframes.com/about-us/`): *"At Beyond Frames, our vision is to be the global leader in developing immersive experiences."*
+- **OBRA DE PERSONAGEM:** *GORN 2* (Cortopia, com a Devolver: *"battle the five sons of the God of the Afterlife"*) e *Escaping Wonderland* (*"Join the ever-curious Molly"*), home de `beyondframes.com`.
+- **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma; candidatura no Connect (departamento Cortopia) enviada em 06/09.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (beyondframes OR "Beyond Frames" OR cortopia OR Roslund)` → Welcome (Ace St-Germain, 06/09) e logins. **Nenhuma recusa.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) a página dela só publica o primeiro nome; sobrenome e cargo vêm de agregador aberto; (2) casa de VR/XR.
+
+### FICHA 4: **Jussi Tähtinen**, *CEO & Co-Founder* da **NITRO GAMES** (*Warhammer 40,000: Boltgun Boom*, *NERF: Superblast*; Kotka e Helsinque, **FINLÂNDIA**) — `j***@nitrogames.com` — **ALTA (PUBLICADO pela casa em press release de 23/09/2026)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.nitrogames.com/warhammer-40000-boltgun-boom-released-on-mobile/` (**200**, 23/09/2026; contato no pé do release). `https://www.nitrogames.com/` (**200, 40.744 bytes**; citação assinada *"Jussi Tähtinen, CEO & Co-Founder"*). **NADA MONTADO.**
+- **POR QUE ELE:** cofundador e CEO de uma casa média; o endereço dele é o que a casa põe no release da semana passada.
+- **FRASE DA CASA, literal** (`nitrogames.com`): *"We design engaging action and shooter games without platform limitations."*
+- **OBRA DE PERSONAGEM:** *Warhammer 40,000: Boltgun Boom* (lançado no mobile em 23/09/2026, com a Space Marine da licença Warhammer).
+- **FORA DOS EUA? SIM** (Finlândia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida nesta rodada (a página *Careers* existe).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (nitrogames OR "Nitro Games" OR jussi@nitrogames.com)` → a carta genérica ao `info@` (06/09) e o follow-up (08/09). **Nenhuma resposta, nenhuma recusa.** Repositório: zero pessoa da casa.
+- **RESSALVAS HONESTAS:** (1) CEO de empresa listada em bolsa: pode não ler; a carta pede que ele repasse ao time de arte; (2) é casa de shooter, e o forte do Vini é personagem estilizado.
+
+### FICHA 5: **Mario Wynands**, *CEO e cofundador* da **PIKPOK** (*Into the Dead*, *Rival Stars*; Wellington, **NOVA ZELÂNDIA**, e Colômbia) — `m***@pikpok.com` — **ALTA (PUBLICADO pela casa em press release)**
+
+- **URLs abertas por mim nesta rodada:** `https://pikpok.com/news/four-letters-app-now-available-app-store-google-play/` (**200**; release de 20/03/2015 com *"Mario Wynands | m***@pikpok.com"*). `https://pikpok.com/about-us/` (**200, 31.300 bytes**). Cargo atual: busca aberta (LinkedIn *"Chief Executive Officer at PikPok"*; entrevista na Newstalk ZB em 09/2026 como *"CEO and co-founder"*). **NADA MONTADO.**
+- **POR QUE ELE:** fundador que continua no comando da maior casa de jogos da Nova Zelândia; não há recrutador com endereço publicado.
+- **FRASE DA CASA, literal** (`pikpok.com/about-us/`): *"Founded in Wellington, 1997, PikPok is New Zealand's longest running studio."*
+- **OBRA DE PERSONAGEM:** a série *Into the Dead* (*"Best known for the critically acclaimed Into the Dead® series"*).
+- **FORA DOS EUA? SIM** (Nova Zelândia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** o quadro Workable da casa estava vazio na última leitura do repositório.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (pikpok OR "Karah Sutton")` → **`{}`**; `to:pikpok.com` → nada. Repositório: zero pessoa da casa. **Casa inédita na caixa.**
+- **RESSALVAS HONESTAS:** (1) **o endereço vem de um release de 2015**: ele segue CEO, mas a caixa pode ter mudado; (2) casa de 200 pessoas: a carta pede direção para o time de arte.
+
+### FICHA 6: **Georgia Kinninmont**, *Senior Manager, Marketing* da **FLYING BARK PRODUCTIONS** (Studio 100; *Stranger Things: Tales From '85*; Sydney, **AUSTRÁLIA**, Los Angeles e Madri) — `g***@flyingbark.com.au` — **ALTA (PUBLICADO pela casa em press release)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.flyingbark.com.au/news/zac-power-leaps-from-page-to-screen-in-new-australian-animated-feature-film` (**200**, 14/10/2025): *"For interview requests, please contact: | Georgia Kinninmont | g***@flyingbark.com.au"*. `https://www.flyingbark.com.au/news/meet-the-sydney-studio-behind-avatar-aang-the-last-airbender` (**200**, 22/07/2026; *"Written By Georgia Kinninmont"*). `https://www.flyingbark.com.au/` (**200**). Cargo: busca aberta (*"Senior Manager, Marketing at Flying Bark Productions"*). **NADA MONTADO.**
+- **POR QUE ELA:** a casa só publica o primeiro nome dos líderes (Head of CG incluso); ela é a única pessoa com endereço publicado, e é quem escreve as notícias da casa.
+- **FRASE DA CASA, literal** (release da casa): *"Flying Bark continues to grow its world class animation team across CG, 2D and CG/2D hybrid productions."*
+- **OBRA DE PERSONAGEM:** *Stranger Things: Tales From '85* (Netflix, **CGI**, temporada 2 em 17/09/2026; Eleven, Mike, Will, Dustin, Lucas e Max).
+- **FORA DOS EUA? SIM** (Austrália). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida nesta rodada (*"OPENINGS - SYDNEY & MADRID"* no menu).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (flyingbark OR "Flying Bark" OR Kinninmont)` → a carta genérica ao `enquiries@` (26/08) e o follow-up (02/09); **a Miranda respondeu em 03/09 que passou o portfólio ao time de recrutamento**, o Vini agradeceu em 07/09 e ela fechou em 08/09. **Nenhuma recusa.** A Georgia é a **primeira pessoa com nome** da casa (o `enquiries@` é caixa).
+- **RESSALVAS HONESTAS:** (1) marketing, não arte nem recrutamento; (2) **a carta não pode soar como cobrança da Miranda**: tem de ser outra porta (personagem 3D para as séries CGI), dizendo que o portfólio já chegou ao recrutamento em setembro; (3) a casa faz muito 2D também.
+
+### FICHA 7: **Emily Newbould**, *Executive Producer* da **FIN VFX** (FIN Design + Effects; *M3GAN*, *The Creator*; Sydney e Gold Coast, **AUSTRÁLIA**) — `e***@findesign.com.au` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.findesign.com.au/contact-tvc` (**200**): *"Advertising | Contacts | Emily Newbould | Executive Producer | e***@findesign.com.au"*. `https://www.findesign.com.au/` (**200, 49.099 bytes**). **NADA MONTADO.**
+- **POR QUE ELA:** a casa só publica caixas (`film@`, `tvc@`, `careers@`) e duas pessoas; ela é a de cargo mais alto.
+- **FRASE DA CASA, literal** (`findesign.com.au`): *"Established in 2001, FIN is home to Australia's most highly awarded, close-knit team of VFX artists, designers and producers."*
+- **OBRA DE PERSONAGEM:** *M3GAN* e *Megan 2* (Blumhouse) na lista de projetos, e o *Creatures Reel* da home.
+- **FORA DOS EUA? SIM** (Austrália). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida nesta rodada; o perfil no portal *Get Into FIN* existe desde 02/09.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (findesign OR "FIN Design" OR Newbould)` → a carta genérica ao `careers@` (02/09, resposta automática mandando ao portal) e a verificação do portal. **Nenhuma recusa.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) ela é produtora da área de **publicidade**, não de cinema; a carta pede que ela aponte a pessoa certa; (2) o forte da casa é VFX fotorreal.
+
+### FICHA 8: **Eli Hodapp**, *Chief Marketing Officer* da **HALFBRICK STUDIOS** (*Fruit Ninja*, *Jetpack Joyride Racing*; Brisbane, **AUSTRÁLIA**) — `e***@halfbrick.com` — **ALTA (PUBLICADO pela casa em press release)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.halfbrick.com/news/jetpack-joyride-racing-press-release` (**200**, 13/11/2025): *"Press Contact | Eli Hodapp, Chief Marketing Officer | Halfbrick Studios | e***@halfbrick.com"*. `https://www.halfbrick.com/about` (**200, 30.145 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** executivo da casa com endereço publicado e cargo escrito pela própria casa; ninguém de arte ou recrutamento publica endereço.
+- **FRASE DA CASA, literal** (`halfbrick.com/about`): *"proving that a little dev down under has the world class skills needed to make a big splash on the global market."*
+- **OBRA DE PERSONAGEM:** *Jetpack Joyride Racing* (mini-série e jogo, 11/2025) e *Dan The Man*.
+- **FORA DOS EUA? SIM** (Austrália). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** a *Expression of Interest* mundial da casa está na leva da caixinha (29/09, reCAPTCHA); conferir se já saiu antes da carta.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (halfbrick OR Hodapp)` → **nada**; `to:halfbrick.com` → nada. Repositório: só a porta EOI na leva de hoje. **Casa inédita na caixa.**
+- **RESSALVAS HONESTAS:** (1) marketing, não arte; (2) parte do catálogo é 2D (*Fruit Ninja* clássico); a carta fala do 3D de *Jetpack Joyride Racing*.
