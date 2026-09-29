@@ -20136,3 +20136,101 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** nenhuma hoje; o Connect do Vini foi criado hoje às 00h40.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (adhocla OR "AdHoc Studio" OR adhocstudio OR Fieldhouse)` → só o Welcome (29/09) e o login. **Nenhuma recusa.** Repositório: só o Connect de hoje. **Primeira pessoa da casa.**
 - **RESSALVAS HONESTAS:** (1) casa nos EUA; (2) não conferi o pipeline de arte de *Dispatch* (o visual lembra série animada); a carta deve falar de personagem e narrativa, sem afirmar que o jogo é 3D; (3) sem vaga aberta.
+
+## RODADA 29/09 noite, frente B (Joe): EUROPA CONTINENTAL (França, Alemanha, Holanda, Bélgica, Espanha, Portugal, Itália, Polônia, Tchéquia e Áustria). **Oito fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** França ×4, Polônia ×2, Bélgica, Tchéquia. Emails completos fora do repositório (repositório público); aqui vão mascarados
+
+**Placar: 8 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Nenhuma das oito casas recusou o Vini, nenhuma pessoa delas respondeu, e nenhuma escreveu que só contrata local (conferido no `processados.csv`, no `enviados.csv`, no `pessoas.csv` e na caixa, por domínio e por nome). Nenhuma repete as vinte casas que já saíram hoje. Todas FORA dos EUA: **a frase de realocação ENTRA em todas**: *"I am ready to move for the role, and I would need visa sponsorship."*
+
+**O QUE A VARREDURA DEU, medido, para ninguém repetir:**
+- **Veia que rendeu (reaproveitada com outra pergunta):** páginas de equipe que publicam VÁRIOS endereços, em casas cuja primeira pessoa levou carta e **não respondeu**. A mesma página dá a segunda e última pessoa da casa, de preferência de arte: The Beast Makers, Kippik, Circus, Walking The Dog, Krutart. Mais o `/people` do Teamtailor relido (214 sites, 757 páginas): Ironbird (líder de arte) e OH BIBI (inédita).
+- **Casas que caíram no dedupe, para não reabrir:** Fool's Theory (**recusou** em 14/09 pela Wiktoria Myszkowska; o `/connect` publica o Łukasz Płandowski, mas a casa está fora), Kazoo (o Germain **respondeu hoje**, sem vaga), MADFINGER (veto escrito de patrocínio, 15/09), CI Games (a Lucie Piskova já respondeu em 10/09), Tactical Adventures (recusa do Armand, 17/09), nWave, Platige, Eallin, Mathematic e M.A.R.K.13 (já com duas pessoas), False Prophet (já tem ficha), PFX (o grupo já tem três pessoas em TELEVISOR e Human PFX).
+- **Reserva com endereço publicado, NÃO fichada (cargo fraco ou dúvida):** Starward Industries (`m***@starward.co`, CMO no catálogo PARP 2025; o LinkedIn dele hoje diz Unity, pode ter saído), 11 bit studios (`p***@11bitstudios.com`, contato de publishing no mesmo catálogo), Paladin Studios (Haia, `s***@paladinstudios.com`, Business Development), Pixel Maniacs (a casa já tem o Steve; o Ben é Founder & CEO), DLP Paris (Cedric Choppin, Partner/Director, segunda pessoa possível), Alchemiq (segunda pessoa possível, mas a casa levou follow-up hoje).
+- **Veias que morreram nesta rodada:** e-mail dentro do texto de vaga em 504 quadros de Greenhouse, Lever, Ashby, Recruitee, Workable, Breezy e SmartRecruiters (zero pessoa europeia); XML do Personio (102 quadros, zero); anúncios da AFJV (107, zero); busca por bio de Bluesky com cidade europeia e e-mail (3 perfis, nenhum em estúdio); catálogo PARP "The Game Industry of Poland 2025" (159 endereços, quase todos genéricos; saíram só as reservas acima); impressum e contato de ~200 domínios europeus (quase tudo `info@`).
+
+### FICHA 1: **Artur Perski**, *Art Team Lead* da **IRONBIRD CREATIONS** (*Phantom Hellcat*; Cracóvia, **POLÔNIA**) — `p***@ironbirdcreations.com` — **ALTA (PUBLICADO pela casa na página dele)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.ironbirdcreations.com/people/1525598-artur` (**200, 47.281 bytes**): *"Artur – Art Team Lead – Art Team"*, `mailto:` do endereço, *"I create graphics for games"*, e os colegas listados abaixo dele (Martyna, *Senior Character Artist*; Paweł, *Character Artist*; Oskar e Mateusz, *3D Artist*). `https://ironbirdcreations.com/` (**200**). `https://ironbirdcreations.com/phantom-hellcat/` (**200**). O sobrenome vem do próprio endereço publicado (a página só mostra o primeiro nome). **NADA MONTADO.**
+- **POR QUE ELE:** casa de **26 pessoas** (número da própria página); pelo BRIEF, em casa pequena quem decide é arte. Ele é o **chefe do time de arte** e o time de personagem responde a ele. A casa tem uma pessoa já escrita (Martyna Muszyńska, *Senior Character Artist*, carta de 28/09, **sem resposta**); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (página de carreiras da casa): *"a development studio that focuses on producing action-adventure games with a unique art style and emphasis on gameplay mechanics."*
+- **OBRA DE PERSONAGEM:** *Phantom Hellcat*, slasher-plataforma com a heroína **Jolene** (*"Jolene must master her mother's craft ... She must use magic masks"*), mistura de 2D e 3D em cada fase.
+- **FORA DOS EUA? SIM** (Polônia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma de arte hoje. O Vini se candidatou a *3D Artist* em 07/09 (recibo, sem resposta).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (ironbirdcreations OR ironbird OR perski OR muszynska)` → o recibo da candidatura (07/09) e a carta à Martyna (28/09, uma mensagem só). **Nenhuma recusa, nenhuma resposta humana.** Repositório: `processados.csv` registra a candidatura e a carta de 25/09 (fila) à Martyna; `pessoas.csv`, zero linha da casa.
+- **RESSALVAS HONESTAS:** (1) sobrenome deduzido do endereço publicado, não impresso por extenso; (2) a carta à Martyna saiu ontem: a carta a ele deve citar outra coisa (liderança de arte, não o perfil dela); (3) o jogo mistura 2D e 3D, e a carta não deve afirmar que é todo em 3D.
+
+### FICHA 2: **Tom Lassota**, *Studio Head* da **BEFFIO** (arte de co-desenvolvimento, *High on Life*; Poznań, **POLÔNIA**, trabalho remoto na UE) — `t***@beffio.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.beffio.com/connect` (**200, 49.533 bytes**): *"Contact us directly at t***@beffio.com"* e *"sending an email to t***@beffio.com"*. `https://careers.beffio.com/jobs` (**200**): *Senior Character Artist Unity3D Europe, Remote / Permanent* e *Senior Character Concept Artist (Remote/Permanent) [European Union]* **abertas hoje**. `https://beffio.com/` (**200, 27.467 bytes**). **Cargo:** assinatura dele nos recibos da casa na caixa do Vini (06/09 e 09/09): *"Tom Lassota / Studio Head / beffio.com"*. **NADA MONTADO.**
+- **POR QUE ELE:** é o chefe do estúdio e o **único endereço de pessoa** que a casa publica; os recibos das três candidaturas de personagem do Vini saíram no nome dele, então a requisição passa por ele.
+- **FRASE DA CASA, literal** (`beffio.com`): *"We build the images players remember."* e *"Co-development game art studio"*.
+- **OBRA DE PERSONAGEM:** *High on Life* e *High on Life 2* (Squanch Games), listados na home como *"Shipped titles carrying Beffio art"*; também *The Medium* (Bloober Team). A casa lista *"Character Art: Character Design, Stylized & Realistic, Rigging-ready"*.
+- **FORA DOS EUA? SIM** (Polônia). **A frase de realocação ENTRA** (as vagas são remotas na UE; a frase de patrocínio segue sendo a verdade).
+- **VAGA ABERTA:** *Senior Character Artist Unity3D Europe* (o Vini já se candidatou em 06/09, recibo sem resposta).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (beffio OR lassota)` → só recibos, logins do Connect e o Welcome do Łukasz Hoffmann. **Nenhuma recusa, nenhuma resposta humana, nenhuma carta a pessoa.** Repositório: três candidaturas em `enviados.csv`; `pessoas.csv`, zero.
+- **RESSALVAS HONESTAS:** (1) as vagas pedem trabalho remoto de dentro da UE; a carta diz a verdade sobre visto; (2) a casa é de serviço (co-desenvolvimento), então o gancho é a entrega de personagem para cliente, não IP própria.
+
+### FICHA 3: **Tristan Cordeboeuf**, *Creature Specialist* da **THE BEAST MAKERS** (criaturas e personagens para cinema e jogos; Lattes, Montpellier, **FRANÇA**) — `t***@thebeastmakers.com` — **ALTA (PUBLICADO pela casa, que autoriza o contato individual)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.thebeastmakers.com/` (**200, 1.354.827 bytes**): bloco *WHO WE ARE* com três cartões, *"Tristan Cordeboeuf / Creature Specialist"* com `mailto:` e ArtStation; e no fim *"You can also contact us individually with emails above."* **NADA MONTADO.**
+- **POR QUE ELE:** é o especialista de criatura e personagem de uma casa de três sócios; colega de ofício responde colega de ofício. A casa tem uma pessoa já escrita (Christophe Petit, fundador e CTO, carta de 21/09, **sem resposta**); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (home): *"WE ARE DEDICATED TO DELIVERING EXCELLENCE ON YOUR PROJECT"* e *"OUR FOCUS IS TO LINK THE QUALITY AND THE PRODUCTIVITY."*; serviço listado: *"Characters&Creatures Modeling&Texture&Shading LookDev"*.
+- **OBRA DE PERSONAGEM:** *"Nix : Star Wars Outlaws"* (a criatura Nix, destaque da home).
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida uma a uma; a casa tem página *Jobs*.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (thebeastmakers OR "Beast Makers" OR cordeboeuf)` → só a carta ao Christophe (21/09, uma mensagem). **Nenhuma recusa, nenhuma resposta.** Repositório: a linha do Christophe em `pessoas.csv`; o endereço dele, zero.
+- **RESSALVAS HONESTAS:** (1) casa pequena, contratação por projeto; (2) o cartão diz só *Creature Specialist*, sem dizer se ele decide contratação: o pedido é de direção e indicação.
+
+### FICHA 4: **Thomas Poulain**, *Partner, Artistic director* do **STUDIO KIPPIK** (animação 2D e 3D; Paris, **FRANÇA**) — `t***@kippik.fr` — **ALTA (PUBLICADO pela casa na página de equipe)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.kippik.fr/about-us` (**200**): *"Thomas / Poulain / Partner / Artistic director"* com `mailto:`, ao lado dos outros dois sócios. `https://www.kippik.fr/` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** é o **diretor artístico** e um dos três sócios; a lista de ofícios da casa inclui *Character design, Sculpting, Texturing / Shading*. A casa tem uma pessoa já escrita (Nicolas Fuminier, carta de 17/09, **sem resposta**); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (`/about-us`): *"Driven by meticulous and ultra-creative animation, Kippik works hand in hand with clients and collaborators to take people on a journey to a handcrafted magical universe."*
+- **OBRA DE PERSONAGEM:** *"A Fairy's Tale on Madison"* (Van Cleef & Arpels, 3D), filme de fada da home.
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma publicada (`jobs@` genérico).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (kippik OR fuminier OR anaelle)` → só a carta ao Nicolas (17/09). **Nenhuma recusa, nenhuma resposta.**
+- **RESSALVAS HONESTAS:** (1) casa de filmes curtos de marca de luxo, não de série nem de jogo; (2) a mesma página publica a Anaëlle Moreau (*Head of animation*); escolhi o diretor artístico, e ela fica fora pela trava de duas por casa.
+
+### FICHA 5: **Marion Cassoré**, *HR Business Partner* da **OH BIBI** (jogos mobile, *Ratchet & Clank: Ranger Rumble*; Paris, **FRANÇA**) — `m***@ohbibi.com` — **ALTA (PUBLICADO pela casa na página dela)**
+
+- **URLs abertas por mim nesta rodada:** `https://jobs.ohbibi.com/people/3644956-marion-cassore` (**200**): título *"Marion Cassoré - HR Business Partner - OH BIBI"* com `mailto:`. `https://jobs.ohbibi.com/` (**200**). `https://www.ohbibi.com/` (**200, 571.136 bytes**). **NADA MONTADO.**
+- **POR QUE ELA:** casa **INÉDITA** para a campanha inteira (zero carta, zero formulário, zero pessoa). É o único endereço de pessoa que a casa publica; em casa média sem página de arte, o RH é a porta.
+- **FRASE DA CASA, literal** (`ohbibi.com`): *"We craft hit games that are loved and shared all over the world."*; e no site de carreiras: *"OH BIBI wants to create unique game experiences that are loved and enjoyed by millions of players worldwide."*
+- **OBRA DE PERSONAGEM:** *Ratchet & Clank: Ranger Rumble*, *"Developed in collaboration with PlayStation Studios™ and Insomniac Games"* (home).
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não achei vaga de arte no quadro hoje.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (ohbibi OR "OH BIBI" OR cassore)` → **`{}`**. Repositório: só a sondagem de slug de 21/09 (Flatchr, "404 sem site de carreira"). **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) RH, não arte; (2) estúdio mobile: a carta fala de personagem estilizado de marca, não de AAA.
+
+### FICHA 6: **Julien Villanueva**, *CEO / Co-owner* da **CIRCUS** (VFX e animação; Paris e Avignon, **FRANÇA**) — `j***@circus.fr` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://circus.fr/contact/` (**200**): *"Julien Villanueva / CEO / Co-owner / j***@circus.fr"*, ao lado do Jerome Bacquet (COO) e do Loic Etienne (Head of studio, Avignon). `https://circus.fr/` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** casa de **mais de 70 pessoas** (número da home); ele é o CEO e sócio. A casa tem uma pessoa já escrita (Loic Etienne, carta de 07/09, **sem resposta**; a caixa geral também ficou calada); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (home): *"Circus is a VFX and Animation studio based in the heart of Paris."* e *"the studio has developped its experience in cinema, animated series, commercials, theme parks and documentaries."*
+- **OBRA DE PERSONAGEM:** *LEGO Friends: The Next Chapter* e *Earthworm Jim* (séries, nos posts recentes da home).
+- **FORA DOS EUA? SIM** (França). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** o Vini já mandou a espontânea pelo formulário da casa em 07/09 (Modeling / 3D Artist).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (circus.fr OR villanueva OR "loic etienne")` → a carta à caixa geral (26/08, follow-up 02/09) e a carta ao Loic (07/09). **Nenhuma recusa, nenhuma resposta.**
+- **RESSALVAS HONESTAS:** (1) CEO de casa de 70 pessoas pode repassar ao RH; (2) a carta deve citar a candidatura de 07/09 para não parecer duplicada.
+
+### FICHA 7: **Eric Goossens**, *Producer* e cofundador da **WALKING THE DOG** (longas de animação; Bruxelas e Genk, **BÉLGICA**) — `e***@walkingthedog.be` — **ALTA (PUBLICADO pela casa na página About)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.walkingthedog.be/about-us` (**200**): seção *People*, *"Eric Goossens / Producer"* com `mailto:`, e *"Eric Goossens founded in 1999 together with Anton Roebben the animation production company Walking The Dog."* `https://www.walkingthedog.be/` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** um dos dois fundadores e o produtor que monta as equipes dos longas. A casa tem uma pessoa já escrita (Anton Roebben, o Toon, carta de 04/09, **sem resposta**); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (home): *"Walking The Dog, Brussels based, is a production company focussing on high-end animated filmprojects."* e *"Production design, pipelining and execution of 2D and/or 3D animation projects, within their own fully equipped animation studio's."*
+- **OBRA DE PERSONAGEM:** *Fox and Hare Save the Forest* (2024, lançado) e *Outfoxed!* (Paul Bolger, em produção, 2027).
+- **FORA DOS EUA? SIM** (Bélgica). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida; a casa tem página *Jobs*.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (walkingthedog OR "Walking the Dog" OR goossens)` → a carta ao `hr@` (26/08, só resposta automática) e a carta ao Toon (04/09). **Nenhuma recusa humana, nenhuma resposta.**
+- **RESSALVAS HONESTAS:** (1) produtor, não arte; (2) a casa faz 2D e 3D; a carta não deve afirmar que *Outfoxed!* é 3D.
+
+### FICHA 8: **Martin Jůza**, *CEO* e fundador da **KRUTART** (séries, filmes e fulldome; Praga, **TCHÉQUIA**) — `m***@krutart.cz` — **ALTA (PUBLICADO pela casa na página de equipe)**
+
+- **URLs abertas por mim nesta rodada:** `https://krutart.cz/krutart-team/` (**200**): bloco *Founders*, *"Martin Jůza / CEO"* com `mailto:`; o rodapé do site escreve *"Film: m***@krutart.cz"*. `https://krutart.cz/` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** fundador, CEO e o contato que a própria casa dá para **filme**. A casa tem uma pessoa já escrita (Alžběta Müllerová, *Art director of animation*, carta de 21/09, **sem resposta**); ele é a **segunda e última**.
+- **FRASE DA CASA, literal** (home): *"We create colourful worlds of animated series, films and other experiences while building on the rich Czech animation history."*
+- **OBRA DE PERSONAGEM:** *Kosmix 2: Underwater* (série animada, 2022) e *Little Eve: Among Dinosaurs* (curta, em desenvolvimento).
+- **FORA DOS EUA? SIM** (Tchéquia). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida (`jobs@` genérico).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (krutart ...)` → a carta à Alžběta (21/09) e o follow-up de 7 dias a ela **hoje (29/09, 11h22 UTC)**. **Nenhuma recusa, nenhuma resposta.**
+- **RESSALVAS HONESTAS:** (1) a casa levou follow-up hoje: a carta a ele pode esperar um ou dois dias; (2) boa parte do trabalho é fulldome para planetário; (3) CEO, não arte.
