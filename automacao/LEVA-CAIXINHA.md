@@ -53,6 +53,15 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | Super Spline Studios | Formulário de candidatura | Google Form só abre com conta Google | n | https://forms.gle/Hy2DSc11gBzGb9hJ8 |
 | Hasbro / Wizards of the Coast | Principal Character Artist (req 68744377699, Durham NC), achada por busca 28/09, inédita no dedupe | o site careers.hasbro.com não abre a partir da nuvem (falha de TLS do próprio servidor); abre no navegador da leva | s | https://careers.hasbro.com/careers/job/68744377699 |
 
+Portas travadas por outro motivo, reconferidas em 29/09 à noite (20h Recife), nada enviado:
+- Infold/Papergames: o portal só oferece "Continue with Google" e "Continue with LinkedIn", não existe conta por email. Fica com o login do Vini.
+- LIGHT VFX e CayPlay: o Google Form abre um aviso "Sign in to continue, you must be signed in" antes de aceitar resposta. Fica com o login Google do Vini.
+- Super Spline: abre sem login, mas as opções de cargo são só Animator, Technical Animator e Other (sem personagem), casa pequena. Fica fora.
+- PlaySide: o "Continue with email" do Employment Hero abre o desafio de imagem do reCAPTCHA antes da conta. Caixa visível, fica na leva.
+- Hasbro (Eightfold): o servidor recusa o handshake TLS também pela nuvem com o truque de Host (careers.hasbro.com e hasbro.eightfold.ai). Sessão fechada. Só o navegador da leva.
+- Grimlore: o litterbox voltou a funcionar (link 72h devolveu %PDF-); o comando `node apply/site/grimlore.js ENVIAR` gera o link novo no envio. A caixa reCAPTCHA continua visível, então segue na leva.
+- Funko: confirmado agora, o Send Application abre o desafio de imagem do reCAPTCHA ("Select all squares with bicycles"), formulário todo preenchido. Fica na leva.
+
 Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador local e pelas APIs, sem Kernel:
 - Caixa "sou humano" VISÍVEL de novo: BambooHR x7 (reCAPTCHA 304x78), Screen Burn e Secret Mode (BreatheHR, o clique do enviar abre o desafio; preenchimento testado, nada enviado), Sans Strings, VFX Legion, Palomar/Mediawan, Menhir (hCaptcha), Outplay, Stellar, Obsidian, Asterman, Grimlore (304x150, preenchida e lida de volta). Squeeze e Framestore Melbourne (Recruitee, hCaptcha no envio, como no Ten Square e no Framestore Blender). Crafty Apes: desafio do reCAPTCHA no envio (medido 20/09).
 - Keywords EOI: ENVIADA E CONFIRMADA em 29/09 pela nuvem (sem desafio desta vez), saiu da leva.
