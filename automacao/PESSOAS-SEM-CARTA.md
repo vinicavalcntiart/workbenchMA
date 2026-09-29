@@ -20234,3 +20234,101 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** não conferida (`jobs@` genérico).
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (krutart ...)` → a carta à Alžběta (21/09) e o follow-up de 7 dias a ela **hoje (29/09, 11h22 UTC)**. **Nenhuma recusa, nenhuma resposta.**
 - **RESSALVAS HONESTAS:** (1) a casa levou follow-up hoje: a carta a ele pode esperar um ou dois dias; (2) boa parte do trabalho é fulldome para planetário; (3) CEO, não arte.
+
+## RODADA 29/09 noite, frente A (Joe): CANADÁ + REINO UNIDO + IRLANDA. **Oito fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Reino Unido ×5 (uma casa também na Noruega), Canadá ×2, Irlanda ×1. Emails completos fora do repositório (repositório público); aqui vão mascarados
+
+**Placar: 8 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** Nenhuma das oito casas recusou o Vini, nenhuma pessoa delas respondeu, e nenhuma escreveu que só contrata local (conferido no `processados.csv`, no `enviados.csv`, no `pessoas.csv` e na caixa, por domínio e por nome). Nenhuma repete as vinte casas que já saíram hoje. **Seis das oito são SEGUNDA E ÚLTIMA pessoa da casa** (a primeira levou carta entre 07/09 e 15/09 e não respondeu); duas são casas inéditas para pessoa (Red Rover e ForthStar).
+
+**O QUE A VARREDURA DEU, medido, para ninguém repetir (a região está quase seca para pessoa nova):**
+- **Veia que rendeu:** (1) remetentes de boas-vindas do Teamtailor na caixa do Vini cruzados com o `/connect` de cada casa: Red Rover e ForthStar publicam o contato no *"Contact us directly at"* e nunca tinham virado ficha; (2) a página de equipe/contato das casas do Reino Unido, Canadá e Irlanda que têm **só uma** pessoa no `pessoas.csv` (136 domínios lidos em 12 caminhos): saíram as segundas pessoas de Revelator, Engine House, Myth, Snafu, Artjail e Pixomondo.
+- **Veias que morreram nesta rodada:** diretório Studio Hog (Canadá, Reino Unido, Irlanda: 393 casas, 276 domínios ainda não contatados, lidos em 14 caminhos, mais sonda de Teamtailor): zero pessoa nova útil (Fort York, Alter Ego, Taylor James, 1920 já estavam descartadas por disciplina). Censo Wikidata do Reino Unido, Canadá e Irlanda (469 domínios nunca contatados): só indie 2D ou endereço de imprensa. `/press`, `/presskit`, `/the-team`, `/crew` em 1.594 domínios: nada novo na região. E-mail dentro do texto de vaga em 472 quadros (Greenhouse, Lever, Ashby, Recruitee, Pinpoint, Personio) e 135 do BambooHR: zero pessoa da região. Bio do Bluesky com os 380 nomes do Studio Hog: 106 perfis, todos já no arquivo ou sem endereço (a Gaby Wilde da Media Molecule já estava). Interactive Ontario e UK Games Map: sem diretório aberto.
+- **Casas que caíram no dedupe, para não reabrir:** Radical Forge (carta ao Alex Whittle em 25/09, fora do `pessoas.csv`), Raw Power Games (carta ao Craig em 28/09), Digital CyberCherries (o Ulrich **respondeu** em 22/09 e 23/09; o Joe Henson, *Creative Gameplay & Marketing Director*, fica fora por isso), Saltstone (a Jess Campbell, *Art Director*, já está no arquivo), The Sequence Group, Ntropic, Blinkink, Telegael, Realtime, Folks, Amiqus (teto de duas).
+- **Descartadas por trava:** Big Jump Entertainment (A.J. Cote, *COO* e artista, `a***@bigjumpent.com`, segunda pessoa possível; **fora porque a casa se define "2D hybrid animation production facility"**), Black Kite Studios (`j***@blackkitestudios.com` no `/privacy-policy`, sem sobrenome e sem cargo publicados pela casa; VFX de publicidade e clipe), Snowed In (Travis Gibson é *Business Development* e a própria home manda candidato para a Johanne, que já está no arquivo), Territory Studio (só `dataprotection@`), Strange Beast (já julgada casa errada em 06/09).
+
+### FICHA 1: **Laura D. García**, *Head of Studio e Head of People* da **RED ROVER INTERACTIVE** (*Enginefall*; Newcastle, **REINO UNIDO**, e Oslo, Noruega) — `l***@redroverinteractive.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://careers.redroverinteractive.com/connect` (**200, 55.121 bytes**): *"Contact us directly at l***@redroverinteractive.com"* e *"you can reach us by sending an email to l***@redroverinteractive.com"*. `https://www.redroverinteractive.com/` (**200, 537.747 bytes**). Sobrenome e cargo: o remetente do Welcome do Connect na caixa do Vini (20/09) é `l***-d-garcia@` do relé `teamtailor-mail.com` da casa, e a busca aberta (theorg.com, *"Laura D. García ... Head of Studio and Head of People at Red Rover Interactive"*) dá o cargo. **NADA MONTADO.**
+- **POR QUE ELA:** casa nova (fundada em 2023), pequena; ela é ao mesmo tempo chefe do estúdio e de pessoas, ou seja quem decide contratação e quem cuida de visto. É o único endereço de pessoa que a casa publica.
+- **FRASE DA CASA, literal** (`redroverinteractive.com`): *"We create multiplayer survival experiences built around social interaction, player agency, and emergent drama, where players themselves become the most engaging form of content."* e *"We primarily work together onsite at our Oslo and Newcastle offices"*.
+- **OBRA DE PERSONAGEM:** *Enginefall* (sobrevivência PvP nos *Titan Trains*, jogadores "Freerailers"; demo no Steam Next Fest de junho de 2026).
+- **FORA DOS EUA? SIM** (Reino Unido e Noruega). **A frase de realocação ENTRA:** *"I am ready to move for the role, and I would need visa sponsorship."*
+- **VAGA ABERTA:** nenhuma hoje (a página de vagas está vazia). O Vini está no Connect da casa, departamento ART, desde 20/09.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (redroverinteractive OR "Red Rover" OR Enginefall)` → só o Welcome automático do Connect (20/09). **Nenhuma carta, nenhuma recusa.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) o cargo vem de agregador aberto, não de página da casa; (2) ela mora em Oslo: se a frente C (Nórdicos) também achar a casa, vale esta ficha e não outra; (3) RH e gestão, não arte; (4) sem vaga aberta.
+
+### FICHA 2: **Anna Tappenden**, *People, Culture and Workplace Manager* da **FORTHSTAR** (Manchester, **REINO UNIDO**) — `a***@forthstar.com` — **ALTA (PUBLICADO pela casa no site de carreiras; cargo publicado na home)**
+
+- **URLs abertas por mim nesta rodada:** `https://forthstar.teamtailor.com/connect` (**200, 92.012 bytes**): *"Contact us directly at a***@forthstar.com"*. `https://forthstar.com/` (**200, 32.810 bytes**): *"Anna Tappenden People, Culture and Workplace Manager"* na lista do time. **NADA MONTADO.**
+- **POR QUE ELA:** a casa publica o time inteiro e ninguém de arte com endereço; ela é a dona do recrutamento e o nome que assinou o Welcome do Connect do Vini (20/09).
+- **FRASE DA CASA, literal** (`forthstar.com`): *"ForthStar's core belief is that the best games are made by highly accomplished teams with freedom for creative innovation."* e *"our mission: to make great games that millions of people love to play every day for years."*
+- **OBRA DE PERSONAGEM:** **nenhuma anunciada.** A casa é dos fundadores da Playdemic (*Golf Clash*), com US$ 10 milhões da Griffin Gaming Partners; o primeiro jogo ainda não foi revelado.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma hoje. O Vini está no Connect da casa desde 20/09 (departamento ART, cardápio com *3D Artist* e *Senior Artist*).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (forthstar OR tappenden)` → só o Welcome automático (20/09). **Nenhuma carta, nenhuma recusa.** Repositório: zero pessoa da casa. **Primeira pessoa da casa.**
+- **RESSALVAS HONESTAS:** (1) **sem obra de personagem publicada**: o gancho da carta tem de ser a frase da casa, não um jogo; (2) jogo móvel F2P de massa, e a imprensa de lançamento (2024) diz que a casa usa ferramentas de IA; (3) RH, não arte.
+
+### FICHA 3: **Andrew Phillips**, *Co-Founder, Creator e Producer* da **REVELATOR STUDIO** (Dublin, **IRLANDA**) — `a***@revelatorstudio.com` — **ALTA (PUBLICADO pela casa na home)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.revelatorstudio.com/` (**200, 211.660 bytes**): *"Andrew Phillips CO-FOUNDER | CREATOR | PRODUCER"* e, no bloco de contato, *"w***@revelatorstudio.com a***@revelatorstudio.com"*. **NADA MONTADO.**
+- **POR QUE ELE:** casa de dois sócios; o Wayne Thornley levou carta em 11/09 e follow-up em 19/09, **sem resposta**. O Andrew é o outro sócio, e é ele quem escreve personagem: *"he creates kids' entertainment, delivering character-driven stories packed with epic adventures, absurd comedy, and heart-melting cuteness"*. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"Tell a story that moves. We're a creator-led studio bringing finely-crafted stories to life through quality animation that truly serves you and your audience."*
+- **OBRA DE PERSONAGEM:** a da casa ainda é IP em desenvolvimento; o crédito publicado na home é dos sócios (*Adventures in Zambezia*, longa em CG que o Wayne co-escreveu e dirigiu; o Andrew escreveu para Cartoon Network, Nickelodeon, Netflix e Disney XD).
+- **FORA DOS EUA? SIM** (Irlanda). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma publicada.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (revelatorstudio OR Revelator)` → a carta ao Wayne (11/09) e o follow-up (19/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) casa pequena e nova, sem produção em andamento publicada; (2) a carta não pode repetir o gancho da carta do Wayne (Zambezia/Seal Team): usar a frase do Andrew sobre personagem.
+
+### FICHA 4: **Tash Price**, *"The Story & Strategy Powerhouse"* (dirige e produz) da **ENGINE HOUSE** (Redruth, Cornualha, **REINO UNIDO**) — `t***@engine-house.co.uk` — **ALTA (PUBLICADO pela casa na home e na página do time)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.engine-house.co.uk/` (**200, 182.260 bytes**): *"Got a project you want to chat to us about? Send it over to Tash who will be in touch right away!"* e o endereço em texto. `https://www.engine-house.co.uk/team` (**200, 136.277 bytes**): *"Tash Price The Story & Strategy Powerhouse. Tash is the one holding it all together, shaping the stories, directing and producing projects"*. **NADA MONTADO.**
+- **POR QUE ELA:** casa de três pessoas; a carta de 11/09 foi ao Jason Robbins justamente porque a Tash estava fora, e ele não respondeu (follow-up em 19/09). Ela dirige e produz, e é quem a casa põe na porta. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"Small Size, BIG surprise! An entirely new approach for how an animation studio can work."* e *"We combine creative direction with cutting-edge real-time pipelines to deliver animation, VFX and immersive experiences"*.
+- **OBRA DE PERSONAGEM:** *Stached* (curta) e as cinemáticas de *Assassin's Creed Chronicles*, ambos na lista da home.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma publicada.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (engine-house.co.uk OR "Engine House")` → a carta ao Jason (11/09) e o follow-up (19/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) coletivo pequeno, trabalha por projeto; (2) a própria página diz que ela quer *"make indie animation thrive"*: a porta real é freelance por projeto, não vaga.
+
+### FICHA 5: **Izzy Hill**, *New Business* da **MYTH STUDIO** (Londres, **REINO UNIDO**) — `i***@mythstudio.co.uk` — **ALTA (PUBLICADO pela casa no rodapé de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.mythstudio.co.uk/` (**200, 96.147 bytes**) e o bloco de contato de todas as páginas: *"New Business Izzy Hill i***@mythstudio.co.uk General hello@..."*. **NADA MONTADO.**
+- **POR QUE ELA:** o fundador (James Finlay) levou carta em 15/09 e não respondeu. Ela é a única outra pessoa com endereço publicado. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"Make your audiences feel something."* e *"Currently Hiring | 3D Animators & Artists"* (faixa na home, hoje).
+- **OBRA DE PERSONAGEM:** *A Modern Fairytale* (curta) e *Forever Young* (filme de marca da IMG), na lista de projetos em destaque.
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** a home anuncia *"Currently Hiring | 3D Animators & Artists"*, com *Enquire now* por email.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (mythstudio OR "Myth Studio")` → só a carta ao James (15/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) cargo comercial (*New Business*), não arte; (2) a casa faz muito 2D e motion; o gancho é o *"3D Animators & Artists"* da faixa.
+
+### FICHA 6: **Paul Schleicher**, *Co-founder/EP* da **SNAFU PICTURES** (Londres, **REINO UNIDO**) — `p***@snafu-pictures.com` — **ALTA (PUBLICADO pela casa na página About/Team)**
+
+- **URLs abertas por mim nesta rodada:** `https://snafu-pictures.com/about` (**200, 39.659 bytes**): *"Paul Schleicher Co-founder/EP p***@snafu-pictures.com"* e *"Paul has worked in visual effects and animation across television, film, advertising and games"*. `https://snafu-pictures.com/family` (**200, 27.994 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** dos dois sócios, o Dan Dixon levou carta em 15/09 e não respondeu. O Paul é o outro fundador e vem de VFX e animação. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"we strive to create must-see cinema for audiences worldwide, with a high level of artistry and crafted storytelling."*
+- **OBRA DE PERSONAGEM:** *Bad Dinosaurs* (série animada, *"Now Streaming on Netflix 24 x 7'"*), mais *I, Chihuahua* (longa em financiamento).
+- **FORA DOS EUA? SIM** (Reino Unido). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma publicada.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (snafu-pictures OR "Snafu Pictures")` → só a carta ao Dan (15/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) a About diz *"Please note that we do not accept unsolicited submissions at this time"* (o contexto é roteiro e projeto, mas vale saber); (2) produtora que terceiriza animação: a porta é indicação para o estúdio parceiro.
+
+### FICHA 7: **Steve Mottershead**, *Chief Creative Officer / Founding Partner* da **ARTJAIL** (Toronto, **CANADÁ**, e Nova York) — `s***@artjail.com` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.artjail.com/contact` (**200**): na coluna TO, *"CHIEF CREATIVE OFFICER / FOUNDING PARTNER STEVE MOTTERSHEAD S***@ARTJAIL.COM ... 1621 DUNDAS ST WEST TORONTO"*. `https://www.artjail.com/about` e `https://www.artjail.com/work` (**200**). **NADA MONTADO.**
+- **POR QUE ELE:** o Gene Dreitser (*Head of 3D*) levou carta em 07/09 e não respondeu. O Steve é o fundador e chefe criativo dos dois escritórios. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"We partner with directors and agencies to deliver high-end 2D & 3D visual effects, CGI, design, color, and finishing."*
+- **OBRA DE PERSONAGEM:** fraca. A casa faz VFX de publicidade; o que mais perto chega na `/work` é *"DOMINOS | STRANGER THINGS"* e *"DOMINOS | SQUID GAME"* (dir. Ted Melfi).
+- **FORA DOS EUA? SIM** (Toronto). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma publicada.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (artjail OR Mottershead)` → a carta genérica de 02/09 a `jobs.toronto@`, o follow-up (07/09) e a carta ao Gene (07/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) casa de VFX publicitário, não de personagem; (2) ele assina nos dois escritórios e pode estar em Nova York.
+
+### FICHA 8: **Joe Finlayson**, *Head of Business Development, PXO Clara* da **PIXOMONDO (PXO)** (Sony Pictures; Toronto, **CANADÁ**, e outros escritórios) — `j***@pixomondo.com` — **ALTA (PUBLICADO pela casa na home e na página de carreiras)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.pixomondo.com/` (**200, 448.866 bytes**) e `https://www.pixomondo.com/careers` (**200**): *"j***@pixomondo.com Joe Finlayson | PXO Clara | Head of Business Development"*, ao lado da Naomi Foakes. **NADA MONTADO.**
+- **POR QUE ELE:** casa grande (Sony). A Naomi Foakes (*Head of Business Development, North America*) levou carta em 09/09 e follow-up em 18/09, sem resposta. Ele é o único outro nome com endereço que a casa publica. **Segunda e última pessoa da casa.**
+- **FRASE DA CASA, literal:** *"We're not just making visual effects - we're redefining how stories are made."* e *"An Oscar, BAFTA, and Emmy-winning force in creative innovation, proudly part of the Sony Pictures family."*
+- **OBRA DE PERSONAGEM:** **não aberta nesta rodada.** O site está em reconstrução e não lista obras; conferir numa página oficial antes da carta.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** a `/careers` manda para o quadro de vagas (Workable, com a parede de rede já registrada em 09/09).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (pixomondo OR PXO)` → a carta à Naomi (09/09) e o follow-up (18/09). **Nenhuma resposta, nenhuma recusa.**
+- **RESSALVAS HONESTAS:** (1) **é a mais fraca das oito**: cargo comercial numa divisão de produção virtual (PXO Clara), longe de personagem; (2) sem obra de personagem conferida; (3) a carta deve pedir encaminhamento ao time de arte ou ao recrutamento.
