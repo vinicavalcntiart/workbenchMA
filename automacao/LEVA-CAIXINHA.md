@@ -10,7 +10,6 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | StoryToys (Dublin) | 3D Art Lead | Workable (caixinha no envio) | s | https://apply.workable.com/j/9EB4FA9382 |
 | 28/09 | Obsidian Entertainment | General Application | JazzHR | n | https://obsidian.applytojob.com/apply/21Ud1IGKcj |
 | 28/09 | Framestore | Expression of Interest 2026 - Melbourne | recruitee | n | https://framestore.recruitee.com/o/expression-of-interest-2026-melbourne |
-| 28/09 | Keywords Studios (Austrália) | General Expressions of Interest | SmartRecruiters (DataDome, "Slide right") | n | https://jobs.smartrecruiters.com/keywordsstudios/744000113045937 |
 | 28/09 | Crafty Apes | General Expression of Interest | Dayforce | n | https://jobs.dayforcehcm.com/en-US/craftyapes/CANDIDATEPORTAL |
 | 28/09 | Palomar Animation (Mediawan) | Candidatura | site | n | https://mediawankidsandfamily.com/jobs |
 | 28/09 | Lighthouse Games | Senior Technical Material/Shader Artist | Workable | n | https://apply.workable.com/lighthousegames/j/E2DF52F9E8/ |
@@ -41,6 +40,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 | 28/09 | Triotech | Candidatures spontanées | BambooHR | n | https://triotech.bamboohr.com/careers/29 |
 | 28/09 | Epic Games | Senior Technical Artist 6139762004 (Fortnite Events, Cary NC) | Greenhouse, Cloudflare 'Verify you are human' visivel | n | https://job-boards.greenhouse.io/epicgames/jobs/6139762004 |
 | 28/09 | Epic Games | Senior Technical Artist 6143677004 (multiplos locais EUA) | Greenhouse, Cloudflare 'Verify you are human' visivel | n | https://job-boards.greenhouse.io/epicgames/jobs/6143677004 |
+| 29/09 | Blind Squirrel Games | General Application (8f652c14) | Rippling (Turnstile "Verify you are human" visivel no Apply) | n | https://ats.rippling.com/blind-squirrel-games/jobs/8f652c14-6e37-45a4-b242-67e942d24ef1/apply?step=application |
 
 
 ## Precisam da conta do Vini (não é caixinha, é login dele)
@@ -55,7 +55,7 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador local e pelas APIs, sem Kernel:
 - Caixa "sou humano" VISÍVEL de novo: BambooHR x7 (reCAPTCHA 304x78), Screen Burn e Secret Mode (BreatheHR, o clique do enviar abre o desafio; preenchimento testado, nada enviado), Sans Strings, VFX Legion, Palomar/Mediawan, Menhir (hCaptcha), Outplay, Stellar, Obsidian, Asterman, Grimlore (304x150, preenchida e lida de volta). Squeeze e Framestore Melbourne (Recruitee, hCaptcha no envio, como no Ten Square e no Framestore Blender). Crafty Apes: desafio do reCAPTCHA no envio (medido 20/09).
-- Keywords EOI: vaga viva, mas o navegador local cai no bloqueio do DataDome ("Access is temporarily restricted", sem desafio para clicar), então só a nuvem abre; a caixa "Slide right" fica para o Vini.
+- Keywords EOI: ENVIADA E CONFIRMADA em 29/09 pela nuvem (sem desafio desta vez), saiu da leva.
 - Workable (Lighthouse x3, Velan, Nexus, Homa, One Of Us, StoryToys, Sawhorse): vaga viva pela API do jobs.workable.com. Crazy Maple General Application não aparece nesse índice; a página do apply.workable.com devolveu 429 (limite do Workable para o nosso IP), então essas linhas não tiveram a caixinha vista hoje.
 - Saíram (já enviadas em 28/09, recibo em enviados.csv): NBCUniversal Lead Technical Artist, Ubisoft Annecy, Ubisoft Montreal x2, Ubisoft Paris, Ubisoft Reflections. Saiu também Ten Square Games Future opportunities (mesma casa do Art Lead enviado em 28/09).
 - Não estão mais na leva por já terem saído: Barnstorm (BambooHR 114, enviada em 23/09), Framestore Montreal, Jungler (recusou em 22/09), Stirling, Relic, NEOWIZ/NOUGH, Skydance.
