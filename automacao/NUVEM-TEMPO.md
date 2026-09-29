@@ -3,22 +3,21 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 662.4 min, cerca de US$ 5.30
+**Total medido:** 662.9 min, cerca de US$ 5.30
 
 ## Por dia
 
 | dia (UTC) | minutos | US$ estimado |
 |---|---|---|
-| 2026-09-26 | 567.0 | 4.54 |
+| 2026-09-26 | 566.3 | 4.53 |
 | 2026-09-27 | 44.8 | 0.36 |
 | 2026-09-28 | 28.5 | 0.23 |
-| 2026-09-29 | 22.1 | 0.18 |
+| 2026-09-29 | 23.4 | 0.19 |
 
 ## Por sessao
 
 | aberta em (UTC) | fechada em (UTC) | nome | sem tela | minutos |
 |---|---|---|---|---|
-| 2026-09-26 02:19 | 2026-09-26 02:22 | - | nao | 0.7 |
 | 2026-09-26 02:20 | 2026-09-26 02:22 | - | nao | 0.9 |
 | 2026-09-26 04:16 | 2026-09-27 04:21 | - | nao | 4.8 |
 | 2026-09-26 06:17 | 2026-09-28 13:26 | - | nao | 560.6 |
@@ -38,3 +37,4 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-29 01:52 | 2026-09-29 01:52 | sr-OutpostVFX-744000151005988-cfx-artist | nao | 0.2 |
 | 2026-09-29 01:52 | 2026-09-29 01:52 | sr-probe | nao | 0.1 |
 | 2026-09-29 02:09 | 2026-09-29 02:12 | - | nao | 3.3 |
+| 2026-09-29 10:16 | 2026-09-29 10:17 | - | sim | 1.3 |
