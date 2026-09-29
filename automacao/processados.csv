@@ -3722,3 +3722,6 @@ NADA FOI ENVIADO nesta rodada. As operacoes seguem encerradas ate quarta por ord
 2026-09-29T00:58Z,Bandai Namco Mobile,Open Application Barcelona,1199319,falhou,"Nuvem (Kernel): CV subiu (fileHandler 200) mas o backend deles devolve getCandidates 400 (401 interno), igual 07/09 e 09/09; porta quebrada do lado deles, nao enviada"
 2026-09-29T00:58Z,Fortiche Production,Candidatura espontanea,-,falhou,"Nuvem (Kernel): 3 etapas preenchidas com CV, sem caixa visivel; CF7 devolveu status spam (reCAPTCHA invisivel). POST paralelo para api.beetween.com/WeaselWeb/api/jobs/application deu 204, sem recibo no Gmail; sem prova, nao contada. Nao reenviada para nao duplicar"
 2026-09-29T00:58Z,CrustLab,Backend Developer (porta de entrada),-,falhou,"Nuvem (Kernel): o seletor de pais do telefone so tem Polonia e o form responde 'Polish phone number required'; exige numero polones, nao enviada"
+2026-09-29,Netflix Animation,careers@jobs.netflix.com,1a0ea773079a835c,rejeicao,Lead Modeler e Lead Surfacing Artist
+2026-09-29,Riot Games,no-reply@riotgames.com,1a0ea83df62d24c9,rejeicao,Technical Art Manager Sydney
+2026-09-29,Caixa 01h,recibos,1a0eaaade82fc191,recibo,Wicked Workshop + Rocket Science x2 + Sphere + Pixelberry + Improbable + 4 Teamtailor Connect confirmados; zero resposta humana
