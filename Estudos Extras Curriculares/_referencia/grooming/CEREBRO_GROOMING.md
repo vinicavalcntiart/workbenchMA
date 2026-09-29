@@ -506,6 +506,11 @@ Observado em teste headless, nao em fonte externa:
      surface_uv_coordinate). O codigo so remove atributos anonimos
      (store_result_geometry). Observado em producao (Vini, 5.2.0): Set
      Selection funciona; o que apagava atributos era o Delete, nao o tool.
+     Tool "Apagar Conjunto" (Named Attribute Boolean → **Delete Geometry**,
+     Spline ou Point, All → Output), testado no 5.2.0 com interface
+     (scripts/t_node_tool_delete_520_gui.py): 8 guias → 4, e todos os
+     atributos (os dois conjuntos e um float) continuaram. Nao reproduziu o
+     "Delete apaga atributos" relatado; pendente ver o grafo do Vini.
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
