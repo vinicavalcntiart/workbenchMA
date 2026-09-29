@@ -14,7 +14,7 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 
 ## O que se busca
 - **Cargo:** personagem 3D (modelagem, escultura, textura e look dev de personagem, vis dev). Grooming é diferencial, vaga só de groom é plano B.
-- **Nunca:** ambiente, props, veículos, hard surface.
+- **Nunca:** ambiente, props, veículos, hard surface. Concept art e character design 2D também ficam fora em casa que não é grande (Goodname 29/09 saiu por engano: concept 2D em casa pequena).
 - **Estúdio grande** (lista no CLAUDE.md): aplica também em 2D, vis dev, direção de arte e vizinhos de personagem (rig, CFX, look dev, textura), em qualquer senioridade, mesmo com veto escrito de residência.
 - **Porta de entrada:** vaga de outra função numa casa sem vaga de personagem vale, pedindo encaminhamento no campo livre.
 - **Onde:** América do Norte, Europa (com Reino Unido, Irlanda e Nórdicos), Oceania, Coreia do Sul e Singapura. Fora: Japão, Índia, Brasil, resto da Ásia. Remoto primeiro, presencial com visto vale.
