@@ -44,6 +44,11 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 4. Campo livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." Campo numérico: só o número.
 5. Taxa por hora de freelance ou contrato (Vini deixou o maestro decidir, 29/09): USD 40/h, NZD 55/h, EUR 35/h, GBP 32/h, CAD 50/h, AUD 55/h. Diária = 8 x a hora.
 
+## Pergunta obrigatória sem opção que sirva (Vini, 29/09)
+*"Lembre que vc pode marcar uma opção e se tiver qualquer espaço de texto é só explicar. Isso é mt comum"*
+
+Campo obrigatório de local, relocação ou elegibilidade cujas opções não descrevem o Vini não trava o envio: marque a opção mais próxima da verdade (a que fala do local da vaga ou de relocação) e explique em qualquer campo de texto do formulário (carta, "anything else", observações): "I live in Olinda and I am ready to relocate to <cidade>; I would need visa sponsorship." Nunca marcar "eligible to work" nem "not open to relocation".
+
 ## Cartas e emails para estúdios
 - **Nunca oferecer teste de arte (Vini, 28/09):** *"Teste de arte é coisa de Junior ou pra quem n tem projetos o suficiente no portfólio."* Nenhuma carta, resposta ou campo de formulário oferece art test por iniciativa própria. O portfólio fala por ele: **47 projetos, mais de 60 personagens, 10 anos de experiência**. Se um estúdio mandar teste, vira aviso ao Vini para ele decidir.
 - **Carta fria para pessoa** (Joe): assunto fixo `Senior Character Artist · Wingfeather Saga credit · stylized + grooming`, sem emoji no assunto; abre com o nome; uma frase de por que aquela pessoa, com a frase da casa entre aspas; teto de 250 palavras; frase do portfólio ("My portfolio holds **47 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it"); fecho pedindo direção; fora dos EUA, "I am ready to move for the role, and I would need visa sponsorship."; rodapé Portfolio / LinkedIn / Site. Detalhes em `BRIEF-JOE.md`.
