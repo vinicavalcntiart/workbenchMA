@@ -42,6 +42,7 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 2. Sem faixa, casa grande: USD 100.000 · CAD 95.000 · GBP 50.000 · EUR 55.000 · AUD 110.000.
 3. Sem faixa, casa pequena ou média, ou cargo abaixo de sênior: USD 85.000 · CAD 80.000 · GBP 42.000 · EUR 45.000 · AUD 95.000.
 4. Campo livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." Campo numérico: só o número.
+5. Taxa por hora de freelance ou contrato (Vini deixou o maestro decidir, 29/09): USD 40/h, NZD 55/h, EUR 35/h, GBP 32/h, CAD 50/h, AUD 55/h. Diária = 8 x a hora.
 
 ## Cartas e emails para estúdios
 - **Nunca oferecer teste de arte (Vini, 28/09):** *"Teste de arte é coisa de Junior ou pra quem n tem projetos o suficiente no portfólio."* Nenhuma carta, resposta ou campo de formulário oferece art test por iniciativa própria. O portfólio fala por ele: **47 projetos, mais de 60 personagens, 10 anos de experiência**. Se um estúdio mandar teste, vira aviso ao Vini para ele decidir.
