@@ -72,7 +72,21 @@ fi
 # e ruido que todo mundo aprende a ignorar.
 ASSUNTO_FIXO='Senior Character Artist · Wingfeather Saga credit · stylized + grooming'
 FECHO_FIXO='just point me and I will take it there'
-CARTAS=$(cd "$DIRR" && git status --porcelain -- 'drafts/*.md' 2>/dev/null | awk '{print $NF}')
+#
+# CORRIGIDO EM 29/09: numa MESCLAGEM o git status lista todo rascunho que vem do outro
+# branch como novo, e o gate reprovava os 190 de uma vez. Isso e exatamente o "reprovar o
+# passado" que o paragrafo acima diz nao querer, e gate que grita errado e gate que todo
+# mundo aprende a pular com --no-verify, que mata tambem a trava de privacidade. Durante
+# uma mesclagem, entao, so interessa o que foi editado A MAO ao resolver conflito: o que
+# difere dos DOIS lados. Rascunho que veio limpo do outro branch difere do HEAD mas nao do
+# MERGE_HEAD, e fica de fora.
+if (cd "$DIRR" && git rev-parse -q --verify MERGE_HEAD >/dev/null 2>&1); then
+  (cd "$DIRR" && git diff --name-only HEAD -- 'drafts/*.md') | sort > "$TMP/cartas_head"
+  (cd "$DIRR" && git diff --name-only MERGE_HEAD -- 'drafts/*.md') | sort > "$TMP/cartas_merge"
+  CARTAS=$(comm -12 "$TMP/cartas_head" "$TMP/cartas_merge")
+else
+  CARTAS=$(cd "$DIRR" && git status --porcelain -- 'drafts/*.md' 2>/dev/null | awk '{print $NF}')
+fi
 PROBLEMAS=""
 for c in $CARTAS; do
   f="$DIRR/$c"
