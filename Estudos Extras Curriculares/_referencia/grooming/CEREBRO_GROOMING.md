@@ -522,6 +522,12 @@ Observado em teste headless, nao em fonte externa:
      conjunto nao precisa de Set Selection [img/126_tool_apagar_corrigido].
      Observado em producao (Vini, 5.2.0): no viewport dele as guias pareciam
      continuar e os atributos sumiam.
+     **Identifier duplicado (testado no 5.2.0 com interface,
+     scripts/t_node_tool_duplicado_520_gui.py):** dois grupos com o mesmo
+     Identifier (ex. "Tool" e a copia "Tool.001") → so um vira operador, o
+     mais antigo; o menu roda o grafo velho e a correcao na copia nao tem
+     efeito. Options mostra "Duplicates". Ao duplicar um tool, troque o
+     Identifier.
   2. Conjuntos em objetos Curves separados, mesmo scalp: no objeto
      principal, Object Info (Relative) de cada conjunto → Join Geometry com a
      propria geometria → Interpolate. Testado em bpy 5.2.2: 53 + 107 guias em
