@@ -14,7 +14,7 @@ PRECO_HORA = 0.48
 chave = os.environ['KERNEL_API_KEY']
 itens, off = [], 0
 while True:
-    req = urllib.request.Request(f'https://api.onkernel.com/browsers?status=all&limit=100&offset={off}',
+    req = urllib.request.Request(f'https://api.onkernel.com/browsers?status=all&limit=20&offset={off}',
                                  headers={'Authorization': 'Bearer ' + chave})
     d = json.load(urllib.request.urlopen(req, timeout=60))
     lote = d if isinstance(d, list) else d.get('items', [])
