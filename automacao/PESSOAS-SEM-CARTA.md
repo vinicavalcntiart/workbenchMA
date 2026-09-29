@@ -20124,7 +20124,7 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? SIM** (Suécia). **A frase de realocação ENTRA.**
 - **VAGA ABERTA:** *Senior Character Concept Artist* (Malmö, presencial). Casa grande, então vizinho de personagem vale.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (sharkmob OR havik) -from:teamtailor-mail.com` → **`{}`**. Repositório: só o Connect de 07/09. **Primeira pessoa da casa.**
-- **RESSALVAS HONESTAS:** (1) **a busca aberta diz que ela saiu de licença-maternidade e que a casa buscava substituta por um ano**; se o email voltar resposta automática, a porta é o Connect; (2) cargo só pela busca.
+- **RESSALVAS HONESTAS:** (1) **a busca aberta diz que ela saiu de licença parental e que a casa buscava quem cobrisse por cerca de um ano**; se o email voltar resposta automática, a porta é o Connect; (2) cargo só pela busca.
 
 ### FICHA 7: **Tom Fieldhouse**, recrutamento e RH da **ADHOC STUDIO** (*Dispatch*; Los Angeles, **EUA**; ele trabalha do Reino Unido) — `t***@adhocla.com` — **ALTA (PUBLICADO pela casa no site de carreiras)**
 
@@ -20135,4 +20135,4 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **FORA DOS EUA? NÃO** (EUA). **Entra a frase de patrocínio, NÃO a de realocação.**
 - **VAGA ABERTA:** nenhuma hoje; o Connect do Vini foi criado hoje às 00h40.
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (adhocla OR "AdHoc Studio" OR adhocstudio OR Fieldhouse)` → só o Welcome (29/09) e o login. **Nenhuma recusa.** Repositório: só o Connect de hoje. **Primeira pessoa da casa.**
-- **RESSALVAS HONESTAS:** (1) casa nos EUA; (2) o visual de *Dispatch* é de animação 2D, então a carta deve falar do trabalho em personagem, não de 3D; (3) sem vaga aberta.
+- **RESSALVAS HONESTAS:** (1) casa nos EUA; (2) não conferi o pipeline de arte de *Dispatch* (o visual lembra série animada); a carta deve falar de personagem e narrativa, sem afirmar que o jogo é 3D; (3) sem vaga aberta.
