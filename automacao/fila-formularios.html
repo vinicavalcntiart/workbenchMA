@@ -1,0 +1,255 @@
+<title>Fila do Vini</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root{
+    --bg:#F5F4F1; --surface:#FFFFFF; --sunk:#EFEEEA;
+    --ink:#171A19; --muted:#66706D; --line:#DDDBD5;
+    --accent:#0E6360; --accent-soft:#DCEDEB;
+    --ok:#2B6B45; --ok-soft:#DDEEE2;
+    --warn:#8E5410; --warn-soft:#F5E7D3;
+    --shadow:0 1px 2px rgba(20,26,25,.06), 0 8px 24px -16px rgba(20,26,25,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121514; --surface:#1A1E1D; --sunk:#151918;
+      --ink:#EAEDEB; --muted:#98A29F; --line:#2A302E;
+      --accent:#5CCFC6; --accent-soft:#183330;
+      --ok:#78CE9A; --ok-soft:#16291F;
+      --warn:#E3A85F; --warn-soft:#2E2317;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -18px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121514; --surface:#1A1E1D; --sunk:#151918;
+    --ink:#EAEDEB; --muted:#98A29F; --line:#2A302E;
+    --accent:#5CCFC6; --accent-soft:#183330;
+    --ok:#78CE9A; --ok-soft:#16291F;
+    --warn:#E3A85F; --warn-soft:#2E2317;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -18px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.55;
+    padding-inline:20px; padding-block:32px 72px;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:28px}
+
+  h1,h2,h3,.ui{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+  h1{font-size:clamp(1.7rem,5vw,2.3rem); line-height:1.12; margin:0; letter-spacing:-.02em; text-wrap:balance}
+  .sub{color:var(--muted); font-size:1rem; margin:0; max-width:60ch}
+
+  .howto{
+    background:var(--sunk); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px; display:flex; flex-direction:column; gap:8px;
+  }
+  .howto p{margin:0; font-size:.95rem; color:var(--muted)}
+  .howto strong{color:var(--ink)}
+
+  .jump{display:flex; flex-wrap:wrap; gap:8px}
+  .jump a{
+    font-family:Archivo,sans-serif; font-size:.8rem; font-weight:600;
+    text-decoration:none; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:6px 12px;
+    background:var(--surface);
+  }
+  .jump a:hover{border-color:var(--accent); color:var(--accent)}
+  .jump a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  .job{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    box-shadow:var(--shadow); overflow:hidden; scroll-margin-top:16px;
+  }
+  .job > header{padding:18px 18px 14px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:8px}
+  .studio{font-family:Archivo,sans-serif; font-weight:700; font-size:1.18rem; letter-spacing:-.01em; margin:0}
+  .role{margin:0; color:var(--muted); font-size:.98rem}
+  .meta{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:2px}
+  .chip{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.72rem; font-weight:500;
+    letter-spacing:.03em; text-transform:uppercase;
+    padding:4px 8px; border-radius:5px; border:1px solid transparent; white-space:nowrap;
+  }
+  .chip.ok{background:var(--ok-soft); color:var(--ok); border-color:color-mix(in srgb,var(--ok) 30%, transparent)}
+  .chip.wall{background:var(--warn-soft); color:var(--warn); border-color:color-mix(in srgb,var(--warn) 30%, transparent)}
+  .chip.plain{background:var(--sunk); color:var(--muted); border-color:var(--line)}
+  .open{
+    font-family:Archivo,sans-serif; font-weight:600; font-size:.9rem;
+    color:var(--accent); text-decoration:none; align-self:flex-start;
+    border-bottom:1px solid color-mix(in srgb,var(--accent) 40%, transparent); padding-bottom:1px;
+  }
+  .open:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+
+  .fields{display:flex; flex-direction:column}
+  .field{border-top:1px solid var(--line); padding:14px 18px; display:flex; flex-direction:column; gap:8px}
+  .field:first-child{border-top:none}
+  .fhead{display:flex; gap:10px; align-items:baseline; justify-content:space-between}
+  .fname{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.78rem; color:var(--muted);
+    letter-spacing:.01em; word-break:break-word;
+  }
+  button.copy{
+    font-family:Archivo,sans-serif; font-size:.78rem; font-weight:600;
+    background:var(--sunk); color:var(--ink); border:1px solid var(--line);
+    border-radius:6px; padding:5px 11px; cursor:pointer; flex:none;
+  }
+  button.copy:hover{border-color:var(--accent); color:var(--accent)}
+  button.copy:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  button.copy[data-done="1"]{background:var(--ok-soft); color:var(--ok); border-color:color-mix(in srgb,var(--ok) 35%, transparent)}
+  .val{
+    margin:0; white-space:pre-wrap; font-size:.97rem; line-height:1.5;
+    max-height:15em; overflow:auto; overscroll-behavior:contain;
+  }
+  .val.short{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.9rem}
+  .note{margin:0; font-size:.86rem; color:var(--muted); font-style:italic}
+  .warnbox{
+    margin:0; padding:10px 12px; border-radius:8px;
+    background:var(--warn-soft); color:var(--warn);
+    font-size:.88rem; font-family:Archivo,sans-serif; font-weight:500;
+  }
+  .okbox{
+    margin:0; padding:10px 12px; border-radius:8px;
+    background:var(--ok-soft); color:var(--ok);
+    font-size:.88rem; font-family:Archivo,sans-serif; font-weight:500;
+  }
+  footer{color:var(--muted); font-size:.86rem; border-top:1px solid var(--line); padding-top:16px}
+  footer a{color:var(--accent)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <h1>Fila do Vini</h1>
+    <p class="sub">Você limpou nove das dez, todas de personagem. <strong>Sobrou uma.</strong>
+    As outras saíram daqui e estão carimbadas NÃO REAPLICAR no painel, com o recibo de cada uma.</p>
+  </header>
+
+  <div class="howto">
+    <p><strong>Como usar.</strong> Abra o link da vaga e, para cada campo, toque em <em>Copiar</em> e cole. Os textos longos já estão prontos e citam o anúncio daquele estúdio, não precisam de edição.</p>
+    <p><strong>Telefone e endereço não estão aqui de propósito.</strong> Eles moram só no seu documento privado do Drive, <em>CAMPANHA - dados pessoais dos formulários</em>. Copie de lá quando o campo pedir.</p>
+    <p><strong>A etiqueta de captcha diz por que a vaga está com você</strong> e não com a automação. Ela não foi enviada: conferi uma a uma contra o registro de envios antes de montar a página.</p>
+    <p><strong>Esta é a que mais aproveita o seu Houdini.</strong> O anúncio pede grooms para personagens humanos, criaturas peludas e personagens com pena, e nomeia o Houdini. É Paramount, o que aciona a regra 14 da campanha.</p>
+  </div>
+
+  <article class="job" id="grooming">
+    <header>
+      <h2 class="studio">Skydance Animation</h2>
+      <p class="role">Senior Grooming TD · Madri, Espanha, híbrido</p>
+      <div class="meta">
+        <span class="chip wall">hCaptcha de imagem</span>
+        <span class="chip plain">Lever</span>
+        <span class="chip ok">Paramount</span>
+      </div>
+      <a class="open" href="https://jobs.lever.co/skydance/9ad28cab-87cd-4235-ae9b-b4c53a3457e5/apply" target="_blank" rel="noopener">Abrir o formulário</a>
+    </header>
+    <div class="fields">
+      <div class="field">
+        <p class="okbox">Esta é a que mais aproveita o Houdini. O anúncio pede grooms para &quot;human characters, furry creatures, feathered characters&quot; e &quot;Strong knowledge of Houdini&quot;. É Paramount: a política de privacidade do próprio anúncio aponta para privacy.paramount.com, o que aciona a regra 14 da campanha.</p>
+        <p class="note">Ressalva honesta: o cargo é TD, mais técnico do que o seu dia a dia, e a lista pede &quot;5+ years in VFX or animation industries&quot; mais &quot;3+ years in the animation industry&quot;. Wingfeather cobre a segunda. CFX e simulação aparecem como &quot;a plus&quot;, não como requisito, então não é a disciplina que você não tem.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Resume/CV</span><button class="copy" data-t="Vini_Cavalcanti_CV.pdf">Copiar</button></div>
+        <p class="val short">Vini_Cavalcanti_CV.pdf</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Full name / Email</span><button class="copy" data-t="Vini Cavalcanti&#10;contact@vinicavalcanti.art">Copiar</button></div>
+        <p class="val short">Vini Cavalcanti
+contact@vinicavalcanti.art</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Current location</span><button class="copy" data-t="Olinda, Pernambuco, Brazil">Copiar</button></div>
+        <p class="val short">Olinda, Pernambuco, Brazil</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">LinkedIn / Portfolio</span><button class="copy" data-t="https://www.linkedin.com/in/vinicavalcnti/&#10;https://www.artstation.com/viniciuscavalcanti">Copiar</button></div>
+        <p class="val short">https://www.linkedin.com/in/vinicavalcnti/
+https://www.artstation.com/viniciuscavalcanti</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">How did you hear about this position?</span><button class="copy" data-t="Skydance Website">Copiar</button></div>
+        <p class="val short">Skydance Website</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Status de trabalho na Espanha</span><button class="copy" data-t="I am not an EU citizen and would need visa sponsorship to work in Spain.">Copiar</button></div>
+        <p class="val short">I am not an EU citizen and would need visa sponsorship to work in Spain.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Pretensão</span><button class="copy" data-t="Open to aligning with your band for the role; as a reference, around EUR 55,000 per year.">Copiar</button></div>
+        <p class="val short">Open to aligning with your band for the role; as a reference, around EUR 55,000 per year.</p>
+      </div>
+      <div class="field">
+        <div class="fhead"><span class="fname">Campo livre / carta</span><button class="copy" data-t="The posting asks for complex, artistically appealing hairstyles, grooms and surfacing for human characters, furry creatures and feathered characters, with strong knowledge of Houdini. Grooming hair and fur in Houdini is part of my normal asset pass, not a side skill I picked up for this application.&#10;&#10;On The Wingfeather Saga season 1 at Angel Studios I modeled and hand painted the season&#x27;s characters, which is animation work on a stylized show where the groom has to serve the design rather than fight it. For almost five years at E-Line Media I have taken Endstar&#x27;s hero characters from first sculpt to engine, and surfacing and look development sit inside that: PBR texturing, trim sheets and material work alongside the groom.&#10;&#10;I work inside established pipelines and I am comfortable contributing to departmental tools. I have been Senior for five years supporting other artists, and I founded and run my own character art school, so guidance and instruction are already part of the job for me.&#10;&#10;I want to relocate to Madrid and I am fully open to moving for the role. I am not an EU citizen and would need sponsorship.&#10;&#10;Portfolio: https://www.artstation.com/viniciuscavalcanti">Copiar</button></div>
+        <p class="val">The posting asks for complex, artistically appealing hairstyles, grooms and surfacing for human characters, furry creatures and feathered characters, with strong knowledge of Houdini. Grooming hair and fur in Houdini is part of my normal asset pass, not a side skill I picked up for this application.
+
+On The Wingfeather Saga season 1 at Angel Studios I modeled and hand painted the season&#x27;s characters, which is animation work on a stylized show where the groom has to serve the design rather than fight it. For almost five years at E-Line Media I have taken Endstar&#x27;s hero characters from first sculpt to engine, and surfacing and look development sit inside that: PBR texturing, trim sheets and material work alongside the groom.
+
+I work inside established pipelines and I am comfortable contributing to departmental tools. I have been Senior for five years supporting other artists, and I founded and run my own character art school, so guidance and instruction are already part of the job for me.
+
+I want to relocate to Madrid and I am fully open to moving for the role. I am not an EU citizen and would need sponsorship.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti</p>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p><strong>As oito que você já mandou</strong>, com o recibo de cada uma lido e carimbado no
+    painel: Behaviour (Senior 3D Character Artist, Dead by Daylight), Frontier (Experienced
+    Character Artist), Lighthouse Games (Lead Character Artist), Ubisoft Massive (Lead Character
+    Artist, The Division 2), Offworld Industries (3D Character Artist), People Can Fly, Avalanche
+    Studios (Lead Character Artist), TTK Games (Character Artist) e Valve (3D Character Artist).
+    A Fenris Creations foi enviada pela automação às 04h e o recibo chegou às 04h10. Dez
+    candidaturas de personagem e nenhuma de ambiente.</p>
+    <p><strong>Uma ressalva só, na People Can Fly:</strong> o recibo prova que uma candidatura
+    entrou, mas não diz qual requisição recebeu, e a casa tem duas entradas vivas no painel. Antes
+    de tocar nela de novo, abra o <em>Access My Application</em> do próprio recibo.</p>
+    <p><strong>A Fenris Creations saiu daqui porque foi ENVIADA</strong>, às 04h de hoje, e é a
+    primeira candidatura de personagem depois da regra que você escreveu. Três provas: o servidor
+    respondeu 302, a página final terminou em <code>/thanks</code> e a tela escreveu
+    <em>"Thanks. You have successfully registered your interest."</em> O que travava era um erro meu,
+    não uma parede deles: a pergunta de visto é booleana e os botões dela valem <code>true</code> e
+    <code>false</code>, não Yes e No, então a resposta obrigatória ia em branco. Corrigido.</p>
+    <p><strong>Fora desta lista e sem esforço nenhum:</strong> a <strong>Flaming Fowl Studios</strong>
+    (Lead 3D Artist, remoto de qualquer lugar do mundo) já está como rascunho pronto no seu Gmail.
+    É só disparar, e a porta é email, então não tem captcha.</p>
+    <p>Anúncios relidos na fonte oficial de cada ATS em 10/09 à noite. A única exceção é a
+    Lighthouse, cujo texto o Workable recusou a devolver hoje por limite de requisições contra
+    este IP; as frases dela vêm do registro de 07/09 e estão marcadas na própria vaga.</p>
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("button.copy");
+    if (!b) return;
+    var texto = b.getAttribute("data-t") || "";
+    var marcar = function () {
+      var antes = b.textContent;
+      b.textContent = "Copiado";
+      b.setAttribute("data-done", "1");
+      setTimeout(function () {
+        b.textContent = antes;
+        b.removeAttribute("data-done");
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(marcar, function () { manual(texto, marcar); });
+    } else {
+      manual(texto, marcar);
+    }
+  });
+  function manual(texto, ok) {
+    var ta = document.createElement("textarea");
+    ta.value = texto;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); ok(); } catch (err) { ta.remove(); return; }
+    ta.remove();
+  }
+</script>

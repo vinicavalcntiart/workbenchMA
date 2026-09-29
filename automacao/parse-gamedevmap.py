@@ -5,9 +5,35 @@ quais deles a campanha nunca contatou.
 Uso:
     python3 automacao/parse-gamedevmap.py <arquivo.html> [<arquivo2.html> ...]
 
-O gamedevmap bloqueia o proxy desta automação, então o fluxo é: o Vini abre
-https://www.gamedevmap.com/index.php?country=<Pais> no navegador, salva a
-página e joga aqui. Vale também country=Remote, que lista estúdios remote-first.
+CORRIGIDO EM 06/09: o gamedevmap NÃO bloqueia mais esta automação. O curl simples
+com user-agent de navegador responde 200 e devolve a página inteira, então o fluxo
+agora é direto, sem depender do Vini salvar HTML:
+
+    curl -s -A "Mozilla/5.0 Chrome/128" \
+      "https://www.gamedevmap.com/index.php?country=<Pais>" -o <Pais>.html
+
+Vale também country=Remote, que lista estúdios remote-first. A observação antiga,
+de que o site bloqueava o proxy, era do tempo em que a rede do ambiente era fechada.
+
+DUAS ARMADILHAS DESCOBERTAS EM 06/09, as duas depois de dar resultado errado.
+
+1. O SITE PAGINA EM 100 POR PAÍS. A URL simples acima devolve só os cem primeiros
+   estúdios em ordem alfabética, e o link para o resto fica escondido no rodapé.
+   Descobri porque a lista da Suécia terminava em "BulletHell Studios", ou seja,
+   parava na letra B. Para pegar tudo, siga as páginas até vir vazio:
+
+       https://www.gamedevmap.com/index.php?location=&country=<Pais>&state=&city=&query=&type=&start=101&count=100
+       ...&start=201&count=100
+
+   Qualquer país com mais de cem estúdios (Polônia, Espanha, Alemanha, Itália,
+   Bélgica, Suécia, Reino Unido) precisa da segunda página no mínimo.
+
+2. PÁGINA VAZIA DE ~2,6 KB NÃO É PAÍS SEM ESTÚDIO. É o firewall da GoDaddy
+   ("GoDaddy Security - Access Denied", Block ID BLACK02) recusando o IP desta
+   máquina por excesso de requisições. É intermitente e solta sozinho: basta
+   esperar de quinze a vinte segundos e repetir. Nunca conclua que um país não
+   tem estúdio a partir de uma resposta menor que 10 KB; confira o tamanho antes
+   de parsear.
 
 A saída vai para a saída padrão em CSV (nome,tipo,cidade,estado,pais,site,status)
 onde status é "NOVO" ou "ja contatado".

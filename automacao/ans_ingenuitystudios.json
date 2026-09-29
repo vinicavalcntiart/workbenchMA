@@ -1,0 +1,28 @@
+{
+  "url": "https://ingenuitystudios.pinpointhq.com/register-your-interest/new",
+  "cv": "Vini_Cavalcanti_CV.pdf",
+  "texto": {
+    "#job_seeker_form_job_seeker_first_name": "Vini",
+    "#job_seeker_form_job_seeker_last_name": "Cavalcanti",
+    "#job_seeker_form_job_seeker_email": "contact@vinicavalcanti.art",
+    "#phone-input": "__TEL__",
+    "#job_seeker_form_linkedin_url": "https://www.linkedin.com/in/vinicavalcnti/",
+    "#personal-summary": "I am registering my interest in character and creature work at Ingenuity Studios. Your film, television and music video work leans on CG characters that have to sit next to live action without being noticed, and character modelling, surfacing and grooming is the only discipline I have worked in.\n\nI am a senior 3D character artist with more than ten years on stylized characters and creatures. At Angel Studios I modelled and hand painted the season one characters of The Wingfeather Saga. For close to five years at E-Line Media I have built hero characters end to end on Endstar, from sculpt to engine. I came up through outsourcing at PUGA Studios, which taught me to match an established look exactly.\n\nI take a character all the way: high poly, sculpt, retopology, UV, bake, texture and look development, with grooming in Houdini as a support skill. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it: https://www.artstation.com/viniciuscavalcanti\n\nI do not hold work authorization in the United States, so I would need visa sponsorship. I am ready to move for the role.\n\nVini Cavalcanti"
+  },
+  "combos": [
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][location_ids][]\"]",
+      "rotulo": "Locations",
+      "valores": [
+        "Los Angeles, California"
+      ]
+    },
+    {
+      "sel": "[id=\"job_seeker_form[interest_options][department_ids][]\"]",
+      "rotulo": "Departments",
+      "valores": [
+        "Product"
+      ]
+    }
+  ]
+}

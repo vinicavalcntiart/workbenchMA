@@ -2,12 +2,14 @@
 
 Respostas prontas para os campos típicos de formulários de carreira.
 Copiar, colar, anexar CV + cover letter (PDFs) e enviar.
-REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês full-time.
+REGRAS: nunca citar o salário da E-Line (NDA); a pretensão é a POLÍTICA NOVA de 04/09, na
+seção de pretensão salarial mais abaixo. A faixa antiga de USD 3.840 por mês e USD 46.000 por
+ano está MORTA e não deve ser escrita em formulário nenhum.
 
 ## Dados básicos
 - Nome: Vini Cavalcanti
 - Email: contact@vinicavalcanti.art
-- Telefone: +55 81 97306 2286
+- Telefone: no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 - Portfólio: https://www.artstation.com/viniciuscavalcanti
 - LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
 - Site / escola: https://vinicavalcanti.com
@@ -17,11 +19,11 @@ REGRAS: nunca citar o salário da E-Line (NDA); pretensão é USD 3.840/mês ful
 - Localização / fuso: Based in Brazil (UTC-3); working remotely with a US team (Arizona) for almost five years
 - Formação: Game Art Specialist (PG Dip), Melies Sao Paulo; MA candidate in Creative Industries, Catholic University of Pernambuco; IELTS certified
 - Title (tratamento): Mr
-- Endereço (Address 1): Estrada do Bonsucesso, 209
+- Endereço (Address 1): no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 - Cidade (Town/City): Olinda
 - Estado (County/State): Pernambuco
 - País (Country): Brazil
-- CEP (Postcode/Zip): 53240-480
+- CEP (Postcode/Zip): no documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Não escrever aqui: este repositório é público
 
 ## Bio curta (aprox. 50 palavras)
 Senior 3D Character Artist with 10+ years in stylized characters. Modeled and hand-painted Season 1 characters on The Wingfeather Saga at Angel Studios. Almost five years at E-Line Media taking Endstar's hero characters from sculpt to engine. Houdini grooming as well. Portfolio: artstation.com/viniciuscavalcanti
@@ -45,15 +47,29 @@ Vini Cavalcanti
 {STUDIO}'s character work is the kind I want my name on. I follow the studio's projects and the craft bar is exactly where I operate: appealing stylized characters, built clean, delivered on schedule. I want to bring ten years of character experience to a team that treats characters as the center of the project.
 
 ## Experiência resumida (campo "describe your experience")
-Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Earlier outsourcing background at PUGA Studios delivering characters for international clients. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration.
+Senior 3D Character Artist with 10+ years across animation and games. Credits include The Wingfeather Saga (Angel Studios): modeled and hand-painted Season 1 characters; and Endstar (E-Line Media): hero characters from first sculpt to engine for almost five years. Three years at PUGA Studios before that, delivering characters for international clients, matching someone else’s art direction and turning revision rounds fast. Specialties: stylized modeling, hand-painted and PBR texturing, Houdini grooming, engine integration.
 
 ## Softwares
 ZBrush, Maya, Substance Painter, Houdini (grooming), Photoshop, Marmoset, Unreal and Unity (engine integration)
 
-## Pretensão salarial
-- Full-time: My salary expectation is USD 3,840 per month.
+## Pretensão salarial (regra nova do Vini, 04/09; a faixa antiga de USD 46.000 está MORTA)
+A posição é **no mínimo competitivo, na BASE da faixa**. Política completa no fim do BRIEFING.md.
+
+1. **Se o anúncio publica faixa, peça a base dela.** É a regra principal:
+   "Aligned with the posted range for the role, at the lower end."
+2. **Sem faixa publicada, sênior ou lead em estúdio grande:** EUA **USD 100,000** · Canadá
+   **CAD 95,000** · Reino Unido **GBP 50,000** · Europa ocidental **EUR 55,000** · Austrália
+   **AUD 110,000**
+3. **Estúdio pequeno ou médio, ou cargo abaixo de sênior:** EUA **USD 85,000** · Canadá
+   **CAD 80,000** · Reino Unido **GBP 42,000** · Europa **EUR 45,000** · Austrália **AUD 95,000**
+4. **Nunca abaixo do piso legal da ocupação no país**, porque isso inviabiliza o patrocínio
+   de visto (prevailing wage nos EUA, salário vigente do LMIA no Canadá, mínimo do Skilled
+   Worker no Reino Unido).
+5. **Texto para campo livre:** "Open to aligning with your band for the role; as a reference,
+   I'm looking at around <valor>."
+6. **Salário atual da E-Line: NUNCA revelar** (NDA). Resposta fixa: "Confidential under the
+   NDA of my current contract; happy to discuss ranges during the process."
 - Freelance/projeto: For freelance or per-project work I'm flexible on structure; happy to align a number to the scope of the project.
-- Se o campo for anual: USD 46,000 per year (equivalente aproximado).
 
 ## Disponibilidade / notice period
 I can start after a standard transition with my current studio; I'm glad to align dates in the process. (Ajustar se quiser prazo específico.)

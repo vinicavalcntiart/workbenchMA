@@ -3,8 +3,13 @@
 Usado pela automação diária. Responder NA MESMA THREAD da rejeição, em inglês,
 sem assinatura extra (a resposta abaixo já fecha com o nome).
 Substituir `{TEAM}` pelo nome do estúdio (ex.: "Cartoon Saloon team").
-Nada além deste texto. Sem emojis, sem travessão, sem "I hope this finds you well",
-sem floreio de IA.
+Nada além deste texto. Sem travessão, sem "I hope this finds you well", sem floreio de IA.
+
+SOBRE EMOJI (regra do Vini, 07/09): este template não leva emoji porque é o texto de
+faixa 1, para mensagem curta e sem voz própria. Resposta a pessoa que escreveu com
+gentileza NÃO usa este template: leva texto escrito à mão, começa reconhecendo a
+gentileza ("Thanks for your kind answer") e PODE levar um emoji discreto. Veja a seção
+"Seja SIMPÁTICO quando a pessoa foi simpática" do BRIEF-COMUNICADOR.md.
 
 NUNCA ESCAPE O htmlBody (erro real cometido em 01/09 no email para a Amy Hurwitz,
 da LAIKA). O campo htmlBody recebe HTML DE VERDADE: `<p>`, `<b>`, `<a href="...">`.
@@ -19,6 +24,16 @@ No htmlBody, o link do portfólio vai como âncora com texto limpo:
 `<a href="https://www.artstation.com/viniciuscavalcanti">artstation.com/viniciuscavalcanti</a>`
 Nunca enviar só body com URL crua: o Gmail converte para HTML embrulhando a URL
 no redirecionador google.com/url e ela aparece por extenso, com cara de spam.
+
+
+ATENÇÃO, LIMITE DE USO (07/09): este texto é PISO, não é padrão. Ele só serve para
+mensagem curta, de caixa funcional ou sem voz própria, cujo engajamento é uma linha só.
+Se a pessoa assina com nome próprio, escreve na primeira pessoa, cita algo específico do
+material dele ou agradece a ele por ter escrito, o template é PROIBIDO e a resposta se
+escreve à mão, mais curta que este texto. A seção "O template é PISO, não é padrão" do
+BRIEF-COMUNICADOR.md tem os critérios. Motivo: em 07/09 este texto foi mandado ao Ole, da
+Flashbulb Games, em cima de uma mensagem pessoal e calorosa, e agradeceu "for taking the
+time to reply" a quem já tinha agradecido o tempo do Vini. Leu como robô.
 
 ---
 

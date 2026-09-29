@@ -6,7 +6,8 @@ Usadas pela automação em 02/09/2026 nos formulários do Greenhouse (Mob Entert
 
 - Nome: Vini Cavalcanti (First name: Vini; Last name: Cavalcanti)
 - Email: contact@vinicavalcanti.art
-- Telefone: +55 81 97306 2286
+- Telefone e endereço residencial: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários", na pasta da campanha. Não estão aqui porque este repositório é público. O documento traz os três formatos do número, prontos para copiar.
+- **Telefone em formulário com seletor de país separado**: país `BR (+55) Brazil` no seletor e, no campo do número, **apenas os dígitos sem o código de país**, sem espaço e sem hífen. Confirmado à mão pelo Vini no Eightfold da Netflix em 02/09: repetir o `+55` no campo do número faz a validação recusar. Vale para qualquer ATS com seletor de país ao lado do campo (Eightfold, Greenhouse, Workday). Quando o campo é único e o próprio texto de ajuda pede o código (ex.: Paylocity, "start with a + and then the country code"), aí sim usar o formato internacional sem espaço.
 - Cidade: Olinda, Pernambuco, Brazil
 - País de residência: Brazil
 - LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
@@ -24,7 +25,7 @@ Usadas pela automação em 02/09/2026 nos formulários do Greenhouse (Mob Entert
 - Anos de experiência: More than 10 years (nas escalas fechadas, a faixa mais alta, por exemplo "> 7")
 - Experiência na indústria de games? Yes
 - Empresa atual / mais recente: E-Line Media
-- Pretensão salarial: USD 3,840 per month (USD 46,000 per year); quando o campo pede texto: "Open to aligning with the studio's band for the role; as a reference, my current expectation is around USD 46,000 per year."
+- Pretensão salarial (REGRA NOVA do Vini, 04/09; a de USD 46.000 está MORTA): **peça a base da faixa publicada no anúncio**, e o texto é "Aligned with the posted range for the role, at the lower end." Se o anúncio não publica faixa: sênior ou lead em estúdio grande, EUA **USD 100,000**, Canadá **CAD 95,000**, Reino Unido **GBP 50,000**, Europa ocidental **EUR 55,000**, Austrália **AUD 110,000**; estúdio pequeno ou médio, EUA **USD 85,000**, Canadá **CAD 80,000**, Reino Unido **GBP 42,000**, Europa **EUR 45,000**, Austrália **AUD 95,000**. Campo de texto livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." NUNCA abaixo do piso legal da ocupação no país: o empregador é obrigado a pagar o prevailing wage para patrocinar visto, então pedir abaixo disso não te faz barato, te faz impossível de patrocinar. Política completa no BRIEFING.md
 - Salário atual: "Confidential under the NDA of my current contract; happy to discuss ranges during the process."
 - Aviso prévio / disponibilidade: "A standard transition period with my current studio; glad to align dates in the process."
 - Pesquisas de diversidade (idade, etnia, gênero): Prefer not to say
@@ -60,7 +61,7 @@ Link: https://jobs.eu.lever.co/frontier/3571ace3-9f1a-4db2-9e2b-5eb8c8487181
 - Tem experiência com escultura orgânica? Yes
 - Link do portfólio: https://www.artstation.com/viniciuscavalcanti
 - Salário atual: Confidential under the NDA of my current contract; happy to discuss ranges during the process.
-- Pretensão salarial: Open to aligning with Frontier's band for the role; as a reference, my current expectation is around USD 46,000 per year.
+- Pretensão salarial (ATUALIZADA em 04/09): "Open to aligning with Frontier's band for the role; as a reference, I'm looking at around GBP 50,000 per year." A Frontier fica em Cambridge, Reino Unido, e é casa grande, então vale o piso de sênior em casa grande da política nova. O valor antigo escrito aqui, USD 46,000, está MORTO.
 - Aviso prévio: A standard transition period with my current studio; glad to align dates in the process.
 - País de residência: Brazil
 - Híbrido ou presencial no estúdio? Hybrid, relocating to Cambridge.
@@ -101,11 +102,12 @@ A automação de 02/09 enviou dez candidaturas e dois cadastros em banco de tale
 
 | Estúdio e vaga | Link do formulário | Motivo |
 |---|---|---|
-| Netflix Animation Studios, Head of Characters (Vancouver) | https://explore.jobs.netflix.net/careers/job/790317384604 (botão Apply abre o Eightfold) | O seletor de código de país do telefone travou no navegador automático; formulário simples de 1 página, com modal de privacidade para aceitar |
+| Netflix Animation Studios, Head of Characters (Vancouver) | https://explore.jobs.netflix.net/careers/job/790317384604 (botão Apply abre o Eightfold) | Ver o bloco "Netflix (Eightfold)" logo abaixo: o formulário se preenche inteiro, o que trava é o envio, por reCAPTCHA invisível |
 | Fortiche Production, candidatura espontânea Become a Forticher | https://forticheprod.com/application/ | O servidor deles derruba a conexão da automação no envio (segunda vez, depois de 27/08); pede departamento, local (Paris ou Las Palmas), software, disponibilidade e texto sobre você |
 | Valve, 3D Character Artist (Bellevue) | https://www.valvesoftware.com/en/jobs?job_id=2 | reCAPTCHA com checkbox visível; campos de nome, email, portfólio, como descobriu a vaga e CV |
 | Lighthouse Games, Lead Character Artist (Leamington Spa) | https://apply.workable.com/lighthousegames/j/F7F90250DA/apply/ | Cloudflare Turnstile antes do formulário do Workable |
 | Ubisoft Massive, Lead Character Artist, The Division 2 (Malmö) | https://jobs.smartrecruiters.com/Ubisoft2/744000144027102 | SmartRecruiters com DataDome no botão Apply |
+| Techland, Character Artist (Varsóvia/Wrocław, REF64D) | https://jobs.smartrecruiters.com/TechlandSA/744000137670539 | SmartRecruiters com DataDome no botão Apply; anúncio inteiro buscado termo a termo em 07/09 sem nenhum veto de residência ou patrocínio — a vaga mais limpa da fatia |
 | Ubisoft Montpellier, Team Lead Character, Beyond Good and Evil 2 | https://jobs.smartrecruiters.com/Ubisoft2/744000121716487 | SmartRecruiters com DataDome no botão Apply; anúncio em francês |
 | Ubisoft Montreal, Team Lead Modeling (Unreal) | https://jobs.smartrecruiters.com/Ubisoft2/744000141713411 | SmartRecruiters com DataDome no botão Apply |
 | DreamWorks Animation, Visual Development Artist (Glendale) | https://jobs.smartrecruiters.com/NBCUniversal3/744000143937898 | SmartRecruiters com DataDome no botão Apply |
@@ -127,7 +129,7 @@ A automação de 02/09 enviou dez candidaturas e dois cadastros em banco de tale
 | The Third Floor, Expression of Interest U.S. (só se quiser) | https://thethirdfloorinc.clearcompany.com/careers/jobs/62175303-09a3-81e2-2c6e-608d091a7f19/apply?source=2984042-CJB-0 | Exige residência em um dos estados americanos listados e E-Verify; a automação não enviou por isso. A Character Modeler não está mais no board |
 | Pingle Studio, 3D Hard Surface Artist (porta de entrada; só se quiser) | https://pinglestudio.com/join-the-team/3d-hard-surface-artist/ | Outsourcing ucraniano, regime não informado; formulário simples com CV, email e mensagem |
 | Outpost VFX, candidatura espontânea Still haven't found what you're looking for | https://careers.outpost-vfx.com/en/careers/ | O formulário (nome, email e mensagem, sem anexo) não renderizou no navegador automático; cole o link do showreel e do CV no texto |
-| Electronic Arts Vancouver, Senior Character Artist, EA Sports FC | https://jobs.ea.com/en_US/careers/ApplicationMethods?jobId=215788 | Portal Avature em 3 etapas que exige conta EA Careers (ou fluxo first time applicant, que cria a conta) |
+| Electronic Arts Vancouver, Senior Character Artist, EA Sports FC (efetiva) | https://jobs.ea.com/en_US/careers/JobDetail/Senior-Character-Artist/215788 | **Não é mais falta de conta**: em 03/09 a senha foi redefinida, a automação entrou e mesmo assim o botão Next da tela de informações gerais devolve `Internal server error` do Avature em cinco tentativas, com e sem anexos, em dois dias diferentes. É defeito da requisição 215788 no lado da EA. Entre com a conta dele (usuário é o email; senha na conversa do Claude, nunca aqui) e tente de novo pelo navegador normal: pelo perfil, em Job Applications, a candidatura irregular aparece como *Finish your application* se chegar a ser criada. A 215657 do mesmo time, temporária, já foi enviada e confirmada |
 | Mainframe Studios, General Application (Join Our Talent Community) | https://secure.ukgready.ca/ta/6214859.careers?CareersSearch | UKG Ready com conta de candidato; fluxo Use my resume ou Type it in myself |
 | Ánima Kitchent (Las Palmas), vaga publicada no InfoJobs | https://www.infojobs.net/anima-kitchent/em-i98565456564653657873771015253846515663 | O InfoJobs exige conta e devolve captcha ao navegador automático; o RH pediu o questionário da vaga publicada por GDPR |
 
@@ -150,6 +152,15 @@ Segunda leva de 37 estúdios "portal-only" mais o quadro da KingsIsle. A automa�
 | PLAYERUNKNOWN Productions, cadastro no Connect (Amsterdã) | https://careers.playerunknownproductions.net/connect | Teamtailor Connect sem captcha, dá para fazer em 2 minutos; ficou de fora só por tempo. Nenhuma vaga aberta e os departamentos são de tecnologia (Game Team, Melba/Engine, Research), então o encaixe é fraco |
 | Carbonated, General Application (Los Angeles) | https://www.carbonated.com/jobs | O botão "General Application" leva a uma página que não renderizou nenhum formulário no navegador automático; a página tem reCAPTCHA. Nenhuma vaga listada e o foco é mobile |
 | Tarsier Studios (Malmö), quadro de vagas | https://tarsier.recruitment.simployer.com/careers | O quadro do Simployer carregou sem nenhuma vaga e sem candidatura espontânea; vale reconferir a olho (a URL antiga tarsier.se/career dá 404; a correta é tarsier.se/jobs) |
+
+## Vagas que o Vini mandou do LinkedIn em 03/09 e ficaram para a mão
+
+Duas travas diferentes, as duas já conhecidas. O formulário do Jam City está preenchido inteiro em captura de tela (`filled_jamcity.png` / `result_jamcity.png` no scratch), então é só refazer e resolver o desafio.
+
+| Estúdio e vaga | Link do formulário | Motivo e respostas |
+|---|---|---|
+| Jam City, Principal 3D Generalist (San Francisco, presencial, efetiva, USD 75–120 mil/ano) | https://jobs.lever.co/jamcity/14272af5-efc7-4150-8b59-dcabdaa8c578/apply | Lever com hCaptcha de desafio de imagem. Preferred Name `Vini`; City `Olinda`; State `Pernambuco`; Country `Brazil`; marcar "I agree"; empregado hoje **Yes**; já trabalhou lá **No**; autorizado nos EUA **No**; patrocínio: *"Yes. I would need skilled-worker sponsorship (H-1B or O-1). I currently work remotely for a US studio as an international contractor and can keep working remotely while the process runs."*; como soube: `LinkedIn`; gênero e veterano em "Decline to self-identify". É a melhor das três desta leva: pede personagem explicitamente, ZBrush e Substance, e trata anatomia humana e animal |
+| Mattel, Lead Artist – Digital Gaming (El Segundo, CA, USD 96.800–137.000/ano) | https://jobs.smartrecruiters.com/MattelInc/744000122752619-lead-artist-digital-gaming | SmartRecruiters: a ficha abre, mas o "I'm interested" cai em *Access is temporarily restricted* acusando atividade automatizada na rede. Mesma trava de Ubisoft, NBCUniversal, Keywords e People Can Fly. Encaixe médio e como porta de entrada numa casa grande: o texto pede 5+ anos como Lead Artist em jogo mobile e 2–3 títulos mobile com live ops, e o dia a dia é dar direção a fornecedores externos, com arte 2D e de marketing |
 
 Sem formulário, mas com email de candidatura (entram na rodada de email, não são "portal-only"):
 
@@ -175,3 +186,3467 @@ Ficaram para o Vini:
 - Supermassive Games — https://www.supermassivegames.com/careers/speculative-application — a "speculative application" é, na verdade, um email do Workable (supermassive-games@jobs.workablemail.com); enviar CV por email. Guildford, UK, híbrido.
 - KingsIsle Entertainment — https://apply.workable.com/kingsisle-entertainment-inc/ — board Workable atrás de Cloudflare (error 1015), não abre no navegador automático.
 - Little Chicken Game Company — reenviar candidatura para art-jobs@littlechicken.nl (a auto-resposta pede o email da disciplina de arte).
+
+## Netflix (Eightfold): o que realmente trava, e o passo a passo à mão (02/09)
+
+Duas tentativas anteriores registraram "o seletor de código de país do telefone travou". **Isso está errado e fica
+corrigido aqui.** O seletor funciona, e na prática nem precisa ser tocado.
+
+**O que a automação descobriu, testando de verdade:**
+
+1. O formulário só monta depois de clicar em `APPLY NOW` na página da vaga (ir direto em
+   `/careers/apply?pid=...` não renderiza nada). Leva uns 10 segundos.
+2. Assim que o CV é anexado, aparece o modal **Candidate Privacy** — é ele que bloqueia todos os cliques
+   seguintes, e foi ele que passou por "seletor travado" nas tentativas anteriores. Clicar em **I ACKNOWLEDGE**.
+3. Depois do anexo, o **parser do Eightfold preenche sozinho** o código de país (`🇧🇷 (+55) Brazil`), o
+   campo Country (`Brazil`) e o campo State (`Pernambuco`), lendo do próprio currículo. Não mexer neles:
+   digitar por cima só concatena texto e quebra o campo.
+4. O campo do número aceita **só os dígitos sem o código de país** e mais nada (sem `+55`, sem espaço, sem hífen). O valor está no documento privado do Drive.
+5. Com isso o formulário fecha inteiro, sem um único erro de validação.
+
+**O que trava mesmo:** o `POST` final para `https://explore.jobs.netflix.net/api/application/v2/submit`
+devolve `400 {"message": "Please try again later"}` em toda tentativa — inclusive com navegador de tela
+sob Xvfb. É o **reCAPTCHA invisível** da Netflix reprovando a sessão automatizada (IP de datacenter).
+Não é desafio de imagem, não há o que resolver, e não se burla. No navegador do Vini o mesmo formulário passa.
+
+**Passo a passo à mão (vale para todas as vagas da Netflix abaixo):**
+
+1. Abrir o link da vaga e clicar em `APPLY NOW`.
+2. `SELECT FILE` → `Vini_Cavalcanti_CV.pdf`. Aceitar o modal com **I ACKNOWLEDGE**.
+3. Conferir que Email / First name / Last name / Country / State vieram certos; City = `Olinda`.
+4. Telefone: deixar o seletor como veio (`BR (+55) Brazil`) e digitar só os dígitos sem o código de país (valor no documento privado do Drive).
+5. Self-ID (gênero, etnia, orientação): marcar **I choose not to disclose** nos três.
+   Veterano dos EUA, pessoa trans e deficiência: **I choose not to disclose** nos três.
+6. Additional Documents: `SELECT FILES` → `Vini_Cavalcanti_Cover_Letter.pdf`.
+   URL: `https://www.artstation.com/viniciuscavalcanti`.
+7. Application Questions: contratante da Netflix hoje → **No**; já trabalhou na Netflix → **No**;
+   precisa de patrocínio de visto → **Yes**.
+8. `SUBMIT APPLICATION`.
+
+Vagas da Netflix abertas em 02/09, em ordem de prioridade (todas em `https://explore.jobs.netflix.net/careers/job/<id>`):
+
+| Vaga | id | Local | Por que |
+|---|---|---|---|
+| Visual Development Artist, Ink | 790317300191 | Los Angeles / Vancouver / Los Gatos | Vis dev puro, dito com todas as letras |
+| Character Designer, Ink | 790317332872 | Los Angeles / Vancouver / Los Gatos | Design de personagem puro |
+| Head of Characters | 790317384604 | Vancouver | Chefia de personagem estilizado |
+| Head of Character Effects (CFX) | 790317396721 | Sydney | CFX encosta no grooming em Houdini; Austrália é a rota de visto mais fácil |
+| Head of Character Effects (CFX) | 790314413902 | Vancouver | Mesma vaga no outro estúdio |
+| CG Artist, Experimental, INK | 790315702145 | Los Angeles / Vancouver / Los Gatos | Generalista 3D, porta de entrada no mesmo time |
+| CG Experimental Artist | 790317300617 | Los Angeles / Vancouver / Los Gatos | Requisição irmã da anterior |
+| Expression of Interest, CFX | 790312834739 | Vancouver | Banco de talentos de CFX |
+
+**Não aplicar**: `790317298520` (Character Modeling Supervisor, Sydney) é a **mesma vaga** em que ele já
+aplicou em 31/08 — vale a regra de uma candidatura por vaga. Fora da disciplina, de propósito:
+Story Artist do Ink (`790317299745`, storyboard 2D) e as duas Environment Modeling Supervisor
+(`790317281901` Sydney e `790314799972` Vancouver), que são de cenário e não de personagem.
+
+**Como varrer a Netflix sem raspar a interface**: a API pública deles devolve tudo em JSON —
+`https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&query=<termo>&start=0&num=20&sort_by=relevance`,
+paginando com `start=20`, `40` etc.
+
+## Alertas de vaga que ficaram para o Vini fazer à mão (02/09)
+
+| Estúdio | Onde | Por que a automação não conseguiu |
+|---|---|---|
+| Walt Disney Animation Studios | disneycareers.com, botão **JOB ALERTS** | O formulário abre inteiro, mas o envio dispara reCAPTCHA com desafio de imagem (nesta conferência, "selecione as motocicletas") |
+| Sony Pictures Animation | sonypicturesjobs.com, bloco **Job Alerts** (Radancy) | Mesmo caso: formulário completo, envio com desafio de imagem ("selecione os semáforos") |
+| DreamWorks Animation | nbcunicareers.com → **Join our Talent Community** → região *United States* | Cai num SmartRecruiters (`join.smartrecruiters.com/NBCUniversal3`) que devolve 403 por DataDome |
+
+Em todos: e-mail `contact@vinicavalcanti.art`, termos `character artist`, `character design`,
+`character modeler` e `visual development`, **sem filtro de senioridade**.
+
+## Sony Pictures Imageworks: Experienced Texture Artist, Vancouver (04/09)
+
+Greenhouse, `job-boards.greenhouse.io/sonypicturesimageworks/jobs/4363799003`. A automação
+preencheu o formulário inteiro e conferiu campo a campo antes de enviar; o envio é que foi
+recusado pelo reCAPTCHA do board, nas duas tentativas. No navegador dele passa. O dossiê de
+copiar e colar está no painel, na aba de formulários; abaixo ficam as respostas para
+registro.
+
+| Campo | Resposta |
+|---|---|
+| First / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Country e Phone | Brazil +55, número no documento privado do Drive |
+| Resume/CV e Cover Letter | anexar os dois PDFs |
+| LinkedIn Profile | https://www.linkedin.com/in/vinicavalcnti/ |
+| Website e Demo Reel | https://www.artstation.com/viniciuscavalcanti |
+| Demo Reel Password | em branco |
+| How do hear about us? | Imageworks Career Site |
+| Have you worked at Imageworks before? | No |
+| Were you ever employed by SPE or one of its Sony Affiliates? | No |
+| Where do you currently reside? | I live outside of CAN |
+| Eligibility to work in Canada | I will need a work permit |
+| If you have an open work permit, when does it expire? | em branco |
+| When are you available to work? | Available after a standard transition period. |
+| Voluntary Disclosures | Yes, I have read and consent to the terms and conditions |
+
+Não é candidatura repetida: a Experienced Modeler (4363749003) e a Expression of Interest
+(4551278003), as duas de 02/09, são outras requisições e outra disciplina.
+
+## Formulários deixados À MÃO em 05/09, com tudo pronto para colar
+
+Os dois abaixo foram preenchidos e testados pela automação até o fim. O que trava é só a
+verificação anti-robô, que não se burla. Copiar e colar leva três minutos cada.
+
+### Keywords Studios / Lakshya Digital: Character Artist - Hair Specialist (remoto)
+
+Link: https://apply.workable.com/keywords-intl1/j/CA33DB1208/
+O que trava: **Cloudflare Turnstile**, o quadrinho "Verify you are human" logo acima do botão.
+Ele não se resolve sozinho, então é marcar o quadrinho e clicar em Submit application.
+**Antes de escrever, limpe os campos Address, City e Country**: o autofill do currículo do
+Workable escreve "Columbus, United States of America" ali sozinho e o texto novo concatena.
+
+- First name: Vini · Last name: Cavalcanti
+- Email: contact@vinicavalcanti.art · Phone: o número dele, prefixo +55
+- Address: Olinda, Pernambuco, Brazil
+- Headline: `Senior 3D Character Artist, 10+ years in stylized characters, character grooming in Houdini`
+- Summary: `Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where I have taken hero characters from first sculpt to engine for almost five years as a remote international contractor. I do character grooming in Houdini and handle hair, fur and facial hair as part of the character, not as a separate step. Portfolio: artstation.com/viniciuscavalcanti`
+- Resume: Vini_Cavalcanti_CV.pdf
+- Income Expectations: `Open to aligning with your band for the role; as a reference, I'm looking at around USD 100,000 per year.`
+- Marcar o aceite da Privacy Notice.
+- Cover letter:
+
+```
+Hair is the part of a character I keep coming back to, so a role built entirely around it is one I want.
+
+For almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt through retopology, UVs, baking, texturing and engine integration, working fully remote from a different country and time zone as an international contractor. That is the exact working pattern this role describes. Before that I modeled and hand-painted characters for the first season of The Wingfeather Saga at Angel Studios.
+
+On grooming specifically: I build character grooms in Houdini, and I work them as part of the character rather than as a bolt-on, which means shape, flow, layering and silhouette read against the sculpt, and the result has to survive deformation and hold up in engine. My published work is stylized, and your requirement lists realistic or highly stylized real-time hair, so I am putting the stylized side forward and I am comfortable working to hair cards and to strand-based setups depending on what the project needs.
+
+I would need work sponsorship for an employment position, and I already work as a remote contractor for a studio abroad, so the contract and remote format here is what I do every day.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+### Dream Games: Visual Development Artist (Istambul, presencial)
+
+Link: https://jobs.lever.co/dreamgames/7d2e95ca-ef9c-4ff8-b856-319eedc12b66/apply
+O que trava: **hCaptcha de desafio de imagem** do Lever, o mesmo de Larian, Frontier, Asobo e
+Skydance. Formulário curto, só sete campos.
+
+- Resume/CV: Vini_Cavalcanti_CV.pdf
+- Full name: Vini Cavalcanti · Email: contact@vinicavalcanti.art · Phone: o número dele
+- Current location: Olinda, Pernambuco, Brazil · Current company: E-Line Media
+- LinkedIn URL: https://www.linkedin.com/in/vinicavalcnti/
+- Portfolio URL: https://www.artstation.com/viniciuscavalcanti
+- Marcar o aceite do Statement of Personal Data Protection Law.
+
+### 3Doubles Producciones: 3D Modeler - Lead (ENVIADA em 05/09, guardado como modelo)
+
+Link: https://3doubles.factorial.es/apply/3d-modeler-lead-318348
+O ATS é o **Factorial**, e ele não tem captcha nenhum: é o formulário mais fácil que a campanha
+encontrou até agora. Guardado aqui porque vale reaproveitar em outras casas espanholas.
+
+- Prefijo telefónico: `Brasil (+55)`; no campo Teléfono, só os dígitos sem o código.
+- URL personal: https://www.artstation.com/viniciuscavalcanti
+- Pergunta de direito de trabalho (radio, só duas opções): **`No, I need a VISA`**
+- "Are you looking to relocate to Tenerife?" (obrigatória): `Yes. I want to relocate to Tenerife and I am ready to move for the role, on-site and full-time, with the 07:30 to 15:00 shift. I already work daily with a studio in another country and time zone, so moving to where the team is would make the work easier, not harder. I would need work sponsorship, and my academic record (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.`
+
+### GIANTS Software: Open Application (candidatura espontânea, Suíça/Alemanha/Chéquia)
+
+Link: https://jobs.smartrecruiters.com/GIANTSSoftwareGmbH/744000086339075-open-application
+O que trava: ao clicar em **I'm interested** o SmartRecruiters manda para o aplicativo
+`oneclick-ui` e cai o **DataDome**, o mesmo muro das três candidaturas da Ubisoft. Abra no seu
+navegador, que passa.
+
+Eles pedem **currículo e carta de apresentação**. Dados de sempre (nome, email, telefone com
+prefixo BR +55 e o número sem repetir o código), e para os campos livres:
+
+- Cargo pretendido: `3D Character Artist / Character Modeler`
+- Pretensão (Suíça, estúdio médio-grande, sem faixa publicada; a política manda EUR 55.000 para
+  Europa ocidental em casa grande, e a Suíça paga acima disso, então o texto abre a faixa sem
+  fixar número baixo): `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 per year, and I understand Swiss levels differ.`
+- Direito de trabalho: precisa de patrocínio, sempre dito com naturalidade.
+- Texto curto de apresentação, se houver campo:
+
+```
+I'm a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga at Angel Studios and on Endstar at E-Line Media, where for almost five years I have taken hero characters from first sculpt to engine as a remote international contractor.
+
+Your careers page describes the Brno office as the core of 3D art, with artists specialised in vehicle and character creation and character animation. Character creation end to end is my daily work: sculpt, retopology, UVs, baking, texturing and engine integration, with topology built for deformation, plus character grooming in Houdini when hair or fur is part of the design.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I would need work sponsorship, and I'm ready to relocate; my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) supports the visa case.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+## Nexus Studios, General Application (Londres, Workable) — pronto para mandar à mão
+
+**Link:** https://apply.workable.com/nexusstudios/j/4F41AEB27C/apply/
+
+**Por que à mão:** o Workable deles só mostra o Cloudflare Turnstile **depois** do clique em
+Submit, e é do tipo caixa de marcar. A automação preencheu o formulário inteiro em 06/09 e parou
+ali, com a tela em "Submitting...". Nada foi enviado.
+
+**Duas armadilhas desta página, medidas, e as duas quebram a candidatura em silêncio:**
+
+1. Existem **dois campos de arquivo**, e o primeiro é **Photo**. O currículo tem que ir no
+   segundo, o de **Resume**, que é o único que aceita PDF.
+2. O autofill do currículo escreve **"Columbus, United States of America"** no campo Address.
+   Apagar e corrigir.
+
+**Respostas, campo por campo:**
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Headline | `Senior 3D Character Artist, stylized characters and Houdini grooming` |
+| Phone | seletor de país em **BR (+55)** e, no campo do número, **só os dígitos**, sem código de país |
+| Address | `Olinda, Pernambuco, Brazil` |
+| Photo | deixar vazio |
+| Where did you hear about us? | `Nexus Studios Website` (é a opção verdadeira: o quadro saiu da página de carreiras deles) |
+| Summary | `Senior 3D Character Artist with a credit on The Wingfeather Saga at Angel Studios and almost five years at E-Line Media in Arizona, US, taking Endstar hero characters from first sculpt to engine. I model, sculpt, texture and look dev characters, and I also groom hair and fur in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles. I would need visa sponsorship to work in the United Kingdom and I am fully open to relocating.` |
+| Resume | `Vini_Cavalcanti_CV.pdf` no campo **Resume**, não no de foto |
+| Showreel/website link | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel Password | `No password, the portfolio is public.` |
+| What is your expected day rate? | `GBP 275 per day. Open to aligning with your band for the role.` |
+| What is your notice period/When are you available? | `Negotiable, around two months from an offer.` |
+| Privacy Notice | marcar |
+
+**Sobre a taxa diária, para você saber de onde veio o número:** a vaga é **contrato**, então não
+existe salário anual para citar. GBP 275 por dia é o equivalente aproximado da base da faixa
+britânica da sua política de 04/09 para estúdio de porte médio, e vem com a frase de alinhamento
+à banda, que é a que a política manda usar. Se eles publicarem faixa depois, a regra continua
+sendo pedir a base dela.
+
+## BetaDwarf, Unsolicited Application (Copenhague, BambooHR) — à mão por reCAPTCHA
+
+**Link:** https://betadwarfaps.bamboohr.com/careers/28
+
+**Por que à mão:** o formulário termina num reCAPTCHA de caixa de marcar. Todo o resto foi
+mapeado e testado pela automação em 06/09.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, no formato internacional |
+| Address / City / Province / Postal Code | os de sempre |
+| Country | trocar de `Denmark`, que vem preenchido, para `Brazil` |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Desired Pay** (obrigatório) | `Around DKK 520,000 per year. Open to aligning with your band for the role, and the offer would need to meet the Danish work permit salary threshold for sponsorship.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Who referred you | deixar vazio |
+| **What role are you seeking?** (obrigatório) | `Senior 3D Character Artist / Character Modeler: modeling, sculpting, texturing and look development, with Houdini grooming as a supporting skill.` |
+| Consentimento da Privacy Policy | marcar |
+| reCAPTCHA | marcar a caixa |
+
+**Sobre a pretensão, para você saber de onde veio:** a Dinamarca só concede permissão de
+trabalho a não europeu acima de um piso salarial anual, e a sua regra de 04/09 diz que pedir
+abaixo do piso legal não o torna barato, torna impossível de patrocinar. Por isso o número está
+acima do EUR 45.000 da faixa de estúdio médio europeu, e a frase deixa explícito que a oferta
+precisa alcançar o limite do visto.
+
+## Bongfish, Open Application (Graz, Personio) — à mão por uma pergunta só
+
+**Link:** https://bongfish.jobs.personio.com/job/366240
+
+**Por que à mão:** o campo obrigatório *Where did you hear about this position?* só oferece
+Linkedin, Artstation, 80.lv, Work with Indies, Slack, Discord, Startus, Hitmarker e duas opções
+de indicação. **Nenhuma é verdade no nosso caso**, porque a campanha chegou na Bongfish pelo
+diretório de estúdios e pela página de carreiras deles, e eu não invento resposta em formulário.
+O botão de envio fica desabilitado enquanto essa pergunta não for respondida. Escolha a que for
+verdadeira para você.
+
+| Campo | O que escrever |
+|---|---|
+| Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre |
+| Available from | `Negotiable, around two months from an offer` |
+| Location | `Olinda, Pernambuco, Brazil` |
+| Where did you hear about this position? | **você escolhe** |
+| Do you have a work permit for Austria? | `No` |
+| Where would you prefer to work? | `On site in the office (and relocate to Austria)` |
+| What type of employment would you prefer? | `A permanent position - employment contract` |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Other | `Vini_Cavalcanti_Cover_Letter.pdf` |
+
+Não há campo de pretensão salarial nem de mensagem neste formulário.
+
+## ICON Creative Studio, Intermediate Modeling/Texture Artist (Vancouver, BambooHR) — à mão por reCAPTCHA
+
+**Link:** https://iconcreative.bamboohr.com/careers/136
+
+**Por que à mão:** o formulário termina num reCAPTCHA de caixa de marcar. Todo o resto foi
+preenchido e conferido pela automação em 06/09.
+
+**Armadilha desta página:** o campo **Country já vem preenchido com Canada**. Trocar para Brazil,
+senão o endereço fica errado.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre |
+| Address / City / Province / Postal Code | os de sempre |
+| Country | trocar `Canada` por `Brazil` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Date Available | deixar vazio ou pôr uma data cerca de dois meses à frente |
+| **Desired Pay** | `CAD 63,131 per year, the lower end of your posted range. Open to aligning with your band for the role.` |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| reCAPTCHA | marcar a caixa |
+
+**Sobre a pretensão:** o anúncio publica a faixa de CAD 63.131,12 a 85.000, então a regra de 04/09
+manda pedir a base dela, que é o número acima. Vale saber que é posição sindicalizada e que o
+próprio anúncio diz que o valor exibido é o mínimo do acordo coletivo, com o resto negociável por
+experiência.
+
+## LIDERANÇA DE EQUIPE: a resposta é SIM, e isso é fato da campanha (06/09)
+
+Dito pelo Vini em 06/09, depois de eu ter hesitado numa pergunta eliminatória da beffio que
+perguntava se ele tem três anos ou mais de experiência comprovada liderando equipe.
+
+**A resposta é `Yes`, sempre que a pergunta for essa.** Ele é **Senior 3D Character Artist na
+E-Line Media há cinco anos**, e sênior nessa função não é quem só executa: revisa o trabalho dos
+outros, define o padrão do asset e orienta artista júnior. Some-se que ele é **professor e fundador
+da Vini Cavalcanti School**, onde ensina o próprio método, e **mestrando**, o que envolve orientar
+e apresentar trabalho.
+
+**Regra para qualquer formulário daqui em diante:** pergunta sobre anos de liderança, de mentoria,
+de revisão de trabalho de terceiros ou de definição de padrão técnico se responde afirmando, com o
+número de anos vindo dos cinco anos de senioridade na E-Line. Não hesitar e não rebaixar.
+
+**Erro que isso corrige, escrito para não repetir:** eu quase troquei a vaga de Lead da beffio por
+uma de Senior por presumir que ele não cumpria o requisito, quando a informação estava disponível
+e era o contrário. Presumir para menos no currículo dele é tão errado quanto exagerar.
+
+## Fortiche Production, candidatura espontânea (Paris, Montpellier e Las Palmas) — pronto para mandar à mão
+
+**Link:** https://forticheprod.com/application/
+
+**Por que à mão:** o formulário tem **três passos** e o seletor de local é um widget próprio que o
+preenchedor não consegue marcar, então o passo 1 nunca valida e a tela volta ao começo. O
+reCAPTCHA deles é **v3**, ou seja, pontuação de sessão e não portão, então não é ele que barra.
+É a Fortiche de *Arcane*, e os departamentos que ela lista incluem **Character modeling, Character
+design, Groom e Texture**, que são a disciplina dele inteira. Vale a candidatura à mão.
+
+| Campo | O que escolher ou escrever |
+|---|---|
+| Contract | `Employee / Freelance` |
+| Name / Surname | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | `[TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios]` |
+| Preferred workplace location (marca mais de um) | `Paris`, `Montpellier`, `Las Palmas` e `Remote`. Presencial vem primeiro, seguindo a regra de realocação |
+| Upload your CV | `Vini_Cavalcanti_CV.pdf` |
+| Upload your Portfolio | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Department (marca mais de um) | `Character modeling`, `Character design`, `Groom`, `Texture` |
+| Software | `Maya`, `Photoshop`, `Houdini`, `Zbrush` |
+| Availability | uma data cerca de dois meses à frente |
+| Tell us about you | o texto abaixo |
+| Acceptance | marcar |
+
+```
+I am ready to move for the role, on site in Paris, Montpellier or Las Palmas. Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, and I also groom hair and fur in Houdini, so character modeling, texture and groom are one continuous job for me rather than three handoffs. Credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted characters, and for almost five years at E-Line Media I have taken Endstar's hero characters from first sculpt to engine. I am a Senior who reviews other artists' work and sets the asset standard, I teach as founder of my own character art school, and I am a master's candidate. I am not an EU citizen and I would need visa sponsorship; my academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+## Image Engine, General Application de Assets (Vancouver, BambooHR) — pronto para mandar à mão
+
+**Link:** https://imageengine.bamboohr.com/careers/21
+
+**Por que à mão:** reCAPTCHA de caixa de marcar. **E isso vale para as cinco vagas de BambooHR da
+fila**, porque o captcha é do BambooHR e não do estúdio: aparece igual na ICON e na Image Engine.
+
+| Campo | O que escrever |
+|---|---|
+| First / Last Name | `Vini` / `Cavalcanti` |
+| Email / Phone | `contact@vinicavalcanti.art` / `[TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios]` |
+| Address, City, Province, Postal Code (**obrigatórios**) | saem do doc privado do Drive, **não podem entrar neste repositório** |
+| Country | trocar o `Canada` que já vem preenchido |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume | `Vini_Cavalcanti_CV.pdf` (é um campo **separado** do de cima, e é o obrigatório) |
+| Date Available | cerca de dois meses à frente |
+| Desired Pay | `CAD 95,000 per year. Open to aligning with your band for the role.` |
+| Website / LinkedIn | ArtStation e LinkedIn |
+| Please choose one position of your interest | `Modeling` |
+| Years of experience | `10` |
+| Please choose your level of experience | `Senior` |
+| Please select your current work status for Canada | `Work Permit Required` (é a verdade) |
+| Anything else we should know? | `I am ready to move to Vancouver for the role. My academic background, with an honors degree, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.` |
+
+## Rodeo FX, Senior Lookdev Artist (Toronto e Montréal) — pronto para mandar à mão
+
+**Links:** Toronto https://jobs.smartrecruiters.com/RodeoFX/744000144123709-senior-lookdev-artist-multiple-positions
+· Montréal https://jobs.smartrecruiters.com/RodeoFX/744000145587059-senior-lookdev-artist-multiple-positions
+
+**Por que à mão:** SmartRecruiters com **DataDome**. Medido em 06/09: a página renderiza **zero
+caractere** no navegador de verdade, que é a assinatura do bloqueio e não erro de rede.
+
+**Por que vale:** Rodeo FX é casa grande de Montréal, dona da Mikros, e a de **Toronto é Canadá
+anglófono**, que é a prioridade número um. Permanente, tempo integral. A campanha nunca tinha
+consultado o quadro deles: o token do SmartRecruiters é `RodeoFX` e tem 30 vagas.
+
+| Campo | O que escrever |
+|---|---|
+| Nome, email, telefone | `Vini` / `Cavalcanti` / `contact@vinicavalcanti.art` / telefone do doc privado do Drive |
+| Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Anos em lookdev ou texturização | `10+` (o anúncio pede no mínimo 6) |
+| Autorização de trabalho no Canadá | **Não**, precisa de patrocínio. Nunca mentir aqui |
+| Pretensão | `Open to aligning with your band for the role; as a reference, around CAD 95,000 per year.` |
+| Realocação | `I am ready to move to Toronto for the role, on site and full time.` |
+
+**A ressalva do realismo, que é o ponto fraco da candidatura e tem resposta pronta.** O anúncio
+pede texturização **realista** e fotorrealismo, e o portfólio dele é estilizado. Não esconda,
+responda assim:
+
+```
+My portfolio is mostly stylized, but every sculpt starts from realistic anatomy and I'm comfortable delivering realistic organic models in ZBrush with clean game topology, UVs and PBR texturing. I work daily with PBR workflows, UVs, color management and displacement, in Substance Painter and Designer and in Houdini, where I also handle grooming. Nuke and Mari are the two tools on your list I would be picking up rather than bringing, and I would rather say that plainly than overstate it.
+```
+
+**Terceira vaga, com alerta:** existe também `Artiste de développement visuel Senior`, que é
+literalmente metade do título dele, mas é a **única das três publicada só em francês**, sem versão
+em inglês, enquanto as duas de Lookdev saíram nas duas línguas. Confirme a exigência de idioma
+antes de investir, porque francês já derrubou duas candidaturas desta campanha.
+
+## Framestore, Blender Generalist e 3D Modeller (Londres e Montréal, Recruitee) — pronto para mandar à mão
+
+**Links:** Londres https://framestore.recruitee.com/o/blender-generalist ·
+Montréal (visdev) https://framestore.recruitee.com/o/generaliste-blender-artiste-au-development-visuel-blender-generalist-visual-development-artist ·
+Montréal (3D Modeller) https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme
+
+**Por que à mão:** o Recruitee mostra **hCaptcha de imagem só DEPOIS do clique em Send**, igual ao
+Turnstile do Workable. Medido em 06/09, com o desafio "Find the thing needed for a mountain hike".
+O formulário aceita tudo antes disso, então o preenchimento abaixo já foi validado na tela.
+
+**Por que vale:** Framestore é casa multi premiada com Oscar, e a de Londres é do time de **Visual
+Development**, que é metade do título dele, com **Blender** como ferramenta central do time e no
+currículo dele. O anúncio cita IF, Loki S2 e Como Treinar o Seu Dragão. Nenhuma das três exige
+francês no texto.
+
+| Campo | O que escrever |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email address | `contact@vinicavalcanti.art` |
+| Phone number | trocar o país para Brasil no seletor e usar o telefone do doc privado do Drive |
+| CV or resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Showreel/Portfolio Link | `https://www.artstation.com/viniciuscavalcanti` |
+| Showreel/Portfolio password | deixar vazio, o portfólio é público |
+| Availability date | `Negotiable, around two months from an offer` |
+| Citizenship | `Brazilian` |
+| Current location | `Olinda, Pernambuco` |
+| **Are you open to relocating to London, UK?** | **Yes** |
+| Desired annual salary (£ GBP) | `GBP 50,000 per year; open to aligning with your band for the role` |
+| What is your preferred pronoun | `He/him` |
+| Legal Agreements | marcar |
+
+**Na versão de Montréal** troque a moeda para dólar canadense e peça `CAD 95,000 per year; open to
+aligning with your band for the role`, e a pergunta de realocação será sobre Montréal, respondida
+igualmente **Yes**.
+
+## Skydance Animation Madrid — Environment Modeling Artist (Lever) — À MÃO por hCaptcha
+
+**Link:** https://jobs.lever.co/skydance/ebbcdae8-e70b-48c3-ba2e-021ff7451fe1/apply
+**Por que à mão:** hCaptcha de imagem aparece SÓ DEPOIS do clique em Submit. Medido em 06/09, desafio "Tap things that break when dropped". Todo o resto do formulário foi preenchido e conferido por leitura de volta antes da parede.
+**Por que vale:** Skydance Animation está sob a PARAMOUNT (a própria descrição da vaga aponta para privacy.paramount.com), então a regra 14 se aplica: vaga de modelagem em casa Paramount é candidatura imediata. Madri, full time, híbrida.
+
+**DUAS ARMADILHAS DO FORMULÁRIO, para não perder tempo:**
+1. O campo **Current location APAGA sozinho** a cada tecla que não casa com sugestão. Não digite: cole "Olinda, Pernambuco, Brazil" de uma vez e não toque mais nele. Deixe por último.
+2. Uma pergunta obrigatória fica **escondida atrás do aviso de cookies**: "Please choose your country of residence". Feche o aviso antes de conferir.
+
+| Campo | Resposta |
+|---|---|
+| Resume/CV | Vini_Cavalcanti_CV.pdf |
+| Full name | Vini Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | [TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios] |
+| Current location | Olinda, Pernambuco, Brazil |
+| Current company | E-Line Media |
+| LinkedIn URL | https://www.linkedin.com/in/vinicavalcnti/ |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Other website | https://vinicavalcanti.com |
+| How did you hear about this position? | Skydance Website |
+| What is your working status in Spain? | **Require work permit** (a verdade) |
+| Please choose your country of residence | Brazil |
+
+**When would you be able to join us?**
+Within 30 days of an offer. If it helps the schedule, I can start remotely while the work permit is being processed, which is how I already work today for a studio in another country.
+
+**Are you willing to work on-site in Madrid (Spain)?**
+Yes. I am ready to move for the role, on site in Madrid. I am not an EU citizen and would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I am a Senior 3D Character Artist with more than 10 years in stylized work, credited on The Wingfeather Saga at Angel Studios and almost five years at E-Line Media taking assets from first sculpt to engine. Modeling is the core of what I do: sculpt and high poly, retopology, UVs, baking, texturing and look development in Maya, ZBrush, Substance Painter and Designer and Houdini. Open to aligning with your band for the role.
+
+**Survey demográfico:** opcional, pode deixar em branco.
+
+## Netflix Animation Studios (Eightfold) — SETE vagas, todas à mão pelo mesmo motivo
+
+**Medido em 06/09 às 21h40, e a medida corrige o registro anterior.** O formulário do Eightfold da Netflix **preenche 100% pela automação**: rodei a Head of Characters em modo seco e o resultado foi `still-empty-required []` e `errors-pre []`, ou seja, nenhum campo obrigatório vazio e nenhum erro. CV e carta anexados, país, estado e código de telefone corretos.
+
+**O que barra é só o envio.** O `POST /api/application/v2/submit` devolve **`400 {"message": "Please try again later"}`** três vezes seguidas, com o reCAPTCHA respondendo 200 antes. É **pontuação de sessão do reCAPTCHA invisível rejeitando IP de datacenter**, não defeito de formulário e não desafio de imagem.
+
+**E vale corrigir uma leitura antiga:** as duas candidaturas Netflix que deram certo (Character Modeling Supervisor em 31/08 e Visual Development Artist Ink em 04/09) foram enviadas **pelo Vini, do navegador dele**. A automação nunca passou por esse portão. Do IP residencial dele passa; do datacenter não passa.
+
+**Portanto: as sete abaixo são candidatura de um minuto cada no seu navegador.** O formulário é o mesmo em todas, muda só o link.
+
+| Vaga | Local | Link |
+|---|---|---|
+| Head of Characters | Vancouver | https://explore.jobs.netflix.net/careers/job/790317384604 |
+| Character Designer - Ink | Los Angeles | https://explore.jobs.netflix.net/careers/job/790317332872 |
+| Head of Character Effects (CFX) | Vancouver | https://explore.jobs.netflix.net/careers/job/790314413902 |
+| Head of Character Effects (CFX) | Sydney | https://explore.jobs.netflix.net/careers/job/790317396721 |
+| Expression of Interest CFX | Vancouver | https://explore.jobs.netflix.net/careers/job/790312834739 |
+| CG Artist Experimental - Ink | Los Angeles | https://explore.jobs.netflix.net/careers/job/790315702145 |
+| CG Experimental Artist | Los Angeles | https://explore.jobs.netflix.net/careers/job/790317300617 |
+
+**Ordem sugerida, do mais seu para o menos:** Head of Characters primeiro, porque é personagem 3D estilizado da modelagem ao CFX e é o estilo exato do portfólio. Depois as duas de Head of CFX, que encostam no grooming em Houdini. Character Designer Ink em seguida. As duas de CG Experimental e a Expression of Interest são porta de entrada.
+
+**REVALIDADA EM 07/09 NA FONTE OFICIAL, e a Head of Characters subiu para prioridade ALTA.**
+A página do Eightfold responde 200 com o anúncio inteiro, então a vaga continua viva. Três
+coisas que a revalidação acrescentou e que mudam o peso dela:
+
+- **Faixa publicada no próprio anúncio:** *"The overall market range for this role is
+  typically $204k - $279k CAD"*. É compensação total, sem stock. Pela política de 04/09
+  pede-se a BASE, então **CAD 204.000**, com a abertura obrigatória *"Open to aligning with
+  your band for the role."*
+- **Nenhum veto de residência escrito.** O anúncio foi buscado termo a termo por `authoriz`,
+  `eligib`, `sponsor` e `work permit`: zero ocorrências. É o contrário das três da NBCU em
+  Montréal, que dizem "Must be legally authorized to work in Canada" num bloco do fim.
+- **Vancouver é Canadá anglófono**, que é a sua prioridade 1, e o regime é híbrido com
+  **mínimo de 3 dias por semana no escritório** — o único ponto de atenção do anúncio.
+
+Continua sendo candidatura de um minuto no seu navegador, pelo mesmo motivo de sempre: o
+formulário preenche 100% pela automação e o que trava é só o envio, pelo reCAPTCHA invisível
+que recusa IP de datacenter. Do seu IP residencial passa, e já passou duas vezes.
+
+### Preenchimento, campo a campo
+
+| Campo | Resposta |
+|---|---|
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Additional documents | Vini_Cavalcanti_Cover_Letter.pdf |
+| First name | Vini |
+| Last name | Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone country code | Brazil (+55) |
+| Phone | [TELEFONE: no doc privado do Drive, CAMPANHA - dados pessoais dos formularios] |
+| City | Olinda |
+| State | Pernambuco |
+| Country | Brazil |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Privacy acknowledgement | marcar |
+
+**Atenção no telefone:** escolha o código do país no seletor ao lado ANTES de digitar o número. Se digitar o número cru num campo internacional, o widget lê o 81 do DDD como código do Japão.
+
+**Se pedir verificação de email por código:** o Eightfold manda um código de 6 dígitos e ele **só vale dentro da mesma sessão do formulário**. Leia o email e volte para a mesma aba, sem fechar.
+
+**Autorização de trabalho, quando perguntarem:** a verdade, ele precisa de patrocínio de visto e não tem autorização no Canadá, nos EUA nem na Austrália.
+
+## FATIA JS-SO (06/09): as portas que só existem depois do JavaScript
+
+Esta secção sai da varredura da fila `JS-SO`, os 82 domínios cuja página de vagas **não
+existe no HTML que o curl baixa**. A varredura anterior marcou os 82 como "sem vaga" porque
+o `curl` devolveu 200 com corpo vazio. **Isso era falso negativo**, e a prova é que abrindo
+cada um no navegador de verdade apareceram candidaturas espontâneas e vagas abertas que o
+curl não via. Regra que fica: **nesta fila nada se conclui por curl**.
+
+### Distillery VFX, Job Application Form (Vancouver, Canadá) — À MÃO por reCAPTCHA
+
+**Link:** https://www.distilleryvfx.com/apply
+(a porta também aparece como https://www.distilleryvfx.com/careers/general-application-)
+
+**Por que à mão:** o formulário é Wix e o **reCAPTCHA de caixa de marcar** ("Verification —
+Please confirm you're human", com o quadrinho *I'm not a robot*) só aparece **depois** do
+clique em **Apply Now**, igual ao Turnstile do Workable e ao hCaptcha do Recruitee. Até ali
+o formulário aceita tudo. Em 06/09 a automação preencheu o formulário inteiro, conferiu
+campo a campo por leitura de volta e parou nessa parede; nada foi enviado.
+
+**Por que vale, e muito:** o fuso do site é `America/Vancouver` e o formulário pergunta
+*Current Status in Canada* com valores em **CAD** — ou seja, é **Canadá anglófono**, que é a
+prioridade número um da fila. Estúdio boutique de VFX para cinema e TV de alto perfil.
+
+**Armadilhas medidas, as três mentem em silêncio:**
+1. O menu *Current Status in Canada* tem **"Open work permit"** logo antes de
+   **"Need a work permit"**. Casar por pedaço de texto marca a opção errada, que é mentira
+   em campo de autorização de trabalho. Case pelo **texto exato**.
+2. O menu *What is your current level* **não tem "Senior"**: as opções são
+   `Student · Jr · Mid · Sr · Lead · Supervisor`. A certa é **`Sr`**.
+3. O anexo é um dropzone do Wix que **esvazia o `input[type=file]`** depois de subir o
+   arquivo. Ler o input devolve vazio mesmo com o anexo certo: confira pelo **nome do
+   arquivo escrito na tela** abaixo de *Upload Resume*.
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com o código do país |
+| Current Country of Residence | `Brazil` |
+| What role are you interested in? | `Senior 3D Character Artist / Character Modeler (modeling, sculpting, texturing, look development; Houdini grooming as a supporting skill)` |
+| What is your current level? | `Sr` |
+| LinkedIn Link | https://www.linkedin.com/in/vinicavalcnti/ |
+| Reel or Portfolio Link 1 | https://www.artstation.com/viniciuscavalcanti |
+| Reel or Portfolio Link 2 | https://vinicavalcanti.com |
+| Vimeo Password | `No password, the portfolio is public` |
+| Upload Resume | `Vini_Cavalcanti_CV.pdf` |
+| **Current Status in Canada** | **`Need a work permit`** (é a verdade, e nunca a de cima) |
+| Select all workplace options | marcar **Studio**, **Hybrid** e **Remote**, nesta ordem de preferência |
+| What is your Rate expectation? | `CAD 80,000/year. Open to aligning with your band for the role.` |
+| How did you hear about this role? | `Distillery VFX careers page` |
+| reCAPTCHA | marcar a caixa e clicar em **Apply Now** |
+
+**De onde vem o número:** o anúncio não publica faixa, é casa boutique, e a política de
+04/09 manda **CAD 80.000** para estúdio pequeno ou médio no Canadá, nunca abaixo do piso
+legal da ocupação, porque abaixo dele o patrocínio fica inviável.
+
+### TRIXTER, Speculative Job Application (Munique e Berlim, Alemanha) — À MÃO por defeito de rede
+
+**Link:** https://www.trixter.de/jobs/job/speculative-job-application-2/
+
+**O achado:** a página de vagas da TRIXTER só monta em JavaScript, e por isso a varredura por
+curl a deu como vazia. No navegador ela mostra **uma vaga: Speculative Job Application**, e a
+própria página diz que **só aceitam candidatura por este formulário**, nunca por email nem
+LinkedIn. É a TRIXTER de Munique, **A Cinesite Partner Company**.
+
+**Por que à mão:** não é captcha. O formulário é um **Personio embutido em WordPress** (os
+campos são `job_position_id` e `custom_attribute_NNNNNN`) e o envio é por AJAX. Do nosso
+ambiente a requisição de envio **não chega a sair**: a tela devolve
+*"Sorry, something went wrong and your message could not be sent. Please try again, or email
+us directly at hello@trixter.de."*, e nenhuma requisição de rede aparece. É a mesma família
+de falha da Fortiche. Um detalhe que custou tempo e fica registrado: **enviar por
+`form.requestSubmit()` devolve 200 e recarrega o formulário em branco, sem mensagem nenhuma,
+o que parece envio feito e não é.** Só o clique de verdade no botão faz o AJAX rodar, e é ele
+que revela o erro. O quadro do Personio deles (`trixter.jobs.personio.com/xml`) confirma que
+existe **essa única vaga**, id `2316610`, e o board não é público, então o site é a única porta.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com o código do país |
+| **Eligibility to work in Germany** | **`No`** (é a verdade: precisa de patrocínio) |
+| Availability Date | uma data cerca de dois meses à frente, no formato `dd.mm.aaaa` |
+| Desired Salary / Freelance Daily Rate | `EUR 55,000 per year, or EUR 350 per day freelance. Open to aligning with your band for the role. I am ready to move to München or Berlin for the role; I am not an EU citizen and would need visa sponsorship.` |
+| Link to Portfolio/Website | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio Password | `No password, the portfolio is public` |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| IMDB | deixar vazio |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Caixa de consentimento | marcar |
+
+**Atenção na carta:** a própria vaga pede *"include in your cover letter for what kind of
+position you want to apply for"*, e **não existe campo de texto livre** neste formulário.
+O cargo pretendido precisa estar escrito na carta: *Senior 3D Character Artist / Character
+Modeler*. O `EUR 55.000` sai da política de 04/09 para Europa ocidental em casa grande, e a
+TRIXTER é casa grande do grupo Cinesite.
+
+**Armadilha da página:** o aviso de cookies fica por cima do botão de envio, e clicar com
+força no botão sem fechar o aviso leva para `/data-privacy/`, que parece o formulário ter
+sumido. Aceite os cookies antes.
+
+### Gaijin Entertainment, Lead Material & Texture Artist (Budapeste, Hungria) — À MÃO por captcha
+
+**Link:** https://gaijinent.com/job/material--texture-artist
+**Quadro inteiro:** https://gaijinent.com/job
+
+**O achado:** o quadro deles não existe sem JavaScript. Renderizado, mostra **9 vagas**, duas
+de arte, e uma delas é **Lead Material & Texture Artist**, ou seja, texturização em cargo de
+liderança, que é disciplina dele com a resposta de liderança já fechada em 06/09 como **SIM**.
+A casa **paga realocação** para Hungria, Chipre, Alemanha, Montenegro, Letônia e Armênia, e o
+anúncio diz com todas as letras que consideram candidatos de qualquer país e residência.
+
+**Por que à mão:** o formulário (`form.job-respond-form`) termina num campo
+`input[name=captcha]` com **desafio de imagem próprio**. Captcha de desafio não se burla.
+
+**A ressalva honesta, que precisa ir na carta:** o anúncio pede **materiais realistas** de
+hard surface, arquitetura e terreno, e pede Substance Designer. O portfólio dele é
+estilizado e de personagem. Use a resposta já pronta do bloco da Rodeo FX sobre realismo, e
+não esconda a diferença.
+
+| Campo | O que escrever |
+|---|---|
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Additional communication method | LinkedIn: https://www.linkedin.com/in/vinicavalcnti/ |
+| Country | `Brazil` |
+| What languages do you speak? | `Portuguese (native), English (IELTS certified), Spanish (working proficiency)` |
+| Cover letter | o texto abaixo |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Enter captcha | resolver na tela |
+
+```
+I am ready to move for the role, and your relocation support to Hungary or Germany is one of the reasons I am writing.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, credited on The Wingfeather Saga season 1 at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor. Texturing and material work are not a separate step for me: I own the asset end to end, sculpt and high poly, retopology, UVs, baking, PBR and hand painted texturing, look development and engine integration, in Substance Painter and Designer, ZBrush, Maya and Houdini, where I also handle grooming.
+
+On the lead side, I have been Senior for five years, which means reviewing other artists' work, setting the asset standard and mentoring juniors; I also teach as the founder of my own character art school and I am a master's candidate, so giving feedback and holding a quality bar is daily work for me.
+
+One thing said plainly: my published portfolio is mostly stylized, while this role asks for realistic materials for hard surface, architecture and terrain. Every sculpt I make starts from realistic anatomy and I work daily with PBR, UVs, color management, trim sheets and tileables, so I am comfortable delivering realistic surfaces, and I would rather say that clearly than overstate it.
+
+I am not an EU citizen and would need work sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+## EF Games, Senior 3D Hard Surface And Vehicle Artist (Madri, Espanha) — À MÃO por reCAPTCHA v3
+
+**Link:** https://ef.games/jobs/senior-3d-hard-surface/
+
+**Por que à mão:** formulário Elementor com **reCAPTCHA v3 invisível**
+(`data-type="v3"`, sitekey `6LdHI1cqAAAAAOHNZPOUjdX3nmTiCgSm_Io8_Vtn`). A automação preencheu o
+formulário inteiro em 06/09, conferiu campo a campo por leitura de volta, os dois anexos entraram e
+**nenhum campo obrigatório ficou inválido**. No clique em enviar o `admin-ajax.php` devolveu
+`{"success":false,...,"message":"reCAPTCHA V3 validation failed, suspected as abusive usage"}` e a
+tela mostrou *Invalid form, reCAPTCHA validation failed*. É pontuação de sessão reprovando IP de
+datacenter, igual ao da Netflix: no navegador dele passa. **Nada foi enviado.**
+
+**Por que vale:** é a única vaga ABERTA de modelagem e texturização achada na fatia MOTOR-A. Madri,
+presencial, estúdio novo bancado por uma das maiores casas de multiplayer e esports (o próprio site
+liga para a Steam com `utm_source=kraftonhq_web`). Pede modelar, texturizar e implementar asset em
+Unity, levar concept 2D até asset final com UV, material e bake, e **mentorar outros no
+departamento**, que é exatamente o argumento de senioridade dele.
+
+**Armadilha desta página, medida:** a caixa de aceite da Privacy Policy e a caixa opcional de
+contato futuro têm o **mesmo `id` e o mesmo `name`** (`form-field-field_91ffee6`). `querySelector`
+pega só a primeira. Marque as duas na tela.
+
+| Campo | O que escrever |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o número dele, no formato internacional com +55 |
+| Upload CV | `Vini_Cavalcanti_CV.pdf` |
+| Additional files | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| LinkedIn profile | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Link to your website/portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| Other useful links | `https://vinicavalcanti.com` |
+| How many years of experience... | `10+ years` |
+| Have you worked on AAA video game projects? | **`No`** (é a verdade: Endstar não é AAA e não há credito AAA comprovado; o texto livre explica o alcance) |
+| Proficiency in English | `Fluent (C1-C2)` |
+| Proficiency in Spanish | `Basic (A1-A2)` — **confira com ele**, foi a escolha conservadora por não haver dado na campanha; o requisito da vaga é inglês OU espanhol nativo, e o inglês já cumpre |
+| Where are you based | `Olinda, Pernambuco, Brazil` |
+| Desired salary (gross/year, in €) | `Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 gross per year.` |
+| Notice needed | `About one to two months, negotiable.` |
+| Comfortable in a hybrid environment? | `Yes` |
+| As DUAS caixas de aceite | marcar |
+
+**Lista de jogos (campo "Please list all the video games you have contributed to"):**
+
+```
+Endstar (E-Line Media, PC), Senior 3D Character Artist: hero characters from first sculpt to engine, high poly, retopology, UVs, baking, texturing and engine integration. Almost five years, ongoing. The Wingfeather Saga, season 1 (Angel Studios, animated series): character modeling and hand painted texturing. Earlier outsourcing work at PUGA Studios delivering character and asset work for international clients. Full breakdown and images: https://www.artstation.com/viniciuscavalcanti
+```
+
+**Cover letter:**
+
+```
+My discipline is character: modeling, sculpting, texturing and look development. If a character opening comes up at EF Games I would like this application forwarded there. I am applying to the Hard Surface and Vehicle role because building a game asset end to end is the same job for me, and because I want to work in Madrid.
+
+I am ready to move for the role, on site in Madrid and full time. I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized work. For almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration in Unity and Unreal, which is the whole asset rather than one stage of it. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios, and I have an outsourcing background delivering assets for international clients. On hard surface specifically, mechanical and articulated shapes are part of my daily modeling work, and I take 2D concept through to a finished asset with clean topology, UV edit, materials and baked textures.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+I am a Senior who reviews other artists' work and sets the asset standard, I teach as the founder of my own character art school, and I am a master's candidate, so mentoring inside a department is already part of what I do.
+
+Portfolio: artstation.com/viniciuscavalcanti
+```
+
+## eXiin, candidatura espontânea (Bruxelas, Bélgica) — À MÃO, o envio falhou
+
+**Link:** https://exiin.com/jobs-internships/
+
+**Por que à mão:** Contact Form 7 com **reCAPTCHA v3** (`api.js?render=6LdfPdAUAAAAAPDn1oizGunxc...`).
+A automação preencheu tudo em 06/09 e o clique em Submit devolveu na tela *Failed to send your
+message. Please try later or contact the administrator by another method.* **Nada foi enviado.**
+
+**O que a página diz, e é honesto registrar:** *We don't have any public job openings at the moment.
+However, we are looking to increase our team, but preference is given to people who have been an
+intern with us.* O select de posição só tem `Internship` e `Other`; escolher **Other**. O campo de
+arquivo aceita só `audio/*,video/*,image/*`, então **não dá para anexar o CV em PDF**: vai por link.
+
+Campos: Your Name, Your Email, For which position (**Other**), Link of your work/Portfolio
+(`https://www.artstation.com/viniciuscavalcanti`), Your Bluesky (deixar vazio), Your Message.
+
+```
+Applying for: Artist. Senior 3D Character Artist, character modeling, sculpting, texturing and look development, plus hair and fur grooming in Houdini.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site and school: https://vinicavalcanti.com
+
+Not an internship, a senior application. Your page says you are looking to increase the team, so here I am.
+
+Start: about one to two months from an offer, negotiable.
+Length: permanent, full time.
+English: yes, fluent, IELTS certified. I work every day with a studio in the United States.
+Commute to Brussels: yes. I am ready to move for the role, on site in Brussels. I am not an EU citizen and I would need visa sponsorship; an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications make a strong visa case.
+
+10+ years. Season 1 of The Wingfeather Saga at Angel Studios, where I modeled and hand painted characters. Almost five years at E-Line Media on Endstar, hero characters from first sculpt to engine: high poly, retopology, UVs, baking, texturing, LODs and engine integration. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+Open to aligning with your band for the role; as a reference, around EUR 45,000 gross per year.
+```
+
+## Gamecan (Pärnu, Estônia) — porta QUEBRADA no lado deles, avisar
+
+**Link que a página de carreiras publica:** https://careers.gamecan.eu/connect
+
+O botão *Connect* da página de carreiras aponta para um Teamtailor em domínio próprio que **não
+resolve**: o certificado TLS servido pela Fastly não cobre `careers.gamecan.eu`
+(`is not in the cert's altnames: DNS:x.sni-498-default.ssl.fastly.net`) e o host devolve **421**.
+Confirmado por curl e pelo navegador de verdade em 06/09, e `gamecan.teamtailor.com` devolve 404,
+ou seja, não existe slug alternativo achável. **Não é bloqueio contra nós, é configuração errada
+deles**, e enquanto durar ninguém consegue se candidatar por ali.
+
+Vale insistir depois: a Gamecan mantém uma **página inteira de realocação** (`gamecan.eu/relocation/`,
+com time de realocação e pacote de chegada em Pärnu), que é exatamente a prioridade dele. Se o link
+continuar quebrado, a alternativa é `info@gamecan.eu`, que é rota de email e não de formulário.
+
+## Fatia ATS pequeno e formulário hospedado (06/09) — o que ficou À MÃO e por quê
+
+Esta rodada varreu 32 estúdios europeus classificados como ATS pequeno (Traffit, eRecruiter,
+Homerun, Recruitee, Factorial, Oracle, Workday) e formulário hospedado (Notion, Google Forms,
+Tally, Typeform, JotForm, Formspree, MS Forms, HubSpot). O que segue é o que sobrou de parede,
+já mapeado, e uma correção de link que estava errada na rodada anterior.
+
+### Deep Worlds (Genebra, Suíça) — o link certo do formulário de vaga
+
+**CORREÇÃO IMPORTANTE.** O Tally linkado na página inicial deles, `https://tally.so/r/J9l6q7`, é
+**formulário de contato**, não de candidatura: o título é "Contact form" e o próprio texto diz
+"For Job Applications, please use this link". O formulário de candidatura é outro:
+
+**Link certo:** https://tally.so/r/RGRv7d ("Deep Worlds - Job application", 3 páginas)
+
+A primeira pergunta obrigatória é "What position are you applying for?" e as opções são
+**Senior Gameplay programmer**, **Generalist Programmer** e **Other**. Não há vaga de arte
+aberta: a via possível é escolher `Other` e declarar a disciplina. Encaixe fraco, porque a
+contratação anunciada é de programação, mas a porta existe e é espontânea por `Other`.
+Eles oferecem 100% remoto (freelance) ou híbrido presencial em Genebra, à escolha do candidato.
+
+**ONDE EXATAMENTE ELE TRAVA, medido em 06/09 e diferente do que estava escrito antes.** O
+reCAPTCHA v2 não está na última página: está no **fim da página 2**, e a página escreve
+*"Complete the Captcha before you can proceed"* junto do aviso "1 question needs your attention".
+Tudo o que vem antes foi preenchido e conferido por leitura de volta, **inclusive o anexo do
+currículo, que aqui sobe sem problema** (o nome do arquivo aparece na tela). Ou seja: para o Vini
+isso é um minuto de trabalho, é marcar o quadradinho e clicar em Next.
+
+**Página 1:** marcar `Other` e escrever no campo ao lado `Senior 3D Character Artist / Character Modeler`.
+**Página 2:** First Name `Vini`, Last Name `Cavalcanti`, Email `contact@vinicavalcanti.art`,
+Phone o de sempre no formato internacional, Location `Olinda, Pernambuco, Brazil`,
+LinkedIN Profile o de sempre, Website / Portfolio a ArtStation, Other links `https://vinicavalcanti.com`,
+"Anything else we should know?" o texto longo abaixo, "Upload your resume and cover letter" os dois PDFs,
+"How did you hear about this job?" **Company website** (é a verdade: a campanha chegou pelo site deles),
+e "Are you able to work in our Geneva office?" respondida com sim, seguindo a regra de realocação.
+
+### Rebel Wolves (Varsóvia, Polônia) — eRecruiter, Open Application
+
+**Link:** https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74
+(chega-se por rebel-wolves.com → /en/join-us)
+
+Formulário de candidatura espontânea ("Open Application") do eRecruiter, em inglês. Campos:
+nome, sobrenome, email, telefone, **anexo de CV obrigatório** (`data-test-id="cv-file"`, aceita
+pdf), três caixas de texto livre e uma pilha de consentimentos de RGPD que são caixas
+escondidas atrás de widget próprio — vale a regra das três formas de caixa de marcar do
+BRIEF-JHON, e `isChecked()` tem que voltar `true` antes de dar por marcado.
+**Não há captcha no HTML da página.** O que a rodada anterior mediu foi o POST de upload do CV
+voltando **403 do Cloudflare com "Just a moment"** contra o nosso IP de datacenter. No navegador
+do Vini passa.
+
+### PixelAnt Games (Wrocław, Polônia) — eRecruiter, Future Opportunities
+
+**Link do formulário:** https://form.erecruiter.pl/form/a66fabf884d24c15beb2ec7854531f0a
+**Página que o publica:** https://pixelantgames.com/careers/future-opportunities/
+
+É candidatura espontânea declarada: "Didn't see a role that's the right fit just yet? No
+worries - we'd still love to hear from you". Local: Wrocław ou remoto. Mesmo eRecruiter da
+Rebel Wolves, mesmo campo de CV obrigatório e a mesma parede de 403 no upload.
+
+### Respostas para os três, quando o Vini abrir no navegador dele
+
+Dados básicos do topo deste arquivo. Nos campos livres, o texto é este:
+
+```
+I am ready to move for the role, on site and full time, and I am equally comfortable with remote or hybrid. I am a Senior 3D Character Artist with more than 10 years in stylized characters. I take a character end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development, LODs and engine integration, plus character grooming in Houdini when hair or fur is part of the design. Credited on The Wingfeather Saga season 1 at Angel Studios, and for almost five years at E-Line Media in Arizona I have taken Endstar's hero characters from first sculpt to engine as a remote international contractor. As a Senior I review other artists' work and set the asset standard, I teach as founder of my own character art school and I am a master's candidate. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am not an EU citizen and I would need visa sponsorship; my academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I'm looking at around EUR 45,000 per year. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+Autorização de trabalho na Polônia e na Suíça: **não tem, precisa de patrocínio**, e isso se
+responde com a verdade. Liderança de equipe: **sim**. Salário atual da E-Line: nunca se revela.
+
+---
+
+# Fatia MOTOR-B (06/09): dossiês dos formulários de WordPress que ficaram à mão
+
+Sete formulários abaixo foram preenchidos inteiros pela automação, com leitura de volta campo a
+campo, e pararam na verificação anti-robô ou num campo que eu não invento. Nenhum deles foi
+enviado. Copiar e colar leva poucos minutos cada.
+
+## A regra nova que esta rodada mediu, e ela vale para o WordPress inteiro
+
+**Formulário de WordPress com reCAPTCHA v3 recusa a sessão automatizada, e a mensagem de erro
+mente sobre o motivo.** Três casas devolveram a mesma tela genérica do Contact Form 7,
+*"There was an error trying to send your message. Please try again later"*, que parece defeito de
+servidor de email e **não é**: é pontuação de sessão. Quem provou isso foi o **Urban Games**, cujo
+Elementor escreve o motivo por extenso na tela, em vermelho: **"Invalid form, reCAPTCHA validation
+failed"** e **"reCAPTCHA V3 validation failed, suspected as abusive usage"**. É o mesmo muro da EF
+Games e da eXiin na fatia A.
+
+**Consequência prática, e ela poupa tempo:** antes de preencher um formulário de WordPress, veja
+como o `api.js` do reCAPTCHA é carregado na página.
+
+| O que aparece no HTML | O que é | O que fazer |
+|---|---|---|
+| Nenhum `recaptcha` na página | sem captcha | **envia normalmente** |
+| `api.js?render=<chave>` | v3, pontuação de sessão | **vai à mão**, a automação é reprovada |
+| `api.js?render=explicit` com `<div class="g-recaptcha" data-sitekey>` | v2 de caixa | **vai à mão**, é parede |
+| `api.js` sem `render=`, com `data-sitekey` | v2 de caixa | **vai à mão**, é parede |
+
+A **Nordcurrent**, o único envio confirmado desta fatia, é exatamente o caso da primeira linha:
+Contact Form 7 **sem reCAPTCHA nenhum**, e passou de primeira.
+
+## Dados que valem para todos os sete
+
+Nome `Vini` / `Cavalcanti` · Email `contact@vinicavalcanti.art` · Telefone `o telefone do doc privado do Drive`
+(em campo único, sem espaços: `o telefone do doc privado do Drive`) · Cidade `Olinda, Pernambuco` · País `Brazil`
+Portfólio `https://www.artstation.com/viniciuscavalcanti` ·
+LinkedIn `https://www.linkedin.com/in/vinicavalcnti/` · Escola `https://vinicavalcanti.com`
+Anexos: `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf`
+Autorização de trabalho: **não é cidadão da UE, precisa de patrocínio** — nunca responder outra coisa.
+Liderança de equipe: **Yes**, cinco anos de Senior na E-Line, professor e fundador da própria escola, mestrando.
+
+## 1. Gigantic Duck Games — 3D Artist (Borås, Suécia, REMOTO efetivo) — à mão por reCAPTCHA v3
+
+**Link:** https://giganticduck.com/application/
+**Por que vale:** é a única **vaga de 3D Artist aberta** da fatia inteira, remota, 40h por semana,
+em dois projetos (Bombergrounds e um título não anunciado). A mesma requisição existe nas duas
+versões, então escolha uma.
+**O que trava:** Contact Form 7 com reCAPTCHA v3. Preenchido e enviado **duas vezes**, e nas duas
+a tela devolveu *"There was an error trying to send your message. Please try again later"*.
+
+| Campo | O que preencher |
+|---|---|
+| Position you are applying for (select, obrigatório) | `3D Artist` |
+| Location (select, obrigatório) | `Remote` |
+| Full Name (obrigatório) | `Vini Cavalcanti` |
+| Country (obrigatório) | `Brazil` |
+| Email (obrigatório) | `contact@vinicavalcanti.art` |
+| Discord | deixar vazio |
+| Link to portfolio or other site | `https://www.artstation.com/viniciuscavalcanti` |
+| CV (obrigatório, aceita pdf/docx/jpg/png) | `Vini_Cavalcanti_CV.pdf` |
+| Application Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Extra Attachment | deixar vazio |
+| Where did you hear about this position (select, obrigatório) | `Other` — é a única verdadeira, a campanha chegou pelo diretório de estúdios e pela página de carreiras deles |
+
+**Não existe campo de mensagem livre neste formulário**, então a frase de realocação e o caso de
+visto só cabem na carta anexada.
+
+## 2. Urban Games — Head of Art (Schaffhausen, Suíça) — à mão por reCAPTCHA v3
+
+**Link do formulário:** https://www.urbangames.com/contact/#contact-form
+**Vaga:** https://www.urbangames.com/career/ (a descrição de Head of Art é um PDF em
+`https://www.urbangames.com/head-of-art-2/`). Casa de *Transport Fever 3*. Há também Head of
+Publishing e Lead Producer abertos, e a página convida candidatura espontânea.
+**O que trava:** o Elementor escreve o motivo na tela: *"Invalid form, reCAPTCHA validation failed"*
+e *"reCAPTCHA V3 validation failed, suspected as abusive usage"*.
+**Aviso:** o formulário tem só três campos e **nenhum campo de arquivo**, então CV e carta vão por
+link e por resposta ao email deles.
+
+- Name: `Vini Cavalcanti`
+- Email: `contact@vinicavalcanti.art`
+- Message:
+
+```
+Application for the Head of Art opening listed on your career page (and, if the fit is better there, for any character or 3D art role on the team).
+
+I am ready to move to Schaffhausen for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+On the leadership side, which is what a Head of Art role asks for: as a Senior I review other artists' work, set the asset standard and mentor junior artists. I am also a teacher and the founder of my own character art school, where I built and teach the curriculum, and I am a master's candidate. Setting an art vision, giving structured feedback and writing guides is already my daily practice.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+I can send the CV and cover letter in PDF by reply, or by any address you prefer.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year, and I understand Swiss levels differ.
+
+Work authorisation: I am not an EU or Swiss citizen and I would need a permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
+
+Phone: o telefone do doc privado do Drive
+```
+
+## 3. Grimlore Games (THQ Nordic) — Open Application (Munique) — à mão por reCAPTCHA v2 de caixa
+
+**Link:** https://grimloregames.com/open-application/ , botão **APPLY NOW**, que leva a
+`https://grimloregames.com/apply?contact-reason=Grimlore%20Job%20Application:%20Open%20Application%20(m/f/d)`
+**Por que vale:** casa de *Titan Quest II* e *SpellForce 3*, do grupo THQ Nordic/Embracer. As vagas
+de arte abertas hoje são **Senior/Principal Environment Artist** e **3D Animator**, ou seja, o lado
+de personagem e criatura está descoberto, e a própria página pede candidatura espontânea.
+**O que trava:** WPForms com **reCAPTCHA v2 de caixa de marcar**, visível logo acima do Submit.
+**Aviso:** o formulário **não tem campo de arquivo**. CV por link.
+
+| Campo | O que preencher |
+|---|---|
+| Name * | `Vini Cavalcanti` |
+| Email * | `contact@vinicavalcanti.art` |
+| Subject * | `Open Application (m/f/d) - Senior 3D Character Artist / Character Modeler` |
+| Privacy Policy Checkbox * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+Message *:
+
+```
+I am ready to move to Munich for the role, on site and full time.
+
+I am applying as a Senior 3D Character Artist / Character Modeler. I have more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini, so hair is part of the character rather than a separate handoff.
+
+Your open application page says to reach out even when the role is not listed, and Titan Quest II and the RPG and RTS line are exactly the kind of character and creature work I want: heroes, monsters and armour sets built for deformation and for engine, at scale. Your current openings list a Senior/Principal Environment Artist and a 3D Animator, so the character and creature side is where I would strengthen the team, and I am comfortable covering hard surface and props alongside characters.
+
+As a Senior I review other artists' work, set the asset standard and mentor junior artists. I also teach as founder of my own character art school and I am a master's candidate.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+CV on request or downloadable from the portfolio site; happy to send the PDF by reply.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 55,000 per year.
+
+Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. I can start remotely while the permit is processed, which is how I already work today for a studio in another country and time zone.
+
+Phone: o telefone do doc privado do Drive
+```
+
+## 4. Stormind Games — Spontaneous Applications (Acireale e Milão, Itália) — à mão por reCAPTCHA do BambooHR
+
+**Link:** https://stormindgames.bamboohr.com/careers/203
+**Por que vale:** casa italiana premiada de *Remothered* e *Batora*, jogos narrativos para PC e
+console. É a **única requisição aberta** no quadro deles, e é espontânea, que conta.
+**O que trava:** o reCAPTCHA de caixa de marcar do BambooHR, o mesmo da ICON, da Image Engine e da
+BetaDwarf. É do ATS, não do estúdio.
+
+**Não perca tempo com o formulário do site:** `stormindgames.com/careers` tem um Contact Form 7 de
+candidatura espontânea no HTML, mas ele está **escondido, sem nenhum gatilho visível na página** —
+o único botão real é VIEW OPENINGS, que leva ao BambooHR. Medido no navegador de verdade.
+
+**Duas armadilhas desta página, as duas medidas:**
+1. O campo **Country já vem preenchido com `United States`**. Trocar para `Brazil`.
+2. Existe um **radio obrigatório** *"Is your English proficiency level at least B2? (Please note
+   your English level will be tested during the recruiting process)"* → **Yes**.
+
+| Campo | O que preencher |
+|---|---|
+| First / Last Name * | `Vini` / `Cavalcanti` |
+| Email * | `contact@vinicavalcanti.art` |
+| Phone * | `o telefone do doc privado do Drive` |
+| Address / City / State / ZIP | os de sempre (documento privado do Drive) |
+| Country | trocar `United States` por `Brazil` |
+| Cover Letter * | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Resume * | `Vini_Cavalcanti_CV.pdf` |
+| Date Available | cerca de dois meses à frente |
+| Desired Pay | `Around EUR 45,000 per year. Open to aligning with your band for the role.` |
+| Website, Blog or Portfolio | ArtStation |
+| LinkedIn URL * | LinkedIn |
+| Highest Education Obtained / College | escolaridade e universidade |
+| Who referred you / References | deixar vazio |
+| English proficiency at least B2 * | **Yes** |
+| Please attach any relevant document or portfolio | opcional, pode ir o PDF do portfólio |
+| Referred by a current employee | deixar vazio |
+| Consentimento GDPR (EU 2016/679) * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+## 5. The Knights of Unity — candidatura espontânea (Wrocław, Polônia) — à mão por reCAPTCHA v2
+
+**Link:** https://theknightsofunity.elevato.net/pl/nie-znalazles-interesujacego-cie-stanowiska,ja,58
+(a página tem alternador PL / EN no topo)
+**O ATS é o Elevato**, que é **ATS novo para esta campanha** e vale conhecer: formulário completo,
+com **até quatro arquivos de CV**, pretensão salarial, aviso prévio e campo de informação adicional.
+**O que trava:** reCAPTCHA v2 de caixa de marcar (`api.js` sem `render=`, com `div.g-recaptcha` e
+`data-sitekey`, que é a assinatura do v2).
+
+| Campo (rótulo em polonês) | O que preencher |
+|---|---|
+| Imię * | `Vini` |
+| Nazwisko * | `Cavalcanti` |
+| Adres e-mail * | `contact@vinicavalcanti.art` |
+| Telefon komórkowy * | `o telefone do doc privado do Drive` |
+| Jakie stanowisko Cię interesuje? (que cargo te interessa) | `Senior 3D Character Artist / Character Modeler` |
+| Plik CV (até 4 arquivos, máx 4 MB cada) | `Vini_Cavalcanti_CV.pdf` e `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Kwota (pretensão) | `EUR 45,000` |
+| Okres wypowiedzenia (aviso prévio, select) | cerca de dois meses |
+| Adres e-mail de quem indicou | deixar vazio |
+| Informacja dodatkowa (informação adicional) | o texto abaixo |
+| Zgoda (consentimento de dados) * | marcar |
+| reCAPTCHA | marcar a caixa |
+
+```
+I am ready to move to Wroclaw for the role, on site and full time. Remote also works, since I already work every day with a studio in another country and time zone.
+
+Senior 3D Character Artist with more than 10 years in stylized characters. Almost five years as Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unreal and Unity. Credited on season 1 of The Wingfeather Saga at Angel Studios, where I modeled and hand painted characters. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+As a Senior I review other artists' work, set the asset standard and mentor junior artists; I also teach as founder of my own character art school and I am a master's candidate.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+```
+
+## 6. Milestone — General Application (Milão) — à mão por DATA DE NASCIMENTO, não por captcha
+
+**Link:** https://milestone.it/general-application/ (chega-se por milestone.it/careers → *Send your
+spontaneous application*)
+**Por que vale:** Milestone é casa grande italiana, de *MotoGP*, *Hot Wheels Infinite Rush*,
+*Screamer* e *Ride*. O ATS é o **Cezanne** (`cezanneondemand.intervieweb.it`, IdForm 1108), dentro
+de iframe, e é **ATS novo para a campanha**.
+**Por que ficou à mão, e é um motivo diferente de todos os outros desta rodada:** o reCAPTCHA deles
+é **invisível e não barrou nada**. O que barra são dois campos obrigatórios que a automação não
+responde: **Home Address**, que é widget de autocomplete de endereço, e **Date of birth**, que é
+dado que eu não invento em formulário. O envio devolve *"Some required fields are empty or
+incorrect. Fill in all fields marked with *"* e marca esses dois em vermelho.
+
+**Tudo o mais já foi preenchido e conferido por leitura de volta**, então é só repetir:
+
+| Campo | O que preencher |
+|---|---|
+| First Name / Surname | `Vini` / `Cavalcanti` |
+| E-Mail / Confirm E-Mail | `contact@vinicavalcanti.art` nos dois |
+| **Home Address** (obrigatório) | escolher da lista do autocomplete; o endereço está no documento privado do Drive |
+| Mobile phone number | o widget vem em `+1`: digitar `o telefone do doc privado do Drive` faz ele virar `+55` sozinho, conferido |
+| **Date of birth** (obrigatório) | **só você tem esse dado** |
+| Total years of experience | `10` |
+| Functional Area (select) | `Creativity` |
+| Portfolio Link | `https://www.artstation.com/viniciuscavalcanti` |
+| Education Qualification (select) | `Post lauream Specialization` |
+| Skills | ZBrush, Maya, Blender, Substance Painter, Substance Designer, Houdini, Unreal, Unity |
+| CV (máx 5 MB) | `Vini_Cavalcanti_CV.pdf` |
+| Privacy (informativa art. 13 GDPR) | marcar |
+
+**Não há campo de mensagem livre neste formulário**, então a frase de realocação e o caso de visto
+só cabem na carta, que aqui não tem campo: vale mandar o CV com a carta no mesmo PDF, ou escrever
+depois para o RH deles.
+
+## 7. Gamious — candidatura espontânea (Haarlem, Holanda) — à mão por reCAPTCHA v3
+
+**Link:** https://gamious.com/jobs/
+**Por que conta como porta:** a página diz que não há vaga aberta agora **mas convida a escrever
+assim mesmo** e pede, com todas as letras, *"Don't forget a link to your portfolio and/or resume"*.
+Encaixe fraco de urgência, mas é porta aberta declarada.
+**O que trava:** Contact Form 7 com reCAPTCHA v3; a tela devolveu *"There was an error trying to
+send your message. Please try again later"*. Não há campo de arquivo.
+
+- Name: `Vini Cavalcanti` · E-mail: `contact@vinicavalcanti.art`
+- Subject: `Senior 3D Character Artist / Character Modeler - open application`
+- Your message:
+
+```
+Your jobs page says to reach out even when nothing is listed, so here I am.
+
+I am ready to move to the Netherlands for the role, on site and full time. Remote also works: I already work every day with a studio in another country and time zone.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters. For almost five years I have been Senior at E-Line Media in Arizona, taking Endstar hero characters from first sculpt to engine: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration in Unity and Unreal. Before that I modeled and hand painted the characters of season 1 of The Wingfeather Saga at Angel Studios. I also groom hair and fur in Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Houdini.
+
+Your games are stylized and character driven, which is the register I work in natively, and I take a character end to end rather than one step of it.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+Portfolio and resume: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+School: https://vinicavalcanti.com
+Happy to send the CV in PDF by reply.
+
+Compensation: open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Work authorisation: I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Phone: o telefone do doc privado do Drive
+```
+
+## 8. VSTEP (Roterdã) — não é captcha, é bloqueio de rede contra nós
+
+**Link:** https://vstepsimulation.com/careers/
+O host **derruba a conexão** (`Recv failure: Connection reset by peer`) por curl **e** pelo
+navegador de verdade, em `vstepsimulation.com` e em `vstep.nl`, na raiz e em `/careers`. Pela regra
+de 06/09 isso não prova vaga morta nem site fora do ar: prova bloqueio contra o nosso IP. O CSV de
+portas registra Gravity Forms no site deles. **Abra no seu navegador antes de descartar.**
+
+### Cosmico (Suécia), SENIOR 3D ARTIST — À MÃO porque o Squarespace recusa a automação
+
+**Link:** https://www.cosmicogames.com/career (o botão **SENIOR 3D ARTIST →** leva para
+https://www.cosmicogames.com/contact, que é a porta que o próprio estúdio publicou para a vaga)
+
+**O achado:** a página de carreiras da Cosmico só monta em JavaScript e por isso o curl a deu
+como sem vaga. Renderizada, ela lista **três vagas abertas: SENIOR 3D ARTIST, WRITER e
+ENVIRONMENT ARTIST**. A primeira é a disciplina dele em nível dele.
+
+**Por que à mão:** o formulário é Squarespace e não tem captcha visível, mas o
+`POST /api/form/SaveFormSubmission` volta **401** e a tela responde *"Unable to submit form.
+Please try again later."* É o anti-robô do Squarespace recusando a sessão automatizada, do
+mesmo tipo do reCAPTCHA invisível da Netflix. No navegador dele passa.
+
+**Armadilha:** o formulário tem um **campo isca** (`id=message-field`) que fica invisível e
+não pode ser preenchido, senão o envio é descartado como spam. Preencha só Name, Email e
+Message.
+
+**Ressalva honesta:** não há campo de anexo, então o currículo não vai. Os links do portfólio
+precisam estar no texto, e estão.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Message | o texto abaixo |
+
+```
+Applying for the SENIOR 3D ARTIST role listed on your careers page. I am ready to move to Sweden for the role, on site and full time.
+
+I am a Senior 3D Character Artist with more than 10 years in stylized characters, and I take an asset end to end: sculpt and high poly, retopology, UVs, baking, hand painted and PBR texturing, look development and engine integration, in Maya, ZBrush, Substance Painter and Designer and Blender. I also groom hair and fur in Houdini, so character, texture and groom are one continuous job for me rather than three handoffs.
+
+I am credited on The Wingfeather Saga season 1 at Angel Studios, where I modeled and hand painted the characters, and for almost five years I have been the character artist on Endstar at E-Line Media in Arizona, taking hero characters from first sculpt to engine while working fully remote from another country and time zone. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. Your studio works in stylized worlds, which is exactly my register.
+
+As a Senior of five years I review other artists' work and set the asset standard; I also teach as the founder of my own character art school and I am a master's candidate.
+
+I am not an EU citizen and I would need visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site: https://vinicavalcanti.com
+```
+
+### Achado que é da fila de EMAIL, não de formulário: THQ Nordic Mobile / HandyGames
+
+**Vaga:** 2D/3D Game Artist (Mid-level/Senior) (f/m/d), **HandyGames Studios GmbH**,
+Giebelstadt perto de Würzburg, Alemanha, **presencial**, parte do **Embracer Group**.
+**Link:** https://www.thqnordicmobile.com/en/jobs/2d-3d-game-artist/
+
+**Por que entra aqui:** o quadro deles não existe sem JavaScript e o curl marcou o domínio
+como sem vaga. Renderizado, ele mostra seis anúncios, e este é **arte de verdade e no nível
+dele**: o texto pede *"Execution of the entire game asset creation workflow: from high- and
+low-poly modeling to PBR texturing and integration into the game engine (Unity)"*,
+*"Creation of stylized 3D models, environments, props, and potentially characters"* e
+*"mentoring junior artists and interns"*. É o fluxo inteiro que ele faz todo dia, em estilizado,
+com mentoria, que é a resposta de liderança já fechada como SIM.
+
+**Não é candidatura de formulário:** o botão **APPLY NOW!** é um `mailto:` para
+`jobs@thqnordicmobile.com` com o assunto já montado
+(`Application as 2D/3D Game Artist (Mid-level/Senior)`). Por isso ela **sai da fila do Jhon e
+vai para a fila de email**, com currículo e carta anexados. Atenção: **Alkimia Interactive
+(THQ Nordic Barcelona) já foi contatada** em 02/09, mas é outro estúdio e outro endereço; esta
+não é repetição.
+
+### O que a fila JS-SO mostrou e não virou candidatura, com o motivo
+
+Registrado para a próxima rodada não reabrir o que já foi lido no navegador de verdade em 06/09:
+
+- **Nixxes Software (PlayStation Studios, Utrecht)**: quadro vivo, **só Graphics Programmer e
+  Senior Optimization Programmer**. Sem candidatura espontânea.
+- **InnoGames (Hamburgo)**: o quadro é **Lever europeu** (`api.eu.lever.co/v0/postings/innogames`),
+  **5 vagas**, nenhuma de arte e nenhuma espontânea. O site linka só a âncora `#c926`, por isso
+  a varredura por curl não achava nada.
+- **Hazelight (Estocolmo)**: página de carreiras renderiza **zero vaga**.
+- **Paradox Interactive**: 22 vagas, a única de personagem é **estágio** de 3D Character Art,
+  abaixo do nível dele. A via foi o banco de talentos, já feita.
+- **Aonic** e **Rift Consulting** (Suécia): Teamtailor com 2 e 3 vagas, todas de engenharia e
+  jurídico. Sem arte.
+- **Sandbox Interactive (Albion Online, Berlim)**: tem **Lead 3D Environment Artist**, mas o
+  formulário exige, em campo obrigatório, **anos de experiência em arte de cenário** e um
+  **link de portfólio mostrando assets 3D de cenário**. O portfólio dele é de personagem e não
+  tem esse material, então responder seria inventar. Descartada por exigência do anúncio.
+- **RaceWard Studio (Nacon, Milão)**, **The Game Kitchen (Tenerife)**, **Gamedia (Alkmaar)**,
+  **Inverge (Valência)**, **Blue Brain Games**, **EB Studio (Suécia)**, **Beartwigs**,
+  **Frostrok**, **Strelka Games**, **Throughline Games**: a porta é **email**, não formulário.
+  Vão para a fila de email. A Gamedia ainda exige morar a **até 40 km de Alkmaar**.
+- **Mooneye Studios (Hamburgo)**: sem vaga; só procura freelancer de **concept art de cenário**.
+- **Villain Studios (Amsterdã)**: tem candidatura espontânea, mas é produtora de reality e
+  documentário, e as áreas são criação, produção e pós. Fora da disciplina.
+- **DigiTales**, **Bippinbits**, **BiteMe Games**, **Bloom and Gloom**, **Convoy Games**,
+  **Crunchy Leaf**, **Ember Trail**, **Tiny Bull**, **Barrel Roll Games**: a página renderizada
+  diz, com todas as letras, que **não há vaga** e várias pedem para **não** mandar espontânea.
+- **On a Roll Studio**: o domínio da fila é `tumblr.com` e cai no quadro da **Automattic**, que
+  não é o estúdio. Registro errado na fila de origem.
+- **Nomada Studio (GRIS, Neva — Barcelona)**: a página `/careers/` renderiza uma frase só,
+  *"There are no open positions at this time."* Encaixe seria ótimo, vale revisitar.
+- **Oddshot Games (Flandres, Bélgica)**: tem **Open Application**, mas é por email
+  (`jobs@oddshot.gg`, assunto *Open Application*) e o anúncio **exige morar em Flandres**.
+  Descartada por exigência do anúncio.
+- **Red Rover Interactive (Oslo)**: a candidatura espontânea é `mailto:` para
+  `rick@redroverinteractive.com`. Fila de email.
+- **Broken Rules (Viena)**: a única vaga é **Finanzmanager*in**, meio período.
+- **Dionic Software (Alemanha, 100% remoto)**: *"We are currently not looking to hire."*
+- **Kong Orange (Aarhus)**: a página de carreiras é **texto de exemplo em lorem ipsum**
+  ("Senior Architect", "Design Intern"), ou seja, modelo de site nunca preenchido. Não há vaga.
+- **Brunch Studio (Paris)**: casa de CGI que faz trailer de Riot, Blizzard e Mojang. A página
+  de carreiras renderiza praticamente vazia, sem vaga e sem porta de candidatura.
+- **Coffee Stain North, Art Director and Art Lead**: **já tinha candidatura enviada hoje** por
+  outra frente da campanha, requisição `8083591`. Duplicata pega no dedupe, não reenviada.
+
+## 9. SQRT3 (Varsóvia, Polônia) — envio NÃO CONFIRMADO, e a armadilha dos dois formulários iguais
+
+**Link:** https://sqrt3.games/#rekrutacja (a seção *Kariera* fica na própria home)
+**Por que conta:** a seção diz *"Kochasz gry i chcesz tworzyć je razem z nami? Zostaw nam swoje CV!"*
+(deixe seu CV) e tem campo real de upload de PDF, até 24 MB. É candidatura espontânea.
+**O que aconteceu:** o formulário foi preenchido inteiro e conferido campo a campo, com o CV
+anexado e o consentimento lido de volta como marcado, mas **depois do clique em WYŚLIJ a tela
+limpou o formulário sem escrever mensagem nenhuma**, nem de sucesso nem de erro. Pela regra da
+campanha isso **não conta como envio**. Numa tentativa o POST do Elementor devolveu 200 e noutra
+502 pelo nosso proxy. **Confira a caixa de email antes de reenviar**, porque uma das tentativas
+pode ter entrado.
+
+**A armadilha, que vale para qualquer página com mais de um formulário Elementor:** existem **dois
+formulários Elementor idênticos** nesta página, o de contato e o de recrutamento, com os **mesmos
+`name`** (`form_fields[name]`, `form_fields[email]`, `form_fields[message]`) e o mesmo
+`name="Nowy formularz"`. `querySelector` devolve o **de contato**, então a primeira tentativa
+escreveu no formulário errado sem erro nenhum. O que distingue os dois é o campo de arquivo, que só
+o de recrutamento tem: escope tudo por **`form:has(input[type=file])`**.
+
+| Campo | O que preencher |
+|---|---|
+| Imię i Nazwisko | `Vini Cavalcanti` |
+| E-mail | `contact@vinicavalcanti.art` |
+| Wiadomość | o texto de candidatura espontânea (o mesmo do bloco do Knights of Unity serve) |
+| Wgraj swoje CV (PDF, máx 24 MB) | `Vini_Cavalcanti_CV.pdf` |
+| Zgoda (consentimento) | marcar |
+
+## Framestore — 3D Modeller (Short term contract), Montreal — À MÃO por hCaptcha
+
+**Link:** https://framestore.recruitee.com/o/modeleurse-3d-3d-modeller-contrat-court-terme
+**Achada em 06/09 as 22h40** varrendo a API do Recruitee da Framestore por disciplina, e ela NAO estava no painel: o painel so tinha a Blender Generalist e a Visual Development AI. Das 51 vagas do quadro, esta e a unica de MODELAGEM.
+**Por que vale muito:** e a disciplina literal dele, no departamento de Film de uma casa multi premiada com Oscar, em MONTREAL, ou seja, Canada, que e pais prioritario. Contrato curto, mas contrato por projeto em casa grande de VFX conta normalmente pela regra de formato.
+**Por que a mao:** hCaptcha de imagem, medido em 06/09. Preenchi tudo, a URL avancou para /c/new e o desafio apareceu. Nao se burla.
+
+**TRES ARMADILHAS DESTE FORMULARIO, para nao perder tempo:**
+1. O formulario existe no DOM mas fica FECHADO: os campos preenchem normalmente e o botao **Send continua invisivel**. Tem que clicar em **Apply** primeiro para abrir a secao de envio.
+2. O campo de telefone **ja vem preenchido com +1** e nao aceita clique (widget proprio). Escreva com o codigo do pais explicito, senao o numero sai como norte-americano.
+3. As tres ultimas perguntas sao **radio e nao texto**: anos de experiencia, patrocinio de visto e pronomes. Um preenchedor de texto ignora as tres em silencio.
+
+| Campo | Resposta |
+|---|---|
+| CV or resume | Vini_Cavalcanti_CV.pdf |
+| Full name | Vini Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | codigo do pais Brasil, numero no doc privado do Drive |
+| Portfolio link | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio password | No password, the portfolio is public. |
+| Years of experience in 3D modeling | **More than 5 years** |
+| Availability date | Within 30 days of an offer. |
+| Current Location | Olinda, Pernambuco |
+| Citizenship | Brazilian |
+| **Will you need visa sponsorship?** | **Yes** (a verdade) |
+| What are your pronouns? | He/him |
+| Consentimento | marcar |
+
+**Desired salary/rate:**
+Open to aligning with your band for the role; as a reference, around CAD 95,000 per year equivalent. I am ready to move to Montreal for the role.
+
+## SQRT3 (Square Root of Tree), Varsóvia — espontânea — À MÃO, e NÃO é captcha
+
+**Link:** https://sqrt3.games/#rekrutacja (a seção REKRUTACJA, no fim da página)
+**Medido em 06/09 às 23h.** Preenchi tudo e a leitura de volta deu certo: CV anexado, nome, email, mensagem de 1451 caracteres e o consentimento marcado. **Nenhum desafio de captcha apareceu** (o reCAPTCHA da página é v2 invisível, `render=explicit` com `data-size="invisible"`, que passa por pontuação).
+
+**O que trava é a NOSSA rede, não o estúdio:** o `POST /wp-admin/admin-ajax.php` volta **502 com `bridge error read ECONNRESET`**. É a mesma assinatura que a TRIXTER deu na fatia JS-SO: o AJAX de envio não sai deste ambiente. **No seu navegador isso não acontece**, e como não há captcha, é envio de um minuto.
+
+**Cuidado que vale para este e para qualquer Contact Form 7 e Elementor:** depois de clicar em enviar, se os campos continuarem preenchidos, **não enviou**. Formulário que enviou de verdade limpa ou troca de tela.
+
+**Atenção: há DOIS formulários na página.** O de contato não tem campo de CV. O de recrutamento é o que tem **"Wgraj CV"**. Use esse.
+
+| Campo (em polonês) | Resposta |
+|---|---|
+| Imię i Nazwisko | Vini Cavalcanti |
+| E-mail | contact@vinicavalcanti.art |
+| Wgraj CV | Vini_Cavalcanti_CV.pdf |
+| Zgoda (consentimento) | marcar, é obrigatório |
+
+**Wiadomość (mensagem):**
+Senior 3D Character Artist, 10+ years in stylized characters, applying spontaneously.
+
+I am ready to move to Warsaw for the role. I am not an EU citizen and would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case.
+
+Credited on The Wingfeather Saga at Angel Studios, where I modelled and hand painted the Season 1 characters, and for almost five years at E-Line Media in Arizona I have taken the hero characters of Endstar from first sculpt into engine. I take a character end to end: high poly sculpting, retopology, UVs, baking, texturing, look development and engine integration, plus hair and fur grooming in Houdini. Tools: ZBrush, Maya, Substance Painter and Designer, Houdini, Marmoset, Unreal Engine.
+
+My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it.
+
+As a Senior I review other artists' work and set the asset standard; I also teach as founder of my own character art school and I am a master's candidate, so leading and mentoring is part of what I do.
+
+Open to aligning with your band for the role; as a reference, I am looking at around EUR 45,000 per year.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+
+## Distillery VFX, Vancouver — Job Application Form — À MÃO, e NÃO é captcha
+
+**Link:** https://www.distilleryvfx.com/apply
+**Medido em 06/09 às 23h30, e o diagnóstico corrige o anterior.** A entrada dizia "à mão por reCAPTCHA". **Não há captcha nenhum:** nenhum script de reCAPTCHA, hCaptcha ou Turnstile carrega na página, e depois do clique em Apply Now nenhum desafio aparece.
+
+**O que trava são DOIS campos obrigatórios que não são `input`, `textarea` nem `select`:** são dropdowns próprios do Wix, botões com `data-hook=dropdown-base`. Um preenchedor comum ignora os dois **em silêncio**, o formulário não envia e **não aparece mensagem de erro nenhuma** — parece captcha e não é. Nem o clique do Playwright nem o `.click()` de dentro do navegador abriram a lista.
+
+Tudo o mais preenche: 12 de 12 campos, CV sobe para o serviço do Wix (o nome do arquivo aparece na tela), e as três opções de local ficam marcadas.
+
+**Cuidado com o CV:** depois do upload o Wix **limpa o `input[type=file]`**, então `input.value` vazio NÃO quer dizer que faltou anexo. A prova é o nome do arquivo na tela.
+
+**Por que vale:** Vancouver, Canadá anglófono, que é a prioridade número um da campanha.
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | código do país Brasil, número no doc privado do Drive |
+| Current Country of Residence | Brazil |
+| What role are you interested in? | Character Modeller and Texture Artist. Senior 3D Character Artist, 10+ years, stylized. I am ready to move to Vancouver for the role; I would need visa sponsorship. |
+| **What is your current level?** (dropdown) | **Sr** |
+| LinkedIn Link | https://www.linkedin.com/in/vinicavalcnti/ |
+| Reel or Portfolio Link 1 | https://www.artstation.com/viniciuscavalcanti |
+| Reel or Portfolio Link 2 | https://vinicavalcanti.com |
+| Vimeo Password | No password, the portfolio is public. |
+| Upload Resume | Vini_Cavalcanti_CV.pdf |
+| **Current Status in Canada** (dropdown) | **Need a work permit** (a verdade) |
+| Workplace options | marcar Studio, Remote e Hybrid |
+| Rate expectation | Open to aligning with your band for the role; as a reference, around CAD 48/hour, or CAD 95,000 per year equivalent. |
+| How did you hear about this role? | Your careers page. |
+
+## ICON Creative Studio — Intermediate Modeling/Texture Artist, Vancouver — A VAGA MAIS IMPORTANTE DA FILA
+
+**Link:** https://iconcreative.bamboohr.com/careers/136
+**Por que esta é a número um por chance de contratação:** é a disciplina literal dele (modelar e texturizar em Maya, com Substance Painter e ZBrush, topologia e UV, e o anúncio cita Houdini como diferencial); a faixa é **publicada, CAD 63.131 a 85.000**; a posição é **sindicalizada**; e há **dois sinais de visto que quase nenhum estúdio dá**: eles dizem que o time vem do mundo inteiro e mantêm uma vaga aberta de **RCIC Immigration Coordinator**, ou seja, tratam imigração dentro de casa. É a maior casa de animação CG independente do Canadá, com mais de mil artistas, entregando para Netflix, Disney+, Apple TV+, Amazon, Peacock e Paramount+.
+**Conferido em 06/09 às 23h45:** o quadro tem **28 vagas** e esta é a **única** da disciplina dele. Não existe versão sênior de modelagem lá, então é esta ou nenhuma.
+**Ressalvas honestas:** o nível é intermediário, não sênior, e é presencial em Vancouver.
+
+**Parede confirmada, não vale insistir:** o formulário do BambooHR termina em **reCAPTCHA v2 de caixa** (o iframe vem com `size=normal` e `render=explicit`). Não é caso mal diagnosticado como a SQRT3 e a Distillery foram.
+
+**O formulário fica atrás do botão Apply** e tem 17 campos. Preenchimento:
+
+| Campo | Resposta |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | seu número, com o código do país na frente |
+| Address / City / Postal Code | os do documento privado do Drive, "CAMPANHA - dados pessoais dos formulários" |
+| Province | Pernambuco |
+| Country | Brazil |
+| Choose File (obrigatório) | Vini_Cavalcanti_CV.pdf |
+| Date Available | dentro de 30 dias da oferta |
+| **Desired Pay** | Aligned with the posted range for the role, at the lower end (CAD 63,131). Open to aligning with your band. |
+| Website, Blog or Portfolio | https://www.artstation.com/viniciuscavalcanti |
+| LinkedIn URL | https://www.linkedin.com/in/vinicavalcnti/ |
+
+**Atenção:** há um campo armadilha chamado "Please leave this field blank" (`nickname_hpcsaf`). É caça-robô: **deixe vazio**.
+
+**Se houver campo de mensagem ou o formulário permitir carta:** diga que você QUER REALOCAR para Vancouver, que precisa de patrocínio de visto, e cite a láurea, a especialização, o mestrado em andamento, o IELTS e as publicações como caso de visto. Com o RCIC deles, essa é a informação mais útil que você pode dar.
+
+---
+
+# Fatia CANADÁ ANGLÓFONO (07/09): casas de VFX e animação de Vancouver, Toronto, BC e Ontário
+
+Esta fatia cobre a lista fechada do Vini de casas de VFX/animação do Canadá anglófono, mais a
+colheita nova de 351+85 domínios canadenses que outro agente varreu por curl e me entregou para
+abrir com navegador de verdade. Prioridade: personagem, modelagem, texturização, look dev, visual
+dev e grooming antes de generalista.
+
+## Roarty Digital, 3D Character Artist - Realistic (Vancouver, remoto) — À MÃO, formulário Squarespace bloqueia o envio (401)
+
+**Link:** https://www.roartydigital.com/character-artist-realistic
+**Por que vale:** casa de Vancouver que se descreve como "3d characters, digital art for AAA", e
+a vaga aberta é literalmente Character Artist. Remota.
+**Por que à mão:** o site é Squarespace (POST vai para `clanker-events.squarespace.com` e
+`roartydigital.com/api/form/SaveFormSubmission`). O formulário inteiro foi preenchido e conferido
+por leitura de volta (30 campos, 12 selects, 2 grupos de caixa), e o clique em SUBMIT devolveu
+**`401`** no `SaveFormSubmission` com a mensagem na tela **"Please try again later"**. Não é
+captcha de desafio: é o anti-robô do Squarespace recusando a sessão automatizada por pontuação,
+a mesma família da Netflix (Eightfold) e da Cosmico, medida antes nesta campanha. Do navegador do
+Vini isso passa. **REGRA NOVA: formulário cujo POST vai para um domínio `*.squarespace.com` ou
+`/api/form/SaveFormSubmission` é parede de rede, não vale insistir automatizado.**
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email Address | contact@vinicavalcanti.art |
+| your current location | Olinda, Pernambuco, Brazil |
+| position applying for | 3D Character Artist - Realistic |
+| portfolio link | https://www.artstation.com/viniciuscavalcanti |
+| resume link | https://vinicavalcanti.com |
+| Are you currently employed? | yes |
+| details | Currently a Senior 3D Character Artist at E-Line Media (Endstar), full-time, remote, international contractor |
+| years of industry experience | 10+ |
+| Are you familiar with Maya? | yes |
+| Are you familiar with Unreal Engine? | somewhat |
+| Are you familiar with creating real-time game characters? | yes |
+| link to a real-time character | https://www.artstation.com/viniciuscavalcanti |
+| familiar with mech/robots for realtime? | somewhat (ressalva: foco é personagem orgânico estilizado, não hard surface/mecha) |
+| experienced with Marvelous Designer? | no |
+| stylized or realistic characters? | both — portfólio é estilizado mas todo sculpt parte de anatomia realista |
+| proficient in English? | yes |
+| languages | Portuguese (native), English (fluent, IELTS), Spanish (working proficiency) |
+| lead a team before? | yes — cinco anos de Senior na E-Line, revisa trabalho de outros e é fundador da própria escola |
+| type of employment | full time |
+| day rate / currency | Open to aligning with your band for the role; referência CAD, aberto a alinhar |
+| earliest availability | ~2 meses a partir de uma oferta |
+| know anyone at RD? | no |
+| upload/download speed | 150 Mbps / 50 Mbps (fibra) |
+| Anything else | I am ready to move for the role. Não é cidadão canadense e precisa de patrocínio; láurea com honors, especialização em Game Art, mestrado em andamento, IELTS e publicações como caso de visto |
+
+**Armadilha desta página:** existe um campo de texto sem rótulo nenhum, `id="message-field"`
+(`name="message-yui_ca03db1f..."`), típico padrão de isca; **deixado vazio**, por precaução, sem
+prova de que seja honeypot de verdade, mas sem uso óbvio nenhum no formulário.
+
+## Game Pill, candidatura espontânea sênior (Concord, Ontário) — À MÃO por reCAPTCHA v3
+
+**Link:** https://gamepill.com/career/
+**Por que vale:** a própria página de carreiras diz "If you are a senior talent and do not see a
+posting that fits your skills please submit your resume and we will see if there is a fit."
+Modelagem/arte cabe no campo livre "What I am best at".
+**Por que à mão:** Contact Form 7 com reCAPTCHA v3. Preenchido inteiro (nome, email, localização,
+"3D Character Art: modeling, sculpting, texturing, look development, Houdini grooming", link do
+portfólio e CV anexado) e conferido por leitura de volta. O token do reCAPTCHA foi obtido
+normalmente (sessão pontuada), mas o envio devolveu na tela **"There was an error trying to send
+your message. Please try again later."** — a mesma assinatura genérica do CF7 com v3 reprovando
+sessão automatizada já medida na EF Games, eXiin, Gigantic Duck Games e Gamious. Do navegador do
+Vini isso passa.
+
+## SideFX, Join Our SideFX Talent Community (Los Angeles ou Toronto, Ontário) — À MÃO por reCAPTCHA de caixa
+
+**Link:** https://sidefx.bamboohr.com/careers/87
+**Por que vale muito:** SideFX é a empresa dona do **Houdini**, a ferramenta central do grooming
+dele. Não há vaga de personagem/modelagem aberta no quadro (só "Learning Materials Coordinator",
+Toronto, e uma vaga de Marketing), mas o banco de talentos aceita candidatura espontânea e cobre
+Toronto, Ontário.
+**Por que à mão:** BambooHR com **reCAPTCHA de caixa "I'm not a robot"**, o mesmo muro do ATS
+inteiro já medido na ICON, Image Engine, Stormind e BetaDwarf — é do BambooHR e não do estúdio.
+Formulário simples: First Name, Last Name, Email, Phone, Resume (anexado e conferido na tela),
+"What type of role interests you?", "Where did you hear about SideFX?" e uma pergunta de
+consentimento de contato futuro (Yes/No).
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | o de sempre, com +55 na frente |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| What type of role interests you? | `3D Character Artist / Character Modeler — modeling, sculpting, texturing, look development, and character grooming in Houdini` |
+| Where did you hear about SideFX? | `SideFX careers page` |
+| Do you agree to SideFX contacting you regarding future employment opportunities? | Yes |
+
+## WGAMES, quadro de vagas (Toronto, Ontário) — PORTA QUEBRADA do lado deles
+
+**Link do site:** https://wgames.com/ (sete botões APPLY apontam para `wgames.bamboohr.com`)
+**O que foi medido:** todos os links `wgames.bamboohr.com/jobs/view.php?id=<n>` (formato antigo do
+BambooHR) devolvem **410 Gone**, e `wgames.bamboohr.com/careers` redireciona para a página de
+marketing genérica `bamboohr.com`. A conta BambooHR deles parece desativada ou migrada. Não é
+bloqueio de rede contra nós: o host responde, só não tem quadro nenhum vivo atrás dele. Sem porta
+de candidatura utilizável agora; reconferir mais tarde.
+
+## Zoic Studios, BC General Application (Vancouver) — DESCARTADA, veto escrito de residência
+
+**Link:** https://zoicstudios.applytojob.com/apply/va0rRqNxqm/BC-General-Application
+**Por que não foi enviada:** a própria página do anúncio diz, em negrito: **"This position is
+based in Vancouver. All applicants must reside in British Columbia/Ontario."** e depois **"Zoic
+does not cover relocation costs."** Não é uma preferência, é requisito de residência já vigente,
+igual ao veto escrito da beloFX (Índia) descartado nesta mesma leva. Como ele mora no Brasil e
+precisaria de patrocínio de visto e realocação, a única resposta honesta ao formulário violaria o
+requisito publicado, então a candidatura não foi enviada. Registrado aqui para não repetir a
+sondagem: as outras quatro vagas do mesmo board (`zoicstudios.applytojob.com`, CG Senior Previs,
+COMP Senior Compositor, Zoic Labs LA e Zoic Studios US) são todas remotas SÓ dentro dos EUA, então
+nenhuma das cinco serve para candidatura de fora da América do Norte. Zoic já tem contato humano
+na campanha por email (Julie Weitzell, rascunho pré-existente), então a casa não fica sem via
+nenhuma.
+
+## Descartes rápidos da colheita de 351+85 domínios canadenses (07/09)
+
+- **Twisted Mountain Animation** (Vancouver, modelagem/visdev/surfacing no site): quadro próprio
+  em `twistedmountainanimation.com/careers` (powered by BambooHR) diz **"We currently have no open
+  positions"**, sem opção de candidatura espontânea. Nada a enviar agora.
+- **Niche VFX** (Vancouver, look dev): site é só portfólio/depoimentos, sem formulário nem quadro
+  de vagas; contato é só `info@nichevfx.com`, o que vira fila de email e não de formulário.
+- **Gneiss Stuff VFX** (Kelowna, look dev): mesmo caso, site institucional sem formulário; contato
+  só `info@gneissstuff.com`.
+- **Fun2Pro / Fun Square VFX Productions** (Vancouver, look dev): o próprio site diz "Check our
+  available job positions on our Linked In" — não têm porta própria, só o LinkedIn Jobs, fora do
+  escopo de formulário direto.
+- **Creature Caster** (Vancouver): **FALSO POSITIVO** da varredura por palavra-chave. O domínio é
+  uma loja Shopify de miniaturas de mesa (tabletop), não um estúdio de VFX/personagem 3D; a
+  palavra "sculpt" apareceu em descrição de produto. Sem vaga, sem porta, descartar da lista.
+- **Ape Squared Creative** (Toronto): os anúncios de Modeler e Surfacing Artist achados citam
+  "as soon as this Spring 2022" — anúncio perene de anos atrás, mesma armadilha que já descartou
+  a Ironbird. Página `apesquared.com/careers` não abriu vaga nova na reconferência; descartado por
+  data, e-mail de contato `hello@apesquared.com` fica para a fila de email se algum dia reabrir.
+- **Bardel Entertainment** (Vancouver e Montréal): o quadro real é `apply.workable.com/bardel-entertainment/`
+  (achado via `bardel.ca/careers/`, não `bardel.com`, que é domínio parked/à venda). O board
+  devolveu **`error code: 1015` do Cloudflare** contra o nosso IP em duas tentativas (com 20s de
+  intervalo), a mesma família de bloqueio já medida na Velan Studios, KingsIsle e PikPok. Fica para
+  reconferir de outra rede ou para o Vini abrir direto.
+
+## Sinn Studio, General Interest Application (Toronto, Humi) — À MÃO por reCAPTCHA Enterprise invisível
+
+**Link:** https://sinnstudio.applytojobs.ca/general+interest/26552
+**Por que vale:** startup de XR/spatial computing em Toronto (Liberty Village, híbrido). O
+próprio texto da vaga espontânea lista **"3D Model Art"** e **"Technical Animation/Art"** entre
+os cargos futuros que esse banco de talentos alimenta — encaixe direto, achado na varredura dos
+351 domínios canadenses novos que curl dava como vazios (fila `can_js.txt`).
+**Por que à mão:** formulário do Humi, sem captcha visível na tela (nenhum quadrinho "I'm not a
+robot"), mas o botão Submit dispara um **reCAPTCHA Enterprise invisível**
+(`google.com/recaptcha/enterprise/anchor`) com callback `onSubmit(token)`. Preenchido o
+formulário inteiro e conferido por leitura de volta, o token do reCAPTCHA ficou **vazio depois de
+30 segundos de espera**, ou seja, a pontuação nunca aprovou a sessão automatizada. Nada foi
+enviado.
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | o de sempre, com +55 na frente |
+| Country | Brazil |
+| Postal Code | o CEP do doc privado do Drive |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Portfolio (if applicable) | https://www.artstation.com/viniciuscavalcanti |
+| Are you legally authorized to work in Canada? | **No** (é a verdade) |
+| Please tell us a little bit about yourself and your career interests | Senior 3D Character Artist, 10+ anos, Wingfeather Saga e Endstar/E-Line Media, modelagem/escultura/textura/look dev e grooming em Houdini; XR é fronteira nova para arte de personagem |
+| Please tell us about the future role you would be interested in | `3D Model Art / Character Art and Technical Animation for XR` |
+| Do you live in the Greater Toronto Area (GTA)? | `No, I currently live in Olinda, Pernambuco, Brazil` |
+| If you do not live in the GTA, are you willing to relocate to commute 2x weekly to the office in Liberty Village? | `Yes. I am ready to move to Toronto for the role and commuting to the Liberty Village office. Preciso de patrocínio de trabalho; láurea com honors, especialização, mestrado em andamento, IELTS e publicações como caso de visto` |
+| Have you been referred...? | deixar vazio |
+
+**Armadilha desta página:** o radio "Are you legally authorized to work in Canada?" tem as duas
+opções (Yes/No) SEM atributo `value` distinguível no HTML — casar por `[value="No"]` não encontra
+nada; escolher pela ordem dos elementos (segundo radio do grupo) ou pelo texto do rótulo ao lado.
+
+## Descartes da fatia JS-SO do Canadá anglófono (07/09), sem porta nem vaga de arte
+
+Conferidos com navegador de verdade, um a um, porque o curl dava todos como vazios:
+
+- **Darling VFX** (Toronto): site é reel de publicidade (Visa, Audi, Burger King), sem página de
+  carreiras nenhuma.
+- **Kerosene Visual Effects** (Toronto): motion graphics/broadcast design, sem página de
+  carreiras, só `studio@kerosenevfx.com`.
+- **Western FX Studios** (Vancouver): tem link "Careers" na navegação mas a página não lista
+  vaga nem formulário, só o telefone e email institucional.
+- **Tantrum Studio** (Toronto): página `#/careers/` não renderiza conteúdo nenhum além do menu.
+- **Truly Social Games** (Vancouver): `/careers/` devolve Access Denied da Akamai citando um
+  domínio terceiro (`dot-games.org`), configuração quebrada do lado deles.
+- **Sun Machine Games** (Vancouver): domínio parked, à venda pela GoDaddy.
+- **JAXX Creative** (Toronto) e **Hyper Hippo Games** (Kelowna/Vancouver): as duas atrás de
+  "Robot Challenge Screen", desafio anti-robô que bloqueia até a home.
+- **Gaggle Studios** (Toronto): uma única vaga aberta, Unity Technical Designer, sem encaixe de
+  disciplina.
+- **CryptoKitties** (Vancouver): página vazia/quebrada, projeto praticamente abandonado.
+- **Kannon Films** (Ottawa): produtora de documentário e conteúdo infantil, sem seção de
+  carreiras.
+- **New World Interactive** (Calgary, Edmonton, Toronto, Vancouver): quadro próprio diz
+  literalmente "There are currently no job openings, please check back later".
+- **Sinn Studio, vaga de Programação** (Junior Developer): fora da disciplina dele; só a General
+  Interest Application (acima) interessa.
+
+## Quebec (07/09): quatro casas com vaga de arte, priorizadas atrás do Canadá anglófono
+
+Vieram da revarredura dos 137 domínios canadenses que tinham ficado de fora da primeira colheita,
+quase todos do Quebec. Regra do Vini: Quebec vale depois do Canadá anglófono, e vaga que exigir
+francês fluente se registra e não se envia.
+
+### Gradient Effects — CORREÇÃO DE LOCAL, os cargos de arte são de Los Angeles, não Montreal
+
+**Link:** https://www.gradientfx.com/jobs/
+O quadro lista oito vagas (VFX Pipeline Engineer, 3D Modeler, VFX Coordinator, Nuke Compositor,
+Senior Effects TD, Assistant VFX Editor, Matchmovers, Animators) e **todas, sem exceção, são em
+Los Angeles, California**, apesar do rodapé mostrar telefone de Montreal também. Não há vaga de
+Montreal no quadro. Fica fora do escopo do Canadá anglófono: se alguém tocar Gradient Effects,
+é pela vaga de 3D Modeler em Los Angeles, não em Montreal.
+
+### Greensky Games (Montreal, remoto) — À MÃO por reCAPTCHA + Cloudflare Turnstile
+
+**Link:** https://www.greensky.games/work
+Estúdio de jogos de VR **fully remote**, sem exigência de francês (site só em inglês). O
+formulário "Open Application" (Webflow) foi preenchido (nome, email, mensagem de apresentação com
+a frase de realocação e o caso de visto) e conferido por leitura de volta, mas tem **DOIS
+anti-robôs empilhados**: um reCAPTCHA v2 e um desafio da Cloudflare (`challenges.cloudflare.com`).
+O token do reCAPTCHA ficou vazio depois de 30s. Nada foi enviado.
+
+### Loomi Animation (Quebec City) — SEM vaga de 3D, site e processo só em francês
+
+**Link:** https://www.loomianimation.ca/
+Estúdio de animação 2D (não 3D), vagas abertas hoje: Coordonateur(trice) de production, Artiste
+décors couleur 2D, Artiste effets 2D, Producteur(trice) délégué(e), Réalisateur(trice) — nenhuma
+de personagem 3D. Candidatura só por email, `rh@loomianimation.com`, processo inteiro em francês.
+Sem encaixe de disciplina e sem porta de formulário; não vale a rodada.
+
+### Up2blu (Bromont) — página de carreiras não encontrada
+
+**Link:** https://www.up2blu.com/ (a rota `/carrieres` devolve 404, e o menu do site não expõe
+links de navegação legíveis por raspagem, provável SPA por hash). Agência multidisciplinar
+pequena (jogo, design, animação), site só em francês. Não foi possível achar a porta de
+candidatura nas duas tentativas; fica pendente de reconferência com mais tempo de navegador.
+
+## FATIA M-R DA EUROPA (07/09): achados novos do diretório de 6.624 estúdios
+
+Varredura da fatia exclusiva M-R da Europa (707 estúdios do diretório, 550 nunca tocados pela
+campanha depois do dedupe). Prioridade seguida: animação e VFX antes de jogos, e dentro disso
+personagem, modelagem, texturização, look dev e visual dev antes de generalista 3D.
+
+### REKiNDLED Studios, Join Us (Brighton/East Sussex, Reino Unido) — pronto para mandar à mão, SEM captcha, AGORA COM AS 16 PERGUNTAS MAPEADAS
+
+**Link da página:** https://rekindled.uk/join-us/ (o formulário de verdade é um **Typeform**
+embutido em iframe, abra direto: `https://form.typeform.com/to/Ab6JnnqE`)
+
+**Por que vale, e muito:** Rekindled é "A Specialist Co-Development Partner for Gameplay and
+Cinematics", que embarca dentro de outros estúdios para entregar **qualidade de personagem AAA em
+prazo AA** — a frase do próprio site é quase o argumento de carreira dele. Clientes citados: Creative
+Assembly, Electric Square, BBC. Sem captcha nenhum: é só um Typeform, e o próprio texto inicial diz
+"We work with freelancers and contractors around the world", ou seja, aceita gente fora do Reino
+Unido.
+
+**Por que CONTINUA à mão, mesmo sem captcha, revisto em 07/09:** o formulário tem **16 perguntas**,
+não duas ou três como a nota antiga registrava, e várias exigem **julgamento honesto** que não pode
+ser chutado por automação (nível de experiência, disponibilidade, forma de contrato) — forçar uma
+tentativa automática nelas produziria resposta FALSA (uma tentativa de automação chegou a marcar
+"Junior" e inventar "veio pelo vídeo do Harvey Newman" só porque essas eram a opção A da lista).
+Preencher a mão leva de dois a três minutos com a tabela abaixo. **Detalhe técnico para quem for
+tentar de novo por script:** o input real de cada pergunta de texto não tem `type="text"` explícito
+(é `type="short_text"`), então seletor `input[type="text"]` erra; e digitar+Enter direto pelo teclado
+(sem clicar em elemento nenhum) funciona melhor que clicar, porque o Typeform mantém o foco na
+pergunta ativa automaticamente. Perguntas de múltipla escolha respondem à **tecla da letra da opção**
+(sem precisar clicar) e confirmam com Enter.
+
+| # | Pergunta (texto exato) | Tipo | Resposta recomendada |
+|---|---|---|---|
+| 1 | 👋 About You? — nome completo | texto | `Vini Cavalcanti` |
+| 2 | What's the best email to reach you at? | texto | `contact@vinicavalcanti.art` |
+| 3 | What do you do best? (única escolha) | A Animation / B Tech Animator / **C Character Artist** / D Tech Artist | **C** |
+| 4 | What is your character art specialisation? (múltipla) | A Realistic Humans / **B Stylised Humans** / C Realistic Creatures / **D Stylised Creatures** / E Hard-Surface / F Background-Crowd / **G Hair, Cloth & Grooming** / H All of the Above / I Other | **B, D, G** |
+| 5 | What is your strongest skill in Character Art? (única) | **A High Poly Modelling** / B Low Poly Game-Ready / C Texturing / D Retopology & UV / E Character & Creature Design / F Real-Time Characters / G Other | **A** (ou E, os dois são defensáveis; A é o mais forte pelo currículo de sculpt) |
+| 6 | What kind of tools do you use in your role? (múltipla) | A Animation Tools / B Technical Animation Tools / **C Character Art Tools** / D Technical Art Tools / E mix of all / F Other | **C** (some **D** se quiser sinalizar o lado técnico do grooming) |
+| 7 | What animation tools do you use regularly? (múltipla, apesar do nome é lista de software) | **A Maya** / B Motion Builder / C Blender / D 3D Max / E Unreal Engine / F Unity / G Cascadeur / **H Other** | **A**, e em H escrever `ZBrush, Substance Painter, Houdini` |
+| 8 | Where in the world are you based? | texto | `Olinda, Pernambuco, Brazil — I am ready to move for the role.` |
+| 9 | Are you set up to work as a contractor? (única) | A Yes, all set up to invoice / B Not yet, but planning to / **C Not sure — happy to chat about it** / D No, only payroll / E Other | **C** (verdadeiro: ele é CLT/contratado remoto na E-Line hoje, não tem estrutura de invoicing aberta) |
+| 10 | Where did you hear about us? (única) | A Harvey Newman's Video/LinkedIn / B Rekindled LinkedIn Page / C Rekindled Team Member Post / D Recommended by Someone / **E Other** | **E**, escrever `Researching UK animation/VFX studios that hire internationally` |
+| 11 | How would you describe your experience level? (única) | A Junior / B Mid Level / **C Senior** / D Lead / E Director | **C** — NUNCA A, um chute errado aqui já saiu numa tentativa de automação e foi descartado a tempo |
+| 12 | Do you have a showreel or portfolio to share? | texto (link) | `https://www.artstation.com/viniciuscavalcanti` |
+| 13 | What kind of projects are you most excited to work on? | texto livre | `Stylized cinematic and game character work — hero characters, creatures and hair/fur grooming; exactly the AAA-quality-on-AA-timelines projects Rekindled specializes in.` |
+| 14 | Are you currently available for contract work? (única) | A Yes, currently available / B Available soon (weeks) / **C Booked, but open later down the line** / D Not right now | **C** é o mais honesto sem citar prazo de contrato (dado privado); **decisão final é do Vini**, que sabe o próprio aviso prévio |
+| 15 | Please share your LinkedIn or socials | texto (link) | `https://www.linkedin.com/in/vinicavalcnti/` |
+| 16 | What's your ideal working setup? (única) | A Remote / B Hybrid / C On-Site | Estúdio é time de freelancers globais ("we work with freelancers and contractors around the world"), então **A Remote** é o mais alinhado ao modelo deles; se o Vini preferir sinalizar a vontade de mudar de país mesmo assim, **B Hybrid** também é defensável. **Decisão do Vini** |
+
+Duas perguntas (9 e 14) tocam em disponibilidade/situação contratual real dele — por isso ficam
+como recomendação e não como automação: envolvem o prazo do contrato atual, que é dado privado e
+não deve ser inventado nem escrito neste repositório.
+
+### Menhir FX, candidatura espontânea (Montpellier, França) — À MÃO por hCaptcha
+
+**Link:** https://menhirfx.com/en/recruitment
+
+**Por que vale:** estúdio de animação 2D/3D/motion design ("Make people want to play!"), com
+projetos para Dungeons & Dragons, Attack on Titan e Monopoly. A própria página de recrutamento diz
+"We are not currently recruiting new collaborators but you can still send us your application" —
+candidatura espontânea explicitamente aceita.
+
+**Por que à mão:** o formulário exige **hCaptcha** (`h-captcha` no rodapé). Campos: nome, email,
+telefone, tipo de contrato (CDD/CDDU/Stage/Alternance/**Freelance**), disponibilidade, CV e
+portfólio em PDF, anos de experiência (1-4 / 5-9 / **+10 années**), e duas listas de caixas de
+marcar: **Especializações** (2D / **3D** / Motion Design) e **Expertises** (Concept art /
+**Modeling** / **Lookdev** / Rigging / Animation / Layout / Set dressing / FX / CFX / Lighting /
+Compositing / IT TD), mais os softwares usados (Blender, Maya, Houdini, Unreal, Unity, ZBrush,
+Substance).
+
+| Campo | O que marcar/escrever |
+|---|---|
+| Type de contrat | `Freelance` (mais realista para candidatura internacional espontânea) |
+| Année d'expérience | `+10 années` |
+| Spécialisations | marcar `3D` |
+| Expertises | marcar `Modeling` e `Lookdev` |
+| Logiciels | `Maya`, `Houdini`, `Zbrush`, `Substance`, `Blender` |
+| Votre message | o texto de realocação padrão (ver topo deste arquivo), citando o crédito na Wingfeather Saga e Endstar/E-Line, e que precisa de patrocínio de visto para a França |
+| hCaptcha | resolver na tela |
+
+### Rumble VFX (Londres, Reino Unido) — parede MEDIDA, não é vaga morta
+
+**Link:** https://rumblevfx.com/
+
+Página inteira atrás de um **Cloudflare "Robot Challenge Screen"** ("Checking the site connection
+security"), tanto por curl (corpo de 169 bytes) quanto por navegador de tela (título literal
+"Robot Challenge Screen", nenhum `<form>` no DOM). Confirmado em 07/09. Reconferir do navegador do
+Vini ou de outra rede antes de descartar — é bloqueio de IP, não anúncio fechado.
+
+### Descartes com motivo escrito (fatia M-R, 07/09)
+
+- **Outside The Club** (Alemanha, VFX de cinema/streaming): única vaga aberta é **VFX Producer**,
+  sem nenhuma vaga de arte/modelagem/texturização. Fora da disciplina dele.
+- **Renderpeople GmbH** (Alemanha): a única vaga listada, 3D Pipeline Developer, está marcada
+  **CLOSED** na própria página; sem vaga de arte aberta.
+- **Moetion Films** (Irlanda): a página de vagas diz literalmente "We are not recruiting at the
+  moment", só aceita currículo por email (`jobs@moetionfilms.com`) sem vaga associada; baixa
+  prioridade por não ter abertura declarada.
+- **Pixel-Nexus** (Bélgica/Espanha): "not actively hiring" e as vagas espontâneas que aceitam são
+  Pipeline TD, SysAdmin e Technical Artist — fora da disciplina de personagem/modelagem.
+
+## Blackbird Interactive, General Application (Vancouver, Canadá, Lever) — à mão por hCaptcha de desafio
+
+**Link:** https://jobs.lever.co/blackbirdinteractive/498bb3c2-b23f-4aed-8fdd-ee80649e381d/apply
+
+**Por que à mão:** confirmado na API oficial do Lever em 07/09 que a General Application de
+Vancouver segue aberta (o board tem dez vagas, nenhuma de arte, mas a espontânea continua lá,
+como as revalidações de 02/09 e 05/09 já registravam). O formulário inteiro foi preenchido e
+conferido campo a campo; no clique em enviar apareceu o desafio de imagem **"Tap things that break
+when dropped"**, a mesma família de hCaptcha de Larian, Frontier, Asobo, Behaviour e Skydance
+Madrid nesta campanha. Nada foi enviado.
+
+**Armadilha nova medida e já corrigida no `apply_lever.js`:** o campo *Current location* (id
+`location-input`) espera uma sugestão de geocodificação para confirmar o texto digitado; quando a
+API não devolve nenhuma (comum nesta rede), o script antigo apertava Escape para fechar o dropdown
+vazio, e isso **apagava o texto já digitado**, deixando o campo em branco sem erro nenhum na tela.
+Corrigido: o script agora relê o valor do campo depois do Escape e reescreve com `.fill()` se ficou
+vazio. Por isso o campo pode aparecer vazio na captura — é opcional, não bloqueia o envio.
+
+| Campo | O que escrever |
+|---|---|
+| Resume/CV | `Vini_Cavalcanti_CV.pdf` |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | o de sempre, com +55 |
+| Current location | `Olinda, Pernambuco, Brazil` (opcional; digite direto, sem Escape) |
+| Current company | `E-Line Media` |
+| Portfolio URL | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Other website | `https://vinicavalcanti.com` |
+| How many years of gaming industry experience do you have? (obrigatório, textarea) | o texto abaixo |
+| Are you eligible to work in Canada? (obrigatório) | **`I would require a work permit/visa`** (é a verdade) |
+| Are you currently living in Canada? | `No` |
+| Desired start date (obrigatório) | `Negotiable, available to start about two months after an offer, once a standard transition period with my current studio and the work permit process allow.` |
+| How did you hear about this opportunity? (obrigatório) | `Other` (nenhuma das opções da lista — LinkedIn, remotegamejobs.com, Discord, Glassdoor/Indeed, Friend/Colleague, Teach-Art.org, Artstation, Fan of BBI — é verdadeira; a campanha chegou pela revalidação do próprio board) |
+| Pesquisa demográfica (idade, etnia, gênero) | opcional, deixar em branco |
+
+**Texto do campo de anos de experiência** (é o único campo grande de texto livre do formulário,
+por isso carrega a frase obrigatória de realocação e o caso de visto):
+
+```
+More than 10 years. I am a Senior 3D Character Artist, credited on The Wingfeather Saga at Angel Studios and, for almost five years, on Endstar at E-Line Media in Arizona, where I take hero characters from first sculpt to engine as a remote international contractor: sculpt and high poly, retopology, UVs, baking, texturing, look development and engine integration, plus character grooming in Houdini. As a Senior I review other artists' work and set the asset standard, I teach as founder of my own character art school, and I am a master's candidate. There is no character opening listed right now, so this is a General Application; if one opens I would like it forwarded to me. I am ready to move to Vancouver for the role, on site and full time. I am not an EU citizen and I am not authorized to work in Canada; I would need a work permit and visa sponsorship. My academic background, with an honors laurea, a postgraduate specialization in Game Art, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, around CAD 95,000 per year. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. Portfolio: https://www.artstation.com/viniciuscavalcanti
+```
+
+## Stellar Entertainment, Associate Art Director (Guildford, Reino Unido, híbrido) — à mão por reCAPTCHA
+
+**Link:** https://jobs.ashbyhq.com/stellarentertainment/2c053416-6eaf-43d7-9932-c3a9eaf9437d
+
+**Por que à mão:** reCAPTCHA v2 invisível (site key `6LeFb_YUAAAAALUD5h-BiQEp8JaFChe0e0A6r49Y`). A automação preencheu o formulário inteiro em 07/09, com CV e carta anexados e confirmados pelo nome do arquivo na tela, e o envio devolveu *"We couldn't submit your application. Your application submission was flagged as possible spam"* — pontuação de sessão reprovando IP de datacenter, mesma família da Netflix. No navegador do Vini passa em menos de um minuto.
+
+**Por que vale:** estúdio de jogos com sede em Guildford (UK) e Utrecht (Holanda), projeto novo **não anunciado** com meta AAA. O cargo é de liderança de arte: mentorar e gerenciar artistas de UI, Hard Surface, World, VFX e Animation, colaborando com o Art Director na visão criativa — bate direto com os cinco anos de Senior na E-Line, revisando trabalho e definindo padrão.
+
+**Armadilha do formulário, já resolvida:** o board da Ashby abre na aba **Overview**; o formulário de candidatura só existe depois de clicar na aba **Application**, ao lado. O formulário em si é curto: nome, email, CV, carta, sem perguntas customizadas.
+
+| Campo | O que escrever |
+|---|---|
+| Name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Resume | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter (campo de arquivo opcional) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Location (autocomplete, se aparecer) | `Olinda, Pernambuco, Brazil` |
+| I agree (consentimento, opcional) | marcar |
+| reCAPTCHA | invisível, só clicar em Submit |
+
+Sem campo de texto livre nem pergunta de patrocínio de visto no formulário; se abrir um campo de mensagem, use a frase fixa de realocação e o caso de visto.
+
+## Screen Burn Interactive / No Code, Speculative Application (Glasgow) — À MÃO por reCAPTCHA de caixa, ATS novo BreatheHR
+
+**Link do anúncio:** https://hr.breathehr.com/recruitment/vacancies/34692?identifier=nocode
+**Link direto do formulário:** https://hr.breathehr.com/application/34692/new
+
+**Por que vale, e muito:** a No Code (BAFTA multiplo, Observation, Stories Untold) rebatizou para
+**Screen Burn Interactive** e está trabalhando em **Silent Hill: Townfall** para a Konami/Annapurna.
+O próprio anúncio de candidatura espontânea diz: *"Please note we will sponsor right-to-work visas
+for eligible permanent roles"* — patrocínio de visto dito com todas as letras. Pede explicitamente
+portfólio para vagas de arte/animação/som.
+
+**Por que à mão:** o formulário termina em **reCAPTCHA v2 de caixa** (recaptcha.net). Medido em
+07/09; não insisti.
+
+**ATS novo para a campanha: BreatheHR.** Formulário simples, sem campo de anexo visível — o link
+do portfólio precisa ir dentro do campo Notes.
+
+| Campo | O que escrever |
+|---|---|
+| Title | deixar vazio |
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Phone number | o de sempre, formato internacional |
+| Email / Email confirmation | `contact@vinicavalcanti.art` |
+| Notes | o texto abaixo |
+| Address 1-3, City, County, Postcode | endereço de Olinda, Pernambuco, Brazil |
+| Country | `Brazil` |
+| Applicant source | `Job site` |
+| Consent checkbox | marcar |
+| reCAPTCHA | resolver na tela |
+
+```
+Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga season 1 I modeled and hand-painted characters for Angel Studios, and for almost five years at E-Line Media I have taken Endstar's hero characters from first sculpt to engine as a remote international contractor: sculpt, retopology, UVs, baking, texturing, look development and engine integration, plus character grooming in Houdini.
+
+I want to relocate to Glasgow and am fully open to moving for the role. I am not a UK/EU citizen and would need visa sponsorship; my academic background (honors laurea, postgraduate specialization in Game Art, master's in progress, IELTS and publications) makes a strong visa case.
+
+Portfolio: https://www.artstation.com/viniciuscavalcanti
+LinkedIn: https://www.linkedin.com/in/vinicavalcnti/
+Site: https://vinicavalcanti.com
+
+If character work opens up on your side, I'd like to be on your list. And if someone else there is the right person for this, just point me and I will take it there.
+
+Vini Cavalcanti
+```
+
+## Streamline Studios (Lead Character Artist, contractor, Malaysia/Remote) — dossiê à mão, 07/09
+
+Link: https://streamlinestudios.bamboohr.com/careers/84 (board oficial BambooHR, requisição 84,
+Department Art, Location "Malaysia (Remote)", Employment Type Contractor). CONFIRMADA na fonte
+oficial em 07/09: a lista `/careers/list` do BambooHR mostra a requisição 84 viva junto com a
+freelancer 3D Character Artist (106), ambas em Art. Formulário inteiro preenchido e conferido
+campo a campo em MODO SECO (sem --submit), com leitura de volta de cada campo — falta só o
+captcha. **PAREDE: reCAPTCHA de caixa de marcar ("I'm not a robot"), visível só depois de rolar
+até o fim do formulário preenchido** — mesma família de parede já medida na ICON Creative, Image
+Engine, Soul Assembly e Barnstorm Visual Effects, todas BambooHR. Abrir o link, conferir os
+campos abaixo (já estão prontos, só falta marcar o captcha e clicar Submit Application):
+
+| Campo | O que escrever |
+|---|---|
+| First Name / Last Name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários" — só os dígitos, sem código de país (campo único do BambooHR, sem seletor de país ao lado) |
+| Address / City / Province / Postal Code | endereço: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários" (Olinda, Pernambuco, Brazil, CEP de lá) |
+| Country | `Brazil` (é um combobox com busca: apagar "United States" com o x, digitar Brazil e clicar na opção) |
+| Cover Letter / Resume | anexar `Vini_Cavalcanti_Cover_Letter.pdf` e `Vini_Cavalcanti_CV.pdf` — cuidado, o Cover Letter vem ANTES do Resume no DOM e os dois aceitam pdf |
+| Date Available | `20/09/2026` (campo digitável, formato dd/mm/yyyy, não aceita clique solto no widget) |
+| Desired Pay | `USD 40/hr (~USD 85k/yr); open to your band for the role` (contractor, casa média — pretensão convertida para hora a partir do piso de USD 85.000/ano) |
+| Website, Blog or Portfolio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Highest Education Obtained | `College - Bachelor of Fine Arts` (é combobox, não select nativo) |
+| References | `Available upon request; happy to share names and contacts from Angel Studios and E-Line Media in a later stage.` |
+| What is your hourly rate (USD)... | `Around USD 40/hour, based on a senior/lead contractor annual reference near USD 85,000; open to aligning with your project budget.` |
+| When can you start... | `I can start within about two weeks of an offer and commit roughly 15-20 hours per week to start, with room to grow depending on project needs.` |
+| Preferred communication method... | `Email and Slack/Discord for async updates, video calls for reviews; I typically respond within 4-6 hours on business days; I am based in UTC-3 (Brazil) and flexible to overlap with the project core hours.` |
+| Which game engines... | `Unreal Engine 4 and 5, Unity` |
+| What is your nationality? | `Brazilian` |
+| Current city and country residing in | `Olinda, Pernambuco, Brazil` |
+| Portfolio link (pergunta repetida) | `https://www.artstation.com/viniciuscavalcanti` |
+| Referred by Streamliner? | `No` |
+| How did you hear about Streamline? | marcar `Artstation` |
+| Campo `nickname_hpcsaf` | HONEYPOT — deixar VAZIO, não escrever nada |
+| `I'm not a robot` | resolver na tela |
+
+Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
+`$SCRATCH/apply/streamline84_filled.png`.
+
+## Larian Studios (Character Artist — Open Application, Gent) — dossiê à mão, 07/09
+
+Link: https://larian.com/careers/64e1e658-7c7a-4c7f-b950-f997d40a9d8e (página oficial da vaga,
+time Character Art, listagem "Open Application", localização "Any" incluindo Gent na Bélgica) →
+botão "Apply for this job" leva ao ATS oficial deles, Lever:
+https://jobs.lever.co/larian/64e1e658-7c7a-4c7f-b950-f997d40a9d8e/apply
+CONFIRMADA na fonte oficial em 07/09: o próprio site da Larian lista esta candidatura aberta
+permanente de Character Art (não é vaga fechada nem expirada) — estúdio de Baldur's Gate 3 e
+Divinity: Original Sin 2, com sede histórica em Gent. Não há vaga nominal de Character Artist
+aberta agora (o quadro de 42 posições tem só Environment Artist em Quebec/Kuala Lumpur e
+Technical Artist em Barcelona), então esta é candidatura espontânea por disciplina, que conta
+como envio pela regra 4. Formulário preenchido inteiro em MODO SECO (sem --submit), com leitura
+de volta de cada campo — falta só o captcha:
+
+| Campo | O que escrever |
+|---|---|
+| Resume/CV | anexar `Vini_Cavalcanti_CV.pdf` (upload comum, sem dropzone escondido) |
+| Full name | `Vini Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Phone | telefone: **no documento privado do Drive** "CAMPANHA - dados pessoais dos formulários", formato internacional com +55 |
+| Current location | **digitar e escolher da lista** (autocomplete): `Olinda, Pernambuco, Brazil` — no teste automático o autocomplete não devolveu sugestão nenhuma (rede do agente), então é campo para digitar devagar e esperar a lista aparecer antes de clicar |
+| Current company | `E-Line Media` |
+| LinkedIn URL | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Portfolio (Artstation, GitHub, personal website etc) URL | `https://www.artstation.com/viniciuscavalcanti` |
+| Other website | `https://vinicavalcanti.com` |
+| What is your preferred Larian Studios location? | `Ghent` (radio) |
+| What is your second preferred Larian Studio location | `Dublin` (radio; opcional, mas ajuda a mostrar abertura a outra praça) |
+| Are you open to working in studio (onsite) full time? | `Yes` (select) |
+| Are you willing to relocate to a Larian studio location for this role? | `Yes` (select) |
+| How many years of professional experience do you have? | `More than 10 years` (select) |
+| Do you have experience working in the games industry? | `Yes` (select) |
+| What is the most recent company you have worked for? | `E-Line Media` |
+| Where did you hear about career opportunities with Larian? | marcar `ArtStation` (checkbox) |
+| Campo de contexto (Other/Conference/School) | pode deixar vazio, já que a resposta acima não é "Other" |
+| **PAREDE: hCaptcha de imagem** | visível no fim do formulário antes do botão Submit Application; resolver na tela, não se burla |
+
+Screenshot do formulário preenchido (modo seco, sem enviar) salvo em
+`$SCRATCH/apply/filled_larian-char.png`.
+
+### Certain Affinity, Senior Material Artist — Vancouver E Toronto — À MÃO por reCAPTCHA de caixa
+
+**Links, e são DUAS requisições separadas, uma por cidade:**
+https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist (Greater Vancouver, BC)
+O quadro do estúdio, com as duas: https://certainaffinity.com/career
+
+**Por que ela vale:** estúdio AAA de verdade, com trabalho em Halo, Doom, Call of Duty e Left 4
+Dead, e a vaga é **material e texturização**, que é a sua disciplina. As duas cidades são Canadá
+anglófono, que é a prioridade número um.
+
+**Como ela foi achada, e isso importa:** o `certainaffinity.com` voltava 403 no curl e a campanha
+o tinha como morto. Reaberto com navegador, estava vivo o tempo todo.
+
+**A parede, medida e não suposta:** o formulário é JazzHR e termina em **reCAPTCHA v2 de CAIXA**.
+A assinatura é inequívoca: `div.g-recaptcha` visível com `data-sitekey`, e o iframe âncora em
+**304 por 78 pixels**, que é o tamanho do quadro "I'm not a robot". Não é v3 de pontuação, então
+não adianta tentar de outro IP.
+
+**Preenchido e conferido por leitura de volta em 07/09**, tudo passou menos o captcha:
+
+| Campo (id do JazzHR) | O que colar |
+|---|---|
+| `resumator-firstname-value` | `Vini` |
+| `resumator-lastname-value` | `Cavalcanti` |
+| `resumator-email-value` | `contact@vinicavalcanti.art` |
+| `resumator-phone-value` | o telefone **com +55 na frente**, do doc privado do Drive |
+| `resumator-city-value` | `Olinda` |
+| `resumator-state-value` | `Pernambuco` |
+| `resumator-address-value` e `resumator-postal-value` | **opcionais**, pode deixar em branco |
+| Currículo | `Vini_Cavalcanti_CV.pdf` |
+
+**Detalhe de leitura que confunde:** o campo de arquivo do JazzHR é **invisível** (`vis:false`), então
+o nome do arquivo **não aparece na tela** mesmo com o anexo dentro. Aqui, ao contrário do Wix, a
+prova é o próprio input: ele guardou `Vini_Cavalcanti_CV.pdf`. Não conclua que faltou CV.
+
+**Nenhuma pergunta de autorização de trabalho ou de salário no formulário**, então não há nada a
+decidir: é preencher, marcar o captcha e enviar.
+
+## Certain Affinity, Senior Material Artist (Vancouver e Toronto, JazzHR) — À MÃO por reCAPTCHA de desafio
+
+**Links:** Vancouver https://certainaffinityinc.applytojob.com/apply/AgAMjfmeKe/Senior-Material-Artist ·
+Toronto https://certainaffinityinc.applytojob.com/apply/eJTHIpzicy/Senior-Material-Artist (mesmo
+formulário, mesmos campos, requisições separadas — mandar as duas)
+
+**Por que vale:** achado na reabertura com navegador de tela dos domínios que o curl tinha marcado
+403 na fatia Canadá anglófono (07/09); certainaffinity.com estava vivo o tempo todo. Estúdio AAA
+(trabalho em Halo, Doom, Call of Duty, Left 4 Dead) com presença nova em Vancouver e Toronto. A vaga
+é **Senior Material Artist**: texturização e shading (PBR, Substance Designer/Painter, Unreal 5,
+Maya, ZBrush), o encaixe mais direto de todo o lote reaberto. Vaga aberta só para candidatos na
+Colúmbia Britânica, Alberta, Ontário ou Nova Escócia (restrição de local de trabalho, não de
+cidadania) — nenhuma exigência escrita de autorização prévia.
+
+**Por que à mão:** testado em 07/09, formulário simples (sem pergunta customizada nenhuma além dos
+campos básicos), preenchido inteiro e conferido por leitura de volta. O `Human Check` é reCAPTCHA
+v2: o clique no quadrinho **não marcou sozinho** e abriu **desafio de imagem**, que não se burla.
+
+| Campo (id do JazzHR) | O que colar |
+|---|---|
+| `resumator-firstname-value` | `Vini` |
+| `resumator-lastname-value` | `Cavalcanti` |
+| `resumator-email-value` | `contact@vinicavalcanti.art` |
+| `resumator-phone-value` | o telefone **com +55 na frente**, do doc privado do Drive |
+| `resumator-city-value` | `Olinda` |
+| `resumator-state-value` | `Pernambuco` |
+| `resumator-address-value` e `resumator-postal-value` | opcionais, pode deixar em branco |
+| Currículo (`resumator-resume-value`) | `Vini_Cavalcanti_CV.pdf` |
+| `Human Check` | reCAPTCHA v2, resolver o desafio de imagem manualmente |
+
+Nenhuma pergunta de patrocínio/visto neste formulário; se aparecer alguma pergunta de elegibilidade
+fora do que já foi visto aqui, responder com a verdade (precisa de patrocínio, ainda não autorizado
+a trabalhar no Canadá). Pretensão, se pedirem: `CAD 95,000 per year. Open to aligning with your band
+for the role.`
+
+---
+
+## Rebel Wolves (Varsóvia, Polônia) — Open Application, departamento Art — À MÃO
+
+Link: https://system.erecruiter.pl/FormTemplates/RecruitmentForm.aspx?WebID=d2fa13d6d9cd47a6aa9010c9e9294d74
+(redireciona para `https://form.erecruiter.pl/form/d2fa13d6d9cd47a6aa9010c9e9294d74`)
+
+Estúdio de Varsóvia fundado por veteranos do *The Witcher 3*, com *The Blood of Dawnwalker*
+anunciado. As duas vagas nominais de hoje são QA e RH, então a porta é a **Open Application**, que
+o próprio site publica como candidatura espontânea.
+
+**Por que à mão, medido em 07/09, e a lição vale para todo o eRecruiter:** a **página não tem
+captcha nenhum** — nem reCAPTCHA, nem hCaptcha, nem Turnstile, nem DataDome no HTML — mas o **POST
+de envio volta 403 com a página `Just a moment...` do Cloudflare** (`script-src
+challenges.cloudflare.com`). O desafio existe **só no envio** e é invisível antes de preencher.
+Depois do clique o formulário **continuou preenchido**, que é a prova de que não entrou, e nenhuma
+mensagem de erro apareceu na tela. No navegador do Vini isso passa direto.
+
+| Campo (`name`) | O que colar |
+|---|---|
+| `firstName` | `Vini` |
+| `lastName` | `Cavalcanti` |
+| `email` | `contact@vinicavalcanti.art` |
+| `phone` (obrigatório) | o telefone **com o código do país na frente**, do doc privado do Drive |
+| `cvFiles` (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| `custom_47761` — *Kind request to attach your portfolio* | `ArtStation: https://www.artstation.com/viniciuscavalcanti \| Website: https://vinicavalcanti.com \| LinkedIn: https://www.linkedin.com/in/vinicavalcnti` |
+| `custom_53668` — *What is your time zone?* (obrigatório) | `Currently UTC-3. I am ready to move to Warsaw for the role, so I would be on CET/CEST full time. Until relocation I already work European hours daily with an international team.` |
+| `custom_47763` — *What are your net financial expectations?* (obrigatório) | `About PLN 11,500 net per month on an employment contract (roughly PLN 16,000 gross per month, or EUR 45,000 gross per year), which is my reference for a senior character artist in this market. Open to aligning with your band for the role, and happy to convert the figure if the contract type is B2B.` |
+| *Which department are you applying to* (obrigatório, 18 caixas) | marcar **Art** |
+| `custom_47765` — *Information for the recruiter* | o texto longo abaixo |
+| Consentimento (`3193`) | marcar: *I consent to the processing of my personal data (...) for the purposes of future recruitment* |
+
+Texto de `Information for the recruiter`:
+
+> I am applying for a Senior 3D Character Artist role in the Art department (character modelling,
+> sculpting, texturing, look development and grooming). I am ready to move and I am fully open to
+> moving to Warsaw for the role; this is not "open to considering", it is what I want.
+> I am a Senior 3D Character Artist with 10+ years of experience, five of them as Senior at E-Line
+> Media, where I review other artists' work and define the asset standard for the team, and I am the
+> founder and teacher of my own character art school. Credited on The Wingfeather Saga. Stylized and
+> semi-realistic characters end to end: ZBrush, Maya, Substance Painter/Designer, Marmoset, Unreal,
+> plus hair and fur grooming in Houdini and XGen.
+> My academic background, with an honors laurea, a postgraduate specialization, a master's in
+> progress, IELTS and publications, makes a strong visa case. I am not an EU citizen and would need
+> work authorisation/sponsorship, and I am ready to start the process immediately.
+> Portfolio: https://www.artstation.com/viniciuscavalcanti | Site: https://vinicavalcanti.com |
+> LinkedIn: https://www.linkedin.com/in/vinicavalcnti
+
+**Duas armadilhas medidas neste formulário:**
+
+1. **As caixas são Radix e o botão é VAZIO.** Cada opção é um `button[role=checkbox]` sem texto
+   nenhum dentro; o rótulo fica num `<label for="<id>">` **irmão**. Casar por `innerText` do próprio
+   botão devolve "não achei" em todas as 19 caixas. O certo é achar o `label[for=id]`, comparar o
+   texto dele e clicar no botão, conferindo depois `aria-checked === "true"`.
+2. O banner de cookies fica no rodapé e **não** cobre o botão `Send`, ao contrário do da Bohemia.
+
+## Floating Rock (Wellington, Nova Zelândia) — Character Artist do Kyōryū — À MÃO por reCAPTCHA
+
+Achada em 07/09 pela fatia JHONB, na fila `automacao/fila-oceania.csv` (linha marcada ARTE).
+Estúdio pequeno de Wellington que **acabou de assinar com um publisher** e está montando o time do
+Kyōryū, e a vaga é literalmente a dele: *"We're looking for a creature-oriented Character Artist to
+bring Kyōryū's re-engineered dinosaurs to life. Translate our concept arts to a 3D model for the
+game. As a key hire in our game team, you'll help define the look and feel of our debut title."*
+
+**Link:** https://floating-rock.com/careers/ (o formulário é um HubSpot embutido, role a página até
+"Apply to be a Rockie at Floating Rock")
+
+**POR QUE FICOU À MÃO:** o formulário do HubSpot termina numa caixa de reCAPTCHA logo acima do
+botão Submit (campo escondido `g-recaptcha-response`, id `hs-recaptcha-response`). A automação
+preencheu **tudo**, conferiu campo a campo pela leitura de volta, clicou em Submit e a página não
+mudou: o formulário continuou preenchido e o widget do captcha ficou como uma caixa vazia. Captura
+em `sp_frock_pos.png`. Não se burla captcha de desafio; **abra o link, cole as respostas abaixo,
+marque a caixa e envie**, que leva um minuto.
+
+Campo a campo, com os valores exatos que a automação já validou:
+
+| Campo | Valor |
+|---|---|
+| First Name | Vini |
+| Last Name | Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone Number | o do documento privado do Drive, **sempre com o código de país +55 na frente** |
+| Link to resume, reel or portfolio * | https://www.artstation.com/viniciuscavalcanti |
+| Or upload resume | Vini_Cavalcanti_CV.pdf |
+| What role are you applying for? * | **Modeller - Character** (é a opção exata da lista; não existe "Character Artist" no menu) |
+| Seniority Level | Senior |
+| If selected other... | deixar em branco |
+| How many years of experience do you have? * | **10+ years** |
+| Linkedin Profile | https://www.linkedin.com/in/vinicavalcnti/ |
+| What is your expected hourly rate in NZD? * | Around NZD 55 per hour. Open to aligning with your band for the role. |
+| What's your ideal start date? | As soon as the visa allows, after a standard transition period with my current studio. |
+| Where are you currently based? * | Olinda, Pernambuco, Brazil |
+| Do you prefer to re-locate to NZ for this position? * | **Yes** |
+| Do you need a visa to work in New Zealand? * | **Yes** |
+| Which softwares are you most experienced with? | Maya, Unreal, Z Brush, Houdini, Photoshop, Substance, Blender |
+| What are your 3 best soft skills? | Adaptability, Communication, Leadership |
+| If software or soft skills are not listed | Marmoset Toolbag, XGen, Marvelous Designer, Unity. I am ready to move to New Zealand for the role. 10+ years in stylized 3D characters: E-Line Media (Endstar, sculpt to engine), The Wingfeather Saga at Angel Studios, and three years at PUGA Studios delivering characters for international clients under someone else's art direction, in the client's style, with review rounds as routine. |
+| Caixa "I agree to receive other communications" | opcional, deixada desmarcada |
+
+**Armadilhas medidas neste formulário, todas novas para a campanha e todas do HubSpot embutido:**
+
+1. **O id de cada campo do HubSpot COMEÇA COM DÍGITO** (é o uuid da instância do formulário, e ele
+   **muda a cada carregamento**). Montar seletor como `#932ca1fb-...` faz o Playwright levantar
+   `SyntaxError: not a valid selector` no `querySelectorAll`, e **todo campo volta vazio**, o que
+   parece formulário quebrado e é seletor. O certo é `[id="..."]`, e casar o campo pelo **texto do
+   rótulo**, nunca pelo id, que não sobrevive à próxima carga.
+2. **O formulário vive num iframe** de `js-ap1.hsforms.net` e só monta **depois de rolar a página**.
+   Ler o DOM da página principal devolve só o campo de newsletter do rodapé.
+3. **Os menus não são `<select>`**: são combobox com lista `[role=listbox]` desenhada à parte. E o
+   seletor `[role=option]` **casa também com a lista de países do telefone**, que está sempre no DOM:
+   uma leitura ingênua devolve "Afghanistan +93, Albania +355..." no lugar das opções da pergunta.
+   Filtre o que termina em `+NN` e leia a lista visível.
+4. **A opção certa do menu de função é `Modeller - Character`.** O menu não tem "Character Artist",
+   e pedir por texto parecido não acha nada.
+5. **`10` casa primeiro com `6-10 years`.** O alvo tem que ser a string inteira, `10+ years`, senão
+   a candidatura sai dizendo que ele tem menos experiência do que tem.
+6. O telefone é widget com bandeira, da mesma família do que virou `+81 Japão` na Hampa: digitado
+   com `+55` na frente, a bandeira vai para o Brasil e o campo escondido `0-1/phone` fica correto.
+
+## Engine Room Hollywood (Los Angeles) — candidatura espontânea — falta só o ANEXO
+
+**Link:** https://www.engineroomhollywood.com/careers/ (rolar até READY TO JOIN US)
+
+Contact Form 7, **sem captcha nenhum**. A automação preencheu tudo e o envio parou num campo só:
+`File` é **obrigatório** e o `accept` dele é `audio/*,video/*,image/*`, ou seja, **não aceita PDF**.
+A tela devolveu *"One or more fields have an error. Please check and try again"* e o campo devolveu
+*"File: The field is required."*. **Anexe uma imagem ou um vídeo do trabalho** e o envio passa.
+
+| Campo | Valor |
+|---|---|
+| *First name | Vini |
+| *Last name | Cavalcanti |
+| *Email | contact@vinicavalcanti.art |
+| *Phone number | o do documento privado do Drive, com o código de país |
+| *Position | **3D artist** (a lista é: visual effects editor, 2D compositor, 3D artist, generalist, vfx producer, vfx supervisor) |
+| *Upload your work | **uma imagem ou um vídeo** — PDF é recusado |
+| *Message | o texto abaixo |
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist and CG generalist with 10+ years, and I WANT TO
+> RELOCATE: I am fully open to moving to Los Angeles for a role. Almost five years at E-Line Media
+> taking Endstar's hero characters from first sculpt to engine, sculpting, retopology, UVs, baking,
+> texturing and in-engine integration. On The Wingfeather Saga at Angel Studios I modelled and
+> hand-painted Season 1 characters. Before that, three years at PUGA Studios delivering characters
+> for international clients, which is where I learned to deliver under someone else's art direction,
+> in the style defined by the client, with review rounds as routine. I also do character grooming in
+> Houdini. Tools: ZBrush, Maya, Blender, Substance Painter and Designer, Marmoset Toolbag, Unreal
+> Engine, Houdini. I would need work visa sponsorship in the United States; my academic background,
+> with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and
+> publications, makes a strong visa case, and I can start remotely while it is processed. Open to
+> aligning with your band for the role; as a reference, I am looking at around USD 100,000. Reel and
+> portfolio: https://www.artstation.com/viniciuscavalcanti — CV:
+> https://www.linkedin.com/in/vinicavalcnti/ — Site: https://vinicavalcanti.com
+
+## Plastic Wax (Sydney, Austrália) — Recruitment Form — À MÃO por reCAPTCHA que só aparece no fim
+
+**Link:** https://www.plasticwax.com/careers (rolar até RECRUITMENT FORM)
+
+Casa de animação e cinemática de Sydney (Subnautica 2, Splitgate 2, Disney Epic Mickey Rebrushed).
+A página diz: *"Don't see your role listed? That's okay, just complete the form below and we'll keep
+your details on hand for any relevant opportunities."*
+
+**POR QUE FICOU À MÃO:** o formulário é do Wix, em **quatro etapas**, e a automação preencheu e
+conferiu **todas** elas, inclusive os três menus e o anexo do CV. Ao clicar em **Submit** abre um
+**modal "Verification — Please confirm you're human"** com **reCAPTCHA de caixa de marcar**. É a
+mesma família do Workable e do Recruitee: até o clique final, tudo passa. Captura em
+`sp_plw_fim.png`. Marque a caixa e clique em Submit de novo, que leva dez segundos.
+
+Etapa a etapa, com os valores já validados:
+
+**Etapa 1** — First name `Vini`; Last name `Cavalcanti`; Email `contact@vinicavalcanti.art`;
+Phone (o do documento privado do Drive, **com o código de país**, e o seletor de bandeira vai
+sozinho para o Brasil); Address `Olinda, Pernambuco, Brazil`.
+
+**Etapa 2** — Resume* `Vini_Cavalcanti_CV.pdf`; Website / Portfolio
+`https://www.artstation.com/viniciuscavalcanti`; Portfolio Password `No password required.`;
+LinkedIn `https://www.linkedin.com/in/vinicavalcnti/`; Brief Description About Yourself:
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters. I WANT
+> TO RELOCATE and I am fully open to moving to Sydney for a role. Almost five years at E-Line Media
+> taking Endstar's hero characters from first sculpt to engine; The Wingfeather Saga at Angel
+> Studios, modelling and hand-painting Season 1 characters; and three years at PUGA Studios
+> delivering characters for international clients under someone else's art direction, in the style
+> defined by the client, with review rounds as routine. I am a Senior who reviews other artists'
+> work and sets the asset standard, and I founded my own character art school. Tools: ZBrush, Maya,
+> Blender, Substance Painter and Designer, Marmoset Toolbag, Unreal Engine, Houdini (grooming). I
+> would need work visa sponsorship for Australia; my academic background, with an honors laurea, a
+> postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa
+> case. Compensation: open to aligning with your band for the role; as a reference, around AUD
+> 95,000. Portfolio: artstation.com/viniciuscavalcanti — LinkedIn: linkedin.com/in/vinicavalcnti —
+> Site: vinicavalcanti.com
+
+**Etapa 3** — Working Rights\* **`Seeking Sponsorship in Australia`** (a lista tem *Australian
+Citizen or Permanent Resident*, *New Zealand Citizen*, *Valid Working Visa*, *Seeking Sponsorship in
+Australia*, *Seeking Remote International Work*; **a verdade é a quarta**); Job Type Preference\*
+**Permanent or Fixed Term - Full Time**; Reason For Application `Actively seeking employment`;
+Salary or Day Rate Expectations `Open to aligning with your band for the role; as a reference,
+around AUD 95,000 per year.` (a própria página avisa: excluir superannuation e informar em AUD);
+Availability To Commence `4 weeks`; e marcar a caixa de consentimento de banco de dados.
+
+**Armadilhas medidas:** (1) o **primeiro clique em Next não avança** — o Wix precisa de um segundo
+clique depois de os campos registrarem; (2) o botão de Submit **fica com o rótulo vazio** enquanto
+processa, o que faz um preenchedor genérico achar que o botão sumiu; (3) o `innerText` do input do
+menu volta **vazio** mesmo com a opção escolhida, e quem mostra a verdade é o **texto do botão** do
+menu; (4) o anexo do Wix limpa o `input[type=file]`, e a prova é o **nome do arquivo na tela**,
+que aqui apareceu como `Vini_Cavalcanti_CV.pdf`.
+
+**RECONFERIDO pelo Jhon em 07/09 (tarefa 1, fatia média):** o dossiê acima continua exato, campo a
+campo, e o Submit ainda cai no mesmo modal de reCAPTCHA de caixa. Confirma-se a mesma escolha de
+Working Rights e os mesmos valores. **Armadilha nova, não registrada acima:** esta página é Wix
+Thunderbolt pesado, e digitar nos campos ANTES de a hidratação terminar (uns 15-20s depois do load)
+faz o valor sumir sozinho 1-2s depois, sem erro nenhum na tela — parecia bug de `fill()`, mas era só
+falta de esperar a hidratação. Espere pelo menos 20s após o carregamento antes de preencher. Este
+achado vale para qualquer site pesado do mesmo motor (Thunderbolt/Wix). O painel (`docs/index.html`)
+estava desatualizado — a nota antiga não citava este dossiê nem o formulário real, e por isso a
+entrada passou o dia sem reconferência; corrigido nesta rodada.
+
+---
+
+# Fatia CACADOR (07/09, madrugada): fontes NOVAS abertas e o que cada uma rendeu
+
+Esta fatia saiu com uma ordem clara: não insistir nos quadros já varridos e **abrir fonte que a
+campanha nunca usou**. O que segue é a medida de cada uma, para ninguém repetir o caminho morto.
+
+| Fonte nova | Resultado medido em 07/09 |
+|---|---|
+| **gamejobs.co** (agregador) | **A ÚNICA QUE RENDEU.** 2.085 anúncios varridos por 12 buscas de disciplina, 132 estúdios, **80 deles inéditos para a campanha**. Dela saíram as três candidaturas enviadas desta fatia (Bluehole x2 e Loonshot) |
+| **API de ATS por token de estúdio** | Varridos **2.588 tokens** dos nomes de `processados.csv` e do `STUDIOS` do painel em sete sistemas (Greenhouse, Lever, Ashby, Workable, Recruitee, SmartRecruiters, BambooHR) e depois **4.505 tokens** das filas do gamedevmap. Resultado da primeira: **55 vagas da disciplina, e nenhuma inédita** além das que esta fatia já trabalhou. Isso confirma, medido e não presumido, o diagnóstico do agente do Grackle: o gargalo é **estoque**, não captcha |
+| **artstation.com/jobs** | **PAREDE, e não é o board:** a página é SPA e o `POST /api/v2/jobs/search.json` exige token CSRF que só existe dentro da sessão; abrindo no navegador de verdade, a ArtStation devolve o desafio da Cloudflare (`Just a moment...`, "Please complete a security check", Session ID e IP do datacenter na tela). Do navegador do Vini abre normal |
+| **awn.com/jobs** | **PAREDE Cloudflare.** curl devolve 403 e o navegador de tela devolve "Performing security verification" com Ray ID. Não é vaga morta, é bloqueio de IP |
+| **animationguild.org/jobs** | **NÃO É QUADRO DE VAGAS.** A URL responde 200, mas o conteúdo é um **post de blog de 2015** ("Jobs and Networking", de Steve Hulett) com conselhos de carreira. Não existe listagem de vaga ali. Não reabrir |
+| **cgmeetup.com/jobs** | Vivo e sem bloqueio, mas **tem duas vagas no total** (`arabic-content-writer` e `vfx-short-film-low-budget`), nenhuma da disciplina. Fonte real, estoque nulo |
+| **workwithindies.com** | Vivo, 98 vagas no quadro, e **as de arte são todas freelance ou pagamento por entrega** (personagem pago por peça, contrato de 3 a 4 semanas). Nenhuma com patrocínio nem realocação. O `/jobs` devolve 404: o quadro fica na raiz do site |
+| **remotive.com/api** e **himalayas.app/jobs/api** | APIs públicas de vaga remota, as duas respondem 200 e **as duas devolvem ZERO vaga de arte 3D** em dez buscas de disciplina. São quadros de tecnologia. Não vale reabrir |
+
+## As três armadilhas do Greenhouse EM OUTRO IDIOMA, medidas e já corrigidas no `apply_gh.js`
+
+O quadro coreano da Bluehole quebrou o preenchedor em três pontos diferentes, e **os três falham em
+silêncio**, que é o tipo de erro mais caro. Ficam corrigidos e valem para qualquer quadro que não
+esteja em inglês (o Greenhouse da Bluehole, da Loonshot e o francês da Highdive são exemplos vivos):
+
+1. **O botão de envio não tem a palavra "Submit".** No quadro coreano ele se chama `지원서 제출`. O
+   seletor antigo (`button:has-text("Submit application")`) devolvia `null` e o script morria com
+   `Cannot read properties of null`, depois de já ter preenchido tudo. Conserto: cair para
+   `form button[type=submit]` e registrar no log o texto do botão que achou.
+2. **A tela do código de segurança também não diz "security code" em inglês.** A detecção era por
+   texto, então o script passava direto, concluía "NOT CONFIRMED" e **fechava o navegador com o
+   código já enviado por email** — candidatura perdida sem erro nenhum na tela. Conserto: detectar
+   também pelo próprio campo de código no DOM (`input[autocomplete=one-time-code]` e parentes).
+3. **O menu de país está no idioma do quadro.** Brasil aparece como `브라질`, e o prefixo fixo
+   `^Brazil` não casava. O campo de país agora aceita `countryPrefs` pelo arquivo de respostas.
+
+E uma quarta, do mesmo lote: a regex que decide se a candidatura foi confirmada só conhecia texto em
+inglês. A confirmação da Bluehole é `(주)블루홀에 지원해주셔서 감사합니다`. **A URL `/confirmation`
+salva nesses casos**, e é a prova que vale em qualquer idioma.
+
+## IGG Canada, 3D Character Artist (Vancouver) — DESCARTADA POR VETO DE RESIDÊNCIA
+
+**Link:** https://igg.bamboohr.com/careers/289 · Vancouver, BC, presencial integral, CAD 60.000–85.000
+
+Dói, porque é **Vancouver**, prioridade número um, disciplina exata (personagem e hard surface,
+ZBrush, Maya, Substance) e faixa publicada. Mas o anúncio fecha a porta por escrito:
+
+> *"Legally eligible to work in Canada - we are unable to sponsor work permits for candidates
+> applying for this position."*
+
+Ele **precisa de patrocínio** e isso não se contorna com texto bonito no formulário. Não enviar.
+Registro da leitura: **07/09**. Se um dia reabrir sem essa frase, é candidatura de um minuto.
+Atenção para não confundir com a outra IGG que a campanha já trabalhou: aquela era a de **Jacarta**,
+requisição diferente e fora do recorte geográfico.
+
+## Good Job Games, Senior 3D Artist e 3D Artist (Istambul) — À MÃO, e por dois motivos
+
+**Links:** https://job-boards.greenhouse.io/goodjobgames/jobs/7491067003 (Senior 3D Artist) ·
+https://job-boards.greenhouse.io/goodjobgames/jobs/4303829003 (3D Artist) ·
+https://job-boards.greenhouse.io/goodjobgames/jobs/7588887003 (3D Artist, Hybrid-Casual)
+
+**Por que à mão, e o segundo motivo é o que manda:**
+
+1. Este quadro do Greenhouse **tem reCAPTCHA na página** (ao contrário do da Bluehole e do da
+   Loonshot, que não têm e por isso enviaram).
+2. Existe uma pergunta obrigatória que **só o Vini pode responder**: *"Match Villains oyununu kaç
+   level oynadın?"* — quantos níveis do jogo Match Villains você jogou. Pela regra da campanha,
+   pergunta cuja resposta só ele sabe **não se inventa**: fica em branco e se registra.
+
+Há ainda uma pergunta obrigatória de menu, *"Autodesk Maya ile çalışma deneyimin var mı?"* (tem
+experiência com Maya?), que é **Sim**, e o campo `Portfolyo`, que é a ArtStation.
+
+## Framestore, Visual Development Artist – AI & Generative Tools (Londres) — requisição NOVA
+
+**Link:** https://framestore.recruitee.com/o/visual-development-artist-ai-generative-tools
+
+Esta **não estava no dossiê de Framestore** que a campanha já tinha (lá constam a Blender Generalist
+de Londres e as duas de Montréal). É requisição diferente, de **Visual Development**, que é metade
+do título dele, em **Londres**. A parede é a mesma do resto do Recruitee: **hCaptcha de imagem só
+depois do clique em Send**. Use o mesmo preenchimento campo a campo já validado no bloco da
+Framestore acima, trocando a pergunta de realocação para Londres e a pretensão para
+`GBP 50,000 per year; open to aligning with your band for the role`.
+
+## ARMADILHA NOVA, medida em 07/09: a PERGUNTA-ELIMINATÓRIA do Teamtailor DESLIGA o formulário
+
+A **Cast Iron Games** (Lead 3D Artist, Wakefield, Reino Unido, presencial) ensinou uma trava que a
+campanha ainda não tinha visto e que vale para **qualquer vaga do Teamtailor**:
+
+O formulário tem uma pergunta obrigatória marcada só como *"Location\*"*, e o enunciado inteiro é
+**"Please note that this role is on-site at our Wakefield studio. Are you currently based in the UK
+and able to work on-site?"**, com rádio Yes/No. Respondendo **No**, que é a verdade, o Teamtailor
+escreve na tela **"You have to meet these requirements to be able to apply"** e aplica a classe
+`cursor-not-allowed opacity-50` no *contêiner inteiro do formulário*: o botão de envio fica
+`disabled` e **nenhum clique passa**.
+
+**Por que isso importa mais do que uma vaga perdida:** o sintoma no log da automação é
+`element is not enabled` e `<div ...> intercepts pointer events`, repetido dezenas de vezes, que é
+**idêntico ao sintoma de sobreposição invisível** já catalogado. São coisas diferentes: uma é
+defeito de página e se contorna, a outra é **veto de residência implementado como código** e não se
+contorna. Diferencie olhando a classe do `formContentWrapper`: se ela tiver `cursor-not-allowed`,
+é eliminatória, e a resposta é **descartar a vaga**, não insistir.
+
+**Cast Iron Games fica DESCARTADA por veto de residência**, medido em 07/09. O anúncio em si não diz
+"must be based in", então a leitura do texto do anúncio **não teria pego isso**: só abrindo o
+formulário. É mais uma prova da regra de 07/09 de que a condição real mora no formulário.
+
+## NEOWIZ (Coreia do Sul, Seongnam) — DUAS vagas de 3D Character Modeler — À MÃO por hCaptcha
+
+Estúdio novo para a campanha, achado em 07/09 pela fatia CACADOR cruzando o `backlog-estudios.md`
+(entrada "Neowiz | South Korea (Seongnam) | Modeler | pendente") com a API oficial do Lever. O
+quadro tem **22 vagas** e duas são exatamente a disciplina dele:
+
+| Vaga | Estúdio interno | Link |
+|---|---|---|
+| **3D 캐릭터 모델러 — 3D Character Modeler, próximo título de *Lies of P*** | NOUGH Studio | https://jobs.lever.co/neowiz/5ad83a87-38c2-4441-81da-5ab73e3217fc |
+| **3D 캐릭터 모델러 — 3D Character Modeler, novo projeto de console de IP original** | Onetake Studio | https://jobs.lever.co/neowiz/7de35c5d-137c-4c03-9453-5f93228899f7 |
+
+*Lies of P* é o soulslike coreano que virou sucesso global, e o próximo título dele é a vaga de
+cima. Coreia do Sul está dentro do escopo geográfico.
+
+**Por que à mão:** Lever, e o Lever da Neowiz tem **hCaptcha** (`newassets.hcaptcha.com` no iframe,
+confirmado em 07/09). É a mesma parede de Larian, Frontier, Asobo, Behaviour, Skydance, Jam City,
+Avalanche e Blackbird. Não se burla.
+
+**Formulário mapeado campo a campo** (o mesmo nas duas vagas):
+
+| Campo | O que preencher |
+|---|---|
+| Resume/CV, Full name, Email, Phone | os de sempre |
+| Current location / Current company | `Olinda, Pernambuco, Brazil` / `E-Line Media` |
+| Portfolio URL / LinkedIn | ArtStation e LinkedIn de sempre |
+| 지원 동기, 강조 프로젝트, 포트폴리오 참고 링크 (obrigatório, texto livre) | motivação, projetos de destaque e links; use o texto padrão de realocação |
+| 경력기술서 및 포트폴리오 파일 첨부 (PDF) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| **1. 나는 어떤 디자이너인가** (obrigatório) — quem você é como artista | apresentação: 10+ anos, Wingfeather Saga temporada 1, cinco anos na E-Line, três anos na PUGA entregando personagem sob direção de arte alheia com rodada de revisão como rotina |
+| **2. 지원동기와 입사 후 목표** (obrigatório) — motivação e objetivos | quer trabalhar em personagem estilizado e semi-realista de console; **QUER REALOCAR** para a Coreia do Sul; precisa de patrocínio de visto |
+| **3. 가장 마음에 들었던 게임과 이유** (obrigatório) — jogo favorito e por quê | **SÓ O VINI RESPONDE.** A campanha não inventa preferência de jogo. O campo aceita `N/A`, mas a resposta boa é dele |
+| 경력 (총 경력 기간) — anos de carreira (select) | **`10년`** ou mais alto conforme ele preferir; a lista vai de 0 a 20+ |
+| 최근 직장명 — último empregador (obrigatório) | `E-Line Media` |
+| 현재 연봉 — salário atual | **DEIXAR VAZIO.** É opcional, e salário atual da E-Line nunca se revela |
+| 희망 연봉 — pretensão (só números, em KRW) | opcional; se quiser preencher, o equivalente da política para casa grande. Também vale deixar vazio e usar o campo de justificativa |
+| 최종 학력 — escolaridade | grau dele |
+| 채용 공고를 처음으로 접하신 경로 (obrigatório, select) | a verdade é **`기타(직접 입력)`**, "outro (escrever)", porque a campanha chegou pelo quadro oficial do Lever; escrever no campo seguinte |
+| 국가보훈대상자 / 장애인 (obrigatórios, rádio) | marcar a opção de **não se aplica**; são benefícios legais coreanos para veterano e pessoa com deficiência |
+| 개인정보 수집 및 이용 동의 (obrigatório, select) | **`동의`** (concordo) |
+| 인재풀 등록 동의 (obrigatório, select) | **`동의`**, que também põe o perfil no banco de talentos |
+| 민감정보 동의 (opcional) | pode deixar em `Select...` |
+| **hCaptcha** | resolver na tela |
+
+## Behaviour Interactive, Senior Texture Artist — Dead by Daylight (Montréal) — REQUISIÇÃO NOVA
+
+**Link:** https://jobs.lever.co/bhvr/55fa65fe-50b8-41e2-a406-5f185c860295/apply
+
+Esta **não estava na campanha**: o painel tem a Senior 3D Character Artist de *Dead by Daylight*
+(`18024240`), a de projeto não anunciado (`86ddd557`) e a de *7 Days to Die* (`976b2a8c`, enviada e
+confirmada em 30/08), mas **não tem a de textura**. É **Montréal, Canadá**, e textura é disciplina
+dele com todas as letras.
+
+**Por que à mão:** hCaptcha do Lever, confirmado em 07/09 no próprio formulário.
+
+O formulário é **idêntico** ao das outras vagas da Behaviour, então valem as respostas do bloco
+"Behaviour Interactive" acima: portfólio, LinkedIn, outro site, **elegível para trabalhar no Canadá
+= No**, e **aceita ir ao escritório três dias por semana = Yes**. No texto livre, a frase de
+realocação para Montréal e o caso de visto.
+
+## Illumination Studios Paris — quadro do Lever ESVAZIADO, a Surfacing Artist morreu
+
+O `backlog-estudios.md` registra "Illumination Studios Paris | France (Paris) | Surfacing Artist |
+https://jobs.lever.co/illumination/88ab5915-96db-448b-98d7-7d3385c5f0bf | pendente". Medido em
+07/09 na **API oficial do Lever**: `api.lever.co/v0/postings/illumination?mode=json` responde 200
+com **lista vazia**. Não é bloqueio nem falso negativo de curl, é quadro sem nenhuma vaga.
+Vale reconferir quando a Illumination reabrir, porque surfacing é o centro da disciplina dele.
+
+## Dossiês do JHON, 08/09 (Europa e Canadá): três formulários prontos para o Vini mandar à mão
+
+Os três estão preenchidos e conferidos campo a campo pela automação; o que falta em cada um está
+dito com todas as letras. Telefone: **documento privado do Drive** "CAMPANHA - dados pessoais dos
+formulários" (nesta sessão a variável `VINI_TEL` estava vazia).
+
+### 1. Bohemia Interactive — Open Application (Praga, Chéquia)
+
+`https://careers.bohemia.net/en/apply` · **A parede é reCAPTCHA v3, e só ela.** Os dois bloqueios
+que o painel registrava, o menu de disciplina e o código de país, **não existem**: eles caíam
+porque pedaços de JavaScript sob demanda voltavam 502 intermitente pela ponte desta sessão.
+
+| Campo | Resposta |
+|---|---|
+| Discipline (menu) | **Art & Animation** (a lista tem 22 opções) |
+| First name / Last name | Vini / Cavalcanti |
+| Email address | contact@vinicavalcanti.art |
+| Country code | **Brazil (+55)** |
+| Phone number | do doc privado do Drive; o campo **não é obrigatório** |
+| CV/Resume | `Vini_Cavalcanti_CV.pdf` (a prova do anexo é o **nome na tela**, o input fica vazio) |
+| Cover Letter | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Portfolio/LinkedIn link | https://www.artstation.com/viniciuscavalcanti |
+| Expected monthly gross salary | **4600** + moeda **EUR** (= EUR 55.200/ano, piso de sênior em casa grande da Europa) |
+| Possible start date | opcional, em branco |
+| How did you learn about the position? | **Search engine** |
+| Are you entitled to work in EU? | **deixar DESMARCADA** — é a verdade, ele precisa de patrocínio |
+| Caixa de consentimento | marcar |
+
+**Não há campo de texto livre**, então a frase de realocação só cabe na carta anexada.
+Sinal de recusa: o POST em `/en/apply.data` volta 200 com `success:false` e
+*"Security verification failed. Please try again."*
+
+### 2. TRIXTER — Speculative Job Application (Munique e Berlim)
+
+`https://www.trixter.de/jobs/job/speculative-job-application-2/` · Personio embutido em WordPress.
+**Vaga marcada FREELANCE.** O clique em enviar **não gera pedido de rede nenhum** e a tela escreve
+*"Sorry, something went wrong..."*: quem recusa é o script deles. Endereço alternativo que a
+própria tela oferece: `hello@trixter.de`.
+
+| Campo | Resposta |
+|---|---|
+| First Name / Last Name | Vini / Cavalcanti |
+| E-mail | contact@vinicavalcanti.art |
+| Phone | doc privado do Drive (opcional) |
+| Eligibility to work in Germany (`custom_attribute_244638`) | **No** — a verdade |
+| Availability Date | 20.10.2026 |
+| Desired Salary / Freelance Daily Rate | EUR 55,000 per year equivalent; open to aligning with your band for the role. |
+| Link to Portfolio (`244637`) | https://www.artstation.com/viniciuscavalcanti |
+| Portfolio Password (`244636`) | em branco |
+| LinkedIn (`244635`) | https://www.linkedin.com/in/vinicavalcnti/ |
+| IMDB (`244413`) | em branco |
+| Resume / Cover letter | os dois PDFs |
+| Caixa `terms` | marcar |
+
+Armadilha nova: o botão **send application não tem atributo `type`**, então `button[type=submit]`
+devolve zero elementos. E o aviso de cookies cobre o botão: remova o nó que aparecer em
+`document.elementFromPoint` no centro dele, nunca clique com força (cai na página de privacidade).
+
+### 3. Ironbird Creations — 3D Artist (Cracóvia, Polônia)
+
+`https://careers.ironbirdcreations.com/jobs/2228715-3d-artist/applications/new` · Teamtailor,
+**sem captcha nenhum**. Falta **um** campo, e é dele: *"Please share your portfolio with us"* é
+**obrigatório e é upload de ARQUIVO** (dropzone, `required: true`, 1 arquivo, sem opção de link).
+A campanha não tem PDF de portfólio, e pôr o CV ali seria mentir sobre o que o arquivo é.
+**Resolve exportando um PDF do ArtStation.** Ressalva: as seis vagas do quadro são de novembro de
+2022 e nada foi publicado depois, então o quadro está parado.
+
+| Campo | Resposta |
+|---|---|
+| Salary expectation (PLN gross) | PLN 16,000 gross per month (~PLN 192,000/ano). Open to aligning with your band for the role. |
+| Aviso prévio (rádio) | **1 month** |
+| Portfólio (upload obrigatório) | **PDF do ArtStation — só o Vini gera** |
+| Nível de inglês (rádio A1–C2) | **C1** |
+| Where did you hear about this position? | Your careers page |
+| First name / Last name / Email | Vini / Cavalcanti / contact@vinicavalcanti.art |
+| Phone | doc privado do Drive, **com o código do país na frente** (widget `intl-tel-input`) |
+| Upload CV (obrigatório) | `Vini_Cavalcanti_CV.pdf` |
+| Additional files | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| Textarea `cover_letter` | "I am ready to move for the role." + o caso de visto (láurea com honras, especialização, mestrado em andamento, IELTS e publicações) |
+
+**Teamtailor:** POST 200 não é candidatura completa — só depois de abrir o link do email
+*"Complete the application"* a URL vira `/thanks`.
+
+## EA (jobs.ea.com, Avature): a porta ESTAVA aberta, e o que travava era o fluxo errado
+
+Medido inteiro em 07/09 mandando a **Principal Materials Artist (Apex Legends)** da Respawn,
+requisição **214789**, Vancouver-Great Northern Way / Los Angeles-Chatsworth / Madison.
+Terminou com **prova tripla**: URL `jobs.ea.com/en_US/careers/Success?jobId=214789`, o texto
+*"Thanks for applying to Electronic Arts! We'll take it from here."* na tela, e o email de
+`EAcareers@ea.com` às 08h13 com o assunto *"Thanks for applying to Principal Materials Artist
+(Apex Legends) (Req ID 214789) at Electronic Arts!"*.
+
+Isto importa muito além da Respawn: o mesmo portal cobre **BioWare, Motive Montreal, Criterion,
+Maxis, DICE e Ripple Effect**, e o painel tinha a EA registrada como parede desde 03/09 por causa
+de um `Internal server error` numa requisição específica. **Não é parede.**
+
+### O erro que travava, e ele é de FLUXO, não de campo
+
+A tela `ApplicationMethods?jobId=<id>` tem duas metades: o login em cima e o bloco
+**"First time applicant"** embaixo. O bloco de candidato novo funciona lindamente — anexa o CV,
+o Avature **lê o PDF** e já preenche empresa, cargo, datas e formação — e então o passo `/Register`
+devolve, em vermelho, **"There's an existing record with that email"** e **nada é enviado**.
+Ou seja: quem já tem conta (o Vini tem, desde 03/09) **tem que ENTRAR**, e o caminho de candidato
+novo é um beco sem saída que consome a rodada inteira parecendo que vai dar certo.
+
+Com a sessão aberta, a URL vira `ApplicationGeneralInformation?jobId=<id>` e **o perfil já vem
+preenchido**: endereço, telefone, histórico, formação, idiomas, skills e link do portfólio.
+
+### Onde é preciso responder, vaga a vaga
+
+| Campo | Resposta |
+|---|---|
+| `7836` How did you hear about this opportunity? | **EA Careers Website** |
+| `7837` Are you willing to relocate? | **Yes** |
+| `7841` Have you ever worked at EA in any capacity? | **No** |
+| `17623` How many years of relevant experience | **More Than 3 Years** (é a faixa mais alta da lista) |
+| `17624` Bootcamp/diploma/serviço militar nos últimos 18 meses | **No** (o mestrado está EM CURSO, não concluído) |
+| `22155` Cover Letter (arquivo) | `Vini_Cavalcanti_Cover_Letter.pdf` |
+| `17505` aceite do **NDA de entrevista** | marcar |
+| gênero (Voluntary Self Disclosure) | **Choose not to Disclose** |
+| `3679-2` **Do you now or in the future require immigration sponsorship?** | **Yes** — é a verdade e é o campo em que não se pode errar |
+| `3679-3` Sujeito a restrição que impeça de trabalhar para a EA? | **No** |
+| `3684` I certify that all information is true and complete | marcar |
+
+Os ids **mudam entre o fluxo de candidato novo e o fluxo logado** (a mesma pergunta de anos de
+experiência é `17621` num e `17623` no outro), então **mapeie os campos da vaga**, como no Greenhouse.
+
+### As cinco armadilhas medidas, e três delas parecem outra coisa
+
+1. **Id que começa com dígito não entra em seletor CSS.** `#162`, `#175-save` e `#7836` levantam
+   `SyntaxError: not a valid selector` e **todo campo volta vazio**, o que parece formulário
+   quebrado e é seletor. Use `[id="162"]`. É a mesma lição do HubSpot embutido.
+2. **A página do Avature monta VAZIA quando o bundle dela falha na rede.** A URL está certíssima,
+   o passo está certo, e não existe um único `<input>`. Isso NÃO é login expirado nem vaga fechada:
+   é para **recarregar** até montar. Clicar no gatilho de upload não adianta, porque quem cria o
+   `#resumeFile` é justamente o JavaScript que não carregou.
+3. **O POST do Continue devolve 502 com frequência** e a página volta para `ApplicationMethods`.
+   Também não é recusa: reanexe o CV e clique de novo.
+4. **O botão Next da tela do NDA fica `disabled`** enquanto a caixa de aceite não estiver marcada,
+   e o clique estoura em *timeout de 30s* com a mensagem "element is not visible". Parece página
+   travada e é a caixa. O rótulo dela é **só um asterisco**, sem texto nenhum, então casar por
+   rótulo não acha: o que identifica é o container `.AcceptanceCheckboxField` com `required`.
+5. **O `select2` do Avature busca no servidor.** País, Estado e Código do país do telefone são
+   combobox que nascem com o `<select>` VAZIO e só carregam ao digitar; ler a lista cedo devolve
+   `["Searching…","Searching…"]` e o código conclui "não achei Brazil". Espere a lista **parar de
+   buscar**. E o Estado só carrega **depois** de o País estar escolhido.
+
+E uma regra que este envio confirma: **o `<select>` desses campos não tem o atributo `required`**,
+só o rótulo tem asterisco. Checagem genérica de "obrigatório vazio" **não pega** País, Estado e DDI.
+Guarde uma verificação explícita para eles, ou o envio sai sem endereço e volta com erro.
+
+### Conta de candidato
+
+A senha antiga não estava disponível para esta rodada. A redefinição foi feita pelo fluxo oficial
+(`/careers/Login` → *Forgot your password?*, e o link chega de `noreply@ea.avature.net` com o
+assunto *Password activation*). **A senha nova NÃO está escrita aqui nem em nenhum arquivo do
+repositório, que é público** — ela foi entregue ao Vini no resumo da rodada e o lugar dela é o
+documento privado do Drive "CAMPANHA - dados pessoais dos formulários". Detalhe do fluxo: a página
+de redefinição tem **dois** campos de senha e o botão se chama **Next**, com `id="submitButton"`;
+abrir `/careers/ForgotPassword` direto pela URL devolve **página vazia**, o link tem que ser clicado.
+
+## CENSO DO PORTAL INTEIRO DA EA (07/09, 09h30): 332 vagas, e a arte NÃO está onde se esperava
+
+A porta da EA foi aberta em 07/09 e a primeira coisa a fazer com ela era **listar o portal
+inteiro**, porque a busca por palavra-chave do `jobs.ea.com` **ignora o termo** e devolve as
+mesmas vinte vagas para qualquer coisa que se digite — foi isso que escondeu a Respawn por dias.
+A leitura confiável é **paginar por `jobOffset`, 20 por página**; `jobRecordsPerPage=100` não
+funciona, o servidor devolve 20 do mesmo jeito. O script está em `automacao/lista-ea.sh` e roda
+em cerca de um minuto com **uma conexão sequencial**; o retrato de 07/09 está em
+`automacao/ea-portal-0709.csv`.
+
+**O resultado desmente a expectativa mais cara do dia.** A esperança escrita era que "Canadá
+anglófono e Europa estão todos aí dentro" por causa de BioWare, Motive, Criterion, DICE e Maxis.
+Geograficamente é verdade. **Em vaga de arte, não é:**
+
+| Estúdio do grupo | Vagas no portal | Da disciplina do Vini |
+|---|---|---|
+| EA Studios - SPORTS (Vancouver, Bucareste, Orlando, Birmingham) | 143 | **4** |
+| EA Studios - Respawn (Vancouver GNW, LA) | 19 | 1 (a 214789, já enviada) |
+| EA Studios - Quality Verification | 24 | 0 |
+| EA Studios - EA Create (Xangai, Kuala Lumpur) | 9 | 0 no escopo geográfico |
+| EA Studios - Localization | 6 | 0 |
+| EA Studios - Motive Montreal | 5 | 0 (engenharia e narrativa) |
+| EA Studios - Full Circle (Vancouver, Montréal) | 5 | 0 |
+| EA Studios - DICE Stockholm | 4 | 0 (engenharia e design) |
+| EA Studios - Mobile Korea | 4 | 0 |
+| Maxis (Vancouver) | 3 | 1 (Art Director 215644, já enviada em 01/09) |
+| EA Studios - Ripple Effect | 2 | 0 |
+| EA Studios - Criterion Games (Guildford) | 2 | 0 (business dev e segurança) |
+| **EA Studios - BioWare (Edmonton)** | **1** | **0** (Production Director) |
+| EA Studios - DCS, Mobile (Firemonkeys, Playdemic, Glu, Slingshot) | 9 | 0 no escopo |
+| CT (IT, Segurança, Frostbite, Infra, Dados), Finanças, Marketing, RH, Jurídico | ~100 | 0 |
+
+**A frase que fica para a campanha: no dia 07/09 a EA inteira tinha exatamente CINCO vagas da
+disciplina no mundo todo, e QUATRO delas eram a mesma equipe de Characters do EA SPORTS FC em
+Vancouver.** BioWare tem uma vaga só no mundo. Criterion tem duas e nenhuma é de arte. DICE tem
+quatro e nenhuma é de arte. **Entrada de painel por estúdio do grupo não vale nada aqui: o que
+vale é o censo do portal, e ele leva um minuto.**
+
+### As três Character Artist do EA SPORTS FC são a MESMA vaga em três contratos
+
+Armadilha nova, e o `internal_job_id` do Greenhouse não ajuda aqui porque o Avature não publica
+um. **O que separa as três é o `Worker Type` e a FAIXA SALARIAL**, não o texto:
+
+| Req | Worker Type | Faixa publicada (BC) | Situação |
+|---|---|---|---|
+| **215358** | **Regular Employee** (efetiva) | CAD 92.900 – 129.200 | **ENVIADA em 07/09** |
+| 215657 | Temporary Employee | CAD 77.700 – 107.900 | enviada em 03/09 |
+| 215666 | Temporary Employee | CAD 92.900 – 129.200 | **NÃO enviada: é cópia literal da 215657** |
+
+Diferença entre a 215657 e a 215666, linha a linha do anúncio renderizado: **só o número da
+requisição e a faixa**. Diferença entre a 215657 e a 215358: número, requisição, **Worker Type** e
+faixa. Ou seja, a regra "título + cidade iguais já é suspeita suficiente para pular" **teria feito
+perder a versão EFETIVA**, que é justamente a que sustenta patrocínio de visto — contrato de doze
+meses raramente sustenta permissão de trabalho e efetivo sustenta. **A regra ganha uma exceção
+medida: quando o mesmo anúncio sai como Temporary e como Regular, as duas são requisições
+diferentes e a Regular vale a candidatura mesmo que a Temporary já tenha ido.** O que NÃO vale é
+mandar nas duas Temporary idênticas.
+
+Como conferir em trinta segundos, sem navegador: `curl` na página da vaga e comparar
+`Worker Type`, `Work Model` e o bloco `PAY RANGES`. O `LinkedInID` que aparece no rodapé **não
+serve de chave**: é o id da empresa na LinkedIn e é o mesmo `74884070` em todas as vagas da EA.
+
+### O que ficou de fora, e por quê
+
+- **215788 Senior Character Artist (Vancouver, efetiva)** — continua sem candidatura, e agora por
+  um motivo NOVO além do defeito de servidor: com a 215358 enviada, mandar também na sênior do
+  **mesmo time e mesma função** é exatamente a candidatura repetida que a regra do Greenhouse
+  proíbe ("Modeler e Experienced Modeler: mande só na sênior"). O erro estrutural, para não se
+  repetir: **quando o mesmo time publica o nível júnior e o sênior da mesma função, decida ANTES
+  qual das duas recebe a candidatura.** Aqui a sênior estava quebrada do lado da EA (Internal
+  server error em cinco tentativas em dois dias), então a efetiva não-sênior era a única porta
+  que abria de verdade.
+- **214767 Concept Hard Surface Artist (Apex Legends, Vancouver)** — o título engana. O anúncio
+  se chama por dentro **"Concept Artist I"**, é concept art 2D de cosmético de arma, e é o nível
+  de ENTRADA. Fora da disciplina e abaixo da senioridade.
+- **215670 / 215659 / 215871 Concept Artist (Environment, Wardrobe, Mural)** — concept 2D.
+- **215826 Visual Designer - EA SPORTS UFC** — o nome soa a visual development e **não é**: é
+  design gráfico e de UI, Figma e Adobe, com 3D só como "nice to have".
+- **214727 Capture Artist - Skate** — captura de gameplay para marketing, não é arte 3D.
+- **216056 Associate Environment Artist** e **215726 Concept Artist** e **215915 Associate
+  Technical Art Director** — todas em Kuala Lumpur, **fora do escopo geográfico** (na Ásia só
+  valem Coreia do Sul e Singapura). As duas últimas saíram do ar entre 09h00 e 09h30 de 07/09.
+- **215999 / 215998 Level Artist e Senior Level Artist, 215913 Concept Artist - Character,
+  216022 Art Director - Create, 214738 Senior 3D Art Lead FC Mobile** — todas em Xangai, fora do
+  escopo.
+- **Todo o bloco de Technical Artist** (são catorze no EA SPORTS) — disciplina que ele não tem.
+
+### Enviadas nesta rodada, com prova tripla cada uma
+
+| Req | Vaga | Local | Prova |
+|---|---|---|---|
+| **215358** | Character Artist - EA Sports FC (Regular Employee, híbrida) | Vancouver, Canadá | `Success?jobId=215358` + texto na tela + email de `EAcareers@ea.com` às 09h07 |
+| **215660** | Level Artist - EA SPORTS FC (contrato de 12 meses, presencial 3 dias) | Vancouver/Burnaby, Canadá | `Success?jobId=215660` + texto na tela + email de `EAcareers@ea.com` às 09h17 |
+
+A Level Artist foi enviada com a ressalva escrita no painel: o eixo do anúncio é construção de
+nível e arquitetura, que não é o portfólio dele, mas as **qualificações** são conhecimento expert
+de Maya, modelagem de alta fidelidade, pintura fotorrealista em Substance Painter, ZBrush e
+Substance Designer, e **supervisionar artistas internos E EXTERNOS com experiência de fornecedor
+de outsourcing** — que é literalmente o que os três anos de PUGA provam.
+
+### O fluxo logado, reconfirmado duas vezes seguidas
+
+O `mt_ea_go.js` fechou as duas candidaturas sem uma única intervenção. A sequência é sempre a
+mesma e vale escrever: `ApplicationMethods` (login) → `ApplicationGeneralInformation` (perfil já
+preenchido, cinco selects e a carta) → botão `7858-save` → `ApplicationEEO` com **três** telas
+encadeadas (`17506-goto`, `2666-next`, `2680-save`) → `Success?jobId=`. O aceite de rótulo
+`*` é o `17505`; o `3679-2` (patrocínio) e o `3679-3` (restrição) só aparecem na **segunda** tela
+do EEO. Em nenhuma das duas houve 502 no Continue nem página vazia — o defeito de rede que
+atormentou a rodada anterior não apareceu com o navegador rodando sozinho.
+
+### A senha da conta
+
+Foi redefinida de novo em 07/09 às 08h55 pelo fluxo oficial (`/careers/Login` → *Forgot your
+password?* → link de `noreply@ea.avature.net`, assunto *Password activation*). **A senha nova NÃO
+está neste arquivo nem em nenhum outro do repositório, que é público**: foi entregue ao Vini no
+resumo da rodada e o lugar dela é o documento privado do Drive "CAMPANHA - dados pessoais dos
+formulários". Dois detalhes do fluxo que custam tempo: o link é de **uso único** (a segunda
+tentativa de abri-lo devolve página sem campo de senha, o que parece defeito e é o link já gasto),
+e o campo de email da recuperação é o **próprio `#username`** da tela de login, com o botão
+**Continue** — não existe tela separada.
+
+### Alerta de vaga criado na conta da EA (07/09), e o que ele cobre de verdade
+
+Com o portal seco na disciplina, a rede que sobra é o alerta do próprio portal. Foi criado um,
+na conta dele: **Job Category = Art, sem filtro de país, frequência semanal**, e a EA confirmou na
+tela *"Job alert created. We'll send you emails to contact@vinicavalcanti.art with jobs that match
+your criteria"*, com a linha aparecendo depois em `/careers/ProfileJobAlerts`.
+
+O caminho, porque ele não está onde parece: o botão **Create job alert** da lista de alertas é um
+`<a class="button button--primary">` para **`/careers/AgentCreate?from=profile`**, e o item de mesmo
+nome no submenu está **invisível**, então `getByText('Create job alert').click()` estoura em timeout
+de 30s dizendo *element is not visible* — vá pela URL. Os cinco filtros (Country `8200`, Job
+Category `4872`, Worker Type `4873`, Studio/Department `4874`, Work Model `4875`) são **select2 que
+busca no servidor**, com um `<input id="<id>-search__field">` ao lado: digite, **espere a lista
+parar de dizer "Searching…"**, clique na opção e **releia `selectedOptions`** antes de dar por
+gravado. A categoria certa se chama exatamente **`Art`**.
+
+**Duas ressalvas honestas, para ninguém contar vitória que não viu.** A frequência foi pedida
+**Daily** e o portal gravou **Weekly**: o `selectOption({label:'Daily'})` não levantou erro nenhum e
+a lista mostra Weekly, e uma segunda passada pelo `EditAgent?action=edit&id=` também não mudou. E
+**não foi possível confirmar por dentro do portal que as vagas de Character Artist estão etiquetadas
+na categoria `Art`**: o painel de filtros da busca só monta depois de expandir e os parâmetros de
+filtro na URL (`?4872=Art` e variantes) são **ignorados pelo servidor**, que devolve as 332 de
+sempre. Ou seja: **o alerta é rede a mais, não substituto do censo.** Quem quiser certeza roda
+`sh automacao/lista-ea.sh`, que leva um minuto e lê o portal inteiro.
+
+---
+
+# Fatia WORKABLE + SKYDANCE, 07/09: seis dossiês campo a campo, todos verificados na fonte
+
+Todos os campos abaixo vieram da **estrutura oficial do formulário**, não de suposição: no Workable
+pelo `GET https://jobs.workable.com/api/v1/jobs/<uuid>/form?includeAccountMetadata=true`, que
+devolve seção por seção cada campo com `id`, rótulo, tipo, obrigatoriedade e a lista de opções com o
+id de cada uma; na Skydance pela API pública do Lever. Nenhum deles passou pelo `apply.workable.com`,
+que continua em `429 / error code 1015` contra o nosso IP.
+
+**Por que estão aqui e não enviados.** No Workable o envio é barrado pelo **Cloudflare Turnstile**:
+o `POST /api/v1/jobs/<uuid>/apply` devolve **412 Precondition Failed** com o cabeçalho **`x-ts: 0`**,
+que é o token faltando, e no navegador de tela o clique em *Submit application* dispara
+`challenges.cloudflare.com` e o POST de candidatura **nunca sai**, com o botão ficando cinza. Na
+Skydance é **hCaptcha de desafio** do Lever. Captcha de desafio não se burla; formulário mapeado
+campo a campo faz o envio virar um minuto de trabalho.
+
+## Respostas que valem para TODOS os formulários desta lista
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | `Vini` / `Cavalcanti` |
+| Email | `contact@vinicavalcanti.art` |
+| Telefone | valor no doc privado do Drive "CAMPANHA - dados pessoais dos formulários". **No Workable o campo tem seletor de país próprio**: escolher Brazil e digitar só os dígitos, sem código e sem espaço |
+| Endereço | `Olinda, Pernambuco`. **Armadilha medida:** o Workable autopreenche `Columbus, United States of America` pela geolocalização do nosso proxy. Trocar sempre |
+| Portfólio | `https://www.artstation.com/viniciuscavalcanti` |
+| LinkedIn | `https://www.linkedin.com/in/vinicavalcnti/` |
+| Site | `https://vinicavalcanti.com` |
+| CV | `Vini_Cavalcanti_CV.pdf` |
+| Autorização de trabalho | **precisa de patrocínio**, sempre a verdade |
+| Liderança de equipe | **Sim** |
+| Aviso prévio | um mês de transição a partir do contrato atual |
+| Salário atual | *"Confidential under the NDA of my current contract; happy to discuss ranges during the process."* |
+| Frase de realocação | *"I am ready to move for the role."* |
+| Caso de visto | *"My academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case."* |
+| Frase fixa de portfólio | *"My portfolio holds more than **45 projects** with **over 60 characters** across many titles, and my **personal projects** are some of the strongest pieces in it."* |
+
+## 1. Skydance Animation — Senior Grooming TD, Madri (PRIORIDADE, regra 14)
+
+`https://jobs.lever.co/skydance/9ad28cab-87cd-4235-ae9b-b4c53a3457e5`
+
+**Por que subiu para alta:** não é grooming puro. O anúncio diz *"Creates complex, artistically
+appealing hairstyles, grooms & **surfacing** for: human characters, furry creatures, feathered
+characters, props and elements"*, e os Requirements pedem *"good understanding of the processes of
+grooming, **surfacing**, rendering, simulation"* e *"Depth of knowledge in groom & surfacing tools
+... **Mari**, **Substance** ..."*. Surfacing é texturização, disciplina dele. Skydance é grupo
+**Paramount**, então vale a regra 14: aplica na hora.
+
+**Busca literal no anúncio inteiro (07/09):** `authoriz` 2, e as duas no aviso padrão de fraude
+(*"contacted by an unauthorized person"*), nunca em elegibilidade; `eligib` 0; `sponsor` 0;
+`work permit` 0; `must be based` 0; `relocat` 0; `days a week` 0; faixa salarial nenhuma.
+**Não há veto de residência escrito.** Idioma: *"High English level desirable. Spanish desirable"*,
+ou seja o espanhol é desejável e **não** exigido. É **híbrido**, não presencial (`workplaceType:
+hybrid` e a etiqueta `#LI-Hybrid` no próprio texto).
+
+**Por que à mão:** a página `/apply` renderiza **hCaptcha de desafio**, sitekey
+`e33f87f8-88ec-4e1a-9a13-df9bbb1d8120`, com `hcaptcha.render('h-captcha', {...})` **sem**
+`size: invisible` e a `<div id="h-captcha" data-sitekey=...>` desenhada na página. Widget desenhado
+é desafio de imagem. Bate com as outras duas medições do mesmo quadro (Environment Surfacing Lead e
+Senior Environment Surfacing).
+
+| Campo | Resposta |
+|---|---|
+| Pretensão | *"Open to aligning with your band for the role; as a reference, I'm looking at around EUR 55,000 per year."* (sem faixa publicada, casa grande de animação, Europa ocidental) |
+| Status de trabalho na Espanha | a verdade: **não** tem autorização e precisaria de patrocínio, mais o caso de visto |
+| Anos de experiência | 10+ em personagem 3D, e grooming em Houdini como especialidade técnica |
+| Carta / campo livre | abrir dizendo que a metade de surfacing do posto é o trabalho dele e que o groom em Houdini é o diferencial: Wingfeather Saga temporada 1 na Angel Studios, quase cinco anos na E-Line com os personagens herói do Endstar do sculpt à engine, três anos na PUGA entregando personagem sob direção de arte de outra pessoa. Fechar com a frase de realocação e o caso de visto |
+
+## 2. Side — Senior Texture Artist, Montréal e Toronto (Canadá, prioridade 1 do Vini)
+
+`https://jobs.workable.com/view/c6VkX4b2KPumikGpAnF75s/...-in-toronto-at-side` (uuid
+`c6VkX4b2KPumikGpAnF75s`) e `.../9yuW35zXXRhYX4wgDGcVSQ/...-in-montreal-at-side`. Conta `sideinc`.
+
+**É UMA requisição com DOIS anúncios de local: manda-se em UM só.** E não confundir com a irmã
+*Artiste 3D senior / Senior 3D Artist*, do mesmo quadro, que **já foi enviada em 30/08 e recusada em
+31/08**. Esta é outra disciplina, outro uuid, e o Gmail não tem confirmação nenhuma dela.
+
+Híbrida, contrato de 6+ meses, Montréal (QC) ou Toronto (ON).
+
+| id | Obrigatório | Resposta |
+|---|---|---|
+| `firstname` `lastname` `email` `phone` `address` | sim | ver tabela comum |
+| `resume` | sim | CV em pdf |
+| `CA_1993` Salary Expectations | sim | *"Open to aligning with your band for the role; as a reference, I'm looking at around CAD 95,000 per year, or the equivalent hourly rate on a contract basis."* |
+| `CA_51704` proficiência em inglês | sim | **Excellent - I can confidently speak, write, and present in English in a professional setting.** |
+| `QA_12346521` inglês ou francês | sim | **Anglais // English** |
+| `QA_12346522` direito legal de trabalhar no Canadá | sim | **No** (a verdade) |
+| `QA_12346523` link de portfólio | sim | ArtStation |
+| `QA_12346524` aceita avaliação | sim | **Yes** |
+| `QA_12346525` experiência em estúdio AAA | sim | **No** (verdade já fixada pela campanha; o texto livre explica o alcance) |
+| `QA_12346526` experiência em textura com ao menos um título comercial | sim | texturização como parte da posse do personagem inteiro: E-Line/Endstar (UVs, bake, PBR, trim, look dev, engine), Wingfeather temporada 1 modelado e pintado à mão, três anos de PUGA sob direção de arte de cliente. Ferramentas: ZBrush, Substance Painter e Designer, Maya, Marmoset, Houdini, Unreal e Unity. Títulos comerciais: **Endstar** e **The Wingfeather Saga temporada 1** |
+| `QA_12346527` aceita híbrido | sim | **Yes** |
+| `QA_12346528` aberto a contrato em time de co-dev | sim | **Yes** |
+| `QA_12346529` valor hora em CAD | sim | *"Around CAD 48 per hour, which matches roughly CAD 95,000 per year at full time. Open to aligning with your band for the role."* |
+| `QA_12346530` quando pode começar | sim | um mês de transição, mais a frase de realocação |
+| `QA_12346531` e `QA_12346532` consentimento e retenção de dados | sim | **Yes** nos dois |
+| `CA_54302` situação atual | não | **Full Time Employee** |
+| `CA_51856` disciplinas | não | nenhuma da lista é arte de personagem (são AI, Back-End, Gameplay, Tools...); marcar **Other** ou deixar em branco |
+| `CA_53031` nome preferido, `CA_54306` indicação | não | em branco |
+| `cover_letter` | não | vale a pena: o argumento de outsourcing da PUGA responde exatamente o que uma casa de co-desenvolvimento quer saber |
+
+## 3. One Of Us — Modeller, Paris (a recomendada das três)
+
+`https://jobs.workable.com/view/2rTHdox84n1Ge86ez2adUb/hybrid-modeller-in-paris-at-one-of-us`
+(uuid `0bb699c6-9aeb-4653-8f85-b54b17abfa5a`, conta `one-of-us`)
+
+Casa de VFX de cinema com estúdios em Londres e Paris. O quadro tem 22 posições e **três** da
+disciplina, todas em Paris e híbridas: **Modeller**, **Texture Artist** e **Look Development
+Artist**. As de arte em Bengaluru estão fora do recorte. **Manda-se UMA**, e a escolhida é a
+Modeller, porque modelagem de personagem é o cargo que o briefing define como o dele.
+
+| id | Obrigatório | Resposta |
+|---|---|---|
+| `firstname` `lastname` `email` `address` | sim | ver tabela comum |
+| `phone` | **não** | opcional nesta casa |
+| `resume` | sim | CV em pdf |
+| `cover_letter` | sim | carta, com a frase de realocação e o caso de visto |
+| `QA_12197151` showreel de trabalho de produção e senhas | sim | ArtStation, sem senha |
+| `QA_12197152` LinkedIn | sim | ver tabela comum |
+| `QA_12197153` aviso prévio | sim | um mês |
+| `QA_12197154` pretensão anual antes de imposto | sim | *"Open to aligning with your band for the role; as a reference, I'm looking at around EUR 45,000 per year."* |
+| `QA_12197164` precisa de patrocínio na França | sim (boolean) | **Yes**, a verdade |
+| `gdpr` | sim | marcar |
+
+**Perguntar não é vetar.** A pergunta de patrocínio é obrigatória, mas **não existe** no formulário
+nem no anúncio nenhuma frase exigindo residência, ao contrário da Larian Québec e da Metropolis VFX.
+
+As outras duas, com os ids já mapeados, para o caso de a Modeller não andar:
+**Texture Artist** (uuid `60d3159b-5eb4-4fd1-ae1f-8a3dbe9c78d4`): `QA_10954755` showreel,
+`QA_10954756` LinkedIn, `QA_10954757` aviso prévio, `QA_10954758` patrocínio — **aqui é campo de
+TEXTO e não boolean, então cabe explicar o caso de visto na própria resposta** — e `QA_10954759`
+pretensão. **Look Development Artist** (uuid `8d806dc0-737b-4489-99cf-b07b533b5cf3`): `QA_12210701`
+showreel, `QA_12210702` LinkedIn, `QA_12210703` aviso prévio, `QA_12210704` pretensão anual,
+`QA_12210705` patrocínio (boolean).
+
+## 4. Lighthouse Games — Lead Character Artist, Royal Leamington Spa (a mais barata da fila)
+
+`https://jobs.workable.com/view/9KTC9Pg9V9wV5peayCNj4a/...` (uuid
+`46e9e7c7-50d6-4d97-a97c-5a8bf1a80e6f`, shortcode `F7F90250DA`)
+
+**O `/form` oficial mostra que o formulário é mínimo: os únicos campos obrigatórios são
+`firstname`, `lastname` e `email`.** Tudo o mais é opcional, inclusive `resume`, `phone`, `address`,
+`headline`, `avatar`, `education`, `experience`, `summary` e `cover_letter`. **Não há uma única
+pergunta customizada**, nenhuma de visto e nenhuma de salário. Anexar o CV, colar a carta, enviar.
+A única parede é o Turnstile.
+
+## 5. Sperasoft — Material Artist (stylization), Bucareste ou Cracóvia
+
+Bucareste uuid `71f8d852-e568-4880-8ad2-75d1357d6061`
+(`https://jobs.workable.com/view/f5h7r4Y8fRA9oyp1zobYkB/...`), Cracóvia uuid
+`241a463d-74ee-40de-abdd-a198dbc2167b`. Conta `sperasoft`. Belgrado (Sérvia) e Armênia estão fora do
+recorte e não recebem envio.
+
+Formulário curto: `firstname`, `lastname`, `email`, `phone`, `address`, `resume`, mais **`CA_45880`
+"Expected monthly salary (in local currency)"** e o link de portfólio (`QA_12376601` em Bucareste,
+`QA_12059404` em Cracóvia), mais a caixa de `gdpr`. **Não há pergunta de visto nem de residência.**
+
+**Atenção: a pretensão é MENSAL.** Europa em casa média são EUR 45.000 ao ano, ou seja cerca de
+**EUR 3.750 por mês**, com *"Open to aligning with your band for the role."*
+
+**Dedupe, e ele tem uma sutileza:** a Sperasoft respondeu um email frio em **26/08** dizendo que não
+tinha vaga aberta. O quadro de hoje desmente aquilo, com seis requisições de Material Artist. Uma
+candidatura por formulário numa requisição viva **não** é insistir sobre recusa.
+
+## 6. Sawhorse Productions — Roblox 3D Artist, remoto (EUA)
+
+uuid `4542a3b0-a493-4384-b604-8b72421e293a`
+
+Obrigatórios: `firstname`, `lastname`, `email`, `phone`, `address`, `resume`, mais
+**`QA_12209895`** *"Please share a link to your Roblox profile and links to Roblox games that you
+have worked on"* e **`QA_12209896`** *"Please provide Portfolio / Work Sample Links - You will not
+be considered without this"*. Opcionais: `avatar`, `education`, `experience`, `summary`,
+`cover_letter`.
+
+**`QA_12209895` só o Vini pode responder**: perfil do Roblox e jogos do Roblox em que trabalhou são
+dado que o repositório não tem e que não se inventa. Se ele não tiver perfil no Roblox, o honesto é
+escrever isso na própria caixa e apontar o portfólio, porque o campo é obrigatório e mentir nele
+queima a candidatura. Pretensão: freelance remoto nos EUA em casa média, **USD 85.000** de
+referência.
+
+## E uma que SAI da fila: Liquid Development — Material Artist, banco de talentos 2026
+
+O anúncio aparece marcado *Canada remoto* e não diz nada sobre residência, o que faz a vaga parecer
+aberta. **O veto está dentro do formulário**, que é a regra de 07/09 em estado puro. São três
+obrigatórias: `QA_11470010` *"Are you authorized to work in Canada without the need for sponsorship
+now or in the future?"*, `QA_11470029` *"Do you currently reside in Ontario, Canada?"* e
+`QA_11470016`, que publica a faixa de **60k a 85k CAD** e pede confirmação de que o candidato
+entende. As duas primeiras respostas verdadeiras são **não**, e não se mente em campo de autorização
+de trabalho. Registrada com o veto escrito e a data, fora da fila de envio.
+
+## FILA B (07/09): estúdios com carta fria entregue e nenhuma candidatura por formulário
+
+Recorte criado a pedido do Vini em 07/09: 448 estúdios receberam carta fria entregue e só 105 tinham
+entrada de portal. Esta fatia é a metade M-Z desses 160 sem porta de formulário trabalhada.
+
+### SHED (Montreal, Canadá) — Spontaneous Application — PAREDE: reCAPTCHA v2 de caixa
+
+Link: https://shedmtl.com/en/jobs/spontaneous-application
+
+Formulário próprio em Drupal, **sem campo de upload**: resolve-se todo com texto e links, e tem um
+campo **Portfolio URL**, que é exatamente onde entra o ArtStation pela regra do Vini de 07/09.
+Medido em 07/09: o formulário aceita tudo, mas o botão Apply now exige **reCAPTCHA v2 de caixa**
+(`anchor` com `size=normal`, `type=image`). A caixa foi clicada uma vez e o Google abriu **desafio de
+imagem**; desafio não se burla, então nada foi enviado.
+
+| Campo | Resposta |
+|---|---|
+| First name | Vini |
+| Name | Cavalcanti |
+| e-Mail | contact@vinicavalcanti.art |
+| Phone | o número do documento privado do Drive, com o código do país na frente |
+| Present Job title | Senior 3D Character Artist |
+| City | Olinda |
+| Country | Brazil |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| Portfolio URL | https://www.artstation.com/viniciuscavalcanti |
+| Other website | https://vinicavalcanti.com |
+| INTERESTED BY | marcar **Full time**, **Work from office** e **Work from home**; deixar Freelance em branco |
+| Caixa de privacidade | marcar |
+
+**MOTIVATION LETTER** (colar inteiro):
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am ready to move to Montreal for the role; I would need work permit sponsorship, and my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. I also lead: I review other artists' work, set the asset standard, and I founded my own character art school. Open to aligning with your band for the role; as a reference, I am looking at around CAD 80,000. Portfolio: https://www.artstation.com/viniciuscavalcanti
+
+### Pixel Zoo (North Lakes, Brisbane, Austrália) — Environment Artist — PAREDE: reCAPTCHA v3
+
+Link da vaga: https://pixelzoo.com.au/careers/environment-artist/ · Formulário: https://pixelzoo.com.au/contact/
+
+O botão **APPLY NOW** do anúncio aponta para a página de contato, então aquele Contact Form 7 é a
+porta designada por eles. Sem campo de arquivo. Tentativa única de envio em 07/09 reprovada pelo
+reCAPTCHA v3, com a tela genérica *"There was an error trying to send your message. Please try again later"*.
+
+| Campo | Resposta |
+|---|---|
+| (select) your-recipient | **Job Interest** |
+| Nome | Vini Cavalcanti |
+| Telefone | número do documento privado do Drive, com o código do país na frente |
+| Email | contact@vinicavalcanti.art |
+| Assunto | Application: Environment Artist (North Lakes, Brisbane) |
+
+**Mensagem** (colar inteiro):
+
+> Hello Pixel Zoo team, I am applying for the Environment Artist opening at your North Lakes studio. I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized 3D. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering assets under another studio's art direction, in the client's style, with review rounds as routine. The posting asks for hard surface modelling in Maya plus texturing, surfacing and shaders, and that is daily work for me: I take an asset end to end, sculpt through retopology, UVs, baking, texturing, LODs and engine integration, and I also do character grooming in Houdini. I lead as well: I review other artists' work, I set the asset standard, and I founded my own character art school. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I am ready to move to Brisbane for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Open to aligning with your band for the role; as a reference, I am looking at around AUD 95,000. Portfolio: https://www.artstation.com/viniciuscavalcanti  LinkedIn: https://www.linkedin.com/in/vinicavalcnti/  Site: https://vinicavalcanti.com  CV and showreel available on request or by email to contact@vinicavalcanti.art
+
+### Next Level Games / Nintendo (Vancouver, Canadá) — General Application — PAREDE: reCAPTCHA v2 de caixa
+
+Link: https://nextlevelgames.applytojob.com/apply/YyYQvToJW1/General-Application
+
+Quadro **próprio em JazzHR** que a campanha nunca tinha listado (a varredura do careers.nintendo.com
+de 03/09 não o cobria). A General Application tem um menu obrigatório *Position / Discipline* com a
+opção literal **3D Character Art**. Regime: híbrido, no mínimo três dias por semana em Vancouver.
+O envio exige reCAPTCHA v2 de caixa, rotulado *Human Check*.
+
+| Campo | Resposta |
+|---|---|
+| First name / Last name | Vini / Cavalcanti |
+| Email address | contact@vinicavalcanti.art |
+| Phone number | número do documento privado do Drive |
+| Resume | Vini_Cavalcanti_CV.pdf |
+| Cover Letter | Vini_Cavalcanti_Cover_Letter.pdf |
+| Website, blog, or portfolio | https://www.artstation.com/viniciuscavalcanti |
+| Position / Discipline * | **3D Character Art** |
+| Are you authorized to work in Canada? * | **No** |
+| Do you currently reside in the province of British Columbia? * | **Willing to Relocate** |
+| Have you previously worked at a video game studio? * | **Yes** |
+| How did you hear about this job opening? | Next Level Games careers page |
+
+### Unit Image (Paris, França) — General Application — PAREDE: reCAPTCHA v3 (mensagem explícita)
+
+Link: https://www.unit-image.fr/en/jobs/ (Fluent Forms, com upload de currículo)
+
+Medido em 07/09, tentativa única de envio: a página respondeu, com todas as letras,
+**"reCaptcha verification failed, please try again."** Nada foi enviado.
+
+Três armadilhas medidas no formulário, todas úteis para quem o abrir de novo:
+1. **Os `id` dos checkboxes mudam a cada carga** (hash por instância). Case pelo texto do rótulo.
+2. O bloco de especialidade só aparece **depois** de marcar o departamento **3D ART**, e mesmo assim
+   o input de *3D CHARACTER* não aceita marcação por automação. Nenhum desses campos é obrigatório.
+3. O campo de telefone tem **máscara local** e come o código do país; o campo de data é seletor e
+   recusa texto digitado.
+
+| Campo | Resposta |
+|---|---|
+| First / Last name | Vini / Cavalcanti |
+| Email | contact@vinicavalcanti.art |
+| Phone | número do documento privado do Drive |
+| Country | Brazil |
+| Salary expectation | Open to aligning with your band for the role; as a reference, around EUR 55,000 per year |
+| Contract | PERMANENT |
+| Showreel / Website | https://www.artstation.com/viniciuscavalcanti |
+| LinkedIn | https://www.linkedin.com/in/vinicavalcnti/ |
+| Seniority | Senior |
+| Team role | Artist / Team member |
+| Education | Honors laurea, postgraduate specialization in Game Art (Méliès), MA in progress (UNICAP), IELTS, published author |
+| Departamento | 3D ART |
+| Especialidade | 3D CHARACTER, com Cartoon character, Realistic character, Grooming e Blendshapes |
+| Other software | ZBrush, Substance 3D Painter, Marmoset Toolbag, Unreal Engine 5, Marvelous Designer, Photoshop, Maya, Houdini |
+| Upload resume | Vini_Cavalcanti_CV.pdf |
+
+**OTHER INFO** (colar inteiro):
+
+> I am Vini Cavalcanti, a Senior 3D Character Artist with 10+ years in stylized characters, applying as a general application because your open roles are outside my discipline today. On The Wingfeather Saga at Angel Studios I modeled and hand painted the Season 1 characters, and for almost five years I have been with E-Line Media in Arizona taking Endstar's hero characters from first sculpt to engine. Before that I spent three years at PUGA Studios delivering characters under another studio's art direction, in the client's style, with review rounds as routine. I take a character end to end: sculpt, retopology, UVs, baking, texturing, LODs and engine integration, plus character grooming in Houdini, which fits a 3DSMax, VRay and Houdini based workflow. My portfolio holds more than 45 projects with over 60 characters across many titles, and my personal projects are some of the strongest pieces in it. I also lead: I review other artists' work, I set the asset standard, and I founded my own character art school, so I am open to a lead seat as well. I am ready to move to Paris for the role. I would need work permit sponsorship; my academic background, with an honors laurea, a postgraduate specialization, a master's in progress, IELTS and publications, makes a strong visa case. Salary: open to aligning with your band for the role; as a reference, around EUR 55,000 per year. My current salary is confidential under the NDA of my current contract; happy to discuss ranges during the process. Portfolio: https://www.artstation.com/viniciuscavalcanti
+
+### SHIFT UP (Seul, Coreia do Sul) — [신규 프로젝트] 3D 캐릭터 모델러 — SÓ O VINI PODE (data de nascimento)
+
+Link: https://career.shiftup.co.kr/o/235689/apply · Segunda porta da casa (não mandar junto):
+https://career.shiftup.co.kr/o/227420/apply (3D 배경 아티스트 / 레벨 아티스트)
+
+Casa de **Stellar Blade** e **NIKKE**. Vaga **efetiva** (정규직), 3+ anos. Coreia do Sul está dentro
+do recorte. O quadro fica em `career.shiftup.co.kr` (plataforma **Greeting**) e só monta por
+JavaScript, o que explica por que nenhuma varredura por curl o achou até hoje.
+**Não tem captcha.** O que impede a automação é um campo só: **생년월일, data de nascimento,
+obrigatória**.
+
+| Campo (coreano) | O que é | Resposta |
+|---|---|---|
+| 이름 | Nome | Vini Cavalcanti |
+| 생년월일 | **Data de nascimento (obrigatória)** | **só você tem esse dado** |
+| 이메일주소 / 이메일 확인 | Email e confirmação | contact@vinicavalcanti.art |
+| 연락처 | Telefone | trocar o seletor de 🇰🇷 +82 para o Brasil **antes** de digitar; número no doc privado do Drive |
+| 병역사항 | Serviço militar | não se aplica a estrangeiro |
+| 장애여부 / 보훈여부 | Deficiência / veterano | 비대상 (não aplicável) nos dois |
+| 이력서 | **Currículo (obrigatório)** | anexar Vini_Cavalcanti_CV.pdf (o campo alterna entre arquivo e URL) |
+| 포트폴리오 | **Portfólio (obrigatório)** | escolher **URL** e pôr https://www.artstation.com/viniciuscavalcanti |
+| 기타 서류 | Outros documentos | opcional, deixar vazio |
+| 지원한 경로 (obrigatória) | Como soube da vaga | 홈페이지 (a página de carreiras do próprio estúdio) |
+| 주소 | Endereço | cidade e país |
+| 포트폴리오 URL | URL do portfólio | https://www.artstation.com/viniciuscavalcanti |
+| Consentimentos | 4 caixas | marcar as duas **(필수)**; as duas **(선택)** são opcionais |
+
+Botão de envio: **제출하기**.
+
+## RetroStyle Games: 3D Artist (Senior \ Lead), Kyiv/remoto — À MÃO por Cloudflare Turnstile (07/09)
+
+**Link:** https://retrostylegames.com/vacancies/3d-artist-senior-lead/
+**Por que à mão:** a página só monta atrás de um desafio Cloudflare (curl dá 403, "Just a moment..."), e isso a
+passada de navegador resolveu sem problema. O que NÃO passa é o formulário: ele é Contact Form 7 em dois
+passos e carrega um widget **Cloudflare Turnstile** (`data-sitekey 0x4AAAAAAEQpP8I1PGQXrhtu`). O campo de
+resposta do Turnstile (`_wpcf7_turnstile_response`) nunca chega a existir no DOM mesmo depois de 8s de espera,
+e por isso o botão **Get Started** do passo 1 não avança para o passo 2 — clica, não dá erro nenhum, mas o
+`step-three` continua `display:none` para sempre. É parede de pontuação da própria Cloudflare, igual à do
+Workable medida antes; não se contorna.
+
+**Por que vale o esforço:** é a disciplina dele ao pé da letra. O anúncio pede um Senior/Lead 3D Artist para
+assets hard-surface (veículos, armas, props) no pipeline completo (modelagem, textura, shading, otimização,
+integração Unity/Unreal), e fecha com uma nota explícita: *"If you're a Senior or Lead 3D Artist with a
+different specialization—whether you're a generalist, character artist, environment artist, or work in
+another area—we'd still love to hear from you."* Emprego oficial, salário em USD, e **remoto, híbrido ou
+presencial em Kyiv, à escolha**. RetroStyle já trabalha para SEGA, Disney, Ubisoft, 11 bit studios, Relic
+Entertainment, 4A Games e Zynga.
+
+**O formulário tem DOIS passos, e só o primeiro foi preenchido** (o segundo nunca libera):
+
+Passo 1 (preenchido e conferido por captura de tela, `rs_step1.png`):
+| Campo | Resposta |
+|---|---|
+| Full Name | `Vini Cavalcanti` |
+| Desired position | `3D Artist (Senior / Lead) - Character / Modeling / Texturing / Look Dev` |
+| Email | `contact@vinicavalcanti.art` |
+
+Passo 2 (nunca abriu; preencher à mão quando resolver o Turnstile):
+| Campo | Resposta |
+|---|---|
+| Message | `Senior 3D Character Artist with 10+ years in stylized characters, applying for the Senior/Lead 3D Artist role. I own the full asset pipeline end to end — sculpt, retopology, UVs, baking, texturing, look development and engine integration (Unity and Unreal) — and also do character grooming in Houdini. Credited on The Wingfeather Saga (Angel Studios, Season 1 characters) and, for almost five years, on Endstar at E-Line Media, where I take hero characters from first sculpt to engine as a remote international contractor. Earlier studio experience at PUGA Studios (3 years) delivering characters for international clients under external art direction. My portfolio holds more than 45 projects with over 60 characters across many titles. I saw your note that generalists and character artists are welcome even outside the hard-surface focus, and character/creature work end-to-end is exactly my daily work. I am ready to move for the role (Kyiv), and remote or hybrid also work well for me as I already work remotely for a US studio. My academic background (honors laurea, postgraduate specialization in Game Art, a master's in progress, IELTS and publications) supports a strong case if any visa/relocation support is ever needed. Portfolio: https://www.artstation.com/viniciuscavalcanti` |
+| Anexo (upload obrigatório, sem alternativa de link nesta etapa) | `Vini_Cavalcanti_Portfolio.pdf` (não há CV.pdf nesta sessão; pela regra do Vini, o PDF do portfólio serve porque o upload é obrigatório e não há campo de link ao lado) |
+
+Recrutadora: Olga Kododova, HR Generalist (hr.assist@retrostylegames.com, LinkedIn na própria página). Marcar
+"OK" no aviso de cookies antes de qualquer clique — ele fica sobre a coluna do formulário e pode atrapalhar.
+
+## Crafty Apes, Reflector Entertainment e Blue Ant/Thunderbird: os três quadros Dayforce, lidos em 07/09
+
+Os três só montavam em JavaScript (curl devolvia 301/500) e por isso ficaram meses como "precisa de
+navegador". Uma passada de Chromium de verdade abriu os três (ver `automacao/processados.csv` para o detalhe
+completo de cada quadro). Resumo: **nenhum tem vaga viável da disciplina.**
+
+- **Crafty Apes** (globalus63.dayforcehcm.com/CandidatePortal/en-US/craftyapes): dez vagas de VFX
+  (composição, FX, rigging, crowd, lighting). A mais próxima, *CG Artist (Assets) Mid/Senior - London*, pede
+  "model, texture, look-develop, and groom high-quality 3D assets, including characters, props, and
+  environments" — mas é contrato **100% remote within the UK**, e as vagas irmãs do mesmo quadro (Rigger,
+  Crowd, Texture Artist) fecham com "no restrictions on local working rights... any exceptions will not be
+  considered", ou seja precisa já morar e já ter direito de trabalho no Reino Unido, sem patrocínio. A única
+  vaga do quadro com patrocínio dito por escrito é *Senior Digital Matte Painter - Australia*, mas é matte
+  painting/ambiente, fora da disciplina dele.
+- **Reflector Entertainment / Bandai Namco** (jobs.dayforcehcm.com/en-US/ref/CANDIDATEPORTAL): três vagas em
+  Montréal (Programmer Engine and Tools, Technical Animator Senior, VFX Artist Expert), nenhuma da
+  disciplina, e as três exigem por escrito "you must be legally authorized to work in Canada".
+- **Blue Ant Media / Thunderbird Entertainment** (jobs.dayforcehcm.com/en-US/blueantmedia/CANDIDATEPORTAL):
+  a Thunderbird foi incorporada pela Blue Ant (thunderbird.tv redireciona inteiro para blueantmedia.com).
+  Cinco vagas em Toronto, todas de mídia/edição/operações, nenhuma de arte. O estúdio de animação do grupo,
+  **Atomic Cartoons**, tem quadro próprio no Greenhouse (job-boards.greenhouse.io/atomiccartoons): CG
+  Designer (foco em veículos, Vancouver), Unreal CG Supervisor, Unreal Previs/Layout Supervisor e duas
+  Expression of Interest (LA e Vancouver). Nenhuma é modelagem/textura de personagem estrita — CG Designer
+  chega mais perto ("design diverse characters, locations, environments or props... with a focus on vehicle
+  design") mas o foco declarado é veículo. Fica registrado para quem quiser avaliar como porta de entrada
+  (regra 13 do BRIEFING), sem candidatura enviada nesta rodada.
+
+## Superseed Studios: candidatura espontânea sem captcha, sem CV obrigatório (07/09)
+
+**Link:** https://www.superseedstudios.com/apply (achado a partir de /jobs)
+**Nota de rede:** o "Host not in allowlist" registrado antes só acontecia no teste anterior; reconferido em
+07/09 o host responde 200 normal, sem precisar de navegador.
+Estúdio remoto (Reino Unido) de animação para jogos (gameplay, cinemáticas, promocional). `/jobs` diz que não
+há vaga aberta agora e oferece candidatura espontânea. O formulário é simples e **não tem captcha nem upload
+obrigatório**: nome, email, disciplina (menu: Gameplay Animation, Cinematics, Rigging/Tech Art, VFX,
+Production, Other — **nenhuma opção de Character/Modeling/Texturing**), link de portfólio e mensagem livre.
+Tem honeypot: `input[name="website"]` escondido (tabindex -1, autocomplete off) — deixar vazio.
+**Não enviado nesta rodada** porque as disciplinas oferecidas não cobrem modelagem/textura/personagem
+(mais próximo seria "Other"); fica pronto para quem quiser usar como porta de entrada.
+
+### Reality Games, 3D Generalist (Cracóvia, Polônia) — VAI À MÃO POR CAPTCHA do Recruitee (prova de trabalho), dossiê completo em 07/09
+
+**Link:** https://careers.reality.co/o/3d-generalist (formulário: `https://careers.reality.co/o/3d-generalist/c/new`)
+
+**Por que vale:** vaga efetiva, presencial em Cracóvia, modelagem/textura/animação de personagens e
+ambientes para o jogo mobile deles, e a página cita por escrito pacote de **relocation assistance**.
+Casa média, escritório numa estação de trem histórica restaurada no centro da cidade.
+
+**Por que fica à mão, medido duas vezes em 07/09:** depois do clique em Send aparece
+`captcha-base.recruiteecdn.com` (widget tipo `hsw`, prova de trabalho) com um botão "Skip" sobreposto;
+em duas tentativas (esperando 15s e depois 120s) a tela **não mudou**, os campos continuaram
+preenchidos e nenhum email de confirmação chegou. Mesma família do Recruitee que bloqueia a Framestore
+— o captcha aparece só depois do clique, nunca antes.
+
+**Duas armadilhas do próprio formulário, para quem for preencher:** o campo "Why do you want to
+join" é um input de **uma linha, limite 255 caracteres** — resposta longa é cortada sem aviso. As
+perguntas de escolha (`contract expectations`, `task agreement`) são radios em `.content`, onde o
+`value` É o próprio texto do rótulo, e os dois consentimentos são `.flag` **sem `id` e sem `label`**,
+então um preenchedor genérico de Recruitee não marca nenhum dos dois — tem que contar a posição do
+elemento.
+
+**Campos, na ordem, lidos da API pública (`careers.reality.co/api/offers/3d-generalist`):**
+
+| Campo | Tipo | Obrigatório | Resposta recomendada |
+|---|---|---|---|
+| Nome / email / telefone | texto | sim | dados básicos do topo deste arquivo |
+| CV | anexo | sim | `Vini_Cavalcanti_CV.pdf` |
+| Cover letter | anexo | **desativado no formulário** (`options_cover_letter: off`) | não existe campo |
+| What is your preferred work location? | múltipla escolha, obrigatória | sim | Kraków (única opção listada); usar a frase de realocação no texto livre seguinte |
+| Please briefly introduce yourself in a video introduction | vídeo, até 120s | **não obrigatório** | deixar em branco — só o Vini pode gravar |
+| Link to LinkedIn/Website/Portfolio/... | texto (link) | sim | `https://www.artstation.com/viniciuscavalcanti` |
+| Why do you want to join Reality Games? | texto, **máx. 255 caracteres** | sim | "Senior 3D character/environment artist, 10+ years, sculpt-to-engine at E-Line Media. Reality Games' mobile IP work and the Kraków studio + relocation support are exactly the move I'm looking for. I am ready to move." (ajustar para caber em 255) |
+| What could be your first available working day at Reality? | texto | sim | "A standard transition period with my current studio; glad to align dates in the process." |
+| What are your contract expectations? | escolha única: Mandate contract (UZ) / B2B | sim | **decisão do Vini** — nenhuma das duas é contrato CLT de emprego direto, o que é atípico para quem pede patrocínio; vale perguntar ao recrutador se há via de emprego direto antes de escolher |
+| What are your salary expectations? (NET in PLN per month) | texto | sim | estimativa a partir da política de 04/09 (estúdio médio, Europa, sem faixa publicada: EUR 45.000/ano bruto) ≈ PLN 16.000 bruto/mês; **valor NET depende dos descontos do contrato escolhido (UZ vs B2B), então registrar como "Open to aligning with your band for the role; as a reference, around PLN 16,000 gross per month, happy to adjust once we know net terms" e o Vini ajusta o NET na hora** |
+| In the next recruitment stage we might give you a short task. Please express your will | escolha única: Agree / Disagree | sim | **Agree** |
+| Consentimento de dados (recrutamento atual) | legal, checkbox sem label | sim | marcar |
+| Consentimento de dados (recrutamentos futuros) | legal, checkbox sem label | opcional | marcar (mantém o perfil ativo) |
+
+**Autorização de trabalho:** o formulário não pergunta diretamente; a frase de realocação e o caso de
+visto (láurea com honras, especialização, mestrado em andamento, IELTS, publicações) cabem na resposta
+de "Why do you want to join".
+
+## Eidos-Montréal — Lead Environment Artist — Montréal (ATS NOVO: Dayforce HCM)
+
+`https://jobs.dayforcehcm.com/en-CA/eic/CANDIDATEPORTAL/jobs/2192`
+(req #158, `jobPostingId` 2192, cliente `eic`, portal `CANDIDATEPORTAL`)
+
+**Primeiro dossiê de Dayforce HCM da campanha.** Casa AAA (Deus Ex, Shadow of the Tomb Raider,
+Guardians of the Galaxy, Thief VR), 400 de Maisonneuve Ouest, Montréal. **Permanent Full-Time**,
+RPG em Unreal Engine 5, publicada em 29/05 e viva em 08/09. **Busca literal de veto no texto
+integral: `authoriz`, `eligib`, `sponsor`, `work permit`, `must be based`, `LMIA`, `days a week`,
+`French`, `français`, `bilingue`, `resident` — NENHUM.** Só diz *"offered onsite or in a hybrid
+capacity"*. Disciplina é AMBIENTE e não personagem, por isso entra como **média**.
+
+### O caminho até o formulário, medido com clique
+
+1. `/jobs/2192` → botão **Apply** → leva a `/apply?flowSelection=true`.
+2. Essa tela oferece **"Apply without an Account"** e "Already Have an Account? Sign In".
+   **A candidatura de convidado existe e não obriga criar conta.**
+3. O convidado cai em `/apply/manualApplication?applicationSource=Manual`.
+4. **ARMADILHA MEDIDA:** abre por cima um modal de Privacy Notice da Eidos com a caixa
+   *"I agree to the Privacy Statement"*. Marcar a caixa **não basta**: o botão que fecha o modal é
+   **`Save`**, não `Next`. Meu script clicou `Next`, que está ATRÁS do modal, e levou timeout de
+   15 s sem sair do lugar. Marque a caixa e clique **Save**.
+5. Atrás do modal está o assistente de **TRÊS PASSOS**: **Candidate Info → Questionnaire → Submit**.
+   O `Questionnaire` ainda NÃO foi visto, e é onde costuma morar a pergunta de autorização de
+   trabalho. **Ler antes de responder qualquer coisa.**
+
+### Campos do passo 1, nomes exatos
+
+| Campo | Valor |
+|---|---|
+| `jobPostingApplication_personalInfo_email` e `_confirmEmail` | `contact@vinicavalcanti.art` nos dois |
+| `jobPostingApplication_personalInfo_firstName` / `_lastName` | `Vini` / `Cavalcanti` |
+| `jobPostingApplication_personalInfo_middleName` | vazio |
+| `jobPostingApplication_personalInfo_linkedInURL` | `https://www.linkedin.com/in/vinicavalcnti/` |
+| `jobPostingApplication_personalInfo_mobilePhone` | do documento privado do Drive; há `_mobilePhoneCountryCode` escondido ao lado, então escolha o país no seletor e digite **só os dígitos** |
+| `jobPostingApplication_personalInfo_preferredContactMethod` | Email |
+| `jobPostingApplication_personalInfo_countryCode` / `_stateCode` / `_city` | os três são combobox de busca; cidade `Olinda` |
+| `jobPostingApplication_personalInfo_candidateSource` | combobox; o rótulo vem com `<!--_dfFormat_=html-->` grudado, é lixo do Dayforce e não parte da pergunta |
+| `jobPostingApplication_files_resume` | o PDF do CV. **Há DOIS inputs com esse mesmo `name`**, um em "Attachment" no topo e outro em "Resume Upload"; use o que está dentro do bloco Resume Upload |
+| `jobPostingApplication_files_coverLetter` | a carta |
+| `jobPostingApplication_files_additionalDocument` | opcional; o portfólio em PDF só se o link não couber em nenhum campo |
+
+Existe também **Import Resume**, que preenche sozinho a partir do CV. Não usar: sobrescreve
+campo já digitado, é o mesmo risco do *Apply with LinkedIn* da Quantic Dream.
+
+### O que FALTA medir, e é o que decide se isto é fila de agente ou fila do Vini
+
+A tela do passo 1 traz um `textarea` **`g-recaptcha-response`** e **dois iframes de captcha**, mas
+**nenhuma caixa "I'm not a robot" aparece na tela** — o print confirma. Dois iframes com textarea
+e sem caixa visível é o desenho de **reCAPTCHA invisível**, e aí o comportamento é o da Netflix:
+o formulário preenche 100 por cento e o veredito só vem no POST, que de IP de datacenter costuma
+ser recusado. **NÃO ESTÁ MEDIDO.** Só o clique em Submit, no fim dos três passos, responde.
+
+Não existe `apply_dayforce.js`. **Próximo passo concreto:** escrever o preenchedor, rodar em modo
+seco até o passo 3 para ler o Questionnaire, e só então clicar.
+
+### Dayforce, continuação de 08/09: `apply_dayforce.js` existe, e onde ele parou
+
+Escrevi `/home/user/apply/apply_dayforce.js` e o arquivo de respostas `ans_eidos.json`. **O que já
+funciona, medido:** o modal fecha, o formulário monta, os campos de texto simples entram, e os
+**dois PDFs sobem** (a tela passa a mostrar `Vini_Cavalcanti_CV.pdf` e
+`Vini_Cavalcanti_Cover_Letter.pdf`).
+
+**TRÊS ARMADILHAS MEDIDAS, e a segunda é a mais cara:**
+
+1. **O modal de privacidade fecha com `Save`, não com `Next`.** O `Next` fica atrás do modal e o
+   clique morre em timeout de 20 s.
+2. **Os identificadores do Dayforce são `id`, NÃO `name`.** Selecionar por `[name="..."]` devolve
+   `null` em todos os campos, o preenchedor loga `MISSING` na lista inteira, e a rodada parece
+   parede quando o formulário está ali, montado e visível. Perdi duas execuções nisso. Selecione
+   por `#id`. O diagnóstico decisivo foi listar os frames: o frame principal tinha 19 inputs e
+   mesmo assim `[name="...email"]` devolvia `false`.
+3. **O bloco Personal Information é um sub-formulário com botão `Update` próprio.** Sem clicar
+   `Update` antes do `Next`, o `Next` não avança.
+
+**ONDE PAROU, e é honesto dizer que não está resolvido:** depois do `Update`, a validação mostra
+que **`Confirm Email Address`, `Mobile Phone Number`, `Preferred Contact Method`, `Country` e um
+`Additional Details` continuam vazios**. A leitura de volta já dizia `(VAZIO)` nesses campos e
+**estava certa** — não era artefato de leitura. Email, First Name e Last Name entram; os outros não.
+
+**A causa provável e o remédio já existem na própria caixa de ferramentas:** é o padrão de input
+controlado por React, o mesmo que o `apply_workable2.js` resolve com o `setv`, que chama o setter
+nativo de `value` e dispara `input` e `change` à mão, e o mesmo que o `apply_gh.js` resolve para
+combobox com o helper `pick`. **Próximo passo concreto: portar `setv` e `pick` para o
+`apply_dayforce.js`**, e só então ler o Questionnaire do passo 2, que continua sem ter sido visto.
+
+**E o captcha, agora com nome:** a listagem de frames mostrou `recaptcha/api2/anchor` **e**
+`recaptcha/api2/bframe`. Anchor mais bframe é o desenho do **reCAPTCHA v2**, o de caixa. Ainda não
+apareceu caixa na tela porque nunca cheguei ao Submit. **Continua sem veredito, e só o clique dá.**
+
+---
+
+## DAYFORCE HCM, FECHADO DE PONTA A PONTA EM 08/09 ÀS 15h49
+
+O `apply_dayforce.js` percorre agora o assistente inteiro. Portei o `setv` do `apply_workable2.js`
+e escrevi um `pick` novo, e as cinco armadilhas que restavam apareceram em três rodadas medidas.
+
+**ARMADILHA 4 — `el.fill()` pinta o campo e não avisa o framework.** Confirmado: a leitura de volta
+que dizia `(VAZIO)` estava certa. Com o setter nativo de `value` mais `input`, `change` e `blur`,
+os sete campos de texto passaram a entrar.
+
+**ARMADILHA 5, a mais cara de todas — o upload do CV REESCREVE o bloco Personal Information.**
+O Dayforce faz o *parse* do PDF e sobrescreve os dados pessoais. Na rodada das 15h20 sobreviveram
+exatamente `email`, `firstName` e `lastName` (que o parser leu do PDF) e morreram `confirmEmail`,
+`linkedInURL`, `city` e o telefone. Não era o `setv` falhando: era **ordem**. **Os arquivos vão
+primeiro, o texto e os combos depois.** Vale a pena generalizar: em qualquer ATS que ofereça
+*Import Resume*, suba o arquivo antes de digitar.
+
+**ARMADILHA 6 — os combos são `rc-select`,** o motor do Ant Design; o `id` `rc_select_1` na tela
+entrega. A lista **não** fica dentro do campo, é desenhada num portal no fim do `body`, e a busca
+só acontece com digitação de teclado. Selecionar por `[role=option]` genérico devolve lista vazia
+e a rodada **parece parede**. Seletor que funciona: `[class*="select-item-option"]`,
+`.rc-virtual-list-holder-inner > div`, `[class*="select-dropdown"] [role="option"]`.
+
+**Alternativas separadas por `|` são ORDEM DE PREFERÊNCIA, não regex solto.** Com um regex único,
+o `find` devolve a primeira opção **da lista** que casa com qualquer alternativa: isso escolheu
+`Other` tendo `Company Website` disponível, e o `Other` abriu um campo obrigatório novo
+(`candidateSourceDescription`, "Additional Details") que travou o Next. Daí também a **segunda
+passada de texto**, para campos que só nascem depois de uma escolha de combo.
+
+**ARMADILHA 7 — o `Update` colapsa o bloco pessoal num resumo só de leitura e redesenha a página.**
+Um handle de `Next` pego antes disso clica **sem erro e sem efeito**. Pegue o botão depois do
+`Update`, e confirme a virada pelo **texto do passo**, não pela URL: o assistente é uma SPA.
+
+**O TELEFONE, com a regra do documento privado aplicada e conferida.** Existe um seletor separado
+`Country dialing code` (`rc_select_1`), então o campo do número leva **só os dígitos**. O resumo
+depois do `Update` reimprimiu o telefone JA FORMATADO pelo proprio site, com o codigo do pais
+separado dos digitos, exatamente o formato que o documento privado manda. O VALOR NAO SE
+ESCREVE AQUI: o repositorio e publico, e quem confere abre o documento privado do Drive.
+
+**O QUESTIONNAIRE, que nunca tinha sido visto.** Duas perguntas, e a primeira é a de autorização:
+*"Are you currently authorized to work in Canada?"* (obrigatória) e *"If you're not in Quebec, are
+you willing to move within 6months?"*. Respondidas **No** e **Yes** — a de autorização com a
+verdade, como manda a regra. Detalhe de implementação: **os radios do Dayforce não têm `id`**, só
+um `value` numérico (29, 30, 31...) que muda de vaga para vaga. Por isso a resposta é casada por
+**texto da pergunta mais texto da opção**, subindo até 12 ancestrais atrás do enunciado: fica
+auditável no arquivo de respostas e continua valendo em outro estúdio da mesma família.
+
+**O VEREDITO DO CAPTCHA, agora com clique.** Passo 3 é o aceite `Candidate Acknowledgement` mais
+`Submit`. Antes do clique o passo 3 media `{frames:2, widgets:0}` — anchor mais bframe, invisível,
+nada na tela. **Depois do clique subiu o quebra-cabeça de imagem "Select all images with a bus".**
+Print em `df_eidos_enviado.png`. **Nada foi enviado**, e não se burla desafio.
+
+**A LIÇÃO QUE VALE MAIS QUE O ATS:** esta é a **terceira família** em que o captcha só existe
+depois do clique — Workable (Turnstile), Lever (hCaptcha de imagem) e agora Dayforce (reCAPTCHA v2
+de imagem). Nas três, a medição pré-clique diz "sem desafio visível" e **mente**. Confirma pela
+terceira vez a regra: **só o clique é veredito.**
+
+---
+
+## RECRUITEE, DIAGNÓSTICO CORRIGIDO EM 08/09 — NÃO É hCaptcha DE IMAGEM
+
+Medido duas vezes hoje com clique real, na **Reality Games** (3D Generalist, Cracóvia) e na
+**Framestore** (3D Modeller, Montréal). As duas deram exatamente o mesmo resultado, e ele
+**contradiz o que este arquivo dizia**.
+
+**O que estava escrito e está errado:** que a Framestore trava em "hCaptcha de imagem". E que o
+formulário da Reality Games tem um botão **"Skip"** sobreposto ao captcha. **Esse "Skip" não
+existe.** O que existe é o **"Skip to content"**, o link de acessibilidade que abre toda página do
+Recruitee — eu mesmo caí nele hoje: um seletor `has-text("Skip")` casou com ele e reportou
+"cliquei no Skip: true" sem ter clicado em nada. Com casamento exato (`/^\s*Skip\s*$/`), a
+contagem é **zero** nas duas casas.
+
+**O que realmente acontece:** o clique em Send dispara `POST captcha-base.recruiteecdn.com/getcaptcha/<uuid>`,
+que responde **200 com corpo binário** — é o desafio de **PROVA DE TRABALHO** (`hsw`), não um
+quebra-cabeça humano. Ele nunca completa neste ambiente e a tela não muda. **Nenhum desafio de
+imagem aparece em momento nenhum**, nem antes nem depois do clique.
+
+**POR QUE ISSO MUDA O CUSTO DA FAMÍLIA INTEIRA:** prova de trabalho **resolve sozinha no navegador
+do Vini**. Não há quebra-cabeça para ele resolver: é preencher e clicar em Send. As entradas de
+Recruitee (Framestore ×4, Reality Games, Dovetail, Ten Square) são portanto **baratas**, e não
+paredes caras como hCaptcha de imagem.
+
+### O BUG QUE ESCONDIA TUDO ISSO, e ele é a lição de verdade
+
+O `apply_recruitee3.js` **ignorava em silêncio duas chaves do próprio arquivo de respostas**:
+`radiosContent` (radio cujo `value` é o texto do rótulo, sob `.content`) e `flags` (consentimento
+que é pergunta aberta, sem `id` e sem `label`). O arquivo `ans_realitygames.json` já trazia as duas,
+preenchidas e corretas, desde 06/09. Como o preenchedor não as tratava, o formulário reprovava na
+validação com **"This field is required and can not be left empty"**, a tela não mudava, os campos
+continuavam preenchidos e nenhum email chegava.
+
+**Esses são exatamente os três sintomas que a campanha aprendeu a ler como "parede de captcha".**
+Não era captcha: era campo obrigatório vazio. O `apply_recruitee5.js` trata as duas chaves e agora
+imprime, **antes de clicar em Send**, a lista de mensagens de validação na tela e a lista de campos
+obrigatórios ainda vazios. Nas duas casas isso passou a devolver `[]` e `[]`.
+
+**REGRA NOVA:** antes de registrar qualquer formulário como parede, imprima o estado da validação.
+Campo obrigatório vazio e captcha produzem o mesmo sintoma, e confundir os dois custou dois dias de
+diagnóstico errado numa família inteira de ATS.
+
+**ARMADILHA DE ID, medida na Framestore:** os ids de `open_questions` que a **API** devolve
+(`3148831`...) **NÃO são** os ids do formulário renderizado (`7457220`...). Preencher pelos ids da
+API loga `SEM CAMPO` em todas as perguntas. Leia os ids do DOM (`probe_rc.js` faz isso e imprime
+rótulo, tipo, obrigatoriedade e as opções de cada radio).
+
+## TYPEFORM DA REKiNDLED — DUAS TENTATIVAS, NÃO PASSOU, E FICA NA MÃO DO VINI
+
+Tentado duas vezes em 08/09. **Nada foi enviado** e **nenhuma resposta errada foi gravada**, porque
+o preenchedor confere o texto da pergunta antes de responder e para quando não casa.
+
+**O que se aprendeu, para quem tentar de novo:**
+1. A dica antiga deste arquivo, de responder escolha pela **tecla da letra**, **não funciona** depois
+   que o foco passa por um campo de texto: o formulário trava na pergunta 11 com **"Please make a
+   selection in How would you describe your experience level?"**. Confirmado em print.
+2. Conferir a pergunta atual pelo `innerText` do **body inteiro** dá falso OK, porque o body traz
+   perguntas fora da tela. A v1 reportou doze passos "OK" estando parada na décima primeira.
+3. A v2 passou a clicar no **rótulo** da opção e a conferir só o bloco visível no viewport, mas o
+   seletor de bloco visível voltou vazio: o Typeform não expõe a pergunta em `h1/h2/legend` como eu
+   supus. **Quem for retomar começa por aí**, e a tabela das 16 respostas continua válida acima.
+
+**Decisão:** parei na segunda tentativa em vez de queimar uma terceira rodada de navegador. O
+dossiê estima 2 a 3 minutos na mão, e a fila do Vini é o lugar certo para ela.
+
+---
+
+## Offworld Industries — 3D Character Artist (New Westminster, BC) — À MÃO POR reCAPTCHA v2
+
+**URL:** https://owi.bamboohr.com/careers/199 · **BambooHR** · requisição 199
+**Faixa publicada:** CAD 80.000 a 95.000 por ano · Efetiva, três dias no escritório
+**Régua de vinte termos:** UM acerto, `days per week` em "work from our office three days per week", que é presença híbrida e falso positivo conhecido. **Nenhum veto escrito de autorização, patrocínio ou residência.**
+
+**A PAREDE, e ela foi MEDIDA COM CLIQUE, não suposta.** Três envios reais tentados. Em todos, o único POST que saiu foi o do upload do currículo (`/ajax/files/attachTemporary.php`, 200, `errorType: ok`). **Nenhum POST de envio.** O botão existe, é `BUTTON` da Fabric, `disabled=false`, foi rolado até a área visível e clicado por coordenada. O diagnóstico do DOM depois do clique: `g-recaptcha-response` **VAZIO**, com os iframes `recaptcha/api2/anchor` **e** `recaptcha/api2/bframe` presentes. O `bframe` é o quadro de desafio por imagem, ou seja **reCAPTCHA v2 com desafio**, que a campanha não burla.
+
+**IMPORTANTE, e corrige o brief:** isto NÃO quer dizer que BambooHR inteiro é parede. A ICON Creative é BambooHR e a candidatura de 31/08 passou, com e-mail de recibo do `notifications@app.bamboohr.com`. O reCAPTCHA é configuração POR QUADRO. O teste de flag no HTML não distingue nada; quem distingue é o clique.
+
+**O formulário fica destrancado para você: campos na ordem, e a ordem importa.**
+
+1. **Country** primeiro, antes de tudo. É um select da Fabric: o `<select>` nativo é esqueleto invisível com uma option vazia, e quem escolhe é o `button.fab-SelectToggle` com `aria-label="Country ..."`. Escolha **Brazil**.
+   *Por que primeiro:* com país Canadá, `state.value` é um **select de províncias**; ao trocar para Brazil o BambooHR **troca o elemento por um input de texto livre**. Preenchendo antes, o valor vai para um select que deixa de existir e a província fica vazia sem aviso.
+2. **First Name** `Vini` · **Last Name** `Cavalcanti` · **Email** `contact@vinicavalcanti.art`
+3. **Phone**: formato internacional (o campo é único, sem seletor de país). Valor no doc privado do Drive.
+4. **Address**, **City**, **Postal Code**: valores no doc privado do Drive. **Province**: `Pernambuco` (campo de texto, depois que o país virou Brazil).
+5. **Date Available**: máscara **mm/dd/yyyy**. Escrever `2026-10-20` grava `02/dd/yyyy`. Use `10/20/2026`.
+6. **Desired Pay**: `CAD 80,000 per year, aligned with the posted range at the lower end. Open to aligning with your band for the role.`
+7. **Website, Blog or Portfolio**: `https://www.artstation.com/viniciuscavalcanti`
+8. **LinkedIn URL**: `https://www.linkedin.com/in/vinicavalcnti/`
+9. **Resume**: o formulário tem DOIS inputs de arquivo e o **primeiro é o da Cover Letter**. O CV vai no segundo, o marcado como obrigatório.
+10. **`nickname_hpcsaf`** ("Please leave this field blank") é **HONEYPOT**: fica vazio sempre.
+
+Depois de preencher, resolva o reCAPTCHA e clique em **Submit Application**. Leva menos de um minuto no seu navegador.
+
+---
+
+## Avalanche Studios Group — Lead Character Artist (Estocolmo) — À MÃO, e agora sabemos POR QUÊ
+
+**URL:** https://jobs.lever.co/avalanchestudios/8f7bd580-5877-446e-83cb-97bb1fce0f6a/apply · **Lever** · Permanente, híbrido
+**Régua de vinte termos:** UM acerto, `relocat` em *"relocation assistance is not available for this role"*. Isso é benefício, **não é veto escrito** de autorização, residência ou nacionalidade. **Nenhum veto.**
+**Encaixe:** Lead, personagem, com ênfase em animal e criatura e em fluxos de **pelo e pele** — que é exatamente onde o grooming em Houdini dele encosta. O realismo é o ponto fraco declarado, e está dito aqui de propósito.
+
+### A PAREDE DO LEVER, medida em 09/09 e finalmente ENTENDIDA
+
+O registro antigo da campanha dizia "Lever tem hCaptcha no HTML", que o próprio brief já proibia como critério porque não discrimina nada. O mecanismo real é outro e é pior:
+
+1. O campo **Current location** é obrigatório e é **autocomplete estruturado**. O que vale para o servidor não é o texto digitado, é o `#selected-location` (`name="selectedLocation"`), que **só recebe valor quando uma sugestão da lista é escolhida**.
+2. A lista vem de `GET https://jobs.lever.co/searchLocations?text=<termo>&**hcaptchaResponse=**`. **O parâmetro do hCaptcha vai VAZIO do nosso IP**, e a lista volta sem resultado nenhum. Testado com `Olinda`, `Recife` e `Olinda, Brazil`: **zero sugestões nas três**. Pelo `curl`, o mesmo endereço devolve **403 Forbidden**.
+3. Sem sugestão escolhida, `selectedLocation` fica vazio, o clique em **Submit** **não gera POST nenhum** e **nenhuma mensagem de erro aparece na tela**.
+
+**Por que isso importa mais do que esta vaga:** um envio nessas condições é indistinguível, no log, de parede de captcha depois do Submit. Foi por pouco que a campanha não registrou "Lever é parede" pelo motivo errado. O correto é: **o hCaptcha do Lever bloqueia a BUSCA DE LOCAL, que é um campo obrigatório, e não o Submit.** No navegador dele, com IP residencial, o hCaptcha emite o token e a lista aparece.
+
+### Está tudo preenchido, falta você escolher o local e clicar
+
+- **Resume/CV**: `Vini_Cavalcanti_CV.pdf` (o parser do Lever leu e devolveu **Success!**)
+- **Full name** `Vini Cavalcanti` · **Email** `contact@vinicavalcanti.art` · **Phone**: doc privado do Drive
+- **Current location**: digite `Olinda` e **escolha a sugestão da lista** (é esse passo que a automação não consegue)
+- **Current company** `E-Line Media`
+- **LinkedIn URL** `https://www.linkedin.com/in/vinicavalcnti/`
+- **Portfolio URL** `https://www.artstation.com/viniciuscavalcanti`
+- **Other website** `https://vinicavalcanti.com`
+- **How would you identify?** `Prefer not to say`
+- **Consentimento de marketing**: opcional, deixe como preferir
+
+Depois é só **Submit**. Menos de um minuto.

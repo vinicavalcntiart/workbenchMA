@@ -1,0 +1,18 @@
+{
+  "city": "Olinda, Pernambuco, Brazil",
+  "questions": [
+    {"id":"question_12858786007","label":"LinkedIn Profile","type":"text","text":"https://www.linkedin.com/in/vinicavalcnti/"},
+    {"id":"question_12858787007","label":"Website","type":"text","text":"https://www.artstation.com/viniciuscavalcanti"},
+
+    {"id":"question_12858788007","label":"2 or more years of experience in the job listed","type":"select","prefs":["^Yes$","Yes"]},
+
+    {"id":"question_12858789007","label":"Require visa sponsorship to work in the United States","type":"select","prefs":["^Yes$","Yes"]},
+    {"id":"question_12858790007","label":"If yes, what kind of visa are you seeking","type":"text","text":"O-1B or H-1B, whichever route fits the studio's sponsorship process. I hold a first-class honours degree in Design, a Postgraduate Diploma in Game Art, an MA in Creative Industries in progress, IELTS, and published work."},
+
+    {"id":"question_12858791007","label":"Available for a live on-camera video interview","type":"select","prefs":["^Yes$","Yes"]},
+
+    {"id":"question_12858792007","label":"Country currently located in and country you intend to work from","type":"text","text":"I am currently physically located in Olinda, Brazil. If hired I intend to work from the United States: I want to relocate and I am fully open to moving for the role."},
+
+    {"id":"question_12858793007","label":"Understand may be asked to travel to Los Angeles","type":"select","prefs":["^Yes$","Yes"]}
+  ]
+}

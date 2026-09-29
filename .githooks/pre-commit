@@ -1,0 +1,28 @@
+#!/bin/sh
+# TRAVA DE PRIVACIDADE, criada em 12/09/2026 depois de o telefone do Vini ser publicado.
+#
+# POR QUE EXISTE. O BRIEFING.md manda, desde o comeco da campanha, nunca escrever telefone,
+# endereco, CEP, salario da E-Line nem senha neste repositorio, que e PUBLICO. Em 12/09 as
+# 21h20 eu mesmo quebrei essa regra: ao documentar o conserto do wd_geral.js, colei a leitura
+# de volta do formulario COM O NUMERO INTEIRO, para provar que o campo tinha ficado certo.
+# O commit foi empurrado antes de alguem notar.
+#
+# O valida-dashboard.sh ja sabia detectar isso, mas so era rodado a mao e so quando se mexia
+# no painel. O trecho vazado entrou por um commit de BRIEFING.md, que ninguem validava.
+#
+# A LICAO, e ela vale para a campanha inteira: REGRA ESCRITA NUM ARQUIVO NAO E TRAVA, e pedido.
+# Trava e a coisa que impede. Este gancho e a trava: nenhum commit passa sem a validacao.
+#
+# Para ligar (uma vez por clone):  git config core.hooksPath .githooks
+# Em emergencia de verdade:        git commit --no-verify   (e diga por que no corpo do commit)
+
+if [ -f automacao/valida-dashboard.sh ]; then
+  if ! sh automacao/valida-dashboard.sh; then
+    echo ""
+    echo "!! COMMIT BLOQUEADO pela validacao acima."
+    echo "   Se for falha de privacidade: tire o VALOR e deixe so o NOME do campo."
+    echo "   Telefone e endereco vivem so no documento privado do Drive."
+    exit 1
+  fi
+fi
+exit 0

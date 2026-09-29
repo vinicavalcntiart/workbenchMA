@@ -1,0 +1,355 @@
+# FILA DE PORTAS DO JHON, refeita em 06/09 depois que o Vini disse "duvido que seja so isso".
+# A varredura anterior achava 16 estudios porque procurava UM formato: <form> com campo de
+# arquivo E campo type=email na mesma pagina estatica. Esta relê as mesmas 7.978 paginas
+# procurando SEIS portas: ATS que a campanha nunca olhou, formulario hospedado em terceiro,
+# formulario proprio com upload, motor de formulario no site, mailto de vaga, e pagina que
+# fala em candidatura mas monta a porta so em JavaScript.
+# Ordenada pela prioridade que o Vini deu em 06/09: Canada anglofono, depois Europa.
+# Os 116 dominios de dominios-sem-email.csv ja estao fora.
+faixa,porta,dominio,estudio,pais,detalhe
+2-Europa,ATS-NOVO,activision.com,Elsewhere Entertainment,Sweden,Workday
+2-Europa,ATS-NOVO,ansharstudios.com,Anshar Studios,Poland,Traffit
+2-Europa,ATS-NOVO,apoglabs.com,Apog Labs,Sweden,Recruitee
+2-Europa,ATS-NOVO,black-shamrock.com,Black Shamrock (Virtuos),Ireland,Oracle
+2-Europa,ATS-NOVO,boombit.com,Boombit,Poland,Traffit
+2-Europa,ATS-NOVO,gamehouse.com,GameHouse - Eindhoven,Netherlands,Factorial
+2-Europa,ATS-NOVO,pixelantgames.com,PixelAnt (Sumo Digital),Poland,eRecruiter
+2-Europa,ATS-NOVO,rebel-wolves.com,Rebel Wolves,Poland,eRecruiter
+2-Europa,ATS-NOVO,superhotgame.com,Superhot Team,Poland,Homerun
+2-Europa,HOSPEDADO,30birdsgame.com,Ram Ram Games,Belgium,Notion
+2-Europa,HOSPEDADO,abonneer-games.com,Abonneer,Belgium,Formspree
+2-Europa,HOSPEDADO,alverastudios.com,Alvera Studios,United Kingdom,MS Forms
+2-Europa,HOSPEDADO,arumastudios.com,Aruma Studios,Spain,Formspree
+2-Europa,HOSPEDADO,aurorapunks.com,Aurora Punks,Sweden,Google Forms
+2-Europa,HOSPEDADO,azerion.com,Azerion,Netherlands,HubSpot
+2-Europa,HOSPEDADO,brimstone.games,Brimstone Games,Sweden,Notion
+2-Europa,HOSPEDADO,dayoff.ie,Day Off Interactive,Ireland,Notion
+2-Europa,HOSPEDADO,deepworlds.studio,Deep Worlds,Switzerland,Tally
+2-Europa,HOSPEDADO,dutchgamestudio.com,Dutch Game Studio,Netherlands,Tally
+2-Europa,HOSPEDADO,exclusible.com,Exclusible,Portugal,Notion
+2-Europa,HOSPEDADO,fantasticsignals.com,Fantastic Signals,Latvia,Google Forms
+2-Europa,HOSPEDADO,fiercefun.com,Fierce Fun,Ireland,JotForm
+2-Europa,HOSPEDADO,framebunker.com,Framebunker,Denmark,Typeform
+2-Europa,HOSPEDADO,geometricinteractive.com,Geometric Interactive,Denmark,Google Forms
+2-Europa,HOSPEDADO,grimmwyrdstudios.com,Grimmwyrd Studios,Netherlands,Google Forms
+2-Europa,HOSPEDADO,hypergames.no,Hyper Games,Norway,Notion
+2-Europa,HOSPEDADO,klabater.com,Klabater,Poland,Google Forms
+2-Europa,HOSPEDADO,monstercouch.com,Monster Couch,Poland,Google Forms
+2-Europa,HOSPEDADO,pixelsplit.games,Pixelsplit,Germany,Notion
+2-Europa,HOSPEDADO,play-sys.com,PlaySys,Italy,Google Forms
+2-Europa,HOSPEDADO,ranj.nl,Ra.nj,Netherlands,HubSpot
+2-Europa,HOSPEDADO,romerogames.com,Romero Games,Ireland,Google Forms
+2-Europa,HOSPEDADO,tinybuild.com,Eerie Guest Studios (tinyBuild),Netherlands,123FormBuilder
+2-Europa,HOSPEDADO,unity3d.com,Unity Technologies,Denmark,Google Forms
+2-Europa,JS-SO,10chambers.com,10 Chambers,Sweden,root
+2-Europa,JS-SO,abbeygames.com,Abbey Games,Netherlands,jobs
+2-Europa,JS-SO,aonic.co,Aonic,Sweden,careers
+2-Europa,JS-SO,appeal-studios.com,Appeal Studios (THQ Nordic),Belgium,root
+2-Europa,JS-SO,appelmoes.games,Appelmoes,Netherlands,jobs
+2-Europa,JS-SO,bandit-island.com,Bandit Island Games,Sweden,careers
+2-Europa,JS-SO,barrelrollgames.com,Barrell Roll Games,Germany,career
+2-Europa,JS-SO,beartwigs.com,Beartwigs,Sweden,careers
+2-Europa,JS-SO,beyondframes.com,Beyond Frames Entertainment,Sweden,root
+2-Europa,JS-SO,bippinbits.com,Bippinbits,Germany,root
+2-Europa,JS-SO,bitemegames.com,BiteMe Games,Belgium,root
+2-Europa,JS-SO,bloomandgloom.games,Bloom and Gloom,Sweden,jobs
+2-Europa,JS-SO,bluebraingames.com,Blue Brain Games,Slovakia,jobs
+2-Europa,JS-SO,brokenrul.es,Broken Rules,Austria,jobs
+2-Europa,JS-SO,codenamered.nl,Codename Red,Netherlands,root
+2-Europa,JS-SO,coffeestainstudios.com,Coffee Stain Studios,Sweden,"about,career,careers,contact,jobs,join-us,root,team,vacancies,work-wit"
+2-Europa,JS-SO,convoy-games.com,Convoy Games,Netherlands,jobs
+2-Europa,JS-SO,cosmicogames.com,Cosmico,Sweden,career
+2-Europa,JS-SO,crunchyleafgames.com,Crunchy Leaf Games,Germany,root
+2-Europa,JS-SO,deck13.com,Deck13 Interactive,Germany,"career,contact,join-us,team,vacancies"
+2-Europa,JS-SO,dice.se,DICE (Electronic Arts),Sweden,careers
+2-Europa,JS-SO,digitales.games,DigiTales,Germany,team
+2-Europa,JS-SO,dionicsoftware.com,Dionic Software,Germany,root
+2-Europa,JS-SO,doublemoose.com,DoubleMoose Games,Sweden,jobs
+2-Europa,JS-SO,electricsquare.com,Electric Square (Keywords),Ireland,root
+2-Europa,JS-SO,embertrail.com,Ember Trail,Sweden,careers
+2-Europa,JS-SO,ernstborg.studio,EB Studio,Sweden,career
+2-Europa,JS-SO,fakefishgames.com,Fakefish,Finland,"jobs,root"
+2-Europa,JS-SO,flamebaitgames.com,Flamebait Games,Sweden,jobs
+2-Europa,JS-SO,frostrok.com,Frostrok,Sweden,careers
+2-Europa,JS-SO,fundaygames.dk,Funday Games,Denmark,root
+2-Europa,JS-SO,g5e.com,G5 Entertainment,Sweden,root
+2-Europa,JS-SO,gaijinent.com,Gaijin Network,Germany,jobs
+2-Europa,JS-SO,gamedia.nl,GAMEDIA,Netherlands,jobs
+2-Europa,JS-SO,games-farm.com,Games Farm,Slovakia,root
+2-Europa,JS-SO,grenaagames.com,Grenaa Games,Sweden,jobs
+2-Europa,JS-SO,hazelight.se,Hazelight,Sweden,"careers,root"
+2-Europa,JS-SO,henchmangoon.com,Henchman and Goon,Norway,jobs
+2-Europa,JS-SO,iceflake.com,Iceflake Studios (Paradox Interactive),Finland,root
+2-Europa,JS-SO,innogames.com,InnoGames,Germany,"about,career,careers,contact,jobs,join-us,root,team,vacancies,work-wit"
+2-Europa,JS-SO,invergestudios.com,Inverge Studios,Spain,jobs
+2-Europa,JS-SO,jugglergames.com,Juggler Games,Poland,"jobs,root"
+2-Europa,JS-SO,kalamonastudios.com,Kalamona Studios,Switzerland,root
+2-Europa,JS-SO,kaleidoscube.com,kaleidoscube,Germany,jobs
+2-Europa,JS-SO,kongorange.com,Kong Orange,Denmark,careers
+2-Europa,JS-SO,littlebat.games,Little Bat Games,Germany,contact
+2-Europa,JS-SO,massiveminiteam.com,Massive Miniteam (THQ Nordic),Germany,jobs
+2-Europa,JS-SO,memorable.games,Memorable Games,Italy,careers
+2-Europa,JS-SO,mooneyestudios.com,Mooneye Studios,Germany,jobs
+2-Europa,JS-SO,nixxes.com,Nixxes Software (PlayStation Studios),Netherlands,jobs
+2-Europa,JS-SO,nomada.studio,Nomada Studio,Spain,"career,careers"
+2-Europa,JS-SO,oddshot.gg,Oddshot Games,Belgium,jobs
+2-Europa,JS-SO,offroadgames.co,Offroad Games,United Kingdom,join-us
+2-Europa,JS-SO,piktiv.com,Piktiv,Sweden,"career,careers"
+2-Europa,JS-SO,playa-games.com,Playa Games,Germany,career
+2-Europa,JS-SO,racewardstudio.com,RaceWard Studio,Italy,"career,careers,jobs,join-us,vacancies,work-with-us"
+2-Europa,JS-SO,redroverinteractive.com,Red Rover Interactive,Norway,careers
+2-Europa,JS-SO,redskygames.com,Red Sky Games,Italy,"career,careers"
+2-Europa,JS-SO,riftgaming.gg,Rift Consulting,Sweden,careers
+2-Europa,JS-SO,rodengames.com,Roden Games,Sweden,jobs
+2-Europa,JS-SO,sassybot.com,Sassybot,Netherlands,jobs
+2-Europa,JS-SO,scopely.com,DIGIT Game Studios (Scopely),Ireland,"careers,join-us"
+2-Europa,JS-SO,slipgate-ironworks.com,Slipgate Ironworks,Denmark,"career,careers"
+2-Europa,JS-SO,spectralgames.com,Spectral Games,Poland,"career,careers"
+2-Europa,JS-SO,stillfront.com,Stillfront Group,Romania,"career,careers,jobs,join-us,vacancies,work-with-us"
+2-Europa,JS-SO,strelkagames.com,Strelka Games,Italy,work-with-us
+2-Europa,JS-SO,the-artistocrats.com,The Artistocrats,Belgium,jobs
+2-Europa,JS-SO,thegamekitchen.com,The Game Kitchen,Spain,jobs
+2-Europa,JS-SO,throughlinegames.com,Throughline Games,Denmark,careers
+2-Europa,JS-SO,tinybullstudios.com,Tiny Bull Studios,Italy,career
+2-Europa,JS-SO,tumblr.com,On a Roll Studio,Belgium,"careers,jobs"
+2-Europa,JS-SO,villainstudios.nl,VILLIAN Studios,Netherlands,jobs
+2-Europa,MAILTO,10tons.com,10tons,Finland,jobs@10tons.com
+2-Europa,MAILTO,42bits-entertainment.com,42 Bits Entertainment,Germany,jobs@42bits-entertainment.com
+2-Europa,MAILTO,alkimiainteractive.com,Alkimia Interactive (THQ Nordic),Spain,jobs@thqnordicbcn.com
+2-Europa,MAILTO,artificer.com,Artificer (Devolver Digital),Poland,jobs@artificer.com
+2-Europa,MAILTO,boxdragon.se,Box Dragon (Coffee Stain),Sweden,jobs@boxdragon.se
+2-Europa,MAILTO,boxelware.com,Boxelware,Germany,jobs@boxelware.de
+2-Europa,MAILTO,byterockers.games,Byterockers’ Games,Germany,jobs@byterockers.games
+2-Europa,MAILTO,cannonsandsparrows.com,Cannons and Sparrows Creative Studio,Germany,jobs@acas.games
+2-Europa,MAILTO,colossalorder.fi,Colossal Order,Finland,jobs@colossalorder.fi
+2-Europa,MAILTO,d4nstudios.com,Day 4 Night Studios,Italy,jobs@d4nproductions.com
+2-Europa,MAILTO,drakkardev.com,Drakkar Dev,Italy,jobs@drakkardev.com
+2-Europa,MAILTO,ea.com,Frostbite (Electronic Arts),Sweden,recruitmentfraudreports@ea.com
+2-Europa,MAILTO,eldenpixels.com,Elden Pixels,Sweden,jobs@eldenpixels.com
+2-Europa,MAILTO,farfromhomegames.com,Far From Home Games,Poland,jobs@farfromhome.games
+2-Europa,MAILTO,funpunchgames.com,Fun Punch Games,Portugal,jobs@funpunchgames.com
+2-Europa,MAILTO,idreams.pl,Infinite Dreams,Poland,jobs@idreams.pl
+2-Europa,MAILTO,marmaladegamestudio.com,Marmalade Game Studio,Portugal,jobs@marmalademail.com
+2-Europa,MAILTO,mechanistry.com,Mechanistry,Poland,career@mechanistry.com
+2-Europa,MAILTO,midnight.works,Midnight.Works,Romania,hr@midnight.works
+2-Europa,MAILTO,moonmonster.be,MoonMonster Studios,Belgium,jobs@moonmonster.be
+2-Europa,MAILTO,paranoidinteractive.net,Paranoid Interactive,Poland,work@paranoidinteractive.net
+2-Europa,MAILTO,pixel-maniacs.com,Pixel Maniacs,Germany,jobs@pixel-maniacs.com
+2-Europa,MAILTO,redthreadgames.com,Red Thread Games,Norway,jobs@redthreadgames.com
+2-Europa,MAILTO,sedleo.com,Sedleo,Italy,jobs@sedleo.com
+2-Europa,MAILTO,theparasight.com,THE PARASIGHT,Poland,jobs@parasight.studio
+2-Europa,MAILTO,vanguardgames.net,Vanguard Entertainment,Netherlands,jobs@vertigo-games.com
+2-Europa,MAILTO,vertigo-games.com,Vertigo Games (PLAION),Netherlands,jobs@vertigo-games.com
+2-Europa,MAILTO,voraginestudios.com,Voragine Game Studios,Spain,jobs@voraginestudios.com
+2-Europa,MOTOR,2awesomestudio.com,2Awesome Studio,Spain,"Contact Form 7,Gravity Forms"
+2-Europa,MOTOR,3d-io.com,3d-io,Germany,Contact Form 7
+2-Europa,MOTOR,abylight.com,Abylight Barcelona,Spain,"Elementor,Gravity Forms"
+2-Europa,MOTOR,adeninteractive.com,Aden Interactive,Portugal,WPForms
+2-Europa,MOTOR,amberdive-interactive.com,Amberdive Interactive,Germany,Contact Form 7
+2-Europa,MOTOR,ancientforgestudio.com,Ancient Forge Studio,Poland,"Contact Form 7,FluentForm"
+2-Europa,MOTOR,arclightcreations.pl,Arclight Creations,Poland,Contact Form 7
+2-Europa,MOTOR,arokogamestudio.com,Aroko Game Studio,Sweden,Elementor
+2-Europa,MOTOR,babybisongames.com,Baby Bison Games,Poland,Contact Form 7
+2-Europa,MOTOR,badgerpunch.com,Badger Punch Games,Norway,Contact Form 7
+2-Europa,MOTOR,bhvr.com,Behaviour Rotterdam,Netherlands,Gravity Forms
+2-Europa,MOTOR,bigbangstudio.nl,Big Bang Studio,Netherlands,Contact Form 7
+2-Europa,MOTOR,binaryimpact.de,Binary Impacts,Germany,Contact Form 7
+2-Europa,MOTOR,bitfallstudios.de,Bitfall Studios,Germany,Contact Form 7
+2-Europa,MOTOR,bitmapgalaxy.com,Bitmap Galaxy,Slovakia,Contact Form 7
+2-Europa,MOTOR,blackcubegames.com,Black Cube Games,Netherlands,Contact Form 7
+2-Europa,MOTOR,blacklanterncollective.com,Black Lantern Collective,Poland,FluentForm
+2-Europa,MOTOR,boltzentertainment.com,Boltz Entertainment,Spain,Elementor
+2-Europa,MOTOR,bytebarrel.com,ByteBarrel,Poland,Ninja Forms
+2-Europa,MOTOR,campfirecabal.com,Campfire Cabal (THQ Nordic),Denmark,Elementor
+2-Europa,MOTOR,chasing-carrots.com,Chasing Carrots,Germany,Contact Form 7
+2-Europa,MOTOR,chopchop.dk,Chop Chop Games,Denmark,Formidable
+2-Europa,MOTOR,chubbypixel.com,Chubby Pixel,Italy,"Contact Form 7,Gravity Forms"
+2-Europa,MOTOR,cinicgames.com,CINIC Games,Italy,Contact Form 7
+2-Europa,MOTOR,clifftopgames.com,Clifftop Games,Sweden,Contact Form 7
+2-Europa,MOTOR,clockstone.com,Clockstone Studio,Austria,Contact Form 7
+2-Europa,MOTOR,codehorizon.pl,Code Horizon,Poland,Caldera
+2-Europa,MOTOR,cyberneticwalrus.com,Cybernetic Walrus,Belgium,Elementor
+2-Europa,MOTOR,darkjay.com,Dark Jay Studio,Poland,"Contact Form 7,WPForms"
+2-Europa,MOTOR,daydreamsoftware.es,Daydream Software,Spain,Contact Form 7
+2-Europa,MOTOR,denda-corporate.com,Denda Games,Netherlands,Contact Form 7
+2-Europa,MOTOR,dgmind.com,Digital Mind Games,Spain,Contact Form 7
+2-Europa,MOTOR,digitaldaredevils.pl,Digital Daredevils,Poland,Contact Form 7
+2-Europa,MOTOR,dojo-system.com,Dojo System,Spain,Elementor
+2-Europa,MOTOR,drawdistance.dev,Draw Distance,Poland,Contact Form 7
+2-Europa,MOTOR,dreamtangovr.com,Uncloudy Labs,Sweden,Contact Form 7
+2-Europa,MOTOR,drkuchogames.com,Dr. Kucho Games,Spain,Contact Form 7
+2-Europa,MOTOR,ducklandgames.com,Duckland Games,Netherlands,Elementor
+2-Europa,MOTOR,earlymorningstudio.com,Early Morning Studio,Sweden,Contact Form 7
+2-Europa,MOTOR,easytrigger.com,Easy Trigger Games (Coffee Stain),Sweden,Contact Form 7
+2-Europa,MOTOR,ef.games,EF Games,Spain,Elementor
+2-Europa,MOTOR,elfgames.com,Elf Games,Italy,Contact Form 7
+2-Europa,MOTOR,endflame.com,Endflame Studios,Spain,WPForms
+2-Europa,MOTOR,engine-software.com,Engine Software,Netherlands,"Contact Form 7,Gravity Forms"
+2-Europa,MOTOR,eremitegames.com,Eremite Games,Poland,Contact Form 7
+2-Europa,MOTOR,evehor.com,Event Horizon,Poland,Contact Form 7
+2-Europa,MOTOR,exiin.com,EXiin,Belgium,"Contact Form 7,Gravity Forms"
+2-Europa,MOTOR,experiment101.com,Experiment 101 (THQ Nordic),Sweden,"Contact Form 7,Gravity Forms"
+2-Europa,MOTOR,explorestudiogames.com,eXplore Studio,Germany,Contact Form 7
+2-Europa,MOTOR,fadingskies.com,Distant Blue,Germany,WPForms
+2-Europa,MOTOR,fatbot-games.com,Fatbot Games,Slovakia,WPForms
+2-Europa,MOTOR,fdg-entertainment.com,FDG Entertainment,Germany,Contact Form 7
+2-Europa,MOTOR,filimundus.se,Filimundus,Sweden,Gravity Forms
+2-Europa,MOTOR,finitude.dev,Finitude,Germany,Contact Form 7
+2-Europa,MOTOR,flyingbeastlabs.com,Flying Beast Labs,Spain,Contact Form 7
+2-Europa,MOTOR,framebreak.se,Frame Break (Amplifier Game Invest),Sweden,Contact Form 7
+2-Europa,MOTOR,frictionalgames.com,Frictional Games,Sweden,WPForms
+2-Europa,MOTOR,futurats.com,Futurats,Italy,Contact Form 7
+2-Europa,MOTOR,gamecan.eu,Gamecan,Estonia,FluentForm
+2-Europa,MOTOR,gamedevestonia.ee,Goose Minded,Estonia,WPForms
+2-Europa,MOTOR,gamehunters-studio.com,GameHunters Studio,Poland,Contact Form 7
+2-Europa,MOTOR,gamious.com,Gamious,Netherlands,"Contact Form 7,WPForms"
+2-Europa,MOTOR,gbanga.com,Gbanga,Switzerland,Contact Form 7
+2-Europa,MOTOR,gearsforbreakfast.com,Gears for Breakfast,Denmark,Gravity Forms
+2-Europa,MOTOR,giganticduck.com,Gigantic Duck,Sweden,Contact Form 7
+2-Europa,MOTOR,godspeargames.com,Godspear Games,Belgium,Contact Form 7
+2-Europa,MOTOR,grimloregames.com,Grimlore Games (THQ Nordic),Germany,WPForms
+2-Europa,MOTOR,groundga.com,Ground Game Atelier,Spain,Contact Form 7
+2-Europa,MOTOR,grubyentertainment.com,Gruby Entertainment,Poland,Contact Form 7
+2-Europa,MOTOR,gtzastudio.com,GTZAStudio,Spain,Contact Form 7
+2-Europa,MOTOR,herobeatstudios.com,Herobeat Studios,Spain,Contact Form 7
+2-Europa,MOTOR,homebearstudio.com,HomeBearStudio,Netherlands,Elementor
+2-Europa,MOTOR,hutlihut.dk,Hutlihut Games,Denmark,Elementor
+2-Europa,MOTOR,hyperstrange.com,Hyperstrange,Poland,Contact Form 7
+2-Europa,MOTOR,icecodegames.com,Ice Code Games,Poland,Contact Form 7
+2-Europa,MOTOR,indomitusgames.com,Indomitus Games,Italy,Contact Form 7
+2-Europa,MOTOR,inntq.com,INNTQ,Sweden,WPForms
+2-Europa,MOTOR,inoutbox.games,Inoutbox,Germany,Contact Form 7
+2-Europa,MOTOR,inthekillhouse.com,Killhouse Games,Romania,"Contact Form 7,WPForms"
+2-Europa,MOTOR,ironwolfstudio.com,Iron Wolf Studio,Poland,Contact Form 7
+2-Europa,MOTOR,irox-games.com,Irox Games,Germany,"Contact Form 7,Gravity Forms,WPForms"
+2-Europa,MOTOR,isolatedgames.com,Isolated Games,Spain,Contact Form 7
+2-Europa,MOTOR,jandusoft.com,JanduSoft Games,Spain,Elementor
+2-Europa,MOTOR,joinplaygames.com,Joinplay Games,Finland,Formidable
+2-Europa,MOTOR,jujubee.pl,Jujubee,Poland,Contact Form 7
+2-Europa,MOTOR,keeperrl.com,Electric Succubi,Poland,Contact Form 7
+2-Europa,MOTOR,klassefilm.dk,Klassefilm,Denmark,Elementor
+2-Europa,MOTOR,kool2play.com,Kool2Play,Poland,Contact Form 7
+2-Europa,MOTOR,krakenempire.com,Kraken Empire,Spain,Elementor
+2-Europa,MOTOR,kuuasema.com,Kuuasema,Finland,Gravity Forms
+2-Europa,MOTOR,lgwstudios.com,Lunar Great Wall Studios,Italy,Contact Form 7
+2-Europa,MOTOR,lichthund.com,Licht Hund,Poland,Contact Form 7
+2-Europa,MOTOR,mangatar.net,Mangatar,Italy,Gravity Forms
+2-Europa,MOTOR,megalevel.es,Megalevel,Spain,Contact Form 7
+2-Europa,MOTOR,milestone.it,Milestone,Italy,Contact Form 7
+2-Europa,MOTOR,miscgames.no,Misc Games,Norway,Contact Form 7
+2-Europa,MOTOR,moviegames.pl,Movie Games Lunarium,Poland,"Forminator,Gravity Forms"
+2-Europa,MOTOR,naptime.games,Naptime Games,Poland,Contact Form 7
+2-Europa,MOTOR,nawiagames.com,Nawia Games,Poland,Contact Form 7
+2-Europa,MOTOR,neobird.de,Neobird,Germany,Contact Form 7
+2-Europa,MOTOR,niekoplay.com,Nieko,Spain,Elementor
+2-Europa,MOTOR,niftyllamagames.com,Nifty Llama Games,Netherlands,Contact Form 7
+2-Europa,MOTOR,nightingames.com,NightinGames,Germany,Contact Form 7
+2-Europa,MOTOR,nordcurrent.com,Nordcurrent,Poland,Contact Form 7
+2-Europa,MOTOR,nutteryentertainment.com,The Nuttery Entertainment,Sweden,"Contact Form 7,Elementor,Gravity Forms"
+2-Europa,MOTOR,omlgames.com,One More Level,Poland,Contact Form 7
+2-Europa,MOTOR,ovidworks.com,Ovid Works,Poland,Contact Form 7
+2-Europa,MOTOR,pajamallama.be,Pajama Llama Games,Belgium,Contact Form 7
+2-Europa,MOTOR,pewtergamesstudios.com,Pewter Games,Ireland,Contact Form 7
+2-Europa,MOTOR,playsoftgames.com,Playsoft Games,Poland,"CF7 upload,Contact Form 7"
+2-Europa,MOTOR,primebitgames.com,Prime Bit Games SA,Poland,Elementor
+2-Europa,MOTOR,psyongames.com,Psyon Games,Finland,Contact Form 7
+2-Europa,MOTOR,pyramid.games,Pyramid Games,Poland,Contact Form 7
+2-Europa,MOTOR,qubicgames.com,Qubic Games,Poland,Contact Form 7
+2-Europa,MOTOR,rabagames.com,Raba Games,Poland,Gravity Forms
+2-Europa,MOTOR,rain-games.com,Rain Games,Norway,Contact Form 7
+2-Europa,MOTOR,reality-twist.com,Reality Twist,Germany,Caldera
+2-Europa,MOTOR,rhea.games,Rhea Games,Estonia,WPForms
+2-Europa,MOTOR,rhombicogames.com,Rhombico Games,Denmark,Contact Form 7
+2-Europa,MOTOR,saltylemonentertainment.com,Salty Lemon Entertainment,Belgium,Contact Form 7
+2-Europa,MOTOR,sandsoft.com,Sandsoft Games,Finland,Contact Form 7
+2-Europa,MOTOR,sbsr.games,SBSR,Romania,Contact Form 7
+2-Europa,MOTOR,siesta-games.com,Siesta Games,Spain,Contact Form 7
+2-Europa,MOTOR,silkroadstudios.net,Silkroad Studios,Denmark,WPForms
+2-Europa,MOTOR,somethingwemade.se,Something We Made Games,Sweden,WPForms
+2-Europa,MOTOR,spawnstudios.com,Spawn Studios,Portugal,Contact Form 7
+2-Europa,MOTOR,spilgames.com,Spil Games Eastern Europe,Poland,Gravity Forms
+2-Europa,MOTOR,spookydoorway.com,Spooky Doorway,Ireland,"Contact Form 7,WPForms"
+2-Europa,MOTOR,sqrt3.games,SQRT3,Poland,Elementor
+2-Europa,MOTOR,stcware.com,Storm in a Teacup,Italy,Contact Form 7
+2-Europa,MOTOR,stickylock.com,Stickylock,Netherlands,Contact Form 7
+2-Europa,MOTOR,stigmastudios.com,Stigma Studios,Italy,Contact Form 7
+2-Europa,MOTOR,stormindgames.com,Stormind Games,Italy,Contact Form 7
+2-Europa,MOTOR,takeitstudio.com,TakeIT Studio,Poland,Contact Form 7
+2-Europa,MOTOR,thedreammachine.se,The Sleeping Machine,Sweden,Contact Form 7
+2-Europa,MOTOR,theknightsofunity.com,The Knights of Unity,Poland,Contact Form 7
+2-Europa,MOTOR,undercoders.com,Undercoders,Spain,Contact Form 7
+2-Europa,MOTOR,urbangames.com,Urban Games,Switzerland,"Contact Form 7,Gravity Forms,WPForms"
+2-Europa,MOTOR,urbanstrifegame.com,White Pond Games,Romania,Contact Form 7
+2-Europa,MOTOR,varsav.com,Varsav Game Studios,Poland,Contact Form 7
+2-Europa,MOTOR,vecubestudio.com,VeCube Studio,Poland,FluentForm
+2-Europa,MOTOR,verdantgames.com,Verdant Games,Netherlands,Elementor
+2-Europa,MOTOR,vermila.com,Vermila Studios,Spain,Contact Form 7
+2-Europa,MOTOR,viridiansoftware.com,Viridian Software,Ireland,Formidable
+2-Europa,MOTOR,virtualplay.games,Virtual Play,Netherlands,Contact Form 7
+2-Europa,MOTOR,vstepsimulation.com,VSTEP,Netherlands,Gravity Forms
+2-Europa,MOTOR,whalestork.com,Whalestork Interactive,Portugal,Contact Form 7
+2-Europa,MOTOR,wispfire.com,Wispfire,Netherlands,Contact Form 7
+2-Europa,MOTOR,zakazane.studio,ZAKAZANE,Poland,Contact Form 7
+2-Europa,MOTOR,zerounogames.com,Zerouno Games,Spain,Contact Form 7
+2-Europa,PROPRIO,1000orks.com,1000 Orks,Germany,root
+2-Europa,PROPRIO,altereyes.com,AlterEyes,Belgium,jobs
+2-Europa,PROPRIO,baroquedecay.com,Baroque Decay Games,Spain,root
+2-Europa,PROPRIO,blobfishgames.com,Blobfish Games,Switzerland,root
+2-Europa,PROPRIO,cm.games,CM Games,Estonia,careers
+2-Europa,PROPRIO,devilishgames.com,Devilish Games,Spain,"about,career,careers,contact,jobs,join-us,root,team,vacancies,work-wit"
+2-Europa,PROPRIO,drago-entertainment.com,Drago Entertainment,Poland,"career,careers"
+2-Europa,PROPRIO,findlinggames.com,Findling Games,Germany,root
+2-Europa,PROPRIO,firechick.de,FIRECHICK,Germany,"about,career,careers,contact,jobs,join-us,root,team,vacancies,work-wit"
+2-Europa,PROPRIO,fracturedbyte.com,Fractured Byte,Poland,jobs
+2-Europa,PROPRIO,gamepoint.com,GamePoint,Netherlands,"about,career,careers,contact,join-us,root,team,vacancies,work-with-us"
+2-Europa,PROPRIO,gamingcorps.com,Gaming Corps,Sweden,contact
+2-Europa,PROPRIO,gamingfactory.pl,Gaming Factory,Poland,"contact,root"
+2-Europa,PROPRIO,handy-games.com,HandyGames (THQ Nordic),Germany,contact
+2-Europa,PROPRIO,killmondaygames.com,Killmonday Games,Sweden,contact
+2-Europa,PROPRIO,linx-interactive.com,Linx Interactive,Netherlands,contact
+2-Europa,PROPRIO,mighty-koi.com,Mighty Koi,Poland,"career,jobs,join-us,vacancies,work-with-us"
+2-Europa,PROPRIO,ninerocksgames.com,Nine Rocks Games (THQ Nordic),Slovakia,careers
+2-Europa,PROPRIO,rendercube.pl,Render Cube,Poland,"career,careers,jobs,join-us,vacancies,work-with-us"
+2-Europa,PROPRIO,rubberbandgames.com,RubberBand Games,United Kingdom,"career,careers"
+2-Europa,PROPRIO,scarecrow-studio.com,Scarecrow Studio,Ireland,careers
+2-Europa,PROPRIO,talisman.games,Talisman Games,Netherlands,"career,careers,jobs,join-us,vacancies,work-with-us"
+2-Europa,PROPRIO,tension.se,Tension Technology,Sweden,career
+2-Europa,PROPRIO,thefarm51.com,The Farm 51,Poland,"career,careers"
+2-Europa,PROPRIO,veomstudio.com,VEOM Studio,Latvia,career
+4-pais desconhecido,ATS-NOVO,bouldermedia.tv,,?,Kenjo
+4-pais desconhecido,ATS-NOVO,cube.eu,,?,Softgarden
+4-pais desconhecido,ATS-NOVO,giantant.ca,,?,Homerun
+4-pais desconhecido,HOSPEDADO,sarofsky.com,,?,Typeform
+4-pais desconhecido,HOSPEDADO,shadowmachine.com,,?,Google Forms
+4-pais desconhecido,HOSPEDADO,sixpointharness.com,,?,JotForm
+4-pais desconhecido,HOSPEDADO,waterproofstudios.com,,?,Google Forms
+4-pais desconhecido,JS-SO,brunchstudio.tv,,?,"career,careers,jobs,join,join-us,opportunities,vacancies,work-with-us"
+4-pais desconhecido,JS-SO,distilleryvfx.com,,?,careers
+4-pais desconhecido,JS-SO,flickerpix.com,,?,jobs
+4-pais desconhecido,JS-SO,goodbyekansas.com,,?,"join,join-us"
+4-pais desconhecido,JS-SO,goodbyekansasstudios.com,,?,"join,join-us"
+4-pais desconhecido,JS-SO,mainframe.ca,,?,"career,careers"
+4-pais desconhecido,JS-SO,passion-animation.com,,?,"join,join-us"
+4-pais desconhecido,JS-SO,shedmtl.com,,?,jobs
+4-pais desconhecido,JS-SO,trixter.de,,?,jobs
+4-pais desconhecido,JS-SO,zoicstudios.com,,?,join
+4-pais desconhecido,MAILTO,blinkink.co.uk,,?,jobs@blinkink.co.uk
+4-pais desconhecido,MAILTO,buck.co,,?,careers@buck.co
+4-pais desconhecido,MAILTO,goldenwolf.tv,,?,jobs@goldenwolf.tv
+4-pais desconhecido,MOTOR,9story.com,,?,"Contact Form 7,Gravity Forms,WPForms"
+4-pais desconhecido,MOTOR,benuts.be,,?,Gravity Forms
+4-pais desconhecido,MOTOR,digitaldomain.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,folksvfx.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,frimastudio.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,giantanimation.ie,,?,Contact Form 7
+4-pais desconhecido,MOTOR,interferencepattern.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,mrxfx.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,theartery.com,,?,Contact Form 7
+4-pais desconhecido,MOTOR,titmouse.net,,?,WPForms
+4-pais desconhecido,MOTOR,tonicdna.com,,?,"Caldera,Contact Form 7,Gravity Forms"
+4-pais desconhecido,MOTOR,woodblock.tv,,?,Contact Form 7
+4-pais desconhecido,MOTOR,yowzaanimation.com,,?,Contact Form 7
+4-pais desconhecido,PROPRIO,digitaldimension.com,,?,careers
+4-pais desconhecido,PROPRIO,passion-pictures.com,,?,"career,careers,jobs,join,join-us,opportunities,vacancies,work-with-us"
+4-pais desconhecido,PROPRIO,prologue.com,,?,"join-us,vacancies"
+4-pais desconhecido,PROPRIO,thepitchagency.com,,?,"careers,jobs,join,join-us,opportunities,vacancies,work-with-us"

@@ -3,10 +3,20 @@ name: Publicar dashboard cifrado
 # O gh-pages recebe SOMENTE a versão cifrada do painel. A senha vive como secret
 # do repositório (DASHBOARD_SENHA) e nunca entra em arquivo nenhum.
 #
-# Enquanto o secret não existir, o job de publicação é PULADO em silêncio, não
-# falha. Job que falha manda email do GitHub a cada push, e em 01/09 isso encheu
-# a caixa do Vini. Como o contexto `secrets` NÃO é permitido num `if` de job,
-# quem lê o secret é o job "checar", que expõe só um sim ou não como saída.
+# Enquanto o secret não existir, o job de publicação é PULADO, e o run NÃO falha.
+# Job que falha manda email do GitHub a cada push, e em 01/09 isso encheu a caixa
+# do Vini. Como o contexto `secrets` NÃO é permitido num `if` de job, quem lê o
+# secret é o job "checar", que expõe só um sim ou não como saída.
+#
+# MAS "não falhar" virou "não avisar", e isso custou caro em 07/09: o secret sumiu
+# depois de 06/09 às 14h06 e a publicação foi pulada por CATORZE HORAS com check
+# verde em todo push. O Vini só descobriu porque estranhou que o painel mostrava
+# 236 rotas quando o repositório já tinha 478. Run com job pulado conta como
+# "success", então o sinal que ele olhava dizia que estava tudo certo.
+#
+# Por isso o aviso agora é `::warning::` com título, e o passo escreve no resumo
+# do run o que aconteceu e como consertar. Continua sem falhar e sem mandar email,
+# mas para de mentir em silêncio.
 
 on:
   push:
@@ -38,7 +48,16 @@ jobs:
             echo "tem_senha=sim" >> "$GITHUB_OUTPUT"
           else
             echo "tem_senha=nao" >> "$GITHUB_OUTPUT"
-            echo "::notice::Secret DASHBOARD_SENHA ausente. Publicação pulada, nada foi exposto."
+            echo "::warning title=Painel NAO publicado::Secret DASHBOARD_SENHA ausente. O painel no gh-pages esta CONGELADO e vai ficando mais velho a cada commit. Nada foi exposto."
+            {
+              echo "## O painel nao foi publicado"
+              echo ""
+              echo "O secret \`DASHBOARD_SENHA\` nao existe neste repositorio, entao a publicacao foi pulada."
+              echo "**O site em gh-pages esta congelado** e continua mostrando dados antigos, sem avisar quem o abre."
+              echo ""
+              echo "Conserto, em Settings > Secrets and variables > Actions > New repository secret,"
+              echo "com o nome exato \`DASHBOARD_SENHA\`. Qualquer push depois disso republica sozinho."
+            } >> "$GITHUB_STEP_SUMMARY"
           fi
 
   publicar:

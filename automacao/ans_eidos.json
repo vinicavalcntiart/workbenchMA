@@ -1,0 +1,21 @@
+{"texto":{
+ "jobPostingApplication_personalInfo_email":"contact@vinicavalcanti.art",
+ "jobPostingApplication_personalInfo_confirmEmail":"contact@vinicavalcanti.art",
+ "jobPostingApplication_personalInfo_firstName":"Vini",
+ "jobPostingApplication_personalInfo_lastName":"Cavalcanti",
+ "jobPostingApplication_personalInfo_linkedInURL":"https://www.linkedin.com/in/vinicavalcnti/",
+ "jobPostingApplication_personalInfo_city":"Olinda"},
+ "texto2":{
+ "jobPostingApplication_personalInfo_candidateSourceDescription":"Studio careers page"},
+ "combo":{
+ "rc_select_1":"Brazil|\\+55",
+ "jobPostingApplication_personalInfo_countryCode":"Brazil",
+ "jobPostingApplication_personalInfo_stateCode":"Pernambuco",
+ "jobPostingApplication_personalInfo_preferredContactMethod":"Email",
+ "jobPostingApplication_personalInfo_candidateSource":"Company Website|Career Site|Company Career|Other"},
+ "radios":[
+ ["authorized to work in Canada","^No$"],
+ ["willing to move","^Yes$"]],
+ "arquivos":{
+ "jobPostingApplication_files_resume":"Vini_Cavalcanti_CV.pdf",
+ "jobPostingApplication_files_coverLetter":"Vini_Cavalcanti_Cover_Letter.pdf"}}
