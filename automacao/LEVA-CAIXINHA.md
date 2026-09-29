@@ -59,3 +59,5 @@ Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador 
 - Workable (Lighthouse x3, Velan, Nexus, Homa, One Of Us, StoryToys, Sawhorse): vaga viva pela API do jobs.workable.com. Crazy Maple General Application não aparece nesse índice; a página do apply.workable.com devolveu 429 (limite do Workable para o nosso IP), então essas linhas não tiveram a caixinha vista hoje.
 - Saíram (já enviadas em 28/09, recibo em enviados.csv): NBCUniversal Lead Technical Artist, Ubisoft Annecy, Ubisoft Montreal x2, Ubisoft Paris, Ubisoft Reflections. Saiu também Ten Square Games Future opportunities (mesma casa do Art Lead enviado em 28/09).
 - Não estão mais na leva por já terem saído: Barnstorm (BambooHR 114, enviada em 23/09), Framestore Montreal, Jungler (recusou em 22/09), Stirling, Relic, NEOWIZ/NOUGH, Skydance.
+
+| Glinda Games | 3D Artist, Melbourne (Wix) | reCAPTCHA "I'm not a robot" visível ao clicar Submit; formulário todo preenchido, CV nos 2 campos, Type=Artist (29/09) | n | https://www.glindagames.com/jobs/apply |
