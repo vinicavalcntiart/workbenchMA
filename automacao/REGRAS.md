@@ -47,6 +47,23 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 ## Meta remota de 30/09 (Vini: "Hj n adimito menos de 50 formularios sem captcha de vaga remoto")
 Para bater 50 formulários remotos sem caixinha hoje, entra também: (1) vaga remota de 3D generalist ou 3D artist cujo anúncio inclua personagem; (2) vaga remota que diz só "Remote" sem restringir país por escrito; (3) vaga remota de freelance ou contrato por projeto de personagem 3D; (4) formulário de rede de freelancers remotos de estúdio de fora (jogos, animação, VFX, motion/publicidade 3D) que faça personagem. Continua fora: estúdio do Brasil, remoto restrito por escrito a outro país, ambiente/props, NFT/cripto/iGaming, Room 8, EA.
 
+## Resposta calorosa: oferecer a agenda, com cautela (Vini, 30/09: "sempre que ver uma resposta assim, com oportunidade de mandar agenda e oferecer a call ja manda. claro que isso tem que ser um recurso que tem que ser usado com cautela")
+
+Quando uma PESSOA responde com abertura real, a resposta do maestro já agradece com empolgação e oferece a call com o link da agenda (https://calendar.app.google/8gi22SHVcsxWiVN69), dizendo que se nenhum horário servir a pessoa manda qualquer um e o Vini ajusta. Modelo: a resposta à Adriana, da Cantina Creative, em 30/09.
+
+Oferece quando TODOS valem:
+- escreveu uma pessoa de verdade, com nome (não recibo automático, não no-reply, não template de ATS);
+- o tom abre porta: "vou passar para o time", "gostamos do seu trabalho", "vamos guardar para vagas futuras que combinem", "pode haver algo", pedido de mais material;
+- o estúdio está no escopo (personagem, fora do Brasil e do Japão);
+- a agenda ainda não foi oferecida naquele fio.
+
+NÃO oferece quando:
+- é recusa fechada ("não vamos precisar de personagem por um bom tempo", "sem vagas e sem planos"): só agradece;
+- é resposta de equipe genérica sem nome, ou só confirma recebimento;
+- a pessoa já propôs horário (aí aceita o horário, conferido contra a agenda);
+- já houve oferta de agenda naquele fio, ou o estúdio tem veto escrito de visto para a única vaga em jogo.
+Na dúvida, agradece sem a agenda e conta ao Vini numa linha.
+
 ## Vaga de animador: fora (Vini, 30/09: "eu n sou animador, vaga de animador n faz sentido")
 
 Nenhuma vaga de animação entra: Animator, Technical Animator, Cinematic Animator, Rigging & Animation, Motion Designer. Vale também para casa grande (a regra de disciplina vizinha do CLAUDE.md cobre rig, CFX, look dev e textura de personagem, não animação). Vaga de rig só entra quando for de rig de personagem sem animar (modelagem, skinning, deformação), e mesmo assim depois das de personagem.
