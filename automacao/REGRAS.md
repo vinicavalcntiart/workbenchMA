@@ -47,6 +47,10 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 ## Meta remota de 30/09 (Vini: "Hj n adimito menos de 50 formularios sem captcha de vaga remoto")
 Para bater 50 formulários remotos sem caixinha hoje, entra também: (1) vaga remota de 3D generalist ou 3D artist cujo anúncio inclua personagem; (2) vaga remota que diz só "Remote" sem restringir país por escrito; (3) vaga remota de freelance ou contrato por projeto de personagem 3D; (4) formulário de rede de freelancers remotos de estúdio de fora (jogos, animação, VFX, motion/publicidade 3D) que faça personagem. Continua fora: estúdio do Brasil, remoto restrito por escrito a outro país, ambiente/props, NFT/cripto/iGaming, Room 8, EA.
 
+## Vaga de animador: fora (Vini, 30/09: "eu n sou animador, vaga de animador n faz sentido")
+
+Nenhuma vaga de animação entra: Animator, Technical Animator, Cinematic Animator, Rigging & Animation, Motion Designer. Vale também para casa grande (a regra de disciplina vizinha do CLAUDE.md cobre rig, CFX, look dev e textura de personagem, não animação). Vaga de rig só entra quando for de rig de personagem sem animar (modelagem, skinning, deformação), e mesmo assim depois das de personagem.
+
 ## Pedido de call: responde na hora com o link da agenda (Vini, 30/09: "ja aproveite esse link e se alguem pedir call ja mande")
 
 Quando um estúdio ou recrutador pede conversa, call ou entrevista, o maestro (ou o Comunicador) responde e ENVIA na hora, sem esperar o Vini: em inglês, agradece, diz que o Vini está muito empolgado, manda o link da agenda de entrevista https://calendar.app.google/8gi22SHVcsxWiVN69 e diz que, se nenhum horário servir, a pessoa pode mandar qualquer horário e o Vini ajusta a agenda. A página já bloqueia sozinha a mentoria e a E-Line. Se a pessoa já propôs um horário, a resposta aceita esse horário (conferido contra a agenda) em vez de mandar o link. Depois, avisa o Vini numa linha e anota na AGENDA do painel.
