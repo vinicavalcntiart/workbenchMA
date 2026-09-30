@@ -109,3 +109,4 @@ Saíram da leva em 29/09 à noite: Jungler (vaga de ambiente e a casa disse em 2
 ## LEVA REMOTO 30/09
 
 1. 30/09 | Amber Studio (remoto, Brasil) | 3D Artist - Characters (Project Based, banco de talentos de contrato por projeto; Jobvite o5cgufwL) | Jobvite: reCAPTCHA de imagem ("Select all squares with traffic lights") aparece ao clicar Send Application; nome, email, telefone, país Brasil, cidade, LinkedIn, portfólio e CV anexado (lido de volta) conferidos; sem campo de carta | s | https://jobs.jobvite.com/amberstudiocareers/job/o5cgufwL/apply
+2. 30/09 | Streamline Studios (Malásia, freelance 100% remoto) | Lead Character Artist (BambooHR 84) | BambooHR: reCAPTCHA de caixa 304x78 visível depois de preencher tudo (script em /home/user/w1/sl84.js, formulário conferido campo a campo, CV anexado) | https://streamlinestudios.bamboohr.com/careers/84
