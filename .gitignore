@@ -19,3 +19,6 @@
 # E regeneravel e nao pertence ao repositorio.
 __pycache__/
 *.pyc
+
+# Capturas de tela de formulario preenchido (podem ter dado pessoal). Nunca versionar.
+automacao/*.png
