@@ -3,21 +3,18 @@
 Gerado por `automacao/cronometro-nuvem.py` a partir do tempo medido pela propria Kernel (usage.uptime_ms).
 Custo estimado a US$ 0.48 por hora.
 
-**Total medido:** 17.9 min, cerca de US$ 0.14
+**Total medido:** 12.7 min, cerca de US$ 0.10
 
 ## Por dia
 
 | dia (UTC) | minutos | US$ estimado |
 |---|---|---|
-| 2026-09-30 | 17.9 | 0.14 |
+| 2026-09-30 | 12.7 | 0.10 |
 
 ## Por sessao
 
 | aberta em (UTC) | fechada em (UTC) | nome | sem tela | minutos |
 |---|---|---|---|---|
-| 2026-09-30 15:49 | 2026-09-30 15:50 | grandes-sumo | nao | 1.3 |
-| 2026-09-30 15:50 | 2026-09-30 15:55 | grandes-sumo | nao | 3.3 |
-| 2026-09-30 15:55 | 2026-09-30 15:55 | ukie-vo | nao | 0.7 |
 | 2026-09-30 16:03 | 2026-09-30 16:04 | fg | nao | 0.6 |
 | 2026-09-30 16:04 | 2026-09-30 16:04 | fg | nao | 0.6 |
 | 2026-09-30 16:07 | 2026-09-30 16:07 | fg | nao | 0.6 |
@@ -35,3 +32,6 @@ Custo estimado a US$ 0.48 por hora.
 | 2026-09-30 16:39 | 2026-09-30 16:39 | boxel-vfxdir | nao | 0.3 |
 | 2026-09-30 16:44 | 2026-09-30 16:47 | finder2-dir2 | sim | 2.3 |
 | 2026-09-30 16:46 | 2026-09-30 16:47 | cassagi-vfxdir | nao | 0.4 |
+| 2026-09-30 16:52 | ABER A | carteiro-dupla-b | sim | 0.0 (AINDA ABERTA) |
+| 2026-09-30 16:57 | ABER A | ano-jogos | nao | 0.0 (AINDA ABERTA) |
+| 2026-09-30 16:57 | 2026-09-30 16:57 | rd-vfxdir | nao | 0.1 |
