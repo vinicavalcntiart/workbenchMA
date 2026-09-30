@@ -20666,11 +20666,13 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 
 ## RODADA 30/09 tarde (13h36 UTC), frente I (remoto primeiro, depois Canadá com visto)
 
+> **Maestro, 30/09:** as seis cartas desta rodada escritas e gravadas em rascunho (assunto fixo, `confere-carta.py` limpo, pior par do lote 40%; dedupe no Gmail por domínio em `in:anywhere` e nos rascunhos logo antes: só o fio antigo do `employment@` da Other Ocean, sem resposta). Gregan Dunn / Offworld `r1027203327310421867` (reforça a candidatura de 10/09 e pede que chegue ao Art Director e ao Character Art Lead); Max Knechtel / Other Ocean `r1318465850482501149` (pede encaminhamento a quem lidera arte de personagem); Jeff Lydell / Gasket `r-377329300714978328` (carta de porta, sem vaga aberta); Alex Delamaire / BBI `r-2356708158050676248` (cita o banco de talentos de 19/09 e pede um nome do time de arte); David Fugère-Lamarre / iLLOGIKA `r8499708533437480582`; Edward Quintero / Mold3D `r-8539198725148205681` (só personagem e Mouse Guard, nada de ambiente). Textos em `/home/user/apply/cartas-3009/`, fora do repositório.
+
 **Fonte nova, nunca usada pela campanha:** o diretório oficial **"Canada at gamescom 2026"** do Trade Commissioner Service do governo do Canadá, `https://gamescomcanada.com/directory` (**200**). A página é um app em JavaScript; os 98 registros (casa, pessoa de contato com cargo, email, cidade, descrição escrita pela própria casa) estão no bundle `https://gamescomcanada.com/assets/index-BdQqhO0j.js` (**200, 933.673 bytes**, lido em 30/09 13h40 UTC). É a própria casa que preencheu o email, então tudo é **PUBLICADO (ALTA)**. **Seis fichas, todas com endereço publicado, nada montado.** Emails completos só no scratchpad (`joe-3009-I-emails.txt`).
 
 **Sobre o foco remoto, com honestidade:** das casas do diretório com personagem 3D, nenhuma escreve que contrata remoto do Brasil. A Other Ocean escreve remoto na América do Norte e a Gasket remoto dentro da Colúmbia Britânica; nas seis a carta leva a frase de mudança e visto, e não a do remoto.
 
-### FICHA 1: **Gregan Dunn**, *Director of Operations* da **OFFWORLD INDUSTRIES** (Squad, Starship Troopers: Extermination; New Westminster, **CANADÁ**) `g***@offworldindustries.com`, **ALTA**
+### FICHA 1: **Gregan Dunn**, *Director of Operations* da **OFFWORLD INDUSTRIES** (Squad, Starship Troopers: Extermination; New Westminster, **CANADÁ**) `g***@offworldindustries.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r1027203327310421867`**
 - **URL:** diretório acima: *"Offworld | contactPerson: Gregan Dunn - Director of Operations | email: g***@offworldindustries.com | New Westminster, BC"*. Cargo confirmado por theorg.com e MCV/DEVELOP (veio da PopReach, onde era VP of Game Studios).
 - **POR QUE ELE:** casa de mais de 150 pessoas sem recrutador de arte publicado; ele cuida de operação e contratação, e é quem a própria casa pôs como contato oficial em 2026.
 - **FRASE DA CASA, literal** (`https://www.offworldindustries.com/careers`, **200**): *"While we do have open job listings, we encourage those with a strong drive and talent to reach out to us."* E na vaga: *"As a 3D Character Artist you will work closely with the Art Director and Character Art Lead to create high-quality characters, clothing, and accessories that align with the visual identity of our IP."*
@@ -20679,7 +20681,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (offworldindustries OR "Offworld Industries" OR "Gregan Dunn" OR owi.bamboohr)` → **1 fio:** o recibo do BambooHR de 10/09 (*"Thank you for applying at Offworld"*, 3D Character Artist). Nenhuma carta, nenhuma recusa, nada em rascunho. Repositório: a candidatura em `enviados.csv` (10/09); zero no `pessoas.csv`.
 - **RESSALVAS HONESTAS:** (1) a vaga pede anatomia **realista** e militar, e o forte do Vini é estilizado; (2) ele é de operações, não de arte: a carta cita a candidatura de 10/09 e pede que chegue ao Art Director e ao Character Art Lead; (3) vaga híbrida, não remota.
 
-### FICHA 2: **Max Knechtel**, *Business Development Manager* da **OTHER OCEAN INTERACTIVE** (Project Winter, Scrap Daddies; Ilha do Príncipe Eduardo e Terra Nova, **CANADÁ**) `m***@otherocean.com`, **ALTA**
+### FICHA 2: **Max Knechtel**, *Business Development Manager* da **OTHER OCEAN INTERACTIVE** (Project Winter, Scrap Daddies; Ilha do Príncipe Eduardo e Terra Nova, **CANADÁ**) `m***@otherocean.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r1318465850482501149`**
 - **URL:** diretório acima: *"Other Ocean Interactive | Max Knechtel, Business Development Manager | m***@otherocean.com"*.
 - **POR QUE ELE:** é a única pessoa com endereço que a casa publica; a caixa `employment@` já foi tentada duas vezes sem resposta, então agora vai para um nome.
 - **FRASE DA CASA, literal:** (`https://otherocean.com/`, **200**) *"With studios in Charlottetown, Prince Edward Island, and St. John's, Newfoundland and Labrador—plus a talented team of remote developers across North America"*; e no diretório: *"we've been busy redefining what multiplayer games can offer with a focus on friend groups and asymmetrical team gameplay."* (Scrap Daddies, 2026.)
@@ -20687,7 +20689,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (otherocean OR "Other Ocean" OR Knechtel)` → **1 fio**, só com as duas mensagens ENVIADAS para `employment@otherocean.com` (carta 02/09 e follow-up 07/09), **nenhuma resposta**. Nada em rascunho.
 - **RESSALVAS HONESTAS:** (1) cargo comercial: a carta pede encaminhamento a quem cuida de arte; (2) é a **segunda e última** aproximação da casa (teto de duas); (3) não há vaga aberta visível (a página de vagas não abriu daqui).
 
-### FICHA 3: **Jeff Lydell**, *CEO* da **GASKET GAMES** (Warhammer Age of Sigmar: Storm Ground; Vancouver, **CANADÁ**) `j***@gasketgames.com`, **ALTA**
+### FICHA 3: **Jeff Lydell**, *CEO* da **GASKET GAMES** (Warhammer Age of Sigmar: Storm Ground; Vancouver, **CANADÁ**) `j***@gasketgames.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r-377329300714978328`**
 - **URL:** diretório acima: *"Gasket Games Corp. | Jeff Lydell CEO | j***@gasketgames.com"*.
 - **POR QUE ELE:** casa pequena e média; o CEO é quem ela mesma pôs como contato.
 - **FRASE DA CASA, literal:** (diretório) *"Gasket Games is a developer of unique online games, with a history of successfully shipped games since 2018."*; e em `https://gasketgames.com` (**200**): *"We offer three working styles: Remote within BC, in-studio and hybrid to suit a variety of lifestyle needs and work preferences."*
@@ -20696,7 +20698,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (gasketgames OR "Gasket Games" OR Lydell)` → **`{}`**. Repositório: só a prospecção de 01/09 (*"SEM VAGAS ABERTAS"*), nenhuma carta nem recusa.
 - **RESSALVAS HONESTAS:** (1) nenhuma vaga aberta hoje (`gasketgames.bamboohr.com/careers/list` vazio): carta de porta; (2) não conferi se o jogo mais novo da casa é de personagem.
 
-### FICHA 4: **Alex Delamaire**, *Director of Business Development & Communications* da **BLACKBIRD INTERACTIVE** (Hardspace: Shipbreaker, Minecraft Legends, Homeworld 3; Vancouver, **CANADÁ**) `a***@blackbirdinteractive.com`, **ALTA**
+### FICHA 4: **Alex Delamaire**, *Director of Business Development & Communications* da **BLACKBIRD INTERACTIVE** (Hardspace: Shipbreaker, Minecraft Legends, Homeworld 3; Vancouver, **CANADÁ**) `a***@blackbirdinteractive.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r-2356708158050676248`**
 - **URL:** diretório acima: *"Blackbird Interactive (BBI) | contactPerson: Alex Delamaire | a***@blackbirdinteractive.com"*. O cargo não está no diretório: vem de theorg.com e do podcast FireDEV (*"Director of Business Development & Communications @ Blackbird Interactive"*).
 - **POR QUE ELE:** é o endereço que a BBI publicou para 2026; ninguém de arte da casa tem endereço publicado.
 - **FRASE DA CASA, literal** (diretório): *"BBI has extensive experience in developing full games (including our own original IP, Hardspace: Shipbreaker) and providing valuable co-development, live ops, remakes, and porting services across Unreal, Unity, but also various proprietary engines."* Na lista de jogos: *Minecraft Legends* (*"Full development, work-for-hire"*).
@@ -20704,7 +20706,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (blackbirdinteractive OR "Blackbird Interactive" OR Delamaire)` → **`{}`**. Repositório: candidatura espontânea no banco de talentos do Pinpoint em 19/09 (`enviados.csv`), nenhuma carta a pessoa, nenhuma recusa.
 - **RESSALVAS HONESTAS:** (1) cargo comercial e de comunicação: a carta pede que ele aponte o time de arte; (2) o Pinpoint da casa está com zero vagas publicadas hoje.
 
-### FICHA 5: **David Fugère-Lamarre**, *CEO* do **iLLOGIKA** (co-desenvolvimento: Cuphead, A Quiet Place: The Road Ahead, 7 Days Blood Moons; Montreal, **CANADÁ**) `d***@illogika.com`, **ALTA**
+### FICHA 5: **David Fugère-Lamarre**, *CEO* do **iLLOGIKA** (co-desenvolvimento: Cuphead, A Quiet Place: The Road Ahead, 7 Days Blood Moons; Montreal, **CANADÁ**) `d***@illogika.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r8499708533437480582`**
 - **URL:** diretório acima: *"iLLOGIKA | David Fugère-Lamarre CEO | d***@illogika.com"*.
 - **POR QUE ELE:** casa de 30 pessoas, fundada em 2009: o CEO decide.
 - **FRASE DA CASA, literal** (diretório): *"iLLOGIKA, founded in 2009, is a multiplatform video game developer with 30 professionals based in Montreal."* Na página de vagas (`https://www.illogika.com/en/carrieres`, **200**): *"Didn't find the offer you were looking for? Send us your CV"*.
@@ -20712,7 +20714,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (illogika OR "Fugère-Lamarre" OR "Fugere-Lamarre" OR nvizzio OR Legris)` → **`{}`**. Repositório: só uma varredura de ATS de 20/09, nenhuma carta nem recusa.
 - **RESSALVAS HONESTAS:** (1) casa do Quebec: pode exigir francês; (2) nenhuma vaga aberta; (3) co-desenvolvimento de vários estilos, sem prova de personagem 3D próprio.
 
-### FICHA 6: **Edward Quintero**, *Founder & CEO* do **MOLD3D STUDIO** (Los Angeles, **EUA**; ex-ILM e DreamWorks Animation) `e***@mold3d.com`, **ALTA**
+### FICHA 6: **Edward Quintero**, *Founder & CEO* do **MOLD3D STUDIO** (Los Angeles, **EUA**; ex-ILM e DreamWorks Animation) `e***@mold3d.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r-8539198725148205681`**
 - **URLs:** rodapé de `https://mold3d.com` e de `https://www.mold3dstudio.com/contact` (**200**, 30/09 13h50 UTC): *"Los Angeles, CA info@mold3d.com ... e***@mold3d.com"*. Cargo por theorg.com e AWN.
 - **POR QUE ELE:** fundador de casa pequena, que responde ele mesmo; o endereço dele está no rodapé de todas as páginas.
 - **FRASE DA CASA, literal** (`https://mold3d.com`): *"A highlight project was the 'Mouse Guard' Animated Feature Film, in which the team created 3D characters and environments, lighting and look development in Unreal Engine."* e *"Mold3D was tasked to produce next generation assets for Epic Games UE5 demo running live on PlayStation 5."*
