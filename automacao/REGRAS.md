@@ -47,6 +47,9 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 ## Meta remota de 30/09 (Vini: "Hj n adimito menos de 50 formularios sem captcha de vaga remoto")
 Para bater 50 formulários remotos sem caixinha hoje, entra também: (1) vaga remota de 3D generalist ou 3D artist cujo anúncio inclua personagem; (2) vaga remota que diz só "Remote" sem restringir país por escrito; (3) vaga remota de freelance ou contrato por projeto de personagem 3D; (4) formulário de rede de freelancers remotos de estúdio de fora (jogos, animação, VFX, motion/publicidade 3D) que faça personagem. Continua fora: estúdio do Brasil, remoto restrito por escrito a outro país, ambiente/props, NFT/cripto/iGaming, Room 8, EA.
 
+## Vaga remota: basta estar escrito remoto (Vini, 30/09: "basta estar escrito vaga remota")
+Vaga de personagem ou 3D com personagem marcada como remota ENTRA, mesmo que o anúncio restrinja a região (Remote US, Remote EU, Remote UK, Canadá). Não se descarta por região. No formulário, as respostas continuam verdadeiras: mora em Olinda, Brazil; autorização de trabalho no país da empresa: No; se perguntar sobre patrocínio de visto, Yes. Continua fora: estúdio do Brasil, ambiente/props, NFT/cripto/iGaming, Room 8, EA, e vaga já enviada.
+
 ## Estúdio do Brasil: fora (Vini, 30/09: "eu to dizendo que a kokku fica no brasil e n quero estudios do brasil")
 Nenhum estúdio sediado no Brasil entra, nem na frente de remoto: nada de formulário, carta ou ficha para casa brasileira (Kokku, Webcore, Wildlife, Hoplon, Behold etc.). O remoto que vale é o de estúdio de fora que contrata a partir do Brasil, como a E-Line.
 
