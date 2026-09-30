@@ -47,6 +47,10 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 ## Meta remota de 30/09 (Vini: "Hj n adimito menos de 50 formularios sem captcha de vaga remoto")
 Para bater 50 formulários remotos sem caixinha hoje, entra também: (1) vaga remota de 3D generalist ou 3D artist cujo anúncio inclua personagem; (2) vaga remota que diz só "Remote" sem restringir país por escrito; (3) vaga remota de freelance ou contrato por projeto de personagem 3D; (4) formulário de rede de freelancers remotos de estúdio de fora (jogos, animação, VFX, motion/publicidade 3D) que faça personagem. Continua fora: estúdio do Brasil, remoto restrito por escrito a outro país, ambiente/props, NFT/cripto/iGaming, Room 8, EA.
 
+## Pedido de call: responde na hora com o link da agenda (Vini, 30/09: "ja aproveite esse link e se alguem pedir call ja mande")
+
+Quando um estúdio ou recrutador pede conversa, call ou entrevista, o maestro (ou o Comunicador) responde e ENVIA na hora, sem esperar o Vini: em inglês, agradece, diz que o Vini está muito empolgado, manda o link da agenda de entrevista https://calendar.app.google/8gi22SHVcsxWiVN69 e diz que, se nenhum horário servir, a pessoa pode mandar qualquer horário e o Vini ajusta a agenda. A página já bloqueia sozinha a mentoria e a E-Line. Se a pessoa já propôs um horário, a resposta aceita esse horário (conferido contra a agenda) em vez de mandar o link. Depois, avisa o Vini numa linha e anota na AGENDA do painel.
+
 ## Vaga remota: basta estar escrito remoto (Vini, 30/09: "basta estar escrito vaga remota")
 Vaga de personagem ou 3D com personagem marcada como remota ENTRA, mesmo que o anúncio restrinja a região (Remote US, Remote EU, Remote UK, Canadá). Não se descarta por região. No formulário, as respostas continuam verdadeiras: mora em Olinda, Brazil; autorização de trabalho no país da empresa: No; se perguntar sobre patrocínio de visto, Yes. Continua fora: estúdio do Brasil, ambiente/props, NFT/cripto/iGaming, Room 8, EA, e vaga já enviada.
 

@@ -81,7 +81,7 @@ Vini, quem decide é o Vini. Mas o Comunicador nunca para aí:
 
 | Situação | O que ele faz |
 |---|---|
-| Convite para entrevista ou call | Deixa o rascunho pronto no Gmail com duas ou três janelas de horário plausíveis, marca o estúdio como "entrevista" no painel, e avisa o Vini por PushNotification e no resumo. Não envia |
+| Convite para entrevista ou call | **Responde na hora e ENVIA (Vini, 30/09: "se alguem pedir call ja mande")**: em inglês, agradece, diz que o Vini está muito empolgado, manda o link da agenda de entrevista https://calendar.app.google/8gi22SHVcsxWiVN69 (a página mostra os horários no fuso de quem abre) e diz que, se nenhum horário servir, a pessoa pode mandar qualquer horário e o Vini ajusta a agenda. Modelo: a resposta à Pine Studio de 30/09. Marca o estúdio como "entrevista" no painel, põe na AGENDA e avisa o Vini no resumo |
 | Teste técnico ou art test (o maestro nunca oferece teste; REGRAS.md, 28/09) | Lê o enunciado, resume o escopo, o prazo e o esforço, deixa rascunho de aceite pronto e avisa. Não envia |
 | Negociação de salário, contrato ou data de início | Deixa rascunho com a faixa oficial da campanha e avisa. Não envia |
 | Oferta de emprego | Só avisa, com destaque máximo. Não escreve nada |
