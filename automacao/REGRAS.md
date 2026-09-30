@@ -44,6 +44,9 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 4. Campo livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." Campo numérico: só o número.
 5. Taxa por hora de freelance ou contrato (Vini deixou o maestro decidir, 29/09): USD 40/h, NZD 55/h, EUR 35/h, GBP 32/h, CAD 50/h, AUD 55/h. Diária = 8 x a hora.
 
+## Onde mora, quando a pessoa pergunta (Vini, 30/09: "oxe, brasil n ne")
+Quando alguém pergunta onde o Vini mora, a resposta diz Brasil com todas as letras: "I am based in Olinda, Brazil (UTC-3)". A regra de não escrever a palavra Brazil vale só para a carta fria, nunca para resposta direta a essa pergunta.
+
 ## Pergunta obrigatória sem opção que sirva (Vini, 29/09)
 *"Lembre que vc pode marcar uma opção e se tiver qualquer espaço de texto é só explicar. Isso é mt comum"*
 
