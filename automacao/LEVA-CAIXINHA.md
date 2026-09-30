@@ -4,6 +4,53 @@ Jeito novo (Vini, 28/09): o Kernel só abre quando o Vini chamar. O maestro pree
 anexa o CV por último, passa o link e fecha a sessão logo depois do envio.
 Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<familia>/resp-*.json.
 
+## LEVA 01/10 manhã (consolidada 30/09 18h UTC)
+
+Consolidação dos blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" (W3, X2, UKIE, EU, V1, A1, A2, OA, CARM etc.). Vaga viva conferida em 30/09 por curl e API pública (BambooHR list, Workable widget, Jobvite, Recruitee, páginas das casas); dedupe em enviados.csv: nenhuma delas enviada. Nada preenchido hoje: as abas se preenchem às 8h47 (preenchimento vence de madrugada). Só entra na leva o que mostrar a caixa "sou humano" visível; se a caixa não aparecer, o maestro resolve sozinho. Respostas campo a campo em /home/user/apply/<familia>/resp-*.json, fora do repositório.
+Salário (REGRAS 04/09 e 29/09): taxa freelance USD 40/h (GBP 32, EUR 35, CAD 50, AUD 55), diária = 8 x hora; fixa sem faixa casa pequena EUR 45.000 / USD 85.000 / AUD 95.000, casa grande USD 100.000. Remoto que contrata do Brasil: carta com "I work fully remote today as a contractor for a US studio, from UTC-3..." e país = Brasil. Presencial: "I am ready to move for the role, and I would need visa sponsorship." Autorização de trabalho No, patrocínio Yes.
+
+Formato: casa | vaga | país | remoto? | URL | desafio | notas
+
+Casa grande primeiro:
+1. Hasbro / Wizards of the Coast | Principal Character Artist (req 68744377699) | EUA (Durham NC) | n | https://careers.hasbro.com/careers/job/68744377699 | Eightfold, caixa ainda NÃO vista | curl daqui não abre (sem resposta); só abre no navegador do computador, conferir na hora; entra só se mostrar a caixa; casa grande USD 100.000
+
+Remoto, personagem:
+2. Amber Studio | 3D Artist - Characters (Project Based, Jobvite o5cgufwL) | remoto, estúdio de fora contrata do Brasil | s | https://jobs.jobvite.com/amberstudiocareers/job/o5cgufwL/apply | reCAPTCHA de imagem ao Send Application | sem carta; país Brasil; taxa USD 40/h se perguntar
+3. Side (Workable sideinc) | 3D Character Artist - Talent Pool (N Americas) 7C6C2916EF | EUA/Canadá | s | https://apply.workable.com/sideinc/j/7C6C2916EF/apply/ | Cloudflare "Verify you are human" (visto na irmã LATAM) | irmã LATAM já enviada 27/09, esta é outra vaga; USD 40/h, inglês, patrocínio Yes, GDPR Yes
+4. Stirling Animation Studios | Character Modeling and Surfacing Artists (BambooHR 77) | Reino Unido | s | https://stirlinganimationstudios.bamboohr.com/careers/77 | reCAPTCHA de caixa | veto "based in UK" não vale; GBP 32/h; aviso de local verdadeiro (Olinda)
+5. Zoic Studios | 3D Senior Character Modeler (JazzHR 6AIrHg8YtX, contrato 6 semanas) | Canadá (Vancouver) | s | https://zoicstudios.applytojob.com/apply/6AIrHg8YtX/BC-3D-Character-Modeler-Senior | campo "Human Check" reCAPTCHA de caixa | "Eligible to work in Canada" = I require a Work Permit; "reside" = I live outside of Canada; USD 40/h (decidido); carta explica visto
+6. Streamline Studios | Lead Character Artist (BambooHR 84, freelance) | Malásia | s | https://streamlinestudios.bamboohr.com/careers/84 | reCAPTCHA de caixa 304x78 | vaga diferente da 106 enviada em 29/09; USD 40/h; script em /home/user/w1/sl84.js
+7. HyperVR Games | 3D Character Artist (Senior, Riga) | Letônia | s | https://gb.ingamejob.com/en/job/3d-character-artist-74 | reCAPTCHA de caixa no modal Apply | anúncio de 25/09 vivo; EUR 45.000
+8. Uchi VFX | Speculative Application (Modeling, Lookdev, Cloth/Hair) | Itália | s (Full Remote, freelance) | https://www.uchivfx.com/join-us | Wix, modal Verification com reCAPTCHA de caixa | C2, Senior, 10+ anos, USD 320/dia e 6500/mês, início 14/10, dois consentimentos GDPR (script em /tmp/dupla-app2/uchi.js, pode ter sumido: refazer)
+9. Sierra Division | Submit Your Portfolio (3D artist outstaffing) | EUA | s | https://www.sierradivision.com/careers | Turnstile (iframe 664x65) segura o Submit | USD 40/h; Olinda, Brasil
+10. Giant Ant | Get in Touch, freelance 3D | Canadá (Vancouver) | s | https://form.jotform.com/252247568962267 (embutido em giantant.ca/get-in-touch) | reCAPTCHA de imagem ao Submit | "Canadian work permit? No"; resumo de 63 palavras
+11. Blue Wizard Digital | Spontaneous application (Senior 3D Character Artist) | Canadá (Comox) | s (contrato remoto) | https://bluewizard.com/jobs | Gravity Forms, reCAPTCHA de imagem ao Submit | refazer do zero
+12. Arrival Game Creative | Job Interest via contato | EUA/UK/Canadá | s | https://www.arrivalgc.com/contact | Wix, reCAPTCHA de caixa ao Send | 6-10 anos, Remote Only, CV por link litterbox no texto
+13. Softgames | Unsolicited Application (Recruitee) | Alemanha (Berlim) | s | https://jobs.softgames.de/o/unsolicited-application/c/new | hCaptcha de imagem ao Submit | vaga de espontânea viva na API; cargo 3D Character Artist, EUR 45.000, relocação Yes, CV e carta
+14. Halfbrick Studios | Expression of Interest WORLDWIDE (Role = Senior 3D Character Artist) | Austrália | possível (worldwide) | https://www.halfbrick.com/expression-of-interest | reCAPTCHA de caixa 304x78 | AUD 95.000 se pedir número
+
+Presencial com visto (personagem ou 3D com personagem):
+15. Funko | 3D Digital Sculptor | EUA (Everett WA) | n | https://jobs.jobvite.com/funko/job/ogyRAfwZ/apply | reCAPTCHA de imagem | pergunta pendente: "vai continuar no emprego atual?" (resposta do Vini antes de enviar); vaga viva
+16. Entropy Studio | 3D Modeler Organic / Character | Espanha (Zaragoza) | n | https://www.entropystudio.net/jobs | reCAPTCHA v2 de imagem | vaga viva na página
+17. Gradient Effects | 3D MODELER (Maya, ZBrush, Mari, look dev) | EUA (Los Angeles) | n | https://gradientfx.com/application/ | Gravity Forms em etapas, reCAPTCHA de caixa | vaga viva em gradientfx.com/jobs
+18. Double Eleven | Expression of Interest (UK) Workable 99F32D8BF0 | Reino Unido (Middlesbrough) | n | https://apply.workable.com/double-eleven/j/99F32D8BF0/apply | Turnstile ao Submit (fica em Submitting) | Pronouns He, direito de trabalho UK = No, relocação explicada; GBP 42.000 se pedir
+19. Metricminds | Unsolicited Application (BambooHR 39) | Alemanha (Frankfurt) | híbrido | https://metricmindsgmbh.bamboohr.com/careers/39 | reCAPTCHA de caixa 304x78 | carta em PDF obrigatória; UE eligible No, visto Yes, EUR 45.000 (as duas linhas antigas viraram esta)
+20. Grimlore Games | Open Application | Alemanha (Munique) | n | https://grimloregames.com/open-application/ | reCAPTCHA de caixa | CV por link litterbox gerado no envio
+21. Effetti Digitali (EDI) | CG - Unsolicited Application (Zoho 46723000004912622) | Itália (Milão) | n | https://effettidigitali.zohorecruit.eu/jobs/careers-en/46723000004912622/CG---Unsolicited-Application | CAPTCHA de texto visível ("Type below image text") | mandar UMA só das duas vagas da casa (a versão em italiano, id 46723000001254126, é a mesma casa: dropada como duplicada); frase de visto
+22. Plastic Wax | Recruitment Form | Austrália (Sydney) | n | https://www.plasticwax.com/careers | reCAPTCHA de caixa em modal após Submit | casa recebeu email em 28/09 (auto-reply); conferir campo de CV
+23. Blowfish Studios | Expression of Interest | Austrália (Sydney) | n | https://www.blowfishstudios.com/careers | reCAPTCHA enterprise ao Submit | o Submit de 29/09 limpou o form sem recibo: refazer; AUD 95.000
+24. Palomar Animation (Mediawan Kids & Family) | candidatura espontânea | França | n | https://mediawankidsandfamily.com/jobs | reCAPTCHA de caixa | espontânea ativa na página
+25. PlaySide Studios | Expression of Interest | Austrália (Melbourne) | n | https://employmenthero.com/jobs/position/playside-studios-ltd-expression-of-interest/ | reCAPTCHA de imagem antes da conta | vaga viva; AUD 95.000
+26. The Game Atelier | Spontaneous Application, categoria Art | França (Paris) | n (aceita contrato longo) | https://www.game-atelier.com/jobapplication | Wix, reCAPTCHA de caixa ("Je ne suis pas un robot") | Long-term, Both, EUR 45.000
+27. beQ Entertainment | Careers form, posição Other: 3D Character Artist | Itália | n | https://www.beqentertainment.eu/careers | Wix, reCAPTCHA de caixa | reaplicar o menu Position of Interest (Other + campo especifique); o Wix não guardou
+28. Big Viking Games | Talent Community (Workable 42D15E5DDF) | Canadá (Toronto) | n | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/ | Turnstile 300x65 ao Submit | página viva (200); API de vagas deu 429 no momento, reconferir às 8h47; CAD 80.000
+
+Total: 28 portas vivas.
+
+Saíram da leva em 30/09 18h UTC: Juego Studios (Índia, regra nova de países, e captcha de texto + Turnstile); EDI versão italiana (duplicata da casa, ver 21); OA-3 (fundido com Metricminds, 19). Nenhuma linha dos blocos antigos estava enviada ou fechada; nenhuma viola "sem animador", "sem Japão" nem "sem Brasil" (Amber Studio é de fora, só contrata do Brasil). Os blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" abaixo ficam só como histórico; vale este bloco.
+
+
+
 | data | casa | cargo | família | personagem | URL |
 |---|---|---|---|---|---|
 | 28/09 | Entropy Studio | Recruitment (3D Modeler organic/character) | site (Wix, reCAPTCHA de caixa) | s | https://www.entropystudio.net/jobs |
