@@ -20733,7 +20733,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 
 **Sobre o foco remoto, com honestidade:** nenhuma das quatro escreve que contrata remoto. Vanite e PULK escrevem que trabalham com rede de freelancers, o que é a porta mais próxima de remoto que apareceu; nas quatro a carta leva a frase de mudança e visto.
 
-### FICHA 1: **Mikko Miettinen**, *CEO | Art Director* da **VANITE** (estúdio de animação 3D, 2D e VFX; Helsinki, **FINLÂNDIA**) `m***@vanite.fi`, **ALTA**
+### FICHA 1: **Mikko Miettinen**, *CEO | Art Director* da **VANITE** (estúdio de animação 3D, 2D e VFX; Helsinki, **FINLÂNDIA**) `m***@vanite.fi`, **ALTA** ✅ **CARTA FEITA, rascunho `r-1288524430749408232`**
 - **URL:** `https://vanite.fi/contact` (**200**, lida em 30/09 18h UTC): *"Mikko Miettinen CEO | Art Director ... m***@vanite.fi"*, ao lado de Lauri Hjelt (Creative Director | Producer) e da caixa `hello@` de novos negócios.
 - **POR QUE ELE:** casa pequena (fundada em 2015 por três amigos); ele é ao mesmo tempo o dono e o diretor de arte, quem olha portfólio e decide.
 - **FRASE DA CASA, literal** (`https://vanite.fi/`): *"Vanite is an artist-driven animation studio, based in Helsinki, specializing in bringing your ideas to life with 3D, 2D and VFX."* E em `https://vanite.fi/about`: *"we offer a flexible approach, collaborating and teaming our artists if necessary with a network of top freelancers"*; a lista de serviços traz *"Character design"*, *"Modeling"*, *"Sculpting"*, *"Texturing"*.
@@ -20741,7 +20741,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (vanite.fi OR vanite OR Miettinen)` → **`{}`**; `in:draft` → **`{}`**. Repositório: só a linha SEM-VAGA na `fila.csv` (fonte vfxdent); zero em `pessoas.csv`, `enviados.csv`, `processados.csv` e no painel.
 - **RESSALVAS HONESTAS:** (1) casa de publicidade (Lidl, Veikkaus, Murata), não de série nem de jogo; (2) não há página de vagas (`/careers` dá 404); (3) personagem aparece na lista de serviços, mas não abri peça de personagem no portfólio.
 
-### FICHA 2: **Neil Stubbings**, *Director / 2D & 3D Artist / Character Design* do **PULK STUDIO** (coletivo de CGI, animação e VFX; Zurique, **SUÍÇA**) `n***@pulk.studio`, **ALTA**
+### FICHA 2: **Neil Stubbings**, *Director / 2D & 3D Artist / Character Design* do **PULK STUDIO** (coletivo de CGI, animação e VFX; Zurique, **SUÍÇA**) `n***@pulk.studio`, **ALTA** ✅ **CARTA FEITA, rascunho `r5779791991595201717`**
 - **URL:** `https://pulk.studio/about` (**200**, 30/09 18h UTC): *"NEIL STUBBINGS DIRECTOR / 2D & 3D ARTIST / CHARACTER DESIGN n***@pulk.studio"*, na lista de dez pessoas do time, cada uma com o próprio endereço.
 - **POR QUE ELE e não outro da casa:** é o único do time com personagem no cargo; os outros são VFX, motion, IA e modelagem geral.
 - **FRASE DA CASA, literal:** *"PULK is an award winning collective and studio of animators, directors, visual artists and illustrators in the heart of Zurich, Switzerland. We create state of the art CGI, animation and visual effects."* e *"Within our studio and with our vast network of professionals we can lift big projects and scale according to any needs."*
@@ -20749,7 +20749,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (pulk.studio OR "PULK" OR Stubbings)` → **`{}`**; `in:draft` → **`{}`**. Repositório: só a linha SEM-VAGA na `fila.csv`.
 - **RESSALVAS HONESTAS:** (1) a home responde **415** ao robô; só a página About abriu; (2) coletivo de diretores, o que costuma querer dizer freelancer por projeto e não vaga fixa; (3) Suíça exige permissão de trabalho difícil para quem não é da UE.
 
-### FICHA 3: **Mitchell Lagran**, *Creative Director & CEO* da **EVER CURIOUS ENTERTAINMENT** (Witherbloom, ARPG de sobrevivência em terceira pessoa; co-desenvolvimento; Montréal, **CANADÁ**) `m***@evercurious.games`, **ALTA**
+### FICHA 3: **Mitchell Lagran**, *Creative Director & CEO* da **EVER CURIOUS ENTERTAINMENT** (Witherbloom, ARPG de sobrevivência em terceira pessoa; co-desenvolvimento; Montréal, **CANADÁ**) `m***@evercurious.games`, **ALTA** ✅ **CARTA FEITA, rascunho `r6700670230286831842`**
 - **URL:** diretório oficial *Canada at gamescom 2026* (`https://gamescomcanada.com/directory`, **200**; registro no bundle): *"name:"Ever Curious Entertainment" ... contactPerson:"Mitchell Lagran, Creative Director & CEO", email:"m***@evercurious.games" ... city:"Montréal"*. Foi a própria casa que preencheu o endereço.
 - **POR QUE ELE:** estúdio pequeno e independente; é o diretor criativo e o dono, e é quem a casa pôs como contato oficial.
 - **FRASE DA CASA, literal:** no diretório, *"Ever Curious Entertainment is a fully independent studio whose leadership brings together years of experience in games and blockbuster film and television."* Em `https://www.evercurious.games/witherbloom` (**200**): *"Create your character from one of 16 multi-class combos and face the Withered alone or with up to 4 players in this ground-breaking 3rd-person survival ARPG."* Em `https://www.evercurious.games/services` (**200**): *"We provide individual contributors in design, engineering, narrative, art, audio, or animation to plug gaps."*
@@ -20757,7 +20757,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (evercurious OR "Ever Curious" OR Lagran OR Witherbloom)` → **`{}`**; `in:draft` → **`{}`**. Repositório: zero em todos os arquivos e nas duas filas. Casa inédita.
 - **RESSALVAS HONESTAS:** (1) nenhuma vaga publicada; o site não tem página de carreiras (o contato é só formulário); (2) casa do Quebec, pode pedir francês; (3) o endereço está no diretório do governo, não no site da casa.
 
-### FICHA 4: **Isael Huard**, *CEO* e cofundador da **CALDERA INTERACTIVE** (The Rabbit Haul, lançado em 21/09 no Steam; Edmonton, **CANADÁ**) `i***@calderainteractive.com`, **ALTA**
+### FICHA 4: **Isael Huard**, *CEO* e cofundador da **CALDERA INTERACTIVE** (The Rabbit Haul, lançado em 21/09 no Steam; Edmonton, **CANADÁ**) `i***@calderainteractive.com`, **ALTA** ✅ **CARTA FEITA, rascunho `r5339877398062446602`**
 - **URL:** o mesmo diretório *Canada at gamescom 2026* (bundle acima): *"name:"Caldera Interactive", contactPerson:"Isael Huard - CEO", email:"i***@calderainteractive.com", website:"https://calderainteractive.com/", city:"Edmonton"*. Cofundador confirmado em `https://calderainteractive.com/about/` (**200**): *"Jeff Cho sought out fellow University of Alberta graduates, Isael Huard, Mickael Zerihoun and Titus Lo, to found a part-time game studio together."*
 - **POR QUE ELE:** casa de poucas pessoas; o CEO decide contratação.
 - **FRASE DA CASA, literal** (`https://www.calderainteractive.com/`, **200**): *"We are Caldera Interactive, an indie game studio based in Edmonton, Alberta dedicated to making wholesome quality games with cute aesthetics."* E em About: *"The team also won the GDC Pitch competition in 2024 for their game, The Rabbit Haul, released on PC in 2026."*
