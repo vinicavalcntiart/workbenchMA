@@ -20497,3 +20497,78 @@ Pedido do maestro: a verificação do Lever recusa o navegador na nuvem, então 
 - **VAGA ABERTA:** candidatura espontânea por área (*3D MODELER ORGANIC / CHARACTER*), travada em 20/09 (`processados.csv`).
 - **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (entropystudio OR "Entropy Studio" OR cebrian OR oyarzabal)` → 1 fio, só ENVIADAS: carta ao Xavier (21/09) e **follow-up de 7 dias HOJE (29/09, 11h24 UTC)**. **Nenhuma recusa, nenhuma resposta.**
 - **RESSALVAS HONESTAS:** (1) **a casa levou follow-up hoje:** a carta a ele pode esperar um ou dois dias; (2) é VFX de ação ao vivo, não animação nem jogo: é a ficha mais fraca da rodada em personagem; (3) a carta não pode afirmar crédito de criatura em obra específica, porque não conferi nenhuma.
+
+## RODADA 30/09 madrugada, frente F (Joe): fonte nova, as listas do studiohog (game, animation e VFX) e as casas "email-publicado, para o Joe" de 29/09. **Seis fichas com endereço PUBLICADO e confiança ALTA; zero montado; zero `sem-email`.** Canadá ×1, Dinamarca ×1, México ×1, Espanha ×1, EUA ×2. Emails completos fora do repositório; aqui vão mascarados
+
+**Placar: 6 fichas ALTA, 0 montado, 0 rascunho, 0 carta.** As seis casas são **inéditas na caixa** (Gmail `in:anywhere` por domínio e por nome devolveu `{}` para todas) e inéditas em `pessoas.csv`, `enviados.csv` e `docs/index.html`; a Phosphene só aparecia em `processados.csv` e `ESTUDIOS-SEM-CARTA.md` como caixa `jobs@` anotada às 00h05 de hoje. Nenhuma recusou o Vini, nenhuma pessoa delas respondeu.
+
+**COMO SAIU, medido, para ninguém repetir:**
+- Das 749 casas do studiohog sem casar no repositório, 399 estavam em país do escopo, fora do dedupe por domínio e nome e fora da varredura de 29/09 (que só tinha passado por 275 domínios). Varri as 399 em `/`, `/contact`, `/about`, `/team`, `/about-us`, `/contact-us`, `/studio`, `/people` e `/our-team`: **58 casas devolveram algum endereço**, quase tudo caixa (`hi@`, `bd@`, `frontdesk@`, `whois@`). As de pessoa com nome e cargo na mesma página viraram as fichas abaixo.
+- **Caíram, para não reabrir:** The Odd (Budapeste; o endereço da Andrea Grosz apareceu uma vez na varredura e **não voltou a aparecer** em nenhuma das nove páginas relidas: não entra sem página que mostre); Whiskytree (`ro@` é a caixa da vaga de roto, sem nome); Chicken Bone FX (`johnny@` no rodapé sem nome ao lado, e a casa é de ambiente e composição); Melocotón (Cidade do México; *Head CGI* Federico Rojo publicado, mas a casa é de VFX de ação ao vivo e composição, sem personagem visível: fica de reserva); Tryptyc (Toronto; VFX fotorreal de publicidade); Fort York, Taylor James e Alter Ego (produtores de publicidade, ou 403); Volstok (Gante; `wouter@` é o contato comercial de estúdio de branding); Artifex, Budge, Hello Games e The Line (já na campanha); Alchemy Interactive (Alberta; Kelly Eros, CEO, mas o jogo é retrô e a casa é minúscula: reserva).
+- As casas "email-publicado, para o Joe" de 29/09 (KeelWorks, First Touch, Invincibles, Madorium, Brainstorm Digital) **não publicam pessoa** em nenhuma página aberta: só a caixa já anotada. A exceção é a Phosphene (ficha 6).
+
+### FICHA 1: **Mo Ghorbankarimi**, *Founder / President / VFX Supervisor* da **WEFX** (VFX de cinema e série; Toronto, **CANADÁ**) — `m***@wefx.com` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.wefx.com/contact` (**200, 458.474 bytes**): cartão *"Mo Ghorbankarimi | Founder | President | VFX Supervisor | mailto"*, ao lado de Amanda Lariviere (*Executive Producer | Head of Studio*), Steve Stransman e Tom Clary (produtores). `https://www.wefx.com/` (**200, 554.030 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** fundador e supervisor de VFX de uma butique; é quem monta a equipe criativa. A Amanda é a segunda opção (chefe de estúdio), para o teto de duas.
+- **FRASE DA CASA, literal** (home): *"OUR SERVICES | On SET SUPERVISION | CREATURE | FX And SIMULATION | ENVIRONMENT"* e *"Globally diverse and proudly collaborative, our team represents 31 nationalities and 12 languages."*
+- **OBRA DE PERSONAGEM CONFERIDA:** fraca. A casa lista criatura como serviço e cita *What We Do in the Shadows*, *Fall of the House of Usher* e *John Wick: Chapter 4*; não abri reel nem breakdown de criatura.
+- **FORA DOS EUA? SIM** (Canadá). **A frase de realocação ENTRA.** A frase das 31 nacionalidades é um bom gancho para quem vem de fora.
+- **VAGA ABERTA:** não conferida; o site não tem página de carreiras.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (wefx OR Ghorbankarimi)` → **`{}`**. Repositório: zero (o "Ghorbankarimi" de 7062 neste arquivo é a Mahsa, de outra casa). **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) VFX fotorreal de ação ao vivo, não animação estilizada; (2) criatura aparece só como serviço, sem obra conferida; (3) fundador de casa que recebe muito pedido de cliente.
+
+### FICHA 2: **Mark Iversen**, *Creative Director* e cofundador da **EDDAHEIM** (*Neon Knights: Humanity Erased*; Copenhague, **DINAMARCA**) — `m***@eddaheim.com` — **ALTA (PUBLICADO pela casa no site, no bloco de contratação)**
+
+- **URLs abertas por mim nesta rodada:** `https://eddaheim.com/` (redireciona para `eddaheim.webflow.io`, **200, 7.054 bytes**): *"Open to Hire ... If you're an developer looking for your next chapter, we'd love to hear your story. | Mark@Eddaheim.com"*. `https://www.gamespress.com/Copenhagen-based-game-developer-Eddaheim-receives-an-Epic-MegaGrant-fr` (**200**, release da própria casa de 14/03/2022): *"said Creative Director and co-founder of Eddaheim, Mark Iversen"*. O sobrenome e o cargo vêm do release; o site só mostra o primeiro nome no endereço. **NADA MONTADO.**
+- **POR QUE ELE:** é o endereço que a casa publica **para quem quer trabalhar lá**, e ele é o diretor criativo e cofundador.
+- **FRASE DA CASA, literal** (home): *"By combining film and game industry skills, we create deep, immersive worlds with characters you can believe in."*
+- **OBRA DE PERSONAGEM CONFERIDA:** *Neon Knights: Humanity Erased* (Unreal, com a cópia digital escaneada do ator Lars Mikkelsen, pelo release). Personagem realista, não estilizado.
+- **FORA DOS EUA? SIM** (Dinamarca). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma nomeada; *"Open to Hire"* é o convite aberto.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (eddaheim OR "Mark Iversen")` → **`{}`**. Repositório: zero (o "Iversen" deste arquivo é outra pessoa). **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) o site é um molde do Webflow com pouco texto, e o release é de 2022: a casa pode estar menor; (2) o cargo vem do release, não do site; (3) personagem realista com captura de movimento.
+
+### FICHA 3: **Paco Navarro**, *Business Developer* da **EXODO ANIMATION STUDIOS** (animação 3D de personagem e cinemáticas de jogo; Guadalajara, **MÉXICO**) — `n***@exodoanimation.com` — **ALTA (PUBLICADO pela casa no rodapé da home)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.exodoanimation.com/` (**200, 301.700 bytes**): rodapé *"Paco Navarro - Business Developer | n***@exodoanimation.com"*. `https://www.exodoanimation.com/contact` (**200, 172.046 bytes**): portfólio para `produccion@` (caixa), só por link. A cidade (Guadalajara) vem de resumo de busca (Crunchbase e 80.lv), não de página aberta. **NADA MONTADO.**
+- **POR QUE ELE:** é a única pessoa com nome e endereço que a casa publica; o resto é `hola@` e `produccion@`.
+- **FRASE DA CASA, literal** (home): *"we've spent over a decade creating unforgettable 3D characters"* e *"We craft 3D characters to remember"*.
+- **OBRA DE PERSONAGEM CONFERIDA:** a casa se define por personagem 3D e *"CHARACTER DEVELOPMENT"*; não abri projeto um a um.
+- **FORA DOS EUA? SIM** (México). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** nenhuma; a página convida a mandar portfólio (texto voltado a estágio).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (exodoanimation OR "Exodo Animation" OR "Paco Navarro")` → **`{}`**. Repositório: zero. **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) cargo comercial, não de arte: a carta pede que ele aponte o diretor de arte; (2) a página de contato fala de estágio e universidade, e a carta tem de deixar claro que é sênior; (3) casa de serviço mexicana: salário e visto são dúvida.
+
+### FICHA 4: **Steve Gaçonnier**, *Executive Producer* da **JANIMATION** (animação 3D, VFX e trailer de jogo desde 1993; Dallas, **EUA**) — `s***@janimation.com` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://janimation.com/contact` (**200, 84.200 bytes**): *"Steve Gaçonnier | Executive Producer | ... | Email | s***@janimation.com"*. `https://janimation.com/` (**200, 212.709 bytes**): índice de trabalhos com *"3D ANIMATION | ... | CHARACTER DESIGN | ... | GAME TRAILER | ... | VIDEO GAME"*. **NADA MONTADO.**
+- **POR QUE ELE:** é a única pessoa que a casa publica, e o sobrenome dele dá nome a uma das categorias de trabalho (*GACONNIER*): é o dono de fato.
+- **FRASE DA CASA, literal** (home): *"With decades of experience across broadcast, gaming, feature films, VR, Ai, VFX and episodic content, Janimation continues to provide innovative solutions to bring what's next in visual storytelling."*
+- **OBRA DE PERSONAGEM CONFERIDA:** fraca. Só as categorias *CHARACTER DESIGN* e *GAME TRAILER*; não abri peça nenhuma.
+- **FORA DOS EUA? NÃO** (Dallas). **A frase de realocação NÃO entra;** entra só a de patrocínio de visto.
+- **VAGA ABERTA:** o link *"Animation Jobs"* dá 404.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (janimation OR Gaconnier OR "Gaçonnier")` → **`{}`**. Repositório: zero. **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) casa muito voltada a publicidade corporativa e a um curso de IA; (2) sem obra de personagem conferida; (3) página de vagas quebrada.
+
+### FICHA 5: **Ignacio Caicoya**, *CEO / VFX Supervisor* da **FLAMING FRAMES** (VFX e animação; Santa Cruz de Tenerife, **ESPANHA**) — `i***@flamingframes.com` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.flamingframes.com/contact-us/` (**200, 138.584 bytes**): bloco *OUR TEAM*, *"Ignacio Caicoya | CEO / VFX SUPERVISOR | EMAIL : | i***@flamingframes.com"* e Austeja Gaputyte (*Head of Production*). `https://www.flamingframes.com/` (**200, 147.585 bytes**). `https://www.flamingframes.com/about-us/` (**200, 122.583 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** CEO e supervisor de VFX de uma casa pequena; é quem decide.
+- **FRASE DA CASA, literal** (home): *"Modelling / Animation | Modelling, rigging and animating environments, hard surface and organic assets."* e (`/about-us/`) *"Our talented team has worked on major projects in Hollywood, the UK, and Europe."*
+- **OBRA DE PERSONAGEM CONFERIDA:** fraca. *"organic assets"* é o único sinal; não abri a página *Works*.
+- **FORA DOS EUA? SIM** (Espanha). **A frase de realocação ENTRA.**
+- **VAGA ABERTA:** não conferida (*"Join to us"* no contato).
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (flamingframes OR "Flaming Frames" OR Caicoya)` → **`{}`**. Repositório: zero. **Casa inédita.**
+- **RESSALVAS HONESTAS:** (1) casa pequena que vive do incentivo fiscal das Canárias, com trabalho de set e composição; (2) sem obra de personagem conferida; (3) pode preferir gente residente.
+
+### FICHA 6: **John Bair**, *CCO, Senior Visual Effects Supervisor* da **PHOSPHENE** (VFX independente; Nova York, **EUA**) — `j***@phosphenefx.com` — **ALTA (PUBLICADO pela casa na página de contato)**
+
+- **URLs abertas por mim nesta rodada:** `https://www.phosphenefx.com/contact` (**200, 47.919 bytes**): *"John Bair | CCO, Senior Visual Effects Supervisor | j***@phosphenefx.com | Vivian Connolly | CEO, Executive Producer | ... | Chris Connolly | Head of Business Affairs"*. `https://www.phosphenefx.com/careers` (**200, 48.456 bytes**): a caixa `jobs@`. `https://www.phosphenefx.com/` (**200, 52.719 bytes**). **NADA MONTADO.**
+- **POR QUE ELE:** é o diretor criativo e supervisor de VFX; a Vivian (CEO) é a segunda opção. A casa estava anotada só com a caixa `jobs@` (processados, 30/09 00h05). **Uma carta só para a casa:** esta, para ele, no lugar da carta de caixa do `ESTUDIOS-SEM-CARTA.md`.
+- **FRASE DA CASA, literal** (`/careers`): *"Phosphene® is always looking for creative and motivated artists (and film and TV nerds) to join our team"* e *"From pipeline and IT wizards to top tier VFX supervisors, producers, coordinators and 2D and 3D artists"*.
+- **OBRA DE PERSONAGEM CONFERIDA:** fraca. A home cita a indicação ao VES por *Motherless Brooklyn* e ao Emmy por *Escape At Dannemora*, VFX invisível de ação ao vivo.
+- **FORA DOS EUA? NÃO** (Nova York). **A frase de realocação NÃO entra;** entra só a de patrocínio de visto.
+- **VAGA ABERTA:** nenhuma nomeada; convite aberto para 3D.
+- **DEDUPE, O QUE O GMAIL DEVOLVEU:** `in:anywhere (phosphenefx OR phosphene OR "John Bair")` → **`{}`**. Repositório: só a anotação da caixa (processados e ESTUDIOS-SEM-CARTA, 30/09). **Nenhuma carta saiu ainda.**
+- **RESSALVAS HONESTAS:** (1) VFX fotorreal invisível, sem personagem; é a ficha mais fraca em disciplina; (2) as notícias da home são de 2018 a 2020; (3) casa dos EUA, com patrocínio como barreira.
