@@ -104,3 +104,8 @@ Reconferida em 28/09 à noite (preparo da leva de terça 29/09), pelo navegador 
 11. PlaySide Studios (Melbourne), Expression of Interest (presencial). https://employmenthero.com/jobs/position/playside-studios-ltd-expression-of-interest/ . reCAPTCHA de imagem antes da conta.
 
 Saíram da leva em 29/09 à noite: Jungler (vaga de ambiente e a casa disse em 22/09 que não há projeto de personagem 3D); Side LATAM (já enviada e confirmada em 27/09, recibo no Gmail); Amuse Animation Concept Designer (2D temporário, casa pequena); Behaviour e outras Lever com hCaptcha (falham até na mão do Vini); Infold, LIGHT, CayPlay e Super Spline (login Google ou LinkedIn, seção "Precisam da conta do Vini"); e todas as linhas desta tabela que já têm recibo de 29/09 em enviados.csv (Epic x6, Lighthouse x3, StoryToys, Obsidian, Framestore Melbourne, Crafty Apes, Stellar, One Of Us, Velan, Nexus, Homa, Sawhorse, Outplay, BambooHR x7, Screen Burn, Secret Mode, Sans Strings, VFX Legion, Menhir, Squeeze, Asterman, Crazy Maple, Triotech, Blind Squirrel, Glinda, Streamline, One Man, Cinesite London, Climax, Bardel, Floating Rock).
+
+
+## LEVA REMOTO 30/09
+
+1. 30/09 | Amber Studio (remoto, Brasil) | 3D Artist - Characters (Project Based, banco de talentos de contrato por projeto; Jobvite o5cgufwL) | Jobvite: reCAPTCHA de imagem ("Select all squares with traffic lights") aparece ao clicar Send Application; nome, email, telefone, país Brasil, cidade, LinkedIn, portfólio e CV anexado (lido de volta) conferidos; sem campo de carta | s | https://jobs.jobvite.com/amberstudiocareers/job/o5cgufwL/apply
