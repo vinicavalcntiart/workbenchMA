@@ -44,6 +44,9 @@ LinkedIn linkedin.com/in/vinicavalcnti, site vinicavalcanti.com (nunca vinicaval
 4. Campo livre: "Open to aligning with your band for the role; as a reference, I'm looking at around <valor>." Campo numérico: só o número.
 5. Taxa por hora de freelance ou contrato (Vini deixou o maestro decidir, 29/09): USD 40/h, NZD 55/h, EUR 35/h, GBP 32/h, CAD 50/h, AUD 55/h. Diária = 8 x a hora.
 
+## Estúdio do Brasil: fora (Vini, 30/09: "eu to dizendo que a kokku fica no brasil e n quero estudios do brasil")
+Nenhum estúdio sediado no Brasil entra, nem na frente de remoto: nada de formulário, carta ou ficha para casa brasileira (Kokku, Webcore, Wildlife, Hoplon, Behold etc.). O remoto que vale é o de estúdio de fora que contrata a partir do Brasil, como a E-Line.
+
 ## Onde mora, quando a pessoa pergunta (Vini, 30/09: "oxe, brasil n ne")
 Quando alguém pergunta onde o Vini mora, a resposta diz Brasil com todas as letras: "I am based in Olinda, Brazil (UTC-3)". A regra de não escrever a palavra Brazil vale só para a carta fria, nunca para resposta direta a essa pergunta.
 
