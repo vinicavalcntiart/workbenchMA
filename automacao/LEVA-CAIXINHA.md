@@ -45,8 +45,9 @@ Presencial com visto (personagem ou 3D com personagem):
 27. beQ Entertainment | Careers form, posição Other: 3D Character Artist | Itália | n | https://www.beqentertainment.eu/careers | Wix, reCAPTCHA de caixa | reaplicar o menu Position of Interest (Other + campo especifique); o Wix não guardou
 28. Big Viking Games | Talent Community (Workable 42D15E5DDF) | Canadá (Toronto) | n | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/ | Turnstile 300x65 ao Submit | página viva (200); API de vagas deu 429 no momento, reconferir às 8h47; CAD 80.000
 29. Gamigo Philippines (KingsIsle) | Character Artist (Workable mediaandgamesinvest 6CE7E86AC4, Cebu presencial) | Filipinas (Cebu) | n | https://apply.workable.com/mediaandgamesinvest/j/6CE7E86AC4/apply/ | Turnstile 300x65 visível ao Submit (preenchido na nuvem 01/10 madrugada, sessão fechada) | autorização PH No, noites Yes, presencial Cebu Yes, salário PHP 400.000/mês e 4,8 mi/ano (≈ USD 85.000); carta com a frase de mudança e visto; respostas em /home/user/apply/leva/gamigo-kingsisle-character.json; vaga de 22/01, reconferir viva às 8h47
+30. Pulse Games | 3D Artist (Workable pulsegames CC77EB579A; personagens, ambientes e props) | Turquia (time 100% remoto, vaga de 12/06) | s | https://apply.workable.com/pulsegames/j/CC77EB579A/apply/ | Turnstile 300x65 visível ao Submit (preenchido na nuvem 01/10, sessão fechada) | só LinkedIn e Portfolio como campos extras; carta curta remota (UTC-3); script em /home/user/apply/leva/wk-fill-pulsegames.txt; reconferir viva às 8h47
 
-Total: 29 portas vivas.
+Total: 30 portas vivas.
 
 Saíram da leva em 30/09 18h UTC: Juego Studios (Índia, regra nova de países, e captcha de texto + Turnstile); EDI versão italiana (duplicata da casa, ver 21); OA-3 (fundido com Metricminds, 19). Nenhuma linha dos blocos antigos estava enviada ou fechada; nenhuma viola "sem animador", "sem Japão" nem "sem Brasil" (Amber Studio é de fora, só contrata do Brasil). Os blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" abaixo ficam só como histórico; vale este bloco.
 
