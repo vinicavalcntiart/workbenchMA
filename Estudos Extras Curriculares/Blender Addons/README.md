@@ -91,6 +91,38 @@ mesmos 2.862.
 Imagem: `robe_assimetrico_sheet.jpg`. Sem assimetria o mesmo robe chega a
 1.418, 716 e 652, zero n-gons e zero non-manifold.
 
+## Versão 1.4 (LOD2 e LOD3 iguais, silhueta)
+
+Na 1.3 o LOD2 já esgotava o que podia sair e o LOD3 saía igual. O relatório
+mostrou o motivo: loops sem par espelhado na mão e nos dedos, onde a
+assimetria é maior que a aresta. Ao destravar isso apareceu outro problema: a
+cintura e o ombro afundavam até 20%, porque a silhueta era só um peso no
+custo.
+
+- **Topology mirror:** depois do pareamento por distância, os vizinhos são
+  pareados pela topologia (par mútuo e com a mesma valência), como o Topology
+  Mirror do Blender.
+- **Silhouette Tolerance (novo, padrão 5 mm):** um vértice que está no contorno
+  de frente ou de lado só sai se o contorno encolher menos que isso naquele
+  ponto. Mede na projeção da vista, então o ombro curvo também conta.
+- **Configuração por LOD:** selecione o LOD na lista e ajuste Min Ring Verts,
+  Max Sparsity e Silhouette só para ele. Em 0 usa o geral. A silhueta dobra a
+  cada LOD (5, 10, 20 mm), porque o LOD de longe aguenta mais erro.
+- **Cadeia padrão:** 0,5, 0,25 e 0,125; o LOD3 com Ring 6 e Max Sparsity 12.
+- **Relatório:** avisa quando um LOD sai igual ao anterior e detalha o
+  "desfeito" (non-manifold, dobra, lasca ou não reduzia).
+
+| Robe com 4 mm de assimetria | 1.3 | 1.4 | Perda de largura na 1.4 |
+|---|---|---|---|
+| LOD1 | 1.430 | 1.782 | 2,8 mm |
+| LOD2 | 974 | 862 | 2,7 mm |
+| LOD3 | 974 (igual) | 576 | 3,6 mm |
+
+Imagem: `robe_v14_sheet.jpg`. O LOD1 reduz menos porque esse teste tem ruído
+de 4 mm em todo vértice, então qualquer vértice do contorno passa dos 5 mm.
+Em pano esculpido liso a perda é menor. Se quiser mais redução no LOD1, suba
+a Silhouette dele.
+
 ## Geometry Nodes
 
 Com **Use Modifiers (Geometry Nodes)** ligado, o addon usa a malha com os
@@ -134,4 +166,4 @@ Com a mão travada (`t_roupa_mao_travada_520.py`): a mão fica com os 82
 vértices em todos os LODs e o anel do cotovelo cai 16, 12, 8, 8. O LOD2 e o
 LOD3 param em 490 triângulos porque a mão não entra na conta.
 
-Ainda não foi testado no personagem de produção depois da versão 1.3.
+Ainda não foi testado no personagem de produção depois da versão 1.4.

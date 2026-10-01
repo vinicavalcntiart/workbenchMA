@@ -53,6 +53,7 @@ class Settings:
         self.optimize_protected_radius = True
         self.shape_balance = 1.0
         self.min_ring_verts = 8
+        self.silhouette_tolerance_mm = 5.0
         self.__dict__.update(kw)
 
 
@@ -195,6 +196,23 @@ def _boundary_cycles(bm):
     return out
 
 
+def _silhouette_loss(v, a, b):
+    """Quanto o contorno encolhe se v sair e a e b se ligarem. Mede na vista de frente
+    (projeta em XZ) quando v esta no contorno de frente, e na de lado (YZ) quando esta no
+    de lado. Ombro curvo, cintura e barra entram aqui mesmo sem ser o ponto mais externo."""
+    n = v.normal
+    loss = 0.0
+    for drop, nc in ((1, n.y), (0, n.x)):
+        if abs(nc) > 0.4:
+            continue                    # vertice de frente para essa camera: nao e contorno
+        keep = [i for i in range(3) if i != drop]
+        p2 = Vector([v.co[i] for i in keep])
+        a2 = Vector([a.co[i] for i in keep])
+        b2 = Vector([b.co[i] for i in keep])
+        loss = max(loss, _point_seg_dist(p2, a2, b2))
+    return loss
+
+
 def _point_seg_dist(p, a, b):
     ab = b - a
     L2 = ab.length_squared
@@ -202,6 +220,47 @@ def _point_seg_dist(p, a, b):
         return (p - a).length
     t = max(0.0, min(1.0, (p - a).dot(ab) / L2))
     return (p - (a + ab * t)).length
+
+
+def _propagate_mirror(bm, m):
+    """Topology mirror: a partir dos pares certos, pareia os vizinhos pela topologia.
+    Pega o que a distancia nao pega (mao, dedo, dobra esculpida com assimetria maior
+    que a aresta). So aceita par mutuo e com a mesma valencia."""
+    # so pares mutuos valem como semente
+    for i in [i for i, j in m.items() if m.get(j) != i]:
+        del m[i]
+    vs = bm.verts
+    for _ in range(64):
+        new = {}
+        taken = set(m.values())
+        for i, j in m.items():
+            v, w = vs[i], vs[j]
+            free_v = [e.other_vert(v) for e in v.link_edges if e.other_vert(v).index not in m]
+            if not free_v:
+                continue
+            free_w = [e.other_vert(w) for e in w.link_edges
+                      if e.other_vert(w).index not in taken and e.other_vert(w).index not in new.values()]
+            if not free_w:
+                continue
+            for b in free_v:
+                if b.index in new:
+                    continue
+                mb = Vector((-b.co.x, b.co.y, b.co.z))
+                cands = [c for c in free_w if len(c.link_edges) == len(b.link_edges)]
+                if not cands:
+                    continue
+                c = min(cands, key=lambda c: (c.co - mb).length_squared)
+                # mutuo: b tambem e o mais perto de c entre os livres de v
+                mc = Vector((-c.co.x, c.co.y, c.co.z))
+                if min(free_v, key=lambda x: (x.co - mc).length_squared) is not b:
+                    continue
+                if c.index in new.values() or (c.index in new and new[c.index] != b.index):
+                    continue
+                new[b.index] = c.index
+                new[c.index] = b.index
+        if not new:
+            break
+        m.update(new)
 
 
 class _Ctx:
@@ -221,6 +280,8 @@ class _Ctx:
         self.deform_groups = [g.index for g in obj.vertex_groups if g.index not in (self.gp, self.gl)] if obj else []
         self._jf = {}
         self.why = None
+        sc = max((abs(x) for x in obj.matrix_world.to_scale()), default=1.0) if obj else 1.0
+        self.sil_tol = s.silhouette_tolerance_mm * 0.001 / max(sc, 1e-9)
         self.prot = set()
         self.edge_loop = {}
         self.bcycle = _boundary_cycles(bm)
@@ -246,6 +307,7 @@ class _Ctx:
                     lim = max(tol, 0.4 * min(e.calc_length() for e in v.link_edges))
                 if d <= lim:
                     self.mirror[v.index] = i
+            _propagate_mirror(bm, self.mirror)
 
     def protect_w(self, v):
         if self.dl is None or self.gp is None:
@@ -380,6 +442,8 @@ def loop_cost(loop, c, allow_poles):
         others = [x.other_vert(v) for x in v.link_edges if x not in edge_set]
         if len(others) != 2:
             continue
+        if _silhouette_loss(v, others[0], others[1]) > c.sil_tol:
+            return _rej(c, "silhueta (Silhouette Tolerance)", loop)
         err = _point_seg_dist(v.co, others[0].co, others[1].co)
         n = v.normal
         sil = max(1.0 - abs(n.y), 1.0 - abs(n.x)) ** 4      # perfil de frente e de lado
@@ -398,6 +462,8 @@ def loop_cost(loop, c, allow_poles):
             bn = [x.other_vert(v) for x in v.link_edges if x.is_boundary]
             if len(bn) != 2:
                 continue
+            if _silhouette_loss(v, bn[0], bn[1]) > c.sil_tol:
+                return _rej(c, "silhueta (Silhouette Tolerance)", loop)
             err = _point_seg_dist(v.co, bn[0].co, bn[1].co)
             total += err * (5.0 if s.protect_boundary else 1.0) * (1.0 + s.silhouette_pressure)
     total += s.shape_balance * 0.05 * shape
@@ -448,6 +514,16 @@ def _healthy(bm, before):
     return all(a <= b for a, b in zip(health(bm), before))
 
 
+def _fail_reason(bm, before, t_before):
+    h = health(bm)
+    for name, a, b in zip(("non-manifold", "dobra", "lasca"), h, before):
+        if a > b:
+            return name
+    if tri_count(bm) >= t_before:
+        return "nao reduzia"
+    return None
+
+
 def nonmanifold_count(bm):
     return sum(1 for e in bm.edges if not e.is_manifold and not e.is_boundary) + \
            sum(1 for v in bm.verts if not v.link_edges)
@@ -488,7 +564,7 @@ def _restore(bm, me):
     bpy.data.meshes.remove(me)
 
 
-def _apply_checked(bm, groups, before_nm, bad, lock_group=None, min_ring=0, protect_group=None):
+def _apply_checked(bm, groups, before_nm, bad, lock_group=None, min_ring=0, protect_group=None, why=None):
     """Aplica o lote; se criar non-manifold ou dobra, ou nao reduzir, desfaz e tenta grupo por
     grupo (loop + espelho juntos, para nao quebrar a simetria), marcando os ruins."""
     key_groups = [[l.bad_key for l in g] for g in groups]
@@ -511,12 +587,16 @@ def _apply_checked(bm, groups, before_nm, bad, lock_group=None, min_ring=0, prot
         t1 = tri_count(bm)
         snap = _snapshot(bm)
         _dissolve(bm, loops)
-        if _healthy(bm, before_nm) and tri_count(bm) < t1:
+        fr = _fail_reason(bm, before_nm, t1)
+        if fr is None:
             bpy.data.meshes.remove(snap)
             applied += 1
         else:
             _restore(bm, snap)
             bad.update(keys)
+            if why is not None:
+                k = "desfeito na hora: " + fr
+                why[k] = why.get(k, 0) + 1
     return applied
 
 
@@ -527,6 +607,7 @@ def reduce_mesh(bm, obj, target_tris, s, log=None, report=None):
     passes = 0
     bad = set()
     why = {}
+    undo_why = {}
     stop = "alvo atingido"
     while tri_count(bm) > target_tris and passes < 400:
         passes += 1
@@ -593,14 +674,17 @@ def reduce_mesh(bm, obj, target_tris, s, log=None, report=None):
             stop = "acabaram os loops que podem sair"
             break
         before_nm = health(bm)
-        applied = _apply_checked(bm, chosen, before_nm, bad, c.gl, s.min_ring_verts, c.gp)
+        applied = _apply_checked(bm, chosen, before_nm, bad, c.gl, s.min_ring_verts, c.gp, undo_why)
         if log:
             log(f"passada {passes}: {applied}/{len(chosen)} grupos, {tri_count(bm)} tris")
     if passes >= 400 and tri_count(bm) > target_tris:
         stop = "limite de passadas"
     if report is not None:
         report["parada"] = stop
-        report["motivos"] = dict(sorted(why.items(), key=lambda t: -t[1]))
+        allw = dict(why)
+        allw.pop("desfeito: criava dobra, lasca, non-manifold ou nao reduzia", None)
+        allw.update(undo_why)
+        report["motivos"] = dict(sorted(allw.items(), key=lambda t: -t[1]))
     return passes
 
 
@@ -611,6 +695,15 @@ def reduce_mesh(bm, obj, target_tris, s, log=None, report=None):
 class LOOPLOD_LodItem(PropertyGroup):
     ratio: FloatProperty(name="Ratio", default=0.5, min=0.01, max=1.0,
                          description="Fracao dos triangulos do original")
+    min_ring: IntProperty(name="Min Ring", default=0, min=0, max=64,
+                          description="Anel minimo so deste LOD. 0 = usa o Min Ring Verts geral. "
+                                      "LOD baixo costuma ir a 6")
+    max_sparsity: FloatProperty(name="Max Sparsity", default=0.0, min=0.0, max=50.0,
+                                description="Max Sparsity so deste LOD. 0 = usa o geral. "
+                                            "Mais alto aceita faces mais compridas e reduz mais")
+    silhouette: FloatProperty(name="Silhouette Tolerance", default=0.0, min=0.0, max=1000.0,
+                              description="Tolerancia de silhueta (mm) so deste LOD. 0 = a geral dobrada a cada "
+                                          "LOD (5, 10, 20 mm...), porque o LOD de longe aguenta mais erro")
 
 
 def _settings_from(p):
@@ -622,7 +715,8 @@ def _settings_from(p):
         protect_materials=p.protect_materials, pole_fallback=p.pole_fallback,
         symmetry=p.symmetry, symmetry_tolerance_mm=p.symmetry_tolerance,
         optimize_protected_radius=p.optimize_protected_radius,
-        shape_balance=p.shape_balance, min_ring_verts=p.min_ring_verts)
+        shape_balance=p.shape_balance, min_ring_verts=p.min_ring_verts,
+        silhouette_tolerance_mm=p.silhouette_tolerance)
 
 
 class LOOPLOD_Settings(PropertyGroup):
@@ -646,6 +740,9 @@ class LOOPLOD_Settings(PropertyGroup):
         description="Quando acabam os loops limpos, aceita loops que terminam em polos (gera alguns n-gons)")
     optimize_protected_radius: BoolProperty(name="Optimize Protected Radius", default=True,
         description="Os aneis protegidos ficam no lugar, mas os loops que cruzam eles podem sair (o anel perde vertices em volta). Desligado: nada que toca a area protegida sai")
+    silhouette_tolerance: FloatProperty(name="Silhouette Tolerance", default=5.0, min=0.0, max=1000.0,
+        description="Quanto (mm) o contorno de frente, de lado ou de cima pode encolher num ponto. "
+                    "Vertice que forma o contorno e passaria disso fica")
     min_ring_verts: IntProperty(name="Min Ring Verts", default=8, min=0, max=64,
         description="Nenhum anel fechado (braco, perna, dedo) nem abertura (barra, gola) fica com menos vertices que isso. 8 segura volume e deformacao de cotovelo e joelho; 0 desliga")
     shape_balance: FloatProperty(name="Shape Balance", default=1.0, min=0.0, max=10.0,
@@ -755,8 +852,9 @@ def _source_mesh(context, ob, use_evaluated):
 
 def generate_lods(context, ob, p, log=None):
     if not p.lods:
-        for r in (0.5, 0.25, 0.125):
-            p.lods.add().ratio = r
+        for r, ring, sp in ((0.5, 0, 0.0), (0.25, 0, 0.0), (0.125, 6, 12.0)):
+            it = p.lods.add()
+            it.ratio, it.min_ring, it.max_sparsity = r, ring, sp
     s = _settings_from(p)
     col = bpy.data.collections.get(p.collection)
     if col is None:
@@ -775,7 +873,15 @@ def generate_lods(context, ob, p, log=None):
         bm.from_mesh(me)
         target = max(1, int(round(src_tris * it.ratio)))
         rep = {}
-        reduce_mesh(bm, ob, target, s, log=log, report=rep)
+        over = {}
+        if it.min_ring > 0:
+            over["min_ring_verts"] = it.min_ring
+        if it.max_sparsity > 0:
+            over["max_sparsity"] = it.max_sparsity
+        over["silhouette_tolerance_mm"] = it.silhouette if it.silhouette > 0 else \
+            s.silhouette_tolerance_mm * 2 ** (i - 1)
+        si = Settings(**dict(s.__dict__, **over)) if over else s
+        reduce_mesh(bm, ob, target, si, log=log, report=rep)
         reports.append((i, target, rep))
         if p.triangulate:
             bmesh.ops.triangulate(bm, faces=bm.faces[:])
@@ -800,8 +906,12 @@ def generate_lods(context, ob, p, log=None):
         out.append((name, target, got))
     bpy.data.meshes.remove(base)
     lines = []
+    prev = None
     for (i, target, rep), (name, _t, got) in zip(reports, out):
         lines.append(f"LOD{i}: {got} tris (alvo {target}) - {rep.get('parada', 'alvo atingido')}")
+        if prev is not None and got >= prev:
+            lines.append(f"   IGUAL ao LOD{i - 1}: neste LOD suba Silhouette ou Max Sparsity, ou baixe Min Ring")
+        prev = got
         if got > target * 1.15:
             for k, n in list(rep.get("motivos", {}).items())[:5]:
                 lines.append(f"   {n}x {k}")
@@ -862,6 +972,7 @@ class LOOPLOD_PT_panel(Panel):
         b = lay.box()
         b.label(text="Silhouette", icon='MOD_OUTLINE')
         b.prop(p, "silhouette_pressure")
+        b.prop(p, "silhouette_tolerance")
         b.prop(p, "max_sparsity")
         b.prop(p, "shape_balance")
         b.prop(p, "min_ring_verts")
@@ -880,6 +991,14 @@ class LOOPLOD_PT_panel(Panel):
         col = row.column(align=True)
         col.operator("looplod.lod_add", text="", icon='ADD')
         col.operator("looplod.lod_remove", text="", icon='REMOVE')
+        if 0 <= p.lod_index < len(p.lods):
+            it = p.lods[p.lod_index]
+            sub = b.column(align=True)
+            sub.label(text=f"So no LOD{p.lod_index + 1} (0 = geral):")
+            sub.prop(it, "min_ring", text="Min Ring Verts")
+            sub.prop(it, "max_sparsity", text="Max Sparsity")
+            auto = p.silhouette_tolerance * 2 ** p.lod_index
+            sub.prop(it, "silhouette", text=f"Silhouette (0 = {auto:g} mm)")
         b.prop(p, "name_mode", text="")
         b.prop(p, "collection")
         b.prop(p, "use_evaluated")

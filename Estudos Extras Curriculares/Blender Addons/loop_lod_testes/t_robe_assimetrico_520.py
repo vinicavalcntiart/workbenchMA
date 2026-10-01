@@ -82,7 +82,10 @@ def stats(o):
     bmx.free(); return r
 P("RESULT LOD0", stats(ob))
 p = bpy.context.scene.loop_lod
-for r in RATIOS: p.lods.add().ratio = r
+RINGS = [int(x) for x in os.environ.get("RINGS", "0,0,0").split(",")]
+SPS = [float(x) for x in os.environ.get("SPS", "0,0,0").split(",")]
+for r, mr, sp in zip(RATIOS, RINGS, SPS):
+    it = p.lods.add(); it.ratio = r; it.min_ring = mr; it.max_sparsity = sp
 p.use_evaluated = False
 t0 = time.time(); src, out = loop_lod.generate_lods(bpy.context, ob, p)
 P("RESULT tempo", round(time.time()-t0, 1), "s")
