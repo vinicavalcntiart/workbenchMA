@@ -22,7 +22,7 @@ Personagem:
 7. Side | 3D Character Artist - Talent Pool (N Americas) | EUA/Canadá (remoto)
 8. Side | 3D Character Artist - Talent Pool (MEA) | Romênia (Bucareste)
 9. Amber Studio | 3D Artist - Characters (por projeto) | remoto
-10. Funko | 3D Digital Sculptor | EUA (Everett WA)
+10. ~~Funko | 3D Digital Sculptor | EUA (Everett WA)~~ ENVIADA 01/10 13h31 UTC pela nuvem sem caixa (W1, tela 'Kaboom Application Sent!'). NÃO reenviar.
 11. Entropy Studio* | 3D Modeler Organic / Character | Espanha
 12. Gradient Effects | 3D Modeler (personagem, look dev) | EUA (Los Angeles)
 13. NECA | Senior 3D Character Artist / Digital Sculptor (candidatura geral) | EUA (NJ)
@@ -91,7 +91,7 @@ Remoto, personagem:
 14. Halfbrick Studios | Expression of Interest WORLDWIDE (Role = Senior 3D Character Artist) | Austrália | possível (worldwide) | https://www.halfbrick.com/expression-of-interest | reCAPTCHA de caixa 304x78 | AUD 95.000 se pedir número
 
 Presencial com visto (personagem ou 3D com personagem):
-15. Funko | 3D Digital Sculptor | EUA (Everett WA) | n | https://jobs.jobvite.com/funko/job/ogyRAfwZ/apply | reCAPTCHA de imagem | pergunta pendente: "vai continuar no emprego atual?" (resposta do Vini antes de enviar); vaga viva
+15. ~~Funko~~ (ENVIADA 01/10 13h31 UTC, não reenviar) | 3D Digital Sculptor | EUA (Everett WA) | n | https://jobs.jobvite.com/funko/job/ogyRAfwZ/apply | reCAPTCHA de imagem | pergunta pendente: "vai continuar no emprego atual?" (resposta do Vini antes de enviar); vaga viva
 16. Entropy Studio | 3D Modeler Organic / Character | Espanha (Zaragoza) | n | https://www.entropystudio.net/jobs | reCAPTCHA v2 de imagem | vaga viva na página
 17. Gradient Effects | 3D MODELER (Maya, ZBrush, Mari, look dev) | EUA (Los Angeles) | n | https://gradientfx.com/application/ | Gravity Forms em etapas, reCAPTCHA de caixa | vaga viva em gradientfx.com/jobs
 18. Double Eleven | Expression of Interest (UK) Workable 99F32D8BF0 | Reino Unido (Middlesbrough) | n | https://apply.workable.com/double-eleven/j/99F32D8BF0/apply | Turnstile ao Submit (fica em Submitting) | Pronouns He, direito de trabalho UK = No, relocação explicada; GBP 42.000 se pedir
