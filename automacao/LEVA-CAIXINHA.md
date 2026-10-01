@@ -8,47 +8,47 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 49 portas vivas. Conferido 01/10 ~11h50-12h07 UTC só por API e navegador local (sem nuvem): BambooHR list (10/10 Open), Recruitee offers (Softgames, Framestore, Dovetail publicadas), Workable API (Pulse 200; Side x2 e Double Eleven deram 429 do Workable agora, vivas na leitura de 01/10 madrugada), Jobvite e JazzHR 200, páginas próprias 200. Dedupe por casa, ID e URL em enviados.csv, processados.csv, docs/index.html e Gmail (recibos): saíram Guru 34 e ICON 36 (recibo de agosto) e Big Viking 28 (talent community).
 Marca * = o Vini disse em 29/09 que enviou pela nuvem, mas não há recibo no Gmail nem em enviados.csv: segue na lista até aparecer prova.
-Hasbro Principal Character Artist (item 1) fica à parte: o site da Hasbro recusa a conexão daqui (TLS) e a caixa nunca foi vista, então não entra na contagem.
+Hasbro Principal Character Artist (item 1) fica à parte (01/10 W11: a nuvem segue sem abrir, falha de TLS do servidor): o site da Hasbro recusa a conexão daqui (TLS) e a caixa nunca foi vista, então não entra na contagem.
 
 Casa grande:
-1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres)
+1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres) (nuvem também mostrou caixa 01/10 W11: quebra-cabeça de imagem do Recruitee ao Send; anúncio mudou para .../realtime-generalist-expression-of-interest-1)
 
 Personagem:
 2. Zoic Studios | 3D Senior Character Modeler (contrato 6 semanas) | Canadá (remoto BC)
 3. Streamline Studios | Lead Character Artist (freelance) | Malásia (remoto)
 4. Stirling Animation Studios | Character Modeling and Surfacing Artists | Reino Unido (remoto)
 5. HyperVR Games* | 3D Character Artist (Senior) | Letônia (remoto)
-6. Blue Wizard Digital | 3D Character Artist (contrato, vaga publicada na página) | Canadá
+6. Blue Wizard Digital | 3D Character Artist (contrato, vaga publicada na página) | Canadá (nuvem também mostrou caixa 01/10 W11: servidor recusou e mostrou reCAPTCHA de caixa 304x78)
 7. Side | 3D Character Artist - Talent Pool (N Americas) | EUA/Canadá (remoto)
 8. Side | 3D Character Artist - Talent Pool (MEA) | Romênia (Bucareste)
-9. Amber Studio | 3D Artist - Characters (por projeto) | remoto
+9. Amber Studio | 3D Artist - Characters (por projeto) | remoto (01/10 W11: fora, painel marca a casa como FECHADA em 29/09, vaga de contratação local do Brasil)
 10. ~~Funko | 3D Digital Sculptor | EUA (Everett WA)~~ ENVIADA 01/10 13h31 UTC pela nuvem sem caixa (W1, tela 'Kaboom Application Sent!'). NÃO reenviar.
-11. Entropy Studio* | 3D Modeler Organic / Character | Espanha
+11. Entropy Studio* | 3D Modeler Organic / Character | Espanha (01/10 W11: reCAPTCHA de caixa 304x78 normal no formulário desde o carregamento, fica para o Vini)
 12. Gradient Effects | 3D Modeler (personagem, look dev) | EUA (Los Angeles)
 13. NECA | Senior 3D Character Artist / Digital Sculptor (candidatura geral) | EUA (NJ)
-14. Uchi VFX | Speculative (Modeling, Lookdev, Cloth/Hair) | Itália (remoto)
+14. ~~Uchi VFX | Speculative (Modeling, Lookdev, Cloth/Hair) | Itália (remoto)~~ ENVIADA 01/10 ~14h16 UTC pela nuvem, sem caixa (W11, servidor Wix 200 com id de envio). NÃO reenviar.
 15. Pulse Games | 3D Artist (personagens, ambientes, props) | Turquia (remoto)
-16. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto)
+16. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto) (nuvem também mostrou caixa 01/10 W11: quebra-cabeça de imagem do Recruitee ao Send)
 17. Halfbrick Studios* | EOI Worldwide (Senior 3D Character Artist) | Austrália
 
 Espontânea, banco ou geral:
 18. Metricminds | Unsolicited Application | Alemanha
 19. Grimlore Games | Open Application | Alemanha
 20. Effetti Digitali (EDI) | CG Unsolicited Application | Itália
-21. Plastic Wax | Recruitment Form | Austrália
-22. Blowfish Studios | Expression of Interest | Austrália
+21. Plastic Wax | Recruitment Form | Austrália (01/10 W11: pela nuvem NÃO apareceu caixa; o Submit limpou o formulário como nos envios Wix confirmados, mas a resposta do servidor não foi capturada, então não conta. Provável que tenha chegado: NÃO reenviar sem conferir.)
+22. ~~Blowfish Studios | Expression of Interest | Austrália~~ ENVIADA 01/10 ~14h05 UTC pela nuvem, sem caixa (W11, servidor Wix 200 com id de envio). NÃO reenviar.
 23. Palomar (Mediawan)* | Candidatura espontânea | França
-24. PlaySide Studios | Expression of Interest | Austrália
-25. The Game Atelier | Spontaneous Application (Art) | França
+24. ~~PlaySide Studios | Expression of Interest | Austrália~~ ENVIADA 01/10 ~14h22 UTC pela nuvem, sem caixa (W11, Employment Hero: Application sent, status APPLIED; conta nova criada). NÃO reenviar.
+25. ~~The Game Atelier | Spontaneous Application (Art) | França~~ ENVIADA 01/10 ~14h12 UTC pela nuvem, sem caixa (W11, servidor Wix 200 com submissionId). NÃO reenviar.
 26. beQ Entertainment | Careers form (3D Character Artist) | Itália
 27. Pixel Toys | Speculative Application | Reino Unido
 28. Blazing Griffin | Speculative + Freelancer Submissions | Reino Unido
 29. Exient | Speculative Application | Malta
-30. Double Eleven | Expression of Interest (UK) | Reino Unido
+30. Double Eleven | Expression of Interest (UK) | Reino Unido (nuvem também mostrou caixa 01/10 W11: Turnstile "Verify you are human" ao Submit; pronome agora vai como Prefer not to say)
 31. Sierra Division | Submit Your Portfolio | EUA (remoto)
-32. Giant Ant | Freelance 3D (Get in Touch) | Canadá
-33. Arrival Game Creative | Job Interest | EUA/Reino Unido/Canadá (remoto)
-34. Dovetail Games | Open Applications | Reino Unido (remoto)
+32. Giant Ant | Freelance 3D (Get in Touch) | Canadá (nuvem também mostrou caixa 01/10 W11: desafio de imagem do reCAPTCHA ao Submit)
+33. ~~Arrival Game Creative | Job Interest | EUA/Reino Unido/Canadá (remoto)~~ ENVIADA 01/10 ~14h10 UTC pela nuvem, sem caixa (W11, tela Thank you e servidor Wix 200). NÃO reenviar.
+34. Dovetail Games | Open Applications | Reino Unido (remoto) (nuvem também mostrou caixa 01/10 W11: quebra-cabeça de imagem do Recruitee ao Send)
 35. Myrkur Games | Open application | Islândia
 36. Cubic Games | Apply for another position | Chipre
 37. Playkot | Candidatura geral | Sérvia (remoto)
@@ -61,7 +61,7 @@ Espontânea, banco ou geral:
 44. SneakyBox | Open Application | Lituânia
 45. Gamajun Games | 2D/3D Artist | República Tcheca
 46. Invisible Seams Studios | Freelancer Interest Form | Canadá
-47. ProbablyMonsters | General Application | EUA
+47. ~~ProbablyMonsters | General Application | EUA~~ ENVIADA 01/10 ~13h45 UTC pela nuvem, sem caixa (W11, tela Application Sent do Jobvite). NÃO reenviar.
 48. East Side Effects | Candidatura geral de artistas | EUA (Nova York)
 49. Greensky Games | Careers (envio de CV) | EUA (Seattle)
 
@@ -268,7 +268,7 @@ R8-2. 01/10 | Scarecrow Studio (Irlanda; jogos com personagens estilizados, Tabb
 R8-3. 01/10 | SneakyBox (Vilnius, Lituania; co-dev/porting/remaster, VR/MR; remoto ou presencial) | Open Application (WPForms 638: nome, email, telefone, educacao, portfolio, CV por LINK litterbox 72h, carta) | hCaptcha de caixa VISIVEL (size=normal), conferido no navegador local 01/10 ~08h55 UTC; nada preenchido | https://sneakybox.biz/career/ | casa nova, dedupe limpo; encaixe de personagem medio (estudio de co-dev, sem vaga de arte aberta): decisao do Vini
 NR-4. (FORA) Side, banco de talentos EU: caixa "sou humano" ainda nao vista, e o Vini ja esta no banco LATAM da Side (item 35 cobre a Side MEA). Nao entra na leva.
 R8-4. 01/10 | Gamajun Games (Brno, Republica Tcheca; jogos mobile, vaga aberta de Artist 3D/2D em 3DS Max) | Apply for fulltime job (formulario proprio React: nome, email, telefone, portfolio, opcao '2D/3D Artist') | reCAPTCHA de caixa 304x78 VISIVEL (conferido no navegador na nuvem 01/10 ~09h15 UTC; o SUBMIT fica travado ate marcar); nada preenchido; sem campo de CV (portfolio ArtStation) | https://gamajun-games.com/career/ | casa nova, dedupe limpo; encaixe medio (casa pequena de mobile): decisao do Vini
-UB-1. 01/10 | Dreamfarm Studios (Dream Farm Studios; rede de freelancers de animacao, remoto) | Individual Application Form (Gravity Form 21, 7 etapas; especialidade 3D Modeler + Grooming, freelancer remoto) | reCAPTCHA invisivel que ABRE DESAFIO DE IMAGEM VISIVEL ('Select all squares with motorcycles') ao clicar Submit, medido no navegador local e de novo na nuvem (Kernel, sessao fechada) em 01/10 ~12h20 UTC; nada foi enviado. Todas as 7 etapas preenchidas e lidas de volta (nome, email, data de nascimento do pessoal.json, pronome 'I prefer not to say', pais Brazil, site, LinkedIn, ArtStation, CV PDF anexado, Meliès, 10 anos, freelancer, E-Line/PUGA, Wingfeather/Endstar, remoto YES, consentimento). Script pronto fora do repo em /home/user/apply/dreamfarm_df.js (refaz tudo em ~1 min) | s | https://dreamfarmstudios.com/join-animation-studio/
+UB-1. 01/10 | Dreamfarm Studios (Dream Farm Studios; rede de freelancers de animacao, remoto) | Individual Application Form (Gravity Form 21, 7 etapas; especialidade 3D Modeler + Grooming, freelancer remoto) | reCAPTCHA invisivel que ABRE DESAFIO DE IMAGEM VISIVEL ('Select all squares with motorcycles') ao clicar Submit, medido no navegador local e de novo na nuvem (Kernel, sessao fechada) em 01/10 ~12h20 UTC; nada foi enviado. Todas as 7 etapas preenchidas e lidas de volta (nome, email, data de nascimento do pessoal.json, pronome 'I prefer not to say', pais Brazil, site, LinkedIn, ArtStation, CV PDF anexado, Meliès, 10 anos, freelancer, E-Line/PUGA, Wingfeather/Endstar, remoto YES, consentimento). Script pronto fora do repo em /home/user/apply/dreamfarm_df.js (refaz tudo em ~1 min) | s | https://dreamfarmstudios.com/join-animation-studio/ (nuvem também mostrou caixa de novo 01/10 ~13h55 UTC W11: desafio de imagem 'traffic lights' ao Submit)
 W10-1. 01/10 | Lockwood Publishing (Nottingham, Reino Unido; Avakin Life, avatares 3D) | Digital Fashion Designer (All Levels, Speculative), roupa 3D de personagem (Marvelous, ZBrush, Substance), remoto UK | Reino Unido | remoto | https://apply.workable.com/lockwood/j/CB721A7F95/apply | Turnstile Cloudflare 300x65 VISIVEL abaixo do aceite, aparece ao clicar Submit (medido na nuvem 01/10 ~13h55 UTC; sessao fechada, nada enviado) | campos: nome, sobrenome, email, headline Senior 3D Character Artist, telefone +55, CV PDF anexado, carta curta remota (UTC-3), aceite de privacidade marcado; cookies "Accept all" antes do Submit; dedupe limpo (ID e casa ineditos)
 W9-1. 01/10 | MY.GAMES (remoto global; hubs Chipre/Armenia/Servia/Holanda; War Robots, Rush Royale) | Artist (vaga 26116, assets 2D/3D estilizados para prototipo, remoto de qualquer lugar) | remoto | https://careers.my.games/26116 | reCAPTCHA de caixa "I'm not a robot" VISIVEL (anchor size=normal, conferido no navegador local 01/10) | formulario curto: nome, sobrenome, email, texto ate 255 caracteres, CV PDF, LinkedIn, dois aceites (dados e acordo); campos preenchidos e lidos de volta na tela; texto: senior 3D artist, personagens e assets estilizados, contratado remoto de estudio dos EUA em UTC-3
 W9-2. 01/10 | Huuuge Games (Szczecin, Polonia; jogos mobile sociais) | No match? No worries! (Recruitee, candidatura geral) | Polonia/Holanda/Finlandia (presencial ou hibrido, relocacao) | https://huuuge.recruitee.com/o/no-match-no-worries/c/new | hCaptcha de IMAGEM visivel ("drag the framed pieces") ao clicar Send, medido no navegador local 01/10 | respostas: funcionario Huuuge = No; futuras selecoes = Yes; local preferido = Amsterdam e Helsinki; telefone com DDI Brasil; CV PDF
