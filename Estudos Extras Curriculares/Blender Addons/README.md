@@ -17,6 +17,10 @@ Edit > Preferences > Get Extensions > seta no canto > **Install from Disk** >
    triângulos) e clique em **Generate LODs**.
 3. Os LODs vão para a coleção `LODs`. Se o nome tiver `LOD0`, vira `LOD1`,
    `LOD2`...
+4. Opcional: selecione mão ou rosto e clique em **Mark Selected as Locked**
+   (grupo `LOD_Lock`). Essa área não muda em nenhum LOD. Os loops que chegam
+   nela param na borda e viram um triângulo ali, então o braço continua
+   reduzindo.
 
 ## O que muda em relação ao anterior
 
@@ -24,6 +28,22 @@ O loop protegido **fica no mesmo lugar, mas perde vértices em volta**. A
 proteção vale para as arestas do loop, então os loops que cruzam ele podem
 sair. Antes o anel ficava com todos os vértices e o resto do braço virava
 triângulos grandes.
+
+## Versão 1.1 (correções do teste no personagem)
+
+- **N-gons:** toda face com mais de 4 lados é triangulada no fim de cada
+  passada.
+- **Non-manifold:** cada lote é conferido. Se aumentar o non-manifold, o lote
+  volta e os loops entram um a um; os que quebram ficam marcados e não são
+  tentados de novo.
+- **Raio do braço:** só o anel marcado fica. Um loop é tratado como anel
+  protegido quando 85% ou mais das arestas dele estão no grupo. Os loops que
+  correm ao longo do braço podem sair mesmo cruzando vários anéis.
+- **Shape Balance (novo, padrão 1,0):** mantém as faces perto de quadradas.
+  Sem isso, num braço reto os anéis no comprimento saem primeiro (erro zero) e
+  o raio só cai nos últimos LODs. Com 1,0 o anel cai de 16 para 12 já no LOD1.
+  Em 0 volta ao comportamento anterior.
+- **Locked Areas (novo):** grupo `LOD_Lock`, descrito no passo 4.
 
 ## Geometry Nodes
 
@@ -43,4 +63,21 @@ em cada cotovelo, uma seam ao longo de cada braço e o punho sharp.
 | 2 | 608 | 13 | inteira | 0 | 0 |
 | 3 | 304 | 8, no mesmo lugar | inteira | 0 | 0 |
 
-Ainda não foi testado num personagem de produção.
+### Teste 1.1: roupa com braços (`t_roupa_braco_520.py`)
+
+Robe simétrico com 1.752 triângulos, braços extrudados em 12 passos, 3 anéis
+protegidos no cotovelo e 2 no punho, pescoço em leque (polo cheio de
+triângulos) e seams nas laterais. Imagem: `lods_braco_sheet_v2.jpg`.
+
+| LOD | Tris (alvo) | Anéis do cotovelo | N-gons | Non-manifold | Sem espelho | Seams |
+|---|---|---|---|---|---|---|
+| 0 | 1.752 | 16 vértices | 0 | 0 | 0 | 2 cadeias |
+| 1 | 840 (876) | 12 | 0 | 0 | 0 | 2 cadeias |
+| 2 | 438 (438) | 8 | 0 | 0 | 0 | 2 cadeias |
+| 3 | 280 (219) | 5, no mesmo lugar | 0 | 0 | 0 | 2 cadeias |
+
+Com a mão travada (`t_roupa_mao_travada_520.py`): a mão fica com os 82
+vértices em todos os LODs e o anel do cotovelo cai 16, 12, 5, 4. O LOD3 para
+em 412 triângulos porque a mão não entra na conta.
+
+Ainda não foi testado no personagem de produção depois da versão 1.1.

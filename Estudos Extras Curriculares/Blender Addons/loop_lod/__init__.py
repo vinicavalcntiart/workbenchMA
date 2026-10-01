@@ -36,6 +36,7 @@ class Settings:
     """Copia simples das opcoes, para o nucleo nao depender do bpy.props."""
     def __init__(self, **kw):
         self.protect_group = "LOD_Protect"
+        self.lock_group = "LOD_Lock"
         self.weight_aware = True
         self.weight_influence = 1.0
         self.silhouette_pressure = 1.5
@@ -47,6 +48,8 @@ class Settings:
         self.pole_fallback = True
         self.symmetry = True
         self.symmetry_tolerance_mm = 1.0
+        self.optimize_protected_radius = True
+        self.shape_balance = 1.0
         self.__dict__.update(kw)
 
 
@@ -54,9 +57,9 @@ def tri_count(bm):
     return sum(len(f.verts) - 2 for f in bm.faces)
 
 
-def _opposite_edge(v, e):
-    """Proxima aresta do loop ao passar por v; None se v e polo, borda ou toca n-gon/tri."""
-    if v.is_boundary or len(v.link_edges) != 4:
+def _opposite_edge(v, e, stop=()):
+    """Proxima aresta do loop ao passar por v; None se v e polo, borda, area travada ou toca n-gon/tri."""
+    if v in stop or v.is_boundary or len(v.link_edges) != 4:
         return None
     for f in v.link_faces:
         if len(f.verts) != 4:
@@ -69,20 +72,32 @@ def _opposite_edge(v, e):
 
 
 class Loop:
-    __slots__ = ("edges", "ends", "cyclic", "verts", "interior", "key", "cost", "pole_end")
+    __slots__ = ("edges", "ends", "cyclic", "verts", "interior", "key", "cost", "pole_end", "simple", "bad_key", "in_lock")
 
-    def __init__(self, edges, ends, cyclic):
+    def __init__(self, edges, ends, cyclic, stop=()):
         self.edges = edges
         self.ends = ends
         self.cyclic = cyclic
         self.verts = {v for e in edges for v in e.verts}
         self.interior = self.verts if cyclic else self.verts - set(ends)
         self.key = frozenset(v.index for v in self.verts)
-        self.pole_end = any(not v.is_boundary for v in ends)
+        # ponta na area travada nao e polo: o loop so para ali (vira um pentagono triangulado)
+        self.pole_end = any(not v.is_boundary and v not in stop for v in ends)
+        self.in_lock = any(e.verts[0] in stop and e.verts[1] in stop for e in edges)
+        self.simple = len(self.verts) == (len(edges) if cyclic else len(edges) + 1)
+        self.bad_key = frozenset(tuple(round(x, 5) for x in v.co) for v in self.verts)
         self.cost = INF
 
 
-def collect_loops(bm):
+def locked_verts(bm, lock_group):
+    dl = bm.verts.layers.deform.active
+    if dl is None or lock_group is None:
+        return set()
+    return {v for v in bm.verts if v[dl].get(lock_group, 0.0) >= 0.5}
+
+
+def collect_loops(bm, stop=()):
+    """stop: vertices da area travada. O loop corta ali em vez de atravessar."""
     seen = set()
     loops = []
     for e in bm.edges:
@@ -97,7 +112,7 @@ def collect_loops(bm):
         for d in (0, 1):
             cur, v = e, e.verts[d]
             while True:
-                nxt = _opposite_edge(v, cur)
+                nxt = _opposite_edge(v, cur, stop)
                 if nxt is None:
                     ends.append(v)
                     break
@@ -113,7 +128,7 @@ def collect_loops(bm):
                 cur = nxt
             if cyclic:
                 break
-        loops.append(Loop(edges, ends, cyclic))
+        loops.append(Loop(edges, ends, cyclic, stop))
     return loops
 
 
@@ -133,11 +148,14 @@ class _Ctx:
         bm.verts.ensure_lookup_table()
         bm.normal_update()
         self.s = s
+        self.bad = set()
         dl = bm.verts.layers.deform.active
         self.dl = dl
         gp = obj.vertex_groups.get(s.protect_group) if obj else None
         self.gp = gp.index if gp else None
-        self.deform_groups = [g.index for g in obj.vertex_groups if g.index != self.gp] if obj else []
+        gl = obj.vertex_groups.get(s.lock_group) if obj else None
+        self.gl = gl.index if gl else None
+        self.deform_groups = [g.index for g in obj.vertex_groups if g.index not in (self.gp, self.gl)] if obj else []
         self._jf = {}
         # espelho X
         self.mirror = None
@@ -158,6 +176,11 @@ class _Ctx:
             return 0.0
         return v[self.dl].get(self.gp, 0.0)
 
+    def lock_w(self, v):
+        if self.dl is None or self.gl is None:
+            return 0.0
+        return v[self.dl].get(self.gl, 0.0)
+
     def joint_factor(self, v):
         """Maior variacao de peso de deformacao entre v e os vizinhos (0 a 1)."""
         if v.index in self._jf:
@@ -175,6 +198,10 @@ class _Ctx:
         return self._jf[v.index]
 
 
+def _edge_protected(e, c):
+    return c.protect_w(e.verts[0]) >= 0.5 and c.protect_w(e.verts[1]) >= 0.5
+
+
 def _edge_blocked(e, c):
     s = c.s
     if len(e.link_faces) != 2:
@@ -185,8 +212,8 @@ def _edge_blocked(e, c):
         return True
     if s.protect_materials and e.link_faces[0].material_index != e.link_faces[1].material_index:
         return True
-    if c.protect_w(e.verts[0]) >= 0.5 and c.protect_w(e.verts[1]) >= 0.5:
-        return True   # aresta de loop de deformacao: o loop fica
+    if not c.s.optimize_protected_radius and _edge_protected(e, c):
+        return True
     for f in e.link_faces:
         if len(f.verts) != 4:
             return True
@@ -209,17 +236,32 @@ def loop_cost(loop, c, allow_poles):
     s = c.s
     if loop.pole_end and not allow_poles:
         return INF
+    if not loop.simple or loop.bad_key in c.bad:
+        return INF
+    if loop.in_lock or any(c.lock_w(v) >= 0.5 for v in loop.interior):
+        return INF          # area travada (maos, rosto): nada dentro dela sai
+    prot = 0
     for e in loop.edges:
         if _edge_blocked(e, c):
             return INF
+        if _edge_protected(e, c):
+            prot += 1
+    if prot >= 0.85 * len(loop.edges):
+        return INF          # loop de deformacao (anel protegido): fica no lugar
     # esparsidade: as duas faixas viram uma so; a nova face nao pode ficar comprida demais
+    shape = 0.0
     for e in loop.edges:
         L = e.calc_length()
         w = sum(_face_width(f, e) for f in e.link_faces)
         if L < 1e-9 or w < 1e-9:
             return INF
-        if max(w / L, L / w) > s.max_sparsity:
+        a = max(w / L, L / w)
+        if a > s.max_sparsity:
             return INF
+        # equilibrio de forma: tirar o loop que deixa a face mais quadrada vem antes.
+        # Sem isso, num cilindro reto os aneis no comprimento (erro zero) saem todos
+        # antes do raio diminuir.
+        shape += (a - 1.0) ** 2 * min(L, w)
     edge_set = set(loop.edges)
     total = 0.0
     for v in loop.interior:
@@ -246,6 +288,7 @@ def loop_cost(loop, c, allow_poles):
                 continue
             err = _point_seg_dist(v.co, bn[0].co, bn[1].co)
             total += err * (5.0 if s.protect_boundary else 1.0) * (1.0 + s.silhouette_pressure)
+    total += s.shape_balance * 0.05 * shape
     return total / max(1, 2 * len(loop.edges))
 
 
@@ -253,14 +296,78 @@ def _faces_of(loop):
     return {f for e in loop.edges for f in e.link_faces}
 
 
+def nonmanifold_count(bm):
+    return sum(1 for e in bm.edges if not e.is_manifold and not e.is_boundary) + \
+           sum(1 for v in bm.verts if not v.link_edges)
+
+
+def _dissolve(bm, loops):
+    edges = [e for l in loops for e in l.edges]
+    cand = set()
+    for l in loops:
+        cand |= l.interior
+        cand |= {v for v in l.ends if v.is_boundary}
+    near = {f for l in loops for e in l.edges for f in e.link_faces}
+    bmesh.ops.dissolve_edges(bm, edges=edges, use_verts=False, use_face_split=False)
+    rem = [v for v in cand if v.is_valid and len(v.link_edges) == 2]
+    if rem:
+        bmesh.ops.dissolve_verts(bm, verts=rem, use_face_split=False, use_boundary_tear=False)
+    # n-gons (pontas em polo) viram triangulos na hora
+    ngons = [f for f in bm.faces if len(f.verts) > 4]
+    if ngons:
+        bmesh.ops.triangulate(bm, faces=ngons, quad_method='BEAUTY', ngon_method='BEAUTY')
+
+
+def _snapshot(bm):
+    me = bpy.data.meshes.new("_looplod_tmp")
+    bm.to_mesh(me)
+    return me
+
+
+def _restore(bm, me):
+    bm.clear()
+    bm.from_mesh(me)
+    bpy.data.meshes.remove(me)
+
+
+def _apply_checked(bm, groups, before_nm, bad, lock_group=None):
+    """Aplica o lote; se criar non-manifold, desfaz e tenta grupo por grupo (loop + espelho
+    juntos, para nao quebrar a simetria), marcando os ruins."""
+    key_groups = [[l.bad_key for l in g] for g in groups]
+    snap = _snapshot(bm)
+    _dissolve(bm, [l for g in groups for l in g])
+    if nonmanifold_count(bm) <= before_nm:
+        bpy.data.meshes.remove(snap)
+        return len(groups)
+    _restore(bm, snap)
+    applied = 0
+    for keys in key_groups:
+        bm.verts.ensure_lookup_table()
+        current = {l.bad_key: l for l in collect_loops(bm, locked_verts(bm, lock_group))}
+        loops = [current[k] for k in keys if k in current]
+        if len(loops) != len(keys):
+            continue
+        snap = _snapshot(bm)
+        _dissolve(bm, loops)
+        if nonmanifold_count(bm) <= before_nm:
+            bpy.data.meshes.remove(snap)
+            applied += 1
+        else:
+            _restore(bm, snap)
+            bad.update(keys)
+    return applied
+
+
 def reduce_mesh(bm, obj, target_tris, s, log=None):
     """Remove loops ate tri_count(bm) <= target_tris. Devolve o numero de passadas."""
     allow_poles = False
     passes = 0
-    while tri_count(bm) > target_tris:
+    bad = set()
+    while tri_count(bm) > target_tris and passes < 400:
         passes += 1
         c = _Ctx(bm, obj, s)
-        loops = collect_loops(bm)
+        c.bad = bad
+        loops = collect_loops(bm, locked_verts(bm, c.gl))
         by_key = {l.key: l for l in loops}
         groups = []
         for l in loops:
@@ -285,6 +392,7 @@ def reduce_mesh(bm, obj, target_tris, s, log=None):
         groups.sort(key=lambda t: t[0])
         need = tri_count(bm) - target_tris
         used_v, used_f, batch, est = set(), set(), [], 0
+        chosen = []
         for cost, group in groups:
             vs = set().union(*(g.verts for g in group))
             fs = set().union(*(_faces_of(g) for g in group))
@@ -293,6 +401,7 @@ def reduce_mesh(bm, obj, target_tris, s, log=None):
             used_v |= vs
             used_f |= fs
             batch.extend(group)
+            chosen.append(group)
             est += sum(2 * len(g.edges) for g in group)
             if est >= need:
                 break
@@ -301,19 +410,10 @@ def reduce_mesh(bm, obj, target_tris, s, log=None):
                 allow_poles = True
                 continue
             break
-        edges = [e for l in batch for e in l.edges]
-        cand = set()
-        for l in batch:
-            cand |= l.interior
-            cand |= {v for v in l.ends if v.is_boundary}
-        bmesh.ops.dissolve_edges(bm, edges=edges, use_verts=False, use_face_split=False)
-        rem = [v for v in cand if v.is_valid and len(v.link_edges) == 2]
-        if rem:
-            bmesh.ops.dissolve_verts(bm, verts=rem, use_face_split=False, use_boundary_tear=False)
+        before_nm = nonmanifold_count(bm)
+        applied = _apply_checked(bm, chosen, before_nm, bad, c.gl)
         if log:
-            log(f"passada {passes}: {len(batch)} loops, {tri_count(bm)} tris")
-        if passes > 400:
-            break
+            log(f"passada {passes}: {applied}/{len(chosen)} grupos, {tri_count(bm)} tris")
     return passes
 
 
@@ -328,17 +428,21 @@ class LOOPLOD_LodItem(PropertyGroup):
 
 def _settings_from(p):
     return Settings(
-        protect_group=p.protect_group, weight_aware=p.weight_aware,
+        protect_group=p.protect_group, lock_group=p.lock_group, weight_aware=p.weight_aware,
         weight_influence=p.weight_influence, silhouette_pressure=p.silhouette_pressure,
         max_sparsity=p.max_sparsity, protect_seams=p.protect_seams,
         protect_sharp=p.protect_sharp, protect_boundary=p.protect_boundary,
         protect_materials=p.protect_materials, pole_fallback=p.pole_fallback,
-        symmetry=p.symmetry, symmetry_tolerance_mm=p.symmetry_tolerance)
+        symmetry=p.symmetry, symmetry_tolerance_mm=p.symmetry_tolerance,
+        optimize_protected_radius=p.optimize_protected_radius,
+        shape_balance=p.shape_balance)
 
 
 class LOOPLOD_Settings(PropertyGroup):
     protect_group: StringProperty(name="Deformation Loops", default="LOD_Protect",
         description="Grupo de vertices com os loops de deformacao. O loop fica no lugar; os loops que cruzam ele podem sair")
+    lock_group: StringProperty(name="Locked Areas", default="LOD_Lock",
+        description="Grupo de vertices que nao muda em nenhum LOD (maos, rosto). Os loops que chegam nela param na borda (vira triangulo ali)")
     weight_aware: BoolProperty(name="Weight-Aware Cost", default=True,
         description="Encarece remover loops onde os pesos de deformacao mudam (juntas)")
     weight_influence: FloatProperty(name="Weight Influence", default=1.0, min=0.0, max=10.0)
@@ -353,6 +457,10 @@ class LOOPLOD_Settings(PropertyGroup):
     protect_materials: BoolProperty(name="Protect Material Borders", default=True)
     pole_fallback: BoolProperty(name="Pole Fallback", default=True,
         description="Quando acabam os loops limpos, aceita loops que terminam em polos (gera alguns n-gons)")
+    optimize_protected_radius: BoolProperty(name="Optimize Protected Radius", default=True,
+        description="Os aneis protegidos ficam no lugar, mas os loops que cruzam eles podem sair (o anel perde vertices em volta). Desligado: nada que toca a area protegida sai")
+    shape_balance: FloatProperty(name="Shape Balance", default=1.0, min=0.0, max=10.0,
+        description="Mantem as faces perto de quadradas: alterna entre tirar aneis no comprimento e reduzir o raio. 0 = so o erro de forma decide")
     symmetry: BoolProperty(name="X Symmetry", default=True)
     symmetry_tolerance: FloatProperty(name="Symmetry Tolerance", default=1.0, min=0.0, max=100.0,
         description="Distancia maxima, em mm, entre um vertice e o espelho dele")
@@ -406,6 +514,7 @@ class LOOPLOD_OT_mark(Operator):
     bl_description = "No Edit Mode: poe os vertices selecionados no grupo dos loops de deformacao (peso 1)"
     bl_options = {'REGISTER', 'UNDO'}
     clear: BoolProperty(default=False)
+    target: EnumProperty(items=[('PROTECT', "Protect", ""), ('LOCK', "Lock", "")], default='PROTECT')
 
     @classmethod
     def poll(cls, context):
@@ -414,7 +523,8 @@ class LOOPLOD_OT_mark(Operator):
     def execute(self, context):
         ob = context.object
         p = context.scene.loop_lod
-        g = ob.vertex_groups.get(p.protect_group) or ob.vertex_groups.new(name=p.protect_group)
+        name = p.protect_group if self.target == 'PROTECT' else p.lock_group
+        g = ob.vertex_groups.get(name) or ob.vertex_groups.new(name=name)
         bm = bmesh.from_edit_mesh(ob.data)
         dl = bm.verts.layers.deform.verify()
         n = 0
@@ -533,14 +643,24 @@ class LOOPLOD_PT_panel(Panel):
         else:
             b.prop(p, "protect_group", text="")
         r = b.row(align=True)
-        r.operator("looplod.mark_protected", text="Mark Selected as Protected", icon='ADD').clear = False
-        r.operator("looplod.mark_protected", text="", icon='REMOVE').clear = True
+        o = r.operator("looplod.mark_protected", text="Mark Selected as Protected", icon='ADD'); o.clear = False; o.target = 'PROTECT'
+        o = r.operator("looplod.mark_protected", text="", icon='REMOVE'); o.clear = True; o.target = 'PROTECT'
+        b.label(text="Locked Areas (hands, face)", icon='LOCKED')
+        if ob and ob.type == 'MESH':
+            b.prop_search(p, "lock_group", ob, "vertex_groups", text="")
+        else:
+            b.prop(p, "lock_group", text="")
+        r = b.row(align=True)
+        o = r.operator("looplod.mark_protected", text="Mark Selected as Locked", icon='ADD'); o.clear = False; o.target = 'LOCK'
+        o = r.operator("looplod.mark_protected", text="", icon='REMOVE'); o.clear = True; o.target = 'LOCK'
+        b.prop(p, "optimize_protected_radius")
         b.prop(p, "weight_aware")
         sub = b.row(); sub.active = p.weight_aware; sub.prop(p, "weight_influence")
         b = lay.box()
         b.label(text="Silhouette", icon='MOD_OUTLINE')
         b.prop(p, "silhouette_pressure")
         b.prop(p, "max_sparsity")
+        b.prop(p, "shape_balance")
         b = lay.box()
         b.label(text="Keep Intact", icon='LOCKED')
         for k in ("protect_seams", "protect_sharp", "protect_boundary", "protect_materials", "pole_fallback"):
