@@ -65,6 +65,8 @@ Espontânea, banco ou geral:
 48. East Side Effects | Candidatura geral de artistas | EUA (Nova York)
 49. Greensky Games | Careers (envio de CV) | EUA (Seattle)
 50. Psyop | Job Application (Jotform 231947297367168; posição CG Modeler, tipo Freelance, diária USD 320, skills Modeling/Texturing/LookDev/Groom, CV PDF) | EUA (Los Angeles/Nova York), remoto freelance | https://form.jotform.com/231947297367168 (no psyop.com/contact) | reCAPTCHA de caixa VISÍVEL "Please verify that you are a human" antes do Next | achada por W15 em 01/10 ~15h UTC; nada enviado, preencher na leva
+51. Mercury Filmworks | Expression of Interest (BambooHR 118, "candidates encouraged to apply regardless of where they live") | Canadá (Ottawa, híbrido) | s/n | https://mercuryfilmworks.bamboohr.com/careers/118 | reCAPTCHA de caixa VISÍVEL (size=normal) no Submit | W15 01/10: tudo preenchido e CV aceito (attachTemporary OK) pelo apply_bamboohr.js com /tmp/w2o/ans-mercury.json; falta só o menu obrigatório "What job role are you interested in?" = Builds & Rigging (o mais perto de modelagem de personagem)
+52. Reel FX | General Application (careers.reelfx.com/apply, departamentos Modeling / Surfacing / Fur-Hair, Freelancer Yes, elegível No, relocação Yes) | Canadá (Montreal) / EUA | s/n | https://careers.reelfx.com/apply?language=en | reCAPTCHA de imagem abre ao clicar APPLY | W15 01/10: script pronto /tmp/w2o/rfx.js (preenche tudo, CV PDF); nada enviado
 
 ## LEVA 01/10 manhã (consolidada 30/09 18h UTC)
 
