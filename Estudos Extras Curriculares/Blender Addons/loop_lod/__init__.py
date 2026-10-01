@@ -18,6 +18,8 @@
 # deles podem sair, e o Blender junta as duas arestas numa so, mantendo a
 # marcacao (testado no 5.2.0).
 
+import math
+
 import bpy
 import bmesh
 from mathutils import Vector, kdtree
@@ -75,7 +77,7 @@ def _opposite_edge(v, e, stop=()):
 class Loop:
     __slots__ = ("edges", "ends", "cyclic", "verts", "interior", "key", "cost", "pole_end", "simple", "bad_key", "in_lock", "ring_hits")
 
-    def __init__(self, edges, ends, cyclic, stop=()):
+    def __init__(self, edges, ends, cyclic, stop=(), lock=()):
         self.edges = edges
         self.ends = ends
         self.cyclic = cyclic
@@ -84,7 +86,7 @@ class Loop:
         self.key = frozenset(v.index for v in self.verts)
         # ponta na area travada nao e polo: o loop so para ali (vira um pentagono triangulado)
         self.pole_end = any(not v.is_boundary and v not in stop for v in ends)
-        self.in_lock = any(e.verts[0] in stop and e.verts[1] in stop for e in edges)
+        self.in_lock = any(e.verts[0] in lock and e.verts[1] in lock for e in edges)
         self.simple = len(self.verts) == (len(edges) if cyclic else len(edges) + 1)
         self.bad_key = frozenset(tuple(round(x, 5) for x in v.co) for v in self.verts)
         self.cost = INF
@@ -98,8 +100,9 @@ def locked_verts(bm, lock_group):
     return {v for v in bm.verts if v[dl].get(lock_group, 0.0) >= 0.5}
 
 
-def collect_loops(bm, stop=()):
-    """stop: vertices da area travada. O loop corta ali em vez de atravessar."""
+def collect_loops(bm, stop=(), lock=None):
+    """stop: vertices onde o loop corta em vez de atravessar (area travada, anel no minimo)."""
+    lock = stop if lock is None else lock
     seen = set()
     loops = []
     for e in bm.edges:
@@ -130,8 +133,42 @@ def collect_loops(bm, stop=()):
                 cur = nxt
             if cyclic:
                 break
-        loops.append(Loop(edges, ends, cyclic, stop))
+        loops.append(Loop(edges, ends, cyclic, stop, lock))
     return loops
+
+
+def _ring_size(l, prot):
+    """Vertices do anel, ou None se o loop nao e anel. Anel protegido conta mesmo aberto
+    (um triangulo encostado quebra o loop, mas o anel continua sendo o do cotovelo)."""
+    if l.cyclic:
+        return len(l.edges)
+    if prot and sum(1 for v in l.verts if v in prot) >= 0.85 * len(l.verts):
+        return len(l.verts)
+    return None
+
+
+def protected_verts(bm, protect_group):
+    return locked_verts(bm, protect_group)
+
+
+def gather_loops(bm, lock, min_ring, prot=()):
+    """Loops candidatos. Um anel fechado que ja esta no minimo (dedo, punho, braco no LOD
+    baixo) vira barreira: o loop que vem do torso ou do braco para ali, em vez de ser
+    recusado inteiro por atravessar ele."""
+    base = collect_loops(bm, lock, lock)
+    if min_ring <= 0:
+        return base
+    small = [l for l in base if (_ring_size(l, prot) or 10 ** 9) <= min_ring]
+    if not small:
+        return base
+    ring_vs = set().union(*(l.verts for l in small))
+    stop = set(lock) | ring_vs
+    out = list(small)
+    for l in collect_loops(bm, stop, lock):
+        if all(e.verts[0] in ring_vs and e.verts[1] in ring_vs for e in l.edges):
+            continue            # trecho entre dois aneis no minimo (ou o proprio anel)
+        out.append(l)
+    return out
 
 
 def _boundary_cycles(bm):
@@ -183,6 +220,8 @@ class _Ctx:
         self.gl = gl.index if gl else None
         self.deform_groups = [g.index for g in obj.vertex_groups if g.index not in (self.gp, self.gl)] if obj else []
         self._jf = {}
+        self.why = None
+        self.prot = set()
         self.edge_loop = {}
         self.bcycle = _boundary_cycles(bm)
         # espelho X
@@ -192,11 +231,20 @@ class _Ctx:
             for v in bm.verts:
                 kd.insert(v.co, v.index)
             kd.balance()
-            tol = s.symmetry_tolerance_mm * 0.001
+            sc = max((abs(x) for x in obj.matrix_world.to_scale()), default=1.0) if obj else 1.0
+            tol = s.symmetry_tolerance_mm * 0.001 / max(sc, 1e-9)    # mm no mundo -> unidade local
             self.mirror = {}
             for v in bm.verts:
                 co, i, d = kd.find(Vector((-v.co.x, v.co.y, v.co.z)))
-                if i is not None and d <= tol:
+                if i is None:
+                    continue
+                # malha esculpida (pano, dobras) nunca e simetrica ao milimetro: aceita o par
+                # se ele esta a menos de 40% da menor aresta do vertice. O par so vale se o
+                # loop espelhado inteiro existir, entao a topologia continua conferida.
+                lim = tol
+                if v.link_edges:
+                    lim = max(tol, 0.4 * min(e.calc_length() for e in v.link_edges))
+                if d <= lim:
                     self.mirror[v.index] = i
 
     def protect_w(self, v):
@@ -231,21 +279,28 @@ def _edge_protected(e, c):
 
 
 def _edge_blocked(e, c):
+    """Motivo do bloqueio da aresta, ou None."""
     s = c.s
     if len(e.link_faces) != 2:
-        return True
+        return "aresta de borda"
     if s.protect_seams and e.seam:
-        return True
+        return "UV seam"
     if s.protect_sharp and not e.smooth:
-        return True
+        return "sharp edge"
     if s.protect_materials and e.link_faces[0].material_index != e.link_faces[1].material_index:
-        return True
+        return "borda de material"
     if not c.s.optimize_protected_radius and _edge_protected(e, c):
-        return True
+        return "area protegida"
     for f in e.link_faces:
         if len(f.verts) != 4:
-            return True
-    return False
+            return "vizinho de triangulo/n-gon"
+    return None
+
+
+def _rej(c, why, loop=None):
+    if c.why is not None and (loop is None or len(loop.edges) > 1):
+        c.why[why] = c.why.get(why, 0) + 1
+    return INF
 
 
 def _face_width(f, e):
@@ -263,29 +318,32 @@ def _face_width(f, e):
 def loop_cost(loop, c, allow_poles):
     s = c.s
     if loop.pole_end and not allow_poles:
-        return INF
-    if not loop.simple or loop.bad_key in c.bad:
-        return INF
+        return _rej(c, "termina em polo (so no Pole Fallback)")
+    if not loop.simple:
+        return _rej(c, "loop cruza a si mesmo")
+    if loop.bad_key in c.bad:
+        return _rej(c, "desfeito: criava dobra, lasca, non-manifold ou nao reduzia")
     if loop.in_lock or any(c.lock_w(v) >= 0.5 for v in loop.interior):
-        return INF          # area travada (maos, rosto): nada dentro dela sai
+        return _rej(c, "area travada")      # maos, rosto: nada dentro dela sai
     prot = 0
     for e in loop.edges:
-        if _edge_blocked(e, c):
-            return INF
+        why = _edge_blocked(e, c)
+        if why:
+            return _rej(c, why, loop)
         if _edge_protected(e, c):
             prot += 1
     if prot >= 0.85 * len(loop.edges):
-        return INF          # loop de deformacao (anel protegido): fica no lugar
+        return _rej(c, "anel protegido")    # loop de deformacao: fica no lugar
     # esparsidade: as duas faixas viram uma so; a nova face nao pode ficar comprida demais
     shape = 0.0
     for e in loop.edges:
         L = e.calc_length()
         w = sum(_face_width(f, e) for f in e.link_faces)
         if L < 1e-9 or w < 1e-9:
-            return INF
+            return _rej(c, "aresta degenerada")
         a = max(w / L, L / w)
         if a > s.max_sparsity:
-            return INF
+            return _rej(c, "face ficaria comprida (Max Sparsity)")
         # equilibrio de forma: tirar o loop que deixa a face mais quadrada vem antes.
         # Sem isso, num cilindro reto os aneis no comprimento (erro zero) saem todos
         # antes do raio diminuir.
@@ -300,10 +358,12 @@ def loop_cost(loop, c, allow_poles):
                 if x in edge_set:
                     continue
                 r = c.edge_loop.get(x)
-                if r is not None and r is not loop and r.cyclic:
-                    k = ('r', id(r))
-                    n, h = hits.get(k, (len(r.edges), 0))
-                    hits[k] = (n, h + 1)
+                if r is not None and r is not loop:
+                    size = _ring_size(r, c.prot)
+                    if size is not None:
+                        k = ('r', id(r))
+                        n, h = hits.get(k, (size, 0))
+                        hits[k] = (n, h + 1)
                 break
         if not loop.cyclic:
             for v in loop.ends:
@@ -313,7 +373,7 @@ def loop_cost(loop, c, allow_poles):
                     hits[k] = (n, hits.get(k, (n, 0))[1] + 1)
         for n, h in hits.values():
             if n - h < s.min_ring_verts:
-                return INF
+                return _rej(c, "anel ficaria abaixo de Min Ring Verts")
     loop.ring_hits = hits
     total = 0.0
     for v in loop.interior:
@@ -361,9 +421,31 @@ def fold_count(bm, max_angle=1.75):
     return n
 
 
+def _min_angle(f):
+    vs = [v.co for v in f.verts]
+    n = len(vs)
+    m = math.pi
+    for i in range(n):
+        a = vs[i - 1] - vs[i]
+        b = vs[(i + 1) % n] - vs[i]
+        if a.length_squared < 1e-20 or b.length_squared < 1e-20:
+            return 0.0
+        m = min(m, a.angle(b))
+    return m
+
+
+def sliver_count(bm, min_angle=math.radians(14)):
+    """Faces com algum canto muito fechado (triangulo-lasca). Deformam mal e sombreiam mal."""
+    return sum(1 for f in bm.faces if _min_angle(f) < min_angle)
+
+
 def health(bm):
-    """Quanto menor, melhor: non-manifold + vertice solto + dobra."""
-    return nonmanifold_count(bm) + fold_count(bm)
+    """(non-manifold + vertice solto, dobras, lascas). Nenhum pode aumentar."""
+    return (nonmanifold_count(bm), fold_count(bm), sliver_count(bm))
+
+
+def _healthy(bm, before):
+    return all(a <= b for a, b in zip(health(bm), before))
 
 
 def nonmanifold_count(bm):
@@ -382,10 +464,16 @@ def _dissolve(bm, loops):
     rem = [v for v in cand if v.is_valid and len(v.link_edges) == 2]
     if rem:
         bmesh.ops.dissolve_verts(bm, verts=rem, use_face_split=False, use_boundary_tear=False)
-    # n-gons (pontas em polo) viram triangulos na hora
+    # n-gons (pontas em polo): triangula e junta de volta o que der em quad
+    # (pentagono vira quad + triangulo, hexagono vira 2 quads). Triangulo solto trava os
+    # loops em volta, entao quanto menos sobrar, mais o LOD reduz.
     ngons = [f for f in bm.faces if len(f.verts) > 4]
     if ngons:
-        bmesh.ops.triangulate(bm, faces=ngons, quad_method='BEAUTY', ngon_method='BEAUTY')
+        tris = bmesh.ops.triangulate(bm, faces=ngons, quad_method='BEAUTY', ngon_method='BEAUTY')['faces']
+        tris = [f for f in tris if f.is_valid and len(f.verts) == 3]
+        if tris:
+            bmesh.ops.join_triangles(bm, faces=tris, cmp_seam=True, cmp_sharp=True, cmp_materials=True,
+                                     angle_face_threshold=math.radians(40), angle_shape_threshold=math.radians(60))
 
 
 def _snapshot(bm):
@@ -400,26 +488,30 @@ def _restore(bm, me):
     bpy.data.meshes.remove(me)
 
 
-def _apply_checked(bm, groups, before_nm, bad, lock_group=None):
-    """Aplica o lote; se criar non-manifold, desfaz e tenta grupo por grupo (loop + espelho
-    juntos, para nao quebrar a simetria), marcando os ruins."""
+def _apply_checked(bm, groups, before_nm, bad, lock_group=None, min_ring=0, protect_group=None):
+    """Aplica o lote; se criar non-manifold ou dobra, ou nao reduzir, desfaz e tenta grupo por
+    grupo (loop + espelho juntos, para nao quebrar a simetria), marcando os ruins."""
     key_groups = [[l.bad_key for l in g] for g in groups]
+    t0 = tri_count(bm)
     snap = _snapshot(bm)
     _dissolve(bm, [l for g in groups for l in g])
-    if health(bm) <= before_nm:
+    # cada grupo tem que tirar triangulo: loop que so troca 2 quads por 2 quads entra em ciclo
+    if _healthy(bm, before_nm) and t0 - tri_count(bm) >= 2 * len(groups):
         bpy.data.meshes.remove(snap)
         return len(groups)
     _restore(bm, snap)
     applied = 0
     for keys in key_groups:
         bm.verts.ensure_lookup_table()
-        current = {l.bad_key: l for l in collect_loops(bm, locked_verts(bm, lock_group))}
+        current = {l.bad_key: l for l in gather_loops(bm, locked_verts(bm, lock_group), min_ring,
+                                                       protected_verts(bm, protect_group))}
         loops = [current[k] for k in keys if k in current]
         if len(loops) != len(keys):
             continue
+        t1 = tri_count(bm)
         snap = _snapshot(bm)
         _dissolve(bm, loops)
-        if health(bm) <= before_nm:
+        if _healthy(bm, before_nm) and tri_count(bm) < t1:
             bpy.data.meshes.remove(snap)
             applied += 1
         else:
@@ -428,16 +520,23 @@ def _apply_checked(bm, groups, before_nm, bad, lock_group=None):
     return applied
 
 
-def reduce_mesh(bm, obj, target_tris, s, log=None):
-    """Remove loops ate tri_count(bm) <= target_tris. Devolve o numero de passadas."""
+def reduce_mesh(bm, obj, target_tris, s, log=None, report=None):
+    """Remove loops ate tri_count(bm) <= target_tris. Devolve o numero de passadas.
+    report (dict): recebe os motivos de recusa da ultima passada e o motivo da parada."""
     allow_poles = False
     passes = 0
     bad = set()
+    why = {}
+    stop = "alvo atingido"
     while tri_count(bm) > target_tris and passes < 400:
         passes += 1
         c = _Ctx(bm, obj, s)
         c.bad = bad
-        loops = collect_loops(bm, locked_verts(bm, c.gl))
+        c.why = why = {}
+        if report is not None and passes == 1 and c.mirror is not None:
+            report["espelho"] = len(c.mirror) / max(1, len(bm.verts))
+        c.prot = protected_verts(bm, c.gp)
+        loops = gather_loops(bm, locked_verts(bm, c.gl), s.min_ring_verts, c.prot)
         by_key = {l.key: l for l in loops}
         c.edge_loop = {e: l for l in loops for e in l.edges}
         groups = []
@@ -452,9 +551,11 @@ def reduce_mesh(bm, obj, target_tris, s, log=None):
                 mk = frozenset(c.mirror.get(i, -1) for i in l.key)
                 m = by_key.get(mk)
                 if m is None:
-                    continue                    # sem par espelhado: fica, para manter a simetria
+                    _rej(c, "sem par espelhado (X Symmetry)")
+                    continue                    # fica, para manter a simetria
                 if m is not l:
                     if m.cost == INF:
+                        _rej(c, "par espelhado recusado")
                         continue
                     group.append(m)
             for g in group:
@@ -489,11 +590,17 @@ def reduce_mesh(bm, obj, target_tris, s, log=None):
             if s.pole_fallback and not allow_poles:
                 allow_poles = True
                 continue
+            stop = "acabaram os loops que podem sair"
             break
         before_nm = health(bm)
-        applied = _apply_checked(bm, chosen, before_nm, bad, c.gl)
+        applied = _apply_checked(bm, chosen, before_nm, bad, c.gl, s.min_ring_verts, c.gp)
         if log:
             log(f"passada {passes}: {applied}/{len(chosen)} grupos, {tri_count(bm)} tris")
+    if passes >= 400 and tri_count(bm) > target_tris:
+        stop = "limite de passadas"
+    if report is not None:
+        report["parada"] = stop
+        report["motivos"] = dict(sorted(why.items(), key=lambda t: -t[1]))
     return passes
 
 
@@ -544,6 +651,7 @@ class LOOPLOD_Settings(PropertyGroup):
     shape_balance: FloatProperty(name="Shape Balance", default=1.0, min=0.0, max=10.0,
         description="Mantem as faces perto de quadradas: alterna entre tirar aneis no comprimento e reduzir o raio. 0 = so o erro de forma decide")
     symmetry: BoolProperty(name="X Symmetry", default=True)
+    last_report: StringProperty(default="")
     symmetry_tolerance: FloatProperty(name="Symmetry Tolerance", default=1.0, min=0.0, max=100.0,
         description="Distancia maxima, em mm, entre um vertice e o espelho dele")
     use_evaluated: BoolProperty(name="Use Modifiers (Geometry Nodes)", default=True,
@@ -660,12 +768,15 @@ def generate_lods(context, ob, p, log=None):
     src_tris = tri_count(bm0)
     bm0.free()
     out = []
+    reports = []
     for i, it in enumerate(p.lods, start=1):
         me = base.copy()
         bm = bmesh.new()
         bm.from_mesh(me)
         target = max(1, int(round(src_tris * it.ratio)))
-        reduce_mesh(bm, ob, target, s, log=log)
+        rep = {}
+        reduce_mesh(bm, ob, target, s, log=log, report=rep)
+        reports.append((i, target, rep))
         if p.triangulate:
             bmesh.ops.triangulate(bm, faces=bm.faces[:])
         got = tri_count(bm)
@@ -688,6 +799,16 @@ def generate_lods(context, ob, p, log=None):
         col.objects.link(new)
         out.append((name, target, got))
     bpy.data.meshes.remove(base)
+    lines = []
+    for (i, target, rep), (name, _t, got) in zip(reports, out):
+        lines.append(f"LOD{i}: {got} tris (alvo {target}) - {rep.get('parada', 'alvo atingido')}")
+        if got > target * 1.15:
+            for k, n in list(rep.get("motivos", {}).items())[:5]:
+                lines.append(f"   {n}x {k}")
+    if reports and "espelho" in reports[0][2] and reports[0][2]["espelho"] < 0.98:
+        lines.append(f"Simetria: so {reports[0][2]['espelho']:.0%} dos vertices tem par. "
+                     "Aumente Symmetry Tolerance ou desligue X Symmetry")
+    p.last_report = "\n".join(lines)
     return src_tris, out
 
 
@@ -767,6 +888,13 @@ class LOOPLOD_PT_panel(Panel):
         if ob and ob.type == 'MESH':
             tris = sum(len(f.vertices) - 2 for f in ob.data.polygons)
             lay.label(text=f"Active: {tris:,} tris", icon='INFO')
+        if p.last_report:
+            b = lay.box()
+            b.label(text="Ultima geracao", icon='TEXT')
+            col = b.column(align=True)
+            col.scale_y = 0.8
+            for line in p.last_report.split("\n"):
+                col.label(text=line)
 
 
 classes = (LOOPLOD_LodItem, LOOPLOD_Settings, LOOPLOD_UL_lods, LOOPLOD_OT_lod_add,

@@ -59,6 +59,38 @@ faces viradas uma contra a outra, porque o anel chegou a 5 vértices.
 - **Só quads:** desligue **Pole Fallback**. O addon para quando acabam os loops
   limpos, sem triângulos novos, mas não chega aos LODs mais baixos.
 
+## Versão 1.3 (redução quase zero em malha real)
+
+Causa principal: **simetria**. A 1.2 só pareava um vértice com o espelho se
+ele estivesse a menos de 1 mm. Pano esculpido nunca é simétrico ao milímetro,
+então quase todo loop ficava sem par e era pulado. Reproduzido: robe de 2.862
+triângulos com 4 mm de assimetria, a 1.2 gerava LOD1, LOD2 e LOD3 com os
+mesmos 2.862.
+
+- **Simetria tolerante:** o par vale se estiver a menos de 40% da menor aresta
+  do vértice (ou da Symmetry Tolerance, o que for maior). O loop espelhado
+  inteiro ainda precisa existir, então a topologia continua conferida. A
+  tolerância agora é em mm do mundo, considerando a escala do objeto.
+- **Relatório no painel (Última geração):** para cada LOD, quantos
+  triângulos saíram, por que parou e os motivos mais comuns de recusa (sem
+  par espelhado, seam, sharp, anel mínimo, Max Sparsity...).
+- **Anel no mínimo vira barreira:** o loop que vem do braço para no punho ou
+  no dedo, em vez de ser recusado inteiro.
+- **Menos triângulos:** os n-gons das pontas em polo são triangulados e
+  juntados de volta em quads quando dá.
+- **Sem lascas:** remoção que cria triângulo com canto abaixo de 14 graus é
+  desfeita. A checagem de non-manifold, dobra e lasca agora é separada (antes
+  uma dobra a menos podia esconder um non-manifold a mais).
+- **Sem ciclo infinito:** um loop que não tira triângulo é desfeito.
+
+| Robe com 4 mm de assimetria | 1.2 | 1.3 |
+|---|---|---|
+| LOD1 (alvo 1.431) | 2.862 | 1.430 |
+| LOD2 (alvo 716) | 2.862 | 974 (mínimo com anel de 8) |
+
+Imagem: `robe_assimetrico_sheet.jpg`. Sem assimetria o mesmo robe chega a
+1.418, 716 e 652, zero n-gons e zero non-manifold.
+
 ## Geometry Nodes
 
 Com **Use Modifiers (Geometry Nodes)** ligado, o addon usa a malha com os
@@ -102,4 +134,4 @@ Com a mão travada (`t_roupa_mao_travada_520.py`): a mão fica com os 82
 vértices em todos os LODs e o anel do cotovelo cai 16, 12, 8, 8. O LOD2 e o
 LOD3 param em 490 triângulos porque a mão não entra na conta.
 
-Ainda não foi testado no personagem de produção depois da versão 1.2.
+Ainda não foi testado no personagem de produção depois da versão 1.3.
