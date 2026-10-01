@@ -141,3 +141,4 @@ Ver `LEIA-ME.md` na raiz.
 - **Geografia:** América do Norte (EUA e Canadá), Europa e Oceania com contratação remota. **Ásia inteira (inclusive Singapura) e América Latina saem.**
 - E-Line no CV; nunca vaga interna da E-Line. Room 8 fora.
 - **Fuso:** a agenda do Vini e toda organização de horário seguem Recife (UTC-3). No email ao estúdio, o horário vai no fuso do estúdio (regra de 01/10 do próprio Vini), com a conferência de conflito feita no horário de Recife.
+- **Rejeição fecha a porta (Vini, 01/10):** pessoa ou estúdio com recusa ou processo fechado no histórico (inclusive recusa automática ou por visto) NÃO recebe mais nada: nem agradecimento, nem follow-up, nem agenda, nem carta nova. Recusa só se registra. Contato permitido: Troll VFX; notas curtas a recrutadores de vagas aplicadas nos últimos 3 a 5 dias (games e animação); e conversas abertas sem recusa (quem pediu portfólio ou informação, ou disse "vamos te guardar").
