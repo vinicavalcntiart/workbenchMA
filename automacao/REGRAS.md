@@ -124,7 +124,7 @@ Ver `LEIA-ME.md` na raiz.
 - Na quarta as rotinas extras de terça param sozinhas, porque o agendamento delas é só para o dia 2.
 
 ## Modo alto desempenho, segunda leva (Vini, 01/10 ~13h UTC)
-- **Fuso de Recife (BRT, UTC-3) em tudo que for agenda:** convite de entrevista, horários oferecidos e respostas por email sempre citam o horário de Recife (e, quando ajudar, o do estúdio ao lado). O link da agenda continua o mesmo.
+- **Fuso (Vini, 01/10):** para o estúdio, email e resposta citam SEMPRE o horário do estúdio (o fuso dele). O horário de Recife (BRT, UTC-3) é só para a organização interna: mensagens ao Vini, agenda dele, painel e conferência de conflito no calendário. Não escrever "Recife time" nem BRT para o estúdio.
 - **E-Line Media:** continua no CV e no histórico em todas as candidaturas. Só não se aplica a vaga DENTRO da E-Line e não se escreve para nenhum endereço da E-Line.
 - **Room 8 fora** de vez, e nada de rota de contratação local no Brasil: só contratação internacional ou remota global, paga em dólar ou euro.
 - **EA entra** (o Vini listou a EA entre os alvos). A conta do jobs.ea.com já existe.
