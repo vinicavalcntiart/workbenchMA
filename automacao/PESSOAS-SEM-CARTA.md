@@ -20931,3 +20931,57 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 **O QUE CAIU, para não reabrir:**
 - **Simutronics:** o site só tem `jobs@` (rascunho às 08h55); o CEO (Chris Moore) só aparece com endereço em serviço pago. **Diamond Games:** o Rusty já é pessoa e já tem rascunho (05h40). **AnkleBreaker:** François Cugy já está `sem-email` desde 29/09; o site só publica `press@`, `hello@`, `playtest@`. **Another Axiom:** só `jobs@`, `support@`, `legal@`; nenhum nome de RH ou arte. **Corvus Belli:** o diretor de arte (Pero Da Ponte) e o escultor-chefe aparecem por nome, mas a casa só publica `contact@` e `career@`. **Hazelight:** a Katherine já está em `pessoas.csv` (28/09). **Act III:** Tina Townley é cofundadora e diretora de Produção e Operações (Companies House), mas a casa só publica `contact@` e `privacy@`.
 - **Do achado do cookie-policy, fora:** Embark (Terri respondeu), CI Games (Lucie respondeu), Kepler/Ebb (Jess já tem carta), Beffio (Tom já tem carta), Airship (Declan, duas cartas), Star Stable (Linnéa, carta 28/09), Tactical (francês), Snowprint (recusa), Wargaming (recusa). The Gang (`k***@`/`r***@thegang.io`): sem vaga e o Vini já escreveu ao Sven-Robin em 14/09. Creepy Jar (Alicja): sem vaga de arte, recibo em polonês. **Lista inteira dos ~110 endereços** fica para as próximas rodadas do Joe: Sharkmob, Starbreeze, Paradox, Funcom, Goodbye Kansas, Untold, Realtime, Lightheart e outros já têm pessoa em `pessoas.csv` e ficaram fora por isso.
+
+## RODADA 01/10 tarde (13h35 UTC), frente O (Joe): a lista do `/cookie-policy` do Teamtailor que a frente N deixou na reserva, refeita do zero. **Sete fichas com endereço PUBLICADO e confiança ALTA; zero montado; sete rascunhos prontos.** Reino Unido ×2, Suécia ×2, Finlândia, Espanha, EUA. Emails completos só fora do repositório (`/tmp/joeO/emails.txt` e `joe-0110-O-emails.txt` no scratchpad); aqui vão mascarados.
+
+**Como saiu:** rodei de novo o `/cookie-policy` nos 173 tokens Teamtailor de `tokens-ats-1809.csv` (145 páginas 200, 114 com *"please email <casa> at <endereço>"*) e nos 72 domínios próprios de carreira citados em `enviados.csv` e `processados.csv` (mais 34 achados, entre eles FRAME BREAK, OtherSide e Codigames, que não estão nos tokens). Depois o dedupe de três camadas: `pessoas.csv` por domínio e por nome da casa; Gmail `in:anywhere` por domínio, casa e sobrenome (pega as cartas que saíram pela caixa e as respostas aos Welcome de 14/09, que não estão no csv); e a trava de duas pessoas por casa.
+
+### FICHA O1: **Kate Parker** (a página da casa hoje diz *Kate Hudson*), *People and Talent Director / Senior People Director*, **KEPLER INTERACTIVE** (grupo de Sandfall, Sloclap, Tactical Adventures, Awaceb, Ebb; Londres, **REINO UNIDO**) `k***@kepler-interactive.com`, **ALTA**
+- **URL:** `https://careers.kepler-interactive.com/cookie-policy` (**200**): *"please email Kepler Interactive at k***@kepler-interactive.com"*. Pessoa: `https://careers.kepler-interactive.com/people/1769991-kate-parker` (o mesmo ID mostra hoje "Kate Hudson - Senior People Director"); theorg.com e LinkedIn: *"People and Talent Director"*, ex-Talent Acquisition Manager da Team17.
+- **VAGA DE PERSONAGEM VIVA NO QUADRO DO GRUPO:** *Lead 3D Character Artist* (Tactical Adventures, `https://tacticaladventures.teamtailor.com/jobs/8311973-lead-3d-character-artist`, publicada 02/09).
+- **FRASE DA CASA, literal:** *"offering artistic independence, excellent operational support, and cross-pollination between outstanding teams"* (página de carreiras). A carta da Jess (29/09) usou outra frase, *"combine experimental game design with unique art direction"*.
+- **DEDUPE:** Gmail `kepler-interactive.com OR "Kate Parker"` → 1 fio, a carta para a Jess de 29/09. **Ela é a segunda e última pessoa do grupo.** Nenhuma recusa.
+- **RESSALVA:** a vaga de Lead é da Tactical (Paris), casa que a frente N tirou por exigir francês; a carta pede a ela o estúdio do grupo que melhor recebe personagem estilizado.
+
+### FICHA O2: **Hannah Webb**, *Lead Talent Acquisition Manager / People Lead*, **BULKHEAD** (WARDOGS, Battalion 1944; Derby, **REINO UNIDO**) `h***@bulkhead.com`, **ALTA**
+- **URL:** `https://careers.bulkhead.com/cookie-policy` (**200**): *"please email BULKHEAD at h***@bulkhead.com"*. Cargo: perfil público no LinkedIn; foi ela quem assinou o recibo da *Open Application [In-Studio]* em 07/09.
+- **FRASE DA CASA, literal** (`https://www.bulkhead.com/`): *"WE WANT TO MAKE THE NEXT MUST-PLAY FIRST PERSON SHOOTER."* e *"three teams fight to secure a dynamic 100-player battlefield"*.
+- **DEDUPE:** Gmail → recibos automáticos (Hannah e Joe Brammer, 07/09), login do Connect, e a carta de 06/09 para `info@`. Nenhuma carta para pessoa, nenhuma recusa. Zero em `pessoas.csv`.
+- **RESSALVA:** casa de FPS realista e nenhuma vaga de arte de personagem aberta (só Senior VFX Artist); carta de porta.
+
+### FICHA O3: **Liza Lind**, *co-fundadora*, **GOALS** (jogo de futebol; Estocolmo, **SUÉCIA**, *remote-first*) `l***@playgoals.com`, **ALTA**
+- **URL:** `https://tt.playgoals.com/cookie-policy` (**200**): *"please email GOALS at l***@playgoals.com"*. Cargo: LinkedIn público e a imprensa da rodada de investimento (*"Liza Lind is one of the founders of GOALS"*).
+- **FRASE DA CASA, literal** (`https://tt.playgoals.com/`): *"GOALS is a remote-first game studio, with HQ in Stockholm. We're developing the biggest thing happening to football since, well, the football."*
+- **REMOTO:** a casa é *remote-first*: a carta leva a frase de remoto, não a de mudança.
+- **DEDUPE:** Gmail → Welcome de Peter Kjellberg (11/09) e a resposta do Vini a ele (14/09). **Ela é a segunda e última pessoa da casa.** Nenhuma recusa.
+- **RESSALVA:** sem vaga aberta (`jobs.rss` vazio); o remoto da casa é dentro da Europa.
+
+### FICHA O4: **Joakim Hedström**, *CEO e co-fundador*, **FRAME BREAK** (Lightyear Frontier; grupo Coffee Stain; Skövde, **SUÉCIA**) `j***@framebreak.se`, **ALTA**
+- **URL:** `https://jobs.framebreak.se/cookie-policy` (**200**): *"please email FRAME BREAK at j***@framebreak.se"*. Cargo: Gamereactor e GamesMarket (*"Frame Break's CEO"*).
+- **FRASE DA CASA, literal** (`https://www.framebreak.se/`): *"FRAME BREAK is about making games that break the mold"*; Lightyear Frontier é *"a peaceful open-world farming adventure on a planet at the far edge of the galaxy"*.
+- **DEDUPE:** Gmail → Welcome da equipe e login do Connect (06 e 07/09). Nenhuma carta, nenhuma recusa. Zero em `pessoas.csv`.
+- **RESSALVA:** sem vaga aberta; casa de 3 fundadores que cresceu, o CEO ainda decide.
+
+### FICHA O5: **Andrew Alcott**, *Senior Manager, People Operations* (antes *Senior Recruiter*), **OTHERSIDE ENTERTAINMENT** (Thick as Thieves; Boston, **EUA**, time remoto nos EUA) `a***@otherside-e.com`, **ALTA**
+- **URL:** `https://careers.otherside-e.com/cookie-policy` (**200**): *"please email OtherSide Entertainment at a***@otherside-e.com"*. Pessoa: `https://careers.otherside-e.com/people/29035-andrew-alcott` (*"Senior Recruiter"*); LinkedIn público com o cargo novo.
+- **FRASE DA CASA, literal** (`https://otherside-e.com/`): *"We make deeply immersive games that draw players into richly imagined worlds."* Carreiras: *"we are open to remote work"* (dentro dos EUA).
+- **DEDUPE:** Gmail → Welcome dele ao banco de talentos (29/09) e login. Nenhuma carta, nenhuma recusa. Zero em `pessoas.csv`.
+- **RESSALVA:** sem vaga aberta; o remoto da casa é nos EUA, então a carta leva a frase de mudança e visto.
+
+### FICHA O6: **Marian Viciana**, *Talent Manager*, **CODIGAMES** (jogos mobile 3D estilizados; Valência, **ESPANHA**, *Fully Remote*) `m***@codigames.com`, **ALTA**
+- **URL:** `https://jobs.codigames.com/cookie-policy` (**200**): *"please email Codigames at m***@codigames.com"*. Cargo: LinkedIn público; ela assinou o Welcome e o recibo do banco de talentos de hoje (07h40 e 12h29 UTC).
+- **FRASE DA CASA, literal** (`https://jobs.codigames.com/`): *"Shape the future of gaming with us"*; vagas *"Valencia · Fully Remote"*.
+- **REMOTO:** frase de remoto.
+- **DEDUPE:** Gmail → só os automáticos de hoje. Nenhuma carta, nenhuma recusa. Zero em `pessoas.csv`.
+- **RESSALVA:** sem vaga de arte aberta (só *Future Opportunities*, enviada hoje); casa mobile.
+
+### FICHA O7: **Teemu Mäki-Patola**, *COO*, **HYPEHYPE** (ex-Frogmind: BADLAND, Rumble Stars; parceria com a Supercell; Helsinque, **FINLÂNDIA**) `t***@hypehype.com`, **ALTA**
+- **URL:** `https://hypehype.teamtailor.com/cookie-policy` (**200**): *"please email HypeHype at t***@hypehype.com"*. Cargo: theorg.com e LinkedIn (*"Chief Operating Officer at HypeHype Inc."*).
+- **FRASE DA CASA, literal** (`https://www.hypehype.com/`, meta): *"AI native game studio redefining how games are made. Creators of BADLAND and Rumble Stars."*
+- **DEDUPE:** Gmail → recibo da *Open Application* assinado por ele (16/09) e login. Nenhuma carta, nenhuma recusa. Zero em `pessoas.csv`.
+- **RESSALVA:** a casa hoje se vende como plataforma de criação com IA; personagem é parte do produto, não o centro.
+
+**O QUE CAIU NESTA RODADA, para não reabrir:**
+- **Já com duas pessoas ou com carta para a mesma pessoa:** 10 Chambers (Robin e David), Awaceb (Thierry e Philippe), Pixion (Tamara, resposta ao Welcome 14/09), Kinda Brave (Therese, idem), MindArk (Madeleine, idem; `madjon@` é ela), Gigglebug (duas), IOI (duas), ILP (Eleonora), Red Rover (Laura), Raw Power (Craig), Bespoke Pixel (Louise), ForthStar (Anna; o outro endereço publicado é do *Head of Data*), Funday (Nina), Coatsink, Steel City, LEGO Digital Play, AdHoc, Chief Rebel.
+- **Respondeu ou recusou:** Game Boost (Jenny respondeu), Plummy (Milena respondeu sem vaga), Sandbox e Stillfront (recusa 21/09), Snowprint, Vivid, Embark, CI Games.
+- **Fora do foco ou fora de jogo:** KIXEYE (Office Manager & HR; estratégia militar mobile), Black Kite (VFX de TV, vagas de FX e cor), Vine FX, Territory, MAG Interactive, Raw Fury (publisher), Sweetspot (golfe), Unfold (agência norueguesa), Neat, Fully, Infinity, Ground Control, Envar (ambiente). Caixas genéricas (`careers@`, `privacy@`, `production@`, `arcade@`, `recruitment@`): ficam para o Carteiro, não para o Joe.
