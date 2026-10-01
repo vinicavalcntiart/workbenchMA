@@ -24,7 +24,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import os as _os
 TOK = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'tokens-ats-1809.csv')
-OUT = sys.argv[1] if len(sys.argv) > 1 else '/tmp/janela.csv'
+OUT = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith('-') else '/tmp/janela.csv'  # '--help' virava arquivo na raiz do repo
 # JANELA: default 18/09 16h00 UTC, mas sobrescrita pelo ambiente JANELA_ISO
 # (ex.: JANELA_ISO=2026-09-19T00:15:00+00:00) — 19/09 02h20, para nao editar codigo
 # a cada rodada de janela curta.
