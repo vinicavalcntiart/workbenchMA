@@ -66,7 +66,7 @@ Na dúvida, agradece sem a agenda e conta ao Vini numa linha.
 
 ## Coreia fora, e só estúdio que trabalha em inglês (Vini, 01/10: "n po coreia é foda ne tem que ser um pais que minimamente fale ingles")
 
-Coreia do Sul sai do escopo (junto com Japão e Brasil). Vale para qualquer país: só entra estúdio onde dá para trabalhar em inglês (anúncio em inglês, ou estúdio internacional que contrata estrangeiro em inglês). Vaga que exige o idioma local (coreano, japonês, chinês, francês, alemão, polonês etc.) fica fora. Escopo atual: América do Norte, Europa, Oceania, Singapura e vagas remotas em inglês de qualquer lugar.
+Coreia do Sul sai do escopo (junto com Japão e Brasil). Não precisa ser país de inglês como primeira língua (Vini: "tipo finlandia, croacia etc, que conseguem se comunicar em ingles"). Vale para qualquer país: só entra estúdio onde dá para trabalhar em inglês (anúncio em inglês, ou estúdio internacional que contrata estrangeiro em inglês). Vaga que exige o idioma local (coreano, japonês, chinês, francês, alemão, polonês etc.) fica fora. Escopo atual: América do Norte, Europa, Oceania, Singapura e vagas remotas em inglês de qualquer lugar.
 
 ## Vaga de animador: fora (Vini, 30/09: "eu n sou animador, vaga de animador n faz sentido")
 
