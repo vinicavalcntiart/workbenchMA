@@ -53,7 +53,11 @@ Presencial com visto (personagem ou 3D com personagem):
 34. Guru Studio | General Application (BambooHR 11, animacao CG de personagem) | Canada (Toronto) | n | https://gurustudio.bamboohr.com/careers/11 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10; so houve carta que quicou, formulario nunca enviado
 35. Side (Workable sideinc) | 3D Character Artist - Talent Pool (MEA, escritório de Bucareste) E57D73194A | Romênia (Bucareste, presencial; o formulário pergunta também os escritórios de Londres, Estocolmo e Varsóvia) | n | https://apply.workable.com/sideinc/j/E57D73194A/apply/ | Turnstile visível ao Submit (mesma plataforma das irmãs LATAM e N Americas) | vaga viva (API v2 200 em 01/10); as irmãs EU de Berlim, Estocolmo, Varsóvia, Madri e Londres aparecem no índice do jobs.workable.com mas não no quadro público, então só esta entra; USD 40/h, patrocínio Yes; pergunta de experiência AAA: responder pelo CV
 
-Total: 35 portas vivas (30 + 4 achadas em 01/10 pela noite C + 1 Side Bucareste da noite B).
+36. ICON Creative Studio | Intermediate Modeling/Texture Artist (BambooHR 136, Assets, CAD 63-85 mil) | Canada (Vancouver) | n | https://iconcreative.bamboohr.com/careers/136 | reCAPTCHA de caixa VISIVEL (visto no ensaio local de 01/10 da noite P, form preenchido e nao enviado) | a irma Character Sculptor ja foi enviada em 23/09, esta e outra vaga; Date Available e Desired Pay opcionais (CAD 63.131, base da faixa)
+
+Obs. noite P (01/10) sobre a 34 Guru: o formulario pede, obrigatorios, teste de velocidade da internet de casa (link insight.gurustudio.com:3003), Wifi ou Ethernet e se da para trocar de pacote; so o Vini sabe responder.
+
+Total: 36 portas vivas (30 + 4 achadas em 01/10 pela noite C + 1 Side Bucareste da noite B + 1 ICON da noite P).
 
 Saíram da leva em 30/09 18h UTC: Juego Studios (Índia, regra nova de países, e captcha de texto + Turnstile); EDI versão italiana (duplicata da casa, ver 21); OA-3 (fundido com Metricminds, 19). Nenhuma linha dos blocos antigos estava enviada ou fechada; nenhuma viola "sem animador", "sem Japão" nem "sem Brasil" (Amber Studio é de fora, só contrata do Brasil). Os blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" abaixo ficam só como histórico; vale este bloco.
 
