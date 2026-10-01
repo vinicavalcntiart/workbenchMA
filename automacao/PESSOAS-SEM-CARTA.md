@@ -20985,3 +20985,36 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **Já com duas pessoas ou com carta para a mesma pessoa:** 10 Chambers (Robin e David), Awaceb (Thierry e Philippe), Pixion (Tamara, resposta ao Welcome 14/09), Kinda Brave (Therese, idem), MindArk (Madeleine, idem; `madjon@` é ela), Gigglebug (duas), IOI (duas), ILP (Eleonora), Red Rover (Laura), Raw Power (Craig), Bespoke Pixel (Louise), ForthStar (Anna; o outro endereço publicado é do *Head of Data*), Funday (Nina), Coatsink, Steel City, LEGO Digital Play, AdHoc, Chief Rebel.
 - **Respondeu ou recusou:** Game Boost (Jenny respondeu), Plummy (Milena respondeu sem vaga), Sandbox e Stillfront (recusa 21/09), Snowprint, Vivid, Embark, CI Games.
 - **Fora do foco ou fora de jogo:** KIXEYE (Office Manager & HR; estratégia militar mobile), Black Kite (VFX de TV, vagas de FX e cor), Vine FX, Territory, MAG Interactive, Raw Fury (publisher), Sweetspot (golfe), Unfold (agência norueguesa), Neat, Fully, Infinity, Ground Control, Envar (ambiente). Caixas genéricas (`careers@`, `privacy@`, `production@`, `arcade@`, `recruitment@`): ficam para o Carteiro, não para o Joe.
+
+## RODADA 01/10 17h35 UTC, frente P (Joe): **AMÉRICA DO NORTE**, horário comercial dos EUA. **Duas pessoas novas com endereço PUBLICADO e confiança ALTA, mais a carta pendente do Stuart Ng (Riyo, 28/09). Três rascunhos prontos; zero montado.** Canadá ×1, EUA ×1 (mais Canadá do pendente). Emails completos só fora do repositório (`/tmp/joeP/emails.txt`); aqui vão mascarados.
+
+**Abaixo da meta de quatro, e o motivo está medido:** a América do Norte quase não publica endereço de pessoa. O que foi lido nesta rodada e não rendeu ninguém novo:
+- **Planilha da comunidade** (gviz, 3.231 linhas): a coluna de contato é quase só link; nos últimos 40 dias, só 5 linhas trazem email, todas caixa genérica (Cartoon Conrad, VertexBee, Cosmic Dino). Ela serviu para listar as casas norte-americanas com vaga de personagem viva (Ludia, Cloud Imperium Montréal, 31st Union, ICON, Roarty, dirk, Absurd, IGG, Zoic, The Embassy, Image Engine, thatgamecompany, EA UFC).
+- **Teamtailor `/cookie-policy`**: a frente O já tinha varrido os 173 tokens (quase todos europeus). Descoberto nesta rodada que a casa norte-americana do Teamtailor mora em `<slug>.na.teamtailor.com` (é o caso da OtherSide e da AdHoc); sondei ~230 slugs norte-americanos ali e nos subdomínios `careers.`/`jobs.` de 335 domínios: zero endereço novo. Storm8 (`simon.guenther@stillfront.com`) caiu porque a Stillfront recusou em 21/09.
+- **Texto e metadado de vaga** em 118 quadros Greenhouse, 61 Lever e 59 Ashby: só a Hasbro expõe recrutador; a Wizards já levou carta hoje (Adam), então a Hasbro fica de fora nesta rodada (sem spam de casa no mesmo dia).
+- **Páginas de contato, equipe e privacidade** de ~250 domínios norte-americanos (painel, planilha e lista à mão): quase tudo caixa genérica. Pessoas que apareceram e caíram: Melanie (ShadowMachine, **já respondeu**), Carson (ICON, já tem carta), Edward Quintero (Mold3D, já tem), Dave Lipes (Budge, já tem), Laundry (só motion design, sem personagem), Unico (representante de GDPR, casa mobile turca).
+- **Bio do Bluesky** (9.028 perfis lidos): as pessoas norte-americanas de arte com email já estão no `pessoas.csv` (Matt B. da Aether, David Mann da Zynga) ou não são de estúdio.
+
+### FICHA P1: **Dan Roarty**, *Founder*, **ROARTY DIGITAL INC.** (outsourcing de personagem para AAA e publicidade; Vancouver, **CANADÁ**, estúdio 100% remoto) `d***@roartydigital.com`, **ALTA**
+- **URL:** `https://www.danroarty.com` (**200**), site pessoal dele, endereço em texto visível. Cargo e casa: `https://www.roartydigital.com/about` (**200**): *"Founded in 2016 by game industry veteran Dan Roarty, Roarty Digital is a full-service game development studio"*; *"We specialize in high-quality character creation ... and advanced hair creation for real-time and Unreal Engine grooms"*; *"Roarty Digital is a fully remote studio"*.
+- **POR QUE ELE:** é o dono e o character artist que deu nome à casa; o forte dela é exatamente personagem e cabelo, o par do Vini.
+- **FRASE DA CASA, literal** (home): *"Being able to work on incredible projects for amazing clients is a dream come true." — Dan Roarty - founder.*
+- **REMOTO:** frase de remoto, não a de mudança.
+- **DEDUPE:** Gmail `in:anywhere (roartydigital OR "Roarty Digital" OR "Dan Roarty")` → `{}`. Repositório: zero em `pessoas.csv` e `enviados.csv`; em `processados.csv` só as vagas mortas (Character Artist Realistic 16/09, Hair Artist/Groomer 26/09).
+- **RESSALVAS HONESTAS:** (1) a página de carreiras está sem vaga hoje; (2) a casa diz que todo o time trabalha no mesmo fuso (Vancouver é UTC-7, o Vini UTC-3).
+- **RASCUNHO:** `r6103636496442620879`.
+
+### FICHA P2: **Brien Holman**, *CCO / Co-Founder*, **WE ARE ROYALE** (estúdio de design e CG para jogos e marcas: Riot *Naafiri Character Reveal Trailer*, Blizzard 35th Anniversary; Los Angeles e Seattle, **EUA**) `b***@weareroyale.com`, **ALTA**
+- **URL:** `https://weareroyale.com/contact` (**200**), bloco *Partners*: *"Jen Lucero CEO / Co-Founder ... Brien Holman CCO / Co-Founder"*, cada um com o endereço ao lado.
+- **POR QUE ELE:** é o diretor criativo e sócio; numa casa desse porte, quem decide o artista de um trailer de personagem é o lado criativo.
+- **FRASE DA CASA, literal** (home): *"We Are Royale delivers full-spectrum creative services that inspire fandoms and empowers brands to grow and evolve with their communities."*
+- **FORA DOS EUA? NÃO**, mas presencial em LA/Seattle: frase de mudança e visto.
+- **DEDUPE:** Gmail `in:anywhere (weareroyale OR "We Are Royale" OR "Brien Holman" OR "Jen Lucero")` → `{}`. Zero em `pessoas.csv`, `enviados.csv`, `processados.csv` e painel.
+- **RESSALVAS HONESTAS:** (1) sem vaga de personagem publicada (só o bloco *RECRUITMENT* genérico); (2) a casa é metade marca e metade jogo; o gancho da carta é o trailer de personagem da Riot. A CEO Jen Lucero fica para outra rodada, só se esta não andar.
+- **RASCUNHO:** `r6212117022364782503`.
+
+### PENDENTE ESCRITO: **Stuart Ng**, *Art Director*, **RIYO GAMES** (ficha 5 de 28/09)
+- Endereço conferido de novo hoje em `https://stuartng.art/about` e cargo em `https://riyogames.com/about` (*"Stuart Art Director"*); Gmail continua `{}`. Carta com frase de remoto e a disciplina na borda (2.5D) dita na própria carta. **RASCUNHO:** `r4429725454681169954`.
+- As outras linhas `PENDENTE-maestro-escreve` do `pessoas.csv` são todas `sem-email` (ou casa do Brasil, caso da Kokku): não há para quem escrever.
+
+**Conferência do lote:** `confere-carta.py` limpo nas três (222 a 232 palavras, 2 emojis diferentes, 5 a 6 negritos), pior par 18% contra o lote e contra as cartas da frente O; HTML por `monta-html-carta.py`; `plaintextBody` conferido nos três rascunhos.
