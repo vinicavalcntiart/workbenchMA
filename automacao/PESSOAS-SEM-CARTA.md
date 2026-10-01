@@ -21018,3 +21018,30 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - As outras linhas `PENDENTE-maestro-escreve` do `pessoas.csv` são todas `sem-email` (ou casa do Brasil, caso da Kokku): não há para quem escrever.
 
 **Conferência do lote:** `confere-carta.py` limpo nas três (222 a 232 palavras, 2 emojis diferentes, 5 a 6 negritos), pior par 18% contra o lote e contra as cartas da frente O; HTML por `monta-html-carta.py`; `plaintextBody` conferido nos três rascunhos.
+
+## RODADA 01/10 21h35 UTC, frente Q (Joe): censo Wikidata nunca varrido por página de equipe, mais listas de associação. **Duas pessoas novas com endereço PUBLICADO e confiança ALTA; dois rascunhos prontos; zero montado.** EUA ×1, República Tcheca ×1. Emails completos só no scratchpad (`joe-0110-Q-emails.txt`); aqui vão mascarados.
+
+**Abaixo da meta de quatro, e o motivo está medido:** nenhuma ficha `PENDENTE` com email publicado esperava carta (as `PENDENTE` do `pessoas.csv` são todas `sem-email`). O que foi lido e não rendeu pessoa de personagem:
+- **Pista Raised by Monsters** (Madri): `raisedbymonsters.eu/about` publica só `hello@` e `jobs@`, nenhum nome; e a casa é palco de captura de movimento, não estúdio de personagem. Fica fora.
+- **Censo Wikidata** (1.908 domínios em escopo que nunca entraram em `pessoas.csv`, `processados.csv` nem `enviados.csv`; home, contato, about e equipe): ~200 com endereço que não é caixa geral, quase todos de casa 2D, de áudio, de uma pessoa só, de cassino ou fechada. Caíram na leitura: Paladin Studios (fechou em 05/2024), Red Pipe (só áudio), Galdra (Arcadia Fallen, 2D), 5am Games (jogos de palavra 2D), Dolores (dois sócios, pixel art), Celluloid VFX (**já tem fio no Gmail**, respondeu em 30/09), Fool's Theory (`rodo@` é a caixa de proteção de dados polonesa, não pessoa).
+- **Listas de associação**: Film London (61 casas), Nordic Animation (50 contatos, quase todos já no `pessoas.csv`), Screen Flanders (só 2D e stop-motion com nome), CEE Animation (26 casas, só caixa geral), SGDA e PGDA (178 domínios, quase só pessoa física).
+
+### FICHA Q1: **Kartik Kini**, *Creative Lead / Creative Director* e cofundador, **FINITE REFLECTION STUDIOS** (Mouseward, souls-like 3D com um ratinho da guarda real; Void Sols; Atlanta, **EUA**) `k***@finitereflection.com`, **ALTA**
+- **URL:** `https://finitereflection.com/about-us` (**200**), card "Kartik Kini Creative Director" com o link de email dele. Cargo e cidade em `https://finitereflection.com/presskit`: *"Creative Lead: Kartik Kini"*, *"Location: Atlanta, GA"*.
+- **POR QUE ELE:** casa de quatro sócios; ele cuida do visual e do design. Mouseward é personagem estilizado com pelo, o par do Vini.
+- **FRASE DA CASA, literal** (home e página do jogo): *"Overcome overwhelming odds as the smallest critter in the forest in this souls-like collectathon!"*
+- **REMOTO:** frase de remoto (casa indie pequena, sem vaga publicada).
+- **DEDUPE:** Gmail `in:anywhere (finitereflection OR "Finite Reflection" OR Mouseward OR "Kartik Kini")` → `{}`. Zero no repositório.
+- **RESSALVAS HONESTAS:** (1) sem vaga aberta; (2) Mouseward ainda está em pré-alfa.
+- **RASCUNHO:** `r-1851087811657536845`.
+
+### FICHA Q2: **Lukáš Kolek**, *Chief Executive Officer*, **CHARLES GAMES** (Playing Kafka, We Grew Up In War, Svoboda 1945; Praga, **REPÚBLICA TCHECA**) `l***@charlesgames.net`, **ALTA**
+- **URL:** `https://charlesgames.net/about-us` (**200**), card "Lukáš Kolek Chief Executive Officer" com o endereço em texto.
+- **POR QUE ELE:** casa média sem cargo de arte publicado com email; o CEO é quem aparece como contato.
+- **FRASE DA CASA, literal** (home): *"an award-winning Prague-based indie game studio pushing the boundaries of what video games can do"*.
+- **FORA DOS EUA:** frase de mudança e visto.
+- **DEDUPE:** Gmail `in:anywhere (charlesgames OR "Charles Games" OR "Lukas Kolek" OR "Lukáš Kolek")` → `{}`. Zero em `pessoas.csv`, `enviados.csv` e `processados.csv`.
+- **RESSALVAS HONESTAS:** (1) a arte da casa puxa para o ilustrado e para o vídeo, personagem 3D é borda; (2) sem vaga publicada.
+- **RASCUNHO:** `r5617145847881515451`.
+
+**Conferência do lote:** `confere-carta.py` limpo nas duas (226 e 236 palavras, 2 emojis, 5 e 6 negritos); pior par 23% contra o lote e contra as cartas da frente P; HTML por `monta-html-carta.py`.
