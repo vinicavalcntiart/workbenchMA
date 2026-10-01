@@ -459,7 +459,7 @@ de formulário único volta "sem campos" em todos eles.
 ## Escopo, que é o mesmo da campanha
 
 América do Norte, Europa incluindo Reino Unido, Irlanda, Nórdicos e União Europeia, Oceania, e na
-Ásia somente Coreia do Sul e Singapura. **Nada de Índia, Brasil nem Japão.** Room 8 Studio está
+Ásia somente Singapura (Coreia do Sul saiu em 01/10). **Nada de Índia, Brasil nem Japão.** Room 8 Studio está
 fora. Vaga totalmente remota vale fora dessa lista, exceto Japão.
 
 ## O que ele entrega no fim de cada rodada

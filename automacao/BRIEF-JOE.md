@@ -78,8 +78,8 @@ foi qualificado, só faltou chegar em alguém. Depois, quem respondeu pedindo pa
 acompanhar a página de carreiras, que é um sim disfarçado de não.
 
 **Escopo geográfico da campanha, sem exceção**: América do Norte, Europa incluindo Reino
-Unido, Irlanda, Nórdicos e União Europeia, Oceania, e na Ásia **somente Coreia do Sul e
-Singapura**. Nada de Índia, nada de Brasil, nada de Japão. Vaga 100% remota conta fora
+Unido, Irlanda, Nórdicos e União Europeia, Oceania, e na Ásia **somente Singapura** (Coreia do Sul saiu em 01/10)
+. Nada de Índia, nada de Brasil, nada de Japão. Vaga 100% remota conta fora
 dessa lista, exceto Japão.
 
 ## Onde ele caça

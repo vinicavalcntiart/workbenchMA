@@ -15,8 +15,8 @@ Anúncio que exige disciplina que ele não tem queima a porta daquela casa: não
 
 ## Escopo geográfico, e ele não se negocia
 
-América do Norte, Europa (UK, Irlanda, Nórdicos, UE), Oceania, e na Ásia **só Coreia do Sul e
-Singapura**. **NADA de Índia, NADA de Brasil, NADA de Japão.** Remoto 100% vale fora dessa
+América do Norte, Europa (UK, Irlanda, Nórdicos, UE), Oceania, e na Ásia **só Singapura** (Coreia do Sul saiu em 01/10)
+. **NADA de Índia, NADA de Brasil, NADA de Japão.** Remoto 100% vale fora dessa
 lista, exceto Japão.
 
 ## CAPTCHA: não perca tempo

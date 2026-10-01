@@ -38,7 +38,7 @@ Greenhouse tem API pública, use-a para inventariar antes de abrir o navegador:
 | **Nintendo** | `careers.nintendo.com` | NoA e NoE |
 | **Amazon Games** | `amazon.jobs` | |
 | **Netflix Games** | Eightfold, mesma API da Netflix | ver BRIEF-GRANDES.md |
-| **Krafton, Nexon, NCSoft, Pearl Abyss, Smilegate** | portais próprios | Coreia do Sul está no escopo |
+| **Krafton, Nexon, NCSoft, Pearl Abyss, Smilegate** | portais próprios | FORA: Coreia do Sul saiu do escopo em 01/10 |
 | **Remedy, Housemarque, Supercell, Rovio** | portais próprios | Finlândia |
 | **Larian** | Lever | **hCaptcha**, sempre à mão |
 | **CD Projekt Red** | portal próprio | |
