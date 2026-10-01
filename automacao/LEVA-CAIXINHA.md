@@ -4,6 +4,67 @@ Jeito novo (Vini, 28/09): o Kernel só abre quando o Vini chamar. O maestro pree
 anexa o CV por último, passa o link e fecha a sessão logo depois do envio.
 Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<familia>/resp-*.json.
 
+## PRONTAS 01/10 (conferido 12:07 UTC)
+
+49 portas vivas. Conferido 01/10 ~11h50-12h07 UTC só por API e navegador local (sem nuvem): BambooHR list (10/10 Open), Recruitee offers (Softgames, Framestore, Dovetail publicadas), Workable API (Pulse 200; Side x2 e Double Eleven deram 429 do Workable agora, vivas na leitura de 01/10 madrugada), Jobvite e JazzHR 200, páginas próprias 200. Dedupe por casa, ID e URL em enviados.csv, processados.csv, docs/index.html e Gmail (recibos): saíram Guru 34 e ICON 36 (recibo de agosto) e Big Viking 28 (talent community).
+Marca * = o Vini disse em 29/09 que enviou pela nuvem, mas não há recibo no Gmail nem em enviados.csv: segue na lista até aparecer prova.
+Hasbro Principal Character Artist (item 1) fica à parte: o site da Hasbro recusa a conexão daqui (TLS) e a caixa nunca foi vista, então não entra na contagem.
+
+Casa grande:
+1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres)
+
+Personagem:
+2. Zoic Studios | 3D Senior Character Modeler (contrato 6 semanas) | Canadá (remoto BC)
+3. Streamline Studios | Lead Character Artist (freelance) | Malásia (remoto)
+4. Stirling Animation Studios | Character Modeling and Surfacing Artists | Reino Unido (remoto)
+5. HyperVR Games* | 3D Character Artist (Senior) | Letônia (remoto)
+6. Blue Wizard Digital | 3D Character Artist (contrato, vaga publicada na página) | Canadá
+7. Side | 3D Character Artist - Talent Pool (N Americas) | EUA/Canadá (remoto)
+8. Side | 3D Character Artist - Talent Pool (MEA) | Romênia (Bucareste)
+9. Amber Studio | 3D Artist - Characters (por projeto) | remoto
+10. Funko | 3D Digital Sculptor | EUA (Everett WA)
+11. Entropy Studio* | 3D Modeler Organic / Character | Espanha
+12. Gradient Effects | 3D Modeler (personagem, look dev) | EUA (Los Angeles)
+13. NECA | Senior 3D Character Artist / Digital Sculptor (candidatura geral) | EUA (NJ)
+14. Uchi VFX | Speculative (Modeling, Lookdev, Cloth/Hair) | Itália (remoto)
+15. Pulse Games | 3D Artist (personagens, ambientes, props) | Turquia (remoto)
+16. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto)
+17. Halfbrick Studios* | EOI Worldwide (Senior 3D Character Artist) | Austrália
+
+Espontânea, banco ou geral:
+18. Metricminds | Unsolicited Application | Alemanha
+19. Grimlore Games | Open Application | Alemanha
+20. Effetti Digitali (EDI) | CG Unsolicited Application | Itália
+21. Plastic Wax | Recruitment Form | Austrália
+22. Blowfish Studios | Expression of Interest | Austrália
+23. Palomar (Mediawan)* | Candidatura espontânea | França
+24. PlaySide Studios | Expression of Interest | Austrália
+25. The Game Atelier | Spontaneous Application (Art) | França
+26. beQ Entertainment | Careers form (3D Character Artist) | Itália
+27. Pixel Toys | Speculative Application | Reino Unido
+28. Blazing Griffin | Speculative + Freelancer Submissions | Reino Unido
+29. Exient | Speculative Application | Malta
+30. Double Eleven | Expression of Interest (UK) | Reino Unido
+31. Sierra Division | Submit Your Portfolio | EUA (remoto)
+32. Giant Ant | Freelance 3D (Get in Touch) | Canadá
+33. Arrival Game Creative | Job Interest | EUA/Reino Unido/Canadá (remoto)
+34. Dovetail Games | Open Applications | Reino Unido (remoto)
+35. Myrkur Games | Open application | Islândia
+36. Cubic Games | Apply for another position | Chipre
+37. Playkot | Candidatura geral | Sérvia (remoto)
+38. ChimpWorks | Open Application | Holanda
+39. Crema | Spontaneous application | Espanha
+40. Amuse Animation | Talent Pool (CV) | Espanha
+41. MiTale | Open application | Finlândia
+42. Scarecrow Studio | Join our team | Irlanda
+43. MiroWin | Work with us (3D artist) | Ucrânia
+44. SneakyBox | Open Application | Lituânia
+45. Gamajun Games | 2D/3D Artist | República Tcheca
+46. Invisible Seams Studios | Freelancer Interest Form | Canadá
+47. ProbablyMonsters | General Application | EUA
+48. East Side Effects | Candidatura geral de artistas | EUA (Nova York)
+49. Greensky Games | Careers (envio de CV) | EUA (Seattle)
+
 ## LEVA 01/10 manhã (consolidada 30/09 18h UTC)
 
 Consolidação dos blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" (W3, X2, UKIE, EU, V1, A1, A2, OA, CARM etc.). Vaga viva conferida em 30/09 por curl e API pública (BambooHR list, Workable widget, Jobvite, Recruitee, páginas das casas); dedupe em enviados.csv: nenhuma delas enviada. Nada preenchido hoje: as abas se preenchem às 8h47 (preenchimento vence de madrugada). Só entra na leva o que mostrar a caixa "sou humano" visível; se a caixa não aparecer, o maestro resolve sozinho. Respostas campo a campo em /home/user/apply/<familia>/resp-*.json, fora do repositório.
@@ -43,17 +104,17 @@ Presencial com visto (personagem ou 3D com personagem):
 25. PlaySide Studios | Expression of Interest | Austrália (Melbourne) | n | https://employmenthero.com/jobs/position/playside-studios-ltd-expression-of-interest/ | reCAPTCHA de imagem antes da conta | vaga viva; AUD 95.000
 26. The Game Atelier | Spontaneous Application, categoria Art | França (Paris) | n (aceita contrato longo) | https://www.game-atelier.com/jobapplication | Wix, reCAPTCHA de caixa ("Je ne suis pas un robot") | Long-term, Both, EUR 45.000
 27. beQ Entertainment | Careers form, posição Other: 3D Character Artist | Itália | n | https://www.beqentertainment.eu/careers | Wix, reCAPTCHA de caixa | reaplicar o menu Position of Interest (Other + campo especifique); o Wix não guardou
-28. Big Viking Games | Talent Community (Workable 42D15E5DDF) | Canadá (Toronto) | n | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/ | Turnstile 300x65 ao Submit | página viva (200); API de vagas deu 429 no momento, reconferir às 8h47; CAD 80.000
+28. (FORA 01/10 12h UTC) talent community, fora do escopo novo (sem Teamtailor Connect nem talent community). Big Viking Games | Talent Community (Workable 42D15E5DDF) | Canadá (Toronto) | n | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/ | Turnstile 300x65 ao Submit | página viva (200); API de vagas deu 429 no momento, reconferir às 8h47; CAD 80.000
 29. (FORA) Gamigo Philippines, Character Artist em Cebu: Filipinas está fora do escopo (Ásia só Singapura). Não entra na leva.
 30. Pulse Games | 3D Artist (Workable pulsegames CC77EB579A; personagens, ambientes e props) | Turquia (time 100% remoto, vaga de 12/06) | s | https://apply.workable.com/pulsegames/j/CC77EB579A/apply/ | Turnstile 300x65 visível ao Submit (preenchido na nuvem 01/10, sessão fechada) | só LinkedIn e Portfolio como campos extras; carta curta remota (UTC-3); script em /home/user/apply/leva/wk-fill-pulsegames.txt; reconferir viva às 8h47
 
 31. Pixel Toys | Speculative Application (BambooHR 31, jogos mobile, Leamington Spa) | Reino Unido | n | https://pixeltoysltd.bamboohr.com/careers/31 | reCAPTCHA de caixa VISIVEL (visto no ensaio local de 01/10, formulario preenchido, nao enviado) | pergunta Right to Work UK = No; Pais Brazil; Province vazio; respostas em /tmp/nightC/ans-pixeltoys.json (fora do repo)
 32. Blazing Griffin | Speculative Application (Games) (BambooHR 63) e Freelancer Submissions (Games) (BambooHR 62) | Reino Unido (Glasgow) | n | https://blazinggriffin.bamboohr.com/careers/63 | reCAPTCHA de caixa (chave unica do BambooHR) | duas portas Open em 01/10, casa inedita; pede cargo de interesse, CV, link de portfolio e pretensao (GBP 42.000 fixa / GBP 32/h freelance)
 33. Exient | Speculative Application (BambooHR 58, Malta, tem time remoto UK) | Malta | n | https://exient.bamboohr.com/careers/58 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10, casa inedita
-34. Guru Studio | General Application (BambooHR 11, animacao CG de personagem) | Canada (Toronto) | n | https://gurustudio.bamboohr.com/careers/11 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10; so houve carta que quicou, formulario nunca enviado
+34. (FORA 01/10 12h UTC) ja enviada: recibo BambooHR 'Thank you for applying at Guru Studio' de 27/08 no Gmail, General Application, e painel registra envio 27/08. Guru Studio | General Application (BambooHR 11, animacao CG de personagem) | Canada (Toronto) | n | https://gurustudio.bamboohr.com/careers/11 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10; so houve carta que quicou, formulario nunca enviado
 35. Side (Workable sideinc) | 3D Character Artist - Talent Pool (MEA, escritório de Bucareste) E57D73194A | Romênia (Bucareste, presencial; o formulário pergunta também os escritórios de Londres, Estocolmo e Varsóvia) | n | https://apply.workable.com/sideinc/j/E57D73194A/apply/ | Turnstile visível ao Submit (mesma plataforma das irmãs LATAM e N Americas) | vaga viva (API v2 200 em 01/10); as irmãs EU de Berlim, Estocolmo, Varsóvia, Madri e Londres aparecem no índice do jobs.workable.com mas não no quadro público, então só esta entra; USD 40/h, patrocínio Yes; pergunta de experiência AAA: responder pelo CV
 
-36. ICON Creative Studio | Intermediate Modeling/Texture Artist (BambooHR 136, Assets, CAD 63-85 mil) | Canada (Vancouver) | n | https://iconcreative.bamboohr.com/careers/136 | reCAPTCHA de caixa VISIVEL (visto no ensaio local de 01/10 da noite P, form preenchido e nao enviado) | a irma Character Sculptor ja foi enviada em 23/09, esta e outra vaga; Date Available e Desired Pay opcionais (CAD 63.131, base da faixa)
+36. (FORA 01/10 12h UTC) ja enviada: recibo BambooHR 'Thank you for applying at ICON Creative Studio!' de 31/08 no Gmail para esta mesma vaga Intermediate Modeling/Texture Artist. ICON Creative Studio | Intermediate Modeling/Texture Artist (BambooHR 136, Assets, CAD 63-85 mil) | Canada (Vancouver) | n | https://iconcreative.bamboohr.com/careers/136 | reCAPTCHA de caixa VISIVEL (visto no ensaio local de 01/10 da noite P, form preenchido e nao enviado) | a irma Character Sculptor ja foi enviada em 23/09, esta e outra vaga; Date Available e Desired Pay opcionais (CAD 63.131, base da faixa)
 
 Obs. noite P (01/10) sobre a 34 Guru: o formulario pede, obrigatorios, teste de velocidade da internet de casa (link insight.gurustudio.com:3003), Wifi ou Ethernet e se da para trocar de pacote; so o Vini sabe responder.
 
@@ -186,7 +247,7 @@ A1-2. 30/09 | EDI Effetti Digitali (Milao, Italia, presencial; candidatura espon
 V1-1. 30/09 | Effetti Digitali (Milao, Italia; Zoho Recruit, presencial) | CG - Unsolicited Application (id 46723000004912622) | Zoho Recruit: aplicacao tem campo "Type below image text" (captcha de texto visivel) na hora do Submit; NAO preenchido (formulario tem CV, contato, termos); usar "I am ready to move for the role, and I would need visa sponsorship." | s | https://effettidigitali.zohorecruit.eu/jobs/careers-en/46723000004912622/CG---Unsolicited-Application
 V1-2. 30/09 | Gradient Effects (Los Angeles, presencial) | 3D MODELER (Maya, ZBrush, Mari, look dev, noções de rig) | Gravity Forms em varias etapas com reCAPTCHA de caixa visivel; NAO preenchido; vaga lida inteira em gradientfx.com/jobs, formulario em gradientfx.com/application | s | https://gradientfx.com/application/
 OA-1. 30/09 | Softgames (Berlim, remoto; jogos casuais) | Unsolicited Application (Recruitee 1981488 campos) | Recruitee: hCaptcha de imagem aparece ao clicar Submit; todos os campos preenchidos (cargo 3D Character Artist, EUR 45.000, local Olinda, relocacao Yes, consentimento, CV e carta anexados) | https://jobs.softgames.de/o/unsolicited-application/c/new
-OA-2. 30/09 | Big Viking Games (Toronto, presencial; Talent Community) | Big Viking Games Talent Community (Workable 42D15E5DDF) | Workable: Turnstile Cloudflare 300x65 visivel ao clicar Submit (fica em Submitting); nome, email, telefone, endereco Olinda, CV e carta preenchidos | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/
+OA-2. (FORA 01/10 12h UTC, talent community; ver item 28) 30/09 | Big Viking Games (Toronto, presencial; Talent Community) | Big Viking Games Talent Community (Workable 42D15E5DDF) | Workable: Turnstile Cloudflare 300x65 visivel ao clicar Submit (fica em Submitting); nome, email, telefone, endereco Olinda, CV e carta preenchidos | https://apply.workable.com/big-viking-games-3/j/42D15E5DDF/apply/
 OA-3. 30/09 | Metricminds (Frankfurt, hibrido) | Unsolicited Application (BambooHR 39) | BambooHR: reCAPTCHA de caixa 304x78 visivel; preenchido e conferido (CV e carta anexados, UE eligible No, visto Yes, EUR 45.000) | https://metricmindsgmbh.bamboohr.com/careers/39
 RF-1. 30/09 | Framestore (Londres, hibrido; VFX grande) | Realtime Generalist (Expression of Interest) | Recruitee: hCaptcha de imagem visivel ao clicar Send (espelho); todos os campos preenchidos e conferidos (CV anexado, GBP 50.000, local Olinda/Brazil, visto Yes, hibrido Yes, consentimento marcado); sessao fechada, refazer na leva | https://framestore.recruitee.com/o/realtime-generalist-expression-of-interest-1/c/new
 NI-1. 01/10 | Dovetail Games (Chatham, Reino Unido; remoto UK-only, veto de região não vale mais; Train Sim World) | Open Applications (candidatura espontânea, Recruitee) | Recruitee: captcha de imagem visível ("Skip"/imagens) ao clicar Send; formulário preenchido campo a campo (CV anexado, GBP 42.000, elegível UK = No, marcadas "Overseas remote" e "VISA Sponsorship required", texto com a frase remota) | n | https://careers.dovetailgames.com/o/open-applications/c/new
