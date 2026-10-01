@@ -51,8 +51,9 @@ Presencial com visto (personagem ou 3D com personagem):
 32. Blazing Griffin | Speculative Application (Games) (BambooHR 63) e Freelancer Submissions (Games) (BambooHR 62) | Reino Unido (Glasgow) | n | https://blazinggriffin.bamboohr.com/careers/63 | reCAPTCHA de caixa (chave unica do BambooHR) | duas portas Open em 01/10, casa inedita; pede cargo de interesse, CV, link de portfolio e pretensao (GBP 42.000 fixa / GBP 32/h freelance)
 33. Exient | Speculative Application (BambooHR 58, Malta, tem time remoto UK) | Malta | n | https://exient.bamboohr.com/careers/58 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10, casa inedita
 34. Guru Studio | General Application (BambooHR 11, animacao CG de personagem) | Canada (Toronto) | n | https://gurustudio.bamboohr.com/careers/11 | reCAPTCHA de caixa (chave unica do BambooHR) | Open em 01/10; so houve carta que quicou, formulario nunca enviado
+35. Side (Workable sideinc) | 3D Character Artist - Talent Pool (MEA, escritório de Bucareste) E57D73194A | Romênia (Bucareste, presencial; o formulário pergunta também os escritórios de Londres, Estocolmo e Varsóvia) | n | https://apply.workable.com/sideinc/j/E57D73194A/apply/ | Turnstile visível ao Submit (mesma plataforma das irmãs LATAM e N Americas) | vaga viva (API v2 200 em 01/10); as irmãs EU de Berlim, Estocolmo, Varsóvia, Madri e Londres aparecem no índice do jobs.workable.com mas não no quadro público, então só esta entra; USD 40/h, patrocínio Yes; pergunta de experiência AAA: responder pelo CV
 
-Total: 34 portas vivas (30 + 4 achadas em 01/10 pela noite C).
+Total: 35 portas vivas (30 + 4 achadas em 01/10 pela noite C + 1 Side Bucareste da noite B).
 
 Saíram da leva em 30/09 18h UTC: Juego Studios (Índia, regra nova de países, e captcha de texto + Turnstile); EDI versão italiana (duplicata da casa, ver 21); OA-3 (fundido com Metricminds, 19). Nenhuma linha dos blocos antigos estava enviada ou fechada; nenhuma viola "sem animador", "sem Japão" nem "sem Brasil" (Amber Studio é de fora, só contrata do Brasil). Os blocos "LEVA 30/09 manhã" e "LEVA REMOTO 30/09" abaixo ficam só como histórico; vale este bloco.
 
