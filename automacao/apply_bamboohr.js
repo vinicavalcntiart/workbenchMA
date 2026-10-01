@@ -148,6 +148,31 @@ const log = (...a) => console.log('[' + slug + ']', ...a);
       await p.waitForTimeout(600);
     }
 
+    // RADIOS por pergunta (01/10): chave = regex do enunciado, valor = texto exato da opcao.
+    for (const [q, opt] of Object.entries(A.radios || {})) {
+      const r = await p.evaluate(({q, opt}) => {
+        const re = new RegExp(q, 'i');
+        const nos = [...document.querySelectorAll('label,legend,div,span,p')].filter(e => re.test((e.innerText || '').slice(0, 300)) && (e.innerText || '').length < 400);
+        for (const n of nos) {
+          let w = n;
+          for (let i = 0; i < 5 && w; i++, w = w.parentElement) {
+            const rs = [...w.querySelectorAll('input[type=radio]')];
+            if (!rs.length) continue;
+            for (const r of rs) {
+              let lab = '';
+              if (r.id) { const l = document.querySelector('label[for="' + CSS.escape(r.id) + '"]'); if (l) lab = l.innerText; }
+              if (!lab) { const l = r.closest('label'); if (l) lab = l.innerText; }
+              if (!lab && r.parentElement) lab = r.parentElement.innerText;
+              if ((lab || '').trim().toLowerCase() === opt.toLowerCase()) { r.click(); return 'ok:' + lab.trim(); }
+            }
+          }
+        }
+        return null;
+      }, {q, opt});
+      log(r ? 'radio ' + q.slice(0, 40) + ' => ' + r : 'RADIO NAO ACHADO: ' + q);
+      await p.waitForTimeout(600);
+    }
+
     // Antes de enviar, listar o que AINDA esta obrigatorio e vazio. Foi a falta disso que fez
     // o primeiro envio na Offworld voltar com quatro "Please fill in this field" na tela.
     const faltando = await p.evaluate(() => [...document.querySelectorAll('input,select,textarea')]
