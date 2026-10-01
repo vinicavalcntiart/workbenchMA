@@ -45,6 +45,20 @@ triângulos grandes.
   Em 0 volta ao comportamento anterior.
 - **Locked Areas (novo):** grupo `LOD_Lock`, descrito no passo 4.
 
+## Versão 1.2 (topologia para deformação)
+
+O LOD3 da 1.1 tinha a ponta do braço dobrada sobre si mesma (cunha escura no
+render). Não era non-manifold: a malha estava fechada, mas 8 arestas tinham as
+faces viradas uma contra a outra, porque o anel chegou a 5 vértices.
+
+- **Min Ring Verts (novo, padrão 8):** nenhum anel fechado (braço, perna,
+  dedo) e nenhuma abertura (barra, gola, punho) fica com menos vértices que
+  isso. 8 segura volume e deformação de cotovelo e joelho. Em 0 desliga.
+- **Checagem de dobra:** além do non-manifold, cada lote é desfeito se criar
+  aresta com as faces a mais de ~100 graus.
+- **Só quads:** desligue **Pole Fallback**. O addon para quando acabam os loops
+  limpos, sem triângulos novos, mas não chega aos LODs mais baixos.
+
 ## Geometry Nodes
 
 Com **Use Modifiers (Geometry Nodes)** ligado, o addon usa a malha com os
@@ -74,10 +88,18 @@ triângulos) e seams nas laterais. Imagem: `lods_braco_sheet_v2.jpg`.
 | 0 | 1.752 | 16 vértices | 0 | 0 | 0 | 2 cadeias |
 | 1 | 840 (876) | 12 | 0 | 0 | 0 | 2 cadeias |
 | 2 | 438 (438) | 8 | 0 | 0 | 0 | 2 cadeias |
-| 3 | 280 (219) | 5, no mesmo lugar | 0 | 0 | 0 | 2 cadeias |
+| 3 | 344 (219) | 8, no mesmo lugar | 0 | 0 | 0 | 2 cadeias |
+
+Na 1.2 (`lods_braco_sheet_v3.jpg`): zero dobras em todos os LODs, a barra do
+robe para em 8 vértices (na 1.1 caía para 4) e o LOD3 para em 344 triângulos
+por causa do anel mínimo. Quads e triângulos: LOD1 408/24, LOD2 190/58, LOD3
+106/132 (os triângulos novos ficam na axila e no ombro, pelo Pole Fallback).
+
+Com Pole Fallback desligado (`t_roupa_so_quads_520.py`): nenhum triângulo novo
+(os 24 são do leque do pescoço original), mas o LOD2 e o LOD3 param em 552.
 
 Com a mão travada (`t_roupa_mao_travada_520.py`): a mão fica com os 82
-vértices em todos os LODs e o anel do cotovelo cai 16, 12, 5, 4. O LOD3 para
-em 412 triângulos porque a mão não entra na conta.
+vértices em todos os LODs e o anel do cotovelo cai 16, 12, 8, 8. O LOD2 e o
+LOD3 param em 490 triângulos porque a mão não entra na conta.
 
-Ainda não foi testado no personagem de produção depois da versão 1.1.
+Ainda não foi testado no personagem de produção depois da versão 1.2.

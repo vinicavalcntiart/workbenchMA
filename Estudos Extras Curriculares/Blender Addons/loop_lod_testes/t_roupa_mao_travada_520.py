@@ -71,8 +71,9 @@ def stats(o):
             ring[round(k, 2)] = ring.get(round(k, 2), 0) + 1
     sz = [m.vertices[i].co.z for e in m.edges if e.use_seam for i in e.vertices]
     seams = (sum(1 for e in m.edges if e.use_seam), round(min(sz),2) if sz else None, round(max(sz),2) if sz else None)
+    dob = loop_lod.fold_count(bmx); bord = sum(1 for e in bmx.edges if e.is_boundary)
     bmx.free()
-    return dict(tris=tr, ngons=ng, nonmanifold=nm, sem_espelho=sem, aneis_protegidos_braco_dir=dict(sorted(ring.items())), seams=seams)
+    return dict(dobras=dob, borda_barra_gola=bord, tris=tr, ngons=ng, nonmanifold=nm, sem_espelho=sem, aneis_protegidos_braco_dir=dict(sorted(ring.items())), seams=seams)
 P("RESULT LOD0", stats(ob))
 gl = ob.vertex_groups.new(name="LOD_Lock")
 gl.add([v.index for v in ob.data.vertices if abs(v.co.x) > 0.8], 1.0, 'REPLACE')

@@ -77,8 +77,8 @@ def stats(o):
 P("RESULT LOD0", stats(ob))
 p = bpy.context.scene.loop_lod
 for r in (0.5, 0.25, 0.125): p.lods.add().ratio = r
-p.use_evaluated = False
+p.use_evaluated = False; p.pole_fallback = False
 t0 = time.time(); src, out = loop_lod.generate_lods(bpy.context, ob, p)
 P("RESULT tempo", round(time.time() - t0, 1), "s")
 for n, t, g in out: P("RESULT", n, "alvo", t, stats(bpy.data.objects[n]))
-bpy.ops.wm.save_as_mainfile(filepath="/tmp/claude-0/-home-user-workbenchMA/f47732b7-f570-5d7c-a0c7-06fcea6d4438/scratchpad/lodtest2.blend")
+bpy.ops.wm.save_as_mainfile(filepath="/tmp/claude-0/-home-user-workbenchMA/f47732b7-f570-5d7c-a0c7-06fcea6d4438/scratchpad/lodtest4.blend")
