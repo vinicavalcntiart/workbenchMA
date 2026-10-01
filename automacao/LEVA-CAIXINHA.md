@@ -64,6 +64,7 @@ Espontânea, banco ou geral:
 47. ~~ProbablyMonsters | General Application | EUA~~ ENVIADA 01/10 ~13h45 UTC pela nuvem, sem caixa (W11, tela Application Sent do Jobvite). NÃO reenviar.
 48. East Side Effects | Candidatura geral de artistas | EUA (Nova York)
 49. Greensky Games | Careers (envio de CV) | EUA (Seattle)
+50. Psyop | Job Application (Jotform 231947297367168; posição CG Modeler, tipo Freelance, diária USD 320, skills Modeling/Texturing/LookDev/Groom, CV PDF) | EUA (Los Angeles/Nova York), remoto freelance | https://form.jotform.com/231947297367168 (no psyop.com/contact) | reCAPTCHA de caixa VISÍVEL "Please verify that you are a human" antes do Next | achada por W15 em 01/10 ~15h UTC; nada enviado, preencher na leva
 
 ## LEVA 01/10 manhã (consolidada 30/09 18h UTC)
 
