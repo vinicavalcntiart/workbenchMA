@@ -132,3 +132,12 @@ Ver `LEIA-ME.md` na raiz.
 - **Meta da leva:** 50 formulários novos com precisão e pelo menos 1 entrevista confirmada com a agenda no horário de Recife. Volume contínuo, decisão autônoma de preenchimento, sem travar em análise longa.
 - **Senhas e logins (Vini, 01/10):** antes de criar conta, trocar senha ou dar um login como travado, o agente confere SEMPRE os documentos de credenciais da pasta da campanha no Google Drive do Vini ("CAMPANHA - credenciais ..."; os marcados "APAGAR" têm senha errada) e o /home/user/apply/cred.json. Troca de senha de conta da campanha está autorizada pelo Vini. Senha nunca entra no repositório.
 - **Pergunta "já jogou nosso jogo?" (01/10):** a resposta padrão "jogo do próprio estúdio" é citar um jogo deles na carta, não afirmar que jogou. Pergunta de fato ("Played X?", "Have you played our games?") vai com "No", a não ser que o Vini tenha dito que jogou.
+
+## Foco em conversão (Vini, 01/10 ~18h30 UTC)
+- **Meta real: entrevista confirmada.** Formulário é a primeira etapa. Resposta a recrutador, estúdio ou líder de arte vem antes de tudo: o vigia responde na hora com a agenda e fecha a call.
+- **Troll VFX é prioridade:** acompanhar o fio do Anthony e fechar o agendamento.
+- **Notas diretas a recrutadores** das candidaturas recentes de jogos e animação continuam todo dia.
+- **Nichos: só GAMES e ANIMAÇÃO/VFX** (cinema, séries, TV, tempo real), para 3D Character Artist, Stylized Character, 3D Generalist e LookDev. **Colecionáveis, estátuas e brinquedos saem.**
+- **Geografia:** América do Norte (EUA e Canadá), Europa e Oceania com contratação remota. **Ásia inteira (inclusive Singapura) e América Latina saem.**
+- E-Line no CV; nunca vaga interna da E-Line. Room 8 fora.
+- **Fuso:** a agenda do Vini e toda organização de horário seguem Recife (UTC-3). No email ao estúdio, o horário vai no fuso do estúdio (regra de 01/10 do próprio Vini), com a conferência de conflito feita no horário de Recife.
