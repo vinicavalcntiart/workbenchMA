@@ -122,3 +122,11 @@ Ver `LEIA-ME.md` na raiz.
 - **Remoto vira segunda frente (Vini, 30/09): "Vamos tentar vaga remota como segunda frente. Vamos fazer hj um dia dedicado a vagas remotas como a eline."** O teto de 30% sai. Vaga FIXA ou contrato longo, remota, que contrata do Brasil (worldwide, Americas, LATAM, Brasil, contractor ou EOR tipo Deel/Remote/Oyster), entra como frente própria, ao lado da mudança com visto. Em 30/09 o dia inteiro é dela. Nessas vagas a carta NÃO leva a frase de mudança e visto: leva "I work fully remote today as a contractor for a US studio, from UTC-3, with good overlap with US and European hours." Campo de país no formulário: a verdade (Brasil). Remoto só-EUA ou só-UE continua fora.
 - Ordem de envio: primeiro as 27 prontas de /home/user/apply/terca-prontas.json, depois a FILA-TERCA e as portas travadas.
 - Na quarta as rotinas extras de terça param sozinhas, porque o agendamento delas é só para o dia 2.
+
+## Modo alto desempenho, segunda leva (Vini, 01/10 ~13h UTC)
+- **Fuso de Recife (BRT, UTC-3) em tudo que for agenda:** convite de entrevista, horários oferecidos e respostas por email sempre citam o horário de Recife (e, quando ajudar, o do estúdio ao lado). O link da agenda continua o mesmo.
+- **E-Line Media:** continua no CV e no histórico em todas as candidaturas. Só não se aplica a vaga DENTRO da E-Line e não se escreve para nenhum endereço da E-Line.
+- **Room 8 fora** de vez, e nada de rota de contratação local no Brasil: só contratação internacional ou remota global, paga em dólar ou euro.
+- **EA entra** (o Vini listou a EA entre os alvos). A conta do jobs.ea.com já existe.
+- **Fontes de alto valor primeiro:** quadros (Greenhouse, Ashby, Lever, Workable, SmartRecruiters, Workday) de grandes de tech, games, brinquedos e metaverso (Mattel, Hasbro, LEGO, Roblox, Snap, Meta, Unity, Epic, Ubisoft, EA etc.), dos grandes estúdios de outsourcing 3D (Virtuos, Keywords, Sperasoft, ArtBully, elite3D, Mold3D, Counterpunch etc.) e de AA/AAA com vaga remota de Senior 3D Character Artist, Stylized Character, 3D Generalist e LookDev.
+- **Meta da leva:** 50 formulários novos com precisão e pelo menos 1 entrevista confirmada com a agenda no horário de Recife. Volume contínuo, decisão autônoma de preenchimento, sem travar em análise longa.
