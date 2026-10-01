@@ -63,8 +63,9 @@ o caso de visto, nunca como algo que o prenda a um lugar.
 
 Praticamente tudo que for **fato ou cortesia**:
 
-- **Recusa explícita** de um humano, em endereço que aceita resposta: responde com o texto de
-  `automacao/template-rejeicao.md`, trocando `{TEAM}`. Uma por thread.
+- **Recusa (de humano ou automática): NÃO responde** (Vini, 01/10: mandar mensagem para quem acabou
+  de recusar "pega super mal e queima pontes"). Só registra em processados.csv, e a casa fica fechada
+  para follow-up, agenda e carta nova.
 - **Pedido de informação** que ele já sabe: visto, disponibilidade, pretensão, ferramentas,
   anos de experiência, portfólio, se aceita remoto, se aceita realocar, se fala inglês.
 - **Pedido de material** que já existe: portfólio, CV, carta, LinkedIn, breakdown de grooming.
