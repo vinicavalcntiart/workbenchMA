@@ -8,27 +8,28 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 46 portas vivas com caixa "sou humano" já vista. Conferido sem nuvem: BambooHR /careers/list (Stirling 77, Metricminds 39, Pixel Toys 31, Blazing Griffin 63, Exient 58, Amuse 164, Mercury 118, Flying Bark 114: todas listadas), Recruitee /api/offers (Framestore 2715433 e 513953, Softgames 212775, Dovetail 1439246, Huuuge 796516: publicadas), Workable widget (Double Eleven 99F32D8BF0 e ZeptoLab 4BB602E1A6 na API; Pulse CC77EB579A na API; Lockwood CB721A7F95 no quadro da própria Lockwood), JazzHR Zoic (no widget do site), Rippling Iconic e MY.GAMES 26116 (anúncio aberto no navegador local), páginas próprias 200 com o formulário. Gmail: nenhuma recusa nova das casas da leva (o email da Framestore de 01/10 é só questionário de diversidade). Rota alternativa sem caixinha: procurada de novo casa por casa (ver processados.csv, N6 02/10) e nenhuma achada.
 Ficha campo a campo, respostas padrão, pretensão e scripts: /home/user/apply/leva0210/FICHA-LEVA-0210.md (fora do repositório). CV conferido (%PDF-).
+N6b, nuvem 02/10 ~02h50-04h00 UTC (Kernel, stealth desligado): as 46 portas abertas na nuvem, uma por vez. ZERO envio: todas mostraram a caixa "sou humano" visível (nada tocado, nada contornado), então seguem todas na leva. Ao abrir: BambooHR 4, 17, 18, 23, 24, 25, 34 e 43 (reCAPTCHA de caixa), 6, 11, 14, 16, 19, 21, 30, 32, 33, 35, 36, 37, 39, 41, 42 e 22 (reCAPTCHA), 12 e 27 (Turnstile), 20 (captcha de texto em imagem), 38 (hCaptcha de caixa), 3, 5, 7 e 8 (reCAPTCHA de caixa no formulário). Depois de preencher tudo e apertar enviar: 2 e 45 (Recruitee, hCaptcha de imagem), 9, 15 e 46 (Workable, Turnstile), 13 (Rippling, Turnstile), 31 (Playkot, Turnstile ao lado do Submit), 28 (JotForm, desafio de imagem do reCAPTCHA), 40 (Tally, reCAPTCHA de caixa na página 2). Já vistos na nuvem em 01/10 e iguais à família: 1, 10, 26, 29 e 44. Nenhum formulário ficou aberto: a sessão foi fechada.
 
 Casa grande:
-1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres) | Recruitee, hCaptcha de imagem no Send
-2. Framestore | Freelance: CG - Los Angeles | remoto | Recruitee, hCaptcha (se for uma Framestore só no dia, esta primeiro)
+1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres) | Recruitee, hCaptcha de imagem no Send (caixa visível na nuvem 01/10 (W11), mesma família do item 2)
+2. Framestore | Freelance: CG - Los Angeles | remoto | Recruitee, hCaptcha (se for uma Framestore só no dia, esta primeiro) (caixa visível na nuvem 02/10: preenchido inteiro, hCaptcha de imagem ao Send)
 
 Personagem:
-3. Zoic Studios | 3D Senior Character Modeler (contrato 6 semanas) | Canadá (remoto BC) | JazzHR Human Check
-4. Stirling Animation Studios | Character Modeling and Surfacing Artists | Reino Unido (remoto) | BambooHR
-5. HyperVR Games | 3D Character Artist | Letônia (remoto) | InGame Job, reCAPTCHA no modal
-6. Blue Wizard Digital | 3D Character Artist (contrato) | Canadá | Gravity Forms (carta já foi 01/10)
-7. Entropy Studio | 3D Modeler Organic / Character | Espanha | Wix
-8. Gradient Effects | 3D Modeler | EUA (Los Angeles) | Gravity Forms (carta já foi 01/10)
-9. Pulse Games | 3D Artist (personagens) | remoto | Workable Turnstile
-10. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto) | Recruitee hCaptcha
-11. Halfbrick Studios | EOI Worldwide (Senior 3D Character Artist) | Austrália (remoto) | reCAPTCHA
-12. Myrkur Games | Open application | Islândia | Turnstile
-13. Iconic Interactive | Mid-Snr Generalist Artist (personagens e criaturas) | Reino Unido | Rippling Turnstile
-14. MY.GAMES | Artist 26116 | remoto | reCAPTCHA
-15. Lockwood Publishing | Digital Fashion Designer (roupa 3D de personagem) | Reino Unido (remoto) | Workable Turnstile
-16. The Loc Studios | CGI Generalist | Reino Unido (híbrido ou remoto) | Tally reCAPTCHA
-17. Flying Bark Productions | CFX Artist (EOI para jan/2027) | Austrália | BambooHR
+3. Zoic Studios | 3D Senior Character Modeler (contrato 6 semanas) | Canadá (remoto BC) | JazzHR Human Check (caixa visível na nuvem 02/10: reCAPTCHA de caixa no formulário; o anúncio pede residência em BC)
+4. Stirling Animation Studios | Character Modeling and Surfacing Artists | Reino Unido (remoto) | BambooHR (caixa visível na nuvem 02/10: reCAPTCHA de caixa no formulário)
+5. HyperVR Games | 3D Character Artist | Letônia (remoto) | InGame Job, reCAPTCHA no modal (caixa visível na nuvem 02/10: reCAPTCHA de caixa (tamanho normal) no modal)
+6. Blue Wizard Digital | 3D Character Artist (contrato) | Canadá | Gravity Forms (carta já foi 01/10) (caixa visível na nuvem 02/10: reCAPTCHA de caixa ao abrir)
+7. Entropy Studio | 3D Modeler Organic / Character | Espanha | Wix (caixa visível na nuvem 02/10: reCAPTCHA de caixa (tamanho normal) no formulário)
+8. Gradient Effects | 3D Modeler | EUA (Los Angeles) | Gravity Forms (carta já foi 01/10) (caixa visível na nuvem 02/10: reCAPTCHA de caixa (tamanho normal) no formulário)
+9. Pulse Games | 3D Artist (personagens) | remoto | Workable Turnstile (caixa visível na nuvem 02/10: preenchido inteiro, Turnstile "Verify you are human" ao Submit)
+10. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto) | Recruitee hCaptcha (caixa visível na nuvem 01/10 (W11); Recruitee repetiu o hCaptcha de imagem em 02/10 (Framestore, Huuuge))
+11. Halfbrick Studios | EOI Worldwide (Senior 3D Character Artist) | Austrália (remoto) | reCAPTCHA (caixa visível na nuvem 02/10: reCAPTCHA de caixa ao abrir)
+12. Myrkur Games | Open application | Islândia | Turnstile (caixa visível na nuvem 02/10: Turnstile ao abrir)
+13. Iconic Interactive | Mid-Snr Generalist Artist (personagens e criaturas) | Reino Unido | Rippling Turnstile (caixa visível na nuvem 02/10: preenchido inteiro (CV, carta, +55, Olinda), Turnstile ao Apply)
+14. MY.GAMES | Artist 26116 | remoto | reCAPTCHA (caixa visível na nuvem 02/10: reCAPTCHA de caixa ao abrir)
+15. Lockwood Publishing | Digital Fashion Designer (roupa 3D de personagem) | Reino Unido (remoto) | Workable Turnstile (caixa visível na nuvem 02/10: preenchido inteiro, Turnstile ao Submit)
+16. The Loc Studios | CGI Generalist | Reino Unido (híbrido ou remoto) | Tally reCAPTCHA (caixa visível na nuvem 02/10: reCAPTCHA de caixa ao abrir)
+17. Flying Bark Productions | CFX Artist (EOI para jan/2027) | Austrália | BambooHR (caixa visível na nuvem 02/10: reCAPTCHA de caixa no formulário)
 
 Espontânea, banco ou geral:
 18. Metricminds | 19. Grimlore Games | 20. Effetti Digitali (captcha de texto) | 21. Palomar / Mediawan | 22. beQ Entertainment | 23. Pixel Toys | 24. Blazing Griffin (só a 63, Speculative Games) | 25. Exient | 26. Double Eleven | 27. Sierra Division | 28. Giant Ant | 29. Dovetail Games | 30. Cubic Games | 31. Playkot | 32. ChimpWorks | 33. Crema | 34. Amuse Animation | 35. MiTale | 36. Scarecrow Studio | 37. MiroWin | 38. SneakyBox | 39. Gamajun Games | 40. Invisible Seams | 41. East Side Effects | 42. Greensky Games | 43. Mercury Filmworks | 44. Dreamfarm Studios | 45. Huuuge Games | 46. ZeptoLab
