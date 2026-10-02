@@ -53,7 +53,7 @@ Quando uma PESSOA responde com abertura real, a resposta do maestro já agradece
 
 Oferece quando TODOS valem:
 - escreveu uma pessoa de verdade, com nome (não recibo automático, não no-reply, não template de ATS);
-- o tom abre porta: "vou passar para o time", "gostamos do seu trabalho", "vamos guardar para vagas futuras que combinem", "pode haver algo", pedido de mais material;
+- o tom abre porta, mesmo sem pedir conversa (Vini, 02/10: agenda vai para quem mostrar interesse, não só para quem pede call): elogio ao portfólio, pergunta, pedido de informação, "vou passar para o time", "gostamos do seu trabalho", "vamos guardar para vagas futuras que combinem", "pode haver algo", pedido de mais material;
 - o estúdio está no escopo (personagem, fora do Brasil e do Japão);
 - a agenda ainda não foi oferecida naquele fio.
 
@@ -62,7 +62,7 @@ NÃO oferece quando:
 - é resposta de equipe genérica sem nome, ou só confirma recebimento;
 - a pessoa já propôs horário (aí aceita o horário, conferido contra a agenda);
 - já houve oferta de agenda naquele fio, ou o estúdio tem veto escrito de visto para a única vaga em jogo.
-Na dúvida, agradece sem a agenda e conta ao Vini numa linha.
+Na dúvida, MANDA a agenda (Vini, 02/10: "vc falou que so ia mandar se fosse explicito ai é ruim"). Só não vai em recusa, recibo automático, mensagem fria e casa com recusa no histórico.
 
 ## Coreia fora, e só estúdio que trabalha em inglês (Vini, 01/10: "n po coreia é foda ne tem que ser um pais que minimamente fale ingles")
 
