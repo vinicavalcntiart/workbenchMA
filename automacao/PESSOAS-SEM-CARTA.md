@@ -21073,3 +21073,31 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **RASCUNHO:** `r-5498404961644121080`.
 
 **Conferência:** `confere-carta.py` limpo nas duas (246 e 230 palavras, 2 emojis, 6 negritos); pior par 20% contra as cartas de 01/10; HTML por `monta-html-carta.py`.
+
+## RODADA 02/10 04h UTC, N10 (Joe extra da madrugada): as quatro casas novas do N2 mais a segunda leva do Steam.
+
+### FICHA N10-1: **Kindred Spirit Games** (caixa geral), Londres, **REINO UNIDO** `h***@kindredspiritgames.com`, **ALTA**
+- **URL:** `https://kindredspiritgames.com` (mailto na home) e `/press-kit/` (fundadores Megan Ralph, Design Director, e Joel Herber, Technical Director, ex-Fall Guys; nenhum dos dois com email publicado, só `hello@` e `press@`). Londres por gamedeveloper.com.
+- **FRASE DA CASA, literal** (press kit): *"strong narrative and multilayered characters"*.
+- **DEDUPE:** Gmail `in:anywhere` pelas quatro casas → `{}`. Zero no repositório.
+- **RESSALVA:** dois sócios em protótipo, sem vaga e sem arte 3D mostrada.
+- **RASCUNHO:** `r3711183135585447828` (abre com "Hello Kindred Spirit Games team").
+
+### FICHA N10-2: **North Beach Games** (caixa geral; estúdio de Praga), **REPÚBLICA TCHECA** (sede em San Rafael, EUA) `c***@northbeachgames.com`, **ALTA**
+- **URL:** `https://northbeachgames.com` (mailto; *"Our focus is on open-world survival crafting titles"*; vaga aberta Art Director / Lead Artist de Stranded Deep 2) e o comunicado de Praga (GM Tomáš Pšenička, CTO Sam Edwards, sem email pessoal). O único outro endereço é de assessoria de imprensa terceirizada.
+- **RESSALVA:** sobrevivência 3D; personagem e criatura são parte, não o centro. Carta citando criatura e Praga.
+- **RASCUNHO:** `r-7949010954933772625`.
+
+### FICHA N10-3: **Summer Eternal** (caixa geral), Zagreb, **CROÁCIA** `i***@summereternal.com`, **ALTA**
+- **URL:** `https://summereternal.com` (rodapé *"Contact the Team"*, `info@`; empresa em Zagreb) e `/blog/studio-architecture`. O único nome com email (Dora Klindžić) é *Writer/Editor* do blog, fora do alvo.
+- **FRASE DA CASA, literal:** *"Artistically driven. Creative led."*. Jogo: Red Rooster.
+- **RESSALVA:** Red Rooster sem imagem publicada; 3D não confirmado.
+- **RASCUNHO:** `r-4975210619344466523`.
+
+### FICHA N10-4: **Antihero Studios** (caixa geral), Barcelona, **ESPANHA** `h***@antiherostudios.com`, **ALTA**
+- **URL:** `https://antiherostudios.com/contact` e `/en/press` (Barcelona, ~11 pessoas, MISFITZ com seis personagens; CEO Brice Laville Saint-Martin, ex-Art Director de Clash Royale, sem email pessoal).
+- **FRASE DA CASA, literal:** *"games worth sharing"*.
+- **RESSALVA:** jogo mobile top-down; personagem estilizado é o forte.
+- **RASCUNHO:** `r4511873846949212855`.
+
+**Conferência das quatro:** `confere-carta.py --tipo generica` limpo (215 a 234 palavras, 1 emoji no fecho, 6 negritos), pior par 28% no lote do dia; HTML por `monta-html-carta.py`.
