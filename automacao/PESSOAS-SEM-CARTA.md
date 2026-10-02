@@ -21101,3 +21101,20 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **RASCUNHO:** `r4511873846949212855`.
 
 **Conferência das quatro:** `confere-carta.py --tipo generica` limpo (215 a 234 palavras, 1 emoji no fecho, 6 negritos), pior par 28% no lote do dia; HTML por `monta-html-carta.py`.
+
+### FICHA N10-5: **Michael Meier**, *Founder*, **1A3M STUDIO** (Skeleton Crew, pirata VR 3D com tripulação de esqueletos; Londres, **REINO UNIDO**) `m***@1a3m-studio.com`, **ALTA**
+- **URL:** `https://1a3m-studio.com/presskit` (*"Founder michael.meier@..."*, *"Location London, UK"*, fundada por dois irmãos em 2023).
+- **POR QUE ELE:** casa de dois irmãos; ele é o fundador com email publicado. Jogo de personagem estilizado visto de perto em VR.
+- **FRASE DA CASA, literal:** *"a light-hearted, action-adventure VR pirate game"*.
+- **FONTE NOVA:** segunda leva do Steam (900 jogos de mais vendidos, em breve e marcas estilizado/fofo/3D, mais 2.229 de marcas de personagem), 1.100 domínios nunca tocados lidos em home, contato, about, equipe, press kit, impressum e carreiras, com decodificação de `data-cfemail`.
+- **DEDUPE:** Gmail `in:anywhere` → `{}`. Zero no repositório.
+- **RESSALVA:** sem vaga publicada.
+- **RASCUNHO:** `r2546376196086250334`.
+
+### FICHA N10-6: **Thomas Brush**, *fundador e diretor*, **ATMOS GAMES** (Twisted Tower, tiro em primeira pessoa num parque dos anos 50 com mascotes de conto de fadas, publicado pela 3D Realms; Pinstripe; **EUA**) `t***@thomasbrush.com`, **ALTA**
+- **URL:** `https://atmosgames.com` (*"Games by Thomas Brush"*, *"LET'S BE FRIENDS! thomas@..."*). Jogo e desenvolvedora conferidos na loja do Steam.
+- **POR QUE ELE:** a casa é o estúdio dele; mascote estilizado que vira terror é exatamente personagem 3D.
+- **FRASE DA CASA, literal** (Steam): *"an abandoned 1950s theme park crawling with fairy-tale mascots"*.
+- **EUA:** frase de remoto.
+- **DEDUPE:** Gmail `in:anywhere` → `{}`. No repositório só a linha do censo Wikidata, sem carta nem contato.
+- **RASCUNHO:** `r-9142080310015003767`.
