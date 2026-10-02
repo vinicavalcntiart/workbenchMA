@@ -21118,3 +21118,10 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **EUA:** frase de remoto.
 - **DEDUPE:** Gmail `in:anywhere` → `{}`. No repositório só a linha do censo Wikidata, sem carta nem contato.
 - **RASCUNHO:** `r-9142080310015003767`.
+
+### FICHAS N10-7 a N10-9: as casas só-email do N4 (animação/VFX), conferidas uma a uma
+- **Panic Studio** (Riga, **LETÔNIA**, remoto declarado) `t***@panicstudio.tv`, **ALTA**. `https://panicstudio.tv/jobs`: vaga de 3D Designer que pede *"Excel in character development"* e *character modeling, look development*. Os nomes com email no site são de vendas e representantes, então a carta vai para a caixa de talentos. Frase de remoto. **RASCUNHO:** `r-8587745734897290781`.
+- **Busterwood** (Paris, **FRANÇA**) `c***@busterwood.com`, **ALTA**. `https://busterwood.com/jobs`: *"If you are a 3D artist, please send your application to contactvfx@..."*; casa de AR, FOOH e CGI com personagem licenciado (*"ALWAYS INSPIRED BY POP CULTURE"*). Nenhum nome publicado. Frase de mudança e visto. **RASCUNHO:** `r6039720753028853995`.
+- **Hinge Digital** (Portland, **EUA**) `j***@hellohinge.com`, **ALTA**. `https://hellohinge.com/careers` (*"JOBS: jobs@..."*) e home (*"bringing unique stories to life through characters"*). O único nome publicado é Roland Gauthier, *Executive Producer*, na caixa compartilhada de produção; a carta o cita no fecho. Frase de remoto. **RASCUNHO:** `r6364589670003802449`.
+- **Ficaram fora, com motivo:** **Studio Moshi** (Melbourne): a carteira publicada é toda 2D (*Solar Opposites*, *Good Times*, *Space Chickens*), fora da disciplina. **ManvsMachine** (Londres): design de movimento, e a página de talentos pede perfil gráfico e conceitual; motion puro, fora. **Brainstorm Digital**: já tem rascunho de 29/09.
+- **Dedupe:** Gmail `in:anywhere` pelos cinco domínios → `{}`; zero em `pessoas.csv`. **Conferência:** `confere-carta.py --tipo generica` limpo nas três, pior par do lote do dia 31%.
