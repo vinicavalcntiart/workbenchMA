@@ -21125,3 +21125,10 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **Hinge Digital** (Portland, **EUA**) `j***@hellohinge.com`, **ALTA**. `https://hellohinge.com/careers` (*"JOBS: jobs@..."*) e home (*"bringing unique stories to life through characters"*). O único nome publicado é Roland Gauthier, *Executive Producer*, na caixa compartilhada de produção; a carta o cita no fecho. Frase de remoto. **RASCUNHO:** `r6364589670003802449`.
 - **Ficaram fora, com motivo:** **Studio Moshi** (Melbourne): a carteira publicada é toda 2D (*Solar Opposites*, *Good Times*, *Space Chickens*), fora da disciplina. **ManvsMachine** (Londres): design de movimento, e a página de talentos pede perfil gráfico e conceitual; motion puro, fora. **Brainstorm Digital**: já tem rascunho de 29/09.
 - **Dedupe:** Gmail `in:anywhere` pelos cinco domínios → `{}`; zero em `pessoas.csv`. **Conferência:** `confere-carta.py --tipo generica` limpo nas três, pior par do lote do dia 31%.
+
+### FICHA N10-10: **K9 Digital** (caixa geral, endereçada a Ashley Sparling, *Co-Founder & Character Art Director*), Suffolk, **REINO UNIDO** `h***@k9digital.co.uk`, **ALTA**
+- **URL:** `https://www.k9digital.co.uk/contact-9` (endereço em texto) e `/about-1` (equipe com nome e cargo, sem email pessoal).
+- **POR QUE ELA (A CASA):** estúdio de personagem para jogos, *"CREATURE | GROOM | CHARACTER | ANIMALS"*, groom em XGen e em tempo real. É o par mais exato do Vini que apareceu na rodada.
+- **FRASE DA CASA, literal:** *"Character pipeline specialists, taking the stress out of character creation and integration"*; a carta cita a linha do topo.
+- **DEDUPE:** Gmail `in:anywhere` → `{}`. Zero no repositório.
+- **RASCUNHO:** `r-5926829609353528827` (abre com "Hello K9 Digital team" e pede que chegue a Ashley).
