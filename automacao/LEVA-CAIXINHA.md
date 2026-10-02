@@ -4,6 +4,47 @@ Jeito novo (Vini, 28/09): o Kernel só abre quando o Vini chamar. O maestro pree
 anexa o CV por último, passa o link e fecha a sessão logo depois do envio.
 Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<familia>/resp-*.json.
 
+## LEVA 02/10 manhã (N6, conferida 02/10 ~02h-03h30 UTC; vale este bloco, os de baixo viram histórico)
+
+46 portas vivas com caixa "sou humano" já vista. Conferido sem nuvem: BambooHR /careers/list (Stirling 77, Metricminds 39, Pixel Toys 31, Blazing Griffin 63, Exient 58, Amuse 164, Mercury 118, Flying Bark 114: todas listadas), Recruitee /api/offers (Framestore 2715433 e 513953, Softgames 212775, Dovetail 1439246, Huuuge 796516: publicadas), Workable widget (Double Eleven 99F32D8BF0 e ZeptoLab 4BB602E1A6 na API; Pulse CC77EB579A na API; Lockwood CB721A7F95 no quadro da própria Lockwood), JazzHR Zoic (no widget do site), Rippling Iconic e MY.GAMES 26116 (anúncio aberto no navegador local), páginas próprias 200 com o formulário. Gmail: nenhuma recusa nova das casas da leva (o email da Framestore de 01/10 é só questionário de diversidade). Rota alternativa sem caixinha: procurada de novo casa por casa (ver processados.csv, N6 02/10) e nenhuma achada.
+Ficha campo a campo, respostas padrão, pretensão e scripts: /home/user/apply/leva0210/FICHA-LEVA-0210.md (fora do repositório). CV conferido (%PDF-).
+
+Casa grande:
+1. Framestore | Realtime Generalist (Expression of Interest) | Reino Unido (Londres) | Recruitee, hCaptcha de imagem no Send
+2. Framestore | Freelance: CG - Los Angeles | remoto | Recruitee, hCaptcha (se for uma Framestore só no dia, esta primeiro)
+
+Personagem:
+3. Zoic Studios | 3D Senior Character Modeler (contrato 6 semanas) | Canadá (remoto BC) | JazzHR Human Check
+4. Stirling Animation Studios | Character Modeling and Surfacing Artists | Reino Unido (remoto) | BambooHR
+5. HyperVR Games | 3D Character Artist | Letônia (remoto) | InGame Job, reCAPTCHA no modal
+6. Blue Wizard Digital | 3D Character Artist (contrato) | Canadá | Gravity Forms (carta já foi 01/10)
+7. Entropy Studio | 3D Modeler Organic / Character | Espanha | Wix
+8. Gradient Effects | 3D Modeler | EUA (Los Angeles) | Gravity Forms (carta já foi 01/10)
+9. Pulse Games | 3D Artist (personagens) | remoto | Workable Turnstile
+10. Softgames | Unsolicited (3D Character Artist) | Alemanha (remoto) | Recruitee hCaptcha
+11. Halfbrick Studios | EOI Worldwide (Senior 3D Character Artist) | Austrália (remoto) | reCAPTCHA
+12. Myrkur Games | Open application | Islândia | Turnstile
+13. Iconic Interactive | Mid-Snr Generalist Artist (personagens e criaturas) | Reino Unido | Rippling Turnstile
+14. MY.GAMES | Artist 26116 | remoto | reCAPTCHA
+15. Lockwood Publishing | Digital Fashion Designer (roupa 3D de personagem) | Reino Unido (remoto) | Workable Turnstile
+16. The Loc Studios | CGI Generalist | Reino Unido (híbrido ou remoto) | Tally reCAPTCHA
+17. Flying Bark Productions | CFX Artist (EOI para jan/2027) | Austrália | BambooHR
+
+Espontânea, banco ou geral:
+18. Metricminds | 19. Grimlore Games | 20. Effetti Digitali (captcha de texto) | 21. Palomar / Mediawan | 22. beQ Entertainment | 23. Pixel Toys | 24. Blazing Griffin (só a 63, Speculative Games) | 25. Exient | 26. Double Eleven | 27. Sierra Division | 28. Giant Ant | 29. Dovetail Games | 30. Cubic Games | 31. Playkot | 32. ChimpWorks | 33. Crema | 34. Amuse Animation | 35. MiTale | 36. Scarecrow Studio | 37. MiroWin | 38. SneakyBox | 39. Gamajun Games | 40. Invisible Seams | 41. East Side Effects | 42. Greensky Games | 43. Mercury Filmworks | 44. Dreamfarm Studios | 45. Huuuge Games | 46. ZeptoLab
+
+A conferir, sem caixa vista: Plastic Wax (o Submit pela nuvem de 01/10 limpou o formulário sem recibo; não reenviar sem prova de que não chegou). Hasbro segue à parte (site não abre, caixa nunca vista).
+
+FORA (N6 02/10, escopo de 02/10):
+- Streamline Studios (Lead Character Artist, BambooHR 84): Ásia (Malásia).
+- NECA: estátuas e colecionáveis.
+- Side, bancos N Americas (7C6C2916EF) e MEA Bucareste (E57D73194A): mesma vaga em outra região; o banco LATAM da Side já foi em 27/09 (uma por tipo de vaga por casa).
+- Skydance Animation Madrid (Senior Rigging Artist, Lever): processo fechado no histórico (18/09, "the position has been filled", registrado como recusa de ATS). Regra de 01/10: casa com recusa ou processo fechado não recebe mais nada. Volta só se o Vini quiser.
+- Epic Games Senior Technical Designer in Animation (x2): vaga de animação.
+- One Man Studio Lead Character Concept Artist: concept 2D em casa pequena.
+- Amber Studio: contratação local do Brasil.
+JÁ ENVIADAS (saem da leva, não reenviar): Funko, Uchi VFX, Blowfish, PlaySide, The Game Atelier, Arrival, ProbablyMonsters (01/10); Climax, Bardel, Cinesite London, Glinda, Floating Rock (29/09); Psyop (27/08), Reel FX (31/08), Guru (27/08), ICON (31/08).
+
 ## PRONTAS 01/10 (conferido 12:07 UTC)
 
 49 portas vivas. Conferido 01/10 ~11h50-12h07 UTC só por API e navegador local (sem nuvem): BambooHR list (10/10 Open), Recruitee offers (Softgames, Framestore, Dovetail publicadas), Workable API (Pulse 200; Side x2 e Double Eleven deram 429 do Workable agora, vivas na leitura de 01/10 madrugada), Jobvite e JazzHR 200, páginas próprias 200. Dedupe por casa, ID e URL em enviados.csv, processados.csv, docs/index.html e Gmail (recibos): saíram Guru 34 e ICON 36 (recibo de agosto) e Big Viking 28 (talent community).
