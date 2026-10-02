@@ -21141,3 +21141,10 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **RESSALVA:** sem vaga publicada. **RASCUNHO:** `r-1949898039216063992`.
 
 **Fechamento da caça da N10:** Steam em três levas novas (900 + 2.229 + 587 jogos, ~1.270 domínios nunca tocados), associação alemã game.de (420 domínios), FLEGA (35), associações italiana, suíça e irlandesa (listas sem link direto, nada a ler), Work With Indies (33 vagas de arte, todas fechadas) e busca de estúdio de arte de personagem. Rendeu quatro pessoas com nome e endereço publicado (Michael Meier, Thomas Brush, Tom Astle) mais a K9 Digital pela caixa geral. Caídos na leitura, com motivo: Small Bang/Carnaval Marbles (2D em Godot), Frostwood (Índia), Kiss A Fish (África do Sul), Godspear (só primeiro nome, dev), Diorama Machine e Rat King (narrativa e jogo de autor, sem personagem 3D), MinskWorks (já descartada por disciplina), Antelus (já fora por escopo), Bridgebourn e AlterMage (dev solo), Red Nexus e Animal Well (2D), Nasty Rodent (só `sales@`, Estônia/terceirização).
+
+### FICHA N10-12: **Heather Courage**, *Founder and Lead 3D Character Artist*, **FIRESTORM STUDIO** (personagem 3D estilizado para jogos e filme; Londres, **REINO UNIDO**) `h***@firestormstudio3d.com`, **ALTA**
+- **URL:** `https://firestormstudio3d.com/contact` (*"For direct inquiries, you can also email us at heather.courage@..."*) e `/about` (equipe com cargo).
+- **POR QUE ELA:** fundadora e líder de personagem da casa; o estúdio é de personagem 3D estilizado, o ofício do Vini.
+- **FRASE DA CASA, literal:** *"Igniting Worlds, Forging Legends."* e *"bold forms, expressive detail, and technical excellence"*.
+- **DEDUPE:** Gmail `in:anywhere` → `{}`; zero no repositório. **RESSALVA:** casa pequena com braço de mentoria, sem vaga publicada.
+- **RASCUNHO:** `r-10101238749985911`.
