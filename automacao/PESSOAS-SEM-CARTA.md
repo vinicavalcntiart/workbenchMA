@@ -21243,3 +21243,23 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 - **Serenity Forge:** catálogo 2D e de publicação; a única vaga é de designer gráfico. **Grimbart Tales:** Itorah é 2D e o site não publica email.
 - **Beyond Creative:** mapas de marca no Fortnite Creative (UEFN), sem personagem próprio. **Formation Games:** jogo mobile de gestão de clube, sem personagem 3D. **Studio 555:** app de design de interiores. **Meeple Corp:** adaptação digital de jogo de tabuleiro, vagas só de Unity e UI, sem email no site.
 - **Cardboard Sword:** a página de carreiras exige por escrito *"Must already be living and able to work in the UK"* (veto de residência em casa pequena).
+
+## RODADA 02/10 09h35 UTC, J0935 (Joe): só pessoa com nome e email publicado
+
+**Uma pessoa nova com endereço PUBLICADO e confiança ALTA; um rascunho pronto; zero montado; zero caixa geral.** Reino Unido. **Abaixo da meta de 4**, e o motivo está medido no fim do bloco. Email completo fora do repositório; aqui vai mascarado.
+
+### FICHA J0935-1: **Adam Vian**, *Co-founder, Artist, Animator* e creative director de Crow Country, **SFB GAMES** (Crow Country, survival horror 3D low poly; Tangle Tower; Snipperclips; Londres, **REINO UNIDO**) `a***@sfbgames.com`, **ALTA**
+- **ONDE O EMAIL FOI PUBLICADO:** bio pública no Bluesky (`sfbdim.bsky.social`): *"creative director/writer of Crow Country, The Mermaid Mask, Tangle Tower, Snipperclips, Haunt the House. SFB Games w/@sfbtom"*, com o endereço no fim. Cargo no press kit da casa (`https://sfbgames.com/presskit/`, *"Team: Tom Vian Co-founder, Programmer; Adam Vian Co-founder, Artist, Animator"*). O press kit só publica o endereço do outro sócio (contato de imprensa e negócios, programador), por isso a carta vai ao artista.
+- **FRASE DA CASA, literal** (home): *"Something is lurking in the shadows of this abandoned theme park"*.
+- **DEDUPE:** Gmail `in:anywhere` e `in:draft` por domínio, nome da casa e nome da pessoa → `{}`; zero em `enviados.csv`, `processados.csv` e `pessoas.csv`.
+- **RESSALVA:** casa de dois irmãos, sem vaga publicada.
+- **RASCUNHO:** `r8102026393644564500` (233 palavras, 6 negritos, ☺️ e 😊, frase de mudança e visto; `confere-carta.py` limpo, pior par do lote do dia 37%).
+
+### Ficaram fora, com motivo
+- **Lion Game Lion** (Zagreb), da lista do N5: o único endereço de pessoa é do *Senior 3D Artist* Dinko Pavičić, e ele está só na meta `author` do código da home, não no texto da página. O site parou em 2017 e o registro croata (`insolve.hr`) mostra receita de 2025 caindo 53%, para cerca de €136 mil, e 10 pessoas em 2023. Não escrevi.
+- **Outras casas do N5:** Entrada Interactive, Bigmoon, Ishtar Games, Another Axiom, Tokkun e Cyanide só publicam caixa geral no site; InSpades e Frogwares foram puladas pelo aviso do maestro (carta do N14 e rascunho de 29/09).
+- **Casas das fichas N10, N11 e N14 com nome mas só caixa geral** (Kindred Spirit, Antihero, K9 Digital, Game Art Brain, Creatives in the Attic, Sundog, Ambertail, Vankrupt, North Beach, Hinge, Point Blank): procurei o nome de cada sócio ou líder no site, no press kit, no Bluesky e na busca aberta. Nenhum email de pessoa publicado. A da K9 Digital (Ashley Sparling, *Character Art Director*) tem palestra na GDC, mas a página da GDC fica atrás do Cloudflare e o perfil não mostra endereço.
+- **Gaby Wilde** (Media Molecule) já está no `pessoas.csv` desde 27/09. **Micaela Dawn** (*Lead Artist*, Silver Rain Games): a bio do Mastodon está velha, e o domínio da casa hoje é de outra empresa.
+- **Hugecalf Studios:** o `jonny@` só aparece num campo interno do Squarespace; o endereço publicado é `info@`.
+
+**O que a caça leu, com número:** Bluesky `searchActors` com ~150 termos novos (cargo mais cidade e cargo em francês, espanhol, alemão e italiano), com e sem email gratuito. A grande maioria eram jornalistas, ilustradores freelancers e contas já registradas. Diretórios do Mastodon `peoplemaking.games` (914 contas), `toot.community` (4.287), `gamedev.lgbt` (69) e `mastodon.art` (9.901), mais as hashtags de vaga em quatro instâncias desde 15/08: nenhum anúncio com email. Páginas home, about, team, contact, presskit, impressum e careers de ~170 domínios de estúdios de jogos e animação nunca tocados (Reino Unido, Nórdicos, Alemanha, Bálcãs, Canadá e Austrália): só caixa geral. A busca de posts do Bluesky (`searchPosts`) responde 403 e a agenda da GDC fica atrás do Cloudflare. Fica sem minerar o **`impress.games`** (5.508 press kits): o contato vem por JavaScript, e ler isso exige navegador.
