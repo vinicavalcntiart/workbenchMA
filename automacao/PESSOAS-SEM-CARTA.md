@@ -21045,3 +21045,22 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **RASCUNHO:** `r5617145847881515451`.
 
 **Conferência do lote:** `confere-carta.py` limpo nas duas (226 e 236 palavras, 2 emojis, 5 e 6 negritos); pior par 23% contra o lote e contra as cartas da frente P; HTML por `monta-html-carta.py`.
+
+## RODADA 02/10 01h35 UTC, frente R (Joe): fonte nova, a lista de jogos do Steam. **Uma pessoa nova com endereço PUBLICADO e confiança ALTA; um rascunho pronto; zero montado.** Lituânia ×1. Antes da caça: três rascunhos fora do escopo apagados (Sideshow, McFarlane, Koei Tecmo Singapura), destinatários conferidos.
+
+**Abaixo da meta de quatro, e o motivo está medido:** nenhuma ficha `PENDENTE` com email publicado esperava carta (a única com endereço, Jan Philip Cramer da Digital Domain, segue sem endereço literal). Fonte nova desta rodada: **1.194 jogos do Steam** (mais desejados, lançamentos populares e lançamentos recentes em 3D), `appdetails` com o site oficial de cada um, filtrados contra o repositório e contra a Ásia e a América Latina: **488 domínios de jogo nunca tocados**, lidos em home, contato, about, equipe e press kit. Rendeu pouco endereço de pessoa: quase tudo caixa geral, Gmail de dev solo, endereço de modelo de formulário ou casa grande sem email. O que caiu na leitura:
+- **Beast Burst** (Scars of Honor, MMORPG 3D, Sófia): o press kit publica `j.mihaylov@`, mas sem nome completo nem cargo em lugar nenhum (o CEO publicado é outro, Venelin Vasilev, sem email). Fica fora até aparecer o cargo.
+- **Techtive Games** (Ardem, Alemanha) e **Reverie Clouds** (BIG LOOT): endereço só com apelido (`basti@`, `eugeni@`), sem sobrenome nem cargo publicado.
+- **Portable Moose** (Sally Face, 2D), **Byting Games** (corrida), **Egosoft** (já no repositório), **ZA/UM** (já no repositório), **iRacing** (simulador, sem personagem), **Hillfort Games** (dev solo de pixel 3D): fora.
+- Segunda leva do Steam (900 jogos de mais vendidos, em breve e tags estilizado/fofo) parou no limite de consulta da loja; fica para a próxima rodada.
+
+### FICHA R1: **Mantas Banevičius**, *cofundador* (co-developer de Haunted Paws), **LAZYFLOCK** (Haunted Paws, co-op de terror aconchegante com dois filhotes; prêmio na Gamescom 2026; Kaunas, **LITUÂNIA**) `m***@lazyflock.com`, **ALTA**
+- **URL:** `https://lazyflock.com` (**200**), endereço publicado no bloco Organization do código da página, como email da LazyFlock UAB. Cargo: comunicado em gamespress.com (*"Mantas, co-developer at LazyFlock Studio"*) e perfil público (Co-Founder & CMO).
+- **POR QUE ELE:** casa de duas pessoas; ele é um dos dois sócios. O jogo é personagem estilizado com pelo, o par exato do grooming em Houdini.
+- **FRASE DA CASA, literal** (home): *"a cozy two-player co-op horror game about two puppies"*.
+- **FORA DOS EUA:** frase de mudança e visto.
+- **DEDUPE:** Gmail `in:anywhere (lazyflock OR "Haunted Paws")` → `{}`. Zero em `pessoas.csv`, `enviados.csv`, `processados.csv` e painel.
+- **RESSALVAS HONESTAS:** (1) sem vaga publicada; (2) o lado dele é mais marketing que arte, então a carta pede o encaminhamento a quem cuida da arte.
+- **RASCUNHO:** `r-492987958287075512`.
+
+**Conferência:** `confere-carta.py` limpo (246 palavras, 2 emojis, 6 negritos); pior par 20% contra as cartas de 01/10; HTML por `monta-html-carta.py`.
