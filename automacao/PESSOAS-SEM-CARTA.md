@@ -21132,3 +21132,12 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **FRASE DA CASA, literal:** *"Character pipeline specialists, taking the stress out of character creation and integration"*; a carta cita a linha do topo.
 - **DEDUPE:** Gmail `in:anywhere` → `{}`. Zero no repositório.
 - **RASCUNHO:** `r-5926829609353528827` (abre com "Hello K9 Digital team" e pede que chegue a Ashley).
+
+### FICHA N10-11: **Tom Astle**, *fundador* e criador de Wobbledogs, **ANIMAL UPRISING** (Wobbledogs, simulador 3D de cachorros mutantes; Los Angeles, **EUA**) `t***@wobbledogs.com`, **ALTA**
+- **URL:** `https://wobbledogs.com` (rodapé *"CONTACT ME"* com o endereço). Nome, cargo e cidade no comunicado da publisher (`wearesecretmode.com`): *"Los Angeles-based Animal Uprising is the brainchild of Tom Astle"*; equipe Tom Astle, Jordan Speer (3D artist) e Sam Keohane (áudio).
+- **POR QUE ELE:** dono da casa de três pessoas; jogo de criatura 3D estilizada com pelo, o par do grooming em Houdini.
+- **FRASE DA CASA, literal:** *"physically simulated all the way down to their guts"*.
+- **EUA:** frase de remoto. **DEDUPE:** Gmail `in:anywhere` → `{}`; zero no repositório.
+- **RESSALVA:** sem vaga publicada. **RASCUNHO:** `r-1949898039216063992`.
+
+**Fechamento da caça da N10:** Steam em três levas novas (900 + 2.229 + 587 jogos, ~1.270 domínios nunca tocados), associação alemã game.de (420 domínios), FLEGA (35), associações italiana, suíça e irlandesa (listas sem link direto, nada a ler), Work With Indies (33 vagas de arte, todas fechadas) e busca de estúdio de arte de personagem. Rendeu quatro pessoas com nome e endereço publicado (Michael Meier, Thomas Brush, Tom Astle) mais a K9 Digital pela caixa geral. Caídos na leitura, com motivo: Small Bang/Carnaval Marbles (2D em Godot), Frostwood (Índia), Kiss A Fish (África do Sul), Godspear (só primeiro nome, dev), Diorama Machine e Rat King (narrativa e jogo de autor, sem personagem 3D), MinskWorks (já descartada por disciplina), Antelus (já fora por escopo), Bridgebourn e AlterMage (dev solo), Red Nexus e Animal Well (2D), Nasty Rodent (só `sales@`, Estônia/terceirização).
