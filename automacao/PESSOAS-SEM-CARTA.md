@@ -21306,3 +21306,24 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 - **Estúdios novos de 2026:** Sneaky Devil Studios (ex-Sanzaru, Sly Cooper; ótimo encaixe) e Dark Ritual Studios (Barcelona) não publicam email de pessoa; Pretty Cool, Black Pony, Atmospheric, Studio Reset, Small Axe, Cosmic Division, Build Machine e Wildlight já estão no histórico.
 - **Animação (Annecy 2026, CEE):** as seleções são quase todas 2D ou stop motion, e as casas 3D de porte já estão no histórico.
 - **Work With Indies, outras:** Candlestick (Stylized 3D Character Artist, `Laura@`) e Qudical (3D Character Artist, `amara@`) já estão no histórico; Balas Games (Istambul) fora por geografia; YoYo Studios (Meme Wars) e Muffin Games sem nome completo nem site legível; Starlit Lion só contrata no Reino Unido por contrato local; Glue Crew é jogo adulto.
+
+## RODADA 02/10 17h35 UTC, J1735 (Joe, impress.games com cargo conferido + Work With Indies inteiro): só pessoa com nome e email publicado
+
+**Quatro pessoas com endereço PUBLICADO e confiança ALTA; quatro rascunhos prontos; zero montado; zero caixa geral.** Reino Unido (2), Canadá e Finlândia, todas com a frase de mudança e visto. Nenhuma ficha `PENDENTE` antiga com email esperava carta (as que sobram são `sem-email` ou casa do Brasil). Lote conferido com `confere-carta.py`: 231 a 247 palavras, 6 negritos, ☺️ e 😊, pior par do dia 44%. Emails mascarados; o completo fica fora do repositório.
+
+### FICHA J1735-1: **Amy Madin**, *Director / Artist / Community Manager*, **Onion Soup Interactive** (Nippon Marathon 2: Daijoubu, corrida de festa 3D; **REINO UNIDO**) `a***@onionsoupinteractive.com`, **ALTA**
+- **ONDE:** press kit da casa no impress.games (contato e bloco de equipe: *"Her love for fashion adds a unique touch to in-game characters"*). **FRASE:** *"unapologetically weird"*. **RESSALVA:** casa de duas pessoas, sem vaga. **RASCUNHO:** `r-3160503780297423184`.
+
+### FICHA J1735-2: **Lindsay Rollins**, *character designer e artista*, **Rocket Adrift** (cooperativa de Toronto; SHE: Seraphim Helix Experiment, horror tático 3D low poly; **CANADÁ**) `l***@rocketadrift.com`, **ALTA**
+- **ONDE:** press kit no impress.games (*"Marketing Lead/PR, Character Artist, Designer"*) e site `rocketadrift.com` (*"Lindsay is our character designer and artist"*). **FRASE:** *"Trapped in a missile silo with an angelic entity and mutating personnel"*. **RASCUNHO:** `r-447315557904658585`.
+
+### FICHA J1735-3: **Valtteri Yli-Olli**, *CEO*, **Lumo Creations** (Harmony in the Wild, raposa e animais 3D; Jyväskylä, **FINLÂNDIA**) `v***@lumocreations.fi`, **ALTA**
+- **ONDE:** press kit no impress.games; cargo na matéria da JAMK e no registro da empresa. **FRASE:** *"Nature's balance lies in the paws of a transforming fox pup"*. **RESSALVA:** o domínio hoje mostra página de hospedagem, risco de quique. **RASCUNHO:** `r6366885908903829779`.
+
+### FICHA J1735-4: **Fintan Collison**, *CEO e programador*, **Celtic Dragon Studio** (Azzy Battles the Darkness, plataforma 3D com heróis felinos; Dundee, **REINO UNIDO**) `f***@celticdragonstudio.com`, **ALTA**
+- **ONDE:** press kit no impress.games; cargo no anúncio da casa no Polycount. **FRASE:** *"Ratchet & Clank meets Avatar: The Last Airbender"*. **RESSALVA:** hoje se apresenta como dev solo. **RASCUNHO:** `r-6081943838659275387`.
+
+### Ficaram fora, com motivo
+- **Work With Indies, varrido inteiro (1.376 anúncios, todos os mailto):** o que tinha personagem e email de pessoa já estava no histórico (LingoLooper, Candlestick, Qudical, DuskSoft, Dodge Roll, Clay Urn, Blue Pixie, Overfull). Saguni Studio (site fora do ar, anime), SkyKelpie (site atrás de verificação, sem sobrenome nem cargo), Cyquential (startup de IA, retextura), Fable Forge (Arábia Saudita), Firefly (cinemática), Crustacean e Dry Cactus (armas e hard surface): fora.
+- **impress.games:** Gentleman Rat (o endereço é de quem não está na equipe; a Lead Artist não tem email), Indie Wolverine (agência de marketing), Enders Workshop (pai e filho, papel técnico), Hexonine (sem cargo), Stranogene e White Guardian (2D).
+- **Páginas /people do Teamtailor:** IOI, Ironbird, Resolution, PFX, Cast Iron e PLAYERUNKNOWN já no histórico; Dashy Studios é casa de serviço sem personagem.
