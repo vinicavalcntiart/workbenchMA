@@ -21184,3 +21184,19 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **Ficaram fora, com motivo:** **Paranoid Interactive** e **Optillusion** (já receberam carta em 01/10, fio no Gmail), **Thunder Lotus** (catálogo 2D, descartada antes pelo mesmo motivo), **East Side Games** (mobile 2D), **22cans** (porta fechada em 29/09), **Early Morning Studio** (RPG old-school 2D), **Extra Nice** e **Black Phoenix** (narrativa e publicação, sem personagem 3D), **Sakari Games** (site parado desde 2020), **FX3X** (grupo Cinesite, já com quatro candidaturas e dois bounces).
 
 **Fechamento da caça da N11:** busca de estúdio de personagem, criatura, groom e digital double em inglês, francês, espanhol, alemão e polonês, mais as listas de Gamescom, Future Games Show, Wholesome Direct e PAX West. A busca devolve sobretudo fábricas de outsourcing já tocadas (Airship, TONIC DNA, FABLEfx, Terminal FX, Mimic, Hologram Monster, Eisko, The GFactory, Mortar, Roarty, Ocellus, Asterman, Stim, Alt VFX, Myth, Liquid Development, Unit Image, Plastic Wax, Steamroller, Mold3D). Caídos na leitura: Diorama Digital (Brasil), Lotus Art (mudou para a Ásia), Ten24 (scanner, não contrata personagem), Disbelief (engenharia), Monster & Bear e Dream Farm (publicidade), Moonwell (Armênia, pixel art), JARCORP (2D), Active Fungus e Iksyr (sem endereço publicado). Pior semelhança do lote no `confere-carta.py`: 37%.
+
+## RODADA 02/10 ~07h15 UTC, N13 (cartas da madrugada): as casas só-email do N12 e as casas médias europeias sem vaga de arte
+
+### FICHA N13-1: **Critical Force** (caixa de vagas, nenhum nome publicado), Helsinque, **FINLÂNDIA** `j***@criticalforce.fi`, **ALTA**
+- **URL:** `https://criticalforce.fi/careers/` (*"leave your application with your resume"*; o endereço está atrás do ofuscador do Cloudflare e saiu decodificado). Na home só a diretoria (CEO, COO, CFO, CPO, CTO), sem email de pessoa.
+- **POR QUE A CASA:** Critical Ops, tiro tático mobile com operadores e skins em 3D que precisam ler na tela pequena.
+- **FRASE DA CASA, literal:** *"We're a friendly, honest and creative unit."*
+- **DEDUPE:** Gmail `in:anywhere` pelo domínio e pelo nome → `{}`; zero em `enviados.csv`, `processados.csv` e `pessoas.csv`. **RESSALVA:** sem vaga de arte aberta.
+- **RASCUNHO:** `r-4585097759077604440` (241 palavras, pior semelhança do lote do dia 37%).
+
+### Ficaram fora, com motivo
+- **Supermassive Games:** carta para `jobs@` em 02/09 (só resposta automática). O endereço do Workable é outra caixa geral, não pessoa, e nenhum recrutador publica email; a regra de carta nova pede pessoa diferente. A Speculative Application segue como rota de formulário.
+- **11 bit studios:** carta para `jobs@` em 02/09 (resposta automática). Nenhuma pessoa com email publicado.
+- **Red Thread Games:** carta para `jobs@` em 06/09 (resposta automática). Página /jobs sem vaga e sem nome; a próxima vaga anunciada é de 3D generalista de ambiente.
+- **Fish Blowing Bubbles:** produtora de filme institucional e publicitário de Munique (Imagefilm, Produktfilm), sem personagem; a única vaga é de vendas. Fora do nicho de jogos e animação.
+- **Casas médias da lista do N12:** Remedy (cartas a Valeria Rossi em 28/09 e Camilla Viden em 30/09), Rovio (Jan Ditlev, 28/09), Sharkmob (Josefina Havik, 29/09) e Hazelight (28/09) dentro dos 14 dias; Coatsink, do braço da Thunderful (carta a Richard em 28/09); Kylotonn (corrida). Paradox, Housemarque, Splash Damage, Tarsier, Owlcat, Jagex e Yager só recebem por ATS ou Connect, sem email de candidatura nem de pessoa publicado (Owlcat publica só `contact@`, `pitch@` e `press@`; Tarsier só `press@` e `fanmail@`; o `jobs@` da Splash Damage só aparece num fio antigo do Polycount, não no site).
