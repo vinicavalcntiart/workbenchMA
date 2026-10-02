@@ -21200,3 +21200,46 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **Red Thread Games:** carta para `jobs@` em 06/09 (resposta automática). Página /jobs sem vaga e sem nome; a próxima vaga anunciada é de 3D generalista de ambiente.
 - **Fish Blowing Bubbles:** produtora de filme institucional e publicitário de Munique (Imagefilm, Produktfilm), sem personagem; a única vaga é de vendas. Fora do nicho de jogos e animação.
 - **Casas médias da lista do N12:** Remedy (cartas a Valeria Rossi em 28/09 e Camilla Viden em 30/09), Rovio (Jan Ditlev, 28/09), Sharkmob (Josefina Havik, 29/09) e Hazelight (28/09) dentro dos 14 dias; Coatsink, do braço da Thunderful (carta a Richard em 28/09); Kylotonn (corrida). Paradox, Housemarque, Splash Damage, Tarsier, Owlcat, Jagex e Yager só recebem por ATS ou Connect, sem email de candidatura nem de pessoa publicado (Owlcat publica só `contact@`, `pitch@` e `press@`; Tarsier só `press@` e `fanmail@`; o `jobs@` da Splash Damage só aparece num fio antigo do Polycount, não no site).
+
+## RODADA 02/10 ~08h30 UTC, N14 (cartas da madrugada): as 21 casas só-email do "N7 final"
+
+Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confiança ALTA; zero montado; nenhum enviado. Emails completos fora do repositório; aqui vão mascarados. Dedupe: Gmail `in:anywhere` por domínio e por nome da casa → `{}` nas dez; zero em `enviados.csv`, `processados.csv` (fora a lista do N7) e `pessoas.csv`. Pior semelhança do lote do dia no `confere-carta.py`: 37%.
+
+### FICHA N14-1: **Thera Bytes** (caixa de vagas), região de Munique, **ALEMANHA** `h***@therabytes.de`, **ALTA**
+- **VAGA:** *Technical Artist / 3D Generalist*, remota, shooter tático co-op em UE5; a carta cita a linha *"Model, texture, rig and animate game-ready 3D characters when necessary"*. Diretoria no `/company` (Thorsten Feldmann, Kreshnik Halili, Robin Houben), sem email de pessoa.
+- **RASCUNHO:** `r-7404560391340760138`.
+
+### FICHA N14-2: **Lost Native** (caixa geral), **REINO UNIDO**, remote-first `i***@lostnative.co`, **ALTA**
+- **FRASE:** *"a remote-first independent game studio on a mission to create games that remind you of your past adventures"*; Wild Country, jogo de cartas com personagens animais. Equipe só por primeiro nome. **RASCUNHO:** `r538396037895701531`.
+
+### FICHA N14-3: **InSpades Studio** (caixa geral), Virgínia, **EUA** `t***@inspades.net`, **ALTA**
+- **FRASE:** *"send us your portfolio and tell us what you bring to the raid"*; Everlast: Undying Tale, RPG 3D com *"a memorable cast of characters"*. Frase de remoto. **RASCUNHO:** `r-3043836162205178217`.
+
+### FICHA N14-4: **Sundog Games** (caixa geral; carta pede que chegue a Carlos Castanon, *Game Director & Co-Founder*, ou a Łukasz Siudziński, *Senior Character Artist*), **POLÔNIA** `c***@sundog.games`, **ALTA**
+- **FRASE:** Ibru, *"a world made in collaboration with Nobel laureate Olga Tokarczuk"*; a página de carreiras pede portfólio aos artistas. **RASCUNHO:** `r1235848327148367229`.
+
+### FICHA N14-5: **Liquid Ice Studios** (caixa geral), Haia, **HOLANDA** `h***@liquidicestudios.com`, **ALTA**
+- **FRASE:** *"Exceptional people do not wait for the right vacancy, and neither do we"*; 3D artist e character animator anunciados como próximas vagas. **RASCUNHO:** `r4952794088288229601`.
+
+### FICHA N14-6: **Full Fat Games** (caixa de vagas), Warwick, **REINO UNIDO** `j***@full-fat.com`, **ALTA**
+- **FRASE:** speculative application, *"something unique"*, *"Silicon Spa"*; Agent Dash, Deer Hunter. **RASCUNHO:** `r-8008594216140860822`.
+
+### FICHA N14-7: **Vankrupt Games** (caixa de vagas; carta pede que chegue a David Villarreal, dono citado no site), Vancouver, **CANADÁ** `j***@vankrupt.com`, **ALTA**
+- **FRASE:** *"We pride ourselves on being on the bleeding edge of VR game design"*; Pavlov VR. **RASCUNHO:** `r-3249020376957163240`.
+
+### FICHA N14-8: **Ambertail Games** (caixa geral; carta pede que chegue a Jordan Bradley, *Creative Director*, ou Milo Moore, *Lead 3D Artist*), Belfast, **REINO UNIDO** `i***@ambertailgames.com`, **ALTA**
+- **FRASE:** *"there's no such thing as 'too cute'"*; Amber Isle, dinossauros 3D. **RASCUNHO:** `r5654884673797524641`.
+
+### FICHA N14-9: **Odenity Interactive** (caixa de vagas), Vänersborg, **SUÉCIA** `c***@odenity.se`, **ALTA**
+- **FRASE:** Myrkvidr, *"Cinematic Nordic Horror"*; open application *"tell us briefly who you are and what you love to create"*. **RASCUNHO:** `r1916893073196716164`.
+
+### FICHA N14-10: **Super X Studios** (caixa `j***@`, nome da pessoa não publicado, carta abre com "Hello team"), Seattle, **EUA** `j***@superxstudios.com`, **ALTA**
+- **FRASE:** a página Jobs pede currículo e lista primeiro *3D Character Artist* (*"high-detail character modelling/texturing"*); motor 3D próprio com *"more than 20 years of continuous development"*. Frase de remoto. **RESSALVA:** página antiga, último lançamento em 2022. **RASCUNHO:** `r-7292959026644380869`.
+
+### Ficaram fora, com motivo
+- **Game Art Brain** e **Creatives in the Attic:** carta do N11 hoje.
+- **Paranoid Interactive:** carta em 01/10. **Aether Studios:** carta ao Lead 3D Character Artist enviada em 29/09.
+- **Milky Tea:** rascunho registrado em 30/09 (Carteiro Sobras); hoje não aparece nem nos rascunhos nem nos enviados, então não refiz dentro dos 14 dias.
+- **Serenity Forge:** catálogo 2D e de publicação; a única vaga é de designer gráfico. **Grimbart Tales:** Itorah é 2D e o site não publica email.
+- **Beyond Creative:** mapas de marca no Fortnite Creative (UEFN), sem personagem próprio. **Formation Games:** jogo mobile de gestão de clube, sem personagem 3D. **Studio 555:** app de design de interiores. **Meeple Corp:** adaptação digital de jogo de tabuleiro, vagas só de Unity e UI, sem email no site.
+- **Cardboard Sword:** a página de carreiras exige por escrito *"Must already be living and able to work in the UK"* (veto de residência em casa pequena).
