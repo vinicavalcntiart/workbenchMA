@@ -21263,3 +21263,23 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 - **Hugecalf Studios:** o `jonny@` só aparece num campo interno do Squarespace; o endereço publicado é `info@`.
 
 **O que a caça leu, com número:** Bluesky `searchActors` com ~150 termos novos (cargo mais cidade e cargo em francês, espanhol, alemão e italiano), com e sem email gratuito. A grande maioria eram jornalistas, ilustradores freelancers e contas já registradas. Diretórios do Mastodon `peoplemaking.games` (914 contas), `toot.community` (4.287), `gamedev.lgbt` (69) e `mastodon.art` (9.901), mais as hashtags de vaga em quatro instâncias desde 15/08: nenhum anúncio com email. Páginas home, about, team, contact, presskit, impressum e careers de ~170 domínios de estúdios de jogos e animação nunca tocados (Reino Unido, Nórdicos, Alemanha, Bálcãs, Canadá e Austrália): só caixa geral. A busca de posts do Bluesky (`searchPosts`) responde 403 e a agenda da GDC fica atrás do Cloudflare. Fica sem minerar o **`impress.games`** (5.508 press kits): o contato vem por JavaScript, e ler isso exige navegador.
+
+## RODADA 02/10 12h20 UTC, IMP (Joe, fonte nova impress.games): formulário ou pessoa com email publicado
+
+**Fonte nova aberta e minerada inteira:** os 5.578 press kits do `impress.games` (3.312 casas). O contato não precisa de navegador: a página chama `data2.impress.games/api/v1/presskit/public?kit=<slug>`, que devolve país, tamanho do time, site, email de imprensa e créditos com cargo. Filtro: 1.951 casas em América do Norte, Europa e Oceania; 360 com sinal de 3D e personagem e time de 4 ou mais; 170 sites varridos atrás de carreira, ATS, formulário e email de pessoa. **Zero formulário de candidatura enviável**; **quatro pessoas com email publicado, quatro rascunhos**. Emails mascarados aqui.
+
+### FICHA IMP-1: **Priscilla Firstenberg**, *CEO + Creative Director*, **Pie Trap Studios** (Seattle, **EUA**; outsourcing estilizado com 3D Characters; remoto até 5h de PST) `p***@pietrap.com`, **ALTA**
+- **FRASE:** careers *"All applicants must share an online portfolio that heavily demonstrates stylized art"*; about *"We create great art with minimal oversight"*. **RESSALVA:** sem vaga aberta hoje. **RASCUNHO:** `r2357621306246044494`.
+
+### FICHA IMP-2: **Christian Fowler**, *Owner, Founder, Lead Designer, Animator*, **Blue Comet Games** (Bellevue, **EUA**; Magical Showdown, brawler 3D) `c***@magicalshowdown.com`, **ALTA**
+- **FRASE:** *"with fast paced melee combat, and a variety of unique characters"*. A Character Modeler/Art Lead (Katelyn Ziegenhagen) não tem email publicado. **RASCUNHO:** `r-7239354505013406288`.
+
+### FICHA IMP-3: **Alexandre Hecquet**, *CEO*, **Paper Strike** (La Rochelle, **FRANÇA**; arena 3v3 3D de magos) `a***@paper-strike.com`, **ALTA**
+- **FRASE:** *"Play as a Warrior Mage, wielding powerful magic and deadly weapons"*. Frase de mudança e visto. **RASCUNHO:** `r237896163201922789`.
+
+### FICHA IMP-4: **Jeremiah** (sobrenome não publicado na página), contato do press kit, **5TH Cell** (Bellevue, **EUA**; Broke Wizards, co-op 3D com customização de personagem) `j***@5thcell.com`, **ALTA**
+- **FRASE:** *"Wizard roommates slay monsters ... before he eats you"*. **RASCUNHO:** `r1790566674496969197`.
+
+### Ficaram fora, com motivo
+- **Surgent Studios:** página diz *"We are not currently accepting applications"*; o `dthompson@` do press kit não tem nome nem cargo publicados. **Firestoke/Balor, Monster Theater, Giiku, Skystone:** publicadoras. **Cayplay:** formulário espontâneo existe, mas a casa já tem fio no Gmail (carta 02/09 e follow-up). **Render Cube:** Turnstile já registrado em 06/09. **Jewel Seeker:** só `info@`, time voluntário. **NeoBird:** agência de software. **Pie Trap, Pixelsplit, Potion 8, Titan Roc, Chronospace:** sem formulário. Já no histórico: Tic Toc, Binary Spiders, Nine Dots, Emerald City, ByteRockers, No Brakes, Played With Fire, Stitch Media, Jamin, Ever Curious, Sky-E Red, HGames.
+- O grosso do impress.games é dev solo ou time de estudante (1.400 casas com 1 pessoa): o rendimento de formulário é baixo nesta fonte.
