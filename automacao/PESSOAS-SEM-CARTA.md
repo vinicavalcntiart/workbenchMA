@@ -21046,7 +21046,7 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 
 **Conferência do lote:** `confere-carta.py` limpo nas duas (226 e 236 palavras, 2 emojis, 5 e 6 negritos); pior par 23% contra o lote e contra as cartas da frente P; HTML por `monta-html-carta.py`.
 
-## RODADA 02/10 01h35 UTC, frente R (Joe): fonte nova, a lista de jogos do Steam. **Uma pessoa nova com endereço PUBLICADO e confiança ALTA; um rascunho pronto; zero montado.** Lituânia ×1. Antes da caça: três rascunhos fora do escopo apagados (Sideshow, McFarlane, Koei Tecmo Singapura), destinatários conferidos.
+## RODADA 02/10 01h35 UTC, frente R (Joe): fonte nova, a lista de jogos do Steam. **Duas pessoas novas com endereço PUBLICADO e confiança ALTA; dois rascunhos prontos; zero montado.** Lituânia ×1, EUA ×1. Antes da caça: três rascunhos fora do escopo apagados (Sideshow, McFarlane, Koei Tecmo Singapura), destinatários conferidos.
 
 **Abaixo da meta de quatro, e o motivo está medido:** nenhuma ficha `PENDENTE` com email publicado esperava carta (a única com endereço, Jan Philip Cramer da Digital Domain, segue sem endereço literal). Fonte nova desta rodada: **1.194 jogos do Steam** (mais desejados, lançamentos populares e lançamentos recentes em 3D), `appdetails` com o site oficial de cada um, filtrados contra o repositório e contra a Ásia e a América Latina: **488 domínios de jogo nunca tocados**, lidos em home, contato, about, equipe e press kit. Rendeu pouco endereço de pessoa: quase tudo caixa geral, Gmail de dev solo, endereço de modelo de formulário ou casa grande sem email. O que caiu na leitura:
 - **Beast Burst** (Scars of Honor, MMORPG 3D, Sófia): o press kit publica `j.mihaylov@`, mas sem nome completo nem cargo em lugar nenhum (o CEO publicado é outro, Venelin Vasilev, sem email). Fica fora até aparecer o cargo.
@@ -21063,4 +21063,13 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **RESSALVAS HONESTAS:** (1) sem vaga publicada; (2) o lado dele é mais marketing que arte, então a carta pede o encaminhamento a quem cuida da arte.
 - **RASCUNHO:** `r-492987958287075512`.
 
-**Conferência:** `confere-carta.py` limpo (246 palavras, 2 emojis, 6 negritos); pior par 20% contra as cartas de 01/10; HTML por `monta-html-carta.py`.
+### FICHA R2: **Leroy Anderson** ("Elwood"), *Studio Manager*, **SUPERNOVA STUDIOS** (Funnel Runners, co-op de até 8 jogadores fugindo de um tornado; Oroville, Califórnia, **EUA**) `e***@supernovastudios.com`, **ALTA**
+- **URL:** `https://supernovastudios.com/contact-us` (endereço em texto) e `https://supernovastudios.com/about-us` (*"Leroy Anderson "Elwood" Studio Manager"*, ao lado de Logan Bamford, Founder & CEO).
+- **POR QUE ELE:** é o único da casa com email publicado; a carta pede que encaminhe ao fundador se for o caso.
+- **FRASE DA CASA, literal** (home): *"To forge the brightest and most innovative games in the universe."*
+- **EUA:** frase de remoto.
+- **DEDUPE:** Gmail `in:anywhere (supernovastudios OR "Supernova Studios" OR "Funnel Runners")` → `{}`. Zero no repositório.
+- **RESSALVAS HONESTAS:** (1) casa pequena, sem vaga e sem foco declarado em personagem; (2) ele cuida da gestão, não da arte.
+- **RASCUNHO:** `r-5498404961644121080`.
+
+**Conferência:** `confere-carta.py` limpo nas duas (246 e 230 palavras, 2 emojis, 6 negritos); pior par 20% contra as cartas de 01/10; HTML por `monta-html-carta.py`.
