@@ -21283,3 +21283,26 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 ### Ficaram fora, com motivo
 - **Surgent Studios:** página diz *"We are not currently accepting applications"*; o `dthompson@` do press kit não tem nome nem cargo publicados. **Firestoke/Balor, Monster Theater, Giiku, Skystone:** publicadoras. **Cayplay:** formulário espontâneo existe, mas a casa já tem fio no Gmail (carta 02/09 e follow-up). **Render Cube:** Turnstile já registrado em 06/09. **Jewel Seeker:** só `info@`, time voluntário. **NeoBird:** agência de software. **Pie Trap, Pixelsplit, Potion 8, Titan Roc, Chronospace:** sem formulário. Já no histórico: Tic Toc, Binary Spiders, Nine Dots, Emerald City, ByteRockers, No Brakes, Played With Fire, Stitch Media, Jamin, Ever Curious, Sky-E Red, HGames.
 - O grosso do impress.games é dev solo ou time de estudante (1.400 casas com 1 pessoa): o rendimento de formulário é baixo nesta fonte.
+
+## RODADA 02/10 13h35 UTC, J1335 (Joe, fonte nova: sitemap do Work With Indies e lançamentos 3D da Steam de julho a setembro): só pessoa com nome e email publicado
+
+**Quatro pessoas com endereço PUBLICADO e confiança ALTA; quatro rascunhos prontos; zero montado; zero caixa geral.** Três nos EUA (frase de remoto), uma no Reino Unido (frase de mudança e visto). Emails mascarados aqui; o completo fica fora do repositório. Lote conferido com `confere-carta.py`: 230 a 246 palavras, 5 ou 6 negritos, ☺️ e 😊, pior par do dia 44%.
+
+### FICHA J1335-1: **Brady Soglin**, game developer e artista dono da **Overfull Games** (Tall Trails; protótipo 3D novo; Chicago, **EUA**) `b***@overfull.games`, **ALTA**
+- **ONDE O EMAIL FOI PUBLICADO:** site próprio `https://overfull.games` (*"or send me an email at ..."*) e o mesmo endereço no anúncio *3D Environment Artist* de 10/08/2026 no Work With Indies.
+- **FRASE DA CASA:** *"a chill exploration game where you're a little golem on a quest to find his purpose"*. **RESSALVA:** dev solo, sem vaga de personagem aberta. **RASCUNHO:** `r-3584724917953552887`.
+
+### FICHA J1335-2: **Eli** (sobrenome não publicado), contato de contratação da **Dodge Roll** (Enter the Gungeon; próximo jogo estilizado em 3D, Blender para Unreal; **EUA**, anúncio remoto) `e***@dodgeroll.com`, **ALTA**
+- **ONDE:** botão Apply (mailto) do anúncio *Gameplay Animator + 3D Artist* de 26/02/2026 no Work With Indies. **FRASE:** *"this is ridiculous but it's also extremely intentional"*. **RESSALVA:** cargo da pessoa não publicado; anúncio já fechado. **RASCUNHO:** `r3163787856740917001`.
+
+### FICHA J1335-3: **Emily** (sobrenome não publicado), criadora e *director / artist / designer* de **Blockfeet**, **Blue Pixie Studio** (UE5, cidade de brinquedo com NPCs e customização de personagem; financiado por publisher por 3 anos; **REINO UNIDO**, time remoto UK e UE) `e***@bluepixiestudio.com`, **ALTA**
+- **ONDE:** mailto do anúncio *AI & Systems Programmer* de 02/02/2026 no Work With Indies (*"Hi, I'm Emily, creator of Blockfeet"*). **FRASE:** *"a colourful world where everything is made of toy-like blocks"*. **RESSALVA:** site da casa em construção. **RASCUNHO:** `r-6009877763729118562`.
+
+### FICHA J1335-4: **Sean** (sobrenome não publicado), contato da **Clay Urn** (jogo cooperativo estilizado em Unity com heroína, montaria e família de inimigos; Clay Urn LLC, **EUA**, anúncio remoto) `s***@clayurn.com`, **ALTA**
+- **ONDE:** mailto do anúncio *Visual Development / Concept Artist* de 24/07/2026 no Work With Indies. **FRASE:** *"establish a recognizable visual identity for the main character and her mount"*. **RESSALVA:** cargo não publicado; site só com "Launching Soon". **RASCUNHO:** `r172663128514154685`.
+
+### Ficaram fora, com motivo
+- **Steam, lançamentos 3D, Stylized e Cute de julho a setembro de 2026:** ~5.000 títulos lidos, ~1.600 com 15 ou mais avaliações, ~440 sites de estúdio varridos em 12 caminhos (home, about, team, contact, press, presskit, careers, impressum). Quase tudo é caixa geral ou dev solo. Já no histórico ou com fio: Invisible Walls, Little Chicken, Hovgaard, Borealys, Playable Worlds, Atmos, SFB, Genie Boy, Oisoi, Byting, Reverie Clouds, Wanted 5, Eat Pant. Fora por disciplina ou perfil: Flying Rat (plataforma 2D, Praga), Firesquid (publicadora), Conradical, Dadbod (narrativa), Visent (simulador de tapete e IA), Altered Self (endereço sem nome nem cargo).
+- **Estúdios novos de 2026:** Sneaky Devil Studios (ex-Sanzaru, Sly Cooper; ótimo encaixe) e Dark Ritual Studios (Barcelona) não publicam email de pessoa; Pretty Cool, Black Pony, Atmospheric, Studio Reset, Small Axe, Cosmic Division, Build Machine e Wildlight já estão no histórico.
+- **Animação (Annecy 2026, CEE):** as seleções são quase todas 2D ou stop motion, e as casas 3D de porte já estão no histórico.
+- **Work With Indies, outras:** Candlestick (Stylized 3D Character Artist, `Laura@`) e Qudical (3D Character Artist, `amara@`) já estão no histórico; Balas Games (Istambul) fora por geografia; YoYo Studios (Meme Wars) e Muffin Games sem nome completo nem site legível; Starlit Lion só contrata no Reino Unido por contrato local; Glue Crew é jogo adulto.
