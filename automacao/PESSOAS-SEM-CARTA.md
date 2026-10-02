@@ -21148,3 +21148,39 @@ Dia do remoto (REGRAS.md, *"Remoto vira segunda frente"*). Alvo: casas de co-des
 - **FRASE DA CASA, literal:** *"Igniting Worlds, Forging Legends."* e *"bold forms, expressive detail, and technical excellence"*.
 - **DEDUPE:** Gmail `in:anywhere` → `{}`; zero no repositório. **RESSALVA:** casa pequena com braço de mentoria, sem vaga publicada.
 - **RASCUNHO:** `r-10101238749985911`.
+
+## RODADA 02/10 ~05h30 UTC, N11 (Joe da madrugada): estúdios de personagem, criatura e groom, mais as casas só-email do N9
+
+### FICHA N11-1: **Game Art Brain** (caixa de vagas, endereçada a Christian Retzlaff, *Founder & CEO*), Berlim, **ALEMANHA** `j***@gameartbrain.com`, **ALTA**
+- **URL:** `https://gameartbrain.com` (*"Job applications of any kind to this email please: jobs@..."*). Fundador e cargo em `80.lv` (entrevista de 2023).
+- **POR QUE A CASA:** outsourcing de arte estilizada com *"3d fully rigged characters"*.
+- **FRASE DA CASA, literal:** *"a small and cosy experienced Berlin based art outsourcing studio for stylized 2D and 3D game art"*.
+- **DEDUPE:** Gmail `in:anywhere` → `{}`; no repositório só a menção na lista email-only do N7. **RESSALVA:** sem vaga publicada.
+- **RASCUNHO:** `r2634480859990603086`.
+
+### FICHA N11-2: **Creatives in the Attic** (caixa de vagas; carta cita Derek Ham e Jane Stroud, *Co-founders*), **REINO UNIDO** `j***@creativesintheattic.com`, **ALTA**
+- **URL:** `https://www.creativesintheattic.com/jobs` (pede CV e portfólio no `jobs@`, procura *character artists* freelance) e `/team`.
+- **FRASE DA CASA, literal:** *"We have a team of character specialists. From low poly to Zbrush/Mudbox"*.
+- **DEDUPE:** Gmail `in:anywhere` pelo domínio e pelos dois nomes → `{}`. **RASCUNHO:** `r-8563766944981936432`.
+
+### FICHA N11-3: **Ben Escobar**, *fundador*, **GENIE BOY GAMES** (Sweetheart, terror em primeira pessoa anunciado no Future Games Show da Gamescom 2026; Los Angeles, **EUA**) `b***@genieboygames.com`, **ALTA**
+- **URL:** `https://genieboygames.com` (endereço no bloco schema.org da própria casa). Fundador na imprensa (GameDaily, Gematsu).
+- **FRASE DA CASA, literal:** *"mutated into a monster born from the delusion of your childhood dreams"*.
+- **EUA:** frase de remoto. **DEDUPE:** Gmail `in:anywhere` → `{}`. **RESSALVA:** sem vaga publicada.
+- **RASCUNHO:** `r-4515392843282092155`.
+
+### FICHA N11-4: **Hexa Studio** (caixa de vagas, nenhum nome publicado), região de Nice, **FRANÇA** `j***@hexastudio.art`, **ALTA**
+- **URL:** `https://hexastudio.art/careers/` (*"Send your portfolio directly to jobs@..."*). Cidade só pelo LinkedIn da casa.
+- **POR QUE A CASA:** estúdio só de Hair & Groom para jogos e cinemáticas, o par exato do grooming em Houdini.
+- **FRASE DA CASA, literal:** *"Turns out making digital hair is surprisingly complicated. Luckily, we enjoy that part."*
+- **DEDUPE:** Gmail `in:anywhere` → `{}`. **RASCUNHO:** `r-2147053384735379396`.
+
+### FICHAS N11-5 a N11-9: as casas só-email do N9, conferidas uma a uma
+- **Cinetism** (Vancouver, **CANADÁ**) `c***@cinetism.com`, **ALTA**. **VAGA VIVA** em `https://cinetism.com/creature/`: *Creature / Animal Modeler*, remota e freelance, longa-metragem realista; a carta cita a vaga. Nenhum nome no site. Frase de remoto mais a de mudança e visto para vaga fixa. **RASCUNHO:** `r6487896794936774528`.
+- **ArtOut Productions** (Auckland, **NOVA ZELÂNDIA**) `j***@artoutproductions.com`, **ALTA**. `/careers` (*"send us all your details to jobs@..."*, sem vaga aberta). **RASCUNHO:** `r-1804110208412322194`.
+- **Point Blank Games** (Berlim, **ALEMANHA**) `j***@point-blank-games.com`, **ALTA**. A página da vaga *3D Artist* (Stray Blade) manda para `jobs@`, não para o `mail@` do resumo do N9; Leonard Kausch é o *Geschäftsführer* no Impressum e a carta pede que chegue a ele. **RESSALVA:** página de vagas antiga. **RASCUNHO:** `r3622093646536415297`.
+- **Zen Studios** (Budapeste, **HUNGRIA**) `j***@zenstudios.com`, **ALTA**. `/careers` sem vaga aberta; gancho nos personagens 3D das mesas. **RASCUNHO:** `r6210933887141498894`.
+- **Kerberos Productions** (Vancouver, **CANADÁ**) `c***@kerberos-productions.com`, **ALTA**. Seção Careers: *"For general artist and programmer submissions, email us"*. **RASCUNHO:** `r6056375930825760162`.
+- **Ficaram fora, com motivo:** **Paranoid Interactive** e **Optillusion** (já receberam carta em 01/10, fio no Gmail), **Thunder Lotus** (catálogo 2D, descartada antes pelo mesmo motivo), **East Side Games** (mobile 2D), **22cans** (porta fechada em 29/09), **Early Morning Studio** (RPG old-school 2D), **Extra Nice** e **Black Phoenix** (narrativa e publicação, sem personagem 3D), **Sakari Games** (site parado desde 2020), **FX3X** (grupo Cinesite, já com quatro candidaturas e dois bounces).
+
+**Fechamento da caça da N11:** busca de estúdio de personagem, criatura, groom e digital double em inglês, francês, espanhol, alemão e polonês, mais as listas de Gamescom, Future Games Show, Wholesome Direct e PAX West. A busca devolve sobretudo fábricas de outsourcing já tocadas (Airship, TONIC DNA, FABLEfx, Terminal FX, Mimic, Hologram Monster, Eisko, The GFactory, Mortar, Roarty, Ocellus, Asterman, Stim, Alt VFX, Myth, Liquid Development, Unit Image, Plastic Wax, Steamroller, Mold3D). Caídos na leitura: Diorama Digital (Brasil), Lotus Art (mudou para a Ásia), Ten24 (scanner, não contrata personagem), Disbelief (engenharia), Monster & Bear e Dream Farm (publicidade), Moonwell (Armênia, pixel art), JARCORP (2D), Active Fungus e Iksyr (sem endereço publicado). Pior semelhança do lote no `confere-carta.py`: 37%.
