@@ -528,6 +528,25 @@ Observado em teste headless, nao em fonte externa:
      mais antigo; o menu roda o grafo velho e a correcao na copia nao tem
      efeito. Options mostra "Duplicates". Ao duplicar um tool, troque o
      Identifier.
+- **Esconder guias sem addon, so com modificador** (2026-10-02, testado no
+  Blender 5.2.0 headless, 313 guias reais, scripts/t_hide_manual2.py):
+  modificador sozinho nao esconde nada (o cage mostra as guias originais), entao
+  esconder = tirar as guias do objeto com **Separate (P)** no Edit Mode
+  [manual modeling/curves_new/editing/curves.rst, bpy.ops.curves.separate] e
+  devolver na avaliacao com um modificador no topo da stack:
+  Group Input + **Object Info** (Original, objeto separado) → Join Geometry →
+  **Sort Elements** (Spline, Sort Weight = Named Attribute Integer `ordem`).
+  `ordem` e gravado uma vez antes do Separate: Store Named Attribute (Integer,
+  Spline, Index) no topo e Apply. Resultado: 4.816 filhos identicos
+  (diferenca 9e-8). **Sem o Sort**, a ordem das guias muda e ~5% dos pontos
+  dos filhos andam ate ~8 mm (efeitos por indice). Revelar: **Apply** no
+  modificador (volta as 313 na ordem original, com surface e atributos) e
+  apagar a copia; Ctrl+J tambem junta mas embaralha a ordem. O Separate copia
+  a stack inteira para o objeto novo: apagar os modificadores dele e esconder.
+  Achado: depois do Separate o Curves original fica com 2 usuarios ate salvar
+  e reabrir, e o Apply recusa ("multi-user data"); salvar e reabrir resolve.
+  Arquivo: `laboratorio/exemplos/guias_ocultas_sem_addon.blend` (57 guias
+  escondidas) [img/132_guias_ocultas_modifier].
 - **Arquivo pronto dos tools** (2026-09-29, validado no Blender 5.2.0 com
   interface): `laboratorio/exemplos/tools_conjuntos_guias.blend`, com 313
   guias reais, conjuntos Front_Guides_02_R (57) e Back_Guides_01_R (185) e
