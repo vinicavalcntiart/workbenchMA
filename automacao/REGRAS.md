@@ -142,3 +142,11 @@ Ver `LEIA-ME.md` na raiz.
 - E-Line no CV; nunca vaga interna da E-Line. Room 8 fora.
 - **Fuso:** a agenda do Vini e toda organização de horário seguem Recife (UTC-3). No email ao estúdio, o horário vai no fuso do estúdio (regra de 01/10 do próprio Vini), com a conferência de conflito feita no horário de Recife.
 - **Rejeição fecha a porta (Vini, 01/10):** pessoa ou estúdio com recusa ou processo fechado no histórico (inclusive recusa automática ou por visto) NÃO recebe mais nada: nem agradecimento, nem follow-up, nem agenda, nem carta nova. Recusa só se registra. Contato permitido: Troll VFX; notas curtas a recrutadores de vagas aplicadas nos últimos 3 a 5 dias (games e animação); e conversas abertas sem recusa (quem pediu portfólio ou informação, ou disse "vamos te guardar").
+
+## Fim do zero em formulários (Vini, 03/10 ~13h UTC)
+
+"Dizer que não apareceu vaga nova não condiz com a dimensão do mercado." Toda rodada de formulários termina com envio ou com fonte nova lida e registrada. Quando os quadros conhecidos não trazem vaga nova pela data, a rodada amplia o raio, nesta ordem:
+1. Agregadores amplos fora do universo de tokens: busca pública de vagas do LinkedIn (guest), busca global do Workable, quadros remotos de games, com janela de até 30 dias e estúdios ainda sem candidatura nossa; o envio vai sempre pelo formulário do próprio estúdio.
+2. Candidatura espontânea / "General Application" / "Open Application" com formulário real em todos os quadros conhecidos (tokens-ats-1809.csv) que ainda não receberam candidatura nossa.
+3. Vaga "3D Artist" ou "Senior 3D Artist" que cite personagem nas tarefas também entra.
+Descarte rápido e silencioso: proposta sem salário (sociedade, equity, revenue-share) e vaga de ambiente/props vão só para uma linha de processados.csv, sem análise no relatório. Relatório ao Vini em tabela curta. Indicador final: entrevista na agenda.
