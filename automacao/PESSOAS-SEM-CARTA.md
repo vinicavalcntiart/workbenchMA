@@ -21380,3 +21380,23 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 
 ### FICHA J0935-2: **Electric Theatre Collective** (CG e VFX de publicidade premiada: John Lewis Snapper; Londres e Nova York, **REINO UNIDO**) `j***@electrictheatre.tv`, caixa de candidatura de Londres PUBLICADA
 - **ONDE:** https://electrictheatre.tv/careers (*"For opportunities in our London studio please email us at ..."*, pede CV e portfólio). **FRASE:** *"a global studio that makes work for the world's biggest brands and cultural moments"*. **HISTÓRICO:** nunca recebeu email (só estava no painel como portal atrás do Cloudflare; hoje a página abre). **RASCUNHO:** `r6018583277927077163`.
+
+## RODADA 03/10 13h35 UTC, J1335 (Joe, regra da rodada: só casa que NUNCA recebeu email nosso, de nome e com personagem): 2 casas, 2 rascunhos
+
+**Duas casas de nome, zero ocorrência de nome e domínio em `enviados.csv`, `processados.csv`, `pessoas.csv` e no Gmail (`in:anywhere`), email de PESSOA publicado no site oficial, dois rascunhos com o nome da pessoa, ☺️ e 😊, 239 e 234 palavras, 6 negritos, pior par do lote do dia 33% no `confere-carta.py`.** Abaixo da meta de 3: o que foi medido vai no fim do bloco.
+
+### FICHA J1335-1: **Matīss Kaža**, produtor, **Dream Well Studio** (Flow, longa 3D vencedor do Oscar de animação 2025; Away; Riga, **LETÔNIA**) `m***@dreamwell.lv`, **ALTA**
+- **ONDE:** home https://dreamwell.lv/ (bloco "Contacts", com o endereço dele e o do diretor Gints Zilbalodis). Cargo de produtor de Flow é público (indicação e prêmio do Oscar).
+- **FRASE DA CASA, literal:** *"Dream Well Studio is an independent animation studio founded by Gints Zilbalodis"*.
+- **RESSALVA:** casa pequena e independente, sem vaga publicada; a força é o nome (Flow).
+- **RASCUNHO:** `r3521904218116771381`.
+
+### FICHA J1335-2: **Debbie MacDonald**, *Creative Director*, **3D Sparrow** (Booba, série 3D infantil com 13 bilhões de visualizações e 15 milhões de inscritos; Londres, **REINO UNIDO**) `d***@3dsparrow.com`, **ALTA**
+- **ONDE:** https://www.3dsparrow.com/about (bloco "Management Team", nome, cargo e endereço). A página de carreiras do site está fora do ar (404).
+- **FRASE DA CASA, literal:** *"a unique 3D animation studio making and producing beautiful amazing stories for kids"*; a página cita segunda IP em produção.
+- **RESSALVA:** a casa tem operação também em Dubai; a sede é Londres.
+- **RASCUNHO:** `r8654899504634074578`.
+
+### Ficaram fora, com motivo (medido nesta rodada)
+- **Listas lidas:** Wikipedia "List of animation studios", "List of visual effects companies" e 22 categorias de estúdios de animação por país e de VFX (490 nomes), mais ~350 nomes de jogos AA/AAA, CG de publicidade e cinemáticas cruzados com os três CSVs. Quase tudo já está no histórico; os nunca tocados são fechados, 2D, stop motion ou distribuidoras.
+- **Nunca tocadas, mas sem destino que sirva:** Coffee & TV (Londres, `jobs@` publicado atrás do ofuscador do Cloudflare, mas o trabalho é cor e VFX de publicidade, quase sem personagem), Aaron Sims Creative (LA, criaturas e personagens; só formulário "Join the ASC team" e `contact@` de clientes: fica para a frente de formulários), Studio FILM BILDER (Stuttgart, 2D), Picasso Pictures (site em reforma, só formulário de briefing), Frantic (motion design), Rare (portal da Microsoft), Dimfrost (só Gmail), Saddington Baynes (CGI de produto), Talking Animals (só `info@`), Kawanimation (só `contact@`), Airship Images (site fora do ar), Th1ng (domínio estacionado).
