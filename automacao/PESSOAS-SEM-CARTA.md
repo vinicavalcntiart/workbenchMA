@@ -21369,3 +21369,14 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 
 ### FICHA J0535-4: **Microids** (Asterix & Obelix, Smurfs, Garfield, Syberia; Paris e Lyon, **FRANÇA**) `r***@microids.com`, caixa de recrutamento PUBLICADA
 - **ONDE:** https://www.microids.com/jobs/ . **FRASE:** *"creates original adventures which gives gamers the chance to play as some of their most beloved characters"*. **HISTÓRICO:** carta 02/09 e follow-up 07/09, nenhuma resposta. **RASCUNHO:** `r5350250211062233674`.
+
+## RODADA 03/10 09h35 UTC, J0935 (Joe, regra da rodada: só casa que NUNCA recebeu email nosso): 2 casas, 2 rascunhos
+
+**Duas casas estabelecidas, zero ocorrência de nome e domínio em `enviados.csv`, `processados.csv`, `pessoas.csv` e no Gmail (`in:anywhere`), endereço de candidatura PUBLICADO no site oficial, dois rascunhos "Hello <Studio> team," com 1 ☺️, 244 e 247 palavras, pior par do lote do dia 33% no `confere-carta.py`.** Método: ~450 nomes de estúdios (jogos AA/AAA, co-dev, animação 3D, VFX e CG de publicidade da Europa, América do Norte e Oceania) cruzados com os três CSVs; só ~60 nunca tocados, quase todos fechados, 2D, pequenos ou sem caixa publicada.
+- **Fora, medido nesta rodada:** Like a Photon (só `hello@` de coprodução), Grove Street Games (só `contact@`), Telltale (sem vaga, sem email), Petroglyph (`careers@` publicado, mas RTS sem personagem, mesma leitura da J0135), Coffee & TV (email escondido pelo Cloudflare, 403 daqui), Armature, Camouflaj, Gamepires, Survios, Fuzzy Door, Gaumont (formulário), Eko Software e Invader Studios (domínio à venda), Incuvo e 3Doubles (só `info@`), Sanzaru, Pieces, Toadman, Torus (fechadas).
+
+### FICHA J0935-1: **Gruppo Alcuni** (Pet Pals, Leo da Vinci, Mini Pet Pals; 100+ pessoas; Treviso, **ITÁLIA**) `c***@alcuni.it`, caixa de candidatura PUBLICADA
+- **ONDE:** https://studios.alcuni.it/lavora-con-noi/ (*"Come candidarsi: Scrivici a ... allegando il tuo CV e una breve lettera di presentazione"*). **FRASE:** *"currently one of the most important European companies specializing in content for the 2-12 age group and teens"* (home em inglês). **HISTÓRICO:** nunca recebeu email. **RASCUNHO:** `r5156354717261345695`.
+
+### FICHA J0935-2: **Electric Theatre Collective** (CG e VFX de publicidade premiada: John Lewis Snapper; Londres e Nova York, **REINO UNIDO**) `j***@electrictheatre.tv`, caixa de candidatura de Londres PUBLICADA
+- **ONDE:** https://electrictheatre.tv/careers (*"For opportunities in our London studio please email us at ..."*, pede CV e portfólio). **FRASE:** *"a global studio that makes work for the world's biggest brands and cultural moments"*. **HISTÓRICO:** nunca recebeu email (só estava no painel como portal atrás do Cloudflare; hoje a página abre). **RASCUNHO:** `r6018583277927077163`.
