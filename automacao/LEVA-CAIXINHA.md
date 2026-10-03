@@ -6,6 +6,8 @@ Respostas prontas de cada casa ficam fora do repositório, em /home/user/apply/<
 
 ## LEVA 02/10 manhã (N6, conferida 02/10 ~02h-03h30 UTC; vale este bloco, os de baixo viram histórico)
 
+**EXTRA 03/10 14h (sem caixinha visível):** Aaron Sims Creative (LA, criaturas/personagens), formulário "Join the ASC Team" em aaronsimscreative.com/contact-clone-1784040557566 (nome, email, cargo, portfólio, mensagem; sem CV). reCAPTCHA invisível recusou o navegador local; vai junto na próxima sessão de nuvem da leva.
+
 **EXTRA 02/10 19h (sem caixinha):** Plaion (Deep Silver) candidatura espontânea, jobs.plaion.com yid=137. Navegador local: servidor recusou ("Unable to process your enquiry"); nuvem: formulário abre sem caixa, falta só o CV entrar na sessão. Vai junto na próxima sessão de nuvem da leva, com o CV subido como nas outras portas. Preenchimento pronto em scratchpad/plk.js.
 
 **RECONFERÊNCIA 03/10 12h UTC: 52 portas vivas (nenhuma saiu).** BambooHR /careers/list 9/9 listadas (Metricminds 39, Pixel Toys 31, Blazing Griffin 63, Exient 58, Amuse 164, Mercury 118, Flying Bark 114, Singing Frog 27, Stirling já fora); Recruitee Softgames 212775, Dovetail 1439246 e Huuuge 796516 publicadas; páginas próprias, Jobvite, Mainstay, Iron Fox, Rippling Iconic, MY.GAMES, Tally, Jotform e demais 200. NÃO conferidas: Workable (Pulse, Lockwood, Double Eleven, ZeptoLab) 429 Cloudflare e Xilam sem conexão daqui; seguem vivas pela leitura anterior. Dedupe: nenhuma casa da leva com envio confirmado nem recusa nova depois de 02/10 (Playkot só autorresposta).
