@@ -21352,3 +21352,20 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 
 ### FICHA J0135-4: **GO-N Productions** (Simon Super Rabbit, Tootuff, The Large Family; estúdio de 70 postos; Paris, **FRANÇA**) `j***@go-n.fr`, caixa de candidatura PUBLICADA
 - **ONDE:** https://www.go-n.fr/contact (*"Apply (job and internship)"*) e página do estúdio. **FRASE:** *"located in the heart of Paris"*. **HISTÓRICO:** carta e follow-up para o `contact@` em 26/08 e 02/09; esta é a primeira no endereço de candidatura. **RASCUNHO:** `r175790414433385731`.
+
+## RODADA 03/10 05h35 UTC, J0535 (Joe, mesma abordagem da J0135: caixa de recrutamento PUBLICADA por casa estabelecida): 4 casas, 4 rascunhos
+
+**Quatro casas estabelecidas, endereço publicado no site oficial, quatro rascunhos "Hello <Studio> team," com 1 emoji, 234 a 246 palavras, pior par do lote do dia 33% no `confere-carta.py`.** Fonte: coorte de cartas de 02/09 com só recibo automático (relida em `processados.csv` e no Gmail por domínio). Nenhuma recusa, nenhum formulário depois, nenhuma pessoa em `pessoas.csv`.
+- **Fora, medido nesta rodada:** Flix Interactive (formulário Pinpoint 10/09), Cloud Imperium e Wētā (só portal), Sandfall, Owlchemy, Cyborn, Grinding Gear (recusa), Hello Games (duas cartas, a última 08/09 com vaga), Jyamma (o site hoje só publica `info@` e `marketing@`), Tic Toc Games (casa de mobile, site invadido por spam), Bossa (demissões recentes, página 403), Gunfire e Other Ocean (pessoa já no `pessoas.csv`), Vertigo, Hidden Path e Little Chicken (carta em 30/09 a 01/10).
+
+### FICHA J0535-1: **Supermassive Games** (Until Dawn, The Quarry, The Dark Pictures; Guildford, **REINO UNIDO**) `s***@jobs.workablemail.com`, caixa de candidatura espontânea PUBLICADA
+- **ONDE:** https://www.supermassivegames.com/careers/speculative-application (o botão "Speculative Applications" é esse endereço). **FRASE:** *"With a passion to deliver high-end cinematic games, Supermassive Games is carving a unique and exciting path in the games industry."* **HISTÓRICO:** carta ao `jobs@` em 02/09, só resposta automática, sem follow-up. **RASCUNHO:** `r-4720634290868840978`.
+
+### FICHA J0535-2: **11 bit studios** (Frostpunk 2, The Alters, This War of Mine; Varsóvia, **POLÔNIA**) `j***@11bitstudios.com`, caixa geral PUBLICADA
+- **ONDE:** https://11bitstudios.com/jobs/ (*"Haven't found what you're after? ... just send an e-mail with your application"*; a página diz que ajudam com mudança do exterior). **FRASE:** *"Make Your Mark With Us"*. **HISTÓRICO:** carta 02/09, só recibo automático, sem follow-up. **RASCUNHO:** `r1540755357486970272`.
+
+### FICHA J0535-3: **Frozenbyte** (série Trine; Helsinque, **FINLÂNDIA**) `j***@frozenbyte.com`, caixa geral PUBLICADA
+- **ONDE:** https://www.frozenbyte.com/jobs (seção Art: *"Feel free to send open applications to ..."*; pede carta pessoal e link do portfólio no corpo, que a carta traz). **FRASE:** *"one of the biggest truly independent high-end developers in Finland"*. **HISTÓRICO:** carta 02/09 e follow-up 07/09, só recibo automático. **RASCUNHO:** `r4243289890727323651`.
+
+### FICHA J0535-4: **Microids** (Asterix & Obelix, Smurfs, Garfield, Syberia; Paris e Lyon, **FRANÇA**) `r***@microids.com`, caixa de recrutamento PUBLICADA
+- **ONDE:** https://www.microids.com/jobs/ . **FRASE:** *"creates original adventures which gives gamers the chance to play as some of their most beloved characters"*. **HISTÓRICO:** carta 02/09 e follow-up 07/09, nenhuma resposta. **RASCUNHO:** `r5350250211062233674`.
