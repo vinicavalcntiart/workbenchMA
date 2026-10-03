@@ -21400,3 +21400,38 @@ Dez rascunhos prontos, todos com endereço PUBLICADO na própria casa e confian�
 ### Ficaram fora, com motivo (medido nesta rodada)
 - **Listas lidas:** Wikipedia "List of animation studios", "List of visual effects companies" e 22 categorias de estúdios de animação por país e de VFX (490 nomes), mais ~350 nomes de jogos AA/AAA, CG de publicidade e cinemáticas cruzados com os três CSVs. Quase tudo já está no histórico; os nunca tocados são fechados, 2D, stop motion ou distribuidoras.
 - **Nunca tocadas, mas sem destino que sirva:** Coffee & TV (Londres, `jobs@` publicado atrás do ofuscador do Cloudflare, mas o trabalho é cor e VFX de publicidade, quase sem personagem), Aaron Sims Creative (LA, criaturas e personagens; só formulário "Join the ASC team" e `contact@` de clientes: fica para a frente de formulários), Studio FILM BILDER (Stuttgart, 2D), Picasso Pictures (site em reforma, só formulário de briefing), Frantic (motion design), Rare (portal da Microsoft), Dimfrost (só Gmail), Saddington Baynes (CGI de produto), Talking Animals (só `info@`), Kawanimation (só `contact@`), Airship Images (site fora do ar), Th1ng (domínio estacionado).
+
+## RODADA 03/10 17h35 UTC, J1735 (Joe, regra da rodada: só PESSOA com email publicado, em casa que NUNCA recebeu email nosso): 3 fichas, sem carta
+
+**Três pessoas com nome, cargo e email PUBLICADO no site da própria casa, zero ocorrência de nome e domínio em `enviados.csv`, `processados.csv`, `pessoas.csv` e no Gmail (busca por domínio, nome da casa e nome da pessoa). Abaixo da meta de 4: o que foi medido vai no fim do bloco.** Nenhum rascunho criado; as três esperam a carta do maestro (`PENDENTE-maestro-escreve`). Endereços completos ficam fora do repositório.
+
+### FICHA J1735-1: **Kirsten Noll**, *Managing Director / Executive Producer*, **Scholar** (ex-Gentleman Scholar; CG, 2D e 3D para publicidade; Los Angeles e Nova York, **EUA**) `k***@helloscholar.com`, **ALTA**
+- **ONDE:** https://www.helloscholar.com/contact (bloco de Los Angeles: cargo, nome e endereço, nesta ordem).
+- **POR QUE ELA:** casa média (46+ pessoas na página About); a diretora-geral é quem decide contratação e a página não publica recrutador nem caixa de vagas, só `eps@` para projetos e `info@`.
+- **FRASE DA CASA, literal** (https://www.helloscholar.com/about): *"We are a creative production company driven by curiosity and an eagerness to engage viewers on an emotional level."*
+- **ENCAIXE:** a home lista trabalhos recentes marcados *"3D ANIMATION + CHARACTER"* (ExtraMile 2026, Chevron 2026, Target Holiday 2025).
+- **PAÍS:** EUA, então pela regra a frase de mudança não entra.
+- **RESSALVA:** casa de publicidade, sem vaga aberta publicada; Kirsten é produtora executiva, não diretora de arte.
+
+### FICHA J1735-2: **Ray Di Carlo**, *Executive Producer*, **Bent Image Lab** (CG, stop motion e personagem para publicidade; Portland, **EUA**) `r***@bentimagelab.com`, **ALTA**
+- **ONDE:** https://www.bentimagelab.com/contact/ (único nome publicado na página, com cargo e endereço; vagas vão para um `jobs@` genérico).
+- **POR QUE ELE:** é a única pessoa que a casa expõe; em estúdio desse porte o produtor executivo é quem monta a equipe por projeto.
+- **FRASE DA CASA, literal** (https://www.bentimagelab.com/about/): *"WE MAKE A LIVING FROM CREATIVITY. OUR TOOLS ARE ANIMATION, STORY TELLING, VFX, LIVE ACTION AND DESIGN."*
+- **ENCAIXE:** o filtro do portfólio tem as categorias *CG*, *Character* e *Puppet*.
+- **PAÍS:** EUA, então pela regra a frase de mudança não entra.
+- **RESSALVA:** o rodapé do site ainda diz 2024 e a página About fala de uma incubadora de AR. A casa existe há mais de 20 anos, mas o ritmo atual não foi medido. O site às vezes devolve 202 (desafio anti-robô); abriu na terceira tentativa.
+
+### FICHA J1735-3: **Will MacKinnon**, *New Business & Enquiries*, **Electric Art** (CGI, animação e retoque para publicidade; Sydney, **AUSTRÁLIA**) `w***@electricart.com.au`, **ALTA**
+- **ONDE:** https://electricart.com.au/contact (bloco "Australia": função, nome, telefone e endereço).
+- **POR QUE ELE:** é o único nome da casa no site; a página About diz *"tight knit team"* e não publica equipe, vaga nem recrutador.
+- **FRASE DA CASA, literal** (https://electricart.com.au/about): *"Electric Art has been delivering amazing creative production solutions to agencies, direct clients, photographers and directors for 30 years."* (lema: *"Play god"*).
+- **ENCAIXE:** o portfólio (https://electricart.com.au/work) marca trabalhos com *"CGI / VFX , Animation , Characters"* (ex.: Hershey's, 02/2026).
+- **PAÍS:** fora dos EUA, então a frase de mudança e visto entra.
+- **RESSALVA:** a maior parte do portfólio recente é retoque de imagem parada, e Will é o contato comercial, não de arte. É a ficha mais fraca das três.
+
+### Ficaram fora, com motivo (medido nesta rodada)
+- **Censo Wikidata, casas nunca tocadas:** 1.381 domínios (Europa, América do Norte e Oceania, sem nenhuma aparição nos três CSVs nem neste arquivo), lidos em home, contact, about, team, careers, jobs, press e studio atrás de endereço de pessoa. 72 com algum endereço, quase todos de indie de uma a três pessoas. Os de casa com nome não servem: Shin'en (o `linzner@` é só para motor de som e música), Iron Galaxy (só `communications@`, e o nome já está no histórico), Stainless (só suporte e corporativo), Nerve Software (o domínio virou site de conferência), Eurocom (fechada).
+- **JobVFX:** API pública, 1.661 vagas fora da Ásia e da LATAM com a descrição lida. Nenhum email de pessoa: só caixas (`jobs@`, `recruiting@`, `careers@`) ou casa já contatada (Reflector, com recusa).
+- **Casas de nome nunca tocadas, mas sem email de pessoa publicado:** Avalanche Software (portal WBD), Cat Daddy (2K), Red Barrels, Phosphor, Big Huge Games (só `bd@`/`press@`), Harmonix, Mind Candy, Alderon, Tuque, Endnight, Kitfox, KO OP, Krome, Kalypso, Zagtoon, Atlantyca, Pukeko, Studio 100 Media, Motionworks, Scopas, Animade (site arquivado), Hornet, Superfad e Laundry (página em JS, sem texto), Glassworks (bloqueado pelo proxy, 503), Imaginary Forces e Mr. Wonderful (só `info@`), Trollbäck (só `careers@`/`newbiz@`), HouseSpecial (só `hello@`).
+- **Com email de pessoa, mas fora:** Make Make (a52 + Elastic, já está no `processados.csv` de 30/09), Partizan e Agile Films (produtoras de live action que representam diretores), Heckler (pós-produção; o site bloqueia por WAF), Lord Danger (só caixas), Piktiv (codesenvolvimento de programação).
+- **Swissanimation (GSFA):** 234 fichas de membro, nenhuma com email.
